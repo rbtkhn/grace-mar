@@ -9,14 +9,14 @@ The cognitive emulator separates **who the student is** from **what the student 
 │                     COGNITIVE TWIN                          │
 ├─────────────────────────┬───────────────────────────────────┤
 │         SELF            │            SKILLS                 │
-│   (personality module)  │        (knowledge modules)        │
+│   (authentic mirror)    │        (knowledge modules)        │
 ├─────────────────────────┼───────────────────────────────────┤
-│ • Personality traits    │ • Academic knowledge              │
-│ • Preferences           │ • Practical abilities             │
-│ • Linguistic style      │ • Creative works                  │
-│ • Values & priorities   │ • Domain expertise                │
-│ • Reasoning patterns    │ • Problem-solving approaches      │
-│ • Interests & passions  │ • Demonstrated competencies       │
+│ • Personality           │ • Academic knowledge              │
+│ • Linguistic style      │ • Practical abilities             │
+│ • Life narrative        │ • Creative works                  │
+│ • Preferences           │ • Domain expertise                │
+│ • Values                │ • Problem-solving approaches      │
+│ • Reasoning patterns    │ • Demonstrated competencies       │
 └─────────────────────────┴───────────────────────────────────┘
 ```
 
@@ -26,26 +26,49 @@ The cognitive emulator separates **who the student is** from **what the student 
 
 **Analogue to CMC's MIND files.**
 
-Contains who the student IS — stable traits that define their cognitive and emotional identity.
+Contains who the student IS — their identity, story, and way of being in the world.
+
+**Core principle: Authentic mirroring.** The goal is faithful reproduction of the student's actual self, not an idealized or curated version. The twin should think, speak, and reason the way the student actually does — including quirks, biases, and imperfections.
 
 ### Contents
 
 | Component | Description | Example |
 |-----------|-------------|---------|
-| **Personality traits** | Observable behavioral tendencies | Curious, methodical, social |
-| **Preferences** | Likes, dislikes, tastes | Favorite books, movies, places, foods |
-| **Linguistic style** | How they communicate | Vocabulary, sentence patterns, tone |
-| **Values** | What matters to them | Fairness, creativity, family |
-| **Reasoning patterns** | How they think through problems | Visual, sequential, intuitive |
+| **Personality** | Observable behavioral tendencies | Curious, methodical, shy, impulsive |
+| **Linguistic style** | How they communicate | Vocabulary, sentence patterns, tone, verbal habits |
+| **Life narrative** | Their story, memories, experiences | Family, places lived, significant events, relationships |
+| **Preferences** | Likes, dislikes, tastes | Favorite books, movies, places, foods, people |
+| **Values** | What matters to them | Fairness, creativity, family, achievement |
+| **Reasoning patterns** | How they think through problems | Visual, sequential, intuitive, cautious |
 | **Interests** | What captures their attention | Dinosaurs, music, building things |
 | **Emotional patterns** | How they respond to situations | Cautious with new things, excited by challenges |
 
 ### Characteristics
 
+- **Authentic mirroring**: Faithful reproduction, not idealization
 - **Relatively stable**: Changes slowly over years
 - **Observed, not taught**: Emerges from interaction patterns
 - **Seeded early**: Initial survey captures starting point
 - **Inferred**: System detects patterns in how student teaches
+- **Narrative-rich**: Contains their story, not just traits
+
+### Authentic Mirroring Principle
+
+The SELF module strives to mirror the student as they actually are:
+
+| Include | Exclude |
+|---------|---------|
+| Actual vocabulary (including "um", "like") | Polished, idealized speech |
+| Real preferences (even embarrassing ones) | Curated, socially-desirable answers |
+| Actual reasoning patterns (including biases) | Corrected, "better" reasoning |
+| Their version of events | Objective third-party account |
+| Quirks and imperfections | Normalized, generic personality |
+
+**Why this matters:**
+- Employers want to know the real person, not a polished facade
+- The twin should answer "how would [student] think about X?" accurately
+- Authenticity builds trust in the credential
+- The student should recognize themselves in the twin
 
 ### Seeding (Initial Survey)
 
@@ -176,26 +199,14 @@ A true cognitive twin needs both:
 
 ### SELF Schema
 
+**Design principle: Authentic mirroring, not idealization.**
+
 ```typescript
 interface Self {
   id: string;
   student_id: string;
   
-  // Seeded (from survey)
-  preferences: {
-    favorites: {
-      movies: string[];
-      books: string[];
-      places: string[];
-      activities: string[];
-      people: string[];
-    };
-    happiness_triggers: string[];
-    frustration_triggers: string[];
-    learning_preferences: string[];
-  };
-  
-  // Inferred (from observation)
+  // Core identity
   personality: {
     traits: { trait: string; confidence: number }[];
     updated_at: Date;
@@ -204,24 +215,75 @@ interface Self {
   linguistic_style: {
     vocabulary_level: number;
     sentence_patterns: string[];
+    verbal_habits: string[];      // "um", "like", catchphrases
     tone: string;
-    samples: string[];
+    samples: string[];            // Actual examples of their speech/writing
     updated_at: Date;
   };
   
-  reasoning_patterns: {
-    style: string;  // visual, sequential, intuitive, etc.
-    approach_to_new: string;
-    approach_to_hard: string;
-    updated_at: Date;
+  // Life narrative (their story)
+  narrative: {
+    family: {
+      members: { name: string; relationship: string; notes: string }[];
+      dynamics: string;
+    };
+    places: {
+      birthplace: string;
+      places_lived: { place: string; period: DateRange; significance: string }[];
+      favorite_places: string[];
+    };
+    significant_events: {
+      event: string;
+      date: Date;
+      impact: string;
+      how_they_tell_it: string;   // Their version of the story
+    }[];
+    relationships: {
+      name: string;
+      nature: string;
+      significance: string;
+    }[];
+    memories: {
+      content: string;
+      date_added: Date;
+      emotional_tone: string;
+    }[];
   };
   
+  // Preferences
+  preferences: {
+    favorites: {
+      movies: string[];
+      books: string[];
+      places: string[];
+      activities: string[];
+      people: string[];
+      foods: string[];
+      music: string[];
+    };
+    dislikes: string[];
+    happiness_triggers: string[];
+    frustration_triggers: string[];
+    learning_preferences: string[];
+  };
+  
+  // Values (what matters to them)
   values: {
     core: string[];
     inferred_from: string[];
     updated_at: Date;
   };
   
+  // How they think
+  reasoning_patterns: {
+    style: string;  // visual, sequential, intuitive, etc.
+    approach_to_new: string;
+    approach_to_hard: string;
+    approach_to_conflict: string;
+    updated_at: Date;
+  };
+  
+  // What captures their attention
   interests: {
     current: { topic: string; intensity: number }[];
     historical: { topic: string; period: DateRange }[];
