@@ -7,9 +7,14 @@ Use this file to initiate or continue work on cog-em in any Cursor conversation.
 
 ## QUICK START
 
-**To continue development:** Read this file, then proceed with the task.
+When this file is loaded at the start of a conversation, present the user with multiple choice options:
 
-**To run a pilot session:** Load `users/pilot-001/SELF.md`, `SKILLS.md`, `EVIDENCE.md`, then interact with the user following the Cursor rule at `.cursor/rules/cog-em-pilot.mdc`.
+1. **Run pilot session** — Load pilot-001 files, follow `.cursor/rules/cog-em.mdc`
+2. **Continue development** — Proceed with a task (user specifies)
+3. **Review status** — Summarize current phase, next steps, recent changes
+4. **Other** — User describes what they need
+
+Wait for the user to choose before proceeding.
 
 ---
 
@@ -133,7 +138,7 @@ cog-em/
 ├── COG-EM-BOOTSTRAP.md      # THIS FILE — session bootstrap
 ├── README.md                 # Project overview
 ├── .cursor/rules/
-│   └── cog-em-pilot.mdc     # Cursor rule for pilot sessions
+│   └── cog-em.mdc           # Governance + pilot protocol (users/**)
 ├── docs/
 │   ├── COG-EM-CORE.md       # CANONICAL governance
 │   ├── PARENT-BRIEF.md      # Parent/guardian brief (pre-survey)
