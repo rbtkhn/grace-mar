@@ -49,8 +49,8 @@ cog-em/
 │   ├── DIFFERENTIATION.md      # Competitive moats
 │   ├── TEAM.md                 # Hiring plan
 │   └── LETTER-TO-STUDENT.md    # Letter to first pilot student
-├── students/
-│   └── pilot-001/              # First pilot student
+├── users/
+│   └── pilot-001/              # First pilot user (6-year-old student)
 │       ├── SELF.md             # Personality profile
 │       ├── SKILLS.md           # Capability containers
 │       ├── EVIDENCE.md         # Reading/Writing/Creation logs

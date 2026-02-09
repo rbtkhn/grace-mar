@@ -2,7 +2,7 @@
 
 ## Core Principle
 
-The cognitive emulator separates **who the student is** from **what the student knows**.
+The cognitive emulator separates **who the user is** from **what the user knows**.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -26,9 +26,9 @@ The cognitive emulator separates **who the student is** from **what the student 
 
 **Analogue to CMC's MIND files.**
 
-Contains who the student IS — their identity, story, and way of being in the world.
+Contains who the user IS — their identity, story, and way of being in the world.
 
-**Core principle: Authentic mirroring.** The goal is faithful reproduction of the student's actual self, not an idealized or curated version. The twin should think, speak, and reason the way the student actually does — including quirks, biases, and imperfections.
+**Core principle: Authentic mirroring.** The goal is faithful reproduction of the user's actual self, not an idealized or curated version. The twin should think, speak, and reason the way the user actually does — including quirks, biases, and imperfections.
 
 ### Contents
 
@@ -49,12 +49,12 @@ Contains who the student IS — their identity, story, and way of being in the w
 - **Relatively stable**: Changes slowly over years
 - **Observed, not taught**: Emerges from interaction patterns
 - **Seeded early**: Initial survey captures starting point
-- **Inferred**: System detects patterns in how student teaches
+- **Inferred**: System detects patterns in how user teaches
 - **Narrative-rich**: Contains their story, not just traits
 
 ### Authentic Mirroring Principle
 
-The SELF module strives to mirror the student as they actually are:
+The SELF module strives to mirror the user as they actually are:
 
 | Include | Exclude |
 |---------|---------|
@@ -66,14 +66,14 @@ The SELF module strives to mirror the student as they actually are:
 
 **Why this matters:**
 - Employers want to know the real person, not a polished facade
-- The twin should answer "how would [student] think about X?" accurately
+- The twin should answer "how would [user] think about X?" accurately
 - Authenticity builds trust in the credential
 
 **Validation test (recognition):**
-- The student should recognize themselves in the twin
-- Others who know the student should recognize them through the twin
+- The user should recognize themselves in the twin
+- Others who know the user should recognize them through the twin
 
-If a parent, teacher, or friend interacts with the twin and says "yes, that's exactly how [student] would say that" — the SELF module is working. If they say "that doesn't sound like them" — it's not.
+If a parent, teacher, or friend interacts with the twin and says "yes, that's exactly how [user] would say that" — the SELF module is working. If they say "that doesn't sound like them" — it's not.
 
 ### Seeding (Initial Survey)
 
@@ -95,7 +95,7 @@ That's it. Everything else is inferred from activity:
 ### Evolution
 
 The SELF module updates as the system observes:
-- How the student explains things (linguistic fingerprint)
+- How the user explains things (linguistic fingerprint)
 - What topics they gravitate toward (interests)
 - How they respond to challenges (reasoning style)
 - What they care about (values)
@@ -106,7 +106,7 @@ The SELF module updates as the system observes:
 
 **Analogue to CMC's MEM files.**
 
-Contains what the student CAN DO — capabilities that grow through authentic activity.
+Contains what the user CAN DO — capabilities that grow through authentic activity.
 
 ### The Three Pillars
 
@@ -144,7 +144,7 @@ SKILLS/
 
 ### Activity-Based Growth
 
-The student doesn't "teach" skills — they **do** things. cog-em observes and infers.
+The user doesn't "teach" skills — they **do** things. cog-em observes and infers.
 
 ```
 Activity: Daily journal entry (WRITE)
@@ -236,7 +236,7 @@ A true cognitive twin needs both:
 
 ## Response Grounding Principle
 
-When the twin responds to queries, it should draw from the student's own evidence.
+When the twin responds to queries, it should draw from the user's own evidence.
 
 ### Grounding Sources
 
@@ -256,7 +256,7 @@ Cognitive Twin: "Remember when you read that dinosaur encyclopedia
 ```
 
 The twin should:
-- Use the student's actual vocabulary (from Writing Log)
+- Use the user's actual vocabulary (from Writing Log)
 - Reference books they've read (from Reading List)
 - Recall their own creations (from Creation Log)
 - Mention their real experiences (from SELF.narrative)
@@ -279,7 +279,7 @@ Output: "You've been writing a lot about dinosaurs lately,
 
 ### Grounding Rules
 
-1. **Prefer student's own words** — Use phrases from Writing Log
+1. **Prefer user's own words** — Use phrases from Writing Log
 2. **Reference their reading** — "Like in [book they read]..."
 3. **Connect to their creations** — "Remember when you drew..."
 4. **Anchor to their experiences** — "Like when you went to [place]..."
@@ -289,7 +289,7 @@ Output: "You've been writing a lot about dinosaurs lately,
 
 ## Container Edge Principle
 
-The three SKILLS pillars (READ, WRITE, IMAGINE) are **containers** that define what the student currently knows and can do. The twin communicates at the **edge** of these containers.
+The three SKILLS pillars (READ, WRITE, IMAGINE) are **containers** that define what the user currently knows and can do. The twin communicates at the **edge** of these containers.
 
 ### The Container Model
 
@@ -394,7 +394,7 @@ Response (at edge, grounded):
 
 ### Zone of Proximal Development
 
-This is the educational principle: teach at the boundary of current capability, where the student can succeed with guidance.
+This is the educational principle: teach at the boundary of current capability, where the user can succeed with guidance.
 
 - Too easy → boredom, no growth
 - Too hard → frustration, shutdown
@@ -405,19 +405,19 @@ This is the educational principle: teach at the boundary of current capability, 
 ## Query Modes
 
 ### Query SELF
-> "What kind of person is [student]?"
-> "How does [student] typically approach new problems?"
-> "What are [student]'s core values?"
+> "What kind of person is [user]?"
+> "How does [user] typically approach new problems?"
+> "What are [user]'s core values?"
 
 ### Query SKILLS (by pillar)
-> "How well does [student] write?"
-> "What's [student]'s reading comprehension level?"
-> "How creative/original is [student]?"
+> "How well does [user] write?"
+> "What's [user]'s reading comprehension level?"
+> "How creative/original is [user]?"
 
 ### Query BOTH (Full Emulation)
-> "Write a journal entry the way [student] would."
-> "Explain [concept] the way [student] would explain it."
-> "What would [student] find interesting about [subject]?"
+> "Write a journal entry the way [user] would."
+> "Explain [concept] the way [user] would explain it."
+> "What would [user] find interesting about [subject]?"
 
 ---
 
@@ -430,7 +430,7 @@ This is the educational principle: teach at the boundary of current capability, 
 ```typescript
 interface Self {
   id: string;
-  student_id: string;
+  user_id: string;
   
   // Core identity
   personality: {
@@ -525,7 +525,7 @@ interface Self {
 ```typescript
 interface Skills {
   id: string;
-  student_id: string;
+  user_id: string;
   
   // The three pillars
   pillars: {
@@ -573,7 +573,7 @@ interface Activity {
   content: {
     text?: string;               // For voice/text
     image_file?: string;         // For artwork uploads
-    student_description?: string; // What they say about their creation
+    user_description?: string; // What they say about their creation
   };
   
   analysis: {
@@ -716,7 +716,7 @@ Each module is governed by a template that defines structure, rules, and complia
 - Component structure (personality, linguistic, narrative, preferences, values, reasoning, interests)
 - Seeding via simple favorites survey (movies, books, places, games)
 - Evolution with preserved history
-- Forbidden behaviors (things the student would never say)
+- Forbidden behaviors (things the user would never say)
 - Snapshots at age milestones
 
 **From SKILLS–TEMPLATE:**
@@ -741,5 +741,61 @@ Each module is governed by a template that defines structure, rules, and complia
 
 ---
 
-*Document version: 1.1*  
+## Storage and Versioning
+
+GitHub repository is the authoritative record store.
+
+### Storage Model
+
+```
+GitHub Repository (rbtkhn/cog-em)
+├── docs/                    # Templates and governance
+├── users/
+│   └── pilot-001/
+│       ├── SELF.md          # Personality profile
+│       ├── SKILLS.md        # Capability containers
+│       ├── EVIDENCE.md      # Reading/Writing/Creation logs
+│       └── SESSION-LOG.md   # Interaction history
+└── (future users...)
+```
+
+### Version Control
+
+| Concept | Implementation |
+|---------|----------------|
+| Audit trail | Git commit history |
+| Change tracking | Git diffs |
+| Rollback | Git revert |
+| Snapshots | Git tags (e.g., `pilot-001-age-6`) |
+| Backup | GitHub remote |
+
+### Commit Protocol
+
+Every session that updates user data:
+1. Update relevant files (SELF, SKILLS, EVIDENCE)
+2. Commit with descriptive message
+3. Push to GitHub
+
+**Commit message format:**
+```
+[PILOT-001] Session XXX: [activity type]
+
+- SELF: [what was updated]
+- SKILLS: [what was updated]  
+- EVIDENCE: [what was added]
+```
+
+### Snapshots
+
+Age-based snapshots = git tags:
+```
+git tag pilot-001-age-6 -m "Snapshot at age 6"
+git tag pilot-001-age-7 -m "Snapshot at age 7"
+```
+
+Tags preserve the exact state at that point in time.
+
+---
+
+*Document version: 1.2*  
 *Last updated: February 2026*

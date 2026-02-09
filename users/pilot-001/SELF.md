@@ -1,6 +1,6 @@
 # SELF — PILOT-001
 
-Cognitive Emulator · Student Profile
+Cognitive Emulator · User Profile
 Version: 0.1 (Initial)
 Created: February 2026
 Status: SEEDING

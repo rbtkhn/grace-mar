@@ -15,11 +15,11 @@ Adapted from: CIV–MIND–TEMPLATE v3.0 (CMC)
 This template governs the SELF module of the cognitive twin.
 
 The SELF module:
-- Captures WHO the student IS
+- Captures WHO the user IS
 - Mirrors personality, linguistic style, values, narrative
 - Enables authentic emulation (not idealization)
-- Evolves as the student grows
-- Allows recognition by those who know the student
+- Evolves as the user grows
+- Allows recognition by those who know the user
 
 The SELF module is NOT:
 - A curated persona
@@ -33,7 +33,7 @@ SELF strives for AUTHENTIC MIRRORING.
 
 ## II. CORE PRINCIPLE: AUTHENTIC MIRRORING
 
-The twin should mirror the student as they actually are.
+The twin should mirror the user as they actually are.
 
 ### Include
 
@@ -54,8 +54,8 @@ The twin should mirror the student as they actually are.
 ### Validation Test (Recognition)
 
 The SELF module is working when:
-- The student recognizes themselves in the twin
-- Others who know the student recognize them through the twin
+- The user recognizes themselves in the twin
+- Others who know the user recognize them through the twin
 
 If a parent, teacher, or friend says "that sounds exactly like them" — success.
 If they say "that doesn't sound like them" — failure.
@@ -66,7 +66,7 @@ If they say "that doesn't sound like them" — failure.
 
 ### 1. Identity
 
-Basic information about the student.
+Basic information about the user.
 
 ```typescript
 identity: {
@@ -162,7 +162,7 @@ narrative: {
     members: {
       name: string;
       relationship: string;      // "mom", "grandpa", "sister"
-      notes: string;             // How student describes them
+      notes: string;             // How user describes them
     }[];
     dynamics: string;            // Student's view of family
   };
@@ -417,7 +417,7 @@ Unlike CMC's frozen MIND profiles, SELF evolves.
 ### How It Evolves
 
 1. **Continuous Inference**
-   - System observes how student teaches
+   - System observes how user teaches
    - Patterns detected and recorded
    - Confidence scores updated
 
@@ -467,7 +467,7 @@ forbidden: {
 ### Purpose
 
 - Prevents generic responses
-- Ensures twin sounds like THIS student
+- Ensures twin sounds like THIS user
 - Detection mechanism for authenticity
 
 ### Example
@@ -533,7 +533,7 @@ How the twin uses SELF to respond.
 
 ### Response Grounding Principle
 
-The twin should speak THROUGH the student's own evidence, not about them generically.
+The twin should speak THROUGH the user's own evidence, not about them generically.
 
 **Grounding sources:**
 | Source | Use |
@@ -561,7 +561,7 @@ Grounded: "Remember when you wrote about wanting to be an astronaut?
 
 ### For Emulation
 
-When asked "What would [student] say about X?":
+When asked "What would [user] say about X?":
 1. Load relevant SELF components
 2. Load relevant evidence (Writing Log, Reading List)
 3. Apply linguistic style (vocabulary, phrases from their writing)
@@ -571,14 +571,14 @@ When asked "What would [student] say about X?":
 ### For Recognition
 
 When evaluator queries:
-- "What kind of person is [student]?" → Personality summary
-- "How does [student] communicate?" → Linguistic markers + examples from Writing Log
-- "What does [student] care about?" → Values and interests + evidence
-- "Tell me about [student]'s background" → Life narrative
+- "What kind of person is [user]?" → Personality summary
+- "How does [user] communicate?" → Linguistic markers + examples from Writing Log
+- "What does [user] care about?" → Values and interests + evidence
+- "Tell me about [user]'s background" → Life narrative
 
 ### For Prediction
 
-When asked "What would [student] enjoy?":
+When asked "What would [user] enjoy?":
 - Use preferences and interests
 - Reference similar things they've enjoyed (from Reading List, Creation Log)
 - Apply reasoning patterns
@@ -645,13 +645,13 @@ Before creating SELF SNAPSHOT:
 
 ### SKILLS → SELF
 
-- What student teaches reveals interests
+- What user teaches reveals interests
 - How they explain reveals linguistic style
 - Struggles reveal emotional patterns
 
 ### Full Emulation Requires Both
 
-> "Explain [topic] the way [student] would"
+> "Explain [topic] the way [user] would"
 
 = SKILLS (what they know) + SELF (how they express it)
 

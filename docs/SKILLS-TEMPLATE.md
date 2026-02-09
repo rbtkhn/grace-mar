@@ -15,7 +15,7 @@ Adapted from: CIV–SCHOLAR–TEMPLATE v3.1 (CMC)
 This template governs the SKILLS module of the cognitive twin.
 
 The SKILLS module:
-- Captures what the student CAN DO
+- Captures what the user CAN DO
 - Grows through authentic activity (not explicit teaching)
 - Provides queryable, verifiable capability evidence
 - Tracks depth, not just breadth
@@ -28,7 +28,7 @@ The SKILLS module is NOT:
 - An automated assessment
 - A teaching interface
 
-SKILLS are demonstrated through real activity. The student DOES things;
+SKILLS are demonstrated through real activity. The user DOES things;
 cog-em observes, records, and infers capability from accumulated evidence.
 
 ---
@@ -39,7 +39,7 @@ All skills organize under three fundamental cognitive modes.
 
 ### WRITE (Production)
 
-The student produces something. cog-em captures and analyzes.
+The user produces something. cog-em captures and analyzes.
 
 **Activities:**
 - Daily journal entries
@@ -66,7 +66,7 @@ The student produces something. cog-em captures and analyzes.
 
 ### READ (Intake)
 
-The student consumes content. cog-em tracks and assesses comprehension.
+The user consumes content. cog-em tracks and assesses comprehension.
 
 **Activities:**
 - Books read (with summaries, reactions)
@@ -93,7 +93,7 @@ The student consumes content. cog-em tracks and assesses comprehension.
 
 ### IMAGINE (Creation/Exploration)
 
-The student thinks beyond what's given. cog-em captures creative and reasoning capability.
+The user thinks beyond what's given. cog-em captures creative and reasoning capability.
 
 **Activities:**
 - Creative play and scenarios
@@ -161,7 +161,7 @@ All SKILLS operate within one of three phases.
 
 ### PHASE I — BUILDING (Default)
 
-The student is actively teaching this skill to the twin.
+The user is actively teaching this skill to the twin.
 
 Characteristics:
 - Knowledge is accumulating
@@ -173,7 +173,7 @@ Permitted:
 - Free teaching
 - Exploration
 - Mistakes and corrections
-- Inconsistencies (student is learning)
+- Inconsistencies (user is learning)
 
 ### PHASE II — MILESTONE
 
@@ -205,7 +205,7 @@ Characteristics:
 
 ## III. CAPABILITY CLAIMS
 
-Capability Claims are formal statements about what the student can do,
+Capability Claims are formal statements about what the user can do,
 derived from accumulated activity evidence across the three pillars.
 
 Analogous to CMC's Recursive Learning Ledger (RLL).
@@ -383,13 +383,13 @@ Adapted from CMC's Failure-First Standard.
 ### Purpose
 
 - Authentic mirroring includes struggles
-- Shows how student learns from difficulty
+- Shows how user learns from difficulty
 - Reveals learning patterns and resilience
 - Differentiates from curated profiles
 
 ### What to Capture
 
-- Activities where student struggled
+- Activities where user struggled
 - Pillar dimensions that are difficult
 - Emotional responses to difficulty
 - Breakthrough moments
@@ -455,7 +455,7 @@ STRUGGLE-READ-001: Non-Fiction Comprehension
 
 ## VI. ACTIVITY CAPTURE FORMAT
 
-Structured capture of what the student produces.
+Structured capture of what the user produces.
 
 ### Activity Record
 
@@ -734,7 +734,7 @@ Action: Update VKC, preserve history
 ### Principle
 
 Do NOT silently reconcile. Preserve the tension.
-Let the student's learning journey be visible.
+Let the user's learning journey be visible.
 
 ---
 
@@ -747,7 +747,7 @@ Preserve skills at points in time.
 - Age milestones (6, 8, 10, 12, 14, 16, 18)
 - Grade transitions
 - Major life events (moving, changing schools)
-- On-demand (parent/student request)
+- On-demand (parent/user request)
 
 ### Snapshot Format
 
@@ -781,7 +781,7 @@ LEARNING VELOCITY:
 
 ### Preservation Rule
 
-Snapshots are IMMUTABLE. They preserve who the student was.
+Snapshots are IMMUTABLE. They preserve who the user was.
 Later learning does not modify snapshots.
 
 ---
@@ -851,39 +851,39 @@ How evaluators interact with the SKILLS module.
 ### Pillar Queries
 
 **WRITE capability:**
-> "How well does [student] write?"
+> "How well does [user] write?"
 > Returns: Levels across vocabulary, complexity, style, expression, logic
 
 **READ capability:**
-> "How well does [student] comprehend?"
+> "How well does [user] comprehend?"
 > Returns: Levels across comprehension, inference, vocabulary acquisition
 
 **IMAGINE capability:**
-> "How creative/original is [student]?"
+> "How creative/original is [user]?"
 > Returns: Levels across originality, reasoning, flexibility, elaboration
 
 ### Cross-Pillar Queries
 
 **Overall profile:**
-> "What are [student]'s cognitive strengths?"
+> "What are [user]'s cognitive strengths?"
 > Returns: Pillar comparison, strongest dimensions
 
 **Demonstration:**
-> "Show me how [student] would explain [topic]"
-> Returns: Twin demonstrates in student's style (WRITE + SELF)
+> "Show me how [user] would explain [topic]"
+> Returns: Twin demonstrates in user's style (WRITE + SELF)
 
 **Trajectory:**
-> "How has [student]'s writing developed?"
+> "How has [user]'s writing developed?"
 > Returns: WRITE pillar growth over time, milestones, struggles
 
 **Gap analysis:**
-> "Where should [student] focus development?"
+> "Where should [user] focus development?"
 > Returns: Lowest dimensions, limited-evidence areas, struggles
 
 ### Example Query Responses
 
 ```
-Query: "How well does [student] write?"
+Query: "How well does [user] write?"
 
 WRITE CAPABILITY PROFILE
 
@@ -996,7 +996,7 @@ The linguistic fingerprint lives in SELF but is derived from WRITE.
 
 ### Query Requiring Both
 
-> "Write a journal entry the way [student] would."
+> "Write a journal entry the way [user] would."
 
 Uses: SELF.linguistic_style (derived from WRITE) + SELF.interests + WRITE.topics
 

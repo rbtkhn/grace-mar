@@ -63,7 +63,7 @@ The reading list is the systematic record of content consumed.
 ```typescript
 interface ReadingList {
   id: string;
-  student_id: string;
+  user_id: string;
   
   entries: ReadingEntry[];
   
@@ -99,7 +99,7 @@ interface ReadingEntry {
   // Evidence
   evidence_tier: 1 | 2 | 3 | 4 | 5;
   evidence: {
-    how_added: 'student_report' | 'parent_report' | 'observed' | 'verified';
+    how_added: 'user_report' | 'parent_report' | 'observed' | 'verified';
     attestations: Attestation[];
     activities: string[];        // Activity IDs where this was discussed
   };
@@ -178,7 +178,7 @@ The writing log is the systematic record of content produced.
 ```typescript
 interface WritingLog {
   id: string;
-  student_id: string;
+  user_id: string;
   
   entries: WritingEntry[];
   
@@ -377,7 +377,7 @@ interface MediaEntry {
   
   // Evidence
   evidence_tier: 1 | 2 | 3 | 4 | 5;
-  how_added: 'survey' | 'student_report' | 'parent_report' | 'activity_mention';
+  how_added: 'survey' | 'user_report' | 'parent_report' | 'activity_mention';
   
   // SELF implications
   self_signals: {
@@ -411,7 +411,7 @@ The creation log is the systematic record of creative output.
 ```typescript
 interface CreationLog {
   id: string;
-  student_id: string;
+  user_id: string;
   
   entries: CreationEntry[];
   
