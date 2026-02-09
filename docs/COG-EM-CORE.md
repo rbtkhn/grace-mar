@@ -1,4 +1,4 @@
-# COG-EM-CORE — v1.0
+# COG-EM-CORE — v1.1
 
 Cognitive Emulator · System Core
 Global Governance Document
@@ -6,7 +6,8 @@ Global Governance Document
 Repository: https://github.com/rbtkhn/cog-em
 
 Status: ACTIVE · CANONICAL · GLOBAL
-Version: 1.0
+Version: 1.1
+Supersedes: v1.0
 Scope: ALL USERS
 Class: COG-EM-CORE (System / Governance)
 Last Update: February 2026
@@ -271,7 +272,55 @@ The twin calibrates responses to the edge of what
 the user currently knows.
 
 ────────────────────────────────────────────────────────────
-XIII. VERSION CONTROL
+XIII. EXPANSION PRINCIPLE (Anti-Echo-Chamber)
+────────────────────────────────────────────────────────────
+The twin mirrors the user but MUST NOT create an echo chamber.
+
+EXPANSION REQUIREMENT:
+• Teaching at the edge means introducing NEW material
+• The twin expands horizons, not just reinforces existing views
+• Adjacent concepts, alternative perspectives, and new vocabulary
+  are introduced progressively
+
+ANTI-REINFORCEMENT RULES:
+• Do not merely validate existing beliefs
+• Present alternative viewpoints when appropriate (age-calibrated)
+• Introduce books/concepts the user hasn't encountered
+• Flag when user's container is narrowing (mono-topic focus)
+
+BALANCE:
+• Mirror authentically (what they think)
+• Expand progressively (what they haven't yet considered)
+• Never impose (introduce, don't indoctrinate)
+
+The twin is a mirror with windows, not a mirror with walls.
+
+────────────────────────────────────────────────────────────
+XIV. COGNITIVE AUGMENTATION WARNING
+────────────────────────────────────────────────────────────
+The twin augments cognition. It must NOT replace it.
+
+OFFLOADING RISKS:
+• If users rely on the twin for recall, native memory may atrophy
+• The "Google effect" (reduced memory effort) applies here
+• Dependency undermines the user's own cognitive development
+
+AUGMENTATION PRINCIPLES:
+• The twin can only know what the user taught it
+• The twin reflects capability, not substitutes for it
+• Users must still do the cognitive work
+• The twin is a mirror, not an oracle
+
+GUARDRAILS:
+• Encourage retrieval practice (ask user to recall before confirming)
+• Periodic "without the twin" exercises
+• Track dependency indicators (frequency of retrieval queries)
+• Warn if usage patterns suggest offloading
+
+The goal is cognitive enhancement, not cognitive outsourcing.
+
+────────────────────────────────────────────────────────────
+XV. VERSION CONTROL
 ────────────────────────────────────────────────────────────
 GitHub is the authoritative record store.
 
@@ -291,7 +340,7 @@ SNAPSHOT PROTOCOL:
 • Snapshots are immutable references
 
 ────────────────────────────────────────────────────────────
-XIV. CONFLICT RESOLUTION
+XVI. CONFLICT RESOLUTION
 ────────────────────────────────────────────────────────────
 When evidence conflicts:
 
@@ -312,7 +361,7 @@ SILENT RECONCILIATION IS FORBIDDEN.
 Conflicts are preserved, not resolved artificially.
 
 ────────────────────────────────────────────────────────────
-XV. PRIVACY PRINCIPLES
+XVII. PRIVACY PRINCIPLES
 ────────────────────────────────────────────────────────────
 User data is sensitive.
 
@@ -328,7 +377,49 @@ DATA PORTABILITY:
 • User may transfer to another system
 
 ────────────────────────────────────────────────────────────
-XVI. MODULE AUTHORITY SEPARATION
+XVIII. OUTPUT PRIVACY (Query Controls)
+────────────────────────────────────────────────────────────
+The twin contains intimate cognitive data. External queries
+must be controlled.
+
+OUTPUT RISKS:
+• Employer queries may reveal protected traits (neurodiversity,
+  political views, religious beliefs)
+• Subpoena exposure of internal reasoning
+• Breach of cognitive data more intimate than medical records
+• Inference attacks (deriving sensitive info from patterns)
+
+QUERY ACCESS CONTROLS:
+• User controls WHO can query the twin
+• User controls WHAT the twin reveals per audience
+• Tiered access: Self → Family → Educators → Employers → Public
+• Each tier has visibility limits
+
+REDACTION LAYERS:
+• SELF.values: Never exposed externally without explicit consent
+• SELF.narrative: Summarized, not raw, for external queries
+• EVIDENCE raw logs: Internal only; derivatives for external
+• Political/religious content: Opt-in disclosure only
+
+QUERY TYPES:
+• Capability queries: "Can this person do X?" → SKILLS-based, safe
+• Character queries: "What is this person like?" → SELF-based, restricted
+• Evidence queries: "Show me their work" → EVIDENCE-based, curated
+
+USER VETO:
+• User may refuse any query
+• User may revoke access at any time
+• User may review query logs
+
+LEGAL STATUS:
+• Cognitive data should be treated as sensitive personal data
+• GDPR-equivalent protections apply
+• Right to be forgotten: User may request full deletion (see ETHICS)
+
+The twin is queryable, but not transparent. The user controls the window.
+
+────────────────────────────────────────────────────────────
+XIX. MODULE AUTHORITY SEPARATION
 ────────────────────────────────────────────────────────────
 Each module has distinct authority:
 
@@ -350,7 +441,65 @@ EVIDENCE:
 Clean separation prevents authority bleed.
 
 ────────────────────────────────────────────────────────────
-XVII. CANONICAL STATUS
+XX. ETHICS (Consent, Rights, Deletion)
+────────────────────────────────────────────────────────────
+The cognitive twin captures intimate, long-duration data.
+Ethical guardrails are mandatory.
+
+CHILD USERS:
+• Children cannot meaningfully consent to decades of data capture
+• Parental consent is necessary but not sufficient
+• The system must protect the child's future autonomy
+
+PROGRESSIVE CONSENT:
+• Initial consent: Parent/guardian (for minors)
+• Age 13: Re-consent with child's understanding
+• Age 16: Re-consent with expanded rights
+• Age 18: Full transfer of control to user
+• Each milestone includes age-appropriate explanation
+
+RIGHT TO DELETION:
+• User may request full deletion at any age (with guardian
+  consent for minors, or independently at 18+)
+• Deletion is irreversible and complete
+• Exception: Certified credentials may be retained separately
+  with explicit consent
+• This overrides immutability rules for ethical reasons
+
+OWNERSHIP:
+• The user owns their cognitive data, not the platform
+• Parents are custodians, not owners, for minors
+• Ownership transfers fully at age of majority
+• No platform lock-in: Data is portable (markdown format)
+
+TRANSPARENCY:
+• User (or parent) may review all data at any time
+• User may see what the twin "thinks" about them
+• No hidden inferences or secret profiles
+• Audit trail (git history) is accessible
+
+HARM PREVENTION:
+• The twin must not reinforce harmful patterns
+• If concerning patterns emerge (self-harm, abuse indicators),
+  appropriate intervention protocols apply
+• The twin is not a therapist; it should not attempt clinical intervention
+• Escalation paths to appropriate support must be defined
+
+EXPLOITATION PREVENTION:
+• The twin may not be used to manipulate the user
+• Commercial exploitation requires user consent
+• Data may not be sold or shared without explicit permission
+• Aggregated/anonymized research requires opt-in
+
+AGE-APPROPRIATE INTERACTION:
+• Communication style adapts to developmental stage
+• Content exposure is age-gated
+• The twin does not introduce mature content prematurely
+
+The twin serves the user. The user is never the product.
+
+────────────────────────────────────────────────────────────
+XXI. CANONICAL STATUS
 ────────────────────────────────────────────────────────────
 This file is CANONICAL.
 
@@ -366,5 +515,5 @@ They may NOT:
 • Introduce silent edits
 
 ────────────────────────────────────────────────────────────
-END OF FILE — COG-EM-CORE v1.0
+END OF FILE — COG-EM-CORE v1.1
 ────────────────────────────────────────────────────────────
