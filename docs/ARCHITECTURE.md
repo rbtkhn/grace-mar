@@ -1,5 +1,9 @@
 # cog-em Architecture
 
+**Governed by**: [COG-EM-CORE v1.0](COG-EM-CORE.md)
+
+---
+
 ## Core Principle
 
 The cognitive emulator separates **who the user is** from **what the user knows**.

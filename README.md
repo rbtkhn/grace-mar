@@ -38,6 +38,7 @@ See [Architecture](docs/ARCHITECTURE.md) for full details.
 cog-em/
 ├── README.md                    # This file
 ├── docs/
+│   ├── COG-EM-CORE.md          # System core governance (canonical)
 │   ├── ARCHITECTURE.md         # SELF + SKILLS module design
 │   ├── SELF-TEMPLATE.md        # SELF module governance
 │   ├── SKILLS-TEMPLATE.md      # SKILLS module governance
@@ -63,6 +64,7 @@ cog-em/
 
 ## Quick Links
 
+- [COG-EM-CORE](docs/COG-EM-CORE.md) — **System core governance (canonical)**
 - [Architecture](docs/ARCHITECTURE.md) — SELF + SKILLS module design
 - [SELF Template](docs/SELF-TEMPLATE.md) — Personality module governance
 - [SKILLS Template](docs/SKILLS-TEMPLATE.md) — Capability module governance
