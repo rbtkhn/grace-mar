@@ -231,4 +231,213 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 
 ---
 
+## Session 005 — Seed Phase 5: Writing Samples & Linguistic Voice
+
+**Date:** 2026-02-15
+**Participants:** Parent (reporting + administering), Grace-Mar/Abby (writing)
+**Method:** Child writes from memory, parent uploads, assistant analyzes + asks child questions
+**Evidence tier:** Tier 4 (OBSERVED — actual handwritten artifact)
+
+### Writing Sample 1: Madeline Retell
+
+**Source:** Madeline by Ludwig Bemelmans — opening lines
+**Condition:** Written from memory (confirmed by child, Q1)
+**Word count:** ~40
+
+**Raw transcription (preserving phonetic spelling):**
+"In an old house in paris that was caverd with vins lived tuelv little grils the smallest won was Maedlin and us because shes not afraid of mice and to the tigere in the s madlin gust side boo hoo."
+
+**Child Q&A:**
+- Q1. From memory or looking at book? → A) From memory
+- Q2. "boo hoo" vs "pooh-pooh"? → A) Remembered it that way (not intentional)
+
+### Key Findings
+
+**Phonetic spelling CONFIRMED** (was "uncertain" from Phase 3):
+- caverd (covered), vins (vines), tuelv (twelve), grils (girls), won (one), gust (just)
+- Two spellings of "Madeline": Maedlin, madlin — actively encoding
+
+**Literary recall strong:**
+- ~40 words of verse reconstructed from memory
+- Key elements intact: Paris, vines, twelve girls, smallest, Madeline, mice, tiger, zoo
+- Paraphrases verse → prose ("and us because shes not afraid")
+
+**Writing structure:**
+- One continuous run-on sentence — no periods or sentence breaks
+- "and" as primary connector
+- Mix of upper/lowercase
+- Confident handwriting, not hesitant
+
+**Sound substitution: "boo hoo" for "pooh-pooh":**
+- Remembered, not intentional
+- Similar phonetic shape (rhyming bisyllable starting with labial consonant)
+- Interesting emotional shift: brave dismissal → emotional expression
+- Not a comprehension error — a memory-level transformation
+
+### Updates Made
+
+- EVIDENCE.md — WRITING LOG entry WRITE-0001 with full analysis
+- EVIDENCE.md — Writing Profile initialized
+- SKILLS.md — WRITE container → ACTIVE, phonetic spelling confirmed, edge refined
+- SKILLS.md — READ container → ACTIVE, comprehension upgraded to 3
+- SELF.md — Linguistic Style section initialized with first sample
+- Artifact stored: WRITE-0001-madeline-retell.png
+
+### Writing Sample 2: Earth Layers (original writing)
+
+**Source:** Child's own — wrote about what she learned in science class
+**Condition:** Written at home, parent-prompted ("write something"), child chose topic
+**Word count:** ~48
+
+**Raw transcription:**
+"today I lernd about the Earth and the lay ers of the Earth the names of them are crust, mantle and outer core, Inner core and cove. at scool my favrit subjet is saience because I like it I like lerning about space and I like lisning to storece"
+
+**Child Q&A:**
+- Q1. School or home? → B) At home
+- Q2. Someone asked or just wanted to? → "Asked to write it for this seed phase" (parent prompted, child chose content)
+- Q3. Why Earth layers? → A) "We just learned about it and I thought it was cool"
+- Q4. Favorite one thing (science/space/stories)? → C) Listening to stories
+
+**Key Findings:**
+- First ORIGINAL writing (not retell) — massive milestone
+- Three writing modes in one piece: informational report → personal opinion → interest list
+- Uses "because" as reasoning connector — first seen in writing
+- Academic vocabulary (crust, mantle, outer core, inner core) used correctly
+- When forced to pick one, stories > space > science — stories are the deep substrate
+- Still no sentence boundaries (run-on), but logical structure emerging
+
+**Updates made:**
+- EVIDENCE.md — WRITING LOG entry WRITE-0002 with full analysis
+- EVIDENCE.md — Writing Profile updated (2 entries, 88 words, milestones)
+- SKILLS.md — WRITE container updated (original writing confirmed, expression level 2, logic level 2)
+- SELF.md — Linguistic Style updated with second sample + tone
+- SELF.md — Interests: "Stories" upgraded to intensity 5, science added, space confirmed
+- Artifact stored: WRITE-0002-earth-layers-science.png
+
+### Writing Sample 3: Personal journal (swimming, food, movie)
+
+**Source:** Child's own — three self-chosen topics
+**Condition:** Written at home, parent-prompted ("write something"), child chose all topics independently
+**Word count:** ~43
+
+**Raw transcription:**
+"I used to be afraid of swimming because the water was deep. my faverit food is spaghetti and pissa. The next movie I want to wach is K pop demon huters because the costumes are cool."
+
+**Child Q&A:**
+- Q1. K-Pop Demon Hunters? → Parent confirmed: Netflix animated film, already watched, wants to rewatch
+- Q2. Still afraid of swimming? → A) Not afraid anymore
+- Q3. Topic choice? → A) Chose all three topics herself
+
+**STRUCTURAL BREAKTHROUGH:**
+- **First use of sentence boundaries** — three periods, three discrete sentences
+- **Three tenses in one piece** — past ("I used to be"), present ("my faverit food is"), future ("I want to wach")
+- **"Because" habitual** — used twice in one piece
+- **Self-reflection** — "I used to be afraid" = names a fear she overcame = growth awareness
+
+**New data points:**
+- K-Pop Demon Hunters — new favorite movie (strong female leads, costumes, action)
+- Favorite food: spaghetti and pizza
+- Overcame fear of swimming (deep water) — bravery value confirmed in her own words
+
+**Updates made:**
+- EVIDENCE.md — WRITING LOG entry WRITE-0003 with full analysis
+- EVIDENCE.md — Writing Profile updated (3 entries, 131 words, trajectory, milestones)
+- SKILLS.md — WRITE container updated (sentence boundaries, three tenses, complexity 3)
+- SELF.md — Linguistic Style updated with third sample
+- SELF.md — Preferences updated (K-Pop Demon Hunters, spaghetti, pizza)
+- Artifact stored: WRITE-0003-personal-journal.png
+
+### Phase 5 Summary — 3 writing samples analyzed
+
+**Writing trajectory (visible growth across 3 samples):**
+
+| Sample | Type | Words | Sentences | Periods | Tenses | "Because" |
+|--------|------|-------|-----------|---------|--------|-----------|
+| WRITE-0001 | Literary retell (Madeline) | 40 | 0 (run-on) | 0 | past | 0 |
+| WRITE-0002 | Original informational (Earth) | 48 | 0 (run-on, 3 segments) | 0 | present | 1 |
+| WRITE-0003 | Personal journal | 43 | 3 | 3 | past + present + future | 2 |
+
+**Milestones achieved in Phase 5:**
+1. Phonetic spelling CONFIRMED (was uncertain from Phase 3)
+2. First original writing captured
+3. Sentence boundaries arrived (periods)
+4. Past/present/future tenses in one piece
+5. "Because" established as habitual reasoning connector
+6. Self-reflection in writing ("I used to be afraid")
+7. Literary recall confirmed (40 words from memory)
+8. First self-reported interests in her own writing (science, space, stories)
+9. Stories confirmed as #1 interest (chose it over science and space)
+
+**Containers activated by Phase 5:**
+- WRITE: SEED → ACTIVE (3 Tier 4 artifacts)
+- READ: SEED → ACTIVE (retell confirms comprehension level 3)
+
+**New SELF data from Phase 5:**
+- Linguistic style initialized (3 samples)
+- Preferences: K-Pop Demon Hunters, spaghetti, pizza
+- Values: bravery confirmed in her own words ("I used to be afraid")
+- Interests: stories upgraded to intensity 5
+
+**What Phase 5 revealed about Grace-Mar's writing voice:**
+- "Because" is her word — she explains *why*, not just *what*
+- She writes about what excites her (Earth layers, K-Pop costumes)
+- She writes about who she's becoming ("I used to be afraid")
+- Three writing modes: literary retell, academic report, personal journal
+- Structure is advancing rapidly (run-on → segments → sentences)
+
+---
+
+## Session 006 — Seed Phase 6: Personality Deep-Dive (5 questions)
+
+**Date:** 2026-02-19
+**Participants:** Parent (administering), Grace-Mar/Abby (answering)
+**Method:** 5 targeted multiple-choice questions designed to fill personality gaps for twin replication
+**Evidence tier:** Tier 5 (REPORTED — child-reported via parent)
+
+### Questions & Answers
+
+| # | Question | Answer | Signal |
+|---|----------|--------|--------|
+| Q1 | What makes you laugh the hardest? | A — funny faces, someone doing something silly | Physical/slapstick humor. Body-oriented, not wordplay. |
+| Q2 | If your friend is crying, what do you do? | B — try to make them laugh or cheer them up | Active cheerer-upper. Intervenes with joy, not quiet comfort. |
+| Q3 | If you could have one superpower? | A — flying | Freedom and movement. Not connection or stealth. |
+| Q4 | When something is really hard, what happens in your head? | A — keep thinking about it until I get it | Grinder. Stays with the problem. Doesn't pivot or seek help first. |
+| Q5 | What's the best thing about being you? | B — I'm creative | Self-concept = CREATIVE. Not brave or kind (though she is both). |
+
+**Post-Q5 moment:** After answering, she felt bad about not choosing "kind" and wanted the AI to know. This is the strongest single evidence of kindness in the profile — only a kind person would worry about that answer. Creative is what she's proud of; kind is what she is.
+
+### Key Findings
+
+**Self-concept: creative.** This is the anchor. The twin should lead with creativity as identity. Bravery and kindness are things she does; creative is who she thinks she is.
+
+**Humor: physical.** Funny faces, silly behavior. Body-oriented, matching her kinesthetic personality (gymnastics, climbing, flying).
+
+**Empathy: active intervention.** She doesn't sit with sadness — she tries to transform it with joy. Same instinct as her caregiving art.
+
+**Problem-solving: grinder.** Stays with the problem. "I keep thinking about it until I get it." Inside of her persistence pattern.
+
+**Superpower: flying.** Freedom, movement, upward. The kid who put herself on the moon.
+
+### Updates Made
+
+- SELF.md — Personality section overhauled: self-concept, humor, empathy mode, problem-solving style, imagination, kinesthetic trait added
+- SELF.md — Evolution log updated
+
+---
+
+## SEEDING COMPLETE — ALL 6 PHASES
+
+| Phase | Focus | Method | Key Unlocks |
+|-------|-------|--------|-------------|
+| 1 | Identity + Preferences | Parent-reported survey | Name, age, favorites, interests baseline |
+| 2 | Personality + Behavior | 10 MC questions (child) | Traits, emotional patterns, social style |
+| 3 | Academic/Intellectual | 20 yes/no questions (parent) | READ/WRITE/MATH/CHINESE baselines, edges |
+| 4 | Creativity | 8 artwork analyses + child Q&A | IMAGINE container, artistic signatures, values |
+| 5 | Writing Voice | 3 writing samples + child Q&A | WRITE/READ activated, linguistic style, sentence milestones |
+| 6 | Personality Core | 5 targeted questions (child) | Self-concept, humor, empathy, problem-solving, imagination |
+
+**Profile status:** All containers have data. SELF, SKILLS, and EVIDENCE populated across 6 phases. Ready for first twin interaction.
+
+---
+
 END OF FILE — SESSION LOG PILOT-001

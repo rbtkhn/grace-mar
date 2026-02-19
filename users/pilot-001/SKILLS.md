@@ -12,37 +12,46 @@ Status: EMPTY
 ### READ Container
 
 ```yaml
-status: SEED (parent-reported, Tier 5)
+status: ACTIVE (first Tier 4 evidence: WRITE-0001 as retell)
 letters: yes (all 26)
 reads_words: yes
 reads_sentences: yes
 reads_pages: yes
 sounds_out_unfamiliar: yes
-retells_stories: yes
-vocabulary_level: 2      # estimated, pending WRITE samples
-comprehension_level: 2-3  # retells with main events, characters, plot
+retells_stories: yes     # CONFIRMED — WRITE-0001 retells Madeline from memory with high accuracy
+vocabulary_level: 2
+comprehension_level: 3    # UPGRADED — retell captures key elements, characters, sequence, and character traits (bravery)
 inference_level: null     # not yet assessed
-edge: "Longer independent text; early chapter books; inference questions"
+edge: "Longer independent text; early chapter books; inference questions; retelling with explicit sentence structure"
 gaps: []
-notes: "Strong reader for first grade. Collaborative reading preferred (Phase 2) despite independent capability."
+notes: "WRITE-0001 confirms strong literary recall — ~40 words of Madeline reconstructed from memory with key elements intact (setting, characters, traits, action). Captures meaning not just words — paraphrases verse into prose. Collaborative reading preferred (Phase 2) despite independent capability."
 ```
 
 ### WRITE Container
 
 ```yaml
-status: SEED (parent-reported, Tier 5)
+status: ACTIVE (3 samples — WRITE-0001, WRITE-0002, WRITE-0003)
 writes_name: yes
 writes_words: yes
 writes_sentences: yes
-phonetic_spelling: uncertain  # EDGE
-vocabulary_level: 2      # estimated, pending samples
-complexity_level: 2      # writes sentences; longer compositions not confirmed
-style_level: null        # needs actual writing samples
-expression_level: null   # needs actual writing samples
-logic_level: null        # needs actual writing samples
-edge: "Phonetic/invented spelling; writing beyond single sentences; connectors (because, so, then)"
-gaps: []
-notes: "Can produce sentences independently. Phonetic encoding uncertain — key edge to test."
+writes_multiple_sentences: YES  # CONFIRMED by WRITE-0003 — three distinct sentences with periods
+phonetic_spelling: YES     # CONFIRMED (decreasing frequency across samples)
+writes_extended_text: yes  # 40-48 word pieces
+writes_original: yes       # CONFIRMED by WRITE-0002 + WRITE-0003
+uses_periods: YES          # NEW — WRITE-0003 has 3 periods (was absent in 0001/0002)
+uses_because: YES          # habitual — 3 uses across 2 samples
+uses_past_tense: YES       # "I used to be afraid" — WRITE-0003
+uses_future_tense: YES     # "I want to wach" — WRITE-0003
+vocabulary_level: 2-3      # academic + personal; "spaghetti" spelled correctly
+complexity_level: 3        # UPGRADED — three sentences, three topics, three tenses
+style_level: 2-3           # sentence boundaries, "because" habitual, varied openers
+expression_level: 2-3      # personal reflection ("I used to be afraid"), opinions, preferences
+logic_level: 2-3           # "because" + causal reasoning, past→present→future structure
+edge: "Capitals at sentence start (inconsistent); variety of connectors (then, so, but, also); narrative/story writing (fiction); longer compositions"
+gaps:
+  - "No fiction/narrative writing yet — has retell, informational, and journal"
+  - "Capitals at sentence start inconsistent (2/3 in WRITE-0003)"
+notes: "Three samples show rapid progression: run-on retell (0001) → run-on original with segments (0002) → sentences with periods (0003). WRITE-0003 is a breakthrough — periods, three tenses (past/present/future), self-reflection. 'Because' is habitual (3 uses). Phonetic errors decreasing. Next: fiction/narrative writing, consistent capitalization."
 ```
 
 ### IMAGINE Container

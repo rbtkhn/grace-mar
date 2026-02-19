@@ -48,42 +48,265 @@ vocabulary_acquired: []
 Journals, stories, all text produced.
 
 ```yaml
-entries: []
+entries:
+  - id: WRITE-0001
+    type: retell (literary)
+    title: "Madeline retelling — from memory"
+    created_at: 2026-02-15
+    word_count: 40
+    image_file: artifacts/WRITE-0001-madeline-retell.png
+    evidence_tier: 4  # OBSERVED — actual handwritten artifact
 
-# Example entry format:
-# - id: WRITE-0001
-#   activity_id: ACT-0001
-#   type: journal
-#   created_at: 2026-02-XX
-#   word_count: 54
-#   full_text: "..."
-#   analysis:
-#     unique_words: 42
-#     vocabulary_level: 2
-#     complexity_score: 2
-#     tone: enthusiastic
-#     topics: [play, friends, nature]
-#   self_signals:
-#     linguistic_markers: ["really fun", "cool"]
-#     interests: [outdoor play, nature]
+    full_text: "In an old house in paris that was caverd with vins lived tuelv little grils the smallest won was Maedlin and us because shes not afraid of mice and to the tigere in the s madlin gust side boo hoo."
+
+    decoded_text: "In an old house in Paris that was covered with vines lived twelve little girls the smallest one was Madeline and us because she's not afraid of mice and to the tiger in the [zoo] Madeline just said boo hoo."
+
+    source_text: "Madeline by Ludwig Bemelmans — opening lines, reconstructed from memory (confirmed by child)"
+
+    analysis:
+      unique_words: 33
+      vocabulary_level: 2
+      complexity_score: 2
+      tone: narrative (literary retell)
+      topics: [Madeline, Paris, bravery, animals]
+
+      spelling:
+        correct: [in, an, old, house, paris, that, was, with, lived, little, the, smallest, and, because, not, afraid, of, mice, to, side]
+        phonetic: [caverd=covered, vins=vines, tuelv=twelve, grils=girls, won=one, Maedlin/madlin=Madeline, tigere=tiger, gust=just]
+        phonetic_spelling_confirmed: true  # RESOLVES Phase 3 Q10 uncertainty
+        patterns:
+          - "Drops silent e: vins (vines), caverd (covered)"
+          - "Homophone confusion: won (one)"
+          - "Letter swap: grils (girls) — common age 6"
+          - "g/j substitution: gust (just)"
+          - "Two spellings of same word: Maedlin, madlin — actively encoding"
+
+      structure:
+        sentences: 1  # One continuous run-on — no periods or breaks
+        connectors: ["and", "because", "and to"]
+        flow: "Stream — connected by 'and', no sentence boundaries. Typical for age."
+
+      literary_recall:
+        source_accuracy: "High — captures key elements (house, Paris, vines, twelve girls, smallest, Madeline, not afraid, mice, tiger, zoo)"
+        omissions: ["in two straight lines", "she loved winter snow and ice"]
+        substitutions: ["boo hoo for pooh-pooh (remembered that way, not intentional)"]
+        paraphrasing: ["'and us because shes not afraid' — restructured from verse to prose"]
+
+      handwriting:
+        legibility: good
+        line_tracking: mostly on lines
+        case: mix of upper and lowercase
+        effort: confident, not hesitant
+        paper: lined
+
+    self_signals:
+      linguistic_markers: ["and" as primary connector, stream-of-consciousness flow, no sentence breaks]
+      interests: [Madeline — chose this story unprompted]
+      personality: "Chose story about the smallest girl who isn't afraid of anything. Resonates with her values (bravery, kindness)."
+      read_signal: "Retained ~40 words of literary text from memory with high accuracy. Strong recall."
+      write_signal: "Phonetic spelling confirmed. Can produce extended text from memory. Run-on structure typical for age."
+
+    child_commentary:
+      q1_from_memory: "A — from memory, just remembered it"
+      q2_boo_hoo: "A — remembered it that way (not intentional change)"
+
+  - id: WRITE-0002
+    type: original (informational + personal)
+    title: "Earth's layers — what I learned at school"
+    created_at: 2026-02-19
+    word_count: 48
+    image_file: artifacts/WRITE-0002-earth-layers-science.png
+    evidence_tier: 4  # OBSERVED — actual handwritten artifact
+
+    full_text: "today I lernd about the Earth and the lay ers of the Earth the names of them are crust, mantle and outer core, Inner core and cove. at scool my favrit subjet is saience because I like it I like lerning about space and I like lisning to storece"
+
+    decoded_text: "Today I learned about the Earth and the layers of the Earth. The names of them are crust, mantle and outer core, inner core and [cove?]. At school my favorite subject is science because I like it. I like learning about space and I like listening to stories."
+
+    context: "Parent asked child to write something for seed phase. Child chose topic independently — wrote about Earth science lesson from school."
+
+    analysis:
+      unique_words: 35
+      vocabulary_level: 2-3
+      complexity_score: 3
+      tone: informational → personal
+      topics: [Earth science, layers of Earth, school, science, space, stories]
+
+      spelling:
+        correct: [today, I, about, the, Earth, and, lay, ers, of, names, them, are, crust, mantle, outer, core, Inner, at, my, is, it, like, to]
+        phonetic: [lernd=learned, scool=school, favrit=favorite, subjet=subject, saience=science, lerning=learning, lisning=listening, storece=stories, cove=?]
+        patterns:
+          - "Drops medial vowels: lernd (learned), favrit (favorite)"
+          - "Simplifies consonant clusters: lisning (listening)"
+          - "Phonetic mapping: saience (science), subjet (subject)"
+          - "Word splitting: lay ers (layers) — segmenting syllables"
+          - "Academic vocabulary attempted: crust, mantle, outer core, inner core"
+
+      structure:
+        sentences: 0 formal (no periods)  # Still stream/run-on
+        logical_segments: 3
+        segment_1: "Informational report — what she learned (Earth layers)"
+        segment_2: "Personal opinion — favorite subject + why"
+        segment_3: "Interest list — space + stories"
+        connectors: ["and", "because", "and"]
+        flow: "Three-part structure emerging even without punctuation"
+        advancement_from_WRITE_0001: "Uses 'because' to give a reason. Shifts from retell → opinion → list. More structurally complex despite still being run-on."
+
+      content_analysis:
+        mode_1_informational: "Reports Earth layer names accurately (crust, mantle, outer core, inner core) — academic recall"
+        mode_2_opinion: "'my favrit subjet is saience because I like it' — first personal opinion in writing"
+        mode_3_interests: "'I like lerning about space and I like lisning to storece' — lists passions"
+        topic_choice: "Given free choice, wrote about science — confirms school-mode interest pattern from artwork"
+        academic_vocabulary: "Uses scientific terms (crust, mantle, outer core, inner core) correctly in context"
+
+      handwriting:
+        legibility: good
+        line_tracking: on lines
+        case: mostly lowercase, capitals for Earth and Inner
+        effort: confident, natural
+        paper: lined notebook
+
+    self_signals:
+      linguistic_markers: ["I like" as repeated opener (3x), "because" as reasoning connector, "and" as list connector]
+      interests: [science, Earth science, space, stories — confirmed in her own words]
+      personality: "Writes about learning with enthusiasm. Connects academic content to personal interest without prompting."
+      write_signal: "First original writing. Three logical segments (report, opinion, list). 'Because' connector = reasoning. Still no sentence boundaries."
+      key_insight: "When forced to pick ONE favorite: stories > space > science. Stories are the deep substrate; science and space are current excitements."
+
+    child_commentary:
+      q1_where_written: "B — at home"
+      q2_prompted: "Parent asked her to write something (for seed phase)"
+      q3_topic_choice: "A — chose Earth layers because 'we just learned about it and I thought it was cool'"
+      q4_favorite_one: "C — listening to stories is absolute favorite (over science and space)"
+
+  - id: WRITE-0003
+    type: original (personal journal)
+    title: "Swimming, food, movie — personal facts"
+    created_at: 2026-02-19
+    word_count: 43
+    image_file: artifacts/WRITE-0003-personal-journal.png
+    evidence_tier: 4  # OBSERVED — actual handwritten artifact
+
+    full_text: "I used to be afraid of swimming because the water was deep. my faverit food is spaghetti and pissa. The next movie I want to wach is K pop demon huters because the costumes are cool."
+
+    decoded_text: "I used to be afraid of swimming because the water was deep. My favorite food is spaghetti and pizza. The next movie I want to watch is K-Pop Demon Hunters because the costumes are cool."
+
+    context: "Parent asked child to write something (for seed phase). Child chose all three topics independently. No prompts or topic list given."
+
+    analysis:
+      unique_words: 34
+      vocabulary_level: 2-3
+      complexity_score: 3
+      tone: personal/reflective
+      topics: [swimming, fear overcome, food preferences, movies, K-Pop Demon Hunters]
+
+      spelling:
+        correct: [I, used, to, be, afraid, of, swimming, because, the, water, was, deep, my, food, is, spaghetti, and, next, movie, want, cool, are, K, pop, demon]
+        phonetic: [faverit=favorite, pissa=pizza, wach=watch, huters=hunters]
+        patterns:
+          - "Fewer phonetic errors than WRITE-0001/0002 — improving"
+          - "Handles 'spaghetti' correctly — impressive for age 6"
+          - "Double-s for z: pissa (pizza)"
+          - "Drops 'tc' cluster: wach (watch)"
+
+      structure:
+        sentences: 3  # *** FIRST USE OF SENTENCE BOUNDARIES ***
+        periods: 3    # After each sentence
+        capitals: 2 of 3 sentences start with capitals (I, The — but 'my' is lowercase)
+        topics_per_sentence: 1 each (swimming, food, movie)
+        connectors: ["because" x2]
+        flow: "Three discrete sentences, each self-contained. MAJOR structural advancement."
+        advancement_from_WRITE_0002: "From run-on stream → distinct sentences with periods. From single topic → three independent topics. Sentence boundaries have arrived."
+
+      content_analysis:
+        sentence_1_past_reflection: "'I used to be afraid of swimming because the water was deep' — past tense, self-reflection, names the reason. Implies she overcame the fear."
+        sentence_2_preference: "'my faverit food is spaghetti and pissa' — present tense, personal preference."
+        sentence_3_future_intent: "'The next movie I want to wach is K pop demon huters because the costumes are cool' — future tense, anticipation. Note: she already watched it, wants to rewatch."
+        temporal_range: "Past (used to) → Present (is) → Future (want to) — all three in one piece. Remarkable temporal range for age 6."
+        because_usage: "Used twice — becoming habitual reasoning connector"
+        fear_narrative: "Overcame fear of swimming (deep water). Chose to write about it — growth awareness. Connects to bravery value."
+
+      handwriting:
+        legibility: good
+        line_tracking: on lines
+        case: mix — mostly lowercase with occasional capitals
+        spacing: wider, more deliberate than WRITE-0001/0002
+        effort: confident
+        paper: lined notebook
+
+    self_signals:
+      linguistic_markers: ["because" as habitual reasoning word (2x), sentence boundaries emerging, past/present/future range]
+      interests: [K-Pop Demon Hunters — new, costumes/visual aesthetic]
+      personality: "Chose to write about overcoming a fear. Growth mindset visible in writing. Self-aware about past vs present self."
+      preferences_new: [spaghetti, pizza, K-Pop Demon Hunters]
+      values: "Bravery confirmed — she names a fear she overcame. Visual aesthetic — drawn to costumes."
+
+    child_commentary:
+      q1_kpop: "Parent clarified — K-Pop Demon Hunters (Netflix animated film). Already watched it, wants to rewatch."
+      q2_still_afraid: "A — not afraid anymore (overcame it)"
+      q3_topic_choice: "A — chose all three topics herself, no prompts"
 ```
 
 ### Writing Profile
 
 ```yaml
-total_entries: 0
-total_words: 0
+total_entries: 3
+total_words: 131
 vocabulary_profile:
-  unique_words: 0
-  level: null
+  unique_words: 72
+  level: 2-3
+  phonetic_spelling: confirmed (decreasing frequency — WRITE-0003 has fewest errors)
+  notable_words: [covered, vines, twelve, smallest, afraid, tiger, crust, mantle, science, favorite, learning, spaghetti, swimming, costumes, demon, hunters]
+  academic_vocabulary: [crust, mantle, outer core, inner core]
+  impressive_for_age: [spaghetti (spelled correctly), swimming (correct), afraid (correct)]
 style_profile:
-  avg_sentence_length: null
-  common_openers: []
-  verbal_habits: []
+  avg_sentence_length: 14  # WRITE-0003 avg = 14 words/sentence (3 sentences)
+  common_openers: ["In", "today I", "I like", "I used to", "The next"]
+  verbal_habits: ["because" as habitual reasoning connector (3 uses across 2 samples), "and" for listing]
+  structure: "TRANSITIONING — from run-on (WRITE-0001, 0002) to sentence boundaries (WRITE-0003)"
 topic_profile:
-  recurring_topics: []
+  recurring_topics: [literary retell, science/Earth, space, stories, personal preferences, growth/overcoming]
+  self_chosen_topics:
+    - "Earth science — 'because we just learned about it and I thought it was cool'"
+    - "Swimming fear overcome, food preferences, K-Pop Demon Hunters — all self-chosen"
+writing_modes:
+  retell: "WRITE-0001 — literary retell from memory (Madeline)"
+  original_informational: "WRITE-0002 — reports what she learned at school (Earth layers)"
+  original_opinion: "WRITE-0002 — 'my favrit subjet is saience because I like it'"
+  original_list: "WRITE-0002 — lists interests (space, stories)"
+  personal_journal: "WRITE-0003 — three personal facts spanning past/present/future"
+  self_reflection: "WRITE-0003 — 'I used to be afraid' — names and reflects on growth"
+temporal_range:
+  past: "'I used to be afraid of swimming' (WRITE-0003)"
+  present: "'my faverit food is spaghetti and pissa' (WRITE-0003)"
+  future: "'The next movie I want to wach' (WRITE-0003)"
+  note: "All three tenses in one piece — remarkable for age 6"
 growth:
-  milestones: []
+  milestones:
+    - date: 2026-02-15
+      type: first_writing_sample
+      description: "First captured writing — 40-word literary retell from memory (Madeline)"
+    - date: 2026-02-15
+      type: phonetic_spelling_confirmed
+      description: "Phonetic spelling confirmed — resolves Phase 3 uncertainty"
+    - date: 2026-02-19
+      type: first_original_writing
+      description: "First original/personal writing — 48 words about Earth layers + personal interests"
+    - date: 2026-02-19
+      type: because_connector
+      description: "First use of 'because' in writing — reasoning connector"
+    - date: 2026-02-19
+      type: opinion_writing
+      description: "First personal opinion in writing — 'my favrit subjet is saience because I like it'"
+    - date: 2026-02-19
+      type: sentence_boundaries
+      description: "FIRST USE OF PERIODS — three distinct sentences in WRITE-0003. Major structural milestone."
+    - date: 2026-02-19
+      type: temporal_range
+      description: "Past/present/future tenses all used in one piece (WRITE-0003)"
+    - date: 2026-02-19
+      type: self_reflection
+      description: "'I used to be afraid' — first written self-reflection on personal growth"
+  trajectory: "WRITE-0001 (retell, run-on) → WRITE-0002 (original, run-on with segments) → WRITE-0003 (original, sentences with periods, three tenses). Clear upward trajectory in structure and complexity."
 ```
 
 ---
@@ -542,7 +765,7 @@ attestations: []
 ```yaml
 total_activities: 0
 total_read_entries: 0
-total_write_entries: 0
+total_write_entries: 3
 total_create_entries: 8
 total_media_entries: 8
 total_attestations: 0
