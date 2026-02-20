@@ -461,7 +461,7 @@ entries:
       colors_mood: happy, playful, peaceful
 
     child_commentary:
-      q1_abby: Parent clarified — Abby is the child's real name, Grace-Mar is the cognitive twin
+      q1_abby: Parent clarified — Abby is the child's real name, Grace-Mar is the cognitive fork
       q2_octopus: "A and B — swimming around happy AND playing with the fish"
       q3_source: "B — I made it up, it's my own ocean"
       q4_red_creature: "A — a crab"

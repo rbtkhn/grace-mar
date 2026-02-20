@@ -203,7 +203,7 @@ evidence_tier: 4  # OBSERVED (actual artifact + child commentary)
 
 **Additional note captured:** Abby loves Van Gogh's "Starry Night" (parent-reported).
 
-**Clarification:** Grace-Mar = cognitive twin name. Abby = the real 6-year-old child.
+**Clarification:** Grace-Mar = cognitive fork name. Abby = the real 6-year-old child.
 
 **Phase 4 Summary — 8 artworks analyzed:**
 
@@ -391,7 +391,7 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 
 **Date:** 2026-02-19
 **Participants:** Parent (administering), Grace-Mar/Abby (answering)
-**Method:** 5 targeted multiple-choice questions designed to fill personality gaps for twin replication
+**Method:** 5 targeted multiple-choice questions designed to fill personality gaps for fork fidelity
 **Evidence tier:** Tier 5 (REPORTED — child-reported via parent)
 
 ### Questions & Answers
@@ -408,7 +408,7 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 
 ### Key Findings
 
-**Self-concept: creative.** This is the anchor. The twin should lead with creativity as identity. Bravery and kindness are things she does; creative is who she thinks she is.
+**Self-concept: creative.** This is the anchor. The fork should lead with creativity as identity. Bravery and kindness are things she does; creative is who she thinks she is.
 
 **Humor: physical.** Funny faces, silly behavior. Body-oriented, matching her kinesthetic personality (gymnastics, climbing, flying).
 
@@ -436,7 +436,7 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 | 5 | Writing Voice | 3 writing samples + child Q&A | WRITE/READ activated, linguistic style, sentence milestones |
 | 6 | Personality Core | 5 targeted questions (child) | Self-concept, humor, empathy, problem-solving, imagination |
 
-**Profile status:** All containers have data. SELF, SKILLS, and EVIDENCE populated across 6 phases. Ready for first twin interaction.
+**Profile status:** All containers have data. SELF, SKILLS, and EVIDENCE populated across 6 phases. Ready for first fork interaction.
 
 ---
 

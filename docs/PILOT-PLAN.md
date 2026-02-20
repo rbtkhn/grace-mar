@@ -12,9 +12,9 @@
 | Goal | What We're Validating |
 |------|----------------------|
 | **Engagement** | Will a 6-year-old want to teach the system repeatedly? |
-| **Comprehension** | Does she understand the concept of "teaching" her twin? |
+| **Comprehension** | Does she understand the concept of "teaching" the fork? |
 | **Learning capture** | Does the system accurately reflect what she knows? |
-| **Recognition** | Can parent recognize the student through the twin's responses? |
+| **Recognition** | Can parent recognize the student through the fork's responses? |
 | **Parent trust** | Does the parent see value and feel comfortable? |
 | **Interaction model** | What modalities work? (voice, drawing, typing, video) |
 | **Session rhythm** | How long? How often? What triggers engagement? |
@@ -26,23 +26,23 @@
 - Average session length (hypothesis: 5-15 min for 6-year-old)
 - Return rate (comes back voluntarily?)
 - Knowledge nodes created per week
-- Query accuracy (when parent asks twin, is it accurate?)
+- Query accuracy (when parent queries the fork, is it accurate?)
 
 **Qualitative:**
 - Does she enjoy it or treat it as a chore?
-- What does she call the twin? (naming = attachment)
+- What does she call the fork? (naming = attachment)
 - What does she want to teach? (follows curriculum or goes rogue?)
 - What frustrates her?
 - What delights her?
-- **Recognition test**: Does parent say "that sounds like her" when querying the twin?
+- **Recognition test**: Does parent say "that sounds like her" when querying the fork?
 
 ### MVP Scope
 
 **Include:**
 - Teaching interface (voice + simple text + drawing)
-- Simple "what twin knows" view
+- Simple "what the fork knows" view
 - Basic parent dashboard
-- Parent can ask twin questions
+- Parent can query the fork
 - Basic timestamps
 - iPad app
 
@@ -60,18 +60,18 @@
 - Introduce concept ("teaching your learning friend")
 - Preference survey (movies, books, places, etc.)
 - First teaching sessions (guided, with parent)
-- Name the twin (her choice)
+- Name the fork (her choice)
 
 **Week 3-4: Routine Building**
 - Establish session rhythm (after school? before bed?)
 - Expand to independent teaching (less parent involvement)
 - Test different modalities
-- First "query" test (parent asks twin something she taught)
+- First "query" test (parent queries the fork with something she taught)
 
 **Week 5-6: Depth Testing**
 - Can she teach something complex (multi-step)?
 - Does she remember what she taught?
-- Does the twin remember accurately?
+- Does the fork remember accurately?
 - What does she want to teach vs. what you expected?
 
 **Week 7-8: Assessment**
@@ -87,9 +87,9 @@
 | Sessions per week | ≥3 |
 | Voluntary engagement | >50% initiated by her |
 | Query accuracy | >80% |
-| **Recognition** | Parent says "that sounds like her" when querying twin |
+| **Recognition** | Parent says "that sounds like her" when querying the fork |
 | Parent sentiment | Positive; would recommend |
-| Child sentiment | Wants to continue; names the twin |
+| Child sentiment | Wants to continue; names the fork |
 | Retention | Still engaged in week 8 |
 
 ## Phase 2: Cohort Pilot (5 Additional Students)

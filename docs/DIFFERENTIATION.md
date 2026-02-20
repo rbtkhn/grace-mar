@@ -40,7 +40,7 @@
 
 **Competitors**: Individual experience.
 
-**cog-em**: Learning cohorts where twins can interact — debate, challenge, teach each other.
+**cog-em**: Learning cohorts where forks can interact — debate, challenge, teach each other.
 
 **Why it matters**:
 - Learning is social
@@ -64,7 +64,7 @@
 
 **Competitors**: Proprietary, locked-in.
 
-**cog-em**: Open standard for cognitive twin data. Export/import. Third-party tools.
+**cog-em**: Open standard for cognitive fork data. Export/import. Third-party tools.
 
 **Why it matters**:
 - GDPR compliance
@@ -76,7 +76,7 @@
 
 **Competitors**: No mentor matching.
 
-**cog-em**: Connect students with experts who query their twin and provide targeted guidance.
+**cog-em**: Connect students with experts who query their fork and provide targeted guidance.
 
 **Why it matters**:
 - Wealthy families already pay for tutors
@@ -94,7 +94,7 @@
 - External validation
 - Network effects
 - Employers trust other employers
-- Twin becomes more valuable over time
+- The fork becomes more valuable over time
 
 ### 8. Anti-Gaming Transparency
 

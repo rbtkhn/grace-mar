@@ -1,12 +1,20 @@
 # AGENTS.md — AI Coding Assistant Guardrails
 
-This file defines rules for any AI coding assistant working on this repository. Read `docs/ARCHITECTURE.md` for full system design.
+This file defines rules for any AI coding assistant working on this repository.
+
+**For conceptual clarity:** Read `docs/CONCEPTUAL-FRAMEWORK.md` — fork vs. twin, fork as own entity vs. emulation, terminology.
+
+**For system design:** Read `docs/ARCHITECTURE.md`.
 
 ---
 
 ## What This System Is
 
 A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. The fork exists inside the user's mind. A Telegram bot (`bot/`) provides an emulation layer — an observation window, not where the fork lives.
+
+**Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
+- **Fork, not twin** — The fork diverges by design; it is its own entity, not a mirror.
+- **Emulation** — Applies to the bot (renders the fork in conversation), not to the fork's relationship to the real person.
 
 ---
 
@@ -84,6 +92,7 @@ cog-em/
 ├── .cursor/rules/cog-em.mdc    # Cursor-specific governance rule
 ├── docs/
 │   ├── COG-EM-CORE.md          # Canonical governance (v2.0)
+│   ├── CONCEPTUAL-FRAMEWORK.md # Fork vs. twin, emulation, terminology (AI parsing)
 │   ├── ARCHITECTURE.md         # Full system architecture
 │   ├── SELF-TEMPLATE.md        # SELF module template
 │   ├── SKILLS-TEMPLATE.md      # SKILLS module template
@@ -130,3 +139,4 @@ The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality in
 - Raise the Lexile ceiling without writing sample evidence
 - Reference books, media, or experiences not in the profile
 - Treat the bot as the fork (it's just the observation window)
+- Use "cognitive twin" (use "cognitive fork")

@@ -1,22 +1,22 @@
-# COG-EM-CORE — v2.0
+# GRACE-MAR-CORE — v2.0
 
-Cognitive Emulator · System Core
+GRACE-MAR · System Core
 Global Governance Document
 
-Repository: https://github.com/rbtkhn/cog-em
+Repository: https://github.com/rbtkhn/grace-mar
 
 Status: ACTIVE · CANONICAL · GLOBAL
 Version: 2.0
 Supersedes: v1.1
 Scope: ALL USERS
-Class: COG-EM-CORE (System / Governance)
+Class: GRACE-MAR-CORE (System / Governance)
 Last Update: February 2026
 
 ────────────────────────────────────────────────────────────
 I. PURPOSE & AUTHORITY
 ────────────────────────────────────────────────────────────
-This file defines the global operating system of the
-Cognitive Emulator (cog-em).
+This file defines the global operating system of
+GRACE-MAR.
 
 It governs:
 • All user profile files (SELF, SKILLS, EVIDENCE)
@@ -30,9 +30,12 @@ No file may contradict it.
 ────────────────────────────────────────────────────────────
 II. SYSTEM DEFINITION
 ────────────────────────────────────────────────────────────
-A cognitive emulator is a long-duration cognitive record
+A cognitive fork is a long-duration cognitive record
 of an individual, forked from a real person at a point
 in time and growing through curated interactions.
+
+Conceptual framework (fork vs. twin, fork as own entity vs.
+emulation, terminology): see CONCEPTUAL-FRAMEWORK.md.
 
 It is defined by:
 • How identity is recorded (SELF)
@@ -90,13 +93,13 @@ LIFETIME SYSTEM:
 ────────────────────────────────────────────────────────────
 IV. FILE CLASS TAXONOMY
 ────────────────────────────────────────────────────────────
-COG-EM-CORE
+GRACE-MAR-CORE
 • Global system law
 • Absolute authority
 
 TEMPLATES (SELF-TEMPLATE, SKILLS-TEMPLATE, EVIDENCE-TEMPLATE)
 • Define structure for user files
-• Subordinate to COG-EM-CORE
+• Subordinate to GRACE-MAR-CORE
 
 USER FILES (users/[id]/SELF.md, SKILLS.md, EVIDENCE.md)
 • Individual user data
@@ -358,7 +361,7 @@ GitHub is the authoritative record store.
 Git IS the fork mechanism — the metaphor is literal.
 
 VERSION MODEL:
-• Governance version: COG-EM-CORE vX.Y
+• Governance version: GRACE-MAR-CORE vX.Y
 • Template versions: SELF-TEMPLATE vX.Y, etc.
 • User data versions: Content changes only
 
@@ -567,7 +570,7 @@ EMULATION PRINCIPLES (when enabled):
 • Never fabricate experiences or knowledge
 • Authenticity: others should recognize the user
 
-This is a future capability. The core of cog-em is the
+This is a future capability. The core of GRACE-MAR is the
 record. Emulation is a layer that the record enables.
 
 ────────────────────────────────────────────────────────────
@@ -587,5 +590,5 @@ They may NOT:
 • Introduce silent edits
 
 ────────────────────────────────────────────────────────────
-END OF FILE — COG-EM-CORE v2.0
+END OF FILE — GRACE-MAR-CORE v2.0
 ────────────────────────────────────────────────────────────

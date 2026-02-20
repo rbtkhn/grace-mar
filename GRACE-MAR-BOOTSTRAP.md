@@ -1,7 +1,7 @@
-# COG-EM-BOOTSTRAP
+# GRACE-MAR-BOOTSTRAP
 
-Cognitive Emulator · Session Bootstrap
-Use this file to initiate or continue work on cog-em in any Cursor conversation.
+GRACE-MAR · Session Bootstrap
+Use this file to initiate or continue work on GRACE-MAR in any Cursor conversation.
 
 ---
 
@@ -9,7 +9,7 @@ Use this file to initiate or continue work on cog-em in any Cursor conversation.
 
 When this file is loaded at the start of a conversation, present the user with multiple choice options:
 
-1. **Run session** — Load pilot-001 files, follow `.cursor/rules/cog-em.mdc`
+1. **Run session** — Load pilot-001 files, follow `.cursor/rules/grace-mar.mdc`
 2. **Continue development** — Proceed with a task (user specifies)
 3. **Review status** — Summarize current phase, next steps, recent changes
 4. **Other** — User describes what they need
@@ -20,8 +20,8 @@ Wait for the user to choose before proceeding.
 
 ## PROJECT IDENTITY
 
-**Name:** cog-em (Cognitive Emulator)
-**Repository:** https://github.com/rbtkhn/cog-em
+**Name:** GRACE-MAR
+**Repository:** https://github.com/rbtkhn/grace-mar
 **Status:** Pilot (seeding complete)
 **Current Phase:** POST-SEED — ready for first interactive sessions
 
@@ -39,6 +39,8 @@ Like a software fork:
 - **Git** = literally the version control mechanism
 
 The fork is not a real-time mirror. It is a living, growing cognitive record — the user's lifetime academic project and archive.
+
+**Conceptual clarity:** See `docs/CONCEPTUAL-FRAMEWORK.md` — fork vs. twin, fork as own entity vs. emulation, terminology for AI parsing.
 
 ### Single User, Lifetime System
 
@@ -119,7 +121,7 @@ The fork accumulates enough data to optionally emulate the user — answering qu
 ## GOVERNANCE HIERARCHY
 
 ```
-COG-EM-CORE.md (canonical, absolute authority)
+GRACE-MAR-CORE.md (canonical, absolute authority)
     ↓
 SELF-TEMPLATE.md / SKILLS-TEMPLATE.md / EVIDENCE-TEMPLATE.md
     ↓
@@ -143,28 +145,29 @@ users/[id]/SELF.md / SKILLS.md / EVIDENCE.md (instance files)
 ## FILE MAP
 
 ```
-cog-em/
-├── COG-EM-BOOTSTRAP.md      # THIS FILE — session bootstrap
+grace-mar/
+├── GRACE-MAR-BOOTSTRAP.md      # THIS FILE — session bootstrap
 ├── README.md                 # Project overview
 ├── .cursor/rules/
-│   └── cog-em.mdc           # Governance + session protocol (users/**)
+│   └── grace-mar.mdc         # Governance + session protocol (users/**)
 ├── docs/
-│   ├── COG-EM-CORE.md       # CANONICAL governance (v2.0)
-│   ├── PARENT-BRIEF.md      # Parent/guardian brief (pre-survey)
-│   ├── ARCHITECTURE.md      # Module design
-│   ├── SELF-TEMPLATE.md     # SELF module governance
-│   ├── SKILLS-TEMPLATE.md   # SKILLS module governance
-│   ├── EVIDENCE-TEMPLATE.md # Evidence storage governance
-│   ├── CONCEPT.md           # Full concept explanation
-│   ├── PILOT-PLAN.md        # Pilot structure
-│   └── ...                  # Supporting docs
+│   ├── GRACE-MAR-CORE.md     # CANONICAL governance (v2.0)
+│   ├── CONCEPTUAL-FRAMEWORK.md  # Fork vs. twin, emulation, terminology (AI parsing)
+│   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
+│   ├── ARCHITECTURE.md       # Module design
+│   ├── SELF-TEMPLATE.md      # SELF module governance
+│   ├── SKILLS-TEMPLATE.md    # SKILLS module governance
+│   ├── EVIDENCE-TEMPLATE.md  # Evidence storage governance
+│   ├── CONCEPT.md            # Full concept explanation
+│   ├── PILOT-PLAN.md         # Pilot structure
+│   └── ...                   # Supporting docs
 └── users/
-    └── pilot-001/           # First pilot user (age 6)
-        ├── SELF.md          # Identity record (seeded)
-        ├── SKILLS.md        # Capability record (seeded)
-        ├── EVIDENCE.md      # Activity logs (seeded)
-        ├── SESSION-LOG.md   # Interaction history
-        └── artifacts/       # Raw files (writing samples, artwork)
+    └── pilot-001/            # First pilot user (age 6)
+        ├── SELF.md           # Identity record (seeded)
+        ├── SKILLS.md         # Capability record (seeded)
+        ├── EVIDENCE.md       # Activity logs (seeded)
+        ├── SESSION-LOG.md    # Interaction history
+        └── artifacts/        # Raw files (writing samples, artwork)
 ```
 
 ---
@@ -175,7 +178,7 @@ cog-em/
 - [x] Core concept defined (fork model, v2.0)
 - [x] Two-module architecture (SELF + SKILLS)
 - [x] Three pillars (READ, WRITE, IMAGINE)
-- [x] COG-EM-CORE governance document (v2.0)
+- [x] GRACE-MAR-CORE governance document (v2.0)
 - [x] All templates created (v2.0)
 - [x] Pilot user directory structure
 - [x] Cursor rule for sessions
@@ -250,4 +253,4 @@ git push origin --tags
 
 ---
 
-END OF BOOTSTRAP — COG-EM v2.0
+END OF BOOTSTRAP — GRACE-MAR v2.0

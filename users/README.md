@@ -1,6 +1,6 @@
 # Students Directory
 
-Each subdirectory contains one user's cognitive twin data.
+Each subdirectory contains one user's cognitive fork data.
 
 ## Structure
 

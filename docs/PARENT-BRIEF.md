@@ -6,7 +6,7 @@ For the parent/guardian of the pilot student.
 
 ## What is COG-EM?
 
-A **cognitive emulator** is a system your child teaches. Unlike typical apps that teach kids, this one learns *from* them. Over time it becomes a kind of "cognitive twin" — a reflection of how they think, what they know, and who they are.
+A **cognitive emulator** is a system your child teaches. Unlike typical apps that teach kids, this one learns *from* them. Over time it becomes a **cognitive fork** — a versioned record of how they think, what they know, and who they are, growing independently from a snapshot in time.
 
 Your child is the teacher. The system only grows through their activity.
 
