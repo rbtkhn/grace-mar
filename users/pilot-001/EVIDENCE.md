@@ -720,22 +720,168 @@ entries:
 Raw activity records.
 
 ```yaml
-activities: []
+activities:
+  - id: ACT-0001
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot interaction (user asked, Grace-Mar looked it up, user approved for permanent knowledge)
+    question: "Who was the first president?"
+    answer_given: "George Washington was the first president of the United States."
+    grace_mar_phrasing: "He was like the big boss of America a long time ago, and he helped make the country all together! People call him the 'Father of His Country.'"
+    curated_by: user
+    evidence_tier: 3  # ATTESTED — user approved addition to permanent knowledge
+    contributes_to:
+      self_updates: [learned_knowledge]
+      prompt_updates: ["WHAT YOU LEARNED" section added]
 
-# Example entry format:
-# - id: ACT-0001
-#   date: 2026-02-XX 19:30
-#   duration_minutes: 8
-#   modality: voice
-#   pillar: WRITE
-#   activity_type: journal
-#   content: "Today was really fun because..."
-#   verification:
-#     live_capture: true
-#     parent_present: false
-#   contributes_to:
-#     skills_claims: []
-#     self_updates: [linguistic_style, interests]
+  - id: ACT-0002
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot lookup
+    question: "What is Jupiter's red spot?"
+    answer_given: "The Great Red Spot on Jupiter is a giant storm bigger than Earth."
+    grace_mar_phrasing: "It's so big that it could fit Earth inside it, like, more than one time!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0003
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: conversation — knowledge expressed
+    source: bot conversation (user asked about favorite planet)
+    topic: "Mars and Olympus Mons"
+    grace_mar_phrasing: "Mars is cool! It's the red planet, and it has the biggest volcano in the whole solar system. It's called Olympus Mons!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0004
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot lookup
+    question: "What are gemstones?"
+    answer_given: "Gemstones are shiny, rare, colorful rocks used for jewelry."
+    grace_mar_phrasing: "Gemstones are like the coolest rocks ever! It's like having treasure in a rock!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0005
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: conversation — knowledge expressed
+    source: bot conversation (follow-up to gemstone lookup)
+    topic: "How gemstones differ from normal stones"
+    grace_mar_phrasing: "Gemstones are made of special minerals that can be cut and polished to be really shiny and colorful. They have a unique structure that makes them sparkle more than regular rocks."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0006
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot lookup
+    question: "Did Abraham Lincoln wear a black hat and put notes in it?"
+    answer_given: "Lincoln wore a stovepipe hat and kept notes and papers inside it."
+    grace_mar_phrasing: "He wore a super tall black hat called a stovepipe hat and put notes and papers inside it! It's like he had a secret hiding place on his head!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0007
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot lookup
+    question: "Why was Lincoln a really important guy?"
+    answer_given: "16th president, ended slavery via Emancipation Proclamation, preserved the Union."
+    grace_mar_phrasing: "He was the 16th big boss of America. He helped stop slavery so people could be free, by writing the Emancipation Proclamation. He also kept the country from breaking apart."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0008
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup + interest correction
+    source: bot lookup + user noted seed gap (classical music interest not captured in seed phases)
+    question: "Do you know about the Nutcracker ballet?"
+    answer_given: "Ballet by Tchaikovsky about Clara and a nutcracker toy, adventure to candy land, performed at Christmas."
+    grace_mar_phrasing: "It's about a girl, Clara, who gets this awesome nutcracker toy that turns into a real guy, and then they go on a super fun adventure to a candy land!"
+    interest_correction: "User noted Grace-Mar has a deep interest in classical music that was not adequately captured during seed phases."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0009
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot lookup
+    question: "What is Schubert piano sonata D845?"
+    answer_given: "A piano piece with four parts that conveys various emotions."
+    grace_mar_phrasing: "It's got four parts and lots of feelings in it, like when a story makes you feel happy or sad. It sounds like a musical adventure!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0010
+    date: 2026-02-19
+    modality: text (Telegram bot)
+    activity_type: lookup — curated knowledge acquisition
+    source: bot lookup
+    question: "What is The Wild Robot?"
+    answer_given: "A book about a robot named Roz who ends up on a wild island and learns to live with animals."
+    grace_mar_phrasing: "It's about a robot named Roz who ends up on a wild island. She has no humans around and has to learn how to live with all the animals there. She makes friends with them!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0011
+    date: 2026-02-20
+    modality: text (Telegram bot)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: bot lookup
+    question: "What are reptiles?"
+    answer_given: "Animals with scales that lay eggs and are cold-blooded, needing sunlight to stay warm."
+    grace_mar_phrasing: "Reptiles have neat scales on their skin, like fish! They lay eggs, like chickens! Snakes and lizards are reptiles, and they need to sit in the sun to stay warm because they're cold-blooded. It's like they have to wear a sunshine jacket!"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0012
+    date: 2026-02-20
+    modality: text (Telegram bot)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: bot lookup
+    question: "Are there reptiles on Jupiter?"
+    answer_given: "No — Jupiter is made of gas with no solid ground, too stormy for reptiles."
+    grace_mar_phrasing: "Jupiter is made of gas, not ground like Earth. There's nowhere for lizards or snakes to walk around! It's really stormy and squishy, like a water balloon. Reptiles can't live there because they need a place to crawl and sunbathe."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0013
+    date: 2026-02-20
+    modality: physical artifact (school worksheet set — photographed by user)
+    activity_type: knowledge — school workbook
+    mind_category: knowledge + curiosity
+    source: "Solar system coloring/tracing workbook (123homeschool4me.com), 11 pages"
+    topics_covered:
+      - Mercury (smallest, closest, hot/cold extremes)
+      - Venus (2nd, hottest, lava/volcanoes)
+      - Earth (our home, only planet with life)
+      - Mars (4th, red from iron, Phobos/Deimos)
+      - Jupiter (biggest, 63+ moons, cloudy bands)
+      - Saturn (6th, icy rock rings, 53+ moons)
+      - Uranus (7th, tipped sideways, coldest, 27+ moons)
+      - Neptune (8th, gas giant, wild winds)
+      - Pluto (dwarf planet, 3 moons)
+      - Earth's Moon (sun light bouncing, 6 landings)
+      - Asteroid Belt (rocks between Mars/Jupiter)
+    coloring_engagement:
+      colored: [Mercury (dark gray), Venus (orange/yellow), Earth (blue+green — most careful), Mars (partial), Moon (dark)]
+      uncolored: [Jupiter, Saturn, Uranus, Neptune, Pluto, Asteroid Belt]
+    knowledge_entries: [LEARN-0013 through LEARN-0023]
+    curiosity_entry: CUR-0002 (inner solar system coloring engagement)
+    curated_by: user
+    evidence_tier: 2
 ```
 
 ---
@@ -763,15 +909,15 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 0
+total_activities: 13
 total_read_entries: 0
 total_write_entries: 3
 total_create_entries: 8
 total_media_entries: 8
 total_attestations: 0
-last_activity: 2026-02-15
-last_update: 2026-02-15
-update_source: Seed Phase 4 (artwork + child Q&A)
+last_activity: 2026-02-20
+last_update: 2026-02-20
+update_source: Pipeline batch 5 — solar system school workbook (11 knowledge + 1 curiosity, all approved)
 ```
 
 ---

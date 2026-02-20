@@ -1,19 +1,18 @@
-# SKILLS–TEMPLATE v1.1
+# SKILLS–TEMPLATE v2.0
 
 Cognitive Emulator · Skills Module Governance Template
 
-Status: DRAFT
-Version: 1.1
+Status: ACTIVE
+Version: 2.0
 Last Update: February 2026
 
-**Governed by**: [COG-EM-CORE v1.1](COG-EM-CORE.md)
-Adapted from: CIV–SCHOLAR–TEMPLATE v3.1 (CMC)
+**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
 
 ---
 
 ## I. PURPOSE
 
-This template governs the SKILLS module of the cognitive twin.
+This template governs the SKILLS module of the cognitive fork.
 
 The SKILLS module:
 - Captures what the user CAN DO
@@ -162,13 +161,13 @@ All SKILLS operate within one of three phases.
 
 ### PHASE I — BUILDING (Default)
 
-The user is actively teaching this skill to the twin.
+The user is actively building this skill through interaction.
 
 Characteristics:
 - Knowledge is accumulating
 - Depth is increasing
 - No formal verification required
-- Twin reflects what has been taught
+- Record reflects what has been demonstrated
 
 Permitted:
 - Free teaching
@@ -181,7 +180,7 @@ Permitted:
 A verification checkpoint has been reached.
 
 Triggers:
-- Student declares "I know this now"
+- User declares "I know this now"
 - Parent/teacher attests competence
 - Threshold criteria met (e.g., 5+ teaching sessions)
 - External verification (proctored demonstration)
@@ -789,7 +788,7 @@ Later learning does not modify snapshots.
 
 ## XI. CONTAINER EDGE TEACHING
 
-The three pillars are CONTAINERS that define current capability boundaries. The twin teaches at the EDGE.
+The three pillars are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE.
 
 ### Container State
 
@@ -817,10 +816,10 @@ IMAGINE Container:
 
 ### Teaching at the Edge
 
-| Zone | Description | Twin behavior |
-|------|-------------|---------------|
+| Zone | Description | System behavior |
+|------|-------------|-----------------|
 | Inside | Already knows/can do | Use as foundation, reference |
-| Edge | Just beyond current | Teach here (optimal) |
+| Edge | Just beyond current | Propose activities here (optimal) |
 | Outside | Too advanced | Don't go here yet |
 
 ### Gap vs Edge
@@ -835,7 +834,7 @@ IMAGINE Container:
 
 ### Implementation
 
-When the twin communicates:
+When the system proposes activities or interacts:
 
 1. Check container state (levels, gaps)
 2. Use vocabulary FROM container (grounding)
@@ -871,7 +870,7 @@ How evaluators interact with the SKILLS module.
 
 **Demonstration:**
 > "Show me how [user] would explain [topic]"
-> Returns: Twin demonstrates in user's style (WRITE + SELF)
+> Returns: Record data + SELF context (optional emulation if enabled)
 
 **Trajectory:**
 > "How has [user]'s writing developed?"
@@ -1027,4 +1026,4 @@ Before creating SNAPSHOT:
 
 ---
 
-END OF FILE — SKILLS–TEMPLATE v1.1
+END OF FILE — SKILLS–TEMPLATE v2.0

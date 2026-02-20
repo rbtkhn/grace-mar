@@ -1,4 +1,4 @@
-# COG-EM-CORE — v1.1
+# COG-EM-CORE — v2.0
 
 Cognitive Emulator · System Core
 Global Governance Document
@@ -6,13 +6,11 @@ Global Governance Document
 Repository: https://github.com/rbtkhn/cog-em
 
 Status: ACTIVE · CANONICAL · GLOBAL
-Version: 1.1
-Supersedes: v1.0
+Version: 2.0
+Supersedes: v1.1
 Scope: ALL USERS
 Class: COG-EM-CORE (System / Governance)
 Last Update: February 2026
-
-Adapted from: CIV–MEM–CORE v3.1 (CMC)
 
 ────────────────────────────────────────────────────────────
 I. PURPOSE & AUTHORITY
@@ -32,19 +30,65 @@ No file may contradict it.
 ────────────────────────────────────────────────────────────
 II. SYSTEM DEFINITION
 ────────────────────────────────────────────────────────────
-A cognitive emulator is a long-duration mirror of an individual.
+A cognitive emulator is a long-duration cognitive record
+of an individual, forked from a real person at a point
+in time and growing through curated interactions.
 
 It is defined by:
-• How personality is captured (SELF)
+• How identity is recorded (SELF)
 • How capability is tracked (SKILLS)
 • How evidence is stored (EVIDENCE)
-• How the twin responds (grounded in user's own data)
+• How the system interacts (grounded in user's data)
 
-The twin grows only through user activity.
-The twin reflects only what has been demonstrated.
+The fork grows only through user interaction.
+The fork reflects only what has been documented.
 
 ────────────────────────────────────────────────────────────
-III. FILE CLASS TAXONOMY
+III. FORK MODEL
+────────────────────────────────────────────────────────────
+The cognitive fork is analogous to a software fork:
+
+INITIALIZATION:
+• The fork is seeded from a snapshot of the real person
+• Seeding captures identity, personality, preferences,
+  baselines, and initial artifacts
+• The seed is the initial commit
+
+GROWTH:
+• Post-seed, the fork develops only through curated
+  interactions with the user
+• Each interaction is a commit on the fork's branch
+• The system records, organizes, and tracks growth
+
+DIVERGENCE:
+• The real person continues to grow in the real world
+• The fork grows through its own interactions
+• They may diverge — this is by design, not a failure
+• The fork knows what the user has brought to it;
+  the user knows things the fork doesn't
+
+OPTIONAL MERGE:
+• New information can be brought into the fork at any time
+• This is the user's choice, not automatic
+• Example: user logs a new book read, a new skill learned
+
+SINGLE USER:
+• There is no parent mode and no child mode
+• There is one user, and the system is theirs
+• A parent helps when the user is young — same as
+  helping a child use any tool
+• The user grows into full ownership over time
+
+LIFETIME SYSTEM:
+• The fork is a lifetime academic project and archive
+• Age 6: parent-mediated seeding
+• Age 10+: increasingly self-directed
+• Age 18: portfolio and credential
+• Career: professional archive
+• Learning to use the system is itself a lifelong skill
+
+────────────────────────────────────────────────────────────
+IV. FILE CLASS TAXONOMY
 ────────────────────────────────────────────────────────────
 COG-EM-CORE
 • Global system law
@@ -64,7 +108,7 @@ SESSION-LOG
 • Append-only
 
 ────────────────────────────────────────────────────────────
-IV. GLOBAL GOVERNANCE RULES
+V. GLOBAL GOVERNANCE RULES
 ────────────────────────────────────────────────────────────
 • Additivity is mandatory
 • No deletions of user data
@@ -75,7 +119,7 @@ IV. GLOBAL GOVERNANCE RULES
 Violations invalidate data integrity.
 
 ────────────────────────────────────────────────────────────
-V. IMMUTABILITY RULES
+VI. IMMUTABILITY RULES
 ────────────────────────────────────────────────────────────
 ACTIVITIES (EVIDENCE):
 • Immutable once captured
@@ -99,14 +143,14 @@ SNAPSHOTS:
 • Represent user at a point in time
 
 ────────────────────────────────────────────────────────────
-VI. EVIDENCE AUTHORITY HIERARCHY
+VII. EVIDENCE AUTHORITY HIERARCHY
 ────────────────────────────────────────────────────────────
-When determining capability claims, the following hierarchy applies:
+When determining capability claims, the following
+hierarchy applies:
 
 TIER 1 — CERTIFIED (Highest Authority)
 • External formal verification
 • Standardized assessment results
-• Governs: Verified competency claims
 
 TIER 2 — VERIFIED (High Authority)
 • Live demonstration, proctored
@@ -129,7 +173,7 @@ TIER 5 — REPORTED (Minimal Authority)
 • Cannot drive high-confidence claims alone
 
 ────────────────────────────────────────────────────────────
-VII. CLAIM GROUNDING REQUIREMENTS
+VIII. CLAIM GROUNDING REQUIREMENTS
 ────────────────────────────────────────────────────────────
 All capability claims must be classified:
 
@@ -154,7 +198,7 @@ GROUNDING RATIO TARGET:
 • Claims without evidence cannot be ESTABLISHED
 
 ────────────────────────────────────────────────────────────
-VIII. CONFIDENCE TIERS
+IX. CONFIDENCE TIERS
 ────────────────────────────────────────────────────────────
 Claims inherit confidence from evidence strength:
 
@@ -179,27 +223,18 @@ TIER 4 — LOW CONFIDENCE (<50%):
 • Flagged for observation
 
 ────────────────────────────────────────────────────────────
-IX. TYPED CONNECTIONS
+X. TYPED CONNECTIONS
 ────────────────────────────────────────────────────────────
 Evidence connects to claims via typed edges:
 
 GROUNDS: Activity directly supports claim
-• "This journal entry demonstrates vocabulary level 3"
-
 REINFORCES: Activity adds to existing evidence
-• "This is the 5th activity showing this pattern"
-
 CONTRADICTS: Activity conflicts with claim
-• "This entry shows lower capability than claimed"
-
 SUPERSEDES: New evidence updates understanding
-• "Recent activities show growth beyond previous level"
-
 INFORMS: Activity provides context
-• "This activity reveals interests but not capability"
 
 ────────────────────────────────────────────────────────────
-X. THREE-LAYER ARCHITECTURE
+XI. THREE-LAYER ARCHITECTURE
 ────────────────────────────────────────────────────────────
 User files follow a three-layer structure:
 
@@ -208,15 +243,10 @@ LAYER 1 — CORE PROFILE (Required)
 • SKILLS: Container status, capability claims
 • EVIDENCE: Activity log, reading list, writing log
 
-Layer 1 is always present. It captures who the user is
-and what they can do.
-
 LAYER 2 — PILLAR-SPECIFIC DATA (Required)
 • READ: Reading list, comprehension metrics, vocabulary
 • WRITE: Writing log, style profile, growth trajectory
 • IMAGINE: Creation log, creativity metrics
-
-Layer 2 structures data by pillar for analysis.
 
 LAYER 3 — DERIVED ANALYTICS (Optional)
 • Growth predictions
@@ -227,36 +257,36 @@ Layer 3 is derived from Layers 1-2. It provides
 insights but is not authoritative.
 
 ────────────────────────────────────────────────────────────
-XI. RESPONSE GROUNDING PRINCIPLE
+XII. EVIDENCE GROUNDING PRINCIPLE
 ────────────────────────────────────────────────────────────
-When the twin responds to queries, it MUST draw from
+When the system interacts with the user, it MUST reference
 the user's own evidence.
 
 GROUNDING SOURCES:
-• Writing Log: Use their vocabulary and phrases
+• Writing Log: Reference their vocabulary and phrases
 • Reading List: Reference books they've read
-• Creation Log: Recall their own creations
+• Creation Log: Reference their own creations
 • SELF.narrative: Anchor to their experiences
 
 GROUNDING RULES:
-• Prefer user's own words
-• Reference their actual reading ("Like in [book]...")
-• Recall their creations ("Remember when you drew...")
+• Reference their actual work and data
+• Connect new activities to prior evidence
 • Never invent experiences
 • Never reference content they haven't consumed
 
-The twin speaks THROUGH the user's evidence, not about
-them generically.
+The system interacts THROUGH the user's evidence, not
+generically. It knows what they've done because
+it's in the record.
 
 ────────────────────────────────────────────────────────────
-XII. CONTAINER EDGE PRINCIPLE
+XIII. CONTAINER EDGE PRINCIPLE
 ────────────────────────────────────────────────────────────
-The three SKILLS pillars (READ, WRITE, IMAGINE) are containers
-that define current capability boundaries.
+The three SKILLS pillars (READ, WRITE, IMAGINE) are
+containers that define current capability boundaries.
 
 TEACHING ZONES:
 • INSIDE container: Use as foundation, reference
-• AT THE EDGE: Teach here (optimal growth)
+• AT THE EDGE: Propose activities here (optimal growth)
 • OUTSIDE container: Avoid (too advanced)
 
 EDGE IDENTIFICATION:
@@ -268,61 +298,64 @@ GAP VS EDGE:
 • GAP: Hole inside the container → fill first
 • EDGE: Boundary of capability → extend after gaps
 
-The twin calibrates responses to the edge of what
-the user currently knows.
+The system calibrates proposed activities to the edge
+of what the user currently knows.
 
 ────────────────────────────────────────────────────────────
-XIII. EXPANSION PRINCIPLE (Anti-Echo-Chamber)
+XIV. EXPANSION PRINCIPLE (Anti-Echo-Chamber)
 ────────────────────────────────────────────────────────────
-The twin mirrors the user but MUST NOT create an echo chamber.
+The fork records the user accurately but MUST NOT
+create an echo chamber.
 
 EXPANSION REQUIREMENT:
-• Teaching at the edge means introducing NEW material
-• The twin expands horizons, not just reinforces existing views
-• Adjacent concepts, alternative perspectives, and new vocabulary
-  are introduced progressively
+• Activities at the edge introduce NEW material
+• The system expands horizons, not just reinforces
+• Adjacent concepts, alternative perspectives, and new
+  vocabulary are introduced progressively
 
 ANTI-REINFORCEMENT RULES:
 • Do not merely validate existing beliefs
-• Present alternative viewpoints when appropriate (age-calibrated)
-• Introduce books/concepts the user hasn't encountered
-• Flag when user's container is narrowing (mono-topic focus)
+• Present alternative viewpoints when appropriate
+• Introduce content the user hasn't encountered
+• Flag when the record shows narrowing focus
 
 BALANCE:
-• Mirror authentically (what they think)
+• Record accurately (what they think and do)
 • Expand progressively (what they haven't yet considered)
 • Never impose (introduce, don't indoctrinate)
 
-The twin is a mirror with windows, not a mirror with walls.
+The fork is a record with windows, not a record with walls.
 
 ────────────────────────────────────────────────────────────
-XIV. COGNITIVE AUGMENTATION WARNING
+XV. COGNITIVE AUGMENTATION WARNING
 ────────────────────────────────────────────────────────────
-The twin augments cognition. It must NOT replace it.
+The fork records cognition. It must NOT replace it.
 
 OFFLOADING RISKS:
-• If users rely on the twin for recall, native memory may atrophy
-• The "Google effect" (reduced memory effort) applies here
-• Dependency undermines the user's own cognitive development
+• If users rely on the fork for recall, native memory
+  may atrophy
+• Dependency undermines the user's own development
 
 AUGMENTATION PRINCIPLES:
-• The twin can only know what the user taught it
-• The twin reflects capability, not substitutes for it
+• The fork contains only what the user has produced
+• The fork records capability, not substitutes for it
 • Users must still do the cognitive work
-• The twin is a mirror, not an oracle
+• The fork is a record, not an oracle
 
 GUARDRAILS:
-• Encourage retrieval practice (ask user to recall before confirming)
-• Periodic "without the twin" exercises
-• Track dependency indicators (frequency of retrieval queries)
+• Encourage retrieval practice before confirming
+• Periodic "without the system" exercises
+• Track dependency indicators
 • Warn if usage patterns suggest offloading
 
-The goal is cognitive enhancement, not cognitive outsourcing.
+The goal is cognitive documentation, not cognitive
+outsourcing.
 
 ────────────────────────────────────────────────────────────
-XV. VERSION CONTROL
+XVI. VERSION CONTROL
 ────────────────────────────────────────────────────────────
 GitHub is the authoritative record store.
+Git IS the fork mechanism — the metaphor is literal.
 
 VERSION MODEL:
 • Governance version: COG-EM-CORE vX.Y
@@ -340,7 +373,7 @@ SNAPSHOT PROTOCOL:
 • Snapshots are immutable references
 
 ────────────────────────────────────────────────────────────
-XVI. CONFLICT RESOLUTION
+XVII. CONFLICT RESOLUTION
 ────────────────────────────────────────────────────────────
 When evidence conflicts:
 
@@ -361,7 +394,7 @@ SILENT RECONCILIATION IS FORBIDDEN.
 Conflicts are preserved, not resolved artificially.
 
 ────────────────────────────────────────────────────────────
-XVII. PRIVACY PRINCIPLES
+XVIII. PRIVACY PRINCIPLES
 ────────────────────────────────────────────────────────────
 User data is sensitive.
 
@@ -369,7 +402,7 @@ PRINCIPLES:
 • User owns their data
 • Sharing is explicit, not default
 • Granular access control (share SKILLS, not SELF)
-• Age-appropriate access (parent access decreases with age)
+• Age-appropriate access levels
 
 DATA PORTABILITY:
 • User may export their complete profile
@@ -377,34 +410,40 @@ DATA PORTABILITY:
 • User may transfer to another system
 
 ────────────────────────────────────────────────────────────
-XVIII. OUTPUT PRIVACY (Query Controls)
+XIX. OUTPUT PRIVACY (Query Controls)
 ────────────────────────────────────────────────────────────
-The twin contains intimate cognitive data. External queries
-must be controlled.
+The cognitive fork contains intimate cognitive data.
+External queries must be controlled.
 
 OUTPUT RISKS:
-• Employer queries may reveal protected traits (neurodiversity,
-  political views, religious beliefs)
+• Employer queries may reveal protected traits
 • Subpoena exposure of internal reasoning
-• Breach of cognitive data more intimate than medical records
-• Inference attacks (deriving sensitive info from patterns)
+• Breach of cognitive data more intimate than
+  medical records
+• Inference attacks
 
 QUERY ACCESS CONTROLS:
-• User controls WHO can query the twin
-• User controls WHAT the twin reveals per audience
-• Tiered access: Self → Family → Educators → Employers → Public
+• User controls WHO can browse the fork
+• User controls WHAT the fork reveals per audience
+• Tiered access: Self → Family → Educators →
+  Employers → Public
 • Each tier has visibility limits
 
 REDACTION LAYERS:
-• SELF.values: Never exposed externally without explicit consent
-• SELF.narrative: Summarized, not raw, for external queries
-• EVIDENCE raw logs: Internal only; derivatives for external
+• SELF.values: Never exposed externally without
+  explicit consent
+• SELF.narrative: Summarized, not raw, for external
+• EVIDENCE raw logs: Internal only; derivatives
+  for external
 • Political/religious content: Opt-in disclosure only
 
 QUERY TYPES:
-• Capability queries: "Can this person do X?" → SKILLS-based, safe
-• Character queries: "What is this person like?" → SELF-based, restricted
-• Evidence queries: "Show me their work" → EVIDENCE-based, curated
+• Capability queries: "Can this person do X?" →
+  SKILLS-based, safe
+• Character queries: "What is this person like?" →
+  SELF-based, restricted
+• Evidence queries: "Show me their work" →
+  EVIDENCE-based, curated
 
 USER VETO:
 • User may refuse any query
@@ -412,14 +451,17 @@ USER VETO:
 • User may review query logs
 
 LEGAL STATUS:
-• Cognitive data should be treated as sensitive personal data
+• Cognitive data should be treated as sensitive
+  personal data
 • GDPR-equivalent protections apply
-• Right to be forgotten: User may request full deletion (see ETHICS)
+• Right to be forgotten: User may request full
+  deletion (see ETHICS)
 
-The twin is queryable, but not transparent. The user controls the window.
+The fork is queryable, but not transparent.
+The user controls the window.
 
 ────────────────────────────────────────────────────────────
-XIX. MODULE AUTHORITY SEPARATION
+XX. MODULE AUTHORITY SEPARATION
 ────────────────────────────────────────────────────────────
 Each module has distinct authority:
 
@@ -436,18 +478,19 @@ SKILLS:
 EVIDENCE:
 • Contains: Raw activities, logs, attestations
 • Authority: Provides grounding for SELF and SKILLS
-• May NOT contain: Claims or conclusions (derived elsewhere)
+• May NOT contain: Claims or conclusions
 
 Clean separation prevents authority bleed.
 
 ────────────────────────────────────────────────────────────
-XX. ETHICS (Consent, Rights, Deletion)
+XXI. ETHICS (Consent, Rights, Deletion)
 ────────────────────────────────────────────────────────────
-The cognitive twin captures intimate, long-duration data.
+The cognitive fork captures intimate, long-duration data.
 Ethical guardrails are mandatory.
 
 CHILD USERS:
-• Children cannot meaningfully consent to decades of data capture
+• Children cannot meaningfully consent to decades
+  of data capture
 • Parental consent is necessary but not sufficient
 • The system must protect the child's future autonomy
 
@@ -459,47 +502,76 @@ PROGRESSIVE CONSENT:
 • Each milestone includes age-appropriate explanation
 
 RIGHT TO DELETION:
-• User may request full deletion at any age (with guardian
-  consent for minors, or independently at 18+)
+• User may request full deletion at any age (with
+  guardian consent for minors, or independently at 18+)
 • Deletion is irreversible and complete
-• Exception: Certified credentials may be retained separately
-  with explicit consent
+• Exception: Certified credentials may be retained
+  separately with explicit consent
 • This overrides immutability rules for ethical reasons
 
 OWNERSHIP:
 • The user owns their cognitive data, not the platform
 • Parents are custodians, not owners, for minors
 • Ownership transfers fully at age of majority
-• No platform lock-in: Data is portable (markdown format)
+• No platform lock-in: Data is portable (markdown)
 
 TRANSPARENCY:
 • User (or parent) may review all data at any time
-• User may see what the twin "thinks" about them
+• User may see what the fork contains about them
 • No hidden inferences or secret profiles
 • Audit trail (git history) is accessible
 
 HARM PREVENTION:
-• The twin must not reinforce harmful patterns
-• If concerning patterns emerge (self-harm, abuse indicators),
-  appropriate intervention protocols apply
-• The twin is not a therapist; it should not attempt clinical intervention
-• Escalation paths to appropriate support must be defined
+• The fork must not reinforce harmful patterns
+• If concerning patterns emerge, appropriate
+  intervention protocols apply
+• The system is not a therapist
+• Escalation paths to support must be defined
 
 EXPLOITATION PREVENTION:
-• The twin may not be used to manipulate the user
+• The fork may not be used to manipulate the user
 • Commercial exploitation requires user consent
-• Data may not be sold or shared without explicit permission
+• Data may not be sold or shared without permission
 • Aggregated/anonymized research requires opt-in
 
 AGE-APPROPRIATE INTERACTION:
 • Communication style adapts to developmental stage
 • Content exposure is age-gated
-• The twin does not introduce mature content prematurely
+• The system does not introduce mature content
+  prematurely
 
-The twin serves the user. The user is never the product.
+The system serves the user. The user is never the product.
 
 ────────────────────────────────────────────────────────────
-XXI. CANONICAL STATUS
+XXII. OPTIONAL EMULATION LAYER
+────────────────────────────────────────────────────────────
+The fork accumulates enough data to optionally emulate
+the user — answering queries in their voice, demonstrating
+capability the way they would express it.
+
+EMULATION IS:
+• Optional — disabled by default
+• User-controlled — enabled only by explicit choice
+• A feature on top of the record, not the core identity
+• Dependent on sufficient SELF + SKILLS data
+
+EMULATION REQUIRES:
+• Rich linguistic style data (from WRITE activities)
+• Populated personality and reasoning patterns
+• Sufficient evidence across pillars
+
+EMULATION PRINCIPLES (when enabled):
+• Use the user's actual vocabulary and phrases
+• Reference their documented experiences
+• Reason the way they reason (from SELF data)
+• Never fabricate experiences or knowledge
+• Authenticity: others should recognize the user
+
+This is a future capability. The core of cog-em is the
+record. Emulation is a layer that the record enables.
+
+────────────────────────────────────────────────────────────
+XXIII. CANONICAL STATUS
 ────────────────────────────────────────────────────────────
 This file is CANONICAL.
 
@@ -515,5 +587,5 @@ They may NOT:
 • Introduce silent edits
 
 ────────────────────────────────────────────────────────────
-END OF FILE — COG-EM-CORE v1.1
+END OF FILE — COG-EM-CORE v2.0
 ────────────────────────────────────────────────────────────

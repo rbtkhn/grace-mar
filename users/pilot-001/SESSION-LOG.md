@@ -440,4 +440,226 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 
 ---
 
+## Session 007 — Post-Seed: First Curated Bot Interaction
+
+```yaml
+date: 2026-02-19
+participants: user (via Telegram bot)
+method: Telegram bot conversation → lookup → user-curated approval
+activity_type: knowledge acquisition (curated)
+evidence_tier: 3  # ATTESTED — user approved addition
+```
+
+**What happened:**
+
+User asked Grace-Mar via Telegram: "who was the first president"
+
+Grace-Mar correctly identified this as outside her knowledge and offered to look it up. User confirmed. The system performed a two-step lookup (factual research → Grace-Mar voice rephrase) and delivered:
+
+> "I looked it up! The first president was George Washington! He was like the big boss of America a long time ago, and he helped make the country all together! People call him the 'Father of His Country,' kinda like how my dad says he's the boss of the TV remote at home!"
+
+User reviewed the exchange and approved it for permanent knowledge.
+
+**Updates made:**
+- SELF.md — New section IX "LEARNED KNOWLEDGE" created, entry LEARN-0001
+- EVIDENCE.md — Activity Log entry ACT-0001
+- bot/prompt.py — "WHAT YOU LEARNED" section added with George Washington fact
+
+**Significance:** This is the first post-seed knowledge acquisition. The cognitive fork is now growing through curated interactions — exactly as designed. The workflow is: encounter → lookup → deliver in voice → user approves → permanent record.
+
+---
+
+## Session 008 — Post-Seed: First Pipeline Batch (4 approved)
+
+```yaml
+date: 2026-02-19
+participants: user (via Telegram bot)
+method: Gated pipeline — bot analyst staged 10 candidates, user approved 4, rejected 6
+activity_type: curated knowledge acquisition (batch)
+evidence_tier: 3  # ATTESTED — user approved
+```
+
+**Approved:**
+
+| ID | Topic | Type | Source |
+|----|-------|------|--------|
+| LEARN-0002 | Jupiter's Great Red Spot | lookup | User asked, system looked up |
+| LEARN-0003 | Mars / Olympus Mons | conversation | Grace-Mar expressed knowledge |
+| LEARN-0004 | Gemstones — shiny, rare, colorful | lookup | User asked, system looked up |
+| LEARN-0005 | Gemstones vs normal stones | conversation | Follow-up to lookup |
+
+**Rejected (6):** Duplicates of existing profile data (Earth layers, drawing astronauts), LLM knowledge leaks without evidence (Jupiter gas composition), offers-to-lookup without results, confused lookup response.
+
+**Updates made:**
+- SELF.md — 4 new entries in LEARNED KNOWLEDGE (LEARN-0002 through LEARN-0005)
+- EVIDENCE.md — 4 new Activity Log entries (ACT-0002 through ACT-0005)
+- bot/prompt.py — 4 new lines in "WHAT YOU LEARNED" section
+- PENDING-REVIEW.md — All 10 candidates processed
+
+**Significance:** First use of the gated pipeline. The analyst correctly identified lookups and knowledge signals. Rejection rate (60%) shows the analyst is somewhat noisy — future tuning will improve signal-to-noise.
+
+---
+
+## Session 009 — Post-Seed: Pipeline Batch 2 (4 approved)
+
+```yaml
+date: 2026-02-19
+participants: user (via Telegram bot)
+method: Gated pipeline — bot analyst staged 6 candidates, user approved 4, rejected 2
+activity_type: curated knowledge acquisition + interest correction (batch)
+evidence_tier: 3
+```
+
+**Approved:**
+
+| ID | Topic | Type | Source |
+|----|-------|------|--------|
+| LEARN-0006 | Lincoln's stovepipe hat | lookup | User asked, system looked up |
+| LEARN-0007 | Lincoln — 16th president, Emancipation Proclamation | lookup | User asked, system looked up |
+| LEARN-0008 | The Nutcracker ballet (Tchaikovsky, Clara) | lookup | User asked, system looked up |
+| — | Classical music / ballet interest | interest correction | User noted seed gap — deep interest not captured in phases 1-6 |
+
+**Rejected (2):** Offer-to-lookup without result (Lincoln hat offer, Lincoln importance offer).
+
+**Updates made:**
+- SELF.md — 3 new entries in LEARNED KNOWLEDGE (LEARN-0006 to LEARN-0008), classical music added to PREFERENCES and INTERESTS
+- EVIDENCE.md — 3 new Activity Log entries (ACT-0006 to ACT-0008)
+- bot/prompt.py — 3 new lines in "WHAT YOU LEARNED", classical music added to "WHAT YOU LOVE"
+- PENDING-REVIEW.md — 6 candidates processed
+
+**Note:** ACT-0008 documents both the Nutcracker lookup and the seed gap correction for classical music interest.
+
+---
+
+## Session 010 — Post-Seed: Pipeline Batch 3 (2 approved)
+
+```yaml
+date: 2026-02-19
+participants: user (via Telegram bot)
+method: Gated pipeline — bot analyst staged 5 candidates, user approved 2, rejected 3
+activity_type: curated knowledge acquisition (batch)
+evidence_tier: 3
+```
+
+**Approved:**
+
+| ID | Topic | Type | Source |
+|----|-------|------|--------|
+| LEARN-0009 | Schubert Sonata D845 — four parts, emotional | lookup | User mentioned, system looked up |
+| LEARN-0010 | The Wild Robot — book about Roz on a wild island | lookup | User mentioned, system looked up |
+
+**Rejected (3):** Schubert interest (user's preference, not Grace-Mar's), dancing to Nutcracker (already in profile), Wild Robot interest (just an offer, no preference formed).
+
+**Updates made:**
+- SELF.md — 2 new entries in LEARNED KNOWLEDGE (LEARN-0009 to LEARN-0010)
+- EVIDENCE.md — 2 new Activity Log entries (ACT-0009 to ACT-0010)
+- bot/prompt.py — 2 new lines in "WHAT YOU LEARNED"
+- PENDING-REVIEW.md — 5 candidates processed
+
+---
+
+## Session 011 — Architecture: Three-Part Mind Model
+
+```yaml
+date: 2026-02-20
+participants: user
+method: Architecture restructuring — conceptual reframe + SELF.md + prompt.py + analyst pipeline
+activity_type: system evolution
+evidence_tier: N/A
+```
+
+**Conceptual reframe:** Grace-Mar lives inside the user's mind. The Telegram bot is not a conversation — it is a selective exposure of thoughts. The user decides which thoughts Grace-Mar gets to observe and process. The gated pipeline determines which observations take root permanently.
+
+**Three-part mind model adopted for post-seed growth:**
+
+| Channel | What it captures | SELF.md section | Prompt section |
+|---------|-----------------|-----------------|----------------|
+| Knowledge | Facts that entered her awareness | IX-A. KNOWLEDGE | YOUR KNOWLEDGE |
+| Curiosity | Topics that caught her attention | IX-B. CURIOSITY | YOUR CURIOSITY |
+| Personality | How she processes observations | IX-C. PERSONALITY | YOUR PERSONALITY |
+
+**Changes:**
+- SELF.md Section IX restructured from "LEARNED KNOWLEDGE" into "MIND (Post-Seed Growth)" with three subsections (IX-A, IX-B, IX-C)
+- Classical music/ballet interest moved to IX-B Curiosity as CUR-0001
+- bot/prompt.py — "WHAT YOU LEARNED" renamed to "YOUR KNOWLEDGE", new sections "YOUR CURIOSITY" and "YOUR PERSONALITY" added, constraint language reframed around observation model
+- ANALYST_PROMPT — reframed around thought exposure, signal types grouped under three mind categories, output includes `mind_category` field, deduplication lists organized by IX-A/B/C
+
+**Seed baseline (Sections I-VIII) unchanged.**
+
+---
+
+## Session 012 — Post-Seed: Pipeline Batch 4 (2 approved)
+
+```yaml
+date: 2026-02-20
+participants: user (via Telegram bot)
+method: Gated pipeline — bot analyst staged 4 candidates, 2 approved, 2 rejected
+activity_type: curated knowledge acquisition (batch)
+evidence_tier: 3
+```
+
+**First batch processed using the three-part mind routing.**
+
+**Approved:**
+
+| ID | Topic | Mind Category | Source |
+|----|-------|---------------|--------|
+| LEARN-0011 | Reptiles — scales, eggs, cold-blooded | knowledge | User exposed thought, system looked up |
+| LEARN-0012 | No reptiles on Jupiter — gas, no solid ground | knowledge | User exposed thought, system looked up |
+
+**Rejected (2):** Reptile offer (offer, not result), Jupiter gas giant knowledge (LLM leakage — she shouldn't know "gas giant").
+
+**Updates made:**
+- SELF.md — 2 new entries in IX-A. KNOWLEDGE (LEARN-0011 to LEARN-0012)
+- EVIDENCE.md — 2 new Activity Log entries (ACT-0011 to ACT-0012), activity type now includes `mind_category`
+- bot/prompt.py — 2 new lines in "YOUR KNOWLEDGE", analyst dedup list updated
+- PENDING-REVIEW.md — 4 candidates processed, processed entries now include `mind_category` field
+
+---
+
+## Session 013 — Post-Seed: Pipeline Batch 5 — Solar System School Workbook (12 approved)
+
+```yaml
+date: 2026-02-20
+participants: user
+method: Gated pipeline — user photographed school workbook (11 pages), 12 candidates staged, all approved
+activity_type: school knowledge acquisition + curiosity signal (batch)
+evidence_tier: 2
+source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
+```
+
+**First use of the gated pipeline for non-bot input (physical school artifact).**
+
+**Approved (Knowledge):**
+
+| ID | Topic | Source |
+|----|-------|--------|
+| LEARN-0013 | Mercury — smallest, closest, hot/cold extremes | School worksheet |
+| LEARN-0014 | Venus — 2nd, hottest, lava/volcanoes | School worksheet |
+| LEARN-0015 | Earth — our home, only planet with life | School worksheet |
+| LEARN-0016 | Mars — 4th, red from iron, Phobos/Deimos | School worksheet |
+| LEARN-0017 | Jupiter — biggest, all fit inside, 63+ moons | School worksheet |
+| LEARN-0018 | Saturn — 6th, icy rock rings, 53+ moons | School worksheet |
+| LEARN-0019 | Uranus — 7th, tipped sideways, coldest, 27+ moons | School worksheet |
+| LEARN-0020 | Neptune — 8th, gas giant, 1000mph winds | School worksheet |
+| LEARN-0021 | Pluto — dwarf planet, 3 moons | School worksheet |
+| LEARN-0022 | Earth's Moon — light bouncing, 6 landings | School worksheet |
+| LEARN-0023 | Asteroid Belt — rocks between Mars/Jupiter | School worksheet |
+
+**Approved (Curiosity):**
+
+| ID | Topic | Signal |
+|----|-------|--------|
+| CUR-0002 | Inner solar system / terrestrial bodies | Coloring engagement — colored Earth, Venus, Mercury, Moon carefully; left gas giants uncolored |
+
+**Updates made:**
+- SELF.md — 11 new IX-A Knowledge entries (LEARN-0013 to LEARN-0023), 1 new IX-B Curiosity entry (CUR-0002)
+- EVIDENCE.md — 1 consolidated Activity Log entry (ACT-0013) covering entire workbook
+- bot/prompt.py — Solar system added to "WHAT YOU KNOW", curiosity updated, analyst dedup updated
+- PENDING-REVIEW.md — 12 candidates processed
+
+**Note:** This extends Grace-Mar's space knowledge significantly. She already knew about Earth layers, Jupiter's Great Red Spot, and Mars/Olympus Mons from earlier sessions. The school workbook fills in the complete solar system picture at a first-grade vocabulary level.
+
+---
+
 END OF FILE — SESSION LOG PILOT-001

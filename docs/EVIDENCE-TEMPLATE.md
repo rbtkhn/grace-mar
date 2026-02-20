@@ -1,13 +1,12 @@
-# EVIDENCE–TEMPLATE v1.0
+# EVIDENCE–TEMPLATE v2.0
 
 Cognitive Emulator · Evidence Governance Template
 
-Status: DRAFT
-Version: 1.0
+Status: ACTIVE
+Version: 2.0
 Last Update: February 2026
 
-**Governed by**: [COG-EM-CORE v1.1](COG-EM-CORE.md)
-Adapted from: CIV–ARC–TEMPLATE v3.1 (CMC)
+**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
 
 ---
 
@@ -737,4 +736,4 @@ Before accepting attestation:
 
 ---
 
-END OF FILE — EVIDENCE–TEMPLATE v1.0
+END OF FILE — EVIDENCE–TEMPLATE v2.0

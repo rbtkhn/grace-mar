@@ -1,19 +1,19 @@
 # cog-em Architecture
 
-**Governed by**: [COG-EM-CORE v1.1](COG-EM-CORE.md)
+**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
 
 ---
 
 ## Core Principle
 
-The cognitive emulator separates **who the user is** from **what the user knows**.
+The cognitive fork separates **who the user is** from **what the user can do**, recording both as structured, evidence-grounded data that grows through interaction.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     COGNITIVE TWIN                          │
+│                     COGNITIVE FORK                          │
 ├─────────────────────────┬───────────────────────────────────┤
 │         SELF            │            SKILLS                 │
-│   (authentic mirror)    │        (knowledge modules)        │
+│   (who they ARE)        │      (what they CAN DO)           │
 ├─────────────────────────┼───────────────────────────────────┤
 │ • Personality           │ • Academic knowledge              │
 │ • Linguistic style      │ • Practical abilities             │
@@ -26,58 +26,70 @@ The cognitive emulator separates **who the user is** from **what the user knows*
 
 ---
 
-## Module 1: SELF (Personality Module)
+## Fork Lifecycle
 
-**Analogue to CMC's MIND files.**
+The fork follows a lifecycle analogous to a software fork:
+
+```
+SEED (Initial Fork)
+  │  Capture snapshot: identity, personality, preferences,
+  │  baselines, initial artifacts
+  │
+  ▼
+INTERACT (Growth Through Use)
+  │  Each session = a commit
+  │  Writing, reading, creating, answering → recorded
+  │  Containers fill, edges advance, SELF evolves
+  │
+  ▼
+DIVERGE (Fork Develops Its Own History)
+  │  Real person grows in the real world
+  │  Fork grows through its interactions
+  │  They may drift apart — by design
+  │
+  ▼
+MERGE (Optional — Bring In New Data)
+  │  User logs new books, skills, life events
+  │  Parent reports new information (when young)
+  │  System incorporates and continues
+  │
+  ▼
+SNAPSHOT (Preserve State at a Point in Time)
+     Git tags: pilot-001-age-6, pilot-001-age-7
+     Immutable. Shows who the user was at that age.
+```
+
+**Single user, lifetime system.** There is no parent mode and no child mode. A parent helps when the user is young. The user grows into full ownership.
+
+---
+
+## Module 1: SELF (Identity Record)
 
 Contains who the user IS — their identity, story, and way of being in the world.
 
-**Core principle: Authentic mirroring.** The goal is faithful reproduction of the user's actual self, not an idealized or curated version. The twin should think, speak, and reason the way the user actually does — including quirks, biases, and imperfections.
+**Core principle: Accurate recording.** The goal is faithful documentation of the user's actual personality, preferences, reasoning, and voice — not an idealized or curated version. The record should capture them as they are, including quirks and imperfections.
 
 ### Contents
 
 | Component | Description | Example |
 |-----------|-------------|---------|
-| **Personality** | Observable behavioral tendencies | Curious, methodical, shy, impulsive |
+| **Personality** | Observable behavioral tendencies | Creative, persistent, physical, strong-willed |
 | **Linguistic style** | How they communicate | Vocabulary, sentence patterns, tone, verbal habits |
-| **Life narrative** | Their story, memories, experiences | Family, places lived, significant events, relationships |
-| **Preferences** | Likes, dislikes, tastes | Favorite books, movies, places, foods, people |
-| **Values** | What matters to them | Fairness, creativity, family, achievement |
-| **Reasoning patterns** | How they think through problems | Visual, sequential, intuitive, cautious |
-| **Interests** | What captures their attention | Dinosaurs, music, building things |
-| **Emotional patterns** | How they respond to situations | Cautious with new things, excited by challenges |
+| **Life narrative** | Their story, memories, experiences | Family, places lived, significant events |
+| **Preferences** | Likes, dislikes, tastes | Favorite books, movies, places, foods |
+| **Values** | What matters to them | Bravery, kindness, creativity |
+| **Reasoning patterns** | How they think through problems | Grinder, observer, pivoter |
+| **Interests** | What captures their attention | Stories, science, space, animals |
+| **Emotional patterns** | How they respond to situations | Cheers up sad friends, upset but keeps trying |
 
 ### Characteristics
 
-- **Authentic mirroring**: Faithful reproduction, not idealization
+- **Accurately recorded**: Captures the real person, not an idealized version
 - **Relatively stable**: Changes slowly over years
-- **Observed, not taught**: Emerges from interaction patterns
+- **Observed from interaction**: Emerges from what the user does and says
 - **Seeded early**: Initial survey captures starting point
-- **Inferred**: System detects patterns in how user teaches
+- **Inferred**: System detects patterns in user's activity
 - **Narrative-rich**: Contains their story, not just traits
-
-### Authentic Mirroring Principle
-
-The SELF module strives to mirror the user as they actually are:
-
-| Include | Exclude |
-|---------|---------|
-| Actual vocabulary (including "um", "like") | Polished, idealized speech |
-| Real preferences (even embarrassing ones) | Curated, socially-desirable answers |
-| Actual reasoning patterns (including biases) | Corrected, "better" reasoning |
-| Their version of events | Objective third-party account |
-| Quirks and imperfections | Normalized, generic personality |
-
-**Why this matters:**
-- Employers want to know the real person, not a polished facade
-- The twin should answer "how would [user] think about X?" accurately
-- Authenticity builds trust in the credential
-
-**Validation test (recognition):**
-- The user should recognize themselves in the twin
-- Others who know the user should recognize them through the twin
-
-If a parent, teacher, or friend interacts with the twin and says "yes, that's exactly how [user] would say that" — the SELF module is working. If they say "that doesn't sound like them" — it's not.
 
 ### Seeding (Initial Survey)
 
@@ -90,7 +102,7 @@ Simple favorites survey (5-10 minutes):
 4. What are your favorite games?
 ```
 
-That's it. Everything else is inferred from activity:
+Everything else is inferred from activity:
 - Linguistic style ← WRITE activities
 - Interests ← all pillars
 - Personality ← observed patterns
@@ -98,17 +110,17 @@ That's it. Everything else is inferred from activity:
 
 ### Evolution
 
-The SELF module updates as the system observes:
+The SELF record updates as the system observes:
 - How the user explains things (linguistic fingerprint)
 - What topics they gravitate toward (interests)
 - How they respond to challenges (reasoning style)
 - What they care about (values)
 
+History is always preserved. Changes do not overwrite.
+
 ---
 
-## Module 2: SKILLS (Capability Modules)
-
-**Analogue to CMC's MEM files.**
+## Module 2: SKILLS (Capability Record)
 
 Contains what the user CAN DO — capabilities that grow through authentic activity.
 
@@ -120,7 +132,7 @@ Skills organize under three fundamental cognitive modes:
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
 | **READ** | Intake, comprehension | Books read, summaries, interpretations |
-| **IMAGINE** | Creation, exploration | Creative play, hypotheticals, problem-solving |
+| **IMAGINE** | Creation, exploration | Creative play, hypotheticals, artwork, problem-solving |
 
 ### Structure
 
@@ -148,7 +160,7 @@ SKILLS/
 
 ### Activity-Based Growth
 
-The user doesn't "teach" skills — they **do** things. cog-em observes and infers.
+The user doesn't explicitly "teach" skills — they **do** things. cog-em observes and records.
 
 ```
 Activity: Daily journal entry (WRITE)
@@ -214,33 +226,21 @@ Every READ activity triggers a SELF update:
 | genres preferred | preferences.favorites |
 | themes returned to | values (what matters to them) |
 | difficulty level | (informs developmental stage) |
-| emotional reactions | emotional_patterns |
 
-**Example:**
-```
-READ: "Charlotte's Web" (3rd time), "Magic Tree House #12", "Dinosaur encyclopedia"
+### Both Required for Full Record
 
-SELF inferences:
-├── interests: animals, adventure, dinosaurs
-├── preferences.favorites.books: ["Charlotte's Web", ...]
-├── values: friendship (Charlotte's Web theme)
-└── reading_patterns: re-reads favorites, explores series
-```
-
-### Both Required for Emulation
-
-A true cognitive twin needs both:
+A complete cognitive fork needs both:
 - SELF alone = personality without capability
 - SKILLS alone = capabilities without character
-- SELF + SKILLS = produces output like this specific person
+- SELF + SKILLS = the full picture of this specific person
 
 **Key insight:** WRITE is both a skill AND the primary data source for SELF.
 
 ---
 
-## Response Grounding Principle
+## Evidence Grounding Principle
 
-When the twin responds to queries, it should draw from the user's own evidence.
+When the system interacts with the user, it should reference their own evidence.
 
 ### Grounding Sources
 
@@ -254,38 +254,23 @@ When the twin responds to queries, it should draw from the user's own evidence.
 ### Why This Matters
 
 ```
-Generic AI: "You might enjoy reading about dinosaurs."
-Cognitive Twin: "Remember when you read that dinosaur encyclopedia 
-                 and wrote about the T-Rex in your journal? Like that."
+Generic system: "You might enjoy reading about dinosaurs."
+Grounded system: "You wrote about Earth's layers last week and 
+                  said you like learning about space. Maybe a 
+                  book about what's inside other planets?"
 ```
 
-The twin should:
-- Use the user's actual vocabulary (from Writing Log)
-- Reference books they've read (from Reading List)
-- Recall their own creations (from Creation Log)
-- Mention their real experiences (from SELF.narrative)
-
-### Implementation
-
-```
-Query: "What should I learn next?"
-
-Response generation:
-1. Load SELF.interests → dinosaurs, space, building
-2. Load Reading List → books read, gaps
-3. Load Writing Log → recent topics, vocabulary level
-4. Generate response GROUNDED in their evidence
-
-Output: "You've been writing a lot about dinosaurs lately, 
-        and you finished that Magic Tree House about the moon. 
-        Maybe a book about what dinosaurs would do in space?"
-```
+The system should:
+- Reference the user's actual work and data
+- Connect new activities to prior evidence
+- Anchor suggestions to their documented interests
+- Never invent experiences or reference undocumented content
 
 ### Grounding Rules
 
-1. **Prefer user's own words** — Use phrases from Writing Log
+1. **Reference their work** — Connect to Writing Log, Creation Log
 2. **Reference their reading** — "Like in [book they read]..."
-3. **Connect to their creations** — "Remember when you drew..."
+3. **Connect to their creations** — "Your drawing of [X] showed..."
 4. **Anchor to their experiences** — "Like when you went to [place]..."
 5. **Never invent experiences** — Only reference documented evidence
 
@@ -293,59 +278,36 @@ Output: "You've been writing a lot about dinosaurs lately,
 
 ## Container Edge Principle
 
-The three SKILLS pillars (READ, WRITE, IMAGINE) are **containers** that define what the user currently knows and can do. The twin communicates at the **edge** of these containers.
+The three SKILLS pillars (READ, WRITE, IMAGINE) are **containers** that define what the user currently knows and can do. The system proposes activities at the **edge** of these containers.
 
 ### The Container Model
 
 ```
-┌─────────────────────────────────────────────────────┐
-│                   TOO ADVANCED                       │
-│              (beyond current reach)                  │
-├─────────────────────────────────────────────────────┤
-│ ░░░░░░░░░░░░░░░░ THE EDGE ░░░░░░░░░░░░░░░░░░░░░░░░░ │
-│   (zone of proximal development — where to teach)   │
-├─────────────────────────────────────────────────────┤
-│                                                     │
-│              INSIDE THE CONTAINER                   │
-│           (what they already know/can do)           │
-│                                                     │
-│   READ: books read, vocabulary acquired             │
-│   WRITE: words used, complexity achieved            │
-│   IMAGINE: creativity demonstrated                  │
-│                                                     │
-└─────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                   TOO ADVANCED                               │
+│              (beyond current reach)                          │
+├─────────────────────────────────────────────────────────────┤
+│ ░░░░░░░░░░░░░░░░ THE EDGE ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ │
+│   (zone of proximal development — optimal activity zone)    │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│              INSIDE THE CONTAINER                           │
+│           (what they already know/can do)                   │
+│                                                             │
+│   READ: books read, vocabulary acquired                     │
+│   WRITE: words used, complexity achieved                    │
+│   IMAGINE: creativity demonstrated                          │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Communication at the Edge
+### Activity Calibration
 
-| Zone | What it means | Twin behavior |
-|------|---------------|---------------|
-| Inside container | Already knows/can do | Reference, don't teach |
-| At the edge | Just beyond current level | Teach here — optimal |
+| Zone | What it means | System behavior |
+|------|---------------|-----------------|
+| Inside container | Already knows/can do | Reference, build on |
+| At the edge | Just beyond current level | Propose activities here — optimal |
 | Outside container | Too advanced | Don't go here yet |
-
-### How the Twin Finds the Edge
-
-**READ container edge:**
-```
-Current: Reading chapter books, vocabulary ~800 words
-Edge: Slightly longer books, 1-2 new words per session
-Too far: Young adult novels, complex vocabulary
-```
-
-**WRITE container edge:**
-```
-Current: Simple sentences, 50-word entries
-Edge: Introduce compound sentences, "because" connectors
-Too far: Paragraph structure, thesis statements
-```
-
-**IMAGINE container edge:**
-```
-Current: Recombines familiar elements
-Edge: Prompt novel combinations, "what if X met Y?"
-Too far: Abstract reasoning, philosophical hypotheticals
-```
 
 ### Gap Filling
 
@@ -355,50 +317,15 @@ The Capability Gap Log identifies holes INSIDE the container:
 Container: WRITE
   │
   ├── Established: vocabulary, expression, topics
-  ├── GAP: logical organization (should be here, isn't)
-  └── Edge: complexity (next to develop)
+  ├── GAP: sentence boundaries (should be here, developing)
+  └── Edge: paragraph structure (next to develop)
 
-Twin response: Fill the gap before extending the edge.
-"Let's try writing about what happened FIRST, THEN, FINALLY..."
-```
-
-### Implementation
-
-When the twin responds:
-
-1. **Load container state** — What's in each pillar?
-2. **Identify the edge** — What's the current boundary?
-3. **Check for gaps** — Any holes inside the container?
-4. **Calibrate response:**
-   - Use vocabulary FROM the container (grounding)
-   - Introduce concepts AT the edge
-   - Fill gaps BEFORE extending
-   - Never jump OUTSIDE the container
-
-### Example
-
-```
-Student: "Tell me about volcanoes."
-
-Container check:
-- READ: Has read 2 books mentioning volcanoes (basic)
-- WRITE: Uses "hot", "fire", "explode" (limited vocab)
-- IMAGINE: Drew a volcano once (surface interest)
-
-Edge identification:
-- Vocabulary edge: "lava", "eruption", "magma"
-- Concept edge: Why volcanoes happen (plate tectonics)
-
-Response (at edge, grounded):
-"Remember when you drew that volcano with the red lava? 
- The hot melted rock inside is called 'magma.' 
- When it comes out, it's called 'lava.' 
- Do you know why it comes out? The Earth is like a puzzle..."
+System: Fill the gap before extending the edge.
 ```
 
 ### Zone of Proximal Development
 
-This is the educational principle: teach at the boundary of current capability, where the user can succeed with guidance.
+Activities proposed at the boundary of current capability, where the user can succeed with guidance.
 
 - Too easy → boredom, no growth
 - Too hard → frustration, shutdown
@@ -408,20 +335,32 @@ This is the educational principle: teach at the boundary of current capability, 
 
 ## Query Modes
 
-### Query SELF
-> "What kind of person is [user]?"
-> "How does [user] typically approach new problems?"
-> "What are [user]'s core values?"
+### Browse the Record (Primary)
 
-### Query SKILLS (by pillar)
-> "How well does [user] write?"
-> "What's [user]'s reading comprehension level?"
-> "How creative/original is [user]?"
+> "What are [user]'s interests?" → SELF.interests
+> "Show me [user]'s writing growth" → SKILLS.WRITE trajectory
+> "What books has [user] read?" → EVIDENCE.reading_list
+> "Show me [user]'s artwork" → EVIDENCE.creation_log
 
-### Query BOTH (Full Emulation)
+### Query Capabilities
+
+> "How well does [user] write?" → SKILLS.WRITE levels
+> "What's [user]'s reading comprehension level?" → SKILLS.READ
+> "How creative/original is [user]?" → SKILLS.IMAGINE
+
+### Query Both (Full Profile)
+
+> "What are [user]'s cognitive strengths?" → SELF + SKILLS
+> "Where should [user] focus development?" → Gaps + edges
+> "Show me [user]'s growth trajectory" → Evidence over time
+
+### Emulation Queries (Optional Future Feature)
+
+If the user enables emulation:
 > "Write a journal entry the way [user] would."
 > "Explain [concept] the way [user] would explain it."
-> "What would [user] find interesting about [subject]?"
+
+Emulation requires rich SELF + SKILLS data and explicit user opt-in.
 
 ---
 
@@ -429,91 +368,62 @@ This is the educational principle: teach at the boundary of current capability, 
 
 ### SELF Schema
 
-**Design principle: Authentic mirroring, not idealization.**
-
 ```typescript
 interface Self {
   id: string;
   user_id: string;
   
-  // Core identity
   personality: {
+    self_concept: string;
     traits: { trait: string; confidence: number }[];
+    emotional_patterns: { trigger: string; response: string }[];
+    humor: { style: string; trigger: string };
+    empathy_mode: string;
+    problem_solving: { style: string; approach: string };
     updated_at: Date;
   };
   
   linguistic_style: {
     vocabulary_level: number;
     sentence_patterns: string[];
-    verbal_habits: string[];      // "um", "like", catchphrases
+    verbal_habits: string[];
     tone: string;
-    samples: string[];            // Actual examples of their speech/writing
+    samples: string[];
     updated_at: Date;
   };
   
-  // Life narrative (their story)
   narrative: {
-    family: {
-      members: { name: string; relationship: string; notes: string }[];
-      dynamics: string;
-    };
-    places: {
-      birthplace: string;
-      places_lived: { place: string; period: DateRange; significance: string }[];
-      favorite_places: string[];
-    };
-    significant_events: {
-      event: string;
-      date: Date;
-      impact: string;
-      how_they_tell_it: string;   // Their version of the story
-    }[];
-    relationships: {
-      name: string;
-      nature: string;
-      significance: string;
-    }[];
-    memories: {
-      content: string;
-      date_added: Date;
-      emotional_tone: string;
-    }[];
+    family: { members: { name: string; relationship: string; notes: string }[] };
+    places: { favorite_places: string[] };
+    significant_events: { event: string; date: Date; impact: string }[];
+    memories: { content: string; date_added: Date; emotional_tone: string }[];
   };
   
-  // Preferences
   preferences: {
     favorites: {
       movies: string[];
       books: string[];
       places: string[];
       activities: string[];
-      people: string[];
       foods: string[];
-      music: string[];
     };
     dislikes: string[];
-    happiness_triggers: string[];
-    frustration_triggers: string[];
     learning_preferences: string[];
   };
   
-  // Values (what matters to them)
   values: {
     core: string[];
     inferred_from: string[];
     updated_at: Date;
   };
   
-  // How they think
   reasoning_patterns: {
-    style: string;  // visual, sequential, intuitive, etc.
+    style: string;
     approach_to_new: string;
     approach_to_hard: string;
-    approach_to_conflict: string;
     updated_at: Date;
   };
   
-  // What captures their attention
   interests: {
     current: { topic: string; intensity: number }[];
     historical: { topic: string; period: DateRange }[];
@@ -531,20 +441,14 @@ interface Skills {
   id: string;
   user_id: string;
   
-  // The three pillars
   pillars: {
     WRITE: PillarProfile;
     READ: PillarProfile;
     IMAGINE: PillarProfile;
   };
   
-  // All captured activities
   activities: Activity[];
-  
-  // Derived capability claims
   capabilities: CapabilityClaim[];
-  
-  // Gaps and struggles
   gaps: GapEntry[];
   struggles: StruggleEntry[];
   
@@ -556,7 +460,7 @@ interface PillarProfile {
   dimensions: {
     [dimension: string]: {
       level: 1 | 2 | 3 | 4 | 5;
-      confidence: number;           // 0-1
+      confidence: number;
       activity_count: number;
       last_activity: Date;
     };
@@ -568,26 +472,23 @@ interface Activity {
   date: Date;
   duration_minutes: number;
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
-  
-  activity_type: 'journal' | 'story' | 'summary' | 'conversation' | 'creative' | 'artwork' | 'building' | 'problem';
+  activity_type: string;
   pillar_primary: 'WRITE' | 'READ' | 'IMAGINE';
   pillar_secondary?: 'WRITE' | 'READ' | 'IMAGINE';
   
-  // Content varies by modality
   content: {
-    text?: string;               // For voice/text
-    image_file?: string;         // For artwork uploads
-    user_description?: string; // What they say about their creation
+    text?: string;
+    image_file?: string;
+    user_description?: string;
   };
   
   analysis: {
-    pillar_metrics: Record<string, any>;  // Dimension-specific analysis
+    pillar_metrics: Record<string, any>;
     self_observations: {
       linguistic_markers: string[];
       emotional_tone: string;
       interests_signaled: string[];
     };
-    // For image activities
     image_analysis?: {
       subject_matter: string[];
       elaboration: 1 | 2 | 3 | 4 | 5;
@@ -600,7 +501,6 @@ interface Activity {
     live_capture: boolean;
     biometric_confirmed: boolean;
     ai_detection: 'human' | 'uncertain' | 'flagged';
-    image_authenticity?: 'original' | 'uncertain' | 'flagged';
   };
 }
 
@@ -617,7 +517,7 @@ interface CapabilityClaim {
   first_demonstrated: Date;
   last_confirmed: Date;
   activity_count: number;
-  evidence: string[];  // Activity IDs
+  evidence: string[];
   
   status: 'emerging' | 'established' | 'archived';
 }
@@ -630,124 +530,31 @@ interface CapabilityClaim {
 ### SELF (Highly Sensitive)
 - Contains personality, values, emotional patterns
 - Highest privacy tier
-- Parent oversight required for minors
-- Granular access control (can share skills without personality)
+- User-controlled access at all ages
 
 ### SKILLS (Sensitive)
 - Contains capability data across READ/WRITE/IMAGINE
 - Can be shared for credential purposes
-- Pillar-limited access possible (share WRITE, not all pillars)
+- Pillar-limited access possible
 
-### Access Control Matrix
+### Access Control
 
 | Accessor | SELF Access | SKILLS Access |
 |----------|-------------|---------------|
-| Student | Full | Full |
-| Parent (child <12) | Full | Full |
-| Parent (child 12-18) | Summary | Full |
-| Parent (child 18+) | None (unless granted) | None (unless granted) |
+| User | Full | Full |
+| Parent (user <12) | Full (custodial) | Full |
+| Parent (user 12-18) | Summary | Full |
+| Parent (user 18+) | None (unless granted) | None (unless granted) |
 | Employer | None (unless granted) | Granted pillars only |
 | University | None (unless granted) | Granted pillars only |
-| Mentor | Granted portions | Granted pillars |
 
----
-
-## MVP Scope
-
-### Phase 1 (Solo Pilot)
-
-**SELF:**
-- Preference survey (seeding)
-- Basic linguistic style capture
-- Interest tracking
-
-**SKILLS:**
-- WRITE pillar only (journal entries)
-- Activity capture and analysis
-- Basic dimension tracking (vocabulary, complexity, expression)
-
-### Phase 2 (Cohort Pilot)
-
-**SELF:**
-- Personality inference from activities
-- Reasoning pattern detection
-- Value inference
-
-**SKILLS:**
-- All three pillars (WRITE, READ, IMAGINE)
-- Full dimension tracking
-- Capability claims with verification levels
-- Gap and struggle logging
-
----
-
-## Open Questions
-
-1. **How granular should SELF be for a 6-year-old?**
-   - Personality traits are still forming
-   - Preferences change rapidly
-   - Need to balance capture vs. overfit
-
-2. **How to prompt READ and IMAGINE activities?**
-   - WRITE is natural (journal)
-   - READ needs "tell me about what you read" prompts
-   - IMAGINE needs creative prompts or observation
-
-3. **How to handle SELF changes over time?**
-   - Person at 6 ≠ person at 16
-   - Preserve history (snapshots) + update current
-
-4. **What's the minimum for useful emulation?**
-   - WRITE samples + SELF linguistic style might be enough to start
-   - Full pillar coverage can wait
-
----
-
-## Template Governance
-
-Each module is governed by a template that defines structure, rules, and compliance checks.
-
-| Module | Template | Adapted From |
-|--------|----------|--------------|
-| SELF | [SELF–TEMPLATE.md](SELF-TEMPLATE.md) | CMC's CIV–MIND–TEMPLATE |
-| SKILLS | [SKILLS–TEMPLATE.md](SKILLS-TEMPLATE.md) | CMC's CIV–SCHOLAR–TEMPLATE |
-| EVIDENCE | [EVIDENCE–TEMPLATE.md](EVIDENCE-TEMPLATE.md) | CMC's CIV–ARC–TEMPLATE |
-
-### Key Concepts from Templates
-
-**From SELF–TEMPLATE:**
-- Authentic mirroring principle
-- Component structure (personality, linguistic, narrative, preferences, values, reasoning, interests)
-- Seeding via simple favorites survey (movies, books, places, games)
-- Evolution with preserved history
-- Forbidden behaviors (things the user would never say)
-- Snapshots at age milestones
-
-**From SKILLS–TEMPLATE:**
-- Three pillars: WRITE, READ, IMAGINE
-- Activity-based growth (not explicit teaching)
-- Capability Claims with developmental levels
-- Capability Gap Log
-- Struggle Log (difficulties and breakthroughs)
-- Activity Capture Format (text, voice, image)
-- WRITE → SELF linguistic pipeline
-- READ → SELF preferences pipeline
-- Snapshots at age milestones
-
-**From EVIDENCE–TEMPLATE:**
-- Evidence tiers (Certified → Verified → Attested → Observed → Reported)
-- Reading List as systematic canon (like ARC)
-- Re-reads as strong preference signal
-- Media log for movies, shows, games
-- Attestation log for parent/teacher confirmations
-- Evidence metrics and confidence calculation
-- Immutability rules (activities can't be modified)
+There is no parent mode — parents have age-appropriate access to the user's single system.
 
 ---
 
 ## Storage and Versioning
 
-GitHub repository is the authoritative record store.
+GitHub repository is the authoritative record store. Git IS the fork.
 
 ### Storage Model
 
@@ -756,10 +563,11 @@ GitHub Repository (rbtkhn/cog-em)
 ├── docs/                    # Templates and governance
 ├── users/
 │   └── pilot-001/
-│       ├── SELF.md          # Personality profile
-│       ├── SKILLS.md        # Capability containers
-│       ├── EVIDENCE.md      # Reading/Writing/Creation logs
-│       └── SESSION-LOG.md   # Interaction history
+│       ├── SELF.md          # Identity record
+│       ├── SKILLS.md        # Capability record
+│       ├── EVIDENCE.md      # Activity logs
+│       ├── SESSION-LOG.md   # Interaction history
+│       └── artifacts/       # Raw files (writing, artwork)
 └── (future users...)
 ```
 
@@ -772,6 +580,7 @@ GitHub Repository (rbtkhn/cog-em)
 | Rollback | Git revert |
 | Snapshots | Git tags (e.g., `pilot-001-age-6`) |
 | Backup | GitHub remote |
+| The fork itself | The git repository |
 
 ### Commit Protocol
 
@@ -780,26 +589,16 @@ Every session that updates user data:
 2. Commit with descriptive message
 3. Push to GitHub
 
-**Commit message format:**
-```
-[PILOT-001] Session XXX: [activity type]
-
-- SELF: [what was updated]
-- SKILLS: [what was updated]  
-- EVIDENCE: [what was added]
-```
-
 ### Snapshots
 
 Age-based snapshots = git tags:
 ```
 git tag pilot-001-age-6 -m "Snapshot at age 6"
-git tag pilot-001-age-7 -m "Snapshot at age 7"
 ```
 
 Tags preserve the exact state at that point in time.
 
 ---
 
-*Document version: 1.2*  
+*Document version: 2.0*
 *Last updated: February 2026*

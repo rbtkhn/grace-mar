@@ -27,6 +27,10 @@ Pods/
 *.swo
 .DS_Store
 
+# Python
+__pycache__/
+*.pyc
+
 # Logs
 *.log
 npm-debug.log*

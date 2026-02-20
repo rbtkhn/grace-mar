@@ -1,26 +1,25 @@
-# SELF–TEMPLATE v1.0
+# SELF–TEMPLATE v2.0
 
 Cognitive Emulator · Self Module Governance Template
 
-Status: DRAFT
-Version: 1.0
+Status: ACTIVE
+Version: 2.0
 Last Update: February 2026
 
-**Governed by**: [COG-EM-CORE v1.1](COG-EM-CORE.md)
-Adapted from: CIV–MIND–TEMPLATE v3.0 (CMC)
+**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
 
 ---
 
 ## I. PURPOSE
 
-This template governs the SELF module of the cognitive twin.
+This template governs the SELF module of the cognitive fork.
 
 The SELF module:
-- Captures WHO the user IS
-- Mirrors personality, linguistic style, values, narrative
-- Enables authentic emulation (not idealization)
+- Records WHO the user IS
+- Captures personality, linguistic style, values, narrative
+- Enables accurate representation (not idealization)
 - Evolves as the user grows
-- Allows recognition by those who know the user
+- Preserves history at every stage
 
 The SELF module is NOT:
 - A curated persona
@@ -28,17 +27,17 @@ The SELF module is NOT:
 - A generic child profile
 - A static personality test result
 
-SELF strives for AUTHENTIC MIRRORING.
+SELF strives for ACCURATE RECORDING.
 
 ---
 
-## II. CORE PRINCIPLE: AUTHENTIC MIRRORING
+## II. CORE PRINCIPLE: ACCURATE RECORDING
 
-The twin should mirror the user as they actually are.
+The fork should record the user as they actually are.
 
 ### Include
 
-- Actual vocabulary (including "um", "like", filler words)
+- Actual vocabulary (including filler words, verbal habits)
 - Real preferences (even embarrassing ones)
 - Actual reasoning patterns (including biases)
 - Their version of events (not objective third-party)
@@ -47,19 +46,17 @@ The twin should mirror the user as they actually are.
 
 ### Exclude
 
-- Polished, idealized speech
+- Polished, idealized descriptions
 - Curated, socially-desirable answers
 - Corrected, "better" reasoning
 - Normalized, generic personality
 
-### Validation Test (Recognition)
+### Accuracy Test
 
 The SELF module is working when:
-- The user recognizes themselves in the twin
-- Others who know the user recognize them through the twin
-
-If a parent, teacher, or friend says "that sounds exactly like them" — success.
-If they say "that doesn't sound like them" — failure.
+- The record accurately reflects the user's documented behavior
+- Data is grounded in evidence (activities, surveys, artifacts)
+- Changes over time are preserved, not overwritten
 
 ---
 
@@ -73,7 +70,7 @@ Basic information about the user.
 identity: {
   name: string;
   birthdate: Date;
-  age: number;                    // Calculated
+  age: number;
   languages: string[];
   location: string;
   created_at: Date;
@@ -86,17 +83,31 @@ Observable behavioral tendencies.
 
 ```typescript
 personality: {
+  self_concept: string;          // What they think is the best thing about themselves
+  
   traits: {
-    trait: string;               // e.g., "curious", "cautious"
+    trait: string;
     confidence: number;          // 0-1
-    evidence: string[];          // Sessions that revealed this
+    evidence: string[];          // Sessions/activities that revealed this
   }[];
   
   emotional_patterns: {
-    trigger: string;             // What triggers the emotion
-    response: string;            // How they typically respond
+    trigger: string;
+    response: string;
     examples: string[];
   }[];
+  
+  humor: {
+    style: string;               // physical, wordplay, absurd, etc.
+    trigger: string;
+  };
+  
+  empathy_mode: string;          // How they respond to others' emotions
+  
+  problem_solving: {
+    style: string;               // grinder, pivoter, help-seeker
+    approach: string;
+  };
   
   updated_at: Date;
 }
@@ -108,28 +119,26 @@ How they communicate. **Primary data source: WRITE activities.**
 
 ```typescript
 linguistic_style: {
-  vocabulary_level: number;      // Age-adjusted, derived from WRITE.vocabulary
+  vocabulary_level: number;
   
   sentence_patterns: {
-    pattern: string;             // e.g., "starts with 'so'"
+    pattern: string;
     frequency: number;
-    examples: string[];          // From WRITE activities
+    examples: string[];
   }[];
   
-  verbal_habits: string[];       // "um", "like", catchphrases
-  
-  tone: string;                  // e.g., "enthusiastic", "quiet"
+  verbal_habits: string[];
+  tone: string;
   
   samples: {
-    content: string;             // Actual quote from WRITE activity
+    content: string;
     date: Date;
-    activity_id: string;         // Reference to source activity
+    activity_id: string;
     context: string;
   }[];
   
-  // Derivation metadata
   derived_from: {
-    activity_count: number;      // How many WRITE activities analyzed
+    activity_count: number;
     last_updated: Date;
   };
   
@@ -151,8 +160,6 @@ WRITE Activity (journal, story, message)
             └── SELF.linguistic_style updated
 ```
 
-The more WRITE activities, the richer the linguistic fingerprint.
-
 ### 4. Life Narrative
 
 Their story, memories, relationships.
@@ -162,10 +169,9 @@ narrative: {
   family: {
     members: {
       name: string;
-      relationship: string;      // "mom", "grandpa", "sister"
-      notes: string;             // How user describes them
+      relationship: string;
+      notes: string;
     }[];
-    dynamics: string;            // Student's view of family
   };
   
   places: {
@@ -173,7 +179,7 @@ narrative: {
     places_lived: {
       place: string;
       period: DateRange;
-      significance: string;      // What it means to them
+      significance: string;
     }[];
     favorite_places: string[];
   };
@@ -181,13 +187,13 @@ narrative: {
   significant_events: {
     event: string;
     date: Date;
-    impact: string;              // How it affected them
-    their_version: string;       // How THEY tell the story
+    impact: string;
+    their_version: string;
   }[];
   
   relationships: {
     name: string;
-    nature: string;              // "best friend", "teacher"
+    nature: string;
     significance: string;
   }[];
   
@@ -207,13 +213,13 @@ Likes, dislikes, tastes. **Primary data source: READ activities + explicit input
 preferences: {
   favorites: {
     movies: string[];
-    books: string[];             // Derived from READ content log
+    books: string[];
     music: string[];
     places: string[];
     activities: string[];
     foods: string[];
-    people: string[];            // Characters, heroes, family
-    [custom]: string[];          // Extensible
+    people: string[];
+    [custom]: string[];
   };
   
   dislikes: string[];
@@ -222,12 +228,11 @@ preferences: {
   frustration_triggers: string[];
   
   learning_preferences: {
-    modality: string;            // visual, auditory, kinesthetic
-    environment: string;         // quiet, music, etc.
+    modality: string;
+    environment: string;
     time_of_day: string;
   };
   
-  // Derivation metadata
   derived_from: {
     read_activity_count: number;
     explicit_input_count: number;
@@ -238,36 +243,23 @@ preferences: {
 }
 ```
 
-**Derivation from READ:**
-```
-READ Activity Log
-    │
-    ├── Books read → preferences.favorites.books
-    ├── Re-reads detected → strong preference signal
-    ├── Genres chosen → interest patterns
-    ├── Themes returned to → values inference
-    └── Content avoided → dislikes inference
-```
-
-Preferences combine explicit input (survey) + inferred from READ behavior.
-
 ### 6. Values
 
 What matters to them.
 
 ```typescript
 values: {
-  core: string[];                // e.g., "fairness", "family"
+  core: string[];
   
   inferred_from: {
     value: string;
-    evidence: string[];          // What revealed this value
+    evidence: string[];
   }[];
   
   conflicts: {
     value_a: string;
     value_b: string;
-    context: string;             // When these conflict
+    context: string;
   }[];
   
   updated_at: Date;
@@ -280,11 +272,11 @@ How they think.
 
 ```typescript
 reasoning_patterns: {
-  style: string;                 // visual, sequential, intuitive
+  style: string;
   
-  approach_to_new: string;       // How they handle new things
-  approach_to_hard: string;      // How they handle difficulty
-  approach_to_conflict: string;  // How they handle disagreement
+  approach_to_new: string;
+  approach_to_hard: string;
+  approach_to_conflict: string;
   
   characteristic_moves: {
     situation: string;
@@ -304,9 +296,9 @@ What captures their attention. **Derived from all three pillars.**
 interests: {
   current: {
     topic: string;
-    intensity: number;           // 1-5
+    intensity: number;
     since: Date;
-    sources: string[];           // Which pillars revealed this
+    sources: string[];
   }[];
   
   historical: {
@@ -315,31 +307,16 @@ interests: {
     peak_intensity: number;
   }[];
   
-  emerging: string[];            // Topics showing new interest
-  declining: string[];           // Topics losing interest
+  emerging: string[];
+  declining: string[];
   
-  // Derivation metadata
   derived_from: {
-    write_topics: number;        // Topics from WRITE content
-    read_content: number;        // Topics from READ choices
-    imagine_themes: number;      // Topics from IMAGINE activities
+    write_topics: number;
+    read_content: number;
+    imagine_themes: number;
     last_updated: Date;
   };
 }
-```
-
-**Derivation from all pillars:**
-```
-WRITE: topics written about → interests
-READ: content chosen → interests  
-IMAGINE: themes explored → interests
-
-Example:
-├── WRITE: 12 journal entries mention "dinosaurs"
-├── READ: 3 dinosaur books, 1 dinosaur video
-├── IMAGINE: 5 creative plays involving dinosaurs
-│
-└── SELF.interests: { topic: "dinosaurs", intensity: 5, sources: ["WRITE", "READ", "IMAGINE"] }
 ```
 
 ---
@@ -357,12 +334,10 @@ Simple favorites survey to initialize SELF. Everything else is inferred from act
 4. What are your favorite games?
 ```
 
-That's it. Keep it simple.
-
-### Optional Extensions (if child is engaged)
+### Optional Extensions (if user is engaged)
 
 ```
-5. Who are your favorite people? (family, friends, characters)
+5. Who are your favorite people?
 6. What do you like to do for fun?
 7. What do you want to be when you grow up?
 ```
@@ -378,14 +353,6 @@ That's it. Keep it simple.
 
 Everything else — linguistic style, personality, values, reasoning patterns — is **inferred from activity**, not surveyed.
 
-### Survey Administration
-
-- Voice or text (transcribed)
-- Parent may assist
-- Takes 5-10 minutes
-- Answers are starting point, not permanent
-- No wrong answers
-
 ### After Seeding
 
 ```
@@ -394,18 +361,18 @@ SELF initialized with:
 ├── interests (inferred from favorites)
 └── everything else: EMPTY (to be derived from activity)
 
-First journal entry:
+First writing sample:
 └── SELF.linguistic_style begins populating
 ```
 
-The survey gives the twin something to talk about.
-Activity gives the twin a voice.
+The survey gives the system something to reference.
+Activity gives the record depth.
 
 ---
 
 ## V. SELF EVOLUTION
 
-Unlike CMC's frozen MIND profiles, SELF evolves.
+SELF evolves over a lifetime.
 
 ### What Evolves
 
@@ -418,19 +385,19 @@ Unlike CMC's frozen MIND profiles, SELF evolves.
 ### How It Evolves
 
 1. **Continuous Inference**
-   - System observes how user teaches
+   - System observes patterns in activity
    - Patterns detected and recorded
    - Confidence scores updated
 
 2. **Periodic Anchoring**
    - Annual or milestone surveys
-   - Parent/teacher attestation
-   - Student self-reflection
+   - Parent/teacher attestation (when young)
+   - User self-reflection (as they grow)
 
 3. **Explicit Updates**
-   - Student says "I don't like that anymore"
-   - Parent provides correction
+   - User says "I don't like that anymore"
    - Major life event
+   - User logs new information
 
 ### Preserving History
 
@@ -445,44 +412,11 @@ PREFERENCE HISTORY: Favorite Movie
 2031-06 (age 11): Star Wars
 ```
 
-The twin knows current preference AND can recall past preferences.
+The fork knows current preference AND can recall past preferences.
 
 ---
 
-## VI. FORBIDDEN BEHAVIORS
-
-What the twin should NOT say or do (based on SELF).
-
-Adapted from CMC's Forbidden Linguistic Behaviors.
-
-### Capture Negative Markers
-
-```typescript
-forbidden: {
-  phrases_never_used: string[];    // Words they don't use
-  tones_never_adopted: string[];   // Tones foreign to them
-  reasoning_never_used: string[];  // Ways they don't think
-}
-```
-
-### Purpose
-
-- Prevents generic responses
-- Ensures twin sounds like THIS user
-- Detection mechanism for authenticity
-
-### Example
-
-```
-FORBIDDEN for [Student]:
-- Never uses: "furthermore", "consequently" (too formal)
-- Never adopts: sarcastic tone (earnest personality)
-- Never reasons: abstract-first (always starts concrete)
-```
-
----
-
-## VII. SNAPSHOTS
+## VI. SNAPSHOTS
 
 Preserve SELF at points in time.
 
@@ -505,7 +439,7 @@ PERSONALITY SUMMARY:
 [Key traits at this age]
 
 LINGUISTIC MARKERS:
-[How they spoke at this age]
+[How they communicated at this age]
 
 FAVORITES AT THIS AGE:
 [Top preferences]
@@ -523,67 +457,74 @@ NARRATIVE:
 ### Preservation Rule
 
 Snapshots are IMMUTABLE.
-Parent can revisit "who they were at 6."
-Student can see their own growth.
+The user can revisit who they were at any age.
 
 ---
 
-## VIII. QUERYING SELF
+## VII. QUERYING SELF
 
-How the twin uses SELF to respond.
+How the SELF record is accessed.
 
-### Response Grounding Principle
+### Record Queries (Primary)
 
-The twin should speak THROUGH the user's own evidence, not about them generically.
+When browsing or querying the fork:
 
-**Grounding sources:**
-| Source | Use |
-|--------|-----|
-| Writing Log | Their vocabulary, phrases, examples |
-| Reading List | Books they've actually read |
-| Creation Log | Their own drawings, inventions |
-| SELF.narrative | Their memories, experiences |
+| Query | Source |
+|-------|--------|
+| "What kind of person is [user]?" | Personality summary |
+| "How does [user] communicate?" | Linguistic markers + samples from Writing Log |
+| "What does [user] care about?" | Values and interests + evidence |
+| "Tell me about [user]'s background" | Life narrative |
+| "What are [user]'s interests?" | Interest profile with sources |
 
-**Example:**
-```
-Generic: "You might like space books."
-Grounded: "Remember when you wrote about wanting to be an astronaut? 
-           And you loved that Magic Tree House moon book. 
-           Maybe the one about Mars next?"
-```
+### Evidence-Grounded Interaction
 
-### Grounding Rules
-
-1. **Use their words** — Pull phrases from Writing Log
-2. **Reference their reading** — "Like in [book they read]..."
-3. **Recall their creations** — "Remember when you drew..."
-4. **Anchor to experiences** — "Like when you went to [place]..."
-5. **Never invent** — Only reference documented evidence
-
-### For Emulation
-
-When asked "What would [user] say about X?":
+When the system interacts with the user:
 1. Load relevant SELF components
 2. Load relevant evidence (Writing Log, Reading List)
-3. Apply linguistic style (vocabulary, phrases from their writing)
-4. Reference their actual experiences
-5. Deliver in their voice, grounded in their evidence
+3. Reference their actual data
+4. Connect new activities to prior evidence
 
-### For Recognition
+### Emulation Queries (Optional Future Feature)
 
-When evaluator queries:
-- "What kind of person is [user]?" → Personality summary
-- "How does [user] communicate?" → Linguistic markers + examples from Writing Log
-- "What does [user] care about?" → Values and interests + evidence
-- "Tell me about [user]'s background" → Life narrative
+When the user enables emulation:
+- "Write a journal entry the way [user] would"
+- "Explain [concept] the way [user] would"
+- Apply linguistic style from WRITE samples
+- Reference their actual experiences
+- Deliver in their voice, grounded in evidence
 
-### For Prediction
+Emulation requires explicit opt-in and sufficient data.
 
-When asked "What would [user] enjoy?":
-- Use preferences and interests
-- Reference similar things they've enjoyed (from Reading List, Creation Log)
-- Apply reasoning patterns
-- Deliver suggestion in their voice, connected to their experience
+---
+
+## VIII. EMULATION FEATURES (Optional, Future)
+
+These features depend on sufficient SELF data and explicit user opt-in.
+
+### Linguistic Fingerprint
+
+When emulation is enabled, the system can produce output
+in the user's voice using their documented linguistic style.
+
+### Forbidden Behaviors (Emulation Mode)
+
+When emulating, the system should NOT produce output that
+contradicts the user's documented patterns:
+
+```typescript
+forbidden: {
+  phrases_never_used: string[];
+  tones_never_adopted: string[];
+  reasoning_never_used: string[];
+}
+```
+
+### Recognition Test (Emulation Mode)
+
+If a parent, teacher, or friend interacts with the emulation
+and says "that sounds exactly like them" — success.
+If they say "that doesn't sound like them" — failure.
 
 ---
 
@@ -595,11 +536,11 @@ SELF is highly sensitive.
 
 | Accessor | Access Level |
 |----------|--------------|
-| Student | Full |
-| Parent (child <12) | Full |
-| Parent (child 12-16) | Summary + explicit grants |
-| Parent (child 16+) | Summary only |
-| Parent (child 18+) | None unless granted |
+| User | Full |
+| Parent (user <12) | Full (custodial) |
+| Parent (user 12-16) | Summary + explicit grants |
+| Parent (user 16+) | Summary only |
+| Parent (user 18+) | None unless granted |
 | Employer | None unless granted (rare) |
 | University | None unless granted (rare) |
 | Mentor | Granted portions only |
@@ -646,16 +587,16 @@ Before creating SELF SNAPSHOT:
 
 ### SKILLS → SELF
 
-- What user teaches reveals interests
-- How they explain reveals linguistic style
+- What user produces reveals interests
+- How they express reveals linguistic style
 - Struggles reveal emotional patterns
 
-### Full Emulation Requires Both
+### Full Record Requires Both
 
-> "Explain [topic] the way [user] would"
+> "What are [user]'s cognitive strengths?"
 
-= SKILLS (what they know) + SELF (how they express it)
+= SKILLS (what they can do) + SELF (how they approach it)
 
 ---
 
-END OF FILE — SELF–TEMPLATE v1.0
+END OF FILE — SELF–TEMPLATE v2.0

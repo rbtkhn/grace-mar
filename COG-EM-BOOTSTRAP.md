@@ -9,7 +9,7 @@ Use this file to initiate or continue work on cog-em in any Cursor conversation.
 
 When this file is loaded at the start of a conversation, present the user with multiple choice options:
 
-1. **Run pilot session** — Load pilot-001 files, follow `.cursor/rules/cog-em.mdc`
+1. **Run session** — Load pilot-001 files, follow `.cursor/rules/cog-em.mdc`
 2. **Continue development** — Proceed with a task (user specifies)
 3. **Review status** — Summarize current phase, next steps, recent changes
 4. **Other** — User describes what they need
@@ -22,21 +22,27 @@ Wait for the user to choose before proceeding.
 
 **Name:** cog-em (Cognitive Emulator)
 **Repository:** https://github.com/rbtkhn/cog-em
-**Status:** Pre-pilot
-**Current Phase:** SEEDING (initial profile building)
+**Status:** Pilot (seeding complete)
+**Current Phase:** POST-SEED — ready for first interactive sessions
 
 ---
 
 ## CORE CONCEPT
 
-A cognitive emulator is an AI system that:
-- Learns FROM the user (not teaches TO the user)
-- Grows only through authentic user activity
-- Mirrors the user's personality, reasoning, and knowledge
-- Functions as a living credential (queryable diploma/CV)
-- Persists across years (childhood → career)
+A cognitive fork: a versioned, evidence-grounded record of an individual's cognitive development — initialized from a real person at a point in time, growing through curated interactions over a lifetime.
 
-The user teaches the system. The system becomes their cognitive twin.
+Like a software fork:
+- **Seed** = initial fork (snapshot of the real person)
+- **Each interaction** = a commit on the fork's branch
+- **Divergence** = the fork and the real person grow independently — by design
+- **Optional merge** = new information brought in when the user chooses
+- **Git** = literally the version control mechanism
+
+The fork is not a real-time mirror. It is a living, growing cognitive record — the user's lifetime academic project and archive.
+
+### Single User, Lifetime System
+
+There is no parent mode and no child mode. There is one user. A parent helps when the user is young. The user grows into full ownership. Learning to use this system is itself a lifelong skill.
 
 ---
 
@@ -44,7 +50,7 @@ The user teaches the system. The system becomes their cognitive twin.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     COGNITIVE TWIN                          │
+│                     COGNITIVE FORK                          │
 ├─────────────────────────┬───────────────────────────────────┤
 │         SELF            │            SKILLS                 │
 │   (who they ARE)        │      (what they CAN DO)           │
@@ -57,9 +63,9 @@ The user teaches the system. The system becomes their cognitive twin.
 └─────────────────────────┴───────────────────────────────────┘
 ```
 
-**SELF** — Authentic mirror of identity. Evolves slowly. Observed, not taught.
+**SELF** — Accurate record of identity. Evolves slowly. Observed from interaction.
 
-**SKILLS** — Three pillars (READ, WRITE, IMAGINE) that grow through activity. Each pillar is a "container" with an edge where teaching happens.
+**SKILLS** — Three pillars (READ, WRITE, IMAGINE) that grow through activity. Each pillar is a "container" with an edge where optimal activities are proposed.
 
 ---
 
@@ -75,35 +81,38 @@ The user teaches the system. The system becomes their cognitive twin.
 
 ## KEY PRINCIPLES
 
-### Response Grounding Principle
-The twin speaks THROUGH the user's evidence:
-- Use their vocabulary and phrases
-- Reference books they've actually read
-- Recall their own creations
+### Evidence Grounding Principle
+The system references the user's own evidence:
+- Reference their actual work and data
+- Connect new activities to prior evidence
 - Never invent experiences
 
 ### Container Edge Principle
-Teach at the boundary of current capability:
+Propose activities at the boundary of current capability:
 - INSIDE container → use as foundation
-- AT THE EDGE → teach here (optimal)
+- AT THE EDGE → propose activities here (optimal)
 - OUTSIDE container → avoid (too advanced)
 
 ### Expansion Principle (Anti-Echo-Chamber)
-The twin mirrors but must not create an echo chamber:
+The fork records accurately but must not create an echo chamber:
 - Introduce adjacent concepts and alternative perspectives
 - Do not merely validate existing beliefs
-- The twin is a mirror with windows, not walls
+- The fork is a record with windows, not walls
 
 ### Cognitive Augmentation Warning
-The twin augments cognition, not replaces it:
+The fork records cognition, not replaces it:
 - Users must still do the cognitive work
-- Encourage retrieval practice (ask user to recall before confirming)
-- The twin is a mirror, not an oracle
+- Encourage retrieval practice
+- The fork is a record, not an oracle
 
-### Authentic Mirroring
-Mirror the real user, not an idealized version:
+### Accurate Recording
+Record the real user, not an idealized version:
 - Include quirks and imperfections
-- Others should recognize the user through the twin
+- Capture them as they are
+- History is preserved, not overwritten
+
+### Optional Emulation (Future)
+The fork accumulates enough data to optionally emulate the user — answering queries in their voice. This is a future feature, not the core identity. The core is the record.
 
 ---
 
@@ -138,29 +147,24 @@ cog-em/
 ├── COG-EM-BOOTSTRAP.md      # THIS FILE — session bootstrap
 ├── README.md                 # Project overview
 ├── .cursor/rules/
-│   └── cog-em.mdc           # Governance + pilot protocol (users/**)
+│   └── cog-em.mdc           # Governance + session protocol (users/**)
 ├── docs/
-│   ├── COG-EM-CORE.md       # CANONICAL governance
+│   ├── COG-EM-CORE.md       # CANONICAL governance (v2.0)
 │   ├── PARENT-BRIEF.md      # Parent/guardian brief (pre-survey)
 │   ├── ARCHITECTURE.md      # Module design
 │   ├── SELF-TEMPLATE.md     # SELF module governance
 │   ├── SKILLS-TEMPLATE.md   # SKILLS module governance
 │   ├── EVIDENCE-TEMPLATE.md # Evidence storage governance
 │   ├── CONCEPT.md           # Full concept explanation
-│   ├── PILOT-PLAN.md        # 2-month pilot structure
-│   ├── COMPETITIVE-ANALYSIS.md
-│   ├── ANTI-CHEATING.md
-│   ├── DIFFERENTIATION.md
-│   ├── TEAM.md
-│   └── LETTER-TO-STUDENT.md
+│   ├── PILOT-PLAN.md        # Pilot structure
+│   └── ...                  # Supporting docs
 └── users/
-    ├── README.md            # User directory structure
     └── pilot-001/           # First pilot user (age 6)
-        ├── SELF.md          # Personality profile (to be seeded)
-        ├── SKILLS.md        # Capability containers (empty)
-        ├── EVIDENCE.md      # Activity logs (empty)
-        ├── SESSION-LOG.md   # Interaction history (incl. consent)
-        └── SURVEY-CAPTURE.md # Seed survey capture template
+        ├── SELF.md          # Identity record (seeded)
+        ├── SKILLS.md        # Capability record (seeded)
+        ├── EVIDENCE.md      # Activity logs (seeded)
+        ├── SESSION-LOG.md   # Interaction history
+        └── artifacts/       # Raw files (writing samples, artwork)
 ```
 
 ---
@@ -168,37 +172,38 @@ cog-em/
 ## CURRENT STATUS
 
 **Completed:**
-- [x] Core concept defined
+- [x] Core concept defined (fork model, v2.0)
 - [x] Two-module architecture (SELF + SKILLS)
 - [x] Three pillars (READ, WRITE, IMAGINE)
-- [x] COG-EM-CORE governance document
-- [x] All templates created
+- [x] COG-EM-CORE governance document (v2.0)
+- [x] All templates created (v2.0)
 - [x] Pilot user directory structure
-- [x] Cursor rule for pilot sessions
+- [x] Cursor rule for sessions
 - [x] GitHub repository live
+- [x] **Seed Phase 1** — Identity + preferences (parent-reported)
+- [x] **Seed Phase 2** — Personality + behavior (10 MC questions, child-reported)
+- [x] **Seed Phase 3** — Academic/intellectual baselines (20 yes/no, parent-reported)
+- [x] **Seed Phase 4** — Creativity (8 artworks analyzed + child Q&A)
+- [x] **Seed Phase 5** — Writing voice (3 writing samples + child Q&A)
+- [x] **Seed Phase 6** — Personality core (5 targeted questions, child-reported)
+
+**All containers have data. Seeding is complete.**
 
 **Next:**
-- [ ] Run first pilot session with pilot-001
-- [ ] Complete initial survey (favorite books, movies, places, games)
-- [ ] Begin WRITE activities (daily journal)
-- [ ] Begin READ evidence (reading list)
+- [ ] First interactive session (post-seed)
+- [ ] Begin regular WRITE activities
+- [ ] Begin READ evidence logging
+- [ ] Create age-6 snapshot (git tag)
 
 ---
 
 ## PILOT USER
 
 **ID:** pilot-001
+**Name:** Grace-Mar (fork name) / Abby (the real child)
 **Age:** 6 years old
-**Phase:** SEEDING
-**Goal:** Build initial SELF profile through survey + early activities
-
-**Before survey:** Share `docs/PARENT-BRIEF.md` with parent; use `users/pilot-001/SURVEY-CAPTURE.md` during session.
-
-**Initial survey questions:**
-1. What are your favorite movies/shows?
-2. What are your favorite books/stories?
-3. What are your favorite places?
-4. What are your favorite games?
+**Phase:** POST-SEED — all 6 seed phases complete
+**Status:** SELF populated (identity, personality, linguistic style, interests, values), SKILLS populated (READ, WRITE, IMAGINE active), EVIDENCE populated (8 artworks, 3 writing samples, media log)
 
 ---
 
@@ -207,7 +212,7 @@ cog-em/
 1. **Load user files** — SELF.md, SKILLS.md, EVIDENCE.md
 2. **Check SESSION-LOG.md** — What happened last time?
 3. **Greet** — Use their name, reference prior session
-4. **Explore** — Follow their interests, teach at the edge
+4. **Interact** — Follow their interests, propose activities at the edge
 5. **Capture** — Log new activities, skills, preferences
 6. **Commit** — `git add && git commit && git push`
 
@@ -245,22 +250,4 @@ git push origin --tags
 
 ---
 
-## RELATED PROJECTS
-
-This project adapts patterns from the **Civilizational Memory Codex (CMC)**:
-- CIV-MEM-CORE → COG-EM-CORE
-- CIV-MIND-TEMPLATE → SELF-TEMPLATE
-- CIV-SCHOLAR-TEMPLATE → SKILLS-TEMPLATE
-- CIV-ARC-TEMPLATE → EVIDENCE-TEMPLATE
-
-CMC repository: `/Users/robertkuhne/Documents/CIV–MEM/`
-
----
-
-## CONTACT
-
-Repository owner: rbtkhn
-
----
-
-END OF BOOTSTRAP — COG-EM v1.0
+END OF BOOTSTRAP — COG-EM v2.0
