@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ask Grace-Mar</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root { --bg: #1a1917; --surface: #252422; --text: #e8e6e3; --muted: #9c9a96; --accent: #88b4d4; --success: #6bcf7f; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); display: flex; flex-direction: column; padding: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right)) max(0.5rem, env(safe-area-inset-bottom)) max(0.5rem, env(safe-area-inset-left)); }
+    h1 { font-size: 1.1rem; margin: 0 0 0.5rem; color: var(--accent); }
+    .intro { font-size: 0.9rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.4; }
+    .chat { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding-right: 4px; }
+    .msg { margin-bottom: 1rem; padding: 0.6rem 0.8rem; border-radius: 12px; max-width: 92%; word-wrap: break-word; }
+    .msg.user { background: var(--accent); color: var(--bg); margin-left: auto; }
+    .msg.gm { background: var(--surface); border: 1px solid rgba(255,255,255,0.08); }
+    .msg .label { font-size: 0.7rem; color: var(--muted); margin-bottom: 0.2rem; }
+    .msg.user .label { color: rgba(0,0,0,0.6); }
+    .input-row { display: flex; gap: 0.5rem; margin-top: 0.75rem; flex-shrink: 0; }
+    #q { flex: 1; padding: 0.6rem 0.8rem; border-radius: 10px; border: 1px solid var(--surface); background: var(--surface); color: var(--text); font-size: 1rem; }
+    #send { padding: 0.6rem 1rem; border-radius: 10px; background: var(--accent); color: var(--bg); border: none; font-weight: 600; cursor: pointer; }
+    #send:disabled { opacity: 0.5; cursor: not-allowed; }
+    .typing { color: var(--muted); font-size: 0.85rem; font-style: italic; padding: 0.3rem 0; }
+    .error { color: #e88; font-size: 0.9rem; padding: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Ask Grace-Mar</h1>
+  <p class="intro">Ask me anything! I know about my favorite stories, planets, art, and stuff I learned at school. If I don't know, I'll say so.</p>
+  <div class="chat" id="chat"></div>
+  <div class="input-row">
+    <input type="text" id="q" placeholder="What do you want to know?" autocomplete="off" enterkeyhint="send">
+    <button id="send">Ask</button>
+  </div>
+  <script>
+    (function() {
+      if (window.Telegram && window.Telegram.WebApp) {
+        window.Telegram.WebApp.ready();
+        window.Telegram.WebApp.expand();
+      }
+      var chat = document.getElementById('chat');
+      var q = document.getElementById('q');
+      var send = document.getElementById('send');
+      var apiBase = (document.documentElement.dataset.apiBase || '').replace(/\/$/, '') || '';
+      function addMsg(role, text) {
+        var d = document.createElement('div');
+        d.className = 'msg ' + role;
+        d.innerHTML = '<div class="label">' + (role === 'user' ? 'You' : 'Grace-Mar') + '</div>' + text.replace(/</g, '&lt;').replace(/\n/g, '<br>');
+        chat.appendChild(d);
+        chat.scrollTop = chat.scrollHeight;
+      }
+      function setTyping(on) {
+        var t = document.getElementById('typing');
+        if (on && !t) {
+          t = document.createElement('div');
+          t.className = 'typing';
+          t.id = 'typing';
+          t.textContent = 'Grace-Mar is thinking...';
+          chat.appendChild(t);
+          chat.scrollTop = chat.scrollHeight;
+        } else if (!on && t) t.remove();
+      }
+      function setError(msg) {
+        var e = document.getElementById('err');
+        if (e) e.remove();
+        if (msg) {
+          e = document.createElement('div');
+          e.className = 'error';
+          e.id = 'err';
+          e.textContent = msg;
+          chat.appendChild(e);
+          chat.scrollTop = chat.scrollHeight;
+        }
+      }
+      function ask() {
+        var text = (q.value || '').trim();
+        if (!text) return;
+        q.value = '';
+        addMsg('user', text);
+        setError(null);
+        setTyping(true);
+        send.disabled = true;
+        fetch((apiBase || '') + '/api/ask', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: text })
+        }).then(function(r) {
+          return r.json().then(function(data) {
+            if (!r.ok) throw new Error(data.error || data.detail || 'Something went wrong');
+            return data;
+          });
+        }).then(function(data) {
+          setTyping(false);
+          addMsg('gm', data.response || '');
+        }).catch(function(err) {
+          setTyping(false);
+          setError(err.message || 'Could not reach Grace-Mar. Try again.');
+        }).finally(function() {
+          send.disabled = false;
+        });
+      }
+      send.onclick = ask;
+      q.onkeydown = function(e) { if (e.key === 'Enter') ask(); };
+    })();
+  </script>
+</body>
+</html>

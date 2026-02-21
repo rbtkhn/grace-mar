@@ -1,0 +1,4 @@
+# For miniapp_server (Q&A Mini App) — Railway, Render, etc.
+flask>=3.0
+openai>=1.0
+python-dotenv>=1.0
