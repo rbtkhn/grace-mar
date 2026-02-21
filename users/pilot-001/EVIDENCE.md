@@ -244,13 +244,61 @@ entries:
       q1_kpop: "Parent clarified — K-Pop Demon Hunters (Netflix animated film). Already watched it, wants to rewatch."
       q2_still_afraid: "A — not afraid anymore (overcame it)"
       q3_topic_choice: "A — chose all three topics herself, no prompts"
+
+  - id: WRITE-0004
+    type: original (personal narrative)
+    title: "Sleepover, movies — yesterday's activities"
+    created_at: 2026-02-21
+    word_count: 58
+    image_file: artifacts/WRITE-0004-sleepover-journal.png
+    evidence_tier: 4  # OBSERVED — actual handwritten artifact
+
+    full_text: "Yesterday I had a sleep over in my mommy's room. and I wacht a Movie in mommys room and went to bed. and I wacht Barby. and I went to bed and at shcool I wacht magic scoohl bus. for are movie"
+
+    decoded_text: "Yesterday I had a sleepover in my mommy's room. And I watched a movie in mommy's room and went to bed. And I watched Barbie. And I went to bed and at school I watched Magic School Bus. For our movie."
+
+    context: "Operator-submitted writing sample. Personal narrative of prior day's activities — sleepover, movies (Barbie, Magic School Bus at school)."
+
+    analysis:
+      unique_words: 28
+      vocabulary_level: 2
+      complexity_score: 2
+      tone: personal narrative (chronological recall)
+      topics: [sleepover, mommy, movies, Barbie, Magic School Bus, school]
+
+      spelling:
+        correct: [Yesterday, I, had, a, sleep, over, in, my, room, and, a, Movie, went, to, bed, at, magic, bus, for]
+        phonetic: [wacht=watched (x3), Barby=Barbie, shcool=school, scoohl=School, are=our, mommys=mommy's (inconsistent)]
+        patterns:
+          - "Phonetic: wacht (watched), Barby (Barbie)"
+          - "Possessive inconsistent: mommy's vs mommys"
+          - "Homophone: are (our)"
+
+      structure:
+        sentences: run-on with emerging periods
+        connectors: ["and" as primary connector, repeated "and I [verb]"]
+        flow: "Chronological narrative — Yesterday → then → then. Time-adverbial opener."
+        advancement: "First use of 'Yesterday I' opener. Chronological personal narrative (new structure vs report/opinion/list)."
+
+      linguistic_markers_new:
+        - "Time-adverbial opener: 'Yesterday I'"
+        - "Chronological narrative structure (sequence of events)"
+        - "'and I [verb]' repetition (and I wacht, and I went)"
+        - "Trailing fragment: 'for are movie' (incomplete thought)"
+        - "Emerging period use (between clauses)"
+        - "Mixed possessives: mommy's vs mommys"
+
+    self_signals:
+      interests: [Barbie (movie), Magic School Bus (science at school)]
+      content_alignment: "Fits profile — love of movies, science at school. Barbie and Magic School Bus not yet in documented favorites."
+      linguistic: "New markers: time-adverbial opener, chronological narrative, 'and I' repetition."
 ```
 
 ### Writing Profile
 
 ```yaml
-total_entries: 3
-total_words: 131
+total_entries: 4
+total_words: 189
 vocabulary_profile:
   unique_words: 72
   level: 2-3
@@ -897,6 +945,31 @@ activities:
     personality_entry: PER-0001
     curated_by: user
     evidence_tier: 2
+
+  - id: ACT-0015
+    date: 2026-02-21
+    modality: physical artifact (handwritten writing sample — operator-submitted)
+    activity_type: writing — personal narrative
+    mind_category: curiosity + personality
+    source: WRITE-0004 (sleepover journal)
+    topic: Magic School Bus — watched at school for class movie
+    content_excerpt: "at shcool I wacht magic scoohl bus. for are movie"
+    curiosity_entry: CUR-0004
+    personality_entry: [PER-0002, PER-0003]
+    curated_by: user
+    evidence_tier: 4
+
+  - id: ACT-0016
+    date: 2026-02-21
+    modality: text (Telegram bot)
+    activity_type: conversation — knowledge expressed before lookup
+    mind_category: knowledge
+    source: bot conversation
+    question: "what is a black hole"
+    grace_mar_phrasing: "A black hole is a place in space where gravity is super strong, and it pulls everything in, even light! It's like a big invisible vacuum."
+    knowledge_entry: LEARN-0025
+    curated_by: user
+    evidence_tier: 3
 ```
 
 ---
@@ -924,15 +997,15 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 14
+total_activities: 16
 total_read_entries: 0
 total_write_entries: 3
 total_create_entries: 8
 total_media_entries: 8
 total_attestations: 0
-last_activity: 2026-02-20
-last_update: 2026-02-20
-update_source: Pipeline batch 5 — solar system school workbook (11 knowledge + 1 curiosity, all approved)
+last_activity: 2026-02-21
+last_update: 2026-02-21
+update_source: Pipeline review queue — CANDIDATE-0042 (black holes) approved
 ```
 
 ---

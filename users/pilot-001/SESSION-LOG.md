@@ -698,4 +698,35 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 
 ---
 
+## Session 015 — Pipeline Review Queue (one-by-one)
+
+**Date:** 2026-02-21
+**Method:** Operator processes PENDING-REVIEW candidates one at a time
+
+**CANDIDATE-0045 (Barbie):** Rejected
+
+**CANDIDATE-0046 (Magic School Bus):** Approved
+- SELF.md — CUR-0004 added to IX-B Curiosity (Magic School Bus — science show watched at school)
+- EVIDENCE.md — ACT-0015 added
+- bot/prompt.py — YOUR CURIOSITY updated
+
+**CANDIDATE-0047 (Time-adverbial opener, chronological narrative):** Approved
+- SELF.md — PER-0002 added to IX-C, verbal_habits updated
+- bot/prompt.py — HOW YOU TALK updated
+
+**CANDIDATE-0048 ("and I [verb]" connector):** Approved
+
+**CANDIDATE-0041 (Moose antlers):** Rejected
+
+**CANDIDATE-0042 (Black holes):** Approved
+
+**CANDIDATE-0043 (Black hole duplicate):** Rejected
+- SELF.md — LEARN-0025 added to IX-A
+- EVIDENCE.md — ACT-0016 added
+- bot/prompt.py — YOUR KNOWLEDGE updated
+- SELF.md — PER-0003 added to IX-C, verbal_habits updated
+- bot/prompt.py — HOW YOU TALK updated
+
+---
+
 END OF FILE — SESSION LOG PILOT-001

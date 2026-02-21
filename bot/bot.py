@@ -14,7 +14,15 @@ import os
 import logging
 
 from dotenv import load_dotenv
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, MenuButtonWebApp, Update, WebAppInfo
+from telegram import (
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    KeyboardButton,
+    MenuButtonWebApp,
+    ReplyKeyboardMarkup,
+    Update,
+    WebAppInfo,
+)
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -47,13 +55,46 @@ def _channel_key(chat_id: int) -> str:
     return f"telegram:{chat_id}"
 
 
+# Session paths shown on /start — instructions/commands to Grace-Mar.
+# Each option sets a different interaction model; tapping sends that text to Grace-Mar.
+# All must be actions Grace-Mar can execute (ask, help, explore, chat).
+# - Ask me what I'm thinking: thought-exposure path (she asks, user shares, she responds)
+# - Look something up: lookup flow (user asks, she looks up and explains)
+# - Explore: curiosity-driven topic dive
+# - Ask me what I'm curious about: she asks, user answers
+# - Chat: open conversation
+START_PROMPT_OPTIONS = [
+    [
+        KeyboardButton("Ask me what I'm thinking"),
+        KeyboardButton("Look something up for me"),
+    ],
+    [
+        KeyboardButton("Explore a topic with me"),
+        KeyboardButton("Ask me what I'm curious about"),
+    ],
+    [
+        KeyboardButton("Chat with me"),
+    ],
+]
+
+START_KEYBOARD = ReplyKeyboardMarkup(
+    START_PROMPT_OPTIONS,
+    resize_keyboard=True,
+    is_persistent=True,
+    input_field_placeholder="Or type anything — buttons are optional",
+)
+
+
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     chat_id = update.effective_chat.id
     key = _channel_key(chat_id)
     reset_conversation(key)
     greeting = get_greeting()
     archive("SESSION START", key, greeting)
-    await update.message.reply_text(greeting)
+    await update.message.reply_text(
+        greeting,
+        reply_markup=START_KEYBOARD,
+    )
 
 
 async def dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -78,7 +119,7 @@ async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     reset_conversation(key)
     msg = get_reset_message()
     archive("SESSION RESET", key, msg)
-    await update.message.reply_text(msg)
+    await update.message.reply_text(msg, reply_markup=START_KEYBOARD)
 
 
 async def handle_message(
