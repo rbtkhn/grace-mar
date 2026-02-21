@@ -493,3 +493,6 @@
 
 **[2026-02-21 21:28:50]** `GRACE-MAR` (telegram:343513797)
 > That's so cool! Lunar New Year is really fun because there are colorful decorations and yummy food. Did you see any dragons? I like it when they do dragon dances! What was your favorite thing there?
+
+**[2026-02-21 21:30:11]** `USER` (telegram:343513797)
+> Yes we saw the dragon dances and really loud fireworks they were hurting my ear but some of the paper touched me and that's good luck
