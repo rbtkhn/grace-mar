@@ -513,3 +513,6 @@
 > 5. What is something reptiles have that is also like fish?
 > 
 > See if you can answer them!
+
+**[2026-02-21 21:33:44]** `GRACE-MAR` (telegram:343513797)
+> Wow, good job getting them all right! Reptiles and fish both have scales, so that might be a tricky question. But reptiles lay eggs like chickens, and fish live in water all the time. And reptiles are cold-blooded and need sunlight. That's what makes them different! Isn't learning fun? What's your favorite thing to learn about?
