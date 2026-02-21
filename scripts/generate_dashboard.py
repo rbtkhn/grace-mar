@@ -365,6 +365,9 @@ def render_html(data: DashboardData) -> str:
     .exchange .user { color: var(--muted); }
     .exchange .gm { color: var(--accent); }
     .skills-wrap { overflow-y: auto; max-height: 5rem; -webkit-overflow-scrolling: touch; }
+    .skills-lexile { margin-bottom: 0.5rem; padding: 0.35rem 0; font-size: 0.95rem; }
+    .skills-lexile .label { color: var(--muted); margin-right: 0.5rem; }
+    .skills-lexile .value { font-weight: 600; color: var(--accent); }
     .skills-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .skill { flex: 1 1 160px; min-width: 0; background: var(--bg); padding: 0.45rem; border-radius: 6px; font-size: 0.95rem; }
     .skill .name { font-weight: 600; color: var(--accent); }
@@ -386,8 +389,6 @@ def render_html(data: DashboardData) -> str:
     .col-left { display: grid; grid-template-rows: 1fr auto; gap: 0.4rem; min-height: 0; }
     .col-right { display: flex; flex-direction: column; gap: 0.4rem; min-height: 0; }
     """
-
-    pipeline_badge = f'<span class="badge pending">{data.pending_count} pending</span>' if data.pending_candidates else '<span class="badge ok">Queue empty</span>'
 
     skills_html = "".join(
         f'<div class="skill"><span class="name">{k}</span> {v["status"]}'
@@ -424,14 +425,6 @@ def render_html(data: DashboardData) -> str:
         <div class="header">
             <h1>{data.name}</h1>
             <span class="meta">{data.generated_at} · pilot-001</span>
-            <div class="grid" style="flex:1; max-width:360px; margin-left:auto;">
-                <div class="stat"><div class="label">Age</div><div class="value">{data.age}</div></div>
-                <div class="stat"><div class="label">Lexile</div><div class="value">{data.lexile_output}</div></div>
-                <div class="stat"><div class="label">IX-A</div><div class="value">{data.ix_a_count}</div></div>
-                <div class="stat"><div class="label">IX-B</div><div class="value">{data.ix_b_count}</div></div>
-                <div class="stat"><div class="label">IX-C</div><div class="value">{data.ix_c_count}</div></div>
-                <div class="stat"><div class="label">Pipeline</div><div class="value">{pipeline_badge}</div></div>
-            </div>
         </div>
         <div class="row-main">
             <div class="col-left">
@@ -447,7 +440,7 @@ def render_html(data: DashboardData) -> str:
                     </div>
                     <div class="tab-content">
                         <div class="tab-panel active" id="panel-knowledge"><ul>{k_samples}</ul></div>
-                        <div class="tab-panel skills-panel" id="panel-skills"><div class="skills-row">{skills_html}</div></div>
+                        <div class="tab-panel skills-panel" id="panel-skills"><div class="skills-lexile"><span class="label">Lexile output</span> <span class="value">{data.lexile_output}</span></div><div class="skills-row">{skills_html}</div></div>
                         <div class="tab-panel" id="panel-curiosity"><ul>{c_samples}</ul></div>
                         <div class="tab-panel" id="panel-personality"><ul>{p_samples}</ul></div>
                         <div class="tab-panel" id="panel-library"><ul>{lib_samples}</ul></div>
