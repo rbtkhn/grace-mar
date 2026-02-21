@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Grace-Mar — Grace-Mar</title>
     <style>
-    :root { --bg: #0f1419; --surface: #1a2332; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --success: #3fb950; --warn: #d29922; }
+    :root { --bg: #1a1917; --surface: #252422; --text: #e8e6e3; --muted: #9c9a96; --accent: #88b4d4; --success: #6bcf7f; --warn: #e0b858; }
     * { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-    body { font-family: 'SF Mono', 'Consolas', monospace; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.4; padding: 0.5rem; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; padding: 0.5rem; }
     .dash { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr auto; gap: 0.4rem; height: 100vh; max-height: 100vh; }
     .header { grid-column: 1/-1; display: flex; align-items: center; gap: 1rem; }
     h1 { font-size: 1.25rem; margin: 0; }
     .meta { color: var(--muted); font-size: 0.9rem; }
-    h2 { font-size: 0.9rem; color: var(--accent); margin: 0 0 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; }
-    section { background: var(--surface); border-radius: 4px; padding: 0.5rem 0.6rem; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }
+    h2 { font-size: 0.9rem; color: var(--accent); margin: 0 0 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+    section { background: var(--surface); border-radius: 8px; padding: 0.6rem 0.75rem; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 0.3rem; }
-    .stat { background: var(--bg); padding: 0.3rem 0.4rem; border-radius: 2px; }
+    .stat { background: var(--bg); padding: 0.35rem 0.5rem; border-radius: 4px; }
     .stat .label { font-size: 0.8rem; color: var(--muted); }
     .stat .value { font-size: 1.1rem; font-weight: 600; }
-    .badge { display: inline-block; padding: 0.1rem 0.35rem; border-radius: 2px; font-size: 0.8rem; }
+    .badge { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8rem; }
     .badge.pending { background: var(--warn); color: var(--bg); }
     .badge.ok { background: var(--success); color: var(--bg); }
     .candidate { padding: 0.25rem 0; font-size: 0.95rem; }
@@ -30,11 +30,11 @@
     .exchange .gm { color: var(--accent); }
     .skills-wrap { overflow-y: auto; max-height: 5rem; -webkit-overflow-scrolling: touch; }
     .skills-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .skill { flex: 1 1 160px; min-width: 0; background: var(--bg); padding: 0.4rem; border-radius: 2px; font-size: 0.95rem; }
+    .skill { flex: 1 1 160px; min-width: 0; background: var(--bg); padding: 0.45rem; border-radius: 6px; font-size: 0.95rem; }
     .skill .name { font-weight: 600; color: var(--accent); }
     .skill .edge { color: var(--muted); font-size: 0.85rem; }
     .tabs { display: flex; gap: 0.3rem; margin-bottom: 0.3rem; flex-shrink: 0; }
-    .tab { padding: 0.3rem 0.6rem; font-size: 0.9rem; background: var(--bg); border-radius: 2px; cursor: pointer; color: var(--muted); border: 1px solid transparent; }
+    .tab { padding: 0.35rem 0.65rem; font-size: 0.9rem; background: var(--bg); border-radius: 6px; cursor: pointer; color: var(--muted); border: 1px solid transparent; }
     .tab:hover { color: var(--text); }
     .tab.active { color: var(--accent); background: var(--surface); border-color: var(--accent); cursor: default; }
     .tab-content { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
@@ -56,7 +56,7 @@
     <div class="dash">
         <div class="header">
             <h1>Grace-Mar</h1>
-            <span class="meta">2026-02-21 01:54:39 · pilot-001</span>
+            <span class="meta">2026-02-21 02:00:26 · pilot-001</span>
             <div class="grid" style="flex:1; max-width:360px; margin-left:auto;">
                 <div class="stat"><div class="label">Age</div><div class="value">6</div></div>
                 <div class="stat"><div class="label">Lexile</div><div class="value">600L</div></div>
@@ -71,11 +71,11 @@
                 <section style="flex:1; min-height:0;">
                     <h2>Profile</h2>
                     <div class="tabs">
-                        <button class="tab active" data-tab="knowledge">Knowledge 24</button>
+                        <button class="tab active" data-tab="knowledge">Knowledge</button>
                         <button class="tab" data-tab="skills">Skills</button>
-                        <button class="tab" data-tab="curiosity">Curiosity 3</button>
-                        <button class="tab" data-tab="personality">Personality 1</button>
-                        <button class="tab" data-tab="library">Library 24</button>
+                        <button class="tab" data-tab="curiosity">Curiosity</button>
+                        <button class="tab" data-tab="personality">Personality</button>
+                        <button class="tab" data-tab="library">Library</button>
                         <button class="tab" data-tab="disclosure">Disclosure</button>
                     </div>
                     <div class="tab-content">
