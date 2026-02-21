@@ -460,3 +460,6 @@
 
 **[2026-02-21 17:48:45]** `GRACE-MAR` (telegram:343513797)
 > That's awesome! Dogs are so fun and playful. I like drawing animals a lot. Do you have a dog, or is there a dog you like most?
+
+**[2026-02-21 17:49:18]** `USER` (telegram:343513797)
+> I like dogs but I don't have one because I am allergic
