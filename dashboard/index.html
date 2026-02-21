@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Grace-Mar — Grace-Mar</title>
     <style>
     :root { --bg: #0f1419; --surface: #1a2332; --text: #e6edf3; --muted: #8b949e; --accent: #58a6ff; --success: #3fb950; --warn: #d29922; }
@@ -50,12 +50,13 @@
     .col-left { display: grid; grid-template-rows: 1fr auto; gap: 0.4rem; min-height: 0; }
     .col-right { display: flex; flex-direction: column; gap: 0.4rem; min-height: 0; }
     </style>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
     <div class="dash">
         <div class="header">
             <h1>Grace-Mar</h1>
-            <span class="meta">2026-02-20 16:12:53 · pilot-001</span>
+            <span class="meta">2026-02-20 16:51:09 · pilot-001</span>
             <div class="grid" style="flex:1; max-width:360px; margin-left:auto;">
                 <div class="stat"><div class="label">Age</div><div class="value">6</div></div>
                 <div class="stat"><div class="label">Lexile</div><div class="value">600L</div></div>
@@ -75,6 +76,7 @@
                         <button class="tab" data-tab="curiosity">Curiosity 3</button>
                         <button class="tab" data-tab="personality">Personality 1</button>
                         <button class="tab" data-tab="library">Library 24</button>
+                        <button class="tab" data-tab="disclosure">Disclosure</button>
                     </div>
                     <div class="tab-content">
                         <div class="tab-panel active" id="panel-knowledge"><ul><li>George Washington — first president of the United States</li><li>Jupiter</li><li>Mars — the red planet with Olympus Mons</li><li>Gemstones — shiny, rare, colorful rocks used for jewelry</li><li>Gemstones vs normal stones — special minerals, cut and polished</li><li>Abraham Lincoln</li><li>Abraham Lincoln — 16th president, ended slavery, Emancipation Proclamation</li><li>The Nutcracker — ballet by Tchaikovsky about Clara</li><li>Schubert</li><li>The Wild Robot — book about a robot named Roz on a wild island</li><li>Reptiles — animals with scales, lay eggs, cold-blooded</li><li>No reptiles on Jupiter — made of gas, no solid ground</li><li>Mercury — smallest planet, closest to the sun</li><li>Venus — 2nd planet, hottest, covered in lava</li><li>Earth — our home, only planet with life</li><li>Mars — 4th planet, red from iron, 2 moons Phobos and Deimos</li><li>Jupiter — biggest planet, all others fit inside, 63+ moons</li><li>Saturn — 6th planet, rings of icy rocks, 53+ moons</li><li>Uranus — 7th planet, tipped on its side, coldest</li><li>Neptune — 8th planet, gas giant, wild winds</li><li>Pluto — dwarf planet, 3 small moons</li><li>Earth</li><li>Asteroid Belt — ring of rocks between Mars and Jupiter</li><li>Egyptian pharaoh portrait — King Tut</li></ul></div>
@@ -82,6 +84,22 @@
                         <div class="tab-panel" id="panel-curiosity"><ul><li>Classical music and ballet</li><li>Inner solar system / terrestrial bodies</li><li>Ancient Egypt — deepening engagement</li></ul></div>
                         <div class="tab-panel" id="panel-personality"><ul><li>First documented use of paint as art medium. Full brush painting with thick coverage, bold primary colors (gold, blue, red). Previous documented media: crayon, marker, collage, crayon-on-black-paper. Shows confidence with new tools — filled the entire frame with no hesitation.</li></ul></div>
                         <div class="tab-panel" id="panel-library"><ul><li>Usborne World Geography Encyclopedia (Internet Linked)</li><li>Usborne World History Encyclopedia: An Illustrated Introduction to World History for Kids, full of Maps, Time Charts and over 800 Links for Homework Help</li><li>Usborne Science Encyclopedia: An In-depth Guide for Young Scientists Exploring Gravity, Flight, Genes, DNA and More, with Over 180 Video Clips and 1000 Recommended Websites for Further Learning</li><li>Usborne Complete Greek Myths: An Illustrated Collection of Ancient Greek Mythology Featuring Maps and a Glossary</li><li>Usborne Illustrated Odyssey</li><li>Usborne Illustrated Stories from India</li><li>Usborne Illustrated Adventure Stories</li><li>Usborne Illustrated Bible Stories</li><li>Usborne Illustrated Stories from China</li><li>Usborne Illustrated Myths From Around The World</li><li>Usborne Illustrated Ballet Stories</li><li>Usborne Illustrated Classics: Secret Garden & Other Stories</li><li>Usborne Illustrated Stories from Aesop: A Beautifully Illustrated Collection of Timeless Fables</li><li>Usborne Illustrated Stories from the Greek Myths</li><li>Usborne Illustrated Norse Myths</li><li>Usborne Illustrated Hans Christian Andersen</li><li>Usborne Illustrated Tales of King Arthur</li><li>Usborne Illustrated Stories from Shakespeare</li><li>Usborne Illustrated Grimm</li><li>Usborne Complete Dickens</li><li>Usborne Illustrated Arabian Nights</li><li>Usborne Complete Shakespeare: Stories from All the Plays</li><li>Usborne Complete Jane Austen: All the Novels Retold</li><li>Encyclopædia Britannica (1911)</li></ul></div>
+                        <div class="tab-panel" id="panel-disclosure" style="flex-direction:column; overflow-y:auto;">
+                            <p><strong>What&rsquo;s in the fork</strong></p>
+                            <ul>
+                                <li>Identity, Lexile (600L), IX-A/B/C counts: 24 / 3 / 1</li>
+                                <li>Only content that passed the gated pipeline (staged → user approval → profile update)</li>
+                            </ul>
+                            <p><strong>Knowledge boundary</strong></p>
+                            <ul>
+                                <li>The emulated self knows only what is documented in its profile (SELF.md). No LLM training data.</li>
+                            </ul>
+                            <p><strong>Attestation</strong></p>
+                            <ul>
+                                <li>Last checksum: c8ff32b3fde41801…</li>
+                                <li>Harness: run Counterfactual Pack to verify knowledge boundary.</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -100,22 +118,48 @@
                         <div class="stat"><div class="label">Tokens today</div><div class="value">0</div></div>
                         <div class="stat"><div class="label">Tokens total</div><div class="value">0</div></div>
                         <div class="stat"><div class="label">Tokens/IX</div><div class="value">—</div></div>
+                        <div class="stat"><div class="label">Curation</div><div class="value">—</div></div>
+                        <div class="stat"><div class="label">Approved / Rejected</div><div class="value">0 / 0</div></div>
                     </div>
                 </section>
             </div>
         </div>
     </div>
     <script>
-    document.querySelectorAll('.tab').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            var tab = this.dataset.tab;
-            document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
-            document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
-            this.classList.add('active');
-            var panel = document.getElementById('panel-' + tab);
-            if (panel) panel.classList.add('active');
+    (function() {
+        function switchTab(tabId) {
+            var tab = document.querySelector('.tab[data-tab="' + tabId + '"]');
+            var panel = document.getElementById('panel-' + tabId);
+            if (tab && panel) {
+                document.querySelectorAll('.tab').forEach(function(b) { b.classList.remove('active'); });
+                document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+                tab.classList.add('active');
+                panel.classList.add('active');
+            }
+        }
+        document.querySelectorAll('.tab').forEach(function(btn) {
+            btn.addEventListener('click', function() { switchTab(this.dataset.tab); });
         });
-    });
+        if (window.Telegram && window.Telegram.WebApp) {
+            var w = window.Telegram.WebApp;
+            w.ready();
+            w.expand();
+            var tp = w.themeParams;
+            if (tp && (tp.bg_color || tp.secondary_bg_color)) {
+                var s = document.createElement('style');
+                s.textContent = ':root{' +
+                    (tp.bg_color ? '--bg:' + tp.bg_color + ';' : '') +
+                    (tp.secondary_bg_color ? '--surface:' + tp.secondary_bg_color + ';' : '') +
+                    (tp.text_color ? '--text:' + tp.text_color + ';' : '') +
+                    (tp.hint_color ? '--muted:' + tp.hint_color + ';' : '') +
+                    (tp.button_color ? '--accent:' + tp.button_color + ';' : '') +
+                '}';
+                document.head.appendChild(s);
+            }
+            var start = w.initDataUnsafe && w.initDataUnsafe.start_param;
+            if (start) switchTab(start);
+        }
+    })();
     </script>
 </body>
 </html>

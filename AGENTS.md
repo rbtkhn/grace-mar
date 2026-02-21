@@ -90,6 +90,8 @@ When pipeline candidates are approved, update **all** of these together:
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 
+**Provenance on IX entries:** When adding new entries to IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: user` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the user requests it.
+
 ---
 
 ## Three-Channel Mind Model
@@ -136,7 +138,8 @@ grace-mar/
         ├── PENDING-REVIEW.md   # Pipeline staging
         ├── PIPELINE-EVENTS.jsonl  # Append-only pipeline audit log
         ├── COMPUTE-LEDGER.jsonl   # Token usage (energy ledger)
-        ├── GRACE-MAR-BOT-ARCHIVE.md  # Bot conversation archive
+        ├── TELEGRAM-ARCHIVE.md       # Bot conversation archive
+│   └── archives/             # Rotated chunks (TELEGRAM-ARCHIVE-YYYY-MM.md)
         └── artifacts/          # Raw files (writing, artwork)
 ```
 

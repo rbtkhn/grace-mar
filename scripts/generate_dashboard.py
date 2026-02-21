@@ -12,6 +12,9 @@ Reads pilot-001 profile files and produces a single HTML dashboard with:
 Usage:
     python scripts/generate_dashboard.py
     open dashboard/index.html
+
+The dashboard works as a Telegram Mini App when served over HTTPS. Configure the URL
+in @BotFather (Bot Settings → Menu Button) and set DASHBOARD_MINIAPP_URL in .env.
 """
 
 import json
@@ -49,6 +52,10 @@ class DashboardData:
     total_tokens: int
     tokens_today: int
     tokens_per_ix: str  # "X" or "—" when no IX
+    pipeline_applied: int
+    pipeline_rejected: int
+    curation_ratio: str  # "X% human-approved" or "—"
+    fork_checksum: str  # from FORK-MANIFEST.json or ""
 
 
 def parse_pending_review(content: str) -> tuple[int, list[dict]]:
@@ -191,7 +198,7 @@ def collect_data() -> DashboardData:
     self_path = PROFILE_DIR / "SELF.md"
     evidence_path = PROFILE_DIR / "EVIDENCE.md"
     skills_path = PROFILE_DIR / "SKILLS.md"
-    archive_path = PROFILE_DIR / "GRACE-MAR-BOT-ARCHIVE.md"
+    archive_path = PROFILE_DIR / "TELEGRAM-ARCHIVE.md"
     library_path = PROFILE_DIR / "LIBRARY.md"
 
     pending_content = pending_path.read_text() if pending_path.exists() else ""
@@ -233,6 +240,33 @@ def collect_data() -> DashboardData:
     ix_total = self_data["ix_a_count"] + self_data["ix_b_count"] + self_data["ix_c_count"]
     tokens_per_ix = str(total_tokens // ix_total) if ix_total and total_tokens else "—"
 
+    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    pipeline_applied = pipeline_rejected = 0
+    if events_path.exists():
+        for line in events_path.read_text().strip().splitlines():
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+                e = row.get("event", "")
+                if e == "applied" or e == "approved":
+                    pipeline_applied += 1
+                elif e == "rejected":
+                    pipeline_rejected += 1
+            except json.JSONDecodeError:
+                pass
+    total_decisions = pipeline_applied + pipeline_rejected
+    curation_ratio = f"{100 * pipeline_applied // total_decisions}% approved" if total_decisions else "—"
+
+    manifest_path = PROFILE_DIR / "FORK-MANIFEST.json"
+    fork_checksum = ""
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text())
+            fork_checksum = manifest.get("checksum", "")[:16] + "…" if manifest.get("checksum") else ""
+        except (json.JSONDecodeError, KeyError):
+            pass
+
     return DashboardData(
         name=self_data["name"],
         age=self_data["age"],
@@ -256,6 +290,10 @@ def collect_data() -> DashboardData:
         total_tokens=total_tokens,
         tokens_today=tokens_today,
         tokens_per_ix=tokens_per_ix,
+        pipeline_applied=pipeline_applied,
+        pipeline_rejected=pipeline_rejected,
+        curation_ratio=curation_ratio,
+        fork_checksum=fork_checksum,
     )
 
 
@@ -335,9 +373,10 @@ def render_html(data: DashboardData) -> str:
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Grace-Mar — {data.name}</title>
     <style>{css}</style>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
     <div class="dash">
@@ -363,6 +402,7 @@ def render_html(data: DashboardData) -> str:
                         <button class="tab" data-tab="curiosity">Curiosity {data.ix_b_count}</button>
                         <button class="tab" data-tab="personality">Personality {data.ix_c_count}</button>
                         <button class="tab" data-tab="library">Library {len(data.library_entries)}</button>
+                        <button class="tab" data-tab="disclosure">Disclosure</button>
                     </div>
                     <div class="tab-content">
                         <div class="tab-panel active" id="panel-knowledge"><ul>{k_samples}</ul></div>
@@ -370,6 +410,22 @@ def render_html(data: DashboardData) -> str:
                         <div class="tab-panel" id="panel-curiosity"><ul>{c_samples}</ul></div>
                         <div class="tab-panel" id="panel-personality"><ul>{p_samples}</ul></div>
                         <div class="tab-panel" id="panel-library"><ul>{lib_samples}</ul></div>
+                        <div class="tab-panel" id="panel-disclosure" style="flex-direction:column; overflow-y:auto;">
+                            <p><strong>What&rsquo;s in the fork</strong></p>
+                            <ul>
+                                <li>Identity, Lexile ({data.lexile_output}), IX-A/B/C counts: {data.ix_a_count} / {data.ix_b_count} / {data.ix_c_count}</li>
+                                <li>Only content that passed the gated pipeline (staged → user approval → profile update)</li>
+                            </ul>
+                            <p><strong>Knowledge boundary</strong></p>
+                            <ul>
+                                <li>The emulated self knows only what is documented in its profile (SELF.md). No LLM training data.</li>
+                            </ul>
+                            <p><strong>Attestation</strong></p>
+                            <ul>
+                                <li>Last checksum: {data.fork_checksum or "— (run scripts/fork_checksum.py --manifest)"}</li>
+                                <li>Harness: run Counterfactual Pack to verify knowledge boundary.</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -388,22 +444,48 @@ def render_html(data: DashboardData) -> str:
                         <div class="stat"><div class="label">Tokens today</div><div class="value">{data.tokens_today:,}</div></div>
                         <div class="stat"><div class="label">Tokens total</div><div class="value">{data.total_tokens:,}</div></div>
                         <div class="stat"><div class="label">Tokens/IX</div><div class="value">{data.tokens_per_ix}</div></div>
+                        <div class="stat"><div class="label">Curation</div><div class="value">{data.curation_ratio}</div></div>
+                        <div class="stat"><div class="label">Approved / Rejected</div><div class="value">{data.pipeline_applied} / {data.pipeline_rejected}</div></div>
                     </div>
                 </section>
             </div>
         </div>
     </div>
     <script>
-    document.querySelectorAll('.tab').forEach(function(btn) {{
-        btn.addEventListener('click', function() {{
-            var tab = this.dataset.tab;
-            document.querySelectorAll('.tab').forEach(function(b) {{ b.classList.remove('active'); }});
-            document.querySelectorAll('.tab-panel').forEach(function(p) {{ p.classList.remove('active'); }});
-            this.classList.add('active');
-            var panel = document.getElementById('panel-' + tab);
-            if (panel) panel.classList.add('active');
+    (function() {{
+        function switchTab(tabId) {{
+            var tab = document.querySelector('.tab[data-tab="' + tabId + '"]');
+            var panel = document.getElementById('panel-' + tabId);
+            if (tab && panel) {{
+                document.querySelectorAll('.tab').forEach(function(b) {{ b.classList.remove('active'); }});
+                document.querySelectorAll('.tab-panel').forEach(function(p) {{ p.classList.remove('active'); }});
+                tab.classList.add('active');
+                panel.classList.add('active');
+            }}
+        }}
+        document.querySelectorAll('.tab').forEach(function(btn) {{
+            btn.addEventListener('click', function() {{ switchTab(this.dataset.tab); }});
         }});
-    }});
+        if (window.Telegram && window.Telegram.WebApp) {{
+            var w = window.Telegram.WebApp;
+            w.ready();
+            w.expand();
+            var tp = w.themeParams;
+            if (tp && (tp.bg_color || tp.secondary_bg_color)) {{
+                var s = document.createElement('style');
+                s.textContent = ':root{{' +
+                    (tp.bg_color ? '--bg:' + tp.bg_color + ';' : '') +
+                    (tp.secondary_bg_color ? '--surface:' + tp.secondary_bg_color + ';' : '') +
+                    (tp.text_color ? '--text:' + tp.text_color + ';' : '') +
+                    (tp.hint_color ? '--muted:' + tp.hint_color + ';' : '') +
+                    (tp.button_color ? '--accent:' + tp.button_color + ';' : '') +
+                '}}';
+                document.head.appendChild(s);
+            }}
+            var start = w.initDataUnsafe && w.initDataUnsafe.start_param;
+            if (start) switchTab(start);
+        }}
+    }})();
     </script>
 </body>
 </html>

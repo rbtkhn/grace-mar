@@ -14,7 +14,7 @@ import os
 import logging
 
 from dotenv import load_dotenv
-from telegram import Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, MenuButtonWebApp, Update, WebAppInfo
 from telegram.ext import (
     Application,
     CommandHandler,
@@ -40,6 +40,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+DASHBOARD_MINIAPP_URL = os.getenv("DASHBOARD_MINIAPP_URL", "").rstrip("/")
 
 
 def _channel_key(chat_id: int) -> str:
@@ -53,6 +54,22 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     greeting = get_greeting()
     archive("SESSION START", key, greeting)
     await update.message.reply_text(greeting)
+
+
+async def dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if not DASHBOARD_MINIAPP_URL:
+        await update.message.reply_text(
+            "Dashboard Mini App URL not configured. Set DASHBOARD_MINIAPP_URL in .env and "
+            "serve the dashboard over HTTPS. See docs/MINIAPP-SETUP.md."
+        )
+        return
+    keyboard = InlineKeyboardMarkup.from_button(
+        InlineKeyboardButton("Open Dashboard", web_app=WebAppInfo(url=DASHBOARD_MINIAPP_URL))
+    )
+    await update.message.reply_text(
+        "Open the fork dashboard to view profile, pipeline, benchmarks, and disclosure:",
+        reply_markup=keyboard,
+    )
 
 
 async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -87,9 +104,22 @@ def main() -> None:
     if not OPENAI_API_KEY:
         raise RuntimeError("OPENAI_API_KEY not set in .env")
 
-    app = Application.builder().token(TELEGRAM_TOKEN).build()
+    async def set_menu_button(application: Application) -> None:
+        if DASHBOARD_MINIAPP_URL:
+            await application.bot.set_chat_menu_button(
+                menu_button=MenuButtonWebApp(text="Dashboard", web_app=WebAppInfo(url=DASHBOARD_MINIAPP_URL))
+            )
+            logger.info("Dashboard menu button configured: %s", DASHBOARD_MINIAPP_URL)
+
+    app = (
+        Application.builder()
+        .token(TELEGRAM_TOKEN)
+        .post_init(set_menu_button)
+        .build()
+    )
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("dashboard", dashboard))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 

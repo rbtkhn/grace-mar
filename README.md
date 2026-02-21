@@ -75,7 +75,9 @@ grace-mar/
 │   └── LETTER-TO-STUDENT.md         # Letter to first pilot student
 ├── scripts/
 │   ├── generate_dashboard.py        # Dashboard generator
-│   └── validate-integrity.py        # Integrity validator
+│   ├── fork_checksum.py            # Fork state checksum (--manifest writes FORK-MANIFEST.json)
+│   ├── export_fork.py              # Export fork to portable JSON
+│   └── validate-integrity.py       # Integrity validator
 ├── dashboard/
 │   └── index.html                   # Fork dashboard (run generate_dashboard.py to refresh)
 ├── bot/
@@ -92,7 +94,7 @@ grace-mar/
         ├── EVIDENCE.md              # Activity log
         ├── SESSION-LOG.md           # Interaction history
         ├── PENDING-REVIEW.md        # Pipeline staging
-        ├── GRACE-MAR-BOT-ARCHIVE.md # Bot conversation archive
+        ├── TELEGRAM-ARCHIVE.md      # Bot conversation archive
         ├── artifacts/               # Raw files (writing, artwork)
         ├── SEED-PHASE-2-SURVEY.md   # Seed phase 2 survey data
         ├── SEED-PHASE-3-SURVEY.md   # Seed phase 3 survey data
@@ -114,8 +116,38 @@ grace-mar/
 Generate an HTML dashboard for the pilot fork (summary, pipeline queue, SKILLS, recent exchanges, benchmarks):
 
 ```bash
-python scripts/generate_dashboard.py
+python3 scripts/generate_dashboard.py
 open dashboard/index.html
+```
+
+The same dashboard can run as a **Telegram Mini App** — chat and inspect the fork in one place. Set `DASHBOARD_MINIAPP_URL` in `bot/.env`, host the dashboard over HTTPS, and use `/dashboard` or the menu button. See [docs/MINIAPP-SETUP.md](docs/MINIAPP-SETUP.md).
+
+## Archive Rotation
+
+When `TELEGRAM-ARCHIVE.md` exceeds ~1 MB or 2,500 entries, rotate oldest content to dated files:
+
+```bash
+python scripts/rotate_telegram_archive.py          # Dry run (report only)
+python scripts/rotate_telegram_archive.py --apply  # Perform rotation
+```
+
+Rotated content goes to `users/pilot-001/archives/TELEGRAM-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
+
+## Fork attestation and export
+
+Compute a checksum of the fork state (SELF + EVIDENCE + prompt) and optionally write a manifest for the dashboard Disclosure view:
+
+```bash
+python scripts/fork_checksum.py              # Print checksum
+python scripts/fork_checksum.py --manifest   # Also write users/pilot-001/FORK-MANIFEST.json
+```
+
+Export the fork to a single JSON file (SELF, EVIDENCE, LIBRARY, optional manifest) for backup or portability:
+
+```bash
+python scripts/export_fork.py                      # Print JSON to stdout
+python scripts/export_fork.py -o fork-export.json  # Write to file
+python scripts/export_fork.py --no-raw -o summary.json  # Summary + manifest only
 ```
 
 ## Validation

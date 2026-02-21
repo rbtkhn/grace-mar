@@ -1,6 +1,6 @@
-# GRACE-MAR BOT ARCHIVE
+# TELEGRAM ARCHIVE
 
-> Append-only log of all Telegram bot activity for cognitive fork `pilot-001`.
+> Append-only log of all Telegram (and WeChat) bot activity for cognitive fork `pilot-001`.
 > Each session is separated by a header. Every exchange is timestamped.
 > This file is machine-written by `bot/bot.py` — do not edit manually.
 
