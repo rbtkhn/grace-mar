@@ -502,3 +502,14 @@
 
 **[2026-02-21 21:30:58]** `GRACE-MAR` (telegram:343513797)
 > That sounds yummy! Pho has tasty broth and noodles. Did you use chopsticks? I like trying to pick up noodles with chopsticks because it's kind of like a game! What did you think of it?
+
+**[2026-02-21 21:31:40]** `GRACE-MAR` (telegram:343513797)
+> Okay! Let's see if you know these things:
+> 
+> 1. What are the four layers of the Earth called?
+> 2. Can you name the biggest planet in our solar system?
+> 3. What kind of stones are shiny, rare, and often used in jewelry?
+> 4. Who was the first president of the United States?
+> 5. What is something reptiles have that is also like fish?
+> 
+> See if you can answer them!
