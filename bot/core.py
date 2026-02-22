@@ -24,6 +24,11 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 try:
+    from .conflict_check import check_conflicts, format_conflicts_for_yaml
+except ImportError:
+    from conflict_check import check_conflicts, format_conflicts_for_yaml
+
+try:
     from .prompt import (
     SYSTEM_PROMPT,
     LOOKUP_PROMPT,
@@ -350,6 +355,10 @@ def _stage_candidate(
 ) -> None:
     candidate_id = _next_candidate_id()
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    conflicts = check_conflicts(analysis_yaml)
+    conflicts_block = format_conflicts_for_yaml(conflicts) if conflicts else ""
+    if conflicts:
+        logger.info("CONFLICT: %d contradiction(s) flagged for %s", len(conflicts), candidate_id)
     block = f"""### {candidate_id}
 
 ```yaml
@@ -359,7 +368,7 @@ channel_key: {channel_key}
 source_exchange:
   user: "{user_message}"
   grace_mar: "{assistant_message}"
-{analysis_yaml}
+{analysis_yaml}{conflicts_block}
 ```
 
 """

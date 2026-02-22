@@ -2,7 +2,7 @@
 
 **Purpose:** Define how to handle conflicts between new evidence and existing SELF/SKILLS claims. Preserves history instead of overwriting; requires explicit user resolution.
 
-**Status:** Specification for approved improvement #2 (Contradiction surfacing). Not yet implemented.
+**Status:** Specification for approved improvement #2 (Contradiction surfacing). Conflict detection in staging is implemented (`bot/conflict_check.py`, `bot/conflict_rules.yaml`).
 
 **See also:** [ANTI-CHEATING.md](ANTI-CHEATING.md), [AGENTS.md](../AGENTS.md) (immutability rules)
 
@@ -45,14 +45,18 @@ superseded_entry:
 
 ---
 
-## Conflict Detection (Future)
+## Conflict Detection (Implemented)
 
-A contradiction detector would:
+The pipeline runs `bot/conflict_check.py` before appending to PENDING-REVIEW. It:
 
-1. Compare new candidate content to existing SELF IX-A/B/C entries
-2. Flag semantic conflicts (e.g., "fearful of swimming" vs "joined swim team")
-3. Stage conflict for user resolution instead of auto-integrating
-4. On resolution, add `superseded_by` / `superseded_entry` to old claim, add new claim with `supersedes: LEARN-XXXX`
+1. Compares new personality candidates to existing SELF traits (seed + IX-C)
+2. Flags contradictions using `bot/conflict_rules.yaml` (e.g., dependent vs independent)
+3. Appends `conflicts_detected` to the candidate YAML; user sees the flag in PENDING-REVIEW
+4. Does **not** block staging — surfaces for user resolution (approve/reject/merge)
+
+Rules are editable in `conflict_rules.yaml`. V1 covers personality opposites only; knowledge/curiosity checks can be added later.
+
+On resolution (when user approves), add `superseded_by` / `superseded_entry` per the format above.
 
 ---
 
