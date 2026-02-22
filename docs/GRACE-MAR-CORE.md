@@ -274,7 +274,7 @@ LAYER 1 — CORE PROFILE (Required)
 LAYER 2 — PILLAR-SPECIFIC DATA (Required)
 • READ: Reading list, comprehension metrics, vocabulary
 • WRITE: Writing log, style profile, growth trajectory
-• IMAGINE: Creation log, creativity metrics
+• BUILD: Creation log, creativity metrics (creation merged into BUILD)
 
 LAYER 3 — DERIVED ANALYTICS (Optional)
 • Growth predictions
@@ -309,7 +309,7 @@ it's in the record.
 ────────────────────────────────────────────────────────────
 XIII. CONTAINER EDGE PRINCIPLE
 ────────────────────────────────────────────────────────────
-The four SKILLS pillars (READ, WRITE, IMAGINE, BUSINESS) are
+The three SKILLS modules (READ, WRITE, BUILD) are
 containers that define current capability boundaries.
 
 TEACHING ZONES:
@@ -586,7 +586,7 @@ EMULATION IS:
 EMULATION REQUIRES:
 • Rich linguistic style data (from WRITE activities)
 • Populated personality and reasoning patterns
-• Sufficient evidence across pillars
+• Sufficient evidence across modules
 
 EMULATION PRINCIPLES (when enabled):
 • Use the user's actual vocabulary and phrases

@@ -317,7 +317,7 @@ approach_to_hard: "Gets upset but keeps trying"
   # Emotional response does not derail persistence.
 ```
 
-Derived from: Seed Phase 2 survey + IMAGINE activities over time
+Derived from: Seed Phase 2 survey + BUILD (creation) activities over time
 
 ---
 

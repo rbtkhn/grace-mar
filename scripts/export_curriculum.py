@@ -91,7 +91,7 @@ def _extract_access_needs(self_content: str, lexile: str | None) -> dict:
 
 
 def _extract_skills_edge(skills_content: str) -> dict:
-    """Extract edge from each container: READ, WRITE, IMAGINE, MATH, CHINESE."""
+    """Extract edge from each container: READ, WRITE, BUILD, MATH, CHINESE."""
     edges = {}
     blocks = re.split(r"\n### ", skills_content)
     for block in blocks[1:]:  # skip header

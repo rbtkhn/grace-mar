@@ -111,7 +111,7 @@ The fork is not a real-time mirror. It is a living, growing Record.
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
-| **SKILLS** | READ, WRITE, IMAGINE, BUSINESS capability containers | What they CAN DO |
+| **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
 
 ### Three-Channel Mind (Post-Seed Growth)
 

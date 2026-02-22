@@ -107,7 +107,7 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 
 ## 7. Canva Integration
 
-**Rationale:** Canva's APIs (Connect API, App SDK) enable design integration — templates, asset sync, automated creation. Grace-Mar could use Canva for IMAGINE evidence (designs as creation log), newsletter layout (outbound digest → Canva template), or shareable content (JOURNAL, admissions portfolio).
+**Rationale:** Canva's APIs (Connect API, App SDK) enable design integration — templates, asset sync, automated creation. Grace-Mar could use Canva for BUILD creation evidence (designs as creation log), newsletter layout (outbound digest → Canva template), or shareable content (JOURNAL, admissions portfolio).
 
 **Scope:**
 - **Designs as evidence** — User creates in Canva → export → "we designed X" → pipeline stages → EVIDENCE
@@ -162,7 +162,7 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 
 **Scope:**
 - **Path generation** — Given `curriculum_profile.json`, generate a suggested sequence: "Curious about reptiles, WRITE edge for narrative → reptile fact sheet (read) → short story prompt (write)." Curriculum engine maps suggestions to its lesson library.
-- **Skills-aware sequencing** — READ edge + curiosity topic → suggest text. WRITE edge + topic → suggest writing prompt. IMAGINE edge → suggest creative task.
+- **Skills-aware sequencing** — READ edge + curiosity topic → suggest text. WRITE edge + topic → suggest writing prompt. BUILD (creation) edge → suggest creative task.
 - **Knowledge-avoidance** — IX-A (knowledge) filters out already-learned content; path builds on gaps and stretches at the edge.
 
 **Output:** Suggested path (lesson IDs or descriptors) that a curriculum platform consumes. Grace-Mar does not hold lessons; it holds the identity that *selects* them.
@@ -196,7 +196,7 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 | [YOUTUBE-PLAYLIST-DESIGN](YOUTUBE-PLAYLIST-DESIGN.md) | Playlist building; watched-video detection; feeds into newsletter content |
 | [OPENCLAW-INTEGRATION](OPENCLAW-INTEGRATION.md) | Record as identity; session continuity; staging automation; Chinese apps |
 | [INTERSIGNAL-INTEGRATION](INTERSIGNAL-INTEGRATION.md) | Symbolic export; Familiar nodes; Mesh Cache; The Braid |
-| [CANVA-INTEGRATION](CANVA-INTEGRATION.md) | Design APIs; IMAGINE evidence; newsletter layout; template population |
+| [CANVA-INTEGRATION](CANVA-INTEGRATION.md) | Design APIs; BUILD creation evidence; newsletter layout; template population |
 | [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md) | Entry format; linguistic fingerprint; attestation data source |
 | [ADAPTIVE-CURRICULUM-INTEGRATION](ADAPTIVE-CURRICULUM-INTEGRATION.md) | Record as identity for curriculum engines; homeschool bots |
 | [ARCHITECTURE](ARCHITECTURE.md) | Pipeline, Record structure, gating |

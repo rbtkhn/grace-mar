@@ -81,8 +81,7 @@ def generate_manifest(user_id: str = "pilot-001") -> dict:
             "SELF/IX-C",
             "SKILLS/READ",
             "SKILLS/WRITE",
-            "SKILLS/IMAGINE",
-            "SKILLS/BUSINESS",
+            "SKILLS/BUILD",
             "EVIDENCE/activity_log",
             "EVIDENCE/writing_log",
             "EVIDENCE/creation_log",
@@ -94,7 +93,7 @@ def generate_manifest(user_id: str = "pilot-001") -> dict:
         "writable_note": "Agents may stage candidates only. Merge requires user approval.",
         "schema_hints": {
             "SELF": {"type": "object", "description": "Identity, personality, post-seed growth (IX-A, IX-B, IX-C)"},
-            "SKILLS": {"type": "object", "description": "Capability containers (READ, WRITE, IMAGINE, BUSINESS)"},
+            "SKILLS": {"type": "object", "description": "Capability containers (READ, WRITE, BUILD)"},
             "EVIDENCE": {"type": "object", "description": "Activity log, writing, creation; immutable once captured"},
             "PENDING-REVIEW": {"type": "object", "description": "Staging area; format documented in AGENTS.md"},
         },

@@ -70,7 +70,7 @@ There is no parent mode and no child mode. There is one user. A parent helps whe
 ├─────────────────────────┼───────────────────────────────────┤
 │ • Personality           │ • READ (comprehension)            │
 │ • Linguistic style      │ • WRITE (expression)              │
-│ • Life narrative        │ • IMAGINE (creation)              │
+│ • Life narrative        │ • BUILD (creation)                │
 │ • Preferences/values    │                                   │
 │ • Reasoning patterns    │                                   │
 └─────────────────────────┴───────────────────────────────────┘
@@ -78,18 +78,17 @@ There is no parent mode and no child mode. There is one user. A parent helps whe
 
 **SELF** — Accurate record of identity. Evolves slowly. Observed from interaction.
 
-**SKILLS** — Four pillars (READ, WRITE, IMAGINE, BUSINESS) that grow through activity. Each pillar is a "container" with an edge where optimal activities are proposed. BUSINESS starts from zero.
+**SKILLS** — Three modules (READ, WRITE, BUILD) that grow through activity. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper) and a "container" with an edge where optimal activities are proposed. BUILD starts from zero; creation/exploration (formerly IMAGINE) is merged into BUILD.
 
 ---
 
-## FOUR PILLARS OF SKILLS
+## THREE MODULES OF SKILLS
 
-| Pillar | What it captures | Example activities |
+| Module | What it captures | Example activities |
 |--------|------------------|-------------------|
 | **READ** | Comprehension, vocabulary, knowledge intake | Books read, articles, discussions |
 | **WRITE** | Expression, linguistic production | Journals, stories, messages |
-| **IMAGINE** | Creation, synthesis, exploration | Drawings, inventions, scenarios |
-| **BUSINESS** | Planning, execution, exchange | Lemonade stand, projects with P&L, content for audience |
+| **BUILD** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content for audience, things built, drawings, inventions, scenarios |
 
 ---
 
@@ -233,7 +232,7 @@ grace-mar/
 **Completed:**
 - [x] Core concept defined (fork model, v2.0)
 - [x] Two-module architecture (SELF + SKILLS)
-- [x] Four pillars (READ, WRITE, IMAGINE, BUSINESS)
+- [x] Three modules (READ, WRITE, BUILD)
 - [x] GRACE-MAR-CORE governance document (v2.0)
 - [x] All templates created (v2.0)
 - [x] Pilot user directory structure
@@ -265,7 +264,7 @@ grace-mar/
 **Name:** Grace-Mar (fork name) / Abby (the real child)
 **Age:** 6 years old
 **Phase:** POST-SEED — all 6 seed phases complete
-**Status:** SELF populated (identity, personality, linguistic style, interests, values), SKILLS populated (READ, WRITE, IMAGINE active), EVIDENCE populated (8 artworks, 3 writing samples, media log)
+**Status:** SELF populated (identity, personality, linguistic style, interests, values), SKILLS populated (READ, WRITE, BUILD), EVIDENCE populated (8 artworks, 3 writing samples, media log)
 
 ---
 

@@ -290,7 +290,7 @@ reasoning_patterns: {
 
 ### 8. Interests
 
-What captures their attention. **Derived from all four pillars.**
+What captures their attention. **Derived from all three modules.**
 
 ```typescript
 interests: {

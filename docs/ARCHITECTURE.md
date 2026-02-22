@@ -104,7 +104,7 @@ Simple favorites survey (5-10 minutes):
 
 Everything else is inferred from activity:
 - Linguistic style ← WRITE activities
-- Interests ← all pillars
+- Interests ← all modules
 - Personality ← observed patterns
 - Values ← READ choices, WRITE content
 
@@ -124,16 +124,15 @@ History is always preserved. Changes do not overwrite.
 
 Contains what the user CAN DO — capabilities that grow through authentic activity.
 
-### The Four Pillars
+### The Three Modules
 
-Skills organize under four fundamental cognitive modes. The fourth (BUSINESS) starts from zero and grows with experience through the pipeline (human-gated).
+Skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
 
-| Pillar | Function | Activities |
+| Module | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
 | **READ** | Intake, comprehension | Books read, summaries, interpretations |
-| **IMAGINE** | Creation, exploration | Creative play, hypotheticals, artwork, problem-solving |
-| **BUSINESS** | Planning, execution, exchange | Lemonade stand, projects with P&L, content with audience, budgeting |
+| **BUILD** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content with audience, things built, drawings, inventions, budgeting |
 
 ### Structure
 
@@ -152,17 +151,14 @@ SKILLS/
 │   ├── vocabulary/       # Words acquired
 │   └── interests/        # What they choose
 │
-├── IMAGINE/
-│   ├── originality/      # Novel ideas
-│   ├── reasoning/        # Logical chains
-│   ├── flexibility/      # Adapting to constraints
-│   └── elaboration/      # Detail, richness
-│
-└── BUSINESS/
+└── BUILD/
     ├── planning/         # Goals, timelines, milestones
     ├── execution/        # Follow-through, deliverables
     ├── financial/        # Money concepts, P&L, budgeting
-    └── collaboration/    # Teamwork, delegation
+    ├── collaboration/    # Teamwork, delegation
+    ├── originality/      # Novel ideas (creation)
+    ├── elaboration/      # Detail, richness (creation)
+    └── flexibility/      # Adapting to constraints (creation)
 ```
 
 ### Activity-Based Growth
@@ -180,8 +176,8 @@ Activity: Daily journal entry (WRITE)
 ### Characteristics
 
 - **Activity-driven**: Grows from authentic production, not explicit teaching
-- **Pillar-organized**: WRITE, READ, IMAGINE, BUSINESS as primary structure
-- **Dimension-tracked**: Each pillar has measurable sub-dimensions
+- **Module-organized**: READ, WRITE, BUILD as primary structure
+- **Dimension-tracked**: Each module has measurable sub-dimensions
 - **Level-based**: 5 developmental levels per dimension
 - **Evidence-linked**: Every claim traces to captured activities
 
@@ -191,12 +187,12 @@ Activity: Daily journal entry (WRITE)
 
 ### SELF → SKILLS (Prediction)
 
-- **Interests** (SELF) predict which pillars develop fastest
-- **Reasoning patterns** (SELF) shape IMAGINE capability growth
+- **Interests** (SELF) predict which modules develop fastest
+- **Reasoning patterns** (SELF) shape BUILD (creation) capability growth
 
 ### SKILLS → SELF (Inference)
 
-Each pillar feeds different SELF components:
+Each module feeds different SELF components:
 
 ```
 WRITE Activity ──→ SELF.linguistic_style (primary source)
@@ -207,8 +203,8 @@ READ Activity ───→ SELF.interests (what they choose)
                    SELF.preferences (content patterns)
                    SELF.values (themes they return to)
 
-IMAGINE Activity → SELF.reasoning_patterns (how they think)
-                   SELF.interests (what they explore)
+BUILD (creation) Activity → SELF.reasoning_patterns (how they think)
+                            SELF.interests (what they explore)
 ```
 
 ### The WRITE → SELF Pipeline
@@ -285,7 +281,7 @@ The system should:
 
 ## Container Edge Principle
 
-The four SKILLS pillars (READ, WRITE, IMAGINE, BUSINESS) are **containers** that define what the user currently knows and can do. The system proposes activities at the **edge** of these containers.
+The three SKILLS modules (READ, WRITE, BUILD) are **containers** that define what the user currently knows and can do. The system proposes activities at the **edge** of these containers.
 
 ### The Container Model
 
@@ -303,7 +299,7 @@ The four SKILLS pillars (READ, WRITE, IMAGINE, BUSINESS) are **containers** that
 │                                                             │
 │   READ: books read, vocabulary acquired                     │
 │   WRITE: words used, complexity achieved                    │
-│   IMAGINE: creativity demonstrated                          │
+│   BUILD (creation): creativity demonstrated                  │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -353,7 +349,7 @@ Activities proposed at the boundary of current capability, where the user can su
 
 > "How well does [user] write?" → SKILLS.WRITE levels
 > "What's [user]'s reading comprehension level?" → SKILLS.READ
-> "How creative/original is [user]?" → SKILLS.IMAGINE
+> "How creative/original is [user]?" → SKILLS.BUILD (creation dimensions)
 
 ### Query Both (Full Profile)
 
@@ -448,10 +444,10 @@ interface Skills {
   id: string;
   user_id: string;
   
-  pillars: {
-    WRITE: PillarProfile;
-    READ: PillarProfile;
-    IMAGINE: PillarProfile;
+  modules: {
+    WRITE: ModuleProfile;
+    READ: ModuleProfile;
+    BUILD: ModuleProfile;
   };
   
   activities: Activity[];
@@ -463,7 +459,7 @@ interface Skills {
   updated_at: Date;
 }
 
-interface PillarProfile {
+interface ModuleProfile {
   dimensions: {
     [dimension: string]: {
       level: 1 | 2 | 3 | 4 | 5;
@@ -480,8 +476,8 @@ interface Activity {
   duration_minutes: number;
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   activity_type: string;
-  pillar_primary: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
-  pillar_secondary?: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
+  module_primary: 'WRITE' | 'READ' | 'BUILD';
+  module_secondary?: 'WRITE' | 'READ' | 'BUILD';
   
   content: {
     text?: string;
@@ -490,7 +486,7 @@ interface Activity {
   };
   
   analysis: {
-    pillar_metrics: Record<string, any>;
+    module_metrics: Record<string, any>;
     self_observations: {
       linguistic_markers: string[];
       emotional_tone: string;
@@ -513,7 +509,7 @@ interface Activity {
 
 interface CapabilityClaim {
   id: string;
-  pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
+  module: 'WRITE' | 'READ' | 'BUILD';
   dimension: string;
   statement: string;
   level: 1 | 2 | 3 | 4 | 5;
@@ -540,7 +536,7 @@ interface CapabilityClaim {
 - User-controlled access at all ages
 
 ### SKILLS (Sensitive)
-- Contains capability data across READ/WRITE/IMAGINE/BUSINESS
+- Contains capability data across READ/WRITE/BUILD
 - Can be shared for credential purposes
 - Pillar-limited access possible
 
@@ -552,8 +548,8 @@ interface CapabilityClaim {
 | Parent (user <12) | Full (custodial) | Full |
 | Parent (user 12-18) | Summary | Full |
 | Parent (user 18+) | None (unless granted) | None (unless granted) |
-| Employer | None (unless granted) | Granted pillars only |
-| University | None (unless granted) | Granted pillars only |
+| Employer | None (unless granted) | Granted modules only |
+| University | None (unless granted) | Granted modules only |
 
 There is no parent mode — parents have age-appropriate access to the user's single system.
 

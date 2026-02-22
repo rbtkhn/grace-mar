@@ -5,6 +5,9 @@ Used by both the Telegram and WeChat bots. Handles LLM conversation,
 lookup, analyst, archive, and rate limiting. Channel-agnostic — callers
 pass a channel_key (e.g. "telegram:123" or "wechat:oABC123") to scope
 conversations and rate limits.
+
+Design principle: The integration moment is where meaning enters. The user
+gates; the system stages. AI extends humanity; it does not replace it.
 """
 
 import base64

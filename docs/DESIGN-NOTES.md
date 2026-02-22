@@ -263,7 +263,7 @@ Grace-Mar exposes:
 
 **Design target:** Homeschool is the primary gap (Alpha homeschool = 1x). Grace-Mar + Khan/IXL + lightweight structure = low-cost alternative. Record feeds motivation; "we did X" provides ritual.
 
-**BUSINESS pillar:** Fourth SKILLS pillar (planning, execution, exchange). Starts from zero; grows with pipeline input (human-gated). Supports zero-human business vision: when BUSINESS capability is evidenced, the Record can inform agent-run businesses. See SKILLS-TEMPLATE, ARCHITECTURE.
+**BUILD module:** Third SKILLS module (making, planning, execution, exchange, creation, exploration). Folds in former BUSINESS and IMAGINE. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). Starts from zero; grows with pipeline input (human-gated). Supports zero-human business vision. See SKILLS-TEMPLATE, ARCHITECTURE.
 
 ---
 

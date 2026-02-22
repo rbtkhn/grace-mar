@@ -46,7 +46,7 @@ Only the user (or an explicitly delegated human) may merge. Agents, bots, and th
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
-| **SKILLS** | READ, WRITE, IMAGINE, BUSINESS capability containers | What they CAN DO |
+| **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
 
 ### 3.2 Post-Seed Growth (Three-Channel Mind)

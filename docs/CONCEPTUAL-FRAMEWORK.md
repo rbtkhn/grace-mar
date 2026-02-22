@@ -73,6 +73,7 @@
 23. **Guild economy; human-unique labor as currency** — In abundance, cash recedes; human-unique labor becomes the rarest commodity. Guilds: decentralized networks of craft associations, unit-based valuation, relational credit, mutual obligation, voluntary exchange. Direct creation → visible impact → belonging. From scarcity anxiety to abundance gratitude. The fork records who you are; guilds structure how you contribute. (5000 Days Part 13 / Guilded Age.)
 24. **Query-triggered voice; never unbidden** — The bot is the voice of the fork. It speaks only when queried; it never speaks unbidden. This guards against bicameral reversal. The fork does not command; the user does not obey. (Jaynes / Bicameral lens.)
 25. **Write it down or forget it** — Nothing enters the Record without being written and approved. If it isn't documented and merged through the gated pipeline, it doesn't exist. Mental notes don't survive; the Record is the only persistence layer.
+26. **Meaning vs. pattern** — We provide meaning; AI provides pattern. The analyst detects signals; the user decides what enters the Record. Collaboration, not competition. "Teaching mirrors how to reflect light."
 
 ---
 

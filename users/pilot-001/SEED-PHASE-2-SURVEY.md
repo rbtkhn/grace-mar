@@ -77,7 +77,7 @@
 
 **Answer:** ___
 
-**Why this question:** Art + drawing both made the favorites list. What she creates reveals relational vs. naturalistic vs. imaginative orientation. Critical for IMAGINE container.
+**Why this question:** Art + drawing both made the favorites list. What she creates reveals relational vs. naturalistic vs. imaginative orientation. Critical for BUILD (creation) container.
 
 ---
 
@@ -125,7 +125,7 @@
 
 **Answer:** ___
 
-**Why this question:** Grace-Mar's favorites blend adventure narratives (Mulan, Moana), animal worlds (Land Before Time, Clifford, Paw Patrol), and friendship. Which thread drives her own imagination? Seeds IMAGINE container.
+**Why this question:** Grace-Mar's favorites blend adventure narratives (Mulan, Moana), animal worlds (Land Before Time, Clifford, Paw Patrol), and friendship. Which thread drives her own imagination? Seeds BUILD (creation) container.
 
 ---
 
@@ -171,11 +171,11 @@ Q8 and Q9 produced off-script responses — more authentic than the choices offe
 | Q3 | reasoning_patterns.approach_to_new |
 | Q4 | personality.traits (social style) |
 | Q5 | narrative (language/cultural centrality) |
-| Q6 | interests (creative orientation), IMAGINE container |
+| Q6 | interests (creative orientation), BUILD container |
 | Q7 | (calibrates READ container edge) |
 | Q8 | personality.emotional_patterns, struggle log |
 | Q9 | reasoning_patterns.approach_to_hard |
-| Q10 | interests (imagination mode), IMAGINE container |
+| Q10 | interests (imagination mode), BUILD container |
 
 ---
 

@@ -189,7 +189,7 @@ evidence_tier: 4  # OBSERVED (actual artifact + child commentary)
 
 **Updates made:**
 - EVIDENCE.md — Creation Log entry CREATE-0001
-- SKILLS.md — IMAGINE container activated (originality 4, elaboration 4)
+- SKILLS.md — BUILD container activated (creation) (originality 4, elaboration 4)
 - SELF.md — Values seeded (kindness, bravery, beauty), cultural identity note, narrative updated
 
 **Phase 4 continued — additional artwork:**
@@ -226,7 +226,7 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 - EVIDENCE.md — Creativity Profile with confirmed signatures
 - SELF.md — Interests expanded (ancient history, space, visual art)
 - SELF.md — Values updated
-- SKILLS.md — IMAGINE container activated
+- SKILLS.md — BUILD container activated (creation)
 - Artifacts stored: 8 images in users/pilot-001/artifacts/
 
 ---
@@ -432,7 +432,7 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 | 1 | Identity + Preferences | Parent-reported survey | Name, age, favorites, interests baseline |
 | 2 | Personality + Behavior | 10 MC questions (child) | Traits, emotional patterns, social style |
 | 3 | Academic/Intellectual | 20 yes/no questions (parent) | READ/WRITE/MATH/CHINESE baselines, edges |
-| 4 | Creativity | 8 artwork analyses + child Q&A | IMAGINE container, artistic signatures, values |
+| 4 | Creativity | 8 artwork analyses + child Q&A | BUILD (creation) container, artistic signatures, values |
 | 5 | Writing Voice | 3 writing samples + child Q&A | WRITE/READ activated, linguistic style, sentence milestones |
 | 6 | Personality Core | 5 targeted questions (child) | Self-concept, humor, empathy, problem-solving, imagination |
 

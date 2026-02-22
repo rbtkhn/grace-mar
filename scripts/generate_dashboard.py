@@ -5,7 +5,7 @@ Generate the Grace-Mar pilot dashboard.
 Reads pilot-001 profile files and produces a single HTML dashboard with:
 - Fork summary (identity, Lexile, pipeline status)
 - PENDING-REVIEW queue (candidates awaiting approval)
-- SKILLS container status (READ, WRITE, IMAGINE, BUSINESS)
+- SKILLS container status (READ, WRITE, BUILD)
 - Recent bot archive excerpts
 - Benchmarks (pipeline stats, IX channel counts)
 
@@ -119,7 +119,7 @@ def parse_evidence(content: str) -> dict:
 def parse_skills(content: str) -> dict:
     """Extract container status from SKILLS.md."""
     summary = {}
-    for container in ["READ", "WRITE", "IMAGINE", "BUSINESS"]:
+    for container in ["READ", "WRITE", "BUILD"]:
         block = re.search(
             rf"### {container} Container.*?```yaml(.*?)```",
             content,

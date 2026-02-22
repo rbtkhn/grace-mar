@@ -33,9 +33,9 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 ---
 
-## II. THE FOUR PILLARS
+## II. THE THREE MODULES
 
-All skills organize under four fundamental cognitive modes. The fourth (BUSINESS) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
+All skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
 
 ### WRITE (Production)
 
@@ -91,64 +91,24 @@ The user consumes content. Grace-Mar tracks and assesses comprehension.
 > Grace-Mar captures: comprehension level, new vocabulary,
 > character understanding, plot inference, emotional response.
 
-### IMAGINE (Creation/Exploration)
+### BUILD (Making, Planning, Execution, Exchange)
 
-The user thinks beyond what's given. Grace-Mar captures creative and reasoning capability.
-
-**Activities:**
-- Creative play and scenarios
-- "What if" questions and answers
-- Problem-solving (novel situations)
-- Inventions, designs
-- Hypotheticals, counterfactuals
-- Drawing, painting, crafts (image upload)
-- Building, making (photo upload)
-- Games, puzzles, challenges
-- Planning future events
-
-**Input modalities:**
-- Voice/text (describing creative play)
-- Image upload (artwork, drawings, crafts)
-- Photo upload (things they built/made)
-- Video (creative performances)
-
-**What Grace-Mar captures:**
-- Originality (novel ideas, combinations)
-- Reasoning (logical steps, if-then)
-- Pattern-finding (connections, analogies)
-- Flexibility (adapting to constraints)
-- Elaboration (detail, richness)
-- Risk tolerance (safe vs wild ideas)
-- Persistence (sticking with hard problems)
-- Visual expression (from artwork)
-- Subject matter (what they choose to create)
-
-**Example activity (verbal):**
-> Student plays "what would happen if dinosaurs came back?"
-> Grace-Mar captures: reasoning chains, creative elements,
-> knowledge applied, narrative construction.
-
-**Example activity (image upload):**
-> Student uploads drawing of "my family as superheroes"
-> Grace-Mar captures: subject matter (family, superheroes),
-> elaboration (detail level), originality (power choices),
-> interests (superheroes), relationships (who's included).
-
-### BUSINESS (Planning, Execution, Exchange)
-
-The user engages in planning, execution, or exchange. Grace-Mar captures business-relevant capability. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
+The user makes things, plans, executes, or engages in exchange. Grace-Mar captures capability in building, delivery, and exchange. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
 
 **Activities:**
 - Lemonade stand, crafts sale, bake sale
 - School project with P&L (e.g., Airbnb, food truck)
 - Content creation with audience (YouTube, blog)
 - Allowance management, budgeting
+- Following instructions to build (Legos, models, projects)
+- Physical making (photo upload of things built)
 - "We did X" involving planning, delivery, or exchange
 - Any artifact showing goals, timelines, customer feedback, or financial outcome
 
 **What Grace-Mar captures:**
 - Planning (goals, timelines, milestones)
 - Execution (follow-through, deliverables)
+- Making (following instructions, assembly, construction)
 - Customer/audience (who to serve, feedback received)
 - Financial (basic money concepts, profit/loss, budgeting)
 - Collaboration (teamwork, delegation, roles)
@@ -159,30 +119,49 @@ The user engages in planning, execution, or exchange. Grace-Mar captures busines
 > Student participates in class food truck project. "We did X" + artifact (business plan, P&L).
 > Grace-Mar captures: planning level, execution follow-through, financial understanding, teamwork.
 
-**Integration with zero-human business vision:** BUSINESS pillar grows from evidence; when sufficient, the Record (including BUSINESS) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the pillar reflects demonstrated capability, not aspiration.
+**Integration with zero-human business vision:** BUILD module grows from evidence; when sufficient, the Record (including BUILD) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the module reflects demonstrated capability, not aspiration.
+
+**Creation and exploration (BUILD):** Making includes creative output — drawings, paintings, crafts, inventions, designs. Grace-Mar captures creative capability alongside execution.
+
+**Activities (creation):**
+- Drawing, painting, crafts (image upload)
+- Creative play and scenarios
+- "What if" questions and answers
+- Problem-solving (novel situations)
+- Inventions, designs (conceptual)
+- Hypotheticals, counterfactuals
+- Games, puzzles, challenges
+
+**What Grace-Mar captures (creation):**
+- Originality (novel ideas, combinations)
+- Elaboration (detail, richness)
+- Flexibility (adapting to constraints)
+- Visual expression (from artwork)
+- Subject matter (what they choose to create)
 
 ---
 
-## III. PILLAR INTERACTIONS
+## III. MODULE INTERACTIONS
 
-The four pillars are not isolated. Most activities engage multiple pillars.
+The three modules are not isolated. Most activities engage multiple modules.
 
 | Activity | Primary | Secondary |
 |----------|---------|-----------|
-| Write a story | WRITE | IMAGINE |
+| Write a story | WRITE | BUILD |
 | Summarize a book | READ | WRITE |
-| Solve a puzzle | IMAGINE | — |
+| Solve a puzzle | BUILD | — |
 | Explain how something works | WRITE | READ |
-| Ask "what if" about a story | IMAGINE | READ |
+| Ask "what if" about a story | BUILD | READ |
 | Journal about the day | WRITE | — |
-| Follow instructions to build | READ | IMAGINE |
-| Run a lemonade stand | BUSINESS | WRITE |
-| Class food truck project | BUSINESS | READ |
-| Create content for audience | BUSINESS | WRITE |
-| Manage allowance, budget | BUSINESS | — |
+| Follow instructions to build | READ | BUILD |
+| Run a lemonade stand | BUILD | WRITE |
+| Class food truck project | BUILD | READ |
+| Create content for audience | BUILD | WRITE |
+| Manage allowance, budget | BUILD | — |
+| Drawing, artwork, invention | BUILD | — |
 
-**Tagging rule:** Tag primary pillar; optionally tag secondary.
-Evidence accrues to tagged pillars.
+**Tagging rule:** Tag primary module; optionally tag secondary.
+Evidence accrues to tagged modules.
 
 ---
 
@@ -237,7 +216,7 @@ Characteristics:
 ## III. CAPABILITY CLAIMS
 
 Capability Claims are formal statements about what the user can do,
-derived from accumulated activity evidence across the four pillars.
+derived from accumulated activity evidence across the three modules.
 
 Analogous to CMC's Recursive Learning Ledger (RLL): activities feed capability claims; claims accumulate; the Record improves over time. See [PIPELINE-MAP](PIPELINE-MAP.md#recursive-learning-process) for the full recursive learning definition.
 
@@ -246,7 +225,7 @@ Analogous to CMC's Recursive Learning Ledger (RLL): activities feed capability c
 ```typescript
 interface CapabilityClaim {
   id: string;                    // CAP-WRITE-VOC-001
-  pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
+  module: 'WRITE' | 'READ' | 'BUILD';
   dimension: string;             // "vocabulary", "comprehension", "originality"
   statement: string;             // "Uses age-appropriate vocabulary with variety"
   
@@ -274,7 +253,7 @@ interface CapabilityClaim {
 
 ```
 CAP-WRITE-VOC-001
-Pillar: WRITE
+Module: WRITE
 Dimension: vocabulary
 Statement: Uses age-appropriate vocabulary (500+ unique words observed)
 Level: 2
@@ -282,23 +261,23 @@ Evidence: 42 journal entries, 8 stories
 Status: established
 
 CAP-READ-COMP-001
-Pillar: READ
+Module: READ
 Dimension: comprehension
 Statement: Can accurately summarize chapter-length narratives
 Level: 3
 Evidence: 15 book summaries, 90%+ accuracy
 Status: established
 
-CAP-IMAGINE-ORIG-001
-Pillar: IMAGINE
-Dimension: originality
+CAP-BUILD-ORIG-001
+Module: BUILD
+Dimension: originality (creation)
 Statement: Generates novel combinations (e.g., "dinosaur astronaut")
 Level: 2
 Evidence: 23 creative play sessions
 Status: emerging
 
-CAP-BUSINESS-PLAN-001
-Pillar: BUSINESS
+CAP-BUILD-PLAN-001
+Module: BUILD
 Dimension: planning
 Statement: Can set goals and track milestones (e.g., food truck project)
 Level: 1
@@ -326,7 +305,7 @@ Status: emerging
 
 ### Developmental Levels (per dimension)
 
-Each pillar dimension has 5 developmental levels.
+Each module dimension has 5 developmental levels.
 
 **WRITE.vocabulary**
 | Level | Description |
@@ -346,7 +325,7 @@ Each pillar dimension has 5 developmental levels.
 | 4 | Analyzes author intent |
 | 5 | Critiques and compares |
 
-**IMAGINE.originality**
+**BUILD.originality** (creation)
 | Level | Description |
 |-------|-------------|
 | 1 | Recombines familiar elements |
@@ -386,7 +365,7 @@ Adapted from CMC's Negative Capability Zone.
 CAPABILITY GAP LOG
 
 GAP-WRITE-LOGIC-001
-  Pillar: WRITE
+  Module: WRITE
   Dimension: logic
   Status: DEVELOPING
   Observation: Sequential narratives strong; argument structure weak
@@ -406,7 +385,7 @@ GAP-WRITE-LOGIC-001
 - Difficulty with non-fiction
 - Low retention of factual content
 
-**IMAGINE gaps:**
+**BUILD gaps (creation):**
 - Ideas stay close to source material
 - Struggles with "what if" questions
 - Gives up quickly on novel problems
@@ -429,7 +408,7 @@ Adapted from CMC's Failure-First Standard.
 ### What to Capture
 
 - Activities where user struggled
-- Pillar dimensions that are difficult
+- Module dimensions that are difficult
 - Emotional responses to difficulty
 - Breakthrough moments
 - Growth trajectory
@@ -440,7 +419,7 @@ Adapted from CMC's Failure-First Standard.
 STRUGGLE LOG
 
 STRUGGLE-WRITE-001: Complex Sentences
-  Pillar: WRITE
+  Module: WRITE
   Dimension: complexity
   First observed: 2026-03-01
   Status: RESOLVING
@@ -456,7 +435,7 @@ STRUGGLE-WRITE-001: Complex Sentences
   Evidence: Activities 0024, 0031, 0042, 0056
 
 STRUGGLE-READ-001: Non-Fiction Comprehension
-  Pillar: READ
+  Module: READ
   Dimension: comprehension
   First observed: 2026-02-15
   Status: ONGOING
@@ -470,7 +449,7 @@ STRUGGLE-READ-001: Non-Fiction Comprehension
     non-fiction content.
 ```
 
-### Struggle Types by Pillar
+### Struggle Types by Module
 
 **WRITE struggles:**
 - Vocabulary limitations
@@ -484,7 +463,7 @@ STRUGGLE-READ-001: Non-Fiction Comprehension
 - Retaining factual information
 - Following multi-step instructions
 
-**IMAGINE struggles:**
+**BUILD struggles (creation):**
 - Breaking from familiar patterns
 - Sustaining creative play
 - Logical reasoning chains
@@ -514,14 +493,14 @@ METADATA:
 ACTIVITY TYPE:
 [journal | story | summary | question | conversation | creative | artwork | building | problem | business | project]
 
-PILLAR TAGS:
-- Primary: [WRITE | READ | IMAGINE | BUSINESS]
-- Secondary: [WRITE | READ | IMAGINE | BUSINESS | none]
+MODULE TAGS:
+- Primary: [WRITE | READ | BUILD]
+- Secondary: [WRITE | READ | BUILD | none]
 
 CONTENT:
 [Full text, transcript, image file, or description of activity content]
 
-PILLAR ANALYSIS:
+MODULE ANALYSIS:
 
 If WRITE:
 - Vocabulary: [word count, unique words, new words]
@@ -537,14 +516,9 @@ If READ:
 - Inference: [conclusions drawn]
 - Vocabulary: [new words encountered]
 
-If IMAGINE (verbal):
-- Prompt/trigger: [what sparked the imagination]
-- Originality: [novel elements]
-- Reasoning: [logical chains]
-- Elaboration: [detail level 1-5]
-
-If IMAGINE (image/artwork):
-- Image file: [reference to uploaded image]
+If BUILD (creation/artwork):
+- Image file: [reference to uploaded image, if applicable]
+- Prompt/trigger: [what sparked the creation]
 - Subject matter: [what they drew/made]
 - Elaboration: [detail level 1-5]
 - Originality: [novel elements, unexpected choices]
@@ -552,7 +526,7 @@ If IMAGINE (image/artwork):
 - Colors/mood: [emotional expression]
 - Student description: [what they say about it]
 
-If BUSINESS:
+If BUILD (planning/execution):
 - Planning: [goals, timelines, milestones evidenced]
 - Execution: [follow-through, deliverables]
 - Financial: [P&L, budgeting, money concepts]
@@ -587,7 +561,7 @@ METADATA:
 
 ACTIVITY TYPE: journal
 
-PILLAR TAGS:
+MODULE TAGS:
 - Primary: WRITE
 - Secondary: none
 
@@ -598,7 +572,7 @@ explorers looking for treasure. I found a cool rock that looks
 like a dinosaur egg. Mom said we can keep it. I want to go 
 back tomorrow."
 
-PILLAR ANALYSIS:
+MODULE ANALYSIS:
 
 WRITE:
 - Vocabulary: 54 words, 42 unique, 0 new
@@ -636,8 +610,8 @@ METADATA:
 
 ACTIVITY TYPE: artwork
 
-PILLAR TAGS:
-- Primary: IMAGINE
+MODULE TAGS:
+- Primary: BUILD
 - Secondary: none
 
 CONTENT:
@@ -647,9 +621,9 @@ Student description (voice): "This is my family but we're all
 superheroes. Dad can fly, Mom has super strength, I can turn 
 invisible, and my brother shoots lasers from his eyes."
 
-PILLAR ANALYSIS:
+MODULE ANALYSIS:
 
-IMAGINE (image/artwork):
+BUILD (image/artwork):
 - Image file: drawing_family_superheroes.jpg
 - Subject matter: family, superheroes, powers
 - Elaboration: 4/5 (detailed costumes, background city)
@@ -670,9 +644,9 @@ VERIFICATION FLAGS:
 
 ---
 
-## VII. PILLAR STRUCTURE
+## VII. MODULE STRUCTURE
 
-Skills organize under the four pillars, with sub-dimensions.
+Skills organize under the three modules, with sub-dimensions.
 
 ### Structure
 
@@ -696,41 +670,36 @@ SKILLS/
 │   ├── velocity/             # Speed, volume
 │   └── content_log/          # What they've read
 │
-├── IMAGINE/
-│   ├── originality/          # Novel ideas, combinations
-│   ├── reasoning/            # Logical steps, if-then
-│   ├── patterns/             # Connections, analogies
-│   ├── flexibility/          # Adapting to constraints
-│   ├── elaboration/          # Detail, richness
-│   ├── risk/                 # Safe vs wild ideas
-│   └── persistence/          # Sticking with hard problems
-│
-└── BUSINESS/
+└── BUILD/
     ├── planning/             # Goals, timelines, milestones
     ├── execution/            # Follow-through, deliverables
     ├── customer_audience/    # Who to serve, feedback
     ├── financial/            # Money concepts, P&L, budgeting
     ├── collaboration/        # Teamwork, delegation, roles
     ├── marketing/            # Telling your story, reach
-    └── decision_making/      # Trade-offs, prioritization
+    ├── decision_making/      # Trade-offs, prioritization
+    ├── originality/          # Novel ideas, combinations (creation)
+    ├── elaboration/          # Detail, richness (creation)
+    ├── flexibility/          # Adapting to constraints (creation)
+    └── persistence/          # Sticking with hard problems
 ```
 
 ### Subject Knowledge
 
-Traditional subjects (math, science, history) are NOT separate pillars.
-They are CONTEXTS where READ/WRITE/IMAGINE/BUSINESS are applied.
+Traditional subjects (math, science, history) are NOT separate modules.
+They are CONTEXTS where READ/WRITE/BUILD are applied.
 
 **Example: Math**
 - READ: Understands math concepts, can interpret problems
 - WRITE: Can produce correct solutions, explain reasoning
-- IMAGINE: Can solve novel problems, find patterns
+- BUILD: Can solve novel problems, find patterns
 
 **Example: History**
 - READ: Knows historical events, can summarize periods
 - WRITE: Can explain historical cause/effect
-- IMAGINE: Can reason about counterfactuals ("what if...")
+- BUILD: Can reason about counterfactuals ("what if...")
 
-Subject knowledge emerges from evidence across all four pillars. BUSINESS starts from zero; no evidence = no claims.
+Subject knowledge emerges from evidence across all three modules. BUILD starts from zero; no evidence = no claims.
 
 ---
 
@@ -843,11 +812,11 @@ Later learning does not modify snapshots.
 
 ## XI. CONTAINER EDGE TEACHING
 
-The four pillars are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE. BUSINESS container starts empty until evidence enters through the pipeline.
+The three modules are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE. BUILD container starts empty until evidence enters through the pipeline.
 
 ### Container State
 
-Each pillar has a current boundary:
+Each module has a current boundary:
 
 ```
 READ Container:
@@ -862,10 +831,10 @@ WRITE Container:
 ├── Expression: strong (level 3)
 └── EDGE: compound sentences, connectors
 
-IMAGINE Container:
+BUILD Container (creation dimensions):
 ├── Originality: familiar recombinations (level 2)
-├── Reasoning: basic if-then (level 2)
 ├── Elaboration: moderate detail (level 3)
+├── Flexibility: adapting to constraints
 └── EDGE: novel combinations, longer chains
 ```
 
@@ -913,19 +882,15 @@ How evaluators interact with the SKILLS module.
 > "How well does [user] comprehend?"
 > Returns: Levels across comprehension, inference, vocabulary acquisition
 
-**IMAGINE capability:**
-> "How creative/original is [user]?"
-> Returns: Levels across originality, reasoning, flexibility, elaboration
+**BUILD capability (includes creation):**
+> "What business/planning/creation capability does [user] have?"
+> Returns: Levels across planning, execution, financial, collaboration, originality, elaboration (or "no evidence yet" if container empty)
 
-**BUSINESS capability:**
-> "What business/planning capability does [user] have?"
-> Returns: Levels across planning, execution, financial, collaboration (or "no evidence yet" if container empty)
-
-### Cross-Pillar Queries
+### Cross-Module Queries
 
 **Overall profile:**
 > "What are [user]'s cognitive strengths?"
-> Returns: Pillar comparison, strongest dimensions
+> Returns: Module comparison, strongest dimensions
 
 **Demonstration:**
 > "Show me how [user] would explain [topic]"
@@ -933,7 +898,7 @@ How evaluators interact with the SKILLS module.
 
 **Trajectory:**
 > "How has [user]'s writing developed?"
-> Returns: WRITE pillar growth over time, milestones, struggles
+> Returns: WRITE module growth over time, milestones, struggles
 
 **Gap analysis:**
 > "Where should [user] focus development?"
@@ -988,8 +953,8 @@ SKILLS and SELF interact bidirectionally. WRITE is the primary data source for S
 
 ### SELF → SKILLS (Prediction)
 
-- Interests (SELF) predict which pillars develop fastest
-- Reasoning patterns (SELF) shape how IMAGINE capability grows
+- Interests (SELF) predict which modules develop fastest
+- Reasoning patterns (SELF) shape how BUILD (creation) capability grows
 
 ### SKILLS → SELF (Inference)
 
@@ -1039,22 +1004,17 @@ READ Activity: Finished "Charlotte's Web" (2nd read)
         └── reading_patterns: re-reads favorites
 ```
 
-### IMAGINE → SELF
-
-- Creative content → interests (what they explore)
-- Problem-solving approach → reasoning_patterns
-- Risk-taking in ideas → personality.traits
-
-### BUSINESS → SELF
+### BUILD → SELF
 
 - Planning/collaboration style → reasoning_patterns
 - Financial/values signals → values (if evidenced)
 - Execution approach → personality (e.g., follow-through)
+- Creative content (artwork, inventions) → interests (what they explore)
 
 ### Key Insight
 
 WRITE is both:
-1. A skill pillar (capability to produce)
+1. A skill module (capability to produce)
 2. The primary data source for SELF (how they express themselves)
 
 The linguistic fingerprint lives in SELF but is derived from WRITE.
@@ -1081,10 +1041,10 @@ Before marking any Capability Claim as ESTABLISHED:
 
 Before creating SNAPSHOT:
 
-- [ ] All pillar dimensions reviewed
+- [ ] All module dimensions reviewed
 - [ ] Gaps explicitly documented
 - [ ] Struggles logged
-- [ ] Pillar breakdown complete
+- [ ] Module breakdown complete
 - [ ] Summary written
 - [ ] Timestamp recorded
 - [ ] Marked as ARCHIVED (immutable)

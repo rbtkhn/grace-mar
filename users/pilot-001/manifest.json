@@ -2,8 +2,8 @@
   "version": "1.0",
   "grace_mar": true,
   "user_id": "pilot-001",
-  "generated_at": "2026-02-22T09:36:43.047454",
-  "checksum": "9eb837d622ab7816f633652b5018199246e9b51549c298cea7cee88051c9a1d4",
+  "generated_at": "2026-02-22T12:52:05.737794",
+  "checksum": "d94f834a8fcf76d91592499aec084c352ff378146b84c74394668056eb1b4091",
   "readable": [
     "SELF/identity",
     "SELF/preferences",
@@ -18,8 +18,7 @@
     "SELF/IX-C",
     "SKILLS/READ",
     "SKILLS/WRITE",
-    "SKILLS/IMAGINE",
-    "SKILLS/BUSINESS",
+    "SKILLS/BUILD",
     "EVIDENCE/activity_log",
     "EVIDENCE/writing_log",
     "EVIDENCE/creation_log",
@@ -36,7 +35,7 @@
     },
     "SKILLS": {
       "type": "object",
-      "description": "Capability containers (READ, WRITE, IMAGINE, BUSINESS)"
+      "description": "Capability containers (READ, WRITE, BUILD)"
     },
     "EVIDENCE": {
       "type": "object",

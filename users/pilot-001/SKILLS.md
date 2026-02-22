@@ -54,33 +54,26 @@ gaps:
 notes: "Three samples show rapid progression: run-on retell (0001) → run-on original with segments (0002) → sentences with periods (0003). WRITE-0003 is a breakthrough — periods, three tenses (past/present/future), self-reflection. 'Because' is habitual (3 uses). Phonetic errors decreasing. Next: fiction/narrative writing, consistent capitalization."
 ```
 
-### IMAGINE Container
+### BUILD Container
 
 ```yaml
-status: ACTIVE (first Tier 4 evidence: CREATE-0001)
-originality_level: 4      # original visual interpretation of text-only Chinese story
-reasoning_level: 2         # multi-step instructions, sequential thinking (forward + backward)
-flexibility_level: 3       # works within story framework but makes own visual choices
-elaboration_level: 4       # detailed — careful color banding, shading, decorative elements, full page
-edge: "Narrative creation from prompts; cross-language creative tasks; independent scene composition"
-gaps: []
-notes: "CREATE-0001 (Nine-Colored Deer) demonstrates: comprehension of text-only Chinese story → original visual interpretation. Confident technique, strong spatial composition, deliberate color choices. Draws animals/nature (confirmed). Chinese cultural content chosen deliberately."
-```
-
-### BUSINESS Container
-
-```yaml
-status: EMPTY (starts from zero; grows with pipeline input, human-gated)
+status: ACTIVE (creation dimensions from CREATE-0001–0008; planning/execution from zero)
+# Creation (merged from IMAGINE)
+originality_level: 4      # original visual interpretation of text-only Chinese story (CREATE-0001)
+elaboration_level: 4      # detailed — careful color banding, shading, decorative elements
+flexibility_level: 3      # works within story framework but makes own visual choices
+# Planning/execution (starts from zero)
 planning_level: null
 execution_level: null
+making_level: null
 financial_level: null
 collaboration_level: null
-edge: null
+edge: "Narrative creation from prompts; cross-language creative tasks; independent scene composition; planning/execution evidence enters via 'we did X' pipeline"
 gaps: []
-notes: "BUSINESS pillar starts at zero. Evidence enters through 'we did X' pipeline (e.g., lemonade stand, school project with P&L, content for audience). Human gates all merges."
+notes: "Creation: CREATE-0001 (Nine-Colored Deer) demonstrates comprehension of text-only Chinese story → original visual interpretation. 8 artworks (CREATE-0001–0008) show strong creation capability. Planning/execution: starts from zero; evidence enters through 'we did X' (lemonade stand, school project with P&L, etc.). Human gates all merges."
 ```
 
-### MATH (contextual — not a pillar, but tracked)
+### MATH (contextual — not a module, but tracked)
 
 ```yaml
 status: SEED (parent-reported, Tier 5)

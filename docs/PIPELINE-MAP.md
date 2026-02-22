@@ -33,7 +33,7 @@
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                           FORK STATE                                             │
-│  SELF (IX-A/B/C)  │  SKILLS (READ/WRITE/IMAGINE/BUSINESS)  │  EVIDENCE (pillar logs)  │
+│  SELF (IX-A/B/C)  │  SKILLS (READ/WRITE/BUILD)  │  EVIDENCE (module logs)  │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -95,7 +95,7 @@ User message (Telegram)
           └──[NONE]──────────► (no staging)
 ```
 
-**Bot feeds:** SELF (IX-A Knowledge, IX-B Curiosity, IX-C Personality) via lookup and conversation signals. Does **not** directly feed SKILLS pillars or EVIDENCE pillar logs (READ/WRITE/IMAGINE/BUSINESS).
+**Bot feeds:** SELF (IX-A Knowledge, IX-B Curiosity, IX-C Personality) via lookup and conversation signals. Does **not** directly feed SKILLS modules or EVIDENCE module logs (READ/WRITE/BUILD).
 
 **Bot produces:** ACT-* entries (activity log) when candidates are approved. Each approved candidate becomes an ACT-* + SELF entry + prompt.py update.
 
@@ -161,11 +161,11 @@ Books / articles consumed
           └──► SELF.interests, SELF.preferences, SELF.values
 ```
 
-**Automation:** None. Fully manual. **Gap:** Bot conversations about books could feed interest signals, but those go to SELF IX-B (curiosity), not to READ pillar. No structured READ evidence from bot.
+**Automation:** None. Fully manual. **Gap:** Bot conversations about books could feed interest signals, but those go to SELF IX-B (curiosity), not to READ module. No structured READ evidence from bot.
 
 ---
 
-### IMAGINE (EVIDENCE § III. CREATION LOG)
+### BUILD creation (EVIDENCE § III. CREATION LOG)
 
 ```
 Physical artifact (artwork, collage, etc.)
@@ -176,7 +176,7 @@ Physical artifact (artwork, collage, etc.)
 │  (manual)         │  Add entry to EVIDENCE.md Creation Log
 └─────────┬─────────┘
           │
-          ├──► SKILLS.md IMAGINE (originality, elaboration, flexibility)
+          ├──► SKILLS.md BUILD (originality, elaboration, flexibility)
           └──► SELF.reasoning_patterns, SELF.interests
 ```
 
@@ -190,7 +190,7 @@ Physical artifact (artwork, collage, etc.)
 |-----------------|------------|
 | WRITE | linguistic_style (primary), interests, emotional_patterns |
 | READ | interests, preferences, values |
-| IMAGINE | reasoning_patterns, interests |
+| BUILD (creation) | reasoning_patterns, interests |
 
 ---
 
@@ -212,8 +212,8 @@ The approval step is the **integration moment** — the conscious gate where the
 
 | Gap | Description | Potential fix |
 |-----|-------------|---------------|
-| **READ has no bot feed** | Bot conversations mention books, but READ pillar (comprehension, vocabulary) has no automated input. Reading List is empty. | Add analyst signal for "book discussed" → stage candidate that could create READ-* or link to interest. Or: operator workflow for "we finished [book]." |
-| **WRITE / IMAGINE fully manual** | No automation for artifact capture. User must photograph, save, and write EVIDENCE entry. | Optional: upload flow (e.g. Telegram photo → staging for EVIDENCE), or template script for new WRITE/IMAGINE entries. |
+| **READ has no bot feed** | Bot conversations mention books, but READ module (comprehension, vocabulary) has no automated input. Reading List is empty. | Add analyst signal for "book discussed" → stage candidate that could create READ-* or link to interest. Or: operator workflow for "we finished [book]." |
+| **WRITE / BUILD (creation) fully manual** | No automation for artifact capture. User must photograph, save, and write EVIDENCE entry. | Optional: upload flow (e.g. Telegram photo → staging for EVIDENCE), or template script for new WRITE/BUILD entries. |
 | **Edge → quest feedback** | Container edge (SKILLS) could drive "propose activity" but there is no automated quest generator. | Future: script that reads SKILLS, infers edge, outputs suggested activities. |
 | ~~No pipeline event log~~ | ~~Staging and approval implicit in file edits~~ | ✅ Implemented: `PIPELINE-EVENTS.jsonl` — bot emits `staged`; operator runs `emit_pipeline_event.py applied CANDIDATE-XX` when processing. |
 
@@ -237,7 +237,7 @@ python scripts/run_counterfactual_harness.py
 | Operator → PENDING → Integration → SELF, EVIDENCE | ✅ Yes | Per "we [did X]" |
 | WRITE artifact → EVIDENCE → SKILLS, SELF | ✅ Yes | Manual, per artifact |
 | READ artifact → EVIDENCE → SKILLS, SELF | ⚠️ Sparse | Manual, 0 entries so far |
-| IMAGINE artifact → EVIDENCE → SKILLS, SELF | ✅ Yes | Manual, per artifact |
+| BUILD (creation) artifact → EVIDENCE → SKILLS, SELF | ✅ Yes | Manual, per artifact |
 | SKILLS/edge → propose activity → artifact → EVIDENCE | ❌ No | Not implemented. Would close recursive loop. |
 
 ---

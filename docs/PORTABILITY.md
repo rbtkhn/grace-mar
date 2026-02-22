@@ -65,7 +65,7 @@ Exports include a generation timestamp. The Record schema (SELF, SKILLS, EVIDENC
 | File | Role in transfer |
 |------|------------------|
 | `users/[id]/SELF.md` | Identity, interests, personality, IX-A/B/C |
-| `users/[id]/SKILLS.md` | READ, WRITE, IMAGINE, BUSINESS container status |
+| `users/[id]/SKILLS.md` | READ, WRITE, BUILD container status |
 | `users/[id]/EVIDENCE.md` | Activity log (full fork export only) |
 | `scripts/export_user_identity.py` | Produce identity handoff |
 | `scripts/export_fork.py` | Produce full fork handoff |

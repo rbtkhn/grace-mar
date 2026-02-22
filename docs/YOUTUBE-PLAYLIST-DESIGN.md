@@ -59,12 +59,12 @@ Videos that extend the LIBRARY (books already known).
 
 ---
 
-### 2.3 `build_edge_playlist(skill_pillar: str) -> list[VideoCandidate]`
+### 2.3 `build_edge_playlist(skill_module: str) -> list[VideoCandidate]`
 
 Content at the SKILLS edge — stretches capability.
 
 **Logic:**
-1. Read `edge` for pillar (e.g. READ: "Longer text, inference, retelling").
+1. Read `edge` for module (e.g. READ: "Longer text, inference, retelling").
 2. Map edge phrases → search terms: "read aloud chapter book", "reading comprehension for kids".
 3. Optionally intersect with IX-B topics.
 4. Search; filter; return.

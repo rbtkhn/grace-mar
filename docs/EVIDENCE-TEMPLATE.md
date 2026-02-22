@@ -15,7 +15,7 @@ Last Update: February 2026
 This template governs how evidence is stored, organized, and weighted.
 
 Evidence includes:
-- Activities (WRITE, READ, IMAGINE, BUSINESS)
+- Activities (WRITE, READ, BUILD)
 - Content consumed (reading list, media)
 - External attestations (parent, teacher)
 - Assessments and verifications
@@ -352,7 +352,7 @@ WritingEntry.analysis
 
 ---
 
-## V. MEDIA LOG (IMAGINE/READ EVIDENCE)
+## V. MEDIA LOG (BUILD/READ EVIDENCE)
 
 Movies, shows, videos, games.
 
@@ -402,7 +402,7 @@ Parent: "She's watched Frozen 12 times"
 
 ---
 
-## V. CREATION LOG (IMAGINE EVIDENCE CANON)
+## V. CREATION LOG (BUILD EVIDENCE CANON)
 
 The creation log is the systematic record of creative output.
 
@@ -519,7 +519,7 @@ interface ActivityEvidence {
   date: Date;
   
   // Classification
-  pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
+  module: 'WRITE' | 'READ' | 'BUILD';
   activity_type: string;  // e.g. lookup, conversation, survey, art, writing, teach (child explains to Record — learning-by-teaching)
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   

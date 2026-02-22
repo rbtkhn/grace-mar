@@ -1,8 +1,8 @@
 # Grace-Mar Record — Agent Manifest
 
 User: pilot-001
-Checksum: 9eb837d622ab7816f633652b5018199246e9b51549c298cea7cee88051c9a1d4
-Generated: 2026-02-22T09:36:43.047454
+Checksum: d94f834a8fcf76d91592499aec084c352ff378146b84c74394668056eb1b4091
+Generated: 2026-02-22T12:52:05.737794
 
 ## Readable
 Agents may read (for personalization, session continuity):
@@ -20,8 +20,7 @@ Agents may read (for personalization, session continuity):
   - SELF/IX-C
   - SKILLS/READ
   - SKILLS/WRITE
-  - SKILLS/IMAGINE
-  - SKILLS/BUSINESS
+  - SKILLS/BUILD
   - EVIDENCE/activity_log
   - EVIDENCE/writing_log
   - EVIDENCE/creation_log
