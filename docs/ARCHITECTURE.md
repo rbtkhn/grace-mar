@@ -573,6 +573,7 @@ GitHub Repository (rbtkhn/grace-mar)
 │       ├── SELF.md          # Identity record
 │       ├── SKILLS.md        # Capability record
 │       ├── EVIDENCE.md      # Activity logs
+│       ├── MEMORY.md        # Ephemeral session context (optional; not part of Record)
 │       ├── SESSION-LOG.md   # Interaction history
 │       ├── ARCHIVE.md       # Raw conversation log (private)
 │       ├── JOURNAL.md       # Daily highlights (public-suitable, shareable)
@@ -598,9 +599,13 @@ Every session that updates user data:
 2. Commit with descriptive message
 3. Push to GitHub
 
+### MEMORY (Ephemeral Session Context)
+
+MEMORY.md holds ephemeral session context — tone, recent topics, calibrations — to improve continuity between sessions. It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. MEMORY may be rotated or pruned (weekly recommended). Optional; the system runs normally if absent. See [MEMORY-TEMPLATE](MEMORY-TEMPLATE.md).
+
 ### JOURNAL (Shareable Daily Highlights)
 
-JOURNAL.md consolidates daily highlights of activity — what Grace-Mar read, wrote, created, learned. Public-suitable; contrasts with ARCHIVE (raw conversation log, private). Sources: EVIDENCE, SESSION-LOG. See [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md). Profile tab order: Knowledge | Skills | Curiosity | Personality | Library | Journal.
+JOURNAL.md consolidates daily highlights of activity — what Grace-Mar read, wrote, created, learned. Entries are written in **first-person Grace-Mar voice** ("I learned…", "I drew…") and serve to **demonstrate and audit** the fork's linguistic fingerprint (vocabulary, sentence patterns, tone). Public-suitable; contrasts with ARCHIVE (raw conversation log, private). Sources: EVIDENCE, SESSION-LOG. See [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md). Profile tab order: Knowledge | Skills | Curiosity | Personality | Library | Journal.
 
 ### Snapshots
 
@@ -615,7 +620,7 @@ Tags preserve the exact state at that point in time.
 
 ## Emulation Layer
 
-The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The pilot supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality.
+The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The pilot supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality. **Teaching/tutoring** is one of the Voice's functions: it answers questions, explains concepts, and helps the user learn — in-character, at the Record's Lexile level, and within the knowledge boundary.
 
 ### The Observation Window Model
 

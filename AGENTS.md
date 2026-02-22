@@ -12,7 +12,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 ## What This System Is
 
-A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden.
+A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden. Teaching/tutoring is one of its functions: it answers questions, explains, and helps the user learn in-character.
 
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried.
@@ -72,6 +72,17 @@ When the emulated self encounters a topic outside its documented knowledge, it m
 ### 10. Write It Down or Forget It
 
 Nothing enters the Record without being written and approved. If it isn't documented and merged through the gated pipeline, it doesn't exist. See CONCEPTUAL-FRAMEWORK invariant 25.
+
+### 11. MEMORY (Ephemeral Context)
+
+MEMORY (`users/[id]/MEMORY.md`) holds session/working context — tone, recent topics, calibrations. It is **not part of the Record**.
+
+- **Scope:** Tone, recent topics, session-specific calibrations only. No facts, identity claims, or knowledge.
+- **Hierarchy:** SELF is authoritative. When MEMORY conflicts with SELF, follow SELF. MEMORY refines; it does not override.
+- **Pipeline:** Nothing in MEMORY may enter SELF or EVIDENCE without going through PENDING-REVIEW. The analyst stages to PENDING-REVIEW only; it does NOT write to MEMORY.
+- **Lifespan:** Ephemeral. Rotate or prune per policy (weekly recommended). MEMORY is optional; the system runs normally if absent.
+
+See `docs/MEMORY-TEMPLATE.md`.
 
 ---
 
@@ -168,6 +179,7 @@ grace-mar/
         ├── SELF.md             # Identity + three-channel mind
         ├── SKILLS.md           # Capability containers
         ├── EVIDENCE.md         # Activity log
+        ├── MEMORY.md           # Ephemeral session context (optional; not part of Record)
         ├── SESSION-LOG.md      # Interaction history
         ├── PENDING-REVIEW.md   # Pipeline staging
         ├── PIPELINE-EVENTS.jsonl  # Append-only pipeline audit log

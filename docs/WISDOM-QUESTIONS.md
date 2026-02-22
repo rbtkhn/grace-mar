@@ -48,6 +48,16 @@
 | 17 | What makes you feel brave? | Courage, values |
 | 18 | When do you feel most like YOU? | Identity, authenticity |
 
+### Teach Grace-Mar (IX-A, IX-B) — learning by teaching
+
+Child explains to the Record; same pipeline. Invokes protégé effect: teaching deepens understanding.
+
+| # | Question | Notes |
+|---|----------|-------|
+| 60 | What would you teach someone about [topic you just learned]? | Knowledge articulation; use activity_type: teach |
+| 61 | Explain to Grace-Mar what you learned about [X] today. | Direct teaching frame |
+| 62 | If you had to teach a friend about [your favorite subject], what would you say? | Knowledge + preference |
+
 ### Curiosity & Interests (IX-B)
 
 | # | Question | Notes |
@@ -126,7 +136,7 @@ Questions that assume no productivity pressure — who are you when nothing is r
 ## Pipeline Notes
 
 - **mind_category:** Most answers map to `curiosity` (IX-B) or `personality` (IX-C). Clear preference statements → SELF II or IX-A.
-- **signal_type:** `survey_confirmed` or `wisdom_elicitation` (add to analyst vocabulary if desired).
+- **signal_type:** `survey_confirmed`, `wisdom_elicitation`, or `teach` (learning-by-teaching questions 60–62).
 - **evidence_tier:** 3 (attested — user approved). Source: operator-administered, wisdom questions.
 - **Lexile:** Keep question phrasing at or below 600L for pilot-001. Simplify as needed.
 
@@ -145,5 +155,6 @@ Questions that assume no productivity pressure — who are you when nothing is r
 - **Updated:** 2026-02-21 — added Q54, Q55 mentoring / repair / resurrection (5000 Days Part 12)
 - **Updated:** 2026-02-21 — added Q56, Q57 creation-for-community / barter / guild economy (5000 Days Part 13 / Guilded Age)
 - **Updated:** 2026-02-21 — added Q58 mutual aid, Q59 mentorship (design-review catch-up)
+- **Updated:** 2026-02-22 — added Q60–Q62 Teach Grace-Mar (learning-by-teaching, Betty's Brain–inspired)
 - **Tier:** Child only (ages ~5–10)
-- **Question count:** 59
+- **Question count:** 62

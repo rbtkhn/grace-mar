@@ -12,6 +12,9 @@ Usage:
   python scripts/validate-integrity.py [users_dir]
   python scripts/validate-integrity.py --changed-only   # validate only if files changed (for CI)
 
+Cron: Run nightly to catch integrity issues early:
+  0 3 * * * cd /path/to/grace-mar && python3 scripts/validate-integrity.py || alert_on_failure
+
 Exit: 0 if pass, 1 if any check fails.
 """
 

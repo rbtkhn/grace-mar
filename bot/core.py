@@ -64,6 +64,7 @@ ARCHIVE_REPO_PATH = "users/pilot-001/ARCHIVE.md"  # repo-relative for GitHub API
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
 PENDING_REVIEW_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
+MEMORY_PATH = PROFILE_DIR / "MEMORY.md"
 LIBRARY_PATH = PROFILE_DIR / "LIBRARY.md"
 COMPUTE_LEDGER_PATH = PROFILE_DIR / "COMPUTE-LEDGER.jsonl"
 PIPELINE_EVENTS_PATH = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
@@ -232,6 +233,35 @@ def _load_library() -> list[dict]:
             volume = volume_m.group(1) if volume_m else None
             entries.append({"title": title_m.group(1), "scope": scope, "volume": volume})
     return entries
+
+
+def _load_memory_appendix() -> str:
+    """Load MEMORY.md if present. Returns appendix for system prompt, or empty string."""
+    if not MEMORY_PATH.exists():
+        return ""
+    content = MEMORY_PATH.read_text(encoding="utf-8").strip()
+    if not content:
+        return ""
+    lines = content.splitlines()
+    # Skip placeholders; require at least one line of real content
+    useful = []
+    for line in lines:
+        s = line.strip()
+        if not s or "(optional" in s.lower() or s.startswith("> ") or s.startswith("Last rotated:"):
+            continue
+        useful.append(line)
+    # Must have content beyond headers
+    has_content = any(not s.startswith("#") for s in [l.strip() for l in useful])
+    if not has_content:
+        return ""
+    block = "\n".join(useful)
+    return """
+
+## SESSION CONTEXT (ephemeral — SELF is authoritative)
+
+The following is ephemeral session context. Use it to refine tone and continuity. If it conflicts with SELF, follow SELF. Do not cite factual content from this section.
+
+""" + block
 
 
 def _library_summary() -> str:
@@ -445,8 +475,12 @@ def get_pending_candidates() -> list[dict]:
     return candidates
 
 
-def update_candidate_status(candidate_id: str, status: str) -> bool:
-    """Update candidate status (approved/rejected) in PENDING-REVIEW.md."""
+def update_candidate_status(
+    candidate_id: str, status: str, rejection_reason: str | None = None
+) -> bool:
+    """Update candidate status (approved/rejected) in PENDING-REVIEW.md.
+    For rejected, optional rejection_reason is stored in PIPELINE-EVENTS for learning.
+    """
     if status not in ("approved", "rejected"):
         return False
     if not PENDING_REVIEW_PATH.exists():
@@ -458,7 +492,8 @@ def update_candidate_status(candidate_id: str, status: str) -> bool:
     if n == 0:
         return False
     PENDING_REVIEW_PATH.write_text(new_content)
-    emit_pipeline_event(status, candidate_id)
+    kwargs = {"rejection_reason": rejection_reason} if status == "rejected" and rejection_reason else {}
+    emit_pipeline_event(status, candidate_id, **kwargs)
     return True
 
 
@@ -511,7 +546,8 @@ def get_response(channel_key: str, user_message: str) -> str:
         logger.warning("Rate limit exceeded (main, %s)", channel_key)
         return "i'm a little tired right now. can we talk more in a bit?"
 
-    messages = [{"role": "system", "content": SYSTEM_PROMPT}] + history
+    system_content = SYSTEM_PROMPT + _load_memory_appendix()
+    messages = [{"role": "system", "content": system_content}] + history
 
     response = _get_client().chat.completions.create(
         model=OPENAI_MODEL,
@@ -588,7 +624,7 @@ def run_grounded_response(
         )
     else:
         excerpt_block = "\nNo relevant record excerpts found for this question."
-    system = SYSTEM_PROMPT + GROUNDED_PROMPT_APPENDIX + excerpt_block
+    system = SYSTEM_PROMPT + _load_memory_appendix() + GROUNDED_PROMPT_APPENDIX + excerpt_block
     messages = [{"role": "system", "content": system}]
     if history:
         for h in history:

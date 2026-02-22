@@ -9,6 +9,7 @@ Usage:
     python scripts/emit_pipeline_event.py applied CANDIDATE-0040 evidence_id=ACT-0014
     python scripts/emit_pipeline_event.py approved CANDIDATE-0039
     python scripts/emit_pipeline_event.py rejected CANDIDATE-0002
+    python scripts/emit_pipeline_event.py rejected CANDIDATE-0045 rejection_reason="too trivial"
 """
 
 import json

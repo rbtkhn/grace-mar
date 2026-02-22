@@ -232,6 +232,7 @@ def telegram_webhook():
 
 @app.route("/")
 def index():
+    """Q&A Mini App — interactive chat with Grace-Mar."""
     return send_from_directory("miniapp", "index.html")
 
 

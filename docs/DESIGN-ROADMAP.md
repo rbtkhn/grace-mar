@@ -120,7 +120,58 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 
 ---
 
-## 8. Dependencies
+## 8. Journal ML — Attestation and Coherence
+
+**Rationale:** A year (or more) of first-person journal entries forms a longitudinal corpus of the fork's linguistic fingerprint. ML over that corpus supports **attestation and coherence** — demonstrating that the fork's voice remained consistent over time, with no drift or contamination.
+
+**Scope:**
+- **Voice model / fine-tuning** — Fine-tune a small model on journal prose to capture vocabulary, syntax, and tone. That model could draft candidate journal entries, suggest completions for partial sentences, or extend her voice to new topics while staying in-character.
+- **Linguistic fingerprint audit** — Quantify the fork's stylometric profile; detect drift from her documented voice, consistency of tone and style over time, misalignment with the Lexile ceiling or documented linguistic style.
+- **Coherence analysis** — Stylometric profiling across entries; flag entries that diverge from the fork's typical voice.
+- **Attestation** — Report or artifact: "Voice remained coherent over [period]." Useful for governance, admissions, or transfer.
+- **Drift detection** — Alert when new entries deviate from the established fingerprint; supports curation quality.
+- **Portable voice profile** — Produce a compact, ML-based representation of her linguistic fingerprint for Intersignal Familiar nodes, tutoring apps, or other platforms that need "her voice" without full Record access.
+
+**Data:** JOURNAL entries (first-person prose, human-approved). Requires sufficient volume (e.g. 6–12 months) for statistical validity.
+
+**See:** [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md) for entry format and linguistic fingerprint role.
+
+---
+
+## 9. Homeschool / Adaptive Curriculum Integration
+
+**Rationale:** Grace-Mar's Voice teaches and tutors. External curriculum systems (homeschool bots, adaptive platforms like Khan, IXL, custom Glide/Zapier stacks) can use the Record as the **identity layer** to personalize lessons and activities. The Record tells the curriculum engine: what the student knows (IX-A), what they're curious about (IX-B), their skills edge (SKILLS), and their Lexile level.
+
+**Scope:**
+- **Record as identity source** — Export a curriculum-oriented view: IX-B (curiosity), SKILLS edge, Lexile, knowledge gaps. Curriculum engines read this to tailor content.
+- **Activity/lesson personalization** — "She's curious about reptiles and gemstones" → suggest crystal formation lab. "She just learned Jupiter's Red Spot" → extend with storm systems.
+- **Grace-Mar Voice does tutoring** — Core tutoring happens in Grace-Mar. Curriculum systems can *supplement* (deliver structured lessons, labs, activities) while Grace-Mar answers questions and explains in-character.
+- **Evidence loop** — Curriculum outputs (writing, photos, completion) flow back via "we did X" → pipeline stages → user approves → EVIDENCE, SELF.
+- **Access needs** — Curriculum export includes `access_needs` (explanation level, dyslexia-friendly font, read speed) for assistive tools (e.g. World Pen Scan).
+- **Assistive tools as signal source** — Reading pens, speech-to-text: vocabulary lookups and "tell me more" curiosity can flow into pipeline as IX-A/IX-B candidates.
+
+**Workspace patterns:** Grace-Mar as sibling to curriculum stack; export `symbolic_identity.json` or a curriculum-specific schema; curriculum engine queries on schedule or at lesson generation.
+
+**See:** [ADAPTIVE-CURRICULUM-INTEGRATION](ADAPTIVE-CURRICULUM-INTEGRATION.md) for full guide.
+
+---
+
+## 10. Learning Path from Record
+
+**Rationale:** Curriculum platforms (SparkPath, Khan, homeschool stacks) use "learning paths" — sequences of lessons. Grace-Mar's Record can *drive* those paths: IX-B (curiosity) + SKILLS edge suggest what to assign next.
+
+**Scope:**
+- **Path generation** — Given `curriculum_profile.json`, generate a suggested sequence: "Curious about reptiles, WRITE edge for narrative → reptile fact sheet (read) → short story prompt (write)." Curriculum engine maps suggestions to its lesson library.
+- **Skills-aware sequencing** — READ edge + curiosity topic → suggest text. WRITE edge + topic → suggest writing prompt. IMAGINE edge → suggest creative task.
+- **Knowledge-avoidance** — IX-A (knowledge) filters out already-learned content; path builds on gaps and stretches at the edge.
+
+**Output:** Suggested path (lesson IDs or descriptors) that a curriculum platform consumes. Grace-Mar does not hold lessons; it holds the identity that *selects* them.
+
+**See:** [ADAPTIVE-CURRICULUM-INTEGRATION](ADAPTIVE-CURRICULUM-INTEGRATION.md) for Record-as-identity pattern.
+
+---
+
+## 11. Dependencies
 
 | Feature | Depends on |
 |---------|------------|
@@ -131,10 +182,13 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 | OpenClaw integration | OpenClaw workspace; export script; OPENCLAW-INTEGRATION workflow |
 | Intersignal / Braid integration | export_hook --target intersignal; INTERSIGNAL-INTEGRATION guide |
 | Canva integration | Canva developer account; Connect API or App SDK; template design |
+| Journal ML (attestation) | 6–12+ months of journal entries; stylometric/ML tooling |
+| Adaptive curriculum integration | export_curriculum; curriculum engine (SparkPath, Glide, Zapier, custom) |
+| Learning path from Record | curriculum_profile.json; path-generation logic (could be script or external) |
 
 ---
 
-## 9. Related Docs
+## 12. Related Docs
 
 | Document | Relevance |
 |----------|-----------|
@@ -143,6 +197,8 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 | [OPENCLAW-INTEGRATION](OPENCLAW-INTEGRATION.md) | Record as identity; session continuity; staging automation; Chinese apps |
 | [INTERSIGNAL-INTEGRATION](INTERSIGNAL-INTEGRATION.md) | Symbolic export; Familiar nodes; Mesh Cache; The Braid |
 | [CANVA-INTEGRATION](CANVA-INTEGRATION.md) | Design APIs; IMAGINE evidence; newsletter layout; template population |
+| [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md) | Entry format; linguistic fingerprint; attestation data source |
+| [ADAPTIVE-CURRICULUM-INTEGRATION](ADAPTIVE-CURRICULUM-INTEGRATION.md) | Record as identity for curriculum engines; homeschool bots |
 | [ARCHITECTURE](ARCHITECTURE.md) | Pipeline, Record structure, gating |
 | [INTEGRATION-APIS](INTEGRATION-APIS.md) | Multi-API context for email + YouTube + others |
 

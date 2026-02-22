@@ -13,20 +13,22 @@ Grace-Mar has two web surfaces:
 
 | Surface | Host | URL | Purpose |
 |---------|------|-----|---------|
-| Dashboard (HTML) | GitHub Pages | `https://<org>.github.io/grace-mar/dashboard/` | Read-only — view profile, pipeline, SKILLS, disclosure |
-| Q&A Mini App | Railway / Render / etc. | `https://grace-mar-qa.railway.app` | Bidirectional — ask Grace-Mar questions, see her voice |
+| Dashboard (HTML) | GitHub Pages | `https://<org>.github.io/grace-mar/` | Read-only — view profile, pipeline, SKILLS, disclosure |
+| Q&A Mini App | Render / Railway | `https://grace-mar.onrender.com/` | Bidirectional — ask Grace-Mar questions, see her voice |
 
-Set `DASHBOARD_MINIAPP_URL` in `bot/.env` to the **Q&A Mini App** URL (not the dashboard). The menu button and `/dashboard` open the Q&A app inside Telegram.
+Dashboard and Q&A are separate deployments. Set `DASHBOARD_MINIAPP_URL` to the **Q&A Mini App** URL (e.g. `https://grace-mar.onrender.com`). The Telegram menu button opens the chat.
 
-## 1. Dashboard (browser-only)
+## 1. Dashboard (browser-only, read-only)
 
-Generate and deploy the static dashboard:
+The dashboard is a **separate deployment** — static HTML on GitHub Pages. It does not run on Render.
+
+Generate and deploy:
 
 ```bash
 python3 scripts/generate_dashboard.py
 ```
 
-Deploy `dashboard/` to GitHub Pages via `.github/workflows/pages.yml`. The dashboard lives at `https://<org>.github.io/grace-mar/dashboard/`. Users open it directly in a browser.
+Push to `main` or run the workflow manually. `.github/workflows/pages.yml` generates the dashboard and deploys `dashboard/` to the `gh-pages` branch. Enable GitHub Pages in the repo (Settings → Pages → Source: Deploy from branch → branch: `gh-pages`, folder: `/ (root)`). The dashboard then lives at `https://<org>.github.io/grace-mar/`.
 
 ## 2. Q&A Mini App (Mini App + API)
 

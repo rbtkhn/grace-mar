@@ -509,6 +509,8 @@ CreationEntry
 
 All activities are stored with full metadata.
 
+**activity_type** may include: `lookup`, `conversation`, `survey`, `art`, `writing`, `teach`. Use `teach` when the child explains or teaches something to the Record (learning-by-teaching; child as instructor of their documented self).
+
 ### Activity Evidence Structure
 
 ```typescript
@@ -518,7 +520,7 @@ interface ActivityEvidence {
   
   // Classification
   pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
-  activity_type: string;
+  activity_type: string;  // e.g. lookup, conversation, survey, art, writing, teach (child explains to Record — learning-by-teaching)
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   
   // Evidence tier

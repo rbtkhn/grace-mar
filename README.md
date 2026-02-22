@@ -6,7 +6,7 @@
 
 The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. It captures who the person is (identity, personality, voice) and what they can do (skills, knowledge, creative capability). Over time, the fork becomes a living cognitive record that can be queried, emulated, and preserved.
 
-The fork grows only through what the user explicitly provides. An optional emulation layer (Telegram and/or WeChat bots) acts as an observation window — a channel through which the user selectively exposes thoughts and information to the fork's awareness.
+The fork grows only through what the user explicitly provides. An optional emulation layer (Telegram and/or WeChat bots) acts as an observation window and teaching/tutoring interface — a channel through which the user selectively exposes thoughts and learns from the fork's voice.
 
 ## Architecture
 
@@ -81,7 +81,9 @@ grace-mar/
 │   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
 │   ├── metrics.py                   # Pipeline health, record completeness
 │   ├── governance_checker.py        # Pre-commit principle violations
-│   └── validate-integrity.py        # Integrity validator
+│   ├── validate-integrity.py        # Integrity validator
+│   ├── session_brief.py             # Session briefing (pending, recent activity, wisdom questions)
+│   └── emit_pipeline_event.py       # Emit pipeline events (applied, rejected with reason)
 ├── integrations/
 │   └── openclaw_hook.py             # Export Record for OpenClaw session continuity
 ├── dashboard/
@@ -126,6 +128,7 @@ grace-mar/
 | [OpenClaw Integration](docs/OPENCLAW-INTEGRATION.md) | Record as identity layer, session continuity |
 | [Design Notes](docs/DESIGN-NOTES.md) | White paper & business proposal input (positioning, agent-web insights) |
 | [AGENTS.md](AGENTS.md) | Guardrails for AI coding assistants |
+| [Rejection Feedback](docs/REJECTION-FEEDBACK.md) | Learning from pipeline rejections |
 | [Portability](docs/PORTABILITY.md) | School transfer, ownership, handoff workflow |
 | [Simple User Interface](docs/SIMPLE-USER-INTERFACE.md) | Chat-based workflow for families (no GitHub) |
 | [Admissions Link Use Case](docs/ADMISSIONS-LINK-USE-CASE.md) | Share link so admissions/employers can chat with applicant's fork |
@@ -138,14 +141,14 @@ grace-mar/
 
 ## Dashboard
 
-Generate an HTML dashboard for the pilot fork (summary, pipeline queue, SKILLS, recent exchanges, benchmarks):
+The dashboard is a **read-only** HTML view (profile, pipeline, SKILLS, benchmarks). Deploy it separately to GitHub Pages via `.github/workflows/pages.yml` (runs on push to `main`). The Q&A chat and Telegram bot run on Render — a different service.
 
 ```bash
-python3 scripts/generate_dashboard.py
+python3 scripts/generate_dashboard.py   # generate locally
 open dashboard/index.html
 ```
 
-The dashboard is **read-only** (browser-only, e.g. GitHub Pages). **Telegram** is bidirectional — the primary channel for conversation with Grace-Mar and pipeline staging. A separate **Q&A Mini App** also provides interactive Q&A; deploy `miniapp_server.py` to Railway/Render and set `DASHBOARD_MINIAPP_URL` in `bot/.env`. See [docs/MINIAPP-SETUP.md](docs/MINIAPP-SETUP.md).
+**Telegram** is bidirectional — the primary channel for conversation and pipeline staging. See [docs/MINIAPP-SETUP.md](docs/MINIAPP-SETUP.md) for full setup.
 
 ## Archive Rotation
 
@@ -228,13 +231,21 @@ python3 scripts/governance_checker.py             # Principle violations (pre-co
 python3 integrations/openclaw_hook.py -u pilot-001 -o ../openclaw/   # OpenClaw export
 ```
 
-## Validation
+## Validation and Session Support
 
-Run the integrity validator to check evidence references, SELF structure, and PENDING-REVIEW format:
+**Integrity audit** — run before merges or nightly via cron:
 
 ```bash
 python scripts/validate-integrity.py
 ```
+
+**Session briefing** — run before a tutoring session for pending count, recent activity, and suggested wisdom questions:
+
+```bash
+python scripts/session_brief.py
+```
+
+**Learning from rejection** — use `/reject CANDIDATE-123 [reason]` in Telegram to capture feedback; see [docs/REJECTION-FEEDBACK.md](docs/REJECTION-FEEDBACK.md).
 
 See [docs/ID-TAXONOMY.md](docs/ID-TAXONOMY.md) for identifier prefixes and relationships.
 

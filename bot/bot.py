@@ -172,6 +172,31 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
         await query.edit_message_text(f"couldn't update {candidate_id}")
 
 
+async def reject_with_reason(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Reject a candidate with optional reason: /reject CANDIDATE-123 [reason].
+    Reason is stored in PIPELINE-EVENTS for learning from rejection."""
+    args = context.args or []
+    if not args:
+        await update.message.reply_text(
+            "Usage: /reject CANDIDATE-123 [optional reason]\n"
+            "Example: /reject CANDIDATE-0045 too trivial"
+        )
+        return
+    candidate_id = args[0]
+    reason = " ".join(args[1:]).strip() if len(args) > 1 else None
+    if not candidate_id.upper().startswith("CANDIDATE-"):
+        await update.message.reply_text(f"Expected CANDIDATE-XXXX, got {candidate_id}")
+        return
+    ok = update_candidate_status(candidate_id, "rejected", rejection_reason=reason)
+    if ok:
+        msg = f"❌ {candidate_id} — rejected"
+        if reason:
+            msg += f" (reason: {reason})"
+        await update.message.reply_text(msg)
+    else:
+        await update.message.reply_text(f"couldn't update {candidate_id} (not pending?)")
+
+
 async def handle_message(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> None:
@@ -241,6 +266,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("dashboard", dashboard))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))
+    app.add_handler(CommandHandler("reject", reject_with_reason))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))

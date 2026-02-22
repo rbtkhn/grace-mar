@@ -30,7 +30,7 @@
 
 **Summary:**
 - The **Record** (fork) = the documented self. Own record, diverging by design. Not emulating the real person.
-- The **Voice** (bot) = the queryable voice of the Record. Observation window and rendered voice: speaks the Record in real-time when the user queries; never speaks unbidden.
+- The **Voice** (bot) = the queryable voice of the Record. Observation window and rendered voice: speaks the Record in real-time when the user queries; never speaks unbidden. **Teaching/tutoring** is one of its functions: the Voice answers questions, explains, and helps the user learn, in-character and at the Record's Lexile level.
 
 ---
 
@@ -39,7 +39,7 @@
 | Component | Location | Role |
 |-----------|----------|------|
 | **The Record** (fork) | Inside the user's mind (their mental model, made explicit and structured). Data: `users/[id]/SELF.md`, SKILLS.md, EVIDENCE.md | The documented self |
-| **The Voice** (bot) | `bot/bot.py` — Telegram interface | Observation window; queryable voice of the Record — responds when queried, never unbidden |
+| **The Voice** (bot) | `bot/bot.py` — Telegram interface | Observation window; queryable voice of the Record; teaching/tutoring (answers, explains, helps learn) — responds when queried, never unbidden |
 | **LLM** | External (OpenAI, etc.) | Generates text; constrained by SYSTEM_PROMPT (Record profile) |
 
 **The Voice is not the Record.** The Voice is the interface through which the user interacts with the Record.

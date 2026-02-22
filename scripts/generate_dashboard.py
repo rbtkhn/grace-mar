@@ -187,26 +187,33 @@ def parse_library(content: str) -> list[dict]:
 
 
 def parse_journal(content: str) -> list[dict]:
-    """Extract JOURNAL entries (date, highlights) from JOURNAL.md. Approved only."""
+    """Extract JOURNAL entries (date, entry) from JOURNAL.md. Approved only. Supports entry (prose) or legacy highlights (bullets)."""
     entries = []
-    # Match each entry block: - date: "..." then highlights: then list items
-    for block in re.findall(
-        r'-\s+date:\s*["\']([^"\']+)["\'].*?highlights:\s*\n(.*?)(?=\n\s+source_ids:|\n\s+approved:|\n  -|\Z)',
+    # Split into entry blocks: - date: "..." ... until next - date: or end
+    blocks = re.findall(
+        r'-\s+date:\s*["\']([^"\']+)["\'](.*?)(?=\n\s+-\s+date:|\Z)',
         content,
         re.DOTALL,
-    ):
-        date_str, highlights_block = block
-        # Skip if approved: false (check in full block)
-        full_match = re.search(
-            rf'date:\s*["\']{re.escape(date_str)}["\'].*?approved:\s*(true|false)',
-            content,
-            re.DOTALL,
-        )
-        if full_match and full_match.group(1) == "false":
+    )
+    for date_str, block in blocks:
+        if re.search(r'approved:\s*false', block):
             continue
-        bullets = re.findall(r'-\s*"([^"]*)"', highlights_block)
-        if bullets:
-            entries.append({"date": date_str, "highlights": bullets})
+        text = None
+        # New format: entry: "..." or entry: |
+        m = re.search(r'entry:\s*["\']((?:[^"\\]|\\.)*)["\']', block)
+        if m:
+            text = m.group(1).replace("\\n", "\n").replace('\\"', '"').strip()
+        if not text:
+            m = re.search(r'entry:\s*\|\s*\n((?:\s+.+\n?)*)', block)
+            if m:
+                text = re.sub(r"^\s+", "", m.group(1)).strip()
+        # Legacy: highlights as bullets
+        if not text:
+            bullets = re.findall(r'-\s*"([^"]*)"', block)
+            if bullets:
+                text = " ".join(bullets)
+        if text:
+            entries.append({"date": date_str, "entry": text})
     return entries
 
 
@@ -398,7 +405,7 @@ def render_html(data: DashboardData) -> str:
     .volume { color: var(--muted); font-weight: normal; font-size: 0.9em; }
     .journal-day { margin-bottom: 0.75rem; }
     .journal-date { font-weight: 600; color: var(--accent); font-size: 0.9rem; margin-bottom: 0.2rem; }
-    .journal-day ul { margin: 0; padding-left: 1.2rem; font-size: 0.9rem; }
+    .journal-day p { margin: 0.25rem 0 0; font-size: 0.9rem; line-height: 1.5; }
     .candidate { padding: 0.25rem 0; font-size: 0.95rem; }
     .exchange { padding: 0.3rem 0; font-size: 0.9rem; border-bottom: 1px solid var(--bg); word-wrap: break-word; overflow-wrap: break-word; }
     .exchange:last-child { border-bottom: none; }
@@ -480,11 +487,18 @@ def render_html(data: DashboardData) -> str:
         else '<li class="meta">—</li>'
     )
 
+    def _journal_entry_html(e: dict) -> str:
+        entry_text = e.get("entry", "")
+        # Preserve paragraphs (double newline) as separate <p>
+        paras = [
+            f'<p>{p.strip()}</p>' for p in entry_text.split("\n\n") if p.strip()
+        ] if entry_text else []
+        if not paras:
+            paras = ['<p class="meta">—</p>']
+        return f'<div class="journal-day"><div class="journal-date">{e["date"]}</div>{"".join(paras)}</div>'
+
     journal_html = "".join(
-        f'<div class="journal-day"><div class="journal-date">{e["date"]}</div><ul>'
-        + "".join(f'<li>{h}</li>' for h in e["highlights"])
-        + '</ul></div>'
-        for e in reversed(data.journal_entries)
+        _journal_entry_html(e) for e in reversed(data.journal_entries)
     ) if data.journal_entries else '<p class="meta">—</p>'
 
     return f"""<!DOCTYPE html>

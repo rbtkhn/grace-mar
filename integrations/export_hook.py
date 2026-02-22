@@ -3,8 +3,9 @@
 Unified export hook for downstream integrations.
 
 Targets:
-  openclaw   — Record → USER.md + manifest (OpenClaw session continuity)
+  openclaw    — Record → USER.md + manifest (OpenClaw session continuity)
   intersignal — Record → symbolic_identity.json + manifest (Familiar nodes, Mesh Cache)
+  curriculum  — Record → curriculum_profile.json (adaptive curriculum engines)
 
 Usage:
     python integrations/export_hook.py --target openclaw --user pilot-001
@@ -66,6 +67,17 @@ def run_export(target: str, output_dir: Path | None, user_id: str = "pilot-001")
         if r2.returncode != 0:
             return r2.returncode
 
+    elif target == "curriculum":
+        cmd = [
+            sys.executable,
+            str(scripts / "export_curriculum.py"),
+            "-u", user_id,
+            "-o", str(out),
+        ]
+        r = subprocess.run(cmd, cwd=REPO_ROOT)
+        if r.returncode != 0:
+            return r.returncode
+
     else:
         print(f"Unknown target: {target}", file=sys.stderr)
         return 1
@@ -79,7 +91,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--target", "-t",
-        choices=["openclaw", "intersignal"],
+        choices=["openclaw", "intersignal", "curriculum"],
         required=True,
         help="Integration target",
     )
