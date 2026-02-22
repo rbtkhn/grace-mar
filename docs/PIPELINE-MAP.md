@@ -160,11 +160,11 @@ Physical artifact (artwork, collage, etc.)
 
 ## Integration Step (File Update Protocol)
 
-When candidates are **approved**, update **all** of:
+When candidates are **approved**, merge into **all** of:
 
 | File | Update |
 |------|--------|
-| `users/[id]/SELF.md` | IX-A, IX-B, IX-C entries |
+| `users/[id]/SELF.md` | IX-A, IX-B, IX-C entries (merged) |
 | `users/[id]/EVIDENCE.md` | New ACT-* in Activity Log |
 | `users/[id]/PENDING-REVIEW.md` | Move candidate to Processed |
 | `users/[id]/SESSION-LOG.md` | Session record |

@@ -632,7 +632,7 @@ The emulation layer (Telegram, WeChat, or other bot adapters) is not where the f
           └─────────────────┘
 ```
 
-The emulation layer enforces a **knowledge boundary**: the fork can only reference what has been explicitly added to its profile. LLM world knowledge must not leak through.
+The emulation layer enforces a **knowledge boundary**: the fork can only reference what has been explicitly merged into its profile. LLM world knowledge must not leak through.
 
 ---
 
@@ -712,7 +712,7 @@ The analyst (automated or manual) detects three categories of signal:
 1. **Signal detection** — Identify profile-relevant information in the input
 2. **Candidate staging** — Write structured candidates to `PENDING-REVIEW.md` with analysis and recommendations
 3. **User review** — User approves, rejects, or modifies each candidate
-4. **Integration** — Approved candidates are written to `SELF.md` (profile), `EVIDENCE.md` (evidence log), `bot/prompt.py` (emulation prompt), and `SESSION-LOG.md` (history)
+4. **Integration** — Approved candidates are merged into `SELF.md` (profile), `EVIDENCE.md` (evidence log), `bot/prompt.py` (emulation prompt), and `SESSION-LOG.md` (history)
 
 ### Candidate Structure
 

@@ -80,6 +80,7 @@ foods: []
 music:
   - Classical music (deep interest — seed gap corrected post-seed)
   - The Nutcracker (Tchaikovsky) — loves the ballet
+favorite_gemstone: diamond  # ARCHIVE insight survey 2026-02-21
 ```
 
 ---
@@ -618,6 +619,26 @@ entries:
     evidence_id: ACT-0015
     curated_by: user
     notes: "Science/educational media engagement at school. Aligns with favorite subject (science) and Earth/science interests."
+
+  - id: CUR-0005
+    date: 2026-02-21
+    topic: "Reptiles — snakes and lizards"
+    trigger: "ARCHIVE insight survey — 'Do you like reptiles?'"
+    response_signal: "A — Yes, a lot"
+    intensity: 4
+    evidence_id: ACT-0017
+    curated_by: user
+    notes: "Reptiles already in IX-A as knowledge (LEARN-0011); survey confirms strong curiosity — IX-B gap filled."
+
+  - id: CUR-0006
+    date: 2026-02-21
+    topic: "Rocks and gemstones"
+    trigger: "ARCHIVE insight survey — 'What do you like best about rocks?'"
+    response_signal: "C — Both (learning about them and how shiny they are)"
+    intensity: 4
+    evidence_id: ACT-0018
+    curated_by: user
+    notes: "Gemstones already in IX-A; survey confirms curiosity — both learning about them and how shiny they are."
 ```
 
 ### IX-C. PERSONALITY (Observed)
@@ -698,6 +719,9 @@ Track what updated SELF and when.
 | 2026-02-20 | Knowledge (LEARN-0024), Curiosity (CUR-0003), Personality (PER-0001) | Pipeline batch 6 | Pharaoh painting — first entry in all three mind channels from a single artifact |
 | 2026-02-21 | Curiosity (CUR-0004), Personality (PER-0002, PER-0003) | Pipeline review queue | Magic School Bus, time-adverbial opener, "and I [verb]" connector — WRITE-0004, CANDIDATE-0046–0048 approved |
 | 2026-02-21 | Knowledge (LEARN-0025) | Pipeline review queue | Black holes — CANDIDATE-0042 approved |
+| 2026-02-21 | Curiosity (CUR-0005) | Pipeline review queue | Reptiles — CANDIDATE-0049 approved |
+| 2026-02-21 | Curiosity (CUR-0006) | Pipeline review queue | Rocks and gemstones — CANDIDATE-0050 approved |
+| 2026-02-21 | Preference (favorite gemstone) | Pipeline review queue | Diamond — CANDIDATE-0051 approved |
 
 ---
 

@@ -22,7 +22,7 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 
 ### 1. Knowledge Boundary — Never Leak LLM Knowledge
 
-The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** add facts, references, or knowledge to the profile or prompt that the user has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork.
+The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the user has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork.
 
 ### 2. Gated Pipeline — Never Commit Without Approval
 
@@ -30,10 +30,10 @@ All profile changes pass through a user-controlled gate:
 
 1. Detect signals (knowledge, curiosity, personality)
 2. Stage candidates in `users/[id]/PENDING-REVIEW.md`
-3. **Wait for user approval** before writing to profile
-4. On approval, update all affected files together (see File Update Protocol below)
+3. **Wait for user approval** before merging into profile
+4. On approval, merge into all affected files together (see File Update Protocol below)
 
-**Never** write directly to SELF.md, EVIDENCE.md, or prompt.py without staging and approval.
+**Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval.
 
 ### 3. The "we" Convention
 
@@ -77,11 +77,11 @@ What "good" looks like for Grace-Mar:
 
 ## File Update Protocol
 
-When pipeline candidates are approved, update **all** of these together:
+When pipeline candidates are approved, **merge** into all of these together:
 
 | File | What to update |
 |------|---------------|
-| `users/[id]/SELF.md` | New entries in IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
+| `users/[id]/SELF.md` | New entries merged into IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
 | `users/[id]/EVIDENCE.md` | New activity log entry (ACT-XXXX) |
 | `users/[id]/PENDING-REVIEW.md` | Move candidates from Candidates to Processed |
 | `users/[id]/SESSION-LOG.md` | New session record |
@@ -90,7 +90,7 @@ When pipeline candidates are approved, update **all** of these together:
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 
-**Provenance on IX entries:** When adding new entries to IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: user` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the user requests it.
+**Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: user` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the user requests it.
 
 ---
 
@@ -121,6 +121,7 @@ grace-mar/
 │   ├── SELF-TEMPLATE.md        # SELF module template
 │   ├── SKILLS-TEMPLATE.md      # SKILLS module template
 │   ├── EVIDENCE-TEMPLATE.md    # EVIDENCE module template
+│   ├── WISDOM-QUESTIONS.md     # Child-tier wisdom elicitation questions (Save Wisdom inspired)
 │   └── ...                     # Supporting docs
 ├── bot/
 │   ├── core.py                 # Shared emulation logic (used by Telegram + WeChat)
@@ -156,13 +157,13 @@ Four prompts, each with a distinct role:
 | `LOOKUP_PROMPT` | Knowledge lookup — rephrases search queries for child-appropriate results |
 | `REPHRASE_PROMPT` | Answer rephrasing — converts search results into the self's voice and vocabulary |
 
-The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality inline. It grows as the fork grows. Apply summarization tiers to manage token count.
+The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality inline. It grows as content is merged into the fork. Apply summarization tiers to manage token count.
 
 ---
 
 ## What Not to Do
 
-- Add knowledge the user didn't provide
+- Merge knowledge the user didn't provide
 - Skip the staging/approval gate
 - Delete or overwrite user data
 - Use "parent" as a system term

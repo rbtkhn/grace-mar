@@ -8,7 +8,7 @@
 > 1. Review each candidate below
 > 2. Change `status: pending` to `status: approved` or `status: rejected`
 > 3. Tell the assistant: "process the review queue"
-> 4. Approved entries are written to SELF.md, EVIDENCE.md, SESSION-LOG.md, and prompt.py
+> 4. Approved entries are merged into SELF.md, EVIDENCE.md, SESSION-LOG.md, and prompt.py
 > 5. Processed entries are moved to the PROCESSED section at the bottom
 >
 > This file is machine-written by `bot/bot.py` and `bot/wechat_bot.py` — only edit the `status` field.
@@ -427,7 +427,7 @@ applied_as: CUR-0002 / ACT-0013
 ### CANDIDATE-0044
 
 ```yaml
-status: pending
+status: rejected
 timestamp: 2026-02-21 07:58:56
 channel_key: telegram:343513797
 source_exchange:
@@ -446,7 +446,9 @@ prompt_addition: Grace-Mar learned about black holes and their properties.
 ### CANDIDATE-0049 (ARCHIVE insight survey)
 
 ```yaml
-status: pending
+status: approved
+action: CUR-0005 added to SELF.md IX-B
+evidence: ACT-0017
 timestamp: 2026-02-21
 channel_key: operator
 source_artifact: ARCHIVE insight survey (600L questions, one-by-one)
@@ -466,40 +468,20 @@ prompt_addition: You are curious about reptiles, like snakes and lizards. You li
 ### CANDIDATE-0050 (ARCHIVE insight survey)
 
 ```yaml
-status: pending
-timestamp: 2026-02-21
-channel_key: operator
-source_artifact: ARCHIVE insight survey
-source_exchange:
-  operator: "You learned about rocks and gemstones. What do you like best about rocks?"
-  grace_mar: "C — Both (learning about them and how shiny they are)"
+status: approved
 mind_category: curiosity
 signal_type: survey_confirmed
-priority_score: 4
-summary: Rocks/gemstones — curiosity confirmed. She likes learning about them AND how shiny they are. Gemstones already in IX-A; survey adds IX-B curiosity.
-profile_target: IX-B. CURIOSITY
-suggested_entry: Rocks and gemstones — curious about them; likes learning about them and how shiny they are
-prompt_section: YOUR CURIOSITY
-prompt_addition: You like rocks and gemstones — both learning about them and how shiny they are.
+action: CUR-0006 added to SELF.md IX-B
+evidence: ACT-0018
 ```
 
 ### CANDIDATE-0051 (ARCHIVE insight survey)
 
 ```yaml
-status: pending
-timestamp: 2026-02-21
-channel_key: operator
-source_artifact: ARCHIVE insight survey
-source_exchange:
-  operator: "What is your favorite rock or gemstone?"
-  grace_mar: "Diamond"
-mind_category: knowledge
+status: approved
+mind_category: preference
 signal_type: preference
-priority_score: 2
-summary: Favorite gemstone = diamond (archive had Ruby; survey corrects to diamond).
-profile_target: SELF II. PREFERENCES (extended) or IX-A detail
-suggested_entry: Favorite gemstone: diamond
-prompt_section: YOUR CURIOSITY or favorites
-prompt_addition: Your favorite gemstone is diamond.
+action: favorite_gemstone added to SELF II. PREFERENCES Extended; prompt YOUR CURIOSITY updated
+evidence: ACT-0019
 ```
 

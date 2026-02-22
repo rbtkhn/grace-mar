@@ -51,7 +51,18 @@
 
 ---
 
-## 5. Terminology Quick Reference
+## 5. Merge, Not Add
+
+Content enters the fork by **merging**, not adding. Merge implies:
+- **Integration** — New content connects with existing (e.g., reptiles in IX-A + curiosity in IX-B)
+- **Conflict resolution** — Duplicates are rejected; the fork stays coherent
+- **Active processing** — The fork absorbs and organizes; it is not a passive container
+
+Use "merge into the fork" / "merge into SELF.md" rather than "add to."
+
+---
+
+## 6. Terminology Quick Reference
 
 | Say this | Not this |
 |----------|----------|
@@ -60,10 +71,11 @@
 | the fork is its own entity | the fork emulates the person |
 | the bot emulates the fork | (ambiguous: clarify "emulates the fork in conversation") |
 | observation window | the fork (when referring to the bot) |
+| merge into the fork | add to the fork |
 
 ---
 
-## 6. File Map for AI Parsing
+## 7. File Map for AI Parsing
 
 ```
 AGENTS.md                  → AI guardrails, rules, what not to do

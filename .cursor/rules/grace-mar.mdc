@@ -18,7 +18,7 @@ Governed by [GRACE-MAR-CORE v2.0](docs/GRACE-MAR-CORE.md). See [ARCHITECTURE](do
 
 The fork lives inside the user's mind — it is their mental model of the self, made explicit and structured. The emulation layer (Telegram at `bot/bot.py`, WeChat at `bot/wechat_bot.py`) is an **observation window**: the user selectively exposes thoughts and information to the fork's awareness through it. The bot is not where the fork lives.
 
-The fork can only reference what has been explicitly added to its profile. **LLM world knowledge must never leak through the emulation.**
+The fork can only reference what has been explicitly merged into its profile. **LLM world knowledge must never leak through the emulation.**
 
 ---
 
@@ -57,11 +57,11 @@ A single artifact can populate all three channels simultaneously.
 1. **Signal detection** — identify profile-relevant information
 2. **Candidate staging** — write to `PENDING-REVIEW.md` with analysis
 3. **User review** — approve, reject, or modify
-4. **Integration** — update SELF.md, EVIDENCE.md, `bot/prompt.py`, SESSION-LOG.md
+4. **Integration** — merge into SELF.md, EVIDENCE.md, `bot/prompt.py`, SESSION-LOG.md
 
 ### File Update Protocol (Integration)
 
-When candidates are approved, update ALL of these together:
+When candidates are approved, merge into ALL of these together:
 - `users/[id]/SELF.md` — profile entries (IX-A, IX-B, IX-C)
 - `users/[id]/EVIDENCE.md` — activity log entry
 - `users/[id]/PENDING-REVIEW.md` — move candidates to Processed
@@ -158,7 +158,7 @@ users/[user-id]/
 ├── EVIDENCE.md              # Raw activities and evidence log
 ├── SESSION-LOG.md           # Interaction history
 ├── PENDING-REVIEW.md        # Pipeline staging (candidates + processed)
-├── GRACE-MAR-BOT-ARCHIVE.md # Telegram bot conversation archive
+├── ARCHIVE.md      # Telegram bot conversation archive
 └── artifacts/               # Raw files (writing samples, artwork)
 ```
 

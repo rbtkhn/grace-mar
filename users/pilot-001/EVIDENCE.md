@@ -970,6 +970,42 @@ activities:
     knowledge_entry: LEARN-0025
     curated_by: user
     evidence_tier: 3
+
+  - id: ACT-0017
+    date: 2026-02-21
+    modality: survey (operator-administered, ARCHIVE insight)
+    activity_type: survey — multiple choice, one-by-one
+    mind_category: curiosity
+    source: ARCHIVE insight survey
+    topic: Reptiles — "Do you like reptiles? Like snakes and lizards?"
+    response: "A — Yes, a lot"
+    curiosity_entry: CUR-0005
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0018
+    date: 2026-02-21
+    modality: survey (operator-administered, ARCHIVE insight)
+    activity_type: survey — multiple choice, one-by-one
+    mind_category: curiosity
+    source: ARCHIVE insight survey
+    topic: Rocks and gemstones — "What do you like best about rocks?"
+    response: "C — Both (learning about them and how shiny they are)"
+    curiosity_entry: CUR-0006
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0019
+    date: 2026-02-21
+    modality: survey (operator-administered, ARCHIVE insight)
+    activity_type: survey — open response
+    mind_category: preference
+    source: ARCHIVE insight survey
+    topic: "What is your favorite rock or gemstone?"
+    response: "Diamond"
+    preference: favorite_gemstone
+    curated_by: user
+    evidence_tier: 3
 ```
 
 ---
@@ -997,7 +1033,7 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 16
+total_activities: 19
 total_read_entries: 0
 total_write_entries: 3
 total_create_entries: 8
@@ -1005,7 +1041,7 @@ total_media_entries: 8
 total_attestations: 0
 last_activity: 2026-02-21
 last_update: 2026-02-21
-update_source: Pipeline review queue — CANDIDATE-0042 (black holes) approved
+update_source: Pipeline review queue — CANDIDATE-0051 (favorite gemstone: diamond) approved
 ```
 
 ---

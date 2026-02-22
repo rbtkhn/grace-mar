@@ -721,6 +721,23 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 **CANDIDATE-0042 (Black holes):** Approved
 
 **CANDIDATE-0043 (Black hole duplicate):** Rejected
+
+**CANDIDATE-0044 (Black holes post-lookup):** Rejected — duplicate of LEARN-0025 (0042)
+
+**CANDIDATE-0049 (Reptiles curiosity):** Approved
+- SELF.md — CUR-0005 added to IX-B Curiosity (reptiles — snakes, lizards)
+- EVIDENCE.md — ACT-0017 added
+- bot/prompt.py — YOUR CURIOSITY updated
+
+**CANDIDATE-0050 (Rocks/gemstones curiosity):** Approved
+- SELF.md — CUR-0006 added to IX-B Curiosity (rocks and gemstones — learning about them and how shiny they are)
+- EVIDENCE.md — ACT-0018 added
+- bot/prompt.py — YOUR CURIOSITY updated
+
+**CANDIDATE-0051 (Favorite gemstone):** Approved
+- SELF.md — favorite_gemstone: diamond added to II. PREFERENCES Extended
+- EVIDENCE.md — ACT-0019 added
+- bot/prompt.py — YOUR CURIOSITY (rocks line) updated with favorite gemstone
 - SELF.md — LEARN-0025 added to IX-A
 - EVIDENCE.md — ACT-0016 added
 - bot/prompt.py — YOUR KNOWLEDGE updated
