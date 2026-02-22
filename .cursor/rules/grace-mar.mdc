@@ -119,7 +119,7 @@ Reference the user's own evidence:
 
 ## Container Edge (CRITICAL)
 
-READ, WRITE, IMAGINE are capability containers.
+READ, WRITE, IMAGINE, BUSINESS are capability containers.
 - **INSIDE**: Use as foundation
 - **AT THE EDGE**: Propose activities here (optimal)
 - **OUTSIDE**: Avoid (too advanced)

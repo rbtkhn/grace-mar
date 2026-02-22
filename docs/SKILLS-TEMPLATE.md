@@ -33,9 +33,9 @@ cog-em observes, records, and infers capability from accumulated evidence.
 
 ---
 
-## II. THE THREE PILLARS
+## II. THE FOUR PILLARS
 
-All skills organize under three fundamental cognitive modes.
+All skills organize under four fundamental cognitive modes. The fourth (BUSINESS) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
 
 ### WRITE (Production)
 
@@ -134,11 +134,38 @@ The user thinks beyond what's given. cog-em captures creative and reasoning capa
 > elaboration (detail level), originality (power choices),
 > interests (superheroes), relationships (who's included).
 
+### BUSINESS (Planning, Execution, Exchange)
+
+The user engages in planning, execution, or exchange. cog-em captures business-relevant capability. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
+
+**Activities:**
+- Lemonade stand, crafts sale, bake sale
+- School project with P&L (e.g., Airbnb, food truck)
+- Content creation with audience (YouTube, blog)
+- Allowance management, budgeting
+- "We did X" involving planning, delivery, or exchange
+- Any artifact showing goals, timelines, customer feedback, or financial outcome
+
+**What cog-em captures:**
+- Planning (goals, timelines, milestones)
+- Execution (follow-through, deliverables)
+- Customer/audience (who to serve, feedback received)
+- Financial (basic money concepts, profit/loss, budgeting)
+- Collaboration (teamwork, delegation, roles)
+- Marketing (telling your story, reach)
+- Decision-making (trade-offs, prioritization, saying no)
+
+**Example activity:**
+> Student participates in class food truck project. "We did X" + artifact (business plan, P&L).
+> cog-em captures: planning level, execution follow-through, financial understanding, teamwork.
+
+**Integration with zero-human business vision:** BUSINESS pillar grows from evidence; when sufficient, the Record (including BUSINESS) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the pillar reflects demonstrated capability, not aspiration.
+
 ---
 
 ## III. PILLAR INTERACTIONS
 
-The three pillars are not isolated. Most activities engage multiple pillars.
+The four pillars are not isolated. Most activities engage multiple pillars.
 
 | Activity | Primary | Secondary |
 |----------|---------|-----------|
@@ -149,6 +176,10 @@ The three pillars are not isolated. Most activities engage multiple pillars.
 | Ask "what if" about a story | IMAGINE | READ |
 | Journal about the day | WRITE | — |
 | Follow instructions to build | READ | IMAGINE |
+| Run a lemonade stand | BUSINESS | WRITE |
+| Class food truck project | BUSINESS | READ |
+| Create content for audience | BUSINESS | WRITE |
+| Manage allowance, budget | BUSINESS | — |
 
 **Tagging rule:** Tag primary pillar; optionally tag secondary.
 Evidence accrues to tagged pillars.
@@ -206,7 +237,7 @@ Characteristics:
 ## III. CAPABILITY CLAIMS
 
 Capability Claims are formal statements about what the user can do,
-derived from accumulated activity evidence across the three pillars.
+derived from accumulated activity evidence across the four pillars.
 
 Analogous to CMC's Recursive Learning Ledger (RLL).
 
@@ -215,7 +246,7 @@ Analogous to CMC's Recursive Learning Ledger (RLL).
 ```typescript
 interface CapabilityClaim {
   id: string;                    // CAP-WRITE-VOC-001
-  pillar: 'WRITE' | 'READ' | 'IMAGINE';
+  pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
   dimension: string;             // "vocabulary", "comprehension", "originality"
   statement: string;             // "Uses age-appropriate vocabulary with variety"
   
@@ -264,6 +295,14 @@ Dimension: originality
 Statement: Generates novel combinations (e.g., "dinosaur astronaut")
 Level: 2
 Evidence: 23 creative play sessions
+Status: emerging
+
+CAP-BUSINESS-PLAN-001
+Pillar: BUSINESS
+Dimension: planning
+Statement: Can set goals and track milestones (e.g., food truck project)
+Level: 1
+Evidence: 1 group project, "we did X" + artifact
 Status: emerging
 ```
 
@@ -473,11 +512,11 @@ METADATA:
 - Device: [iPad/phone/computer]
 
 ACTIVITY TYPE:
-[journal | story | summary | question | conversation | creative | artwork | building | problem]
+[journal | story | summary | question | conversation | creative | artwork | building | problem | business | project]
 
 PILLAR TAGS:
-- Primary: [WRITE | READ | IMAGINE]
-- Secondary: [WRITE | READ | IMAGINE | none]
+- Primary: [WRITE | READ | IMAGINE | BUSINESS]
+- Secondary: [WRITE | READ | IMAGINE | BUSINESS | none]
 
 CONTENT:
 [Full text, transcript, image file, or description of activity content]
@@ -512,6 +551,13 @@ If IMAGINE (image/artwork):
 - Technique: [developmental observations]
 - Colors/mood: [emotional expression]
 - Student description: [what they say about it]
+
+If BUSINESS:
+- Planning: [goals, timelines, milestones evidenced]
+- Execution: [follow-through, deliverables]
+- Financial: [P&L, budgeting, money concepts]
+- Collaboration: [teamwork, roles, delegation]
+- Artifact: [business plan, sales record, feedback, etc.]
 
 SELF OBSERVATIONS (always):
 - Linguistic markers: [notable phrases, vocabulary]
@@ -626,7 +672,7 @@ VERIFICATION FLAGS:
 
 ## VII. PILLAR STRUCTURE
 
-Skills organize under the three pillars, with sub-dimensions.
+Skills organize under the four pillars, with sub-dimensions.
 
 ### Structure
 
@@ -650,20 +696,29 @@ SKILLS/
 │   ├── velocity/             # Speed, volume
 │   └── content_log/          # What they've read
 │
-└── IMAGINE/
-    ├── originality/          # Novel ideas, combinations
-    ├── reasoning/            # Logical steps, if-then
-    ├── patterns/             # Connections, analogies
-    ├── flexibility/          # Adapting to constraints
-    ├── elaboration/          # Detail, richness
-    ├── risk/                 # Safe vs wild ideas
-    └── persistence/          # Sticking with hard problems
+├── IMAGINE/
+│   ├── originality/          # Novel ideas, combinations
+│   ├── reasoning/            # Logical steps, if-then
+│   ├── patterns/             # Connections, analogies
+│   ├── flexibility/          # Adapting to constraints
+│   ├── elaboration/          # Detail, richness
+│   ├── risk/                 # Safe vs wild ideas
+│   └── persistence/          # Sticking with hard problems
+│
+└── BUSINESS/
+    ├── planning/             # Goals, timelines, milestones
+    ├── execution/            # Follow-through, deliverables
+    ├── customer_audience/    # Who to serve, feedback
+    ├── financial/            # Money concepts, P&L, budgeting
+    ├── collaboration/        # Teamwork, delegation, roles
+    ├── marketing/            # Telling your story, reach
+    └── decision_making/      # Trade-offs, prioritization
 ```
 
 ### Subject Knowledge
 
 Traditional subjects (math, science, history) are NOT separate pillars.
-They are CONTEXTS where READ/WRITE/IMAGINE are applied.
+They are CONTEXTS where READ/WRITE/IMAGINE/BUSINESS are applied.
 
 **Example: Math**
 - READ: Understands math concepts, can interpret problems
@@ -675,7 +730,7 @@ They are CONTEXTS where READ/WRITE/IMAGINE are applied.
 - WRITE: Can explain historical cause/effect
 - IMAGINE: Can reason about counterfactuals ("what if...")
 
-Subject knowledge emerges from evidence across all three pillars.
+Subject knowledge emerges from evidence across all four pillars. BUSINESS starts from zero; no evidence = no claims.
 
 ---
 
@@ -788,7 +843,7 @@ Later learning does not modify snapshots.
 
 ## XI. CONTAINER EDGE TEACHING
 
-The three pillars are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE.
+The four pillars are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE. BUSINESS container starts empty until evidence enters through the pipeline.
 
 ### Container State
 
@@ -861,6 +916,10 @@ How evaluators interact with the SKILLS module.
 **IMAGINE capability:**
 > "How creative/original is [user]?"
 > Returns: Levels across originality, reasoning, flexibility, elaboration
+
+**BUSINESS capability:**
+> "What business/planning capability does [user] have?"
+> Returns: Levels across planning, execution, financial, collaboration (or "no evidence yet" if container empty)
 
 ### Cross-Pillar Queries
 
@@ -985,6 +1044,12 @@ READ Activity: Finished "Charlotte's Web" (2nd read)
 - Creative content → interests (what they explore)
 - Problem-solving approach → reasoning_patterns
 - Risk-taking in ideas → personality.traits
+
+### BUSINESS → SELF
+
+- Planning/collaboration style → reasoning_patterns
+- Financial/values signals → values (if evidenced)
+- Execution approach → personality (e.g., follow-through)
 
 ### Key Insight
 

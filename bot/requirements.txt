@@ -4,3 +4,4 @@ cryptography>=41.0
 flask>=3.0
 openai>=1.0
 python-dotenv>=1.0
+textstat>=0.7  # optional: for measure_uniqueness readability

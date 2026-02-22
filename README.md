@@ -15,7 +15,7 @@ Two core modules define the fork:
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
-| **SKILLS** | READ, WRITE, IMAGINE capability containers | What they CAN DO |
+| **SKILLS** | READ, WRITE, IMAGINE, BUSINESS capability containers | What they CAN DO |
 
 Post-seed growth is organized into a **three-channel mind model**:
 
@@ -112,7 +112,11 @@ grace-mar/
 |----------|---------|
 | [GRACE-MAR-CORE](docs/GRACE-MAR-CORE.md) | Canonical governance — absolute authority |
 | [Architecture](docs/ARCHITECTURE.md) | Full system design including observation window, pipeline, mind model |
+| [Design Notes](docs/DESIGN-NOTES.md) | White paper & business proposal input (positioning, agent-web insights) |
 | [AGENTS.md](AGENTS.md) | Guardrails for AI coding assistants |
+| [Portability](docs/PORTABILITY.md) | School transfer, ownership, handoff workflow |
+| [Simple User Interface](docs/SIMPLE-USER-INTERFACE.md) | Chat-based workflow for families (no GitHub) |
+| [Admissions Link Use Case](docs/ADMISSIONS-LINK-USE-CASE.md) | Share link so admissions/employers can chat with applicant's fork |
 | [Concept](docs/CONCEPT.md) | Full concept explanation |
 | [Pilot Plan](docs/PILOT-PLAN.md) | Two-month pilot structure |
 
@@ -137,6 +141,12 @@ python scripts/rotate_telegram_archive.py --apply  # Perform rotation
 ```
 
 Rotated content goes to `users/pilot-001/archives/ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
+
+## Portability (school transfer)
+
+The Record is user-owned. When changing schools, the user brings their Record. See [Portability](docs/PORTABILITY.md) for the transfer workflow, checklist, and handoff format.
+
+---
 
 ## Fork attestation and export
 

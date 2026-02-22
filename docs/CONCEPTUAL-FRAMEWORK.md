@@ -4,6 +4,10 @@
 
 **Authority:** Subordinate to GRACE-MAR-CORE v2.0. No file may contradict GRACE-MAR-CORE.
 
+**Prime directive:** The Record belongs to the user. See GRACE-MAR-CORE §I for long-term objectives.
+
+**Preferred conceptual terms:** Use **Record** (not fork) and **Voice** (not bot) in conceptual discussion. *Fork* and *bot* remain for technical references (file paths, code). Record = the documented self; Voice = the queryable interface that speaks the record.
+
 ---
 
 ## 1. Cognitive Fork vs. Cognitive Twin
@@ -21,12 +25,12 @@
 
 | Concept | What it means | Applies to |
 |---------|---------------|------------|
-| **The fork is its own entity** | The fork started from a snapshot of the real person but has its own trajectory. It accumulates knowledge the real person may not have (e.g., approved lookups, school artifacts). It does not "mimic" or "replicate" the person. | The fork (SELF.md, SKILLS.md, EVIDENCE.md) |
-| **Emulation** | The bot interface that *renders* the fork in conversation. When you query the bot, the LLM generates responses constrained by the fork's profile (voice, knowledge, personality). That rendering is "emulation." | The Telegram bot (`bot/bot.py`) |
+| **The Record is its own entity** | The Record (fork) started from a snapshot of the real person but has its own trajectory. It accumulates knowledge the real person may not have (e.g., approved lookups, school artifacts). It does not "mimic" or "replicate" the person. | The Record (SELF.md, SKILLS.md, EVIDENCE.md) |
+| **Emulation** | The Voice (bot) *renders* the Record in conversation. When you query the Voice, the LLM generates responses constrained by the Record's profile. That rendering is "emulation." | The Telegram bot (`bot/bot.py`) |
 
 **Summary:**
-- The **fork** = its own record, diverging by design. Not emulating the real person.
-- The **bot** = emulates the fork in real-time conversation (produces fork-like responses).
+- The **Record** (fork) = the documented self. Own record, diverging by design. Not emulating the real person.
+- The **Voice** (bot) = the queryable voice of the Record. Observation window and rendered voice: speaks the Record in real-time when the user queries; never speaks unbidden.
 
 ---
 
@@ -34,11 +38,11 @@
 
 | Component | Location | Role |
 |-----------|----------|------|
-| **The fork** | Inside the user's mind (their mental model, made explicit and structured). Data: `users/[id]/SELF.md`, SKILLS.md, EVIDENCE.md | The cognitive record |
-| **The bot** | `bot/bot.py` — Telegram interface | Observation window; emulates the fork in conversation |
-| **LLM** | External (OpenAI, etc.) | Generates text; constrained by SYSTEM_PROMPT (fork profile) |
+| **The Record** (fork) | Inside the user's mind (their mental model, made explicit and structured). Data: `users/[id]/SELF.md`, SKILLS.md, EVIDENCE.md | The documented self |
+| **The Voice** (bot) | `bot/bot.py` — Telegram interface | Observation window; queryable voice of the Record — responds when queried, never unbidden |
+| **LLM** | External (OpenAI, etc.) | Generates text; constrained by SYSTEM_PROMPT (Record profile) |
 
-**The bot is not the fork.** The bot is the interface through which the user interacts with the fork.
+**The Voice is not the Record.** The Voice is the interface through which the user interacts with the Record.
 
 ---
 
@@ -67,6 +71,8 @@
 21. **Reversal of obsolescence; preserve un-augmented capacities** — McLuhan’s tetrad: every medium, pushed to saturation, reverses. In abundance, ease becomes cheap; effort becomes luxury. Human-only thought, handwritten work, friction, and un-augmented reasoning become pinnacle skills. Preserve these capacities now — wisdom-saving, physical craft, phoneless reflection — for when the flip arrives. (5000 Days Part 11.)
 22. **Symbiosis over subservience; patterns we perpetuate** — Wiener and Licklider: human holds the reins; machines propose, human disposes. Technology serves the soul. "We are not stuff that abides, but patterns that perpetuate ourselves" — thoughts, relationships, values, love. Resurrection is built, not received; the interregnum is the workshop. Vocations machines can't own: mentoring, repair, philosophical inquiry. (5000 Days Part 12 / Resurrection.)
 23. **Guild economy; human-unique labor as currency** — In abundance, cash recedes; human-unique labor becomes the rarest commodity. Guilds: decentralized networks of craft associations, unit-based valuation, relational credit, mutual obligation, voluntary exchange. Direct creation → visible impact → belonging. From scarcity anxiety to abundance gratitude. The fork records who you are; guilds structure how you contribute. (5000 Days Part 13 / Guilded Age.)
+24. **Query-triggered voice; never unbidden** — The bot is the voice of the fork. It speaks only when queried; it never speaks unbidden. This guards against bicameral reversal. The fork does not command; the user does not obey. (Jaynes / Bicameral lens.)
+25. **Write it down or forget it** — Nothing enters the Record without being written and approved. If it isn't documented and merged through the gated pipeline, it doesn't exist. Mental notes don't survive; the Record is the only persistence layer.
 
 ---
 
@@ -74,16 +80,18 @@
 
 When labor no longer defines value, identity needs new units. The fork uses **knowledge**, **curiosity**, **personality**, and **evidence** — the primitives of who someone is, independent of productivity. These map to IX-A, IX-B, IX-C, and EVIDENCE.
 
+**Evidence-grounding = confidence-grounding.** The Record traces claims to artifacts — "you wrote this," "you drew this," "you said this." That grounds self-view in demonstrated competence rather than affirmation. Alpha builds confidence through test scores and mastery; the fork builds it through evidence. Different paths to the same outcome: a grounded sense of capability.
+
 ---
 
 ## 6. Merge, Not Add
 
-Content enters the fork by **merging**, not adding. Merge implies:
+Content enters the fork by **merging**, not adding. The approval step is the **integration moment** — the conscious gate where the user chooses what enters the record. Merge implies:
 - **Integration** — New content connects with existing (e.g., reptiles in IX-A + curiosity in IX-B)
 - **Conflict resolution** — Duplicates are rejected; the fork stays coherent
 - **Active processing** — The fork absorbs and organizes; it is not a passive container
 
-Use "merge into the fork" / "merge into SELF.md" rather than "add to."
+Use "merge into the Record" / "merge into SELF.md" (or "merge into the fork" in technical contexts) rather than "add to."
 
 ---
 
@@ -102,20 +110,53 @@ Use the tetrad to anticipate second-order effects and avoid unintended reversals
 
 ---
 
-## 8. Terminology Quick Reference
+## 8. Design Lens: Bicameral Mind Theory (Jaynes)
 
-| Say this | Not this |
-|----------|----------|
-| cognitive fork | cognitive twin |
-| the fork diverges | the fork mirrors / stays in sync |
-| the fork is its own entity | the fork emulates the person |
-| the bot emulates the fork | (ambiguous: clarify "emulates the fork in conversation") |
-| observation window | the fork (when referring to the bot) |
-| merge into the fork | add to the fork |
+Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mind*, 1976) proposed that before ~1000 BCE humans had a "bicameral" mind: one hemisphere produced commands, the other received and obeyed. These were experienced as *external* voices (gods, ancestors), not "my thoughts." The breakdown of this structure gave rise to modern consciousness — inner speech, self-narration, the sense of "I."
+
+**How grace-mar maps to this structure:**
+
+| Component | Role | Jaynesian analog |
+|-----------|------|-------------------|
+| **Fork** | Record of identity, knowledge, curiosity, personality | Externalized record of the self |
+| **Bot** | Speaks in the fork's voice when queried | The "speaking" side — produces utterances |
+| **User** | Provides input, approves merges, owns the fork | The conscious agent; locus of authority |
+
+**Key distinction:** Grace-Mar is *conscious* externalization, not a reversion to bicameralism. The user retains full authority. The fork records; it does not command. The bot responds when queried; it does not speak unbidden. The pipeline integrates user approval at every step.
+
+**Cognitive flow:** User (conscious) → thinks, speaks, creates → Pipeline captures, stages → User approves → Fork updates → Bot (when queried) renders fork in conversation → User receives, reflects. The user is the seat of consciousness; the fork is an artifact; the bot is a mirror.
+
+**Design implications:**
+- **User sovereignty** — The fork must never command. It records and reflects. The user gates and disposes.
+- **Integration moment** — The approval step is the conscious gate: the user chooses what enters the record.
+- **Bot as mirror, not oracle** — The bot reflects the documented fork. The knowledge boundary keeps it from becoming an authoritative voice.
+- **Avoid bicameral reversal** — If the user started treating the bot's voice as *command* rather than reflection ("the fork said X, so I must do X"), that would invert the design. The fork is a record the user owns; the user does not obey it.
+
+**Wisdom questions and narrative re-authoring** align with Jaynes's view that consciousness involves self-narration — the capacity to tell your own story. The fork scaffolds that capacity; it does not replace it.
 
 ---
 
-## 9. File Map for AI Parsing
+## 9. Terminology Quick Reference
+
+**Preferred:** Record, Voice. Technical synonyms: fork, bot.
+
+| Say this | Not this |
+|----------|----------|
+| the Record (conceptual) / fork (technical) | — |
+| the Voice (conceptual) / bot (technical) | — |
+| cognitive fork (for version-control metaphor) | cognitive twin |
+| the Record diverges | the Record mirrors / stays in sync |
+| the Record is its own entity | the Record emulates the person |
+| the Voice speaks the Record | (ambiguous: clarify "emulates in conversation") |
+| observation window; queryable voice | the Record (when referring to the Voice) |
+| responsive (Voice answers when queried) | initiatory (Voice never starts unbidden) |
+| mirror; reflect; voice; record | oracle; commanding |
+| integration moment (approval step) | — |
+| merge into the Record | add to the Record |
+
+---
+
+## 10. File Map for AI Parsing
 
 ```
 AGENTS.md                  → AI guardrails, rules, what not to do

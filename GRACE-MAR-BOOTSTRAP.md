@@ -7,14 +7,23 @@ Use this file to initiate or continue work on GRACE-MAR in any Cursor conversati
 
 ## QUICK START
 
-**Before starting:** Review the last SESSION-LOG entry and PENDING-REVIEW status so you can pick up where you left off. Session continuity supports the feedback loop — sustained direction over time, not one-shot processing.
+**Session continuity checklist (read first, before any action):**
+1. Read last SESSION-LOG entry
+2. Check PENDING-REVIEW status (any candidates?)
+3. Skim last 1–2 EVIDENCE entries for recent context
+
+Session continuity supports the feedback loop — sustained direction over time, not one-shot processing.
+
+**If using OpenClaw (shared workspace):** See `docs/OPENCLAW-INTEGRATION.md`. Export Record for identity: `python scripts/export_user_identity.py -u pilot-001 -o USER.md`.
 
 When this file is loaded at the start of a conversation, present the user with multiple choice options:
 
 1. **Run session** — Load pilot-001 files, follow `.cursor/rules/grace-mar.mdc`
 2. **Continue development** — Proceed with a task (user specifies)
 3. **Review status** — Summarize current phase, next steps, recent changes
-4. **Other** — User describes what they need
+4. **OpenClaw / shared workspace** — Session continuity across grace-mar + OpenClaw; see `docs/OPENCLAW-INTEGRATION.md`
+5. **Transfer / handoff** — School transfer, export Record for new school; see `docs/PORTABILITY.md`
+6. **Other** — User describes what they need
 
 Wait for the user to choose before proceeding.
 
@@ -69,17 +78,18 @@ There is no parent mode and no child mode. There is one user. A parent helps whe
 
 **SELF** — Accurate record of identity. Evolves slowly. Observed from interaction.
 
-**SKILLS** — Three pillars (READ, WRITE, IMAGINE) that grow through activity. Each pillar is a "container" with an edge where optimal activities are proposed.
+**SKILLS** — Four pillars (READ, WRITE, IMAGINE, BUSINESS) that grow through activity. Each pillar is a "container" with an edge where optimal activities are proposed. BUSINESS starts from zero.
 
 ---
 
-## THREE PILLARS OF SKILLS
+## FOUR PILLARS OF SKILLS
 
 | Pillar | What it captures | Example activities |
 |--------|------------------|-------------------|
 | **READ** | Comprehension, vocabulary, knowledge intake | Books read, articles, discussions |
 | **WRITE** | Expression, linguistic production | Journals, stories, messages |
 | **IMAGINE** | Creation, synthesis, exploration | Drawings, inventions, scenarios |
+| **BUSINESS** | Planning, execution, exchange | Lemonade stand, projects with P&L, content for audience |
 
 ---
 
@@ -166,6 +176,12 @@ grace-mar/
 ├── docs/
 │   ├── GRACE-MAR-CORE.md     # CANONICAL governance (v2.0)
 │   ├── CONCEPTUAL-FRAMEWORK.md  # Fork vs. twin, emulation, terminology (AI parsing)
+│   ├── OPENCLAW-INTEGRATION.md  # OpenClaw integration (Record as identity, session continuity, staging)
+│   ├── PORTABILITY.md           # School transfer, ownership, handoff workflow
+│   ├── SIMPLE-USER-INTERFACE.md # Chat workflow for families (no GitHub)
+│   ├── ADMISSIONS-LINK-USE-CASE.md # Share link for admissions/employers to chat with fork
+│   ├── DESIGN-NOTES.md       # White paper & business proposal input (positioning, insights)
+│   ├── MARKET-RESEARCH-ALPHA-KHAN.md  # Alpha alternatives, Khan Academy, cost comparison
 │   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
 │   ├── ARCHITECTURE.md       # Module design
 │   ├── SELF-TEMPLATE.md      # SELF module governance
@@ -174,6 +190,9 @@ grace-mar/
 │   ├── CONCEPT.md            # Full concept explanation
 │   ├── PILOT-PLAN.md         # Pilot structure
 │   └── ...                   # Supporting docs
+├── scripts/
+│   ├── export_fork.py        # Full fork export (JSON)
+│   └── export_user_identity.py  # Record → USER.md / SOUL.md for OpenClaw
 └── users/
     └── pilot-001/            # First pilot user (age 6)
         ├── SELF.md           # Identity record (seeded)
@@ -190,7 +209,7 @@ grace-mar/
 **Completed:**
 - [x] Core concept defined (fork model, v2.0)
 - [x] Two-module architecture (SELF + SKILLS)
-- [x] Three pillars (READ, WRITE, IMAGINE)
+- [x] Four pillars (READ, WRITE, IMAGINE, BUSINESS)
 - [x] GRACE-MAR-CORE governance document (v2.0)
 - [x] All templates created (v2.0)
 - [x] Pilot user directory structure

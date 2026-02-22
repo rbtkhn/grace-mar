@@ -124,15 +124,16 @@ History is always preserved. Changes do not overwrite.
 
 Contains what the user CAN DO — capabilities that grow through authentic activity.
 
-### The Three Pillars
+### The Four Pillars
 
-Skills organize under three fundamental cognitive modes:
+Skills organize under four fundamental cognitive modes. The fourth (BUSINESS) starts from zero and grows with experience through the pipeline (human-gated).
 
 | Pillar | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
 | **READ** | Intake, comprehension | Books read, summaries, interpretations |
 | **IMAGINE** | Creation, exploration | Creative play, hypotheticals, artwork, problem-solving |
+| **BUSINESS** | Planning, execution, exchange | Lemonade stand, projects with P&L, content with audience, budgeting |
 
 ### Structure
 
@@ -151,11 +152,17 @@ SKILLS/
 │   ├── vocabulary/       # Words acquired
 │   └── interests/        # What they choose
 │
-└── IMAGINE/
-    ├── originality/      # Novel ideas
-    ├── reasoning/        # Logical chains
-    ├── flexibility/      # Adapting to constraints
-    └── elaboration/      # Detail, richness
+├── IMAGINE/
+│   ├── originality/      # Novel ideas
+│   ├── reasoning/        # Logical chains
+│   ├── flexibility/      # Adapting to constraints
+│   └── elaboration/      # Detail, richness
+│
+└── BUSINESS/
+    ├── planning/         # Goals, timelines, milestones
+    ├── execution/        # Follow-through, deliverables
+    ├── financial/        # Money concepts, P&L, budgeting
+    └── collaboration/    # Teamwork, delegation
 ```
 
 ### Activity-Based Growth
@@ -173,7 +180,7 @@ Activity: Daily journal entry (WRITE)
 ### Characteristics
 
 - **Activity-driven**: Grows from authentic production, not explicit teaching
-- **Pillar-organized**: WRITE, READ, IMAGINE as primary structure
+- **Pillar-organized**: WRITE, READ, IMAGINE, BUSINESS as primary structure
 - **Dimension-tracked**: Each pillar has measurable sub-dimensions
 - **Level-based**: 5 developmental levels per dimension
 - **Evidence-linked**: Every claim traces to captured activities
@@ -278,7 +285,7 @@ The system should:
 
 ## Container Edge Principle
 
-The three SKILLS pillars (READ, WRITE, IMAGINE) are **containers** that define what the user currently knows and can do. The system proposes activities at the **edge** of these containers.
+The four SKILLS pillars (READ, WRITE, IMAGINE, BUSINESS) are **containers** that define what the user currently knows and can do. The system proposes activities at the **edge** of these containers.
 
 ### The Container Model
 
@@ -473,8 +480,8 @@ interface Activity {
   duration_minutes: number;
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   activity_type: string;
-  pillar_primary: 'WRITE' | 'READ' | 'IMAGINE';
-  pillar_secondary?: 'WRITE' | 'READ' | 'IMAGINE';
+  pillar_primary: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
+  pillar_secondary?: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
   
   content: {
     text?: string;
@@ -506,7 +513,7 @@ interface Activity {
 
 interface CapabilityClaim {
   id: string;
-  pillar: 'WRITE' | 'READ' | 'IMAGINE';
+  pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
   dimension: string;
   statement: string;
   level: 1 | 2 | 3 | 4 | 5;
@@ -533,7 +540,7 @@ interface CapabilityClaim {
 - User-controlled access at all ages
 
 ### SKILLS (Sensitive)
-- Contains capability data across READ/WRITE/IMAGINE
+- Contains capability data across READ/WRITE/IMAGINE/BUSINESS
 - Can be shared for credential purposes
 - Pillar-limited access possible
 

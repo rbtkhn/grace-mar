@@ -15,7 +15,7 @@ Last Update: February 2026
 This template governs how evidence is stored, organized, and weighted.
 
 Evidence includes:
-- Activities (WRITE, READ, IMAGINE)
+- Activities (WRITE, READ, IMAGINE, BUSINESS)
 - Content consumed (reading list, media)
 - External attestations (parent, teacher)
 - Assessments and verifications
@@ -517,7 +517,7 @@ interface ActivityEvidence {
   date: Date;
   
   // Classification
-  pillar: 'WRITE' | 'READ' | 'IMAGINE';
+  pillar: 'WRITE' | 'READ' | 'IMAGINE' | 'BUSINESS';
   activity_type: string;
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   

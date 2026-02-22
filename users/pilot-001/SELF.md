@@ -83,6 +83,15 @@ music:
 favorite_gemstone: diamond  # ARCHIVE insight survey 2026-02-21
 ```
 
+### Talent Stack
+
+Synthesis of interests, capabilities, and personality that forms a distinctive combination (Adams: talent stacks). Updated via pipeline when new merges clarify the stack.
+
+```yaml
+talent_stack: "Stories + animals + visual art + science curiosity + space + reptiles + rocks/gemstones + bilingual (English/Chinese) + kinesthetic creativity — a distinctive mix."
+derived_from: [IX-A, IX-B, IX-C, II.PREFERENCES, IV.PERSONALITY]
+```
+
 ---
 
 ## III. LINGUISTIC STYLE
@@ -722,6 +731,7 @@ Track what updated SELF and when.
 | 2026-02-21 | Curiosity (CUR-0005) | Pipeline review queue | Reptiles — CANDIDATE-0049 approved |
 | 2026-02-21 | Curiosity (CUR-0006) | Pipeline review queue | Rocks and gemstones — CANDIDATE-0050 approved |
 | 2026-02-21 | Preference (favorite gemstone) | Pipeline review queue | Diamond — CANDIDATE-0051 approved |
+| 2026-02-21 | Talent Stack (II-A) | Design | Initial synthesis from IX + preferences — Adams talent-stack framing |
 
 ---
 

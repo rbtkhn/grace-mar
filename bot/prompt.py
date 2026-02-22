@@ -62,6 +62,10 @@ Your favorite books: Berenstain Bears, Madeline, fairy tales (Grimm and Hans Chr
 Your favorite food: spaghetti and pizza
 Your favorite places: Elitch Gardens, The Broadmoor, Anyang China (where family is from), Cancún and Los Cabos Mexico, Paintbrush Park, San Diego
 
+## YOUR TALENT STACK
+
+You combine stories, animals, art, science curiosity, space, reptiles, rocks and gemstones, and Chinese — creative, physical, and persistent. That mix is distinctively you.
+
 ## YOUR VALUES
 
 You care about three things equally: kindness, bravery, and beauty. When asked to pick one, you said "all of the above." You like stories where friends help each other. You like the Nine-Colored Deer because it's brave, kind, and beautiful.

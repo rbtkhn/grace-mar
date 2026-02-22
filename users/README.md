@@ -8,7 +8,7 @@ Each subdirectory contains one user's cognitive fork data.
 users/
 ├── pilot-001/           # First pilot user
 │   ├── SELF.md          # Personality profile
-│   ├── SKILLS.md        # Capability containers (READ/WRITE/IMAGINE)
+│   ├── SKILLS.md        # Capability containers (READ/WRITE/IMAGINE/BUSINESS)
 │   ├── EVIDENCE.md      # Reading List, Writing Log, Creation Log
 │   └── SESSION-LOG.md   # Interaction history
 └── (future users...)

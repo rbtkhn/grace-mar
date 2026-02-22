@@ -25,6 +25,7 @@ from telegram import (
 )
 from telegram.ext import (
     Application,
+    CallbackQueryHandler,
     CommandHandler,
     MessageHandler,
     filters,
@@ -37,6 +38,8 @@ from core import (
     reset_conversation,
     get_greeting,
     get_reset_message,
+    get_pending_candidates,
+    update_candidate_status,
 )
 
 load_dotenv()
@@ -122,6 +125,45 @@ async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(msg, reply_markup=START_KEYBOARD)
 
 
+async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Show pending pipeline candidates with Approve/Reject buttons."""
+    candidates = get_pending_candidates()
+    if not candidates:
+        await update.message.reply_text("nothing to review right now! when we add something new, you'll see it here.")
+        return
+    lines = [f"You have {len(candidates)} thing{'s' if len(candidates) != 1 else ''} to review:\n"]
+    buttons = []
+    for c in candidates[:5]:  # max 5 rows
+        short = c["summary"][:50] + "…" if len(c["summary"]) > 50 else c["summary"]
+        lines.append(f"• {c['id']}: {short}")
+        buttons.append([
+            InlineKeyboardButton("✅ Approve", callback_data=f"approve:{c['id']}"),
+            InlineKeyboardButton("❌ Reject", callback_data=f"reject:{c['id']}"),
+        ])
+    keyboard = InlineKeyboardMarkup(buttons)
+    text = "\n".join(lines)
+    if len(candidates) > 5:
+        text += f"\n… and {len(candidates) - 5} more. Type /review again after approving to see the rest."
+    await update.message.reply_text(text, reply_markup=keyboard)
+
+
+async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handle Approve/Reject button presses."""
+    query = update.callback_query
+    await query.answer()
+    data = query.data
+    if ":" not in data:
+        return
+    action, candidate_id = data.split(":", 1)
+    status = "approved" if action == "approve" else "rejected"
+    ok = update_candidate_status(candidate_id, status)
+    if ok:
+        emoji = "✅" if action == "approve" else "❌"
+        await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
+    else:
+        await query.edit_message_text(f"couldn't update {candidate_id}")
+
+
 async def handle_message(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> None:
@@ -162,6 +204,8 @@ def main() -> None:
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("dashboard", dashboard))
     app.add_handler(CommandHandler("reset", reset))
+    app.add_handler(CommandHandler("review", review))
+    app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
     logger.info("Grace-Mar Telegram bot starting...")

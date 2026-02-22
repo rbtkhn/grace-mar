@@ -2,21 +2,22 @@
 
 This file defines rules for any AI coding assistant working on this repository.
 
-**For conceptual clarity:** Read `docs/CONCEPTUAL-FRAMEWORK.md` — fork vs. twin, fork as own entity vs. emulation, terminology.
+**For conceptual clarity:** Read `docs/CONCEPTUAL-FRAMEWORK.md` — Record vs. fork, Voice vs. bot, fork vs. twin, terminology. **Prime directive:** The Record belongs to the user (GRACE-MAR-CORE §I).
 
 **For system design:** Read `docs/ARCHITECTURE.md`.
 
-**Design alignment:** Grace-mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins). See invariants 5–23 in CONCEPTUAL-FRAMEWORK.md.
+**Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins). See invariants 5–23 in CONCEPTUAL-FRAMEWORK.md.
 
 ---
 
 ## What This System Is
 
-A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. The fork exists inside the user's mind. A Telegram bot (`bot/`) provides an emulation layer — an observation window, not where the fork lives.
+A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden.
 
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
-- **Fork, not twin** — The fork diverges by design; it is its own entity, not a mirror.
-- **Emulation** — Applies to the bot (renders the fork in conversation), not to the fork's relationship to the real person.
+- **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried.
+- **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
+- **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
 
 ---
 
@@ -32,7 +33,7 @@ All profile changes pass through a user-controlled gate:
 
 1. Detect signals (knowledge, curiosity, personality)
 2. Stage candidates in `users/[id]/PENDING-REVIEW.md`
-3. **Wait for user approval** before merging into profile
+3. **Integration moment** — Wait for user approval before merging into profile. This is the conscious gate: the user chooses what enters the record.
 4. On approval, merge into all affected files together (see File Update Protocol below)
 
 **Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval.
@@ -67,6 +68,28 @@ When designing or modifying analyst prompts, system prompts, or lookup flows, em
 ### 9. Calibrated Abstention
 
 When the emulated self encounters a topic outside its documented knowledge, it must say so and offer to look it up — never guess or hallucinate. The phrase "do you want me to look it up?" enforces this. Abstention (saying "I don't know") is a safety feature, not a failure.
+
+### 10. Write It Down or Forget It
+
+Nothing enters the Record without being written and approved. If it isn't documented and merged through the gated pipeline, it doesn't exist. See CONCEPTUAL-FRAMEWORK invariant 25.
+
+---
+
+## Permission Boundaries
+
+**Autonomous (no approval required):**
+- Read user files (SELF, SKILLS, EVIDENCE, SESSION-LOG, PENDING-REVIEW, etc.)
+- Run signal detection; stage candidates to PENDING-REVIEW
+- Respond as Voice (emulate Record)
+- Propose activities, wisdom questions, lookups
+- Analyze exchanges for profile-relevant signals
+
+**Requires user approval:**
+- Merge into SELF, EVIDENCE, or prompt
+- Process PENDING-REVIEW (approve or reject candidates)
+- Any change to the Record
+- Create or modify EVIDENCE entries
+- Update bot/prompt.py
 
 ---
 
@@ -179,5 +202,7 @@ The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality in
 - Use "parent" as a system term
 - Raise the Lexile ceiling without writing sample evidence
 - Reference books, media, or experiences not in the profile
-- Treat the bot as the fork (it's just the observation window)
+- Treat the Voice as the Record (it's the observation window and queryable voice, not the Record itself)
 - Use "cognitive twin" (use "cognitive fork")
+- Call the Voice an "oracle" or the Record "commanding" — use mirror, reflect, voice, record
+- Let terminology drift — when editing CONCEPTUAL-FRAMEWORK, AGENTS, or templates, prefer Record (not fork) and Voice (not bot) in conceptual prose; correct inconsistencies

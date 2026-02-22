@@ -116,6 +116,12 @@ LOOKUP_TRIGGER = "do you want me to look it up"
 AFFIRMATIVE_WORDS = {"yes", "yeah", "yea", "yep", "sure", "ok", "okay", "please", "ya", "y"}
 AFFIRMATIVE_PHRASES = {"look it up", "go ahead", "do it", "go for it", "find out", "tell me", "look up", "yes please"}
 
+# "We did X" — activity report from parent/operator. Triggers pipeline staging.
+WE_DID_PATTERN = re.compile(
+    r"^we\s+(drew|wrote|made|learned|read|painted|built|created|did|watched|played)\b",
+    re.IGNORECASE,
+)
+
 _client: OpenAI | None = None
 conversations: dict[str, list[dict]] = defaultdict(list)
 pending_lookups: dict[str, str] = {}
@@ -375,9 +381,82 @@ def _run_analyst_background(
     thread.start()
 
 
+ACTIVITY_REPORT_SYNTHETIC = "[Activity reported by parent/operator. No bot response. Treat as direct evidence of real-world activity. Extract knowledge, curiosity, or personality signals.]"
+
+
+def analyze_activity_report(user_message: str, channel_key: str) -> bool:
+    """Run analyst on 'we did X' activity report. Returns True if staged."""
+    if not _check_rate_limit(channel_key, "analyst", tokens=1):
+        return False
+    synthetic = f"USER: {user_message}\nGRACE-MAR: {ACTIVITY_REPORT_SYNTHETIC}"
+    try:
+        result = _get_client().chat.completions.create(
+            model=OPENAI_ANALYST_MODEL,
+            messages=[
+                {"role": "system", "content": ANALYST_PROMPT},
+                {"role": "user", "content": synthetic},
+            ],
+            max_tokens=300,
+            temperature=0.2,
+        )
+        if u := getattr(result, "usage", None):
+            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL)
+        analysis = result.choices[0].message.content.strip()
+        if analysis.upper() == "NONE":
+            return False
+        _stage_candidate(analysis, user_message, ACTIVITY_REPORT_SYNTHETIC, channel_key)
+        logger.info("ANALYST: activity report staged")
+        return True
+    except Exception:
+        logger.exception("Analyst error on activity report (non-fatal)")
+        return False
+
+
+def get_pending_candidates() -> list[dict]:
+    """Parse PENDING-REVIEW.md and return list of pending candidates (id, summary)."""
+    if not PENDING_REVIEW_PATH.exists():
+        return []
+    content = PENDING_REVIEW_PATH.read_text()
+    candidates: list[dict] = []
+    for m in re.finditer(r"### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```", content, re.DOTALL):
+        block = m.group(2)
+        if "status: pending" not in block:
+            continue
+        summary_m = re.search(r"summary:\s*(.+?)(?:\n|$)", block)
+        summary = summary_m.group(1).strip().strip('"') if summary_m else "(no summary)"
+        candidates.append({"id": m.group(1), "summary": summary[:100]})
+    return candidates
+
+
+def update_candidate_status(candidate_id: str, status: str) -> bool:
+    """Update candidate status (approved/rejected) in PENDING-REVIEW.md."""
+    if status not in ("approved", "rejected"):
+        return False
+    if not PENDING_REVIEW_PATH.exists():
+        return False
+    content = PENDING_REVIEW_PATH.read_text()
+    pattern = rf"(### {re.escape(candidate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n)(status:\s*)pending"
+    replacement = rf"\1\2{status}"
+    new_content, n = re.subn(pattern, replacement, content, count=1)
+    if n == 0:
+        return False
+    PENDING_REVIEW_PATH.write_text(new_content)
+    emit_pipeline_event(status, candidate_id)
+    return True
+
+
 def get_response(channel_key: str, user_message: str) -> str:
     """Get Grace-Mar's response for a given message. Channel-key scopes conversation."""
     history = conversations[channel_key]
+
+    # "We did X" — activity report from parent; run pipeline, skip chat.
+    if WE_DID_PATTERN.search(user_message.strip()):
+        archive("ACTIVITY REPORT", channel_key, user_message)
+        staged = analyze_activity_report(user_message, channel_key)
+        count = len(get_pending_candidates())
+        if staged:
+            return f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
+        return "ok i wrote that down. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
 
     normalized = user_message.strip().lower().rstrip("!.,")
     is_affirmative = normalized in AFFIRMATIVE_WORDS or any(

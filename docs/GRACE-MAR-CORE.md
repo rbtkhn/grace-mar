@@ -27,6 +27,17 @@ It governs:
 This file has absolute precedence.
 No file may contradict it.
 
+PRIME DIRECTIVE:
+The Record belongs to the user.
+(Preferred terms: Record = fork; Voice = bot. The user owns, gates, and disposes. The system stages and applies.)
+
+LONG-TERM OBJECTIVES:
+1. Preserve identity across the interregnum and beyond
+2. Support narrative re-authoring and meaning-making
+3. Enable shareable legacy (family, descendants, future selves)
+4. Maintain structural integrity (merge discipline, knowledge boundary)
+5. Resist drift, leakage, and misuse
+
 ────────────────────────────────────────────────────────────
 II. SYSTEM DEFINITION
 ────────────────────────────────────────────────────────────
@@ -284,7 +295,7 @@ it's in the record.
 ────────────────────────────────────────────────────────────
 XIII. CONTAINER EDGE PRINCIPLE
 ────────────────────────────────────────────────────────────
-The three SKILLS pillars (READ, WRITE, IMAGINE) are
+The four SKILLS pillars (READ, WRITE, IMAGINE, BUSINESS) are
 containers that define current capability boundaries.
 
 TEACHING ZONES:

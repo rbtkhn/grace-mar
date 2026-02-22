@@ -67,6 +67,19 @@ gaps: []
 notes: "CREATE-0001 (Nine-Colored Deer) demonstrates: comprehension of text-only Chinese story → original visual interpretation. Confident technique, strong spatial composition, deliberate color choices. Draws animals/nature (confirmed). Chinese cultural content chosen deliberately."
 ```
 
+### BUSINESS Container
+
+```yaml
+status: EMPTY (starts from zero; grows with pipeline input, human-gated)
+planning_level: null
+execution_level: null
+financial_level: null
+collaboration_level: null
+edge: null
+gaps: []
+notes: "BUSINESS pillar starts at zero. Evidence enters through 'we did X' pipeline (e.g., lemonade stand, school project with P&L, content for audience). Human gates all merges."
+```
+
 ### MATH (contextual — not a pillar, but tracked)
 
 ```yaml

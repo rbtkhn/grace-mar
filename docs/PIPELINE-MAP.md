@@ -20,7 +20,8 @@
                                       ▼
                          ┌─────────────────────────┐
                          │     PENDING-REVIEW      │
-                         │  (user approve/reject)  │
+                         │  (integration moment:   │
+                         │   user approve/reject)  │
                          └────────────┬────────────┘
                                       │ approved
                                       ▼
@@ -32,7 +33,7 @@
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                           FORK STATE                                             │
-│  SELF (IX-A/B/C)  │  SKILLS (READ/WRITE/IMAGINE)  │  EVIDENCE (pillar logs)     │
+│  SELF (IX-A/B/C)  │  SKILLS (READ/WRITE/IMAGINE/BUSINESS)  │  EVIDENCE (pillar logs)  │
 └─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -59,7 +60,7 @@ User message (Telegram)
           └──[NONE]──────────► (no staging)
 ```
 
-**Bot feeds:** SELF (IX-A Knowledge, IX-B Curiosity, IX-C Personality) via lookup and conversation signals. Does **not** directly feed SKILLS pillars or EVIDENCE pillar logs (READ/WRITE/IMAGINE).
+**Bot feeds:** SELF (IX-A Knowledge, IX-B Curiosity, IX-C Personality) via lookup and conversation signals. Does **not** directly feed SKILLS pillars or EVIDENCE pillar logs (READ/WRITE/IMAGINE/BUSINESS).
 
 **Bot produces:** ACT-* entries (activity log) when candidates are approved. Each approved candidate becomes an ACT-* + SELF entry + prompt.py update.
 
@@ -160,7 +161,7 @@ Physical artifact (artwork, collage, etc.)
 
 ## Integration Step (File Update Protocol)
 
-When candidates are **approved**, merge into **all** of:
+The approval step is the **integration moment** — the conscious gate where the user chooses what enters the record (Jaynes / bicameral lens). When candidates are **approved**, merge into **all** of:
 
 | File | Update |
 |------|--------|
