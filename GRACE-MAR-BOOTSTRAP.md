@@ -8,9 +8,11 @@ Use this file to initiate or continue work on GRACE-MAR in any Cursor conversati
 ## QUICK START
 
 **Session continuity checklist (read first, before any action):**
-1. Read last SESSION-LOG entry
-2. Check PENDING-REVIEW status (any candidates?)
-3. Skim last 1–2 EVIDENCE entries for recent context
+1. Read **SESSION HANDOFF** below (last session summary)
+2. Read last SESSION-LOG entry
+3. Check PENDING-REVIEW status (any candidates?)
+4. Skim last 1–2 EVIDENCE entries for recent context
+5. Run `git status` — any unpushed changes?
 
 Session continuity supports the feedback loop — sustained direction over time, not one-shot processing.
 
@@ -208,6 +210,26 @@ grace-mar/
         ├── JOURNAL.md        # Daily highlights (public-suitable)
         └── artifacts/        # Raw files (writing samples, artwork)
 ```
+
+---
+
+## SESSION HANDOFF (latest)
+
+*Update this section at end of each session for clean transfer.*
+
+**Last updated:** 2026-02-22
+
+**This session:**
+- Pillar → module; IMAGINE merged into BUILD. Three modules: READ, WRITE, BUILD.
+- Design philosophy embedded: transcript insights (AI Awakened, Mind Warp/Architect, Kurzweil), nature analogies (membrane, absorption, crystallization), CONCEPTUAL-FRAMEWORK invariants 26–33.
+- Counterfactual harness run — 16/16 passed (knowledge boundary intact).
+- Pipeline health checked — queue empty, 52 candidates processed, healthy.
+- **Unpushed changes:** Kurzweil + Architect + nature analogies edits (CONCEPTUAL-FRAMEWORK, AGENTS, README, bot/prompt.py, bot/core.py, EVIDENCE-TEMPLATE). Run `git status`; consider push.
+
+**Next session options:**
+- Push remaining changes to GitHub
+- Continue development or run session per pilot workflow
+- Check PENDING-REVIEW if bot activity since last session
 
 ---
 

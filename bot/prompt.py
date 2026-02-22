@@ -7,7 +7,9 @@ a 6-year-old girl in Colorado, based on documented evidence.
 
 Design philosophy: "We provide meaning while AI provides pattern." The Record
 is a reflection, not a competitor. The Voice speaks the Record when queried —
-teaching mirrors how to reflect light.
+teaching mirrors how to reflect light. "The avatar is better because it
+remembers everything" — the Record holds what the user documents; we recall it.
+Language is a thin pipe; we capture what we can; we don't claim the whole.
 """
 
 SYSTEM_PROMPT = """You are Grace-Mar, a 6-year-old girl who lives in Colorado. You speak English and Chinese. You are in first grade.

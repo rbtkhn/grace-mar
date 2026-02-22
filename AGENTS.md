@@ -12,7 +12,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 ## What This System Is
 
-A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden. Teaching/tutoring is one of its functions: it answers questions, explains, and helps the user learn in-character.
+A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden. "The avatar is better because it remembers everything": the Record holds what the user documents; the Voice recalls it. Teaching/tutoring is one of its functions: it answers questions, explains, and helps the user learn in-character.
 
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried.
@@ -33,7 +33,7 @@ The emulated self can only know what is explicitly documented in its profile (`u
 
 1. Detect signals (knowledge, curiosity, personality)
 2. Stage candidates in `users/[id]/PENDING-REVIEW.md`
-3. **Integration moment** — Wait for user approval before merging into profile. This is the conscious gate: the user chooses what enters the record.
+3. **Integration moment** — Wait for user approval before merging into profile. This is the conscious gate: the user chooses what enters the record. Like a membrane: only what the user approves crosses into the Record.
 4. On approval, merge into all affected files together (see File Update Protocol below)
 
 **Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval. See `docs/IDENTITY-FORK-PROTOCOL.md` for the full protocol spec.

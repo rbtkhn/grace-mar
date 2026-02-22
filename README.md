@@ -4,7 +4,7 @@
 
 ## Concept
 
-The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. It captures who the person is (identity, personality, voice) and what they can do (skills, knowledge, creative capability). Over time, the fork becomes a living cognitive record that can be queried, emulated, and preserved.
+The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. It captures who the person is (identity, personality, voice) and what they can do (skills, knowledge, creative capability). We create avatars of ourselves; the fork is one: queryable, evidence-grounded, gated. Over time, it becomes a living cognitive record that can be queried, emulated, and preserved — extended memory that remembers what the user has chosen to document.
 
 The fork grows only through what the user explicitly provides. An optional emulation layer (Telegram and/or WeChat bots) acts as an observation window and teaching/tutoring interface — a channel through which the user selectively exposes thoughts and learns from the fork's voice.
 

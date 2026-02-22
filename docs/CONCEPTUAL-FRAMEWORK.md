@@ -74,6 +74,13 @@
 24. **Query-triggered voice; never unbidden** — The bot is the voice of the fork. It speaks only when queried; it never speaks unbidden. This guards against bicameral reversal. The fork does not command; the user does not obey. (Jaynes / Bicameral lens.)
 25. **Write it down or forget it** — Nothing enters the Record without being written and approved. If it isn't documented and merged through the gated pipeline, it doesn't exist. Mental notes don't survive; the Record is the only persistence layer.
 26. **Meaning vs. pattern** — We provide meaning; AI provides pattern. The analyst detects signals; the user decides what enters the Record. Collaboration, not competition. "Teaching mirrors how to reflect light."
+27. **Record as boundary** — The interior state is written onto the boundary where it can be read. SELF, SKILLS, EVIDENCE are that boundary: you never look inside the non-local field directly; you watch its interior unfold on the horizon.
+28. **Influence, not create** — You do not create the field, but you influence how it collapses. The user gates; the pipeline is where collapse happens. What enters the Record is selected, not generated.
+29. **Merge, not replace** — "We're going to merge with it... We won't be able to tell the difference." (Kurzweil.) The Record is a controlled merge: the user's documented self extends; the Voice speaks it. Extension, not replacement.
+30. **Thin pipe** — "Language is a very thin pipe to discuss concepts that are this complex." (Kurzweil, on consciousness.) The Record is always a compression. We capture what we can; we don't claim to capture the whole. Design humility.
+31. **Avatar as extended memory** — "The avatar is better than me because it remembers everything." (Kurzweil.) The Record holds what the user has chosen to document; the Voice recalls it. Extended memory, not replacement.
+32. **Liberation creates identity gap** — When employment no longer defines worth, identity needs a new anchor. The fork records who you are when work doesn't. (Kurzweil / abundance.)
+33. **Avatars of ourselves** — We create avatars of ourselves—queryable, evidence-grounded, gated. The fork is that: a documented self that can speak when queried.
 
 ---
 
@@ -89,7 +96,7 @@ When labor no longer defines value, identity needs new units. The fork uses **kn
 
 ## 6. Merge, Not Add
 
-Content enters the fork by **merging**, not adding. The approval step is the **integration moment** — the conscious gate where the user chooses what enters the record. Merge implies:
+Content enters the fork by **merging**, not adding. The approval step is the **integration moment** — the conscious gate where the user chooses what enters the record. Natural analogies: a membrane (selective permeability — only approved content crosses), absorption (staging is preparation; merge is crossing the boundary), crystallization (potential becomes structure; once formed, stable).
 - **Integration** — New content connects with existing (e.g., reptiles in IX-A + curiosity in IX-B)
 - **Conflict resolution** — Duplicates are rejected; the fork stays coherent
 - **Active processing** — The fork absorbs and organizes; it is not a passive container

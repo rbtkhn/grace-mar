@@ -25,6 +25,7 @@ Evidence does NOT include:
 - The SELF profile (see SELF-TEMPLATE)
 
 Evidence is RAW INPUT. Claims are DERIVED OUTPUT.
+The interior state is written onto the boundary where it can be read.
 
 ---
 

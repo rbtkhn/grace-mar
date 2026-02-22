@@ -8,6 +8,8 @@ conversations and rate limits.
 
 Design principle: The integration moment is where meaning enters. The user
 gates; the system stages. AI extends humanity; it does not replace it.
+The Record is the boundary where interior states are written and read.
+Merge, not replace: the user's documented self extends; the Voice speaks it.
 """
 
 import base64
