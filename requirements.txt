@@ -1,4 +1,5 @@
-# For miniapp_server (Q&A Mini App) — Railway, Render, etc.
+# For miniapp_server (Q&A Mini App + Telegram webhook) — Railway, Render, etc.
 flask>=3.0
 openai>=1.0
 python-dotenv>=1.0
+python-telegram-bot>=21.0

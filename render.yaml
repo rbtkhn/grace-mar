@@ -1,8 +1,8 @@
-# Render Blueprint: Grace-Mar Mini App + Telegram Bot
-# See docs/MINIAPP-SETUP.md for env var setup.
+# Render Blueprint: Grace-Mar Mini App + Telegram Webhook
+# See docs/MINIAPP-SETUP.md and docs/TELEGRAM-WEBHOOK-SETUP.md.
 #
-# If you already have the Mini App service, create the bot manually:
-#   New → Background Worker → connect repo → use build/start from grace-mar-bot below.
+# Telegram bot runs via webhook on the miniapp service (no separate worker).
+# RENDER_EXTERNAL_URL is set automatically; webhook URL = RENDER_EXTERNAL_URL/telegram/webhook
 
 services:
   - type: web
@@ -17,20 +17,7 @@ services:
         sync: false
       - key: GRACE_MAR_REPO
         value: rbtkhn/grace-mar
-
-  - type: worker
-    name: grace-mar-bot
-    runtime: python
-    buildCommand: pip install -r bot/requirements.txt
-    startCommand: python bot/bot.py
-    envVars:
       - key: TELEGRAM_BOT_TOKEN
-        sync: false
-      - key: OPENAI_API_KEY
-        sync: false
+        sync: false  # When set, Telegram webhook is enabled (RENDER_EXTERNAL_URL used)
       - key: DASHBOARD_MINIAPP_URL
-        sync: false  # Set to your Mini App URL, e.g. https://grace-mar-miniapp.onrender.com
-      - key: GITHUB_TOKEN
-        sync: false  # For archiving to ARCHIVE.md
-      - key: GRACE_MAR_REPO
-        value: rbtkhn/grace-mar
+        sync: false  # Mini App URL for bot menu button (e.g. https://grace-mar-miniapp.onrender.com)

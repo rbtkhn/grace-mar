@@ -21,6 +21,26 @@
 
 ## Processed
 
+### CANDIDATE-0052 (Wisdom survey)
+
+```yaml
+status: approved
+mind_category: personality
+signal_type: wisdom_elicitation
+action: PER-0004 added to SELF.md IX-C
+evidence: ACT-0020
+```
+
+### CANDIDATE-0053 (Wisdom survey)
+
+```yaml
+status: approved
+mind_category: curiosity
+signal_type: wisdom_elicitation
+action: CUR-0007, CUR-0008 added to SELF.md IX-B
+evidence: ACT-0020
+```
+
 ### CANDIDATE-0045
 
 ```yaml

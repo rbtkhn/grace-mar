@@ -4,11 +4,19 @@ Grace-Mar Telegram Bot
 A Telegram bot that responds as Grace-Mar, powered by her
 cognitive fork profile data and an OpenAI LLM backend.
 
-Usage:
+Usage (local polling):
     1. Copy .env.example to .env and fill in your keys
-    2. pip install -r requirements.txt
-    3. python bot.py
+    2. pip install -r bot/requirements.txt
+    3. python -m bot.bot   # from repo root
+
+For production: use webhook mode via miniapp_server (see docs/TELEGRAM-WEBHOOK-SETUP.md).
 """
+# Allow running as script: python bot/bot.py (simulate package for relative imports)
+if __package__ is None:
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    __package__ = "bot"
 
 import os
 import logging
@@ -32,7 +40,7 @@ from telegram.ext import (
     ContextTypes,
 )
 
-from core import (
+from .core import (
     get_response,
     archive,
     reset_conversation,
@@ -183,7 +191,7 @@ async def handle_voice(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> None:
     """Transcribe voice message and process like text (chat or 'we did X' pipeline)."""
-    from core import transcribe_voice
+    from .core import transcribe_voice
 
     chat_id = update.effective_chat.id
     key = _channel_key(chat_id)
@@ -214,14 +222,9 @@ async def handle_voice(
         await update.message.reply_text("um... i got confused. can you say that again?")
 
 
-def main() -> None:
-    if not TELEGRAM_TOKEN:
-        raise RuntimeError("TELEGRAM_BOT_TOKEN not set in .env")
-
-    from core import OPENAI_API_KEY
-    if not OPENAI_API_KEY:
-        raise RuntimeError("OPENAI_API_KEY not set in .env")
-
+def create_application(webhook_mode: bool = False) -> Application:
+    """Build and return the configured Telegram Application.
+    When webhook_mode=True, uses updater=None for custom webhook (caller injects updates)."""
     async def set_menu_button(application: Application) -> None:
         if DASHBOARD_MINIAPP_URL:
             await application.bot.set_chat_menu_button(
@@ -229,12 +232,10 @@ def main() -> None:
             )
             logger.info("Dashboard menu button configured: %s", DASHBOARD_MINIAPP_URL)
 
-    app = (
-        Application.builder()
-        .token(TELEGRAM_TOKEN)
-        .post_init(set_menu_button)
-        .build()
-    )
+    builder = Application.builder().token(TELEGRAM_TOKEN).post_init(set_menu_button)
+    if webhook_mode:
+        builder = builder.updater(None)
+    app = builder.build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("dashboard", dashboard))
@@ -243,8 +244,19 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))
+    return app
 
-    logger.info("Grace-Mar Telegram bot starting...")
+
+def main() -> None:
+    if not TELEGRAM_TOKEN:
+        raise RuntimeError("TELEGRAM_BOT_TOKEN not set in .env")
+
+    from .core import OPENAI_API_KEY
+    if not OPENAI_API_KEY:
+        raise RuntimeError("OPENAI_API_KEY not set in .env")
+
+    app = create_application(webhook_mode=False)
+    logger.info("Grace-Mar Telegram bot starting (polling)...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 

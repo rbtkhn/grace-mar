@@ -3,16 +3,19 @@
 Grace-Mar Q&A Mini App server.
 
 Serves the interactive Q&A Mini App and provides the /api/ask endpoint.
+Optional: Telegram webhook (when TELEGRAM_BOT_TOKEN and webhook URL are set).
 Deploy to Railway, Render, or run locally with ngrok for Telegram testing.
 
 Usage:
-    pip install flask python-dotenv openai
+    pip install flask python-dotenv openai python-telegram-bot
     OPENAI_API_KEY=... python miniapp_server.py
 
 Set PORT (default 5000) for hosting. Enable CORS if Mini App is on a different origin.
 Set GITHUB_TOKEN and GRACE_MAR_REPO (e.g. rbtkhn/grace-mar) to archive to ARCHIVE.md.
+For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 """
 
+import asyncio
 import base64
 import json
 import logging
@@ -50,7 +53,51 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
 ARCHIVE_PATH = "users/pilot-001/ARCHIVE.md"
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+WEBHOOK_BASE_URL = (
+    os.getenv("WEBHOOK_BASE_URL", "").strip()
+    or os.getenv("RENDER_EXTERNAL_URL", "").strip()
+).rstrip("/")
 logger = logging.getLogger(__name__)
+
+_telegram_app = None
+_telegram_loop = None
+
+
+def _start_telegram_webhook() -> None:
+    """Start Telegram webhook in a background thread. Run once at startup."""
+    global _telegram_app, _telegram_loop
+    if not TELEGRAM_BOT_TOKEN or not WEBHOOK_BASE_URL:
+        return
+    if not OPENAI_API_KEY:
+        logger.warning("Telegram webhook skipped: OPENAI_API_KEY not set")
+        return
+
+    def _run_bot() -> None:
+        global _telegram_app, _telegram_loop
+        loop = asyncio.new_event_loop()
+        asyncio.set_event_loop(loop)
+        _telegram_loop = loop
+
+        sys.path.insert(0, str(REPO_ROOT))
+        from bot.bot import create_application
+
+        app = create_application(webhook_mode=True)
+        _telegram_app = app
+
+        async def _setup() -> None:
+            await app.initialize()
+            await app.start()
+            webhook_url = f"{WEBHOOK_BASE_URL}/telegram/webhook"
+            await app.bot.set_webhook(url=webhook_url, allowed_updates=Update.ALL_TYPES)
+            logger.info("Telegram webhook set: %s", webhook_url)
+
+        loop.run_until_complete(_setup())
+        loop.run_forever()
+
+    t = threading.Thread(target=_run_bot, daemon=True)
+    t.start()
+    logger.info("Telegram webhook thread started")
 
 
 def _format_archive_block(event: str, text: str) -> str:
@@ -164,6 +211,25 @@ def _should_run_lookup(message: str, history: list) -> str | None:
     return question if question else None
 
 
+@app.route("/telegram/webhook", methods=["POST"])
+def telegram_webhook():
+    """Receive Telegram updates. Only active when TELEGRAM_BOT_TOKEN is set."""
+    if _telegram_app is None or _telegram_loop is None:
+        return "", 200  # Silently ignore if webhook not configured
+    try:
+        data = request.get_json()
+        if not data:
+            return "", 400
+        update = Update.de_json(data, _telegram_app.bot)
+        asyncio.run_coroutine_threadsafe(
+            _telegram_app.update_queue.put(update), _telegram_loop
+        ).result(timeout=5.0)
+    except Exception as e:
+        logger.exception("Telegram webhook error: %s", e)
+        return "", 500
+    return "", 200
+
+
 @app.route("/")
 def index():
     return send_from_directory("miniapp", "index.html")
@@ -243,5 +309,7 @@ def ask():
 
 
 if __name__ == "__main__":
+    if TELEGRAM_BOT_TOKEN and WEBHOOK_BASE_URL:
+        _start_telegram_webhook()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=False)

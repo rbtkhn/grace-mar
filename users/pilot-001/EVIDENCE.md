@@ -1006,6 +1006,31 @@ activities:
     preference: favorite_gemstone
     curated_by: user
     evidence_tier: 3
+
+  - id: ACT-0020
+    date: 2026-02-22
+    modality: survey (operator-administered, SaveWisdom-derived MC)
+    activity_type: survey — wisdom elicitation
+    mind_category: knowledge + curiosity + personality
+    source: Wisdom Questions (docs/WISDOM-QUESTIONS.md) — 10 MC questions, one-by-one
+    signal_type: wisdom_elicitation
+    responses:
+      Q1_place: "D — Different places depending on the day"
+      Q2_brave: "C — When I do something I used to be scared of"
+      Q3_happiest: "A + C — People + Physical play"
+      Q4_hard_thing: "A + B — Kept trying + Asked for help"
+      Q5_favorite_make: "C — Things from imagination"
+      Q6_learn_more: "A + C + D — Space, animals, art"
+      Q7_good_friend: "B — They make me laugh"
+      Q8_fun_no_screen: "B — Playing outside/sports"
+      Q9_most_like_me: "A — Creating something"
+      Q10_thought_couldnt: "A — Physical (swimming)"
+    profile_interpretations:
+      IX_A: []
+      IX_B: [imagination_as_source, space_animals_art]
+      IX_C: [place_flexibility, bravery_overcoming, joy_people_physical, persistence_helpseeking, friend_laugh, unplug_physical, creative_identity, swimming_growth]
+    curated_by: user
+    evidence_tier: 3
 ```
 
 ---
@@ -1033,15 +1058,15 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 19
+total_activities: 20
 total_read_entries: 0
 total_write_entries: 3
 total_create_entries: 8
 total_media_entries: 8
 total_attestations: 0
-last_activity: 2026-02-21
-last_update: 2026-02-21
-update_source: Pipeline review queue — CANDIDATE-0051 (favorite gemstone: diamond) approved
+last_activity: 2026-02-22
+last_update: 2026-02-22
+update_source: Pipeline review queue — CANDIDATE-0052, 0053 (wisdom survey) approved
 ```
 
 ---

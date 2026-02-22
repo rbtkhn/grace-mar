@@ -648,6 +648,26 @@ entries:
     evidence_id: ACT-0018
     curated_by: user
     notes: "Gemstones already in IX-A; survey confirms curiosity — both learning about them and how shiny they are."
+
+  - id: CUR-0007
+    date: 2026-02-22
+    topic: "Space, animals, art — want to learn more"
+    trigger: "Wisdom survey Q6 — 'What do you want to learn more about?'"
+    response_signal: "A + C + D — Space, animals, art"
+    intensity: 4
+    evidence_id: ACT-0020
+    provenance: human_approved
+    source: wisdom_elicitation
+
+  - id: CUR-0008
+    date: 2026-02-22
+    topic: "Things from imagination — favorite thing to make"
+    trigger: "Wisdom survey Q5 — 'What's your favorite thing to make?'"
+    response_signal: "C — Things from imagination"
+    intensity: 4
+    evidence_id: ACT-0020
+    provenance: human_approved
+    source: wisdom_elicitation
 ```
 
 ### IX-C. PERSONALITY (Observed)
@@ -678,6 +698,14 @@ entries:
     observation: "Uses 'and I [verb]' to connect actions in sequence — e.g. 'and I wacht', 'and I went'. Specific connector habit in narrative."
     evidence_id: ACT-0015
     curated_by: user
+
+  - id: PER-0004
+    date: 2026-02-22
+    type: wisdom_elicitation
+    observation: "Place preference flexible — different places depending on the day. Bravery: feels brave when doing something she used to be scared of (overcoming fear). Joy: people and physical play. Problem-solving: kept trying AND asked for help (adds help-seeking to grinder trait). Good friend: someone who makes her laugh. Fun without a screen: playing outside/sports. Identity anchor: feels most like herself when creating something. Growth narrative: swimming — something she thought she couldn't do."
+    evidence_id: ACT-0020
+    provenance: human_approved
+    source: wisdom_elicitation
 ```
 
 ---
@@ -732,6 +760,7 @@ Track what updated SELF and when.
 | 2026-02-21 | Curiosity (CUR-0006) | Pipeline review queue | Rocks and gemstones — CANDIDATE-0050 approved |
 | 2026-02-21 | Preference (favorite gemstone) | Pipeline review queue | Diamond — CANDIDATE-0051 approved |
 | 2026-02-21 | Talent Stack (II-A) | Design | Initial synthesis from IX + preferences — Adams talent-stack framing |
+| 2026-02-22 | Curiosity (CUR-0007, CUR-0008), Personality (PER-0004) | Pipeline review queue | Wisdom survey — CANDIDATE-0052, CANDIDATE-0053 approved |
 
 ---
 

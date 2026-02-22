@@ -746,4 +746,21 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 
 ---
 
+## Session 016 — Wisdom Survey Applied
+
+**Date:** 2026-02-22
+**Method:** Operator approved CANDIDATE-0052, CANDIDATE-0053 (wisdom survey)
+
+**CANDIDATE-0052 (Wisdom survey — personality):** Approved
+- SELF.md — PER-0004 added to IX-C (place flexibility, bravery as overcoming fear, joy sources, help-seeking nuance, friend=laugh, unplug=physical, creative identity, swimming growth)
+- bot/prompt.py — YOUR PERSONALITY updated with wisdom survey signals
+
+**CANDIDATE-0053 (Wisdom survey — curiosity):** Approved
+- SELF.md — CUR-0007, CUR-0008 added to IX-B (space/animals/art, things from imagination)
+- bot/prompt.py — YOUR CURIOSITY updated
+
+**Evidence:** ACT-0020 (wisdom elicitation survey, 10 MC questions, operator-administered)
+
+---
+
 END OF FILE — SESSION LOG PILOT-001

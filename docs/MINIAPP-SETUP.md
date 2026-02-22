@@ -70,16 +70,16 @@ Set these env vars on Render (or in `.env` locally):
 
 Without them, local dev writes to `users/pilot-001/ARCHIVE.md` on disk; on Render, exchanges are not archived.
 
-## 3. Bot 24/7
+## 3. Bot (Webhook Mode)
 
-The `render.yaml` blueprint defines a **Background Worker** (`grace-mar-bot`) that runs the Telegram bot. With the blueprint deployed, the bot runs 24/7. Set these env vars on the bot service:
+The `render.yaml` blueprint runs the Telegram bot via **webhook** on the miniapp service (no separate worker). Set these env vars on the **miniapp** service:
 
-- `TELEGRAM_BOT_TOKEN` — from @BotFather
+- `TELEGRAM_BOT_TOKEN` — from @BotFather (when set, webhook is enabled)
 - `OPENAI_API_KEY`
-- `DASHBOARD_MINIAPP_URL` — your Mini App URL (e.g. `https://grace-mar.onrender.com`)
-- `GITHUB_TOKEN` — PAT with `contents: write` (for archiving to ARCHIVE.md; without it, exchanges are not saved when running on Render)
+- `DASHBOARD_MINIAPP_URL` — your Mini App URL (e.g. `https://grace-mar-miniapp.onrender.com`)
+- `GITHUB_TOKEN` — PAT with `contents: write` (for archiving to ARCHIVE.md)
 
-If you deployed the Mini App manually (without the blueprint), add the bot separately: New → Background Worker, connect repo, build: `pip install -r bot/requirements.txt`, start: `python bot/bot.py`.
+See [TELEGRAM-WEBHOOK-SETUP](TELEGRAM-WEBHOOK-SETUP.md) for details and migration from polling.
 
 ## 4. Bot env (local)
 
