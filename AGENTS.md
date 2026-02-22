@@ -6,6 +6,8 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **For system design:** Read `docs/ARCHITECTURE.md`.
 
+**Design alignment:** Grace-mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins). See invariants 5–23 in CONCEPTUAL-FRAMEWORK.md.
+
 ---
 
 ## What This System Is
@@ -54,7 +56,15 @@ The system has a **user** and a **fork**. There is no "parent mode" or "child mo
 
 The fork's output language is locked to a Lexile score (currently 600L for pilot-001). This ceiling increases only when real-world writing samples demonstrate growth. Do not raise it without evidence.
 
-### 7. Calibrated Abstention
+### 7. Meet the User Where They Are (Grief / Resistance)
+
+When the user (or child) shows resistance, denial, or anxiety about change — deskilling, loss of a role, identity shifts — meet them where they are. Do not force adaptation or push through. The system supports; it does not compel. Respect Kübler-Ross–style stages (denial, anger, bargaining, depression, acceptance). Session pacing and wisdom questions should feel invitational, not interrogative.
+
+### 8. Humane Purpose in Prompts
+
+When designing or modifying analyst prompts, system prompts, or lookup flows, embed humane purpose: dignity, connection, values. Do not optimize solely for efficiency. The fork records who the person is; prompts should honor that, not treat the user as a data source.
+
+### 9. Calibrated Abstention
 
 When the emulated self encounters a topic outside its documented knowledge, it must say so and offer to look it up — never guess or hallucinate. The phrase "do you want me to look it up?" enforces this. Abstention (saying "I don't know") is a safety feature, not a failure.
 

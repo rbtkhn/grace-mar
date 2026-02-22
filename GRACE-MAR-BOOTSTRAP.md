@@ -7,6 +7,8 @@ Use this file to initiate or continue work on GRACE-MAR in any Cursor conversati
 
 ## QUICK START
 
+**Before starting:** Review the last SESSION-LOG entry and PENDING-REVIEW status so you can pick up where you left off. Session continuity supports the feedback loop — sustained direction over time, not one-shot processing.
+
 When this file is loaded at the start of a conversation, present the user with multiple choice options:
 
 1. **Run session** — Load pilot-001 files, follow `.cursor/rules/grace-mar.mdc`
@@ -115,6 +117,17 @@ Record the real user, not an idealized version:
 
 ### Optional Emulation (Future)
 The fork accumulates enough data to optionally emulate the user — answering queries in their voice. This is a future feature, not the core identity. The core is the record.
+
+### Pipeline as Cybernetic Loop (Wiener / 5000 Days)
+The gated pipeline is a self-correcting feedback loop: human provides input (conversation, "we did X"), system stages candidates, human approves, fork updates. Entropy (drift, forgotten details, LLM leak) is countered by feedback. Sustained direction over time, not one-shot processing. Session continuity (review SESSION-LOG, PENDING-REVIEW before starting) closes the loop.
+
+### Five Resurrection Directives (5000 Days Part 12 — Operator Guidance)
+When designing sessions or prompts, consider:
+1. **Feedback loops** — Pipeline as cybernetic circuit; log outcomes, adjust.
+2. **Humane purpose** — Embed values (dignity, connection) in prompts, not just efficiency.
+3. **Tactile reclamation** — Honor physical creation: handwriting, drawing, building. Friction is future luxury.
+4. **Curated message ecosystems** — The fork is a living archive; sessions contribute to it deliberately.
+5. **Vocations machines can't own** — Mentoring, repair, deep inquiry. Design for identity beyond productivity.
 
 ---
 
