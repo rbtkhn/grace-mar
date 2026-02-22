@@ -29,6 +29,11 @@ except ImportError:
     from conflict_check import check_conflicts, format_conflicts_for_yaml
 
 try:
+    from .retriever import retrieve as _retrieve
+except ImportError:
+    from retriever import retrieve as _retrieve
+
+try:
     from .prompt import (
     SYSTEM_PROMPT,
     LOOKUP_PROMPT,
@@ -532,6 +537,54 @@ def get_response(channel_key: str, user_message: str) -> str:
 def run_lookup(question: str, channel_key: str = "miniapp") -> str:
     """Public entry point for lookup. Used by Mini App."""
     return _lookup_with_library_first(question, channel_key)
+
+
+GROUNDED_PROMPT_APPENDIX = """
+
+## GROUNDED MODE
+Answer ONLY from the relevant record excerpts below. If the excerpts do not contain enough information to answer, say "I don't know that yet!" and do NOT guess.
+When you use information from the record, cite the source ID at the end of the relevant sentence, e.g. [LEARN-0001] or [WRITE-0003]. At least one citation or explicit abstention is required.
+"""
+
+
+def run_grounded_response(
+    question: str,
+    channel_key: str = "miniapp",
+    history: list[dict] | None = None,
+) -> str:
+    """Response with retrieval: cite source IDs or abstain. Used by Mini App grounded mode."""
+    if not _check_rate_limit(channel_key, "main", tokens=1):
+        return "i'm a little tired right now. can we talk more in a bit?"
+    chunks = _retrieve(question, top_k=5)
+    excerpt_block = ""
+    if chunks:
+        excerpt_block = "\nRelevant record excerpts:\n" + "\n\n".join(
+            text for _, text in chunks
+        )
+    else:
+        excerpt_block = "\nNo relevant record excerpts found for this question."
+    system = SYSTEM_PROMPT + GROUNDED_PROMPT_APPENDIX + excerpt_block
+    messages = [{"role": "system", "content": system}]
+    if history:
+        for h in history:
+            role = h.get("role")
+            content = (h.get("content") or "").strip()
+            if role in ("user", "assistant") and content:
+                messages.append({"role": role, "content": content})
+    messages.append({"role": "user", "content": question})
+    try:
+        response = _get_client().chat.completions.create(
+            model=OPENAI_MODEL,
+            messages=messages,
+            max_tokens=250,
+            temperature=0.7,
+        )
+        if u := getattr(response, "usage", None):
+            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+        return response.choices[0].message.content.strip()
+    except Exception:
+        logger.exception("Grounded response error")
+        return "um... i got confused. can you try again?"
 
 
 def reset_conversation(channel_key: str) -> None:

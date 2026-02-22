@@ -23,11 +23,17 @@
     #send:disabled { opacity: 0.5; cursor: not-allowed; }
     .typing { color: var(--muted); font-size: 0.85rem; font-style: italic; padding: 0.3rem 0; }
     .error { color: #e88; font-size: 0.9rem; padding: 0.5rem 0; }
+    .toggle-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; cursor: pointer; }
+    .toggle-row input { cursor: pointer; }
   </style>
 </head>
 <body>
   <h1>Ask Grace-Mar</h1>
   <p class="intro">Ask me anything! I know about my favorite stories, planets, art, and stuff I learned at school. If I don't know, I'll say so.</p>
+  <label class="toggle-row">
+    <input type="checkbox" id="grounded" checked>
+    <span>Grounded mode — answers cite sources [LEARN-0001] or abstain</span>
+  </label>
   <div class="chat" id="chat"></div>
   <div class="input-row">
     <input type="text" id="q" placeholder="What do you want to know?" autocomplete="off" enterkeyhint="send">
@@ -84,10 +90,11 @@
         setError(null);
         setTyping(true);
         send.disabled = true;
+        var grounded = document.getElementById('grounded').checked;
         fetch((apiBase || '') + '/api/ask', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: text, history: messages.slice(0, -1) })
+          body: JSON.stringify({ message: text, history: messages.slice(0, -1), mode: grounded ? 'grounded' : 'normal' })
         }).then(function(r) {
           return r.json().then(function(data) {
             if (!r.ok) throw new Error(data.error || data.detail || 'Something went wrong');

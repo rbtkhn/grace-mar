@@ -38,6 +38,7 @@ from openai import OpenAI
 from bot.prompt import SYSTEM_PROMPT
 from bot.core import (
     run_lookup,
+    run_grounded_response,
     LOOKUP_TRIGGER,
     AFFIRMATIVE_WORDS,
     AFFIRMATIVE_PHRASES,
@@ -187,8 +188,14 @@ def ask():
     if not message:
         return jsonify({"error": "message required"}), 400
     history = data.get("history") or []
+    grounded = data.get("mode") == "grounded"
 
     try:
+        if grounded:
+            reply = run_grounded_response(message, channel_key="miniapp", history=history)
+            _archive_miniapp(message, reply, is_lookup=False)
+            return jsonify({"response": reply})
+
         # Affirmative follow-up to "do you want me to look it up?" → run lookup
         question = _should_run_lookup(message, history)
         if question:

@@ -69,6 +69,7 @@ Exports include a generation timestamp. The Record schema (SELF, SKILLS, EVIDENC
 | `users/[id]/EVIDENCE.md` | Activity log (full fork export only) |
 | `scripts/export_user_identity.py` | Produce identity handoff |
 | `scripts/export_fork.py` | Produce full fork handoff |
+| `scripts/export_view.py` | School/public views with redaction (see PRIVACY-REDACTION.md) |
 
 ---
 

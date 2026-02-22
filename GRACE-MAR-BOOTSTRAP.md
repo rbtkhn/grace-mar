@@ -180,6 +180,7 @@ grace-mar/
 │   ├── PORTABILITY.md           # School transfer, ownership, handoff workflow
 │   ├── SIMPLE-USER-INTERFACE.md # Chat workflow for families (no GitHub)
 │   ├── ADMISSIONS-LINK-USE-CASE.md # Share link for admissions/employers to chat with fork
+│   ├── PRIVACY-REDACTION.md        # School/public views, redaction policy
 │   ├── DESIGN-NOTES.md       # White paper & business proposal input (positioning, insights)
 │   ├── MARKET-RESEARCH-ALPHA-KHAN.md  # Alpha alternatives, Khan Academy, cost comparison
 │   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
@@ -192,7 +193,8 @@ grace-mar/
 │   └── ...                   # Supporting docs
 ├── scripts/
 │   ├── export_fork.py        # Full fork export (JSON)
-│   └── export_user_identity.py  # Record → USER.md / SOUL.md for OpenClaw
+│   ├── export_user_identity.py  # Record → USER.md / SOUL.md for OpenClaw
+│   └── export_view.py        # School/public views with redaction
 └── users/
     └── pilot-001/            # First pilot user (age 6)
         ├── SELF.md           # Identity record (seeded)
