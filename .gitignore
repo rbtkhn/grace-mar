@@ -38,6 +38,9 @@ npm-debug.log*
 # Testing
 coverage/
 
+# PDF tools (bundled; run setup_pdf_tools.sh to fetch)
+tools/
+
 # Misc
 *.pem
 .vercel

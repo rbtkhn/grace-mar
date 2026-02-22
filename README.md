@@ -75,9 +75,15 @@ grace-mar/
 │   └── LETTER-TO-STUDENT.md         # Letter to first pilot student
 ├── scripts/
 │   ├── generate_dashboard.py        # Dashboard generator
-│   ├── fork_checksum.py            # Fork state checksum (--manifest writes FORK-MANIFEST.json)
-│   ├── export_fork.py              # Export fork to portable JSON
-│   └── validate-integrity.py       # Integrity validator
+│   ├── fork_checksum.py             # Fork state checksum (--manifest writes FORK-MANIFEST.json)
+│   ├── export_fork.py               # Export fork to portable JSON
+│   ├── export_user_identity.py      # Record → USER.md / SOUL.md for OpenClaw
+│   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
+│   ├── metrics.py                   # Pipeline health, record completeness
+│   ├── governance_checker.py        # Pre-commit principle violations
+│   └── validate-integrity.py        # Integrity validator
+├── integrations/
+│   └── openclaw_hook.py             # Export Record for OpenClaw session continuity
 ├── dashboard/
 │   └── index.html                   # Fork dashboard (run generate_dashboard.py to refresh)
 ├── miniapp/
@@ -115,6 +121,8 @@ grace-mar/
 | [Architecture](docs/ARCHITECTURE.md) | Full system design including observation window, pipeline, mind model |
 | [White Paper](docs/WHITE-PAPER.md) | Full narrative — identity gap, Grace-Mar model, differentiation |
 | [Business Prospectus](docs/BUSINESS-PROSPECTUS.md) | Investor/partner document — problem, solution, market, ask |
+| [PDF Setup](docs/PDF-SETUP.md) | Render White Paper and Prospectus to PDF (Pandoc + Eisvogel) |
+| [OpenClaw Integration](docs/OPENCLAW-INTEGRATION.md) | Record as identity layer, session continuity |
 | [Design Notes](docs/DESIGN-NOTES.md) | White paper & business proposal input (positioning, agent-web insights) |
 | [AGENTS.md](AGENTS.md) | Guardrails for AI coding assistants |
 | [Portability](docs/PORTABILITY.md) | School transfer, ownership, handoff workflow |
@@ -194,6 +202,30 @@ python3 scripts/measure_growth_and_density.py
 ```
 
 Reports: **entries per day**, **pipeline throughput** (if PIPELINE-EVENTS exists), **words per IX entry**, **evidence backing %**, **topic diversity**, **channel balance** (IX-A:IX-B:IX-C), and **git history delta**.
+
+## PDF Export
+
+Render the White Paper and Business Prospectus to polished PDFs:
+
+```bash
+# Without Homebrew: download Pandoc + Tectonic first
+./scripts/setup_pdf_tools.sh
+./scripts/render_pdf.sh --install-eisvogel   # One-time: Eisvogel template
+./scripts/render_pdf.sh
+
+# With Homebrew: brew install pandoc && brew install --cask mactex-no-gui
+```
+
+See [docs/PDF-SETUP.md](docs/PDF-SETUP.md) for full options.
+
+## Agent Manifest & Metrics
+
+```bash
+python3 scripts/export_manifest.py -u pilot-001   # manifest.json + llms.txt
+python3 scripts/metrics.py                        # Pipeline health, IX counts
+python3 scripts/governance_checker.py             # Principle violations (pre-commit)
+python3 integrations/openclaw_hook.py -u pilot-001 -o ../openclaw/   # OpenClaw export
+```
 
 ## Validation
 

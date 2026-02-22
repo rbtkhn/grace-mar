@@ -1,0 +1,12 @@
+# Optional pre-commit hooks for Grace-Mar
+# Install: pip install pre-commit && pre-commit install
+# Run manually: pre-commit run --all-files
+
+repos:
+  - repo: local
+    hooks:
+      - id: governance-check
+        name: Governance checker
+        entry: python scripts/governance_checker.py
+        language: system
+        pass_filenames: false
