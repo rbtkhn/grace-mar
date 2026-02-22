@@ -29,7 +29,7 @@
 </head>
 <body>
   <h1>Ask Grace-Mar</h1>
-  <p class="intro">Ask me anything! I know about my favorite stories, planets, art, and stuff I learned at school. If I don't know, I'll say so.</p>
+  <p class="intro" id="intro">Ask me anything! I know about my favorite stories, planets, art, and stuff I learned at school. If I don't know, I'll say so.</p>
   <label class="toggle-row">
     <input type="checkbox" id="grounded" checked>
     <span>Grounded mode — answers cite sources [LEARN-0001] or abstain</span>
@@ -44,6 +44,15 @@
       if (window.Telegram && window.Telegram.WebApp) {
         window.Telegram.WebApp.ready();
         window.Telegram.WebApp.expand();
+      }
+      var path = (document.location.pathname || '').replace(/\/$/, '') || '/';
+      var params = new URLSearchParams(document.location.search || '');
+      var isInterview = path.indexOf('/i/') === 0 || path.indexOf('/me/') === 0 || params.get('mode') === 'interview' || params.has('t');
+      if (isInterview) {
+        var introEl = document.getElementById('intro');
+        if (introEl) introEl.textContent = "This is Grace-Mar's cognitive fork — a record of who she is. Ask anything to get to know her. Your questions are not saved.";
+        var g = document.getElementById('grounded');
+        if (g) g.checked = true;
       }
       var chat = document.getElementById('chat');
       var q = document.getElementById('q');
@@ -91,10 +100,12 @@
         setTyping(true);
         send.disabled = true;
         var grounded = document.getElementById('grounded').checked;
+        var payload = { message: text, history: messages.slice(0, -1), mode: grounded ? 'grounded' : 'normal' };
+        if (isInterview) payload.interview = true;
         fetch((apiBase || '') + '/api/ask', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: text, history: messages.slice(0, -1), mode: grounded ? 'grounded' : 'normal' })
+          body: JSON.stringify(payload)
         }).then(function(r) {
           return r.json().then(function(data) {
             if (!r.ok) throw new Error(data.error || data.detail || 'Something went wrong');

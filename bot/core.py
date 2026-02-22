@@ -534,6 +534,28 @@ def get_response(channel_key: str, user_message: str) -> str:
     return assistant_message
 
 
+def transcribe_voice(audio_bytes: bytes, channel_key: str = "telegram") -> str | None:
+    """Transcribe audio via OpenAI Whisper. Returns transcript or None on failure."""
+    import tempfile
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".ogg", delete=False) as f:
+            f.write(audio_bytes)
+            path = f.name
+        try:
+            with open(path, "rb") as audio_file:
+                result = _get_client().audio.transcriptions.create(
+                    model="whisper-1",
+                    file=audio_file,
+                )
+            transcript = (result.text or "").strip()
+            return transcript if transcript else None
+        finally:
+            Path(path).unlink(missing_ok=True)
+    except Exception:
+        logger.exception("Whisper transcription error")
+        return None
+
+
 def run_lookup(question: str, channel_key: str = "miniapp") -> str:
     """Public entry point for lookup. Used by Mini App."""
     return _lookup_with_library_first(question, channel_key)

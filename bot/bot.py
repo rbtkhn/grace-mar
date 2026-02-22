@@ -179,6 +179,41 @@ async def handle_message(
         await update.message.reply_text("um... i got confused. can you say that again?")
 
 
+async def handle_voice(
+    update: Update, context: ContextTypes.DEFAULT_TYPE
+) -> None:
+    """Transcribe voice message and process like text (chat or 'we did X' pipeline)."""
+    from core import transcribe_voice
+
+    chat_id = update.effective_chat.id
+    key = _channel_key(chat_id)
+    voice = update.message.voice
+
+    if not voice:
+        await update.message.reply_text("i didn't get that — can you try again?")
+        return
+
+    try:
+        file = await context.bot.get_file(voice.file_id)
+        buf = await file.download_as_bytearray()
+        transcript = transcribe_voice(bytes(buf), channel_key=key)
+    except Exception:
+        logger.exception("Voice download/transcribe error")
+        await update.message.reply_text("i couldn't understand the voice message — can you type it?")
+        return
+
+    if not transcript:
+        await update.message.reply_text("i couldn't make out what you said — can you try again or type it?")
+        return
+
+    try:
+        response = get_response(key, transcript)
+        await update.message.reply_text(response)
+    except Exception:
+        logger.exception("Error generating response after voice")
+        await update.message.reply_text("um... i got confused. can you say that again?")
+
+
 def main() -> None:
     if not TELEGRAM_TOKEN:
         raise RuntimeError("TELEGRAM_BOT_TOKEN not set in .env")
@@ -207,6 +242,7 @@ def main() -> None:
     app.add_handler(CommandHandler("review", review))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_handler(MessageHandler(filters.VOICE, handle_voice))
 
     logger.info("Grace-Mar Telegram bot starting...")
     app.run_polling(allowed_updates=Update.ALL_TYPES)

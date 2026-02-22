@@ -43,7 +43,7 @@ Each item is a short summary (e.g., *"new interest in volcanoes"*, *"learned abo
 
 ## Chatting With Grace-Mar
 
-The main use is still **chat** — ask questions, talk about stories, look things up. Grace-Mar will answer in the child’s voice using only what’s in the record.
+The main use is still **chat** — ask questions, talk about stories, look things up. Grace-Mar will answer in the child's voice using only what's in the record. You can also send **voice messages** in Telegram; they are transcribed and processed like typed text (including "we did X" activity reports) — ask questions, talk about stories, look things up. Grace-Mar will answer in the child’s voice using only what’s in the record.
 
 Other useful commands:
 

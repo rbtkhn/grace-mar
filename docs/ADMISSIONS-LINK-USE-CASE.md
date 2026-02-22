@@ -104,10 +104,10 @@ Same as today: **only what is in the Record**. Knowledge boundary applies. The f
 
 ## Implementation Plan (Phased)
 
-### Phase 1 — Foundation
-- [ ] Extend miniapp/server to accept `user_id` or `token` in URL (e.g. `?user=pilot-001` or `?t=<token>`).
-- [ ] Ensure interview sessions use a distinct channel_key (e.g. `interview:token-xyz`) so they are not archived to the main ARCHIVE or pipeline.
-- [ ] Document "interview mode" in prompt: optional intro line ("I'm here so you can learn about me") and read-only behavior.
+### Phase 1 — Foundation ✓
+- [x] Extend miniapp/server to accept interview mode via URL: `/i/<token>`, `/me/<user_id>`, `?mode=interview`, or `?t=<token>`.
+- [x] Interview sessions use `channel_key: interview`; exchanges are **not** archived (read-only for reviewer).
+- [x] Interview landing shows different intro: "This is Grace-Mar's cognitive fork... Ask anything to get to know her. Your questions are not saved."
 
 ### Phase 2 — Shareable links
 - [ ] Token generation: create time-limited tokens for a user; store mapping (token → user_id, expiry).

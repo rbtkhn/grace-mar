@@ -169,6 +169,18 @@ def index():
     return send_from_directory("miniapp", "index.html")
 
 
+@app.route("/i/<token>")
+def interview_by_token(token: str):
+    """Shareable interview link — reviewer chats with fork, exchanges not archived."""
+    return send_from_directory("miniapp", "index.html")
+
+
+@app.route("/me/<user_id>")
+def interview_by_user(user_id: str):
+    """Per-user interview link (e.g. /me/pilot-001). Exchanges not archived."""
+    return send_from_directory("miniapp", "index.html")
+
+
 @app.after_request
 def _cors(resp):
     resp.headers["Access-Control-Allow-Origin"] = "*"
@@ -189,11 +201,14 @@ def ask():
         return jsonify({"error": "message required"}), 400
     history = data.get("history") or []
     grounded = data.get("mode") == "grounded"
+    interview = data.get("interview") is True
 
     try:
+        channel_key = "interview" if interview else "miniapp"
         if grounded:
-            reply = run_grounded_response(message, channel_key="miniapp", history=history)
-            _archive_miniapp(message, reply, is_lookup=False)
+            reply = run_grounded_response(message, channel_key=channel_key, history=history)
+            if not interview:
+                _archive_miniapp(message, reply, is_lookup=False)
             return jsonify({"response": reply})
 
         # Affirmative follow-up to "do you want me to look it up?" → run lookup
@@ -220,7 +235,8 @@ def ask():
             temperature=0.9,
         )
         reply = response.choices[0].message.content.strip()
-        _archive_miniapp(message, reply, is_lookup=False)
+        if not interview:
+            _archive_miniapp(message, reply, is_lookup=False)
         return jsonify({"response": reply})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
