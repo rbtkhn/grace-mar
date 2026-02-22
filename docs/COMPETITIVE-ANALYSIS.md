@@ -68,9 +68,9 @@
 - 15,000+ monthly actives
 - 50-60% professionals, 25% students
 
-## Differentiation: cog-em vs. Market
+## Differentiation: Grace-Mar vs. Market
 
-| Dimension | Competitors | cog-em |
+| Dimension | Competitors | Grace-Mar |
 |-----------|-------------|--------|
 | **Direction** | System captures *from* you | Student teaches *to* system |
 | **Function** | Productivity/memory tool | Living credential |

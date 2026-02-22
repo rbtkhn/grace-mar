@@ -1,6 +1,6 @@
-# cog-em Architecture
+# GRACE-MAR Architecture
 
-**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
+**Governed by**: [GRACE-MAR-CORE v2.0](GRACE-MAR-CORE.md)
 
 ---
 
@@ -167,7 +167,7 @@ SKILLS/
 
 ### Activity-Based Growth
 
-The user doesn't explicitly "teach" skills — they **do** things. cog-em observes and records.
+The user doesn't explicitly "teach" skills — they **do** things. Grace-Mar observes and records.
 
 ```
 Activity: Daily journal entry (WRITE)
@@ -566,7 +566,7 @@ GitHub repository is the authoritative record store. Git IS the fork.
 ### Storage Model
 
 ```
-GitHub Repository (rbtkhn/cog-em)
+GitHub Repository (rbtkhn/grace-mar)
 ├── docs/                    # Templates and governance
 ├── users/
 │   └── pilot-001/

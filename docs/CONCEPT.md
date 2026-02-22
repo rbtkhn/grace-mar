@@ -22,7 +22,7 @@ A **cognitive fork**: a versioned, evidence-grounded record of an individual's c
 
 ### The Fork Metaphor
 
-Like a software fork, cog-em copies the state of a person at a moment in time and then develops independently through its own interactions.
+Like a software fork, Grace-Mar copies the state of a person at a moment in time and then develops independently through its own interactions.
 
 ```
 Real person (main branch):

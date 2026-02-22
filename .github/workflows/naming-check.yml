@@ -1,0 +1,22 @@
+# Fail if deprecated COG-EM naming appears — GRACE-MAR is canonical
+name: Naming check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  naming:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for deprecated COG-EM naming
+        run: |
+          if grep -riE 'cog-em|COG-EM-CORE' --include='*.md' --include='*.yml' --include='*.yaml' --include='*.py' --exclude-dir=.github .; then
+            echo "::error::Found deprecated 'cog-em' or 'COG-EM-CORE'. Use GRACE-MAR / GRACE-MAR-CORE."
+            exit 1
+          fi
+          echo "Naming check passed."

@@ -2,7 +2,7 @@
 
 ## Core Differentiators (Architectural)
 
-| Dimension | Competitors | cog-em |
+| Dimension | Competitors | Grace-Mar |
 |-----------|-------------|--------|
 | **Direction** | System captures from you | Student teaches to system |
 | **Function** | Productivity tool | Living credential |
@@ -16,7 +16,7 @@
 
 **Competitors**: Show achievements, hide gaps.
 
-**cog-em**: Explicitly maps knowledge gaps — what hasn't been learned, where student is weak, what they're working on.
+**Grace-Mar**: Explicitly maps knowledge gaps — what hasn't been learned, where student is weak, what they're working on.
 
 **Why it matters**:
 - Employers value self-awareness
@@ -28,7 +28,7 @@
 
 **Competitors**: Individual-focused.
 
-**cog-em**: Grandparents, parents, mentors can contribute — transmitting values, stories, reasoning patterns, cultural knowledge.
+**Grace-Mar**: Grandparents, parents, mentors can contribute — transmitting values, stories, reasoning patterns, cultural knowledge.
 
 **Why it matters**:
 - Wealthy families invest in cultural transmission
@@ -40,7 +40,7 @@
 
 **Competitors**: Individual experience.
 
-**cog-em**: Learning cohorts where forks can interact — debate, challenge, teach each other.
+**Grace-Mar**: Learning cohorts where forks can interact — debate, challenge, teach each other.
 
 **Why it matters**:
 - Learning is social
@@ -52,7 +52,7 @@
 
 **Competitors**: Either child-only or parent-only.
 
-**cog-em**: Parents have visibility early; control gradually transfers; full ownership at 18.
+**Grace-Mar**: Parents have visibility early; control gradually transfers; full ownership at 18.
 
 **Mechanics**:
 - Age 6-12: Parents see everything
@@ -64,7 +64,7 @@
 
 **Competitors**: Proprietary, locked-in.
 
-**cog-em**: Open standard for cognitive fork data. Export/import. Third-party tools.
+**Grace-Mar**: Open standard for cognitive fork data. Export/import. Third-party tools.
 
 **Why it matters**:
 - GDPR compliance
@@ -76,7 +76,7 @@
 
 **Competitors**: No mentor matching.
 
-**cog-em**: Connect students with experts who query their fork and provide targeted guidance.
+**Grace-Mar**: Connect students with experts who query their fork and provide targeted guidance.
 
 **Why it matters**:
 - Wealthy families already pay for tutors
@@ -88,7 +88,7 @@
 
 **Competitors**: Credentials from student only.
 
-**cog-em**: Employers/universities can add verified attestations after interviews, internships, projects.
+**Grace-Mar**: Employers/universities can add verified attestations after interviews, internships, projects.
 
 **Why it matters**:
 - External validation
@@ -100,7 +100,7 @@
 
 **Competitors**: Don't discuss cheating.
 
-**cog-em**: Explicitly show verification status. Make anti-cheating visible and auditable.
+**Grace-Mar**: Explicitly show verification status. Make anti-cheating visible and auditable.
 
 **Why it matters**:
 - Proactive trust-building
@@ -111,7 +111,7 @@
 
 **Competitors**: Focus on knowledge/skills only.
 
-**cog-em**: Encodes values — ethical reasoning, cultural identity, priorities.
+**Grace-Mar**: Encodes values — ethical reasoning, cultural identity, priorities.
 
 **Why it matters**:
 - Employers hire for "culture fit"

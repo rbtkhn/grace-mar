@@ -6,7 +6,7 @@ Status: ACTIVE
 Version: 2.0
 Last Update: February 2026
 
-**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
+**Governed by**: [GRACE-MAR-CORE v2.0](GRACE-MAR-CORE.md)
 
 ---
 

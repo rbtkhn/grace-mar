@@ -1,10 +1,10 @@
-# Parent Brief — COG-EM Pilot
+# Parent Brief — Grace-Mar Pilot
 
 For the parent/guardian of the pilot student.
 
 ---
 
-## What is COG-EM?
+## What is Grace-Mar?
 
 A **cognitive emulator** is a system your child teaches. Unlike typical apps that teach kids, this one learns *from* them. Over time it becomes a **cognitive fork** — a versioned record of how they think, what they know, and who they are, growing independently from a snapshot in time.
 
@@ -40,7 +40,7 @@ The first session is a short survey to get to know your child. Four questions:
 - Parent/guardian consent is required for participation
 - Your child may stop at any time
 - You may request full deletion of all data at any time
-- Milestone re-consent at ages 13, 16, 18 (per COG-EM-CORE)
+- Milestone re-consent at ages 13, 16, 18 (per GRACE-MAR-CORE)
 
 ---
 

@@ -6,7 +6,7 @@ Status: ACTIVE
 Version: 2.0
 Last Update: February 2026
 
-**Governed by**: [COG-EM-CORE v2.0](COG-EM-CORE.md)
+**Governed by**: [GRACE-MAR-CORE v2.0](GRACE-MAR-CORE.md)
 
 ---
 
@@ -29,7 +29,7 @@ The SKILLS module is NOT:
 - A teaching interface
 
 SKILLS are demonstrated through real activity. The user DOES things;
-cog-em observes, records, and infers capability from accumulated evidence.
+Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 ---
 
@@ -39,7 +39,7 @@ All skills organize under four fundamental cognitive modes. The fourth (BUSINESS
 
 ### WRITE (Production)
 
-The user produces something. cog-em captures and analyzes.
+The user produces something. Grace-Mar captures and analyzes.
 
 **Activities:**
 - Daily journal entries
@@ -50,7 +50,7 @@ The user produces something. cog-em captures and analyzes.
 - Lists, notes, plans
 - Code, designs, diagrams
 
-**What cog-em captures:**
+**What Grace-Mar captures:**
 - Vocabulary (words used, range, sophistication)
 - Sentence complexity (structure, length, variety)
 - Narrative style (how they tell stories)
@@ -60,13 +60,13 @@ The user produces something. cog-em captures and analyzes.
 - Growth trajectory (improvement over time)
 
 **Example activity:**
-> Student writes daily journal. cog-em ingests each entry.
+> Student writes daily journal. Grace-Mar ingests each entry.
 > After 30 days: vocabulary profile, style fingerprint, 
 > topic map, emotional range, complexity baseline.
 
 ### READ (Intake)
 
-The user consumes content. cog-em tracks and assesses comprehension.
+The user consumes content. Grace-Mar tracks and assesses comprehension.
 
 **Activities:**
 - Books read (with summaries, reactions)
@@ -77,7 +77,7 @@ The user consumes content. cog-em tracks and assesses comprehension.
 - Maps, diagrams interpreted
 - Conversations (what they took in)
 
-**What cog-em captures:**
+**What Grace-Mar captures:**
 - Content consumed (what they read/watched)
 - Comprehension (can they summarize, explain?)
 - Inference (can they predict, conclude?)
@@ -87,13 +87,13 @@ The user consumes content. cog-em tracks and assesses comprehension.
 - Reading velocity (speed, volume)
 
 **Example activity:**
-> Student reads chapter book, tells cog-em what happened.
-> cog-em captures: comprehension level, new vocabulary,
+> Student reads chapter book, tells Grace-Mar what happened.
+> Grace-Mar captures: comprehension level, new vocabulary,
 > character understanding, plot inference, emotional response.
 
 ### IMAGINE (Creation/Exploration)
 
-The user thinks beyond what's given. cog-em captures creative and reasoning capability.
+The user thinks beyond what's given. Grace-Mar captures creative and reasoning capability.
 
 **Activities:**
 - Creative play and scenarios
@@ -112,7 +112,7 @@ The user thinks beyond what's given. cog-em captures creative and reasoning capa
 - Photo upload (things they built/made)
 - Video (creative performances)
 
-**What cog-em captures:**
+**What Grace-Mar captures:**
 - Originality (novel ideas, combinations)
 - Reasoning (logical steps, if-then)
 - Pattern-finding (connections, analogies)
@@ -125,18 +125,18 @@ The user thinks beyond what's given. cog-em captures creative and reasoning capa
 
 **Example activity (verbal):**
 > Student plays "what would happen if dinosaurs came back?"
-> cog-em captures: reasoning chains, creative elements,
+> Grace-Mar captures: reasoning chains, creative elements,
 > knowledge applied, narrative construction.
 
 **Example activity (image upload):**
 > Student uploads drawing of "my family as superheroes"
-> cog-em captures: subject matter (family, superheroes),
+> Grace-Mar captures: subject matter (family, superheroes),
 > elaboration (detail level), originality (power choices),
 > interests (superheroes), relationships (who's included).
 
 ### BUSINESS (Planning, Execution, Exchange)
 
-The user engages in planning, execution, or exchange. cog-em captures business-relevant capability. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
+The user engages in planning, execution, or exchange. Grace-Mar captures business-relevant capability. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
 
 **Activities:**
 - Lemonade stand, crafts sale, bake sale
@@ -146,7 +146,7 @@ The user engages in planning, execution, or exchange. cog-em captures business-r
 - "We did X" involving planning, delivery, or exchange
 - Any artifact showing goals, timelines, customer feedback, or financial outcome
 
-**What cog-em captures:**
+**What Grace-Mar captures:**
 - Planning (goals, timelines, milestones)
 - Execution (follow-through, deliverables)
 - Customer/audience (who to serve, feedback received)
@@ -157,7 +157,7 @@ The user engages in planning, execution, or exchange. cog-em captures business-r
 
 **Example activity:**
 > Student participates in class food truck project. "We did X" + artifact (business plan, P&L).
-> cog-em captures: planning level, execution follow-through, financial understanding, teamwork.
+> Grace-Mar captures: planning level, execution follow-through, financial understanding, teamwork.
 
 **Integration with zero-human business vision:** BUSINESS pillar grows from evidence; when sufficient, the Record (including BUSINESS) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the pillar reflects demonstrated capability, not aspiration.
 
