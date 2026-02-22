@@ -294,6 +294,8 @@ Grace-Mar exposes:
 
 | Document | Use For |
 |----------|---------|
+| [WHITE-PAPER](WHITE-PAPER.md) | Published thought-leadership; full narrative |
+| [BUSINESS-PROSPECTUS](BUSINESS-PROSPECTUS.md) | Investor/partner summary |
 | [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) | Invariants, terminology, philosophical grounding |
 | [ARCHITECTURE](ARCHITECTURE.md) | Technical design, pipeline, modules |
 | [OPENCLAW-INTEGRATION](OPENCLAW-INTEGRATION.md) | Integration patterns, staging contract |

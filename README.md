@@ -113,6 +113,8 @@ grace-mar/
 |----------|---------|
 | [GRACE-MAR-CORE](docs/GRACE-MAR-CORE.md) | Canonical governance — absolute authority |
 | [Architecture](docs/ARCHITECTURE.md) | Full system design including observation window, pipeline, mind model |
+| [White Paper](docs/WHITE-PAPER.md) | Full narrative — identity gap, Grace-Mar model, differentiation |
+| [Business Prospectus](docs/BUSINESS-PROSPECTUS.md) | Investor/partner document — problem, solution, market, ask |
 | [Design Notes](docs/DESIGN-NOTES.md) | White paper & business proposal input (positioning, agent-web insights) |
 | [AGENTS.md](AGENTS.md) | Guardrails for AI coding assistants |
 | [Portability](docs/PORTABILITY.md) | School transfer, ownership, handoff workflow |
@@ -211,6 +213,10 @@ Read [AGENTS.md](AGENTS.md) before making any changes. Critical constraints:
 - **Never commit profile changes** without user approval through the gated pipeline
 - **"We [did X]"** from the user is a pipeline invocation — go straight to signal detection
 - **Update all affected files together** when integrating approved candidates
+
+## Credits
+
+The ideas behind Grace-Mar draw on the work of: Alexander Wissner-Gross (causal entropic forces), Peter Diamandis (abundance), Nick Bostrom (superintelligence), Ray Kurzweil (singularity), Brian Roemmele (multimodal AI), Scott Adams (systems thinking), Julian Jaynes (bicameral mind), and Satoshi Nakamoto (decentralized trust).
 
 ## License
 

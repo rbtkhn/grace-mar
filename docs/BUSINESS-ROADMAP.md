@@ -86,8 +86,10 @@ Not essential to system operation; required for go-to-market in child/minor segm
 
 | Document | Relevance |
 |----------|-----------|
+| [White Paper](WHITE-PAPER.md) | Full narrative, differentiation, trust primitive |
+| [Business Prospectus](BUSINESS-PROSPECTUS.md) | Investor/partner summary |
 | [Design Roadmap](DESIGN-ROADMAP.md) | Product/feature design (email, newsletters, X, integrations) |
-| [Design Notes](DESIGN-NOTES.md) | White paper, positioning, agent-web insights |
+| [Design Notes](DESIGN-NOTES.md) | White paper input, positioning, agent-web insights |
 | [Competitive Analysis](COMPETITIVE-ANALYSIS.md) | Market landscape |
 | [Differentiation](DIFFERENTIATION.md) | Competitive moats |
 | [Market Research Alpha/Khan](MARKET-RESEARCH-ALPHA-KHAN.md) | Alpha alternatives, cost comparison |
