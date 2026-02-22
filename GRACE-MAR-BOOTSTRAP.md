@@ -181,6 +181,9 @@ grace-mar/
 │   ├── SIMPLE-USER-INTERFACE.md # Chat workflow for families (no GitHub)
 │   ├── ADMISSIONS-LINK-USE-CASE.md # Share link for admissions/employers to chat with fork
 │   ├── PRIVACY-REDACTION.md        # School/public views, redaction policy
+│   ├── YOUTUBE-PLAYLIST-DESIGN.md  # Playlist building, watched-video detection (history polling)
+│   ├── DESIGN-ROADMAP.md     # Product/feature design (email, newsletters, X account)
+│   ├── BUSINESS-ROADMAP.md   # Strategy, monetization, child safety & privacy
 │   ├── DESIGN-NOTES.md       # White paper & business proposal input (positioning, insights)
 │   ├── MARKET-RESEARCH-ALPHA-KHAN.md  # Alpha alternatives, Khan Academy, cost comparison
 │   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
@@ -206,6 +209,22 @@ grace-mar/
 
 ---
 
+## LAST SESSION SUMMARY (Feb 2026)
+
+**Design / business roadmap:**
+- Split into `docs/DESIGN-ROADMAP.md` (product/feature design) and `docs/BUSINESS-ROADMAP.md` (strategy, monetization, go-to-market)
+- DESIGN-ROADMAP: Grace-Mar email, outbound curated newsletter, inbound newsletter processing, X (Twitter) follow-only account
+- BUSINESS-ROADMAP: positioning, monetization angles, priority items, metrics, risks; **child safety & privacy (COPPA, PII)** moved here (not essential to system operation)
+- `docs/YOUTUBE-PLAYLIST-DESIGN.md`: added Section 7 — Watched Video Detection via history polling (OAuth → poll → filter by recommended → stage → approve → LIBRARY)
+
+**OpenClaw research (pending write-up):**
+- OpenClaw: personal AI assistant, runs on your machine, WhatsApp/Telegram/Discord/Signal/iMessage, persistent memory, skills/plugins, open source. See https://openclaw.ai/
+- Chinese integrations: WeChat Official Account, WeCom (openclaw-plugin-wecom), personal WeChat (openclaw-wechat), DingTalk (dingtalk-openclaw-connector)
+- Grace-Mar already has `docs/OPENCLAW-INTEGRATION.md` — Record as identity, session continuity, staging automation
+- **Next step:** Consider adding DESIGN-ROADMAP entry for OpenClaw + Chinese app integration ideas (WeChat, DingTalk, Xiaohongshu, etc.)
+
+---
+
 ## CURRENT STATUS
 
 **Completed:**
@@ -223,6 +242,8 @@ grace-mar/
 - [x] **Seed Phase 4** — Creativity (8 artworks analyzed + child Q&A)
 - [x] **Seed Phase 5** — Writing voice (3 writing samples + child Q&A)
 - [x] **Seed Phase 6** — Personality core (5 targeted questions, child-reported)
+- [x] DESIGN-ROADMAP + BUSINESS-ROADMAP split (email, newsletters, X, child safety)
+- [x] YOUTUBE-PLAYLIST-DESIGN: watched video detection via history polling
 
 **All containers have data. Seeding is complete.**
 
@@ -231,6 +252,7 @@ grace-mar/
 - [ ] Begin regular WRITE activities
 - [ ] Begin READ evidence logging
 - [ ] Create age-6 snapshot (git tag)
+- [ ] Optional: OpenClaw + Chinese apps integration design (add to DESIGN-ROADMAP)
 
 ---
 

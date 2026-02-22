@@ -118,6 +118,9 @@ grace-mar/
 | [Simple User Interface](docs/SIMPLE-USER-INTERFACE.md) | Chat-based workflow for families (no GitHub) |
 | [Admissions Link Use Case](docs/ADMISSIONS-LINK-USE-CASE.md) | Share link so admissions/employers can chat with applicant's fork |
 | [Privacy and Redaction](docs/PRIVACY-REDACTION.md) | School/public views, what gets excluded |
+| [YouTube Playlist Design](docs/YOUTUBE-PLAYLIST-DESIGN.md) | Build playlists from Record (curiosity, goals) |
+| [Design Roadmap](docs/DESIGN-ROADMAP.md) | Product/feature design — Grace-Mar email, newsletters, X account |
+| [Business Roadmap](docs/BUSINESS-ROADMAP.md) | Strategy, monetization, go-to-market |
 | [Concept](docs/CONCEPT.md) | Full concept explanation |
 | [Pilot Plan](docs/PILOT-PLAN.md) | Two-month pilot structure |
 
