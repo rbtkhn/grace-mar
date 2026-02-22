@@ -225,10 +225,12 @@ def _load_library() -> list[dict]:
         title_m = re.search(r'title:\s*["\']([^"\']+)["\']', block)
         scope_m = re.search(r"scope:\s*\[([^\]]*)\]", block)
         status_m = re.search(r"status:\s*(\w+)", block)
+        volume_m = re.search(r'volume:\s*["\']([^"\']+)["\']', block)
         if title_m and (status_m is None or status_m.group(1) == "active"):
             scope = scope_m.group(1).split(",") if scope_m else []
             scope = [s.strip() for s in scope if s.strip()]
-            entries.append({"title": title_m.group(1), "scope": scope})
+            volume = volume_m.group(1) if volume_m else None
+            entries.append({"title": title_m.group(1), "scope": scope, "volume": volume})
     return entries
 
 
@@ -237,7 +239,8 @@ def _library_summary() -> str:
     lines = []
     for e in entries:
         scope_str = ", ".join(e["scope"]) if e["scope"] else "general"
-        lines.append(f"- {e['title']}: {scope_str}")
+        label = f"{e['title']} (in {e['volume']})" if e.get("volume") else e["title"]
+        lines.append(f"- {label}: {scope_str}")
     return "\n".join(lines) if lines else "(no books)"
 
 

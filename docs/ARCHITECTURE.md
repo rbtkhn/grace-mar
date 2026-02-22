@@ -574,6 +574,8 @@ GitHub Repository (rbtkhn/grace-mar)
 │       ├── SKILLS.md        # Capability record
 │       ├── EVIDENCE.md      # Activity logs
 │       ├── SESSION-LOG.md   # Interaction history
+│       ├── ARCHIVE.md       # Raw conversation log (private)
+│       ├── JOURNAL.md       # Daily highlights (public-suitable, shareable)
 │       └── artifacts/       # Raw files (writing, artwork)
 └── (future users...)
 ```
@@ -595,6 +597,10 @@ Every session that updates user data:
 1. Update relevant files (SELF, SKILLS, EVIDENCE)
 2. Commit with descriptive message
 3. Push to GitHub
+
+### JOURNAL (Shareable Daily Highlights)
+
+JOURNAL.md consolidates daily highlights of activity — what Grace-Mar read, wrote, created, learned. Public-suitable; contrasts with ARCHIVE (raw conversation log, private). Sources: EVIDENCE, SESSION-LOG. See [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md). Profile tab order: Knowledge | Skills | Curiosity | Personality | Library | Journal.
 
 ### Snapshots
 

@@ -27,10 +27,12 @@ entries:
     title: "Example Book Title"
     author: "Author Name"
     isbn: ""                      # optional: 10- or 13-digit ISBN (for lookup, disambiguation)
-    type: book                    # book | article | reference | other
+    type: book                    # book | story | article | reference | other
+    volume: ""                    # for type: story — the volume that contains this story
     status: active                # active | deprecated
     scope: []                     # optional: topics this source covers (for query routing)
-    read_id: null                 # optional: READ-XXXX if also in Reading List
+    read_status: unread           # read | unread — has Grace-Mar consumed this?
+    read_id: null                 # optional: READ-XXXX if also in Reading List (evidence link)
     source: manual                # manual | path | url (for future RAG/indexing)
     pd_url: ""                    # optional: Project Gutenberg, Wikisource, etc.
     added_at: 2026-02-XX
@@ -47,10 +49,12 @@ entries:
 | **title** | Yes | Full title |
 | **author** | No | Author or editor (omit for reference works) |
 | **isbn** | No | 10- or 13-digit ISBN (with or without hyphens). Use for catalog lookups, disambiguation, future RAG. Older or non-trade books may omit. |
-| **type** | Yes | `book`, `article`, `reference`, `other` |
+| **type** | Yes | `book`, `story`, `article`, `reference`, `other` |
+| **volume** | No | For `type: story` — the book/collection that contains this story (e.g. "Usborne Illustrated Grimm's Fairy Tales") |
 | **status** | Yes | `active` (queryable) or `deprecated` (excluded from lookup) |
 | **scope** | No | List of topics (e.g. `[space, science, animals]`) for query routing |
-| **read_id** | No | READ-XXXX if this book is in EVIDENCE Reading List |
+| **read_status** | Yes | `read` or `unread` — has Grace-Mar consumed this? Default `unread` for new entries. |
+| **read_id** | No | READ-XXXX if this book is in EVIDENCE Reading List (evidence link when consumed) |
 | **source** | Yes | `manual` (no indexed content yet), `path`, or `url` for future RAG |
 | **pd_url** | No | URL to complete public domain text (Project Gutenberg, Wikisource) — for retrieval and RAG |
 | **added_at** | Yes | ISO date when added |

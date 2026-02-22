@@ -99,7 +99,8 @@ grace-mar/
         ├── EVIDENCE.md              # Activity log
         ├── SESSION-LOG.md           # Interaction history
         ├── PENDING-REVIEW.md        # Pipeline staging
-        ├── ARCHIVE.md               # Conversation archive (Telegram, Mini App)
+        ├── ARCHIVE.md               # Conversation archive (Telegram, Mini App) — private
+        ├── JOURNAL.md               # Daily highlights — public-suitable, shareable
         ├── artifacts/               # Raw files (writing, artwork)
         ├── SEED-PHASE-2-SURVEY.md   # Seed phase 2 survey data
         ├── SEED-PHASE-3-SURVEY.md   # Seed phase 3 survey data

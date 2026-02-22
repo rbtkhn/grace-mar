@@ -16,6 +16,7 @@ entries:
     isbn: "9780746042069"
     type: reference
     status: active
+    read_status: unread
     scope: [geography, world atlas, maps]
     source: manual
     added_at: 2026-02-20
@@ -27,6 +28,7 @@ entries:
     isbn: "9781836052555"
     type: reference
     status: active
+    read_status: unread
     scope: [history, world history, maps, time charts]
     source: manual
     added_at: 2026-02-20
@@ -38,6 +40,7 @@ entries:
     isbn: "9781805079019"
     type: reference
     status: active
+    read_status: unread
     scope: [science, gravity, flight, genes, DNA]
     source: manual
     added_at: 2026-02-20
@@ -49,6 +52,7 @@ entries:
     isbn: "9781474986441"
     type: book
     status: active
+    read_status: unread
     scope: [mythology, Greek myths, ancient Greece]
     pd_url: "https://www.gutenberg.org/ebooks/22381"
     source: manual
@@ -61,6 +65,7 @@ entries:
     isbn: "9781409598930"
     type: book
     status: active
+    read_status: unread
     scope: [mythology, Greek, Odyssey, Homer]
     pd_url: "https://www.gutenberg.org/ebooks/1727"
     source: manual
@@ -73,6 +78,7 @@ entries:
     isbn: "9781409596714"
     type: book
     status: active
+    read_status: unread
     scope: [mythology, India, stories, folktales]
     pd_url: "https://www.gutenberg.org/ebooks/2388"
     source: manual
@@ -85,6 +91,7 @@ entries:
     isbn: "9781409522300"
     type: book
     status: active
+    read_status: unread
     scope: [adventure, stories]
     pd_url: "https://www.gutenberg.org/ebooks/1184"
     source: manual
@@ -97,6 +104,7 @@ entries:
     isbn: "9781409580980"
     type: book
     status: active
+    read_status: unread
     scope: [Bible, stories, religion]
     pd_url: "https://www.gutenberg.org/ebooks/10"
     source: manual
@@ -109,6 +117,7 @@ entries:
     isbn: "9781474947077"
     type: book
     status: active
+    read_status: unread
     scope: [China, stories, folktales]
     pd_url: "https://www.gutenberg.org/ebooks/25240"
     source: manual
@@ -121,6 +130,7 @@ entries:
     isbn: "9781409596738"
     type: book
     status: active
+    read_status: unread
     scope: [mythology, world myths, folktales]
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     source: manual
@@ -132,12 +142,13 @@ entries:
     author: "Usborne"
     isbn: "9781474922050"
     type: book
-    status: active
+    status: deprecated
+    read_status: unread
     scope: [ballet, dance, stories]
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     source: manual
     added_at: 2026-02-20
-    notes: "Ordered Sept 2025."
+    notes: "Replaced by story-level entries LIB-0052 to LIB-0063. Ordered Sept 2025."
 
   - id: LIB-0012
     title: "Usborne Illustrated Classics: Secret Garden & Other Stories"
@@ -145,6 +156,7 @@ entries:
     isbn: "9781409586562"
     type: book
     status: active
+    read_status: unread
     scope: [classics, Secret Garden, stories]
     pd_url: "https://www.gutenberg.org/ebooks/17396"
     source: manual
@@ -157,6 +169,7 @@ entries:
     isbn: "9781409538875"
     type: book
     status: active
+    read_status: unread
     scope: [fables, Aesop, stories]
     pd_url: "https://www.gutenberg.org/ebooks/21"
     source: manual
@@ -169,6 +182,7 @@ entries:
     isbn: "9781409531678"
     type: book
     status: active
+    read_status: unread
     scope: [mythology, Greek myths, stories]
     pd_url: "https://www.gutenberg.org/ebooks/11582"
     source: manual
@@ -181,6 +195,7 @@ entries:
     isbn: "9781409550723"
     type: book
     status: active
+    read_status: unread
     scope: [mythology, Norse, Vikings, stories]
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     source: manual
@@ -192,12 +207,13 @@ entries:
     author: "Usborne"
     isbn: "9781409523390"
     type: book
-    status: active
+    status: deprecated
+    read_status: unread
     scope: [fairy tales, Hans Christian Andersen, stories]
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     source: manual
     added_at: 2026-02-20
-    notes: "Ordered Sept 2025."
+    notes: "Replaced by story-level entries LIB-0040 to LIB-0051. Ordered Sept 2025."
 
   - id: LIB-0017
     title: "Usborne Illustrated Tales of King Arthur"
@@ -205,6 +221,7 @@ entries:
     isbn: "9781409563266"
     type: book
     status: active
+    read_status: unread
     scope: [King Arthur, legends, stories, mythology]
     pd_url: "https://www.gutenberg.org/ebooks/610"
     source: manual
@@ -217,6 +234,7 @@ entries:
     isbn: "9781409522232"
     type: book
     status: active
+    read_status: unread
     scope: [Shakespeare, plays, stories]
     pd_url: "https://www.gutenberg.org/ebooks/100"
     source: manual
@@ -228,12 +246,13 @@ entries:
     author: "Usborne"
     isbn: "9780746098547"
     type: book
-    status: active
+    status: deprecated
+    read_status: unread
     scope: [fairy tales, Grimm, stories]
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     source: manual
     added_at: 2026-02-20
-    notes: "Ordered Sept 2025."
+    notes: "Replaced by story-level entries LIB-0025 to LIB-0039. Ordered Sept 2025."
 
   - id: LIB-0020
     title: "Usborne Complete Dickens"
@@ -241,6 +260,7 @@ entries:
     isbn: "9781474938136"
     type: book
     status: active
+    read_status: unread
     scope: [Dickens, classics, literature]
     pd_url: "https://www.gutenberg.org/ebooks/author/37"
     source: manual
@@ -253,6 +273,7 @@ entries:
     isbn: "9781409533009"
     type: book
     status: active
+    read_status: unread
     scope: [Arabian Nights, tales, Middle East, stories]
     pd_url: "https://www.gutenberg.org/ebooks/128"
     source: manual
@@ -265,6 +286,7 @@ entries:
     isbn: "9781409598770"
     type: book
     status: active
+    read_status: unread
     scope: [Shakespeare, plays, stories, classics]
     pd_url: "https://www.gutenberg.org/ebooks/100"
     source: manual
@@ -277,6 +299,7 @@ entries:
     isbn: "9781474938143"
     type: book
     status: active
+    read_status: unread
     scope: [Jane Austen, novels, classics, literature]
     pd_url: "https://www.gutenberg.org/ebooks/author/68"
     source: manual
@@ -289,11 +312,402 @@ entries:
     isbn: ""
     type: reference
     status: active
+    read_status: unread
     scope: [encyclopedia, reference, general knowledge]
     pd_url: "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica"
     source: manual
     added_at: 2026-02-20
     notes: "11th edition — most prestigious public domain encyclopedia. Full text on Wikisource."
+
+  - id: LIB-0025
+    title: "Snow White and Rose Red"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0026
+    title: "Little Red Riding Hood"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0027
+    title: "Rapunzel"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0028
+    title: "Sleeping Beauty"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0029
+    title: "The Frog Prince"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0030
+    title: "The Musicians of Bremen"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0031
+    title: "Rumpelstiltskin"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0032
+    title: "Tom Thumb"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0033
+    title: "Hansel and Gretel"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0034
+    title: "The Twelve Dancing Princesses"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0035
+    title: "The Bear and the Wren"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0036
+    title: "King Thrushbeard"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0037
+    title: "The Goose Girl"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0038
+    title: "The Elves and the Shoemaker"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0039
+    title: "Snow White and the Seven Dwarfs"
+    type: story
+    volume: "Usborne Illustrated Grimm's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Grimm, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0040
+    title: "The Princess and the Pea"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0041
+    title: "The Emperor's New Clothes"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0042
+    title: "Thumbelina"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0043
+    title: "The Ugly Duckling"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0044
+    title: "The Little Mermaid"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0045
+    title: "The Emperor and the Nightingale"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0046
+    title: "The Flying Trunk"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0047
+    title: "The Brave Tin Soldier"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0048
+    title: "The Wild Swans"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0049
+    title: "The Little Fir Tree"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0050
+    title: "The Tinderbox"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0051
+    title: "The Snow Queen"
+    type: story
+    volume: "Usborne Illustrated Hans Christian Andersen's Fairy Tales"
+    status: active
+    read_status: unread
+    scope: [fairy tales, Hans Christian Andersen, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0052
+    title: "Cinderella"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0053
+    title: "Swan Lake"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0054
+    title: "Sleeping Beauty"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0055
+    title: "Don Quixote"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0056
+    title: "Coppélia"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0057
+    title: "The Nutcracker"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0058
+    title: "The Firebird"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0059
+    title: "Giselle"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0060
+    title: "Ondine"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0061
+    title: "La Sylphide"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0062
+    title: "La Fille Mal Gardée"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
+
+  - id: LIB-0063
+    title: "Romeo and Juliet"
+    type: story
+    volume: "Usborne Illustrated Ballet Stories"
+    status: active
+    read_status: unread
+    scope: [ballet, dance, stories]
+    source: manual
+    added_at: 2026-02-22
 ```
 
 ---
@@ -301,8 +715,8 @@ entries:
 ## Metadata
 
 ```yaml
-total_entries: 24
-last_updated: 2026-02-20
+total_entries: 63
+last_updated: 2026-02-22
 ```
 
 ---

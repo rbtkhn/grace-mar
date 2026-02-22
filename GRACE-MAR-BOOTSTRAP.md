@@ -191,6 +191,7 @@ grace-mar/
 │   ├── SELF-TEMPLATE.md      # SELF module governance
 │   ├── SKILLS-TEMPLATE.md    # SKILLS module governance
 │   ├── EVIDENCE-TEMPLATE.md  # Evidence storage governance
+│   ├── JOURNAL-SCHEMA.md    # Journal (daily highlights) governance
 │   ├── CONCEPT.md            # Full concept explanation
 │   ├── PILOT-PLAN.md         # Pilot structure
 │   └── ...                   # Supporting docs
@@ -204,6 +205,8 @@ grace-mar/
         ├── SKILLS.md         # Capability record (seeded)
         ├── EVIDENCE.md       # Activity logs (seeded)
         ├── SESSION-LOG.md    # Interaction history
+        ├── ARCHIVE.md        # Raw conversation log (private)
+        ├── JOURNAL.md        # Daily highlights (public-suitable)
         └── artifacts/        # Raw files (writing samples, artwork)
 ```
 

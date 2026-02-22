@@ -46,6 +46,7 @@ class DashboardData:
     curiosity_samples: list[str]
     personality_samples: list[str]
     library_entries: list[dict]
+    journal_entries: list[dict]
     recent_exchanges: list[dict]
     generated_at: str
     last_pipeline_activity: str
@@ -163,7 +164,7 @@ def parse_archive(content: str, limit: int = 10) -> list[dict]:
 
 
 def parse_library(content: str) -> list[dict]:
-    """Extract active LIBRARY entries (id, title, scope) from LIBRARY.md."""
+    """Extract active LIBRARY entries (id, title, scope, read_status, volume) from LIBRARY.md."""
     entries = []
     blocks = re.split(r'-\s+id:\s+LIB-', content)
     for block in blocks[1:]:  # skip first (header)
@@ -172,12 +173,40 @@ def parse_library(content: str) -> list[dict]:
         title_m = re.search(r'title:\s*["\']([^"\']+)["\']', block)
         scope_m = re.search(r'scope:\s*\[([^\]]*)\]', block)
         status_m = re.search(r'status:\s*(\w+)', block)
+        read_m = re.search(r'read_status:\s*(\w+)', block)
+        volume_m = re.search(r'volume:\s*["\']([^"\']+)["\']', block)
         if status_m and status_m.group(1) != "active":
             continue
         title = title_m.group(1) if title_m else ""
         scope_str = scope_m.group(1) if scope_m else ""
         scope = [s.strip() for s in scope_str.split(",") if s.strip()]
-        entries.append({"id": lib_id, "title": title, "scope": scope})
+        read_status = read_m.group(1) if read_m else "unread"
+        volume = volume_m.group(1) if volume_m else None
+        entries.append({"id": lib_id, "title": title, "scope": scope, "read_status": read_status, "volume": volume})
+    return entries
+
+
+def parse_journal(content: str) -> list[dict]:
+    """Extract JOURNAL entries (date, highlights) from JOURNAL.md. Approved only."""
+    entries = []
+    # Match each entry block: - date: "..." then highlights: then list items
+    for block in re.findall(
+        r'-\s+date:\s*["\']([^"\']+)["\'].*?highlights:\s*\n(.*?)(?=\n\s+source_ids:|\n\s+approved:|\n  -|\Z)',
+        content,
+        re.DOTALL,
+    ):
+        date_str, highlights_block = block
+        # Skip if approved: false (check in full block)
+        full_match = re.search(
+            rf'date:\s*["\']{re.escape(date_str)}["\'].*?approved:\s*(true|false)',
+            content,
+            re.DOTALL,
+        )
+        if full_match and full_match.group(1) == "false":
+            continue
+        bullets = re.findall(r'-\s*"([^"]*)"', highlights_block)
+        if bullets:
+            entries.append({"date": date_str, "highlights": bullets})
     return entries
 
 
@@ -236,6 +265,7 @@ def collect_data() -> DashboardData:
     skills_path = PROFILE_DIR / "SKILLS.md"
     archive_path = PROFILE_DIR / "ARCHIVE.md"
     library_path = PROFILE_DIR / "LIBRARY.md"
+    journal_path = PROFILE_DIR / "JOURNAL.md"
 
     pending_content = pending_path.read_text() if pending_path.exists() else ""
     self_content = self_path.read_text() if self_path.exists() else ""
@@ -243,6 +273,7 @@ def collect_data() -> DashboardData:
     skills_content = skills_path.read_text() if skills_path.exists() else ""
     archive_content = archive_path.read_text() if archive_path.exists() else ""
     library_content = library_path.read_text() if library_path.exists() else ""
+    journal_content = journal_path.read_text() if journal_path.exists() else ""
 
     pending_count, pending_candidates = parse_pending_review(pending_content)
     self_data = parse_self(self_content)
@@ -255,6 +286,7 @@ def collect_data() -> DashboardData:
     curiosity_samples = seed_interests + curiosity_ix
     personality_samples = seed_personality + personality_ix
     library_entries = parse_library(library_content)
+    journal_entries = parse_journal(journal_content)
     recent = parse_archive(archive_content, limit=15)
 
     last_activity = "—"
@@ -325,6 +357,7 @@ def collect_data() -> DashboardData:
         curiosity_samples=curiosity_samples,
         personality_samples=personality_samples,
         library_entries=library_entries,
+        journal_entries=journal_entries,
         recent_exchanges=recent,
         generated_at=datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         last_pipeline_activity=last_activity,
@@ -355,9 +388,17 @@ def render_html(data: DashboardData) -> str:
     .stat { background: var(--bg); padding: 0.35rem 0.5rem; border-radius: 4px; }
     .stat .label { font-size: 0.8rem; color: var(--muted); }
     .stat .value { font-size: 1.1rem; font-weight: 600; }
-    .badge { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8rem; }
+    .badge { display: inline-block; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.35rem; }
     .badge.pending { background: var(--warn); color: var(--bg); }
     .badge.ok { background: var(--success); color: var(--bg); }
+    .badge.read { background: var(--success); color: var(--bg); }
+    .badge.unread { background: var(--muted); color: var(--bg); }
+    .lib-section { list-style: none; margin-left: -1.2rem; font-weight: 600; color: var(--accent); margin-top: 0.5rem; }
+    .lib-section:first-child { margin-top: 0; }
+    .volume { color: var(--muted); font-weight: normal; font-size: 0.9em; }
+    .journal-day { margin-bottom: 0.75rem; }
+    .journal-date { font-weight: 600; color: var(--accent); font-size: 0.9rem; margin-bottom: 0.2rem; }
+    .journal-day ul { margin: 0; padding-left: 1.2rem; font-size: 0.9rem; }
     .candidate { padding: 0.25rem 0; font-size: 0.95rem; }
     .exchange { padding: 0.3rem 0; font-size: 0.9rem; border-bottom: 1px solid var(--bg); word-wrap: break-word; overflow-wrap: break-word; }
     .exchange:last-child { border-bottom: none; }
@@ -422,7 +463,29 @@ def render_html(data: DashboardData) -> str:
     k_samples = "".join(f'<li>{s}</li>' for s in data.knowledge_samples) or '<li class="meta">—</li>'
     c_samples = "".join(f'<li>{s}</li>' for s in data.curiosity_samples) or '<li class="meta">—</li>'
     p_samples = "".join(f'<li>{s}</li>' for s in data.personality_samples) or '<li class="meta">—</li>'
-    lib_samples = "".join(f'<li>{e["title"]}</li>' for e in data.library_entries) or '<li class="meta">—</li>'
+    read_entries = [e for e in data.library_entries if e.get("read_status") == "read"]
+    unread_entries = [e for e in data.library_entries if e.get("read_status") != "read"]
+
+    def _lib_label(e: dict) -> str:
+        if e.get("volume"):
+            return f'{e["title"]} <span class="volume">({e["volume"]})</span>'
+        return e["title"]
+
+    lib_read = "".join(f'<li><span class="badge read">read</span> {_lib_label(e)}</li>' for e in read_entries)
+    lib_unread = "".join(f'<li><span class="badge unread">unread</span> {_lib_label(e)}</li>' for e in unread_entries)
+    lib_samples = (
+        (f'<li class="lib-section">Read ({len(read_entries)})</li>{lib_read}'
+         f'<li class="lib-section">Unread ({len(unread_entries)})</li>{lib_unread}')
+        if data.library_entries
+        else '<li class="meta">—</li>'
+    )
+
+    journal_html = "".join(
+        f'<div class="journal-day"><div class="journal-date">{e["date"]}</div><ul>'
+        + "".join(f'<li>{h}</li>' for h in e["highlights"])
+        + '</ul></div>'
+        for e in reversed(data.journal_entries)
+    ) if data.journal_entries else '<p class="meta">—</p>'
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -449,6 +512,7 @@ def render_html(data: DashboardData) -> str:
                         <button class="tab" data-tab="curiosity">Curiosity</button>
                         <button class="tab" data-tab="personality">Personality</button>
                         <button class="tab" data-tab="library">Library</button>
+                        <button class="tab" data-tab="journal">Journal</button>
                         <button class="tab" data-tab="disclosure">Disclosure</button>
                     </div>
                     <div class="tab-content">
@@ -457,6 +521,7 @@ def render_html(data: DashboardData) -> str:
                         <div class="tab-panel" id="panel-curiosity"><ul>{c_samples}</ul></div>
                         <div class="tab-panel" id="panel-personality"><ul>{p_samples}</ul></div>
                         <div class="tab-panel" id="panel-library"><ul>{lib_samples}</ul></div>
+                        <div class="tab-panel" id="panel-journal"><div class="journal-entries">{journal_html}</div></div>
                         <div class="tab-panel" id="panel-disclosure" style="flex-direction:column; overflow-y:auto;">
                             <p><strong>What&rsquo;s in the fork</strong></p>
                             <ul>
