@@ -1,16 +1,20 @@
 # Telegram Mini App Setup
 
+**Channel roles:**
+- **HTML dashboard** — Read-only. View profile, pipeline, SKILLS, benchmarks. No input, no chat.
+- **Telegram** — Bidirectional. User and Grace-Mar exchange messages; "we did X" invokes the pipeline. The primary conversation channel.
+
 Grace-Mar has two web surfaces:
 
-- **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only.** Served on GitHub Pages.
-- **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser.
+- **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Served on GitHub Pages.
+- **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
 
 ## Architecture
 
 | Surface | Host | URL | Purpose |
 |---------|------|-----|---------|
-| Dashboard | GitHub Pages | `https://<org>.github.io/grace-mar/dashboard/` | Read-only fork view, browser-only |
-| Q&A Mini App | Railway / Render / etc. | `https://grace-mar-qa.railway.app` | Ask Grace-Mar questions, see her knowledge and voice |
+| Dashboard (HTML) | GitHub Pages | `https://<org>.github.io/grace-mar/dashboard/` | Read-only — view profile, pipeline, SKILLS, disclosure |
+| Q&A Mini App | Railway / Render / etc. | `https://grace-mar-qa.railway.app` | Bidirectional — ask Grace-Mar questions, see her voice |
 
 Set `DASHBOARD_MINIAPP_URL` in `bot/.env` to the **Q&A Mini App** URL (not the dashboard). The menu button and `/dashboard` open the Q&A app inside Telegram.
 

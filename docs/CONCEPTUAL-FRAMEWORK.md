@@ -80,6 +80,8 @@
 
 When labor no longer defines value, identity needs new units. The fork uses **knowledge**, **curiosity**, **personality**, and **evidence** — the primitives of who someone is, independent of productivity. These map to IX-A, IX-B, IX-C, and EVIDENCE.
 
+**Recursive learning** — The Record improves itself over time. Each pipeline cycle (capture → stage → approve → merge) refines the model; the updated Record shapes the next cycle (analyst dedup, Voice responses, and—when implemented—proposed activities at the container edge). See [PIPELINE-MAP](PIPELINE-MAP.md#recursive-learning-process).
+
 **Evidence-grounding = confidence-grounding.** The Record traces claims to artifacts — "you wrote this," "you drew this," "you said this." That grounds self-view in demonstrated competence rather than affirmation. Alpha builds confidence through test scores and mastery; the fork builds it through evidence. Different paths to the same outcome: a grounded sense of capability.
 
 ---
@@ -136,7 +138,27 @@ Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mi
 
 ---
 
-## 9. Terminology Quick Reference
+## 9. Sideloading and the Record
+
+**Sideloading** (in transhumanist/digital-immortality discourse) is a practical, LLM-based alternative to full mind uploading. Instead of scanning a brain at neuron level, sideloading builds a detailed digital model of a person from personal data—writings, interviews, preferences, thought patterns—encoded as a structured prompt ("prompt-loader"). The model is iteratively refined via feedback. The result is a "compressed JPEG of a mind": lossy but behaviorally accurate. Not true consciousness transfer; a phenomenological simulacrum for interaction, legacy, or partial "immortality."
+
+**How the Record relates:**
+
+| Sideloading | Grace-Mar Record |
+|-------------|------------------|
+| Builds from personal data | SELF + SKILLS + EVIDENCE = structured, artifact-linked identity |
+| Iterative refinement via feedback | Gated pipeline: user approves every merge |
+| Output: LLM-ready prompt for emulation | Output: Record; Voice renders it in conversation |
+| "Predictive facts" (values, quirks, style) | IX-A (knowledge), IX-B (curiosity), IX-C (personality) |
+| Often built posthumously from public data | Built during life; user controls what enters |
+
+**The Record as sideload source:** The Record is an ideal input for a sideload. It is evidence-grounded (no hallucinated traits), user-approved (no auto-merge), and portable. Exporting the Record into an LLM sideload for emulation fits the agent-web trust primitive: the Record remains sovereign; the sideload is a downstream consumer. The gate stays: nothing enters the Record without approval; the sideload inherits that discipline.
+
+**Distinction:** The Record's purpose is the *documented self*—identity infrastructure, not emulation per se. Sideloading's purpose is emulation. The Record can *feed* a sideload; it does not *become* one. The Record is primary; sideload export is optional.
+
+---
+
+## 10. Terminology Quick Reference
 
 **Preferred:** Record, Voice. Technical synonyms: fork, bot.
 
@@ -156,7 +178,7 @@ Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mi
 
 ---
 
-## 10. File Map for AI Parsing
+## 11. File Map for AI Parsing
 
 ```
 AGENTS.md                  → AI guardrails, rules, what not to do

@@ -118,6 +118,7 @@ grace-mar/
 | Document | Purpose |
 |----------|---------|
 | [GRACE-MAR-CORE](docs/GRACE-MAR-CORE.md) | Canonical governance — absolute authority |
+| [Identity Fork Protocol](docs/IDENTITY-FORK-PROTOCOL.md) | Protocol spec v1.0 — Sovereign Merge Rule, schema, staging contract |
 | [Architecture](docs/ARCHITECTURE.md) | Full system design including observation window, pipeline, mind model |
 | [White Paper](docs/WHITE-PAPER.md) | Full narrative — identity gap, Grace-Mar model, differentiation |
 | [Business Prospectus](docs/BUSINESS-PROSPECTUS.md) | Investor/partner document — problem, solution, market, ask |
@@ -144,7 +145,7 @@ python3 scripts/generate_dashboard.py
 open dashboard/index.html
 ```
 
-The dashboard is **browser-only** (e.g. deployed to GitHub Pages). A separate **Q&A Mini App** lets users ask Grace-Mar questions and see her voice — deploy `miniapp_server.py` to Railway/Render and set `DASHBOARD_MINIAPP_URL` in `bot/.env` to that URL. See [docs/MINIAPP-SETUP.md](docs/MINIAPP-SETUP.md).
+The dashboard is **read-only** (browser-only, e.g. GitHub Pages). **Telegram** is bidirectional — the primary channel for conversation with Grace-Mar and pipeline staging. A separate **Q&A Mini App** also provides interactive Q&A; deploy `miniapp_server.py` to Railway/Render and set `DASHBOARD_MINIAPP_URL` in `bot/.env`. See [docs/MINIAPP-SETUP.md](docs/MINIAPP-SETUP.md).
 
 ## Archive Rotation
 

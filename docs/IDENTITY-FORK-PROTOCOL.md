@@ -1,0 +1,207 @@
+# Identity Fork Protocol (IFP) — v1.0
+
+**A sovereign, evidence-linked, agent-consumable identity layer for the agent web.**
+
+*Protocol · Reference Implementation: Grace-Mar*
+*Version 1.0 · February 2026*
+
+---
+
+## 1. Protocol Definition
+
+The **Identity Fork Protocol (IFP)** defines a standard for user-owned, evidence-grounded identity records that agents and platforms can consume without owning. It is vendor-neutral: no single platform controls identity. The user is the gate.
+
+**Scope:**
+- Identity schema (who they are + what they can do)
+- Gated staging contract (stage vs. merge)
+- Evidence linking rules
+- Knowledge boundary invariant
+- Manifest and export specifications
+
+**Reference implementation:** Grace-Mar (https://github.com/rbtkhn/grace-mar)
+
+**Governance steward:** Grace-Mar maintains protocol spec, certification, and compliance.
+
+---
+
+## 2. Core Doctrine: The Sovereign Merge Rule
+
+> **The agent may stage. It may not merge.**
+
+This is the sovereignty invariant. It is non-negotiable.
+
+- **Stage** — Propose candidates for addition to the Record (e.g., PENDING-REVIEW)
+- **Merge** — Commit changes to SELF, EVIDENCE, or canonical profile
+
+Only the user (or an explicitly delegated human) may merge. Agents, bots, and third-party systems may stage. The gate is architectural, not configurable.
+
+**Why this matters:** Serious security assumes the agent may be an adversary. The Sovereign Merge Rule enforces that assumption. No amount of automation may bypass the gate.
+
+---
+
+## 3. Identity Schema
+
+### 3.1 Modules
+
+| Module | Contains | Purpose |
+|--------|----------|---------|
+| **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
+| **SKILLS** | READ, WRITE, IMAGINE, BUSINESS capability containers | What they CAN DO |
+| **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
+
+### 3.2 Post-Seed Growth (Three-Channel Mind)
+
+| Channel | Section | What it captures |
+|---------|---------|------------------|
+| **IX-A** | Knowledge | Facts entering awareness through observation |
+| **IX-B** | Curiosity | Topics that catch attention, engagement signals |
+| **IX-C** | Personality | Observed behavioral patterns, art style, speech traits |
+
+### 3.3 Evidence Linking
+
+Every claim in SELF (IX-A, IX-B, IX-C) must reference evidence:
+
+- `evidence_id: ACT-XXXX` — links to EVIDENCE activity log
+- `provenance: human_approved` — passed through gated pipeline
+
+No claim may exist without traceability to an artifact or approved source.
+
+---
+
+## 4. Gated Staging Contract
+
+### 4.1 Workflow
+
+1. **Detect** — Identify profile-relevant signals (knowledge, curiosity, personality)
+2. **Stage** — Write candidates to PENDING-REVIEW (or equivalent staging area)
+3. **Review** — User approves, rejects, or modifies
+4. **Merge** — Approved changes integrated into SELF, EVIDENCE, SESSION-LOG, prompt
+
+### 4.2 Staging Interface
+
+- Agents may **append** to the staging area
+- Agents may **not** modify or delete from canonical Record
+- Staging format: machine-readable (YAML/JSON) with candidate ID, mind category, signal type, proposed action
+
+### 4.3 Merge Authority
+
+Merge is performed only by:
+- The user
+- A human operator explicitly delegated by the user
+- Automated merge only when explicitly configured (see §7 Tiered Autonomy)
+
+---
+
+## 5. Knowledge Boundary Invariant
+
+The Record may contain only what the user has explicitly provided.
+
+- **No LLM inference** — Facts, references, and knowledge from model training must not enter the Record
+- **Calibrated abstention** — When queried outside documented knowledge, the system says "I don't know" and may offer to look up
+- **Evidence linkage** — Every knowledge entry traces to ACT-XXXX or equivalent
+
+This invariant is a **regulatory advantage**: COPPA-aligned (parent controls data), GDPR-aligned (data sovereignty), and architecturally safer than platforms that auto-update profiles without consent.
+
+---
+
+## 6. Manifest and Export Specification
+
+### 6.1 Agent Manifest (llms.txt-style)
+
+Enables discoverability without full access:
+
+- **Readable** — List of consumable surfaces (SELF/IX-A, SKILLS/READ, etc.)
+- **Writable** — Staging area only; merge requires user approval
+- **Checksum** — Tamper-evident identifier of current fork state
+- **Exports** — Commands to generate USER.md, fork JSON, etc.
+
+### 6.2 Export Formats
+
+- **USER.md / SOUL.md** — Condensed identity for agent consumption (OpenClaw, etc.)
+- **manifest.json** — Machine-readable schema, readable/writable surfaces, checksum
+- **fork JSON** — Full export for backup, portability, or migration
+
+---
+
+## 7. Vendor-Neutral Identity
+
+IFP is **not a competitor** to AI schools or platforms. It is the identity layer that prevents vendor lock-in.
+
+- **Alpha, Prisma, Synthesis** — Consumers of identity; they teach, IFP records
+- **Families** — Own the Record; platforms consume it with consent
+- **Agents** — Query identity for personalization; never own it
+
+Grace-Mar is the reference implementation. Platforms may adopt IFP-compatible exports. Copying the schema strengthens the protocol; Grace-Mar certifies compliance.
+
+---
+
+## 8. Compliance Positioning
+
+| Regulation | IFP Alignment |
+|------------|---------------|
+| **COPPA** | Parent controls linkage; explicit consent; no autonomous child-facing merge |
+| **GDPR** | User owns data; portable; export/delete rights architecturally supported |
+| **Knowledge boundary** | No LLM leak = no training-data provenance in child profile |
+
+The gate is not philosophical — it is regulatory defensibility.
+
+---
+
+## 9. Future Extensions (Out of Scope for v1.0)
+
+### 9.1 Fork Integrity Chain (Cryptographic)
+
+```
+entry_hash = sha256(prev_hash + canonical_entry_text)
+```
+
+- Store in LEDGER.jsonl
+- Optional: snapshot signing (GPG/Ed25519), notarization
+- Transforms Record from versioned documentation into tamper-evident identity ledger
+
+### 9.2 Evidence Depth Score
+
+- Artifact-linked claims count
+- Cross-context linkage density
+- Time-span of evidence
+- Verification tier (self/attested/verified)
+
+Quantifies identity robustness and audit strength. Time becomes moat.
+
+### 9.3 Tiered Autonomy Modes
+
+| Mode | Approval | Use case |
+|------|----------|----------|
+| **Bronze** | Manual every change | Maximum control |
+| **Silver** | Auto-merge low-risk (knowledge only) | Reduced friction |
+| **Gold** | Staged batch approval weekly | Balanced |
+
+Gate invariant preserved; UX flexible. Reduces user fatigue risk.
+
+---
+
+## 10. Certification
+
+Implementations that comply with:
+
+- Sovereign Merge Rule
+- Evidence linking rules
+- Knowledge boundary invariant
+- Manifest spec
+
+May seek **Fork-Integrity Verified** certification from the protocol steward.
+
+---
+
+## References
+
+| Document | Purpose |
+|----------|---------|
+| [GRACE-MAR-CORE](GRACE-MAR-CORE.md) | Canonical governance |
+| [ARCHITECTURE](ARCHITECTURE.md) | Technical design |
+| [WHITE-PAPER](WHITE-PAPER.md) | Full narrative |
+| [AGENTS](AGENTS.md) | Implementation guardrails |
+
+---
+
+*Identity Fork Protocol · Sovereign, evidence-linked, agent-consumable*

@@ -27,16 +27,16 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 
 The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the user has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork.
 
-### 2. Gated Pipeline — Never Commit Without Approval
+### 2. Gated Pipeline — The Sovereign Merge Rule
 
-All profile changes pass through a user-controlled gate:
+*The agent may stage. It may not merge.* All profile changes pass through a user-controlled gate:
 
 1. Detect signals (knowledge, curiosity, personality)
 2. Stage candidates in `users/[id]/PENDING-REVIEW.md`
 3. **Integration moment** — Wait for user approval before merging into profile. This is the conscious gate: the user chooses what enters the record.
 4. On approval, merge into all affected files together (see File Update Protocol below)
 
-**Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval.
+**Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval. See `docs/IDENTITY-FORK-PROTOCOL.md` for the full protocol spec.
 
 ### 3. The "we" Convention
 

@@ -39,6 +39,41 @@
 
 ---
 
+## Recursive Learning Process
+
+**Recursive learning** means the Record improves itself over time: each cycle refines the model of the person, and the refined Record shapes the next cycle's inputs and interpretations.
+
+### Definition
+
+The **recursive learning process** is:
+
+1. **Input** — Activity (conversation, artifact, "we did X") enters the system.
+2. **Signal detection** — Analyst compares input to current Record; identifies new knowledge, curiosity, personality.
+3. **Staging** — Candidates written to PENDING-REVIEW.
+4. **Integration moment** — User approves or rejects.
+5. **Merge** — Approved content integrated into SELF, EVIDENCE, prompt.
+6. **Updated Record** — Fork state now reflects the new content.
+7. **Cycle repeats** — Next input is analyzed *against the updated Record* (dedup, richer context). Voice responses use the updated profile. Proposed activities (future) could use SKILLS container edge.
+
+**Recursion** = The output of step 6 becomes input to step 1 (indirectly): the Record influences what gets detected (analyst dedup), what the Voice says (SYSTEM_PROMPT), and—when implemented—what activities get proposed (container edge).
+
+### Current vs. Full Recursion
+
+| Loop | Status | Description |
+|------|--------|-------------|
+| **Forward** (input → Record) | ✅ Implemented | Activity → detect → stage → approve → merge |
+| **Record → Voice** | ✅ Implemented | Prompt embeds Record; Voice speaks from it |
+| **Record → Analyst** | ✅ Implemented | Dedup list prevents re-staging known content |
+| **Record → Proposed activities** | ❌ Not implemented | SKILLS container edge could drive "propose activity at edge" |
+
+The edge→quest loop (Record proposes activities at the container boundary) would close the recursion: the Record would influence *what the user is invited to do next*, creating new input. See Gaps below.
+
+### Cybernetic Framing
+
+The pipeline is a **cybernetic loop** (Wiener): feedback corrects drift. Entropy (forgotten details, LLM leak, stale profile) is countered by sustained input and approval. Session continuity (read SESSION-LOG, PENDING-REVIEW before starting) closes the loop across sessions.
+
+---
+
 ## Channel 1: Bot Pipeline
 
 ```
@@ -203,7 +238,7 @@ python scripts/run_counterfactual_harness.py
 | WRITE artifact → EVIDENCE → SKILLS, SELF | ✅ Yes | Manual, per artifact |
 | READ artifact → EVIDENCE → SKILLS, SELF | ⚠️ Sparse | Manual, 0 entries so far |
 | IMAGINE artifact → EVIDENCE → SKILLS, SELF | ✅ Yes | Manual, per artifact |
-| SKILLS/edge → propose activity → artifact → EVIDENCE | ❌ No | Not implemented |
+| SKILLS/edge → propose activity → artifact → EVIDENCE | ❌ No | Not implemented. Would close recursive loop. |
 
 ---
 

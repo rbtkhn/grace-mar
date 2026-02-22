@@ -8,9 +8,11 @@
 
 ## Executive Summary
 
-Grace-Mar provides the **identity substrate for the agent web**: a structured, evidence-grounded Record of who a person is, with a user-controlled gate that ensures only approved content enters. As agents become economic actors—searching, paying, executing across services—they need trusted identity data. Today, that primitive does not exist at scale.
+Grace-Mar defines the **Identity Fork Protocol (IFP)**: a sovereign, evidence-linked, agent-consumable identity layer. Instead of a product, it is a protocol—identity schema, gated staging contract, evidence linking rules, and manifest spec. The reference implementation is open-source; Grace-Mar is the certification authority and governance steward.
 
-**Positioning:** Grace-Mar is not a second-brain tool, AI clone, or child-specific tutor. It is **identity infrastructure**—the trust primitive agents and AI schools need to know who they serve.
+**Core doctrine — The Sovereign Merge Rule:** *The agent may stage. It may not merge.* Only the user approves what enters the Record. Trust boundary is architectural, not configurable.
+
+**Positioning:** Grace-Mar is vendor-neutral identity infrastructure. AI schools and platforms consume identity; they do not own it. Families own the Record; agents and platforms read it with consent.
 
 **Dual opportunity:**
 1. **Supplemental** — Add user-owned Record layer to Alpha ($40K–$75K/year AI schools) and similar platforms. Record feeds personalization; school events feed pipeline.
@@ -33,7 +35,7 @@ Grace-Mar provides the **identity substrate for the agent web**: a structured, e
 
 **Record** — Structured, evidence-grounded identity: who they are (SELF) + what they can do (SKILLS).
 
-**Gate** — User approves every merge. The agent may stage; it may not merge. Trust boundary is architectural, not configurable.
+**Gate (Sovereign Merge Rule)** — The agent may stage; it may not merge. User approves every merge. Trust boundary is architectural, not configurable.
 
 **Evidence grounding** — Every claim traces to artifacts (ACT-XXXX). No LLM inference; no undocumented knowledge.
 
@@ -66,14 +68,58 @@ Grace-Mar provides the **identity substrate for the agent web**: a structured, e
 
 ---
 
-## Monetization Paths
+## Monetization (Seed Deck)
 
-| Path | Value | Revenue Model |
-|------|-------|---------------|
-| **Supplemental (Alpha families)** | Record layer for AI schools | Integration license; subscription for Record hosting + export |
-| **Low-cost alternative** | Open-source for families outside elite tuition | Open core free; hosted service; support; premium export |
-| **B2B (AI school platforms)** | Identity substrate for Alpha, future schools | Platform license; API fees; white-label |
-| **Infrastructure** | Open schema, protocol, trust primitives | Reference implementation; certification; ecosystem |
+### Revenue Streams — Priority Order
+
+| Priority | Stream | Target | Price | Notes |
+|----------|--------|--------|-------|-------|
+| **1** | Hosted service (B2C) | Families, homeschoolers | $8–15/mo or $80–120/yr | No-code Record + Voice; Alpha/Khan/IXL compatible |
+| **2** | B2B platform license | AI schools (Alpha, Prisma, Synthesis) | $5–15/student/year or rev share | Identity layer; white-label export |
+| **3** | Premium export / integrations | Power users, schools | $50–200/yr | Alpha-compatible, advanced analytics |
+| **4** | Certification | Third-party implementations | One-time + annual | Fork-Integrity Verified badge |
+
+### TAM / SAM / SOM (Directional)
+
+| Layer | Segment | Est. Size | Grace-Mar Wedge |
+|-------|---------|-----------|-----------------|
+| **TAM** | US K–12 students | ~50M | Identity/learning-record infrastructure |
+| **SAM** | Homeschool + microschool + AI-school families | ~3–5M students | User-owned Record; homeschool growing 5–30% YoY by state (post-pandemic) |
+| **SOM** | Year 1–3: homeschool + Alpha-adjacent | 10K–50K families | Hosted service + 1–2 platform integrations |
+
+### Unit Economics (Target)
+
+| Metric | Assumption |
+|--------|------------|
+| **ARPU (hosted)** | $100/yr |
+| **CAC** | <$50 (organic, content, community) |
+| **LTV** | $300+ (3+ year retention; Record compounds) |
+| **Gross margin** | 80%+ (software) |
+| **Platform (B2B)** | $10/student/year at 1K students = $10K ARR per school |
+
+### Use of Funds (18–24 Month Runway)
+
+| Category | % | Use |
+|----------|---|-----|
+| **Product** | 40% | Hosted service launch; homeschool docs; Alpha/Incept integration path |
+| **Go-to-market** | 30% | Content, community, 1–2 integration pilots |
+| **Team** | 25% | 1–2 FTE (product + growth) |
+| **Ops / legal** | 5% | Compliance (COPPA), infra |
+
+### Milestones Tied to Capital
+
+| Month | Milestone |
+|-------|-----------|
+| 3 | Hosted service MVP (Record + Voice, no GitHub required) |
+| 6 | 500+ families; first platform pilot (Alpha-adjacent or microschool) |
+| 12 | 5K+ families; B2B contract or LOI |
+| 18 | 15K+ families; path to profitability visible |
+
+### Path to First Revenue
+
+1. **Hosted service** — Primary. Families pay for convenience; open core remains free.
+2. **Platform pilot** — One Alpha-adjacent or Prisma-style school adopts Grace-Mar as identity layer.
+3. **Certification** — Third parties build IFP-compatible systems; Grace-Mar certifies and charges.
 
 ---
 
@@ -82,7 +128,7 @@ Grace-Mar provides the **identity substrate for the agent web**: a structured, e
 | Moat | Description |
 |------|-------------|
 | **Evidence grounding** | Every claim traces to artifacts. Competitors use engagement metrics. |
-| **Gate as trust boundary** | User sovereignty architectural. Schools auto-update; Grace-Mar never does. |
+| **Sovereign Merge Rule** | Agent may stage, never merge. User sovereignty architectural. Schools auto-update; IFP never does. |
 | **Agent-native interface** | Record structured for consumption; export, schema, manifest. |
 | **Portable architecture** | Principles and schema adoptable; Grace-Mar = reference implementation. |
 | **Open-source + low-cost** | No $40K tuition. Homeschoolers, public-school families can adopt. |
@@ -91,9 +137,9 @@ Grace-Mar provides the **identity substrate for the agent web**: a structured, e
 
 ## Ask
 
-**Partners:** AI school platforms (Alpha, Prisma, Synthesis) seeking identity layer; OpenClaw and agent ecosystems needing identity source.
+**Raise:** Pre-seed / seed ($500K–$1.5M). 18–24 month runway to hosted service, integration pilot, and path to profitability.
 
-**Investors:** Pre-seed / seed. Use of funds: hosted service, homeschool documentation, Alpha/Incept integration path, team.
+**Partners:** AI school platforms (Alpha, Prisma, Synthesis) seeking identity layer; OpenClaw and agent ecosystems needing identity source.
 
 ---
 
@@ -118,6 +164,7 @@ The ideas behind Grace-Mar draw on the work of: Alexander Wissner-Gross (causal 
 
 | Document | Purpose |
 |----------|---------|
+| [Identity Fork Protocol](IDENTITY-FORK-PROTOCOL.md) | Protocol spec v1.0 — schema, staging contract, Sovereign Merge Rule |
 | [White Paper](WHITE-PAPER.md) | Full narrative, differentiation, technical model |
 | [Design Notes](DESIGN-NOTES.md) | Positioning, agent-web insights, proposal angles |
 | [Business Roadmap](BUSINESS-ROADMAP.md) | Strategy, priority roadmap, metrics |

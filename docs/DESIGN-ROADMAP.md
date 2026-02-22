@@ -84,7 +84,28 @@
 
 ---
 
-## 6. Canva Integration
+## 6. Intersignal / The Braid Integration
+
+**Rationale:** Intersignal (The Braid, Mesh Cache, Familiar nodes) builds local/offline multi-AI protocol with traceable identity. Grace-Mar provides the **identity substrate** Familiar nodes need: consent-bound, evidence-grounded, user-approved.
+
+**Scope:**
+- **Record as identity source** — Export SELF → `symbolic_identity.json` via `scripts/export_symbolic.py` (cache-oriented, Familiar-ready).
+- **Session continuity** — Intersignal reads SESSION-LOG, PENDING-REVIEW, EVIDENCE before startup.
+- **Staging contract** — Braid agents may stage to PENDING-REVIEW; **never** merge. User remains the gate.
+- **Cache-level symbolic sharing** — Structured primitives (interests, IX-A/B/C summaries, evidence anchors, checksum) for Mesh Cache.
+
+**Workspace patterns:** grace-mar as sibling to Intersignal mesh; export to `../intersignal-mesh/identity/`.
+
+**Export:**
+```bash
+python integrations/export_hook.py --target intersignal -u pilot-001 -o ../intersignal-mesh/
+```
+
+**See:** [INTERSIGNAL-INTEGRATION](INTERSIGNAL-INTEGRATION.md) for full guide.
+
+---
+
+## 7. Canva Integration
 
 **Rationale:** Canva's APIs (Connect API, App SDK) enable design integration — templates, asset sync, automated creation. Grace-Mar could use Canva for IMAGINE evidence (designs as creation log), newsletter layout (outbound digest → Canva template), or shareable content (JOURNAL, admissions portfolio).
 
@@ -99,7 +120,7 @@
 
 ---
 
-## 7. Dependencies
+## 8. Dependencies
 
 | Feature | Depends on |
 |---------|------------|
@@ -108,17 +129,19 @@
 | Inbound processing | Grace-Mar email; IMAP or Gmail API; matching logic; PENDING-REVIEW staging |
 | X account (follow-only) | X API; matching logic; PENDING-REVIEW staging; parent manages account |
 | OpenClaw integration | OpenClaw workspace; export script; OPENCLAW-INTEGRATION workflow |
+| Intersignal / Braid integration | export_hook --target intersignal; INTERSIGNAL-INTEGRATION guide |
 | Canva integration | Canva developer account; Connect API or App SDK; template design |
 
 ---
 
-## 8. Related Docs
+## 9. Related Docs
 
 | Document | Relevance |
 |----------|-----------|
 | [BUSINESS-ROADMAP](BUSINESS-ROADMAP.md) | Strategy, monetization, go-to-market |
 | [YOUTUBE-PLAYLIST-DESIGN](YOUTUBE-PLAYLIST-DESIGN.md) | Playlist building; watched-video detection; feeds into newsletter content |
 | [OPENCLAW-INTEGRATION](OPENCLAW-INTEGRATION.md) | Record as identity; session continuity; staging automation; Chinese apps |
+| [INTERSIGNAL-INTEGRATION](INTERSIGNAL-INTEGRATION.md) | Symbolic export; Familiar nodes; Mesh Cache; The Braid |
 | [CANVA-INTEGRATION](CANVA-INTEGRATION.md) | Design APIs; IMAGINE evidence; newsletter layout; template population |
 | [ARCHITECTURE](ARCHITECTURE.md) | Pipeline, Record structure, gating |
 | [INTEGRATION-APIS](INTEGRATION-APIS.md) | Multi-API context for email + YouTube + others |

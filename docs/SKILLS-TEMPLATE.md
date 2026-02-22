@@ -239,7 +239,7 @@ Characteristics:
 Capability Claims are formal statements about what the user can do,
 derived from accumulated activity evidence across the four pillars.
 
-Analogous to CMC's Recursive Learning Ledger (RLL).
+Analogous to CMC's Recursive Learning Ledger (RLL): activities feed capability claims; claims accumulate; the Record improves over time. See [PIPELINE-MAP](PIPELINE-MAP.md#recursive-learning-process) for the full recursive learning definition.
 
 ### Capability Claim Structure
 

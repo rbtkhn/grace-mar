@@ -122,7 +122,21 @@ SESSION-LOG
 • Append-only
 
 ────────────────────────────────────────────────────────────
-V. GLOBAL GOVERNANCE RULES
+V. THE SOVEREIGN MERGE RULE
+────────────────────────────────────────────────────────────
+The agent may stage. It may not merge.
+
+• Stage: propose candidates (e.g. to PENDING-REVIEW)
+• Merge: commit changes to SELF, EVIDENCE, or canonical profile
+
+Only the user (or explicitly delegated human) may merge.
+Agents, bots, and third-party systems may stage only.
+The gate is architectural, not configurable.
+
+See IDENTITY-FORK-PROTOCOL.md for full protocol spec.
+
+────────────────────────────────────────────────────────────
+VI. GLOBAL GOVERNANCE RULES
 ────────────────────────────────────────────────────────────
 • Additivity is mandatory
 • No deletions of user data
@@ -133,7 +147,7 @@ V. GLOBAL GOVERNANCE RULES
 Violations invalidate data integrity.
 
 ────────────────────────────────────────────────────────────
-VI. IMMUTABILITY RULES
+VII. IMMUTABILITY RULES
 ────────────────────────────────────────────────────────────
 ACTIVITIES (EVIDENCE):
 • Immutable once captured
@@ -157,7 +171,7 @@ SNAPSHOTS:
 • Represent user at a point in time
 
 ────────────────────────────────────────────────────────────
-VII. EVIDENCE AUTHORITY HIERARCHY
+VIII. EVIDENCE AUTHORITY HIERARCHY
 ────────────────────────────────────────────────────────────
 When determining capability claims, the following
 hierarchy applies:
@@ -187,7 +201,7 @@ TIER 5 — REPORTED (Minimal Authority)
 • Cannot drive high-confidence claims alone
 
 ────────────────────────────────────────────────────────────
-VIII. CLAIM GROUNDING REQUIREMENTS
+IX. CLAIM GROUNDING REQUIREMENTS
 ────────────────────────────────────────────────────────────
 All capability claims must be classified:
 

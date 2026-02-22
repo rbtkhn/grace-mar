@@ -1,8 +1,8 @@
 # Grace-Mar White Paper
 
-**Identity Infrastructure for the Agent Web**
+**Identity Fork Protocol (IFP) — Reference Implementation**
 
-*A structured, evidence-grounded Record of who a person is — the trust primitive for agents and AI schools*
+*A sovereign, evidence-linked, agent-consumable identity layer for the agent web*
 
 *Version 1.0 · February 2026*
 
@@ -164,9 +164,9 @@ Every claim traces to artifacts:
 
 ## 6. Trust Primitive
 
-### User Gate = Sovereignty
+### User Gate = Sovereignty (The Sovereign Merge Rule)
 
-The user controls what enters the Record. The agent cannot merge. This is architectural, not configurable. Serious security assumes the agent may be an adversary; the gate enforces that assumption.
+*The agent may stage. It may not merge.* The user controls what enters the Record. This is architectural, not configurable. Serious security assumes the agent may be an adversary; the Sovereign Merge Rule enforces that assumption.
 
 ### Evidence Linkage = Auditability
 
@@ -261,6 +261,7 @@ The ideas behind Grace-Mar draw on the work of:
 
 | Document | Purpose |
 |----------|---------|
+| [Identity Fork Protocol](IDENTITY-FORK-PROTOCOL.md) | Protocol spec v1.0 — Sovereign Merge Rule, schema, staging contract |
 | [Architecture](ARCHITECTURE.md) | Full technical design, pipeline, modules |
 | [Conceptual Framework](CONCEPTUAL-FRAMEWORK.md) | Invariants, terminology, philosophical grounding |
 | [Design Notes](DESIGN-NOTES.md) | Positioning, agent-web insights |
