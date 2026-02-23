@@ -36,17 +36,17 @@ When the user says **"we [did X]"**, it is a **pipeline invocation**. Go straigh
 
 ---
 
-## Three-Channel Mind Model
+## Three-Dimension Mind Model
 
-Post-seed growth is organized into three channels in Section IX of SELF.md:
+Post-seed growth is organized into three dimensions in Section IX of SELF.md:
 
-| Channel | Section | What it captures |
+| Dimension | Section | What it captures |
 |---------|---------|-----------------|
 | **Knowledge** | IX-A | Facts entering awareness through observation |
 | **Curiosity** | IX-B | Topics that catch attention, engagement signals |
 | **Personality** | IX-C | Behavioral patterns, speech traits, art style, values |
 
-A single artifact can populate all three channels simultaneously.
+A single artifact can populate all three dimensions simultaneously.
 
 ---
 
@@ -153,7 +153,7 @@ The emulation prompt (`bot/prompt.py`) grows as the fork grows. To manage this:
 
 ```
 users/[user-id]/
-├── SELF.md                  # Who they ARE (identity + three-channel mind)
+├── SELF.md                  # Who they ARE (identity + three-dimension mind)
 ├── SKILLS.md                # What they CAN DO
 ├── EVIDENCE.md              # Raw activities and evidence log
 ├── SESSION-LOG.md           # Interaction history

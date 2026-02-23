@@ -292,42 +292,88 @@ entries:
       interests: [Barbie (movie), Magic School Bus (science at school)]
       content_alignment: "Fits profile — love of movies, science at school. Barbie and Magic School Bus not yet in documented favorites."
       linguistic: "New markers: time-adverbial opener, chronological narrative, 'and I' repetition."
+
+  - id: WRITE-0005
+    type: original (personal narrative)
+    title: "Casa Bonita — today's visit"
+    created_at: 2026-02-23
+    word_count: 44
+    image_file: artifacts/WRITE-0005-casa-bonita.png
+    evidence_tier: 4  # OBSERVED — actual handwritten artifact
+
+    full_text: "today I went to casa bonita and I had Slideres for lunch and ther I went to play at Casa bonita and I got a face pating at casa bonita then I saw a perpet show"
+
+    decoded_text: "Today I went to Casa Bonita and I had sliders for lunch and there I went to play at Casa Bonita and I got a face painting at Casa Bonita then I saw a puppet show."
+
+    context: "Operator-submitted writing sample. Personal narrative of a visit to Casa Bonita — lunch (sliders), play, face painting, puppet show."
+
+    analysis:
+      unique_words: 22
+      vocabulary_level: 2
+      complexity_score: 2
+      tone: personal narrative (chronological recall)
+      topics: [Casa Bonita, sliders, lunch, play, face painting, puppet show]
+
+      spelling:
+        correct: [today, I, went, to, casa, bonita, and, had, for, lunch, ther, play, at, got, a, face, then, saw]
+        phonetic: [Slideres=Sliders, ther=there, pating=painting, perpet=puppet]
+        patterns:
+          - "Phonetic: Slideres (sliders), ther (there), pating (painting), perpet (puppet)"
+          - "Place name: Casa Bonita — mixed capitalization (casa bonita / Casa bonita)"
+          - "No end punctuation; run-on with 'and' / 'then' connectors"
+
+      structure:
+        sentences: run-on, no periods
+        connectors: ["and", "then"] as primary
+        flow: "Chronological — today I went → had lunch → went to play → got face painting → saw puppet show"
+        advancement: "Same 'today I went' opener as WRITE-0004; consistent chronological personal narrative."
+
+      linguistic_markers_new:
+        - "Repeated place name (Casa Bonita) anchors narrative"
+        - "Sequence: food → play → face painting → show"
+        - "Word-level phonetic spellings (perpet, pating) — age-appropriate"
+
+    self_signals:
+      interests: [Casa Bonita (place), face painting, puppet show, sliders]
+      content_alignment: "New place/experience not yet in Record — Casa Bonita. Fits profile: outings, play, sensory/creative activities."
+      linguistic: "Continues pattern: time-adverbial opener, chronological recall, 'and/then' connectors."
 ```
 
 ### Writing Profile
 
 ```yaml
-total_entries: 4
-total_words: 189
+total_entries: 5
+total_words: 233
 vocabulary_profile:
-  unique_words: 72
+  unique_words: 86
   level: 2-3
-  phonetic_spelling: confirmed (decreasing frequency — WRITE-0003 has fewest errors)
-  notable_words: [covered, vines, twelve, smallest, afraid, tiger, crust, mantle, science, favorite, learning, spaghetti, swimming, costumes, demon, hunters]
+  phonetic_spelling: confirmed (Slideres, ther, pating, perpet in WRITE-0005)
+  notable_words: [covered, vines, twelve, smallest, afraid, tiger, crust, mantle, science, favorite, learning, spaghetti, swimming, costumes, demon, hunters, sliders, painting, puppet]
   academic_vocabulary: [crust, mantle, outer core, inner core]
   impressive_for_age: [spaghetti (spelled correctly), swimming (correct), afraid (correct)]
 style_profile:
-  avg_sentence_length: 14  # WRITE-0003 avg = 14 words/sentence (3 sentences)
-  common_openers: ["In", "today I", "I like", "I used to", "The next"]
-  verbal_habits: ["because" as habitual reasoning connector (3 uses across 2 samples), "and" for listing]
-  structure: "TRANSITIONING — from run-on (WRITE-0001, 0002) to sentence boundaries (WRITE-0003)"
+  avg_sentence_length: 14
+  common_openers: ["In", "today I", "yesterday I", "I like", "I used to", "The next"]
+  verbal_habits: ["because" as habitual reasoning connector, "and" / "then" for chronological listing]
+  structure: "TRANSITIONING — run-on with segments (WRITE-0004, 0005); WRITE-0003 used sentence boundaries"
 topic_profile:
-  recurring_topics: [literary retell, science/Earth, space, stories, personal preferences, growth/overcoming]
+  recurring_topics: [literary retell, science/Earth, space, stories, personal preferences, growth/overcoming, outings, places]
   self_chosen_topics:
     - "Earth science — 'because we just learned about it and I thought it was cool'"
     - "Swimming fear overcome, food preferences, K-Pop Demon Hunters — all self-chosen"
+    - "Casa Bonita visit — sliders, face painting, puppet show (WRITE-0005)"
 writing_modes:
   retell: "WRITE-0001 — literary retell from memory (Madeline)"
   original_informational: "WRITE-0002 — reports what she learned at school (Earth layers)"
   original_opinion: "WRITE-0002 — 'my favrit subjet is saience because I like it'"
   original_list: "WRITE-0002 — lists interests (space, stories)"
-  personal_journal: "WRITE-0003 — three personal facts spanning past/present/future"
+  personal_journal: "WRITE-0003, WRITE-0004, WRITE-0005 — chronological day narratives"
   self_reflection: "WRITE-0003 — 'I used to be afraid' — names and reflects on growth"
 temporal_range:
   past: "'I used to be afraid of swimming' (WRITE-0003)"
   present: "'my faverit food is spaghetti and pissa' (WRITE-0003)"
   future: "'The next movie I want to wach' (WRITE-0003)"
-  note: "All three tenses in one piece — remarkable for age 6"
+  note: "WRITE-0005: present-day narrative ('today I went') — same day recall"
 growth:
   milestones:
     - date: 2026-02-15
@@ -354,7 +400,7 @@ growth:
     - date: 2026-02-19
       type: self_reflection
       description: "'I used to be afraid' — first written self-reflection on personal growth"
-  trajectory: "WRITE-0001 (retell, run-on) → WRITE-0002 (original, run-on with segments) → WRITE-0003 (original, sentences with periods, three tenses). Clear upward trajectory in structure and complexity."
+  trajectory: "WRITE-0001 (retell, run-on) → WRITE-0002 (original, run-on) → WRITE-0003 (sentences, three tenses) → WRITE-0004, 0005 (chronological day narratives, run-on). Consistent personal-narrative mode."
 ```
 
 ---
@@ -1031,6 +1077,16 @@ activities:
       IX_C: [place_flexibility, bravery_overcoming, joy_people_physical, persistence_helpseeking, friend_laugh, unplug_physical, creative_identity, swimming_growth]
     curated_by: user
     evidence_tier: 3
+
+  - id: ACT-0021
+    date: 2026-02-23
+    modality: handwritten (operator-submitted artifact)
+    activity_type: writing — personal narrative
+    source: operator-submitted writing sample
+    artifact_id: WRITE-0005
+    summary: "Handwritten narrative of visit to Casa Bonita — sliders for lunch, play, face painting, puppet show."
+    curated_by: user
+    evidence_tier: 4  # OBSERVED — actual artifact
 ```
 
 ---
@@ -1058,15 +1114,15 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 20
+total_activities: 21
 total_read_entries: 0
-total_write_entries: 3
+total_write_entries: 5
 total_create_entries: 8
 total_media_entries: 8
 total_attestations: 0
-last_activity: 2026-02-22
-last_update: 2026-02-22
-update_source: Pipeline review queue — CANDIDATE-0052, 0053 (wisdom survey) approved
+last_activity: 2026-02-23
+last_update: 2026-02-23
+update_source: Operator-submitted writing sample WRITE-0005 (Casa Bonita visit — ACT-0021)
 ```
 
 ---

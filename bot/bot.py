@@ -48,6 +48,10 @@ from .core import (
     get_reset_message,
     get_pending_candidates,
     update_candidate_status,
+    start_homework_session,
+    process_homework_answer,
+    is_in_homework_session,
+    end_homework_session,
 )
 
 load_dotenv()
@@ -84,6 +88,7 @@ START_PROMPT_OPTIONS = [
         KeyboardButton("Ask me what I'm curious about"),
     ],
     [
+        KeyboardButton("Homework"),
         KeyboardButton("Chat with me"),
     ],
 ]
@@ -94,6 +99,12 @@ START_KEYBOARD = ReplyKeyboardMarkup(
     is_persistent=True,
     input_field_placeholder="Or type anything — buttons are optional",
 )
+
+# One-tap answer buttons for homework (quick-fire, gamified)
+HOMEWORK_ANSWER_KEYBOARD = InlineKeyboardMarkup([
+    [InlineKeyboardButton("A", callback_data="hw:A"), InlineKeyboardButton("B", callback_data="hw:B")],
+    [InlineKeyboardButton("C", callback_data="hw:C"), InlineKeyboardButton("D", callback_data="hw:D")],
+])
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -122,6 +133,22 @@ async def dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         "Open the fork dashboard to view profile, pipeline, benchmarks, and disclosure:",
         reply_markup=keyboard,
     )
+
+
+async def _homework_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Start homework session (one question at a time). Same as tapping Homework button."""
+    chat_id = update.effective_chat.id
+    key = _channel_key(chat_id)
+    try:
+        first_q, err = start_homework_session(key)
+        if err:
+            await update.message.reply_text(err)
+            return
+        archive("HOMEWORK START", key, first_q or "")
+        await update.message.reply_text(first_q, reply_markup=HOMEWORK_ANSWER_KEYBOARD)
+    except Exception:
+        logger.exception("Homework start error")
+        await update.message.reply_text("um... i couldn't make homework right now. try again in a little bit?")
 
 
 async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -153,6 +180,36 @@ async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if len(candidates) > 5:
         text += f"\n… and {len(candidates) - 5} more. Type /review again after approving to see the rest."
     await update.message.reply_text(text, reply_markup=keyboard)
+
+
+async def callback_homework_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handle A/B/C/D inline button taps during homework."""
+    query = update.callback_query
+    await query.answer()
+    data = query.data or ""
+    if not data.startswith("hw:"):
+        return
+    letter = data.split(":")[-1].strip().upper()
+    if letter not in "ABCD":
+        return
+    chat_id = query.message.chat.id if query.message else None
+    if not chat_id:
+        return
+    key = _channel_key(chat_id)
+    if not is_in_homework_session(key):
+        await query.edit_message_text("homework session ended — tap Homework to start again!")
+        return
+    try:
+        response, session_ended, has_next = process_homework_answer(key, letter)
+        archive("HOMEWORK ANSWER (tap)", key, letter)
+        archive("GRACE-MAR (homework)", key, response)
+        await query.edit_message_text(
+            response,
+            reply_markup=HOMEWORK_ANSWER_KEYBOARD if has_next else None,
+        )
+    except Exception:
+        logger.exception("Homework callback error")
+        await query.edit_message_text("oops! try again — tap A, B, C, or D")
 
 
 async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -204,6 +261,41 @@ async def handle_message(
     key = _channel_key(chat_id)
     user_message = update.message.text
 
+    # Homework flow: one question at a time, gamified
+    if user_message.strip().lower() == "homework":
+        try:
+            first_q, err = start_homework_session(key)
+            if err:
+                await update.message.reply_text(err)
+                return
+            archive("HOMEWORK START", key, first_q or "")
+            await update.message.reply_text(first_q, reply_markup=HOMEWORK_ANSWER_KEYBOARD)
+        except Exception:
+            logger.exception("Homework start error")
+            await update.message.reply_text("um... i couldn't make homework right now. try again in a little bit?")
+        return
+
+    # In homework session: treat message as answer (or stop/quit to exit)
+    if is_in_homework_session(key):
+        reply_lower = user_message.strip().lower()
+        if reply_lower in ("stop", "quit", "done", "exit"):
+            end_homework_session(key)
+            archive("HOMEWORK STOPPED", key, reply_lower)
+            await update.message.reply_text("ok homework paused! tap Homework anytime to start again 🎯")
+            return
+        try:
+            response, session_ended, has_next = process_homework_answer(key, user_message)
+            archive("HOMEWORK ANSWER", key, user_message)
+            archive("GRACE-MAR (homework)", key, response)
+            await update.message.reply_text(
+                response,
+                reply_markup=HOMEWORK_ANSWER_KEYBOARD if has_next else None,
+            )
+        except Exception:
+            logger.exception("Homework answer error")
+            await update.message.reply_text("oops! tap A, B, C, or D to answer (or 'stop' to quit)")
+        return
+
     try:
         response = get_response(key, user_message)
         await update.message.reply_text(response)
@@ -215,7 +307,7 @@ async def handle_message(
 async def handle_voice(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> None:
-    """Transcribe voice message and process like text (chat or 'we did X' pipeline)."""
+    """Transcribe voice message and process like text (chat, homework answer, or 'we did X' pipeline)."""
     from .core import transcribe_voice
 
     chat_id = update.effective_chat.id
@@ -237,6 +329,27 @@ async def handle_voice(
 
     if not transcript:
         await update.message.reply_text("i couldn't make out what you said — can you try again or type it?")
+        return
+
+    # In homework: treat voice as answer (e.g. "A" or "B")
+    if is_in_homework_session(key):
+        reply_lower = transcript.strip().lower()
+        if reply_lower in ("stop", "quit", "done", "exit"):
+            end_homework_session(key)
+            archive("HOMEWORK STOPPED", key, reply_lower)
+            await update.message.reply_text("ok homework paused! tap Homework anytime to start again 🎯")
+            return
+        try:
+            response, _, has_next = process_homework_answer(key, transcript)
+            archive("HOMEWORK ANSWER (voice)", key, transcript)
+            archive("GRACE-MAR (homework)", key, response)
+            await update.message.reply_text(
+                response,
+                reply_markup=HOMEWORK_ANSWER_KEYBOARD if has_next else None,
+            )
+        except Exception:
+            logger.exception("Homework answer error (voice)")
+            await update.message.reply_text("tap A, B, C, or D to answer (or type 'stop' to quit)")
         return
 
     try:
@@ -264,9 +377,11 @@ def create_application(webhook_mode: bool = False) -> Application:
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("dashboard", dashboard))
+    app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))
     app.add_handler(CommandHandler("reject", reject_with_reason))
+    app.add_handler(CallbackQueryHandler(callback_homework_answer, pattern=r"^hw:[ABCD]$"))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))

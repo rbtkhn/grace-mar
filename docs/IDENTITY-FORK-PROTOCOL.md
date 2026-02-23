@@ -39,6 +39,19 @@ Only the user (or an explicitly delegated human) may merge. Agents, bots, and th
 
 ---
 
+## 2.1 Process Over Prompt
+
+The quality of outputs depends on **process**, not on model strength or prompt tuning. Without structured control, outputs degrade even when the model is capable. The pipeline enforces:
+
+- **Bounded context** — Analyst receives the exchange; main model receives SELF + history; each participant gets exactly what they need
+- **Facts first** — Analyst stages only what is grounded in observed words or actions; no inference beyond the exchange
+- **Quality gates** — Staging → Review → Merge; no merge without explicit approval
+- **Specialized roles** — Different prompts for detection, emulation, lookup, homework; each does one thing
+
+This mirrors contextual engineering in AI-assisted coding: the model writes only at the implementation phase; research, design, and planning create the context. Here, the analyst detects; the user gates; the merge integrates. Process controls outcome.
+
+---
+
 ## 3. Identity Schema
 
 ### 3.1 Modules
@@ -49,9 +62,9 @@ Only the user (or an explicitly delegated human) may merge. Agents, bots, and th
 | **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
 
-### 3.2 Post-Seed Growth (Three-Channel Mind)
+### 3.2 Post-Seed Growth (Three-Dimension Mind)
 
-| Channel | Section | What it captures |
+| Dimension | Section | What it captures |
 |---------|---------|------------------|
 | **IX-A** | Knowledge | Facts entering awareness through observation |
 | **IX-B** | Curiosity | Topics that catch attention, engagement signals |
@@ -77,13 +90,19 @@ No claim may exist without traceability to an artifact or approved source.
 3. **Review** — User approves, rejects, or modifies
 4. **Merge** — Approved changes integrated into SELF, EVIDENCE, SESSION-LOG, prompt
 
-### 4.2 Staging Interface
+### 4.2 Review Checklist (before approving)
+
+- Is it grounded in something the child/user actually said or did?
+- No LLM inference beyond the exchange?
+- No contradiction with existing Record?
+
+### 4.3 Staging Interface
 
 - Agents may **append** to the staging area
 - Agents may **not** modify or delete from canonical Record
 - Staging format: machine-readable (YAML/JSON) with candidate ID, mind category, signal type, proposed action
 
-### 4.3 Merge Authority
+### 4.4 Merge Authority
 
 Merge is performed only by:
 - The user
@@ -120,6 +139,8 @@ Enables discoverability without full access:
 - **USER.md / SOUL.md** — Condensed identity for agent consumption (OpenClaw, etc.)
 - **manifest.json** — Machine-readable schema, readable/writable surfaces, checksum
 - **fork JSON** — Full export for backup, portability, or migration
+
+Exports are snapshots for **consumption** (e.g., by schools or agents that read the Record). No other instance of the Record or Voice may be deployed as an independent economic or social agent without explicit user consent and, where feasible, a revocation path. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md).
 
 ---
 

@@ -40,12 +40,13 @@ except ImportError:
 
 try:
     from .prompt import (
-    SYSTEM_PROMPT,
-    LOOKUP_PROMPT,
-    LIBRARY_LOOKUP_PROMPT,
-    REPHRASE_PROMPT,
-    ANALYST_PROMPT,
-)
+        SYSTEM_PROMPT,
+        LOOKUP_PROMPT,
+        LIBRARY_LOOKUP_PROMPT,
+        REPHRASE_PROMPT,
+        ANALYST_PROMPT,
+        HOMEWORK_PROMPT,
+    )
 except ImportError:
     from prompt import (
         SYSTEM_PROMPT,
@@ -53,6 +54,7 @@ except ImportError:
         LIBRARY_LOOKUP_PROMPT,
         REPHRASE_PROMPT,
         ANALYST_PROMPT,
+        HOMEWORK_PROMPT,
     )
 
 load_dotenv()
@@ -267,6 +269,286 @@ def _load_memory_appendix() -> str:
 The following is ephemeral session context. Use it to refine tone and continuity. If it conflicts with SELF, follow SELF. Do not cite factual content from this section.
 
 """ + block
+
+
+SELF_PATH = PROFILE_DIR / "SELF.md"
+EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
+
+
+def _load_recency_context() -> str:
+    """Load recent Record content for homework generation: IX-A (knowledge), IX-B (curiosity), recent EVIDENCE entries."""
+    parts: list[str] = []
+
+    if SELF_PATH.exists():
+        content = SELF_PATH.read_text(encoding="utf-8")
+        # Extract IX-A block (knowledge)
+        ix_a = re.search(r"### IX-A\. KNOWLEDGE.*?```yaml\n(.*?)```", content, re.DOTALL)
+        if ix_a:
+            entries = ix_a.group(1).strip()
+            # Take last ~12 entries (most recent) — entries start with "  - id:"
+            lines = entries.split("\n")
+            blocks: list[str] = []
+            current: list[str] = []
+            for line in lines:
+                if re.match(r"\s+-\s+id:\s+", line):
+                    if current:
+                        blocks.append("\n".join(current))
+                    current = [line]
+                elif current:
+                    current.append(line)
+            if current:
+                blocks.append("\n".join(current))
+            recent_k = blocks[-12:] if len(blocks) > 12 else blocks
+            parts.append("### Recent knowledge (IX-A)\n```yaml\n" + "\n".join(recent_k) + "\n```")
+
+        # Extract IX-B block (curiosity)
+        ix_b = re.search(r"### IX-B\. CURIOSITY.*?```yaml\n(.*?)```", content, re.DOTALL)
+        if ix_b:
+            entries = ix_b.group(1).strip()
+            lines = entries.split("\n")
+            blocks = []
+            current = []
+            for line in lines:
+                if re.match(r"\s+-\s+id:\s+", line):
+                    if current:
+                        blocks.append("\n".join(current))
+                    current = [line]
+                elif current:
+                    current.append(line)
+            if current:
+                blocks.append("\n".join(current))
+            recent_c = blocks[-6:] if len(blocks) > 6 else blocks
+            parts.append("\n### Recent curiosity (IX-B)\n```yaml\n" + "\n".join(recent_c) + "\n```")
+
+    if EVIDENCE_PATH.exists():
+        content = EVIDENCE_PATH.read_text(encoding="utf-8")
+        # Extract WRITE, ACT, CREATE entries — take highest id numbers (most recent)
+        id_matches = list(re.finditer(r"id:\s+(WRITE|ACT|CREATE)-(\d+)", content, re.IGNORECASE))
+        if id_matches:
+            # Get unique entry ids and sort by number descending
+            seen: set[str] = set()
+            entries_with_pos: list[tuple[int, str, int]] = []
+            for m in id_matches:
+                full_id = f"{m.group(1).upper()}-{m.group(2)}"
+                if full_id in seen:
+                    continue
+                seen.add(full_id)
+                num = int(m.group(2))
+                entries_with_pos.append((m.start(), full_id, num))
+            entries_with_pos.sort(key=lambda x: -x[2])  # most recent first
+            recent_ids = [e[1] for e in entries_with_pos[:8]]
+            # Extract first 400 chars around each recent entry
+            excerpt_lines: list[str] = []
+            for eid in recent_ids:
+                pat = rf"id:\s+{re.escape(eid)}\s*\n(.*?)(?=\n\s+-\s+id:|\n## |\Z)"
+                mat = re.search(pat, content, re.DOTALL)
+                if mat:
+                    block = mat.group(0)[:400].strip()
+                    excerpt_lines.append(block + "\n")
+            if excerpt_lines:
+                parts.append("\n### Recent activities (EVIDENCE)\n" + "\n".join(excerpt_lines[:5]))
+
+    result = "\n".join(parts).strip()
+    return result[:3500] if len(result) > 3500 else result
+
+
+# Homework session state: one question at a time, gamified, 30 total = competency milestone
+homework_sessions: dict[str, dict] = {}
+HOMEWORK_LEDGER_PATH = PROFILE_DIR / "HOMEWORK-LEDGER.jsonl"
+HOMEWORK_MILESTONE = 30  # 30 correct = high competency (relative to age)
+HOMEWORK_BATCH_SIZE = 8  # questions per session
+
+
+def _parse_homework_json(text: str) -> list[dict]:
+    """Extract JSON array from LLM output (may have markdown or trailing text)."""
+    text = (text or "").strip()
+    # Remove markdown code fences
+    if "```" in text:
+        for m in re.finditer(r"```(?:json)?\s*([\s\S]*?)```", text):
+            try:
+                arr = json.loads(m.group(1).strip())
+                if isinstance(arr, list) and arr:
+                    return arr
+            except json.JSONDecodeError:
+                pass
+    # Find [ ... ] array
+    start = text.find("[")
+    if start >= 0:
+        depth = 0
+        for i, c in enumerate(text[start:], start):
+            if c == "[":
+                depth += 1
+            elif c == "]":
+                depth -= 1
+                if depth == 0:
+                    try:
+                        return json.loads(text[start : i + 1])
+                    except json.JSONDecodeError:
+                        pass
+                    break
+    return []
+
+
+def _get_homework_total_correct() -> int:
+    """Total correct answers across all sessions (for 30 milestone)."""
+    if not HOMEWORK_LEDGER_PATH.exists():
+        return 0
+    total = 0
+    try:
+        for line in HOMEWORK_LEDGER_PATH.read_text().strip().splitlines():
+            if not line.strip():
+                continue
+            obj = json.loads(line)
+            total += int(obj.get("correct", 0))
+    except Exception:
+        pass
+    return total
+
+
+def _append_homework_session(correct: int, total: int, channel_key: str) -> None:
+    """Append session result to ledger."""
+    try:
+        HOMEWORK_LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
+        with open(HOMEWORK_LEDGER_PATH, "a") as f:
+            f.write(json.dumps({
+                "ts": datetime.now().isoformat(),
+                "channel_key": channel_key,
+                "correct": correct,
+                "total": total,
+            }) + "\n")
+    except Exception:
+        logger.exception("Homework ledger append error")
+
+
+def is_in_homework_session(channel_key: str) -> bool:
+    return channel_key in homework_sessions
+
+
+def end_homework_session(channel_key: str) -> None:
+    homework_sessions.pop(channel_key, None)
+
+
+def start_homework_session(channel_key: str) -> tuple[str | None, str | None]:
+    """Start a homework session. Returns (first_question_msg, error_msg). error_msg set on failure."""
+    if not _check_rate_limit(channel_key, "main", tokens=2):
+        return None, "i'm a little tired right now. can we do homework later?"
+    recency = _load_recency_context()
+    if not recency.strip():
+        return None, "i don't have enough in my record yet to make homework! let's chat and learn some stuff first."
+    prompt = HOMEWORK_PROMPT.format(recency_context=recency)
+    try:
+        result = _get_client().chat.completions.create(
+            model=OPENAI_MODEL,
+            messages=[
+                {"role": "system", "content": prompt},
+                {"role": "user", "content": "Generate the 8 questions as JSON now."},
+            ],
+            max_tokens=800,
+            temperature=0.7,
+        )
+        if u := getattr(result, "usage", None):
+            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+        raw = (result.choices[0].message.content or "").strip()
+        questions = _parse_homework_json(raw)
+        if not questions:
+            logger.warning("Homework: no valid questions parsed from %s", raw[:200])
+            return None, "um... i couldn't make the questions. try again?"
+        # Normalize: ensure options have A) B) C) D) and correct is A/B/C/D
+        normalized = []
+        for q in questions[:HOMEWORK_BATCH_SIZE]:
+            opts = q.get("options") or []
+            correct_raw = str(q.get("correct", "A")).upper()
+            if len(opts) < 2:
+                continue
+            letters = "ABCD"[: len(opts)]
+            # Format options as "A) text", "B) text", ...
+            opts_fmt = []
+            for j, o in enumerate(opts):
+                text = o.strip()
+                if not re.match(r"^[A-D]\)", text, re.IGNORECASE):
+                    text = re.sub(r"^[A-Da-d0-9]\)\s*", "", text)
+                opts_fmt.append(f"{letters[j]}) {text}")
+            # Map correct: if LLM said "A", our first option is A
+            correct_letter = correct_raw if correct_raw in letters else letters[0]
+            normalized.append({"q": (q.get("q") or "?").strip(), "options": opts_fmt, "correct": correct_letter})
+        if not normalized:
+            return None, "um... i couldn't make the questions. try again?"
+        total_correct_ever = _get_homework_total_correct()
+        homework_sessions[channel_key] = {
+            "questions": normalized,
+            "idx": 0,
+            "correct_in_session": 0,
+            "streak": 0,
+        }
+        q0 = normalized[0]
+        msg = f"homework time! 🎯 one at a time — tap A, B, C, or D!\n\n"
+        if total_correct_ever >= HOMEWORK_MILESTONE:
+            msg += f"you've got {total_correct_ever} right total — you're a champ! 🏆\n\n"
+        elif total_correct_ever > 0:
+            msg += f"({total_correct_ever} right so far — {HOMEWORK_MILESTONE} = champ! 🏆)\n\n"
+        msg += f"Question 1 of {len(normalized)}!\n\n{q0['q']}\n\n" + "\n".join(q0["options"])
+        return msg, None
+    except Exception:
+        logger.exception("Homework generation error")
+        return None, "um... i couldn't make homework right now. try again in a little bit?"
+
+
+def process_homework_answer(channel_key: str, user_reply: str) -> tuple[str, bool, bool]:
+    """Process answer. Returns (response_message, session_ended, has_next_question).
+    When has_next_question, bot should show A B C D inline buttons."""
+    session = homework_sessions.get(channel_key)
+    if not session:
+        return "", True, False
+    idx = session["idx"]
+    questions = session["questions"]
+    if idx >= len(questions):
+        end_homework_session(channel_key)
+        return "", True
+    q = questions[idx]
+    correct_letter = q["correct"]
+    # Parse: "A", "a", "1" (first), "B", "b", "2", etc.
+    reply = user_reply.strip().upper()[:1]
+    if reply.isdigit():
+        num = int(reply)
+        if 1 <= num <= 4:
+            reply = "ABCD"[num - 1]
+    if not reply or reply not in "ABCD":
+        return "tap A, B, C, or D to answer! (or type 'stop' to quit)", False, True
+    is_correct = reply == correct_letter
+    if is_correct:
+        session["correct_in_session"] += 1
+        session["streak"] += 1
+        streak = session["streak"]
+        if streak >= 3:
+            feedback = "yes! 🔥 " + str(streak) + " in a row!"
+        elif streak >= 2:
+            feedback = "yes! 2 in a row! 🌟"
+        else:
+            feedback = "yes! 🎉"
+    else:
+        session["streak"] = 0
+        correct_opt = next(o for o in q["options"] if o.upper().startswith(correct_letter))
+        feedback = f"not quite — it's {correct_letter}) " + correct_opt.split(")", 1)[1].strip()
+    session["idx"] += 1
+    if session["idx"] >= len(questions):
+        # Session done
+        correct_in = session["correct_in_session"]
+        total_in = len(questions)
+        _append_homework_session(correct_in, total_in, channel_key)
+        total_ever = _get_homework_total_correct()
+        end_homework_session(channel_key)
+        msg = feedback + f"\n\nall done! {correct_in}/{total_in} right!"
+        if total_ever >= HOMEWORK_MILESTONE:
+            msg += f" you've got {total_ever} total — champ! 🏆"
+        elif total_ever > 0:
+            msg += f" ({total_ever} total — {HOMEWORK_MILESTONE} = champ! 🏆)"
+        msg += "\n\nwant more? tap Homework again!"
+        return msg, True, False
+    # Next question
+    nq = questions[session["idx"]]
+    n = session["idx"] + 1
+    total = len(questions)
+    return feedback + f"\n\nQuestion {n} of {total}!\n\n{nq['q']}\n\n" + "\n".join(nq["options"]), False, True
 
 
 def _library_summary() -> str:
@@ -510,6 +792,7 @@ def get_response(channel_key: str, user_message: str) -> str:
     if WE_DID_PATTERN.search(user_message.strip()):
         archive("ACTIVITY REPORT", channel_key, user_message)
         staged = analyze_activity_report(user_message, channel_key)
+        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
         count = len(get_pending_candidates())
         if staged:
             return f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
@@ -529,6 +812,7 @@ def get_response(channel_key: str, user_message: str) -> str:
         archive("LOOKUP REQUEST", channel_key, question)
 
         assistant_message = _lookup_with_library_first(question, channel_key)
+        emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, question=question[:100])
 
         history.append({"role": "user", "content": user_message})
         history.append({"role": "assistant", "content": assistant_message})
@@ -602,7 +886,9 @@ def transcribe_voice(audio_bytes: bytes, channel_key: str = "telegram") -> str |
 
 def run_lookup(question: str, channel_key: str = "miniapp") -> str:
     """Public entry point for lookup. Used by Mini App."""
-    return _lookup_with_library_first(question, channel_key)
+    result = _lookup_with_library_first(question, channel_key)
+    emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, source="miniapp", question=question[:100])
+    return result
 
 
 GROUNDED_PROMPT_APPENDIX = """
@@ -647,7 +933,9 @@ def run_grounded_response(
         )
         if u := getattr(response, "usage", None):
             _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
-        return response.choices[0].message.content.strip()
+        reply = response.choices[0].message.content.strip()
+        emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp")
+        return reply
     except Exception:
         logger.exception("Grounded response error")
         return "um... i got confused. can you try again?"
@@ -657,10 +945,11 @@ def reset_conversation(channel_key: str) -> None:
     """Clear conversation history for a channel. Used by /start and /reset."""
     conversations[channel_key] = []
     pending_lookups.pop(channel_key, None)
+    end_homework_session(channel_key)
 
 
 def get_greeting() -> str:
-    return "hi! i'm grace-mar! do you want to talk? i like stories and science and drawing!"
+    return "hi! i'm grace-mar — i remember what you've learned and what you've done. do you want to talk? i like stories and science and drawing!"
 
 
 def get_reset_message() -> str:

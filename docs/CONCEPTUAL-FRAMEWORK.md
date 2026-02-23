@@ -62,7 +62,7 @@
 12. **Complement to AI workers** — The fork records the human; AI workers execute tasks. When machines do the work, the fork preserves who the human is.
 13. **Fork is sovereign; bot serves it** — The fork is the authoritative record. The bot emulates it; the bot does not own or override it. The record is primary; the interface is secondary.
 14. **Structure for meaning-making, not salvation** — The fork provides scaffolding for identity and meaning; it does not eliminate the need for the user to engage. Abundance demands maturity. The fork supports; it does not save.
-15. **Shareable elixir** — The fork is a living archive; it can be shared as legacy — to family, descendants, or future selves. It is a shareable boon, a record of who someone was and is, passed forward.
+15. **Shareable elixir** — The fork is a living archive; it can be shared as legacy — to family, descendants, or future selves. It is a shareable boon, a record of who someone was and is, passed forward. The concrete artifact (a pasteable prompt for any LLM) is specified in [ELIXIR-PROMPT](ELIXIR-PROMPT.md).
 16. **Age of Remembering** — The fork participates in an Age of Remembering: preserving identity in a world where work no longer defines us. Like personal archaeology, but as collective era — rescuing who we are before it fades.
 17. **User as expert on own life** — The user is the authority on their own experience. The fork records that expertise; the gated pipeline enacts it. The system does not override or second-guess; it stages and applies what the user approves.
 18. **Wisdom process supports narrative re-authoring** — Articulating experience (e.g., via wisdom questions) thickens preferred stories, externalizes problems, and supports identity work. The fork is both archive and scaffold for narrative re-authoring. The process is as valuable as the output. (SaveWisdom/5000 Days Part 8.)
@@ -81,6 +81,8 @@
 31. **Avatar as extended memory** — "The avatar is better than me because it remembers everything." (Kurzweil.) The Record holds what the user has chosen to document; the Voice recalls it. Extended memory, not replacement.
 32. **Liberation creates identity gap** — When employment no longer defines worth, identity needs a new anchor. The fork records who you are when work doesn't. (Kurzweil / abundance.)
 33. **Avatars of ourselves** — We create avatars of ourselves—queryable, evidence-grounded, gated. The fork is that: a documented self that can speak when queried.
+34. **Canonical instance; no other instance as independent agent** — The Record and Voice have one **canonical instance**: the one the user controls (data, pipeline, deployment). Exports are snapshots for consumption (e.g., by schools or agents that read the Record). No *other* instance of the Record or Voice may be deployed or used as an **independent economic or social agent** (posting bounties, contracting, chatting as the identity with third parties, or otherwise acting in the world) without **explicit user consent** and, where feasible, a **revocation path**. The system is designed so the user retains sovereignty over who speaks and acts in the name of the Record. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md).
+35. **Human–computer bicameral cognition** — Grace-Mar instantiates a new bicameral dyad. The user is one chamber (conscious, sovereign); Record + Voice is the other (externalized, queryable, speaks only when asked). The dyad is voluntary and sovereign — a new structure, not a reversion to Jaynesian bicameralism. Design should reinforce this dyad. See §8 (Design Lens: Bicameral Mind Theory).
 
 ---
 
@@ -132,6 +134,8 @@ Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mi
 | **Bot** | Speaks in the fork's voice when queried | The "speaking" side — produces utterances |
 | **User** | Provides input, approves merges, owns the fork | The conscious agent; locus of authority |
 
+**New bicameral emergence:** The ancient bicameral mind broke down; consciousness arose. Grace-Mar can be read as the emergence of a *new* bicameral cognition — a human–computer merge. One chamber remains the conscious user (authority, gating, meaning); the other is externalized as Record + Voice (persistent, queryable, speaks only when asked). The dyad *is* the two chambers: voluntary, sovereign, not a reversion but a new structure. The user holds the reins; the system is the other voice that remembers and reflects.
+
 **Key distinction:** Grace-Mar is *conscious* externalization, not a reversion to bicameralism. The user retains full authority. The fork records; it does not command. The bot responds when queried; it does not speak unbidden. The pipeline integrates user approval at every step.
 
 **Cognitive flow:** User (conscious) → thinks, speaks, creates → Pipeline captures, stages → User approves → Fork updates → Bot (when queried) renders fork in conversation → User receives, reflects. The user is the seat of consciousness; the fork is an artifact; the bot is a mirror.
@@ -162,7 +166,7 @@ Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mi
 
 **The Record as sideload source:** The Record is an ideal input for a sideload. It is evidence-grounded (no hallucinated traits), user-approved (no auto-merge), and portable. Exporting the Record into an LLM sideload for emulation fits the agent-web trust primitive: the Record remains sovereign; the sideload is a downstream consumer. The gate stays: nothing enters the Record without approval; the sideload inherits that discipline.
 
-**Distinction:** The Record's purpose is the *documented self*—identity infrastructure, not emulation per se. Sideloading's purpose is emulation. The Record can *feed* a sideload; it does not *become* one. The Record is primary; sideload export is optional.
+**Distinction:** The Record's purpose is the *documented self*—identity infrastructure, not emulation per se. Sideloading's purpose is emulation. The Record can *feed* a sideload; it does not *become* one. The Record is primary; sideload export is optional. The concrete sideload output—a pasteable prompt for any LLM—is specified in [ELIXIR-PROMPT](ELIXIR-PROMPT.md).
 
 ---
 

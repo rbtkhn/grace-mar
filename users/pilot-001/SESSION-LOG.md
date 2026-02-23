@@ -572,7 +572,7 @@ evidence_tier: N/A
 
 **Three-part mind model adopted for post-seed growth:**
 
-| Channel | What it captures | SELF.md section | Prompt section |
+| Dimension | What it captures | SELF.md section | Prompt section |
 |---------|-----------------|-----------------|----------------|
 | Knowledge | Facts that entered her awareness | IX-A. KNOWLEDGE | YOUR KNOWLEDGE |
 | Curiosity | Topics that caught her attention | IX-B. CURIOSITY | YOUR CURIOSITY |
@@ -670,7 +670,7 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 **Candidates staged:** 3 (CANDIDATE-0038 to CANDIDATE-0040)
 **Decision:** Approve all
 
-**Significance:** First artifact to generate entries in all three mind channels from a single source.
+**Significance:** First artifact to generate entries in all three mind dimensions from a single source.
 
 **Approved (Knowledge):**
 
@@ -760,6 +760,19 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 - bot/prompt.py — YOUR CURIOSITY updated
 
 **Evidence:** ACT-0020 (wisdom elicitation survey, 10 MC questions, operator-administered)
+
+---
+
+## Session 017 — Pipeline: Casa Bonita (Writing Sample)
+
+**Date:** 2026-02-23
+**Method:** Operator approved CANDIDATE-0054 (writing sample WRITE-0005)
+
+**CANDIDATE-0054 (Writing sample — Casa Bonita):** Approved
+- SELF.md — Casa Bonita added to places and favorite_places (child documented visit: sliders, face painting, puppet show)
+- bot/prompt.py — YOUR KNOWLEDGE / Favorite places updated with Casa Bonita
+
+**Evidence:** ACT-0021, WRITE-0005 (operator-submitted handwritten narrative)
 
 ---
 

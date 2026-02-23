@@ -13,7 +13,7 @@ Cognitive density:
   - Words per IX entry (elaboration)
   - Evidence backing (% of IX entries with evidence_id or curated_by)
   - Topic diversity (unique concepts / total entries)
-  - Channel balance (IX-A : IX-B : IX-C)
+  - Dimension balance (IX-A : IX-B : IX-C)
 """
 
 import json
@@ -205,7 +205,7 @@ def main() -> None:
     print(f"Words per entry:      {avg_words:.1f} avg")
     print(f"Evidence backing:     {with_evidence}/{len(entries)} ({evidence_pct:.0f}%)")
     print(f"Topic diversity:      {diversity:.2f} (unique/total words)")
-    print(f"Channel balance:      IX-A:IX-B:IX-C = {balance}")
+    print(f"Dimension balance:    IX-A:IX-B:IX-C = {balance}")
 
     print()
 

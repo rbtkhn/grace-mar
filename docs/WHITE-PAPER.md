@@ -113,15 +113,15 @@ The fork is not a real-time mirror. It is a living, growing Record.
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
 | **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
 
-### Three-Channel Mind (Post-Seed Growth)
+### Three-Dimension Mind (Post-Seed Growth)
 
-| Channel | Section | What it captures |
+| Dimension | Section | What it captures |
 |---------|---------|------------------|
 | **Knowledge** | IX-A | Facts entering awareness through observation |
 | **Curiosity** | IX-B | Topics that catch attention, engagement signals |
 | **Personality** | IX-C | Observed behavioral patterns, art style, speech traits |
 
-A single artifact can populate all three channels. Entries link to evidence (ACT-XXXX).
+A single artifact can populate all three dimensions. Entries link to evidence (ACT-XXXX).
 
 ### Gated Pipeline
 
@@ -151,7 +151,7 @@ Every claim traces to artifacts:
 | **Primary function** | Teach (AI tutor, adaptive apps, mastery) | Record (identity, evidence, archive) |
 | **Data ownership** | School/platform | User/family |
 | **Evidence source** | Platform metrics, engagement | Artifacts, "we did X," cross-context |
-| **Personality channel** | Interest graph for content | IX-C: structured, evidence-linked, user-approved |
+| **Personality dimension** | Interest graph for content | IX-C: structured, evidence-linked, user-approved |
 | **Gate** | None — system auto-updates | User approves every merge |
 | **Knowledge boundary** | Incept generates; may infer | Only user-provided; no LLM leak |
 | **Portability** | Locked to Alpha platform | Export, open schema, agent-consumable |

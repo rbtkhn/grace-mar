@@ -384,7 +384,7 @@ memories: []
 
 ## Post-seed growth
 
-Grace-Mar's mind grows through selective exposure — the user shares thoughts via the Telegram channel, and Grace-Mar observes and processes them. What takes root permanently is gated by the user. Growth is organized into three channels.
+Grace-Mar's mind grows through selective exposure — the user shares thoughts via the Telegram channel, and Grace-Mar observes and processes them. What takes root permanently is gated by the user. Growth is organized into three dimensions.
 
 ### IX-A. KNOWLEDGE
 

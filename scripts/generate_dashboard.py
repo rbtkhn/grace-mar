@@ -7,7 +7,7 @@ Reads pilot-001 profile files and produces a single HTML dashboard with:
 - PENDING-REVIEW queue (candidates awaiting approval)
 - SKILLS container status (READ, WRITE, BUILD)
 - Recent bot archive excerpts
-- Benchmarks (pipeline stats, IX channel counts)
+- Benchmarks (pipeline stats, IX dimension counts)
 
 Usage:
     python scripts/generate_dashboard.py
@@ -20,7 +20,7 @@ in @BotFather (Bot Settings → Menu Button) and set DASHBOARD_MINIAPP_URL in .e
 import json
 import re
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -57,6 +57,9 @@ class DashboardData:
     pipeline_rejected: int
     curation_ratio: str  # "X% human-approved" or "—"
     fork_checksum: str  # from FORK-MANIFEST.json or ""
+    dyad_consultations_7d: int
+    dyad_integrations_7d: int
+    dyad_activity_reports_7d: int
 
 
 def parse_pending_review(content: str) -> tuple[int, list[dict]]:
@@ -322,6 +325,20 @@ def collect_data() -> DashboardData:
 
     events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
     pipeline_applied = pipeline_rejected = 0
+    dyad_consultations_7d = dyad_integrations_7d = dyad_activity_reports_7d = 0
+    cutoff_7d = datetime.now() - timedelta(days=7)
+
+    def _in_window(ts_str: str) -> bool:
+        if not ts_str:
+            return False
+        try:
+            dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+            if dt.tzinfo:
+                dt = dt.replace(tzinfo=None)
+            return dt >= cutoff_7d
+        except (ValueError, TypeError):
+            return False
+
     if events_path.exists():
         for line in events_path.read_text().strip().splitlines():
             if not line:
@@ -329,12 +346,31 @@ def collect_data() -> DashboardData:
             try:
                 row = json.loads(line)
                 e = row.get("event", "")
+                ts = row.get("ts", "")
                 if e == "applied" or e == "approved":
                     pipeline_applied += 1
+                    if _in_window(ts):
+                        dyad_integrations_7d += 1
                 elif e == "rejected":
                     pipeline_rejected += 1
+                elif e == "dyad:activity_report" and _in_window(ts):
+                    dyad_activity_reports_7d += 1
+                elif e in ("dyad:lookup", "dyad:grounded_query") and _in_window(ts):
+                    dyad_consultations_7d += 1
             except json.JSONDecodeError:
                 pass
+
+    if dyad_consultations_7d == 0 and ledger_path.exists():
+        for line in ledger_path.read_text().strip().splitlines():
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+                if row.get("bucket") == "lookup_rephrase" and _in_window(row.get("ts", "")):
+                    dyad_consultations_7d += 1
+            except (json.JSONDecodeError, KeyError):
+                pass
+
     total_decisions = pipeline_applied + pipeline_rejected
     curation_ratio = f"{100 * pipeline_applied // total_decisions}% approved" if total_decisions else "—"
 
@@ -375,6 +411,9 @@ def collect_data() -> DashboardData:
         pipeline_rejected=pipeline_rejected,
         curation_ratio=curation_ratio,
         fork_checksum=fork_checksum,
+        dyad_consultations_7d=dyad_consultations_7d,
+        dyad_integrations_7d=dyad_integrations_7d,
+        dyad_activity_reports_7d=dyad_activity_reports_7d,
     )
 
 
@@ -572,6 +611,9 @@ def render_html(data: DashboardData) -> str:
                         <div class="stat"><div class="label">Tokens/IX</div><div class="value">{data.tokens_per_ix}</div></div>
                         <div class="stat"><div class="label">Curation</div><div class="value">{data.curation_ratio}</div></div>
                         <div class="stat"><div class="label">Approved / Rejected</div><div class="value">{data.pipeline_applied} / {data.pipeline_rejected}</div></div>
+                        <div class="stat"><div class="label">Consultations (7d)</div><div class="value">{data.dyad_consultations_7d}</div></div>
+                        <div class="stat"><div class="label">Integrations (7d)</div><div class="value">{data.dyad_integrations_7d}</div></div>
+                        <div class="stat"><div class="label">Activity reports (7d)</div><div class="value">{data.dyad_activity_reports_7d}</div></div>
                     </div>
                 </section>
             </div>

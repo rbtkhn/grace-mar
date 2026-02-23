@@ -177,8 +177,10 @@ grace-mar/
 ├── docs/
 │   ├── GRACE-MAR-CORE.md     # CANONICAL governance (v2.0)
 │   ├── CONCEPTUAL-FRAMEWORK.md  # Fork vs. twin, emulation, terminology (AI parsing)
+│   ├── CHAT-FIRST-DESIGN.md     # Design principles for Telegram/chat constraint (bounded sessions, one-tap, Record felt not seen)
 │   ├── OPENCLAW-INTEGRATION.md  # OpenClaw integration (Record as identity, session continuity, staging)
 │   ├── PORTABILITY.md           # School transfer, ownership, handoff workflow
+│   ├── INSTANCES-AND-RELEASE.md # Instances of Record/Voice as independent actors; canonical instance; invariant 34
 │   ├── SIMPLE-USER-INTERFACE.md # Chat workflow for families (no GitHub)
 │   ├── ADMISSIONS-LINK-USE-CASE.md # Share link for admissions/employers to chat with fork
 │   ├── PRIVACY-REDACTION.md        # School/public views, redaction policy
@@ -186,6 +188,7 @@ grace-mar/
 │   ├── DESIGN-ROADMAP.md     # Product/feature design (email, newsletters, X account)
 │   ├── BUSINESS-ROADMAP.md   # Strategy, monetization, child safety & privacy
 │   ├── DESIGN-NOTES.md       # White paper & business proposal input (positioning, insights)
+│   ├── ELIXIR-PROMPT.md      # Portable prompt — voice, knowledge, personality (pasteable into any LLM)
 │   ├── MARKET-RESEARCH-ALPHA-KHAN.md  # Alpha alternatives, Khan Academy, cost comparison
 │   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
 │   ├── ARCHITECTURE.md       # Module design
@@ -199,6 +202,7 @@ grace-mar/
 ├── scripts/
 │   ├── export_fork.py        # Full fork export (JSON)
 │   ├── export_user_identity.py  # Record → USER.md / SOUL.md for OpenClaw
+│   ├── export_elixir.py         # Record → elixir prompt (pasteable into any LLM)
 │   └── export_view.py        # School/public views with redaction
 └── users/
     └── pilot-001/            # First pilot user (age 6)
@@ -208,6 +212,7 @@ grace-mar/
         ├── SESSION-LOG.md    # Interaction history
         ├── ARCHIVE.md        # Raw conversation log (private)
         ├── JOURNAL.md        # Daily highlights (public-suitable)
+        ├── HOMEWORK-LEDGER.jsonl  # Append-only: correct/total per homework session (30 = competency milestone)
         └── artifacts/        # Raw files (writing samples, artwork)
 ```
 

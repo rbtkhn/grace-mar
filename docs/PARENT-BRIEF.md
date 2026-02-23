@@ -52,6 +52,12 @@ The first session is a short survey to get to know your child. Four questions:
 
 ---
 
+## Your Role: Co-Learner, Not Just Supervisor
+
+Position yourself as a **co-learner** with your child. AI evolves quickly; you may not have more expertise than they do. Instead of only supervising, embrace open-minded, transparent conversations. Explore the bot together, ask questions together, and be willing to navigate the space alongside them through trial, error, and adjustments.
+
+---
+
 ## Before the Session
 
 1. Read [LETTER-TO-STUDENT.md](LETTER-TO-STUDENT.md) if you want to frame it for your child

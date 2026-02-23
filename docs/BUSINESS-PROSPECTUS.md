@@ -60,7 +60,7 @@ Grace-Mar defines the **Identity Fork Protocol (IFP)**: a sovereign, evidence-li
 
 | Milestone | Status |
 |-----------|--------|
-| **Architecture** | Complete — Record schema, gated pipeline, three-channel mind (Knowledge, Curiosity, Personality) |
+| **Architecture** | Complete — Record schema, gated pipeline, three-dimension mind (Knowledge, Curiosity, Personality) |
 | **Pilot** | Active — pilot-001 (age 6) post-seed; SELF, SKILLS, EVIDENCE populated |
 | **Emulation** | Live — Telegram bot; WeChat optional |
 | **Pipeline** | Active — analyst stages candidates; user approves; merge to profile |

@@ -16,9 +16,11 @@ Usage:
 
 import re
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+STALE_PENDING_DAYS = 3
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
 LAST_N_ACTIVITIES = 5
@@ -64,6 +66,23 @@ def _pending_count(pr_content: str) -> int:
         return 0
     candidates = pr_content.split("## Processed")[0]
     return len(re.findall(r"### CANDIDATE-\d+", candidates))
+
+
+def _from_the_record_topics(self_content: str, n: int = 3) -> list[str]:
+    """Extract 1–3 topics from IX-A, IX-B, IX-C for 'From the Record' section."""
+    knowledge = re.findall(r'id: LEARN-\d+.*?topic:\s*["\']([^"\']+)["\']', self_content, re.DOTALL)
+    curiosity = re.findall(r'id: CUR-\d+.*?topic:\s*["\']([^"\']+)["\']', self_content, re.DOTALL)
+    personality = re.findall(r'id: PER-\d+.*?observation:\s*["\']([^"\']+)["\']', self_content, re.DOTALL)
+    if not personality:
+        personality = [m.group(1).strip() for m in re.finditer(r'id: PER-\d+.*?observation:\s*([^\n]+)', self_content, re.DOTALL)]
+    topics = []
+    if knowledge:
+        topics.append(knowledge[-1].strip()[:40])
+    if curiosity and len(topics) < n:
+        topics.append(curiosity[-1].strip()[:40])
+    if personality and len(topics) < n:
+        topics.append(personality[-1].strip()[:40])
+    return topics[:n]
 
 
 def _ix_b_topics(self_content: str) -> list[str]:
@@ -125,8 +144,18 @@ def main() -> int:
     pending_count = _pending_count(pr_content)
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
+    from_record = _from_the_record_topics(self_content)
+    pr_path = user_dir / "PENDING-REVIEW.md"
+    pending_stale = False
+    if pending_count > 0 and pr_path.exists():
+        mtime = datetime.fromtimestamp(pr_path.stat().st_mtime)
+        pending_stale = (datetime.now() - mtime) > timedelta(days=STALE_PENDING_DAYS)
 
     # Build brief
+    pending_section = f"**{pending_count}** candidate(s) awaiting review. Type `/review` in Telegram to see them."
+    if pending_stale:
+        pending_section += "\n\nYou have candidates waiting — consider bringing them into the Record (type /review)."
+
     lines = [
         "# Session Brief",
         "",
@@ -134,7 +163,7 @@ def main() -> int:
         "",
         "## Pending Review",
         "",
-        f"**{pending_count}** candidate(s) awaiting review. Type `/review` in Telegram to see them.",
+        pending_section,
         "",
         "## Recent Activity",
         "",
@@ -145,6 +174,12 @@ def main() -> int:
             lines.append(f"- **{a['id']}** ({a['date']}) — {topic}")
     else:
         lines.append("(no recent activities)")
+    lines.extend(["", "## From the Record", ""])
+    if from_record:
+        topics_str = ", ".join(from_record)
+        lines.append(f"The Record holds: {topics_str}. Ask Grace-Mar to recall any of these.")
+    else:
+        lines.append("(nothing yet — pipeline will grow the Record)")
     lines.extend(["", "## Suggested Wisdom Questions", ""])
     if wisdom:
         for q in wisdom:

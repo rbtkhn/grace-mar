@@ -25,6 +25,9 @@
     .error { color: #e88; font-size: 0.9rem; padding: 0.5rem 0; }
     .toggle-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; cursor: pointer; }
     .toggle-row input { cursor: pointer; }
+    .suggested-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; }
+    .suggested-chip { padding: 0.35rem 0.6rem; font-size: 0.8rem; background: var(--surface); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--accent); cursor: pointer; white-space: nowrap; }
+    .suggested-chip:hover { background: rgba(136,180,212,0.15); }
   </style>
 </head>
 <body>
@@ -34,6 +37,11 @@
     <input type="checkbox" id="grounded" checked>
     <span>Grounded mode — answers cite sources [LEARN-0001] or abstain</span>
   </label>
+  <div class="suggested-row" id="suggested">
+    <button type="button" class="suggested-chip" data-q="What do I know about dinosaurs?">What do I know about dinosaurs?</button>
+    <button type="button" class="suggested-chip" data-q="What do I know about space?">What do I know about space?</button>
+    <button type="button" class="suggested-chip" data-q="What's in my Record?">What's in my Record?</button>
+  </div>
   <div class="chat" id="chat"></div>
   <div class="input-row">
     <input type="text" id="q" placeholder="What do you want to know?" autocomplete="off" enterkeyhint="send">
@@ -123,6 +131,15 @@
       }
       send.onclick = ask;
       q.onkeydown = function(e) { if (e.key === 'Enter') ask(); };
+      document.querySelectorAll('.suggested-chip').forEach(function(btn) {
+        btn.onclick = function() {
+          var text = (btn.dataset.q || '').trim();
+          if (!text) return;
+          q.value = text;
+          document.getElementById('grounded').checked = true;
+          ask();
+        };
+      });
     })();
   </script>
 </body>

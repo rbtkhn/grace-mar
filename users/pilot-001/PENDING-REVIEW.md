@@ -11,6 +11,8 @@
 > 4. Approved entries are merged into SELF.md, EVIDENCE.md, SESSION-LOG.md, and prompt.py
 > 5. Processed entries are moved to the PROCESSED section at the bottom
 >
+> **Review checklist** (before approving): Is it grounded in something the child actually said or did? No LLM inference beyond the exchange? No contradiction with existing Record?
+>
 > This file is machine-written by `bot/bot.py` and `bot/wechat_bot.py` — only edit the `status` field.
 
 ---
@@ -20,6 +22,15 @@
 ---
 
 ## Processed
+
+### CANDIDATE-0054 (Writing sample — Casa Bonita)
+
+```yaml
+status: approved
+source: operator-submitted writing sample (WRITE-0005)
+evidence: ACT-0021, WRITE-0005
+action: Casa Bonita added to SELF.md places and favorite_places; bot/prompt.py updated
+```
 
 ### CANDIDATE-0052 (Wisdom survey)
 

@@ -744,9 +744,9 @@ The gate is the user's discernment. The system proposes; the user disposes. This
 
 ---
 
-## Three-Channel Mind Model
+## Three-Dimension Mind Model
 
-Post-seed growth is organized into three channels within Section IX of SELF.md. The seed baseline (Sections I–VIII) remains intact; these channels capture everything learned after seeding.
+Post-seed growth is organized into three dimensions within Section IX of SELF.md. The seed baseline (Sections I–VIII) remains intact; these dimensions capture everything learned after seeding.
 
 ### IX-A. Knowledge
 
@@ -760,9 +760,9 @@ Topics that caught the self's attention — what they're drawn to, what resonate
 
 Emergent behavioral patterns detected through the observation window. Art media choices, speech patterns, emotional responses, value expressions. These are not declared traits — they are observed and documented.
 
-### Multi-Channel Signals
+### Multi-Dimension Signals
 
-A single artifact can generate entries in all three channels simultaneously. For example, a painted pharaoh portrait produces:
+A single artifact can generate entries in all three dimensions simultaneously. For example, a painted pharaoh portrait produces:
 - **Knowledge**: Egyptian pharaohs / King Tut's death mask
 - **Curiosity**: Deepening engagement with ancient Egypt
 - **Personality**: First use of paint as art medium, bold color choices

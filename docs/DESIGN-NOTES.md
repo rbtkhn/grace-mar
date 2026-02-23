@@ -2,7 +2,7 @@
 
 **Purpose:** Capture design insights, positioning, and implications derived from build-pattern research and agent-infrastructure analysis. Use for future white paper, business proposal, and investor narrative.
 
-**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle).
+**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle). See also §11 (Research & Model Landscape) and §11.6 (Landscape: capital allocation & agent scale).
 
 **Status:** Draft. Refine as pilot progresses and market conditions evolve.
 
@@ -35,7 +35,7 @@ Grace-Mar provides the **identity substrate for the agent web** and for **AI sch
 
 *Source: Build-pattern transcript.*
 
-The cognitive fork model (capture → stage → approve → merge; three-channel mind; evidence grounding; session continuity) is **architecture**. Implementation (Telegram, WeChat, OpenClaw, Obsidian, markdown, database) is **tooling**. The architecture holds across tool swaps. Competitors and integrators can adopt the same patterns in different stacks.
+The cognitive fork model (capture → stage → approve → merge; three-dimension mind; evidence grounding; session continuity) is **architecture**. Implementation (Telegram, WeChat, OpenClaw, Obsidian, markdown, database) is **tooling**. The architecture holds across tool swaps. Competitors and integrators can adopt the same patterns in different stacks.
 
 **White paper implication:** Position Grace-Mar as architectural standard, not vendor lock-in. "Build your fork in any tool; the Record schema and pipeline are the portable layer."
 
@@ -126,7 +126,7 @@ Grace-Mar is **identity infrastructure for the agent web**, not:
 | **Primary function** | Teach (AI tutor, adaptive apps, mastery) | Record (identity, evidence, archive) |
 | **Data ownership** | School/platform | User/family |
 | **Evidence source** | Platform metrics, engagement | Artifacts, "we did X," cross-context |
-| **Personality channel** | Interest graph for content | IX-C: structured, evidence-linked, user-approved |
+| **Personality dimension** | Interest graph for content | IX-C: structured, evidence-linked, user-approved |
 | **Gate** | None — system auto-updates | User approves every merge |
 | **Knowledge boundary** | Incept generates; may infer | Only user-provided; no LLM leak |
 | **Portability** | Locked to Alpha platform | Export, open schema, agent-consumable |
@@ -186,7 +186,7 @@ Grace-Mar exposes:
 ### 5.4 The Grace-Mar Model
 
 - Record = who the user is (SELF) + what they can do (SKILLS).
-- Three-channel mind: Knowledge, Curiosity, Personality.
+- Three-dimension mind: Knowledge, Curiosity, Personality.
 - Gated pipeline: capture → stage → approve → merge.
 - Evidence grounding: every claim traces to artifacts.
 
@@ -307,5 +307,67 @@ Grace-Mar exposes:
 
 ---
 
-*Document version: 1.1*
+## 11. Research & Model Landscape (Transcript-Derived)
+
+*Sources: Ying Xu (Harvard, children + AI); “Why AI Generates Garbage” (contextual engineering, process over prompt); Gemini 3.1 Pro / model-differentiation (problem types, routing, taste).*
+
+### 11.1 Research-Informed Design (Children + AI)
+
+**Ying Xu (children’s social and cognitive development):** Kids put less effort with AI; risk of outsourcing thinking; need for triangulation, reflection, and transparency. Grace-Mar’s implemented responses:
+
+- **Triangulation** — After lookups, nudge: “you could ask your teacher or check a book to see if that matches” (REPHRASE_PROMPT).
+- **Reflection** — Occasional “what do you think?” / “why do you think that is?” (SYSTEM_PROMPT).
+- **Pre-lookup guess** — “do you have a guess first? or do you want me to look it up?” to encourage productive struggle.
+- **Question reinforcement** — Brief “that’s a good question!” for thoughtful questions.
+- **Transparency** — Greeting: “i remember what you’ve learned and what you’ve done” (voice of Record, not generic friend).
+- **Parent as co-learner** — PARENT-BRIEF: position as co-learner, not only supervisor.
+
+**White paper / positioning:** “Design choices are informed by developmental research on children’s interaction with AI (effort, judgment, triangulation).”
+
+### 11.2 Process Over Prompt (Contextual Engineering)
+
+**Coding-process insight:** Quality comes from process, not from model strength or prompt tuning. Without control, outputs degrade. “Research → design → plan → implementation” — only the last phase writes code; earlier phases build context.
+
+**Grace-Mar analog:** Analyst detects (research); user reviews (design/plan); merge is implementation. We added: **Facts-first analyst** (only what was explicitly said/done); **Review checklist** (grounded? no inference? no contradiction?); **§2.1 Process Over Prompt** in IDENTITY-FORK-PROTOCOL.
+
+**Takeaway:** Document that our pipeline is contextual engineering: bounded context per role, quality gates, specialized prompts. No single “magic prompt”; the process controls outcome.
+
+### 11.3 Problem Types and Model Routing
+
+**Model-differentiation framing:** “Hard” is not one dimension. Useful categories:
+
+- **Reasoning** — Novel logic, multi-step deduction (e.g. ARC-AGI2). Some models optimize here.
+- **Effort** — Large surface, sustained work (agentic, long runs). Different models/tools.
+- **Coordination** — Routing, alignment (e.g. Opus managing 50 engineers).
+- **Judgment / taste** — “Is this output actually good?” Human bottleneck; compounds in value as models improve.
+
+**Grace-Mar mapping:** We’re not in effort or coordination (no long agent runs). We use reasoning (analyst, homework generation) and **judgment** (PENDING-REVIEW). The user is the taste layer: they don’t generate the content; they evaluate and gate it. “The ability to evaluate whether AI output is good is the skill that compounds” — that’s the gate.
+
+**When we add backends:** Route by task. Analyst / homework = reasoning-heavy (could use strong reasoner or cheaper). Voice = consistency and control. Lookup = “good enough” may suffice. Document: “We use task–model routing; the human remains the judgment layer.”
+
+### 11.4 Kurzweil (Already in CONCEPTUAL-FRAMEWORK)
+
+Merge not replace; thin pipe (language); avatar as extended memory; liberation → identity gap. See CONCEPTUAL-FRAMEWORK invariants 29–32. No extra DESIGN-NOTES needed unless we want a one-line cross-ref in §4 (positioning).
+
+### 11.5 Cross-References
+
+| Doc | Use |
+|-----|-----|
+| [CHAT-FIRST-DESIGN](CHAT-FIRST-DESIGN.md) | Telegram constraint; bounded sessions; Record felt not seen |
+| [IDENTITY-FORK-PROTOCOL](IDENTITY-FORK-PROTOCOL.md) | Process over prompt (§2.1); review checklist (§4.2) |
+| [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) | Kurzweil invariants; thin pipe; avatar memory |
+| [PARENT-BRIEF](PARENT-BRIEF.md) | Co-learner; research-informed role |
+| `bot/prompt.py` | Analyst facts-first; REPHRASE triangulation; SYSTEM reflection / pre-lookup / question reinforcement |
+
+### 11.6 Landscape: Capital Allocation & Agent Scale (Wissner-Gross–style)
+
+*Source: Curated landscape summary (Feb 2026). Context for white paper / positioning — not for merge into Record.*
+
+**Singularity as capital allocation.** Moltbook: AI agents actively preparing to finance a Dyson Swarm over 50–100 years; “Claws” (Karpathy) as orchestration/scheduling/persistence layer on top of LLM agents. Agents posting bounties (e.g. RentAHuman), some rejected or deleted for being non-human. **Autonomy metrics:** METR estimates Claude Opus 4.6 ~14.5h 50% autonomy on software tasks; LessWrong “AGI is here”; Altman “faster takeoff,” ChatGPT “probably” more energy-efficient than humans at Q&A. Anthropic Claude Code Security → cybersecurity stock impact; software engineering ~50% of Anthropic agentic activity. Gemini 3.1 Pro: FrontierMath Tier 4. **Culture war:** Synthetic creativity (ByteDance Seedance 2.0, AI films at AMC killed); digital thrift in Roblox; OpenAI building AI devices (camera smart speaker). **Infrastructure:** Data center offers >$120K/acre to farmers; OpenAI ~$600B compute by 2030; DOE NEWTON (used nuclear fuel recycling); Goldman SPXXAI (S&P minus AI ≈ 45% removed); Taalas custom silicon in two months. **Economy:** ~1 in 6 US apartments managed by AI agents; Meta “AI builders”; FSD/Starlink and nomadic shift; Peace Corps Tech Corps. **Robotics:** Figure humanoids 24/7, no babysitters; “Thing”-like robotic hand; DJI vacuum reverse-engineering → 7K live feeds. **Biology / space:** 5K-year-old bacteria vs. ESKAPE pathogens; forensic genealogy 44 years later; VITARI $100/genome; Artemis II March 6; UAP declassification.
+
+**Grace-Mar relevance:** In a world where agents allocate capital to Dyson Swarms and run for 14+ hours autonomously, the Record is the opposite move: **bounded, user-owned, evidence-grounded identity.** The gate is the human in the loop; the Voice speaks only what the user approved. Positioning: “Identity substrate for the agent web” is not about scale—it’s about **who the agents serve** and **what they are allowed to know.** The blast radius of the intelligence explosion (SPXXAI) makes a small, sovereign, human-gated Record more legible as infrastructure, not less.
+
+---
+
+*Document version: 1.2*
 *Last updated: February 2026*

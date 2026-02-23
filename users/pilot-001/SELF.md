@@ -52,6 +52,7 @@ books:
 places:
   - Elitch Gardens
   - The Broadmoor
+  - Casa Bonita
   - Anyang, China
   - Cancún, Mexico
   - Los Cabos, Mexico
@@ -341,6 +342,7 @@ places_lived: [Colorado]
 favorite_places:
   - Elitch Gardens
   - The Broadmoor
+  - Casa Bonita
   - Anyang, China
   - Cancún, Mexico
   - Los Cabos, Mexico
@@ -370,7 +372,7 @@ memories: []
 
 ## IX. MIND (Post-Seed Growth)
 
-Grace-Mar's mind grows through selective exposure — the user shares thoughts via the Telegram channel, and Grace-Mar observes and processes them. What takes root permanently is gated by the user. Growth is organized into three channels.
+Grace-Mar's mind grows through selective exposure — the user shares thoughts via the Telegram channel, and Grace-Mar observes and processes them. What takes root permanently is gated by the user. Growth is organized into three dimensions.
 
 ### IX-A. KNOWLEDGE
 
@@ -753,7 +755,7 @@ Track what updated SELF and when.
 | 2026-02-20 | Section IX restructured into three-part MIND model (Knowledge, Curiosity, Personality) | Architecture | Post-seed growth now routes to IX-A/B/C; classical music interest moved to IX-B Curiosity as CUR-0001 |
 | 2026-02-20 | Knowledge (LEARN-0011 to LEARN-0012) | Pipeline batch 4 | Reptiles, no reptiles on Jupiter — 2 approved / 2 rejected, first batch using three-part mind routing |
 | 2026-02-20 | Knowledge (LEARN-0013 to LEARN-0023), Curiosity (CUR-0002) | Pipeline batch 5 | Solar system school workbook — 11 planets/bodies + inner solar system coloring engagement, all 12 approved |
-| 2026-02-20 | Knowledge (LEARN-0024), Curiosity (CUR-0003), Personality (PER-0001) | Pipeline batch 6 | Pharaoh painting — first entry in all three mind channels from a single artifact |
+| 2026-02-20 | Knowledge (LEARN-0024), Curiosity (CUR-0003), Personality (PER-0001) | Pipeline batch 6 | Pharaoh painting — first entry in all three mind dimensions from a single artifact |
 | 2026-02-21 | Curiosity (CUR-0004), Personality (PER-0002, PER-0003) | Pipeline review queue | Magic School Bus, time-adverbial opener, "and I [verb]" connector — WRITE-0004, CANDIDATE-0046–0048 approved |
 | 2026-02-21 | Knowledge (LEARN-0025) | Pipeline review queue | Black holes — CANDIDATE-0042 approved |
 | 2026-02-21 | Curiosity (CUR-0005) | Pipeline review queue | Reptiles — CANDIDATE-0049 approved |

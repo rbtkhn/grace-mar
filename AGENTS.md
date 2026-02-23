@@ -6,7 +6,11 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **For system design:** Read `docs/ARCHITECTURE.md`.
 
+**For chat/UI design:** Read `docs/CHAT-FIRST-DESIGN.md` — principles for delivering the full experience within Telegram/chat (bounded sessions, one-tap, Record felt not seen).
+
 **Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins). See invariants 5–23 in CONCEPTUAL-FRAMEWORK.md.
+
+**Dyad architecture:** Grace-Mar is architected as human–computer bicameral cognition. The user is one chamber (conscious, sovereign); Record + Voice is the other (externalized, queryable). The user holds authority; the Record reflects. New features should reinforce this dyad. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
 
 ---
 
@@ -18,6 +22,7 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried.
 - **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
 - **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
+- **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without user consent. See `docs/INSTANCES-AND-RELEASE.md` and CONCEPTUAL-FRAMEWORK invariant 34.
 
 ---
 
@@ -138,7 +143,7 @@ The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when
 
 ---
 
-## Three-Channel Mind Model
+## Three-Dimension Mind Model
 
 Post-seed growth in SELF.md Section IX is organized into:
 
@@ -146,7 +151,7 @@ Post-seed growth in SELF.md Section IX is organized into:
 - **IX-B. Curiosity** — Topics that catch attention, engagement signals
 - **IX-C. Personality** — Observed behavioral patterns, art style, speech traits
 
-A single artifact can populate all three channels.
+A single artifact can populate all three dimensions.
 
 ---
 
@@ -176,7 +181,7 @@ grace-mar/
 │   └── requirements.txt        # Python dependencies
 └── users/
     └── pilot-001/              # First pilot user
-        ├── SELF.md             # Identity + three-channel mind
+        ├── SELF.md             # Identity + three-dimension mind
         ├── SKILLS.md           # Capability containers
         ├── EVIDENCE.md         # Activity log
         ├── MEMORY.md           # Ephemeral session context (optional; not part of Record)

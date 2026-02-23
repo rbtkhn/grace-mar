@@ -17,9 +17,9 @@ Two core modules define the fork:
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
 | **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
 
-Post-seed growth is organized into a **three-channel mind model**:
+Post-seed growth is organized into a **three-dimension mind model**:
 
-| Channel | What it captures |
+| Dimension | What it captures |
 |---------|-----------------|
 | **Knowledge** (IX-A) | Facts entering awareness through observation |
 | **Curiosity** (IX-B) | Topics that catch attention, engagement signals |
@@ -46,7 +46,7 @@ Two input channels feed the pipeline:
 **Pilot user:** pilot-001 (fork name: Grace-Mar)
 **Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality)
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/WECHAT-SETUP.md`)
-**Pipeline:** Active — knowledge, curiosity, and personality channels populated
+**Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
 
 ## Repository Structure
 
@@ -78,6 +78,7 @@ grace-mar/
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes FORK-MANIFEST.json)
 │   ├── export_fork.py               # Export fork to portable JSON
 │   ├── export_user_identity.py      # Record → USER.md / SOUL.md for OpenClaw
+│   ├── export_elixir.py             # Record → elixir prompt (pasteable into any LLM)
 │   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
 │   ├── metrics.py                   # Pipeline health, record completeness
 │   ├── governance_checker.py        # Pre-commit principle violations
@@ -102,7 +103,7 @@ grace-mar/
 │   └── requirements.txt             # Python dependencies
 └── users/
     └── pilot-001/                   # First pilot user
-        ├── SELF.md                  # Identity + three-channel mind
+        ├── SELF.md                  # Identity + three-dimension mind
         ├── SKILLS.md                # Capability containers
         ├── EVIDENCE.md              # Activity log
         ├── SESSION-LOG.md           # Interaction history
@@ -205,7 +206,7 @@ Measure how fast the fork is growing and how dense its content is:
 python3 scripts/measure_growth_and_density.py
 ```
 
-Reports: **entries per day**, **pipeline throughput** (if PIPELINE-EVENTS exists), **words per IX entry**, **evidence backing %**, **topic diversity**, **channel balance** (IX-A:IX-B:IX-C), and **git history delta**.
+Reports: **entries per day**, **pipeline throughput** (if PIPELINE-EVENTS exists), **words per IX entry**, **evidence backing %**, **topic diversity**, **dimension balance** (IX-A:IX-B:IX-C), and **git history delta**.
 
 ## PDF Export
 
