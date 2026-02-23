@@ -18,8 +18,11 @@ if __package__ is None:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     __package__ = "bot"
 
+import importlib.util
 import os
 import logging
+from io import BytesIO
+from pathlib import Path
 
 from dotenv import load_dotenv
 from telegram import (
@@ -117,6 +120,32 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         greeting,
         reply_markup=START_KEYBOARD,
     )
+
+
+async def prp(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Send the Portable Record Prompt as a downloadable .txt file."""
+    try:
+        repo_root = Path(__file__).resolve().parent.parent
+        spec = importlib.util.spec_from_file_location(
+            "export_prp",
+            repo_root / "scripts" / "export_prp.py",
+        )
+        if not spec or not spec.loader:
+            await update.message.reply_text("Could not load PRP export.")
+            return
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        content = mod.export_prp(user_id="pilot-001")
+        buf = BytesIO(content.encode("utf-8"))
+        buf.seek(0)
+        await update.message.reply_document(
+            document=buf,
+            filename="grace-mar-prp.txt",
+            caption="Portable Record Prompt — paste into ChatGPT, Claude, or any LLM to chat with my Record.",
+        )
+    except Exception:
+        logger.exception("PRP export error")
+        await update.message.reply_text("i couldn't make the PRP right now. try again in a little bit?")
 
 
 async def dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -376,6 +405,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app = builder.build()
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("prp", prp))
     app.add_handler(CommandHandler("dashboard", dashboard))
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))

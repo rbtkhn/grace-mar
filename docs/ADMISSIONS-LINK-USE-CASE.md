@@ -73,7 +73,7 @@ Applicant's Record (SELF, SKILLS, EVIDENCE)
 
 **Recommendation:** Time-limited token (e.g. 14 days) for school/job applications. Per-user public link for portfolios / "meet me" pages.
 
-**Alternative:** Applicant can share the [elixir prompt](ELIXIR-PROMPT.md) instead of a hosted link; reviewer pastes into their own LLM (ChatGPT, Claude, etc.). No server required; applicant controls the snapshot.
+**Alternative:** Applicant can share the [Portable Record Prompt](PORTABLE-RECORD-PROMPT.md) instead of a hosted link; reviewer pastes into their own LLM (ChatGPT, Claude, etc.). No server required; applicant controls the snapshot.
 
 ### What the fork knows
 

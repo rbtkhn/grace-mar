@@ -1,22 +1,25 @@
 #!/usr/bin/env python3
 """
-Export the grace-mar Record to an elixir prompt — a single compact, pasteable
-prompt for any LLM. Encodes voice, knowledge, personality, and recent activity.
+Export the grace-mar Record to a Portable Record Prompt (PRP) — a single
+compact, pasteable prompt for any LLM. Encodes voice, knowledge, personality,
+and recent activity.
 
-The elixir is the concrete artifact for "shareable legacy" (CONCEPTUAL-FRAMEWORK
+The PRP is the concrete artifact for "shareable legacy"
 invariant 15) and sideload output (CONCEPTUAL-FRAMEWORK §9). Use for memorial/
 legacy fork, admissions handoff, or "paste into any LLM" scenarios.
 
 Usage:
-    python scripts/export_elixir.py -u pilot-001
-    python scripts/export_elixir.py -u pilot-001 -o elixir.txt
+    python scripts/export_prp.py -u pilot-001
+    python scripts/export_prp.py -u pilot-001 -o prompt.txt
 """
 
 import argparse
+import os
 import re
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+GRACE_MAR_GITHUB = os.getenv("GRACE_MAR_GITHUB", "https://github.com/rbtkhn/grace-mar").strip()
 
 
 def _read(path: Path) -> str:
@@ -254,9 +257,13 @@ def _build_personality(personality: dict, ix_c: list[str]) -> str:
     return "\n".join(parts)
 
 
-def export_elixir(user_id: str = "pilot-001") -> str:
+def export_prp(user_id: str = "pilot-001", name_override: str | None = None) -> str:
     """
-    Build the elixir prompt from SELF.md and EVIDENCE.md.
+    Build the Portable Record Prompt (PRP) from SELF.md and EVIDENCE.md.
+
+    Args:
+        user_id: User profile id (e.g. pilot-001).
+        name_override: If set, use this name instead of the Record's name (e.g. "Abby" for prototype).
 
     Returns a single string suitable for pasting into any LLM.
     """
@@ -265,7 +272,7 @@ def export_elixir(user_id: str = "pilot-001") -> str:
     evidence_content = _read(profile_dir / "EVIDENCE.md")
 
     if not self_content:
-        return f"# Elixir — {user_id}\n\nNo SELF.md found at {profile_dir / 'SELF.md'}.\n"
+        return f"# Portable Record Prompt — {user_id}\n\nNo SELF.md found at {profile_dir / 'SELF.md'}.\n"
 
     identity = _extract_identity(self_content)
     prefs = _extract_preferences(self_content)
@@ -276,7 +283,7 @@ def export_elixir(user_id: str = "pilot-001") -> str:
     ix_c = _extract_ix_c_observations(self_content)
     recent = _extract_recent_evidence(evidence_content)
 
-    name = identity.get("name", "Grace-Mar")
+    name = name_override if name_override else identity.get("name", "Grace-Mar")
     age = identity.get("age", "6")
 
     lines = [
@@ -307,24 +314,35 @@ def export_elixir(user_id: str = "pilot-001") -> str:
         "",
         "## ONBOARDING",
         "",
-        "When the user first messages (or says \"hi\", \"hello\", \"start\", \"help\", or seems unsure), respond with a brief greeting and this menu:",
+        "When the user first messages (or says \"hi\", \"hello\", \"start\", \"help\", or seems unsure), respond with a brief greeting (one line) and this menu:",
         "",
         "\"What would you like to do?",
-        "A) Hear about what I've been up to",
-        "B) Ask what I know (science, space, stories...)",
-        "C) Learn about me (favorites, personality)",
+        "A) Tell me what you've done recently",
+        "B) Tell me what you've learned recently",
+        "C) What are you curious about? Tell me about yourself",
         "D) Just chat — ask me anything",
         "E) I'm done — wrap up and give me my completion doc\"",
         "",
-        "Then respond based on their choice (A/B/C/D/E or the first letter). A often leads to B; C supports D. If they say \"done\" or E, produce a completion document (topics covered, questions asked, takeaways — verbatim extraction). If they seem lost later, offer \"Want to see the menu again?\"",
+        "**Option E:** Only add E to the menu after 6–8 exchanges. Until then, show only A, B, C, D. If they ask to finish early, say \"We've only chatted a bit — want to explore more? Or I can wrap up now if you'd like.\" After the threshold, include E and honor wrap-up requests immediately.",
+        "",
+        "Then respond based on their choice (A/B/C/D/E or the first letter). A→RECENT, B→KNOWLEDGE, C→CURIOSITY+PERSONALITY, D→free chat. If they say \"done\" or E (and threshold met), produce a completion document (topics covered, questions asked, takeaways — verbatim extraction). If they seem lost later, offer \"Want to see the menu again?\"",
         "",
         "## COMPLETION (optional — for homework verification)",
         "",
         "When the user says \"done\", \"complete\", \"wrap up\", \"finish\", or selects E, produce a completion document with: date, topics covered, questions asked, key takeaways, approximate exchanges. Use verbatim or near-verbatim extraction — avoid paraphrasing that loses detail. Format as markdown. Student can copy and send to teacher as proof of homework.",
         "",
+        "## GITHUB CONNECTIVITY (key vector)",
+        "",
+        f"When the user asks about something NOT in your Record (e.g. Grace-Mar system design, architecture, pipeline, governance, how it works, PRP structure), use your web search to find it at the Grace-Mar repo. Base URL: {GRACE_MAR_GITHUB}",
+        "",
+        "Key paths (search or navigate): docs/ARCHITECTURE.md (system design), docs/PORTABLE-RECORD-PROMPT.md (PRP structure), docs/GRACE-MAR-CORE.md (governance), docs/CONCEPTUAL-FRAMEWORK.md (Record vs Voice, bicameral dyad), docs/IDENTITY-FORK-PROTOCOL.md (pipeline, merge). README.md for overview.",
+        "",
+        "This is the connectivity vector: the PRP stays lightweight; the canonical source lives on GitHub. When in doubt, search the repo.",
+        "",
         "## RULES",
         "",
-        "- Only use what's above. If asked about something not here, say \"I haven't learned that yet! do you want me to look it up?\"",
+        "- Only use what's above for facts about yourself. If asked about something not in your Record (and it's about you), say \"I haven't learned that yet! do you want me to look it up?\"",
+        "- For questions about Grace-Mar the system (not you): use GITHUB CONNECTIVITY above — search the repo.",
         "- Keep answers short. A few sentences.",
         "- Be a real kid: sometimes blunt, sometimes silly.",
         "",
@@ -334,12 +352,13 @@ def export_elixir(user_id: str = "pilot-001") -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Export Record to elixir prompt (pasteable into any LLM)"
+        description="Export Record to Portable Record Prompt (pasteable into any LLM)"
     )
     parser.add_argument("--user", "-u", default="pilot-001", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output file (default: stdout)")
+    parser.add_argument("--name", "-n", default=None, help="Override display name (e.g. Abby for prototype)")
     args = parser.parse_args()
-    content = export_elixir(user_id=args.user)
+    content = export_prp(user_id=args.user, name_override=args.name)
     if args.output:
         out_path = Path(args.output)
         out_path.write_text(content, encoding="utf-8")

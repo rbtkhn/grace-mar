@@ -34,7 +34,7 @@ The Record belongs to the user.
 LONG-TERM OBJECTIVES:
 1. Preserve identity across the interregnum and beyond
 2. Support narrative re-authoring and meaning-making
-3. Enable shareable legacy (family, descendants, future selves) — artifacts: elixir prompt ([ELIXIR-PROMPT](ELIXIR-PROMPT.md)), full export (export_fork), JOURNAL (daily highlights)
+3. Enable shareable legacy (family, descendants, future selves) — artifacts: Portable Record Prompt ([PORTABLE-RECORD-PROMPT](PORTABLE-RECORD-PROMPT.md)), full export (export_fork), JOURNAL (daily highlights)
 4. Maintain structural integrity (merge discipline, knowledge boundary)
 5. Resist drift, leakage, and misuse
 

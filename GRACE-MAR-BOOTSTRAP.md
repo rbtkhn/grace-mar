@@ -188,7 +188,7 @@ grace-mar/
 │   ├── DESIGN-ROADMAP.md     # Product/feature design (email, newsletters, X account)
 │   ├── BUSINESS-ROADMAP.md   # Strategy, monetization, child safety & privacy
 │   ├── DESIGN-NOTES.md       # White paper & business proposal input (positioning, insights)
-│   ├── ELIXIR-PROMPT.md      # Portable prompt — voice, knowledge, personality (pasteable into any LLM)
+│   ├── PORTABLE-RECORD-PROMPT.md    # Portable Record Prompt — voice, knowledge, personality (pasteable into any LLM)
 │   ├── MARKET-RESEARCH-ALPHA-KHAN.md  # Alpha alternatives, Khan Academy, cost comparison
 │   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
 │   ├── ARCHITECTURE.md       # Module design
@@ -202,7 +202,7 @@ grace-mar/
 ├── scripts/
 │   ├── export_fork.py        # Full fork export (JSON)
 │   ├── export_user_identity.py  # Record → USER.md / SOUL.md for OpenClaw
-│   ├── export_elixir.py         # Record → elixir prompt (pasteable into any LLM)
+│   ├── export_prp.py            # Record → Portable Record Prompt (pasteable into any LLM)
 │   └── export_view.py        # School/public views with redaction
 └── users/
     └── pilot-001/            # First pilot user (age 6)

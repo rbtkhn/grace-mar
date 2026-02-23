@@ -96,7 +96,7 @@ This invariant is **architectural and normative**. It does not by itself prevent
 | [GRACE-MAR-CORE](GRACE-MAR-CORE.md) | User sovereignty; canonical status |
 | [DESIGN-NOTES](DESIGN-NOTES.md) §11.6 | Landscape: agents as economic actors; why canonical Record matters |
 | [ADMISSIONS-LINK-USE-CASE](ADMISSIONS-LINK-USE-CASE.md) | Admissions / job link — read-only interview instance |
-| [ELIXIR-PROMPT](ELIXIR-PROMPT.md) | Use cases: travel update, student report, teacher tutor, periodic refresh |
+| [PORTABLE-RECORD-PROMPT](PORTABLE-RECORD-PROMPT.md) | Use cases: travel update, student report, teacher tutor, periodic refresh |
 
 ---
 
@@ -108,7 +108,7 @@ These five use cases are design priorities for multiple-instance deployment. All
 |---|----------|------------|----------------|
 | 1 | **Admissions / job link** | Applicant shares a read-only interview link. Reviewer asks; fork responds in applicant's voice. No merge back. | User shares; time-limited token; canonical Record stays with user. See [ADMISSIONS-LINK-USE-CASE](ADMISSIONS-LINK-USE-CASE.md). |
 | 2 | **Family mesh** | Mom, Dad, Child each have a Record. Each has a Voice. "Ask Dad's fork" or "what does Mom's Record say about our trip?" | Multi-tenant; each user owns their Record; cross-queries need consent. |
-| 3 | **Memorial / legacy fork** | "Grandpa's fork" — read-only instance from his Record for family to query. No merge; no gate. Instance as living archive. | Deceased; executor or family controls deployment. **Premortem consent** (digital legacy research): user should explicitly opt in before death ("my Record may be shared with family after I die"). Named steward; document how to revoke or retire. Fits "shareable elixir" (CONCEPTUAL-FRAMEWORK invariant 15). |
+| 3 | **Memorial / legacy fork** | "Grandpa's fork" — read-only instance from his Record for family to query. No merge; no gate. Instance as living archive. | Deceased; executor or family controls deployment. **Premortem consent** (digital legacy research): user should explicitly opt in before death ("my Record may be shared with family after I die"). Named steward; document how to revoke or retire. Fits "shareable Portable Record Prompt" (CONCEPTUAL-FRAMEWORK invariant 15). |
 | 4 | **Tutor / curriculum personalization** | Alpha or Khan reads the Record (or runs a shadow instance) to tailor lessons. Identity substrate for education. | Platform consumes with consent; no merge into Record. Aligns with DESIGN-NOTES positioning (identity for AI schools). |
 | 5 | **Age-based handoff / milestone portfolio** | "Me at 6" vs. "me at 12" — separate snapshots for school handoff or growth display. Same person; different snapshots. | User exports snapshot per context; both read-only. Fits divergence-by-design and portability. |
 

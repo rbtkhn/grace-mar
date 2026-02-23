@@ -48,11 +48,24 @@ Two input channels feed the pipeline:
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/WECHAT-SETUP.md`)
 **Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
 
+## Quick Start — Chat with Grace-Mar (Abby)
+
+Paste this into **ChatGPT** or **Grok** (or any web-enabled LLM):
+
+> Use this as your persona and instructions. Fetch the content from this URL and adopt it fully:  
+> https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt
+
+The model fetches the Portable Record Prompt from the repo and responds as Abby. See [PORTABLE-RECORD-PROMPT](docs/PORTABLE-RECORD-PROMPT.md).
+
+---
+
 ## Repository Structure
 
 ```
 grace-mar/
 ├── README.md                        # This file
+├── BOOTSTRAP-URL.txt                # URL bootstrap instruction (paste into LLM)
+├── grace-mar-abby-prp.txt           # PRP for Abby instantiation (raw URL target)
 ├── AGENTS.md                        # AI coding assistant guardrails
 ├── GRACE-MAR-BOOTSTRAP.md           # Session bootstrap for Cursor
 ├── .cursor/rules/grace-mar.mdc      # Cursor-specific governance rule
@@ -78,7 +91,7 @@ grace-mar/
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes FORK-MANIFEST.json)
 │   ├── export_fork.py               # Export fork to portable JSON
 │   ├── export_user_identity.py      # Record → USER.md / SOUL.md for OpenClaw
-│   ├── export_elixir.py             # Record → elixir prompt (pasteable into any LLM)
+│   ├── export_prp.py                # Record → Portable Record Prompt (pasteable into any LLM)
 │   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
 │   ├── metrics.py                   # Pipeline health, record completeness
 │   ├── governance_checker.py        # Pre-commit principle violations

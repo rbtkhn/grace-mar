@@ -8,7 +8,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **For chat/UI design:** Read `docs/CHAT-FIRST-DESIGN.md` — principles for delivering the full experience within Telegram/chat (bounded sessions, one-tap, Record felt not seen).
 
-**Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins). See invariants 5–23 in CONCEPTUAL-FRAMEWORK.md.
+**Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins), interregnum fortification (Part 14). See invariants 5–23 and 36 in CONCEPTUAL-FRAMEWORK.md.
 
 **Dyad architecture:** Grace-Mar is architected as human–computer bicameral cognition. The user is one chamber (conscious, sovereign); Record + Voice is the other (externalized, queryable). The user holds authority; the Record reflects. New features should reinforce this dyad. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
 

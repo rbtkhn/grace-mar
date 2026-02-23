@@ -49,6 +49,7 @@ Other useful commands:
 
 - **/start** — reset the conversation, show menu
 - **/reset** — clear chat history and start over
+- **/prp** — download the Portable Record Prompt (.txt) to paste into ChatGPT, Claude, or any LLM
 - **/dashboard** — open the fork dashboard (if configured) in a browser
 
 ---
