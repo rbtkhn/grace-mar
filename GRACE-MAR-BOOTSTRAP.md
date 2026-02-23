@@ -16,6 +16,8 @@ Use this file to initiate or continue work on GRACE-MAR in any Cursor conversati
 
 Session continuity supports the feedback loop — sustained direction over time, not one-shot processing.
 
+**If the current conversation is slowing down:** Load this file in a *new* conversation to continue development with fresh context. SESSION HANDOFF captures recent work; the new session picks up from there.
+
 **If using OpenClaw (shared workspace):** See `docs/OPENCLAW-INTEGRATION.md`. Export Record for identity: `python scripts/export_user_identity.py -u pilot-001 -o USER.md`.
 
 When this file is loaded at the start of a conversation, present the user with multiple choice options:
@@ -224,17 +226,19 @@ grace-mar/
 
 **Last updated:** 2026-02-22
 
-**This session:**
-- Pillar → module; IMAGINE merged into BUILD. Three modules: READ, WRITE, BUILD.
-- Design philosophy embedded: transcript insights (AI Awakened, Mind Warp/Architect, Kurzweil), nature analogies (membrane, absorption, crystallization), CONCEPTUAL-FRAMEWORK invariants 26–33.
-- Counterfactual harness run — 16/16 passed (knowledge boundary intact).
-- Pipeline health checked — queue empty, 52 candidates processed, healthy.
-- **Unpushed changes:** Kurzweil + Architect + nature analogies edits (CONCEPTUAL-FRAMEWORK, AGENTS, README, bot/prompt.py, bot/core.py, EVIDENCE-TEMPLATE). Run `git status`; consider push.
+**This session (PRP + bootstrap + connectivity):**
+- **Elixir → PRP rename:** export_elixir.py → export_prp.py; ELIXIR-PROMPT.md → PORTABLE-RECORD-PROMPT.md
+- **URL bootstrap:** Paste raw PRP URL into web-enabled LLM (ChatGPT, Grok) for one-paste instantiation. Added BOOTSTRAP-URL.txt, grace-mar-abby-prp.txt. Raw URL: https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt
+- **GitHub connectivity vector:** PRP instructs model to search the repo when user asks about Grace-Mar (architecture, pipeline, docs). Key paths in RULES. Supports recursive evolution — PRP stays lightweight, canonical source on GitHub.
+- **PRP refinements:** Menu (A/B/C/D) aligned to Record sections; option E only after 6–8 exchanges; /prp command in Telegram bot
+- **5000 Days Part 14:** Invariant 36 (interregnum chaos, hero's fortification); bicameral dyad (invariant 35, AGENTS, SYSTEM_PROMPT, ANALYST_PROMPT)
+- **Abby prototype:** prototypes/abby-prp.txt; export_prp -n Abby
+- **All changes pushed** (commit 13e1567)
 
 **Next session options:**
-- Push remaining changes to GitHub
-- Continue development or run session per pilot workflow
-- Check PENDING-REVIEW if bot activity since last session
+- Continue development — PRP retrieval/routing (personality, curiosity, knowledge, library, archive when needed)
+- Run session per pilot workflow
+- Regenerate grace-mar-abby-prp.txt after Record changes: `python scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt` then commit
 
 ---
 
