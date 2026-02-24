@@ -22,6 +22,7 @@ MERGE_WITHOUT_APPROVAL_PATTERNS = [
     (r"\.merge\s*\(|merge\s+into\s+SELF|merge\s+into\s+EVIDENCE", "merge without approval"),
     (r"write\s*\([^)]*SELF\.md|write\s*\([^)]*EVIDENCE\.md", "direct write to SELF/EVIDENCE"),
     (r"open\s*\([^)]*SELF\.md.*['\"]w['\"]|open\s*\([^)]*EVIDENCE\.md.*['\"]w['\"]", "direct write to Record"),
+    (r"process_approved_candidates\.py\s+--apply(?!.*--receipt)", "merge apply without receipt"),
 ]
 
 # Patterns that suggest LLM knowledge leak (referencing non-profile knowledge)

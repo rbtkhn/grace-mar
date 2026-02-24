@@ -29,6 +29,7 @@ EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
 PRP_PATH = REPO_ROOT / "grace-mar-abby-prp.txt"
 MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
+MIN_EVIDENCE_TIER = 3
 
 
 def _read(path: Path) -> str:
@@ -120,6 +121,7 @@ def _build_receipt(approved: list[dict], approved_by: str) -> dict:
         "user_id": USER_ID,
         "approved_by": approved_by.strip(),
         "approved_at": _utc_now_iso(),
+        "min_evidence_tier": MIN_EVIDENCE_TIER,
         "candidate_ids": _canonical_candidate_ids(approved),
     }
 
@@ -137,6 +139,9 @@ def _validate_receipt(receipt: dict, approved: list[dict]) -> tuple[bool, str]:
         return False, "receipt missing approved_at"
     if not isinstance(receipt.get("candidate_ids"), list):
         return False, "receipt missing candidate_ids list"
+    min_tier = receipt.get("min_evidence_tier", MIN_EVIDENCE_TIER)
+    if not isinstance(min_tier, int) or min_tier < MIN_EVIDENCE_TIER:
+        return False, f"receipt min_evidence_tier must be int >= {MIN_EVIDENCE_TIER}"
     receipt_ids = sorted(str(x).strip() for x in receipt["candidate_ids"] if str(x).strip())
     current_ids = _canonical_candidate_ids(approved)
     if receipt_ids != current_ids:
@@ -148,6 +153,91 @@ def _append_merge_receipt(receipt: dict) -> None:
     MERGE_RECEIPTS_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(MERGE_RECEIPTS_PATH, "a", encoding="utf-8") as f:
         f.write(json.dumps(receipt, ensure_ascii=True) + "\n")
+
+
+def _emit_validation_failure(candidate_id: str | None, reason: str, actor: str | None = None) -> None:
+    candidate_arg = candidate_id or "none"
+    extras = [
+        f"reason={reason[:200]}",
+        "source=process_approved_candidates",
+        "channel_key=operator:cli",
+    ]
+    if actor:
+        extras.append(f"actor={actor}")
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/emit_pipeline_event.py",
+            "--user",
+            USER_ID,
+            "validation_failed",
+            candidate_arg,
+            *extras,
+        ],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+    )
+
+
+def _run_integrity_validation(min_evidence_tier: int) -> tuple[bool, str]:
+    result = subprocess.run(
+        [
+            sys.executable,
+            "scripts/validate-integrity.py",
+            "--user",
+            USER_ID,
+            "--min-evidence-tier",
+            str(min_evidence_tier),
+            "--json",
+        ],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode == 0:
+        return True, ""
+    try:
+        payload = json.loads(result.stdout.strip() or "{}")
+        errors = payload.get("errors") or []
+        if errors:
+            return False, str(errors[0])
+    except Exception:
+        pass
+    msg = (result.stderr or result.stdout or "integrity validation failed").strip()
+    return False, msg.splitlines()[0] if msg else "integrity validation failed"
+
+
+def _compute_fork_checksum() -> tuple[bool, str]:
+    result = subprocess.run(
+        [sys.executable, "scripts/fork_checksum.py"],
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    checksum_lines = (result.stdout or "").strip().splitlines()
+    if result.returncode != 0 or not checksum_lines:
+        return False, (result.stderr or "checksum failed").strip()
+    return True, checksum_lines[-1].strip()
+
+
+def _validate_candidate_before_merge(candidate: dict, min_evidence_tier: int) -> tuple[bool, str]:
+    block = candidate.get("block", "")
+    summary = (candidate.get("summary") or "").strip()
+    suggested_entry = (candidate.get("suggested_entry") or "").strip()
+    mind_category = (candidate.get("mind_category") or "").strip().lower()
+    if not summary:
+        return False, "missing summary"
+    if not suggested_entry:
+        return False, "missing suggested_entry"
+    if mind_category not in {"knowledge", "curiosity", "personality"}:
+        return False, f"invalid mind_category: {mind_category or '(empty)'}"
+    tier_match = re.search(r"^evidence_tier:\s*(\d+)", block, re.MULTILINE)
+    if tier_match and int(tier_match.group(1)) < min_evidence_tier:
+        return False, f"candidate evidence_tier below minimum {min_evidence_tier}"
+    return True, ""
 
 
 def get_approved_in_candidates() -> list[dict]:
@@ -183,6 +273,7 @@ def merge_candidate_in_memory(
     evidence_content: str,
     prompt_content: str,
     today: str,
+    evidence_tier: int,
 ) -> tuple[str, str, str, str]:
     """Merge one candidate into in-memory content; returns updated contents + act_id."""
 
@@ -199,7 +290,7 @@ def merge_candidate_in_memory(
     source: {source}
     summary: "{c["summary"][:200].replace(chr(34), "'")}"
     curated_by: user
-    evidence_tier: 3
+    evidence_tier: {evidence_tier}
 '''
     # Insert before "## VI. ATTESTATION LOG" or at end of ACT entries
     att_m = re.search(r"\n## VI\. ATTESTATION LOG", evidence_content)
@@ -313,6 +404,8 @@ def _emit_applied_event(candidate_id: str, evidence_id: str, approved_by: str) -
         [
             sys.executable,
             "scripts/emit_pipeline_event.py",
+            "--user",
+            USER_ID,
             "applied",
             candidate_id,
             f"evidence_id={evidence_id}",
@@ -334,6 +427,12 @@ def main() -> None:
     ap.add_argument("--approved-by", default="", help="Human approver id/name (required for --apply)")
     ap.add_argument("--receipt", default="", help="Path to approval receipt JSON (required for --apply)")
     ap.add_argument("--generate-receipt", default="", help="Generate approval receipt JSON and exit")
+    ap.add_argument(
+        "--min-evidence-tier",
+        type=int,
+        default=MIN_EVIDENCE_TIER,
+        help=f"Minimum evidence tier policy for merge validation (default: {MIN_EVIDENCE_TIER})",
+    )
     args = ap.parse_args()
     _set_user(args.user)
     dry_run = not args.apply
@@ -347,6 +446,7 @@ def main() -> None:
         if not args.approved_by.strip():
             raise SystemExit("--approved-by is required with --generate-receipt")
         receipt = _build_receipt(approved, args.approved_by)
+        receipt["min_evidence_tier"] = max(args.min_evidence_tier, MIN_EVIDENCE_TIER)
         out_path = Path(args.generate_receipt)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
@@ -373,6 +473,12 @@ def main() -> None:
     ok, reason = _validate_receipt(receipt, approved)
     if not ok:
         raise SystemExit(f"invalid receipt: {reason}")
+    min_tier = max(int(receipt.get("min_evidence_tier", args.min_evidence_tier)), MIN_EVIDENCE_TIER)
+
+    preflight_ok, preflight_reason = _run_integrity_validation(min_tier)
+    if not preflight_ok:
+        _emit_validation_failure(None, f"preflight_integrity_failed: {preflight_reason}", args.approved_by.strip())
+        raise SystemExit(f"preflight integrity failed: {preflight_reason}")
 
     today = datetime.now().strftime("%Y-%m-%d")
     self_content = _read(SELF_PATH)
@@ -381,9 +487,18 @@ def main() -> None:
     pending_content = _read(PENDING_PATH)
     blocks_to_move: list[str] = []
     applied_pairs: list[tuple[str, str]] = []
+    pre_checksum_ok, pre_checksum = _compute_fork_checksum()
+    if not pre_checksum_ok:
+        _emit_validation_failure(None, f"checksum_pre_failed: {pre_checksum}", args.approved_by.strip())
+        raise SystemExit(f"checksum pre-merge failed: {pre_checksum}")
+
     for c in approved:
+        candidate_ok, candidate_reason = _validate_candidate_before_merge(c, min_tier)
+        if not candidate_ok:
+            _emit_validation_failure(c["id"], candidate_reason, args.approved_by.strip())
+            raise SystemExit(f"candidate {c['id']} failed validation: {candidate_reason}")
         self_content, evidence_content, prompt_content, act_id = merge_candidate_in_memory(
-            c, self_content, evidence_content, prompt_content, today
+            c, self_content, evidence_content, prompt_content, today, evidence_tier=min_tier
         )
         blocks_to_move.append(c["full_match"])
         applied_pairs.append((c["id"], act_id))
@@ -428,13 +543,24 @@ def main() -> None:
             **receipt,
             "merged_at": _utc_now_iso(),
             "merge_source": "process_approved_candidates",
+            "checksum_before": pre_checksum,
         }
         _append_merge_receipt(receipt_event)
         print(f"Merge receipt appended: {MERGE_RECEIPTS_PATH}")
 
         for candidate_id, act_id in applied_pairs:
             _emit_applied_event(candidate_id, act_id, args.approved_by.strip())
-    except Exception:
+
+        post_ok, post_reason = _run_integrity_validation(min_tier)
+        if not post_ok:
+            raise RuntimeError(f"post-merge integrity failed: {post_reason}")
+        after_ok, after_checksum = _compute_fork_checksum()
+        if not after_ok:
+            raise RuntimeError(f"checksum post-merge failed: {after_checksum}")
+        if pre_checksum == after_checksum:
+            raise RuntimeError("checksum unchanged after merge; expected state change")
+    except Exception as e:
+        _emit_validation_failure(None, f"merge_apply_failed_or_rolled_back: {e}", args.approved_by.strip())
         rollback_plan = {
             SELF_PATH: original_files[SELF_PATH],
             EVIDENCE_PATH: original_files[EVIDENCE_PATH],

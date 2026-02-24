@@ -16,6 +16,8 @@ Usage:
 
 import re
 import sys
+import json
+import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -25,6 +27,7 @@ DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
 LAST_N_ACTIVITIES = 5
 WISDOM_COUNT = 3
+DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
 
 
 def _read(path: Path) -> str:
@@ -65,7 +68,97 @@ def _pending_count(pr_content: str) -> int:
     if "## Candidates" not in pr_content or "## Processed" not in pr_content:
         return 0
     candidates = pr_content.split("## Processed")[0]
-    return len(re.findall(r"### CANDIDATE-\d+", candidates))
+    return len(re.findall(r"### CANDIDATE-\d+.*?status:\s*pending", candidates, re.DOTALL))
+
+
+def _pending_candidate_ids(pr_content: str) -> list[str]:
+    if "## Candidates" not in pr_content:
+        return []
+    candidates = pr_content.split("## Processed")[0]
+    ids = []
+    for m in re.finditer(r"### (CANDIDATE-\d+).*?status:\s*pending", candidates, re.DOTALL):
+        ids.append(m.group(1))
+    return ids
+
+
+def _load_pipeline_events(user_dir: Path) -> list[dict]:
+    path = user_dir / "PIPELINE-EVENTS.jsonl"
+    if not path.exists():
+        return []
+    rows: list[dict] = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+            if isinstance(row, dict):
+                rows.append(row)
+        except json.JSONDecodeError:
+            continue
+    return rows
+
+
+def _oldest_pending_age_days(pr_content: str, events: list[dict]) -> int | None:
+    pending_ids = set(_pending_candidate_ids(pr_content))
+    if not pending_ids:
+        return None
+    oldest: datetime | None = None
+    for row in events:
+        if row.get("event") != "staged":
+            continue
+        cid = row.get("candidate_id")
+        if cid not in pending_ids:
+            continue
+        ts = str(row.get("ts") or "").strip()
+        if not ts:
+            continue
+        try:
+            dt = datetime.fromisoformat(ts)
+        except ValueError:
+            continue
+        if oldest is None or dt < oldest:
+            oldest = dt
+    if oldest is None:
+        return None
+    return max(0, int((datetime.now() - oldest).days))
+
+
+def _recent_rejection_reasons(events: list[dict], limit: int = 3) -> list[str]:
+    reasons: list[str] = []
+    for row in reversed(events):
+        if row.get("event") != "rejected":
+            continue
+        reason = str(row.get("rejection_reason") or "").strip()
+        if reason:
+            reasons.append(reason)
+        if len(reasons) >= limit:
+            break
+    return reasons
+
+
+def build_operator_reminder(
+    user_dir: Path,
+    pending_threshold: int,
+    stale_days: int,
+) -> str:
+    pr_content = _read(user_dir / "PENDING-REVIEW.md")
+    pending_count = _pending_count(pr_content)
+    events = _load_pipeline_events(user_dir)
+    oldest_days = _oldest_pending_age_days(pr_content, events)
+    should_notify = pending_count >= pending_threshold or (oldest_days is not None and oldest_days >= stale_days)
+    if not should_notify:
+        return ""
+    reasons = _recent_rejection_reasons(events)
+    lines = [
+        "Grace-Mar operator reminder:",
+        f"- pending candidates: {pending_count}",
+        f"- oldest pending age: {oldest_days if oldest_days is not None else 'unknown'} day(s)",
+    ]
+    if reasons:
+        lines.append(f"- recent rejection reasons: {'; '.join(reasons)}")
+    lines.append("- next action: run /review in Telegram")
+    return "\n".join(lines)
 
 
 def _from_the_record_topics(self_content: str, n: int = 3) -> list[str]:
@@ -122,18 +215,37 @@ def _wisdom_questions(wisdom_content: str, ix_b_topics: list[str], n: int) -> li
 
 
 def main() -> int:
-    users_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_USERS_DIR
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Generate session brief or operator reminder.")
+    parser.add_argument("--users-dir", default=str(DEFAULT_USERS_DIR), help="Users directory")
+    parser.add_argument("--user", "-u", default=DEFAULT_USER_ID, help="User id")
+    parser.add_argument("--reminder", action="store_true", help="Emit operator reminder text (if thresholds exceeded)")
+    parser.add_argument("--pending-threshold", type=int, default=5, help="Reminder trigger: pending count")
+    parser.add_argument("--stale-days", type=int, default=7, help="Reminder trigger: oldest pending age days")
+    args = parser.parse_args()
+
+    users_dir = Path(args.users_dir)
     if not users_dir.exists():
         print(f"Users dir not found: {users_dir}", file=sys.stderr)
         return 1
 
-    # For now, assume pilot-001
-    user_dir = users_dir / "pilot-001"
+    user_dir = users_dir / args.user
     if not user_dir.exists():
         user_dir = next(users_dir.iterdir(), None) if users_dir.is_dir() else None
     if not user_dir or not user_dir.is_dir():
         print("No user dir found.", file=sys.stderr)
         return 1
+
+    if args.reminder:
+        text = build_operator_reminder(
+            user_dir=user_dir,
+            pending_threshold=args.pending_threshold,
+            stale_days=args.stale_days,
+        )
+        if text:
+            print(text)
+        return 0
 
     evidence_content = _read(user_dir / "EVIDENCE.md")
     pr_content = _read(user_dir / "PENDING-REVIEW.md")

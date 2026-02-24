@@ -1,37 +1,55 @@
 #!/usr/bin/env python3
 """
-Append a pipeline event (approved, rejected, applied) to PIPELINE-EVENTS.jsonl.
+Append a pipeline event to PIPELINE-EVENTS.jsonl.
 
-Used when processing the review queue. The bot emits "staged" automatically;
-approved/rejected/applied are emitted by the operator or assistant.
+Used by operator scripts and maintenance jobs.
 
 Usage:
     python scripts/emit_pipeline_event.py applied CANDIDATE-0040 evidence_id=ACT-0014
     python scripts/emit_pipeline_event.py approved CANDIDATE-0039
-    python scripts/emit_pipeline_event.py rejected CANDIDATE-0002
-    python scripts/emit_pipeline_event.py rejected CANDIDATE-0045 rejection_reason="too trivial"
+    python scripts/emit_pipeline_event.py rejected CANDIDATE-0002 rejection_reason="too trivial"
+    python scripts/emit_pipeline_event.py validation_failed CANDIDATE-0046 reason="missing evidence"
+    python scripts/emit_pipeline_event.py maintenance none action=rotate_context rotated=true
+    python scripts/emit_pipeline_event.py --user pilot-001 applied CANDIDATE-0040
 """
 
+import argparse
 import json
+import os
 import sys
 from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-EVENTS_PATH = REPO_ROOT / "users" / "pilot-001" / "PIPELINE-EVENTS.jsonl"
 
 
 def main() -> None:
-    if len(sys.argv) < 3:
-        print(__doc__, file=sys.stderr)
+    parser = argparse.ArgumentParser(description="Append event to pipeline ledger.")
+    parser.add_argument(
+        "--user",
+        "-u",
+        default=(os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"),
+        help="User id (default: GRACE_MAR_USER_ID or pilot-001)",
+    )
+    parser.add_argument("event_type", help="Event name (approved/rejected/applied/validation_failed/maintenance/...)")
+    parser.add_argument(
+        "candidate_id",
+        help="Candidate id, or 'none' when event is not candidate-specific",
+    )
+    parser.add_argument("extras", nargs="*", help="Extra key=value fields")
+    args = parser.parse_args()
+
+    event_type = args.event_type.lower().strip()
+    if not event_type:
+        print("event_type must be non-empty", file=sys.stderr)
         sys.exit(1)
-    event_type = sys.argv[1].lower()
-    candidate_id = sys.argv[2]
-    if event_type not in ("approved", "rejected", "applied"):
-        print("event_type must be approved, rejected, or applied", file=sys.stderr)
-        sys.exit(1)
+    candidate_id = args.candidate_id.strip() or None
+    if candidate_id and candidate_id.lower() == "none":
+        candidate_id = None
+
+    events_path = REPO_ROOT / "users" / args.user / "PIPELINE-EVENTS.jsonl"
     extras = {}
-    for arg in sys.argv[3:]:
+    for arg in args.extras:
         if "=" in arg:
             k, v = arg.split("=", 1)
             extras[k] = v
@@ -41,10 +59,10 @@ def main() -> None:
         "candidate_id": candidate_id,
         **extras,
     }
-    EVENTS_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(EVENTS_PATH, "a") as f:
+    events_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(events_path, "a", encoding="utf-8") as f:
         f.write(json.dumps(event) + "\n")
-    print(f"Emitted {event_type} {candidate_id}")
+    print(f"Emitted {event_type} {candidate_id or '(none)'} for {args.user}")
 
 
 if __name__ == "__main__":

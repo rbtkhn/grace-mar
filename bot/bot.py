@@ -21,8 +21,10 @@ if __package__ is None:
 import importlib.util
 import os
 import logging
+import subprocess
 from io import BytesIO
 from pathlib import Path
+from datetime import datetime, timedelta
 
 from dotenv import load_dotenv
 from telegram import (
@@ -68,6 +70,11 @@ logger = logging.getLogger(__name__)
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 DASHBOARD_MINIAPP_URL = os.getenv("DASHBOARD_MINIAPP_URL", "").rstrip("/")
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+OPERATOR_CHAT_ID = os.getenv("GRACE_MAR_OPERATOR_CHAT_ID", "").strip()
+OPERATOR_REMINDER_ENABLED = os.getenv("GRACE_MAR_OPERATOR_REMINDERS", "1").strip().lower() not in {"0", "false", "no"}
+OPERATOR_REMINDER_INTERVAL_SEC = int(os.getenv("GRACE_MAR_OPERATOR_REMINDER_INTERVAL_SEC", "21600"))
+OPERATOR_PENDING_THRESHOLD = int(os.getenv("GRACE_MAR_OPERATOR_PENDING_THRESHOLD", "5"))
+OPERATOR_STALE_DAYS = int(os.getenv("GRACE_MAR_OPERATOR_STALE_DAYS", "7"))
 
 
 def _channel_key(chat_id: int) -> str:
@@ -325,6 +332,79 @@ async def reject_with_reason(update: Update, context: ContextTypes.DEFAULT_TYPE)
         await update.message.reply_text(f"couldn't update {candidate_id} (not pending?)")
 
 
+async def rotate_context_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Rotate MEMORY/ARCHIVE context files and emit maintenance event."""
+    try:
+        result = subprocess.run(
+            [
+                "python3",
+                "scripts/rotate_context.py",
+                "--user",
+                USER_ID,
+                "--apply",
+            ],
+            cwd=Path(__file__).resolve().parent.parent,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        output = (result.stdout or result.stderr or "").strip()
+        if result.returncode == 0:
+            await update.message.reply_text(output or "context rotation complete")
+        else:
+            await update.message.reply_text(f"context rotation failed: {output[:300]}")
+    except Exception:
+        logger.exception("Rotate context command failed")
+        await update.message.reply_text("couldn't rotate context right now")
+
+
+async def operator_reminder_job(context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Periodic operator-only reminder about stale or large review queue."""
+    if not OPERATOR_CHAT_ID:
+        return
+    try:
+        result = subprocess.run(
+            [
+                "python3",
+                "scripts/session_brief.py",
+                "--users-dir",
+                "users",
+                "--user",
+                USER_ID,
+                "--reminder",
+                "--pending-threshold",
+                str(OPERATOR_PENDING_THRESHOLD),
+                "--stale-days",
+                str(OPERATOR_STALE_DAYS),
+            ],
+            cwd=Path(__file__).resolve().parent.parent,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            logger.warning("Operator reminder failed: %s", (result.stderr or "").strip())
+            return
+        text = (result.stdout or "").strip()
+        if not text:
+            return
+
+        key = "last_operator_reminder_text"
+        ts_key = "last_operator_reminder_ts"
+        now = datetime.now()
+        last_text = context.application.bot_data.get(key, "")
+        last_ts = context.application.bot_data.get(ts_key)
+        # Do not spam unchanged reminder more than once every 24h.
+        if text == last_text and isinstance(last_ts, datetime) and (now - last_ts) < timedelta(hours=24):
+            return
+
+        await context.bot.send_message(chat_id=int(OPERATOR_CHAT_ID), text=text)
+        context.application.bot_data[key] = text
+        context.application.bot_data[ts_key] = now
+    except Exception:
+        logger.exception("Operator reminder job error")
+
+
 async def handle_message(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> None:
@@ -486,6 +566,18 @@ def create_application(webhook_mode: bool = False) -> Application:
                 menu_button=MenuButtonWebApp(text="Dashboard", web_app=WebAppInfo(url=DASHBOARD_MINIAPP_URL))
             )
             logger.info("Dashboard menu button configured: %s", DASHBOARD_MINIAPP_URL)
+        if OPERATOR_CHAT_ID and OPERATOR_REMINDER_ENABLED and application.job_queue:
+            application.job_queue.run_repeating(
+                operator_reminder_job,
+                interval=max(300, OPERATOR_REMINDER_INTERVAL_SEC),
+                first=30,
+                name="operator_reminder",
+            )
+            logger.info(
+                "Operator reminders enabled for chat %s (interval=%ss)",
+                OPERATOR_CHAT_ID,
+                max(300, OPERATOR_REMINDER_INTERVAL_SEC),
+            )
 
     builder = Application.builder().token(TELEGRAM_TOKEN).post_init(set_menu_button)
     if webhook_mode:
@@ -500,6 +592,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("review", review))
     app.add_handler(CommandHandler("merge", merge_command))
     app.add_handler(CommandHandler("reject", reject_with_reason))
+    app.add_handler(CommandHandler("rotate", rotate_context_command))
     app.add_handler(CallbackQueryHandler(callback_homework_answer, pattern=r"^hw:[ABCD]$"))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
