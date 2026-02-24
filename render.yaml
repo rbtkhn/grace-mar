@@ -20,4 +20,4 @@ services:
       - key: TELEGRAM_BOT_TOKEN
         sync: false  # When set, Telegram webhook is enabled (RENDER_EXTERNAL_URL used)
       - key: DASHBOARD_MINIAPP_URL
-        sync: false  # Mini App URL for bot menu button (e.g. https://grace-mar-miniapp.onrender.com)
+        sync: false  # URL for bot menu button (e.g. https://grace-mar.com for dashboard)

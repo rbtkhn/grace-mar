@@ -12,7 +12,7 @@ Usage:
 
 Set PORT (default 5000) for hosting. Enable CORS if Mini App is on a different origin.
 Real-time exchanges are appended to users/<user>/SESSION-TRANSCRIPT.md (same as Telegram).
-VOICE-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
+SELF-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 """
 
@@ -110,12 +110,12 @@ def _session_transcript_header() -> str:
     return (
         "# SESSION TRANSCRIPT\n\n"
         "> Raw conversation log for operator continuity. Not part of the Record. "
-        "Approved content is written to VOICE-ARCHIVE on merge.\n\n---\n\n"
+        "Approved content is written to SELF-ARCHIVE on merge.\n\n---\n\n"
     )
 
 
 def _append_to_session_transcript(blocks: str) -> None:
-    """Append exchange to SESSION-TRANSCRIPT (real-time log). VOICE-ARCHIVE is gated (merge only)."""
+    """Append exchange to SESSION-TRANSCRIPT (real-time log). SELF-ARCHIVE is gated (merge only)."""
     try:
         SESSION_TRANSCRIPT_PATH.parent.mkdir(parents=True, exist_ok=True)
         if not SESSION_TRANSCRIPT_PATH.exists():
@@ -127,7 +127,7 @@ def _append_to_session_transcript(blocks: str) -> None:
 
 
 def _archive_miniapp(user_message: str, reply: str, is_lookup: bool = False, lookup_question: str | None = None) -> None:
-    """Append exchange to SESSION-TRANSCRIPT (same policy as bot: real-time log; VOICE-ARCHIVE only on merge). Runs in background."""
+    """Append exchange to SESSION-TRANSCRIPT (same policy as bot: real-time log; SELF-ARCHIVE only on merge). Runs in background."""
     blocks = _format_archive_block("USER", user_message)
     if is_lookup and lookup_question:
         blocks += _format_archive_block("LOOKUP REQUEST", lookup_question)

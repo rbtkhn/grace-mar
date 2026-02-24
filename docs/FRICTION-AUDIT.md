@@ -60,7 +60,7 @@
 
 ### 4. Bot session review
 
-**What it is:** After a bot conversation, the user may want to review what happened. VOICE-ARCHIVE.md has the raw log, but there's no summary, no "what's new in PENDING," no diff of profile changes. User must read archive + PENDING-REVIEW manually.
+**What it is:** After a bot conversation, the user may want to review what happened. SELF-ARCHIVE.md holds the gated approved log; SESSION-TRANSCRIPT.md has the raw log. There's no summary, no "what's new in PENDING," no diff of profile changes. User must read archive + PENDING-REVIEW manually.
 
 **Impact:** 3 — Slows "what did we learn?" reflection. Hard to spot missed signals or duplicates.
 

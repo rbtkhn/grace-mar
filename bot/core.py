@@ -72,9 +72,9 @@ MAX_HISTORY = 20
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
-ARCHIVE_PATH = PROFILE_DIR / "VOICE-ARCHIVE.md"
-ARCHIVE_REPO_PATH = f"users/{USER_ID}/VOICE-ARCHIVE.md"  # repo-relative for GitHub API
-# Real-time conversation log (operator continuity). Gated content goes to VOICE-ARCHIVE only on merge.
+ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
+ARCHIVE_REPO_PATH = f"users/{USER_ID}/SELF-ARCHIVE.md"  # repo-relative for GitHub API
+# Real-time conversation log (operator continuity). Gated content goes to SELF-ARCHIVE only on merge.
 SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "SESSION-TRANSCRIPT.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
@@ -265,7 +265,7 @@ def _append_via_github_api(block: str) -> None:
                 raise
             content = ""
             sha = ""
-        header = "# VOICE-ARCHIVE\n\n> Append-only log of all Grace-Mar interactions (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). One mind, multiple channels.\n\n---\n\n"
+        header = "# SELF-ARCHIVE\n\n> Append-only log of approved activity for the self (voice and non-voice). Telegram, WeChat, Mini App today; eventually email, X, and other platform channels.\n\n---\n\n"
         base = content if content else header
         new_content = base.rstrip() + "\n\n" + block.strip() + "\n"
         payload = {"message": "bot: archive exchange", "content": base64.b64encode(new_content.encode()).decode()}
@@ -283,7 +283,7 @@ def _append_via_github_api(block: str) -> None:
 
 
 def archive(event: str, channel_key: str, text: str) -> None:
-    """Append an event to the session transcript (raw log for operator continuity). VOICE-ARCHIVE is written only when candidates are merged."""
+    """Append an event to the session transcript (raw log for operator continuity). SELF-ARCHIVE is written only when candidates are merged."""
     block = _format_archive_block(event, channel_key, text)
     try:
         SESSION_TRANSCRIPT_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -291,7 +291,7 @@ def archive(event: str, channel_key: str, text: str) -> None:
             header = (
                 "# SESSION TRANSCRIPT\n\n"
                 "> Raw conversation log for operator continuity. Not part of the Record. "
-                "Approved content is written to VOICE-ARCHIVE on merge.\n\n---\n\n"
+                "Approved content is written to SELF-ARCHIVE on merge.\n\n---\n\n"
             )
             SESSION_TRANSCRIPT_PATH.write_text(header, encoding="utf-8")
         with open(SESSION_TRANSCRIPT_PATH, "a", encoding="utf-8") as f:
@@ -1387,7 +1387,7 @@ def get_response(channel_key: str, user_message: str) -> str:
             return f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
         return "ok i wrote that down. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
 
-    # "checkpoint" — companion requests checkpoint save; send transcript (since session/last checkpoint) to pipeline and VOICE-ARCHIVE.
+    # "checkpoint" — companion requests checkpoint save; send transcript (since session/last checkpoint) to pipeline and SELF-ARCHIVE.
     if CHECKPOINT_REQUEST_PATTERN.search(user_message.strip()):
         archive("USER", channel_key, user_message)
         transcript = _format_checkpoint_transcript(history)

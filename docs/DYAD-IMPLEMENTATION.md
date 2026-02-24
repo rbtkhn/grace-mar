@@ -49,7 +49,7 @@ emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source
 
 ### 2.2 ARCHIVE event types
 
-Parse `VOICE-ARCHIVE.md` for:
+Parse `SELF-ARCHIVE.md` for:
 - `LOOKUP REQUEST` — User triggered lookup (question stored)
 - `GRACE-MAR (lookup)` — Lookup response delivered
 - `ACTIVITY REPORT` — "We did X" feeding
@@ -60,11 +60,11 @@ Fallback if we don’t emit dyad events yet: regex on archive blocks.
 
 ## 3. `scripts/dyad_metrics.py` — New script
 
-Compute dyad health from PIPELINE-EVENTS, COMPUTE-LEDGER, and optionally ARCHIVE.
+Compute dyad health from PIPELINE-EVENTS, COMPUTE-LEDGER, and optionally SELF-ARCHIVE.
 
 **Output (JSON / human-readable):**
 - `consultations_7d` — Lookup + grounded_query count (from ledger buckets or dyad events)
-- `activity_reports_7d` — `dyad:activity_report` or ARCHIVE `ACTIVITY REPORT` count
+- `activity_reports_7d` — `dyad:activity_report` or SELF-ARCHIVE `ACTIVITY REPORT` count
 - `integrations_7d` — `applied` events from PIPELINE-EVENTS
 - `consultation_ratio` — consultations / (consultations + chat turns) if estimable
 - `dyad_score` — Simple composite (e.g. consultations + 2*integrations + activity_reports) for trend
@@ -135,7 +135,7 @@ In `bot/prompt.py` SYSTEM_PROMPT, add one line: "When the user asks 'what do I k
 | 4 | core.py: emit dyad:lookup, dyad:activity_report, dyad:grounded_query | Low | None |
 | 5 | Dashboard: dyad subsection (consultations, integrations, reports) | Low | dyad_metrics or inline |
 | 6 | Mini App: suggested "Ask the Record" prompts | Medium | miniapp UI |
-| 7 | dyad_metrics: parse ARCHIVE as fallback | Medium | Archive format |
+| 7 | dyad_metrics: parse SELF-ARCHIVE as fallback | Medium | Archive format |
 
 ---
 

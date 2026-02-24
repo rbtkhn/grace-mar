@@ -46,7 +46,7 @@ The server listens on port 5000 by default. You must expose it via HTTPS. Use a 
 
 Set **Server URL** in the WeChat console to your public URL, e.g.:
 
-- Production: `https://grace-mar.example.com/wechat`
+- Production: `https://grace-mar.com/wechat`
 - Local (ngrok): `https://abc123.ngrok.io/wechat`
 
 WeChat will verify the URL by sending a GET request. The bot responds with `echostr` to confirm.
@@ -62,7 +62,7 @@ Users can type these to emulate `/start` and `/reset`:
 
 - **Same core**: Both Telegram and WeChat use `bot/core.py` — identical emulation, lookup, and analyst behavior
 - **Separate conversations**: Telegram and WeChat users have isolated conversation history (scoped by `telegram:{id}` vs `wechat:{openid}`)
-- **Shared archive**: All exchanges are logged to VOICE-ARCHIVE.md with channel tags
+- **Shared archive**: All exchanges are logged to SESSION-TRANSCRIPT in real time; SELF-ARCHIVE is updated only on merge (gated), with channel tags
 - **Shared pipeline**: Analyst-staged candidates from either channel go to the same `PENDING-REVIEW.md`
 
 ## Limitations

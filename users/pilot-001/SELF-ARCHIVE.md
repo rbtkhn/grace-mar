@@ -1,6 +1,6 @@
-# VOICE-ARCHIVE
+# SELF-ARCHIVE
 
-> Append-only log of all Grace-Mar interactions across channels (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). One mind, multiple channels. Machine-written by `bot/core.py` and `miniapp_server.py` — do not edit manually.
+> Append-only log of approved activity for the self (voice and non-voice) across channels (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). Includes voice entries and other approved activities. Written only when candidates are merged via process_approved_candidates.
 
 ---
 

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-One-off: Merge VOICE-ARCHIVE.md and TELEGRAM-ARCHIVE.md (if present) into a single VOICE-ARCHIVE.md
+One-off: Merge SELF-ARCHIVE.md and TELEGRAM-ARCHIVE.md (if present) into a single SELF-ARCHIVE.md
 with human-readable channel labels (Telegram, Test, WeChat).
 """
 import re
 from pathlib import Path
 
 USER_DIR = Path(__file__).resolve().parent.parent / "users" / "pilot-001"
-ARCHIVE = USER_DIR / "VOICE-ARCHIVE.md"
+ARCHIVE = USER_DIR / "SELF-ARCHIVE.md"
 TELEGRAM_ARCHIVE = USER_DIR / "TELEGRAM-ARCHIVE.md"
 
 
@@ -71,9 +71,9 @@ def main() -> str:
             continue
         seen.add(key)
         merged.append((ts, speaker, channel, body))
-    header = """# VOICE-ARCHIVE
+    header = """# SELF-ARCHIVE
 
-> Append-only log of all Grace-Mar interactions across channels (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). One mind, multiple channels. Machine-written by `bot/core.py` and `miniapp_server.py` — do not edit manually.
+> Append-only log of approved activity for the self (voice and non-voice) across channels (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). Machine-written — do not edit manually.
 
 ---
 

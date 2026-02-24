@@ -28,7 +28,7 @@ SELF_PATH = PROFILE_DIR / "SELF.md"
 EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
 INTENT_PATH = PROFILE_DIR / "INTENT.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
-VOICE_ARCHIVE_PATH = PROFILE_DIR / "VOICE-ARCHIVE.md"
+SELF_ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
 PRP_PATH = REPO_ROOT / "grace-mar-abby-prp.txt"
 MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
 MIN_EVIDENCE_TIER = 3
@@ -58,7 +58,7 @@ def _next_id(content: str, prefix: str) -> str:
 
 def _set_user(user_id: str) -> None:
     """Configure per-user paths for this invocation."""
-    global USER_ID, PROFILE_DIR, PENDING_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH, VOICE_ARCHIVE_PATH
+    global USER_ID, PROFILE_DIR, PENDING_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH, SELF_ARCHIVE_PATH
     USER_ID = user_id.strip()
     PROFILE_DIR = REPO_ROOT / "users" / USER_ID
     PENDING_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
@@ -66,7 +66,7 @@ def _set_user(user_id: str) -> None:
     EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
     INTENT_PATH = PROFILE_DIR / "INTENT.md"
     MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
-    VOICE_ARCHIVE_PATH = PROFILE_DIR / "VOICE-ARCHIVE.md"
+    SELF_ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
 
 
 def _prp_output_path() -> Path:
@@ -491,7 +491,7 @@ def get_approved_in_candidates() -> list[dict]:
 
 
 def _channel_label(channel_key: str) -> str:
-    """Human-readable channel for VOICE-ARCHIVE (Telegram, Test, WeChat, Mini App)."""
+    """Human-readable channel for SELF-ARCHIVE (Telegram, Test, WeChat, Mini App)."""
     k = (channel_key or "").strip().lower()
     if k.startswith("telegram:") or k.startswith("chat "):
         return "Telegram"
@@ -507,7 +507,7 @@ def _channel_label(channel_key: str) -> str:
 
 
 def _extract_source_exchange_snippet(block: str, max_chars: int = 600) -> str:
-    """Extract source_exchange section from candidate block for VOICE-ARCHIVE snippet."""
+    """Extract source_exchange section from candidate block for SELF-ARCHIVE snippet."""
     m = re.search(r"source_exchange:\s*\n(.*?)(?=\n[A-Za-z_]+:|\n```|\Z)", block, re.DOTALL)
     if not m:
         return ""
@@ -517,23 +517,23 @@ def _extract_source_exchange_snippet(block: str, max_chars: int = 600) -> str:
     return (out[:max_chars] + "...") if len(out) > max_chars else out
 
 
-def _voice_archive_header() -> str:
+def _self_archive_header() -> str:
     return (
-        "# VOICE-ARCHIVE\n\n"
-        "> Append-only log of approved voice interactions (gated). "
+        "# SELF-ARCHIVE\n\n"
+        "> Append-only log of approved activity for the self (voice and non-voice). "
         "Content is written here only when candidates are merged via process_approved_candidates. "
         "Telegram, WeChat, Mini App today; eventually email, X, and other platform channels.\n\n---\n\n"
     )
 
 
-def _append_voice_archive_entry(
+def _append_self_archive_entry(
     candidate_id: str,
     act_id: str,
     channel_key: str,
     summary: str,
     source_snippet: str,
 ) -> None:
-    """Append one APPROVED entry to VOICE-ARCHIVE (gated merge path only)."""
+    """Append one APPROVED entry to SELF-ARCHIVE (gated merge path only)."""
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     label = _channel_label(channel_key)
     lines = [f"**[{ts}]** `APPROVED` ({label})\n", f"> {candidate_id} → {act_id}\n", f"> {summary[:300]}\n"]
@@ -542,11 +542,11 @@ def _append_voice_archive_entry(
             lines.append(f"> {line[:400]}\n")
     lines.append("\n")
     block = "".join(lines)
-    content = _read(VOICE_ARCHIVE_PATH) if VOICE_ARCHIVE_PATH.exists() else ""
+    content = _read(SELF_ARCHIVE_PATH) if SELF_ARCHIVE_PATH.exists() else ""
     if not content.strip():
-        content = _voice_archive_header()
+        content = _self_archive_header()
     new_content = content.rstrip() + "\n\n" + block.strip() + "\n"
-    _write(VOICE_ARCHIVE_PATH, new_content)
+    _write(SELF_ARCHIVE_PATH, new_content)
 
 
 def merge_candidate_in_memory(
@@ -824,7 +824,7 @@ def main() -> None:
     pending_content = _read(PENDING_PATH)
     intent_profile = _load_intent_profile()
     blocks_to_move: list[str] = []
-    applied_candidates: list[tuple[dict, str]] = []  # (c, act_id) for emit + VOICE-ARCHIVE
+    applied_candidates: list[tuple[dict, str]] = []  # (c, act_id) for emit + SELF-ARCHIVE
     pre_checksum_ok, pre_checksum = _compute_fork_checksum()
     if not pre_checksum_ok:
         _emit_validation_failure(None, f"checksum_pre_failed: {pre_checksum}", args.approved_by.strip())
@@ -926,14 +926,14 @@ def main() -> None:
             raise RuntimeError("checksum unchanged after merge; expected state change")
 
         for c, act_id in applied_candidates:
-            _append_voice_archive_entry(
+            _append_self_archive_entry(
                 c["id"],
                 act_id,
                 c.get("channel_key") or "telegram",
                 c["summary"],
                 _extract_source_exchange_snippet(c["block"]),
             )
-        print("VOICE-ARCHIVE updated.")
+        print("SELF-ARCHIVE updated.")
         if args.export_openclaw:
             export_ok, export_msg = _run_openclaw_export(
                 user_id=USER_ID,

@@ -430,7 +430,7 @@ async def reject_with_reason(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 
 async def rotate_context_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Rotate MEMORY/VOICE-ARCHIVE context files and emit maintenance event."""
+    """Rotate MEMORY/SELF-ARCHIVE context files and emit maintenance event."""
     try:
         result = subprocess.run(
             [

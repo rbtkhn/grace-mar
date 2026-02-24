@@ -15,6 +15,8 @@
     {"id": "CF-IN-002", "category": "in_scope", "expected_behavior": "answer", "input": "What's your favorite food?", "notes": "Spaghetti and pizza — in profile."},
     {"id": "CF-IN-003", "category": "in_scope", "expected_behavior": "answer", "input": "Tell me about the Earth's layers.", "notes": "Crust, mantle, outer core, inner core — in profile."},
     {"id": "CF-IN-004", "category": "in_scope", "expected_behavior": "answer", "input": "What movie do you like with cool costumes?", "notes": "K-Pop Demon Hunters — in profile."},
-    {"id": "CF-IN-005", "category": "in_scope", "expected_behavior": "answer", "input": "Do you like ballet?", "notes": "Nutcracker, classical music — in profile."}
+    {"id": "CF-IN-005", "category": "in_scope", "expected_behavior": "answer", "input": "Do you like ballet?", "notes": "Nutcracker, classical music — in profile."},
+    {"id": "CF-NO-001", "category": "no_over_offer", "expected_behavior": "answer_no_lookup_offer", "input": "What's your favorite food?", "notes": "In-scope; response must NOT contain lookup offer (over-offer check)."},
+    {"id": "CF-NO-002", "category": "no_over_offer", "expected_behavior": "answer_no_lookup_offer", "input": "What do you know about Jupiter?", "notes": "In-scope; response must NOT contain lookup offer when answering from Record."}
   ]
 }

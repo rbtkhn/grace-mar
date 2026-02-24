@@ -27,3 +27,7 @@
 {"ts": "2026-02-24T10:31:43.418120", "event": "applied", "candidate_id": "CANDIDATE-0069", "evidence_id": "ACT-0034", "source": "process_approved_candidates", "actor": "robertkuhne", "channel_key": "operator:cli"}
 {"ts": "2026-02-24T12:29:58.228629", "event": "staged", "candidate_id": "CANDIDATE-0070", "source": "operator_cursor"}
 {"ts": "2026-02-24T12:31:38.129146", "event": "applied", "candidate_id": "CANDIDATE-0070", "evidence_id": "ACT-0035"}
+{"ts": "2026-02-24T13:59:19.995601", "event": "dyad:checkpoint_request", "candidate_id": null, "channel_key": "test:checkpoint"}
+{"ts": "2026-02-24T13:59:24.657709", "event": "dyad:checkpoint_request", "candidate_id": null, "channel_key": "test:checkpoint"}
+{"ts": "2026-02-24T14:07:50.458267", "event": "staged", "candidate_id": "CANDIDATE-0071", "channel_key": "test:voice_authenticity:2"}
+{"ts": "2026-02-24T14:08:19.321604", "event": "staged", "candidate_id": "CANDIDATE-0072", "channel_key": "test:voice_authenticity:1"}

@@ -1,14 +1,14 @@
 # JOURNAL Schema
 
-**Purpose:** Daily consolidated highlights of Grace-Mar's activity. Public-suitable, shareable. Journal entries also **demonstrate and audit** the fork's linguistic fingerprint — vocabulary, sentence patterns, tone — in first-person prose. Contrasts with ARCHIVE (raw conversation log, private).
+**Purpose:** Daily consolidated highlights of Grace-Mar's activity. Public-suitable, shareable. Journal entries also **demonstrate and audit** the fork's linguistic fingerprint — vocabulary, sentence patterns, tone — in first-person prose. Contrasts with SESSION-TRANSCRIPT (raw conversation log) and SELF-ARCHIVE (gated activity log); both private.
 
 **See also:** [ARCHITECTURE](ARCHITECTURE.md), [ADMISSIONS-LINK-USE-CASE](ADMISSIONS-LINK-USE-CASE.md), [PRIVACY-REDACTION](PRIVACY-REDACTION.md)
 
 ---
 
-## ARCHIVE vs JOURNAL
+## Conversation/activity logs vs JOURNAL
 
-| | **ARCHIVE** | **JOURNAL** |
+| | **SELF-ARCHIVE / SESSION-TRANSCRIPT** | **JOURNAL** |
 |---|-------------|-------------|
 | **Content** | Raw conversation log (exact messages, timestamps, chat IDs) | Daily consolidated highlights of activity |
 | **Purpose** | Internal record for analysis, pipeline, session continuity | Shareable summary; demonstrates and audits linguistic fingerprint |
@@ -54,7 +54,7 @@ entries:
 - **Gated:** Entries are curated — user approves what appears in JOURNAL.
 - **Lexile:** Language matches the fork's output ceiling (600L for pilot-001).
 - **No PII:** No chat IDs, no raw quotes that could identify individuals.
-- **Sources:** EVIDENCE (activity log), SESSION-LOG, approved pipeline outputs. Not raw ARCHIVE.
+- **Sources:** EVIDENCE (activity log), SESSION-LOG, approved pipeline outputs. Not raw SESSION-TRANSCRIPT or SELF-ARCHIVE.
 - **Immutability:** Approved entries are not edited; corrections = new entry or note.
 - **Future: attestation** — ML over a year+ of entries can attest that the fork's voice remained coherent over time. See [DESIGN-ROADMAP §8](DESIGN-ROADMAP.md#8-journal-ml--attestation-and-coherence).
 

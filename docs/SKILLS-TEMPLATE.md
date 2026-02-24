@@ -35,6 +35,8 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 ## II. THE THREE MODULES
 
+**Standard labels:** For APIs, docs, and cross-references use **self-skill-write**, **self-skill-read**, **self-skill-build**. See [ID-TAXONOMY § Standard capability labels](ID-TAXONOMY.md#standard-capability-labels-self-skill-).
+
 All skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
 
 ### II-A. Semi-Independent Executor Contract

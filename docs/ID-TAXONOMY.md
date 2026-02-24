@@ -23,7 +23,52 @@
 
 ---
 
-## Relationships
+## Standard capability labels (self-skill-*)
+
+Canonical labels for the three SKILLS modules when referring to the self's capability layer (APIs, docs, cross-references):
+
+| Standard label | Module | Location | Description |
+|----------------|--------|----------|-------------|
+| **self-skill-write** | WRITE | SKILLS.md § WRITE Container | Production — journal, stories, explanations; primary data source for SELF linguistic style |
+| **self-skill-read** | READ | SKILLS.md § READ Container | Intake — comprehension, inference, vocabulary; feeds SELF interests and preferences |
+| **self-skill-build** | BUILD | SKILLS.md § BUILD Container | Making, planning, execution, creation; starts from zero, grows via pipeline |
+
+Use these labels in prose, tooling, and external references where a single token is needed. In SKILLS.md the section headings remain "READ Container", "WRITE Container", "BUILD Container". Evidence prefixes (WRITE-, READ-, CREATE-) are unchanged.
+
+---
+
+## Standard location labels (self-library, self-archive, self-memory)
+
+Canonical labels for key self-scoped files (APIs, docs, cross-references):
+
+| Standard label | File | Description |
+|----------------|------|-------------|
+| **self-library** | users/[id]/LIBRARY.md | Curated lookup sources (books, reference works, videos); query-first for answers; gated pipeline |
+| **self-archive** | users/[id]/SELF-ARCHIVE.md | Gated log of approved activity (voice and non-voice); appended only on merge |
+| **self-memory** | users/[id]/MEMORY.md | Ephemeral session context — tone, recent topics, calibrations; not part of the Record; optional |
+
+Use these with **self-skill-write**, **self-skill-read**, **self-skill-build** for a consistent self-scoped vocabulary.
+
+---
+
+## Companion self contains
+
+The **companion self** (the documented self + the self that companions) is composed of these standard components. See [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) (companion self).
+
+| Component | Location | Description |
+|-----------|----------|-------------|
+| **self-knowledge** | SELF.md IX-A | Facts that entered awareness (post-seed knowledge) |
+| **self-curiosity** | SELF.md IX-B | Topics that catch attention (post-seed curiosity) |
+| **self-personality** | SELF.md IX-C | Observed behavioral patterns (post-seed personality) |
+| **self-skill-write** | SKILLS.md § WRITE Container | Production capability |
+| **self-skill-read** | SKILLS.md § READ Container | Intake/comprehension capability |
+| **self-skill-build** | SKILLS.md § BUILD Container | Making, planning, execution, creation |
+| **self-archive** | SELF-ARCHIVE.md | Gated log of approved activity |
+| **self-library** | LIBRARY.md | Curated lookup sources |
+| **self-memory** | MEMORY.md | Ephemeral session context (not part of Record) |
+| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-read, self-skill-write, self-skill-build (and the rest of the companion self) |
+
+---
 
 ```
 CANDIDATE-* (pending)

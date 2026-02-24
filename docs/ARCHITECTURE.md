@@ -126,7 +126,7 @@ Contains what the companion CAN DO — capabilities that grow through authentic 
 
 ### The Three Modules
 
-Skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
+Skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. **Standard labels** (for APIs, docs, cross-references): **self-skill-write**, **self-skill-read**, **self-skill-build**. See [ID-TAXONOMY § Standard capability labels](ID-TAXONOMY.md#standard-capability-labels-self-skill-). Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
 
 | Module | Function | Activities |
 |--------|----------|------------|
@@ -590,9 +590,9 @@ GitHub Repository (rbtkhn/grace-mar)
 │       ├── SELF.md          # Identity record
 │       ├── SKILLS.md        # Capability record
 │       ├── EVIDENCE.md      # Activity logs
-│       ├── MEMORY.md        # Ephemeral session context (optional; not part of Record)
+│       ├── MEMORY.md        # self-memory — ephemeral session context (optional; not part of Record)
 │       ├── SESSION-LOG.md   # Interaction history
-│       ├── VOICE-ARCHIVE.md   # Raw conversation log from all channels — Telegram, WeChat, Mini App today; eventually email, X, others (private)
+│       ├── SELF-ARCHIVE.md   # self-archive — gated log of approved activity (voice and non-voice) from all channels — Telegram, WeChat, Mini App today; eventually email, X, others (private)
 │       ├── JOURNAL.md       # Daily highlights (public-suitable, shareable)
 │       └── artifacts/       # Raw files (writing, artwork)
 └── (future users...)
@@ -618,11 +618,11 @@ Every session that updates user data:
 
 ### MEMORY (Ephemeral Session Context)
 
-MEMORY.md holds ephemeral session context — tone, recent topics, calibrations — to improve continuity between sessions. It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. MEMORY may be rotated or pruned (weekly recommended). Optional; the system runs normally if absent. See [MEMORY-TEMPLATE](MEMORY-TEMPLATE.md).
+MEMORY.md (**self-memory**) holds ephemeral session context — tone, recent topics, calibrations — to improve continuity between sessions. It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. MEMORY may be rotated or pruned (weekly recommended). Optional; the system runs normally if absent. See [MEMORY-TEMPLATE](MEMORY-TEMPLATE.md).
 
 ### JOURNAL (Shareable Daily Highlights)
 
-JOURNAL.md consolidates daily highlights of activity — what Grace-Mar read, wrote, created, learned. Entries are written in **first-person Grace-Mar voice** ("I learned…", "I drew…") and serve to **demonstrate and audit** the fork's linguistic fingerprint (vocabulary, sentence patterns, tone). Public-suitable; contrasts with ARCHIVE (raw conversation log, private). Sources: EVIDENCE, SESSION-LOG. See [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md). Profile tab order: Knowledge | Skills | Curiosity | Personality | Library | Journal.
+JOURNAL.md consolidates daily highlights of activity — what Grace-Mar read, wrote, created, learned. Entries are written in **first-person Grace-Mar voice** ("I learned…", "I drew…") and serve to **demonstrate and audit** the fork's linguistic fingerprint (vocabulary, sentence patterns, tone). Public-suitable; contrasts with SESSION-TRANSCRIPT (raw conversation log) and SELF-ARCHIVE (gated approved activity); both private. Sources: EVIDENCE, SESSION-LOG. See [JOURNAL-SCHEMA](JOURNAL-SCHEMA.md). Profile tab order: Knowledge | Skills | Curiosity | Personality | Library | Journal.
 
 ### Snapshots
 
@@ -646,7 +646,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 | **SELF** | Identity, IX-A/B/C, voice, personality |
 | **SKILLS** | Capability containers (READ, WRITE, BUILD) |
 | **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
-| **LIBRARY** | Curated lookups (books, videos) for the bot |
+| **LIBRARY** (self-library) | Curated lookups (books, videos) for the bot |
 | **PENDING-REVIEW** | Staging area before merge |
 | **prompt.py** | Emulation prompt (SYSTEM, ANALYST, LOOKUP, REPHRASE) |
 | **CMC** | Lookup engine (LIBRARY → CMC → LLM) |
@@ -725,7 +725,7 @@ The emulation layer (Telegram, WeChat, or other bot adapters) is not where the f
           └─────────────────┘
 ```
 
-The emulation layer enforces a **knowledge boundary**: the fork can only reference what has been explicitly merged into its profile. LLM world knowledge must not leak through.
+The emulation layer enforces a **knowledge boundary**: the fork can only reference what has been explicitly merged into its profile. LLM world knowledge must not leak through. See [KNOWLEDGE-BOUNDARY-FRAMEWORK](KNOWLEDGE-BOUNDARY-FRAMEWORK.md) for quantifying, describing, and treating information at the boundary.
 
 ---
 

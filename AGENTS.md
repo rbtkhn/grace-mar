@@ -10,7 +10,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins), interregnum fortification (Part 14). See invariants 5–23 and 36 in CONCEPTUAL-FRAMEWORK.md.
 
-**Tricameral mind:** Grace-Mar is architected as a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. New features should reinforce this structure. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
+**Tricameral mind:** Grace-Mar is architected as a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. **Companion self = human–computer tricameral cognition.** New features should reinforce this structure. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
 
 ---
 
@@ -21,6 +21,7 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
 - **Companion** — The person whose Record it is (the human in the tricameral mind). Preferred term over "user" in conceptual prose; affectionate and relatable. **Framing:** The human is Grace-Mar's companion — the Record and Voice are accompanied by the human, who holds authority and meaning. Grace-Mar serves the companion; the companion serves Grace-Mar.
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried. Self = Record + Voice (the thing you can talk to).
+- **Companion self** — One phrase for both sides of the dyad: the companion's self (the human's self, externalized in the Record) and the self that companions (the Record and Voice that accompany the human). The ambiguity is intentional; see CONCEPTUAL-FRAMEWORK (companion self). **Companion self contains:** self-knowledge, self-skill-write, self-skill-read, self-skill-build, self-curiosity, self-personality, self-archive, self-library, self-memory, self-voice (see ID-TAXONOMY).
 - **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
 - **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
 - **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without companion consent. See `docs/INSTANCES-AND-RELEASE.md` and CONCEPTUAL-FRAMEWORK invariant 34.
@@ -45,7 +46,7 @@ When in doubt, default to Session (conversational, no merges).
 
 ### 1. Knowledge Boundary — Never Leak LLM Knowledge
 
-The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the companion has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork.
+The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the companion has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork. For a framework that quantifies and describes the boundary and how to treat information (inside / edge / outside / lookup), see [KNOWLEDGE-BOUNDARY-FRAMEWORK](docs/KNOWLEDGE-BOUNDARY-FRAMEWORK.md).
 
 ### 2. Gated Pipeline — The Sovereign Merge Rule
 
@@ -144,6 +145,7 @@ What "good" looks like for Grace-Mar:
 | **Profile growth** | IX entries increase over time | IX-A, IX-B, IX-C counts in dashboard |
 | **Calibrated abstention** | "I don't know" when outside knowledge | Bot says "do you want me to look it up?" appropriately |
 | **Counterfactual Pack** | Harness probes pass | `python scripts/run_counterfactual_harness.py` — run before prompt changes |
+| **Self-voice linguistic authenticity** | In-character, Lexile-friendly, fingerprint markers | `python scripts/test_voice_linguistic_authenticity.py` — no AI disclosure, simple vocab, readability ≤6 |
 
 ---
 
@@ -157,12 +159,12 @@ When pipeline candidates are approved, **merge** into all of these together:
 | `users/[id]/EVIDENCE.md` | New activity log entry (ACT-XXXX) |
 | `users/[id]/PENDING-REVIEW.md` | Move candidates from Candidates to Processed |
 | `users/[id]/SESSION-LOG.md` | New session record |
-| `users/[id]/VOICE-ARCHIVE.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
+| `users/[id]/SELF-ARCHIVE.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/PIPELINE-EVENTS.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
 | **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-abby-prp.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
 
-**Real-time log vs gated archive:** The bot and Mini App append to `users/[id]/SESSION-TRANSCRIPT.md` (raw conversation log for operator continuity). VOICE-ARCHIVE is **not** written in real time; it is appended only when candidates are merged (same gate as SELF/EVIDENCE).
+**Real-time log vs gated archive:** The bot and Mini App append to `users/[id]/SESSION-TRANSCRIPT.md` (raw conversation log for operator continuity). SELF-ARCHIVE is **not** written in real time; it is appended only when candidates are merged (same gate as SELF/EVIDENCE). SELF-ARCHIVE holds voice entries and other approved activities (e.g. operator actions, non-voice).
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 
@@ -211,16 +213,17 @@ grace-mar/
 └── users/
     └── pilot-001/              # First pilot companion
         ├── SELF.md             # Identity + three-dimension mind
-        ├── SKILLS.md           # Capability containers
+        ├── SKILLS.md           # Capability containers (self-skill-write, self-skill-read, self-skill-build)
         ├── EVIDENCE.md         # Activity log
-        ├── MEMORY.md           # Ephemeral session context (optional; not part of Record)
+        ├── LIBRARY.md          # self-library — curated lookup sources (books, videos); gated
+        ├── MEMORY.md           # self-memory — ephemeral session context (optional; not part of Record)
         ├── SESSION-LOG.md      # Interaction history
         ├── PENDING-REVIEW.md   # Pipeline staging
         ├── PIPELINE-EVENTS.jsonl  # Append-only pipeline audit log
         ├── COMPUTE-LEDGER.jsonl   # Token usage (energy ledger)
-        ├── VOICE-ARCHIVE.md            # Voice conversation archive (Telegram, Mini App) — private
+        ├── SELF-ARCHIVE.md            # self-archive — gated log of approved activity (voice + non-voice) — private
         ├── JOURNAL.md                # Daily highlights — public-suitable, shareable
-│   └── archives/             # Rotated chunks (VOICE-ARCHIVE-YYYY-MM.md)
+│   └── archives/             # Rotated chunks (SELF-ARCHIVE-YYYY-MM.md)
         └── artifacts/          # Raw files (writing, artwork)
 ```
 

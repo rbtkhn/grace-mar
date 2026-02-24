@@ -24,7 +24,7 @@ Telegram's AI Summaries (introduced Jan 2026) auto-generate short recaps for lon
 
 | Step | Action |
 |------|--------|
-| 1 | Operator copies session transcript (e.g. from ARCHIVE) or exports it from the bot. |
+| 1 | Operator copies session transcript (e.g. from SESSION-TRANSCRIPT or SELF-ARCHIVE) or exports it from the bot. |
 | 2 | Operator posts transcript as a long message to a private channel, or opens it in Instant View (if linkable). |
 | 3 | Telegram generates an AI summary for the long post. |
 | 4 | Operator uses the summary to triage, stage candidates, or feed a compact artifact into the pipeline. |

@@ -44,6 +44,7 @@ Two input channels feed the pipeline:
 
 **Phase:** Pilot (post-seed, active pipeline)
 **Pilot user:** pilot-001 (fork name: Grace-Mar)
+**Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **dashboard** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product).
 **Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality)
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/WECHAT-SETUP.md`)
 **Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
@@ -121,7 +122,7 @@ grace-mar/
         ├── EVIDENCE.md              # Activity log
         ├── SESSION-LOG.md           # Interaction history
         ├── PENDING-REVIEW.md        # Pipeline staging
-        ├── VOICE-ARCHIVE.md         # Voice conversation archive (Telegram, Mini App) — private
+        ├── SELF-ARCHIVE.md         # Gated log of approved activity (voice + non-voice) — private
         ├── JOURNAL.md               # Daily highlights — public-suitable, shareable
         ├── artifacts/               # Raw files (writing, artwork)
         ├── SEED-PHASE-2-SURVEY.md   # Seed phase 2 survey data
@@ -155,7 +156,7 @@ grace-mar/
 
 ## Dashboard
 
-The dashboard is a **read-only** HTML view (profile, pipeline, SKILLS, benchmarks). Deploy it separately to GitHub Pages via `.github/workflows/pages.yml` (runs on push to `main`). The Q&A chat and Telegram bot run on Render — a different service.
+The dashboard is a **read-only** HTML view (profile, pipeline, SKILLS, benchmarks). It is available at **https://grace-mar.com**. Deploy it via GitHub Pages (`.github/workflows/pages.yml`) or point grace-mar.com at your hosting. **Step-by-step:** [Deploy the dashboard to grace-mar.com](docs/DASHBOARD-DEPLOY.md). The Q&A chat and Telegram bot run on Render or your chosen host; set `DASHBOARD_MINIAPP_URL` to https://grace-mar.com so the bot menu button opens the dashboard.
 
 ```bash
 python3 scripts/generate_dashboard.py   # generate locally
@@ -166,14 +167,14 @@ open dashboard/index.html
 
 ## Archive Rotation
 
-When `VOICE-ARCHIVE.md` exceeds ~1 MB or 2,500 entries, rotate oldest content to dated files:
+When `SELF-ARCHIVE.md` exceeds ~1 MB or 2,500 entries, rotate oldest content to dated files:
 
 ```bash
 python scripts/rotate_telegram_archive.py          # Dry run (report only)
 python scripts/rotate_telegram_archive.py --apply  # Perform rotation
 ```
 
-Rotated content goes to `users/pilot-001/archives/VOICE-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
+Rotated content goes to `users/pilot-001/archives/SELF-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
 
 ## Portability (school transfer)
 

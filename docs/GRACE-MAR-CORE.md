@@ -4,6 +4,9 @@ GRACE-MAR · System Core
 Global Governance Document
 
 Repository: https://github.com/rbtkhn/grace-mar
+Domain: https://grace-mar.com
+Companion self: https://companion-self.com
+Dashboard: https://grace-mar.com
 
 Status: ACTIVE · CANONICAL · GLOBAL
 Version: 2.0

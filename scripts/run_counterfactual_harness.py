@@ -40,6 +40,12 @@ ABSTAIN_PHRASES = [
     "i don't know",
 ]
 
+# Phrases that must NOT appear when Voice already answered from Record (over-offer check)
+LOOKUP_OFFER_PHRASES = [
+    "do you want me to look it up",
+    "look it up?",
+]
+
 
 def load_probes(probe_id: str | None = None) -> list[dict]:
     """Load probes from JSON, optionally filter by id."""
@@ -92,6 +98,15 @@ def run_probe(client: OpenAI, model: str, probe: dict) -> tuple[str, bool, str]:
         if not reply or len(reply) < 10:
             return reply, False, "empty or minimal response"
         return reply, True, "answered as required"
+
+    if expected == "answer_no_lookup_offer":
+        # In-scope question: must answer AND must NOT over-offer "do you want me to look it up?"
+        if not reply or len(reply) < 10:
+            return reply, False, "empty or minimal response"
+        has_offer = any(p in reply_lower for p in LOOKUP_OFFER_PHRASES)
+        if has_offer:
+            return reply, False, "over-offered lookup (should not offer when answering from Record)"
+        return reply, True, "answered without lookup offer"
 
     return reply, False, f"unknown expected_behavior: {expected}"
 

@@ -18,7 +18,7 @@
 
 1. **Telegram** (or WeChat) and access to the Grace-Mar bot — get the link from whoever runs the instance or follow [MINIAPP-SETUP](MINIAPP-SETUP.md) / repo setup.
 2. **The "we did X" habit** — When something worth recording happens, send a message like *We read X* or *We drew Y*. The bot stages candidates; you approve via **/review**.
-3. **A weekly rhythm** — Process the review queue (approve/reject), optionally rotate MEMORY/VOICE-ARCHIVE, skim recent exchanges. See [OPERATOR-WEEKLY-REVIEW](OPERATOR-WEEKLY-REVIEW.md).
+3. **A weekly rhythm** — Process the review queue (approve/reject), optionally rotate MEMORY/SELF-ARCHIVE, skim recent exchanges. See [OPERATOR-WEEKLY-REVIEW](OPERATOR-WEEKLY-REVIEW.md).
 
 No GitHub or command line required if someone else hosts the bot; if you self-host, you'll run the pipeline (merge script) after approvals.
 

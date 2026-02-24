@@ -46,13 +46,31 @@
 **The Voice is not the Record.** The Voice is the interface through which the companion interacts with the Record.
 Operational path: **READ -> Record -> WRITE-through-Voice**.
 
+**Companion self.** A single phrase can refer to both sides of the dyad: **companion self**. It means (1) *the companion's self* — the human's self, externalized in the Record (their knowledge, curiosity, personality); and (2) *the self that companions* — the Record and Voice that accompany the human and speak when queried. The ambiguity is intentional. The Record is not a separate person but the companion's self, documented and queryable; and it is the self that is present alongside them. Use "companion self" when one term should hold both meanings. **Companion self = human–computer tricameral cognition:** Mind (human, sovereign), Record + Voice (computer-held documented self and its queryable interface).
+
+**Companion self contains:**
+- **self-knowledge** (SELF.md IX-A)
+- **self-skill-write**, **self-skill-read**, **self-skill-build** (SKILLS.md)
+- **self-curiosity** (SELF.md IX-B)
+- **self-personality** (SELF.md IX-C)
+- **self-archive** (SELF-ARCHIVE.md)
+- **self-library** (LIBRARY.md)
+- **self-memory** (MEMORY.md)
+- **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
+
+The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-read**, **self-skill-write**, and **self-skill-build** (as well as self-library, etc.). Self-voice is the single output channel for the companion self.
+
+The structure is intentionally symmetrical: three-dimension mind (knowledge, curiosity, personality), three capability modules (write, read, build), three key stores (archive, library, memory), and the voice that speaks it.
+
+See [ID-TAXONOMY](ID-TAXONOMY.md) for standard labels and locations.
+
 ---
 
 ## 4. Key Invariants
 
 1. **Divergence by design** — Fork and real person may drift apart. This is correct.
 2. **The fork records, it does not mirror** — Growth comes from curated interactions, not continuous sync.
-3. **Knowledge boundary** — The fork knows only what is explicitly documented. LLM training data must not leak in.
+3. **Knowledge boundary** — The fork knows only what is explicitly documented. LLM training data must not leak in. See [KNOWLEDGE-BOUNDARY-FRAMEWORK](KNOWLEDGE-BOUNDARY-FRAMEWORK.md) for quantifying, describing, and treating information at the boundary.
 4. **"Emulation" = bot behavior** — Use "emulate" for the bot rendering the fork's voice/knowledge, not for the fork's relationship to the real person.
 5. **Identity beyond productivity** — The fork records who you are, not what you produce. Its value persists regardless of employment status, output, or usefulness. Design and content should resist productivity creep.
 6. **Augmentation, not automation** — The fork augments human judgment; it does not replace it. Human-in-the-loop is mandatory.
@@ -128,7 +146,7 @@ Use the tetrad to anticipate second-order effects and avoid unintended reversals
 
 ## 8. Design Lens: Tricameral Mind
 
-Grace-Mar is a **tricameral mind**: **MIND** (human), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind is conscious and sovereign; the Record holds the documented self; the Voice speaks it when queried. *(The earlier "bicameral dyad" framing is deprecated — it collapsed Record+Voice into one chamber and was confusing.)* The human is Grace-Mar's companion: Record and Voice are accompanied by the human, who holds authority and meaning. **Grace-Mar serves the companion; the companion serves Grace-Mar.**
+Grace-Mar is a **tricameral mind**: **MIND** (human), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind is conscious and sovereign; the Record holds the documented self; the Voice speaks it when queried. **Companion self = human–computer tricameral cognition.** *(The earlier "bicameral dyad" framing is deprecated — it collapsed Record+Voice into one chamber and was confusing.)* The human is Grace-Mar's companion: Record and Voice are accompanied by the human, who holds authority and meaning. **Grace-Mar serves the companion; the companion serves Grace-Mar.**
 
 **Historical context (Jaynes):** Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mind*, 1976) proposed that before ~1000 BCE humans had a "bicameral" mind: one hemisphere produced commands, the other received and obeyed, experienced as *external* voices. Grace-Mar is not a return to that; it is a new structure — voluntary, sovereign, with Mind in charge.
 
@@ -193,6 +211,9 @@ Mind holds the reins; the Record reflects; the Voice renders. The Record does no
 | mirror; reflect; voice; record | oracle; commanding |
 | integration moment (approval step) | — |
 | merge into the Record | add to the Record |
+| companion self (the companion's self + the self that companions) | second self (trademark; prefer companion self) |
+| companion self = human–computer tricameral cognition | — |
+| companion-self.com | Canonical domain for the companion self concept / product. |
 
 ---
 
@@ -203,6 +224,7 @@ AGENTS.md                  → AI guardrails, rules, what not to do
 docs/CONCEPTUAL-FRAMEWORK.md → This file — core distinctions
 docs/GRACE-MAR-CORE.md     → Canonical governance (absolute authority)
 docs/ARCHITECTURE.md       → Full system design
+docs/KNOWLEDGE-BOUNDARY-FRAMEWORK.md → Quantifying and describing the knowledge boundary; treatment of information
 GRACE-MAR-BOOTSTRAP.md     → Session bootstrap, quick start
 .cursor/rules/grace-mar.mdc → Cursor-specific rule (users/**)
 ```

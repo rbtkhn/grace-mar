@@ -19,7 +19,7 @@ The reviewer wants to **get to know the applicant** beyond static materials (ré
 
 ### Flow
 
-1. **Applicant** completes their application and includes a link (e.g. `https://grace-mar.example.com/me/abigail-smith`).
+1. **Applicant** completes their application and includes a link (e.g. `https://grace-mar.com/me/abigail-smith`).
 2. **Reviewer** clicks the link and lands on a chat interface.
 3. **Reviewer** reads a brief intro (e.g. "This is Abigail's cognitive fork — a living record of who she is. Ask anything to get to know her.").
 4. **Reviewer** asks questions; the fork responds in Abigail's voice using only what is documented in her Record.
@@ -113,7 +113,7 @@ Same as today: **only what is in the Record**. Knowledge boundary applies. The f
 
 ### Phase 2 — Shareable links
 - [ ] Token generation: create time-limited tokens for a user; store mapping (token → user_id, expiry).
-- [ ] Shareable URL format: `https://grace-mar.example.com/i/<token>`.
+- [ ] Shareable URL format: `https://grace-mar.com/i/<token>`.
 - [ ] Landing page with brief intro for reviewer (who this is, how to use, privacy note).
 
 ### Phase 3 — Polish

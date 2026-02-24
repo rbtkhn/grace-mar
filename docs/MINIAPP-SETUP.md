@@ -6,21 +6,21 @@
 
 Grace-Mar has two web surfaces:
 
-- **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Served on GitHub Pages.
+- **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Available at **https://grace-mar.com**.
 - **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
 
 ## Architecture
 
 | Surface | Host | URL | Purpose |
 |---------|------|-----|---------|
-| Dashboard (HTML) | GitHub Pages | `https://<org>.github.io/grace-mar/` | Read-only — view profile, pipeline, SKILLS, disclosure |
-| Q&A Mini App | Render / Railway | `https://grace-mar.onrender.com/` | Bidirectional — ask Grace-Mar questions, see her voice |
+| Dashboard (HTML) | grace-mar.com | **https://grace-mar.com** | Read-only — view profile, pipeline, SKILLS, disclosure |
+| Q&A Mini App | Render / Railway / your host | e.g. `https://grace-mar.onrender.com/` | Bidirectional — ask Grace-Mar questions, see her voice |
 
-Dashboard and Q&A are separate deployments. Set `DASHBOARD_MINIAPP_URL` to the **Q&A Mini App** URL (e.g. `https://grace-mar.onrender.com`). The Telegram menu button opens the chat.
+The **dashboard** is at **https://grace-mar.com**. Set `DASHBOARD_MINIAPP_URL` to **https://grace-mar.com** so the Telegram menu button opens the dashboard. (If you prefer the menu button to open the Q&A Mini App instead, set it to that URL.)
 
 ## 1. Dashboard (browser-only, read-only)
 
-The dashboard is a **separate deployment** — static HTML on GitHub Pages. It does not run on Render.
+The dashboard is available at **https://grace-mar.com**. Generate the static HTML with `scripts/generate_dashboard.py`; deploy via GitHub Pages (point grace-mar.com at the Pages site) or serve from your own host. **Full steps:** [DASHBOARD-DEPLOY.md](DASHBOARD-DEPLOY.md).
 
 Generate and deploy:
 
@@ -28,7 +28,7 @@ Generate and deploy:
 python3 scripts/generate_dashboard.py
 ```
 
-Push to `main` or run the workflow manually. `.github/workflows/pages.yml` generates the dashboard and deploys `dashboard/` to the `gh-pages` branch. Enable GitHub Pages in the repo (Settings → Pages → Source: Deploy from branch → branch: `gh-pages`, folder: `/ (root)`). The dashboard then lives at `https://<org>.github.io/grace-mar/`.
+Push to `main` or run the workflow manually. `.github/workflows/pages.yml` generates the dashboard and deploys `dashboard/` to the `gh-pages` branch. Enable GitHub Pages in the repo (Settings → Pages → Source: Deploy from branch → branch: `gh-pages`, folder: `/ (root)`). Point **grace-mar.com** at the Pages site (Settings → Pages → Custom domain) so the dashboard lives at https://grace-mar.com.
 
 ## 2. Q&A Mini App (Mini App + API)
 
@@ -67,7 +67,7 @@ ngrok http 5000
 
 ### Archive (session transcript)
 
-Mini App exchanges are appended to `users/<user>/SESSION-TRANSCRIPT.md` (real-time log, same policy as Telegram). VOICE-ARCHIVE is updated only when candidates are merged via `process_approved_candidates` (gated). No GitHub token is required for archiving.
+Mini App exchanges are appended to `users/<user>/SESSION-TRANSCRIPT.md` (real-time log, same policy as Telegram). SELF-ARCHIVE is updated only when candidates are merged via `process_approved_candidates` (gated). No GitHub token is required for archiving.
 
 On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Mini App is lost between deploys unless you add a separate step to persist it (e.g. push to repo). Local dev writes to disk as usual.
 
@@ -77,8 +77,8 @@ The `render.yaml` blueprint runs the Telegram bot via **webhook** on the miniapp
 
 - `TELEGRAM_BOT_TOKEN` — from @BotFather (when set, webhook is enabled)
 - `OPENAI_API_KEY`
-- `DASHBOARD_MINIAPP_URL` — your Mini App URL (e.g. `https://grace-mar-miniapp.onrender.com`)
-- Session transcript is written locally; VOICE-ARCHIVE is updated only on merge (no GITHUB_TOKEN needed for archiving).
+- `DASHBOARD_MINIAPP_URL` — URL opened by the Telegram menu button (e.g. **https://grace-mar.com** for the dashboard)
+- Session transcript is written locally; SELF-ARCHIVE is updated only on merge (no GITHUB_TOKEN needed for archiving).
 
 See [TELEGRAM-WEBHOOK-SETUP](TELEGRAM-WEBHOOK-SETUP.md) for details and migration from polling.
 
@@ -87,16 +87,16 @@ See [TELEGRAM-WEBHOOK-SETUP](TELEGRAM-WEBHOOK-SETUP.md) for details and migratio
 When running the bot locally, set in `bot/.env`:
 
 ```env
-DASHBOARD_MINIAPP_URL=https://grace-mar-miniapp.onrender.com
+DASHBOARD_MINIAPP_URL=https://grace-mar.com
 ```
 
-This URL must serve the Q&A Mini App. When set, the bot exposes `/dashboard` and the menu button. On Render, set the same var in the bot service’s Environment tab.
+This URL is opened when the user taps the Telegram menu button (Dashboard). Set it to **https://grace-mar.com** so the dashboard is one tap away. On Render, set the same var in the bot service’s Environment tab.
 
 ## 5. @BotFather (optional)
 
 In @BotFather → Bot Settings → Menu Button:
 
-- Set URL to your Q&A Mini App URL (same as `DASHBOARD_MINIAPP_URL`).
+- Set URL to **https://grace-mar.com** (or whatever URL you set in `DASHBOARD_MINIAPP_URL`).
 
 ## 6. Deep linking
 

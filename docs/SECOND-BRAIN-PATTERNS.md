@@ -78,7 +78,7 @@
 **Pattern:** A short checklist at the start of the day—5–10 minutes—to ground oneself and avoid reactive mode. Check inbox, priorities, today's focus.
 
 **Grace-Mar application:**
-- **Operator startup:** Open PENDING-REVIEW; skim ARCHIVE or MEMORY for recent context; process any urgent candidates.
+- **Operator startup:** Open PENDING-REVIEW; skim SESSION-TRANSCRIPT or SELF-ARCHIVE for recent context; process any urgent candidates.
 - **Session start (Voice):** Menu (A=recent doings, B=learnings, C=curiosity, D=free chat) lets the user choose how to begin. Bounded, not infinite.
 - **Design rule:** Offer a lightweight "how do you want to start?" rather than dumping everything. Match Second Brain's proactive vs. reactive framing.
 
@@ -107,7 +107,7 @@
 | Mobile-optimized | Chat-first; flat menus |
 | Startup checklist | Operator startup; session menu (A/B/C/D) |
 | Progressive disclosure | AGENTS + linked docs; load-on-demand rules |
-| Markdown as canvas | SELF, EVIDENCE, ARCHIVE as files; git audit |
+| Markdown as canvas | SELF, EVIDENCE, SELF-ARCHIVE as files; git audit |
 | Human in the loop | Sovereign Merge; conductor workflow |
 
 ---
@@ -120,7 +120,7 @@ Ideas extracted from these patterns that could be implemented:
 |------|--------|--------|-------|
 | **Rule file "when to load" cues** | Progressive disclosure | Low | Add one-line description to AGENTS sections so Cursor knows when to read full doc. |
 | **Session priming from MEMORY** | Connection, startup | Medium | When starting a Voice session, inject MEMORY (tone, resistance notes) into context so responses honor it. **Done:** `_load_memory_appendix` adds explicit Resistance Notes instruction when that section exists. |
-| **Index/graph of Record links** | Markdown as canvas | Low | Script to output SELF↔EVIDENCE↔ARCHIVE link map; helps operator navigate. |
+| **Index/graph of Record links** | Markdown as canvas | Low | Script to output SELF↔EVIDENCE↔SELF-ARCHIVE link map; helps operator navigate. |
 | **Scannable candidate cards** | Two-minute rule | Low | Improve PENDING-REVIEW formatting: bold summary, collapsible detail. |
 | **MCP-as-skill for Cursor** | Progressive disclosure | Medium | If Grace-Mar adds MCPs (e.g. Telegram, Notion), wrap as skills that load only when task requires. Reduces context bloat. |
 | **Brand/voice for PRP** | Human in the loop | Low | PRP already encodes voice; consider explicit "voice calibration" pass (Lexile, tone) when regenerating. |

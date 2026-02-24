@@ -95,7 +95,7 @@ No claim may exist without traceability to an artifact or approved source.
 ### 3.4 Skill Executor Model (READ/WRITE/BUILD)
 
 The SKILLS module may be operationalized as three semi-independent executors:
-`READ`, `WRITE`, and `BUILD`.
+`READ`, `WRITE`, and `BUILD`. **Standard labels:** **self-skill-read**, **self-skill-write**, **self-skill-build** (see [ID-TAXONOMY](ID-TAXONOMY.md#standard-capability-labels-self-skill-)).
 
 - They may use distinct heuristics, prompts, and evaluation criteria.
 - They are capability-specialized, not identity-sovereign.

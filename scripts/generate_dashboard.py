@@ -273,7 +273,7 @@ def collect_data() -> DashboardData:
     self_path = PROFILE_DIR / "SELF.md"
     evidence_path = PROFILE_DIR / "EVIDENCE.md"
     skills_path = PROFILE_DIR / "SKILLS.md"
-    archive_path = PROFILE_DIR / "VOICE-ARCHIVE.md"
+    archive_path = PROFILE_DIR / "SELF-ARCHIVE.md"
     session_transcript_path = PROFILE_DIR / "SESSION-TRANSCRIPT.md"
     library_path = PROFILE_DIR / "LIBRARY.md"
     journal_path = PROFILE_DIR / "JOURNAL.md"
