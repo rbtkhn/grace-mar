@@ -129,7 +129,7 @@ When designing new features or modes:
 
 The design works if:
 - A 6-year-old can use it without explanation
-- A parent can hand the phone to the child and walk away
+- The operator can hand the device to the user and step back
 - The user *chooses* to open Grace-Mar over another app in a moment of boredom
 - The chat history, scrolled months later, feels like a relationship
 

@@ -57,20 +57,21 @@ notes: "Three samples show rapid progression: run-on retell (0001) → run-on or
 ### BUILD Container
 
 ```yaml
-status: ACTIVE (creation dimensions from CREATE-0001–0008; planning/execution from zero)
+status: ACTIVE (creation dimensions from CREATE-0001–0008; planning/execution from ACT-0035 BUILD probe)
 # Creation (merged from IMAGINE)
-originality_level: 4      # original visual interpretation of text-only Chinese story (CREATE-0001)
-elaboration_level: 4      # detailed — careful color banding, shading, decorative elements
-flexibility_level: 3      # works within story framework but makes own visual choices
-# Planning/execution (starts from zero)
-planning_level: null
-execution_level: null
-making_level: null
+originality_level: 4      # original visual interpretation of text-only Chinese story (CREATE-0001); BUILD probe confirmed story combo (Deer+Madeline)
+elaboration_level: 4      # detailed — careful color banding, shading, decorative elements; BUILD probe confirmed (scarf, eyelashes, whole world)
+flexibility_level: 3      # works within story framework but makes own visual choices; BUILD probe confirmed (add one thing not in book)
+# Planning/execution (evidenced by BUILD probe ACT-0035)
+planning_level: 1-2       # can order steps for familiar tasks (drawing: get materials first; lemonade stand: lemonade first)
+execution_level: 1        # next step in sequence (Lego: go to step 5 after step 4)
+making_level: 1           # follows instructions + looks at box (Legos — methodical)
 financial_level: null
 collaboration_level: null
-edge: "Narrative creation from prompts; cross-language creative tasks; independent scene composition; planning/execution evidence enters via 'we did X' pipeline"
+decision_making: 1        # can give reason for choice (why pick deer: kind, brave, beautiful)
+edge: "Narrative creation from prompts; cross-language creative tasks; independent scene composition; planning/execution evidenced via BUILD probe (step order, next step, making method)"
 gaps: []
-notes: "Creation: CREATE-0001 (Nine-Colored Deer) demonstrates comprehension of text-only Chinese story → original visual interpretation. 8 artworks (CREATE-0001–0008) show strong creation capability. Planning/execution: starts from zero; evidence enters through 'we did X' (lemonade stand, school project with P&L, etc.). Human gates all merges."
+notes: "Creation: CREATE-0001–0008 show strong creation capability. BUILD probe (2026-02-24, ACT-0035): planning (step order), execution (next step), making (Legos instructions+box), elaboration/flexibility/originality/decision_making confirmed. Human gates all merges."
 ```
 
 ### MATH (contextual — not a module, but tracked)

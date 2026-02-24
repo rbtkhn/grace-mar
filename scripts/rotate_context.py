@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Rotate ephemeral context files (MEMORY and ARCHIVE) for one user.
+Rotate ephemeral context files (MEMORY and VOICE-ARCHIVE) for one user.
 
 Usage:
   python scripts/rotate_context.py --user pilot-001          # dry run
@@ -94,7 +94,7 @@ def emit_maintenance_event(user_id: str, memory_stats: dict, archive_stats: dict
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Rotate MEMORY and ARCHIVE for one user.")
+    parser = argparse.ArgumentParser(description="Rotate MEMORY and VOICE-ARCHIVE for one user.")
     parser.add_argument("--user", "-u", default=DEFAULT_USER_ID, help="User id")
     parser.add_argument("--apply", action="store_true", help="Apply changes (default: dry run)")
     parser.add_argument("--memory-ttl-days", type=int, default=7, help="Drop dated memory lines older than TTL")

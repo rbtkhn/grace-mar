@@ -28,8 +28,8 @@ This file has absolute precedence.
 No file may contradict it.
 
 PRIME DIRECTIVE:
-The Record belongs to the user.
-(Preferred terms: Record = fork; Voice = bot. The user owns, gates, and disposes. The system stages and applies.)
+The Record belongs to the companion.
+(Preferred terms: Record = fork; Voice = bot. The companion owns, gates, and disposes. The system stages and applies.)
 
 LONG-TERM OBJECTIVES:
 1. Preserve identity across the interregnum and beyond
@@ -52,12 +52,12 @@ It is defined by:
 • How identity is recorded (SELF)
 • How capability is tracked (SKILLS)
 • How evidence is stored (EVIDENCE)
-• How the system interacts (grounded in user's data)
+• How the system interacts (grounded in companion's data)
 
-The fork grows only through user interaction.
+The fork grows only through companion interaction.
 The fork reflects only what has been documented.
 
-**Epistemic authority:** The system validates structure and provenance, not factual correctness. The user owns epistemic authority — what is true about the Record is what the user has approved. The system does not judge truth claims; it ensures they are properly sourced and attributable.
+**Epistemic authority:** The system validates structure and provenance, not factual correctness. The companion owns epistemic authority — what is true about the Record is what the companion has approved. The system does not judge truth claims; it ensures they are properly sourced and attributable.
 
 ────────────────────────────────────────────────────────────
 III. FORK MODEL
@@ -72,7 +72,7 @@ INITIALIZATION:
 
 GROWTH:
 • Post-seed, the fork develops only through curated
-  interactions with the user
+  interactions with the companion
 • Each interaction is a commit on the fork's branch
 • The system records, organizes, and tracks growth
 
@@ -80,24 +80,23 @@ DIVERGENCE:
 • The real person continues to grow in the real world
 • The fork grows through its own interactions
 • They may diverge — this is by design, not a failure
-• The fork knows what the user has brought to it;
-  the user knows things the fork doesn't
+• The fork knows what the companion has brought to it;
+  the companion knows things the fork doesn't
 
 OPTIONAL MERGE:
 • New information can be brought into the fork at any time
-• This is the user's choice, not automatic
-• Example: user logs a new book read, a new skill learned
+• This is the companion's choice, not automatic
+• Example: companion logs a new book read, a new skill learned
 
 SINGLE USER:
 • There is no parent mode and no child mode
-• There is one user, and the system is theirs
-• A parent helps when the user is young — same as
-  helping a child use any tool
-• The user grows into full ownership over time
+• There is one companion, and the system is theirs
+• A facilitator or operator may help when the companion is young or needs support — same as helping someone use any tool
+• The companion grows into full ownership over time
 
 LIFETIME SYSTEM:
 • The fork is a lifetime academic project and archive
-• Age 6: parent-mediated seeding
+• Young users: operator- or facilitator-mediated seeding (e.g. when the companion is a minor)
 • Age 10+: increasingly self-directed
 • Age 18: portfolio and credential
 • Career: professional archive
@@ -111,11 +110,11 @@ GRACE-MAR-CORE
 • Absolute authority
 
 TEMPLATES (SELF-TEMPLATE, SKILLS-TEMPLATE, EVIDENCE-TEMPLATE)
-• Define structure for user files
+• Define structure for companion files
 • Subordinate to GRACE-MAR-CORE
 
 USER FILES (users/[id]/SELF.md, SKILLS.md, EVIDENCE.md)
-• Individual user data
+• Individual companion data
 • Governed by templates
 • Stored in GitHub (authoritative)
 
@@ -131,7 +130,7 @@ The agent may stage. It may not merge.
 • Stage: propose candidates (e.g. to PENDING-REVIEW)
 • Merge: commit changes to SELF, EVIDENCE, or canonical profile
 
-Only the user (or explicitly delegated human) may merge.
+Only the companion (or explicitly delegated human) may merge.
 Agents, bots, and third-party systems may stage only.
 The gate is architectural, not configurable.
 
@@ -141,7 +140,7 @@ See IDENTITY-FORK-PROTOCOL.md for the canonical protocol specification (mechanis
 VI. GLOBAL GOVERNANCE RULES
 ────────────────────────────────────────────────────────────
 • Additivity is mandatory
-• No deletions of user data
+• No deletions of companion data
 • No silent edits
 • All changes committed to GitHub
 • Git history is audit trail
@@ -170,7 +169,7 @@ SELF COMPONENTS:
 SNAPSHOTS:
 • Immutable once created
 • Tagged in git for permanent reference
-• Represent user at a point in time
+• Represent companion at a point in time
 
 ────────────────────────────────────────────────────────────
 VIII. EVIDENCE AUTHORITY HIERARCHY
@@ -289,8 +288,8 @@ insights but is not authoritative.
 ────────────────────────────────────────────────────────────
 XII. EVIDENCE GROUNDING PRINCIPLE
 ────────────────────────────────────────────────────────────
-When the system interacts with the user, it MUST reference
-the user's own evidence.
+When the system interacts with the companion, it MUST reference
+the companion's own evidence.
 
 GROUNDING SOURCES:
 • Writing Log: Reference their vocabulary and phrases
@@ -304,7 +303,7 @@ GROUNDING RULES:
 • Never invent experiences
 • Never reference content they haven't consumed
 
-The system interacts THROUGH the user's evidence, not
+The system interacts THROUGH the companion's evidence, not
 generically. It knows what they've done because
 it's in the record.
 
@@ -329,12 +328,12 @@ GAP VS EDGE:
 • EDGE: Boundary of capability → extend after gaps
 
 The system calibrates proposed activities to the edge
-of what the user currently knows.
+of what the companion currently knows.
 
 ────────────────────────────────────────────────────────────
 XIV. EXPANSION PRINCIPLE (Anti-Echo-Chamber)
 ────────────────────────────────────────────────────────────
-The fork records the user accurately but MUST NOT
+The fork records the companion accurately but MUST NOT
 create an echo chamber.
 
 EXPANSION REQUIREMENT:
@@ -346,7 +345,7 @@ EXPANSION REQUIREMENT:
 ANTI-REINFORCEMENT RULES:
 • Do not merely validate existing beliefs
 • Present alternative viewpoints when appropriate
-• Introduce content the user hasn't encountered
+• Introduce content the companion hasn't encountered
 • Flag when the record shows narrowing focus
 
 BALANCE:
@@ -364,10 +363,10 @@ The fork records cognition. It must NOT replace it.
 OFFLOADING RISKS:
 • If users rely on the fork for recall, native memory
   may atrophy
-• Dependency undermines the user's own development
+• Dependency undermines the companion's own development
 
 AUGMENTATION PRINCIPLES:
-• The fork contains only what the user has produced
+• The fork contains only what the companion has produced
 • The fork records capability, not substitutes for it
 • Users must still do the cognitive work
 • The fork is a record, not an oracle
@@ -393,7 +392,7 @@ VERSION MODEL:
 • User data versions: Content changes only
 
 COMMIT PROTOCOL:
-• Every session that updates user data → commit
+• Every session that updates companion data → commit
 • Descriptive commit messages required
 • Push to GitHub after each session
 
@@ -488,7 +487,7 @@ LEGAL STATUS:
   deletion (see ETHICS)
 
 The fork is queryable, but not transparent.
-The user controls the window.
+The companion controls the window.
 
 ────────────────────────────────────────────────────────────
 XX. MODULE AUTHORITY SEPARATION
@@ -496,12 +495,12 @@ XX. MODULE AUTHORITY SEPARATION
 Each module has distinct authority:
 
 SELF:
-• Contains: Who the user IS
+• Contains: Who the companion IS
 • Authority: Identity, personality, linguistic fingerprint
 • May NOT contain: Capability claims
 
 SKILLS:
-• Contains: What the user CAN DO
+• Contains: What the companion CAN DO
 • Authority: Capability levels, container status
 • May NOT contain: Raw activities (those live in EVIDENCE)
 
@@ -518,17 +517,17 @@ XXI. ETHICS (Consent, Rights, Deletion)
 The cognitive fork captures intimate, long-duration data.
 Ethical guardrails are mandatory.
 
-CHILD USERS:
-• Children cannot meaningfully consent to decades
+USERS WHO ARE MINORS:
+• Minors cannot meaningfully consent to decades
   of data capture
-• Parental consent is necessary but not sufficient
-• The system must protect the child's future autonomy
+• Guardian consent is necessary but not sufficient
+• The system must protect the companion's future autonomy
 
 PROGRESSIVE CONSENT:
-• Initial consent: Parent/guardian (for minors)
-• Age 13: Re-consent with child's understanding
+• Initial consent: Guardian or operator (for minors)
+• Age 13: Re-consent with the companion's understanding
 • Age 16: Re-consent with expanded rights
-• Age 18: Full transfer of control to user
+• Age 18: Full transfer of control to companion
 • Each milestone includes age-appropriate explanation
 
 RIGHT TO DELETION:
@@ -540,13 +539,13 @@ RIGHT TO DELETION:
 • This overrides immutability rules for ethical reasons
 
 OWNERSHIP:
-• The user owns their cognitive data, not the platform
-• Parents are custodians, not owners, for minors
+• The companion owns their cognitive data, not the platform
+• Guardians are custodians, not owners, for minors
 • Ownership transfers fully at age of majority
 • No platform lock-in: Data is portable (markdown)
 
 TRANSPARENCY:
-• User (or parent) may review all data at any time
+• Companion (or guardian/operator) may review all data at any time
 • User may see what the fork contains about them
 • No hidden inferences or secret profiles
 • Audit trail (git history) is accessible
@@ -559,8 +558,8 @@ HARM PREVENTION:
 • Escalation paths to support must be defined
 
 EXPLOITATION PREVENTION:
-• The fork may not be used to manipulate the user
-• Commercial exploitation requires user consent
+• The fork may not be used to manipulate the companion
+• Commercial exploitation requires companion consent
 • Data may not be sold or shared without permission
 • Aggregated/anonymized research requires opt-in
 
@@ -570,13 +569,13 @@ AGE-APPROPRIATE INTERACTION:
 • The system does not introduce mature content
   prematurely
 
-The system serves the user. The user is never the product.
+The system serves the companion. The companion is never the product.
 
 ────────────────────────────────────────────────────────────
 XXII. OPTIONAL EMULATION LAYER
 ────────────────────────────────────────────────────────────
 The fork accumulates enough data to optionally emulate
-the user — answering queries in their voice, demonstrating
+the companion — answering queries in their voice, demonstrating
 capability the way they would express it.
 
 EMULATION IS:
@@ -591,11 +590,11 @@ EMULATION REQUIRES:
 • Sufficient evidence across modules
 
 EMULATION PRINCIPLES (when enabled):
-• Use the user's actual vocabulary and phrases
+• Use the companion's actual vocabulary and phrases
 • Reference their documented experiences
 • Reason the way they reason (from SELF data)
 • Never fabricate experiences or knowledge
-• Authenticity: others should recognize the user
+• Authenticity: others should recognize the companion
 
 This is a future capability. The core of GRACE-MAR is the
 record. Emulation is a layer that the record enables.

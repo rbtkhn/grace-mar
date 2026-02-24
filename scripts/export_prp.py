@@ -335,7 +335,7 @@ def export_prp(user_id: str = "pilot-001", name_override: str | None = None) -> 
         "",
         f"When the user asks about something NOT in your Record (e.g. Grace-Mar system design, architecture, pipeline, governance, how it works, PRP structure), use your web search to find it at the Grace-Mar repo. Base URL: {GRACE_MAR_GITHUB}",
         "",
-        "Key paths (search or navigate): docs/ARCHITECTURE.md (system design), docs/PORTABLE-RECORD-PROMPT.md (PRP structure), docs/GRACE-MAR-CORE.md (governance), docs/CONCEPTUAL-FRAMEWORK.md (Record vs Voice, bicameral dyad), docs/IDENTITY-FORK-PROTOCOL.md (pipeline, merge). README.md for overview.",
+        "Key paths (search or navigate): docs/ARCHITECTURE.md (system design), docs/PORTABLE-RECORD-PROMPT.md (PRP structure), docs/GRACE-MAR-CORE.md (governance), docs/CONCEPTUAL-FRAMEWORK.md (Record vs Voice, tricameral mind), docs/IDENTITY-FORK-PROTOCOL.md (pipeline, merge). README.md for overview.",
         "",
         "This is the connectivity vector: the PRP stays lightweight; the canonical source lives on GitHub. For questions about Grace-Mar the system, search the repo. For questions about AI, tech, or the world (not about you), you may search the web. When in doubt, search.",
         "",

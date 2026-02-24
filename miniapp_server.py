@@ -11,7 +11,7 @@ Usage:
     OPENAI_API_KEY=... python miniapp_server.py
 
 Set PORT (default 5000) for hosting. Enable CORS if Mini App is on a different origin.
-Set GITHUB_TOKEN and GRACE_MAR_REPO (e.g. rbtkhn/grace-mar) to archive to ARCHIVE.md.
+Set GITHUB_TOKEN and GRACE_MAR_REPO (e.g. rbtkhn/grace-mar) to archive to VOICE-ARCHIVE.md.
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 """
 
@@ -52,7 +52,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
-ARCHIVE_PATH = "users/pilot-001/ARCHIVE.md"
+ARCHIVE_PATH = "users/pilot-001/VOICE-ARCHIVE.md"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
     os.getenv("WEBHOOK_BASE_URL", "").strip()
@@ -123,7 +123,7 @@ def _append_to_local_file(blocks: str) -> None:
         path.parent.mkdir(parents=True, exist_ok=True)
         if not path.exists():
             path.write_text(
-                "# CONVERSATION ARCHIVE\n\n> Append-only log (Telegram, WeChat, Mini App). Local dev.\n\n---\n\n",
+                "# VOICE-ARCHIVE\n\n> Append-only log (Telegram, WeChat, Mini App; eventually email, X, other channels). Local dev.\n\n---\n\n",
                 encoding="utf-8",
             )
         with path.open("a", encoding="utf-8") as f:
@@ -151,7 +151,7 @@ def _append_via_github_api(blocks: str) -> None:
                 raise
             content = ""
             sha = ""
-        header = "# CONVERSATION ARCHIVE\n\n> Append-only log of all Grace-Mar interactions (Telegram, WeChat, Mini App). One mind, multiple channels.\n\n---\n\n"
+        header = "# VOICE-ARCHIVE\n\n> Append-only log of all Grace-Mar interactions (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). One mind, multiple channels.\n\n---\n\n"
         base = content if content else header
         new_content = base.rstrip() + "\n\n" + blocks.strip() + "\n"
         payload = {"message": "miniapp: archive exchange", "content": base64.b64encode(new_content.encode()).decode()}
@@ -170,7 +170,7 @@ def _append_via_github_api(blocks: str) -> None:
 
 
 def _archive_miniapp(user_message: str, reply: str, is_lookup: bool = False, lookup_question: str | None = None) -> None:
-    """Append exchange to ARCHIVE.md (same file as bot). Runs in background."""
+    """Append exchange to VOICE-ARCHIVE.md (same file as bot). Runs in background."""
     blocks = _format_archive_block("USER", user_message)
     if is_lookup and lookup_question:
         blocks += _format_archive_block("LOOKUP REQUEST", lookup_question)

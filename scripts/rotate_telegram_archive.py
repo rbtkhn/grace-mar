@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Rotate ARCHIVE.md when it exceeds size or entry count.
+Rotate VOICE-ARCHIVE.md when it exceeds size or entry count.
 
-Moves oldest entries to users/<id>/archives/ARCHIVE-YYYY-MM.md.
+Moves oldest entries to users/<id>/archives/VOICE-ARCHIVE-YYYY-MM.md.
 Keeps the last KEEP_RECENT entries in the main file. Run manually or via cron.
 
 Thresholds:
@@ -53,7 +53,7 @@ def rotate_archive(
     max_entries: int = MAX_ENTRIES,
     keep_recent: int = KEEP_RECENT,
 ) -> dict:
-    archive_path = REPO_ROOT / "users" / user_id / "ARCHIVE.md"
+    archive_path = REPO_ROOT / "users" / user_id / "VOICE-ARCHIVE.md"
     archives_dir = REPO_ROOT / "users" / user_id / "archives"
 
     if not archive_path.exists():
@@ -86,8 +86,8 @@ def rotate_archive(
             ym = get_entry_ym(block) or "unknown"
             by_month.setdefault(ym, []).append(block)
         for ym, entries in by_month.items():
-            dest = archives_dir / f"ARCHIVE-{ym}.md"
-            header_ym = f"# CONVERSATION ARCHIVE — {ym}\n\n> Rotated from main archive. Append-only.\n\n---\n\n"
+            dest = archives_dir / f"VOICE-ARCHIVE-{ym}.md"
+            header_ym = f"# VOICE-ARCHIVE — {ym}\n\n> Rotated from main archive. Append-only.\n\n---\n\n"
             if dest.exists():
                 existing = dest.read_text(encoding="utf-8")
                 if not existing.rstrip().endswith("\n\n"):

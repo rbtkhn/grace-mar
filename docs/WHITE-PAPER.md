@@ -46,7 +46,7 @@ Alpha School represents a new category: AI-powered K–12 microschools. Students
 | **Portability** | Locked to platform | No export of identity or Record |
 | **Access** | $40K–$75K/year | Most families excluded |
 
-AI schools optimize for teaching outcomes. They do not provide a user-owned, evidence-grounded, portable Record of who the child is.
+AI schools optimize for teaching outcomes. They do not provide a user-owned, evidence-grounded, portable Record of who the user is.
 
 ---
 
@@ -54,7 +54,7 @@ AI schools optimize for teaching outcomes. They do not provide a user-owned, evi
 
 ### The Trust Problem
 
-Who owns the narrative of who the child is? Today:
+Who owns the narrative of who the user is? Today:
 - **Platforms** hold the data — engagement, placement, interests
 - **Families** have no export, no artifact trail, no approval gate
 - **Agents** (future tutors, admissions, employers) will need identity — and today there is no trusted source
@@ -257,7 +257,7 @@ Infrastructure is built for fully autonomous agents. Many users want ~70% human 
 
 Alpha's homeschool pilot: same platform, 1x results vs. 2.6x at full Alpha. Motivation (incentives, culture, guides) is the bottleneck, not content.
 
-Grace-Mar does not build incentive systems (bucks, store). We stay in the Record lane. But the Record **feeds** motivation: interests, curiosity, personality. The Record is the **engagement substrate** — the structured input that tutors, platforms, and parents use to reach and motivate.
+Grace-Mar does not build incentive systems (bucks, store). We stay in the Record lane. But the Record **feeds** motivation: interests, curiosity, personality. The Record is the **engagement substrate** — the structured input that tutors, platforms, and operators use to reach and motivate.
 
 ### "We Did X" as Ritual
 

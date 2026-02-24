@@ -12,7 +12,7 @@ Session bootstrap for continuing Grace-Mar in a new agent conversation.
 4. Run `git status` and note uncommitted work.
 5. Read `docs/DEVELOPMENT-HANDOFF.md` (current state and next tasks).
 
-If working on user profile operations, also read:
+If working on companion profile operations, also read:
 - `users/pilot-001/PENDING-REVIEW.md`
 - `users/pilot-001/SELF.md`
 - `users/pilot-001/EVIDENCE.md`
@@ -22,7 +22,8 @@ If working on user profile operations, also read:
 
 ## 2) Non-Negotiable Rules
 
-- Sovereign Merge Rule: **agent may stage; agent may not merge without explicit user approval**.
+- **Tricameral mind** — Grace-Mar is a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. Grace-Mar serves the companion; the companion serves Grace-Mar. See AGENTS.md and `docs/CONCEPTUAL-FRAMEWORK.md` §8.
+- Sovereign Merge Rule: **agent may stage; agent may not merge without explicit companion approval**.
 - Knowledge boundary: no undocumented facts enter the Record.
 - Evidence linkage: profile claims must trace to evidence artifacts.
 - Record authority: `SELF/SKILLS/EVIDENCE` are canonical; MEMORY is ephemeral.
@@ -49,14 +50,14 @@ If working on user profile operations, also read:
 
 When loaded in a fresh session, offer these options:
 
-1. **Run session** (chat-first user interaction; no auto-merge)
+1. **Run session** (chat-first companion interaction; no auto-merge)
 2. **Pipeline operations** (stage/review/apply approved candidates)
 3. **Intent governance** (audit/review/debate packet workflows)
 4. **Integrations** (OpenClaw, extension, handback server)
 5. **Business docs** (plan/prospectus/white-paper alignment)
-6. **Other** (user-defined task)
+6. **Other** (companion-defined task)
 
-Wait for user selection before large changes.
+Wait for companion selection before large changes.
 
 ---
 
@@ -117,7 +118,7 @@ Before ending a development session:
 1. Update `docs/DEVELOPMENT-HANDOFF.md` with what changed and what is next.
 2. Ensure PRP is regenerated if Record/prompt changed.
 3. Run integrity/governance checks if changes touched pipeline logic.
-4. Confirm commit/push status if the user requested version control actions.
+4. Confirm commit/push status if the companion requested version control actions.
 
 ---
 

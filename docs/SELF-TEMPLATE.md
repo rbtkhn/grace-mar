@@ -24,7 +24,7 @@ The SELF module:
 The SELF module is NOT:
 - A curated persona
 - An idealized version
-- A generic child profile
+- A generic user profile
 - A static personality test result
 
 SELF strives for ACCURATE RECORDING.
@@ -522,7 +522,7 @@ forbidden: {
 
 ### Recognition Test (Emulation Mode)
 
-If a parent, teacher, or friend interacts with the emulation
+If an operator, teacher, or friend interacts with the emulation
 and says "that sounds exactly like them" — success.
 If they say "that doesn't sound like them" — failure.
 

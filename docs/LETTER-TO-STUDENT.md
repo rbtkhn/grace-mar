@@ -1,5 +1,7 @@
 # Letter to First Pilot Student
 
+*Variant for a school-aged or younger user. For age-neutral wording, see [LETTER-TO-USER.md](LETTER-TO-USER.md).*
+
 ---
 
 **Dear [Name],**
@@ -26,7 +28,7 @@ You are the very first kid in the whole world to try this.
 
 Nobody else has done this before. You're like an explorer going somewhere new. And I really need your help to make it better.
 
-Some things might not work perfectly at first. That's okay! You can tell me what's fun and what's not fun, what's easy and what's confusing. Your ideas will help me make it great for other kids too.
+Some things might not work perfectly at first. That's okay! You can tell me what's fun and what's not fun, what's easy and what's confusing. Your ideas will help me make it great for others too.
 
 **What will happen:**
 

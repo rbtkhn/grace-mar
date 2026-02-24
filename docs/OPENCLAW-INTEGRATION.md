@@ -4,7 +4,7 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 - The Record feeds OpenClaw's identity layer (who it serves)
 - Session continuity spans both systems
 - OpenClaw artifacts can feed the grace-mar pipeline
-- Staging automation stays gated — user remains the approval gate
+- Staging automation stays gated — companion remains the approval gate
 
 ---
 
@@ -17,7 +17,7 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 | **Artifacts as evidence** | OpenClaw outputs → "we did X" → pipeline | User invokes pipeline |
 | **Staging automation** | OpenClaw skill/cron stages to PENDING-REVIEW | Stage only, never merge |
 
-**Invariant:** The user is always the gate. OpenClaw can stage; it cannot merge into the Record.
+**Invariant:** The companion is always the gate. OpenClaw can stage; it cannot merge into the Record.
 
 ---
 
@@ -139,7 +139,7 @@ The pipeline treats this like any other "we did X" + artifact. The operator load
 
 ### No Automatic Ingestion
 
-Artifacts do **not** auto-ingest. The user must explicitly invoke the pipeline ("we did X") and approve any candidates. This preserves the gate.
+Artifacts do **not** auto-ingest. The companion must explicitly invoke the pipeline ("we did X") and approve any candidates. This preserves the gate.
 
 ### Stage-only inbound hook (OpenClaw -> Grace-Mar)
 
@@ -201,7 +201,7 @@ suggested_entry: <proposed SELF.md text>
 evidence: <ACT-XXXX or artifact reference>
 ```
 
-Agents append to the **Candidates** section. The user reviews and changes `status` to `approved` or `rejected`, then tells the operator to "process the review queue."
+Agents append to the **Candidates** section. The companion reviews and changes `status` to `approved` or `rejected`, then tells the operator to "process the review queue."
 
 ### Analyst Logic
 
@@ -243,7 +243,7 @@ python integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emi
 
 **Pipeline invocation:**
 - User: "we [did X]" [+ optional artifact path]
-- Operator: Run signal detection → stage → user approves → merge
+- Operator: Run signal detection → stage → companion approves → merge
 
 **Operator bot command:**
 - `/openclaw_export [format] [output_dir]`
@@ -253,9 +253,9 @@ python integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emi
 
 ## 7. School Transfer
 
-When the user switches schools, the Record moves with them. See **[PORTABILITY](PORTABILITY.md)** for:
+When the companion switches schools, the Record moves with them. See **[PORTABILITY](PORTABILITY.md)** for:
 
-- Ownership principle (Record belongs to the user)
+- Ownership principle (Record belongs to the companion)
 - Transfer checklist
 - Handoff format (identity vs. full fork)
 - Revocation guidance for the previous school

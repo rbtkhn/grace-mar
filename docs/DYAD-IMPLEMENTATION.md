@@ -1,6 +1,6 @@
-# Dyad Implementation — New Bicameral Cognition
+# Dyad Implementation — Tricameral Mind (MIND, RECORD, VOICE)
 
-Specific implementations to track and encourage human–Record/Voice dyad emergence. Builds on existing infrastructure.
+Specific implementations to track and encourage tricameral-mind activity (MIND consulting and feeding RECORD/VOICE). Builds on existing infrastructure.
 
 ---
 
@@ -49,7 +49,7 @@ emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source
 
 ### 2.2 ARCHIVE event types
 
-Parse `ARCHIVE.md` for:
+Parse `VOICE-ARCHIVE.md` for:
 - `LOOKUP REQUEST` — User triggered lookup (question stored)
 - `GRACE-MAR (lookup)` — Lookup response delivered
 - `ACTIVITY REPORT` — "We did X" feeding

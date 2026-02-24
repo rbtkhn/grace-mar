@@ -40,7 +40,7 @@ entries:
 | Field | Required | Description |
 |-------|----------|-------------|
 | **date** | Yes | YYYY-MM-DD |
-| **entry** | Yes | Natural-language paragraph(s) in first-person Grace-Mar voice (child-friendly, non-technical). No bullets. |
+| **entry** | Yes | Natural-language paragraph(s) in first-person Grace-Mar voice (age-appropriate, non-technical). No bullets. |
 | **source_ids** | No | ACT-*, WRITE-*, CREATE-* — traceability to EVIDENCE |
 | **approved** | Yes | `true` = suitable for public/shareable; `false` = draft or restricted |
 

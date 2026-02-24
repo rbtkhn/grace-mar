@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Dyad metrics for Grace-Mar — new bicameral cognition emergence.
+Dyad metrics for Grace-Mar — tricameral mind (MIND, RECORD, VOICE).
 
-Tracks human–Record/Voice dyad activity:
-  - Consultations (lookup, grounded query) — user consulting the other chamber
-  - Activity reports — user feeding the other chamber ("we did X")
+Tracks MIND–RECORD/VOICE activity:
+  - Consultations (lookup, grounded query) — Mind consulting Record/Voice
+  - Activity reports — Mind feeding the Record ("we did X")
   - Integrations — applied events (conscious gate crossings)
 
 Usage:

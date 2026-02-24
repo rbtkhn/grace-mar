@@ -1245,6 +1245,17 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0035
+    date: 2026-02-24
+    modality: text (operator-run in Cursor)
+    activity_type: build_probe
+    source: BUILD probe (docs/BUILD-PROBE-QUESTIONS.md) — 8 multiple-choice questions, one-by-one
+    summary: "BUILD probe session: 8 Record-grounded MC questions. Planning (first step for drawing, first thing for lemonade stand): correct. Execution (Lego next step): correct. Making (Legos — follow instructions + look at box): A+C. Elaboration (scarf, eyelashes, whole world): D. Flexibility (add one thing not in book): D. Decision-making (why pick deer): A. Originality (Deer+Madeline where): A (zoo). Planning (lemonade stand): A."
+    dimensions_probed: [planning, execution, making, elaboration, flexibility, decision_making, originality]
+    contributes_to: SKILLS/BUILD
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.
@@ -1268,7 +1279,7 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 32
+total_activities: 33
 total_read_entries: 0
 total_write_entries: 5
 total_create_entries: 8
@@ -1276,7 +1287,7 @@ total_media_entries: 8
 total_attestations: 0
 last_activity: 2026-02-24
 last_update: 2026-02-24
-update_source: Reptile/fish multiple-answers observation (ACT-0032)
+update_source: BUILD probe session (ACT-0035)
 ```
 
 ---

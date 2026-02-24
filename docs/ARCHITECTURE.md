@@ -6,7 +6,7 @@
 
 ## Core Principle
 
-The cognitive fork separates **who the user is** from **what the user can do**, recording both as structured, evidence-grounded data that grows through interaction.
+The cognitive fork separates **who the companion is** from **what the companion can do**, recording both as structured, evidence-grounded data that grows through interaction.
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -59,15 +59,15 @@ SNAPSHOT (Preserve State at a Point in Time)
      Immutable. Shows who the user was at that age.
 ```
 
-**Single user, lifetime system.** There is no parent mode and no child mode. A parent helps when the user is young. The user grows into full ownership.
+**Single companion, lifetime system.** There is no parent mode and no child mode. A facilitator or operator may help when the companion is young or needs support. The companion grows into full ownership. The system is age-neutral: the first pilot happens to be young; the architecture applies to any age. See [OPERATOR-BRIEF](OPERATOR-BRIEF.md), [LETTER-TO-USER](LETTER-TO-USER.md).
 
 ---
 
 ## Module 1: SELF (Identity Record)
 
-Contains who the user IS — their identity, story, and way of being in the world.
+Contains who the companion IS — their identity, story, and way of being in the world.
 
-**Core principle: Accurate recording.** The goal is faithful documentation of the user's actual personality, preferences, reasoning, and voice — not an idealized or curated version. The record should capture them as they are, including quirks and imperfections.
+**Core principle: Accurate recording.** The goal is faithful documentation of the companion's actual personality, preferences, reasoning, and voice — not an idealized or curated version. The record should capture them as they are, including quirks and imperfections.
 
 ### Contents
 
@@ -86,9 +86,9 @@ Contains who the user IS — their identity, story, and way of being in the worl
 
 - **Accurately recorded**: Captures the real person, not an idealized version
 - **Relatively stable**: Changes slowly over years
-- **Observed from interaction**: Emerges from what the user does and says
+- **Observed from interaction**: Emerges from what the companion does and says
 - **Seeded early**: Initial survey captures starting point
-- **Inferred**: System detects patterns in user's activity
+- **Inferred**: System detects patterns in companion's activity
 - **Narrative-rich**: Contains their story, not just traits
 
 ### Seeding (Initial Survey)
@@ -111,7 +111,7 @@ Everything else is inferred from activity:
 ### Evolution
 
 The SELF record updates as the system observes:
-- How the user explains things (linguistic fingerprint)
+- How the companion explains things (linguistic fingerprint)
 - What topics they gravitate toward (interests)
 - How they respond to challenges (reasoning style)
 - What they care about (values)
@@ -122,7 +122,7 @@ History is always preserved. Changes do not overwrite.
 
 ## Module 2: SKILLS (Capability Record)
 
-Contains what the user CAN DO — capabilities that grow through authentic activity.
+Contains what the companion CAN DO — capabilities that grow through authentic activity.
 
 ### The Three Modules
 
@@ -148,7 +148,7 @@ Shared constraints for all three:
 - stage-only authority (never merge),
 - evidence-linked output,
 - knowledge boundary compliance,
-- conflict resolution through user approval.
+- conflict resolution through companion approval.
 
 READ-specific capture contract (normative):
 - treat READ as media-agnostic (not text-only),
@@ -184,7 +184,7 @@ SKILLS/
 
 ### Activity-Based Growth
 
-The user doesn't explicitly "teach" skills — they **do** things. Grace-Mar observes and records.
+The companion doesn't explicitly "teach" skills — they **do** things. Grace-Mar observes and records.
 
 ```
 Activity: Daily journal entry (WRITE)
@@ -264,7 +264,7 @@ A complete cognitive fork needs both:
 
 ## Evidence Grounding Principle
 
-When the system interacts with the user, it should reference their own evidence.
+When the system interacts with the companion, it should reference their own evidence.
 
 ### Grounding Sources
 
@@ -285,7 +285,7 @@ Grounded system: "You wrote about Earth's layers last week and
 ```
 
 The system should:
-- Reference the user's actual work and data
+- Reference the companion's actual work and data
 - Connect new activities to prior evidence
 - Anchor suggestions to their documented interests
 - Never invent experiences or reference undocumented content
@@ -302,7 +302,7 @@ The system should:
 
 ## Container Edge Principle
 
-The three SKILLS modules (READ, WRITE, BUILD) are **containers** that define what the user currently knows and can do. The system proposes activities at the **edge** of these containers.
+The three SKILLS modules (READ, WRITE, BUILD) are **containers** that define what the companion currently knows and can do. The system proposes activities at the **edge** of these containers.
 
 ### The Container Model
 
@@ -349,7 +349,7 @@ System: Fill the gap before extending the edge.
 
 ### Zone of Proximal Development
 
-Activities proposed at the boundary of current capability, where the user can succeed with guidance.
+Activities proposed at the boundary of current capability, where the companion can succeed with guidance.
 
 - Too easy → boredom, no growth
 - Too hard → frustration, shutdown
@@ -572,7 +572,7 @@ interface CapabilityClaim {
 | Employer | None (unless granted) | Granted modules only |
 | University | None (unless granted) | Granted modules only |
 
-There is no parent mode — parents have age-appropriate access to the user's single system.
+There is no parent mode — operators or guardians have age-appropriate access to the user's single system when the user is a minor.
 
 ---
 
@@ -592,7 +592,7 @@ GitHub Repository (rbtkhn/grace-mar)
 │       ├── EVIDENCE.md      # Activity logs
 │       ├── MEMORY.md        # Ephemeral session context (optional; not part of Record)
 │       ├── SESSION-LOG.md   # Interaction history
-│       ├── ARCHIVE.md       # Raw conversation log (private)
+│       ├── VOICE-ARCHIVE.md   # Raw conversation log from all channels — Telegram, WeChat, Mini App today; eventually email, X, others (private)
 │       ├── JOURNAL.md       # Daily highlights (public-suitable, shareable)
 │       └── artifacts/       # Raw files (writing, artwork)
 └── (future users...)
@@ -688,7 +688,7 @@ The cognitive fork can optionally power an **emulation** — a live conversation
 
 ### READ/WRITE Refinement in Emulation
 
-For Jaynes-aligned bicameral clarity:
+For tricameral-mind clarity (MIND, RECORD, VOICE):
 
 - `READ` is the intake function that processes text, video, music/audio, images, and mixed media into evidence-linked signals.
 - Those signals feed the **Record** through the gated pipeline.

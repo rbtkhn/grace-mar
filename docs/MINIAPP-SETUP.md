@@ -67,14 +67,14 @@ ngrok http 5000
 
 ### Archive (optional)
 
-Mini App exchanges are archived to `users/pilot-001/ARCHIVE.md`, the same file as Telegram and WeChat (one mind, multiple channels). Render’s filesystem is ephemeral, so the server uses the GitHub API to append to the repo.
+Mini App exchanges are archived to `users/pilot-001/VOICE-ARCHIVE.md`, the same file as Telegram and WeChat (one mind, multiple channels). Render’s filesystem is ephemeral, so the server uses the GitHub API to append to the repo.
 
 Set these env vars on Render (or in `.env` locally):
 
 - `GITHUB_TOKEN` — A fine-grained or classic PAT with `contents: write` on the repo
 - `GRACE_MAR_REPO` — Repo in `owner/repo` form (default: `rbtkhn/grace-mar`)
 
-Without them, local dev writes to `users/pilot-001/ARCHIVE.md` on disk; on Render, exchanges are not archived.
+Without them, local dev writes to `users/pilot-001/VOICE-ARCHIVE.md` on disk; on Render, exchanges are not archived.
 
 ## 3. Bot (Webhook Mode)
 
@@ -83,7 +83,7 @@ The `render.yaml` blueprint runs the Telegram bot via **webhook** on the miniapp
 - `TELEGRAM_BOT_TOKEN` — from @BotFather (when set, webhook is enabled)
 - `OPENAI_API_KEY`
 - `DASHBOARD_MINIAPP_URL` — your Mini App URL (e.g. `https://grace-mar-miniapp.onrender.com`)
-- `GITHUB_TOKEN` — PAT with `contents: write` (for archiving to ARCHIVE.md)
+- `GITHUB_TOKEN` — PAT with `contents: write` (for archiving to VOICE-ARCHIVE.md)
 
 See [TELEGRAM-WEBHOOK-SETUP](TELEGRAM-WEBHOOK-SETUP.md) for details and migration from polling.
 

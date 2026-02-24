@@ -25,3 +25,5 @@
 {"ts": "2026-02-24T10:31:42.880435", "event": "intent_constitutional_critique", "candidate_id": "CANDIDATE-0069", "status": "advisory_clear", "candidate_source": "operator_cli", "rule_ids": "none", "source": "process_approved_candidates", "channel_key": "operator:cli", "actor": "robertkuhne"}
 {"ts": "2026-02-24T10:31:43.237612", "event": "applied", "candidate_id": "CANDIDATE-0068", "evidence_id": "ACT-0033", "source": "process_approved_candidates", "actor": "robertkuhne", "channel_key": "operator:cli"}
 {"ts": "2026-02-24T10:31:43.418120", "event": "applied", "candidate_id": "CANDIDATE-0069", "evidence_id": "ACT-0034", "source": "process_approved_candidates", "actor": "robertkuhne", "channel_key": "operator:cli"}
+{"ts": "2026-02-24T12:29:58.228629", "event": "staged", "candidate_id": "CANDIDATE-0070", "source": "operator_cursor"}
+{"ts": "2026-02-24T12:31:38.129146", "event": "applied", "candidate_id": "CANDIDATE-0070", "evidence_id": "ACT-0035"}

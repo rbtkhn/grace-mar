@@ -66,7 +66,7 @@ The **recursive learning process** is:
 | **Record → Analyst** | ✅ Implemented | Dedup list prevents re-staging known content |
 | **Record → Proposed activities** | ❌ Not implemented | SKILLS container edge could drive "propose activity at edge" |
 
-The edge→quest loop (Record proposes activities at the container boundary) would close the recursion: the Record would influence *what the user is invited to do next*, creating new input. See Gaps below.
+The edge→quest loop (Record proposes activities at the container boundary) would close the recursion: the Record would influence *what the companion is invited to do next*, creating new input. See Gaps below.
 
 ### Cybernetic Framing
 
@@ -196,7 +196,7 @@ Physical artifact (artwork, collage, etc.)
 
 ## Integration Step (File Update Protocol)
 
-The approval step is the **integration moment** — the conscious gate where the user chooses what enters the record (Jaynes / bicameral lens). When candidates are **approved**, merge into **all** of:
+The approval step is the **integration moment** — the conscious gate where the companion (Mind) chooses what enters the Record. When candidates are **approved**, merge into **all** of:
 
 | File | Update |
 |------|--------|

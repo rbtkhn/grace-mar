@@ -121,7 +121,7 @@ grace-mar/
         ├── EVIDENCE.md              # Activity log
         ├── SESSION-LOG.md           # Interaction history
         ├── PENDING-REVIEW.md        # Pipeline staging
-        ├── ARCHIVE.md               # Conversation archive (Telegram, Mini App) — private
+        ├── VOICE-ARCHIVE.md         # Voice conversation archive (Telegram, Mini App) — private
         ├── JOURNAL.md               # Daily highlights — public-suitable, shareable
         ├── artifacts/               # Raw files (writing, artwork)
         ├── SEED-PHASE-2-SURVEY.md   # Seed phase 2 survey data
@@ -166,14 +166,14 @@ open dashboard/index.html
 
 ## Archive Rotation
 
-When `ARCHIVE.md` exceeds ~1 MB or 2,500 entries, rotate oldest content to dated files:
+When `VOICE-ARCHIVE.md` exceeds ~1 MB or 2,500 entries, rotate oldest content to dated files:
 
 ```bash
 python scripts/rotate_telegram_archive.py          # Dry run (report only)
 python scripts/rotate_telegram_archive.py --apply  # Perform rotation
 ```
 
-Rotated content goes to `users/pilot-001/archives/ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
+Rotated content goes to `users/pilot-001/archives/VOICE-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
 
 ## Portability (school transfer)
 

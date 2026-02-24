@@ -2,11 +2,13 @@
 
 > Machine-readable intent layer for agent alignment.
 > Advisory in v1: intent conflicts are flagged, not auto-blocked.
+>
+> **Design lens:** This file is Grace-Mar's **intent engineering** layer at companion scale — it encodes what the Record and downstream agents should *want* (goals, tradeoffs, escalation), not just what they know (context). See [DESIGN-NOTES §11.7](DESIGN-NOTES.md#117-intent-engineering--what-agents-should-want) and the "Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." framing (2026).
 
 ## Purpose
 
 Use this file to encode what the system should optimize for when trade-offs appear.
-This is not merge authority. The user remains the gate.
+This is not merge authority. The companion remains the gate.
 
 ## Template
 

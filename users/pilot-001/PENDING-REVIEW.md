@@ -43,6 +43,17 @@ summary: Casa Bonita history — user rejected.
 
 ## Processed
 
+### CANDIDATE-0070 (BUILD probe — 8 questions, operator-run)
+
+```yaml
+status: approved
+mind_category: skills_build
+signal_type: build_probe
+source: operator-run BUILD probe in Cursor (8 MC questions)
+evidence: ACT-0035
+action: ACT-0035 added to EVIDENCE.md Activity Log; SKILLS.md BUILD container updated — planning_level 1-2, execution_level 1, making_level 1, decision_making 1; elaboration/flexibility/originality confirmed.
+```
+
 ### CANDIDATE-0068 (Curiosity probe — conservation success stories)
 
 ```yaml

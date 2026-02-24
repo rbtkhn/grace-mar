@@ -155,7 +155,7 @@ Schema can be copied; longitudinal trust and operating discipline are harder to 
 
 ## Compliance and Trust Controls
 
-Grace-Mar targets child/family contexts; trust controls are product requirements, not legal afterthoughts.
+Grace-Mar targets family and identity contexts; trust controls are product requirements, not legal afterthoughts.
 
 | Control Area | Current Direction |
 |--------------|-------------------|

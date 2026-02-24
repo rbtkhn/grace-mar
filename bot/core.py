@@ -72,8 +72,10 @@ MAX_HISTORY = 20
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
-ARCHIVE_PATH = PROFILE_DIR / "ARCHIVE.md"
-ARCHIVE_REPO_PATH = f"users/{USER_ID}/ARCHIVE.md"  # repo-relative for GitHub API
+ARCHIVE_PATH = PROFILE_DIR / "VOICE-ARCHIVE.md"
+ARCHIVE_REPO_PATH = f"users/{USER_ID}/VOICE-ARCHIVE.md"  # repo-relative for GitHub API
+# Real-time conversation log (operator continuity). Gated content goes to VOICE-ARCHIVE only on merge.
+SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "SESSION-TRANSCRIPT.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
 PENDING_REVIEW_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
@@ -140,11 +142,18 @@ LOOKUP_TRIGGER = "do you want me to look it up"
 AFFIRMATIVE_WORDS = {"yes", "yeah", "yea", "yep", "sure", "ok", "okay", "please", "ya", "y"}
 AFFIRMATIVE_PHRASES = {"look it up", "go ahead", "do it", "go for it", "find out", "tell me", "look up", "yes please"}
 
-# "We did X" — activity report from parent/operator. Triggers pipeline staging.
+# "We did X" — activity report from operator. Triggers pipeline staging.
 WE_DID_PATTERN = re.compile(
     r"^we\s+(drew|wrote|made|learned|read|painted|built|created|did|watched|played)\b",
     re.IGNORECASE,
 )
+
+# Bare "checkpoint" in conversation — companion requests checkpoint save; stage to pipeline and archive.
+CHECKPOINT_REQUEST_PATTERN = re.compile(r"^checkpoint\s*[!?.,]*$", re.IGNORECASE)
+
+# Transcript sent to pipeline for checkpoint: last N exchanges, or max chars (abridged).
+MAX_CHECKPOINT_EXCHANGES = 25
+MAX_CHECKPOINT_TRANSCRIPT_CHARS = 5000
 
 # Pasted checkpoint from external LLM (ChatGPT, PRP, etc.) — route to pipeline.
 CHECKPOINT_MARKERS = re.compile(
@@ -155,6 +164,44 @@ CHECKPOINT_MARKERS = re.compile(
 _client: OpenAI | None = None
 conversations: dict[str, list[dict]] = defaultdict(list)
 pending_lookups: dict[str, str] = {}
+
+
+def _format_checkpoint_transcript(history: list[dict]) -> str:
+    """Format conversation history as USER/GRACE-MAR transcript. Returns abridged if over limit."""
+    lines: list[str] = []
+    user_count = 0
+    for msg in history:
+        role = (msg.get("role") or "").strip().lower()
+        content = (msg.get("content") or "").strip()
+        if not content:
+            continue
+        if role == "user":
+            lines.append(f"USER: {content}")
+            user_count += 1
+        elif role == "assistant":
+            lines.append(f"GRACE-MAR: {content}")
+    if not lines:
+        return ""
+    # Keep last MAX_CHECKPOINT_EXCHANGES exchanges; then truncate by chars.
+    if user_count > MAX_CHECKPOINT_EXCHANGES:
+        trimmed: list[str] = []
+        count = 0
+        for i in range(len(lines) - 1, -1, -1):
+            trimmed.append(lines[i])
+            if lines[i].startswith("USER:"):
+                count += 1
+                if count >= MAX_CHECKPOINT_EXCHANGES:
+                    break
+        lines = list(reversed(trimmed))
+    transcript = "\n\n".join(lines)
+    if len(transcript) > MAX_CHECKPOINT_TRANSCRIPT_CHARS:
+        transcript = transcript[-MAX_CHECKPOINT_TRANSCRIPT_CHARS:].strip()
+        # Start at a message boundary
+        first_br = transcript.find("\n\n")
+        if first_br > 0:
+            transcript = transcript[first_br:].strip()
+        transcript = "(abridged — most recent only)\n\n" + transcript
+    return transcript
 
 
 def _check_rate_limit(channel_key: str, bucket: str, tokens: int = 1) -> bool:
@@ -173,9 +220,24 @@ def _check_rate_limit(channel_key: str, bucket: str, tokens: int = 1) -> bool:
     return True
 
 
+def _channel_label(channel_key: str) -> str:
+    """Human-readable channel for archive (Telegram, Test, WeChat, Mini App)."""
+    k = (channel_key or "").strip().lower()
+    if k.startswith("telegram:") or k.startswith("chat "):
+        return "Telegram"
+    if k.startswith("test:"):
+        return "Test"
+    if k.startswith("wechat:"):
+        return "WeChat"
+    if k.startswith("miniapp:") or k.startswith("miniapp_"):
+        return "Mini App"
+    return channel_key or "Unknown"
+
+
 def _format_archive_block(event: str, channel_key: str, text: str) -> str:
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    lines = [f"**[{ts}]** `{event}` ({channel_key})\n"]
+    label = _channel_label(channel_key)
+    lines = [f"**[{ts}]** `{event}` ({label})\n"]
     for line in (text or "").strip().splitlines():
         lines.append(f"> {line}\n")
     lines.append("\n")
@@ -203,7 +265,7 @@ def _append_via_github_api(block: str) -> None:
                 raise
             content = ""
             sha = ""
-        header = "# CONVERSATION ARCHIVE\n\n> Append-only log of all Grace-Mar interactions (Telegram, WeChat, Mini App). One mind, multiple channels.\n\n---\n\n"
+        header = "# VOICE-ARCHIVE\n\n> Append-only log of all Grace-Mar interactions (Telegram, WeChat, Mini App today; eventually email, X, and other platform channels). One mind, multiple channels.\n\n---\n\n"
         base = content if content else header
         new_content = base.rstrip() + "\n\n" + block.strip() + "\n"
         payload = {"message": "bot: archive exchange", "content": base64.b64encode(new_content.encode()).decode()}
@@ -221,19 +283,21 @@ def _append_via_github_api(block: str) -> None:
 
 
 def archive(event: str, channel_key: str, text: str) -> None:
-    """Append an event to the conversation archive. Uses GitHub API when GITHUB_TOKEN set (Render), else local file."""
+    """Append an event to the session transcript (raw log for operator continuity). VOICE-ARCHIVE is written only when candidates are merged."""
     block = _format_archive_block(event, channel_key, text)
-    if GITHUB_TOKEN and GRACE_MAR_REPO:
-        def _run():
-            _append_via_github_api(block)
-        threading.Thread(target=_run, daemon=True).start()
-    else:
-        try:
-            ARCHIVE_PATH.parent.mkdir(parents=True, exist_ok=True)
-            with open(ARCHIVE_PATH, "a", encoding="utf-8") as f:
-                f.write(block)
-        except Exception as e:
-            logger.warning("Archive local write error: %s", e)
+    try:
+        SESSION_TRANSCRIPT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        if not SESSION_TRANSCRIPT_PATH.exists():
+            header = (
+                "# SESSION TRANSCRIPT\n\n"
+                "> Raw conversation log for operator continuity. Not part of the Record. "
+                "Approved content is written to VOICE-ARCHIVE on merge.\n\n---\n\n"
+            )
+            SESSION_TRANSCRIPT_PATH.write_text(header, encoding="utf-8")
+        with open(SESSION_TRANSCRIPT_PATH, "a", encoding="utf-8") as f:
+            f.write(block)
+    except Exception as e:
+        logger.warning("Session transcript write error: %s", e)
 
 
 def _load_library() -> list[dict]:
@@ -831,7 +895,7 @@ def _run_analyst_background(
     thread.start()
 
 
-ACTIVITY_REPORT_SYNTHETIC = "[Activity reported by parent/operator. No bot response. Treat as direct evidence of real-world activity. Extract knowledge, curiosity, or personality signals.]"
+ACTIVITY_REPORT_SYNTHETIC = "[Activity reported by operator. No bot response. Treat as direct evidence of real-world activity. Extract knowledge, curiosity, or personality signals.]"
 
 
 def analyze_activity_report(user_message: str, channel_key: str) -> bool:
@@ -925,8 +989,8 @@ def get_pipeline_health_summary(channel_key: str | None = None) -> dict[str, obj
                 break
 
     archive_last_modified = ""
-    if ARCHIVE_PATH.exists():
-        archive_last_modified = datetime.fromtimestamp(ARCHIVE_PATH.stat().st_mtime).isoformat()
+    if SESSION_TRANSCRIPT_PATH.exists():
+        archive_last_modified = datetime.fromtimestamp(SESSION_TRANSCRIPT_PATH.stat().st_mtime).isoformat()
 
     now = time.time()
     window_start = now - RATE_LIMIT_WINDOW
@@ -1247,6 +1311,33 @@ def resolve_intent_debate_packet(
     return {"ok": True, "debate_id": debate_id, "resolution": safe_resolution}
 
 
+def list_unresolved_debate_packets() -> list[dict[str, object]]:
+    """List debate packets in PENDING-REVIEW that are still pending (not resolved)."""
+    if not PENDING_REVIEW_PATH.exists():
+        return []
+    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8")
+    if "## Debate Packets" not in content:
+        return []
+    section = content.split("## Debate Packets")[1].split("## ")[0]
+    out: list[dict[str, object]] = []
+    for m in re.finditer(r"### (DEBATE-\d+)\s*\n```yaml\n(.*?)\n```", section, re.DOTALL):
+        debate_id = m.group(1)
+        block = m.group(2)
+        if re.search(r"^status:\s*resolved:", block, re.MULTILINE):
+            continue
+        if "status: pending" not in block:
+            continue
+        row: dict[str, object] = {"debate_id": debate_id}
+        rule_m = re.search(r"^rule_id:\s*(.+)$", block, re.MULTILINE)
+        if rule_m:
+            row["rule_id"] = rule_m.group(1).strip().strip('"')
+        src_m = re.search(r"^source_agents:\s*\[?(.*?)\]?", block, re.MULTILINE)
+        if src_m:
+            row["source_agents"] = [s.strip().strip('"') for s in src_m.group(1).split(",") if s.strip()]
+        out.append(row)
+    return out
+
+
 def update_candidate_status(
     candidate_id: str,
     status: str,
@@ -1286,7 +1377,7 @@ def get_response(channel_key: str, user_message: str) -> str:
     """Get Grace-Mar's response for a given message. Channel-key scopes conversation."""
     history = conversations[channel_key]
 
-    # "We did X" — activity report from parent; run pipeline, skip chat.
+    # "We did X" — activity report from operator; run pipeline, skip chat.
     if WE_DID_PATTERN.search(user_message.strip()):
         archive("ACTIVITY REPORT", channel_key, user_message)
         staged = analyze_activity_report(user_message, channel_key)
@@ -1295,6 +1386,28 @@ def get_response(channel_key: str, user_message: str) -> str:
         if staged:
             return f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
         return "ok i wrote that down. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
+
+    # "checkpoint" — companion requests checkpoint save; send transcript (since session/last checkpoint) to pipeline and VOICE-ARCHIVE.
+    if CHECKPOINT_REQUEST_PATTERN.search(user_message.strip()):
+        archive("USER", channel_key, user_message)
+        transcript = _format_checkpoint_transcript(history)
+        if transcript:
+            synthetic = (
+                "we did a checkpoint. here is our Telegram conversation since the last checkpoint (or this session):\n\n"
+                + transcript
+            )
+        else:
+            synthetic = "we did a checkpoint — companion requested to save state; no conversation since session start yet."
+        staged = analyze_activity_report(synthetic, channel_key)
+        emit_pipeline_event("dyad:checkpoint_request", None, channel_key=channel_key)
+        count = len(get_pending_candidates())
+        reply = (
+            f"got it! i added a checkpoint to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review"
+            if staged
+            else "ok i wrote that checkpoint down. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
+        )
+        archive("GRACE-MAR", channel_key, reply)
+        return reply
 
     # Pasted checkpoint — long message with checkpoint markers; route to pipeline.
     stripped = user_message.strip()
@@ -1459,7 +1572,11 @@ def reset_conversation(channel_key: str) -> None:
 
 
 def get_greeting() -> str:
-    return "hi! i'm grace-mar — i remember what you've learned and what you've done. do you want to talk? i like stories and science and drawing!"
+    return (
+        "hi! i'm grace-mar — i remember what you've learned and what you've done. "
+        "when something cool happens, say \"we did X\" and i'll add it — then /review to see what's waiting. "
+        "do you want to talk? i like stories and science and drawing!"
+    )
 
 
 def get_reset_message() -> str:

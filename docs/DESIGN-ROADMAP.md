@@ -26,9 +26,9 @@
 - **LIBRARY** — Extensions of books: read-alouds, related videos, "if you liked X…"
 - **SKILLS edge** — One "stretch" item per issue (e.g. longer read-aloud, slightly harder activity)
 
-**Flow:** Build digest from Record → render as email → send to Grace-Mar address → parent triages; items can be approved for playlists or LIBRARY.
+**Flow:** Build digest from Record → render as email → send to Grace-Mar address → operator triages; items can be approved for playlists or LIBRARY.
 
-**Gating:** Everything proposed; parent decides what to surface or add.
+**Gating:** Everything proposed; operator (or user) decides what to surface or add.
 
 ---
 
@@ -62,7 +62,9 @@
 - **Public and permanent** — Unlike inbox, posts are visible and hard to fully retract
 - **Platform dependency** — X policies and direction add long-term uncertainty
 
-**Reasonable scope:** Private or low-visibility account used *only for following* — consume feed, match to Record, stage candidates, parent approves. Same pattern as inbound newsletters. *Posting* in fork's voice is out of scope.
+**Reasonable scope:** Private or low-visibility account used *only for following* — consume feed, match to Record, stage candidates, Mind approves. Same pattern as inbound newsletters. *Posting* in fork's voice is out of scope.
+
+**See:** [X-INTEGRATION.md](X-INTEGRATION.md) for X API v2 mapping, integration patterns (feed consumer vs DM vs posting), tricameral alignment, and technical placement.
 
 ---
 
@@ -111,7 +113,7 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 
 **Scope:**
 - **Designs as evidence** — User creates in Canva → export → "we designed X" → pipeline stages → EVIDENCE
-- **Template population** — IX-B, LIBRARY, or JOURNAL highlights → insert into Canva template → parent-approved output
+- **Template population** — IX-B, LIBRARY, or JOURNAL highlights → insert into Canva template → operator-approved output
 - **Newsletter layout** — Outbound digest rendered via Canva for visual polish
 
 **APIs:** Connect API (workflow integration, asset sync), App SDK (content import, design automation). Admin/SCIM for org management if needed.
@@ -143,7 +145,7 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 **Rationale:** Grace-Mar's Voice teaches and tutors. External curriculum systems (homeschool bots, adaptive platforms like Khan, IXL, custom Glide/Zapier stacks) can use the Record as the **identity layer** to personalize lessons and activities. The Record tells the curriculum engine: what the student knows (IX-A), what they're curious about (IX-B), their skills edge (SKILLS), and their Lexile level.
 
 **Scope:**
-- **Record as identity source** — Export a curriculum-oriented view: IX-B (curiosity), SKILLS edge, Lexile, knowledge gaps. Curriculum engines read this to tailor content.
+- **Record as identity source** — Export a curriculum-oriented view: IX-B (curiosity), SKILLS edge, Lexile, knowledge gaps. Use `scripts/export_engagement_profile.py -u [id]` for a motivation/engagement slice (interests, curiosity_topics, personality_snippets, talent_stack) in JSON or `--md` for markdown. Curriculum engines read this to tailor content.
 - **Activity/lesson personalization** — "She's curious about reptiles and gemstones" → suggest crystal formation lab. "She just learned Jupiter's Red Spot" → extend with storm systems.
 - **Grace-Mar Voice does tutoring** — Core tutoring happens in Grace-Mar. Curriculum systems can *supplement* (deliver structured lessons, labs, activities) while Grace-Mar answers questions and explains in-character.
 - **Evidence loop** — Curriculum outputs (writing, photos, completion) flow back via "we did X" → pipeline stages → user approves → EVIDENCE, SELF.
@@ -178,7 +180,7 @@ python integrations/export_hook.py --target intersignal -u pilot-001 -o ../inter
 | Grace-Mar email | Parent decision; no technical blocker |
 | Outbound newsletter | Record query APIs; email send; playlist/recommendation logic (see YOUTUBE-PLAYLIST-DESIGN) |
 | Inbound processing | Grace-Mar email; IMAP or Gmail API; matching logic; PENDING-REVIEW staging |
-| X account (follow-only) | X API; matching logic; PENDING-REVIEW staging; parent manages account |
+| X account (follow-only) | X API; matching logic; PENDING-REVIEW staging; operator manages account |
 | OpenClaw integration | OpenClaw workspace; export script; OPENCLAW-INTEGRATION workflow |
 | Intersignal / Braid integration | export_hook --target intersignal; INTERSIGNAL-INTEGRATION guide |
 | Canva integration | Canva developer account; Connect API or App SDK; template design |

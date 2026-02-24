@@ -18,7 +18,7 @@ How to connect Grace-Mar (Record / Identity Fork Protocol) with adaptive curricu
 | **Grace-Mar Voice tutoring** | Core tutoring in Grace-Mar (answers, explains) | Built-in |
 | **Evidence loop** | Curriculum outputs → "we did X" → pipeline stages | User invokes pipeline |
 
-**Invariant:** The user gates what enters the Record. Curriculum systems may propose; they cannot merge directly.
+**Invariant:** The companion gates what enters the Record. Curriculum systems may propose; they cannot merge directly.
 
 ---
 
@@ -77,7 +77,7 @@ For lighter footprint, `export_symbolic.py` (or `--target intersignal`) produces
 
 **Integration flow:**
 - **Identity in** — SparkPath (or a lesson-selector) reads `curriculum_profile.json`. Curiosity (IX-B), knowledge (IX-A), skills edge, and Lexile drive which lessons to suggest. E.g. "Curious about reptiles, WRITE edge for narrative → suggest reptile fact sheet, then short story prompt."
-- **Evidence out** — When the student completes a SparkPath lesson (creative task, quiz), the tutor or parent invokes "we did X" with the completion/feedback. Pipeline stages → user approves → EVIDENCE, SELF. SparkPath does the delivery and marking; Grace-Mar holds the long-term Record.
+- **Evidence out** — When the student completes a SparkPath lesson (creative task, quiz), the tutor or operator invokes "we did X" with the completion/feedback. Pipeline stages → companion approves → EVIDENCE, SELF. SparkPath does the delivery and marking; Grace-Mar holds the long-term Record.
 
 **Why it fits:** SparkPath provides structure, instant feedback, and progress summaries. Grace-Mar provides who the student *is* — the identity layer that personalizes which SparkPath lessons to assign and absorbs completion as evidence.
 

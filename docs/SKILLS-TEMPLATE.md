@@ -670,7 +670,7 @@ SELF OBSERVATIONS:
 
 VERIFICATION FLAGS:
 - Temporal consistency: normal
-- Image authenticity: appears original child artwork
+- Image authenticity: appears original user artwork
 ```
 
 ---
@@ -802,7 +802,7 @@ Preserve skills at points in time.
 - Age milestones (6, 8, 10, 12, 14, 16, 18)
 - Grade transitions
 - Major life events (moving, changing schools)
-- On-demand (parent/user request)
+- On-demand (operator/user request)
 
 ### Snapshot Format
 

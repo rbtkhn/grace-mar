@@ -77,7 +77,7 @@ Sequencing rule: retain focus on proof before broad platform claims.
 ### Secondary ICP (pilot partners)
 - AI-forward schools and operator networks,
 - product/learning-science leads needing explainable profile governance,
-- organizations with explicit parent trust and compliance requirements.
+- organizations with explicit operator/guardian trust and compliance requirements.
 
 ---
 
@@ -200,7 +200,7 @@ Grace-Mar treats trust controls as product requirements:
 - role-scoped access patterns,
 - export-first portability model.
 
-This supports child/family contexts where control and auditability are adoption-critical.
+This supports family and controlled-adoption contexts where control and auditability are adoption-critical.
 
 ---
 

@@ -9,7 +9,7 @@
 
 ## Abstract
 
-Agents and platforms need identity data to personalize and to act on behalf of users, but today they scrape, infer, or hallucinate — there is no standard for user-owned, evidence-grounded identity. This protocol defines that standard: a **Record** (identity schema + evidence linking), a **gate** (the user approves every merge; the agent may stage, not merge), and **export** (agent-consumable manifest and profile). The result is portable, user-owned identity that any agent or platform can consume without owning; the user remains sovereign.
+Agents and platforms need identity data to personalize and to act on behalf of users, but today they scrape, infer, or hallucinate — there is no standard for companion-owned, evidence-grounded identity. This protocol defines that standard: a **Record** (identity schema + evidence linking), a **gate** (the companion approves every merge; the agent may stage, not merge), and **export** (agent-consumable manifest and profile). The result is portable, companion-owned identity that any agent or platform can consume without owning; the companion remains sovereign.
 
 ---
 
@@ -17,7 +17,7 @@ Agents and platforms need identity data to personalize and to act on behalf of u
 
 This document is the **canonical protocol specification**. Implementations and extensions reference it for mechanism; governance is in GRACE-MAR-CORE.
 
-The **Identity Fork Protocol (IFP)** defines a standard for user-owned, evidence-grounded identity records that agents and platforms can consume without owning. It is vendor-neutral: no single platform controls identity. The user is the gate.
+The **Identity Fork Protocol (IFP)** defines a standard for companion-owned, evidence-grounded identity records that agents and platforms can consume without owning. It is vendor-neutral: no single platform controls identity. The companion is the gate.
 
 **Scope:**
 - Identity schema (who they are + what they can do)
@@ -43,11 +43,11 @@ This is the sovereignty invariant. It is non-negotiable.
 - **Stage** — Propose candidates for addition to the Record (e.g., PENDING-REVIEW)
 - **Merge** — Commit changes to SELF, EVIDENCE, or canonical profile
 
-Only the user (or an explicitly delegated human) may merge. Agents, bots, and third-party systems may stage. The gate is architectural, not configurable.
+Only the companion (or an explicitly delegated human) may merge. Agents, bots, and third-party systems may stage. The gate is architectural, not configurable.
 
 **Why this matters:** Serious security assumes the agent may be an adversary. The Sovereign Merge Rule enforces that assumption. No amount of automation may bypass the gate.
 
-**Normative clarification (v1.0):** The reference implementation (Grace-Mar) operates in manual-gate mode. Merge authority is human-only (user or explicitly delegated human). No autonomous merge path is enabled in this implementation.
+**Normative clarification (v1.0):** The reference implementation (Grace-Mar) operates in manual-gate mode. Merge authority is human-only (companion or explicitly delegated human). No autonomous merge path is enabled in this implementation.
 
 ---
 
@@ -60,7 +60,7 @@ The quality of outputs depends on **process**, not on model strength or prompt t
 - **Quality gates** — Staging → Review → Merge; no merge without explicit approval
 - **Specialized roles** — Different prompts for detection, emulation, lookup, homework; each does one thing
 
-This mirrors contextual engineering in AI-assisted coding: the model writes only at the implementation phase; research, design, and planning create the context. Here, the analyst detects; the user gates; the merge integrates. Process controls outcome.
+This mirrors contextual engineering in AI-assisted coding: the model writes only at the implementation phase; research, design, and planning create the context. Here, the analyst detects; the companion gates; the merge integrates. Process controls outcome.
 
 ---
 
@@ -99,13 +99,13 @@ The SKILLS module may be operationalized as three semi-independent executors:
 
 - They may use distinct heuristics, prompts, and evaluation criteria.
 - They are capability-specialized, not identity-sovereign.
-- They share one constitutional boundary: user-owned Record, gated merge, evidence linkage, and knowledge boundary.
+- They share one constitutional boundary: companion-owned Record, gated merge, evidence linkage, and knowledge boundary.
 
 Normative constraints:
 
 1. `READ`/`WRITE`/`BUILD` may stage candidates only; they may not merge.
 2. All staged outputs must remain evidence-linked and reviewable.
-3. Divergent executor recommendations are allowed; user approval is the resolution layer.
+3. Divergent executor recommendations are allowed; companion approval is the resolution layer.
 4. Executor behavior is shaped by the SELF three-dimension mind:
    - IX-A (Knowledge): what is treated as known.
    - IX-B (Curiosity): what is prioritized for exploration.
@@ -128,7 +128,7 @@ Normative constraints:
 
 ### 4.2 Review Checklist (before approving)
 
-- Is it grounded in something the child/user actually said or did?
+- Is it grounded in something the companion actually said or did?
 - No LLM inference beyond the exchange?
 - No contradiction with existing Record?
 
@@ -141,8 +141,8 @@ Normative constraints:
 ### 4.4 Merge Authority
 
 Merge is performed only by:
-- The user
-- A human operator explicitly delegated by the user
+- The companion
+- A human operator explicitly delegated by the companion
 
 For this protocol version's reference implementation, merge remains human-only. Any automated path is an optional future extension and is out of scope for current compliance.
 
@@ -150,13 +150,13 @@ For this protocol version's reference implementation, merge remains human-only. 
 
 ## 5. Knowledge Boundary Invariant
 
-The Record may contain only what the user has explicitly provided.
+The Record may contain only what the companion has explicitly provided.
 
 - **No LLM inference** — Facts, references, and knowledge from model training must not enter the Record
 - **Calibrated abstention** — When queried outside documented knowledge, the system says "I don't know" and may offer to look up
 - **Evidence linkage** — Every knowledge entry traces to ACT-XXXX or equivalent
 
-This invariant is a **regulatory advantage**: COPPA-aligned (parent controls data), GDPR-aligned (data sovereignty), and architecturally safer than platforms that auto-update profiles without consent.
+This invariant is a **regulatory advantage**: COPPA-aligned (guardian/operator controls data for minors), GDPR-aligned (data sovereignty), and architecturally safer than platforms that auto-update profiles without consent.
 
 ---
 
@@ -167,7 +167,7 @@ This invariant is a **regulatory advantage**: COPPA-aligned (parent controls dat
 Enables discoverability without full access:
 
 - **Readable** — List of consumable surfaces (SELF/IX-A, SKILLS/READ, etc.)
-- **Writable** — Staging area only; merge requires user approval
+- **Writable** — Staging area only; merge requires companion approval
 - **Checksum** — Tamper-evident identifier of current fork state
 - **Exports** — Commands to generate USER.md, fork JSON, etc.
 
@@ -178,7 +178,7 @@ Enables discoverability without full access:
 - **intent_snapshot.json** — Machine-readable intent rules (goals, trade-offs, escalation, `applies_to`, `priority`, `conflict_strategy`)
 - **fork JSON** — Full export for backup, portability, or migration
 
-Exports are snapshots for **consumption** (e.g., by schools or agents that read the Record). No other instance of the Record or Voice may be deployed as an independent economic or social agent without explicit user consent and, where feasible, a revocation path. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md).
+Exports are snapshots for **consumption** (e.g., by schools or agents that read the Record). No other instance of the Record or Voice may be deployed as an independent economic or social agent without explicit companion consent and, where feasible, a revocation path. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md).
 
 ---
 
@@ -198,9 +198,9 @@ Grace-Mar is the reference implementation. Platforms may adopt IFP-compatible ex
 
 | Regulation | IFP Alignment |
 |------------|---------------|
-| **COPPA** | Parent controls linkage; explicit consent; no autonomous child-facing merge |
+| **COPPA** | Guardian/operator controls linkage; explicit consent; no autonomous companion-facing merge |
 | **GDPR** | User owns data; portable; export/delete rights architecturally supported |
-| **Knowledge boundary** | No LLM leak = no training-data provenance in child profile |
+| **Knowledge boundary** | No LLM leak = no training-data provenance in companion profile |
 
 The gate is not philosophical — it is regulatory defensibility.
 
@@ -254,7 +254,7 @@ May seek **Fork-Integrity Verified** certification from the protocol steward.
 
 ## Conclusion
 
-We have proposed a protocol for user-owned, evidence-linked identity: a Record (SELF, SKILLS, EVIDENCE) that grows only through a gated pipeline, a Sovereign Merge Rule that makes the user the gate, and export formats that let agents and platforms consume identity without owning it. The combination is the contribution; the rest (markdown, LLMs, messaging, tooling) is borrowed. The result is portable, verifiable identity for the agent web — a primitive that can outlive any single implementation or organization.
+We have proposed a protocol for companion-owned, evidence-linked identity: a Record (SELF, SKILLS, EVIDENCE) that grows only through a gated pipeline, a Sovereign Merge Rule that makes the companion the gate, and export formats that let agents and platforms consume identity without owning it. The combination is the contribution; the rest (markdown, LLMs, messaging, tooling) is borrowed. The result is portable, verifiable identity for the agent web — a primitive that can outlive any single implementation or organization.
 
 ---
 

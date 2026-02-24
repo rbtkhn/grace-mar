@@ -1,6 +1,6 @@
 # Portability — Transferring Grace-Mar Between Schools
 
-**Purpose:** Document how the Record moves with the user when they change schools. The Record belongs to the user; schools consume it. No institutional handoff — the user brings their Record.
+**Purpose:** Document how the Record moves with the companion when they change schools. The Record belongs to the companion; schools consume it. No institutional handoff — the companion brings their Record.
 
 **See also:** [OPENCLAW-INTEGRATION](OPENCLAW-INTEGRATION.md) (school integration), [ARCHITECTURE](ARCHITECTURE.md) (Record structure).
 
@@ -8,7 +8,7 @@
 
 ## 1. Core Principle
 
-**The Record is user-owned.** SELF.md, SKILLS.md, EVIDENCE.md live under the user's control — in a repo, on a family machine, or in a hosted instance the user controls. Schools do not own the Record. They read it (or receive exports). When the user switches schools, they bring their Record. There is no "transfer" between institutions — only a change in who receives access or an export.
+**The Record is companion-owned.** SELF.md, SKILLS.md, EVIDENCE.md live under the companion's control — in a repo, on a family machine, or in a hosted instance the companion controls. Schools do not own the Record. They read it (or receive exports). When the companion switches schools, they bring their Record. There is no "transfer" between institutions — only a change in who receives access or an export.
 
 ---
 
@@ -28,7 +28,7 @@ When switching from School A to School B:
 
 ## 3. Handoff Format
 
-What the user gives to the new school depends on integration depth.
+What the companion gives to the new school depends on integration depth.
 
 | Use case | Contents | How to produce |
 |----------|----------|----------------|
@@ -47,7 +47,7 @@ What the user gives to the new school depends on integration depth.
 - Rotate any shared credentials if applicable.
 
 **If the school had an export file:**
-- There is no technical revocation; the file is a snapshot. Inform School A that they should delete their copy and no longer use it. The canonical Record remains with the user.
+- There is no technical revocation; the file is a snapshot. Inform School A that they should delete their copy and no longer use it. The canonical Record remains with the companion.
 
 **If using a future API/token model:**
 - Revoke the token or disconnect the integration for School A.

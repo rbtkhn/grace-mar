@@ -12,6 +12,8 @@
 | **Implementation** | [AGENTS](../AGENTS.md), [ARCHITECTURE](ARCHITECTURE.md) | Guardrails for AI and developers; system design. |
 | **Intent schema** | [INTENT-TEMPLATE](INTENT-TEMPLATE.md) | Machine-readable goal hierarchy, trade-offs, and escalation rules. |
 | **Session/development handoff** | [DEVELOPMENT-HANDOFF](DEVELOPMENT-HANDOFF.md) | Latest engineering state and restart checklist for new agent conversations. |
+| **Operator / pilot onboarding** | [OPERATOR-BRIEF](OPERATOR-BRIEF.md), [LETTER-TO-USER](LETTER-TO-USER.md), [LETTER-TO-STUDENT](LETTER-TO-STUDENT.md) | Age-neutral operator brief; letters to the companion (age-neutral and school-aged variants). [PARENT-BRIEF](PARENT-BRIEF.md) = parent/guardian variant. |
+| **Using Grace-Mar without a school** | [USING-GRACE-MAR-WITHOUT-A-SCHOOL](USING-GRACE-MAR-WITHOUT-A-SCHOOL.md) | Homeschool / standalone: who it's for, core loop, "we did X" + /review, export, optional stack (e.g. Grace-Mar + Khan/IXL). |
 
 **Hierarchy:** The protocol (IDENTITY-FORK-PROTOCOL) is the thing to implement. CORE is governance. CONCEPTUAL-FRAMEWORK and DESIGN-NOTES interpret and explain intent. WHITE-PAPER and prospectus are narrative and business.
 

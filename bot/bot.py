@@ -64,6 +64,7 @@ from .core import (
     get_intent_review_summary,
     stage_intent_debate_packet,
     resolve_intent_debate_packet,
+    list_unresolved_debate_packets,
     emit_pipeline_event,
 )
 
@@ -429,7 +430,7 @@ async def reject_with_reason(update: Update, context: ContextTypes.DEFAULT_TYPE)
 
 
 async def rotate_context_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Rotate MEMORY/ARCHIVE context files and emit maintenance event."""
+    """Rotate MEMORY/VOICE-ARCHIVE context files and emit maintenance event."""
     try:
         result = subprocess.run(
             [
@@ -567,6 +568,22 @@ async def resolve_debate_command(update: Update, context: ContextTypes.DEFAULT_T
     await update.message.reply_text(
         f"debate resolved: {result.get('debate_id')} -> {result.get('resolution')}"
     )
+
+
+async def debates_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only: list unresolved debate packets."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("debates listing is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    packets = await _run_blocking(list_unresolved_debate_packets)
+    if not packets:
+        await update.message.reply_text("no unresolved debate packets.")
+        return
+    lines = [f"• {p['debate_id']} — rule={p.get('rule_id', '?')} — {', '.join(p.get('source_agents') or [])}" for p in packets]
+    await update.message.reply_text("unresolved debates:\n" + "\n".join(lines) + "\n\n/resolve_debate DEBATE-XXXX <resolution>")
 
 
 async def openclaw_export_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -852,6 +869,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("intent_review", intent_review_command))
     app.add_handler(CommandHandler("intent_debate", intent_debate_command))
     app.add_handler(CommandHandler("resolve_debate", resolve_debate_command))
+    app.add_handler(CommandHandler("debates", debates_command))
     app.add_handler(CommandHandler("openclaw_export", openclaw_export_command))
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))

@@ -1,0 +1,67 @@
+[
+  {
+    "q": "You want to draw the Nine-Colored Deer like you did before. What do you do first?",
+    "options": ["A) Get paper and crayons", "B) Draw the mountains", "C) Draw the deer", "D) Add the rainbow scarf"],
+    "correct": "A",
+    "topic": "planning",
+    "hint": "First you get your materials, then you draw.",
+    "build_dimension": "planning"
+  },
+  {
+    "q": "You're building a Lego set. You just finished step 4. What do you do next?",
+    "options": ["A) Go to step 5", "B) Play with what you built", "C) Start over", "D) Put it away"],
+    "correct": "A",
+    "topic": "execution",
+    "hint": "You like to follow the steps one by one.",
+    "build_dimension": "execution"
+  },
+  {
+    "q": "When you build something with Legos, how do you do it?",
+    "options": ["A) Follow the instructions step by step", "B) Make whatever I want", "C) Look at the picture on the box first", "D) Mix both — follow some then add my own"],
+    "correct": "A",
+    "topic": "making",
+    "hint": "You like to follow the instructions and build with structure.",
+    "build_dimension": "making"
+  },
+  {
+    "q": "You're drawing an animal. What do you add to make it special, like you did with the Nine-Colored Deer?",
+    "options": ["A) A rainbow scarf", "B) Eyelashes", "C) A whole world around it (mountains, sky)", "D) All of those"],
+    "correct": "D",
+    "topic": "elaboration",
+    "hint": "You add scarves, eyelashes, and a complete world around your characters.",
+    "build_dimension": "elaboration"
+  },
+  {
+    "q": "The story says the deer is on a mountain. You get to add one thing that's not in the book. What do you add?",
+    "options": ["A) A rainbow scarf", "B) Hearts on the deer", "C) A halo behind its head", "D) Any of those — they're all from your own choices"],
+    "correct": "D",
+    "topic": "flexibility",
+    "hint": "You added scarf, hearts, and halo from your own imagination.",
+    "build_dimension": "flexibility"
+  },
+  {
+    "q": "You can show your class only one drawing: your Nine-Colored Deer OR your astronaut on the moon. Why might you pick the deer?",
+    "options": ["A) Because it's kind and brave and beautiful", "B) Because it's from a Chinese story", "C) Because you made it from a word book with no pictures", "D) Any of those"],
+    "correct": "D",
+    "topic": "decision_making",
+    "hint": "You like the deer because it's kind, brave, and beautiful — and you imagined it yourself.",
+    "build_dimension": "decision_making"
+  },
+  {
+    "q": "What if the Nine-Colored Deer met Madeline in Paris? Where could they meet?",
+    "options": ["A) At the zoo", "B) On a mountain", "C) In the big house with the twelve girls", "D) At the Eiffel Tower"],
+    "correct": "B",
+    "accept_multiple": ["B", "C", "D"],
+    "topic": "originality",
+    "hint": "Any place from your stories is a good choice — you're making a new combo!",
+    "build_dimension": "originality"
+  },
+  {
+    "q": "You and a friend want to make a lemonade stand. What is the first thing you need?",
+    "options": ["A) Lemonade", "B) A table", "C) A plan for who does what", "D) A sign"],
+    "correct": "A",
+    "topic": "planning",
+    "hint": "You need the lemonade before you can sell it!",
+    "build_dimension": "planning"
+  }
+]

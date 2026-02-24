@@ -16,7 +16,9 @@
 
 ## Adding Activities ("We did X")
 
-When your child does something worth recording (drawing, writing, a new interest, something learned), send a message in the bot that starts with **"we"** and an activity verb:
+**The ritual:** When something worth recording happens — a drawing, a story, something learned, a new interest — send a message that starts with **"we"** and an activity verb. Grace-Mar adds it to the review queue. You approve what enters the Record. That’s how the Record grows and how the companion gets recognition for what they do.
+
+**How to do it:**
 
 - *We drew a volcano at school today*
 - *We wrote a story about dinosaurs*
@@ -24,7 +26,7 @@ When your child does something worth recording (drawing, writing, a new interest
 - *We read The Wild Robot*
 - *We painted a picture of the moon*
 
-The bot will treat it as an activity report, analyze it, and add it to the review queue. It will reply with something like: *"got it! i added that to your record. you have 3 things to review — type /review to see them."*
+Send the message in the bot. The bot will treat it as an activity report, analyze it, and add it to the review queue. It will reply with something like: *"got it! i added that to your record. you have 3 things to review — type /review to see them."*
 
 ---
 
@@ -43,7 +45,7 @@ Each item is a short summary (e.g., *"new interest in volcanoes"*, *"learned abo
 
 ## Chatting With Grace-Mar
 
-The main use is still **chat** — ask questions, talk about stories, look things up. Grace-Mar will answer in the child's voice using only what's in the record. You can also send **voice messages** in Telegram; they are transcribed and processed like typed text (including "we did X" activity reports) — ask questions, talk about stories, look things up. Grace-Mar will answer in the child’s voice using only what’s in the record.
+The main use is still **chat** — ask questions, talk about stories, look things up. Grace-Mar will answer in the Record's voice using only what's in the record. You can also send **voice messages** in Telegram; they are transcribed and processed like typed text (including "we did X" activity reports) — ask questions, talk about stories, look things up. Grace-Mar will answer in the child’s voice using only what’s in the record.
 
 Other useful commands:
 
@@ -64,7 +66,7 @@ If you run the bot yourself, see [AGENTS.md](../AGENTS.md) and [PIPELINE-MAP](PI
 
 ## School Transfer
 
-When your child switches schools, the record belongs to you. Use **"we did X"** and **/review** as before. For handing the record to the new school, see [PORTABILITY](PORTABILITY.md).
+When the user switches schools, the record belongs to you. Use **"we did X"** and **/review** as before. For handing the record to the new school, see [PORTABILITY](PORTABILITY.md).
 
 ---
 

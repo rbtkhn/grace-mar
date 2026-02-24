@@ -263,10 +263,25 @@ def main() -> int:
         mtime = datetime.fromtimestamp(pr_path.stat().st_mtime)
         pending_stale = (datetime.now() - mtime) > timedelta(days=STALE_PENDING_DAYS)
 
+    # Nudge: no "we did X" in the last 7 days
+    no_activity_nudge = ""
+    if activities:
+        last_date_str = activities[-1].get("date", "")
+        try:
+            last_dt = datetime.strptime(last_date_str, "%Y-%m-%d")
+            if (datetime.now() - last_dt).days >= 7:
+                no_activity_nudge = "\n\n**Ritual nudge:** No activity in the last 7 days — when something worth recording happens, send \"we did X\" in the bot, then /review."
+        except (ValueError, TypeError):
+            pass
+    else:
+        no_activity_nudge = "\n\n**Ritual nudge:** When something worth recording happens, send \"we did X\" in the bot, then /review to approve what gets added."
+
     # Build brief
     pending_section = f"**{pending_count}** candidate(s) awaiting review. Type `/review` in Telegram to see them."
     if pending_stale:
         pending_section += "\n\nYou have candidates waiting — consider bringing them into the Record (type /review)."
+    if no_activity_nudge:
+        pending_section += no_activity_nudge
 
     lines = [
         "# Session Brief",

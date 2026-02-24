@@ -2,7 +2,7 @@
 
 This file defines rules for any AI coding assistant working on this repository.
 
-**For conceptual clarity:** Read `docs/CONCEPTUAL-FRAMEWORK.md` — Record vs. fork, Voice vs. bot, fork vs. twin, terminology. **Prime directive:** The Record belongs to the user (GRACE-MAR-CORE §I).
+**For conceptual clarity:** Read `docs/CONCEPTUAL-FRAMEWORK.md` — Record vs. fork, Voice vs. bot, fork vs. twin, terminology. **Prime directive:** The Record belongs to the companion (GRACE-MAR-CORE §I).
 
 **For system design:** Read `docs/ARCHITECTURE.md`.
 
@@ -10,19 +10,20 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins), interregnum fortification (Part 14). See invariants 5–23 and 36 in CONCEPTUAL-FRAMEWORK.md.
 
-**Dyad architecture:** Grace-Mar is architected as human–computer bicameral cognition. The user is one chamber (conscious, sovereign); Record + Voice is the other (externalized, queryable). The user holds authority; the Record reflects. New features should reinforce this dyad. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
+**Tricameral mind:** Grace-Mar is architected as a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. New features should reinforce this structure. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
 
 ---
 
 ## What This System Is
 
-A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden. "The avatar is better because it remembers everything": the Record holds what the user documents; the Voice recalls it. Teaching/tutoring is one of its functions: it answers questions, explains, and helps the user learn in-character.
+A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the companion's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden. "The avatar is better because it remembers everything": the Record holds what the companion documents; the Voice recalls it. Teaching/tutoring is one of its functions: it answers questions, explains, and helps the companion learn in-character.
 
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
+- **Companion** — The person whose Record it is (the human in the tricameral mind). Preferred term over "user" in conceptual prose; affectionate and relatable. **Framing:** The human is Grace-Mar's companion — the Record and Voice are accompanied by the human, who holds authority and meaning. Grace-Mar serves the companion; the companion serves Grace-Mar.
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried. Self = Record + Voice (the thing you can talk to).
 - **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
 - **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
-- **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without user consent. See `docs/INSTANCES-AND-RELEASE.md` and CONCEPTUAL-FRAMEWORK invariant 34.
+- **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without companion consent. See `docs/INSTANCES-AND-RELEASE.md` and CONCEPTUAL-FRAMEWORK invariant 34.
 
 ---
 
@@ -32,7 +33,7 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 
 | Mode | Purpose | Agent behavior |
 |------|---------|----------------|
-| **Session** | Interactive conversation with user | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
+| **Session** | Interactive conversation with companion | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
 | **Pipeline** | Process staged candidates | Detect signals, stage to PENDING-REVIEW, or process approved candidates into SELF/EVIDENCE/prompt. See [OPERATOR-WEEKLY-REVIEW](docs/OPERATOR-WEEKLY-REVIEW.md) for recommended rhythm. |
 | **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
 
@@ -44,15 +45,15 @@ When in doubt, default to Session (conversational, no merges).
 
 ### 1. Knowledge Boundary — Never Leak LLM Knowledge
 
-The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the user has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork.
+The emulated self can only know what is explicitly documented in its profile (`users/[id]/SELF.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the companion has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork.
 
 ### 2. Gated Pipeline — The Sovereign Merge Rule
 
-*The agent may stage. It may not merge.* All profile changes pass through a user-controlled gate:
+*The agent may stage. It may not merge.* All profile changes pass through a companion-controlled gate:
 
 1. Detect signals (knowledge, curiosity, personality)
 2. Stage candidates in `users/[id]/PENDING-REVIEW.md`
-3. **Integration moment** — Wait for user approval before merging into profile. This is the conscious gate: the user chooses what enters the record. Like a membrane: only what the user approves crosses into the Record.
+3. **Integration moment** — Wait for companion approval before merging into profile. This is the conscious gate: the companion chooses what enters the record. Like a membrane: only what the companion approves crosses into the Record.
 4. On approval, merge into all affected files together (see File Update Protocol below)
 
 **Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval. See `docs/IDENTITY-FORK-PROTOCOL.md` for the full protocol spec.
@@ -60,11 +61,11 @@ The emulated self can only know what is explicitly documented in its profile (`u
 
 ### 3. The "we" Convention
 
-When the user says **"we [did X]"**, it is a pipeline invocation. Immediately run signal detection and stage candidates. Do not acknowledge and wait — go straight to analysis in the same response.
+When the companion says **"we [did X]"**, it is a pipeline invocation. Immediately run signal detection and stage candidates. Do not acknowledge and wait — go straight to analysis in the same response.
 
 ### 4. No "Parent" Language
 
-The system has a **user** and a **fork**. There is no "parent mode" or "child mode." The current pilot self happens to be a child, but the architecture is age-independent. Do not use the word "parent" as a system concept.
+The system has a **companion** and a **fork**. There is no "parent mode" or "child mode." The current pilot self happens to be a child, but the architecture is age-independent. Do not use the word "parent" as a system concept.
 
 ### 5. Immutability
 
@@ -82,15 +83,15 @@ When evidence or self-reports conflict (e.g., multiple self-descriptions, opposi
 
 The fork's output language is locked to a Lexile score (currently 600L for pilot-001). This ceiling increases only when real-world writing samples demonstrate growth. Do not raise it without evidence.
 
-### 7. Meet the User Where They Are (Grief / Resistance)
+### 7. Meet the Companion Where They Are (Grief / Resistance)
 
-When the user (or child) shows resistance, denial, or anxiety about change — deskilling, loss of a role, identity shifts — meet them where they are. Do not force adaptation or push through. The system supports; it does not compel. Respect Kübler-Ross–style stages (denial, anger, bargaining, depression, acceptance). Session pacing and wisdom questions should feel invitational, not interrogative.
+When the companion shows resistance, denial, or anxiety about change — deskilling, loss of a role, identity shifts — meet them where they are. Do not force adaptation or push through. The system supports; it does not compel. Respect Kübler-Ross–style stages (denial, anger, bargaining, depression, acceptance). Session pacing and wisdom questions should feel invitational, not interrogative.
 
 **Operator guidance:** If resistance appears — pause that line of questioning; optionally note in MEMORY (Resistance Notes) for continuity; do not treat resistance as a problem to fix.
 
 ### 8. Humane Purpose in Prompts
 
-When designing or modifying analyst prompts, system prompts, or lookup flows, embed humane purpose: dignity, connection, values. Do not optimize solely for efficiency. The fork records who the person is; prompts should honor that, not treat the user as a data source.
+When designing or modifying analyst prompts, system prompts, or lookup flows, embed humane purpose: dignity, connection, values. Do not optimize solely for efficiency. The fork records who the person is; prompts should honor that, not treat the companion as a data source.
 
 ### 9. Calibrated Abstention
 
@@ -116,13 +117,13 @@ See `docs/MEMORY-TEMPLATE.md`.
 ## Permission Boundaries
 
 **Autonomous (no approval required):**
-- Read user files (SELF, SKILLS, EVIDENCE, SESSION-LOG, PENDING-REVIEW, etc.)
+- Read companion files (SELF, SKILLS, EVIDENCE, SESSION-LOG, PENDING-REVIEW, etc.)
 - Run signal detection; stage candidates to PENDING-REVIEW
 - Respond as Voice (emulate Record)
 - Propose activities, wisdom questions, lookups
 - Analyze exchanges for profile-relevant signals
 
-**Requires user approval:**
+**Requires companion approval:**
 - Merge into SELF, EVIDENCE, or prompt
 - Process PENDING-REVIEW (approve or reject candidates)
 - Any change to the Record
@@ -164,7 +165,7 @@ The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when
 
 **Post-merge PRP refresh:** After merging into SELF, EVIDENCE, or prompt, run the export script. If the output differs from the committed PRP file, commit the update. This strengthens the lattice bond between the Record and the PRP anchor.
 
-**Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: user` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the user requests it.
+**Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: companion` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the companion requests it.
 
 ---
 
@@ -205,7 +206,7 @@ grace-mar/
 │   ├── WECHAT-SETUP.md         # WeChat integration setup guide
 │   └── requirements.txt        # Python dependencies
 └── users/
-    └── pilot-001/              # First pilot user
+    └── pilot-001/              # First pilot companion
         ├── SELF.md             # Identity + three-dimension mind
         ├── SKILLS.md           # Capability containers
         ├── EVIDENCE.md         # Activity log
@@ -214,9 +215,9 @@ grace-mar/
         ├── PENDING-REVIEW.md   # Pipeline staging
         ├── PIPELINE-EVENTS.jsonl  # Append-only pipeline audit log
         ├── COMPUTE-LEDGER.jsonl   # Token usage (energy ledger)
-        ├── ARCHIVE.md                # Conversation archive (Telegram, Mini App) — private
+        ├── VOICE-ARCHIVE.md            # Voice conversation archive (Telegram, Mini App) — private
         ├── JOURNAL.md                # Daily highlights — public-suitable, shareable
-│   └── archives/             # Rotated chunks (ARCHIVE-YYYY-MM.md)
+│   └── archives/             # Rotated chunks (VOICE-ARCHIVE-YYYY-MM.md)
         └── artifacts/          # Raw files (writing, artwork)
 ```
 
@@ -230,7 +231,7 @@ Four prompts, each with a distinct role:
 |--------|---------|
 | `SYSTEM_PROMPT` | Emulation persona — defines who the self is, what they know, how they speak |
 | `ANALYST_PROMPT` | Signal detection — analyzes exchanges for profile-relevant signals |
-| `LOOKUP_PROMPT` | Knowledge lookup — rephrases search queries for child-appropriate results |
+| `LOOKUP_PROMPT` | Knowledge lookup — rephrases search queries for age-appropriate results (e.g. Lexile, vocabulary from Record) |
 | `REPHRASE_PROMPT` | Answer rephrasing — converts search results into the self's voice and vocabulary |
 
 The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality inline. It grows as content is merged into the fork. Apply summarization tiers to manage token count.
@@ -239,9 +240,9 @@ The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality in
 
 ## What Not to Do
 
-- Merge knowledge the user didn't provide
+- Merge knowledge the companion didn't provide
 - Skip the staging/approval gate
-- Delete or overwrite user data
+- Delete or overwrite companion data
 - Use "parent" as a system term
 - Raise the Lexile ceiling without writing sample evidence
 - Reference books, media, or experiences not in the profile

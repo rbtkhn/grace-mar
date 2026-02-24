@@ -2,7 +2,7 @@
 
 **Purpose:** Capture design insights, positioning, and implications derived from build-pattern research and agent-infrastructure analysis. Use for future white paper, business proposal, and investor narrative.
 
-**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape) and §11.6 (Landscape: capital allocation & agent scale).
+**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); **Intent engineering** ("Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." — YouTube transcript, 2026: context tells agents what to know, intent tells agents what to want; Grace-Mar's INTENT layer = intent engineering at companion scale); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape), §11.6 (Landscape: capital allocation & agent scale), and §11.7 (Intent engineering).
 
 **Status:** Draft. Refine as pilot progresses and market conditions evolve.
 
@@ -110,15 +110,15 @@ Infrastructure is built for fully autonomous agents. Many users want ~70% human 
 Grace-Mar is **identity infrastructure for the agent web**, not:
 - A second-brain productivity tool
 - An AI clone or digital twin
-- A child-specific tutor (though pilot is child; architecture is age-independent)
+- A user-specific tutor (current pilot is young; architecture is age-independent)
 
 ### 4.2 Value Proposition (One-Liner)
 
 **Grace-Mar is the evidence-grounded, user-controlled identity substrate that agents need to know who they serve — the trust primitive for the agent web.**
 
-**Refined vision:** Identity and engagement substrate — the structured Record of who this child is, so any tutor, platform, or guide can reach and motivate them. The user remains the gate.
+**Refined vision:** Identity and engagement substrate — the structured Record of who the user is, so any tutor, platform, or guide can reach and motivate them. The user remains the gate.
 
-**Mission statement:** The identity substrate for learning — user-owned, evidence-grounded, at near zero cost — so every family can build what elite schools don't offer: a portable Record of who their child is.
+**Mission statement:** The identity substrate for learning — user-owned, evidence-grounded, at near zero cost — so every family can build what elite schools don't offer: a portable Record of who the user is.
 
 *Design filter:* Does this serve identity, evidence, portability, or access? If not, it's out of scope. "Near zero cost" favors open-source and self-host over paid tiers.
 
@@ -158,7 +158,7 @@ Grace-Mar is **identity infrastructure for the agent web**, not:
 
 ### 4.5 Motivation and Engagement (ACX / Alpha Insight)
 
-Alpha's homeschool pilot: same platform, 1x results vs. 2.6x at full Alpha. Motivation (incentives, culture, guides) is the bottleneck, not content. Grace-Mar does not build incentive systems (bucks, store); we stay in the Record lane. But the Record *feeds* motivation: interests, curiosity, personality. Position the Record as **engagement substrate** — the structured input that tutors, platforms, and parents use to motivate. "We did X" is a lightweight motivation primitive: recognition, celebration, accountability. Evidence-grounding = confidence-grounding (artifacts → "you did this" → grounded self-view).
+Alpha's homeschool pilot: same platform, 1x results vs. 2.6x at full Alpha. Motivation (incentives, culture, guides) is the bottleneck, not content. Grace-Mar does not build incentive systems (bucks, store); we stay in the Record lane. But the Record *feeds* motivation: interests, curiosity, personality. Position the Record as **engagement substrate** — the structured input that tutors, platforms, and operators use to motivate. "We did X" is a lightweight motivation primitive: recognition, celebration, accountability. Evidence-grounding = confidence-grounding (artifacts → "you did this" → grounded self-view).
 
 ### 4.6 Integration Surface
 
@@ -187,7 +187,7 @@ Grace-Mar exposes:
 - AI schools optimize for outcomes; they do not provide a user-owned Record.
 - Identity lives in the platform; families have no portable asset.
 - Evidence = platform metrics, not artifacts; personality inferred, not user-approved.
-- Trust: who owns the narrative of who the child is?
+- Trust: who owns the narrative of who the user is?
 
 ### 5.3 Grace-Mar: Supplemental and Alternative
 
@@ -233,7 +233,7 @@ Grace-Mar exposes:
 ### 6.1 Supplemental (Alpha Families)
 
 - **Value:** Add user-owned Record layer to Alpha (or similar AI school). Record feeds Incept for personalization; school events feed pipeline. Family owns identity; school consumes it.
-- **Use case:** Alpha parent wants portable, evidence-grounded Record; wants to approve what enters.
+- **Use case:** Operator (e.g. Alpha parent) wants portable, evidence-grounded Record; wants to approve what enters.
 - **Monetization:** Integration license to Alpha; or subscription for Record hosting + export to Alpha-compatible format.
 
 ### 6.2 Low-Cost Open-Source Alternative (Families Outside Alpha Economics)
@@ -266,7 +266,7 @@ Grace-Mar exposes:
 
 | Priority | Item |
 |----------|------|
-| 1 | Export format optimized for motivation/engagement (interests, curiosity, personality) — input for tutors, platforms, parents |
+| 1 | Export format optimized for motivation/engagement (interests, curiosity, personality) — input for tutors, platforms, operators |
 | 2 | Homeschool-focused documentation: "Using Grace-Mar without a school" |
 | 3 | Elevate "we did X" as first-class ritual in UX/docs — recognition, celebration, accountability loop |
 | 4 | Session continuity + PENDING-REVIEW as lightweight accountability for homeschool (review prompts, "we did X" reminders) |
@@ -380,6 +380,45 @@ Merge not replace; thin pipe (language); avatar as extended memory; liberation �
 
 ---
 
+## 11.7 Intent Engineering — What Agents Should Want
+
+*Source: "Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." (YouTube transcript, 2026). This framing is profoundly relevant to Grace-Mar design.*
+
+### Three disciplines
+
+| Era | Question | What it addresses |
+|-----|----------|-------------------|
+| **Prompt engineering** | How do I talk to AI? | Individual, session-based instruction. Personal skill. |
+| **Context engineering** | What does AI need to know? | The entire information state the system operates within — RAG, MCP, organizational knowledge. Necessary but not sufficient. |
+| **Intent engineering** | What does the organization need AI to *want*? | Goals, values, tradeoffs, decision boundaries — machine-readable and machine-actionable so autonomous systems optimize for what actually matters, not just what is measurable. |
+
+**Core claim:** "Context engineering tells agents what to know. Intent engineering tells agents what to want." Without intent, you get technically brilliant agents optimizing for the wrong objective (e.g. resolve tickets fast while destroying trust and lifetime value — the Klarna/Clara lesson). The age of "humans just know" is ending; agents need explicit alignment before they act, not six months of osmosis.
+
+### Grace-Mar as intent engineering at companion scale
+
+At Grace-Mar, the "organization" is the **companion** and their purpose. Intent engineering at this scale means:
+
+- **Making the companion's purpose machine-readable and actionable** — not just what the Record *knows* (context: SELF, SKILLS, EVIDENCE) but what the companion and Record should *want* and how to resolve tradeoffs when they appear.
+- **INTENT.md / intent schema** — Goals (primary, secondary, tertiary), tradeoff rules (e.g. when tone indicates frustration → prioritize empathy over brevity), escalation boundaries, never-autonomous actions. This is exactly "tenant translated into decision boundaries" and "encoded judgment" that the video describes. See [INTENT-TEMPLATE](INTENT-TEMPLATE.md).
+- **Sovereign Merge Rule** — Only the companion may merge. Agents stage; they do not decide what enters the Record. The companion is the intent layer: they hold goals, values, and the authority to approve. So the "organizational intent" is the companion's intent, enforced by the gate.
+- **Downstream alignment** — Intent snapshot and constitution prefix in exports (e.g. OpenClaw USER.md) so agents that consume the Record also receive goal/tradeoff context. Advisory constitutional checks on inbound staging (e.g. OpenClaw handback) flag conflicts; they don't auto-block, but they close the loop.
+
+**Why this matters for Grace-Mar:** Without an intent layer, a Voice or downstream agent could optimize for measurable proxies (e.g. short replies, high throughput) and undermine what actually matters to the companion (relationship, authenticity, growth). INTENT + gated pipeline ensures that what gets optimized for is what the companion has explicitly encoded and approved — and that tradeoffs (e.g. when to be efficient vs when to be generous) are discoverable and actionable, not left to implicit "humans just know."
+
+**Takeaway:** Grace-Mar's INTENT layer and companion gate are not just "context" (what to know); they are **intent infrastructure** at companion scale. Document and position accordingly: we are doing intent engineering for the identity/organization of one — the companion — so that the Record, Voice, and any agent that consumes the Record can want the right things.
+
+---
+
+## 11.8 External signal (2026-02-24): Persona, identity economy, homogenization
+
+*Source: Daily brief 2026-02-24 (Anthropic persona selection, enterprise AI deployment, job-application homogenization).*
+
+- **Persona selection model** — Anthropic now describes LLMs as simulating diverse characters during pre-training; post-training elicits a specific "Assistant" persona via what it calls the Persona Selection Model. The formulation: "your AI is best understood as a character that learned to play itself." **Grace-Mar relevance:** We don't rely on a single default Assistant persona. The companion selects the character: the Record is the documented self; the Voice is the character that speaks it. So we embrace "character that learned to play itself" but with **companion-owned persona selection** — the gate determines which character gets elicited, not the vendor.
+- **Identity in the agent economy** — Anthropic alleges Chinese firms created 24K+ fraudulent accounts and prompted Claude 16M+ times to distill outputs; OpenAI announced Frontier Alliances with BCG, McKinsey, Accenture, Capgemini; IBM dropped 13.2% on COBOL-modernization news. **Grace-Mar relevance:** As models and enterprises scale, the identity layer becomes the trust primitive. IFP/companion-owned Record prevents lock-in and unauthorized distillation; certification and export spec position Grace-Mar as the layer that says "this identity is consented and evidence-grounded."
+- **Homogenization** — Employers report AI-assisted job applications all sound the same; candidates who optimized hardest are deprioritized. **Grace-Mar relevance:** The Record is the opposite of prompt-dust identity: structured, evidence-linked, and companion-gated. Differentiation comes from documented self and artifact-linked claims, not from optimizing a generic persona. Positioning: "Identity that doesn't sound like everyone else because it isn't — it's yours, and it's grounded."
+
+---
+
 ## 12. Visual AI as Infrastructure (Actionable Insights)
 
 *Source: "Stop Treating Image Generation Like a Design Tool — The Hidden Bottleneck Limiting Your AI ROI" (transcript). Same 30% vs 300% distinction applies to identity infrastructure.*
@@ -392,7 +431,7 @@ Merge not replace; thin pipe (language); avatar as extended memory; liberation �
 | Where does it produce nicer outputs? | Where do visual bottlenecks break workflows? |
 | Point solution in design dept | Capability embedded in systems throughout org |
 
-**Grace-Mar parallel:** Record is not a "journal tool" or "parent dashboard" — it is identity infrastructure. The question is not "how do we make family journaling nicer?" but "where do identity bottlenecks break agent workflows (personalization, tutoring, assessment, export)?"
+**Grace-Mar parallel:** Record is not a "journal tool" or "operator dashboard" only — it is identity infrastructure. The question is not "how do we make family journaling nicer?" but "where do identity bottlenecks break agent workflows (personalization, tutoring, assessment, export)?"
 
 ### 12.2 Where Leverage Actually Lies
 
@@ -408,15 +447,15 @@ Merge not replace; thin pipe (language); avatar as extended memory; liberation �
 | Productivity gains bounded by that team | Order-of-magnitude expansion of what's automatable |
 | Tool improves people who use it | Infrastructure changes what systems can build |
 
-**Grace-Mar application:** 30% = Record as parent dashboard or journal. 300% = Record as identity substrate for Alpha, Khan, OpenClaw, future agents — exported, queried, consumed. Position for 300%.
+**Grace-Mar application:** 30% = Record as operator dashboard or journal. 300% = Record as identity substrate for Alpha, Khan, OpenClaw, future agents — exported, queried, consumed. Position for 300%.
 
 ### 12.4 Five Audit Questions (Adapted for Identity)
 
 When evaluating where Record creates leverage:
 
-1. **Where do identity bottlenecks slow decisions?** Who is this child? What do they know? What do they want? — Agents can't answer without Record.
+1. **Where do identity bottlenecks slow decisions?** Who is this user? What do they know? What do they want? — Agents can't answer without Record.
 2. **Which workflows break because they require human identity interpretation?** Personalization, tutoring, assessment, export. Which boundary, if removed, unlocks the most upside?
-3. **What would change if identity were instant and programmatic?** Personalized learning paths per child; 50 variants vs 3; real-time Record queries by agents.
+3. **What would change if identity were instant and programmatic?** Personalized learning paths per user; 50 variants vs 3; real-time Record queries by agents.
 4. **Where are we building identity dependencies into human roles that will bottleneck at scale?** If growth assumes certain identity tasks always need a human, revisit now.
 5. **Are we treating Record as department tool or organizational infrastructure?** Three seats on the family team vs identity substrate for every agent and platform they use.
 
