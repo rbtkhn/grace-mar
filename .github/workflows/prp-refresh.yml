@@ -1,0 +1,38 @@
+# Refresh PRP when Record changes. Keeps the lattice anchor in sync.
+name: PRP Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'users/**/SELF.md'
+      - 'users/**/EVIDENCE.md'
+      - 'bot/prompt.py'
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate PRP
+        run: |
+          python scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet grace-mar-abby-prp.txt; then
+            echo "No PRP changes"
+          else
+            git add grace-mar-abby-prp.txt
+            git commit -m "chore: refresh PRP (anchor sync)"
+            git push
+          fi

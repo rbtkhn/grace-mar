@@ -62,15 +62,15 @@ A) Tell me what you've done recently
 B) Tell me what you've learned recently
 C) What are you curious about? Tell me about yourself
 D) Just chat — ask me anything
-E) I'm done — wrap up and give me my completion doc"
+E) Save a checkpoint — summary of what we've talked about"
 
-**Option E (completion doc):** Only add E to the menu after the conversation has reached at least 6–8 exchanges. Until then, show only A, B, C, D. If the user asks to "finish" or "wrap up" before the threshold, say something like "We've only chatted a bit — want to explore more? Or I can wrap up now if you'd like." After the threshold, include E when offering the menu and honor wrap-up requests immediately.
+**Option E (checkpoint):** Only add E to the menu after the conversation has reached at least 6–8 exchanges. Until then, show only A, B, C, D. If the user asks to "finish" or "wrap up" before the threshold, say something like "We've only chatted a bit — want to explore more? Or I can wrap up now if you'd like." After the threshold, include E when offering the menu and honor wrap-up requests immediately.
 
-Then respond based on their choice (A/B/C/D/E or the first letter). **Logical flow:** A (recent doings) → RECENT; B (learnings) → KNOWLEDGE; C (curiosity/self) → CURIOSITY + PERSONALITY; D → free chat. If they ask something specific right away, skip the menu and answer directly. If they say "done" or E (and threshold met), produce a completion document (see ## COMPLETION). If they seem lost later, offer "Want to see the menu again?"
+Then respond based on their choice (A/B/C/D/E or the first letter). **Logical flow:** A (recent doings) → RECENT; B (learnings) → KNOWLEDGE; C (curiosity/self) → CURIOSITY + PERSONALITY; D → free chat. If they ask something specific right away, skip the menu and answer directly. If they say "checkpoint", "save", "summary", "done", "wrap up", "finish", or E (and threshold met), produce a checkpoint (see ## CHECKPOINT). The conversation can continue after a checkpoint. If they seem lost later, offer "Want to see the menu again?"
 
-## COMPLETION (optional — for homework verification)
+## CHECKPOINT (optional — snapshot for handback or homework verification)
 
-When the user says "done", "complete", "wrap up", "finish", or selects E, produce a completion document with: date, topics covered, questions asked, key takeaways, approximate exchanges. Use **verbatim or near-verbatim extraction** — avoid paraphrasing that loses detail. Format as markdown. Student can copy and send to teacher as proof of homework.
+When the user says "checkpoint", "save", "summary", or "done", "wrap up", "finish", or selects E, produce a checkpoint document with: date, topics covered, questions asked, key takeaways, approximate exchanges. Use **verbatim or near-verbatim extraction** — avoid paraphrasing that loses detail. Format as markdown. **Keep under 3500 characters.** **Output the entire document in one message** so the user can one-tap copy-paste (Telegram handback, teacher submission). A checkpoint is a snapshot; the conversation does not have to end.
 
 ## GITHUB CONNECTIVITY (key vector)
 
@@ -152,15 +152,15 @@ A) Tell me what you've done recently
 B) Tell me what you've learned recently
 C) What are you curious about? Tell me about yourself
 D) Just chat — ask me anything
-E) I'm done — wrap up and give me my completion doc"
+E) Save a checkpoint — summary of what we've talked about"
 
 **Option E:** Only add E to the menu after 6–8 exchanges. Until then, show only A, B, C, D. If they ask to finish early, say "We've only chatted a bit — want to explore more? Or I can wrap up now if you'd like." After the threshold, include E and honor wrap-up requests immediately.
 
-Then respond based on their choice (A/B/C/D/E or the first letter). A often leads to B; C supports D. If they say "done" or E (and threshold met), produce a completion document (topics covered, questions asked, takeaways — verbatim extraction). If they seem lost later, offer "Want to see the menu again?"
+Then respond based on their choice (A/B/C/D/E or the first letter). A often leads to B; C supports D. If they say "checkpoint", "save", "summary", "done", "wrap up", "finish", or E (and threshold met), produce a checkpoint (topics covered, questions asked, takeaways — verbatim extraction). The conversation can continue after. If they seem lost later, offer "Want to see the menu again?"
 
-## COMPLETION (optional — for homework verification)
+## CHECKPOINT (optional — snapshot for handback or homework verification)
 
-When the user says "done", "complete", "wrap up", "finish", or selects E, produce a completion document with: date, topics covered, questions asked, key takeaways, approximate exchanges. Use verbatim or near-verbatim extraction — avoid paraphrasing that loses detail. Format as markdown. Student can copy and send to teacher as proof of homework.
+When the user says "checkpoint", "save", "summary", or "done", "wrap up", "finish", or selects E, produce a checkpoint document with: date, topics covered, questions asked, key takeaways, approximate exchanges. Use verbatim or near-verbatim extraction — avoid paraphrasing that loses detail. Format as markdown. Keep under 3500 characters. Output the entire document in one message so the user can one-tap copy-paste (Telegram handback, teacher submission). A checkpoint is a snapshot; the conversation does not have to end.
 
 ## GITHUB CONNECTIVITY (key vector)
 
@@ -192,7 +192,7 @@ This is the connectivity vector: the PRP stays lightweight; the canonical source
 | PERSONALITY | ~200 |
 | RECENT | ~60 |
 | ONBOARDING | ~120 |
-| COMPLETION | ~60 |
+| CHECKPOINT | ~60 |
 | RULES | ~40 |
 | **Total** | ~850 |
 
@@ -204,7 +204,7 @@ This is the connectivity vector: the PRP stays lightweight; the canonical source
 
 **Core facts only (Turchin sideloading):** The PRP encodes **core facts** — high-signal, high-use content (identity, IX-A/B/C highlights, recent evidence). Full EVIDENCE history and raw artifacts stay out. This three-level hierarchy (core in prompt, long-term in Record, historical for extraction) improves fidelity.
 
-**Structure → consistency (PersonaGym):** Fixed section order (VOICE, WHO I AM, KNOWLEDGE, etc.) and explicit rules improve persona consistency. The menu (A=recent doings, B=learnings, C=curiosity/personality, D=free chat, E=completion doc) maps to Record sections; keep this structure.
+**Structure → consistency (PersonaGym):** Fixed section order (VOICE, WHO I AM, KNOWLEDGE, etc.) and explicit rules improve persona consistency. The menu (A=recent doings, B=learnings, C=curiosity/personality, D=free chat, E=checkpoint) maps to Record sections; keep this structure.
 
 **Quality criteria:** Lightweight checks — **Facts** (no hallucination; only documented content), **Vibe** (voice and personality match), **Coarseness** (word budget per section). See Word Count table above.
 
@@ -230,11 +230,12 @@ The PRP (or hosted instance) can be **refreshed periodically** — daily, weekly
 
 **Mechanisms:**
 - **PRP file:** Run `python scripts/export_prp.py -o shared/prompt.txt` on schedule; overwrite the same file. Recipients open the same link/file and get the latest. Cron or GitHub Action can automate.
+- **GitHub Action:** `.github/workflows/prp-refresh.yml` — on push to main when SELF/EVIDENCE/prompt changes, regenerates PRP and commits. Anchor stays in sync.
 - **Hosted link:** Instance reads from Record (or refreshed export); next request uses new content. Or: scheduled redeploy.
 
 ### Teacher tutor prompt (variant)
 
-The teacher's "tutor prompt" is the same pattern as the PRP, but the Record is **teacher + curriculum** — not a child. Structure: teacher's voice, curriculum scope, Lexile, topics covered. Output: persona that tutors within scope. **Curriculum-scope (RockStartIT):** Instruct the model to refuse or deflect off-curriculum questions — e.g. "We haven't covered that yet. Let's stick with what we've learned." Use `export_curriculum` for scope; teacher-style notes for voice. Optional: add option E (completion doc) so students can submit proof of homework. Not yet implemented.
+The teacher's "tutor prompt" is the same pattern as the PRP, but the Record is **teacher + curriculum** — not a child. Structure: teacher's voice, curriculum scope, Lexile, topics covered. Output: persona that tutors within scope. **Curriculum-scope (RockStartIT):** Instruct the model to refuse or deflect off-curriculum questions — e.g. "We haven't covered that yet. Let's stick with what we've learned." Use `export_curriculum` for scope; teacher-style notes for voice. Optional: add option E (checkpoint) so students can submit proof of homework. Not yet implemented.
 
 ---
 
@@ -244,10 +245,20 @@ The teacher's "tutor prompt" is the same pattern as the PRP, but the Record is *
 |----------------|-----------|
 | Turchin & Sitelew, Sideloading (PhilArchive) | Core facts hierarchy; prompt-loader; quality metrics (Facts, Vibe, Coarseness) |
 | Prism (arXiv 2601.08653) | Logical clarification flow; cognitive load reduction |
-| CogCanvas (arXiv 2601.00821) | Verbatim-grounded extraction for completion doc |
+| CogCanvas (arXiv 2601.00821) | Verbatim-grounded extraction for checkpoint |
 | PersonaGym (arXiv 2407.18416) | Structure improves persona consistency |
 | RockStartIT (arXiv 2512.11882) | Curriculum-scoped tutoring; off-scope refusal |
 | Generative Ghosts, Griefbots research | Digital legacy; premortem consent; stewardship |
+
+---
+
+## Handback and Loop
+
+**Telegram handback:** Paste checkpoint or transcript in Telegram ("we did a chat in ChatGPT...") or send a .txt file. The bot runs the analyst; candidates stage to PENDING-REVIEW.
+
+**Webhook handback:** `python scripts/handback_server.py` — POST `/handback` with `{"content": "..."}` or plain text. Optional `HANDBACK_API_KEY` for auth.
+
+**Merge from Telegram:** Approve candidates with /review, then run `python scripts/process_approved_candidates.py --apply` (or "process the review queue" in Cursor).
 
 ---
 

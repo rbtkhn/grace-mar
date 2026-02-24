@@ -258,6 +258,24 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
         await query.edit_message_text(f"couldn't update {candidate_id}")
 
 
+async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Tell user how to merge approved candidates."""
+    candidates = get_pending_candidates()
+    # Count approved (we only have pending in get_pending_candidates — approved are different)
+    from pathlib import Path
+    import re
+    pending_path = Path(__file__).resolve().parent.parent / "users" / "pilot-001" / "PENDING-REVIEW.md"
+    content = pending_path.read_text() if pending_path.exists() else ""
+    approved = len(re.findall(r"status: approved", content.split("## Processed")[0]))
+    if approved == 0:
+        await update.message.reply_text("no approved candidates to merge. approve some with /review first!")
+        return
+    await update.message.reply_text(
+        f"you have {approved} approved candidate(s). to merge: run 'process the review queue' in Cursor, "
+        "or: python scripts/process_approved_candidates.py --apply"
+    )
+
+
 async def reject_with_reason(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Reject a candidate with optional reason: /reject CANDIDATE-123 [reason].
     Reason is stored in PIPELINE-EVENTS for learning from rejection."""
@@ -331,6 +349,52 @@ async def handle_message(
     except Exception:
         logger.exception("Error generating response")
         await update.message.reply_text("um... i got confused. can you say that again?")
+
+
+async def handle_document(
+    update: Update, context: ContextTypes.DEFAULT_TYPE
+) -> None:
+    """Handle .txt document upload — handback of checkpoint or long transcript from external LLM chat."""
+    from .core import analyze_activity_report, archive
+
+    chat_id = update.effective_chat.id
+    key = _channel_key(chat_id)
+    doc = update.message.document
+
+    if not doc or not doc.file_name or not doc.file_name.lower().endswith(".txt"):
+        await update.message.reply_text("send me a .txt file for handback (checkpoint or transcript)")
+        return
+
+    if doc.file_size and doc.file_size > 100_000:  # 100KB limit
+        await update.message.reply_text("file too big — keep it under 100KB (or paste a summary instead)")
+        return
+
+    try:
+        tg_file = await context.bot.get_file(doc.file_id)
+        buf = await tg_file.download_as_bytearray()
+        text = bytes(buf).decode("utf-8", errors="replace").strip()
+    except Exception:
+        logger.exception("Document download error")
+        await update.message.reply_text("i couldn't read that file — try pasting the text instead")
+        return
+
+    if not text:
+        await update.message.reply_text("file was empty")
+        return
+
+    # Treat as activity report: "we did a chat in external LLM, here's the content"
+    synthetic = f"we did a chat in an external LLM (ChatGPT, Claude, etc). here is the checkpoint or transcript:\n\n{text}"
+    archive("HANDBACK DOCUMENT", key, f"[{doc.file_name}] {text[:200]}...")
+    staged = analyze_activity_report(synthetic, key)
+    count = len(get_pending_candidates())
+    if staged:
+        await update.message.reply_text(
+            f"got it! i read that and added it to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review"
+        )
+    else:
+        await update.message.reply_text(
+            "ok i read that. nothing new to add to your profile right now, but it's in the log! type /review"
+        )
 
 
 async def handle_voice(
@@ -410,11 +474,13 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))
+    app.add_handler(CommandHandler("merge", merge_command))
     app.add_handler(CommandHandler("reject", reject_with_reason))
     app.add_handler(CallbackQueryHandler(callback_homework_answer, pattern=r"^hw:[ABCD]$"))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))
+    app.add_handler(MessageHandler(filters.Document.ALL, handle_document))
     return app
 
 
