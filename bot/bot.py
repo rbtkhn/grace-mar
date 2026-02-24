@@ -18,6 +18,7 @@ if __package__ is None:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     __package__ = "bot"
 
+import asyncio
 import importlib.util
 import os
 import logging
@@ -57,6 +58,8 @@ from .core import (
     process_homework_answer,
     is_in_homework_session,
     end_homework_session,
+    consume_homework_timeout_notice,
+    get_pipeline_health_summary,
 )
 
 load_dotenv()
@@ -83,6 +86,32 @@ def _channel_key(chat_id: int) -> str:
 
 def _profile_path(filename: str) -> Path:
     return Path(__file__).resolve().parent.parent / "users" / USER_ID / filename
+
+
+async def _run_blocking(func, *args, **kwargs):
+    """Run blocking core work without blocking Telegram event loop."""
+    return await asyncio.to_thread(func, *args, **kwargs)
+
+
+def _is_operator_chat(update: Update) -> bool:
+    if not OPERATOR_CHAT_ID:
+        return False
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    return bool(chat_id) and str(chat_id) == OPERATOR_CHAT_ID
+
+
+def _format_health_summary(summary: dict) -> str:
+    oldest = summary.get("oldest_pending_days")
+    oldest_txt = "n/a" if oldest is None else f"{oldest} day(s)"
+    rejections = summary.get("recent_rejection_reasons") or []
+    rejection_txt = "; ".join(rejections) if rejections else "none"
+    return (
+        f"pending: {summary.get('pending_count', 0)} (oldest: {oldest_txt})\n"
+        f"rate(main): {summary.get('main_used', 0)}/{summary.get('main_limit', 0)} "
+        f"rate(analyst): {summary.get('analyst_used', 0)}/{summary.get('analyst_limit', 0)}\n"
+        f"last event: {summary.get('last_event_ts') or 'n/a'}\n"
+        f"recent rejects: {rejection_txt}"
+    )
 
 
 # Session paths shown on /start — instructions/commands to Grace-Mar.
@@ -167,11 +196,14 @@ async def dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             "serve the dashboard over HTTPS. See docs/MINIAPP-SETUP.md."
         )
         return
+    summary = get_pipeline_health_summary()
+    summary_text = _format_health_summary(summary)
     keyboard = InlineKeyboardMarkup.from_button(
         InlineKeyboardButton("Open Dashboard", web_app=WebAppInfo(url=DASHBOARD_MINIAPP_URL))
     )
     await update.message.reply_text(
-        "Open the fork dashboard to view profile, pipeline, benchmarks, and disclosure:",
+        "Open the fork dashboard to view profile, pipeline, benchmarks, and disclosure.\n\n"
+        f"Quick health:\n{summary_text}",
         reply_markup=keyboard,
     )
 
@@ -181,7 +213,7 @@ async def _homework_command(update: Update, context: ContextTypes.DEFAULT_TYPE) 
     chat_id = update.effective_chat.id
     key = _channel_key(chat_id)
     try:
-        first_q, err = start_homework_session(key)
+        first_q, err = await _run_blocking(start_homework_session, key)
         if err:
             await update.message.reply_text(err)
             return
@@ -238,10 +270,13 @@ async def callback_homework_answer(update: Update, context: ContextTypes.DEFAULT
         return
     key = _channel_key(chat_id)
     if not is_in_homework_session(key):
-        await query.edit_message_text("homework session ended — tap Homework to start again!")
+        if consume_homework_timeout_notice(key):
+            await query.edit_message_text("homework timed out after a break — tap Homework to start again!")
+        else:
+            await query.edit_message_text("homework session ended — tap Homework to start again!")
         return
     try:
-        response, session_ended, has_next = process_homework_answer(key, letter)
+        response, session_ended, has_next = await _run_blocking(process_homework_answer, key, letter)
         archive("HOMEWORK ANSWER (tap)", key, letter)
         archive("GRACE-MAR (homework)", key, response)
         await query.edit_message_text(
@@ -358,6 +393,19 @@ async def rotate_context_command(update: Update, context: ContextTypes.DEFAULT_T
         await update.message.reply_text("couldn't rotate context right now")
 
 
+async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only runtime/pipeline status summary."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("operator status is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    chat_id = update.effective_chat.id if update.effective_chat else 0
+    summary = get_pipeline_health_summary(channel_key=_channel_key(chat_id))
+    await update.message.reply_text(f"Operator status:\n{_format_health_summary(summary)}")
+
+
 async def operator_reminder_job(context: ContextTypes.DEFAULT_TYPE) -> None:
     """Periodic operator-only reminder about stale or large review queue."""
     if not OPERATOR_CHAT_ID:
@@ -415,7 +463,7 @@ async def handle_message(
     # Homework flow: one question at a time, gamified
     if user_message.strip().lower() == "homework":
         try:
-            first_q, err = start_homework_session(key)
+            first_q, err = await _run_blocking(start_homework_session, key)
             if err:
                 await update.message.reply_text(err)
                 return
@@ -427,6 +475,10 @@ async def handle_message(
         return
 
     # In homework session: treat message as answer (or stop/quit to exit)
+    if (not is_in_homework_session(key)) and consume_homework_timeout_notice(key):
+        await update.message.reply_text("homework timed out after a break — tap Homework to start again 🎯")
+        return
+
     if is_in_homework_session(key):
         reply_lower = user_message.strip().lower()
         if reply_lower in ("stop", "quit", "done", "exit"):
@@ -435,7 +487,7 @@ async def handle_message(
             await update.message.reply_text("ok homework paused! tap Homework anytime to start again 🎯")
             return
         try:
-            response, session_ended, has_next = process_homework_answer(key, user_message)
+            response, session_ended, has_next = await _run_blocking(process_homework_answer, key, user_message)
             archive("HOMEWORK ANSWER", key, user_message)
             archive("GRACE-MAR (homework)", key, response)
             await update.message.reply_text(
@@ -448,7 +500,7 @@ async def handle_message(
         return
 
     try:
-        response = get_response(key, user_message)
+        response = await _run_blocking(get_response, key, user_message)
         await update.message.reply_text(response)
     except Exception:
         logger.exception("Error generating response")
@@ -489,7 +541,7 @@ async def handle_document(
     # Treat as activity report: "we did a chat in external LLM, here's the content"
     synthetic = f"we did a chat in an external LLM (ChatGPT, Claude, etc). here is the checkpoint or transcript:\n\n{text}"
     archive("HANDBACK DOCUMENT", key, f"[{doc.file_name}] {text[:200]}...")
-    staged = analyze_activity_report(synthetic, key)
+    staged = await _run_blocking(analyze_activity_report, synthetic, key)
     count = len(get_pending_candidates())
     if staged:
         await update.message.reply_text(
@@ -518,7 +570,7 @@ async def handle_voice(
     try:
         file = await context.bot.get_file(voice.file_id)
         buf = await file.download_as_bytearray()
-        transcript = transcribe_voice(bytes(buf), channel_key=key)
+        transcript = await _run_blocking(transcribe_voice, bytes(buf), channel_key=key)
     except Exception:
         logger.exception("Voice download/transcribe error")
         await update.message.reply_text("i couldn't understand the voice message — can you type it?")
@@ -537,7 +589,7 @@ async def handle_voice(
             await update.message.reply_text("ok homework paused! tap Homework anytime to start again 🎯")
             return
         try:
-            response, _, has_next = process_homework_answer(key, transcript)
+            response, _, has_next = await _run_blocking(process_homework_answer, key, transcript)
             archive("HOMEWORK ANSWER (voice)", key, transcript)
             archive("GRACE-MAR (homework)", key, response)
             await update.message.reply_text(
@@ -550,7 +602,7 @@ async def handle_voice(
         return
 
     try:
-        response = get_response(key, transcript)
+        response = await _run_blocking(get_response, key, transcript)
         await update.message.reply_text(response)
     except Exception:
         logger.exception("Error generating response after voice")
@@ -587,6 +639,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("prp", prp))
     app.add_handler(CommandHandler("dashboard", dashboard))
+    app.add_handler(CommandHandler("status", status_command))
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))

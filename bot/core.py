@@ -374,6 +374,8 @@ homework_sessions: dict[str, dict] = {}
 HOMEWORK_LEDGER_PATH = PROFILE_DIR / "HOMEWORK-LEDGER.jsonl"
 HOMEWORK_MILESTONE = 30  # 30 correct = high competency (relative to age)
 HOMEWORK_BATCH_SIZE = 8  # questions per session
+HOMEWORK_SESSION_TIMEOUT_SEC = max(60, int(os.getenv("HOMEWORK_SESSION_TIMEOUT_SEC", "1800")))
+_homework_timeout_notices: dict[str, bool] = {}
 
 
 def _parse_homework_json(text: str) -> list[dict]:
@@ -437,8 +439,29 @@ def _append_homework_session(correct: int, total: int, channel_key: str) -> None
         logger.exception("Homework ledger append error")
 
 
+def _expire_homework_session_if_stale(channel_key: str) -> bool:
+    """Expire stale homework session for a channel. Returns True if expired."""
+    session = homework_sessions.get(channel_key)
+    if not session:
+        return False
+    last_active_raw = session.get("last_active_at")
+    if not isinstance(last_active_raw, (int, float)):
+        return False
+    if (time.time() - float(last_active_raw)) <= HOMEWORK_SESSION_TIMEOUT_SEC:
+        return False
+    end_homework_session(channel_key)
+    _homework_timeout_notices[channel_key] = True
+    return True
+
+
 def is_in_homework_session(channel_key: str) -> bool:
+    _expire_homework_session_if_stale(channel_key)
     return channel_key in homework_sessions
+
+
+def consume_homework_timeout_notice(channel_key: str) -> bool:
+    """Return and clear timeout notice for UI messaging."""
+    return _homework_timeout_notices.pop(channel_key, False)
 
 
 def end_homework_session(channel_key: str) -> None:
@@ -497,6 +520,7 @@ def start_homework_session(channel_key: str) -> tuple[str | None, str | None]:
             "idx": 0,
             "correct_in_session": 0,
             "streak": 0,
+            "last_active_at": time.time(),
         }
         q0 = normalized[0]
         msg = f"homework time! 🎯 one at a time — tap A, B, C, or D!\n\n"
@@ -517,6 +541,7 @@ def process_homework_answer(channel_key: str, user_reply: str) -> tuple[str, boo
     session = homework_sessions.get(channel_key)
     if not session:
         return "", True, False
+    session["last_active_at"] = time.time()
     idx = session["idx"]
     questions = session["questions"]
     if idx >= len(questions):
@@ -852,6 +877,83 @@ def get_pending_candidates() -> list[dict]:
         summary = summary_m.group(1).strip().strip('"') if summary_m else "(no summary)"
         candidates.append({"id": m.group(1), "summary": summary[:100]})
     return candidates
+
+
+def get_pipeline_health_summary(channel_key: str | None = None) -> dict[str, object]:
+    """Return lightweight pipeline/rate snapshot for operator status surfaces."""
+    pending = get_pending_candidates()
+    pending_ids = {c["id"] for c in pending}
+    oldest_pending_days: int | None = None
+    last_event_ts = ""
+    rejection_reasons: list[str] = []
+
+    if PIPELINE_EVENTS_PATH.exists():
+        lines = PIPELINE_EVENTS_PATH.read_text(encoding="utf-8").splitlines()
+        events: list[dict] = []
+        for line in lines[-500:]:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+                if isinstance(row, dict):
+                    events.append(row)
+            except json.JSONDecodeError:
+                continue
+        if events:
+            last_event_ts = str(events[-1].get("ts") or "")
+        staged_times: list[datetime] = []
+        for row in events:
+            if row.get("event") == "staged" and row.get("candidate_id") in pending_ids:
+                ts = str(row.get("ts") or "").strip()
+                if not ts:
+                    continue
+                try:
+                    staged_times.append(datetime.fromisoformat(ts))
+                except ValueError:
+                    continue
+        if staged_times:
+            oldest = min(staged_times)
+            oldest_pending_days = max(0, (datetime.now() - oldest).days)
+        for row in reversed(events):
+            if row.get("event") != "rejected":
+                continue
+            reason = str(row.get("rejection_reason") or "").strip()
+            if reason:
+                rejection_reasons.append(reason)
+            if len(rejection_reasons) >= 3:
+                break
+
+    archive_last_modified = ""
+    if ARCHIVE_PATH.exists():
+        archive_last_modified = datetime.fromtimestamp(ARCHIVE_PATH.stat().st_mtime).isoformat()
+
+    now = time.time()
+    window_start = now - RATE_LIMIT_WINDOW
+    main_used = 0
+    analyst_used = 0
+    with _rate_limit_lock:
+        for (key, bucket), timestamps in _rate_counters.items():
+            active = [t for t in timestamps if t > window_start]
+            if channel_key and key != channel_key:
+                continue
+            if bucket == "main":
+                main_used += len(active)
+            elif bucket == "analyst":
+                analyst_used += len(active)
+
+    return {
+        "pending_count": len(pending),
+        "oldest_pending_days": oldest_pending_days,
+        "last_event_ts": last_event_ts or None,
+        "recent_rejection_reasons": rejection_reasons,
+        "archive_last_modified": archive_last_modified or None,
+        "main_used": main_used,
+        "main_limit": RATE_LIMIT_MAIN,
+        "analyst_used": analyst_used,
+        "analyst_limit": RATE_LIMIT_ANALYST,
+        "rate_limit_window_sec": RATE_LIMIT_WINDOW,
+    }
 
 
 def update_candidate_status(
