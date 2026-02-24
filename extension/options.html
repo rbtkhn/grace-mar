@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Grace-Mar Extension Settings</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; max-width: 720px; }
+    h1 { font-size: 20px; margin-bottom: 12px; }
+    label { display: block; margin-top: 12px; font-weight: 600; }
+    input { width: 100%; box-sizing: border-box; padding: 8px 10px; margin-top: 6px; }
+    .hint { color: #475569; font-size: 12px; margin-top: 4px; }
+    .row { display: flex; gap: 10px; margin-top: 16px; }
+    button { padding: 8px 14px; border: 0; border-radius: 6px; background: #2563eb; color: white; cursor: pointer; }
+    button.secondary { background: #334155; }
+    #status { margin-top: 12px; color: #047857; }
+    #status.err { color: #b91c1c; }
+  </style>
+</head>
+<body>
+  <h1>Grace-Mar Extension Settings</h1>
+
+  <label for="stageUrl">Stage URL</label>
+  <input id="stageUrl" type="text" placeholder="http://localhost:5050/stage">
+  <div class="hint">Used for Save to Record POST calls.</div>
+
+  <label for="apiKey">API Key (optional)</label>
+  <input id="apiKey" type="password" placeholder="HANDBACK_API_KEY">
+  <div class="hint">Sent as <code>X-Api-Key</code> for non-loopback servers.</div>
+
+  <label for="userId">User ID (optional)</label>
+  <input id="userId" type="text" placeholder="pilot-001">
+  <div class="hint">Included as <code>user_id</code> in stage payload.</div>
+
+  <label for="queueRetryMinutes">Queue Retry Interval (minutes)</label>
+  <input id="queueRetryMinutes" type="number" min="1" max="60" value="5">
+  <div class="hint">Background queue flush interval for offline captures.</div>
+
+  <div class="row">
+    <button id="saveBtn">Save Settings</button>
+    <button class="secondary" id="testBtn">Test Status Endpoint</button>
+  </div>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

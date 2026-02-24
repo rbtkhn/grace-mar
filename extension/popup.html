@@ -12,14 +12,27 @@
     .status { margin-top: 12px; font-size: 13px; color: #059669; }
     .status.err { color: #dc2626; }
     .hint { margin-top: 8px; font-size: 11px; color: #64748b; }
+    .row { display: flex; gap: 8px; margin-top: 8px; }
+    .row button { flex: 1; padding: 8px 10px; font-size: 12px; background: #334155; }
+    .row button:hover { background: #1e293b; }
+    .meta { margin-top: 8px; font-size: 12px; color: #334155; }
+    a { color: #2563eb; text-decoration: none; }
   </style>
 </head>
 <body>
   <h2>Save to Record</h2>
   <div class="url" id="page-info">Loading…</div>
   <button id="save-btn">Save to Record</button>
+  <div class="row">
+    <button id="retry-btn">Retry Queue</button>
+    <button id="status-btn">Refresh Status</button>
+  </div>
+  <div class="meta" id="pipeline-meta"></div>
   <div class="status" id="status"></div>
-  <div class="hint">Run: python scripts/handback_server.py</div>
+  <div class="hint">
+    Run: python scripts/handback_server.py ·
+    <a href="#" id="settings-link">Settings</a>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>

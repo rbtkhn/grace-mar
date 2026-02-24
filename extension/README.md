@@ -24,10 +24,11 @@ One-click capture from any URL to your Grace-Mar Record. Local only; stages to P
 
 ## What it does
 
-- Builds activity report: `we read "[page title]"` + URL
-- POSTs to `http://localhost:5050/stage`
+- Builds activity report: `we read "[page title]"` + URL (+ optional selected text/snippet)
+- POSTs to configurable `/stage` endpoint (default `http://localhost:5050/stage`)
 - Shows confirmation: "Saved! X items to review" (if staged) or "Added to log. X items to review"
 - Pipeline: stage → PENDING-REVIEW → user approves in Telegram via /review
+- If server is unavailable, capture is queued locally and retried
 
 ## Requirements
 
@@ -35,3 +36,18 @@ One-click capture from any URL to your Grace-Mar Record. Local only; stages to P
 - OPENAI_API_KEY set (analyst needs it)
 - Pilot user configured (default: pilot-001)
 - Optional for remote/non-loopback staging: set `HANDBACK_API_KEY` and pass `X-Api-Key`
+
+## Settings
+
+Open extension settings (popup "Settings" link or extension options page) to configure:
+
+- Stage URL
+- Optional API key (`X-Api-Key`)
+- Optional `user_id` payload field
+- Queue retry interval
+
+## Popup actions
+
+- **Save to Record**: stage current page with optional snippet
+- **Retry Queue**: resend offline-queued captures
+- **Refresh Status**: query `/status` for pending pipeline count

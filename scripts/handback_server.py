@@ -6,6 +6,7 @@ Endpoints:
 - POST /handback — Checkpoints/transcripts from external LLMs. JSON { "content": "..." } or plain text.
 - POST /stage   — Activity reports from browser extension. JSON { "content": "we read...", "url": "..." }.
                   Returns { ok, staged, pending_count } for confirmation.
+- GET  /status  — Pipeline status for extension popup ({ ok, pending_count, oldest_pending_days }).
 - GET  /health  — Health check.
 
 Security model:
@@ -85,11 +86,12 @@ def handback() -> tuple:
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
-def _run_stage(content: str) -> tuple[bool, int]:
+def _run_stage(content: str, user_id: str = "") -> tuple[bool, int]:
     """Run analyst on activity report. Returns (staged, pending_count)."""
     from bot.core import analyze_activity_report, get_pending_candidates
 
-    staged = analyze_activity_report(content, "extension:browser")
+    channel_key = f"extension:browser:{user_id}" if user_id else "extension:browser"
+    staged = analyze_activity_report(content, channel_key)
     count = len(get_pending_candidates())
     return (staged, count)
 
@@ -109,21 +111,76 @@ def stage() -> tuple:
     data = request.get_json() or {}
     content = (data.get("content") or data.get("text") or "").strip()
     url = (data.get("url") or "").strip()
+    user_id = (data.get("user_id") or "").strip()
+    title = (data.get("title") or "").strip()
+    selection_text = (data.get("selection_text") or "").strip()
 
     if not content:
         return jsonify({"ok": False, "error": "empty content"}), 400
 
+    meta_parts = []
+    if user_id:
+        meta_parts.append(f"user_id={user_id}")
+    if title:
+        meta_parts.append(f"title={title}")
     if url:
-        content = f"{content} URL: {url}"
+        meta_parts.append(f"url={url}")
+    if selection_text:
+        meta_parts.append(f'selection="{selection_text[:500]}"')
+    if meta_parts:
+        content = f"{content} META: {'; '.join(meta_parts)}"
 
     if len(content) > MAX_CONTENT:
         return jsonify({"ok": False, "error": f"content too long (max {MAX_CONTENT} chars)"}), 400
 
     try:
-        staged, pending_count = _run_stage(content)
-        return jsonify({"ok": True, "staged": staged, "pending_count": pending_count})
+        staged, pending_count = _run_stage(content, user_id=user_id)
+        return jsonify({
+            "ok": True,
+            "staged": staged,
+            "pending_count": pending_count,
+            "user_id": user_id or None,
+        })
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
+
+
+@app.route("/status", methods=["GET"])
+def status() -> tuple:
+    if not _is_authorized():
+        return jsonify({"ok": False, "error": "unauthorized"}), 401
+    from bot.core import get_pending_candidates, PIPELINE_EVENTS_PATH
+    from datetime import datetime
+    import json
+
+    pending = get_pending_candidates()
+    pending_ids = {c.get("id") for c in pending}
+    oldest_pending_days = None
+    if PIPELINE_EVENTS_PATH.exists() and pending_ids:
+        try:
+            staged_ts = []
+            for line in PIPELINE_EVENTS_PATH.read_text(encoding="utf-8").splitlines():
+                line = line.strip()
+                if not line:
+                    continue
+                row = json.loads(line)
+                if row.get("event") != "staged":
+                    continue
+                if row.get("candidate_id") not in pending_ids:
+                    continue
+                ts = str(row.get("ts") or "").strip()
+                if not ts:
+                    continue
+                staged_ts.append(datetime.fromisoformat(ts))
+            if staged_ts:
+                oldest_pending_days = max(0, (datetime.now() - min(staged_ts)).days)
+        except Exception:
+            oldest_pending_days = None
+    return jsonify({
+        "ok": True,
+        "pending_count": len(pending),
+        "oldest_pending_days": oldest_pending_days,
+    }), 200
 
 
 @app.route("/health", methods=["GET"])

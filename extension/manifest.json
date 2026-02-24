@@ -7,11 +7,15 @@
     "activeTab",
     "contextMenus",
     "scripting",
-    "notifications"
+    "notifications",
+    "storage",
+    "alarms"
   ],
   "host_permissions": [
-    "http://localhost:5050/*"
+    "http://*/*",
+    "https://*/*"
   ],
+  "options_page": "options.html",
   "action": {
     "default_popup": "popup.html"
   },
