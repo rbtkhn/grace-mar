@@ -47,6 +47,14 @@ class RecordCompleteness:
     total_ix: int
 
 
+@dataclass
+class IntentDrift:
+    total_conflicts: int
+    conflicts_by_source: dict[str, int]
+    conflicts_by_rule: dict[str, int]
+    rejection_categories: dict[str, int]
+
+
 def parse_pending_review(content: str) -> tuple[list[dict], list[dict]]:
     """
     Extract pending and processed candidates from PENDING-REVIEW.md.
@@ -160,10 +168,64 @@ def compute_record_completeness() -> RecordCompleteness:
     )
 
 
+def compute_intent_drift(window_days: int = 30) -> IntentDrift:
+    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    if not events_path.exists():
+        return IntentDrift(0, {}, {}, {})
+    now = datetime.now().timestamp()
+    cutoff = now - max(1, window_days) * 86400
+    by_source: dict[str, int] = {}
+    by_rule: dict[str, int] = {}
+    reject_cats: dict[str, int] = {}
+    total = 0
+    for line in events_path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(row, dict):
+            continue
+        ts_raw = str(row.get("ts") or "").strip()
+        if ts_raw:
+            try:
+                ts = datetime.fromisoformat(ts_raw.replace("Z", "+00:00")).timestamp()
+                if ts < cutoff:
+                    continue
+            except (ValueError, TypeError):
+                pass
+        event = str(row.get("event") or "")
+        if event == "intent_conflict_cross_agent":
+            total += 1
+            source = str(row.get("candidate_source") or "unknown")
+            rule_id = str(row.get("rule_id") or "UNKNOWN")
+            by_source[source] = by_source.get(source, 0) + 1
+            by_rule[rule_id] = by_rule.get(rule_id, 0) + 1
+        elif event == "rejected":
+            reason = str(row.get("rejection_reason") or "").lower()
+            if "value_misalignment" in reason:
+                key = "value_misalignment"
+            elif "wrong_tradeoff" in reason:
+                key = "wrong_tradeoff"
+            elif reason:
+                key = "other"
+            else:
+                continue
+            reject_cats[key] = reject_cats.get(key, 0) + 1
+    return IntentDrift(
+        total_conflicts=total,
+        conflicts_by_source=dict(sorted(by_source.items(), key=lambda kv: (-kv[1], kv[0]))),
+        conflicts_by_rule=dict(sorted(by_rule.items(), key=lambda kv: (-kv[1], kv[0]))),
+        rejection_categories=dict(sorted(reject_cats.items(), key=lambda kv: (-kv[1], kv[0]))),
+    )
+
+
 def report() -> str:
     """Human-readable metrics report."""
     health = compute_pipeline_health()
     completeness = compute_record_completeness()
+    drift = compute_intent_drift()
 
     ar_str = f"{health.approval_rate:.1%}" if health.approval_rate is not None else "—"
     rr_str = f"{health.rejection_rate:.1%}" if health.rejection_rate is not None else "—"
@@ -189,6 +251,12 @@ def report() -> str:
         f"  IX-B (Curiosity): {completeness.ix_b}",
         f"  IX-C (Personality): {completeness.ix_c}",
         f"  Total IX entries: {completeness.total_ix}",
+        "",
+        "## Intent Drift (30d)",
+        f"  Cross-agent conflicts: {drift.total_conflicts}",
+        f"  By source: {drift.conflicts_by_source or '—'}",
+        f"  By rule: {drift.conflicts_by_rule or '—'}",
+        f"  Rejection categories: {drift.rejection_categories or '—'}",
         "",
     ]
 
@@ -216,6 +284,7 @@ def main() -> None:
 
     health = compute_pipeline_health()
     completeness = compute_record_completeness()
+    drift = compute_intent_drift()
 
     if args.json:
         out = {
@@ -234,6 +303,13 @@ def main() -> None:
                 "ix_b": completeness.ix_b,
                 "ix_c": completeness.ix_c,
                 "total_ix": completeness.total_ix,
+            },
+            "intent_drift": {
+                "window_days": 30,
+                "total_conflicts": drift.total_conflicts,
+                "conflicts_by_source": drift.conflicts_by_source,
+                "conflicts_by_rule": drift.conflicts_by_rule,
+                "rejection_categories": drift.rejection_categories,
             },
         }
         print(json.dumps(out, indent=2))

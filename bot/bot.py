@@ -60,6 +60,11 @@ from .core import (
     end_homework_session,
     consume_homework_timeout_notice,
     get_pipeline_health_summary,
+    get_intent_audit_summary,
+    get_intent_review_summary,
+    stage_intent_debate_packet,
+    resolve_intent_debate_packet,
+    emit_pipeline_event,
 )
 
 load_dotenv()
@@ -112,6 +117,62 @@ def _format_health_summary(summary: dict) -> str:
         f"last event: {summary.get('last_event_ts') or 'n/a'}\n"
         f"recent rejects: {rejection_txt}"
     )
+
+
+def _format_intent_audit(summary: dict) -> str:
+    def _top_items(mapping: dict, limit: int = 3) -> str:
+        if not mapping:
+            return "none"
+        pairs = list(mapping.items())[:limit]
+        return ", ".join(f"{k}:{v}" for k, v in pairs)
+
+    lines = [
+        f"Intent audit ({summary.get('window_days', 30)}d)",
+        f"cross-agent conflicts: {summary.get('total_conflicts', 0)}",
+        f"rejections: {summary.get('total_rejections', 0)}",
+        f"by source: {_top_items(summary.get('conflicts_by_source') or {})}",
+        f"by rule: {_top_items(summary.get('conflicts_by_rule') or {})}",
+        f"strategies: {_top_items(summary.get('conflict_strategies') or {})}",
+        f"rejection categories: {_top_items(summary.get('rejection_categories') or {})}",
+    ]
+    recent = summary.get("recent_conflicts") or []
+    if recent:
+        latest = recent[0]
+        lines.append(
+            "latest: "
+            f"{latest.get('candidate_id') or 'n/a'} "
+            f"{latest.get('source') or 'unknown'} "
+            f"{latest.get('rule_id') or 'UNKNOWN'}"
+        )
+    return "\n".join(lines)
+
+
+def _format_intent_review(summary: dict) -> str:
+    lines = [
+        f"Intent review ({summary.get('window_days', 30)}d)",
+        f"conflicts: {summary.get('total_conflicts', 0)}",
+        f"rejections: {summary.get('total_rejections', 0)}",
+    ]
+    by_source = summary.get("conflicts_by_source") or {}
+    if by_source:
+        top_source = list(by_source.items())[:3]
+        lines.append("top sources: " + ", ".join(f"{k}:{v}" for k, v in top_source))
+    by_rule = summary.get("conflicts_by_rule") or {}
+    if by_rule:
+        top_rules = list(by_rule.items())[:3]
+        lines.append("top rules: " + ", ".join(f"{k}:{v}" for k, v in top_rules))
+    updates = summary.get("suggested_updates") or []
+    if updates:
+        lines.append("")
+        lines.append("suggested updates:")
+        for item in updates[:3]:
+            lines.append(
+                "- "
+                + str(item.get("suggestion") or "review intent rules")
+            )
+    else:
+        lines.append("suggested updates: none")
+    return "\n".join(lines)
 
 
 # Session paths shown on /start — instructions/commands to Grace-Mar.
@@ -406,6 +467,108 @@ async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await update.message.reply_text(f"Operator status:\n{_format_health_summary(summary)}")
 
 
+async def intent_audit_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only summary of intent conflicts and drift signals."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("intent audit is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    window_days = 30
+    if context.args and context.args[0].isdigit():
+        window_days = max(1, min(180, int(context.args[0])))
+    summary = await _run_blocking(get_intent_audit_summary, window_days)
+    await update.message.reply_text(_format_intent_audit(summary))
+
+
+async def intent_review_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only constitution review with actionable suggestions."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("intent review is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    window_days = 30
+    if context.args and context.args[0].isdigit():
+        window_days = max(1, min(180, int(context.args[0])))
+    summary = await _run_blocking(get_intent_review_summary, window_days)
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    emit_pipeline_event(
+        "intent_review_generated",
+        None,
+        source="telegram:command",
+        channel_key=_channel_key(chat_id) if chat_id else None,
+        actor=f"telegram:{update.effective_user.id}" if update.effective_user else None,
+        window_days=window_days,
+        suggestion_count=len(summary.get("suggested_updates") or []),
+    )
+    await update.message.reply_text(_format_intent_review(summary))
+
+
+async def intent_debate_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only: stage a debate packet from cross-agent intent conflicts."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("intent debate is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    rule_id = ""
+    window_days = 30
+    for arg in context.args or []:
+        if arg.isdigit():
+            window_days = max(1, min(180, int(arg)))
+        elif arg.upper().startswith("INTENT-RULE-"):
+            rule_id = arg.strip()
+    result = await _run_blocking(stage_intent_debate_packet, window_days, rule_id)
+    if not result.get("ok"):
+        await update.message.reply_text(f"no debate staged: {result.get('error', 'unknown error')}")
+        return
+    await update.message.reply_text(
+        "debate packet staged: "
+        f"{result.get('debate_id')} "
+        f"(rule={result.get('rule_id')}, sources={','.join(result.get('source_agents') or [])})"
+    )
+
+
+async def resolve_debate_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only: resolve a staged debate packet."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("resolve debate is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    args = context.args or []
+    if len(args) < 2:
+        await update.message.reply_text(
+            "Usage: /resolve_debate DEBATE-0001 <keep_rule|revise_rule|scope_rule|gather_more_evidence>"
+        )
+        return
+    debate_id = args[0].strip().upper()
+    resolution = " ".join(args[1:]).strip()
+    if not debate_id.startswith("DEBATE-"):
+        await update.message.reply_text(f"Expected DEBATE-XXXX, got {debate_id}")
+        return
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    actor = f"telegram:{update.effective_user.id}" if update.effective_user else ""
+    result = await _run_blocking(
+        resolve_intent_debate_packet,
+        debate_id,
+        resolution,
+        actor,
+        _channel_key(chat_id) if chat_id else "",
+    )
+    if not result.get("ok"):
+        await update.message.reply_text(f"couldn't resolve debate: {result.get('error', 'unknown error')}")
+        return
+    await update.message.reply_text(
+        f"debate resolved: {result.get('debate_id')} -> {result.get('resolution')}"
+    )
+
+
 async def openclaw_export_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only OpenClaw export trigger."""
     if not OPERATOR_CHAT_ID:
@@ -685,6 +848,10 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("prp", prp))
     app.add_handler(CommandHandler("dashboard", dashboard))
     app.add_handler(CommandHandler("status", status_command))
+    app.add_handler(CommandHandler("intent_audit", intent_audit_command))
+    app.add_handler(CommandHandler("intent_review", intent_review_command))
+    app.add_handler(CommandHandler("intent_debate", intent_debate_command))
+    app.add_handler(CommandHandler("resolve_debate", resolve_debate_command))
     app.add_handler(CommandHandler("openclaw_export", openclaw_export_command))
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))

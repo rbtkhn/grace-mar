@@ -956,6 +956,297 @@ def get_pipeline_health_summary(channel_key: str | None = None) -> dict[str, obj
     }
 
 
+def get_intent_audit_summary(window_days: int = 30) -> dict[str, object]:
+    """
+    Return advisory intent-alignment summary from pipeline events.
+    Focuses on cross-agent intent conflicts and rejection signals.
+    """
+    cutoff_ts = time.time() - max(1, window_days) * 86400
+    conflict_by_source: dict[str, int] = defaultdict(int)
+    conflict_by_rule: dict[str, int] = defaultdict(int)
+    strategy_counts: dict[str, int] = defaultdict(int)
+    rejection_categories: dict[str, int] = defaultdict(int)
+    total_conflicts = 0
+    total_rejections = 0
+    recent_conflicts: list[dict] = []
+
+    if not PIPELINE_EVENTS_PATH.exists():
+        return {
+            "window_days": window_days,
+            "total_conflicts": 0,
+            "total_rejections": 0,
+            "conflicts_by_source": {},
+            "conflicts_by_rule": {},
+            "conflict_strategies": {},
+            "rejection_categories": {},
+            "recent_conflicts": [],
+        }
+
+    lines = PIPELINE_EVENTS_PATH.read_text(encoding="utf-8").splitlines()
+    for line in lines[-2000:]:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(row, dict):
+            continue
+        raw_ts = str(row.get("ts") or "").strip()
+        if raw_ts:
+            try:
+                dt = datetime.fromisoformat(raw_ts)
+                if dt.timestamp() < cutoff_ts:
+                    continue
+            except ValueError:
+                pass
+        event_name = str(row.get("event") or "").strip()
+        if event_name == "intent_conflict_cross_agent":
+            source = str(row.get("candidate_source") or "unknown").strip() or "unknown"
+            rule_id = str(row.get("rule_id") or "UNKNOWN").strip() or "UNKNOWN"
+            strategy = str(row.get("conflict_strategy") or "escalate_to_human").strip() or "escalate_to_human"
+            total_conflicts += 1
+            conflict_by_source[source] += 1
+            conflict_by_rule[rule_id] += 1
+            strategy_counts[strategy] += 1
+            if len(recent_conflicts) < 5:
+                recent_conflicts.append(
+                    {
+                        "ts": raw_ts,
+                        "candidate_id": row.get("candidate_id"),
+                        "source": source,
+                        "rule_id": rule_id,
+                        "reason": str(row.get("reason") or "").strip(),
+                    }
+                )
+        elif event_name == "rejected":
+            total_rejections += 1
+            reason = str(row.get("rejection_reason") or "").strip().lower()
+            if "value_misalignment" in reason:
+                rejection_categories["value_misalignment"] += 1
+            elif "wrong_tradeoff" in reason:
+                rejection_categories["wrong_tradeoff"] += 1
+            elif reason:
+                rejection_categories["other"] += 1
+
+    return {
+        "window_days": window_days,
+        "total_conflicts": total_conflicts,
+        "total_rejections": total_rejections,
+        "conflicts_by_source": dict(sorted(conflict_by_source.items(), key=lambda kv: (-kv[1], kv[0]))),
+        "conflicts_by_rule": dict(sorted(conflict_by_rule.items(), key=lambda kv: (-kv[1], kv[0]))),
+        "conflict_strategies": dict(sorted(strategy_counts.items(), key=lambda kv: (-kv[1], kv[0]))),
+        "rejection_categories": dict(sorted(rejection_categories.items(), key=lambda kv: (-kv[1], kv[0]))),
+        "recent_conflicts": recent_conflicts,
+    }
+
+
+def get_intent_review_summary(window_days: int = 30) -> dict[str, object]:
+    """
+    Operator-facing intent review summary with lightweight rule-update suggestions.
+    Advisory only; does not modify canonical files.
+    """
+    summary = get_intent_audit_summary(window_days=window_days)
+    conflicts_by_rule = summary.get("conflicts_by_rule") or {}
+    conflicts_by_source = summary.get("conflicts_by_source") or {}
+    rejection_categories = summary.get("rejection_categories") or {}
+    suggested_updates: list[dict[str, object]] = []
+
+    for rule_id, count in list(conflicts_by_rule.items())[:5]:
+        if int(count) < 2:
+            continue
+        dominant_source = "unknown"
+        if conflicts_by_source:
+            dominant_source = max(conflicts_by_source.items(), key=lambda kv: kv[1])[0]
+        suggestion = {
+            "rule_id": str(rule_id),
+            "conflict_count": int(count),
+            "dominant_source": dominant_source,
+            "suggestion": (
+                f"review applies_to or prioritize/deprioritize wording for {rule_id}; "
+                f"repeated conflicts detected from {dominant_source}"
+            ),
+        }
+        suggested_updates.append(suggestion)
+
+    if rejection_categories.get("wrong_tradeoff", 0) >= 2:
+        suggested_updates.append(
+            {
+                "rule_id": "MULTI",
+                "conflict_count": int(rejection_categories.get("wrong_tradeoff", 0)),
+                "dominant_source": "review_feedback",
+                "suggestion": "consider adding or tightening conflict_strategy on relevant INTENT rules",
+            }
+        )
+
+    return {
+        **summary,
+        "suggested_updates": suggested_updates,
+    }
+
+
+def _next_debate_id() -> str:
+    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8") if PENDING_REVIEW_PATH.exists() else ""
+    ids = [int(m.group(1)) for m in re.finditer(r"DEBATE-(\d+)", content)]
+    n = max(ids, default=0) + 1
+    return f"DEBATE-{n:04d}"
+
+
+def _ensure_debate_section(content: str) -> str:
+    if "## Debate Packets" in content:
+        return content
+    return content.rstrip() + "\n\n## Debate Packets\n\n"
+
+
+def stage_intent_debate_packet(window_days: int = 30, rule_id: str = "") -> dict[str, object]:
+    """
+    Stage a debate packet when the same rule conflicts across multiple sources.
+    Advisory-only workflow for operator arbitration; never merges canonical Record.
+    """
+    if not PIPELINE_EVENTS_PATH.exists():
+        return {"ok": False, "error": "no pipeline events found"}
+    cutoff_ts = time.time() - max(1, window_days) * 86400
+    events_by_rule: dict[str, list[dict]] = defaultdict(list)
+    lines = PIPELINE_EVENTS_PATH.read_text(encoding="utf-8").splitlines()
+    for line in lines[-3000:]:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(row, dict) or row.get("event") != "intent_conflict_cross_agent":
+            continue
+        raw_ts = str(row.get("ts") or "").strip()
+        if raw_ts:
+            try:
+                dt = datetime.fromisoformat(raw_ts)
+                if dt.timestamp() < cutoff_ts:
+                    continue
+            except ValueError:
+                pass
+        rid = str(row.get("rule_id") or "UNKNOWN").strip() or "UNKNOWN"
+        events_by_rule[rid].append(row)
+
+    target_rule = rule_id.strip() if rule_id.strip() else ""
+    if target_rule and target_rule not in events_by_rule:
+        return {"ok": False, "error": f"no conflicts found for {target_rule}"}
+
+    if not target_rule:
+        ranked: list[tuple[str, int]] = []
+        for rid, rows in events_by_rule.items():
+            sources = {str(r.get("candidate_source") or "unknown") for r in rows}
+            if len(sources) < 2:
+                continue
+            ranked.append((rid, len(rows)))
+        if not ranked:
+            return {"ok": False, "error": "no multi-source cross-agent conflicts in window"}
+        ranked.sort(key=lambda x: (-x[1], x[0]))
+        target_rule = ranked[0][0]
+
+    rows = events_by_rule.get(target_rule, [])
+    by_source: dict[str, list[dict]] = defaultdict(list)
+    for row in rows:
+        source = str(row.get("candidate_source") or "unknown").strip() or "unknown"
+        by_source[source].append(row)
+    if len(by_source) < 2:
+        return {"ok": False, "error": f"rule {target_rule} does not have multi-source conflicts"}
+
+    source_items = sorted(by_source.items(), key=lambda kv: -len(kv[1]))
+    left_source, left_rows = source_items[0]
+    right_source, right_rows = source_items[1]
+    left = left_rows[0]
+    right = right_rows[0]
+    debate_id = _next_debate_id()
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    debate_block = f"""### {debate_id}
+
+```yaml
+status: pending
+timestamp: {ts}
+topic: "cross-agent intent conflict"
+rule_id: {target_rule}
+source_agents: [{left_source}, {right_source}]
+position_a:
+  source: {left_source}
+  candidate_id: "{left.get('candidate_id') or 'none'}"
+  reason: "{str(left.get('reason') or '').replace(chr(34), chr(39))[:220]}"
+position_b:
+  source: {right_source}
+  candidate_id: "{right.get('candidate_id') or 'none'}"
+  reason: "{str(right.get('reason') or '').replace(chr(34), chr(39))[:220]}"
+operator_prompt: "choose keep_rule | revise_rule | scope_rule | gather_more_evidence"
+```
+
+"""
+    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8") if PENDING_REVIEW_PATH.exists() else "## Candidates\n\n## Processed\n\n"
+    content = _ensure_debate_section(content)
+    content = content.replace("## Debate Packets\n\n", "## Debate Packets\n\n" + debate_block, 1)
+    PENDING_REVIEW_PATH.write_text(content, encoding="utf-8")
+    emit_pipeline_event(
+        "intent_debate_packet_staged",
+        debate_id,
+        rule_id=target_rule,
+        source_agents=f"{left_source},{right_source}",
+        window_days=window_days,
+        source="core:stage_intent_debate_packet",
+    )
+    return {
+        "ok": True,
+        "debate_id": debate_id,
+        "rule_id": target_rule,
+        "source_agents": [left_source, right_source],
+    }
+
+
+def resolve_intent_debate_packet(
+    debate_id: str,
+    resolution: str,
+    actor: str = "",
+    channel_key: str = "",
+) -> dict[str, object]:
+    """
+    Resolve a staged debate packet by writing resolution status in PENDING-REVIEW.
+    """
+    if not PENDING_REVIEW_PATH.exists():
+        return {"ok": False, "error": "PENDING-REVIEW not found"}
+    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8")
+    pattern = rf"(### {re.escape(debate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n)(.*?)(\n```)"
+    m = re.search(pattern, content, re.DOTALL)
+    if not m:
+        return {"ok": False, "error": f"{debate_id} not found"}
+    block = m.group(2)
+    if re.search(r"^status:\s*resolved:", block, re.MULTILINE):
+        return {"ok": False, "error": f"{debate_id} already resolved"}
+    safe_resolution = resolution.strip() or "gather_more_evidence"
+    safe_resolution = re.sub(r"[^a-zA-Z0-9_\-:. ]+", "", safe_resolution)[:80]
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    updated = re.sub(
+        r"^status:\s*pending\s*$",
+        f"status: resolved:{safe_resolution}",
+        block,
+        count=1,
+        flags=re.MULTILINE,
+    )
+    if updated == block:
+        updated = f"status: resolved:{safe_resolution}\n" + block
+    updated += f"\nresolved_at: {now}"
+    replacement = m.group(1) + updated + m.group(3)
+    new_content = content[: m.start()] + replacement + content[m.end() :]
+    PENDING_REVIEW_PATH.write_text(new_content, encoding="utf-8")
+    emit_pipeline_event(
+        "intent_debate_packet_resolved",
+        debate_id,
+        resolution=safe_resolution,
+        actor=actor or None,
+        channel_key=channel_key or None,
+        source="core:resolve_intent_debate_packet",
+    )
+    return {"ok": True, "debate_id": debate_id, "resolution": safe_resolution}
+
+
 def update_candidate_status(
     candidate_id: str,
     status: str,

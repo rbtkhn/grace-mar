@@ -13,6 +13,9 @@ import argparse
 import hashlib
 import json
 import os
+import re
+import subprocess
+import sys
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -49,6 +52,81 @@ def _build_content(text: str, artifact: Path | None) -> tuple[str, dict]:
     return base.strip(), meta
 
 
+def _load_intent_profile(user_id: str) -> dict:
+    intent_path = REPO_ROOT / "users" / user_id / "INTENT.md"
+    if not intent_path.exists():
+        return {"ok": False, "tradeoff_rules": []}
+    raw = intent_path.read_text(encoding="utf-8")
+    m = re.search(r"```(?:yaml|yml)\s*\n(.*?)```", raw, re.DOTALL)
+    if not m:
+        return {"ok": False, "tradeoff_rules": []}
+    block = m.group(1)
+    rules: list[dict] = []
+    rules_block = re.search(r"^tradeoff_rules:\s*\n((?:^[ \t]+.+\n?)*)", block, re.MULTILINE)
+    if rules_block:
+        chunks = re.findall(r"(?:^[ \t]*-\s+.+(?:\n(?![ \t]*-\s).+)*)", rules_block.group(1), re.MULTILINE)
+        for idx, chunk in enumerate(chunks, 1):
+            rid_m = re.search(r"\bid:\s*([^\n]+)", chunk)
+            prio_m = re.search(r"\bprioritize:\s*([^\n]+)", chunk)
+            de_m = re.search(r"\bdeprioritize:\s*([^\n]+)", chunk)
+            rules.append(
+                {
+                    "id": rid_m.group(1).strip().strip("\"'") if rid_m else f"INTENT-RULE-{idx:03d}",
+                    "prioritize": prio_m.group(1).strip().strip("\"'") if prio_m else "",
+                    "deprioritize": de_m.group(1).strip().strip("\"'") if de_m else "",
+                }
+            )
+    return {"ok": True, "tradeoff_rules": rules}
+
+
+def _keywords(text: str) -> set[str]:
+    return {w for w in re.findall(r"[a-zA-Z][a-zA-Z0-9_-]{2,}", (text or "").lower())}
+
+
+def _detect_constitution_conflicts(content: str, intent_profile: dict) -> list[str]:
+    if not intent_profile.get("ok"):
+        return []
+    observed = _keywords(content)
+    conflicts: list[str] = []
+    for rule in intent_profile.get("tradeoff_rules", []):
+        de = _keywords(rule.get("deprioritize", ""))
+        pr = _keywords(rule.get("prioritize", ""))
+        if not de:
+            continue
+        hits_de = observed & de
+        if not hits_de:
+            continue
+        hits_pr = observed & pr if pr else set()
+        if hits_pr:
+            continue
+        conflicts.append(str(rule.get("id") or "UNKNOWN"))
+    return conflicts
+
+
+def _emit_constitution_event(user_id: str, status: str, rule_ids: list[str]) -> None:
+    extras = [
+        f"status={status}",
+        "candidate_source=openclaw",
+        f"rule_ids={','.join(rule_ids) if rule_ids else 'none'}",
+        "source=openclaw_stage",
+        "channel_key=openclaw:stage",
+    ]
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/emit_pipeline_event.py",
+            "--user",
+            user_id,
+            "intent_constitutional_critique",
+            "none",
+            *extras,
+        ],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+    )
+
+
 def stage_openclaw(
     stage_url: str,
     user_id: str,
@@ -59,6 +137,17 @@ def stage_openclaw(
     content, meta = _build_content(text, artifact)
     if not content:
         raise ValueError("Provide --text and/or --artifact")
+    intent_profile = _load_intent_profile(user_id)
+    conflicts = _detect_constitution_conflicts(content, intent_profile)
+    status = "advisory_flagged" if conflicts else "advisory_clear"
+    _emit_constitution_event(user_id, status=status, rule_ids=conflicts)
+    meta["constitution_check_status"] = status
+    if conflicts:
+        meta["constitution_rule_ids"] = ",".join(conflicts)
+        content = (
+            f"{content}\n\n"
+            f"CONSTITUTION_ADVISORY: status={status}; rule_ids={','.join(conflicts)}"
+        )
     payload = {
         "content": content,
         "user_id": user_id,

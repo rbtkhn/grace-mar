@@ -23,6 +23,10 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 BOT_DIR = REPO_ROOT / "bot"
+try:
+    from export_intent_snapshot import export_intent_snapshot
+except ImportError:
+    from scripts.export_intent_snapshot import export_intent_snapshot
 
 
 def _read(path: Path) -> str:
@@ -86,6 +90,8 @@ def generate_manifest(user_id: str = "pilot-001") -> dict:
             "EVIDENCE/writing_log",
             "EVIDENCE/creation_log",
             "LIBRARY/entries",
+            "INTENT/goals",
+            "INTENT/tradeoff_rules",
         ],
         "writable": [
             "PENDING-REVIEW/candidates",
@@ -101,7 +107,9 @@ def generate_manifest(user_id: str = "pilot-001") -> dict:
             "USER.md": "python scripts/export_user_identity.py -u " + user_id,
             "manifest": "python scripts/export_manifest.py -u " + user_id,
             "fork_json": "python scripts/export_fork.py -o fork-export.json",
+            "intent_snapshot": "python scripts/export_intent_snapshot.py -u " + user_id,
         },
+        "intent_snapshot": export_intent_snapshot(user_id),
     }
 
     return manifest
@@ -163,6 +171,13 @@ def main() -> None:
     manifest_path = out_dir / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {manifest_path}", file=sys.stderr)
+
+    intent_path = out_dir / "intent_snapshot.json"
+    intent_path.write_text(
+        json.dumps(manifest["intent_snapshot"], indent=2) + "\n",
+        encoding="utf-8",
+    )
+    print(f"Wrote {intent_path}", file=sys.stderr)
 
     if args.llms_txt and not args.no_llms_txt:
         llms_path = out_dir / "llms.txt"

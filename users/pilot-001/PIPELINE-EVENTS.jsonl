@@ -16,3 +16,12 @@
 {"ts": "2026-02-23T20:56:14.451017", "event": "applied", "candidate_id": "CANDIDATE-0064", "evidence_id": "ACT-0030"}
 {"ts": "2026-02-23T20:58:34.964520", "event": "applied", "candidate_id": "CANDIDATE-0065", "evidence_id": "ACT-0031"}
 {"ts": "2026-02-23T21:02:35.911273", "event": "applied", "candidate_id": "CANDIDATE-0067", "evidence_id": "ACT-0032"}
+{"ts": "2026-02-24T09:59:37.507193", "event": "intent_constitutional_critique", "candidate_id": null, "status": "advisory_clear", "candidate_source": "openclaw", "rule_ids": "none", "source": "openclaw_stage", "channel_key": "openclaw:stage"}
+{"ts": "2026-02-24T10:29:49.835328", "event": "staged", "candidate_id": "CANDIDATE-0068", "channel_key": "operator:cursor", "source": "operator:curiosity_probe"}
+{"ts": "2026-02-24T10:29:50.007534", "event": "staged", "candidate_id": "CANDIDATE-0069", "channel_key": "operator:cursor", "source": "operator:curiosity_probe"}
+{"ts": "2026-02-24T10:31:41.634606", "event": "approved", "candidate_id": "CANDIDATE-0068", "channel_key": "operator:cursor", "source": "operator:manual_approval", "actor": "robertkuhne"}
+{"ts": "2026-02-24T10:31:41.778510", "event": "approved", "candidate_id": "CANDIDATE-0069", "channel_key": "operator:cursor", "source": "operator:manual_approval", "actor": "robertkuhne"}
+{"ts": "2026-02-24T10:31:42.716799", "event": "intent_constitutional_critique", "candidate_id": "CANDIDATE-0068", "status": "advisory_clear", "candidate_source": "operator_cli", "rule_ids": "none", "source": "process_approved_candidates", "channel_key": "operator:cli", "actor": "robertkuhne"}
+{"ts": "2026-02-24T10:31:42.880435", "event": "intent_constitutional_critique", "candidate_id": "CANDIDATE-0069", "status": "advisory_clear", "candidate_source": "operator_cli", "rule_ids": "none", "source": "process_approved_candidates", "channel_key": "operator:cli", "actor": "robertkuhne"}
+{"ts": "2026-02-24T10:31:43.237612", "event": "applied", "candidate_id": "CANDIDATE-0068", "evidence_id": "ACT-0033", "source": "process_approved_candidates", "actor": "robertkuhne", "channel_key": "operator:cli"}
+{"ts": "2026-02-24T10:31:43.418120", "event": "applied", "candidate_id": "CANDIDATE-0069", "evidence_id": "ACT-0034", "source": "process_approved_candidates", "actor": "robertkuhne", "channel_key": "operator:cli"}

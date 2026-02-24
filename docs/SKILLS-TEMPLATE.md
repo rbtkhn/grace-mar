@@ -37,6 +37,31 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 All skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
 
+### II-A. Semi-Independent Executor Contract
+
+READ, WRITE, and BUILD may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
+
+Constitutional constraints (mandatory):
+- Stage-only: no executor may merge into canonical Record files.
+- Evidence-linked output: every capability claim remains traceable.
+- Knowledge boundary: no undocumented facts may be asserted as Record truth.
+- User gate: conflicts between executors are resolved by user approval, not by executor arbitration.
+
+Behavior shaping from SELF (three-dimension mind):
+- IX-A Knowledge influences factual confidence and abstention thresholds.
+- IX-B Curiosity influences exploration priority and query selection.
+- IX-C Personality influences tone, framing, and interaction style.
+
+Suggested default emphasis profile:
+
+| Executor | Weight profile |
+|----------|----------------|
+| READ | Curiosity > Knowledge > Personality |
+| WRITE | Personality > Knowledge > Curiosity |
+| BUILD | Knowledge > Personality > Curiosity |
+
+This profile is advisory and may be tuned per user while preserving the constitutional constraints above.
+
 ### WRITE (Production)
 
 The user produces something. Grace-Mar captures and analyzes.
@@ -67,18 +92,22 @@ The user produces something. Grace-Mar captures and analyzes.
 ### READ (Intake)
 
 The user consumes content. Grace-Mar tracks and assesses comprehension.
+READ is multimodal by default and must not be limited to text.
 
 **Activities:**
 - Books read (with summaries, reactions)
 - Articles, stories consumed
 - Videos watched (educational, entertainment)
 - Podcasts, audiobooks
+- Music listening (songs, classical pieces, performances)
+- Images, diagrams, maps, and visual media
 - Instructions followed
-- Maps, diagrams interpreted
 - Conversations (what they took in)
 
 **What Grace-Mar captures:**
 - Content consumed (what they read/watched)
+- Input modality (`text`, `video`, `audio/music`, `image/diagram/map`, or `mixed`)
+- Source or artifact reference (title, URL, file path, or media id)
 - Comprehension (can they summarize, explain?)
 - Inference (can they predict, conclude?)
 - Vocabulary acquisition (new words learned)
@@ -511,7 +540,9 @@ If WRITE:
 - Logic: [structure, argument]
 
 If READ:
-- Content consumed: [book, article, video title]
+- Content consumed: [book, article, video title, music piece, image/diagram/map]
+- Input modality: [text | video | audio_music | image_diagram_map | mixed]
+- Source reference: [url | file path | media id | library id]
 - Comprehension: [summary accuracy, key points captured]
 - Inference: [conclusions drawn]
 - Vocabulary: [new words encountered]

@@ -1225,6 +1225,26 @@ activities:
 
 ---
 
+  - id: ACT-0033
+    date: 2026-02-24
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: curiosity
+    source: pipeline merge
+    summary: "Curiosity concentrates on human impact in nature, especially conservation success stories and regional comparison."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0034
+    date: 2026-02-24
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: curiosity
+    source: pipeline merge
+    summary: "Curiosity style is implementation-oriented: step-by-step execution, clear measurable outcomes, and real trade-offs (local needs vs ecosystem)."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

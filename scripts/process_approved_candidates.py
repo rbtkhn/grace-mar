@@ -26,6 +26,7 @@ PROFILE_DIR = REPO_ROOT / "users" / USER_ID
 PENDING_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
 SELF_PATH = PROFILE_DIR / "SELF.md"
 EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
+INTENT_PATH = PROFILE_DIR / "INTENT.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
 PRP_PATH = REPO_ROOT / "grace-mar-abby-prp.txt"
 MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
@@ -56,12 +57,13 @@ def _next_id(content: str, prefix: str) -> str:
 
 def _set_user(user_id: str) -> None:
     """Configure per-user paths for this invocation."""
-    global USER_ID, PROFILE_DIR, PENDING_PATH, SELF_PATH, EVIDENCE_PATH, MERGE_RECEIPTS_PATH
+    global USER_ID, PROFILE_DIR, PENDING_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH
     USER_ID = user_id.strip()
     PROFILE_DIR = REPO_ROOT / "users" / USER_ID
     PENDING_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
     SELF_PATH = PROFILE_DIR / "SELF.md"
     EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
+    INTENT_PATH = PROFILE_DIR / "INTENT.md"
     MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
 
 
@@ -207,6 +209,224 @@ def _run_integrity_validation(min_evidence_tier: int) -> tuple[bool, str]:
         pass
     msg = (result.stderr or result.stdout or "integrity validation failed").strip()
     return False, msg.splitlines()[0] if msg else "integrity validation failed"
+
+
+def _load_intent_profile() -> dict:
+    """Load minimal intent profile from INTENT.md YAML block."""
+    raw = _read(INTENT_PATH)
+    if not raw:
+        return {"ok": False, "reason": "missing INTENT.md", "tradeoff_rules": []}
+    m = re.search(r"```(?:yaml|yml)\s*\n(.*?)```", raw, re.DOTALL)
+    if not m:
+        return {"ok": False, "reason": "missing YAML block", "tradeoff_rules": []}
+    block = m.group(1)
+    rules: list[dict] = []
+    rules_block = re.search(
+        r"^tradeoff_rules:\s*\n((?:^[ \t]+.+\n?)*)",
+        block,
+        re.MULTILINE,
+    )
+    if rules_block:
+        chunks = re.findall(r"(?:^[ \t]*-\s+.+(?:\n(?![ \t]*-\s).+)*)", rules_block.group(1), re.MULTILINE)
+        for idx, chunk in enumerate(chunks, 1):
+            rid_m = re.search(r"\bid:\s*([^\n]+)", chunk)
+            prio_m = re.search(r"\bprioritize:\s*([^\n]+)", chunk)
+            de_m = re.search(r"\bdeprioritize:\s*([^\n]+)", chunk)
+            when_m = re.search(r"\bwhen:\s*([^\n]+)", chunk)
+            applies_to_m = re.search(r"\bapplies_to:\s*\[([^\]]*)\]", chunk)
+            priority_m = re.search(r"\bpriority:\s*([^\n]+)", chunk)
+            strategy_m = re.search(r"\bconflict_strategy:\s*([^\n]+)", chunk)
+            applies_to = []
+            if applies_to_m:
+                applies_to = [
+                    token.strip().strip("\"'")
+                    for token in applies_to_m.group(1).split(",")
+                    if token.strip()
+                ]
+            priority = 100
+            if priority_m:
+                raw = priority_m.group(1).strip().strip("\"'")
+                if raw.isdigit():
+                    priority = int(raw)
+            rules.append(
+                {
+                    "id": (rid_m.group(1).strip().strip("\"'") if rid_m else f"INTENT-RULE-{idx:03d}"),
+                    "when": (when_m.group(1).strip().strip("\"'") if when_m else ""),
+                    "prioritize": (prio_m.group(1).strip().strip("\"'") if prio_m else ""),
+                    "deprioritize": (de_m.group(1).strip().strip("\"'") if de_m else ""),
+                    "applies_to": applies_to,
+                    "priority": priority,
+                    "conflict_strategy": (
+                        strategy_m.group(1).strip().strip("\"'")
+                        if strategy_m
+                        else "escalate_to_human"
+                    ),
+                }
+            )
+    return {"ok": True, "tradeoff_rules": rules}
+
+
+def _keywords(text: str) -> set[str]:
+    return {w for w in re.findall(r"[a-zA-Z][a-zA-Z0-9_-]{2,}", (text or "").lower())}
+
+
+def _candidate_agent_source(candidate: dict) -> str:
+    channel = _yaml_get(candidate.get("block", ""), "channel_key") or ""
+    prefix = channel.split(":", 1)[0].strip().lower()
+    mapping = {
+        "telegram": "voice",
+        "wechat": "voice",
+        "extension": "browser_extension",
+        "handback": "handback",
+        "operator": "operator_cli",
+        "openclaw": "openclaw",
+    }
+    return mapping.get(prefix, prefix or "unknown")
+
+
+def _detect_intent_conflicts(candidate: dict, intent_profile: dict, candidate_source: str) -> list[dict]:
+    """
+    Advisory check only:
+    If candidate text contains deprioritized terms but misses prioritized terms
+    from the same intent rule, flag potential conflict.
+    """
+    if not intent_profile.get("ok"):
+        return []
+    text = " ".join(
+        [
+            candidate.get("summary", ""),
+            candidate.get("suggested_entry", ""),
+            candidate.get("prompt_addition", ""),
+        ]
+    )
+    observed = _keywords(text)
+    conflicts: list[dict] = []
+    for rule in intent_profile.get("tradeoff_rules", []):
+        applies_to = [str(x).strip().lower() for x in (rule.get("applies_to") or []) if str(x).strip()]
+        if applies_to and candidate_source.lower() not in applies_to and "all" not in applies_to:
+            continue
+        deprioritized = _keywords(rule.get("deprioritize", ""))
+        prioritized = _keywords(rule.get("prioritize", ""))
+        if not deprioritized:
+            continue
+        hits_de = observed & deprioritized
+        if not hits_de:
+            continue
+        hits_pr = observed & prioritized if prioritized else set()
+        if hits_pr:
+            continue
+        conflicts.append(
+            {
+                "rule_id": rule.get("id", "UNKNOWN"),
+                "severity": "advisory",
+                "candidate_source": candidate_source,
+                "rule_applies_to": applies_to or ["all"],
+                "priority": int(rule.get("priority", 100)),
+                "conflict_strategy": rule.get("conflict_strategy", "escalate_to_human"),
+                "reason": (
+                    f"candidate may over-optimize for deprioritized terms: "
+                    f"{', '.join(sorted(hits_de))}"
+                ),
+            }
+        )
+    return sorted(conflicts, key=lambda x: int(x.get("priority", 100)))
+
+
+def _emit_intent_conflict(
+    candidate_id: str,
+    conflict: dict,
+    actor: str | None = None,
+    event_type: str = "intent_conflict",
+) -> None:
+    extras = [
+        f"rule_id={str(conflict.get('rule_id') or 'UNKNOWN')}",
+        f"severity={str(conflict.get('severity') or 'advisory')}",
+        f"candidate_source={str(conflict.get('candidate_source') or 'unknown')}",
+        f"rule_applies_to={','.join(conflict.get('rule_applies_to') or ['all'])}",
+        f"priority={str(conflict.get('priority') or '100')}",
+        f"conflict_strategy={str(conflict.get('conflict_strategy') or 'escalate_to_human')}",
+        f"reason={str(conflict.get('reason') or '')[:220]}",
+        "source=process_approved_candidates",
+        "channel_key=operator:cli",
+    ]
+    if actor:
+        extras.append(f"actor={actor}")
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/emit_pipeline_event.py",
+            "--user",
+            USER_ID,
+            event_type,
+            candidate_id,
+            *extras,
+        ],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+    )
+
+
+def _emit_constitutional_critique_event(
+    candidate_id: str,
+    candidate_source: str,
+    status: str,
+    rule_ids: list[str],
+    actor: str | None = None,
+) -> None:
+    extras = [
+        f"status={status}",
+        f"candidate_source={candidate_source}",
+        f"rule_ids={','.join(rule_ids) if rule_ids else 'none'}",
+        "source=process_approved_candidates",
+        "channel_key=operator:cli",
+    ]
+    if actor:
+        extras.append(f"actor={actor}")
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/emit_pipeline_event.py",
+            "--user",
+            USER_ID,
+            "intent_constitutional_critique",
+            candidate_id,
+            *extras,
+        ],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+    )
+
+
+def _emit_constitutional_revision_suggested(
+    candidate_id: str,
+    conflict: dict,
+    actor: str | None = None,
+) -> None:
+    extras = [
+        f"rule_id={str(conflict.get('rule_id') or 'UNKNOWN')}",
+        f"candidate_source={str(conflict.get('candidate_source') or 'unknown')}",
+        f"reason={str(conflict.get('reason') or '')[:220]}",
+        "source=process_approved_candidates",
+        "channel_key=operator:cli",
+    ]
+    if actor:
+        extras.append(f"actor={actor}")
+    subprocess.run(
+        [
+            sys.executable,
+            "scripts/emit_pipeline_event.py",
+            "--user",
+            USER_ID,
+            "intent_constitutional_revision_suggested",
+            candidate_id,
+            *extras,
+        ],
+        cwd=REPO_ROOT,
+        check=False,
+        capture_output=True,
+    )
 
 
 def _compute_fork_checksum() -> tuple[bool, str]:
@@ -540,6 +760,7 @@ def main() -> None:
     evidence_content = _read(EVIDENCE_PATH)
     prompt_content = _read(PROMPT_PATH)
     pending_content = _read(PENDING_PATH)
+    intent_profile = _load_intent_profile()
     blocks_to_move: list[str] = []
     applied_pairs: list[tuple[str, str]] = []
     pre_checksum_ok, pre_checksum = _compute_fork_checksum()
@@ -552,6 +773,33 @@ def main() -> None:
         if not candidate_ok:
             _emit_validation_failure(c["id"], candidate_reason, args.approved_by.strip())
             raise SystemExit(f"candidate {c['id']} failed validation: {candidate_reason}")
+        candidate_source = _candidate_agent_source(c)
+        intent_conflicts = _detect_intent_conflicts(c, intent_profile, candidate_source)
+        conflict_rule_ids = [str(conflict.get("rule_id") or "UNKNOWN") for conflict in intent_conflicts]
+        _emit_constitutional_critique_event(
+            c["id"],
+            candidate_source,
+            status="advisory_flagged" if intent_conflicts else "advisory_clear",
+            rule_ids=conflict_rule_ids,
+            actor=args.approved_by.strip(),
+        )
+        for conflict in intent_conflicts:
+            _emit_intent_conflict(
+                c["id"],
+                conflict,
+                args.approved_by.strip(),
+                event_type="intent_conflict_cross_agent",
+            )
+            _emit_constitutional_revision_suggested(
+                c["id"],
+                conflict,
+                args.approved_by.strip(),
+            )
+            print(
+                f"[advisory] intent_conflict {c['id']} "
+                f"rule={conflict.get('rule_id')} source={candidate_source} "
+                f"strategy={conflict.get('conflict_strategy')} reason={conflict.get('reason')}"
+            )
         self_content, evidence_content, prompt_content, act_id = merge_candidate_in_memory(
             c, self_content, evidence_content, prompt_content, today, evidence_tier=min_tier
         )

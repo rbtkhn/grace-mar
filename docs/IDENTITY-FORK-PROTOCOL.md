@@ -73,6 +73,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 | **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
 | **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
+| **INTENT** | Goal hierarchy, trade-off rules, escalation boundaries, cross-agent policy scope | What the system should WANT to optimize |
 
 ### 3.2 Post-Seed Growth (Three-Dimension Mind)
 
@@ -90,6 +91,29 @@ Every claim in SELF (IX-A, IX-B, IX-C) must reference evidence:
 - `provenance: human_approved` — passed through gated pipeline
 
 No claim may exist without traceability to an artifact or approved source.
+
+### 3.4 Skill Executor Model (READ/WRITE/BUILD)
+
+The SKILLS module may be operationalized as three semi-independent executors:
+`READ`, `WRITE`, and `BUILD`.
+
+- They may use distinct heuristics, prompts, and evaluation criteria.
+- They are capability-specialized, not identity-sovereign.
+- They share one constitutional boundary: user-owned Record, gated merge, evidence linkage, and knowledge boundary.
+
+Normative constraints:
+
+1. `READ`/`WRITE`/`BUILD` may stage candidates only; they may not merge.
+2. All staged outputs must remain evidence-linked and reviewable.
+3. Divergent executor recommendations are allowed; user approval is the resolution layer.
+4. Executor behavior is shaped by the SELF three-dimension mind:
+   - IX-A (Knowledge): what is treated as known.
+   - IX-B (Curiosity): what is prioritized for exploration.
+   - IX-C (Personality): style, tone, and interaction posture.
+5. `READ` is explicitly multimodal and must not be treated as text-only:
+   - Accepted inputs include text, video, music/audio, images/diagrams/maps, and mixed media.
+   - Staged READ-derived candidates should include modality provenance (for example `input_modality`, source/artifact reference).
+   - Evidence linkage and knowledge-boundary rules apply equally to every modality.
 
 ---
 
@@ -151,6 +175,7 @@ Enables discoverability without full access:
 
 - **USER.md / SOUL.md** — Condensed identity for agent consumption (OpenClaw, etc.)
 - **manifest.json** — Machine-readable schema, readable/writable surfaces, checksum
+- **intent_snapshot.json** — Machine-readable intent rules (goals, trade-offs, escalation, `applies_to`, `priority`, `conflict_strategy`)
 - **fork JSON** — Full export for backup, portability, or migration
 
 Exports are snapshots for **consumption** (e.g., by schools or agents that read the Record). No other instance of the Record or Voice may be deployed as an independent economic or social agent without explicit user consent and, where feasible, a revocation path. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md).

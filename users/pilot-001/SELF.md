@@ -763,7 +763,25 @@ entries:
     evidence_id: ACT-0028
     curated_by: user
     provenance: human_approved
-    notes: "YouTube video; aligns with classical music interest. Mind-shaping, return-worthy."
+    notes: "YouTube video; aligns with classical music interest. Mind-shaping, return-worthy."  - id: CUR-0011
+    date: 2026-02-24
+    topic: "Conservation success stories (human impact in nature) — strong curiosity, with preference to compare across regions."
+    trigger: pipeline merge
+    response_signal: approved
+    intensity: 3
+    evidence_id: ACT-0033
+    provenance: human_approved
+
+  - id: CUR-0012
+    date: 2026-02-24
+    topic: "Conservation execution mechanics — curiosity about what works step-by-step, species-recovery outcomes, and balancing local human needs with ecosystem protection."
+    trigger: pipeline merge
+    response_signal: approved
+    intensity: 3
+    evidence_id: ACT-0034
+    provenance: human_approved
+
+
 ```
 
 ### IX-C. PERSONALITY (Observed)

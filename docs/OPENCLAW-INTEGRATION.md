@@ -43,6 +43,8 @@ Output: Markdown suitable for `USER.md` or `SOUL.md`, containing:
 - Linguistic style and vocabulary level
 - Personality traits and values
 - Post-seed growth (IX-A knowledge, IX-B curiosity, IX-C personality)
+- Intent snapshot (`intent_snapshot.json`) for machine-readable goal/trade-off alignment
+- Constitution prefix in `USER.md` (derived from INTENT) for downstream alignment context
 
 ### Sync Options
 
@@ -149,6 +151,23 @@ python integrations/openclaw_stage.py --user pilot-001 --text "we explored fract
 ```
 
 This path only stages to `PENDING-REVIEW`; it never merges into the Record.
+Inbound payloads also run an advisory constitutional check against `INTENT.md` and emit
+`intent_constitutional_critique` events (`advisory_clear` or `advisory_flagged`).
+
+### Debate packet workflow (Phase C)
+
+When repeated cross-agent conflicts appear for the same intent rule across sources
+(for example, Voice vs OpenClaw), operators can stage a debate packet for explicit
+human arbitration:
+
+```bash
+/intent_debate
+/intent_debate INTENT-RULE-001 30
+/resolve_debate DEBATE-0001 revise_rule
+```
+
+Debate packets are stage-only artifacts in `PENDING-REVIEW`; resolving them emits
+`intent_debate_packet_resolved` events and does not auto-merge Record content.
 
 ---
 

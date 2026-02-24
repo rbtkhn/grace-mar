@@ -10,6 +10,7 @@
 | **Narrative & differentiation** | [WHITE-PAPER](WHITE-PAPER.md) | Full story, positioning, technical model. |
 | **Business** | [BUSINESS-PROSPECTUS](BUSINESS-PROSPECTUS.md), [BUSINESS-ROADMAP](BUSINESS-ROADMAP.md) | Market, revenue, roadmap. |
 | **Implementation** | [AGENTS](../AGENTS.md), [ARCHITECTURE](ARCHITECTURE.md) | Guardrails for AI and developers; system design. |
+| **Intent schema** | [INTENT-TEMPLATE](INTENT-TEMPLATE.md) | Machine-readable goal hierarchy, trade-offs, and escalation rules. |
 
 **Hierarchy:** The protocol (IDENTITY-FORK-PROTOCOL) is the thing to implement. CORE is governance. CONCEPTUAL-FRAMEWORK and DESIGN-NOTES interpret and explain intent. WHITE-PAPER and prospectus are narrative and business.
 

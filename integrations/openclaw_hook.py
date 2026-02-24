@@ -41,6 +41,7 @@ def _collect_export_files(out_dir: Path, fmt: str) -> list[Path]:
         "USER.json",
         "manifest.json",
         "llms.txt",
+        "intent_snapshot.json",
         "OPENCLAW-PRP.txt",
         "fork-export.json",
     }
@@ -63,6 +64,17 @@ def _emit_openclaw_event(user_id: str, out_dir: Path, fmt: str, files: list[Path
     ]
     if hashes:
         extras.append(f"file_hashes={hashes}")
+    intent_path = out_dir / "intent_snapshot.json"
+    if intent_path.exists():
+        extras.append(f"constitution_sha256={_sha256(intent_path)}")
+        try:
+            intent = json.loads(intent_path.read_text(encoding="utf-8"))
+            if isinstance(intent, dict):
+                extras.append(f"constitution_ok={str(bool(intent.get('ok'))).lower()}")
+                rules = intent.get("tradeoff_rules") or []
+                extras.append(f"constitution_rule_count={len(rules) if isinstance(rules, list) else 0}")
+        except Exception:
+            extras.append("constitution_ok=false")
     if error:
         extras.append(f"error={error[:240]}")
     subprocess.run(

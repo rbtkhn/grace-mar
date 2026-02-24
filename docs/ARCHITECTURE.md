@@ -131,8 +131,29 @@ Skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. E
 | Module | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
-| **READ** | Intake, comprehension | Books read, summaries, interpretations |
+| **READ** | Intake, comprehension (multimodal) | Text, video, music/audio, images/diagrams/maps, mixed media; summaries and interpretations |
 | **BUILD** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content with audience, things built, drawings, inventions, budgeting |
+
+### Semi-Independent Executor Policy
+
+READ/WRITE/BUILD may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate.
+
+| Executor | Primary objective | SELF input emphasis | Default posture |
+|----------|-------------------|---------------------|-----------------|
+| **READ** | Perception and comprehension fidelity | IX-B Curiosity first, IX-A Knowledge second, IX-C Personality third | Explore broadly; abstain when evidence is thin |
+| **WRITE** | Expression and explanation in-character | IX-C Personality first, IX-A Knowledge second, IX-B Curiosity third | Preserve voice and tone; avoid unsupported claims |
+| **BUILD** | Planning, execution, and deliverable quality | IX-A Knowledge first, IX-C Personality second, IX-B Curiosity third | Favor explicit constraints, trade-offs, and escalation |
+
+Shared constraints for all three:
+- stage-only authority (never merge),
+- evidence-linked output,
+- knowledge boundary compliance,
+- conflict resolution through user approval.
+
+READ-specific capture contract (normative):
+- treat READ as media-agnostic (not text-only),
+- record input modality and source/artifact reference in activity evidence,
+- evaluate comprehension/inference per modality, then route profile-relevant signals through the same gated pipeline.
 
 ### Structure
 
@@ -664,6 +685,17 @@ Grace-Mar shares conceptual DNA with other patterns: **multi-agent debate before
 ## Emulation Layer
 
 The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The pilot supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality. **Teaching/tutoring** is one of the Voice's functions: it answers questions, explains concepts, and helps the user learn — in-character, at the Record's Lexile level, and within the knowledge boundary.
+
+### READ/WRITE Refinement in Emulation
+
+For Jaynes-aligned bicameral clarity:
+
+- `READ` is the intake function that processes text, video, music/audio, images, and mixed media into evidence-linked signals.
+- Those signals feed the **Record** through the gated pipeline.
+- `WRITE` is the expression function used by the Voice to render responses from the Record.
+- The **Voice** is the interface wrapper around this expression path; it is not identical to `WRITE` by itself.
+
+Canonical flow: **READ -> Record -> WRITE-through-Voice**.
 
 ### The Observation Window Model
 

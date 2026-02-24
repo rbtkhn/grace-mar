@@ -13,11 +13,59 @@ Usage:
 """
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def _prepend_constitution_prefix(out_dir: Path) -> int:
+    """
+    Prepend machine-readable constitution summary to USER.md for OpenClaw.
+    Advisory-only context for downstream agents; does not alter canonical Record.
+    """
+    user_md = out_dir / "USER.md"
+    intent_json = out_dir / "intent_snapshot.json"
+    if not user_md.exists() or not intent_json.exists():
+        return 0
+    try:
+        intent = json.loads(intent_json.read_text(encoding="utf-8"))
+    except Exception:
+        return 0
+    if not isinstance(intent, dict) or not intent.get("ok"):
+        return 0
+    goals = intent.get("goals") or {}
+    rules = intent.get("tradeoff_rules") or []
+    escalations = intent.get("escalation_rules") or []
+    lines = [
+        "## CONSTITUTIONAL CONTEXT (INTENT)",
+        "",
+        "Use these as alignment constraints for downstream reasoning.",
+        f"- primary_goal: {goals.get('primary') or ''}",
+        f"- secondary_goal: {goals.get('secondary') or ''}",
+        f"- tertiary_goal: {goals.get('tertiary') or ''}",
+        f"- tradeoff_rule_count: {len(rules)}",
+    ]
+    if rules:
+        for rule in rules[:5]:
+            lines.append(
+                "- rule "
+                f"{rule.get('id')}: prioritize={rule.get('prioritize') or ''}; "
+                f"deprioritize={rule.get('deprioritize') or ''}; "
+                f"applies_to={','.join(rule.get('applies_to') or ['all'])}; "
+                f"strategy={rule.get('conflict_strategy') or 'escalate_to_human'}"
+            )
+    if escalations:
+        lines.append(f"- escalation_rules: {len(escalations)}")
+    lines.extend(["", "---", ""])
+    prefix = "\n".join(lines)
+    original = user_md.read_text(encoding="utf-8")
+    if "## CONSTITUTIONAL CONTEXT (INTENT)" in original:
+        return 0
+    user_md.write_text(prefix + original, encoding="utf-8")
+    return 0
 
 
 def run_export(
@@ -111,6 +159,23 @@ def run_export(
             )
             if r_fork.returncode != 0:
                 return r_fork.returncode
+
+        # Always provide machine-readable intent surface for OpenClaw consumers.
+        r_intent = subprocess.run(
+            [
+                sys.executable,
+                str(scripts / "export_intent_snapshot.py"),
+                "-u",
+                user_id,
+                "-o",
+                str(out / "intent_snapshot.json"),
+            ],
+            cwd=REPO_ROOT,
+        )
+        if r_intent.returncode != 0:
+            return r_intent.returncode
+        if fmt in {"md", "md+manifest", "json+md", "full-prp"}:
+            _prepend_constitution_prefix(out)
 
     elif target == "intersignal":
         cmd = [

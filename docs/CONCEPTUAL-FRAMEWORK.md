@@ -31,6 +31,7 @@
 **Summary:**
 - The **Record** (fork) = the documented self. Own record, diverging by design. Not emulating the real person.
 - The **Voice** (bot) = the queryable voice of the Record. Observation window and rendered voice: speaks the Record in real-time when the user queries; never speaks unbidden. **Teaching/tutoring** is one of its functions: the Voice answers questions, explains, and helps the user learn, in-character and at the Record's Lexile level.
+- Functional refinement: **READ feeds the Record; WRITE is the expression engine used by the Voice.** Voice remains the interface layer, not equivalent to WRITE alone.
 
 ---
 
@@ -43,6 +44,7 @@
 | **LLM** | External (OpenAI, etc.) | Generates text; constrained by SYSTEM_PROMPT (Record profile) |
 
 **The Voice is not the Record.** The Voice is the interface through which the user interacts with the Record.
+Operational path: **READ -> Record -> WRITE-through-Voice**.
 
 ---
 
