@@ -2,7 +2,8 @@
 """
 Rotate VOICE-ARCHIVE.md when it exceeds size or entry count.
 
-Moves oldest entries to users/<id>/archives/VOICE-ARCHIVE-YYYY-MM.md.
+VOICE-ARCHIVE is gated (appended only on merge). This script rotates the main file
+when it grows large; rotated chunks go to archives/VOICE-ARCHIVE-YYYY-MM.md.
 Keeps the last KEEP_RECENT entries in the main file. Run manually or via cron.
 
 Thresholds:

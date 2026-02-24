@@ -157,9 +157,12 @@ When pipeline candidates are approved, **merge** into all of these together:
 | `users/[id]/EVIDENCE.md` | New activity log entry (ACT-XXXX) |
 | `users/[id]/PENDING-REVIEW.md` | Move candidates from Candidates to Processed |
 | `users/[id]/SESSION-LOG.md` | New session record |
+| `users/[id]/VOICE-ARCHIVE.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/PIPELINE-EVENTS.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
 | **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-abby-prp.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
+
+**Real-time log vs gated archive:** The bot and Mini App append to `users/[id]/SESSION-TRANSCRIPT.md` (raw conversation log for operator continuity). VOICE-ARCHIVE is **not** written in real time; it is appended only when candidates are merged (same gate as SELF/EVIDENCE).
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 

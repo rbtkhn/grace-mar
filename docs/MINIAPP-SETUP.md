@@ -65,16 +65,11 @@ ngrok http 5000
 - **Option A — Blueprint:** Add `render.yaml` to your repo. In Render Dashboard → New → Blueprint, connect the repo. Both the Mini App (web) and the bot (worker) will be created. Set env vars in each service’s Environment tab.
 - **Option B — Manual:** New Web Service, connect repo. Build: `pip install -r requirements.txt`. Start: `python miniapp_server.py`. Set `OPENAI_API_KEY`, and optionally `GITHUB_TOKEN`, `GRACE_MAR_REPO`.
 
-### Archive (optional)
+### Archive (session transcript)
 
-Mini App exchanges are archived to `users/pilot-001/VOICE-ARCHIVE.md`, the same file as Telegram and WeChat (one mind, multiple channels). Render’s filesystem is ephemeral, so the server uses the GitHub API to append to the repo.
+Mini App exchanges are appended to `users/<user>/SESSION-TRANSCRIPT.md` (real-time log, same policy as Telegram). VOICE-ARCHIVE is updated only when candidates are merged via `process_approved_candidates` (gated). No GitHub token is required for archiving.
 
-Set these env vars on Render (or in `.env` locally):
-
-- `GITHUB_TOKEN` — A fine-grained or classic PAT with `contents: write` on the repo
-- `GRACE_MAR_REPO` — Repo in `owner/repo` form (default: `rbtkhn/grace-mar`)
-
-Without them, local dev writes to `users/pilot-001/VOICE-ARCHIVE.md` on disk; on Render, exchanges are not archived.
+On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Mini App is lost between deploys unless you add a separate step to persist it (e.g. push to repo). Local dev writes to disk as usual.
 
 ## 3. Bot (Webhook Mode)
 
@@ -83,7 +78,7 @@ The `render.yaml` blueprint runs the Telegram bot via **webhook** on the miniapp
 - `TELEGRAM_BOT_TOKEN` — from @BotFather (when set, webhook is enabled)
 - `OPENAI_API_KEY`
 - `DASHBOARD_MINIAPP_URL` — your Mini App URL (e.g. `https://grace-mar-miniapp.onrender.com`)
-- `GITHUB_TOKEN` — PAT with `contents: write` (for archiving to VOICE-ARCHIVE.md)
+- Session transcript is written locally; VOICE-ARCHIVE is updated only on merge (no GITHUB_TOKEN needed for archiving).
 
 See [TELEGRAM-WEBHOOK-SETUP](TELEGRAM-WEBHOOK-SETUP.md) for details and migration from polling.
 

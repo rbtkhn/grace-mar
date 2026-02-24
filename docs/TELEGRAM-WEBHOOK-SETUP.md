@@ -31,8 +31,8 @@ The `render.yaml` blueprint configures the miniapp with optional Telegram webhoo
 | `TELEGRAM_BOT_TOKEN` | Yes (for bot) | From @BotFather |
 | `OPENAI_API_KEY` | Yes | For LLM responses |
 | `DASHBOARD_MINIAPP_URL` | No | Q&A Mini App URL for bot menu button (e.g. `https://grace-mar.onrender.com`) |
-| `GITHUB_TOKEN` | No | For archiving to VOICE-ARCHIVE.md |
-| `GRACE_MAR_REPO` | No | Repo for archive (default: rbtkhn/grace-mar) |
+| `GITHUB_TOKEN` | No | Session transcript is local; VOICE-ARCHIVE is updated only on merge. |
+| `GRACE_MAR_REPO` | No | (Unused for archiving; VOICE-ARCHIVE is gated.) |
 
 **Do not** create a separate Background Worker for the bot. The miniapp handles it.
 

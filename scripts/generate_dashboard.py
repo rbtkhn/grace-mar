@@ -274,6 +274,7 @@ def collect_data() -> DashboardData:
     evidence_path = PROFILE_DIR / "EVIDENCE.md"
     skills_path = PROFILE_DIR / "SKILLS.md"
     archive_path = PROFILE_DIR / "VOICE-ARCHIVE.md"
+    session_transcript_path = PROFILE_DIR / "SESSION-TRANSCRIPT.md"
     library_path = PROFILE_DIR / "LIBRARY.md"
     journal_path = PROFILE_DIR / "JOURNAL.md"
 
@@ -282,6 +283,7 @@ def collect_data() -> DashboardData:
     evidence_content = evidence_path.read_text() if evidence_path.exists() else ""
     skills_content = skills_path.read_text() if skills_path.exists() else ""
     archive_content = archive_path.read_text() if archive_path.exists() else ""
+    transcript_content = session_transcript_path.read_text() if session_transcript_path.exists() else ""
     library_content = library_path.read_text() if library_path.exists() else ""
     journal_content = journal_path.read_text() if journal_path.exists() else ""
 
@@ -297,7 +299,7 @@ def collect_data() -> DashboardData:
     personality_samples = seed_personality + personality_ix
     library_entries = parse_library(library_content)
     journal_entries = parse_journal(journal_content)
-    recent = parse_archive(archive_content, limit=15)
+    recent = parse_archive(transcript_content or archive_content, limit=15)
 
     last_activity = "—"
     if pending_path.exists():
