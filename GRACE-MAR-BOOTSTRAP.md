@@ -1,345 +1,124 @@
-# GRACE-MAR-BOOTSTRAP
+# GRACE-MAR BOOTSTRAP
 
-GRACE-MAR · Session Bootstrap
-Use this file to initiate or continue work on GRACE-MAR in any Cursor conversation.
-
----
-
-## QUICK START
-
-**Session continuity checklist (read first, before any action):**
-1. Read **SESSION HANDOFF** below (last session summary)
-2. Read last SESSION-LOG entry
-3. Check PENDING-REVIEW status (any candidates?)
-4. Skim last 1–2 EVIDENCE entries for recent context
-5. Run `git status` — any unpushed changes?
-
-Session continuity supports the feedback loop — sustained direction over time, not one-shot processing.
-
-**If the current conversation is slowing down:** Load this file in a *new* conversation to continue development with fresh context. SESSION HANDOFF captures recent work; the new session picks up from there.
-
-**If using OpenClaw (shared workspace):** See `docs/OPENCLAW-INTEGRATION.md`. Export Record for identity: `python scripts/export_user_identity.py -u pilot-001 -o USER.md`.
-
-When this file is loaded at the start of a conversation, present the user with multiple choice options:
-
-1. **Run session** — Load pilot-001 files, follow `.cursor/rules/grace-mar.mdc`
-2. **Continue development** — Proceed with a task (user specifies)
-3. **Review status** — Summarize current phase, next steps, recent changes
-4. **OpenClaw / shared workspace** — Session continuity across grace-mar + OpenClaw; see `docs/OPENCLAW-INTEGRATION.md`
-5. **Transfer / handoff** — School transfer, export Record for new school; see `docs/PORTABILITY.md`
-6. **Other** — User describes what they need
-
-Wait for the user to choose before proceeding.
+Session bootstrap for continuing Grace-Mar in a new agent conversation.
 
 ---
 
-## PROJECT IDENTITY
+## 1) First-Run Checklist (Do This First)
 
-**Name:** GRACE-MAR
-**Repository:** https://github.com/rbtkhn/grace-mar
-**Status:** Pilot (seeding complete)
-**Current Phase:** POST-SEED — ready for first interactive sessions
+1. Read `AGENTS.md` (guardrails and merge authority rules).
+2. Read `docs/README.md` (document map and hierarchy).
+3. Read `docs/IDENTITY-FORK-PROTOCOL.md` (canonical protocol contract).
+4. Run `git status` and note uncommitted work.
+5. Read `docs/DEVELOPMENT-HANDOFF.md` (current state and next tasks).
 
----
-
-## CORE CONCEPT
-
-A cognitive fork: a versioned, evidence-grounded record of an individual's cognitive development — initialized from a real person at a point in time, growing through curated interactions over a lifetime.
-
-Like a software fork:
-- **Seed** = initial fork (snapshot of the real person)
-- **Each interaction** = a commit on the fork's branch
-- **Divergence** = the fork and the real person grow independently — by design
-- **Optional merge** = new information brought in when the user chooses
-- **Git** = literally the version control mechanism
-
-The fork is not a real-time mirror. It is a living, growing cognitive record — the user's lifetime academic project and archive.
-
-**Conceptual clarity:** See `docs/CONCEPTUAL-FRAMEWORK.md` — fork vs. twin, fork as own entity vs. emulation, terminology for AI parsing.
-
-### Single User, Lifetime System
-
-There is no parent mode and no child mode. There is one user. A parent helps when the user is young. The user grows into full ownership. Learning to use this system is itself a lifelong skill.
+If working on user profile operations, also read:
+- `users/pilot-001/PENDING-REVIEW.md`
+- `users/pilot-001/SELF.md`
+- `users/pilot-001/EVIDENCE.md`
+- `users/pilot-001/PIPELINE-EVENTS.jsonl`
 
 ---
 
-## TWO-MODULE ARCHITECTURE
+## 2) Non-Negotiable Rules
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     COGNITIVE FORK                          │
-├─────────────────────────┬───────────────────────────────────┤
-│         SELF            │            SKILLS                 │
-│   (who they ARE)        │      (what they CAN DO)           │
-├─────────────────────────┼───────────────────────────────────┤
-│ • Personality           │ • READ (comprehension)            │
-│ • Linguistic style      │ • WRITE (expression)              │
-│ • Life narrative        │ • BUILD (creation)                │
-│ • Preferences/values    │                                   │
-│ • Reasoning patterns    │                                   │
-└─────────────────────────┴───────────────────────────────────┘
-```
-
-**SELF** — Accurate record of identity. Evolves slowly. Observed from interaction.
-
-**SKILLS** — Three modules (READ, WRITE, BUILD) that grow through activity. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper) and a "container" with an edge where optimal activities are proposed. BUILD starts from zero; creation/exploration (formerly IMAGINE) is merged into BUILD.
+- Sovereign Merge Rule: **agent may stage; agent may not merge without explicit user approval**.
+- Knowledge boundary: no undocumented facts enter the Record.
+- Evidence linkage: profile claims must trace to evidence artifacts.
+- Record authority: `SELF/SKILLS/EVIDENCE` are canonical; MEMORY is ephemeral.
+- Preserve contradictions with provenance; do not flatten tension.
 
 ---
 
-## THREE MODULES OF SKILLS
+## 3) Current System Snapshot
 
-| Module | What it captures | Example activities |
-|--------|------------------|-------------------|
-| **READ** | Comprehension, vocabulary, knowledge intake | Books read, articles, discussions |
-| **WRITE** | Expression, linguistic production | Journals, stories, messages |
-| **BUILD** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content for audience, things built, drawings, inventions, scenarios |
+### Product state
+- Pilot active (`pilot-001`), gated pipeline live.
+- Telegram bot operational with operator tooling (`/status`, `/intent_audit`, `/intent_review`).
+- Intent layer active (`INTENT` schema + snapshot export + advisory conflict detection).
+- OpenClaw integration supports outbound export and inbound stage-only handback.
 
----
-
-## KEY PRINCIPLES
-
-### Evidence Grounding Principle
-The system references the user's own evidence:
-- Reference their actual work and data
-- Connect new activities to prior evidence
-- Never invent experiences
-
-### Container Edge Principle
-Propose activities at the boundary of current capability:
-- INSIDE container → use as foundation
-- AT THE EDGE → propose activities here (optimal)
-- OUTSIDE container → avoid (too advanced)
-
-### Expansion Principle (Anti-Echo-Chamber)
-The fork records accurately but must not create an echo chamber:
-- Introduce adjacent concepts and alternative perspectives
-- Do not merely validate existing beliefs
-- The fork is a record with windows, not walls
-
-### Cognitive Augmentation Warning
-The fork records cognition, not replaces it:
-- Users must still do the cognitive work
-- Encourage retrieval practice
-- The fork is a record, not an oracle
-
-### Accurate Recording
-Record the real user, not an idealized version:
-- Include quirks and imperfections
-- Capture them as they are
-- History is preserved, not overwritten
-
-### Optional Emulation (Future)
-The fork accumulates enough data to optionally emulate the user — answering queries in their voice. This is a future feature, not the core identity. The core is the record.
-
-### Pipeline as Cybernetic Loop (Wiener / 5000 Days)
-The gated pipeline is a self-correcting feedback loop: human provides input (conversation, "we did X"), system stages candidates, human approves, fork updates. Entropy (drift, forgotten details, LLM leak) is countered by feedback. Sustained direction over time, not one-shot processing. Session continuity (review SESSION-LOG, PENDING-REVIEW before starting) closes the loop.
-
-### Five Resurrection Directives (5000 Days Part 12 — Operator Guidance)
-When designing sessions or prompts, consider:
-1. **Feedback loops** — Pipeline as cybernetic circuit; log outcomes, adjust.
-2. **Humane purpose** — Embed values (dignity, connection) in prompts, not just efficiency.
-3. **Tactile reclamation** — Honor physical creation: handwriting, drawing, building. Friction is future luxury.
-4. **Curated message ecosystems** — The fork is a living archive; sessions contribute to it deliberately.
-5. **Vocations machines can't own** — Mentoring, repair, deep inquiry. Design for identity beyond productivity.
+### Recently completed development themes
+- Intent Batch 2/3: cross-agent advisory checks, intent review command, debate packet workflow.
+- OpenClaw hardening: constitution propagation in exports + inbound advisory constitutional checks.
+- Curiosity probe workflow used to stage/merge IX-B growth signals.
 
 ---
 
-## GOVERNANCE HIERARCHY
+## 4) New Conversation Menu
 
-```
-GRACE-MAR-CORE.md (canonical, absolute authority)
-    ↓
-SELF-TEMPLATE.md / SKILLS-TEMPLATE.md / EVIDENCE-TEMPLATE.md
-    ↓
-users/[id]/SELF.md / SKILLS.md / EVIDENCE.md (instance files)
-```
+When loaded in a fresh session, offer these options:
 
----
+1. **Run session** (chat-first user interaction; no auto-merge)
+2. **Pipeline operations** (stage/review/apply approved candidates)
+3. **Intent governance** (audit/review/debate packet workflows)
+4. **Integrations** (OpenClaw, extension, handback server)
+5. **Business docs** (plan/prospectus/white-paper alignment)
+6. **Other** (user-defined task)
 
-## EVIDENCE TIERS
-
-| Tier | Type | Authority |
-|------|------|-----------|
-| 1 | CERTIFIED | External formal verification |
-| 2 | VERIFIED | Live demonstration, proctored |
-| 3 | ATTESTED | Parent/teacher confirmation |
-| 4 | OBSERVED | System-captured authentic activity |
-| 5 | REPORTED | User self-reports |
+Wait for user selection before large changes.
 
 ---
 
-## FILE MAP
+## 5) Development Commands (Operator)
 
-```
-grace-mar/
-├── GRACE-MAR-BOOTSTRAP.md      # THIS FILE — session bootstrap
-├── README.md                 # Project overview
-├── .cursor/rules/
-│   └── grace-mar.mdc         # Governance + session protocol (users/**)
-├── docs/
-│   ├── GRACE-MAR-CORE.md     # CANONICAL governance (v2.0)
-│   ├── CONCEPTUAL-FRAMEWORK.md  # Fork vs. twin, emulation, terminology (AI parsing)
-│   ├── CHAT-FIRST-DESIGN.md     # Design principles for Telegram/chat constraint (bounded sessions, one-tap, Record felt not seen)
-│   ├── OPENCLAW-INTEGRATION.md  # OpenClaw integration (Record as identity, session continuity, staging)
-│   ├── PORTABILITY.md           # School transfer, ownership, handoff workflow
-│   ├── INSTANCES-AND-RELEASE.md # Instances of Record/Voice as independent actors; canonical instance; invariant 34
-│   ├── SIMPLE-USER-INTERFACE.md # Chat workflow for families (no GitHub)
-│   ├── ADMISSIONS-LINK-USE-CASE.md # Share link for admissions/employers to chat with fork
-│   ├── PRIVACY-REDACTION.md        # School/public views, redaction policy
-│   ├── YOUTUBE-PLAYLIST-DESIGN.md  # Playlist building, watched-video detection (history polling)
-│   ├── DESIGN-ROADMAP.md     # Product/feature design (email, newsletters, X account)
-│   ├── BUSINESS-ROADMAP.md   # Strategy, monetization, child safety & privacy
-│   ├── DESIGN-NOTES.md       # White paper & business proposal input (positioning, insights)
-│   ├── PORTABLE-RECORD-PROMPT.md    # Portable Record Prompt — voice, knowledge, personality (pasteable into any LLM)
-│   ├── MARKET-RESEARCH-ALPHA-KHAN.md  # Alpha alternatives, Khan Academy, cost comparison
-│   ├── PARENT-BRIEF.md       # Parent/guardian brief (pre-survey)
-│   ├── ARCHITECTURE.md       # Module design
-│   ├── SELF-TEMPLATE.md      # SELF module governance
-│   ├── SKILLS-TEMPLATE.md    # SKILLS module governance
-│   ├── EVIDENCE-TEMPLATE.md  # Evidence storage governance
-│   ├── JOURNAL-SCHEMA.md    # Journal (daily highlights) governance
-│   ├── CONCEPT.md            # Full concept explanation
-│   ├── PILOT-PLAN.md         # Pilot structure
-│   └── ...                   # Supporting docs
-├── scripts/
-│   ├── export_fork.py        # Full fork export (JSON)
-│   ├── export_user_identity.py  # Record → USER.md / SOUL.md for OpenClaw
-│   ├── export_prp.py            # Record → Portable Record Prompt (pasteable into any LLM)
-│   └── export_view.py        # School/public views with redaction
-└── users/
-    └── pilot-001/            # First pilot user (age 6)
-        ├── SELF.md           # Identity record (seeded)
-        ├── SKILLS.md         # Capability record (seeded)
-        ├── EVIDENCE.md       # Activity logs (seeded)
-        ├── SESSION-LOG.md    # Interaction history
-        ├── ARCHIVE.md        # Raw conversation log (private)
-        ├── JOURNAL.md        # Daily highlights (public-suitable)
-        ├── HOMEWORK-LEDGER.jsonl  # Append-only: correct/total per homework session (30 = competency milestone)
-        └── artifacts/        # Raw files (writing samples, artwork)
-```
-
----
-
-## SESSION HANDOFF (latest)
-
-*Update this section at end of each session for clean transfer.*
-
-**Last updated:** 2026-02-22
-
-**This session (PRP + bootstrap + connectivity):**
-- **Elixir → PRP rename:** export_elixir.py → export_prp.py; ELIXIR-PROMPT.md → PORTABLE-RECORD-PROMPT.md
-- **URL bootstrap:** Paste raw PRP URL into web-enabled LLM (ChatGPT, Grok) for one-paste instantiation. Added BOOTSTRAP-URL.txt, grace-mar-abby-prp.txt. Raw URL: https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt
-- **GitHub connectivity vector:** PRP instructs model to search the repo when user asks about Grace-Mar (architecture, pipeline, docs). Key paths in RULES. Supports recursive evolution — PRP stays lightweight, canonical source on GitHub.
-- **PRP refinements:** Menu (A/B/C/D) aligned to Record sections; option E only after 6–8 exchanges; /prp command in Telegram bot
-- **5000 Days Part 14:** Invariant 36 (interregnum chaos, hero's fortification); bicameral dyad (invariant 35, AGENTS, SYSTEM_PROMPT, ANALYST_PROMPT)
-- **Abby prototype:** prototypes/abby-prp.txt; export_prp -n Abby
-- **All changes pushed** (commit 13e1567)
-
-**Next session options:**
-- Continue development — PRP retrieval/routing (personality, curiosity, knowledge, library, archive when needed)
-- Run session per pilot workflow
-- Regenerate grace-mar-abby-prp.txt after Record changes: `python scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt` then commit
-
----
-
-## LAST SESSION SUMMARY (Feb 2026)
-
-**Design / business roadmap:**
-- Split into `docs/DESIGN-ROADMAP.md` (product/feature design) and `docs/BUSINESS-ROADMAP.md` (strategy, monetization, go-to-market)
-- DESIGN-ROADMAP: Grace-Mar email, outbound curated newsletter, inbound newsletter processing, X (Twitter) follow-only account
-- BUSINESS-ROADMAP: positioning, monetization angles, priority items, metrics, risks; **child safety & privacy (COPPA, PII)** moved here (not essential to system operation)
-- `docs/YOUTUBE-PLAYLIST-DESIGN.md`: added Section 7 — Watched Video Detection via history polling (OAuth → poll → filter by recommended → stage → approve → LIBRARY)
-
-**OpenClaw research (pending write-up):**
-- OpenClaw: personal AI assistant, runs on your machine, WhatsApp/Telegram/Discord/Signal/iMessage, persistent memory, skills/plugins, open source. See https://openclaw.ai/
-- Chinese integrations: WeChat Official Account, WeCom (openclaw-plugin-wecom), personal WeChat (openclaw-wechat), DingTalk (dingtalk-openclaw-connector)
-- Grace-Mar already has `docs/OPENCLAW-INTEGRATION.md` — Record as identity, session continuity, staging automation
-- **Next step:** Consider adding DESIGN-ROADMAP entry for OpenClaw + Chinese app integration ideas (WeChat, DingTalk, Xiaohongshu, etc.)
-
----
-
-## CURRENT STATUS
-
-**Completed:**
-- [x] Core concept defined (fork model, v2.0)
-- [x] Two-module architecture (SELF + SKILLS)
-- [x] Three modules (READ, WRITE, BUILD)
-- [x] GRACE-MAR-CORE governance document (v2.0)
-- [x] All templates created (v2.0)
-- [x] Pilot user directory structure
-- [x] Cursor rule for sessions
-- [x] GitHub repository live
-- [x] **Seed Phase 1** — Identity + preferences (parent-reported)
-- [x] **Seed Phase 2** — Personality + behavior (10 MC questions, child-reported)
-- [x] **Seed Phase 3** — Academic/intellectual baselines (20 yes/no, parent-reported)
-- [x] **Seed Phase 4** — Creativity (8 artworks analyzed + child Q&A)
-- [x] **Seed Phase 5** — Writing voice (3 writing samples + child Q&A)
-- [x] **Seed Phase 6** — Personality core (5 targeted questions, child-reported)
-- [x] DESIGN-ROADMAP + BUSINESS-ROADMAP split (email, newsletters, X, child safety)
-- [x] YOUTUBE-PLAYLIST-DESIGN: watched video detection via history polling
-
-**All containers have data. Seeding is complete.**
-
-**Next:**
-- [ ] First interactive session (post-seed)
-- [ ] Begin regular WRITE activities
-- [ ] Begin READ evidence logging
-- [ ] Create age-6 snapshot (git tag)
-- [ ] Optional: OpenClaw + Chinese apps integration design (add to DESIGN-ROADMAP)
-
----
-
-## PILOT USER
-
-**ID:** pilot-001
-**Name:** Grace-Mar (fork name) / Abby (the real child)
-**Age:** 6 years old
-**Phase:** POST-SEED — all 6 seed phases complete
-**Status:** SELF populated (identity, personality, linguistic style, interests, values), SKILLS populated (READ, WRITE, BUILD), EVIDENCE populated (8 artworks, 3 writing samples, media log)
-
----
-
-## SESSION WORKFLOW
-
-1. **Load user files** — SELF.md, SKILLS.md, EVIDENCE.md
-2. **Check SESSION-LOG.md** — What happened last time?
-3. **Greet** — Use their name, reference prior session
-4. **Interact** — Follow their interests, propose activities at the edge
-5. **Capture** — Log new activities, skills, preferences
-6. **Commit** — `git add && git commit && git push`
-
----
-
-## IMMUTABILITY RULES
-
-- Activities (EVIDENCE) are immutable once captured
-- Claims (SKILLS) may upgrade, never downgrade or delete
-- SELF components may update but history is preserved
-- Git commits = audit trail
-- Snapshots via git tags (age-based)
-
----
-
-## COMMANDS
-
-**Check status:**
+### Health and status
 ```bash
 git status
+python3 scripts/metrics.py
+python3 scripts/session_brief.py --user pilot-001
 ```
 
-**After session updates:**
+### Pipeline merge (receipt-based)
 ```bash
-git add users/pilot-001/*
-git commit -m "Session [DATE]: [summary]"
-git push origin main
+python3 scripts/process_approved_candidates.py --user pilot-001 --generate-receipt /tmp/receipt.json --approved-by <name>
+python3 scripts/process_approved_candidates.py --user pilot-001 --apply --approved-by <name> --receipt /tmp/receipt.json
 ```
 
-**Create age snapshot:**
+### Intent and integrity
 ```bash
-git tag pilot-001-age-6
-git push origin --tags
+python3 scripts/export_intent_snapshot.py --user pilot-001
+python3 scripts/validate-integrity.py --user pilot-001 --json
+python3 scripts/governance_checker.py
+```
+
+### OpenClaw
+```bash
+python3 integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emit-event
+python3 integrations/openclaw_stage.py --user pilot-001 --text "we explored X in OpenClaw"
+```
+
+### PRP refresh (after profile/prompt updates)
+```bash
+python3 scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt
 ```
 
 ---
 
-END OF BOOTSTRAP — GRACE-MAR v2.0
+## 6) Primary File Map
+
+- `AGENTS.md` — development guardrails and policy.
+- `docs/README.md` — canonical doc map.
+- `docs/IDENTITY-FORK-PROTOCOL.md` — protocol compact.
+- `docs/ARCHITECTURE.md` — system implementation model.
+- `docs/WHITE-PAPER.md` — narrative + technical thesis.
+- `docs/BUSINESS-PLAN.md` — execution/commercial operating plan.
+- `docs/BUSINESS-PROSPECTUS.md` — concise investor summary.
+- `docs/BUSINESS-ROADMAP.md` — strategic priorities and metrics.
+- `docs/DEVELOPMENT-HANDOFF.md` — latest engineering handoff.
+- `users/pilot-001/*` — active pilot Record files.
+
+---
+
+## 7) End-of-Session Handoff Rule
+
+Before ending a development session:
+
+1. Update `docs/DEVELOPMENT-HANDOFF.md` with what changed and what is next.
+2. Ensure PRP is regenerated if Record/prompt changed.
+3. Run integrity/governance checks if changes touched pipeline logic.
+4. Confirm commit/push status if the user requested version control actions.
+
+---
+
+END OF FILE — GRACE-MAR BOOTSTRAP
