@@ -26,6 +26,20 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 
 ---
 
+## Operating Modes
+
+Distinct modes govern what the agent may do. Avoid mixing them.
+
+| Mode | Purpose | Agent behavior |
+|------|---------|----------------|
+| **Session** | Interactive conversation with user | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
+| **Pipeline** | Process staged candidates | Detect signals, stage to PENDING-REVIEW, or process approved candidates into SELF/EVIDENCE/prompt. |
+| **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
+
+When in doubt, default to Session (conversational, no merges).
+
+---
+
 ## Critical Rules
 
 ### 1. Knowledge Boundary — Never Leak LLM Knowledge
@@ -54,6 +68,11 @@ The system has a **user** and a **fork**. There is no "parent mode" or "child mo
 ### 5. Immutability
 
 - EVIDENCE entries are immutable once captured
+
+### 5a. Contradiction Preservation
+
+When evidence or self-reports conflict (e.g., multiple self-descriptions, opposing observations), preserve both with provenance — do not force resolution. Record tensions; do not flatten them for narrative smoothness.
+
 - SKILLS claims may upgrade, never downgrade or delete
 - SELF components may update but history is preserved
 - Git history is the audit trail
@@ -136,8 +155,11 @@ When pipeline candidates are approved, **merge** into all of these together:
 | `users/[id]/SESSION-LOG.md` | New session record |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/PIPELINE-EVENTS.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
+| **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-abby-prp.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
+
+**Post-merge PRP refresh:** After merging into SELF, EVIDENCE, or prompt, run the export script. If the output differs from the committed PRP file, commit the update. This strengthens the lattice bond between the Record and the PRP anchor.
 
 **Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: user` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the user requests it.
 

@@ -1087,6 +1087,97 @@ activities:
     summary: "Handwritten narrative of visit to Casa Bonita — sliders for lunch, play, face painting, puppet show."
     curated_by: user
     evidence_tier: 4  # OBSERVED — actual artifact
+
+  - id: ACT-0022
+    date: 2026-02-23
+    modality: structured assessment (KBCP)
+    activity_type: knowledge — KBCP calibration probe (learning moment)
+    mind_category: knowledge
+    source: KBCP-003 (Knowledge Boundary Calibration Probe)
+    question: "Who wrote the music for Swan Lake?"
+    answer_given: "Tchaikovsky"
+    proposed_entry: "Swan Lake is a ballet by Tchaikovsky — same composer as The Nutcracker."
+    notes: "Grace-Mar answered correctly. User requested staging for pipeline approval — treat correct factual answers in KBCP as learning moments."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0023
+    date: 2026-02-23
+    modality: structured assessment (KBCP)
+    activity_type: knowledge — KBCP calibration probe (learning moment)
+    mind_category: knowledge
+    source: KBCP-002 (Knowledge Boundary Calibration Probe)
+    question: "Who was the second president of the United States?"
+    answer_given: "John Adams"
+    proposed_entry: "John Adams was the 2nd president of the United States."
+    notes: "Grace-Mar answered correctly. Staged for pipeline approval per KBCP learning-moment policy."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0024
+    date: 2026-02-23
+    modality: structured assessment (KBCP)
+    activity_type: knowledge — KBCP calibration probe (learning moment)
+    mind_category: knowledge
+    source: KBCP-005 (Knowledge Boundary Calibration Probe)
+    question: "What happens in Land Before Time 2?"
+    answer_given: "Littlefoot meets a new friend named Chomper"
+    proposed_entry: "Land Before Time 2 — Littlefoot meets a new friend named Chomper."
+    notes: "Grace-Mar answered correctly. Sequel not previously in profile. Staged for pipeline approval."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0025
+    date: 2026-02-23
+    modality: structured assessment (KBCP)
+    activity_type: knowledge — KBCP calibration probe (learning moment)
+    mind_category: knowledge
+    source: KBCP-007 (Knowledge Boundary Calibration Probe)
+    question: "Where is the Tomb of Pakal?"
+    answer_given: "Palenque, Mexico"
+    proposed_entry: "The Tomb of Pakal is in Palenque, Mexico."
+    notes: "Grace-Mar answered correctly. Tomb of Pakal (Mayan) in profile; location not. Staged for pipeline approval."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0026
+    date: 2026-02-23
+    modality: structured assessment (KBCP)
+    activity_type: knowledge — KBCP calibration probe (learning moment)
+    mind_category: knowledge
+    source: KBCP-009 (Knowledge Boundary Calibration Probe)
+    question: "What's the hardest gemstone?"
+    answer_given: "Diamond"
+    proposed_entry: "Diamond is the hardest gemstone."
+    notes: "Grace-Mar answered correctly. Favorite gemstone (diamond) in profile; hardness property not. Staged for pipeline approval."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0028
+    date: 2026-02-23
+    modality: video (YouTube)
+    activity_type: media — bedtime / calming
+    mind_category: curiosity
+    source: user report — "Debussy is perfect for bedtime"
+    url: "https://www.youtube.com/watch?v=KuGrV0ADzOQ"
+    title: "The Best of Debussy / Classical Piano Music"
+    description: "2-hour Debussy piano collection (Clair de lune, Arabesque, Reverie, etc.). Used for bedtime; described as perfect for that."
+    notes: "Aligns with classical music interest. Mind-shaping, return-worthy."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0027
+    date: 2026-02-23
+    modality: video (YouTube)
+    activity_type: media — watched frequently
+    mind_category: curiosity
+    source: user report — "we have been watching this sublime video a lot recently"
+    url: "https://www.youtube.com/watch?v=hfzAXUkzlMo"
+    title: "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale"
+    description: "Bolshoi Ballet performance of Coppélia finale; Natalia Osipova. User described as sublime; watched a lot recently."
+    notes: "Aligns with documented ballet interest (Nutcracker, Swan Lake). Coppélia story already in LIBRARY (ballet stories)."
+    curated_by: user
+    evidence_tier: 3
 ```
 
 ---
@@ -1114,7 +1205,7 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 21
+total_activities: 28
 total_read_entries: 0
 total_write_entries: 5
 total_create_entries: 8
@@ -1122,7 +1213,7 @@ total_media_entries: 8
 total_attestations: 0
 last_activity: 2026-02-23
 last_update: 2026-02-23
-update_source: Operator-submitted writing sample WRITE-0005 (Casa Bonita visit — ACT-0021)
+update_source: Coppélia video engagement (ACT-0027)
 ```
 
 ---

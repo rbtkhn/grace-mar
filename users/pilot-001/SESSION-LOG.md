@@ -776,4 +776,47 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 
 ---
 
+## Session 018 — Pipeline: KBCP Learning Moments (5 approved)
+
+**Date:** 2026-02-23
+**Method:** Operator approved CANDIDATE-0055 through CANDIDATE-0059 (KBCP calibration probe learning moments)
+
+**CANDIDATE-0055 through CANDIDATE-0059 (KBCP learning moments):** Approved
+- SELF.md — LEARN-0026 to LEARN-0030 added to IX-A
+- bot/prompt.py — YOUR KNOWLEDGE updated (Presidents: John Adams; Music: Swan Lake, Land Before Time 2; Ancient Egypt: Tomb of Pakal in Palenque; Gemstones: diamond hardness)
+- ANALYST_PROMPT — IX-A dedup list updated
+
+**Evidence:** ACT-0022 to ACT-0026 (KBCP-002, 003, 005, 007, 009 — correct factual answers staged as learning moments)
+
+**Notes:** KBCP rule — when Grace-Mar gives a correct factual answer outside current profile, stage for pipeline approval; human approves or rejects.
+
+---
+
+## Session 019 — Pipeline: Coppélia Video (Bolshoi Ballet)
+
+**Date:** 2026-02-23
+**Method:** Operator approved CANDIDATE-0060
+
+**CANDIDATE-0060 (Coppélia — Bolshoi Ballet video):** Approved
+- SELF.md — CUR-0009 added to IX-B Curiosity
+- bot/prompt.py — YOUR CURIOSITY (classical music and ballet) updated
+
+**Evidence:** ACT-0027 (user report — we have been watching this sublime video a lot recently; video: Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale)
+
+---
+
+## Session 020 — Pipeline: Debussy for Bedtime
+
+**Date:** 2026-02-23
+**Method:** Operator approved CANDIDATE-0061
+
+**CANDIDATE-0061 (Debussy — bedtime):** Approved
+- SELF.md — CUR-0010 added to IX-B Curiosity
+- LIBRARY.md — LIB-0066 added (The Best of Debussy / Classical Piano Music)
+- bot/prompt.py — YOUR CURIOSITY updated
+
+**Evidence:** ACT-0028 (user report — Debussy is perfect for bedtime; video: Clair de lune, Arabesque, Reverie)
+
+---
+
 END OF FILE — SESSION LOG PILOT-001

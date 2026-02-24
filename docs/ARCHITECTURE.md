@@ -614,6 +614,49 @@ Tags preserve the exact state at that point in time.
 
 ---
 
+## Lattice Model
+
+The system can be viewed as a **lattice**: nodes (data and components) connected by bonds (flows, pipelines, linkages). The **PRP URL** serves as the primary **anchor** — a single, stable public entry point for instantiation.
+
+### Nodes
+
+| Node | Role |
+|------|------|
+| **SELF** | Identity, IX-A/B/C, voice, personality |
+| **SKILLS** | Capability containers (READ, WRITE, BUILD) |
+| **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
+| **LIBRARY** | Curated lookups (books, videos) for the bot |
+| **PENDING-REVIEW** | Staging area before merge |
+| **prompt.py** | Emulation prompt (SYSTEM, ANALYST, LOOKUP, REPHRASE) |
+| **CMC** | Lookup engine (LIBRARY → CMC → LLM) |
+| **PRP** | Portable Record Prompt — pasteable identity for any LLM |
+| **Telegram / WeChat** | Bot adapters (observation window) |
+
+### Bonds
+
+| Bond | Flow |
+|------|------|
+| **Pipeline** | Signal detection → PENDING-REVIEW → user approval → merge into SELF, EVIDENCE, prompt |
+| **PRP refresh** | Merge triggers `export_prp` → PRP file updated → anchor stays in sync with Record |
+| **Lookup flow** | User question → LIBRARY → CMC → LLM → rephrased answer |
+| **Evidence linkage** | EVIDENCE entries reference SELF; RECENT in PRP pulls from EVIDENCE |
+| **PRP → GitHub** | GITHUB CONNECTIVITY in PRP: model searches repo for system design, governance |
+
+### The Anchor
+
+The PRP URL (e.g. `https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt`) is the **anchor**: one-fetch instantiation, portable, refreshable. The anchor stays fixed; the lattice grows as SELF, EVIDENCE, LIBRARY, and SKILLS evolve. Post-merge PRP refresh keeps the anchor aligned with the Record.
+
+### Two Instantiation Paths
+
+| Path | What the model has |
+|------|--------------------|
+| **PRP URL only** | Persona (VOICE, KNOWLEDGE, CURIOSITY, PERSONALITY, RECENT) + GitHub search for system questions. No LIBRARY, no CMC. |
+| **Telegram / WeChat bot** | Full persona + LIBRARY → CMC lookup flow. Complete lattice access. |
+
+PRP-only is lightweight and pasteable anywhere; the bot offers the full observation-window experience. See [PORTABLE-RECORD-PROMPT](PORTABLE-RECORD-PROMPT.md).
+
+---
+
 ## Emulation Layer
 
 The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The pilot supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality. **Teaching/tutoring** is one of the Voice's functions: it answers questions, explains concepts, and helps the user learn — in-character, at the Record's Lexile level, and within the knowledge boundary.
@@ -726,7 +769,7 @@ The analyst (automated or manual) detects three categories of signal:
 1. **Signal detection** — Identify profile-relevant information in the input
 2. **Candidate staging** — Write structured candidates to `PENDING-REVIEW.md` with analysis and recommendations
 3. **User review** — User approves, rejects, or modifies each candidate
-4. **Integration** — Approved candidates are merged into `SELF.md` (profile), `EVIDENCE.md` (evidence log), `bot/prompt.py` (emulation prompt), and `SESSION-LOG.md` (history)
+4. **Relay to record** — Approved candidates are merged into `SELF.md` (profile), `EVIDENCE.md` (evidence log), `bot/prompt.py` (emulation prompt), and `SESSION-LOG.md` (history). This step is the **relay**: raw input has been gated and now crosses into the permanent Record.
 
 ### Candidate Structure
 

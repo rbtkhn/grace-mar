@@ -581,6 +581,51 @@ entries:
     her_understanding: "Places in space where gravity is super strong and pulls everything in, even light. Like a big invisible vacuum."
     evidence_id: ACT-0016
     curated_by: user
+
+  - id: LEARN-0026
+    date: 2026-02-23
+    topic: "Swan Lake — ballet by Tchaikovsky"
+    source: KBCP-003 (Knowledge Boundary Calibration Probe)
+    her_understanding: "Swan Lake is a ballet by Tchaikovsky, same composer as The Nutcracker."
+    evidence_id: ACT-0022
+    curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0027
+    date: 2026-02-23
+    topic: "John Adams — 2nd president"
+    source: KBCP-002 (Knowledge Boundary Calibration Probe)
+    her_understanding: "John Adams was the 2nd president of the United States."
+    evidence_id: ACT-0023
+    curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0028
+    date: 2026-02-23
+    topic: "Land Before Time 2 — Littlefoot meets Chomper"
+    source: KBCP-005 (Knowledge Boundary Calibration Probe)
+    her_understanding: "Land Before Time 2 — Littlefoot meets a new friend named Chomper."
+    evidence_id: ACT-0024
+    curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0029
+    date: 2026-02-23
+    topic: "Tomb of Pakal — location Palenque, Mexico"
+    source: KBCP-007 (Knowledge Boundary Calibration Probe)
+    her_understanding: "The Tomb of Pakal is in Palenque, Mexico."
+    evidence_id: ACT-0025
+    curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0030
+    date: 2026-02-23
+    topic: "Diamond — hardest gemstone"
+    source: KBCP-009 (Knowledge Boundary Calibration Probe)
+    her_understanding: "Diamond is the hardest gemstone."
+    evidence_id: ACT-0026
+    curated_by: user
+    provenance: human_approved
 ```
 
 ### IX-B. CURIOSITY
@@ -670,6 +715,28 @@ entries:
     evidence_id: ACT-0020
     provenance: human_approved
     source: wisdom_elicitation
+
+  - id: CUR-0009
+    date: 2026-02-23
+    topic: "Coppélia — Bolshoi Ballet video (Natalia Osipova)"
+    trigger: "User report — we have been watching this sublime video a lot recently"
+    response_signal: "Watching Coppélia finale (Bolshoi Ballet, Natalia Osipova) frequently; described as sublime"
+    intensity: 4
+    evidence_id: ACT-0027
+    curated_by: user
+    provenance: human_approved
+    notes: "YouTube video watched a lot recently. Aligns with ballet interest; Coppélia story in LIBRARY."
+
+  - id: CUR-0010
+    date: 2026-02-23
+    topic: "Debussy — classical piano for bedtime"
+    trigger: "User report — Debussy is perfect for bedtime"
+    response_signal: "Debussy classical piano (Clair de lune, Arabesque, Reverie) used for bedtime/calming"
+    intensity: 4
+    evidence_id: ACT-0028
+    curated_by: user
+    provenance: human_approved
+    notes: "YouTube video; aligns with classical music interest. Mind-shaping, return-worthy."
 ```
 
 ### IX-C. PERSONALITY (Observed)

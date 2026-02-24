@@ -1,6 +1,6 @@
 # LIBRARY — PILOT-001
 
-Grace-Mar's approved lookup sources. Queries this list first before falling back to full LLM lookup.
+A record of what has shaped the mind and what we might want to return to. Books, reference works, videos — for lookup when answering questions, and as a catalog of influential and return-worthy media.
 
 **Schema:** [docs/LIBRARY-SCHEMA.md](../../docs/LIBRARY-SCHEMA.md)
 
@@ -708,6 +708,39 @@ entries:
     scope: [ballet, dance, stories]
     source: manual
     added_at: 2026-02-22
+
+  - id: LIB-0064
+    title: "Civilization Memory Codex"
+    type: reference
+    status: active
+    read_status: unread
+    scope: [civilizational history, Rome, China, ancient civilizations, Anglia, strategy, history, politics, culture]
+    source: url
+    pd_url: "https://github.com/rbtkhn/civilization_memory"
+    added_at: 2026-02-23
+    notes: "Structured corpus for civilizational history and strategy. Query via cmc-index-search or CMC Console. Parent-approved external source for historical/cultural/political lookup."
+
+  - id: LIB-0065
+    title: "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale"
+    type: video
+    status: active
+    read_status: read
+    scope: [ballet, Coppélia, Bolshoi, Natalia Osipova, dance]
+    source: url
+    url: "https://www.youtube.com/watch?v=hfzAXUkzlMo"
+    added_at: 2026-02-23
+    notes: "Watched a lot recently; described as sublime. Record of what shaped the mind; return-worthy."
+
+  - id: LIB-0066
+    title: "The Best of Debussy / Classical Piano Music"
+    type: video
+    status: active
+    read_status: read
+    scope: [Debussy, classical music, piano, Clair de lune, bedtime, calming]
+    source: url
+    url: "https://www.youtube.com/watch?v=KuGrV0ADzOQ"
+    added_at: 2026-02-23
+    notes: "Perfect for bedtime. Record of what shaped the mind; return-worthy."
 ```
 
 ---
@@ -715,8 +748,8 @@ entries:
 ## Metadata
 
 ```yaml
-total_entries: 63
-last_updated: 2026-02-22
+total_entries: 66
+last_updated: 2026-02-23
 ```
 
 ---

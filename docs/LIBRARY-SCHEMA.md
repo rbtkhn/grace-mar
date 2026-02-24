@@ -1,6 +1,10 @@
 # LIBRARY Schema
 
-**Purpose:** Governs the LIBRARY component — the prioritized list of books/sources Grace-Mar must query first when answering questions. Only if the answer is not found in LIBRARY does the system fall back to full LLM lookup or web search.
+**Purpose:** Governs the LIBRARY component — a record of what has shaped the mind and what we might want to return to in future media consumption.
+
+**Dual role:**
+1. **Lookup** — Books, reference works, and media Grace-Mar can draw on when answering questions. The system queries LIBRARY first before falling back to CMC or full LLM lookup.
+2. **Mind-shaping record** — A catalog of influential and return-worthy media: books, videos, references. What entered awareness; what to revisit.
 
 **See also:** [ARCHITECTURE.md](ARCHITECTURE.md), [ID-TAXONOMY.md](ID-TAXONOMY.md), EVIDENCE § I. READING LIST
 
@@ -11,9 +15,9 @@
 | Component | Purpose |
 |-----------|---------|
 | **EVIDENCE Reading List (READ-*)** | Books Grace-Mar has *consumed* — evidence of what she's read |
-| **LIBRARY** | Approved sources for *lookup* — what she can query when answering questions |
+| **LIBRARY** | Record of what shaped the mind + lookup sources. Books, reference works, videos. What to query for answers; what to come back to. |
 
-A book can appear in both. LIBRARY can also include reference sources she hasn't read but are parent-approved for lookup (e.g., encyclopedia, science reference).
+A book can appear in both. LIBRARY includes lookup sources (encyclopedias, story collections, CMC) and media that shaped the mind (videos watched, performances).
 
 ---
 
@@ -27,7 +31,7 @@ entries:
     title: "Example Book Title"
     author: "Author Name"
     isbn: ""                      # optional: 10- or 13-digit ISBN (for lookup, disambiguation)
-    type: book                    # book | story | article | reference | other
+    type: book                    # book | story | article | reference | video | other
     volume: ""                    # for type: story — the volume that contains this story
     status: active                # active | deprecated
     scope: []                     # optional: topics this source covers (for query routing)
@@ -49,7 +53,7 @@ entries:
 | **title** | Yes | Full title |
 | **author** | No | Author or editor (omit for reference works) |
 | **isbn** | No | 10- or 13-digit ISBN (with or without hyphens). Use for catalog lookups, disambiguation, future RAG. Older or non-trade books may omit. |
-| **type** | Yes | `book`, `story`, `article`, `reference`, `other` |
+| **type** | Yes | `book`, `story`, `article`, `reference`, `video`, `other` |
 | **volume** | No | For `type: story` — the book/collection that contains this story (e.g. "Usborne Illustrated Grimm's Fairy Tales") |
 | **status** | Yes | `active` (queryable) or `deprecated` (excluded from lookup) |
 | **scope** | No | List of topics (e.g. `[space, science, animals]`) for query routing |
@@ -79,9 +83,11 @@ entries:
 
 When Grace-Mar receives a "look it up" request (Telegram bot):
 
-1. **Query LIBRARY** (active entries only) — LLM checks if question can be answered from LIBRARY books by scope
+1. **Query LIBRARY** (active entries only) — LLM checks if question can be answered from LIBRARY sources (books, reference, video scope) by scope
 2. **If found** → Answer from LIBRARY, rephrase in Grace-Mar's voice (REPHRASE_PROMPT)
-3. **If not found** (LIBRARY_MISS) → Fall back to full LOOKUP_PROMPT, then REPHRASE
+3. **If not found** (LIBRARY_MISS) → Fall back to CMC, then full LOOKUP_PROMPT, then REPHRASE
+
+Videos in LIBRARY contribute scope for routing (e.g. Coppélia video → ballet questions); the LLM draws on documented knowledge of that content.
 
 ---
 

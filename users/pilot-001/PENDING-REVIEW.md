@@ -23,6 +23,83 @@
 
 ## Processed
 
+### CANDIDATE-0061 (Debussy — bedtime / classical piano)
+
+```yaml
+status: approved
+mind_category: curiosity
+signal_type: we_did / media_engagement
+source: user report — "Debussy is perfect for bedtime"
+evidence: ACT-0028
+action: CUR-0010 added to IX-B; LIB-0066 added to LIBRARY; bot/prompt.py YOUR CURIOSITY updated
+```
+
+### CANDIDATE-0060 (Coppélia — Bolshoi Ballet video)
+
+```yaml
+status: approved
+mind_category: curiosity
+signal_type: we_did / media_engagement
+source: user report — "we have been watching this sublime video a lot recently"
+evidence: ACT-0027
+action: CUR-0009 added to IX-B; bot/prompt.py YOUR CURIOSITY updated
+```
+
+### CANDIDATE-0059 (KBCP-009 — Diamond hardness)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: kbcp_learning_moment
+source: KBCP-009 (Knowledge Boundary Calibration Probe)
+evidence: ACT-0026
+action: LEARN-0030 added to IX-A; bot/prompt.py YOUR KNOWLEDGE (gemstones) updated
+```
+
+### CANDIDATE-0058 (KBCP-007 — Tomb of Pakal location)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: kbcp_learning_moment
+source: KBCP-007 (Knowledge Boundary Calibration Probe)
+evidence: ACT-0025
+action: LEARN-0029 added to IX-A; bot/prompt.py YOUR KNOWLEDGE (Ancient Egypt) updated
+```
+
+### CANDIDATE-0057 (KBCP-005 — Land Before Time 2 / Chomper)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: kbcp_learning_moment
+source: KBCP-005 (Knowledge Boundary Calibration Probe)
+evidence: ACT-0024
+action: LEARN-0028 added to IX-A; bot/prompt.py YOUR KNOWLEDGE (Music and stories) updated
+```
+
+### CANDIDATE-0056 (KBCP-002 — John Adams)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: kbcp_learning_moment
+source: KBCP-002 (Knowledge Boundary Calibration Probe)
+evidence: ACT-0023
+action: LEARN-0027 added to IX-A; bot/prompt.py YOUR KNOWLEDGE (Presidents) updated
+```
+
+### CANDIDATE-0055 (KBCP-003 — Swan Lake / Tchaikovsky)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: kbcp_learning_moment
+source: KBCP-003 (Knowledge Boundary Calibration Probe)
+evidence: ACT-0022
+action: LEARN-0026 added to IX-A; bot/prompt.py YOUR KNOWLEDGE (Music and stories) updated
+```
+
 ### CANDIDATE-0054 (Writing sample — Casa Bonita)
 
 ```yaml

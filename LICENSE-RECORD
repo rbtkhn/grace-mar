@@ -1,0 +1,11 @@
+LICENSE — Record / User Data
+
+User Records (SELF, SKILLS, EVIDENCE, SESSION-LOG, PENDING-REVIEW, ARCHIVE,
+JOURNAL, MEMORY, PIPELINE-EVENTS, artifacts, and all content under users/)
+are personal data owned by the user. The system operator holds them in trust.
+
+Record content is not licensed for redistribution without explicit user consent.
+Export tools (export_fork, export_prp, export_user_identity, export_view) produce
+outputs that inherit the user's ownership and consent scope.
+
+Code and tooling in this repository are licensed separately (see project root).

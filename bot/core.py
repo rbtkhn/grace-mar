@@ -39,6 +39,11 @@ except ImportError:
     from retriever import retrieve as _retrieve
 
 try:
+    from .lookup_cmc import query_cmc
+except ImportError:
+    query_cmc = None
+
+try:
     from .prompt import (
         SYSTEM_PROMPT,
         LOOKUP_PROMPT,
@@ -558,12 +563,12 @@ def _library_summary() -> str:
         scope_str = ", ".join(e["scope"]) if e["scope"] else "general"
         label = f"{e['title']} (in {e['volume']})" if e.get("volume") else e["title"]
         lines.append(f"- {label}: {scope_str}")
-    return "\n".join(lines) if lines else "(no books)"
+    return "\n".join(lines) if lines else "(no sources)"
 
 
 def _library_lookup(question: str, channel_key: str = "unknown") -> str | None:
     summary = _library_summary()
-    if "(no books)" in summary:
+    if "(no sources)" in summary:
         return None
     prompt = LIBRARY_LOOKUP_PROMPT.format(
         library_summary=summary,
@@ -633,7 +638,13 @@ def _lookup_with_library_first(question: str, channel_key: str = "unknown") -> s
     if lib_answer:
         logger.info("LIBRARY: hit for %s", question[:50])
         return _rephrase_lookup(question, lib_answer, channel_key)
-    logger.info("LIBRARY: miss, falling back to full lookup")
+    logger.info("LIBRARY: miss, trying CMC")
+    if query_cmc:
+        cmc_text = query_cmc(question, limit=5)
+        if cmc_text:
+            logger.info("CMC: hit for %s", question[:50])
+            return _rephrase_lookup(question, cmc_text, channel_key)
+    logger.info("CMC: miss, falling back to full lookup")
     return _lookup(question, channel_key)
 
 

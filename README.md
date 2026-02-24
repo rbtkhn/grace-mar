@@ -253,11 +253,24 @@ python3 integrations/openclaw_hook.py -u pilot-001 -o ../openclaw/   # OpenClaw 
 python scripts/validate-integrity.py
 ```
 
+**Record index** — fast local search over SELF, EVIDENCE, PENDING-REVIEW (analyst dedup, PRP retrieval):
+
+```bash
+python scripts/index_record.py build -u pilot-001
+python scripts/index_record.py query "space Jupiter" -u pilot-001
+```
+
 **Session briefing** — run before a tutoring session for pending count, recent activity, and suggested wisdom questions:
 
 ```bash
 python scripts/session_brief.py
 ```
+
+**CMC (Civilization Memory) integration** — when lookup gets a LIBRARY miss, the bot queries [civilization_memory](https://github.com/rbtkhn/civilization_memory) for historical/civilizational questions. Routing: only questions matching CMC scope (Rome, China, ancient civilizations, history, etc.) hit CMC; others skip to full LLM. See [docs/CMC-ROUTING.md](docs/CMC-ROUTING.md). Setup:
+
+1. Clone CMC as sibling: `../civilization_memory` or set `CIVILIZATION_MEMORY_PATH`
+2. Build index: `cd civilization_memory && python3 tools/cmc-index-search.py build`
+3. LIB-0064 in LIBRARY marks CMC as approved source
 
 **Learning from rejection** — use `/reject CANDIDATE-123 [reason]` in Telegram to capture feedback; see [docs/REJECTION-FEEDBACK.md](docs/REJECTION-FEEDBACK.md).
 
@@ -278,4 +291,5 @@ The ideas behind Grace-Mar draw on the work of: Alexander Wissner-Gross (causal 
 
 ## License
 
-Proprietary. All rights reserved.
+- **Code and tooling:** Proprietary. All rights reserved.
+- **Record / user data:** See [LICENSE-RECORD](LICENSE-RECORD) — user Records (SELF, EVIDENCE, etc.) are personal data owned by the user; the system holds them in trust.

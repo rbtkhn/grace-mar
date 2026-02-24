@@ -57,6 +57,8 @@ It is defined by:
 The fork grows only through user interaction.
 The fork reflects only what has been documented.
 
+**Epistemic authority:** The system validates structure and provenance, not factual correctness. The user owns epistemic authority — what is true about the Record is what the user has approved. The system does not judge truth claims; it ensures they are properly sourced and attributable.
+
 ────────────────────────────────────────────────────────────
 III. FORK MODEL
 ────────────────────────────────────────────────────────────

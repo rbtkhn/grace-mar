@@ -170,6 +170,61 @@ def validate_cross_ref(evidence_ids: set[str], act_ids: set[str]) -> list[str]:
     return errors
 
 
+# ID format per docs/ID-TAXONOMY.md: 4-digit zero-padded
+ID_PATTERNS = {
+    "LEARN": re.compile(r"LEARN-\d{4}$"),
+    "CUR": re.compile(r"CUR-\d{4}$"),
+    "PER": re.compile(r"PER-\d{4}$"),
+    "ACT": re.compile(r"ACT-\d{4}$"),
+    "CANDIDATE": re.compile(r"CANDIDATE-\d{4}$"),
+}
+
+
+def validate_id_format(users_dir: Path) -> list[str]:
+    """Validate ID format (4-digit per ID-TAXONOMY). Returns errors."""
+    errors = []
+
+    for user_dir in users_dir.iterdir():
+        if not user_dir.is_dir():
+            continue
+        for fname in ("SELF.md", "EVIDENCE.md", "PENDING-REVIEW.md"):
+            path = user_dir / fname
+            if not path.exists():
+                continue
+            content = path.read_text()
+            for prefix, pat in ID_PATTERNS.items():
+                for m in re.finditer(rf"\b{prefix}-(\d+)\b", content):
+                    full = f"{prefix}-{m.group(1)}"
+                    if not pat.match(full):
+                        errors.append(f"{path.relative_to(REPO_ROOT)}: {full} — ID must be 4-digit (e.g. {prefix}-0001)")
+
+    return errors
+
+
+def validate_self_sections(users_dir: Path) -> list[str]:
+    """Validate SELF.md has required sections (I, II, IX or equivalent)."""
+    errors = []
+    required = ["## I.", "## II."]  # Identity, Preferences minimum
+    ix_sections = ["### IX-A.", "### IX-B.", "### IX-C."]
+
+    for user_dir in users_dir.iterdir():
+        if not user_dir.is_dir():
+            continue
+        path = user_dir / "SELF.md"
+        if not path.exists():
+            continue
+        content = path.read_text()
+        for r in required:
+            if r not in content:
+                errors.append(f"{path.relative_to(REPO_ROOT)}: missing required section {r.strip()}")
+        if "## IX." in content or "### IX-A." in content:
+            for ix in ix_sections:
+                if ix not in content:
+                    errors.append(f"{path.relative_to(REPO_ROOT)}: IX present but missing {ix.strip()}")
+
+    return errors
+
+
 def main() -> int:
     users_dir = DEFAULT_USERS_DIR
     if len(sys.argv) > 1:
@@ -193,6 +248,8 @@ def main() -> int:
 
     all_errors.extend(validate_cross_ref(evidence_ids, act_ids))
     all_errors.extend(validate_pending_review(users_dir))
+    all_errors.extend(validate_id_format(users_dir))
+    all_errors.extend(validate_self_sections(users_dir))
 
     if all_errors:
         print("Integrity check FAILED:\n")
