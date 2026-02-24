@@ -419,6 +419,45 @@ def _emit_applied_event(candidate_id: str, evidence_id: str, approved_by: str) -
     )
 
 
+def _run_openclaw_export(
+    user_id: str,
+    fmt: str,
+    output_dir: str,
+    destination: str,
+    post_url: str,
+    api_key: str,
+) -> tuple[bool, str]:
+    cmd = [
+        sys.executable,
+        "integrations/openclaw_hook.py",
+        "--user",
+        user_id,
+        "--format",
+        fmt,
+        "--destination",
+        destination,
+        "--emit-event",
+    ]
+    if output_dir.strip():
+        cmd.extend(["--output", output_dir.strip()])
+    if destination == "post":
+        if post_url.strip():
+            cmd.extend(["--post-url", post_url.strip()])
+        if api_key.strip():
+            cmd.extend(["--api-key", api_key.strip()])
+    result = subprocess.run(
+        cmd,
+        cwd=REPO_ROOT,
+        capture_output=True,
+        text=True,
+        check=False,
+    )
+    if result.returncode != 0:
+        msg = (result.stderr or result.stdout or "openclaw export failed").strip()
+        return False, msg
+    return True, (result.stdout or "openclaw export complete").strip()
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--user", "-u", default=USER_ID, help="User id (default: GRACE_MAR_USER_ID or pilot-001)")
@@ -433,6 +472,22 @@ def main() -> None:
         default=MIN_EVIDENCE_TIER,
         help=f"Minimum evidence tier policy for merge validation (default: {MIN_EVIDENCE_TIER})",
     )
+    ap.add_argument("--export-openclaw", action="store_true", help="Run OpenClaw export after successful merge")
+    ap.add_argument(
+        "--openclaw-format",
+        choices=["md", "md+manifest", "json+md", "full-prp", "fork-json"],
+        default="md+manifest",
+        help="OpenClaw export shape when --export-openclaw is used",
+    )
+    ap.add_argument("--openclaw-output", default="", help="Optional OpenClaw output directory")
+    ap.add_argument(
+        "--openclaw-destination",
+        choices=["local", "post"],
+        default="local",
+        help="OpenClaw destination mode when --export-openclaw is used",
+    )
+    ap.add_argument("--openclaw-post-url", default="", help="OpenClaw post destination URL (if destination=post)")
+    ap.add_argument("--openclaw-api-key", default="", help="OpenClaw post API key (if destination=post)")
     args = ap.parse_args()
     _set_user(args.user)
     dry_run = not args.apply
@@ -559,6 +614,20 @@ def main() -> None:
             raise RuntimeError(f"checksum post-merge failed: {after_checksum}")
         if pre_checksum == after_checksum:
             raise RuntimeError("checksum unchanged after merge; expected state change")
+        if args.export_openclaw:
+            export_ok, export_msg = _run_openclaw_export(
+                user_id=USER_ID,
+                fmt=args.openclaw_format,
+                output_dir=args.openclaw_output,
+                destination=args.openclaw_destination,
+                post_url=args.openclaw_post_url,
+                api_key=args.openclaw_api_key,
+            )
+            if export_ok:
+                print("OpenClaw export complete.")
+            else:
+                # Non-fatal: merge succeeded; export failure is surfaced for operator action.
+                print(f"Warning: OpenClaw export failed: {export_msg}")
     except Exception as e:
         _emit_validation_failure(None, f"merge_apply_failed_or_rolled_back: {e}", args.approved_by.strip())
         rollback_plan = {

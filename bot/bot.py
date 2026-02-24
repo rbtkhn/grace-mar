@@ -406,6 +406,51 @@ async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await update.message.reply_text(f"Operator status:\n{_format_health_summary(summary)}")
 
 
+async def openclaw_export_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only OpenClaw export trigger."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("openclaw export command is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+
+    fmt = "md+manifest"
+    output = ""
+    if context.args:
+        if context.args[0] in {"md", "md+manifest", "json+md", "full-prp", "fork-json"}:
+            fmt = context.args[0]
+        if len(context.args) > 1:
+            output = context.args[1]
+    cmd = [
+        "python3",
+        "integrations/openclaw_hook.py",
+        "--user",
+        USER_ID,
+        "--format",
+        fmt,
+        "--emit-event",
+    ]
+    if output:
+        cmd.extend(["--output", output])
+    try:
+        result = subprocess.run(
+            cmd,
+            cwd=Path(__file__).resolve().parent.parent,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        out = (result.stdout or result.stderr or "").strip()
+        if result.returncode == 0:
+            await update.message.reply_text(f"openclaw export complete ({fmt}).")
+        else:
+            await update.message.reply_text(f"openclaw export failed: {out[:400]}")
+    except Exception:
+        logger.exception("OpenClaw export command failed")
+        await update.message.reply_text("openclaw export failed unexpectedly.")
+
+
 async def operator_reminder_job(context: ContextTypes.DEFAULT_TYPE) -> None:
     """Periodic operator-only reminder about stale or large review queue."""
     if not OPERATOR_CHAT_ID:
@@ -640,6 +685,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("prp", prp))
     app.add_handler(CommandHandler("dashboard", dashboard))
     app.add_handler(CommandHandler("status", status_command))
+    app.add_handler(CommandHandler("openclaw_export", openclaw_export_command))
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))

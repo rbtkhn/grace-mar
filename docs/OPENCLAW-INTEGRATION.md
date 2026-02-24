@@ -31,6 +31,12 @@ The grace-mar Record (SELF.md + selected SKILLS) can populate OpenClaw's `USER.m
 python scripts/export_user_identity.py --user pilot-001
 ```
 
+Or use the integration hook (supports format + event emission):
+
+```bash
+python integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emit-event
+```
+
 Output: Markdown suitable for `USER.md` or `SOUL.md`, containing:
 - Identity (name, age, languages, location)
 - Preferences and interests
@@ -45,6 +51,14 @@ Output: Markdown suitable for `USER.md` or `SOUL.md`, containing:
 | **Manual** | Run export and paste into USER.md when profile changes |
 | **Pre-session** | Run export as part of OpenClaw startup before agent runs |
 | **Cron** | Export on commit (e.g. post-merge hook) if workspace is shared |
+
+### Post-merge optional trigger
+
+`process_approved_candidates.py` supports optional OpenClaw export after successful merge:
+
+```bash
+python scripts/process_approved_candidates.py --apply --approved-by <name> --receipt <receipt.json> --export-openclaw --openclaw-format md+manifest
+```
 
 ### What NOT to export
 
@@ -125,6 +139,17 @@ The pipeline treats this like any other "we did X" + artifact. The operator load
 
 Artifacts do **not** auto-ingest. The user must explicitly invoke the pipeline ("we did X") and approve any candidates. This preserves the gate.
 
+### Stage-only inbound hook (OpenClaw -> Grace-Mar)
+
+Use `integrations/openclaw_stage.py` to send OpenClaw output to `/stage` with provenance metadata:
+
+```bash
+python integrations/openclaw_stage.py --user pilot-001 --artifact ./outputs/session-note.md
+python integrations/openclaw_stage.py --user pilot-001 --text "we explored fractions in OpenClaw"
+```
+
+This path only stages to `PENDING-REVIEW`; it never merges into the Record.
+
 ---
 
 ## 4. Staging Automation (OpenClaw Skill / Cron)
@@ -189,6 +214,7 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 **Export identity:**
 ```bash
 python scripts/export_user_identity.py --user pilot-001 -o openclaw/USER.md
+python integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emit-event
 ```
 
 **Session continuity (read first):**
@@ -199,6 +225,10 @@ python scripts/export_user_identity.py --user pilot-001 -o openclaw/USER.md
 **Pipeline invocation:**
 - User: "we [did X]" [+ optional artifact path]
 - Operator: Run signal detection → stage → user approves → merge
+
+**Operator bot command:**
+- `/openclaw_export [format] [output_dir]`
+- Example: `/openclaw_export json+md ../openclaw`
 
 ---
 

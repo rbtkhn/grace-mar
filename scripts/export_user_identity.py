@@ -13,6 +13,7 @@ Usage:
 """
 
 import argparse
+import json
 import re
 from pathlib import Path
 
@@ -86,6 +87,42 @@ def export_user_identity(user_id: str = "pilot-001") -> str:
     return "\n".join(out_lines).rstrip() + "\n"
 
 
+def export_user_identity_json(user_id: str = "pilot-001") -> dict:
+    """Build structured identity export for agent consumers."""
+    profile_dir = REPO_ROOT / "users" / user_id
+    self_path = profile_dir / "SELF.md"
+    self_raw = _read(self_path)
+    if not self_raw:
+        return {
+            "user_id": user_id,
+            "ok": False,
+            "error": f"No SELF.md found at {self_path}",
+        }
+
+    mapping = [
+        ("I. IDENTITY", "identity"),
+        ("II. PREFERENCES (Survey Seeded)", "preferences"),
+        ("III. LINGUISTIC STYLE", "linguistic_style"),
+        ("IV. PERSONALITY", "personality"),
+        ("V. INTERESTS", "interests"),
+        ("VI. VALUES", "values"),
+        ("VII. REASONING PATTERNS", "reasoning"),
+        ("VIII. NARRATIVE", "narrative"),
+        ("IX. MIND (Post-Seed Growth)", "mind_post_seed"),
+    ]
+    sections: dict[str, str] = {}
+    for title, key in mapping:
+        block = _section(self_raw, title)
+        if block:
+            sections[key] = block
+    return {
+        "ok": True,
+        "format": "grace-mar-user-identity",
+        "user_id": user_id,
+        "sections": sections,
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Export grace-mar Record to USER.md / SOUL.md for OpenClaw"
@@ -94,8 +131,18 @@ def main() -> None:
     parser.add_argument(
         "--output", "-o", default=None, help="Output file (default: stdout)"
     )
+    parser.add_argument(
+        "--format",
+        choices=["markdown", "json"],
+        default="markdown",
+        help="Export format (default: markdown)",
+    )
     args = parser.parse_args()
-    content = export_user_identity(user_id=args.user)
+    if args.format == "json":
+        payload = export_user_identity_json(user_id=args.user)
+        content = json.dumps(payload, indent=2, ensure_ascii=True) + "\n"
+    else:
+        content = export_user_identity(user_id=args.user)
     if args.output:
         out_path = Path(args.output)
         out_path.write_text(content, encoding="utf-8")
