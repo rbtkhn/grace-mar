@@ -626,6 +626,33 @@ entries:
     evidence_id: ACT-0026
     curated_by: user
     provenance: human_approved
+
+  - id: LEARN-0031
+    date: 2026-02-21
+    topic: "Lunar New Year — dragon dances, fireworks, paper = good luck"
+    source: bot conversation (user shared experience)
+    her_understanding: "Saw dragon dances and really loud fireworks (hurt ears). Paper touched her and that's good luck."
+    evidence_id: ACT-0029
+    curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0032
+    date: 2026-02-21
+    topic: "Vietnamese food / pho — mom gave it because she likes it"
+    source: bot conversation (user shared experience)
+    her_understanding: "Mom gave me Vietnamese food because she really likes it. Pho has tasty broth and noodles. I like trying chopsticks for noodles."
+    evidence_id: ACT-0030
+    curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0033
+    date: 2026-02-21
+    topic: "The Fox and the Hound — Tod and Copper"
+    source: bot conversation (user referenced)
+    her_understanding: "A fox named Tod and a hound dog named Copper become friends. It's fun and a little bit sad because they have to deal with being different."
+    evidence_id: ACT-0031
+    curated_by: user
+    provenance: human_approved
 ```
 
 ### IX-B. CURIOSITY
@@ -775,6 +802,14 @@ entries:
     evidence_id: ACT-0020
     provenance: human_approved
     source: wisdom_elicitation
+
+  - id: PER-0005
+    date: 2026-02-21
+    type: reasoning
+    observation: "After homework quiz (reptile/fish question): 'I can think of multiple answers for the reptile fish question' — notices when questions have multiple valid answers; comfortable with ambiguity."
+    evidence_id: ACT-0032
+    curated_by: user
+    provenance: human_approved
 ```
 
 ---

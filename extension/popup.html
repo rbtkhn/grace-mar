@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 280px; padding: 12px 16px; font-family: system-ui, sans-serif; font-size: 14px; }
+    h2 { margin: 0 0 8px 0; font-size: 14px; font-weight: 600; }
+    .url { color: #666; font-size: 12px; word-break: break-all; margin-bottom: 12px; }
+    button { width: 100%; padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    button:disabled { background: #94a3b8; cursor: not-allowed; }
+    .status { margin-top: 12px; font-size: 13px; color: #059669; }
+    .status.err { color: #dc2626; }
+    .hint { margin-top: 8px; font-size: 11px; color: #64748b; }
+  </style>
+</head>
+<body>
+  <h2>Save to Record</h2>
+  <div class="url" id="page-info">Loading…</div>
+  <button id="save-btn">Save to Record</button>
+  <div class="status" id="status"></div>
+  <div class="hint">Run: python scripts/handback_server.py</div>
+  <script src="popup.js"></script>
+</body>
+</html>

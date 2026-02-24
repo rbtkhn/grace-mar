@@ -43,6 +43,7 @@ MEMORY may contain only:
 | **Tone** | Calibrations for current session | `playful`, `calm`, `focused`, `tired` |
 | **Recent Topics** | Topics of recent conversation | `frogs`, `solar system`, `art project` |
 | **Calibrations** | Session-specific preferences | `shorter answers today`, `more questions than usual` |
+| **Resistance Notes** (optional) | Topics to avoid or handle gently | `resistance on school questions`, `deflected when asked about X` |
 
 MEMORY must NOT contain:
 
@@ -93,4 +94,8 @@ Last rotated: YYYY-MM-DD
 ## Calibrations
 
 (optional: session-specific preferences)
+
+## Resistance Notes
+
+(optional: topics to avoid or handle gently — e.g. "resistance on school questions"; use to avoid retriggering next session)
 ```

@@ -16,6 +16,8 @@ The missing primitive: **identity and trust.** Agents need to know who they serv
 
 Grace-Mar provides that substrate. This white paper describes the problem, the solution, and Grace-Mar's positioning as (1) supplemental to AI schools like Alpha and (2) a low-cost open-source alternative for families outside elite tuition.
 
+**Execution focus:** In the next 18 months, Grace-Mar prioritizes one wedge — hosted family product for homeschool/microschool adoption — while running a small number of integration pilots. Broader protocol commercialization (including certification) is intentionally sequenced after proof.
+
 ---
 
 ## 1. The Rise of AI Schools
@@ -79,6 +81,13 @@ Grace-Mar is designed for the agent interface: structured, machine-readable, que
 **Supplemental** — Grace-Mar works alongside Alpha (and similar AI schools). Alpha teaches; Grace-Mar records. The Record provides the identity, interest, and personality layer that Incept can consume for personalization. School events feed the pipeline as evidence. The Record is the user-owned substrate; Alpha is one consumer. Integration, not competition.
 
 **Low-cost alternative** — Alpha tuition excludes most families. Grace-Mar is open-source. Families who cannot afford $40K–$75K/year can run Grace-Mar with Khan Academy, IXL, or any adaptive platform. Same identity architecture at $0 software cost. Democratizes the cognitive-fork model.
+
+### Sequencing to Reduce Execution Risk
+
+Grace-Mar treats the two positions asymmetrically:
+- **Now (0-18 months):** family-hosted product as primary wedge.
+- **Parallel but limited:** 1-2 scoped integration pilots with explicit success criteria.
+- **Later:** platform-scale licensing and certification after demonstrated retention, trust metrics, and pilot outcomes.
 
 ### Ideal Stacks
 
@@ -200,7 +209,33 @@ An llms.txt-style manifest: what's readable, writable, schema. Discoverability f
 
 ---
 
-## 8. Governance and Security
+## 8. Commercialization Model
+
+### Initial Customer Profile
+
+- Parent/guardian-led homeschool and microschool families
+- Multi-tool learning stack users (Khan/IXL/tutors) with continuity gaps
+- High sensitivity to ownership, portability, and evidence traceability
+
+### Distribution Model (First 12 Months)
+
+| Channel | Why it fits | Leading indicator |
+|---------|-------------|-------------------|
+| Homeschool communities | High pain and high trust in peer references | Waitlist-to-activation conversion |
+| Educator creators/newsletters | Efficient education-led demand creation | Cost per activated family |
+| Parent referrals | Record value compounds over time | Referral share of new activations |
+
+### Pilot Integration Package (90 Days)
+
+| Component | Definition |
+|-----------|------------|
+| Scope | Identity read + stage path only; merge remains human-only |
+| Stakeholders | Product lead + learning-science lead + operator |
+| Success metrics | activation lift, personalization quality signal, operator burden delta |
+| Deliverables | Pilot report, security notes, rollout recommendation |
+
+---
+## 9. Governance and Security
 
 ### Principles-Based Guidance
 
@@ -216,7 +251,7 @@ Infrastructure is built for fully autonomous agents. Many users want ~70% human 
 
 ---
 
-## 9. Motivation and Engagement
+## 10. Motivation and Engagement
 
 ### The Homeschool Gap
 
@@ -230,7 +265,25 @@ The "we did X" convention is a lightweight motivation primitive: recognition, ce
 
 ---
 
-## 10. Conclusion
+## 11. Proof Architecture
+
+Grace-Mar claims should be evaluated as an operating system, not only as a concept. The minimum proof set:
+
+| Proof Track | Metric | Cadence |
+|-------------|--------|---------|
+| Pipeline health | staged/approved/rejected/applied rates and queue age | Weekly |
+| Gate integrity | merge receipt coverage and merge audit completeness | Weekly |
+| Retention | week-4 and month-3 cohort retention | Monthly |
+| Evidence quality | artifact-linked claim ratio over time | Monthly |
+| Knowledge boundary safety | counterfactual harness pass rate | Per release |
+
+### Unit Economics as Hypothesis (Not Conclusion)
+
+Current business assumptions (CAC, churn, conversion, ARPU) are planning inputs and must be reported as observed vs. assumed each quarter.
+
+---
+
+## 12. Conclusion
 
 Grace-Mar is identity infrastructure for the agent web. It provides:
 
@@ -243,7 +296,7 @@ The agent web needs to know who it serves. Grace-Mar is the substrate.
 
 ---
 
-## Acknowledgments
+## 13. Acknowledgments
 
 The ideas behind Grace-Mar draw on the work of:
 - **Alexander Wissner-Gross** — causal entropic forces; intelligence as freedom maximization
@@ -277,9 +330,10 @@ The ideas behind Grace-Mar draw on the work of:
 |--------|--------|--------------|
 | Record completeness | IX-A, IX-B, IX-C populated | Dashboard, growth script |
 | Pipeline health | Candidates processed, not stale | PENDING-REVIEW queue |
+| Gate integrity | Receipt coverage + auditable apply events | Merge logs + pipeline events |
 | Knowledge boundary | No undocumented references | Counterfactual harness |
-| Export adoption | Integrations using identity export | OpenClaw, agents |
-| Trust signal | User approval rate, rejection reasons | Pipeline analytics |
+| Retention quality | Cohort week-4 and month-3 retention | Product analytics |
+| Export adoption | Integrations using identity export | Pilot/integration reports |
 
 ---
 

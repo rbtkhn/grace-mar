@@ -12,3 +12,7 @@
 {"ts": "2026-02-23T17:09:34.079039", "event": "applied", "candidate_id": "CANDIDATE-0059", "evidence_id": "ACT-0026"}
 {"ts": "2026-02-23T17:13:59.134450", "event": "applied", "candidate_id": "CANDIDATE-0060", "evidence_id": "ACT-0027"}
 {"ts": "2026-02-23T17:24:03.692905", "event": "applied", "candidate_id": "CANDIDATE-0061", "evidence_id": "ACT-0028"}
+{"ts": "2026-02-23T20:54:05.520519", "event": "applied", "candidate_id": "CANDIDATE-0063", "evidence_id": "ACT-0029"}
+{"ts": "2026-02-23T20:56:14.451017", "event": "applied", "candidate_id": "CANDIDATE-0064", "evidence_id": "ACT-0030"}
+{"ts": "2026-02-23T20:58:34.964520", "event": "applied", "candidate_id": "CANDIDATE-0065", "evidence_id": "ACT-0031"}
+{"ts": "2026-02-23T21:02:35.911273", "event": "applied", "candidate_id": "CANDIDATE-0067", "evidence_id": "ACT-0032"}

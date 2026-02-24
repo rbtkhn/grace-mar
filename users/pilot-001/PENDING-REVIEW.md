@@ -19,9 +19,73 @@
 
 ## Candidates
 
+### CANDIDATE-0062 (Checkpoint — Casa Bonita history & engagement)
+
+```yaml
+status: rejected
+timestamp: 2026-02-24
+channel_key: telegram:343513797
+source: Abby checkpoint (user-submitted)
+source_exchange:
+  user: "We talked about Casa Bonita because it's my favorite place EVER!! I told you it started in 1968 in Oklahoma by Bill Waugh, came to Colorado in 1974, got famous from South Park, closed for a bit but Trey and Matt bought it and fixed it up with $40 million and better food and it reopened in 2023!! And how it's like Pirates of the Caribbean and the documentary ¡Casa Bonita Mi Amor! and some grown-up strike thing but it's all good now!!"
+mind_category: knowledge
+signal_type: checkpoint / we_did
+priority_score: 4
+summary: Casa Bonita history — 1968 Oklahoma (Bill Waugh), 1974 Colorado, South Park fame, Trey & Matt $40M renovation, 2023 reopen. Documentary ¡Casa Bonita Mi Amor!. Favorite place EVER; divers, pirate cave, sopapillas with honey.
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: Casa Bonita — favorite place EVER. History: 1968 Oklahoma (Bill Waugh), 1974 Colorado, famous from South Park. Trey and Matt bought it, $40M renovation, reopened 2023. Documentary ¡Casa Bonita Mi Amor!. Divers, pirate cave, sopapillas with honey.
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 in Oklahoma, came to Colorado 1974, got famous from South Park. Trey and Matt bought it and fixed it up with $40 million, reopened 2023. Documentary ¡Casa Bonita Mi Amor!. You love the divers, pirate cave, sopapillas with honey.
+summary: Casa Bonita history — user rejected.
+```
+
 ---
 
 ## Processed
+
+### CANDIDATE-0067 (Reptile/fish multiple answers — personality)
+
+```yaml
+status: approved
+mind_category: personality
+signal_type: reasoning
+source: bot conversation — homework quiz follow-up
+evidence: ACT-0032
+action: PER-0005 added to IX-C; bot/prompt.py YOUR PERSONALITY updated
+```
+
+### CANDIDATE-0065 (Fox and the Hound)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: conversation
+source: bot conversation — user referenced Fox and the Hound
+evidence: ACT-0031
+action: LEARN-0033 added to IX-A; bot/prompt.py YOUR KNOWLEDGE (Music and stories) updated
+```
+
+### CANDIDATE-0064 (Vietnamese food / pho)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: conversation
+source: bot conversation — mom gave Vietnamese food, pho
+evidence: ACT-0030
+action: LEARN-0032 added to IX-A; bot/prompt.py YOUR KNOWLEDGE updated
+```
+
+### CANDIDATE-0063 (Lunar New Year — dragon dances, fireworks, good luck)
+
+```yaml
+status: approved
+mind_category: knowledge
+signal_type: conversation
+source: bot conversation — user shared Lunar New Year experience
+evidence: ACT-0029
+action: LEARN-0031 added to IX-A; bot/prompt.py YOUR KNOWLEDGE updated
+```
 
 ### CANDIDATE-0061 (Debussy — bedtime / classical piano)
 

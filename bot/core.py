@@ -70,9 +70,10 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 MAX_HISTORY = 20
 
-PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / "pilot-001"
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
 ARCHIVE_PATH = PROFILE_DIR / "ARCHIVE.md"
-ARCHIVE_REPO_PATH = "users/pilot-001/ARCHIVE.md"  # repo-relative for GitHub API
+ARCHIVE_REPO_PATH = f"users/{USER_ID}/ARCHIVE.md"  # repo-relative for GitHub API
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
 PENDING_REVIEW_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
@@ -120,8 +121,8 @@ def _log_tokens(
         logger.exception("Failed to log tokens (non-fatal)")
 
 
-def emit_pipeline_event(event_type: str, candidate_id: str | None = None, **kwargs: str) -> None:
-    """Append a pipeline event (staged, approved, rejected, applied)."""
+def emit_pipeline_event(event_type: str, candidate_id: str | None = None, **kwargs: object) -> None:
+    """Append a pipeline event (staged, approved, rejected, applied, etc.)."""
     try:
         event = {
             "ts": datetime.now().isoformat(),
@@ -143,6 +144,12 @@ AFFIRMATIVE_PHRASES = {"look it up", "go ahead", "do it", "go for it", "find out
 WE_DID_PATTERN = re.compile(
     r"^we\s+(drew|wrote|made|learned|read|painted|built|created|did|watched|played)\b",
     re.IGNORECASE,
+)
+
+# Pasted checkpoint from external LLM (ChatGPT, PRP, etc.) — route to pipeline.
+CHECKPOINT_MARKERS = re.compile(
+    r"(?i)(checkpoint\s*[–:-]|abby\s+checkpoint|here[\'s]?\s*(is|my)\s+checkpoint|"
+    r"summary\s+of\s+what\s+we|topics\s+covered|checkpoint\s+saved)"
 )
 
 _client: OpenAI | None = None
@@ -267,11 +274,16 @@ def _load_memory_appendix() -> str:
     if not has_content:
         return ""
     block = "\n".join(useful)
+    # When Resistance Notes section has content beyond placeholder, prime Voice to honor it
+    resistance_hint = ""
+    if "## Resistance Notes" in block or "## resistance notes" in block.lower():
+        resistance_hint = " If Resistance Notes list topics: do not bring them up unprompted. If the user raises them, meet them where they are—change topic or offer alternatives if they seem resistant. Do not push."
     return """
 
 ## SESSION CONTEXT (ephemeral — SELF is authoritative)
 
 The following is ephemeral session context. Use it to refine tone and continuity. If it conflicts with SELF, follow SELF. Do not cite factual content from this section.
+""" + resistance_hint + """
 
 """ + block
 
@@ -475,7 +487,8 @@ def start_homework_session(channel_key: str) -> tuple[str | None, str | None]:
                 opts_fmt.append(f"{letters[j]}) {text}")
             # Map correct: if LLM said "A", our first option is A
             correct_letter = correct_raw if correct_raw in letters else letters[0]
-            normalized.append({"q": (q.get("q") or "?").strip(), "options": opts_fmt, "correct": correct_letter})
+            hint = (q.get("hint") or "").strip()
+            normalized.append({"q": (q.get("q") or "?").strip(), "options": opts_fmt, "correct": correct_letter, "hint": hint})
         if not normalized:
             return None, "um... i couldn't make the questions. try again?"
         total_correct_ever = _get_homework_total_correct()
@@ -533,7 +546,12 @@ def process_homework_answer(channel_key: str, user_reply: str) -> tuple[str, boo
     else:
         session["streak"] = 0
         correct_opt = next(o for o in q["options"] if o.upper().startswith(correct_letter))
-        feedback = f"not quite — it's {correct_letter}) " + correct_opt.split(")", 1)[1].strip()
+        correct_text = correct_opt.split(")", 1)[1].strip()
+        hint = q.get("hint") or ""
+        if hint:
+            feedback = f"here's a hint: {hint}\n\nnot quite — it's {correct_letter}) {correct_text}"
+        else:
+            feedback = f"not quite — it's {correct_letter}) {correct_text}"
     session["idx"] += 1
     if session["idx"] >= len(questions):
         # Session done
@@ -658,6 +676,54 @@ def _next_candidate_id() -> str:
             return "CANDIDATE-0001"
 
 
+ALLOWED_MIND_CATEGORIES = {"knowledge", "curiosity", "personality"}
+REQUIRED_ANALYST_FIELDS = {
+    "mind_category",
+    "signal_type",
+    "summary",
+    "profile_target",
+    "suggested_entry",
+    "prompt_section",
+    "prompt_addition",
+}
+
+
+def _parse_top_level_yaml(analysis_yaml: str) -> dict[str, str]:
+    """Parse simple top-level analyst YAML fields (key: value)."""
+    parsed: dict[str, str] = {}
+    for line in (analysis_yaml or "").splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        # We only allow flat top-level keys for analyst payloads.
+        if line.startswith((" ", "\t")):
+            continue
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        k = key.strip()
+        if not k:
+            continue
+        v = value.strip().strip('"').strip("'")
+        parsed[k] = v
+    return parsed
+
+
+def _validate_analysis_yaml(analysis_yaml: str) -> tuple[bool, str]:
+    """Validate analyst output schema before staging."""
+    parsed = _parse_top_level_yaml(analysis_yaml)
+    missing = [f for f in REQUIRED_ANALYST_FIELDS if not parsed.get(f)]
+    if missing:
+        return False, f"missing fields: {', '.join(sorted(missing))}"
+    mind_category = (parsed.get("mind_category") or "").strip().lower()
+    if mind_category not in ALLOWED_MIND_CATEGORIES:
+        return False, f"invalid mind_category: {mind_category}"
+    priority = (parsed.get("priority_score") or "").strip()
+    if priority:
+        if not priority.isdigit() or not (1 <= int(priority) <= 5):
+            return False, f"invalid priority_score: {priority}"
+    return True, ""
+
+
 def analyze_exchange(user_message: str, assistant_message: str, channel_key: str) -> None:
     if not _check_rate_limit(channel_key, "analyst", tokens=1):
         logger.debug("Analyst rate limit exceeded (%s), skipping", channel_key)
@@ -677,8 +743,11 @@ def analyze_exchange(user_message: str, assistant_message: str, channel_key: str
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return
-        _stage_candidate(analysis, user_message, assistant_message, channel_key)
-        logger.info("ANALYST: signal detected — staged candidate")
+        staged = _stage_candidate(analysis, user_message, assistant_message, channel_key)
+        if staged:
+            logger.info("ANALYST: signal detected — staged candidate")
+        else:
+            logger.warning("ANALYST: signal detected but candidate failed schema validation")
     except Exception:
         logger.exception("Analyst error (non-fatal)")
 
@@ -688,7 +757,17 @@ def _stage_candidate(
     user_message: str,
     assistant_message: str,
     channel_key: str,
-) -> None:
+) -> bool:
+    valid, reason = _validate_analysis_yaml(analysis_yaml)
+    if not valid:
+        logger.warning("ANALYST: invalid candidate payload (%s)", reason)
+        emit_pipeline_event(
+            "invalid_candidate",
+            None,
+            channel_key=channel_key,
+            reason=reason,
+        )
+        return False
     candidate_id = _next_candidate_id()
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     conflicts = check_conflicts(analysis_yaml)
@@ -711,6 +790,7 @@ source_exchange:
     with open(PENDING_REVIEW_PATH, "a") as f:
         f.write(block)
     emit_pipeline_event("staged", candidate_id, channel_key=channel_key)
+    return True
 
 
 def _run_analyst_background(
@@ -749,9 +829,10 @@ def analyze_activity_report(user_message: str, channel_key: str) -> bool:
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return False
-        _stage_candidate(analysis, user_message, ACTIVITY_REPORT_SYNTHETIC, channel_key)
-        logger.info("ANALYST: activity report staged")
-        return True
+        staged = _stage_candidate(analysis, user_message, ACTIVITY_REPORT_SYNTHETIC, channel_key)
+        if staged:
+            logger.info("ANALYST: activity report staged")
+        return staged
     except Exception:
         logger.exception("Analyst error on activity report (non-fatal)")
         return False
@@ -774,7 +855,12 @@ def get_pending_candidates() -> list[dict]:
 
 
 def update_candidate_status(
-    candidate_id: str, status: str, rejection_reason: str | None = None
+    candidate_id: str,
+    status: str,
+    rejection_reason: str | None = None,
+    channel_key: str | None = None,
+    actor: str | None = None,
+    source: str | None = None,
 ) -> bool:
     """Update candidate status (approved/rejected) in PENDING-REVIEW.md.
     For rejected, optional rejection_reason is stored in PIPELINE-EVENTS for learning.
@@ -790,7 +876,15 @@ def update_candidate_status(
     if n == 0:
         return False
     PENDING_REVIEW_PATH.write_text(new_content)
-    kwargs = {"rejection_reason": rejection_reason} if status == "rejected" and rejection_reason else {}
+    kwargs: dict[str, object] = {}
+    if status == "rejected" and rejection_reason:
+        kwargs["rejection_reason"] = rejection_reason
+    if channel_key:
+        kwargs["channel_key"] = channel_key
+    if actor:
+        kwargs["actor"] = actor
+    if source:
+        kwargs["source"] = source
     emit_pipeline_event(status, candidate_id, **kwargs)
     return True
 
@@ -808,6 +902,18 @@ def get_response(channel_key: str, user_message: str) -> str:
         if staged:
             return f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
         return "ok i wrote that down. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
+
+    # Pasted checkpoint — long message with checkpoint markers; route to pipeline.
+    stripped = user_message.strip()
+    if len(stripped) >= 400 and CHECKPOINT_MARKERS.search(stripped):
+        synthetic = f"we did a chat in an external LLM (ChatGPT, Claude, PRP, etc). here is the checkpoint or transcript:\n\n{stripped}"
+        archive("CHECKPOINT HANDBACK", channel_key, stripped[:500] + ("..." if len(stripped) > 500 else ""))
+        staged = analyze_activity_report(synthetic, channel_key)
+        emit_pipeline_event("dyad:checkpoint_handback", None, channel_key=channel_key)
+        count = len(get_pending_candidates())
+        if staged:
+            return f"got it! i read that checkpoint and added it to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review"
+        return "ok i read that checkpoint. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
 
     normalized = user_message.strip().lower().rstrip("!.,")
     is_affirmative = normalized in AFFIRMATIVE_WORDS or any(

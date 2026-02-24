@@ -1178,7 +1178,50 @@ activities:
     notes: "Aligns with documented ballet interest (Nutcracker, Swan Lake). Coppélia story already in LIBRARY (ballet stories)."
     curated_by: user
     evidence_tier: 3
-```
+
+  - id: ACT-0029
+    date: 2026-02-21
+    modality: conversation (Telegram)
+    activity_type: knowledge
+    mind_category: knowledge
+    source: bot conversation — user shared experience
+    summary: "Lunar New Year — saw dragon dances and fireworks (loud, hurt ears); paper touched her and that's good luck."
+    notes: "Child's direct report. Cultural celebration observation."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0030
+    date: 2026-02-21
+    modality: conversation (Telegram)
+    activity_type: knowledge
+    mind_category: knowledge
+    source: bot conversation — user shared experience
+    summary: "Mom gave her Vietnamese food because she (mom) likes it. Pho — broth, noodles, chopsticks."
+    notes: "Child's direct report. Food/culture observation."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0031
+    date: 2026-02-21
+    modality: conversation (Telegram)
+    activity_type: knowledge
+    mind_category: knowledge
+    source: bot conversation — user referenced
+    summary: "Fox and the Hound — Tod (fox) and Copper (hound) become friends; a little bit sad because they deal with being different."
+    notes: "Child engaged with story; Grace-Mar named characters and theme."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0032
+    date: 2026-02-21
+    modality: conversation (Telegram)
+    activity_type: homework_quiz
+    mind_category: personality
+    source: bot conversation — homework quiz follow-up
+    summary: "After getting reptile/fish question right: 'I can think of multiple answers for the reptile fish question' — notices when questions have multiple valid answers."
+    notes: "Reasoning style: comfortable with ambiguity; aware of alternative valid answers."
+    curated_by: user
+    evidence_tier: 3
 
 ---
 
@@ -1205,15 +1248,15 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 28
+total_activities: 32
 total_read_entries: 0
 total_write_entries: 5
 total_create_entries: 8
 total_media_entries: 8
 total_attestations: 0
-last_activity: 2026-02-23
-last_update: 2026-02-23
-update_source: Coppélia video engagement (ACT-0027)
+last_activity: 2026-02-24
+last_update: 2026-02-24
+update_source: Reptile/fish multiple-answers observation (ACT-0032)
 ```
 
 ---

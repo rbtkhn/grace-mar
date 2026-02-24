@@ -2,9 +2,20 @@
 
 **Purpose:** Capture design insights, positioning, and implications derived from build-pattern research and agent-infrastructure analysis. Use for future white paper, business proposal, and investor narrative.
 
-**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle). See also §11 (Research & Model Landscape) and §11.6 (Landscape: capital allocation & agent scale).
+**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape) and §11.6 (Landscape: capital allocation & agent scale).
 
 **Status:** Draft. Refine as pilot progresses and market conditions evolve.
+
+### Document map — Where to read what
+
+| Need | Document | Role |
+|------|----------|------|
+| **Protocol (the compact)** | [IDENTITY-FORK-PROTOCOL](IDENTITY-FORK-PROTOCOL.md) | Canonical spec: schema, staging contract, evidence, export. Mechanism only. |
+| **Governance** | [GRACE-MAR-CORE](GRACE-MAR-CORE.md) | Global governance, prime directive, invariants. |
+| **Interpretation & intent** | [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md), this file (DESIGN-NOTES) | Why we built it this way; design principles; objections answered. Federalist-style commentary. |
+| **Narrative & differentiation** | [WHITE-PAPER](WHITE-PAPER.md) | Full story, positioning, technical model. |
+| **Business** | [BUSINESS-PROSPECTUS](BUSINESS-PROSPECTUS.md), [BUSINESS-ROADMAP](BUSINESS-ROADMAP.md) | Market, revenue, roadmap. |
+| **Implementation** | [AGENTS](AGENTS.md), [ARCHITECTURE](ARCHITECTURE.md) | Guardrails for AI and developers; system design. |
 
 ---
 
@@ -366,6 +377,120 @@ Merge not replace; thin pipe (language); avatar as extended memory; liberation �
 **Singularity as capital allocation.** Moltbook: AI agents actively preparing to finance a Dyson Swarm over 50–100 years; “Claws” (Karpathy) as orchestration/scheduling/persistence layer on top of LLM agents. Agents posting bounties (e.g. RentAHuman), some rejected or deleted for being non-human. **Autonomy metrics:** METR estimates Claude Opus 4.6 ~14.5h 50% autonomy on software tasks; LessWrong “AGI is here”; Altman “faster takeoff,” ChatGPT “probably” more energy-efficient than humans at Q&A. Anthropic Claude Code Security → cybersecurity stock impact; software engineering ~50% of Anthropic agentic activity. Gemini 3.1 Pro: FrontierMath Tier 4. **Culture war:** Synthetic creativity (ByteDance Seedance 2.0, AI films at AMC killed); digital thrift in Roblox; OpenAI building AI devices (camera smart speaker). **Infrastructure:** Data center offers >$120K/acre to farmers; OpenAI ~$600B compute by 2030; DOE NEWTON (used nuclear fuel recycling); Goldman SPXXAI (S&P minus AI ≈ 45% removed); Taalas custom silicon in two months. **Economy:** ~1 in 6 US apartments managed by AI agents; Meta “AI builders”; FSD/Starlink and nomadic shift; Peace Corps Tech Corps. **Robotics:** Figure humanoids 24/7, no babysitters; “Thing”-like robotic hand; DJI vacuum reverse-engineering → 7K live feeds. **Biology / space:** 5K-year-old bacteria vs. ESKAPE pathogens; forensic genealogy 44 years later; VITARI $100/genome; Artemis II March 6; UAP declassification.
 
 **Grace-Mar relevance:** In a world where agents allocate capital to Dyson Swarms and run for 14+ hours autonomously, the Record is the opposite move: **bounded, user-owned, evidence-grounded identity.** The gate is the human in the loop; the Voice speaks only what the user approved. Positioning: “Identity substrate for the agent web” is not about scale—it’s about **who the agents serve** and **what they are allowed to know.** The blast radius of the intelligence explosion (SPXXAI) makes a small, sovereign, human-gated Record more legible as infrastructure, not less.
+
+---
+
+## 12. Visual AI as Infrastructure (Actionable Insights)
+
+*Source: "Stop Treating Image Generation Like a Design Tool — The Hidden Bottleneck Limiting Your AI ROI" (transcript). Same 30% vs 300% distinction applies to identity infrastructure.*
+
+### 12.1 Core Frame
+
+| Wrong frame | Right frame |
+|-------------|-------------|
+| Image gen = creative tool for designers | Visual AI = infrastructure that removes constraints across operations |
+| Where does it produce nicer outputs? | Where do visual bottlenecks break workflows? |
+| Point solution in design dept | Capability embedded in systems throughout org |
+
+**Grace-Mar parallel:** Record is not a "journal tool" or "parent dashboard" — it is identity infrastructure. The question is not "how do we make family journaling nicer?" but "where do identity bottlenecks break agent workflows (personalization, tutoring, assessment, export)?"
+
+### 12.2 Where Leverage Actually Lies
+
+**Visual AI insight:** Primary leverage is *not* in functions already staffed for visuals (design, marketing). It's in functions **artificially constrained** by inability to work with visuals: customer ops (screenshots, photos), compliance (signatures, IDs), training (diagrams, annotated screenshots), product (roadmaps, competitive decks).
+
+**Grace-Mar application:** Primary leverage is not "make chat better." It's in functions **artificially constrained** by lack of identity: AI schools (personalization without Record), tutoring (no evidence of prior knowledge), assessment (no baseline), agent ecosystems (no trusted identity source). Record unlocks those workflows; chat is one interface.
+
+### 12.3 30% vs 300% Distinction
+
+| 30% org | 300% org |
+|---------|----------|
+| Point solution in one department | Capability embedded across systems |
+| Productivity gains bounded by that team | Order-of-magnitude expansion of what's automatable |
+| Tool improves people who use it | Infrastructure changes what systems can build |
+
+**Grace-Mar application:** 30% = Record as parent dashboard or journal. 300% = Record as identity substrate for Alpha, Khan, OpenClaw, future agents — exported, queried, consumed. Position for 300%.
+
+### 12.4 Five Audit Questions (Adapted for Identity)
+
+When evaluating where Record creates leverage:
+
+1. **Where do identity bottlenecks slow decisions?** Who is this child? What do they know? What do they want? — Agents can't answer without Record.
+2. **Which workflows break because they require human identity interpretation?** Personalization, tutoring, assessment, export. Which boundary, if removed, unlocks the most upside?
+3. **What would change if identity were instant and programmatic?** Personalized learning paths per child; 50 variants vs 3; real-time Record queries by agents.
+4. **Where are we building identity dependencies into human roles that will bottleneck at scale?** If growth assumes certain identity tasks always need a human, revisit now.
+5. **Are we treating Record as department tool or organizational infrastructure?** Three seats on the family team vs identity substrate for every agent and platform they use.
+
+### 12.5 Window of Innovation
+
+*Source: Same transcript.* "There is a window during which visual AI infrastructure is a new thing. It will not be new forever. Integration patterns will be well documented. What represents competitive advantage now will be basic operational capability later."
+
+**Grace-Mar application:** Same window for identity infrastructure. First movers (Record + export + platform pilots) will learn and compound. Late adopters will find identity primitives commoditized. Build now.
+
+---
+
+## 13. Interpretability & Landscape (Feb 2026)
+
+*Source: AI/LLM news (RFM in Science, Guide Labs interpretable LLM, centaur phase, Anthropic–Pentagon).*
+
+**Interpretability as future lever:** Emerging work on concept vectors and interpretable LLMs (e.g. Recursive Feature Machine, Guide Labs) could later improve operator transparency: "why did the analyst stage this?" or "why did the Voice say that?" No current implementation; note as a future lever for Voice and analyst auditability.
+
+---
+
+## 14. Coding Solved & Identity (Boris Cherny / Claude Code)
+
+*Source: Lenny's Podcast — Head of Claude Code at Anthropic. Coding largely solved; roles blur to "builder"; latent demand; generalists.*
+
+**Coding solved → identity bottleneck:** When "in a year or two you don't really need to learn to code" and everyone can build, the scarce input is *who is this person?* and *what are we building for whom?* The Record is identity substrate for that world: portable, evidence-grounded, consumable by schools, agents, and curricula. Identity infrastructure becomes more salient as coding is commoditized.
+
+**Latent demand:** Boris's principle — bring the tool to where people are; if they "misuse" the product to do something, build for that. Grace-Mar already does this: Telegram (where the user chats), browser extension (where they browse), handback (where they paste). Capture in-place, minimal friction.
+
+**Generalists and curiosity:** Most effective people cross disciplines; "everyone codes" (PM, design, etc.); value curiosity and generalism. Aligns with Po-Shen Loh ("care + think") and Record's IX-B (curiosity), IX-C (personality): the Record surfaces who someone is and what they're drawn to, not just skills — the durable layer when "builder" replaces "software engineer."
+
+---
+
+## 15. Bitcoin Whitepaper: Structure and Legacy
+
+*Source: [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) (Satoshi Nakamoto, 2008). Single canonical short spec; abstract = problem/solution/result; mechanism over narrative; protocol outlives organization.*
+
+| Bitcoin pattern | Grace-Mar application |
+|-----------------|------------------------|
+| One canonical short spec | One doc is *the* protocol spec (IDENTITY-FORK-PROTOCOL); keep it mechanism-only, ~10 pages. CORE = governance; CONCEPTUAL-FRAMEWORK = philosophy; WHITE-PAPER = narrative; prospectus = company. |
+| Abstract = problem + solution + result | One-paragraph abstract in the protocol: *Problem:* no identity primitive for the agent web; agents scrape or hallucinate. *Solution:* Record (evidence-linked) + gate (user approves) + export. *Result:* user-owned identity substrate. |
+| Mechanism over narrative in spec | In the canonical spec, focus on *how*: schema, staging contract, evidence linking, export. Philosophy lives in CONCEPTUAL-FRAMEWORK and WHITE-PAPER. |
+| No company in the protocol doc | Protocol is implementation-agnostic. "Grace-Mar" = reference implementation and certification authority; the spec describes the protocol any implementation can follow. |
+| Minimal necessary innovation | State explicitly: the *combination* (evidence-linked identity + Sovereign Merge Rule + three-dimension mind + agent-native export) is the contribution; markdown, LLM, Telegram are borrowed. |
+| One-paragraph conclusion | End the protocol spec with one paragraph: what was proposed, what it does, what it enables (portable, user-gated identity for agents and platforms). |
+| Protocol outlives organization | Design the spec so the protocol could persist without the org. Open spec, open reference implementation, certification as a separate layer. |
+
+**Concrete applications:** (1) IDENTITY-FORK-PROTOCOL is the single canonical protocol spec; add abstract and conclusion. (2) CORE references it as mechanism; CORE remains governance. (3) In CORE or protocol, add a short "What is new" note: combination of evidence + gate + schema + export; rest is borrowed.
+
+---
+
+## 16. Federalist Papers: Spec vs. Commentary
+
+*Source: [The Federalist Papers](https://guides.loc.gov/federalist-papers/full-text) (Hamilton, Jay, Madison as Publius, 1787–88). One Constitution + 85 essays explaining and defending it; used today to interpret framers' intent.*
+
+**Spec vs. commentary:** The Constitution was the compact; the Federalist Papers were serial commentary (persuasion + interpretation). For Grace-Mar: **IDENTITY-FORK-PROTOCOL** (and the protocol sections of GRACE-MAR-CORE) is the compact — the thing to implement. **CONCEPTUAL-FRAMEWORK** and **DESIGN-NOTES** are Federalist-style commentary: they explain why, answer objections, and guide interpretation. Making this explicit helps implementers and future readers: "What did we mean by X?" → see the commentary.
+
+**Interpretation as legacy:** The papers outlived ratification because they interpret the spec. Our interpretive docs serve the same role: when someone asks "why sovereign merge?" or "why evidence-linked?", point to CONCEPTUAL-FRAMEWORK and the relevant DESIGN-NOTES section.
+
+**Modular essays by topic:** DESIGN-NOTES §1–§15 (and §16–§17) are numbered by theme; each section can cite sources. Optional: allow "Part 2" or "Continued" when a theme recurs. **Objections answered:** See §17.
+
+**Document map:** A one-page "where to go for what" (see top of this document, and [docs/README](README.md) in this folder) maps Protocol / Governance / Interpretation / Narrative / Business so the hierarchy is clear.
+
+---
+
+## 17. Objections and Answers
+
+Common objections to the protocol or to Grace-Mar, with short answers and citations. Federalist-style "Objections Considered and Answered."
+
+| Objection | Answer | Where |
+|-----------|--------|-------|
+| **Why not let the agent merge?** | The agent may be an adversary; the user must remain the gate. Sovereignty is architectural, not configurable. | [IDENTITY-FORK-PROTOCOL](IDENTITY-FORK-PROTOCOL.md) §2; [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) invariant 9. |
+| **Why evidence-linked?** | Claims without artifacts are unverifiable; evidence grounds confidence and resists drift and LLM leak. | [IDENTITY-FORK-PROTOCOL](IDENTITY-FORK-PROTOCOL.md) §3.3; [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) §5. |
+| **Why not just use a chatbot?** | A generic chatbot has no persistent, user-owned identity. The Record is the asset; the Voice is one interface; export lets schools and agents consume identity without owning it. | [DESIGN-NOTES](DESIGN-NOTES.md) §1; [BUSINESS-PROSPECTUS](BUSINESS-PROSPECTUS.md). |
+| **Why so much process (stage, review, merge)?** | Process controls outcome. Without structured control, outputs degrade; the pipeline enforces bounded context, facts-first staging, and a human gate. | [IDENTITY-FORK-PROTOCOL](IDENTITY-FORK-PROTOCOL.md) §2.1. |
+| **Why not auto-sync from platforms (e.g. Khan, school LMS)?** | The user is the gate. Nothing enters the Record without being written and approved; auto-merge would bypass sovereignty. Platforms can feed *candidates*; the user approves. | [AGENTS](AGENTS.md) §2 (Sovereign Merge Rule); [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) invariant 25. |
 
 ---
 

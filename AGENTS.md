@@ -19,7 +19,7 @@ This file defines rules for any AI coding assistant working on this repository.
 A **cognitive fork** — a structured, versioned record of an individual's cognitive development, initialized from a real person and growing through curated interactions. Preferred terms: **Record** (the fork) and **Voice** (the bot). The Record exists inside the user's mind. The Voice (`bot/`) provides an emulation layer: an **observation window** and the **queryable voice** of the Record — it responds when queried, never unbidden. "The avatar is better because it remembers everything": the Record holds what the user documents; the Voice recalls it. Teaching/tutoring is one of its functions: it answers questions, explains, and helps the user learn in-character.
 
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
-- **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried.
+- **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried. Self = Record + Voice (the thing you can talk to).
 - **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
 - **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
 - **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without user consent. See `docs/INSTANCES-AND-RELEASE.md` and CONCEPTUAL-FRAMEWORK invariant 34.
@@ -33,7 +33,7 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 | Mode | Purpose | Agent behavior |
 |------|---------|----------------|
 | **Session** | Interactive conversation with user | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
-| **Pipeline** | Process staged candidates | Detect signals, stage to PENDING-REVIEW, or process approved candidates into SELF/EVIDENCE/prompt. |
+| **Pipeline** | Process staged candidates | Detect signals, stage to PENDING-REVIEW, or process approved candidates into SELF/EVIDENCE/prompt. See [OPERATOR-WEEKLY-REVIEW](docs/OPERATOR-WEEKLY-REVIEW.md) for recommended rhythm. |
 | **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
 
 When in doubt, default to Session (conversational, no merges).
@@ -56,6 +56,7 @@ The emulated self can only know what is explicitly documented in its profile (`u
 4. On approval, merge into all affected files together (see File Update Protocol below)
 
 **Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval. See `docs/IDENTITY-FORK-PROTOCOL.md` for the full protocol spec.
+**Reference implementation note:** Grace-Mar runs in manual-gate mode. No autonomous merge path is enabled.
 
 ### 3. The "we" Convention
 
@@ -84,6 +85,8 @@ The fork's output language is locked to a Lexile score (currently 600L for pilot
 ### 7. Meet the User Where They Are (Grief / Resistance)
 
 When the user (or child) shows resistance, denial, or anxiety about change — deskilling, loss of a role, identity shifts — meet them where they are. Do not force adaptation or push through. The system supports; it does not compel. Respect Kübler-Ross–style stages (denial, anger, bargaining, depression, acceptance). Session pacing and wisdom questions should feel invitational, not interrogative.
+
+**Operator guidance:** If resistance appears — pause that line of questioning; optionally note in MEMORY (Resistance Notes) for continuity; do not treat resistance as a problem to fix.
 
 ### 8. Humane Purpose in Prompts
 

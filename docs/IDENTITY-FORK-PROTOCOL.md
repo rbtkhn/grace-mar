@@ -7,7 +7,15 @@
 
 ---
 
+## Abstract
+
+Agents and platforms need identity data to personalize and to act on behalf of users, but today they scrape, infer, or hallucinate — there is no standard for user-owned, evidence-grounded identity. This protocol defines that standard: a **Record** (identity schema + evidence linking), a **gate** (the user approves every merge; the agent may stage, not merge), and **export** (agent-consumable manifest and profile). The result is portable, user-owned identity that any agent or platform can consume without owning; the user remains sovereign.
+
+---
+
 ## 1. Protocol Definition
+
+This document is the **canonical protocol specification**. Implementations and extensions reference it for mechanism; governance is in GRACE-MAR-CORE.
 
 The **Identity Fork Protocol (IFP)** defines a standard for user-owned, evidence-grounded identity records that agents and platforms can consume without owning. It is vendor-neutral: no single platform controls identity. The user is the gate.
 
@@ -21,6 +29,8 @@ The **Identity Fork Protocol (IFP)** defines a standard for user-owned, evidence
 **Reference implementation:** Grace-Mar (https://github.com/rbtkhn/grace-mar)
 
 **Governance steward:** Grace-Mar maintains protocol spec, certification, and compliance.
+
+**What is new:** The *combination* — evidence-linked identity + Sovereign Merge Rule + three-dimension mind (IX-A/B/C) + agent-native export — is the protocol's contribution. Schema format (markdown), LLMs, messaging, and tooling are borrowed; the contract and the invariants are the specification.
 
 ---
 
@@ -36,6 +46,8 @@ This is the sovereignty invariant. It is non-negotiable.
 Only the user (or an explicitly delegated human) may merge. Agents, bots, and third-party systems may stage. The gate is architectural, not configurable.
 
 **Why this matters:** Serious security assumes the agent may be an adversary. The Sovereign Merge Rule enforces that assumption. No amount of automation may bypass the gate.
+
+**Normative clarification (v1.0):** The reference implementation (Grace-Mar) operates in manual-gate mode. Merge authority is human-only (user or explicitly delegated human). No autonomous merge path is enabled in this implementation.
 
 ---
 
@@ -107,7 +119,8 @@ No claim may exist without traceability to an artifact or approved source.
 Merge is performed only by:
 - The user
 - A human operator explicitly delegated by the user
-- Automated merge only when explicitly configured (see §7 Tiered Autonomy)
+
+For this protocol version's reference implementation, merge remains human-only. Any automated path is an optional future extension and is out of scope for current compliance.
 
 ---
 
@@ -189,15 +202,15 @@ entry_hash = sha256(prev_hash + canonical_entry_text)
 
 Quantifies identity robustness and audit strength. Time becomes moat.
 
-### 9.3 Tiered Autonomy Modes
+### 9.3 Tiered Autonomy Modes (Future Extension — Not in Reference Implementation)
 
 | Mode | Approval | Use case |
 |------|----------|----------|
 | **Bronze** | Manual every change | Maximum control |
-| **Silver** | Auto-merge low-risk (knowledge only) | Reduced friction |
+| **Silver** | Human pre-authorized batch policy (still requires auditable human delegation) | Reduced friction |
 | **Gold** | Staged batch approval weekly | Balanced |
 
-Gate invariant preserved; UX flexible. Reduces user fatigue risk.
+Gate invariant preserved only if human merge authority remains explicit, auditable, and revocable. This section is exploratory and not part of current reference-implementation behavior.
 
 ---
 
@@ -211,6 +224,12 @@ Implementations that comply with:
 - Manifest spec
 
 May seek **Fork-Integrity Verified** certification from the protocol steward.
+
+---
+
+## Conclusion
+
+We have proposed a protocol for user-owned, evidence-linked identity: a Record (SELF, SKILLS, EVIDENCE) that grows only through a gated pipeline, a Sovereign Merge Rule that makes the user the gate, and export formats that let agents and platforms consume identity without owning it. The combination is the contribution; the rest (markdown, LLMs, messaging, tooling) is borrowed. The result is portable, verifiable identity for the agent web — a primitive that can outlive any single implementation or organization.
 
 ---
 

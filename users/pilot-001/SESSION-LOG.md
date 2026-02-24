@@ -819,4 +819,56 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 
 ---
 
+## Session 021 — Pipeline: Lunar New Year
+
+**Date:** 2026-02-24
+**Method:** Operator approved CANDIDATE-0063 (one-by-one approval)
+
+**CANDIDATE-0063 (Lunar New Year):** Approved
+- SELF.md — LEARN-0031 added to IX-A (Lunar New Year — dragon dances, fireworks, paper = good luck)
+- bot/prompt.py — YOUR KNOWLEDGE updated
+
+**Evidence:** ACT-0029 (bot conversation — user shared Lunar New Year experience: dragon dances, fireworks hurt ears, paper touched her = good luck)
+
+---
+
+## Session 022 — Pipeline: Vietnamese food / pho
+
+**Date:** 2026-02-24
+**Method:** Operator approved CANDIDATE-0064 (one-by-one approval)
+
+**CANDIDATE-0064 (Vietnamese food / pho):** Approved
+- SELF.md — LEARN-0032 added to IX-A (mom gave Vietnamese food because she likes it; pho, broth, noodles, chopsticks)
+- bot/prompt.py — YOUR KNOWLEDGE updated
+
+**Evidence:** ACT-0030 (bot conversation — user shared: mom gave Vietnamese food, pho)
+
+---
+
+## Session 023 — Pipeline: Fox and the Hound
+
+**Date:** 2026-02-24
+**Method:** Operator approved CANDIDATE-0065 (one-by-one approval)
+
+**CANDIDATE-0065 (Fox and the Hound):** Approved
+- SELF.md — LEARN-0033 added to IX-A (Tod and Copper, friendship, a little bit sad)
+- bot/prompt.py — YOUR KNOWLEDGE (Music and stories) updated
+
+**Evidence:** ACT-0031 (bot conversation — user referenced Fox and the Hound)
+
+---
+
+## Session 024 — Pipeline: Reptile/fish multiple answers (personality)
+
+**Date:** 2026-02-24
+**Method:** Operator approved CANDIDATE-0067 (one-by-one approval)
+
+**CANDIDATE-0067 (Reptile/fish multiple answers):** Approved
+- SELF.md — PER-0005 added to IX-C (notices multiple valid answers; comfortable with ambiguity)
+- bot/prompt.py — YOUR PERSONALITY updated
+
+**Evidence:** ACT-0032 (homework quiz — "I can think of multiple answers for the reptile fish question")
+
+---
+
 END OF FILE — SESSION LOG PILOT-001

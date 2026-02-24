@@ -655,6 +655,10 @@ The PRP URL (e.g. `https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace
 
 PRP-only is lightweight and pasteable anywhere; the bot offers the full observation-window experience. See [PORTABLE-RECORD-PROMPT](PORTABLE-RECORD-PROMPT.md).
 
+### Related Architectures
+
+Grace-Mar shares conceptual DNA with other patterns: **multi-agent debate before answer** (e.g. Grok 4.2 — multiple perspectives before synthesis); **society of mind** (agents greater than sum of parts); **user as final arbiter** (human gates what enters the Record). The analyst stages; the user merges. Debate and divergence are valued; convergence is gated.
+
 ---
 
 ## Emulation Layer

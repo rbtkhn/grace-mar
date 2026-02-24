@@ -15,3 +15,7 @@ Last rotated: 2026-02-22
 ## Calibrations
 
 (optional: session-specific preferences — e.g. shorter answers, more questions)
+
+## Resistance Notes
+
+(optional: topics to avoid or handle gently — e.g. "resistance on school questions"; use to avoid retriggering next session)

@@ -6,7 +6,7 @@
 
 **Prime directive:** The Record belongs to the user. See GRACE-MAR-CORE §I for long-term objectives.
 
-**Preferred conceptual terms:** Use **Record** (not fork) and **Voice** (not bot) in conceptual discussion. *Fork* and *bot* remain for technical references (file paths, code). Record = the documented self; Voice = the queryable interface that speaks the record.
+**Preferred conceptual terms:** Use **Record** (not fork) and **Voice** (not bot) in conceptual discussion. *Fork* and *bot* remain for technical references (file paths, code). Record = the documented self; Voice = the queryable interface that speaks the record. **Self = Record + Voice** — the thing you can talk to; together they form the queryable documented self.
 
 ---
 
@@ -84,6 +84,7 @@
 34. **Canonical instance; no other instance as independent agent** — The Record and Voice have one **canonical instance**: the one the user controls (data, pipeline, deployment). Exports are snapshots for consumption (e.g., by schools or agents that read the Record). No *other* instance of the Record or Voice may be deployed or used as an **independent economic or social agent** (posting bounties, contracting, chatting as the identity with third parties, or otherwise acting in the world) without **explicit user consent** and, where feasible, a **revocation path**. The system is designed so the user retains sovereignty over who speaks and acts in the name of the Record. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md).
 35. **Human–computer bicameral cognition** — Grace-Mar instantiates a new bicameral dyad. The user is one chamber (conscious, sovereign); Record + Voice is the other (externalized, queryable, speaks only when asked). The dyad is voluntary and sovereign — a new structure, not a reversion to Jaynesian bicameralism. Design should reinforce this dyad. See §8 (Design Lens: Bicameral Mind Theory).
 36. **Interregnum chaos; hero's fortification** — Gramsci: "the old is dying and the new cannot be born." The transitional epoch (5–10 years) will see AI-driven abundance clash with entrenched systems — protests, conspiracies, mental health crises, currency collapse, authoritarian drift, robot scapegoating. Chaos breeds control; Faraday Cage communities embody voluntary opt-out. The fork is identity infrastructure amid upheaval. Fortify with guilds, wisdom-saving, foresight audits; ride the waves, not fight them. (5000 Days Part 14.)
+37. **Centaur alignment** — The "centaur phase" (human + AI agent as the unit of work) aligns with Grace-Mar's dyad: the user is sovereign; the agent stages, extends, and speaks the Record. The human holds the reins; the system executes. Design reinforces this — operator in the loop, gate intact, agent as extension not replacement.
 
 ---
 

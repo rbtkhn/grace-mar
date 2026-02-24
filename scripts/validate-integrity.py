@@ -150,6 +150,7 @@ def validate_pending_review(users_dir: Path) -> list[str]:
 
         candidates_section = content.split("## Processed")[0]
         # Each candidate block
+        allowed_mind_categories = {"knowledge", "curiosity", "personality"}
         for m in re.finditer(r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", candidates_section, re.DOTALL):
             cid, yaml_block = m.groups()
             if "status:" not in yaml_block:
@@ -157,6 +158,14 @@ def validate_pending_review(users_dir: Path) -> list[str]:
             elif "status: pending" in yaml_block:
                 if "mind_category:" not in yaml_block and "summary:" not in yaml_block:
                     errors.append(f"PENDING-REVIEW: {cid} (pending) missing mind_category or summary")
+            mind_m = re.search(r"^mind_category:\s*([^\n]+)", yaml_block, re.MULTILINE)
+            if mind_m:
+                mind_category = mind_m.group(1).strip().strip('"\'').lower()
+                if mind_category not in allowed_mind_categories:
+                    errors.append(
+                        f"PENDING-REVIEW: {cid} invalid mind_category '{mind_category}' "
+                        f"(allowed: knowledge, curiosity, personality)"
+                    )
 
     return errors
 

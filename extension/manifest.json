@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Grace-Mar Save to Record",
+  "version": "0.1.0",
+  "description": "Save pages to your Grace-Mar Record — one-click capture from any URL.",
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "http://localhost:5050/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -10,6 +10,11 @@
 
 **Category:** Identity infrastructure for the agent web — not second-brain tool, AI clone, or child-specific tutor.
 
+**Execution sequence (next 18 months):**
+- Primary wedge: hosted family product (homeschool/microschool)
+- Secondary: 1-2 scoped integration pilots
+- Deferred: certification/compliance program as standalone revenue
+
 **Dual positioning:**
 - **Supplemental** — Works alongside Alpha (and similar AI schools). Alpha teaches; Grace-Mar records. Record feeds Incept for personalization.
 - **Low-cost alternative** — Open-source. Families outside $40K–$75K tuition run Grace-Mar + Khan/IXL + lightweight structure.
@@ -53,6 +58,8 @@ See [Design Notes](DESIGN-NOTES.md) for full white-paper narrative and different
 | Knowledge boundary | No undocumented references | Counterfactual harness |
 | Export adoption | Integrations using identity export | OpenClaw, other agents |
 | Trust signal | User approval rate, rejection reasons | Pipeline analytics |
+| Gate integrity | Merge receipt coverage; auditable apply events | MERGE-RECEIPTS + PIPELINE-EVENTS |
+| Retention quality | Week-4 and month-3 paid cohort retention | Product analytics |
 
 ---
 

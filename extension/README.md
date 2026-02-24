@@ -1,0 +1,37 @@
+# Grace-Mar Browser Extension
+
+One-click capture from any URL to your Grace-Mar Record. Local only; stages to PENDING-REVIEW (user approves via /review in Telegram).
+
+## Setup
+
+1. **Run the handback server** (local):
+   ```bash
+   cd grace-mar
+   python scripts/handback_server.py
+   ```
+   Listens on `http://127.0.0.1:5050` by default.
+   Unauthenticated requests are accepted only from local loopback.
+
+2. **Load the extension** (Chrome/Edge):
+   - Open `chrome://extensions`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `extension/` folder
+
+3. **Use**:
+   - **Toolbar** — Click the extension icon, then "Save to Record" to stage the current page
+   - **Context menu** — Right-click on a page or link → "Save to Record"
+
+## What it does
+
+- Builds activity report: `we read "[page title]"` + URL
+- POSTs to `http://localhost:5050/stage`
+- Shows confirmation: "Saved! X items to review" (if staged) or "Added to log. X items to review"
+- Pipeline: stage → PENDING-REVIEW → user approves in Telegram via /review
+
+## Requirements
+
+- Python handback server running locally
+- OPENAI_API_KEY set (analyst needs it)
+- Pilot user configured (default: pilot-001)
+- Optional for remote/non-loopback staging: set `HANDBACK_API_KEY` and pass `X-Api-Key`

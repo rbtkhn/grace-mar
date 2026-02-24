@@ -67,10 +67,15 @@ logger = logging.getLogger(__name__)
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 DASHBOARD_MINIAPP_URL = os.getenv("DASHBOARD_MINIAPP_URL", "").rstrip("/")
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
 
 
 def _channel_key(chat_id: int) -> str:
     return f"telegram:{chat_id}"
+
+
+def _profile_path(filename: str) -> Path:
+    return Path(__file__).resolve().parent.parent / "users" / USER_ID / filename
 
 
 # Session paths shown on /start — instructions/commands to Grace-Mar.
@@ -135,7 +140,7 @@ async def prp(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             return
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        content = mod.export_prp(user_id="pilot-001")
+        content = mod.export_prp(user_id=USER_ID)
         buf = BytesIO(content.encode("utf-8"))
         buf.seek(0)
         await update.message.reply_document(
@@ -250,7 +255,16 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
         return
     action, candidate_id = data.split(":", 1)
     status = "approved" if action == "approve" else "rejected"
-    ok = update_candidate_status(candidate_id, status)
+    chat_id = query.message.chat.id if query.message else None
+    actor_id = update.effective_user.id if update.effective_user else None
+    channel_key = _channel_key(chat_id) if chat_id else None
+    ok = update_candidate_status(
+        candidate_id,
+        status,
+        channel_key=channel_key,
+        actor=f"telegram:{actor_id}" if actor_id else None,
+        source="telegram:callback",
+    )
     if ok:
         emoji = "✅" if action == "approve" else "❌"
         await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
@@ -264,15 +278,16 @@ async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     # Count approved (we only have pending in get_pending_candidates — approved are different)
     from pathlib import Path
     import re
-    pending_path = Path(__file__).resolve().parent.parent / "users" / "pilot-001" / "PENDING-REVIEW.md"
+    pending_path = _profile_path("PENDING-REVIEW.md")
     content = pending_path.read_text() if pending_path.exists() else ""
     approved = len(re.findall(r"status: approved", content.split("## Processed")[0]))
     if approved == 0:
         await update.message.reply_text("no approved candidates to merge. approve some with /review first!")
         return
     await update.message.reply_text(
-        f"you have {approved} approved candidate(s). to merge: run 'process the review queue' in Cursor, "
-        "or: python scripts/process_approved_candidates.py --apply"
+        f"you have {approved} approved candidate(s). merge now needs a receipt.\n\n"
+        "1) python3 scripts/process_approved_candidates.py --generate-receipt /tmp/receipt.json --approved-by <your_name>\n"
+        "2) python3 scripts/process_approved_candidates.py --apply --approved-by <your_name> --receipt /tmp/receipt.json"
     )
 
 
@@ -291,7 +306,16 @@ async def reject_with_reason(update: Update, context: ContextTypes.DEFAULT_TYPE)
     if not candidate_id.upper().startswith("CANDIDATE-"):
         await update.message.reply_text(f"Expected CANDIDATE-XXXX, got {candidate_id}")
         return
-    ok = update_candidate_status(candidate_id, "rejected", rejection_reason=reason)
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    actor_id = update.effective_user.id if update.effective_user else None
+    ok = update_candidate_status(
+        candidate_id,
+        "rejected",
+        rejection_reason=reason,
+        channel_key=_channel_key(chat_id) if chat_id else None,
+        actor=f"telegram:{actor_id}" if actor_id else None,
+        source="telegram:command",
+    )
     if ok:
         msg = f"❌ {candidate_id} — rejected"
         if reason:

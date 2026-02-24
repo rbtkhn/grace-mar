@@ -135,7 +135,7 @@ Only the user (or explicitly delegated human) may merge.
 Agents, bots, and third-party systems may stage only.
 The gate is architectural, not configurable.
 
-See IDENTITY-FORK-PROTOCOL.md for full protocol spec.
+See IDENTITY-FORK-PROTOCOL.md for the canonical protocol specification (mechanism: schema, staging contract, export); this file (CORE) is governance.
 
 ────────────────────────────────────────────────────────────
 VI. GLOBAL GOVERNANCE RULES
