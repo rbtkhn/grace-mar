@@ -30,7 +30,7 @@ The `render.yaml` blueprint configures the miniapp with optional Telegram webhoo
 |---------|----------|-------------|
 | `TELEGRAM_BOT_TOKEN` | Yes (for bot) | From @BotFather |
 | `OPENAI_API_KEY` | Yes | For LLM responses |
-| `DASHBOARD_MINIAPP_URL` | No | URL for bot menu button (e.g. **https://grace-mar.com** — dashboard) |
+| `DASHBOARD_MINIAPP_URL` or `PROFILE_MINIAPP_URL` | No | URL for bot menu button (e.g. **https://grace-mar.com** — profile) |
 | `GITHUB_TOKEN` | No | Session transcript is local; SELF-ARCHIVE is updated only on merge. |
 | `GRACE_MAR_REPO` | No | (Unused for archiving; SELF-ARCHIVE is gated.) |
 
@@ -46,7 +46,7 @@ If you previously had a **grace-mar-bot** worker:
 
 1. **Remove** the worker service (or stop it) in the Render dashboard
 2. **Add** `TELEGRAM_BOT_TOKEN` to the miniapp service
-3. **Add** `DASHBOARD_MINIAPP_URL` to the miniapp (same as the miniapp URL)
+3. **Add** `PROFILE_MINIAPP_URL` (or `DASHBOARD_MINIAPP_URL`) to the miniapp (same as the profile URL)
 4. **Redeploy** the miniapp
 
 The miniapp will register the webhook on startup. The bot will work immediately.

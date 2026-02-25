@@ -6,8 +6,8 @@ Produces view_school (school-safe: no addresses, family details) or view_public
 (portfolio-only: interests, skills summary, no raw evidence).
 
 Usage:
-    python scripts/export_view.py --view school -u pilot-001 -o school-export.md
-    python scripts/export_view.py --view public -u pilot-001
+    python scripts/export_view.py --view school -u grace-mar -o school-export.md
+    python scripts/export_view.py --view public -u grace-mar
 
 See docs/PRIVACY-REDACTION.md for what each view excludes.
 """
@@ -142,7 +142,7 @@ def main() -> None:
         description="Export Record with privacy redaction (school, public)"
     )
     parser.add_argument("--view", "-v", required=True, choices=["school", "public"])
-    parser.add_argument("--user", "-u", default="pilot-001")
+    parser.add_argument("--user", "-u", default="grace-mar")
     parser.add_argument("--output", "-o", default=None)
     args = parser.parse_args()
     content = export_view(user_id=args.user, view=args.view)

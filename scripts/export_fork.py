@@ -8,7 +8,7 @@ or external tooling.
 
 Usage:
     python scripts/export_fork.py
-    python scripts/export_fork.py --user pilot-001 --output fork-export.json
+    python scripts/export_fork.py --user grace-mar --output fork-export.json
 """
 
 import argparse
@@ -50,7 +50,7 @@ def _parse_evidence_summary(content: str) -> dict:
     }
 
 
-def export_fork(user_id: str = "pilot-001", include_raw: bool = True) -> dict:
+def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     """Build the fork export structure."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_path = profile_dir / "SELF.md"
@@ -86,7 +86,7 @@ def export_fork(user_id: str = "pilot-001", include_raw: bool = True) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Export fork to portable JSON")
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id (e.g. pilot-001)")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id (e.g. grace-mar)")
     parser.add_argument("--output", "-o", default=None, help="Output file (default: stdout)")
     parser.add_argument("--no-raw", action="store_true", help="Omit raw file contents (summary + manifest only)")
     args = parser.parse_args()

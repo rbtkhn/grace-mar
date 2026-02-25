@@ -10,7 +10,7 @@ Usage:
     python scripts/emit_pipeline_event.py rejected CANDIDATE-0002 rejection_reason="too trivial"
     python scripts/emit_pipeline_event.py validation_failed CANDIDATE-0046 reason="missing evidence"
     python scripts/emit_pipeline_event.py maintenance none action=rotate_context rotated=true
-    python scripts/emit_pipeline_event.py --user pilot-001 applied CANDIDATE-0040
+    python scripts/emit_pipeline_event.py --user grace-mar applied CANDIDATE-0040
 """
 
 import argparse
@@ -28,8 +28,8 @@ def main() -> None:
     parser.add_argument(
         "--user",
         "-u",
-        default=(os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"),
-        help="User id (default: GRACE_MAR_USER_ID or pilot-001)",
+        default=(os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"),
+        help="User id (default: GRACE_MAR_USER_ID or grace-mar)",
     )
     parser.add_argument("event_type", help="Event name (approved/rejected/applied/validation_failed/maintenance/...)")
     parser.add_argument(

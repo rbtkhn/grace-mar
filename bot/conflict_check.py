@@ -11,7 +11,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RULES_PATH = Path(__file__).resolve().parent / "conflict_rules.yaml"
-PROFILE_DIR = REPO_ROOT / "users" / "pilot-001"
+PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 SELF_PATH = PROFILE_DIR / "SELF.md"
 
 

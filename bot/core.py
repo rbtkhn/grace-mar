@@ -70,7 +70,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 MAX_HISTORY = 20
 
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
 ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
 ARCHIVE_REPO_PATH = f"users/{USER_ID}/SELF-ARCHIVE.md"  # repo-relative for GitHub API
@@ -1373,8 +1373,21 @@ def update_candidate_status(
     return True
 
 
+def _normalize_channel_key(channel_key: str) -> str:
+    """Ensure channel_key is non-empty and in expected form (prefix:id). Prevents misrouted archive/rate-limit."""
+    k = (channel_key or "").strip()
+    if not k:
+        logger.warning("channel_key empty; using fallback unknown:unknown")
+        return "unknown:unknown"
+    if ":" not in k or k.startswith(":") or k.endswith(":"):
+        logger.warning("channel_key missing prefix:id form (%r); using as-is", k[:50])
+    return k
+
+
 def get_response(channel_key: str, user_message: str) -> str:
     """Get Grace-Mar's response for a given message. Channel-key scopes conversation."""
+    # Session (State) never writes to SELF/EVIDENCE; staging is the only path. Merge only via process_approved_candidates after companion approval.
+    channel_key = _normalize_channel_key(channel_key)
     history = conversations[channel_key]
 
     # "We did X" — activity report from operator; run pipeline, skip chat.

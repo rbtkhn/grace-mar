@@ -122,7 +122,7 @@ Same as today: **only what is in the Record**. Knowledge boundary applies. The f
 - [ ] Optional: one-time links for maximum control.
 
 ### Phase 4 — Multi-user
-- [ ] Today: single pilot (pilot-001). Future: multi-user backend; each applicant has their own Record and shareable link.
+- [ ] Today: single pilot (grace-mar). Future: multi-user backend; each applicant has their own Record and shareable link.
 - [ ] Auth for applicants (to generate links, manage Record); reviewers remain unauthenticated.
 
 ---

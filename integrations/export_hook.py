@@ -8,8 +8,8 @@ Targets:
   curriculum  — Record → curriculum_profile.json (adaptive curriculum engines)
 
 Usage:
-    python integrations/export_hook.py --target openclaw --user pilot-001
-    python integrations/export_hook.py --target intersignal -u pilot-001 -o ../intersignal-mesh/
+    python integrations/export_hook.py --target openclaw --user grace-mar
+    python integrations/export_hook.py --target intersignal -u grace-mar -o ../intersignal-mesh/
 """
 
 import argparse
@@ -71,7 +71,7 @@ def _prepend_constitution_prefix(out_dir: Path) -> int:
 def run_export(
     target: str,
     output_dir: Path | None,
-    user_id: str = "pilot-001",
+    user_id: str = "grace-mar",
     openclaw_format: str = "md+manifest",
 ) -> int:
     scripts = REPO_ROOT / "scripts"
@@ -226,7 +226,7 @@ def main() -> int:
         required=True,
         help="Integration target",
     )
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output directory (default: users/[id]/)")
     parser.add_argument(
         "--openclaw-format",

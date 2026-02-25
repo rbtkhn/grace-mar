@@ -41,6 +41,10 @@ Last updated: 2026-02-24
 ### X.com (Twitter) integration — design only
 - **docs/X-INTEGRATION.md** — Design-stage options for X API: feed consumer (read → match → stage) recommended first; Voice-on-X deferred. Tricameral alignment and technical placement documented. No implementation yet.
 
+### Implementable insights (design + skills)
+- **docs/IMPLEMENTABLE-INSIGHTS.md** — Concrete takeaways from Claws/AGI discourse: harness vs model, continual learning = human-gated writes, system boundaries, config-via-skills, small auditable surface, forkable + skills. Linked from ARCHITECTURE § System boundaries and harness.
+- **docs/ADDING-A-CHANNEL.md** — Skill pattern for new channels: one entrypoint per channel, shared core, env config, no channel logic in core.
+
 ---
 
 ## Recently Completed (High Level)
@@ -117,15 +121,15 @@ See DESIGN-NOTES §11.8 for slightly expanded commentary.
 ```bash
 git status
 python3 scripts/metrics.py
-python3 scripts/session_brief.py --user pilot-001
-python3 scripts/validate-integrity.py --user pilot-001 --json
+python3 scripts/session_brief.py --user grace-mar
+python3 scripts/validate-integrity.py --user grace-mar --json
 python3 scripts/governance_checker.py
 ```
 
 If profile or prompt changed:
 
 ```bash
-python3 scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt
+python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
 ```
 
 ---

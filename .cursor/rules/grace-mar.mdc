@@ -101,7 +101,7 @@ This boundary is enforced in `SYSTEM_PROMPT` in `bot/prompt.py`. Violating it br
 
 ## Lexile Constraint
 
-The self's output language is locked to a Lexile score (currently 600L for pilot-001). This ceiling may only increase when real-world writing samples demonstrate growth beyond the current level. The constraint is enforced in `SYSTEM_PROMPT`.
+The self's output language is locked to a Lexile score (currently 600L for grace-mar). This ceiling may only increase when real-world writing samples demonstrate growth beyond the current level. The constraint is enforced in `SYSTEM_PROMPT`.
 
 ---
 
@@ -175,6 +175,6 @@ bot/
 
 ---
 
-## Pilot: pilot-001
+## Pilot: grace-mar
 
-Fork name: Grace-Mar. Phase: POST-SEED, active pipeline. Load from `users/pilot-001/`.
+Fork name: Grace-Mar. Phase: POST-SEED, active pipeline. Load from `users/grace-mar/`.

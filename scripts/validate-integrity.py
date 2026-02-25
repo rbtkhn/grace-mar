@@ -12,7 +12,7 @@ Checks:
 
 Usage:
   python scripts/validate-integrity.py
-  python scripts/validate-integrity.py --user pilot-001
+  python scripts/validate-integrity.py --user grace-mar
   python scripts/validate-integrity.py --users-dir users --json
 
 Exit:

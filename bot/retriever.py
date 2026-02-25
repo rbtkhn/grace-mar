@@ -9,7 +9,7 @@ import os
 import re
 from pathlib import Path
 
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
 SELF_PATH = PROFILE_DIR / "SELF.md"
 SKILLS_PATH = PROFILE_DIR / "SKILLS.md"

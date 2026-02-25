@@ -17,7 +17,7 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROFILE_DIR = REPO_ROOT / "users" / "pilot-001"
+PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 STALE_DAYS = 7
 
 
@@ -276,7 +276,7 @@ def main() -> None:
     import argparse
     parser = argparse.ArgumentParser(description="Pipeline health and record metrics")
     parser.add_argument("--json", action="store_true", help="Output JSON")
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     args = parser.parse_args()
 
     global PROFILE_DIR

@@ -34,7 +34,7 @@ One-click capture from any URL to your Grace-Mar Record. Local only; stages to P
 
 - Python handback server running locally
 - OPENAI_API_KEY set (analyst needs it)
-- Pilot user configured (default: pilot-001)
+- Pilot user configured (default: grace-mar)
 - Optional for remote/non-loopback staging: set `HANDBACK_API_KEY` and pass `X-Api-Key`
 
 ## Settings

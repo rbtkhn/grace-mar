@@ -7,9 +7,9 @@ personality (IX-C), and talent_stack — for tutors, platforms, and operators
 as the "motivation/engagement substrate" (BUSINESS-ROADMAP priority #1).
 
 Usage:
-    python scripts/export_engagement_profile.py --user pilot-001
-    python scripts/export_engagement_profile.py -u pilot-001 -o engagement.json
-    python scripts/export_engagement_profile.py -u pilot-001 --md -o engagement.md
+    python scripts/export_engagement_profile.py --user grace-mar
+    python scripts/export_engagement_profile.py -u grace-mar -o engagement.json
+    python scripts/export_engagement_profile.py -u grace-mar --md -o engagement.md
 """
 
 import argparse
@@ -93,7 +93,7 @@ def _ix_c_snippets(content: str) -> list[str]:
     return snippets[:20]
 
 
-def export_engagement_profile(user_id: str = "pilot-001") -> dict:
+def export_engagement_profile(user_id: str = "grace-mar") -> dict:
     """Build engagement profile dict: interests, curiosity, personality, talent_stack."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_path = profile_dir / "SELF.md"
@@ -181,7 +181,7 @@ def export_engagement_profile_md(profile: dict) -> str:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Export engagement/motivation profile from Record")
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output file (default: stdout)")
     parser.add_argument("--md", action="store_true", help="Emit markdown instead of JSON")
     args = parser.parse_args()

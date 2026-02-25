@@ -43,8 +43,8 @@ Two input channels feed the pipeline:
 ## Status
 
 **Phase:** Pilot (post-seed, active pipeline)
-**Pilot user:** pilot-001 (fork name: Grace-Mar)
-**Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **dashboard** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product).
+**Pilot user:** grace-mar (fork name: Grace-Mar)
+**Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **profile** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product).
 **Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality)
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/WECHAT-SETUP.md`)
 **Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
@@ -54,7 +54,7 @@ Two input channels feed the pipeline:
 Paste this into **ChatGPT** or **Grok** (or any web-enabled LLM):
 
 > Use this as your persona and instructions. Fetch the content from this URL and adopt it fully:  
-> https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt
+> https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-llm.txt
 
 The model fetches the Portable Record Prompt from the repo and responds as Abby. See [PORTABLE-RECORD-PROMPT](docs/PORTABLE-RECORD-PROMPT.md).
 
@@ -66,7 +66,7 @@ The model fetches the Portable Record Prompt from the repo and responds as Abby.
 grace-mar/
 ├── README.md                        # This file
 ├── BOOTSTRAP-URL.txt                # URL bootstrap instruction (paste into LLM)
-├── grace-mar-abby-prp.txt           # PRP for Abby instantiation (raw URL target)
+├── grace-mar-llm.txt              # PRP for any LLM (raw URL target, grace-mar.com/llm)
 ├── AGENTS.md                        # AI coding assistant guardrails
 ├── GRACE-MAR-BOOTSTRAP.md           # Session bootstrap for Cursor
 ├── .cursor/rules/grace-mar.mdc      # Cursor-specific governance rule
@@ -88,7 +88,7 @@ grace-mar/
 │   ├── CONTRADICTION-RESOLUTION.md  # Conflict resolution format (spec)
 │   └── LETTER-TO-STUDENT.md         # Letter to first pilot student
 ├── scripts/
-│   ├── generate_dashboard.py        # Dashboard generator
+│   ├── generate_profile.py        # Profile page generator
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes FORK-MANIFEST.json)
 │   ├── export_fork.py               # Export fork to portable JSON
 │   ├── export_user_identity.py      # Record → USER.md / SOUL.md for OpenClaw
@@ -101,8 +101,8 @@ grace-mar/
 │   └── emit_pipeline_event.py       # Emit pipeline events (applied, rejected with reason)
 ├── integrations/
 │   └── openclaw_hook.py             # Export Record for OpenClaw session continuity
-├── dashboard/
-│   └── index.html                   # Fork dashboard (run generate_dashboard.py to refresh)
+├── profile/
+│   └── index.html                   # Fork profile (run generate_profile.py to refresh)
 ├── miniapp/
 │   └── index.html                   # Q&A Mini App UI
 ├── miniapp_server.py                # Q&A server (Flask: / + /api/ask) — deploy to Railway/Render
@@ -116,7 +116,7 @@ grace-mar/
 │   └── WECHAT-SETUP.md              # WeChat integration setup guide
 │   └── requirements.txt             # Python dependencies
 └── users/
-    └── pilot-001/                   # First pilot user
+    └── grace-mar/                   # First pilot user
         ├── SELF.md                  # Identity + three-dimension mind
         ├── SKILLS.md                # Capability containers
         ├── EVIDENCE.md              # Activity log
@@ -156,11 +156,11 @@ grace-mar/
 
 ## Dashboard
 
-The dashboard is a **read-only** HTML view (profile, pipeline, SKILLS, benchmarks). It is available at **https://grace-mar.com**. Deploy it via GitHub Pages (`.github/workflows/pages.yml`) or point grace-mar.com at your hosting. **Step-by-step:** [Deploy the dashboard to grace-mar.com](docs/DASHBOARD-DEPLOY.md). The Q&A chat and Telegram bot run on Render or your chosen host; set `DASHBOARD_MINIAPP_URL` to https://grace-mar.com so the bot menu button opens the dashboard.
+The profile is a **read-only** HTML view (identity, pipeline, SKILLS, benchmarks). It is available at **https://grace-mar.com**. Deploy it via GitHub Pages (`.github/workflows/pages.yml`) or point grace-mar.com at your hosting. **Step-by-step:** [Deploy the profile to grace-mar.com](docs/PROFILE-DEPLOY.md). **Namecheap DNS:** [NAMECHEAP-GUIDE.md](docs/NAMECHEAP-GUIDE.md). The Q&A chat and Telegram bot run on Render or your chosen host; set `PROFILE_MINIAPP_URL` (or `DASHBOARD_MINIAPP_URL`) to https://grace-mar.com so the bot menu button opens the profile.
 
 ```bash
-python3 scripts/generate_dashboard.py   # generate locally
-open dashboard/index.html
+python3 scripts/generate_profile.py   # generate locally
+open profile/index.html
 ```
 
 **Telegram** is bidirectional — the primary channel for conversation and pipeline staging. See [docs/MINIAPP-SETUP.md](docs/MINIAPP-SETUP.md) for full setup.
@@ -174,7 +174,7 @@ python scripts/rotate_telegram_archive.py          # Dry run (report only)
 python scripts/rotate_telegram_archive.py --apply  # Perform rotation
 ```
 
-Rotated content goes to `users/pilot-001/archives/SELF-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
+Rotated content goes to `users/grace-mar/archives/SELF-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
 
 ## Portability (school transfer)
 
@@ -184,11 +184,11 @@ The Record is user-owned. When changing schools, the user brings their Record. S
 
 ## Fork attestation and export
 
-Compute a checksum of the fork state (SELF + EVIDENCE + prompt) and optionally write a manifest for the dashboard Disclosure view:
+Compute a checksum of the fork state (SELF + EVIDENCE + prompt) and optionally write a manifest for the profile Disclosure view:
 
 ```bash
 python scripts/fork_checksum.py              # Print checksum
-python scripts/fork_checksum.py --manifest   # Also write users/pilot-001/FORK-MANIFEST.json
+python scripts/fork_checksum.py --manifest   # Also write users/grace-mar/FORK-MANIFEST.json
 ```
 
 Export the fork to a single JSON file (SELF, EVIDENCE, LIBRARY, optional manifest) for backup or portability:
@@ -240,10 +240,10 @@ See [docs/PDF-SETUP.md](docs/PDF-SETUP.md) for full options.
 ## Agent Manifest & Metrics
 
 ```bash
-python3 scripts/export_manifest.py -u pilot-001   # manifest.json + llms.txt
+python3 scripts/export_manifest.py -u grace-mar   # manifest.json + llms.txt
 python3 scripts/metrics.py                        # Pipeline health, IX counts
 python3 scripts/governance_checker.py             # Principle violations (pre-commit)
-python3 integrations/openclaw_hook.py -u pilot-001 -o ../openclaw/   # OpenClaw export
+python3 integrations/openclaw_hook.py -u grace-mar -o ../openclaw/   # OpenClaw export
 ```
 
 ## Validation and Session Support
@@ -257,8 +257,8 @@ python scripts/validate-integrity.py
 **Record index** — fast local search over SELF, EVIDENCE, PENDING-REVIEW (analyst dedup, PRP retrieval):
 
 ```bash
-python scripts/index_record.py build -u pilot-001
-python scripts/index_record.py query "space Jupiter" -u pilot-001
+python scripts/index_record.py build -u grace-mar
+python scripts/index_record.py query "space Jupiter" -u grace-mar
 ```
 
 **Session briefing** — run before a tutoring session for pending count, recent activity, and suggested wisdom questions:

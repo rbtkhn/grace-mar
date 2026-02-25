@@ -43,8 +43,8 @@ Grace-Mar provides the **identity substrate** Familiar nodes need: who the perso
 Run the symbolic export for cache-oriented, Familiar-ready identity:
 
 ```bash
-python scripts/export_symbolic.py -u pilot-001
-python scripts/export_symbolic.py -u pilot-001 -o ../intersignal-mesh/
+python scripts/export_symbolic.py -u grace-mar
+python scripts/export_symbolic.py -u grace-mar -o ../intersignal-mesh/
 ```
 
 Output: `symbolic_identity.json` — structured primitives (interests, values, IX-A/B/C summaries, evidence anchors, checksum).
@@ -107,7 +107,7 @@ workspace/
 ├── intersignal/          # Braid, Mesh Cache, Familiar nodes
 │   └── identity/         # symbolic_identity.json, manifest.json
 └── grace-mar/
-    └── users/pilot-001/
+    └── users/grace-mar/
 ```
 
 Export path: `../grace-mar/scripts/export_symbolic.py`

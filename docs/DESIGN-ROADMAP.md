@@ -100,7 +100,7 @@
 
 **Export:**
 ```bash
-python integrations/export_hook.py --target intersignal -u pilot-001 -o ../intersignal-mesh/
+python integrations/export_hook.py --target intersignal -u grace-mar -o ../intersignal-mesh/
 ```
 
 **See:** [INTERSIGNAL-INTEGRATION](INTERSIGNAL-INTEGRATION.md) for full guide.

@@ -8,7 +8,7 @@ Aligns with civilization_memory-style cmc-index-search.
 Usage:
   python scripts/index_record.py build [-u USER_ID]
   python scripts/index_record.py query "terms" [-u USER_ID]
-  python scripts/index_record.py query "space Jupiter" -u pilot-001
+  python scripts/index_record.py query "space Jupiter" -u grace-mar
 
 Index stored in users/[id]/.index_record.json (gitignored recommended).
 """
@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_USER = "pilot-001"
+DEFAULT_USER = "grace-mar"
 
 
 def extract_yaml_blocks(content: str, after_marker: str | None = None) -> list[str]:

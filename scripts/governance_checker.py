@@ -35,14 +35,22 @@ LLM_LEAK_PATTERNS = [
 SKIP_DIRS = {".git", "node_modules", "__pycache__", "tools", ".cursor"}
 SKIP_FILES = {"governance_checker.py"}  # Don't flag self
 
+# Only these paths may write to SELF.md or EVIDENCE.md (Record). Staging to PENDING-REVIEW is allowed from bot.
+ALLOWED_RECORD_WRITERS = frozenset({
+    "scripts/process_approved_candidates.py",
+})
 
-def scan_file(path: Path) -> list[tuple[int, str, str]]:
+
+def scan_file(path: Path, path_rel: Path | None = None) -> list[tuple[int, str, str]]:
     """Return list of (line_num, rule, detail)."""
     violations = []
     try:
         content = path.read_text(encoding="utf-8", errors="ignore")
     except OSError:
         return []
+
+    path_rel = path_rel or path.relative_to(REPO_ROOT)
+    path_str = str(path_rel).replace("\\", "/")
 
     for i, line in enumerate(content.splitlines(), 1):
         for pattern, rule in MERGE_WITHOUT_APPROVAL_PATTERNS:
@@ -53,6 +61,10 @@ def scan_file(path: Path) -> list[tuple[int, str, str]]:
                     continue
                 if "PENDING-REVIEW" in line or "approval" in line or "approved" in line:
                     continue  # Likely documenting the gate
+                # Write to SELF.md or EVIDENCE.md only allowed from whitelist
+                if "SELF.md" in line or "EVIDENCE.md" in line:
+                    if path_str in ALLOWED_RECORD_WRITERS:
+                        continue
                 violations.append((i, rule, line.strip()[:80]))
 
     return violations
@@ -66,8 +78,9 @@ def scan_repo() -> list[tuple[Path, int, str, str]]:
             continue
         if path.name in SKIP_FILES:
             continue
-        for line_num, rule, detail in scan_file(path):
-            results.append((path.relative_to(REPO_ROOT), line_num, rule, detail))
+        path_rel = path.relative_to(REPO_ROOT)
+        for line_num, rule, detail in scan_file(path, path_rel):
+            results.append((path_rel, line_num, rule, detail))
     return results
 
 

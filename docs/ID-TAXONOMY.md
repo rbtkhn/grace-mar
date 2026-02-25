@@ -106,6 +106,10 @@ Every post-seed SELF entry (IX-A, IX-B, IX-C) must have `evidence_id: ACT-XXXX` 
 - LLM knowledge cannot leak (claims require user-approved source)
 - Provenance is traceable
 
+### Optional: scope / constraint (CMC-aligned)
+
+IX entries (LEARN-, CUR-, PER-) may include an optional **scope** or **constraint** field: when the belief does not apply or would be invalid (e.g. "Only for pre-modern cases", "If X then this narrows"). Use when the candidate or analyst output implies a boundary. No backfill required. Improves auditability and aligns with CMC-style hard constraints per doctrine. See [NOTES-CMC-SUBSTANCE](NOTES-CMC-SUBSTANCE.md) §4, [IMPLEMENTABLE-OPTIMIZATIONS-FROM-CMC](IMPLEMENTABLE-OPTIMIZATIONS-FROM-CMC.md) §3.
+
 ---
 
 ## Allocation

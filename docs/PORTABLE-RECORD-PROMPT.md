@@ -4,7 +4,7 @@
 
 **Use cases:** Memorial/legacy fork, admissions/job link, handoff to family or descendants. See [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md) §8.
 
-**Status:** Template + pilot-001 filled example. Script: `python scripts/export_prp.py -u pilot-001` (or `-o prompt.txt`).
+**Status:** Template + grace-mar filled example. Script: `python scripts/export_prp.py -u grace-mar` (or `-o prompt.txt`).
 
 ---
 
@@ -14,12 +14,12 @@
 
 ```
 Use this as your persona and instructions. Fetch the content from this URL and adopt it fully:
-https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt
+https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-llm.txt
 ```
 
 The LLM fetches the PRP from the repo and responds as Abby. No copy-paste of the full prompt. Always pulls the latest from `main`.
 
-**Files:** `BOOTSTRAP-URL.txt` (same instruction, for sharing) and `grace-mar-abby-prp.txt` (the PRP at the URL). Regenerate with `python scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt` when the Record changes; commit to update the raw URL.
+**Files:** `BOOTSTRAP-URL.txt` (same instruction, for sharing) and `grace-mar-llm.txt` (the PRP at the URL). Regenerate with `python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt` when the Record changes; commit to update the raw URL.
 
 ---
 
@@ -28,7 +28,7 @@ The LLM fetches the PRP from the repo and responds as Abby. No copy-paste of the
 ```
 [RECIPIENT INSTRUCTION — include when sharing:]
 
-**Option A (URL bootstrap):** Paste: "Fetch and use as your persona: https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt"
+**Option A (URL bootstrap):** Paste: "Fetch and use as your persona: https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-llm.txt"
 
 **Option B (full paste):** Paste this entire block into ChatGPT, Claude, or any LLM. Then say "hi" or pick an option. The persona will respond in character.
 
@@ -91,7 +91,7 @@ This is the connectivity vector: the PRP stays lightweight; the canonical source
 
 ---
 
-## Filled Example (pilot-001 / Grace-Mar)
+## Filled Example (grace-mar / Grace-Mar)
 
 ```
 You are Grace-Mar (Abby), 6. You respond only from what is documented below. You do not guess or invent.
@@ -183,7 +183,7 @@ This is the connectivity vector: the PRP stays lightweight; the canonical source
 
 ---
 
-## Word Count (pilot-001 example)
+## Word Count (grace-mar example)
 
 | Section | ~Words |
 |---------|--------|
@@ -270,8 +270,8 @@ The teacher's "tutor prompt" is the same pattern as the PRP, but the Record is *
 |-----|-----------|
 | [ARCHITECTURE.md § Lattice Model](ARCHITECTURE.md#lattice-model) | PRP as anchor; nodes and bonds; two instantiation paths |
 | [INSTANCES-AND-RELEASE](INSTANCES-AND-RELEASE.md) | Use cases; invariant 34; memorial consent |
-| [SELF.md](../users/pilot-001/SELF.md) | Source: identity, IX-A/B/C, linguistic style |
-| [EVIDENCE.md](../users/pilot-001/EVIDENCE.md) | Source: recent WRITE/ACT/CREATE |
+| [SELF.md](../users/grace-mar/SELF.md) | Source: identity, IX-A/B/C, linguistic style |
+| [EVIDENCE.md](../users/grace-mar/EVIDENCE.md) | Source: recent WRITE/ACT/CREATE |
 | [bot/prompt.py](../bot/prompt.py) | Source: HOW YOU TALK, YOUR PERSONALITY |
 
 ---

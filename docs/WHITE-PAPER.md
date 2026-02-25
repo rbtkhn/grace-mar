@@ -111,7 +111,7 @@ Like a software fork:
 - **Interact** = each session is a commit
 - **Diverge** = fork and real person grow independently — by design
 - **Merge** = user brings new data when they choose
-- **Snapshot** = git tags preserve state (e.g., pilot-001-age-6)
+- **Snapshot** = git tags preserve state (e.g., grace-mar-age-6)
 
 The fork is not a real-time mirror. It is a living, growing Record.
 

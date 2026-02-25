@@ -5,7 +5,7 @@ Test the checkpoint function: pattern match, transcript formatting, and optional
 Usage:
   python scripts/test_checkpoint.py              # unit-style tests (no API)
   python scripts/test_checkpoint.py --live       # one live get_response("checkpoint") if OPENAI_API_KEY set
-  python scripts/test_checkpoint.py --live --user pilot-001
+  python scripts/test_checkpoint.py --live --user grace-mar
 """
 import os
 import sys
@@ -19,7 +19,7 @@ def _parse_args():
     import argparse
     ap = argparse.ArgumentParser()
     ap.add_argument("--live", action="store_true", help="Run one live get_response('checkpoint') with mock history")
-    ap.add_argument("--user", default=os.getenv("GRACE_MAR_USER_ID", "pilot-001"), help="User id")
+    ap.add_argument("--user", default=os.getenv("GRACE_MAR_USER_ID", "grace-mar"), help="User id")
     return ap.parse_args()
 
 

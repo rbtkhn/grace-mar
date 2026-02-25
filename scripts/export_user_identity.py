@@ -8,8 +8,8 @@ who it serves — identity, preferences, interests, values, personality,
 and post-seed growth (IX-A, IX-B, IX-C).
 
 Usage:
-    python scripts/export_user_identity.py --user pilot-001
-    python scripts/export_user_identity.py -u pilot-001 -o ../openclaw/USER.md
+    python scripts/export_user_identity.py --user grace-mar
+    python scripts/export_user_identity.py -u grace-mar -o ../openclaw/USER.md
 """
 
 import argparse
@@ -40,7 +40,7 @@ def _subsection(content: str, title: str) -> str | None:
     return m.group(1).strip() if m else None
 
 
-def export_user_identity(user_id: str = "pilot-001") -> str:
+def export_user_identity(user_id: str = "grace-mar") -> str:
     """
     Build USER.md / SOUL.md compatible markdown from the Record.
 
@@ -56,7 +56,7 @@ def export_user_identity(user_id: str = "pilot-001") -> str:
         "# USER — Grace-Mar Record Export",
         "",
         "> Identity source for OpenClaw. Exported from grace-mar Record (SELF.md).",
-        "> Update by re-running: `python scripts/export_user_identity.py -u pilot-001 -o USER.md`",
+        "> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o USER.md`",
         "",
         "---",
         "",
@@ -87,7 +87,7 @@ def export_user_identity(user_id: str = "pilot-001") -> str:
     return "\n".join(out_lines).rstrip() + "\n"
 
 
-def export_user_identity_json(user_id: str = "pilot-001") -> dict:
+def export_user_identity_json(user_id: str = "grace-mar") -> dict:
     """Build structured identity export for agent consumers."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_path = profile_dir / "SELF.md"
@@ -127,7 +127,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Export grace-mar Record to USER.md / SOUL.md for OpenClaw"
     )
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id (e.g. pilot-001)")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id (e.g. grace-mar)")
     parser.add_argument(
         "--output", "-o", default=None, help="Output file (default: stdout)"
     )

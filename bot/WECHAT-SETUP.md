@@ -51,6 +51,8 @@ Set **Server URL** in the WeChat console to your public URL, e.g.:
 
 WeChat will verify the URL by sending a GET request. The bot responds with `echostr` to confirm.
 
+**Note:** The profile at **grace-mar.com/wechat** (the website path) can redirect users to your WeChat Official Account page. Add your account URL (e.g. from mp.weixin.qq.com) in one line to `users/grace-mar/WECHAT_ACCOUNT_URL.txt`, then regenerate the profile and redeploy. Visitors to grace-mar.com/wechat will be redirected to that URL.
+
 ## Commands (WeChat has no slash commands)
 
 Users can type these to emulate `/start` and `/reset`:

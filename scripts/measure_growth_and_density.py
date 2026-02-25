@@ -24,7 +24,7 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROFILE_DIR = REPO_ROOT / "users" / "pilot-001"
+PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 
 
 def _read(path: Path) -> str:
@@ -114,7 +114,7 @@ def growth_from_git(self_path: Path) -> list[tuple[str, int, int, int]]:
         seen.add(commit)
         try:
             show = subprocess.run(
-                ["git", "show", f"{commit}:users/pilot-001/SELF.md"],
+                ["git", "show", f"{commit}:users/grace-mar/SELF.md"],
                 cwd=REPO_ROOT,
                 capture_output=True,
                 text=True,

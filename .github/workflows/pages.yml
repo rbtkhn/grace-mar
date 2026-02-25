@@ -1,10 +1,18 @@
-# Deploy dashboard to GitHub Pages (browser-only)
-name: Deploy dashboard to Pages
+# Deploy profile to GitHub Pages (browser-only)
+name: Deploy profile to Pages
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'users/grace-mar/**'
+      - 'scripts/generate_profile.py'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -17,12 +25,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate dashboard
-        run: python3 scripts/generate_dashboard.py
+      - name: Generate profile
+        run: python3 scripts/generate_profile.py
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dashboard
+          publish_dir: ./profile
           publish_branch: gh-pages

@@ -17,7 +17,7 @@ Block time weekly — e.g. Sunday evening or Monday morning. All steps optional 
 | 3 | **Rotate MEMORY + SELF-ARCHIVE** — Run `python3 scripts/rotate_context.py --user [id] --apply` (or `/rotate` in Telegram) to prune dated MEMORY entries older than TTL and rotate SELF-ARCHIVE when thresholds are exceeded. | ~5 min |
 | 4 | **Skim SESSION-TRANSCRIPT** — Glance at recent raw conversation in `users/[id]/SESSION-TRANSCRIPT.md`. Note resistance, recurring topics, and continuity cues for next session. SELF-ARCHIVE holds only approved/merged content. | ~5 min |
 | 5 | **Optional: Gap Hunter** — When reviewing an exchange, ask: *What's missing in the Record for this exchange?* Surfaces candidates the analyst might have missed. Stage to PENDING-REVIEW if you find gaps. | ~5 min |
-| 6 | **Optional: PRP refresh** — If merges were applied, run `python scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt` and commit. Keeps the anchor in sync. | ~2 min |
+| 6 | **Optional: PRP refresh** — If merges were applied, run `python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt` and commit. Keeps the anchor in sync. | ~2 min |
 
 ---
 

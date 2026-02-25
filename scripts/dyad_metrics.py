@@ -8,7 +8,7 @@ Tracks MIND–RECORD/VOICE activity:
   - Integrations — applied events (conscious gate crossings)
 
 Usage:
-    python scripts/dyad_metrics.py [--user pilot-001] [--days 7] [--json]
+    python scripts/dyad_metrics.py [--user grace-mar] [--days 7] [--json]
 """
 
 import argparse
@@ -17,7 +17,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_USER = "pilot-001"
+DEFAULT_USER = "grace-mar"
 DEFAULT_DAYS = 7
 
 # Each lookup ends with lookup_rephrase; use that for 1:1 consultation count.

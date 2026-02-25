@@ -5,8 +5,8 @@ Stage OpenClaw session output into Grace-Mar's gated pipeline.
 This script is stage-only. It never merges into the Record.
 
 Usage:
-  python integrations/openclaw_stage.py --user pilot-001 --artifact ./session-note.md
-  python integrations/openclaw_stage.py -u pilot-001 --text "we explored fractions in OpenClaw"
+  python integrations/openclaw_stage.py --user grace-mar --artifact ./session-note.md
+  python integrations/openclaw_stage.py -u grace-mar --text "we explored fractions in OpenClaw"
 """
 
 import argparse
@@ -165,7 +165,7 @@ def stage_openclaw(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Stage OpenClaw output to Grace-Mar /stage endpoint.")
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--stage-url", default=os.getenv("OPENCLAW_STAGE_URL", "http://127.0.0.1:5050/stage"))
     parser.add_argument("--text", default="", help='Natural language summary (e.g. "we did X in OpenClaw")')
     parser.add_argument("--artifact", default="", help="Optional artifact file path")

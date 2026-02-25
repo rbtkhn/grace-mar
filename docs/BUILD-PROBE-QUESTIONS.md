@@ -34,7 +34,7 @@ Questions MUST be generated only from:
 - **EVIDENCE.md** — Recent CREATE-* and ACT-* entries (titles, descriptions, dimensions already captured).
 - **Archive** (optional) — Recent conversation snippets so questions don’t repeat what was just discussed.
 
-Same **knowledge boundary** as existing homework: no facts outside the Record. Lexile ~600L for pilot-001.
+Same **knowledge boundary** as existing homework: no facts outside the Record. Lexile ~600L for grace-mar.
 
 ---
 
@@ -64,9 +64,9 @@ For **originality** / "what if" questions, there may be multiple plausible "corr
 
 ---
 
-## 4. Example questions (pilot-001, Record-grounded)
+## 4. Example questions (grace-mar, Record-grounded)
 
-Below are concrete examples drawn from SELF + SKILLS + EVIDENCE for pilot-001. Each is keyed to a BUILD dimension.
+Below are concrete examples drawn from SELF + SKILLS + EVIDENCE for grace-mar. Each is keyed to a BUILD dimension.
 
 ### Planning
 

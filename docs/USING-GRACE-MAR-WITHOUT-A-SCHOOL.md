@@ -38,7 +38,7 @@ No GitHub or command line required if someone else hosts the bot; if you self-ho
 ## Export and Sharing
 
 - **PRP (Portable Record Prompt)** — Type **/prp** in the bot to download a .txt file you can paste into ChatGPT, Claude, or any LLM. The model adopts the Record's voice and knowledge. Good for one-off chats or handing to a tutor.
-- **Identity export** — For schools or platforms: `python scripts/export_user_identity.py --user pilot-001` (or your user id). Produces a markdown summary of identity, interests, curiosity, personality. See [PORTABILITY](PORTABILITY.md) for handoff formats.
+- **Identity export** — For schools or platforms: `python scripts/export_user_identity.py --user grace-mar` (or your user id). Produces a markdown summary of identity, interests, curiosity, personality. See [PORTABILITY](PORTABILITY.md) for handoff formats.
 - **Full fork export** — For full evidence history: `scripts/export_fork.py`. Use when a school or partner needs the complete Record.
 
 ---

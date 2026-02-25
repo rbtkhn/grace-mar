@@ -1,0 +1,212 @@
+{
+  "version": "1.0",
+  "grace_mar": true,
+  "curriculum_ready": true,
+  "user_id": "grace-mar",
+  "generated_at": "2026-02-22T10:56:13.478313",
+  "provenance": "human_approved",
+  "lexile_output": "600L",
+  "access_needs": {
+    "explanation_level_lexile": "600L",
+    "explanation_grade": "2nd"
+  },
+  "identity": {
+    "name": "Grace-Mar",
+    "age": 6
+  },
+  "knowledge": [
+    "George Washington \u2014 first president of the United States",
+    "Jupiter's Great Red Spot \u2014 giant storm bigger than Earth",
+    "Mars \u2014 the red planet with Olympus Mons",
+    "Gemstones \u2014 shiny, rare, colorful rocks used for jewelry",
+    "Gemstones vs normal stones \u2014 special minerals, cut and polished",
+    "Abraham Lincoln's stovepipe hat \u2014 kept notes and papers inside",
+    "Abraham Lincoln \u2014 16th president, ended slavery, Emancipation Proclamation",
+    "The Nutcracker \u2014 ballet by Tchaikovsky about Clara",
+    "Schubert's Sonata D845 \u2014 piano piece with four parts",
+    "The Wild Robot \u2014 book about a robot named Roz on a wild island",
+    "Reptiles \u2014 animals with scales, lay eggs, cold-blooded",
+    "No reptiles on Jupiter \u2014 made of gas, no solid ground",
+    "Mercury \u2014 smallest planet, closest to the sun",
+    "Venus \u2014 2nd planet, hottest, covered in lava",
+    "Earth \u2014 our home, only planet with life",
+    "Mars \u2014 4th planet, red from iron, 2 moons Phobos and Deimos",
+    "Jupiter \u2014 biggest planet, all others fit inside, 63+ moons",
+    "Saturn \u2014 6th planet, rings of icy rocks, 53+ moons",
+    "Uranus \u2014 7th planet, tipped on its side, coldest",
+    "Neptune \u2014 8th planet, gas giant, wild winds",
+    "Pluto \u2014 dwarf planet, 3 small moons",
+    "Earth's Moon \u2014 sun's light bouncing off, 6 astronaut landings",
+    "Asteroid Belt \u2014 ring of rocks between Mars and Jupiter",
+    "Egyptian pharaoh portrait \u2014 King Tut's death mask",
+    "Black holes \u2014 places in space with super strong gravity"
+  ],
+  "curiosity": [
+    "Classical music and ballet",
+    "Inner solar system / terrestrial bodies",
+    "Ancient Egypt \u2014 deepening engagement",
+    "Magic School Bus \u2014 science show",
+    "Reptiles \u2014 snakes and lizards",
+    "Rocks and gemstones",
+    "Space, animals, art \u2014 want to learn more",
+    "Things from imagination \u2014 favorite thing to make"
+  ],
+  "personality": [],
+  "skills_edge": {
+    "read": "Longer independent text; early chapter books; inference questions; retelling with explicit sentence structure",
+    "write": "Capitals at sentence start (inconsistent); variety of connectors (then, so, but, also); narrative/story writing (fiction); longer compositions",
+    "imagine": "Narrative creation from prompts; cross-language creative tasks; independent scene composition",
+    "math": "Telling time; place value; double-digit operations",
+    "chinese": "First character recognition; expanding vocabulary beyond home context"
+  },
+  "interests": [],
+  "evidence_anchors": [
+    "ACT-0020",
+    "ACT-0019",
+    "ACT-0018",
+    "ACT-0017",
+    "ACT-0016",
+    "ACT-0015",
+    "ACT-0014",
+    "ACT-0013",
+    "ACT-0012",
+    "ACT-0011",
+    "ACT-0010",
+    "ACT-0009",
+    "ACT-0008",
+    "ACT-0007",
+    "ACT-0006",
+    "ACT-0005",
+    "ACT-0004",
+    "ACT-0003",
+    "ACT-0002",
+    "ACT-0001"
+  ],
+  "library": [
+    {
+      "title": "Usborne World Geography Encyclopedia (Internet Linked)",
+      "scope": [
+        "geography",
+        "world atlas",
+        "maps"
+      ]
+    },
+    {
+      "title": "Usborne World History Encyclopedia: An Illustrated Introduction to World History for Kids, full of Maps, Time Charts and over 800 Links for Homework Help",
+      "scope": [
+        "history",
+        "world history",
+        "maps",
+        "time charts"
+      ]
+    },
+    {
+      "title": "Usborne Science Encyclopedia: An In-depth Guide for Young Scientists Exploring Gravity, Flight, Genes, DNA and More, with Over 180 Video Clips and 1000 Recommended Websites for Further Learning",
+      "scope": [
+        "science",
+        "gravity",
+        "flight",
+        "genes",
+        "DNA"
+      ]
+    },
+    {
+      "title": "Usborne Complete Greek Myths: An Illustrated Collection of Ancient Greek Mythology Featuring Maps and a Glossary",
+      "scope": [
+        "mythology",
+        "Greek myths",
+        "ancient Greece"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Odyssey",
+      "scope": [
+        "mythology",
+        "Greek",
+        "Odyssey",
+        "Homer"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Stories from India",
+      "scope": [
+        "mythology",
+        "India",
+        "stories",
+        "folktales"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Adventure Stories",
+      "scope": [
+        "adventure",
+        "stories"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Bible Stories",
+      "scope": [
+        "Bible",
+        "stories",
+        "religion"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Stories from China",
+      "scope": [
+        "China",
+        "stories",
+        "folktales"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Myths From Around The World",
+      "scope": [
+        "mythology",
+        "world myths",
+        "folktales"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Ballet Stories",
+      "scope": [
+        "ballet",
+        "dance",
+        "stories"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Classics: Secret Garden & Other Stories",
+      "scope": [
+        "classics",
+        "Secret Garden",
+        "stories"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Stories from Aesop: A Beautifully Illustrated Collection of Timeless Fables",
+      "scope": [
+        "fables",
+        "Aesop",
+        "stories"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Stories from the Greek Myths",
+      "scope": [
+        "mythology",
+        "Greek myths",
+        "stories"
+      ]
+    },
+    {
+      "title": "Usborne Illustrated Norse Myths",
+      "scope": [
+        "mythology",
+        "Norse",
+        "Vikings",
+        "stories"
+      ]
+    }
+  ]
+}

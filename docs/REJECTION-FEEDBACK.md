@@ -31,7 +31,7 @@
 Periodically review rejections with reasons:
 
 ```bash
-grep '"event":"rejected"' users/pilot-001/PIPELINE-EVENTS.jsonl | grep rejection_reason
+grep '"event":"rejected"' users/grace-mar/PIPELINE-EVENTS.jsonl | grep rejection_reason
 ```
 
 Consider:

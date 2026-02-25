@@ -10,8 +10,8 @@ Outputs:
   - users/[id]/llms.txt — Human- and agent-readable discoverability file
 
 Usage:
-    python scripts/export_manifest.py --user pilot-001
-    python scripts/export_manifest.py -u pilot-001 -o ../openclaw/
+    python scripts/export_manifest.py --user grace-mar
+    python scripts/export_manifest.py -u grace-mar -o ../openclaw/
 """
 
 import argparse
@@ -56,7 +56,7 @@ def _compute_checksum(profile_dir: Path) -> str:
     return h.hexdigest()
 
 
-def generate_manifest(user_id: str = "pilot-001") -> dict:
+def generate_manifest(user_id: str = "grace-mar") -> dict:
     """
     Build agent manifest: readable/writable surfaces, schema hints, checksum.
 
@@ -153,7 +153,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate agent-consumable manifest for Grace-Mar Record"
     )
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument(
         "--output", "-o", default=None, help="Output directory (default: users/[id]/)"
     )

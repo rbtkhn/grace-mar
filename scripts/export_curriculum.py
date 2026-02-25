@@ -8,8 +8,8 @@ Provides a snapshot for homeschool bots, Glide/Zapier stacks, Khan, IXL, etc.:
 - Does NOT expose full Record content
 
 Usage:
-    python scripts/export_curriculum.py -u pilot-001
-    python scripts/export_curriculum.py -u pilot-001 -o ../curriculum-stack/
+    python scripts/export_curriculum.py -u grace-mar
+    python scripts/export_curriculum.py -u grace-mar -o ../curriculum-stack/
 """
 
 import argparse
@@ -128,7 +128,7 @@ def _library_titles(library_content: str, limit: int = 15) -> list[dict]:
     return entries
 
 
-def export_curriculum(user_id: str = "pilot-001") -> dict:
+def export_curriculum(user_id: str = "grace-mar") -> dict:
     """Build curriculum-oriented export for adaptive curriculum engines."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_content = _read(profile_dir / "SELF.md")
@@ -186,7 +186,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Export Record to curriculum-oriented JSON for adaptive curriculum engines"
     )
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output directory (default: users/[id]/)")
     args = parser.parse_args()
 

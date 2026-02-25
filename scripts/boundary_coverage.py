@@ -10,7 +10,7 @@ Use for visibility into what's inside the knowledge boundary. Run occasionally o
 
 Usage:
   python3 scripts/boundary_coverage.py
-  python3 scripts/boundary_coverage.py -u pilot-001
+  python3 scripts/boundary_coverage.py -u grace-mar
   python3 scripts/boundary_coverage.py --json   # machine-readable
 """
 
@@ -79,7 +79,7 @@ def _extract_favorites(content: str) -> dict[str, int]:
     return counts
 
 
-def run(user_id: str = "pilot-001", json_out: bool = False) -> dict:
+def run(user_id: str = "grace-mar", json_out: bool = False) -> dict:
     """Compute boundary coverage for user. Returns dict of counts."""
     self_path = USERS_DIR / user_id / "SELF.md"
     if not self_path.exists():
@@ -109,7 +109,7 @@ def run(user_id: str = "pilot-001", json_out: bool = False) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description="Boundary coverage from SELF.md")
-    parser.add_argument("-u", "--user", default="pilot-001", help="User id (default: pilot-001)")
+    parser.add_argument("-u", "--user", default="grace-mar", help="User id (default: grace-mar)")
     parser.add_argument("--json", action="store_true", help="Output JSON")
     args = parser.parse_args()
 

@@ -11,7 +11,7 @@ Run before a tutoring session or via cron. Output to stdout.
 
 Usage:
     python scripts/session_brief.py [users_dir]
-    python scripts/session_brief.py users/pilot-001
+    python scripts/session_brief.py users/grace-mar
 """
 
 import re
@@ -27,7 +27,7 @@ DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
 LAST_N_ACTIVITIES = 5
 WISDOM_COUNT = 3
-DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
 
 def _read(path: Path) -> str:

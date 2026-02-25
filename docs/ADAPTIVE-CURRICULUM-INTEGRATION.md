@@ -44,8 +44,8 @@ Without this, curriculum is one-size-fits-all or requires manual configuration. 
 Run the curriculum-oriented export:
 
 ```bash
-python scripts/export_curriculum.py -u pilot-001
-python integrations/export_hook.py --target curriculum -u pilot-001 -o ../curriculum-stack/
+python scripts/export_curriculum.py -u grace-mar
+python integrations/export_hook.py --target curriculum -u grace-mar -o ../curriculum-stack/
 ```
 
 Output: `curriculum_profile.json` — Lexile, knowledge/curiosity/personality, skills edge, interests, evidence anchors, library. Does not expose full Record content.
@@ -127,12 +127,12 @@ Curriculum outputs become evidence. The Record grows from both Grace-Mar convers
 ```
 workspace/
 ├── grace-mar/
-│   └── users/pilot-001/
+│   └── users/grace-mar/
 └── curriculum-stack/          # Glide, Zapier, Sheets, etc.
     └── identity/              # symbolic_identity.json
 ```
 
-Export path: `python ../grace-mar/scripts/export_symbolic.py -u pilot-001 -o identity/`
+Export path: `python ../grace-mar/scripts/export_symbolic.py -u grace-mar -o identity/`
 
 ---
 

@@ -6,8 +6,8 @@ Reads users/[id]/INTENT.md and writes a structured intent snapshot for
 agent consumption and intent-aware validation.
 
 Usage:
-    python scripts/export_intent_snapshot.py --user pilot-001
-    python scripts/export_intent_snapshot.py -u pilot-001 -o users/pilot-001/intent_snapshot.json
+    python scripts/export_intent_snapshot.py --user grace-mar
+    python scripts/export_intent_snapshot.py -u grace-mar -o users/grace-mar/intent_snapshot.json
 """
 
 import argparse
@@ -120,7 +120,7 @@ def _tradeoff_rules(block: str) -> list[dict]:
     return rules
 
 
-def export_intent_snapshot(user_id: str = "pilot-001") -> dict:
+def export_intent_snapshot(user_id: str = "grace-mar") -> dict:
     profile_dir = REPO_ROOT / "users" / user_id
     intent_path = profile_dir / "INTENT.md"
     raw = _read(intent_path)
@@ -169,7 +169,7 @@ def export_intent_snapshot(user_id: str = "pilot-001") -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Export INTENT.md as intent_snapshot.json")
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default="", help="Output JSON file (default: stdout)")
     args = parser.parse_args()
     payload = export_intent_snapshot(user_id=args.user)

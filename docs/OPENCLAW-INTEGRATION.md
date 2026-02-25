@@ -28,13 +28,13 @@ The grace-mar Record (SELF.md + selected SKILLS) can populate OpenClaw's `USER.m
 ### Export Script
 
 ```bash
-python scripts/export_user_identity.py --user pilot-001
+python scripts/export_user_identity.py --user grace-mar
 ```
 
 Or use the integration hook (supports format + event emission):
 
 ```bash
-python integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emit-event
+python integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
 ```
 
 Output: Markdown suitable for `USER.md` or `SOUL.md`, containing:
@@ -85,7 +85,7 @@ When running in a shared workspace or OpenClaw session, read these grace-mar fil
 If OpenClaw has a startup checklist (e.g. `active-tasks.md`, `HEARTBEAT.md`), add:
 
 ```
-Grace-Mar continuity (if users/pilot-001 exists):
+Grace-Mar continuity (if users/grace-mar exists):
 - [ ] Read last SESSION-LOG entry
 - [ ] Check PENDING-REVIEW — any candidates to process?
 - [ ] Skim last 1–2 EVIDENCE entries
@@ -102,7 +102,7 @@ openclaw/
 ├── active-tasks.md
 ├── memory/
 └── grace-mar/        # ← symlink or copy of grace-mar repo
-    └── users/pilot-001/
+    └── users/grace-mar/
 ```
 
 **B. OpenClaw and grace-mar sibling repos**
@@ -146,8 +146,8 @@ Artifacts do **not** auto-ingest. The companion must explicitly invoke the pipel
 Use `integrations/openclaw_stage.py` to send OpenClaw output to `/stage` with provenance metadata:
 
 ```bash
-python integrations/openclaw_stage.py --user pilot-001 --artifact ./outputs/session-note.md
-python integrations/openclaw_stage.py --user pilot-001 --text "we explored fractions in OpenClaw"
+python integrations/openclaw_stage.py --user grace-mar --artifact ./outputs/session-note.md
+python integrations/openclaw_stage.py --user grace-mar --text "we explored fractions in OpenClaw"
 ```
 
 This path only stages to `PENDING-REVIEW`; it never merges into the Record.
@@ -189,7 +189,7 @@ An OpenClaw skill or cron job can run signal detection and **stage** candidates 
 
 ### PENDING-REVIEW Candidate Format
 
-Each candidate uses this structure (see `users/pilot-001/PENDING-REVIEW.md`):
+Each candidate uses this structure (see `users/grace-mar/PENDING-REVIEW.md`):
 
 ```yaml
 status: pending
@@ -232,14 +232,14 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 
 **Export identity:**
 ```bash
-python scripts/export_user_identity.py --user pilot-001 -o openclaw/USER.md
-python integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emit-event
+python scripts/export_user_identity.py --user grace-mar -o openclaw/USER.md
+python integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
 ```
 
 **Session continuity (read first):**
-- `users/pilot-001/SESSION-LOG.md`
-- `users/pilot-001/PENDING-REVIEW.md`
-- `users/pilot-001/EVIDENCE.md` (last entries)
+- `users/grace-mar/SESSION-LOG.md`
+- `users/grace-mar/PENDING-REVIEW.md`
+- `users/grace-mar/EVIDENCE.md` (last entries)
 
 **Pipeline invocation:**
 - User: "we [did X]" [+ optional artifact path]
@@ -262,8 +262,8 @@ When the companion switches schools, the Record moves with them. See **[PORTABIL
 
 Export commands used for handoff:
 ```bash
-python scripts/export_user_identity.py -u pilot-001 -o handoff-identity.md
-python scripts/export_fork.py -u pilot-001 -o handoff-fork.json
+python scripts/export_user_identity.py -u grace-mar -o handoff-identity.md
+python scripts/export_fork.py -u grace-mar -o handoff-fork.json
 ```
 
 ---

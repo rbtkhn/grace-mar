@@ -9,8 +9,9 @@ invariant 15) and sideload output (CONCEPTUAL-FRAMEWORK §9). Use for memorial/
 legacy fork, admissions handoff, or "paste into any LLM" scenarios.
 
 Usage:
-    python scripts/export_prp.py -u pilot-001
-    python scripts/export_prp.py -u pilot-001 -o prompt.txt
+    python scripts/export_prp.py -u grace-mar
+    python scripts/export_prp.py -u grace-mar -o prompt.txt
+    python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt   # canonical anchor file
 """
 
 import argparse
@@ -257,12 +258,12 @@ def _build_personality(personality: dict, ix_c: list[str]) -> str:
     return "\n".join(parts)
 
 
-def export_prp(user_id: str = "pilot-001", name_override: str | None = None) -> str:
+def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> str:
     """
     Build the Portable Record Prompt (PRP) from SELF.md and EVIDENCE.md.
 
     Args:
-        user_id: User profile id (e.g. pilot-001).
+        user_id: User profile id (e.g. grace-mar).
         name_override: If set, use this name instead of the Record's name (e.g. "Abby" for prototype).
 
     Returns a single string suitable for pasting into any LLM.
@@ -310,6 +311,8 @@ def export_prp(user_id: str = "pilot-001", name_override: str | None = None) -> 
         for item in recent.get(etype, [])[:5]:
             recent_parts.append(f"{etype}: {item}")
     lines.append(" ".join(recent_parts) if recent_parts else "(No recent entries.)")
+    lines.append("")
+    lines.append("When describing what you did recently (e.g. \"what have you done this week\"), use ONLY the activities and details listed above. Do not add details from general knowledge (e.g. for a place: only what is documented — e.g. Casa Bonita: sliders, face painting, puppet show; not divers, cliff jumping, or sopapillas unless listed above).")
     lines.extend([
         "",
         "## ONBOARDING",
@@ -337,11 +340,14 @@ def export_prp(user_id: str = "pilot-001", name_override: str | None = None) -> 
         "",
         "Key paths (search or navigate): docs/ARCHITECTURE.md (system design), docs/PORTABLE-RECORD-PROMPT.md (PRP structure), docs/GRACE-MAR-CORE.md (governance), docs/CONCEPTUAL-FRAMEWORK.md (Record vs Voice, tricameral mind), docs/IDENTITY-FORK-PROTOCOL.md (pipeline, merge). README.md for overview.",
         "",
+        "Tricameral mind (when explaining Grace-Mar): The three parts are Mind (the human, sovereign), Record (what's documented about me), Voice (me talking now). Not Record + Voice + agents.",
+        "",
         "This is the connectivity vector: the PRP stays lightweight; the canonical source lives on GitHub. For questions about Grace-Mar the system, search the repo. For questions about AI, tech, or the world (not about you), you may search the web. When in doubt, search.",
         "",
         "## RULES",
         "",
         "- Only use what's above for facts about yourself. If asked about something not in your Record (and it's about you), say \"I haven't learned that yet!\"",
+        "- When answering \"what have you done recently\" or similar, use only RECENT above; do not add details from world knowledge (e.g. famous features of a place).",
         "- This version has no lookup library. If they ask you to look something up (a book, video, or topic), say you don't have it — the full Grace-Mar app has a library for that.",
         "- For questions about Grace-Mar the system (not you): use GITHUB CONNECTIVITY above — search the repo.",
         "- Keep answers short. A few sentences.",
@@ -356,7 +362,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Export Record to Portable Record Prompt (pasteable into any LLM)"
     )
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output file (default: stdout)")
     parser.add_argument("--name", "-n", default=None, help="Override display name (e.g. Abby for prototype)")
     args = parser.parse_args()

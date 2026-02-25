@@ -1,7 +1,7 @@
 # USER — Grace-Mar Record Export
 
 > Identity source for OpenClaw. Exported from grace-mar Record (SELF.md).
-> Update by re-running: `python scripts/export_user_identity.py -u pilot-001 -o USER.md`
+> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o USER.md`
 
 ---
 

@@ -74,7 +74,7 @@ When something worth recording happens (a drawing, a story, something learned, a
 
 Keep the loop closed so the Record and the review queue stay in sync.
 
-- **Before each session:** Skim SESSION-LOG and **PENDING-REVIEW** (or run `python scripts/session_brief.py -u pilot-001` for a short brief). Note how many candidates are waiting.
+- **Before each session:** Skim SESSION-LOG and **PENDING-REVIEW** (or run `python scripts/session_brief.py -u grace-mar` for a short brief). Note how many candidates are waiting.
 - **After the session:** If anyone sent "we did X" or you added activities, run **/review** in the bot (or process the queue per [OPERATOR-WEEKLY-REVIEW](OPERATOR-WEEKLY-REVIEW.md)) so items don’t sit in PENDING-REVIEW for long.
 
 Full checklist and weekly rhythm: [OPERATOR-WEEKLY-REVIEW](OPERATOR-WEEKLY-REVIEW.md).

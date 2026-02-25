@@ -42,8 +42,8 @@
 ## Usage
 
 ```bash
-python scripts/export_view.py --view school -u pilot-001 -o school-export.md
-python scripts/export_view.py --view public -u pilot-001 -o portfolio.md
+python scripts/export_view.py --view school -u grace-mar -o school-export.md
+python scripts/export_view.py --view public -u grace-mar -o portfolio.md
 ```
 
 ---

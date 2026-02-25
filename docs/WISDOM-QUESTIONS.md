@@ -138,7 +138,7 @@ Questions that assume no productivity pressure — who are you when nothing is r
 - **mind_category:** Most answers map to `curiosity` (IX-B) or `personality` (IX-C). Clear preference statements → SELF II or IX-A.
 - **signal_type:** `survey_confirmed`, `wisdom_elicitation`, or `teach` (learning-by-teaching questions 60–62).
 - **evidence_tier:** 3 (attested — user approved). Source: operator-administered, wisdom questions.
-- **Lexile:** Keep question phrasing at or below 600L for pilot-001. Simplify as needed.
+- **Lexile:** Keep question phrasing at or below 600L for grace-mar. Simplify as needed.
 
 ---
 

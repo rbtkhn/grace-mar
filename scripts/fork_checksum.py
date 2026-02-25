@@ -20,7 +20,7 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROFILE_DIR = REPO_ROOT / "users" / "pilot-001"
+PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 BOT_DIR = REPO_ROOT / "bot"
 LOG_PATH = PROFILE_DIR / "FORK-CHECKSUM-LOG.txt"
 

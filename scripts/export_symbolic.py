@@ -9,8 +9,8 @@ Designed for "cache-level symbolic sharing" and Mesh Cache alignment:
 - Consent-bound, human_approved provenance
 
 Usage:
-    python scripts/export_symbolic.py -u pilot-001
-    python scripts/export_symbolic.py -u pilot-001 -o ../intersignal-mesh/
+    python scripts/export_symbolic.py -u grace-mar
+    python scripts/export_symbolic.py -u grace-mar -o ../intersignal-mesh/
 """
 
 import argparse
@@ -90,7 +90,7 @@ def _evidence_anchors(content: str) -> list[str]:
     return list(set(re.findall(r"ACT-\d+", content)))[:50]
 
 
-def export_symbolic(user_id: str = "pilot-001") -> dict:
+def export_symbolic(user_id: str = "grace-mar") -> dict:
     """Build cache-oriented symbolic identity for Familiar nodes."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_content = _read(profile_dir / "SELF.md")
@@ -148,7 +148,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description="Export Record to symbolic JSON for Intersignal Familiar nodes"
     )
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output directory (default: users/[id]/)")
     args = parser.parse_args()
 

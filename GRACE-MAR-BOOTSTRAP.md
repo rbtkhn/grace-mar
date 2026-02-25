@@ -13,10 +13,10 @@ Session bootstrap for continuing Grace-Mar in a new agent conversation.
 5. Read `docs/DEVELOPMENT-HANDOFF.md` (current state and next tasks).
 
 If working on companion profile operations, also read:
-- `users/pilot-001/PENDING-REVIEW.md`
-- `users/pilot-001/SELF.md`
-- `users/pilot-001/EVIDENCE.md`
-- `users/pilot-001/PIPELINE-EVENTS.jsonl`
+- `users/grace-mar/PENDING-REVIEW.md`
+- `users/grace-mar/SELF.md`
+- `users/grace-mar/EVIDENCE.md`
+- `users/grace-mar/PIPELINE-EVENTS.jsonl`
 
 ---
 
@@ -34,7 +34,7 @@ If working on companion profile operations, also read:
 ## 3) Current System Snapshot
 
 ### Product state
-- Pilot active (`pilot-001`), gated pipeline live.
+- Pilot active (`grace-mar`), gated pipeline live.
 - Telegram bot operational with operator tooling (`/status`, `/intent_audit`, `/intent_review`).
 - Intent layer active (`INTENT` schema + snapshot export + advisory conflict detection).
 - OpenClaw integration supports outbound export and inbound stage-only handback.
@@ -67,31 +67,31 @@ Wait for companion selection before large changes.
 ```bash
 git status
 python3 scripts/metrics.py
-python3 scripts/session_brief.py --user pilot-001
+python3 scripts/session_brief.py --user grace-mar
 ```
 
 ### Pipeline merge (receipt-based)
 ```bash
-python3 scripts/process_approved_candidates.py --user pilot-001 --generate-receipt /tmp/receipt.json --approved-by <name>
-python3 scripts/process_approved_candidates.py --user pilot-001 --apply --approved-by <name> --receipt /tmp/receipt.json
+python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by <name>
+python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by <name> --receipt /tmp/receipt.json
 ```
 
 ### Intent and integrity
 ```bash
-python3 scripts/export_intent_snapshot.py --user pilot-001
-python3 scripts/validate-integrity.py --user pilot-001 --json
+python3 scripts/export_intent_snapshot.py --user grace-mar
+python3 scripts/validate-integrity.py --user grace-mar --json
 python3 scripts/governance_checker.py
 ```
 
 ### OpenClaw
 ```bash
-python3 integrations/openclaw_hook.py --user pilot-001 --format md+manifest --emit-event
-python3 integrations/openclaw_stage.py --user pilot-001 --text "we explored X in OpenClaw"
+python3 integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
+python3 integrations/openclaw_stage.py --user grace-mar --text "we explored X in OpenClaw"
 ```
 
 ### PRP refresh (after profile/prompt updates)
 ```bash
-python3 scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt
+python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
 ```
 
 ---
@@ -107,7 +107,7 @@ python3 scripts/export_prp.py -u pilot-001 -n Abby -o grace-mar-abby-prp.txt
 - `docs/BUSINESS-PROSPECTUS.md` — concise investor summary.
 - `docs/BUSINESS-ROADMAP.md` — strategic priorities and metrics.
 - `docs/DEVELOPMENT-HANDOFF.md` — latest engineering handoff.
-- `users/pilot-001/*` — active pilot Record files.
+- `users/grace-mar/*` — active pilot Record files.
 
 ---
 

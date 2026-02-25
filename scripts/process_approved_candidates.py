@@ -6,7 +6,7 @@ Usage:
     python scripts/process_approved_candidates.py           # dry run
     python scripts/process_approved_candidates.py --apply   # perform merge
     python scripts/process_approved_candidates.py --apply --push  # merge + git push
-    python scripts/process_approved_candidates.py -u pilot-001 --generate-receipt /tmp/receipt.json --approved-by operator
+    python scripts/process_approved_candidates.py -u grace-mar --generate-receipt /tmp/receipt.json --approved-by operator
 
 Requires repo root as cwd. For merge-from-Telegram: run this after approving in Telegram.
 """
@@ -21,7 +21,7 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
 PENDING_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
 SELF_PATH = PROFILE_DIR / "SELF.md"
@@ -29,7 +29,7 @@ EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
 INTENT_PATH = PROFILE_DIR / "INTENT.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
 SELF_ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
-PRP_PATH = REPO_ROOT / "grace-mar-abby-prp.txt"
+PRP_PATH = REPO_ROOT / "grace-mar-llm.txt"
 MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
 MIN_EVIDENCE_TIER = 3
 
@@ -70,9 +70,9 @@ def _set_user(user_id: str) -> None:
 
 
 def _prp_output_path() -> Path:
-    if USER_ID == "pilot-001":
+    if USER_ID == "grace-mar":
         return PRP_PATH
-    return PROFILE_DIR / f"{USER_ID}-prp.txt"
+    return PROFILE_DIR / f"{USER_ID}-llm.txt"
 
 
 PROMPT_SECTION_HEADERS = {
@@ -742,7 +742,7 @@ def _run_openclaw_export(
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--user", "-u", default=USER_ID, help="User id (default: GRACE_MAR_USER_ID or pilot-001)")
+    ap.add_argument("--user", "-u", default=USER_ID, help="User id (default: GRACE_MAR_USER_ID or grace-mar)")
     ap.add_argument("--apply", action="store_true", help="Perform merge (default: dry run)")
     ap.add_argument("--push", action="store_true", help="Git add, commit, push after merge")
     ap.add_argument("--approved-by", default="", help="Human approver id/name (required for --apply)")

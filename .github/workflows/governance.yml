@@ -1,0 +1,20 @@
+# Run governance checker on push/PR (no secrets required).
+# Catches merge-without-approval and direct-write-to-Record patterns.
+name: Governance
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Governance check
+        run: python scripts/governance_checker.py

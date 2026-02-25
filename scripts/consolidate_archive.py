@@ -6,7 +6,7 @@ with human-readable channel labels (Telegram, Test, WeChat).
 import re
 from pathlib import Path
 
-USER_DIR = Path(__file__).resolve().parent.parent / "users" / "pilot-001"
+USER_DIR = Path(__file__).resolve().parent.parent / "users" / "grace-mar"
 ARCHIVE = USER_DIR / "SELF-ARCHIVE.md"
 TELEGRAM_ARCHIVE = USER_DIR / "TELEGRAM-ARCHIVE.md"
 

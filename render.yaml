@@ -19,5 +19,5 @@ services:
         value: rbtkhn/grace-mar
       - key: TELEGRAM_BOT_TOKEN
         sync: false  # When set, Telegram webhook is enabled (RENDER_EXTERNAL_URL used)
-      - key: DASHBOARD_MINIAPP_URL
-        sync: false  # URL for bot menu button (e.g. https://grace-mar.com for dashboard)
+      - key: PROFILE_MINIAPP_URL
+        sync: false  # URL for bot menu button (e.g. https://grace-mar.com for profile); DASHBOARD_MINIAPP_URL still supported

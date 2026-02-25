@@ -52,7 +52,7 @@ entries:
 - **Voice:** First-person ("I learned…", "I drew…") — the fork's own reflection on the day.
 - **Format:** Natural-language sentences and paragraphs. No bullets.
 - **Gated:** Entries are curated — user approves what appears in JOURNAL.
-- **Lexile:** Language matches the fork's output ceiling (600L for pilot-001).
+- **Lexile:** Language matches the fork's output ceiling (600L for grace-mar).
 - **No PII:** No chat IDs, no raw quotes that could identify individuals.
 - **Sources:** EVIDENCE (activity log), SESSION-LOG, approved pipeline outputs. Not raw SESSION-TRANSCRIPT or SELF-ARCHIVE.
 - **Immutability:** Approved entries are not edited; corrections = new entry or note.

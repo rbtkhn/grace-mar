@@ -26,6 +26,20 @@ The cognitive fork separates **who the companion is** from **what the companion 
 
 ---
 
+## System boundaries and harness
+
+**Voice = model + harness.** What the companion experiences as the Voice is the underlying model plus prompt, pipeline, tools, and approval gate. Improvements to prompt, pipeline, or tooling are first-class; the model is one component. When debugging behavior, consider: model limit, prompt gap, pipeline miss, or tool/context issue. See [IMPLEMENTABLE-INSIGHTS](IMPLEMENTABLE-INSIGHTS.md).
+
+**Explicit non-goals.** Grace-Mar does not:
+- Merge into the Record without companion approval (stage only; companion merges).
+- Learn from the open web or from model training data; knowledge is gated and evidence-linked.
+- Pursue autonomous long-horizon or self-set instrumental goals (no unbounded agentic optimizer).
+- Allow the model to edit SELF or EVIDENCE directly; "continual learning" is human-gated writes only.
+
+Any future agentic or orchestration layer (e.g. Claw-style) must keep merge authority human-only; orchestration may suggest or stage, not merge.
+
+---
+
 ## Fork Lifecycle
 
 The fork follows a lifecycle analogous to a software fork:
@@ -55,7 +69,7 @@ MERGE (Optional — Bring In New Data)
   │
   ▼
 SNAPSHOT (Preserve State at a Point in Time)
-     Git tags: pilot-001-age-6, pilot-001-age-7
+     Git tags: grace-mar-age-6, grace-mar-age-7
      Immutable. Shows who the user was at that age.
 ```
 
@@ -586,7 +600,7 @@ GitHub repository is the authoritative record store. Git IS the fork.
 GitHub Repository (rbtkhn/grace-mar)
 ├── docs/                    # Templates and governance
 ├── users/
-│   └── pilot-001/
+│   └── grace-mar/
 │       ├── SELF.md          # Identity record
 │       ├── SKILLS.md        # Capability record
 │       ├── EVIDENCE.md      # Activity logs
@@ -605,7 +619,7 @@ GitHub Repository (rbtkhn/grace-mar)
 | Audit trail | Git commit history |
 | Change tracking | Git diffs |
 | Rollback | Git revert |
-| Snapshots | Git tags (e.g., `pilot-001-age-6`) |
+| Snapshots | Git tags (e.g., `grace-mar-age-6`) |
 | Backup | GitHub remote |
 | The fork itself | The git repository |
 
@@ -628,7 +642,7 @@ JOURNAL.md consolidates daily highlights of activity — what Grace-Mar read, wr
 
 Age-based snapshots = git tags:
 ```
-git tag pilot-001-age-6 -m "Snapshot at age 6"
+git tag grace-mar-age-6 -m "Snapshot at age 6"
 ```
 
 Tags preserve the exact state at that point in time.
@@ -665,7 +679,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 
 ### The Anchor
 
-The PRP URL (e.g. `https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-abby-prp.txt`) is the **anchor**: one-fetch instantiation, portable, refreshable. The anchor stays fixed; the lattice grows as SELF, EVIDENCE, LIBRARY, and SKILLS evolve. Post-merge PRP refresh keeps the anchor aligned with the Record.
+The PRP URL (e.g. `https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-llm.txt`) is the **anchor**: one-fetch instantiation, portable, refreshable. The anchor stays fixed; the lattice grows as SELF, EVIDENCE, LIBRARY, and SKILLS evolve. Post-merge PRP refresh keeps the anchor aligned with the Record.
 
 ### Two Instantiation Paths
 
@@ -727,6 +741,8 @@ The emulation layer (Telegram, WeChat, or other bot adapters) is not where the f
 
 The emulation layer enforces a **knowledge boundary**: the fork can only reference what has been explicitly merged into its profile. LLM world knowledge must not leak through. See [KNOWLEDGE-BOUNDARY-FRAMEWORK](KNOWLEDGE-BOUNDARY-FRAMEWORK.md) for quantifying, describing, and treating information at the boundary.
 
+**Reactive and agentic:** The current Voice is **reactive** (query-triggered, never unbidden). Future Grace-Mar versions will support both reactive and agentic modes; the Record is the shared substrate. Agentic versions will require additional design (world models, guard rails). See [CONCEPTUAL-FRAMEWORK](CONCEPTUAL-FRAMEWORK.md) invariant 38.
+
 ---
 
 ## Input Channels
@@ -752,6 +768,8 @@ User ↔ Bot conversation
        ▼
   SELF.md, EVIDENCE.md, prompt.py updated
 ```
+
+**Multiple bots:** You can run several Telegram bots (one per person) from the same codebase and shared LLM: each process uses a different `TELEGRAM_BOT_TOKEN` and `GRACE_MAR_USER_ID`, pointing at different `users/<id>/` profiles. See [MULTI-BOT-CENTRAL-MODEL](MULTI-BOT-CENTRAL-MODEL.md).
 
 ### Channel 2: Operator (Manual)
 

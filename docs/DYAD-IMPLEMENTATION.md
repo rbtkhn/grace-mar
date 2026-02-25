@@ -69,7 +69,7 @@ Compute dyad health from PIPELINE-EVENTS, COMPUTE-LEDGER, and optionally SELF-AR
 - `consultation_ratio` — consultations / (consultations + chat turns) if estimable
 - `dyad_score` — Simple composite (e.g. consultations + 2*integrations + activity_reports) for trend
 
-**Usage:** `python scripts/dyad_metrics.py [--user pilot-001] [--days 7] [--json]`
+**Usage:** `python scripts/dyad_metrics.py [--user grace-mar] [--days 7] [--json]`
 
 ---
 
@@ -90,7 +90,7 @@ Extend `scripts/session_brief.py`:
 
 ## 5. Dashboard — Dyad health panel
 
-Extend `scripts/generate_dashboard.py`:
+Extend `scripts/generate_profile.py`:
 
 **New data:**
 - `dyad_consultations_7d` — from dyad_metrics or ledger
@@ -145,7 +145,7 @@ In `bot/prompt.py` SYSTEM_PROMPT, add one line: "When the user asks 'what do I k
 |------|---------|
 | `bot/core.py` | emit_pipeline_event for dyad:lookup, dyad:activity_report; run_lookup, run_grounded_response |
 | `scripts/session_brief.py` | "From the Record" section; integration nudge |
-| `scripts/generate_dashboard.py` | Dyad panel / metrics in Benchmarks |
+| `scripts/generate_profile.py` | Dyad panel / metrics in Benchmarks |
 | `scripts/dyad_metrics.py` | **New** — compute consultations, integrations, activity reports |
 | `miniapp/index.html` | Suggested "Ask the Record" prompts (optional) |
 | `docs/DYAD-IMPLEMENTATION.md` | This spec |

@@ -105,10 +105,7 @@ See [ID-TAXONOMY](ID-TAXONOMY.md) for standard labels and locations.
 35. **Tricameral mind** — Grace-Mar is a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record holds the documented self; the Voice speaks it when queried. Design should reinforce this structure. See §8 (Design Lens: Tricameral Mind).
 36. **Interregnum chaos; hero's fortification** — Gramsci: "the old is dying and the new cannot be born." The transitional epoch (5–10 years) will see AI-driven abundance clash with entrenched systems — protests, conspiracies, mental health crises, currency collapse, authoritarian drift, robot scapegoating. Chaos breeds control; Faraday Cage communities embody voluntary opt-out. The fork is identity infrastructure amid upheaval. Fortify with guilds, wisdom-saving, foresight audits; ride the waves, not fight them. (5000 Days Part 14.)
 37. **Centaur alignment** — The "centaur phase" (human + AI agent as the unit of work) aligns with the tricameral mind: Mind is sovereign; the agent stages, extends, and speaks the Record through the Voice. The human holds the reins; the system executes. Design reinforces this — operator in the loop, gate intact, agent as extension not replacement.
-
----
-
-## 5. Fork Primitives
+38. **Reactive now, agentic later** — The current Voice is **reactive**: query-triggered, never unbidden; it responds when asked and does not plan or execute action sequences. Future Grace-Mar versions will include **agentic** capabilities (planning, action sequences, proactive assistance). The Record remains the shared substrate for both. Agentic versions will require additional design: world models, consequence prediction, and inference-time guard rails — concerns that reactive Voice sidesteps. Both modalities serve the companion; the roadmap is reactive first, agentic when ready.
 
 When labor no longer defines value, identity needs new units. The fork uses **knowledge**, **curiosity**, **personality**, and **evidence** — the primitives of who someone is, independent of productivity. These map to IX-A, IX-B, IX-C, and EVIDENCE.
 
@@ -161,6 +158,8 @@ Grace-Mar is a **tricameral mind**: **MIND** (human), **RECORD** (Grace-Mar), **
 Mind holds the reins; the Record reflects; the Voice renders. The Record does not command; the Voice does not speak unbidden.
 
 **Key distinction:** Grace-Mar is *conscious* externalization. The companion (Mind) retains full authority. The fork records; it does not command. The bot responds when queried; it does not speak unbidden. The pipeline integrates companion approval at every step.
+
+**Reactive and agentic:** The *current* Voice is reactive (query-triggered, never unbidden). Eventually Grace-Mar will support both reactive and agentic versions; the Record is the shared substrate for both. Agentic versions (planning, action sequences) will need world models, consequence prediction, and guard rails — design work that reactive Voice does not require. See invariant 38.
 
 **Cognitive flow:** Mind → thinks, speaks, creates → Pipeline captures, stages → Mind approves → Record updates → Voice (when queried) renders Record in conversation → Mind receives, reflects.
 

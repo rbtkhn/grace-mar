@@ -3,8 +3,8 @@
 Rotate ephemeral context files (MEMORY and SELF-ARCHIVE) for one user.
 
 Usage:
-  python scripts/rotate_context.py --user pilot-001          # dry run
-  python scripts/rotate_context.py --user pilot-001 --apply  # apply changes
+  python scripts/rotate_context.py --user grace-mar          # dry run
+  python scripts/rotate_context.py --user grace-mar --apply  # apply changes
 """
 
 import argparse
@@ -18,7 +18,7 @@ from pathlib import Path
 from rotate_telegram_archive import rotate_archive
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
 
 def _parse_dated_line(line: str) -> tuple[datetime | None, str]:

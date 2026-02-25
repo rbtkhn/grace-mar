@@ -10,7 +10,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **Design alignment:** Grace-Mar aligns with the 5000 Days series framing — abundance, identity beyond productivity, conductor workflow, symbiosis (human holds the reins), interregnum fortification (Part 14). See invariants 5–23 and 36 in CONCEPTUAL-FRAMEWORK.md.
 
-**Tricameral mind:** Grace-Mar is architected as a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. **Companion self = human–computer tricameral cognition.** New features should reinforce this structure. See CONCEPTUAL-FRAMEWORK invariant 35 and §8.
+**Tricameral mind:** Grace-Mar is architected as a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. **Companion self = human–computer tricameral cognition.** The current Voice is reactive; future versions will include agentic. New features should reinforce this structure. See CONCEPTUAL-FRAMEWORK invariant 35, 38, and §8.
 
 ---
 
@@ -40,6 +40,8 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 
 When in doubt, default to Session (conversational, no merges).
 
+**Implementation preference:** The operator prefers to see a short proposal (scope, approach, files to touch) before the agent implements. Propose first; implement after approval.
+
 ---
 
 ## Critical Rules
@@ -57,7 +59,7 @@ The emulated self can only know what is explicitly documented in its profile (`u
 3. **Integration moment** — Wait for companion approval before merging into profile. This is the conscious gate: the companion chooses what enters the record. Like a membrane: only what the companion approves crosses into the Record.
 4. On approval, merge into all affected files together (see File Update Protocol below)
 
-**Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval. See `docs/IDENTITY-FORK-PROTOCOL.md` for the full protocol spec.
+**Never** merge directly into SELF.md, EVIDENCE.md, or prompt.py without staging and approval. See `docs/IDENTITY-FORK-PROTOCOL.md` for the full protocol spec. **Companion-reported content** (e.g. "we listened to X", "merge X into grace-mar") must be staged as candidate(s) in PENDING-REVIEW and merged only after companion approval — do not merge on report alone.
 **Reference implementation note:** Grace-Mar runs in manual-gate mode. No autonomous merge path is enabled.
 
 ### 3. The "we" Convention
@@ -82,7 +84,7 @@ When evidence or self-reports conflict (e.g., multiple self-descriptions, opposi
 
 ### 6. Lexile Ceiling
 
-The fork's output language is locked to a Lexile score (currently 600L for pilot-001). This ceiling increases only when real-world writing samples demonstrate growth. Do not raise it without evidence.
+The fork's output language is locked to a Lexile score (currently 600L for grace-mar). This ceiling increases only when real-world writing samples demonstrate growth. Do not raise it without evidence.
 
 ### 7. Meet the Companion Where They Are (Grief / Resistance)
 
@@ -142,7 +144,7 @@ What "good" looks like for Grace-Mar:
 | **Lexile compliance** | Output ≤ 600L | Manual spot-check of bot responses |
 | **Knowledge boundary** | No undocumented references | Bot never cites facts not in profile |
 | **Pipeline health** | Candidates processed, not stale | PENDING-REVIEW queue doesn't grow unbounded |
-| **Profile growth** | IX entries increase over time | IX-A, IX-B, IX-C counts in dashboard |
+| **Profile growth** | IX entries increase over time | IX-A, IX-B, IX-C counts in profile |
 | **Calibrated abstention** | "I don't know" when outside knowledge | Bot says "do you want me to look it up?" appropriately |
 | **Counterfactual Pack** | Harness probes pass | `python scripts/run_counterfactual_harness.py` — run before prompt changes |
 | **Self-voice linguistic authenticity** | In-character, Lexile-friendly, fingerprint markers | `python scripts/test_voice_linguistic_authenticity.py` — no AI disclosure, simple vocab, readability ≤6 |
@@ -162,7 +164,7 @@ When pipeline candidates are approved, **merge** into all of these together:
 | `users/[id]/SELF-ARCHIVE.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/PIPELINE-EVENTS.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
-| **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-abby-prp.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
+| **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-llm.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
 
 **Real-time log vs gated archive:** The bot and Mini App append to `users/[id]/SESSION-TRANSCRIPT.md` (raw conversation log for operator continuity). SELF-ARCHIVE is **not** written in real time; it is appended only when candidates are merged (same gate as SELF/EVIDENCE). SELF-ARCHIVE holds voice entries and other approved activities (e.g. operator actions, non-voice).
 
@@ -170,7 +172,7 @@ The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when
 
 **Post-merge PRP refresh:** After merging into SELF, EVIDENCE, or prompt, run the export script. If the output differs from the committed PRP file, commit the update. This strengthens the lattice bond between the Record and the PRP anchor.
 
-**Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: companion` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Do not backfill old entries unless the companion requests it.
+**Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: companion` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Optionally add `scope:` or `constraint:` when the candidate implies a boundary (when the belief does not apply or would be invalid). Do not backfill old entries unless the companion requests it.
 
 ---
 
@@ -211,7 +213,7 @@ grace-mar/
 │   ├── WECHAT-SETUP.md         # WeChat integration setup guide
 │   └── requirements.txt        # Python dependencies
 └── users/
-    └── pilot-001/              # First pilot companion
+    └── grace-mar/              # First pilot companion
         ├── SELF.md             # Identity + three-dimension mind
         ├── SKILLS.md           # Capability containers (self-skill-write, self-skill-read, self-skill-build)
         ├── EVIDENCE.md         # Activity log

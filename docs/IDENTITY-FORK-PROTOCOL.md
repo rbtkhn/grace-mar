@@ -62,6 +62,8 @@ The quality of outputs depends on **process**, not on model strength or prompt t
 
 This mirrors contextual engineering in AI-assisted coding: the model writes only at the implementation phase; research, design, and planning create the context. Here, the analyst detects; the companion gates; the merge integrates. Process controls outcome.
 
+**Continual learning** is implemented as human-gated writes to SELF and EVIDENCE; the model does not self-edit memory or weights. The only way new knowledge or personality enters the Record is via staging and companion-approved merge.
+
 ---
 
 ## 3. Identity Schema

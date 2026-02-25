@@ -48,7 +48,7 @@ from bot.core import (
 app = Flask(__name__, static_folder="miniapp", static_url_path="")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip()
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
 SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "SESSION-TRANSCRIPT.md"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
@@ -201,7 +201,7 @@ def interview_by_token(token: str):
 
 @app.route("/me/<user_id>")
 def interview_by_user(user_id: str):
-    """Per-user interview link (e.g. /me/pilot-001). Exchanges not archived."""
+    """Per-user interview link (e.g. /me/grace-mar). Exchanges not archived."""
     return send_from_directory("miniapp", "index.html")
 
 

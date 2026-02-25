@@ -3,9 +3,9 @@
 OpenClaw integration hook: export Record for session continuity.
 
 Usage:
-    python integrations/openclaw_hook.py --user pilot-001
-    python integrations/openclaw_hook.py -u pilot-001 -o ../openclaw/
-    python integrations/openclaw_hook.py -u pilot-001 --format json+md --emit-event
+    python integrations/openclaw_hook.py --user grace-mar
+    python integrations/openclaw_hook.py -u grace-mar -o ../openclaw/
+    python integrations/openclaw_hook.py -u grace-mar --format json+md --emit-event
 """
 
 import argparse
@@ -150,7 +150,7 @@ def run_openclaw_export(
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Export Grace-Mar Record for OpenClaw")
-    parser.add_argument("--user", "-u", default="pilot-001", help="User id")
+    parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output directory (default: users/[id]/)")
     parser.add_argument(
         "--format",

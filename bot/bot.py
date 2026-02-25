@@ -77,8 +77,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-DASHBOARD_MINIAPP_URL = os.getenv("DASHBOARD_MINIAPP_URL", "").rstrip("/")
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "pilot-001").strip() or "pilot-001"
+PROFILE_MINIAPP_URL = (
+    os.getenv("PROFILE_MINIAPP_URL", "").strip() or os.getenv("DASHBOARD_MINIAPP_URL", "").strip()
+).rstrip("/")
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 OPERATOR_CHAT_ID = os.getenv("GRACE_MAR_OPERATOR_CHAT_ID", "").strip()
 OPERATOR_REMINDER_ENABLED = os.getenv("GRACE_MAR_OPERATOR_REMINDERS", "1").strip().lower() not in {"0", "false", "no"}
 OPERATOR_REMINDER_INTERVAL_SEC = int(os.getenv("GRACE_MAR_OPERATOR_REMINDER_INTERVAL_SEC", "21600"))
@@ -243,7 +245,7 @@ async def prp(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         buf.seek(0)
         await update.message.reply_document(
             document=buf,
-            filename="grace-mar-prp.txt",
+            filename="grace-mar-llm.txt",
             caption="Portable Record Prompt — paste into ChatGPT, Claude, or any LLM to chat with my Record.",
         )
     except Exception:
@@ -251,20 +253,20 @@ async def prp(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await update.message.reply_text("i couldn't make the PRP right now. try again in a little bit?")
 
 
-async def dashboard(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    if not DASHBOARD_MINIAPP_URL:
+async def profile_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    if not PROFILE_MINIAPP_URL:
         await update.message.reply_text(
-            "Dashboard Mini App URL not configured. Set DASHBOARD_MINIAPP_URL in .env and "
-            "serve the dashboard over HTTPS. See docs/MINIAPP-SETUP.md."
+            "Profile Mini App URL not configured. Set PROFILE_MINIAPP_URL (or DASHBOARD_MINIAPP_URL) in .env and "
+            "serve the profile over HTTPS. See docs/MINIAPP-SETUP.md."
         )
         return
     summary = get_pipeline_health_summary()
     summary_text = _format_health_summary(summary)
     keyboard = InlineKeyboardMarkup.from_button(
-        InlineKeyboardButton("Open Dashboard", web_app=WebAppInfo(url=DASHBOARD_MINIAPP_URL))
+        InlineKeyboardButton("Open Profile", web_app=WebAppInfo(url=PROFILE_MINIAPP_URL))
     )
     await update.message.reply_text(
-        "Open the fork dashboard to view profile, pipeline, benchmarks, and disclosure.\n\n"
+        "Open the fork profile to view identity, pipeline, SKILLS, benchmarks, and disclosure.\n\n"
         f"Quick health:\n{summary_text}",
         reply_markup=keyboard,
     )
@@ -838,11 +840,11 @@ def create_application(webhook_mode: bool = False) -> Application:
     """Build and return the configured Telegram Application.
     When webhook_mode=True, uses updater=None for custom webhook (caller injects updates)."""
     async def set_menu_button(application: Application) -> None:
-        if DASHBOARD_MINIAPP_URL:
+        if PROFILE_MINIAPP_URL:
             await application.bot.set_chat_menu_button(
-                menu_button=MenuButtonWebApp(text="Dashboard", web_app=WebAppInfo(url=DASHBOARD_MINIAPP_URL))
+                menu_button=MenuButtonWebApp(text="Profile", web_app=WebAppInfo(url=PROFILE_MINIAPP_URL))
             )
-            logger.info("Dashboard menu button configured: %s", DASHBOARD_MINIAPP_URL)
+            logger.info("Profile menu button configured: %s", PROFILE_MINIAPP_URL)
         if OPERATOR_CHAT_ID and OPERATOR_REMINDER_ENABLED and application.job_queue:
             application.job_queue.run_repeating(
                 operator_reminder_job,
@@ -863,7 +865,7 @@ def create_application(webhook_mode: bool = False) -> Application:
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("prp", prp))
-    app.add_handler(CommandHandler("dashboard", dashboard))
+    app.add_handler(CommandHandler("profile", profile_cmd))
     app.add_handler(CommandHandler("status", status_command))
     app.add_handler(CommandHandler("intent_audit", intent_audit_command))
     app.add_handler(CommandHandler("intent_review", intent_review_command))
