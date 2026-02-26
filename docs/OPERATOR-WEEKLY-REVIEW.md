@@ -18,6 +18,7 @@ Block time weekly — e.g. Sunday evening or Monday morning. All steps optional 
 | 4 | **Skim SESSION-TRANSCRIPT** — Glance at recent raw conversation in `users/[id]/SESSION-TRANSCRIPT.md`. Note resistance, recurring topics, and continuity cues for next session. SELF-ARCHIVE holds only approved/merged content. | ~5 min |
 | 5 | **Optional: Gap Hunter** — When reviewing an exchange, ask: *What's missing in the Record for this exchange?* Surfaces candidates the analyst might have missed. Stage to PENDING-REVIEW if you find gaps. | ~5 min |
 | 6 | **Optional: PRP refresh** — If merges were applied, run `python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt` and commit. Keeps the anchor in sync. | ~2 min |
+| 7 | **Optional: Template sync** — When companion-self (template) has been updated, pull upgrades into grace-mar per [MERGING-FROM-COMPANION-SELF](MERGING-FROM-COMPANION-SELF.md): diff template paths, merge into grace-mar's docs, validate, log the sync. Not needed every week; do when template or instance governance changes. | ~10 min |
 
 ---
 

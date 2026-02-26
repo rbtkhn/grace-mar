@@ -15,7 +15,7 @@ Last Update: February 2026
 This template governs how evidence is stored, organized, and weighted.
 
 Evidence includes:
-- Activities (WRITE, READ, BUILD)
+- Activities (WRITE, READ, WORK)
 - Content consumed (reading list, media)
 - External attestations (parent, teacher)
 - Assessments and verifications

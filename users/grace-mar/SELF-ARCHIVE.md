@@ -665,3 +665,12 @@
 **[2026-02-24 03:42:32]** `GRACE-MAR` (Telegram)
 > Back bends are really fun! They make me feel like a bridge. How do you feel when you do them?
 
+**[2026-02-25 11:44:18]** `APPROVED` (telegram)
+> CANDIDATE-0078 → ACT-0040
+> Companion chose "learn from past mistakes" as why history matters; Grace-Mar affirmed — values learning from the past to make better choices and be kinder.
+> user: "2" grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?" grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to sol
+
+**[2026-02-25 11:44:18]** `APPROVED` (telegram)
+> CANDIDATE-0079 → ACT-0041
+> Companion engaged with why history matters; chose "learn from past mistakes" — curiosity about history as a way to learn and improve, not just facts.
+> user: "2" grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?" grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to sol

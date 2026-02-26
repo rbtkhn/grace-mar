@@ -44,7 +44,7 @@
    - Empty or minimal structure: SELF.md (template only), SKILLS.md (template), EVIDENCE.md (template), PENDING-REVIEW.md (template), MEMORY.md (template). No real data. Used as the scaffold when creating a new user directory in an instance repo. Can be copied from grace-mar's `docs/SELF-TEMPLATE.md`, `docs/EVIDENCE-TEMPLATE.md`, etc., rendered as minimal files.
 
 4. **Optional: HOW-INSTANCES-CONSUME-UPGRADES.md** (or section in README)
-   - Describe how an instance (e.g. grace-mar) merges upgrades from this template: compare and update docs (CONCEPTUAL-FRAMEWORK, IDENTITY-FORK-PROTOCOL, SELF-TEMPLATE, seed description, AGENTS governance); never overwrite the instance's `users/<id>/` Record. Optionally: list of template paths safe to copy into instances; or a small sync script idea.
+   - Describe how an instance (e.g. grace-mar) merges upgrades from this template: compare and update docs (CONCEPTUAL-FRAMEWORK, IDENTITY-FORK-PROTOCOL, SELF-TEMPLATE, seed description, AGENTS governance); never overwrite the instance's `users/<id>/` Record. Optionally: list of template paths safe to copy into instances; or a small sync script idea. **Instances:** Use the merge checklist in grace-mar's [MERGING-FROM-COMPANION-SELF.md](https://github.com/rbtkhn/grace-mar/blob/main/docs/MERGING-FROM-COMPANION-SELF.md) when pulling upgrades.
 
 ### Optional later
 
@@ -68,7 +68,7 @@ When companion-self (template) is updated, grace-mar (instance) can pull those c
 
 - **Safe to sync from template:** Concept docs, protocol docs, SELF/SKILLS/EVIDENCE *templates* (schema/structure), seed-phase definition, template-level governance (pipeline rule, knowledge boundary). Grace-mar keeps its own copies and updates them to match the template.
 - **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config, PRP output paths.
-- **Process:** Compare template docs/templates with grace-mar's; merge changes into grace-mar's files; run validation (e.g. governance checker, validate-integrity). No automated overwrite of `users/grace-mar/`.
+- **Process:** Compare template docs/templates with grace-mar's; merge changes into grace-mar's files; run validation (e.g. governance checker, validate-integrity). No automated overwrite of `users/grace-mar/`. Grace-mar's merge checklist: [docs/MERGING-FROM-COMPANION-SELF.md](https://github.com/rbtkhn/grace-mar/blob/main/docs/MERGING-FROM-COMPANION-SELF.md).
 - **Optional:** Maintain a list of "template paths" in companion-self (e.g. `docs/CONCEPTUAL-FRAMEWORK.md`, `docs/SELF-TEMPLATE.md`) and document in this repo that instances may copy those paths when upgrading.
 
 ---
@@ -87,10 +87,11 @@ When companion-self (template) is updated, grace-mar (instance) can pull those c
 When the user opens the **companion-self** repo in a new Cursor workspace and invokes you with this bootstrap:
 
 1. **Confirm context:** This repo is the companion-self **template**. The user may have copied this bootstrap from the grace-mar repo. There is no Record here; no `users/grace-mar/`.
-2. **Create the minimum:** README (template vs instance; new user + seed phase; link to grace-mar). One or more concept/protocol/seed docs under `docs/` (or a single CONCEPT.md). Generalize from grace-mar's concepts; remove instance-specific references.
-3. **Optional:** Add `users/_template/` with minimal SELF/SKILLS/EVIDENCE/PENDING-REVIEW/MEMORY templates (structure only). Add a short HOW-INSTANCES-CONSUME-UPGRADES or merge section.
-4. **Do not** copy the full grace-mar codebase or Record. Only what defines the template: concept, protocol, seed, and optional scaffold.
-5. **Propose before implementing:** Per user preference, show a short proposal (scope, files to create) before writing; implement after approval.
+2. **Use the developer plan:** Follow the checklist and plan in grace-mar's [COMPANION-SELF-DEVELOPER-PLAN.md](https://github.com/rbtkhn/grace-mar/blob/main/docs/COMPANION-SELF-DEVELOPER-PLAN.md): minimal docs list, source mapping, and phased implementation (README → concept → protocol → seed → optional scaffold and upgrade guide).
+3. **Create the minimum:** README (template vs instance; new user + seed phase; link to grace-mar). One or more concept/protocol/seed docs under `docs/` (or a single CONCEPT.md). Generalize from grace-mar's concepts; remove instance-specific references.
+4. **Optional:** Add `users/_template/` with minimal SELF/SKILLS/EVIDENCE/PENDING-REVIEW/MEMORY templates (structure only). Add a short HOW-INSTANCES-CONSUME-UPGRADES or merge section.
+5. **Do not** copy the full grace-mar codebase or Record. Only what defines the template: concept, protocol, seed, and optional scaffold.
+6. **Propose before implementing:** Per user preference, show a short proposal (scope, files to create) before writing; implement after approval.
 
 ---
 

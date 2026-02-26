@@ -81,6 +81,88 @@ Full checklist and weekly rhythm: [OPERATOR-WEEKLY-REVIEW](OPERATOR-WEEKLY-REVIE
 
 ---
 
+## Where is the Record? How does SELF-ARCHIVE get updated?
+
+**Where to find the Record**
+
+All pilot files live in the repo under **`users/grace-mar/`** (or `users/pilot-001/` in some setups). The Record itself is:
+
+| File | What it is |
+|------|------------|
+| **SELF.md** | Who the companion is — identity, preferences, interests, knowledge (IX-A), curiosity (IX-B), personality (IX-C). |
+| **SKILLS.md** | What they can do — READ, WRITE, WORK capability and edges. |
+| **EVIDENCE.md** | Activity log — ACT-*, WRITE-*, CREATE-* entries; raw evidence the Record is built on. |
+| **PENDING-REVIEW.md** | Staging area — candidates the analyst (or you) staged; **nothing is in the Record until you approve and merge.** |
+| **SESSION-TRANSCRIPT.md** | Raw conversation log (every message), for operator continuity. Not part of the Record. |
+| **SELF-ARCHIVE.md** | Gated log of **approved** activity only — the conversation that made it into the Record. |
+
+So: **Record = SELF + SKILLS + EVIDENCE** (and what’s reflected in the bot prompt). **PENDING-REVIEW** is the gate. **SELF-ARCHIVE** is the approved-activity log.
+
+**Why SELF-ARCHIVE isn’t updating**
+
+SELF-ARCHIVE is **not** written in real time. It is updated **only when you merge approved candidates**. The bot and analyst do this:
+
+1. **Conversation** → Bot replies; analyst may detect a “signal” (new knowledge, curiosity, personality).
+2. **Staging** → That becomes a **candidate** in PENDING-REVIEW (you saw “ANALYST: signal detected - staged candidate” in the log).
+3. **Your step** → You open PENDING-REVIEW, approve (or reject) each candidate, then **process the queue** (merge). Only then does the script write to SELF, EVIDENCE, SESSION-LOG, the bot prompt, **and append to SELF-ARCHIVE**.
+
+**How to get SELF-ARCHIVE to update (short version)**
+
+1. Open **`users/grace-mar/PENDING-REVIEW.md`** (or your user id).
+2. In the **Candidates** section, for each block you want to keep: change `status: pending` to **`status: approved`** (or `rejected` to skip).
+3. Process the queue: either tell your assistant **“process the review queue”** or run:
+   ```bash
+   python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by "Your Name"
+   python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by "Your Name" --receipt /tmp/receipt.json
+   ```
+4. After the merge, **SELF-ARCHIVE** is appended with the approved exchange(s); SELF, EVIDENCE, and the bot prompt are updated too.
+
+Recommended rhythm: do this at least weekly (e.g. [OPERATOR-WEEKLY-REVIEW](OPERATOR-WEEKLY-REVIEW.md) step 2) so the Record and SELF-ARCHIVE stay in sync with conversations.
+
+---
+
+## Getting Telegram chat content into Cursor
+
+The bot writes live chat to **`users/grace-mar/SESSION-TRANSCRIPT.md`** and stages candidates to **`users/grace-mar/PENDING-REVIEW.md`**. Those paths are relative to the **repo root of the process running the bot**. So whether that content appears in Cursor depends on where the bot runs.
+
+**Option A — Bot runs on the same machine as Cursor, from this repo**
+
+- Run the Telegram bot from this repo (e.g. `python -m bot.bot` or your start command from `/Users/.../grace-mar`).
+- Set `GRACE_MAR_USER_ID=grace-mar` (or leave default).
+- Then **`users/grace-mar/SESSION-TRANSCRIPT.md`** and **PENDING-REVIEW.md** are inside this workspace; just open them in Cursor. New exchanges appear as the bot runs.
+
+**Option B — Bot runs elsewhere (e.g. Render, another server)**
+
+- The bot writes to that environment’s clone of the repo. To get that content into Cursor:
+  1. **Pull from GitHub** — If the server (or a job on it) commits and pushes `users/grace-mar/SESSION-TRANSCRIPT.md` and `PENDING-REVIEW.md` to the same repo you use in Cursor, run `git pull` in Cursor to get the latest.
+  2. **Sync script** — If you have SSH or an API to the server, add a small script that copies those two files from the server into this repo (e.g. `scp server:grace-mar/users/grace-mar/SESSION-TRANSCRIPT.md users/grace-mar/`), then run it when you want to refresh.
+  3. **Manual paste** — Copy the chat from your log viewer or Telegram export and paste into a file in this repo (e.g. create `users/grace-mar/LOG-2026-02-25.md` or append to a notes file). Use that for operator context; it won’t update SESSION-TRANSCRIPT on the server.
+
+**Bot on Render (24/7)** — Use the operator fetch so Cursor gets the live chat and pipeline:
+
+1. In **Render** → your service → Environment: add **`OPERATOR_FETCH_SECRET`** (e.g. a long random string). Redeploy.
+2. In **Cursor** (repo root), run:
+   ```bash
+   export OPERATOR_FETCH_SECRET=the-same-secret
+   export GRACE_MAR_RENDER_URL=https://your-app.onrender.com
+   python3 scripts/fetch_operator_files.py
+   ```
+   This writes `users/grace-mar/SESSION-TRANSCRIPT.md` and `PENDING-REVIEW.md`. Run whenever you want to refresh.
+
+**Option C — One-off: save a log snippet in the repo**
+
+- To keep a specific conversation (e.g. the Feb 25 history Q&A) in the repo for reference: create a file like **`users/grace-mar/notes/2026-02-25-telegram-log.md`** and paste the conversation and any analyst line (e.g. “ANALYST: signal detected - staged candidate”) into it. That way it’s in Cursor and in version control without touching the bot’s live files.
+
+**Summary**
+
+| Bot runs in | What to do so Cursor has the chat |
+|-------------|------------------------------------|
+| This repo (same machine) | Run bot from this repo; open `users/grace-mar/SESSION-TRANSCRIPT.md`. |
+| **Render (24/7)** | Set `OPERATOR_FETCH_SECRET` on Render; run `python3 scripts/fetch_operator_files.py` from Cursor with `GRACE_MAR_RENDER_URL` and the same secret. Opens `users/grace-mar/SESSION-TRANSCRIPT.md` and `PENDING-REVIEW.md` after fetch. |
+| Other remote | Use fetch script if the host exposes the same operator endpoints; or sync the two files by another means; or paste into a notes file. |
+
+---
+
 ## Before the Session
 
 1. Read [LETTER-TO-USER.md](LETTER-TO-USER.md) (or [LETTER-TO-STUDENT.md](LETTER-TO-STUDENT.md) for a school-aged variant) if you want to frame it for the companion

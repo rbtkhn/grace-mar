@@ -60,7 +60,7 @@ Output: `curriculum_profile.json` — Lexile, knowledge/curiosity/personality, s
 | `knowledge` | IX-A topics — don't repeat; build on |
 | `curiosity` | IX-B topics — prioritize in activity suggestions |
 | `personality` | IX-C summaries — tone, engagement style |
-| `skills_edge` | READ/WRITE/BUILD/MATH/CHINESE edges — what to stretch into |
+| `skills_edge` | READ/WRITE/WORK/MATH/CHINESE edges — what to stretch into |
 | `interests` | Topics to weave into lessons |
 | `evidence_anchors` | Traceability; avoid duplicate evidence |
 | `library` | Titles + scope — what they have access to; extensions |

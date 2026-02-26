@@ -21,3 +21,5 @@ services:
         sync: false  # When set, Telegram webhook is enabled (RENDER_EXTERNAL_URL used)
       - key: PROFILE_MINIAPP_URL
         sync: false  # URL for bot menu button (e.g. https://grace-mar.com for profile); DASHBOARD_MINIAPP_URL still supported
+      - key: OPERATOR_FETCH_SECRET
+        sync: false  # Optional: when set, GET /operator/session-transcript and /operator/pending-review return live files (Bearer token). Use scripts/fetch_operator_files.py from Cursor to pull chat into local repo.

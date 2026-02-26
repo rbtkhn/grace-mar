@@ -1344,6 +1344,26 @@ activities:
     curated_by: user
     evidence_tier: 5
 
+  - id: ACT-0040
+    date: 2026-02-25
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: personality
+    source: pipeline merge
+    summary: "Companion chose 'learn from past mistakes' as why history matters; Grace-Mar affirmed — values learning from the past to make better choices and be kinder."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0041
+    date: 2026-02-25
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: curiosity
+    source: pipeline merge
+    summary: "Companion engaged with why history matters; chose 'learn from past mistakes' — curiosity about history as a way to learn and improve, not just facts."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

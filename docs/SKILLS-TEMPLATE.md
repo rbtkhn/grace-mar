@@ -35,13 +35,17 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 ## II. THE THREE MODULES
 
-**Standard labels:** For APIs, docs, and cross-references use **self-skill-write**, **self-skill-read**, **self-skill-build**. See [ID-TAXONOMY § Standard capability labels](ID-TAXONOMY.md#standard-capability-labels-self-skill-).
+**Formal specification:** Module set, boundaries, and the rule that Voice and written profile are functions of the Record (with skill-write as linguistic shaper) are specified in [SKILLS-MODULARITY](SKILLS-MODULARITY.md).
 
-All skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
+**Standard labels:** For APIs, docs, and cross-references use **self-skill-write**, **self-skill-read**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](ID-TAXONOMY.md#standard-capability-labels-self-skill-).
+
+**Naming:** The third module is named **WORK** in prose and design (making, planning, execution, exchange, creation, exploration). **Internal identifiers remain BUILD** for compatibility: in SKILLS.md the section is "BUILD Container"; evidence IDs use CREATE-nnn and ACT-nnn. No change to existing evidence or scripts.
+
+All skills organize under three fundamental cognitive modules: READ, WRITE, WORK. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
 
 ### II-A. Semi-Independent Executor Contract
 
-READ, WRITE, and BUILD may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
+READ, WRITE, and WORK may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
 
 Constitutional constraints (mandatory):
 - Stage-only: no executor may merge into canonical Record files.
@@ -60,7 +64,7 @@ Suggested default emphasis profile:
 |----------|----------------|
 | READ | Curiosity > Knowledge > Personality |
 | WRITE | Personality > Knowledge > Curiosity |
-| BUILD | Knowledge > Personality > Curiosity |
+| WORK | Knowledge > Personality > Curiosity |
 
 This profile is advisory and may be tuned per user while preserving the constitutional constraints above.
 
@@ -122,7 +126,9 @@ READ is multimodal by default and must not be limited to text.
 > Grace-Mar captures: comprehension level, new vocabulary,
 > character understanding, plot inference, emotional response.
 
-### BUILD (Making, Planning, Execution, Exchange)
+### WORK (Making, Planning, Execution, Exchange)
+
+*(Internal identifier: BUILD container in SKILLS.md; evidence CREATE-nnn, ACT-nnn. Kept for compatibility.)*
 
 The user makes things, plans, executes, or engages in exchange. Grace-Mar captures capability in building, delivery, and exchange. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
 
@@ -150,9 +156,11 @@ The user makes things, plans, executes, or engages in exchange. Grace-Mar captur
 > Student participates in class food truck project. "We did X" + artifact (business plan, P&L).
 > Grace-Mar captures: planning level, execution follow-through, financial understanding, teamwork.
 
-**Integration with zero-human business vision:** BUILD module grows from evidence; when sufficient, the Record (including BUILD) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the module reflects demonstrated capability, not aspiration.
+**Integration with zero-human business vision:** The WORK module grows from evidence; when sufficient, the Record (including WORK) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the module reflects demonstrated capability, not aspiration.
 
-**Creation and exploration (BUILD):** Making includes creative output — drawings, paintings, crafts, inventions, designs. Grace-Mar captures creative capability alongside execution.
+**Future API surface:** WORK is the natural integration point for external APIs — marketplaces, creation tools (e.g. Canva, design apps), planning/financial systems, content platforms, or any service that involves making, planning, execution, or exchange. The Record (BUILD container + evidence) would drive or constrain what those integrations can do on the companion's behalf; the companion remains the gate for what enters the Record.
+
+**Creation and exploration (WORK):** Making includes creative output — drawings, paintings, crafts, inventions, designs. Grace-Mar captures creative capability alongside execution.
 
 **Activities (creation):**
 - Drawing, painting, crafts (image upload)
@@ -178,21 +186,29 @@ The three modules are not isolated. Most activities engage multiple modules.
 
 | Activity | Primary | Secondary |
 |----------|---------|-----------|
-| Write a story | WRITE | BUILD |
+| Write a story | WRITE | WORK |
 | Summarize a book | READ | WRITE |
-| Solve a puzzle | BUILD | — |
+| Solve a puzzle | WORK | — |
 | Explain how something works | WRITE | READ |
-| Ask "what if" about a story | BUILD | READ |
+| Ask "what if" about a story | WORK | READ |
 | Journal about the day | WRITE | — |
-| Follow instructions to build | READ | BUILD |
-| Run a lemonade stand | BUILD | WRITE |
-| Class food truck project | BUILD | READ |
-| Create content for audience | BUILD | WRITE |
-| Manage allowance, budget | BUILD | — |
-| Drawing, artwork, invention | BUILD | — |
+| Follow instructions to build | READ | WORK |
+| Run a lemonade stand | WORK | WRITE |
+| Class food truck project | WORK | READ |
+| Create content for audience | WORK | WRITE |
+| Manage allowance, budget | WORK | — |
+| Drawing, artwork, invention | WORK | — |
 
 **Tagging rule:** Tag primary module; optionally tag secondary.
 Evidence accrues to tagged modules.
+
+### Skill modules vs. self (IX-A/B/C)
+
+**Skill modules (READ, WRITE, WORK) update only capability** — comprehension, production, making. They do *not* extract or write knowledge, curiosity, or personality into SELF.
+
+**The analyst** (see ARCHITECTURE, pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from the same inputs and stages candidates to PENDING-REVIEW → SELF after companion approval.
+
+So **one input** (e.g. art, music, journal, conversation) can update both: (1) a skill container (READ/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS.
 
 ---
 
@@ -720,19 +736,19 @@ SKILLS/
 ### Subject Knowledge
 
 Traditional subjects (math, science, history) are NOT separate modules.
-They are CONTEXTS where READ/WRITE/BUILD are applied.
+They are CONTEXTS where READ/WRITE/WORK are applied.
 
 **Example: Math**
 - READ: Understands math concepts, can interpret problems
 - WRITE: Can produce correct solutions, explain reasoning
-- BUILD: Can solve novel problems, find patterns
+- WORK: Can solve novel problems, find patterns
 
 **Example: History**
 - READ: Knows historical events, can summarize periods
 - WRITE: Can explain historical cause/effect
-- BUILD: Can reason about counterfactuals ("what if...")
+- WORK: Can reason about counterfactuals ("what if...")
 
-Subject knowledge emerges from evidence across all three modules. BUILD starts from zero; no evidence = no claims.
+Subject knowledge emerges from evidence across all three modules. WORK starts from zero; no evidence = no claims.
 
 ---
 
@@ -845,7 +861,7 @@ Later learning does not modify snapshots.
 
 ## XI. CONTAINER EDGE TEACHING
 
-The three modules are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE. BUILD container starts empty until evidence enters through the pipeline.
+The three modules are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE. The WORK module's BUILD container starts empty until evidence enters through the pipeline.
 
 ### Container State
 
@@ -915,7 +931,7 @@ How evaluators interact with the SKILLS module.
 > "How well does [user] comprehend?"
 > Returns: Levels across comprehension, inference, vocabulary acquisition
 
-**BUILD capability (includes creation):**
+**WORK capability (includes creation):**
 > "What business/planning/creation capability does [user] have?"
 > Returns: Levels across planning, execution, financial, collaboration, originality, elaboration (or "no evidence yet" if container empty)
 
@@ -987,7 +1003,7 @@ SKILLS and SELF interact bidirectionally. WRITE is the primary data source for S
 ### SELF → SKILLS (Prediction)
 
 - Interests (SELF) predict which modules develop fastest
-- Reasoning patterns (SELF) shape how BUILD (creation) capability grows
+- Reasoning patterns (SELF) shape how WORK (creation) capability grows
 
 ### SKILLS → SELF (Inference)
 
@@ -1037,7 +1053,7 @@ READ Activity: Finished "Charlotte's Web" (2nd read)
         └── reading_patterns: re-reads favorites
 ```
 
-### BUILD → SELF
+### WORK → SELF
 
 - Planning/collaboration style → reasoning_patterns
 - Financial/values signals → values (if evidenced)

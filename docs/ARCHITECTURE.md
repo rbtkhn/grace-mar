@@ -140,23 +140,23 @@ Contains what the companion CAN DO — capabilities that grow through authentic 
 
 ### The Three Modules
 
-Skills organize under three fundamental cognitive modules: READ, WRITE, BUILD. **Standard labels** (for APIs, docs, cross-references): **self-skill-write**, **self-skill-read**, **self-skill-build**. See [ID-TAXONOMY § Standard capability labels](ID-TAXONOMY.md#standard-capability-labels-self-skill-). Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). BUILD (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
+Skills organize under three fundamental cognitive modules: READ, WRITE, WORK. For a formal specification of module boundaries, output functions (Voice and profile as functions of skill-write), and invariants, see [SKILLS-MODULARITY](SKILLS-MODULARITY.md). **Standard labels** (for APIs, docs, cross-references): **self-skill-write**, **self-skill-read**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](ID-TAXONOMY.md#standard-capability-labels-self-skill-). Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). **Naming:** The third module is WORK in prose; internal identifiers remain BUILD (SKILLS BUILD container, CREATE-nnn, ACT-nnn) for compatibility. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
 
 | Module | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
 | **READ** | Intake, comprehension (multimodal) | Text, video, music/audio, images/diagrams/maps, mixed media; summaries and interpretations |
-| **BUILD** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content with audience, things built, drawings, inventions, budgeting |
+| **WORK** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content with audience, things built, drawings, inventions, budgeting |
 
 ### Semi-Independent Executor Policy
 
-READ/WRITE/BUILD may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate.
+READ/WRITE/WORK may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate.
 
 | Executor | Primary objective | SELF input emphasis | Default posture |
 |----------|-------------------|---------------------|-----------------|
 | **READ** | Perception and comprehension fidelity | IX-B Curiosity first, IX-A Knowledge second, IX-C Personality third | Explore broadly; abstain when evidence is thin |
 | **WRITE** | Expression and explanation in-character | IX-C Personality first, IX-A Knowledge second, IX-B Curiosity third | Preserve voice and tone; avoid unsupported claims |
-| **BUILD** | Planning, execution, and deliverable quality | IX-A Knowledge first, IX-C Personality second, IX-B Curiosity third | Favor explicit constraints, trade-offs, and escalation |
+| **WORK** | Planning, execution, and deliverable quality | IX-A Knowledge first, IX-C Personality second, IX-B Curiosity third | Favor explicit constraints, trade-offs, and escalation |
 
 Shared constraints for all three:
 - stage-only authority (never merge),
@@ -211,7 +211,7 @@ Activity: Daily journal entry (WRITE)
 ### Characteristics
 
 - **Activity-driven**: Grows from authentic production, not explicit teaching
-- **Module-organized**: READ, WRITE, BUILD as primary structure
+- **Module-organized**: READ, WRITE, WORK as primary structure
 - **Dimension-tracked**: Each module has measurable sub-dimensions
 - **Level-based**: 5 developmental levels per dimension
 - **Evidence-linked**: Every claim traces to captured activities
@@ -223,7 +223,7 @@ Activity: Daily journal entry (WRITE)
 ### SELF → SKILLS (Prediction)
 
 - **Interests** (SELF) predict which modules develop fastest
-- **Reasoning patterns** (SELF) shape BUILD (creation) capability growth
+- **Reasoning patterns** (SELF) shape WORK (creation) capability growth
 
 ### SKILLS → SELF (Inference)
 
@@ -238,7 +238,7 @@ READ Activity ───→ SELF.interests (what they choose)
                    SELF.preferences (content patterns)
                    SELF.values (themes they return to)
 
-BUILD (creation) Activity → SELF.reasoning_patterns (how they think)
+WORK (creation) Activity → SELF.reasoning_patterns (how they think)
                             SELF.interests (what they explore)
 ```
 
@@ -316,7 +316,7 @@ The system should:
 
 ## Container Edge Principle
 
-The three SKILLS modules (READ, WRITE, BUILD) are **containers** that define what the companion currently knows and can do. The system proposes activities at the **edge** of these containers.
+The three SKILLS modules (READ, WRITE, WORK) are **containers** that define what the companion currently knows and can do. The system proposes activities at the **edge** of these containers.
 
 ### The Container Model
 
@@ -334,7 +334,7 @@ The three SKILLS modules (READ, WRITE, BUILD) are **containers** that define wha
 │                                                             │
 │   READ: books read, vocabulary acquired                     │
 │   WRITE: words used, complexity achieved                    │
-│   BUILD (creation): creativity demonstrated                  │
+│   WORK (creation): creativity demonstrated                  │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -384,7 +384,7 @@ Activities proposed at the boundary of current capability, where the companion c
 
 > "How well does [user] write?" → SKILLS.WRITE levels
 > "What's [user]'s reading comprehension level?" → SKILLS.READ
-> "How creative/original is [user]?" → SKILLS.BUILD (creation dimensions)
+> "How creative/original is [user]?" → SKILLS WORK (BUILD container; creation dimensions)
 
 ### Query Both (Full Profile)
 
@@ -658,7 +658,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 | Node | Role |
 |------|------|
 | **SELF** | Identity, IX-A/B/C, voice, personality |
-| **SKILLS** | Capability containers (READ, WRITE, BUILD) |
+| **SKILLS** | Capability containers (READ, WRITE, WORK) |
 | **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
 | **LIBRARY** (self-library) | Curated lookups (books, videos) for the bot |
 | **PENDING-REVIEW** | Staging area before merge |
@@ -858,6 +858,8 @@ Topics that caught the self's attention — what they're drawn to, what resonate
 Emergent behavioral patterns detected through the observation window. Art media choices, speech patterns, emotional responses, value expressions. These are not declared traits — they are observed and documented.
 
 ### Multi-Dimension Signals
+
+**IX-A/B/C extraction is done by the analyst**, not by the skill modules (READ, WRITE, WORK). Skill modules update only capability (SKILLS); the analyst stages knowledge/curiosity/personality candidates for SELF. One input (e.g. art, music, journal) can therefore feed both a skill container and SELF. See [SKILLS-TEMPLATE § III](SKILLS-TEMPLATE.md#skill-modules-vs-self-ix-abc).
 
 A single artifact can generate entries in all three dimensions simultaneously. For example, a painted pharaoh portrait produces:
 - **Knowledge**: Egyptian pharaohs / King Tut's death mask

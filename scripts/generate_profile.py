@@ -843,7 +843,7 @@ def _render_playlist_placeholder() -> str:
 
 
 def _render_landing_page(prp_text: str = "") -> str:
-    """Landing page at grace-mar.com — design inspired by Record's artistic style (striped bands, bold primaries, black paper, complete world)."""
+    """Landing page at grace-mar.com — design inspired by desert art: hand-drawn style, sun, mountains, horizontal bands (pink-red, orange-brown, yellow desert), camels and cacti."""
     if not prp_text.strip():
         llm_block = '<a href="/llm" class="nav-link nav-llm">LLM</a>'
         llm_script = ""
@@ -870,24 +870,29 @@ def _render_landing_page(prp_text: str = "") -> str:
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Grace-Mar</title>
     <style>
-        /* Inspired by Record artistic style: black paper, striped bands, bold primaries, complete world, confident fill */
+        /* Desert art: hand-drawn style, sun, mountains, bands, yellow desert, camels & cacti */
         :root {{
-            --paper: #0f0e0d;
-            --ink: #e8e6e3;
-            --strip-gold: #d4a84b;
-            --strip-blue: #5b8fd4;
-            --strip-red: #c45c4a;
-            --strip-purple: #9b7bb8;
-            --strip-teal: #4a9b8a;
-            --nav-profile: #5b8fd4;
-            --nav-telegram: #4a9b8a;
-            --nav-wechat: #6ab56a;
-            --nav-llm: #d4a84b;
+            --sky: #f5f4f0;
+            --sun: #f5d742;
+            --sun-ray: #e8a83a;
+            --mountain-dark: #8b4513;
+            --mountain-mid: #c4a574;
+            --mountain-base: #6b3420;
+            --band-pink: #d46a7a;
+            --band-orange: #c97b4a;
+            --desert: #e8c547;
+            --cactus: #3a8b4a;
+            --cactus-outline: #1a4d2a;
+            --ink: #2c2825;
+            --nav-profile: #c97b4a;
+            --nav-telegram: #3a8b4a;
+            --nav-wechat: #5a9b5a;
+            --nav-llm: #d46a7a;
         }}
         * {{ box-sizing: border-box; }}
         body {{
             margin: 0; padding: 0; min-height: 100vh;
-            background: var(--paper);
+            background: var(--desert);
             color: var(--ink);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -895,40 +900,95 @@ def _render_landing_page(prp_text: str = "") -> str:
             padding-left: max(1.5rem, env(safe-area-inset-left));
             padding-right: max(1.5rem, env(safe-area-inset-right));
         }}
-        /* Subtle starry sky at top — complete world (Starry Night nod) */
-        .sky {{
-            position: fixed; top: 0; left: 0; right: 0; height: 35%;
-            background: radial-gradient(ellipse 90% 70% at 50% 0%, rgba(91, 143, 212, 0.12) 0%, transparent 55%);
+        .scene {{
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
         }}
-        .stars {{
-            position: absolute; top: 0.75rem; left: 50%; transform: translateX(-50%);
-            width: 100px; height: 24px;
-            background-image: radial-gradient(circle at 10px 8px, rgba(212, 168, 75, 0.5) 1.5px, transparent 1.5px),
-                              radial-gradient(circle at 40px 4px, rgba(255,255,255,0.35) 1px, transparent 1px),
-                              radial-gradient(circle at 70px 14px, rgba(212, 168, 75, 0.4) 1px, transparent 1px),
-                              radial-gradient(circle at 95px 6px, rgba(255,255,255,0.3) 1px, transparent 1px);
-            background-repeat: no-repeat;
+        .sky {{
+            position: absolute; top: 0; left: 0; right: 0; height: 22%;
+            background: var(--sky);
+        }}
+        .sun {{
+            position: absolute; top: 0.5rem; right: 1.5rem;
+            width: 48px; height: 48px;
+            background: var(--sun);
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px var(--sun-ray), 0 0 20px rgba(232, 168, 58, 0.4);
+        }}
+        .sun-rays {{
+            position: absolute; top: -4px; right: 14px;
+            width: 20px; height: 56px;
+            background: repeating-linear-gradient(90deg, var(--sun-ray) 0 3px, transparent 3px 8px);
+            transform: rotate(-15deg);
             opacity: 0.9;
+        }}
+        .mountains {{
+            position: absolute; top: 12%; left: 0; right: 0; height: 28%;
+            background: linear-gradient(180deg,
+                var(--mountain-mid) 0%,
+                var(--mountain-dark) 25%,
+                var(--mountain-base) 70%,
+                var(--mountain-base) 100%);
+            clip-path: polygon(0 100%, 0 45%, 12% 65%, 25% 40%, 42% 55%, 58% 35%, 75% 50%, 88% 40%, 100% 60%, 100% 100%);
+        }}
+        .band-pink {{
+            position: absolute; top: 36%; left: 0; right: 0; height: 4%;
+            background: var(--band-pink);
+            border-top: 2px solid rgba(0,0,0,0.1);
+        }}
+        .band-orange {{
+            position: absolute; top: 39%; left: 0; right: 0; height: 4%;
+            background: var(--band-orange);
+            border-top: 2px solid rgba(0,0,0,0.06);
+        }}
+        .desert-bg {{
+            position: absolute; top: 42%; left: 0; right: 0; bottom: 0;
+            background: var(--desert);
+        }}
+        .camel {{
+            position: absolute; bottom: 22%; left: 8%;
+            width: 52px; height: 34px;
+            background: #1a1a1a;
+            clip-path: polygon(18% 82%, 24% 58%, 36% 68%, 52% 48%, 66% 58%, 76% 42%, 86% 52%, 92% 82%, 68% 88%, 28% 88%);
+            opacity: 0.9;
+        }}
+        .cactus {{
+            position: absolute; bottom: 20%; right: 10%;
+            width: 20px; height: 44px;
+            background: var(--cactus);
+            border: 2px solid var(--cactus-outline);
+            border-radius: 5px;
+            opacity: 0.95;
+        }}
+        .cactus::before {{
+            content: ""; position: absolute; left: -8px; top: 16px;
+            width: 14px; height: 18px; background: var(--cactus); border: 2px solid var(--cactus-outline); border-radius: 3px;
         }}
         .page {{
             position: relative; z-index: 1;
-            display: flex; flex-direction: column; align-items: center;
-            width: 100%; max-width: 300px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            width: 100%; max-width: 320px;
+            min-height: 60vh;
+        }}
+        .card {{
+            background: rgba(255, 251, 243, 0.97);
+            padding: 1.75rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.06);
+            width: 100%;
         }}
         h1 {{
-            font-size: 1.6rem; font-weight: 700; margin: 0 0 1rem;
+            font-size: 1.75rem; font-weight: 800; margin: 0 0 0.35rem;
             color: var(--ink);
             letter-spacing: 0.02em;
+            line-height: 1.2;
         }}
-        /* Striped band — signature aesthetic */
-        .stripes {{
-            width: 100%; height: 12px; border-radius: 6px; margin-bottom: 1.5rem;
-            background: linear-gradient(90deg,
-                var(--strip-gold) 0%, var(--strip-blue) 22%,
-                var(--strip-red) 44%, var(--strip-purple) 66%, var(--strip-blue) 88%, var(--strip-gold) 100%);
-            background-size: 200% 100%;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        .tagline {{
+            font-size: 0.8rem; color: #5c564d; margin: 0 0 1.25rem;
+            letter-spacing: 0.04em;
         }}
         .nav {{
             display: flex; flex-direction: column; gap: 0.65rem;
@@ -945,40 +1005,44 @@ def _render_landing_page(prp_text: str = "") -> str:
             cursor: pointer;
             font-family: inherit;
             transition: transform 0.12s ease, box-shadow 0.12s ease;
-            color: var(--paper);
+            color: #1a1a1a;
+            border: 2px solid rgba(0,0,0,0.15);
             position: relative;
-            overflow: hidden;
         }}
-        .nav-link::before, .nav .nav-btn::before {{
-            content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px;
-            border-radius: 12px 0 0 12px;
-        }}
-        .nav-profile {{ background: var(--nav-profile); }}
-        .nav-profile::before {{ background: var(--strip-blue); }}
-        .nav-telegram {{ background: var(--nav-telegram); }}
-        .nav-telegram::before {{ background: var(--strip-teal); }}
-        .nav-wechat {{ background: var(--nav-wechat); }}
-        .nav-wechat::before {{ background: #7bc47b; }}
-        .nav-llm {{ background: var(--nav-llm); }}
-        .nav-llm::before {{ background: var(--strip-gold); }}
+        .nav-profile {{ background: var(--nav-profile); color: #fff; }}
+        .nav-telegram {{ background: var(--nav-telegram); color: #fff; }}
+        .nav-wechat {{ background: var(--nav-wechat); color: #fff; }}
+        .nav-llm {{ background: var(--nav-llm); color: #1a1a1a; }}
         .nav-link:hover, .nav .nav-btn:hover {{
-            transform: translateY(-1px);
-            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }}
         .nav-link:active, .nav .nav-btn:active {{ transform: translateY(0); }}
     </style>
 </head>
 <body>
-    <div class="sky" aria-hidden="true"><div class="stars"></div></div>
+    <div class="scene" aria-hidden="true">
+        <div class="sky"></div>
+        <div class="sun"></div>
+        <div class="sun-rays"></div>
+        <div class="mountains"></div>
+        <div class="band-pink"></div>
+        <div class="band-orange"></div>
+        <div class="desert-bg"></div>
+        <div class="camel" aria-hidden="true"></div>
+        <div class="cactus" aria-hidden="true"></div>
+    </div>
     <main class="page">
-        <h1>Grace-Mar</h1>
-        <div class="stripes" aria-hidden="true"></div>
-        <nav class="nav">
-            <a href="/profile" class="nav-link nav-profile">Profile</a>
-            <a href="/telegram" class="nav-link nav-telegram">Telegram</a>
-            <a href="/wechat" class="nav-link nav-wechat">WeChat</a>
-            {llm_block}
-        </nav>{llm_script}
+        <div class="card">
+            <h1>Grace-Mar</h1>
+            <p class="tagline">Record · Voice · You</p>
+            <nav class="nav">
+                <a href="/profile" class="nav-link nav-profile">Profile</a>
+                <a href="/telegram" class="nav-link nav-telegram">Telegram</a>
+                <a href="/wechat" class="nav-link nav-wechat">WeChat</a>
+                {llm_block}
+            </nav>
+        </div>{llm_script}
     </main>
 </body>
 </html>"""

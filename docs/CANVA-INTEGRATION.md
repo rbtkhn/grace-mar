@@ -29,7 +29,7 @@ With Canva's APIs you can:
 
 | Use case | Canva API | Flow |
 |----------|-----------|------|
-| **BUILD creation evidence** | Connect API | User creates design in Canva → export/retrieve → "we designed X" → pipeline stages → EVIDENCE creation log |
+| **WORK (creation) evidence** | Connect API | User creates design in Canva → export/retrieve → "we designed X" → pipeline stages → EVIDENCE creation log |
 | **Newsletter layout** | Connect API / App SDK | Outbound digest (IX-B, LIBRARY) → populate Canva template → render as image/PDF → email or JOURNAL |
 | **Template + Record** | App SDK | IX-B curiosity, LIBRARY titles, or JOURNAL highlights → insert into Canva template → parent-approved output |
 | **Shareable content** | Connect API | Designs as JOURNAL daily highlights; shareable portfolio for admissions/family |
@@ -106,7 +106,7 @@ Projecting technology trends (AI-assisted design, personalization, multimodal cr
 - **LIBRARY extensions** — "If you liked X…" prompts with suggested designs ("Design a poster for your favorite scene")
 - **Output** — Printable activity kits or shareable links
 
-### 7. Design-as-Expression (BUILD creation)
+### 7. Design-as-Expression (WORK creation)
 
 **Assumption:** Canvas as creative tool, not just templates.
 
@@ -148,7 +148,7 @@ Projecting technology trends (AI-assisted design, personalization, multimodal cr
 | 2 | Reading & Story Response Cards | Aligns with LIBRARY; supports READ + BUILD |
 | 3 | Growth Portfolios | Clear parent/school value; uses existing data |
 | 4 | Record-Aware Templates | Differentiator; makes Canva "for this child" |
-| 5 | Collaborative Family Sessions | Habit-forming; strong BUILD creation evidence |
+| 5 | Collaborative Family Sessions | Habit-forming; strong WORK creation evidence |
 
 ---
 

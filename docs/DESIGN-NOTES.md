@@ -274,7 +274,7 @@ Grace-Mar exposes:
 
 **Design target:** Homeschool is the primary gap (Alpha homeschool = 1x). Grace-Mar + Khan/IXL + lightweight structure = low-cost alternative. Record feeds motivation; "we did X" provides ritual.
 
-**BUILD module:** Third SKILLS module (making, planning, execution, exchange, creation, exploration). Folds in former BUSINESS and IMAGINE. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). Starts from zero; grows with pipeline input (human-gated). Supports zero-human business vision. See SKILLS-TEMPLATE, ARCHITECTURE.
+**WORK module:** Third SKILLS module (making, planning, execution, exchange, creation, exploration). Folds in former BUSINESS and IMAGINE. Internal identifier: BUILD container. Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). Starts from zero; grows with pipeline input (human-gated). Supports zero-human business vision. See SKILLS-TEMPLATE, ARCHITECTURE.
 
 ---
 

@@ -50,7 +50,7 @@ Operational path: **READ -> Record -> WRITE-through-Voice**.
 
 **Companion self contains:**
 - **self-knowledge** (SELF.md IX-A)
-- **self-skill-write**, **self-skill-read**, **self-skill-build** (SKILLS.md)
+- **self-skill-write**, **self-skill-read**, **self-skill-work** (SKILLS.md)
 - **self-curiosity** (SELF.md IX-B)
 - **self-personality** (SELF.md IX-C)
 - **self-archive** (SELF-ARCHIVE.md)
@@ -58,7 +58,7 @@ Operational path: **READ -> Record -> WRITE-through-Voice**.
 - **self-memory** (MEMORY.md)
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
-The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-read**, **self-skill-write**, and **self-skill-build** (as well as self-library, etc.). Self-voice is the single output channel for the companion self.
+The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-read**, **self-skill-write**, and **self-skill-work** (as well as self-library, etc.). Self-voice is the single output channel for the companion self.
 
 The structure is intentionally symmetrical: three-dimension mind (knowledge, curiosity, personality), three capability modules (write, read, build), three key stores (archive, library, memory), and the voice that speaks it.
 

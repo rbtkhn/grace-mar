@@ -830,6 +830,15 @@ entries:
     curated_by: user
     provenance: human_approved
     notes: "Same composer as Nutcracker and Swan Lake; gentle piece for listening."
+  - id: CUR-0015
+    date: 2026-02-25
+    topic: "History — why it matters; curiosity about learning from the past to make better choices and be kinder (engagement with purpose of history, not only content)."
+    trigger: pipeline merge
+    response_signal: approved
+    intensity: 3
+    evidence_id: ACT-0041
+    provenance: human_approved
+
 
 ```
 
@@ -884,7 +893,14 @@ entries:
     observation: "When imagining hypothetical threat (dinosaurs still alive), responds with fear and avoidance — would be scared to go outside. Drawing and sentence show cause-effect: dinosaur outside, house/fence as safety. Values safety; clear emotional reasoning."
     evidence_id: ACT-0037
     curated_by: user
+    provenance: human_approved  - id: PER-0007
+    date: 2026-02-25
+    type: observed
+    observation: "Values learning from the past — sees history as a way to make better choices, solve problems, and be kinder to each other."
+    evidence_id: ACT-0040
     provenance: human_approved
+
+
 ```
 
 ---

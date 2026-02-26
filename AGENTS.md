@@ -4,7 +4,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **For conceptual clarity:** Read `docs/CONCEPTUAL-FRAMEWORK.md` — Record vs. fork, Voice vs. bot, fork vs. twin, terminology. **Prime directive:** The Record belongs to the companion (GRACE-MAR-CORE §I).
 
-**For system design:** Read `docs/ARCHITECTURE.md`.
+**For system design:** Read `docs/ARCHITECTURE.md`. For the formal skill modularity model (READ/WRITE/WORK boundaries, Voice and profile as functions of skill-write, invariants), see `docs/SKILLS-MODULARITY.md`.
 
 **For chat/UI design:** Read `docs/CHAT-FIRST-DESIGN.md` — principles for delivering the full experience within Telegram/chat (bounded sessions, one-tap, Record felt not seen).
 
@@ -21,7 +21,7 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 **Conceptual distinctions (see CONCEPTUAL-FRAMEWORK.md):**
 - **Companion** — The person whose Record it is (the human in the tricameral mind). Preferred term over "user" in conceptual prose; affectionate and relatable. **Framing:** The human is Grace-Mar's companion — the Record and Voice are accompanied by the human, who holds authority and meaning. Grace-Mar serves the companion; the companion serves Grace-Mar.
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried. Self = Record + Voice (the thing you can talk to).
-- **Companion self** — One phrase for both sides of the dyad: the companion's self (the human's self, externalized in the Record) and the self that companions (the Record and Voice that accompany the human). The ambiguity is intentional; see CONCEPTUAL-FRAMEWORK (companion self). **Companion self contains:** self-knowledge, self-skill-write, self-skill-read, self-skill-build, self-curiosity, self-personality, self-archive, self-library, self-memory, self-voice (see ID-TAXONOMY).
+- **Companion self** — One phrase for both sides of the dyad: the companion's self (the human's self, externalized in the Record) and the self that companions (the Record and Voice that accompany the human). The ambiguity is intentional; see CONCEPTUAL-FRAMEWORK (companion self). **Companion self contains:** self-knowledge, self-skill-write, self-skill-read, self-skill-work, self-curiosity, self-personality, self-archive, self-library, self-memory, self-voice (see ID-TAXONOMY).
 - **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
 - **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
 - **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without companion consent. See `docs/INSTANCES-AND-RELEASE.md` and CONCEPTUAL-FRAMEWORK invariant 34.
@@ -215,7 +215,7 @@ grace-mar/
 └── users/
     └── grace-mar/              # First pilot companion
         ├── SELF.md             # Identity + three-dimension mind
-        ├── SKILLS.md           # Capability containers (self-skill-write, self-skill-read, self-skill-build)
+        ├── SKILLS.md           # Capability containers (self-skill-write, self-skill-read, self-skill-work)
         ├── EVIDENCE.md         # Activity log
         ├── LIBRARY.md          # self-library — curated lookup sources (books, videos); gated
         ├── MEMORY.md           # self-memory — ephemeral session context (optional; not part of Record)

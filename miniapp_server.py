@@ -50,6 +50,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
 SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "SESSION-TRANSCRIPT.md"
+PENDING_REVIEW_PATH = REPO_ROOT / "users" / USER_ID / "PENDING-REVIEW.md"
+OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
     os.getenv("WEBHOOK_BASE_URL", "").strip()
@@ -209,8 +211,43 @@ def interview_by_user(user_id: str):
 def _cors(resp):
     resp.headers["Access-Control-Allow-Origin"] = "*"
     resp.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    resp.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
     return resp
+
+
+def _operator_auth():
+    """Require Bearer token matching OPERATOR_FETCH_SECRET. Return (ok, error_response)."""
+    if not OPERATOR_FETCH_SECRET:
+        return False, (jsonify({"error": "OPERATOR_FETCH_SECRET not configured"}), 503)
+    auth = request.headers.get("Authorization") or ""
+    if not auth.startswith("Bearer "):
+        return False, (jsonify({"error": "Authorization: Bearer <secret> required"}), 401)
+    token = auth[7:].strip()
+    if token != OPERATOR_FETCH_SECRET:
+        return False, (jsonify({"error": "Invalid secret"}), 403)
+    return True, None
+
+
+@app.route("/operator/session-transcript", methods=["GET"])
+def operator_session_transcript():
+    """Return SESSION-TRANSCRIPT.md content for operator sync (e.g. into Cursor). Requires OPERATOR_FETCH_SECRET."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    if not SESSION_TRANSCRIPT_PATH.exists():
+        return jsonify({"error": "SESSION-TRANSCRIPT.md not found", "path": str(SESSION_TRANSCRIPT_PATH)}), 404
+    return SESSION_TRANSCRIPT_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
+
+
+@app.route("/operator/pending-review", methods=["GET"])
+def operator_pending_review():
+    """Return PENDING-REVIEW.md content for operator sync. Requires OPERATOR_FETCH_SECRET."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    if not PENDING_REVIEW_PATH.exists():
+        return jsonify({"error": "PENDING-REVIEW.md not found", "path": str(PENDING_REVIEW_PATH)}), 404
+    return PENDING_REVIEW_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
 
 
 @app.route("/api/ask", methods=["POST", "OPTIONS"])

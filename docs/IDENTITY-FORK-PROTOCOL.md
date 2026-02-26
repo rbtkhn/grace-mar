@@ -73,7 +73,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
-| **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
+| **SKILLS** | READ, WRITE, WORK capability containers | What they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
 | **INTENT** | Goal hierarchy, trade-off rules, escalation boundaries, cross-agent policy scope | What the system should WANT to optimize |
 
@@ -94,10 +94,10 @@ Every claim in SELF (IX-A, IX-B, IX-C) must reference evidence:
 
 No claim may exist without traceability to an artifact or approved source.
 
-### 3.4 Skill Executor Model (READ/WRITE/BUILD)
+### 3.4 Skill Executor Model (READ/WRITE/WORK)
 
 The SKILLS module may be operationalized as three semi-independent executors:
-`READ`, `WRITE`, and `BUILD`. **Standard labels:** **self-skill-read**, **self-skill-write**, **self-skill-build** (see [ID-TAXONOMY](ID-TAXONOMY.md#standard-capability-labels-self-skill-)).
+`READ`, `WRITE`, and `WORK`. **Standard labels:** **self-skill-read**, **self-skill-write**, **self-skill-work** (see [ID-TAXONOMY](ID-TAXONOMY.md#standard-capability-labels-self-skill-)). Internal identifier for the third module: BUILD container.
 
 - They may use distinct heuristics, prompts, and evaluation criteria.
 - They are capability-specialized, not identity-sovereign.
@@ -105,7 +105,7 @@ The SKILLS module may be operationalized as three semi-independent executors:
 
 Normative constraints:
 
-1. `READ`/`WRITE`/`BUILD` may stage candidates only; they may not merge.
+1. `READ`/`WRITE`/`WORK` may stage candidates only; they may not merge.
 2. All staged outputs must remain evidence-linked and reviewable.
 3. Divergent executor recommendations are allowed; companion approval is the resolution layer.
 4. Executor behavior is shaped by the SELF three-dimension mind:

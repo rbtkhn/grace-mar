@@ -1,10 +1,10 @@
 # BUILD Probe Questions
 
-**Purpose:** Propose multiple-choice questions generated from SELF + SKILLS + EVIDENCE (and optionally archive) that **probe or test dimensions which can populate or evidence the BUILD container** — planning, execution, making, creation (originality, elaboration, flexibility), and decision-making.
+**Purpose:** Propose multiple-choice questions generated from SELF + SKILLS + EVIDENCE (and optionally archive) that **probe or test dimensions which can populate or evidence the BUILD container** (WORK module) — planning, execution, making, creation (originality, elaboration, flexibility), and decision-making. *Naming: the module is WORK in prose; the container and evidence IDs (BUILD, CREATE-nnn, ACT-nnn) remain BUILD for compatibility.*
 
 **Status:** Design proposal. No implementation yet.
 
-**Governed by:** [SKILLS-TEMPLATE](SKILLS-TEMPLATE.md) (BUILD section), [AGENTS.md](../AGENTS.md) (knowledge boundary, stage-only).
+**Governed by:** [SKILLS-TEMPLATE](SKILLS-TEMPLATE.md) (WORK section / BUILD container), [AGENTS.md](../AGENTS.md) (knowledge boundary, stage-only).
 
 ---
 

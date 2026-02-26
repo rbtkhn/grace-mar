@@ -30,11 +30,11 @@
 
 ---
 
-### 2. Upload artifact (WRITE / BUILD creation)
+### 2. Upload artifact (WRITE / WORK creation)
 
 **What it is:** To log a writing sample or artwork, the user must: (1) photograph or scan, (2) save to `artifacts/`, (3) create or extend the EVIDENCE.md entry (YAML structure, analysis). No upload flow, no templates.
 
-**Impact:** 5 — This is the main blocker for WRITE and BUILD (creation) evidence. High cognitive load: user must know the schema and write YAML.
+**Impact:** 5 — This is the main blocker for WRITE and WORK (creation) evidence. High cognitive load: user must know the schema and write YAML.
 
 **Effort:** 3 — Options: (a) Telegram bot photo upload → staging area with minimal metadata, (b) template script that scaffolds a new WRITE-* or CREATE-* entry from filename + prompts for key fields, (c) web form for artifact + metadata.
 
