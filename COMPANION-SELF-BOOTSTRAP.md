@@ -2,6 +2,8 @@
 
 **Use this file in the companion-self repo workspace.** Copy this file into the root of your new companion-self repository, open that repo in a new Cursor workspace, then open this file and say: *"Read COMPANION-SELF-BOOTSTRAP.md and set up this repo as the companion-self template per the plan."* The agent will have full context to continue.
 
+**In grace-mar:** This file lives here until the companion-self repo exists. For the latest audit of grace-mar (instance) vs this template, see [docs/AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE.md](docs/AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE.md).
+
 ---
 
 ## 1) What This Repo Is
@@ -104,7 +106,22 @@ If you need to extract or generalize content for companion-self, the canonical s
 - Governance: `AGENTS.md` (template-level rules: pipeline, knowledge boundary, operating modes)
 - Seed / lifecycle: `docs/ARCHITECTURE.md` (Fork Lifecycle, Seeding), `docs/OPERATOR-BRIEF.md`
 - Schema templates: `docs/SELF-TEMPLATE.md`, `docs/SKILLS-TEMPLATE.md`, `docs/EVIDENCE-TEMPLATE.md`, `docs/MEMORY-TEMPLATE.md`
-- Merge process (instance side): described in §5 above; can be documented in grace-mar as `docs/MERGING-FROM-COMPANION-SELF.md` when needed.
+- Modularity (module set, skill-write as voice shaper): `docs/SKILLS-MODULARITY.md`
+- Merge process (instance side): `docs/MERGING-FROM-COMPANION-SELF.md` (template paths, merge checklist)
+- Instance vs template audit: `docs/AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE.md` (compliance check; use to confirm grace-mar is a valid source before extracting template)
+
+**Naming:** Third skill module is **WORK** in prose; internal identifier remains **BUILD** (container, CREATE-nnn, ACT-nnn). Standard label: **self-skill-work**. When generalizing for the template, use WORK in concept docs.
+
+---
+
+## 9) Continue template analysis (new session)
+
+When resuming in a **new session** and the user says "continue template analysis" (or similar):
+
+- **If you are in the grace-mar workspace:** Re-read [docs/AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE.md](docs/AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE.md). Optionally re-run the audit (structure, protocol, schema paths, governance), update the audit doc for any changes, or extend analysis (e.g. gap deep-dives, template-path diff readiness). Use [docs/COMPANION-SELF-DEVELOPER-PLAN.md](docs/COMPANION-SELF-DEVELOPER-PLAN.md) and [docs/MERGING-FROM-COMPANION-SELF.md](docs/MERGING-FROM-COMPANION-SELF.md) for context.
+- **If you are in the companion-self workspace:** Continue from [COMPANION-SELF-DEVELOPER-PLAN](https://github.com/rbtkhn/grace-mar/blob/main/docs/COMPANION-SELF-DEVELOPER-PLAN.md) (grace-mar): next unchecked phase (A1 README → B1 concept → C1 protocol → D1 seed → E1/E2 optional). Use grace-mar as read-only reference; extract and generalize only. Propose scope before implementing.
+
+**Recent context (grace-mar, Feb 2026):** Audit completed (grace-mar compliant). WORK rename applied in docs; SKILLS-MODULARITY formalized (full module set, outputs as f(skill-write)). Landing page desert theme + card. Bootstrap updated for handoff.
 
 ---
 
