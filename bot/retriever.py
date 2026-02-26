@@ -11,9 +11,9 @@ from pathlib import Path
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
-SELF_PATH = PROFILE_DIR / "SELF.md"
-SKILLS_PATH = PROFILE_DIR / "SKILLS.md"
-EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
+SELF_PATH = PROFILE_DIR / "self.md"
+SKILLS_PATH = PROFILE_DIR / "skills.md"
+EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
 
 def _read(path: Path) -> str:

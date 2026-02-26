@@ -1,5 +1,5 @@
 # Render Blueprint: Grace-Mar Mini App + Telegram Webhook
-# See docs/MINIAPP-SETUP.md and docs/TELEGRAM-WEBHOOK-SETUP.md.
+# See docs/miniapp-setup.md and docs/telegram-webhook-setup.md.
 #
 # Telegram bot runs via webhook on the miniapp service (no separate worker).
 # RENDER_EXTERNAL_URL is set automatically; webhook URL = RENDER_EXTERNAL_URL/telegram/webhook

@@ -60,14 +60,14 @@ def compute_dyad_metrics(profile_dir: Path, days: int) -> dict:
     dyad_lookups_7d = 0
     dyad_grounded_7d = 0
 
-    ledger_path = profile_dir / "COMPUTE-LEDGER.jsonl"
+    ledger_path = profile_dir / "compute-ledger.jsonl"
     for row in _parse_jsonl(ledger_path):
         if not _ts_in_window(row.get("ts", ""), cutoff):
             continue
         if row.get("bucket") == CONSULTATION_BUCKET:
             consultations_7d += 1
 
-    events_path = profile_dir / "PIPELINE-EVENTS.jsonl"
+    events_path = profile_dir / "pipeline-events.jsonl"
     for row in _parse_jsonl(events_path):
         if not _ts_in_window(row.get("ts", ""), cutoff):
             continue

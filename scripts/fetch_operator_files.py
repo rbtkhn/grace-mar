@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch SESSION-TRANSCRIPT.md and PENDING-REVIEW.md from the bot running on Render (or any host).
+Fetch session-transcript.md and pending-review.md from the bot running on Render (or any host).
 
 Use this from Cursor so your local repo has the latest Telegram chat and pipeline state.
 Requires OPERATOR_FETCH_SECRET to be set on the server (Render env) and passed here.
@@ -69,7 +69,7 @@ def main() -> None:
                 except Exception:
                     pass
 
-    print("Done. Open users/{}/SESSION-TRANSCRIPT.md and PENDING-REVIEW.md in Cursor.".format(args.user))
+    print("Done. Open users/{}/session-transcript.md and pending-review.md in Cursor.".format(args.user))
 
 
 if __name__ == "__main__":

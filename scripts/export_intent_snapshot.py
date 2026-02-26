@@ -2,7 +2,7 @@
 """
 Export user intent rules as machine-readable JSON.
 
-Reads users/[id]/INTENT.md and writes a structured intent snapshot for
+Reads users/[id]/intent.md and writes a structured intent snapshot for
 agent consumption and intent-aware validation.
 
 Usage:
@@ -122,14 +122,14 @@ def _tradeoff_rules(block: str) -> list[dict]:
 
 def export_intent_snapshot(user_id: str = "grace-mar") -> dict:
     profile_dir = REPO_ROOT / "users" / user_id
-    intent_path = profile_dir / "INTENT.md"
+    intent_path = profile_dir / "intent.md"
     raw = _read(intent_path)
     if not raw:
         return {
             "ok": False,
             "user_id": user_id,
             "generated_at": datetime.now().isoformat(),
-            "error": f"missing INTENT.md at {intent_path}",
+            "error": f"missing intent.md at {intent_path}",
             "goals": {},
             "tradeoff_rules": [],
             "escalation_rules": [],
@@ -142,7 +142,7 @@ def export_intent_snapshot(user_id: str = "grace-mar") -> dict:
             "ok": False,
             "user_id": user_id,
             "generated_at": datetime.now().isoformat(),
-            "error": "INTENT.md missing YAML block",
+            "error": "intent.md missing YAML block",
             "goals": {},
             "tradeoff_rules": [],
             "escalation_rules": [],
@@ -168,7 +168,7 @@ def export_intent_snapshot(user_id: str = "grace-mar") -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Export INTENT.md as intent_snapshot.json")
+    parser = argparse.ArgumentParser(description="Export intent.md as intent_snapshot.json")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default="", help="Output JSON file (default: stdout)")
     args = parser.parse_args()

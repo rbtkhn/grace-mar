@@ -96,13 +96,13 @@ def _ix_c_snippets(content: str) -> list[str]:
 def export_engagement_profile(user_id: str = "grace-mar") -> dict:
     """Build engagement profile dict: interests, curiosity, personality, talent_stack."""
     profile_dir = REPO_ROOT / "users" / user_id
-    self_path = profile_dir / "SELF.md"
+    self_path = profile_dir / "self.md"
     self_raw = _read(self_path)
     if not self_raw:
         return {
             "user_id": user_id,
             "ok": False,
-            "error": f"No SELF.md at {self_path}",
+            "error": f"No self.md at {self_path}",
             "generated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         }
 

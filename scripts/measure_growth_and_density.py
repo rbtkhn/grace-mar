@@ -2,11 +2,11 @@
 """
 Measure cognitive growth rate and cognitive density of the fork.
 
-Uses SELF.md, EVIDENCE.md, and optionally git history.
+Uses self.md, self-evidence.md, and optionally git history.
 
 Growth rate:
-  - IX entries per day (from date: fields in SELF.md)
-  - Pipeline throughput (applied events per week, if PIPELINE-EVENTS.jsonl exists)
+  - IX entries per day (from date: fields in self.md)
+  - Pipeline throughput (applied events per week, if pipeline-events.jsonl exists)
   - Optional: IX accumulation over time from git history
 
 Cognitive density:
@@ -68,7 +68,7 @@ def parse_ix_entries(content: str) -> list[dict]:
 
 
 def pipeline_throughput(events_path: Path) -> dict:
-    """Count applied events per week from PIPELINE-EVENTS.jsonl."""
+    """Count applied events per week from pipeline-events.jsonl."""
     if not events_path.exists():
         return {}
     by_week: dict[str, int] = defaultdict(int)
@@ -114,7 +114,7 @@ def growth_from_git(self_path: Path) -> list[tuple[str, int, int, int]]:
         seen.add(commit)
         try:
             show = subprocess.run(
-                ["git", "show", f"{commit}:users/grace-mar/SELF.md"],
+                ["git", "show", f"{commit}:users/grace-mar/self.md"],
                 cwd=REPO_ROOT,
                 capture_output=True,
                 text=True,
@@ -133,15 +133,15 @@ def growth_from_git(self_path: Path) -> list[tuple[str, int, int, int]]:
 
 
 def main() -> None:
-    self_path = PROFILE_DIR / "SELF.md"
-    evidence_path = PROFILE_DIR / "EVIDENCE.md"
-    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    self_path = PROFILE_DIR / "self.md"
+    evidence_path = PROFILE_DIR / "self-evidence.md"
+    events_path = PROFILE_DIR / "pipeline-events.jsonl"
 
     content = _read(self_path)
     entries = parse_ix_entries(content)
 
     if not entries:
-        print("No IX entries found in SELF.md")
+        print("No IX entries found in self.md")
         return
 
     # Growth rate from dates
@@ -193,7 +193,7 @@ def main() -> None:
         recent = sorted(by_week.items(), reverse=True)[:4]
         print(f"Pipeline (applied/wk): {dict(recent)}")
     else:
-        print("Pipeline:             (no PIPELINE-EVENTS.jsonl)")
+        print("Pipeline:             (no pipeline-events.jsonl)")
     if git_history:
         first = git_history[-1]
         last = git_history[0]

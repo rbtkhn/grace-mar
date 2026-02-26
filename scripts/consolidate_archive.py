@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-One-off: Merge SELF-ARCHIVE.md and TELEGRAM-ARCHIVE.md (if present) into a single SELF-ARCHIVE.md
+One-off: Merge self-archive.md and TELEGRAM-ARCHIVE.md (if present) into a single self-archive.md
 with human-readable channel labels (Telegram, Test, WeChat).
 """
 import re
 from pathlib import Path
 
 USER_DIR = Path(__file__).resolve().parent.parent / "users" / "grace-mar"
-ARCHIVE = USER_DIR / "SELF-ARCHIVE.md"
+ARCHIVE = USER_DIR / "self-archive.md"
 TELEGRAM_ARCHIVE = USER_DIR / "TELEGRAM-ARCHIVE.md"
 
 

@@ -7,8 +7,8 @@ the fork's documented state at a given moment.
 
 Usage:
     python scripts/fork_checksum.py
-    python scripts/fork_checksum.py --append   # Append (ts, checksum) to FORK-CHECKSUM-LOG.txt
-    python scripts/fork_checksum.py --manifest  # Write FORK-MANIFEST.json (checksum, IX counts, pipeline stats)
+    python scripts/fork_checksum.py --append   # Append (ts, checksum) to fork-checksum-log.txt
+    python scripts/fork_checksum.py --manifest  # Write fork-manifest.json (checksum, IX counts, pipeline stats)
 """
 
 import argparse
@@ -22,7 +22,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 BOT_DIR = REPO_ROOT / "bot"
-LOG_PATH = PROFILE_DIR / "FORK-CHECKSUM-LOG.txt"
+LOG_PATH = PROFILE_DIR / "fork-checksum-log.txt"
 
 
 def _read(path: Path) -> str:
@@ -40,8 +40,8 @@ def _canonicalize(text: str) -> bytes:
 def compute_checksum() -> str:
     """Compute SHA-256 of fork state."""
     parts = []
-    parts.append(_read(PROFILE_DIR / "SELF.md"))
-    parts.append(_read(PROFILE_DIR / "EVIDENCE.md"))
+    parts.append(_read(PROFILE_DIR / "self.md"))
+    parts.append(_read(PROFILE_DIR / "self-evidence.md"))
     # Key prompt sections that embed fork state
     prompt_path = BOT_DIR / "prompt.py"
     if prompt_path.exists():
@@ -58,7 +58,7 @@ def compute_checksum() -> str:
 
 
 def _ix_counts(content: str) -> tuple[int, int, int]:
-    """Return (ix_a, ix_b, ix_c) from SELF.md content."""
+    """Return (ix_a, ix_b, ix_c) from self.md content."""
     a = len(re.findall(r"id:\s+LEARN-\d+", content))
     b = len(re.findall(r"id:\s+CUR-\d+", content))
     c = len(re.findall(r"id:\s+PER-\d+", content))
@@ -66,8 +66,8 @@ def _ix_counts(content: str) -> tuple[int, int, int]:
 
 
 def _pipeline_stats() -> tuple[int, int, str]:
-    """Return (applied, rejected, last_applied_ts) from PIPELINE-EVENTS.jsonl."""
-    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    """Return (applied, rejected, last_applied_ts) from pipeline-events.jsonl."""
+    events_path = PROFILE_DIR / "pipeline-events.jsonl"
     applied = rejected = 0
     last_ts = ""
     if events_path.exists():
@@ -90,8 +90,8 @@ def _pipeline_stats() -> tuple[int, int, str]:
 
 
 def write_manifest(checksum: str) -> None:
-    """Write FORK-MANIFEST.json with checksum, IX counts, pipeline stats."""
-    self_content = _read(PROFILE_DIR / "SELF.md")
+    """Write fork-manifest.json with checksum, IX counts, pipeline stats."""
+    self_content = _read(PROFILE_DIR / "self.md")
     ix_a, ix_b, ix_c = _ix_counts(self_content)
     pipeline_applied, pipeline_rejected, last_applied_ts = _pipeline_stats()
     manifest = {
@@ -104,7 +104,7 @@ def write_manifest(checksum: str) -> None:
         "last_applied_ts": last_applied_ts or None,
         "generated_at": datetime.now().isoformat(),
     }
-    manifest_path = PROFILE_DIR / "FORK-MANIFEST.json"
+    manifest_path = PROFILE_DIR / "fork-manifest.json"
     PROFILE_DIR.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {manifest_path}", file=sys.stderr)
@@ -112,8 +112,8 @@ def write_manifest(checksum: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Compute fork state checksum")
-    parser.add_argument("--append", "-a", action="store_true", help="Append to FORK-CHECKSUM-LOG.txt")
-    parser.add_argument("--manifest", "-m", action="store_true", help="Write FORK-MANIFEST.json")
+    parser.add_argument("--append", "-a", action="store_true", help="Append to fork-checksum-log.txt")
+    parser.add_argument("--manifest", "-m", action="store_true", help="Write fork-manifest.json")
     args = parser.parse_args()
     checksum = compute_checksum()
     print(checksum)

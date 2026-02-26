@@ -40,8 +40,8 @@ def _compute_checksum(profile_dir: Path) -> str:
     import re
 
     parts = []
-    parts.append(_read(profile_dir / "SELF.md"))
-    parts.append(_read(profile_dir / "EVIDENCE.md"))
+    parts.append(_read(profile_dir / "self.md"))
+    parts.append(_read(profile_dir / "self-evidence.md"))
     prompt_path = BOT_DIR / "prompt.py"
     if prompt_path.exists():
         content = prompt_path.read_text()
@@ -101,10 +101,10 @@ def generate_manifest(user_id: str = "grace-mar") -> dict:
             "SELF": {"type": "object", "description": "Identity, personality, post-seed growth (IX-A, IX-B, IX-C)"},
             "SKILLS": {"type": "object", "description": "Capability containers (READ, WRITE, BUILD)"},
             "EVIDENCE": {"type": "object", "description": "Activity log, writing, creation; immutable once captured"},
-            "PENDING-REVIEW": {"type": "object", "description": "Staging area; format documented in AGENTS.md"},
+            "PENDING-REVIEW": {"type": "object", "description": "Staging area; format documented in agents.md"},
         },
         "exports": {
-            "USER.md": "python scripts/export_user_identity.py -u " + user_id,
+            "user.md": "python scripts/export_user_identity.py -u " + user_id,
             "manifest": "python scripts/export_manifest.py -u " + user_id,
             "fork_json": "python scripts/export_fork.py -o fork-export.json",
             "intent_snapshot": "python scripts/export_intent_snapshot.py -u " + user_id,

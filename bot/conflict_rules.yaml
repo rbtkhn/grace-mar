@@ -1,6 +1,6 @@
 # Conflict rules for pipeline staging.
 # Used by conflict_check.py to flag contradictions before candidates hit PENDING-REVIEW.
-# See docs/CONTRADICTION-RESOLUTION.md for resolution format.
+# See docs/contradiction-resolution.md for resolution format.
 
 # Personality opposites — pairs that typically contradict.
 # When new candidate contains B and existing profile contains A (or vice versa), flag.

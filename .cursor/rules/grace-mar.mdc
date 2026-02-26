@@ -8,9 +8,9 @@ alwaysApply: false
 
 A cognitive fork — a versioned, evidence-grounded record of an individual's cognitive development. The fork exists inside the user's mind. It grows through selective exposure and user-curated integration.
 
-**Conceptual framework:** [CONCEPTUAL-FRAMEWORK.md](docs/CONCEPTUAL-FRAMEWORK.md) — fork vs. twin, fork as own entity vs. emulation, terminology.
+**Conceptual framework:** [conceptual-framework.md](docs/conceptual-framework.md) — fork vs. twin, fork as own entity vs. emulation, terminology.
 
-Governed by [GRACE-MAR-CORE v2.0](docs/GRACE-MAR-CORE.md). See [ARCHITECTURE](docs/ARCHITECTURE.md) for full system design.
+Governed by [GRACE-MAR-CORE v2.0](docs/grace-mar-core.md). See [architecture](docs/architecture.md) for full system design.
 
 ---
 

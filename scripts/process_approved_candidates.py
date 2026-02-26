@@ -23,14 +23,14 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
-PENDING_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
-SELF_PATH = PROFILE_DIR / "SELF.md"
-EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
-INTENT_PATH = PROFILE_DIR / "INTENT.md"
+PENDING_PATH = PROFILE_DIR / "pending-review.md"
+    SELF_PATH = PROFILE_DIR / "self.md"
+    EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
+INTENT_PATH = PROFILE_DIR / "intent.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
-SELF_ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
+SELF_ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
 PRP_PATH = REPO_ROOT / "grace-mar-llm.txt"
-MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
+MERGE_RECEIPTS_PATH = PROFILE_DIR / "merge-receipts.jsonl"
 MIN_EVIDENCE_TIER = 3
 
 
@@ -61,12 +61,12 @@ def _set_user(user_id: str) -> None:
     global USER_ID, PROFILE_DIR, PENDING_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH, SELF_ARCHIVE_PATH
     USER_ID = user_id.strip()
     PROFILE_DIR = REPO_ROOT / "users" / USER_ID
-    PENDING_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
-    SELF_PATH = PROFILE_DIR / "SELF.md"
-    EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
-    INTENT_PATH = PROFILE_DIR / "INTENT.md"
-    MERGE_RECEIPTS_PATH = PROFILE_DIR / "MERGE-RECEIPTS.jsonl"
-    SELF_ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
+    PENDING_PATH = PROFILE_DIR / "pending-review.md"
+    SELF_PATH = PROFILE_DIR / "self.md"
+    EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
+    INTENT_PATH = PROFILE_DIR / "intent.md"
+    MERGE_RECEIPTS_PATH = PROFILE_DIR / "merge-receipts.jsonl"
+    SELF_ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
 
 
 def _prp_output_path() -> Path:
@@ -214,10 +214,10 @@ def _run_integrity_validation(min_evidence_tier: int) -> tuple[bool, str]:
 
 
 def _load_intent_profile() -> dict:
-    """Load minimal intent profile from INTENT.md YAML block."""
+    """Load minimal intent profile from intent.md YAML block."""
     raw = _read(INTENT_PATH)
     if not raw:
-        return {"ok": False, "reason": "missing INTENT.md", "tradeoff_rules": []}
+        return {"ok": False, "reason": "missing intent.md", "tradeoff_rules": []}
     m = re.search(r"```(?:yaml|yml)\s*\n(.*?)```", raw, re.DOTALL)
     if not m:
         return {"ok": False, "reason": "missing YAML block", "tradeoff_rules": []}
@@ -868,7 +868,7 @@ def main() -> None:
         blocks_to_move.append(c["full_match"])
         applied_candidates.append((c, act_id))
 
-    # Move blocks from Candidates to Processed in PENDING-REVIEW
+    # Move blocks from Candidates to Processed in pending-review.md
     for block in blocks_to_move:
         pending_content = pending_content.replace(block, "", 1)
     pending_content = re.sub(r"\n{3,}", "\n\n", pending_content)

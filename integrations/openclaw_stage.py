@@ -53,7 +53,7 @@ def _build_content(text: str, artifact: Path | None) -> tuple[str, dict]:
 
 
 def _load_intent_profile(user_id: str) -> dict:
-    intent_path = REPO_ROOT / "users" / user_id / "INTENT.md"
+    intent_path = REPO_ROOT / "users" / user_id / "intent.md"
     if not intent_path.exists():
         return {"ok": False, "tradeoff_rules": []}
     raw = intent_path.read_text(encoding="utf-8")

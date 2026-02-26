@@ -33,7 +33,7 @@ def _parse_dated_line(line: str) -> tuple[datetime | None, str]:
 
 
 def rotate_memory(user_id: str, ttl_days: int, apply: bool) -> dict:
-    memory_path = REPO_ROOT / "users" / user_id / "MEMORY.md"
+    memory_path = REPO_ROOT / "users" / user_id / "memory.md"
     if not memory_path.exists():
         return {"ok": True, "memory_removed": 0, "reason": "memory_not_found"}
 

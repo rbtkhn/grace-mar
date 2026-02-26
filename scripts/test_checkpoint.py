@@ -108,7 +108,7 @@ def run_live_checkpoint(user_id: str) -> None:
     if st.exists():
         text = st.read_text()
         if "checkpoint" in text.lower() or "USER:" in text:
-            print("  SESSION-TRANSCRIPT contains checkpoint/USER: ok")
+            print("  session-transcript contains checkpoint/user: ok")
     print("  live checkpoint: ok")
 
 

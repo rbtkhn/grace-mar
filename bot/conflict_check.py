@@ -3,7 +3,7 @@ Conflict detection for pipeline staging.
 
 Compares new candidates against existing SELF profile and flags contradictions
 before they hit PENDING-REVIEW. Surfaces for user resolution; does not block staging.
-See docs/CONTRADICTION-RESOLUTION.md.
+See docs/contradiction-resolution.md.
 """
 
 import re
@@ -12,7 +12,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 RULES_PATH = Path(__file__).resolve().parent / "conflict_rules.yaml"
 PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
-SELF_PATH = PROFILE_DIR / "SELF.md"
+SELF_PATH = PROFILE_DIR / "self.md"
 
 
 def _load_rules() -> dict:
@@ -29,7 +29,7 @@ def _load_rules() -> dict:
 
 
 def _load_self_personality_summary() -> str:
-    """Extract personality-related text from SELF.md (traits + IX-C observations)."""
+    """Extract personality-related text from self.md (traits + IX-C observations)."""
     if not SELF_PATH.exists():
         return ""
     content = SELF_PATH.read_text()

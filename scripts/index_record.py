@@ -59,14 +59,14 @@ def index_self(path: Path) -> list[dict]:
                     "type": section,
                     "id": eid,
                     "snippet": snippet,
-                    "file": "SELF.md",
+                    "file": "self.md",
                 })
             for m in re.finditer(r"topic:\s*[\"']?([^\"'\n]+)", block):
                 topic = m.group(1).strip()
                 hits.append({
                     "type": "topic",
                     "value": topic,
-                    "file": "SELF.md",
+                    "file": "self.md",
                 })
     return hits
 
@@ -97,7 +97,7 @@ def index_evidence(path: Path) -> list[dict]:
                 "type": "ACT",
                 "id": act_id,
                 "snippet": summary,
-                "file": "EVIDENCE.md",
+                "file": "self-evidence.md",
             })
     return hits
 
@@ -125,7 +125,7 @@ def index_pending(path: Path) -> list[dict]:
             "type": "CANDIDATE",
             "id": cid,
             "snippet": summary,
-            "file": "PENDING-REVIEW.md",
+            "file": "pending-review.md",
         })
     return hits
 
@@ -135,13 +135,13 @@ def build_index(user_dir: Path) -> dict:
     index = {"terms": {}, "hits": []}
     hits = []
 
-    self_path = user_dir / "SELF.md"
+    self_path = user_dir / "self.md"
     if self_path.exists():
         hits.extend(index_self(self_path))
-    ev_path = user_dir / "EVIDENCE.md"
+    ev_path = user_dir / "self-evidence.md"
     if ev_path.exists():
         hits.extend(index_evidence(ev_path))
-    pr_path = user_dir / "PENDING-REVIEW.md"
+    pr_path = user_dir / "pending-review.md"
     hits.extend(index_pending(pr_path))
 
     for i, h in enumerate(hits):

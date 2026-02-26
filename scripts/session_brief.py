@@ -82,7 +82,7 @@ def _pending_candidate_ids(pr_content: str) -> list[str]:
 
 
 def _load_pipeline_events(user_dir: Path) -> list[dict]:
-    path = user_dir / "PIPELINE-EVENTS.jsonl"
+    path = user_dir / "pipeline-events.jsonl"
     if not path.exists():
         return []
     rows: list[dict] = []
@@ -142,7 +142,7 @@ def build_operator_reminder(
     pending_threshold: int,
     stale_days: int,
 ) -> str:
-    pr_content = _read(user_dir / "PENDING-REVIEW.md")
+    pr_content = _read(user_dir / "pending-review.md")
     pending_count = _pending_count(pr_content)
     events = _load_pipeline_events(user_dir)
     oldest_days = _oldest_pending_age_days(pr_content, events)
@@ -247,9 +247,9 @@ def main() -> int:
             print(text)
         return 0
 
-    evidence_content = _read(user_dir / "EVIDENCE.md")
-    pr_content = _read(user_dir / "PENDING-REVIEW.md")
-    self_content = _read(user_dir / "SELF.md")
+    evidence_content = _read(user_dir / "self-evidence.md")
+    pr_content = _read(user_dir / "pending-review.md")
+    self_content = _read(user_dir / "self.md")
     wisdom_content = _read(WISDOM_PATH)
 
     activities = _last_activities(evidence_content, LAST_N_ACTIVITIES)
@@ -257,7 +257,7 @@ def main() -> int:
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
     from_record = _from_the_record_topics(self_content)
-    pr_path = user_dir / "PENDING-REVIEW.md"
+    pr_path = user_dir / "pending-review.md"
     pending_stale = False
     if pending_count > 0 and pr_path.exists():
         mtime = datetime.fromtimestamp(pr_path.stat().st_mtime)
@@ -312,7 +312,7 @@ def main() -> int:
         for q in wisdom:
             lines.append(f"- {q}")
     else:
-        lines.append("(see docs/WISDOM-QUESTIONS.md)")
+        lines.append("(see docs/wisdom-questions.md)")
     lines.append("")
     print("\n".join(lines))
     return 0

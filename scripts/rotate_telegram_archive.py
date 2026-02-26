@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Rotate SELF-ARCHIVE.md when it exceeds size or entry count.
+Rotate self-archive.md when it exceeds size or entry count.
 
 SELF-ARCHIVE is gated (appended only on merge). This script rotates the main file
 when it grows large; rotated chunks go to archives/SELF-ARCHIVE-YYYY-MM.md.
@@ -54,7 +54,7 @@ def rotate_archive(
     max_entries: int = MAX_ENTRIES,
     keep_recent: int = KEEP_RECENT,
 ) -> dict:
-    archive_path = REPO_ROOT / "users" / user_id / "SELF-ARCHIVE.md"
+    archive_path = REPO_ROOT / "users" / user_id / "self-archive.md"
     archives_dir = REPO_ROOT / "users" / user_id / "archives"
 
     if not archive_path.exists():

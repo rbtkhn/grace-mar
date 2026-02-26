@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Boundary coverage — entity and IX counts from SELF.md.
+Boundary coverage — entity and IX counts from self.md.
 
-Parses users/[id]/SELF.md and reports:
+Parses users/[id]/self.md and reports:
 - Entity counts per category (movies, books, places, foods, activities, etc.)
 - IX-A / IX-B / IX-C entry counts (post-seed growth dimensions)
 
@@ -81,9 +81,9 @@ def _extract_favorites(content: str) -> dict[str, int]:
 
 def run(user_id: str = "grace-mar", json_out: bool = False) -> dict:
     """Compute boundary coverage for user. Returns dict of counts."""
-    self_path = USERS_DIR / user_id / "SELF.md"
+    self_path = USERS_DIR / user_id / "self.md"
     if not self_path.exists():
-        raise SystemExit(f"SELF.md not found: {self_path}")
+        raise SystemExit(f"self.md not found: {self_path}")
 
     content = self_path.read_text()
 
@@ -108,7 +108,7 @@ def run(user_id: str = "grace-mar", json_out: bool = False) -> dict:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Boundary coverage from SELF.md")
+    parser = argparse.ArgumentParser(description="Boundary coverage from self.md")
     parser.add_argument("-u", "--user", default="grace-mar", help="User id (default: grace-mar)")
     parser.add_argument("--json", action="store_true", help="Output JSON")
     args = parser.parse_args()

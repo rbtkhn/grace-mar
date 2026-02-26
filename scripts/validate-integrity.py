@@ -93,7 +93,7 @@ def validate_self(user_dirs: list[Path]) -> tuple[list[str], set[str]]:
     errors: list[str] = []
     evidence_ids: set[str] = set()
     for user_dir in user_dirs:
-        self_path = user_dir / "SELF.md"
+        self_path = user_dir / "self.md"
         content = _safe_read(self_path)
         if not content:
             continue
@@ -119,7 +119,7 @@ def validate_evidence(user_dirs: list[Path], min_evidence_tier: int) -> tuple[li
     errors: list[str] = []
     act_ids: set[str] = set()
     for user_dir in user_dirs:
-        ev_path = user_dir / "EVIDENCE.md"
+        ev_path = user_dir / "self-evidence.md"
         content = _safe_read(ev_path)
         if "## V. ACTIVITY LOG" not in content:
             continue
@@ -170,7 +170,7 @@ def validate_pending_review(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     allowed_mind_categories = {"knowledge", "curiosity", "personality"}
     for user_dir in user_dirs:
-        pr_path = user_dir / "PENDING-REVIEW.md"
+        pr_path = user_dir / "pending-review.md"
         content = _safe_read(pr_path)
         if "## Candidates" not in content:
             continue
@@ -207,7 +207,7 @@ ID_PATTERNS = {
 def validate_id_format(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     for user_dir in user_dirs:
-        for fname in ("SELF.md", "EVIDENCE.md", "PENDING-REVIEW.md"):
+        for fname in ("self.md", "self-evidence.md", "pending-review.md"):
             path = user_dir / fname
             content = _safe_read(path)
             if not content:
@@ -225,7 +225,7 @@ def validate_self_sections(user_dirs: list[Path]) -> list[str]:
     required = ["## I.", "## II."]
     ix_sections = ["### IX-A.", "### IX-B.", "### IX-C."]
     for user_dir in user_dirs:
-        path = user_dir / "SELF.md"
+        path = user_dir / "self.md"
         content = _safe_read(path)
         if not content:
             continue
@@ -243,7 +243,7 @@ def validate_skills_sections(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     required = ["## I. CONTAINER STATUS", "## II. CAPABILITY CLAIMS", "## III. CAPABILITY GAPS"]
     for user_dir in user_dirs:
-        path = user_dir / "SKILLS.md"
+        path = user_dir / "skills.md"
         content = _safe_read(path)
         if not content:
             continue

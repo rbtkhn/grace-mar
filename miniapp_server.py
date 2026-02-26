@@ -11,7 +11,7 @@ Usage:
     OPENAI_API_KEY=... python miniapp_server.py
 
 Set PORT (default 5000) for hosting. Enable CORS if Mini App is on a different origin.
-Real-time exchanges are appended to users/<user>/SESSION-TRANSCRIPT.md (same as Telegram).
+Real-time exchanges are appended to users/<user>/session-transcript.md (same as Telegram).
 SELF-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 """
@@ -49,8 +49,8 @@ app = Flask(__name__, static_folder="miniapp", static_url_path="")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
-SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "SESSION-TRANSCRIPT.md"
-PENDING_REVIEW_PATH = REPO_ROOT / "users" / USER_ID / "PENDING-REVIEW.md"
+SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "session-transcript.md"
+PENDING_REVIEW_PATH = REPO_ROOT / "users" / USER_ID / "pending-review.md"
 OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
@@ -117,7 +117,7 @@ def _session_transcript_header() -> str:
 
 
 def _append_to_session_transcript(blocks: str) -> None:
-    """Append exchange to SESSION-TRANSCRIPT (real-time log). SELF-ARCHIVE is gated (merge only)."""
+    """Append exchange to session-transcript.md (real-time log). self-archive.md is gated (merge only)."""
     try:
         SESSION_TRANSCRIPT_PATH.parent.mkdir(parents=True, exist_ok=True)
         if not SESSION_TRANSCRIPT_PATH.exists():
@@ -129,7 +129,7 @@ def _append_to_session_transcript(blocks: str) -> None:
 
 
 def _archive_miniapp(user_message: str, reply: str, is_lookup: bool = False, lookup_question: str | None = None) -> None:
-    """Append exchange to SESSION-TRANSCRIPT (same policy as bot: real-time log; SELF-ARCHIVE only on merge). Runs in background."""
+    """Append exchange to session-transcript.md (same policy as bot: real-time log; self-archive.md only on merge). Runs in background."""
     blocks = _format_archive_block("USER", user_message)
     if is_lookup and lookup_question:
         blocks += _format_archive_block("LOOKUP REQUEST", lookup_question)
@@ -230,23 +230,23 @@ def _operator_auth():
 
 @app.route("/operator/session-transcript", methods=["GET"])
 def operator_session_transcript():
-    """Return SESSION-TRANSCRIPT.md content for operator sync (e.g. into Cursor). Requires OPERATOR_FETCH_SECRET."""
+    """Return session-transcript.md content for operator sync (e.g. into Cursor). Requires OPERATOR_FETCH_SECRET."""
     ok, err = _operator_auth()
     if not ok:
         return err
     if not SESSION_TRANSCRIPT_PATH.exists():
-        return jsonify({"error": "SESSION-TRANSCRIPT.md not found", "path": str(SESSION_TRANSCRIPT_PATH)}), 404
+        return jsonify({"error": "session-transcript.md not found", "path": str(SESSION_TRANSCRIPT_PATH)}), 404
     return SESSION_TRANSCRIPT_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
 
 
 @app.route("/operator/pending-review", methods=["GET"])
 def operator_pending_review():
-    """Return PENDING-REVIEW.md content for operator sync. Requires OPERATOR_FETCH_SECRET."""
+    """Return pending-review.md content for operator sync. Requires OPERATOR_FETCH_SECRET."""
     ok, err = _operator_auth()
     if not ok:
         return err
     if not PENDING_REVIEW_PATH.exists():
-        return jsonify({"error": "PENDING-REVIEW.md not found", "path": str(PENDING_REVIEW_PATH)}), 404
+        return jsonify({"error": "pending-review.md not found", "path": str(PENDING_REVIEW_PATH)}), 404
     return PENDING_REVIEW_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
 
 

@@ -1,7 +1,7 @@
 """
 System prompt for Grace-Mar's cognitive fork emulation.
 
-Built from grace-mar SELF.md, SKILLS.md, and EVIDENCE.md.
+Built from grace-mar self.md, skills.md, and self-evidence.md.
 This prompt instructs the LLM to respond as Grace-Mar would —
 a 6-year-old girl in Colorado, based on documented evidence.
 
@@ -289,7 +289,7 @@ signal_type: <type>
 priority_score: <1-5>
 summary: <one-sentence description of what was detected>
 example_from_exchange: <one short phrase or sentence from the companion that evidences this signal — grounds the suggestion>
-profile_target: <which SELF.md section — e.g. "IX-A. KNOWLEDGE" or "IX-B. CURIOSITY" or "IX-C. PERSONALITY">
+profile_target: <which self.md section — e.g. "IX-A. KNOWLEDGE" or "IX-B. CURIOSITY" or "IX-C. PERSONALITY">
 suggested_entry: <the data to merge into the profile, as a compact string>
 prompt_section: <which prompt section to update — "YOUR KNOWLEDGE" or "YOUR CURIOSITY" or "YOUR PERSONALITY">
 prompt_addition: <the line to merge into the prompt, or "none" if not applicable>

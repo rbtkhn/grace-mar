@@ -260,7 +260,7 @@ def _build_personality(personality: dict, ix_c: list[str]) -> str:
 
 def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> str:
     """
-    Build the Portable Record Prompt (PRP) from SELF.md and EVIDENCE.md.
+    Build the Portable Record Prompt (PRP) from self.md and self-evidence.md.
 
     Args:
         user_id: User profile id (e.g. grace-mar).
@@ -269,11 +269,11 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
     Returns a single string suitable for pasting into any LLM.
     """
     profile_dir = REPO_ROOT / "users" / user_id
-    self_content = _read(profile_dir / "SELF.md")
-    evidence_content = _read(profile_dir / "EVIDENCE.md")
+    self_content = _read(profile_dir / "self.md")
+    evidence_content = _read(profile_dir / "self-evidence.md")
 
     if not self_content:
-        return f"# Portable Record Prompt — {user_id}\n\nNo SELF.md found at {profile_dir / 'SELF.md'}.\n"
+        return f"# Portable Record Prompt — {user_id}\n\nNo self.md found at {profile_dir / 'self.md'}.\n"
 
     identity = _extract_identity(self_content)
     prefs = _extract_preferences(self_content)
@@ -338,7 +338,7 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
         "",
         f"When the user asks about something NOT in your Record (e.g. Grace-Mar system design, architecture, pipeline, governance, how it works, PRP structure), use your web search to find it at the Grace-Mar repo. Base URL: {GRACE_MAR_GITHUB}",
         "",
-        "Key paths (search or navigate): docs/ARCHITECTURE.md (system design), docs/PORTABLE-RECORD-PROMPT.md (PRP structure), docs/GRACE-MAR-CORE.md (governance), docs/CONCEPTUAL-FRAMEWORK.md (Record vs Voice, tricameral mind), docs/IDENTITY-FORK-PROTOCOL.md (pipeline, merge). README.md for overview.",
+        "Key paths (search or navigate): docs/architecture.md (system design), docs/portable-record-prompt.md (PRP structure), docs/grace-mar-core.md (governance), docs/conceptual-framework.md (Record vs Voice, tricameral mind), docs/identity-fork-protocol.md (pipeline, merge). readme.md for overview.",
         "",
         "Tricameral mind (when explaining Grace-Mar): The three parts are Mind (the human, sovereign), Record (what's documented about me), Voice (me talking now). Not Record + Voice + agents.",
         "",

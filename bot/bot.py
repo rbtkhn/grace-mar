@@ -9,7 +9,7 @@ Usage (local polling):
     2. pip install -r bot/requirements.txt
     3. python -m bot.bot   # from repo root
 
-For production: use webhook mode via miniapp_server (see docs/TELEGRAM-WEBHOOK-SETUP.md).
+For production: use webhook mode via miniapp_server (see docs/telegram-webhook-setup.md).
 """
 # Allow running as script: python bot/bot.py (simulate package for relative imports)
 if __package__ is None:
@@ -257,7 +257,7 @@ async def profile_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
     if not PROFILE_MINIAPP_URL:
         await update.message.reply_text(
             "Profile Mini App URL not configured. Set PROFILE_MINIAPP_URL (or DASHBOARD_MINIAPP_URL) in .env and "
-            "serve the profile over HTTPS. See docs/MINIAPP-SETUP.md."
+            "serve the profile over HTTPS. See docs/miniapp-setup.md."
         )
         return
     summary = get_pipeline_health_summary()
@@ -384,7 +384,7 @@ async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     # Count approved (we only have pending in get_pending_candidates — approved are different)
     from pathlib import Path
     import re
-    pending_path = _profile_path("PENDING-REVIEW.md")
+    pending_path = _profile_path("pending-review.md")
     content = pending_path.read_text() if pending_path.exists() else ""
     approved = len(re.findall(r"status: approved", content.split("## Processed")[0]))
     if approved == 0:

@@ -57,7 +57,7 @@ class IntentDrift:
 
 def parse_pending_review(content: str) -> tuple[list[dict], list[dict]]:
     """
-    Extract pending and processed candidates from PENDING-REVIEW.md.
+    Extract pending and processed candidates from pending-review.md.
     Returns (pending_list, processed_list).
     """
     pending = []
@@ -97,10 +97,10 @@ def parse_pending_review(content: str) -> tuple[list[dict], list[dict]]:
 
 def compute_pipeline_health() -> PipelineHealth:
     """Compute pipeline health from PENDING-REVIEW and PIPELINE-EVENTS."""
-    pr_content = _read(PROFILE_DIR / "PENDING-REVIEW.md")
+    pr_content = _read(PROFILE_DIR / "pending-review.md")
     pending, processed = parse_pending_review(pr_content)
 
-    pr_path = PROFILE_DIR / "PENDING-REVIEW.md"
+    pr_path = PROFILE_DIR / "pending-review.md"
     mtime = datetime.fromtimestamp(pr_path.stat().st_mtime) if pr_path.exists() else None
     now = datetime.now()
     stale_candidates = 0
@@ -115,7 +115,7 @@ def compute_pipeline_health() -> PipelineHealth:
     approval_rate = approved / total_processed if total_processed else None
     rejection_rate = rejected / total_processed if total_processed else None
 
-    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    events_path = PROFILE_DIR / "pipeline-events.jsonl"
     applied_total = rejected_total = 0
     last_applied_ts = None
     if events_path.exists():
@@ -158,8 +158,8 @@ def compute_pipeline_health() -> PipelineHealth:
 
 
 def compute_record_completeness() -> RecordCompleteness:
-    """IX channel counts from SELF.md."""
-    content = _read(PROFILE_DIR / "SELF.md")
+    """IX channel counts from self.md."""
+    content = _read(PROFILE_DIR / "self.md")
     ix_a = len(re.findall(r"id:\s+LEARN-\d+", content))
     ix_b = len(re.findall(r"id:\s+CUR-\d+", content))
     ix_c = len(re.findall(r"id:\s+PER-\d+", content))
@@ -169,7 +169,7 @@ def compute_record_completeness() -> RecordCompleteness:
 
 
 def compute_intent_drift(window_days: int = 30) -> IntentDrift:
-    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    events_path = PROFILE_DIR / "pipeline-events.jsonl"
     if not events_path.exists():
         return IntentDrift(0, {}, {}, {})
     now = datetime.now().timestamp()

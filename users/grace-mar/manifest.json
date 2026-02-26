@@ -43,7 +43,7 @@
     },
     "PENDING-REVIEW": {
       "type": "object",
-      "description": "Staging area; format documented in AGENTS.md"
+      "description": "Staging area; format documented in agents.md"
     }
   },
   "exports": {

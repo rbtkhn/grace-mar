@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Render Grace-Mar White Paper and Business Prospectus to PDF
-# Uses Pandoc + Eisvogel template. See docs/PDF-SETUP.md for prerequisites.
+# Uses Pandoc + Eisvogel template. See docs/pdf-setup.md for prerequisites.
 # Can use bundled tools (tools/) when Homebrew is not available.
 
 set -e

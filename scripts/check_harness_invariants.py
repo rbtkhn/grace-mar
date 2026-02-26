@@ -3,7 +3,7 @@
 Check harness invariants (run before model upgrades or when auditing the stack).
 
 Runs governance_checker and optionally warns if core surface exceeds line thresholds.
-See docs/IMPLEMENTABLE-INSIGHTS.md — small auditable surface, no autonomous merge.
+See docs/implementable-insights.md — small auditable surface, no autonomous merge.
 """
 
 import subprocess

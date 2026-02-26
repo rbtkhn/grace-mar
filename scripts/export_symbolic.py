@@ -33,8 +33,8 @@ def _read(path: Path) -> str:
 
 def _compute_checksum(profile_dir: Path) -> str:
     parts = []
-    parts.append(_read(profile_dir / "SELF.md"))
-    parts.append(_read(profile_dir / "EVIDENCE.md"))
+    parts.append(_read(profile_dir / "self.md"))
+    parts.append(_read(profile_dir / "self-evidence.md"))
     prompt_path = BOT_DIR / "prompt.py"
     if prompt_path.exists():
         content = prompt_path.read_text()
@@ -93,8 +93,8 @@ def _evidence_anchors(content: str) -> list[str]:
 def export_symbolic(user_id: str = "grace-mar") -> dict:
     """Build cache-oriented symbolic identity for Familiar nodes."""
     profile_dir = REPO_ROOT / "users" / user_id
-    self_content = _read(profile_dir / "SELF.md")
-    evidence_content = _read(profile_dir / "EVIDENCE.md")
+    self_content = _read(profile_dir / "self.md")
+    evidence_content = _read(profile_dir / "self-evidence.md")
 
     identity_block = _extract_section(self_content, "I. IDENTITY") or ""
     pref_block = _extract_section(self_content, "II. PREFERENCES (Survey Seeded)") or ""

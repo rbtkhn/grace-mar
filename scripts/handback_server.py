@@ -17,7 +17,7 @@ Security model:
 Run: python scripts/handback_server.py
      (or: HANDBACK_API_KEY=secret python scripts/handback_server.py)
 
-Deploy alongside the bot or as a separate service. See extension/README.md for browser extension setup.
+Deploy alongside the bot or as a separate service. See extension/readme.md for browser extension setup.
 """
 
 import os

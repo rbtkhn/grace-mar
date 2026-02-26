@@ -56,14 +56,14 @@ class ProfileData:
     pipeline_applied: int
     pipeline_rejected: int
     curation_ratio: str  # "X% human-approved" or "—"
-    fork_checksum: str  # from FORK-MANIFEST.json or ""
+    fork_checksum: str  # from fork-manifest.json or ""
     dyad_consultations_7d: int
     dyad_integrations_7d: int
     dyad_activity_reports_7d: int
 
 
 def parse_pending_review(content: str) -> tuple[int, list[dict]]:
-    """Extract pending candidates from PENDING-REVIEW.md."""
+    """Extract pending candidates from pending-review.md."""
     candidates = []
     in_candidates = False
     in_processed = False
@@ -94,7 +94,7 @@ def parse_pending_review(content: str) -> tuple[int, list[dict]]:
 
 
 def parse_self(content: str) -> dict:
-    """Extract key fields from SELF.md."""
+    """Extract key fields from self.md."""
     data = {"name": "?", "age": 0, "lexile_output": "?", "ix_a_count": 0, "ix_b_count": 0, "ix_c_count": 0}
 
     if m := re.search(r"name:\s*(\S+)", content):
@@ -112,7 +112,7 @@ def parse_self(content: str) -> dict:
 
 
 def parse_evidence(content: str) -> dict:
-    """Count evidence entries from EVIDENCE.md."""
+    """Count evidence entries from self-evidence.md."""
     write = len(re.findall(r"id:\s+WRITE-\d+", content))
     read = len(re.findall(r"id:\s+READ-\d+", content))
     create = len(re.findall(r"id:\s+CREATE-\d+", content))
@@ -120,7 +120,7 @@ def parse_evidence(content: str) -> dict:
 
 
 def parse_skills(content: str) -> dict:
-    """Extract container status from SKILLS.md."""
+    """Extract container status from skills.md."""
     summary = {}
     for container in ["READ", "WRITE", "BUILD"]:
         block = re.search(
@@ -167,7 +167,7 @@ def parse_archive(content: str, limit: int = 10) -> list[dict]:
 
 
 def parse_library(content: str) -> list[dict]:
-    """Extract active LIBRARY entries (id, title, scope, read_status, volume) from LIBRARY.md."""
+    """Extract active LIBRARY entries (id, title, scope, read_status, volume) from library.md."""
     entries = []
     blocks = re.split(r'-\s+id:\s+LIB-', content)
     for block in blocks[1:]:  # skip first (header)
@@ -190,7 +190,7 @@ def parse_library(content: str) -> list[dict]:
 
 
 def parse_journal(content: str) -> list[dict]:
-    """Extract JOURNAL entries (date, entry) from JOURNAL.md. Approved only. Supports entry (prose) or legacy highlights (bullets)."""
+    """Extract JOURNAL entries (date, entry) from journal.md. Approved only. Supports entry (prose) or legacy highlights (bullets)."""
     entries = []
     # Split into entry blocks: - date: "..." ... until next - date: or end
     blocks = re.findall(
@@ -221,7 +221,7 @@ def parse_journal(content: str) -> list[dict]:
 
 
 def parse_ix_samples(content: str) -> tuple[list[str], list[str], list[str]]:
-    """Extract topics from IX-A, IX-B, IX-C in SELF.md (all entries)."""
+    """Extract topics from IX-A, IX-B, IX-C in self.md (all entries)."""
     knowledge = re.findall(r'id: LEARN-\d+.*?topic:\s*["\']([^"\']+)["\']', content, re.DOTALL)
     curiosity = re.findall(r'id: CUR-\d+.*?topic:\s*["\']([^"\']+)["\']', content, re.DOTALL)
     personality = re.findall(r'id: PER-\d+.*?observation:\s*["\']([^"\']+)["\']', content, re.DOTALL)
@@ -232,7 +232,7 @@ def parse_ix_samples(content: str) -> tuple[list[str], list[str], list[str]]:
 
 
 def parse_seed_interests(content: str) -> list[str]:
-    """Extract interest topics from Section V (current interests) in SELF.md."""
+    """Extract interest topics from Section V (current interests) in self.md."""
     # Match "topic: X" under current: block (before ## VI or next ##)
     section_v = re.search(r'## V\. INTERESTS.*?current:.*?(?=## |emerging:|$)', content, re.DOTALL)
     if not section_v:
@@ -242,7 +242,7 @@ def parse_seed_interests(content: str) -> list[str]:
 
 
 def parse_seed_personality(content: str) -> list[str]:
-    """Extract personality traits and patterns from Section IV in SELF.md."""
+    """Extract personality traits and patterns from Section IV in self.md."""
     section_iv = re.search(r'## IV\. PERSONALITY.*?(?=## V\.|$)', content, re.DOTALL)
     if not section_iv:
         return []
@@ -269,14 +269,14 @@ def parse_seed_personality(content: str) -> list[str]:
 
 def collect_data() -> ProfileData:
     """Collect all profile page data from profile files."""
-    pending_path = PROFILE_DIR / "PENDING-REVIEW.md"
-    self_path = PROFILE_DIR / "SELF.md"
-    evidence_path = PROFILE_DIR / "EVIDENCE.md"
-    skills_path = PROFILE_DIR / "SKILLS.md"
-    archive_path = PROFILE_DIR / "SELF-ARCHIVE.md"
-    session_transcript_path = PROFILE_DIR / "SESSION-TRANSCRIPT.md"
-    library_path = PROFILE_DIR / "LIBRARY.md"
-    journal_path = PROFILE_DIR / "JOURNAL.md"
+    pending_path = PROFILE_DIR / "pending-review.md"
+    self_path = PROFILE_DIR / "self.md"
+    evidence_path = PROFILE_DIR / "self-evidence.md"
+    skills_path = PROFILE_DIR / "skills.md"
+    archive_path = PROFILE_DIR / "self-archive.md"
+    session_transcript_path = PROFILE_DIR / "session-transcript.md"
+    library_path = PROFILE_DIR / "library.md"
+    journal_path = PROFILE_DIR / "journal.md"
 
     pending_content = pending_path.read_text() if pending_path.exists() else ""
     self_content = self_path.read_text() if self_path.exists() else ""
@@ -306,7 +306,7 @@ def collect_data() -> ProfileData:
         mtime = pending_path.stat().st_mtime
         last_activity = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
 
-    ledger_path = PROFILE_DIR / "COMPUTE-LEDGER.jsonl"
+    ledger_path = PROFILE_DIR / "compute-ledger.jsonl"
     total_tokens = 0
     tokens_today = 0
     today = datetime.now().strftime("%Y-%m-%d")
@@ -325,7 +325,7 @@ def collect_data() -> ProfileData:
     ix_total = self_data["ix_a_count"] + self_data["ix_b_count"] + self_data["ix_c_count"]
     tokens_per_ix = str(total_tokens // ix_total) if ix_total and total_tokens else "—"
 
-    events_path = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+    events_path = PROFILE_DIR / "pipeline-events.jsonl"
     pipeline_applied = pipeline_rejected = 0
     dyad_consultations_7d = dyad_integrations_7d = dyad_activity_reports_7d = 0
     cutoff_7d = datetime.now() - timedelta(days=7)
@@ -376,7 +376,7 @@ def collect_data() -> ProfileData:
     total_decisions = pipeline_applied + pipeline_rejected
     curation_ratio = f"{100 * pipeline_applied // total_decisions}% approved" if total_decisions else "—"
 
-    manifest_path = PROFILE_DIR / "FORK-MANIFEST.json"
+    manifest_path = PROFILE_DIR / "fork-manifest.json"
     fork_checksum = ""
     if manifest_path.exists():
         try:
@@ -585,7 +585,7 @@ def render_html(data: ProfileData) -> str:
                             </ul>
                             <p><strong>Knowledge boundary</strong></p>
                             <ul>
-                                <li>The emulated self knows only what is documented in its profile (SELF.md). No LLM training data.</li>
+                                <li>The emulated self knows only what is documented in its profile (self.md). No LLM training data.</li>
                             </ul>
                             <p><strong>Attestation</strong></p>
                             <ul>
@@ -711,8 +711,8 @@ def main() -> None:
 
 
 def _read_telegram_bot_username() -> str | None:
-    """Read optional bot username from users/<profile>/TELEGRAM_BOT_USERNAME.txt (one line, stripped)."""
-    path = PROFILE_DIR / "TELEGRAM_BOT_USERNAME.txt"
+    """Read optional bot username from users/<profile>/telegram_bot_username.txt (one line, stripped)."""
+    path = PROFILE_DIR / "telegram_bot_username.txt"
     if not path.exists():
         return None
     line = path.read_text(encoding="utf-8").strip().splitlines()
@@ -762,15 +762,15 @@ def _render_telegram_redirect(bot_username: str | None) -> str:
 <body>
     <h1>Telegram bot not configured</h1>
     <p>To make <strong>grace-mar.com/telegram</strong> open your Grace-Mar bot, add your bot's username (from @BotFather) in one line to:</p>
-    <p><code>users/grace-mar/TELEGRAM_BOT_USERNAME.txt</code></p>
+    <p><code>users/grace-mar/telegram_bot_username.txt</code></p>
     <p>Example: if your bot is <strong>@MyGraceMarBot</strong>, the file should contain only <code>MyGraceMarBot</code> (no @). Then regenerate the profile and redeploy.</p>
 </body>
 </html>"""
 
 
 def _read_wechat_account_url() -> str | None:
-    """Read optional WeChat Official Account URL from users/<profile>/WECHAT_ACCOUNT_URL.txt (one line)."""
-    path = PROFILE_DIR / "WECHAT_ACCOUNT_URL.txt"
+    """Read optional WeChat Official Account URL from users/<profile>/wechat_account_url.txt (one line)."""
+    path = PROFILE_DIR / "wechat_account_url.txt"
     if not path.exists():
         return None
     line = path.read_text(encoding="utf-8").strip().splitlines()
@@ -818,7 +818,7 @@ def _render_wechat_redirect(account_url: str | None) -> str:
 <body>
     <h1>WeChat not configured</h1>
     <p>To make <strong>grace-mar.com/wechat</strong> open your Grace-Mar WeChat Official Account, add the account URL (e.g. from mp.weixin.qq.com) in one line to:</p>
-    <p><code>users/grace-mar/WECHAT_ACCOUNT_URL.txt</code></p>
+    <p><code>users/grace-mar/wechat_account_url.txt</code></p>
     <p>Use a link that opens or promotes your Official Account (公众号). Then regenerate the profile and redeploy. See <code>bot/WECHAT-SETUP.md</code>.</p>
 </body>
 </html>"""

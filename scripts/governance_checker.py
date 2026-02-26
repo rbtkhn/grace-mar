@@ -5,7 +5,7 @@ Governance checker: scan for principle violations.
 Aligns with white paper §8: "agent as potential adversary," 70/30 sovereignty.
 Use as pre-commit hook or in CI to catch violations before merge.
 
-Principles (from AGENTS.md, DESIGN-NOTES):
+Principles (from agents.md, design-notes):
   - Never leak LLM knowledge
   - The user is the gate (no merge without approval)
   - Calibrated abstention (say "I don't know" when outside knowledge)
@@ -35,7 +35,7 @@ LLM_LEAK_PATTERNS = [
 SKIP_DIRS = {".git", "node_modules", "__pycache__", "tools", ".cursor"}
 SKIP_FILES = {"governance_checker.py"}  # Don't flag self
 
-# Only these paths may write to SELF.md or EVIDENCE.md (Record). Staging to PENDING-REVIEW is allowed from bot.
+# Only these paths may write to self.md or self-evidence.md (Record). Staging to PENDING-REVIEW is allowed from bot.
 ALLOWED_RECORD_WRITERS = frozenset({
     "scripts/process_approved_candidates.py",
 })
@@ -61,8 +61,8 @@ def scan_file(path: Path, path_rel: Path | None = None) -> list[tuple[int, str, 
                     continue
                 if "PENDING-REVIEW" in line or "approval" in line or "approved" in line:
                     continue  # Likely documenting the gate
-                # Write to SELF.md or EVIDENCE.md only allowed from whitelist
-                if "SELF.md" in line or "EVIDENCE.md" in line:
+                # Write to self.md or self-evidence.md only allowed from whitelist
+                if "self.md" in line or "self-evidence.md" in line:
                     if path_str in ALLOWED_RECORD_WRITERS:
                         continue
                 violations.append((i, rule, line.strip()[:80]))

@@ -131,10 +131,10 @@ def _library_titles(library_content: str, limit: int = 15) -> list[dict]:
 def export_curriculum(user_id: str = "grace-mar") -> dict:
     """Build curriculum-oriented export for adaptive curriculum engines."""
     profile_dir = REPO_ROOT / "users" / user_id
-    self_content = _read(profile_dir / "SELF.md")
-    skills_content = _read(profile_dir / "SKILLS.md")
-    evidence_content = _read(profile_dir / "EVIDENCE.md")
-    library_content = _read(profile_dir / "LIBRARY.md")
+    self_content = _read(profile_dir / "self.md")
+    skills_content = _read(profile_dir / "skills.md")
+    evidence_content = _read(profile_dir / "self-evidence.md")
+    library_content = _read(profile_dir / "library.md")
 
     identity_block = re.search(r"## I\. IDENTITY(.*?)(?=## |\Z)", self_content, re.DOTALL)
     identity_block = identity_block.group(1) if identity_block else ""

@@ -9,7 +9,7 @@ Usage:
     python scripts/export_view.py --view school -u grace-mar -o school-export.md
     python scripts/export_view.py --view public -u grace-mar
 
-See docs/PRIVACY-REDACTION.md for what each view excludes.
+See docs/privacy-redaction.md for what each view excludes.
 """
 
 import argparse
@@ -58,8 +58,8 @@ def export_view(user_id: str, view: str) -> str:
     Export Record with redaction. view in (school, public).
     """
     profile_dir = REPO_ROOT / "users" / user_id
-    self_path = profile_dir / "SELF.md"
-    skills_path = profile_dir / "SKILLS.md"
+    self_path = profile_dir / "self.md"
+    skills_path = profile_dir / "skills.md"
     self_raw = _read(self_path)
 
     if view == "school":
@@ -71,7 +71,7 @@ def export_view(user_id: str, view: str) -> str:
 
 def _export_school(self_raw: str, profile_dir: Path, user_id: str) -> str:
     """School-safe: identity generalized, no birthdate, no places_lived, no family details."""
-    out = ["# Grace-Mar Record — School View", "", "> Redacted for school sharing. See docs/PRIVACY-REDACTION.md.", ""]
+    out = ["# Grace-Mar Record — School View", "", "> Redacted for school sharing. See docs/privacy-redaction.md.", ""]
 
     sections = [
         ("I. IDENTITY", "Identity"),
@@ -108,7 +108,7 @@ def _export_school(self_raw: str, profile_dir: Path, user_id: str) -> str:
 
 def _export_public(self_raw: str, skills_raw: str, user_id: str) -> str:
     """Portfolio-only: interests, skills summary, no identity, no raw evidence."""
-    out = ["# Grace-Mar Record — Public View", "", "> Portfolio summary. See docs/PRIVACY-REDACTION.md.", ""]
+    out = ["# Grace-Mar Record — Public View", "", "> Portfolio summary. See docs/privacy-redaction.md.", ""]
 
     for section_title, short_name in [
         ("II. PREFERENCES (Survey Seeded)", "Preferences"),

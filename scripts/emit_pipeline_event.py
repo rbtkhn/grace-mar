@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Append a pipeline event to PIPELINE-EVENTS.jsonl.
+Append a pipeline event to pipeline-events.jsonl.
 
 Used by operator scripts and maintenance jobs.
 
@@ -47,7 +47,7 @@ def main() -> None:
     if candidate_id and candidate_id.lower() == "none":
         candidate_id = None
 
-    events_path = REPO_ROOT / "users" / args.user / "PIPELINE-EVENTS.jsonl"
+    events_path = REPO_ROOT / "users" / args.user / "pipeline-events.jsonl"
     extras = {}
     for arg in args.extras:
         if "=" in arg:

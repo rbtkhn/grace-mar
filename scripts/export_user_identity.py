@@ -2,7 +2,7 @@
 """
 Export the grace-mar Record to USER.md or SOUL.md format for OpenClaw.
 
-Reads users/[id]/SELF.md and produces a condensed, agent-friendly markdown
+Reads users/[id]/self.md and produces a condensed, agent-friendly markdown
 file suitable for OpenClaw's identity layer. Use this so the agent knows
 who it serves — identity, preferences, interests, values, personality,
 and post-seed growth (IX-A, IX-B, IX-C).
@@ -47,15 +47,15 @@ def export_user_identity(user_id: str = "grace-mar") -> str:
     Returns a single string suitable for writing to a file.
     """
     profile_dir = REPO_ROOT / "users" / user_id
-    self_path = profile_dir / "SELF.md"
+    self_path = profile_dir / "self.md"
     self_raw = _read(self_path)
     if not self_raw:
-        return f"# USER — {user_id}\n\nNo SELF.md found at {self_path}.\n"
+        return f"# USER — {user_id}\n\nNo self.md found at {self_path}.\n"
 
     out_lines = [
         "# USER — Grace-Mar Record Export",
         "",
-        "> Identity source for OpenClaw. Exported from grace-mar Record (SELF.md).",
+        "> Identity source for OpenClaw. Exported from grace-mar Record (self.md).",
         "> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o USER.md`",
         "",
         "---",
@@ -90,13 +90,13 @@ def export_user_identity(user_id: str = "grace-mar") -> str:
 def export_user_identity_json(user_id: str = "grace-mar") -> dict:
     """Build structured identity export for agent consumers."""
     profile_dir = REPO_ROOT / "users" / user_id
-    self_path = profile_dir / "SELF.md"
+    self_path = profile_dir / "self.md"
     self_raw = _read(self_path)
     if not self_raw:
         return {
             "user_id": user_id,
             "ok": False,
-            "error": f"No SELF.md found at {self_path}",
+            "error": f"No self.md found at {self_path}",
         }
 
     mapping = [

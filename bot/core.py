@@ -72,17 +72,17 @@ MAX_HISTORY = 20
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
-ARCHIVE_PATH = PROFILE_DIR / "SELF-ARCHIVE.md"
-ARCHIVE_REPO_PATH = f"users/{USER_ID}/SELF-ARCHIVE.md"  # repo-relative for GitHub API
+ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
+ARCHIVE_REPO_PATH = f"users/{USER_ID}/self-archive.md"  # repo-relative for GitHub API
 # Real-time conversation log (operator continuity). Gated content goes to SELF-ARCHIVE only on merge.
-SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "SESSION-TRANSCRIPT.md"
+SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "session-transcript.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
-PENDING_REVIEW_PATH = PROFILE_DIR / "PENDING-REVIEW.md"
-MEMORY_PATH = PROFILE_DIR / "MEMORY.md"
-LIBRARY_PATH = PROFILE_DIR / "LIBRARY.md"
-COMPUTE_LEDGER_PATH = PROFILE_DIR / "COMPUTE-LEDGER.jsonl"
-PIPELINE_EVENTS_PATH = PROFILE_DIR / "PIPELINE-EVENTS.jsonl"
+PENDING_REVIEW_PATH = PROFILE_DIR / "pending-review.md"
+MEMORY_PATH = PROFILE_DIR / "memory.md"
+LIBRARY_PATH = PROFILE_DIR / "library.md"
+COMPUTE_LEDGER_PATH = PROFILE_DIR / "compute-ledger.jsonl"
+PIPELINE_EVENTS_PATH = PROFILE_DIR / "pipeline-events.jsonl"
 
 LIBRARY_MISS = "LIBRARY_MISS"
 
@@ -319,7 +319,7 @@ def _load_library() -> list[dict]:
 
 
 def _load_memory_appendix() -> str:
-    """Load MEMORY.md if present. Returns appendix for system prompt, or empty string."""
+    """Load memory.md if present. Returns appendix for system prompt, or empty string."""
     if not MEMORY_PATH.exists():
         return ""
     content = MEMORY_PATH.read_text(encoding="utf-8").strip()
@@ -352,8 +352,8 @@ The following is ephemeral session context. Use it to refine tone and continuity
 """ + block
 
 
-SELF_PATH = PROFILE_DIR / "SELF.md"
-EVIDENCE_PATH = PROFILE_DIR / "EVIDENCE.md"
+SELF_PATH = PROFILE_DIR / "self.md"
+EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
 
 def _load_recency_context() -> str:
@@ -435,7 +435,7 @@ def _load_recency_context() -> str:
 
 # Homework session state: one question at a time, gamified, 30 total = competency milestone
 homework_sessions: dict[str, dict] = {}
-HOMEWORK_LEDGER_PATH = PROFILE_DIR / "HOMEWORK-LEDGER.jsonl"
+HOMEWORK_LEDGER_PATH = PROFILE_DIR / "homework-ledger.jsonl"
 HOMEWORK_MILESTONE = 30  # 30 correct = high competency (relative to age)
 HOMEWORK_BATCH_SIZE = 8  # questions per session
 HOMEWORK_SESSION_TIMEOUT_SEC = max(60, int(os.getenv("HOMEWORK_SESSION_TIMEOUT_SEC", "1800")))
@@ -928,7 +928,7 @@ def analyze_activity_report(user_message: str, channel_key: str) -> bool:
 
 
 def get_pending_candidates() -> list[dict]:
-    """Parse PENDING-REVIEW.md and return list of pending candidates (id, summary)."""
+    """Parse pending-review.md and return list of pending candidates (id, summary)."""
     if not PENDING_REVIEW_PATH.exists():
         return []
     content = PENDING_REVIEW_PATH.read_text()
@@ -1346,7 +1346,7 @@ def update_candidate_status(
     actor: str | None = None,
     source: str | None = None,
 ) -> bool:
-    """Update candidate status (approved/rejected) in PENDING-REVIEW.md.
+    """Update candidate status (approved/rejected) in pending-review.md.
     For rejected, optional rejection_reason is stored in PIPELINE-EVENTS for learning.
     """
     if status not in ("approved", "rejected"):
