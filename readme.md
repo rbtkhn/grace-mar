@@ -32,7 +32,7 @@ See [Architecture](docs/architecture.md) for full details.
 All profile changes pass through a user-controlled gate:
 
 1. **Signal detection** — identify knowledge, curiosity, and personality signals from input
-2. **Candidate staging** — structured proposals written to pending-review.md
+2. **Candidate staging** — structured proposals written to recursion-gate.md
 3. **User review** — approve, reject, or modify each candidate
 4. **Integration** — approved changes committed across profile, evidence, prompt, and session log
 
@@ -121,7 +121,7 @@ grace-mar/
         ├── skills.md                # Capability containers
         ├── self-evidence.md              # Activity log
         ├── session-log.md           # Interaction history
-        ├── pending-review.md        # Pipeline staging
+        ├── recursion-gate.md        # Pipeline staging
         ├── self-archive.md         # Gated log of approved activity (voice + non-voice) — private
         ├── journal.md               # Daily highlights — public-suitable, shareable
         ├── artifacts/               # Raw files (writing, artwork)
@@ -254,7 +254,7 @@ python3 integrations/openclaw_hook.py -u grace-mar -o ../openclaw/   # OpenClaw 
 python scripts/validate-integrity.py
 ```
 
-**Record index** — fast local search over SELF, EVIDENCE, PENDING-REVIEW (analyst dedup, PRP retrieval):
+**Record index** — fast local search over SELF, EVIDENCE, RECURSION-GATE (analyst dedup, PRP retrieval):
 
 ```bash
 python scripts/index_record.py build -u grace-mar

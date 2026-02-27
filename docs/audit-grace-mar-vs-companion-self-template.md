@@ -12,7 +12,7 @@
 
 From the bootstrap and merge doc, an **instance** (e.g. grace-mar) is expected to:
 
-- Have a **Record** under `users/<id>/`: SELF, SKILLS, EVIDENCE, PENDING-REVIEW, and related pipeline/archive files.
+- Have a **Record** under `users/<id>/`: SELF, SKILLS, EVIDENCE, RECURSION-GATE, and related pipeline/archive files.
 - Run a **bot** (or equivalent Voice) and **pipeline** (stage → approve → merge).
 - Hold **instance-specific config** (e.g. Telegram, domain, PRP output) that is never overwritten by template sync.
 - Maintain **copies of template docs** (concept, protocol, schema templates, AGENTS) that can be updated when the template is updated.
@@ -29,7 +29,7 @@ From the bootstrap and merge doc, an **instance** (e.g. grace-mar) is expected t
 | self.md | Present | ✅ |
 | skills.md | Present | ✅ |
 | self-evidence.md | Present | ✅ |
-| pending-review.md | Present | ✅ |
+| recursion-gate.md | Present | ✅ |
 | memory.md | Optional; present | ✅ |
 | self-archive.md | Present (gated; written only on merge) | ✅ |
 | session-transcript.md / SESSION-LOG | Present | ✅ |
@@ -67,7 +67,7 @@ The template concept (Mind + Record + Voice; cognitive fork; sovereign merge; kn
 
 | Rule | Implementation | Status |
 |------|----------------|--------|
-| Agent may stage, may not merge | Analyst stages to PENDING-REVIEW; merge only via `process_approved_candidates.py` after human approval | ✅ |
+| Agent may stage, may not merge | Analyst stages to RECURSION-GATE; merge only via `process_approved_candidates.py` after human approval | ✅ |
 | No direct merge into SELF/EVIDENCE/prompt without staging and approval | AGENTS §2; no code path merges without approval | ✅ |
 | Evidence linkage (claims traceable) | EVIDENCE entries, ACT-*, CREATE-*, WRITE-*; provenance in SELF IX entries | ✅ |
 | Manual gate only (no autonomous merge) | Documented in AGENTS and IDENTITY-FORK-PROTOCOL; no autonomous merge path | ✅ |
@@ -102,7 +102,7 @@ Template paths that instances sync *from* companion-self (grace-mar holds copies
 |------|--------|
 | Operating modes (Session, Pipeline, Query) defined in AGENTS | ✅ |
 | Session: no merge; pipeline only on "we [did X]" or explicit processing | ✅ |
-| Pipeline: stage to PENDING-REVIEW; process approved via script | ✅ |
+| Pipeline: stage to RECURSION-GATE; process approved via script | ✅ |
 | Query: read-only | ✅ |
 | Knowledge boundary rule (no undocumented facts in Record) | ✅ |
 | Lexile / WRITE-derived voice (skill-write) | ✅ (prompt, SKILLS-MODULARITY) |

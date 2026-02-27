@@ -25,7 +25,7 @@
     "LIBRARY/entries"
   ],
   "writable": [
-    "PENDING-REVIEW/candidates"
+    "RECURSION-GATE/candidates"
   ],
   "writable_note": "Agents may stage candidates only. Merge requires user approval.",
   "schema_hints": {
@@ -41,7 +41,7 @@
       "type": "object",
       "description": "Activity log, writing, creation; immutable once captured"
     },
-    "PENDING-REVIEW": {
+    "RECURSION-GATE": {
       "type": "object",
       "description": "Staging area; format documented in agents.md"
     }

@@ -23,7 +23,7 @@ The MEMORY module holds **ephemeral session/working context** — tone, recent t
 ### MEMORY is NOT
 
 - A shadow Record — no facts, identity claims, or knowledge
-- A staging area for the pipeline — that is PENDING-REVIEW
+- A staging area for the pipeline — that is RECURSION-GATE
 - A substitute for SELF — SELF is authoritative; MEMORY defers
 
 ---
@@ -68,7 +68,7 @@ Document the chosen policy in the MEMORY file header. Include timestamps on entr
 
 ## V. WRITE RULES
 
-- The analyst does NOT write to MEMORY. Analysts stage to PENDING-REVIEW only.
+- The analyst does NOT write to MEMORY. Analysts stage to RECURSION-GATE only.
 - MEMORY may be written by: operator (manual), future session summarizer, or user.
 - Nothing in MEMORY may become a claim in SELF or EVIDENCE without going through the gated pipeline.
 

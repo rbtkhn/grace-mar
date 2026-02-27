@@ -55,9 +55,9 @@ class IntentDrift:
     rejection_categories: dict[str, int]
 
 
-def parse_pending_review(content: str) -> tuple[list[dict], list[dict]]:
+def parse_recursion_gate(content: str) -> tuple[list[dict], list[dict]]:
     """
-    Extract pending and processed candidates from pending-review.md.
+    Extract pending and processed candidates from recursion-gate.md.
     Returns (pending_list, processed_list).
     """
     pending = []
@@ -96,11 +96,11 @@ def parse_pending_review(content: str) -> tuple[list[dict], list[dict]]:
 
 
 def compute_pipeline_health() -> PipelineHealth:
-    """Compute pipeline health from PENDING-REVIEW and PIPELINE-EVENTS."""
-    pr_content = _read(PROFILE_DIR / "pending-review.md")
-    pending, processed = parse_pending_review(pr_content)
+    """Compute pipeline health from recursion-gate and PIPELINE-EVENTS."""
+    pr_content = _read(PROFILE_DIR / "recursion-gate.md")
+    pending, processed = parse_recursion_gate(pr_content)
 
-    pr_path = PROFILE_DIR / "pending-review.md"
+    pr_path = PROFILE_DIR / "recursion-gate.md"
     mtime = datetime.fromtimestamp(pr_path.stat().st_mtime) if pr_path.exists() else None
     now = datetime.now()
     stale_candidates = 0

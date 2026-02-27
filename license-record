@@ -1,6 +1,6 @@
 LICENSE — Record / User Data
 
-User Records (SELF, SKILLS, EVIDENCE, SESSION-LOG, PENDING-REVIEW, SELF-ARCHIVE,
+User Records (SELF, SKILLS, EVIDENCE, SESSION-LOG, RECURSION-GATE, SELF-ARCHIVE,
 JOURNAL, MEMORY, PIPELINE-EVENTS, artifacts, and all content under users/)
 are personal data owned by the user. The system operator holds them in trust.
 

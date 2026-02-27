@@ -14,7 +14,7 @@
 |--------|---------|
 | **One codebase** | Same repo, same `bot/`, same prompts and pipeline. No fork of the app per person. |
 | **One LLM API** | Shared OpenAI (or other) key and model. Each bot uses the same API; prompts differ by user (SELF, SKILLS, EVIDENCE). |
-| **One pipeline** | Same analyst, lookup, rephrase, PENDING-REVIEW, merge flow. Per-user data lives under `users/<id>/`. |
+| **One pipeline** | Same analyst, lookup, rephrase, RECURSION-GATE, merge flow. Per-user data lives under `users/<id>/`. |
 | **Optional: one operator view** | Profile and operator tools can later support multiple users (e.g. grace-mar.com?user=abby vs ?user=dad). Today the profile is single-user (grace-mar). |
 
 Each **bot** is still the Voice for **one** Record. There is no shared “brain” across people—only shared infrastructure and rules.
@@ -25,7 +25,7 @@ Each **bot** is still the Voice for **one** Record. There is no shared “brain�
 
 The app already keys everything by **user ID**:
 
-- `GRACE_MAR_USER_ID` (env, default `grace-mar`) → `users/<id>/` for SELF, SKILLS, EVIDENCE, PENDING-REVIEW, archive, etc.
+- `GRACE_MAR_USER_ID` (env, default `grace-mar`) → `users/<id>/` for SELF, SKILLS, EVIDENCE, RECURSION-GATE, archive, etc.
 - `TELEGRAM_BOT_TOKEN` → one Telegram bot per process.
 
 So: **one process = one bot = one Record.** To run a second bot for a second person you run a second process with different env.

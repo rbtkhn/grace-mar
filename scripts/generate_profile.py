@@ -4,7 +4,7 @@ Generate the Grace-Mar pilot profile page.
 
 Reads grace-mar profile files and produces a single HTML profile view with:
 - Fork summary (identity, Lexile, pipeline status)
-- PENDING-REVIEW queue (candidates awaiting approval)
+- RECURSION-GATE queue (candidates awaiting approval)
 - SKILLS container status (THINK, WRITE, BUILD)
 - Recent bot archive excerpts
 - Benchmarks (pipeline stats, IX dimension counts)
@@ -62,8 +62,8 @@ class ProfileData:
     dyad_activity_reports_7d: int
 
 
-def parse_pending_review(content: str) -> tuple[int, list[dict]]:
-    """Extract pending candidates from pending-review.md."""
+def parse_recursion_gate(content: str) -> tuple[int, list[dict]]:
+    """Extract pending candidates from recursion-gate.md."""
     candidates = []
     in_candidates = False
     in_processed = False
@@ -269,7 +269,7 @@ def parse_seed_personality(content: str) -> list[str]:
 
 def collect_data() -> ProfileData:
     """Collect all profile page data from profile files."""
-    pending_path = PROFILE_DIR / "pending-review.md"
+    recursion_gate_path = PROFILE_DIR / "recursion-gate.md"
     self_path = PROFILE_DIR / "self.md"
     evidence_path = PROFILE_DIR / "self-evidence.md"
     skills_paths = [
@@ -283,7 +283,7 @@ def collect_data() -> ProfileData:
     library_path = PROFILE_DIR / "self-library.md"
     journal_path = PROFILE_DIR / "journal.md"
 
-    pending_content = pending_path.read_text() if pending_path.exists() else ""
+    pending_content = recursion_gate_path.read_text() if recursion_gate_path.exists() else ""
     self_content = self_path.read_text() if self_path.exists() else ""
     evidence_content = evidence_path.read_text() if evidence_path.exists() else ""
     skills_content = "\n".join(
@@ -294,7 +294,7 @@ def collect_data() -> ProfileData:
     library_content = library_path.read_text() if library_path.exists() else ""
     journal_content = journal_path.read_text() if journal_path.exists() else ""
 
-    pending_count, pending_candidates = parse_pending_review(pending_content)
+    pending_count, pending_candidates = parse_recursion_gate(pending_content)
     self_data = parse_self(self_content)
     evidence_data = parse_evidence(evidence_content)
     skills_summary = parse_skills(skills_content)
@@ -309,8 +309,8 @@ def collect_data() -> ProfileData:
     recent = parse_archive(transcript_content or archive_content, limit=15)
 
     last_activity = "—"
-    if pending_path.exists():
-        mtime = pending_path.stat().st_mtime
+    if recursion_gate_path.exists():
+        mtime = recursion_gate_path.stat().st_mtime
         last_activity = datetime.fromtimestamp(mtime).strftime("%Y-%m-%d")
 
     ledger_path = PROFILE_DIR / "compute-ledger.jsonl"

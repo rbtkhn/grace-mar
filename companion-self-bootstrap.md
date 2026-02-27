@@ -43,7 +43,7 @@
    - **Seed phase:** Definition of seed phases (what surveys, what artifacts, what creates initial SELF/SKILLS/EVIDENCE). "New instance = new user + seed phase" as the only creation path. Can be derived from grace-mar's ARCHITECTURE (Fork Lifecycle, Seeding) and OPERATOR-BRIEF.
 
 3. **Optional: users/_template/**
-   - Empty or minimal structure: self.md (template only), skills.md (template), self-evidence.md (template), pending-review.md (template), memory.md (template). No real data. Used as the scaffold when creating a new user directory in an instance repo. Use companion-self's `users/_template/` or derive from companion-self's schema docs (`docs/self-template.md`, `docs/evidence-template.md`, etc.).
+   - Empty or minimal structure: self.md (template only), skills.md (template), self-evidence.md (template), recursion-gate.md (template), memory.md (template). No real data. Used as the scaffold when creating a new user directory in an instance repo. Use companion-self's `users/_template/` or derive from companion-self's schema docs (`docs/self-template.md`, `docs/evidence-template.md`, etc.).
 
 4. **Optional: HOW-INSTANCES-CONSUME-UPGRADES.md** (or section in README)
    - Describe how an instance (e.g. grace-mar) merges upgrades from this template: compare and update docs (CONCEPTUAL-FRAMEWORK, IDENTITY-FORK-PROTOCOL, SELF-TEMPLATE, seed description, AGENTS governance); never overwrite the instance's `users/<id>/` Record. Optionally: list of template paths safe to copy into instances; or a small sync script idea. **Instances:** Use the merge checklist in grace-mar's [merging-from-companion-self.md](https://github.com/rbtkhn/grace-mar/blob/main/docs/merging-from-companion-self.md) when pulling upgrades.
@@ -91,7 +91,7 @@ When the user opens the **companion-self** repo in a new Cursor workspace and in
 1. **Confirm context:** This repo is the companion-self **template**. The user may have copied this bootstrap from the grace-mar repo. There is no Record here; no `users/grace-mar/`.
 2. **Use the developer plan:** Follow the checklist and plan in grace-mar's [companion-self-developer-plan.md](https://github.com/rbtkhn/grace-mar/blob/main/docs/companion-self-developer-plan.md): minimal docs list, source mapping, and phased implementation (README → concept → protocol → seed → optional scaffold and upgrade guide).
 3. **Create the minimum:** README (template vs instance; new user + seed phase; link to grace-mar). One or more concept/protocol/seed docs under `docs/` (or a single concept.md). Generalize from grace-mar's concepts; remove instance-specific references.
-4. **Optional:** Add `users/_template/` with minimal SELF/SKILLS/EVIDENCE/PENDING-REVIEW/MEMORY templates (structure only). Add a short HOW-INSTANCES-CONSUME-UPGRADES or merge section.
+4. **Optional:** Add `users/_template/` with minimal SELF/SKILLS/EVIDENCE/RECURSION-GATE/MEMORY templates (structure only). Add a short HOW-INSTANCES-CONSUME-UPGRADES or merge section.
 5. **Do not** copy the full grace-mar codebase or Record. Only what defines the template: concept, protocol, seed, and optional scaffold.
 6. **Propose before implementing:** Per user preference, show a short proposal (scope, files to create) before writing; implement after approval.
 

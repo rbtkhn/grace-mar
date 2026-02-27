@@ -684,3 +684,8 @@
 > CANDIDATE-0080 → ACT-0043
 > Companion chose and affirmed one reason we learn history — to learn from past mistakes and make better choices; entered awareness through the exchange.
 > user: "2" grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?" grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to sol
+
+**[2026-02-27 10:43:11]** `APPROVED` (operator)
+> CANDIDATE-0082 → ACT-0044
+> Phase 7 pre–cognitive replication survey (6 questions). Mars/oceans-trees; Earth crust; ballet all aspects; curiosity dinosaurs-extinct; stories animals; friends laugh + physical play.
+> user: "Survey: multiple-choice questions grounded in existing self-knowledge/curiosity/personality. Ended at Q6." grace_mar: "Q1: Mars — scientists used to be oceans and trees there. Q2: Crust. Q3: All (music, dancing, costumes, story). Q4: Dinosaurs and extinct animals. Q5: Animals in stories. Q6: B+C — make each other laugh and move/play."

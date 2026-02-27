@@ -405,6 +405,13 @@ books_read:
     evidence_id: ACT-0043
     provenance: human_approved
 
+  - id: LEARN-0039
+    date: 2026-02-27
+    topic: "Phase 7 survey: Mars (oceans/trees), Earth crust, ballet (all), dinosaurs-extinct curiosity, animals in stories, friends laugh + move/play."
+    source: pipeline merge
+    evidence_id: ACT-0044
+    provenance: human_approved
+
 
 ```
 

@@ -164,10 +164,10 @@ Alpha's homeschool pilot: same platform, 1x results vs. 2.6x at full Alpha. Moti
 
 Grace-Mar exposes:
 - **Identity export** — `export_user_identity.py` → user.md / SOUL.md (and Alpha/Incept-compatible format).
-- **Staging contract** — PENDING-REVIEW format; agents may stage, never merge.
-- **Session continuity** — SESSION-LOG, PENDING-REVIEW, EVIDENCE as startup checklist.
+- **Staging contract** — RECURSION-GATE format; agents may stage, never merge.
+- **Session continuity** — SESSION-LOG, RECURSION-GATE, EVIDENCE as startup checklist.
 - **Future: Agent manifest** — llms.txt-style discoverability: what's readable, writable, schema.
-- **Future: AI school integration** — Record feeds Incept/Alpha; school events stage to PENDING-REVIEW.
+- **Future: AI school integration** — Record feeds Incept/Alpha; school events stage to RECURSION-GATE.
 
 ---
 
@@ -245,7 +245,7 @@ Grace-Mar exposes:
 ### 6.3 B2B (AI School Platforms)
 
 - **Value:** Identity substrate for Alpha, and future AI schools. Record schema + export + staging contract.
-- **Use case:** School integrates Grace-Mar as identity layer; events stage to PENDING-REVIEW; family approves.
+- **Use case:** School integrates Grace-Mar as identity layer; events stage to RECURSION-GATE; family approves.
 - **Monetization:** Platform license, API fees, white-label.
 
 ### 6.4 Infrastructure (Standard / Protocol)
@@ -269,7 +269,7 @@ Grace-Mar exposes:
 | 1 | Export format optimized for motivation/engagement (interests, curiosity, personality) — input for tutors, platforms, operators |
 | 2 | Homeschool-focused documentation: "Using Grace-Mar without a school" |
 | 3 | Elevate "we did X" as first-class ritual in UX/docs — recognition, celebration, accountability loop |
-| 4 | Session continuity + PENDING-REVIEW as lightweight accountability for homeschool (review prompts, "we did X" reminders) |
+| 4 | Session continuity + RECURSION-GATE as lightweight accountability for homeschool (review prompts, "we did X" reminders) |
 | 5 | Explicit "evidence-grounding = confidence-grounding" in CONCEPTUAL-FRAMEWORK (done) |
 
 **Design target:** Homeschool is the primary gap (Alpha homeschool = 1x). Grace-Mar + Khan/IXL + lightweight structure = low-cost alternative. Record feeds motivation; "we did X" provides ritual.
@@ -283,7 +283,7 @@ Grace-Mar exposes:
 | Metric | Target | How to Verify |
 |--------|--------|---------------|
 | **Record completeness** | IX-A, IX-B, IX-C populated | Dashboard, growth script |
-| **Pipeline health** | Candidates processed, not stale | PENDING-REVIEW queue |
+| **Pipeline health** | Candidates processed, not stale | RECURSION-GATE queue |
 | **Knowledge boundary** | No undocumented references | Counterfactual harness |
 | **Export adoption** | Integrations using identity export | OpenClaw, other agents |
 | **Trust signal** | User approval rate, rejection reasons | Pipeline analytics |
@@ -352,7 +352,7 @@ Grace-Mar exposes:
 - **Coordination** — Routing, alignment (e.g. Opus managing 50 engineers).
 - **Judgment / taste** — “Is this output actually good?” Human bottleneck; compounds in value as models improve.
 
-**Grace-Mar mapping:** We’re not in effort or coordination (no long agent runs). We use reasoning (analyst, homework generation) and **judgment** (PENDING-REVIEW). The user is the taste layer: they don’t generate the content; they evaluate and gate it. “The ability to evaluate whether AI output is good is the skill that compounds” — that’s the gate.
+**Grace-Mar mapping:** We’re not in effort or coordination (no long agent runs). We use reasoning (analyst, homework generation) and **judgment** (RECURSION-GATE). The user is the taste layer: they don’t generate the content; they evaluate and gate it. “The ability to evaluate whether AI output is good is the skill that compounds” — that’s the gate.
 
 **When we add backends:** Route by task. Analyst / homework = reasoning-heavy (could use strong reasoner or cheaper). Voice = consistency and control. Lookup = “good enough” may suffice. Document: “We use task–model routing; the human remains the judgment layer.”
 

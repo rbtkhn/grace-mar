@@ -35,7 +35,7 @@ LLM_LEAK_PATTERNS = [
 SKIP_DIRS = {".git", "node_modules", "__pycache__", "tools", ".cursor"}
 SKIP_FILES = {"governance_checker.py"}  # Don't flag self
 
-# Only these paths may write to self.md or self-evidence.md (Record). Staging to PENDING-REVIEW is allowed from bot.
+# Only these paths may write to self.md or self-evidence.md (Record). Staging to RECURSION-GATE is allowed from bot.
 ALLOWED_RECORD_WRITERS = frozenset({
     "scripts/process_approved_candidates.py",
 })
@@ -59,7 +59,7 @@ def scan_file(path: Path, path_rel: Path | None = None) -> list[tuple[int, str, 
                 stripped = line.strip()
                 if stripped.startswith("#") or '"""' in line or "'''" in line:
                     continue
-                if "PENDING-REVIEW" in line or "approval" in line or "approved" in line:
+                if "RECURSION-GATE" in line or "approval" in line or "approved" in line:
                     continue  # Likely documenting the gate
                 # Write to self.md or self-evidence.md only allowed from whitelist
                 if "self.md" in line or "self-evidence.md" in line:

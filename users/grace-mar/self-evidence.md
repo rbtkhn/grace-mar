@@ -1418,6 +1418,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0044
+    date: 2026-02-27
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "Phase 7 pre–cognitive replication survey (6 questions). Mars/oceans-trees; Earth crust; ballet all aspects; curiosity dinosaurs-extinct; stories animals; friends laugh + physical play."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

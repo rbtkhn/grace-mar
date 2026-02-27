@@ -7,7 +7,7 @@ Checks:
   2. SELF evidence_id references resolve to EVIDENCE ACT-* entries
   3. EVIDENCE ACT entries include required fields and evidence_tier >= minimum
   4. Optional artifact references resolve and sha256 matches when provided
-  5. PENDING-REVIEW candidates have required shape
+  5. recursion-gate candidates have required shape
   6. ID format and required section shape checks for SELF/SKILLS
 
 Usage:
@@ -166,11 +166,11 @@ def validate_evidence(user_dirs: list[Path], min_evidence_tier: int) -> tuple[li
     return errors, act_ids
 
 
-def validate_pending_review(user_dirs: list[Path]) -> list[str]:
+def validate_recursion_gate(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     allowed_mind_categories = {"knowledge", "curiosity", "personality"}
     for user_dir in user_dirs:
-        pr_path = user_dir / "pending-review.md"
+        pr_path = user_dir / "recursion-gate.md"
         content = _safe_read(pr_path)
         if "## Candidates" not in content:
             continue
@@ -207,7 +207,7 @@ ID_PATTERNS = {
 def validate_id_format(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     for user_dir in user_dirs:
-        for fname in ("self.md", "self-evidence.md", "pending-review.md"):
+        for fname in ("self.md", "self-evidence.md", "recursion-gate.md"):
             path = user_dir / fname
             content = _safe_read(path)
             if not content:
@@ -268,7 +268,7 @@ def run_validation(users_dir: Path, user: str | None, min_evidence_tier: int) ->
     ev_errors, act_ids = validate_evidence(user_dirs, min_evidence_tier=min_evidence_tier)
     all_errors.extend(ev_errors)
     all_errors.extend(validate_cross_ref(evidence_ids, act_ids))
-    all_errors.extend(validate_pending_review(user_dirs))
+    all_errors.extend(validate_recursion_gate(user_dirs))
     all_errors.extend(validate_id_format(user_dirs))
     all_errors.extend(validate_self_sections(user_dirs))
     all_errors.extend(validate_skills_sections(user_dirs))

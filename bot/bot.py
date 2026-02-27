@@ -384,8 +384,8 @@ async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
     # Count approved (we only have pending in get_pending_candidates — approved are different)
     from pathlib import Path
     import re
-    pending_path = _profile_path("pending-review.md")
-    content = pending_path.read_text() if pending_path.exists() else ""
+    recursion_gate_path = _profile_path("recursion-gate.md")
+    content = recursion_gate_path.read_text() if recursion_gate_path.exists() else ""
     approved = len(re.findall(r"status: approved", content.split("## Processed")[0]))
     if approved == 0:
         await update.message.reply_text("no approved candidates to merge. approve some with /review first!")

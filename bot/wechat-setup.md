@@ -65,7 +65,7 @@ Users can type these to emulate `/start` and `/reset`:
 - **Same core**: Both Telegram and WeChat use `bot/core.py` — identical emulation, lookup, and analyst behavior
 - **Separate conversations**: Telegram and WeChat users have isolated conversation history (scoped by `telegram:{id}` vs `wechat:{openid}`)
 - **Shared archive**: All exchanges are logged to SESSION-TRANSCRIPT in real time; SELF-ARCHIVE is updated only on merge (gated), with channel tags
-- **Shared pipeline**: Analyst-staged candidates from either channel go to the same `pending-review.md`
+- **Shared pipeline**: Analyst-staged candidates from either channel go to the same `recursion-gate.md`
 
 ## Limitations
 

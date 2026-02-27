@@ -1,6 +1,6 @@
 # Wisdom Questions — Reflective Tier
 
-**Purpose:** Curated questions to elicit identity-relevant content for the cognitive fork. Designed for users of any age; wording can be adapted for younger users (e.g. ages 5–10) or for reflective, simple-language contexts. Answers flow through the normal pipeline: signal detection → PENDING-REVIEW → user approval → merge into SELF, EVIDENCE, prompt. These questions support **abundance rituals**, **post-work rehearsal**, and **narrative re-authoring** (SaveWisdom/5000 Days Part 8): articulating experience thickens preferred stories; the process is as valuable as the output. Treat questions as **ritual**, not checklist — one at a time, with space for reflection.
+**Purpose:** Curated questions to elicit identity-relevant content for the cognitive fork. Designed for users of any age; wording can be adapted for younger users (e.g. ages 5–10) or for reflective, simple-language contexts. Answers flow through the normal pipeline: signal detection → RECURSION-GATE → user approval → merge into SELF, EVIDENCE, prompt. These questions support **abundance rituals**, **post-work rehearsal**, and **narrative re-authoring** (SaveWisdom/5000 Days Part 8): articulating experience thickens preferred stories; the process is as valuable as the output. Treat questions as **ritual**, not checklist — one at a time, with space for reflection.
 
 **Source:** Adapted from [Save Wisdom 1000 Questions](https://savewisdom.org/) by Brian Roemmele (v7.0, 2/8/2025). Grace-Mar implements a structured variant of the SaveWisdom wisdom-preservation ethos. Used under open-source terms. Not for commercial publication.
 
@@ -13,7 +13,7 @@
 1. Choose a question that fits the moment — not rapid-fire, not interrogative.
 2. Pose it in natural language; adapt wording to the user's age and context.
 3. Let them answer at their own pace. Follow up gently if helpful (“Tell me more” / “Why?”).
-4. Run signal detection on the exchange. Stage candidates in PENDING-REVIEW.
+4. Run signal detection on the exchange. Stage candidates in RECURSION-GATE.
 5. Process approved candidates per the File Update Protocol (merge into SELF, EVIDENCE, prompt, SESSION-LOG).
 
 ---

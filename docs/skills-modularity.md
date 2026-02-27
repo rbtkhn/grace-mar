@@ -48,7 +48,7 @@ Each module updates **only** its capability container in SKILLS. Modules do **no
 | **WRITE** | Vocabulary, complexity, style, expression, logic, growth (production) | Does not stage IX-A / IX-B / IX-C candidates |
 | **WORK** | Planning, execution, making, creation (originality, elaboration, flexibility), decision-making, financial, collaboration | Does not stage IX-A / IX-B / IX-C candidates |
 
-**Analyst vs. modules:** The **analyst** (pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from inputs and stages candidates to PENDING-REVIEW → SELF. So one input can update both (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals).
+**Analyst vs. modules:** The **analyst** (pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from inputs and stages candidates to RECURSION-GATE → SELF. So one input can update both (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals).
 
 ---
 
@@ -84,7 +84,7 @@ Skill-read and skill-work add **content and scope** (what to talk about, what th
 ```
 Input (conversation, artifact, "we did X")
     │
-    ├──► Analyst ──► PENDING-REVIEW ──► [companion approval] ──► SELF (IX-A, IX-B, IX-C), EVIDENCE, prompt
+    ├──► Analyst ──► RECURSION-GATE ──► [companion approval] ──► SELF (IX-A, IX-B, IX-C), EVIDENCE, prompt
     │
     └──► Skill path (operator or pipeline) ──► SKILLS (THINK / WRITE / WORK container) + EVIDENCE (READ-nnn, WRITE-nnn, CREATE-nnn, ACT-nnn)
 ```
@@ -97,7 +97,7 @@ Input (conversation, artifact, "we did X")
 
 ## 6. Invariants
 
-1. **Stage-only for modules and analyst.** No skill module and no analyst merges directly into SELF, EVIDENCE, or prompt. All merges go through companion approval (PENDING-REVIEW → process_approved_candidates).
+1. **Stage-only for modules and analyst.** No skill module and no analyst merges directly into SELF, EVIDENCE, or prompt. All merges go through companion approval (RECURSION-GATE → process_approved_candidates).
 2. **Evidence-linked.** Every capability claim in SKILLS traces to evidence (WRITE-nnn, READ-nnn, CREATE-nnn, ACT-nnn).
 3. **Knowledge boundary.** No undocumented facts enter the Record. The Voice abstains when outside documented knowledge and offers to look up.
 4. **Record vs. Voice.** The Record is the documented self; the Voice speaks the Record when queried. WRITE is part of the Record that shapes the Voice; WRITE is not the Voice itself.

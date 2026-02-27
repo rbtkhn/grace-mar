@@ -29,7 +29,7 @@ Agents may read (for personalization, session continuity):
 ## Writable
 Agents may stage candidates only. Merge requires user approval.
 
-  - PENDING-REVIEW/candidates
+  - RECURSION-GATE/candidates
 
 ## Exports
 

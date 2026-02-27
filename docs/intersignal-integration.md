@@ -5,7 +5,7 @@ How to connect Grace-Mar (Record / Identity Fork Protocol) with Intersignal (The
 - The Record serves as the **identity source** for Familiar nodes
 - **Consent-bound, traceable identity** aligns with IFP's evidence linkage
 - **Session continuity** spans both systems
-- **Staging contract** — Braid agents may stage to PENDING-REVIEW; they may not merge
+- **Staging contract** — Braid agents may stage to RECURSION-GATE; they may not merge
 
 ---
 
@@ -15,9 +15,9 @@ How to connect Grace-Mar (Record / Identity Fork Protocol) with Intersignal (The
 |----------|--------------|------------|
 | **Record as identity source** | Export SELF → symbolic JSON (Familiar-ready) | Export script (read-only) |
 | **Cache-level symbolic sharing** | Structured identity primitives for Mesh Cache | Export script |
-| **Session continuity** | Intersignal reads SESSION-LOG, PENDING-REVIEW, EVIDENCE | Read-only |
+| **Session continuity** | Intersignal reads SESSION-LOG, RECURSION-GATE, EVIDENCE | Read-only |
 | **Artifacts as evidence** | Familiar outputs → "we did X" → pipeline | User invokes pipeline |
-| **Staging** | Braid agents stage to PENDING-REVIEW | Stage only, never merge |
+| **Staging** | Braid agents stage to RECURSION-GATE | Stage only, never merge |
 
 **Invariant:** The user is always the gate. Intersignal agents may stage; they cannot merge into the Record.
 
@@ -78,7 +78,7 @@ When running Familiar nodes that consume the Record, read these **before** start
 | File | Purpose |
 |------|---------|
 | `users/[id]/session-log.md` | Last session; what happened |
-| `users/[id]/pending-review.md` | Staged candidates awaiting approval |
+| `users/[id]/recursion-gate.md` | Staged candidates awaiting approval |
 | `users/[id]/self-evidence.md` (last 1–2 entries) | Recent activity context |
 
 ---
@@ -88,7 +88,7 @@ When running Familiar nodes that consume the Record, read these **before** start
 Braid agents and Familiar nodes may:
 
 - **Read** — SELF, SKILLS, EVIDENCE, manifest, symbolic export
-- **Stage** — Append candidates to PENDING-REVIEW in the documented format
+- **Stage** — Append candidates to RECURSION-GATE in the documented format
 
 Braid agents may **not**:
 
@@ -119,7 +119,7 @@ Export path: `../grace-mar/scripts/export_symbolic.py`
 When The Braid SDK and identity schema are released:
 
 - Align `symbolic_identity.json` with Braid's expected format
-- Confirm PENDING-REVIEW as a staging endpoint for Braid agents
+- Confirm RECURSION-GATE as a staging endpoint for Braid agents
 - Document how IMTP passes identity context across Familiar nodes
 
 ---

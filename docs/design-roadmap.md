@@ -50,7 +50,7 @@
 1. **Subscribe** — Grace-Mar email receives newsletters from allowlisted sources (e.g. Khan Kids, Common Sense Media, Smithsonian for Kids, book/series newsletters)
 2. **Ingest** — Cron polls inbox; fetches new messages; extracts links, titles, topics
 3. **Match** — Score each item against IX-B, LIBRARY, SKILLS edge
-4. **Stage** — Matches above threshold → PENDING-REVIEW: "Newsletter X recommended this on [topic]; matches curiosity in Y"
+4. **Stage** — Matches above threshold → RECURSION-GATE: "Newsletter X recommended this on [topic]; matches curiosity in Y"
 5. **Approve** — Parent approves → add to playlists, LIBRARY, or feed back into curiosity
 
 **Principle:** Record filters input, not just drives output. External curators suggest; Record selects relevance. Still fully gated.
@@ -84,9 +84,9 @@
 
 **Scope:**
 - **Record as identity** — Export SELF → user.md / SOUL.md via `scripts/export_user_identity.py`. OpenClaw knows who it serves.
-- **Session continuity** — Before starting, read SESSION-LOG, PENDING-REVIEW, last EVIDENCE entries. Close the cybernetic loop.
+- **Session continuity** — Before starting, read SESSION-LOG, RECURSION-GATE, last EVIDENCE entries. Close the cybernetic loop.
 - **Artifacts as evidence** — OpenClaw outputs (writing, drawings, summaries) → user invokes "we did X" → pipeline stages → user approves.
-- **Staging automation** — OpenClaw skill/cron may stage candidates to PENDING-REVIEW; **never** merge. User remains the gate.
+- **Staging automation** — OpenClaw skill/cron may stage candidates to RECURSION-GATE; **never** merge. User remains the gate.
 
 **Workspace patterns:** grace-mar as subdir of OpenClaw, or sibling repos in shared workspace.
 
@@ -102,8 +102,8 @@
 
 **Scope:**
 - **Record as identity source** — Export SELF → `symbolic_identity.json` via `scripts/export_symbolic.py` (cache-oriented, Familiar-ready).
-- **Session continuity** — Intersignal reads SESSION-LOG, PENDING-REVIEW, EVIDENCE before startup.
-- **Staging contract** — Braid agents may stage to PENDING-REVIEW; **never** merge. User remains the gate.
+- **Session continuity** — Intersignal reads SESSION-LOG, RECURSION-GATE, EVIDENCE before startup.
+- **Staging contract** — Braid agents may stage to RECURSION-GATE; **never** merge. User remains the gate.
 - **Cache-level symbolic sharing** — Structured primitives (interests, IX-A/B/C summaries, evidence anchors, checksum) for Mesh Cache.
 
 **Workspace patterns:** grace-mar as sibling to Intersignal mesh; export to `../intersignal-mesh/identity/`.
@@ -190,8 +190,8 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 | Grace-Mar web app | bot core, retriever, prompt; hosting for API. See [WEB-APP-PLAN](web-app-plan.md). |
 | Grace-Mar email | Parent decision; no technical blocker |
 | Outbound newsletter | Record query APIs; email send; playlist/recommendation logic (see YOUTUBE-PLAYLIST-DESIGN) |
-| Inbound processing | Grace-Mar email; IMAP or Gmail API; matching logic; PENDING-REVIEW staging |
-| X account (follow-only) | X API; matching logic; PENDING-REVIEW staging; operator manages account |
+| Inbound processing | Grace-Mar email; IMAP or Gmail API; matching logic; RECURSION-GATE staging |
+| X account (follow-only) | X API; matching logic; RECURSION-GATE staging; operator manages account |
 | OpenClaw integration | OpenClaw workspace; export script; OPENCLAW-INTEGRATION workflow |
 | Intersignal / Braid integration | export_hook --target intersignal; INTERSIGNAL-INTEGRATION guide |
 | Canva integration | Canva developer account; Connect API or App SDK; template design |

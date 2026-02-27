@@ -94,14 +94,14 @@ def generate_manifest(user_id: str = "grace-mar") -> dict:
             "INTENT/tradeoff_rules",
         ],
         "writable": [
-            "PENDING-REVIEW/candidates",
+            "RECURSION-GATE/candidates",
         ],
         "writable_note": "Agents may stage candidates only. Merge requires user approval.",
         "schema_hints": {
             "SELF": {"type": "object", "description": "Identity, personality, post-seed growth (IX-A, IX-B, IX-C)"},
             "SKILLS": {"type": "object", "description": "Capability containers (THINK, WRITE, BUILD)"},
             "EVIDENCE": {"type": "object", "description": "Activity log, writing, creation; immutable once captured"},
-            "PENDING-REVIEW": {"type": "object", "description": "Staging area; format documented in agents.md"},
+            "RECURSION-GATE": {"type": "object", "description": "Staging area; format documented in agents.md"},
         },
         "exports": {
             "user.md": "python scripts/export_user_identity.py -u " + user_id,

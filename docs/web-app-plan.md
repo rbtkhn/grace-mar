@@ -61,12 +61,12 @@ Grace-mar.com becomes the **primary front door** for Grace-Mar:
 
 | Deliverable | Description |
 |-------------|-------------|
-| **Review flow** | View PENDING-REVIEW; approve/reject from web. Same gate as today; web UI instead of editing files. |
+| **Review flow** | View RECURSION-GATE; approve/reject from web. Same gate as today; web UI instead of editing files. |
 | **Session continuity** | Before chat, load SESSION-LOG, MEMORY. Close the loop. |
 | **Export** | Trigger export (PRP, curriculum_profile, etc.) from web; download. |
 | **Auth** | Companion/operator login. Scope: one user per instance for pilot. |
 
-**Tech:** Add auth layer; integrate with pipeline (read PENDING-REVIEW; call process_approved_candidates on approve).
+**Tech:** Add auth layer; integrate with pipeline (read RECURSION-GATE; call process_approved_candidates on approve).
 
 **Dependencies:** Pipeline scripts; user dir structure.
 
@@ -103,7 +103,7 @@ grace-mar.com
 ├── /export        Export triggers (Phase 2)
 └── /api
     ├── /ask       Chat API (Phase 1)
-    ├── /pending   PENDING-REVIEW read (Phase 2)
+    ├── /pending   RECURSION-GATE read (Phase 2)
     └── /approve   Process approved (Phase 2)
 ```
 
@@ -140,7 +140,7 @@ grace-mar.com
 | Phase | Success |
 |-------|---------|
 | 1 | Reviewer can open `/me/<token>`, ask questions, get fork responses. No Telegram. |
-| 2 | Operator can approve PENDING-REVIEW from web. Export downloadable. |
+| 2 | Operator can approve RECURSION-GATE from web. Export downloadable. |
 | 3 | Companion/operator uses grace-mar.com as primary interface. |
 
 ---

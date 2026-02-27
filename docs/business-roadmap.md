@@ -42,7 +42,7 @@ See [Design Notes](design-notes.md) for full white-paper narrative and different
 | 1 | Export format optimized for motivation/engagement (interests, curiosity, personality) — input for tutors, platforms, parents |
 | 2 | Homeschool-focused documentation: "Using Grace-Mar without a school" |
 | 3 | Elevate "we did X" as first-class ritual in UX/docs — recognition, celebration, accountability loop |
-| 4 | Session continuity + PENDING-REVIEW as lightweight accountability for homeschool |
+| 4 | Session continuity + RECURSION-GATE as lightweight accountability for homeschool |
 | 5 | Alpha/Incept integration path — Record as identity feed |
 
 **Design target:** Homeschool is the primary gap (Alpha homeschool = 1x). Grace-Mar + Khan/IXL + lightweight structure = low-cost alternative. Record feeds motivation; "we did X" provides ritual.
@@ -54,7 +54,7 @@ See [Design Notes](design-notes.md) for full white-paper narrative and different
 | Metric | Target | How to Verify |
 |--------|--------|---------------|
 | Record completeness | IX-A, IX-B, IX-C populated | Dashboard, growth script |
-| Pipeline health | Candidates processed, not stale | PENDING-REVIEW queue |
+| Pipeline health | Candidates processed, not stale | RECURSION-GATE queue |
 | Knowledge boundary | No undocumented references | Counterfactual harness |
 | Export adoption | Integrations using identity export | OpenClaw, other agents |
 | Trust signal | User approval rate, rejection reasons | Pipeline analytics |

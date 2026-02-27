@@ -13,10 +13,10 @@ Block time weekly — e.g. Sunday evening or Monday morning. All steps optional 
 | Step | Action | Time |
 |------|--------|------|
 | 1 | **Experience check** — *Did the Voice feel like the companion's Record when it knew, and clearly offer help when it didn't? Did abstention/lookup feel like honesty and support, not failure or deflection?* Note any drift; adjust prompt or add probes if the experience felt wrong. See [KNOWLEDGE-BOUNDARY-FRAMEWORK](knowledge-boundary-framework.md) §1. | ~2 min |
-| 2 | **Process PENDING-REVIEW** — Open `users/[id]/pending-review.md`. Review each pending candidate. Approve or reject. Tell the assistant **"approve"** — it immediately merges (one gate). Or run CLI: `scripts/process_approved_candidates.py --generate-receipt ...` then `--apply --receipt ...`. | ~15 min |
+| 2 | **Process RECURSION-GATE** — Open `users/[id]/recursion-gate.md`. Review each pending candidate. Approve or reject. Tell the assistant **"approve"** — it immediately merges (one gate). Or run CLI: `scripts/process_approved_candidates.py --generate-receipt ...` then `--apply --receipt ...`. | ~15 min |
 | 3 | **Rotate MEMORY + SELF-ARCHIVE** — Run `python3 scripts/rotate_context.py --user [id] --apply` (or `/rotate` in Telegram) to prune dated MEMORY entries older than TTL and rotate SELF-ARCHIVE when thresholds are exceeded. | ~5 min |
 | 4 | **Skim SESSION-TRANSCRIPT** — Glance at recent raw conversation in `users/[id]/session-transcript.md`. Note resistance, recurring topics, and continuity cues for next session. SELF-ARCHIVE holds only approved/merged content. | ~5 min |
-| 5 | **Optional: Gap Hunter** — When reviewing an exchange, ask: *What's missing in the Record for this exchange?* Surfaces candidates the analyst might have missed. Stage to PENDING-REVIEW if you find gaps. | ~5 min |
+| 5 | **Optional: Gap Hunter** — When reviewing an exchange, ask: *What's missing in the Record for this exchange?* Surfaces candidates the analyst might have missed. Stage to RECURSION-GATE if you find gaps. | ~5 min |
 | 6 | **Optional: PRP refresh** — If merges were applied, run `python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt` and commit. Keeps the anchor in sync. | ~2 min |
 | 7 | **Optional: Template sync** — When companion-self (template) has been updated, pull upgrades into grace-mar per [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md): diff template paths, merge into grace-mar's docs, validate, log the sync. Not needed every week; do when template or instance governance changes. | ~10 min |
 
@@ -32,13 +32,13 @@ When reviewing an exchange or SESSION-TRANSCRIPT chunk, ask yourself:
 - Something the user said or did that would enrich the profile but wasn't staged?
 - A follow-up question the operator could ask to deepen the Record?
 
-If you spot a gap, stage a candidate to PENDING-REVIEW manually (or describe it for the assistant to stage). This supplements automated analyst signal detection.
+If you spot a gap, stage a candidate to RECURSION-GATE manually (or describe it for the assistant to stage). This supplements automated analyst signal detection.
 
 ---
 
 ## Rationale
 
-- **Process queue** — Prevents PENDING-REVIEW from growing unbounded. Human gates what enters the Record.
+- **Process queue** — Prevents RECURSION-GATE from growing unbounded. Human gates what enters the Record.
 - **Rotate MEMORY** — Keeps ephemeral context fresh; avoids stale tone or resistance notes.
 - **Skim SESSION-TRANSCRIPT** — Builds continuity; operator enters the next week with context.
 - **PRP refresh** — Ensures PRP/URL bootstrap reflects the latest Record.

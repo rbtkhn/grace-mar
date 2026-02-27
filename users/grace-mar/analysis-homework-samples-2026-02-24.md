@@ -119,4 +119,4 @@
    - **IX-C / EVIDENCE:** Emotional response to "dinosaurs not extinct" (fear, stay inside); optional PER for associative task approach (Sample 5).
 3. **SESSION-LOG:** Add a session entry for "Companion-submitted homework samples (5 sheets) — analysis 2026-02-24" with link to this file.
 
-If you tell me which of these you want staged (e.g. "stage knowledge and the dinosaur writing only"), I can add concrete PENDING-REVIEW candidates and artifact paths.
+If you tell me which of these you want staged (e.g. "stage knowledge and the dinosaur writing only"), I can add concrete RECURSION-GATE candidates and artifact paths.

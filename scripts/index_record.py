@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Record index for fast local search over SELF, EVIDENCE, PENDING-REVIEW.
+Record index for fast local search over SELF, EVIDENCE, recursion-gate.
 
 Builds a term index for analyst dedup, PRP retrieval, and record lookup.
 Aligns with civilization_memory-style cmc-index-search.
@@ -125,7 +125,7 @@ def index_pending(path: Path) -> list[dict]:
             "type": "CANDIDATE",
             "id": cid,
             "snippet": summary,
-            "file": "pending-review.md",
+            "file": "recursion-gate.md",
         })
     return hits
 
@@ -141,7 +141,7 @@ def build_index(user_dir: Path) -> dict:
     ev_path = user_dir / "self-evidence.md"
     if ev_path.exists():
         hits.extend(index_evidence(ev_path))
-    pr_path = user_dir / "pending-review.md"
+    pr_path = user_dir / "recursion-gate.md"
     hits.extend(index_pending(pr_path))
 
     for i, h in enumerate(hits):

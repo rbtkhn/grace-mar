@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch session-transcript.md and pending-review.md from the bot running on Render (or any host).
+Fetch session-transcript.md and recursion-gate.md from the bot running on Render (or any host).
 
 Use this from Cursor so your local repo has the latest Telegram chat and pipeline state.
 Requires OPERATOR_FETCH_SECRET to be set on the server (Render env) and passed here.
@@ -23,7 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Fetch SESSION-TRANSCRIPT and PENDING-REVIEW from Render (or bot host).")
+    ap = argparse.ArgumentParser(description="Fetch SESSION-TRANSCRIPT and recursion-gate from Render (or bot host).")
     ap.add_argument("--url", "-u", default=os.getenv("GRACE_MAR_RENDER_URL", "").strip(), help="Base URL of the bot (e.g. https://grace-mar-miniapp.onrender.com)")
     ap.add_argument("--secret", "-s", default=os.getenv("OPERATOR_FETCH_SECRET", "").strip(), help="OPERATOR_FETCH_SECRET (or set env)")
     ap.add_argument("--user", default=os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar", help="User id (for local output path)")
@@ -50,7 +50,7 @@ def main() -> None:
 
     for name, path in (
         ("SESSION-TRANSCRIPT", f"{base}/operator/session-transcript"),
-        ("PENDING-REVIEW", f"{base}/operator/pending-review"),
+        ("recursion-gate", f"{base}/operator/recursion-gate"),
     ):
         out_file = out_dir / f"{name}.md"
         try:
@@ -69,7 +69,7 @@ def main() -> None:
                 except Exception:
                     pass
 
-    print("Done. Open users/{}/session-transcript.md and pending-review.md in Cursor.".format(args.user))
+    print("Done. Open users/{}/session-transcript.md and recursion-gate.md in Cursor.".format(args.user))
 
 
 if __name__ == "__main__":

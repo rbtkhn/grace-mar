@@ -19,7 +19,7 @@
    {"ts": "...", "event": "rejected", "candidate_id": "CANDIDATE-0045", "rejection_reason": "too trivial"}
    ```
 
-4. **Operator workflow**: When processing the review queue manually, you can add `summary:` to rejected blocks in PENDING-REVIEW (e.g. "Barbie — watched during sleepover; user rejected"). For programmatic capture, use `/reject` with reason or run:
+4. **Operator workflow**: When processing the review queue manually, you can add `summary:` to rejected blocks in RECURSION-GATE (e.g. "Barbie — watched during sleepover; user rejected"). For programmatic capture, use `/reject` with reason or run:
    ```
    python scripts/emit_pipeline_event.py rejected CANDIDATE-0045 rejection_reason="too trivial"
    ```

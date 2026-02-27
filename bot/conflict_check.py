@@ -2,7 +2,7 @@
 Conflict detection for pipeline staging.
 
 Compares new candidates against existing SELF profile and flags contradictions
-before they hit PENDING-REVIEW. Surfaces for user resolution; does not block staging.
+before they hit RECURSION-GATE. Surfaces for user resolution; does not block staging.
 See docs/contradiction-resolution.md.
 """
 

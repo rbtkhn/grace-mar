@@ -130,7 +130,7 @@ V. THE SOVEREIGN MERGE RULE
 ────────────────────────────────────────────────────────────
 The agent may stage. It may not merge.
 
-• Stage: propose candidates (e.g. to PENDING-REVIEW)
+• Stage: propose candidates (e.g. to RECURSION-GATE)
 • Merge: commit changes to SELF, EVIDENCE, or canonical profile
 
 Only the companion (or explicitly delegated human) may merge.

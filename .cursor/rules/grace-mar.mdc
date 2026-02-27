@@ -26,7 +26,7 @@ The fork can only reference what has been explicitly merged into its profile. **
 
 Both channels feed the same gated pipeline and the same profile.
 
-**Channel 1 — Bot (Automated):** Telegram and WeChat bot conversations are analyzed by an LLM analyst (`ANALYST_PROMPT` in `bot/prompt.py`). The analyst stages candidates in `PENDING-REVIEW.md` automatically.
+**Channel 1 — Bot (Automated):** Telegram and WeChat bot conversations are analyzed by an LLM analyst (`ANALYST_PROMPT` in `bot/prompt.py`). The analyst stages candidates in `RECURSION-GATE.md` automatically.
 
 **Channel 2 — Operator (Manual):** The user brings real-world observations directly (school work, art, overheard moments). Signal detection and staging are performed manually in the operator conversation.
 
@@ -55,7 +55,7 @@ A single artifact can populate all three dimensions simultaneously.
 **Nothing is committed to the fork without explicit user approval.**
 
 1. **Signal detection** — identify profile-relevant information
-2. **Candidate staging** — write to `PENDING-REVIEW.md` with analysis
+2. **Candidate staging** — write to `RECURSION-GATE.md` with analysis
 3. **User review** — approve, reject, or modify
 4. **Integration** — on approval, merge immediately. When the user says "approve", process right away — one gate, no separate "process the review queue" step.
 
@@ -64,7 +64,7 @@ A single artifact can populate all three dimensions simultaneously.
 When candidates are approved, merge into ALL of these together:
 - `users/[id]/SELF.md` — profile entries (IX-A, IX-B, IX-C)
 - `users/[id]/EVIDENCE.md` — activity log entry
-- `users/[id]/PENDING-REVIEW.md` — move candidates to Processed
+- `users/[id]/RECURSION-GATE.md` — move candidates to Processed
 - `users/[id]/SESSION-LOG.md` — session record
 - `bot/prompt.py` — emulation prompt (knowledge, curiosity, personality sections + analyst dedup list)
 
@@ -157,7 +157,7 @@ users/[user-id]/
 ├── SKILLS.md                # What they CAN DO
 ├── EVIDENCE.md              # Raw activities and evidence log
 ├── SESSION-LOG.md           # Interaction history
-├── PENDING-REVIEW.md        # Pipeline staging (candidates + processed)
+├── RECURSION-GATE.md        # Pipeline staging (candidates + processed)
 ├── SELF-ARCHIVE.md      # Gated log of approved activity (voice + non-voice)
 └── artifacts/               # Raw files (writing samples, artwork)
 ```

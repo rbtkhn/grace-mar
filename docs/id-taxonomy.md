@@ -14,7 +14,7 @@
 | **LEARN-** | Knowledge | self.md IX-A | Facts that entered awareness (post-seed) |
 | **CUR-** | Curiosity | self.md IX-B | Topics that caught attention (post-seed) |
 | **PER-** | Personality | self.md IX-C | Observed behavioral patterns (post-seed) |
-| **CANDIDATE-** | Pipeline | pending-review.md | Staged signals awaiting approve/reject |
+| **CANDIDATE-** | Pipeline | recursion-gate.md | Staged signals awaiting approve/reject |
 | **WRITE-** | Evidence | self-evidence.md § II. WRITING LOG | Writing samples, journals, stories |
 | **READ-** | Evidence | self-evidence.md § I. READING LIST | Books, articles consumed |
 | **CREATE-** | Evidence | self-evidence.md § III. CREATION LOG | Artwork, collages, creative output |

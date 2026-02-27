@@ -189,7 +189,7 @@ Optional: "We watched this playlist" → stage THINK evidence from playlist topi
 2. **Poll** — Cron (e.g. daily) fetches watch history via `playlists.list` for playlist ID `HL` (History) or equivalent endpoint.
 3. **Filter** — Keep only video IDs that match Grace-Mar's recommended playlists (compare against `PlaylistSpec.videos` for approved playlists).
 4. **Diff** — Compare polled history to `RECOMMENDED-WATCHED.jsonl` (or similar) to find *new* watches.
-5. **Stage** — For each new watched recommended video, create candidate → append to PENDING-REVIEW or PENDING-VIDEOS.
+5. **Stage** — For each new watched recommended video, create candidate → append to RECURSION-GATE or PENDING-VIDEOS.
 6. **Approve** — User reviews; approved → add to LIBRARY videos section, log in EVIDENCE.
 
 **Store recommended IDs:** When a playlist is approved, persist `video_id` list to `RECOMMENDED-VIDEO-IDS.json` (or in PlaylistSpec). Poll uses this as the allowlist.

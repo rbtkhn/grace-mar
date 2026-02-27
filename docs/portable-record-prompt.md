@@ -256,7 +256,7 @@ The teacher's "tutor prompt" is the same pattern as the PRP, but the Record is *
 
 ## Handback and Loop
 
-**Telegram handback:** Paste checkpoint or transcript in Telegram (the bot auto-detects pasted checkpoints via markers like "Checkpoint –", "Abby Checkpoint", "topics covered") or send a .txt file. You can also prefix with "we did a chat in ChatGPT...". The bot runs the analyst; candidates stage to PENDING-REVIEW.
+**Telegram handback:** Paste checkpoint or transcript in Telegram (the bot auto-detects pasted checkpoints via markers like "Checkpoint –", "Abby Checkpoint", "topics covered") or send a .txt file. You can also prefix with "we did a chat in ChatGPT...". The bot runs the analyst; candidates stage to RECURSION-GATE.
 
 **Webhook handback:** `python scripts/handback_server.py` — POST `/handback` with `{"content": "..."}` or plain text. Optional `HANDBACK_API_KEY` for auth.
 

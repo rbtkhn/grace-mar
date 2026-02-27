@@ -78,7 +78,7 @@ ARCHIVE_REPO_PATH = f"users/{USER_ID}/self-archive.md"  # repo-relative for GitH
 SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "session-transcript.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
-PENDING_REVIEW_PATH = PROFILE_DIR / "pending-review.md"
+RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
 MEMORY_PATH = PROFILE_DIR / "memory.md"
 LIBRARY_PATH = PROFILE_DIR / "self-library.md"
 COMPUTE_LEDGER_PATH = PROFILE_DIR / "compute-ledger.jsonl"
@@ -759,7 +759,7 @@ def _lookup_with_library_first(question: str, channel_key: str = "unknown") -> t
 def _next_candidate_id() -> str:
     with _candidate_counter_lock:
         try:
-            content = PENDING_REVIEW_PATH.read_text()
+            content = RECURSION_GATE_PATH.read_text()
             ids = [int(m) for m in re.findall(r"CANDIDATE-(\d+)", content)]
             return f"CANDIDATE-{max(ids) + 1:04d}" if ids else "CANDIDATE-0001"
         except (FileNotFoundError, ValueError):
@@ -877,7 +877,7 @@ source_exchange:
 ```
 
 """
-    with open(PENDING_REVIEW_PATH, "a") as f:
+    with open(RECURSION_GATE_PATH, "a") as f:
         f.write(block)
     emit_pipeline_event("staged", candidate_id, channel_key=channel_key)
     return True
@@ -929,10 +929,10 @@ def analyze_activity_report(user_message: str, channel_key: str) -> bool:
 
 
 def get_pending_candidates() -> list[dict]:
-    """Parse pending-review.md and return list of pending candidates (id, summary)."""
-    if not PENDING_REVIEW_PATH.exists():
+    """Parse recursion-gate.md and return list of pending candidates (id, summary)."""
+    if not RECURSION_GATE_PATH.exists():
         return []
-    content = PENDING_REVIEW_PATH.read_text()
+    content = RECURSION_GATE_PATH.read_text()
     candidates: list[dict] = []
     for m in re.finditer(r"### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```", content, re.DOTALL):
         block = m.group(2)
@@ -1152,7 +1152,7 @@ def get_intent_review_summary(window_days: int = 30) -> dict[str, object]:
 
 
 def _next_debate_id() -> str:
-    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8") if PENDING_REVIEW_PATH.exists() else ""
+    content = RECURSION_GATE_PATH.read_text(encoding="utf-8") if RECURSION_GATE_PATH.exists() else ""
     ids = [int(m.group(1)) for m in re.finditer(r"DEBATE-(\d+)", content)]
     n = max(ids, default=0) + 1
     return f"DEBATE-{n:04d}"
@@ -1246,10 +1246,10 @@ operator_prompt: "choose keep_rule | revise_rule | scope_rule | gather_more_evid
 ```
 
 """
-    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8") if PENDING_REVIEW_PATH.exists() else "## Candidates\n\n## Processed\n\n"
+    content = RECURSION_GATE_PATH.read_text(encoding="utf-8") if RECURSION_GATE_PATH.exists() else "## Candidates\n\n## Processed\n\n"
     content = _ensure_debate_section(content)
     content = content.replace("## Debate Packets\n\n", "## Debate Packets\n\n" + debate_block, 1)
-    PENDING_REVIEW_PATH.write_text(content, encoding="utf-8")
+    RECURSION_GATE_PATH.write_text(content, encoding="utf-8")
     emit_pipeline_event(
         "intent_debate_packet_staged",
         debate_id,
@@ -1273,11 +1273,11 @@ def resolve_intent_debate_packet(
     channel_key: str = "",
 ) -> dict[str, object]:
     """
-    Resolve a staged debate packet by writing resolution status in PENDING-REVIEW.
+    Resolve a staged debate packet by writing resolution status in recursion-gate.
     """
-    if not PENDING_REVIEW_PATH.exists():
-        return {"ok": False, "error": "PENDING-REVIEW not found"}
-    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8")
+    if not RECURSION_GATE_PATH.exists():
+        return {"ok": False, "error": "recursion-gate not found"}
+    content = RECURSION_GATE_PATH.read_text(encoding="utf-8")
     pattern = rf"(### {re.escape(debate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n)(.*?)(\n```)"
     m = re.search(pattern, content, re.DOTALL)
     if not m:
@@ -1300,7 +1300,7 @@ def resolve_intent_debate_packet(
     updated += f"\nresolved_at: {now}"
     replacement = m.group(1) + updated + m.group(3)
     new_content = content[: m.start()] + replacement + content[m.end() :]
-    PENDING_REVIEW_PATH.write_text(new_content, encoding="utf-8")
+    RECURSION_GATE_PATH.write_text(new_content, encoding="utf-8")
     emit_pipeline_event(
         "intent_debate_packet_resolved",
         debate_id,
@@ -1313,10 +1313,10 @@ def resolve_intent_debate_packet(
 
 
 def list_unresolved_debate_packets() -> list[dict[str, object]]:
-    """List debate packets in PENDING-REVIEW that are still pending (not resolved)."""
-    if not PENDING_REVIEW_PATH.exists():
+    """List debate packets in recursion-gate that are still pending (not resolved)."""
+    if not RECURSION_GATE_PATH.exists():
         return []
-    content = PENDING_REVIEW_PATH.read_text(encoding="utf-8")
+    content = RECURSION_GATE_PATH.read_text(encoding="utf-8")
     if "## Debate Packets" not in content:
         return []
     section = content.split("## Debate Packets")[1].split("## ")[0]
@@ -1347,20 +1347,20 @@ def update_candidate_status(
     actor: str | None = None,
     source: str | None = None,
 ) -> bool:
-    """Update candidate status (approved/rejected) in pending-review.md.
+    """Update candidate status (approved/rejected) in recursion-gate.md.
     For rejected, optional rejection_reason is stored in PIPELINE-EVENTS for learning.
     """
     if status not in ("approved", "rejected"):
         return False
-    if not PENDING_REVIEW_PATH.exists():
+    if not RECURSION_GATE_PATH.exists():
         return False
-    content = PENDING_REVIEW_PATH.read_text()
+    content = RECURSION_GATE_PATH.read_text()
     pattern = rf"(### {re.escape(candidate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n)(status:\s*)pending"
     replacement = rf"\1\2{status}"
     new_content, n = re.subn(pattern, replacement, content, count=1)
     if n == 0:
         return False
-    PENDING_REVIEW_PATH.write_text(new_content)
+    RECURSION_GATE_PATH.write_text(new_content)
     kwargs: dict[str, object] = {}
     if status == "rejected" and rejection_reason:
         kwargs["rejection_reason"] = rejection_reason

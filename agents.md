@@ -35,7 +35,7 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 | Mode | Purpose | Agent behavior |
 |------|---------|----------------|
 | **Session** | Interactive conversation with companion | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
-| **Pipeline** | Process staged candidates | Detect signals, stage to PENDING-REVIEW, or process approved candidates into SELF/EVIDENCE/prompt. See [OPERATOR-WEEKLY-REVIEW](docs/operator-weekly-review.md) for recommended rhythm. |
+| **Pipeline** | Process staged candidates | Detect signals, stage to RECURSION-GATE, or process approved candidates into SELF/EVIDENCE/prompt. See [OPERATOR-WEEKLY-REVIEW](docs/operator-weekly-review.md) for recommended rhythm. |
 | **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
 
 When in doubt, default to Session (conversational, no merges).
@@ -55,11 +55,11 @@ The emulated self can only know what is explicitly documented in its profile (`u
 *The agent may stage. It may not merge.* All profile changes pass through a companion-controlled gate:
 
 1. Detect signals (knowledge, curiosity, personality)
-2. Stage candidates in `users/[id]/pending-review.md`
+2. Stage candidates in `users/[id]/recursion-gate.md`
 3. **Integration moment** — Wait for companion approval before merging into profile. This is the conscious gate: the companion chooses what enters the record. Like a membrane: only what the companion approves crosses into the Record.
 4. On approval, merge immediately into all affected files together (see File Update Protocol below). **One gate:** When the user says "approve" or approves candidates, process right away — do not wait for a separate "process the review queue" command.
 
-**Never** merge directly into self.md, self-evidence.md, or prompt.py without staging and approval. See `docs/identity-fork-protocol.md` for the full protocol spec. **Companion-reported content** (e.g. "we listened to X", "merge X into grace-mar") must be staged as candidate(s) in PENDING-REVIEW and merged only after companion approval — do not merge on report alone.
+**Never** merge directly into self.md, self-evidence.md, or prompt.py without staging and approval. See `docs/identity-fork-protocol.md` for the full protocol spec. **Companion-reported content** (e.g. "we listened to X", "merge X into grace-mar") must be staged as candidate(s) in RECURSION-GATE and merged only after companion approval — do not merge on report alone.
 **Reference implementation note:** Grace-Mar runs in manual-gate mode. No autonomous merge path is enabled.
 
 ### 3. The "we" Convention
@@ -110,7 +110,7 @@ MEMORY (`users/[id]/memory.md`) holds session/working context — tone, recent t
 
 - **Scope:** Tone, recent topics, session-specific calibrations only. No facts, identity claims, or knowledge.
 - **Hierarchy:** SELF is authoritative. When MEMORY conflicts with SELF, follow SELF. MEMORY refines; it does not override.
-- **Pipeline:** Nothing in MEMORY may enter SELF or EVIDENCE without going through PENDING-REVIEW. The analyst stages to PENDING-REVIEW only; it does NOT write to MEMORY.
+- **Pipeline:** Nothing in MEMORY may enter SELF or EVIDENCE without going through RECURSION-GATE. The analyst stages to RECURSION-GATE only; it does NOT write to MEMORY.
 - **Lifespan:** Ephemeral. Rotate or prune per policy (weekly recommended). MEMORY is optional; the system runs normally if absent.
 
 See `docs/memory-template.md`.
@@ -120,15 +120,15 @@ See `docs/memory-template.md`.
 ## Permission Boundaries
 
 **Autonomous (no approval required):**
-- Read companion files (SELF, SKILLS, EVIDENCE, SESSION-LOG, PENDING-REVIEW, etc.)
-- Run signal detection; stage candidates to PENDING-REVIEW
+- Read companion files (SELF, SKILLS, EVIDENCE, SESSION-LOG, RECURSION-GATE, etc.)
+- Run signal detection; stage candidates to RECURSION-GATE
 - Respond as Voice (emulate Record)
 - Propose activities, wisdom questions, lookups
 - Analyze exchanges for profile-relevant signals
 
 **Requires companion approval:**
 - Merge into SELF, EVIDENCE, or prompt
-- Process PENDING-REVIEW (approve or reject candidates)
+- Process RECURSION-GATE (approve or reject candidates)
 - Any change to the Record
 - Create or modify EVIDENCE entries
 - Update bot/prompt.py
@@ -143,7 +143,7 @@ What "good" looks like for Grace-Mar:
 |--------|--------|---------------|
 | **Lexile compliance** | Output ≤ 600L | Manual spot-check of bot responses |
 | **Knowledge boundary** | No undocumented references | Bot never cites facts not in profile |
-| **Pipeline health** | Candidates processed, not stale | PENDING-REVIEW queue doesn't grow unbounded |
+| **Pipeline health** | Candidates processed, not stale | RECURSION-GATE queue doesn't grow unbounded |
 | **Profile growth** | IX entries increase over time | IX-A, IX-B, IX-C counts in profile |
 | **Calibrated abstention** | "I don't know" when outside knowledge | Bot says "do you want me to look it up?" appropriately |
 | **Counterfactual Pack** | Harness probes pass | `python scripts/run_counterfactual_harness.py` — run before prompt changes |
@@ -159,7 +159,7 @@ When pipeline candidates are approved, **merge** into all of these together:
 |------|---------------|
 | `users/[id]/self.md` | New entries merged into IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
 | `users/[id]/self-evidence.md` | New activity log entry (ACT-XXXX) |
-| `users/[id]/pending-review.md` | Move candidates from Candidates to Processed |
+| `users/[id]/recursion-gate.md` | Move candidates from Candidates to Processed |
 | `users/[id]/session-log.md` | New session record |
 | `users/[id]/self-archive.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
@@ -223,7 +223,7 @@ grace-mar/
         ├── self-library.md     # self-library — curated lookup sources (books, videos); gated
         ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)
         ├── session-log.md      # Interaction history
-        ├── pending-review.md   # Pipeline staging
+        ├── recursion-gate.md   # Pipeline staging
         ├── pipeline-events.jsonl  # Append-only pipeline audit log
         ├── compute-ledger.jsonl   # Token usage (energy ledger)
         ├── self-archive.md            # self-archive — gated log of approved activity (voice + non-voice) — private

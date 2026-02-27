@@ -113,7 +113,7 @@ When the student completes curriculum work (writing, lab, activity):
 
 1. **Capture** — Photo, text, or completion flag
 2. **Invoke pipeline** — User (or curriculum hook) says "we did X"
-3. **Stage** — Analyst stages candidates to PENDING-REVIEW
+3. **Stage** — Analyst stages candidates to RECURSION-GATE
 4. **Approve** — User approves → EVIDENCE, SELF
 
 Curriculum outputs become evidence. The Record grows from both Grace-Mar conversations and curriculum completion.

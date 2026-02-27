@@ -144,4 +144,4 @@ git checkout main
 | **See profile changes in seconds** | Run `./scripts/preview_profile.sh` (or `python3 scripts/generate_profile.py` then `open profile/index.html`). No push required. |
 | **Deploy only when profile changes** | The workflow runs only when `users/grace-mar/**`, `scripts/generate_profile.py`, or the workflow file change. Doc-only pushes skip the deploy. |
 | **Re-run deploy without a new commit** | **Actions** → **Deploy profile to Pages** → **Run workflow**. Uses current `main`. |
-| **Telegram → Cursor** | If the bot runs **locally** (e.g. `python -m bot.bot`), SESSION-TRANSCRIPT, PENDING-REVIEW, and archive updates land in your repo immediately. If it runs on a server (e.g. Render), you need a sync step (e.g. pull from server or run the bot locally for development) so Cursor and the profile see the latest. |
+| **Telegram → Cursor** | If the bot runs **locally** (e.g. `python -m bot.bot`), SESSION-TRANSCRIPT, RECURSION-GATE, and archive updates land in your repo immediately. If it runs on a server (e.g. Render), you need a sync step (e.g. pull from server or run the bot locally for development) so Cursor and the profile see the latest. |

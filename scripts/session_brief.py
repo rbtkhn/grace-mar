@@ -2,7 +2,7 @@
 """
 Session briefing for Grace-Mar.
 
-Reads EVIDENCE, PENDING-REVIEW, SELF and produces a markdown brief:
+Reads EVIDENCE, RECURSION-GATE, SELF and produces a markdown brief:
 - Last N activity entries
 - Pending candidate count
 - Suggested wisdom questions (from WISDOM-QUESTIONS, tuned to IX-B)
@@ -64,7 +64,7 @@ def _last_activities(evidence_content: str, n: int) -> list[dict]:
 
 
 def _pending_count(pr_content: str) -> int:
-    """Count pending candidates in PENDING-REVIEW."""
+    """Count pending candidates in RECURSION-GATE."""
     if "## Candidates" not in pr_content or "## Processed" not in pr_content:
         return 0
     candidates = pr_content.split("## Processed")[0]
@@ -142,7 +142,7 @@ def build_operator_reminder(
     pending_threshold: int,
     stale_days: int,
 ) -> str:
-    pr_content = _read(user_dir / "pending-review.md")
+    pr_content = _read(user_dir / "recursion-gate.md")
     pending_count = _pending_count(pr_content)
     events = _load_pipeline_events(user_dir)
     oldest_days = _oldest_pending_age_days(pr_content, events)
@@ -248,7 +248,7 @@ def main() -> int:
         return 0
 
     evidence_content = _read(user_dir / "self-evidence.md")
-    pr_content = _read(user_dir / "pending-review.md")
+    pr_content = _read(user_dir / "recursion-gate.md")
     self_content = _read(user_dir / "self.md")
     wisdom_content = _read(WISDOM_PATH)
 
@@ -257,7 +257,7 @@ def main() -> int:
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
     from_record = _from_the_record_topics(self_content)
-    pr_path = user_dir / "pending-review.md"
+    pr_path = user_dir / "recursion-gate.md"
     pending_stale = False
     if pending_count > 0 and pr_path.exists():
         mtime = datetime.fromtimestamp(pr_path.stat().st_mtime)
@@ -288,7 +288,7 @@ def main() -> int:
         "",
         f"*Generated for {user_dir.name}*",
         "",
-        "## Pending Review",
+        "## Recursion Gate",
         "",
         pending_section,
         "",

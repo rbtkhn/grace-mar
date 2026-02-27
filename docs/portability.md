@@ -22,7 +22,7 @@ When switching from School A to School B:
 | 2 | **Provide to School B.** Send the export file(s) or grant access (e.g., repo URL, shared folder) per School B's process. |
 | 3 | **Revoke access at School A** (see §4). Remove shares, tokens, or integrations. The Record stays with you; School A no longer has access. |
 | 4 | **Confirm School B has it.** Verify they received the export or can read the Record. |
-| 5 | **Continue the pipeline.** Keep staging and merging through PENDING-REVIEW as before. School B's events can feed the pipeline via "we did X" if applicable. |
+| 5 | **Continue the pipeline.** Keep staging and merging through RECURSION-GATE as before. School B's events can feed the pipeline via "we did X" if applicable. |
 
 ---
 

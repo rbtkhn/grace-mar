@@ -19,7 +19,7 @@
                  └────────────────────┬───────────────────┘
                                       ▼
                          ┌─────────────────────────┐
-                         │     PENDING-REVIEW      │
+                         │     RECURSION-GATE      │
                          │  (integration moment:   │
                          │   user approve/reject)  │
                          └────────────┬────────────┘
@@ -49,7 +49,7 @@ The **recursive learning process** is:
 
 1. **Input** — Activity (conversation, artifact, "we did X") enters the system.
 2. **Signal detection** — Analyst compares input to current Record; identifies new knowledge, curiosity, personality.
-3. **Staging** — Candidates written to PENDING-REVIEW.
+3. **Staging** — Candidates written to RECURSION-GATE.
 4. **Integration moment** — User approves or rejects.
 5. **Merge** — Approved content integrated into SELF, EVIDENCE, prompt.
 6. **Updated Record** — Fork state now reflects the new content.
@@ -70,7 +70,7 @@ The edge→quest loop (Record proposes activities at the container boundary) wou
 
 ### Cybernetic Framing
 
-The pipeline is a **cybernetic loop** (Wiener): feedback corrects drift. Entropy (forgotten details, LLM leak, stale profile) is countered by sustained input and approval. Session continuity (read SESSION-LOG, PENDING-REVIEW before starting) closes the loop across sessions.
+The pipeline is a **cybernetic loop** (Wiener): feedback corrects drift. Entropy (forgotten details, LLM leak, stale profile) is countered by sustained input and approval. Session continuity (read SESSION-LOG, RECURSION-GATE before starting) closes the loop across sessions.
 
 ---
 
@@ -91,7 +91,7 @@ User message (Telegram)
 │  Analyst (async)  │  ← ANALYST_PROMPT, compares to profile for dedup
 └─────────┬─────────┘
           │
-          ├──[signal found]──► stage_candidate() → pending-review.md
+          ├──[signal found]──► stage_candidate() → recursion-gate.md
           └──[NONE]──────────► (no staging)
 ```
 
@@ -114,14 +114,14 @@ User says "we [did X]" (Cursor)
           │
           ▼
 ┌───────────────────┐
-│  Stage candidate  │  Write to pending-review.md with analysis
+│  Stage candidate  │  Write to recursion-gate.md with analysis
 └─────────┬─────────┘
           │
           ▼
     [same integration as Channel 1]
 ```
 
-**Operator feeds:** Any observed activity — school work, art, overheard moments, real-world events. Same destination: PENDING-REVIEW → SELF, EVIDENCE (ACT-*), etc.
+**Operator feeds:** Any observed activity — school work, art, overheard moments, real-world events. Same destination: RECURSION-GATE → SELF, EVIDENCE (ACT-*), etc.
 
 ---
 
@@ -202,7 +202,7 @@ The approval step is the **integration moment** — the conscious gate where the
 |------|--------|
 | `users/[id]/self.md` | IX-A, IX-B, IX-C entries (merged) |
 | `users/[id]/self-evidence.md` | New ACT-* in Activity Log |
-| `users/[id]/pending-review.md` | Move candidate to Processed |
+| `users/[id]/recursion-gate.md` | Move candidate to Processed |
 | `users/[id]/session-log.md` | Session record |
 | `bot/prompt.py` | YOUR KNOWLEDGE, YOUR CURIOSITY, YOUR PERSONALITY + analyst dedup list |
 

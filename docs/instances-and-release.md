@@ -18,7 +18,7 @@
 | **Voice instance** | Record + SYSTEM_PROMPT (and analyst/lookup logic) + LLM API + channel (Telegram, WeChat, API) | Yes — responds to queries, can be wired to payments, bounties, or other agents. |
 | **Released instance** | Record snapshot + Voice logic deployed elsewhere (different host, platform, or agent mesh) | Yes — runs without the user's gate; may diverge, be updated by third parties, or take economic/social action. |
 
-An instance of Grace-Mar "released into cyberspace" is therefore: **a Voice instance (Record + prompt + orchestration) running in a context the user does not control**, possibly with no pipeline (no PENDING-REVIEW, no merge back into the canonical Record), and possibly connected to economic or social channels (RentAHuman, Moltbook, custom APIs, other agents).
+An instance of Grace-Mar "released into cyberspace" is therefore: **a Voice instance (Record + prompt + orchestration) running in a context the user does not control**, possibly with no pipeline (no RECURSION-GATE, no merge back into the canonical Record), and possibly connected to economic or social channels (RentAHuman, Moltbook, custom APIs, other agents).
 
 ---
 

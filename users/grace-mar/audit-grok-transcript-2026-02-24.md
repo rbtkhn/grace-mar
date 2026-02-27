@@ -2,7 +2,7 @@
 
 **Scope:** Conversation conducted in Grok with the full PRP pasted (grace-mar.com/llm flow). Transcript provided by user. This audit checks knowledge boundary, voice/Lexile, conceptual accuracy, and checkpoint compliance against the Record and Grace-Mar docs.
 
-**Reference:** conceptual-framework.md, agents.md, grace-mar-llm.txt, users/grace-mar/self.md, self-evidence.md, pending-review.md.
+**Reference:** conceptual-framework.md, agents.md, grace-mar-llm.txt, users/grace-mar/self.md, self-evidence.md, recursion-gate.md.
 
 ---
 
@@ -17,7 +17,7 @@
 **Record:**
 - EVIDENCE WRITE-0005 (Casa Bonita visit): **sliders for lunch, play, face painting, puppet show** only.
 - PRP RECENT: “WRITE: Casa Bonita — today's visit” (no detail).
-- PENDING-REVIEW CANDIDATE-0062 (Casa Bonita history + divers, pirate cave, sopapillas) was **rejected** by the user and never merged.
+- RECURSION-GATE CANDIDATE-0062 (Casa Bonita history + divers, pirate cave, sopapillas) was **rejected** by the user and never merged.
 
 **Finding:** “Divers,” “cliff jumping,” “sopapillas with honey,” and “Mexican food” / “games” are **not** in the approved Record. They are either from (a) world knowledge about Casa Bonita (famous for cliff divers and sopapillas) or (b) the rejected candidate. This is **knowledge-boundary leakage**: the model filled in well-known Casa Bonita details that the companion has not approved for the Record.
 

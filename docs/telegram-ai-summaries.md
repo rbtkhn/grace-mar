@@ -30,7 +30,7 @@ Telegram's AI Summaries (introduced Jan 2026) auto-generate short recaps for lon
 | 4 | Operator uses the summary to triage, stage candidates, or feed a compact artifact into the pipeline. |
 
 **Use cases:**
-- Quick "what happened this week" before reviewing PENDING-REVIEW.
+- Quick "what happened this week" before reviewing RECURSION-GATE.
 - Session recap artifact for operator handoff.
 - Condensed input for analyst or staging (instead of raw full transcript).
 

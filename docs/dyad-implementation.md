@@ -84,7 +84,7 @@ Extend `scripts/session_brief.py`:
 
 **Integration nudge**
 - If `pending_count > 0` and oldest pending is >3 days: add line "You have N candidates waiting — consider bringing them into the Record (type /review)."
-- Already has pending count; add staleness check via pending-review.md mtime or candidate timestamps.
+- Already has pending count; add staleness check via recursion-gate.md mtime or candidate timestamps.
 
 ---
 

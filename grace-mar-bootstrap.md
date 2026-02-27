@@ -14,7 +14,7 @@ Session bootstrap for continuing Grace-Mar in a new agent conversation.
 6. **Companion-self audit** — Read `docs/audit-companion-self.md` (concept alignment: companion self, self-* taxonomy, tricameral). Optionally read `docs/audit-grace-mar-vs-companion-self-template.md` (instance vs template repo). Note any drift; if material changes have been made since the audit date, re-run or update the audit.
 
 If working on companion profile operations, also read:
-- `users/grace-mar/pending-review.md`
+- `users/grace-mar/recursion-gate.md`
 - `users/grace-mar/self.md`
 - `users/grace-mar/self-evidence.md`
 - `users/grace-mar/pipeline-events.jsonl`

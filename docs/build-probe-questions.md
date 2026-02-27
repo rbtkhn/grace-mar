@@ -139,7 +139,7 @@ Below are concrete examples drawn from SELF + SKILLS + EVIDENCE for grace-mar. E
 
 1. **Session log** — Run a "BUILD probe" session (e.g. 6–8 questions per batch). Log which questions were shown, which dimension, and the companion’s answer (and correct/incorrect if applicable).
 2. **Activity evidence** — Treat the session as an activity: e.g. "Companion completed BUILD probe (planning, making, elaboration, decision-making)." Stage an ACT-* or a dedicated BUILD-probe log entry; operator can merge into EVIDENCE and optionally update SKILLS BUILD (e.g. planning_level, execution_level) when approved.
-3. **Staging** — When merging, link BUILD probe results to BUILD container: e.g. "planning: 1–2 (can order steps for familiar task); making: observed (follows Lego instructions); elaboration: 4 (confirmed); decision_making: 1 (can give reason for choice)." All via gated pipeline — stage to PENDING-REVIEW, companion approves.
+3. **Staging** — When merging, link BUILD probe results to BUILD container: e.g. "planning: 1–2 (can order steps for familiar task); making: observed (follows Lego instructions); elaboration: 4 (confirmed); decision_making: 1 (can give reason for choice)." All via gated pipeline — stage to RECURSION-GATE, companion approves.
 4. **"What if" / originality** — Open-ended or multi-correct answers don’t get a single right/wrong; they serve as **creation** evidence (originality/flexibility). Operator or analyst can stage: "Companion combined Nine-Colored Deer + Madeline / Roz + ocean in BUILD probe."
 
 ---

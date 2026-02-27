@@ -23,7 +23,7 @@
 **Pattern:** Capture first; process later. Inbox holds raw items; processing assigns them to structure (projects, areas). Merge happens during review, not at capture.
 
 **Grace-Mar application:**
-- **PENDING-REVIEW** is the inbox. Analyst stages candidates; user processes during review.
+- **RECURSION-GATE** is the inbox. Analyst stages candidates; user processes during review.
 - **Sovereign Merge Rule** — The agent may stage; it may not merge. See [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md).
 - **Design rule:** Never require the user to decide IX-A vs IX-B vs IX-C at capture time. Staging proposes; review assigns.
 
@@ -45,7 +45,7 @@
 **Pattern:** 30 minutes or less per week to clear inboxes, process pending items, and start the next week with clarity. Block it on the calendar.
 
 **Grace-Mar application:**
-- **Operator ritual:** Process PENDING-REVIEW queue; clear staged candidates; optionally run checkpoint/summary for the week. See [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md).
+- **Operator ritual:** Process RECURSION-GATE queue; clear staged candidates; optionally run checkpoint/summary for the week. See [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md).
 - **MEMORY rotation** — Prune or rotate MEMORY per policy (weekly recommended). See [MEMORY-TEMPLATE](memory-template.md).
 - **Design rule:** Document a recommended operator rhythm (e.g., "Sunday evening: process queue, rotate MEMORY"). Make it optional but explicit.
 
@@ -78,7 +78,7 @@
 **Pattern:** A short checklist at the start of the day—5–10 minutes—to ground oneself and avoid reactive mode. Check inbox, priorities, today's focus.
 
 **Grace-Mar application:**
-- **Operator startup:** Open PENDING-REVIEW; skim SESSION-TRANSCRIPT or SELF-ARCHIVE for recent context; process any urgent candidates.
+- **Operator startup:** Open RECURSION-GATE; skim SESSION-TRANSCRIPT or SELF-ARCHIVE for recent context; process any urgent candidates.
 - **Session start (Voice):** Menu (A=recent doings, B=learnings, C=curiosity, D=free chat) lets the user choose how to begin. Bounded, not infinite.
 - **Design rule:** Offer a lightweight "how do you want to start?" rather than dumping everything. Match Second Brain's proactive vs. reactive framing.
 
@@ -100,7 +100,7 @@
 | Pattern | Grace-Mar Implementation |
 |---------|--------------------------|
 | Quick capture | Telegram chat, "we [did X]", one-tap actions |
-| Inbox → process | PENDING-REVIEW; stage vs. merge |
+| Inbox → process | RECURSION-GATE; stage vs. merge |
 | Connection over isolation | Evidence linking; LIBRARY → lookup |
 | Weekly review | Operator processes queue; MEMORY rotation |
 | Two-minute rule | Quick approve/reject; scannable candidates |
@@ -121,9 +121,9 @@ Ideas extracted from these patterns that could be implemented:
 | **Rule file "when to load" cues** | Progressive disclosure | Low | Add one-line description to AGENTS sections so Cursor knows when to read full doc. |
 | **Session priming from MEMORY** | Connection, startup | Medium | When starting a Voice session, inject MEMORY (tone, resistance notes) into context so responses honor it. **Done:** `_load_memory_appendix` adds explicit Resistance Notes instruction when that section exists. |
 | **Index/graph of Record links** | Markdown as canvas | Low | Script to output SELF↔EVIDENCE↔SELF-ARCHIVE link map; helps operator navigate. |
-| **Scannable candidate cards** | Two-minute rule | Low | Improve PENDING-REVIEW formatting: bold summary, collapsible detail. |
+| **Scannable candidate cards** | Two-minute rule | Low | Improve RECURSION-GATE formatting: bold summary, collapsible detail. |
 | **MCP-as-skill for Cursor** | Progressive disclosure | Medium | If Grace-Mar adds MCPs (e.g. Telegram, Notion), wrap as skills that load only when task requires. Reduces context bloat. |
 | **Brand/voice for PRP** | Human in the loop | Low | PRP already encodes voice; consider explicit "voice calibration" pass (Lexile, tone) when regenerating. |
-| **Weekly review reminder** | Weekly ritual | Low | Optional: cron or script that emits "PENDING-REVIEW has N candidates" to operator channel. |
+| **Weekly review reminder** | Weekly ritual | Low | Optional: cron or script that emits "RECURSION-GATE has N candidates" to operator channel. |
 
 **Prioritization:** Session priming (MEMORY → Voice) and scannable candidates directly improve daily use. Rule cues and index are refinements. MCP-as-skill is forward-looking if the ecosystem grows.

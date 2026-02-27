@@ -70,12 +70,12 @@ When something worth recording happens (a drawing, a story, something learned, a
 
 ---
 
-## Session continuity & PENDING-REVIEW
+## Session continuity & RECURSION-GATE
 
 Keep the loop closed so the Record and the review queue stay in sync.
 
-- **Before each session:** Skim SESSION-LOG and **PENDING-REVIEW** (or run `python scripts/session_brief.py -u grace-mar` for a short brief). Note how many candidates are waiting.
-- **After the session:** If anyone sent "we did X" or you added activities, run **/review** in the bot (or process the queue per [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md)) so items don’t sit in PENDING-REVIEW for long.
+- **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python scripts/session_brief.py -u grace-mar` for a short brief). Note how many candidates are waiting.
+- **After the session:** If anyone sent "we did X" or you added activities, run **/review** in the bot (or process the queue per [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md)) so items don’t sit in RECURSION-GATE for long.
 
 Full checklist and weekly rhythm: [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md).
 
@@ -92,23 +92,23 @@ All pilot files live in the repo under **`users/grace-mar/`** (or `users/pilot-0
 | **self.md** | Who the companion is — identity, preferences, interests, knowledge (IX-A), curiosity (IX-B), personality (IX-C). |
 | **skills.md** | What they can do — THINK, WRITE, WORK capability and edges. |
 | **self-evidence.md** | Activity log — ACT-*, WRITE-*, CREATE-* entries; raw evidence the Record is built on. |
-| **pending-review.md** | Staging area — candidates the analyst (or you) staged; **nothing is in the Record until you approve and merge.** |
+| **recursion-gate.md** | Staging area — candidates the analyst (or you) staged; **nothing is in the Record until you approve and merge.** |
 | **session-transcript.md** | Raw conversation log (every message), for operator continuity. Not part of the Record. |
 | **self-archive.md** | Gated log of **approved** activity only — the conversation that made it into the Record. |
 
-So: **Record = SELF + SKILLS + EVIDENCE** (and what’s reflected in the bot prompt). **PENDING-REVIEW** is the gate. **SELF-ARCHIVE** is the approved-activity log.
+So: **Record = SELF + SKILLS + EVIDENCE** (and what’s reflected in the bot prompt). **RECURSION-GATE** is the gate. **SELF-ARCHIVE** is the approved-activity log.
 
 **Why SELF-ARCHIVE isn’t updating**
 
 SELF-ARCHIVE is **not** written in real time. It is updated **only when you merge approved candidates**. The bot and analyst do this:
 
 1. **Conversation** → Bot replies; analyst may detect a “signal” (new knowledge, curiosity, personality).
-2. **Staging** → That becomes a **candidate** in PENDING-REVIEW (you saw “ANALYST: signal detected - staged candidate” in the log).
-3. **Your step** → You open PENDING-REVIEW, approve (or reject) each candidate, then tell the assistant **"approve"**. The agent immediately merges — one gate. Only then does the script write to SELF, EVIDENCE, SESSION-LOG, the bot prompt, **and append to SELF-ARCHIVE**.
+2. **Staging** → That becomes a **candidate** in RECURSION-GATE (you saw “ANALYST: signal detected - staged candidate” in the log).
+3. **Your step** → You open RECURSION-GATE, approve (or reject) each candidate, then tell the assistant **"approve"**. The agent immediately merges — one gate. Only then does the script write to SELF, EVIDENCE, SESSION-LOG, the bot prompt, **and append to SELF-ARCHIVE**.
 
 **How to get SELF-ARCHIVE to update (short version)**
 
-1. Open **`users/grace-mar/pending-review.md`** (or your user id).
+1. Open **`users/grace-mar/recursion-gate.md`** (or your user id).
 2. In the **Candidates** section, for each block you want to keep: change `status: pending` to **`status: approved`** (or `rejected` to skip).
 3. Tell the assistant **“approve”** — it immediately processes. Or run:
    ```bash
@@ -123,18 +123,18 @@ Recommended rhythm: do this at least weekly (e.g. [OPERATOR-WEEKLY-REVIEW](opera
 
 ## Getting Telegram chat content into Cursor
 
-The bot writes live chat to **`users/grace-mar/session-transcript.md`** and stages candidates to **`users/grace-mar/pending-review.md`**. Those paths are relative to the **repo root of the process running the bot**. So whether that content appears in Cursor depends on where the bot runs.
+The bot writes live chat to **`users/grace-mar/session-transcript.md`** and stages candidates to **`users/grace-mar/recursion-gate.md`**. Those paths are relative to the **repo root of the process running the bot**. So whether that content appears in Cursor depends on where the bot runs.
 
 **Option A — Bot runs on the same machine as Cursor, from this repo**
 
 - Run the Telegram bot from this repo (e.g. `python -m bot.bot` or your start command from `/Users/.../grace-mar`).
 - Set `GRACE_MAR_USER_ID=grace-mar` (or leave default).
-- Then **`users/grace-mar/session-transcript.md`** and **pending-review.md** are inside this workspace; just open them in Cursor. New exchanges appear as the bot runs.
+- Then **`users/grace-mar/session-transcript.md`** and **recursion-gate.md** are inside this workspace; just open them in Cursor. New exchanges appear as the bot runs.
 
 **Option B — Bot runs elsewhere (e.g. Render, another server)**
 
 - The bot writes to that environment’s clone of the repo. To get that content into Cursor:
-  1. **Pull from GitHub** — If the server (or a job on it) commits and pushes `users/grace-mar/session-transcript.md` and `pending-review.md` to the same repo you use in Cursor, run `git pull` in Cursor to get the latest.
+  1. **Pull from GitHub** — If the server (or a job on it) commits and pushes `users/grace-mar/session-transcript.md` and `recursion-gate.md` to the same repo you use in Cursor, run `git pull` in Cursor to get the latest.
   2. **Sync script** — If you have SSH or an API to the server, add a small script that copies those two files from the server into this repo (e.g. `scp server:grace-mar/users/grace-mar/session-transcript.md users/grace-mar/`), then run it when you want to refresh.
   3. **Manual paste** — Copy the chat from your log viewer or Telegram export and paste into a file in this repo (e.g. create `users/grace-mar/LOG-2026-02-25.md` or append to a notes file). Use that for operator context; it won’t update SESSION-TRANSCRIPT on the server.
 
@@ -147,7 +147,7 @@ The bot writes live chat to **`users/grace-mar/session-transcript.md`** and stag
    export GRACE_MAR_RENDER_URL=https://your-app.onrender.com
    python3 scripts/fetch_operator_files.py
    ```
-   This writes `users/grace-mar/session-transcript.md` and `pending-review.md`. Run whenever you want to refresh.
+   This writes `users/grace-mar/session-transcript.md` and `recursion-gate.md`. Run whenever you want to refresh.
 
 **Option C — One-off: save a log snippet in the repo**
 
@@ -158,7 +158,7 @@ The bot writes live chat to **`users/grace-mar/session-transcript.md`** and stag
 | Bot runs in | What to do so Cursor has the chat |
 |-------------|------------------------------------|
 | This repo (same machine) | Run bot from this repo; open `users/grace-mar/session-transcript.md`. |
-| **Render (24/7)** | Set `OPERATOR_FETCH_SECRET` on Render; run `python3 scripts/fetch_operator_files.py` from Cursor with `GRACE_MAR_RENDER_URL` and the same secret. Opens `users/grace-mar/session-transcript.md` and `pending-review.md` after fetch. |
+| **Render (24/7)** | Set `OPERATOR_FETCH_SECRET` on Render; run `python3 scripts/fetch_operator_files.py` from Cursor with `GRACE_MAR_RENDER_URL` and the same secret. Opens `users/grace-mar/session-transcript.md` and `recursion-gate.md` after fetch. |
 | Other remote | Use fetch script if the host exposes the same operator endpoints; or sync the two files by another means; or paste into a notes file. |
 
 ---

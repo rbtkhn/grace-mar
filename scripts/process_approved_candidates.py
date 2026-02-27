@@ -23,7 +23,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
-PENDING_PATH = PROFILE_DIR / "pending-review.md"
+RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
 SELF_PATH = PROFILE_DIR / "self.md"
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 INTENT_PATH = PROFILE_DIR / "intent.md"
@@ -58,10 +58,10 @@ def _next_id(content: str, prefix: str) -> str:
 
 def _set_user(user_id: str) -> None:
     """Configure per-user paths for this invocation."""
-    global USER_ID, PROFILE_DIR, PENDING_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH, SELF_ARCHIVE_PATH
+    global USER_ID, PROFILE_DIR, RECURSION_GATE_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH, SELF_ARCHIVE_PATH
     USER_ID = user_id.strip()
     PROFILE_DIR = REPO_ROOT / "users" / USER_ID
-    PENDING_PATH = PROFILE_DIR / "pending-review.md"
+    RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
     SELF_PATH = PROFILE_DIR / "self.md"
     EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
     INTENT_PATH = PROFILE_DIR / "intent.md"
@@ -464,7 +464,7 @@ def _validate_candidate_before_merge(candidate: dict, min_evidence_tier: int) ->
 
 def get_approved_in_candidates() -> list[dict]:
     """Return approved candidates from the Candidates section (not yet processed)."""
-    content = _read(PENDING_PATH)
+    content = _read(RECURSION_GATE_PATH)
     if not content:
         return []
     # Split at ## Processed — we only want candidates before that
@@ -821,7 +821,7 @@ def main() -> None:
     self_content = _read(SELF_PATH)
     evidence_content = _read(EVIDENCE_PATH)
     prompt_content = _read(PROMPT_PATH)
-    pending_content = _read(PENDING_PATH)
+    pending_content = _read(RECURSION_GATE_PATH)
     intent_profile = _load_intent_profile()
     blocks_to_move: list[str] = []
     applied_candidates: list[tuple[dict, str]] = []  # (c, act_id) for emit + SELF-ARCHIVE
@@ -868,7 +868,7 @@ def main() -> None:
         blocks_to_move.append(c["full_match"])
         applied_candidates.append((c, act_id))
 
-    # Move blocks from Candidates to Processed in pending-review.md
+    # Move blocks from Candidates to Processed in recursion-gate.md
     for block in blocks_to_move:
         pending_content = pending_content.replace(block, "", 1)
     pending_content = re.sub(r"\n{3,}", "\n\n", pending_content)
@@ -885,13 +885,13 @@ def main() -> None:
         SELF_PATH: _read(SELF_PATH),
         EVIDENCE_PATH: _read(EVIDENCE_PATH),
         PROMPT_PATH: _read(PROMPT_PATH),
-        PENDING_PATH: _read(PENDING_PATH),
+        RECURSION_GATE_PATH: _read(RECURSION_GATE_PATH),
     }
     file_plan = {
         SELF_PATH: self_content,
         EVIDENCE_PATH: evidence_content,
         PROMPT_PATH: prompt_content,
-        PENDING_PATH: pending_content,
+        RECURSION_GATE_PATH: pending_content,
     }
     _transactional_write(file_plan)
 
@@ -954,7 +954,7 @@ def main() -> None:
             SELF_PATH: original_files[SELF_PATH],
             EVIDENCE_PATH: original_files[EVIDENCE_PATH],
             PROMPT_PATH: original_files[PROMPT_PATH],
-            PENDING_PATH: original_files[PENDING_PATH],
+            RECURSION_GATE_PATH: original_files[RECURSION_GATE_PATH],
         }
         _transactional_write(rollback_plan)
         raise

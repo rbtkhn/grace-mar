@@ -48,7 +48,7 @@ No GitHub or command line required if someone else hosts the bot; if you self-ho
 - **Grace-Mar** — Identity Record + Voice (this repo; open-source).
 - **Khan Academy** — Free curriculum, practice, videos.
 - **Khanmigo or similar** — Optional paid tutoring layer.
-- **Session continuity** — Run `session_brief.py` before sessions; use PENDING-REVIEW as lightweight accountability (nothing merges until you approve).
+- **Session continuity** — Run `session_brief.py` before sessions; use RECURSION-GATE as lightweight accountability (nothing merges until you approve).
 
 This gives you a portable Record and a queryable Voice without a school contract. When the companion later applies to a school or joins a program, you hand them the export (see [PORTABILITY](portability.md)).
 

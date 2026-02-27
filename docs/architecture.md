@@ -661,7 +661,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 | **SKILLS** | Capability containers (THINK, WRITE, WORK) |
 | **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
 | **LIBRARY** (self-library) | Curated lookups (books, videos) for the bot |
-| **PENDING-REVIEW** | Staging area before merge |
+| **RECURSION-GATE** | Staging area before merge |
 | **prompt.py** | Emulation prompt (SYSTEM, ANALYST, LOOKUP, REPHRASE) |
 | **CMC** | Lookup engine (LIBRARY → CMC → LLM) |
 | **PRP** | Portable Record Prompt — pasteable identity for any LLM |
@@ -671,7 +671,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 
 | Bond | Flow |
 |------|------|
-| **Pipeline** | Signal detection → PENDING-REVIEW → user approval → merge into SELF, EVIDENCE, prompt |
+| **Pipeline** | Signal detection → RECURSION-GATE → user approval → merge into SELF, EVIDENCE, prompt |
 | **PRP refresh** | Merge triggers `export_prp` → PRP file updated → anchor stays in sync with Record |
 | **Lookup flow** | User question → LIBRARY → CMC → LLM → rephrased answer |
 | **Evidence linkage** | EVIDENCE entries reference SELF; RECENT in PRP pulls from EVIDENCE |
@@ -751,7 +751,7 @@ The fork's profile grows through two independent input channels. Both feed the s
 
 ### Channel 1: Bot (Automated)
 
-Conversations in the Telegram or WeChat bot are analyzed by an LLM analyst (`ANALYST_PROMPT` in `bot/prompt.py`). The analyst detects profile-relevant signals and stages candidates in `pending-review.md`. This runs automatically after bot exchanges.
+Conversations in the Telegram or WeChat bot are analyzed by an LLM analyst (`ANALYST_PROMPT` in `bot/prompt.py`). The analyst detects profile-relevant signals and stages candidates in `recursion-gate.md`. This runs automatically after bot exchanges.
 
 ```
 User ↔ Bot conversation
@@ -760,7 +760,7 @@ User ↔ Bot conversation
   Analyst (LLM)
        │
        ▼
-  pending-review.md (staged candidates)
+  recursion-gate.md (staged candidates)
        │
        ▼
   User approves/rejects
@@ -782,7 +782,7 @@ User: "we learned about volcanoes today" [+ optional artifact]
   Operator runs signal detection
        │
        ▼
-  pending-review.md (staged candidates)
+  recursion-gate.md (staged candidates)
        │
        ▼
   User approves/rejects
@@ -821,7 +821,7 @@ The analyst (automated or manual) detects three categories of signal:
 ### Pipeline Stages
 
 1. **Signal detection** — Identify profile-relevant information in the input
-2. **Candidate staging** — Write structured candidates to `pending-review.md` with analysis and recommendations
+2. **Candidate staging** — Write structured candidates to `recursion-gate.md` with analysis and recommendations
 3. **User review** — User approves, rejects, or modifies each candidate
 4. **Relay to record** — Approved candidates are merged into `self.md` (profile), `self-evidence.md` (evidence log), `bot/prompt.py` (emulation prompt), and `session-log.md` (history). This step is the **relay**: raw input has been gated and now crosses into the permanent Record.
 

@@ -13,9 +13,9 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 | Use Case | What it does | Permission |
 |----------|--------------|------------|
 | **Record as identity source** | Export SELF → user.md or SOUL.md | Export script (read-only) |
-| **Session continuity** | OpenClaw reads SESSION-LOG, PENDING-REVIEW, EVIDENCE | Read-only |
+| **Session continuity** | OpenClaw reads SESSION-LOG, RECURSION-GATE, EVIDENCE | Read-only |
 | **Artifacts as evidence** | OpenClaw outputs → "we did X" → pipeline | User invokes pipeline |
-| **Staging automation** | OpenClaw skill/cron stages to PENDING-REVIEW | Stage only, never merge |
+| **Staging automation** | OpenClaw skill/cron stages to RECURSION-GATE | Stage only, never merge |
 
 **Invariant:** The companion is always the gate. OpenClaw can stage; it cannot merge into the Record.
 
@@ -66,7 +66,7 @@ python scripts/process_approved_candidates.py --apply --approved-by <name> --rec
 
 - Raw EVIDENCE content (too large, not identity-defining)
 - Session logs (temporal, not identity)
-- PENDING-REVIEW (staging, not canonical)
+- RECURSION-GATE (staging, not canonical)
 
 ---
 
@@ -77,7 +77,7 @@ When running in a shared workspace or OpenClaw session, read these grace-mar fil
 | File | Purpose |
 |------|---------|
 | `users/[id]/session-log.md` | Last session summary; what happened |
-| `users/[id]/pending-review.md` | Any staged candidates awaiting approval |
+| `users/[id]/recursion-gate.md` | Any staged candidates awaiting approval |
 | `users/[id]/self-evidence.md` (last 1–2 entries) | Recent context for activities |
 
 ### OpenClaw Startup Additions
@@ -87,7 +87,7 @@ If OpenClaw has a startup checklist (e.g. `active-tasks.md`, `HEARTBEAT.md`), ad
 ```
 Grace-Mar continuity (if users/grace-mar exists):
 - [ ] Read last SESSION-LOG entry
-- [ ] Check PENDING-REVIEW — any candidates to process?
+- [ ] Check RECURSION-GATE — any candidates to process?
 - [ ] Skim last 1–2 EVIDENCE entries
 ```
 
@@ -124,7 +124,7 @@ OpenClaw-produced artifacts (writing, drawings, summaries) can feed the grace-ma
 1. User creates something with OpenClaw (e.g. story, research summary, drawing)
 2. User says: "we wrote a story about volcanoes today" (optionally attaching the file)
 3. Operator (Cursor session or pipeline) runs signal detection
-4. Candidates staged to PENDING-REVIEW
+4. Candidates staged to RECURSION-GATE
 5. User approves; merge into SELF, EVIDENCE, SESSION-LOG
 
 ### Path Convention
@@ -150,7 +150,7 @@ python integrations/openclaw_stage.py --user grace-mar --artifact ./outputs/sess
 python integrations/openclaw_stage.py --user grace-mar --text "we explored fractions in OpenClaw"
 ```
 
-This path only stages to `PENDING-REVIEW`; it never merges into the Record.
+This path only stages to `RECURSION-GATE`; it never merges into the Record.
 Inbound payloads also run an advisory constitutional check against `INTENT.md` and emit
 `intent_constitutional_critique` events (`advisory_clear` or `advisory_flagged`).
 
@@ -166,20 +166,20 @@ human arbitration:
 /resolve_debate DEBATE-0001 revise_rule
 ```
 
-Debate packets are stage-only artifacts in `PENDING-REVIEW`; resolving them emits
+Debate packets are stage-only artifacts in `RECURSION-GATE`; resolving them emits
 `intent_debate_packet_resolved` events and does not auto-merge Record content.
 
 ---
 
 ## 4. Staging Automation (OpenClaw Skill / Cron)
 
-An OpenClaw skill or cron job can run signal detection and **stage** candidates to PENDING-REVIEW. It must **never** merge.
+An OpenClaw skill or cron job can run signal detection and **stage** candidates to RECURSION-GATE. It must **never** merge.
 
 ### What the Agent May Do
 
 - Read SELF, EVIDENCE, SESSION-LOG
 - Analyze exchanges or artifacts for profile-relevant signals
-- Write new candidates to PENDING-REVIEW in the correct format
+- Write new candidates to RECURSION-GATE in the correct format
 
 ### What the Agent May NOT Do
 
@@ -187,9 +187,9 @@ An OpenClaw skill or cron job can run signal detection and **stage** candidates 
 - Change `status: approved` or move candidates to Processed
 - Delete or overwrite existing profile content
 
-### PENDING-REVIEW Candidate Format
+### RECURSION-GATE Candidate Format
 
-Each candidate uses this structure (see `users/grace-mar/pending-review.md`):
+Each candidate uses this structure (see `users/grace-mar/recursion-gate.md`):
 
 ```yaml
 status: pending
@@ -220,8 +220,8 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 | Action | Agent | User |
 |--------|-------|------|
 | Export Record → user.md | ✅ (read + transform) | — |
-| Read SESSION-LOG, PENDING-REVIEW, EVIDENCE | ✅ | ✅ |
-| Stage candidates to PENDING-REVIEW | ✅ | ✅ |
+| Read SESSION-LOG, RECURSION-GATE, EVIDENCE | ✅ | ✅ |
+| Stage candidates to RECURSION-GATE | ✅ | ✅ |
 | Approve/reject candidates | ❌ | ✅ |
 | Merge into SELF, EVIDENCE, prompt | ❌ | ✅ |
 | Invoke "we did X" pipeline | — | ✅ (operator assists) |
@@ -238,7 +238,7 @@ python integrations/openclaw_hook.py --user grace-mar --format md+manifest --emi
 
 **Session continuity (read first):**
 - `users/grace-mar/session-log.md`
-- `users/grace-mar/pending-review.md`
+- `users/grace-mar/recursion-gate.md`
 - `users/grace-mar/self-evidence.md` (last entries)
 
 **Pipeline invocation:**

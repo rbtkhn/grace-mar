@@ -1,6 +1,6 @@
 # Grace-Mar Browser Extension
 
-One-click capture from any URL to your Grace-Mar Record. Local only; stages to PENDING-REVIEW (user approves via /review in Telegram).
+One-click capture from any URL to your Grace-Mar Record. Local only; stages to RECURSION-GATE (user approves via /review in Telegram).
 
 ## Setup
 
@@ -27,7 +27,7 @@ One-click capture from any URL to your Grace-Mar Record. Local only; stages to P
 - Builds activity report: `we read "[page title]"` + URL (+ optional selected text/snippet)
 - POSTs to configurable `/stage` endpoint (default `http://localhost:5050/stage`)
 - Shows confirmation: "Saved! X items to review" (if staged) or "Added to log. X items to review"
-- Pipeline: stage → PENDING-REVIEW → user approves in Telegram via /review
+- Pipeline: stage → RECURSION-GATE → user approves in Telegram via /review
 - If server is unavailable, capture is queued locally and retried
 
 ## Requirements

@@ -18,7 +18,7 @@
 
 ### 1. Process the review queue
 
-**What it is:** User opens pending-review.md, changes `status: pending` to `approved` or `rejected` for each candidate, then tells the assistant **"approve"** — the agent immediately merges (one gate, no separate "process the review queue" step).
+**What it is:** User opens recursion-gate.md, changes `status: pending` to `approved` or `rejected` for each candidate, then tells the assistant **"approve"** — the agent immediately merges (one gate, no separate "process the review queue" step).
 
 **Impact:** 4 — If queue grows (e.g., after a long bot session), review becomes tedious. Skipping leaves orphaned candidates. No batch actions.
 
@@ -46,11 +46,11 @@
 
 ### 3. Integration (five-file sync on approval)
 
-**What it is:** When processing approved candidates, the assistant must update self.md, self-evidence.md (ACT-*), pending-review.md, session-log.md, and bot/prompt.py in one atomic pass. Any omission causes inconsistency.
+**What it is:** When processing approved candidates, the assistant must update self.md, self-evidence.md (ACT-*), recursion-gate.md, session-log.md, and bot/prompt.py in one atomic pass. Any omission causes inconsistency.
 
 **Impact:** 3 — Error-prone. One missed file = drift. Human must verify.
 
-**Effort:** 3 — Could add: (a) integration script that takes approved candidate IDs and performs all updates, (b) validator that checks consistency post-integration, (c) single "process" command that reads PENDING-REVIEW and applies changes.
+**Effort:** 3 — Could add: (a) integration script that takes approved candidate IDs and performs all updates, (b) validator that checks consistency post-integration, (c) single "process" command that reads RECURSION-GATE and applies changes.
 
 **Priority:** 3 ÷ 3 = **1.0**
 
@@ -60,7 +60,7 @@
 
 ### 4. Bot session review
 
-**What it is:** After a bot conversation, the user may want to review what happened. self-archive.md holds the gated approved log; session-transcript.md has the raw log. There's no summary, no "what's new in PENDING," no diff of profile changes. User must read archive + PENDING-REVIEW manually.
+**What it is:** After a bot conversation, the user may want to review what happened. self-archive.md holds the gated approved log; session-transcript.md has the raw log. There's no summary, no "what's new in PENDING," no diff of profile changes. User must read archive + RECURSION-GATE manually.
 
 **Impact:** 3 — Slows "what did we learn?" reflection. Hard to spot missed signals or duplicates.
 
@@ -78,7 +78,7 @@
 
 **Impact:** 4 — THINK module is underfed. Architecture expects THINK → SELF.interests, SKILLS.THINK, but there's no habit or tool.
 
-**Effort:** 2 — Options: (a) minimal READ template (title, date, tier, 1–2 comprehension notes), (b) "we finished [book]" operator flow that stages a READ candidate for PENDING-REVIEW, (c) analyst could flag book mentions in bot → stage as curiosity/knowledge (already happens for interest) but not as structured READ evidence.
+**Effort:** 2 — Options: (a) minimal READ template (title, date, tier, 1–2 comprehension notes), (b) "we finished [book]" operator flow that stages a READ candidate for RECURSION-GATE, (c) analyst could flag book mentions in bot → stage as curiosity/knowledge (already happens for interest) but not as structured READ evidence.
 
 **Priority:** 4 ÷ 2 = **2.0**
 

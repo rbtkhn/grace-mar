@@ -56,7 +56,7 @@ Strengthen the existing line ("If the signal could support an alternative interp
 
 **Proposal:** In `scripts/governance_checker.py`:
 
-- Add a **whitelist** of paths/scripts that are allowed to write to `users/*/self.md`, `users/*/self-evidence.md`, or `users/*/pending-review.md` (e.g. `scripts/process_approved_candidates.py`, and optionally `bot/core.py` only for appending to PENDING-REVIEW when staging). Any other code in `bot/` or `scripts/` that matches "write to self.md / self-evidence.md" (or open for write) and is **not** on the whitelist → violation.
+- Add a **whitelist** of paths/scripts that are allowed to write to `users/*/self.md`, `users/*/self-evidence.md`, or `users/*/recursion-gate.md` (e.g. `scripts/process_approved_candidates.py`, and optionally `bot/core.py` only for appending to RECURSION-GATE when staging). Any other code in `bot/` or `scripts/` that matches "write to self.md / self-evidence.md" (or open for write) and is **not** on the whitelist → violation.
 - Implement as: (1) extend `MERGE_WITHOUT_APPROVAL_PATTERNS` or add a new check that looks for `self.md` or `self-evidence.md` in a write/open path; (2) when a match is found, allow it only if the file doing the write is in the whitelist (e.g. `process_approved_candidates.py`). Exclude `governance_checker.py` and test files.
 
 **Files:** `scripts/governance_checker.py`.

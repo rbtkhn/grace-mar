@@ -50,7 +50,7 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
 SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "session-transcript.md"
-PENDING_REVIEW_PATH = REPO_ROOT / "users" / USER_ID / "pending-review.md"
+RECURSION_GATE_PATH = REPO_ROOT / "users" / USER_ID / "recursion-gate.md"
 OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
@@ -239,15 +239,15 @@ def operator_session_transcript():
     return SESSION_TRANSCRIPT_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
 
 
-@app.route("/operator/pending-review", methods=["GET"])
-def operator_pending_review():
-    """Return pending-review.md content for operator sync. Requires OPERATOR_FETCH_SECRET."""
+@app.route("/operator/recursion-gate", methods=["GET"])
+def operator_recursion_gate():
+    """Return recursion-gate.md content for operator sync. Requires OPERATOR_FETCH_SECRET."""
     ok, err = _operator_auth()
     if not ok:
         return err
-    if not PENDING_REVIEW_PATH.exists():
-        return jsonify({"error": "pending-review.md not found", "path": str(PENDING_REVIEW_PATH)}), 404
-    return PENDING_REVIEW_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
+    if not RECURSION_GATE_PATH.exists():
+        return jsonify({"error": "recursion-gate.md not found", "path": str(RECURSION_GATE_PATH)}), 404
+    return RECURSION_GATE_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
 
 
 @app.route("/api/ask", methods=["POST", "OPTIONS"])

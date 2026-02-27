@@ -43,7 +43,7 @@ So: **X as read-only feed into the Record (gated), not as a Voice channel.**
 1. **Auth** — OAuth 2.0 user context (or app-only for a single "Grace-Mar" account). Store token per user or per pilot.
 2. **Pull** — Periodically (cron) or on-demand: fetch home timeline, or list timeline, or bookmarks (depending on product choice). Stay within rate limits (Free: 100 reads/month; Basic: 10k).
 3. **Match** — Score items against Record: IX-B (curiosity), LIBRARY, SKILLS edge. Same style as inbound newsletter matching (Design Roadmap §3).
-4. **Stage** — Matches above threshold → PENDING-REVIEW with provenance (e.g. "X: @author, link, excerpt"). Use existing staging path (e.g. `/stage` or script analogous to `openclaw_stage.py`).
+4. **Stage** — Matches above threshold → RECURSION-GATE with provenance (e.g. "X: @author, link, excerpt"). Use existing staging path (e.g. `/stage` or script analogous to `openclaw_stage.py`).
 5. **Approve** — Mind approves in existing pipeline; merge into Record/LIBRARY/playlists as today.
 
 **Channel key:** e.g. `x:feed` or `x:{user_id}` for archive and pipeline events. Exchanges are "system → stage," not conversational; no `get_response` in the loop.
@@ -86,13 +86,13 @@ No change to `bot/core.py` for feed-only: no X channel in `get_response`. Only i
 | **Platform dependency** | X policy and pricing can change. Prefer thin integration: read → stage; no lock-in of Record content into X-native formats. |
 | **Public posting** | Do not implement Voice-on-X in pilot. If posting at all, explicit "Mind posts" flow only. |
 | **Rate limits** | Free tier 100 reads/month is tight. Basic ($200/mo) for any real feed volume. Design for "batch pull → match → stage" once per day or per N hours. |
-| **Data handling** | Tweets/post content in PENDING-REVIEW and pipeline events. Retain only what's needed for matching and provenance; document in privacy/DPA if needed. |
+| **Data handling** | Tweets/post content in RECURSION-GATE and pipeline events. Retain only what's needed for matching and provenance; document in privacy/DPA if needed. |
 
 ---
 
 ## 6. Recommendation
 
-1. **Implement feed consumer only** — Follow/list or bookmarks → match to Record (IX-B, LIBRARY) → stage to PENDING-REVIEW → Mind approves. Aligns with Design Roadmap §4 and tricameral mind (X feeds RECORD, gated by MIND; VOICE not on X).
+1. **Implement feed consumer only** — Follow/list or bookmarks → match to Record (IX-B, LIBRARY) → stage to RECURSION-GATE → Mind approves. Aligns with Design Roadmap §4 and tricameral mind (X feeds RECORD, gated by MIND; VOICE not on X).
 2. **Reuse patterns** — Staging like OpenClaw (stage-only script or `/stage`), existing pipeline and merge flow, `channel_key` for X.
 3. **Defer** — X as conversational channel (DM), Voice posting, and any write path until there is a clear product need and compliance path.
 4. **Document** — Add "X feed" to DESIGN-ROADMAP §4 and any integration table (e.g. OPENCLAW-INTEGRATION style) once we add an implementation ticket.

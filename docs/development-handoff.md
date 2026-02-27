@@ -51,7 +51,7 @@ Last updated: 2026-02-24
 
 ### This session (recommended order)
 - **Engagement export** — `scripts/export_engagement_profile.py`: JSON/markdown of interests, IX-B curiosity, IX-C personality, talent_stack for tutors/platforms. DESIGN-ROADMAP §9 and OPERATOR-BRIEF updated.
-- **Session continuity** — OPERATOR-BRIEF section "Session continuity & PENDING-REVIEW": before/after checklist, link to OPERATOR-WEEKLY-REVIEW.
+- **Session continuity** — OPERATOR-BRIEF section "Session continuity & RECURSION-GATE": before/after checklist, link to OPERATOR-WEEKLY-REVIEW.
 - **/debates** — Operator command lists unresolved debate packets; `list_unresolved_debate_packets()` in core.py.
 - **Companion terminology** — Pass over IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION; DEVELOPMENT-HANDOFF task 1 and 4 updated.
 - **docs/README** — Row for USING-GRACE-MAR-WITHOUT-A-SCHOOL; operator row uses "companion" not "user".

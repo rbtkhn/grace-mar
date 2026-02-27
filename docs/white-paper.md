@@ -137,7 +137,7 @@ A single artifact can populate all three dimensions. Entries link to evidence (A
 All profile changes pass through a user-controlled gate:
 
 1. **Signal detection** — LLM analyst identifies knowledge, curiosity, personality from input
-2. **Candidate staging** — Proposals written to pending-review.md
+2. **Candidate staging** — Proposals written to recursion-gate.md
 3. **User review** — Approve, reject, or modify
 4. **Integration** — Approved changes merge to SELF, EVIDENCE, prompt, SESSION-LOG
 
@@ -201,7 +201,7 @@ The Record exports to user.md, SOUL.md, and future Alpha/Incept-compatible forma
 
 ### Staging Contract
 
-Agents may stage candidates to PENDING-REVIEW. They may not merge. The format is open; the boundary is enforced. Schools, bots, and third-party tools can contribute; the user decides what enters.
+Agents may stage candidates to RECURSION-GATE. They may not merge. The format is open; the boundary is enforced. Schools, bots, and third-party tools can contribute; the user decides what enters.
 
 ### Future: Agent Manifest
 
@@ -329,7 +329,7 @@ The ideas behind Grace-Mar draw on the work of:
 | Metric | Target | Verification |
 |--------|--------|--------------|
 | Record completeness | IX-A, IX-B, IX-C populated | Dashboard, growth script |
-| Pipeline health | Candidates processed, not stale | PENDING-REVIEW queue |
+| Pipeline health | Candidates processed, not stale | RECURSION-GATE queue |
 | Gate integrity | Receipt coverage + auditable apply events | Merge logs + pipeline events |
 | Knowledge boundary | No undocumented references | Counterfactual harness |
 | Retention quality | Cohort week-4 and month-3 retention | Product analytics |

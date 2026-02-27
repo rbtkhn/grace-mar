@@ -1,5 +1,5 @@
 # Conflict rules for pipeline staging.
-# Used by conflict_check.py to flag contradictions before candidates hit PENDING-REVIEW.
+# Used by conflict_check.py to flag contradictions before candidates hit RECURSION-GATE.
 # See docs/contradiction-resolution.md for resolution format.
 
 # Personality opposites — pairs that typically contradict.

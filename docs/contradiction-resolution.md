@@ -47,11 +47,11 @@ superseded_entry:
 
 ## Conflict Detection (Implemented)
 
-The pipeline runs `bot/conflict_check.py` before appending to PENDING-REVIEW. It:
+The pipeline runs `bot/conflict_check.py` before appending to RECURSION-GATE. It:
 
 1. Compares new personality candidates to existing SELF traits (seed + IX-C)
 2. Flags contradictions using `bot/conflict_rules.yaml` (e.g., dependent vs independent)
-3. Appends `conflicts_detected` to the candidate YAML; user sees the flag in PENDING-REVIEW
+3. Appends `conflicts_detected` to the candidate YAML; user sees the flag in RECURSION-GATE
 4. Does **not** block staging — surfaces for user resolution (approve/reject/merge)
 
 Rules are editable in `conflict_rules.yaml`. V1 covers personality opposites only; knowledge/curiosity checks can be added later.

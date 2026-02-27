@@ -40,7 +40,7 @@ The **Identity Fork Protocol (IFP)** defines a standard for companion-owned, evi
 
 This is the sovereignty invariant. It is non-negotiable.
 
-- **Stage** — Propose candidates for addition to the Record (e.g., PENDING-REVIEW)
+- **Stage** — Propose candidates for addition to the Record (e.g., RECURSION-GATE)
 - **Merge** — Commit changes to SELF, EVIDENCE, or canonical profile
 
 Only the companion (or an explicitly delegated human) may merge. Agents, bots, and third-party systems may stage. The gate is architectural, not configurable.
@@ -124,7 +124,7 @@ Normative constraints:
 ### 4.1 Workflow
 
 1. **Detect** — Identify profile-relevant signals (knowledge, curiosity, personality)
-2. **Stage** — Write candidates to PENDING-REVIEW (or equivalent staging area)
+2. **Stage** — Write candidates to RECURSION-GATE (or equivalent staging area)
 3. **Review** — User approves, rejects, or modifies
 4. **Merge** — Approved changes integrated into SELF, EVIDENCE, SESSION-LOG, prompt
 

@@ -494,7 +494,7 @@ evidence_tier: 3  # ATTESTED — user approved
 - self.md — 4 new entries in LEARNED KNOWLEDGE (LEARN-0002 through LEARN-0005)
 - self-evidence.md — 4 new Activity Log entries (ACT-0002 through ACT-0005)
 - bot/prompt.py — 4 new lines in "WHAT YOU LEARNED" section
-- pending-review.md — All 10 candidates processed
+- recursion-gate.md — All 10 candidates processed
 
 **Significance:** First use of the gated pipeline. The analyst correctly identified lookups and knowledge signals. Rejection rate (60%) shows the analyst is somewhat noisy — future tuning will improve signal-to-noise.
 
@@ -525,7 +525,7 @@ evidence_tier: 3
 - self.md — 3 new entries in LEARNED KNOWLEDGE (LEARN-0006 to LEARN-0008), classical music added to PREFERENCES and INTERESTS
 - self-evidence.md — 3 new Activity Log entries (ACT-0006 to ACT-0008)
 - bot/prompt.py — 3 new lines in "WHAT YOU LEARNED", classical music added to "WHAT YOU LOVE"
-- pending-review.md — 6 candidates processed
+- recursion-gate.md — 6 candidates processed
 
 **Note:** ACT-0008 documents both the Nutcracker lookup and the seed gap correction for classical music interest.
 
@@ -554,7 +554,7 @@ evidence_tier: 3
 - self.md — 2 new entries in LEARNED KNOWLEDGE (LEARN-0009 to LEARN-0010)
 - self-evidence.md — 2 new Activity Log entries (ACT-0009 to ACT-0010)
 - bot/prompt.py — 2 new lines in "WHAT YOU LEARNED"
-- pending-review.md — 5 candidates processed
+- recursion-gate.md — 5 candidates processed
 
 ---
 
@@ -613,7 +613,7 @@ evidence_tier: 3
 - self.md — 2 new entries in IX-A. KNOWLEDGE (LEARN-0011 to LEARN-0012)
 - self-evidence.md — 2 new Activity Log entries (ACT-0011 to ACT-0012), activity type now includes `mind_category`
 - bot/prompt.py — 2 new lines in "YOUR KNOWLEDGE", analyst dedup list updated
-- pending-review.md — 4 candidates processed, processed entries now include `mind_category` field
+- recursion-gate.md — 4 candidates processed, processed entries now include `mind_category` field
 
 ---
 
@@ -656,7 +656,7 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 - self.md — 11 new IX-A Knowledge entries (LEARN-0013 to LEARN-0023), 1 new IX-B Curiosity entry (CUR-0002)
 - self-evidence.md — 1 consolidated Activity Log entry (ACT-0013) covering entire workbook
 - bot/prompt.py — Solar system added to "WHAT YOU KNOW", curiosity updated, analyst dedup updated
-- pending-review.md — 12 candidates processed
+- recursion-gate.md — 12 candidates processed
 
 **Note:** This extends Grace-Mar's space knowledge significantly. She already knew about Earth layers, Jupiter's Great Red Spot, and Mars/Olympus Mons from earlier sessions. The school workbook fills in the complete solar system picture at a first-grade vocabulary level.
 
@@ -694,14 +694,14 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 - self.md — LEARN-0024 (IX-A), CUR-0003 (IX-B), PER-0001 (IX-C, first personality entry)
 - self-evidence.md — ACT-0014
 - bot/prompt.py — Knowledge, curiosity, personality sections updated; analyst dedup updated
-- pending-review.md — 3 candidates processed
+- recursion-gate.md — 3 candidates processed
 
 ---
 
 ## Session 015 — Pipeline Review Queue (one-by-one)
 
 **Date:** 2026-02-21
-**Method:** Operator processes PENDING-REVIEW candidates one at a time
+**Method:** Operator processes RECURSION-GATE candidates one at a time
 
 **CANDIDATE-0045 (Barbie):** Rejected
 

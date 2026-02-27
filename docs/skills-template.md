@@ -218,7 +218,7 @@ Evidence accrues to tagged modules.
 
 **Skill modules (THINK, WRITE, WORK) update only capability** — comprehension, production, making. They do *not* extract or write knowledge, curiosity, or personality into SELF.
 
-**The analyst** (see ARCHITECTURE, pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from the same inputs and stages candidates to PENDING-REVIEW → SELF after companion approval.
+**The analyst** (see ARCHITECTURE, pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from the same inputs and stages candidates to RECURSION-GATE → SELF after companion approval.
 
 So **one input** (e.g. art, music, journal, conversation) can update both: (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS.
 
