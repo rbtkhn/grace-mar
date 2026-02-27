@@ -37,15 +37,15 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 **Formal specification:** Module set, boundaries, and the rule that Voice and written profile are functions of the Record (with skill-write as linguistic shaper) are specified in [SKILLS-MODULARITY](skills-modularity.md).
 
-**Standard labels:** For APIs, docs, and cross-references use **self-skill-write**, **self-skill-read**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-).
+**Standard labels:** For APIs, docs, and cross-references use **self-skill-write**, **self-skill-think**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-).
 
 **Naming:** The third module is named **WORK** in prose and design (making, planning, execution, exchange, creation, exploration). **Internal identifiers remain BUILD** for compatibility: in skills.md the section is "BUILD Container"; evidence IDs use CREATE-nnn and ACT-nnn. No change to existing evidence or scripts.
 
-All skills organize under three fundamental cognitive modules: READ, WRITE, WORK. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
+All skills organize under three fundamental cognitive modules: THINK, WRITE, WORK. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
 
 ### II-A. Semi-Independent Executor Contract
 
-READ, WRITE, and WORK may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
+THINK, WRITE, and WORK may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
 
 Constitutional constraints (mandatory):
 - Stage-only: no executor may merge into canonical Record files.
@@ -62,7 +62,7 @@ Suggested default emphasis profile:
 
 | Executor | Weight profile |
 |----------|----------------|
-| READ | Curiosity > Knowledge > Personality |
+| THINK | Curiosity > Knowledge > Personality |
 | WRITE | Personality > Knowledge > Curiosity |
 | WORK | Knowledge > Personality > Curiosity |
 
@@ -95,10 +95,12 @@ The user produces something. Grace-Mar captures and analyzes.
 > After 30 days: vocabulary profile, style fingerprint, 
 > topic map, emotional range, complexity baseline.
 
-### READ (Intake)
+### THINK (Intake, Learning)
+
+**Module intent:** THINK captures capability from evidence. When WORK has horizon goals (e.g. SAT), THINK prioritizes content and assessments that move the companion toward those goals. WORK reads THINK state to measure progress.
 
 The user consumes content. Grace-Mar tracks and assesses comprehension.
-READ is multimodal by default and must not be limited to text.
+THINK is multimodal by default and must not be limited to text.
 
 **Activities:**
 - Books read (with summaries, reactions)
@@ -126,9 +128,15 @@ READ is multimodal by default and must not be limited to text.
 > Grace-Mar captures: comprehension level, new vocabulary,
 > character understanding, plot inference, emotional response.
 
+**SAT readiness (when WORK has SAT goal):** Add optional `sat_readiness` block in skill-think.md — maps THINK/MATH/Lexile to SAT domains (EBRW Reading, Math), defines trajectory and next milestones. Use **general principles** (comprehension at edge, inference through "why?", vocabulary in context, evidence "what in the story shows that?", simple choices that scale) — developmentally appropriate at companion's level; no SAT-specific mechanics for young companions. WORK reads this to measure progress. See pilot skill-think.md § SAT READINESS.
+
 ### WORK (Making, Planning, Execution, Exchange)
 
 *(Internal identifier: BUILD container in skills.md; evidence CREATE-nnn, ACT-nnn. Kept for compatibility.)*
+
+**Module intent:** WORK serves as tutor for the companion in the making, planning, execution, and creation domain — proposing activities at the container edge, answering questions, scaffolding next steps, aligned with work goals and life mission.
+
+**Module objectives:** Implement and maintain the Grace-Mar Telegram and WeChat bots; develop and maintain the Grace-Mar web app at grace-mar.com; curate and maintain self-library.
 
 The user makes things, plans, executes, or engages in exchange. Grace-Mar captures capability in building, delivery, and exchange. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
 
@@ -178,6 +186,10 @@ The user makes things, plans, executes, or engages in exchange. Grace-Mar captur
 - Visual expression (from artwork)
 - Subject matter (what they choose to create)
 
+**Companion work goals and life mission:**
+- **work_goals** (skill-work.md): Companion's own objectives for making, planning, execution, creation — near_term, horizon; evidence-linked when captured. Gated.
+- **life_mission** (self.md § VI VALUES): What they want to become or contribute. Identity-level; WORK goals align with it. See ID-TAXONOMY and SKILLS-MODULARITY.
+
 ---
 
 ## III. MODULE INTERACTIONS
@@ -187,14 +199,14 @@ The three modules are not isolated. Most activities engage multiple modules.
 | Activity | Primary | Secondary |
 |----------|---------|-----------|
 | Write a story | WRITE | WORK |
-| Summarize a book | READ | WRITE |
+| Summarize a book | THINK | WRITE |
 | Solve a puzzle | WORK | — |
-| Explain how something works | WRITE | READ |
-| Ask "what if" about a story | WORK | READ |
+| Explain how something works | WRITE | THINK |
+| Ask "what if" about a story | WORK | THINK |
 | Journal about the day | WRITE | — |
-| Follow instructions to build | READ | WORK |
+| Follow instructions to build | THINK | WORK |
 | Run a lemonade stand | WORK | WRITE |
-| Class food truck project | WORK | READ |
+| Class food truck project | WORK | THINK |
 | Create content for audience | WORK | WRITE |
 | Manage allowance, budget | WORK | — |
 | Drawing, artwork, invention | WORK | — |
@@ -204,11 +216,11 @@ Evidence accrues to tagged modules.
 
 ### Skill modules vs. self (IX-A/B/C)
 
-**Skill modules (READ, WRITE, WORK) update only capability** — comprehension, production, making. They do *not* extract or write knowledge, curiosity, or personality into SELF.
+**Skill modules (THINK, WRITE, WORK) update only capability** — comprehension, production, making. They do *not* extract or write knowledge, curiosity, or personality into SELF.
 
 **The analyst** (see ARCHITECTURE, pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from the same inputs and stages candidates to PENDING-REVIEW → SELF after companion approval.
 
-So **one input** (e.g. art, music, journal, conversation) can update both: (1) a skill container (READ/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS.
+So **one input** (e.g. art, music, journal, conversation) can update both: (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS.
 
 ---
 
@@ -272,7 +284,7 @@ Analogous to CMC's Recursive Learning Ledger (RLL): activities feed capability c
 ```typescript
 interface CapabilityClaim {
   id: string;                    // CAP-WRITE-VOC-001
-  module: 'WRITE' | 'READ' | 'BUILD';
+  module: 'WRITE' | 'THINK' | 'BUILD';
   dimension: string;             // "vocabulary", "comprehension", "originality"
   statement: string;             // "Uses age-appropriate vocabulary with variety"
   
@@ -308,7 +320,7 @@ Evidence: 42 journal entries, 8 stories
 Status: established
 
 CAP-READ-COMP-001
-Module: READ
+Module: THINK
 Dimension: comprehension
 Statement: Can accurately summarize chapter-length narratives
 Level: 3
@@ -363,7 +375,7 @@ Each module dimension has 5 developmental levels.
 | 4 | Proficient (1000+ words, nuanced) |
 | 5 | Advanced (rich, precise, domain-specific) |
 
-**READ.comprehension**
+**THINK.comprehension**
 | Level | Description |
 |-------|-------------|
 | 1 | Recalls main events |
@@ -427,7 +439,7 @@ GAP-WRITE-LOGIC-001
 - Simple sentence structures (no complex clauses)
 - Weak logical organization
 
-**READ gaps:**
+**THINK gaps:**
 - Inference limited (misses implied meaning)
 - Difficulty with non-fiction
 - Low retention of factual content
@@ -482,7 +494,7 @@ STRUGGLE-WRITE-001: Complex Sentences
   Evidence: Activities 0024, 0031, 0042, 0056
 
 STRUGGLE-READ-001: Non-Fiction Comprehension
-  Module: READ
+  Module: THINK
   Dimension: comprehension
   First observed: 2026-02-15
   Status: ONGOING
@@ -504,7 +516,7 @@ STRUGGLE-READ-001: Non-Fiction Comprehension
 - Organizing ideas logically
 - Expressing emotions in words
 
-**READ struggles:**
+**THINK struggles:**
 - Comprehending complex text
 - Making inferences
 - Retaining factual information
@@ -541,8 +553,8 @@ ACTIVITY TYPE:
 [journal | story | summary | question | conversation | creative | artwork | building | problem | business | project]
 
 MODULE TAGS:
-- Primary: [WRITE | READ | BUILD]
-- Secondary: [WRITE | READ | BUILD | none]
+- Primary: [WRITE | THINK | BUILD]
+- Secondary: [WRITE | THINK | BUILD | none]
 
 CONTENT:
 [Full text, transcript, image file, or description of activity content]
@@ -557,7 +569,7 @@ If WRITE:
 - Topics: [subject tags]
 - Logic: [structure, argument]
 
-If READ:
+If THINK:
 - Content consumed: [book, article, video title, music piece, image/diagram/map]
 - Input modality: [text | video | audio_music | image_diagram_map | mixed]
 - Source reference: [url | file path | media id | library id]
@@ -710,7 +722,7 @@ SKILLS/
 │   ├── logic/                # Argument, sequence, structure
 │   └── growth/               # Trajectory over time
 │
-├── READ/
+├── THINK/
 │   ├── comprehension/        # Understanding what was consumed
 │   ├── inference/            # Conclusions beyond explicit
 │   ├── vocabulary/           # Words acquired
@@ -868,7 +880,7 @@ The three modules are CONTAINERS that define current capability boundaries. The 
 Each module has a current boundary:
 
 ```
-READ Container:
+THINK Container:
 ├── Vocabulary: ~800 words (level 3)
 ├── Comprehension: chapter books (level 3)
 ├── Inference: basic predictions (level 2)
@@ -927,7 +939,7 @@ How evaluators interact with the SKILLS module.
 > "How well does [user] write?"
 > Returns: Levels across vocabulary, complexity, style, expression, logic
 
-**READ capability:**
+**THINK capability:**
 > "How well does [user] comprehend?"
 > Returns: Levels across comprehension, inference, vocabulary acquisition
 
@@ -1030,11 +1042,11 @@ Journal Entry → WRITE Analysis → SELF Update
                     └── WRITE capability claims updated
 ```
 
-### The READ → SELF Pipeline
+### The THINK → SELF Pipeline
 
-Every READ activity triggers a SELF update:
+Every THINK activity triggers a SELF update:
 
-| READ data | Updates SELF component |
+| THINK data | Updates SELF component |
 |-----------|------------------------|
 | content chosen | interests (topics they seek out) |
 | genres preferred | preferences.favorites |
@@ -1044,7 +1056,7 @@ Every READ activity triggers a SELF update:
 
 **Example:**
 ```
-READ Activity: Finished "Charlotte's Web" (2nd read)
+THINK Activity: Finished "Charlotte's Web" (2nd read)
     │
     └── SELF updates:
         ├── interests: animals, farm life, friendship

@@ -15,7 +15,7 @@ Two core modules define the fork:
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
-| **SKILLS** | READ, WRITE, BUILD capability containers | What they CAN DO |
+| **SKILLS** | THINK, WRITE, BUILD capability containers | What they CAN DO |
 
 Post-seed growth is organized into a **three-dimension mind model**:
 

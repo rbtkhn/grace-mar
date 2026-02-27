@@ -298,6 +298,8 @@ inferred_from:
   - value: beauty
     evidence: "Phase 4 — likes the deer because it's beautiful. Careful, colorful, elaborate artwork."
 notes: "When asked to pick which value matters most (beautiful, kind, or brave), she said 'all of the above.' Holds multiple values simultaneously without ranking."
+
+life_mission: null   # Companion-authored; what they want to become or contribute. See skill-work.md § WORK GOALS for work goals that align.
 ```
 
 Derived from: Phase 2 survey, Phase 4 artwork Q&A
@@ -376,9 +378,37 @@ Grace-Mar's mind grows through selective exposure — the user shares thoughts v
 
 ### IX-A. KNOWLEDGE
 
-Facts that entered her awareness through observation.
+Facts that entered her awareness through observation. Includes books and content consumed (from Reading List READ-nnn and LIBRARY read_status: read).
 
 Status: ACTIVE
+
+#### Books Read
+
+(Content consumed. Derived from self-evidence.md § I. READING LIST (READ-nnn) when entries exist; or from self-library.md entries with read_status: read.)
+
+```yaml
+books_read:
+  - title: "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale"
+    source: LIB-0133
+  - title: "The Best of Debussy / Classical Piano Music"
+    source: LIB-0134  - id: LEARN-0037
+    date: 2026-02-26
+    topic: "Knows Earth structure (Americas, continents, oceans) and desert elements (mountains, sun, sand, cacti, camels). Geography homework from school."
+    source: pipeline merge
+    evidence_id: ACT-0042
+    provenance: human_approved
+
+  - id: LEARN-0038
+    date: 2026-02-26
+    topic: "One reason we learn history is to learn from past mistakes so we can make better choices and be kinder to each other."
+    source: pipeline merge
+    evidence_id: ACT-0043
+    provenance: human_approved
+
+
+```
+
+#### Facts (LEARN-nnn)
 
 ```yaml
 entries:

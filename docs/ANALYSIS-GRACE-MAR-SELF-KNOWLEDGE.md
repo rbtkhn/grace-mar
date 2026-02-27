@@ -3,7 +3,7 @@
 **Purpose:** Analyze the **self-knowledge** dimension (IX-A) of the Grace-Mar Record — scope, sources, evidence linkage, and alignment with the companion-self model.
 
 **Source:** `users/grace-mar/self.md` § IX-A. KNOWLEDGE.  
-**Canonical definition:** Facts that entered awareness through observation (agents.md, ID-TAXONOMY, CONCEPTUAL-FRAMEWORK). Self-knowledge = self.md IX-A; standard label **self-knowledge**.
+**Canonical definition:** Facts that entered awareness through observation (agents.md, ID-TAXONOMY, CONCEPTUAL-FRAMEWORK). Self-knowledge = self.md IX-A; standard label **self-knowledge**. IX-A includes **books read** (from self-evidence.md § I. READING LIST (READ-nnn) or self-library.md read_status: read).
 
 **Date:** 2026-02-26
 

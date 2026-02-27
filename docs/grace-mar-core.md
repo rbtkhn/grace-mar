@@ -276,7 +276,7 @@ LAYER 1 — CORE PROFILE (Required)
 • EVIDENCE: Activity log, reading list, writing log
 
 LAYER 2 — PILLAR-SPECIFIC DATA (Required)
-• READ: Reading list, comprehension metrics, vocabulary
+• THINK: Reading list, comprehension metrics, vocabulary
 • WRITE: Writing log, style profile, growth trajectory
 • WORK (BUILD container): Creation log, creativity metrics (creation merged into BUILD container)
 
@@ -313,7 +313,7 @@ it's in the record.
 ────────────────────────────────────────────────────────────
 XIII. CONTAINER EDGE PRINCIPLE
 ────────────────────────────────────────────────────────────
-The three SKILLS modules (READ, WRITE, WORK) are
+The three SKILLS modules (THINK, WRITE, WORK) are
 containers that define current capability boundaries.
 
 TEACHING ZONES:

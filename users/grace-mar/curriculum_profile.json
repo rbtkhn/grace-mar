@@ -3,7 +3,7 @@
   "grace_mar": true,
   "curriculum_ready": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-02-22T10:56:13.478313",
+  "generated_at": "2026-02-26T13:55:40.380328",
   "provenance": "human_approved",
   "lexile_output": "600L",
   "access_needs": {
@@ -15,6 +15,8 @@
     "age": 6
   },
   "knowledge": [
+    "Knows Earth structure (Americas, continents, oceans) and desert elements (mounta",
+    "One reason we learn history is to learn from past mistakes so we can make better",
     "George Washington \u2014 first president of the United States",
     "Jupiter's Great Red Spot \u2014 giant storm bigger than Earth",
     "Mars \u2014 the red planet with Olympus Mons",
@@ -37,9 +39,7 @@
     "Neptune \u2014 8th planet, gas giant, wild winds",
     "Pluto \u2014 dwarf planet, 3 small moons",
     "Earth's Moon \u2014 sun's light bouncing off, 6 astronaut landings",
-    "Asteroid Belt \u2014 ring of rocks between Mars and Jupiter",
-    "Egyptian pharaoh portrait \u2014 King Tut's death mask",
-    "Black holes \u2014 places in space with super strong gravity"
+    "Asteroid Belt \u2014 ring of rocks between Mars and Jupiter"
   ],
   "curiosity": [
     "Classical music and ballet",
@@ -49,38 +49,55 @@
     "Reptiles \u2014 snakes and lizards",
     "Rocks and gemstones",
     "Space, animals, art \u2014 want to learn more",
-    "Things from imagination \u2014 favorite thing to make"
+    "Things from imagination \u2014 favorite thing to make",
+    "Copp\u00e9lia \u2014 Bolshoi Ballet video (Natalia Osipova)",
+    "Debussy \u2014 classical piano for bedtime",
+    "Conservation success stories (human impact in nature) \u2014 strong curiosity, with p",
+    "Conservation execution mechanics \u2014 curiosity about what works step-by-step, spec",
+    "Bach Goldberg Variations \u2014 for bedtime (alongside Debussy)",
+    "Tchaikovsky Andante cantabile \u2014 for listening",
+    "History \u2014 why it matters; curiosity about learning from the past to make better "
   ],
   "personality": [],
   "skills_edge": {
-    "read": "Longer independent text; early chapter books; inference questions; retelling with explicit sentence structure",
-    "write": "Capitals at sentence start (inconsistent); variety of connectors (then, so, but, also); narrative/story writing (fiction); longer compositions",
-    "imagine": "Narrative creation from prompts; cross-language creative tasks; independent scene composition",
+    "think": "Longer independent text; early chapter books; inference questions; retelling with explicit sentence structure",
     "math": "Telling time; place value; double-digit operations",
-    "chinese": "First character recognition; expanding vocabulary beyond home context"
+    "chinese": "First character recognition; expanding vocabulary beyond home context",
+    "write": "Capitals at sentence start (inconsistent); variety of connectors (then, so, but, also); narrative/story writing (fiction); longer compositions",
+    "work": "Narrative creation from prompts; cross-language creative tasks; independent scene composition; planning/execution evidenced via WORK probe (step order, next step, making method)"
   },
   "interests": [],
   "evidence_anchors": [
+    "ACT-0043",
+    "ACT-0042",
+    "ACT-0041",
+    "ACT-0040",
+    "ACT-0039",
+    "ACT-0038",
+    "ACT-0037",
+    "ACT-0036",
+    "ACT-0035",
+    "ACT-0034",
+    "ACT-0033",
+    "ACT-0032",
+    "ACT-0031",
+    "ACT-0030",
+    "ACT-0029",
+    "ACT-0028",
+    "ACT-0027",
+    "ACT-0026",
+    "ACT-0025",
+    "ACT-0024",
+    "ACT-0023",
+    "ACT-0022",
+    "ACT-0021",
     "ACT-0020",
     "ACT-0019",
     "ACT-0018",
     "ACT-0017",
     "ACT-0016",
     "ACT-0015",
-    "ACT-0014",
-    "ACT-0013",
-    "ACT-0012",
-    "ACT-0011",
-    "ACT-0010",
-    "ACT-0009",
-    "ACT-0008",
-    "ACT-0007",
-    "ACT-0006",
-    "ACT-0005",
-    "ACT-0004",
-    "ACT-0003",
-    "ACT-0002",
-    "ACT-0001"
+    "ACT-0014"
   ],
   "library": [
     {
@@ -111,7 +128,7 @@
       ]
     },
     {
-      "title": "Usborne Complete Greek Myths: An Illustrated Collection of Ancient Greek Mythology Featuring Maps and a Glossary",
+      "title": "Greek Myths (Bulfinch, PG 22381)",
       "scope": [
         "mythology",
         "Greek myths",
@@ -119,7 +136,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Odyssey",
+      "title": "The Odyssey (Homer, PG 1727)",
       "scope": [
         "mythology",
         "Greek",
@@ -128,7 +145,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Stories from India",
+      "title": "Stories from India (PG 2388)",
       "scope": [
         "mythology",
         "India",
@@ -137,14 +154,14 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Adventure Stories",
+      "title": "Adventure classics (PG 521, 120, 829)",
       "scope": [
         "adventure",
         "stories"
       ]
     },
     {
-      "title": "Usborne Illustrated Bible Stories",
+      "title": "Bible stories (KJV, PG 10)",
       "scope": [
         "Bible",
         "stories",
@@ -152,7 +169,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Stories from China",
+      "title": "Stories from China (PG 25240)",
       "scope": [
         "China",
         "stories",
@@ -160,7 +177,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Myths From Around The World",
+      "title": "Myths from around the world (Bulfinch, PG 3327)",
       "scope": [
         "mythology",
         "world myths",
@@ -168,7 +185,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Ballet Stories",
+      "title": "Ballet stories (PG 38733)",
       "scope": [
         "ballet",
         "dance",
@@ -176,7 +193,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Classics: Secret Garden & Other Stories",
+      "title": "The Secret Garden (PG 17396)",
       "scope": [
         "classics",
         "Secret Garden",
@@ -184,7 +201,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Stories from Aesop: A Beautifully Illustrated Collection of Timeless Fables",
+      "title": "Aesop",
       "scope": [
         "fables",
         "Aesop",
@@ -192,7 +209,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Stories from the Greek Myths",
+      "title": "Greek myths (PG 11582)",
       "scope": [
         "mythology",
         "Greek myths",
@@ -200,7 +217,7 @@
       ]
     },
     {
-      "title": "Usborne Illustrated Norse Myths",
+      "title": "Norse myths (Guerber, PG 28497)",
       "scope": [
         "mythology",
         "Norse",

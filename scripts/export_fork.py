@@ -2,7 +2,7 @@
 """
 Export the cognitive fork to a single portable JSON file.
 
-Reads self.md, self-evidence.md, and library.md for the given user and optionally
+Reads self.md, self-evidence.md, and self-library.md for the given user and optionally
 fork-manifest.json, then writes a structured JSON export for backup, portability,
 or external tooling.
 
@@ -55,7 +55,7 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     profile_dir = REPO_ROOT / "users" / user_id
     self_path = profile_dir / "self.md"
     evidence_path = profile_dir / "self-evidence.md"
-    library_path = profile_dir / "library.md"
+    library_path = profile_dir / "self-library.md"
     manifest_path = profile_dir / "fork-manifest.json"
 
     self_raw = _read(self_path)

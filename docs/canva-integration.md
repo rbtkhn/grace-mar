@@ -145,7 +145,7 @@ Projecting technology trends (AI-assisted design, personalization, multimodal cr
 | Priority | Idea | Rationale |
 |----------|------|-----------|
 | 1 | Today I… Auto-Cards | Highest value-to-effort; directly feeds JOURNAL and evidence |
-| 2 | Reading & Story Response Cards | Aligns with LIBRARY; supports READ + BUILD |
+| 2 | Reading & Story Response Cards | Aligns with LIBRARY; supports THINK + BUILD |
 | 3 | Growth Portfolios | Clear parent/school value; uses existing data |
 | 4 | Record-Aware Templates | Differentiator; makes Canva "for this child" |
 | 5 | Collaborative Family Sessions | Habit-forming; strong WORK creation evidence |

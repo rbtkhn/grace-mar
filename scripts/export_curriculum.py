@@ -91,9 +91,9 @@ def _extract_access_needs(self_content: str, lexile: str | None) -> dict:
 
 
 def _extract_skills_edge(skills_content: str) -> dict:
-    """Extract edge from each container: READ, WRITE, BUILD, MATH, CHINESE."""
+    """Extract edge from each container: THINK, WRITE, WORK, MATH, CHINESE."""
     edges = {}
-    blocks = re.split(r"\n### ", skills_content)
+    blocks = re.split(r"\n#{2,3} ", skills_content)
     for block in blocks[1:]:  # skip header
         name_match = re.match(r"(\w+)", block)
         if not name_match:
@@ -132,9 +132,12 @@ def export_curriculum(user_id: str = "grace-mar") -> dict:
     """Build curriculum-oriented export for adaptive curriculum engines."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_content = _read(profile_dir / "self.md")
-    skills_content = _read(profile_dir / "skills.md")
+    skills_content = "\n".join(
+        _read(profile_dir / p)
+        for p in ["skills.md", "skill-think.md", "skill-write.md", "skill-work.md"]
+    )
     evidence_content = _read(profile_dir / "self-evidence.md")
-    library_content = _read(profile_dir / "library.md")
+    library_content = _read(profile_dir / "self-library.md")
 
     identity_block = re.search(r"## I\. IDENTITY(.*?)(?=## |\Z)", self_content, re.DOTALL)
     identity_block = identity_block.group(1) if identity_block else ""

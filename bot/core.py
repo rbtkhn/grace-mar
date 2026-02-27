@@ -80,7 +80,7 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
 PENDING_REVIEW_PATH = PROFILE_DIR / "pending-review.md"
 MEMORY_PATH = PROFILE_DIR / "memory.md"
-LIBRARY_PATH = PROFILE_DIR / "library.md"
+LIBRARY_PATH = PROFILE_DIR / "self-library.md"
 COMPUTE_LEDGER_PATH = PROFILE_DIR / "compute-ledger.jsonl"
 PIPELINE_EVENTS_PATH = PROFILE_DIR / "pipeline-events.jsonl"
 

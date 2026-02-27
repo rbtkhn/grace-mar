@@ -120,7 +120,7 @@ Everything else is inferred from activity:
 - Linguistic style ← WRITE activities
 - Interests ← all modules
 - Personality ← observed patterns
-- Values ← READ choices, WRITE content
+- Values ← THINK choices, WRITE content
 
 ### Evolution
 
@@ -140,21 +140,21 @@ Contains what the companion CAN DO — capabilities that grow through authentic 
 
 ### The Three Modules
 
-Skills organize under three fundamental cognitive modules: READ, WRITE, WORK. For a formal specification of module boundaries, output functions (Voice and profile as functions of skill-write), and invariants, see [SKILLS-MODULARITY](skills-modularity.md). **Standard labels** (for APIs, docs, cross-references): **self-skill-write**, **self-skill-read**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-). Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). **Naming:** The third module is WORK in prose; internal identifiers remain BUILD (SKILLS BUILD container, CREATE-nnn, ACT-nnn) for compatibility. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
+Skills organize under three fundamental cognitive modules: THINK, WRITE, WORK. For a formal specification of module boundaries, output functions (Voice and profile as functions of skill-write), and invariants, see [SKILLS-MODULARITY](skills-modularity.md). **Standard labels** (for APIs, docs, cross-references): **self-skill-write**, **self-skill-think**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-). Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). **Naming:** The third module is WORK in prose; internal identifiers remain BUILD (SKILLS BUILD container, CREATE-nnn, ACT-nnn) for compatibility. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
 
 | Module | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
-| **READ** | Intake, comprehension (multimodal) | Text, video, music/audio, images/diagrams/maps, mixed media; summaries and interpretations |
+| **THINK** | Intake, learning, comprehension (multimodal) | Text, video, music/audio, images/diagrams/maps, mixed media; summaries and interpretations |
 | **WORK** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content with audience, things built, drawings, inventions, budgeting |
 
 ### Semi-Independent Executor Policy
 
-READ/WRITE/WORK may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate.
+THINK/WRITE/WORK may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate.
 
 | Executor | Primary objective | SELF input emphasis | Default posture |
 |----------|-------------------|---------------------|-----------------|
-| **READ** | Perception and comprehension fidelity | IX-B Curiosity first, IX-A Knowledge second, IX-C Personality third | Explore broadly; abstain when evidence is thin |
+| **THINK** | Perception and comprehension fidelity | IX-B Curiosity first, IX-A Knowledge second, IX-C Personality third | Explore broadly; abstain when evidence is thin |
 | **WRITE** | Expression and explanation in-character | IX-C Personality first, IX-A Knowledge second, IX-B Curiosity third | Preserve voice and tone; avoid unsupported claims |
 | **WORK** | Planning, execution, and deliverable quality | IX-A Knowledge first, IX-C Personality second, IX-B Curiosity third | Favor explicit constraints, trade-offs, and escalation |
 
@@ -164,8 +164,8 @@ Shared constraints for all three:
 - knowledge boundary compliance,
 - conflict resolution through companion approval.
 
-READ-specific capture contract (normative):
-- treat READ as media-agnostic (not text-only),
+THINK-specific capture contract (normative):
+- treat THINK as media-agnostic (not text-only),
 - record input modality and source/artifact reference in activity evidence,
 - evaluate comprehension/inference per modality, then route profile-relevant signals through the same gated pipeline.
 
@@ -180,7 +180,7 @@ SKILLS/
 │   ├── expression/       # Emotional content
 │   └── logic/            # Argument, sequence
 │
-├── READ/
+├── THINK/
 │   ├── comprehension/    # Understanding content
 │   ├── inference/        # Conclusions beyond explicit
 │   ├── vocabulary/       # Words acquired
@@ -211,7 +211,7 @@ Activity: Daily journal entry (WRITE)
 ### Characteristics
 
 - **Activity-driven**: Grows from authentic production, not explicit teaching
-- **Module-organized**: READ, WRITE, WORK as primary structure
+- **Module-organized**: THINK, WRITE, WORK as primary structure
 - **Dimension-tracked**: Each module has measurable sub-dimensions
 - **Level-based**: 5 developmental levels per dimension
 - **Evidence-linked**: Every claim traces to captured activities
@@ -234,7 +234,7 @@ WRITE Activity ──→ SELF.linguistic_style (primary source)
                    SELF.interests (topics written about)
                    SELF.emotional_patterns (expression)
 
-READ Activity ───→ SELF.interests (what they choose)
+THINK Activity ───→ SELF.interests (what they choose)
                    SELF.preferences (content patterns)
                    SELF.values (themes they return to)
 
@@ -254,11 +254,11 @@ Every WRITE activity triggers a SELF update:
 | expression | emotional_patterns |
 | topics | interests |
 
-### The READ → SELF Pipeline
+### The THINK → SELF Pipeline
 
-Every READ activity triggers a SELF update:
+Every THINK activity triggers a SELF update:
 
-| READ data | Updates SELF component |
+| THINK data | Updates SELF component |
 |-----------|------------------------|
 | content chosen | interests (topics they seek out) |
 | genres preferred | preferences.favorites |
@@ -316,7 +316,7 @@ The system should:
 
 ## Container Edge Principle
 
-The three SKILLS modules (READ, WRITE, WORK) are **containers** that define what the companion currently knows and can do. The system proposes activities at the **edge** of these containers.
+The three SKILLS modules (THINK, WRITE, WORK) are **containers** that define what the companion currently knows and can do. The system proposes activities at the **edge** of these containers.
 
 ### The Container Model
 
@@ -332,7 +332,7 @@ The three SKILLS modules (READ, WRITE, WORK) are **containers** that define what
 │              INSIDE THE CONTAINER                           │
 │           (what they already know/can do)                   │
 │                                                             │
-│   READ: books read, vocabulary acquired                     │
+│   THINK: books read, vocabulary acquired                     │
 │   WRITE: words used, complexity achieved                    │
 │   WORK (creation): creativity demonstrated                  │
 │                                                             │
@@ -383,7 +383,7 @@ Activities proposed at the boundary of current capability, where the companion c
 ### Query Capabilities
 
 > "How well does [user] write?" → SKILLS.WRITE levels
-> "What's [user]'s reading comprehension level?" → SKILLS.READ
+> "What's [user]'s reading comprehension level?" → SKILLS.THINK
 > "How creative/original is [user]?" → SKILLS WORK (BUILD container; creation dimensions)
 
 ### Query Both (Full Profile)
@@ -481,7 +481,7 @@ interface Skills {
   
   modules: {
     WRITE: ModuleProfile;
-    READ: ModuleProfile;
+    THINK: ModuleProfile;
     BUILD: ModuleProfile;
   };
   
@@ -511,8 +511,8 @@ interface Activity {
   duration_minutes: number;
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   activity_type: string;
-  module_primary: 'WRITE' | 'READ' | 'BUILD';
-  module_secondary?: 'WRITE' | 'READ' | 'BUILD';
+  module_primary: 'WRITE' | 'THINK' | 'BUILD';
+  module_secondary?: 'WRITE' | 'THINK' | 'BUILD';
   
   content: {
     text?: string;
@@ -544,7 +544,7 @@ interface Activity {
 
 interface CapabilityClaim {
   id: string;
-  module: 'WRITE' | 'READ' | 'BUILD';
+  module: 'WRITE' | 'THINK' | 'BUILD';
   dimension: string;
   statement: string;
   level: 1 | 2 | 3 | 4 | 5;
@@ -658,7 +658,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 | Node | Role |
 |------|------|
 | **SELF** | Identity, IX-A/B/C, voice, personality |
-| **SKILLS** | Capability containers (READ, WRITE, WORK) |
+| **SKILLS** | Capability containers (THINK, WRITE, WORK) |
 | **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
 | **LIBRARY** (self-library) | Curated lookups (books, videos) for the bot |
 | **PENDING-REVIEW** | Staging area before merge |
@@ -700,16 +700,16 @@ Grace-Mar shares conceptual DNA with other patterns: **multi-agent debate before
 
 The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The pilot supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality. **Teaching/tutoring** is one of the Voice's functions: it answers questions, explains concepts, and helps the user learn — in-character, at the Record's Lexile level, and within the knowledge boundary.
 
-### READ/WRITE Refinement in Emulation
+### THINK/WRITE Refinement in Emulation
 
 For tricameral-mind clarity (MIND, RECORD, VOICE):
 
-- `READ` is the intake function that processes text, video, music/audio, images, and mixed media into evidence-linked signals.
+- `THINK` is the intake function that processes text, video, music/audio, images, and mixed media into evidence-linked signals.
 - Those signals feed the **Record** through the gated pipeline.
 - `WRITE` is the expression function used by the Voice to render responses from the Record.
 - The **Voice** is the interface wrapper around this expression path; it is not identical to `WRITE` by itself.
 
-Canonical flow: **READ -> Record -> WRITE-through-Voice**.
+Canonical flow: **THINK -> Record -> WRITE-through-Voice**.
 
 ### The Observation Window Model
 
@@ -859,7 +859,7 @@ Emergent behavioral patterns detected through the observation window. Art media 
 
 ### Multi-Dimension Signals
 
-**IX-A/B/C extraction is done by the analyst**, not by the skill modules (READ, WRITE, WORK). Skill modules update only capability (SKILLS); the analyst stages knowledge/curiosity/personality candidates for SELF. One input (e.g. art, music, journal) can therefore feed both a skill container and SELF. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc).
+**IX-A/B/C extraction is done by the analyst**, not by the skill modules (THINK, WRITE, WORK). Skill modules update only capability (SKILLS); the analyst stages knowledge/curiosity/personality candidates for SELF. One input (e.g. art, music, journal) can therefore feed both a skill container and SELF. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc).
 
 A single artifact can generate entries in all three dimensions simultaneously. For example, a painted pharaoh portrait produces:
 - **Knowledge**: Egyptian pharaohs / King Tut's death mask

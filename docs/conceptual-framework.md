@@ -31,7 +31,7 @@
 **Summary:**
 - The **Record** (fork) = the documented self. Own record, diverging by design. Not emulating the real person.
 - The **Voice** (bot) = the queryable voice of the Record. Observation window and rendered voice: speaks the Record in real-time when the companion queries; never speaks unbidden. **Teaching/tutoring** is one of its functions: the Voice answers questions, explains, and helps the companion learn, in-character and at the Record's Lexile level.
-- Functional refinement: **READ feeds the Record; WRITE is the expression engine used by the Voice.** Voice remains the interface layer, not equivalent to WRITE alone.
+- Functional refinement: **THINK feeds the Record; WRITE is the expression engine used by the Voice.** Voice remains the interface layer, not equivalent to WRITE alone.
 
 ---
 
@@ -44,21 +44,21 @@
 | **LLM** | External (OpenAI, etc.) | Generates text; constrained by SYSTEM_PROMPT (Record profile) |
 
 **The Voice is not the Record.** The Voice is the interface through which the companion interacts with the Record.
-Operational path: **READ -> Record -> WRITE-through-Voice**.
+Operational path: **THINK -> Record -> WRITE-through-Voice**.
 
 **Companion self.** A single phrase can refer to both sides of the dyad: **companion self**. It means (1) *the companion's self* — the human's self, externalized in the Record (their knowledge, curiosity, personality); and (2) *the self that companions* — the Record and Voice that accompany the human and speak when queried. The ambiguity is intentional. The Record is not a separate person but the companion's self, documented and queryable; and it is the self that is present alongside them. Use "companion self" when one term should hold both meanings. **Companion self = human–computer tricameral cognition:** Mind (human, sovereign), Record + Voice (computer-held documented self and its queryable interface).
 
 **Companion self contains:**
 - **self-knowledge** (self.md IX-A)
-- **self-skill-write**, **self-skill-read**, **self-skill-work** (skills.md)
+- **self-skill-write**, **self-skill-think**, **self-skill-work** (skills.md)
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
 - **self-archive** (self-archive.md)
-- **self-library** (library.md)
+- **self-library** (self-library.md)
 - **self-memory** (memory.md)
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
-The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-read**, **self-skill-write**, and **self-skill-work** (as well as self-library, etc.). Self-voice is the single output channel for the companion self.
+The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, and **self-skill-work** (as well as self-library, etc.). Self-voice is the single output channel for the companion self.
 
 The structure is intentionally symmetrical: three-dimension mind (knowledge, curiosity, personality), three capability modules (write, read, build), three key stores (archive, library, memory), and the voice that speaks it.
 

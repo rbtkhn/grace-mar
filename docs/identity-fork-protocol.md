@@ -73,7 +73,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
-| **SKILLS** | READ, WRITE, WORK capability containers | What they CAN DO |
+| **SKILLS** | THINK, WRITE, WORK capability containers | What they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
 | **INTENT** | Goal hierarchy, trade-off rules, escalation boundaries, cross-agent policy scope | What the system should WANT to optimize |
 
@@ -81,7 +81,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 
 | Dimension | Section | What it captures |
 |---------|---------|------------------|
-| **IX-A** | Knowledge | Facts entering awareness through observation |
+| **IX-A** | Knowledge | Facts entering awareness through observation; includes books read (from READ-nnn or LIBRARY read_status) |
 | **IX-B** | Curiosity | Topics that catch attention, engagement signals |
 | **IX-C** | Personality | Observed behavioral patterns, art style, speech traits |
 
@@ -94,10 +94,10 @@ Every claim in SELF (IX-A, IX-B, IX-C) must reference evidence:
 
 No claim may exist without traceability to an artifact or approved source.
 
-### 3.4 Skill Executor Model (READ/WRITE/WORK)
+### 3.4 Skill Executor Model (THINK/WRITE/WORK)
 
 The SKILLS module may be operationalized as three semi-independent executors:
-`READ`, `WRITE`, and `WORK`. **Standard labels:** **self-skill-read**, **self-skill-write**, **self-skill-work** (see [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-)). Internal identifier for the third module: BUILD container.
+`THINK`, `WRITE`, and `WORK`. **Standard labels:** **self-skill-think**, **self-skill-write**, **self-skill-work** (see [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-)). Internal identifier for the third module: BUILD container.
 
 - They may use distinct heuristics, prompts, and evaluation criteria.
 - They are capability-specialized, not identity-sovereign.
@@ -105,16 +105,16 @@ The SKILLS module may be operationalized as three semi-independent executors:
 
 Normative constraints:
 
-1. `READ`/`WRITE`/`WORK` may stage candidates only; they may not merge.
+1. `THINK`/`WRITE`/`WORK` may stage candidates only; they may not merge.
 2. All staged outputs must remain evidence-linked and reviewable.
 3. Divergent executor recommendations are allowed; companion approval is the resolution layer.
 4. Executor behavior is shaped by the SELF three-dimension mind:
    - IX-A (Knowledge): what is treated as known.
    - IX-B (Curiosity): what is prioritized for exploration.
    - IX-C (Personality): style, tone, and interaction posture.
-5. `READ` is explicitly multimodal and must not be treated as text-only:
+5. `THINK` is explicitly multimodal and must not be treated as text-only:
    - Accepted inputs include text, video, music/audio, images/diagrams/maps, and mixed media.
-   - Staged READ-derived candidates should include modality provenance (for example `input_modality`, source/artifact reference).
+   - Staged THINK-derived candidates should include modality provenance (for example `input_modality`, source/artifact reference).
    - Evidence linkage and knowledge-boundary rules apply equally to every modality.
 
 ---
@@ -168,7 +168,7 @@ This invariant is a **regulatory advantage**: COPPA-aligned (guardian/operator c
 
 Enables discoverability without full access:
 
-- **Readable** — List of consumable surfaces (SELF/IX-A, SKILLS/READ, etc.)
+- **Readable** — List of consumable surfaces (SELF/IX-A, SKILLS/THINK, etc.)
 - **Writable** — Staging area only; merge requires companion approval
 - **Checksum** — Tamper-evident identifier of current fork state
 - **Exports** — Commands to generate user.md, fork JSON, etc.

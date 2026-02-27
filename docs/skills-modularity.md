@@ -1,6 +1,6 @@
 # Skill Modularity — Formal Model
 
-**Purpose:** Canonical specification of the Record’s modules (including self-knowledge, self-personality, self-curiosity, self-library, and the three skill modules READ/WRITE/WORK), their boundaries, their relationship to the Voice, and the rule that outputs (bots, profile) are functions of the Record with WRITE as the linguistic shaper.
+**Purpose:** Canonical specification of the Record’s modules (including self-knowledge, self-personality, self-curiosity, self-library, and the three skill modules THINK/WRITE/WORK), their boundaries, their relationship to the Voice, and the rule that outputs (bots, profile) are functions of the Record with WRITE as the linguistic shaper.
 
 **Governed by:** [GRACE-MAR-CORE](grace-mar-core.md), [SKILLS-TEMPLATE](skills-template.md), [ARCHITECTURE](architecture.md)
 
@@ -17,8 +17,8 @@ The Record (and the companion self) is composed of the following modules. Togeth
 | **Self-knowledge** | self-knowledge | self.md IX-A | Facts that entered awareness (post-seed knowledge) |
 | **Self-personality** | self-personality | self.md IX-C | Observed behavioral patterns, values, speech traits, art style |
 | **Self-curiosity** | self-curiosity | self.md IX-B | Topics that catch attention (post-seed curiosity) |
-| **Self-library** | self-library | users/[id]/library.md | Curated lookup sources (books, reference works, videos); query-first for answers |
-| **Self-skill-read** | self-skill-read | skills.md READ container | Intake, comprehension (multimodal) |
+| **Self-library** | self-library | users/[id]/self-library.md | Curated lookup sources (books, reference works, videos); query-first for answers |
+| **Self-skill-think** | self-skill-think | skills.md THINK container | Intake, learning, comprehension (multimodal) |
 | **Self-skill-write** | self-skill-write | skills.md WRITE container | Production (text, journal, stories); linguistic style source |
 | **Self-skill-work** | self-skill-work | skills.md BUILD container | Making, planning, execution, exchange, creation |
 
@@ -30,7 +30,7 @@ Additional Record components (self-archive, self-memory, evidence logs) are defi
 
 | Module | Standard label | Internal identifier | Scope |
 |--------|----------------|---------------------|--------|
-| **READ** | self-skill-read | READ container, READ-nnn | Intake, comprehension (multimodal) |
+| **THINK** | self-skill-think | THINK container, READ-nnn | Intake, learning, comprehension (multimodal) |
 | **WRITE** | self-skill-write | WRITE container, WRITE-nnn | Production (text, journal, stories, explanations) |
 | **WORK** | self-skill-work | BUILD container, CREATE-nnn, ACT-nnn | Making, planning, execution, exchange, creation |
 
@@ -44,11 +44,11 @@ Each module updates **only** its capability container in SKILLS. Modules do **no
 
 | Module | What it captures | What it does not do |
 |--------|------------------|----------------------|
-| **READ** | Content consumed, modality, comprehension, inference, vocabulary, interests (intake) | Does not stage IX-A / IX-B / IX-C candidates |
+| **THINK** | Content consumed, modality, comprehension, inference, vocabulary, interests (intake); learning from doing | Does not stage IX-A / IX-B / IX-C candidates |
 | **WRITE** | Vocabulary, complexity, style, expression, logic, growth (production) | Does not stage IX-A / IX-B / IX-C candidates |
 | **WORK** | Planning, execution, making, creation (originality, elaboration, flexibility), decision-making, financial, collaboration | Does not stage IX-A / IX-B / IX-C candidates |
 
-**Analyst vs. modules:** The **analyst** (pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from inputs and stages candidates to PENDING-REVIEW → SELF. So one input can update both (1) a skill container (READ/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals).
+**Analyst vs. modules:** The **analyst** (pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from inputs and stages candidates to PENDING-REVIEW → SELF. So one input can update both (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals).
 
 ---
 
@@ -86,7 +86,7 @@ Input (conversation, artifact, "we did X")
     │
     ├──► Analyst ──► PENDING-REVIEW ──► [companion approval] ──► SELF (IX-A, IX-B, IX-C), EVIDENCE, prompt
     │
-    └──► Skill path (operator or pipeline) ──► SKILLS (READ / WRITE / WORK container) + EVIDENCE (READ-nnn, WRITE-nnn, CREATE-nnn, ACT-nnn)
+    └──► Skill path (operator or pipeline) ──► SKILLS (THINK / WRITE / WORK container) + EVIDENCE (READ-nnn, WRITE-nnn, CREATE-nnn, ACT-nnn)
 ```
 
 - **Record** = SELF + SKILLS + EVIDENCE (and related pipeline files). The Record belongs to the companion.
@@ -109,7 +109,7 @@ Input (conversation, artifact, "we did X")
 | Topic | Where defined |
 |-------|----------------|
 | Full module set (self-knowledge, self-personality, self-curiosity, self-library, self-skill-*) | This doc §1; [ID-TAXONOMY § Companion self contains](id-taxonomy.md#companion-self-contains) |
-| Three skill modules (READ, WRITE, WORK) | [SKILLS-TEMPLATE § II](skills-template.md#ii-the-three-modules), [ARCHITECTURE § The Three Modules](architecture.md#the-three-modules) |
+| Three skill modules (THINK, WRITE, WORK) | [SKILLS-TEMPLATE § II](skills-template.md#ii-the-three-modules), [ARCHITECTURE § The Three Modules](architecture.md#the-three-modules) |
 | Standard labels (self-skill-*) | [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-) |
 | Analyst vs. skill modules (IX-A/B/C) | [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals) |
 | Record and Voice | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [AGENTS](agents.md) |

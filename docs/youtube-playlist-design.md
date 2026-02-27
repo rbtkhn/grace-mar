@@ -26,7 +26,7 @@ The Record (SELF, SKILLS, IX-A/B) already captures goals and curiosity. This des
 | **IX-A. Knowledge** | Already-learned facts (LEARN-*) | Avoid pure repetition; allow "next level" depth |
 | **II. Preferences** | Favorites (movies, books) | Related content — e.g. Madeline → read-alouds |
 | **LIBRARY** | Book titles, topics | Videos that extend reading (read-alouds, summaries) |
-| **SKILLS READ edge** | "Longer text, inference, retelling" | Suggest content at the edge of capability |
+| **SKILLS THINK edge** | "Longer text, inference, retelling" | Suggest content at the edge of capability |
 | **lexile_output** | 600L | Age-appropriateness heuristic |
 | **EVIDENCE** | Recent WRITE/CREATE topics | Follow-up content on same themes |
 
@@ -64,7 +64,7 @@ Videos that extend the LIBRARY (books already known).
 Content at the SKILLS edge — stretches capability.
 
 **Logic:**
-1. Read `edge` for module (e.g. READ: "Longer text, inference, retelling").
+1. Read `edge` for module (e.g. THINK: "Longer text, inference, retelling").
 2. Map edge phrases → search terms: "read aloud chapter book", "reading comprehension for kids".
 3. Optionally intersect with IX-B topics.
 4. Search; filter; return.
@@ -176,7 +176,7 @@ Playlists are **suggestions** until approved. No auto-merge.
 3. User reviews; approves or rejects
 4. On approve: create playlist (if OAuth), add to LIBRARY or video-playlist index, log in EVIDENCE
 
-Optional: "We watched this playlist" → stage READ evidence from playlist topics.
+Optional: "We watched this playlist" → stage THINK evidence from playlist topics.
 
 ---
 

@@ -59,13 +59,16 @@ def export_view(user_id: str, view: str) -> str:
     """
     profile_dir = REPO_ROOT / "users" / user_id
     self_path = profile_dir / "self.md"
-    skills_path = profile_dir / "skills.md"
+    skills_content = "\n".join(
+        _read(profile_dir / p)
+        for p in ["skills.md", "skill-think.md", "skill-write.md", "skill-work.md"]
+    )
     self_raw = _read(self_path)
 
     if view == "school":
         return _export_school(self_raw, profile_dir, user_id)
     if view == "public":
-        return _export_public(self_raw, _read(skills_path), user_id)
+        return _export_public(self_raw, skills_content, user_id)
     raise ValueError(f"view must be 'school' or 'public', got {view!r}")
 
 
@@ -126,11 +129,15 @@ def _export_public(self_raw: str, skills_raw: str, user_id: str) -> str:
             out.append("")
 
     if skills_raw:
-        summary = re.search(r"## I\. CONTAINER STATUS.*?(?=## II\.|$)", skills_raw, re.DOTALL)
+        summary = re.findall(
+            r"## (THINK|WRITE|WORK) Container\s*\n(```yaml[\s\S]*?```)",
+            skills_raw,
+        )
         if summary:
+            parts = [f"## {n} Container\n{b}" for n, b in summary]
             out.append("## Skills Summary")
             out.append("")
-            out.append(summary.group(0).strip()[:1500])
+            out.append("\n\n".join(parts)[:1500])
             out.append("")
             out.append("---")
 

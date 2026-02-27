@@ -89,7 +89,7 @@
 
 **Answer:** ___
 
-**Why this question:** 8 books listed but no reading mode signal. Calibrates the READ container edge — is she decoding independently or still in read-aloud territory?
+**Why this question:** 8 books listed but no reading mode signal. Calibrates the THINK container edge — is she decoding independently or still in read-aloud territory?
 
 ---
 
@@ -172,7 +172,7 @@ Q8 and Q9 produced off-script responses — more authentic than the choices offe
 | Q4 | personality.traits (social style) |
 | Q5 | narrative (language/cultural centrality) |
 | Q6 | interests (creative orientation), BUILD container |
-| Q7 | (calibrates READ container edge) |
+| Q7 | (calibrates THINK container edge) |
 | Q8 | personality.emotional_patterns, struggle log |
 | Q9 | reasoning_patterns.approach_to_hard |
 | Q10 | interests (imagination mode), BUILD container |

@@ -674,3 +674,13 @@
 > CANDIDATE-0079 → ACT-0041
 > Companion engaged with why history matters; chose "learn from past mistakes" — curiosity about history as a way to learn and improve, not just facts.
 > user: "2" grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?" grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to sol
+
+**[2026-02-26 13:11:26]** `APPROVED` (operator)
+> CANDIDATE-0081 → ACT-0042
+> Two homework artifacts demonstrating geography/earth science and desert ecosystem learning. Skill-think: translating learned content (continents, oceans, desert elements) into visual representation. Evidence of learning intake + creation (CREATE-0009, CREATE-0010).
+> artifacts: - "Earth cutout — hand-drawn Americas view, continents green, oceans blue, crayon/colored pencil, cut out (geography homework)" - "Desert scene — mountains, sun, sandy terrain, cacti, two black silhouette camels, markers (desert ecosystem homework)"
+
+**[2026-02-26 13:11:26]** `APPROVED` (telegram)
+> CANDIDATE-0080 → ACT-0043
+> Companion chose and affirmed one reason we learn history — to learn from past mistakes and make better choices; entered awareness through the exchange.
+> user: "2" grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?" grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to sol

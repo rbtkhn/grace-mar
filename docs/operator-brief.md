@@ -90,7 +90,7 @@ All pilot files live in the repo under **`users/grace-mar/`** (or `users/pilot-0
 | File | What it is |
 |------|------------|
 | **self.md** | Who the companion is — identity, preferences, interests, knowledge (IX-A), curiosity (IX-B), personality (IX-C). |
-| **skills.md** | What they can do — READ, WRITE, WORK capability and edges. |
+| **skills.md** | What they can do — THINK, WRITE, WORK capability and edges. |
 | **self-evidence.md** | Activity log — ACT-*, WRITE-*, CREATE-* entries; raw evidence the Record is built on. |
 | **pending-review.md** | Staging area — candidates the analyst (or you) staged; **nothing is in the Record until you approve and merge.** |
 | **session-transcript.md** | Raw conversation log (every message), for operator continuity. Not part of the Record. |
@@ -104,13 +104,13 @@ SELF-ARCHIVE is **not** written in real time. It is updated **only when you merg
 
 1. **Conversation** → Bot replies; analyst may detect a “signal” (new knowledge, curiosity, personality).
 2. **Staging** → That becomes a **candidate** in PENDING-REVIEW (you saw “ANALYST: signal detected - staged candidate” in the log).
-3. **Your step** → You open PENDING-REVIEW, approve (or reject) each candidate, then **process the queue** (merge). Only then does the script write to SELF, EVIDENCE, SESSION-LOG, the bot prompt, **and append to SELF-ARCHIVE**.
+3. **Your step** → You open PENDING-REVIEW, approve (or reject) each candidate, then tell the assistant **"approve"**. The agent immediately merges — one gate. Only then does the script write to SELF, EVIDENCE, SESSION-LOG, the bot prompt, **and append to SELF-ARCHIVE**.
 
 **How to get SELF-ARCHIVE to update (short version)**
 
 1. Open **`users/grace-mar/pending-review.md`** (or your user id).
 2. In the **Candidates** section, for each block you want to keep: change `status: pending` to **`status: approved`** (or `rejected` to skip).
-3. Process the queue: either tell your assistant **“process the review queue”** or run:
+3. Tell the assistant **“approve”** — it immediately processes. Or run:
    ```bash
    python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by "Your Name"
    python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by "Your Name" --receipt /tmp/receipt.json

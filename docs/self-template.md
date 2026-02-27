@@ -262,6 +262,8 @@ values: {
     context: string;
   }[];
   
+  life_mission: string | null;  // Companion-authored; what they want to become or contribute. WORK goals (skill-work.md) align with it.
+  
   updated_at: Date;
 }
 ```

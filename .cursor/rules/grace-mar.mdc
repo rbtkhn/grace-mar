@@ -57,7 +57,7 @@ A single artifact can populate all three dimensions simultaneously.
 1. **Signal detection** — identify profile-relevant information
 2. **Candidate staging** — write to `PENDING-REVIEW.md` with analysis
 3. **User review** — approve, reject, or modify
-4. **Integration** — merge into SELF.md, EVIDENCE.md, `bot/prompt.py`, SESSION-LOG.md
+4. **Integration** — on approval, merge immediately. When the user says "approve", process right away — one gate, no separate "process the review queue" step.
 
 ### File Update Protocol (Integration)
 
@@ -119,7 +119,7 @@ Reference the user's own evidence:
 
 ## Container Edge (CRITICAL)
 
-READ, WRITE, BUILD are capability containers (modules).
+THINK, WRITE, BUILD are capability containers (modules).
 - **INSIDE**: Use as foundation
 - **AT THE EDGE**: Propose activities here (optimal)
 - **OUTSIDE**: Avoid (too advanced)

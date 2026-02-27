@@ -5,7 +5,7 @@ Generate the Grace-Mar pilot profile page.
 Reads grace-mar profile files and produces a single HTML profile view with:
 - Fork summary (identity, Lexile, pipeline status)
 - PENDING-REVIEW queue (candidates awaiting approval)
-- SKILLS container status (READ, WRITE, BUILD)
+- SKILLS container status (THINK, WRITE, BUILD)
 - Recent bot archive excerpts
 - Benchmarks (pipeline stats, IX dimension counts)
 
@@ -120,11 +120,11 @@ def parse_evidence(content: str) -> dict:
 
 
 def parse_skills(content: str) -> dict:
-    """Extract container status from skills.md."""
+    """Extract container status from skill-think.md, skill-write.md, skill-work.md."""
     summary = {}
-    for container in ["READ", "WRITE", "BUILD"]:
+    for container in ["THINK", "WRITE", "WORK"]:
         block = re.search(
-            rf"### {container} Container.*?```yaml(.*?)```",
+            rf"## {container} Container.*?```yaml(.*?)```",
             content,
             re.DOTALL,
         )
@@ -167,7 +167,7 @@ def parse_archive(content: str, limit: int = 10) -> list[dict]:
 
 
 def parse_library(content: str) -> list[dict]:
-    """Extract active LIBRARY entries (id, title, scope, read_status, volume) from library.md."""
+    """Extract active LIBRARY entries (id, title, scope, read_status, volume) from self-library.md."""
     entries = []
     blocks = re.split(r'-\s+id:\s+LIB-', content)
     for block in blocks[1:]:  # skip first (header)
@@ -272,16 +272,23 @@ def collect_data() -> ProfileData:
     pending_path = PROFILE_DIR / "pending-review.md"
     self_path = PROFILE_DIR / "self.md"
     evidence_path = PROFILE_DIR / "self-evidence.md"
-    skills_path = PROFILE_DIR / "skills.md"
+    skills_paths = [
+        PROFILE_DIR / "skills.md",
+        PROFILE_DIR / "skill-think.md",
+        PROFILE_DIR / "skill-write.md",
+        PROFILE_DIR / "skill-work.md",
+    ]
     archive_path = PROFILE_DIR / "self-archive.md"
     session_transcript_path = PROFILE_DIR / "session-transcript.md"
-    library_path = PROFILE_DIR / "library.md"
+    library_path = PROFILE_DIR / "self-library.md"
     journal_path = PROFILE_DIR / "journal.md"
 
     pending_content = pending_path.read_text() if pending_path.exists() else ""
     self_content = self_path.read_text() if self_path.exists() else ""
     evidence_content = evidence_path.read_text() if evidence_path.exists() else ""
-    skills_content = skills_path.read_text() if skills_path.exists() else ""
+    skills_content = "\n".join(
+        p.read_text() for p in skills_paths if p.exists()
+    )
     archive_content = archive_path.read_text() if archive_path.exists() else ""
     transcript_content = session_transcript_path.read_text() if session_transcript_path.exists() else ""
     library_content = library_path.read_text() if library_path.exists() else ""

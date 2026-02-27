@@ -18,7 +18,7 @@
 
 ### 1. Process the review queue
 
-**What it is:** User must open pending-review.md, change `status: pending` to `approved` or `rejected` for each candidate, then tell the assistant "process the review queue." The assistant updates SELF, EVIDENCE, SESSION-LOG, prompt.py, and moves candidates to Processed.
+**What it is:** User opens pending-review.md, changes `status: pending` to `approved` or `rejected` for each candidate, then tells the assistant **"approve"** — the agent immediately merges (one gate, no separate "process the review queue" step).
 
 **Impact:** 4 — If queue grows (e.g., after a long bot session), review becomes tedious. Skipping leaves orphaned candidates. No batch actions.
 
@@ -72,11 +72,11 @@
 
 ---
 
-### 5. READ evidence logging
+### 5. THINK evidence logging
 
 **What it is:** Reading List in EVIDENCE is empty. No flow exists for "we finished a book" or "we read X." User would need to add READ-* entry manually with full schema (title, author, evidence_tier, comprehension, etc.).
 
-**Impact:** 4 — READ module is underfed. Architecture expects READ → SELF.interests, SKILLS.READ, but there's no habit or tool.
+**Impact:** 4 — THINK module is underfed. Architecture expects THINK → SELF.interests, SKILLS.THINK, but there's no habit or tool.
 
 **Effort:** 2 — Options: (a) minimal READ template (title, date, tier, 1–2 comprehension notes), (b) "we finished [book]" operator flow that stages a READ candidate for PENDING-REVIEW, (c) analyst could flag book mentions in bot → stage as curiosity/knowledge (already happens for interest) but not as structured READ evidence.
 
@@ -91,7 +91,7 @@
 | Rank | Friction point        | Impact | Effort | Priority |
 |------|------------------------|--------|--------|----------|
 | 1    | Process review queue   | 4      | 2      | 2.0      |
-| 2    | READ evidence logging  | 4      | 2      | 2.0      |
+| 2    | THINK evidence logging  | 4      | 2      | 2.0      |
 | 3    | Bot session review     | 3      | 2      | 1.5      |
 | 4    | Upload artifact        | 5      | 3      | 1.67     |
 | 5    | Integration (five-file) | 3     | 3      | 1.0      |

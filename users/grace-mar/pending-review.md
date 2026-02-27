@@ -4,12 +4,10 @@
 > The Telegram and WeChat bots automatically append candidates here when they detect
 > a profile-relevant signal in conversation.
 >
-> **Workflow:**
+> **Workflow (one gate):**
 > 1. Review each candidate below
 > 2. Change `status: pending` to `status: approved` or `status: rejected`
-> 3. Tell the assistant: "process the review queue"
-> 4. Approved entries are merged into self.md, self-evidence.md, session-log.md, and prompt.py
-> 5. Processed entries are moved to the PROCESSED section at the bottom
+> 3. Tell the assistant: **"approve"** — the agent immediately processes approved candidates into self.md, self-evidence.md, session-log.md, and prompt.py. No separate "process the review queue" step.
 >
 > **Review checklist** (before approving): Is it grounded in something the child actually said or did? No LLM inference beyond the exchange? No contradiction with existing Record?
 >
@@ -19,28 +17,7 @@
 
 ## Candidates
 
-### CANDIDATE-0080 (Telegram — self-knowledge: why history matters)
-
-```yaml
-status: pending
-timestamp: 2026-02-25
-channel_key: telegram
-source: operator-submitted Telegram conversation (same exchange as CANDIDATE-0078/0079)
-source_exchange:
-  user: "2"
-  grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?"
-  grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to solve problems and be kinder to each other."
-mind_category: knowledge
-signal_type: knowledge
-priority_score: 2
-summary: Companion chose and affirmed one reason we learn history — to learn from past mistakes and make better choices; entered awareness through the exchange.
-example_from_exchange: Chose option 2; Grace-Mar affirmed "learning from past mistakes helps us make better choices... be kinder."
-profile_target: IX-A. KNOWLEDGE
-suggested_entry: One reason we learn history is to learn from past mistakes so we can make better choices and be kinder to each other.
-prompt_section: YOUR KNOWLEDGE
-prompt_addition: You know that one reason we learn history is to learn from past mistakes and make better choices — and be kinder to each other.
-suggested_followup: Optional — "Can you think of a time someone learned from a mistake?"
-```
+---
 
 ---
 
@@ -67,6 +44,101 @@ summary: Casa Bonita history — user rejected.
 ---
 
 ## Processed
+
+### CANDIDATE-0081 (Homework — skill-think: Earth cutout + desert scene)
+
+```yaml
+status: approved
+timestamp: 2026-02-26
+channel_key: operator
+source: operator-submitted homework artifacts (2 images)
+source_exchange:
+  artifacts:
+    - "Earth cutout — hand-drawn Americas view, continents green, oceans blue, crayon/colored pencil, cut out (geography homework)"
+    - "Desert scene — mountains, sun, sandy terrain, cacti, two black silhouette camels, markers (desert ecosystem homework)"
+mind_category: knowledge
+signal_type: homework / we_did
+priority_score: 4
+summary: Two homework artifacts demonstrating geography/earth science and desert ecosystem learning. Skill-think: translating learned content (continents, oceans, desert elements) into visual representation. Evidence of learning intake + creation (CREATE-0009, CREATE-0010).
+profile_target: IX-A. KNOWLEDGE, IX-B. CURIOSITY, IX-C. PERSONALITY
+suggested_entry: Knows Earth structure (Americas, continents, oceans) and desert elements (mountains, sun, sand, cacti, camels). Geography homework from school.
+evidence_targets:
+  - self-evidence.md § III. CREATION LOG — CREATE-0009, CREATE-0010
+  - self-evidence.md § V. ACTIVITY LOG — ACT-0042
+suggested_entries:
+  IX-A: "Knows Earth structure (continents, oceans — Americas view); knows desert elements (mountains, sun, sand, cacti, camels). Geography homework from school."
+  IX-B: "Geography and Earth — curiosity about world, continents, landforms; desert ecosystems and animals."
+  IX-C: "Art style: bold colors, distinct forms, hand-cut shapes; translates learned content into visual representation. Matches documented style (markers, crayon, layered scenes)."
+create_entries:
+  CREATE-0009:
+    type: drawing (cutout)
+    title: "Earth — Americas View"
+    description: "Hand-drawn Earth cutout showing Americas, Greenland, Europe, Africa. Continents green, oceans blue. Crayon/colored pencil on paper, cut into circular shape. Geography homework."
+    source: "School — geography/earth science"
+    image_file: artifacts/create-0009-earth-cutout.png
+    created_at: 2026-02-26
+    evidence_tier: 4
+    context: school
+    analysis:
+      subjects: [Earth, Americas, continents, oceans, geography]
+      themes: [earth science, world, landforms]
+      skill_think: "Translating learned geography into visual representation; demonstrates knowledge of continent positions and water/land distinction."
+    self_signals:
+      interests: [geography, Earth, world]
+      learning_signal: "School homework — earth science / geography"
+  CREATE-0010:
+    type: drawing
+    title: "Desert Scene"
+    description: "Desert landscape with mountains, sun with rays, sandy terrain, cacti/desert plants, two black silhouette camels. Markers on paper. Desert ecosystem homework."
+    source: "School — desert/earth science"
+    image_file: artifacts/create-0010-desert-scene.png
+    created_at: 2026-02-26
+    evidence_tier: 4
+    context: school
+    analysis:
+      subjects: [desert, mountains, sun, sand, cacti, camels]
+      themes: [desert ecosystem, animals, landforms]
+      skill_think: "Knowledge of desert elements; translates ecosystem understanding into visual representation."
+    self_signals:
+      interests: [desert, animals, geography]
+      learning_signal: "School homework — desert ecosystem"
+activity_entry:
+  ACT-0042:
+    date: 2026-02-26
+    modality: artifact (homework)
+    activity_type: homework — geography + earth science
+    source: operator-submitted homework
+    description: "Geography homework — Earth cutout (Americas view) and desert scene (mountains, camels, cacti). Skill-think: learning intake translated into visual creation."
+    evidence_tier: 4
+    contributes_to:
+      creation_log: [CREATE-0009, CREATE-0010]
+      self_updates: [IX-A geography, IX-B curiosity, IX-C art style]
+prompt_section: YOUR KNOWLEDGE, YOUR CURIOSITY (optional)
+prompt_addition: |
+  Geography homework: you drew the Earth (Americas view) and a desert scene with mountains, camels, and cacti. You know continents and oceans, and desert ecosystem elements.
+```
+### CANDIDATE-0080 (Telegram — self-knowledge: why history matters)
+
+```yaml
+status: approved
+timestamp: 2026-02-25
+channel_key: telegram
+source: operator-submitted Telegram conversation (same exchange as CANDIDATE-0078/0079)
+source_exchange:
+  user: "2"
+  grace_mar: "Why do you think learning about history is important? 1. To understand how people lived long ago 2. To learn from past mistakes 3. To appreciate different cultures 4. To see how the world has changed. Which one do you think is important?"
+  grace_mar_response: "That's a good answer! Learning from past mistakes helps us make better choices in the future. It teaches us how to solve problems and be kinder to each other."
+mind_category: knowledge
+signal_type: knowledge
+priority_score: 2
+summary: Companion chose and affirmed one reason we learn history — to learn from past mistakes and make better choices; entered awareness through the exchange.
+example_from_exchange: Chose option 2; Grace-Mar affirmed "learning from past mistakes helps us make better choices... be kinder."
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: One reason we learn history is to learn from past mistakes so we can make better choices and be kinder to each other.
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: You know that one reason we learn history is to learn from past mistakes and make better choices — and be kinder to each other.
+suggested_followup: Optional — "Can you think of a time someone learned from a mistake?"
+```
 
 ### CANDIDATE-0078 (Telegram — history question: learn from past mistakes)
 

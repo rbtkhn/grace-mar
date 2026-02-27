@@ -10,6 +10,7 @@
 | **Narrative & differentiation** | [WHITE-PAPER](white-paper.md) | Full story, positioning, technical model. |
 | **Business** | [BUSINESS-PLAN](business-plan.md), [BUSINESS-PROSPECTUS](business-prospectus.md), [BUSINESS-ROADMAP](business-roadmap.md) | Operating plan, market, revenue, roadmap. |
 | **Implementation** | [AGENTS](../agents.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
+| **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |
 | **Intent schema** | [INTENT-TEMPLATE](intent-template.md) | Machine-readable goal hierarchy, trade-offs, and escalation rules. |
 | **Session/development handoff** | [DEVELOPMENT-HANDOFF](development-handoff.md) | Latest engineering state and restart checklist for new agent conversations. |
 | **Operator / pilot onboarding** | [OPERATOR-BRIEF](operator-brief.md), [LETTER-TO-USER](letter-to-user.md), [LETTER-TO-STUDENT](letter-to-student.md) | Age-neutral operator brief; letters to the companion (age-neutral and school-aged variants). [PARENT-BRIEF](parent-brief.md) = parent/guardian variant. |

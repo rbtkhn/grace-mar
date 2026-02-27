@@ -279,7 +279,7 @@ Chinese folk tale → Disney remix → personal stuffie → original world → M
 - self-evidence.md — WRITING LOG entry WRITE-0001 with full analysis
 - self-evidence.md — Writing Profile initialized
 - skills.md — WRITE container → ACTIVE, phonetic spelling confirmed, edge refined
-- skills.md — READ container → ACTIVE, comprehension upgraded to 3
+- skills.md — THINK container → ACTIVE, comprehension upgraded to 3
 - self.md — Linguistic Style section initialized with first sample
 - Artifact stored: write-0001-madeline-retell.png
 
@@ -812,7 +812,7 @@ source_artifact: Solar system coloring/tracing workbook (123homeschool4me.com)
 
 **CANDIDATE-0061 (Debussy — bedtime):** Approved
 - self.md — CUR-0010 added to IX-B Curiosity
-- library.md — LIB-0066 added (The Best of Debussy / Classical Piano Music)
+- self-library.md — LIB-0066 added (The Best of Debussy / Classical Piano Music)
 - bot/prompt.py — YOUR CURIOSITY updated
 
 **Evidence:** ACT-0028 (user report — Debussy is perfect for bedtime; video: Clair de lune, Arabesque, Reverie)

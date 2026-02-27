@@ -19,7 +19,7 @@
 | **READ-** | Evidence | self-evidence.md § I. READING LIST | Books, articles consumed |
 | **CREATE-** | Evidence | self-evidence.md § III. CREATION LOG | Artwork, collages, creative output |
 | **MEDIA-** | Evidence | self-evidence.md § IV. MEDIA LOG | Movies, shows, games (survey + mentions) |
-| **LIB-** | Library | users/[id]/library.md | Approved lookup sources (query first before full LLM) |
+| **LIB-** | Library | users/[id]/self-library.md | Approved lookup sources (query first before full LLM) |
 
 ---
 
@@ -30,10 +30,10 @@ Canonical labels for the three SKILLS modules when referring to the self's capab
 | Standard label | Module | Location | Description |
 |----------------|--------|----------|-------------|
 | **self-skill-write** | WRITE | skills.md § WRITE Container | Production — journal, stories, explanations; primary data source for SELF linguistic style |
-| **self-skill-read** | READ | skills.md § READ Container | Intake — comprehension, inference, vocabulary; feeds SELF interests and preferences |
+| **self-skill-think** | THINK | skills.md § THINK Container | Intake, learning, comprehension (multimodal); feeds SELF interests and preferences |
 | **self-skill-work** | WORK (BUILD container) | skills.md § BUILD Container | Making, planning, execution, creation; starts from zero, grows via pipeline |
 
-Use these labels in prose, tooling, and external references where a single token is needed. The third module is named **WORK** in prose; in skills.md the section heading remains "BUILD Container" (internal identifier). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged.
+Use these labels in prose, tooling, and external references where a single token is needed. The first module is **THINK** (intake, learning, comprehension); the third is **WORK** (internal identifier: BUILD container). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged; READ-nnn feeds the THINK container (Reading List).
 
 ---
 
@@ -43,11 +43,11 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 
 | Standard label | File | Description |
 |----------------|------|-------------|
-| **self-library** | users/[id]/library.md | Curated lookup sources (books, reference works, videos); query-first for answers; gated pipeline |
+| **self-library** | users/[id]/self-library.md | Curated lookup sources (books, reference works, videos); query-first for answers; gated pipeline |
 | **self-archive** | users/[id]/self-archive.md | Gated log of approved activity (voice and non-voice); appended only on merge |
 | **self-memory** | users/[id]/memory.md | Ephemeral session context — tone, recent topics, calibrations; not part of the Record; optional |
 
-Use these with **self-skill-write**, **self-skill-read**, **self-skill-work** for a consistent self-scoped vocabulary.
+Use these with **self-skill-write**, **self-skill-think**, **self-skill-work** for a consistent self-scoped vocabulary.
 
 ---
 
@@ -57,16 +57,16 @@ The **companion self** (the documented self + the self that companions) is compo
 
 | Component | Location | Description |
 |-----------|----------|-------------|
-| **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge) |
+| **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge); includes books read (from READ-nnn or LIBRARY read_status) |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
 | **self-personality** | self.md IX-C | Observed behavioral patterns (post-seed personality) |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
-| **self-skill-read** | skills.md § READ Container | Intake/comprehension capability |
+| **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
 | **self-skill-work** | skills.md § BUILD Container | Making, planning, execution, creation |
 | **self-archive** | self-archive.md | Gated log of approved activity |
-| **self-library** | library.md | Curated lookup sources |
+| **self-library** | self-library.md | Curated lookup sources |
 | **self-memory** | memory.md | Ephemeral session context (not part of Record) |
-| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-read, self-skill-write, self-skill-work (and the rest of the companion self) |
+| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, self-skill-work (and the rest of the companion self) |
 
 ---
 

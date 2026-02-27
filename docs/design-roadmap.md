@@ -6,7 +6,17 @@
 
 ---
 
-## 1. Grace-Mar Email Address
+## 1. Grace-Mar Web App (grace-mar.com)
+
+**Rationale:** Web app at grace-mar.com provides a central front door — chat, profile, review, export — without requiring Telegram/WeChat. Supports admissions use case, families, and institutional access.
+
+**Scope:** See [WEB-APP-PLAN](web-app-plan.md) for full phased plan.
+
+**Phases:** (1) Chat + admissions mode; (2) Review flow, export, auth; (3) Dashboard, journal, library views.
+
+---
+
+## 2. Grace-Mar Email Address
 
 **Rationale:** A dedicated email for the fork enables:
 - Clear separation of fork-linked accounts (YouTube, Khan, etc.) from family accounts
@@ -17,7 +27,7 @@
 
 ---
 
-## 2. Outbound Curated Newsletter
+## 3. Outbound Curated Newsletter
 
 **Concept:** Grace-Mar generates a periodic digest (e.g. weekly) and sends it to the fork's email.
 
@@ -32,7 +42,7 @@
 
 ---
 
-## 3. Inbound Newsletter Processing
+## 4. Inbound Newsletter Processing
 
 **Concept:** Subscribe the Grace-Mar email to trusted external newsletters. System ingests, matches to Record, stages candidates.
 
@@ -49,7 +59,7 @@
 
 ---
 
-## 4. Grace-Mar X (Twitter) Account
+## 5. Grace-Mar X (Twitter) Account
 
 **Potential rationale:**
 - **Identity separation** — Handle like `@grace_mar` distinguishes fork persona from family accounts
@@ -68,7 +78,7 @@
 
 ---
 
-## 5. OpenClaw Integration
+## 6. OpenClaw Integration
 
 **Rationale:** OpenClaw (personal AI assistant, runs on your machine, WhatsApp/Telegram/Discord/Signal/iMessage, persistent memory, skills/plugins, open source) can use the Grace-Mar Record as its identity layer. Session continuity spans both systems; OpenClaw artifacts can feed the grace-mar pipeline via "we did X."
 
@@ -86,7 +96,7 @@
 
 ---
 
-## 6. Intersignal / The Braid Integration
+## 7. Intersignal / The Braid Integration
 
 **Rationale:** Intersignal (The Braid, Mesh Cache, Familiar nodes) builds local/offline multi-AI protocol with traceable identity. Grace-Mar provides the **identity substrate** Familiar nodes need: consent-bound, evidence-grounded, user-approved.
 
@@ -107,7 +117,7 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 
 ---
 
-## 7. Canva Integration
+## 8. Canva Integration
 
 **Rationale:** Canva's APIs (Connect API, App SDK) enable design integration — templates, asset sync, automated creation. Grace-Mar could use Canva for WORK creation evidence (designs as creation log), newsletter layout (outbound digest → Canva template), or shareable content (JOURNAL, admissions portfolio).
 
@@ -122,7 +132,7 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 
 ---
 
-## 8. Journal ML — Attestation and Coherence
+## 9. Journal ML — Attestation and Coherence
 
 **Rationale:** A year (or more) of first-person journal entries forms a longitudinal corpus of the fork's linguistic fingerprint. ML over that corpus supports **attestation and coherence** — demonstrating that the fork's voice remained consistent over time, with no drift or contamination.
 
@@ -140,7 +150,7 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 
 ---
 
-## 9. Homeschool / Adaptive Curriculum Integration
+## 10. Homeschool / Adaptive Curriculum Integration
 
 **Rationale:** Grace-Mar's Voice teaches and tutors. External curriculum systems (homeschool bots, adaptive platforms like Khan, IXL, custom Glide/Zapier stacks) can use the Record as the **identity layer** to personalize lessons and activities. The Record tells the curriculum engine: what the student knows (IX-A), what they're curious about (IX-B), their skills edge (SKILLS), and their Lexile level.
 
@@ -158,13 +168,13 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 
 ---
 
-## 10. Learning Path from Record
+## 11. Learning Path from Record
 
 **Rationale:** Curriculum platforms (SparkPath, Khan, homeschool stacks) use "learning paths" — sequences of lessons. Grace-Mar's Record can *drive* those paths: IX-B (curiosity) + SKILLS edge suggest what to assign next.
 
 **Scope:**
 - **Path generation** — Given `curriculum_profile.json`, generate a suggested sequence: "Curious about reptiles, WRITE edge for narrative → reptile fact sheet (read) → short story prompt (write)." Curriculum engine maps suggestions to its lesson library.
-- **Skills-aware sequencing** — READ edge + curiosity topic → suggest text. WRITE edge + topic → suggest writing prompt. WORK (creation) edge → suggest creative task.
+- **Skills-aware sequencing** — THINK edge + curiosity topic → suggest text. WRITE edge + topic → suggest writing prompt. WORK (creation) edge → suggest creative task.
 - **Knowledge-avoidance** — IX-A (knowledge) filters out already-learned content; path builds on gaps and stretches at the edge.
 
 **Output:** Suggested path (lesson IDs or descriptors) that a curriculum platform consumes. Grace-Mar does not hold lessons; it holds the identity that *selects* them.
@@ -173,10 +183,11 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 
 ---
 
-## 11. Dependencies
+## 12. Dependencies
 
 | Feature | Depends on |
 |---------|------------|
+| Grace-Mar web app | bot core, retriever, prompt; hosting for API. See [WEB-APP-PLAN](web-app-plan.md). |
 | Grace-Mar email | Parent decision; no technical blocker |
 | Outbound newsletter | Record query APIs; email send; playlist/recommendation logic (see YOUTUBE-PLAYLIST-DESIGN) |
 | Inbound processing | Grace-Mar email; IMAP or Gmail API; matching logic; PENDING-REVIEW staging |
@@ -190,10 +201,12 @@ python integrations/export_hook.py --target intersignal -u grace-mar -o ../inter
 
 ---
 
-## 12. Related Docs
+## 13. Related Docs
 
 | Document | Relevance |
 |----------|-----------|
+| [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies |
+| [ADMISSIONS-LINK-USE-CASE](admissions-link-use-case.md) | Web chat for reviewers; token-based shareable link |
 | [BUSINESS-ROADMAP](business-roadmap.md) | Strategy, monetization, go-to-market |
 | [YOUTUBE-PLAYLIST-DESIGN](youtube-playlist-design.md) | Playlist building; watched-video detection; feeds into newsletter content |
 | [OPENCLAW-INTEGRATION](openclaw-integration.md) | Record as identity; session continuity; staging automation; Chinese apps |

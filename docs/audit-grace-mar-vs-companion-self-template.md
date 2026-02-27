@@ -34,7 +34,7 @@ From the bootstrap and merge doc, an **instance** (e.g. grace-mar) is expected t
 | self-archive.md | Present (gated; written only on merge) | ✅ |
 | session-transcript.md / SESSION-LOG | Present | ✅ |
 | pipeline-events.jsonl | Present | ✅ |
-| library.md | Present | ✅ |
+| self-library.md | Present | ✅ |
 | Artifacts (CREATE-*, WRITE-* evidence) | `users/grace-mar/artifacts/` | ✅ |
 | Bot code | `bot/` (Telegram, WeChat, core, prompt) | ✅ |
 | Merge script | `scripts/process_approved_candidates.py` | ✅ |

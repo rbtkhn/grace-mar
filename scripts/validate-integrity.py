@@ -241,15 +241,19 @@ def validate_self_sections(user_dirs: list[Path]) -> list[str]:
 
 def validate_skills_sections(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
-    required = ["## I. CONTAINER STATUS", "## II. CAPABILITY CLAIMS", "## III. CAPABILITY GAPS"]
+    skills_markers = ["## II. CAPABILITY CLAIMS", "## III. CAPABILITY GAPS"]
+    skill_files = ["skill-think.md", "skill-write.md", "skill-work.md"]
     for user_dir in user_dirs:
-        path = user_dir / "skills.md"
-        content = _safe_read(path)
+        skills_path = user_dir / "skills.md"
+        content = _safe_read(skills_path)
         if not content:
             continue
-        for marker in required:
+        for marker in skills_markers:
             if marker not in content:
-                errors.append(f"{path.relative_to(REPO_ROOT)} missing required section '{marker}'")
+                errors.append(f"{skills_path.relative_to(REPO_ROOT)} missing required section '{marker}'")
+        found = any((user_dir / f).exists() for f in skill_files)
+        if not found:
+            errors.append(f"{user_dir.relative_to(REPO_ROOT)} missing at least one of {skill_files}")
     return errors
 
 

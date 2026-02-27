@@ -741,10 +741,44 @@ entries:
         black_paper: "3rd piece on black paper (moon #6, snowman #8) — matches material to context"
       colorado_connection: "Snowman = Colorado winter. She draws her real environment."
 
+  - id: CREATE-0009
+    type: drawing (cutout)
+    title: "Earth — Americas View"
+    description: "Hand-drawn Earth cutout showing Americas, Greenland, Europe, Africa. Continents green, oceans blue. Crayon/colored pencil on paper, cut into circular shape. Geography homework."
+    source: "School — geography/earth science"
+    image_file: artifacts/create-0009-earth-cutout.png
+    created_at: 2026-02-26
+    evidence_tier: 4
+    context: school
+    analysis:
+      subjects: [Earth, Americas, continents, oceans, geography]
+      themes: [earth science, world, landforms]
+      skill_think: "Translating learned geography into visual representation; demonstrates knowledge of continent positions and water/land distinction."
+    self_signals:
+      interests: [geography, Earth, world]
+      learning_signal: "School homework — earth science / geography"
+
+  - id: CREATE-0010
+    type: drawing
+    title: "Desert Scene"
+    description: "Desert landscape with mountains, sun with rays, sandy terrain, cacti/desert plants, two black silhouette camels. Markers on paper. Desert ecosystem homework."
+    source: "School — desert/earth science"
+    image_file: artifacts/create-0010-desert-scene.png
+    created_at: 2026-02-26
+    evidence_tier: 4
+    context: school
+    analysis:
+      subjects: [desert, mountains, sun, sand, cacti, camels]
+      themes: [desert ecosystem, animals, landforms]
+      skill_think: "Knowledge of desert elements; translates ecosystem understanding into visual representation."
+    self_signals:
+      interests: [desert, animals, geography]
+      learning_signal: "School homework — desert ecosystem"
+
 ### Creativity Profile
 
 ```yaml
-total_entries: 8
+total_entries: 10
 avg_originality: 3.5
 avg_elaboration: 3.6
 preferred_subjects: [animals, creatures, personified objects (home); ancient civilizations, space, seasonal (school)]
@@ -1361,6 +1395,26 @@ activities:
     mind_category: curiosity
     source: pipeline merge
     summary: "Companion engaged with why history matters; chose 'learn from past mistakes' — curiosity about history as a way to learn and improve, not just facts."
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0042
+    date: 2026-02-26
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "Two homework artifacts demonstrating geography/earth science and desert ecosystem learning. Skill-think: translating learned content (continents, oceans, desert elements) into visual representation. E"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0043
+    date: 2026-02-26
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "Companion chose and affirmed one reason we learn history — to learn from past mistakes and make better choices; entered awareness through the exchange."
     curated_by: user
     evidence_tier: 3
 

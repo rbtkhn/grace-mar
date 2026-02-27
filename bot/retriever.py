@@ -12,7 +12,12 @@ from pathlib import Path
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
 SELF_PATH = PROFILE_DIR / "self.md"
-SKILLS_PATH = PROFILE_DIR / "skills.md"
+SKILLS_PATHS = [
+    PROFILE_DIR / "skills.md",
+    PROFILE_DIR / "skill-think.md",
+    PROFILE_DIR / "skill-write.md",
+    PROFILE_DIR / "skill-work.md",
+]
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
 
@@ -49,8 +54,9 @@ def load_record_chunks() -> list[tuple[str, str]]:
     chunks: list[tuple[str, str]] = []
     if SELF_PATH.exists():
         chunks.extend(_extract_chunks(_read(SELF_PATH), "SELF"))
-    if SKILLS_PATH.exists():
-        chunks.extend(_extract_chunks(_read(SKILLS_PATH), "SKILLS"))
+    for p in SKILLS_PATHS:
+        if p.exists():
+            chunks.extend(_extract_chunks(_read(p), "SKILLS"))
     if EVIDENCE_PATH.exists():
         chunks.extend(_extract_chunks(_read(EVIDENCE_PATH), "EVIDENCE"))
     return chunks

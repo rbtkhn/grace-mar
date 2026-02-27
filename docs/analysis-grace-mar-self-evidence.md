@@ -12,12 +12,12 @@
 **"Self-evidence"** is not a canonical term in grace-mar. ID-TAXONOMY and CONCEPTUAL-FRAMEWORK define companion self as:
 
 - self-knowledge, self-curiosity, self-personality  
-- self-skill-write, self-skill-read, self-skill-work  
+- self-skill-write, self-skill-think, self-skill-work  
 - self-archive, self-library, self-memory, self-voice  
 
 There is no **self-evidence** label. The Record module that holds raw activity is **EVIDENCE** (`self-evidence.md`).
 
-**EVIDENCE** = the canonical activity log. It is the *source* for SELF (IX-A/B/C via `evidence_id`) and SKILLS (WRITE/READ/WORK samples). It holds:
+**EVIDENCE** = the canonical activity log. It is the *source* for SELF (IX-A/B/C via `evidence_id`) and SKILLS (WRITE/THINK/WORK samples). It holds:
 
 | Section | Prefix | Description |
 |---------|--------|-------------|
@@ -58,9 +58,9 @@ Raw evidence → pipeline → SELF/SKILLS. EVIDENCE is canonical; SELF and SKILL
 | File | Purpose | Redundancy |
 |------|---------|------------|
 | self.md | Identity, IX-A/B/C | None |
-| skills.md | WRITE, READ, BUILD containers | None |
+| skills.md | WRITE, THINK, BUILD containers | None |
 | self-evidence.md | Raw activity logs | None |
-| library.md | Curated lookup sources | None |
+| self-library.md | Curated lookup sources | None |
 | pending-review.md | Pipeline staging | None |
 | self-archive.md | Gated approved activity | None |
 | session-log.md | Session chronicle | None |

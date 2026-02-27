@@ -96,8 +96,8 @@ If the companion/operator asks to commit, include all modified and new files fro
 1. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
 2. Align business docs for zero drift:
    - add explicit cross-links between `business-plan.md`, `business-prospectus.md`, `white-paper.md`.
-3. Formalize READ multimodality wording:
-   - update `skills-template.md` and architecture references so READ explicitly includes text/video/music/images.
+3. Formalize THINK multimodality wording:
+   - update `skills-template.md` and architecture references so THINK explicitly includes text/video/music/images.
 4. Operator UX for debate workflow:
    - `/debates` listing command for unresolved debate packets (implemented).
 5. Add small glossary section to business-facing docs for non-technical readers.
