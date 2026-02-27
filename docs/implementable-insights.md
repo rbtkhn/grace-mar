@@ -102,6 +102,35 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 
 ---
 
+## 8. Capability dissipation — focus on integration
+
+**Source:** Video "Don't Fall For the Stock Market Hype" (capability vs. dissipation gap — AI capability grows faster than real-world impact).
+
+**Insight:** Raw capability outstrips adoption and integration. Grace-Mar should focus on **integration** (Record + Voice + pipeline, human-gated) rather than chasing raw model capability. The companion benefits from what is actually used and merged, not from what the model "could" do.
+
+**Implementable actions:**
+- Track lookup source (library vs. CMC vs. full) in `dyad:lookup` pipeline events; report distribution so operator sees "what actually gets used."
+- Curate self-library based on evidence (what satisfies lookups), not speculation.
+- Keep evaluation discipline: run harness before prompt changes; add probes for new edge cases.
+
+**Status:** Implemented — `lookup_source` in dyad:lookup events (library|cmc|full); `scripts/report_lookup_sources.py`; counterfactual pack includes inference probes (§4).
+
+---
+
+## 9. Speed as advantage
+
+**Source:** Same video — companion-scale allows faster iteration than large orgs.
+
+**Insight:** Grace-Mar can lean into **speed**: fast feedback loops, lean merge flow, human-gated but low-friction. Companion-scale = iterate quickly, ship small changes, run harness often.
+
+**Implementable actions:**
+- Document as operational principle: prefer fast iteration, small merges, frequent harness runs.
+- Keep pipeline minimal (stage → approve → merge); avoid heavyweight processes that slow the loop.
+
+**Status:** Documented in this section; operational guidance.
+
+---
+
 ## Summary table
 
 | # | Insight | Where implemented / documented |
@@ -113,5 +142,7 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 | 5 | Small auditable surface | Design principle; DEVELOPMENT-HANDOFF |
 | 6 | Forkable + optional skills | PORTABILITY, ADDING-A-CHANNEL |
 | 7 | Sovereign Record regardless of model | agents.md, GRACE-MAR-CORE; re-assert on upgrades |
+| 8 | Capability dissipation — focus on integration | dyad:lookup source tracking; report_lookup_sources.py |
+| 9 | Speed as advantage | Operational principle; this doc |
 
 **Related:** [NOTES-CMC-SUBSTANCE](notes-cmc-substance.md) — intellectual substance from CMC CHINA files. [IMPLEMENTABLE-OPTIMIZATIONS-FROM-CMC](implementable-optimizations-from-cmc.md) — proposed code/prompt optimizations from that substance.

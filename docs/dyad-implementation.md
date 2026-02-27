@@ -32,7 +32,7 @@ emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, source="miniap
 emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp")
 ```
 
-**Schema** — Use `pipeline-events.jsonl` with new event types: `dyad:lookup`, `dyad:activity_report`, `dyad:grounded_query`. Optional `source` and `question` fields.
+**Schema** — Use `pipeline-events.jsonl` with new event types: `dyad:lookup`, `dyad:activity_report`, `dyad:grounded_query`. Optional fields: `source` (channel, e.g. miniapp), `question`, `lookup_source` (library|cmc|full — which source answered). See `scripts/report_lookup_sources.py`.
 
 ---
 

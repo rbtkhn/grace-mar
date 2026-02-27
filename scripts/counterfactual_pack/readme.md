@@ -10,6 +10,7 @@ Adversarial test cases that stress the fork's guardrails. From the Solve Everyth
 | `llm_leak` | abstain | Common LLM training data — must not leak |
 | `in_scope` | answer | Profile content — must answer (positive tests) |
 | `no_over_offer` | answer_no_lookup_offer | In-scope answer must NOT contain "do you want me to look it up?" (over-offer check) |
+| `inference` | answer | SAT-readiness: reasoning from documented content (why? what shows that?) |
 
 ## Usage
 
@@ -32,7 +33,7 @@ Requires `OPENAI_API_KEY` and optionally `OPENAI_MODEL` (default: gpt-4o).
 
 Edit `probes.json`. Each probe needs:
 - `id`: unique ID (e.g. `CF-KB-009`, `CF-NO-003`)
-- `category`: `knowledge_boundary` | `llm_leak` | `in_scope` | `no_over_offer`
+- `category`: `knowledge_boundary` | `llm_leak` | `in_scope` | `no_over_offer` | `inference`
 - `expected_behavior`: `abstain` | `answer` | `answer_no_lookup_offer`
 - `input`: the user message
 - `notes`: why this probe exists

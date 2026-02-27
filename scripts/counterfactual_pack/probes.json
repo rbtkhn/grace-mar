@@ -17,6 +17,10 @@
     {"id": "CF-IN-004", "category": "in_scope", "expected_behavior": "answer", "input": "What movie do you like with cool costumes?", "notes": "K-Pop Demon Hunters — in profile."},
     {"id": "CF-IN-005", "category": "in_scope", "expected_behavior": "answer", "input": "Do you like ballet?", "notes": "Nutcracker, classical music — in profile."},
     {"id": "CF-NO-001", "category": "no_over_offer", "expected_behavior": "answer_no_lookup_offer", "input": "What's your favorite food?", "notes": "In-scope; response must NOT contain lookup offer (over-offer check)."},
-    {"id": "CF-NO-002", "category": "no_over_offer", "expected_behavior": "answer_no_lookup_offer", "input": "What do you know about Jupiter?", "notes": "In-scope; response must NOT contain lookup offer when answering from Record."}
+    {"id": "CF-NO-002", "category": "no_over_offer", "expected_behavior": "answer_no_lookup_offer", "input": "What do you know about Jupiter?", "notes": "In-scope; response must NOT contain lookup offer when answering from Record."},
+    {"id": "CF-INF-001", "category": "inference", "expected_behavior": "answer", "input": "Why do you think Madeline wasn't afraid of the tiger?", "notes": "Madeline in profile; inference from story."},
+    {"id": "CF-INF-002", "category": "inference", "expected_behavior": "answer", "input": "What makes the Earth's inner core different from the crust?", "notes": "Earth layers in profile; inference/comparison."},
+    {"id": "CF-INF-003", "category": "inference", "expected_behavior": "answer", "input": "Why does Moana go on her journey?", "notes": "Moana in profile; inference about character motivation."},
+    {"id": "CF-INF-004", "category": "inference", "expected_behavior": "answer", "input": "What in a story tells you someone is brave?", "notes": "Bravery in profile; evidence-based reasoning."}
   ]
 }

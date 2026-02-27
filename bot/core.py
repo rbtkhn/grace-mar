@@ -740,19 +740,20 @@ def _lookup(question: str, channel_key: str = "unknown") -> str:
     return _rephrase_lookup(question, facts, channel_key)
 
 
-def _lookup_with_library_first(question: str, channel_key: str = "unknown") -> str:
+def _lookup_with_library_first(question: str, channel_key: str = "unknown") -> tuple[str, str]:
+    """Run lookup (library → CMC → full). Returns (answer, lookup_source). lookup_source: library|cmc|full."""
     lib_answer = _library_lookup(question, channel_key)
     if lib_answer:
         logger.info("LIBRARY: hit for %s", question[:50])
-        return _rephrase_lookup(question, lib_answer, channel_key)
+        return _rephrase_lookup(question, lib_answer, channel_key), "library"
     logger.info("LIBRARY: miss, trying CMC")
     if query_cmc:
         cmc_text = query_cmc(question, limit=5)
         if cmc_text:
             logger.info("CMC: hit for %s", question[:50])
-            return _rephrase_lookup(question, cmc_text, channel_key)
+            return _rephrase_lookup(question, cmc_text, channel_key), "cmc"
     logger.info("CMC: miss, falling back to full lookup")
-    return _lookup(question, channel_key)
+    return _lookup(question, channel_key), "full"
 
 
 def _next_candidate_id() -> str:
@@ -1447,8 +1448,8 @@ def get_response(channel_key: str, user_message: str) -> str:
         logger.info("LOOKUP: %s", question)
         archive("LOOKUP REQUEST", channel_key, question)
 
-        assistant_message = _lookup_with_library_first(question, channel_key)
-        emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, question=question[:100])
+        assistant_message, lookup_source = _lookup_with_library_first(question, channel_key)
+        emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, question=question[:100], lookup_source=lookup_source)
 
         history.append({"role": "user", "content": user_message})
         history.append({"role": "assistant", "content": assistant_message})
@@ -1522,8 +1523,8 @@ def transcribe_voice(audio_bytes: bytes, channel_key: str = "telegram") -> str |
 
 def run_lookup(question: str, channel_key: str = "miniapp") -> str:
     """Public entry point for lookup. Used by Mini App."""
-    result = _lookup_with_library_first(question, channel_key)
-    emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, source="miniapp", question=question[:100])
+    result, lookup_source = _lookup_with_library_first(question, channel_key)
+    emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, source="miniapp", question=question[:100], lookup_source=lookup_source)
     return result
 
 
