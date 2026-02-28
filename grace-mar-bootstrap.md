@@ -2,6 +2,8 @@
 
 Session bootstrap for continuing Grace-Mar in a new agent conversation.
 
+**Session focus:** If this conversation is **extension-focused**, read §1 then **extension/readme.md** and skim `extension/` (background.js, popup.js, popup.html, manifest.json). Use §5 Extension commands and §6 Extension file map below.
+
 ---
 
 ## 1) First-Run Checklist (Do This First)
@@ -54,9 +56,10 @@ When loaded in a fresh session, offer these options:
 1. **Run session** (chat-first companion interaction; no auto-merge)
 2. **Pipeline operations** (stage/review/apply approved candidates)
 3. **Intent governance** (audit/review/debate packet workflows)
-4. **Integrations** (OpenClaw, extension, handback server)
-5. **Business docs** (plan/prospectus/white-paper alignment)
-6. **Other** (companion-defined task)
+4. **Browser extension** (transcript handback, Save to Record, popup/context menu, handback server)
+5. **Integrations** (OpenClaw, handback server config)
+6. **Business docs** (plan/prospectus/white-paper alignment)
+7. **Other** (companion-defined task)
 
 Wait for companion selection before large changes.
 
@@ -95,6 +98,15 @@ python3 integrations/openclaw_stage.py --user grace-mar --text "we explored X in
 python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
 ```
 
+### Extension (browser extension focus)
+```bash
+# Run handback server (required for Save to Record + transcript handback)
+python3 scripts/handback_server.py
+# Load unpacked: chrome://extensions → Developer mode → Load unpacked → select extension/
+```
+- Extension lives in `extension/`. Popup: Save to Record, Save transcript (paste → /handback). Context menu: Save to Record, Save transcript to Record (selection → /handback).
+- See `extension/readme.md` for setup, settings (stage URL, API key, user_id, queue retry).
+
 ---
 
 ## 6) Primary File Map
@@ -111,6 +123,13 @@ python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
 - `docs/audit-companion-self.md` — companion-self concept alignment (run as part of bootstrap; re-run after concept/taxonomy changes).
 - `docs/audit-grace-mar-vs-companion-self-template.md` — instance vs template ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)); re-run after structure/protocol changes.
 - `users/grace-mar/*` — active pilot Record files.
+
+**Extension (when focus is browser extension):**
+- `extension/readme.md` — setup, behavior, settings.
+- `extension/manifest.json` — version, permissions, background/popup/context menu.
+- `extension/background.js` — handback/stage URLs, message handling, context menu, queue/retry.
+- `extension/popup.html` / `extension/popup.js` — toolbar UI (Save to Record, Save transcript, Retry Queue, Settings).
+- `scripts/handback_server.py` — local server for `/stage` and `/handback` (default 127.0.0.1:5050).
 
 ---
 
