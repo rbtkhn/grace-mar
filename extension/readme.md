@@ -1,6 +1,6 @@
 # Grace-Mar Browser Extension
 
-One-click capture from any URL to your Grace-Mar Record. Local only; stages to RECURSION-GATE (user approves via /review in Telegram).
+One-click capture from any URL to your Grace-Mar Record. LLM transcript handback for ChatGPT/Grok/Claude. Local only; stages to RECURSION-GATE (user approves via /review in Telegram).
 
 ## Setup
 
@@ -19,16 +19,19 @@ One-click capture from any URL to your Grace-Mar Record. Local only; stages to R
    - Select the `extension/` folder
 
 3. **Use**:
-   - **Toolbar** — Click the extension icon, then "Save to Record" to stage the current page
-   - **Context menu** — Right-click on a page or link → "Save to Record"
+   - **Toolbar** — Click the extension icon:
+     - "Save to Record" — stage the current page
+     - "Save transcript" — paste LLM transcript or "We did [X]" lines → POST to /handback
+   - **Context menu** — Right-click:
+     - "Save to Record" — page/link/selection (stages to /stage)
+     - "Save transcript to Record" — selected transcript text → POST to /handback (selection only)
 
 ## What it does
 
-- Builds activity report: `we read "[page title]"` + URL (+ optional selected text/snippet)
-- POSTs to configurable `/stage` endpoint (default `http://localhost:5050/stage`)
-- Shows confirmation: "Saved! X items to review" (if staged) or "Added to log. X items to review"
-- Pipeline: stage → RECURSION-GATE → user approves in Telegram via /review
-- If server is unavailable, capture is queued locally and retried
+- **Save to Record** — Builds activity report: `we read "[page title]"` + URL (+ optional selected text/snippet). POSTs to `/stage`. Pipeline: stage → RECURSION-GATE → user approves in Telegram via /review.
+- **Save transcript** — LLM lesson transcript handback. Paste full transcript or "We did [X]" lines → POST to `/handback`. Analyst stages candidates to RECURSION-GATE. One install, one paste: user is in the recursive loop.
+- **Context menu (selection)** — "Save transcript to Record" sends selected text directly to `/handback` (no paste needed when transcript is visible).
+- Stage payloads: if server is unavailable, capture is queued locally and retried. Transcript handback does not queue; shows error if server down.
 
 ## Requirements
 

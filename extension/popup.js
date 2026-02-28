@@ -142,5 +142,27 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  const transcriptBtn = document.getElementById("transcript-btn");
+  const transcriptInput = document.getElementById("transcript-input");
+  transcriptBtn.addEventListener("click", async () => {
+    const content = (transcriptInput.value || "").trim();
+    if (!content) {
+      setStatus("Paste transcript first", true);
+      return;
+    }
+    transcriptBtn.disabled = true;
+    setStatus("Saving transcript…");
+    try {
+      const data = await sendMessage("handback", { content });
+      setStatus(data.staged ? "Transcript saved! Review in recursion-gate." : "Transcript added. Review in recursion-gate.");
+      transcriptInput.value = "";
+    } catch (err) {
+      setStatus(err.message || "Can't reach server", true);
+    } finally {
+      transcriptBtn.disabled = false;
+      refreshStatus();
+    }
+  });
+
   await refreshStatus();
 });

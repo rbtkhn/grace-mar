@@ -164,6 +164,8 @@ CHECKPOINT_MARKERS = re.compile(
 _client: OpenAI | None = None
 conversations: dict[str, list[dict]] = defaultdict(list)
 pending_lookups: dict[str, str] = {}
+# Agentic: after lookup, Voice proposes "add to record?" — companion says yes → stage
+pending_lookup_save: dict[str, tuple[str, str]] = {}
 
 
 def _format_checkpoint_transcript(history: list[dict]) -> str:
@@ -814,10 +816,11 @@ def _validate_analysis_yaml(analysis_yaml: str) -> tuple[bool, str]:
     return True, ""
 
 
-def analyze_exchange(user_message: str, assistant_message: str, channel_key: str) -> None:
+def analyze_exchange(user_message: str, assistant_message: str, channel_key: str) -> bool:
+    """Run analyst on exchange. Returns True if a candidate was staged."""
     if not _check_rate_limit(channel_key, "analyst", tokens=1):
         logger.debug("Analyst rate limit exceeded (%s), skipping", channel_key)
-        return
+        return False
     try:
         result = _get_client().chat.completions.create(
             model=OPENAI_ANALYST_MODEL,
@@ -832,14 +835,16 @@ def analyze_exchange(user_message: str, assistant_message: str, channel_key: str
             _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL)
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
-            return
+            return False
         staged = _stage_candidate(analysis, user_message, assistant_message, channel_key)
         if staged:
             logger.info("ANALYST: signal detected — staged candidate")
         else:
             logger.warning("ANALYST: signal detected but candidate failed schema validation")
+        return staged
     except Exception:
         logger.exception("Analyst error (non-fatal)")
+        return False
 
 
 def _stage_candidate(
@@ -888,11 +893,10 @@ def _run_analyst_background(
     assistant_message: str,
     channel_key: str,
 ) -> None:
-    thread = threading.Thread(
-        target=analyze_exchange,
-        args=(user_message, assistant_message, channel_key),
-        daemon=True,
-    )
+    def _run() -> None:
+        analyze_exchange(user_message, assistant_message, channel_key)
+
+    thread = threading.Thread(target=_run, daemon=True)
     thread.start()
 
 
@@ -926,6 +930,32 @@ def analyze_activity_report(user_message: str, channel_key: str) -> bool:
     except Exception:
         logger.exception("Analyst error on activity report (non-fatal)")
         return False
+
+
+def stage_last_exchange(channel_key: str) -> tuple[bool, str]:
+    """Agentic pipeline assistant: run analyst on the last user+assistant exchange. Returns (staged, message)."""
+    history = conversations.get(channel_key, [])
+    user_msg = None
+    assistant_msg = None
+    for i in range(len(history) - 1, -1, -1):
+        role = (history[i].get("role") or "").strip().lower()
+        content = (history[i].get("content") or "").strip()
+        if not content:
+            continue
+        if role == "assistant" and assistant_msg is None:
+            assistant_msg = content
+        elif role == "user" and assistant_msg is not None:
+            user_msg = content
+            break
+    if not user_msg or not assistant_msg:
+        return False, "no recent exchange to stage. chat a bit first, then try again."
+    if not _check_rate_limit(channel_key, "analyst", tokens=1):
+        return False, "i'm a little tired right now. can we try again in a bit?"
+    staged = analyze_exchange(user_msg, assistant_msg, channel_key)
+    count = len(get_pending_candidates())
+    if staged:
+        return True, f"i staged that. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
+    return True, f"i looked at that — no new signal to add right now. (you still have {count} in review — /review)"
 
 
 def get_pending_candidates() -> list[dict]:
@@ -1440,6 +1470,24 @@ def get_response(channel_key: str, user_message: str) -> str:
         p in normalized for p in AFFIRMATIVE_PHRASES
     )
 
+    # Agentic: companion said yes to "add to record?" after a lookup — stage and return
+    if channel_key in pending_lookup_save and is_affirmative:
+        question, answer = pending_lookup_save.pop(channel_key)
+        if not _check_rate_limit(channel_key, "analyst", tokens=1):
+            return "i'm a little tired right now. can we add it later?"
+        short_answer = (answer[:200] + "…") if len(answer) > 200 else answer
+        synthetic = f"we looked up '{question}' and learned: {short_answer}"
+        staged = analyze_activity_report(synthetic, channel_key)
+        emit_pipeline_event("dyad:lookup_save_proposal", None, channel_key=channel_key, question=question[:80])
+        count = len(get_pending_candidates())
+        archive("USER", channel_key, user_message)
+        archive("GRACE-MAR (lookup save)", channel_key, "added to review")
+        reply = f"got it! i added it to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
+        archive("GRACE-MAR", channel_key, reply)
+        return reply
+
+    pending_lookup_save.pop(channel_key, None)
+
     if channel_key in pending_lookups and is_affirmative:
         question = pending_lookups.pop(channel_key)
         if not _check_rate_limit(channel_key, "main", tokens=2):
@@ -1451,16 +1499,21 @@ def get_response(channel_key: str, user_message: str) -> str:
         assistant_message, lookup_source = _lookup_with_library_first(question, channel_key)
         emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, question=question[:100], lookup_source=lookup_source)
 
+        # Agentic: propose adding to record so companion can say yes
+        proposal = " want me to add this to your record so we remember it? say yes!"
+        full_message = assistant_message.rstrip() + proposal
+
         history.append({"role": "user", "content": user_message})
-        history.append({"role": "assistant", "content": assistant_message})
+        history.append({"role": "assistant", "content": full_message})
+        pending_lookup_save[channel_key] = (question, assistant_message)
 
         logger.info("USER: %s", user_message)
-        logger.info("GRACE-MAR (lookup): %s", assistant_message)
+        logger.info("GRACE-MAR (lookup): %s", full_message)
         archive("USER", channel_key, user_message)
-        archive("GRACE-MAR (lookup)", channel_key, assistant_message)
+        archive("GRACE-MAR (lookup)", channel_key, full_message)
 
-        _run_analyst_background(user_message, assistant_message, channel_key)
-        return assistant_message
+        _run_analyst_background(user_message, full_message, channel_key)
+        return full_message
 
     pending_lookups.pop(channel_key, None)
     history.append({"role": "user", "content": user_message})
@@ -1519,6 +1572,26 @@ def transcribe_voice(audio_bytes: bytes, channel_key: str = "telegram") -> str |
     except Exception:
         logger.exception("Whisper transcription error")
         return None
+
+
+def run_export_curriculum(user_id: str | None = None, audience: str | None = None) -> str:
+    """Export Record to curriculum JSON. Returns JSON string for sharing. Audience: alpha-school or None."""
+    import sys
+    repo_root = Path(__file__).resolve().parent.parent
+    sys.path.insert(0, str(repo_root / "scripts"))
+    try:
+        from export_curriculum import export_curriculum as _export
+        data = _export(user_id=user_id or USER_ID, audience=audience)
+        return json.dumps(data, indent=2)
+    except ImportError:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("export_curriculum", repo_root / "scripts" / "export_curriculum.py")
+        if spec and spec.loader:
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            data = mod.export_curriculum(user_id=user_id or USER_ID, audience=audience)
+            return json.dumps(data, indent=2)
+        raise
 
 
 def run_lookup(question: str, channel_key: str = "miniapp") -> str:
@@ -1582,6 +1655,7 @@ def reset_conversation(channel_key: str) -> None:
     """Clear conversation history for a channel. Used by /start and /reset."""
     conversations[channel_key] = []
     pending_lookups.pop(channel_key, None)
+    pending_lookup_save.pop(channel_key, None)
     end_homework_session(channel_key)
 
 

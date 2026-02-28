@@ -111,6 +111,8 @@ When labor no longer defines value, identity needs new units. The fork uses **kn
 
 **Recursive learning** — The Record improves itself over time. Each pipeline cycle (capture → stage → approve → merge) refines the model; the updated Record shapes the next cycle (analyst dedup, Voice responses, and—when implemented—proposed activities at the container edge). See [PIPELINE-MAP](pipeline-map.md#recursive-learning-process).
 
+**Record as skills file** — Like an agent's skills file refined weekly from external sources, the Record is a growing body of capability: knowledge (IX-A), curiosity (IX-B), personality (IX-C), and evidence (EVIDENCE). The human provides structure (what to learn, what to do); the system executes and records outcomes. "We did X" feeds back; the next prompt reflects what was done. Recursive refinement: the Record is not static; it improves each cycle.
+
 **Evidence-grounding = confidence-grounding.** The Record traces claims to artifacts — "you wrote this," "you drew this," "you said this." That grounds self-view in demonstrated competence rather than affirmation. Alpha builds confidence through test scores and mastery; the fork builds it through evidence. Different paths to the same outcome: a grounded sense of capability.
 
 ---

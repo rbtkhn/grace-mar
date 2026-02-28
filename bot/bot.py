@@ -66,6 +66,8 @@ from .core import (
     resolve_intent_debate_packet,
     list_unresolved_debate_packets,
     emit_pipeline_event,
+    stage_last_exchange,
+    run_export_curriculum,
 )
 
 load_dotenv()
@@ -376,6 +378,40 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
         await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
     else:
         await query.edit_message_text(f"couldn't update {candidate_id}")
+
+
+async def stage_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Agentic pipeline assistant: stage the last exchange to PENDING-REVIEW (never merge)."""
+    chat_id = update.effective_chat.id
+    key = _channel_key(chat_id)
+    try:
+        ok, msg = await _run_blocking(stage_last_exchange, key)
+        archive("STAGE (agentic)", key, msg)
+        await update.message.reply_text(msg)
+    except Exception:
+        logger.exception("Stage command error")
+        await update.message.reply_text("i couldn't stage that right now. try again?")
+
+
+async def export_curriculum_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Export curriculum profile (JSON) — shareable for adaptive curriculum engines."""
+    args = context.args or []
+    audience = "alpha-school" if "alpha" in " ".join(args).lower() else None
+    try:
+        content = await _run_blocking(run_export_curriculum, None, audience)
+        buf = BytesIO(content.encode("utf-8"))
+        buf.seek(0)
+        caption = "Curriculum profile — curiosity, knowledge, skills edge, evidence anchors."
+        if audience:
+            caption += " (alpha-school context included)"
+        await update.message.reply_document(
+            document=buf,
+            filename="curriculum_profile.json",
+            caption=caption,
+        )
+    except Exception:
+        logger.exception("Export curriculum error")
+        await update.message.reply_text("i couldn't make the curriculum export right now. try again in a bit?")
 
 
 async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -876,6 +912,8 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))
+    app.add_handler(CommandHandler("stage", stage_command))
+    app.add_handler(CommandHandler("export_curriculum", export_curriculum_command))
     app.add_handler(CommandHandler("merge", merge_command))
     app.add_handler(CommandHandler("reject", reject_with_reason))
     app.add_handler(CommandHandler("rotate", rotate_context_command))

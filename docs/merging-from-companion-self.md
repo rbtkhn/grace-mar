@@ -1,6 +1,6 @@
 # Merging Upgrades from Companion-Self (Template → Instance)
 
-**Purpose:** Grace-Mar is an **instance**; companion-self is the **template** repo. When the template is updated (concept, protocol, seed, schema), this doc describes how to pull those changes into grace-mar without overwriting the Record. See [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §5 for the contract.
+**Purpose:** Grace-Mar is an **instance**; companion-self is the **template** repo. When the template is updated (concept, protocol, seed, schema), this doc describes how to pull those changes into grace-mar without overwriting the Record. See [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §5 for the contract. For a side-by-side overview of instance vs template, see [grace-mar vs companion-self](grace-mar-vs-companion-self.md).
 
 **Workspace boundary:** All grace-mar modifications—including merges from companion-self—are done in **this (grace-mar) workspace**. Do not edit grace-mar from a companion-self workspace; there, grace-mar is read-only reference. When you perform the merge checklist below, you are in the grace-mar workspace; companion-self is pulled or opened for reference only. See companion-self [COMPANION-SELF-BOOTSTRAP](https://github.com/rbtkhn/companion-self/blob/main/companion-self-bootstrap.md) §7.
 
@@ -21,6 +21,7 @@ These paths in companion-self are the canonical source for shared concept, proto
 | `docs/memory-template.md` | MEMORY schema and scope |
 | `agents.md` | Template-level governance (pipeline rule, knowledge boundary, operating modes) |
 | Seed-phase definition | In companion-self: docs or README section describing seed phases; in grace-mar: reflected in ARCHITECTURE and OPERATOR-BRIEF |
+| `docs/skill-work/` | WORK submodules: skill-work-alpha-school (Alpha benchmarks, 2-hour target, Record-driven prompts). Re-sync when template updates. |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.
 

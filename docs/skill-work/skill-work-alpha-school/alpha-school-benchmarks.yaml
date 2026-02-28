@@ -1,0 +1,104 @@
+# Alpha School benchmarks (reference only)
+# Companion-Self template · Not verified by Companion-Self; optional comparison targets.
+# Source: Moonshots #233 — Alpha Schools (McKenzie Price, Joe Lamont).
+# See alpha-school-reference.md for status and how instances should use these.
+# Cloned into grace-mar from companion-self.
+
+id: alpha-school-benchmarks-v1
+source: "Moonshots #233 transcript — This $40M AI Company Is Using AI Tutors to Teach 2 Hours/Day"
+source_url: "https://moonshots.xyz/233"
+confidence: low
+verified_by_companion_self: false
+
+target_market:
+  - alpha_school_families
+  - cant_afford_alpha
+  - homeschool
+  - self_motivated_adults
+
+success_metrics:
+  - screen_time_daily
+  - sat_metrics
+  - state_tests
+  - engagement
+  - value_creation
+
+benchmarks:
+  screen_time_daily:
+    minutes: 120
+    description: "Target daily academic screen time (full K–12 coverage in Alpha's model)"
+    evidence:
+      - id: alpha-2hr-claim
+        type: external-report
+        url: "https://alpha.school"
+        verified: false
+        notes: "Alpha's '2-hour school day'; Moonshots #233; 2hourlearning.com"
+
+  sat_metrics:
+    seniors_avg: 1535
+    whole_school_avg: 1410
+    freshman_goal_min: 1410
+    description: "SAT outcomes (top 1–2% nationally vs ~1024 national)"
+    evidence:
+      - id: alpha-sat-claim
+        type: external-report
+        url: ""
+        verified: false
+        notes: "Transcript: 'Our average SAT score for our seniors is 1535'; '1410 is the average for our entire high school'; third-party verification not in Record"
+
+  state_tests:
+    example: "Texas STAR"
+    mastery_target: 100
+    description: "State standardized test; mastery-based (don't move up until master)"
+    evidence:
+      - id: alpha-star-claim
+        type: external-report
+        verified: false
+        notes: "Transcript: Texas STAR; '95% of alpha students say you can get 100'"
+
+  engagement:
+    love_school_rate:
+      percent: 90
+      description: ">90% 'love school'; measured weekly"
+      evidence:
+        - id: alpha-love-school
+          type: external-report
+          verified: false
+          notes: "Transcript: 'We actually measure it where over 90% of our kids love school. We measure every week.'"
+    school_vs_vacation_rate:
+      percent_min: 40
+      percent_max: 60
+      description: "Would rather go to school than vacation (varies by workshop/vacation)"
+      evidence:
+        - id: alpha-vacation
+          type: external-report
+          verified: false
+          notes: "Transcript: '40 to 60% of our students say they'd rather go to school'"
+    mastery_belief_students_percent: 95
+    mastery_belief_parents_percent_lt: 10
+    description: "Belief that you can get 100 on state test (students vs parents)"
+    evidence:
+      - id: alpha-mastery-belief
+        type: external-report
+        verified: false
+        notes: "Transcript: alpha students 95% yes, parents <10%"
+
+  two_hour_block:
+    segment_minutes: [25, 30]
+    mastery_threshold_percent: 90
+    in_lesson_success_rate_percent: [80, 85]
+    open_chat_during_block: false
+    description: "Composition of Alpha's 2-hour academic block (design reference)"
+    evidence:
+      - id: alpha-block-composition
+        type: external-report
+        verified: false
+        notes: "Alpha blog/support docs; 25-min Pomodoro, 30-min subject blocks; zone of proximal development; chat disabled during block"
+
+  value_creation:
+    description: "Economic productivity and value creation — life-skills output, entrepreneurship, passion projects with real outcomes (e.g. food trucks, Airbnbs, Broadway musicals)"
+    evidence:
+      - id: alpha-life-skills
+        type: external-report
+        verified: false
+        notes: "Moonshots #233; Alpha afternoon workshops; fifth graders running food trucks/Airbnbs; senior producing Broadway musical; creators and contributors, not consumers"

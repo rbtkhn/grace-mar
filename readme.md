@@ -49,6 +49,10 @@ Two input channels feed the pipeline:
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/wechat-setup.md`)
 **Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
 
+### Instance vs template
+
+This repo is a **live instance** (one person’s cognitive fork). The **template** for creating new instances is [companion-self](https://github.com/rbtkhn/companion-self). For a side-by-side comparison — purpose, relationship, and one-sentence summaries — see [grace-mar vs companion-self](docs/grace-mar-vs-companion-self.md).
+
 ## Quick Start — Chat with Grace-Mar (Abby)
 
 Paste this into **ChatGPT** or **Grok** (or any web-enabled LLM):

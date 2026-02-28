@@ -63,6 +63,21 @@ entries:
 | **pd_url** | No | URL to complete public domain text (Project Gutenberg, Wikisource) — for retrieval and RAG |
 | **added_at** | Yes | ISO date when added |
 | **notes** | No | Free-form notes |
+| **maturity** | No | 1–3 scale for content difficulty; see [Maturity](#maturity) below. Mirrors lesson difficulty. |
+
+---
+
+## Maturity
+
+Optional **maturity** field (1–3) aligns LIBRARY with lesson difficulty. Same scale is used in [lesson-rules-config](../skill-work/lesson-rules-config.yaml) for LLM lesson scope.
+
+| Value | Label | Description |
+|-------|-------|-------------|
+| **1** | Early/young | Picture books, early readers, simple vocabulary |
+| **2** | Intermediate | Retellings, short chapter books, edge Lexile |
+| **3** | Advanced | Full texts, older literature, SAT-prep tier |
+
+Lesson generator uses this scale to scope activity difficulty and to instruct which LIBRARY maturity to draw from for reading activities.
 
 ---
 

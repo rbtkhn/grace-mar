@@ -1,5 +1,6 @@
 const DEFAULT_STAGE_URL = "http://localhost:5050/stage";
 const DEFAULT_STATUS_URL = "http://localhost:5050/status";
+const DEFAULT_HANDBACK_URL = "http://localhost:5050/handback";
 const QUEUE_KEY = "stageQueue";
 
 function asStatusUrl(stageUrl) {
@@ -10,6 +11,17 @@ function asStatusUrl(stageUrl) {
     return u.toString();
   } catch {
     return DEFAULT_STATUS_URL;
+  }
+}
+
+function asHandbackUrl(stageUrl) {
+  try {
+    const u = new URL(stageUrl || DEFAULT_STAGE_URL);
+    u.pathname = "/handback";
+    u.search = "";
+    return u.toString();
+  } catch {
+    return DEFAULT_HANDBACK_URL;
   }
 }
 
@@ -68,6 +80,20 @@ async function postStage(payload, cfg) {
   return data;
 }
 
+async function postHandback(content, cfg) {
+  const url = asHandbackUrl(cfg.stageUrl);
+  const res = await fetch(url, {
+    method: "POST",
+    headers: buildHeaders(cfg),
+    body: JSON.stringify({ content })
+  });
+  const data = await res.json().catch(() => ({ ok: false, error: "Invalid JSON response" }));
+  if (!res.ok || !data.ok) {
+    throw new Error(data.error || `HTTP ${res.status}`);
+  }
+  return data;
+}
+
 async function fetchStatus(cfg) {
   const url = new URL(cfg.statusUrl);
   if (cfg.userId) url.searchParams.set("user_id", cfg.userId);
@@ -113,6 +139,11 @@ chrome.runtime.onInstalled.addListener(() => {
     title: "Save to Record",
     contexts: ["page", "link", "selection"]
   });
+  chrome.contextMenus.create({
+    id: "save-transcript-to-record",
+    title: "Save transcript to Record",
+    contexts: ["selection"]
+  });
   chrome.alarms.create("graceMarFlushQueue", { periodInMinutes: 5 });
 });
 
@@ -132,6 +163,11 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
       ? `we read "${title}". selected text: "${selection.slice(0, 500)}"`
       : `we read "${title}"`;
     await stageToRecord({ content, url, title, selection_text: selection || undefined });
+  } else if (info.menuItemId === "save-transcript-to-record") {
+    const selection = (info.selectionText || "").trim();
+    if (selection) {
+      await handbackToRecord({ content: selection });
+    }
   }
 });
 
@@ -141,6 +177,12 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
     stageToRecord(msg.payload || {})
       .then((data) => sendResponse({ ok: true, data }))
       .catch((err) => sendResponse({ ok: false, error: err?.message || "stage failed" }));
+    return true;
+  }
+  if (msg.type === "handback") {
+    handbackToRecord(msg.payload || {})
+      .then((data) => sendResponse({ ok: true, data }))
+      .catch((err) => sendResponse({ ok: false, error: err?.message || "handback failed" }));
     return true;
   }
   if (msg.type === "flushQueue") {
@@ -195,5 +237,27 @@ async function stageToRecord(payload) {
           `. Queued offline (${queuedCount}).`
     }).catch(() => {});
     return { ok: true, queued: true, queue_count: queuedCount, error: err?.message || "failed" };
+  }
+}
+
+async function handbackToRecord(payload) {
+  const content = (payload.content || "").trim();
+  if (!content) {
+    throw new Error("Transcript content is empty");
+  }
+  const cfg = await getConfig();
+  const data = await postHandback(content, cfg);
+  if (data.ok) {
+    const msg = data.staged
+      ? "Transcript saved! Review in recursion-gate."
+      : "Transcript added. Review in recursion-gate.";
+    chrome.notifications?.create({
+      type: "basic",
+      title: "Grace-Mar",
+      message: msg
+    }).catch(() => {});
+    return { ...data, queued: false };
+  } else {
+    throw new Error(data.error || "Request failed");
   }
 }

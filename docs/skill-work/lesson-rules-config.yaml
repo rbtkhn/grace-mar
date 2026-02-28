@@ -1,0 +1,61 @@
+# Lesson prompt rules config
+# Generator pulls these rules so updates propagate without code change.
+# Aligns with educational-software-history-insights: formative loop, tutor-as-guide, 4-option rule, vocabulary in context.
+
+# Difficulty/maturity — mirrors self-library (docs/library-schema.md § Maturity).
+# Same 1–3 scale: scope activity complexity and LIBRARY selection for reading.
+difficulty:
+  scale: [1, 2, 3]
+  default: 2
+  reading_max_maturity: 2
+  descriptions:
+    1: "Early/young — picture books, early readers, simple prompts, single-step tasks"
+    2: "Intermediate — retellings, short chapter books, multi-step prompts, edge vocabulary"
+    3: "Advanced — full texts, longer compositions, complex inference, SAT-prep tier"
+
+mastery:
+  in_lesson_success_percent: [80, 85]
+  advance_threshold_percent: 90
+  description: "Per segment: aim for 80–85% success; don't advance until ~90% mastery. (Bloom, Alpha, IXL)"
+
+session:
+  segments_count: 4
+  segment_minutes: [25, 30]
+  activity_minutes: [10, 15]
+  total_hours: 2
+  description: "4 segments of ~25–30 min; 10–15 min per activity; 2-hour ceiling. (Alpha, CLT)"
+
+# Constraint architecture: musts, must_nots, preferences, escalation.
+# Aligns with 2026 prompting framework (specification engineering); evidence-first.
+constraints:
+  musts:
+    - "One question or prompt at a time. If she's stuck or misses a question, give a hint from the Record and try again before moving on."
+    - "Base activities on what is documented in the Record; do not speculate or invent scenarios."
+    - "Do not add facts, stories, or topics not listed above."
+    - "Aim for 4 short segments of ~25–30 min each; keep each activity to 10–15 min. Stay within one thread for the day."
+    - 'After each activity: "We did [X]."'
+  must_nots:
+    - "Do not advance to a new segment until she shows ~90% mastery on the current one."
+    - "Do not add content outside IX-A, IX-B, or IX-C."
+  preferences:
+    - "For reading: introduce one new word in context; when it appears, briefly explain it using a student-friendly definition (simple words, example from her world)."
+    - "Tone: warm and simple; light emoji is fine if it fits."
+  escalation:
+    - 'When the learner might not know how to respond: offer 4 multiple choice options (e.g. "What do you want to do next? A) reading, B) math, C) drawing/planning, D) we\'re done for today"). So the learner never gets stuck.'
+
+# Legacy flat rules; generator prefers constraints when present.
+rules:
+  - "One question or prompt at a time. If she's stuck or misses a question, give a hint from the Record and try again before moving on."
+  - "Base activities on what is documented in the Record; do not speculate or invent scenarios."
+  - "Do not add facts, stories, or topics not listed above."
+  - "For reading: introduce one new word in context; when it appears, briefly explain it using a student-friendly definition (simple words, example from her world)."
+  - "Aim for 4 short segments of ~25–30 min each; keep each activity to 10–15 min. Stay within one thread for the day."
+  - 'After each activity: "We did [X]."'
+  - "Tone: warm and simple; light emoji is fine if it fits."
+  - 'Always offer 4 multiple choice options when asking what to do next or when the learner might not know how to respond (e.g. "What do you want to do next? A) reading, B) math, C) drawing/planning, D) we\'re done for today"). So the learner never gets stuck not knowing what to ask or do next.'
+
+vocabulary_in_context:
+  enabled: true
+  one_new_word_per_reading: true
+  hint_from_record_when_stuck: true
+  description: "Beck et al., NRP: vocabulary in context at edge; student-friendly definitions."

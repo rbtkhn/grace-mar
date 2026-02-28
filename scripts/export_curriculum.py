@@ -10,6 +10,7 @@ Provides a snapshot for homeschool bots, Glide/Zapier stacks, Khan, IXL, etc.:
 Usage:
     python scripts/export_curriculum.py -u grace-mar
     python scripts/export_curriculum.py -u grace-mar -o ../curriculum-stack/
+    python scripts/export_curriculum.py -u grace-mar --audience alpha-school  # add alpha-school context
 """
 
 import argparse
@@ -128,7 +129,20 @@ def _library_titles(library_content: str, limit: int = 15) -> list[dict]:
     return entries
 
 
-def export_curriculum(user_id: str = "grace-mar") -> dict:
+def _load_alpha_school_context() -> dict | None:
+    """Load alpha-school target market, success metrics, and design params for alpha-school audience."""
+    sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    try:
+        from load_alpha_school_benchmarks import load_alpha_school_benchmarks
+        return load_alpha_school_benchmarks()
+    except ImportError:
+        return None
+
+
+def export_curriculum(
+    user_id: str = "grace-mar",
+    audience: str | None = None,
+) -> dict:
     """Build curriculum-oriented export for adaptive curriculum engines."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_content = _read(profile_dir / "self.md")
@@ -165,7 +179,7 @@ def export_curriculum(user_id: str = "grace-mar") -> dict:
     evidence_anchors = _evidence_anchors(evidence_content)
     library = _library_titles(library_content)
 
-    return {
+    data = {
         "version": "1.0",
         "grace_mar": True,
         "curriculum_ready": True,
@@ -184,6 +198,18 @@ def export_curriculum(user_id: str = "grace-mar") -> dict:
         "library": library,
     }
 
+    if audience == "alpha-school":
+        alpha = _load_alpha_school_context()
+        if alpha:
+            data["alpha_school_context"] = {
+                "target_market": alpha.get("target_market", []),
+                "success_metrics": alpha.get("success_metrics", []),
+                "screen_time_target_minutes": alpha.get("screen_time_target_minutes", 120),
+                "value_creation_description": alpha.get("value_creation_description"),
+            }
+
+    return data
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -191,9 +217,10 @@ def main() -> None:
     )
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output directory (default: users/[id]/)")
+    parser.add_argument("--audience", "-a", default=None, help="Audience: alpha-school (add target_market, success_metrics, screen_time_target)")
     args = parser.parse_args()
 
-    data = export_curriculum(user_id=args.user)
+    data = export_curriculum(user_id=args.user, audience=args.audience)
     profile_dir = REPO_ROOT / "users" / args.user
     out_dir = Path(args.output) if args.output else profile_dir
     out_dir.mkdir(parents=True, exist_ok=True)

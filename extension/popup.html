@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <style>
-    body { width: 280px; padding: 12px 16px; font-family: system-ui, sans-serif; font-size: 14px; }
+    body { width: 300px; min-height: 120px; padding: 12px 16px; font-family: system-ui, sans-serif; font-size: 14px; }
     h2 { margin: 0 0 8px 0; font-size: 14px; font-weight: 600; }
     .url { color: #666; font-size: 12px; word-break: break-all; margin-bottom: 12px; }
     button { width: 100%; padding: 10px 16px; background: #2563eb; color: white; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; }
@@ -17,12 +17,21 @@
     .row button:hover { background: #1e293b; }
     .meta { margin-top: 8px; font-size: 12px; color: #334155; }
     a { color: #2563eb; text-decoration: none; }
+    .divider { margin: 12px 0; border-top: 1px solid #e2e8f0; }
+    .section-title { font-size: 12px; font-weight: 600; color: #475569; margin-bottom: 6px; }
+    textarea { width: 100%; box-sizing: border-box; min-height: 80px; padding: 8px; font-size: 12px; border: 1px solid #cbd5e1; border-radius: 6px; resize: vertical; margin-bottom: 8px; font-family: inherit; }
   </style>
 </head>
 <body>
   <h2>Save to Record</h2>
   <div class="url" id="page-info">Loading…</div>
   <button id="save-btn">Save to Record</button>
+
+  <div class="divider"></div>
+  <div class="section-title">LLM transcript handback</div>
+  <textarea id="transcript-input" placeholder="Paste transcript or 'We did [X]' lines from ChatGPT/Grok/Claude…"></textarea>
+  <button id="transcript-btn">Save transcript</button>
+
   <div class="row">
     <button id="retry-btn">Retry Queue</button>
     <button id="status-btn">Refresh Status</button>
