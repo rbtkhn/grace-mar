@@ -21,11 +21,12 @@ if __package__ is None:
 import asyncio
 import importlib.util
 import os
+import re
 import logging
 import subprocess
 from io import BytesIO
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, time
 
 from dotenv import load_dotenv
 from telegram import (
@@ -49,6 +50,7 @@ from telegram.ext import (
 from .core import (
     get_response,
     archive,
+    analyze_activity_report,
     reset_conversation,
     get_greeting,
     get_reset_message,
@@ -92,6 +94,12 @@ OPERATOR_REMINDER_INTERVAL_SEC = int(os.getenv("GRACE_MAR_OPERATOR_REMINDER_INTE
 OPERATOR_PENDING_THRESHOLD = int(os.getenv("GRACE_MAR_OPERATOR_PENDING_THRESHOLD", "5"))
 OPERATOR_STALE_DAYS = int(os.getenv("GRACE_MAR_OPERATOR_STALE_DAYS", "7"))
 
+# Idle checkpoint prompt: daily nudge to add anything from the day (passive capture)
+IDLE_CHECKPOINT_ENABLED = os.getenv("GRACE_MAR_IDLE_CHECKPOINT_ENABLED", "0").strip().lower() in {"1", "true", "yes"}
+IDLE_CHECKPOINT_HOUR = int(os.getenv("GRACE_MAR_IDLE_CHECKPOINT_HOUR", "20"))
+IDLE_CHECKPOINT_MINUTE = int(os.getenv("GRACE_MAR_IDLE_CHECKPOINT_MINUTE", "0"))
+IDLE_CHECKPOINT_CHAT_ID = os.getenv("GRACE_MAR_IDLE_CHECKPOINT_CHAT_ID", "").strip() or OPERATOR_CHAT_ID
+
 
 def _channel_key(chat_id: int) -> str:
     return f"telegram:{chat_id}"
@@ -111,6 +119,19 @@ def _is_operator_chat(update: Update) -> bool:
         return False
     chat_id = update.effective_chat.id if update.effective_chat else None
     return bool(chat_id) and str(chat_id) == OPERATOR_CHAT_ID
+
+
+def _looks_like_paste_handback(text: str) -> bool:
+    """True if message looks like pasted transcript (external LLM chat, notes)."""
+    if not text or len(text) < 500:
+        return False
+    lines = text.count("\n")
+    transcript_markers = re.search(
+        r"\b(User|Assistant|Human|AI|Me|ChatGPT|Claude|System|Bot):\s",
+        text,
+        re.IGNORECASE,
+    )
+    return lines >= 4 or bool(transcript_markers)
 
 
 def _is_operator_review_intent(text: str) -> bool:
@@ -971,6 +992,19 @@ async def operator_reminder_job(context: ContextTypes.DEFAULT_TYPE) -> None:
         logger.exception("Operator reminder job error")
 
 
+async def idle_checkpoint_job(context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Daily idle checkpoint prompt: gentle nudge to add anything from the day (passive capture)."""
+    if not IDLE_CHECKPOINT_ENABLED or not IDLE_CHECKPOINT_CHAT_ID:
+        return
+    try:
+        await context.bot.send_message(
+            chat_id=int(IDLE_CHECKPOINT_CHAT_ID),
+            text="anything from today you'd like me to remember? (paste or type to add; or just leave it)",
+        )
+    except Exception:
+        logger.exception("Idle checkpoint job error")
+
+
 async def handle_message(
     update: Update, context: ContextTypes.DEFAULT_TYPE
 ) -> None:
@@ -1021,6 +1055,43 @@ async def handle_message(
     if _is_operator_chat(update) and _is_operator_review_intent(user_message):
         archive("USER", key, user_message)
         await _show_review_one_by_one(update, context, index=0)
+        return
+
+    # Paste-as-handback: long transcript-like paste → stage as activity report
+    if _looks_like_paste_handback(user_message):
+        synthetic = (
+            "we did a chat in an external LLM (ChatGPT, Claude, etc). here is the checkpoint or transcript:\n\n"
+            + user_message
+        )
+        archive("HANDBACK PASTE", key, user_message[:500] + ("..." if len(user_message) > 500 else ""))
+        try:
+            staged = await _run_blocking(analyze_activity_report, synthetic, key)
+            count = len(get_pending_candidates())
+            if staged:
+                await update.message.reply_text(
+                    f"got it! i read that and added it to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review"
+                )
+            else:
+                await update.message.reply_text(
+                    "ok i read that. nothing new to add to your profile right now, but it's in the log! type /review"
+                )
+        except Exception:
+            logger.exception("Paste handback error")
+            await update.message.reply_text("i couldn't read that paste right now. try again or send as a .txt file?")
+        return
+
+    # Session-end idle prompt: goodbye-type phrase → gentle "anything to add?"
+    goodbye_patterns = (
+        "bye", "goodbye", "good bye", "see you", "talk later", "that's all",
+        "done for now", "done for today", "done for the day", "signing off",
+    )
+    if user_message.strip().lower() in goodbye_patterns or any(
+        user_message.strip().lower().startswith(p) for p in ("bye", "goodbye", "see you", "talk later")
+    ):
+        archive("USER", key, user_message)
+        await update.message.reply_text(
+            "ok! anything from today you'd like me to remember? (paste or type to add; or just leave it)"
+        )
         return
 
     try:
@@ -1153,6 +1224,18 @@ def create_application(webhook_mode: bool = False) -> Application:
                 "Operator reminders enabled for chat %s (interval=%ss)",
                 OPERATOR_CHAT_ID,
                 max(300, OPERATOR_REMINDER_INTERVAL_SEC),
+            )
+        if IDLE_CHECKPOINT_ENABLED and IDLE_CHECKPOINT_CHAT_ID and application.job_queue:
+            application.job_queue.run_daily(
+                idle_checkpoint_job,
+                time=time(hour=IDLE_CHECKPOINT_HOUR, minute=IDLE_CHECKPOINT_MINUTE),
+                name="idle_checkpoint",
+            )
+            logger.info(
+                "Idle checkpoint prompt enabled for chat %s (daily at %02d:%02d)",
+                IDLE_CHECKPOINT_CHAT_ID,
+                IDLE_CHECKPOINT_HOUR,
+                IDLE_CHECKPOINT_MINUTE,
             )
 
     builder = Application.builder().token(TELEGRAM_TOKEN).post_init(set_menu_button)
