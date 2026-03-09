@@ -2,7 +2,7 @@
 
 Use this file to resume development quickly in a new agent conversation.
 
-Last updated: 2026-02-27
+Last updated: 2026-03-09
 
 ---
 
@@ -48,6 +48,18 @@ Last updated: 2026-02-27
 ---
 
 ## Recently Completed (High Level)
+
+### Feedback loop fast wins (2026-03-09)
+- **Calibrate-on-miss** — `scripts/calibrate_from_miss.py`: stage candidate when Voice missed/was wrong. Usage: `--miss "…"` optional `--suggested "…"`.
+- **Oversight cadence** — `scripts/openclaw_heartbeat.py`: heartbeat for long OpenClaw sessions (pending count, last evidence, last session). Doc: openclaw-integration § Oversight cadence.
+- **Closed-loop verification** — New pipeline event types: `export_used`, `merge_feedback`. Doc: [feedback-loops.md](feedback-loops.md).
+- **Idle digest** — session_brief now includes "Suggested Activities" (from IX-B, LIBRARY) and INTENT primary goal when present.
+- **INTENT-driven proposals** — session_brief loads intent.md primary goal and displays in Suggested Activities section.
+
+### Proactive proposal + low-friction approval (2026-03-09)
+- **Proposal brief** — `scripts/proposal_brief.py`: 3–5 activities from IX-A/B/C, LIBRARY, gaps, INTENT. Usage: `python scripts/proposal_brief.py -u grace-mar -n 5`.
+- **Low-friction approval** — Operator one-tap: ✅ Approve in /review or `/approve CANDIDATE-XXX` merges immediately when candidate is low-risk (single IX target, no conflicts, no advisory_flagged). Set `GRACE_MAR_OPERATOR_NAME` for audit. Doc: feedback-loops § Low-friction approval.
+- **process_approved_candidates --quick** — `--quick CANDIDATE-XXX --approved-by <name>` for single-candidate merge without receipt file.
 
 ### This session (recommended order)
 - **Engagement export** — `scripts/export_engagement_profile.py`: JSON/markdown of interests, IX-B curiosity, IX-C personality, talent_stack for tutors/platforms. DESIGN-ROADMAP §9 and OPERATOR-BRIEF updated.

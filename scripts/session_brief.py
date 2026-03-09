@@ -25,8 +25,10 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 STALE_PENDING_DAYS = 3
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
+LIBRARY_PATH_REL = "self-library.md"  # relative to user_dir
 LAST_N_ACTIVITIES = 5
 WISDOM_COUNT = 3
+SUGGESTED_ACTIVITIES_COUNT = 3
 DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
 
@@ -184,15 +186,66 @@ def _ix_b_topics(self_content: str) -> list[str]:
     if "### IX-B. CURIOSITY" not in self_content:
         return topics
     idx = self_content.find("### IX-B. CURIOSITY")
-    block = self_content[idx : idx + 2000]
-    # Simple extraction: look for - topic or CUR- entries
-    for m in re.finditer(r"-\s+([^\n]+)", block):
-        line = m.group(1).strip()
-        if line.startswith("#") or "provenance" in line or "evidence" in line:
-            continue
-        if len(line) > 3 and not line.startswith("curated"):
-            topics.append(line.split("—")[0].strip()[:40])
+    block = self_content[idx : idx + 4000]
+    # Prefer topic: "..." lines
+    for m in re.finditer(r'topic:\s*["\']([^"\']+)["\']', block):
+        t = m.group(1).strip()[:60]
+        if t and t not in topics:
+            topics.append(t)
+    # Fallback: lines that look like content (not id:, provenance, evidence)
+    if not topics:
+        for m in re.finditer(r"-\s+([^\n]+)", block):
+            line = m.group(1).strip()
+            if line.startswith("id:") or "provenance" in line or "evidence" in line:
+                continue
+            if len(line) > 5 and not line.startswith("curated"):
+                topics.append(line.split("—")[0].strip()[:40])
     return topics[:10]
+
+
+def _suggested_activities(
+    ix_b_topics: list[str],
+    from_record: list[str],
+    library_titles: list[str],
+    n: int = 3,
+) -> list[str]:
+    """Derive 2–3 suggested activities from Record and LIBRARY."""
+    activities = []
+    seen = set()
+    for t in ix_b_topics[:2]:
+        t = t.strip()
+        if t and t.lower() not in seen:
+            seen.add(t.lower())
+            activities.append(f"Ask Grace-Mar about {t} — or teach her what you've learned.")
+    for t in from_record[:1]:
+        t = t.strip()
+        if t and t.lower() not in seen and len(activities) < n:
+            seen.add(t.lower())
+            activities.append(f"Explore {t} further.")
+    for title in library_titles[:1]:
+        if title and len(activities) < n:
+            activities.append(f"From LIBRARY: {title[:50]} — consider reading or discussing.")
+    return activities[:n]
+
+
+def _library_titles(library_content: str, n: int = 3) -> list[str]:
+    """Extract up to n active library entry titles."""
+    titles = []
+    for m in re.finditer(r'title:\s*["\']([^"\']+)["\']', library_content):
+        titles.append(m.group(1).strip())
+        if len(titles) >= n:
+            break
+    return titles
+
+
+def _intent_primary_goal(user_dir: Path) -> str | None:
+    """Load primary goal from intent.md if present."""
+    path = user_dir / "intent.md"
+    if not path.exists():
+        return None
+    raw = path.read_text(encoding="utf-8")
+    m = re.search(r"primary:\s*[\"']([^\"']+)[\"']", raw)
+    return m.group(1).strip() if m else None
 
 
 def _wisdom_questions(wisdom_content: str, ix_b_topics: list[str], n: int) -> list[str]:
@@ -251,12 +304,17 @@ def main() -> int:
     pr_content = _read(user_dir / "recursion-gate.md")
     self_content = _read(user_dir / "self.md")
     wisdom_content = _read(WISDOM_PATH)
+    library_content = _read(user_dir / LIBRARY_PATH_REL)
 
     activities = _last_activities(evidence_content, LAST_N_ACTIVITIES)
     pending_count = _pending_count(pr_content)
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
     from_record = _from_the_record_topics(self_content)
+    suggested_activities = _suggested_activities(
+        ix_b, from_record, _library_titles(library_content), SUGGESTED_ACTIVITIES_COUNT
+    )
+    intent_goal = _intent_primary_goal(user_dir)
     pr_path = user_dir / "recursion-gate.md"
     pending_stale = False
     if pending_count > 0 and pr_path.exists():
@@ -307,6 +365,14 @@ def main() -> int:
         lines.append(f"The Record holds: {topics_str}. Ask Grace-Mar to recall any of these.")
     else:
         lines.append("(nothing yet — pipeline will grow the Record)")
+    lines.extend(["", "## Suggested Activities", ""])
+    if suggested_activities:
+        for a in suggested_activities:
+            lines.append(f"- {a}")
+        if intent_goal:
+            lines.append(f"\n*Aligned with INTENT: {intent_goal}*")
+    else:
+        lines.append("(Record will suggest activities as IX-B and LIBRARY grow)")
     lines.extend(["", "## Suggested Wisdom Questions", ""])
     if wisdom:
         for q in wisdom:

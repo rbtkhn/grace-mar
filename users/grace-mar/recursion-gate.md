@@ -957,4 +957,3 @@ prompt_section: YOUR KNOWLEDGE
 prompt_addition: none
 suggested_followup: What do you think makes Mars different from Earth?
 ```
-

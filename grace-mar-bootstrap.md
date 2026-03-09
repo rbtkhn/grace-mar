@@ -95,6 +95,11 @@ python3 integrations/openclaw_hook.py --user grace-mar --format md+manifest --em
 python3 integrations/openclaw_stage.py --user grace-mar --text "we explored X in OpenClaw"
 ```
 
+### Proposal brief (proactive activities from Record)
+```bash
+python3 scripts/proposal_brief.py -u grace-mar -n 5
+```
+
 ### PRP refresh (after profile/prompt updates)
 ```bash
 python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt

@@ -54,6 +54,8 @@ from .core import (
     get_reset_message,
     get_pending_candidates,
     update_candidate_status,
+    is_low_risk_candidate,
+    quick_merge_candidate,
     start_homework_session,
     process_homework_answer,
     is_in_homework_session,
@@ -366,6 +368,15 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
     chat_id = query.message.chat.id if query.message else None
     actor_id = update.effective_user.id if update.effective_user else None
     channel_key = _channel_key(chat_id) if chat_id else None
+
+    # Low-friction: operator + low-risk + approve → quick merge (one-tap)
+    do_quick_merge = (
+        action == "approve"
+        and _is_operator_chat(update)
+        and is_low_risk_candidate(candidate_id)
+    )
+    approved_by = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator").strip() or "operator"
+
     ok = update_candidate_status(
         candidate_id,
         status,
@@ -373,11 +384,24 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
         actor=f"telegram:{actor_id}" if actor_id else None,
         source="telegram:callback",
     )
-    if ok:
-        emoji = "✅" if action == "approve" else "❌"
-        await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
-    else:
+    if not ok:
         await query.edit_message_text(f"couldn't update {candidate_id}")
+        return
+
+    if do_quick_merge:
+        try:
+            merge_ok, msg = await _run_blocking(quick_merge_candidate, candidate_id, approved_by)
+            if merge_ok:
+                await query.edit_message_text(f"✅ {candidate_id} — merged! (quick approve)")
+            else:
+                await query.edit_message_text(f"✅ {candidate_id} — approved. Merge failed: {msg[:80]}. Run /merge for receipt flow.")
+        except Exception:
+            logger.exception("Quick merge error")
+            await query.edit_message_text(f"✅ {candidate_id} — approved. Quick merge failed — run /merge for receipt flow.")
+        return
+
+    emoji = "✅" if action == "approve" else "❌"
+    await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
 
 
 async def stage_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -412,6 +436,54 @@ async def export_curriculum_command(update: Update, context: ContextTypes.DEFAUL
     except Exception:
         logger.exception("Export curriculum error")
         await update.message.reply_text("i couldn't make the curriculum export right now. try again in a bit?")
+
+
+async def approve_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Approve a candidate by ID. If operator and low-risk, quick-merge immediately."""
+    args = context.args or []
+    if not args:
+        await update.message.reply_text(
+            "Usage: /approve CANDIDATE-0040\n"
+            "If you're the operator and the candidate is low-risk, it merges immediately."
+        )
+        return
+    candidate_id = args[0]
+    if not candidate_id.upper().startswith("CANDIDATE-"):
+        await update.message.reply_text(f"Expected CANDIDATE-XXXX, got {candidate_id}")
+        return
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    actor_id = update.effective_user.id if update.effective_user else None
+    approved_by = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator").strip() or "operator"
+
+    ok = update_candidate_status(
+        candidate_id,
+        "approved",
+        channel_key=_channel_key(chat_id) if chat_id else None,
+        actor=f"telegram:{actor_id}" if actor_id else None,
+        source="telegram:command",
+    )
+    if not ok:
+        await update.message.reply_text(f"couldn't approve {candidate_id} (not pending?)")
+        return
+
+    if _is_operator_chat(update) and is_low_risk_candidate(candidate_id):
+        try:
+            merge_ok, msg = await _run_blocking(quick_merge_candidate, candidate_id, approved_by)
+            if merge_ok:
+                await update.message.reply_text(f"✅ {candidate_id} — merged! (quick approve)")
+            else:
+                await update.message.reply_text(
+                    f"✅ {candidate_id} — approved. Merge failed: {msg[:80]}. Run /merge for receipt flow."
+                )
+        except Exception:
+            logger.exception("Quick approve merge error")
+            await update.message.reply_text(
+                f"✅ {candidate_id} — approved. Quick merge failed — run /merge for receipt flow."
+            )
+    else:
+        await update.message.reply_text(
+            f"✅ {candidate_id} — approved. Type /merge for receipt-based merge instructions."
+        )
 
 
 async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -912,6 +984,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))
+    app.add_handler(CommandHandler("approve", approve_command))
     app.add_handler(CommandHandler("stage", stage_command))
     app.add_handler(CommandHandler("export_curriculum", export_curriculum_command))
     app.add_handler(CommandHandler("merge", merge_command))

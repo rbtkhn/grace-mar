@@ -25,6 +25,8 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 
 The grace-mar Record (self.md + selected SKILLS) can populate OpenClaw's `user.md` or `SOUL.md` so the agent knows who it serves.
 
+OpenClaw practitioners often "tell OpenClaw everything" — mission, goals, context — by hand. Grace-Mar provides a **canonical, evidence-linked identity layer** instead: the Record is the single source of truth, gated by the companion, and grows only through approved merges. Export replaces ad hoc briefing with a structured profile.
+
 ### Export Script
 
 ```bash
@@ -91,6 +93,18 @@ Grace-Mar continuity (if users/grace-mar exists):
 - [ ] Skim last 1–2 EVIDENCE entries
 ```
 
+This checklist supports human-in-the-loop oversight — analogous to orchestration patterns (e.g. a "chief of staff" agent checking subordinates). The companion or operator stays aware of staged work and recent evidence before OpenClaw runs.
+
+### Oversight cadence (long sessions)
+
+For OpenClaw sessions running longer than a few hours, run a **heartbeat** periodically:
+
+```bash
+python scripts/openclaw_heartbeat.py -u grace-mar
+```
+
+Output: pending candidate count, last evidence date, last session. Add to OpenClaw cron or run manually every 2–4 hours. Keeps the human gate relevant during long autonomous runs.
+
 ### Workspace Layout
 
 Two patterns:
@@ -112,6 +126,15 @@ workspace/
 └── grace-mar/
 ```
 Export script path: `../grace-mar/scripts/export_user_identity.py`
+
+### Deployment topology: local vs VPS
+
+| Topology | Grace-Mar | OpenClaw | Notes |
+|----------|-----------|----------|-------|
+| **Local–local** | On companion/operator machine | Same machine or sibling dir | Preferred. Export and handback run locally; provenance and security are simplest. |
+| **Local–VPS** | Local | OpenClaw on cloud/VPS | Export can be pulled by remote agent. Handback from VPS to Grace-Mar requires provenance metadata (`source: openclaw`) and raises trust/security questions — document the handback path and avoid staging untrusted content. |
+
+When OpenClaw runs on a VPS, keys and agent state live in the cloud; injection and hijack risks are higher than on fresh local hardware. Prefer local-to-local when possible.
 
 ---
 
@@ -226,6 +249,12 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 | Merge into SELF, EVIDENCE, prompt | ❌ | ✅ |
 | Invoke "we did X" pipeline | — | ✅ (operator assists) |
 
+### 5.5 Security Considerations
+
+- **Third-party OpenClaw skills** — Community skills and plugins are a major attack surface. Prefer Grace-Mar's native tooling (`openclaw_hook`, `openclaw_stage`) over third-party Record-sync skills. If you use a skill for staging, audit it; better: point OpenClaw at the behavior and have it build its own version.
+- **Injection and hijack** — OpenClaw agents can be targeted (e.g. malicious sites, prompt injection). Inbound handback runs an advisory constitutional check before staging. Never auto-merge from OpenClaw; the companion gate is the defense.
+- **Local preferred** — Running OpenClaw locally (e.g. Mac Mini, Mac Studio) is generally more secure than on a VPS. See [Deployment topology](#deployment-topology-local-vs-vps) above.
+
 ---
 
 ## 6. Quick Reference
@@ -265,6 +294,12 @@ Export commands used for handoff:
 python scripts/export_user_identity.py -u grace-mar -o handoff-identity.md
 python scripts/export_fork.py -u grace-mar -o handoff-fork.json
 ```
+
+---
+
+## Research
+
+- [skill-work-openclaw/research-moonshots-237.md](skill-work/skill-work-openclaw/research-moonshots-237.md) — Moonshots #237 (Alex Finn): identity, memory, security, hierarchy.
 
 ---
 

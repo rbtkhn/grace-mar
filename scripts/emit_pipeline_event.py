@@ -11,6 +11,10 @@ Usage:
     python scripts/emit_pipeline_event.py validation_failed CANDIDATE-0046 reason="missing evidence"
     python scripts/emit_pipeline_event.py maintenance none action=rotate_context rotated=true
     python scripts/emit_pipeline_event.py --user grace-mar applied CANDIDATE-0040
+
+Closed-loop verification (optional):
+    python scripts/emit_pipeline_event.py export_used none export_id=abc123 used_in_openclaw=true
+    python scripts/emit_pipeline_event.py merge_feedback CANDIDATE-0040 helpful=true
 """
 
 import argparse

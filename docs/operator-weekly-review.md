@@ -22,6 +22,11 @@ Block time weekly — e.g. Sunday evening or Monday morning. All steps optional 
 
 ---
 
+## Feedback loops
+
+- **Calibrate-on-miss** — When Voice missed or was wrong: `python scripts/calibrate_from_miss.py -u [id] --miss "…"` (see [feedback-loops.md](feedback-loops.md))
+- **Closed-loop verification** — Optional: `emit_pipeline_event.py export_used` and `merge_feedback` for benchmarks
+
 ## Gap Hunter (operator prompt)
 
 When reviewing an exchange or SESSION-TRANSCRIPT chunk, ask yourself:

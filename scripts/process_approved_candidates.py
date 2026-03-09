@@ -754,6 +754,7 @@ def main() -> None:
         default=MIN_EVIDENCE_TIER,
         help=f"Minimum evidence tier policy for merge validation (default: {MIN_EVIDENCE_TIER})",
     )
+    ap.add_argument("--quick", default="", help="Quick merge single candidate (implies --apply); e.g. CANDIDATE-0040")
     ap.add_argument("--export-openclaw", action="store_true", help="Run OpenClaw export after successful merge")
     ap.add_argument(
         "--openclaw-format",
@@ -774,7 +775,22 @@ def main() -> None:
     _set_user(args.user)
     dry_run = not args.apply
 
+    # --quick: single-candidate merge without receipt file (for Telegram one-tap)
+    if args.quick.strip():
+        args.apply = True
+        dry_run = False
+        if not args.approved_by.strip():
+            raise SystemExit("--approved-by is required with --quick")
+
     approved = get_approved_in_candidates()
+    if args.quick.strip():
+        quick_id = args.quick.strip()
+        if not quick_id.upper().startswith("CANDIDATE-"):
+            raise SystemExit(f"--quick expects CANDIDATE-XXXX, got {quick_id}")
+        approved = [c for c in approved if c["id"] == quick_id]
+        if not approved:
+            raise SystemExit(f"No approved candidate {quick_id} — ensure it is approved (e.g. via /review)")
+
     if not approved:
         print("No approved candidates to process.")
         return
@@ -800,13 +816,17 @@ def main() -> None:
 
     if not args.approved_by.strip():
         raise SystemExit("--approved-by is required with --apply")
-    if not args.receipt.strip():
-        raise SystemExit("--receipt is required with --apply")
+    if not args.receipt.strip() and not args.quick.strip():
+        raise SystemExit("--receipt is required with --apply (or use --quick for single-candidate)")
 
-    receipt_path = Path(args.receipt)
-    if not receipt_path.exists():
-        raise SystemExit(f"receipt file not found: {receipt_path}")
-    receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+    if args.quick.strip():
+        receipt = _build_receipt(approved, args.approved_by.strip())
+        receipt["min_evidence_tier"] = max(args.min_evidence_tier, MIN_EVIDENCE_TIER)
+    else:
+        receipt_path = Path(args.receipt)
+        if not receipt_path.exists():
+            raise SystemExit(f"receipt file not found: {receipt_path}")
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
     ok, reason = _validate_receipt(receipt, approved)
     if not ok:
         raise SystemExit(f"invalid receipt: {reason}")

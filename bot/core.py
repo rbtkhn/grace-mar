@@ -17,6 +17,7 @@ import json
 import logging
 import os
 import re
+import subprocess
 import threading
 import time
 from collections import defaultdict
@@ -972,6 +973,86 @@ def get_pending_candidates() -> list[dict]:
         summary = summary_m.group(1).strip().strip('"') if summary_m else "(no summary)"
         candidates.append({"id": m.group(1), "summary": summary[:100]})
     return candidates
+
+
+def get_candidate_block(candidate_id: str) -> dict | None:
+    """Return candidate block (id, block, summary, profile_target) by id, or None."""
+    if not RECURSION_GATE_PATH.exists():
+        return None
+    content = RECURSION_GATE_PATH.read_text()
+    parts = content.split("## Processed")[0]
+    for m in re.finditer(r"### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```", parts, re.DOTALL):
+        if m.group(1) == candidate_id:
+            block = m.group(2)
+            profile = re.search(r"profile_target:\s*(.+?)(?:\n|$)", block)
+            return {
+                "id": m.group(1),
+                "block": block,
+                "profile_target": (profile.group(1).strip().strip('"') if profile else ""),
+            }
+    return None
+
+
+def is_low_risk_candidate(candidate_id: str) -> bool:
+    """
+    True if candidate is safe for one-tap quick merge.
+    Low-risk: single profile_target, no conflicts in block, no advisory_flagged in pipeline events.
+    """
+    c = get_candidate_block(candidate_id)
+    if not c:
+        return False
+    block = c.get("block", "")
+    profile = (c.get("profile_target") or "").strip()
+    # Single target: IX-A, IX-B, or IX-C only (no comma = no multi-target)
+    if "," in profile:
+        return False
+    if not re.match(r"^IX-[ABC]\.", profile):
+        return False
+    # No conflicts in block
+    if re.search(r"conflicts?:|contradiction|advisory_flagged", block, re.IGNORECASE):
+        return False
+    # No advisory_flagged for this candidate in recent pipeline events
+    if PIPELINE_EVENTS_PATH.exists():
+        lines = PIPELINE_EVENTS_PATH.read_text().splitlines()
+        for line in reversed(lines[-100:]):
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+                if row.get("candidate_id") == candidate_id and row.get("event") == "intent_constitutional_critique":
+                    if str(row.get("status") or "").lower() == "advisory_flagged":
+                        return False
+            except json.JSONDecodeError:
+                continue
+    return True
+
+
+def quick_merge_candidate(candidate_id: str, approved_by: str) -> tuple[bool, str]:
+    """
+    Run process_approved_candidates --quick for a single candidate.
+    Candidate must already be approved (status updated). Returns (ok, message).
+    """
+    repo_root = RECURSION_GATE_PATH.parent.parent  # users/grace-mar -> repo root
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(repo_root / "scripts" / "process_approved_candidates.py"),
+            "--user",
+            USER_ID,
+            "--quick",
+            candidate_id,
+            "--approved-by",
+            approved_by,
+        ],
+        cwd=repo_root,
+        capture_output=True,
+        text=True,
+        timeout=60,
+    )
+    if result.returncode == 0:
+        return True, (result.stdout or "").strip() or "merged"
+    return False, (result.stderr or result.stdout or "merge failed").strip()
 
 
 def get_pipeline_health_summary(channel_key: str | None = None) -> dict[str, object]:
