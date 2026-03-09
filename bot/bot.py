@@ -115,8 +115,9 @@ async def _run_blocking(func, *args, **kwargs):
 
 
 def _is_operator_chat(update: Update) -> bool:
+    """True if chat has operator access. When OPERATOR_CHAT_ID is not set, any chat does (single-chat mode)."""
     if not OPERATOR_CHAT_ID:
-        return False
+        return True  # No restriction: all commands available in every chat
     chat_id = update.effective_chat.id if update.effective_chat else None
     return bool(chat_id) and str(chat_id) == OPERATOR_CHAT_ID
 
@@ -396,10 +397,7 @@ def _checkpoint_to_github() -> tuple[bool, str]:
 
 async def checkpoint_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only: commit and push session-transcript + recursion-gate to GitHub."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("checkpoint is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     try:
@@ -412,8 +410,90 @@ async def checkpoint_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
         await update.message.reply_text("checkpoint failed — try again or push manually.")
 
 
+def _is_in_review_session(context: ContextTypes.DEFAULT_TYPE) -> bool:
+    """True if chat has an active review session (one-letter entry flow)."""
+    candidates = context.chat_data.get("review_candidate_ids")
+    index = context.chat_data.get("review_index", 0)
+    return candidates is not None and 0 <= index < len(candidates)
+
+
+def _format_review_candidate(c: dict, index: int, total: int) -> str:
+    """Format one candidate for review, with one-letter prompt."""
+    short = c["summary"][:80] + "…" if len(c["summary"]) > 80 else c["summary"]
+    return f"[{index + 1}/{total}] {c['id']}:\n{short}\n\nA=Approve R=Reject N=Skip Q=Quit"
+
+
+async def _process_review_choice(
+    update: Update, context: ContextTypes.DEFAULT_TYPE, choice: str
+) -> bool:
+    """Process A/R/N/Q in review session. Returns True if handled."""
+    candidates = context.chat_data.get("review_candidate_ids") or []
+    index = context.chat_data.get("review_index", 0)
+    if index >= len(candidates):
+        return False
+    cid = candidates[index]
+    choice = choice.strip().upper()
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    actor_id = update.effective_user.id if update.effective_user else None
+    key = _channel_key(chat_id) if chat_id else None
+    approved_by = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator").strip() or "operator"
+
+    if choice == "A":
+        ok = update_candidate_status(cid, "approved", channel_key=key, actor=f"telegram:{actor_id}" if actor_id else None, source="telegram:review")
+        if ok and _is_operator_chat(update) and is_low_risk_candidate(cid):
+            try:
+                merge_ok, msg = await _run_blocking(quick_merge_candidate, cid, approved_by)
+                await update.message.reply_text(f"✅ {cid} — merged! (quick approve)")
+            except Exception:
+                logger.exception("Quick merge in review")
+                await update.message.reply_text(f"✅ {cid} — approved. Quick merge failed — /merge for receipt.")
+        elif ok:
+            await update.message.reply_text(f"✅ {cid} — approved")
+        else:
+            await update.message.reply_text(f"couldn't approve {cid} (not pending?)")
+    elif choice == "R":
+        ok = update_candidate_status(cid, "rejected", channel_key=key, actor=f"telegram:{actor_id}" if actor_id else None, source="telegram:review")
+        await update.message.reply_text(f"❌ {cid} — rejected" if ok else f"couldn't reject {cid}")
+    elif choice == "N":
+        await update.message.reply_text(f"⏭ {cid} — skipped")
+    elif choice == "Q":
+        context.chat_data.pop("review_candidate_ids", None)
+        context.chat_data.pop("review_index", None)
+        await update.message.reply_text("review ended")
+        return True
+    else:
+        await update.message.reply_text("type A, R, N, or Q")
+        return True
+
+    context.chat_data["review_index"] = index + 1
+    await _show_next_review_candidate(update, context)
+    return True
+
+
+async def _show_next_review_candidate(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Show next candidate in review session, or 'that's all'."""
+    candidates = context.chat_data.get("review_candidate_ids") or []
+    index = context.chat_data.get("review_index", 0)
+    key = _channel_key(update.effective_chat.id) if update.effective_chat else None
+    if index >= len(candidates):
+        context.chat_data.pop("review_candidate_ids", None)
+        context.chat_data.pop("review_index", None)
+        msg = "that's all — no more candidates."
+        if key:
+            archive("GRACE-MAR (review)", key, msg)
+        await update.message.reply_text(msg)
+        return
+    fresh = get_pending_candidates()
+    cid = candidates[index]
+    c = next((x for x in fresh if x["id"] == cid), {"id": cid, "summary": "(no longer pending)"})
+    text = _format_review_candidate(c, index, len(candidates))
+    if key:
+        archive("GRACE-MAR (review)", key, f"showing {cid} [{index + 1}/{len(candidates)}]")
+    await update.message.reply_text(text)
+
+
 async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Show pending pipeline candidates with Approve/Reject buttons."""
+    """Show pending candidates one at a time. Type A=Approve R=Reject N=Skip Q=Quit."""
     candidates = get_pending_candidates()
     chat_id = update.effective_chat.id if update.effective_chat else None
     key = _channel_key(chat_id) if chat_id else None
@@ -424,75 +504,11 @@ async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             archive("GRACE-MAR (review)", key, msg)
         await update.message.reply_text(msg)
         return
-    lines = [f"You have {len(candidates)} thing{'s' if len(candidates) != 1 else ''} to review:\n"]
-    buttons = []
-    for c in candidates[:5]:  # max 5 rows
-        short = c["summary"][:50] + "…" if len(c["summary"]) > 50 else c["summary"]
-        lines.append(f"• {c['id']}: {short}")
-        buttons.append([
-            InlineKeyboardButton("✅ Approve", callback_data=f"approve:{c['id']}"),
-            InlineKeyboardButton("❌ Reject", callback_data=f"reject:{c['id']}"),
-        ])
-    keyboard = InlineKeyboardMarkup(buttons)
-    text = "\n".join(lines)
-    if len(candidates) > 5:
-        text += f"\n… and {len(candidates) - 5} more. Type /review again after approving to see the rest."
+    context.chat_data["review_candidate_ids"] = [c["id"] for c in candidates]
+    context.chat_data["review_index"] = 0
     if key:
         archive("USER", key, "/review")
-        archive("GRACE-MAR (review)", key, text)
-    await update.message.reply_text(text, reply_markup=keyboard)
-
-
-def _format_one_candidate(candidate: dict, block_data: dict | None, index: int, total: int) -> str:
-    """Format a single candidate for one-by-one view. Truncates to fit Telegram 4096-char limit."""
-    cid = candidate["id"]
-    summary = candidate["summary"]
-    lines = [f"[{index + 1}/{total}] {cid}\n", summary]
-    if block_data and block_data.get("block"):
-        block = block_data["block"]
-        target = block_data.get("profile_target", "").strip()
-        if target:
-            lines.append(f"\n→ {target}")
-        text_so_far = "\n".join(lines)
-        max_block_chars = 3800 - len(text_so_far) - 20
-        if len(block) > max_block_chars:
-            block = block[:max_block_chars] + "\n...truncated"
-        lines.append(f"\n```yaml\n{block}\n```")
-    return "\n".join(lines)
-
-
-async def _show_review_one_by_one(
-    update: Update, context: ContextTypes.DEFAULT_TYPE, index: int = 0
-) -> None:
-    """Show one candidate at a time with Approve/Reject/Next for operator one-by-one flow."""
-    candidates = get_pending_candidates()
-    chat_id = update.effective_chat.id if update.effective_chat else None
-    key = _channel_key(chat_id) if chat_id else None
-    if not candidates:
-        msg = "nothing to review right now! when we add something new, you'll see it here."
-        if key:
-            archive("GRACE-MAR (review)", key, msg)
-        await update.message.reply_text(msg)
-        return
-    if index >= len(candidates):
-        msg = f"that's all — no more candidates. ({len(candidates)} reviewed or approved)"
-        if key:
-            archive("GRACE-MAR (review)", key, msg)
-        await update.message.reply_text(msg)
-        return
-    c = candidates[index]
-    block_data = get_candidate_block(c["id"])
-    text = _format_one_candidate(c, block_data, index, len(candidates))
-    buttons = [
-        InlineKeyboardButton("✅ Approve", callback_data=f"approve:{c['id']}"),
-        InlineKeyboardButton("❌ Reject", callback_data=f"reject:{c['id']}"),
-    ]
-    if index + 1 < len(candidates):
-        buttons.append(InlineKeyboardButton("Next →", callback_data=f"review_one:next:{index + 1}"))
-    keyboard = InlineKeyboardMarkup([buttons])
-    if key:
-        archive("GRACE-MAR (review)", key, f"showing {c['id']} [{index + 1}/{len(candidates)}]")
-    await update.message.reply_text(text, reply_markup=keyboard)
+    await _show_next_review_candidate(update, context)
 
 
 async def callback_homework_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -526,38 +542,6 @@ async def callback_homework_answer(update: Update, context: ContextTypes.DEFAULT
     except Exception:
         logger.exception("Homework callback error")
         await query.edit_message_text("oops! try again — tap A, B, C, or D")
-
-
-async def callback_review_one_next(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Handle Next button in one-by-one review flow — edit message to show next candidate."""
-    query = update.callback_query
-    await query.answer()
-    data = query.data or ""
-    if not data.startswith("review_one:next:"):
-        return
-    try:
-        index = int(data.split(":")[-1])
-    except (ValueError, IndexError):
-        return
-    chat_id = query.message.chat.id if query.message else None
-    key = _channel_key(chat_id) if chat_id else None
-    candidates = get_pending_candidates()
-    if not candidates or index >= len(candidates):
-        await query.edit_message_text("that's all — no more candidates.")
-        return
-    c = candidates[index]
-    block_data = get_candidate_block(c["id"])
-    text = _format_one_candidate(c, block_data, index, len(candidates))
-    buttons = [
-        InlineKeyboardButton("✅ Approve", callback_data=f"approve:{c['id']}"),
-        InlineKeyboardButton("❌ Reject", callback_data=f"reject:{c['id']}"),
-    ]
-    if index + 1 < len(candidates):
-        buttons.append(InlineKeyboardButton("Next →", callback_data=f"review_one:next:{index + 1}"))
-    keyboard = InlineKeyboardMarkup([buttons])
-    if key:
-        archive("OPERATOR (review next)", key, c["id"])
-    await query.edit_message_text(text, reply_markup=keyboard)
 
 
 async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -771,10 +755,7 @@ async def rotate_context_command(update: Update, context: ContextTypes.DEFAULT_T
 
 async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only runtime/pipeline status summary."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("operator status is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     chat_id = update.effective_chat.id if update.effective_chat else 0
@@ -784,10 +765,7 @@ async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
 async def intent_audit_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only summary of intent conflicts and drift signals."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("intent audit is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     window_days = 30
@@ -799,10 +777,7 @@ async def intent_audit_command(update: Update, context: ContextTypes.DEFAULT_TYP
 
 async def intent_review_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only constitution review with actionable suggestions."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("intent review is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     window_days = 30
@@ -824,10 +799,7 @@ async def intent_review_command(update: Update, context: ContextTypes.DEFAULT_TY
 
 async def intent_debate_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only: stage a debate packet from cross-agent intent conflicts."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("intent debate is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     rule_id = ""
@@ -850,10 +822,7 @@ async def intent_debate_command(update: Update, context: ContextTypes.DEFAULT_TY
 
 async def resolve_debate_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only: resolve a staged debate packet."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("resolve debate is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     args = context.args or []
@@ -886,10 +855,7 @@ async def resolve_debate_command(update: Update, context: ContextTypes.DEFAULT_T
 
 async def debates_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only: list unresolved debate packets."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("debates listing is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
     packets = await _run_blocking(list_unresolved_debate_packets)
@@ -902,10 +868,7 @@ async def debates_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
 async def openclaw_export_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only OpenClaw export trigger."""
-    if not OPERATOR_CHAT_ID:
-        await update.message.reply_text("openclaw export command is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
-        return
-    if not _is_operator_chat(update):
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
         await update.message.reply_text("this command is operator-only.")
         return
 
@@ -1051,10 +1014,19 @@ async def handle_message(
             await update.message.reply_text("oops! tap A, B, C, or D to answer (or 'stop' to quit)")
         return
 
-    # Operator intent: "show me candidates one by one" etc → route to review, not Voice
+    # Review session: A/R/N/Q one-letter entry (no buttons)
+    if _is_in_review_session(context):
+        letter = user_message.strip().upper()[:1]
+        if letter in "ARNQ":
+            await _process_review_choice(update, context, letter)
+        else:
+            await update.message.reply_text("type A, R, N, or Q")
+        return
+
+    # Operator intent: "show me candidates one by one" etc → route to review
     if _is_operator_chat(update) and _is_operator_review_intent(user_message):
         archive("USER", key, user_message)
-        await _show_review_one_by_one(update, context, index=0)
+        await review(update, context)
         return
 
     # Paste-as-handback: long transcript-like paste → stage as activity report
@@ -1264,8 +1236,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("reject", reject_with_reason))
     app.add_handler(CommandHandler("rotate", rotate_context_command))
     app.add_handler(CallbackQueryHandler(callback_homework_answer, pattern=r"^hw:[ABCD]$"))
-    app.add_handler(CallbackQueryHandler(callback_review_one_next, pattern=r"^review_one:next:\d+$"))
-    app.add_handler(CallbackQueryHandler(callback_approve_reject))
+    app.add_handler(CallbackQueryHandler(callback_approve_reject))  # Legacy: old review messages with buttons
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))
     app.add_handler(MessageHandler(filters.Document.ALL, handle_document))
