@@ -1,4 +1,4 @@
-# RECURSION GATE — PILOT-001
+# RECURSION GATE — grace-mar
 
 > Staging file for the gated profile pipeline.
 > The Telegram and WeChat bots automatically append candidates here when they detect

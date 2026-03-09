@@ -2,7 +2,9 @@
 
 Session bootstrap for continuing Grace-Mar in a new agent conversation.
 
-**Session focus:** If this conversation is **extension-focused**, read §1 then **extension/readme.md** and skim `extension/` (background.js, popup.js, popup.html, manifest.json). Use §5 Extension commands and §6 Extension file map below.
+**Session focus:**
+- If **OpenClaw-focused**, read §1 then **docs/openclaw-integration.md** and skim `integrations/openclaw_hook.py`, `integrations/openclaw_stage.py`, `scripts/export_user_identity.py`. Use §5 OpenClaw commands and §6 OpenClaw file map below.
+- If **extension-focused**, read §1 then **extension/readme.md** and skim `extension/` (background.js, popup.js, popup.html, manifest.json). Use §5 Extension commands and §6 Extension file map below.
 
 ---
 
@@ -37,7 +39,7 @@ If working on companion profile operations, also read:
 ## 3) Current System Snapshot
 
 ### Product state
-- Pilot active (`grace-mar`), gated pipeline live.
+- Active instance (`grace-mar`), **moment of cognitive bifurcation** (Seed Phase 7, 2026-02-27) — graduated to emergent cognition. Gated pipeline live.
 - Telegram bot operational with operator tooling (`/status`, `/intent_audit`, `/intent_review`).
 - Intent layer active (`INTENT` schema + snapshot export + advisory conflict detection).
 - OpenClaw integration supports outbound export and inbound stage-only handback.
@@ -122,7 +124,16 @@ python3 scripts/handback_server.py
 - `docs/development-handoff.md` — latest engineering handoff.
 - `docs/audit-companion-self.md` — companion-self concept alignment (run as part of bootstrap; re-run after concept/taxonomy changes).
 - `docs/audit-grace-mar-vs-companion-self-template.md` — instance vs template ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)); re-run after structure/protocol changes.
-- `users/grace-mar/*` — active pilot Record files.
+- `users/grace-mar/*` — active instance Record files.
+
+**OpenClaw (when focus is OpenClaw integration):**
+- `docs/openclaw-integration.md` — canonical integration guide (export, session continuity, inbound staging, staging automation).
+- `integrations/openclaw_hook.py` — outbound export (Record → user.md / SOUL.md); supports md+manifest, json+md; emits pipeline event.
+- `integrations/openclaw_stage.py` — inbound staging (OpenClaw output → /stage); advisory constitutional check; stage-only, never merge.
+- `scripts/export_user_identity.py` — identity-only export for user.md / SOUL.md.
+- `integrations/export_hook.py` — shared export logic; openclaw target.
+- `docs/skill-work/skill-work-openclaw/` — skill-work OpenClaw docs (economic-benchmarks, sovereignty invariant).
+- Session continuity: read `users/grace-mar/session-log.md`, `recursion-gate.md`, last EVIDENCE before OpenClaw sessions.
 
 **Extension (when focus is browser extension):**
 - `extension/readme.md` — setup, behavior, settings.

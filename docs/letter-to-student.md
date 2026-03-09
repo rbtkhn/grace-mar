@@ -1,4 +1,4 @@
-# Letter to First Pilot Student
+# Letter to Companion (School-Aged Variant)
 
 *Variant for a school-aged or younger user. For age-neutral wording, see [letter-to-user.md](letter-to-user.md).*
 

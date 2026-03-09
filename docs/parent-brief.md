@@ -1,8 +1,8 @@
-# Parent Brief — Grace-Mar Pilot
+# Parent Brief — Grace-Mar
 
 *Age-specific variant when the operator is a parent/guardian. For age-neutral language, see [operator-brief.md](operator-brief.md).*
 
-For the parent/guardian of the pilot (when the pilot is a minor).
+For the parent/guardian of the companion (when the companion is a minor).
 
 ---
 
@@ -10,7 +10,7 @@ For the parent/guardian of the pilot (when the pilot is a minor).
 
 A **cognitive emulator** is a system the user teaches. Unlike typical apps that teach the user, this one learns *from* them. Over time it becomes a **cognitive fork** — a versioned record of how they think, what they know, and who they are, growing independently from a snapshot in time.
 
-The pilot (the companion) is the teacher. The system only grows through their activity.
+The companion is the teacher. The system only grows through their activity.
 
 ---
 

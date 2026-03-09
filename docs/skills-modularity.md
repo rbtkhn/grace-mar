@@ -95,6 +95,16 @@ Input (conversation, artifact, "we did X")
 
 ---
 
+## 5a. Identity vs instrument: self-knowledge and skill-work
+
+**Self-knowledge (IX-A)** is an aspect of **identity** — what the companion knows (who they are). **Skill-work** is an **instrument** for accomplishing tasks and projects (what they can do).
+
+- **IX-A does not limit skill-work capabilities.** WORK (planning, execution, making, creation) can propose and support tasks regardless of what is documented in IX-A.
+- **IX-A is more relevant to skill-think and skill-write.** THINK (intake, comprehension) and WRITE (production, expression) are content-oriented; their boundaries are shaped by what the companion knows. IX-A defines content boundary and hints for those modules.
+- **Skill-work is designed to grow rapidly with technology.** WORK is the integration point for agents, APIs, tools, and platforms. Its capabilities expand with advances in technology; they are not bounded by the current Record or schema.
+
+---
+
 ## 6. Invariants
 
 1. **Stage-only for modules and analyst.** No skill module and no analyst merges directly into SELF, EVIDENCE, or prompt. All merges go through companion approval (RECURSION-GATE → process_approved_candidates).

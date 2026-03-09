@@ -1,4 +1,4 @@
-# Companion context — PILOT-001
+# Companion context — grace-mar
 
 Persistent context about the companion (the human) for continuity and optional use by the system. Not part of the Record (child's SELF); companion holds authority over this file.
 

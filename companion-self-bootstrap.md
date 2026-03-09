@@ -10,7 +10,7 @@
 
 **Companion-self** = the **template** repo. **Grace-Mar** = the **instance** repo (first and currently only instance).
 
-- **Template:** Concept, protocol, seed-phase definition, and structure for creating a new companion self. No one's Record; no pilot data.
+- **Template:** Concept, protocol, seed-phase definition, and structure for creating a new companion self. No one's Record; no instance data.
 - **Instance:** One live companion self (Record, bot, pipeline). Created from the template when a **new user completes seed phase**.
 - **Creation rule:** A new companion self is **initiated only by a new user via seed phase**. No copying another repo's `users/`; no pre-filled Record.
 

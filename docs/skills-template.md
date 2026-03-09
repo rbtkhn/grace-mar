@@ -128,7 +128,7 @@ THINK is multimodal by default and must not be limited to text.
 > Grace-Mar captures: comprehension level, new vocabulary,
 > character understanding, plot inference, emotional response.
 
-**SAT readiness (when WORK has SAT goal):** Add optional `sat_readiness` block in skill-think.md — maps THINK/MATH/Lexile to SAT domains (EBRW Reading, Math), defines trajectory and next milestones. Use **general principles** (comprehension at edge, inference through "why?", vocabulary in context, evidence "what in the story shows that?", simple choices that scale) — developmentally appropriate at companion's level; no SAT-specific mechanics for young companions. WORK reads this to measure progress. See pilot skill-think.md § SAT READINESS.
+**SAT readiness (when WORK has SAT goal):** Add optional `sat_readiness` block in skill-think.md — maps THINK/MATH/Lexile to SAT domains (EBRW Reading, Math), defines trajectory and next milestones. Use **general principles** (comprehension at edge, inference through "why?", vocabulary in context, evidence "what in the story shows that?", simple choices that scale) — developmentally appropriate at companion's level; no SAT-specific mechanics for young companions. WORK reads this to measure progress. See grace-mar skill-think.md § SAT READINESS.
 
 ### WORK (Making, Planning, Execution, Exchange)
 
@@ -167,6 +167,8 @@ The user makes things, plans, executes, or engages in exchange. Grace-Mar captur
 **Integration with zero-human business vision:** The WORK module grows from evidence; when sufficient, the Record (including WORK) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the module reflects demonstrated capability, not aspiration.
 
 **Future API surface:** WORK is the natural integration point for external APIs — marketplaces, creation tools (e.g. Canva, design apps), planning/financial systems, content platforms, or any service that involves making, planning, execution, or exchange. The Record (BUILD container + evidence) would drive or constrain what those integrations can do on the companion's behalf; the companion remains the gate for what enters the Record.
+
+**Identity vs instrument:** WORK is an *instrument* for accomplishing tasks and projects; self-knowledge (IX-A) is an aspect of *identity*. IX-A does not limit WORK capabilities. IX-A is more relevant to skill-think and skill-write (content boundaries). WORK capabilities are intended to grow rapidly with technology — agents, APIs, tools, and platforms extend what WORK can do without waiting for the Record to document that knowledge.
 
 **Creation and exploration (WORK):** Making includes creative output — drawings, paintings, crafts, inventions, designs. Grace-Mar captures creative capability alongside execution.
 

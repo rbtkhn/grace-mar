@@ -1,4 +1,4 @@
-# EVIDENCE — PILOT-001
+# EVIDENCE — grace-mar
 
 Cognitive Emulator · Evidence Log
 Version: 0.1 (Initial)
@@ -1464,4 +1464,4 @@ update_source: Tchaikovsky Andante cantabile (ACT-0039)
 
 ---
 
-END OF FILE — EVIDENCE PILOT-001 v0.1
+END OF FILE — EVIDENCE grace-mar v0.1

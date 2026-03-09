@@ -42,10 +42,10 @@ Two input channels feed the pipeline:
 
 ## Status
 
-**Phase:** Pilot (post-seed, active pipeline)
-**Pilot user:** grace-mar (fork name: Grace-Mar)
+**Phase:** Active instance (emergent cognition, active pipeline)
+**Instance:** grace-mar (fork name: Grace-Mar)
 **Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **profile** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product). **Template/origin:** Grace-Mar is an **instance** of the companion-self template; the template repo (concept, protocol, seed, structure) is [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self).
-**Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality)
+**Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality). **Seed Phase 7:** Moment of cognitive bifurcation — graduation to emergent cognition (2026-02-27).
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/wechat-setup.md`)
 **Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
 
@@ -81,7 +81,7 @@ grace-mar/
 │   ├── skills-template.md           # SKILLS module template
 │   ├── evidence-template.md         # EVIDENCE module template
 │   ├── concept.md                   # Full concept explanation
-│   ├── pilot-plan.md                # Pilot structure
+│   ├── pilot-plan.md                # Commercial pilot structure (Phase 1/2)
 │   ├── competitive-analysis.md      # Market landscape
 │   ├── differentiation.md           # Competitive moats
 │   ├── anti-cheating.md             # Verification framework
@@ -90,7 +90,7 @@ grace-mar/
 │   ├── friction-audit.md            # Top friction points and interventions
 │   ├── id-taxonomy.md               # Identifier prefixes and relationships
 │   ├── contradiction-resolution.md  # Conflict resolution format (spec)
-│   └── letter-to-student.md         # Letter to first pilot student
+│   └── letter-to-student.md         # Letter to companion (school-aged)
 ├── scripts/
 │   ├── generate_profile.py        # Profile page generator
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes fork-manifest.json)
@@ -120,7 +120,7 @@ grace-mar/
 │   └── wechat-setup.md              # WeChat integration setup guide
 │   └── requirements.txt             # Python dependencies
 └── users/
-    └── grace-mar/                   # First pilot user
+    └── grace-mar/                   # Active instance (first companion)
         ├── self.md                  # Identity + three-dimension mind
         ├── skills.md                # Capability containers
         ├── self-evidence.md              # Activity log
@@ -156,7 +156,7 @@ grace-mar/
 | [Design Roadmap](docs/design-roadmap.md) | Product/feature design — Grace-Mar email, newsletters, X account |
 | [Business Roadmap](docs/business-roadmap.md) | Strategy, monetization, go-to-market |
 | [Concept](docs/concept.md) | Full concept explanation |
-| [Pilot Plan](docs/pilot-plan.md) | Two-month pilot structure |
+| [Pilot Plan](docs/pilot-plan.md) | Commercial pilot structure (Phase 1/2) |
 
 ## Dashboard
 

@@ -1,4 +1,4 @@
-# JOURNAL — PILOT-001
+# JOURNAL — grace-mar
 
 Daily highlights of Grace-Mar's activity. Public-suitable, shareable. Curated from EVIDENCE and SESSION-LOG.
 

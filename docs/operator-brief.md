@@ -1,6 +1,6 @@
-# Operator Brief — Grace-Mar Pilot
+# Operator Brief — Grace-Mar
 
-For the operator or facilitator (e.g. parent, guardian, or family member) of the pilot.
+For the operator or facilitator (e.g. parent, guardian, or family member) of the companion.
 
 ---
 
@@ -8,7 +8,7 @@ For the operator or facilitator (e.g. parent, guardian, or family member) of the
 
 A **cognitive emulator** is a system the user teaches. Unlike typical apps that teach the user, this one learns *from* them. Over time it becomes a **cognitive fork** — a versioned record of how they think, what they know, and who they are, growing independently from a snapshot in time.
 
-The pilot (the companion) is the teacher. The system only grows through their activity.
+The companion is the teacher. The system only grows through their activity.
 
 ---
 
@@ -74,7 +74,7 @@ When something worth recording happens (a drawing, a story, something learned, a
 
 Keep the loop closed so the Record and the review queue stay in sync.
 
-- **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python scripts/session_brief.py -u grace-mar` for a short brief). Note how many candidates are waiting.
+- **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python3 scripts/session_brief.py -u grace-mar` for a short brief, or `python3 scripts/operator_blocker_report.py -u grace-mar` for a fuller blocker report). Note how many candidates are waiting.
 - **After the session:** If anyone sent "we did X" or you added activities, run **/review** in the bot (or process the queue per [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md)) so items don’t sit in RECURSION-GATE for long.
 
 Full checklist and weekly rhythm: [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md).
@@ -85,7 +85,7 @@ Full checklist and weekly rhythm: [OPERATOR-WEEKLY-REVIEW](operator-weekly-revie
 
 **Where to find the Record**
 
-All pilot files live in the repo under **`users/grace-mar/`** (or `users/pilot-001/` in some setups). The Record itself is:
+All instance files live in the repo under **`users/grace-mar/`**. The Record itself is:
 
 | File | What it is |
 |------|------------|

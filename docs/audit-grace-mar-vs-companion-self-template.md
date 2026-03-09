@@ -122,7 +122,7 @@ Template paths that instances sync *from* companion-self (grace-mar holds copies
 
 ### 7.2 Instance-only vs template
 
-- Grace-mar contains **instance-only** docs (PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW, pilot/operator workflows, etc.). This is correct: they stay in the instance and are not overwritten by template sync. No change needed.
+- Grace-mar contains **instance-only** docs (PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW, instance/operator workflows, etc.). This is correct: they stay in the instance and are not overwritten by template sync. No change needed.
 - **companion-self-bootstrap.md** lives in grace-mar root as the bootstrap for the companion-self repo. That’s intentional per §6: “This file can live in grace-mar; the companion-self repo now exists at https://github.com/rbtkhn/companion-self.” No change needed.
 
 ### 7.3 Naming and consistency

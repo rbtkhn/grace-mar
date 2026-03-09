@@ -1,4 +1,4 @@
-# skill-work — PILOT-001
+# skill-work — grace-mar
 
 Making, planning, execution, exchange, creation.
 Part of SKILLS. See [skill-think](skill-think.md), [skill-write](skill-write.md).

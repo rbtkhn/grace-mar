@@ -117,7 +117,7 @@ Design principles: **companion sovereignty**, **gated pipeline**, **Record as co
 |----------|------|--------|----------------|
 | **P0** | Etsy → Record handback (orders, reviews, key events as staged candidates) | Medium | High — evidence without auto-merge |
 | **P1** | Order/receipt summary for operator (report only) | Low | High — no Record write |
-| **P2** | Message assist (draft only; human sends) | Medium | High — reduces load, keeps gate |
+| **P2** | Message assist (draft only; human sends) — **implemented** | Low | High — reduces load, keeps gate |
 | **P3** | Listing sync (read; optional staged “new listing” candidates) | Medium | Medium — optional Record growth |
 | **P4** | Custom/layaway tracker (internal; optional handback summary) | Medium | Medium — operational only |
 | **P5** | Voice answers from Record (curate business profile) | Low | High — already supported; add content |
@@ -138,6 +138,7 @@ Design principles: **companion sovereignty**, **gated pipeline**, **Record as co
 
 - [skill-work-grace-gems README](README.md) — Objective and principles
 - [skill-work-grace-gems roadmap](roadmap.md) — Phases 0–3
+- [agent-encoding.md](agent-encoding.md) — Phase 1 reference for message assist and listing validation (provenance table, glossary, meta-rules)
 - [AGENTS.md](../../../AGENTS.md) — Gated pipeline, knowledge boundary
 - [Etsy Open API v3](https://developers.etsy.com/documentation/) — Listings, Receipts, Inventory, Shipping
 

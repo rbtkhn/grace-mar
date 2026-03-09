@@ -15,6 +15,8 @@ This submodule supports WORK and the Record by documenting how Grace-Mar relates
 
 Grace Gems (GraceGemsUS) sells customized fine jewelry with natural, untreated gemstones; solid 14k/18k gold; handmade in Denver. Products include emeralds, rubies, sapphires, tanzanite, moonstone, topaz, tourmaline, amethyst, opal, bridal sets. Policies: free worldwide shipping, 30-day returns (excl. custom), 1-year repair warranty, layaway. Companion-led; the Record holds business-relevant context when documented.
 
+**Sovereignty framing:** Grace Gems aligns with companion-owned, local economy principles: natural provenance (untreated gemstones), handmade in Denver, policy-transparent, cash-friendly. The business models authenticity and local production as alternatives to homogenized, programmable commerce.
+
 ---
 
 ## Contents
@@ -24,6 +26,10 @@ Grace Gems (GraceGemsUS) sells customized fine jewelry with natural, untreated g
 | **This README** | Objective, scope, and principles for skill-work-grace-gems. |
 | **[roadmap.md](roadmap.md)** | Phased roadmap for business management (Record context → operator flows → optional integration). |
 | **[market-research-and-automation-ideas.md](market-research-and-automation-ideas.md)** | Deep market research (Etsy jewelry, natural vs lab-grown, pain points) and automation integration ideas aligned with Grace-Mar (handback, draft-only message assist, staged candidates). |
+| **[jewelry-industry-research-pre1970.md](jewelry-industry-research-pre1970.md)** | History and science of gems, jewelry crafting, mining, selling — **sources from 1969 or earlier only**. |
+| **[agent-encoding.md](agent-encoding.md)** | Phase 1 agent reference: provenance–stone table, terminology glossary, meta-rules, handback semantics, tone guidelines, example drafts (message assist, listing validation). |
+| **[message-assist-calibration.md](message-assist-calibration.md)** | Calibration loop: operator feedback when drafts miss the mark; message-assist loads it if present. |
+| *scripts/grace_gems_message_assist.py* | Message assist — draft-only reply for Etsy customer messages. `python3 scripts/grace_gems_message_assist.py -m "message"` |
 
 ---
 

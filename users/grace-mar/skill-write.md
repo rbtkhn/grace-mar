@@ -1,4 +1,4 @@
-# skill-write — PILOT-001
+# skill-write — grace-mar
 
 Production (text, journal, stories, explanations).
 Part of SKILLS. See [skill-think](skill-think.md), [skill-work](skill-work.md).

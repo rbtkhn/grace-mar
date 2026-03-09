@@ -71,4 +71,6 @@
 
 ## Related
 
+- **[agent-encoding.md](agent-encoding.md)** — Phase 1 agent reference: provenance–stone table, terminology glossary, meta-rules for drafts. Used by message assist and listing validation.
 - **[market-research-and-automation-ideas.md](market-research-and-automation-ideas.md)** — Market research (Etsy jewelry trends, natural vs lab-grown, seller pain points) and prioritized automation ideas (Etsy handback, message draft assist, order summary, listing sync).
+- **[jewelry-industry-research-pre1970.md](jewelry-industry-research-pre1970.md)** — History and science of gems, jewelry crafting, mining, selling (pre-1970 sources only).

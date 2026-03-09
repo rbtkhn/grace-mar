@@ -39,7 +39,7 @@
 
 | Deliverable | Description |
 |-------------|-------------|
-| **Tier support** | `--tier elementary` (one prompt = full day) vs `--tier specialized` (one prompt = one subject/session, more Record excerpt). Grace-mar pilot is elementary. |
+| **Tier support** | `--tier elementary` (one prompt = full day) vs `--tier specialized` (one prompt = one subject/session, more Record excerpt). Grace-mar instance is elementary. |
 | **Alpha-school integration** | Optional `--alpha-school` flag: include 2-hour design, segment timing, mastery threshold (90%), block composition from alpha-school-benchmarks.yaml. |
 | **Focus override** | `--focus reading|math|work|integrated` — emphasize one area when human wants to modulate. |
 | **Rules appendix** | Generator pulls rules from a config or doc (vocabulary in context, 4 MC options when stuck, one-line log per activity) so updates propagate without code change. |

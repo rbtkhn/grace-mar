@@ -1,6 +1,6 @@
 # Grace-Mar vs Companion-Self: Skill-Work (WORK / BUILD) Comparison
 
-**Purpose:** Compare how **skill-work** (self-skill-work, WORK module, BUILD container) is defined in the **companion-self template** vs how it is **instantiated** in the **grace-mar** pilot. Template = schema, intent, and governance; instance = concrete Record with evidence and levels.
+**Purpose:** Compare how **skill-work** (self-skill-work, WORK module, BUILD container) is defined in the **companion-self template** vs how it is **instantiated** in the **grace-mar** instance. Template = schema, intent, and governance; instance = concrete Record with evidence and levels.
 
 **References:** Template: [SKILLS-TEMPLATE](skills-template.md) § WORK, [SKILLS-MODULARITY](skills-modularity.md). Instance: [users/grace-mar/skill-work.md](../users/grace-mar/skill-work.md), [analysis-grace-mar-skill-work](analysis-grace-mar-skill-work.md).
 
@@ -59,7 +59,7 @@ Template defines the full schema and example activities (lemonade stand, food tr
 
 | Section | Template (schema) | Instance (grace-mar) |
 |---------|-------------------|----------------------|
-| **Header** | Module intent, link to skill-think/skill-write | Same + PILOT-001 |
+| **Header** | Module intent, link to skill-think/skill-write | Same + grace-mar |
 | **Module objectives** | Example: bots, web app, self-library | Same three (grace-mar-specific) |
 | **WORK Container** | YAML schema: status, levels (originality, elaboration, flexibility, planning, execution, making, financial, collaboration, decision_making), edge, gaps, notes | Populated: status ACTIVE, levels from CREATE/ACT, edge text, gaps [], notes with evidence refs |
 | **Companion creative context** | Not in template | YAML from ACT-0036 (medium, frequency, finishing, sharing, one_word_style, etc.) |
@@ -94,6 +94,6 @@ Template defines the full schema and example activities (lemonade stand, food tr
 ## 8. Summary
 
 - **Template (companion-self) skill-work** = Definition of WORK: scope (making, planning, execution, exchange, creation), schema (BUILD container, CREATE/ACT), dimensions (planning, execution, making, financial, collaboration, originality, elaboration, flexibility, decision-making), work_goals and life_mission ref, module intent, and rules (starts from zero, human-gated, no staging to SELF).
-- **Instance (grace-mar) skill-work** = Same structure and intent, filled with pilot data: evidence-linked levels, 8 CREATE entries, 2 ACT entries, work_goals (horizon SAT), SCHOOL, companion_creative_context, and explicit nulls (financial, collaboration) where evidence is missing.
+- **Instance (grace-mar) skill-work** = Same structure and intent, filled with instance data: evidence-linked levels, 8 CREATE entries, 2 ACT entries, work_goals (horizon SAT), SCHOOL, companion_creative_context, and explicit nulls (financial, collaboration) where evidence is missing.
 
 Grace-mar’s skill-work is a valid instantiation of the template: it uses the same labels, container shape, and evidence types; it omits or leaves null only where the template allows (e.g. optional financial/collaboration until evidence exists).

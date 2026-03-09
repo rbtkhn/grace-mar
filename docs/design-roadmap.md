@@ -66,7 +66,7 @@
 - **Inbound discovery** — Follow authors, museums, educators, book-related accounts; feed timeline content through matching logic (similar to inbound newsletters)
 - **Export/presence** — If fork is shared (e.g. admissions link), a stable public handle could reinforce identity
 
-**Higher-risk use:** Fork posts in its own voice (e.g. "I learned X today") — public, permanent; out of scope for current pilot.
+**Higher-risk use:** Fork posts in its own voice (e.g. "I learned X today") — public, permanent; out of scope for current instance.
 
 **Design concerns:**
 - **Public and permanent** — Unlike inbox, posts are visible and hard to fully retract

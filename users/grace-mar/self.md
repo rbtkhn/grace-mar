@@ -1,4 +1,4 @@
-# SELF — PILOT-001
+# SELF — grace-mar
 
 Cognitive Emulator · User Profile
 Version: 0.1 (Initial)
@@ -1012,4 +1012,4 @@ activity_count: 0
 
 ---
 
-END OF FILE — SELF PILOT-001 v0.1
+END OF FILE — SELF grace-mar v0.1

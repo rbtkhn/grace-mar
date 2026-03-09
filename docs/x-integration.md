@@ -10,7 +10,7 @@
 
 - **Identity separation** — Handle (e.g. `@grace_mar`) distinguishes fork persona from family accounts.
 - **Inbound discovery** — Follow authors, museums, educators, book-related accounts; feed timeline (or lists/bookmarks) through matching logic; stage candidates; Mind approves. Same pattern as inbound newsletters.
-- **Out of scope for current pilot** — Fork posting in its own voice (public, permanent). *Posting* in Voice is higher-risk and deferred.
+- **Out of scope for current instance** — Fork posting in its own voice (public, permanent). *Posting* in Voice is higher-risk and deferred.
 - **Reasonable first step** — Private or low-visibility account used *only for following*: consume feed → match to Record → stage → approve. No Voice-on-X.
 
 ---
@@ -40,7 +40,7 @@ So: **X as read-only feed into the Record (gated), not as a Voice channel.**
 
 ### A. Feed consumer (recommended first)
 
-1. **Auth** — OAuth 2.0 user context (or app-only for a single "Grace-Mar" account). Store token per user or per pilot.
+1. **Auth** — OAuth 2.0 user context (or app-only for a single "Grace-Mar" account). Store token per user or per instance.
 2. **Pull** — Periodically (cron) or on-demand: fetch home timeline, or list timeline, or bookmarks (depending on product choice). Stay within rate limits (Free: 100 reads/month; Basic: 10k).
 3. **Match** — Score items against Record: IX-B (curiosity), LIBRARY, SKILLS edge. Same style as inbound newsletter matching (Design Roadmap §3).
 4. **Stage** — Matches above threshold → RECURSION-GATE with provenance (e.g. "X: @author, link, excerpt"). Use existing staging path (e.g. `/stage` or script analogous to `openclaw_stage.py`).
@@ -82,9 +82,9 @@ No change to `bot/core.py` for feed-only: no X channel in `get_response`. Only i
 
 | Risk | Mitigation |
 |------|-------------|
-| **Age** | X ToS typically 13+. Pilot may be under 13; account would be operator/family, not child. No child PII in X; use only for feed consumption and staging. |
+| **Age** | X ToS typically 13+. Companion may be under 13; account would be operator/family, not child. No child PII in X; use only for feed consumption and staging. |
 | **Platform dependency** | X policy and pricing can change. Prefer thin integration: read → stage; no lock-in of Record content into X-native formats. |
-| **Public posting** | Do not implement Voice-on-X in pilot. If posting at all, explicit "Mind posts" flow only. |
+| **Public posting** | Do not implement Voice-on-X in current instance. If posting at all, explicit "Mind posts" flow only. |
 | **Rate limits** | Free tier 100 reads/month is tight. Basic ($200/mo) for any real feed volume. Design for "batch pull → match → stage" once per day or per N hours. |
 | **Data handling** | Tweets/post content in RECURSION-GATE and pipeline events. Retain only what's needed for matching and provenance; document in privacy/DPA if needed. |
 

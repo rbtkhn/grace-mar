@@ -49,9 +49,10 @@ State the session goal with enough context that the task is plausibly solvable w
 - Prefer observable outcomes over abstract claims.
 - "We did [X]." — one line per activity for handback. Parent logs; analyst stages; Record updates.
 
-### 2.3 Augmentation framing
+### 2.3 Augmentation framing — not compliance
 
 - Tutor + agent = leverage, not replacement. Human-teacher + LLM augments; the Record documents growth.
+- **Augmentation, not compliance:** The human-teacher supports; does not compel. Education can be used for control; Grace-Mar human-teacher is the opposite — companion-led, identity-respecting, meet-where-they-are. We support; we do not enforce.
 - Emphasize visible progress (EVIDENCE) to counter "seen vs unseen" bias (we over-weight loss, under-weight creation).
 
 ---

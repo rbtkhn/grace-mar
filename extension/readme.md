@@ -37,7 +37,7 @@ One-click capture from any URL to your Grace-Mar Record. LLM transcript handback
 
 - Python handback server running locally
 - OPENAI_API_KEY set (analyst needs it)
-- Pilot user configured (default: grace-mar)
+- Instance configured (default: grace-mar)
 - Optional for remote/non-loopback staging: set `HANDBACK_API_KEY` and pass `X-Api-Key`
 
 ## Settings

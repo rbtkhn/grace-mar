@@ -6,7 +6,7 @@ Each subdirectory contains one user's cognitive fork data.
 
 ```
 users/
-├── grace-mar/           # First pilot user
+├── grace-mar/           # Active instance (first companion)
 │   ├── self.md          # Personality profile
 │   ├── skills.md        # Capability containers (READ/WRITE/BUILD)
 │   ├── self-evidence.md      # Reading List, Writing Log, Creation Log

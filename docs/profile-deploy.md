@@ -1,6 +1,6 @@
 # Deploy the profile to grace-mar.com
 
-The profile is static HTML generated from the pilot profile. To serve it at **https://grace-mar.com**, use GitHub Pages with a custom domain. **Domains (grace-mar.com, companion-self.com) are registered with Namecheap** — DNS steps below use Namecheap’s Advanced DNS.
+The profile is static HTML generated from the instance profile. To serve it at **https://grace-mar.com**, use GitHub Pages with a custom domain. **Domains (grace-mar.com, companion-self.com) are registered with Namecheap** — DNS steps below use Namecheap’s Advanced DNS.
 
 ---
 

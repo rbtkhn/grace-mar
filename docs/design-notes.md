@@ -2,9 +2,9 @@
 
 **Purpose:** Capture design insights, positioning, and implications derived from build-pattern research and agent-infrastructure analysis. Use for future white paper, business proposal, and investor narrative.
 
-**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); **Intent engineering** ("Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." — YouTube transcript, 2026: context tells agents what to know, intent tells agents what to want; Grace-Mar's INTENT layer = intent engineering at companion scale); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape), §11.6 (Landscape: capital allocation & agent scale), and §11.7 (Intent engineering).
+**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); **Intent engineering** ("Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." — YouTube transcript, 2026: context tells agents what to know, intent tells agents what to want; Grace-Mar's INTENT layer = intent engineering at companion scale); **Catherine Fitts** (Epstein, CIA Black Budget, the Control Grid, and the Banks' Role in War — YouTube transcript, 2026: control grid vs sovereignty; §2.5); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape), §11.6 (Landscape: capital allocation & agent scale), and §11.7 (Intent engineering).
 
-**Status:** Draft. Refine as pilot progresses and market conditions evolve.
+**Status:** Draft. Refine as instance progresses and market conditions evolve.
 
 ### Document map — Where to read what
 
@@ -74,6 +74,16 @@ A tool solves a problem. Infrastructure enables others to build on top. Grace-Ma
 
 **White paper implication:** "Grace-Mar is not just a cognitive record; it is identity infrastructure for the agent web."
 
+### 2.5 Control Grid vs Grace-Mar — Sovereignty as Positioning
+
+*Source: Catherine Fitts (Epstein, CIA Black Budget, the Control Grid, and the Banks' Role in War — YouTube transcript, 2026).*
+
+The "control grid" is infrastructure that allows digital technology to assert surveillance and control: programmable money (rules embedded in currency), digital ID, local hardware (cameras, cell towers, satellites, data centers). Central bankers move from controlling monetary policy to controlling fiscal policy; legislators become "show and tell." Enforcement is through the pipe; the companion is not the gate.
+
+**Grace-Mar is the opposite:** companion-owned identity, gated pipeline, evidence-grounded, enforcement by culture (protocol + norms). The Record resists the control grid because identity, knowledge, and integration remain under companion sovereignty — structured, human-approved, local (companion-scoped). Integrations (OpenClaw, agent platforms) must preserve the companion gate; downstream systems must not become control-grid infrastructure that centralizes identity or removes human approval.
+
+**White paper implication:** "In a world moving toward programmable identity and centralized control, Grace-Mar offers companion-owned, evidence-grounded, human-gated identity — sovereignty as design principle."
+
 ---
 
 ## 3. Agent-Web Design Insights (Derived from Infrastructure Transcript)
@@ -110,7 +120,7 @@ Infrastructure is built for fully autonomous agents. Many users want ~70% human 
 Grace-Mar is **identity infrastructure for the agent web**, not:
 - A second-brain productivity tool
 - An AI clone or digital twin
-- A user-specific tutor (current pilot is young; architecture is age-independent)
+- A user-specific tutor (current instance is young; architecture is age-independent)
 
 ### 4.2 Value Proposition (One-Liner)
 

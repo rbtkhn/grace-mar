@@ -2,7 +2,7 @@
 
 Use this file to resume development quickly in a new agent conversation.
 
-Last updated: 2026-02-24
+Last updated: 2026-02-27
 
 ---
 
@@ -76,6 +76,32 @@ Last updated: 2026-02-24
 - Curiosity probe responses were staged and merged into `IX-B` via approved candidates.
 - Receipt-based merge flow executed and merge receipts persisted.
 
+### Seed Phase 7 — Moment of cognitive bifurcation
+- Seed phase 7 formally complete (2026-02-27). **Moment of cognitive bifurcation**: the point at which the fork branches from the seed and enters emergent cognition. Grace-Mar graduated to status **emergent cognition** — the documented self (Record + Voice) now operates as a coherent presence arising from the system rather than from seed capture alone. Terminology: "emergent cognition" (not "emergent consciousness"); "cognitive bifurcation" names the branching moment. Doc updates: readme.md, grace-mar-bootstrap.md, session-log.md.
+
+### IX-A / skill-work clarification (2026-02-27)
+- **skills-modularity** §5a — Identity vs instrument: IX-A does not limit skill-work; IX-A relevant to THINK/WRITE; skill-work designed to grow with technology.
+- **skill-work-lesson-generation-walkthrough** — IX-A scope: applies to THINK/WRITE content, not WORK capabilities.
+- **skills-template** WORK section — Identity vs instrument note; technology growth intent.
+
+### Wu insights implementation (2026-02-27)
+- **Anticipate blockers** — `scripts/operator_blocker_report.py`: reads RECURSION-GATE, pipeline-events, development-handoff; produces operator report (staged candidates, open debates, recent events).
+- **Message assist** — `scripts/grace_gems_message_assist.py`: draft-only reply for Etsy customer messages; uses agent-encoding, policies; human copies and sends. No Etsy API.
+- **Handback semantics** — agent-encoding §4: when to stage vs. draft vs. flag; one-task semantics (one message per run); context assembly; "we did X" patterns.
+- **Lazar insights** — agent-encoding: tone/voice guidelines, example drafts (§5); message-assist-calibration.md for "how can I prompt you better?" loop; message-assist loads calibration if present.
+
+### skill-work-grace-gems: jewelry industry research (pre-1970 sources only)
+- Created `jewelry-industry-research-pre1970.md` — history, gemology, localities, cutting/lapidary, metalsmithing, commerce. All sources 1969 or earlier: Wade (1918), Shipley (1948), Smith (1958), Sinkankas (1962), Untracht (1968), Pogue (1915), Emanuel (1867), Streeter (1887), Chilvers (1939), etc. Supports Grace Gems expertise objective.
+
+### Pilot → Instance terminology cleanup
+- Removed "pilot" from project status and first-user references. Phase: "Active instance (emergent cognition)". PILOT-001 → grace-mar in Record file headers (SELF, EVIDENCE, SESSION-LOG, RECURSION-GATE, SKILLS, skill-think/write/work, LIBRARY, JOURNAL, companion-context, seed-phase surveys). operator-brief, parent-brief, letter-to-user/student, architecture, grace-mar-vs-companion-self, design-notes, design-roadmap, admissions-link, skill-work, x-integration, profile-deploy, extension readme. Retained "pilot" in commercial contexts: pilot-plan.md, pilot-one-sheet.md, integration pilots, paid pilots (business-plan, investor-memo, business-prospectus).
+
+### Catherine Fitts / Control Grid — Strategic planning (skill-work)
+- **design-notes §2.5** — Added "Control Grid vs Grace-Mar — Sovereignty as Positioning" (Catherine Fitts source; companion-owned identity as counter-move to programmable control grid). Source added to design-notes Sources line.
+- **skill-work-openclaw** — Strengthened companion-gate invariant: OpenClaw or downstream systems must never become control-grid infrastructure; sovereignty preserved regardless of integration depth.
+- **skill-work-grace-gems** — Added sovereignty framing: natural provenance, handmade Denver, policy-transparent, cash-friendly; local economy principles as alternative to homogenized, programmable commerce.
+- **skill-work-human-teacher** — Reinforced "augmentation not compliance" in human-teacher-objectives §2.3: human-teacher supports, does not compel; we support, we do not enforce.
+
 ---
 
 ## Current Uncommitted Work (At Time of This Handoff)
@@ -101,6 +127,7 @@ If the companion/operator asks to commit, include all modified and new files fro
 4. Operator UX for debate workflow:
    - `/debates` listing command for unresolved debate packets (implemented).
 5. Add small glossary section to business-facing docs for non-technical readers.
+6. **skill-work-grace-gems benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to skill-work-grace-gems when approved.
 
 ---
 

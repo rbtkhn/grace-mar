@@ -4,18 +4,18 @@ Side-by-side comparison of the two repositories that form the companion-self vis
 
 | Repo | Role |
 |------|------|
-| [github.com/rbtkhn/grace-mar](https://github.com/rbtkhn/grace-mar) | **Instance / pilot** — live cognitive fork for one person |
+| [github.com/rbtkhn/grace-mar](https://github.com/rbtkhn/grace-mar) | **Instance** — live cognitive fork for one person |
 | [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self) | **Template / framework** — reusable blueprint for new instances |
 
 ---
 
 ## Core comparison
 
-| Aspect | grace-mar (instance / pilot) | companion-self (template) |
+| Aspect | grace-mar (instance) | companion-self (template) |
 |--------|------------------------------|----------------------------|
-| **Purpose** | Live pilot for a specific user (Grace-Mar): real cognitive fork with seeded data, active pipeline, and emulation. | Reusable blueprint for creating new companion-self instances. No live user data. |
+| **Purpose** | Live instance for a specific user (Grace-Mar): real cognitive fork with seeded data, active pipeline, and emulation. | Reusable blueprint for creating new companion-self instances. No live user data. |
 | **Description** | System for creating and maintaining versioned, evidence-grounded cognitive forks of an individual, growing via curated interactions over time. | Template repo for instantiating new companion selves after seed phase completion. |
-| **Status** | Active pilot — seeded, pipeline running, bots live, real user data. | Reference/template — clone or fork to bootstrap new instances. |
+| **Status** | Active instance — seeded, pipeline running, bots live, real user data. | Reference/template — clone or fork to bootstrap new instances. |
 | **Main reference** | Concrete example; linked from companion-self docs. | Points to grace-mar as the reference implementation ([grace-mar.com](https://grace-mar.com)). |
 | **Primary focus** | Running system: profile generation, gated updates, bot emulation (Telegram/WeChat), export, metrics, integrity, profile/miniapp UI. | Education and self-improvement protocol, student app, upgrade mechanics, library structure, bootstrap process. |
 | **Contains user data** | Yes — `users/grace-mar/` with self.md, skills, evidence logs, interaction history. | No — template only (`users/` is placeholder or _template). |

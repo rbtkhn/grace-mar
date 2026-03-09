@@ -24,6 +24,7 @@ The Record is the shared medium. Alpha-school does not write into the Record; it
 |------------|---------|
 | **This README** | Objective, purpose, and cross-references. |
 | **[roadmap.md](roadmap.md)** | Phased roadmap: foundation → human-teacher objectives → enhanced generator → formative loop → agentic. |
+| **[quantitative-benchmarks.md](quantitative-benchmarks.md)** | Benchmarks for growth, engagement, formative loop, and edge progression — priority six and full set. |
 | **[skill-work-lesson-generation-walkthrough](../skill-work-lesson-generation-walkthrough.md)** | How Record → lesson prompt; minimal prompt shape; examples A–D. |
 | **[sample-lesson-prompt-grace-mar.txt](../sample-lesson-prompt-grace-mar.txt)** | Demo one-prompt-per-day lesson. |
 

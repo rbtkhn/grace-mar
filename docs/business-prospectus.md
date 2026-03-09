@@ -124,7 +124,7 @@ These are planning assumptions, not validated outcomes. Prospectus updates shoul
 | Milestone | Status |
 |-----------|--------|
 | Protocol + architecture | Implemented |
-| Pilot user profile | Active |
+| grace-mar instance | Active |
 | Gate + pipeline | Live in reference implementation |
 | Export surfaces | Implemented (`user.md`, PRP, manifest) |
 

@@ -99,7 +99,7 @@ Same as today: **only what is in the Record**. Knowledge boundary applies. The f
 - **Audience:** Schools (Alpha, Incept, selective admissions), employers (especially roles where fit and character matter), scholarships.
 
 ### Age / maturity
-- Current pilot is a 6-year-old. The use case scales: high school, college, job applicants. Voice and depth of the Record grow with the person.
+- Current instance (grace-mar) is a 6-year-old. The use case scales: high school, college, job applicants. Voice and depth of the Record grow with the person.
 - Lexile / vocabulary constraints in the prompt adapt to age. Older applicants have richer SELF, SKILLS, EVIDENCE.
 
 ---
@@ -122,7 +122,7 @@ Same as today: **only what is in the Record**. Knowledge boundary applies. The f
 - [ ] Optional: one-time links for maximum control.
 
 ### Phase 4 — Multi-user
-- [ ] Today: single pilot (grace-mar). Future: multi-user backend; each applicant has their own Record and shareable link.
+- [ ] Today: single instance (grace-mar). Future: multi-user backend; each applicant has their own Record and shareable link.
 - [ ] Auth for applicants (to generate links, manage Record); reviewers remain unauthenticated.
 
 ---

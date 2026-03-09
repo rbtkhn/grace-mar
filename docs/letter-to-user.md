@@ -1,6 +1,6 @@
 # Letter to the User (Age-Neutral)
 
-Use this when the pilot is any age. For a school-aged, more playful variant, see [letter-to-student.md](letter-to-student.md).
+Use this when the companion is any age. For a school-aged, more playful variant, see [letter-to-student.md](letter-to-student.md).
 
 ---
 

@@ -1,4 +1,4 @@
-# skill-think — PILOT-001
+# skill-think — grace-mar
 
 Intake, learning, comprehension (multimodal).
 Part of SKILLS. See [skill-write](skill-write.md), [skill-work](skill-work.md).

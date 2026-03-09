@@ -1,4 +1,4 @@
-# SKILLS — PILOT-001
+# SKILLS — grace-mar
 
 Cognitive Emulator · Capability Profile
 Version: 0.1 (Initial)
@@ -67,4 +67,4 @@ seed_phase_3: 2026-02-09  # Academic capability mapping (parent-reported)
 
 ---
 
-END OF FILE — SKILLS PILOT-001 v0.1
+END OF FILE — SKILLS grace-mar v0.1

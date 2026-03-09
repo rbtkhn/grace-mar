@@ -68,7 +68,7 @@ When the companion says **"we [did X]"**, it is a pipeline invocation. Immediate
 
 ### 4. No "Parent" Language
 
-The system has a **companion** and a **fork**. There is no "parent mode" or "child mode." The current pilot self happens to be a child, but the architecture is age-independent. Do not use the word "parent" as a system concept.
+The system has a **companion** and a **fork**. There is no "parent mode" or "child mode." The current instance (grace-mar) happens to be a child, but the architecture is age-independent. Do not use the word "parent" as a system concept.
 
 ### 5. Immutability
 
@@ -213,7 +213,7 @@ grace-mar/
 │   ├── wechat-setup.md         # WeChat integration setup guide
 │   └── requirements.txt        # Python dependencies
 └── users/
-    └── grace-mar/              # First pilot companion
+    └── grace-mar/              # Active instance (first companion)
         ├── self.md             # Identity + three-dimension mind
         ├── skills.md           # Capability index (Claims, Gaps, Struggles, Milestones)
         ├── skill-think.md      # THINK, MATH, CHINESE containers

@@ -73,7 +73,7 @@ SNAPSHOT (Preserve State at a Point in Time)
      Immutable. Shows who the user was at that age.
 ```
 
-**Single companion, lifetime system.** There is no parent mode and no child mode. A facilitator or operator may help when the companion is young or needs support. The companion grows into full ownership. The system is age-neutral: the first pilot happens to be young; the architecture applies to any age. See [OPERATOR-BRIEF](operator-brief.md), [LETTER-TO-USER](letter-to-user.md).
+**Single companion, lifetime system.** There is no parent mode and no child mode. A facilitator or operator may help when the companion is young or needs support. The companion grows into full ownership. The system is age-neutral: the first instance (grace-mar) happens to be young; the architecture applies to any age. See [OPERATOR-BRIEF](operator-brief.md), [LETTER-TO-USER](letter-to-user.md).
 
 ---
 
@@ -698,7 +698,7 @@ Grace-Mar shares conceptual DNA with other patterns: **multi-agent debate before
 
 ## Emulation Layer
 
-The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The pilot supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality. **Teaching/tutoring** is one of the Voice's functions: it answers questions, explains concepts, and helps the user learn — in-character, at the Record's Lexile level, and within the knowledge boundary.
+The cognitive fork can optionally power an **emulation** — a live conversational interface that behaves as the self would. The instance supports Telegram (`bot/bot.py`) and WeChat (`bot/wechat_bot.py`). Both share the same emulation core (`bot/core.py`) and use the SELF profile to generate responses constrained to the self's knowledge, vocabulary, and personality. **Teaching/tutoring** is one of the Voice's functions: it answers questions, explains concepts, and helps the user learn — in-character, at the Record's Lexile level, and within the knowledge boundary.
 
 ### THINK/WRITE Refinement in Emulation
 
