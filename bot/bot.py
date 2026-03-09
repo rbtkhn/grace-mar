@@ -32,11 +32,8 @@ from dotenv import load_dotenv
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
-    KeyboardButton,
-    MenuButtonWebApp,
-    ReplyKeyboardMarkup,
+    MenuButtonDefault,
     Update,
-    WebAppInfo,
 )
 from telegram.ext import (
     Application,
@@ -227,29 +224,6 @@ def _format_intent_review(summary: dict) -> str:
 # - Look something up: lookup flow (user asks, she looks up and explains)
 # - Explore: curiosity-driven topic dive
 # - Ask me what I'm curious about: she asks, user answers
-# - Chat: open conversation
-START_PROMPT_OPTIONS = [
-    [
-        KeyboardButton("Ask me what I'm thinking"),
-        KeyboardButton("Look something up for me"),
-    ],
-    [
-        KeyboardButton("Explore a topic with me"),
-        KeyboardButton("Ask me what I'm curious about"),
-    ],
-    [
-        KeyboardButton("Homework"),
-        KeyboardButton("Chat with me"),
-    ],
-]
-
-START_KEYBOARD = ReplyKeyboardMarkup(
-    START_PROMPT_OPTIONS,
-    resize_keyboard=True,
-    is_persistent=True,
-    input_field_placeholder="Or type anything — buttons are optional",
-)
-
 # One-tap answer buttons for homework (quick-fire, gamified)
 HOMEWORK_ANSWER_KEYBOARD = InlineKeyboardMarkup([
     [InlineKeyboardButton("A", callback_data="hw:A"), InlineKeyboardButton("B", callback_data="hw:B")],
@@ -263,10 +237,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     reset_conversation(key)
     greeting = get_greeting()
     archive("SESSION START", key, greeting)
-    await update.message.reply_text(
-        greeting,
-        reply_markup=START_KEYBOARD,
-    )
+    await update.message.reply_text(greeting)
 
 
 async def prp(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -304,13 +275,9 @@ async def profile_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         return
     summary = get_pipeline_health_summary()
     summary_text = _format_health_summary(summary)
-    keyboard = InlineKeyboardMarkup.from_button(
-        InlineKeyboardButton("Open Profile", web_app=WebAppInfo(url=PROFILE_MINIAPP_URL))
-    )
     await update.message.reply_text(
         "Open the fork profile to view identity, pipeline, SKILLS, benchmarks, and disclosure.\n\n"
-        f"Quick health:\n{summary_text}",
-        reply_markup=keyboard,
+        f"Quick health:\n{summary_text}\n\n{PROFILE_MINIAPP_URL}"
     )
 
 
@@ -336,7 +303,7 @@ async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     reset_conversation(key)
     msg = get_reset_message()
     archive("SESSION RESET", key, msg)
-    await update.message.reply_text(msg, reply_markup=START_KEYBOARD)
+    await update.message.reply_text(msg)
 
 
 def _checkpoint_to_github() -> tuple[bool, str]:
@@ -1180,11 +1147,8 @@ def create_application(webhook_mode: bool = False) -> Application:
     """Build and return the configured Telegram Application.
     When webhook_mode=True, uses updater=None for custom webhook (caller injects updates)."""
     async def set_menu_button(application: Application) -> None:
-        if PROFILE_MINIAPP_URL:
-            await application.bot.set_chat_menu_button(
-                menu_button=MenuButtonWebApp(text="Profile", web_app=WebAppInfo(url=PROFILE_MINIAPP_URL))
-            )
-            logger.info("Profile menu button configured: %s", PROFILE_MINIAPP_URL)
+        # Keyboard-first: no custom menu button (default bot commands)
+        await application.bot.set_chat_menu_button(menu_button=MenuButtonDefault())
         if OPERATOR_CHAT_ID and OPERATOR_REMINDER_ENABLED and application.job_queue:
             application.job_queue.run_repeating(
                 operator_reminder_job,
