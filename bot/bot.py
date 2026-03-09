@@ -53,6 +53,7 @@ from .core import (
     get_greeting,
     get_reset_message,
     get_pending_candidates,
+    get_candidate_block,
     update_candidate_status,
     is_low_risk_candidate,
     quick_merge_candidate,
@@ -110,6 +111,21 @@ def _is_operator_chat(update: Update) -> bool:
         return False
     chat_id = update.effective_chat.id if update.effective_chat else None
     return bool(chat_id) and str(chat_id) == OPERATOR_CHAT_ID
+
+
+def _is_operator_review_intent(text: str) -> bool:
+    """True if message indicates operator wants to see/approve candidates (route to review, not Voice)."""
+    t = text.strip().lower()
+    if not t:
+        return False
+    review_words = ("candidate", "approval", "approve", "review")
+    if any(w in t for w in review_words) and any(x in t for x in ("show", "these", "one by one", "me")):
+        return True
+    if "show me these" in t and ("candidate" in t or "approval" in t):
+        return True
+    if "candidates for approval" in t:
+        return True
+    return False
 
 
 def _format_health_summary(summary: dict) -> str:
@@ -301,11 +317,91 @@ async def reset(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(msg, reply_markup=START_KEYBOARD)
 
 
+def _checkpoint_to_github() -> tuple[bool, str]:
+    """
+    Commit and push session-transcript.md and recursion-gate.md to GitHub.
+    Returns (ok, message). Operator should run this from the bot's repo root.
+    """
+    repo_root = Path(__file__).resolve().parent.parent
+    files = [
+        f"users/{USER_ID}/session-transcript.md",
+        f"users/{USER_ID}/recursion-gate.md",
+    ]
+    for f in files:
+        if not (repo_root / f).exists():
+            return False, f"file not found: {f}"
+    try:
+        r = subprocess.run(
+            ["git", "-C", str(repo_root), "add"] + files,
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if r.returncode != 0:
+            return False, f"git add failed: {r.stderr or r.stdout or 'unknown'}"
+        r = subprocess.run(
+            ["git", "-C", str(repo_root), "status", "--porcelain"] + files,
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if not (r.stdout or "").strip():
+            return True, "nothing new to push (already up to date)"
+        r = subprocess.run(
+            ["git", "-C", str(repo_root), "commit", "-m", "checkpoint: sync transcript and recursion-gate"],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if r.returncode != 0:
+            return False, f"git commit failed: {r.stderr or r.stdout or 'unknown'}"
+        r = subprocess.run(
+            ["git", "-C", str(repo_root), "push"],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+        if r.returncode != 0:
+            return False, f"git push failed: {r.stderr or r.stdout or 'unknown'}"
+        return True, "checkpoint pushed to GitHub ✓"
+    except subprocess.TimeoutExpired:
+        return False, "git command timed out"
+    except FileNotFoundError:
+        return False, "git not found"
+    except Exception as e:
+        logger.exception("Checkpoint error")
+        return False, str(e)
+
+
+async def checkpoint_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only: commit and push session-transcript + recursion-gate to GitHub."""
+    if not OPERATOR_CHAT_ID:
+        await update.message.reply_text("checkpoint is disabled (set GRACE_MAR_OPERATOR_CHAT_ID).")
+        return
+    if not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    try:
+        ok, msg = await _run_blocking(_checkpoint_to_github)
+        await update.message.reply_text(msg)
+        if ok:
+            archive("CHECKPOINT", _channel_key(update.effective_chat.id), msg)
+    except Exception:
+        logger.exception("Checkpoint command error")
+        await update.message.reply_text("checkpoint failed — try again or push manually.")
+
+
 async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Show pending pipeline candidates with Approve/Reject buttons."""
     candidates = get_pending_candidates()
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    key = _channel_key(chat_id) if chat_id else None
     if not candidates:
-        await update.message.reply_text("nothing to review right now! when we add something new, you'll see it here.")
+        msg = "nothing to review right now! when we add something new, you'll see it here."
+        if key:
+            archive("USER", key, "/review")
+            archive("GRACE-MAR (review)", key, msg)
+        await update.message.reply_text(msg)
         return
     lines = [f"You have {len(candidates)} thing{'s' if len(candidates) != 1 else ''} to review:\n"]
     buttons = []
@@ -320,6 +416,61 @@ async def review(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     text = "\n".join(lines)
     if len(candidates) > 5:
         text += f"\n… and {len(candidates) - 5} more. Type /review again after approving to see the rest."
+    if key:
+        archive("USER", key, "/review")
+        archive("GRACE-MAR (review)", key, text)
+    await update.message.reply_text(text, reply_markup=keyboard)
+
+
+def _format_one_candidate(candidate: dict, block_data: dict | None, index: int, total: int) -> str:
+    """Format a single candidate for one-by-one view. Truncates to fit Telegram 4096-char limit."""
+    cid = candidate["id"]
+    summary = candidate["summary"]
+    lines = [f"[{index + 1}/{total}] {cid}\n", summary]
+    if block_data and block_data.get("block"):
+        block = block_data["block"]
+        target = block_data.get("profile_target", "").strip()
+        if target:
+            lines.append(f"\n→ {target}")
+        text_so_far = "\n".join(lines)
+        max_block_chars = 3800 - len(text_so_far) - 20
+        if len(block) > max_block_chars:
+            block = block[:max_block_chars] + "\n...truncated"
+        lines.append(f"\n```yaml\n{block}\n```")
+    return "\n".join(lines)
+
+
+async def _show_review_one_by_one(
+    update: Update, context: ContextTypes.DEFAULT_TYPE, index: int = 0
+) -> None:
+    """Show one candidate at a time with Approve/Reject/Next for operator one-by-one flow."""
+    candidates = get_pending_candidates()
+    chat_id = update.effective_chat.id if update.effective_chat else None
+    key = _channel_key(chat_id) if chat_id else None
+    if not candidates:
+        msg = "nothing to review right now! when we add something new, you'll see it here."
+        if key:
+            archive("GRACE-MAR (review)", key, msg)
+        await update.message.reply_text(msg)
+        return
+    if index >= len(candidates):
+        msg = f"that's all — no more candidates. ({len(candidates)} reviewed or approved)"
+        if key:
+            archive("GRACE-MAR (review)", key, msg)
+        await update.message.reply_text(msg)
+        return
+    c = candidates[index]
+    block_data = get_candidate_block(c["id"])
+    text = _format_one_candidate(c, block_data, index, len(candidates))
+    buttons = [
+        InlineKeyboardButton("✅ Approve", callback_data=f"approve:{c['id']}"),
+        InlineKeyboardButton("❌ Reject", callback_data=f"reject:{c['id']}"),
+    ]
+    if index + 1 < len(candidates):
+        buttons.append(InlineKeyboardButton("Next →", callback_data=f"review_one:next:{index + 1}"))
+    keyboard = InlineKeyboardMarkup([buttons])
+    if key:
+        archive("GRACE-MAR (review)", key, f"showing {c['id']} [{index + 1}/{len(candidates)}]")
     await update.message.reply_text(text, reply_markup=keyboard)
 
 
@@ -354,6 +505,38 @@ async def callback_homework_answer(update: Update, context: ContextTypes.DEFAULT
     except Exception:
         logger.exception("Homework callback error")
         await query.edit_message_text("oops! try again — tap A, B, C, or D")
+
+
+async def callback_review_one_next(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Handle Next button in one-by-one review flow — edit message to show next candidate."""
+    query = update.callback_query
+    await query.answer()
+    data = query.data or ""
+    if not data.startswith("review_one:next:"):
+        return
+    try:
+        index = int(data.split(":")[-1])
+    except (ValueError, IndexError):
+        return
+    chat_id = query.message.chat.id if query.message else None
+    key = _channel_key(chat_id) if chat_id else None
+    candidates = get_pending_candidates()
+    if not candidates or index >= len(candidates):
+        await query.edit_message_text("that's all — no more candidates.")
+        return
+    c = candidates[index]
+    block_data = get_candidate_block(c["id"])
+    text = _format_one_candidate(c, block_data, index, len(candidates))
+    buttons = [
+        InlineKeyboardButton("✅ Approve", callback_data=f"approve:{c['id']}"),
+        InlineKeyboardButton("❌ Reject", callback_data=f"reject:{c['id']}"),
+    ]
+    if index + 1 < len(candidates):
+        buttons.append(InlineKeyboardButton("Next →", callback_data=f"review_one:next:{index + 1}"))
+    keyboard = InlineKeyboardMarkup([buttons])
+    if key:
+        archive("OPERATOR (review next)", key, c["id"])
+    await query.edit_message_text(text, reply_markup=keyboard)
 
 
 async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -834,6 +1017,12 @@ async def handle_message(
             await update.message.reply_text("oops! tap A, B, C, or D to answer (or 'stop' to quit)")
         return
 
+    # Operator intent: "show me candidates one by one" etc → route to review, not Voice
+    if _is_operator_chat(update) and _is_operator_review_intent(user_message):
+        archive("USER", key, user_message)
+        await _show_review_one_by_one(update, context, index=0)
+        return
+
     try:
         response = await _run_blocking(get_response, key, user_message)
         await update.message.reply_text(response)
@@ -984,6 +1173,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("homework", _homework_command))
     app.add_handler(CommandHandler("reset", reset))
     app.add_handler(CommandHandler("review", review))
+    app.add_handler(CommandHandler("checkpoint", checkpoint_command))
     app.add_handler(CommandHandler("approve", approve_command))
     app.add_handler(CommandHandler("stage", stage_command))
     app.add_handler(CommandHandler("export_curriculum", export_curriculum_command))
@@ -991,6 +1181,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("reject", reject_with_reason))
     app.add_handler(CommandHandler("rotate", rotate_context_command))
     app.add_handler(CallbackQueryHandler(callback_homework_answer, pattern=r"^hw:[ABCD]$"))
+    app.add_handler(CallbackQueryHandler(callback_review_one_next, pattern=r"^review_one:next:\d+$"))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))
