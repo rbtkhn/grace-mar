@@ -1,7 +1,7 @@
 # skill-think — grace-mar
 
 Intake, learning, comprehension (multimodal).
-Part of SKILLS. See [skill-write](skill-write.md), [skill-work](skill-work.md).
+Part of SKILLS. See [skill-write](skill-write.md), [work-alpha-school](work-alpha-school.md).
 
 **Module intent:** THINK captures capability from evidence. When WORK has horizon goals (e.g. SAT ≥ 1200), THINK prioritizes content and assessments that move the companion toward those goals. WORK reads THINK state to measure progress. Human-gated; evidence-linked.
 
@@ -56,7 +56,7 @@ notes: "Strong oral. Literacy is a clear future growth area."
 
 ---
 
-## SAT READINESS (aligned with skill-work horizon goal)
+## SAT READINESS (aligned with work-alpha-school horizon goal)
 
 WORK goal: SAT ≥ 1200. THINK tracks dimensions that map to SAT domains; proposes content at the edge to progress.
 
@@ -66,7 +66,7 @@ WORK goal: SAT ≥ 1200. THINK tracks dimensions that map to SAT domains; propos
 sat_readiness:
   target: 1200
   target_date: null      # e.g. "2031" when companion would typically take SAT
-  source: "skill-work.md work_goals.horizon"
+  source: "work-alpha-school.md work_goals.horizon"
   companion_level: "age 6, first grade"
 
   # General principles — developmentally appropriate; scale with age

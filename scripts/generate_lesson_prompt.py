@@ -2,8 +2,8 @@
 """
 Generate a one-prompt-per-day lesson for the human companion to paste into ChatGPT or Grok.
 
-Reads Record (self.md, skill-think.md, skill-work.md), extracts IX-A/B, edge, goals,
-and fills the minimal prompt shape from docs/skill-work/skill-work-lesson-generation-walkthrough.md §3.
+Reads Record (self.md, skill-think.md, work-alpha-school.md), extracts IX-A/B, edge, goals,
+and fills the minimal prompt shape from docs/skill-work/work-lesson-generation-walkthrough.md §3.
 
 Design: structure+execution (human provides structure via prompt; LLM executes), evidence-first
 (base activities on Record; "We did [X]" for handback). Rules from lesson-rules-config.yaml.
@@ -297,7 +297,7 @@ def _load_lesson_rules_config() -> dict:
 
 def _load_alpha_school_block() -> dict:
     """Load two_hour_block from alpha-school-benchmarks.yaml."""
-    path = SKILL_WORK_DIR / "skill-work-alpha-school" / "alpha-school-benchmarks.yaml"
+    path = SKILL_WORK_DIR / "work-alpha-school" / "alpha-school-benchmarks.yaml"
     if not path.exists():
         return {}
     content = _read(path)
@@ -339,7 +339,7 @@ def generate_lesson_prompt(
     profile_dir = REPO_ROOT / "users" / user_id
     self_content = _read(profile_dir / "self.md")
     think_content = _read(profile_dir / "skill-think.md")
-    work_content = _read(profile_dir / "skill-work.md")
+    work_content = _read(profile_dir / "work-alpha-school.md")
 
     if not self_content:
         return f"# Lesson Prompt — {user_id}\n\nNo self.md found at {profile_dir / 'self.md'}.\n"

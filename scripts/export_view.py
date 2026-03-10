@@ -61,7 +61,7 @@ def export_view(user_id: str, view: str) -> str:
     self_path = profile_dir / "self.md"
     skills_content = "\n".join(
         _read(profile_dir / p)
-        for p in ["skills.md", "skill-think.md", "skill-write.md", "skill-work.md"]
+        for p in ["skills.md", "skill-think.md", "skill-write.md", "work-alpha-school.md"]
     )
     self_raw = _read(self_path)
 

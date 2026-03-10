@@ -148,7 +148,7 @@ def export_curriculum(
     self_content = _read(profile_dir / "self.md")
     skills_content = "\n".join(
         _read(profile_dir / p)
-        for p in ["skills.md", "skill-think.md", "skill-write.md", "skill-work.md"]
+        for p in ["skills.md", "skill-think.md", "skill-write.md", "work-alpha-school.md"]
     )
     evidence_content = _read(profile_dir / "self-evidence.md")
     library_content = _read(profile_dir / "self-library.md")

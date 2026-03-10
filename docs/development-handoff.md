@@ -93,7 +93,7 @@ Last updated: 2026-03-09
 
 ### IX-A / skill-work clarification (2026-02-27)
 - **skills-modularity** §5a — Identity vs instrument: IX-A does not limit skill-work; IX-A relevant to THINK/WRITE; skill-work designed to grow with technology.
-- **skill-work-lesson-generation-walkthrough** — IX-A scope: applies to THINK/WRITE content, not WORK capabilities.
+- **** — IX-A scope: applies to THINK/WRITE content, not WORK capabilities.
 - **skills-template** WORK section — Identity vs instrument note; technology growth intent.
 
 ### Wu insights implementation (2026-02-27)
@@ -102,7 +102,7 @@ Last updated: 2026-03-09
 - **Handback semantics** — agent-encoding §4: when to stage vs. draft vs. flag; one-task semantics (one message per run); context assembly; "we did X" patterns.
 - **Lazar insights** — agent-encoding: tone/voice guidelines, example drafts (§5); message-assist-calibration.md for "how can I prompt you better?" loop; message-assist loads calibration if present.
 
-### skill-work-grace-gems: jewelry industry research (pre-1970 sources only)
+### : jewelry industry research (pre-1970 sources only)
 - Created `jewelry-industry-research-pre1970.md` — history, gemology, localities, cutting/lapidary, metalsmithing, commerce. All sources 1969 or earlier: Wade (1918), Shipley (1948), Smith (1958), Sinkankas (1962), Untracht (1968), Pogue (1915), Emanuel (1867), Streeter (1887), Chilvers (1939), etc. Supports Grace Gems expertise objective.
 
 ### Pilot → Instance terminology cleanup
@@ -110,9 +110,9 @@ Last updated: 2026-03-09
 
 ### Catherine Fitts / Control Grid — Strategic planning (skill-work)
 - **design-notes §2.5** — Added "Control Grid vs Grace-Mar — Sovereignty as Positioning" (Catherine Fitts source; companion-owned identity as counter-move to programmable control grid). Source added to design-notes Sources line.
-- **skill-work-openclaw** — Strengthened companion-gate invariant: OpenClaw or downstream systems must never become control-grid infrastructure; sovereignty preserved regardless of integration depth.
-- **skill-work-grace-gems** — Added sovereignty framing: natural provenance, handmade Denver, policy-transparent, cash-friendly; local economy principles as alternative to homogenized, programmable commerce.
-- **skill-work-human-teacher** — Reinforced "augmentation not compliance" in human-teacher-objectives §2.3: human-teacher supports, does not compel; we support, we do not enforce.
+- **work-openclaw** — Strengthened companion-gate invariant: OpenClaw or downstream systems must never become control-grid infrastructure; sovereignty preserved regardless of integration depth.
+- **** — Added sovereignty framing: natural provenance, handmade Denver, policy-transparent, cash-friendly; local economy principles as alternative to homogenized, programmable commerce.
+- **** — Reinforced "augmentation not compliance" in human-teacher-objectives §2.3: human-teacher supports, does not compel; we support, we do not enforce.
 
 ---
 
@@ -139,7 +139,7 @@ If the companion/operator asks to commit, include all modified and new files fro
 4. Operator UX for debate workflow:
    - `/debates` listing command for unresolved debate packets (implemented).
 5. Add small glossary section to business-facing docs for non-technical readers.
-6. **skill-work-grace-gems benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to skill-work-grace-gems when approved.
+6. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
 
 ---
 

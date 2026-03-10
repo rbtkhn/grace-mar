@@ -1,8 +1,8 @@
-# Skill-work-human-teacher
+# work-human-teacher
 
 **Objective:** Provide personalized education for Grace-Mar's companion — the child whose Record it is — and their family/caregiver. The human teacher (or Record-derived lesson prompt) uses IX-A (knowledge), IX-B (curiosity), IX-C (personality), and skill-think/skill-work edge to shape lessons. Human augments the system by reading skill-think, modulating focus and gate, and respecting identity.
 
-**Different measure of success:** skill-work-human-teacher emphasizes **personalized growth and engagement** for the companion. Economic outcomes (alpha-school) may be downstream but are not the primary metric.
+**Different measure of success:** work-human-teacher emphasizes **personalized growth and engagement** for the companion. Economic outcomes (alpha-school) may be downstream but are not the primary metric.
 
 ---
 
@@ -25,7 +25,7 @@ The Record is the shared medium. Alpha-school does not write into the Record; it
 | **This README** | Objective, purpose, and cross-references. |
 | **[roadmap.md](roadmap.md)** | Phased roadmap: foundation → human-teacher objectives → enhanced generator → formative loop → agentic. |
 | **[quantitative-benchmarks.md](quantitative-benchmarks.md)** | Benchmarks for growth, engagement, formative loop, and edge progression — priority six and full set. |
-| **[skill-work-lesson-generation-walkthrough](../skill-work-lesson-generation-walkthrough.md)** | How Record → lesson prompt; minimal prompt shape; examples A–D. |
+| **[](../.md)** | How Record → lesson prompt; minimal prompt shape; examples A–D. |
 | **[sample-lesson-prompt-grace-mar.txt](../sample-lesson-prompt-grace-mar.txt)** | Demo one-prompt-per-day lesson. |
 
 ---
@@ -41,7 +41,7 @@ The Record is the shared medium. Alpha-school does not write into the Record; it
 
 ## Cross-references
 
-- [skill-work-lesson-generation-walkthrough](../skill-work-lesson-generation-walkthrough.md) — Flow, prompt shape, examples
-- [skill-work-alpha-school](skill-work-alpha-school/) — Recursion, 2-hour design, mastery thresholds
-- [alpha-school-reference](skill-work-alpha-school/alpha-school-reference.md) — § Recursion with skill-work-human-teacher
+- [work-lesson-generation-walkthrough](../work-lesson-generation-walkthrough.md) — Flow, prompt shape, examples
+- [work-alpha-school](work-alpha-school/) — Recursion, 2-hour design, mastery thresholds
+- [alpha-school-reference](work-alpha-school/alpha-school-reference.md) — § Recursion with work-human-teacher
 - [generate_lesson_prompt.py](../../../scripts/generate_lesson_prompt.py) — Day-scoped lesson prompt generator

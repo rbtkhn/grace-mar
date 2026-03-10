@@ -1,4 +1,4 @@
-## skill-work-companion-self — Template Diff Report
+## work-companion-self — Template Diff Report
 
 Companion-self: /tmp/companion-self
 Instance (grace-mar): /Users/robertkuhne/Documents/grace-mar
@@ -28,18 +28,20 @@ Paths: companion-self template-manifest.json
 ### Instance additions (in instance, not in template)
   - docs/skill-work/README.md
   - docs/skill-work/sample-lesson-prompt-grace-mar.txt
-  - docs/skill-work/skill-work-alpha-school/README.md
-  - docs/skill-work/skill-work-alpha-school/academic-literature-elementary-pedagogy.md
-  - docs/skill-work/skill-work-alpha-school/alpha-school-benchmarks.yaml
-  - docs/skill-work/skill-work-alpha-school/alpha-school-reference.md
-  - docs/skill-work/skill-work-alpha-school/insights-alpha-moonshots-233-for-business.md
-  - docs/skill-work/skill-work-companion-self/README.md
-  - docs/skill-work/skill-work-companion-self/roadmap.md
-  - docs/skill-work/skill-work-curate-library/README.md
-  - docs/skill-work/skill-work-health-fitness/README.md
-  - docs/skill-work/skill-work-health-fitness/roadmap.md
-  - docs/skill-work/skill-work-human-teacher/README.md
-  - docs/skill-work/skill-work-human-teacher/roadmap.md
-  - docs/skill-work/skill-work-lesson-generation-walkthrough.md
+  - docs/skill-work/work-alpha-school/README.md
+  - docs/skill-work/work-alpha-school/academic-literature-elementary-pedagogy.md
+  - docs/skill-work/work-alpha-school/alpha-school-benchmarks.yaml
+  - docs/skill-work/work-alpha-school/alpha-school-reference.md
+  - docs/skill-work/work-alpha-school/insights-alpha-moonshots-233-for-business.md
+  - docs/skill-work/work-companion-self/README.md
+  - docs/skill-work/work-companion-self/roadmap.md
+  - docs/skill-work/work-curate-library/README.md
+  - docs/skill-work/work-grace-gems/README.md
+  - docs/skill-work/work-grace-gems/roadmap.md
+  - docs/skill-work/work-health-fitness/README.md
+  - docs/skill-work/work-health-fitness/roadmap.md
+  - docs/skill-work/work-human-teacher/README.md
+  - docs/skill-work/work-human-teacher/roadmap.md
+  - docs/skill-work/work-lesson-generation-walkthrough.md
 
 Summary: same=0 differ=2 only_template=15 only_instance=15

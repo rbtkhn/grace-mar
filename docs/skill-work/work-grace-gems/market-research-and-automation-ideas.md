@@ -136,8 +136,8 @@ Design principles: **companion sovereignty**, **gated pipeline**, **Record as co
 
 ## 6. Cross-References
 
-- [skill-work-grace-gems README](README.md) — Objective and principles
-- [skill-work-grace-gems roadmap](roadmap.md) — Phases 0–3
+- [work-grace-gems README](README.md) — Objective and principles
+- [work-grace-gems roadmap](roadmap.md) — Phases 0–3
 - [agent-encoding.md](agent-encoding.md) — Phase 1 reference for message assist and listing validation (provenance table, glossary, meta-rules)
 - [AGENTS.md](../../../AGENTS.md) — Gated pipeline, knowledge boundary
 - [Etsy Open API v3](https://developers.etsy.com/documentation/) — Listings, Receipts, Inventory, Shipping

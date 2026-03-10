@@ -16,8 +16,8 @@ SKILLS_PATHS = [
     PROFILE_DIR / "skills.md",
     PROFILE_DIR / "skill-think.md",
     PROFILE_DIR / "skill-write.md",
-    PROFILE_DIR / "skill-work.md",
 ]
+WORK_PATHS = [PROFILE_DIR / "work-alpha-school.md"]
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
 
@@ -57,6 +57,9 @@ def load_record_chunks() -> list[tuple[str, str]]:
     for p in SKILLS_PATHS:
         if p.exists():
             chunks.extend(_extract_chunks(_read(p), "SKILLS"))
+    for p in WORK_PATHS:
+        if p.exists():
+            chunks.extend(_extract_chunks(_read(p), "WORK"))
     if EVIDENCE_PATH.exists():
         chunks.extend(_extract_chunks(_read(EVIDENCE_PATH), "EVIDENCE"))
     return chunks

@@ -1,8 +1,8 @@
-# Skill-work-alpha-school submodule
+# work-alpha-school submodule
 
 **Companion-Self template · Alpha reference and lesson-delivery pattern**
 
-This submodule consolidates Alpha School reference material and the template's **Record-driven lesson** pattern for use by WORK, the Record, and instances. Cloned into grace-mar from [companion-self docs/skill-work/skill-work-alpha-school](https://github.com/rbtkhn/companion-self/tree/main/docs/skill-work/skill-work-alpha-school).
+This submodule consolidates Alpha School reference material and the template's **Record-driven lesson** pattern for use by WORK, the Record, and instances. Cloned into grace-mar from [companion-self docs/skill-work/](https://github.com/rbtkhn/companion-self/tree/main/docs/skill-work/).
 
 ---
 
@@ -13,7 +13,7 @@ This submodule consolidates Alpha School reference material and the template's *
 | **[alpha-school-reference.md](alpha-school-reference.md)** | Short reference: status of benchmarks (external, unverified, optional); how instances use metrics (Student UI, Export, Curriculum); 2-hour design constraint; **Record-driven prompts** (3–5 lessons via ChatGPT/Grok, transcript → skill-think). |
 | **[alpha-school-benchmarks.yaml](alpha-school-benchmarks.yaml)** | **Structured benchmark data**: `target_market`, `success_metrics`, benchmarks (screen time, SAT, engagement, 2-hour block, value_creation). Evidence IDs and confidence; machine-friendly. Use for tooling and calibration. See *YAML usage* below. |
 | **[insights-alpha-moonshots-233-for-business.md](insights-alpha-moonshots-233-for-business.md)** | Alpha/Moonshots #233 insights for business plan, white paper, and GTM (THINK/WRITE/WORK narrative). Optional for instances. |
-| **[academic-literature-elementary-pedagogy.md](academic-literature-elementary-pedagogy.md)** | Top 10 influential academic papers on elementary pedagogy (past 25 years); why each is influential; relevance to Record-driven lessons and skill-work-alpha-school. |
+| **[academic-literature-elementary-pedagogy.md](academic-literature-elementary-pedagogy.md)** | Top 10 influential academic papers on elementary pedagogy (past 25 years); why each is influential; relevance to Record-driven lessons and . |
 
 ---
 

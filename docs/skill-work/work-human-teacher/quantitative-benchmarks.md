@@ -1,4 +1,4 @@
-# Quantitative Benchmarks — skill-work-human-teacher
+# Quantitative Benchmarks — work-human-teacher
 
 Benchmarks to track personalized growth, engagement, formative loop health, and edge progression. Emphasizes Record evolution and lesson-related pipeline activity over economic outcomes.
 

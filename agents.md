@@ -218,7 +218,7 @@ grace-mar/
         ├── skills.md           # Capability index (Claims, Gaps, Struggles, Milestones)
         ├── skill-think.md      # THINK, MATH, CHINESE containers
         ├── skill-write.md      # WRITE container
-        ├── skill-work.md       # WORK container
+        ├── work-alpha-school.md # WORK context (separate from SKILLS)
         ├── self-evidence.md         # Activity log
         ├── self-library.md     # self-library — curated lookup sources (books, videos); gated
         ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)

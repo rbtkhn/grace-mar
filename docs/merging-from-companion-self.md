@@ -21,7 +21,7 @@ These paths in companion-self are the canonical source for shared concept, proto
 | `docs/memory-template.md` | MEMORY schema and scope |
 | `agents.md` | Template-level governance (pipeline rule, knowledge boundary, operating modes) |
 | Seed-phase definition | In companion-self: docs or README section describing seed phases; in grace-mar: reflected in ARCHITECTURE and OPERATOR-BRIEF |
-| `docs/skill-work/` | WORK submodules: skill-work-alpha-school (Alpha benchmarks, 2-hour target, Record-driven prompts). Re-sync when template updates. |
+| `docs/skill-work/` | WORK submodules:  (Alpha benchmarks, 2-hour target, Record-driven prompts). Re-sync when template updates. |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.
 

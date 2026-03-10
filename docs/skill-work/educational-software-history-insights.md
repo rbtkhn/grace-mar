@@ -11,7 +11,7 @@
 ## Executive Summary
 
 - **Mastery-based progression** (Bloom 2 Sigma, Alpha, IXL, Khan) underpins 90% thresholds and edge-at-ZPD design. Grace-Mar aligns: teach just above current, 80–85% in-lesson, 90% mastery to advance.
-- **Formative loop** (Black & Wiliam, DreamBox, IXL) — evidence must adapt teaching. Grace-Mar: "We did X" → pipeline → Record → next prompt. Skill-work-human-teacher Phase 4 is central.
+- **Formative loop** (Black & Wiliam, DreamBox, IXL) — evidence must adapt teaching. Grace-Mar: "We did X" → pipeline → Record → next prompt. work-human-teacher Phase 4 is central.
 - **Session design** (Alpha 2-hour block, Duolingo 5–15 min, MOOCs 3–10 min videos) — short activities, clear structure, cognitive load limits. Grace-Mar: 10–15 min activities, one prompt per day.
 - **Engagement** (Duolingo streaks, Deci & Ryan SDT) — autonomy, competence, relatedness. 4-option rule supports autonomy. Avoid extrinsic overload; meet where they are (AGENTS rule 7).
 - **AI tutor pattern** (Khanmigo) — guide, do not give answers. Grace-Mar prompt encodes tutor-as-guide; knowledge boundary = Record only.
@@ -117,7 +117,7 @@ flowchart LR
 - **DreamBox / IXL:** Continuous formative data; no separate assessments; real-time adjustment.
 - **Grace-Mar pattern:** "We did X" → pipeline → Record → next prompt. Explicit handback.
 
-**Insight for Grace-Mar:** The "We did X" handback is the formative loop. Skill-work-human-teacher Phase 4 (formative loop) is central. Evidence must adapt the next prompt.
+**Insight for Grace-Mar:** The "We did X" handback is the formative loop. work-human-teacher Phase 4 (formative loop) is central. Evidence must adapt the next prompt.
 
 ### C. Session Design and Cognitive Load
 
@@ -209,15 +209,15 @@ Synthesized from market and agent-orchestration discourse (All-In podcast, 2025)
 | **health-fitness** | Meet where they are; no compulsion; agency. |
 | **lesson generator** | IX-A/B/C + edge = differentiation (Tomlinson); short activities (CLT); mastery threshold in rules. |
 
-**alpha-school:** Benchmarks and 2-hour design are informed by Alpha School, DreamBox, and Bloom. Optional comparison targets; not verified. See [alpha-school-reference](skill-work-alpha-school/alpha-school-reference.md).
+**alpha-school:** Benchmarks and 2-hour design are informed by Alpha School, DreamBox, and Bloom. Optional comparison targets; not verified. See [alpha-school-reference](work-alpha-school/alpha-school-reference.md).
 
-**human-teacher:** The formative loop ("We did X" → Record → next prompt) is the core feedback mechanism. One prompt per day reduces friction; 4-option rule supports autonomy. Tutor-as-guide aligns with Khanmigo; knowledge boundary = Record only. See [skill-work-human-teacher roadmap](skill-work-human-teacher/roadmap.md).
+**human-teacher:** The formative loop ("We did X" → Record → next prompt) is the core feedback mechanism. One prompt per day reduces friction; 4-option rule supports autonomy. Tutor-as-guide aligns with Khanmigo; knowledge boundary = Record only. See [work-human-teacher roadmap](work-human-teacher/roadmap.md).
 
-**curate-library:** LIBRARY holds books and videos for lookup. Vocabulary-in-context at edge Lexile differentiates from drill apps; curate-library supplies texts and media for lesson prompts. See [skill-work-curate-library](skill-work-curate-library/README.md).
+**curate-library:** LIBRARY holds books and videos for lookup. Vocabulary-in-context at edge Lexile differentiates from drill apps; curate-library supplies texts and media for lesson prompts. See [work-curate-library](work-curate-library/README.md).
 
-**health-fitness:** Meet where they are; no compulsion. Agency and autonomy apply across skill-work. See [skill-work-health-fitness](skill-work-health-fitness/README.md).
+**health-fitness:** Meet where they are; no compulsion. Agency and autonomy apply across work. See [work-health-fitness](work-health-fitness/README.md).
 
-**lesson generator:** IX-A/B/C + edge implement Tomlinson-style differentiation. Short activities and mastery threshold in rules align with CLT and Bloom. See [skill-work-lesson-generation-walkthrough](skill-work-lesson-generation-walkthrough.md).
+**lesson generator:** IX-A/B/C + edge implement Tomlinson-style differentiation. Short activities and mastery threshold in rules align with CLT and Bloom. See [work-lesson-generation-walkthrough](work-lesson-generation-walkthrough.md).
 
 ---
 
@@ -225,7 +225,7 @@ Synthesized from market and agent-orchestration discourse (All-In podcast, 2025)
 
 Actionable principles distilled from the history and insights:
 
-1. **Preserve the formative loop.** "We did X" → pipeline → Record → next prompt. Evidence must adapt the next lesson. Skill-work-human-teacher Phase 4 is central.
+1. **Preserve the formative loop.** "We did X" → pipeline → Record → next prompt. Evidence must adapt the next lesson. work-human-teacher Phase 4 is central.
 2. **One prompt per day.** Reduces friction; one paste, one thread, full day context. Fits 2-hour design and cognitive load limits.
 3. **4-option rule.** When asking what to do next or when learner might not know how to respond, offer A/B/C/D choices. Supports autonomy; learner never gets stuck.
 4. **Tutor-as-guide, not oracle.** Encoded in lesson prompt: one question at a time; hint from Record when stuck; do not give answers. Knowledge boundary = Record only.
@@ -265,7 +265,7 @@ Actionable principles distilled from the history and insights:
 
 **Related Grace-Mar docs**
 
-- [skill-work-alpha-school/academic-literature-elementary-pedagogy](skill-work-alpha-school/academic-literature-elementary-pedagogy.md) — Top 10 influential papers, mapped to skill-work.
-- [skill-work-alpha-school/alpha-school-reference](skill-work-alpha-school/alpha-school-reference.md) — Alpha benchmarks, 2-hour design, Record-driven prompts.
-- [skill-work-human-teacher/roadmap](skill-work-human-teacher/roadmap.md) — Phases 1–5, formative loop, agentic proposals.
-- [skill-work-lesson-generation-walkthrough](skill-work-lesson-generation-walkthrough.md) — Flow, prompt shape, IX-A/B/C usage.
+- [work-alpha-school/academic-literature-elementary-pedagogy](work-alpha-school/academic-literature-elementary-pedagogy.md) — Top 10 influential papers, mapped to work.
+- [work-alpha-school/alpha-school-reference](work-alpha-school/alpha-school-reference.md) — Alpha benchmarks, 2-hour design, Record-driven prompts.
+- [work-human-teacher/roadmap](work-human-teacher/roadmap.md) — Phases 1–5, formative loop, agentic proposals.
+- [work-lesson-generation-walkthrough](work-lesson-generation-walkthrough.md) — Flow, prompt shape, IX-A/B/C usage.

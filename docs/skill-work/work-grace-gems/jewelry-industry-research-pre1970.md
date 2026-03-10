@@ -1,6 +1,6 @@
 # Jewelry Industry Research — Pre-1970 Sources Only
 
-**Purpose:** Deep research into the history and science of gems, jewelry crafting, mining, and selling, using **only sources published in 1969 or earlier**. Supports skill-work-grace-gems objective: become expert in the jewelry industry.
+**Purpose:** Deep research into the history and science of gems, jewelry crafting, mining, and selling, using **only sources published in 1969 or earlier**. Supports work-grace-gems objective: become expert in the jewelry industry.
 
 **Constraint:** Every fact, claim, or citation must trace to a source published 1969 or earlier. No modern sources.
 

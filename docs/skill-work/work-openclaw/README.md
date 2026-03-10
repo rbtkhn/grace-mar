@@ -1,4 +1,4 @@
-# Skill-work-openclaw
+# work-openclaw
 
 **Objective:** Connect Grace-Mar (Record + Voice) with OpenClaw (personal agent workspace) so the Record feeds OpenClaw's identity layer, session continuity spans both systems, and OpenClaw artifacts can feed the grace-mar pipeline — with the companion always as gate.
 
@@ -21,7 +21,7 @@
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, scope, and principles for skill-work-openclaw. |
+| **This README** | Objective, scope, and principles for work-openclaw. |
 | **[openclaw-integration.md](../../openclaw-integration.md)** | Full integration guide — export, continuity, handback, staging, permission summary. |
 | **[economic-benchmarks.md](economic-benchmarks.md)** | Benchmarks for cost, value flow, and gate health — priority five and full set. |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |

@@ -1,4 +1,4 @@
-# Economic Benchmarks — skill-work-openclaw
+# Economic Benchmarks — work-openclaw
 
 Benchmarks to track cost, value flow, and gate health for the Grace-Mar ↔ OpenClaw integration.
 

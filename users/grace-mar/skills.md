@@ -11,7 +11,8 @@ Status: EMPTY
 |--------|------|-------|
 | **skill-think** | [skill-think.md](skill-think.md) | Intake, learning, comprehension (THINK, MATH, CHINESE) |
 | **skill-write** | [skill-write.md](skill-write.md) | Production (text, journal, stories) |
-| **skill-work** | [skill-work.md](skill-work.md) | Making, planning, execution, creation (WORK, SCHOOL) |
+
+**WORK** (separate from SKILLS): [work-alpha-school.md](work-alpha-school.md) — making, planning, execution, creation, school context.
 
 ---
 

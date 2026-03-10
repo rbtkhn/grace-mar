@@ -1,6 +1,6 @@
 # Alpha School Reference (Skill-Work-Alpha-School Submodule)
 
-**Companion-Self template.** **skill-work-alpha-school** is a tool designed for its **target market**:
+**Companion-Self template.** **** is a tool designed for its **target market**:
 
 - **Alpha School families** — at or considering Alpha School
 - **Can't afford Alpha School** — want Alpha-like design at lower cost
@@ -27,7 +27,7 @@ They do not form part of the Record unless assimilated via the evidence pipeline
 
 ## Primary deliverable (comparison target)
 
-**Different measure of success.** skill-work-alpha-school includes **economic productivity and value creation** as success metrics — aligned with Alpha's life-skills workshops (entrepreneurship, passion projects, creators and contributors). skill-work-human-teacher, by contrast, emphasizes personalized growth and engagement for the companion; economic outcomes may be downstream but are not the primary metric.
+**Different measure of success.**  includes **economic productivity and value creation** as success metrics — aligned with Alpha's life-skills workshops (entrepreneurship, passion projects, creators and contributors). , by contrast, emphasizes personalized growth and engagement for the companion; economic outcomes may be downstream but are not the primary metric.
 
 | Dimension | Alpha's deliverable | Structured data key |
 |-----------|---------------------|----------------------|
@@ -77,14 +77,14 @@ Without in-room guides, Companion-Self uses **Record- and system-based metrics**
 Companion-self can deliver **personalized lessons** via **Record-derived prompts** pasted into any LLM (e.g. ChatGPT, Grok). The prompt is built from the Record only: knowledge (IX-A), curiosity (IX-B), personality (IX-C), edge (THINK/WRITE/WORK). The LLM is the tutor; Companion-Self supplies context.
 
 - **Knowledge boundary:** Prompt content is from the Record. No LLM inference is written back into the Record; evidence of what was done can be captured via "we did X" and merged through the gate.
-- **Typical use:** 3–5 lessons per day (or per 2-hour block); transcript of the LLM session can flow into **skill-think** (self-skill-think) for processing and merge. **Ideal UX:** one prompt per day — the human pastes once and runs all lessons in one LLM thread (see [skill-work-lesson-generation-walkthrough](../skill-work-lesson-generation-walkthrough.md) §0).
+- **Typical use:** 3–5 lessons per day (or per 2-hour block); transcript of the LLM session can flow into **skill-think** (self-skill-think) for processing and merge. **Ideal UX:** one prompt per day — the human pastes once and runs all lessons in one LLM thread (see [](../.md) §0).
 - **Minimal prompt shape and APIs:** See template [schema-record-api.md](https://github.com/rbtkhn/companion-self/blob/main/docs/schema-record-api.md#record-derived-lesson-prompt-minimal-shape). Instances may implement a prompt generator from Record/export.
 
 ---
 
-## Recursion with skill-work-human-teacher
+## Recursion with 
 
-Alpha-school and skill-work-human-teacher form a **bidirectional loop**:
+Alpha-school and  form a **bidirectional loop**:
 
 - **Human-teacher → alpha-school:** The human teacher (or Record-derived prompt encoding the same logic) uses alpha-school's design constraints and methods — 2-hour block, segment composition, mastery thresholds, academic-literature mappings — to shape lessons. Alpha-school supplies the structural and pedagogical scaffolding.
 - **Alpha-school ← human-teacher:** Alpha-school observes human-teacher's practice for feedback. Evidence in the Record ("we did X," evidence-linked progress, retention, edge movement) reflects what happens when those methods are applied. That evidence can inform how benchmarks and design principles are interpreted or refined. Alpha-school does not write into the Record directly; it learns from how the Record evolves when human-teacher applies its methods.

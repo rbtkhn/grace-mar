@@ -21,7 +21,7 @@ self-library is **gated**: entries enter through the pipeline (staging → compa
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, scope, and curation principles for skill-work-curate-library. |
+| **This README** | Objective, scope, and curation principles for work-curate-library. |
 | **[library-schema](../../library-schema.md)** | Entry format (LIB-NNNN), fields (title, scope, status, type), dual role (lookup vs mind-shaping). |
 
 ---

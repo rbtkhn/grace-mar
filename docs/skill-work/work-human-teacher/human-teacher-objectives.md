@@ -1,6 +1,6 @@
 # Human-Teacher Objectives
 
-**Purpose:** Formal list of objectives for the operator/caregiver when acting as human-teacher (without LLM) or when modulating LLM-derived prompts. Aligns with Phase 2 of [skill-work-human-teacher roadmap](roadmap.md).
+**Purpose:** Formal list of objectives for the operator/caregiver when acting as human-teacher (without LLM) or when modulating LLM-derived prompts. Aligns with Phase 2 of [work-human-teacher roadmap](roadmap.md).
 
 **Design lens:** Agent maestro (structure provider) + evidence-first + augmentation. Human-teacher structures the session; LLM executes. See [educational-software-history-insights §K](../educational-software-history-insights.md#k-ai-era-insights-all-in-synthesis).
 
@@ -83,7 +83,7 @@ State the session goal with enough context that the task is plausibly solvable w
 
 ## 5. Alpha-School Recursion
 
-When human-teacher uses Alpha School methods (2-hour block, 4 segments, 90% mastery, vocabulary in context), reference [alpha-school-reference](../skill-work-alpha-school/alpha-school-reference.md). Document any alpha-school-specific adaptations in session notes or MEMORY.
+When human-teacher uses Alpha School methods (2-hour block, 4 segments, 90% mastery, vocabulary in context), reference [alpha-school-reference](../work-alpha-school/alpha-school-reference.md). Document any alpha-school-specific adaptations in session notes or MEMORY.
 
 ---
 

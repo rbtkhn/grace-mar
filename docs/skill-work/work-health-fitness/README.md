@@ -13,7 +13,7 @@ This submodule supports WORK and the Record by documenting how Grace-Mar can sup
 | **Companion support** | Activities, prompts, and habits that support the human's health and fitness — sleep, movement, nutrition, recovery. |
 | **Record alignment** | When the companion documents preferences, access needs, or health-related observations, the Record can inform how the Voice responds (e.g., encouraging movement, respecting rest). |
 
-The companion is sovereign. skill-work-health-fitness does not prescribe; it offers structure and prompts that the companion can adopt, adapt, or ignore.
+The companion is sovereign.  does not prescribe; it offers structure and prompts that the companion can adopt, adapt, or ignore.
 
 ---
 
@@ -21,7 +21,7 @@ The companion is sovereign. skill-work-health-fitness does not prescribe; it off
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, scope, and principles for skill-work-health-fitness. |
+| **This README** | Objective, scope, and principles for . |
 | **[roadmap.md](roadmap.md)** | Phased roadmap: Phase 0 (Record-only) → Phase 1 (USDA lookup) → Phase 2 (single-source API) → Phase 3 (Terra aggregation) → Phase 4 (agentic). APIs, constraints, and design guardrails. |
 
 ---

@@ -1,11 +1,11 @@
-# skill-work — grace-mar
+# work-alpha-school — grace-mar
 
-Making, planning, execution, exchange, creation.
-Part of SKILLS. See [skill-think](skill-think.md), [skill-write](skill-write.md).
+Making, planning, execution, exchange, creation (Alpha School context).
+Separate from SKILLS. See [skill-think](skill-think.md), [skill-write](skill-write.md).
 
-**Module intent:** WORK serves as tutor for the companion in the making, planning, execution, and creation domain — proposing activities at the container edge, answering questions, scaffolding next steps, aligned with work goals and life mission. Captures capability from evidence; human-gated.
+**Context intent:** WORK serves as tutor for the companion in the making, planning, execution, and creation domain — proposing activities at the container edge, answering questions, scaffolding next steps, aligned with work goals and life mission. Captures capability from evidence; human-gated.
 
-**Module objectives:**
+**Context objectives:**
 - Implement and maintain the Grace-Mar Telegram and WeChat bots
 - Develop and maintain the Grace-Mar web app at grace-mar.com
 - Curate and maintain self-library

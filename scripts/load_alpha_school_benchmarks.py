@@ -13,7 +13,7 @@ import re
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-ALPHA_SCHOOL_YAML = REPO_ROOT / "docs" / "skill-work" / "skill-work-alpha-school" / "alpha-school-benchmarks.yaml"
+ALPHA_SCHOOL_YAML = REPO_ROOT / "docs" / "skill-work" / "work-alpha-school" / "alpha-school-benchmarks.yaml"
 
 
 def _read(path: Path) -> str:

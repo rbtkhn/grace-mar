@@ -242,7 +242,7 @@ def validate_self_sections(user_dirs: list[Path]) -> list[str]:
 def validate_skills_sections(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     skills_markers = ["## II. CAPABILITY CLAIMS", "## III. CAPABILITY GAPS"]
-    skill_files = ["skill-think.md", "skill-write.md", "skill-work.md"]
+    skill_files = ["skill-think.md", "skill-write.md"]
     for user_dir in user_dirs:
         skills_path = user_dir / "skills.md"
         content = _safe_read(skills_path)

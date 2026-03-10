@@ -60,6 +60,9 @@ class ProfileData:
     dyad_consultations_7d: int
     dyad_integrations_7d: int
     dyad_activity_reports_7d: int
+    session_snapshot: list[dict]
+    health_fitness_summary: dict
+    raw_files: dict[str, str]  # for dashboard: self, skills, library, journal, work
 
 
 def parse_recursion_gate(content: str) -> tuple[int, list[dict]]:
@@ -120,7 +123,7 @@ def parse_evidence(content: str) -> dict:
 
 
 def parse_skills(content: str) -> dict:
-    """Extract container status from skill-think.md, skill-write.md, skill-work.md."""
+    """Extract container status from skill-think.md, skill-write.md (WORK is separate in work-*.md)."""
     summary = {}
     for container in ["THINK", "WRITE", "WORK"]:
         block = re.search(
@@ -138,6 +141,31 @@ def parse_skills(content: str) -> dict:
                 edge = m.group(1).strip().strip('"')[:80]
             summary[container] = {"status": status, "edge": edge}
     return summary
+
+
+def parse_session_transcript_snapshot(content: str, limit: int = 12) -> list[dict]:
+    """Extract last N exchanges from session-transcript (raw log format)."""
+    blocks: list[dict] = []
+    for m in re.finditer(
+        r"\*\*\[([^\]]+)\]\*\*\s+`([^`]+)`[^\n]*\n>\s*(.+?)(?=\n\n\*\*\[|\n\Z)",
+        content,
+        re.DOTALL,
+    ):
+        ts, role, text = m.group(1), m.group(2).strip(), m.group(3).strip().replace("\n> ", "\n")
+        blocks.append({"timestamp": ts, "role": role, "text": text[:200] + ("…" if len(text) > 200 else "")})
+    return blocks[-limit:]
+
+
+def parse_health_fitness_summary(content: str) -> dict:
+    """Extract brief health-fitness summary for dashboard."""
+    out: dict = {}
+    if m := re.search(r'client_name:\s*["\']([^"\']+)["\']', content):
+        out["client_name"] = m.group(1)
+    if m := re.search(r"age_years:\s*(\d+)", content):
+        out["age_years"] = m.group(1)
+    if m := re.search(r"\*\*Trend:\*\*\s+(.+?)(?=\n\n|\Z)", content, re.DOTALL):
+        out["stature_trend"] = m.group(1).strip()[:120]
+    return out
 
 
 def parse_archive(content: str, limit: int = 10) -> list[dict]:
@@ -276,12 +304,12 @@ def collect_data() -> ProfileData:
         PROFILE_DIR / "skills.md",
         PROFILE_DIR / "skill-think.md",
         PROFILE_DIR / "skill-write.md",
-        PROFILE_DIR / "skill-work.md",
     ]
     archive_path = PROFILE_DIR / "self-archive.md"
     session_transcript_path = PROFILE_DIR / "session-transcript.md"
     library_path = PROFILE_DIR / "self-library.md"
     journal_path = PROFILE_DIR / "journal.md"
+    health_fitness_path = PROFILE_DIR / "health-fitness-profile.md"
 
     pending_content = recursion_gate_path.read_text() if recursion_gate_path.exists() else ""
     self_content = self_path.read_text() if self_path.exists() else ""
@@ -293,8 +321,11 @@ def collect_data() -> ProfileData:
     transcript_content = session_transcript_path.read_text() if session_transcript_path.exists() else ""
     library_content = library_path.read_text() if library_path.exists() else ""
     journal_content = journal_path.read_text() if journal_path.exists() else ""
+    health_fitness_content = health_fitness_path.read_text() if health_fitness_path.exists() else ""
 
     pending_count, pending_candidates = parse_recursion_gate(pending_content)
+    session_snapshot = parse_session_transcript_snapshot(transcript_content, limit=12)
+    health_fitness_summary = parse_health_fitness_summary(health_fitness_content)
     self_data = parse_self(self_content)
     evidence_data = parse_evidence(evidence_content)
     skills_summary = parse_skills(skills_content)
@@ -392,6 +423,16 @@ def collect_data() -> ProfileData:
         except (json.JSONDecodeError, KeyError):
             pass
 
+    work_content = (PROFILE_DIR / "work-alpha-school.md").read_text() if (PROFILE_DIR / "work-alpha-school.md").exists() else ""
+    skills_content_no_work = "\n".join(p.read_text() for p in skills_paths if p.exists())
+    raw_files = {
+        "self": self_content,
+        "skills": skills_content_no_work,
+        "library": library_content,
+        "journal": journal_content,
+        "work": work_content,
+    }
+
     return ProfileData(
         name=self_data["name"],
         age=self_data["age"],
@@ -423,6 +464,9 @@ def collect_data() -> ProfileData:
         dyad_consultations_7d=dyad_consultations_7d,
         dyad_integrations_7d=dyad_integrations_7d,
         dyad_activity_reports_7d=dyad_activity_reports_7d,
+        session_snapshot=session_snapshot,
+        health_fitness_summary=health_fitness_summary,
+        raw_files=raw_files,
     )
 
 
@@ -669,6 +713,77 @@ def render_html(data: ProfileData) -> str:
 """
 
 
+def _render_dashboard(data: ProfileData) -> str:
+    """Read-only dashboard: Grace-Mar entity with five sections (Self, Skills, Library, Journal, Work)."""
+    raw = data.raw_files
+
+    def _section(title: str, filename: str, content: str) -> str:
+        escaped = content.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;") if content else ""
+        return f'''
+    <section class="card" data-panel="{filename}">
+        <h2>{title}</h2>
+        <button type="button" class="view-btn" data-panel="{filename}">View full</button>
+        <pre id="panel-{filename}" class="full-file" style="display:none; max-height:400px; overflow:auto; margin:0.5rem 0 0; padding:0.75rem; background:var(--bg); border-radius:6px; font-size:0.85rem; white-space:pre-wrap; word-break:break-word;">{escaped or "(empty)"}</pre>
+    </section>'''
+
+    sections = [
+        ("Self", "self", raw.get("self", "")),
+        ("Skills", "skills", raw.get("skills", "")),
+        ("Library", "library", raw.get("library", "")),
+        ("Journal", "journal", raw.get("journal", "")),
+        ("Work", "work", raw.get("work", "")),
+    ]
+    sections_html = "".join(_section(t, f, c) for t, f, c in sections)
+
+    css = """
+    :root { --bg: #1a1917; --surface: #252422; --text: #e8e6e3; --muted: #9c9a96; --accent: #88b4d4; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; min-height: 100vh; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.5; padding: 0.75rem; padding-left: max(0.75rem, env(safe-area-inset-left)); padding-right: max(0.75rem, env(safe-area-inset-right)); padding-bottom: max(0.75rem, env(safe-area-inset-bottom)); }
+    .header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+    h1 { font-size: 1.25rem; margin: 0; }
+    .back { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .back:hover { text-decoration: underline; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .card { flex: 1 1 140px; min-width: 0; background: var(--surface); border-radius: 8px; padding: 0.75rem 1rem; }
+    .card h2 { font-size: 0.9rem; color: var(--accent); margin: 0 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+    .view-btn { padding: 0.35rem 0.75rem; background: var(--accent); color: var(--bg); border: none; border-radius: 6px; font-size: 0.9rem; cursor: pointer; font-weight: 600; }
+    .view-btn:hover { filter: brightness(1.1); }
+    .view-btn[data-open="true"] { background: var(--muted); }
+    @media (max-width: 640px) { .row { flex-direction: column; } .card { flex: 1 1 100%; } }
+    """
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Grace-Mar</title>
+    <style>{css}</style>
+</head>
+<body>
+    <div class="header">
+        <h1>Grace-Mar</h1>
+        <a href="/" class="back">← Home</a>
+    </div>
+    <div class="row">
+{sections_html}
+    </div>
+    <script>
+    document.querySelectorAll(".view-btn").forEach(function(btn) {{
+        btn.addEventListener("click", function() {{
+            var id = this.getAttribute("data-panel");
+            var pre = document.getElementById("panel-" + id);
+            var open = pre.style.display === "block";
+            pre.style.display = open ? "none" : "block";
+            this.setAttribute("data-open", open ? "false" : "true");
+            this.textContent = open ? "View full" : "Hide";
+        }});
+    }});
+    </script>
+</body>
+</html>"""
+
+
 def main() -> None:
     data = collect_data()
     html = render_html(data)
@@ -678,6 +793,12 @@ def main() -> None:
     profile_view_dir.mkdir(exist_ok=True)
     (profile_view_dir / "index.html").write_text(html, encoding="utf-8")
     print(f"Profile view written to {profile_view_dir / 'index.html'}")
+
+    # grace-mar.com/dashboard — read-only view of the Grace-Mar entity
+    dashboard_dir = PROFILE_PAGE_DIR / "dashboard"
+    dashboard_dir.mkdir(exist_ok=True)
+    (dashboard_dir / "index.html").write_text(_render_dashboard(data), encoding="utf-8")
+    print("Dashboard written to profile/dashboard/index.html")
 
     # grace-mar.com (root) — landing page with buttons to Profile, Telegram, WeChat, LLM (LLM copies PRP to clipboard)
     prp_text = _read_full_prp()
@@ -892,6 +1013,7 @@ def _render_landing_page(prp_text: str = "") -> str:
             --cactus-outline: #1a4d2a;
             --ink: #2c2825;
             --nav-profile: #c97b4a;
+            --nav-dashboard: #6b7baa;
             --nav-telegram: #3a8b4a;
             --nav-wechat: #5a9b5a;
             --nav-llm: #d46a7a;
@@ -1017,6 +1139,7 @@ def _render_landing_page(prp_text: str = "") -> str:
             position: relative;
         }}
         .nav-profile {{ background: var(--nav-profile); color: #fff; }}
+        .nav-dashboard {{ background: var(--nav-dashboard); color: #fff; }}
         .nav-telegram {{ background: var(--nav-telegram); color: #fff; }}
         .nav-wechat {{ background: var(--nav-wechat); color: #fff; }}
         .nav-llm {{ background: var(--nav-llm); color: #1a1a1a; }}
@@ -1045,6 +1168,7 @@ def _render_landing_page(prp_text: str = "") -> str:
             <p class="tagline">Record · Voice · You</p>
             <nav class="nav">
                 <a href="/profile" class="nav-link nav-profile">Profile</a>
+                <a href="/dashboard" class="nav-link nav-dashboard">Dashboard</a>
                 <a href="/telegram" class="nav-link nav-telegram">Telegram</a>
                 <a href="/wechat" class="nav-link nav-wechat">WeChat</a>
                 {llm_block}

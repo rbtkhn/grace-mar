@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Compare grace-mar with companion-self on template paths. skill-work-companion-self Phase 1.
+Compare grace-mar with companion-self on template paths. work-companion-self Phase 1.
 
 Reports: (a) what template has that instance lacks (pull needed); (b) what instance has diverged.
 Does NOT overwrite anything. Per MERGING-FROM-COMPANION-SELF §4.
@@ -132,7 +132,7 @@ def run_diff(
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Compare grace-mar with companion-self on template paths. skill-work-companion-self Phase 1."
+        description="Compare grace-mar with companion-self on template paths. work-companion-self Phase 1."
     )
     parser.add_argument(
         "--companion-self",
@@ -174,7 +174,7 @@ def main() -> None:
         print(out)
         return
 
-    emit("## skill-work-companion-self — Template Diff Report")
+    emit("## work-companion-self — Template Diff Report")
     emit()
     emit("Companion-self: " + str(cs_root))
     emit("Instance (grace-mar): " + str(args.instance))

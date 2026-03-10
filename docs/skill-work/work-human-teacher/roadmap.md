@@ -1,4 +1,4 @@
-# Skill-work-human-teacher — Roadmap
+# work-human-teacher — Roadmap
 
 **Status:** Current state is Phase 1 (Record-derived prompts, script, sample). Phases 2–5 are aspirational; implementation aligns with AGENTS rules (gated pipeline, knowledge boundary, companion sovereignty).
 
@@ -11,9 +11,9 @@
 | Deliverable | Status | Description |
 |-------------|--------|-------------|
 | **Lesson prompt generator** | Done | `scripts/generate_lesson_prompt.py` — reads SELF, skill-think, skill-work; outputs one-prompt-per-day. |
-| **Minimal prompt shape** | Done | §3 of [skill-work-lesson-generation-walkthrough](../skill-work-lesson-generation-walkthrough.md): role, who she is, IX-A, IX-B, edge, today's goals, rules. |
+| **Minimal prompt shape** | Done | §3 of [work-lesson-generation-walkthrough](../work-lesson-generation-walkthrough.md): role, who she is, IX-A, IX-B, edge, today's goals, rules. |
 | **Sample prompt** | Done | [sample-lesson-prompt-grace-mar.txt](../sample-lesson-prompt-grace-mar.txt) — curated demo. Regenerate with generator. |
-| **Walkthrough** | Done | [skill-work-lesson-generation-walkthrough](../skill-work-lesson-generation-walkthrough.md) — flow, examples A–D, IX-A/B/C usage. |
+| **Walkthrough** | Done | [work-lesson-generation-walkthrough](../work-lesson-generation-walkthrough.md) — flow, examples A–D, IX-A/B/C usage. |
 
 **Usage:** `python scripts/generate_lesson_prompt.py -u grace-mar -n Abby -o lesson.txt` — run once per day; regenerate after "we did X" merges.
 
@@ -29,7 +29,7 @@
 | **Operator checklist** | Pre-session: "What's the edge today? Any resistance notes? Today's focus?" Post-session: "Log what we did — we did X." (Included in human-teacher-objectives.md.) |
 | **Alpha-school recursion** | Explicitly reference alpha-school methods (2-hour block, 4 segments, 90% mastery, vocabulary in context) when human-teacher uses them. Document in alpha-school-reference. |
 
-**Output:** `docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md` (or section in README).
+**Output:** `docs/skill-work/work-human-teacher/human-teacher-objectives.md` (or section in README).
 
 ---
 

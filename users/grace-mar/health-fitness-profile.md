@@ -1,6 +1,6 @@
 # Health-Fitness Profile — grace-mar (Abby)
 
-**First client/user.** Companion-led. Phase 0 (Record-only). See [skill-work-health-fitness](../../docs/skill-work/skill-work-health-fitness/README.md).
+**First client/user.** Companion-led. Phase 0 (Record-only). See [](../../docs/skill-work//README.md).
 
 ---
 

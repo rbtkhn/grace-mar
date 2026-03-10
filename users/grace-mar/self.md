@@ -299,7 +299,7 @@ inferred_from:
     evidence: "Phase 4 — likes the deer because it's beautiful. Careful, colorful, elaborate artwork."
 notes: "When asked to pick which value matters most (beautiful, kind, or brave), she said 'all of the above.' Holds multiple values simultaneously without ranking."
 
-life_mission: null   # Companion-authored; what they want to become or contribute. See skill-work.md § WORK GOALS for work goals that align.
+life_mission: null   # Companion-authored; what they want to become or contribute. See work-alpha-school.md § WORK GOALS for work goals that align.
 ```
 
 Derived from: Phase 2 survey, Phase 4 artwork Q&A

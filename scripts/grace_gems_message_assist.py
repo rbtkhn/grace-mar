@@ -5,8 +5,8 @@ Grace Gems message assist — draft-only reply for Etsy customer messages (Wu in
 Minimal v1: input = customer message (paste); prompt = Record excerpt (policies, agent-encoding)
 + message; output = draft reply. Human copies into Etsy and sends. No Etsy API, no auto-send.
 
-Knowledge boundary: uses only documented Record content (agent-encoding, skill-work README).
-See docs/skill-work/skill-work-grace-gems/agent-encoding.md for meta-rules.
+Knowledge boundary: uses only documented Record content (agent-encoding, work-grace-gems README).
+See docs/skill-work/work-grace-gems/agent-encoding.md for meta-rules.
 
 Usage:
     python scripts/grace_gems_message_assist.py --message "Do you ship to Canada?"
@@ -20,7 +20,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-SKILL_WORK_DIR = REPO_ROOT / "docs" / "skill-work" / "skill-work-grace-gems"
+SKILL_WORK_DIR = REPO_ROOT / "docs" / "skill-work" / "work-grace-gems"
 
 
 def _load_context() -> str:

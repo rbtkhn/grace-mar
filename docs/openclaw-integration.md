@@ -299,7 +299,7 @@ python scripts/export_fork.py -u grace-mar -o handoff-fork.json
 
 ## Research
 
-- [skill-work-openclaw/research-moonshots-237.md](skill-work/skill-work-openclaw/research-moonshots-237.md) — Moonshots #237 (Alex Finn): identity, memory, security, hierarchy.
+- [work-openclaw/research-moonshots-237.md](skill-work/work-openclaw/research-moonshots-237.md) — Moonshots #237 (Alex Finn): identity, memory, security, hierarchy.
 
 ---
 

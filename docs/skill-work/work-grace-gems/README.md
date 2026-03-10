@@ -23,7 +23,7 @@ Grace Gems (GraceGemsUS) sells customized fine jewelry with natural, untreated g
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, scope, and principles for skill-work-grace-gems. |
+| **This README** | Objective, scope, and principles for . |
 | **[roadmap.md](roadmap.md)** | Phased roadmap for business management (Record context → operator flows → optional integration). |
 | **[market-research-and-automation-ideas.md](market-research-and-automation-ideas.md)** | Deep market research (Etsy jewelry, natural vs lab-grown, pain points) and automation integration ideas aligned with Grace-Mar (handback, draft-only message assist, staged candidates). |
 | **[jewelry-industry-research-pre1970.md](jewelry-industry-research-pre1970.md)** | History and science of gems, jewelry crafting, mining, selling — **sources from 1969 or earlier only**. |
