@@ -84,4 +84,4 @@ Set `GRACE_MAR_OPERATOR_NAME` for merge audit. Higher-risk candidates use the no
 
 - [rejection-feedback.md](rejection-feedback.md) — rejection reasons
 - [openclaw-integration.md](openclaw-integration.md) — session continuity, heartbeat
-- [work-openclaw/economic-benchmarks.md](skill-work/work-openclaw/economic-benchmarks.md) — metrics sources
+- [work-build-ai/economic-benchmarks.md](skill-work/work-build-ai/economic-benchmarks.md) — metrics sources

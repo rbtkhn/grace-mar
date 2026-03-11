@@ -1,4 +1,4 @@
-# Economic Benchmarks — work-openclaw
+# Economic Benchmarks — work-build-ai
 
 Benchmarks to track cost, value flow, and gate health for the Grace-Mar ↔ OpenClaw integration.
 

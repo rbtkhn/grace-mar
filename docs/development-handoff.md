@@ -110,7 +110,7 @@ Last updated: 2026-03-09
 
 ### Catherine Fitts / Control Grid — Strategic planning (skill-work)
 - **design-notes §2.5** — Added "Control Grid vs Grace-Mar — Sovereignty as Positioning" (Catherine Fitts source; companion-owned identity as counter-move to programmable control grid). Source added to design-notes Sources line.
-- **work-openclaw** — Strengthened companion-gate invariant: OpenClaw or downstream systems must never become control-grid infrastructure; sovereignty preserved regardless of integration depth.
+- **work-build-ai** — Strengthened companion-gate invariant: OpenClaw or downstream systems must never become control-grid infrastructure; sovereignty preserved regardless of integration depth.
 - **** — Added sovereignty framing: natural provenance, handmade Denver, policy-transparent, cash-friendly; local economy principles as alternative to homogenized, programmable commerce.
 - **** — Reinforced "augmentation not compliance" in human-teacher-objectives §2.3: human-teacher supports, does not compel; we support, we do not enforce.
 

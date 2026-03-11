@@ -8,7 +8,7 @@
 
 ## Summary
 
-Research notes from Moonshots episode #237. Use for work-openclaw alignment, integration design, and Grace-Mar positioning.
+Research notes from Moonshots episode #237. Use for work-build-ai alignment, integration design, and Grace-Mar positioning.
 
 ---
 
@@ -78,7 +78,7 @@ Research notes from Moonshots episode #237. Use for work-openclaw alignment, int
 **Grace-Mar relevance:**
 - `openclaw_stage` and `openclaw_hook` are first-party, auditable. We control the surface.
 - Handback receives content from OpenClaw; constitutional check runs before staging. Reduces injection risk into Record.
-- work-openclaw docs should note: prefer Grace-Mar-native tooling over third-party OpenClaw skills for Record sync.
+- work-build-ai docs should note: prefer Grace-Mar-native tooling over third-party OpenClaw skills for Record sync.
 
 ---
 
@@ -127,7 +127,7 @@ Research notes from Moonshots episode #237. Use for work-openclaw alignment, int
 
 ---
 
-## 10. Actionable Takeaways for work-openclaw
+## 10. Actionable Takeaways for work-build-ai
 
 | Takeaway | Action |
 |----------|--------|

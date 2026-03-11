@@ -1,20 +1,21 @@
-# Skill-work-health-fitness — Roadmap
+# work-health-fitness — Roadmap
 
-**Status:** Draft. Phases are aspirational; implementation requires companion approval and aligns with AGENTS rules (gated pipeline, meet where they are).
+**Status:** Draft. work-health-fitness is a **digital trainer** with multiple users (currently Abigail, Hannah). Phases are aspirational; implementation requires user/companion approval and aligns with AGENTS rules (gated pipeline, meet where they are).
 
 ---
 
 ## Phase 0 — Foundation (current)
 
-**Scope:** Record-only. No external APIs. Voice supports health/fitness via documented preferences and wisdom questions.
+**Scope:** Record-only. No external APIs. Trainer supports each user via per-user profiles (identity, growth baseline, preferences) and wisdom questions.
 
 | Deliverable | Description |
 |-------------|-------------|
-| Record-driven prompts | Companion documents health preferences (e.g., sleep goals, movement type) in SELF or MEMORY. Lesson prompts, wisdom questions, or checkpoint reflections can reference them when companion consents. |
-| Wisdom questions | Add health/fitness questions to [wisdom-questions.md](../../wisdom-questions.md) — e.g., "how did you sleep last night?", "what movement felt good today?" — optional, companion-led. |
-| Integration with existing flows | Health cues woven into `generate_lesson_prompt.py` or checkpoint flows only when companion has documented interest. |
+| Per-user profiles | One profile per user (e.g. Abigail, Hannah). Identity, growth baseline, movement/preferences. See README § Users and profiles. |
+| Record-driven prompts | User (or caregiver) documents health preferences in that user's profile or in SELF/MEMORY. Lesson prompts, wisdom questions, or checkpoint reflections can reference them when that user consents. |
+| Wisdom questions | Health/fitness questions (e.g. "how did you sleep last night?", "what movement felt good today?") — optional, user-led. Add to [wisdom-questions.md](../../wisdom-questions.md) when desired. |
+| Integration with existing flows | Health cues woven into lesson generator or checkpoint flows per user when documented and consented. |
 
-**No API integration.** All data flows from companion self-report or operator input.
+**No API integration.** All data flows from user self-report or operator input.
 
 ---
 
@@ -80,20 +81,20 @@
 
 ## Design guardrails (all phases)
 
-1. **Companion-led** — Goals, pacing, and data sharing are companion choices. System supports; does not compel.
+1. **User-led** — Goals, pacing, and data sharing are each user's (or caregiver's) choices. Trainer supports; does not compel.
 2. **Meet where they are** — No pushing through resistance. Respect deflection. (AGENTS rule 7.)
-3. **Minimal Record footprint** — Health data stays in external systems or ephemeral context. Only companion-approved summaries enter Record (e.g., "companion prefers morning movement").
-4. **Privacy** — Sensitive data. Minimal retention; clear consent; revocable links.
-5. **Gated pipeline** — Any health-derived content for SELF/EVIDENCE goes through PENDING-REVIEW. Agent stages; companion merges.
+3. **Minimal Record footprint** — Health data stays in external systems or ephemeral context. Only user-approved summaries enter Record (e.g., "prefers morning movement").
+4. **Privacy** — Sensitive data. Per-user profiles; minimal retention; clear consent; revocable links.
+5. **Gated pipeline** — Any health-derived content for SELF/EVIDENCE goes through RECURSION-GATE. Agent stages; user/companion merges.
 
 ---
 
 ## Summary
 
-| Phase | APIs | Record impact | Companion action |
-|-------|------|---------------|------------------|
-| 0 | None | Preferences in SELF/MEMORY | Self-report |
+| Phase | APIs | Record impact | User action |
+|-------|------|---------------|-------------|
+| 0 | None | Per-user profile + optional SELF/MEMORY | Self-report |
 | 1 | USDA FoodData Central | None | Asks nutrition questions |
-| 2 | Strava, Oura, Fitbit, or Garmin | Optional MEMORY | Links one account |
-| 3 | Terra (aggregation) | Optional MEMORY | Links multiple sources |
-| 4 | Same as 2 or 3 | Same | Agentic proposals; companion approves |
+| 2 | Strava, Oura, Fitbit, or Garmin | Optional MEMORY (per user) | Links one account |
+| 3 | Terra (aggregation) | Optional MEMORY (per user) | Links multiple sources |
+| 4 | Same as 2 or 3 | Same | Agentic proposals; user approves |

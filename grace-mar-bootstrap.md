@@ -137,7 +137,7 @@ python3 scripts/handback_server.py
 - `integrations/openclaw_stage.py` — inbound staging (OpenClaw output → /stage); advisory constitutional check; stage-only, never merge.
 - `scripts/export_user_identity.py` — identity-only export for user.md / SOUL.md.
 - `integrations/export_hook.py` — shared export logic; openclaw target.
-- `docs/skill-work/work-openclaw/` — work-openclaw docs (economic-benchmarks, sovereignty invariant).
+- `docs/skill-work/work-build-ai/` — work-build-ai docs (economic-benchmarks, sovereignty invariant).
 - Session continuity: read `users/grace-mar/session-log.md`, `recursion-gate.md`, last EVIDENCE before OpenClaw sessions.
 
 **Extension (when focus is browser extension):**
