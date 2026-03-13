@@ -2,6 +2,65 @@
 
 Session bootstrap for continuing Grace-Mar in a new agent conversation.
 
+---
+
+## Session focus: full-repo optimization (advanced LLM)
+
+Use this when starting a **new session with a stronger model** to refactor, dedupe, document, or harden the **whole repository** — not a single feature thread.
+
+### Paste into message 1 (clean context)
+
+```bash
+python3 scripts/harness_warmup.py -u grace-mar --fresh-judge
+python3 scripts/harness_warmup.py -u grace-mar --compact
+```
+
+Paste both outputs (or the full non-compact block). **Canonical state is on disk**, not prior chat.
+
+### Read before large edits (order)
+
+| # | File | Why |
+|---|------|-----|
+| 1 | `agents.md` | Sovereign merge, knowledge boundary, Lexile, MEMORY vs Record, file-update protocol |
+| 2 | `docs/harness-inventory.md` | What may write where; bot/core audit; two doors / one book |
+| 3 | `docs/architecture.md` (§ System boundaries) | Voice = model + harness; non-goals |
+| 4 | `docs/identity-fork-protocol.md` | Stage → approve → merge; never direct SELF/EVIDENCE without gate |
+| 5 | `docs/development-handoff.md` | Current engineering state; don’t contradict without updating |
+| 6 | `docs/readme.md` | Doc map |
+
+Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional).
+
+### Non-negotiables for “optimization”
+
+- **Do not** merge into `users/*/self.md`, `self-evidence.md`, or `bot/prompt.py` without companion approval (stage only).
+- **Do not** add undocumented facts into the Record or SYSTEM prompt (knowledge boundary).
+- **Do not** raise Lexile ceiling without writing-sample evidence (agents.md).
+- **Do not** bypass pre-commit: Record-facing edits in gated paths need commit message **`[gated-merge]`** (or hook will block).
+- **Preserve** contradiction + provenance; don’t flatten tensions in companion files.
+- **Prefer** small PR-sized commits; run checks below before claiming done.
+
+### Safe optimization targets (high value, low sovereignty risk)
+
+- **Tests / CI:** `scripts/run_counterfactual_harness.py`, `scripts/test_voice_linguistic_authenticity.py`, `validate-integrity.py`, `governance_checker.py`
+- **Duplication:** shared helpers in `scripts/`, repeated patterns in `bot/`
+- **Docs:** drift, broken links, single source of truth (link to harness-inventory instead of copying policy)
+- **Operator ergonomics:** scripts/README, Makefile or task list, typing/lint on `bot/core.py` (behavior unchanged)
+- **Dependencies:** `bot/requirements.txt` pin audit; security warnings only — don’t swap stack without handoff note
+
+### Verify after substantive changes
+
+```bash
+python3 scripts/governance_checker.py
+python3 scripts/validate-integrity.py --user grace-mar --json
+# If bot/prompt.py or emulation changed:
+python3 scripts/run_counterfactual_harness.py
+python3 scripts/test_voice_linguistic_authenticity.py
+```
+
+End of session: update **`docs/development-handoff.md`**, commit, push if requested.
+
+---
+
 **Default session focus — work-build-ai (continue here):**
 1. Read §1 (first-run checklist).
 2. Read **`docs/skill-work/work-build-ai/README.md`** — objective, companion gate invariant, principles.
@@ -74,6 +133,7 @@ When loaded in a fresh session, offer these options:
 5. **Browser extension** (transcript handback, Save to Record, popup/context menu, handback server)
 6. **Business docs** (plan/prospectus/white-paper alignment)
 7. **Other** (companion-defined task)
+8. **Full-repo optimization** (advanced model — read **Session focus: full-repo optimization** at top of this file; fresh-judge + harness-inventory first)
 
 Wait for companion selection before large changes.
 
@@ -114,8 +174,10 @@ pip install pre-commit && pre-commit install && pre-commit install --hook-type c
 ### Harness warmup (any agent session — paste into first message)
 ```bash
 python3 scripts/harness_warmup.py -u grace-mar
+python3 scripts/harness_warmup.py -u grace-mar --fresh-judge   # clean context for new thread / advanced model
 python3 scripts/harness_warmup.py -u grace-mar --territory wap   # WAP pending only in paste
 python3 scripts/harness_warmup.py -u grace-mar --compact
+python3 scripts/generate_gate_dashboard.py -u grace-mar   # pending queue HTML (human door)
 ```
 
 ### OpenClaw
@@ -166,6 +228,7 @@ python3 scripts/handback_server.py
 
 **Harness hybrid (plan in one tool, build in another):**
 - `docs/harness-handoff.md` — handoff = commits + warmup paste; never state only in chat.
+- `docs/harness-inventory.md` — components, write surfaces, two doors / one book; **start here for repo-wide refactors**.
 
 **work-build-ai / OpenClaw (default continuation):**
 - `docs/skill-work/work-build-ai/README.md` — territory objective; companion gate invariant; principles; quick ref commands.
