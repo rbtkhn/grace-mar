@@ -4,7 +4,7 @@ Use this file to resume development quickly in a new agent conversation.
 
 **Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-build-ai** (OpenClaw + companion gate); read `docs/skill-work/work-build-ai/README.md` then `docs/openclaw-integration.md`.
 
-Last updated: 2026-03-12
+Last updated: 2026-03-13
 
 ---
 
@@ -50,6 +50,11 @@ Last updated: 2026-03-12
 ---
 
 ## Recently Completed (High Level)
+
+### CI + PRP workflow hardening (2026-03-13)
+- **`.github/workflows/governance.yml`** — Added `validate-integrity.py --json` to the no-secrets governance CI path so routine push/PR checks cover both policy scan and canonical Record integrity.
+- **`.github/workflows/prp-refresh.yml`** — Fixed trigger paths to canonical lowercase `self.md` / `self-evidence.md`, added explicit `contents: write`, and aligned the auto-generated commit message with gated PRP policy via `[gated-merge]`.
+- **Verification baseline** — `python3 scripts/governance_checker.py` and `python3 scripts/validate-integrity.py --user grace-mar --json` both passed locally after the CI/doc changes.
 
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).

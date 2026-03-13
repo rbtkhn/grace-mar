@@ -1,5 +1,6 @@
-# Run governance checker on push/PR (no secrets required).
-# Catches merge-without-approval and direct-write-to-Record patterns.
+# Run governance + integrity checks on push/PR (no secrets required).
+# Catches merge-without-approval, direct-write-to-Record patterns,
+# and record/integrity regressions in canonical files.
 name: Governance
 
 on:
@@ -18,3 +19,5 @@ jobs:
           python-version: "3.11"
       - name: Governance check
         run: python scripts/governance_checker.py
+      - name: Integrity check
+        run: python scripts/validate-integrity.py --json
