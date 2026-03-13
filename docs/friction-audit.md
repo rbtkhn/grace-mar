@@ -34,6 +34,8 @@
 
 **What it is:** To log a writing sample or artwork, the user must: (1) photograph or scan, (2) save to `artifacts/`, (3) create or extend the self-evidence.md entry (YAML structure, analysis). No upload flow, no templates.
 
+**Canonical save rule:** Store retained visuals in `users/grace-mar/artifacts/` with evidence-aware lowercase names (`write-0007-title-slug.png`, `create-0011-title-slug.jpg`, `act-0045-title-slug-page-1.png`). See `pipeline-map.md` for the current artifact taxonomy and class guidance.
+
 **Impact:** 5 — This is the main blocker for WRITE and WORK (creation) evidence. High cognitive load: user must know the schema and write YAML.
 
 **Effort:** 3 — Options: (a) Telegram bot photo upload → staging area with minimal metadata, (b) template script that scaffolds a new WRITE-* or CREATE-* entry from filename + prompts for key fields, (c) web form for artifact + metadata.

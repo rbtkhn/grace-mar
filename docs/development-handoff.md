@@ -83,6 +83,10 @@ Last updated: 2026-03-13
 ### Local hook parity for integrity (2026-03-13)
 - **`.pre-commit-config.yaml`** — Added `validate-integrity.py --json` to local hooks so developers catch canonical Record / gate shape regressions before push, not only in CI.
 
+### Artifact taxonomy + naming convention (2026-03-13)
+- **`docs/pipeline-map.md`** — Added a canonical artifact taxonomy for the most common retained visual evidence classes plus naming rules for files saved under `users/grace-mar/artifacts/`.
+- **`docs/friction-audit.md`** — Added the short save rule that points new artifact capture toward evidence-aware lowercase filenames instead of generic root-level screenshots.
+
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.

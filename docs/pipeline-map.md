@@ -184,6 +184,39 @@ Physical artifact (artwork, collage, etc.)
 
 ---
 
+## Canonical Artifact Taxonomy
+
+When saving retained visual evidence under `users/grace-mar/artifacts/`, default to these high-frequency classes:
+
+| Class | Typical examples | Usual evidence surface |
+|------|-------------------|------------------------|
+| **Writing sample** | journal page, story, copied text, reflection, school writing | `WRITE-*` entry in EVIDENCE § II |
+| **Drawing / illustration** | free drawing, character art, imaginative scene | `CREATE-*` entry in EVIDENCE § III |
+| **Worksheet / school page** | science worksheet, reading response, vocabulary page | Usually `WRITE-*`; sometimes `ACT-*` if the artifact supports multiple signals |
+| **Craft / collage / physical project** | collage, cutout, 3D craft, poster | `CREATE-*` entry in EVIDENCE § III |
+| **Multi-page packet** | booklet, worksheet sequence, multi-page assignment | One parent `ACT-*` plus linked `WRITE-*` / `CREATE-*` entries as needed |
+| **Scratch / whiteboard thinking** | planning page, labeling exercise, rough problem-solving | `WRITE-*` or `ACT-*` depending on whether text or process is primary |
+| **Reading-adjacent artifact** | book response page, read-aloud follow-up, favorite-book drawing | `WRITE-*`, `CREATE-*`, or `ACT-*` depending on dominant modality |
+| **Skill-work project artifact** | plan, checklist, mockup, poster, territory-specific deliverable | Usually `CREATE-*` or `ACT-*` |
+| **Meaningful digital output** | typed page, app-made creative work, designed graphic | Match content type: `WRITE-*`, `CREATE-*`, or `ACT-*` |
+| **Progress comparison snapshot** | before/after work, growth comparison over time | Usually linked from `ACT-*`; may reference multiple artifact files |
+
+### Naming convention
+
+- Save files in lowercase under `users/grace-mar/artifacts/`.
+- Prefer existing evidence IDs in filenames when known:
+  - `write-0007-title-slug.png`
+  - `create-0011-title-slug.jpg`
+  - `act-0045-title-slug-page-1.png`
+- If an activity has multiple pages, append `-page-1`, `-page-2`, etc.
+- Avoid generic root-level names like `Image_*.jpg`; rename on save so the file already carries its evidence context.
+- If uncertain whether something is `WRITE-*` or `CREATE-*`, decide by dominant signal:
+  - text / authored words -> `WRITE-*`
+  - visual making / design / artwork -> `CREATE-*`
+  - mixed packet or multi-signal event -> `ACT-*` can be the parent evidence anchor
+
+---
+
 ## SELF ← Pillar Feedback (from ARCHITECTURE)
 
 | Pillar activity | Feeds SELF |
