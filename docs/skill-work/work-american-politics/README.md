@@ -18,6 +18,42 @@
 
 ---
 
+## Sync with RECURSION-GATE
+
+WAP lives in **two places**: this folder (**docs**, working truth) and **`users/grace-mar/recursion-gate.md`** (gated merges into SELF / EVIDENCE / prompt). Optimal sync = **know which lane** and **touch the gate on a rhythm**.
+
+### Doc-only (no candidate)
+
+Keep in git only when:
+
+- Drafts, scratch opposition notes, internal SMM runbooks — iterate freely.
+- Nothing must **constrain Voice** this week and no **paid / audit** line needed in EVIDENCE yet.
+
+### Stage to RECURSION-GATE when
+
+1. **Voice / PRP should reflect it** — companion wants the fork to “know” something for queries (then merge touches prompt or IX — still companion-approved).
+2. **Paid or milestone audit** — deliverable closed, revenue event, “we shipped X” → **ACT-** trail; use [wap-candidate-template.md](wap-candidate-template.md).
+3. **Explicit companion approval** of a fact for the Record — same gated rule as Abby pipeline; no merge on agent say-so alone.
+
+### Territory (required for WAP rows)
+
+Every WAP candidate must include **`territory: work-american-politics`** and/or **`channel_key: operator:wap:<slug>`** so reports and **`--territory wap`** batch merge stay clean. See principle 4 below.
+
+### IX vs ACT (policy)
+
+- **Default for WAP merges:** prefer **ACT- + minimal IX** unless the companion wants campaign substance in Abby’s IX-A/B/C. Opposition and strategy need not become the child’s self-knowledge.
+- **INTENT:** When campaign posture shifts materially, consider a separate candidate or INTENT edit **through the gate** so long agents align — optional but high leverage.
+
+### Rhythm
+
+At least **weekly** (e.g. before weekly brief): either **one WAP candidate** capturing what merged Voice/audit-wise, or an explicit **“doc-only this week”** — avoids drift between `docs/skill-work/work-american-politics/` and the gate.
+
+### Template
+
+**[wap-candidate-template.md](wap-candidate-template.md)** — paste-ready YAML; name artifacts in `summary` (`iran-foreign-policy-brief.md`, `revenue-log` row).
+
+---
+
 ## Lifecycle
 
 **Phase 1 — Primary (~3 months):** Now through **May 19, 2026** (KY-4 primary). Focus: shadow campaign support for Massie — briefs, opposition, message discipline, X, calendar. See [calendar-2026.md](calendar-2026.md).
@@ -71,6 +107,7 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **[metrics.md](metrics.md)** | Quantitative metrics across the territory: revenue, funnel, deliverables, territory health, efficiency. Priority set + full set; sources (revenue-log, Fiverr, etc.). |
 | **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @shadowcampain, (3) first $1k deliverable, (4) scale or repeat. |
 | **[simple-in-long-term-speculation.md](simple-in-long-term-speculation.md)** | Long-term speculation: effect of "simple in, more work out" on development and potential of the system. |
+| **[wap-candidate-template.md](wap-candidate-template.md)** | Paste-ready RECURSION-GATE YAML for WAP milestones; territory + batch merge commands. |
 
 ---
 
@@ -79,7 +116,7 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 1. **Companion sovereignty** — Campaign strategy and public positioning are the companion’s. The agent supports with research and drafts; it does not direct.
 2. **Knowledge boundary** — Briefs and Voice responses use documented Record content and cited sources. No unsourced or inferred political claims.
 3. **Gated pipeline** — New campaign-relevant facts or claims (opposition research, issue positions) enter the Record only via staging and companion approval.
-4. **RECURSION-GATE territory** — WAP candidates: add **`territory: work-american-politics`** or **`channel_key: operator:wap`** so operator tools can filter WAP vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory wap` | `companion` | `all`). **Batch merge WAP only:** approve WAP rows, then  
+4. **RECURSION-GATE territory** — WAP candidates (see [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md)): add **`territory: work-american-politics`** or **`channel_key: operator:wap`** so operator tools can filter WAP vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory wap` | `companion` | `all`). **Batch merge WAP only:** approve WAP rows, then  
    `python scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>`  
    `python scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json`  
    Companion-approved rows stay in the gate until you run `--territory companion` or `all`.
@@ -109,6 +146,7 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **Opposition brief (living doc)** | Single doc: Gallrein (and others) bio, endorsements, spending, narrative lines, vulnerabilities. Agent updates when you request; keeps tracking in one place. | Added — [opposition-brief.md](opposition-brief.md) |
 | **Weekly brief template** | Standard structure for “this week” briefs (news, votes, opposition, social, key dates). Consistent format; you know what to expect. | Added — [weekly-brief-template.md](weekly-brief-template.md) |
 | **Message bank** | Approved or draft talking points by issue (war powers, Epstein, Trump opposition). Keeps X and briefs on-message; update via pipeline. | Optional — add when you want a single source of truth for lines. |
+| **RECURSION-GATE sync** | Doc vs gate lanes, weekly rhythm, WAP template — [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md). | Added |
 | **District context** | KY-4 basics: counties, demographics, local issues, local media. Improves district-focused messaging and briefs. | Optional — add when you want district one-pager. |
 | **FEC / compliance reminders** | Tie calendar to reminders: 48-hour notices window, pre-primary report due. So we don’t miss deadlines. | Optional — add to workflow-reminders or calendar. |
 | **Debate prep (if primary debate)** | If KY-4 has a debate: date in calendar; one-pager for prep (opposition lines, principal’s best answers) and post-debate (narrative, X angles). | Optional — add when debate is confirmed. |

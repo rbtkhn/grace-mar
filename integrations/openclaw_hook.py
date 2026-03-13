@@ -22,6 +22,13 @@ from urllib.request import Request, urlopen
 from export_hook import run_export
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = REPO_ROOT / "scripts"
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+try:
+    from harness_events import append_harness_event
+except ImportError:
+    append_harness_event = None  # type: ignore
 
 
 def _sha256(path: Path) -> str:
@@ -145,6 +152,17 @@ def run_openclaw_export(
             return 3
     if emit_event:
         _emit_openclaw_event(user_id, out_dir, fmt, files, status="ok")
+    if append_harness_event and files:
+        append_harness_event(
+            user_id,
+            "openclaw_hook",
+            "openclaw_export",
+            path=str(out_dir.resolve()),
+            format=fmt,
+            file_count=len(files),
+            status="ok",
+            pipeline_event=bool(emit_event),
+        )
     return 0
 
 

@@ -51,6 +51,15 @@ Last updated: 2026-03-12
 
 ## Recently Completed (High Level)
 
+### WAP ↔ RECURSION-GATE sync (2026-03-12)
+- **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
+- **wap-candidate-template.md** — paste-ready WAP YAML.
+
+### Trajectory export + RL boundary (2026-03-12)
+- **`scripts/export_conversation_trajectories.py`** — session-transcript → JSONL; optional pipeline_events attach.
+- **`docs/openclaw-rl-boundary.md`** — green/yellow/red; minors; no secrets.
+- **openclaw-integration.md** — Trajectory export subsection.
+
 ### Territory lens / WAP vs companion (2026-03-12)
 - **`scripts/recursion_gate_territory.py`** — `territory: work-american-politics` or `channel_key: operator:wap` → WAP.
 - **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|wap|companion`.

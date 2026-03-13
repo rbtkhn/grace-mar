@@ -137,6 +137,8 @@ See `docs/memory-template.md`.
 - Create or modify EVIDENCE entries
 - Update bot/prompt.py
 
+**RL / fine-tuning (optional):** `scripts/export_conversation_trajectories.py` emits read-only JSONL for local harnesses. It does **not** merge into the Record. Shared or pooled RL requires operator policy — minors, secrets, staging drafts: see [openclaw-rl-boundary.md](docs/openclaw-rl-boundary.md).
+
 ---
 
 ## Success Metrics (Targeting System)
@@ -231,6 +233,7 @@ grace-mar/
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging
         ├── pipeline-events.jsonl  # Append-only pipeline audit log
+        ├── harness-events.jsonl    # Optional harness audit (merge/export); see docs/harness-inventory.md
         ├── compute-ledger.jsonl   # Token usage (energy ledger)
         ├── self-archive.md            # self-archive — gated log of approved activity (voice + non-voice) — private
         ├── journal.md                # Daily highlights — public-suitable, shareable

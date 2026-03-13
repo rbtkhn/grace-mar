@@ -1,5 +1,7 @@
 # Harness handoff (hybrid workflows)
 
+**Inventory:** [harness-inventory.md](harness-inventory.md) (includes **two doors, one book**). **Fresh-context paste:** `python scripts/harness_warmup.py -u grace-mar --fresh-judge`. **Pending scan:** `python scripts/generate_gate_dashboard.py -u grace-mar` → open `users/grace-mar/gate-dashboard.html`.
+
 Short guide for using **more than one AI harness** (e.g. **Cursor** + **Codex**, **Claude Code** + **ChatGPT**) on the same Grace-Mar work without losing state.
 
 **Problem:** Each harness has its own chat context. Memory in chat **does not** live in the Record. Switching tools without a handoff resets understanding.

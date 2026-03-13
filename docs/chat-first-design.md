@@ -4,7 +4,13 @@
 
 **Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md)
 
-**See also:** [ARCHITECTURE](architecture.md), [SIMPLE-USER-INTERFACE](simple-user-interface.md)
+**See also:** [ARCHITECTURE](architecture.md), [SIMPLE-USER-INTERFACE](simple-user-interface.md), [harness-inventory § Two doors](harness-inventory.md#two-doors-one-book)
+
+---
+
+## Operator harness (outside chat)
+
+The **chat product** stays text-first: no dashboard *required* for the companion. Separately, the **operator** may use a **human door** on the same book — e.g. a generated HTML view of pending gate candidates — so approvals don’t depend on parsing long markdown in a Cursor thread. That surface is optional, read-only, and **not** part of what the child sees in Telegram. See [harness-inventory — pending dashboard](harness-inventory.md#pending-candidates-dashboard-human-door).
 
 ---
 

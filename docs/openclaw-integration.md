@@ -74,6 +74,18 @@ python scripts/process_approved_candidates.py --apply --approved-by <name> --rec
 - Session logs (temporal, not identity)
 - RECURSION-GATE (staging, not canonical)
 
+### Trajectory export (optional RL / research)
+
+For **local** tooling that expects multi-turn JSONL (e.g. [OpenClaw-RL](https://github.com/Gen-Verse/OpenClaw-RL)-style pipelines), Grace-Mar provides a **read-only** exporter — it does **not** train models or merge into the Record.
+
+```bash
+python scripts/export_conversation_trajectories.py -u grace-mar -o /tmp/traj.jsonl
+python scripts/export_conversation_trajectories.py -u grace-mar --last-n 500   # cap size
+python scripts/export_conversation_trajectories.py -u grace-mar --no-pipeline-events
+```
+
+Each line: `turn`, `role`, `channel`, `text`, `ts`, `user_id`, and optionally `pipeline_events` (staged/applied/rejected near that turn). **Policy before any upload or shared RL:** [openclaw-rl-boundary.md](openclaw-rl-boundary.md) (minors, secrets, green/yellow/red).
+
 ---
 
 ## 2. Session Continuity (Startup Checklist)

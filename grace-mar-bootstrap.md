@@ -122,6 +122,7 @@ python3 scripts/harness_warmup.py -u grace-mar --compact
 ```bash
 python3 integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
 python3 integrations/openclaw_stage.py --user grace-mar --text "we explored X in OpenClaw"
+python3 scripts/export_conversation_trajectories.py -u grace-mar -o /tmp/traj.jsonl   # optional JSONL for local RL; see docs/openclaw-rl-boundary.md
 ```
 
 ### Proposal brief (proactive activities from Record)

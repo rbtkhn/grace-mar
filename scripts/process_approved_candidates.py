@@ -31,6 +31,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
+from harness_events import append_harness_event
 from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
@@ -960,6 +961,15 @@ def main() -> None:
         }
         _append_merge_receipt(receipt_event)
         print(f"Merge receipt appended: {MERGE_RECEIPTS_PATH}")
+        append_harness_event(
+            USER_ID,
+            "process_approved_candidates",
+            "merge_applied",
+            path=str(MERGE_RECEIPTS_PATH.relative_to(REPO_ROOT)),
+            candidate_ids=receipt.get("candidate_ids"),
+            approved_by=receipt.get("approved_by"),
+            merged_at=receipt_event.get("merged_at"),
+        )
 
         for c, act_id in applied_candidates:
             _emit_applied_event(c["id"], act_id, args.approved_by.strip())
