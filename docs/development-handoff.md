@@ -106,6 +106,16 @@ Last updated: 2026-03-13
 - **Adjacent strategic priorities captured (future, not implemented here):** approval inbox for `RECURSION-GATE`, visible provenance surfaces, and a portability-grade export bundle.
 - **Operational surfaces added:** `docs/skill-work/work-civ-mem/workspace.md` (runbook) and `docs/skill-work/work-civ-mem/audit-report.md` (initial baseline snapshot).
 
+### Approval inbox specification (2026-03-13)
+- **`docs/approval-inbox-spec.md`** — New implementation-ready product spec for a browser-first `RECURSION-GATE` approval inbox.
+- **Core decision:** the inbox is a review surface over the existing queue, not a second memory system; it reuses current quick-merge rules, receipt flow, and pipeline audit events.
+- **Defined surfaces:** candidate card shape, derived risk tiers, filters, batch actions, dedupe hints, post-action states, audit behavior, and first implementation path through authenticated miniapp/web endpoints.
+
+### Companion Self doctrine memo (2026-03-13)
+- **`docs/companion-self-doctrine-memo.md`** — New outward-facing source text that explains Companion Self as identity infrastructure for the agentic era.
+- **Core framing:** Record vs Voice vs gate; SELF vs SKILLS vs WORK; governance before fluency; portability as a first-order product principle.
+- **Usage:** intended as the canonical narrative bridge for collaborator language, investor memo revisions, and future deck copy.
+
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.
@@ -240,7 +250,7 @@ Likely includes (run `git status` to confirm):
 - Bot: `bot/prompt.py`, `bot/core.py` (companion/operator wording).
 - New: `docs/operator-brief.md`, `docs/letter-to-user.md`, `docs/x-integration.md`.
 - intent-template.md (design-lens block, companion gate wording).
-- Next likely work after the work-layer closure commit: define the `RECURSION-GATE` approval inbox as a concrete product surface and write one canonical outward-facing Companion Self doctrine memo.
+- If work stopped right now, the likely local changes would be the approval inbox spec, doctrine memo, and any follow-on narrative derivatives or implementation work that had not yet been committed.
 - Optional later cleanup: continue migrating or annotating older legacy analyses that still discuss `self-skill-work` / `BUILD` for historical comparison.
 
 If the companion/operator asks to commit, include all modified and new files from this session.
@@ -249,8 +259,8 @@ If the companion/operator asks to commit, include all modified and new files fro
 
 ## Recommended Next Tasks
 
-1. **Specify the approval inbox** — Turn the current `RECURSION-GATE` queue, bot flow, and dashboard surfaces into one implementation-ready product spec.
-2. **Write the Companion Self doctrine memo** — Create one canonical outward-facing narrative that can feed investor and deck language without drifting from architecture.
+1. **Implement the approval inbox** — Add authenticated read/write web endpoints and a browser surface that follows `docs/approval-inbox-spec.md` without changing gate semantics.
+2. **Derive business-facing language from the doctrine memo** — Tighten `docs/investor-memo.md`, deck text, and related narrative docs so they pull from `docs/companion-self-doctrine-memo.md` rather than drifting separately.
 3. **Mark or migrate remaining legacy work docs** — Analysis/audit docs that still say `self-skill-work` should either remain clearly legacy or be rewritten to the new work-layer vocabulary.
 4. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
 5. Align business docs for zero drift:
