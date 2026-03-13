@@ -56,6 +56,11 @@ Last updated: 2026-03-13
 - **`.github/workflows/prp-refresh.yml`** — Fixed trigger paths to canonical lowercase `self.md` / `self-evidence.md`, added explicit `contents: write`, and aligned the auto-generated commit message with gated PRP policy via `[gated-merge]`.
 - **Verification baseline** — `python3 scripts/governance_checker.py` and `python3 scripts/validate-integrity.py --user grace-mar --json` both passed locally after the CI/doc changes.
 
+### Naming guard consolidation (2026-03-13)
+- **`scripts/check_deprecated_naming.py`** — Centralized the deprecated legacy-name scan in a repo script so CI and local hooks share one rule.
+- **`.github/workflows/naming-check.yml`** — Switched the workflow from inline shell to the shared Python script.
+- **`.pre-commit-config.yaml`** — Added the naming guard to local pre-commit hooks for the same protection before push.
+
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.

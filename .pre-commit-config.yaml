@@ -5,6 +5,11 @@
 repos:
   - repo: local
     hooks:
+      - id: deprecated-naming-check
+        name: Deprecated naming check
+        entry: python scripts/check_deprecated_naming.py
+        language: system
+        pass_filenames: false
       - id: governance-check
         name: Governance checker
         entry: python scripts/governance_checker.py
