@@ -15,6 +15,11 @@ repos:
         entry: python scripts/governance_checker.py
         language: system
         pass_filenames: false
+      - id: integrity-check
+        name: Integrity validator
+        entry: python scripts/validate-integrity.py --json
+        language: system
+        pass_filenames: false
       - id: gated-record-commit-msg
         name: Gated Record commit token
         entry: python scripts/check_gated_record_commit_msg.py

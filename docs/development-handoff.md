@@ -61,6 +61,9 @@ Last updated: 2026-03-13
 - **`.github/workflows/naming-check.yml`** — Switched the workflow from inline shell to the shared Python script.
 - **`.pre-commit-config.yaml`** — Added the naming guard to local pre-commit hooks for the same protection before push.
 
+### Local hook parity for integrity (2026-03-13)
+- **`.pre-commit-config.yaml`** — Added `validate-integrity.py --json` to local hooks so developers catch canonical Record / gate shape regressions before push, not only in CI.
+
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.
