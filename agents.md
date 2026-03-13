@@ -42,6 +42,10 @@ When in doubt, default to Session (conversational, no merges).
 
 **Implementation preference:** The operator prefers to see a short proposal (scope, approach, files to touch) before the agent implements. Propose first; implement after approval.
 
+**Proposal format:** One paragraph with: (1) Scope — what's in, what's out; (2) Approach — high-level steps or method; (3) Files — paths to create or modify. Trivial fixes (typos, obvious corrections) may skip proposal.
+
+**Edit restraint:** When the operator asks to "think about", "consider", or explores conceptually — answer in prose. Do not edit files unless implementation is clearly requested ("do it", "implement", "add this"). If unclear, prefer answer over edit.
+
 ---
 
 ## Critical Rules
@@ -55,7 +59,7 @@ The emulated self can only know what is explicitly documented in its profile (`u
 *The agent may stage. It may not merge.* All profile changes pass through a companion-controlled gate:
 
 1. Detect signals (knowledge, curiosity, personality)
-2. Stage candidates in `users/[id]/recursion-gate.md`
+2. Stage candidates in `users/[id]/recursion-gate.md` (shared queue — Telegram, WeChat, operator, tests; `channel_key` marks source)
 3. **Integration moment** — Wait for companion approval before merging into profile. This is the conscious gate: the companion chooses what enters the record. Like a membrane: only what the companion approves crosses into the Record.
 4. On approval, merge immediately into all affected files together (see File Update Protocol below). **One gate:** When the user says "approve" or approves candidates, process right away — do not wait for a separate "process the review queue" command.
 
@@ -171,6 +175,8 @@ When pipeline candidates are approved, **merge** into all of these together:
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 
 **Post-merge PRP refresh:** After merging into SELF, EVIDENCE, or prompt, run the export script. If the output differs from the committed PRP file, commit the update. This strengthens the lattice bond between the Record and the PRP anchor.
+
+**Gated commit hook (optional):** If pre-commit is installed with `pre-commit install --hook-type commit-msg`, commits that stage `users/*/self.md`, `self-evidence.md`, `self-archive.md`, `merge-receipts.jsonl`, `bot/prompt.py`, or PRP `*-llm.txt` must include **`[gated-merge]`** in the commit message (or mention `process_approved_candidates`). That matches pipeline merges. Emergency bypass: `ALLOW_GATED_RECORD_EDIT=1`. See `scripts/check_gated_record_commit_msg.py`.
 
 **Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: companion` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Optionally add `scope:` or `constraint:` when the candidate implies a boundary (when the belief does not apply or would be invalid). Do not backfill old entries unless the companion requests it.
 

@@ -19,6 +19,10 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 
 **Invariant:** The companion is always the gate. OpenClaw can stage; it cannot merge into the Record.
 
+### Comprehension lock-in and portability
+
+Enterprise AI products increasingly aim to become the **system of record for organizational understanding** — synthesis across CRM, code, chat, and docs. That layer is hard to export; **comprehension lock-in** is switching cost from *understanding*, not just from data tables. Grace-Mar is the **companion-scale inverse**: the **Record** (git, human-approved merges) is canonical; **OpenClaw consumes exports** (USER.md, intent snapshot, PRP) — it does not own the fork. Refresh exports after pipeline merges so downstream workspaces stay aligned; if you ever leave OpenClaw, **SELF + EVIDENCE + PRP** remain. See [design-notes §2.5](design-notes.md#25-control-grid-vs-grace-mar--sovereignty-as-positioning), [implementable-insights §10](implementable-insights.md#10-comprehension-lock-in-vs-companion-owned-synthesis).
+
 ---
 
 ## 1. Record as Identity Source
@@ -94,6 +98,17 @@ Grace-Mar continuity (if users/grace-mar exists):
 ```
 
 This checklist supports human-in-the-loop oversight — analogous to orchestration patterns (e.g. a "chief of staff" agent checking subordinates). The companion or operator stays aware of staged work and recent evidence before OpenClaw runs.
+
+### Any harness startup (Cursor, Codex, Claude Code, new chat)
+
+New agent sessions start with **no memory** unless you feed the repo state. Run:
+
+```bash
+python scripts/harness_warmup.py -u grace-mar
+python scripts/harness_warmup.py -u grace-mar --tail 8
+```
+
+Paste the markdown block into the **first message** of the session. Output includes: **pending RECURSION-GATE** candidates (IDs + summaries; scans full gate file), **last ACT-*** from EVIDENCE (date + summary), **session-log tail** (narrative lines only — skips embedded ` ``` ` YAML blocks). `--compact` = one paragraph. See script docstring for full behavior.
 
 ### Oversight cadence (long sessions)
 

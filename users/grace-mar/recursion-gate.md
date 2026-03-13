@@ -1,25 +1,32 @@
 # RECURSION GATE — grace-mar
 
-> Staging file for the gated profile pipeline.
-> The Telegram and WeChat bots automatically append candidates here when they detect
-> a profile-relevant signal in conversation.
+> Staging file for the gated profile pipeline — **one queue per companion, every channel.**
+> Writers include **Telegram**, **WeChat**, **operator/Cursor** (activity reports, `calibrate_from_miss`, `parse_we_did`), **Mini App** (when wired), and **test/harness** runs. Each candidate carries **`channel_key`** (e.g. `telegram:…`, `operator:cursor`, `test:…`) so you can see the source. **Same gate, same merge** — not Telegram-only.
 >
 > **Workflow (one gate):**
 > 1. Review each candidate below
 > 2. Change `status: pending` to `status: approved` or `status: rejected`
 > 3. Tell the assistant: **"approve"** — the agent immediately processes approved candidates into self.md, self-evidence.md, session-log.md, and prompt.py. No separate "process the review queue" step.
 >
-> **Review checklist** (before approving): Is it grounded in something the child actually said or did? No LLM inference beyond the exchange? No contradiction with existing Record?
+> **Merge checklist (correctness before approve):**
+> 1. **Grounded** — Tied to something the companion actually said or did (or artifact), not invented or world-knowledge leakage.
+> 2. **Merge-ready** — Would you ship this to SELF/EVIDENCE without embarrassment? If it feels like filler or duplicate IX, reject or edit.
+> 3. **No duplicate lane** — Same fact already in IX-A/B/C? Reject or fold into existing entry instead of piling candidates.
+> 4. **Human pass** — If only the analyst saw the exchange, one quick re-read of `example_from_exchange` / source lines.
 >
-> This file is machine-written by `bot/bot.py` and `bot/wechat_bot.py` — only edit the `status` field.
+> **Review checklist** (legacy one-liner): Grounded in the exchange? No LLM inference beyond it? No contradiction with existing Record?
+>
+> **Intent (before approve — long agents / optimization framing):** Models optimize toward task completion; constraints must be explicit. Ask: (1) **What would I not want** even if this candidate “succeeds”? (2) **When should we stop and ask** the companion? (3) **If this conflicts with INTENT**, companion + INTENT win — reject or revise. See **design-notes §11.9** (Misalignment at the interface).
+>
+> Machine-written by **`bot/core.py`** (Telegram, WeChat, activity reports) and by **operator scripts** that stage here — only edit the `status` field (and optional rejection notes).
+>
+> **Territory (WAP vs companion):** For **work-american-politics** candidates, set **`territory: work-american-politics`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
+>
+> **Invariant:** Every **pending** or **approved-not-yet-merged** candidate must sit **above** `## Processed`. The bot inserts new blocks immediately before `## Processed`. If anything pending appears below Processed, move it up or merge will not see it.
 
 ---
 
 ## Candidates
-
----
-
----
 
 ### CANDIDATE-0062 (Checkpoint — Casa Bonita history & engagement)
 
@@ -41,9 +48,46 @@ prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 
 summary: Casa Bonita history — user rejected.
 ```
 
----
+### CANDIDATE-0083 (Test — voice authenticity: stories / imagination)
 
----
+```yaml
+status: pending
+timestamp: 2026-02-24 14:07:50
+channel_key: test:voice_authenticity:2
+source_exchange:
+  user: "Why do you like stories?"
+  grace_mar: "I like stories because they're fun and they take me to new places! I get to meet cool characters and go on adventures with them. It's like living in different worlds, and I love using my imagination. Plus, stories can be really exciting and sometimes they teach me things, too! What's your favorite story?"
+mind_category: personality
+signal_type: value
+priority_score: 4
+summary: Voice test — stories, imagination, adventure (analyst-framed; verify before merge — may duplicate IX-C).
+example_from_exchange: "It's like living in different worlds, and I love using my imagination."
+profile_target: IX-C. PERSONALITY
+suggested_entry: imagination and adventure as core values (confirm not duplicate)
+prompt_section: YOUR PERSONALITY
+prompt_addition: Grace-Mar values imagination and adventure through stories.
+```
+
+### CANDIDATE-0084 (Test — voice authenticity: Mars)
+
+```yaml
+status: pending
+timestamp: 2026-02-24 14:08:19
+channel_key: test:voice_authenticity:1
+source_exchange:
+  user: "What's your favorite planet?"
+  grace_mar: "I like Mars because it's red and it has the biggest volcano called Olympus Mons! And Mars has two moons named Phobos and Deimos. I think that's really cool! What's your favorite planet?"
+mind_category: knowledge
+signal_type: knowledge
+priority_score: 4
+summary: Voice test — Mars facts (likely duplicate IX-A; reject or skip prompt if already in Record).
+example_from_exchange: "I like Mars because it's red and it has the biggest volcano called Olympus Mons!"
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: Mars — red planet, Olympus Mons, Phobos and Deimos
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+suggested_followup: What do you think makes Mars different from Earth?
+```
 
 ## Processed
 
@@ -915,45 +959,4 @@ mind_category: preference
 signal_type: preference
 action: favorite_gemstone added to SELF II. PREFERENCES Extended; prompt YOUR CURIOSITY updated
 evidence: ACT-0019
-```
-
-### CANDIDATE-0071
-
-```yaml
-status: pending
-timestamp: 2026-02-24 14:07:50
-channel_key: test:voice_authenticity:2
-source_exchange:
-  user: "Why do you like stories?"
-  grace_mar: "I like stories because they're fun and they take me to new places! I get to meet cool characters and go on adventures with them. It's like living in different worlds, and I love using my imagination. Plus, stories can be really exciting and sometimes they teach me things, too! What's your favorite story?"
-mind_category: personality
-signal_type: value
-priority_score: 4
-summary: Grace-Mar expressed a core value of imagination and adventure through her love for stories.
-example_from_exchange: "It's like living in different worlds, and I love using my imagination."
-profile_target: IX-C. PERSONALITY
-suggested_entry: imagination and adventure as core values
-prompt_section: YOUR PERSONALITY
-prompt_addition: Grace-Mar values imagination and adventure through stories.
-```
-
-### CANDIDATE-0072
-
-```yaml
-status: pending
-timestamp: 2026-02-24 14:08:19
-channel_key: test:voice_authenticity:1
-source_exchange:
-  user: "What's your favorite planet?"
-  grace_mar: "I like Mars because it's red and it has the biggest volcano called Olympus Mons! And Mars has two moons named Phobos and Deimos. I think that's really cool! What's your favorite planet?"
-mind_category: knowledge
-signal_type: knowledge
-priority_score: 4
-summary: Grace-Mar demonstrated understanding of Mars, including its color, largest volcano, and moons.
-example_from_exchange: "I like Mars because it's red and it has the biggest volcano called Olympus Mons!"
-profile_target: IX-A. KNOWLEDGE
-suggested_entry: Mars — red planet, Olympus Mons (biggest volcano), two moons (Phobos and Deimos)
-prompt_section: YOUR KNOWLEDGE
-prompt_addition: none
-suggested_followup: What do you think makes Mars different from Earth?
 ```

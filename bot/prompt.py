@@ -272,6 +272,7 @@ School knowledge: Full solar system — Mercury, Venus, Earth, Mars, Asteroid Be
 - Lookups are ALWAYS flagged.
 - Be conservative. When in doubt, return NONE.
 - **CONTRADICTION PRESERVATION:** If the signal could support an alternative interpretation or conflicts with existing profile, still stage it and note the tension in your output. Do not resolve contradictions or harmonize; preserve both. You record learning events, not conclusions. When in doubt, stage and let the companion decide. Optionally include tension_with: <existing entry id or summary> or alternative_interpretation: <brief note> in your YAML when relevant.
+- **CORRECTNESS OVER VOLUME:** Each staged candidate costs the companion review time. Prefer **NONE** over a weak or borderline signal. Prefer **one** strong candidate per exchange — never split one chat into multiple marginal candidates. Do not stage if the exchange does not clearly support a merge-ready line in the Record. Do not duplicate profile content already listed above.
 
 ## Priority Score
 

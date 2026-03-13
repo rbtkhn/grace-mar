@@ -174,6 +174,17 @@ def validate_recursion_gate(user_dirs: list[Path]) -> list[str]:
         content = _safe_read(pr_path)
         if "## Candidates" not in content:
             continue
+        if "## Processed" in content:
+            after_processed = content.split("## Processed", 1)[1]
+            for m in re.finditer(
+                r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", after_processed, re.DOTALL
+            ):
+                blk = m.group(2)
+                if re.search(r"^status:\s*pending\s*$", blk, re.MULTILINE):
+                    errors.append(
+                        f"{pr_path.relative_to(REPO_ROOT)} {m.group(1)} pending below ## Processed "
+                        f"(merge only scans above Processed — move block up)"
+                    )
         candidates_section = content.split("## Processed")[0]
         for m in re.finditer(r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", candidates_section, re.DOTALL):
             cid, yaml_block = m.groups()

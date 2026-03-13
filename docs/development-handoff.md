@@ -2,7 +2,9 @@
 
 Use this file to resume development quickly in a new agent conversation.
 
-Last updated: 2026-03-09
+**Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-build-ai** (OpenClaw + companion gate); read `docs/skill-work/work-build-ai/README.md` then `docs/openclaw-integration.md`.
+
+Last updated: 2026-03-12
 
 ---
 
@@ -48,6 +50,56 @@ Last updated: 2026-03-09
 ---
 
 ## Recently Completed (High Level)
+
+### Territory lens / WAP vs companion (2026-03-12)
+- **`scripts/recursion_gate_territory.py`** — `territory: work-american-politics` or `channel_key: operator:wap` → WAP.
+- **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|wap|companion`.
+- **`process_approved_candidates`** — `--territory wap|companion|all` — batch merge only that slice; receipt must use same flag.
+
+### Recursion-gate multi-channel docs (2026-03-12)
+- **recursion-gate.md** header, **operator-brief**, **architecture** — explicit: one gate per user, all channels; `channel_key`.
+
+### Recursion-gate staging fix (2026-03-12)
+- **`bot/core.py` `_stage_candidate`** — Inserts new candidates **before** `## Processed` (was appending to EOF; those never merged).
+- **`users/grace-mar/recursion-gate.md`** — Pending test rows relocated + renumbered **0083/0084**; duplicate **0071** id removed; invariant note in header.
+- **`scripts/validate-integrity.py`** — Fails if any pending/approved CANDIDATE block appears **below** `## Processed`.
+
+### Gated commit hook (2026-03-12)
+- **`scripts/check_gated_record_commit_msg.py`** — commit-msg: staged Record/prompt/PRP paths require `[gated-merge]` or `process_approved_candidates` in message; `ALLOW_GATED_RECORD_EDIT=1` bypass.
+- **`.pre-commit-config.yaml`** — `pre-commit install --hook-type commit-msg`
+- **`process_approved_candidates --push`** — commit message includes `[gated-merge]`.
+
+### Harness convergence / §11.11 (2026-03-12)
+- **design-notes §11.11** — Decompose / parallelize / verify / iterate; Grace-Mar = gate + pipeline.
+- **implementable-insights §14** — Summary table + actions.
+
+### Rejection as skill / §11.10 (2026-03-12)
+- **design-notes §11.10** — Recognition, articulation, encoding; Grace-Mar = gate + calibrate_from_miss.
+- **implementable-insights §13** — Actions; summary table row.
+- **operator-brief** + **feedback-loops** — calibrate_from_miss linked to encoded taste.
+
+### Intent gap / §11.9 (2026-03-12)
+- **design-notes §11.9** — Optimization framing, three operator questions, Grace-Mar mapping.
+- **implementable-insights §12** — Actions + summary table row.
+- **recursion-gate.md** header — Intent block + link to §11.9.
+- **operator-brief** — Intent-before-approve bullet.
+
+### Operator + insights surfacing (2026-03-12)
+- **[harness-handoff.md](harness-handoff.md)** — one-page hybrid harness handoff (commits + warmup).
+- **operator-brief** — `report_lookup_sources.py` one-liner (§8 integration visibility).
+- **implementable-insights** — quick-reference table at top of doc.
+- **bootstrap** — report_lookup_sources in health commands; file map link to harness-handoff.
+
+### Harness lock-in (2026-03-12)
+- **ARCHITECTURE** — Harness lock-in paragraph; Grace-Mar = git + gated pipeline as portable memory.
+- **implementable-insights §1** — Extended source (Claude Code vs Codex); §11 full section.
+- **design-notes §2.6** — Workbench not wrench; model vs harness.
+
+### Comprehension lock-in positioning (2026-03-12)
+- **design-notes §2.5** — Enterprise synthesis / comprehension lock-in; Grace-Mar counter (portable, gate-kept Record + export).
+- **implementable-insights §10** — Actionable mapping; summary table row.
+- **work-build-ai README** — Invariant adjacent paragraph; principle 6 portable synthesis.
+- **openclaw-integration** — Overview subsection on comprehension lock-in and portability.
 
 ### Feedback loop fast wins (2026-03-09)
 - **Calibrate-on-miss** — `scripts/calibrate_from_miss.py`: stage candidate when Voice missed/was wrong. Usage: `--miss "…"` optional `--suggested "…"`.

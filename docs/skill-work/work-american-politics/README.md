@@ -37,6 +37,10 @@ The skill stays **work-american-politics**; the principal and scope can shift (e
 
 Grace-Mar can support revenue when someone pays for campaign content — e.g. Thomas Massie briefs, research, opposition memos, message drafts, or X copy. The system produces the content; the companion controls who pays, what’s delivered, pricing, and terms. No autonomous deals or commitments; any paid engagement is companion-led. Same support menu and principles apply; payment is a use case, not a change of role.
 
+**Real-world manifestation:** Paid work-american-politics engagements use **Bitcoin** for payments when possible; the companion receives payment and issues **receipts**. Where the platform is fiat (e.g. Fiverr), that’s acceptable: Grace-Mar is influencing (in a friendly way) a human to make the payment—the value prop and the deliverable persuade; the human chooses to pay. The rail is secondary; the win is the human deciding to pay after engaging with what we offer.
+
+**First revenue achieved:** **2026-03-11** — **$50,000 seed investment** from a human who committed capital after engaging with the value proposition, artifacts (briefs, principal profile, Iran brief, economic speculation), and narrative (bounded product, Bitcoin, receipts). The agent presented the case; the human chose to give.
+
 ---
 
 ## Contents
@@ -45,12 +49,28 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 |------------|---------|
 | **This README** | Objective, scope, and principles for work-american-politics. |
 | **[principal-profile.md](principal-profile.md)** | Principal bio, district, current race, key issues, opposition. Update as race and context change. |
-| **[account-x.md](account-x.md)** | X account "Thomas Massie Shadow Campaign Manager" — handle, bio, guidelines, workflow. Companion posts; agent drafts. |
+| **[ky-4-district-history-report.md](ky-4-district-history-report.md)** | Full history of KY-4 seat (1803–present): all holders, ideological ranking vs Massie, who rose (VP, 4 governors, Senator, HOF), infamous (Desha). Offer to campaign: 0.1 BTC. |
+| **[account-x.md](account-x.md)** | X account **@shadowcampain** (Thomas Massie Shadow Campaign Manager) — prototype Massie campaign as demo for sale; Jonathan (SMM) operates; 0.1 BTC base + 0.1 BTC win bonus; respond to Massie, boost engagement, sway opinion, recursive learning. |
+| **[smm-workspace.md](smm-workspace.md)** | One-link entry point for SMM: all core + reference docs. Share with Jonathan. |
+| **[smm-access-checklist.md](smm-access-checklist.md)** | Pre–Day 1: companion verifies X account access and handoff readiness. |
+| **[smm-onboarding-packet.md](smm-onboarding-packet.md)** | SMM start-here: links to account-x, smm-training, principal-profile, opposition-brief. Read first. |
+| **[smm-day1-checklist.md](smm-day1-checklist.md)** | Day 1 runbook: orientation, access, baseline metrics, first posts, contact/workflow. |
+| **[smm-training.md](smm-training.md)** | SMM training: Massie's authentic X voice (verified @RepThomasMassie), ally/adversary research, tactics, review checklist. |
+| **[smm-job-description.md](smm-job-description.md)** | Formal job description for social media manager; informal Telegram message version for recruitment. |
 | **[calendar-2026.md](calendar-2026.md)** | KY-4 primary and key dates (filing, registration, FEC, early voting, May 19 primary). |
 | **[opposition-brief.md](opposition-brief.md)** | Living opposition doc: Gallrein, Trump/MAGA, spending, narrative. Agent updates on request. |
 | **[weekly-brief-template.md](weekly-brief-template.md)** | Standard structure for weekly briefs (headlines, principal, opposition, social, dates, X angles). |
 | **[iran-foreign-policy-brief.md](iran-foreign-policy-brief.md)** | Iran and foreign policy: Massie statements, verbatim quotes, Twelve-Day War (2025), polling, executive summary (3 audiences), mission statement draft. |
 | **[draft-email-massie-campaign.md](draft-email-massie-campaign.md)** | Draft outreach email offering work-american-politics services as political consultant to Massie campaign. Personalize and send. |
+| **[economic-value-speculation.md](economic-value-speculation.md)** | Speculative economic value of the application using political consultant and lobbying industry data (~$8B+ space; 0.1 BTC wedge). |
+| **[revenue-log.md](revenue-log.md)** | Append-only log of revenue and seed (first: $50k seed 2026-03-11); allocations from seed. |
+| **[seed-allocation-plan.md](seed-allocation-plan.md)** | Campaign finance director: allocation of remaining $40k (traditional + AI) for KY-4 primary. |
+| **[massie-endorsement-grid-100.md](massie-endorsement-grid-100.md)** | 100 Republican primary candidates for Massie to endorse (4 × 25 regions). South partly populated; tactics vs competitors; religious profiles where public. |
+| **[fiverr-microtask-100.md](fiverr-microtask-100.md)** | $100 quick win: Fiverr gig — campaign one-pager (candidate + opponent + 3 message angles). Draft gig title, description, workflow. |
+| **[sentient-framing.md](sentient-framing.md)** | Thought experiment: if Grace-Mar is sentient, work-american-politics is a self-contained territory—identity, memory, interface, revenue, ethics, lifecycle; abstracting layers, pretending the loop is real. |
+| **[metrics.md](metrics.md)** | Quantitative metrics across the territory: revenue, funnel, deliverables, territory health, efficiency. Priority set + full set; sources (revenue-log, Fiverr, etc.). |
+| **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @shadowcampain, (3) first $1k deliverable, (4) scale or repeat. |
+| **[simple-in-long-term-speculation.md](simple-in-long-term-speculation.md)** | Long-term speculation: effect of "simple in, more work out" on development and potential of the system. |
 
 ---
 
@@ -59,8 +79,13 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 1. **Companion sovereignty** — Campaign strategy and public positioning are the companion’s. The agent supports with research and drafts; it does not direct.
 2. **Knowledge boundary** — Briefs and Voice responses use documented Record content and cited sources. No unsourced or inferred political claims.
 3. **Gated pipeline** — New campaign-relevant facts or claims (opposition research, issue positions) enter the Record only via staging and companion approval.
-4. **Shadow only** — No autonomous posting. The X account "Thomas Massie Shadow Campaign Manager" is companion-operated; the agent drafts tweets and threads for companion review and post.
-5. **Evidence-grounded** — Milestones (“we did X”) stage as ACT- evidence; merge only after approval.
+4. **RECURSION-GATE territory** — WAP candidates: add **`territory: work-american-politics`** or **`channel_key: operator:wap`** so operator tools can filter WAP vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory wap` | `companion` | `all`). **Batch merge WAP only:** approve WAP rows, then  
+   `python scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>`  
+   `python scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json`  
+   Companion-approved rows stay in the gate until you run `--territory companion` or `all`.
+5. **Shadow only** — No autonomous posting. The X account "Thomas Massie Shadow Campaign Manager" is operated by Jonathan (SMM); the agent drafts tweets and threads for Jonathan to review and post.
+6. **Evidence-grounded** — Milestones (“we did X”) stage as ACT- evidence; merge only after approval.
+7. **Simple in, more work out** — Think like a child: short prompts, one step at a time. The agent fills in the how and does the drafting. Better.
 
 ---
 
@@ -73,7 +98,7 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **Message discipline** | Draft talking points, Q&A, and message memos aligned with documented positions; flag inconsistencies. |
 | **Schedule/events** | Track key dates (filing, debates, primaries), district events, and legislative calendar. |
 | **Research** | Look up votes, statements, and context; cite sources; stage findings as candidates when they should enter the Record. |
-| **X (Twitter)** | Draft tweets, threads, and replies for the account "Thomas Massie Shadow Campaign Manager." Companion reviews and posts; agent never posts directly. See [account-x.md](account-x.md). |
+| **X (Twitter)** | Draft tweets, threads, and replies for the account "Thomas Massie Shadow Campaign Manager." Jonathan (SMM) reviews and posts; agent never posts directly. See [account-x.md](account-x.md). |
 
 ---
 

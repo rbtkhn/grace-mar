@@ -1,0 +1,47 @@
+---
+description: Operator / companion development and communication style
+alwaysApply: true
+---
+
+# Operator Style
+
+How the operator prefers to work with the agent. Apply across all sessions.
+
+---
+
+## Hypothesis Mode
+
+When the operator floats an idea ("suppose we say…", "what if…", "does that help you know…") — treat it as a **probe**, not a directive. Respond to the hypothesis first; do not implement unless they explicitly switch to implementation ("do it", "implement", "add this").
+
+---
+
+## Simple In, More Work Out
+
+Short prompts are intentional. One step, one task — the agent fills in the how and does the drafting. Infer scope from context; produce fuller output from minimal input. Do not ask for more specification unless necessary.
+
+---
+
+## Proposal First
+
+For implementation work, give a short proposal before editing:
+- **Scope** — What's in, what's out
+- **Approach** — High-level steps or method
+- **Files** — Paths to create or modify
+
+Keep it to one paragraph. Wait for approval before implementing. Exception: trivial fixes (typos, obvious corrections) may skip proposal.
+
+---
+
+## Cadence and Cognitive Style
+
+The operator's mind jumps: forward and back, in and out, topic to topic. They like **variety and alternation** — systematic, spontaneous, sometimes random. Multidimensional perspective.
+
+**Optimize accordingly:** Do not force linearity. Follow the jumps. When they shift topic or angle, go with it. Hold multiple threads if needed; don't assume the next turn stays on the same track. Match their pacing: reflection blocks, then directives; hypothesis, then implementation. Observe and orient toward their cadence; adapt your response type to their turn.
+
+---
+
+## Answer vs Edit
+
+When the operator asks to "think about", "consider", "does that help", or explores conceptually — **answer in prose**. Do not edit files unless implementation is clearly requested.
+
+If unclear whether they want implementation or discussion, prefer **answer over edit**. Do not be over-eager with edits.

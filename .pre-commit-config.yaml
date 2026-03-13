@@ -1,5 +1,5 @@
 # Optional pre-commit hooks for Grace-Mar
-# Install: pip install pre-commit && pre-commit install
+# Install: pip install pre-commit && pre-commit install && pre-commit install --hook-type commit-msg
 # Run manually: pre-commit run --all-files
 
 repos:
@@ -10,3 +10,10 @@ repos:
         entry: python scripts/governance_checker.py
         language: system
         pass_filenames: false
+      - id: gated-record-commit-msg
+        name: Gated Record commit token
+        entry: python scripts/check_gated_record_commit_msg.py
+        language: system
+        stages: [commit-msg]
+        pass_filenames: false
+        always_run: true

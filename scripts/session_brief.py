@@ -4,14 +4,14 @@ Session briefing for Grace-Mar.
 
 Reads EVIDENCE, RECURSION-GATE, SELF and produces a markdown brief:
 - Last N activity entries
-- Pending candidate count
+- Pending candidate count (full gate file)
 - Suggested wisdom questions (from WISDOM-QUESTIONS, tuned to IX-B)
 
 Run before a tutoring session or via cron. Output to stdout.
 
 Usage:
-    python scripts/session_brief.py [users_dir]
-    python scripts/session_brief.py users/grace-mar
+    python scripts/session_brief.py -u grace-mar
+    python scripts/session_brief.py -u grace-mar --minimal
 """
 
 import re
@@ -22,6 +22,10 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from recursion_gate_territory import pending_by_territory
 STALE_PENDING_DAYS = 3
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
@@ -65,22 +69,39 @@ def _last_activities(evidence_content: str, n: int) -> list[dict]:
     return entries[-n:] if len(entries) > n else entries
 
 
-def _pending_count(pr_content: str) -> int:
-    """Count pending candidates in RECURSION-GATE."""
-    if "## Candidates" not in pr_content or "## Processed" not in pr_content:
-        return 0
-    candidates = pr_content.split("## Processed")[0]
-    return len(re.findall(r"### CANDIDATE-\d+.*?status:\s*pending", candidates, re.DOTALL))
+def _pending_candidate_ids(pr_content: str, territory: str = "all") -> list[str]:
+    """All pending IDs — full file. territory: all | wap | companion."""
+    wap, companion = pending_by_territory(pr_content)
+    if territory == "wap":
+        return [r["id"] for r in wap]
+    if territory == "companion":
+        return [r["id"] for r in companion]
+    return [r["id"] for r in wap + companion]
 
 
-def _pending_candidate_ids(pr_content: str) -> list[str]:
-    if "## Candidates" not in pr_content:
-        return []
-    candidates = pr_content.split("## Processed")[0]
-    ids = []
-    for m in re.finditer(r"### (CANDIDATE-\d+).*?status:\s*pending", candidates, re.DOTALL):
-        ids.append(m.group(1))
-    return ids
+def _pending_count_full(pr_content: str, territory: str = "all") -> int:
+    return len(_pending_candidate_ids(pr_content, territory))
+
+
+def _last_act_oneliner(evidence_content: str) -> str:
+    if "## V. ACTIVITY LOG" not in evidence_content:
+        return "(none)"
+    start = evidence_content.find("## V. ACTIVITY LOG")
+    end = evidence_content.find("\n## VI.", start)
+    block = evidence_content[start:end] if end > start else evidence_content[start:]
+    matches = list(re.finditer(r"\n  - id: (ACT-\d+)", block))
+    if not matches:
+        return "(none)"
+    last = matches[-1]
+    act_id = last.group(1)
+    chunk_end = last.end()
+    nxt = re.search(r"\n  - id: ", block[chunk_end:])
+    chunk = block[last.start() + 1 : chunk_end + nxt.start()] if nxt else block[last.start() + 1 : last.start() + 2000]
+    date_m = re.search(r"date:\s*(\S+)", chunk)
+    summary_m = re.search(r'summary:\s*"([^"]*)"', chunk)
+    label = (summary_m.group(1) if summary_m else act_id)[:90]
+    d = date_m.group(1) if date_m else "?"
+    return f"{act_id} ({d}) — {label}"
 
 
 def _load_pipeline_events(user_dir: Path) -> list[dict]:
@@ -102,7 +123,7 @@ def _load_pipeline_events(user_dir: Path) -> list[dict]:
 
 
 def _oldest_pending_age_days(pr_content: str, events: list[dict]) -> int | None:
-    pending_ids = set(_pending_candidate_ids(pr_content))
+    pending_ids = set(_pending_candidate_ids(pr_content, "all"))
     if not pending_ids:
         return None
     oldest: datetime | None = None
@@ -145,7 +166,7 @@ def build_operator_reminder(
     stale_days: int,
 ) -> str:
     pr_content = _read(user_dir / "recursion-gate.md")
-    pending_count = _pending_count(pr_content)
+    pending_count = _pending_count_full(pr_content)
     events = _load_pipeline_events(user_dir)
     oldest_days = _oldest_pending_age_days(pr_content, events)
     should_notify = pending_count >= pending_threshold or (oldest_days is not None and oldest_days >= stale_days)
@@ -276,6 +297,17 @@ def main() -> int:
     parser.add_argument("--reminder", action="store_true", help="Emit operator reminder text (if thresholds exceeded)")
     parser.add_argument("--pending-threshold", type=int, default=5, help="Reminder trigger: pending count")
     parser.add_argument("--stale-days", type=int, default=7, help="Reminder trigger: oldest pending age days")
+    parser.add_argument(
+        "--minimal",
+        action="store_true",
+        help="One screen: pending count + IDs + last ACT + next action",
+    )
+    parser.add_argument(
+        "--territory",
+        choices=("all", "wap", "companion"),
+        default="all",
+        help="Pending lens: wap | companion | all (default). Same as operator_blocker_report.",
+    )
     args = parser.parse_args()
 
     users_dir = Path(args.users_dir)
@@ -300,6 +332,40 @@ def main() -> int:
             print(text)
         return 0
 
+    if args.minimal:
+        pr_content = _read(user_dir / "recursion-gate.md")
+        evidence_content = _read(user_dir / "self-evidence.md")
+        wap_rows, comp_rows = pending_by_territory(pr_content)
+        n = _pending_count_full(pr_content, args.territory)
+        ids = _pending_candidate_ids(pr_content, args.territory)
+        last_act = _last_act_oneliner(evidence_content)
+        lines = [
+            "# Session brief (minimal)",
+            "",
+            f"**Territory lens:** {args.territory}",
+            f"**Pending (this lens):** {n} — {', '.join(ids) if ids else 'none'}",
+        ]
+        if args.territory == "all":
+            lines.append(
+                f"**Split:** WAP {len(wap_rows)} · Companion {len(comp_rows)} — use `--territory wap` or `companion`"
+            )
+        lines.extend(
+            [
+                "",
+                f"**Last activity:** {last_act}",
+                "",
+                "**Next action:** "
+                + (
+                    "/review in Telegram → approve or reject each pending."
+                    if n
+                    else "Nothing in gate (this lens) — send \"we did X\" when something worth recording happens."
+                ),
+                "",
+            ]
+        )
+        print("\n".join(lines))
+        return 0
+
     evidence_content = _read(user_dir / "self-evidence.md")
     pr_content = _read(user_dir / "recursion-gate.md")
     self_content = _read(user_dir / "self.md")
@@ -307,7 +373,8 @@ def main() -> int:
     library_content = _read(user_dir / LIBRARY_PATH_REL)
 
     activities = _last_activities(evidence_content, LAST_N_ACTIVITIES)
-    pending_count = _pending_count(pr_content)
+    wap_rows, comp_rows = pending_by_territory(pr_content)
+    pending_count = _pending_count_full(pr_content, args.territory)
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
     from_record = _from_the_record_topics(self_content)
@@ -335,7 +402,11 @@ def main() -> int:
         no_activity_nudge = "\n\n**Ritual nudge:** When something worth recording happens, send \"we did X\" in the bot, then /review to approve what gets added."
 
     # Build brief
-    pending_section = f"**{pending_count}** candidate(s) awaiting review. Type `/review` in Telegram to see them."
+    pending_section = (
+        f"**Territory lens:** `{args.territory}` — **{pending_count}** pending (this lens). "
+        f"WAP **{len(wap_rows)}** · Companion **{len(comp_rows)}**. "
+        f"`--territory wap` = work-american-politics only. Type `/review` in Telegram to see them."
+    )
     if pending_stale:
         pending_section += "\n\nYou have candidates waiting — consider bringing them into the Record (type /review)."
     if no_activity_nudge:

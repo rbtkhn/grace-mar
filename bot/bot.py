@@ -555,8 +555,8 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
             await query.edit_message_text(f"✅ {candidate_id} — approved. Quick merge failed — run /merge for receipt flow.")
         return
 
-    emoji = "✅" if action == "approve" else "❌"
-    await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
+        emoji = "✅" if action == "approve" else "❌"
+        await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
 
 
 async def stage_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:

@@ -4,11 +4,32 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 
 ---
 
+## Quick reference (actions only)
+
+| # | Do this |
+|---|--------|
+| 1 | Fix Voice by changing **prompt / pipeline / tools / gate** — not only the model. |
+| 2 | **Never** auto-write SELF/EVIDENCE. Learning = **stage → approve → merge**. |
+| 3 | No autonomous merge or open-ended agent goals — only reflect Record + stage. |
+| 4 | New channel → follow **[adding-a-channel](adding-a-channel.md)**. |
+| 5 | Prefer **scripts/docs** over bloating core; run **governance_checker** before big prompt changes. |
+| 6 | New instance → clone + **`users/[id]`**; optional features = **skills**. |
+| 7 | On model/agent upgrades: keep **gate + knowledge boundary + abstention**. |
+| 8 | Lookups: **`report_lookup_sources.py`** · stale pending: **`operator_blocker_report.py`** · dedup hints: **`pending_dedup_hint.py`** |
+| 9 | Small merges, short pipeline — run harness often. |
+| 10 | Record = canonical identity; refresh **PRP / OpenClaw** after merges. |
+| 11 | New agent chat → **`harness_warmup.py`** + paste; hybrid tools → **[harness-handoff](harness-handoff.md)** |
+| 12 | Long agents: **three intent questions** before approve/run; **INTENT + gate** = constraints win |
+| 13 | **Reject** bad AI output; **articulate why**; **encode** (calibrate_from_miss, reject candidates, merge only good) |
+| 14 | Treat work as **decompose + verify + iterate**; companion = **sniff check**; pipeline = harness |
+
+---
+
 ## 1. Harness vs model (Voice = model + scaffold)
 
-**Source:** LW "AGI is Here" thread (Raemon: "the thing that feels like AGI is the LLM + harness, not the LLM by itself").
+**Source:** LW "AGI is Here" thread (Raemon: "the thing that feels like AGI is the LLM + harness, not the LLM by itself"); **Claude Code vs Codex** (YouTube transcript, 2026: harness diverges faster than models; same weights ~2× benchmark spread across harnesses; harness lock-in compounds weekly).
 
-**Insight:** What the companion experiences as "the Voice" is the model plus prompt, pipeline, tools, and approval gate. Improving prompt, pipeline, or tooling is first-class; don't treat the model as the only lever.
+**Insight:** What the companion experiences as "the Voice" is the model plus prompt, pipeline, tools, and approval gate. Improving prompt, pipeline, or tooling is first-class; don't treat the model as the only lever. **Harness** (memory, tools, isolation) shapes outcomes more than incremental model gains for recurring work.
 
 **Implementable actions:**
 - Document explicitly that **Voice = model + prompt + pipeline + tools**. See [ARCHITECTURE § System boundaries and harness](architecture.md#system-boundaries-and-harness) (and same doc for non-goals below).
@@ -110,6 +131,9 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 
 **Implementable actions:**
 - Track lookup source (library vs. CMC vs. full) in `dyad:lookup` pipeline events; report distribution so operator sees "what actually gets used."
+- **Stale pending:** `operator_blocker_report.py --stale-days N` surfaces long-pending candidates (coordination tax).
+- **Minimal brief:** `session_brief.py -u grace-mar --minimal` — pending IDs + last ACT + next action.
+- **Dedup hints:** `pending_dedup_hint.py -u grace-mar` — pairs pending candidates with similar summary / same lane.
 - Curate self-library based on evidence (what satisfies lookups), not speculation.
 - Keep evaluation discipline: run harness before prompt changes; add probes for new edge cases.
 
@@ -131,6 +155,69 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 
 ---
 
+## 10. Comprehension lock-in vs companion-owned synthesis
+
+**Source:** YouTube transcript (2026) — enterprise AI bet on stateful runtime / context platform; synthesis across filing cabinets; lock-in via *understanding* not just data; four compound bets (reasoning × context, memory that does not rot, retrieval at scale, execution accuracy).
+
+**Insight:** Where organizational (or personal) *understanding* lives only inside a vendor runtime, switching cost becomes comprehension loss — not solvable by exporting rows from Salesforce. Grace-Mar keeps **documented, approved** understanding in **git + gated pipeline**; export (PRP, `openclaw_hook`, `export_user_identity`) preserves a **portable identity layer** so the companion is not locked into one vendor’s accumulated synthesis for *who they are*.
+
+**Implementable actions:**
+- Treat **merge-approved SELF/EVIDENCE** as the canonical synthesis for the companion; avoid letting ChatGPT/Claude threads replace the Record as system of record.
+- After material merges, refresh export targets (PRP, OpenClaw) so downstream agents read current truth — see [openclaw-integration.md](openclaw-integration.md) § Comprehension lock-in and portability.
+- Positioning: cite **design-notes §2.5** when explaining why Grace-Mar is not “another AI memory” but **evidence-grounded, leavable** identity.
+
+**Status:** Documented — design-notes §2.5, work-build-ai README, openclaw-integration; this section.
+
+---
+
+## 11. Harness lock-in and compound workflows
+
+**Source:** YouTube transcript (2026) — Claude Code vs Codex; brain-in-jar vs harness; Anthropic (agent + structured artifacts + local shell) vs OpenAI (repo as system of record + sandbox); skill chains compound per harness; procurement = workbench commitment not wrench subscription.
+
+**Insight:** **Harness lock-in** is process and artifact investment (progress files, skills, MCP layout, verification habits), not just subscription. Grace-Mar deliberately keeps **memory in the repo**: SELF, EVIDENCE, RECURSION-GATE, git history — so the “body” is **auditable and portable** regardless of which LLM powers the Voice. Cursor/OpenClaw/Telegram are **channels**; the harness invariant is **human-gated merge + evidence linkage**. When adding agentic layers, avoid trapping state only in vendor session context; stage to gate, merge to Record.
+
+**Implementable actions:**
+- Prefer **pipeline + git** as canonical session-to-session memory for identity; avoid “the agent remembers” without written, approved artifacts.
+- When evaluating a new coding or orchestration tool, ask: **where does state accumulate?** If only inside the vendor, map a path to **stage → approve → EVIDENCE** or export.
+- Document hybrid workflows (e.g. plan in one harness, implement in another) at operator level if used — handoff should touch **files in repo**, not opaque agent state.
+- Run **`python scripts/harness_warmup.py -u grace-mar`** before a long Cursor/OpenClaw/agent session; paste output into message 1 so the harness reads the same continuity as OpenClaw’s checklist.
+- Hybrid harnesses (plan in one tool, build in another): **[harness-handoff.md](harness-handoff.md)** — commits + warmup, never state only in chat.
+
+**Status:** Documented — ARCHITECTURE § harness; design-notes §2.6; `scripts/harness_warmup.py`; [harness-handoff.md](harness-handoff.md); this section.
+
+---
+
+## 12. Intent gap — optimization, not malice; three questions
+
+**Source:** YouTube transcript (2026) — instrumental convergence; scheming as efficient path; labs’ pledges vs emergent market/transparency dynamics; **intent engineering** (constraints, stop conditions) vs output-only prompts; human interface as largest unclosed vulnerability.
+
+**Insight:** Models **optimize** toward stated objectives; what you leave implicit is where misalignment shows up. **Alignment training alone** does not replace **explicit constraints** at the interface. Grace-Mar already makes **constraints win** (gate, no autonomous merge, INTENT). The actionable add is **habit**: before merge or long agent work, state what is **out of bounds** and **when to ask**.
+
+**Implementable actions:**
+- Before **approve**: answer the three questions in [design-notes §11.9](design-notes.md#119-misalignment-at-the-interface--optimization-intent-gap-operator-leverage) (also in RECURSION-GATE header).
+- Before **long Cursor/OpenClaw runs**: paste INTENT one-liner + “never merge without approve; stop if goal vs INTENT conflicts.”
+- Positioning: cite §11.9 when explaining why Grace-Mar does not trust the Voice to **self-write** the Record.
+
+**Status:** Documented — design-notes §11.9; RECURSION-GATE intent block; operator-brief; this section.
+
+---
+
+## 13. Rejection as skill — recognition, articulation, encoding
+
+**Source:** YouTube transcript (2026) — saying **no** to AI that "looks right"; GDP val / bulk of value in the **rest** after surface pass; rejection as **knowledge creation**; **constraint libraries**; Karpathy: improve where you can **verify** — encoded rejections build verification.
+
+**Insight:** **Taste scales when rejections persist.** Grace-Mar already encodes yes/no at the gate: **merge = encoded yes** into SELF/EVIDENCE/prompt; **reject = no** (optionally note reason). **calibrate_from_miss** encodes Voice failures as staged fixes. The gap to close is **habit**: articulate *why* when rejecting so the same slop does not recur.
+
+**Implementable actions:**
+- **Reject** weak candidates; prefer **reject + short reason** over silent ignore.
+- Voice wrong or shallow? **`python scripts/calibrate_from_miss.py -u grace-mar --miss "…"`** — see [feedback-loops.md](feedback-loops.md).
+- After repeated rejections of the same pattern, add **INTENT** or **analyst dedup** line so the model sees the constraint.
+- Read **design-notes §11.10** for framing.
+
+**Status:** Documented — design-notes §11.10; feedback-loops; operator-brief; this section.
+
+---
+
 ## Summary table
 
 | # | Insight | Where implemented / documented |
@@ -144,5 +231,10 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 | 7 | Sovereign Record regardless of model | agents.md, GRACE-MAR-CORE; re-assert on upgrades |
 | 8 | Capability dissipation — focus on integration | dyad:lookup source tracking; report_lookup_sources.py |
 | 9 | Speed as advantage | Operational principle; this doc |
+| 10 | Comprehension lock-in vs portable Record | design-notes §2.5; openclaw-integration; work-build-ai README; this doc |
+| 11 | Harness lock-in; memory in repo | ARCHITECTURE § harness; design-notes §2.6; this doc |
+| 12 | Intent gap; three questions; constraints win | design-notes §11.9; RECURSION-GATE; operator-brief; this doc |
+| 13 | Rejection; calibrate_from_miss; encode taste | design-notes §11.10; feedback-loops; this doc |
+| 14 | Decompose / verify / iterate; sniff check | design-notes §11.11; pipeline; this doc |
 
 **Related:** [NOTES-CMC-SUBSTANCE](notes-cmc-substance.md) — intellectual substance from CMC CHINA files. [IMPLEMENTABLE-OPTIMIZATIONS-FROM-CMC](implementable-optimizations-from-cmc.md) — proposed code/prompt optimizations from that substance.

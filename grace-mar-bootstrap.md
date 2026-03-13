@@ -2,9 +2,16 @@
 
 Session bootstrap for continuing Grace-Mar in a new agent conversation.
 
-**Session focus:**
-- If **OpenClaw-focused**, read §1 then **docs/openclaw-integration.md** and skim `integrations/openclaw_hook.py`, `integrations/openclaw_stage.py`, `scripts/export_user_identity.py`. Use §5 OpenClaw commands and §6 OpenClaw file map below.
-- If **extension-focused**, read §1 then **extension/readme.md** and skim `extension/` (background.js, popup.js, popup.html, manifest.json). Use §5 Extension commands and §6 Extension file map below.
+**Default session focus — work-build-ai (continue here):**
+1. Read §1 (first-run checklist).
+2. Read **`docs/skill-work/work-build-ai/README.md`** — objective, companion gate invariant, principles.
+3. Read **`docs/openclaw-integration.md`** — export, session continuity, inbound staging, staging automation.
+4. Skim **`integrations/openclaw_hook.py`**, **`integrations/openclaw_stage.py`**, **`scripts/export_user_identity.py`**.
+5. Optional: **`docs/skill-work/work-build-ai/economic-benchmarks.md`**, **`research-moonshots-237.md`**.
+6. Use §5 OpenClaw commands and §6 work-build-ai / OpenClaw file map below.
+
+**Other session focus:**
+- If **extension-focused** (not work-build-ai), read §1 then **extension/readme.md** and skim `extension/`. Use §5 Extension commands and §6 Extension file map below.
 
 ---
 
@@ -15,9 +22,10 @@ Session bootstrap for continuing Grace-Mar in a new agent conversation.
 3. Read `docs/identity-fork-protocol.md` (canonical protocol contract).
 4. Run `git status` and note uncommitted work.
 5. Read `docs/development-handoff.md` (current state and next tasks).
-6. **Companion-self audit** — Read `docs/audit-companion-self.md` (concept alignment: companion self, self-* taxonomy, tricameral). Optionally read `docs/audit-grace-mar-vs-companion-self-template.md` (instance vs template repo). Note any drift; if material changes have been made since the audit date, re-run or update the audit.
+6. **work-build-ai** — Read `docs/skill-work/work-build-ai/README.md`; then `docs/openclaw-integration.md` if continuing integration work.
+7. **Companion-self audit** — Read `docs/audit-companion-self.md` (concept alignment: companion self, self-* taxonomy, tricameral). Optionally read `docs/audit-grace-mar-vs-companion-self-template.md` (instance vs template repo). Note any drift; if material changes have been made since the audit date, re-run or update the audit.
 
-If working on companion profile operations, also read:
+If working on companion profile operations (not work-build-ai), also read:
 - `users/grace-mar/recursion-gate.md`
 - `users/grace-mar/self.md`
 - `users/grace-mar/self-evidence.md`
@@ -49,17 +57,21 @@ If working on companion profile operations, also read:
 - OpenClaw hardening: constitution propagation in exports + inbound advisory constitutional checks.
 - Curiosity probe workflow used to stage/merge IX-B growth signals.
 
+### work-build-ai (active continuation)
+- **Territory:** `docs/skill-work/work-build-ai/` — Record ↔ OpenClaw; stage-only handback; companion gate invariant (never control-grid).
+- **Next:** See `docs/development-handoff.md`; extend hooks, staging automation, benchmarks, or Moonshots takeaways as handoff specifies.
+
 ---
 
 ## 4) New Conversation Menu
 
 When loaded in a fresh session, offer these options:
 
-1. **Run session** (chat-first companion interaction; no auto-merge)
-2. **Pipeline operations** (stage/review/apply approved candidates)
-3. **Intent governance** (audit/review/debate packet workflows)
-4. **Browser extension** (transcript handback, Save to Record, popup/context menu, handback server)
-5. **Integrations** (OpenClaw, handback server config)
+1. **work-build-ai** (default — OpenClaw integration, export, staging, session continuity; read work-build-ai README + openclaw-integration)
+2. **Run session** (chat-first companion interaction; no auto-merge)
+3. **Pipeline operations** (stage/review/apply approved candidates)
+4. **Intent governance** (audit/review/debate packet workflows)
+5. **Browser extension** (transcript handback, Save to Record, popup/context menu, handback server)
 6. **Business docs** (plan/prospectus/white-paper alignment)
 7. **Other** (companion-defined task)
 
@@ -74,12 +86,21 @@ Wait for companion selection before large changes.
 git status
 python3 scripts/metrics.py
 python3 scripts/session_brief.py --user grace-mar
+python3 scripts/session_brief.py --user grace-mar --minimal
+python3 scripts/session_brief.py -u grace-mar --minimal --territory wap   # WAP pending only
+python3 scripts/pending_dedup_hint.py -u grace-mar
+python3 scripts/report_lookup_sources.py -u grace-mar   # dyad:lookup distribution (library vs full)
+python3 scripts/operator_blocker_report.py -u grace-mar --stale-days 3   # WAP + companion sections by default
+python3 scripts/operator_blocker_report.py -u grace-mar --territory wap  # WAP-only pending
 ```
 
 ### Pipeline merge (receipt-based)
 ```bash
 python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by <name>
 python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by <name> --receipt /tmp/receipt.json
+# WAP-only batch (same --territory for generate + apply):
+python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>
+python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json
 ```
 
 ### Intent and integrity
@@ -87,6 +108,14 @@ python3 scripts/process_approved_candidates.py --user grace-mar --apply --approv
 python3 scripts/export_intent_snapshot.py --user grace-mar
 python3 scripts/validate-integrity.py --user grace-mar --json
 python3 scripts/governance_checker.py
+pip install pre-commit && pre-commit install && pre-commit install --hook-type commit-msg   # optional: block Record edits without [gated-merge]
+```
+
+### Harness warmup (any agent session — paste into first message)
+```bash
+python3 scripts/harness_warmup.py -u grace-mar
+python3 scripts/harness_warmup.py -u grace-mar --territory wap   # WAP pending only in paste
+python3 scripts/harness_warmup.py -u grace-mar --compact
 ```
 
 ### OpenClaw
@@ -128,16 +157,24 @@ python3 scripts/handback_server.py
 - `docs/business-roadmap.md` — strategic priorities and metrics.
 - `docs/development-handoff.md` — latest engineering handoff.
 - `docs/audit-companion-self.md` — companion-self concept alignment (run as part of bootstrap; re-run after concept/taxonomy changes).
+- `docs/design-notes.md` §11.9 — intent gap, three questions before approve / long agent runs.
+- `docs/design-notes.md` §11.10 — rejection as skill; encode taste via gate + calibrate_from_miss.
+- `docs/design-notes.md` §11.11 — harness convergence (verify loop; labs’ shared pattern).
 - `docs/audit-grace-mar-vs-companion-self-template.md` — instance vs template ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)); re-run after structure/protocol changes.
 - `users/grace-mar/*` — active instance Record files.
 
-**OpenClaw (when focus is OpenClaw integration):**
+**Harness hybrid (plan in one tool, build in another):**
+- `docs/harness-handoff.md` — handoff = commits + warmup paste; never state only in chat.
+
+**work-build-ai / OpenClaw (default continuation):**
+- `docs/skill-work/work-build-ai/README.md` — territory objective; companion gate invariant; principles; quick ref commands.
+- `docs/skill-work/work-build-ai/economic-benchmarks.md` — cost/value/gate health metrics.
+- `docs/skill-work/work-build-ai/research-moonshots-237.md` — identity, memory, hierarchy; actionable takeaways.
 - `docs/openclaw-integration.md` — canonical integration guide (export, session continuity, inbound staging, staging automation).
-- `integrations/openclaw_hook.py` — outbound export (Record → user.md / SOUL.md); supports md+manifest, json+md; emits pipeline event.
+- `integrations/openclaw_hook.py` — outbound export (Record → user.md / SOUL.md); md+manifest, json+md; emits pipeline event.
 - `integrations/openclaw_stage.py` — inbound staging (OpenClaw output → /stage); advisory constitutional check; stage-only, never merge.
 - `scripts/export_user_identity.py` — identity-only export for user.md / SOUL.md.
 - `integrations/export_hook.py` — shared export logic; openclaw target.
-- `docs/skill-work/work-build-ai/` — work-build-ai docs (economic-benchmarks, sovereignty invariant).
 - Session continuity: read `users/grace-mar/session-log.md`, `recursion-gate.md`, last EVIDENCE before OpenClaw sessions.
 
 **Extension (when focus is browser extension):**

@@ -30,6 +30,8 @@ The cognitive fork separates **who the companion is** from **what the companion 
 
 **Voice = model + harness.** What the companion experiences as the Voice is the underlying model plus prompt, pipeline, tools, and approval gate. Improvements to prompt, pipeline, or tooling are first-class; the model is one component. When debugging behavior, consider: model limit, prompt gap, pipeline miss, or tool/context issue. See [IMPLEMENTABLE-INSIGHTS](implementable-insights.md).
 
+**Harness lock-in (industry).** Coding and knowledge-work agents diverge less on raw model scores than on **harness**: where state lives, tool integration, session memory, trust boundary (local shell vs isolated sandbox). Teams compound workflows, skills, and verification **around** a harness; switching harnesses resets process — not just “another model.” Grace-Mar’s harness choice is **git + gated pipeline + small auditable core**: institutional memory lives in **approved Record artifacts**, not in a vendor’s session-only context; see [IMPLEMENTABLE-INSIGHTS §11](implementable-insights.md#11-harness-lock-in-and-compound-workflows). Major agent stacks converge on **decompose → parallelize → verify → iterate**; Grace-Mar maps **verify** to companion approval and **iterate** to pipeline + git history; see [design-notes §11.11](design-notes.md#1111-harness-convergence--decompose-parallelize-verify-iterate).
+
 **Explicit non-goals.** Grace-Mar does not:
 - Merge into the Record without companion approval (stage only; companion merges).
 - Learn from the open web or from model training data; knowledge is gated and evidence-linked.
@@ -751,7 +753,7 @@ The fork's profile grows through two independent input channels. Both feed the s
 
 ### Channel 1: Bot (Automated)
 
-Conversations in the Telegram or WeChat bot are analyzed by an LLM analyst (`ANALYST_PROMPT` in `bot/prompt.py`). The analyst detects profile-relevant signals and stages candidates in `recursion-gate.md`. This runs automatically after bot exchanges.
+**Multi-channel staging:** Telegram, WeChat, operator activity reports, and other callers share **one** `recursion-gate.md` per user. An LLM analyst (`ANALYST_PROMPT` in `bot/prompt.py`) detects profile-relevant signals and stages candidates (with `channel_key`) after bot exchanges; operator scripts may stage without the bot. **One gate, one merge path** — not Telegram-only.
 
 ```
 User ↔ Bot conversation

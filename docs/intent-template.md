@@ -3,7 +3,7 @@
 > Machine-readable intent layer for agent alignment.
 > Advisory in v1: intent conflicts are flagged, not auto-blocked.
 >
-> **Design lens:** This file is Grace-Mar's **intent engineering** layer at companion scale — it encodes what the Record and downstream agents should *want* (goals, tradeoffs, escalation), not just what they know (context). See [DESIGN-NOTES §11.7](design-notes.md#117-intent-engineering--what-agents-should-want) and the "Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." framing (2026).
+> **Design lens:** This file is Grace-Mar's **intent engineering** layer at companion scale — it encodes what the Record and downstream agents should *want* (goals, tradeoffs, escalation), not just what they know (context). See [DESIGN-NOTES §11.7](design-notes.md#117-intent-engineering--what-agents-should-want). **Why explicit constraints:** Models optimize toward completion; underspecified goals invite paths you did not want — [§11.9](design-notes.md#119-misalignment-at-the-interface--optimization-intent-gap-operator-leverage) (intent gap, three operator questions).
 
 ## Purpose
 

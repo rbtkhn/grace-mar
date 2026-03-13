@@ -1,0 +1,35 @@
+---
+description: Run harness warmup at start of Grace-Mar sessions — repo state for blank chats
+alwaysApply: true
+---
+
+# Harness warmup (Grace-Mar)
+
+New Cursor threads have **no memory** of `recursion-gate`, `self-evidence`, or `session-log`. Warmup fixes that.
+
+## When to run
+
+At the **start of a new chat** when work touches **instance state** (pipeline, RECURSION-GATE, Voice, OpenClaw handoff, `users/grace-mar/`, bootstrap continuation):
+
+1. Run from repo root:
+   ```bash
+   python3 scripts/harness_warmup.py -u grace-mar
+   ```
+   Use `--compact` if the operator prefers one paragraph. **`--territory wap`** = work-american-politics pending only; **`companion`** = Record pending only (see `recursion_gate_territory.py`).
+
+2. **Include the command output** in your reply (paste verbatim or as a fenced markdown block) so the thread carries the same snapshot.
+
+## When you may skip
+
+- Operator says they’re only editing unrelated code/docs with no gate/evidence context.
+- Warmup was already pasted in this thread.
+- Trivial one-line fix with no Record/pipeline involvement.
+
+## Relation to bootstrap
+
+`grace-mar-bootstrap.md` = **procedure** (what to read, work-build-ai, commands). Warmup = **current state** (pending candidates, last ACT, session tail). They stack: bootstrap orients; warmup grounds.
+
+## Do not
+
+- Merge or stage from warmup output — it’s read-only context.
+- Treat warmup text as Record truth; canonical files remain `users/grace-mar/*.md`.

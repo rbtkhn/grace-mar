@@ -91,7 +91,7 @@ User message (Telegram)
 │  Analyst (async)  │  ← ANALYST_PROMPT, compares to profile for dedup
 └─────────┬─────────┘
           │
-          ├──[signal found]──► stage_candidate() → recursion-gate.md
+          ├──[signal found]──► stage_candidate() → recursion-gate.md **before** `## Processed`
           └──[NONE]──────────► (no staging)
 ```
 

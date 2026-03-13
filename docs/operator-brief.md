@@ -74,7 +74,14 @@ When something worth recording happens (a drawing, a story, something learned, a
 
 Keep the loop closed so the Record and the review queue stay in sync.
 
-- **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python3 scripts/session_brief.py -u grace-mar` for a short brief, or `python3 scripts/operator_blocker_report.py -u grace-mar` for a fuller blocker report). Note how many candidates are waiting.
+- **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python3 scripts/session_brief.py -u grace-mar` for a short brief, or `python3 scripts/operator_blocker_report.py -u grace-mar` for a fuller blocker report — includes **stale pending** so old candidates don’t sit forever). Note how many candidates are waiting.
+- **WAP vs companion lens:** Pending split by territory — **`--territory wap`** = work-american-politics only (`territory: work-american-politics` or `channel_key: operator:wap` on the YAML); **`--territory companion`** = Abby Record only. Same on `session_brief`, `harness_warmup`, `operator_blocker_report`. Default `all` shows both sections in the blocker report.
+- **Lookup usage (optional):** `python3 scripts/report_lookup_sources.py -u grace-mar` — shows whether Voice lookups used library vs full prompt (what actually gets used, not raw model capability).
+- **Minimal brief:** `python3 scripts/session_brief.py -u grace-mar --minimal` — pending count + IDs + last activity + next action. Add `--territory wap` or `companion` to filter.
+- **Duplicate-ish pending (optional):** `python3 scripts/pending_dedup_hint.py -u grace-mar` — flags pairs with similar summaries (merge one or reject).
+- **Intent before approve (AI safety posture):** Three quick questions — (1) What would I *not* want merged even if it looks fine? (2) When must we stop and ask the companion? (3) If this conflicts with **INTENT**, companion wins. See [design-notes §11.9](design-notes.md#119-misalignment-at-the-interface--optimization-intent-gap-operator-leverage).
+- **Rejection as skill:** Say **no** to candidates or Voice behavior that "looks right" but isn’t grounded — **reject** in RECURSION-GATE; if Voice missed, **`calibrate_from_miss`** ([feedback-loops](feedback-loops.md)). Articulating *why* turns taste into something the pipeline can reuse. See [design-notes §11.10](design-notes.md#1110-rejection-as-skill--recognition-articulation-encoding).
+- **Verify loop (harness convergence):** Big labs converged on **decompose → verify → iterate**. Your role is **sniff check** before merge — same as Cursor’s judge, not the raw chat turn. See [design-notes §11.11](design-notes.md#1111-harness-convergence--decompose-parallelize-verify-iterate).
 - **After the session:** If anyone sent "we did X" or you added activities, run **/review** in the bot (or process the queue per [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md)) so items don’t sit in RECURSION-GATE for long.
 
 Full checklist and weekly rhythm: [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md).
@@ -92,7 +99,7 @@ All instance files live in the repo under **`users/grace-mar/`**. The Record its
 | **self.md** | Who the companion is — identity, preferences, interests, knowledge (IX-A), curiosity (IX-B), personality (IX-C). |
 | **skills.md** | What they can do — THINK, WRITE, WORK capability and edges. |
 | **self-evidence.md** | Activity log — ACT-*, WRITE-*, CREATE-* entries; raw evidence the Record is built on. |
-| **recursion-gate.md** | Staging area — candidates the analyst (or you) staged; **nothing is in the Record until you approve and merge.** |
+| **recursion-gate.md** | **Multi-channel staging** (Telegram, WeChat, operator, tests — see each row’s `channel_key`). One queue per user; **nothing is in the Record until you approve and merge.** |
 | **session-transcript.md** | Raw conversation log (every message), for operator continuity. Not part of the Record. |
 | **self-archive.md** | Gated log of **approved** activity only — the conversation that made it into the Record. |
 
@@ -114,8 +121,11 @@ SELF-ARCHIVE is **not** written in real time. It is updated **only when you merg
    ```bash
    python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by "Your Name"
    python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by "Your Name" --receipt /tmp/receipt.json
+   **WAP-only batch:** same commands with `--territory wap` on both steps (only merges candidates tagged WAP; companion queue untouched).
    ```
 4. After the merge, **SELF-ARCHIVE** is appended with the approved exchange(s); SELF, EVIDENCE, and the bot prompt are updated too.
+
+**Gated commits (optional hardening):** If you use pre-commit with `pre-commit install --hook-type commit-msg`, any commit that stages SELF, EVIDENCE, prompt, PRP, or SELF-ARCHIVE must include **`[gated-merge]`** in the message (the merge script’s `--push` does this). Manual emergency edits: `ALLOW_GATED_RECORD_EDIT=1`. See AGENTS.md File Update Protocol.
 
 Recommended rhythm: do this at least weekly (e.g. [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md) step 2) so the Record and SELF-ARCHIVE stay in sync with conversations.
 
@@ -123,7 +133,7 @@ Recommended rhythm: do this at least weekly (e.g. [OPERATOR-WEEKLY-REVIEW](opera
 
 ## Getting Telegram chat content into Cursor
 
-The bot writes live chat to **`users/grace-mar/session-transcript.md`** and stages candidates to **`users/grace-mar/recursion-gate.md`**. Those paths are relative to the **repo root of the process running the bot**. So whether that content appears in Cursor depends on where the bot runs.
+The bot (and other writers) append chat to **`session-transcript.md`** per channel and stage profile candidates to **`recursion-gate.md`** — **one gate for all channels** (`channel_key` on each block). Paths are relative to the **repo root of the process running the bot**. So whether that content appears in Cursor depends on where the bot runs.
 
 **Option A — Bot runs on the same machine as Cursor, from this repo**
 

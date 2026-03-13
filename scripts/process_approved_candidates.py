@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """
 Process approved pipeline candidates: merge into SELF, EVIDENCE, prompt; run export_prp; optionally push.
+After --apply, stderr reminds to refresh OpenClaw / external USER.md if --export-openclaw was not used.
+
+Territory batch merge (work-american-politics vs companion):
+    --territory wap        # only candidates with territory: work-american-politics or channel_key: operator:wap
+    --territory companion  # only the rest
+    --territory all        # default — every approved row in Candidates section
+    Generate receipt and apply with the same --territory so candidate_ids match.
 
 Usage:
     python scripts/process_approved_candidates.py           # dry run
@@ -21,6 +28,11 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
 RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
@@ -120,14 +132,17 @@ def _canonical_candidate_ids(candidates: list[dict]) -> list[str]:
     return sorted(c["id"] for c in candidates)
 
 
-def _build_receipt(approved: list[dict], approved_by: str) -> dict:
-    return {
+def _build_receipt(approved: list[dict], approved_by: str, territory: str = "all") -> dict:
+    r = {
         "user_id": USER_ID,
         "approved_by": approved_by.strip(),
         "approved_at": _utc_now_iso(),
         "min_evidence_tier": MIN_EVIDENCE_TIER,
         "candidate_ids": _canonical_candidate_ids(approved),
     }
+    if territory and territory != "all":
+        r["territory"] = territory
+    return r
 
 
 def _validate_receipt(receipt: dict, approved: list[dict]) -> tuple[bool, str]:
@@ -771,6 +786,12 @@ def main() -> None:
     )
     ap.add_argument("--openclaw-post-url", default="", help="OpenClaw post destination URL (if destination=post)")
     ap.add_argument("--openclaw-api-key", default="", help="OpenClaw post API key (if destination=post)")
+    ap.add_argument(
+        "--territory",
+        choices=("all", "wap", "companion"),
+        default="all",
+        help="Merge only approved candidates in this territory (wap = work-american-politics; companion = rest). Receipt must match.",
+    )
     args = ap.parse_args()
     _set_user(args.user)
     dry_run = not args.apply
@@ -783,6 +804,10 @@ def main() -> None:
             raise SystemExit("--approved-by is required with --quick")
 
     approved = get_approved_in_candidates()
+    if args.territory == "wap":
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
+    elif args.territory == "companion":
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]
     if args.quick.strip():
         quick_id = args.quick.strip()
         if not quick_id.upper().startswith("CANDIDATE-"):
@@ -792,21 +817,24 @@ def main() -> None:
             raise SystemExit(f"No approved candidate {quick_id} — ensure it is approved (e.g. via /review)")
 
     if not approved:
-        print("No approved candidates to process.")
+        print(
+            f"No approved candidates to process (territory={args.territory}). "
+            "Approve rows in recursion-gate above ## Processed; WAP rows need territory: work-american-politics or channel_key: operator:wap."
+        )
         return
 
     if args.generate_receipt:
         if not args.approved_by.strip():
             raise SystemExit("--approved-by is required with --generate-receipt")
-        receipt = _build_receipt(approved, args.approved_by)
+        receipt = _build_receipt(approved, args.approved_by, args.territory)
         receipt["min_evidence_tier"] = max(args.min_evidence_tier, MIN_EVIDENCE_TIER)
         out_path = Path(args.generate_receipt)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
-        print(f"Wrote receipt template: {out_path}")
+        print(f"Wrote receipt template: {out_path} (territory={args.territory}, {len(approved)} id(s))")
         return
 
-    print(f"Found {len(approved)} approved candidate(s).")
+    print(f"Found {len(approved)} approved candidate(s) (territory={args.territory}).")
     if dry_run:
         for c in approved:
             print(f"  [DRY RUN] would merge {c['id']}: {c['summary'][:60]}...")
@@ -820,7 +848,7 @@ def main() -> None:
         raise SystemExit("--receipt is required with --apply (or use --quick for single-candidate)")
 
     if args.quick.strip():
-        receipt = _build_receipt(approved, args.approved_by.strip())
+        receipt = _build_receipt(approved, args.approved_by.strip(), args.territory)
         receipt["min_evidence_tier"] = max(args.min_evidence_tier, MIN_EVIDENCE_TIER)
     else:
         receipt_path = Path(args.receipt)
@@ -968,6 +996,25 @@ def main() -> None:
             else:
                 # Non-fatal: merge succeeded; export failure is surfaced for operator action.
                 print(f"Warning: OpenClaw export failed: {export_msg}")
+
+        # Downstream harness drift: repo PRP already regenerated above; copied USER.md / OpenClaw dir may lag.
+        if args.export_openclaw:
+            print(
+                "grace-mar: merge complete — PRP updated in-repo; OpenClaw export ran (--export-openclaw).",
+                file=sys.stderr,
+            )
+        else:
+            print(
+                "grace-mar: merge complete — PRP updated in-repo. If you use OpenClaw or any external copy of "
+                "USER.md/SOUL, refresh or it is stale: "
+                f"python3 integrations/openclaw_hook.py --user {USER_ID} --format md+manifest --emit-event",
+                file=sys.stderr,
+            )
+            print(
+                "grace-mar: commit with [gated-merge] in the message (pre-commit commit-msg hook), "
+                "or ALLOW_GATED_RECORD_EDIT=1 for emergency only.",
+                file=sys.stderr,
+            )
     except Exception as e:
         _emit_validation_failure(None, f"merge_apply_failed_or_rolled_back: {e}", args.approved_by.strip())
         rollback_plan = {
@@ -989,7 +1036,16 @@ def main() -> None:
             cwd=REPO_ROOT,
             check=True,
         )
-        subprocess.run(["git", "commit", "-m", "merge approved candidates via process_approved_candidates"], cwd=REPO_ROOT, check=True)
+        subprocess.run(
+            [
+                "git",
+                "commit",
+                "-m",
+                "[gated-merge] merge approved candidates via process_approved_candidates",
+            ],
+            cwd=REPO_ROOT,
+            check=True,
+        )
         subprocess.run(["git", "push"], cwd=REPO_ROOT, check=True, env={**os.environ, "GITHUB_TOKEN": token})
         print("Pushed.")
 

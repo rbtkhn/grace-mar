@@ -3,12 +3,12 @@
 Anticipate blockers for operator (Wu insight: manager leverage).
 
 Reads SESSION-LOG, RECURSION-GATE, development-handoff, pipeline-events
-and produces a short report: staged candidates, open debates, recent events,
-and development-handoff summary. Operator can use this to "look around corners"
-and focus on what needs attention.
+and produces a short report: **stale pending** (coordination tax), staged candidates,
+open debates, recent events, development-handoff summary.
 
 Usage:
     python scripts/operator_blocker_report.py -u grace-mar
+    python scripts/operator_blocker_report.py -u grace-mar --stale-days 7
     python scripts/operator_blocker_report.py -u grace-mar -o report.md
 """
 
@@ -16,15 +16,33 @@ import argparse
 import json
 import re
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
 
 
 def _read(path: Path) -> str:
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8")
+
+
+def _parse_gate_timestamp(block: str) -> datetime | None:
+    """Best-effort timestamp from candidate yaml (timestamp: YYYY-MM-DD or with time)."""
+    tm = re.search(r"timestamp:\s*(\d{4}-\d{2}-\d{2})(?:\s+(\d{2}:\d{2}:\d{2}))?", block)
+    if not tm:
+        return None
+    date_part = tm.group(1)
+    time_part = tm.group(2) or "00:00:00"
+    try:
+        return datetime.strptime(f"{date_part} {time_part}", "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
 
 
 def _extract_pending_candidates(content: str) -> list[dict]:
@@ -38,7 +56,15 @@ def _extract_pending_candidates(content: str) -> list[dict]:
             sm = re.search(r"summary:\s*(.+?)(?:\n|$)", block)
             if sm:
                 summary = sm.group(1).strip().strip('"\'')
-            out.append({"id": cid, "summary": summary})
+            ts = _parse_gate_timestamp(block)
+            out.append(
+                {
+                    "id": cid,
+                    "summary": summary,
+                    "timestamp": ts,
+                    "territory": territory_from_yaml_block(block),
+                }
+            )
     return out
 
 
@@ -111,6 +137,19 @@ def main() -> int:
     parser.add_argument("-u", "--user", default="grace-mar", help="User id (e.g. grace-mar)")
     parser.add_argument("-o", "--output", help="Write report to file instead of stdout")
     parser.add_argument("--events", type=int, default=15, help="Number of pipeline events to include")
+    parser.add_argument(
+        "--stale-days",
+        type=int,
+        default=3,
+        metavar="N",
+        help="Flag pending candidates older than N days (default 3)",
+    )
+    parser.add_argument(
+        "--territory",
+        choices=("all", "wap", "companion"),
+        default="all",
+        help="Pending lens: wap = work-american-politics only; companion = Record only; all = both sections",
+    )
     args = parser.parse_args()
 
     user_id = args.user
@@ -122,7 +161,15 @@ def main() -> int:
     session_log = _read(profile_dir / "session-log.md")
     pipeline_events = _read_pipeline_events(profile_dir / "pipeline-events.jsonl", args.events)
 
-    pending = _extract_pending_candidates(recursion_gate)
+    all_pending = _extract_pending_candidates(recursion_gate)
+    wap_pending = [c for c in all_pending if c.get("territory") == TERRITORY_WAP]
+    companion_pending = [c for c in all_pending if c.get("territory") != TERRITORY_WAP]
+    if args.territory == "wap":
+        pending = wap_pending
+    elif args.territory == "companion":
+        pending = companion_pending
+    else:
+        pending = all_pending
     debates = _extract_unresolved_debates(recursion_gate)
     handoff_excerpt = _handoff_summary(handoff)
 
@@ -130,21 +177,82 @@ def main() -> int:
     lines.append("# Operator Blocker Report")
     lines.append("")
     lines.append(f"**User:** {user_id}")
+    if args.territory == "all":
+        lines.append(
+            f"**Pending by territory:** WAP {len(wap_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
+        )
+        lines.append(
+            f"_Lens:_ `--territory wap` | `--territory companion` | `all` (default). WAP = `territory: work-american-politics` or `channel_key: operator:wap`."
+        )
+    else:
+        lines.append(f"**Territory lens:** {args.territory} ({len(pending)} pending)")
     lines.append("")
     lines.append("---")
     lines.append("")
 
-    # Staged candidates
-    lines.append("## Staged candidates (RECURSION-GATE)")
-    if not pending:
-        lines.append("- None")
-    else:
-        for c in pending:
-            s = c["summary"] or "(no summary)"
-            if len(s) > 100:
-                s = s[:97] + "..."
-            lines.append(f"- **{c['id']}** — {s}")
+    now = datetime.now(timezone.utc)
+    stale_days = max(1, args.stale_days)
+    stale = [
+        c
+        for c in pending
+        if c.get("timestamp") and (now - c["timestamp"]).total_seconds() >= stale_days * 86400
+    ]
+    no_ts = [c for c in pending if not c.get("timestamp")]
+
+    # Stale pending (coordination tax)
+    lines.append("## Stale pending (coordination tax)")
+    lines.append(
+        f"Candidates still **pending** after **{stale_days}+ days** — same cost as standing meetings: attention without closure. "
+        "Approve, reject, or batch-process."
+    )
     lines.append("")
+    if stale:
+        for c in stale:
+            s = c["summary"] or "(no summary)"
+            if len(s) > 80:
+                s = s[:77] + "..."
+            age = (now - c["timestamp"]).days
+            lines.append(f"- **{c['id']}** — ~{age}d old — {s}")
+    else:
+        lines.append("- None over threshold")
+    if no_ts and pending:
+        lines.append(f"- _{len(no_ts)} pending without parseable timestamp — check manually_")
+    lines.append("")
+
+    # Staged candidates
+    if args.territory == "all" and (wap_pending or companion_pending):
+        lines.append("## Staged — work-american-politics (WAP)")
+        if not wap_pending:
+            lines.append("- None")
+        else:
+            for c in wap_pending:
+                s = (c["summary"] or "(no summary)")[:100]
+                lines.append(f"- **{c['id']}** — {s}")
+        lines.append("")
+        lines.append("## Staged — companion Record")
+        if not companion_pending:
+            lines.append("- None")
+        else:
+            for c in companion_pending:
+                s = (c["summary"] or "(no summary)")[:100]
+                age_note = f" ({c['timestamp'].strftime('%Y-%m-%d')})" if c.get("timestamp") else ""
+                lines.append(f"- **{c['id']}**{age_note} — {s}")
+        lines.append("")
+    else:
+        lines.append("## Staged candidates (RECURSION-GATE)")
+        if not pending:
+            lines.append("- None")
+        else:
+            for c in pending:
+                s = c["summary"] or "(no summary)"
+                if len(s) > 100:
+                    s = s[:97] + "..."
+                age_note = ""
+                if c.get("timestamp"):
+                    age_note = f" ({c['timestamp'].strftime('%Y-%m-%d')})"
+                tag = f" [{c.get('territory', '?')}]" if args.territory == "all" else ""
+                lines.append(f"- **{c['id']}**{age_note}{tag} — {s}")
+        lines.append("")
     lines.append("**Action:** Review in recursion-gate.md; approve or reject.")
     lines.append("")
 

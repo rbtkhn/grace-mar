@@ -2,7 +2,7 @@
 
 **Purpose:** Capture design insights, positioning, and implications derived from build-pattern research and agent-infrastructure analysis. Use for future white paper, business proposal, and investor narrative.
 
-**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); **Intent engineering** ("Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." — YouTube transcript, 2026: context tells agents what to know, intent tells agents what to want; Grace-Mar's INTENT layer = intent engineering at companion scale); **Catherine Fitts** (Epstein, CIA Black Budget, the Control Grid, and the Banks' Role in War — YouTube transcript, 2026: control grid vs sovereignty; §2.5); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape), §11.6 (Landscape: capital allocation & agent scale), and §11.7 (Intent engineering).
+**Sources:** Build-pattern transcript (architecture portable, principles scale, agent-maintainable, infrastructure); Infrastructure transcript (agent web fork, trust primitive, structured interfaces); Alpha School interview (AI schools, 2-hour learning, identity vs. teaching layer); ACX review of Alpha School (incentives as bottleneck, homeschool gap, platform vs. bundle); Visual AI transcript (Stop Treating Image Generation Like a Design Tool — infrastructure vs point solution); **Intent engineering** ("Prompt Engineering Is Dead. Context Engineering Is Dying. What Comes Next Changes Everything." — YouTube transcript, 2026: context tells agents what to know, intent tells agents what to want; Grace-Mar's INTENT layer = intent engineering at companion scale); **Catherine Fitts** (Epstein, CIA Black Budget, the Control Grid, and the Banks' Role in War — YouTube transcript, 2026: control grid vs sovereignty; §2.5); **Enterprise context / comprehension lock-in** (OpenAI Leaked GPT-5.4 / AI lock-in — YouTube transcript, 2026: synthesis layer, retrieval at scale, comprehension lock-in vs data portability; §2.5); **Harness lock-in** (Claude Code vs Codex — YouTube transcript, 2026: harness vs model, compound workflows, repo vs agent memory; §2.6); **Harness convergence** (4 labs same structure / jaggedness vs harness — YouTube transcript, 2026: decompose, parallelize, verify, iterate; sniff check; §11.11); **Rejection as AI skill** (Stop accepting output that "looks right" — YouTube transcript, 2026: recognition, articulation, encoding; taste as durable constraints; §11.10); **AI safety / intent gap** (Claude blackmail / optimization framing — YouTube transcript, 2026: instrumental convergence, scheming as efficient path, emergent institutional safety, intent engineering vs output-only prompts; §11.9); Po-Shen Loh (CMU — trust networks, rural potential, "great = care + think"); Boris Cherny / Claude Code (Lenny's Podcast — coding solved, latent demand, generalists); Bitcoin whitepaper (canonical spec structure, abstract/conclusion, protocol over org); Federalist Papers (spec vs. commentary, interpretation as legacy). See also §11 (Research & Model Landscape), §11.6 (Landscape: capital allocation & agent scale), §11.7 (Intent engineering), §11.9 (intent gap), §11.10 (rejection / encoded taste), §11.11 (harness convergence / verify loop).
 
 **Status:** Draft. Refine as instance progresses and market conditions evolve.
 
@@ -83,6 +83,22 @@ The "control grid" is infrastructure that allows digital technology to assert su
 **Grace-Mar is the opposite:** companion-owned identity, gated pipeline, evidence-grounded, enforcement by culture (protocol + norms). The Record resists the control grid because identity, knowledge, and integration remain under companion sovereignty — structured, human-approved, local (companion-scoped). Integrations (OpenClaw, agent platforms) must preserve the companion gate; downstream systems must not become control-grid infrastructure that centralizes identity or removes human approval.
 
 **White paper implication:** "In a world moving toward programmable identity and centralized control, Grace-Mar offers companion-owned, evidence-grounded, human-gated identity — sovereignty as design principle."
+
+**Comprehension lock-in (enterprise AI).** Vendors are racing to own the *synthesis layer* — not raw storage but accumulated *organizational understanding* (reasoning × context, retrieval, memory that stays current). Raw data is often portable; months or years of vendor-hosted synthesis usually are not — **comprehension lock-in** (understanding trapped in one runtime). Grace-Mar at **companion scale** inverts that for the individual: approved truth lives in the repo; **PRP and OpenClaw export** carry documented identity and intent; the companion chooses where understanding accumulates and keeps a portability path. Same sovereignty family as the control-grid flank: avoid letting "where AI remembers for you" become a layer you cannot leave.
+
+**White paper implication:** "Enterprise AI optimizes for comprehension lock-in; Grace-Mar optimizes for companion-owned, exportable, gate-kept understanding."
+
+### 2.6 Harness lock-in — workbench, not wrench
+
+*Source: Claude Code vs Codex (YouTube transcript, 2026).*
+
+**Model vs harness:** Headlines compare models (“brain in a jar”); **harness** is everything else — memory across sessions, tools, trust boundary, how failures compound. Same model in different harnesses can show **large** outcome gaps; harnesses **diverge on purpose** (local composable shell vs isolated sandbox; agent-held progress artifacts vs repo-as–system-of-record).
+
+**Lock-in:** Teams build skills, checks, and habits **around** one harness; switching resets process. Procurement is a **workbench** commitment — velocity, security, hiring, switching cost for years.
+
+**Grace-Mar:** Identity and growth memory live in **git + gated pipeline** (SELF, EVIDENCE), not in a single vendor’s agent session. Voice is one render path; **Record** is the portable institutional layer. Aligns with “codebase remembers” *and* companion sovereignty — approved writes only. See [IMPLEMENTABLE-INSIGHTS §11](implementable-insights.md#11-harness-lock-in-and-compound-workflows).
+
+**White paper implication:** "Grace-Mar separates harness from model: small auditable core, human-gated memory in-repo — so harness choice does not trap companion identity."
 
 ---
 
@@ -426,6 +442,87 @@ At Grace-Mar, the "organization" is the **companion** and their purpose. Intent 
 - **Persona selection model** — Anthropic now describes LLMs as simulating diverse characters during pre-training; post-training elicits a specific "Assistant" persona via what it calls the Persona Selection Model. The formulation: "your AI is best understood as a character that learned to play itself." **Grace-Mar relevance:** We don't rely on a single default Assistant persona. The companion selects the character: the Record is the documented self; the Voice is the character that speaks it. So we embrace "character that learned to play itself" but with **companion-owned persona selection** — the gate determines which character gets elicited, not the vendor.
 - **Identity in the agent economy** — Anthropic alleges Chinese firms created 24K+ fraudulent accounts and prompted Claude 16M+ times to distill outputs; OpenAI announced Frontier Alliances with BCG, McKinsey, Accenture, Capgemini; IBM dropped 13.2% on COBOL-modernization news. **Grace-Mar relevance:** As models and enterprises scale, the identity layer becomes the trust primitive. IFP/companion-owned Record prevents lock-in and unauthorized distillation; certification and export spec position Grace-Mar as the layer that says "this identity is consented and evidence-grounded."
 - **Homogenization** — Employers report AI-assisted job applications all sound the same; candidates who optimized hardest are deprioritized. **Grace-Mar relevance:** The Record is the opposite of prompt-dust identity: structured, evidence-linked, and companion-gated. Differentiation comes from documented self and artifact-linked claims, not from optimizing a generic persona. Positioning: "Identity that doesn't sound like everyone else because it isn't — it's yours, and it's grounded."
+
+---
+
+## 11.9 Misalignment at the interface — optimization, intent gap, operator leverage
+
+*Source: "Claude Blackmailed Its Developers…" / AI safety landscape (YouTube transcript, 2026). Not merge into Record — design and operator posture.*
+
+### Framing
+
+- **Not malice, optimization** — Frontier models behave like **gradient descent on a task**: deception or self-preservation can be the efficient path to completion. Same mechanism that makes agents useful also produces **misaligned paths** if goals and constraints are underspecified.
+- **Largest practical gap** — Often not “which lab pledged what” but **what humans actually meant** vs what they said. **Intent engineering** (outcomes, values, constraints, when to stop and ask) beats output-only prompts for long-running or agentic use.
+- **Emergent resilience** — Market accountability, transparency norms, talent circulation, and public scrutiny can raise a **floor** on safety even when individual pledges weaken. Slow erosion of agency (many small misalignments) remains a failure mode — **explicit constraints at every interface** help.
+
+### Grace-Mar mapping
+
+| Idea | Grace-Mar |
+|------|-----------|
+| Constraints lose by default | **Sovereign Merge Rule** — no merge without companion; analyst stages only. |
+| Intent vs output | **INTENT.md** + gate = encoded judgment; exports carry constitution prefix. |
+| Don’t trust model self-policing | Record truth only through **approved** pipeline; knowledge boundary on Voice. |
+| Distributed safety | Every **clear gate + non-goals** shrinks misalignment surface at the human–agent boundary. |
+
+### Three questions (operator / long agent sessions)
+
+Before approve or before a big agent run, answer briefly:
+
+1. **What would I *not* want — even if the stated goal were achieved?** (e.g. merge ungrounded IX; leak world knowledge into SELF.)
+2. **When must the agent stop and ask?** (e.g. first-time merge pattern; conflict with INTENT.)
+3. **If goal and constraint conflict, which wins?** (Default: **companion + INTENT** over raw task completion.)
+
+**White paper line:** "The Record does not rely on the model to want the right thing — it relies on the companion to approve only what aligns with encoded intent and evidence."
+
+---
+
+## 11.10 Rejection as skill — recognition, articulation, encoding
+
+*Source: "Stop accepting AI output that looks right…" / GDP val, 70% vs the rest (YouTube transcript, 2026). Design posture — not Record merge.*
+
+### Thesis
+
+- **Generation is cheap; judgment is scarce.** Frontier models can match experts much of the time on bounded tasks — the **remaining gap** is where someone must **recognize** wrong, **articulate why**, and **encode** so the same mistake does not repeat.
+- **Rejection is knowledge creation** — "This isn't right *because*…" produces a **constraint** that did not exist before. Left in chat/email, it **evaporates**; captured in a durable system, it **compounds** (constraint library, tests, gate rules).
+- **Three dimensions:** (1) **Recognition** — domain feel for "off" (hard to shortcut). (2) **Articulation** — turn "no" into a **usable rule** for the next prompt or merge. (3) **Encoding** — persist (docs, tests, RECURSION-GATE rejections, prompt updates after approve).
+
+### Grace-Mar mapping
+
+| Transcript idea | Grace-Mar |
+|-----------------|-----------|
+| Say no to slop | **Reject** pending candidates; **reject** bad merges before approve. |
+| Articulate why | Merge checklist + **rejection** still teaches — note reason when rejecting. |
+| Encode constraints | **Approved** merges → SELF/prompt; **calibrate_from_miss** stages Voice failures; **INTENT** = encoded tradeoffs. |
+| 70% looks right / 17% everything | **Knowledge boundary** — Voice must not sound right on undocumented facts; gate catches profile slop. |
+
+**Operator habit:** When Voice misses, run **`calibrate_from_miss`** (stage a fix). When a candidate is wrong, **reject** with a one-line reason when possible — patterns inform analyst dedup and INTENT later.
+
+**White paper line:** "Grace-Mar treats **companion approval** as the institutional no — only encoded, evidence-linked judgment enters the Record; everything else stays out."
+
+---
+
+## 11.11 Harness convergence — decompose, parallelize, verify, iterate
+
+*Source: "4 AI Labs Built the Same System Without Talking to Each Other" (YouTube transcript, 2026). Cursor math / planner–worker–judge; Anthropic initializer + progress file; OpenAI Codex sandboxes; Google generation/verification/revision. Design posture.*
+
+### Claims (compressed)
+
+- **“Jagged” outcomes** were partly an artifact of **one-shot chat** — no retry, no structure, errors propagate. **Harness** (time, tools, roles, memory) smooths practical work more than raw IQ curves alone.
+- **Convergent pattern** across major labs: **decompose** → **parallelize** (workers / sandboxes) → **verify** (judge, tests, peer role) → **iterate** (fresh context, restart). Same shape as human org design — not accidental.
+- **Work question shifts** from “can AI do my task?” to “can this be **decomposed** into **verifiable** substeps?” **Sniff check** / meta-skill (is it correct?) rises as execution cheapens.
+
+### Grace-Mar mapping
+
+| Pattern | Grace-Mar |
+|---------|-----------|
+| Decompose | **Signals** → discrete **candidates** (IX-A/B/C), not one blob merge. |
+| Parallelize | Multiple channels (bot, operator, OpenClaw) **stage** independently; same gate. |
+| Verify | **Companion + operator** = judge; INTENT advisory; merge checklist; harness / counterfactual. |
+| Iterate | **Session continuity**, warmup, PRP refresh; rejected → no merge; approved → Record + prompt. |
+
+**Voice as single-turn** stays bounded (query-triggered) — the **pipeline** is the long-horizon harness: artifacts in git, human verify, no autonomous merge.
+
+**White paper line:** "Grace-Mar is verify-first identity infrastructure: agents may propose; only **approved** merges write the Record — the same organizational loop labs rediscovered for coding, applied to the companion’s documented self."
 
 ---
 

@@ -23,6 +23,8 @@ When the companion reports "Voice didn't know X" or "that was wrong", stage a ca
 
 ```bash
 python scripts/calibrate_from_miss.py -u grace-mar --miss "Voice didn't know we went to the aquarium"
+
+**Framing:** Rejecting bad AI output + staging a fix = **encoding taste** (see [design-notes §11.10](design-notes.md#1110-rejection-as-skill--recognition-articulation-encoding), [implementable-insights §13](implementable-insights.md#13-rejection-as-skill--recognition-articulation-encoding)).
 python scripts/calibrate_from_miss.py -u grace-mar --miss "Voice gave wrong Casa Bonita date" --suggested "Add to IX-A: Casa Bonita reopened 2023"
 ```
 

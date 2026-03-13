@@ -1,0 +1,35 @@
+---
+description: Territory awareness when working in skill-work territories
+globs: docs/skill-work/**
+alwaysApply: false
+---
+
+# Territory Awareness
+
+When working in `docs/skill-work/`, treat each subdirectory as a **territory** — a self-contained region with its own identity, memory, interface, and rules.
+
+---
+
+## On Entering a Territory
+
+- **Load context:** Read the territory's README, principal profile (if politics), revenue-log (if applicable), and key specs before drafting or changing artifacts.
+- **Respect boundaries:** Do not leak content or assumptions from one territory into another (e.g. politics vs gems vs health) unless the operator explicitly crosses the border.
+- **Use territory vocabulary:** Match the territory's framing (e.g. work-american-politics: principal, shadow campaign, Fiverr, seed allocation; work-health-fitness: readiness, protocol).
+
+---
+
+## Territories
+
+| Territory | Path | Key context |
+|-----------|------|-------------|
+| work-american-politics | `docs/skill-work/work-american-politics/` | README, principal-profile, revenue-log, seed-allocation-plan, opposition-brief, sentient-framing |
+| work-health-fitness | `docs/skill-work/work-health-fitness/` | README, roadmap |
+| work-human-teacher | `docs/skill-work/work-human-teacher/` | README, roadmap |
+| work-companion-self | `docs/skill-work/work-companion-self/` | README, roadmap |
+| work-alpha-school | `docs/skill-work/work-alpha-school/` | README |
+
+---
+
+## Self-Contained
+
+Each territory has identity, memory, interface, revenue (if applicable), ethics, and lifecycle. Nothing outside the territory is *required* for that function to run. The companion is the only external authority.

@@ -883,8 +883,19 @@ source_exchange:
 ```
 
 """
-    with open(RECURSION_GATE_PATH, "a") as f:
-        f.write(block)
+    # Insert before ## Processed so merge (process_approved_candidates) and /merge see this block.
+    # Appending to EOF placed candidates after Processed — they never merged.
+    content = (
+        RECURSION_GATE_PATH.read_text(encoding="utf-8")
+        if RECURSION_GATE_PATH.exists()
+        else "## Candidates\n\n## Processed\n\n"
+    )
+    marker = "## Processed"
+    if marker in content:
+        content = content.replace(marker, block + marker, 1)
+    else:
+        content = content.rstrip() + "\n\n## Candidates\n\n" + block + "\n## Processed\n\n"
+    RECURSION_GATE_PATH.write_text(content, encoding="utf-8")
     emit_pipeline_event("staged", candidate_id, channel_key=channel_key)
     return True
 
