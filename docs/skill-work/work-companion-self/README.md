@@ -54,6 +54,26 @@ Before proposing a `grace-mar` change back to `companion-self`, ask:
 
 ---
 
+## Operator Instruction Pattern
+
+When the operator wants work to happen in `grace-mar` first and then flow back into the template, the canonical instruction is:
+
+`Implement this in grace-mar first, then promote the reusable template layer to companion-self.`
+
+Short form:
+
+`Upstream this from grace-mar to companion-self.`
+
+Implied meaning:
+
+1. Build or refine the change in `grace-mar`.
+2. Apply the upstreamability test.
+3. Separate reusable structure from instance-specific material.
+4. Keep `users/grace-mar/`, private workflows, deployment quirks, and live Record state in `grace-mar`.
+5. Prepare only the structural, instance-agnostic layer for `companion-self`.
+
+---
+
 ## Cross-references
 
 - [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md) — Template → instance flow

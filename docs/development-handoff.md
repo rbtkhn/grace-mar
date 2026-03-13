@@ -53,6 +53,7 @@ Last updated: 2026-03-13
 - Structural, reusable, instance-agnostic improvements proven in `grace-mar` may be merged back into `companion-self`.
 - Record content, private workflows, deployment quirks, and instance-specific state stay in `grace-mar`.
 - Working rule: treat `grace-mar` as laboratory + live instrument; treat `companion-self` as reusable base.
+- Canonical operator phrase for this workflow: `Implement this in grace-mar first, then promote the reusable template layer to companion-self.` Short form: `Upstream this from grace-mar to companion-self.`
 
 ---
 
@@ -67,6 +68,7 @@ Last updated: 2026-03-13
 - **`docs/audit-grace-mar-vs-companion-self-template.md`** — Reframed the audit around concept alignment vs manifest/path alignment; conclusion is now "conceptually aligned, operationally stale" rather than blanket path-level compliance.
 - **`docs/merging-from-companion-self.md`** — Updated sync guidance to treat `template-manifest.json`, `template-version.json`, and `how-instances-consume-upgrades.md` as the live upstream contract.
 - **`docs/skill-work/work-companion-self/audit-report.md`** — Marked the older non-manifest diff as legacy; `audit-report-manifest.md` is the current path-level reference until the next regenerated report.
+- **`docs/skill-work/work-companion-self/README.md`** — Added the canonical operator instruction for "build in grace-mar first, then upstream the reusable layer."
 
 ### CI + PRP workflow hardening (2026-03-13)
 - **`.github/workflows/governance.yml`** — Added `validate-integrity.py --json` to the no-secrets governance CI path so routine push/PR checks cover both policy scan and canonical Record integrity.
