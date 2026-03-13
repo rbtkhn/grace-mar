@@ -1,5 +1,9 @@
 ## work-companion-self — Template Diff Report
 
+**Status:** Legacy pre-manifest diff snapshot. This report was generated from the older grace-mar-side path list and is no longer the authoritative alignment view now that the live `companion-self` repo exposes `template-manifest.json`.
+
+Use `audit-report-manifest.md` for the current path-level comparison. Keep this file only as historical context unless it is regenerated from the live template inventory.
+
 Companion-self: /tmp/companion-self
 Instance (grace-mar): /Users/robertkuhne/Documents/grace-mar
 Paths: grace-mar MERGING-FROM-COMPANION-SELF

@@ -2,7 +2,9 @@
 
 **Objective:** Eventually enable Grace-Mar to autonomously manage and improve the companion-self codebase — and to maintain proper sync between companion-self and grace-mar.
 
-Companion-self is both the **concept** (companion's self + self that companions, self-* taxonomy, tricameral mind) and the **template repo** ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)). Grace-Mar is an instance. This submodule scopes: (1) **sync** — keeping grace-mar aligned with companion-self; (2) **contribution back** — proposing improvements upstream.
+Companion-self is both the **concept** (companion's self + self that companions, self-* taxonomy, tricameral mind) and the **template repo** ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)). Grace-Mar is a private instance and working tool built from that template. This submodule scopes: (1) **sync** — keeping grace-mar aligned with companion-self; (2) **contribution back** — proposing improvements upstream.
+
+**Canonical framing:** `companion-self` is the upstream template and public architecture for sovereign, evidence-grounded cognitive forks. `grace-mar` is the private proving ground and active instance: a working tool where structural ideas are tested against real use. Improvements developed in `grace-mar` that are structural, reusable, and instance-agnostic may be merged back into `companion-self`; Record content, private workflows, and instance-specific state remain private to `grace-mar`.
 
 ---
 
@@ -37,6 +39,18 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 4. **Template-first** — Changes proposed to companion-self must align with template governance (concept, self-* taxonomy, tricameral). Instance-specific content stays in grace-mar.
 5. **Audit trail** — Proposals, PRs, sync events, and contributions are tracked. Provenance preserved.
 6. **Companion sovereignty** — "Autonomous" means Grace-Mar operates within approved scope (e.g., docs only, scripts only, specific paths). Companion sets boundaries.
+
+---
+
+## Upstreamability Test
+
+Before proposing a `grace-mar` change back to `companion-self`, ask:
+
+1. **Is it structural?** Docs, schema, tooling, governance, bootstrap, sync process, and reusable architecture are candidates for upstreaming.
+2. **Is it instance-agnostic?** If it depends on `users/grace-mar/`, private operator workflow, local deployment details, or Grace-Mar-specific state, keep it in `grace-mar`.
+3. **Does it preserve template purity?** `companion-self` must stay free of live Record data, private artifacts, and instance-only assumptions.
+4. **Can it be generalized cleanly?** If the change is mixed, separate the reusable part before proposing it upstream.
+5. **Is provenance clear?** Note whether the idea came from instance operation, a sync audit, or a private workflow that was later generalized.
 
 ---
 

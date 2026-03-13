@@ -8,10 +8,10 @@
 
 ## 1) What This Repo Is
 
-**Companion-self** = the **template** repo. **Grace-Mar** = the **instance** repo (first and currently only instance).
+**Companion-self** = the **template** repo and potential public/open-source product surface. **Grace-Mar** = the private **instance** repo (first and currently only instance) and working tool.
 
 - **Template:** Concept, protocol, seed-phase definition, and structure for creating a new companion self. No one's Record; no instance data.
-- **Instance:** One live companion self (Record, bot, pipeline). Created from the template when a **new user completes seed phase**.
+- **Instance:** One live companion self (Record, bot, pipeline). Created from the template when a **new user completes seed phase**. Grace-Mar is the proving ground where structural ideas are tested against real use.
 - **Creation rule:** A new companion self is **initiated only by a new user via seed phase**. No copying another repo's `users/`; no pre-filled Record.
 
 **Domains:** companion-self.com = concept/product (this template). grace-mar.com = the first instance (profile, bot, PRP).
@@ -24,6 +24,7 @@
 - **Different lifecycles:** Template changes slowly (protocol, seed design). Instance changes with every pipeline merge and session.
 - **Fork semantics:** People fork **companion-self** to create new instances (new user + seed phase). They do **not** fork grace-mar to get a second companion.
 - **System development:** Ongoing system development (protocol, schema, seed phases) happens in **companion-self**. Grace-Mar **consumes** upgrades by merging from the template (docs, templates, governance) without overwriting its Record.
+- **Proof flow:** Structural improvements proven in Grace-Mar may be generalized and merged back into companion-self. Private workflows, live Record state, and instance-specific deployment details stay in Grace-Mar.
 
 ---
 

@@ -4,7 +4,7 @@
 
 **Scope:** Structure, concept compliance, protocol compliance, schema alignment, governance, and sync readiness. Not a full security or UX audit.
 
-**Date:** February 2026
+**Date:** March 2026
 
 ---
 
@@ -78,21 +78,26 @@ The template concept (Mind + Record + Voice; cognitive fork; sovereign merge; kn
 
 ## 5. Schema alignment (template paths)
 
-Template paths that instances sync *from* companion-self (grace-mar holds copies received via sync) are listed in MERGING-FROM-COMPANION-SELF §1. Grace-mar should have these files so it can receive template updates from companion-self.
+Template alignment is now best understood in **two layers**:
+
+1. **Concept / protocol alignment** — does grace-mar implement the same governing model?
+2. **Manifest / path alignment** — does grace-mar mirror or explicitly account for the live template's current file surface?
+
+Grace-mar remains strongly aligned on the first layer. The second layer is now **partial**, because the live companion-self repo has added template files and path names that are not yet fully reflected in grace-mar's local sync docs.
 
 | Template path | In grace-mar | Notes |
 |---------------|--------------|--------|
-| docs/conceptual-framework.md | ✅ | Present |
-| docs/architecture.md | ✅ | Present |
-| docs/identity-fork-protocol.md | ✅ | Present |
-| docs/self-template.md | ✅ | Present |
-| docs/skills-template.md | ✅ | Present (WORK rename reflected) |
-| docs/evidence-template.md | ✅ | Present |
-| docs/memory-template.md | ✅ | Present |
-| agents.md | ✅ | Present (self-skill-work, SKILLS-MODULARITY ref) |
-| Seed-phase definition | ✅ | ARCHITECTURE (Fork Lifecycle, Seeding), OPERATOR-BRIEF; SEED-PHASE-2/3 in users/grace-mar |
+| `docs/identity-fork-protocol.md` | ✅ | Present, but differs from template copy |
+| `docs/concept.md` | ⚠️ | No same-name file; concept is covered across `docs/conceptual-framework.md` and `docs/architecture.md` |
+| `docs/seed-phase.md` | ⚠️ | No same-name file; seed phase is covered in ARCHITECTURE and operator docs |
+| `docs/long-term-objective.md` | ❌ | Template-only path; not yet mirrored or explicitly mapped in grace-mar |
+| `docs/two-hour-screentime-target.md` | ❌ | Template-only path; not yet mirrored or explicitly mapped in grace-mar |
+| `docs/instance-patterns.md` | ❌ | Template-only path; not yet mirrored or explicitly mapped in grace-mar |
+| `users/_template/` | Reference only | Correctly absent as a live instance path; should remain template-side |
+| `template-manifest.json` / `template-version.json` | ⚠️ | Not tracked locally as sync anchors; no recorded baseline yet |
+| Grace-mar schema mirrors (`docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `agents.md`) | ✅ | Present and still valid instance-side mirrors / elaborations |
 
-**Verdict:** All template paths exist in grace-mar. Schema and governance docs are in place (synced from companion-self; grace-mar receives updates, does not originate templates).
+**Verdict:** Grace-mar is **conceptually aligned** with the companion-self template, but **path / manifest alignment is partial**. The local instance still matches the template's governing model, yet the sync contract and audit docs lag the live template surface.
 
 ---
 
@@ -114,11 +119,12 @@ Template paths that instances sync *from* companion-self (grace-mar holds copies
 
 ## 7. Gaps and recommendations
 
-### 7.1 Minor / optional
+### 7.1 Audit drift to fix
 
-- **Template sync log (MERGING-FROM-COMPANION-SELF §3):** Still empty (“none yet”). Acceptable until the first pull from a live companion-self repo; then log each sync.
-- **Optional diff script (MERGING-FROM-COMPANION-SELF §4):** Not implemented. Low priority until companion-self has stable content to diff against.
-- **users/_template/ in template repo:** Not applicable to grace-mar; that’s for companion-self to add. Grace-mar correctly does not contain a generic _template/ (it has a real user, grace-mar).
+- **Local audit verdict is too strong:** Earlier wording said all template paths exist in grace-mar. That is no longer accurate against the live template manifest.
+- **Template sync log is still empty:** There is no recorded baseline showing which companion-self commit, tag, or template version grace-mar is aligned to.
+- **Manifest-first sync contract not yet fully internalized:** Grace-mar now acknowledges manifest-driven sync, but older audit artifacts still reflect pre-manifest assumptions.
+- **users/_template/ in template repo:** Correctly absent in grace-mar as a live instance path. This is not a defect, but the audit should distinguish template-only scaffolds from missing instance mirrors.
 
 ### 7.2 Instance-only vs template
 
@@ -143,11 +149,11 @@ Template paths that instances sync *from* companion-self (grace-mar holds copies
 | Structure | ✅ Complete |
 | Concept compliance | ✅ Aligned |
 | Protocol compliance | ✅ Aligned |
-| Schema / template paths | ✅ Present |
+| Schema / template paths | ⚠️ Partial |
 | Governance & operating modes | ✅ Aligned |
-| Gaps | Minor only (sync log empty until first sync; optional diff script) |
+| Gaps | Sync contract and local audit artifacts lag the live template manifest |
 
-**Conclusion:** Grace-mar is **compliant** with the companion-self template specification. The template repo is live at [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self). Grace-mar is the first **instance**; companion-self is the **template** (concept, protocol, seed, users/_template/). Grace-mar receives template updates via the merge checklist in MERGING-FROM-COMPANION-SELF without overwriting the Record or instance config.
+**Conclusion:** Grace-mar remains a valid **reference implementation** of the companion-self model, and it is still aligned on concept, protocol, and governance. However, the local sync docs and audit story were ahead of the live public template becoming concrete. The current state is best described as **conceptually aligned, operationally stale**: the instance is sound, but the documented sync surface should be refreshed against the live template manifest before claiming full path-level alignment.
 
 ---
 

@@ -1,29 +1,34 @@
 # Merging Upgrades from Companion-Self (Template → Instance)
 
-**Purpose:** Grace-Mar is an **instance**; companion-self is the **template** repo. When the template is updated (concept, protocol, seed, schema), this doc describes how to pull those changes into grace-mar without overwriting the Record. See [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §5 for the contract. For a side-by-side overview of instance vs template, see [grace-mar vs companion-self](grace-mar-vs-companion-self.md).
+**Purpose:** Grace-Mar is a private **instance** and working tool; companion-self is the upstream **template** repo and live public/open-source product surface. When the template is updated (concept, protocol, seed, schema), this doc describes how to pull those changes into grace-mar without overwriting the Record. Structural improvements proven inside grace-mar may later be generalized back into companion-self, but instance data and private workflows remain in grace-mar. See [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §5 for the contract. For a side-by-side overview of instance vs template, see [grace-mar vs companion-self](grace-mar-vs-companion-self.md).
 
 **Workspace boundary:** All grace-mar modifications—including merges from companion-self—are done in **this (grace-mar) workspace**. Do not edit grace-mar from a companion-self workspace; there, grace-mar is read-only reference. When you perform the merge checklist below, you are in the grace-mar workspace; companion-self is pulled or opened for reference only. See companion-self [COMPANION-SELF-BOOTSTRAP](https://github.com/rbtkhn/companion-self/blob/main/companion-self-bootstrap.md) §7.
 
 ---
 
-## 1. Template paths (safe to sync)
+## 1. Template sync surfaces (safe to sync)
 
-These paths in companion-self are the canonical source for shared concept, protocol, and schema. Grace-mar keeps its own copies and updates them to match the template when upgrading. **When companion-self adds or renames files, update this list.**
+Use the live template repo's manifest and upgrade docs as the source of truth. Grace-mar keeps local copies or instance-specific equivalents where useful, but not every template path must exist verbatim in the instance. **When companion-self adds or renames files, update this section and the audit.**
 
 | Path | Description |
 |------|-------------|
-| `docs/conceptual-framework.md` | Concept: Record, Voice, cognitive fork, knowledge boundary |
-| `docs/architecture.md` | System design, fork lifecycle, seeding |
+| `template-manifest.json` | Authoritative template inventory; use this first when checking what the template now contains |
+| `template-version.json` | Template version / release marker for recording sync baseline |
+| `how-instances-consume-upgrades.md` | Companion-self's instance upgrade contract; compare with this doc when drift appears |
+| `docs/concept.md` | Template concept doc; grace-mar may mirror this into its broader concept docs rather than a same-named file |
 | `docs/identity-fork-protocol.md` | Protocol: stage → approve → merge; evidence linkage |
-| `docs/self-template.md` | SELF module schema and governance |
-| `docs/skills-template.md` | SKILLS module schema |
-| `docs/evidence-template.md` | EVIDENCE module schema |
-| `docs/memory-template.md` | MEMORY schema and scope |
-| `agents.md` | Template-level governance (pipeline rule, knowledge boundary, operating modes) |
-| Seed-phase definition | In companion-self: docs or README section describing seed phases; in grace-mar: reflected in ARCHITECTURE and OPERATOR-BRIEF |
-| `docs/skill-work/` | WORK submodules:  (Alpha benchmarks, 2-hour target, Record-driven prompts). Re-sync when template updates. |
+| `docs/seed-phase.md` | Template seed-phase definition; grace-mar currently expresses this through ARCHITECTURE and operator docs |
+| `docs/long-term-objective.md` | Template-level long-term objective / system rule |
+| `docs/two-hour-screentime-target.md` | Template-level screen time constraint / philosophy |
+| `docs/instance-patterns.md` | Template guidance for instance variants and advanced patterns |
+| `users/_template/` | Template scaffold for new instances; reference-only in grace-mar (do not copy into `users/grace-mar/`) |
+| Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `agents.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.
+
+**Useful rule:** Treat `grace-mar` as the proving ground and `companion-self` as the reusable base. If a change is structural and instance-agnostic, it may be a candidate to merge back upstream later. If it depends on live Record state, private operator routines, or local deployment quirks, keep it instance-only.
+
+**Current alignment note:** The live companion-self repo contains template-only paths that do not need one-to-one copies in grace-mar, but they do need explicit acknowledgment in audits and sync notes. Use `docs/skill-work/work-companion-self/audit-report-manifest.md` as the current path-level reference until a newer diff is generated.
 
 ---
 
@@ -34,10 +39,11 @@ Use this when you have updates in companion-self that should flow into grace-mar
 | Step | Action |
 |------|--------|
 | 1 | **Get template state** — Clone or pull companion-self (e.g. `git clone https://github.com/rbtkhn/companion-self.git /tmp/companion-self` or open in a sibling directory). Note the commit or tag you're syncing from. |
-| 2 | **Diff template paths** — For each path in §1 that exists in companion-self, compare with grace-mar's copy. `diff -r` or a script (see §4) can help. |
-| 3 | **Merge into grace-mar** — For each path where the template is ahead, copy or merge changes into grace-mar's file. Resolve any instance-specific additions in grace-mar (keep them). Do **not** overwrite `users/grace-mar/` or instance config. |
-| 4 | **Validate** — Run `python scripts/validate-integrity.py` (or equivalent). Run governance check if applicable (e.g. `scripts/governance_checker.py`). Fix any breakage. |
-| 5 | **Log the sync** — Record in §3 (Template sync log) the date, companion-self commit/tag, and paths updated. |
+| 2 | **Read template inventory** — Check `template-manifest.json`, `template-version.json`, and `how-instances-consume-upgrades.md` in companion-self so you know the current upstream surface before comparing individual files. |
+| 3 | **Diff mapped paths** — Compare template files with grace-mar's same-name copies or instance-side equivalents. `docs/skill-work/work-companion-self/audit-report-manifest.md` and `scripts/template_diff.py` can help. |
+| 4 | **Merge into grace-mar** — For each area where the template is ahead, update grace-mar's mirrored file or instance-side equivalent. Resolve any instance-specific additions in grace-mar (keep them). Do **not** overwrite `users/grace-mar/` or instance config. |
+| 5 | **Validate** — Run `python scripts/validate-integrity.py --user grace-mar --json` and `python scripts/governance_checker.py`. Fix any breakage. |
+| 6 | **Log the sync** — Record in §3 (Template sync log) the date, companion-self commit/tag or template version, and paths updated. |
 
 ---
 
@@ -47,7 +53,7 @@ Record each merge from template so you can see when grace-mar was last updated a
 
 | Date | Companion-self (commit or tag) | Paths updated |
 |------|---------------------------------|---------------|
-| *(none yet)* | — | — |
+| *(no recorded baseline yet)* | — | Before claiming full alignment, record the companion-self commit/tag or `template-version.json` value used for the sync |
 
 ---
 
@@ -63,7 +69,23 @@ Placeholder: `scripts/template_diff.py` or similar, to be added when useful.
 
 ---
 
-## 5. Related
+## 5. Deciding whether a Grace-Mar change should go upstream
+
+Use this checklist before proposing an instance-side improvement back to `companion-self`.
+
+| Question | If yes | If no |
+|------|--------|-------|
+| Is the change reusable across many future instances? | Candidate for upstreaming | Keep in `grace-mar` |
+| Does it avoid `users/grace-mar/`, private artifacts, and instance-only config? | Candidate for upstreaming | Keep in `grace-mar` |
+| Can it be described without Abby/Grace-Mar-specific context? | Candidate for upstreaming | Generalize first or keep local |
+| Is it governance, schema, docs, tooling, bootstrap, or sync logic? | Strong upstream candidate | Review carefully |
+| Is it a private operating habit or one-off workflow for this instance? | Probably instance-only | Keep in `grace-mar` |
+
+If mixed, split the change: upstream the reusable layer to `companion-self`; keep the instance-specific layer in `grace-mar`.
+
+---
+
+## 6. Related
 
 - **companion-self-bootstrap.md** §5 — Contract: safe to sync, never overwrite, process.
 - **operator-weekly-review.md** — Optional step: periodic template sync when template or instance change.

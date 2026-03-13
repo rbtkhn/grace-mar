@@ -47,9 +47,26 @@ Last updated: 2026-03-13
 - **docs/implementable-insights.md** — Concrete takeaways from Claws/AGI discourse: harness vs model, continual learning = human-gated writes, system boundaries, config-via-skills, small auditable surface, forkable + skills. Linked from ARCHITECTURE § System boundaries and harness.
 - **docs/adding-a-channel.md** — Skill pattern for new channels: one entrypoint per channel, shared core, env config, no channel logic in core.
 
+### Companion-self vs Grace-Mar boundary
+- **`companion-self`** = upstream template and potential public/open-source product surface.
+- **`grace-mar`** = private instance, proving ground, and working tool.
+- Structural, reusable, instance-agnostic improvements proven in `grace-mar` may be merged back into `companion-self`.
+- Record content, private workflows, deployment quirks, and instance-specific state stay in `grace-mar`.
+- Working rule: treat `grace-mar` as laboratory + live instrument; treat `companion-self` as reusable base.
+
 ---
 
 ## Recently Completed (High Level)
+
+### Companion-self boundary clarification (2026-03-13)
+- **`docs/skill-work/work-companion-self/README.md`** — Added canonical template-vs-instance framing plus an upstreamability test for deciding what can merge back to `companion-self`.
+- **`docs/merging-from-companion-self.md`** — Clarified `grace-mar` as private proving ground and added a checklist for deciding whether a structural change should go upstream.
+- **`companion-self-bootstrap.md`** — Strengthened the template/public-vs-instance/private distinction so future template work starts from the right boundary.
+
+### Companion-self alignment audit refresh (2026-03-13)
+- **`docs/audit-grace-mar-vs-companion-self-template.md`** — Reframed the audit around concept alignment vs manifest/path alignment; conclusion is now "conceptually aligned, operationally stale" rather than blanket path-level compliance.
+- **`docs/merging-from-companion-self.md`** — Updated sync guidance to treat `template-manifest.json`, `template-version.json`, and `how-instances-consume-upgrades.md` as the live upstream contract.
+- **`docs/skill-work/work-companion-self/audit-report.md`** — Marked the older non-manifest diff as legacy; `audit-report-manifest.md` is the current path-level reference until the next regenerated report.
 
 ### CI + PRP workflow hardening (2026-03-13)
 - **`.github/workflows/governance.yml`** — Added `validate-integrity.py --json` to the no-secrets governance CI path so routine push/PR checks cover both policy scan and canonical Record integrity.
