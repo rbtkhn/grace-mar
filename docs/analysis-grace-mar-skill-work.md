@@ -1,5 +1,7 @@
 # Analysis: Grace-Mar Skill-Work (BUILD Container)
 
+> Legacy analysis note: this file analyzes the older `self-skill-work` / `BUILD` model as it existed in the Record. Current canon treats work as a separate execution layer. Preserve this analysis for history; do not use it as the current taxonomy source.
+
 **Purpose:** Analyze the **self-skill-work** dimension (BUILD container) of the Grace-Mar Record — scope, evidence linkage, dimensions, and alignment with SKILLS-MODULARITY and ID-TAXONOMY.
 
 **Source:** `users/grace-mar/skills.md` § BUILD Container; `users/grace-mar/self-evidence.md` § III. CREATION LOG, § V. ACTIVITY LOG.  

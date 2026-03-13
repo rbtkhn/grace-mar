@@ -85,7 +85,7 @@ def generate_manifest(user_id: str = "grace-mar") -> dict:
             "SELF/IX-C",
             "SKILLS/THINK",
             "SKILLS/WRITE",
-            "SKILLS/BUILD",
+            "WORK/context",
             "EVIDENCE/activity_log",
             "EVIDENCE/writing_log",
             "EVIDENCE/creation_log",
@@ -99,7 +99,8 @@ def generate_manifest(user_id: str = "grace-mar") -> dict:
         "writable_note": "Agents may stage candidates only. Merge requires user approval.",
         "schema_hints": {
             "SELF": {"type": "object", "description": "Identity, personality, post-seed growth (IX-A, IX-B, IX-C)"},
-            "SKILLS": {"type": "object", "description": "Capability containers (THINK, WRITE, BUILD)"},
+            "SKILLS": {"type": "object", "description": "Record-bound capability containers (THINK, WRITE)"},
+            "WORK": {"type": "object", "description": "Separate work / execution context (territories, plans, delivery state)"},
             "EVIDENCE": {"type": "object", "description": "Activity log, writing, creation; immutable once captured"},
             "RECURSION-GATE": {"type": "object", "description": "Staging area; format documented in agents.md"},
         },

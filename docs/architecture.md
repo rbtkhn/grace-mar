@@ -140,27 +140,34 @@ History is always preserved. Changes do not overwrite.
 
 Contains what the companion CAN DO — capabilities that grow through authentic activity.
 
-### The Three Modules
+### The Record-Bound Skill Modules
 
-Skills organize under three fundamental cognitive modules: THINK, WRITE, WORK. For a formal specification of module boundaries, output functions (Voice and profile as functions of skill-write), and invariants, see [SKILLS-MODULARITY](skills-modularity.md). **Standard labels** (for APIs, docs, cross-references): **self-skill-write**, **self-skill-think**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-). Each module is an objective-topic-specialized sub-agent (teacher/tutor, evaluator, record keeper). **Naming:** The third module is WORK in prose; internal identifiers remain BUILD (SKILLS BUILD container, CREATE-nnn, ACT-nnn) for compatibility. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience through the pipeline (human-gated).
+Skills organize under **two Record-bound cognitive modules: THINK and WRITE**. For a formal specification of module boundaries, output functions (Voice and profile as functions of skill-write), and invariants, see [SKILLS-MODULARITY](skills-modularity.md). **Standard labels** (for APIs, docs, cross-references): **self-skill-write** and **self-skill-think**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-). These modules are objective-topic-specialized components (teacher/tutor, evaluator, record keeper) for what the Record can evidence directly.
 
 | Module | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
 | **THINK** | Intake, learning, comprehension (multimodal) | Text, video, music/audio, images/diagrams/maps, mixed media; summaries and interpretations |
-| **WORK** | Making, planning, execution, exchange, creation, exploration | Lemonade stand, projects with P&L, content with audience, things built, drawings, inventions, budgeting |
+
+### Separate work / execution layer
+
+Work is now a separate layer rather than a self-skill module. It lives in:
+
+- `docs/skill-work/work-*/` for reusable work territories
+- `users/[id]/work-*.md` for instance work contexts
+
+Work territories may use broader LLM capability, external tools, APIs, and planning loops than the Record allows. They can produce artifacts, plans, and candidate proposals. But they do not write Record truth directly, and they remain gated whenever they would update SELF, EVIDENCE, or prompt.
 
 ### Semi-Independent Executor Policy
 
-THINK/WRITE/WORK may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate.
+THINK and WRITE may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate. Work territories may also have their own execution loops, but those loops are adjacent to the Record rather than part of the self-skill set.
 
 | Executor | Primary objective | SELF input emphasis | Default posture |
 |----------|-------------------|---------------------|-----------------|
 | **THINK** | Perception and comprehension fidelity | IX-B Curiosity first, IX-A Knowledge second, IX-C Personality third | Explore broadly; abstain when evidence is thin |
 | **WRITE** | Expression and explanation in-character | IX-C Personality first, IX-A Knowledge second, IX-B Curiosity third | Preserve voice and tone; avoid unsupported claims |
-| **WORK** | Planning, execution, and deliverable quality | IX-A Knowledge first, IX-C Personality second, IX-B Curiosity third | Favor explicit constraints, trade-offs, and escalation |
 
-Shared constraints for all three:
+Shared constraints for Record-bound executors:
 - stage-only authority (never merge),
 - evidence-linked output,
 - knowledge boundary compliance,
@@ -188,14 +195,9 @@ SKILLS/
 │   ├── vocabulary/       # Words acquired
 │   └── interests/        # What they choose
 │
-└── BUILD/
-    ├── planning/         # Goals, timelines, milestones
-    ├── execution/        # Follow-through, deliverables
-    ├── financial/        # Money concepts, P&L, budgeting
-    ├── collaboration/    # Teamwork, delegation
-    ├── originality/      # Novel ideas (creation)
-    ├── elaboration/      # Detail, richness (creation)
-    └── flexibility/      # Adapting to constraints (creation)
+work/
+├── territories/         # Reusable work domains and operator doctrine
+└── contexts/            # Instance-specific work files and live execution state
 ```
 
 ### Activity-Based Growth
@@ -213,7 +215,7 @@ Activity: Daily journal entry (WRITE)
 ### Characteristics
 
 - **Activity-driven**: Grows from authentic production, not explicit teaching
-- **Module-organized**: THINK, WRITE, WORK as primary structure
+- **Module-organized**: THINK and WRITE as Record structure; work lives alongside as an execution layer
 - **Dimension-tracked**: Each module has measurable sub-dimensions
 - **Level-based**: 5 developmental levels per dimension
 - **Evidence-linked**: Every claim traces to captured activities
@@ -225,7 +227,7 @@ Activity: Daily journal entry (WRITE)
 ### SELF → SKILLS (Prediction)
 
 - **Interests** (SELF) predict which modules develop fastest
-- **Reasoning patterns** (SELF) shape WORK (creation) capability growth
+- **Reasoning patterns** (SELF) can shape adjacent work style and project selection
 
 ### SKILLS → SELF (Inference)
 
@@ -240,8 +242,8 @@ THINK Activity ───→ SELF.interests (what they choose)
                    SELF.preferences (content patterns)
                    SELF.values (themes they return to)
 
-WORK (creation) Activity → SELF.reasoning_patterns (how they think)
-                            SELF.interests (what they explore)
+Work-context activity ──→ SELF.reasoning_patterns (how they think)
+                         SELF.interests (what they explore)
 ```
 
 ### The WRITE → SELF Pipeline
@@ -318,7 +320,7 @@ The system should:
 
 ## Container Edge Principle
 
-The three SKILLS modules (THINK, WRITE, WORK) are **containers** that define what the companion currently knows and can do. The system proposes activities at the **edge** of these containers.
+The Record-bound SKILLS modules (THINK, WRITE) are **containers** that define what the companion currently knows and can do inside the Record. The system proposes Record-facing activities at the **edge** of these containers. Work territories may also have their own operational edge, but that edge belongs to the work layer rather than to SKILLS.
 
 ### The Container Model
 
@@ -336,7 +338,7 @@ The three SKILLS modules (THINK, WRITE, WORK) are **containers** that define wha
 │                                                             │
 │   THINK: books read, vocabulary acquired                     │
 │   WRITE: words used, complexity achieved                    │
-│   WORK (creation): creativity demonstrated                  │
+│   Adjacent work context: approved execution evidence        │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -386,7 +388,7 @@ Activities proposed at the boundary of current capability, where the companion c
 
 > "How well does [user] write?" → SKILLS.WRITE levels
 > "What's [user]'s reading comprehension level?" → SKILLS.THINK
-> "How creative/original is [user]?" → SKILLS WORK (BUILD container; creation dimensions)
+> "How creative/original is [user]?" → approved evidence and work-layer artifacts (historical BUILD creation dimensions may still inform this)
 
 ### Query Both (Full Profile)
 
@@ -484,7 +486,6 @@ interface Skills {
   modules: {
     WRITE: ModuleProfile;
     THINK: ModuleProfile;
-    BUILD: ModuleProfile;
   };
   
   activities: Activity[];
@@ -513,8 +514,8 @@ interface Activity {
   duration_minutes: number;
   modality: 'voice' | 'text' | 'image' | 'video' | 'mixed';
   activity_type: string;
-  module_primary: 'WRITE' | 'THINK' | 'BUILD';
-  module_secondary?: 'WRITE' | 'THINK' | 'BUILD';
+  module_primary: 'WRITE' | 'THINK' | 'WORK_CONTEXT';
+  module_secondary?: 'WRITE' | 'THINK' | 'WORK_CONTEXT';
   
   content: {
     text?: string;
@@ -546,7 +547,7 @@ interface Activity {
 
 interface CapabilityClaim {
   id: string;
-  module: 'WRITE' | 'THINK' | 'BUILD';
+  module: 'WRITE' | 'THINK';
   dimension: string;
   statement: string;
   level: 1 | 2 | 3 | 4 | 5;
@@ -573,7 +574,7 @@ interface CapabilityClaim {
 - User-controlled access at all ages
 
 ### SKILLS (Sensitive)
-- Contains capability data across READ/WRITE/BUILD
+- Contains Record-bound capability data across THINK/WRITE
 - Can be shared for credential purposes
 - Pillar-limited access possible
 
@@ -660,7 +661,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 | Node | Role |
 |------|------|
 | **SELF** | Identity, IX-A/B/C, voice, personality |
-| **SKILLS** | Capability containers (THINK, WRITE, WORK) |
+| **SKILLS** | Capability containers (THINK, WRITE) |
 | **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
 | **LIBRARY** (self-library) | Curated lookups (books, videos) for the bot |
 | **RECURSION-GATE** | Staging area before merge |
@@ -861,7 +862,7 @@ Emergent behavioral patterns detected through the observation window. Art media 
 
 ### Multi-Dimension Signals
 
-**IX-A/B/C extraction is done by the analyst**, not by the skill modules (THINK, WRITE, WORK). Skill modules update only capability (SKILLS); the analyst stages knowledge/curiosity/personality candidates for SELF. One input (e.g. art, music, journal) can therefore feed both a skill container and SELF. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc).
+**IX-A/B/C extraction is done by the analyst**, not by the skill modules. Skill modules update only capability (SKILLS); the analyst stages knowledge/curiosity/personality candidates for SELF. One input (e.g. art, music, journal, work artifact) can therefore feed both a skill container and SELF. See [SKILLS-TEMPLATE § III](skills-template.md#iii-skill-interactions-and-the-self).
 
 A single artifact can generate entries in all three dimensions simultaneously. For example, a painted pharaoh portrait produces:
 - **Knowledge**: Egyptian pharaohs / King Tut's death mask

@@ -92,7 +92,7 @@ def _extract_access_needs(self_content: str, lexile: str | None) -> dict:
 
 
 def _extract_skills_edge(skills_content: str) -> dict:
-    """Extract edge from each container: THINK, WRITE, WORK, MATH, CHINESE."""
+    """Extract edge from each container-like section."""
     edges = {}
     blocks = re.split(r"\n#{2,3} ", skills_content)
     for block in blocks[1:]:  # skip header
@@ -148,8 +148,9 @@ def export_curriculum(
     self_content = _read(profile_dir / "self.md")
     skills_content = "\n".join(
         _read(profile_dir / p)
-        for p in ["skills.md", "skill-think.md", "skill-write.md", "work-alpha-school.md"]
+        for p in ["skills.md", "skill-think.md", "skill-write.md"]
     )
+    work_content = _read(profile_dir / "work-alpha-school.md")
     evidence_content = _read(profile_dir / "self-evidence.md")
     library_content = _read(profile_dir / "self-library.md")
 
@@ -176,6 +177,7 @@ def export_curriculum(
     lexile = _extract_lexile(self_content)
     access_needs = _extract_access_needs(self_content, lexile)
     skills_edge = _extract_skills_edge(skills_content)
+    work_edge = _extract_skills_edge(work_content).get("work")
     evidence_anchors = _evidence_anchors(evidence_content)
     library = _library_titles(library_content)
 
@@ -193,6 +195,7 @@ def export_curriculum(
         "curiosity": ix["ix_b"],
         "personality": ix["ix_c"][:10],
         "skills_edge": skills_edge,
+        "work_context_edge": work_edge,
         "interests": interests,
         "evidence_anchors": evidence_anchors,
         "library": library,

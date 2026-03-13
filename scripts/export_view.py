@@ -61,7 +61,7 @@ def export_view(user_id: str, view: str) -> str:
     self_path = profile_dir / "self.md"
     skills_content = "\n".join(
         _read(profile_dir / p)
-        for p in ["skills.md", "skill-think.md", "skill-write.md", "work-alpha-school.md"]
+        for p in ["skills.md", "skill-think.md", "skill-write.md"]
     )
     self_raw = _read(self_path)
 
@@ -130,7 +130,7 @@ def _export_public(self_raw: str, skills_raw: str, user_id: str) -> str:
 
     if skills_raw:
         summary = re.findall(
-            r"## (THINK|WRITE|WORK) Container\s*\n(```yaml[\s\S]*?```)",
+            r"## (THINK|WRITE) Container\s*\n(```yaml[\s\S]*?```)",
             skills_raw,
         )
         if summary:

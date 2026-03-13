@@ -1,5 +1,7 @@
 # Analysis: Grace-Mar Evidence Module and Redundancy Audit
 
+> Compatibility note: references in this audit to `self-skill-work` reflect the older taxonomy. Current canon keeps `CREATE-*` / `ACT-*` evidence and historical BUILD references, but work now lives in a separate execution layer rather than in the self-skill set.
+
 **Purpose:** Analyze the Record's **evidence** layer — scope, terminology, linkage to SELF/SKILLS — and audit `users/grace-mar` for redundant or overlapping files.
 
 **Sources:** `users/grace-mar/self-evidence.md`, `docs/id-taxonomy.md`, `docs/evidence-template.md`, `docs/conceptual-framework.md`  

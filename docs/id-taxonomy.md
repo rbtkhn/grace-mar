@@ -25,15 +25,25 @@
 
 ## Standard capability labels (self-skill-*)
 
-Canonical labels for the three SKILLS modules when referring to the self's capability layer (APIs, docs, cross-references):
+Canonical labels for the Record-bound SKILLS modules when referring to the companion's capability layer (APIs, docs, cross-references):
 
 | Standard label | Module | Location | Description |
 |----------------|--------|----------|-------------|
 | **self-skill-write** | WRITE | skills.md § WRITE Container | Production — journal, stories, explanations; primary data source for SELF linguistic style |
 | **self-skill-think** | THINK | skills.md § THINK Container | Intake, learning, comprehension (multimodal); feeds SELF interests and preferences |
-| **self-skill-work** | WORK (BUILD container) | skills.md § BUILD Container | Making, planning, execution, creation; starts from zero, grows via pipeline |
 
-Use these labels in prose, tooling, and external references where a single token is needed. The first module is **THINK** (intake, learning, comprehension); the third is **WORK** (internal identifier: BUILD container). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged; READ-nnn feeds the THINK container (Reading List).
+Use these labels in prose, tooling, and external references where a single token is needed. The Record-bound skill modules are **THINK** (intake, learning, comprehension) and **WRITE** (production, expression). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged; READ-nnn feeds the THINK container (Reading List).
+
+### Work layer labels
+
+Canonical labels for the separate work / execution layer:
+
+| Standard label | Scope | Location | Description |
+|----------------|-------|----------|-------------|
+| **work-territory** | Reusable execution domain | `docs/skill-work/work-*/` | A self-contained work domain such as `work-build-ai`, `work-american-politics`, or `work-human-teacher` |
+| **work-context** | Instance-specific work state | `users/[id]/work-*.md` | Live instance work file such as `work-alpha-school.md`; separate from SKILLS |
+
+**Historical compatibility:** `BUILD` remains an internal legacy term attached to older docs, evidence, and analyses. `CREATE-*` and `ACT-*` remain valid evidence IDs and are not renamed by this taxonomy change.
 
 ---
 
@@ -47,7 +57,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 | **self-archive** | users/[id]/self-archive.md | Gated log of approved activity (voice and non-voice); appended only on merge |
 | **self-memory** | users/[id]/memory.md | Ephemeral session context — tone, recent topics, calibrations; not part of the Record; optional |
 
-Use these with **self-skill-write**, **self-skill-think**, **self-skill-work** for a consistent self-scoped vocabulary.
+Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
 
 ---
 
@@ -62,11 +72,12 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-personality** | self.md IX-C | Observed behavioral patterns (post-seed personality) |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
 | **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
-| **self-skill-work** | skills.md § BUILD Container | Making, planning, execution, creation |
 | **self-archive** | self-archive.md | Gated log of approved activity |
 | **self-library** | self-library.md | Curated lookup sources |
 | **self-memory** | memory.md | Ephemeral session context (not part of Record) |
-| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, self-skill-work (and the rest of the companion self) |
+| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self |
+
+**Adjacent but separate:** work territories and instance work contexts may use full LLM/tool capability and may produce artifacts or staged candidates, but they are not part of the self-skill taxonomy and do not automatically enter the Record.
 
 ---
 

@@ -115,12 +115,13 @@ Like a software fork:
 
 The fork is not a real-time mirror. It is a living, growing Record.
 
-### Two Modules
+### Core Structure
 
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
-| **SKILLS** | THINK, WRITE, WORK capability containers | What they CAN DO |
+| **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
+| **WORK LAYER** | `work-*` territories and instance work contexts | Planning, execution, delivery, and tool-using work adjacent to the Record |
 
 ### Three-Dimension Mind (Post-Seed Growth)
 

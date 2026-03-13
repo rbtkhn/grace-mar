@@ -4,7 +4,7 @@
 
 ## Concept
 
-The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. It captures who the person is (identity, personality, voice) and what they can do (skills, knowledge, creative capability). We create avatars of ourselves; the fork is one: queryable, evidence-grounded, gated. Over time, it becomes a living cognitive record that can be queried, emulated, and preserved — extended memory that remembers what the user has chosen to document.
+The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. It captures who the person is (identity, personality, voice) and what they can do (Record-bound skills, knowledge, approved evidence). Separate work territories handle planning and execution without redefining the Record itself. We create avatars of ourselves; the fork is one: queryable, evidence-grounded, gated. Over time, it becomes a living cognitive record that can be queried, emulated, and preserved — extended memory that remembers what the user has chosen to document.
 
 The fork grows only through what the user explicitly provides. An optional emulation layer (Telegram and/or WeChat bots) acts as an observation window and teaching/tutoring interface — a channel through which the user selectively exposes thoughts and learns from the fork's voice.
 
@@ -15,7 +15,8 @@ Two core modules define the fork:
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
-| **SKILLS** | THINK, WRITE, BUILD capability containers | What they CAN DO |
+| **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
+| **WORK LAYER** | `work-*` territories and instance work contexts | Planning, execution, delivery, and tool-using work outside the self-skill taxonomy |
 
 Post-seed growth is organized into a **three-dimension mind model**:
 

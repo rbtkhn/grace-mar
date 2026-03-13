@@ -1,5 +1,7 @@
 # Grace-Mar vs Companion-Self: Skill-Work (WORK / BUILD) Comparison
 
+> Legacy comparison note: this document describes the pre-refactor `self-skill-work` / `BUILD` model. Current canon treats work as a separate execution layer rather than a self-skill. Keep this file for historical comparison, not for current taxonomy.
+
 **Purpose:** Compare how **skill-work** (self-skill-work, WORK module, BUILD container) is defined in the **companion-self template** vs how it is **instantiated** in the **grace-mar** instance. Template = schema, intent, and governance; instance = concrete Record with evidence and levels.
 
 **References:** Template: [SKILLS-TEMPLATE](skills-template.md) § WORK, [SKILLS-MODULARITY](skills-modularity.md). Instance: [users/grace-mar/skill-work.md](../users/grace-mar/skill-work.md), [analysis-grace-mar-skill-work](analysis-grace-mar-skill-work.md).

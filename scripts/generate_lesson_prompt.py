@@ -2,7 +2,7 @@
 """
 Generate a one-prompt-per-day lesson for the human companion to paste into ChatGPT or Grok.
 
-Reads Record (self.md, skill-think.md, work-alpha-school.md), extracts IX-A/B, edge, goals,
+Reads the Record (`self.md`, `skill-think.md`) plus separate work context (`work-alpha-school.md`), extracts IX-A/B, edge, work goals,
 and fills the minimal prompt shape from docs/skill-work/work-lesson-generation-walkthrough.md §3.
 
 Design: structure+execution (human provides structure via prompt; LLM executes), evidence-first
@@ -99,7 +99,7 @@ def _extract_cur_topics(self_content: str, max_entries: int = 15) -> list[str]:
 
 
 def _extract_who_she_is(self_content: str, skill_work: str, identity: dict) -> str:
-    """Build WHO SHE IS summary from SELF + skill-work companion_creative_context."""
+    """Build WHO SHE IS summary from SELF plus adjacent work-context creative notes."""
     parts = []
     prefs = _section(self_content, "II. PREFERENCES (Survey Seeded)") or ""
     personality = _section(self_content, "IV. PERSONALITY") or ""
@@ -130,7 +130,7 @@ def _extract_who_she_is(self_content: str, skill_work: str, identity: dict) -> s
         interest_bits = ["stories", "animals", "space", "art"]
     interests_str = ", ".join(interest_bits)
 
-    # Companion creative context (from skill-work)
+    # Companion creative context (from work context)
     ctx_block = re.search(r"companion_creative_context:(.*?)(?=\n\w+:|```|\Z)", skill_work, re.DOTALL)
     ctx = ctx_block.group(1) if ctx_block else ""
     primary = _yaml_value(ctx, "primary_medium")
@@ -193,13 +193,14 @@ def _extract_chinese_edge(think_content: str) -> str:
 
 
 def _extract_work_edge(work_content: str) -> str:
-    block = _section(work_content, "WORK Container") or ""
+    # Compatibility: current work files still use the historical "WORK Container" heading.
+    block = _section(work_content, "WORK Context") or _section(work_content, "WORK Container") or ""
     m = re.search(r'edge:\s*["\']([^"\']+)["\']', block)
     return m.group(1).strip() if m else "Narrative creation from prompts; plan 3 steps for a small project"
 
 
 def _extract_work_goals(work_content: str) -> list[str]:
-    block = _section(work_content, "WORK GOALS") or ""
+    block = _section(work_content, "WORK Goals") or _section(work_content, "WORK GOALS") or ""
     horizon = _yaml_list(block, "horizon")
     return horizon if isinstance(horizon, list) else []
 
@@ -214,7 +215,7 @@ def _extract_school(work_content: str) -> dict:
 
 
 def _extract_companion_creative(work_content: str) -> dict:
-    """Extract companion_creative_context from skill-work."""
+    """Extract companion_creative_context from work context."""
     block = re.search(r"companion_creative_context:(.*?)(?=\n\w+:|```|\Z)", work_content, re.DOTALL)
     if not block:
         return {}
@@ -388,7 +389,7 @@ def generate_lesson_prompt(
         f"- Reading (THINK): {think_edge}. Lexile input {lexile_input}; next milestone 600L (early chapter books, short nonfiction).",
         f"- Math: {math_edge}",
         f"- Chinese: {chinese_edge}",
-        f"- Making/planning (WORK): {work_edge}",
+        f"- Making/planning (work context): {work_edge}",
         "",
     ])
 
@@ -402,7 +403,7 @@ def generate_lesson_prompt(
         "DIFFICULTY (mirrors self-library maturity; scope activities and reading sources)",
         f"- Target: maturity {diff_default} ({diff_label}).",
         f"- For reading: use LIBRARY entries with maturity ≤ {diff_read_max} when suggesting or drawing from books.",
-        "- Math and WORK: keep prompts and steps at this tier (single-step vs multi-step, edge vocabulary).",
+        "- Math and work context: keep prompts and steps at this tier (single-step vs multi-step, edge vocabulary).",
         "",
         "TODAY'S GOALS (in this thread)",
     ])
@@ -413,7 +414,7 @@ def generate_lesson_prompt(
     goals_default = [
         '1. One short reading at the edge — 1–2 inference questions ("why?", "what in the story shows that?") and/or one new word in context.',
         "2. One math step at the edge — e.g. tens place with a two-digit number, or one telling-time question.",
-        "3. One creation or planning (WORK) — e.g. \"Draw one scene from a story you know and tell me: what did you do first, second, third?\" or \"If you were making a lemonade stand, what would you do first? Second? Third?\"",
+        "3. One creation or planning (work context) — e.g. \"Draw one scene from a story you know and tell me: what did you do first, second, third?\" or \"If you were making a lemonade stand, what would you do first? Second? Third?\"",
     ]
     if focus == "reading":
         goals = [goals_default[0]]
@@ -435,7 +436,7 @@ def generate_lesson_prompt(
         "ACCEPTANCE CRITERIA (what \"done\" looks like per activity)",
         "- Reading: learner answered 1–2 inference questions or used one new word in context.",
         "- Math: learner completed one step at the edge (e.g., tens place, telling time).",
-        "- WORK: learner described steps (first, second, third) or showed planning/execution.",
+        "- Work context: learner described steps (first, second, third) or showed planning/execution.",
         "- After each activity: output \"We did [X].\" so the parent can log.",
         "",
         "RULES",

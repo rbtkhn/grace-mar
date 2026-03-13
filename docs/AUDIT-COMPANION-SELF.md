@@ -1,5 +1,7 @@
 # Audit: Grace-Mar vs Companion-Self Concept
 
+> Audit timestamp note: this audit predates the work-layer refactor. Where it lists `self-skill-work`, read that as the older taxonomy snapshot rather than current canon.
+
 **Purpose:** Assess how well Grace-Mar (docs, prompts, code, profile) aligns with the **companion-self** concept: the dual meaning (companion's self + self that companions), the **self-\*** taxonomy (self-knowledge, self-curiosity, self-personality, self-skill-*, self-archive, self-library, self-memory, self-voice), and tricameral framing (Mind, Record, Voice). Companion-self is both the concept and the **template repository** ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)), the origin for Grace-Mar and future instances.
 
 **Scope:** Conceptual and terminology alignment. Structure/template compliance (instance vs repo) is in [AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE](audit-grace-mar-vs-companion-self-template.md).

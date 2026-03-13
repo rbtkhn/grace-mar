@@ -50,7 +50,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 
 **Companion self contains:**
 - **self-knowledge** (self.md IX-A)
-- **self-skill-write**, **self-skill-think**, **self-skill-work** (skills.md)
+- **self-skill-write**, **self-skill-think** (skills.md)
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
 - **self-archive** (self-archive.md)
@@ -58,9 +58,11 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-memory** (memory.md)
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
-The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, and **self-skill-work** (as well as self-library, etc.). Self-voice is the single output channel for the companion self.
+The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, approved evidence, and self-library. Self-voice is the single output channel for the companion self.
 
-The structure is intentionally symmetrical: three-dimension mind (knowledge, curiosity, personality), three capability modules (write, read, build), three key stores (archive, library, memory), and the voice that speaks it.
+**Work is adjacent, not inside the self-skill set.** Work territories and instance work contexts may use broader tools and model capability to plan or execute tasks, but they become part of the Record only through staged, approved evidence.
+
+The structure is intentionally layered: three-dimension mind (knowledge, curiosity, personality), two Record-bound skill modules (think, write), supporting stores (archive, library, memory), and the Voice that speaks the Record.
 
 See [ID-TAXONOMY](id-taxonomy.md) for standard labels and locations.
 

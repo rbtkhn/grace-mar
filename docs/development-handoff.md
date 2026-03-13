@@ -55,6 +55,11 @@ Last updated: 2026-03-13
 - Working rule: treat `grace-mar` as laboratory + live instrument; treat `companion-self` as reusable base.
 - Canonical operator phrase for this workflow: `Implement this in grace-mar first, then promote the reusable template layer to companion-self.` Short form: `Upstream this from grace-mar to companion-self.`
 
+### Work layer refactor (2026-03-13)
+- **Canonical rule:** `WORK` is no longer a self-skill module. The Record-bound skill set is now **THINK + WRITE** only.
+- **New boundary:** `work-*` territories and `users/[id]/work-*.md` files are the separate execution layer. They may use broader LLM/tool capability, but Record updates remain gated.
+- **Compatibility rule:** legacy `BUILD` language and `CREATE-*` / `ACT-*` evidence IDs remain valid historical compatibility surfaces; do not rewrite archival evidence just to normalize names.
+
 ---
 
 ## Recently Completed (High Level)
@@ -86,6 +91,20 @@ Last updated: 2026-03-13
 ### Artifact taxonomy + naming convention (2026-03-13)
 - **`docs/pipeline-map.md`** — Added a canonical artifact taxonomy for the most common retained visual evidence classes plus naming rules for files saved under `users/grace-mar/artifacts/`.
 - **`docs/friction-audit.md`** — Added the short save rule that points new artifact capture toward evidence-aware lowercase filenames instead of generic root-level screenshots.
+
+### Work layer taxonomy rewrite (2026-03-13)
+- **Core docs updated:** `docs/id-taxonomy.md`, `docs/conceptual-framework.md`, `docs/skills-modularity.md`, `docs/skills-template.md`, `docs/architecture.md`, `docs/grace-mar-core.md`, `docs/identity-fork-protocol.md`, `readme.md`, `docs/white-paper.md`, `docs/operator-brief.md`, `docs/portability.md`, and `companion-self-bootstrap.md`.
+- **Core change:** THINK and WRITE remain the only Record-bound self-skills; work now lives in a separate execution layer (`docs/skill-work/work-*/`, `users/[id]/work-*.md`).
+- **Runtime/export alignment completed for first-pass closure:** `scripts/export_curriculum.py`, `scripts/export_manifest.py`, `scripts/generate_profile.py`, `scripts/export_view.py`, `scripts/generate_lesson_prompt.py`, and `docs/self-template.md` now treat work as adjacent context rather than a peer self-skill.
+- **Legacy boundary clarified:** historical analysis/audit docs still retain `self-skill-work` / `BUILD` where needed, but current canonical docs now label those references as legacy compatibility surfaces rather than active schema.
+
+### work-civ-mem territory setup (2026-03-13)
+- **New territory:** `docs/skill-work/work-civ-mem/README.md` and `docs/skill-work/work-civ-mem/roadmap.md`.
+- **Scope:** Grace-Mar stewardship surface for the external `civilization_memory` repository — repo management, audits, drift detection, contribution prep, and workflow clarity.
+- **Boundary:** `civilization_memory` remains the managed external repo; `work-civ-mem` is Grace-Mar's management territory for it; adjacent Companion Self product priorities are recorded in the roadmap but are not part of the first-pass implementation scope.
+- **Indexed:** `docs/skill-work/README.md` now lists `work-civ-mem` alongside the other work territories.
+- **Adjacent strategic priorities captured (future, not implemented here):** approval inbox for `RECURSION-GATE`, visible provenance surfaces, and a portability-grade export bundle.
+- **Operational surfaces added:** `docs/skill-work/work-civ-mem/workspace.md` (runbook) and `docs/skill-work/work-civ-mem/audit-report.md` (initial baseline snapshot).
 
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
@@ -221,6 +240,8 @@ Likely includes (run `git status` to confirm):
 - Bot: `bot/prompt.py`, `bot/core.py` (companion/operator wording).
 - New: `docs/operator-brief.md`, `docs/letter-to-user.md`, `docs/x-integration.md`.
 - intent-template.md (design-lens block, companion gate wording).
+- Next likely work after the work-layer closure commit: define the `RECURSION-GATE` approval inbox as a concrete product surface and write one canonical outward-facing Companion Self doctrine memo.
+- Optional later cleanup: continue migrating or annotating older legacy analyses that still discuss `self-skill-work` / `BUILD` for historical comparison.
 
 If the companion/operator asks to commit, include all modified and new files from this session.
 
@@ -228,15 +249,19 @@ If the companion/operator asks to commit, include all modified and new files fro
 
 ## Recommended Next Tasks
 
-1. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
-2. Align business docs for zero drift:
+1. **Specify the approval inbox** — Turn the current `RECURSION-GATE` queue, bot flow, and dashboard surfaces into one implementation-ready product spec.
+2. **Write the Companion Self doctrine memo** — Create one canonical outward-facing narrative that can feed investor and deck language without drifting from architecture.
+3. **Mark or migrate remaining legacy work docs** — Analysis/audit docs that still say `self-skill-work` should either remain clearly legacy or be rewritten to the new work-layer vocabulary.
+4. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
+5. Align business docs for zero drift:
    - add explicit cross-links between `business-plan.md`, `business-prospectus.md`, `white-paper.md`.
-3. Formalize THINK multimodality wording:
+6. Formalize THINK multimodality wording:
    - update `skills-template.md` and architecture references so THINK explicitly includes text/video/music/images.
-4. Operator UX for debate workflow:
+7. Operator UX for debate workflow:
    - `/debates` listing command for unresolved debate packets (implemented).
-5. Add small glossary section to business-facing docs for non-technical readers.
-6. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
+8. Add small glossary section to business-facing docs for non-technical readers.
+9. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
+10. **work-civ-mem next docs** — If the territory becomes active, add a recurring `audit-report.md` and/or `workspace.md` for `civilization_memory` management loops.
 
 ---
 

@@ -5,7 +5,7 @@ Generate the Grace-Mar pilot profile page.
 Reads grace-mar profile files and produces a single HTML profile view with:
 - Fork summary (identity, Lexile, pipeline status)
 - RECURSION-GATE queue (candidates awaiting approval)
-- SKILLS container status (THINK, WRITE, BUILD)
+- SKILLS container status (THINK, WRITE) plus adjacent work context
 - Recent bot archive excerpts
 - Benchmarks (pipeline stats, IX dimension counts)
 
@@ -123,9 +123,9 @@ def parse_evidence(content: str) -> dict:
 
 
 def parse_skills(content: str) -> dict:
-    """Extract container status from skill-think.md, skill-write.md (WORK is separate in work-*.md)."""
+    """Extract Record skill status from THINK and WRITE containers only."""
     summary = {}
-    for container in ["THINK", "WRITE", "WORK"]:
+    for container in ["THINK", "WRITE"]:
         block = re.search(
             rf"## {container} Container.*?```yaml(.*?)```",
             content,

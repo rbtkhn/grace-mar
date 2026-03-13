@@ -275,10 +275,14 @@ LAYER 1 — CORE PROFILE (Required)
 • SKILLS: Container status, capability claims
 • EVIDENCE: Activity log, reading list, writing log
 
-LAYER 2 — PILLAR-SPECIFIC DATA (Required)
+LAYER 2 — RECORD-BOUND CAPABILITY DATA (Required)
 • THINK: Reading list, comprehension metrics, vocabulary
 • WRITE: Writing log, style profile, growth trajectory
-• WORK (BUILD container): Creation log, creativity metrics (creation merged into BUILD container)
+
+LAYER 2B — WORK / EXECUTION CONTEXT (Separate from SKILLS)
+• Work territories (`docs/skill-work/work-*/`): reusable execution domains
+• Instance work contexts (`users/[id]/work-*.md`): live planning, delivery, and tool-using work
+• Historical BUILD references remain valid for compatibility and older evidence
 
 LAYER 3 — DERIVED ANALYTICS (Optional)
 • Growth predictions
@@ -313,7 +317,7 @@ it's in the record.
 ────────────────────────────────────────────────────────────
 XIII. CONTAINER EDGE PRINCIPLE
 ────────────────────────────────────────────────────────────
-The three SKILLS modules (THINK, WRITE, WORK) are
+The Record-bound SKILLS modules (THINK, WRITE) are
 containers that define current capability boundaries.
 
 TEACHING ZONES:
@@ -325,6 +329,11 @@ EDGE IDENTIFICATION:
 • Current level + 1 step = edge
 • Vocabulary they know + new words = edge
 • Concepts mastered + next concept = edge
+
+WORK / EXECUTION:
+• Work territories may use broader tools and model capability
+• They are not bounded by IX-A knowledge the way Record skills are
+• Anything that should become Record truth still requires staging and approval
 
 GAP VS EDGE:
 • GAP: Hole inside the container → fill first

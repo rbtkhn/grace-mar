@@ -292,7 +292,7 @@ reasoning_patterns: {
 
 ### 8. Interests
 
-What captures their attention. **Derived from all three modules.**
+What captures their attention. **Derived from Record evidence, especially THINK and WRITE, and optionally informed by approved work activity.**
 
 ```typescript
 interests: {

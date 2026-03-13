@@ -1,6 +1,6 @@
 # Skill Modularity — Formal Model
 
-**Purpose:** Canonical specification of the Record’s modules (including self-knowledge, self-personality, self-curiosity, self-library, and the three skill modules THINK/WRITE/WORK), their boundaries, their relationship to the Voice, and the rule that outputs (bots, profile) are functions of the Record with WRITE as the linguistic shaper.
+**Purpose:** Canonical specification of the Record’s modules (including self-knowledge, self-personality, self-curiosity, self-library, and the Record-bound skill modules THINK/WRITE), their boundaries, their relationship to the Voice, and the rule that outputs (bots, profile) are functions of the Record with WRITE as the linguistic shaper. It also defines the boundary between the Record and the separate work / execution layer.
 
 **Governed by:** [GRACE-MAR-CORE](grace-mar-core.md), [SKILLS-TEMPLATE](skills-template.md), [ARCHITECTURE](architecture.md)
 
@@ -10,7 +10,7 @@
 
 ## 1. Full module set (companion self / Record)
 
-The Record (and the companion self) is composed of the following modules. Together they define who the companion is and what they can do; the Voice and any written profile are functions of this set.
+The Record (and the companion self) is composed of the following modules. Together they define who the companion is and what the Record can evidence about what they can do; the Voice and any written profile are functions of this set.
 
 | Module | Standard label | Location | Scope |
 |--------|----------------|----------|--------|
@@ -20,35 +20,45 @@ The Record (and the companion self) is composed of the following modules. Togeth
 | **Self-library** | self-library | users/[id]/self-library.md | Curated lookup sources (books, reference works, videos); query-first for answers |
 | **Self-skill-think** | self-skill-think | skills.md THINK container | Intake, learning, comprehension (multimodal) |
 | **Self-skill-write** | self-skill-write | skills.md WRITE container | Production (text, journal, stories); linguistic style source |
-| **Self-skill-work** | self-skill-work | skills.md BUILD container | Making, planning, execution, exchange, creation |
 
 Additional Record components (self-archive, self-memory, evidence logs) are defined in [ID-TAXONOMY](id-taxonomy.md#companion-self-contains). The Voice renders the full Record when it speaks; it draws on all of the above as appropriate.
 
+**Separate but adjacent:** Work territories and instance work contexts are execution surfaces, not Record modules. They may use broader tools and model capability, but they enter the Record only through approved evidence and staged merges.
+
 ---
 
-## 2. Skill module set and labels
+## 2. Record skill module set and labels
 
 | Module | Standard label | Internal identifier | Scope |
 |--------|----------------|---------------------|--------|
 | **THINK** | self-skill-think | THINK container, READ-nnn | Intake, learning, comprehension (multimodal) |
 | **WRITE** | self-skill-write | WRITE container, WRITE-nnn | Production (text, journal, stories, explanations) |
-| **WORK** | self-skill-work | BUILD container, CREATE-nnn, ACT-nnn | Making, planning, execution, exchange, creation |
 
-The third skill module is **WORK** in prose and design. The **BUILD** container name and evidence prefixes (CREATE-, ACT-) remain for compatibility and are not renamed in skills.md or EVIDENCE.
+The Record skill module set is limited to THINK and WRITE.
+
+### 2a. Work / execution layer
+
+| Surface | Standard label | Location | Scope |
+|---------|----------------|----------|-------|
+| Work territory | `work-territory` | `docs/skill-work/work-*/` | Reusable execution domain, prompts, doctrine, and operator workflow |
+| Instance work context | `work-context` | `users/[id]/work-*.md` | Live project state, goals, planning, and delivery context |
+
+**Historical compatibility:** `BUILD` remains a legacy compatibility term in older docs, evidence references, and analyses. `CREATE-*` and `ACT-*` remain valid evidence IDs and are not renamed by this refactor.
 
 ---
 
 ## 3. Module boundaries (capability only)
 
-Each module updates **only** its capability container in SKILLS. Modules do **not** extract or write knowledge, curiosity, or personality into SELF.
+Each Record skill module updates **only** its capability container in SKILLS. Modules do **not** extract or write knowledge, curiosity, or personality into SELF.
 
 | Module | What it captures | What it does not do |
 |--------|------------------|----------------------|
 | **THINK** | Content consumed, modality, comprehension, inference, vocabulary, interests (intake); learning from doing | Does not stage IX-A / IX-B / IX-C candidates |
 | **WRITE** | Vocabulary, complexity, style, expression, logic, growth (production) | Does not stage IX-A / IX-B / IX-C candidates |
-| **WORK** | Planning, execution, making, creation (originality, elaboration, flexibility), decision-making, financial, collaboration | Does not stage IX-A / IX-B / IX-C candidates |
 
-**Analyst vs. modules:** The **analyst** (pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from inputs and stages candidates to RECURSION-GATE → SELF. So one input can update both (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS. See [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals).
+**Work boundary:** Work territories may plan, execute, and use tools outside the Record skill boundary. They may use open-world model capability. But work surfaces do not write Record truth directly; any identity, knowledge, curiosity, personality, or evidence change still goes through RECURSION-GATE and companion approval.
+
+**Analyst vs. modules:** The **analyst** (pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from inputs and stages candidates to RECURSION-GATE → SELF. So one input can update both (1) a skill container (THINK/WRITE) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS. Work activity can also produce staged candidates or evidence, but only through the same gate. See [SKILLS-TEMPLATE § III](skills-template.md#iii-skill-interactions-and-the-self), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals).
 
 ---
 
@@ -75,7 +85,7 @@ Any **written or HTML profile** that displays the companion’s identity (intere
 | Voice (Telegram, WeChat) | Record (SELF, SKILLS, EVIDENCE, prompt) | f(skill-write) |
 | HTML / written profile | Record | f(skill-write) |
 
-Skill-read and skill-work add **content and scope** (what to talk about, what the companion can do); **skill-write drives voice and written presentation** across bots and profile.
+Skill-think adds **content and scope** (what the companion has taken in and can discuss inside the Record); approved evidence from work territories can add adjacent context. **Skill-write drives voice and written presentation** across bots and profile.
 
 ---
 
@@ -86,31 +96,34 @@ Input (conversation, artifact, "we did X")
     │
     ├──► Analyst ──► RECURSION-GATE ──► [companion approval] ──► SELF (IX-A, IX-B, IX-C), EVIDENCE, prompt
     │
-    └──► Skill path (operator or pipeline) ──► SKILLS (THINK / WRITE / WORK container) + EVIDENCE (READ-nnn, WRITE-nnn, CREATE-nnn, ACT-nnn)
+    ├──► Skill path (operator or pipeline) ──► SKILLS (THINK / WRITE) + EVIDENCE (READ-nnn, WRITE-nnn)
+    │
+    └──► Work path (territory / operator / tool loop) ──► work-context + artifacts + optional staged candidates / evidence
 ```
 
 - **Record** = SELF + SKILLS + EVIDENCE (and related pipeline files). The Record belongs to the companion.
 - **Voice** = f(Record). Implemented by bot (e.g. Telegram, WeChat) + prompt + retrieval. Linguistic output = f(skill-write).
-- **WORK (BUILD container)** = designated integration point for future external APIs (marketplaces, creation tools, planning/financial systems, content platforms). See [SKILLS-TEMPLATE § WORK](skills-template.md#work-making-planning-execution-exchange).
+- **Work layer** = designated integration point for future external APIs, agent loops, planning systems, and delivery tooling. It is adjacent to the Record, not a self-skill.
 
 ---
 
-## 5a. Identity vs instrument: self-knowledge and skill-work
+## 5a. Identity vs instrument: Record skills and work
 
-**Self-knowledge (IX-A)** is an aspect of **identity** — what the companion knows (who they are). **Skill-work** is an **instrument** for accomplishing tasks and projects (what they can do).
+**Self-knowledge (IX-A)** is an aspect of **identity** — what the companion knows (who they are). **Work** is an **instrument** for accomplishing tasks and projects.
 
-- **IX-A does not limit skill-work capabilities.** WORK (planning, execution, making, creation) can propose and support tasks regardless of what is documented in IX-A.
-- **IX-A is more relevant to skill-think and skill-write.** THINK (intake, comprehension) and WRITE (production, expression) are content-oriented; their boundaries are shaped by what the companion knows. IX-A defines content boundary and hints for those modules.
-- **Skill-work is designed to grow rapidly with technology.** WORK is the integration point for agents, APIs, tools, and platforms. Its capabilities expand with advances in technology; they are not bounded by the current Record or schema.
+- **IX-A shapes Record skill boundaries.** THINK (intake, comprehension) and WRITE (production, expression) are Record-bound and should stay aligned with what the companion knows and how the companion writes.
+- **IX-A does not bound the work layer in the same way.** Work territories may use broader model capability, tools, APIs, and external systems to help plan or execute tasks.
+- **The gate still applies.** Work outputs do not become Record truth unless they are written down, staged as needed, and approved into SELF / EVIDENCE / prompt.
 
 ---
 
 ## 6. Invariants
 
-1. **Stage-only for modules and analyst.** No skill module and no analyst merges directly into SELF, EVIDENCE, or prompt. All merges go through companion approval (RECURSION-GATE → process_approved_candidates).
-2. **Evidence-linked.** Every capability claim in SKILLS traces to evidence (WRITE-nnn, READ-nnn, CREATE-nnn, ACT-nnn).
+1. **Stage-only for Record updates.** No skill module, work territory, or analyst merges directly into SELF, EVIDENCE, or prompt. All merges go through companion approval (RECURSION-GATE → process_approved_candidates).
+2. **Evidence-linked.** Every capability claim in SKILLS traces to evidence. Historical `CREATE-*` / `ACT-*` references remain valid; new work evidence may still use them where appropriate.
 3. **Knowledge boundary.** No undocumented facts enter the Record. The Voice abstains when outside documented knowledge and offers to look up.
-4. **Record vs. Voice.** The Record is the documented self; the Voice speaks the Record when queried. WRITE is part of the Record that shapes the Voice; WRITE is not the Voice itself.
+4. **Work is broader than the Record.** Work territories may use broader tools and knowledge sources, but they do not redefine the Record without the gate.
+5. **Record vs. Voice.** The Record is the documented self; the Voice speaks the Record when queried. WRITE is part of the Record that shapes the Voice; WRITE is not the Voice itself.
 
 ---
 
@@ -119,9 +132,10 @@ Input (conversation, artifact, "we did X")
 | Topic | Where defined |
 |-------|----------------|
 | Full module set (self-knowledge, self-personality, self-curiosity, self-library, self-skill-*) | This doc §1; [ID-TAXONOMY § Companion self contains](id-taxonomy.md#companion-self-contains) |
-| Three skill modules (THINK, WRITE, WORK) | [SKILLS-TEMPLATE § II](skills-template.md#ii-the-three-modules), [ARCHITECTURE § The Three Modules](architecture.md#the-three-modules) |
+| Record skill modules (THINK, WRITE) | [SKILLS-TEMPLATE § II](skills-template.md#ii-the-record-bound-skill-modules), [ARCHITECTURE § The Record-Bound Skill Modules](architecture.md#the-record-bound-skill-modules) |
+| Work layer | This doc §2a, §5a; [SKILLS-TEMPLATE § II-A](skills-template.md#ii-a-separate-work--execution-layer), [ID-TAXONOMY](id-taxonomy.md#work-layer-labels) |
 | Standard labels (self-skill-*) | [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-) |
-| Analyst vs. skill modules (IX-A/B/C) | [SKILLS-TEMPLATE § III](skills-template.md#skill-modules-vs-self-ix-abc), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals) |
+| Analyst vs. skill modules (IX-A/B/C) | [SKILLS-TEMPLATE § III](skills-template.md#iii-skill-interactions-and-the-self), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals) |
 | Record and Voice | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [AGENTS](agents.md) |
 | Pipeline and merge | [PIPELINE-MAP](pipeline-map.md), [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) |
 

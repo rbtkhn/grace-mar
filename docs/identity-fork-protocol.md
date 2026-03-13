@@ -73,9 +73,11 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 | Module | Contains | Purpose |
 |--------|----------|---------|
 | **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
-| **SKILLS** | THINK, WRITE, WORK capability containers | What they CAN DO |
+| **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
 | **INTENT** | Goal hierarchy, trade-off rules, escalation boundaries, cross-agent policy scope | What the system should WANT to optimize |
+
+**Separate work layer:** `work-*` territories and instance work contexts sit adjacent to the Record. They may use broader model/tool capability, but Record updates remain gated.
 
 ### 3.2 Post-Seed Growth (Three-Dimension Mind)
 
@@ -94,10 +96,12 @@ Every claim in SELF (IX-A, IX-B, IX-C) must reference evidence:
 
 No claim may exist without traceability to an artifact or approved source.
 
-### 3.4 Skill Executor Model (THINK/WRITE/WORK)
+### 3.4 Skill Executor Model (THINK/WRITE + separate work layer)
 
-The SKILLS module may be operationalized as three semi-independent executors:
-`THINK`, `WRITE`, and `WORK`. **Standard labels:** **self-skill-think**, **self-skill-write**, **self-skill-work** (see [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-)). Internal identifier for the third module: BUILD container.
+The SKILLS module may be operationalized as two semi-independent executors:
+`THINK` and `WRITE`. **Standard labels:** **self-skill-think** and **self-skill-write** (see [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-)).
+
+The work / execution layer is separate. It may have its own territory-specific executors, but those are not self-skill modules.
 
 - They may use distinct heuristics, prompts, and evaluation criteria.
 - They are capability-specialized, not identity-sovereign.
@@ -105,7 +109,7 @@ The SKILLS module may be operationalized as three semi-independent executors:
 
 Normative constraints:
 
-1. `THINK`/`WRITE`/`WORK` may stage candidates only; they may not merge.
+1. `THINK`/`WRITE` and any work executor may stage candidates only; they may not merge.
 2. All staged outputs must remain evidence-linked and reviewable.
 3. Divergent executor recommendations are allowed; companion approval is the resolution layer.
 4. Executor behavior is shaped by the SELF three-dimension mind:

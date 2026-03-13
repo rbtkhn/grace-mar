@@ -33,19 +33,28 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 ---
 
-## II. THE THREE MODULES
+## II. THE RECORD-BOUND SKILL MODULES
 
 **Formal specification:** Module set, boundaries, and the rule that Voice and written profile are functions of the Record (with skill-write as linguistic shaper) are specified in [SKILLS-MODULARITY](skills-modularity.md).
 
-**Standard labels:** For APIs, docs, and cross-references use **self-skill-write**, **self-skill-think**, **self-skill-work**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-).
+**Standard labels:** For APIs, docs, and cross-references use **self-skill-write** and **self-skill-think**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-).
 
-**Naming:** The third module is named **WORK** in prose and design (making, planning, execution, exchange, creation, exploration). **Internal identifiers remain BUILD** for compatibility: in skills.md the section is "BUILD Container"; evidence IDs use CREATE-nnn and ACT-nnn. No change to existing evidence or scripts.
+SKILLS now organizes under **two Record-bound modules: THINK and WRITE**. These are the capability containers that describe what the companion can do **inside the Record**. They are evidence-linked, gated, and constrained by the Record's knowledge boundary.
 
-All skills organize under three fundamental cognitive modules: THINK, WRITE, WORK. Each module is an objective-topic-specialized sub-agent serving as teacher/tutor, evaluator, and record keeper. WORK (making, planning, execution, exchange, creation, exploration) starts from zero and grows with experience and input through the pipeline, human-gated like all others.
+### II-A. Separate work / execution layer
 
-### II-A. Semi-Independent Executor Contract
+**WORK is no longer a self-skill module.** Work now lives in a separate execution layer:
 
-THINK, WRITE, and WORK may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
+- `docs/skill-work/work-*/` = reusable **work territories**
+- `users/[id]/work-*.md` = instance **work contexts**
+
+Work territories may use broader LLM capability, tools, APIs, and planning loops than the Record allows. They may produce artifacts, plans, and staged candidates. But they do **not** write Record truth directly, and they do **not** change SELF, EVIDENCE, or prompt without the same companion gate.
+
+**Historical compatibility:** `BUILD` remains a legacy compatibility term in older docs and analyses. `CREATE-*` and `ACT-*` evidence IDs remain valid and are not renamed by this taxonomy refactor.
+
+### II-B. Semi-Independent executor contract
+
+THINK and WRITE may be implemented as semi-independent executors with separate prompts or strategies. They are capability-specialized components, not sovereign agents.
 
 Constitutional constraints (mandatory):
 - Stage-only: no executor may merge into canonical Record files.
@@ -64,7 +73,6 @@ Suggested default emphasis profile:
 |----------|----------------|
 | THINK | Curiosity > Knowledge > Personality |
 | WRITE | Personality > Knowledge > Curiosity |
-| WORK | Knowledge > Personality > Curiosity |
 
 This profile is advisory and may be tuned per user while preserving the constitutional constraints above.
 
@@ -97,7 +105,7 @@ The user produces something. Grace-Mar captures and analyzes.
 
 ### THINK (Intake, Learning)
 
-**Module intent:** THINK captures capability from evidence. When WORK has horizon goals (e.g. SAT), THINK prioritizes content and assessments that move the companion toward those goals. WORK reads THINK state to measure progress.
+**Module intent:** THINK captures capability from evidence. When a work territory has horizon goals (e.g. SAT), THINK prioritizes content and assessments that move the companion toward those goals. Work contexts may read THINK state to measure progress.
 
 The user consumes content. Grace-Mar tracks and assesses comprehension.
 THINK is multimodal by default and must not be limited to text.
@@ -128,101 +136,38 @@ THINK is multimodal by default and must not be limited to text.
 > Grace-Mar captures: comprehension level, new vocabulary,
 > character understanding, plot inference, emotional response.
 
-**SAT readiness (when WORK has SAT goal):** Add optional `sat_readiness` block in skill-think.md — maps THINK/MATH/Lexile to SAT domains (EBRW Reading, Math), defines trajectory and next milestones. Use **general principles** (comprehension at edge, inference through "why?", vocabulary in context, evidence "what in the story shows that?", simple choices that scale) — developmentally appropriate at companion's level; no SAT-specific mechanics for young companions. WORK reads this to measure progress. See grace-mar skill-think.md § SAT READINESS.
+**SAT readiness (when a work territory has SAT as a horizon goal):** Add optional `sat_readiness` block in `skill-think.md` — maps THINK/MATH/Lexile to SAT domains (EBRW Reading, Math), defines trajectory and next milestones. Use **general principles** (comprehension at edge, inference through "why?", vocabulary in context, evidence "what in the story shows that?", simple choices that scale) — developmentally appropriate at companion's level; no SAT-specific mechanics for young companions. Work territories may read this to measure progress. See grace-mar `skill-think.md` § SAT READINESS.
 
-### WORK (Making, Planning, Execution, Exchange)
-
-*(Internal identifier: BUILD container in skills.md; evidence CREATE-nnn, ACT-nnn. Kept for compatibility.)*
-
-**Module intent:** WORK serves as tutor for the companion in the making, planning, execution, and creation domain — proposing activities at the container edge, answering questions, scaffolding next steps, aligned with work goals and life mission.
-
-**Module objectives:** Implement and maintain the Grace-Mar Telegram and WeChat bots; develop and maintain the Grace-Mar web app at grace-mar.com; curate and maintain self-library.
-
-The user makes things, plans, executes, or engages in exchange. Grace-Mar captures capability in building, delivery, and exchange. **Starts from zero** — no prior assumption. Grows only through pipeline input (human-gated).
-
-**Activities:**
-- Lemonade stand, crafts sale, bake sale
-- School project with P&L (e.g., Airbnb, food truck)
-- Content creation with audience (YouTube, blog)
-- Allowance management, budgeting
-- Following instructions to build (Legos, models, projects)
-- Physical making (photo upload of things built)
-- "We did X" involving planning, delivery, or exchange
-- Any artifact showing goals, timelines, customer feedback, or financial outcome
-
-**What Grace-Mar captures:**
-- Planning (goals, timelines, milestones)
-- Execution (follow-through, deliverables)
-- Making (following instructions, assembly, construction)
-- Customer/audience (who to serve, feedback received)
-- Financial (basic money concepts, profit/loss, budgeting)
-- Collaboration (teamwork, delegation, roles)
-- Marketing (telling your story, reach)
-- Decision-making (trade-offs, prioritization, saying no)
-
-**Example activity:**
-> Student participates in class food truck project. "We did X" + artifact (business plan, P&L).
-> Grace-Mar captures: planning level, execution follow-through, financial understanding, teamwork.
-
-**Integration with zero-human business vision:** The WORK module grows from evidence; when sufficient, the Record (including WORK) can inform agent-run businesses that act on the user's behalf. The user gates what enters; the module reflects demonstrated capability, not aspiration.
-
-**Future API surface:** WORK is the natural integration point for external APIs — marketplaces, creation tools (e.g. Canva, design apps), planning/financial systems, content platforms, or any service that involves making, planning, execution, or exchange. The Record (BUILD container + evidence) would drive or constrain what those integrations can do on the companion's behalf; the companion remains the gate for what enters the Record.
-
-**Identity vs instrument:** WORK is an *instrument* for accomplishing tasks and projects; self-knowledge (IX-A) is an aspect of *identity*. IX-A does not limit WORK capabilities. IX-A is more relevant to skill-think and skill-write (content boundaries). WORK capabilities are intended to grow rapidly with technology — agents, APIs, tools, and platforms extend what WORK can do without waiting for the Record to document that knowledge.
-
-**Creation and exploration (WORK):** Making includes creative output — drawings, paintings, crafts, inventions, designs. Grace-Mar captures creative capability alongside execution.
-
-**Activities (creation):**
-- Drawing, painting, crafts (image upload)
-- Creative play and scenarios
-- "What if" questions and answers
-- Problem-solving (novel situations)
-- Inventions, designs (conceptual)
-- Hypotheticals, counterfactuals
-- Games, puzzles, challenges
-
-**What Grace-Mar captures (creation):**
-- Originality (novel ideas, combinations)
-- Elaboration (detail, richness)
-- Flexibility (adapting to constraints)
-- Visual expression (from artwork)
-- Subject matter (what they choose to create)
-
-**Companion work goals and life mission:**
-- **work_goals** (skill-work.md): Companion's own objectives for making, planning, execution, creation — near_term, horizon; evidence-linked when captured. Gated.
-- **life_mission** (self.md § VI VALUES): What they want to become or contribute. Identity-level; WORK goals align with it. See ID-TAXONOMY and SKILLS-MODULARITY.
+**Compatibility note for the rest of this file:** Some deeper examples still use legacy `BUILD` terminology. Read those as historical compatibility examples for the separate work layer, not as proof that WORK remains a self-skill module.
 
 ---
 
-## III. MODULE INTERACTIONS
+## III. SKILL INTERACTIONS AND THE SELF
 
-The three modules are not isolated. Most activities engage multiple modules.
+The Record-bound skill modules are not isolated. Most activities engage multiple surfaces, and some also touch the separate work layer.
 
-| Activity | Primary | Secondary |
-|----------|---------|-----------|
-| Write a story | WRITE | WORK |
+| Activity | Primary | Secondary / adjacent |
+|----------|---------|----------------------|
+| Write a story | WRITE | THINK |
 | Summarize a book | THINK | WRITE |
-| Solve a puzzle | WORK | — |
 | Explain how something works | WRITE | THINK |
-| Ask "what if" about a story | WORK | THINK |
 | Journal about the day | WRITE | — |
-| Follow instructions to build | THINK | WORK |
-| Run a lemonade stand | WORK | WRITE |
-| Class food truck project | WORK | THINK |
-| Create content for audience | WORK | WRITE |
-| Manage allowance, budget | WORK | — |
-| Drawing, artwork, invention | WORK | — |
+| Follow instructions to build | THINK | work layer |
+| Run a campaign plan | work layer | WRITE |
+| Class food truck project | work layer | THINK |
+| Create content for audience | work layer | WRITE |
+| Manage allowance, budget | work layer | — |
+| Drawing, artwork, invention | work layer | THINK or WRITE, if evidenced |
 
-**Tagging rule:** Tag primary module; optionally tag secondary.
-Evidence accrues to tagged modules.
+**Tagging rule:** Tag the primary Record skill when the artifact demonstrates THINK or WRITE capability. Otherwise treat it as work-layer activity that may later produce evidence or staged candidates.
 
 ### Skill modules vs. self (IX-A/B/C)
 
-**Skill modules (THINK, WRITE, WORK) update only capability** — comprehension, production, making. They do *not* extract or write knowledge, curiosity, or personality into SELF.
+**Skill modules (THINK, WRITE) update only capability** — comprehension and production. They do *not* extract or write knowledge, curiosity, or personality into SELF.
 
 **The analyst** (see ARCHITECTURE, pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from the same inputs and stages candidates to RECURSION-GATE → SELF after companion approval.
 
-So **one input** (e.g. art, music, journal, conversation) can update both: (1) a skill container (THINK/WRITE/WORK) for *capability*, and (2) SELF (IX-A/B/C) via analyst-staged candidates. The analyst serves SELF; the skill modules serve SKILLS.
+So **one input** (e.g. art, music, journal, conversation, work artifact) can update both: (1) a Record skill container (THINK/WRITE) when it demonstrates Record-bound capability, and (2) SELF (IX-A/B/C) via analyst-staged candidates. Work-layer activity may also stage evidence or candidates, but it does not become a self-skill automatically. The analyst serves SELF; the skill modules serve SKILLS.
 
 ---
 
@@ -277,7 +222,7 @@ Characteristics:
 ## III. CAPABILITY CLAIMS
 
 Capability Claims are formal statements about what the user can do,
-derived from accumulated activity evidence across the three modules.
+derived from accumulated activity evidence across the Record-bound modules. Historical `BUILD` examples below are compatibility artifacts for older work evidence and analyses; they do not redefine WORK as a current self-skill.
 
 Analogous to CMC's Recursive Learning Ledger (RLL): activities feed capability claims; claims accumulate; the Record improves over time. See [PIPELINE-MAP](pipeline-map.md#recursive-learning-process) for the full recursive learning definition.
 
@@ -286,7 +231,7 @@ Analogous to CMC's Recursive Learning Ledger (RLL): activities feed capability c
 ```typescript
 interface CapabilityClaim {
   id: string;                    // CAP-WRITE-VOC-001
-  module: 'WRITE' | 'THINK' | 'BUILD';
+  module: 'WRITE' | 'THINK';
   dimension: string;             // "vocabulary", "comprehension", "originality"
   statement: string;             // "Uses age-appropriate vocabulary with variety"
   
@@ -329,20 +274,12 @@ Level: 3
 Evidence: 15 book summaries, 90%+ accuracy
 Status: established
 
-CAP-BUILD-ORIG-001
-Module: BUILD
+LEGACY WORK EVIDENCE EXAMPLE
+Module: legacy BUILD / work context
 Dimension: originality (creation)
 Statement: Generates novel combinations (e.g., "dinosaur astronaut")
 Level: 2
 Evidence: 23 creative play sessions
-Status: emerging
-
-CAP-BUILD-PLAN-001
-Module: BUILD
-Dimension: planning
-Statement: Can set goals and track milestones (e.g., food truck project)
-Level: 1
-Evidence: 1 group project, "we did X" + artifact
 Status: emerging
 ```
 
@@ -386,7 +323,7 @@ Each module dimension has 5 developmental levels.
 | 4 | Analyzes author intent |
 | 5 | Critiques and compares |
 
-**BUILD.originality** (creation)
+**Legacy work-context originality** (historical BUILD example)
 | Level | Description |
 |-------|-------------|
 | 1 | Recombines familiar elements |
@@ -446,7 +383,7 @@ GAP-WRITE-LOGIC-001
 - Difficulty with non-fiction
 - Low retention of factual content
 
-**BUILD gaps (creation):**
+**Work-context gaps (historical BUILD examples):**
 - Ideas stay close to source material
 - Struggles with "what if" questions
 - Gives up quickly on novel problems
@@ -524,7 +461,7 @@ STRUGGLE-READ-001: Non-Fiction Comprehension
 - Retaining factual information
 - Following multi-step instructions
 
-**BUILD struggles (creation):**
+**Work-context struggles (historical BUILD examples):**
 - Breaking from familiar patterns
 - Sustaining creative play
 - Logical reasoning chains
@@ -555,8 +492,8 @@ ACTIVITY TYPE:
 [journal | story | summary | question | conversation | creative | artwork | building | problem | business | project]
 
 MODULE TAGS:
-- Primary: [WRITE | THINK | BUILD]
-- Secondary: [WRITE | THINK | BUILD | none]
+- Primary: [WRITE | THINK | WORK_CONTEXT]
+- Secondary: [WRITE | THINK | WORK_CONTEXT | none]
 
 CONTENT:
 [Full text, transcript, image file, or description of activity content]
@@ -579,7 +516,7 @@ If THINK:
 - Inference: [conclusions drawn]
 - Vocabulary: [new words encountered]
 
-If BUILD (creation/artwork):
+If WORK_CONTEXT (creation/artwork):
 - Image file: [reference to uploaded image, if applicable]
 - Prompt/trigger: [what sparked the creation]
 - Subject matter: [what they drew/made]
@@ -589,7 +526,7 @@ If BUILD (creation/artwork):
 - Colors/mood: [emotional expression]
 - Student description: [what they say about it]
 
-If BUILD (planning/execution):
+If WORK_CONTEXT (planning/execution):
 - Planning: [goals, timelines, milestones evidenced]
 - Execution: [follow-through, deliverables]
 - Financial: [P&L, budgeting, money concepts]
@@ -674,7 +611,7 @@ METADATA:
 ACTIVITY TYPE: artwork
 
 MODULE TAGS:
-- Primary: BUILD
+- Primary: WORK_CONTEXT
 - Secondary: none
 
 CONTENT:
@@ -686,7 +623,7 @@ invisible, and my brother shoots lasers from his eyes."
 
 MODULE ANALYSIS:
 
-BUILD (image/artwork):
+WORK_CONTEXT (image/artwork):
 - Image file: drawing_family_superheroes.jpg
 - Subject matter: family, superheroes, powers
 - Elaboration: 4/5 (detailed costumes, background city)
@@ -709,7 +646,7 @@ VERIFICATION FLAGS:
 
 ## VII. MODULE STRUCTURE
 
-Skills organize under the three modules, with sub-dimensions.
+SKILLS organize under the two Record-bound modules. Work contexts remain adjacent and may have their own internal dimensions, but they are not part of the self-skill set.
 
 ### Structure
 
@@ -733,36 +670,34 @@ SKILLS/
 │   ├── velocity/             # Speed, volume
 │   └── content_log/          # What they've read
 │
-└── BUILD/
-    ├── planning/             # Goals, timelines, milestones
-    ├── execution/            # Follow-through, deliverables
-    ├── customer_audience/    # Who to serve, feedback
-    ├── financial/            # Money concepts, P&L, budgeting
-    ├── collaboration/        # Teamwork, delegation, roles
-    ├── marketing/            # Telling your story, reach
-    ├── decision_making/      # Trade-offs, prioritization
-    ├── originality/          # Novel ideas, combinations (creation)
-    ├── elaboration/          # Detail, richness (creation)
-    ├── flexibility/          # Adapting to constraints (creation)
-    └── persistence/          # Sticking with hard problems
+└── (work contexts are separate)
+
+work-context/
+├── planning/                # Goals, timelines, milestones
+├── execution/               # Follow-through, deliverables
+├── customer_audience/       # Who to serve, feedback
+├── financial/               # Money concepts, P&L, budgeting
+├── collaboration/           # Teamwork, delegation, roles
+├── decision_making/         # Trade-offs, prioritization
+└── creative_context/        # Originality, elaboration, flexibility, style
 ```
 
 ### Subject Knowledge
 
 Traditional subjects (math, science, history) are NOT separate modules.
-They are CONTEXTS where READ/WRITE/WORK are applied.
+They are CONTEXTS where THINK/WRITE are applied, and where work territories may also operate as adjacent execution surfaces.
 
 **Example: Math**
-- READ: Understands math concepts, can interpret problems
+- THINK: Understands math concepts, can interpret problems
 - WRITE: Can produce correct solutions, explain reasoning
-- WORK: Can solve novel problems, find patterns
+- Work layer: Can solve novel problems, find patterns
 
 **Example: History**
-- READ: Knows historical events, can summarize periods
+- THINK: Knows historical events, can summarize periods
 - WRITE: Can explain historical cause/effect
-- WORK: Can reason about counterfactuals ("what if...")
+- Work layer: Can reason about counterfactuals ("what if...")
 
-Subject knowledge emerges from evidence across all three modules. WORK starts from zero; no evidence = no claims.
+Subject knowledge emerges from evidence across THINK, WRITE, and approved evidence connected to work activity. Work starts from live execution context; it does not become Record truth without evidence and approval.
 
 ---
 
@@ -875,7 +810,7 @@ Later learning does not modify snapshots.
 
 ## XI. CONTAINER EDGE TEACHING
 
-The three modules are CONTAINERS that define current capability boundaries. The system proposes activities at the EDGE. The WORK module's BUILD container starts empty until evidence enters through the pipeline.
+The Record-bound skill modules are CONTAINERS that define current capability boundaries. The system proposes Record-facing activities at the EDGE. Work contexts may also have edges, but they are separate from the self-skill container model.
 
 ### Container State
 
@@ -894,11 +829,10 @@ WRITE Container:
 ├── Expression: strong (level 3)
 └── EDGE: compound sentences, connectors
 
-BUILD Container (creation dimensions):
-├── Originality: familiar recombinations (level 2)
-├── Elaboration: moderate detail (level 3)
-├── Flexibility: adapting to constraints
-└── EDGE: novel combinations, longer chains
+Adjacent work context:
+├── Creative context: familiar recombinations, moderate detail
+├── Planning context: simple steps for small projects
+└── EDGE: clearer sequencing, stronger originality, longer chains
 ```
 
 ### Teaching at the Edge
@@ -945,9 +879,9 @@ How evaluators interact with the SKILLS module.
 > "How well does [user] comprehend?"
 > Returns: Levels across comprehension, inference, vocabulary acquisition
 
-**WORK capability (includes creation):**
-> "What business/planning/creation capability does [user] have?"
-> Returns: Levels across planning, execution, financial, collaboration, originality, elaboration (or "no evidence yet" if container empty)
+**Work context summary:**
+> "What planning/creation/work evidence exists for [user]?"
+> Returns: approved evidence and work-context observations, not a self-skill container score
 
 ### Cross-Module Queries
 
@@ -1012,12 +946,12 @@ Every modification to SKILLS must record:
 
 ## XIII. INTEGRATION WITH SELF
 
-SKILLS and SELF interact bidirectionally. WRITE is the primary data source for SELF.
+SKILLS and SELF interact bidirectionally. WRITE is the primary data source for SELF. Work activity may also generate staged evidence for SELF, but through the gate rather than through a self-skill container.
 
 ### SELF → SKILLS (Prediction)
 
 - Interests (SELF) predict which modules develop fastest
-- Reasoning patterns (SELF) shape how WORK (creation) capability grows
+- Reasoning patterns (SELF) can shape work style and project choices in adjacent work contexts
 
 ### SKILLS → SELF (Inference)
 
@@ -1067,7 +1001,7 @@ THINK Activity: Finished "Charlotte's Web" (2nd read)
         └── reading_patterns: re-reads favorites
 ```
 
-### WORK → SELF
+### Work Activity → SELF
 
 - Planning/collaboration style → reasoning_patterns
 - Financial/values signals → values (if evidenced)

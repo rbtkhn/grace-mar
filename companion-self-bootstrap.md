@@ -111,7 +111,7 @@ If you need to extract or generalize content for companion-self, the canonical s
 - Merge process (instance side): `docs/merging-from-companion-self.md` (template paths, merge checklist)
 - Instance vs template audit: `docs/audit-grace-mar-vs-companion-self-template.md` (compliance check; use to confirm grace-mar is a valid source before extracting template)
 
-**Naming:** Third skill module is **WORK** in prose; internal identifier remains **BUILD** (container, CREATE-nnn, ACT-nnn). Standard label: **self-skill-work**. When generalizing for the template, use WORK in concept docs.
+**Naming:** Record skill modules are **THINK** and **WRITE**. Work is now a separate execution layer organized through `work-*` territories and instance work contexts. Legacy `BUILD` / `CREATE-*` / `ACT-*` references remain valid for historical compatibility.
 
 ---
 
