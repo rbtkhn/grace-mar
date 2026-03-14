@@ -1428,6 +1428,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0045
+    date: 2026-03-14
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py"
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

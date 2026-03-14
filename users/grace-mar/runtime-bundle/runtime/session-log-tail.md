@@ -3,16 +3,6 @@
 > Non-canonical runtime continuity aid derived from `session-log.md`.
 
 ```
-participants: companion (submitted), operator (analysis)
-method: Five school worksheet images provided; analysis in analysis-homework-samples-2026-02-24.md
-activity_type: school artifacts — Layer/Crust, Solid/Mantle/Inner Core, History of the Earth (cover), Dinosaurs/extinction, Read-aloud Time/Heat/Pressure
-evidence_tier: 4  # OBSERVED (actual worksheets)
-```
-**Staged:** CANDIDATE-0073 (LEARN — extinct), CANDIDATE-0074 (WRITE-0006 — dinosaur sentence + drawing), CANDIDATE-0075 (PER — emotional response to hypothetical dinosaurs).
-**Processed (2026-02-24):** All three approved. LEARN-0034 (extinct) added to IX-A; WRITE-0006 added to EVIDENCE Writing Log; PER-0006 added to IX-C; ACT-0037 added to Activity Log; bot/prompt.py updated (YOUR KNOWLEDGE + YOUR PERSONALITY).
-**Artifact note:** Copy the dinosaur/extinction worksheet image to `users/grace-mar/artifacts/WRITE-0006-dinosaur-extinction.png` when available. Full analysis in analysis-homework-samples-2026-02-24.md.
----
-### SESSION 028 — Pipeline: Bach Goldberg + Tchaikovsky Andante cantabile
 ```yaml
 date: 2026-02-24
 participants: companion (reported), operator (approval)
@@ -21,6 +11,16 @@ activity_type: companion_report — music (bedtime + listening)
 evidence_tier: 5
 ```
 **Processed:** CANDIDATE-0076 (Bach Goldberg Variations for bedtime), CANDIDATE-0077 (Tchaikovsky Andante cantabile). LEARN-0035, LEARN-0036 added to IX-A; CUR-0013, CUR-0014 added to IX-B; ACT-0038, ACT-0039 already in EVIDENCE; bot/prompt.py YOUR KNOWLEDGE (classical/bedtime) updated; PRP regenerated.
+---
+### SESSION 029 — Gate: voice-test duplicates rejected (0083, 0084)
+```yaml
+date: 2026-03-14
+participants: operator (Cursor)
+method: harness_warmup follow-up — gate pass on pending test candidates
+activity_type: pipeline — reject duplicate lane
+evidence_tier: 5
+```
+**Rejected:** CANDIDATE-0083 (stories/imagination/adventure) — duplicate IX-C; already covered (stories favorite, imagination, storytelling). CANDIDATE-0084 (Mars facts) — duplicate IX-A; Mars/Olympus Mons/Phobos/Deimos already in Record. No SELF, EVIDENCE ACT, or prompt.py changes. `rejected` events appended to pipeline-events.jsonl.
 ---
 END OF FILE — SESSION LOG grace-mar
 ```

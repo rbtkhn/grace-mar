@@ -17,6 +17,23 @@ Update `Last checked` when you review a source. `Status` is for operator workflo
 | Gallrein / opposition social | live external | X, local campaign surfaces | Opposition narrative and activity | daily |  | watch | Track only with citations |
 | FEC filings / notices | live external | FEC reporting surfaces | Spending, pre-primary filing, 48-hour notices | weekly |  | watch | Use when refreshing spending summary |
 | Local KY news | live external | district / Kentucky press | District narrative, earned media, local events | weekly |  | watch | Add specific outlets as workflow stabilizes |
+| **Recency pass (operator)** | workflow | See § Recency pass below | Forces brief to lean on **last 7–30 days**, not stale SEO | **every weekly brief** | 2026-03-14 | ready | Scaffold + generator §0; live bullets still operator |
+
+---
+
+## Recency pass (last 7–30 days)
+
+**Goal:** At least one full pass of the brief where every external bullet is **grounded in the last 7–30 days** (not evergreen search).
+
+| Step | Action |
+|------|--------|
+| 1 | Pick window: **7d** (tight) or **30d** (standard) for this cycle. |
+| 2 | **Principal X** — scroll @RepThomasMassie for the window only; note dates on bullets. |
+| 3 | **Opposition / race** — X search + one local outlet archive filtered by date; same window. |
+| 4 | **National hooks** (Iran, votes, etc.) — filter Google News or trusted feed by **Past week** / **Past month**. |
+| 5 | Log in brief: `Recency window: [7d \| 30d] · checked [date]` |
+
+**Optional skill:** Install **Last 30 Days** (Matt Van Horn) in **your** coding agent if you want scripted social/recent-web pull; still **cite + companion approves** anything that becomes client-facing. Not Voice knowledge.
 
 ---
 

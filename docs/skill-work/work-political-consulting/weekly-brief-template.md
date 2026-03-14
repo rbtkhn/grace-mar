@@ -6,6 +6,14 @@ Use this structure when the companion requests a weekly brief. Fill each section
 
 ## Week of [DATE RANGE]
 
+### 0. Recency slice (required each cycle)
+
+- **Window:** last **7** or **30** days (circle one).
+- **Rule:** At least **3** bullets in §1–§4 must be **only** from that window (with date or link proving recency).
+- **Logged:** `Recency: 7d \| 30d · assembled [DATE]` — see [brief-source-registry § Recency pass](brief-source-registry.md#recency-pass-last-730-days).
+
+---
+
 ### 1. Headlines (principal-relevant)
 
 - 2–5 bullets: national or KY-4 news that affects the principal (votes, Iran, Epstein, Trump, Gallrein, district).

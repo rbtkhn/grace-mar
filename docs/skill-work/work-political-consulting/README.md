@@ -164,7 +164,9 @@ Use this order when actively running the territory:
 1. Open [workspace.md](workspace.md) for the file map and canonical operator path.
 2. Use the WAP operator surface at `/operator/wap` to see campaign status, blockers, WAP gate items, content queue, and next actions in one place.
 3. Refresh [brief-source-registry.md](brief-source-registry.md) before generating the weekly brief.
-4. Generate a first-pass brief scaffold with `python scripts/generate_wap_weekly_brief.py -u grace-mar`.
+4. Generate a first-pass brief (includes **§0 Recency slice**):  
+   `python scripts/generate_wap_weekly_brief.py -u grace-mar --start YYYY-MM-DD -o docs/skill-work/work-political-consulting/weekly-brief-YYYY-MM-DD.md`  
+   Then run the **live 7d/30d pass** and replace §0 with three dated bullets. Latest artifact: [weekly-brief-2026-03-09.md](weekly-brief-2026-03-09.md).
 5. Use [content-queue.md](content-queue.md) as the working queue for `@shadowcampain`.
 6. Stage WAP milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.
 

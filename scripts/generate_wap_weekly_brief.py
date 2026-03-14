@@ -87,6 +87,7 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
     content = snapshot["content_queue"]
     campaign = snapshot["campaign_status"]
     date_range = _format_date_range(start_text)
+    assembled = datetime.now().strftime("%Y-%m-%d")
 
     lines = [
         "# Weekly brief — work-political-consulting",
@@ -94,6 +95,11 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
         f"## Week of {date_range}",
         "",
         "_This is a first-pass scaffold built from documented WAP surfaces. Refresh live sources and citations before treating it as final._",
+        "",
+        "### 0. Recency slice (required)",
+        "",
+        "- **Window:** 30d (edit if you use 7d).",
+        f"- **Logged:** Recency: 30d · scaffold assembled {assembled} — replace with 3+ dated bullets from §1–§4 after live pass ([brief-source-registry § Recency pass](brief-source-registry.md#recency-pass-last-730-days)).",
         "",
         "### 1. Headlines (principal-relevant)",
         "",

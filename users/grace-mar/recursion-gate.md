@@ -50,6 +50,27 @@ summary: Casa Bonita history — user rejected.
 
 ## Processed
 
+### CANDIDATE-0085 (WAP — weekly brief + recency workflow)
+
+```yaml
+status: approved
+timestamp: 2026-03-14 13:30:00
+channel_key: operator:wap:us-ky4-massie
+territory: work-political-consulting
+source: operator — WPC ops milestone (doc + generator)
+source_exchange:
+  operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass."
+  grace_mar: "[WAP milestone — approve for ACT audit trail; IX optional/minimal]"
+mind_category: knowledge
+signal_type: wap_milestone
+priority_score: 3
+summary: WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-political-consulting/. Not campaign advice to the companion."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+```
+
 ### CANDIDATE-0083 (Test — voice authenticity: stories / imagination)
 
 ```yaml

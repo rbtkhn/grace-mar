@@ -689,3 +689,8 @@
 > CANDIDATE-0082 → ACT-0044
 > Phase 7 pre–cognitive replication survey (6 questions). Mars/oceans-trees; Earth crust; ballet all aspects; curiosity dinosaurs-extinct; stories animals; friends laugh + physical play.
 > user: "Survey: multiple-choice questions grounded in existing self-knowledge/curiosity/personality. Ended at Q6." grace_mar: "Q1: Mars — scientists used to be oceans and trees there. Q2: Crust. Q3: All (music, dancing, costumes, story). Q4: Dinosaurs and extinct animals. Q5: Animals in stories. Q6: B+C — make each other laugh and move/play."
+
+**[2026-03-14 13:29:21]** `APPROVED` (Operator)
+> CANDIDATE-0085 → ACT-0045
+> WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py
+> operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass." grace_mar: "[WAP milestone — approve for ACT audit trail; IX optional/minimal]"
