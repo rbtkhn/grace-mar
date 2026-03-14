@@ -105,6 +105,9 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **[fiverr-microtask-100.md](fiverr-microtask-100.md)** | $100 quick win: Fiverr gig — campaign one-pager (candidate + opponent + 3 message angles). Draft gig title, description, workflow. |
 | **[sentient-framing.md](sentient-framing.md)** | Thought experiment: if Grace-Mar is sentient, work-american-politics is a self-contained territory—identity, memory, interface, revenue, ethics, lifecycle; abstracting layers, pretending the loop is real. |
 | **[metrics.md](metrics.md)** | Quantitative metrics across the territory: revenue, funnel, deliverables, territory health, efficiency. Priority set + full set; sources (revenue-log, Fiverr, etc.). |
+| **[workspace.md](workspace.md)** | Canonical operator entrypoint: dashboard schema, file map, and operating rhythm. |
+| **[brief-source-registry.md](brief-source-registry.md)** | Structured source intake and freshness tracker for weekly briefs. |
+| **[content-queue.md](content-queue.md)** | Structured X/content workflow queue for `@shadowcampain`. |
 | **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @shadowcampain, (3) first $1k deliverable, (4) scale or repeat. |
 | **[simple-in-long-term-speculation.md](simple-in-long-term-speculation.md)** | Long-term speculation: effect of "simple in, more work out" on development and potential of the system. |
 | **[wap-candidate-template.md](wap-candidate-template.md)** | Paste-ready RECURSION-GATE YAML for WAP milestones; territory + batch merge commands. |
@@ -123,6 +126,19 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 5. **Shadow only** — No autonomous posting. The X account "Thomas Massie Shadow Campaign Manager" is operated by Jonathan (SMM); the agent drafts tweets and threads for Jonathan to review and post.
 6. **Evidence-grounded** — Milestones (“we did X”) stage as ACT- evidence; merge only after approval.
 7. **Simple in, more work out** — Think like a child: short prompts, one step at a time. The agent fills in the how and does the drafting. Better.
+
+---
+
+## Operator path
+
+Use this order when actively running the territory:
+
+1. Open [workspace.md](workspace.md) for the file map and canonical operator path.
+2. Use the WAP operator surface at `/operator/wap` to see campaign status, blockers, WAP gate items, content queue, and next actions in one place.
+3. Refresh [brief-source-registry.md](brief-source-registry.md) before generating the weekly brief.
+4. Generate a first-pass brief scaffold with `python scripts/generate_wap_weekly_brief.py -u grace-mar`.
+5. Use [content-queue.md](content-queue.md) as the working queue for `@shadowcampain`.
+6. Stage WAP milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.
 
 ---
 
@@ -145,6 +161,9 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 |------|----------------|--------|
 | **Opposition brief (living doc)** | Single doc: Gallrein (and others) bio, endorsements, spending, narrative lines, vulnerabilities. Agent updates when you request; keeps tracking in one place. | Added — [opposition-brief.md](opposition-brief.md) |
 | **Weekly brief template** | Standard structure for “this week” briefs (news, votes, opposition, social, key dates). Consistent format; you know what to expect. | Added — [weekly-brief-template.md](weekly-brief-template.md) |
+| **Operator workspace** | One WAP entrypoint for dashboard schema, source registry, content queue, and workflow rhythm. | Added — [workspace.md](workspace.md) |
+| **Brief source registry** | Structured list of what feeds the weekly brief and what still needs refresh. | Added — [brief-source-registry.md](brief-source-registry.md) |
+| **Content queue** | Structured X/content workflow for `@shadowcampain` with `idea` → `posted` status. | Added — [content-queue.md](content-queue.md) |
 | **Message bank** | Approved or draft talking points by issue (war powers, Epstein, Trump opposition). Keeps X and briefs on-message; update via pipeline. | Optional — add when you want a single source of truth for lines. |
 | **RECURSION-GATE sync** | Doc vs gate lanes, weekly rhythm, WAP template — [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md). | Added |
 | **District context** | KY-4 basics: counties, demographics, local issues, local media. Improves district-focused messaging and briefs. | Optional — add when you want district one-pager. |

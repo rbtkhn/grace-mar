@@ -16,9 +16,10 @@
 | # | Doc | What |
 |---|-----|------|
 | 1 | [account-x.md](account-x.md) | Account spec, handle @shadowcampain, guidelines, X strategy |
-| 2 | [smm-training.md](smm-training.md) | Massie voice, ally/adversary research, tactics, review checklist |
-| 3 | [principal-profile.md](principal-profile.md) | Who Massie is, race, issues, opposition |
-| 4 | [opposition-brief.md](opposition-brief.md) | Gallrein, Trump/MAGA, spending, narrative |
+| 2 | [content-queue.md](content-queue.md) | What content is in `idea`, `draft`, `review`, or `posted` state |
+| 3 | [smm-training.md](smm-training.md) | Massie voice, ally/adversary research, tactics, review checklist |
+| 4 | [principal-profile.md](principal-profile.md) | Who Massie is, race, issues, opposition |
+| 5 | [opposition-brief.md](opposition-brief.md) | Gallrein, Trump/MAGA, spending, narrative |
 
 ---
 
@@ -29,6 +30,7 @@
 | [smm-job-description.md](smm-job-description.md) | Formal role, comp (0.1 BTC base + 0.1 win bonus) |
 | [iran-foreign-policy-brief.md](iran-foreign-policy-brief.md) | Iran / war-powers context, Massie quotes |
 | [calendar-2026.md](calendar-2026.md) | Key dates (primary May 19, early vote, etc.) |
+| [workspace.md](workspace.md) | Operator-facing territory workspace and file map |
 
 ---
 

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>work-american-politics Ops</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --panel: #211b18;
+      --card: #2a231f;
+      --text: #f3eee8;
+      --muted: #b6a99d;
+      --accent: #d7a86e;
+      --good: #8cc48d;
+      --warn: #e0bf72;
+      --danger: #d7847d;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      padding: 1rem;
+    }
+    h1, h2, h3 { margin: 0; }
+    h1 { font-size: 1.45rem; margin-bottom: 0.35rem; }
+    .intro { color: var(--muted); line-height: 1.45; margin-bottom: 1rem; max-width: 72rem; }
+    .panel, .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .panel { padding: 0.95rem; margin-bottom: 1rem; }
+    .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .stack { display: grid; gap: 1rem; }
+    .row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    input, button {
+      font: inherit;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #13100e;
+      color: var(--text);
+      padding: 0.55rem 0.75rem;
+    }
+    button { cursor: pointer; }
+    button.primary { background: rgba(215,168,110,0.16); color: var(--accent); }
+    .stats {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+    .stat {
+      padding: 0.5rem 0.7rem;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.05);
+      min-width: 9rem;
+    }
+    .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .value { font-size: 1.1rem; margin-top: 0.2rem; }
+    .card { padding: 0.95rem; }
+    .card h2 { font-size: 1rem; margin-bottom: 0.65rem; }
+    .list {
+      display: grid;
+      gap: 0.55rem;
+    }
+    .item {
+      padding: 0.7rem;
+      border-radius: 10px;
+      background: rgba(0,0,0,0.14);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .muted { color: var(--muted); }
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      margin-left: 0.35rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.08);
+      text-transform: uppercase;
+    }
+    .good { color: var(--good); }
+    .warn { color: var(--warn); }
+    .danger { color: var(--danger); }
+    .code {
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      font-size: 0.9rem;
+      color: var(--accent);
+    }
+    pre {
+      margin: 0;
+      white-space: pre-wrap;
+      line-height: 1.45;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .error {
+      color: var(--danger);
+      margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>work-american-politics</h1>
+  <p class="intro">Operator console for the WAP territory. This page reads documented WAP surfaces plus the canonical gate and shows what is stale, what is queued, and what should happen next.</p>
+
+  <section class="panel">
+    <div class="row">
+      <input id="token" type="password" placeholder="Operator secret" style="min-width: 240px; flex: 1;">
+      <button id="saveToken" class="primary" type="button">Save Secret</button>
+      <button id="reload" type="button">Reload</button>
+      <button id="loadBrief" type="button">Refresh Brief Preview</button>
+    </div>
+    <div class="stats" id="topStats"></div>
+    <div class="error" id="error" hidden></div>
+  </section>
+
+  <div class="grid">
+    <section class="stack">
+      <article class="card">
+        <h2>Campaign status</h2>
+        <div class="list" id="campaignStatus"></div>
+      </article>
+      <article class="card">
+        <h2>Territory blockers</h2>
+        <div class="list" id="blockers"></div>
+      </article>
+      <article class="card">
+        <h2>Next actions</h2>
+        <div class="list" id="nextActions"></div>
+      </article>
+    </section>
+
+    <section class="stack">
+      <article class="card">
+        <h2>Brief readiness</h2>
+        <div class="list" id="briefReadiness"></div>
+      </article>
+      <article class="card">
+        <h2>Doc freshness</h2>
+        <div class="list" id="docStatus"></div>
+      </article>
+      <article class="card">
+        <h2>Content queue</h2>
+        <div class="list" id="contentQueue"></div>
+      </article>
+      <article class="card">
+        <h2>Pending WAP gate items</h2>
+        <div class="list" id="wapGate"></div>
+      </article>
+    </section>
+  </div>
+
+  <section class="card" style="margin-top: 1rem;">
+    <h2>Weekly brief preview</h2>
+    <pre id="briefPreview">Load the preview to generate the current brief scaffold.</pre>
+  </section>
+
+  <script>
+    (function() {
+      var STORAGE_KEY = 'grace-mar-operator-secret';
+      var tokenInput = document.getElementById('token');
+      var errorEl = document.getElementById('error');
+      tokenInput.value = localStorage.getItem(STORAGE_KEY) || '';
+
+      function escapeHtml(text) {
+        return String(text || '').replace(/[&<>"']/g, function(ch) {
+          return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
+        });
+      }
+
+      function authHeaders() {
+        var token = (tokenInput.value || '').trim();
+        return token ? { 'Authorization': 'Bearer ' + token } : {};
+      }
+
+      function setError(message) {
+        if (!message) {
+          errorEl.hidden = true;
+          errorEl.textContent = '';
+          return;
+        }
+        errorEl.hidden = false;
+        errorEl.textContent = message;
+      }
+
+      function renderList(targetId, items, formatter, emptyMessage) {
+        var target = document.getElementById(targetId);
+        if (!items || !items.length) {
+          target.innerHTML = '<div class="item muted">' + escapeHtml(emptyMessage || 'None') + '</div>';
+          return;
+        }
+        target.innerHTML = items.map(function(item) {
+          return '<div class="item">' + formatter(item) + '</div>';
+        }).join('');
+      }
+
+      function loadStatus() {
+        setError('');
+        return fetch('/operator/wap-status', { headers: authHeaders() })
+          .then(function(response) {
+            return response.json().then(function(data) {
+              if (!response.ok) throw new Error(data.error || 'Could not load WAP status');
+              return data;
+            });
+          })
+          .then(function(data) {
+            var topStats = document.getElementById('topStats');
+            topStats.innerHTML = ''
+              + '<div class="stat"><div class="label">Primary</div><div class="value">' + escapeHtml(data.campaign_status.primary_date) + '</div></div>'
+              + '<div class="stat"><div class="label">Days until primary</div><div class="value">' + escapeHtml(String(data.campaign_status.days_until_primary)) + '</div></div>'
+              + '<div class="stat"><div class="label">Pending WAP gate</div><div class="value">' + escapeHtml(String(data.gate.pending_count)) + '</div></div>'
+              + '<div class="stat"><div class="label">Total revenue</div><div class="value">$' + escapeHtml(String(data.revenue.total_revenue_usd)) + '</div></div>'
+              + '<div class="stat"><div class="label">Review-ready content</div><div class="value">' + escapeHtml(String(data.content_queue.status_counts.review || 0)) + '</div></div>';
+
+            renderList('campaignStatus', data.campaign_status.upcoming_dates, function(item) {
+              return '<div><strong>' + escapeHtml(item.date) + '</strong><span class="pill">' + escapeHtml(String(item.days_until) + 'd') + '</span></div>'
+                + '<div>' + escapeHtml(item.event) + '</div>'
+                + '<div class="muted">' + escapeHtml(item.decision || '') + '</div>';
+            }, 'No upcoming dates found.');
+
+            renderList('blockers', data.territory_blockers, function(item) {
+              return '<div><strong>' + escapeHtml(item.title) + '</strong></div><div class="muted">' + escapeHtml(item.action) + '</div>';
+            }, 'No blockers right now.');
+
+            renderList('nextActions', data.next_actions, function(item) {
+              return '<div>' + escapeHtml(item) + '</div>';
+            }, 'No next actions generated.');
+
+            renderList('briefReadiness', data.brief_readiness.sources, function(item) {
+              return '<div><strong>' + escapeHtml(item.Source) + '</strong><span class="pill">' + escapeHtml(item.Status) + '</span></div>'
+                + '<div class="muted">' + escapeHtml(item['Use for'] || '') + '</div>'
+                + '<div class="muted code">' + escapeHtml(item['Path / surface'] || '') + '</div>';
+            }, 'No brief sources found.');
+
+            renderList('docStatus', data.doc_statuses, function(item) {
+              var age = item.age_days === null ? 'unknown' : String(item.age_days) + 'd old';
+              return '<div><strong>' + escapeHtml(item.label) + '</strong>'
+                + (item.has_placeholders ? '<span class="pill warn">placeholders</span>' : '')
+                + '</div><div class="muted">' + escapeHtml(age) + '</div>'
+                + '<div class="muted code">' + escapeHtml(item.path) + '</div>';
+            }, 'No doc status found.');
+
+            renderList('contentQueue', data.content_queue.next_items, function(item) {
+              return '<div><strong>' + escapeHtml(item.Topic) + '</strong><span class="pill">' + escapeHtml(item.Status) + '</span></div>'
+                + '<div class="muted">' + escapeHtml(item['Campaign moment'] || '') + ' · ' + escapeHtml(item['Target date'] || '') + '</div>'
+                + '<div class="muted code">' + escapeHtml(item['Source doc'] || '') + '</div>';
+            }, 'No content items in motion.');
+
+            renderList('wapGate', data.gate.pending_items, function(item) {
+              return '<div><strong>' + escapeHtml(item.id) + '</strong><span class="pill">' + escapeHtml(item.risk_tier) + '</span></div>'
+                + '<div>' + escapeHtml(item.summary || '(no summary)') + '</div>'
+                + '<div class="muted">' + escapeHtml(item.timestamp || '') + '</div>';
+            }, 'No live WAP gate items.');
+          })
+          .catch(function(err) {
+            setError(err.message || 'Could not load WAP status');
+          });
+      }
+
+      function loadBrief() {
+        return fetch('/operator/wap-brief', { headers: authHeaders() })
+          .then(function(response) {
+            return response.text().then(function(text) {
+              if (!response.ok) throw new Error(text || 'Could not load brief preview');
+              return text;
+            });
+          })
+          .then(function(text) {
+            document.getElementById('briefPreview').textContent = text;
+          })
+          .catch(function(err) {
+            setError(err.message || 'Could not load brief preview');
+          });
+      }
+
+      document.getElementById('saveToken').onclick = function() {
+        localStorage.setItem(STORAGE_KEY, tokenInput.value || '');
+        loadStatus();
+      };
+      document.getElementById('reload').onclick = loadStatus;
+      document.getElementById('loadBrief').onclick = loadBrief;
+
+      loadStatus();
+      loadBrief();
+    })();
+  </script>
+</body>
+</html>

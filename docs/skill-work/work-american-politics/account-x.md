@@ -63,6 +63,8 @@
 3. **Jonathan** edits if needed and posts from the account.
 4. **Optional:** Stage “we posted X” as ACT- evidence after approval for Record continuity.
 
+**Working queue:** use [content-queue.md](content-queue.md) to track what is only an idea, what is in draft, what is ready for review, and what has already been posted.
+
 ---
 
 ## SMM onboarding

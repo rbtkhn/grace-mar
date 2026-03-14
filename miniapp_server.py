@@ -49,6 +49,8 @@ from bot.core import (
     update_candidate_status,
 )
 from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
+from scripts.work_american_politics_ops import get_wap_snapshot
+from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
 app = Flask(__name__, static_folder="miniapp", static_url_path="")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -210,6 +212,12 @@ def operator_inbox():
     return send_from_directory("miniapp", "operator-inbox.html")
 
 
+@app.route("/operator/wap")
+def operator_wap():
+    """Browser ops surface for work-american-politics."""
+    return send_from_directory("miniapp", "operator-wap.html")
+
+
 @app.route("/i/<token>")
 def interview_by_token(token: str):
     """Shareable interview link — reviewer chats with fork, exchanges not archived."""
@@ -279,6 +287,26 @@ def operator_gate_candidates():
         territory=(request.args.get("territory") or "").strip(),
     )
     return jsonify({"user_id": USER_ID, "count": len(rows), "items": rows})
+
+
+@app.route("/operator/wap-status", methods=["GET"])
+def operator_wap_status():
+    """Return structured work-american-politics operator state."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    return jsonify(get_wap_snapshot(USER_ID))
+
+
+@app.route("/operator/wap-brief", methods=["GET"])
+def operator_wap_brief():
+    """Return a generated weekly brief scaffold for work-american-politics."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    start = (request.args.get("start") or "").strip()
+    brief = build_wap_weekly_brief(start_text=start, user_id=USER_ID)
+    return brief, 200, {"Content-Type": "text/markdown; charset=utf-8"}
 
 
 @app.route("/operator/gate-candidates/<candidate_id>/action", methods=["POST"])

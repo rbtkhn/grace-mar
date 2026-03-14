@@ -4,6 +4,19 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 
 ---
 
+## Current instrumentation status
+
+| Surface | Status | Notes |
+|--------|--------|-------|
+| Revenue totals from `revenue-log.md` | Instrumented | Read by the WAP operator surface. |
+| Key primary dates from `calendar-2026.md` | Instrumented | Read by the WAP operator surface. |
+| WAP gate pending count | Instrumented | Derived from `RECURSION-GATE` with WAP territory filter. |
+| Brief source readiness | Instrumented | Driven by `brief-source-registry.md`. |
+| X/content queue state | Instrumented | Driven by `content-queue.md`. |
+| Fiverr conversion / X engagement / email response | Manual | Still requires human-entered analytics from external platforms. |
+
+---
+
 ## Priority set (instrument first)
 
 | Metric | Description | Source |
@@ -57,6 +70,9 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 | Calendar accuracy | Key dates (e.g. primary May 19) correct and not past. | [calendar-2026.md](calendar-2026.md). |
 | Revenue log current | Last revenue or allocation entry date. | revenue-log.md |
 | Allocation vs budget | Allocated / total seed (or / total revenue) — are we on plan? | revenue-log.md allocations vs [seed-allocation-plan.md](seed-allocation-plan.md). |
+| Brief source readiness | Count of `ready` / `watch` / `needs_refresh` rows in [brief-source-registry.md](brief-source-registry.md). | brief-source-registry.md |
+| Content queue flow | Count by status (`idea`, `draft`, `review`, `posted`) in [content-queue.md](content-queue.md). | content-queue.md |
+| WAP gate rhythm | Pending WAP candidates and whether the territory has live gated continuity this week. | `users/grace-mar/recursion-gate.md` with WAP filter |
 
 ---
 

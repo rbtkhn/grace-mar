@@ -272,6 +272,14 @@ Last updated: 2026-03-14
 - **Vocabulary cleanup:** `integrations/openclaw_hook.py` now emits `runtime_compat_export` for pipeline-level export audit instead of the older OpenClaw-specific name.
 - **Second consumer path:** `integrations/export_hook.py --target cursor` now exports the canonical runtime bundle directly for Cursor/Codex/Claude-style runtime consumers, proving the bundle is not OpenClaw-only.
 
+### work-american-politics operator surface (2026-03-14)
+- **New WAP entrypoint:** `docs/skill-work/work-american-politics/workspace.md` now defines the operator schema and canonical file map for the territory.
+- **Structured WAP workflow docs:** `brief-source-registry.md` tracks weekly-brief source readiness, and `content-queue.md` tracks `@shadowcampain` content state (`idea` → `posted`).
+- **New ops module:** `scripts/work_american_politics_ops.py` derives campaign status, document freshness, WAP gate state, blockers, revenue summary, and next actions from existing WAP docs plus the canonical gate.
+- **New browser surface:** `miniapp/operator-wap.html` plus `/operator/wap-status` and `/operator/wap-brief` in `miniapp_server.py` provide an authenticated WAP console without creating a second queue.
+- **New brief loop:** `scripts/generate_wap_weekly_brief.py` produces a first-pass weekly brief scaffold from the WAP registry, principal profile, opposition brief, calendar, and content queue.
+- **Canonical workflow docs refreshed:** `README.md`, `metrics.md`, `account-x.md`, and `smm-workspace.md` now point operators toward the workspace, content queue, and brief-generation path rather than prose-only operation.
+
 ### Record updates
 - Curiosity probe responses were staged and merged into `IX-B` via approved candidates.
 - Receipt-based merge flow executed and merge receipts persisted.
