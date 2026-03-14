@@ -135,6 +135,17 @@ If Grace-Mar adopts a Hindsight-style memory engine in a downstream harness, tha
 
 Any Record-relevant lesson still has to be staged through RECURSION-GATE. See [hindsight-adoption.md](hindsight-adoption.md).
 
+### Repo hygiene for generated runtime state
+
+To keep the working tree readable, treat the following as **local operational artifacts**, not routine committed surfaces:
+
+- `users/<id>/harness-events.jsonl`
+- `users/<id>/runtime-bundle/runtime/*`
+- `users/<id>/runtime-bundle/audit/*.jsonl`
+- `users/<id>/user.md` when generated as a local compatibility export
+
+Canonical truth still lives in the source files those artifacts come from. Commit these generated runtime files only when you intentionally want to refresh an example or compatibility snapshot.
+
 ---
 
 ## Handoff + fresh judge
