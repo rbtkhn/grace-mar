@@ -3199,20 +3199,50 @@ entries:
     source: "manual"
     added_at: 2026-02-26
     notes: "2-hour Debussy piano collection; used for bedtime; described as perfect."
+
+  # --- Theology (thematic; see ## Theology below) ---
+  - id: LIB-0135
+    title: "The Simple Condition"
+    author: "Robert Kuhne"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "ethics", "coordination", "dignity", "civilization_memory"]
+    source: "manual"
+    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-SIMPLE-CONDITION.md"
+    added_at: 2026-03-14
+    notes: "Essay — mutual recognition, institutions optional. Operator canon in CIV–MEM docs/essays/THE-SIMPLE-CONDITION.md; use same path when repo synced. Plain + distribution variants in that folder."
+
 ```
+
+---
+
+## Theology
+
+**Purpose:** A named shelf for sources that bear on **belief, practice, sacred narrative, ethics-as-tradition, or comparative religion** — without mixing them into geography/science/history lanes by default.
+
+**How it works (schema-aligned):**
+- Entries still use the normal **lanes** (`reference`, `canon`, `influence`) and **types** from [library-schema.md](../../docs/library-schema.md).
+- Mark theological material by adding **`theology`** (and narrower tags if useful, e.g. `Christianity`, `myth-and-rite`) to **`scope`** so lookup and human scan can filter.
+- Nothing here bypasses the **gated pipeline**: facts or claims about the companion’s beliefs belong in SELF via RECURSION-GATE; LIBRARY only holds **approved return-to sources** (books, articles, essays, video, etc.).
+
+**Current entries:** **LIB-0135** — *The Simple Condition* (essay; `scope` includes `theology`).
 
 ---
 
 ## Metadata
 
 ```yaml
-total_entries: 134
+total_entries: 135
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
-grace_mar_additions: "LIB-0001..0003 (Usborne reference), LIB-0132 (CMC), LIB-0133 (Coppélia video), LIB-0134 (Debussy video)"
+grace_mar_additions: "LIB-0001..0003 (Usborne reference), LIB-0132 (CMC), LIB-0133 (Coppélia), LIB-0134 (Debussy), LIB-0135 (The Simple Condition — Theology)"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
 last_updated: 2026-03-14
 library_lanes: "reference, canon, influence"
 taxonomy_note: "engagement_status replaces read_status; lookup_priority marks runtime lookup preference"
+sections: "Entries · Theology (thematic shelf; tag scope: theology) · Metadata"
 ```
 </pre>
     </section>
