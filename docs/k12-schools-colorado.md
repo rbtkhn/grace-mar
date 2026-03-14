@@ -60,3 +60,4 @@ See [k12-pilot-agreement-template.md](k12-pilot-agreement-template.md).
 | [k12-schools-pilot-playbook.md](k12-schools-pilot-playbook.md) | SKU, metrics, phases |
 | [k12-compliance-checklist.md](k12-compliance-checklist.md) | FERPA/COPPA + Colorado rows |
 | [k12-schools-mvp.md](k12-schools-mvp.md) | Technical MVP |
+| [k12-market-research-2026.md](k12-market-research-2026.md) | Market, competitors, pedagogy, 10 feature ideas |
