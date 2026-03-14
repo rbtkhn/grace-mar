@@ -195,7 +195,7 @@ def parse_archive(content: str, limit: int = 10) -> list[dict]:
 
 
 def parse_library(content: str) -> list[dict]:
-    """Extract active LIBRARY entries (id, title, scope, read_status, volume) from self-library.md."""
+    """Extract active LIBRARY entries (id, title, scope, engagement status, lane, volume)."""
     entries = []
     blocks = re.split(r'-\s+id:\s+LIB-', content)
     for block in blocks[1:]:  # skip first (header)
@@ -204,6 +204,8 @@ def parse_library(content: str) -> list[dict]:
         title_m = re.search(r'title:\s*["\']([^"\']+)["\']', block)
         scope_m = re.search(r'scope:\s*\[([^\]]*)\]', block)
         status_m = re.search(r'status:\s*(\w+)', block)
+        lane_m = re.search(r'lane:\s*(\w+)', block)
+        engage_m = re.search(r'engagement_status:\s*(\w+)', block)
         read_m = re.search(r'read_status:\s*(\w+)', block)
         volume_m = re.search(r'volume:\s*["\']([^"\']+)["\']', block)
         if status_m and status_m.group(1) != "active":
@@ -211,9 +213,22 @@ def parse_library(content: str) -> list[dict]:
         title = title_m.group(1) if title_m else ""
         scope_str = scope_m.group(1) if scope_m else ""
         scope = [s.strip() for s in scope_str.split(",") if s.strip()]
-        read_status = read_m.group(1) if read_m else "unread"
+        lane = lane_m.group(1) if lane_m else "canon"
+        engagement_status = engage_m.group(1) if engage_m else None
+        if engagement_status is None:
+            legacy = read_m.group(1) if read_m else "unread"
+            engagement_status = "consumed" if legacy == "read" else "planned"
         volume = volume_m.group(1) if volume_m else None
-        entries.append({"id": lib_id, "title": title, "scope": scope, "read_status": read_status, "volume": volume})
+        entries.append(
+            {
+                "id": lib_id,
+                "title": title,
+                "scope": scope,
+                "lane": lane,
+                "engagement_status": engagement_status,
+                "volume": volume,
+            }
+        )
     return entries
 
 
@@ -562,8 +577,8 @@ def render_html(data: ProfileData) -> str:
     k_samples = "".join(f'<li>{s}</li>' for s in data.knowledge_samples) or '<li class="meta">—</li>'
     c_samples = "".join(f'<li>{s}</li>' for s in data.curiosity_samples) or '<li class="meta">—</li>'
     p_samples = "".join(f'<li>{s}</li>' for s in data.personality_samples) or '<li class="meta">—</li>'
-    read_entries = [e for e in data.library_entries if e.get("read_status") == "read"]
-    unread_entries = [e for e in data.library_entries if e.get("read_status") != "read"]
+    read_entries = [e for e in data.library_entries if e.get("engagement_status") in ("consumed", "recurring", "trusted", "primary")]
+    unread_entries = [e for e in data.library_entries if e.get("engagement_status") not in ("consumed", "recurring", "trusted", "primary")]
 
     def _lib_label(e: dict) -> str:
         if e.get("volume"):

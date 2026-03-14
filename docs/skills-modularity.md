@@ -17,7 +17,7 @@ The Record (and the companion self) is composed of the following modules. Togeth
 | **Self-knowledge** | self-knowledge | self.md IX-A | Facts that entered awareness (post-seed knowledge) |
 | **Self-personality** | self-personality | self.md IX-C | Observed behavioral patterns, values, speech traits, art style |
 | **Self-curiosity** | self-curiosity | self.md IX-B | Topics that catch attention (post-seed curiosity) |
-| **Self-library** | self-library | users/[id]/self-library.md | Curated lookup sources (books, reference works, videos); query-first for answers |
+| **Self-library** | self-library | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first for answers |
 | **Self-skill-think** | self-skill-think | skills.md THINK container | Intake, learning, comprehension (multimodal) |
 | **Self-skill-write** | self-skill-write | skills.md WRITE container | Production (text, journal, stories); linguistic style source |
 

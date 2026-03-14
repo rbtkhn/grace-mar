@@ -228,7 +228,7 @@ grace-mar/
         ├── skill-write.md      # WRITE container
         ├── work-alpha-school.md # WORK context (separate from SKILLS)
         ├── self-evidence.md         # Activity log
-        ├── self-library.md     # self-library — curated lookup sources (books, videos); gated
+        ├── self-library.md     # self-library — curated references, canon, and influential media; gated
         ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging

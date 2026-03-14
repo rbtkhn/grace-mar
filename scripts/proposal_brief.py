@@ -71,22 +71,30 @@ def _gaps(skills_content: str) -> list[str]:
 
 
 def _library_unread(library_content: str, n: int = 2) -> list[dict]:
-    """Extract unread/active library entries."""
+    """Extract planned or in-progress canon entries from self-library."""
     entries = []
     blocks = re.split(r"^\s*-\s+id:\s+", library_content, flags=re.MULTILINE)[1:]
     for block in blocks:
         title_m = re.search(r'title:\s*["\']([^"\']+)["\']', block)
         status_m = re.search(r"^status:\s*(\w+)", block, re.MULTILINE)
+        lane_m = re.search(r"^lane:\s*(\w+)", block, re.MULTILINE)
+        engage_m = re.search(r"engagement_status:\s*(\w+)", block)
         read_m = re.search(r"read_status:\s*(\w+)", block)
         if not title_m:
             continue
         status = status_m.group(1) if status_m else "active"
-        if status == "deprecated":
+        if status in ("deprecated", "archived"):
             continue
-        read_status = read_m.group(1) if read_m else "unread"
-        if read_status not in ("unread", "reading", "in_progress"):
+        lane = lane_m.group(1) if lane_m else "canon"
+        if lane != "canon":
             continue
-        entries.append({"title": title_m.group(1).strip(), "read_status": read_status})
+        engagement_status = engage_m.group(1) if engage_m else None
+        if engagement_status is None:
+            legacy = read_m.group(1) if read_m else "unread"
+            engagement_status = "in_progress" if legacy in ("reading", "in_progress") else "planned"
+        if engagement_status not in ("planned", "in_progress"):
+            continue
+        entries.append({"title": title_m.group(1).strip(), "engagement_status": engagement_status})
         if len(entries) >= n:
             break
     return entries

@@ -83,7 +83,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 
 | Dimension | Section | What it captures |
 |---------|---------|------------------|
-| **IX-A** | Knowledge | Facts entering awareness through observation; includes books read (from READ-nnn or LIBRARY read_status) |
+| **IX-A** | Knowledge | Facts entering awareness through observation; includes books and media consumed (from READ-nnn or LIBRARY engagement/influence state) |
 | **IX-B** | Curiosity | Topics that catch attention, engagement signals |
 | **IX-C** | Personality | Observed behavioral patterns, art style, speech traits |
 

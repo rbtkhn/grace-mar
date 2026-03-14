@@ -19,7 +19,7 @@
 | **READ-** | Evidence | self-evidence.md § I. READING LIST | Books, articles consumed |
 | **CREATE-** | Evidence | self-evidence.md § III. CREATION LOG | Artwork, collages, creative output |
 | **MEDIA-** | Evidence | self-evidence.md § IV. MEDIA LOG | Movies, shows, games (survey + mentions) |
-| **LIB-** | Library | users/[id]/self-library.md | Approved lookup sources (query first before full LLM) |
+| **LIB-** | Library | users/[id]/self-library.md | Approved library entries spanning references, canon works, and influential media |
 
 ---
 
@@ -53,7 +53,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 
 | Standard label | File | Description |
 |----------------|------|-------------|
-| **self-library** | users/[id]/self-library.md | Curated lookup sources (books, reference works, videos); query-first for answers; gated pipeline |
+| **self-library** | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first; gated pipeline |
 | **self-archive** | users/[id]/self-archive.md | Gated log of approved activity (voice and non-voice); appended only on merge |
 | **self-memory** | users/[id]/memory.md | Ephemeral session context — tone, recent topics, calibrations; not part of the Record; optional |
 
@@ -67,13 +67,13 @@ The **companion self** (the documented self + the self that companions) is compo
 
 | Component | Location | Description |
 |-----------|----------|-------------|
-| **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge); includes books read (from READ-nnn or LIBRARY read_status) |
+| **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge); includes books and media consumed (from READ-nnn or LIBRARY engagement/influence state) |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
 | **self-personality** | self.md IX-C | Observed behavioral patterns (post-seed personality) |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
 | **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
 | **self-archive** | self-archive.md | Gated log of approved activity |
-| **self-library** | self-library.md | Curated lookup sources |
+| **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
 | **self-memory** | memory.md | Ephemeral session context (not part of Record) |
 | **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self |
 

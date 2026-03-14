@@ -116,6 +116,11 @@ Last updated: 2026-03-13
 - **Core framing:** Record vs Voice vs gate; SELF vs SKILLS vs WORK; governance before fluency; portability as a first-order product principle.
 - **Usage:** intended as the canonical narrative bridge for collaborator language, investor memo revisions, and future deck copy.
 
+### Self-library taxonomy refactor (2026-03-14)
+- **`docs/library-schema.md`** — Reframed LIBRARY as a three-lane store: `reference`, `canon`, and `influence`; replaced the narrow `read_status` model with `engagement_status` plus `lookup_priority`.
+- **`users/grace-mar/self-library.md`** — Migrated entries to the new lane taxonomy while preserving IDs, order, and existing source notes.
+- **Runtime compatibility:** `bot/core.py`, `scripts/generate_profile.py`, and `scripts/proposal_brief.py` now understand the new fields and keep fallback support for older `read_status`-style library data if encountered.
+
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.

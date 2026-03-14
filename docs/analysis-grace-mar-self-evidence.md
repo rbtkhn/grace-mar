@@ -62,7 +62,7 @@ Raw evidence → pipeline → SELF/SKILLS. EVIDENCE is canonical; SELF and SKILL
 | self.md | Identity, IX-A/B/C | None |
 | skills.md | WRITE, THINK, BUILD containers | None |
 | self-evidence.md | Raw activity logs | None |
-| self-library.md | Curated lookup sources | None |
+| self-library.md | Curated references, canon, and influential media | None |
 | recursion-gate.md | Pipeline staging | None |
 | self-archive.md | Gated approved activity | None |
 | session-log.md | Session chronicle | None |
