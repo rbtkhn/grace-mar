@@ -32,6 +32,7 @@ try:
     from export_prp import export_prp
     from export_user_identity import export_user_identity, export_user_identity_json
     from harness_events import append_harness_event
+    from recursion_gate_review import parse_review_candidates
 except ImportError:
     from scripts.export_fork import export_fork
     from scripts.export_intent_snapshot import export_intent_snapshot
@@ -39,6 +40,7 @@ except ImportError:
     from scripts.export_prp import export_prp
     from scripts.export_user_identity import export_user_identity, export_user_identity_json
     from scripts.harness_events import append_harness_event
+    from scripts.recursion_gate_review import parse_review_candidates
 
 
 RUNTIME_MODES = {
@@ -114,15 +116,10 @@ def _bundle_id(user_id: str, runtime_mode: str, generated_at: str) -> str:
 
 def _warmup_text(user_id: str) -> str:
     profile_dir = _profile_dir(user_id)
-    gate_path = profile_dir / "recursion-gate.md"
     evidence_path = profile_dir / "self-evidence.md"
     session_log_path = profile_dir / "session-log.md"
 
-    pending_ids: list[str] = []
-    gate_text = _read(gate_path)
-    for line in gate_text.splitlines():
-        if line.startswith("### CANDIDATE-") and "## Processed" not in gate_text[: gate_text.find(line)]:
-            pending_ids.append(line.replace("### ", "").strip())
+    pending_ids = [row["id"] for row in parse_review_candidates(user_id) if row.get("status") == "pending"]
     evidence_tail = ""
     if evidence_path.exists():
         lines = [ln for ln in _read(evidence_path).splitlines() if ln.strip()]
@@ -198,7 +195,8 @@ def export_runtime_bundle(
     manifest = generate_manifest(user_id=user_id, runtime_mode=runtime_mode)
     _write_json(policy_dir / "manifest.json", manifest)
     _write_text(policy_dir / "llms.txt", generate_llms_txt(manifest, user_id))
-    _write_json(policy_dir / "intent_snapshot.json", export_intent_snapshot(user_id))
+    intent_snapshot = export_intent_snapshot(user_id)
+    _write_json(policy_dir / "intent_snapshot.json", intent_snapshot)
 
     _write_text(runtime_dir / "warmup.md", _warmup_text(user_id))
     _write_text(runtime_dir / "session-log-tail.md", _session_log_tail(user_id))
@@ -258,6 +256,14 @@ def export_runtime_bundle(
         "user_id": user_id,
         "runtime_mode": runtime_mode,
         "runtime_mode_description": RUNTIME_MODES[runtime_mode]["description"],
+        "degraded_mode": (
+            {
+                "enabled": True,
+                "reason": "intent.md missing or invalid; intent_snapshot exported with ok=false",
+            }
+            if not intent_snapshot.get("ok")
+            else {"enabled": False}
+        ),
         "lanes": {
             "record": {
                 "canonical": True,

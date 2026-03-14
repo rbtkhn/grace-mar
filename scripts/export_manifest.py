@@ -73,15 +73,24 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
         raise ValueError(f"Unknown runtime_mode: {runtime_mode}")
     profile_dir = REPO_ROOT / "users" / user_id
     checksum = _compute_checksum(profile_dir)
+    intent_snapshot = export_intent_snapshot(user_id)
 
     manifest = {
-        "version": "1.1",
+        "version": "1.2",
         "grace_mar": True,
         "user_id": user_id,
         "generated_at": datetime.now().isoformat(),
         "checksum": checksum,
         "runtime_mode": runtime_mode,
         "runtime_modes": RUNTIME_MODES,
+        "degraded_mode": (
+            {
+                "enabled": True,
+                "reason": "intent.md missing or invalid; policy export remains advisory-only until intent is restored",
+            }
+            if not intent_snapshot.get("ok")
+            else {"enabled": False}
+        ),
         "readable": [
             "SELF/identity",
             "SELF/preferences",
@@ -174,7 +183,7 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
             "grace-mar-llm.txt",
             "fork-manifest.json",
         ],
-        "intent_snapshot": export_intent_snapshot(user_id),
+        "intent_snapshot": intent_snapshot,
     }
 
     return manifest
@@ -190,10 +199,19 @@ def generate_llms_txt(manifest: dict, user_id: str) -> str:
         f"Generated: {manifest['generated_at']}",
         f"Runtime mode: {manifest['runtime_mode']}",
         "",
+    ]
+    degraded = manifest.get("degraded_mode") or {}
+    if degraded.get("enabled"):
+        lines.extend([
+            "## Degraded Mode",
+            f"- enabled: true ({degraded.get('reason')})",
+            "",
+        ])
+    lines.extend([
         "## Readable",
         "Agents may read (for personalization, session continuity):",
         "",
-    ]
+    ])
     for r in manifest["readable"]:
         lines.append(f"  - {r}")
     lines.extend([

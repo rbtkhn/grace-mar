@@ -19,6 +19,11 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from recursion_gate_review import split_gate_sections
+
 DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
 
@@ -31,7 +36,7 @@ def _read(path: Path) -> str:
 def _pending_count(pr_content: str) -> int:
     if "## Candidates" not in pr_content or "## Processed" not in pr_content:
         return 0
-    candidates = pr_content.split("## Processed")[0]
+    candidates, _processed = split_gate_sections(pr_content)
     return len(re.findall(r"### CANDIDATE-\d+.*?status:\s*pending", candidates, re.DOTALL))
 
 

@@ -65,6 +65,14 @@ except ImportError:
 
 load_dotenv()
 
+SCRIPTS_DIR = Path(__file__).resolve().parent.parent / "scripts"
+if str(SCRIPTS_DIR) not in os.sys.path:
+    os.sys.path.insert(0, str(SCRIPTS_DIR))
+try:
+    from recursion_gate_review import get_review_candidate, parse_review_candidates
+except ImportError:
+    from scripts.recursion_gate_review import get_review_candidate, parse_review_candidates
+
 logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -994,36 +1002,23 @@ def stage_last_exchange(channel_key: str) -> tuple[bool, str]:
 
 def get_pending_candidates() -> list[dict]:
     """Parse recursion-gate.md and return list of pending candidates (id, summary)."""
-    if not RECURSION_GATE_PATH.exists():
-        return []
-    content = RECURSION_GATE_PATH.read_text()
-    candidates: list[dict] = []
-    for m in re.finditer(r"### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```", content, re.DOTALL):
-        block = m.group(2)
-        if "status: pending" not in block:
-            continue
-        summary_m = re.search(r"summary:\s*(.+?)(?:\n|$)", block)
-        summary = summary_m.group(1).strip().strip('"') if summary_m else "(no summary)"
-        candidates.append({"id": m.group(1), "summary": summary[:100]})
-    return candidates
+    return [
+        {"id": row["id"], "summary": (row.get("summary") or "(no summary)")[:100]}
+        for row in parse_review_candidates(USER_ID)
+        if row.get("status") == "pending"
+    ]
 
 
 def get_candidate_block(candidate_id: str) -> dict | None:
     """Return candidate block (id, block, summary, profile_target) by id, or None."""
-    if not RECURSION_GATE_PATH.exists():
+    row = get_review_candidate(USER_ID, candidate_id)
+    if not row:
         return None
-    content = RECURSION_GATE_PATH.read_text()
-    parts = content.split("## Processed")[0]
-    for m in re.finditer(r"### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```", parts, re.DOTALL):
-        if m.group(1) == candidate_id:
-            block = m.group(2)
-            profile = re.search(r"profile_target:\s*(.+?)(?:\n|$)", block)
-            return {
-                "id": m.group(1),
-                "block": block,
-                "profile_target": (profile.group(1).strip().strip('"') if profile else ""),
-            }
-    return None
+    return {
+        "id": row["id"],
+        "block": row.get("raw_block", ""),
+        "profile_target": row.get("profile_target", ""),
+    }
 
 
 def is_low_risk_candidate(candidate_id: str) -> bool:
@@ -1031,34 +1026,10 @@ def is_low_risk_candidate(candidate_id: str) -> bool:
     True if candidate is safe for one-tap quick merge.
     Low-risk: single profile_target, no conflicts in block, no advisory_flagged in pipeline events.
     """
-    c = get_candidate_block(candidate_id)
-    if not c:
+    row = get_review_candidate(USER_ID, candidate_id)
+    if not row:
         return False
-    block = c.get("block", "")
-    profile = (c.get("profile_target") or "").strip()
-    # Single target: IX-A, IX-B, or IX-C only (no comma = no multi-target)
-    if "," in profile:
-        return False
-    if not re.match(r"^IX-[ABC]\.", profile):
-        return False
-    # No conflicts in block
-    if re.search(r"conflicts?:|contradiction|advisory_flagged", block, re.IGNORECASE):
-        return False
-    # No advisory_flagged for this candidate in recent pipeline events
-    if PIPELINE_EVENTS_PATH.exists():
-        lines = PIPELINE_EVENTS_PATH.read_text().splitlines()
-        for line in reversed(lines[-100:]):
-            line = line.strip()
-            if not line:
-                continue
-            try:
-                row = json.loads(line)
-                if row.get("candidate_id") == candidate_id and row.get("event") == "intent_constitutional_critique":
-                    if str(row.get("status") or "").lower() == "advisory_flagged":
-                        return False
-            except json.JSONDecodeError:
-                continue
-    return True
+    return bool(row.get("ready_for_quick_merge"))
 
 
 def quick_merge_candidate(candidate_id: str, approved_by: str) -> tuple[bool, str]:

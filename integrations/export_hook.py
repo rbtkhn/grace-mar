@@ -4,6 +4,7 @@ Unified export hook for downstream integrations.
 
 Targets:
   openclaw    — Record → USER.md + manifest (OpenClaw session continuity)
+  cursor      — Runtime bundle for Cursor/Codex/Claude-style runtime consumers
   intersignal — Record → symbolic_identity.json + manifest (Familiar nodes, Mesh Cache)
   curriculum  — Record → curriculum_profile.json (adaptive curriculum engines)
 
@@ -118,6 +119,16 @@ def run_export(
         if fmt in {"md", "md+manifest", "json+md", "full-prp"}:
             _prepend_constitution_prefix(out)
 
+    elif target == "cursor":
+        bundle_out = output_dir or (profile_dir / "cursor-runtime")
+        bundle_out.mkdir(parents=True, exist_ok=True)
+        export_runtime_bundle(
+            user_id=user_id,
+            output_dir=bundle_out,
+            runtime_mode="adjunct_runtime",
+            include_user_json=True,
+        )
+
     elif target == "intersignal":
         cmd = [
             sys.executable,
@@ -163,7 +174,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--target", "-t",
-        choices=["openclaw", "intersignal", "curriculum"],
+        choices=["openclaw", "cursor", "intersignal", "curriculum"],
         required=True,
         help="Integration target",
     )

@@ -32,6 +32,7 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 from harness_events import append_harness_event
+from recursion_gate_review import split_gate_sections
 from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
@@ -483,9 +484,7 @@ def get_approved_in_candidates() -> list[dict]:
     content = _read(RECURSION_GATE_PATH)
     if not content:
         return []
-    # Split at ## Processed — we only want candidates before that
-    parts = content.split("## Processed")
-    candidates_section = parts[0] if parts else ""
+    candidates_section, _processed_section = split_gate_sections(content)
     approved: list[dict] = []
     for m in re.finditer(r"### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```", candidates_section, re.DOTALL):
         block = m.group(2)

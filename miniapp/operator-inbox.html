@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Grace-Mar Approval Inbox</title>
+  <style>
+    :root {
+      --bg: #121418;
+      --panel: #1b2129;
+      --card: #202833;
+      --text: #edf1f5;
+      --muted: #9ba6b2;
+      --accent: #91c2dd;
+      --danger: #dd8e91;
+      --warn: #d7b06b;
+      --good: #7dc09a;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+      padding: 1rem;
+    }
+    h1 { margin: 0 0 0.3rem; font-size: 1.4rem; }
+    p { margin: 0; }
+    .intro { color: var(--muted); line-height: 1.45; margin-bottom: 1rem; }
+    .panel, .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .panel {
+      padding: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .row {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .row + .row { margin-top: 0.75rem; }
+    input, select, button, textarea {
+      font: inherit;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #10151c;
+      color: var(--text);
+    }
+    input, select { padding: 0.55rem 0.7rem; }
+    button {
+      padding: 0.55rem 0.8rem;
+      cursor: pointer;
+      background: #18212b;
+    }
+    button.primary { background: rgba(145,194,221,0.18); color: var(--accent); }
+    button.good { color: var(--good); }
+    button.warn { color: var(--warn); }
+    button.danger { color: var(--danger); }
+    .meta { color: var(--muted); font-size: 0.9rem; }
+    .stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .stat {
+      padding: 0.4rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .cards {
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+    .card { padding: 0.95rem; }
+    .card-top {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 0.6rem;
+    }
+    .id {
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .pill {
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .summary { margin: 0.5rem 0 0.6rem; line-height: 1.4; }
+    .detail {
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      background: rgba(0,0,0,0.16);
+      border-radius: 10px;
+      padding: 0.7rem;
+      margin-top: 0.65rem;
+    }
+    .actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.85rem;
+    }
+    .hint-list {
+      margin-top: 0.6rem;
+      color: var(--warn);
+      font-size: 0.84rem;
+    }
+    .empty, .error { padding: 1rem; color: var(--muted); }
+    .error { color: var(--danger); }
+  </style>
+</head>
+<body>
+  <h1>Approval Inbox</h1>
+  <p class="intro">Operator review surface for `recursion-gate.md`. This page does not create a second queue. It reads the canonical queue and writes review actions back through the same gate.</p>
+
+  <section class="panel">
+    <div class="row">
+      <input id="token" type="password" placeholder="Operator secret" style="min-width: 240px; flex: 1;">
+      <button id="saveToken" class="primary" type="button">Save Secret</button>
+      <button id="reload" type="button">Reload</button>
+    </div>
+    <div class="row">
+      <select id="statusFilter">
+        <option value="">All statuses</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+      <select id="riskFilter">
+        <option value="">All risk tiers</option>
+        <option value="quick_merge_eligible">Quick merge</option>
+        <option value="review_batch">Review batch</option>
+        <option value="manual_escalate">Manual escalate</option>
+      </select>
+      <select id="territoryFilter">
+        <option value="">All territories</option>
+        <option value="companion">Companion</option>
+        <option value="work-american-politics">WAP</option>
+      </select>
+    </div>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <div id="error" class="error" hidden></div>
+  <div id="cards" class="cards"></div>
+
+  <script>
+    (function() {
+      var tokenInput = document.getElementById('token');
+      var errorEl = document.getElementById('error');
+      var cardsEl = document.getElementById('cards');
+      var statsEl = document.getElementById('stats');
+      var STORAGE_KEY = 'grace-mar-operator-secret';
+
+      tokenInput.value = localStorage.getItem(STORAGE_KEY) || '';
+
+      function escapeHtml(text) {
+        return String(text || '').replace(/[&<>"']/g, function(ch) {
+          return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
+        });
+      }
+
+      function authHeaders() {
+        var token = (tokenInput.value || '').trim();
+        return token ? { 'Authorization': 'Bearer ' + token } : {};
+      }
+
+      function setError(message) {
+        if (!message) {
+          errorEl.hidden = true;
+          errorEl.textContent = '';
+          return;
+        }
+        errorEl.hidden = false;
+        errorEl.textContent = message;
+      }
+
+      function params() {
+        var out = new URLSearchParams();
+        [['status', 'statusFilter'], ['risk_tier', 'riskFilter'], ['territory', 'territoryFilter']].forEach(function(pair) {
+          var value = (document.getElementById(pair[1]).value || '').trim();
+          if (value) out.set(pair[0], value);
+        });
+        return out.toString();
+      }
+
+      function renderStats(items) {
+        var pending = items.filter(function(item) { return item.status === 'pending'; }).length;
+        var quick = items.filter(function(item) { return item.ready_for_quick_merge; }).length;
+        var escalate = items.filter(function(item) { return item.risk_tier === 'manual_escalate'; }).length;
+        statsEl.innerHTML = ''
+          + '<span class="stat">' + items.length + ' visible</span>'
+          + '<span class="stat">' + pending + ' pending</span>'
+          + '<span class="stat">' + quick + ' quick merge</span>'
+          + '<span class="stat">' + escalate + ' escalate</span>';
+      }
+
+      function detailText(item) {
+        var parts = [];
+        if (item.source) parts.push('source: ' + item.source);
+        if (item.profile_target) parts.push('profile_target: ' + item.profile_target);
+        if (item.prompt_section) parts.push('prompt_section: ' + item.prompt_section);
+        if (item.example_from_exchange) parts.push('example:\n' + item.example_from_exchange);
+        if (item.suggested_entry) parts.push('suggested_entry:\n' + item.suggested_entry);
+        if (item.prompt_addition && item.prompt_addition !== 'none') parts.push('prompt_addition:\n' + item.prompt_addition);
+        return parts.join('\n\n');
+      }
+
+      function render(items) {
+        renderStats(items);
+        if (!items.length) {
+          cardsEl.innerHTML = '<div class="panel empty">No candidates match the current filters.</div>';
+          return;
+        }
+        cardsEl.innerHTML = items.map(function(item) {
+          var detailId = 'detail-' + item.id;
+          var hints = (item.duplicate_hints || []).map(function(hint) {
+            return '<div>Duplicate hint: ' + escapeHtml(hint) + '</div>';
+          }).join('');
+          var audit = (item.audit_trail || []).map(function(entry) {
+            return (entry.ts || '') + ' · ' + (entry.event || '') + (entry.status ? ' · ' + entry.status : '');
+          }).join('\n');
+          var detail = detailText(item);
+          return ''
+            + '<article class="card" data-id="' + escapeHtml(item.id) + '">'
+            + '  <div class="card-top">'
+            + '    <span class="id">' + escapeHtml(item.id) + '</span>'
+            + '    <span class="pill">' + escapeHtml(item.status) + '</span>'
+            + '    <span class="pill">' + escapeHtml(item.risk_tier) + '</span>'
+            + '    <span class="pill">' + escapeHtml(item.territory_label) + '</span>'
+            + '  </div>'
+            + '  <div class="meta">' + escapeHtml(item.timestamp || 'no timestamp') + ' · ' + escapeHtml(item.channel_key || 'no channel') + '</div>'
+            + '  <p class="summary">' + escapeHtml(item.summary || '(no summary)') + '</p>'
+            + (hints ? '<div class="hint-list">' + hints + '</div>' : '')
+            + '  <div class="actions">'
+            + '    <button type="button" data-action="toggle" data-target="' + detailId + '">Details</button>'
+            + '    <button type="button" class="good" data-action="approve">Approve</button>'
+            + '    <button type="button" class="danger" data-action="reject">Reject</button>'
+            + '    <button type="button" class="warn" data-action="defer">Defer</button>'
+            + (item.ready_for_quick_merge ? '<button type="button" class="primary" data-action="quick_merge">Quick Merge</button>' : '')
+            + '  </div>'
+            + '  <div class="detail" id="' + detailId + '" hidden>'
+            + escapeHtml(detail || 'No additional detail.')
+            + (audit ? '\n\nRecent audit:\n' + escapeHtml(audit) : '')
+            + '  </div>'
+            + '</article>';
+        }).join('');
+      }
+
+      function doAction(candidateId, action) {
+        var body = { action: action };
+        if (action === 'reject') {
+          var reason = window.prompt('Optional rejection reason:');
+          if (reason === null) return Promise.resolve();
+          if (reason.trim()) body.rejection_reason = reason.trim();
+        }
+        return fetch('/operator/gate-candidates/' + encodeURIComponent(candidateId) + '/action', {
+          method: 'POST',
+          headers: Object.assign({ 'Content-Type': 'application/json' }, authHeaders()),
+          body: JSON.stringify(body)
+        }).then(function(response) {
+          return response.json().then(function(data) {
+            if (!response.ok) throw new Error(data.error || 'Action failed');
+            return data;
+          });
+        });
+      }
+
+      function load() {
+        setError('');
+        fetch('/operator/gate-candidates' + (params() ? '?' + params() : ''), { headers: authHeaders() })
+          .then(function(response) {
+            return response.json().then(function(data) {
+              if (!response.ok) throw new Error(data.error || 'Could not load candidates');
+              return data;
+            });
+          })
+          .then(function(data) { render(data.items || []); })
+          .catch(function(err) {
+            cardsEl.innerHTML = '';
+            renderStats([]);
+            setError(err.message || 'Could not load candidates');
+          });
+      }
+
+      document.getElementById('saveToken').onclick = function() {
+        localStorage.setItem(STORAGE_KEY, tokenInput.value || '');
+        load();
+      };
+      document.getElementById('reload').onclick = load;
+      document.getElementById('statusFilter').onchange = load;
+      document.getElementById('riskFilter').onchange = load;
+      document.getElementById('territoryFilter').onchange = load;
+
+      cardsEl.addEventListener('click', function(event) {
+        var button = event.target.closest('button');
+        if (!button) return;
+        var card = event.target.closest('.card');
+        if (!card) return;
+        var action = button.getAttribute('data-action');
+        if (action === 'toggle') {
+          var detail = document.getElementById(button.getAttribute('data-target'));
+          detail.hidden = !detail.hidden;
+          return;
+        }
+        doAction(card.getAttribute('data-id'), action)
+          .then(load)
+          .catch(function(err) { setError(err.message || 'Action failed'); });
+      });
+
+      load();
+    })();
+  </script>
+</body>
+</html>

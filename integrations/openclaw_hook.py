@@ -102,7 +102,7 @@ def _emit_openclaw_event(user_id: str, out_dir: Path, fmt: str, files: list[Path
             "scripts/emit_pipeline_event.py",
             "--user",
             user_id,
-            "openclaw_export",
+            "runtime_compat_export",
             "none",
             *extras,
         ],
@@ -198,7 +198,7 @@ def main() -> int:
     )
     parser.add_argument("--post-url", default="", help="POST destination URL when --destination post")
     parser.add_argument("--api-key", default="", help="Optional API key for post destination (X-Api-Key)")
-    parser.add_argument("--emit-event", action="store_true", help="Emit openclaw_export event to pipeline log")
+    parser.add_argument("--emit-event", action="store_true", help="Emit runtime_compat_export event to pipeline log")
     args = parser.parse_args()
     out = Path(args.output) if args.output else None
     return run_openclaw_export(

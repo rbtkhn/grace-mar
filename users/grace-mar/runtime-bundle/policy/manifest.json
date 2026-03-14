@@ -1,14 +1,18 @@
 {
-  "version": "1.1",
+  "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-13T19:35:07.887602",
+  "generated_at": "2026-03-13T20:58:30.928611",
   "checksum": "43a6c92278f5b648e6d36ab8d6affcab43c9741487db55f27542e4cb4eda9ca2",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
     "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
     "primary_runtime": "Primary live runtime while the repo remains canonical.",
     "portable_bundle_only": "Portable transport bundle without assuming a live runtime."
+  },
+  "degraded_mode": {
+    "enabled": true,
+    "reason": "intent.md missing or invalid; policy export remains advisory-only until intent is restored"
   },
   "readable": [
     "SELF/identity",
@@ -117,7 +121,7 @@
   "intent_snapshot": {
     "ok": false,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-13T19:35:07.887678",
+    "generated_at": "2026-03-13T20:58:30.928591",
     "error": "missing intent.md at /Users/robertkuhne/Documents/grace-mar/users/grace-mar/intent.md",
     "goals": {},
     "tradeoff_rules": [],

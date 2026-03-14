@@ -23,53 +23,16 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
-from recursion_gate_territory import TERRITORY_WAP, iter_pending_blocks, territory_from_yaml_block
+from recursion_gate_territory import TERRITORY_WAP
+from recursion_gate_review import parse_review_candidates
 
 DEFAULT_USER = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
 
-def _parse_ts(body: str) -> str | None:
-    m = re.search(r"^timestamp:\s*(.+)$", body, re.MULTILINE)
-    if not m:
-        return None
-    return m.group(1).strip().strip("\"'")[:32]
-
-
-def _days_since(ts: str | None) -> str:
-    if not ts:
+def _age_label(age_days: int | None) -> str:
+    if age_days is None:
         return "—"
-    try:
-        # "2026-02-24" or "2026-02-24 14:07:50"
-        part = ts[:10]
-        then = datetime.strptime(part, "%Y-%m-%d").replace(tzinfo=timezone.utc)
-        now = datetime.now(timezone.utc)
-        d = (now - then).days
-        return f"{d}d" if d >= 0 else "—"
-    except Exception:
-        return "—"
-
-
-def _pending_rows(full_md: str) -> list[dict]:
-    rows = []
-    for cid, body in iter_pending_blocks(full_md):
-        terr = territory_from_yaml_block(body)
-        sm = re.search(r"^summary:\s*(.+)$", body, re.MULTILINE)
-        summary = (sm.group(1).strip().strip("\"'") if sm else "")[:300]
-        ck_m = re.search(r"^channel_key:\s*(.+)$", body, re.MULTILINE)
-        channel_key = ck_m.group(1).strip().strip("\"'") if ck_m else ""
-        ts = _parse_ts(body)
-        rows.append(
-            {
-                "id": cid,
-                "summary": summary,
-                "territory": terr,
-                "territory_label": "WAP" if terr == TERRITORY_WAP else "Companion",
-                "channel_key": channel_key,
-                "timestamp": ts or "",
-                "age": _days_since(ts),
-            }
-        )
-    return rows
+    return f"{age_days}d"
 
 
 def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
@@ -80,15 +43,20 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
 
     cards = []
     for r in rows:
+        duplicate_note = ""
+        if r.get("duplicate_hints"):
+            duplicate_note = f'<p class="hint">{html.escape(r["duplicate_hints"][0])}</p>'
         cards.append(
             f"""
-    <article class="card" data-territory="{html.escape(r['territory'])}">
+    <article class="card" data-territory="{html.escape(r['territory'])}" data-risk="{html.escape(r['risk_tier'])}">
       <header>
         <span class="id">{html.escape(r['id'])}</span>
         <span class="pill pill-{r['territory_label'].lower()}">{html.escape(r['territory_label'])}</span>
-        <span class="age" title="since timestamp">{html.escape(r['age'])}</span>
+        <span class="pill pill-risk">{html.escape(r['risk_tier'])}</span>
+        <span class="age" title="since timestamp">{html.escape(_age_label(r['age_days']))}</span>
       </header>
       <p class="summary">{html.escape(r['summary'] or '(no summary)')}</p>
+      {duplicate_note}
       <footer>
         <span class="meta">{html.escape(r['channel_key'] or '—')}</span>
         <span class="meta">{html.escape(r['timestamp'] or '—')}</span>
@@ -185,8 +153,10 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
     }}
     .pill-wap {{ background: rgba(196,165,116,.2); color: var(--wap); }}
     .pill-companion {{ background: rgba(126,184,218,.15); color: var(--companion); }}
+    .pill-risk {{ background: rgba(193,127,89,.14); color: var(--accent); }}
     .age {{ margin-left: auto; color: var(--muted); font-size: 0.8rem; }}
     .summary {{ margin: 0; color: var(--text); }}
+    .hint {{ margin: 0.6rem 0 0; color: var(--muted); font-size: 0.82rem; }}
     .card footer {{
       margin-top: 0.75rem; padding-top: 0.65rem;
       border-top: 1px solid rgba(255,255,255,.06);
@@ -214,6 +184,8 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
     <button type="button" class="active" data-filter="all">All</button>
     <button type="button" data-filter="{html.escape(TERRITORY_WAP)}">WAP</button>
     <button type="button" data-filter="companion">Companion</button>
+    <button type="button" data-filter="quick_merge_eligible">Quick merge</button>
+    <button type="button" data-filter="manual_escalate">Escalate</button>
   </div>
   <div class="grid" id="grid">
 {rows_html}
@@ -227,7 +199,11 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
         var f = btn.getAttribute('data-filter');
         document.querySelectorAll('.card').forEach(function(card) {{
           var t = card.getAttribute('data-territory');
-          var show = f === 'all' || (f === 'companion' && t !== '{TERRITORY_WAP}') || t === f;
+          var risk = card.getAttribute('data-risk');
+          var show = f === 'all'
+            || (f === 'companion' && t !== '{TERRITORY_WAP}')
+            || t === f
+            || risk === f;
           card.classList.toggle('hidden', !show);
         }});
       }});
@@ -248,8 +224,7 @@ def main() -> int:
     if not gate.exists():
         print(f"Missing {gate}", file=sys.stderr)
         return 1
-    md = gate.read_text(encoding="utf-8")
-    rows = _pending_rows(md)
+    rows = [row for row in parse_review_candidates(args.user) if row.get("status") == "pending"]
     out = Path(args.output) if args.output else user_dir / "gate-dashboard.html"
     gate_rel = f"users/{args.user}/recursion-gate.md"
     out.write_text(build_html(args.user, rows, gate_rel), encoding="utf-8")

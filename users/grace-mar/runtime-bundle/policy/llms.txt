@@ -2,8 +2,11 @@
 
 User: grace-mar
 Checksum: 43a6c92278f5b648e6d36ab8d6affcab43c9741487db55f27542e4cb4eda9ca2
-Generated: 2026-03-13T19:35:07.887602
+Generated: 2026-03-13T20:58:30.928611
 Runtime mode: adjunct_runtime
+
+## Degraded Mode
+- enabled: true (intent.md missing or invalid; policy export remains advisory-only until intent is restored)
 
 ## Readable
 Agents may read (for personalization, session continuity):

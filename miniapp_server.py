@@ -43,7 +43,12 @@ from bot.core import (
     LOOKUP_TRIGGER,
     AFFIRMATIVE_WORDS,
     AFFIRMATIVE_PHRASES,
+    emit_pipeline_event,
+    is_low_risk_candidate,
+    quick_merge_candidate,
+    update_candidate_status,
 )
+from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
 
 app = Flask(__name__, static_folder="miniapp", static_url_path="")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -52,6 +57,7 @@ USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
 SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "session-transcript.md"
 RECURSION_GATE_PATH = REPO_ROOT / "users" / USER_ID / "recursion-gate.md"
 OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
+OPERATOR_NAME = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web").strip() or "operator-web"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
     os.getenv("WEBHOOK_BASE_URL", "").strip()
@@ -80,6 +86,7 @@ def _start_telegram_webhook() -> None:
 
         sys.path.insert(0, str(REPO_ROOT))
         from bot.bot import create_application
+        from telegram import Update
 
         app = create_application(webhook_mode=True)
         _telegram_app = app
@@ -179,6 +186,8 @@ def telegram_webhook():
         data = request.get_json()
         if not data:
             return "", 400
+        from telegram import Update
+
         update = Update.de_json(data, _telegram_app.bot)
         asyncio.run_coroutine_threadsafe(
             _telegram_app.update_queue.put(update), _telegram_loop
@@ -193,6 +202,12 @@ def telegram_webhook():
 def index():
     """Q&A Mini App — interactive chat with Grace-Mar."""
     return send_from_directory("miniapp", "index.html")
+
+
+@app.route("/operator/inbox")
+def operator_inbox():
+    """Browser review surface for RECURSION-GATE."""
+    return send_from_directory("miniapp", "operator-inbox.html")
 
 
 @app.route("/i/<token>")
@@ -248,6 +263,104 @@ def operator_recursion_gate():
     if not RECURSION_GATE_PATH.exists():
         return jsonify({"error": "recursion-gate.md not found", "path": str(RECURSION_GATE_PATH)}), 404
     return RECURSION_GATE_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
+
+
+@app.route("/operator/gate-candidates", methods=["GET"])
+def operator_gate_candidates():
+    """Return structured review candidates for the approval inbox."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    rows = parse_review_candidates(USER_ID)
+    rows = filter_review_candidates(
+        rows,
+        status=(request.args.get("status") or "").strip(),
+        risk_tier=(request.args.get("risk_tier") or "").strip(),
+        territory=(request.args.get("territory") or "").strip(),
+    )
+    return jsonify({"user_id": USER_ID, "count": len(rows), "items": rows})
+
+
+@app.route("/operator/gate-candidates/<candidate_id>/action", methods=["POST"])
+def operator_gate_candidate_action(candidate_id: str):
+    """Apply review actions while keeping recursion-gate.md canonical."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    action = (payload.get("action") or "").strip().lower()
+    if action not in {"approve", "reject", "defer", "quick_merge"}:
+        return jsonify({"error": "action must be approve, reject, defer, or quick_merge"}), 400
+
+    row = get_review_candidate(USER_ID, candidate_id)
+    if not row:
+        return jsonify({"error": f"{candidate_id} not found above ## Processed"}), 404
+
+    channel_key = "operator:web"
+    source = "miniapp_server:approval_inbox"
+    rejection_reason = (payload.get("rejection_reason") or "").strip() or None
+
+    if action == "approve":
+        if row.get("status") != "approved":
+            changed = update_candidate_status(
+                candidate_id,
+                "approved",
+                channel_key=channel_key,
+                actor=OPERATOR_NAME,
+                source=source,
+            )
+            if not changed:
+                return jsonify({"error": f"could not approve {candidate_id}"}), 409
+        return jsonify({"ok": True, "action": action, "candidate": get_review_candidate(USER_ID, candidate_id)})
+
+    if action == "reject":
+        changed = update_candidate_status(
+            candidate_id,
+            "rejected",
+            rejection_reason=rejection_reason,
+            channel_key=channel_key,
+            actor=OPERATOR_NAME,
+            source=source,
+        )
+        if not changed:
+            return jsonify({"error": f"could not reject {candidate_id}"}), 409
+        return jsonify({"ok": True, "action": action, "candidate": get_review_candidate(USER_ID, candidate_id)})
+
+    if action == "defer":
+        emit_pipeline_event(
+            "review_feedback",
+            candidate_id,
+            channel_key=channel_key,
+            actor=OPERATOR_NAME,
+            source=source,
+            decision="defer",
+        )
+        return jsonify({"ok": True, "action": action, "candidate": row})
+
+    if not is_low_risk_candidate(candidate_id):
+        return jsonify({"error": f"{candidate_id} is not quick-merge eligible"}), 409
+    if row.get("status") == "pending":
+        changed = update_candidate_status(
+            candidate_id,
+            "approved",
+            channel_key=channel_key,
+            actor=OPERATOR_NAME,
+            source=source,
+        )
+        if not changed:
+            return jsonify({"error": f"could not approve {candidate_id} before quick merge"}), 409
+    merged_ok, message = quick_merge_candidate(candidate_id, OPERATOR_NAME)
+    if not merged_ok:
+        return jsonify({"error": message}), 500
+    emit_pipeline_event(
+        "review_feedback",
+        candidate_id,
+        channel_key=channel_key,
+        actor=OPERATOR_NAME,
+        source=source,
+        decision="quick_merge",
+    )
+    return jsonify({"ok": True, "action": action, "message": message, "candidate_id": candidate_id})
 
 
 @app.route("/api/ask", methods=["POST", "OPTIONS"])

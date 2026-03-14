@@ -124,6 +124,13 @@ Last updated: 2026-03-14
 - **Core decision:** the inbox is a review surface over the existing queue, not a second memory system; it reuses current quick-merge rules, receipt flow, and pipeline audit events.
 - **Defined surfaces:** candidate card shape, derived risk tiers, filters, batch actions, dedupe hints, post-action states, audit behavior, and first implementation path through authenticated miniapp/web endpoints.
 
+### Approval inbox v1 + shared gate parser (2026-03-14)
+- **New shared parser:** `scripts/recursion_gate_review.py` now builds the canonical derived review model from `recursion-gate.md` for browser/API/dashboard surfaces.
+- **Derived review fields implemented:** `risk_tier`, `territory_label`, `age_days`, `has_prompt_change`, `ready_for_quick_merge`, `duplicate_hints`, audit snippet, and artifact/conflict flags.
+- **Real surfaces now reuse it:** `bot/core.py` low-risk lookup helpers, `scripts/generate_gate_dashboard.py`, and `miniapp_server.py` all read the same candidate model instead of maintaining separate regex logic.
+- **New operator surface:** `miniapp/operator-inbox.html` plus authenticated `/operator/gate-candidates` and `/operator/gate-candidates/<id>/action` endpoints provide browser review with approve, reject, defer, and quick-merge actions.
+- **Important parser correctness fix:** queue consumers now split on the actual `## Processed` section heading rather than header prose mentioning that string; this hardens dashboard, inbox, merge, heartbeat, and validation paths.
+
 ### Companion Self doctrine memo (2026-03-13)
 - **`docs/companion-self-doctrine-memo.md`** — New outward-facing source text that explains Companion Self as identity infrastructure for the agentic era.
 - **Core framing:** Record vs Voice vs gate; SELF vs SKILLS vs WORK; governance before fluency; portability as a first-order product principle.
@@ -251,6 +258,19 @@ Last updated: 2026-03-14
 - **Manifest/export contract refreshed:** `scripts/export_manifest.py` now exports runtime mode + lane metadata and adds `runtime_bundle` to the machine-readable export map.
 - **Compatibility path preserved:** `integrations/export_hook.py` now routes the OpenClaw export through the generic runtime bundle and then emits flat compatibility files (`USER.md`, `manifest.json`, etc.).
 - **Audit/freshness upgrade:** `validate-integrity.py` now checks derived export freshness and stale doctrine drift (`SKILLS/READ`, `SKILLS/BUILD`). `process_approved_candidates.py` refreshes manifest, fork manifest, and runtime bundle after merge. `integrations/openclaw_hook.py` and `integrations/openclaw_stage.py` now emit more generic harness audit actions (`runtime_compat_export`, `runtime_handback_stage`).
+
+### Hindsight-style runtime memory boundary (2026-03-14)
+- **New canonical memo:** `docs/hindsight-adoption.md`.
+- **Core decision:** Hindsight-style retain/recall memory is allowed only as a `runtime`-lane continuity aid in downstream harnesses such as OpenClaw. It is explicitly not a Record surface.
+- **Safe use:** continuity, local recall, segmentation by agent/channel/user/provider, and runtime audit.
+- **Unsafe use:** treating auto-retained summaries or extracted entities as canonical identity truth; auto-writing SELF/EVIDENCE; bypassing RECURSION-GATE.
+- **Docs aligned:** `openclaw-integration.md`, `portability.md`, `harness-inventory.md`, and `openclaw-rl-boundary.md`.
+
+### Portability hardening pass (2026-03-14)
+- **Explicit degraded mode:** `scripts/export_manifest.py` and `scripts/export_runtime_bundle.py` now declare degraded-mode metadata when `intent.md` is missing or invalid, rather than leaving downstream runtimes to infer policy-health implicitly.
+- **Validation tightened:** `scripts/validate-integrity.py` now checks for the degraded-mode contract in both `manifest.json` and `runtime-bundle/bundle.json`.
+- **Vocabulary cleanup:** `integrations/openclaw_hook.py` now emits `runtime_compat_export` for pipeline-level export audit instead of the older OpenClaw-specific name.
+- **Second consumer path:** `integrations/export_hook.py --target cursor` now exports the canonical runtime bundle directly for Cursor/Codex/Claude-style runtime consumers, proving the bundle is not OpenClaw-only.
 
 ### Record updates
 - Curiosity probe responses were staged and merged into `IX-B` via approved candidates.

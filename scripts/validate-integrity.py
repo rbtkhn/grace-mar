@@ -30,6 +30,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 MIN_EVIDENCE_TIER = 3
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from recursion_gate_review import split_gate_sections
 
 
 def extract_yaml_blocks(content: str, section_marker: str | None = None) -> list[str]:
@@ -176,7 +180,7 @@ def validate_recursion_gate(user_dirs: list[Path]) -> list[str]:
         if "## Candidates" not in content:
             continue
         if "## Processed" in content:
-            after_processed = content.split("## Processed", 1)[1]
+            candidates_section, after_processed = split_gate_sections(content)
             for m in re.finditer(
                 r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", after_processed, re.DOTALL
             ):
@@ -186,7 +190,7 @@ def validate_recursion_gate(user_dirs: list[Path]) -> list[str]:
                         f"{pr_path.relative_to(REPO_ROOT)} {m.group(1)} pending below ## Processed "
                         f"(merge only scans above Processed — move block up)"
                     )
-        candidates_section = content.split("## Processed")[0]
+        candidates_section, _processed_section = split_gate_sections(content)
         for m in re.finditer(r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", candidates_section, re.DOTALL):
             cid, yaml_block = m.groups()
             if "status:" not in yaml_block:
@@ -320,6 +324,9 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
                     )
                 if not manifest.get("runtime_mode"):
                     errors.append(f"{manifest_path.relative_to(REPO_ROOT)} missing runtime_mode")
+                degraded = manifest.get("degraded_mode")
+                if not isinstance(degraded, dict) or "enabled" not in degraded:
+                    errors.append(f"{manifest_path.relative_to(REPO_ROOT)} missing degraded_mode contract")
 
         bundle_dir = user_dir / "runtime-bundle"
         bundle_path = bundle_dir / "bundle.json"
@@ -334,6 +341,9 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
                 for lane in ("record", "runtime", "audit", "policy"):
                     if lane not in (bundle.get("lanes") or {}):
                         errors.append(f"{bundle_path.relative_to(REPO_ROOT)} missing lane '{lane}'")
+                degraded = bundle.get("degraded_mode")
+                if not isinstance(degraded, dict) or "enabled" not in degraded:
+                    errors.append(f"{bundle_path.relative_to(REPO_ROOT)} missing degraded_mode contract")
     return errors
 
 
