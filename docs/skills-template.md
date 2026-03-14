@@ -138,6 +138,8 @@ THINK is multimodal by default and must not be limited to text.
 
 **SAT readiness (when a work territory has SAT as a horizon goal):** Add optional `sat_readiness` block in `skill-think.md` — maps THINK/MATH/Lexile to SAT domains (EBRW Reading, Math), defines trajectory and next milestones. Use **general principles** (comprehension at edge, inference through "why?", vocabulary in context, evidence "what in the story shows that?", simple choices that scale) — developmentally appropriate at companion's level; no SAT-specific mechanics for young companions. Work territories may read this to measure progress. See grace-mar `skill-think.md` § SAT READINESS.
 
+**Overlay rule for skill files:** The skill container itself should remain primary. Subject-specific material (for example math or Chinese inside THINK) may appear only as clearly labeled **contextual domain overlays** that show where the skill is being expressed, not as additional self-skills. Goal-linked material (for example SAT readiness) may appear only as clearly labeled **goal interpretation overlays** that help WORK read the skill state for horizon planning. In short: core capability first, overlays second.
+
 **Compatibility note for the rest of this file:** Some deeper examples still use legacy `BUILD` terminology. Read those as historical compatibility examples for the separate work layer, not as proof that WORK remains a self-skill module.
 
 ---
@@ -168,6 +170,8 @@ The Record-bound skill modules are not isolated. Most activities engage multiple
 **The analyst** (see ARCHITECTURE, pipeline) extracts patterns for **self-knowledge (IX-A), curiosity (IX-B), and personality (IX-C)** from the same inputs and stages candidates to RECURSION-GATE → SELF after companion approval.
 
 So **one input** (e.g. art, music, journal, conversation, work artifact) can update both: (1) a Record skill container (THINK/WRITE) when it demonstrates Record-bound capability, and (2) SELF (IX-A/B/C) via analyst-staged candidates. Work-layer activity may also stage evidence or candidates, but it does not become a self-skill automatically. The analyst serves SELF; the skill modules serve SKILLS.
+
+**Personality boundary:** SKILLS may reveal tone, affect, follow-through, collaboration posture, or aesthetic tendency, but those are not canonical personality truth until they are staged and approved into IX-C.
 
 ---
 
@@ -946,7 +950,7 @@ Every modification to SKILLS must record:
 
 ## XIII. INTEGRATION WITH SELF
 
-SKILLS and SELF interact bidirectionally. WRITE is the primary data source for SELF. Work activity may also generate staged evidence for SELF, but through the gate rather than through a self-skill container.
+SKILLS and SELF interact bidirectionally, but **through analyst interpretation and the gate**, not by direct writes from the skill containers. WRITE is the primary source of language evidence for SELF. THINK and work activity can also surface SELF-relevant signals, but canonical identity remains staged and approved.
 
 ### SELF → SKILLS (Prediction)
 
@@ -955,66 +959,61 @@ SKILLS and SELF interact bidirectionally. WRITE is the primary data source for S
 
 ### SKILLS → SELF (Inference)
 
-**WRITE activities update SELF automatically:**
+**WRITE activities can surface SELF signals through analyst staging:**
 
-| WRITE dimension | Updates SELF component |
-|-----------------|------------------------|
-| vocabulary | linguistic_style.vocabulary_level |
-| complexity | linguistic_style.sentence_patterns |
-| style | linguistic_style.tone, verbal_habits |
-| expression | emotional_patterns |
-| topics | interests |
-| content | linguistic_style.samples (raw examples) |
+| WRITE dimension | Possible SELF signal surfaced |
+|-----------------|-------------------------------|
+| vocabulary | linguistic_style range and level |
+| complexity | sentence-pattern observations |
+| style | tone, verbal habits, `IX-C` style markers |
+| expression | emotional or interpersonal patterns staged to `IX-C` when identity-relevant |
+| topics | interests and curiosity signals |
+| content | linguistic_style samples and evidence-linked examples |
 
 **Pipeline:**
 ```
-Journal Entry → WRITE Analysis → SELF Update
-                    │                  │
-                    │                  └── vocabulary_level recalculated
-                    │                  └── new sentence patterns detected
-                    │                  └── verbal habits updated
-                    │                  └── sample added to linguistic archive
+Journal Entry → WRITE Analysis → analyst reviews identity signals → RECURSION-GATE
                     │
                     └── WRITE capability claims updated
 ```
 
 ### The THINK → SELF Pipeline
 
-Every THINK activity triggers a SELF update:
+**THINK activities can surface SELF signals through analyst staging:**
 
-| THINK data | Updates SELF component |
-|-----------|------------------------|
-| content chosen | interests (topics they seek out) |
+| THINK data | Possible SELF signal surfaced |
+|-----------|-------------------------------|
+| content chosen | interests and curiosity topics |
 | genres preferred | preferences.favorites |
-| themes returned to | values (what matters to them) |
-| emotional reactions | emotional_patterns |
-| re-reads | preferences (what they return to) |
+| themes returned to | values or value expressions |
+| emotional reactions | `IX-C` emotional patterns when evidenced |
+| re-reads | recurring taste or attachment patterns |
 
 **Example:**
 ```
 THINK Activity: Finished "Charlotte's Web" (2nd read)
     │
-    └── SELF updates:
+    └── Possible staged signals:
         ├── interests: animals, farm life, friendship
-        ├── preferences.favorites.books: ["Charlotte's Web", ...]
-        ├── values: loyalty, sacrifice (inferred from theme)
-        └── reading_patterns: re-reads favorites
+        ├── preferences.favorites.books: "Charlotte's Web"
+        ├── values: loyalty, sacrifice
+        └── IX-C: recurring attachment to tender friendship stories
 ```
 
 ### Work Activity → SELF
 
-- Planning/collaboration style → reasoning_patterns
-- Financial/values signals → values (if evidenced)
-- Execution approach → personality (e.g., follow-through)
-- Creative content (artwork, inventions) → interests (what they explore)
+- Planning/collaboration style → possible reasoning or interpersonal observations
+- Financial/values signals → possible values or value-expression candidates
+- Execution approach → possible `IX-C` personality candidates (e.g. follow-through)
+- Creative content (artwork, inventions) → possible interests, aesthetic tendencies, or curiosity signals
 
 ### Key Insight
 
 WRITE is both:
 1. A skill module (capability to produce)
-2. The primary data source for SELF (how they express themselves)
+2. The primary language evidence source for SELF (how they express themselves)
 
-The linguistic fingerprint lives in SELF but is derived from WRITE.
+The linguistic fingerprint lives in SELF but is derived from WRITE through analyst interpretation and approved Record updates.
 
 ### Query Requiring Both
 

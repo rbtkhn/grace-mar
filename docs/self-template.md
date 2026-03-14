@@ -77,45 +77,52 @@ identity: {
 }
 ```
 
-### 2. Personality
+### 2. Personality (IX-C)
 
-Observable behavioral tendencies.
+Observed personality belongs in **Section IX-C of `self.md`** as evidence-linked entries, not as a single nested trait object.
+
+**Doctrine:**
+- Personality is documented from **observed behavior**, not declared by test or polished self-description.
+- Contradictions are preserved with provenance; the Record does not force one smooth personality story.
+- IX-C holds **identity-relevant observations**. Neighboring SELF sections may still summarize language, values, reasoning, or interests, but personality truth lives in IX-C.
 
 ```typescript
-personality: {
-  self_concept: string;          // What they think is the best thing about themselves
-  
-  traits: {
-    trait: string;
-    confidence: number;          // 0-1
-    evidence: string[];          // Sessions/activities that revealed this
-  }[];
-  
-  emotional_patterns: {
-    trigger: string;
-    response: string;
-    examples: string[];
-  }[];
-  
-  humor: {
-    style: string;               // physical, wordplay, absurd, etc.
-    trigger: string;
-  };
-  
-  empathy_mode: string;          // How they respond to others' emotions
-  
-  problem_solving: {
-    style: string;               // grinder, pivoter, help-seeker
-    approach: string;
-  };
-  
-  updated_at: Date;
-}
+personality_entries: {
+  id: string;                    // PER-XXXX
+  date: Date;
+  observation: string;           // What was actually observed
+  evidence_id: string;           // ACT-XXXX
+  provenance: 'human_approved';
+
+  facet?:
+    | 'behavioral_tendency'
+    | 'emotional_pattern'
+    | 'interpersonal_posture'
+    | 'aesthetic_tendency'
+    | 'value_expression'
+    | 'style_marker';
+
+  evidence_strength?: 'single_signal' | 'repeated_pattern' | 'cross_context';
+  stability?: 'emerging' | 'recurring' | 'stable';
+  valence?: 'attraction' | 'aversion' | 'mixed' | 'neutral';
+  tension_with?: string[];       // Other PER ids or short notes
+  scope?: string;                // Where this observation applies
+  constraint?: string;           // Where it should not be overgeneralized
+  source?: string;               // Optional source note
+}[];
 ```
+
+**Recommended IX-C facets:**
+- `behavioral_tendency` — recurring ways of acting (playful, persistent, cautious, improvisational)
+- `emotional_pattern` — notable affective responses and triggers
+- `interpersonal_posture` — how they relate to others (help-seeking, leading, accommodating, resisting)
+- `aesthetic_tendency` — medium, color, composition, taste, recurring artistic choices
+- `value_expression` — what they seem to care about as shown in action or language
+- `style_marker` — speech habits, humor, phrasing, expressive signatures that feel identity-relevant
 
 ### 3. Linguistic Style
 
-How they communicate. **Primary data source: WRITE activities.**
+How they communicate. **Primary data source: WRITE activities.** This section tracks language patterns and samples; identity-relevant speech observations may also appear in IX-C as `style_marker` entries when they belong in personality.
 
 ```typescript
 linguistic_style: {
@@ -245,7 +252,7 @@ preferences: {
 
 ### 6. Values
 
-What matters to them.
+What matters to them. This section summarizes values content; observed value expressions may also stage into IX-C when they function as personality evidence.
 
 ```typescript
 values: {
@@ -270,7 +277,7 @@ values: {
 
 ### 7. Reasoning Patterns
 
-How they think.
+How they think. This section summarizes cognitive approach; recurring identity-relevant reasoning posture may also appear in IX-C when it is being documented as personality.
 
 ```typescript
 reasoning_patterns: {
@@ -353,7 +360,7 @@ Simple favorites survey to initialize SELF. Everything else is inferred from act
 | Favorite places | preferences.favorites.places, narrative |
 | Favorite games | preferences.favorites.games, interests |
 
-Everything else — linguistic style, personality, values, reasoning patterns — is **inferred from activity**, not surveyed.
+Everything else — linguistic style, personality observations, values, reasoning patterns — is **inferred from activity**, not surveyed.
 
 ### After Seeding
 
@@ -388,8 +395,8 @@ SELF evolves over a lifetime.
 
 1. **Continuous Inference**
    - System observes patterns in activity
-   - Patterns detected and recorded
-   - Confidence scores updated
+   - Patterns are staged as candidate observations
+   - Approved entries accumulate without erasing tensions
 
 2. **Periodic Anchoring**
    - Annual or milestone surveys
@@ -437,8 +444,8 @@ SELF–SNAPSHOT–[NAME]–AGE–[X]
 Created: [YYYY-MM-DD]
 Status: ARCHIVED
 
-PERSONALITY SUMMARY:
-[Key traits at this age]
+IX-C PERSONALITY SUMMARY:
+[Observed personality patterns at this age]
 
 LINGUISTIC MARKERS:
 [How they communicated at this age]
@@ -473,7 +480,7 @@ When browsing or querying the fork:
 
 | Query | Source |
 |-------|--------|
-| "What kind of person is [user]?" | Personality summary |
+| "What kind of person is [user]?" | IX-C pattern summary + evidence |
 | "How does [user] communicate?" | Linguistic markers + samples from Writing Log |
 | "What does [user] care about?" | Values and interests + evidence |
 | "Tell me about [user]'s background" | Life narrative |
@@ -564,7 +571,7 @@ Before marking SELF as initialized:
 - [ ] Initial survey completed
 - [ ] At least 5 preferences captured
 - [ ] Language samples collected (5+)
-- [ ] Basic personality traits inferred
+- [ ] Initial personality observations captured or explicitly pending further evidence
 - [ ] Family/narrative basics captured
 
 Before creating SELF SNAPSHOT:
@@ -572,7 +579,7 @@ Before creating SELF SNAPSHOT:
 - [ ] All components reviewed
 - [ ] Historical changes preserved
 - [ ] Linguistic samples current
-- [ ] Personality confidence scores assigned
+- [ ] IX-C summary reviewed for tensions, contradictions, and recency
 - [ ] Interests updated
 - [ ] Timestamp recorded
 - [ ] Marked as ARCHIVED (immutable)
@@ -591,7 +598,7 @@ Before creating SELF SNAPSHOT:
 
 - What user produces reveals interests
 - How they express reveals linguistic style
-- Struggles reveal emotional patterns
+- Repeated behavior can surface IX-C personality observations through the analyst
 
 ### Full Record Requires Both
 

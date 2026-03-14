@@ -234,40 +234,37 @@ Activity: Daily journal entry (WRITE)
 Each module feeds different SELF components:
 
 ```
-WRITE Activity ──→ SELF.linguistic_style (primary source)
-                   SELF.interests (topics written about)
-                   SELF.emotional_patterns (expression)
+WRITE Activity ──→ analyst stages signals for SELF.linguistic_style
+                   analyst stages IX-B / IX-C observations when warranted
 
-THINK Activity ───→ SELF.interests (what they choose)
-                   SELF.preferences (content patterns)
-                   SELF.values (themes they return to)
+THINK Activity ───→ analyst stages preferences, values, IX-B, IX-C signals
 
-Work-context activity ──→ SELF.reasoning_patterns (how they think)
-                         SELF.interests (what they explore)
+Work-context activity ──→ analyst stages reasoning, IX-C, and interest signals
 ```
 
 ### The WRITE → SELF Pipeline
 
-Every WRITE activity triggers a SELF update:
+WRITE activities can surface SELF signals through analyst staging:
 
-| WRITE dimension | Updates SELF component |
-|-----------------|------------------------|
-| vocabulary | linguistic_style.vocabulary_level |
-| complexity | linguistic_style.sentence_patterns |
-| style | linguistic_style.tone, verbal_habits |
-| expression | emotional_patterns |
-| topics | interests |
+| WRITE dimension | Possible SELF signal surfaced |
+|-----------------|-------------------------------|
+| vocabulary | linguistic_style range and level |
+| complexity | sentence-pattern observations |
+| style | linguistic_style tone, verbal habits, `IX-C` style markers |
+| expression | emotional or interpersonal patterns staged to `IX-C` when identity-relevant |
+| topics | interests and curiosity signals |
 
 ### The THINK → SELF Pipeline
 
-Every THINK activity triggers a SELF update:
+THINK activities can surface SELF signals through analyst staging:
 
-| THINK data | Updates SELF component |
-|-----------|------------------------|
-| content chosen | interests (topics they seek out) |
+| THINK data | Possible SELF signal surfaced |
+|-----------|-------------------------------|
+| content chosen | interests and curiosity topics |
 | genres preferred | preferences.favorites |
-| themes returned to | values (what matters to them) |
-| difficulty level | (informs developmental stage) |
+| themes returned to | values or value expressions |
+| emotional reactions | `IX-C` emotional patterns when evidenced |
+| difficulty level | developmental context, not automatic identity truth |
 
 ### Both Required for Full Record
 
@@ -276,7 +273,7 @@ A complete cognitive fork needs both:
 - SKILLS alone = capabilities without character
 - SELF + SKILLS = the full picture of this specific person
 
-**Key insight:** WRITE is both a skill AND the primary data source for SELF.
+**Key insight:** WRITE is both a skill and the primary language-evidence source for SELF. Identity still enters canonically through analyst staging and approval.
 
 ---
 
@@ -415,15 +412,26 @@ interface Self {
   id: string;
   user_id: string;
   
-  personality: {
-    self_concept: string;
-    traits: { trait: string; confidence: number }[];
-    emotional_patterns: { trigger: string; response: string }[];
-    humor: { style: string; trigger: string };
-    empathy_mode: string;
-    problem_solving: { style: string; approach: string };
-    updated_at: Date;
-  };
+  ix_c: {
+    id: string;                  // PER-XXXX
+    date: Date;
+    observation: string;
+    evidence_id: string;         // ACT-XXXX
+    provenance: 'human_approved';
+    facet?:
+      | 'behavioral_tendency'
+      | 'emotional_pattern'
+      | 'interpersonal_posture'
+      | 'aesthetic_tendency'
+      | 'value_expression'
+      | 'style_marker';
+    evidence_strength?: 'single_signal' | 'repeated_pattern' | 'cross_context';
+    stability?: 'emerging' | 'recurring' | 'stable';
+    valence?: 'attraction' | 'aversion' | 'mixed' | 'neutral';
+    tension_with?: string[];
+    scope?: string;
+    constraint?: string;
+  }[];
   
   linguistic_style: {
     vocabulary_level: number;
@@ -569,7 +577,7 @@ interface CapabilityClaim {
 ## Privacy Considerations
 
 ### SELF (Highly Sensitive)
-- Contains personality, values, emotional patterns
+- Contains IX-A/B/C identity data, linguistic style, values, and narrative
 - Highest privacy tier
 - User-controlled access at all ages
 
@@ -858,7 +866,7 @@ Topics that caught the self's attention — what they're drawn to, what resonate
 
 ### IX-C. Personality (Observed)
 
-Emergent behavioral patterns detected through the observation window. Art media choices, speech patterns, emotional responses, value expressions. These are not declared traits — they are observed and documented.
+Emergent personality patterns detected through the observation window. Art media choices, speech patterns, emotional responses, value expressions, and interpersonal posture may all appear here. These are not declared traits or personality-test results — they are observed, evidence-linked, and documented with contradiction preservation when tensions appear.
 
 ### Multi-Dimension Signals
 

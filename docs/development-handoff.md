@@ -121,6 +121,19 @@ Last updated: 2026-03-13
 - **`users/grace-mar/self-library.md`** — Migrated entries to the new lane taxonomy while preserving IDs, order, and existing source notes.
 - **Runtime compatibility:** `bot/core.py`, `scripts/generate_profile.py`, and `scripts/proposal_brief.py` now understand the new fields and keep fallback support for older `read_status`-style library data if encountered.
 
+### Self-personality canonical alignment (2026-03-13)
+- **Aligned docs:** `docs/self-template.md`, `docs/skills-template.md`, `docs/identity-fork-protocol.md`, `docs/id-taxonomy.md`, and `docs/architecture.md`.
+- **Core decision:** `self-personality` is now described canonically as `self.md` `IX-C` observed, evidence-linked entries rather than as a monolithic trait object or personality-test summary.
+- **Enriched optional schema documented:** `PER-*` entries may optionally carry `facet`, `evidence_strength`, `stability`, `valence`, `tension_with`, `scope`, and `constraint` when useful.
+- **Boundary clarified:** SKILLS may surface personality-relevant signals, but canonical personality truth enters only through analyst staging and companion approval into `IX-C`.
+- **Important implementation note:** runtime/export surfaces still use the simpler `PER-*` observation shape today; this pass was docs/schema alignment only, not a runtime migration.
+
+### Skill surface cleanup (2026-03-14)
+- **`users/grace-mar/skill-think.md`** — Reorganized into `I. Core THINK Container`, `II. Contextual Domain Overlays`, and `III. Goal Interpretation Overlays` without changing the underlying tracked content.
+- **`docs/skills-template.md`** — Added the canonical overlay rule: core skill container first, subject/domain overlays second, work-linked goal interpretation overlays third.
+- **`users/grace-mar/skill-write.md`** — Refreshed the single WRITE container to reflect `WRITE-0001` through `WRITE-0006`; no overlays added.
+- **Current doctrine:** WRITE remains the cleaner pure skill-container model; THINK may carry clearly labeled overlays when needed for context or work-horizon interpretation.
+
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-american-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.
@@ -257,6 +270,7 @@ Likely includes (run `git status` to confirm):
 - intent-template.md (design-lens block, companion gate wording).
 - If work stopped right now, the likely local changes would be the approval inbox spec, doctrine memo, and any follow-on narrative derivatives or implementation work that had not yet been committed.
 - Optional later cleanup: continue migrating or annotating older legacy analyses that still discuss `self-skill-work` / `BUILD` for historical comparison.
+- New local docs work likely includes the self-personality alignment set (`self-template.md`, `skills-template.md`, `identity-fork-protocol.md`, `id-taxonomy.md`, `architecture.md`) plus this handoff refresh.
 
 If the companion/operator asks to commit, include all modified and new files from this session.
 
@@ -264,19 +278,20 @@ If the companion/operator asks to commit, include all modified and new files fro
 
 ## Recommended Next Tasks
 
-1. **Implement the approval inbox** — Add authenticated read/write web endpoints and a browser surface that follows `docs/approval-inbox-spec.md` without changing gate semantics.
-2. **Derive business-facing language from the doctrine memo** — Tighten `docs/investor-memo.md`, deck text, and related narrative docs so they pull from `docs/companion-self-doctrine-memo.md` rather than drifting separately.
-3. **Mark or migrate remaining legacy work docs** — Analysis/audit docs that still say `self-skill-work` should either remain clearly legacy or be rewritten to the new work-layer vocabulary.
-4. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
-5. Align business docs for zero drift:
+1. **Optional runtime adoption for richer IX-C metadata** — If desired, review `scripts/process_approved_candidates.py`, `scripts/export_prp.py`, `scripts/generate_profile.py`, and `scripts/validate-integrity.py` so the optional `PER-*` enrichment fields become live schema rather than docs-only doctrine.
+2. **Implement the approval inbox** — Add authenticated read/write web endpoints and a browser surface that follows `docs/approval-inbox-spec.md` without changing gate semantics.
+3. **Derive business-facing language from the doctrine memo** — Tighten `docs/investor-memo.md`, deck text, and related narrative docs so they pull from `docs/companion-self-doctrine-memo.md` rather than drifting separately.
+4. **Mark or migrate remaining legacy work docs** — Analysis/audit docs that still say `self-skill-work` should either remain clearly legacy or be rewritten to the new work-layer vocabulary.
+5. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
+6. Align business docs for zero drift:
    - add explicit cross-links between `business-plan.md`, `business-prospectus.md`, `white-paper.md`.
-6. Formalize THINK multimodality wording:
+7. Formalize THINK multimodality wording:
    - update `skills-template.md` and architecture references so THINK explicitly includes text/video/music/images.
-7. Operator UX for debate workflow:
+8. Operator UX for debate workflow:
    - `/debates` listing command for unresolved debate packets (implemented).
-8. Add small glossary section to business-facing docs for non-technical readers.
-9. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
-10. **work-civ-mem next docs** — If the territory becomes active, add a recurring `audit-report.md` and/or `workspace.md` for `civilization_memory` management loops.
+9. Add small glossary section to business-facing docs for non-technical readers.
+10. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
+11. **work-civ-mem next docs** — If the territory becomes active, add a recurring `audit-report.md` and/or `workspace.md` for `civilization_memory` management loops.
 
 ---
 

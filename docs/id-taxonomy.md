@@ -13,7 +13,7 @@
 | **ACT-** | Activity | self-evidence.md § V. ACTIVITY LOG | Raw activity records — bot exchanges, physical artifacts, lookups |
 | **LEARN-** | Knowledge | self.md IX-A | Facts that entered awareness (post-seed) |
 | **CUR-** | Curiosity | self.md IX-B | Topics that caught attention (post-seed) |
-| **PER-** | Personality | self.md IX-C | Observed behavioral patterns (post-seed) |
+| **PER-** | Personality | self.md IX-C | Observed personality entries (post-seed): behavior, speech/style, emotional patterns, aesthetic tendencies, value expressions |
 | **CANDIDATE-** | Pipeline | recursion-gate.md | Staged signals awaiting approve/reject |
 | **WRITE-** | Evidence | self-evidence.md § II. WRITING LOG | Writing samples, journals, stories |
 | **READ-** | Evidence | self-evidence.md § I. READING LIST | Books, articles consumed |
@@ -69,7 +69,7 @@ The **companion self** (the documented self + the self that companions) is compo
 |-----------|----------|-------------|
 | **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge); includes books and media consumed (from READ-nnn or LIBRARY engagement/influence state) |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
-| **self-personality** | self.md IX-C | Observed behavioral patterns (post-seed personality) |
+| **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
 | **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
 | **self-archive** | self-archive.md | Gated log of approved activity |
@@ -120,6 +120,18 @@ Every post-seed SELF entry (IX-A, IX-B, IX-C) must have `evidence_id: ACT-XXXX` 
 ### Optional: scope / constraint (CMC-aligned)
 
 IX entries (LEARN-, CUR-, PER-) may include an optional **scope** or **constraint** field: when the belief does not apply or would be invalid (e.g. "Only for pre-modern cases", "If X then this narrows"). Use when the candidate or analyst output implies a boundary. No backfill required. Improves auditability and aligns with CMC-style hard constraints per doctrine. See [NOTES-CMC-SUBSTANCE](notes-cmc-substance.md) §4, [IMPLEMENTABLE-OPTIMIZATIONS-FROM-CMC](implementable-optimizations-from-cmc.md) §3.
+
+### Optional: richer `PER-*` metadata
+
+`PER-*` entries may also include optional metadata when the observation benefits from more structure:
+
+- `facet` — `behavioral_tendency`, `emotional_pattern`, `interpersonal_posture`, `aesthetic_tendency`, `value_expression`, or `style_marker`
+- `evidence_strength` — `single_signal`, `repeated_pattern`, or `cross_context`
+- `stability` — `emerging`, `recurring`, or `stable`
+- `valence` — `attraction`, `aversion`, `mixed`, or `neutral`
+- `tension_with` — other `PER-*` ids or short notes indicating preserved tension
+
+These are optional enrichment fields, not a schema migration requirement. The core invariant stays the same: `PER-*` is an observed, evidence-linked, human-approved entry in `IX-C`.
 
 ---
 

@@ -36,6 +36,8 @@ Additional Record components (self-archive, self-memory, evidence logs) are defi
 
 The Record skill module set is limited to THINK and WRITE.
 
+**Current shape guidance:** WRITE currently works best as a single pure capability container. THINK may include clearly labeled contextual domain overlays and goal-interpretation overlays when they help adjacent work contexts read the skill state, but those overlays do not create new self-skills.
+
 ### 2a. Work / execution layer
 
 | Surface | Standard label | Location | Scope |

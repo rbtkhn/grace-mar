@@ -85,7 +85,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 |---------|---------|------------------|
 | **IX-A** | Knowledge | Facts entering awareness through observation; includes books and media consumed (from READ-nnn or LIBRARY engagement/influence state) |
 | **IX-B** | Curiosity | Topics that catch attention, engagement signals |
-| **IX-C** | Personality | Observed behavioral patterns, art style, speech traits |
+| **IX-C** | Personality | Observed behavioral patterns, speech traits, emotional patterns, aesthetic tendencies, and value expressions; contradictions preserved with provenance |
 
 ### 3.3 Evidence Linking
 
@@ -95,6 +95,8 @@ Every claim in SELF (IX-A, IX-B, IX-C) must reference evidence:
 - `provenance: human_approved` — passed through gated pipeline
 
 No claim may exist without traceability to an artifact or approved source.
+
+For `IX-C`, implementations may enrich entries with optional metadata such as `facet`, `evidence_strength`, `stability`, `valence`, `tension_with`, `scope`, and `constraint`. These fields refine interpretation, but the core contract remains unchanged: personality is stored as observed, evidence-linked, human-approved entries rather than as a personality-test summary.
 
 ### 3.4 Skill Executor Model (THINK/WRITE + separate work layer)
 

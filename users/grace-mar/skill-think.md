@@ -5,9 +5,11 @@ Part of SKILLS. See [skill-write](skill-write.md), [work-alpha-school](work-alph
 
 **Module intent:** THINK captures capability from evidence. When WORK has horizon goals (e.g. SAT ≥ 1200), THINK prioritizes content and assessments that move the companion toward those goals. WORK reads THINK state to measure progress. Human-gated; evidence-linked.
 
+**Doctrine:** THINK is the Record-bound skill container for intake, learning, and comprehension. It stores core capability first. Subject-specific sections are contextual overlays showing where THINK is being expressed. Goal-linked sections are interpretation overlays used by WORK for long-horizon planning.
+
 ---
 
-## THINK Container
+## I. Core THINK Container
 
 ```yaml
 status: ACTIVE (first Tier 4 evidence: WRITE-0001 as retell)
@@ -27,7 +29,11 @@ notes: "WRITE-0001 confirms strong literary recall — ~40 words of Madeline rec
 
 ---
 
-## MATH (contextual — not a module, but tracked)
+## II. Contextual Domain Overlays
+
+These overlays show where THINK is currently being expressed. They are not separate self-skills.
+
+### Math Context
 
 ```yaml
 status: SEED (parent-reported, Tier 5)
@@ -42,7 +48,7 @@ notes: "Days of week backward is a strong sequential reasoning signal."
 
 ---
 
-## CHINESE (contextual)
+### Chinese Context
 
 ```yaml
 status: SEED (parent-reported, Tier 5)
@@ -56,7 +62,11 @@ notes: "Strong oral. Literacy is a clear future growth area."
 
 ---
 
-## SAT READINESS (aligned with work-alpha-school horizon goal)
+## III. Goal Interpretation Overlays
+
+These overlays help WORK read THINK for long-horizon goals. They are downstream interpretation, not part of THINK's core ontology.
+
+### SAT Readiness (aligned with work-alpha-school horizon goal)
 
 WORK goal: SAT ≥ 1200. THINK tracks dimensions that map to SAT domains; proposes content at the edge to progress.
 
