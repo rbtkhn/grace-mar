@@ -1,6 +1,6 @@
 ---
 name: wap-pulse
-description: Generate a work-american-politics pulse with campaign status, blockers, doc freshness, gate rhythm, content queue state, and next actions. Use when checking WAP readiness, preparing the weekly brief, asking what is stale, or requesting a territory status sweep.
+description: Generate a work-political-consulting pulse with campaign status, blockers, doc freshness, gate rhythm, content queue state, and next actions. Use when checking WAP readiness, preparing the weekly brief, asking what is stale, or requesting a territory status sweep.
 ---
 
 # WAP Pulse
@@ -41,6 +41,6 @@ Keep the response focused on:
 ## Related files
 
 - `docs/operator-skills.md`
-- `docs/skill-work/work-american-politics/workspace.md`
-- `docs/skill-work/work-american-politics/brief-source-registry.md`
-- `docs/skill-work/work-american-politics/content-queue.md`
+- `docs/skill-work/work-political-consulting/workspace.md`
+- `docs/skill-work/work-political-consulting/brief-source-registry.md`
+- `docs/skill-work/work-political-consulting/content-queue.md`

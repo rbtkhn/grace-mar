@@ -1,6 +1,6 @@
 # Long-term speculation — "Simple in, more work out"
 
-**The change:** Companion thinks like a child (short prompts, one step). The agent fills in the how and does the drafting. Principle 6 in work-american-politics; applied in next-4-tasks and elsewhere.
+**The change:** Companion thinks like a child (short prompts, one step). The agent fills in the how and does the drafting. Principle 6 in work-political-consulting; applied in next-4-tasks and elsewhere.
 
 **Question:** What is the long-term effect on the development and potential of the system?
 

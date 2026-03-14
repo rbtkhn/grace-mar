@@ -51,7 +51,7 @@ def _classify_change(path_line: str) -> tuple[str, str]:
     ):
         return "operator_workflow", path
     if (
-        "work-american-politics" in path
+        "work-political-consulting" in path
         or "operator-wap" in path
         or "work_american_politics" in path
         or "generate_wap_weekly_brief.py" in path

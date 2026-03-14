@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Run a disciplined weekly brief workflow for work-american-politics.
+Run a disciplined weekly brief workflow for work-political-consulting.
 
 This wrapper adds readiness checks and a stable operator-facing output around
 the existing weekly brief scaffold generator.
@@ -105,7 +105,7 @@ def build_weekly_brief_run(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run the work-american-politics weekly brief workflow.")
+    parser = argparse.ArgumentParser(description="Run the work-political-consulting weekly brief workflow.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--start", default="", help="Week start date (YYYY-MM-DD). Defaults to current week.")
     parser.add_argument("--allow-stale-sources", action="store_true", help="Emit the scaffold even if sources need refresh.")

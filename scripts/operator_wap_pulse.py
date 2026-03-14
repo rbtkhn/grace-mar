@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a concise operator pulse for work-american-politics.
+Generate a concise operator pulse for work-political-consulting.
 """
 
 from __future__ import annotations

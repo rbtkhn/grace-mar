@@ -80,7 +80,7 @@ id: CANDIDATE-XXXX
 status: pending | approved | rejected
 timestamp: 2026-02-24 14:07:50
 channel_key: telegram:343513797
-territory: work-american-politics | omitted
+territory: work-political-consulting | omitted
 source: operator-submitted homework artifacts
 mind_category: knowledge | curiosity | personality | skills_build | ...
 signal_type: knowledge | engagement | value | checkpoint / we_did | ...

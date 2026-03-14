@@ -1,6 +1,6 @@
 # WAP target registry
 
-Canonical target-segment surface for `work-american-politics`.
+Canonical target-segment surface for `work-political-consulting`.
 
 Use this file to decide who outreach is for before building lists or writing copy.
 

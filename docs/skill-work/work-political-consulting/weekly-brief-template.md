@@ -1,4 +1,4 @@
-# Weekly brief template — work-american-politics
+# Weekly brief template — work-political-consulting
 
 Use this structure when the companion requests a weekly brief. Fill each section with cited, documented content.
 

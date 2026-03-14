@@ -1,4 +1,4 @@
-# Revenue log — work-american-politics
+# Revenue log — work-political-consulting
 
 Append-only record of revenue and seed capital. Companion-led; for internal/Record continuity.
 
@@ -16,7 +16,7 @@ Append-only record of revenue and seed capital. Companion-led; for internal/Reco
 |--------|------------|------|
 | **$10,000** | Employ a 6-year-old child to make hand-drawn campaign art | First $10k of seed. |
 | **$10,000** | Digital advertising | Meta/Google, district targeting; through registration, early vote, primary day. Traditional. |
-| **$10,000** | work-american-politics / Grace-Mar | Full consultant package (briefs, research, opposition, message discipline, X copy) through primary. Innovative (AI). |
+| **$10,000** | work-political-consulting / Grace-Mar | Full consultant package (briefs, research, opposition, message discipline, X copy) through primary. Innovative (AI). |
 | **$6,000** | Direct mail | One or two mail pieces to targeted GOP primary voters; message + hand-drawn art. Traditional. |
 | **$6,000** | Field / GOTV | Canvassing stipends, early-vote push (May 14–16), materials; registration/absentee before Apr 20 / May 5. Traditional. |
 | **$3,000** | Polling | One lean benchmark or message test (online panel). Traditional. |

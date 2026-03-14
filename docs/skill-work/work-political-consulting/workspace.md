@@ -1,4 +1,4 @@
-# work-american-politics workspace
+# work-political-consulting workspace
 
 Canonical operator entrypoint for the territory.
 
@@ -18,6 +18,8 @@ Use this file when you want one place to understand:
 | Section | Purpose | Canonical source |
 |---------|---------|------------------|
 | **Campaign status** | Principal, phase, days until primary, next critical dates | `principal-profile.md`, `calendar-2026.md` |
+| **Active clients** | Multi-client consulting view: who is active, jurisdiction, channel_key | [clients/](clients/) + per-client sheets |
+| **Compliance blockers** | Per-jurisdiction open items before new paid work | [compliance-checklist.md](compliance-checklist.md) + client templates |
 | **Territory blockers** | Stale docs, placeholder-heavy research surfaces, missing WAP gate rhythm | Derived from `calendar-2026.md`, `opposition-brief.md`, `principal-profile.md`, `revenue-log.md`, `brief-source-registry.md`, `content-queue.md`, `users/grace-mar/recursion-gate.md` |
 | **Pending WAP gate items** | WAP-only `RECURSION-GATE` review | `users/grace-mar/recursion-gate.md` via territory filter |
 | **Brief readiness** | What sources feed the weekly brief and what still needs checking | `brief-source-registry.md` |
@@ -33,9 +35,14 @@ Use this file when you want one place to understand:
 | File | Role |
 |------|------|
 | `README.md` | Territory doctrine, scope, sync policy, and support menu |
+| `consulting-charter.md` | Umbrella consulting mission + service lines (federal / state / local / intl) |
+| `compliance-checklist.md` | Pre-engagement gates (FEC, state, FARA, intl) |
+| `clients/` | Per-client index; [clients/massie-ky4.md](clients/massie-ky4.md) = primary client |
 | `brief-source-registry.md` | Structured intake and freshness tracker for weekly brief inputs |
 | `content-queue.md` | Structured X/content operations queue |
 | `weekly-brief-template.md` | Output shape for the campaign brief |
+| `civ-mem-draft-protocol.md` | Civ-mem → speech/policy; human-always-approves gates |
+| `civ-mem-test-run-*.md` | Dated test runs (DRAFT until signed) |
 | `principal-profile.md` | Principal baseline |
 | `opposition-brief.md` | Living opposition tracker |
 | `calendar-2026.md` | Election and compliance calendar |

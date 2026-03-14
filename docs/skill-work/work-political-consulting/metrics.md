@@ -1,4 +1,4 @@
-# Quantitative metrics — work-american-politics
+# Quantitative metrics — work-political-consulting
 
 Metrics to track across the territory: revenue, funnel, deliverables, territory health, and efficiency. Companion-led; use for reflection and tuning, not automated control.
 

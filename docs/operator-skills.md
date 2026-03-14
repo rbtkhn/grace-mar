@@ -11,8 +11,8 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 | Skill | Purpose | Default command |
 |------|---------|-----------------|
 | `daily-warmup` | Repo-wide operator warmup: gate state, WAP status, integrity, local worktree noise, and top priorities | `python3 scripts/operator_daily_warmup.py -u grace-mar` |
-| `wap-pulse` | Territory-only status sweep for `work-american-politics` | `python3 scripts/operator_wap_pulse.py -u grace-mar` |
-| `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-american-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
+| `wap-pulse` | Territory-only status sweep for `work-political-consulting` | `python3 scripts/operator_wap_pulse.py -u grace-mar` |
+| `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-political-consulting` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar` |
 

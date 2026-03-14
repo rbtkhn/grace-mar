@@ -18,7 +18,7 @@
 | Surface | Why it matters |
 |---------|----------------|
 | `repos/civilization_memory/README.md` | High-level structure, operating modes, validation commands |
-| `repos/civilization_memory/docs/` | Governance, architecture, guides, templates |
+| `repos/civilization_memory/docs/` | Governance, architecture, guides, templates, **taxonomy.md**, **essays/** |
 | `repos/civilization_memory/content/` | Civilizational memory corpus, scholar ledgers, archive |
 | `repos/civilization_memory/tools/` | CMC console and related application surfaces |
 | `repos/civilization_memory/scripts/` | Validation, indexing, and maintenance scripts |

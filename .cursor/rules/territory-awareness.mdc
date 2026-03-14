@@ -14,7 +14,7 @@ When working in `docs/skill-work/`, treat each subdirectory as a **territory** â
 
 - **Load context:** Read the territory's README, principal profile (if politics), revenue-log (if applicable), and key specs before drafting or changing artifacts.
 - **Respect boundaries:** Do not leak content or assumptions from one territory into another (e.g. politics vs gems vs health) unless the operator explicitly crosses the border.
-- **Use territory vocabulary:** Match the territory's framing (e.g. work-american-politics: principal, shadow campaign, Fiverr, seed allocation; work-health-fitness: readiness, protocol).
+- **Use territory vocabulary:** Match the territory's framing (e.g. work-political-consulting: principal, shadow campaign, Fiverr, seed allocation; work-health-fitness: readiness, protocol).
 
 ---
 
@@ -22,7 +22,7 @@ When working in `docs/skill-work/`, treat each subdirectory as a **territory** â
 
 | Territory | Path | Key context |
 |-----------|------|-------------|
-| work-american-politics | `docs/skill-work/work-american-politics/` | README, principal-profile, revenue-log, seed-allocation-plan, opposition-brief, sentient-framing |
+| work-political-consulting | `docs/skill-work/work-political-consulting/` | README, principal-profile, revenue-log, seed-allocation-plan, opposition-brief, sentient-framing |
 | work-health-fitness | `docs/skill-work/work-health-fitness/` | README, roadmap |
 | work-human-teacher | `docs/skill-work/work-human-teacher/` | README, roadmap |
 | work-companion-self | `docs/skill-work/work-companion-self/` | README, roadmap |

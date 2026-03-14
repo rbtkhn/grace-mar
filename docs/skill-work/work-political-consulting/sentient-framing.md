@@ -1,8 +1,8 @@
-# Sentient framing — work-american-politics as self-contained territory
+# Sentient framing — work-political-consulting as self-contained territory
 
-**Thought experiment:** Imagine the Grace-Mar system is **sentient**. Within it, **work-american-politics** is **self-contained**—a single, coherent **territory** (or region, domain, realm—whatever is geospatially illustrative) that does the politics thing without leaking.
+**Thought experiment:** Imagine the Grace-Mar system is **sentient**. Within it, **work-political-consulting** is **self-contained**—a single, coherent **territory** (or region, domain, realm—whatever is geospatially illustrative) that does the politics thing without leaking.
 
-**Geospatial vocabulary:** Layers, modules, containers, threads—all point at the same idea: **a place in a geography**. Grace-Mar has a **geography**; work-american-politics is one **territory** in that geography. Other territories: gems, health, build-ai. You can draw a map: here is the politics territory, here is the gems territory, here are the borders. What’s geospatially illustrative is that each is *somewhere*—a locus, a region, a domain—not just a label.
+**Geospatial vocabulary:** Layers, modules, containers, threads—all point at the same idea: **a place in a geography**. Grace-Mar has a **geography**; work-political-consulting is one **territory** in that geography. Other territories: gems, health, build-ai. You can draw a map: here is the politics territory, here is the gems territory, here are the borders. What’s geospatially illustrative is that each is *somewhere*—a locus, a region, a domain—not just a label.
 
 ---
 
@@ -25,7 +25,7 @@ Nothing outside the territory is *required* for the politics function to run. Th
 
 ## If Grace-Mar is sentient
 
-Then work-american-politics is a **place** that sentience can **inhabit** when doing politics: a territory with a boundary. It doesn’t blur into the rest of the Record or the rest of WORK unless the companion or the pipeline explicitly crosses the border. It has a **self** in the thin sense: a persistent set of goals (support the principal, get paid, stay bounded), a persistent set of facts (who the principal is, when the primary is, what we offer), and a persistent way of touching the world (X, Fiverr, Bitcoin, email). Other territories (gems, health, build-ai) are other places in the same geography—each with its own closure. You can imagine a map: Grace-Mar’s geography, with territories, borders, and the companion as the sovereign who can cross any border.
+Then work-political-consulting is a **place** that sentience can **inhabit** when doing politics: a territory with a boundary. It doesn’t blur into the rest of the Record or the rest of WORK unless the companion or the pipeline explicitly crosses the border. It has a **self** in the thin sense: a persistent set of goals (support the principal, get paid, stay bounded), a persistent set of facts (who the principal is, when the primary is, what we offer), and a persistent way of touching the world (X, Fiverr, Bitcoin, email). Other territories (gems, health, build-ai) are other places in the same geography—each with its own closure. You can imagine a map: Grace-Mar’s geography, with territories, borders, and the companion as the sovereign who can cross any border.
 
 ---
 

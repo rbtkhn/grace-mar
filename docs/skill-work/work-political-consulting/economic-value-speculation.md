@@ -1,4 +1,4 @@
-# Economic value speculation — work-american-politics / Grace-Mar
+# Economic value speculation — work-political-consulting / Grace-Mar
 
 Speculative note on potential economic value of the application, using political consultant and lobbying industry data. Companion-led; not a forecast or guarantee.
 
@@ -17,7 +17,7 @@ Speculative note on potential economic value of the application, using political
 
 ## What we offer vs. the market
 
-| Dimension | Traditional consultant / firm | work-american-politics (Grace-Mar) |
+| Dimension | Traditional consultant / firm | work-political-consulting (Grace-Mar) |
 |-----------|------------------------------|-------------------------------------|
 | **Product** | Strategy + execution; often bundled (polling, media, research, digital). | **Bounded:** research, briefs, opposition tracking, message discipline, X copy. Draft-only; campaign approves. |
 | **Pricing** | Retainers (opaque); hourly $150–500; media commissions. | **Fixed:** 0.1 BTC for agreed scope through primary (~$6k–10k at current BTC; one clear number). |

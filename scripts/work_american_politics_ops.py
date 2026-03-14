@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Structured operator state for work-american-politics.
+Structured operator state for work-political-consulting (CLI: wap).
 
 Builds a dashboard-friendly snapshot from WAP docs and the canonical gate.
 """
@@ -19,7 +19,7 @@ except ImportError:
     from scripts.recursion_gate_territory import TERRITORY_WAP
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-american-politics"
+WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-political-consulting"
 
 
 def _read(path: Path) -> str:

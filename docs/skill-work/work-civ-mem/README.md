@@ -38,7 +38,8 @@ So `work-civ-mem` is about **repository management**, not about importing CMC op
 - **History lookup** — structured reference for Rome, China, dynasties, empires, pharaohs, and other civilizational topics
 - **Curriculum design** — source material for `work-alpha-school` history sequencing, reading paths, or comparison units
 - **Strategic analogy** — external historical context for institutional, political, or civilizational pattern analysis
-- **Work support** — input for `work-civ-mem`, `work-american-politics`, operator research, and strategy writing
+- **Work support** — input for `work-civ-mem`, `work-political-consulting`, operator research, and strategy writing  
+  - WAP: [civ-mem-draft-protocol.md](../work-political-consulting/civ-mem-draft-protocol.md) (human-always-approves on any ship)
 - **Library and canon support** — a return-to reference source inside `self-library`
 
 ### Safe vs unsafe boundary

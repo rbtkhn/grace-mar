@@ -214,7 +214,7 @@ def operator_inbox():
 
 @app.route("/operator/wap")
 def operator_wap():
-    """Browser ops surface for work-american-politics."""
+    """Browser ops surface for work-political-consulting."""
     return send_from_directory("miniapp", "operator-wap.html")
 
 
@@ -291,7 +291,7 @@ def operator_gate_candidates():
 
 @app.route("/operator/wap-status", methods=["GET"])
 def operator_wap_status():
-    """Return structured work-american-politics operator state."""
+    """Return structured work-political-consulting operator state."""
     ok, err = _operator_auth()
     if not ok:
         return err
@@ -300,7 +300,7 @@ def operator_wap_status():
 
 @app.route("/operator/wap-brief", methods=["GET"])
 def operator_wap_brief():
-    """Return a generated weekly brief scaffold for work-american-politics."""
+    """Return a generated weekly brief scaffold for work-political-consulting."""
     ok, err = _operator_auth()
     if not ok:
         return err

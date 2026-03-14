@@ -3,8 +3,8 @@
 Process approved pipeline candidates: merge into SELF, EVIDENCE, prompt; run export_prp; optionally push.
 After --apply, stderr reminds to refresh OpenClaw / external USER.md if --export-openclaw was not used.
 
-Territory batch merge (work-american-politics vs companion):
-    --territory wap        # only candidates with territory: work-american-politics or channel_key: operator:wap
+Territory batch merge (work-political-consulting vs companion):
+    --territory wap        # territory: work-political-consulting (or legacy) or channel_key: operator:wap
     --territory companion  # only the rest
     --territory all        # default — every approved row in Candidates section
     Generate receipt and apply with the same --territory so candidate_ids match.
@@ -806,7 +806,7 @@ def main() -> None:
         "--territory",
         choices=("all", "wap", "companion"),
         default="all",
-        help="Merge only approved candidates in this territory (wap = work-american-politics; companion = rest). Receipt must match.",
+        help="Merge only approved candidates in this territory (wap = politics consulting; companion = rest). Receipt must match.",
     )
     args = ap.parse_args()
     _set_user(args.user)
@@ -835,7 +835,7 @@ def main() -> None:
     if not approved:
         print(
             f"No approved candidates to process (territory={args.territory}). "
-            "Approve rows in recursion-gate above ## Processed; WAP rows need territory: work-american-politics or channel_key: operator:wap."
+            "Approve rows in recursion-gate above ## Processed; WAP rows need territory: work-political-consulting (or legacy) or channel_key: operator:wap."
         )
         return
 

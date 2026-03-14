@@ -1,6 +1,6 @@
 # WAP outreach workspace
 
-Canonical operator entrypoint for outreach inside `work-american-politics`.
+Canonical operator entrypoint for outreach inside `work-political-consulting`.
 
 Use this file when you want to answer:
 

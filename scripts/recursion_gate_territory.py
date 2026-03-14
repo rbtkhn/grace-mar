@@ -2,33 +2,38 @@
 """
 Territory lens for RECURSION-GATE pending candidates.
 
-WAP (work-american-politics): territory: work-american-politics
+WPC (work-political-consulting): territory: work-political-consulting
+  OR legacy territory: work-american-politics
   OR channel_key: operator:wap (or operator:wap:*)
 
-Everything else counts as companion (personal Record / IX pipeline).
-
-Same file, different lens — merge script unchanged.
+CLI flag remains --territory wap (alias). Everything else = companion.
 """
 
 from __future__ import annotations
 
 import re
 
-TERRITORY_WAP = "work-american-politics"
+# Canonical territory string for new and migrated YAML
+TERRITORY_WAP = "work-political-consulting"
+TERRITORY_WAP_LEGACY = "work-american-politics"
 CHANNEL_WAP_PREFIX = "operator:wap"
 
 
 def territory_from_yaml_block(yaml_body: str) -> str:
-    """Return TERRITORY_WAP or 'companion'."""
-    tm = re.search(r"^territory:\s*(.+)$", yaml_body, re.MULTILINE)
-    if tm:
-        t = tm.group(1).strip().strip("\"'")
-        if t == TERRITORY_WAP or t.lower() in ("wap", "work_american_politics"):
-            return TERRITORY_WAP
+    """Return TERRITORY_WAP (politics consulting bucket) or 'companion'."""
     ck = re.search(r"^channel_key:\s*(.+)$", yaml_body, re.MULTILINE)
     if ck:
         k = ck.group(1).strip().strip("\"'").lower()
         if k.startswith(CHANNEL_WAP_PREFIX):
+            return TERRITORY_WAP
+    tm = re.search(r"^territory:\s*(.+)$", yaml_body, re.MULTILINE)
+    if tm:
+        t = tm.group(1).strip().strip("\"'")
+        if t == TERRITORY_WAP or t == TERRITORY_WAP_LEGACY or t.lower() in (
+            "wap",
+            "work_american_politics",
+            "work_political_consulting",
+        ):
             return TERRITORY_WAP
     return "companion"
 

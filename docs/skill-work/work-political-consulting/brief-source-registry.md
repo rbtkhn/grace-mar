@@ -1,4 +1,4 @@
-# Brief source registry — work-american-politics
+# Brief source registry — work-political-consulting
 
 Structured intake surface for the weekly brief.
 

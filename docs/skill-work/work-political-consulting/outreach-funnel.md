@@ -1,6 +1,6 @@
 # WAP outreach funnel
 
-Lightweight funnel tracker for `work-american-politics`.
+Lightweight funnel tracker for `work-political-consulting`.
 
 Use this file to learn by stage:
 

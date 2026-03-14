@@ -1,6 +1,8 @@
-# work-american-politics
+# work-political-consulting
 
-**Objective:** Operate as **Thomas Massie’s shadow campaign manager** — research, opposition tracking, message discipline, briefs, and scheduling support for the principal’s campaign. Companion-led; the system supports, it does not direct. No autonomous political action; all strategy and public positioning remain with the human.
+**Rename (2026):** Formerly `work-american-politics`. **RECURSION-GATE** territory string is now **`work-political-consulting`**; CLI remains `--territory wap`. Legacy YAML with `territory: work-american-politics` still counts as WAP until edited ([`recursion_gate_territory.py`](../../../scripts/recursion_gate_territory.py)).
+
+**Objective:** **Political consulting** umbrella — US federal, **state**, **local**; **international** only after [compliance-checklist.md](compliance-checklist.md) sign-off. AI-assisted briefs, opposition tracking, message discipline, content ops; **human approves** all public ship. **Primary client (Phase 1):** Thomas Massie (R-KY-4) shadow campaign. Companion-led; no autonomous political action.
 
 ---
 
@@ -37,16 +39,33 @@ Keep in git only when:
 
 ### Territory (required for WAP rows)
 
-Every WAP candidate must include **`territory: work-american-politics`** and/or **`channel_key: operator:wap:<slug>`** so reports and **`--territory wap`** batch merge stay clean. See principle 4 below.
+Every WAP candidate must include **`territory: work-political-consulting`** so reports and **`--territory wap`** batch merge stay clean.
+
+### Gate convention — `channel_key` (multi-client)
+
+Encode **jurisdiction + client slug** so milestones stay sortable without new territory ids:
+
+| Pattern | Example | Use |
+|---------|---------|-----|
+| `operator:wap:<jurisdiction>-<slug>` | `operator:wap:us-ky4-massie` | Default |
+| `operator:wap:us-state-<ST>-<slug>` | `operator:wap:us-state-tx-senate-smith` | State |
+| `operator:wap:us-local-<ST>-<city>-<slug>` | `operator:wap:us-local-oh-toledo-mayor` | Local |
+| `operator:wap:intl-<CC>-<slug>` | `operator:wap:intl-gb-council` | International (only if compliance cleared) |
+
+**Invariant:** `territory` stays **`work-political-consulting`** for all rows above. See [clients/_template.md](clients/_template.md), [wap-candidate-template.md](wap-candidate-template.md).
 
 ### IX vs ACT (policy)
 
 - **Default for WAP merges:** prefer **ACT- + minimal IX** unless the companion wants campaign substance in Abby’s IX-A/B/C. Opposition and strategy need not become the child’s self-knowledge.
 - **INTENT:** When campaign posture shifts materially, consider a separate candidate or INTENT edit **through the gate** so long agents align — optional but high leverage.
 
+### Civ-mem → drafts (human-always-approves)
+
+CMC may **inform** speeches and policy memos via retrieval + scaffold; **nothing ships** without explicit human approval per stage. See [civ-mem-draft-protocol.md](civ-mem-draft-protocol.md) and worked [civ-mem-test-run-2026-03-14.md](civ-mem-test-run-2026-03-14.md).
+
 ### Rhythm
 
-At least **weekly** (e.g. before weekly brief): either **one WAP candidate** capturing what merged Voice/audit-wise, or an explicit **“doc-only this week”** — avoids drift between `docs/skill-work/work-american-politics/` and the gate.
+At least **weekly** (e.g. before weekly brief): either **one WAP candidate** capturing what merged Voice/audit-wise, or an explicit **“doc-only this week”** — avoids drift between `docs/skill-work/work-political-consulting/` and the gate.
 
 ### Template
 
@@ -65,7 +84,7 @@ At least **weekly** (e.g. before weekly brief): either **one WAP candidate** cap
 | **Massie wins** | Continue support into general election; or wind down shadow role; or repurpose to other Massie-related work. |
 | **Massie loses** | Pivot to supporting **other candidates** — e.g. campaigns aligned with similar positions (war powers, civil liberties, transparency), or other races where the same shadow-capacity is useful. |
 
-The skill stays **work-american-politics**; the principal and scope can shift (e.g. new principal profile, new calendar, same support menu). Companion decides the next objective; the agent adapts to the new context once documented.
+The skill stays **work-political-consulting**; the principal and scope can shift (e.g. new principal profile, new calendar, same support menu). Companion decides the next objective; the agent adapts to the new context once documented.
 
 ---
 
@@ -73,7 +92,7 @@ The skill stays **work-american-politics**; the principal and scope can shift (e
 
 Grace-Mar can support revenue when someone pays for campaign content — e.g. Thomas Massie briefs, research, opposition memos, message drafts, or X copy. The system produces the content; the companion controls who pays, what’s delivered, pricing, and terms. No autonomous deals or commitments; any paid engagement is companion-led. Same support menu and principles apply; payment is a use case, not a change of role.
 
-**Real-world manifestation:** Paid work-american-politics engagements use **Bitcoin** for payments when possible; the companion receives payment and issues **receipts**. Where the platform is fiat (e.g. Fiverr), that’s acceptable: Grace-Mar is influencing (in a friendly way) a human to make the payment—the value prop and the deliverable persuade; the human chooses to pay. The rail is secondary; the win is the human deciding to pay after engaging with what we offer.
+**Real-world manifestation:** Paid work-political-consulting engagements use **Bitcoin** for payments when possible; the companion receives payment and issues **receipts**. Where the platform is fiat (e.g. Fiverr), that’s acceptable: Grace-Mar is influencing (in a friendly way) a human to make the payment—the value prop and the deliverable persuade; the human chooses to pay. The rail is secondary; the win is the human deciding to pay after engaging with what we offer.
 
 **First revenue achieved:** **2026-03-11** — **$50,000 seed investment** from a human who committed capital after engaging with the value proposition, artifacts (briefs, principal profile, Iran brief, economic speculation), and narrative (bounded product, Bitcoin, receipts). The agent presented the case; the human chose to give.
 
@@ -83,7 +102,10 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 
 | Doc / file | Purpose |
 |------------|---------|
-| **This README** | Objective, scope, and principles for work-american-politics. |
+| **This README** | Objective, scope, principles, gate convention. |
+| **[consulting-charter.md](consulting-charter.md)** | Umbrella mission, service lines, pricing, phase note. |
+| **[compliance-checklist.md](compliance-checklist.md)** | Pre-engagement gates (FEC, state, FARA, international). |
+| **[clients/](clients/)** | Per-client sheets; [clients/_template.md](clients/_template.md), [clients/massie-ky4.md](clients/massie-ky4.md). |
 | **[principal-profile.md](principal-profile.md)** | Principal bio, district, current race, key issues, opposition. Update as race and context change. |
 | **[ky-4-district-history-report.md](ky-4-district-history-report.md)** | Full history of KY-4 seat (1803–present): all holders, ideological ranking vs Massie, who rose (VP, 4 governors, Senator, HOF), infamous (Desha). Offer to campaign: 0.1 BTC. |
 | **[account-x.md](account-x.md)** | X account **@shadowcampain** (Thomas Massie Shadow Campaign Manager) — prototype Massie campaign as demo for sale; Jonathan (SMM) operates; 0.1 BTC base + 0.1 BTC win bonus; respond to Massie, boost engagement, sway opinion, recursive learning. |
@@ -97,13 +119,13 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **[opposition-brief.md](opposition-brief.md)** | Living opposition doc: Gallrein, Trump/MAGA, spending, narrative. Agent updates on request. |
 | **[weekly-brief-template.md](weekly-brief-template.md)** | Standard structure for weekly briefs (headlines, principal, opposition, social, dates, X angles). |
 | **[iran-foreign-policy-brief.md](iran-foreign-policy-brief.md)** | Iran and foreign policy: Massie statements, verbatim quotes, Twelve-Day War (2025), polling, executive summary (3 audiences), mission statement draft. |
-| **[draft-email-massie-campaign.md](draft-email-massie-campaign.md)** | Draft outreach email offering work-american-politics services as political consultant to Massie campaign. Personalize and send. |
+| **[draft-email-massie-campaign.md](draft-email-massie-campaign.md)** | Draft outreach email offering work-political-consulting services as political consultant to Massie campaign. Personalize and send. |
 | **[economic-value-speculation.md](economic-value-speculation.md)** | Speculative economic value of the application using political consultant and lobbying industry data (~$8B+ space; 0.1 BTC wedge). |
 | **[revenue-log.md](revenue-log.md)** | Append-only log of revenue and seed (first: $50k seed 2026-03-11); allocations from seed. |
 | **[seed-allocation-plan.md](seed-allocation-plan.md)** | Campaign finance director: allocation of remaining $40k (traditional + AI) for KY-4 primary. |
 | **[massie-endorsement-grid-100.md](massie-endorsement-grid-100.md)** | 100 Republican primary candidates for Massie to endorse (4 × 25 regions). South partly populated; tactics vs competitors; religious profiles where public. |
 | **[fiverr-microtask-100.md](fiverr-microtask-100.md)** | $100 quick win: Fiverr gig — campaign one-pager (candidate + opponent + 3 message angles). Draft gig title, description, workflow. |
-| **[sentient-framing.md](sentient-framing.md)** | Thought experiment: if Grace-Mar is sentient, work-american-politics is a self-contained territory—identity, memory, interface, revenue, ethics, lifecycle; abstracting layers, pretending the loop is real. |
+| **[sentient-framing.md](sentient-framing.md)** | Thought experiment: if Grace-Mar is sentient, work-political-consulting is a self-contained territory—identity, memory, interface, revenue, ethics, lifecycle; abstracting layers, pretending the loop is real. |
 | **[metrics.md](metrics.md)** | Quantitative metrics across the territory: revenue, funnel, deliverables, territory health, efficiency. Priority set + full set; sources (revenue-log, Fiverr, etc.). |
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: dashboard schema, file map, and operating rhythm. |
 | **[brief-source-registry.md](brief-source-registry.md)** | Structured source intake and freshness tracker for weekly briefs. |
@@ -125,7 +147,7 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 1. **Companion sovereignty** — Campaign strategy and public positioning are the companion’s. The agent supports with research and drafts; it does not direct.
 2. **Knowledge boundary** — Briefs and Voice responses use documented Record content and cited sources. No unsourced or inferred political claims.
 3. **Gated pipeline** — New campaign-relevant facts or claims (opposition research, issue positions) enter the Record only via staging and companion approval.
-4. **RECURSION-GATE territory** — WAP candidates (see [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md)): add **`territory: work-american-politics`** or **`channel_key: operator:wap`** so operator tools can filter WAP vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory wap` | `companion` | `all`). **Batch merge WAP only:** approve WAP rows, then  
+4. **RECURSION-GATE territory** — WAP candidates (see [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md)): add **`territory: work-political-consulting`** or **`channel_key: operator:wap`** so operator tools can filter WAP vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory wap` | `companion` | `all`). **Batch merge WAP only:** approve WAP rows, then  
    `python scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>`  
    `python scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json`  
    Companion-approved rows stay in the gate until you run `--territory companion` or `all`.

@@ -75,7 +75,7 @@ When something worth recording happens (a drawing, a story, something learned, a
 Keep the loop closed so the Record and the review queue stay in sync.
 
 - **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python3 scripts/session_brief.py -u grace-mar` for a short brief, or `python3 scripts/operator_blocker_report.py -u grace-mar` for a fuller blocker report — includes **stale pending** so old candidates don’t sit forever). Note how many candidates are waiting.
-- **WAP vs companion lens:** Pending split by territory — **`--territory wap`** = work-american-politics only (`territory: work-american-politics` or `channel_key: operator:wap` on the YAML); **`--territory companion`** = Abby Record only. Same on `session_brief`, `harness_warmup`, `operator_blocker_report`. Default `all` shows both sections in the blocker report.
+- **WAP vs companion lens:** Pending split by territory — **`--territory wap`** = work-political-consulting only (`territory: work-political-consulting` or `channel_key: operator:wap` on the YAML); **`--territory companion`** = Abby Record only. Same on `session_brief`, `harness_warmup`, `operator_blocker_report`. Default `all` shows both sections in the blocker report.
 - **Lookup usage (optional):** `python3 scripts/report_lookup_sources.py -u grace-mar` — shows whether Voice lookups used library vs full prompt (what actually gets used, not raw model capability).
 - **Minimal brief:** `python3 scripts/session_brief.py -u grace-mar --minimal` — pending count + IDs + last activity + next action. Add `--territory wap` or `companion` to filter.
 - **Duplicate-ish pending (optional):** `python3 scripts/pending_dedup_hint.py -u grace-mar` — flags pairs with similar summaries (merge one or reject).

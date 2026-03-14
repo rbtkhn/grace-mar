@@ -20,7 +20,7 @@
 >
 > Machine-written by **`bot/core.py`** (Telegram, WeChat, activity reports) and by **operator scripts** that stage here — only edit the `status` field (and optional rejection notes).
 >
-> **Territory (WAP vs companion):** For **work-american-politics** candidates, set **`territory: work-american-politics`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
+> **Territory (WAP vs companion):** For **work-political-consulting** candidates, set **`territory: work-political-consulting`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
 >
 > **Invariant:** Every **pending** or **approved-not-yet-merged** candidate must sit **above** `## Processed`. The bot inserts new blocks immediately before `## Processed`. If anything pending appears below Processed, move it up or merge will not see it.
 
@@ -48,48 +48,41 @@ prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 
 summary: Casa Bonita history — user rejected.
 ```
 
+## Processed
+
 ### CANDIDATE-0083 (Test — voice authenticity: stories / imagination)
 
 ```yaml
-status: pending
+status: rejected
 timestamp: 2026-02-24 14:07:50
 channel_key: test:voice_authenticity:2
+rejection_reason: duplicate IX-C — stories #1 favorite, imagination substrate, adventure framing already in self.md (e.g. LEARN/story choices, IX-C storytelling). No prompt merge.
 source_exchange:
   user: "Why do you like stories?"
   grace_mar: "I like stories because they're fun and they take me to new places! I get to meet cool characters and go on adventures with them. It's like living in different worlds, and I love using my imagination. Plus, stories can be really exciting and sometimes they teach me things, too! What's your favorite story?"
 mind_category: personality
 signal_type: value
 priority_score: 4
-summary: Voice test — stories, imagination, adventure (analyst-framed; verify before merge — may duplicate IX-C).
-example_from_exchange: "It's like living in different worlds, and I love using my imagination."
+summary: Voice test — rejected as duplicate lane (harness-only).
 profile_target: IX-C. PERSONALITY
-suggested_entry: imagination and adventure as core values (confirm not duplicate)
-prompt_section: YOUR PERSONALITY
-prompt_addition: Grace-Mar values imagination and adventure through stories.
 ```
 
 ### CANDIDATE-0084 (Test — voice authenticity: Mars)
 
 ```yaml
-status: pending
+status: rejected
 timestamp: 2026-02-24 14:08:19
 channel_key: test:voice_authenticity:1
+rejection_reason: duplicate IX-A — Mars red, Olympus Mons, Phobos/Deimos already documented (LEARN + Phase 7). No SELF or prompt change.
 source_exchange:
   user: "What's your favorite planet?"
   grace_mar: "I like Mars because it's red and it has the biggest volcano called Olympus Mons! And Mars has two moons named Phobos and Deimos. I think that's really cool! What's your favorite planet?"
 mind_category: knowledge
 signal_type: knowledge
 priority_score: 4
-summary: Voice test — Mars facts (likely duplicate IX-A; reject or skip prompt if already in Record).
-example_from_exchange: "I like Mars because it's red and it has the biggest volcano called Olympus Mons!"
+summary: Voice test — rejected as duplicate lane (harness-only).
 profile_target: IX-A. KNOWLEDGE
-suggested_entry: Mars — red planet, Olympus Mons, Phobos and Deimos
-prompt_section: YOUR KNOWLEDGE
-prompt_addition: none
-suggested_followup: What do you think makes Mars different from Earth?
 ```
-
-## Processed
 
 ### CANDIDATE-0082 (Phase 7 — Pre–cognitive replication enrichment survey)
 

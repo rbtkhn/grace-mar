@@ -47,4 +47,4 @@
 
 Share this file or its path. Jonathan’s workspace = this doc + the links above.
 
-**Path:** `docs/skill-work/work-american-politics/smm-workspace.md`
+**Path:** `docs/skill-work/work-political-consulting/smm-workspace.md`

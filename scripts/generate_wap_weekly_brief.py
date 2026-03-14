@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a first-pass weekly brief scaffold for work-american-politics.
+Generate a first-pass weekly brief scaffold for work-political-consulting.
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-american-politics"
+WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-political-consulting"
 
 try:
     from work_american_politics_ops import get_wap_snapshot
@@ -89,7 +89,7 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
     date_range = _format_date_range(start_text)
 
     lines = [
-        "# Weekly brief — work-american-politics",
+        "# Weekly brief — work-political-consulting",
         "",
         f"## Week of {date_range}",
         "",
@@ -153,7 +153,7 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate work-american-politics weekly brief scaffold")
+    parser = argparse.ArgumentParser(description="Generate work-political-consulting weekly brief scaffold")
     parser.add_argument("--start", default="", help="Week start date (YYYY-MM-DD). Defaults to current week.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default="", help="Optional output file")

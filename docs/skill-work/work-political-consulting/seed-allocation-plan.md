@@ -11,7 +11,7 @@ Companion approves; adjust as needed.
 | Category | Amount | Type | Rationale |
 |----------|--------|------|------------|
 | Digital advertising | $10,000 | Traditional | Meta/Google, district targeting; proven for House primaries. Run through registration (Apr 20), early vote (May 14–16), primary day. |
-| work-american-politics / Grace-Mar | $10,000 | Innovative (AI) | Purchase the full consultant package (briefs, research, opposition, message discipline, X copy) through primary. Proves the product; feeds the loop. |
+| work-political-consulting / Grace-Mar | $10,000 | Innovative (AI) | Purchase the full consultant package (briefs, research, opposition, message discipline, X copy) through primary. Proves the product; feeds the loop. |
 | Direct mail | $6,000 | Traditional | One or two mail pieces to targeted GOP primary voters; message discipline and hand-drawn art integration. |
 | Field / GOTV | $6,000 | Traditional | Canvassing stipends, early-vote push (May 14–16), door materials. Registration and absentee reminders before Apr 20 / May 5. |
 | Polling | $3,000 | Traditional | One lean benchmark or message test (online panel); inform late mail and digital. |
@@ -47,7 +47,7 @@ Companion approves; adjust as needed.
 
 | Category | Amount | Why |
 |----------|--------|-----|
-| **work-american-politics / Grace-Mar** | **$10,000** | Deliverables (briefs, research, opposition, message discipline, X copy) are produced by the agent; companion operates. Payment already defined as Bitcoin; receipt issued. **No human vendor; no fiat.** |
+| **work-political-consulting / Grace-Mar** | **$10,000** | Deliverables (briefs, research, opposition, message discipline, X copy) are produced by the agent; companion operates. Payment already defined as Bitcoin; receipt issued. **No human vendor; no fiat.** |
 
 **Total fully AI + BTC:** **$10,000** (25% of the $40k).
 

@@ -953,4 +953,18 @@ evidence_tier: 5
 
 ---
 
+### SESSION 029 — Gate: voice-test duplicates rejected (0083, 0084)
+
+```yaml
+date: 2026-03-14
+participants: operator (Cursor)
+method: harness_warmup follow-up — gate pass on pending test candidates
+activity_type: pipeline — reject duplicate lane
+evidence_tier: 5
+```
+
+**Rejected:** CANDIDATE-0083 (stories/imagination/adventure) — duplicate IX-C; already covered (stories favorite, imagination, storytelling). CANDIDATE-0084 (Mars facts) — duplicate IX-A; Mars/Olympus Mons/Phobos/Deimos already in Record. No SELF, EVIDENCE ACT, or prompt.py changes. `rejected` events appended to pipeline-events.jsonl.
+
+---
+
 END OF FILE — SESSION LOG grace-mar
