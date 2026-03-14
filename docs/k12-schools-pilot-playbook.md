@@ -1,6 +1,7 @@
 # K-12 schools — pilot playbook (companion-self type)
 
 **SKU:** **Companion-self for Schools (Pilot)**  
+**Commercial name (Colorado):** **[Rocky Record](rocky-record-service-brief.md)** — customer-facing brief, tiers, deliverables.  
 **Geography (target):** **Colorado-first** — see [k12-schools-colorado.md](k12-schools-colorado.md) (ICP, CO compliance, GTM). Multi-state after CO reference pilot(s).  
 **Purpose:** Run 1–2 institutional pilots per [business-prospectus.md](business-prospectus.md); align with [business-roadmap.md](business-roadmap.md). Not a curriculum product — **identity Record + sovereign merge + Voice + export**.
 

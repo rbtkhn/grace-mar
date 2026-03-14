@@ -115,6 +115,8 @@ Not essential to system operation; required for go-to-market in child/minor segm
 | [K-12 compliance](k12-compliance-checklist.md) | FERPA/COPPA draft checklist |
 | [K-12 Colorado](k12-schools-colorado.md) | CO ICP, HB 16-1423 / SB 24-041, GTM |
 | [K-12 market research](k12-market-research-2026.md) | Competitors, pedagogy, feature roadmap |
+| [Rocky Record](rocky-record-service-brief.md) | CO K-12 commercial tiers |
+| [DPA placeholders](k12-dpa-placeholders.md) | Subprocessors + DPA outline for counsel |
 
 ---
 

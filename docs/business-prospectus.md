@@ -14,7 +14,7 @@ Grace-Mar defines the **Identity Fork Protocol (IFP)** and ships a reference imp
 
 **Business focus (next 18 months):**
 - **Primary wedge:** Hosted B2C product for homeschool and microschool families.
-- **Secondary wedge:** 1-2 institutional pilots (school/platform integration).
+- **Secondary wedge:** 1-2 institutional pilots (school/platform integration). **Colorado K-12:** commercial offer **Rocky Record** ([rocky-record-service-brief.md](rocky-record-service-brief.md)) — charters, microschools, private; DPA + counsel before paid pilots.
 - **Deferred monetization:** Certification only after independent adoption appears.
 
 This sequencing reduces execution risk and creates proof before broad platform claims.
@@ -89,7 +89,7 @@ This is not a tutoring replacement. It is an identity substrate that tutoring sy
 | Priority | Stream | Target | Price (initial) |
 |----------|--------|--------|-----------------|
 | 1 | Hosted service (B2C) | Families | $8-15/mo or $80-120/yr |
-| 2 | Integration pilot fees (B2B light) | Schools/platforms | Pilot-scoped, fixed fee |
+| 2 | Integration pilot fees (B2B light) | Schools/platforms; **Rocky Record (CO)** | Pilot-scoped, fixed fee; see [rocky-record-service-brief.md](rocky-record-service-brief.md) |
 | 3 | Premium exports/workflows | Power users | $50-200/yr |
 
 ### Later Revenue (post-proof)

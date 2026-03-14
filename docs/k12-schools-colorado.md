@@ -1,6 +1,6 @@
 # K-12 companion-self for Schools — Colorado target
 
-**Purpose:** Target the K-12 pilot plan ([k12-schools-pilot-playbook.md](k12-schools-pilot-playbook.md)) specifically at **Colorado** schools and operators. Not legal advice.
+**Purpose:** Target the K-12 pilot plan ([k12-schools-pilot-playbook.md](k12-schools-pilot-playbook.md)) specifically at **Colorado** schools and operators. **Commercial offer:** [Rocky Record service brief](rocky-record-service-brief.md). Not legal advice.
 
 ---
 
@@ -48,6 +48,7 @@
 - **Governing law:** State of Colorado (optional; counsel).
 - **Notices:** Physical address in CO if operator based there.
 - **School type:** Checkbox charter / private / microschool / other (Colorado).
+- **DPA draft:** [k12-dpa-placeholders.md](k12-dpa-placeholders.md) — subprocessors + outline for counsel.
 
 See [k12-pilot-agreement-template.md](k12-pilot-agreement-template.md).
 
