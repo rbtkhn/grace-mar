@@ -159,6 +159,8 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 
 ## Operator path
 
+**North star (lane):** [docs/lanes/work-political-consulting.md](../../lanes/work-political-consulting.md) · **Weekly rhythm:** [docs/lanes/WEEKLY-RHYTHM.md](../../lanes/WEEKLY-RHYTHM.md)
+
 Use this order when actively running the territory:
 
 1. Open [workspace.md](workspace.md) for the file map and canonical operator path.

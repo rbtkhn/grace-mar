@@ -30,6 +30,8 @@ Paste both outputs (or the full non-compact block). **Canonical state is on disk
 
 Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional).
 
+**Operator structure:** `docs/lanes/README.md` (north star per lane) + `docs/lanes/WEEKLY-RHYTHM.md` (weekly checklist).
+
 ### Non-negotiables for “optimization”
 
 - **Do not** merge into `users/*/self.md`, `self-evidence.md`, or `bot/prompt.py` without companion approval (stage only).
