@@ -32,6 +32,23 @@ Use this file to keep outreach outcome-first:
 
 ---
 
+## Partner-facing framing
+
+Use this when the offer is being introduced through a trusted intermediary such as a consultant or boutique agency.
+
+| Layer | Guidance |
+|------|----------|
+| **What the partner gets** | Another way to help their clients without claiming they built a whole new service line |
+| **What the client gets** | A bounded campaign briefing or message-ops diagnostic |
+| **How to frame the intro** | "I want to bring in a specialist to look at one workflow issue," not "I found an AI automation vendor" |
+| **Best first offer** | `Campaign briefing diagnostic` |
+
+### Sample partner-language
+
+> I can offer a small campaign briefing diagnostic for clients whose updates, drafts, and follow-ups are getting fragmented. It is bounded, useful on its own, and gives you another way to bring value without turning this into a giant implementation upfront.
+
+---
+
 ## Guardrail
 
 These offers live in `WORK`. Outreach should stay evidence-backed, bounded, and companion-led.

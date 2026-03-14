@@ -13,9 +13,9 @@ Use this file to improve:
 
 ## Objection log
 
-| Date | Segment | Offer | Objection / pushback | Interpretation | Response adjustment | Status |
-|------|---------|-------|----------------------|----------------|---------------------|--------|
-| 2026-03-14 | Small campaign operators | Campaign briefing diagnostic | Example row | Replace with a real objection after the first outreach cycle | Use this column to change framing, proof, or audience selection | placeholder |
+| Date | Lane | Segment | Offer | Objection / pushback | Interpretation | Response adjustment | Status |
+|------|------|---------|-------|----------------------|----------------|---------------------|--------|
+| 2026-03-14 | direct | Small campaign operators | Campaign briefing diagnostic | Example row | Replace with a real objection after the first outreach cycle | Use this column to change framing, proof, audience selection, or partner strategy | placeholder |
 
 ---
 
@@ -28,6 +28,15 @@ Use this file to improve:
 | **Unclear value** | The outcome is too abstract or too tooling-first |
 | **Too trust-sensitive / political** | The buyer needs more proof, discretion, or a narrower first ask |
 | **No bandwidth** | The ask is too large for a first step; use a smaller diagnostic or sample |
+
+### Likely partner-lane objections
+
+| Objection | What it may mean |
+|----------|-------------------|
+| **I do not want to confuse my client relationship** | The scope feels too open-ended or threatens the partner's role |
+| **I cannot refer someone unproven** | The partner needs stronger proof, a smaller ask, or safer framing |
+| **My clients are not asking for AI** | The pitch is too tooling-first instead of pain-first |
+| **I already handle this myself** | The offer needs to position as a bounded specialist assist, not a replacement |
 
 ---
 

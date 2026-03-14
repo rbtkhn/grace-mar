@@ -286,6 +286,26 @@ Last updated: 2026-03-14
 - **Target + learning surfaces:** `target-registry.md`, `outreach-funnel.md`, and `objection-log.md` define who outreach is for, what happened by stage, and what objections are teaching us.
 - **WAP docs aligned:** `workspace.md`, `README.md`, and `metrics.md` now include outreach as part of the canonical territory workflow.
 
+### work-american-politics partner channel v1 (2026-03-14)
+- **Second outreach lane:** WAP outreach now explicitly supports both direct and partner-led paths inside `outreach-workspace.md`.
+- **Partner framing added:** `offers.md` now includes partner-facing diagnostic framing, and `target-registry.md` now includes partner segments such as boutique consultants and campaign-adjacent operators.
+- **Tracking updated:** `outreach-funnel.md`, `objection-log.md`, `proof-ledger.md`, `README.md`, and `metrics.md` now distinguish direct versus partner-led learning and partner-safe proof use.
+
+### work-build-ai operatorization pass (2026-03-14)
+- **New build-ai entrypoint:** `docs/skill-work/work-build-ai/workspace.md` now defines the territory's current state, blockers, next actions, and canonical file map.
+- **Reality surfaces added:** `integration-status.md`, `known-gaps.md`, and `provenance-checklist.md` now separate implemented behavior from partial or documented-only behavior.
+- **Benchmark honesty pass:** `economic-benchmarks.md` now marks metrics as instrumented, partial, manual, or planned instead of implying full coverage.
+- **README/index aligned:** `work-build-ai/README.md` and `docs/skill-work/README.md` now point operators toward the new status and provenance surfaces.
+
+### work-build-ai business layer v1 (2026-03-14)
+- **Business surfaces added:** `offers.md`, `target-registry.md`, `proof-ledger.md`, `engagement-model.md`, `delivery-playbook.md`, `partner-channel.md`, and `objection-log.md`.
+- **Three-lane framing:** `workspace.md` now separates doctrine, operator, and business lanes so the territory can act as both integration doctrine and the seed of a future company.
+- **README aligned:** `work-build-ai/README.md` now includes a business path alongside the operator path.
+
+### crypto roadmap doctrine (2026-03-14)
+- **New cross-cutting doctrine doc:** `docs/crypto-roadmap.md` frames cryptocurrency as an optional authority, settlement, and access layer rather than as the product itself.
+- **Build-ai linked:** `work-build-ai/README.md` and `workspace.md` now point to the crypto roadmap as a future sovereignty/access layer, not a current requirement.
+
 ### Record updates
 - Curiosity probe responses were staged and merged into `IX-B` via approved candidates.
 - Receipt-based merge flow executed and merge receipts persisted.

@@ -32,9 +32,9 @@ Use one of:
 
 ## Funnel log
 
-| Date | Segment | Prospect / org | Offer used | Status | Reply quality | Meeting | Next step | Reason / notes |
-|------|---------|----------------|------------|--------|---------------|---------|-----------|----------------|
-| 2026-03-14 | Small campaign operators | Example row | Campaign briefing diagnostic | identified | n/a | no | Replace with real prospect when outreach begins | Use this table as the canonical outreach ledger. |
+| Date | Lane | Segment | Prospect / org | Offer used | Status | Reply quality | Meeting | Next step | Reason / notes |
+|------|------|---------|----------------|------------|--------|---------------|---------|-----------|----------------|
+| 2026-03-14 | direct | Small campaign operators | Example row | Campaign briefing diagnostic | identified | n/a | no | Replace with real prospect when outreach begins | Use this table as the canonical outreach ledger. |
 
 ---
 
@@ -44,7 +44,8 @@ Ask these questions each week:
 
 1. Which segment gets the strongest positive signal?
 2. Which offer creates curiosity without too much friction?
-3. Where does the funnel break most often: no reply, weak interest, no meeting, or no close?
+3. Which lane performs better for this offer: direct or partner-led?
+4. Where does the funnel break most often: no reply, weak interest, no meeting, or no close?
 
 ---
 

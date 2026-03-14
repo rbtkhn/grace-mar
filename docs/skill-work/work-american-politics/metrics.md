@@ -58,12 +58,14 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 | Metric | Description | Source |
 |--------|-------------|--------|
 | Leads identified | Prospects entered into the outreach working set. | [outreach-funnel.md](outreach-funnel.md) |
+| Lane mix | Share of direct vs partner-led outreach entries. | outreach-funnel.md |
 | Reply rate | Replies / contacted. | outreach-funnel.md |
 | Positive reply rate | Positive replies / contacted. | outreach-funnel.md |
 | Meeting rate | Meetings booked / contacted or / positive replies. | outreach-funnel.md |
 | Offer response quality | Which offer gets the strongest curiosity or conversion by segment. | outreach-funnel.md |
 | Objection frequency | Most common pushbacks by count. | [objection-log.md](objection-log.md) |
 | Segment quality | Which segments produce the best conversations relative to volume. | target-registry.md + outreach-funnel.md |
+| Partner quality | Which partner types produce credible intros or warmer conversations. | target-registry.md + outreach-funnel.md + objection-log.md |
 
 ---
 

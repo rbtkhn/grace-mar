@@ -24,9 +24,21 @@
 | Doc / file | Purpose |
 |------------|---------|
 | **This README** | Objective, scope, and principles for work-build-ai. |
+| **[workspace.md](workspace.md)** | Canonical operator entrypoint: current state, blockers, next actions, and file map. |
+| **[integration-status.md](integration-status.md)** | Implemented vs partial vs documented-only status table for the integration. |
+| **[known-gaps.md](known-gaps.md)** | Explicit spec-to-implementation gaps and suggested fixes. |
+| **[provenance-checklist.md](provenance-checklist.md)** | Repeatable verification path for export, handback, and audit integrity. |
 | **[openclaw-integration.md](../../openclaw-integration.md)** | Full integration guide — export, continuity, handback, staging, permission summary. |
 | **[economic-benchmarks.md](economic-benchmarks.md)** | Benchmarks for cost, value flow, and gate health — priority five and full set. |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |
+| **[offers.md](offers.md)** | First-pass business-layer offers and commercial framing. |
+| **[target-registry.md](target-registry.md)** | Buyer segments for the future company path. |
+| **[proof-ledger.md](proof-ledger.md)** | Reusable proof lines from internal work and future client work. |
+| **[engagement-model.md](engagement-model.md)** | How work should be packaged commercially. |
+| **[delivery-playbook.md](delivery-playbook.md)** | Default service delivery phases. |
+| **[partner-channel.md](partner-channel.md)** | Borrowed-authority / partner path for growth. |
+| **[objection-log.md](objection-log.md)** | Market-learning and positioning feedback loop. |
+| **[crypto-roadmap.md](../../crypto-roadmap.md)** | Cross-cutting roadmap for using cryptocurrency as an authority, settlement, and access layer. |
 
 ---
 
@@ -56,9 +68,36 @@ python integrations/openclaw_stage.py --user grace-mar --artifact ./outputs/sess
 
 ---
 
+## Operator path
+
+Use this order when actively working on the territory:
+
+1. Open [workspace.md](workspace.md) for the current state and canonical file map.
+2. Check [integration-status.md](integration-status.md) before assuming a capability is operational.
+3. Read [known-gaps.md](known-gaps.md) before claiming provenance, benchmark, or continuity coverage.
+4. Use [provenance-checklist.md](provenance-checklist.md) when validating export or handback behavior.
+5. Use [economic-benchmarks.md](economic-benchmarks.md) only with its current instrumentation labels in mind.
+
+---
+
+## Business path
+
+Use this order when the question is how `work-build-ai` could become a real company rather than just a territory:
+
+1. Open [offers.md](offers.md) and choose the first sellable diagnostic or architecture pass.
+2. Confirm the target segment in [target-registry.md](target-registry.md).
+3. Pull proof lines from [proof-ledger.md](proof-ledger.md).
+4. Check [engagement-model.md](engagement-model.md) before inventing pricing or retainers.
+5. Use [delivery-playbook.md](delivery-playbook.md) to keep implementation bounded.
+6. Use [partner-channel.md](partner-channel.md) for borrowed-authority growth paths.
+7. Log real objections in [objection-log.md](objection-log.md).
+
+---
+
 ## Cross-references
 
 - [OpenClaw Integration Guide](../../openclaw-integration.md) — Full spec
+- [Crypto roadmap](../../crypto-roadmap.md) — authority, settlement, and access layer
 - [Architecture](../../architecture.md) — Record structure, harness
 - [AGENTS.md](../../../AGENTS.md) — Knowledge boundary, gated pipeline
 - [INTENT](../../intent-template.md) — Constitutional context for handback

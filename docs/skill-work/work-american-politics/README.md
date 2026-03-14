@@ -154,10 +154,11 @@ Use this order when the work block is about learning which WAP offer and buyer s
 
 1. Open [outreach-workspace.md](outreach-workspace.md).
 2. Choose one offer from [offers.md](offers.md).
-3. Confirm one target segment in [target-registry.md](target-registry.md).
-4. Pull one or two proof lines from [proof-ledger.md](proof-ledger.md).
-5. Log actual outcomes in [outreach-funnel.md](outreach-funnel.md).
-6. Log pushback and framing lessons in [objection-log.md](objection-log.md).
+3. Choose the lane: direct outreach to a likely buyer or partner-led outreach through a trusted intermediary.
+4. Confirm one target segment or partner type in [target-registry.md](target-registry.md).
+5. Pull one or two proof lines from [proof-ledger.md](proof-ledger.md).
+6. Log actual outcomes in [outreach-funnel.md](outreach-funnel.md).
+7. Log pushback and framing lessons in [objection-log.md](objection-log.md).
 
 ---
 
