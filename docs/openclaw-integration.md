@@ -68,6 +68,23 @@ The generic bundle export is the portable source contract:
 
 OpenClaw does not need to consume every lane. The important rule is that `runtime` aids must stay labeled **non-canonical**, while `record` remains the source of identity truth.
 
+### Runtime memory plugins (Hindsight-style)
+
+Grace-Mar may use a Hindsight-style memory plugin inside OpenClaw, but only as **runtime continuity**, never as canonical identity memory.
+
+**Safe role inside OpenClaw:**
+- retain recent conversation for continuity
+- recall relevant context before the next turn
+- segment memory by channel / user / provider / agent
+- improve fluency and local session coherence
+
+**Unsafe role inside OpenClaw:**
+- becoming the source of truth for what Grace-Mar knows
+- auto-writing extracted facts into the Record
+- silently overriding the knowledge boundary with recalled runtime summaries
+
+If used, such memory belongs in the runtime bundle's `runtime/` lane and should be treated as non-canonical support state. Any identity-relevant lesson still goes through RECURSION-GATE. See [hindsight-adoption.md](hindsight-adoption.md).
+
 ### Sync Options
 
 | Approach | When to use |
@@ -151,6 +168,8 @@ python scripts/harness_warmup.py -u grace-mar --tail 8
 ```
 
 Paste the markdown block into the **first message** of the session. Output includes: **pending RECURSION-GATE** candidates (IDs + summaries; scans full gate file), **last ACT-*** from EVIDENCE (date + summary), **session-log tail** (narrative lines only — skips embedded ` ``` ` YAML blocks). `--compact` = one paragraph. See script docstring for full behavior.
+
+If a runtime memory plugin is also active, treat it as an **adjunct continuity aid**, not as a substitute for the warmup or the canonical files on disk.
 
 ### Oversight cadence (long sessions)
 

@@ -25,6 +25,8 @@ Grace-Mar exports can package four distinct lanes:
 
 Do not confuse these lanes. The `runtime` lane may travel with a harness for continuity, but it must remain labeled non-canonical.
 
+Runtime memory plugins belong here too: if a downstream runtime uses Hindsight-style retain/recall, that memory is portable only as part of the `runtime` lane and must not be mistaken for Record truth.
+
 ---
 
 ## 2. Transfer Workflow (Checklist)
@@ -96,6 +98,7 @@ Exports include a generation timestamp. The Record schema (SELF, SKILLS, EVIDENC
 | `users/[id]/skills.md` | THINK and WRITE Record skill status |
 | `users/[id]/self-evidence.md` | Activity log (full fork export only) |
 | `users/[id]/memory.md` | Runtime continuity only; not canonical identity |
+| `users/[id]/runtime-bundle/` | Portable package for downstream runtimes; includes record/runtime/audit/policy lanes |
 | `users/[id]/pipeline-events.jsonl` | Audit trail for staging, merge, validation, export |
 | `users/[id]/merge-receipts.jsonl` | Merge provenance and approval replay |
 | `scripts/export_user_identity.py` | Produce identity handoff |

@@ -16,6 +16,8 @@ This doc sets **what may and may not** flow into **reinforcement learning**, **f
 
 5. **Knowledge boundary** — Do not use RL to **inject** facts into the Record. Grace-Mar merges only through **RECURSION-GATE + approval**. RL may tune **style or tool use in harness**; it does not replace the gate.
 
+6. **Runtime memory boundary** — A Hindsight-style retain/recall layer may improve session continuity inside a downstream runtime, but it remains **runtime state**, not Record state. Auto-retained summaries, extracted entities, or recalled snippets must not be treated as canonical identity truth.
+
 ---
 
 ## Next-state signals
@@ -48,6 +50,27 @@ Compressed rule: **use next-state signals freely for process improvement, cautio
 ---
 
 ## Boundary model
+
+### Runtime memory is workflow state, not Record truth
+
+Hindsight-style memory systems may:
+
+- retain recent conversation for continuity
+- recall context before the next turn
+- improve local runtime behavior
+
+They may not:
+
+- write to SELF / EVIDENCE / prompt knowledge
+- bypass RECURSION-GATE
+- turn background extraction into approved identity facts
+
+If runtime memory produces a useful observation, split it:
+
+- use it immediately as runtime continuity if helpful
+- stage it separately if it might matter to the Record
+
+Do not let runtime memory collapse these two functions into one.
 
 ### Safe for workflow adaptation
 

@@ -78,6 +78,7 @@ flowchart TB
 | **process_approved_candidates** | CLI + receipt | — | SELF, EVIDENCE, prompt, gate Processed, SELF-ARCHIVE, PRP, merge-receipts | Only after receipt / quick |
 | **OpenClaw export** | Local / hook | USER.md copy | External dir only | Not SELF directly |
 | **OpenClaw stage** | HTTP to bot | — | RECURSION-GATE (append) | Merge |
+| **Runtime memory plugin** | Local runtime memory store | Runtime lane only | Runtime continuity state, runtime-memory audit | SELF, EVIDENCE, prompt.py, gate approvals |
 | **governance_checker / validate-integrity** | CI local | — | None (read-only) | — |
 | **counterfactual harness** | CI local | — | None | — |
 
@@ -118,9 +119,21 @@ Recommended generic action vocabulary:
 - `runtime_bundle_export`
 - `runtime_compat_export`
 - `runtime_handback_stage`
+- `runtime_memory_retain`
+- `runtime_memory_recall`
 - `merge_applied`
 - `validation_failed`
 - `review_feedback`
+
+### Runtime memory placement
+
+If Grace-Mar adopts a Hindsight-style memory engine in a downstream harness, that engine belongs to the `runtime` lane only:
+
+- it may improve continuity
+- it may be audited
+- it may not become identity truth
+
+Any Record-relevant lesson still has to be staged through RECURSION-GATE. See [hindsight-adoption.md](hindsight-adoption.md).
 
 ---
 
