@@ -12,8 +12,18 @@
 
 **Execution sequence (next 18 months):**
 - Primary wedge: hosted family product (homeschool/microschool)
-- Secondary: 1-2 scoped integration pilots
+- Secondary: 1-2 scoped integration pilots (**K-12 companion-self for Schools**, **Colorado-first** — [k12-schools-colorado.md](k12-schools-colorado.md))
 - Deferred: certification/compliance program as standalone revenue
+
+### K-12 pilot milestones (companion-self type)
+
+| Milestone | Artifact | Status |
+|-----------|----------|--------|
+| Phase 0 — SKU + one-pager + metrics | [k12-schools-pilot-playbook.md](k12-schools-pilot-playbook.md) | Doc ready |
+| Compliance draft + counsel | [k12-compliance-checklist.md](k12-compliance-checklist.md) | Schedule legal review |
+| MVP definition | [k12-schools-mvp.md](k12-schools-mvp.md) | Doc ready |
+| First signed pilot | [k12-pilot-agreement-template.md](k12-pilot-agreement-template.md) | Await sign |
+| Exit case study | [k12-pilot-case-study-TEMPLATE.md](k12-pilot-case-study-TEMPLATE.md) | After pilot |
 
 **Dual positioning:**
 - **Supplemental** — Works alongside Alpha (and similar AI schools). Alpha teaches; Grace-Mar records. Record feeds Incept for personalization.
@@ -100,8 +110,12 @@ Not essential to system operation; required for go-to-market in child/minor segm
 | [Competitive Analysis](competitive-analysis.md) | Market landscape |
 | [Differentiation](differentiation.md) | Competitive moats |
 | [Market Research Alpha/Khan](market-research-alpha-khan.md) | Alpha alternatives, cost comparison |
+| [K-12 pilot playbook](k12-schools-pilot-playbook.md) | Schools SKU, metrics, phases |
+| [K-12 MVP](k12-schools-mvp.md) | Roster, admin, merge policy, bulk export |
+| [K-12 compliance](k12-compliance-checklist.md) | FERPA/COPPA draft checklist |
+| [K-12 Colorado](k12-schools-colorado.md) | CO ICP, HB 16-1423 / SB 24-041, GTM |
 
 ---
 
-*Document version: 1.0*
-*Last updated: February 2026*
+*Document version: 1.1*
+*Last updated: March 2026*
