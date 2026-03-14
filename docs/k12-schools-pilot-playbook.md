@@ -77,3 +77,4 @@ Failure to hit metrics → lessons learned doc; optional extension SOW.
 | [using-grace-mar-without-a-school.md](using-grace-mar-without-a-school.md) | Family-facing loop (“we did X”, /review) |
 | [portability.md](portability.md) | Export shapes |
 | [market-research-alpha-khan.md](market-research-alpha-khan.md) | Supplemental positioning |
+| [k12-market-research-2026.md](k12-market-research-2026.md) | Competitors, pedagogy, 10 features |
