@@ -47,6 +47,19 @@ Last updated: 2026-03-13
 - **docs/implementable-insights.md** — Concrete takeaways from Claws/AGI discourse: harness vs model, continual learning = human-gated writes, system boundaries, config-via-skills, small auditable surface, forkable + skills. Linked from ARCHITECTURE § System boundaries and harness.
 - **docs/adding-a-channel.md** — Skill pattern for new channels: one entrypoint per channel, shared core, env config, no channel logic in core.
 
+### Cursor workflow for product surfaces
+- When building product-facing surfaces in Cursor, use a staged workflow rather than a one-shot implementation prompt.
+- **Order:** doctrine first, shell second, real data third, actions fourth, polish last.
+- Start by declaring the current phase: doctrine, shell, implementation, validation, polish, or handoff.
+- Decompose into bounded subproblems only when they are truly separable; use parallel exploration for mapping and audit work, not for overlapping ontology decisions.
+- Build from canonical boundary outward: confirm doctrine, then schema/docs, then runtime/file structure, then user-facing surfaces, then handoff.
+- Build static shells with fake data before wiring canonical files or live pipeline actions.
+- Use explicit validation gates after meaningful passes: lints, integrity/governance checks, targeted review, and doc/runtime consistency.
+- Convert observations into classified tasks before acting on them when scope is unclear: doctrine drift, schema drift, UX, validation gap, workflow, or narrative drift.
+- Keep human judgment centralized at merge points: ontology, schema, governance, Record-adjacent behavior, and commit grouping.
+- Treat dashboards, inboxes, and widgets as downstream views over canonical Record state; do not let UX redefine ontology.
+- Compressed rule: `scaffold, wire, act, verify, polish — never let UX outrun ontology.`
+
 ### Companion-self vs Grace-Mar boundary
 - **`companion-self`** = upstream template and potential public/open-source product surface.
 - **`grace-mar`** = private instance, proving ground, and working tool.

@@ -41,6 +41,7 @@ entries:
     read_id: null                 # optional: READ-XXXX if also in Reading List (evidence link)
     lookup_priority: low          # high | medium | low | none
     source: manual                # manual | path | url (for future RAG/indexing)
+    url: ""                       # optional: canonical website, repository, or source page
     pd_url: ""                    # optional: Project Gutenberg, Wikisource, etc.
     added_at: 2026-02-XX
     notes: ""                     # optional
@@ -65,6 +66,7 @@ entries:
 | **read_id** | No | READ-XXXX if this book is in EVIDENCE Reading List (evidence link when consumed) |
 | **lookup_priority** | No | `high`, `medium`, `low`, or `none` |
 | **source** | Yes | `manual` (no indexed content yet), `path`, or `url` for future RAG |
+| **url** | No | Canonical website, repository, or source page for the entry |
 | **pd_url** | No | URL to complete public domain text (Project Gutenberg, Wikisource) — for retrieval and RAG |
 | **added_at** | Yes | ISO date when added |
 | **notes** | No | Free-form notes |
