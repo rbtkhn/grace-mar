@@ -29,6 +29,36 @@ So `work-civ-mem` is about **repository management**, not about importing CMC op
 
 ---
 
+## How CMC Is Useful Inside Grace-Mar
+
+`civilization_memory` is most useful inside Grace-Mar as an **external civilizational reference surface**, not as part of the companion's Record. It can support lookup, curriculum design, historical explanation, strategic analogy, and work territories that need deeper structured context about civilizations, institutions, continuity, and decline. Grace-Mar may consult it when civilizational context helps the companion think, learn, plan, or build, but nothing from `civilization_memory` becomes Grace-Mar's personal knowledge unless it is explicitly surfaced and approved through the normal gate. In this way, `civilization_memory` functions as a high-quality external corpus and thinking aid, while the Record remains companion-specific, evidence-linked, and sovereign.
+
+### Typical useful scenarios
+
+- **History lookup** — structured reference for Rome, China, dynasties, empires, pharaohs, and other civilizational topics
+- **Curriculum design** — source material for `work-alpha-school` history sequencing, reading paths, or comparison units
+- **Strategic analogy** — external historical context for institutional, political, or civilizational pattern analysis
+- **Work support** — input for `work-civ-mem`, `work-american-politics`, operator research, and strategy writing
+- **Library and canon support** — a return-to reference source inside `self-library`
+
+### Safe vs unsafe boundary
+
+**Safe uses:**
+- external lookup source
+- curriculum and reading-path support
+- structured historical input for work territories
+- source of questions, analogies, and explanatory context
+
+**Unsafe uses:**
+- treating CMC content as Grace-Mar's personal knowledge by default
+- merging CMC facts directly into `IX-A` without explicit engagement and approval
+- letting CMC silently redefine the companion's worldview or the Voice's undocumented knowledge
+- confusing external civilizational corpus with internal documented self
+
+Compressed rule: `civilization_memory` is a reference corpus and work aid, not part of Grace-Mar's personal Record by default.
+
+---
+
 ## Contents
 
 | Doc / file | Purpose |
