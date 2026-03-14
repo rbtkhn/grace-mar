@@ -8,6 +8,7 @@ Use this file when you want one place to understand:
 - what is stale
 - what is queued for X / content
 - what sources feed the weekly brief
+- how outreach is being framed and tracked
 - what should stage to `RECURSION-GATE`
 
 ---
@@ -22,6 +23,7 @@ Use this file when you want one place to understand:
 | **Brief readiness** | What sources feed the weekly brief and what still needs checking | `brief-source-registry.md` |
 | **Content queue** | X / content workflow state for `@shadowcampain` | `content-queue.md` |
 | **Revenue / offer state** | Revenue totals, BTC/SMM commitments, active commercial surfaces | `revenue-log.md`, `fiverr-microtask-100.md`, `account-x.md` |
+| **Outreach learning** | Offer framing, proof, target segments, funnel, and objections | `outreach-workspace.md`, `offers.md`, `proof-ledger.md`, `target-registry.md`, `outreach-funnel.md`, `objection-log.md` |
 | **Next actions** | Highest-leverage companion/operator actions now | Derived from the sections above |
 
 ---
@@ -38,6 +40,12 @@ Use this file when you want one place to understand:
 | `opposition-brief.md` | Living opposition tracker |
 | `calendar-2026.md` | Election and compliance calendar |
 | `revenue-log.md` | Revenue and allocation continuity |
+| `outreach-workspace.md` | Canonical outreach entrypoint and workflow rhythm |
+| `offers.md` | Current offer framing and low-risk entry offers |
+| `proof-ledger.md` | Reusable proof fragments for outreach |
+| `target-registry.md` | Narrow target segments and lead-source logic |
+| `outreach-funnel.md` | Outreach tracking by stage |
+| `objection-log.md` | Structured learning from objections and replies |
 
 ---
 
@@ -46,7 +54,8 @@ Use this file when you want one place to understand:
 1. Refresh `brief-source-registry.md` before the weekly brief.
 2. Review `content-queue.md` before asking for post drafts.
 3. Use the WAP dashboard/operator surface for territory blockers and next actions.
-4. Stage WAP milestones through `RECURSION-GATE` when something should become audited continuity or Record-adjacent knowledge.
+4. Use `outreach-workspace.md` when the work block is about offer testing, proof, and buyer learning rather than campaign execution.
+5. Stage WAP milestones through `RECURSION-GATE` when something should become audited continuity or Record-adjacent knowledge.
 
 ---
 

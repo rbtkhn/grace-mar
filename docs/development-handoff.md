@@ -280,6 +280,12 @@ Last updated: 2026-03-14
 - **New brief loop:** `scripts/generate_wap_weekly_brief.py` produces a first-pass weekly brief scaffold from the WAP registry, principal profile, opposition brief, calendar, and content queue.
 - **Canonical workflow docs refreshed:** `README.md`, `metrics.md`, `account-x.md`, and `smm-workspace.md` now point operators toward the workspace, content queue, and brief-generation path rather than prose-only operation.
 
+### work-american-politics outreach system v1 (2026-03-14)
+- **New outreach entrypoint:** `docs/skill-work/work-american-politics/outreach-workspace.md` defines outreach as a market-learning surface, not a mass-email engine.
+- **Offer + proof surfaces:** `offers.md` and `proof-ledger.md` now hold bounded offer framing and reusable operational proof lines.
+- **Target + learning surfaces:** `target-registry.md`, `outreach-funnel.md`, and `objection-log.md` define who outreach is for, what happened by stage, and what objections are teaching us.
+- **WAP docs aligned:** `workspace.md`, `README.md`, and `metrics.md` now include outreach as part of the canonical territory workflow.
+
 ### Record updates
 - Curiosity probe responses were staged and merged into `IX-B` via approved candidates.
 - Receipt-based merge flow executed and merge receipts persisted.

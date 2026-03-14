@@ -13,6 +13,8 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 | WAP gate pending count | Instrumented | Derived from `RECURSION-GATE` with WAP territory filter. |
 | Brief source readiness | Instrumented | Driven by `brief-source-registry.md`. |
 | X/content queue state | Instrumented | Driven by `content-queue.md`. |
+| Outreach funnel stages | Manual | Tracked in `outreach-funnel.md`. |
+| Objection themes | Manual | Tracked in `objection-log.md`. |
 | Fiverr conversion / X engagement / email response | Manual | Still requires human-entered analytics from external platforms. |
 
 ---
@@ -48,6 +50,20 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 | Conversion (lead → paid) | Paid / leads (or paid / qualified leads). | revenue-log + lead log. |
 | Average deal size | Total revenue / number of paid engagements. | revenue-log.md |
 | Repeat rate | Buyers who pay more than once (Fiverr repeat; seed then BTC). | revenue-log.md |
+
+---
+
+## Outreach learning
+
+| Metric | Description | Source |
+|--------|-------------|--------|
+| Leads identified | Prospects entered into the outreach working set. | [outreach-funnel.md](outreach-funnel.md) |
+| Reply rate | Replies / contacted. | outreach-funnel.md |
+| Positive reply rate | Positive replies / contacted. | outreach-funnel.md |
+| Meeting rate | Meetings booked / contacted or / positive replies. | outreach-funnel.md |
+| Offer response quality | Which offer gets the strongest curiosity or conversion by segment. | outreach-funnel.md |
+| Objection frequency | Most common pushbacks by count. | [objection-log.md](objection-log.md) |
+| Segment quality | Which segments produce the best conversations relative to volume. | target-registry.md + outreach-funnel.md |
 
 ---
 

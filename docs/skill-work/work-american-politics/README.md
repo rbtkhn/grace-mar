@@ -108,6 +108,12 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: dashboard schema, file map, and operating rhythm. |
 | **[brief-source-registry.md](brief-source-registry.md)** | Structured source intake and freshness tracker for weekly briefs. |
 | **[content-queue.md](content-queue.md)** | Structured X/content workflow queue for `@shadowcampain`. |
+| **[outreach-workspace.md](outreach-workspace.md)** | Canonical outreach entrypoint: offer, proof, segment, funnel, and objection workflow. |
+| **[offers.md](offers.md)** | Current WAP offers and default outcome-first framing. |
+| **[proof-ledger.md](proof-ledger.md)** | Reusable proof fragments and operational outcomes for outreach. |
+| **[target-registry.md](target-registry.md)** | Narrow target segments and lead-source logic. |
+| **[outreach-funnel.md](outreach-funnel.md)** | Lightweight outreach pipeline and stage tracking. |
+| **[objection-log.md](objection-log.md)** | Structured learning from objections and reply friction. |
 | **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @shadowcampain, (3) first $1k deliverable, (4) scale or repeat. |
 | **[simple-in-long-term-speculation.md](simple-in-long-term-speculation.md)** | Long-term speculation: effect of "simple in, more work out" on development and potential of the system. |
 | **[wap-candidate-template.md](wap-candidate-template.md)** | Paste-ready RECURSION-GATE YAML for WAP milestones; territory + batch merge commands. |
@@ -139,6 +145,19 @@ Use this order when actively running the territory:
 4. Generate a first-pass brief scaffold with `python scripts/generate_wap_weekly_brief.py -u grace-mar`.
 5. Use [content-queue.md](content-queue.md) as the working queue for `@shadowcampain`.
 6. Stage WAP milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.
+
+---
+
+## Outreach operator path
+
+Use this order when the work block is about learning which WAP offer and buyer segment actually lands:
+
+1. Open [outreach-workspace.md](outreach-workspace.md).
+2. Choose one offer from [offers.md](offers.md).
+3. Confirm one target segment in [target-registry.md](target-registry.md).
+4. Pull one or two proof lines from [proof-ledger.md](proof-ledger.md).
+5. Log actual outcomes in [outreach-funnel.md](outreach-funnel.md).
+6. Log pushback and framing lessons in [objection-log.md](objection-log.md).
 
 ---
 
