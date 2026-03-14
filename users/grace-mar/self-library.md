@@ -50,7 +50,7 @@ entries:
     status: "active"
     engagement_status: "available"
     lookup_priority: "medium"
-    scope: ["science", "gravity", "flight", "genes", "DNA"]
+    scope: ["science", "physics", "chemistry", "biology", "gravity", "flight", "genes", "DNA"]
     source: "manual"
     added_at: 2026-02-20
     notes: "Ordered Sept 2025."
@@ -1945,6 +1945,35 @@ entries:
 
 ---
 
+## Physics, chemistry & biology
+
+**Purpose:** One shelf for **physical and life sciences** — motion, matter, energy, reactions, living systems, genetics, and lab framing — so lookup does not split STEM by department unless you add finer tags.
+
+**How it works (schema-aligned):**
+- Entries keep normal **lanes** and **types** ([library-schema.md](../../docs/library-schema.md)).
+- Tag **`scope`** with one or more of:
+  - **`physics`** — forces, motion, energy, space, astronomy, flight  
+  - **`chemistry`** — atoms, reactions, materials, mixtures  
+  - **`biology`** — life, cells, body systems, ecology, DNA/genes  
+- **`science`** still means mixed or general STEM.
+
+**Current entries (examples):** **LIB-0003** — Usborne Science Encyclopedia (`scope` includes `physics`, `chemistry`, `biology`, `gravity`, `flight`, `genes`, `DNA`). Add more LIB rows with any of these tags as approved.
+
+---
+
+## History
+
+**Purpose:** A named shelf for **chronology, civilizations, primary/secondary historical sources, and world-regional narrative** — without duplicating pure mythology-as-story unless the entry is history-forward (timelines, empires, documents).
+
+**How it works (schema-aligned):**
+- Entries keep normal **lanes** and **types**.
+- Add **`history`** or **`world history`** (and tags like `ancient`, `Rome`, `China`, `civilizations`) to **`scope`**.
+- Myth-heavy canon can still touch history; prefer this shelf when the **return-to reason** is historical context, not myth retell alone.
+
+**Current entries (examples):** **LIB-0002** — Usborne World History Encyclopedia (`world history`, maps, time charts). **LIB-0132** — Civilization Memory Codex (`history`, civilizations, Rome, China, ancient). Add more with `scope: … history …` as approved.
+
+---
+
 ## Metadata
 
 ```yaml
@@ -1952,8 +1981,8 @@ total_entries: 135
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
 grace_mar_additions: "LIB-0001..0003 (Usborne reference), LIB-0132 (CMC), LIB-0133 (Coppélia), LIB-0134 (Debussy), LIB-0135 (The Simple Condition — Theology)"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
-last_updated: 2026-03-14
+last_updated: 2026-03-15
 library_lanes: "reference, canon, influence"
 taxonomy_note: "engagement_status replaces read_status; lookup_priority marks runtime lookup preference"
-sections: "Entries · Theology (thematic shelf; tag scope: theology) · Metadata"
+sections: "Entries · Theology · Physics/chemistry/biology · History (thematic shelves; tag scope) · Metadata"
 ```

@@ -1,0 +1,57 @@
+# Library integration — how LIBRARY connects to the system
+
+**Canonical file:** `users/[id]/self-library.md`  
+**Schema:** [library-schema.md](library-schema.md)
+
+---
+
+## Already integrated (runtime)
+
+| Surface | Role |
+|---------|------|
+| **`bot/core.py`** | Loads **active** LIB entries from `self-library.md` (`_load_library`). |
+| **Lookup order** | **`library → CMC → full web`** (`_lookup_with_library_first`). Analyst prompt sees a **text summary** of every active entry: lane, lookup_priority, title, scope. If the analyst returns a hit, Voice rephrases from that text only — **no full web** for that turn. |
+| **Scope + priority** | Entries sort into the summary by **lane** (reference first) then **lookup_priority** (high first). **Scope** tags steer which questions match which sources. |
+
+So: **adding or editing LIB rows with good `scope` and `lookup_priority` directly changes lookup behavior** without prompt merges.
+
+---
+
+## Shelves (thematic, human scan)
+
+Markdown sections in `self-library.md` (**Theology**, **Physics/chemistry/biology**, **History**) are **not** separate runtime tables — they document **which `scope` tags** to use so operators and future UIs stay consistent. Runtime still uses the single **Entries** YAML list.
+
+---
+
+## Recommended connections (light touch)
+
+| Connection | Why |
+|------------|-----|
+| **EVIDENCE READ-#### ↔ LIB-####** | `read_id` in schema — links *consumed* to *return-to*; audit trail. |
+| **Gate when perimeter shifts** | Large additions or Voice-facing policy (“only these shelves for school lookup”) → stage + approve like other Record-adjacent changes. |
+| **Warmup / operator** | Weekly skim: high `lookup_priority` + one shelf — keeps LIB from drifting. |
+| **Manifest / bundle** | `self-library.md` already in readable set; re-export after big LIB edits so adjunct runtimes see checksum refresh. |
+
+---
+
+## What not to do
+
+- **Don’t** treat LIBRARY as SELF — a book in LIB does not mean the companion has read it or believes it; **EVIDENCE + gate** own that.
+- **Don’t** paste the full YAML into SYSTEM prompt — summary path in core already bounds lookup; prompt bloat fights Lexile and boundary.
+
+---
+
+## Operator tooling
+
+```bash
+python3 scripts/library_shelf_summary.py -u grace-mar
+```
+
+Prints entry counts by shelf keyword (scope tags) and lookup_priority distribution.
+
+---
+
+## See also
+
+- [lanes/README.md](lanes/README.md) — operator rhythm (LIB skim optional).
+- [docs/cmc-routing.md](cmc-routing.md) — CMC after library miss.
