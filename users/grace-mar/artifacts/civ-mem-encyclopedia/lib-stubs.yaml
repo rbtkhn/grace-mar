@@ -1,0 +1,44 @@
+# Paste into self-library.md inside `entries:` (before closing ```). Gate before merge.
+# Generated with: generate_civmem_encyclopedia.py --essays-only
+
+  - id: LIB-0136
+    title: "CMC — Essays index (docs/essays)"
+    author: "civilization_memory"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "civilization_memory", "taxonomy"]
+    source: "url"
+    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/README.md"
+    added_at: 2026-03-15
+    notes: "Hybrid door — full text in artifacts/.../ENCYCLOPEDIA.md anchor ## CMC:docs/essays/README.md"
+
+  - id: LIB-0137
+    title: "CMC — The Coordination Hypothesis"
+    author: "civilization_memory"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "coordination", "civilization_memory", "theology"]
+    source: "url"
+    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-COORDINATION-HYPOTHESIS.md"
+    added_at: 2026-03-15
+    notes: "ENCYCLOPEDIA.md anchor ## CMC:docs/essays/THE-COORDINATION-HYPOTHESIS.md"
+
+  - id: LIB-0138
+    title: "CMC — The Simple Condition"
+    author: "civilization_memory"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "theology", "ethics", "civilization_memory", "coordination"]
+    source: "url"
+    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-SIMPLE-CONDITION.md"
+    added_at: 2026-03-15
+    notes: "ENCYCLOPEDIA.md anchor ## CMC:docs/essays/THE-SIMPLE-CONDITION.md; overlaps LIB-0135 URL — dedupe on merge if needed"

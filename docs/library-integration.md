@@ -51,6 +51,12 @@ Prints entry counts by shelf keyword (scope tags) and lookup_priority distributi
 
 ---
 
+## Civ-mem hybrid encyclopedia
+
+Fat corpus + skinny LIB stubs: [civ-mem-encyclopedia-hybrid.md](civ-mem-encyclopedia-hybrid.md) · `python3 scripts/generate_civmem_encyclopedia.py -u grace-mar`
+
+---
+
 ## See also
 
 - [lanes/README.md](lanes/README.md) — operator rhythm (LIB skim optional).

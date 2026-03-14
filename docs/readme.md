@@ -15,6 +15,7 @@
 | **Session/development handoff** | [DEVELOPMENT-HANDOFF](development-handoff.md) | Latest engineering state and restart checklist for new agent conversations. |
 | **Lanes (north stars + weekly rhythm)** | [lanes/README](lanes/README.md), [WEEKLY-RHYTHM](lanes/WEEKLY-RHYTHM.md) | One screen per lane (Record, WPC, civ-mem, operator); single weekly checklist. |
 | **Library ↔ system** | [LIBRARY-INTEGRATION](library-integration.md) | Lookup order (library → CMC → full), scope/priority, shelves, operator script. |
+| **Civ-mem encyclopedia (hybrid)** | [civ-mem-encyclopedia-hybrid](civ-mem-encyclopedia-hybrid.md) | Fat `ENCYCLOPEDIA.md` + generated LIB stubs; regen script. |
 | **Operator onboarding** | [OPERATOR-BRIEF](operator-brief.md), [LETTER-TO-USER](letter-to-user.md), [LETTER-TO-STUDENT](letter-to-student.md) | Age-neutral operator brief; letters to the companion (age-neutral and school-aged variants). [PARENT-BRIEF](parent-brief.md) = parent/guardian variant. |
 | **Using Grace-Mar without a school** | [USING-GRACE-MAR-WITHOUT-A-SCHOOL](using-grace-mar-without-a-school.md) | Homeschool / standalone: who it's for, core loop, "we did X" + /review, export, optional stack (e.g. Grace-Mar + Khan/IXL). |
 | **Audits** | [audit-companion-self](audit-companion-self.md), [AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE](audit-grace-mar-vs-companion-self-template.md) | Companion-self concept alignment; instance vs template (structure, protocol, schema). |
