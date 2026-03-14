@@ -19,6 +19,8 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 
 **Invariant:** The companion is always the gate. OpenClaw can stage; it cannot merge into the Record.
 
+**Adapter note:** OpenClaw is a **runtime adapter**, not the architecture. The canonical export contract is now the Grace-Mar **runtime bundle** (`record`, `runtime`, `audit`, `policy` lanes). OpenClaw-compatible flat files remain as compatibility outputs on top of that contract.
+
 ### Comprehension lock-in and portability
 
 Enterprise AI products increasingly aim to become the **system of record for organizational understanding** — synthesis across CRM, code, chat, and docs. That layer is hard to export; **comprehension lock-in** is switching cost from *understanding*, not just from data tables. Grace-Mar is the **companion-scale inverse**: the **Record** (git, human-approved merges) is canonical; **OpenClaw consumes exports** (USER.md, intent snapshot, PRP) — it does not own the fork. Refresh exports after pipeline merges so downstream workspaces stay aligned; if you ever leave OpenClaw, **SELF + EVIDENCE + PRP** remain. See [design-notes §2.5](design-notes.md#25-control-grid-vs-grace-mar--sovereignty-as-positioning), [implementable-insights §10](implementable-insights.md#10-comprehension-lock-in-vs-companion-owned-synthesis).
@@ -35,6 +37,7 @@ OpenClaw practitioners often "tell OpenClaw everything" — mission, goals, cont
 
 ```bash
 python scripts/export_user_identity.py --user grace-mar
+python scripts/export_runtime_bundle.py --user grace-mar --mode adjunct_runtime -o ./runtime-bundle
 ```
 
 Or use the integration hook (supports format + event emission):
@@ -52,6 +55,19 @@ Output: Markdown suitable for `user.md` or `SOUL.md`, containing:
 - Intent snapshot (`intent_snapshot.json`) for machine-readable goal/trade-off alignment
 - Constitution prefix in `user.md` (derived from INTENT) for downstream alignment context
 
+### Runtime bundle lanes
+
+The generic bundle export is the portable source contract:
+
+| Lane | What OpenClaw should use |
+|------|--------------------------|
+| **record** | identity export, fork export, PRP |
+| **policy** | intent snapshot, manifest-declared constraints |
+| **runtime** | warmup digest and light continuity surfaces |
+| **audit** | optional replay and provenance files for oversight |
+
+OpenClaw does not need to consume every lane. The important rule is that `runtime` aids must stay labeled **non-canonical**, while `record` remains the source of identity truth.
+
 ### Sync Options
 
 | Approach | When to use |
@@ -59,6 +75,18 @@ Output: Markdown suitable for `user.md` or `SOUL.md`, containing:
 | **Manual** | Run export and paste into user.md when profile changes |
 | **Pre-session** | Run export as part of OpenClaw startup before agent runs |
 | **Cron** | Export on commit (e.g. post-merge hook) if workspace is shared |
+
+### Runtime modes
+
+OpenClaw can consume Grace-Mar in any of these declared runtime modes:
+
+| Mode | What to send OpenClaw |
+|------|------------------------|
+| **`adjunct_runtime`** | `USER.md`, manifest, intent snapshot, light warmup/runtime aids |
+| **`primary_runtime`** | same as above plus fuller runtime and audit lanes |
+| **`portable_bundle_only`** | bundle for transfer or inspection without assuming a live OpenClaw session |
+
+These modes change packaging depth, not sovereignty. OpenClaw still stages only.
 
 ### Post-merge optional trigger
 
@@ -73,6 +101,8 @@ python scripts/process_approved_candidates.py --apply --approved-by <name> --rec
 - Raw EVIDENCE content (too large, not identity-defining)
 - Session logs (temporal, not identity)
 - RECURSION-GATE (staging, not canonical)
+
+Exception: the **runtime bundle** may include bounded continuity aids such as warmup output or `memory.md`, but only inside the explicit `runtime/` lane and only with non-canonical labeling.
 
 ### Trajectory export (optional RL / research)
 
@@ -290,6 +320,7 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 ```bash
 python scripts/export_user_identity.py --user grace-mar -o openclaw/user.md
 python integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
+python scripts/export_runtime_bundle.py --user grace-mar --mode adjunct_runtime -o openclaw/runtime-bundle
 ```
 
 **Session continuity (read first):**

@@ -9,6 +9,7 @@ Checks:
   4. Optional artifact references resolve and sha256 matches when provided
   5. recursion-gate candidates have required shape
   6. ID format and required section shape checks for SELF/SKILLS
+  7. Derived export freshness and runtime portability contract checks
 
 Usage:
   python scripts/validate-integrity.py
@@ -268,6 +269,74 @@ def validate_skills_sections(user_dirs: list[Path]) -> list[str]:
     return errors
 
 
+def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
+    errors: list[str] = []
+    prompt_path = REPO_ROOT / "bot" / "prompt.py"
+    for user_dir in user_dirs:
+        source_paths = [
+            user_dir / "self.md",
+            user_dir / "skills.md",
+            user_dir / "self-evidence.md",
+            user_dir / "self-library.md",
+            user_dir / "intent.md",
+            prompt_path,
+        ]
+        source_mtimes = [p.stat().st_mtime for p in source_paths if p.exists()]
+        latest_source = max(source_mtimes, default=0)
+
+        prp_path = REPO_ROOT / "grace-mar-llm.txt" if user_dir.name == "grace-mar" else user_dir / f"{user_dir.name}-llm.txt"
+        derived_paths = [
+            user_dir / "manifest.json",
+            user_dir / "llms.txt",
+            user_dir / "intent_snapshot.json",
+            user_dir / "fork-manifest.json",
+            prp_path,
+        ]
+        for path in derived_paths:
+            if not path.exists():
+                errors.append(f"Missing derived export: {path.relative_to(REPO_ROOT)}")
+                continue
+            if path.stat().st_mtime < latest_source:
+                errors.append(f"Stale derived export: {path.relative_to(REPO_ROOT)}")
+
+        manifest_path = user_dir / "manifest.json"
+        if manifest_path.exists():
+            try:
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                errors.append(f"{manifest_path.relative_to(REPO_ROOT)} is not valid JSON")
+            else:
+                readable = set(manifest.get("readable") or [])
+                required = {"SKILLS/THINK", "SKILLS/WRITE", "WORK/context", "INTENT/goals", "INTENT/tradeoff_rules"}
+                missing = sorted(required - readable)
+                if missing:
+                    errors.append(
+                        f"{manifest_path.relative_to(REPO_ROOT)} missing required readable surfaces: {', '.join(missing)}"
+                    )
+                deprecated = {"SKILLS/READ", "SKILLS/BUILD"} & readable
+                if deprecated:
+                    errors.append(
+                        f"{manifest_path.relative_to(REPO_ROOT)} contains deprecated readable surfaces: {', '.join(sorted(deprecated))}"
+                    )
+                if not manifest.get("runtime_mode"):
+                    errors.append(f"{manifest_path.relative_to(REPO_ROOT)} missing runtime_mode")
+
+        bundle_dir = user_dir / "runtime-bundle"
+        bundle_path = bundle_dir / "bundle.json"
+        if bundle_path.exists():
+            if bundle_path.stat().st_mtime < latest_source:
+                errors.append(f"Stale runtime bundle: {bundle_path.relative_to(REPO_ROOT)}")
+            try:
+                bundle = json.loads(bundle_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                errors.append(f"{bundle_path.relative_to(REPO_ROOT)} is not valid JSON")
+            else:
+                for lane in ("record", "runtime", "audit", "policy"):
+                    if lane not in (bundle.get("lanes") or {}):
+                        errors.append(f"{bundle_path.relative_to(REPO_ROOT)} missing lane '{lane}'")
+    return errors
+
+
 def run_validation(users_dir: Path, user: str | None, min_evidence_tier: int) -> list[str]:
     user_dirs = _iter_user_dirs(users_dir, user)
     if not user_dirs:
@@ -283,6 +352,7 @@ def run_validation(users_dir: Path, user: str | None, min_evidence_tier: int) ->
     all_errors.extend(validate_id_format(user_dirs))
     all_errors.extend(validate_self_sections(user_dirs))
     all_errors.extend(validate_skills_sections(user_dirs))
+    all_errors.extend(validate_derived_exports(user_dirs))
     return all_errors
 
 

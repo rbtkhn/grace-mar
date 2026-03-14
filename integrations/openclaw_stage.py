@@ -21,6 +21,13 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = REPO_ROOT / "scripts"
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+try:
+    from harness_events import append_harness_event
+except ImportError:
+    append_harness_event = None  # type: ignore
 
 
 def _sha256(path: Path) -> str:
@@ -160,7 +167,19 @@ def stage_openclaw(
     if api_key:
         req.add_header("X-Api-Key", api_key)
     with urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+        result = json.loads(resp.read().decode("utf-8"))
+    if append_harness_event:
+        append_harness_event(
+            user_id,
+            "openclaw_stage",
+            "runtime_handback_stage",
+            path=str(artifact) if artifact else None,
+            status="ok" if result.get("ok") else "failed",
+            stage_url=stage_url,
+            artifact_present=bool(artifact),
+            constitution_status=meta.get("constitution_check_status"),
+        )
+    return result
 
 
 def main() -> int:

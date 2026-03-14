@@ -185,8 +185,34 @@ Enables discoverability without full access:
 - **manifest.json** — Machine-readable schema, readable/writable surfaces, checksum
 - **intent_snapshot.json** — Machine-readable intent rules (goals, trade-offs, escalation, `applies_to`, `priority`, `conflict_strategy`)
 - **fork JSON** — Full export for backup, portability, or migration
+- **runtime bundle** — Runtime-neutral packaging of `record`, `runtime`, `audit`, and `policy` lanes for downstream harnesses
 
 Exports are snapshots for **consumption** (e.g., by schools or agents that read the Record). No other instance of the Record or Voice may be deployed as an independent economic or social agent without explicit companion consent and, where feasible, a revocation path. See [INSTANCES-AND-RELEASE](instances-and-release.md).
+
+### 6.3 Portable harness lanes
+
+The reference implementation distinguishes four exportable lanes:
+
+| Lane | Purpose | Canonical status |
+|------|---------|------------------|
+| **record** | identity, skills, evidence, library, PRP | Canonical |
+| **runtime** | continuity aids for a live harness session | Non-canonical |
+| **audit** | replay, integrity, provenance, and operator traces | Append-only operational history |
+| **policy** | intent and constitutional alignment surfaces | Canonical policy, not identity |
+
+This separation prevents runtime lock-in. A downstream harness may consume more than the `record` lane, but only the `record` lane defines the documented self.
+
+### 6.4 Runtime modes
+
+Implementations may declare a runtime mode in their machine-readable manifest:
+
+| Runtime mode | Meaning |
+|--------------|---------|
+| **`adjunct_runtime`** | Downstream runtime assists alongside the canonical repo |
+| **`primary_runtime`** | Downstream runtime is the main live operating surface, while the repo stays canonical |
+| **`portable_bundle_only`** | Export package for transport, testing, or inspection without assuming a live runtime |
+
+These are **packaging modes**, not autonomy modes. They may change export depth, continuity surfaces, or oversight cadence, but they do not alter merge authority. The Sovereign Merge Rule still governs every mode.
 
 ---
 

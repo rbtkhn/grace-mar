@@ -99,6 +99,7 @@ grace-mar/
 │   ├── export_user_identity.py      # Record → user.md / SOUL.md for OpenClaw
 │   ├── export_prp.py                # Record → Portable Record Prompt (pasteable into any LLM)
 │   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
+│   ├── export_runtime_bundle.py     # Runtime-neutral bundle (record/runtime/audit/policy)
 │   ├── metrics.py                   # Pipeline health, record completeness
 │   ├── governance_checker.py        # Pre-commit principle violations
 │   ├── validate-integrity.py        # Integrity validator
@@ -149,7 +150,7 @@ grace-mar/
 | [Design Notes](docs/design-notes.md) | White paper & business proposal input (positioning, agent-web insights) |
 | [agents.md](agents.md) | Guardrails for AI coding assistants |
 | [Rejection Feedback](docs/rejection-feedback.md) | Learning from pipeline rejections |
-| [Portability](docs/portability.md) | School transfer, ownership, handoff workflow |
+| [Portability](docs/portability.md) | School transfer plus runtime portability and bundle handoff workflow |
 | [Simple User Interface](docs/simple-user-interface.md) | Chat-based workflow for families (no GitHub) |
 | [Admissions Link Use Case](docs/admissions-link-use-case.md) | Share link so admissions/employers can chat with applicant's fork |
 | [Privacy and Redaction](docs/privacy-redaction.md) | School/public views, what gets excluded |
@@ -181,9 +182,9 @@ python scripts/rotate_telegram_archive.py --apply  # Perform rotation
 
 Rotated content goes to `users/grace-mar/archives/SELF-ARCHIVE-YYYY-MM.md`. The main archive keeps the last 2,000 entries.
 
-## Portability (school transfer)
+## Portability
 
-The Record is user-owned. When changing schools, the user brings their Record. See [Portability](docs/portability.md) for the transfer workflow, checklist, and handoff format.
+The Record is user-owned. When changing schools, the user brings their Record. Grace-Mar can also export a runtime-neutral bundle so another harness can consume the Record without becoming the system of record. See [Portability](docs/portability.md) for the transfer workflow, runtime modes, and handoff formats.
 
 ---
 
@@ -202,6 +203,13 @@ Export the fork to a single JSON file (SELF, EVIDENCE, LIBRARY, optional manifes
 python scripts/export_fork.py                      # Print JSON to stdout
 python scripts/export_fork.py -o fork-export.json  # Write to file
 python scripts/export_fork.py --no-raw -o summary.json  # Summary + manifest only
+```
+
+Export a runtime-neutral bundle with explicit `record`, `runtime`, `audit`, and `policy` lanes:
+
+```bash
+python scripts/export_runtime_bundle.py -u grace-mar
+python scripts/export_runtime_bundle.py -u grace-mar --mode primary_runtime -o /tmp/runtime-bundle
 ```
 
 ## Uniqueness measurement

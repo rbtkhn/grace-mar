@@ -1,14 +1,29 @@
-# Portability — Transferring Grace-Mar Between Schools
+# Portability — Record Transfer And Runtime Portability
 
-**Purpose:** Document how the Record moves with the companion when they change schools. The Record belongs to the companion; schools consume it. No institutional handoff — the companion brings their Record.
+**Purpose:** Document how the Record moves with the companion when they change schools, and how Grace-Mar can be moved between runtimes without giving up canonical ownership. The Record belongs to the companion; schools and runtimes consume exports.
 
-**See also:** [OPENCLAW-INTEGRATION](openclaw-integration.md) (school integration), [ARCHITECTURE](architecture.md) (Record structure).
+**See also:** [OPENCLAW-INTEGRATION](openclaw-integration.md) (runtime adapter example), [ARCHITECTURE](architecture.md) (Record structure).
 
 ---
 
 ## 1. Core Principle
 
 **The Record is companion-owned.** self.md, skills.md, self-evidence.md live under the companion's control — in a repo, on a family machine, or in a hosted instance the companion controls. Schools do not own the Record. They read it (or receive exports). When the companion switches schools, they bring their Record. There is no "transfer" between institutions — only a change in who receives access or an export.
+
+**Runtime portability is separate from school transfer.** A runtime such as OpenClaw, Cursor, Codex, Claude Code, or a future local harness may consume exported Grace-Mar surfaces, but it does not become the system of record. Grace-Mar remains canonical; the runtime is an adapter.
+
+### Portable lanes
+
+Grace-Mar exports can package four distinct lanes:
+
+| Lane | Meaning | Canonical? |
+|------|---------|------------|
+| **record** | identity, skills, evidence, library, PRP | Yes |
+| **runtime** | warmup, `memory.md`, session continuity aids | No |
+| **audit** | event logs, merge receipts, checksum/freshness surfaces | Append-only operational history |
+| **policy** | intent rules and machine-readable alignment surfaces | Canonical policy, not identity |
+
+Do not confuse these lanes. The `runtime` lane may travel with a harness for continuity, but it must remain labeled non-canonical.
 
 ---
 
@@ -34,9 +49,22 @@ What the companion gives to the new school depends on integration depth.
 |----------|----------|----------------|
 | **Identity only** | Interests, personality, values, IX-A/B/C, linguistic style | `python scripts/export_user_identity.py -u grace-mar -o handoff-identity.md` |
 | **Full fork** | SELF, EVIDENCE, SKILLS, LIBRARY | `python scripts/export_fork.py -u grace-mar -o handoff-fork.json` |
+| **Runtime bundle** | Record + policy + optional runtime/audit lanes for a downstream harness | `python scripts/export_runtime_bundle.py -u grace-mar -o handoff-runtime-bundle` |
 | **Light handoff** | Identity + SKILLS summary | Run `export_user_identity`; optionally append SKILLS container status (edges, gaps) from skills.md |
 
 **Recommended default:** Identity export (`export_user_identity`) is sufficient for most schools (Alpha/Incept, tutors, onboarding). Use full fork when the school needs full evidence history.
+
+### Runtime modes
+
+Runtime portability may be exported in one of three declared modes:
+
+| Mode | Meaning |
+|------|---------|
+| **`adjunct_runtime`** | Another runtime assists the canonical repo; light continuity only |
+| **`primary_runtime`** | Another runtime is the main live surface; richer continuity/audit export |
+| **`portable_bundle_only`** | Produce a transport package without assuming a live runtime |
+
+These modes change packaging and review rhythm only. They do **not** alter the Sovereign Merge Rule.
 
 ---
 
@@ -67,8 +95,12 @@ Exports include a generation timestamp. The Record schema (SELF, SKILLS, EVIDENC
 | `users/[id]/self.md` | Identity, interests, personality, IX-A/B/C |
 | `users/[id]/skills.md` | THINK and WRITE Record skill status |
 | `users/[id]/self-evidence.md` | Activity log (full fork export only) |
+| `users/[id]/memory.md` | Runtime continuity only; not canonical identity |
+| `users/[id]/pipeline-events.jsonl` | Audit trail for staging, merge, validation, export |
+| `users/[id]/merge-receipts.jsonl` | Merge provenance and approval replay |
 | `scripts/export_user_identity.py` | Produce identity handoff |
 | `scripts/export_fork.py` | Produce full fork handoff |
+| `scripts/export_runtime_bundle.py` | Produce runtime-neutral portability bundle |
 | `scripts/export_view.py` | School/public views with redaction (see privacy-redaction.md) |
 
 ---

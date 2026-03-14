@@ -756,6 +756,22 @@ def _run_openclaw_export(
     return True, (result.stdout or "openclaw export complete").strip()
 
 
+def _refresh_derived_exports() -> None:
+    commands = [
+        [sys.executable, "scripts/export_manifest.py", "-u", USER_ID, "-o", str(PROFILE_DIR)],
+        [sys.executable, "scripts/fork_checksum.py", "--manifest"],
+        [sys.executable, "scripts/export_runtime_bundle.py", "-u", USER_ID, "-o", str(PROFILE_DIR / "runtime-bundle")],
+    ]
+    for cmd in commands:
+        subprocess.run(
+            cmd,
+            cwd=REPO_ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--user", "-u", default=USER_ID, help="User id (default: GRACE_MAR_USER_ID or grace-mar)")
@@ -952,6 +968,8 @@ def main() -> None:
             check=True,
         )
         print("PRP exported.")
+        _refresh_derived_exports()
+        print("Derived exports refreshed.")
 
         receipt_event = {
             **receipt,

@@ -15,6 +15,19 @@ Single place for **what each component owns**, **where state lives**, and **what
 
 Same rows, same truth: the gate markdown is the single source for “what’s waiting.” No sync layer between chat and queue — if it isn’t in `recursion-gate.md`, it isn’t staged.
 
+### Exportable lanes
+
+Grace-Mar now names four portable harness lanes:
+
+| Lane | Role | Canonical status | Primary surfaces |
+|------|------|------------------|------------------|
+| **record** | Companion-owned truth | Canonical | `self.md`, `skills.md`, `self-evidence.md`, `self-library.md`, PRP |
+| **runtime** | Live-session continuity | Non-canonical | `memory.md`, `session-transcript.md`, warmup output, session-log tail |
+| **audit** | Replay, integrity, provenance | Append-only operational history | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
+| **policy** | Intent and constitutional constraints | Canonical policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared rules |
+
+This naming matters for portability: a runtime can carry `runtime` and `audit` lanes with it, but only the `record` lane defines identity.
+
 ---
 
 ## Pending candidates dashboard (human door)
@@ -100,6 +113,14 @@ Anything else writing SELF/EVIDENCE/prompt should be treated as **policy violati
 ## Harness events (audit stream)
 
 Optional append-only **`users/<id>/harness-events.jsonl`**: merge applied, OpenClaw export, etc. — Cursor-style replay without chat. See `scripts/harness_events.py`; emitted by merge hook and OpenClaw hook when configured.
+
+Recommended generic action vocabulary:
+- `runtime_bundle_export`
+- `runtime_compat_export`
+- `runtime_handback_stage`
+- `merge_applied`
+- `validation_failed`
+- `review_feedback`
 
 ---
 

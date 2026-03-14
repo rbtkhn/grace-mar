@@ -1,0 +1,10 @@
+{
+  "ok": false,
+  "user_id": "grace-mar",
+  "generated_at": "2026-03-13T19:35:07.889068",
+  "error": "missing intent.md at /Users/robertkuhne/Documents/grace-mar/users/grace-mar/intent.md",
+  "goals": {},
+  "tradeoff_rules": [],
+  "escalation_rules": [],
+  "never_autonomous_actions": []
+}

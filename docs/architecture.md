@@ -40,6 +40,31 @@ The cognitive fork separates **who the companion is** from **what the companion 
 
 Any future agentic or orchestration layer (e.g. Claw-style) must keep merge authority human-only; orchestration may suggest or stage, not merge.
 
+### Portable harness lanes
+
+Grace-Mar's harness is portable because it separates **canonical truth** from **runtime continuity** and **audit** rather than collapsing them into one opaque memory store.
+
+| Lane | What it contains | Canonical? | Typical files |
+|------|------------------|------------|---------------|
+| **record** | Companion-owned identity and evidence | Yes | `self.md`, `skills.md`, `self-evidence.md`, `self-library.md`, PRP exports |
+| **runtime** | Continuity aids for a live session | No | `memory.md`, `session-transcript.md`, warmup digests, session-log tails |
+| **audit** | Replay, provenance, operational traces | No, but append-only | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
+| **policy** | Intent and constitutional alignment surfaces | Yes for policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared constraints |
+
+The runtime lane is portable, but it is **not** Record truth. A downstream runtime may consume `memory.md` or a warmup block for continuity, yet only the Record lane defines who Grace-Mar is. This keeps runtime swaps possible without making any one harness the owner of memory.
+
+### Runtime modes
+
+Grace-Mar may be exported in different **runtime modes** depending on how much continuity a downstream harness should receive:
+
+| Mode | Meaning | Included emphasis |
+|------|---------|-------------------|
+| **`adjunct_runtime`** | Grace-Mar supports another runtime alongside the canonical repo | Record + policy + light runtime continuity |
+| **`primary_runtime`** | A downstream runtime is the main live operating surface, while the repo remains canonical | Record + policy + fuller runtime lane + audit |
+| **`portable_bundle_only`** | Produce a transport bundle without assuming any live runtime | Record + policy, minimal runtime aids |
+
+These modes change **packaging and oversight cadence**, not sovereignty. In every mode, the gate remains human-only and the Record remains git-backed and companion-owned.
+
 ---
 
 ## Fork Lifecycle

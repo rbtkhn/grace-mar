@@ -51,6 +51,7 @@ def _collect_export_files(out_dir: Path, fmt: str) -> list[Path]:
         "intent_snapshot.json",
         "OPENCLAW-PRP.txt",
         "fork-export.json",
+        "runtime-bundle/bundle.json",
     }
     files = []
     for name in sorted(candidates):
@@ -58,6 +59,17 @@ def _collect_export_files(out_dir: Path, fmt: str) -> list[Path]:
         if p.exists() and p.is_file():
             files.append(p)
     return files
+
+
+def _bundle_id(out_dir: Path) -> str:
+    bundle_path = out_dir / "runtime-bundle" / "bundle.json"
+    if not bundle_path.exists():
+        return ""
+    try:
+        payload = json.loads(bundle_path.read_text(encoding="utf-8"))
+        return str(payload.get("bundle_id") or "")
+    except Exception:
+        return ""
 
 
 def _emit_openclaw_event(user_id: str, out_dir: Path, fmt: str, files: list[Path], status: str, error: str = "") -> None:
@@ -156,11 +168,13 @@ def run_openclaw_export(
         append_harness_event(
             user_id,
             "openclaw_hook",
-            "openclaw_export",
+            "runtime_compat_export",
             path=str(out_dir.resolve()),
             format=fmt,
             file_count=len(files),
             status="ok",
+            target="openclaw",
+            bundle_id=_bundle_id(out_dir),
             pipeline_event=bool(emit_event),
         )
     return 0

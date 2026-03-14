@@ -4,7 +4,7 @@ Use this file to resume development quickly in a new agent conversation.
 
 **Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-build-ai** (OpenClaw + companion gate); read `docs/skill-work/work-build-ai/README.md` then `docs/openclaw-integration.md`.
 
-Last updated: 2026-03-13
+Last updated: 2026-03-14
 
 ---
 
@@ -244,6 +244,14 @@ Last updated: 2026-03-13
 - `user.md` export gets constitution context prefix when intent is available.
 - Inbound OpenClaw staging performs advisory constitutional check and emits events.
 
+### Portable harness first pass (2026-03-14)
+- **Core doctrine added:** `docs/architecture.md`, `docs/harness-inventory.md`, `docs/portability.md`, `docs/openclaw-integration.md`, and `docs/identity-fork-protocol.md` now explicitly separate `record`, `runtime`, `audit`, and `policy` lanes.
+- **Runtime modes added:** `adjunct_runtime`, `primary_runtime`, and `portable_bundle_only` are now declared as packaging/runtime modes rather than autonomy modes; the Sovereign Merge Rule is unchanged in every mode.
+- **New export surface:** `scripts/export_runtime_bundle.py` creates a runtime-neutral bundle with `record/`, `runtime/`, `audit/`, `policy/`, and top-level `bundle.json`.
+- **Manifest/export contract refreshed:** `scripts/export_manifest.py` now exports runtime mode + lane metadata and adds `runtime_bundle` to the machine-readable export map.
+- **Compatibility path preserved:** `integrations/export_hook.py` now routes the OpenClaw export through the generic runtime bundle and then emits flat compatibility files (`USER.md`, `manifest.json`, etc.).
+- **Audit/freshness upgrade:** `validate-integrity.py` now checks derived export freshness and stale doctrine drift (`SKILLS/READ`, `SKILLS/BUILD`). `process_approved_candidates.py` refreshes manifest, fork manifest, and runtime bundle after merge. `integrations/openclaw_hook.py` and `integrations/openclaw_stage.py` now emit more generic harness audit actions (`runtime_compat_export`, `runtime_handback_stage`).
+
 ### Record updates
 - Curiosity probe responses were staged and merged into `IX-B` via approved candidates.
 - Receipt-based merge flow executed and merge receipts persisted.
@@ -294,20 +302,21 @@ If the companion/operator asks to commit, include all modified and new files fro
 
 ## Recommended Next Tasks
 
-1. **Optional runtime adoption for richer IX-C metadata** — If desired, review `scripts/process_approved_candidates.py`, `scripts/export_prp.py`, `scripts/generate_profile.py`, and `scripts/validate-integrity.py` so the optional `PER-*` enrichment fields become live schema rather than docs-only doctrine.
-2. **Implement the approval inbox** — Add authenticated read/write web endpoints and a browser surface that follows `docs/approval-inbox-spec.md` without changing gate semantics.
-3. **Derive business-facing language from the doctrine memo** — Tighten `docs/investor-memo.md`, deck text, and related narrative docs so they pull from `docs/companion-self-doctrine-memo.md` rather than drifting separately.
-4. **Mark or migrate remaining legacy work docs** — Analysis/audit docs that still say `self-skill-work` should either remain clearly legacy or be rewritten to the new work-layer vocabulary.
-5. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
-6. Align business docs for zero drift:
+1. **Optional runtime consumers beyond OpenClaw** — Add a Cursor/Codex/Claude Code compatibility wrapper that consumes the same runtime bundle rather than inventing a second export contract.
+2. **Optional runtime adoption for richer IX-C metadata** — If desired, review `scripts/process_approved_candidates.py`, `scripts/export_prp.py`, `scripts/generate_profile.py`, and `scripts/validate-integrity.py` so the optional `PER-*` enrichment fields become live schema rather than docs-only doctrine.
+3. **Implement the approval inbox** — Add authenticated read/write web endpoints and a browser surface that follows `docs/approval-inbox-spec.md` without changing gate semantics.
+4. **Derive business-facing language from the doctrine memo** — Tighten `docs/investor-memo.md`, deck text, and related narrative docs so they pull from `docs/companion-self-doctrine-memo.md` rather than drifting separately.
+5. **Mark or migrate remaining legacy work docs** — Analysis/audit docs that still say `self-skill-work` should either remain clearly legacy or be rewritten to the new work-layer vocabulary.
+6. **Companion terminology consistency** — Applied in IDENTITY-FORK-PROTOCOL, OPENCLAW-INTEGRATION, PORTABILITY, ARCHITECTURE, PIPELINE-MAP, ADAPTIVE-CURRICULUM-INTEGRATION. Optional further pass: WHITE-PAPER, remaining docs.
+7. Align business docs for zero drift:
    - add explicit cross-links between `business-plan.md`, `business-prospectus.md`, `white-paper.md`.
-7. Formalize THINK multimodality wording:
+8. Formalize THINK multimodality wording:
    - update `skills-template.md` and architecture references so THINK explicitly includes text/video/music/images.
-8. Operator UX for debate workflow:
+9. Operator UX for debate workflow:
    - `/debates` listing command for unresolved debate packets (implemented).
-9. Add small glossary section to business-facing docs for non-technical readers.
-10. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
-11. **work-civ-mem next docs** — If the territory becomes active, add a recurring `audit-report.md` and/or `workspace.md` for `civilization_memory` management loops.
+10. Add small glossary section to business-facing docs for non-technical readers.
+11. ** benchmarks** — Brainstorm complete (2026-02-27). Categories: Record growth (business evidence rate, IX growth, merge rate), pipeline health (handback count, time in gate), operator efficiency (message drafts, order summaries), Etsy integration (Phase 3), knowledge boundary, cost. Priority six: business evidence rate, handback count, merge rate, time in gate, cost per handback, message drafts (Phase 1+). Ready to add `economic-benchmarks.md` to  when approved.
+12. **work-civ-mem next docs** — If the territory becomes active, add a recurring `audit-report.md` and/or `workspace.md` for `civilization_memory` management loops.
 
 ---
 

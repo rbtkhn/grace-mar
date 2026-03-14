@@ -19,6 +19,13 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+SCRIPTS_DIR = REPO_ROOT / "scripts"
+if str(SCRIPTS_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPTS_DIR))
+try:
+    from export_runtime_bundle import export_runtime_bundle
+except ImportError:
+    from scripts.export_runtime_bundle import export_runtime_bundle
 
 
 def _prepend_constitution_prefix(out_dir: Path) -> int:
@@ -81,99 +88,33 @@ def run_export(
     if target == "openclaw":
         out.mkdir(parents=True, exist_ok=True)
         fmt = openclaw_format.strip().lower()
-        if fmt in {"md", "md+manifest", "json+md", "full-prp"}:
-            r = subprocess.run(
-                [
-                    sys.executable,
-                    str(scripts / "export_user_identity.py"),
-                    "-u",
-                    user_id,
-                    "--format",
-                    "markdown",
-                    "-o",
-                    str(out / "USER.md"),
-                ],
-                cwd=REPO_ROOT,
-            )
-            if r.returncode != 0:
-                return r.returncode
-
-        if fmt in {"json+md"}:
-            r_json = subprocess.run(
-                [
-                    sys.executable,
-                    str(scripts / "export_user_identity.py"),
-                    "-u",
-                    user_id,
-                    "--format",
-                    "json",
-                    "-o",
-                    str(out / "USER.json"),
-                ],
-                cwd=REPO_ROOT,
-            )
-            if r_json.returncode != 0:
-                return r_json.returncode
-
-        if fmt in {"md+manifest", "json+md", "full-prp"}:
-            r_manifest = subprocess.run(
-                [
-                    sys.executable,
-                    str(scripts / "export_manifest.py"),
-                    "-u",
-                    user_id,
-                    "-o",
-                    str(out),
-                ],
-                cwd=REPO_ROOT,
-            )
-            if r_manifest.returncode != 0:
-                return r_manifest.returncode
-
-        if fmt in {"full-prp"}:
-            r_prp = subprocess.run(
-                [
-                    sys.executable,
-                    str(scripts / "export_prp.py"),
-                    "-u",
-                    user_id,
-                    "-o",
-                    str(out / "OPENCLAW-PRP.txt"),
-                ],
-                cwd=REPO_ROOT,
-            )
-            if r_prp.returncode != 0:
-                return r_prp.returncode
-
-        if fmt in {"fork-json"}:
-            r_fork = subprocess.run(
-                [
-                    sys.executable,
-                    str(scripts / "export_fork.py"),
-                    "-u",
-                    user_id,
-                    "-o",
-                    str(out / "fork-export.json"),
-                ],
-                cwd=REPO_ROOT,
-            )
-            if r_fork.returncode != 0:
-                return r_fork.returncode
-
-        # Always provide machine-readable intent surface for OpenClaw consumers.
-        r_intent = subprocess.run(
-            [
-                sys.executable,
-                str(scripts / "export_intent_snapshot.py"),
-                "-u",
-                user_id,
-                "-o",
-                str(out / "intent_snapshot.json"),
-            ],
-            cwd=REPO_ROOT,
+        bundle_dir = out / "runtime-bundle"
+        export_runtime_bundle(
+            user_id=user_id,
+            output_dir=bundle_dir,
+            runtime_mode="adjunct_runtime",
+            include_user_json=(fmt == "json+md"),
         )
-        if r_intent.returncode != 0:
-            return r_intent.returncode
+        copy_map = {}
+        if fmt in {"md", "md+manifest", "json+md", "full-prp"}:
+            copy_map[bundle_dir / "record" / "USER.md"] = out / "USER.md"
+        if fmt in {"json+md"}:
+            copy_map[bundle_dir / "record" / "USER.json"] = out / "USER.json"
+        if fmt in {"md+manifest", "json+md", "full-prp"}:
+            copy_map[bundle_dir / "policy" / "manifest.json"] = out / "manifest.json"
+            copy_map[bundle_dir / "policy" / "llms.txt"] = out / "llms.txt"
+        if fmt in {"md", "md+manifest", "json+md", "full-prp"}:
+            copy_map[bundle_dir / "policy" / "intent_snapshot.json"] = out / "intent_snapshot.json"
+        if fmt in {"full-prp"}:
+            copy_map[bundle_dir / "record" / "grace-mar-llm.txt"] = out / "OPENCLAW-PRP.txt"
+        if fmt in {"fork-json"}:
+            copy_map[bundle_dir / "record" / "fork-export.json"] = out / "fork-export.json"
+
+        for src, dst in copy_map.items():
+            if not src.exists():
+                print(f"Missing bundle file: {src}", file=sys.stderr)
+                return 1
+            dst.write_bytes(src.read_bytes())
         if fmt in {"md", "md+manifest", "json+md", "full-prp"}:
             _prepend_constitution_prefix(out)
 

@@ -2,8 +2,8 @@
 """
 Export the cognitive fork to a single portable JSON file.
 
-Reads self.md, self-evidence.md, and self-library.md for the given user and optionally
-fork-manifest.json, then writes a structured JSON export for backup, portability,
+Reads self.md, skills.md, self-evidence.md, and self-library.md for the given user and optionally
+fork-manifest.json / manifest.json, then writes a structured JSON export for backup, portability,
 or external tooling.
 
 Usage:
@@ -54,11 +54,14 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     """Build the fork export structure."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_path = profile_dir / "self.md"
+    skills_path = profile_dir / "skills.md"
     evidence_path = profile_dir / "self-evidence.md"
     library_path = profile_dir / "self-library.md"
-    manifest_path = profile_dir / "fork-manifest.json"
+    fork_manifest_path = profile_dir / "fork-manifest.json"
+    agent_manifest_path = profile_dir / "manifest.json"
 
     self_raw = _read(self_path)
+    skills_raw = _read(skills_path)
     evidence_raw = _read(evidence_path)
     library_raw = _read(library_path)
 
@@ -70,17 +73,24 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
         "summary": {
             "self": _parse_self_summary(self_raw) if self_raw else {},
             "evidence": _parse_evidence_summary(evidence_raw) if evidence_raw else {},
+            "skills_present": bool(skills_raw),
         },
     }
     if include_raw:
         out["self"] = {"raw": self_raw}
+        out["skills"] = {"raw": skills_raw}
         out["evidence"] = {"raw": evidence_raw}
         out["library"] = {"raw": library_raw}
-    if manifest_path.exists():
+    if fork_manifest_path.exists():
         try:
-            out["manifest"] = json.loads(manifest_path.read_text(encoding="utf-8"))
+            out["fork_manifest"] = json.loads(fork_manifest_path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
-            out["manifest"] = None
+            out["fork_manifest"] = None
+    if agent_manifest_path.exists():
+        try:
+            out["agent_manifest"] = json.loads(agent_manifest_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            out["agent_manifest"] = None
     return out
 
 

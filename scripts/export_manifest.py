@@ -56,21 +56,32 @@ def _compute_checksum(profile_dir: Path) -> str:
     return h.hexdigest()
 
 
-def generate_manifest(user_id: str = "grace-mar") -> dict:
+RUNTIME_MODES = {
+    "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
+    "primary_runtime": "Primary live runtime while the repo remains canonical.",
+    "portable_bundle_only": "Portable transport bundle without assuming a live runtime.",
+}
+
+
+def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_runtime") -> dict:
     """
     Build agent manifest: readable/writable surfaces, schema hints, checksum.
 
     Aligns with white paper staging contract: agents may stage, never merge.
     """
+    if runtime_mode not in RUNTIME_MODES:
+        raise ValueError(f"Unknown runtime_mode: {runtime_mode}")
     profile_dir = REPO_ROOT / "users" / user_id
     checksum = _compute_checksum(profile_dir)
 
     manifest = {
-        "version": "1.0",
+        "version": "1.1",
         "grace_mar": True,
         "user_id": user_id,
         "generated_at": datetime.now().isoformat(),
         "checksum": checksum,
+        "runtime_mode": runtime_mode,
+        "runtime_modes": RUNTIME_MODES,
         "readable": [
             "SELF/identity",
             "SELF/preferences",
@@ -97,6 +108,48 @@ def generate_manifest(user_id: str = "grace-mar") -> dict:
             "RECURSION-GATE/candidates",
         ],
         "writable_note": "Agents may stage candidates only. Merge requires user approval.",
+        "lanes": {
+            "record": {
+                "canonical": True,
+                "surfaces": [
+                    "SELF/*",
+                    "SKILLS/*",
+                    "EVIDENCE/*",
+                    "LIBRARY/entries",
+                    "PRP/grace-mar-llm.txt",
+                ],
+            },
+            "runtime": {
+                "canonical": False,
+                "surfaces": [
+                    "memory.md",
+                    "session-transcript.md",
+                    "session-log tail",
+                    "warmup digest",
+                ],
+                "note": "Continuity aids only. Do not treat as Record truth.",
+            },
+            "audit": {
+                "canonical": False,
+                "surfaces": [
+                    "pipeline-events.jsonl",
+                    "merge-receipts.jsonl",
+                    "compute-ledger.jsonl",
+                    "harness-events.jsonl",
+                    "fork-manifest.json",
+                ],
+            },
+            "policy": {
+                "canonical": False,
+                "surfaces": [
+                    "intent.md",
+                    "intent_snapshot.json",
+                    "manifest.json",
+                    "llms.txt",
+                ],
+                "note": "Canonical policy surfaces, but not identity truth.",
+            },
+        },
         "schema_hints": {
             "SELF": {"type": "object", "description": "Identity, personality, post-seed growth (IX-A, IX-B, IX-C)"},
             "SKILLS": {"type": "object", "description": "Record-bound capability containers (THINK, WRITE)"},
@@ -109,7 +162,18 @@ def generate_manifest(user_id: str = "grace-mar") -> dict:
             "manifest": "python scripts/export_manifest.py -u " + user_id,
             "fork_json": "python scripts/export_fork.py -o fork-export.json",
             "intent_snapshot": "python scripts/export_intent_snapshot.py -u " + user_id,
+            "runtime_bundle": "python scripts/export_runtime_bundle.py -u "
+            + user_id
+            + " --mode "
+            + runtime_mode,
         },
+        "derived_exports": [
+            "manifest.json",
+            "llms.txt",
+            "intent_snapshot.json",
+            "grace-mar-llm.txt",
+            "fork-manifest.json",
+        ],
         "intent_snapshot": export_intent_snapshot(user_id),
     }
 
@@ -124,6 +188,7 @@ def generate_llms_txt(manifest: dict, user_id: str) -> str:
         f"User: {user_id}",
         f"Checksum: {manifest['checksum']}",
         f"Generated: {manifest['generated_at']}",
+        f"Runtime mode: {manifest['runtime_mode']}",
         "",
         "## Readable",
         "Agents may read (for personalization, session continuity):",
@@ -141,6 +206,14 @@ def generate_llms_txt(manifest: dict, user_id: str) -> str:
         lines.append(f"  - {w}")
     lines.extend([
         "",
+        "## Lanes",
+        "",
+    ])
+    for lane, meta in manifest.get("lanes", {}).items():
+        canon = "canonical" if meta.get("canonical") else "non-canonical"
+        lines.append(f"  - {lane}: {canon}")
+    lines.extend([
+        "",
         "## Exports",
         "",
     ])
@@ -156,6 +229,12 @@ def main() -> None:
     )
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument(
+        "--runtime-mode",
+        choices=sorted(RUNTIME_MODES.keys()),
+        default="adjunct_runtime",
+        help="Declared runtime mode for exported manifest",
+    )
+    parser.add_argument(
         "--output", "-o", default=None, help="Output directory (default: users/[id]/)"
     )
     parser.add_argument(
@@ -164,7 +243,7 @@ def main() -> None:
     parser.add_argument("--no-llms-txt", action="store_true", help="Skip llms.txt")
     args = parser.parse_args()
 
-    manifest = generate_manifest(user_id=args.user)
+    manifest = generate_manifest(user_id=args.user, runtime_mode=args.runtime_mode)
     profile_dir = REPO_ROOT / "users" / args.user
     out_dir = Path(args.output) if args.output else profile_dir
     out_dir.mkdir(parents=True, exist_ok=True)
