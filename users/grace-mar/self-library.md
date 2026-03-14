@@ -1926,7 +1926,36 @@ entries:
     source: "manual"
     url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-SIMPLE-CONDITION.md"
     added_at: 2026-03-14
-    notes: "Essay — mutual recognition, institutions optional. Operator canon in CIV–MEM docs/essays/THE-SIMPLE-CONDITION.md; use same path when repo synced. Plain + distribution variants in that folder."
+    notes: "Essay — mutual recognition, institutions optional. Operator canon in CIV–MEM docs/essays/THE-SIMPLE-CONDITION.md; hybrid fat anchor: artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.md ## CMC:docs/essays/THE-SIMPLE-CONDITION.md"
+
+  # --- Civ-mem hybrid doors (see docs/civ-mem-encyclopedia-hybrid.md) ---
+  - id: LIB-0136
+    title: "CMC — Essays index (docs/essays)"
+    author: "civilization_memory"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "civilization_memory", "taxonomy"]
+    source: "url"
+    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/README.md"
+    added_at: 2026-03-15
+    notes: "Hybrid — fat text in artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.md"
+
+  - id: LIB-0137
+    title: "CMC — The Coordination Hypothesis"
+    author: "civilization_memory"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "coordination", "civilization_memory", "theology"]
+    source: "url"
+    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-COORDINATION-HYPOTHESIS.md"
+    added_at: 2026-03-15
+    notes: "Hybrid — ENCYCLOPEDIA.md anchor ## CMC:docs/essays/THE-COORDINATION-HYPOTHESIS.md"
 
 ```
 
@@ -1977,9 +2006,9 @@ entries:
 ## Metadata
 
 ```yaml
-total_entries: 135
+total_entries: 137
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
-grace_mar_additions: "LIB-0001..0003 (Usborne reference), LIB-0132 (CMC), LIB-0133 (Coppélia), LIB-0134 (Debussy), LIB-0135 (The Simple Condition — Theology)"
+grace_mar_additions: "… LIB-0135 (Simple Condition), LIB-0136..0137 (CMC hybrid essays doors)"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
 last_updated: 2026-03-15
 library_lanes: "reference, canon, influence"

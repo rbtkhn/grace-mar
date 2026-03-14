@@ -1,21 +1,23 @@
-# Paste into self-library.md inside `entries:` (before closing ```). Gate before merge.
-# Generated with: generate_civmem_encyclopedia.py --essays-only
+# Paste under self-library.md entries: (renumber id LIB-#### if needed; gate before merge)
+# status draft until merged
 
-  - id: LIB-0136
-    title: "CMC — Essays index (docs/essays)"
+  # --- CMC stub 1: docs/essays/README.md ---
+  - id: LIB-NNNN  # assign next free id
+    title: "CMC — Essays (`docs/essays`)"
     author: "civilization_memory"
     lane: "reference"
     type: "article"
     status: "active"
     engagement_status: "trusted"
     lookup_priority: "medium"
-    scope: ["essays", "civilization_memory", "taxonomy"]
-    source: "url"
+    scope: ["docs", "readme", "essays", "civilization_memory"]
+    source: "path"
     url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/README.md"
-    added_at: 2026-03-15
-    notes: "Hybrid door — full text in artifacts/.../ENCYCLOPEDIA.md anchor ## CMC:docs/essays/README.md"
+    added_at: 2026-03-14
+    notes: "Anchor ## CMC:docs/essays/README.md in ENCYCLOPEDIA.md. Long-form argument and companion pieces. Each file uses **YAML frontmatter** per [docs/taxonomy.md](../taxonomy.md). | File | Description | |------|-------------| | [THE-SIMPLE-CONDITION.md](THE-SIMPL…"
 
-  - id: LIB-0137
+  # --- CMC stub 2: docs/essays/THE-COORDINATION-HYPOTHESIS.md ---
+  - id: LIB-NNNN  # assign next free id
     title: "CMC — The Coordination Hypothesis"
     author: "civilization_memory"
     lane: "reference"
@@ -23,13 +25,14 @@
     status: "active"
     engagement_status: "trusted"
     lookup_priority: "medium"
-    scope: ["essays", "coordination", "civilization_memory", "theology"]
-    source: "url"
+    scope: ["docs", "the-coordination-hypothesis", "essays", "civilization_memory"]
+    source: "path"
     url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-COORDINATION-HYPOTHESIS.md"
-    added_at: 2026-03-15
-    notes: "ENCYCLOPEDIA.md anchor ## CMC:docs/essays/THE-COORDINATION-HYPOTHESIS.md"
+    added_at: 2026-03-14
+    notes: "Anchor ## CMC:docs/essays/THE-COORDINATION-HYPOTHESIS.md in ENCYCLOPEDIA.md. THE COORDINATION HYPOTHESIS A Scientific Framework for the Simple Condition ──────────────────────────────────────────────────────────────── A letter has been circulating — addressed to the religious …"
 
-  - id: LIB-0138
+  # --- CMC stub 3: docs/essays/THE-SIMPLE-CONDITION.md ---
+  - id: LIB-NNNN  # assign next free id
     title: "CMC — The Simple Condition"
     author: "civilization_memory"
     lane: "reference"
@@ -37,8 +40,8 @@
     status: "active"
     engagement_status: "trusted"
     lookup_priority: "medium"
-    scope: ["essays", "theology", "ethics", "civilization_memory", "coordination"]
-    source: "url"
+    scope: ["docs", "the-simple-condition", "essays", "civilization_memory"]
+    source: "path"
     url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-SIMPLE-CONDITION.md"
-    added_at: 2026-03-15
-    notes: "ENCYCLOPEDIA.md anchor ## CMC:docs/essays/THE-SIMPLE-CONDITION.md; overlaps LIB-0135 URL — dedupe on merge if needed"
+    added_at: 2026-03-14
+    notes: "Anchor ## CMC:docs/essays/THE-SIMPLE-CONDITION.md in ENCYCLOPEDIA.md. --- Your Holinesses, Your Eminences, Reverend Fathers, Chief Rabbis, Grand Muftis, Patriarchs, Archbishops, Ayatollahs, Rinpoches, Acharyas, Granthis, and all who hold custody of the sacred: I am writ…"

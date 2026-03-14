@@ -65,14 +65,22 @@ def main() -> int:
     ap.add_argument(
         "--essays-only",
         action="store_true",
-        help="Only docs/essays/*.md — small fat file + few LIB stubs (default for first commit)",
+        help="Only docs/essays/*.md — writes ENCYCLOPEDIA.md (committable size)",
     )
     args = ap.parse_args()
     cmc: Path = args.cmc
     out_dir = args.out or (REPO_ROOT / "users" / args.user / "artifacts" / "civ-mem-encyclopedia")
     out_dir.mkdir(parents=True, exist_ok=True)
-    enc_path = out_dir / "ENCYCLOPEDIA.md"
-    stubs_path = out_dir / "lib-stubs.yaml"
+    # Large regens → gitignored filenames; essays-only → ENCYCLOPEDIA.md
+    if args.essays_only:
+        enc_path = out_dir / "ENCYCLOPEDIA.md"
+        stubs_path = out_dir / "lib-stubs.yaml"
+    elif args.include_content:
+        enc_path = out_dir / "ENCYCLOPEDIA.content.md"
+        stubs_path = out_dir / "lib-stubs.content.yaml"
+    else:
+        enc_path = out_dir / "ENCYCLOPEDIA.docs.md"
+        stubs_path = out_dir / "lib-stubs.docs.yaml"
 
     if not cmc.is_dir():
         print(f"CMC root missing: {cmc}", flush=True)

@@ -18,9 +18,9 @@
 
 ```bash
 export CMC_ROOT=/path/to/civilization_memory   # or default: repos/civilization_memory
-python3 scripts/generate_civmem_encyclopedia.py -u grace-mar --essays-only   # small: docs/essays only
-python3 scripts/generate_civmem_encyclopedia.py -u grace-mar                 # all docs/
-python3 scripts/generate_civmem_encyclopedia.py -u grace-mar --include-content # + content/ (huge)
+python3 scripts/generate_civmem_encyclopedia.py -u grace-mar --essays-only    # → ENCYCLOPEDIA.md (gittracked, small)
+python3 scripts/generate_civmem_encyclopedia.py -u grace-mar                  # → ENCYCLOPEDIA.docs.md (gitignored)
+python3 scripts/generate_civmem_encyclopedia.py -u grace-mar --include-content # → ENCYCLOPEDIA.content.md (gitignored)
 ```
 
 Writes `ENCYCLOPEDIA.md` + `lib-stubs.yaml`. Does **not** edit `self-library.md` automatically.
