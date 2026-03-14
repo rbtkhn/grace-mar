@@ -1885,9 +1885,9 @@ entries:
     lookup_priority: "high"
     scope: ["civilizations", "history", "Rome", "China", "ancient", "emperors", "pharaohs"]
     source: "manual"
-    url: "https://github.com/rbtkhn/civilization_memory"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/README.md"
     added_at: 2026-02-26
-    notes: "External lookup for historical/civilizational questions. Canonical repository surface for CMC. See docs/cmc-routing.md."
+    notes: "Civilizational lookup. Essay canon grace-mar–owned: docs/civilization-memory/. Optional upstream repo repos/civilization_memory. See docs/civilization-memory/README.md."
 
   - id: LIB-0133
     title: "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale"
@@ -1924,28 +1924,28 @@ entries:
     lookup_priority: "medium"
     scope: ["theology", "ethics", "coordination", "dignity", "civilization_memory"]
     source: "manual"
-    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-SIMPLE-CONDITION.md"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-SIMPLE-CONDITION.md"
     added_at: 2026-03-14
-    notes: "Essay — mutual recognition, institutions optional. Operator canon in CIV–MEM docs/essays/THE-SIMPLE-CONDITION.md; hybrid fat anchor: artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.md ## CMC:docs/essays/THE-SIMPLE-CONDITION.md"
+    notes: "Essay — grace-mar path docs/civilization-memory/essays/. ENCYCLOPEDIA.md anchor ## CM:essays/THE-SIMPLE-CONDITION.md"
 
   # --- Civ-mem hybrid doors (see docs/civ-mem-encyclopedia-hybrid.md) ---
   - id: LIB-0136
-    title: "CMC — Essays index (docs/essays)"
-    author: "civilization_memory"
+    title: "Civ-mem — Essays index"
+    author: "grace-mar"
     lane: "reference"
     type: "article"
     status: "active"
     engagement_status: "trusted"
     lookup_priority: "medium"
-    scope: ["essays", "civilization_memory", "taxonomy"]
+    scope: ["essays", "civilization_memory", "taxonomy", "grace_mar_owned"]
     source: "url"
-    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/README.md"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/README.md"
     added_at: 2026-03-15
-    notes: "Hybrid — fat text in artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.md"
+    notes: "docs/civilization-memory/essays/README.md — ENCYCLOPEDIA anchor ## CM:essays/README.md"
 
   - id: LIB-0137
-    title: "CMC — The Coordination Hypothesis"
-    author: "civilization_memory"
+    title: "Civ-mem — The Coordination Hypothesis"
+    author: "grace-mar"
     lane: "reference"
     type: "article"
     status: "active"
@@ -1953,9 +1953,9 @@ entries:
     lookup_priority: "medium"
     scope: ["essays", "coordination", "civilization_memory", "theology"]
     source: "url"
-    url: "https://github.com/rbtkhn/civilization_memory/blob/main/docs/essays/THE-COORDINATION-HYPOTHESIS.md"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-COORDINATION-HYPOTHESIS.md"
     added_at: 2026-03-15
-    notes: "Hybrid — ENCYCLOPEDIA.md anchor ## CMC:docs/essays/THE-COORDINATION-HYPOTHESIS.md"
+    notes: "ENCYCLOPEDIA anchor ## CM:essays/THE-COORDINATION-HYPOTHESIS.md"
 
 ```
 
