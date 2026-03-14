@@ -46,6 +46,7 @@ def _parse_markdown_table(content: str) -> list[dict[str, str]]:
         if all(set(cell) <= {"-", ":"} for cell in cells):
             continue
         if len(cells) != len(headers):
+            headers = cells
             continue
         rows.append({headers[idx]: cells[idx] for idx in range(len(headers))})
     return rows
@@ -59,9 +60,17 @@ def _parse_currency_amount(amount: str) -> float | None:
 
 
 def _parse_date(text: str) -> datetime | None:
+    cleaned = re.sub(r"[*_`]", "", (text or "")).strip()
+    cleaned = cleaned.replace("–", "-")
+    if " - " in cleaned:
+        cleaned = cleaned.split(" - ", 1)[0].strip()
+    if " — " in cleaned:
+        cleaned = cleaned.split(" — ", 1)[0].strip()
+    if "," in cleaned and re.search(r",\s*\d{1,2}:\d{2}\s*[AP]M$", cleaned):
+        cleaned = re.sub(r",\s*\d{1,2}:\d{2}\s*[AP]M$", "", cleaned).strip()
     for fmt in ("%Y-%m-%d", "%Y-%m-%d %H:%M:%S", "%b %d, %Y", "%B %d, %Y"):
         try:
-            return datetime.strptime(text.strip(), fmt).replace(tzinfo=timezone.utc)
+            return datetime.strptime(cleaned, fmt).replace(tzinfo=timezone.utc)
         except ValueError:
             continue
     return None
