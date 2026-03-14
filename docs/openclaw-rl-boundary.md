@@ -18,6 +18,80 @@ This doc sets **what may and may not** flow into **reinforcement learning**, **f
 
 ---
 
+## Next-state signals
+
+Every action produces a **next-state signal**: a user reply, operator correction, gate outcome, tool result, validation failure, UI transition, or other post-action state that reveals something about the previous step. Grace-Mar should recover these signals as feedback for **workflow** and **policy** improvement, while keeping **Record** change sovereign and gated.
+
+Next-state signals contain two different kinds of information:
+
+- **Evaluative signals** — indicate whether the action worked: approve/reject, pass/fail, good/bad, satisfied/unsatisfied
+- **Directive signals** — indicate how the action should have been different: "check the file first", "wrong layer", "use fake data first", "this belongs in WORK, not SELF"
+
+Grace-Mar is especially rich in **directive** signals because many failures are category mistakes, workflow-order mistakes, or ontology mistakes rather than simple output failures.
+
+### Safe adaptation target
+
+By default, next-state signals may improve:
+
+- **workflow** — task order, review rhythm, validation habits, handoff discipline
+- **policy** — prompting, routing, tool choice, search behavior, shell-first implementation rhythm
+
+They must **not** directly update:
+
+- **SELF / Record truth**
+- **IX-A / IX-B / IX-C**
+- **prompt knowledge**
+- any other companion-owned identity surface
+
+Compressed rule: **use next-state signals freely for process improvement, cautiously for policy improvement, and never ungated for identity improvement.**
+
+---
+
+## Boundary model
+
+### Safe for workflow adaptation
+
+- repeated validation misses
+- repeated handoff omissions
+- repeated task-order mistakes
+- deterministic integrity / governance failures
+
+These may justify changes to process, checklists, reminders, or task decomposition.
+
+### Safe for bounded policy adaptation
+
+- operator corrections about search order, file reading order, or scope control
+- repeated misses like "too broad", "wrong layer", "should have checked X first"
+- recurring routing mistakes between `SELF`, `SKILLS`, `WORK`, and `LIBRARY`
+
+These may justify visible prompt, routing, or harness changes, but not silent Record edits.
+
+### Never direct Record adaptation
+
+- companion replies that imply new knowledge or personality
+- external lookup results
+- tool success or failure
+- environment success or failure
+- general reinforcement from use
+
+These may inform workflow or policy, but they do not become companion knowledge or identity without explicit staging and approval.
+
+### Mixed signals must be split
+
+A single next-state signal may contain:
+
+- a **workflow/policy** lesson
+- a possible **Record** lesson
+
+Example: "That answer was wrong, and I really care about Roman history."
+
+- "That answer was wrong" may improve policy or workflow.
+- "I really care about Roman history" may be a curiosity signal, but only through the normal gate.
+
+Do not collapse these into one undifferentiated learning channel.
+
+---
+
 ## Green / yellow / red (rough guide)
 
 | Zone | Examples | RL / export |

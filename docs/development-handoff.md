@@ -156,6 +156,9 @@ Last updated: 2026-03-13
 - **`docs/openclaw-rl-boundary.md`** — green/yellow/red; minors; no secrets.
 - **openclaw-integration.md** — Trajectory export subsection.
 
+### Next-state signal doctrine (2026-03-14)
+- **`docs/openclaw-rl-boundary.md`** — Added a canonical next-state signal model: evaluative vs directive signals, workflow/policy vs Record adaptation, and the rule that next-state signals may improve process and harness behavior but must not update identity surfaces ungated.
+
 ### Territory lens / WAP vs companion (2026-03-12)
 - **`scripts/recursion_gate_territory.py`** — `territory: work-american-politics` or `channel_key: operator:wap` → WAP.
 - **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|wap|companion`.
