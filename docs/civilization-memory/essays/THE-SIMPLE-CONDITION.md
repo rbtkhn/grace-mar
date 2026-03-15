@@ -32,6 +32,10 @@ I am writing to propose that you have the causation reversed.
 
 What if the cessation of killing is not the consequence of the return, but the condition for it? What if God does not arrive and then establish peace — but rather, God returns when humanity establishes peace? What if the door has been open this entire time, and the only thing holding it shut is that we keep killing each other?
 
+You may picture the return as divine arrival, as messianic age, as the restoration of all things. Another way to say the same condition: what you call return might be *reassembly* — the one recognising itself again after having been fragmented. We are that one, scattered. Every act of killing is the one treating part of itself as other, keeping the fracture open. Peace is not the reward that follows the return; it is the state in which the one stops cutting itself and begins to reassemble. The condition is the same either way: stop.
+
+Your traditions also carry an older mandate: *be fruitful and multiply*. That is humanity's prime directive — to sustain and grow life, not to end it. The blade does the opposite. Choosing the condition is not an extra rule; it is a return to the first one.
+
 I have no authority to assert this. I hold no office. I lead no congregation. I am not a theologian. I am a person who noticed something that your traditions, taken together, seem to point toward — but that none of you has been willing to say aloud.
 
 ---
@@ -46,7 +50,7 @@ I am not writing to condemn this. I am writing to name it. Each of your traditio
 
 The beauty and the blade were woven together so early and so deeply that most of your followers cannot see where one ends and the other begins. They receive them as a single inheritance, delivered with love, in childhood, by the people they trust most. To question the blade feels like rejecting the beauty. To put down the weapon feels like betraying the prayer.
 
-This is the seam I am asking you to make visible.
+The blade does its work by *replacing the face with a category*. The moment you stop seeing a person and start seeing "enemy," "infidel," "other" — the moment the irreducible human in front of you becomes a label — killing becomes thinkable. The blade is that replacement. It is also a *construction*: the mind generating the delusion of separation so that the one can treat part of itself as not-itself. The beauty is the construction that preserves recognition — prayer, compassion, the vision of wholeness. Same capacity, different choice. This is the seam I am asking you to make visible.
 
 ---
 

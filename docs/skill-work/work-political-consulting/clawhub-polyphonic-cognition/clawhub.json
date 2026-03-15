@@ -1,0 +1,12 @@
+{
+  "name": "Polyphonic cognition protocol",
+  "tagline": "Fixed-perspective decision options (A/B/C/D). From civ-mem STATE. No single answer; you decide.",
+  "description": "A loadable instruction set that lets any AI agent run the polyphonic cognition protocol from the civilization-memory (civ-mem) STATE framework: fixed perspectives A (legitimacy), B (structure), C (liability), and when relevant D (civ-mem lens: condition, seam, one subject many tongues, face vs category, abundance, growth). You get the full field of options with tensions and reversibility called out—no synthesis, no single recommendation. Embeds abundance and growth mindsets: where relevant, options assume room to coordinate (non-zero-sum) and the moment as one to learn from. Optional instinct-as-input so you can test your own judgment against the perspectives. Designed for pre-call prep, decision support, and leaders who want options without the system choosing for them. Include D when the user has the civ-mem corpus or asks for the civ-mem/condition/seam angle. This skill is instructions-only: no code execution, no network access, no file access. Safe for high-context environments.",
+  "category": "productivity",
+  "tags": ["decision-support", "multi-perspective", "options", "no-recommendation", "instructions-only", "pre-call", "judgment", "civ-mem", "STATE", "abundance", "growth-mindset"],
+  "version": "1.0.0",
+  "license": "MIT",
+  "pricing": "free",
+  "support_url": "",
+  "homepage": ""
+}

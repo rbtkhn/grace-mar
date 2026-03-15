@@ -8,6 +8,8 @@ The cognitive fork exists inside the user's mind — their mental model of an in
 
 The fork grows only through what the user explicitly provides. An optional emulation layer (Telegram and/or WeChat bots) acts as an observation window and teaching/tutoring interface — a channel through which the user selectively exposes thoughts and learns from the fork's voice.
 
+**What we're building for:** Companion authority over the Record; evidence-linked growth; seam visible (benefit vs. harm disclosed); no merge without approval. Aligned with condition-derived ethics: [AI Ethics from the Condition](docs/civilization-memory/essays/AI-ETHICS-FROM-THE-CONDITION.md).
+
 ## Architecture
 
 Two core modules define the fork:

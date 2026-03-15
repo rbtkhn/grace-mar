@@ -104,6 +104,8 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 |------------|---------|
 | **This README** | Objective, scope, principles, gate convention. |
 | **[consulting-charter.md](consulting-charter.md)** | Umbrella mission, service lines, pricing, phase note. |
+| **[sell-civ-mem-federal-executive.md](sell-civ-mem-federal-executive.md)** | How to sell the civ-mem / Condition framework to the federal executive branch (NSC, DPC, speechwriting, transition): value prop, offers, target buyers, federal sales path. |
+| **[civ-mem-federal-workflow-integration.md](civ-mem-federal-workflow-integration.md)** | Imagine: civ-mem integrated into the workflow of all federal jobs — onboarding, one question in checklists, optional memo field, engagement lens, leadership dev, interagency, procurement, LMS; available not mandatory. |
 | **[compliance-checklist.md](compliance-checklist.md)** | Pre-engagement gates (FEC, state, FARA, international). |
 | **[clients/](clients/)** | Per-client sheets; [clients/_template.md](clients/_template.md), [clients/massie-ky4.md](clients/massie-ky4.md). |
 | **[principal-profile.md](principal-profile.md)** | Principal bio, district, current race, key issues, opposition. Update as race and context change. |

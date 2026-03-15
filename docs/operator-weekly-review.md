@@ -43,6 +43,7 @@ If you spot a gap, stage a candidate to RECURSION-GATE manually (or describe it 
 
 ## Rationale
 
+- **Feed the gate** — During the week, say **"we did X"** after calls, readings, decisions, milestones so the agent stages candidates. See [we-did-x-habit.md](we-did-x-habit.md). The gate then reflects real activity; weekly review has real items to approve or reject.
 - **Process queue** — Prevents RECURSION-GATE from growing unbounded. Human gates what enters the Record.
 - **Rotate MEMORY** — Keeps ephemeral context fresh; avoids stale tone or resistance notes.
 - **Skim SESSION-TRANSCRIPT** — Builds continuity; operator enters the next week with context.

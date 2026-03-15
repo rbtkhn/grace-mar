@@ -140,6 +140,8 @@ Normative constraints:
 - No LLM inference beyond the exchange?
 - No contradiction with existing Record?
 
+**Pre-merge / pre-release condition checklist:** For a full condition-first checklist (all Record changes from RECURSION-GATE, companion approval, knowledge boundary, evidence linkage, File Update Protocol), see [condition-checklist.md](condition-checklist.md).
+
 ### 4.3 Staging Interface
 
 - Agents may **append** to the staging area

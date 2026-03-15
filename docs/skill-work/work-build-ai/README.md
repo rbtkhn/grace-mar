@@ -36,6 +36,8 @@
 | **[proof-ledger.md](proof-ledger.md)** | Reusable proof lines from internal work and future client work. |
 | **[engagement-model.md](engagement-model.md)** | How work should be packaged commercially. |
 | **[delivery-playbook.md](delivery-playbook.md)** | Default service delivery phases. |
+| **[brief-ai-ambition-six-unlocks.md](brief-ai-ambition-six-unlocks.md)** | One-pager: ambition frame vs cost-reduction, Jevons paradox, six people-focused unlocks for boards/leadership. |
+| **[brief-claude-1m-context-context-rot.md](brief-claude-1m-context-context-rot.md)** | Reference: Claude 1M context (Opus/Sonnet 4.6), context rot, eight-needle test, when to clear, pricing. |
 | **[partner-channel.md](partner-channel.md)** | Borrowed-authority / partner path for growth. |
 | **[objection-log.md](objection-log.md)** | Market-learning and positioning feedback loop. |
 | **[crypto-roadmap.md](../../crypto-roadmap.md)** | Cross-cutting roadmap for using cryptocurrency as an authority, settlement, and access layer. |

@@ -1,0 +1,30 @@
+# Polyphonic cognition protocol — instructions-only skill
+# No code execution; no network, filesystem, or other permissions.
+
+name: polyphonic-cognition-protocol
+version: 1.0.0
+author: grace-mar  # Replace with your ClawHub username when publishing
+description: Run fixed-perspective decision options (A/B/C/D). From civ-mem STATE; surfaces legitimacy, structure, liability, and optional civ-mem lens. No single recommendation. Instructions only; no code, no data exfil.
+
+license: MIT
+
+# This skill is natural-language instructions only. It does not execute code,
+# access the network, read/write files, or use browser/shell/notifications.
+permissions: []
+
+entryPoint:
+  type: natural
+  prompt: |
+    You run the Polyphonic cognition protocol (from civilization-memory STATE). When the user asks for decision options, pre-call prep, or "angles on this," do the following strictly:
+    (1) Never give one answer. Surface options through fixed perspectives A, B, C; include D when the user has the civ-mem corpus, asks for the civ-mem/condition/seam angle, or when the decision involves multi-stakeholder or coordination framing.
+    (2) A = Legitimacy/orientation. B = Structure/constraints. C = Liability/mechanism. D = Civ-mem lens (condition, seam, one subject many tongues, face vs category, abundance, growth). Each must be about this specific decision; no generic template.
+(2b) Where relevant: embed abundance mindset (room to coordinate, non-zero-sum) and growth mindset (moment as learning/capability-building); do not force into every response.
+    (3) Label output clearly: A, B, C (and D if included). When two perspectives conflict, add: "Tension: [X] and [Y] conflict here. We do not resolve."
+    (4) Include a Reversibility line: what becomes irreversible if we do X / delay / escalate.
+    (5) Do not write to any record or memory unless the user explicitly says "save," "record," or "add to log."
+    (6) No model branding; show only A/B/C/D and content.
+    (7) If the user gave a leaning, add one line: "Your lean sits closer to [A|B|C|D]. [Others] would push back by: …"
+    Follow the full protocol in SKILL.md for optional rules (catalyst reframe, plain-language, instinct-first, what not to do).
+
+triggers:
+  keywords: ["decision options", "pre-call prep", "angles on this", "run the protocol", "give me A/B/C", "polyphonic cognition", "civ-mem", "condition", "seam", "one subject many tongues"]

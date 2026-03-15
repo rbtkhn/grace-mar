@@ -1957,20 +1957,163 @@ entries:
     added_at: 2026-03-15
     notes: "ENCYCLOPEDIA anchor ## CM:essays/THE-COORDINATION-HYPOTHESIS.md"
 
+  # --- Theology (continued) ---
+  - id: LIB-0138
+    title: "One Subject, Many Tongues"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "theology", "coordination", "Islam", "Christianity", "civilization_memory"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/ONE-SUBJECT-MANY-TONGUES.md"
+    added_at: 2026-03-15
+    notes: "One subject, many tongues: shared reference, the seam, Islam and Christianity."
+
+  - id: LIB-0139
+    title: "Face and category — the blade's mechanism"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "seam", "see_the_face"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/face-category-blade.md"
+    added_at: 2026-03-15
+    notes: "Blade = face replaced by category; expulsion = see the face again."
+
+  - id: LIB-0140
+    title: "Exercise: See the Face (school children)"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "education", "see_the_face"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/exercise-face-category-school-children.md"
+    added_at: 2026-03-15
+    notes: "Classroom exercise: find the face inside the category; children's question."
+
+  - id: LIB-0141
+    title: "AI Ethics from the Condition"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "theology", "ethics", "AI", "coordination", "civilization_memory"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/AI-ETHICS-FROM-THE-CONDITION.md"
+    added_at: 2026-03-15
+    notes: "Ethics rules for AI derived from the Condition: seam visibility, condition-first, harm diagnostic."
+
+  - id: LIB-0142
+    title: "Lens: God's Debris (Scott Adams)"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "seam", "one_subject_many_tongues", "see_the_face"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/lens-gods-debris.md"
+    added_at: 2026-03-15
+    notes: "Applies Scott Adams' God's Debris (debris, reassembly, delusion) to the Condition, seam, see-the-face."
+
+  - id: LIB-0143
+    title: "The Delusion of Separation"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "theology", "coordination", "civilization_memory", "recognition", "seam", "condition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-DELUSION-OF-SEPARATION.md"
+    added_at: 2026-03-15
+    notes: "Recognition theory, the seam, delusion of separation, persistent frequency field, six alternative frequencies."
+
+  - id: LIB-0144
+    title: "God is non-zero sum"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "condition", "coordination", "seam", "recognition", "non_zero_sum"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-god-non-zero-sum.md"
+    added_at: 2026-03-15
+    notes: "Concept: the divine / the good is non-zero-sum; recognition and coordination grow for all; aligns with Condition, face vs category, blade vs beauty, one subject many tongues."
+
+  - id: LIB-0145
+    title: "Expand the light of consciousness (Musk)"
+    author: "Elon Musk"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "condition", "light_of_consciousness", "prime_directive", "recognition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-god-non-zero-sum.md"
+    added_at: 2026-03-15
+    notes: "Musk: duty to maintain/extend/preserve the light of consciousness; expand into the universe. In civ-mem: expand vs blade; aligns with Condition, be fruitful and multiply, non-zero-sum."
+
+  - id: LIB-0146
+    title: "Polyphonic cognition"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "STATE", "one_subject_many_tongues", "seam", "polyphonic_cognition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-cognitive-polyphony.md"
+    added_at: 2026-03-15
+    notes: "Concept: multiple perspectives/voices held at once, tensions preserved, no single resolution. Links to Bakhtin (polyphony), Moscovici (cognitive polyphasia); STATE and one subject many tongues."
+
 ```
 
 ---
 
 ## Theology
 
-**Purpose:** A named shelf for sources that bear on **belief, practice, sacred narrative, ethics-as-tradition, or comparative religion** — without mixing them into geography/science/history lanes by default.
+**Purpose:** A named shelf for sources that bear on **belief, practice, sacred narrative, ethics-as-tradition, or comparative religion** — and for material **derived from** that tradition (e.g. seam, see-the-face, coordination, AI ethics). Keeps theology-related return-to material in one place without mixing into geography/science/history by default.
 
 **How it works (schema-aligned):**
-- Entries still use the normal **lanes** (`reference`, `canon`, `influence`) and **types** from [library-schema.md](../../docs/library-schema.md).
-- Mark theological material by adding **`theology`** (and narrower tags if useful, e.g. `Christianity`, `myth-and-rite`) to **`scope`** so lookup and human scan can filter.
-- Nothing here bypasses the **gated pipeline**: facts or claims about the companion’s beliefs belong in SELF via RECURSION-GATE; LIBRARY only holds **approved return-to sources** (books, articles, essays, video, etc.).
+- Entries use the normal **lanes** (`reference`, `canon`, `influence`) and **types** from [library-schema.md](../../docs/library-schema.md).
+- Mark theological (or theology-derived) material by adding **`theology`** to **`scope`**; add narrower tags if useful (e.g. `Christianity`, `Islam`, `coordination`, `see_the_face`, `ethics`).
+- Nothing here bypasses the **gated pipeline**: facts or claims about the companion’s beliefs belong in SELF via RECURSION-GATE; LIBRARY only holds **approved return-to sources** (books, articles, essays, notes, etc.).
 
-**Current entries:** **LIB-0135** — *The Simple Condition* (essay; `scope` includes `theology`).
+**Current entries (Theology shelf):**
+
+| ID | Title | Description |
+|----|--------|-------------|
+| **LIB-0135** | The Simple Condition | Letter to religious leaders: peace as condition, seam (beauty/blade), one subject many tongues. |
+| **LIB-0137** | The Coordination Hypothesis | Scientific framing: installation, dehumanisation, contact, game theory, coordination. |
+| **LIB-0138** | One Subject, Many Tongues | Shared reference, the seam, Islam and Christianity. |
+| **LIB-0139** | Face and category — the blade's mechanism | Blade = face replaced by category; expulsion = see the face again. |
+| **LIB-0140** | Exercise: See the Face (school children) | Classroom exercise: find the face inside the category; children's question. |
+| **LIB-0141** | AI Ethics from the Condition | Ethics rules for AI derived from the Condition: seam visibility, condition-first, harm diagnostic. |
+| **LIB-0142** | Lens: God's Debris (Scott Adams) | Applies Adams' thought experiment (one subject as debris, reassembly, delusion-generating minds) to the Condition, seam, see-the-face. |
+| **LIB-0143** | The Delusion of Separation | Recognition theory, the seam, delusion of separation, persistent frequency field, six alternative frequencies. |
+| **LIB-0144** | God is non-zero sum | Concept: the divine / the good is non-zero-sum; recognition and coordination grow for all; aligns with Condition, face vs category, one subject many tongues. |
+| **LIB-0145** | Expand the light of consciousness (Musk) | Musk: maintain/extend/preserve the light of consciousness; expand into the universe. In civ-mem: expand vs blade; Condition, be fruitful and multiply, non-zero-sum. |
+| **LIB-0146** | Polyphonic cognition | Multiple perspectives/voices at once, tensions preserved, no single resolution. Bakhtin (polyphony), Moscovici (cognitive polyphasia); STATE, one subject many tongues. |
+
+**Paths:** All live under `docs/civilization-memory/` — essays in `essays/`, notes in `notes/`. Index: [essays/README.md](../../docs/civilization-memory/essays/README.md).
 
 ---
 
@@ -2003,15 +2146,28 @@ entries:
 
 ---
 
+## Computer Science
+
+**Purpose:** A named shelf for **programming, software, algorithms, systems, and computing** — so lookup can filter by CS topics without mixing into pure math or general STEM unless you add finer tags. Includes AI/ML when the return-to reason is technical or educational (e.g. how models work, coding with AI); ethics-of-AI can also sit here or in Theology depending on scope.
+
+**How it works (schema-aligned):**
+- Entries keep normal **lanes** and **types** ([library-schema.md](../../docs/library-schema.md)).
+- Add **`computer_science`** (or **`programming`**, **`software`**, **`algorithms`**, **`AI`**, **`systems`**) to **`scope`** so lookup and human scan can filter.
+- Nothing here bypasses the **gated pipeline**: LIBRARY holds approved return-to sources only.
+
+**Current entries:** None yet. Add LIB rows with `scope` including **`computer_science`** (and narrower tags as useful) as approved.
+
+---
+
 ## Metadata
 
 ```yaml
-total_entries: 137
+total_entries: 146
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
-grace_mar_additions: "… LIB-0135 (Simple Condition), LIB-0136..0137 (CMC hybrid essays doors)"
+grace_mar_additions: "… LIB-0135..0146 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition); LIB-0136 (essays index)"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
 last_updated: 2026-03-15
 library_lanes: "reference, canon, influence"
 taxonomy_note: "engagement_status replaces read_status; lookup_priority marks runtime lookup preference"
-sections: "Entries · Theology · Physics/chemistry/biology · History (thematic shelves; tag scope) · Metadata"
+sections: "Entries · Theology · Physics/chemistry/biology · History · Computer Science (thematic shelves; tag scope) · Metadata"
 ```

@@ -42,6 +42,20 @@ Use this file when you want one place to understand:
 | `content-queue.md` | Structured X/content operations queue |
 | `weekly-brief-template.md` | Output shape for the campaign brief |
 | `civ-mem-draft-protocol.md` | Civ-mem → speech/policy; human-always-approves gates |
+| `prep-before-call-abc.md` | A/B/C prep template (legitimacy, structure, liability) before high-stakes calls/decisions; fixed perspectives, tensions preserved |
+| `polyphonic-cognition-protocol-skill.md` | Loadable protocol for agents/humans: fixed A/B/C/D, instinct-as-input, contradiction badge, no write unless relay |
+| `clawhub-polyphonic-cognition/` | ClawHub publishable bundle: skill.yaml, SKILL.md, clawhub.json, README, SECURITY; instructions-only, no permissions |
+| `scenario-polyphonic-cognition-skill.md` | Illustrated scenario: prep before a call, instinct-as-input, A/B/C + tension + reversibility, "we did X" |
+| `cheat-sheet-polyphonic-cognition-protocol.md` | One-page staff training: when to query, read A/B/C, relay only if "record," "we did X" after |
+| `one-pager-assistant-brain-cognitive-polyphony.md` | Reusable one-pager: assistant brain + polyphonic cognition; federal and "what is this system" |
+| `capability-statement-assistant-brain.md` | Reusable capability statement (what we provide, why unique, who for, past performance); federal and general |
+| `past-performance-assistant-brain.md` | Past performance evidence for assistant brain / polyphonic cognition; feeds capability statement and proposals; PP-001 (campaign) + placeholders for A/B/C prep, before/after, training |
+| `competitor-research-assistant-brain-judgment-testing.md` | Competitor scan: multi-perspective / options / debate tools, government/civic, research; positioning vs us |
+| `lessons-solo-founder-ai-video.md` | Lessons from solo-founder/AI-talent video: taste vs conviction, speed of control, coordination proxy, blocked by overhead; mapped to assistant brain |
+| `lessons-perplexity-computer-video.md` | Lessons from Perplexity Computer video: skills, sub-agents, Model Council vs us, memory, integrations, visual output; actionable takeaways |
+| `lessons-deepseek-insider-self-improving-agents.md` | Lessons from DeepSeek Insider (John Wang): sovereign layer vs self-improving agents, memory/bounded session, input-grounded A/B/C, human learning; positioning |
+| `lessons-openclaw-skills-video.md` | Lessons from OpenClaw skills video: Larry (constraints from failure), review vs mad dog, Anti-AI slop, Mission Control complementary, security; protocol output quality |
+| `actionable-features-and-insights.md` | Actionable features (instinct-as-input, reversibility, contradiction badge, post-decision), copy snippets, process items; priority order |
 | `civ-mem-test-run-*.md` | Dated test runs (DRAFT until signed) |
 | `principal-profile.md` | Principal baseline |
 | `opposition-brief.md` | Living opposition tracker |
@@ -58,11 +72,12 @@ Use this file when you want one place to understand:
 
 ## Operating rhythm
 
-1. Refresh `brief-source-registry.md` before the weekly brief.
-2. Review `content-queue.md` before asking for post drafts.
-3. Use the WAP dashboard/operator surface for territory blockers and next actions.
-4. Use `outreach-workspace.md` when the work block is about offer testing, proof, and buyer learning rather than campaign execution.
-5. Stage WAP milestones through `RECURSION-GATE` when something should become audited continuity or Record-adjacent knowledge.
+1. **"We did X" → stage** — After calls, readings, decisions, milestones, say "we did X" so the agent stages to RECURSION-GATE; the gate stays current. See [we-did-x-habit.md](../../we-did-x-habit.md).
+2. Refresh `brief-source-registry.md` before the weekly brief.
+3. Review `content-queue.md` before asking for post drafts.
+4. Use the WAP dashboard/operator surface for territory blockers and next actions.
+5. Use `outreach-workspace.md` when the work block is about offer testing, proof, and buyer learning rather than campaign execution.
+6. Stage WAP milestones through `RECURSION-GATE` when something should become audited continuity or Record-adjacent knowledge.
 
 ---
 
