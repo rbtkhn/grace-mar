@@ -47,6 +47,7 @@ tools/
 # Local runtime/export noise
 users/*/user.md
 users/*/harness-events.jsonl
+users/*/continuity-log.jsonl
 users/*/runtime-bundle/runtime/*
 users/*/runtime-bundle/audit/*.jsonl
 

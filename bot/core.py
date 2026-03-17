@@ -878,11 +878,27 @@ def analyze_exchange(user_message: str, assistant_message: str, channel_key: str
         return False
 
 
+def _format_staging_meta_yaml(staging_meta: dict | None) -> str:
+    """Emit optional YAML lines for OpenClaw/handback provenance (candidate_source, artifact_*, constitution_*)."""
+    if not staging_meta:
+        return ""
+    allowed = ("candidate_source", "artifact_path", "artifact_sha256", "constitution_check_status", "constitution_rule_ids")
+    lines = []
+    for k in allowed:
+        v = staging_meta.get(k)
+        if v is None or (isinstance(v, str) and not v.strip()):
+            continue
+        s = str(v).strip().replace("\\", "\\\\").replace('"', '\\"')
+        lines.append(f"{k}: \"{s}\"")
+    return "\n".join(lines) + ("\n" if lines else "")
+
+
 def _stage_candidate(
     analysis_yaml: str,
     user_message: str,
     assistant_message: str,
     channel_key: str,
+    staging_meta: dict | None = None,
 ) -> bool:
     valid, reason = _validate_analysis_yaml(analysis_yaml)
     if not valid:
@@ -900,13 +916,14 @@ def _stage_candidate(
     conflicts_block = format_conflicts_for_yaml(conflicts) if conflicts else ""
     if conflicts:
         logger.info("CONFLICT: %d contradiction(s) flagged for %s", len(conflicts), candidate_id)
+    provenance_yaml = _format_staging_meta_yaml(staging_meta)
     block = f"""### {candidate_id}
 
 ```yaml
 status: pending
 timestamp: {ts}
 channel_key: {channel_key}
-source_exchange:
+{provenance_yaml}source_exchange:
   user: "{user_message}"
   grace_mar: "{assistant_message}"
 {analysis_yaml}{conflicts_block}
@@ -945,8 +962,13 @@ def _run_analyst_background(
 ACTIVITY_REPORT_SYNTHETIC = "[Activity reported by operator. No bot response. Treat as direct evidence of real-world activity. Extract knowledge, curiosity, or personality signals.]"
 
 
-def analyze_activity_report(user_message: str, channel_key: str) -> bool:
-    """Run analyst on 'we did X' activity report. Returns True if staged."""
+def analyze_activity_report(
+    user_message: str,
+    channel_key: str,
+    staging_meta: dict | None = None,
+) -> bool:
+    """Run analyst on 'we did X' activity report. Returns True if staged.
+    staging_meta: optional dict for handback provenance (candidate_source, artifact_path, etc.)."""
     if not _check_rate_limit(channel_key, "analyst", tokens=1):
         return False
     synthetic = f"USER: {user_message}\nGRACE-MAR: {ACTIVITY_REPORT_SYNTHETIC}"
@@ -965,7 +987,9 @@ def analyze_activity_report(user_message: str, channel_key: str) -> bool:
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return False
-        staged = _stage_candidate(analysis, user_message, ACTIVITY_REPORT_SYNTHETIC, channel_key)
+        staged = _stage_candidate(
+            analysis, user_message, ACTIVITY_REPORT_SYNTHETIC, channel_key, staging_meta=staging_meta
+        )
         if staged:
             logger.info("ANALYST: activity report staged")
         return staged

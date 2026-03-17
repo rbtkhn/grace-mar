@@ -86,22 +86,33 @@ def handback() -> tuple:
         return jsonify({"ok": False, "error": str(e)}), 500
 
 
-def _run_stage(content: str, user_id: str = "") -> tuple[bool, int]:
-    """Run analyst on activity report. Returns (staged, pending_count)."""
+def _run_stage(
+    content: str,
+    user_id: str = "",
+    staging_meta: dict | None = None,
+) -> tuple[bool, int]:
+    """Run analyst on activity report. Returns (staged, pending_count).
+    staging_meta: optional dict for OpenClaw provenance (candidate_source, artifact_path, etc.)."""
     from bot.core import analyze_activity_report, get_pending_candidates
 
-    channel_key = f"extension:browser:{user_id}" if user_id else "extension:browser"
-    staged = analyze_activity_report(content, channel_key)
+    if staging_meta and staging_meta.get("candidate_source") == "openclaw":
+        channel_key = staging_meta.get("channel_key") or (
+            f"openclaw:stage:{user_id}" if user_id else "openclaw:stage"
+        )
+    else:
+        channel_key = f"extension:browser:{user_id}" if user_id else "extension:browser"
+    staged = analyze_activity_report(content, channel_key, staging_meta=staging_meta)
     count = len(get_pending_candidates())
     return (staged, count)
 
 
 @app.route("/stage", methods=["POST"])
 def stage() -> tuple:
-    """Stage activity report from browser extension (local only).
-    Accepts JSON: { "content": "we read...", "url": "..." }.
-    content is required; url is optional provenance.
-    Returns { ok, staged, pending_count } for extension confirmation."""
+    """Stage activity report from browser extension or OpenClaw (local only).
+    Accepts JSON: { "content": "we read...", "url": "...", "user_id": "...", "title": "..." }.
+    OpenClaw sends source=openclaw_stage and optional artifact_path, artifact_sha256,
+    constitution_check_status, constitution_rule_ids — these are preserved into the candidate block.
+    content is required. Returns { ok, staged, pending_count }."""
     if not _is_authorized():
         return jsonify({"ok": False, "error": "unauthorized"}), 401
 
@@ -114,27 +125,39 @@ def stage() -> tuple:
     user_id = (data.get("user_id") or "").strip()
     title = (data.get("title") or "").strip()
     selection_text = (data.get("selection_text") or "").strip()
+    source = (data.get("source") or "").strip()
 
     if not content:
         return jsonify({"ok": False, "error": "empty content"}), 400
 
-    meta_parts = []
-    if user_id:
-        meta_parts.append(f"user_id={user_id}")
-    if title:
-        meta_parts.append(f"title={title}")
-    if url:
-        meta_parts.append(f"url={url}")
-    if selection_text:
-        meta_parts.append(f'selection="{selection_text[:500]}"')
-    if meta_parts:
-        content = f"{content} META: {'; '.join(meta_parts)}"
+    staging_meta = None
+    if source == "openclaw_stage":
+        staging_meta = {"candidate_source": "openclaw"}
+        if user_id:
+            staging_meta["channel_key"] = f"openclaw:stage:{user_id}"
+        for key in ("artifact_path", "artifact_sha256", "constitution_check_status", "constitution_rule_ids"):
+            val = (data.get(key) or "").strip()
+            if val:
+                staging_meta[key] = val
+
+    if not staging_meta:
+        meta_parts = []
+        if user_id:
+            meta_parts.append(f"user_id={user_id}")
+        if title:
+            meta_parts.append(f"title={title}")
+        if url:
+            meta_parts.append(f"url={url}")
+        if selection_text:
+            meta_parts.append(f'selection="{selection_text[:500]}"')
+        if meta_parts:
+            content = f"{content} META: {'; '.join(meta_parts)}"
 
     if len(content) > MAX_CONTENT:
         return jsonify({"ok": False, "error": f"content too long (max {MAX_CONTENT} chars)"}), 400
 
     try:
-        staged, pending_count = _run_stage(content, user_id=user_id)
+        staged, pending_count = _run_stage(content, user_id=user_id, staging_meta=staging_meta)
         return jsonify({
             "ok": True,
             "staged": staged,

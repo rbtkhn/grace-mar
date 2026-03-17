@@ -158,6 +158,16 @@ Grace-Mar continuity (if users/grace-mar exists):
 
 This checklist supports human-in-the-loop oversight — analogous to orchestration patterns (e.g. a "chief of staff" agent checking subordinates). The companion or operator stays aware of staged work and recent evidence before OpenClaw runs.
 
+### Proof-of-read (optional)
+
+To **log** that the recommended files were read at session start (for audit or verification), run:
+
+```bash
+python scripts/continuity_read_log.py -u grace-mar
+```
+
+This appends one JSONL line to `users/[id]/continuity-log.jsonl` with timestamp, `user_id`, `files_read` (session-log.md, recursion-gate.md, self-evidence.md), and `missing` if any file was absent. It does not modify the Record. Add this to your OpenClaw startup script or run it manually before starting work. Use `--dry-run` to print the payload without writing.
+
 ### Any harness startup (Cursor, Codex, Claude Code, new chat)
 
 New agent sessions start with **no memory** unless you feed the repo state. Run:
