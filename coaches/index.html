@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Personality with provenance — Grace-Mar</title>
+    <style>
+        :root {
+            --sky: #f5f4f0;
+            --sun: #f5d742;
+            --sun-ray: #e8a83a;
+            --mountain-dark: #8b4513;
+            --mountain-mid: #c4a574;
+            --mountain-base: #6b3420;
+            --band-pink: #d46a7a;
+            --band-orange: #c97b4a;
+            --desert: #e8c547;
+            --cactus: #3a8b4a;
+            --cactus-outline: #1a4d2a;
+            --ink: #2c2825;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; padding: 0; min-height: 100vh;
+            background: var(--desert);
+            color: var(--ink);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            padding: 1.5rem;
+            padding-left: max(1.5rem, env(safe-area-inset-left));
+            padding-right: max(1.5rem, env(safe-area-inset-right));
+        }
+        .scene {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none; z-index: 0; overflow: hidden;
+        }
+        .sky { position: absolute; top: 0; left: 0; right: 0; height: 22%; background: var(--sky); }
+        .sun { position: absolute; top: 0.5rem; right: 1.5rem; width: 48px; height: 48px; background: var(--sun); border-radius: 50%; box-shadow: 0 0 0 6px var(--sun-ray); }
+        .mountains { position: absolute; top: 12%; left: 0; right: 0; height: 28%; background: linear-gradient(180deg, var(--mountain-mid) 0%, var(--mountain-dark) 25%, var(--mountain-base) 70%); clip-path: polygon(0 100%, 0 45%, 12% 65%, 25% 40%, 42% 55%, 58% 35%, 75% 50%, 88% 40%, 100% 60%, 100% 100%); }
+        .band-pink { position: absolute; top: 36%; left: 0; right: 0; height: 4%; background: var(--band-pink); }
+        .band-orange { position: absolute; top: 39%; left: 0; right: 0; height: 4%; background: var(--band-orange); }
+        .desert-bg { position: absolute; top: 42%; left: 0; right: 0; bottom: 0; background: var(--desert); }
+        .page { position: relative; z-index: 1; max-width: 520px; margin: 0 auto; }
+        .card {
+            background: rgba(255, 251, 243, 0.97);
+            padding: 1.75rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+        h1 { font-size: 1.75rem; font-weight: 800; margin: 0 0 0.35rem; color: var(--ink); }
+        .subhead { font-size: 1rem; color: #5c564d; margin: 0 0 1.25rem; line-height: 1.4; }
+        .bullets { margin: 1rem 0; padding-left: 1.25rem; }
+        .bullets li { margin: 0.5rem 0; line-height: 1.45; }
+        .audience { font-size: 0.9rem; color: #5c564d; margin-top: 1.5rem; font-style: italic; }
+        .cta { margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .cta a {
+            display: inline-block;
+            padding: 0.65rem 1rem;
+            background: var(--band-orange);
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 2px solid rgba(0,0,0,0.1);
+        }
+        .cta a:hover { filter: brightness(1.08); }
+        .back { margin-top: 1.25rem; }
+        .back a { color: var(--ink); font-weight: 600; text-decoration: none; }
+        .back a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="scene" aria-hidden="true">
+        <div class="sky"></div>
+        <div class="sun"></div>
+        <div class="mountains"></div>
+        <div class="band-pink"></div>
+        <div class="band-orange"></div>
+        <div class="desert-bg"></div>
+    </div>
+    <main class="page">
+        <div class="card">
+            <h1>Personality with provenance</h1>
+            <p class="subhead">A portable, evidence-backed profile of interests, style, and growth. You approve everything that goes in. You own the Record. Export it to any handoff or tool.</p>
+            <ul class="bullets">
+                <li><strong>You gate, we store.</strong> Nothing enters your profile without your explicit approval. No inferred personality; no platform override.</li>
+                <li><strong>One Record, many uses.</strong> Hand off to the next coach. Share with a cohort. Feed your favorite tools. Export as PRP, JSON, or API.</li>
+                <li><strong>Audit trail built in.</strong> Every claim links to evidence. Full history. Sovereign merge rule: only you (or your delegated operator) can merge.</li>
+            </ul>
+            <p class="audience">For coaches, creator-educators, and teams who need a single source of truth about a person — owned by that person.</p>
+            <div class="cta">
+                <a href="https://github.com/rbtkhn/grace-mar">See the schema</a>
+                <a href="https://github.com/rbtkhn/companion-self">Use open-source</a>
+            </div>
+            <div class="back"><a href="/">← Grace-Mar</a></div>
+        </div>
+    </main>
+</body>
+</html>
