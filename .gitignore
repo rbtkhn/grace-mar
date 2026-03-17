@@ -51,6 +51,9 @@ users/*/continuity-log.jsonl
 users/*/runtime-bundle/runtime/*
 users/*/runtime-bundle/audit/*.jsonl
 
+# Civ-mem — generated/cache
+docs/civilization-memory/.cache/
+
 # Civ-mem encyclopedia — large local regen (committed: ENCYCLOPEDIA.md essays-only only)
 users/grace-mar/artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.docs.md
 users/grace-mar/artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.content.md

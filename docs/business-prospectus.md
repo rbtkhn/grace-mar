@@ -19,6 +19,8 @@ Grace-Mar defines the **Identity Fork Protocol (IFP)** and ships a reference imp
 
 This sequencing reduces execution risk and creates proof before broad platform claims.
 
+**See also:** [Business Plan](business-plan.md) · [White Paper](white-paper.md) · [Business Roadmap](business-roadmap.md)
+
 ---
 
 ## Problem

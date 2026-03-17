@@ -18,6 +18,8 @@ Grace-Mar provides that substrate. This white paper describes the problem, the s
 
 **Execution focus:** In the next 18 months, Grace-Mar prioritizes one wedge — hosted family product for homeschool/microschool adoption — while running a small number of integration pilots. Broader protocol commercialization (including certification) is intentionally sequenced after proof.
 
+**See also:** [Business Plan](business-plan.md) · [Business Prospectus](business-prospectus.md) · [Business Roadmap](business-roadmap.md)
+
 ---
 
 ## 1. The Rise of AI Schools

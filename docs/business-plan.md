@@ -16,8 +16,9 @@ Business objective for the next 18 months:
 - complete 1-2 scoped paid integration pilots.
 
 This document is the operating and commercialization plan.  
-For narrative/technical context, see `white-paper.md`.  
-For concise investor framing, see `business-prospectus.md`.
+For narrative/technical context, see [WHITE-PAPER](white-paper.md). For concise investor framing, see [BUSINESS-PROSPECTUS](business-prospectus.md).
+
+**See also:** [Business Prospectus](business-prospectus.md) · [White Paper](white-paper.md) · [Business Roadmap](business-roadmap.md)
 
 ---
 

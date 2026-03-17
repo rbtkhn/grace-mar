@@ -24,4 +24,6 @@
 
 **Hierarchy:** The protocol (IDENTITY-FORK-PROTOCOL) is the thing to implement. CORE is governance. CONCEPTUAL-FRAMEWORK and DESIGN-NOTES interpret and explain intent. WHITE-PAPER and prospectus are narrative and business.
 
+**If validate-integrity reports stale derived exports:** run the refresh block in [DEVELOPMENT-HANDOFF § Quick Resume](development-handoff.md#quick-resume-commands).
+
 **Objections answered:** See [DESIGN-NOTES §17](design-notes.md#17-objections-and-answers).
