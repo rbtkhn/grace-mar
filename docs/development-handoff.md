@@ -4,7 +4,7 @@ Use this file to resume development quickly in a new agent conversation.
 
 **Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-build-ai** (OpenClaw + companion gate); read `docs/skill-work/work-build-ai/README.md` then `docs/openclaw-integration.md`.
 
-Last updated: 2026-03-14
+Last updated: 2026-03-16
 
 ---
 
@@ -340,17 +340,17 @@ Last updated: 2026-03-14
 
 ## Current Uncommitted Work (At Time of This Handoff)
 
-Likely includes (run `git status` to confirm):
+**Committed this session (2026-03-16):** work-build-ai (OpenClaw provenance end-to-end, benchmark honesty labels, continuity proof-of-read script), and docs (derived-export refresh one-liner in bootstrap + handoff).
 
-- Conceptual/terminology edits: agents.md, grace-mar-core.md, conceptual-framework.md, grace-mar-bootstrap.md, identity-fork-protocol.md, design-roadmap.md, operator-brief.md, parent-brief.md, letter-to-user.md, letter-to-student.md, wisdom-questions.md, simple-user-interface.md, chat-first-design.md, white-paper.md, design-notes.md (§11.7 intent engineering + companion wording), self-template.md, skills-template.md, architecture.md, docs/readme.md, and others.
-- Bot: `bot/prompt.py`, `bot/core.py` (companion/operator wording).
-- New: `docs/operator-brief.md`, `docs/letter-to-user.md`, `docs/x-integration.md`.
-- intent-template.md (design-lens block, companion gate wording).
-- If work stopped right now, the likely local changes would be the approval inbox spec, doctrine memo, and any follow-on narrative derivatives or implementation work that had not yet been committed.
-- Optional later cleanup: continue migrating or annotating older legacy analyses that still discuss `self-skill-work` / `BUILD` for historical comparison.
-- New local docs work likely includes the self-personality alignment set (`self-template.md`, `skills-template.md`, `identity-fork-protocol.md`, `id-taxonomy.md`, `architecture.md`) plus this handoff refresh.
+**Still uncommitted (run `git status` to confirm):**
 
-If the companion/operator asks to commit, include all modified and new files from this session.
+- Bot: `bot/bot.py`, `bot/lookup_cmc.py` (may be unrelated to work-build-ai).
+- Users: `users/grace-mar/self-library.md`; refreshed/generated artifacts (manifest, fork-manifest, llms.txt, intent_snapshot, runtime-bundle, compute-ledger, pipeline-events, session-transcript, recursion-gate.md) — commit only if you intend to snapshot state.
+- Docs: civilization-memory (README, essays, book/, notes/), library-integration.md, work-political-consulting (workspace.md, uare-ai-competitive-notes), and various untracked (federal-ethics-pledge, memo-ai-policy-babel, speech-day-one, vance-first-hours, etc.).
+- Scripts: build_civmem_inrepo_index.py, library_shelf_tables.py, reorder_library_by_shelf.py (untracked).
+- Submodule: repos/civilization_memory (m).
+
+If the companion/operator asks to commit, include all modified and new files from that session.
 
 ---
 
@@ -400,6 +400,15 @@ If profile or prompt changed:
 
 ```bash
 python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
+```
+
+If **validate-integrity** reports stale derived exports or runtime bundle:
+
+```bash
+python3 scripts/fork_checksum.py --manifest && \
+python3 scripts/export_manifest.py -u grace-mar && \
+python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt && \
+python3 scripts/export_runtime_bundle.py -u grace-mar -o users/grace-mar/runtime-bundle
 ```
 
 ---
