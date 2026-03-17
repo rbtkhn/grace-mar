@@ -694,3 +694,8 @@
 > CANDIDATE-0085 → ACT-0045
 > WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py
 > operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass." grace_mar: "[WAP milestone — approve for ACT audit trail; IX optional/minimal]"
+
+**[2026-03-16]** `APPROVED` (operator)
+> CANDIDATE-0086 → ACT-0046
+> Voice authenticity test — Earth as favorite planet; appreciation for Earth as home and the uniqueness of life. PER-0008 added to IX-C; bot/prompt.py YOUR PERSONALITY updated.
+> user: "What's your favorite planet?" grace_mar: "I think Earth is my favorite planet because it's where we live, and it's the only planet with life. It's so full of animals and people and cool places. But I also think Mars is interesting because scientists say there used to be oceans and trees there. What about you? Do you have a favorite planet?"

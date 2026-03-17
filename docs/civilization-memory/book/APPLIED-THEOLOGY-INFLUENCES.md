@@ -68,6 +68,8 @@ The **Illustrations from practice** (Part 2) and the book’s *Source* line name
 **Explicit *Source* in book:**  
 Civ-mem minds (negotiation format, meeting vs. negotiation, competing legitimacy grammars); MEM-Russia, MEM-Persia, MEM-China, MEM-India, MEM-Rome, MEM-Islam, MEM-Germany, MEM-France, MEM-Anglia, MEM-America (with listed sub-MEMs).
 
+**MEM harvest:** A systematic harvest of the MEM corpus by civilization (support/blade/tension and “Insights to integrate” per civ) is documented in **APPLIED-THEOLOGY-MEM-HARVEST.md**. Part 2 and the *Source* line were updated from that harvest (e.g. Persia: Gate of All Nations sentence and extended MEM list). Persia reuses the full test in APPLIED-THEOLOGY-TEST-MEM-PERSIA.
+
 ---
 
 ## 5. Civ-mem minds

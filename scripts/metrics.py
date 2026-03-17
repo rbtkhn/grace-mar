@@ -16,15 +16,20 @@ from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
+try:
+    from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
+except ImportError:
+    from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
+try:
+    from recursion_gate_review import parse_gate_for_metrics
+except ImportError:
+    from scripts.recursion_gate_review import parse_gate_for_metrics
+
+REPO_ROOT = REPO_ROOT  # for scripts that import metrics.REPO_ROOT
+PROFILE_DIR = profile_dir(DEFAULT_USER_ID)
 STALE_DAYS = 7
 
-
-def _read(path: Path) -> str:
-    if not path.exists():
-        return ""
-    return path.read_text(encoding="utf-8")
+_read = read_path
 
 
 @dataclass
@@ -55,50 +60,10 @@ class IntentDrift:
     rejection_categories: dict[str, int]
 
 
-def parse_recursion_gate(content: str) -> tuple[list[dict], list[dict]]:
-    """
-    Extract pending and processed candidates from recursion-gate.md.
-    Returns (pending_list, processed_list).
-    """
-    pending = []
-    processed = []
-    in_candidates = False
-    in_processed = False
-    current: dict | None = None
-
-    for line in content.splitlines():
-        if line.strip() == "## Candidates":
-            in_candidates = True
-            in_processed = False
-            continue
-        if line.strip() == "## Processed":
-            in_candidates = False
-            in_processed = True
-            continue
-
-        m = re.match(r"^### (CANDIDATE-\d+)", line)
-        if m:
-            current_id = m.group(1)
-            current = {"id": current_id}
-            if in_candidates:
-                pending.append(current)
-            elif in_processed:
-                processed.append(current)
-            continue
-
-        if current is not None and line.strip().startswith("status:"):
-            status = line.split(":", 1)[1].strip().lower()
-            current["status"] = status
-            if "approved" in status or "rejected" in status:
-                current["outcome"] = "approved" if "approved" in status else "rejected"
-
-    return pending, processed
-
-
 def compute_pipeline_health() -> PipelineHealth:
     """Compute pipeline health from recursion-gate and PIPELINE-EVENTS."""
     pr_content = _read(PROFILE_DIR / "recursion-gate.md")
-    pending, processed = parse_recursion_gate(pr_content)
+    pending, processed = parse_gate_for_metrics(pr_content)
 
     pr_path = PROFILE_DIR / "recursion-gate.md"
     mtime = datetime.fromtimestamp(pr_path.stat().st_mtime) if pr_path.exists() else None

@@ -23,6 +23,11 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta
 from pathlib import Path
 
+try:
+    from recursion_gate_review import parse_gate_pending_for_dashboard
+except ImportError:
+    from scripts.recursion_gate_review import parse_gate_pending_for_dashboard
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 PROFILE_PAGE_DIR = REPO_ROOT / "profile"
@@ -63,37 +68,6 @@ class ProfileData:
     session_snapshot: list[dict]
     health_fitness_summary: dict
     raw_files: dict[str, str]  # for dashboard: self, skills, library, journal, work
-
-
-def parse_recursion_gate(content: str) -> tuple[int, list[dict]]:
-    """Extract pending candidates from recursion-gate.md."""
-    candidates = []
-    in_candidates = False
-    in_processed = False
-    current: dict | None = None
-
-    for line in content.splitlines():
-        if line.strip() == "## Candidates":
-            in_candidates = True
-            in_processed = False
-            continue
-        if line.strip() == "## Processed":
-            in_candidates = False
-            in_processed = True
-            continue
-
-        if in_candidates:
-            if m := re.match(r"^### (CANDIDATE-\d+)", line):
-                current = {"id": m.group(1), "summary": "", "mind_category": "", "priority_score": ""}
-                candidates.append(current)
-            elif current and line.strip().startswith("summary:"):
-                current["summary"] = line.split(":", 1)[1].strip().strip('"')
-            elif current and line.strip().startswith("mind_category:"):
-                current["mind_category"] = line.split(":", 1)[1].strip()
-            elif current and line.strip().startswith("priority_score:"):
-                current["priority_score"] = line.split(":", 1)[1].strip()
-
-    return len(candidates), candidates
 
 
 def parse_self(content: str) -> dict:
@@ -338,7 +312,7 @@ def collect_data() -> ProfileData:
     journal_content = journal_path.read_text() if journal_path.exists() else ""
     health_fitness_content = health_fitness_path.read_text() if health_fitness_path.exists() else ""
 
-    pending_count, pending_candidates = parse_recursion_gate(pending_content)
+    pending_count, pending_candidates = parse_gate_pending_for_dashboard(pending_content)
     session_snapshot = parse_session_transcript_snapshot(transcript_content, limit=12)
     health_fitness_summary = parse_health_fitness_summary(health_fitness_content)
     self_data = parse_self(self_content)
@@ -1031,6 +1005,7 @@ def _render_landing_page(prp_text: str = "") -> str:
             --nav-dashboard: #6b7baa;
             --nav-telegram: #3a8b4a;
             --nav-wechat: #5a9b5a;
+            --nav-coaches: #5a7a9a;
             --nav-llm: #d46a7a;
         }}
         * {{ box-sizing: border-box; }}
@@ -1157,6 +1132,7 @@ def _render_landing_page(prp_text: str = "") -> str:
         .nav-dashboard {{ background: var(--nav-dashboard); color: #fff; }}
         .nav-telegram {{ background: var(--nav-telegram); color: #fff; }}
         .nav-wechat {{ background: var(--nav-wechat); color: #fff; }}
+        .nav-coaches {{ background: var(--nav-coaches); color: #fff; }}
         .nav-llm {{ background: var(--nav-llm); color: #1a1a1a; }}
         .nav-link:hover, .nav .nav-btn:hover {{
             transform: translateY(-2px);
@@ -1184,6 +1160,7 @@ def _render_landing_page(prp_text: str = "") -> str:
             <nav class="nav">
                 <a href="/profile" class="nav-link nav-profile">Profile</a>
                 <a href="/dashboard" class="nav-link nav-dashboard">Dashboard</a>
+                <a href="/coaches" class="nav-link nav-coaches">Coaches</a>
                 <a href="/telegram" class="nav-link nav-telegram">Telegram</a>
                 <a href="/wechat" class="nav-link nav-wechat">WeChat</a>
                 {llm_block}

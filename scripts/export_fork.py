@@ -11,6 +11,7 @@ Usage:
     python scripts/export_fork.py --user grace-mar --output fork-export.json
     python scripts/export_fork.py --user grace-mar --format obsidian --output obsidian-vault
     python scripts/export_fork.py --user grace-mar --format json-ld --output grace-mar.jsonld
+    python scripts/export_fork.py --format coach-handoff --output coach-handoff.json  # JSON + .md one-pager
 """
 
 import argparse
@@ -19,13 +20,10 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-
-
-def _read(path: Path) -> str:
-    if not path.exists():
-        return ""
-    return path.read_text(encoding="utf-8")
+try:
+    from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
+except ImportError:
+    from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 
 
 def _parse_self_summary(content: str) -> dict:
@@ -52,20 +50,71 @@ def _parse_evidence_summary(content: str) -> dict:
     }
 
 
+def _parse_ix_b_entries(content: str) -> list[dict]:
+    """Extract IX-B CURIOSITY entries (id, topic, one-liner) for coach handoff."""
+    entries = []
+    start = content.find("### IX-B. CURIOSITY")
+    if start < 0:
+        return entries
+    block = content[start : content.find("### IX-C", start)]
+    for m in re.finditer(
+        r"-\s+id:\s+(CUR-\d+)\s*\n(.*?)(?=\n\s+-\s+id:\s+CUR-|\n```|\Z)",
+        block,
+        re.DOTALL,
+    ):
+        cur_id, rest = m.group(1), m.group(2)
+        topic = ""
+        response_signal = ""
+        for line in rest.splitlines():
+            if line.strip().startswith("topic:"):
+                topic = line.split(":", 1)[1].strip().strip('"\'')
+            elif line.strip().startswith("response_signal:"):
+                response_signal = line.split(":", 1)[1].strip().strip('"\'')
+        one_liner = response_signal if response_signal else topic
+        entries.append({"id": cur_id, "topic": topic, "one_liner": one_liner[:300]})
+    return entries
+
+
+def _parse_ix_c_entries(content: str) -> list[dict]:
+    """Extract IX-C PERSONALITY entries (id, type, observation) for coach handoff."""
+    entries = []
+    start = content.find("### IX-C. PERSONALITY")
+    if start < 0:
+        return entries
+    block = content[start : start + 8000]
+    for m in re.finditer(
+        r"-\s+id:\s+(PER-\d+)\s*\n(.*?)(?=\n\s+-\s+id:\s+PER-|\n```|\Z)",
+        block,
+        re.DOTALL,
+    ):
+        per_id, rest = m.group(1), m.group(2)
+        obs_type = ""
+        observation = ""
+        for line in rest.splitlines():
+            if line.strip().startswith("type:"):
+                obs_type = line.split(":", 1)[1].strip()
+            elif line.strip().startswith("observation:"):
+                observation = line.split(":", 1)[1].strip().strip('"\'')
+        entries.append(
+            {"id": per_id, "type": obs_type, "observation": observation[:400]}
+        )
+    return entries
+
+
 def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     """Build the fork export structure."""
-    profile_dir = REPO_ROOT / "users" / user_id
-    self_path = profile_dir / "self.md"
-    skills_path = profile_dir / "skills.md"
-    evidence_path = profile_dir / "self-evidence.md"
-    library_path = profile_dir / "self-library.md"
-    fork_manifest_path = profile_dir / "fork-manifest.json"
-    agent_manifest_path = profile_dir / "manifest.json"
+    user_dir = profile_dir(user_id)
+    self_path = user_dir / "self.md"
+    skills_path = user_dir / "skills.md"
+    evidence_path = user_dir / "self-evidence.md"
+    library_path = user_dir / "self-library.md"
+    fork_manifest_path = user_dir / "fork-manifest.json"
+    agent_manifest_path = user_dir / "manifest.json"
 
-    self_raw = _read(self_path)
-    skills_raw = _read(skills_path)
-    evidence_raw = _read(evidence_path)
-    library_raw = _read(library_path)
+    self_raw = read_path(self_path)
+    skills_raw = read_path(skills_path)
+    evidence_raw = read_path(evidence_path)
+    library_raw = read_path(library_path)
 
     out = {
         "version": "1.0",
@@ -133,6 +182,73 @@ def export_obsidian(data: dict, out_path: Path) -> None:
     )
 
 
+def _write_coach_handoff_onepager(handoff: dict, out_path: Path) -> None:
+    """Write a human-readable one-pager (markdown) for coach handoff."""
+    name = handoff.get("name", "?")
+    generated_at = handoff.get("generated_at", "")
+    interests = handoff.get("interests", [])
+    style_traits = handoff.get("style_traits", [])
+    ev = handoff.get("evidence_summary", {})
+    json_basename = out_path.with_suffix(".json").name
+
+    lines = [
+        f"# Coach handoff — {name}",
+        "",
+        f"*Generated {generated_at}*",
+        "",
+        "## Interests (IX-B)",
+        "",
+    ]
+    if interests:
+        for e in interests:
+            one_liner = e.get("one_liner") or e.get("topic", "").strip()
+            lines.append(f"- {one_liner}" if one_liner else "- (no summary)")
+    else:
+        lines.append("None documented.")
+    lines.extend(["", "## Style / personality (IX-C)", ""])
+    if style_traits:
+        for e in style_traits:
+            obs = (e.get("observation") or "").strip()
+            t = (e.get("type") or "").strip()
+            if t and obs:
+                lines.append(f"- **{t}:** {obs}")
+            elif obs:
+                lines.append(f"- {obs}")
+            else:
+                lines.append("- (no observation)")
+    else:
+        lines.append("None documented.")
+    lines.extend([
+        "",
+        "## Evidence summary",
+        "",
+        f"- Read: {ev.get('read_count', 0)}",
+        f"- Write: {ev.get('write_count', 0)}",
+        f"- Create: {ev.get('create_count', 0)}",
+        "",
+        f"*Generated by Grace-Mar coach-handoff export. Full JSON: {json_basename}*",
+    ])
+    out_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def export_coach_handoff(data: dict) -> dict:
+    """Build coach-handoff export: interests (IX-B), style_traits (IX-C), summary. No raw content."""
+    self_raw = data.get("self", {}).get("raw", "")
+    summary = data.get("summary", {})
+    self_sum = summary.get("self", {})
+    ev_sum = summary.get("evidence", {})
+    return {
+        "version": "1.0",
+        "format": "coach-handoff",
+        "generated_at": data.get("generated_at", ""),
+        "user_id": data.get("user_id", ""),
+        "name": self_sum.get("name", "?"),
+        "interests": _parse_ix_b_entries(self_raw),
+        "style_traits": _parse_ix_c_entries(self_raw),
+        "evidence_summary": ev_sum,
+    }
+
+
 def export_jsonld(data: dict) -> dict:
     """Return a JSON-LD graph with @context and typed nodes (provenance + mind model)."""
     summary = data.get("summary", {})
@@ -163,13 +279,22 @@ def export_jsonld(data: dict) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Export fork to portable JSON")
-    parser.add_argument("--user", "-u", default="grace-mar", help="User id (e.g. grace-mar)")
+    parser.add_argument("--user", "-u", default=DEFAULT_USER_ID, help="User id (e.g. grace-mar)")
     parser.add_argument("--output", "-o", default=None, help="Output file or directory (default: stdout for default format)")
     parser.add_argument("--no-raw", action="store_true", help="Omit raw file contents (summary + manifest only)")
-    parser.add_argument("--format", "-f", choices=("default", "obsidian", "json-ld"), default="default", help="Export format: default (JSON), obsidian (MD vault), json-ld")
+    parser.add_argument("--format", "-f", choices=("default", "obsidian", "json-ld", "coach-handoff"), default="default", help="Export format: default (JSON), obsidian (MD vault), json-ld, coach-handoff (interests + style for handoffs)")
     args = parser.parse_args()
     data = export_fork(user_id=args.user, include_raw=not args.no_raw)
 
+    if args.format == "coach-handoff":
+        handoff = export_coach_handoff(data)
+        text = json.dumps(handoff, indent=2, ensure_ascii=False)
+        out_json = Path(args.output or f"coach-handoff-{args.user}.json")
+        out_json.write_text(text, encoding="utf-8")
+        md_path = out_json.with_suffix(".md")
+        _write_coach_handoff_onepager(handoff, md_path)
+        print(f"Wrote coach-handoff to {out_json} and {md_path}", file=__import__("sys").stderr)
+        return
     if args.format == "obsidian":
         out_path = Path(args.output or "obsidian-export")
         export_obsidian(data, out_path)

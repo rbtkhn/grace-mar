@@ -61,3 +61,4 @@
 {"ts": "2026-03-14T13:29:21.541132", "event": "applied", "candidate_id": "CANDIDATE-0085", "evidence_id": "ACT-0045", "source": "process_approved_candidates", "actor": "operator", "channel_key": "operator:cli"}
 {"ts": "2026-03-14T13:29:29.948067", "event": "applied", "candidate_id": "CANDIDATE-0085", "evidence_id": "ACT-0045"}
 {"ts": "2026-03-16T16:53:17.237047", "event": "staged", "candidate_id": "CANDIDATE-0086", "channel_key": "test:voice_authenticity:1"}
+{"ts": "2026-03-16T21:53:08.302281", "event": "applied", "candidate_id": "CANDIDATE-0086", "evidence_id": "ACT-0046"}

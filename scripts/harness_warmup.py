@@ -41,26 +41,22 @@ Usage
 from __future__ import annotations
 
 import argparse
-import os
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 from recursion_gate_territory import pending_by_territory
+try:
+    from repo_io import read_path, profile_dir, DEFAULT_USER_ID
+except ImportError:
+    from scripts.repo_io import read_path, profile_dir, DEFAULT_USER_ID
 
-DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
+_read = read_path  # backward compat for operator_daily_warmup, operator_handoff_check
 DEFAULT_TAIL = 12
-
-
-def _read(path: Path) -> str:
-    if not path.exists():
-        return ""
-    return path.read_text(encoding="utf-8")
 
 
 def _session_lines_tail(session_md: str, n: int) -> list[str]:
@@ -169,14 +165,14 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    user_dir = REPO_ROOT / "users" / args.user
+    user_dir = profile_dir(args.user)
     if not user_dir.exists():
         print(f"User dir not found: {user_dir}", file=sys.stderr)
         return 1
 
-    pr = _read(user_dir / "recursion-gate.md")
-    evidence = _read(user_dir / "self-evidence.md")
-    session = _read(user_dir / "session-log.md")
+    pr = read_path(user_dir / "recursion-gate.md")
+    evidence = read_path(user_dir / "self-evidence.md")
+    session = read_path(user_dir / "session-log.md")
 
     wap_n = len(pending_by_territory(pr)[0])
     comp_n = len(pending_by_territory(pr)[1])

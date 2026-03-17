@@ -214,6 +214,7 @@ Export the fork to a single JSON file (SELF, EVIDENCE, LIBRARY, optional manifes
 python scripts/export_fork.py                      # Print JSON to stdout
 python scripts/export_fork.py -o fork-export.json  # Write to file
 python scripts/export_fork.py --no-raw -o summary.json  # Summary + manifest only
+python scripts/export_fork.py --format coach-handoff -o coach-handoff.json  # JSON + .md one-pager for coach/creator handoffs
 ```
 
 Export a runtime-neutral bundle with explicit `record`, `runtime`, `audit`, and `policy` lanes:
@@ -271,6 +272,15 @@ python3 integrations/openclaw_hook.py -u grace-mar -o ../openclaw/   # OpenClaw 
 ```
 
 ## Validation and Session Support
+
+**Tests (local)** — install dev deps then run the same checks as CI:
+
+```bash
+pip install -r requirements-dev.txt
+python3 scripts/assert_canonical_paths.py --user grace-mar
+python3 scripts/validate-integrity.py --user grace-mar --json
+python3 -m pytest tests/ -v --tb=short
+```
 
 **Integrity audit** — run before merges or nightly via cron:
 

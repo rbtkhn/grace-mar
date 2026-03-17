@@ -24,17 +24,17 @@ Brief scan for at least 2% efficiency gains. Focus: I/O reduction, duplicate wor
 
 ---
 
-## 3. **bot/retriever.py — Optional in-process cache for load_record_chunks()**
+## 3. **bot/retriever.py — Optional in-process cache for load_record_chunks() (implemented)**
 
 **Issue:** `load_record_chunks()` reads SELF, SKILLS, EVIDENCE, WORK on every call. In a single bot session with multiple lookups, the same files are read repeatedly.
 
-**Fix:** Cache the result (and optionally path mtimes) per process; invalidate when any source file mtime changes. Reduces I/O when multiple messages trigger retrieval in the same run.
+**Fix:** Cache the result (and optionally path mtimes) per process; invalidate when any source file mtime changes. Reduces I/O when multiple messages trigger retrieval in the same run. Use `GRACE_MAR_RETRIEVER_CACHE=0` to disable.
 
 **Impact:** ≥2% of total bot request time when several lookups occur in one session. Lower priority if the bot process is short-lived (one request per process).
 
 ---
 
-## 4. **Recursion-gate parsing — Consolidate parsers (future)**
+## 4. **Recursion-gate parsing — Consolidate parsers (implemented)**
 
 **Issue:** Multiple parsers for `recursion-gate.md`: `split_gate_sections` + `parse_review_candidates` (recursion_gate_review.py), `pending_by_territory` (recursion_gate_territory.py), `parse_recursion_gate` in metrics.py (pending + processed lists), `parse_recursion_gate` in generate_profile.py (different shape: count + list with summary/mind_category/priority_score). Each script that needs gate state may read and parse independently.
 
@@ -44,11 +44,11 @@ Brief scan for at least 2% efficiency gains. Focus: I/O reduction, duplicate wor
 
 ---
 
-## 5. **export_prp.py — Reuse section extraction**
+## 5. **export_prp.py — Reuse section extraction (implemented)**
 
 **Issue:** Repeated regex for `_section()`, `_yaml_list()`, `_yaml_value()` over the same file content in different code paths.
 
-**Fix:** Parse self.md (and other inputs) once into a small in-memory structure (e.g. dict of sections, key YAML fields); derive PRP from that. Reduces repeated scans over the same string.
+**Fix:** Parse self.md once via `_parse_self_sections(content)` into a dict of section title → content; identity, preferences, linguistic, personality extractors read from that. Reduces repeated scans over the same string.
 
 **Impact:** Likely &lt;2% unless self.md is very large; still a clean refactor.
 
@@ -70,9 +70,9 @@ Brief scan for at least 2% efficiency gains. Focus: I/O reduction, duplicate wor
 |---|------|--------|-----------|
 | 1 | process_approved_candidates: avoid 4 re-reads | Implemented | I/O per merge |
 | 2 | website build: skip when up to date | Implemented | 100% when unchanged |
-| 3 | retriever cache (per process) | Optional | ≥2% in multi-lookup sessions |
-| 4 | Consolidate recursion-gate parsers | Future | Maintainability + shared read |
-| 5 | export_prp single-pass parse | Future | Small |
+| 3 | retriever cache (per process) | Implemented | ≥2% in multi-lookup sessions |
+| 4 | Consolidate recursion-gate parsers | Implemented | Maintainability + shared read |
+| 5 | export_prp single-pass parse | Implemented | Small |
 | 6 | Warmup scripts share gate read | If composed | When both run |
 
 Implementing **1** and **2** gives immediate, low-risk gains. **3** is recommended if the bot often serves multiple lookups per process.

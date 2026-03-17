@@ -1438,6 +1438,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0046
+    date: 2026-03-16
+    modality: text (voice authenticity test)
+    activity_type: personality — value expression
+    mind_category: personality
+    source: pipeline merge
+    summary: "Voice test — favorite planet: Earth as home and the only planet with life; expressed appreciation for Earth and uniqueness of life."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

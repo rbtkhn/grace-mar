@@ -9,7 +9,6 @@ providing derived fields for review surfaces such as dashboards and inboxes.
 from __future__ import annotations
 
 import json
-import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,9 +17,14 @@ try:
     from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
 except ImportError:
     from scripts.recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+try:
+    from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
+except ImportError:
+    from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_USER = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
+_read = read_path
+_profile_dir = profile_dir
+DEFAULT_USER = DEFAULT_USER_ID
 
 _STOPWORDS = {
     "a",
@@ -49,14 +53,6 @@ _STOPWORDS = {
     "you",
     "your",
 }
-
-
-def _profile_dir(user_id: str) -> Path:
-    return REPO_ROOT / "users" / user_id
-
-
-def _read(path: Path) -> str:
-    return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
 def _strip_quotes(value: str) -> str:
@@ -132,6 +128,79 @@ def split_gate_sections(full_md: str) -> tuple[str, str]:
     if not marker:
         return full_md, ""
     return full_md[: marker.start()], full_md[marker.end() :]
+
+
+def _parse_candidates_metrics_shape(section: str) -> list[dict]:
+    """Parse a gate section into list of dicts with id, status, outcome (for metrics)."""
+    result: list[dict] = []
+    current: dict | None = None
+    for line in section.splitlines():
+        m = re.match(r"^### (CANDIDATE-\d+)", line)
+        if m:
+            current = {"id": m.group(1)}
+            result.append(current)
+            continue
+        if current is not None and line.strip().startswith("status:"):
+            status = line.split(":", 1)[1].strip().lower()
+            current["status"] = status
+            if "approved" in status or "rejected" in status:
+                current["outcome"] = "approved" if "approved" in status else "rejected"
+    return result
+
+
+def parse_gate_for_metrics(content: str) -> tuple[list[dict], list[dict]]:
+    """
+    Parse recursion-gate content into (pending_list, processed_list) for pipeline health.
+    Each item has id, status, and outcome when present. Use from metrics.py.
+    """
+    candidates_section, processed_section = split_gate_sections(content)
+    # Pending = only the slice between ## Candidates and ## Processed
+    idx_c = content.find("## Candidates")
+    idx_p = content.find("## Processed")
+    if idx_c >= 0 and idx_p > idx_c:
+        pending_section = content[idx_c:idx_p]
+    elif idx_c >= 0:
+        pending_section = content[idx_c:]
+    else:
+        pending_section = ""
+    pending = _parse_candidates_metrics_shape(pending_section)
+    processed = _parse_candidates_metrics_shape(processed_section)
+    return pending, processed
+
+
+def _parse_candidates_dashboard_shape(section: str) -> list[dict]:
+    """Parse pending section into list of {id, summary, mind_category, priority_score} for dashboard/profile."""
+    result: list[dict] = []
+    for m in re.finditer(
+        r"^### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```",
+        section,
+        re.MULTILINE | re.DOTALL,
+    ):
+        cid, yaml_body = m.group(1), m.group(2)
+        result.append({
+            "id": cid,
+            "summary": _extract_scalar(yaml_body, "summary").strip().strip('"'),
+            "mind_category": _extract_scalar(yaml_body, "mind_category").strip(),
+            "priority_score": _extract_scalar(yaml_body, "priority_score").strip(),
+        })
+    return result
+
+
+def parse_gate_pending_for_dashboard(content: str) -> tuple[int, list[dict]]:
+    """
+    Parse recursion-gate content into (pending_count, pending_candidates) for profile/dashboard.
+    Each candidate has id, summary, mind_category, priority_score. Use from generate_profile.py.
+    """
+    idx_c = content.find("## Candidates")
+    idx_p = content.find("## Processed")
+    if idx_c >= 0 and idx_p > idx_c:
+        pending_section = content[idx_c:idx_p]
+    elif idx_c >= 0:
+        pending_section = content[idx_c:]
+    else:
+        pending_section = ""
+    candidates = _parse_candidates_dashboard_shape(pending_section)
+    return len(candidates), candidates
 
 
 def _parse_timestamp(raw_ts: str) -> datetime | None:
@@ -329,6 +398,7 @@ __all__ = [
     "DEFAULT_USER",
     "filter_review_candidates",
     "get_review_candidate",
+    "parse_gate_for_metrics",
     "parse_review_candidates",
     "split_gate_sections",
 ]

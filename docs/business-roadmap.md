@@ -42,6 +42,7 @@ See [Design Notes](design-notes.md) for full white-paper narrative and different
 | **B2B (AI schools)** | Identity substrate for platforms | School integrates Record as identity layer | Platform license, API fees, white-label |
 | **Infrastructure** | Open schema, protocol, trust primitives | Others build Grace-Mar-compatible systems | Reference implementation, certification, ecosystem revenue share |
 | **Hybrid** | Open core + hosted + enterprise | Mixed adoption | Open core; hosted for non-technical; enterprise licensing for integrators |
+| **Coach / creator** | Personality with provenance | Coaches, creator-educators, small teams want portable, evidence-backed profile (interests, style, growth) for handoffs and tools | Hosted Record + export API; optional "coach handoff" export preset; see [positioning-personality-with-provenance.md](positioning-personality-with-provenance.md) |
 
 ---
 

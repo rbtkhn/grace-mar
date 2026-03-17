@@ -20,11 +20,24 @@ SKILLS_PATHS = [
 WORK_PATHS = [PROFILE_DIR / "work-alpha-school.md"]
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
+# In-process cache for load_record_chunks (invalidated when any source file mtime changes)
+_chunks_cache: list[tuple[str, str]] | None = None
+_chunks_mtime: float = 0.0
+
 
 def _read(path: Path) -> str:
     if not path.exists():
         return ""
     return path.read_text(encoding="utf-8")
+
+
+def _max_mtime(paths: list[Path]) -> float:
+    """Max mtime of paths that exist; 0 if none exist."""
+    mt = 0.0
+    for p in paths:
+        if p.exists():
+            mt = max(mt, p.stat().st_mtime)
+    return mt
 
 
 def _extract_chunks(content: str, source: str) -> list[tuple[str, str]]:
@@ -49,8 +62,22 @@ def _extract_chunks(content: str, source: str) -> list[tuple[str, str]]:
     return chunks
 
 
+def _all_record_paths() -> list[Path]:
+    return [SELF_PATH] + list(SKILLS_PATHS) + list(WORK_PATHS) + [EVIDENCE_PATH]
+
+
 def load_record_chunks() -> list[tuple[str, str]]:
-    """Load all chunks from SELF, SKILLS, EVIDENCE."""
+    """Load all chunks from SELF, SKILLS, EVIDENCE. Uses in-process cache when valid (env GRACE_MAR_RETRIEVER_CACHE=0 to disable)."""
+    global _chunks_cache, _chunks_mtime
+    paths = _all_record_paths()
+    max_mt = _max_mtime(paths)
+    if (
+        os.getenv("GRACE_MAR_RETRIEVER_CACHE", "1") != "0"
+        and _chunks_cache is not None
+        and max_mt > 0
+        and max_mt == _chunks_mtime
+    ):
+        return _chunks_cache
     chunks: list[tuple[str, str]] = []
     if SELF_PATH.exists():
         chunks.extend(_extract_chunks(_read(SELF_PATH), "SELF"))
@@ -62,6 +89,8 @@ def load_record_chunks() -> list[tuple[str, str]]:
             chunks.extend(_extract_chunks(_read(p), "WORK"))
     if EVIDENCE_PATH.exists():
         chunks.extend(_extract_chunks(_read(EVIDENCE_PATH), "EVIDENCE"))
+    _chunks_cache = chunks
+    _chunks_mtime = max_mt
     return chunks
 
 

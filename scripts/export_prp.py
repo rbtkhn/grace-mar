@@ -36,6 +36,17 @@ def _section(content: str, title: str) -> str | None:
     return m.group(1).strip() if m else None
 
 
+def _parse_self_sections(content: str) -> dict[str, str]:
+    """Parse self.md once into section title -> content. Single pass."""
+    sections: dict[str, str] = {}
+    for m in re.finditer(r"^## (.+?)\s*\n(.*?)(?=^## |\Z)", content, re.MULTILINE | re.DOTALL):
+        title = m.group(1).strip()
+        body = m.group(2).strip()
+        if title and body:
+            sections[title] = body
+    return sections
+
+
 def _yaml_list(content: str, key: str) -> list[str]:
     """Extract YAML list: key: [a, b] or key: \n  - a."""
     # inline list
@@ -62,9 +73,9 @@ def _yaml_value(content: str, key: str) -> str | None:
     return None
 
 
-def _extract_identity(self_content: str) -> dict:
+def _extract_identity(sections: dict[str, str]) -> dict:
     """Extract name, age, languages, location from I. IDENTITY."""
-    block = _section(self_content, "I. IDENTITY") or ""
+    block = sections.get("I. IDENTITY", "") or ""
     out = {}
     m = re.search(r"name:\s*(.+)", block)
     if m:
@@ -81,9 +92,9 @@ def _extract_identity(self_content: str) -> dict:
     return out
 
 
-def _extract_preferences(self_content: str) -> dict:
+def _extract_preferences(sections: dict[str, str]) -> dict:
     """Extract places, movies, books, food, activities from II. PREFERENCES."""
-    block = _section(self_content, "II. PREFERENCES (Survey Seeded)") or ""
+    block = sections.get("II. PREFERENCES (Survey Seeded)", "") or ""
     out = {}
     for key in ["places", "movies", "books", "food", "activities"]:
         items = _yaml_list(block, key)
@@ -95,9 +106,9 @@ def _extract_preferences(self_content: str) -> dict:
     return out
 
 
-def _extract_linguistic(self_content: str) -> dict:
+def _extract_linguistic(sections: dict[str, str]) -> dict:
     """Extract lexile_output, verbal_habits, tone, first sample from III. LINGUISTIC STYLE."""
-    block = _section(self_content, "III. LINGUISTIC STYLE") or ""
+    block = sections.get("III. LINGUISTIC STYLE", "") or ""
     out = {}
     m = re.search(r"lexile_output:\s*[\"']?(\d+)L", block)
     if m:
@@ -121,9 +132,9 @@ def _extract_linguistic(self_content: str) -> dict:
     return out
 
 
-def _extract_personality(self_content: str) -> dict:
+def _extract_personality(sections: dict[str, str]) -> dict:
     """Extract traits, emotional_patterns, self_concept from IV. PERSONALITY."""
-    block = _section(self_content, "IV. PERSONALITY") or ""
+    block = sections.get("IV. PERSONALITY", "") or ""
     out = {"traits": [], "emotional": [], "self_concept": None}
     m = re.search(r"self_concept:\s*(\w+)", block)
     if m:
@@ -275,10 +286,11 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
     if not self_content:
         return f"# Portable Record Prompt — {user_id}\n\nNo self.md found at {profile_dir / 'self.md'}.\n"
 
-    identity = _extract_identity(self_content)
-    prefs = _extract_preferences(self_content)
-    linguistic = _extract_linguistic(self_content)
-    personality = _extract_personality(self_content)
+    sections = _parse_self_sections(self_content)
+    identity = _extract_identity(sections)
+    prefs = _extract_preferences(sections)
+    linguistic = _extract_linguistic(sections)
+    personality = _extract_personality(sections)
     ix_a = _extract_ix_a(self_content)
     ix_b = _extract_ix_b(self_content)
     ix_c = _extract_ix_c_observations(self_content)
