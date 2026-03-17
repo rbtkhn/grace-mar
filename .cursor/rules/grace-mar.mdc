@@ -32,7 +32,9 @@ Both channels feed the same gated pipeline and the same profile.
 
 ### The "we" Convention
 
-When the user says **"we [did X]"**, it is a **pipeline invocation**. Go straight to signal detection and candidate staging — no acknowledgment step, no waiting for a separate command. "We" means: "I observed the self doing this; process it."
+When the user says **"we [did X]"**, it is a **pipeline invocation**. Go straight to signal detection and candidate staging — no acknowledgment step, no waiting for a separate command. "We" means: "I observed the self doing this; process it." When the user says **"we finished [book]"** or **"we read [title]"**, run signal detection and stage a candidate that can create a READ-* entry (or LEARN-* / curiosity referencing the book) so THINK and SELF.IX can be updated on approval. Do not ignore book-completion signals. See [pipeline-map](docs/pipeline-map.md) § READ.
+
+**Book-completion:** When the user says **"we finished [title]"** or **"we read [title]"**, run signal detection and stage a candidate that can create a READ-* entry (or LEARN-* / curiosity candidate referencing the book so THINK and SELF.IX update on approval). Do not ignore book-completion signals.
 
 ---
 
@@ -67,6 +69,8 @@ When candidates are approved, merge into ALL of these together:
 - `users/[id]/RECURSION-GATE.md` — move candidates to Processed
 - `users/[id]/SESSION-LOG.md` — session record
 - `bot/prompt.py` — emulation prompt (knowledge, curiosity, personality sections + analyst dedup list)
+
+**Merge only via script.** Do not edit SELF, EVIDENCE, or prompt directly on approval. Instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow). Cursor sessions must not perform manual merge.
 
 ---
 
@@ -139,6 +143,7 @@ The emulation prompt (`bot/prompt.py`) grows as the fork grows. To manage this:
 ## Forbidden
 
 - Leak LLM knowledge into the fork's profile or emulation
+- Edit SELF, EVIDENCE, or prompt directly when processing approved candidates (use `process_approved_candidates.py` instead)
 - Commit profile changes without user approval
 - Invent memories or experiences
 - Reference books/media they haven't consumed

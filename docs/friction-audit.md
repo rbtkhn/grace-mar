@@ -42,7 +42,7 @@
 
 **Priority:** 5 ÷ 3 = **1.67**
 
-**Planned intervention:** Template script (low effort) for new WRITE/CREATE entries. Longer term: optional bot or web upload flow.
+**Planned intervention:** Template script (low effort) for new WRITE/CREATE entries. Longer term: optional bot or web upload flow. **Implemented:** `scripts/scaffold_evidence_entry.py` — pass artifact path, `--kind write|create`, `--title` (and optional `--context`, `--evidence-tier`); script infers next ID and prints a YAML block for pasting into self-evidence.md (or use `--output` to append to a staging file).
 
 ---
 
@@ -70,7 +70,7 @@
 
 **Priority:** 3 ÷ 2 = **1.5**
 
-**Planned intervention:** Session summary script or dashboard view. Low effort, high clarity.
+**Planned intervention:** Session summary script or dashboard view. Low effort, high clarity. **Implemented:** `scripts/operator_gate_snapshot.py` — run at start of session for pending count, last N candidate IDs with one-line summary, and last ACT date in EVIDENCE. See [operator-weekly-review.md](operator-weekly-review.md) step 2.
 
 ---
 

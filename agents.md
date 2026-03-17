@@ -35,7 +35,7 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 | Mode | Purpose | Agent behavior |
 |------|---------|----------------|
 | **Session** | Interactive conversation with companion | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
-| **Pipeline** | Process staged candidates | Detect signals, stage to RECURSION-GATE, or process approved candidates into SELF/EVIDENCE/prompt. See [OPERATOR-WEEKLY-REVIEW](docs/operator-weekly-review.md) for recommended rhythm. |
+| **Pipeline** | Process staged candidates | Detect signals, stage to RECURSION-GATE, or on approval instruct operator to run `process_approved_candidates.py --apply` (do not edit SELF/EVIDENCE/prompt directly). See [OPERATOR-WEEKLY-REVIEW](docs/operator-weekly-review.md) for recommended rhythm. |
 | **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
 
 When in doubt, default to Session (conversational, no merges).
@@ -68,7 +68,9 @@ The emulated self can only know what is explicitly documented in its profile (`u
 
 ### 3. The "we" Convention
 
-When the companion says **"we [did X]"**, it is a pipeline invocation. Immediately run signal detection and stage candidates. Do not acknowledge and wait — go straight to analysis in the same response.
+When the companion says **"we [did X]"**, it is a pipeline invocation. Immediately run signal detection and stage candidates. Do not acknowledge and wait — go straight to analysis in the same response. When the operator says **"we finished [book]"** or **"we read [title]"**, run signal detection and stage a candidate that can create a READ-* entry (or a LEARN-* / curiosity candidate that references the book so THINK and SELF.IX can be updated on approval). Do not ignore book-completion signals. See pipeline-map § READ for the convention.
+
+**Book-completion signals:** When the operator says **"we finished [title]"** or **"we read [title]"**, run signal detection and stage a candidate that can create a READ-* entry in EVIDENCE (or a LEARN-* / curiosity candidate referencing the book so THINK and SELF.IX can be updated on approval). Do not ignore these signals.
 
 ### 4. No "Parent" Language
 
@@ -159,7 +161,7 @@ What "good" looks like for Grace-Mar:
 
 ## File Update Protocol
 
-When pipeline candidates are approved, **merge** into all of these together:
+When pipeline candidates are approved, **merge** into all of these together. **Merge only via script:** The agent must **not** edit `self.md`, `self-evidence.md`, `recursion-gate.md`, `session-log.md`, or `bot/prompt.py` directly. It must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow: `--generate-receipt` then `--apply --receipt`). This prevents five-file drift and preserves the audit trail. Only the script performs the atomic update across all files.
 
 | File | What to update |
 |------|---------------|
@@ -171,6 +173,8 @@ When pipeline candidates are approved, **merge** into all of these together:
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/pipeline-events.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
 | **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-llm.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
+
+**Merge only via script.** When the companion approves candidates, the agent must **not** edit self.md, self-evidence.md, or bot/prompt.py directly. The agent must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt-based flow: `--generate-receipt` then `--apply --receipt <path>`). Merging is performed only by the script; this preserves five-file consistency and the audit trail.
 
 **Real-time log vs gated archive:** The bot and Mini App append to `users/[id]/session-transcript.md` (raw conversation log for operator continuity). SELF-ARCHIVE is **not** written in real time; it is appended only when candidates are merged (same gate as SELF/EVIDENCE). SELF-ARCHIVE holds voice entries and other approved activities (e.g. operator actions, non-voice).
 
