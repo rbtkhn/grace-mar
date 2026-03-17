@@ -8,9 +8,21 @@
 
 ## What You Need
 
-- **Telegram** (or WeChat) on your phone
-- Access to the Grace-Mar bot (ask the person who set it up for the link)
+- **Telegram** (or WeChat) on your phone **or** a **family web link** (if your host turned it on)
+- Access to the Grace-Mar bot or the family app (ask the person who set it up)
 - That’s it — no GitHub, no code, no command line
+
+---
+
+## Optional: Family web app (no Telegram for chat/log)
+
+If your operator gives you a link like **https://…/app** with a **family code**, you can:
+
+- **Chat** — talk with Grace-Mar in the browser (same idea as the bot).
+- **Log** — type what you did (e.g. *We read The Wild Robot*) so it goes to the review queue.
+- **Review** — a grown-up enters a separate **operator** code to approve items and update the permanent record.
+
+Telegram is still supported; the web app is an extra channel. Technical setup: [MINIAPP-SETUP](miniapp-setup.md) (Family hub).
 
 ---
 
@@ -39,7 +51,7 @@ Type **/review** in the bot. You’ll see a list of things waiting for your appr
 
 Each item is a short summary (e.g., *"new interest in volcanoes"*, *"learned about black holes"*). Tap the button to approve or reject.
 
-**Important:** Approving in the bot updates the status. The full merge into the record (SELF, EVIDENCE, etc.) happens when the system is next processed — usually by whoever runs Grace-Mar for you (or on a schedule). If you run the bot yourself, you’ll need to run the review-queue process separately (see technical docs).
+**What happens after Approve:** Some items **merge right away** (quick merge — low-risk, operator chat). Others are marked approved first; a grown-up then finishes the job in the **Operator Console** (browser): open the **Gate** tab and tap **Merge approved (companion)** so the permanent record updates. That path needs the Mini App server running against a real copy of the Grace-Mar repo (see technical docs if merge fails on hosting).
 
 ---
 
@@ -58,9 +70,9 @@ Other useful commands:
 
 ## Who Processes the Record?
 
-If you’re using a **hosted** setup (someone else runs the bot), they usually handle processing. You add activities and approve/reject; they make sure changes are applied and the record stays up to date.
+If someone else runs Grace-Mar for you, they use the Operator Console (or command line) to **merge** approved items into the record. You still approve in Telegram; they tap **Merge approved (companion)** when ready.
 
-If you run the bot yourself, see [agents.md](../agents.md) and [PIPELINE-MAP](pipeline-map.md) for how to process the review queue.
+If you run everything yourself, see [operator-console.md](operator-console.md), [agents.md](../agents.md), and [PIPELINE-MAP](pipeline-map.md).
 
 ---
 
@@ -70,5 +82,5 @@ When the user switches schools, the record belongs to you. Use **"we did X"** an
 
 ---
 
-*Document version: 1.0*
-*Last updated: February 2026*
+*Document version: 1.2*
+*Last updated: March 2026*

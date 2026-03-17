@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build the Applied Theology website from APPLIED-THEOLOGY.md.
+Build the Beauty and the Blade website from APPLIED-THEOLOGY.md.
 Outputs index.html with nav and sectioned content.
 Requires: pip install markdown
 """
@@ -119,7 +119,7 @@ def main() -> None:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Applied Theology</title>
+  <title>Beauty and the Blade — A Symphony of Civilizations</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
@@ -128,8 +128,8 @@ def main() -> None:
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <h1 class="site-title">Applied Theology</h1>
-      <p class="site-subtitle">All Theological Materials from the Library</p>
+      <h1 class="site-title">Beauty and the Blade</h1>
+      <p class="site-subtitle">A Symphony of Civilizations</p>
     </div>
   </header>
 

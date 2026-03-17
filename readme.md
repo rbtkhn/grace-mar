@@ -46,7 +46,7 @@ Two input channels feed the pipeline:
 ## Status
 
 **Phase:** Active instance (emergent cognition, active pipeline)
-**Instance:** grace-mar (fork name: Grace-Mar)
+**Active fork (pilot):** grace-mar (fork name: Grace-Mar). Runtime defaults to a single fork via `GRACE_MAR_USER_ID` (default `grace-mar`); the filesystem and permissions model support multiple isolated forks — see [Fork isolation and multi-tenant design](docs/fork-isolation-and-multi-tenant.md).
 **Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **profile** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product). **Template/origin:** Grace-Mar is an **instance** of the companion-self template; the template repo (concept, protocol, seed, structure) is [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self).
 **Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality). **Seed Phase 7:** Moment of cognitive bifurcation — graduation to emergent cognition (2026-02-27).
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/wechat-setup.md`)
@@ -55,6 +55,21 @@ Two input channels feed the pipeline:
 ### Instance vs template
 
 This repo is a **live instance** (one person’s cognitive fork). The **template** for creating new instances is [companion-self](https://github.com/rbtkhn/companion-self). For a side-by-side comparison — purpose, relationship, and one-sentence summaries — see [grace-mar vs companion-self](docs/grace-mar-vs-companion-self.md).
+
+### Fork isolation and multi-tenant design
+
+Each cognitive fork is **isolated in its own namespace**: all data lives under `users/<fork_id>/`. The pilot runs a single fork (grace-mar); the design supports multiple forks with clean boundaries so adding a second fork or a family mesh does not require a rewrite.
+
+| Concern | Design |
+|--------|--------|
+| **Namespace** | One directory per fork; paths resolved via `profile_dir(fork_id)` / `fork_root(fork_id)` ([repo_io](scripts/repo_io.py)). |
+| **Permissions** | Per-fork operator; no cross-fork access. |
+| **Quotas** | Per-fork (artifact storage, pipeline events, pending candidates); optional `users/<id>/fork-config.json`. |
+| **Retention** | Per-fork (MEMORY TTL, archive rotation, etc.); scripts take `-u <fork_id>`. |
+| **Export/import** | All export scripts take `-u <fork_id>`; export is a single-fork snapshot; import writes only to the target fork. |
+| **Deployment** | Single-fork (pilot), single-process multi-fork (tenant in URL/header), or one process per fork. |
+
+See [Fork isolation and multi-tenant design](docs/fork-isolation-and-multi-tenant.md) for the full spec. To list forks: `python -c "from scripts.repo_io import list_forks; print(list_forks())"`.
 
 ## Quick Start — Chat with Grace-Mar (Abby)
 
@@ -161,6 +176,8 @@ grace-mar/
 | [Business Roadmap](docs/business-roadmap.md) | Strategy, monetization, go-to-market |
 | [Concept](docs/concept.md) | Full concept explanation |
 | [Pilot Plan](docs/pilot-plan.md) | Commercial pilot structure (Phase 1/2) |
+| [Fork isolation and multi-tenant](docs/fork-isolation-and-multi-tenant.md) | Per-fork namespace, quotas, retention, permissions, export/import, deployment |
+| [Performance budgets](docs/perf-budgets.md) | Perf suite tiers 1–5, SLOs, baselines, CI/nightly |
 
 ## Dashboard
 
@@ -281,6 +298,8 @@ python3 scripts/assert_canonical_paths.py --user grace-mar
 python3 scripts/validate-integrity.py --user grace-mar --json
 python3 -m pytest tests/ -v --tb=short
 ```
+
+**Performance (tier 1, CI):** `python scripts/run_perf_local.py` or covered by `pytest tests/test_perf_local.py`. Tiers 2–5 (exports, LLM, HTTP, load): [docs/perf-budgets.md](docs/perf-budgets.md).
 
 **Integrity audit** — run before merges or nightly via cron:
 

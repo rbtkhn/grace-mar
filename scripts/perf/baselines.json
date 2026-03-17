@@ -1,0 +1,19 @@
+{
+  "_comment": "p95 budgets in ms unless noted. null = skip check. Update after run_perf_suite on reference machine.",
+  "1.1_parse_gate_ms_p95": 2000,
+  "1.3_retrieve_ms_p95": 500,
+  "1.4_rate_limit_total_ms": 800,
+  "2.1_generate_profile_ms_p95": 120000,
+  "2.2_export_prp_ms_p95": 30000,
+  "2.3_export_manifest_ms_p95": 30000,
+  "2.4_export_runtime_bundle_ms_p95": 90000,
+  "2.5_export_fork_ms_p95": 60000,
+  "2.6_validate_integrity_ms_p95": 120000,
+  "2.7_assert_canonical_paths_ms_p95": 10000,
+  "3.1_get_response_ms_p95": 15000,
+  "3.2_grounded_ms_p95": 20000,
+  "3.3_analyze_exchange_ms_p95": 25000,
+  "4.1_operator_timeline_ms_p95": 5000,
+  "4.2_operator_gate_candidates_ms_p95": 5000,
+  "5.1_concurrent_retrieve_ms_p95": 2000
+}

@@ -19,7 +19,7 @@ Tracing the main sources and components that feed into the book. In-repo paths a
 | Part 6 — The Use | `essays/AI-ETHICS-FROM-THE-CONDITION.md` | *Source* in book: “draws on … Simple Condition and … ONE-SUBJECT-MANY-TONGUES.” |
 | Part 7 — The Coda | `essays/WRITING-THE-BOOK-AND-DEATH.md` | |
 | Part 8 — Preserving Consciousness | `essays/PRESERVING-CONSCIOUSNESS-BIOLOGICAL-SYMBOLS.md` | |
-| Part 9 — Scripture as Test | `notes/scripture-as-test-concept-and-literature.md` | Abridged in book (concept, Hinduism/Buddhism, Zionism tension; literature search omitted). |
+| Chapter 9 — Heaven or Armageddon | `notes/scripture-as-test-concept-and-literature.md` | Merges scripture-as-test (abridged) with heaven-or-Armageddon conclusion; literature search omitted. |
 | Appendix — God is non-zero-sum | `notes/concept-god-non-zero-sum.md` | Claim, link to Condition, “be fruitful and multiply,” “expand the light.” |
 
 ---
@@ -48,7 +48,7 @@ In `docs/civilization-memory/notes/`:
 | Note | How it influences the book |
 |------|----------------------------|
 | **face-category-blade.md** | Blade = replacement of face by category; “find the face inside the category”; expulsion = see the face again. Integrated into Part 1 (§ II, § IX). |
-| **scripture-as-test-concept-and-literature.md** | Concept: violent/prophetic scriptures as test; win by refusing to act out the script. Application to Hinduism and Buddhism; tension with prophecy-fulfillment (Zionism). Feeds Part 2 (§ Scripture as test) and Part 9 (standalone). |
+| **scripture-as-test-concept-and-literature.md** | Concept: violent/prophetic scriptures as test; win by refusing to act out the script. Application to Hinduism and Buddhism; tension with prophecy-fulfillment (Zionism). Feeds Part 2 (§ Scripture as test) and Chapter 9 (Heaven or Armageddon). |
 | **concept-god-non-zero-sum.md** | God / the good as non-zero-sum; link to condition and one subject many tongues; “be fruitful and multiply”; “expand the light.” Feeds Part 2 (§ One subject, many tongues) and Appendix. |
 | **research-brief-condition-in-the-traditions.md** | Research agenda: map “condition” (what must hold before the awaited future) in Christianity, Islam, Judaism, Hinduism, Buddhism. Supports the book’s central claim; not quoted verbatim. |
 | **research-brief-china-concepts-one-subject-many-tongues.md** | China-specific concepts (e.g. tianxia) for one subject many tongues. Background for Part 2 illustrations (China MEMs). |
@@ -87,7 +87,7 @@ THE-SIMPLE-CONDITION (essay)     ──►  Part 1 (Letter)
 face-category-blade (note)       ──►  Part 1 (§ II, § IX)
 
 ONE-SUBJECT-MANY-TONGUES (essay) ──►  Part 2 (Response)
-scripture-as-test (note)         ──►  Part 2 (§ Scripture as test), Part 9
+scripture-as-test (note)         ──►  Part 2 (§ Scripture as test), Ch. 9 (Heaven or Armageddon)
 concept-god-non-zero-sum (note)  ──►  Part 2 (§ One subject), Appendix
 civ-mem minds                    ──►  Part 2 (negotiation, legitimacy grammars)
 MEM corpora (Russia … America)   ──►  Part 2 (Illustrations from practice)

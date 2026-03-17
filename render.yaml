@@ -26,3 +26,5 @@ services:
         sync: false  # URL for bot menu button (e.g. https://grace-mar.com for profile); DASHBOARD_MINIAPP_URL still supported
       - key: OPERATOR_FETCH_SECRET
         sync: false  # Optional: when set, GET /operator/session-transcript and /operator/recursion-gate return live files (Bearer token). Use scripts/fetch_operator_files.py from Cursor to pull chat into local repo.
+      - key: FAMILY_APP_TOKEN
+        sync: false  # Optional: enables /app family hub (chat + log + parent-gated review). Bookmark https://<host>/app?t=<token>

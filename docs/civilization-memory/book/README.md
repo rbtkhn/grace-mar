@@ -24,4 +24,4 @@ Source: essays in `../essays/`, notes in `../notes/`. Single-document edition fo
 
 **website/** — Static website that presents the book: run `python3 build.py` in `website/` to generate `index.html` from APPLIED-THEOLOGY.md; open `index.html` or serve the folder to view. See `website/README.md`.
 
-**APPLIED-THEOLOGY-MANUSCRIPT.md** is the publisher-ready manuscript: same content as APPLIED-THEOLOGY.md with title page (author/copyright placeholders), word count (~20,500), all internal cross-references converted to in-text Part numbers (no file paths), inline source lines moved to a back-matter **Sources and References** section, and manuscript particulars for typesetting. Use this file for submission to a publisher.
+**beauty-and-the-blade-manuscript.md** is the publisher-ready manuscript for *Beauty and the Blade* (*A Symphony of Civilizations*): same body content as **APPLIED-THEOLOGY.md** (library mirror) with title page (author/copyright placeholders), word count, in-text chapter cross-references (no file paths), back-matter **Sources and References**, and manuscript particulars for typesetting. Use this file for submission to a publisher.

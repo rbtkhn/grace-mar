@@ -2,7 +2,7 @@
 
 **Purpose:** Deep-dive the Chinese canon (Analects, Mencius, Xunzi, Han Feizi, Shangjun shu) to **map the seam** — passages and concepts where the same tradition carries both beauty (face, form, restraint) and blade (category, punishment, erasure). Output supports Applied Theology Act II (The Chinese record) and provides evidence for MEM–CHINA entries.
 
-**Related:** [APPLIED-THEOLOGY-MANUSCRIPT](../book/APPLIED-THEOLOGY-MANUSCRIPT.md) (Kongzi, Mencius, Legalism, tributary, Three Kingdoms, Deng); [face-category-blade](face-category-blade.md); [scripture-as-test-concept-and-literature](scripture-as-test-concept-and-literature.md).
+**Related:** [Beauty and the Blade manuscript](../book/beauty-and-the-blade-manuscript.md) (Kongzi, Mencius, Legalism, tributary, Three Kingdoms, Deng); [face-category-blade](face-category-blade.md); [scripture-as-test-concept-and-literature](scripture-as-test-concept-and-literature.md).
 
 ---
 

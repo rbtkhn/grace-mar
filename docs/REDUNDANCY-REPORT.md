@@ -88,9 +88,9 @@ Signatures and regexes differ slightly (e.g. section by `## Title` vs next `##`)
 
 ---
 
-## 6. **APPLIED-THEOLOGY.md vs APPLIED-THEOLOGY-MANUSCRIPT.md**
+## 6. **APPLIED-THEOLOGY.md vs beauty-and-the-blade-manuscript.md**
 
-**Relationship:** Manuscript is the same body of content as the main book, with a **title page / manuscript front matter** and **end matter** (e.g. Sources and References). Body is kept in sync manually or by convention (~166 KB vs ~173 KB; manuscript is larger due to front/back matter and possibly a different Part 2 summary table).
+**Relationship:** Manuscript is the same body of content as the main book (*Beauty and the Blade*), with a **title page / manuscript front matter** and **end matter** (e.g. Sources and References). Body is kept in sync manually or by convention.
 
 **Redundancy:** Intentional dual artifact (web/source vs submission manuscript). Not code redundancy; content is deliberately mirrored. Risk is **drift** if only one file is updated.
 
@@ -149,7 +149,7 @@ So there is **intentional** reuse of ideas and text (essays → book), not accid
 | 3 | Default user id in 40+ places | Medium | Single `DEFAULT_USER_ID` (and argparse default) |
 | 4 | Multiple recursion-gate parsers | Medium | Canonical parse in recursion_gate_review; others call or adapt |
 | 5 | Section/YAML extraction in exports | Low | Optional shared util |
-| 6 | APPLIED-THEOLOGY vs MANUSCRIPT | Intentional | Document convention; optional drift check |
+| 6 | APPLIED-THEOLOGY vs beauty-and-the-blade-manuscript | Intentional | Document convention; optional drift check |
 | 7 | sys.path insert in scripts | Low | Leave as is |
 | 8 | Doc overlap | Low | Optional “where to read what” |
 | 9 | Civ-mem essays vs book | Intentional | Document relationship |

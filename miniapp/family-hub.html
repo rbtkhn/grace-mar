@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5a7d6c">
+  <title>Grace-Mar — Family</title>
+  <link rel="manifest" href="/manifest-family.json">
+  <style>
+    :root {
+      --bg: #1c221e;
+      --surface: #263028;
+      --text: #eef2ee;
+      --muted: #9aaa9e;
+      --accent: #7cb896;
+      --accent2: #c4a574;
+      --good: #7dc09a;
+      --danger: #d98b8e;
+      --border: rgba(255,255,255,0.09);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100dvh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: max(0.6rem, env(safe-area-inset-top)) max(0.75rem, env(safe-area-inset-right)) max(0.75rem, env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-left));
+    }
+    h1 { font-size: 1.15rem; margin: 0 0 0.25rem; color: var(--accent); }
+    .sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; line-height: 1.45; }
+    #setupScreen, #mainApp { max-width: 36rem; margin: 0 auto; }
+    #setupScreen label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 0.35rem; }
+    #setupScreen input {
+      width: 100%; padding: 0.65rem 0.75rem; border-radius: 10px; border: 1px solid var(--border);
+      background: var(--surface); color: var(--text); font-size: 1rem; margin-bottom: 0.75rem;
+    }
+    #setupScreen button {
+      padding: 0.65rem 1.2rem; border-radius: 10px; border: none;
+      background: var(--accent); color: var(--bg); font-weight: 600; cursor: pointer; font-size: 1rem;
+    }
+    .setupErr { color: var(--danger); font-size: 0.9rem; margin-top: 0.5rem; }
+    .tabs {
+      display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 0.85rem;
+    }
+    .tabs button {
+      flex: 1; min-width: 5.5rem; padding: 0.55rem 0.65rem; border-radius: 10px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      font: inherit; cursor: pointer; font-size: 0.9rem;
+    }
+    .tabs button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .tabs button .badge {
+      display: inline-block; margin-left: 0.25rem; padding: 0.1rem 0.4rem; border-radius: 6px;
+      background: rgba(0,0,0,0.2); font-size: 0.75rem; vertical-align: middle;
+    }
+    .tabs button.active .badge { background: rgba(0,0,0,0.15); }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .chat { max-height: min(52vh, 420px); overflow-y: auto; margin-bottom: 0.75rem; padding-right: 4px; }
+    .msg { margin-bottom: 0.85rem; padding: 0.55rem 0.75rem; border-radius: 12px; max-width: 94%; word-wrap: break-word; line-height: 1.4; font-size: 0.95rem; }
+    .msg.you { background: var(--accent); color: var(--bg); margin-left: auto; }
+    .msg.gm { background: var(--surface); border: 1px solid var(--border); }
+    .msg .who { font-size: 0.7rem; opacity: 0.75; margin-bottom: 0.2rem; }
+    .input-row { display: flex; gap: 0.45rem; }
+    .input-row input {
+      flex: 1; padding: 0.6rem 0.75rem; border-radius: 10px; border: 1px solid var(--border);
+      background: var(--surface); color: var(--text); font-size: 1rem;
+    }
+    .input-row button {
+      padding: 0.6rem 1rem; border-radius: 10px; border: none;
+      background: var(--accent); color: var(--bg); font-weight: 600; cursor: pointer;
+    }
+    .input-row button:disabled { opacity: 0.45; cursor: not-allowed; }
+    .toggle { display: flex; align-items: center; gap: 0.45rem; font-size: 0.82rem; color: var(--muted); margin-bottom: 0.65rem; cursor: pointer; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.65rem; }
+    .chip {
+      padding: 0.35rem 0.55rem; font-size: 0.8rem; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--accent2); cursor: pointer;
+    }
+    .typing { color: var(--muted); font-size: 0.85rem; font-style: italic; }
+    .err { color: var(--danger); font-size: 0.88rem; margin: 0.35rem 0; }
+    .logBox {
+      width: 100%; min-height: 6rem; padding: 0.65rem; border-radius: 10px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      font: inherit; margin-bottom: 0.65rem; resize: vertical;
+    }
+    .logExamples { font-size: 0.82rem; color: var(--muted); margin-bottom: 0.65rem; line-height: 1.5; }
+    .logOk { color: var(--good); font-size: 0.9rem; margin-top: 0.5rem; }
+    .lockPanel {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem; margin-bottom: 1rem;
+    }
+    .lockPanel input[type="password"] {
+      width: 100%; max-width: 20rem; padding: 0.55rem; border-radius: 8px;
+      border: 1px solid var(--border); background: #1a1f1c; color: var(--text); margin: 0.5rem 0;
+    }
+    .cards { display: flex; flex-direction: column; gap: 0.75rem; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0.85rem;
+    }
+    .card .sum { margin: 0.45rem 0; line-height: 1.4; font-size: 0.92rem; }
+    .card .meta { font-size: 0.78rem; color: var(--muted); }
+    .card .act { margin-top: 0.65rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .card .act button {
+      padding: 0.45rem 0.7rem; border-radius: 8px; border: 1px solid var(--border);
+      background: #1e2621; color: var(--text); font: inherit; cursor: pointer; font-size: 0.85rem;
+    }
+    .card .act button.good { color: var(--good); }
+    .card .act button.danger { color: var(--danger); }
+    .card .act button.pm { color: var(--accent2); }
+    .mergeRow { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.75rem 0; }
+    .mergeRow button {
+      padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid var(--border);
+      background: #1e2621; color: var(--text); font: inherit; cursor: pointer; font-size: 0.85rem;
+    }
+    .mergeRow button.primary { color: var(--good); border-color: var(--good); }
+    .footerNote { font-size: 0.78rem; color: var(--muted); margin-top: 1.25rem; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="setupScreen">
+    <h1>Grace-Mar Family</h1>
+    <p class="sub">Enter the family code from your setup email or bookmark. It stays on this device after you save.</p>
+    <label for="tokenInput">Family code</label>
+    <input id="tokenInput" type="password" autocomplete="off" placeholder="Paste family code">
+    <button type="button" id="saveTokenBtn">Continue</button>
+    <div id="setupErr" class="setupErr" hidden></div>
+  </div>
+
+  <div id="mainApp" class="hidden">
+    <h1>Grace-Mar Family</h1>
+    <p class="sub">Talk, log what you did, or review (grown-ups).</p>
+    <div class="tabs">
+      <button type="button" class="tabBtn active" data-tab="chat">Chat</button>
+      <button type="button" class="tabBtn" data-tab="log">Log <span class="badge" id="badgeLog"></span></button>
+      <button type="button" class="tabBtn" data-tab="review">Review <span class="badge" id="badgeReview"></span></button>
+    </div>
+
+    <div id="panel-chat" class="panel active">
+      <label class="toggle"><input type="checkbox" id="grounded" checked> Careful mode — stick to what’s in the Record</label>
+      <div class="chips">
+        <button type="button" class="chip" data-q="What do I like to draw?">What do I like to draw?</button>
+        <button type="button" class="chip" data-q="What books do I know?">What books do I know?</button>
+      </div>
+      <div class="chat" id="chat"></div>
+      <div class="input-row">
+        <input id="q" type="text" placeholder="Say something…" autocomplete="off" enterkeyhint="send">
+        <button id="send" type="button">Send</button>
+      </div>
+      <div id="chatErr" class="err" hidden></div>
+    </div>
+
+    <div id="panel-log" class="panel">
+      <p class="sub" style="margin-top:0;">Tell Grace-Mar what you did — like in the bot. Start with <strong>we</strong> or just describe it.</p>
+      <div class="logExamples">Examples: <em>We read a chapter of The Wild Robot.</em> · <em>We painted the moon.</em></div>
+      <textarea id="logText" class="logBox" placeholder="We …"></textarea>
+      <button type="button" id="logSend" style="padding:0.55rem 1rem;border-radius:10px;border:none;background:var(--accent);color:var(--bg);font-weight:600;cursor:pointer;">Send for review</button>
+      <div id="logMsg" class="logOk" hidden></div>
+      <div id="logErr" class="err" hidden></div>
+    </div>
+
+    <div id="panel-review" class="panel">
+      <div id="reviewLocked" class="lockPanel">
+        <strong>Parent / operator</strong>
+        <p class="sub" style="margin-bottom:0.5rem;">Enter the operator secret to approve items and update the permanent record.</p>
+        <input id="opSecret" type="password" placeholder="Operator secret" autocomplete="off">
+        <button type="button" id="unlockReview" style="padding:0.5rem 1rem;border-radius:8px;border:none;background:var(--accent2);color:var(--bg);font-weight:600;cursor:pointer;">Unlock</button>
+        <div id="unlockErr" class="err" hidden></div>
+      </div>
+      <div id="reviewOpen" class="hidden">
+        <p class="sub" style="margin-top:0;">Pending below. Approve or reject. Then merge approved (companion) to write the Record.</p>
+        <div class="mergeRow">
+          <button type="button" class="primary" id="mergeCompanion">Merge approved (companion)</button>
+          <button type="button" id="mergeAll">Merge all</button>
+          <button type="button" id="mergeWap">Merge WAP only</button>
+        </div>
+        <div id="mergeMsg" class="logOk" style="margin-bottom:0.75rem;"></div>
+        <div id="gateCards" class="cards"></div>
+        <div id="gateEmpty" class="sub hidden">Nothing waiting right now.</div>
+      </div>
+    </div>
+
+    <p class="footerNote">Family code stored only on this device. Log out: clear site data or use a private window.</p>
+    <button type="button" id="logoutFamily" style="margin-top:0.5rem;padding:0.4rem 0.75rem;font-size:0.8rem;border:1px solid var(--border);background:transparent;color:var(--muted);border-radius:8px;cursor:pointer;">Forget family code on this device</button>
+  </div>
+
+  <script>
+(function() {
+  var STORAGE_FAMILY = 'grace-mar-family-token';
+  var STORAGE_OP = 'grace-mar-operator-secret';
+  var chatMessages = [];
+
+  function familyHeaders() {
+    var t = localStorage.getItem(STORAGE_FAMILY) || '';
+    return { 'Content-Type': 'application/json', 'X-Family-Token': t };
+  }
+  function opHeaders() {
+    var s = sessionStorage.getItem(STORAGE_OP) || '';
+    return { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + s };
+  }
+
+  function showSetup(msg) {
+    document.getElementById('mainApp').classList.add('hidden');
+    document.getElementById('setupScreen').classList.remove('hidden');
+    var e = document.getElementById('setupErr');
+    if (msg) { e.textContent = msg; e.hidden = false; } else { e.hidden = true; }
+  }
+  function showMain() {
+    document.getElementById('setupScreen').classList.add('hidden');
+    document.getElementById('mainApp').classList.remove('hidden');
+  }
+
+  function boot() {
+    var params = new URLSearchParams(window.location.search);
+    var t = params.get('t');
+    if (t) {
+      localStorage.setItem(STORAGE_FAMILY, t.trim());
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+    var stored = localStorage.getItem(STORAGE_FAMILY);
+    if (!stored) {
+      showSetup('');
+      return;
+    }
+    fetch('/api/family/pending-count', { headers: { 'X-Family-Token': stored } })
+      .then(function(r) {
+        if (r.status === 503) {
+          showSetup('Family app is not enabled here yet. The host must set FAMILY_APP_TOKEN.');
+          return Promise.reject(new Error('skip'));
+        }
+        if (r.status === 401 || r.status === 403) throw new Error('bad token');
+        return r.json();
+      })
+      .then(function() {
+        showMain();
+        refreshBadges();
+        if (sessionStorage.getItem(STORAGE_OP)) {
+          document.getElementById('reviewLocked').classList.add('hidden');
+          document.getElementById('reviewOpen').classList.remove('hidden');
+          loadGate();
+          loadApprovedLine();
+        }
+      })
+      .catch(function(e) {
+        if (e && e.message === 'skip') return;
+        localStorage.removeItem(STORAGE_FAMILY);
+        showSetup('That code did not work. Check your link or ask for a new one.');
+      });
+  }
+
+  document.getElementById('saveTokenBtn').onclick = function() {
+    var v = (document.getElementById('tokenInput').value || '').trim();
+    if (!v) { document.getElementById('setupErr').textContent = 'Enter the family code.'; document.getElementById('setupErr').hidden = false; return; }
+    localStorage.setItem(STORAGE_FAMILY, v);
+    document.getElementById('setupErr').hidden = true;
+    boot();
+  };
+
+  document.getElementById('logoutFamily').onclick = function() {
+    if (!confirm('Forget the family code on this device?')) return;
+    localStorage.removeItem(STORAGE_FAMILY);
+    sessionStorage.removeItem(STORAGE_OP);
+    showSetup('');
+  };
+
+  function refreshBadges() {
+    var t = localStorage.getItem(STORAGE_FAMILY);
+    if (!t) return;
+    fetch('/api/family/pending-count', { headers: { 'X-Family-Token': t } })
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        var n = d.pending_count || 0;
+        var el = document.getElementById('badgeLog');
+        el.textContent = n ? String(n) : '';
+        document.getElementById('badgeReview').textContent = n ? String(n) : '';
+      })
+      .catch(function() {});
+  }
+
+  /* Tabs */
+  document.querySelectorAll('.tabBtn').forEach(function(btn) {
+    btn.onclick = function() {
+      var tab = btn.getAttribute('data-tab');
+      document.querySelectorAll('.tabBtn').forEach(function(b) { b.classList.toggle('active', b === btn); });
+      document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+      document.getElementById('panel-' + tab).classList.add('active');
+      if (tab === 'review' && sessionStorage.getItem(STORAGE_OP)) loadGate();
+    };
+  });
+
+  /* Chat */
+  var chatEl = document.getElementById('chat');
+  function addMsg(role, text) {
+    var apiRole = role === 'gm' ? 'assistant' : 'user';
+    chatMessages.push({ role: apiRole, content: text });
+    var d = document.createElement('div');
+    d.className = 'msg ' + (role === 'you' ? 'you' : 'gm');
+    var safe = String(text).replace(/</g, '&lt;').replace(/\n/g, '<br>');
+    d.innerHTML = '<div class="who">' + (role === 'you' ? 'You' : 'Grace-Mar') + '</div>' + safe;
+    chatEl.appendChild(d);
+    chatEl.scrollTop = chatEl.scrollHeight;
+  }
+  function setTyping(on) {
+    var id = 'typingInd';
+    var x = document.getElementById(id);
+    if (on && !x) {
+      x = document.createElement('div');
+      x.id = id;
+      x.className = 'typing';
+      x.textContent = 'Grace-Mar is thinking…';
+      chatEl.appendChild(x);
+      chatEl.scrollTop = chatEl.scrollHeight;
+    } else if (!on && x) x.remove();
+  }
+  document.getElementById('send').onclick = function() {
+    var q = document.getElementById('q');
+    var text = (q.value || '').trim();
+    if (!text) return;
+    q.value = '';
+    document.getElementById('chatErr').hidden = true;
+    addMsg('you', text);
+    setTyping(true);
+    var send = document.getElementById('send');
+    send.disabled = true;
+    var payload = {
+      message: text,
+      history: chatMessages.slice(0, -1),
+      mode: document.getElementById('grounded').checked ? 'grounded' : 'normal'
+    };
+    fetch('/api/family/ask', { method: 'POST', headers: familyHeaders(), body: JSON.stringify(payload) })
+      .then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error || 'Failed'); return j; }); })
+      .then(function(d) {
+        setTyping(false);
+        addMsg('gm', d.response || '');
+      })
+      .catch(function(e) {
+        setTyping(false);
+        document.getElementById('chatErr').textContent = e.message || 'Could not send.';
+        document.getElementById('chatErr').hidden = false;
+      })
+      .finally(function() { send.disabled = false; });
+  };
+  document.getElementById('q').onkeydown = function(e) { if (e.key === 'Enter') document.getElementById('send').onclick(); };
+  document.querySelectorAll('#panel-chat .chip').forEach(function(b) {
+    b.onclick = function() {
+      document.getElementById('q').value = b.getAttribute('data-q') || '';
+      document.getElementById('grounded').checked = true;
+      document.getElementById('send').onclick();
+    };
+  });
+
+  /* Log */
+  document.getElementById('logSend').onclick = function() {
+    var text = (document.getElementById('logText').value || '').trim();
+    var err = document.getElementById('logErr');
+    var ok = document.getElementById('logMsg');
+    err.hidden = true;
+    ok.hidden = true;
+    if (!text) { err.textContent = 'Write something first.'; err.hidden = false; return; }
+    fetch('/api/family/activity', { method: 'POST', headers: familyHeaders(), body: JSON.stringify({ text: text }) })
+      .then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error || 'Failed'); return j; }); })
+      .then(function(d) {
+        ok.textContent = d.staged
+          ? 'Sent for review. A grown-up can check it in Review. (' + (d.pending_count || 0) + ' waiting.)'
+          : (d.message || 'Nothing new to add.') + ' ' + (d.pending_count || 0) + ' in review.';
+        ok.hidden = false;
+        document.getElementById('logText').value = '';
+        refreshBadges();
+      })
+      .catch(function(e) { err.textContent = e.message || 'Could not send.'; err.hidden = false; });
+  };
+
+  /* Review unlock */
+  document.getElementById('unlockReview').onclick = function() {
+    var s = (document.getElementById('opSecret').value || '').trim();
+    var err = document.getElementById('unlockErr');
+    err.hidden = true;
+    if (!s) { err.textContent = 'Enter the secret.'; err.hidden = false; return; }
+    fetch('/operator/gate-candidates?status=pending', { headers: { 'Authorization': 'Bearer ' + s } })
+      .then(function(r) {
+        if (r.status === 401 || r.status === 403) throw new Error('Wrong secret.');
+        return r.json();
+      })
+      .then(function() {
+        sessionStorage.setItem(STORAGE_OP, s);
+        document.getElementById('reviewLocked').classList.add('hidden');
+        document.getElementById('reviewOpen').classList.remove('hidden');
+        loadGate();
+        loadApprovedLine();
+      })
+      .catch(function(e) { err.textContent = e.message || 'Unlock failed.'; err.hidden = false; });
+  };
+  if (sessionStorage.getItem(STORAGE_OP)) {
+    document.getElementById('reviewLocked').classList.add('hidden');
+    document.getElementById('reviewOpen').classList.remove('hidden');
+  }
+
+  function esc(s) {
+    return String(s || '').replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function loadGate() {
+    if (!sessionStorage.getItem(STORAGE_OP)) return;
+    fetch('/operator/gate-candidates?status=pending', { headers: opHeaders() })
+      .then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error); return j; }); })
+      .then(function(d) {
+        var items = d.items || [];
+        var wrap = document.getElementById('gateCards');
+        var empty = document.getElementById('gateEmpty');
+        wrap.innerHTML = '';
+        if (!items.length) { empty.classList.remove('hidden'); return; }
+        empty.classList.add('hidden');
+        items.forEach(function(item) {
+          var id = esc(item.id);
+          var card = document.createElement('div');
+          card.className = 'card';
+          card.setAttribute('data-id', item.id);
+          var quick = item.ready_for_quick_merge ? '<button type="button" class="pm" data-a="quick_merge">Quick merge</button>' : '';
+          card.innerHTML = '<div class="meta">' + esc(item.timestamp || '') + '</div><div class="sum">' + esc(item.summary || '') + '</div><div class="act">' +
+            '<button type="button" class="good" data-a="approve">Approve</button><button type="button" class="danger" data-a="reject">Reject</button>' + quick + '</div>';
+          wrap.appendChild(card);
+        });
+        wrap.querySelectorAll('[data-a]').forEach(function(btn) {
+          btn.onclick = function() {
+            var card = btn.closest('.card');
+            var cid = card.getAttribute('data-id');
+            var action = btn.getAttribute('data-a');
+            fetch('/operator/gate-candidates/' + encodeURIComponent(cid) + '/action', {
+              method: 'POST',
+              headers: opHeaders(),
+              body: JSON.stringify({ action: action })
+            }).then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error); return j; }); })
+              .then(function() { loadGate(); refreshBadges(); loadApprovedLine(); })
+              .catch(function(e) { alert(e.message); });
+          };
+        });
+      })
+      .catch(function() {
+        sessionStorage.removeItem(STORAGE_OP);
+        document.getElementById('reviewOpen').classList.add('hidden');
+        document.getElementById('reviewLocked').classList.remove('hidden');
+      });
+  }
+
+  function loadApprovedLine() {
+    var el = document.getElementById('mergeMsg');
+    if (!sessionStorage.getItem(STORAGE_OP)) return;
+    fetch('/operator/gate-candidates?status=approved', { headers: opHeaders() })
+      .then(function(r) { return r.json(); })
+      .then(function(d) {
+        var n = (d.items || []).length;
+        el.textContent = n ? (n + ' approved — use merge buttons above to write the Record.') : 'No approved items waiting merge.';
+      })
+      .catch(function() { el.textContent = ''; });
+  }
+
+  function doMerge(territory) {
+    var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'WAP' : 'all';
+    if (!confirm('Merge all APPROVED for "' + label + '" into the Record?')) return;
+    fetch('/operator/gate-candidates/merge-approved', {
+      method: 'POST',
+      headers: Object.assign({ 'Content-Type': 'application/json' }, opHeaders()),
+      body: JSON.stringify({ territory: territory })
+    }).then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error || j.message || 'Merge failed'); return j; }); })
+      .then(function(d) {
+        document.getElementById('mergeMsg').textContent = d.message || 'Done.';
+        loadGate();
+        refreshBadges();
+        loadApprovedLine();
+      })
+      .catch(function(e) { alert(e.message || e); });
+  }
+  document.getElementById('mergeCompanion').onclick = function() { doMerge('companion'); };
+  document.getElementById('mergeAll').onclick = function() { doMerge('all'); };
+  document.getElementById('mergeWap').onclick = function() { doMerge('wap'); };
+
+  boot();
+  setInterval(refreshBadges, 60000);
+})();
+  </script>
+</body>
+</html>

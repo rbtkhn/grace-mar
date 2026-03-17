@@ -2,7 +2,7 @@
 
 **Purpose:** Map how **ritual and channeled procedure** function as **form** that limits the blade across at least three traditions/corpora: Confucian 禮 *li*, Roman *ius* and *fetiales*, Islamic covenant (e.g. Constitution of Medina). Produce one shared frame: "ritual as form that limits arbitrary violence"; optional short appendix or new subsection for Applied Theology Act II.
 
-**Related:** [APPLIED-THEOLOGY-MANUSCRIPT](../book/APPLIED-THEOLOGY-MANUSCRIPT.md) (Terms: "Form"; Act II: Kongzi "replaces violence with form," Rome *ius* and *fetiales*, negotiation and the table); [face-category-blade](face-category-blade.md); MEM–CHINA–LIT–KONGZI, MEM–ROME, MEM–ISLAM–MEDINA.
+**Related:** [Beauty and the Blade manuscript](../book/beauty-and-the-blade-manuscript.md) (Terms: "Form"; Act II: Kongzi "replaces violence with form," Rome *ius* and *fetiales*, negotiation and the table); [face-category-blade](face-category-blade.md); MEM–CHINA–LIT–KONGZI, MEM–ROME, MEM–ISLAM–MEDINA.
 
 ---
 

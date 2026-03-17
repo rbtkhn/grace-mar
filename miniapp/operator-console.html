@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Operator Console — Grace-Mar</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --panel: #1a2332;
+      --card: #202833;
+      --text: #e8ecf1;
+      --muted: #8b9cb3;
+      --accent: #c17f59;
+      --good: #7dc09a;
+      --danger: #dd8e91;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, sans-serif;
+      padding: 1rem;
+    }
+    h1 { margin: 0 0 0.25rem; font-size: 1.35rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; }
+    .tabs {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .tabs button {
+      padding: 0.5rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--panel);
+      color: var(--text);
+      cursor: pointer;
+      font: inherit;
+    }
+    .tabs button.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .panel label { display: block; margin-bottom: 0.35rem; color: var(--muted); font-size: 0.9rem; }
+    input[type="text"], input[type="password"], textarea {
+      width: 100%;
+      max-width: 480px;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #10151c;
+      color: var(--text);
+      font: inherit;
+    }
+    textarea { min-height: 100px; resize: vertical; }
+    button.primary { background: rgba(193,127,89,0.2); color: var(--accent); }
+    button.good { color: var(--good); }
+    button.danger { color: var(--danger); }
+    button { padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid var(--border); background: #18212b; color: inherit; cursor: pointer; font: inherit; }
+    .msg { margin-top: 0.75rem; padding: 0.5rem; border-radius: 8px; font-size: 0.9rem; }
+    .msg.ok { background: rgba(125,192,154,0.15); color: var(--good); }
+    .msg.err { background: rgba(221,142,145,0.15); color: var(--danger); }
+    .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+    .card .id { font-weight: 600; font-family: monospace; color: var(--accent); }
+    .card .summary { margin: 0.5rem 0; }
+    .card .meta { font-size: 0.8rem; color: var(--muted); }
+    .card .actions { margin-top: 0.75rem; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .timeline-list { list-style: none; padding: 0; margin: 0; }
+    .timeline-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    .timeline-list li .ts { color: var(--muted); margin-right: 0.5rem; }
+    .empty { color: var(--muted); padding: 1rem; }
+  </style>
+</head>
+<body>
+  <h1>Operator Console</h1>
+  <p class="sub">Submit observations, upload artifacts, review candidates, and view the fork timeline — without editing markdown.</p>
+
+  <div class="panel">
+    <label>Operator secret</label>
+    <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+      <input id="token" type="password" placeholder="OPERATOR_FETCH_SECRET" style="max-width: 280px;">
+      <button id="saveToken" class="primary" type="button">Save</button>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button type="button" data-tab="observe">Observe</button>
+    <button type="button" data-tab="upload">Upload</button>
+    <button type="button" data-tab="gate">Gate</button>
+    <button type="button" data-tab="timeline">Timeline</button>
+  </div>
+
+  <div id="observe" class="tab-panel">
+    <div class="panel">
+      <label>Observation (e.g. &quot;we did X&quot; — same as saying it in Telegram)</label>
+      <textarea id="observeText" placeholder="we read Madeline and talked about bravery…"></textarea>
+      <button id="submitObserve" class="primary" type="button">Submit</button>
+      <div id="observeMsg" class="msg" style="display:none;"></div>
+    </div>
+  </div>
+
+  <div id="upload" class="tab-panel">
+    <div class="panel">
+      <label>File</label>
+      <input type="file" id="artifactFile">
+      <label style="margin-top: 0.75rem;">Optional note (staged with artifact)</label>
+      <textarea id="artifactNote" placeholder="e.g. homework scan from today" style="min-height: 60px;"></textarea>
+      <button id="submitArtifact" class="primary" type="button">Upload</button>
+      <div id="uploadMsg" class="msg" style="display:none;"></div>
+    </div>
+  </div>
+
+  <div id="gate" class="tab-panel">
+    <div class="panel">
+      <button id="gateReload" type="button">Reload candidates</button>
+      <span id="gateCount" class="sub" style="margin-left: 0.5rem;"></span>
+      <span id="approvedCount" class="sub" style="margin-left: 0.5rem;"></span>
+    </div>
+    <div class="panel">
+      <p class="sub" style="margin-top:0;">After you approve items (here or in Telegram), merge them into the permanent Record in one step.</p>
+      <button id="mergeCompanion" class="good" type="button">Merge approved (companion)</button>
+      <button id="mergeAll" type="button">Merge approved (all)</button>
+      <button id="mergeWap" type="button">Merge approved (WAP only)</button>
+      <div id="mergeMsg" class="msg" style="display:none;"></div>
+    </div>
+    <div id="gateCards" class="cards"></div>
+  </div>
+
+  <div id="timeline" class="tab-panel">
+    <div class="panel">
+      <button id="timelineReload" type="button">Reload timeline</button>
+    </div>
+    <ul id="timelineList" class="timeline-list"></ul>
+  </div>
+
+  <script>
+(function() {
+  var STORAGE_KEY = 'grace-mar-operator-secret';
+  var tokenInput = document.getElementById('token');
+
+  if (typeof URLSearchParams !== 'undefined') {
+    var q = new URLSearchParams(location.search);
+    if (q.get('token')) tokenInput.value = q.get('token');
+  }
+  tokenInput.value = tokenInput.value || localStorage.getItem(STORAGE_KEY) || '';
+
+  document.getElementById('saveToken').onclick = function() {
+    localStorage.setItem(STORAGE_KEY, tokenInput.value.trim());
+    showMsg(null, 'Saved.');
+  };
+
+  function authHeaders() {
+    var t = (tokenInput.value || '').trim();
+    return t ? { 'Authorization': 'Bearer ' + t } : {};
+  }
+
+  function showMsg(el, text, isError) {
+    if (!el) return;
+    el.style.display = text ? 'block' : 'none';
+    el.textContent = text || '';
+    el.className = 'msg ' + (isError ? 'err' : 'ok');
+  }
+
+  function api(path, options) {
+    options = options || {};
+    var headers = Object.assign({}, authHeaders(), options.headers || {});
+    return fetch(path, Object.assign({ headers: headers }, options)).then(function(r) {
+      if (!r.ok) return r.json().then(function(j) { throw new Error(j.error || r.statusText); });
+      return r.headers.get('content-type') && r.headers.get('content-type').indexOf('json') !== -1 ? r.json() : r.text();
+    });
+  }
+
+  // ——— Observe ———
+  document.getElementById('submitObserve').onclick = function() {
+    var text = (document.getElementById('observeText').value || '').trim();
+    if (!text) { showMsg(document.getElementById('observeMsg'), 'Enter an observation.', true); return; }
+    var btn = this;
+    btn.disabled = true;
+    api('/operator/observations', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text })
+    }).then(function(data) {
+      showMsg(document.getElementById('observeMsg'), (data.message || 'Submitted.') + ' Pending: ' + (data.pending_count || 0) + '.', false);
+      document.getElementById('observeText').value = '';
+    }).catch(function(e) {
+      showMsg(document.getElementById('observeMsg'), e.message || 'Request failed', true);
+    }).then(function() { btn.disabled = false; });
+  };
+
+  // ——— Upload ———
+  document.getElementById('submitArtifact').onclick = function() {
+    var file = document.getElementById('artifactFile').files[0];
+    if (!file) { showMsg(document.getElementById('uploadMsg'), 'Choose a file.', true); return; }
+    var note = (document.getElementById('artifactNote').value || '').trim();
+    var form = new FormData();
+    form.append('file', file);
+    if (note) form.append('observation', note);
+    var btn = this;
+    btn.disabled = true;
+    fetch('/operator/artifacts', {
+      method: 'POST',
+      headers: authHeaders(),
+      body: form
+    }).then(function(r) {
+      if (!r.ok) return r.json().then(function(j) { throw new Error(j.error || r.statusText); });
+      return r.json();
+    }).then(function(data) {
+      showMsg(document.getElementById('uploadMsg'), data.message || 'Uploaded.', false);
+      document.getElementById('artifactFile').value = '';
+      document.getElementById('artifactNote').value = '';
+    }).catch(function(e) {
+      showMsg(document.getElementById('uploadMsg'), e.message || 'Upload failed', true);
+    }).then(function() { btn.disabled = false; });
+  };
+
+  // ——— Gate ———
+  function loadApprovedCounts() {
+    api('/operator/gate-candidates?status=approved').then(function(data) {
+      var items = data.items || [];
+      var n = items.length;
+      var WAP = 'work-political-consulting';
+      var comp = items.filter(function(i) { return (i.territory || '') !== WAP; }).length;
+      document.getElementById('approvedCount').textContent = n + ' approved (waiting merge) · ' + comp + ' companion';
+    }).catch(function() {
+      document.getElementById('approvedCount').textContent = '';
+    });
+  }
+  function doMerge(territory) {
+    var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'WAP' : 'all';
+    if (!confirm('Merge all APPROVED candidates for territory "' + label + '" into the Record? This updates self.md, evidence, and prompt.')) return;
+    var el = document.getElementById('mergeMsg');
+    showMsg(el, 'Merging…', false);
+    fetch('/operator/gate-candidates/merge-approved', {
+      method: 'POST',
+      headers: Object.assign({ 'Content-Type': 'application/json' }, authHeaders()),
+      body: JSON.stringify({ territory: territory })
+    }).then(function(r) {
+      return r.json().then(function(j) {
+        if (!r.ok) throw new Error(j.error || r.statusText);
+        return j;
+      });
+    }).then(function(data) {
+      showMsg(el, (data.message || 'Done.') + (data.merged ? ' IDs: ' + (data.candidate_ids || []).join(', ') : ''), false);
+      loadGate();
+      loadApprovedCounts();
+    }).catch(function(e) {
+      showMsg(el, String(e.message || e), true);
+    });
+  }
+  document.getElementById('mergeCompanion').onclick = function() { doMerge('companion'); };
+  document.getElementById('mergeAll').onclick = function() { doMerge('all'); };
+  document.getElementById('mergeWap').onclick = function() { doMerge('wap'); };
+
+  function loadGate() {
+    loadApprovedCounts();
+    api('/operator/gate-candidates?status=pending').then(function(data) {
+      var items = data.items || [];
+      document.getElementById('gateCount').textContent = items.length + ' pending';
+      var html = items.length ? items.map(function(item) {
+        var id = escapeHtml(item.id);
+        var summary = escapeHtml(item.summary || '(no summary)');
+        var ts = escapeHtml(item.timestamp || '');
+        var quick = item.ready_for_quick_merge;
+        return '<div class="card" data-id="' + id + '">'
+          + '<span class="id">' + id + '</span>'
+          + '<p class="summary">' + summary + '</p>'
+          + '<div class="meta">' + ts + '</div>'
+          + '<div class="actions">'
+          + '<button type="button" class="good" data-action="approve">Approve</button>'
+          + '<button type="button" class="danger" data-action="reject">Reject</button>'
+          + (quick ? '<button type="button" class="primary" data-action="quick_merge">Quick merge</button>' : '')
+          + '</div></div>';
+      }).join('') : '<div class="empty">No pending candidates.</div>';
+      document.getElementById('gateCards').innerHTML = html;
+      document.getElementById('gateCards').querySelectorAll('.card [data-action]').forEach(function(btn) {
+        btn.onclick = function() {
+          var card = btn.closest('.card');
+          var cid = card.getAttribute('data-id');
+          var action = btn.getAttribute('data-action');
+          doGateAction(cid, action, card);
+        };
+      });
+    }).catch(function(e) {
+      document.getElementById('gateCards').innerHTML = '<div class="empty">' + escapeHtml(e.message) + '</div>';
+    });
+  }
+  function doGateAction(candidateId, action, cardEl) {
+    api('/operator/gate-candidates/' + encodeURIComponent(candidateId) + '/action', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: action })
+    }).then(function() {
+      if (cardEl) cardEl.remove();
+      loadGate();
+    }).catch(function(e) { alert(e.message); });
+  }
+  document.getElementById('gateReload').onclick = loadGate;
+
+  // ——— Timeline ———
+  function loadTimeline() {
+    api('/operator/timeline?limit=40').then(function(data) {
+      var events = data.events || [];
+      document.getElementById('timelineList').innerHTML = events.length
+        ? events.slice().reverse().map(function(ev) {
+            return '<li><span class="ts">' + escapeHtml(ev.ts) + '</span> ' + escapeHtml(ev.summary || ev.event) + '</li>';
+          }).join('')
+        : '<li class="empty">No events.</li>';
+    }).catch(function(e) {
+      document.getElementById('timelineList').innerHTML = '<li class="empty">' + escapeHtml(e.message) + '</li>';
+    });
+  }
+  document.getElementById('timelineReload').onclick = loadTimeline;
+
+  function escapeHtml(s) {
+    return String(s || '').replace(/[&<>"']/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  // Tabs
+  document.querySelectorAll('.tabs button').forEach(function(btn) {
+    btn.onclick = function() {
+      var tab = btn.getAttribute('data-tab');
+      document.querySelectorAll('.tabs button').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      var panel = document.getElementById(tab);
+      if (panel) panel.classList.add('active');
+      if (tab === 'gate') { loadGate(); loadApprovedCounts(); }
+      if (tab === 'timeline') loadTimeline();
+    };
+  });
+  document.querySelector('.tabs button[data-tab="observe"]').click();
+})();
+  </script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 **Purpose:** Map where Christianity, Islam, Judaism, Hinduism, and Buddhism **explicitly or implicitly** say that something must hold **before** the awaited future (return, restoration, judgment, moksha, nirvana, etc.) — and whether that "something" can be read as **peace or the cessation of killing**. Supports the book's central claim (peace as **condition** for what the traditions await, not the reward after) and Act I (the letter to religious leaders).
 
-**Related:** [APPLIED-THEOLOGY-MANUSCRIPT](../book/APPLIED-THEOLOGY-MANUSCRIPT.md) (Terms: "Condition"; Act I: The Call, "What if the cessation of killing is not the consequence of the return, but the condition for it?"); [THE-SIMPLE-CONDITION](../essays/THE-SIMPLE-CONDITION.md); [ONE-SUBJECT-MANY-TONGUES](../essays/ONE-SUBJECT-MANY-TONGUES.md).
+**Related:** [Beauty and the Blade manuscript](../book/beauty-and-the-blade-manuscript.md) (Terms: "Condition"; Act I: The Call, "What if the cessation of killing is not the consequence of the return, but the condition for it?"); [THE-SIMPLE-CONDITION](../essays/THE-SIMPLE-CONDITION.md); [ONE-SUBJECT-MANY-TONGUES](../essays/ONE-SUBJECT-MANY-TONGUES.md).
 
 ---
 

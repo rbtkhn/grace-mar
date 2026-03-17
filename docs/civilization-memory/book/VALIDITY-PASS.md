@@ -17,7 +17,7 @@
 | Part 6 — The Use | III (Truth) | ✓ AI ethics derived from the condition/framework. |
 | Part 7 — Coda | III (Truth) | ✓ Writing and death; condition as condition for the maximum of the most interesting activity. |
 | Part 8 — Preserving Consciousness | III (Truth) | ✓ Preserving consciousness in symbols; condition still holds. |
-| Part 9 — Scripture as Test | III (Truth) | ✓ Scripture as test; "stop" as content of winning the test; link to condition. |
+| Ch. 9 — Heaven or Armageddon | III (Truth) | ✓ Scripture as test; heaven vs Armageddon fork; link to condition. |
 | Appendix — God is non-zero-sum | III (Truth) | ✓ Non-zero-sum aligns with the condition. |
 
 **Finding:** Every part sits in the correct act per the preface and "How the book is organized."
@@ -36,7 +36,7 @@ For each Act III part, one sentence that states or implies the entailment (or fl
 | Part 6 | "This essay derives from that framework a set of ethics rules." Condition/framework as source of derivation. | Implicit (derivation = what follows from accepting the framework). |
 | Part 7 | "The condition (peace, put down the blade) is then also the condition for the maximum of the most interesting activity." | Explicit. |
 | Part 8 | "The condition (peace, see the face, put down the blade) is still the condition." States that condition governs preservation. | Implicit (condition holds; not quite "if we meet the condition, preserving consciousness is what we pursue"). **Optional fix:** one line at start. |
-| Part 9 | "Stop is the content of winning the test" (Link to Condition table). | Explicit. |
+| Ch. 9 | "Stop is the content of winning the test" (Link to Condition table); heaven-or-Armageddon conclusion. | Explicit. |
 | Appendix | "Aligns with the Condition"; non-zero-sum as structure of the good. | Explicit. |
 
 **Finding:** Part 4 and Part 8 benefit from a one-line explicit entailment at or near the start. Other Act III parts either state or clearly imply "this follows from the condition."
@@ -54,7 +54,7 @@ These are signposting only; no large rewrites.
 
 ## 4. Applied fixes
 
-The following one-line additions were applied in APPLIED-THEOLOGY.md and APPLIED-THEOLOGY-MANUSCRIPT.md:
+The following one-line additions were applied in APPLIED-THEOLOGY.md and beauty-and-the-blade-manuscript.md:
 
 - **Part 4:** First paragraph after the subtitle now includes: "If we meet the condition, the coordination hypothesis describes what becomes possible — and whether the evidence supports that the condition is structurally sound."
 - **Part 8:** First paragraph after the opening claim now includes: "If we meet the condition, preserving consciousness in symbols is what we are freed to pursue; the imperative to keep the species writing follows."

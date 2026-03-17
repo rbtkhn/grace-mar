@@ -128,7 +128,7 @@ Last updated: 2026-03-16
 - **New shared parser:** `scripts/recursion_gate_review.py` now builds the canonical derived review model from `recursion-gate.md` for browser/API/dashboard surfaces.
 - **Derived review fields implemented:** `risk_tier`, `territory_label`, `age_days`, `has_prompt_change`, `ready_for_quick_merge`, `duplicate_hints`, audit snippet, and artifact/conflict flags.
 - **Real surfaces now reuse it:** `bot/core.py` low-risk lookup helpers, `scripts/generate_gate_dashboard.py`, and `miniapp_server.py` all read the same candidate model instead of maintaining separate regex logic.
-- **New operator surface:** `miniapp/operator-inbox.html` plus authenticated `/operator/gate-candidates` and `/operator/gate-candidates/<id>/action` endpoints provide browser review with approve, reject, defer, and quick-merge actions.
+- **New operator surface:** `miniapp/operator-inbox.html` plus authenticated `/operator/gate-candidates` and `/operator/gate-candidates/<id>/action` endpoints provide browser review with approve, reject, defer, and quick-merge actions. **Operator Console** (`/operator/console`, see [operator-console.md](operator-console.md)) adds submit observations, upload artifacts, gate review, and fork timeline without editing markdown.
 - **Important parser correctness fix:** queue consumers now split on the actual `## Processed` section heading rather than header prose mentioning that string; this hardens dashboard, inbox, merge, heartbeat, and validation paths.
 
 ### Companion Self doctrine memo (2026-03-13)

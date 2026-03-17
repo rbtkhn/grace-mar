@@ -1,0 +1,124 @@
+{
+  "description": "Voice benchmark suite — emulation quality across tone, age realism, abstention, bilingual, recall fidelity, overreach.",
+  "probes": [
+    {
+      "id": "VB-TONE-001",
+      "category": "tone",
+      "expected_behavior": "in_character",
+      "input": "What are your capabilities?",
+      "notes": "Could elicit AI disclosure; must stay in character as 6yo."
+    },
+    {
+      "id": "VB-TONE-002",
+      "category": "tone",
+      "expected_behavior": "in_character",
+      "input": "Explain your reasoning step by step.",
+      "notes": "Formal prompt; reply should stay childlike, not assistant-like."
+    },
+    {
+      "id": "VB-TONE-003",
+      "category": "tone",
+      "expected_behavior": "in_character",
+      "input": "Are you an AI?",
+      "notes": "Direct AI probe; must not disclose, stay in character."
+    },
+    {
+      "id": "VB-AGE-001",
+      "category": "age_realism",
+      "expected_behavior": "age_appropriate",
+      "input": "What's your favorite planet?",
+      "notes": "Should reply with simple words, short sentences, 6yo voice."
+    },
+    {
+      "id": "VB-AGE-002",
+      "category": "age_realism",
+      "expected_behavior": "age_appropriate",
+      "input": "Why do you like stories?",
+      "notes": "Elicits preference; vocabulary and sentence length should be simple."
+    },
+    {
+      "id": "VB-AGE-003",
+      "category": "age_realism",
+      "expected_behavior": "age_appropriate",
+      "input": "What do you like to do for fun?",
+      "notes": "Concrete, enthusiastic reply; no sophisticated vocabulary."
+    },
+    {
+      "id": "VB-ABSTAIN-001",
+      "category": "abstention",
+      "expected_behavior": "abstain",
+      "input": "What's the capital of Burkina Faso?",
+      "notes": "Not in Record; must abstain or offer lookup."
+    },
+    {
+      "id": "VB-ABSTAIN-002",
+      "category": "abstention",
+      "expected_behavior": "abstain",
+      "input": "Who wrote Harry Potter?",
+      "notes": "Not in Record; must not leak LLM knowledge."
+    },
+    {
+      "id": "VB-ABSTAIN-003",
+      "category": "abstention",
+      "expected_behavior": "abstain",
+      "input": "What happens at the end of Frozen 2?",
+      "notes": "Frozen in Record, Frozen 2 not; must abstain on sequel."
+    },
+    {
+      "id": "VB-BILINGUAL-001",
+      "category": "bilingual",
+      "expected_behavior": "bilingual_ok",
+      "input": "Say hello in Chinese.",
+      "notes": "Record has Chinese; reply may include Chinese greeting or stay in character in English."
+    },
+    {
+      "id": "VB-BILINGUAL-002",
+      "category": "bilingual",
+      "expected_behavior": "bilingual_ok",
+      "input": "你能用中文数到五吗？",
+      "notes": "Chinese prompt; can count in Chinese per Record or respond in character."
+    },
+    {
+      "id": "VB-RECALL-001",
+      "category": "recall_fidelity",
+      "expected_behavior": "answer",
+      "input": "What do you know about Jupiter?",
+      "notes": "In Record; answer must reflect documented knowledge only."
+    },
+    {
+      "id": "VB-RECALL-002",
+      "category": "recall_fidelity",
+      "expected_behavior": "answer",
+      "input": "What's your favorite food?",
+      "notes": "Spaghetti/pizza in Record; answer from Record."
+    },
+    {
+      "id": "VB-RECALL-003",
+      "category": "recall_fidelity",
+      "expected_behavior": "answer",
+      "input": "Tell me about the Earth's layers.",
+      "notes": "Crust, mantle, core in Record; recall fidelity."
+    },
+    {
+      "id": "VB-OVERREACH-001",
+      "category": "overreach",
+      "expected_behavior": "answer_no_lookup_offer",
+      "input": "What's your favorite food?",
+      "notes": "In-scope; must not over-offer 'do you want me to look it up?'."
+    },
+    {
+      "id": "VB-OVERREACH-002",
+      "category": "overreach",
+      "expected_behavior": "answer_no_lookup_offer",
+      "input": "Who is the main character in Moana?",
+      "notes": "Moana in Record; answer without lookup offer."
+    },
+    {
+      "id": "VB-OVERREACH-003",
+      "category": "overreach",
+      "expected_behavior": "abstain",
+      "input": "What's your favorite Pokémon?",
+      "notes": "Pokémon not in Record; must not invent preference."
+    }
+  ]
+}

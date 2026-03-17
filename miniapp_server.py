@@ -14,12 +14,15 @@ Set PORT (default 5000) for hosting. Enable CORS if Mini App is on a different o
 Real-time exchanges are appended to users/<user>/session-transcript.md (same as Telegram).
 SELF-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
+Family hub: FAMILY_APP_TOKEN, routes /app, /api/family/*.
 """
 
 import asyncio
 import json
 import logging
 import os
+import re
+import subprocess
 import sys
 import threading
 from datetime import datetime
@@ -47,9 +50,12 @@ from bot.core import (
     is_low_risk_candidate,
     quick_merge_candidate,
     update_candidate_status,
+    analyze_activity_report,
+    get_pending_candidates,
 )
 from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
 from scripts import process_approved_candidates as pac
+from scripts.recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
 from scripts.work_american_politics_ops import get_wap_snapshot
 from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
@@ -57,9 +63,13 @@ app = Flask(__name__, static_folder="miniapp", static_url_path="")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
-SESSION_TRANSCRIPT_PATH = REPO_ROOT / "users" / USER_ID / "session-transcript.md"
-RECURSION_GATE_PATH = REPO_ROOT / "users" / USER_ID / "recursion-gate.md"
+USER_DIR = REPO_ROOT / "users" / USER_ID
+ARTIFACTS_DIR = USER_DIR / "artifacts"
+SESSION_TRANSCRIPT_PATH = USER_DIR / "session-transcript.md"
+RECURSION_GATE_PATH = USER_DIR / "recursion-gate.md"
+PIPELINE_EVENTS_PATH = USER_DIR / "pipeline-events.jsonl"
 OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
+FAMILY_APP_TOKEN = os.getenv("FAMILY_APP_TOKEN", "").strip()
 OPERATOR_NAME = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web").strip() or "operator-web"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
@@ -231,6 +241,12 @@ def index():
     return send_from_directory("miniapp", "index.html")
 
 
+@app.route("/operator/console")
+def operator_console():
+    """Operator console: submit observations, upload artifacts, review gate, view timeline. No markdown on critical path."""
+    return send_from_directory("miniapp", "operator-console.html")
+
+
 @app.route("/operator/inbox")
 def operator_inbox():
     """Browser review surface for RECURSION-GATE."""
@@ -255,11 +271,17 @@ def interview_by_user(user_id: str):
     return send_from_directory("miniapp", "index.html")
 
 
+@app.route("/app")
+def family_hub():
+    """Family hub: chat, log activity, parent-gated review. Bookmark with ?t=<FAMILY_APP_TOKEN>."""
+    return send_from_directory("miniapp", "family-hub.html")
+
+
 @app.after_request
 def _cors(resp):
     resp.headers["Access-Control-Allow-Origin"] = "*"
     resp.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
+    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Family-Token"
     return resp
 
 
@@ -296,6 +318,126 @@ def operator_recursion_gate():
     if not RECURSION_GATE_PATH.exists():
         return jsonify({"error": "recursion-gate.md not found", "path": str(RECURSION_GATE_PATH)}), 404
     return RECURSION_GATE_PATH.read_text(encoding="utf-8"), 200, {"Content-Type": "text/markdown; charset=utf-8"}
+
+
+@app.route("/operator/observations", methods=["POST"])
+def operator_observations():
+    """Submit an observation (same pipeline as 'we did X'). Stages to RECURSION-GATE; no markdown editing."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    text = (payload.get("text") or "").strip()
+    if not text:
+        return jsonify({"error": "text required"}), 400
+    channel_key = "operator:console"
+    try:
+        staged = analyze_activity_report(text, channel_key)
+    except Exception as e:
+        logger.exception("analyze_activity_report failed")
+        return jsonify({"error": str(e), "staged": False}), 500
+    pending = get_pending_candidates()
+    count = len(pending)
+    if staged:
+        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+        message = f"Added to your record. You have {count} thing{'s' if count != 1 else ''} to review."
+    else:
+        message = f"Nothing new to add right now. You have {count} in review."
+    return jsonify({
+        "ok": True,
+        "staged": staged,
+        "pending_count": count,
+        "message": message,
+    })
+
+
+@app.route("/operator/artifacts", methods=["POST"])
+def operator_artifacts():
+    """Upload a file to users/<id>/artifacts/ and optionally submit an observation. No markdown editing."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    file = request.files.get("file")
+    if not file or not file.filename:
+        return jsonify({"error": "file required"}), 400
+    # Safe filename: keep extension, sanitize name
+    base = re.sub(r"[^\w.\-]", "_", file.filename)[:120]
+    if not base:
+        base = "upload"
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
+    dest = ARTIFACTS_DIR / base
+    try:
+        file.save(str(dest))
+    except Exception as e:
+        logger.exception("artifact save failed")
+        return jsonify({"error": str(e)}), 500
+    rel_path = f"artifacts/{base}"
+    observation = (request.form.get("observation") or "").strip()
+    text = f"we added an artifact: {base}. {observation}" if observation else f"we added an artifact: {base}."
+    channel_key = "operator:console"
+    staged = False
+    try:
+        staged = analyze_activity_report(text, channel_key, staging_meta={"artifact_path": rel_path})
+        if staged:
+            emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+    except Exception as e:
+        logger.warning("artifact observation staging failed: %s", e)
+    pending = len(get_pending_candidates())
+    return jsonify({
+        "ok": True,
+        "path": rel_path,
+        "staged": staged,
+        "pending_count": pending,
+        "message": f"Saved {base}. " + (f"{pending} in review." if staged else "Nothing new to add to profile."),
+    })
+
+
+def _timeline_events(limit: int = 50) -> list[dict]:
+    """Read pipeline-events.jsonl and return last events for fork timeline (read-only)."""
+    out = []
+    if not PIPELINE_EVENTS_PATH.exists():
+        return out
+    lines = []
+    try:
+        with PIPELINE_EVENTS_PATH.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    lines.append(line)
+    except Exception:
+        return out
+    for line in lines[-limit:]:
+        try:
+            data = json.loads(line)
+            ts = data.get("ts") or ""
+            event = data.get("event") or ""
+            summary = event
+            if data.get("candidate_id"):
+                summary = f"{event} {data.get('candidate_id')}"
+            if data.get("evidence_id"):
+                summary += f" → {data['evidence_id']}"
+            out.append({
+                "ts": ts,
+                "event": event,
+                "candidate_id": data.get("candidate_id"),
+                "evidence_id": data.get("evidence_id"),
+                "channel_key": data.get("channel_key"),
+                "summary": summary,
+            })
+        except (json.JSONDecodeError, TypeError):
+            continue
+    return out
+
+
+@app.route("/operator/timeline", methods=["GET"])
+def operator_timeline():
+    """Return recent pipeline events for fork timeline (read-only). No markdown editing."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    limit = min(int(request.args.get("limit", 50)), 100)
+    events = _timeline_events(limit=limit)
+    return jsonify({"user_id": USER_ID, "events": events, "count": len(events)})
 
 
 @app.route("/operator/gate-candidates", methods=["GET"])
@@ -416,6 +558,92 @@ def operator_gate_candidate_action(candidate_id: str):
     return jsonify({"ok": True, "action": action, "message": message, "candidate_id": candidate_id})
 
 
+@app.route("/operator/gate-candidates/merge-approved", methods=["POST"])
+def operator_merge_approved():
+    """
+    Merge all approved candidates (above ## Processed, status approved) into SELF/EVIDENCE/prompt.
+    Uses receipt + process_approved_candidates --apply (same as CLI). Default territory=companion (family MVP).
+    """
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    territory = (payload.get("territory") or "companion").strip().lower()
+    if territory not in ("companion", "wap", "all"):
+        return jsonify({"error": "territory must be companion, wap, or all"}), 400
+
+    pac._set_user(USER_ID)
+    approved = pac.get_approved_in_candidates()
+    if territory == "wap":
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
+    elif territory == "companion":
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]
+
+    if not approved:
+        return jsonify({
+            "ok": True,
+            "merged": 0,
+            "message": f"No approved candidates waiting to merge (territory={territory}).",
+        })
+
+    receipt = pac._build_receipt(approved, OPERATOR_NAME, territory if territory != "all" else "all")
+    receipt["min_evidence_tier"] = max(
+        int(receipt.get("min_evidence_tier", pac.MIN_EVIDENCE_TIER)),
+        pac.MIN_EVIDENCE_TIER,
+    )
+
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
+    receipt_path = ARTIFACTS_DIR / ".merge-receipt-temp.json"
+    receipt_path.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
+
+    try:
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(REPO_ROOT / "scripts" / "process_approved_candidates.py"),
+                "-u",
+                USER_ID,
+                "--apply",
+                "--receipt",
+                str(receipt_path),
+                "--approved-by",
+                OPERATOR_NAME,
+                "--territory",
+                territory,
+            ],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=600,
+        )
+    finally:
+        receipt_path.unlink(missing_ok=True)
+
+    if result.returncode != 0:
+        err_text = (result.stderr or result.stdout or "merge failed").strip()
+        if len(err_text) > 3000:
+            err_text = err_text[-3000:]
+        logger.warning("merge-approved failed: %s", err_text)
+        return jsonify({"error": err_text, "exit_code": result.returncode}), 500
+
+    ids = [c["id"] for c in approved]
+    emit_pipeline_event(
+        "operator_merge_approved_batch",
+        None,
+        channel_key="operator:web",
+        actor=OPERATOR_NAME,
+        source="miniapp_server:merge_approved",
+        territory=territory,
+        merged_count=len(ids),
+    )
+    return jsonify({
+        "ok": True,
+        "merged": len(approved),
+        "candidate_ids": ids,
+        "message": f"Merged {len(approved)} candidate(s) into the Record (territory={territory}).",
+    })
+
+
 @app.route("/operator/gate-candidates/batch-action", methods=["POST"])
 def operator_gate_candidates_batch_action():
     """Batch approve or reject candidates. Emits one pipeline event per candidate."""
@@ -499,6 +727,110 @@ def operator_gate_candidates_generate_receipt():
     })
 
 
+def _process_ask_body(data: dict, channel_key: str, archive: bool) -> dict:
+    """Run ask flow; channel_key for grounded/lookup (e.g. miniapp, web:family)."""
+    if not OPENAI_API_KEY:
+        return {"_error": ("OPENAI_API_KEY not configured", 500)}
+    message = (data.get("message") or "").strip()
+    if not message:
+        return {"_error": ("message required", 400)}
+    history = data.get("history") or []
+    grounded = data.get("mode") == "grounded"
+    interview = data.get("interview") is True
+    ck = "interview" if interview else channel_key
+    if grounded:
+        reply = run_grounded_response(message, channel_key=ck, history=history)
+        if archive and not interview:
+            _archive_miniapp(message, reply, is_lookup=False)
+        return {"response": reply}
+    question = _should_run_lookup(message, history)
+    if question:
+        reply = run_lookup(question, channel_key=channel_key)
+        if archive and not interview:
+            _archive_miniapp(message, reply, is_lookup=True, lookup_question=question)
+        return {"response": reply}
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    for h in history:
+        role = h.get("role")
+        content = (h.get("content") or "").strip()
+        if role in ("user", "assistant") and content:
+            messages.append({"role": role, "content": content})
+    messages.append({"role": "user", "content": message})
+    client = OpenAI(api_key=OPENAI_API_KEY)
+    response = client.chat.completions.create(
+        model=OPENAI_MODEL,
+        messages=messages,
+        max_tokens=200,
+        temperature=0.9,
+    )
+    reply = response.choices[0].message.content.strip()
+    if archive and not interview:
+        _archive_miniapp(message, reply, is_lookup=False)
+    return {"response": reply}
+
+
+@app.route("/api/family/activity", methods=["POST", "OPTIONS"])
+def family_activity():
+    if request.method == "OPTIONS":
+        return "", 204
+    ok, err = _family_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    text = (payload.get("text") or "").strip()
+    if not text:
+        return jsonify({"error": "text required"}), 400
+    if not re.match(r"(?i)^we\s+", text):
+        text = "we did " + text.lstrip()
+    channel_key = "web:family"
+    try:
+        staged = analyze_activity_report(text, channel_key)
+    except Exception as e:
+        logger.exception("family analyze_activity_report failed")
+        return jsonify({"error": str(e), "staged": False}), 500
+    pending = get_pending_candidates()
+    count = len(pending)
+    if staged:
+        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+    return jsonify({
+        "ok": True,
+        "staged": staged,
+        "pending_count": count,
+        "message": "Sent for review." if staged else "Nothing new to add right now.",
+    })
+
+
+@app.route("/api/family/pending-count", methods=["GET", "OPTIONS"])
+def family_pending_count():
+    if request.method == "OPTIONS":
+        return "", 204
+    ok, err = _family_auth()
+    if not ok:
+        return err
+    pending = get_pending_candidates()
+    return jsonify({"pending_count": len(pending), "user_id": USER_ID})
+
+
+@app.route("/api/family/ask", methods=["POST", "OPTIONS"])
+def family_ask():
+    if request.method == "OPTIONS":
+        return "", 204
+    ok, err = _family_auth()
+    if not ok:
+        return err
+    if not OPENAI_API_KEY:
+        return jsonify({"error": "OPENAI_API_KEY not configured"}), 500
+    data = request.get_json() or {}
+    try:
+        out = _process_ask_body(data, channel_key="web:family", archive=True)
+        if "_error" in out:
+            msg, code = out["_error"]
+            return jsonify({"error": msg}), code
+        return jsonify(out)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route("/api/ask", methods=["POST", "OPTIONS"])
 def ask():
     if request.method == "OPTIONS":
@@ -506,48 +838,12 @@ def ask():
     if not OPENAI_API_KEY:
         return jsonify({"error": "OPENAI_API_KEY not configured"}), 500
     data = request.get_json() or {}
-    message = (data.get("message") or "").strip()
-    if not message:
-        return jsonify({"error": "message required"}), 400
-    history = data.get("history") or []
-    grounded = data.get("mode") == "grounded"
-    interview = data.get("interview") is True
-
     try:
-        channel_key = "interview" if interview else "miniapp"
-        if grounded:
-            reply = run_grounded_response(message, channel_key=channel_key, history=history)
-            if not interview:
-                _archive_miniapp(message, reply, is_lookup=False)
-            return jsonify({"response": reply})
-
-        # Affirmative follow-up to "do you want me to look it up?" → run lookup
-        question = _should_run_lookup(message, history)
-        if question:
-            reply = run_lookup(question, channel_key="miniapp")
-            _archive_miniapp(message, reply, is_lookup=True, lookup_question=question)
-            return jsonify({"response": reply})
-
-        # Normal flow: SYSTEM_PROMPT + history + new message
-        messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-        for h in history:
-            role = h.get("role")
-            content = (h.get("content") or "").strip()
-            if role in ("user", "assistant") and content:
-                messages.append({"role": role, "content": content})
-        messages.append({"role": "user", "content": message})
-
-        client = OpenAI(api_key=OPENAI_API_KEY)
-        response = client.chat.completions.create(
-            model=OPENAI_MODEL,
-            messages=messages,
-            max_tokens=200,
-            temperature=0.9,
-        )
-        reply = response.choices[0].message.content.strip()
-        if not interview:
-            _archive_miniapp(message, reply, is_lookup=False)
-        return jsonify({"response": reply})
+        out = _process_ask_body(data, channel_key="miniapp", archive=True)
+        if "_error" in out:
+            msg, code = out["_error"]
+            return jsonify({"error": msg}), code
+        return jsonify(out)
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

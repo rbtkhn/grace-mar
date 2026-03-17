@@ -2,7 +2,7 @@
 
 **Purpose:** Trace and map Chinese concepts that **name** the book's "one subject, many tongues" and coordination without creedal merger: 和而不同 *he er butong*, 天下 *tianxia*, 夷夏 *yi–xia*. Distinguish **inclusive** readings (one horizon, many rites) from **category-erasing** readings (Sino-centrism, "barbarian" as type). Output supports Applied Theology Act I–II and MEM–CHINA–TIANXIA and related entries.
 
-**Related:** [APPLIED-THEOLOGY-MANUSCRIPT](../book/APPLIED-THEOLOGY-MANUSCRIPT.md) (tianxia, one subject many tongues); [ONE-SUBJECT-MANY-TONGUES](../essays/ONE-SUBJECT-MANY-TONGUES.md); [face-category-blade](face-category-blade.md).
+**Related:** [Beauty and the Blade manuscript](../book/beauty-and-the-blade-manuscript.md) (tianxia, one subject many tongues); [ONE-SUBJECT-MANY-TONGUES](../essays/ONE-SUBJECT-MANY-TONGUES.md); [face-category-blade](face-category-blade.md).
 
 ---
 

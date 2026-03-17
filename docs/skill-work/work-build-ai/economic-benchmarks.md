@@ -76,7 +76,7 @@ Do not treat **planned** or **blocked** metrics as observable until instrumentat
 
 | Metric | Description | Source | Status |
 |--------|-------------|--------|--------|
-| Export latency | Time from trigger to export completion | script timing or wrapper logs | manual |
+| Export latency | Time from trigger to export completion | `scripts/run_perf_suite.py --tier 2` (export_prp, manifest, runtime_bundle, fork) | instrumented via perf suite |
 | Handback latency | Time from `openclaw_stage` to staged candidate | script timing or wrapper logs | manual |
 | Session continuity reads | Proof that SESSION-LOG, RECURSION-GATE, EVIDENCE were read before OpenClaw | continuity-log.jsonl | instrumented |
 

@@ -1,6 +1,6 @@
-# Applied Theology — website
+# Beauty and the Blade — website
 
-Static single-page site that presents the full text of *Applied Theology* with a clear table of contents and readable typography.
+Static single-page site that presents the full text of *Beauty and the Blade* (*A Symphony of Civilizations*) from `APPLIED-THEOLOGY.md`, with a clear table of contents and readable typography.
 
 ## Build
 

@@ -2,7 +2,7 @@
 
 **Purpose:** Plan for developing and maintaining the Grace-Mar web app at grace-mar.com. Aligns with skill-work objectives and long-term identity infrastructure goals.
 
-**Status:** Plan. Not yet implemented.
+**Status:** Partially implemented — **Family hub** on the Mini App host (`/app`): token-gated chat + activity log + parent-gated review/merge. grace-mar.com landing unification and admissions chat remain as before.
 
 **Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md), [CHAT-FIRST-DESIGN](chat-first-design.md)
 
@@ -61,12 +61,14 @@ Grace-mar.com becomes the **primary front door** for Grace-Mar:
 
 | Deliverable | Description |
 |-------------|-------------|
-| **Review flow** | View RECURSION-GATE; approve/reject from web. Same gate as today; web UI instead of editing files. |
-| **Session continuity** | Before chat, load SESSION-LOG, MEMORY. Close the loop. |
+| **Review flow** | **Done (family hub):** `/app` Review tab + operator secret; approve/reject/quick merge + merge-approved. Operator Console / Inbox remain alternate surfaces. |
+| **Activity from web** | **Done:** `POST /api/family/activity` (`FAMILY_APP_TOKEN`). |
+| **Web chat (gated)** | **Done:** `POST /api/family/ask`. |
+| **Session continuity** | Before chat, load SESSION-LOG, MEMORY. Close the loop. *(Not done on /app.)* |
 | **Export** | Trigger export (PRP, curriculum_profile, etc.) from web; download. |
-| **Auth** | Companion/operator login. Scope: one user per instance for pilot. |
+| **Auth** | **Partial:** Shared family token + operator secret for review; not full login/OAuth. |
 
-**Tech:** Add auth layer; integrate with pipeline (read RECURSION-GATE; call process_approved_candidates on approve).
+**Tech:** `miniapp/family-hub.html`, `miniapp_server.py` family routes.
 
 **Dependencies:** Pipeline scripts; user dir structure.
 
@@ -140,7 +142,7 @@ grace-mar.com
 | Phase | Success |
 |-------|---------|
 | 1 | Reviewer can open `/me/<token>`, ask questions, get fork responses. No Telegram. |
-| 2 | Operator can approve RECURSION-GATE from web. Export downloadable. |
+| 2 | Operator can approve RECURSION-GATE from web (**family hub + console + inbox**). Export from web still CLI/profile. |
 | 3 | Companion/operator uses grace-mar.com as primary interface. |
 
 ---
@@ -155,5 +157,5 @@ grace-mar.com
 
 ---
 
-*Plan version: 1.0*
-*Last updated: February 2026*
+*Plan version: 1.1*
+*Last updated: March 2026*

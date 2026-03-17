@@ -1,0 +1,14 @@
+{
+  "fork_id": "grace-mar",
+  "display_name": "Grace-Mar",
+  "quotas": {
+    "artifact_storage_mb": 500,
+    "pipeline_events_max": 50000,
+    "pending_candidates_max": 200
+  },
+  "retention": {
+    "memory_ttl_days": 14,
+    "archive_rotate_entries": 2500,
+    "session_transcript_max_mb": 10
+  }
+}

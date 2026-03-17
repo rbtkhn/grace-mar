@@ -91,6 +91,15 @@ OPERATOR_REMINDER_ENABLED = os.getenv("GRACE_MAR_OPERATOR_REMINDERS", "1").strip
 OPERATOR_REMINDER_INTERVAL_SEC = int(os.getenv("GRACE_MAR_OPERATOR_REMINDER_INTERVAL_SEC", "21600"))
 OPERATOR_PENDING_THRESHOLD = int(os.getenv("GRACE_MAR_OPERATOR_PENDING_THRESHOLD", "5"))
 OPERATOR_STALE_DAYS = int(os.getenv("GRACE_MAR_OPERATOR_STALE_DAYS", "7"))
+# Optional base URL for Operator Console (no trailing path). Bot hints after approve /merge.
+OPERATOR_CONSOLE_URL = (os.getenv("GRACE_MAR_OPERATOR_CONSOLE_URL") or "").strip().rstrip("/")
+
+
+def _operator_merge_hint() -> str:
+    """Short hint for merging approved candidates (browser or CLI)."""
+    if OPERATOR_CONSOLE_URL:
+        return f"Merge: {OPERATOR_CONSOLE_URL}/operator/console → Gate → Merge approved (companion)."
+    return "Merge: Operator Console → Gate → Merge approved (companion), or type /merge for CLI."
 
 # Idle checkpoint prompt: daily nudge to add anything from the day (passive capture)
 IDLE_CHECKPOINT_ENABLED = os.getenv("GRACE_MAR_IDLE_CHECKPOINT_ENABLED", "0").strip().lower() in {"1", "true", "yes"}
@@ -431,9 +440,14 @@ async def _process_review_choice(
                 await update.message.reply_text(f"✅ {cid} — merged! (quick approve)")
             except Exception:
                 logger.exception("Quick merge in review")
-                await update.message.reply_text(f"✅ {cid} — approved. Quick merge failed — /merge for receipt.")
+                await update.message.reply_text(f"✅ {cid} — approved. Quick merge failed. {_operator_merge_hint()}")
         elif ok:
-            await update.message.reply_text(f"✅ {cid} — approved")
+            if _is_operator_chat(update):
+                await update.message.reply_text(f"✅ {cid} — approved. {_operator_merge_hint()}")
+            else:
+                await update.message.reply_text(
+                    f"✅ {cid} — approved. A grown-up with operator access will add it to the permanent record from the Operator Console."
+                )
         else:
             await update.message.reply_text(f"couldn't approve {cid} (not pending?)")
     elif choice == "R":
@@ -567,14 +581,20 @@ async def callback_approve_reject(update: Update, context: ContextTypes.DEFAULT_
             if merge_ok:
                 await query.edit_message_text(f"✅ {candidate_id} — merged! (quick approve)")
             else:
-                await query.edit_message_text(f"✅ {candidate_id} — approved. Merge failed: {msg[:80]}. Run /merge for receipt flow.")
+                await query.edit_message_text(
+                f"✅ {candidate_id} — approved. Merge failed: {msg[:80]}. {_operator_merge_hint()}"
+            )
         except Exception:
             logger.exception("Quick merge error")
-            await query.edit_message_text(f"✅ {candidate_id} — approved. Quick merge failed — run /merge for receipt flow.")
+            await query.edit_message_text(
+                f"✅ {candidate_id} — approved. Quick merge failed. {_operator_merge_hint()}"
+            )
         return
 
-        emoji = "✅" if action == "approve" else "❌"
-        await query.edit_message_text(f"{emoji} {candidate_id} — {status}")
+    if action == "approve":
+        await query.edit_message_text(f"✅ {candidate_id} — approved. {_operator_merge_hint()}")
+    else:
+        await query.edit_message_text(f"❌ {candidate_id} — rejected")
 
 
 async def stage_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -669,17 +689,15 @@ async def approve_command(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                 await update.message.reply_text(f"✅ {candidate_id} — merged! (quick approve)")
             else:
                 await update.message.reply_text(
-                    f"✅ {candidate_id} — approved. Merge failed: {msg[:80]}. Run /merge for receipt flow."
+                    f"✅ {candidate_id} — approved. Merge failed: {msg[:80]}. {_operator_merge_hint()}"
                 )
         except Exception:
             logger.exception("Quick approve merge error")
             await update.message.reply_text(
-                f"✅ {candidate_id} — approved. Quick merge failed — run /merge for receipt flow."
+                f"✅ {candidate_id} — approved. Quick merge failed. {_operator_merge_hint()}"
             )
     else:
-        await update.message.reply_text(
-            f"✅ {candidate_id} — approved. Type /merge for receipt-based merge instructions."
-        )
+        await update.message.reply_text(f"✅ {candidate_id} — approved. {_operator_merge_hint()}")
 
 
 async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -697,8 +715,9 @@ async def merge_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         await update.message.reply_text("no approved candidates to merge. approve some with /review first!")
         return
     await update.message.reply_text(
-        f"you have {approved} approved candidate(s). merge now needs a receipt.\n\n"
-        "1) python3 scripts/process_approved_candidates.py --generate-receipt /tmp/receipt.json --approved-by <your_name>\n"
+        f"you have {approved} approved candidate(s).\n\n"
+        f"{_operator_merge_hint()}\n\n"
+        "CLI (receipt): 1) python3 scripts/process_approved_candidates.py --generate-receipt /tmp/receipt.json --approved-by <your_name>\n"
         "2) python3 scripts/process_approved_candidates.py --apply --approved-by <your_name> --receipt /tmp/receipt.json"
     )
 

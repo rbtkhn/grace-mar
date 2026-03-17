@@ -4,10 +4,11 @@
 - **HTML profile** — Read-only. View identity, pipeline, SKILLS, benchmarks. No input, no chat.
 - **Telegram** — Bidirectional. User and Grace-Mar exchange messages; "we did X" invokes the pipeline. The primary conversation channel.
 
-Grace-Mar has two web surfaces:
+Grace-Mar has three web surfaces on the Mini App host (plus the static dashboard):
 
 - **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Available at **https://grace-mar.com**.
 - **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
+- **Family hub** — `/app` on the Mini App server: chat, log activities (“we did X”), and parent-gated review + merge. See below.
 
 ## Architecture
 
@@ -45,7 +46,9 @@ pip install -r requirements.txt
 OPENAI_API_KEY=sk-... python miniapp_server.py
 ```
 
-Open http://localhost:5000. For Telegram testing, expose with ngrok:
+Open http://localhost:5000 for the Q&A Mini App. For the **family hub**, set `FAMILY_APP_TOKEN` in `.env`, restart, then open http://localhost:5000/app and paste the token (or use `/app?t=<token>` once).
+
+For Telegram testing, expose with ngrok:
 
 ```bash
 ngrok http 5000
@@ -71,6 +74,24 @@ Mini App exchanges are appended to `users/<user>/session-transcript.md` (real-ti
 
 On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Mini App is lost between deploys unless you add a separate step to persist it (e.g. push to repo). Local dev writes to disk as usual.
 
+**Operator Console — merge from browser:** Gate tab and Inbox can run **Merge approved (companion)** / **(all)** / **(WAP)**, which invokes `process_approved_candidates` on the server. That requires a **writable clone** of the repo; ephemeral-only hosts may fail merges. Use the CLI from your laptop, or attach a persistent disk, if web merge errors out.
+
+### Family hub (`/app`)
+
+**Env:** Set **`FAMILY_APP_TOKEN`** to a long random string (same host as `miniapp_server.py`). Optional bookmark: `https://<host>/app?t=<FAMILY_APP_TOKEN>` — the app stores the token in the browser after the first load.
+
+**APIs (require header `X-Family-Token: <FAMILY_APP_TOKEN>`):**
+
+| Endpoint | Purpose |
+|----------|---------|
+| `POST /api/family/activity` | Body `{ "text": "we read …" }` — stages like Telegram “we did X” (`channel_key`: `web:family`). |
+| `GET /api/family/pending-count` | Pending candidate count (for badges). |
+| `POST /api/family/ask` | Same shape as `POST /api/ask` — Voice chat; archives to session-transcript. |
+
+**Review tab:** Parent enters **`OPERATOR_FETCH_SECRET`** once per browser session; then uses the same gate + merge-approved flow as [Operator Console](operator-console.md). Kids do not need the operator secret for Chat or Log.
+
+**Security:** Anyone with `FAMILY_APP_TOKEN` can chat and submit activities (rate-limit at reverse proxy if needed). Rotate the token if the link leaks. Merge still requires the operator secret.
+
 ## 3. Bot (Webhook Mode)
 
 The `render.yaml` blueprint runs the Telegram bot via **webhook** on the miniapp service (no separate worker). Set these env vars on the **miniapp** service:
@@ -89,6 +110,8 @@ When running the bot locally, set in `bot/.env`:
 ```env
 PROFILE_MINIAPP_URL=https://grace-mar.com
 # or DASHBOARD_MINIAPP_URL=https://grace-mar.com
+# Optional: base URL for Operator Console hints after Telegram approve (/merge)
+# GRACE_MAR_OPERATOR_CONSOLE_URL=https://your-miniapp-host.example.com
 ```
 
 This URL is opened when the user taps the Telegram menu button (Profile). Set it to **https://grace-mar.com** so the profile is one tap away. On Render, set the same var in the bot service’s Environment tab.

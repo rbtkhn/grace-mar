@@ -13,7 +13,7 @@ Block time weekly — e.g. Sunday evening or Monday morning. All steps optional 
 | Step | Action | Time |
 |------|--------|------|
 | 1 | **Experience check** — *Did the Voice feel like the companion's Record when it knew, and clearly offer help when it didn't? Did abstention/lookup feel like honesty and support, not failure or deflection?* Note any drift; adjust prompt or add probes if the experience felt wrong. See [KNOWLEDGE-BOUNDARY-FRAMEWORK](knowledge-boundary-framework.md) §1. | ~2 min |
-| 2 | **Process RECURSION-GATE** — For a quick view without opening the file: `python scripts/operator_gate_snapshot.py -u [id]` (pending count, last N candidates, last ACT date). Then open `users/[id]/recursion-gate.md`, review each pending candidate, approve or reject. Tell the assistant **"approve"** — it immediately merges (one gate). Or run CLI: `scripts/process_approved_candidates.py --generate-receipt ...` then `--apply --receipt ...`. | ~15 min |
+| 2 | **Process RECURSION-GATE** — **Without opening markdown:** [Operator Console](operator-console.md) `/operator/console` or [Approval Inbox](approval-inbox-spec.md) `/operator/inbox`: approve/reject; then **Merge approved (companion)** (or all / WAP) to write the Record. Or CLI receipt flow. **With files:** `operator_gate_snapshot.py`; or open `recursion-gate.md` and approve in Cursor + merge. | ~15 min |
 | 3 | **Rotate MEMORY + SELF-ARCHIVE** — Run `python3 scripts/rotate_context.py --user [id] --apply` (or `/rotate` in Telegram) to prune dated MEMORY entries older than TTL and rotate SELF-ARCHIVE when thresholds are exceeded. | ~5 min |
 | 4 | **Skim SESSION-TRANSCRIPT** — Glance at recent raw conversation in `users/[id]/session-transcript.md`. Note resistance, recurring topics, and continuity cues for next session. SELF-ARCHIVE holds only approved/merged content. | ~5 min |
 | 5 | **Optional: Gap Hunter** — When reviewing an exchange, ask: *What's missing in the Record for this exchange?* Surfaces candidates the analyst might have missed. Stage to RECURSION-GATE if you find gaps. | ~5 min |
@@ -43,7 +43,7 @@ If you spot a gap, stage a candidate to RECURSION-GATE manually (or describe it 
 
 ## Rationale
 
-- **Feed the gate** — During the week, say **"we did X"** after calls, readings, decisions, milestones so the agent stages candidates. See [we-did-x-habit.md](we-did-x-habit.md). The gate then reflects real activity; weekly review has real items to approve or reject.
+- **Feed the gate** — During the week, say **"we did X"** in Telegram (or submit an observation in the [Operator Console](operator-console.md) Observe tab) after calls, readings, decisions, milestones so the agent stages candidates. See [we-did-x-habit.md](we-did-x-habit.md). The gate then reflects real activity; weekly review has real items to approve or reject.
 - **Process queue** — Prevents RECURSION-GATE from growing unbounded. Human gates what enters the Record.
 - **Rotate MEMORY** — Keeps ephemeral context fresh; avoids stale tone or resistance notes.
 - **Skim SESSION-TRANSCRIPT** — Builds continuity; operator enters the next week with context.

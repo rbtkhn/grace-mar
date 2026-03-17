@@ -33,6 +33,7 @@ The `render.yaml` blueprint configures the miniapp with optional Telegram webhoo
 | `DASHBOARD_MINIAPP_URL` or `PROFILE_MINIAPP_URL` | No | URL for bot menu button (e.g. **https://grace-mar.com** — profile) |
 | `GITHUB_TOKEN` | No | Session transcript is local; SELF-ARCHIVE is updated only on merge. |
 | `GRACE_MAR_REPO` | No | (Unused for archiving; SELF-ARCHIVE is gated.) |
+| `GRACE_MAR_OPERATOR_CONSOLE_URL` | No | Base URL of the Mini App host (no path). After Telegram approve, `/merge` hints link to `{URL}/operator/console`. |
 
 **Do not** create a separate Background Worker for the bot. The miniapp handles it.
 

@@ -1,0 +1,11 @@
+{
+  "name": "Grace-Mar Family",
+  "short_name": "GM Family",
+  "description": "Chat, log activities, and review — Grace-Mar family hub",
+  "start_url": "/app",
+  "display": "standalone",
+  "background_color": "#1c221e",
+  "theme_color": "#5a7d6c",
+  "orientation": "portrait-primary",
+  "icons": []
+}

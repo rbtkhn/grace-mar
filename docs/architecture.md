@@ -648,6 +648,8 @@ GitHub Repository (rbtkhn/grace-mar)
 └── (future users...)
 ```
 
+Each `users/<id>/` directory is one fork’s isolated namespace; quotas, retention, permissions, and export/import are per-fork. See [Fork isolation and multi-tenant](fork-isolation-and-multi-tenant.md).
+
 ### Version Control
 
 | Concept | Implementation |
