@@ -27,7 +27,7 @@
                                       ▼
 ┌─────────────────────────────────────────────────────────────────────────────────┐
 │                           INTEGRATION                                            │
-│  self.md  │  self-evidence.md (ACT-*)  │  SESSION-LOG  │  bot/prompt.py              │
+│  self.md  │  self-evidence.md (ACT-*)  │  session-log.md  │  bot/prompt.py              │
 └─────────────────────────────────────────────────────────────────────────────────┘
                                       │
                                       ▼
@@ -161,7 +161,11 @@ Books / articles consumed
           └──► SELF.interests, SELF.preferences, SELF.values
 ```
 
-**Automation:** None. Fully manual. **Gap:** Bot conversations about books could feed interest signals, but those go to SELF IX-B (curiosity), not to THINK module. No structured READ evidence from bot.
+**Operator convention:** When the operator says **"we finished [book]"** or **"we read [title]"**, treat it as a pipeline invocation. Run signal detection and stage a candidate that can create a READ-* entry (or a LEARN-* / curiosity candidate that references the book so THINK and SELF.IX can be updated on approval). Do not ignore book-completion signals.
+
+**Minimal READ entry shape** (for staged candidates): `id: READ-XXXX`, `title`, `date`, `evidence_tier` (e.g. 4 OBSERVED), and 1–2 comprehension or interest notes. See [evidence-template.md](evidence-template.md) § III for full structure.
+
+**Automation:** None for bot. Operator-triggered: "we finished [X]" / "we read [X]" → stage READ or LEARN candidate. **Gap:** Bot conversations about books could feed interest signals, but those go to SELF IX-B (curiosity), not to THINK module. No structured READ evidence from bot.
 
 ---
 

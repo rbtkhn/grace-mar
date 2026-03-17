@@ -26,7 +26,7 @@ from datetime import datetime
 from pathlib import Path
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, redirect, request, send_from_directory
 
 REPO_ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(REPO_ROOT))
@@ -49,6 +49,7 @@ from bot.core import (
     update_candidate_status,
 )
 from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
+from scripts import process_approved_candidates as pac
 from scripts.work_american_politics_ops import get_wap_snapshot
 from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
@@ -198,6 +199,30 @@ def telegram_webhook():
         logger.exception("Telegram webhook error: %s", e)
         return "", 500
     return "", 200
+
+
+@app.route("/manifest.json")
+def manifest():
+    """PWA manifest — served with correct MIME type."""
+    return send_from_directory("miniapp", "manifest.json", mimetype="application/manifest+json")
+
+
+@app.route("/service-worker.js")
+def service_worker():
+    """PWA service worker."""
+    return send_from_directory("miniapp", "service-worker.js", mimetype="application/javascript")
+
+
+@app.before_request
+def _https_redirect():
+    """Redirect HTTP to HTTPS in production when FORCE_HTTPS=1 (e.g. behind reverse proxy)."""
+    if os.getenv("FORCE_HTTPS", "").lower() not in ("1", "true", "yes"):
+        return None
+    if request.is_secure:
+        return None
+    if request.headers.get("X-Forwarded-Proto") == "https":
+        return None
+    return redirect(request.url.replace("http://", "https://", 1), code=301)
 
 
 @app.route("/")
@@ -389,6 +414,89 @@ def operator_gate_candidate_action(candidate_id: str):
         decision="quick_merge",
     )
     return jsonify({"ok": True, "action": action, "message": message, "candidate_id": candidate_id})
+
+
+@app.route("/operator/gate-candidates/batch-action", methods=["POST"])
+def operator_gate_candidates_batch_action():
+    """Batch approve or reject candidates. Emits one pipeline event per candidate."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    action = (payload.get("action") or "").strip().lower()
+    if action not in {"approve", "reject"}:
+        return jsonify({"error": "action must be approve or reject"}), 400
+    candidate_ids = payload.get("candidate_ids")
+    if not isinstance(candidate_ids, list) or not candidate_ids:
+        return jsonify({"error": "candidate_ids must be a non-empty list"}), 400
+    candidate_ids = [str(x).strip() for x in candidate_ids if str(x).strip()]
+    if not candidate_ids:
+        return jsonify({"error": "candidate_ids must contain at least one id"}), 400
+    rejection_reason = (payload.get("rejection_reason") or "").strip() or None
+    channel_key = "operator:web"
+    source = "miniapp_server:approval_inbox"
+    results = []
+    for cid in candidate_ids:
+        row = get_review_candidate(USER_ID, cid)
+        if not row:
+            results.append({"id": cid, "ok": False, "error": "not found above ## Processed"})
+            continue
+        if action == "approve" and row.get("status") == "approved":
+            results.append({"id": cid, "ok": True, "skipped": "already approved"})
+            continue
+        if action == "reject" and row.get("status") == "rejected":
+            results.append({"id": cid, "ok": True, "skipped": "already rejected"})
+            continue
+        new_status = "approved" if action == "approve" else "rejected"
+        changed = update_candidate_status(
+            cid,
+            new_status,
+            rejection_reason=rejection_reason if action == "reject" else None,
+            channel_key=channel_key,
+            actor=OPERATOR_NAME,
+            source=source,
+        )
+        if changed:
+            results.append({"id": cid, "ok": True})
+        else:
+            results.append({"id": cid, "ok": False, "error": "status update failed"})
+    return jsonify({"ok": True, "action": action, "results": results})
+
+
+@app.route("/operator/gate-candidates/generate-receipt", methods=["POST"])
+def operator_gate_candidates_generate_receipt():
+    """Generate a merge receipt for the given approved candidate IDs. Does not apply merge."""
+    ok, err = _operator_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    candidate_ids = payload.get("candidate_ids")
+    if not isinstance(candidate_ids, list) or not candidate_ids:
+        return jsonify({"error": "candidate_ids must be a non-empty list"}), 400
+    candidate_ids = sorted({str(x).strip() for x in candidate_ids if str(x).strip()})
+    if not candidate_ids:
+        return jsonify({"error": "candidate_ids must contain at least one id"}), 400
+    pac._set_user(USER_ID)
+    approved = pac.get_approved_in_candidates()
+    requested = [c for c in approved if c["id"] in candidate_ids]
+    missing = [cid for cid in candidate_ids if cid not in (c["id"] for c in requested)]
+    if missing:
+        return jsonify({
+            "error": "some ids are not approved or not found",
+            "missing": missing,
+            "hint": "Only approved candidates above ## Processed can be included",
+        }), 400
+    receipt = pac._build_receipt(requested, OPERATOR_NAME, "all")
+    receipt["min_evidence_tier"] = max(getattr(pac, "MIN_EVIDENCE_TIER", 3), receipt.get("min_evidence_tier", 3))
+    apply_cmd = (
+        f"python3 scripts/process_approved_candidates.py -u {USER_ID} --apply --receipt <path> --approved-by {OPERATOR_NAME!r}"
+    )
+    return jsonify({
+        "ok": True,
+        "receipt": receipt,
+        "apply_command": apply_cmd,
+        "candidate_count": len(requested),
+    })
 
 
 @app.route("/api/ask", methods=["POST", "OPTIONS"])

@@ -2,7 +2,7 @@
 
 **Purpose:** Canonical specification of the Record’s modules (including self-knowledge, self-personality, self-curiosity, self-library, and the Record-bound skill modules THINK/WRITE), their boundaries, their relationship to the Voice, and the rule that outputs (bots, profile) are functions of the Record with WRITE as the linguistic shaper. It also defines the boundary between the Record and the separate work / execution layer.
 
-**Governed by:** [GRACE-MAR-CORE](grace-mar-core.md), [SKILLS-TEMPLATE](skills-template.md), [ARCHITECTURE](architecture.md)
+**Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md), [SKILLS-TEMPLATE](skills-template.md), [ARCHITECTURE](architecture.md)
 
 **Status:** Active
 

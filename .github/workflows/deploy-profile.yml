@@ -1,0 +1,54 @@
+# Deploy profile to GitHub Pages (grace-mar.com)
+# Uses official actions: upload-pages-artifact + deploy-pages.
+# In repo Settings → Pages, set Source to "GitHub Actions" for this workflow.
+name: Deploy profile to Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'users/grace-mar/**'
+      - 'scripts/generate_profile.py'
+      - 'profile/CNAME'
+      - '.github/workflows/deploy-profile.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate profile
+        run: python3 scripts/generate_profile.py
+
+      - name: Ensure CNAME for custom domain
+        run: echo 'grace-mar.com' > profile/CNAME
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: profile
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deploy
+        uses: actions/deploy-pages@v4

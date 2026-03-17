@@ -1,0 +1,40 @@
+# MkDocs — Grace-Mar documentation site
+# Build: mkdocs build. Serve locally: mkdocs serve.
+# Deploy: Can be built into profile/docs/ and deployed with profile (see deploy-profile.yml).
+site_name: Grace-Mar
+site_description: Cognitive fork — Record, Voice, and gated pipeline
+site_url: https://grace-mar.com
+
+docs_dir: docs
+# Exclude nested skill-work and civilization-memory from main nav; include key docs only.
+nav:
+  - Home: readme.md
+  - Core:
+    - Governance: grace-mar-core.md
+    - Architecture: architecture.md
+    - Conceptual framework: conceptual-framework.md
+    - Pipeline map: pipeline-map.md
+  - Operator:
+    - Operator weekly review: operator-weekly-review.md
+    - Profile deploy: profile-deploy.md
+    - Friction audit: friction-audit.md
+    - Approval inbox spec: approval-inbox-spec.md
+  - Design:
+    - Chat-first design: chat-first-design.md
+    - Simple user interface: simple-user-interface.md
+    - Knowledge boundary: knowledge-boundary-framework.md
+  - Reference:
+    - Identity fork protocol: identity-fork-protocol.md
+    - Evidence template: evidence-template.md
+    - Namecheap guide: namecheap-guide.md
+    - Harness inventory: harness-inventory.md
+  - Lanes:
+    - Record & companion: lanes/record-companion.md
+    - Operator cognition: lanes/operator-cognition.md
+    - Weekly rhythm: lanes/WEEKLY-RHYTHM.md
+
+plugins:
+  - search
+
+theme:
+  name: readthedocs

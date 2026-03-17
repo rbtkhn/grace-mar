@@ -77,6 +77,8 @@ logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
+# Future: LLM_PROVIDER (openai | anthropic | ollama) to route chat to different backends; PRP export is already provider-agnostic.
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai").strip().lower()
 MAX_HISTORY = 20
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"

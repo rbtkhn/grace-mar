@@ -1,0 +1,30 @@
+# Weekly newsletter digest — generate and commit to newsletter/
+name: Newsletter digest
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"  # Monday 09:00 UTC
+  workflow_dispatch:
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate digest
+        run: |
+          python scripts/generate_newsletter.py --user grace-mar --output newsletter/digest-$(date +%Y-%m-%d).md
+          python scripts/generate_newsletter.py --user grace-mar --format html --output newsletter/digest-latest.html
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add newsletter/
+          git diff --staged --quiet || (git commit -m "chore: weekly newsletter digest [automated]" && git push)

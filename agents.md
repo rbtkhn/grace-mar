@@ -202,6 +202,8 @@ A single artifact can populate all three dimensions.
 
 ## Repository Structure
 
+**Canonical user paths** (lowercase filenames): [docs/canonical-paths.md](docs/canonical-paths.md).
+
 ```
 grace-mar/
 ├── agents.md                    # This file — AI assistant guardrails
@@ -241,7 +243,7 @@ grace-mar/
         ├── compute-ledger.jsonl   # Token usage (energy ledger)
         ├── self-archive.md            # self-archive — gated log of approved activity (voice + non-voice) — private
         ├── journal.md                # Daily highlights — public-suitable, shareable
-│   └── archives/             # Rotated chunks (SELF-ARCHIVE-YYYY-MM.md)
+│   └── archives/             # Rotated chunks (self-archive-YYYY-MM.md)
         └── artifacts/          # Raw files (writing, artwork)
 ```
 

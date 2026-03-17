@@ -33,7 +33,7 @@
 
 ## Phase 2 — Suggest
 
-**Scope:** Grace-Mar analyzes and suggests improvements. Suggestions staged in grace-mar (e.g., PENDING-REVIEW or a dedicated companion-self-contributions queue). Companion reviews; operator applies manually to companion-self.
+**Scope:** Grace-Mar analyzes and suggests improvements. Suggestions staged in grace-mar (e.g., recursion-gate pending candidates or a dedicated companion-self-contributions queue). Companion reviews; operator applies manually to companion-self.
 
 | Deliverable | Description |
 |-------------|-------------|

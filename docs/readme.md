@@ -1,6 +1,6 @@
 # Grace-Mar — Document Map
 
-**Where to go for what.** This folder holds the protocol, governance, and commentary. Use the table below to find the right document.
+**Where to go for what.** This folder holds the protocol, governance, and commentary. **Terminology:** [glossary.md](glossary.md). Use the table below to find the right document.
 
 | Need | Document | Role |
 |------|----------|------|

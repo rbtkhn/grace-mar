@@ -9,6 +9,8 @@ or external tooling.
 Usage:
     python scripts/export_fork.py
     python scripts/export_fork.py --user grace-mar --output fork-export.json
+    python scripts/export_fork.py --user grace-mar --format obsidian --output obsidian-vault
+    python scripts/export_fork.py --user grace-mar --format json-ld --output grace-mar.jsonld
 """
 
 import argparse
@@ -94,13 +96,95 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     return out
 
 
+def export_obsidian(data: dict, out_path: Path) -> None:
+    """Write Obsidian-friendly markdown files with YAML frontmatter and internal links."""
+    out_path.mkdir(parents=True, exist_ok=True)
+    summary = data.get("summary", {})
+    self_sum = summary.get("self", {})
+    ev_sum = summary.get("evidence", {})
+
+    def write_md(name: str, frontmatter: dict, body: str) -> None:
+        lines = ["---"] + [f"{k}: {v}" for k, v in frontmatter.items()] + ["---", "", body]
+        (out_path / f"{name}.md").write_text("\n".join(lines), encoding="utf-8")
+
+    write_md(
+        "SELF",
+        {"type": "self", "user_id": data.get("user_id", ""), "generated_at": data.get("generated_at", "")},
+        data.get("self", {}).get("raw", "(no self)"),
+    )
+    write_md(
+        "Skills",
+        {"type": "skills", "user_id": data.get("user_id", "")},
+        data.get("skills", {}).get("raw", "(no skills)"),
+    )
+    write_md(
+        "Evidence",
+        {"type": "evidence", "read_count": ev_sum.get("read_count", 0), "write_count": ev_sum.get("write_count", 0), "create_count": ev_sum.get("create_count", 0)},
+        data.get("evidence", {}).get("raw", "(no evidence)"),
+    )
+    write_md(
+        "Library",
+        {"type": "library"},
+        data.get("library", {}).get("raw", "(no library)"),
+    )
+    (out_path / "README.md").write_text(
+        f"# Fork export — {data.get('user_id', '?')}\n\nGenerated {data.get('generated_at', '')}. See [[SELF]], [[Skills]], [[Evidence]], [[Library]].\n",
+        encoding="utf-8",
+    )
+
+
+def export_jsonld(data: dict) -> dict:
+    """Return a JSON-LD graph with @context and typed nodes (provenance + mind model)."""
+    summary = data.get("summary", {})
+    self_sum = summary.get("self", {})
+    return {
+        "@context": {
+            "@vocab": "https://grace-mar.com/ns/",
+            "schema": "https://schema.org/",
+            "name": "schema:name",
+            "description": "schema:description",
+            "generated_at": "schema:dateCreated",
+            "user_id": "schema:identifier",
+        },
+        "@id": f"https://grace-mar.com/fork/{data.get('user_id', '')}",
+        "@type": "Person",
+        "name": self_sum.get("name", "?"),
+        "description": "Cognitive fork export — Record (SELF, SKILLS, EVIDENCE)",
+        "generated_at": data.get("generated_at"),
+        "user_id": data.get("user_id"),
+        "summary": {
+            "ix_a_count": self_sum.get("ix_a_count", 0),
+            "ix_b_count": self_sum.get("ix_b_count", 0),
+            "ix_c_count": self_sum.get("ix_c_count", 0),
+            **summary.get("evidence", {}),
+        },
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Export fork to portable JSON")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id (e.g. grace-mar)")
-    parser.add_argument("--output", "-o", default=None, help="Output file (default: stdout)")
+    parser.add_argument("--output", "-o", default=None, help="Output file or directory (default: stdout for default format)")
     parser.add_argument("--no-raw", action="store_true", help="Omit raw file contents (summary + manifest only)")
+    parser.add_argument("--format", "-f", choices=("default", "obsidian", "json-ld"), default="default", help="Export format: default (JSON), obsidian (MD vault), json-ld")
     args = parser.parse_args()
     data = export_fork(user_id=args.user, include_raw=not args.no_raw)
+
+    if args.format == "obsidian":
+        out_path = Path(args.output or "obsidian-export")
+        export_obsidian(data, out_path)
+        print(f"Wrote Obsidian vault to {out_path}", file=__import__("sys").stderr)
+        return
+    if args.format == "json-ld":
+        ld = export_jsonld(data)
+        text = json.dumps(ld, indent=2, ensure_ascii=False)
+        if args.output:
+            Path(args.output).write_text(text, encoding="utf-8")
+            print(f"Wrote {args.output}", file=__import__("sys").stderr)
+        else:
+            print(text)
+        return
+
     text = json.dumps(data, indent=2, ensure_ascii=False)
     if args.output:
         Path(args.output).write_text(text, encoding="utf-8")

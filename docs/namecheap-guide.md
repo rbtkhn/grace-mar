@@ -33,7 +33,7 @@ Use this when you need to point a domain at a host (e.g. GitHub Pages for the pr
 
 6. In GitHub: repo → **Settings** → **Pages** → **Custom domain** → type `grace-mar.com` → **Save**. GitHub will check DNS and enable HTTPS.
 
-Done. The profile at grace-mar.com will serve from GitHub Pages once the **Deploy profile to Pages** workflow has run (it runs on push to `main`).
+Done. The profile at grace-mar.com will serve from GitHub Pages once the **Deploy profile to Pages** workflow has run (it runs on push to `main`). The repo includes `profile/CNAME` with `grace-mar.com` so the custom domain is applied on deploy; the workflow also writes CNAME when using `.github/workflows/deploy-profile.yml`.
 
 ---
 

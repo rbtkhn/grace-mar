@@ -1,0 +1,38 @@
+# Run pytest and integrity/governance checks on push and PR.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install pytest pytest-mock
+          pip install -r requirements.txt
+          pip install -r bot/requirements.txt 2>/dev/null || true
+
+      - name: Run pytest
+        run: pytest tests/ -v --tb=short
+        working-directory: ${{ github.workspace }}
+
+      - name: Assert canonical paths
+        run: python scripts/assert_canonical_paths.py --user grace-mar
+
+      - name: Validate integrity
+        run: python scripts/validate-integrity.py --user grace-mar
+
+      - name: Governance check
+        run: python scripts/governance_checker.py

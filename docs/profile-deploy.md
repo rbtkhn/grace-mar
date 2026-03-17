@@ -61,7 +61,12 @@ Wait for DNS to propagate (minutes to a few hours). Back in **Settings** → **P
 
 ## 2. Deploy the profile (every time you want to update)
 
-The workflow `.github/workflows/pages.yml` builds and deploys the profile on every push to `main` **when profile-relevant files change** (e.g. `users/grace-mar/`, `scripts/generate_profile.py`). Pushes that only touch docs or other paths skip the deploy. You can also run the workflow manually.
+Two workflows can deploy the profile:
+
+- **`.github/workflows/deploy-profile.yml`** (recommended) — Uses official GitHub Actions (`upload-pages-artifact` + `deploy-pages`). Ensures `profile/CNAME` contains `grace-mar.com` so the custom domain works. **Requires:** In repo **Settings → Pages**, set **Source** to **GitHub Actions** (not "Deploy from a branch"). Triggers on push to `main` when `users/grace-mar/**`, `scripts/generate_profile.py`, `profile/CNAME`, or the workflow file change.
+- **`.github/workflows/pages.yml`** — Uses `peaceiris/actions-gh-pages` to push the `profile/` folder to the `gh-pages` branch. Use when Pages is set to **Deploy from a branch** (branch: `gh-pages`, folder: root). Also add `profile/CNAME` with `grace-mar.com` so the custom domain is set.
+
+Pushes that only touch docs or other paths skip the deploy. You can also run either workflow manually.
 
 ### Fast loop — Local preview (seconds, no push)
 
@@ -88,7 +93,7 @@ git commit -m "Update profile"
 git push origin main
 ```
 
-The **Deploy profile to Pages** workflow runs, runs `python3 scripts/generate_profile.py`, and publishes the `profile/` folder to the `gh-pages` branch. In a minute or two, https://grace-mar.com will show the new content.
+The **Deploy profile to Pages** workflow runs `python3 scripts/generate_profile.py`, ensures `profile/CNAME` is set for grace-mar.com, and publishes the `profile/` folder (via `gh-pages` branch or GitHub Actions artifact). In a minute or two, https://grace-mar.com will show the new content.
 
 ### Option B — Run the workflow manually
 
@@ -132,6 +137,8 @@ git checkout main
 | Certificate / “Not secure” | GitHub provisions HTTPS for the custom domain after DNS validates; can take up to an hour. |
 
 ---
+
+**Documentation site (MkDocs):** The repo includes `mkdocs.yml` for a navigable docs site. Build with `mkdocs build` (output in `site/`). To deploy docs alongside the profile, add a step that runs `pip install mkdocs mkdocs-readthedocs-theme` and `mkdocs build`, then copy `site/` into `profile/docs/` before uploading the artifact so that https://grace-mar.com/docs/ serves the MkDocs site. See [MkDocs](https://www.mkdocs.org/) for local preview (`mkdocs serve`).
 
 **See also:** [namecheap-guide.md](namecheap-guide.md) (simple Namecheap steps), [miniapp-setup.md](miniapp-setup.md) (profile vs Q&A app), [telegram-webhook-setup.md](telegram-webhook-setup.md) (bot menu button).
 

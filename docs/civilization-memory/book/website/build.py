@@ -95,6 +95,14 @@ def build_nav() -> str:
 
 
 def main() -> None:
+    force = "--force" in sys.argv
+    if not MD_PATH.exists():
+        print(f"Missing {MD_PATH}", file=sys.stderr)
+        sys.exit(1)
+    md_mtime = MD_PATH.stat().st_mtime
+    if not force and OUT_PATH.exists() and OUT_PATH.stat().st_mtime >= md_mtime:
+        print("Already up to date.")
+        return
     md_content = MD_PATH.read_text(encoding="utf-8")
     sections = split_sections(md_content)
 

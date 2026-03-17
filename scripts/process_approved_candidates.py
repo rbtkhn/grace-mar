@@ -886,6 +886,13 @@ def main() -> None:
     evidence_content = _read(EVIDENCE_PATH)
     prompt_content = _read(PROMPT_PATH)
     pending_content = _read(RECURSION_GATE_PATH)
+    # Keep pre-merge state for rollback; avoid re-reading files later
+    original_files = {
+        SELF_PATH: self_content,
+        EVIDENCE_PATH: evidence_content,
+        PROMPT_PATH: prompt_content,
+        RECURSION_GATE_PATH: pending_content,
+    }
     intent_profile = _load_intent_profile()
     blocks_to_move: list[str] = []
     applied_candidates: list[tuple[dict, str]] = []  # (c, act_id) for emit + SELF-ARCHIVE
@@ -945,12 +952,6 @@ def main() -> None:
     else:
         pending_content = pending_content.rstrip() + "\n\n## Processed\n\n" + insertion
 
-    original_files = {
-        SELF_PATH: _read(SELF_PATH),
-        EVIDENCE_PATH: _read(EVIDENCE_PATH),
-        PROMPT_PATH: _read(PROMPT_PATH),
-        RECURSION_GATE_PATH: _read(RECURSION_GATE_PATH),
-    }
     file_plan = {
         SELF_PATH: self_content,
         EVIDENCE_PATH: evidence_content,

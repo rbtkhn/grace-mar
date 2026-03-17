@@ -1,6 +1,6 @@
 # grace-mar
 
-**Grace-Mar** — A system that creates and maintains cognitive forks: versioned, evidence-grounded records of an individual's cognitive development, initialized from a real person and growing through curated interactions over a lifetime.
+**Grace-Mar** — A system that creates and maintains cognitive forks: versioned, evidence-grounded records of an individual's cognitive development, initialized from a real person and growing through curated interactions over a lifetime. **Terminology:** [docs/glossary.md](docs/glossary.md).
 
 ## Concept
 
@@ -172,6 +172,15 @@ open profile/index.html
 ```
 
 **Telegram** is bidirectional — the primary channel for conversation and pipeline staging. See [docs/miniapp-setup.md](docs/miniapp-setup.md) for full setup.
+
+**Docker (optional):** Run miniapp and gate-review dashboard in one command:
+
+```bash
+docker compose up --build
+# Miniapp: http://localhost:5000  — Gate review: http://localhost:5001
+```
+
+Requires `.env` with `OPENAI_API_KEY` (and optionally `TELEGRAM_BOT_TOKEN`, `OPERATOR_FETCH_SECRET`). See root `Dockerfile` and `docker-compose.yml`.
 
 ## Archive Rotation
 

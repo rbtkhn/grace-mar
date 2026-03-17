@@ -3,6 +3,9 @@
 #
 # Telegram bot runs via webhook on the miniapp service (no separate worker).
 # RENDER_EXTERNAL_URL is set automatically; webhook URL = RENDER_EXTERNAL_URL/telegram/webhook
+#
+# Optional: Use Docker by setting runtime: docker and dockerfilePath: Dockerfile in this service.
+# For local dev: docker compose up --build (miniapp on 5000, gate-review on 5001).
 
 services:
   - type: web

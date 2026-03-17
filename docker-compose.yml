@@ -1,0 +1,34 @@
+# Grace-Mar — miniapp + gate review dashboard
+# Run from repo root: docker compose up --build
+# Requires .env with OPENAI_API_KEY, TELEGRAM_BOT_TOKEN (optional), OPERATOR_FETCH_SECRET (optional)
+version: "3.9"
+services:
+  miniapp:
+    build: .
+    command: python miniapp_server.py
+    ports:
+      - "5000:5000"
+    env_file: .env
+    environment:
+      - PORT=5000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 2
+      start_period: 10s
+
+  gate-review:
+    build: .
+    command: python gate-review-app.py
+    ports:
+      - "5001:5001"
+    env_file: .env
+    environment:
+      - PORT=5001
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5001/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 2
+      start_period: 5s

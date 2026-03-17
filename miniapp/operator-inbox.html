@@ -151,9 +151,46 @@
         <option value="companion">Companion</option>
         <option value="work-political-consulting">WAP</option>
       </select>
+      <label class="row" style="margin-left: 0.5rem;"><select id="sortBy">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="quick_first">Quick-merge first</option>
+      </select></label>
+    </div>
+    <div class="row">
+      <span class="meta">Views:</span>
+      <button type="button" id="viewAllPending" class="warn">All pending</button>
+      <button type="button" id="viewQuick">Quick approvals</button>
+      <button type="button" id="viewNeedsJudgment">Needs judgment</button>
+      <button type="button" id="viewApprovedAwaiting">Approved awaiting merge</button>
+    </div>
+    <div class="row">
+      <label><input type="checkbox" id="selectAll"> Select all</label>
+      <button type="button" id="clearSelection">Clear</button>
+      <button type="button" id="batchApprove" class="good" disabled>Approve selected</button>
+      <button type="button" id="batchReject" class="danger" disabled>Reject selected</button>
+      <label class="meta" style="margin-left: 0.5rem;">Rejection reason (optional):</label>
+      <select id="rejectionReason">
+        <option value="">—</option>
+        <option value="duplicate">duplicate</option>
+        <option value="too weak">too weak</option>
+        <option value="unclear provenance">unclear provenance</option>
+        <option value="not merge-ready">not merge-ready</option>
+        <option value="contradicts Record">contradicts Record</option>
+        <option value="other">other</option>
+      </select>
+      <button type="button" id="batchReceipt" class="primary" disabled>Generate merge batch</button>
     </div>
     <div class="stats" id="stats"></div>
   </section>
+
+  <div id="receiptPanel" class="panel" hidden>
+    <h3 style="margin-top:0;">Merge receipt</h3>
+    <p class="meta" id="receiptSummary"></p>
+    <pre id="applyCommand" style="background: rgba(0,0,0,0.2); padding: 0.75rem; border-radius: 10px; overflow-x: auto; font-size: 0.88rem;"></pre>
+    <p class="meta">Save the receipt JSON to a file, then run the command above with <code>--receipt /path/to/file.json</code></p>
+    <button type="button" id="receiptClose">Close</button>
+  </div>
 
   <div id="error" class="error" hidden></div>
   <div id="cards" class="cards"></div>
@@ -198,6 +235,42 @@
         return out.toString();
       }
 
+      var currentItems = [];
+
+      function sortItems(items) {
+        var order = (document.getElementById('sortBy').value || 'newest');
+        var copy = items.slice();
+        if (order === 'newest') {
+          copy.sort(function(a, b) { return (b.timestamp || '').localeCompare(a.timestamp || ''); });
+        } else if (order === 'oldest') {
+          copy.sort(function(a, b) { return (a.timestamp || '').localeCompare(b.timestamp || ''); });
+        } else if (order === 'quick_first') {
+          copy.sort(function(a, b) {
+            var qA = a.ready_for_quick_merge ? 1 : 0;
+            var qB = b.ready_for_quick_merge ? 1 : 0;
+            if (qB !== qA) return qB - qA;
+            return (b.timestamp || '').localeCompare(a.timestamp || '');
+          });
+        }
+        return copy;
+      }
+
+      function updateBatchButtons() {
+        var checked = document.querySelectorAll('.card-select:checked');
+        var ids = Array.prototype.map.call(checked, function(cb) { return cb.getAttribute('data-id'); });
+        var hasPending = ids.some(function(id) {
+          var cb = document.querySelector('.card-select[data-id="' + id + '"]');
+          return cb && cb.getAttribute('data-status') === 'pending';
+        });
+        var hasApproved = ids.some(function(id) {
+          var cb = document.querySelector('.card-select[data-id="' + id + '"]');
+          return cb && cb.getAttribute('data-status') === 'approved';
+        });
+        document.getElementById('batchApprove').disabled = !ids.length || !hasPending;
+        document.getElementById('batchReject').disabled = !ids.length;
+        document.getElementById('batchReceipt').disabled = !ids.length || !hasApproved;
+      }
+
       function renderStats(items) {
         var pending = items.filter(function(item) { return item.status === 'pending'; }).length;
         var quick = items.filter(function(item) { return item.ready_for_quick_merge; }).length;
@@ -221,12 +294,16 @@
       }
 
       function render(items) {
-        renderStats(items);
-        if (!items.length) {
+        currentItems = items;
+        var sorted = sortItems(items);
+        renderStats(sorted);
+        if (!sorted.length) {
           cardsEl.innerHTML = '<div class="panel empty">No candidates match the current filters.</div>';
+          document.getElementById('selectAll').checked = false;
+          updateBatchButtons();
           return;
         }
-        cardsEl.innerHTML = items.map(function(item) {
+        cardsEl.innerHTML = sorted.map(function(item) {
           var detailId = 'detail-' + item.id;
           var hints = (item.duplicate_hints || []).map(function(hint) {
             return '<div>Duplicate hint: ' + escapeHtml(hint) + '</div>';
@@ -238,6 +315,7 @@
           return ''
             + '<article class="card" data-id="' + escapeHtml(item.id) + '">'
             + '  <div class="card-top">'
+            + '    <label><input type="checkbox" class="card-select" data-id="' + escapeHtml(item.id) + '" data-status="' + escapeHtml(item.status) + '"> Select</label>'
             + '    <span class="id">' + escapeHtml(item.id) + '</span>'
             + '    <span class="pill">' + escapeHtml(item.status) + '</span>'
             + '    <span class="pill">' + escapeHtml(item.risk_tier) + '</span>'
@@ -259,14 +337,26 @@
             + '  </div>'
             + '</article>';
         }).join('');
+        document.getElementById('selectAll').checked = false;
+        updateBatchButtons();
+        cardsEl.querySelectorAll('.card-select').forEach(function(cb) {
+          cb.addEventListener('change', updateBatchButtons);
+        });
+      }
+
+      function getRejectionReason() {
+        var dropdown = (document.getElementById('rejectionReason').value || '').trim();
+        var promptReason = window.prompt('Optional rejection reason (or leave blank to use dropdown):');
+        if (promptReason === null) return null;
+        return (promptReason.trim() || dropdown) || undefined;
       }
 
       function doAction(candidateId, action) {
         var body = { action: action };
         if (action === 'reject') {
-          var reason = window.prompt('Optional rejection reason:');
+          var reason = getRejectionReason();
           if (reason === null) return Promise.resolve();
-          if (reason.trim()) body.rejection_reason = reason.trim();
+          if (reason) body.rejection_reason = reason;
         }
         return fetch('/operator/gate-candidates/' + encodeURIComponent(candidateId) + '/action', {
           method: 'POST',
@@ -289,7 +379,7 @@
               return data;
             });
           })
-          .then(function(data) { render(data.items || []); })
+          .then(function(data) { render(data.items || []); updateBatchButtons(); })
           .catch(function(err) {
             cardsEl.innerHTML = '';
             renderStats([]);
@@ -305,6 +395,100 @@
       document.getElementById('statusFilter').onchange = load;
       document.getElementById('riskFilter').onchange = load;
       document.getElementById('territoryFilter').onchange = load;
+      document.getElementById('sortBy').onchange = function() { render(currentItems); };
+
+      document.getElementById('viewAllPending').onclick = function() {
+        document.getElementById('statusFilter').value = 'pending';
+        document.getElementById('riskFilter').value = '';
+        document.getElementById('territoryFilter').value = '';
+        load();
+      };
+      document.getElementById('viewQuick').onclick = function() {
+        document.getElementById('statusFilter').value = 'pending';
+        document.getElementById('riskFilter').value = 'quick_merge_eligible';
+        document.getElementById('territoryFilter').value = '';
+        load();
+      };
+      document.getElementById('viewNeedsJudgment').onclick = function() {
+        document.getElementById('statusFilter').value = '';
+        document.getElementById('riskFilter').value = 'manual_escalate';
+        document.getElementById('territoryFilter').value = '';
+        load();
+      };
+      document.getElementById('viewApprovedAwaiting').onclick = function() {
+        document.getElementById('statusFilter').value = 'approved';
+        document.getElementById('riskFilter').value = '';
+        document.getElementById('territoryFilter').value = '';
+        load();
+      };
+
+      document.getElementById('selectAll').onclick = function() {
+        var checked = this.checked;
+        cardsEl.querySelectorAll('.card-select').forEach(function(cb) { cb.checked = checked; });
+        updateBatchButtons();
+      };
+      document.getElementById('clearSelection').onclick = function() {
+        cardsEl.querySelectorAll('.card-select').forEach(function(cb) { cb.checked = false; });
+        document.getElementById('selectAll').checked = false;
+        updateBatchButtons();
+      };
+
+      document.getElementById('batchApprove').onclick = function() {
+        var ids = Array.prototype.map.call(document.querySelectorAll('.card-select:checked'), function(cb) { return cb.getAttribute('data-id'); });
+        var pendingIds = ids.filter(function(id) {
+          var cb = document.querySelector('.card-select[data-id="' + id + '"]');
+          return cb && cb.getAttribute('data-status') === 'pending';
+        });
+        if (!pendingIds.length) return;
+        fetch('/operator/gate-candidates/batch-action', {
+          method: 'POST',
+          headers: Object.assign({ 'Content-Type': 'application/json' }, authHeaders()),
+          body: JSON.stringify({ action: 'approve', candidate_ids: pendingIds })
+        }).then(function(r) { return r.json(); }).then(function(data) {
+          if (!data.ok) throw new Error(data.error || 'Batch approve failed');
+          setError('');
+          load();
+        }).catch(function(err) { setError(err.message || 'Batch approve failed'); });
+      };
+      document.getElementById('batchReject').onclick = function() {
+        var ids = Array.prototype.map.call(document.querySelectorAll('.card-select:checked'), function(cb) { return cb.getAttribute('data-id'); });
+        if (!ids.length) return;
+        var reason = getRejectionReason();
+        if (reason === null) return;
+        fetch('/operator/gate-candidates/batch-action', {
+          method: 'POST',
+          headers: Object.assign({ 'Content-Type': 'application/json' }, authHeaders()),
+          body: JSON.stringify({ action: 'reject', candidate_ids: ids, rejection_reason: reason })
+        }).then(function(r) { return r.json(); }).then(function(data) {
+          if (!data.ok) throw new Error(data.error || 'Batch reject failed');
+          setError('');
+          load();
+        }).catch(function(err) { setError(err.message || 'Batch reject failed'); });
+      };
+      document.getElementById('batchReceipt').onclick = function() {
+        var ids = Array.prototype.map.call(document.querySelectorAll('.card-select:checked'), function(cb) { return cb.getAttribute('data-id'); });
+        var approvedIds = ids.filter(function(id) {
+          var cb = document.querySelector('.card-select[data-id="' + id + '"]');
+          return cb && cb.getAttribute('data-status') === 'approved';
+        });
+        if (!approvedIds.length) return;
+        fetch('/operator/gate-candidates/generate-receipt', {
+          method: 'POST',
+          headers: Object.assign({ 'Content-Type': 'application/json' }, authHeaders()),
+          body: JSON.stringify({ candidate_ids: approvedIds })
+        }).then(function(r) { return r.json(); }).then(function(data) {
+          if (!data.ok) throw new Error(data.error || 'Generate receipt failed');
+          var receipt = data.receipt || {};
+          var cmd = (data.apply_command || '').replace('<path>', '/path/to/receipt.json');
+          document.getElementById('receiptSummary').textContent = 'Receipt for ' + (data.candidate_count || 0) + ' candidate(s). Save the receipt JSON below, then run:';
+          document.getElementById('applyCommand').textContent = cmd + '\n\nReceipt (save to file):\n' + JSON.stringify(receipt, null, 2);
+          document.getElementById('receiptPanel').hidden = false;
+          setError('');
+        }).catch(function(err) { setError(err.message || 'Generate receipt failed'); });
+      };
+      document.getElementById('receiptClose').onclick = function() {
+        document.getElementById('receiptPanel').hidden = true;
+      };
 
       cardsEl.addEventListener('click', function(event) {
         var button = event.target.closest('button');

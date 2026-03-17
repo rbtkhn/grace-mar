@@ -4,7 +4,7 @@
 
 **Status:** Plan. Not yet implemented.
 
-**Governed by:** [GRACE-MAR-CORE](grace-mar-core.md), [CHAT-FIRST-DESIGN](chat-first-design.md)
+**Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md), [CHAT-FIRST-DESIGN](chat-first-design.md)
 
 **See also:** [ADMISSIONS-LINK-USE-CASE](admissions-link-use-case.md), [DESIGN-ROADMAP](design-roadmap.md)
 
