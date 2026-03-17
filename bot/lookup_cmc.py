@@ -7,13 +7,16 @@ or similar topics, the bot can query CMC as an approved external source (LIB-006
 Routing: Only attempt CMC when the question matches CMC scope (LIB-0064). Otherwise
 skip straight to full LLM lookup — avoids wasted subprocess calls and wrong-source answers.
 
-Requires:
-  - CMC repo at CIVILIZATION_MEMORY_PATH or ../civilization_memory (sibling to grace-mar)
-  - Index built: cd CMC && python3 tools/cmc-index-search.py build
+Sources (in order):
+  1. External CMC repo at CIVILIZATION_MEMORY_PATH or ../civilization_memory (sibling)
+     Index: cd CMC && python3 tools/cmc-index-search.py build
+  2. In-repo docs/civilization-memory (when external repo absent)
+     Index: python scripts/build_civmem_inrepo_index.py build
 
 Returns combined snippet text for REPHRASE, or None if CMC unavailable or no matches.
 """
 
+import json
 import logging
 import os
 import re
@@ -24,6 +27,8 @@ logger = logging.getLogger(__name__)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CMC_PATH = REPO_ROOT.parent / "civilization_memory"
+INREPO_CIVMEM_DIR = REPO_ROOT / "docs" / "civilization-memory"
+INREPO_INDEX_PATH = INREPO_CIVMEM_DIR / ".cache" / "inrepo_index.json"
 
 
 def _get_cmc_path() -> Path | None:
@@ -117,6 +122,42 @@ def _index_exists(cmc_root: Path) -> bool:
     return db.is_file()
 
 
+def _query_inrepo_civmem(question: str, limit: int = 5) -> str | None:
+    """
+    Query in-repo docs/civilization-memory index. Returns combined snippet text, or None.
+    Used when external CMC repo is not present. Index must exist (run build_civmem_inrepo_index build).
+    """
+    if not INREPO_INDEX_PATH.is_file():
+        logger.debug("CMC in-repo: index not found at %s", INREPO_INDEX_PATH)
+        return None
+    try:
+        index = json.loads(INREPO_INDEX_PATH.read_text(encoding="utf-8"))
+    except Exception as e:
+        logger.warning("CMC in-repo: failed to load index: %s", e)
+        return None
+    entries = index.get("entries", [])
+    if not entries:
+        return None
+    q_tokens = _safe_query(question).split()
+    if not q_tokens:
+        return None
+    q_set = set(q_tokens)
+    scored = []
+    for e in entries:
+        text = (e.get("title", "") + " " + e.get("snippet", "")).lower()
+        doc_tokens = set(re.findall(r"[a-z0-9]{3,}", text)) - _FTS_STOPWORDS
+        overlap = len(q_set & doc_tokens)
+        if overlap > 0:
+            scored.append((overlap, e.get("snippet", "")))
+    scored.sort(key=lambda x: -x[0])
+    snippets = [s for _, s in scored[:limit] if (s and s.strip())]
+    if not snippets:
+        return None
+    combined = "\n\n".join(snippets)
+    logger.info("CMC in-repo: hit for %s (%d snippets)", question[:50], len(snippets))
+    return combined
+
+
 def query_cmc(question: str, limit: int = 5, skip_routing: bool = False) -> str | None:
     """
     Query CMC index. Returns combined snippet text, or None.
@@ -131,11 +172,16 @@ def query_cmc(question: str, limit: int = 5, skip_routing: bool = False) -> str 
         logger.debug("CMC: skip (question outside scope)")
         return None
     cmc_root = _get_cmc_path()
-    if not cmc_root:
-        logger.debug("CMC: repo not found (set CIVILIZATION_MEMORY_PATH or clone sibling)")
-        return None
-    if not _index_exists(cmc_root):
-        logger.debug("CMC: index not built (run: cd %s && python3 tools/cmc-index-search.py build)", cmc_root)
+    use_external = cmc_root and _index_exists(cmc_root)
+    if not use_external:
+        # Fall back to in-repo docs/civilization-memory when external CMC absent
+        inrepo = _query_inrepo_civmem(question, limit=limit)
+        if inrepo:
+            return inrepo
+        if not cmc_root:
+            logger.debug("CMC: repo not found; in-repo index had no hits")
+            return None
+        logger.debug("CMC: in-repo had no hits; external index not built")
         return None
 
     script = cmc_root / "tools" / "cmc-index-search.py"

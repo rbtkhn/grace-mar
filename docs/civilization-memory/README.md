@@ -9,7 +9,7 @@
 | Path | Role |
 |------|------|
 | **`essays/`** | Operator essays (Simple Condition, Coordination Hypothesis, index). Edit in place. |
-| **`notes/`** | Short conceptual notes: face/category/blade; exercise for school children (see the face); lens: *God's Debris* (Scott Adams) applied to the Condition. |
+| **`notes/`** | Short conceptual notes: face/category/blade; exercise for school children (see the face); lens: *God's Debris* (Scott Adams) applied to the Condition; scripture as test (win by not acting out the script; literature search). |
 | **`minds/`** | Three mind profiles ported from upstream (Mercouris, Mearsheimer, Barnes): polyphonic cognition implementation; reference for STATE-evolved assistant brain. See [minds/README.md](minds/README.md). |
 | **`content/`** | Optional — add chunked or expanded material later (gitignored large regen can mirror here if you want). |
 
@@ -20,6 +20,14 @@
 ```bash
 python3 scripts/generate_civmem_encyclopedia.py -u grace-mar --essays-only
 ```
+
+**In-repo CMC lookup (bot):** When the external civilization_memory repo is not present, the bot can still answer civ-mem–scoped questions using this folder. Build the search index once:
+
+```bash
+python3 scripts/build_civmem_inrepo_index.py build
+```
+
+Index is written to `docs/civilization-memory/.cache/inrepo_index.json`. The bot uses it automatically when external CMC is unavailable.
 
 Default `--cmc` is `docs/civilization-memory/`. Override with `--cmc /other/path` only if you fork layout.
 

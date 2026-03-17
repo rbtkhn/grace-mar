@@ -49,6 +49,9 @@ python3 scripts/library_shelf_summary.py -u grace-mar
 
 Prints entry counts by shelf keyword (scope tags) and lookup_priority distribution.
 
+- **Reorder by shelf:** `python3 scripts/reorder_library_by_shelf.py -u grace-mar -i` — reorders the Entries YAML block by shelf (Theology, Physics/biology, History, Computer Science, then Reference/Canon/Influence). Use without `-i` to print the new block only.
+- **Regenerate shelf tables:** `python3 scripts/library_shelf_tables.py -u grace-mar` — prints markdown tables for Theology, Physics/biology, History, and Computer Science from the YAML; use `-i` to replace the Current entries blocks in-place (optional).
+
 ---
 
 ## Civ-mem hybrid encyclopedia

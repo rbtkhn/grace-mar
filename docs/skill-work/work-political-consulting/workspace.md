@@ -51,6 +51,7 @@ Use this file when you want one place to understand:
 | `capability-statement-assistant-brain.md` | Reusable capability statement (what we provide, why unique, who for, past performance); federal and general |
 | `past-performance-assistant-brain.md` | Past performance evidence for assistant brain / polyphonic cognition; feeds capability statement and proposals; PP-001 (campaign) + placeholders for A/B/C prep, before/after, training |
 | `competitor-research-assistant-brain-judgment-testing.md` | Competitor scan: multi-perspective / options / debate tools, government/civic, research; positioning vs us |
+| `uare-ai-competitive-notes.md` | Uare.ai (Eternos): blog excerpts, LoCascio/Mayfield/Boldstart quotes; pitch comparison and differentiation |
 | `lessons-solo-founder-ai-video.md` | Lessons from solo-founder/AI-talent video: taste vs conviction, speed of control, coordination proxy, blocked by overhead; mapped to assistant brain |
 | `lessons-perplexity-computer-video.md` | Lessons from Perplexity Computer video: skills, sub-agents, Model Council vs us, memory, integrations, visual output; actionable takeaways |
 | `lessons-deepseek-insider-self-improving-agents.md` | Lessons from DeepSeek Insider (John Wang): sovereign layer vs self-improving agents, memory/bounded session, input-grounded A/B/C, human learning; positioning |

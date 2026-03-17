@@ -70,6 +70,7 @@ from .core import (
     emit_pipeline_event,
     stage_last_exchange,
     run_export_curriculum,
+    WE_DID_PATTERN,
 )
 
 load_dotenv()
@@ -96,6 +97,23 @@ IDLE_CHECKPOINT_ENABLED = os.getenv("GRACE_MAR_IDLE_CHECKPOINT_ENABLED", "0").st
 IDLE_CHECKPOINT_HOUR = int(os.getenv("GRACE_MAR_IDLE_CHECKPOINT_HOUR", "20"))
 IDLE_CHECKPOINT_MINUTE = int(os.getenv("GRACE_MAR_IDLE_CHECKPOINT_MINUTE", "0"))
 IDLE_CHECKPOINT_CHAT_ID = os.getenv("GRACE_MAR_IDLE_CHECKPOINT_CHAT_ID", "").strip() or OPERATOR_CHAT_ID
+
+# Guided "we did X" / post-activity log prompts (single place for copy)
+PROMPT_GOODBYE_ADD_ANYTHING = (
+    "ok! anything from today you'd like me to remember? (paste or type to add; or just leave it)"
+)
+PROMPT_LOG_WHAT_DID_YOU_DO = (
+    "What did you do? Reply with a short line and I'll add it for review."
+)
+
+
+def _activity_report_reply(staged: bool, count: int) -> str:
+    """Reply text after staging an activity report (shared by /log and awaiting_log)."""
+    if staged:
+        return (
+            f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
+        )
+    return "ok i wrote that down. nothing new to add to your profile right now, but it's in the log! type /review to see what's waiting."
 
 
 def _channel_key(chat_id: int) -> str:
@@ -572,6 +590,29 @@ async def stage_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
         await update.message.reply_text("i couldn't stage that right now. try again?")
 
 
+async def log_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Guided 'we did X': log activity for the record. With no args, ask for a reply; with args, stage immediately."""
+    chat_id = update.effective_chat.id
+    key = _channel_key(chat_id)
+    args = context.args or []
+
+    if not args:
+        await update.message.reply_text(PROMPT_LOG_WHAT_DID_YOU_DO)
+        context.user_data["awaiting_log"] = True
+        return
+
+    text = " ".join(args).strip()
+    synthetic = text if WE_DID_PATTERN.search(text) else "we did " + text
+    archive("ACTIVITY REPORT (/log)", key, text)
+    try:
+        staged = await _run_blocking(analyze_activity_report, synthetic, key)
+        count = len(get_pending_candidates())
+        await update.message.reply_text(_activity_report_reply(staged, count))
+    except Exception:
+        logger.exception("Log command error")
+        await update.message.reply_text("i couldn't add that right now. try again?")
+
+
 async def export_curriculum_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Export curriculum profile (JSON) — shareable for adaptive curriculum engines."""
     args = context.args or []
@@ -998,6 +1039,21 @@ async def handle_message(
         await review(update, context)
         return
 
+    # Guided log: reply after /log (no args) or after goodbye prompt → treat as activity report
+    if context.user_data.get("awaiting_log"):
+        context.user_data["awaiting_log"] = False
+        msg_stripped = user_message.strip()
+        synthetic = msg_stripped if WE_DID_PATTERN.search(msg_stripped) else "we did " + msg_stripped
+        archive("ACTIVITY REPORT (guided)", key, user_message)
+        try:
+            staged = await _run_blocking(analyze_activity_report, synthetic, key)
+            count = len(get_pending_candidates())
+            await update.message.reply_text(_activity_report_reply(staged, count))
+        except Exception:
+            logger.exception("Guided log (awaiting_log) error")
+            await update.message.reply_text("i couldn't add that right now. try again or say \"we did X\" later?")
+        return
+
     # Paste-as-handback: long transcript-like paste → stage as activity report
     if _looks_like_paste_handback(user_message):
         synthetic = (
@@ -1030,9 +1086,8 @@ async def handle_message(
         user_message.strip().lower().startswith(p) for p in ("bye", "goodbye", "see you", "talk later")
     ):
         archive("USER", key, user_message)
-        await update.message.reply_text(
-            "ok! anything from today you'd like me to remember? (paste or type to add; or just leave it)"
-        )
+        await update.message.reply_text(PROMPT_GOODBYE_ADD_ANYTHING)
+        context.user_data["awaiting_log"] = True
         return
 
     try:
@@ -1197,6 +1252,7 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("checkpoint", checkpoint_command))
     app.add_handler(CommandHandler("approve", approve_command))
     app.add_handler(CommandHandler("stage", stage_command))
+    app.add_handler(CommandHandler("log", log_command))
     app.add_handler(CommandHandler("export_curriculum", export_curriculum_command))
     app.add_handler(CommandHandler("merge", merge_command))
     app.add_handler(CommandHandler("reject", reject_with_reason))

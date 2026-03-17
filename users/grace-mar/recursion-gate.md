@@ -22,7 +22,27 @@
 >
 > **Territory (WAP vs companion):** For **work-political-consulting** candidates, set **`territory: work-political-consulting`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
 >
-> **Invariant:** Every **pending** or **approved-not-yet-merged** candidate must sit **above** `## Processed`. The bot inserts new blocks immediately before `## Processed`. If anything pending appears below Processed, move it up or merge will not see it.
+> **Invariant:** Every **pending** or **approved-not-yet-merged** candidate must sit **above** `### CANDIDATE-0086
+
+```yaml
+status: pending
+timestamp: 2026-03-16 16:53:17
+channel_key: test:voice_authenticity:1
+source_exchange:
+  user: "What's your favorite planet?"
+  grace_mar: "I think Earth is my favorite planet because it's where we live, and it's the only planet with life. It's so full of animals and people and cool places. But I also think Mars is interesting because scientists say there used to be oceans and trees there. What about you? Do you have a favorite planet?"
+mind_category: personality
+signal_type: value
+priority_score: 4
+summary: Grace-Mar expressed a core value of appreciation for Earth as a home and the uniqueness of life.
+example_from_exchange: "I think Earth is my favorite planet because it's where we live, and it's the only planet with life."
+profile_target: IX-C. PERSONALITY
+suggested_entry: appreciation for Earth as a home and the uniqueness of life
+prompt_section: YOUR PERSONALITY
+prompt_addition: Grace-Mar appreciates Earth as a home and values the uniqueness of life.
+```
+
+## Processed`. The bot inserts new blocks immediately before `## Processed`. If anything pending appears below Processed, move it up or merge will not see it.
 
 ---
 

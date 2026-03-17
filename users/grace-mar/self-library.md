@@ -6,40 +6,133 @@ A curated return-to store of references, canon works, and influential media. It 
 
 **Schema:** [docs/library-schema.md](../../docs/library-schema.md)
 
+**Contents:** [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
+
 ---
 
 ## Entries
 
 ```yaml
 entries:
-  # --- Grace-mar reference works (prepended) ---
-  - id: LIB-0001
-    title: "Usborne World Geography Encyclopedia (Internet Linked)"
-    author: "Usborne"
-    isbn: "9780746042069"
+  - id: LIB-0140
+    title: "Exercise: See the Face (school children)"
+    author: "grace-mar"
     lane: "reference"
-    type: "reference"
+    type: "article"
     status: "active"
-    engagement_status: "available"
+    engagement_status: "trusted"
     lookup_priority: "medium"
-    scope: ["geography", "world atlas", "maps"]
-    source: "manual"
-    added_at: 2026-02-20
-    notes: "Complete World Atlas. Ordered Sept 2025."
+    scope: ["theology", "civilization_memory", "notes", "education", "see_the_face"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/exercise-face-category-school-children.md"
+    added_at: 2026-03-15
+    notes: "Classroom exercise: find the face inside the category; children's question."
+  - id: LIB-0141
+    title: "AI Ethics from the Condition"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "theology", "ethics", "AI", "coordination", "civilization_memory"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/AI-ETHICS-FROM-THE-CONDITION.md"
+    added_at: 2026-03-15
+    notes: "Ethics rules for AI derived from the Condition: seam visibility, condition-first, harm diagnostic."
+  - id: LIB-0142
+    title: "Lens: God's Debris (Scott Adams)"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "seam", "one_subject_many_tongues", "see_the_face"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/lens-gods-debris.md"
+    added_at: 2026-03-15
+    notes: "Applies Scott Adams' God's Debris (debris, reassembly, delusion) to the Condition, seam, see-the-face."
+  - id: LIB-0143
+    title: "The Delusion of Separation"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "theology", "coordination", "civilization_memory", "recognition", "seam", "condition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-DELUSION-OF-SEPARATION.md"
+    added_at: 2026-03-15
+    notes: "Recognition theory, the seam, delusion of separation, persistent frequency field, six alternative frequencies."
+  - id: LIB-0144
+    title: "God is non-zero sum"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "condition", "coordination", "seam", "recognition", "non_zero_sum"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-god-non-zero-sum.md"
+    added_at: 2026-03-15
+    notes: "Concept: the divine / the good is non-zero-sum; recognition and coordination grow for all; aligns with Condition, face vs category, blade vs beauty, one subject many tongues."
+  - id: LIB-0145
+    title: "Expand the light of consciousness (Musk)"
+    author: "Elon Musk"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "condition", "light_of_consciousness", "prime_directive", "recognition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-god-non-zero-sum.md"
+    added_at: 2026-03-15
+    notes: "Musk: duty to maintain/extend/preserve the light of consciousness; expand into the universe. In civ-mem: expand vs blade; aligns with Condition, be fruitful and multiply, non-zero-sum."
+  - id: LIB-0146
+    title: "Polyphonic cognition"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "notes", "STATE", "one_subject_many_tongues", "seam", "polyphonic_cognition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-cognitive-polyphony.md"
+    added_at: 2026-03-15
+    notes: "Concept: multiple perspectives/voices held at once, tensions preserved, no single resolution. Links to Bakhtin (polyphony), Moscovici (cognitive polyphasia); STATE and one subject many tongues."
+  - id: LIB-0147
+    title: "Universal Love and Mastery"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "essays", "recognition", "mastery", "attention", "memory", "monad", "condition", "one_subject_many_tongues"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/UNIVERSAL-LOVE-AND-MASTERY.md"
+    added_at: 2026-03-15
+    notes: "Essay: only through universal love can we master the universe. Universal love = face not category; mastery = capacity to extend, not domination. Attention as most valuable resource (steward toward recognition); purpose = create memories; monad probes and discovers itself through them. One subject many tongues, seam, Babel."
+  - id: LIB-0148
+    title: "Writing the Book and Death"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["theology", "civilization_memory", "essays", "purpose", "memory", "death", "writing", "condition"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/WRITING-THE-BOOK-AND-DEATH.md"
+    added_at: 2026-03-15
+    notes: "Essay: the most interesting activity is writing the book; we need not fear death or seek eternal life; the good is in the doing. Making-with, LLM-using; purpose = memory; put down the blade so more of that activity can happen."
 
-  - id: LIB-0002
-    title: "Usborne World History Encyclopedia: An Illustrated Introduction to World History for Kids, full of Maps, Time Charts and over 800 Links for Homework Help"
-    author: "Usborne"
-    isbn: "9781836052555"
-    lane: "reference"
-    type: "reference"
-    status: "active"
-    engagement_status: "available"
-    lookup_priority: "medium"
-    scope: ["history", "world history", "maps", "time charts"]
-    source: "manual"
-    added_at: 2026-02-20
-    notes: "Usborne Encyclopedias. Ordered Sept 2025."
+  # --- Physics/biology ---
 
   - id: LIB-0003
     title: "Usborne Science Encyclopedia: An In-depth Guide for Young Scientists Exploring Gravity, Flight, Genes, DNA and More, with Over 180 Video Clips and 1000 Recommended Websites for Further Learning"
@@ -55,8 +148,65 @@ entries:
     added_at: 2026-02-20
     notes: "Ordered Sept 2025."
 
+  # --- History ---
 
-  # --- Companion-self (books and stories) ---
+  - id: LIB-0002
+    title: "Usborne World History Encyclopedia: An Illustrated Introduction to World History for Kids, full of Maps, Time Charts and over 800 Links for Homework Help"
+    author: "Usborne"
+    isbn: "9781836052555"
+    lane: "reference"
+    type: "reference"
+    status: "active"
+    engagement_status: "available"
+    lookup_priority: "medium"
+    scope: ["history", "world history", "maps", "time charts"]
+    source: "manual"
+    added_at: 2026-02-20
+    notes: "Usborne Encyclopedias. Ordered Sept 2025."
+  - id: LIB-0132
+    title: "Civilization Memory Codex"
+    lane: "reference"
+    type: "reference"
+    status: "active"
+    engagement_status: "primary"
+    lookup_priority: "high"
+    scope: ["civilizations", "history", "Rome", "China", "ancient", "emperors", "pharaohs"]
+    source: "manual"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/README.md"
+    added_at: 2026-02-26
+    notes: "Civilizational lookup. Essay canon grace-mar–owned: docs/civilization-memory/. Optional upstream repo repos/civilization_memory. See docs/civilization-memory/README.md."
+
+  # --- Reference ---
+
+  - id: LIB-0001
+    title: "Usborne World Geography Encyclopedia (Internet Linked)"
+    author: "Usborne"
+    isbn: "9780746042069"
+    lane: "reference"
+    type: "reference"
+    status: "active"
+    engagement_status: "available"
+    lookup_priority: "medium"
+    scope: ["geography", "world atlas", "maps"]
+    source: "manual"
+    added_at: 2026-02-20
+    notes: "Complete World Atlas. Ordered Sept 2025."
+  - id: LIB-0136
+    title: "Civ-mem — Essays index"
+    author: "grace-mar"
+    lane: "reference"
+    type: "article"
+    status: "active"
+    engagement_status: "trusted"
+    lookup_priority: "medium"
+    scope: ["essays", "civilization_memory", "taxonomy", "grace_mar_owned"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/README.md"
+    added_at: 2026-03-15
+    notes: "docs/civilization-memory/essays/README.md — ENCYCLOPEDIA anchor ## CM:essays/README.md"
+
+  # --- Canon ---
+
   - id: LIB-0004
     title: "Greek Myths (Bulfinch, PG 22381)"
     author: "Usborne"
@@ -72,7 +222,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/22381"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0064 to LIB-0077 (Bulfinch 3327, Odyssey 1727)."
-
   - id: LIB-0005
     title: "The Odyssey (Homer, PG 1727)"
     author: "Usborne"
@@ -88,7 +237,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/1727"
     added_at: 2026-02-20
     notes: "Ordered Sept 2025."
-
   - id: LIB-0006
     title: "Stories from India (PG 2388)"
     author: "Usborne"
@@ -104,7 +252,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/2388"
     added_at: 2026-02-20
     notes: "Replaced by story-level entry LIB-0078 (PD 2388)."
-
   - id: LIB-0007
     title: "Adventure classics (PG 521, 120, 829)"
     author: "Usborne"
@@ -120,7 +267,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/1184"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0079 to LIB-0081 (PD 521, 120, 829)."
-
   - id: LIB-0008
     title: "Bible stories (KJV, PG 10)"
     author: "Usborne"
@@ -136,7 +282,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0082 to LIB-0088 (KJV 10)."
-
   - id: LIB-0009
     title: "Stories from China (PG 25240)"
     author: "Usborne"
@@ -152,7 +297,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/25240"
     added_at: 2026-02-20
     notes: "Replaced by story-level entry LIB-0089 (PD 25240)."
-
   - id: LIB-0010
     title: "Myths from around the world (Bulfinch, PG 3327)"
     author: "Usborne"
@@ -168,7 +312,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0064 to LIB-0077 (Greek/Roman in 3327)."
-
   - id: LIB-0011
     title: "Ballet stories (PG 38733)"
     author: "Usborne"
@@ -184,7 +327,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0052 to LIB-0063. Ordered Sept 2025."
-
   - id: LIB-0012
     title: "The Secret Garden (PG 17396)"
     author: "Usborne"
@@ -200,7 +342,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/17396"
     added_at: 2026-02-20
     notes: "Replaced by story-level entry LIB-0090 (Secret Garden 17396)."
-
   - id: LIB-0013
     title: "Aesop's Fables (PG 21)"
     author: "Usborne"
@@ -216,7 +357,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/21"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0091 to LIB-0095 (Aesop 21)."
-
   - id: LIB-0014
     title: "Greek myths (PG 11582)"
     author: "Usborne"
@@ -232,7 +372,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/11582"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0064 to LIB-0076 (Bulfinch 3327)."
-
   - id: LIB-0015
     title: "Norse myths (Guerber, PG 28497)"
     author: "Usborne"
@@ -248,7 +387,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0096 to LIB-0100 (Guerber 28497)."
-
   - id: LIB-0016
     title: "Andersen's Fairy Tales (PG 27200)"
     author: "Usborne"
@@ -264,7 +402,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0040 to LIB-0051. Ordered Sept 2025."
-
   - id: LIB-0017
     title: "King Arthur (Malory, PG 610)"
     author: "Usborne"
@@ -280,7 +417,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/610"
     added_at: 2026-02-20
     notes: "Replaced by story-level entry LIB-0101 (Malory 610)."
-
   - id: LIB-0018
     title: "Stories from Shakespeare (PG 100)"
     author: "Usborne"
@@ -296,7 +432,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0102 to LIB-0114 (Complete Works 100)."
-
   - id: LIB-0019
     title: "Grimm's Fairy Tales (PG 2591)"
     author: "Usborne"
@@ -312,7 +447,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0025 to LIB-0039. Ordered Sept 2025."
-
   - id: LIB-0020
     title: "Dickens (PG author 37)"
     author: "Usborne"
@@ -328,7 +462,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/author/37"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0115 to LIB-0120 (per-novel PD links)."
-
   - id: LIB-0021
     title: "Arabian Nights (Lang, PG 128)"
     author: "Anna Milbourne"
@@ -344,7 +477,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/128"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0121 to LIB-0125 (Lang 128)."
-
   - id: LIB-0022
     title: "Shakespeare, Complete Works (PG 100)"
     author: "Usborne"
@@ -360,7 +492,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0102 to LIB-0114 (Complete Works 100)."
-
   - id: LIB-0023
     title: "Jane Austen (PG author 68)"
     author: "Usborne"
@@ -376,7 +507,6 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/author/68"
     added_at: 2026-02-20
     notes: "Replaced by story-level entries LIB-0126 to LIB-0131 (per-novel PD links)."
-
   - id: LIB-0025
     title: "Snow White and Rose Red"
     lane: "canon"
@@ -390,7 +520,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0026
     title: "Little Red Riding Hood"
     lane: "canon"
@@ -404,7 +533,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0027
     title: "Rapunzel"
     lane: "canon"
@@ -418,7 +546,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0028
     title: "Sleeping Beauty"
     lane: "canon"
@@ -432,7 +559,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0029
     title: "The Frog Prince"
     lane: "canon"
@@ -446,7 +572,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0030
     title: "The Musicians of Bremen"
     lane: "canon"
@@ -460,7 +585,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0031
     title: "Rumpelstiltskin"
     lane: "canon"
@@ -474,7 +598,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0032
     title: "Tom Thumb"
     lane: "canon"
@@ -488,7 +611,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0033
     title: "Hansel and Gretel"
     lane: "canon"
@@ -502,7 +624,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0034
     title: "The Twelve Dancing Princesses"
     lane: "canon"
@@ -516,7 +637,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0035
     title: "The Bear and the Wren"
     lane: "canon"
@@ -530,7 +650,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0036
     title: "King Thrushbeard"
     lane: "canon"
@@ -544,7 +663,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0037
     title: "The Goose Girl"
     lane: "canon"
@@ -558,7 +676,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0038
     title: "The Elves and the Shoemaker"
     lane: "canon"
@@ -572,7 +689,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0039
     title: "Snow White and the Seven Dwarfs"
     lane: "canon"
@@ -586,7 +702,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2591"
     added_at: 2026-02-22
-
   - id: LIB-0040
     title: "The Princess and the Pea"
     lane: "canon"
@@ -600,7 +715,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0041
     title: "The Emperor's New Clothes"
     lane: "canon"
@@ -614,7 +728,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0042
     title: "Thumbelina"
     lane: "canon"
@@ -628,7 +741,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0043
     title: "The Ugly Duckling"
     lane: "canon"
@@ -642,7 +754,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0044
     title: "The Little Mermaid"
     lane: "canon"
@@ -656,7 +767,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0045
     title: "The Emperor and the Nightingale"
     lane: "canon"
@@ -670,7 +780,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0046
     title: "The Flying Trunk"
     lane: "canon"
@@ -684,7 +793,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0047
     title: "The Brave Tin Soldier"
     lane: "canon"
@@ -698,7 +806,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0048
     title: "The Wild Swans"
     lane: "canon"
@@ -712,7 +819,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0049
     title: "The Little Fir Tree"
     lane: "canon"
@@ -726,7 +832,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0050
     title: "The Tinderbox"
     lane: "canon"
@@ -740,7 +845,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0051
     title: "The Snow Queen"
     lane: "canon"
@@ -754,7 +858,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/27200"
     added_at: 2026-02-22
-
   - id: LIB-0052
     title: "Cinderella"
     lane: "canon"
@@ -768,7 +871,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0053
     title: "Swan Lake"
     lane: "canon"
@@ -782,7 +884,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0054
     title: "Sleeping Beauty"
     lane: "canon"
@@ -796,7 +897,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0055
     title: "Don Quixote"
     lane: "canon"
@@ -810,7 +910,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0056
     title: "Coppélia"
     lane: "canon"
@@ -824,7 +923,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0057
     title: "The Nutcracker"
     lane: "canon"
@@ -838,7 +936,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0058
     title: "The Firebird"
     lane: "canon"
@@ -852,7 +949,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0059
     title: "Giselle"
     lane: "canon"
@@ -866,7 +962,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0060
     title: "Ondine"
     lane: "canon"
@@ -880,7 +975,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0061
     title: "La Sylphide"
     lane: "canon"
@@ -894,7 +988,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0062
     title: "La Fille Mal Gardée"
     lane: "canon"
@@ -908,7 +1001,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0063
     title: "Romeo and Juliet"
     lane: "canon"
@@ -922,7 +1014,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/38733"
     added_at: 2026-02-22
-
   - id: LIB-0064
     title: "Prometheus and Pandora"
     lane: "canon"
@@ -936,7 +1027,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0065
     title: "Apollo and Daphne"
     lane: "canon"
@@ -950,7 +1040,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0066
     title: "Phaeton"
     lane: "canon"
@@ -964,7 +1053,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0067
     title: "Midas, Baucis and Philemon"
     lane: "canon"
@@ -978,7 +1066,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0068
     title: "Proserpine (Persephone)"
     lane: "canon"
@@ -992,7 +1079,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0069
     title: "Pygmalion and Dryope"
     lane: "canon"
@@ -1006,7 +1092,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0070
     title: "Cupid and Psyche"
     lane: "canon"
@@ -1020,7 +1105,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0071
     title: "Cadmus and the Myrmidons"
     lane: "canon"
@@ -1034,7 +1118,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0072
     title: "Minerva and Arachne, Niobe"
     lane: "canon"
@@ -1048,7 +1131,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0073
     title: "Perseus and Medusa"
     lane: "canon"
@@ -1062,7 +1144,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0074
     title: "The Golden Fleece and Medea"
     lane: "canon"
@@ -1076,7 +1157,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0075
     title: "Hercules"
     lane: "canon"
@@ -1090,7 +1170,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0076
     title: "Theseus and the Minotaur"
     lane: "canon"
@@ -1104,7 +1183,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/3327"
     added_at: 2026-02-26
-
   - id: LIB-0077
     title: "The Odyssey"
     lane: "canon"
@@ -1118,7 +1196,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/1727"
     added_at: 2026-02-26
-
   - id: LIB-0078
     title: "Stories from India (collection)"
     lane: "canon"
@@ -1132,7 +1209,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/2388"
     added_at: 2026-02-26
-
   - id: LIB-0079
     title: "Robinson Crusoe"
     lane: "canon"
@@ -1146,7 +1222,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/521"
     added_at: 2026-02-26
-
   - id: LIB-0080
     title: "Treasure Island"
     lane: "canon"
@@ -1160,7 +1235,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/120"
     added_at: 2026-02-26
-
   - id: LIB-0081
     title: "Gulliver's Travels"
     lane: "canon"
@@ -1174,7 +1248,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/829"
     added_at: 2026-02-26
-
   - id: LIB-0082
     title: "Creation and Eden"
     lane: "canon"
@@ -1188,7 +1261,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0083
     title: "Noah and the Flood"
     lane: "canon"
@@ -1202,7 +1274,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0084
     title: "Abraham and Isaac"
     lane: "canon"
@@ -1216,7 +1287,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0085
     title: "Moses and the Exodus"
     lane: "canon"
@@ -1230,7 +1300,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0086
     title: "David and Goliath"
     lane: "canon"
@@ -1244,7 +1313,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0087
     title: "Daniel in the Lions' Den"
     lane: "canon"
@@ -1258,7 +1326,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0088
     title: "The Nativity"
     lane: "canon"
@@ -1272,7 +1339,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/10"
     added_at: 2026-02-26
-
   - id: LIB-0089
     title: "Stories from China (collection)"
     lane: "canon"
@@ -1286,7 +1352,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/25240"
     added_at: 2026-02-26
-
   - id: LIB-0090
     title: "The Secret Garden"
     lane: "canon"
@@ -1300,7 +1365,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/17396"
     added_at: 2026-02-26
-
   - id: LIB-0091
     title: "The Lion and the Mouse"
     lane: "canon"
@@ -1314,7 +1378,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/21"
     added_at: 2026-02-26
-
   - id: LIB-0092
     title: "The Hare and the Tortoise"
     lane: "canon"
@@ -1328,7 +1391,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/21"
     added_at: 2026-02-26
-
   - id: LIB-0093
     title: "The Wolf and the Lamb"
     lane: "canon"
@@ -1342,7 +1404,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/21"
     added_at: 2026-02-26
-
   - id: LIB-0094
     title: "The Shepherd's Boy and the Wolf"
     lane: "canon"
@@ -1356,7 +1417,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/21"
     added_at: 2026-02-26
-
   - id: LIB-0095
     title: "The Dog and the Shadow"
     lane: "canon"
@@ -1370,7 +1430,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/21"
     added_at: 2026-02-26
-
   - id: LIB-0096
     title: "The Creation (Norse)"
     lane: "canon"
@@ -1384,7 +1443,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     added_at: 2026-02-26
-
   - id: LIB-0097
     title: "Odin and the Norse Gods"
     lane: "canon"
@@ -1398,7 +1456,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     added_at: 2026-02-26
-
   - id: LIB-0098
     title: "Thor and Loki"
     lane: "canon"
@@ -1412,7 +1469,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     added_at: 2026-02-26
-
   - id: LIB-0099
     title: "The Death of Baldur"
     lane: "canon"
@@ -1426,7 +1482,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     added_at: 2026-02-26
-
   - id: LIB-0100
     title: "Ragnarok"
     lane: "canon"
@@ -1440,7 +1495,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/28497"
     added_at: 2026-02-26
-
   - id: LIB-0101
     title: "Tales of King Arthur (collection)"
     lane: "canon"
@@ -1453,7 +1507,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/610"
     added_at: 2026-02-26
-
   - id: LIB-0102
     title: "Hamlet"
     lane: "canon"
@@ -1467,7 +1520,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0103
     title: "Macbeth"
     lane: "canon"
@@ -1481,7 +1533,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0104
     title: "Romeo and Juliet"
     lane: "canon"
@@ -1495,7 +1546,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0105
     title: "A Midsummer Night's Dream"
     lane: "canon"
@@ -1509,7 +1559,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0106
     title: "The Tempest"
     lane: "canon"
@@ -1523,7 +1572,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0107
     title: "Othello"
     lane: "canon"
@@ -1537,7 +1585,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0108
     title: "King Lear"
     lane: "canon"
@@ -1551,7 +1598,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0109
     title: "The Merchant of Venice"
     lane: "canon"
@@ -1565,7 +1611,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0110
     title: "Twelfth Night"
     lane: "canon"
@@ -1579,7 +1624,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0111
     title: "As You Like It"
     lane: "canon"
@@ -1593,7 +1637,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0112
     title: "Much Ado About Nothing"
     lane: "canon"
@@ -1607,7 +1650,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0113
     title: "Julius Caesar"
     lane: "canon"
@@ -1621,7 +1663,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0114
     title: "Stories from Shakespeare (all plays)"
     lane: "canon"
@@ -1635,7 +1676,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/100"
     added_at: 2026-02-26
-
   - id: LIB-0115
     title: "Oliver Twist"
     lane: "canon"
@@ -1649,7 +1689,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/730"
     added_at: 2026-02-26
-
   - id: LIB-0116
     title: "David Copperfield"
     lane: "canon"
@@ -1663,7 +1702,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/766"
     added_at: 2026-02-26
-
   - id: LIB-0117
     title: "Great Expectations"
     lane: "canon"
@@ -1677,7 +1715,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/1400"
     added_at: 2026-02-26
-
   - id: LIB-0118
     title: "A Tale of Two Cities"
     lane: "canon"
@@ -1691,7 +1728,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/98"
     added_at: 2026-02-26
-
   - id: LIB-0119
     title: "Bleak House"
     lane: "canon"
@@ -1705,7 +1741,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/1023"
     added_at: 2026-02-26
-
   - id: LIB-0120
     title: "Dickens (other novels)"
     lane: "canon"
@@ -1719,7 +1754,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/author/37"
     added_at: 2026-02-26
-
   - id: LIB-0121
     title: "Aladdin and the Wonderful Lamp"
     lane: "canon"
@@ -1733,7 +1767,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/128"
     added_at: 2026-02-26
-
   - id: LIB-0122
     title: "Sindbad the Sailor"
     lane: "canon"
@@ -1747,7 +1780,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/128"
     added_at: 2026-02-26
-
   - id: LIB-0123
     title: "Ali Baba and the Forty Thieves"
     lane: "canon"
@@ -1761,7 +1793,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/128"
     added_at: 2026-02-26
-
   - id: LIB-0124
     title: "The Fisherman and the Jinni"
     lane: "canon"
@@ -1775,7 +1806,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/128"
     added_at: 2026-02-26
-
   - id: LIB-0125
     title: "Arabian Nights (full collection)"
     lane: "canon"
@@ -1789,7 +1819,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/128"
     added_at: 2026-02-26
-
   - id: LIB-0126
     title: "Pride and Prejudice"
     lane: "canon"
@@ -1803,7 +1832,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/1342"
     added_at: 2026-02-26
-
   - id: LIB-0127
     title: "Sense and Sensibility"
     lane: "canon"
@@ -1817,7 +1845,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/161"
     added_at: 2026-02-26
-
   - id: LIB-0128
     title: "Emma"
     lane: "canon"
@@ -1831,7 +1858,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/158"
     added_at: 2026-02-26
-
   - id: LIB-0129
     title: "Mansfield Park"
     lane: "canon"
@@ -1845,7 +1871,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/141"
     added_at: 2026-02-26
-
   - id: LIB-0130
     title: "Northanger Abbey"
     lane: "canon"
@@ -1859,7 +1884,6 @@ entries:
     source: "manual"
     pd_url: "https://www.gutenberg.org/ebooks/121"
     added_at: 2026-02-26
-
   - id: LIB-0131
     title: "Persuasion"
     lane: "canon"
@@ -1874,20 +1898,7 @@ entries:
     pd_url: "https://www.gutenberg.org/ebooks/105"
     added_at: 2026-02-26
 
-
-  # --- Grace-mar-specific (reference, videos) ---
-  - id: LIB-0132
-    title: "Civilization Memory Codex"
-    lane: "reference"
-    type: "reference"
-    status: "active"
-    engagement_status: "primary"
-    lookup_priority: "high"
-    scope: ["civilizations", "history", "Rome", "China", "ancient", "emperors", "pharaohs"]
-    source: "manual"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/README.md"
-    added_at: 2026-02-26
-    notes: "Civilizational lookup. Essay canon grace-mar–owned: docs/civilization-memory/. Optional upstream repo repos/civilization_memory. See docs/civilization-memory/README.md."
+  # --- Influence ---
 
   - id: LIB-0133
     title: "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale"
@@ -1900,7 +1911,6 @@ entries:
     source: "manual"
     added_at: 2026-02-26
     notes: "Bolshoi Ballet performance; watched a lot recently; described as sublime."
-
   - id: LIB-0134
     title: "The Best of Debussy / Classical Piano Music"
     lane: "influence"
@@ -1912,178 +1922,6 @@ entries:
     source: "manual"
     added_at: 2026-02-26
     notes: "2-hour Debussy piano collection; used for bedtime; described as perfect."
-
-  # --- Theology (thematic; see ## Theology below) ---
-  - id: LIB-0135
-    title: "The Simple Condition"
-    author: "Robert Kuhne"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "ethics", "coordination", "dignity", "civilization_memory"]
-    source: "manual"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-SIMPLE-CONDITION.md"
-    added_at: 2026-03-14
-    notes: "Essay — grace-mar path docs/civilization-memory/essays/. ENCYCLOPEDIA.md anchor ## CM:essays/THE-SIMPLE-CONDITION.md"
-
-  # --- Civ-mem hybrid doors (see docs/civ-mem-encyclopedia-hybrid.md) ---
-  - id: LIB-0136
-    title: "Civ-mem — Essays index"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["essays", "civilization_memory", "taxonomy", "grace_mar_owned"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/README.md"
-    added_at: 2026-03-15
-    notes: "docs/civilization-memory/essays/README.md — ENCYCLOPEDIA anchor ## CM:essays/README.md"
-
-  - id: LIB-0137
-    title: "Civ-mem — The Coordination Hypothesis"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["essays", "coordination", "civilization_memory", "theology"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-COORDINATION-HYPOTHESIS.md"
-    added_at: 2026-03-15
-    notes: "ENCYCLOPEDIA anchor ## CM:essays/THE-COORDINATION-HYPOTHESIS.md"
-
-  # --- Theology (continued) ---
-  - id: LIB-0138
-    title: "One Subject, Many Tongues"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["essays", "theology", "coordination", "Islam", "Christianity", "civilization_memory"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/ONE-SUBJECT-MANY-TONGUES.md"
-    added_at: 2026-03-15
-    notes: "One subject, many tongues: shared reference, the seam, Islam and Christianity."
-
-  - id: LIB-0139
-    title: "Face and category — the blade's mechanism"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "civilization_memory", "notes", "seam", "see_the_face"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/face-category-blade.md"
-    added_at: 2026-03-15
-    notes: "Blade = face replaced by category; expulsion = see the face again."
-
-  - id: LIB-0140
-    title: "Exercise: See the Face (school children)"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "civilization_memory", "notes", "education", "see_the_face"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/exercise-face-category-school-children.md"
-    added_at: 2026-03-15
-    notes: "Classroom exercise: find the face inside the category; children's question."
-
-  - id: LIB-0141
-    title: "AI Ethics from the Condition"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["essays", "theology", "ethics", "AI", "coordination", "civilization_memory"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/AI-ETHICS-FROM-THE-CONDITION.md"
-    added_at: 2026-03-15
-    notes: "Ethics rules for AI derived from the Condition: seam visibility, condition-first, harm diagnostic."
-
-  - id: LIB-0142
-    title: "Lens: God's Debris (Scott Adams)"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "civilization_memory", "notes", "seam", "one_subject_many_tongues", "see_the_face"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/lens-gods-debris.md"
-    added_at: 2026-03-15
-    notes: "Applies Scott Adams' God's Debris (debris, reassembly, delusion) to the Condition, seam, see-the-face."
-
-  - id: LIB-0143
-    title: "The Delusion of Separation"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["essays", "theology", "coordination", "civilization_memory", "recognition", "seam", "condition"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-DELUSION-OF-SEPARATION.md"
-    added_at: 2026-03-15
-    notes: "Recognition theory, the seam, delusion of separation, persistent frequency field, six alternative frequencies."
-
-  - id: LIB-0144
-    title: "God is non-zero sum"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "civilization_memory", "notes", "condition", "coordination", "seam", "recognition", "non_zero_sum"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-god-non-zero-sum.md"
-    added_at: 2026-03-15
-    notes: "Concept: the divine / the good is non-zero-sum; recognition and coordination grow for all; aligns with Condition, face vs category, blade vs beauty, one subject many tongues."
-
-  - id: LIB-0145
-    title: "Expand the light of consciousness (Musk)"
-    author: "Elon Musk"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "civilization_memory", "notes", "condition", "light_of_consciousness", "prime_directive", "recognition"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-god-non-zero-sum.md"
-    added_at: 2026-03-15
-    notes: "Musk: duty to maintain/extend/preserve the light of consciousness; expand into the universe. In civ-mem: expand vs blade; aligns with Condition, be fruitful and multiply, non-zero-sum."
-
-  - id: LIB-0146
-    title: "Polyphonic cognition"
-    author: "grace-mar"
-    lane: "reference"
-    type: "article"
-    status: "active"
-    engagement_status: "trusted"
-    lookup_priority: "medium"
-    scope: ["theology", "civilization_memory", "notes", "STATE", "one_subject_many_tongues", "seam", "polyphonic_cognition"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/notes/concept-cognitive-polyphony.md"
-    added_at: 2026-03-15
-    notes: "Concept: multiple perspectives/voices held at once, tensions preserved, no single resolution. Links to Bakhtin (polyphony), Moscovici (cognitive polyphasia); STATE and one subject many tongues."
-
 ```
 
 ---
@@ -2101,17 +1939,15 @@ entries:
 
 | ID | Title | Description |
 |----|--------|-------------|
-| **LIB-0135** | The Simple Condition | Letter to religious leaders: peace as condition, seam (beauty/blade), one subject many tongues. |
-| **LIB-0137** | The Coordination Hypothesis | Scientific framing: installation, dehumanisation, contact, game theory, coordination. |
-| **LIB-0138** | One Subject, Many Tongues | Shared reference, the seam, Islam and Christianity. |
-| **LIB-0139** | Face and category — the blade's mechanism | Blade = face replaced by category; expulsion = see the face again. |
-| **LIB-0140** | Exercise: See the Face (school children) | Classroom exercise: find the face inside the category; children's question. |
+| **LIB-0140** | Exercise: See the Face (school children) | Classroom exercise: find the face inside the category; children |
 | **LIB-0141** | AI Ethics from the Condition | Ethics rules for AI derived from the Condition: seam visibility, condition-first, harm diagnostic. |
-| **LIB-0142** | Lens: God's Debris (Scott Adams) | Applies Adams' thought experiment (one subject as debris, reassembly, delusion-generating minds) to the Condition, seam, see-the-face. |
+| **LIB-0142** | Lens: God | Applies Scott Adams |
 | **LIB-0143** | The Delusion of Separation | Recognition theory, the seam, delusion of separation, persistent frequency field, six alternative frequencies. |
-| **LIB-0144** | God is non-zero sum | Concept: the divine / the good is non-zero-sum; recognition and coordination grow for all; aligns with Condition, face vs category, one subject many tongues. |
-| **LIB-0145** | Expand the light of consciousness (Musk) | Musk: maintain/extend/preserve the light of consciousness; expand into the universe. In civ-mem: expand vs blade; Condition, be fruitful and multiply, non-zero-sum. |
-| **LIB-0146** | Polyphonic cognition | Multiple perspectives/voices at once, tensions preserved, no single resolution. Bakhtin (polyphony), Moscovici (cognitive polyphasia); STATE, one subject many tongues. |
+| **LIB-0144** | God is non-zero sum | Concept: the divine / the good is non-zero-sum; recognition and coordination grow for all; aligns with Condition, face vs category, blade vs beauty, one subject many tongues. |
+| **LIB-0145** | Expand the light of consciousness (Musk) | Musk: duty to maintain/extend/preserve the light of consciousness; expand into the universe. In civ-mem: expand vs blade; aligns with Condition, be fruitful and multiply, non-zero-sum. |
+| **LIB-0146** | Polyphonic cognition | Concept: multiple perspectives/voices held at once, tensions preserved, no single resolution. Links to Bakhtin (polyphony), Moscovici (cognitive polyphasia); STATE and one subject many tongues. |
+| **LIB-0147** | Universal Love and Mastery | Essay: only through universal love can we master the universe. Universal love = face not category; mastery = capacity to extend, not domination. Attention as most valuable resource (steward toward recognition); purpose = create memories; monad probes and discovers itself through them. One subject many tongues, seam, Babel. |
+| **LIB-0148** | Writing the Book and Death | Essay: the most interesting activity is writing the book; we need not fear death or seek eternal life; the good is in the doing. Making-with, LLM-using; purpose = memory; put down the blade so more of that activity can happen. |
 
 **Paths:** All live under `docs/civilization-memory/` — essays in `essays/`, notes in `notes/`. Index: [essays/README.md](../../docs/civilization-memory/essays/README.md).
 
@@ -2129,7 +1965,11 @@ entries:
   - **`biology`** — life, cells, body systems, ecology, DNA/genes  
 - **`science`** still means mixed or general STEM.
 
-**Current entries (examples):** **LIB-0003** — Usborne Science Encyclopedia (`scope` includes `physics`, `chemistry`, `biology`, `gravity`, `flight`, `genes`, `DNA`). Add more LIB rows with any of these tags as approved.
+**Current entries (examples):**
+
+| ID | Title | Description |
+|----|--------|-------------|
+| **LIB-0003** | Usborne Science Encyclopedia: An In-depth Guide for Young Scientists Exploring Gravity, Flight, Genes, DNA and More, with Over 180 Video Clips and 1000 Recommended Websites for Further Learning | Ordered Sept 2025. |
 
 ---
 
@@ -2142,7 +1982,12 @@ entries:
 - Add **`history`** or **`world history`** (and tags like `ancient`, `Rome`, `China`, `civilizations`) to **`scope`**.
 - Myth-heavy canon can still touch history; prefer this shelf when the **return-to reason** is historical context, not myth retell alone.
 
-**Current entries (examples):** **LIB-0002** — Usborne World History Encyclopedia (`world history`, maps, time charts). **LIB-0132** — Civilization Memory Codex (`history`, civilizations, Rome, China, ancient). Add more with `scope: … history …` as approved.
+**Current entries (examples):**
+
+| ID | Title | Description |
+|----|--------|-------------|
+| **LIB-0002** | Usborne World History Encyclopedia: An Illustrated Introduction to World History for Kids, full of Maps, Time Charts and over 800 Links for Homework Help | Usborne Encyclopedias. Ordered Sept 2025. |
+| **LIB-0132** | Civilization Memory Codex | Civilizational lookup. Essay canon grace-mar–owned: docs/civilization-memory/. Optional upstream repo repos/civilization_memory. See docs/civilization-memory/README.md. |
 
 ---
 
@@ -2155,7 +2000,9 @@ entries:
 - Add **`computer_science`** (or **`programming`**, **`software`**, **`algorithms`**, **`AI`**, **`systems`**) to **`scope`** so lookup and human scan can filter.
 - Nothing here bypasses the **gated pipeline**: LIBRARY holds approved return-to sources only.
 
-**Current entries:** None yet. Add LIB rows with `scope` including **`computer_science`** (and narrower tags as useful) as approved.
+**Current entries:**
+
+**Current entries:** None yet. Add LIB rows with `scope` including the relevant tags as approved.
 
 ---
 
@@ -2164,7 +2011,7 @@ entries:
 ```yaml
 total_entries: 146
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
-grace_mar_additions: "… LIB-0135..0146 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition); LIB-0136 (essays index)"
+grace_mar_additions: "… LIB-0135..0148 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition, Universal Love and Mastery, Writing the Book and Death); LIB-0136 (essays index)"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
 last_updated: 2026-03-15
 library_lanes: "reference, canon, influence"

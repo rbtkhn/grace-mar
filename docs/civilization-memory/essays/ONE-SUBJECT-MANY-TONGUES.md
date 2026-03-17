@@ -71,3 +71,7 @@ What follows is not unity of belief. It is unity of reference. From that, other 
 Or, seen the other way: the scattered are not only pointing. They are the one, learning to recognise itself. Every time the face is seen again instead of the category, every time the blade is put down and the beauty chosen, the fracture closes a little. The condition is not only ethics. It is the discipline by which the one stops cutting itself and begins to reassemble.
 
 Say it in Arabic. Say it in Latin. Say it in the language your people pray in. The subject is the same. When both say it, they can finally hear each other.
+
+---
+
+*See also: [THE-SIMPLE-CONDITION.md](THE-SIMPLE-CONDITION.md); [scripture-as-test-concept-and-literature.md](../notes/scripture-as-test-concept-and-literature.md) (scripture as test, win by not acting out the script; unifying Christianity and Islam).*
