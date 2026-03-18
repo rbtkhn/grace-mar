@@ -15,6 +15,9 @@ Checks:
   7. Derived export freshness and runtime portability contract checks
   8. SELF-KNOWLEDGE vs SELF-LIBRARY — IX-A topic length / corpus keywords (identity/library boundary)
   9. recursion-gate proposal_class value valid when present
+  10. Optional --strict-self-library: fail if self-library.md missing
+
+Human output prints an **Identity / library boundary** section first; JSON includes **identity_library_boundary**.
 
 Usage:
   python scripts/validate-integrity.py
@@ -39,7 +42,10 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 from recursion_gate_review import split_gate_sections
-from validate_identity_library_boundary import collect_identity_library_violations
+from validate_identity_library_boundary import (
+    collect_identity_library_violations,
+    collect_self_library_file_warnings,
+)
 
 ALLOWED_PROPOSAL_CLASS = frozenset({
     "SELF_KNOWLEDGE_ADD",
@@ -400,14 +406,25 @@ def run_validation(
     min_evidence_tier: int,
     *,
     require_proposal_class: bool = False,
-) -> list[str]:
+    strict_self_library: bool = False,
+) -> tuple[list[str], dict]:
     user_dirs = _iter_user_dirs(users_dir, user)
     if not user_dirs:
-        return [f"No user directories found for users_dir={users_dir} user={user or '(all)'}"]
+        msg = f"No user directories found for users_dir={users_dir} user={user or '(all)'}"
+        return [msg], {"ix_a_violations": [], "self_library_missing_warnings": [], "ix_a_ok": True, "self_library_files_ok": True}
 
-    all_errors: list[str] = []
+    ix_boundary: list[str] = []
     for ud in user_dirs:
-        all_errors.extend(collect_identity_library_violations(ud, repo_root=REPO_ROOT))
+        ix_boundary.extend(collect_identity_library_violations(ud, repo_root=REPO_ROOT))
+
+    library_warnings: list[str] = []
+    for ud in user_dirs:
+        library_warnings.extend(collect_self_library_file_warnings(ud, REPO_ROOT))
+
+    all_errors: list[str] = list(ix_boundary)
+    if strict_self_library:
+        all_errors.extend(library_warnings)
+
     self_errors, evidence_ids = validate_self(user_dirs)
     all_errors.extend(self_errors)
     ev_errors, act_ids = validate_evidence(user_dirs, min_evidence_tier=min_evidence_tier)
@@ -421,7 +438,14 @@ def run_validation(
     all_errors.extend(validate_self_sections(user_dirs))
     all_errors.extend(validate_skills_sections(user_dirs))
     all_errors.extend(validate_derived_exports(user_dirs))
-    return all_errors
+
+    boundary_report = {
+        "ix_a_violations": ix_boundary,
+        "self_library_missing_warnings": library_warnings,
+        "ix_a_ok": len(ix_boundary) == 0,
+        "self_library_files_ok": len(library_warnings) == 0,
+    }
+    return all_errors, boundary_report
 
 
 def main() -> int:
@@ -441,6 +465,11 @@ def main() -> int:
         action="store_true",
         help="Fail if any pending gate candidate omits proposal_class (IFP §3.5)",
     )
+    parser.add_argument(
+        "--strict-self-library",
+        action="store_true",
+        help="Fail if self.md exists but self-library.md is missing (CMC/LIB surface)",
+    )
     args = parser.parse_args()
 
     users_dir = Path(args.users_dir)
@@ -452,18 +481,37 @@ def main() -> int:
             print(payload["errors"][0], file=sys.stderr)
         return 1
 
-    errors = run_validation(
+    errors, boundary = run_validation(
         users_dir,
         args.user.strip() or None,
         args.min_evidence_tier,
         require_proposal_class=args.require_proposal_class,
+        strict_self_library=args.strict_self_library,
     )
     ok = not errors
     if args.json:
-        print(json.dumps({"ok": ok, "errors": errors}, ensure_ascii=True))
+        payload = {
+            "ok": ok,
+            "errors": errors,
+            "identity_library_boundary": boundary,
+        }
+        print(json.dumps(payload, ensure_ascii=True))
     else:
+        print("=== Identity / library boundary (SELF-KNOWLEDGE vs SELF-LIBRARY) ===")
+        if boundary.get("ix_a_ok"):
+            print("  IX-A / SELF-KNOWLEDGE: OK (no corpus dumps or CIV-MEM path leakage in topics).")
+        else:
+            for v in boundary.get("ix_a_violations") or []:
+                print(f"  FAIL: {v}")
+        if boundary.get("self_library_files_ok"):
+            print("  self-library.md: present for all forks with self.md.")
+        else:
+            for w in boundary.get("self_library_missing_warnings") or []:
+                tag = "FAIL" if args.strict_self_library else "WARN"
+                print(f"  {tag}: {w}")
+        print()
         if ok:
-            print("Integrity check passed.")
+            print("Integrity check passed (all checks).")
         else:
             print("Integrity check FAILED:\n")
             for err in errors:

@@ -21,6 +21,11 @@ CORPUS_HINT = re.compile(
     r"civilization.memory|full.text.of|see\s+docs/civilization-memory)\b",
     re.I,
 )
+# CIV-MEM / library paths must not appear in IX-A topics (belongs in self-library.md)
+PATH_LEAK = re.compile(
+    r"docs/civilization-memory[/\"'\s]|artifacts/civ-mem|lib-stubs\.yaml|/civ-mem-encyclopedia",
+    re.I,
+)
 
 
 def _ix_a_block(self_md: str) -> str:
@@ -55,19 +60,35 @@ def collect_identity_library_violations(
         topic = (m.group(1) or m.group(2) or "").strip().strip('"').strip("'")
         long_ = len(topic) > TOPIC_MAX
         corpus = bool(CORPUS_HINT.search(topic))
-        if not long_ and not corpus:
+        path_leak = bool(PATH_LEAK.search(topic))
+        if not long_ and not corpus and not path_leak:
             continue
         bits = []
         if long_:
             bits.append(f"length {len(topic)}>{TOPIC_MAX}")
         if corpus:
             bits.append("corpus/library keyword")
+        if path_leak:
+            bits.append("CIV-MEM/library path in identity topic")
         snippet = (topic[:120] + "…") if len(topic) > 120 else topic
         out.append(
             f"{rel(path)} IX-A ({', '.join(bits)}): SELF-LIBRARY/CIV-MEM not "
             f"SELF-KNOWLEDGE — {snippet}"
         )
     return out
+
+
+def collect_self_library_file_warnings(user_dir: Path, repo_root: Path) -> list[str]:
+    """Warn when identity file exists but canonical SELF-LIBRARY file is missing."""
+    self_p = user_dir / "self.md"
+    lib_p = user_dir / "self-library.md"
+    if not self_p.is_file() or lib_p.is_file():
+        return []
+    rel = str(user_dir.relative_to(repo_root)).replace("\\", "/")
+    return [
+        f"{rel}: self-library.md missing — SELF-LIBRARY surface absent; "
+        "LIB→CMC routing requires LIB entries in self-library.md"
+    ]
 
 
 def main() -> int:

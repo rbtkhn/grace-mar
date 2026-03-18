@@ -2,7 +2,13 @@
 
 **Purpose:** Decide when to query Civilization Memory Codex vs. skip to full LLM lookup.
 
-**Ontology:** When CIV-MEM is installed in the fork, **routing to CMC** is routing into the **CIV-MEM domain of SELF-LIBRARY** (governed reference), **not** into SELF or SELF-KNOWLEDGE. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
+## Routing contract (identity vs reference)
+
+- **CMC hits are reference retrieval** — answers come from material catalogued under the **CIV-MEM** subdomain of **SELF-LIBRARY** (LIB rows + codex), not from `self.md`.
+- **CMC retrieval is not an identity update** — codex text does not become SELF-KNOWLEDGE until separately merged through the gate into IX-A (if ever).
+- **Internal CIV-MEM** lives under **SELF-LIBRARY** (`self-library.md`, hybrid corpus paths) — see [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
+
+**Ontology (summary):** **routing to CMC** = routing into the **CIV-MEM domain of SELF-LIBRARY**, **not** into SELF or SELF-KNOWLEDGE.
 
 ## Flow
 

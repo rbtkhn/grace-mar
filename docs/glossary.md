@@ -2,8 +2,11 @@
 
 Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md).
 
+**Narrative source of truth for the fork layout:** [architecture.md](architecture.md) § Core Principle. This glossary **locks terminology**; the one-line boundary rule below is **verbatim** from [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
+
 | Term | Definition |
 |------|------------|
+| **Rule (identity vs reference)** | **SELF-KNOWLEDGE is identity-facing. SELF-LIBRARY is reference-facing.** CIV-MEM is inside SELF-LIBRARY, not SELF-KNOWLEDGE. |
 | **Grace-Mar** | The system and product name: a cognitive fork platform that maintains versioned, evidence-grounded records of an individual's cognitive development, with a gated pipeline and a queryable **Voice**. |
 | **Cognitive fork** | A versioned branch from a snapshot of a person; it diverges by design and has its own history. The **Record** is the fork. |
 | **companion** | The human whose Record it is; the sovereign in the tricameral model (**Mind**, **Record**, **Voice**). |
@@ -12,7 +15,8 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 | **tricameral mind** | Grace-Mar’s mind structure: **Mind** (human, sovereign), **Record** (documented self), **Voice** (queryable interface). |
 | **companion self** | A dual-meaning shorthand: (1) the companion’s self externalized in the Record (their knowledge/curiosity/personality), and (2) the Record+Voice that accompanies them and speaks when queried. |
 | **recursion-gate** (gate) | The staging surface and concept: candidates sit above `## Processed` in `users/[id]/recursion-gate.md` until the companion approves; on approval they are merged and moved below Processed. |
-| **SELF / SKILLS / EVIDENCE** (modules) | Conceptual module names. On disk: `self.md`, `skills.md`, `self-evidence.md`. |
+| **SELF** | Identity surface: `self.md` — narrative, preferences, values, and post-seed **SELF-KNOWLEDGE** (IX-A), curiosity (IX-B), personality (IX-C). Not domain corpora. |
+| **SELF / SKILLS / EVIDENCE** (modules) | Shorthand; full Record adds **SELF-LIBRARY**. On disk: `self.md`, `self-library.md`, `skills.md`, `self-evidence.md`. |
 | **SELF-KNOWLEDGE** | Identity-facing knowledge in SELF — what the companion knows *about herself* (IX-A and related); not domain corpora. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). |
 | **SELF-LIBRARY** | Reference-facing governed library (`self-library.md`): return-to sources and domain shelves. **Parallel to identity**, not a subset of SELF-KNOWLEDGE. |
 | **CIV-MEM** | Civilizational-memory **sub-library** inside SELF-LIBRARY (LIB scopes + hybrid corpus). Never treated as SELF-KNOWLEDGE. |

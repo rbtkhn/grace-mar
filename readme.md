@@ -12,7 +12,9 @@ The fork grows only through what the user explicitly provides. An optional emula
 
 ## Architecture
 
-**Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE** — not a two-module (SELF vs SKILLS) story alone.
+**The fork has four canonical Record surfaces: SELF, SELF-LIBRARY, SKILLS, and EVIDENCE.** That replaces any older “two core modules” (SELF vs SKILLS only) framing. **IX-A / IX-B / IX-C** live under **SELF / SELF-KNOWLEDGE** — not under SELF-LIBRARY.
+
+**Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE**.
 
 > **SELF** concerns **identity** and **SELF-KNOWLEDGE** (who she is, what she knows about herself). **SELF-LIBRARY** is the **governed reference layer** attached to the fork (return-to sources, domain shelves). **CIV-MEM** is the **civilizational-memory domain within SELF-LIBRARY** — not part of identity. See [docs/boundary-self-knowledge-self-library.md](docs/boundary-self-knowledge-self-library.md).
 
@@ -246,12 +248,12 @@ python scripts/fork_checksum.py              # Print checksum
 python scripts/fork_checksum.py --manifest   # Also write users/grace-mar/fork-manifest.json
 ```
 
-Export the fork to a single JSON file (SELF, EVIDENCE, LIBRARY, optional manifest) for backup or portability:
+Export the fork to JSON with the same ontology as [architecture.md](docs/architecture.md): top-level **`self`** (full identity markdown), **`self_knowledge`** (IX-A slice = SELF-KNOWLEDGE), **`self_library`** (with nested **`civ_mem`** = CIV-MEM subdomain of SELF-LIBRARY), **`skills`**, **`evidence`**, plus **`library.raw`** when using full export. See `scripts/export_fork.py` (`version` 1.1+).
 
 ```bash
 python scripts/export_fork.py                      # Print JSON to stdout
 python scripts/export_fork.py -o fork-export.json  # Write to file
-python scripts/export_fork.py --no-raw -o summary.json  # Summary + manifest only
+python scripts/export_fork.py --no-raw -o summary.json  # Summary + self_knowledge/self_library buckets + manifest
 python scripts/export_fork.py --format coach-handoff -o coach-handoff.json  # JSON + .md one-pager for coach/creator handoffs
 ```
 

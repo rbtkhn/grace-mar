@@ -151,6 +151,13 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
         "format": "grace-mar-fork-export",
         "generated_at": datetime.now().isoformat(),
         "user_id": user_id,
+        "ontology": {
+            "self": "full identity markdown (`self.md`)",
+            "self_knowledge": "IX-A slice only — SELF-KNOWLEDGE; identity-facing",
+            "self_library": "reference-facing; civ_mem nested object = CIV-MEM subdomain of SELF-LIBRARY",
+            "skills": "capability",
+            "evidence": "activity / provenance logs",
+        },
         "summary": {
             "self": _parse_self_summary(self_raw) if self_raw else {},
             "evidence": _parse_evidence_summary(evidence_raw) if evidence_raw else {},

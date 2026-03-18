@@ -49,3 +49,5 @@ def test_validate_integrity_json_mode():
     assert "ok" in data
     assert "errors" in data
     assert isinstance(data["errors"], list)
+    assert "identity_library_boundary" in data
+    assert "ix_a_ok" in data["identity_library_boundary"]

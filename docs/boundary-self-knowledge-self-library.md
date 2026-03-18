@@ -10,6 +10,8 @@
 
 **SELF-KNOWLEDGE is identity-facing. SELF-LIBRARY is reference-facing. CIV-MEM is a governed sub-library inside SELF-LIBRARY, not part of SELF-KNOWLEDGE.**
 
+*Glossary, README, architecture, and CMC routing quote this rule; do not paraphrase for enforcement text.*
+
 ---
 
 ## Definitions
