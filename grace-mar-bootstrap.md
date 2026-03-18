@@ -28,7 +28,7 @@ Paste both outputs (or the full non-compact block). **Canonical state is on disk
 | 5 | `docs/development-handoff.md` | Current engineering state; don’t contradict without updating |
 | 6 | `docs/readme.md` | Doc map |
 
-Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional).
+Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional). **After shared reading:** [we-read-think-self-pipeline.md](docs/we-read-think-self-pipeline.md) (READ/THINK vs RECURSION-GATE → IX).
 
 **Operator structure:** `docs/lanes/README.md` (north star per lane) + `docs/lanes/WEEKLY-RHYTHM.md` (weekly checklist). **Library wiring:** `docs/library-integration.md` · `python3 scripts/library_shelf_summary.py -u grace-mar`
 

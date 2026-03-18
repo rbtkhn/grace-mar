@@ -93,15 +93,28 @@ Skill-think adds **content and scope** (what the companion has taken in and can 
 
 ## 5. Data flow (concise)
 
+**One sentence:** **THINK and READ evidence** update **SKILLS + EVIDENCE** directly; **SELF IX-A/B/C** updates only through **RECURSION-GATE + approval** (analyst or operator). There is no automatic THINK → IX merge.
+
 ```
+                    ┌── THINK / READ path (no gate to SELF IX) ──────────────────┐
+                    │  skill-think.md + READ-* in self-evidence.md               │
+"we read X" /       │       │                                                    │
+operator log READ   │       ▼                                                    │
+                    │  SKILLS.md THINK · interests / comprehension                │
+                    └──────────────────────────────────────────────────────────────┘
+                                          │
+                    (same session may ALSO stage IX candidates — separate step)
+                                          ▼
 Input (conversation, artifact, "we did X")
     │
-    ├──► Analyst ──► RECURSION-GATE ──► [companion approval] ──► SELF (IX-A, IX-B, IX-C), EVIDENCE, prompt
+    ├──► Analyst or operator ──► RECURSION-GATE ──► [companion approval] ──► SELF (IX-A, IX-B, IX-C), ACT-*, prompt
     │
-    ├──► Skill path (operator or pipeline) ──► SKILLS (THINK / WRITE) + EVIDENCE (READ-nnn, WRITE-nnn)
+    ├──► Skill path (operator) ──► SKILLS (THINK / WRITE) + EVIDENCE (READ-*, WRITE-*)
     │
     └──► Work path (territory / operator / tool loop) ──► work-context + artifacts + optional staged candidates / evidence
 ```
+
+**Optional on gate candidates:** When IX merge should trace to intake, include `intake_evidence_id: READ-XXXX` (or `evidence_ref`, same meaning) on the candidate YAML; merge writes it into the IX entry. Primary `evidence_id` on IX rows remains the pipeline **ACT-*** from approval.
 
 - **Record** = SELF + SKILLS + EVIDENCE (and related pipeline files). The Record belongs to the companion.
 - **Voice** = f(Record). Implemented by bot (e.g. Telegram, WeChat) + prompt + retrieval. Linguistic output = f(skill-write).
@@ -140,6 +153,7 @@ Input (conversation, artifact, "we did X")
 | Analyst vs. skill modules (IX-A/B/C) | [SKILLS-TEMPLATE § III](skills-template.md#iii-skill-interactions-and-the-self), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals) |
 | Record and Voice | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [AGENTS](agents.md) |
 | Pipeline and merge | [PIPELINE-MAP](pipeline-map.md), [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) |
+| THINK/READ vs SELF IX (no auto-merge) | This doc §5; [we-read-think-self-pipeline.md](we-read-think-self-pipeline.md) |
 
 ---
 

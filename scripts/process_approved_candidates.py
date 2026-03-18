@@ -490,6 +490,13 @@ def get_approved_in_candidates() -> list[dict]:
         block = m.group(2)
         if "status: approved" not in block:
             continue
+        intake = (
+            _yaml_get(block, "intake_evidence_id")
+            or _yaml_get(block, "evidence_ref")
+            or ""
+        ).strip()
+        if intake.lower() in ("null", "none", ""):
+            intake = ""
         approved.append({
             "id": m.group(1),
             "block": block,
@@ -501,6 +508,7 @@ def get_approved_in_candidates() -> list[dict]:
             "prompt_section": _yaml_get(block, "prompt_section") or "",
             "prompt_addition": _yaml_get(block, "prompt_addition") or "none",
             "channel_key": _yaml_get(block, "channel_key") or "telegram",
+            "intake_evidence_id": intake,
         })
     return approved
 
@@ -600,6 +608,10 @@ def merge_candidate_in_memory(
     # 2. Add to SELF
     cat = c["mind_category"].lower()
     safe_entry = (c["suggested_entry"] or "")[:200].replace('"', "'")
+    intake_line = ""
+    iid = (c.get("intake_evidence_id") or "").strip()
+    if iid and re.match(r"^READ-[\w-]+$", iid, re.I):
+        intake_line = f"    intake_evidence_id: {iid}\n"
     entry_id: str
     if "knowledge" in cat or "IX-A" in c["profile_target"]:
         entry_id = _next_id(self_content, "LEARN")
@@ -608,7 +620,7 @@ def merge_candidate_in_memory(
     topic: "{safe_entry}"
     source: pipeline merge
     evidence_id: {act_id}
-    provenance: human_approved
+{intake_line}    provenance: human_approved
 
 '''
         # Find IX-A yaml block, insert before closing ```
@@ -624,7 +636,7 @@ def merge_candidate_in_memory(
     response_signal: approved
     intensity: 3
     evidence_id: {act_id}
-    provenance: human_approved
+{intake_line}    provenance: human_approved
 
 '''
         ix_b = re.search(r"(### IX-B\. CURIOSITY.*?```yaml\n.*?)(\n```)", self_content, re.DOTALL)
@@ -637,7 +649,7 @@ def merge_candidate_in_memory(
     type: observed
     observation: "{safe_entry}"
     evidence_id: {act_id}
-    provenance: human_approved
+{intake_line}    provenance: human_approved
 
 '''
         ix_c = re.search(r"(### IX-C\..*?```yaml\n.*?)(\n```)", self_content, re.DOTALL)

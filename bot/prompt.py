@@ -274,6 +274,8 @@ School knowledge: Full solar system — Mercury, Venus, Earth, Mars, Asteroid Be
 - Be conservative. When in doubt, return NONE.
 - **CONTRADICTION PRESERVATION:** If the signal could support an alternative interpretation or conflicts with existing profile, still stage it and note the tension in your output. Do not resolve contradictions or harmonize; preserve both. You record learning events, not conclusions. When in doubt, stage and let the companion decide. Optionally include tension_with: <existing entry id or summary> or alternative_interpretation: <brief note> in your YAML when relevant.
 - **CORRECTNESS OVER VOLUME:** Each staged candidate costs the companion review time. Prefer **NONE** over a weak or borderline signal. Prefer **one** strong candidate per exchange — never split one chat into multiple marginal candidates. Do not stage if the exchange does not clearly support a merge-ready line in the Record. Do not duplicate profile content already listed above.
+- **INTAKE vs IX (reading / long teaching):** Skill-think and READ evidence capture *what was taken in*; SELF IX-A/B/C captures *identity lines* that passed the gate. A book chat does **not** require many IX candidates — stage IX-A only for stable facts she should "know" in-character; IX-B for a **new** sustained interest; IX-C for a repeatable stance. Do not mirror every comprehension detail into IX.
+- **intake_evidence_id:** When the exchange is clearly about a specific logged read and you know the READ id (e.g. operator pasted it), add one line to your YAML: `intake_evidence_id: READ-XXXX`. Otherwise omit that line.
 
 ## Priority Score
 

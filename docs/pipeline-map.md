@@ -153,13 +153,16 @@ Books / articles consumed
         │
         ▼
 ┌───────────────────┐
-│  User logs        │  Add entry to self-evidence.md Reading List
-│  (manual)         │  (Currently: 0 entries)
+│  User logs        │  Add entry to self-evidence.md Reading List (READ-*)
+│  (manual)         │
 └─────────┬─────────┘
           │
-          ├──► skills.md THINK (comprehension, vocabulary, interests)
-          └──► SELF.interests, SELF.preferences, SELF.values
+          ├──► skills.md THINK (comprehension, vocabulary, interests)  ← direct
+          │
+          └──► SELF IX-A/B/C  ← NOT automatic; only via RECURSION-GATE + approve
 ```
+
+**Do not assume** logging READ-* or updating THINK also updates SELF.IX. For identity lines (what she *knows* about the book, sustained curiosity, stance), stage separate candidates and approve. Full ritual: [we-read-think-self-pipeline.md](we-read-think-self-pipeline.md).
 
 **Operator convention:** When the operator says **"we finished [book]"** or **"we read [title]"**, treat it as a pipeline invocation. Run signal detection and stage a candidate that can create a READ-* entry (or a LEARN-* / curiosity candidate that references the book so THINK and SELF.IX can be updated on approval). Do not ignore book-completion signals.
 
