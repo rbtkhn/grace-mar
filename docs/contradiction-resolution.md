@@ -4,7 +4,7 @@
 
 **Status:** Specification for approved improvement #2 (Contradiction surfacing). Conflict detection in staging is implemented (`bot/conflict_check.py`, `bot/conflict_rules.yaml`).
 
-**See also:** [anti-cheating.md](anti-cheating.md), [agents.md](../agents.md) (immutability rules)
+**See also:** [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md) (governed identity-diff workflow, UI, merge, audit), [anti-cheating.md](anti-cheating.md), [agents.md](../agents.md) (immutability rules)
 
 ---
 

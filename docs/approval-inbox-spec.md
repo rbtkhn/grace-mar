@@ -35,6 +35,8 @@ The spec must preserve these already-implemented rules:
 
 The inbox may add **derived UI fields** and **helper endpoints**, but it must not create a second source of truth.
 
+**Contradiction workflow:** Candidates that require an identity-diff decision (not just approve/reject) follow [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md): escalation, before/proposed/after, resolution types, no quick-merge on active contradictions.
+
 ---
 
 ## 3. User Problem

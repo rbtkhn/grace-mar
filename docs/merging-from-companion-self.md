@@ -22,6 +22,7 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 | `docs/two-hour-screentime-target.md` | Template-level screen time constraint / philosophy |
 | `docs/instance-patterns.md` | Template guidance for instance variants and advanced patterns |
 | `users/_template/` | Template scaffold for new instances; reference-only in grace-mar (do not copy into `users/grace-mar/`) |
+| `docs/CONTRADICTION-ENGINE-SPEC.md`, `docs/contradiction-resolution.md`, `docs/approval-inbox-spec.md` | Contradiction engine + gate review surface; grace-mar has instance-specific copies—compare on sync |
 | Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `agents.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.

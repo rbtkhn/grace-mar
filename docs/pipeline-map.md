@@ -2,7 +2,7 @@
 
 **Purpose:** Diagram the feedback loops that feed the cognitive fork — which modules feed which, where data is transformed, and where loops exist or are missing.
 
-**See also:** [architecture.md](architecture.md), [grace-mar.mdc](../.cursor/rules/grace-mar.mdc)
+**See also:** [architecture.md](architecture.md), [grace-mar.mdc](../.cursor/rules/grace-mar.mdc), [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md) (identity-diff at the gate)
 
 ---
 

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/conflict-object.schema.json",
+  "title": "Grace-Mar contradiction object",
+  "description": "Derived sidecar for identity-diff review. See docs/CONTRADICTION-ENGINE-SPEC.md §7.",
+  "type": "object",
+  "required": [
+    "conflict_id",
+    "candidate_id",
+    "status",
+    "existing_entry_id",
+    "incoming_summary",
+    "relationship_type",
+    "conflict_strength",
+    "recommended_resolution"
+  ],
+  "properties": {
+    "conflict_id": { "type": "string", "pattern": "^CONFLICT-[0-9]+$" },
+    "candidate_id": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["pending_review", "resolved", "deferred", "superseded"]
+    },
+    "profile_target": { "type": "string", "description": "e.g. IX-A, IX-B, IX-C, SKILLS" },
+    "mind_category": { "type": "string" },
+    "existing_entry_id": { "type": "string" },
+    "existing_claim_text": { "type": "string" },
+    "existing_claim_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "existing_claim_valid_from": { "type": "string", "format": "date" },
+    "existing_claim_valid_until": { "type": ["string", "null"], "format": "date" },
+    "incoming_evidence_id": { "type": "string" },
+    "incoming_summary": { "type": "string" },
+    "incoming_excerpt": { "type": "string" },
+    "incoming_evidence_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "relationship_type": {
+      "type": "string",
+      "enum": ["reinforcement", "duplicate", "refinement", "contradiction"]
+    },
+    "conflict_strength": { "type": "number", "minimum": 0, "maximum": 1 },
+    "confidence_delta": { "type": "number" },
+    "recommended_resolution": {
+      "type": "string",
+      "enum": ["growth", "correction", "context", "reject_new", "exception"]
+    },
+    "why_flagged": { "type": "array", "items": { "type": "string" } },
+    "prompt_impact": {
+      "type": "object",
+      "properties": {
+        "has_prompt_change": { "type": "boolean" },
+        "sections": { "type": "array", "items": { "type": "string" } },
+        "estimated_behavioral_impact": { "type": "string" }
+      }
+    },
+    "operator_decision": {
+      "anyOf": [
+        { "type": "null" },
+        {
+          "type": "string",
+          "enum": ["growth", "correction", "context", "reject_new", "exception"]
+        }
+      ]
+    },
+    "operator_note": { "type": ["string", "null"] },
+    "resolved_at": { "type": ["string", "null"], "format": "date-time" },
+    "resolved_by": { "type": ["string", "null"] }
+  },
+  "additionalProperties": true
+}
