@@ -1,32 +1,32 @@
-# Validity pass: three-act frame and Act III entailment
+# Validity pass: promise–condition–truth frame and entailment
 
 **Date:** 2026-03-14  
-**Scope:** Check that each Part sits in the correct Act (I/II/III) and that Act III parts state or imply "this follows from the condition."
+**Scope:** Check that each major part sits in the correct movement (promise / condition / truth) and that **truth**-movement chapters state or imply "this follows from the condition."
 
 ---
 
-## 1. Part–Act placement
+## 1. Part–movement placement
 
-| Part | Act | Fit |
-|------|-----|-----|
-| Part 1 — The Call | I (Promise) | ✓ Blade, face/category, seam, condition; letter to religious leaders. |
-| Part 2 — The Response | II (Condition) | ✓ Seam in Islam/Christianity; face and category; one subject many tongues; illustrations from practice (civ-mem). |
-| Part 3 — The Deepening | III (Truth) | ✓ Universal love and mastery as what becomes possible when the condition is met. |
-| Part 4 — The Science | III (Truth) | ✓ Coordination hypothesis as scientific framework for the condition. |
-| Part 5 — The Framework | III (Truth) | ✓ Recognition theory; condition and seam as framework; reversal and attunement. |
-| Part 6 — The Use | III (Truth) | ✓ AI ethics derived from the condition/framework. |
-| Part 7 — Coda | III (Truth) | ✓ Writing and death; condition as condition for the maximum of the most interesting activity. |
-| Part 8 — Preserving Consciousness | III (Truth) | ✓ Preserving consciousness in symbols; condition still holds. |
-| Ch. 9 — Heaven or Armageddon | III (Truth) | ✓ Scripture as test; heaven vs Armageddon fork; link to condition. |
-| Appendix — God is non-zero-sum | III (Truth) | ✓ Non-zero-sum aligns with the condition. |
+| Part | Movement | Fit |
+|------|------------|-----|
+| Prelude & Ch. 1 | Promise | ✓ Blade, face/category, seam, condition; letter to religious leaders. |
+| Ch. 2 | Condition | ✓ Seam in Islam/Christianity; face and category; one subject many tongues; illustrations from practice (civ-mem). |
+| Ch. 3 — Only Through Love | Truth | ✓ Universal love and mastery as what becomes possible when the condition is met. |
+| Ch. 4 — The Focal Point | Truth | ✓ Coordination hypothesis as scientific framework for the condition. |
+| Ch. 5 — Delusion of Separation | Truth | ✓ Recognition theory; condition and seam as framework; reversal and attunement. |
+| Ch. 6 — The Gate | Truth | ✓ AI ethics derived from the condition/framework. |
+| Ch. 7 — Writing the Book | Truth | ✓ Writing and death; condition as condition for the maximum of the most interesting activity. |
+| Ch. 8 — Preserving Consciousness | Truth | ✓ Preserving consciousness in symbols; condition still holds. |
+| Ch. 9 — Heaven or Armageddon | Truth | ✓ Scripture as test; heaven vs Armageddon fork; link to condition. |
+| Appendix — God is non-zero-sum | Truth | ✓ Non-zero-sum aligns with the condition. |
 
-**Finding:** Every part sits in the correct act per the preface and "How the book is organized."
+**Finding:** Every part sits in the correct movement per the preface and "How the book is organized."
 
 ---
 
-## 2. Act III: "This follows from the condition"
+## 2. Truth movement: "This follows from the condition"
 
-For each Act III part, one sentence that states or implies the entailment (or flag if missing).
+For each truth-movement chapter, one sentence that states or implies the entailment (or flag if missing).
 
 | Part | Sentence or location | Note |
 |------|------------------------|------|
@@ -39,7 +39,7 @@ For each Act III part, one sentence that states or implies the entailment (or fl
 | Ch. 9 | "Stop is the content of winning the test" (Link to Condition table); heaven-or-Armageddon conclusion. | Explicit. |
 | Appendix | "Aligns with the Condition"; non-zero-sum as structure of the good. | Explicit. |
 
-**Finding:** Part 4 and Part 8 benefit from a one-line explicit entailment at or near the start. Other Act III parts either state or clearly imply "this follows from the condition."
+**Finding:** Ch. 4 and Ch. 8 benefit from a one-line explicit entailment at or near the start. Other truth-movement chapters either state or clearly imply "this follows from the condition."
 
 ---
 

@@ -4,15 +4,15 @@ Tracing the main sources and components that feed into the book. In-repo paths a
 
 ---
 
-## 1. Structural map: Acts and parts → sources
+## 1. Structural map: chapters → sources
 
 | Book part | Primary source(s) | Additional influences |
 |-----------|-------------------|------------------------|
-| **Act I — The Promise** | | |
-| Part 1 — The Call (Letter) | `essays/THE-SIMPLE-CONDITION.md` | `notes/face-category-blade.md` (blade mechanism, face vs category, “find the face inside the category”; integrated in § II and § IX children’s question) |
-| **Act II — The Condition** | | |
-| Part 2 — The Response | `essays/ONE-SUBJECT-MANY-TONGUES.md` | Same essay supplies Islam/Christianity seam, one subject many tongues, Babel. **Illustrations from practice:** civ-mem **minds** (negotiation format, meeting vs negotiation, competing legitimacy grammars); **MEM corpora** (Russia, Persia, China, India, Rome, Islam, Germany, France, Anglia, America). **Integrated:** `notes/scripture-as-test-concept-and-literature.md` (§ Scripture as test); `notes/concept-god-non-zero-sum.md` (§ One subject, many tongues, non-zero-sum table). |
-| **Act III — The Truth** | | |
+| **Prelude & Ch. 1** (promise) | | |
+| Letter (The Simple Condition) | `essays/THE-SIMPLE-CONDITION.md` | `notes/face-category-blade.md` (blade mechanism, face vs category, “find the face inside the category”; integrated in § II and § IX children’s question) |
+| **Ch. 2** (condition in practice) | | |
+| One Subject, Many Tongues | `essays/ONE-SUBJECT-MANY-TONGUES.md` | Same essay supplies Islam/Christianity seam, one subject many tongues, Babel. **Illustrations from practice:** civ-mem **minds** (negotiation format, meeting vs negotiation, competing legitimacy grammars); **MEM corpora** (Russia, Persia, China, India, Rome, Islam, Germany, France, Anglia, America). **Integrated:** `notes/scripture-as-test-concept-and-literature.md` (§ Scripture as test); `notes/concept-god-non-zero-sum.md` (§ One subject, many tongues, non-zero-sum table). |
+| **Ch. 3 onward** (truth — what follows if we meet the condition) | | |
 | Part 3 — The Deepening | `essays/UNIVERSAL-LOVE-AND-MASTERY.md` | |
 | Part 4 — The Science | `essays/THE-COORDINATION-HYPOTHESIS.md` | |
 | Part 5 — The Framework | `essays/THE-DELUSION-OF-SEPARATION.md` | Recognition theory, seam, frequencies. |
