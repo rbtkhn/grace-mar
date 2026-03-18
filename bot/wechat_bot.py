@@ -141,6 +141,17 @@ def main() -> None:
     if not OPENAI_API_KEY:
         raise RuntimeError("OPENAI_API_KEY not set in .env")
 
+    from pathlib import Path
+    import sys
+
+    _scripts = Path(__file__).resolve().parent.parent / "scripts"
+    if str(_scripts) not in sys.path:
+        sys.path.insert(0, str(_scripts))
+    from repo_io import assert_canonical_record_layout
+
+    uid = (os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar")
+    assert_canonical_record_layout(uid, context="WeChat bot")
+
     port = int(os.getenv("WECHAT_PORT", "5000"))
     host = os.getenv("WECHAT_HOST", "0.0.0.0")
 

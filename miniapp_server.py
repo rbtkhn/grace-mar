@@ -39,6 +39,12 @@ sys.path.insert(0, str(REPO_ROOT))
 load_dotenv(REPO_ROOT / ".env")
 load_dotenv(REPO_ROOT / "bot" / ".env")
 
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from repo_io import assert_canonical_record_layout  # noqa: E402
+
+assert_canonical_record_layout(USER_ID, context="miniapp_server")
+
 from openai import OpenAI
 
 from bot.prompt import SYSTEM_PROMPT
@@ -64,7 +70,6 @@ from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 app = Flask(__name__, static_folder="miniapp", static_url_path="")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
 USER_DIR = REPO_ROOT / "users" / USER_ID
 ARTIFACTS_DIR = USER_DIR / "artifacts"
 SESSION_TRANSCRIPT_PATH = USER_DIR / "session-transcript.md"

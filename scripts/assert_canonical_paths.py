@@ -22,7 +22,10 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 
-REQUIRED = ("self.md", "self-evidence.md", "recursion-gate.md")
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+from repo_io import CANONICAL_RECORD_FILES_REQUIRED  # noqa: E402
+
+REQUIRED = CANONICAL_RECORD_FILES_REQUIRED
 OPTIONAL_STRICT = ("self-archive.md",)
 
 

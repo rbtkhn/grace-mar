@@ -25,8 +25,12 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
-USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip()
+USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 OPERATOR_SECRET = os.getenv("OPERATOR_SECRET", "").strip() or os.getenv("OPERATOR_FETCH_SECRET", "").strip()
+
+from repo_io import assert_canonical_record_layout  # noqa: E402
+
+assert_canonical_record_layout(USER_ID, context="gate-review-app")
 
 
 def _auth():

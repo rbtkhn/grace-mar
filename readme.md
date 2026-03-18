@@ -121,6 +121,8 @@ grace-mar/
 │   ├── governance_checker.py        # Pre-commit principle violations
 │   ├── validate-integrity.py        # Integrity validator
 │   ├── session_brief.py             # Session briefing (pending, recent activity, wisdom questions)
+│   ├── assert_canonical_paths.py    # Fail if required Record files missing
+│   ├── migrate_legacy_user_filenames.py  # Rename SELF.md → self.md, etc.
 │   └── emit_pipeline_event.py       # Emit pipeline events (applied, rejected with reason)
 ├── integrations/
 │   └── openclaw_hook.py             # Export Record for OpenClaw session continuity
@@ -152,6 +154,20 @@ grace-mar/
         ├── seed-phase-3-survey.md   # Seed phase 3 survey data
         └── survey-capture.md        # Survey capture data
 ```
+
+### Canonical filenames (`users/<id>/`)
+
+Docs refer to **SELF**, **EVIDENCE**, and the **gate** as concepts. **On disk, only these names are valid** (lowercase, hyphenated):
+
+| Concept | Authoritative path |
+|---------|-------------------|
+| SELF (identity + IX-A/B/C) | `self.md` |
+| SKILLS | `skills.md` |
+| Activity / evidence log | `self-evidence.md` |
+| Pipeline staging (pending candidates) | `recursion-gate.md` |
+| Gated archive (approved voice + activity) | `self-archive.md` |
+
+**Not used:** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md` — those spellings break scripts. Full spec: [docs/canonical-paths.md](docs/canonical-paths.md). **Migrate:** `python scripts/migrate_legacy_user_filenames.py --user grace-mar --apply`. **Check:** `python scripts/assert_canonical_paths.py --user grace-mar`. Bots and `miniapp_server` **fail at startup** if `self.md`, `self-evidence.md`, or `recursion-gate.md` are missing (set `GRACE_MAR_SKIP_PATH_CHECK=1` only if you must).
 
 ## Key Documents
 

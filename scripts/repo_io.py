@@ -17,6 +17,14 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"
 DEFAULT_USER_ID = (os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar")
 
+# Authoritative on-disk names under users/<id>/. Docs may say SELF/EVIDENCE as concepts;
+# filenames are always these. See docs/canonical-paths.md.
+CANONICAL_RECORD_FILES_REQUIRED: tuple[str, ...] = (
+    "self.md",
+    "self-evidence.md",
+    "recursion-gate.md",
+)
+
 
 def read_path(path: Path) -> str:
     """Read path as utf-8; return '' if missing."""
@@ -55,6 +63,39 @@ def list_forks() -> list[str]:
 def fork_config_path(fork_id: str) -> Path:
     """Path to optional per-fork config (JSON). Schema: docs/fork-isolation-and-multi-tenant.md §7."""
     return fork_root(fork_id) / "fork-config.json"
+
+
+def missing_canonical_record_files(user_id: str) -> list[str]:
+    """
+    Return basenames missing under users/<user_id>/. Empty list if all required exist.
+    If the user directory does not exist, returns a single sentinel entry.
+    """
+    root = profile_dir(user_id)
+    if not root.is_dir():
+        return ["<users/{0}/ directory missing>".format(user_id)]
+    return [name for name in CANONICAL_RECORD_FILES_REQUIRED if not (root / name).is_file()]
+
+
+def assert_canonical_record_layout(user_id: str, *, context: str = "") -> None:
+    """
+    Fail loudly if required Record files are missing. Set GRACE_MAR_SKIP_PATH_CHECK=1 to skip.
+
+    Raises:
+        RuntimeError: missing files or missing user directory
+    """
+    if os.environ.get("GRACE_MAR_SKIP_PATH_CHECK", "").strip() == "1":
+        return
+    missing = missing_canonical_record_files(user_id)
+    if missing:
+        ctx = f" ({context})" if context else ""
+        fix = (
+            "See docs/canonical-paths.md. If you have legacy uppercase filenames, run:\n"
+            f"  python scripts/migrate_legacy_user_filenames.py --user {user_id} --dry-run\n"
+            f"  python scripts/migrate_legacy_user_filenames.py --user {user_id} --apply"
+        )
+        raise RuntimeError(
+            f"Grace-Mar: canonical Record files missing for GRACE_MAR_USER_ID={user_id!r}: {missing}.{ctx}\n{fix}"
+        )
 
 
 def load_fork_config(fork_id: str) -> dict[str, Any] | None:

@@ -22,6 +22,7 @@ import asyncio
 import importlib.util
 import os
 import re
+import sys
 import logging
 import subprocess
 from io import BytesIO
@@ -1291,6 +1292,14 @@ def main() -> None:
     from .core import OPENAI_API_KEY
     if not OPENAI_API_KEY:
         raise RuntimeError("OPENAI_API_KEY not set in .env")
+
+    _repo = Path(__file__).resolve().parent.parent
+    if str(_repo / "scripts") not in sys.path:
+        sys.path.insert(0, str(_repo / "scripts"))
+    from repo_io import assert_canonical_record_layout
+
+    uid = (os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar")
+    assert_canonical_record_layout(uid, context="Telegram bot")
 
     app = create_application(webhook_mode=False)
     logger.info("Grace-Mar Telegram bot starting (polling)...")
