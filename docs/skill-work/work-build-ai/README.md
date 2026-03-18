@@ -36,6 +36,8 @@
 | **[proof-ledger.md](proof-ledger.md)** | Reusable proof lines from internal work and future client work. |
 | **[engagement-model.md](engagement-model.md)** | How work should be packaged commercially. |
 | **[delivery-playbook.md](delivery-playbook.md)** | Default service delivery phases. |
+| **[agent-reliability-playbook.md](agent-reliability-playbook.md)** | Agent failure modes (tails, reasoning vs action, anchoring, guardrails) and four-layer mitigation. |
+| **[variation-types.md](variation-types.md)** | Factorial stressor templates for evals across client workflows. |
 | **[brief-ai-ambition-six-unlocks.md](brief-ai-ambition-six-unlocks.md)** | One-pager: ambition frame vs cost-reduction, Jevons paradox, six people-focused unlocks for boards/leadership. |
 | **[brief-claude-1m-context-context-rot.md](brief-claude-1m-context-context-rot.md)** | Reference: Claude 1M context (Opus/Sonnet 4.6), context rot, eight-needle test, when to clear, pricing. |
 | **[partner-channel.md](partner-channel.md)** | Borrowed-authority / partner path for growth. |
@@ -52,6 +54,7 @@
 4. **Session continuity** — When running shared workspace, read SESSION-LOG, RECURSION-GATE, and recent EVIDENCE before starting. Keep the loop closed.
 5. **Handback provenance** — Inbound staging includes advisory constitutional check against INTENT; events emitted for audit.
 6. **Portable synthesis** — Merge-approved truth in-repo; refresh exports after merges so OpenClaw never becomes the only place “who the companion is” lives.
+7. **Agent reliability** — Do not treat chain-of-thought or internal traces as audit. For consequential agent work outside the companion Voice, use **tail scenarios**, **factorial variations**, and **deterministic checks** (see [agent-reliability-playbook.md](agent-reliability-playbook.md)).
 
 ---
 
@@ -79,6 +82,7 @@ Use this order when actively working on the territory:
 3. Read [known-gaps.md](known-gaps.md) before claiming provenance, benchmark, or continuity coverage.
 4. Use [provenance-checklist.md](provenance-checklist.md) when validating export or handback behavior.
 5. Use [economic-benchmarks.md](economic-benchmarks.md) only with its current instrumentation labels in mind.
+6. For agent eval posture on Voice, run `python scripts/run_counterfactual_harness.py` (includes anchoring-stress probes CF-ANCH-*).
 
 ---
 

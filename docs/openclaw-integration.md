@@ -263,6 +263,10 @@ This path only stages to `RECURSION-GATE`; it never merges into the Record.
 Inbound payloads also run an advisory constitutional check against `INTENT.md` and emit
 `intent_constitutional_critique` events (`advisory_clear` or `advisory_flagged`).
 
+### Handback shape and anchoring
+
+Unstructured opinion in the same payload as facts can **anchor** downstream behavior (e.g. “human says low risk” alongside material that should gate high). Prefer **structured fields** for classification, risk, and artifact references; put narrative opinion in a **separate labeled block** the operator can down-weight. See [work-build-ai agent reliability playbook](skill-work/work-build-ai/agent-reliability-playbook.md) and [variation-types.md](skill-work/work-build-ai/variation-types.md). No automated reasoning-vs-action check exists yet ([BUILD-AI-GAP-006](skill-work/work-build-ai/known-gaps.md)).
+
 ### Debate packet workflow (Phase C)
 
 When repeated cross-agent conflicts appear for the same intent rule across sources
