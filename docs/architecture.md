@@ -48,7 +48,7 @@ Grace-Mar's harness is portable because it separates **canonical truth** from **
 
 | Lane | What it contains | Canonical? | Typical files |
 |------|------------------|------------|---------------|
-| **record** | Companion-owned identity and evidence | Yes | `self.md`, `skills.md`, `self-evidence.md`, `self-library.md`, PRP exports |
+| **record** | Companion-owned identity, evidence, and **reference library** (distinct surfaces) | Yes | `self.md` (identity + SELF-KNOWLEDGE), `skills.md`, `self-evidence.md`, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP exports |
 | **runtime** | Continuity aids for a live session | No | `memory.md`, `session-transcript.md`, warmup digests, session-log tails |
 | **audit** | Replay, provenance, operational traces | No, but append-only | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
 | **policy** | Intent and constitutional alignment surfaces | Yes for policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared constraints |
@@ -110,7 +110,18 @@ SNAPSHOT (Preserve State at a Point in Time)
 
 Contains who the companion IS — their identity, story, and way of being in the world.
 
+**SELF-KNOWLEDGE** — The identity-facing slice of SELF (notably IX-A Knowledge, plus seed preferences/narrative): what she knows *about herself* and identity-relevant facts. **Not** long-form historical corpora or civilization reference inventories; those belong in **SELF-LIBRARY** (see Module 1b).
+
 **Core principle: Accurate recording.** The goal is faithful documentation of the companion's actual personality, preferences, reasoning, and voice — not an idealized or curated version. The record should capture them as they are, including quirks and imperfections.
+
+### Module 1b: SELF-LIBRARY (reference surface)
+
+| File / path | Role |
+|-------------|------|
+| `users/[id]/self-library.md` | Canonical **governed library**: LIB entries, scopes, lookup routing. **Reference-facing**, not identity. |
+| `users/[id]/SELF-LIBRARY/` | Navigator docs: domain index, **CIV-MEM** subdomain description (links to corpus + LIB stubs). |
+
+**CIV-MEM** — Sub-library within SELF-LIBRARY: civilizational / historical / cultural reference material (LIB rows + `docs/civilization-memory/`, hybrid encyclopedia, CMC). Routing to CMC = lookup into this domain, not into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), [library-integration.md](library-integration.md).
 
 ### Contents
 
@@ -700,10 +711,10 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 | **SELF** | Identity, IX-A/B/C, voice, personality |
 | **SKILLS** | Capability containers (THINK, WRITE) |
 | **EVIDENCE** | Activity log, WRITE/ACT/CREATE entries |
-| **LIBRARY** (self-library) | Curated lookups (books, videos) for the bot |
+| **SELF-LIBRARY** (`self-library.md`) | Reference-facing governed domains; **CIV-MEM** subdomain; bot lookup first hop |
 | **RECURSION-GATE** | Staging area before merge |
 | **prompt.py** | Emulation prompt (SYSTEM, ANALYST, LOOKUP, REPHRASE) |
-| **CMC** | Lookup engine (LIBRARY → CMC → LLM) |
+| **CMC** | CIV-MEM domain lookup (SELF-LIBRARY → CMC → LLM) |
 | **PRP** | Portable Record Prompt — pasteable identity for any LLM |
 | **Telegram / WeChat** | Bot adapters (observation window) |
 
@@ -713,7 +724,7 @@ The system can be viewed as a **lattice**: nodes (data and components) connected
 |------|------|
 | **Pipeline** | Signal detection → RECURSION-GATE → user approval → merge into SELF, EVIDENCE, prompt |
 | **PRP refresh** | Merge triggers `export_prp` → PRP file updated → anchor stays in sync with Record |
-| **Lookup flow** | User question → LIBRARY → CMC → LLM → rephrased answer |
+| **Lookup flow** | User question → SELF-LIBRARY → CIV-MEM (CMC) → LLM → rephrased answer |
 | **Evidence linkage** | EVIDENCE entries reference SELF; RECENT in PRP pulls from EVIDENCE |
 | **PRP → GitHub** | GITHUB CONNECTIVITY in PRP: model searches repo for system design, governance |
 

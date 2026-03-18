@@ -12,6 +12,9 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 | **tricameral mind** | Grace-Mar’s mind structure: **Mind** (human, sovereign), **Record** (documented self), **Voice** (queryable interface). |
 | **companion self** | A dual-meaning shorthand: (1) the companion’s self externalized in the Record (their knowledge/curiosity/personality), and (2) the Record+Voice that accompanies them and speaks when queried. |
 | **recursion-gate** (gate) | The staging surface and concept: candidates sit above `## Processed` in `users/[id]/recursion-gate.md` until the companion approves; on approval they are merged and moved below Processed. |
-| **SELF / SKILLS / EVIDENCE** (modules) | Conceptual module names in the identity schema. On disk they map to `self.md`, `skills.md`, and `self-evidence.md`. |
+| **SELF / SKILLS / EVIDENCE** (modules) | Conceptual module names. On disk: `self.md`, `skills.md`, `self-evidence.md`. |
+| **SELF-KNOWLEDGE** | Identity-facing knowledge in SELF — what the companion knows *about herself* (IX-A and related); not domain corpora. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). |
+| **SELF-LIBRARY** | Reference-facing governed library (`self-library.md`): return-to sources and domain shelves. **Parallel to identity**, not a subset of SELF-KNOWLEDGE. |
+| **CIV-MEM** | Civilizational-memory **sub-library** inside SELF-LIBRARY (LIB scopes + hybrid corpus). Never treated as SELF-KNOWLEDGE. |
 
-For full terminology and invariants, see [conceptual-framework.md](conceptual-framework.md) and [canonical-paths.md](canonical-paths.md).
+For full terminology and invariants, see [conceptual-framework.md](conceptual-framework.md), [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), and [canonical-paths.md](canonical-paths.md).

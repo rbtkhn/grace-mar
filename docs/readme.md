@@ -5,6 +5,7 @@
 | Need | Document | Role |
 |------|----------|------|
 | **Protocol (the compact)** | [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) | Canonical spec: schema, staging contract, evidence, export. Mechanism only. |
+| **SELF-KNOWLEDGE vs SELF-LIBRARY** | [BOUNDARY-SELF-KNOWLEDGE-SELF-LIBRARY](boundary-self-knowledge-self-library.md) | Identity-facing vs reference-facing; CIV-MEM as library subdomain; proposal classes. |
 | **Governance** | [GRACE-MAR-CORE](grace-mar-core.md) | Global governance, prime directive, invariants. |
 | **Interpretation & intent** | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [DESIGN-NOTES](design-notes.md) | Why we built it this way; design principles; objections answered. Federalist-style commentary. |
 | **Narrative & differentiation** | [WHITE-PAPER](white-paper.md) | Full story, positioning, technical model. |

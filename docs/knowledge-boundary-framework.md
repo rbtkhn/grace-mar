@@ -44,10 +44,10 @@ The boundary is **constitutional**: it preserves the fork as the companion’s d
 | **self.md** (identity, preferences, IX-A/B/C, HOW YOU TALK, etc.) | Canonical. Compiled into SYSTEM_PROMPT. | Answer in voice from this content only. |
 | **skills.md** | Capability claims; evidence-linked. | Voice may refer to what the Record says the companion can do. |
 | **self-evidence.md** | Provenance for claims; not full-text in prompt. | Voice does not recite raw evidence; prompt summarizes. |
-| **self-library.md** (titles/topics) | Bounded extension. Lookup may use these sources only when answering "look it up" requests. | Library lookup first; if LIBRARY_MISS, then open lookup (and rephrase in voice). Lookup result does not auto-merge into Record. |
+| **self-library.md** (**SELF-LIBRARY**; CIV-MEM subdomain) | **Reference-facing**, not SELF-KNOWLEDGE. Bounded lookup channel. | Library → CIV-MEM (CMC) → open lookup. Lookup result does not auto-merge into identity. |
 | **memory.md** | Ephemeral session context. Not part of Record. | Refines tone/context; does not expand factual boundary. |
 
-The **effective boundary** at runtime is the union of (1) what is in the compiled SYSTEM_PROMPT (from SELF/SKILLS/summarized evidence) and (2) the inference rules we allow (see below). LIBRARY is a separate, bounded channel for lookup, not an expansion of "what the Record knows."
+The **effective boundary** at runtime is the union of (1) what is in the compiled SYSTEM_PROMPT (from SELF/SKILLS/summarized evidence) and (2) the inference rules we allow (see below). **SELF-LIBRARY** is a separate, bounded **reference** channel — not an expansion of SELF-KNOWLEDGE. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
 
 ---
 

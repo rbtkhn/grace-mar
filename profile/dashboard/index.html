@@ -14,7 +14,8 @@
     .back:hover { text-decoration: underline; }
     .row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
     .card { flex: 1 1 140px; min-width: 0; background: var(--surface); border-radius: 8px; padding: 0.75rem 1rem; }
-    .card h2 { font-size: 0.9rem; color: var(--accent); margin: 0 0 0.5rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+    .card h2 { font-size: 0.9rem; color: var(--accent); margin: 0 0 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
+    .card .card-meta { font-size: 0.7rem; color: var(--muted); margin: 0 0 0.5rem; line-height: 1.35; }
     .view-btn { padding: 0.35rem 0.75rem; background: var(--accent); color: var(--bg); border: none; border-radius: 6px; font-size: 0.9rem; cursor: pointer; font-weight: 600; }
     .view-btn:hover { filter: brightness(1.1); }
     .view-btn[data-open="true"] { background: var(--muted); }
@@ -29,7 +30,8 @@
     <div class="row">
 
     <section class="card" data-panel="self">
-        <h2>Self</h2>
+        <h2>Identity</h2>
+        <p class="card-meta">SELF + SELF-KNOWLEDGE (IX-A/B/C). Not library reference.</p>
         <button type="button" class="view-btn" data-panel="self">View full</button>
         <pre id="panel-self" class="full-file" style="display:none; max-height:400px; overflow:auto; margin:0.5rem 0 0; padding:0.75rem; background:var(--bg); border-radius:6px; font-size:0.85rem; white-space:pre-wrap; word-break:break-word;"># SELF — grace-mar
 
@@ -1300,7 +1302,8 @@ notes: "WRITE trajectory now runs through WRITE-0006, not just the first three s
 </pre>
     </section>
     <section class="card" data-panel="library">
-        <h2>Library</h2>
+        <h2>Library domains</h2>
+        <p class="card-meta">SELF-LIBRARY · CIV-MEM + shelves (reference-facing).</p>
         <button type="button" class="view-btn" data-panel="library">View full</button>
         <pre id="panel-library" class="full-file" style="display:none; max-height:400px; overflow:auto; margin:0.5rem 0 0; padding:0.75rem; background:var(--bg); border-radius:6px; font-size:0.85rem; white-space:pre-wrap; word-break:break-word;"># LIBRARY — grace-mar
 

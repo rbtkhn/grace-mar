@@ -75,6 +75,31 @@ def _parse_ix_b_entries(content: str) -> list[dict]:
     return entries
 
 
+def _extract_ix_a_block(content: str) -> str:
+    """IX-A (SELF-KNOWLEDGE) markdown slice for logical export bucket."""
+    if not content:
+        return ""
+    start = content.find("### IX-A")
+    if start < 0:
+        return ""
+    end = content.find("### IX-B", start)
+    return content[start : end if end > 0 else start + 12000].strip()
+
+
+def _civ_mem_lib_ids(library_raw: str) -> list[str]:
+    """LIB ids whose entry block mentions CIV-MEM / CMC / civilization_memory scopes."""
+    if not library_raw:
+        return []
+    marker = re.compile(r"civilization_memory|civ_mem|\bcmc\b|civilization-memory", re.I)
+    ids: list[str] = []
+    for m in re.finditer(r"\n  - id:\s*(LIB-[\w-]+)\s*\n", library_raw):
+        nxt = library_raw.find("\n  - id: LIB-", m.end())
+        block = library_raw[m.start() : nxt if nxt > 0 else m.start() + 3000]
+        if marker.search(block):
+            ids.append(m.group(1))
+    return ids
+
+
 def _parse_ix_c_entries(content: str) -> list[dict]:
     """Extract IX-C PERSONALITY entries (id, type, observation) for coach handoff."""
     entries = []
@@ -116,8 +141,9 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     evidence_raw = read_path(evidence_path)
     library_raw = read_path(library_path)
 
+    civ_ids = _civ_mem_lib_ids(library_raw or "")
     out = {
-        "version": "1.0",
+        "version": "1.1",
         "format": "grace-mar-fork-export",
         "generated_at": datetime.now().isoformat(),
         "user_id": user_id,
@@ -126,12 +152,26 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
             "evidence": _parse_evidence_summary(evidence_raw) if evidence_raw else {},
             "skills_present": bool(skills_raw),
         },
+        "self_knowledge": {
+            "ix_a_markdown": _extract_ix_a_block(self_raw or ""),
+            "note": "SELF-KNOWLEDGE (IX-A) logical bucket; full identity in self",
+        },
+        "self_library": {
+            "civ_mem": {
+                "lib_entry_ids": civ_ids,
+                "note": "CIV-MEM subdomain of SELF-LIBRARY; not SELF-KNOWLEDGE",
+            },
+            "other_domains": {
+                "note": "Remaining LIB entries by scope — see library.raw or self-library.md",
+            },
+        },
     }
     if include_raw:
         out["self"] = {"raw": self_raw}
         out["skills"] = {"raw": skills_raw}
         out["evidence"] = {"raw": evidence_raw}
         out["library"] = {"raw": library_raw}
+        out["self_library"]["raw"] = library_raw
     if fork_manifest_path.exists():
         try:
             out["fork_manifest"] = json.loads(fork_manifest_path.read_text(encoding="utf-8"))

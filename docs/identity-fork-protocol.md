@@ -74,7 +74,8 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 
 | Module | Contains | Purpose |
 |--------|----------|---------|
-| **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C) | Who they ARE |
+| **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C); **SELF-KNOWLEDGE** = identity-facing IX-A | Who they ARE |
+| **SELF-LIBRARY** | `self-library.md` — governed reference domains; **CIV-MEM** = subdomain | What governed reference the fork carries (**not** identity) |
 | **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
 | **INTENT** | Goal hierarchy, trade-off rules, escalation boundaries, cross-agent policy scope | What the system should WANT to optimize |
@@ -85,7 +86,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 
 | Dimension | Section | What it captures |
 |---------|---------|------------------|
-| **IX-A** | Knowledge | Facts entering awareness through observation; includes books and media consumed (from READ-nnn or LIBRARY engagement/influence state) |
+| **IX-A** | SELF-KNOWLEDGE | Identity-facing facts entering awareness (from conversation, READ-nnn, teaching). **Not** civilization corpora or domain libraries — those live in **SELF-LIBRARY** (CIV-MEM subdomain). |
 | **IX-B** | Curiosity | Topics that catch attention, engagement signals |
 | **IX-C** | Personality | Observed behavioral patterns, speech traits, emotional patterns, aesthetic tendencies, and value expressions; contradictions preserved with provenance |
 
@@ -124,6 +125,24 @@ Normative constraints:
    - Accepted inputs include text, video, music/audio, images/diagrams/maps, and mixed media.
    - Staged THINK-derived candidates should include modality provenance (for example `input_modality`, source/artifact reference).
    - Evidence linkage and knowledge-boundary rules apply equally to every modality.
+
+### 3.5 Proposal classes (review semantics)
+
+Candidates SHOULD declare **`proposal_class`** so reviewers separate **identity** edits from **library** edits:
+
+| `proposal_class` | Use when |
+|------------------|----------|
+| `SELF_KNOWLEDGE_ADD` / `SELF_KNOWLEDGE_REVISE` | New or changed **identity-facing** IX-A line (or equivalent SELF knowledge) |
+| `SELF_LIBRARY_ADD` / `SELF_LIBRARY_REVISE` | New or changed LIB row or shelf policy **outside** CIV-MEM |
+| `CIV_MEM_ADD` / `CIV_MEM_REVISE` | New or changed **CIV-MEM** domain material (LIB stubs, civ-mem corpus pointers) |
+
+**IX-B / IX-C** may use `SELF_KNOWLEDGE_ADD` or finer labels in tooling; merge mechanics unchanged. Optional YAML line on gate blocks:
+
+```yaml
+proposal_class: CIV_MEM_ADD   # example
+```
+
+Implementations may warn when `mind_category: knowledge` candidates look like domain dumps without `CIV_MEM_*` routing to library. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
 
 ---
 

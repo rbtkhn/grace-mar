@@ -51,16 +51,18 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 **Companion self.** A single phrase can refer to both sides of the dyad: **companion self**. It means (1) *the companion's self* — the human's self, externalized in the Record (their knowledge, curiosity, personality); and (2) *the self that companions* — the Record and Voice that accompany the human and speak when queried. The ambiguity is intentional. The Record is not a separate person but the companion's self, documented and queryable; and it is the self that is present alongside them. Use "companion self" when one term should hold both meanings. **Companion self = human–computer tricameral cognition:** Mind (human, sovereign), Record + Voice (computer-held documented self and its queryable interface).
 
 **Companion self contains:**
-- **self-knowledge** (self.md IX-A)
+- **self-knowledge** (self.md IX-A) — **SELF-KNOWLEDGE**: identity-facing facts about the companion, not civilization-scale reference corpora
 - **self-skill-write**, **self-skill-think** (skills.md)
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
 - **self-archive** (self-archive.md)
-- **self-library** (self-library.md)
+- **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
 - **self-memory** (memory.md)
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
-The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, approved evidence, and self-library. Self-voice is the single output channel for the companion self.
+**Boundary:** SELF-KNOWLEDGE (IX-A, etc.) answers *who she is*. SELF-LIBRARY answers *what governed reference she carries*. Do not collapse library domains into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
+
+The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, approved evidence, and self-library (including CIV-MEM-scoped lookup). Self-voice is the single output channel for the companion self.
 
 **Work is adjacent, not inside the self-skill set.** Work territories and instance work contexts may use broader tools and model capability to plan or execute tasks, but they become part of the Record only through staged, approved evidence.
 

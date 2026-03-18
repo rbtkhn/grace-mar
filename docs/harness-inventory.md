@@ -21,7 +21,7 @@ Grace-Mar now names four portable harness lanes:
 
 | Lane | Role | Canonical status | Primary surfaces |
 |------|------|------------------|------------------|
-| **record** | Companion-owned truth | Canonical | `self.md`, `skills.md`, `self-evidence.md`, `self-library.md`, PRP |
+| **record** | Companion-owned truth | Canonical | `self.md` (identity + SELF-KNOWLEDGE), `skills.md`, `self-evidence.md`, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP — see [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md) |
 | **runtime** | Live-session continuity | Non-canonical | `memory.md`, `session-transcript.md`, warmup output, session-log tail |
 | **audit** | Replay, integrity, provenance | Append-only operational history | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
 | **policy** | Intent and constitutional constraints | Canonical policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared rules |

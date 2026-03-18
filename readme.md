@@ -12,11 +12,14 @@ The fork grows only through what the user explicitly provides. An optional emula
 
 ## Architecture
 
-Two core modules define the fork:
+> **SELF** concerns **identity** and **SELF-KNOWLEDGE** (who she is, what she knows about herself). **SELF-LIBRARY** is the **governed reference layer** attached to the fork (return-to sources, domain shelves). **CIV-MEM** is the **civilizational-memory domain within SELF-LIBRARY** — not part of identity. See [docs/boundary-self-knowledge-self-library.md](docs/boundary-self-knowledge-self-library.md).
+
+Core modules:
 
 | Module | Contains | Purpose |
 |--------|----------|---------|
-| **SELF** | Personality, linguistic style, life narrative, preferences, values, reasoning patterns | Who they ARE |
+| **SELF** | Personality, linguistic style, life narrative, preferences, values, IX-A/B/C (SELF-KNOWLEDGE + curiosity + personality) | Who they ARE |
+| **SELF-LIBRARY** | `self-library.md` — LIB entries, scopes; CIV-MEM as subdomain | Governed **reference** (not identity) |
 | **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
 | **WORK LAYER** | `work-*` territories and instance work contexts | Planning, execution, delivery, and tool-using work outside the self-skill taxonomy |
 

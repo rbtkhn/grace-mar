@@ -2,10 +2,12 @@
 
 **Purpose:** Decide when to query Civilization Memory Codex vs. skip to full LLM lookup.
 
+**Ontology:** When CIV-MEM is installed in the fork, **routing to CMC** is routing into the **CIV-MEM domain of SELF-LIBRARY** (governed reference), **not** into SELF or SELF-KNOWLEDGE. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
+
 ## Flow
 
 ```
-LIBRARY (books) → miss
+SELF-LIBRARY (LIB entries) → miss
     │
     ▼
 should_route_to_cmc(question)?

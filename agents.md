@@ -21,7 +21,7 @@ A **cognitive fork** — a structured, versioned record of an individual's cogni
 **Conceptual distinctions (see conceptual-framework.md):**
 - **Companion** — The person whose Record it is (the human in the tricameral mind). Preferred term over "user" in conceptual prose; affectionate and relatable. **Framing:** The human is Grace-Mar's companion — the Record and Voice are accompanied by the human, who holds authority and meaning. Grace-Mar serves the companion; the companion serves Grace-Mar.
 - **Record and Voice** — The Record is the documented self; the Voice speaks the Record when queried. Self = Record + Voice (the thing you can talk to).
-- **Companion self** — One phrase for both sides of the dyad: the companion's self (the human's self, externalized in the Record) and the self that companions (the Record and Voice that accompany the human). The ambiguity is intentional; see CONCEPTUAL-FRAMEWORK (companion self). **Companion self contains:** self-knowledge, self-skill-write, self-skill-think, self-curiosity, self-personality, self-archive, self-library, self-memory, self-voice (see ID-TAXONOMY). Work territories are adjacent execution surfaces, not self-skills.
+- **Companion self** — One phrase for both sides of the dyad: the companion's self (the human's self, externalized in the Record) and the self that companions (the Record and Voice that accompany the human). The ambiguity is intentional; see CONCEPTUAL-FRAMEWORK (companion self). **Companion self contains:** **SELF-KNOWLEDGE** (IX-A identity-facing), self-skill-write, self-skill-think, self-curiosity, self-personality, self-archive, **SELF-LIBRARY** (reference-facing; CIV-MEM subdomain), self-memory, self-voice (see ID-TAXONOMY, [boundary-self-knowledge-self-library.md](docs/boundary-self-knowledge-self-library.md)). Work territories are adjacent execution surfaces, not self-skills.
 - **Fork, not twin** — The Record diverges by design; it is its own entity, not a mirror.
 - **Emulation** — Applies to the Voice (renders the Record in conversation), not to the Record's relationship to the real person.
 - **Instances and release** — Exports are for consumption (schools, agents that read the Record), not for deploying other instances as independent economic/social actors without companion consent. See `docs/instances-and-release.md` and CONCEPTUAL-FRAMEWORK invariant 34.
@@ -236,7 +236,8 @@ grace-mar/
         ├── skill-write.md      # WRITE container
         ├── work-alpha-school.md # WORK context (separate from SKILLS)
         ├── self-evidence.md         # Activity log
-        ├── self-library.md     # self-library — curated references, canon, and influential media; gated
+        ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
+        ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)
         ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging

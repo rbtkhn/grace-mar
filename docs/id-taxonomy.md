@@ -53,7 +53,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 
 | Standard label | File | Description |
 |----------------|------|-------------|
-| **self-library** | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first; gated pipeline |
+| **self-library** | users/[id]/self-library.md | **SELF-LIBRARY** — reference-facing governed domains (not SELF-KNOWLEDGE); **CIV-MEM** = sub-library (scopes + corpus); gated pipeline |
 | **self-archive** | users/[id]/self-archive.md | Gated log of approved activity (voice and non-voice); appended only on merge |
 | **self-memory** | users/[id]/memory.md | Ephemeral session context — tone, recent topics, calibrations; not part of the Record; optional |
 
@@ -67,7 +67,7 @@ The **companion self** (the documented self + the self that companions) is compo
 
 | Component | Location | Description |
 |-----------|----------|-------------|
-| **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge); includes books and media consumed (from READ-nnn or LIBRARY engagement/influence state) |
+| **self-knowledge** | self.md IX-A | **SELF-KNOWLEDGE** — identity-facing facts; from observation, READ-nnn, teaching. Domain corpora → **SELF-LIBRARY** / CIV-MEM, not IX-A dumps. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
 | **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
