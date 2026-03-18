@@ -2,6 +2,8 @@
 
 **Governed by**: [GRACE-MAR-CORE v2.0](grace-mar-core.md)
 
+Terminology primer: see [glossary.md](glossary.md) for canonical definitions of Grace-Mar terms (Record, Voice, companion, recursion-gate).
+
 ---
 
 ## Core Principle

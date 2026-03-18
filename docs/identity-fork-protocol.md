@@ -7,6 +7,8 @@
 
 ---
 
+Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, gate/recursion-gate).
+
 ## Abstract
 
 Agents and platforms need identity data to personalize and to act on behalf of users, but today they scrape, infer, or hallucinate — there is no standard for companion-owned, evidence-grounded identity. This protocol defines that standard: a **Record** (identity schema + evidence linking), a **gate** (the companion approves every merge; the agent may stage, not merge), and **export** (agent-consumable manifest and profile). The result is portable, companion-owned identity that any agent or platform can consume without owning; the companion remains sovereign.

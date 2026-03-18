@@ -10,6 +10,8 @@
 
 ---
 
+Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, tricameral mind, recursion-gate).
+
 ## 1. Cognitive Fork vs. Cognitive Twin
 
 | Term | Meaning | grace-mar uses? |
