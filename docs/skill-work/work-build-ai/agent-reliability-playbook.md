@@ -4,7 +4,7 @@
 
 **Pattern lens:** Findings from structured evaluations of conversational health tools illustrate behaviors that appear across **domains** (finance, ops, political consulting, OpenClaw workflows). This doc does **not** make medical claims; it uses those studies as a **lens** for agent failure modes.
 
-**See also:** [variation-types.md](variation-types.md) (factorial stressors), [known-gaps.md](known-gaps.md) (BUILD-AI-GAP-005+), [scripts/counterfactual_pack/readme.md](../../../scripts/counterfactual_pack/readme.md) (Voice harness slice).
+**See also:** [variation-types.md](variation-types.md) (factorial stressors), [claude-code-wat-crosswalk.md](claude-code-wat-crosswalk.md) (WAT / agentic IDE ↔ delivery and gate), [known-gaps.md](known-gaps.md) (BUILD-AI-GAP-005+), [scripts/counterfactual_pack/readme.md](../../../scripts/counterfactual_pack/readme.md) (Voice harness slice).
 
 ---
 

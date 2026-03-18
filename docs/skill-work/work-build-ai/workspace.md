@@ -41,6 +41,7 @@ Use this file when you want one place to understand:
 | `proof-ledger.md` | Reusable proof lines for client or partner conversations |
 | `engagement-model.md` | Commercial packaging and sequencing |
 | `delivery-playbook.md` | Service delivery phases |
+| `claude-code-wat-crosswalk.md` | WAT / agentic IDE ↔ delivery, reliability, handover |
 | `partner-channel.md` | Borrowed-authority / partner growth path |
 | `objection-log.md` | Positioning and market-learning log |
 | `../../crypto-roadmap.md` | Future authority, settlement, and access layer across territories |

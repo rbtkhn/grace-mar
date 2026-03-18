@@ -18,6 +18,8 @@ Use this file to turn the territory's thesis into a repeatable services method.
 
 **Reliability reference:** [agent-reliability-playbook.md](agent-reliability-playbook.md).
 
+**Agentic build vocabulary (WAT, plan-then-deploy, client handover):** [claude-code-wat-crosswalk.md](claude-code-wat-crosswalk.md) — maps workflows/agent/tools and in-session vs production runs to these phases.
+
 ---
 
 ## What not to do

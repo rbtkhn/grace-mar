@@ -38,6 +38,7 @@
 | **[delivery-playbook.md](delivery-playbook.md)** | Default service delivery phases. |
 | **[agent-reliability-playbook.md](agent-reliability-playbook.md)** | Agent failure modes (tails, reasoning vs action, anchoring, guardrails) and four-layer mitigation. |
 | **[variation-types.md](variation-types.md)** | Factorial stressor templates for evals across client workflows. |
+| **[claude-code-wat-crosswalk.md](claude-code-wat-crosswalk.md)** | WAT / agentic-IDE practice mapped to delivery, reliability, gate, and handover. |
 | **[brief-ai-ambition-six-unlocks.md](brief-ai-ambition-six-unlocks.md)** | One-pager: ambition frame vs cost-reduction, Jevons paradox, six people-focused unlocks for boards/leadership. |
 | **[brief-claude-1m-context-context-rot.md](brief-claude-1m-context-context-rot.md)** | Reference: Claude 1M context (Opus/Sonnet 4.6), context rot, eight-needle test, when to clear, pricing. |
 | **[partner-channel.md](partner-channel.md)** | Borrowed-authority / partner path for growth. |
