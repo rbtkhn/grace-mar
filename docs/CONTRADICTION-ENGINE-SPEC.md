@@ -9,6 +9,7 @@
 - [readme.md](../readme.md)
 - [approval-inbox-spec.md](approval-inbox-spec.md)
 - [contradiction-resolution.md](contradiction-resolution.md)
+- [contradiction-timeline.md](contradiction-timeline.md) (time-ordered view; pipeline + git)
 - [gate-review-app.py](../gate-review-app.py)
 - [scripts/generate_gate_dashboard.py](../scripts/generate_gate_dashboard.py)
 
