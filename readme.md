@@ -35,7 +35,7 @@ Within **SELF**, post-seed growth uses a **three-dimension mind model** (**SELF-
 | **Curiosity** (IX-B) | Topics that catch attention, engagement signals |
 | **Personality** (IX-C) | Observed behavioral patterns, art style, speech traits |
 
-See [Architecture](docs/architecture.md) and [boundary-self-knowledge-self-library](docs/boundary-self-knowledge-self-library.md).
+See [Architecture](docs/architecture.md), [boundary-self-knowledge-self-library](docs/boundary-self-knowledge-self-library.md), and [Boundary Review Queue](docs/boundary-review-queue.md) (classification hints in the Approval Inbox).
 
 ## Gated Pipeline
 

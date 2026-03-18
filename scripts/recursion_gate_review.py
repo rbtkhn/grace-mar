@@ -288,6 +288,85 @@ def _risk_tier(candidate: dict) -> str:
     return "review_batch"
 
 
+def _compute_boundary_review(row: dict) -> dict:
+    """
+    Boundary Review Queue hints: target surface vs heuristic suggestion.
+    Does not block merge — companion still approves. See docs/boundary-review-queue.md.
+    """
+    territory = row.get("territory") or ""
+    ch = (row.get("channel_key") or "").lower()
+    if territory == TERRITORY_WAP or "wap" in ch or "work-political" in ch:
+        return {
+            "target_surface": "WORK-LAYER",
+            "suggested_surface": "WORK-LAYER",
+            "misfiled_warning": None,
+            "hint_reasons": [],
+            "confidence": "high",
+        }
+
+    pc = (row.get("proposal_class") or "SELF_KNOWLEDGE_ADD").upper()
+    text = " ".join(
+        x
+        for x in (
+            row.get("summary") or "",
+            (row.get("suggested_entry") or "")[:1500],
+            (row.get("example_from_exchange") or "")[:800],
+        )
+        if x
+    )
+
+    if pc.startswith("CIV_MEM"):
+        return {
+            "target_surface": "CIV-MEM",
+            "suggested_surface": "CIV-MEM",
+            "misfiled_warning": None,
+            "hint_reasons": ["proposal_class is CIV-MEM_*"],
+            "confidence": "high",
+        }
+    if pc.startswith("SELF_LIBRARY"):
+        return {
+            "target_surface": "SELF-LIBRARY",
+            "suggested_surface": "SELF-LIBRARY",
+            "misfiled_warning": None,
+            "hint_reasons": ["proposal_class is SELF_LIBRARY_*"],
+            "confidence": "high",
+        }
+
+    target = "SELF-KNOWLEDGE"
+    suggested = "SELF-KNOWLEDGE"
+    reasons: list[str] = []
+    civ_words = re.search(
+        r"\b(rome|roman|romans|egypt|egyptian|dynasty|empire|empires|civilization|"
+        r"civilizations|pharaoh|pharaohs|mesopotamia|byzantine|ottoman|encyclopedia|corpus|codex)\b",
+        text,
+        re.I,
+    )
+    lib_id = re.search(r"LIB-\d{4}", text, re.I)
+    long_ref = len(text.strip()) > 140
+
+    if lib_id:
+        suggested = "SELF-LIBRARY"
+        reasons.append("mentions LIB- entry")
+    elif civ_words and long_ref:
+        suggested = "CIV-MEM / SELF-LIBRARY"
+        reasons.append("civilization/history-domain vocabulary + length")
+
+    misfiled = None
+    if suggested != "SELF-KNOWLEDGE":
+        misfiled = (
+            f"Target surface is {target} but content suggests {suggested}. "
+            "Misfiled? Consider CIV_MEM_* or SELF_LIBRARY_* on the gate YAML, or reject."
+        )
+
+    return {
+        "target_surface": target,
+        "suggested_surface": suggested,
+        "misfiled_warning": misfiled,
+        "hint_reasons": reasons,
+        "confidence": "low" if misfiled else ("medium" if reasons else "high"),
+    }
+
+
 def _ready_for_quick_merge(candidate: dict) -> bool:
     if candidate.get("status") != "pending":
         return False
@@ -379,6 +458,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
         row["duplicate_hints"] = _duplicate_hints(row, self_text)
         row["ready_for_quick_merge"] = _ready_for_quick_merge(row) and not row["duplicate_hints"]
         row["risk_tier"] = _risk_tier(row)
+        row["boundary_review"] = _compute_boundary_review(row)
         rows.append(row)
     rows.sort(key=lambda row: row.get("timestamp", ""), reverse=True)
     return rows

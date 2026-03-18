@@ -121,11 +121,26 @@
     }
     .empty, .error { padding: 1rem; color: var(--muted); }
     .error { color: var(--danger); }
+    .boundary-review {
+      margin-top: 0.5rem;
+      padding: 0.55rem 0.7rem;
+      border-radius: 10px;
+      font-size: 0.84rem;
+      line-height: 1.4;
+      background: rgba(215, 176, 107, 0.12);
+      border: 1px solid rgba(215, 176, 107, 0.35);
+      color: var(--warn);
+    }
+    .boundary-review.ok {
+      background: rgba(125, 192, 154, 0.08);
+      border-color: rgba(125, 192, 154, 0.25);
+      color: var(--good);
+    }
   </style>
 </head>
 <body>
   <h1>Approval Inbox</h1>
-  <p class="intro">Operator review surface for `recursion-gate.md`. This page does not create a second queue. It reads the canonical queue and writes review actions back through the same gate.</p>
+  <p class="intro">Operator review surface for `recursion-gate.md`. This page does not create a second queue. It reads the canonical queue and writes review actions back through the same gate. <strong>Boundary Review Queue (hints):</strong> each card may show target surface vs “misfiled?” — reclassify by editing <code>proposal_class</code> in the gate file. See <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/boundary-review-queue.md" style="color:var(--accent);">docs/boundary-review-queue.md</a>.</p>
 
   <section class="panel">
     <div class="row">
@@ -314,6 +329,13 @@
         }
         cardsEl.innerHTML = sorted.map(function(item) {
           var detailId = 'detail-' + item.id;
+          var br = item.boundary_review || {};
+          var boundaryHtml = '';
+          if (br.misfiled_warning) {
+            boundaryHtml = '<div class="boundary-review"><strong>Boundary:</strong> ' + escapeHtml(br.target_surface || '') + ' → suggested <strong>' + escapeHtml(br.suggested_surface || '') + '</strong>. ' + escapeHtml(br.misfiled_warning) + (br.hint_reasons && br.hint_reasons.length ? ' <em>(' + escapeHtml(br.hint_reasons.join('; ')) + ')</em>' : '') + '</div>';
+          } else if (br.target_surface) {
+            boundaryHtml = '<div class="boundary-review ok">Boundary: <strong>' + escapeHtml(br.target_surface) + '</strong> (confidence: ' + escapeHtml(br.confidence || '') + ')</div>';
+          }
           var hints = (item.duplicate_hints || []).map(function(hint) {
             return '<div>Duplicate hint: ' + escapeHtml(hint) + '</div>';
           }).join('');
@@ -336,6 +358,7 @@
             + '  </div>'
             + '  <div class="meta">' + escapeHtml(item.timestamp || 'no timestamp') + ' · ' + escapeHtml(item.channel_key || 'no channel') + '</div>'
             + '  <p class="summary">' + escapeHtml(item.summary || '(no summary)') + '</p>'
+            + boundaryHtml
             + (hints ? '<div class="hint-list">' + hints + '</div>' : '')
             + '  <div class="actions">'
             + '    <button type="button" data-action="toggle" data-target="' + detailId + '">Details</button>'

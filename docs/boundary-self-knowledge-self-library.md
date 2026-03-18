@@ -50,6 +50,10 @@ Logical shape (see `scripts/export_fork.py`):
 
 ---
 
+## Boundary Review Queue
+
+Operational surface for **classification at the identity/library boundary**: hints on gate candidates, inbox display, future reclassify + audit. See [boundary-review-queue.md](boundary-review-queue.md).
+
 ## Validation
 
 - **`scripts/validate-integrity.py`** (default CI path) runs IX-A boundary checks via `collect_identity_library_violations` — failures block integrity pass. Also validates `proposal_class` when present on gate candidates; optional `--require-proposal-class` for strict queues.
