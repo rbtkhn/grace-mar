@@ -19,6 +19,8 @@ should_route_to_cmc(question)?
 
 ## Combined Routing Logic
 
+**Ontology (repeat):** A CMC hit is **CIV-MEM / SELF-LIBRARY reference retrieval** — not an update to SELF or SELF-KNOWLEDGE. The Voice may *say* what the codex returns; that content is **not** identity until separately gated into SELF.
+
 Three layers work together:
 
 ### 1. Negative triggers (skip first)

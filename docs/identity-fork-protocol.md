@@ -11,7 +11,7 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Re
 
 ## Abstract
 
-Agents and platforms need identity data to personalize and to act on behalf of users, but today they scrape, infer, or hallucinate — there is no standard for companion-owned, evidence-grounded identity. This protocol defines that standard: a **Record** (identity schema + evidence linking), a **gate** (the companion approves every merge; the agent may stage, not merge), and **export** (agent-consumable manifest and profile). The result is portable, companion-owned identity that any agent or platform can consume without owning; the companion remains sovereign.
+Agents and platforms need identity data to personalize and to act on behalf of users, but today they scrape, infer, or hallucinate — there is no standard for companion-owned, evidence-grounded identity. This protocol defines that standard: a **Record** that includes **SELF** (identity + **SELF-KNOWLEDGE**) and, as a **separate governed surface**, **SELF-LIBRARY** (reference domains, including **CIV-MEM** — not identity), plus evidence linking; a **gate** (the companion approves every merge; the agent may stage, not merge); and **export** (manifest, profile, and logical **self_knowledge** / **self_library** buckets). See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). The companion remains sovereign.
 
 ---
 
@@ -22,7 +22,7 @@ This document is the **canonical protocol specification**. Implementations and e
 The **Identity Fork Protocol (IFP)** defines a standard for companion-owned, evidence-grounded identity records that agents and platforms can consume without owning. It is vendor-neutral: no single platform controls identity. The companion is the gate.
 
 **Scope:**
-- Identity schema (who they are + what they can do)
+- Identity schema (who they are + what they can do) and **SELF-LIBRARY** as reference surface (gated separately in review semantics via `proposal_class`)
 - Gated staging contract (stage vs. merge)
 - Evidence linking rules
 - Knowledge boundary invariant

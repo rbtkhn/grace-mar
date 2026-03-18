@@ -2,6 +2,9 @@
 """
 Grace-Mar integrity validator.
 
+Enforces **SELF-KNOWLEDGE vs SELF-LIBRARY**: IX-A topics must not look like corpus dumps
+(length / keywords) — same rules as validate_identity_library_boundary (integrated here, not advisory-only).
+
 Checks:
   1. SELF IX-A/B/C entries include evidence_id
   2. SELF evidence_id references resolve to EVIDENCE ACT-* entries

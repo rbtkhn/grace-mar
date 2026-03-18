@@ -2,8 +2,12 @@
 """
 Export the cognitive fork to a single portable JSON file.
 
+Ontology in export (v1.1+): **self_knowledge** (IX-A slice = SELF-KNOWLEDGE), **self_library**
+(with **civ_mem.lib_entry_ids** = CIV-MEM subdomain of SELF-LIBRARY), plus **self**, **skills**,
+**evidence**, **library.raw**. See docs/boundary-self-knowledge-self-library.md.
+
 Reads self.md, skills.md, self-evidence.md, and self-library.md for the given user and optionally
-fork-manifest.json / manifest.json, then writes a structured JSON export for backup, portability,
+fork-manifest.json / manifest.json, then writes structured JSON for backup, portability,
 or external tooling.
 
 Usage:
