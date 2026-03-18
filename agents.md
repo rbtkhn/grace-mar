@@ -278,3 +278,4 @@ The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality in
 - Use "cognitive twin" (use "cognitive fork")
 - Call the Voice an "oracle" or the Record "commanding" — use mirror, reflect, voice, record
 - Let terminology drift — when editing CONCEPTUAL-FRAMEWORK, AGENTS, or templates, prefer Record (not fork) and Voice (not bot) in conceptual prose; correct inconsistencies
+- **Do not** use legacy on-disk names (`SELF.md`, `EVIDENCE.md`, `PENDING-REVIEW.md`, …) — canonical paths are **`self.md`**, **`self-evidence.md`**, **`recursion-gate.md`**, **`self-archive.md`** ([canonical-paths.md](docs/canonical-paths.md))
