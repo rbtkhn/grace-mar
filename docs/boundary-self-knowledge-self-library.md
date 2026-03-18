@@ -50,4 +50,5 @@ Logical shape (see `scripts/export_fork.py`):
 
 ## Validation
 
-`scripts/validate_identity_library_boundary.py` warns when IX-A lines look like domain dumps (oversized topics, corpus keywords). Advisory only; does not block merge.
+- **`scripts/validate-integrity.py`** (default CI path) runs IX-A boundary checks via `collect_identity_library_violations` — failures block integrity pass. Also validates `proposal_class` when present on gate candidates; optional `--require-proposal-class` for strict queues.
+- **`scripts/validate_identity_library_boundary.py`** — same IX-A rules standalone (exit 1 if violations).

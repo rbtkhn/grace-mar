@@ -291,6 +291,8 @@
 
       function detailText(item) {
         var parts = [];
+        parts.push('proposal_class: ' + (item.proposal_class || '—')
+          + (item.proposal_class_inferred ? ' (inferred — set explicit in gate YAML for library vs identity)' : ''));
         if (item.source) parts.push('source: ' + item.source);
         if (item.profile_target) parts.push('profile_target: ' + item.profile_target);
         if (item.prompt_section) parts.push('prompt_section: ' + item.prompt_section);
@@ -327,6 +329,10 @@
             + '    <span class="pill">' + escapeHtml(item.status) + '</span>'
             + '    <span class="pill">' + escapeHtml(item.risk_tier) + '</span>'
             + '    <span class="pill">' + escapeHtml(item.territory_label) + '</span>'
+            + '    <span class="pill" title="' + (item.proposal_class_inferred ? 'inferred from mind_category' : 'from YAML') + '">'
+            + escapeHtml(item.proposal_class || '—')
+            + (item.proposal_class_inferred ? '*' : '')
+            + '</span>'
             + '  </div>'
             + '  <div class="meta">' + escapeHtml(item.timestamp || 'no timestamp') + ' · ' + escapeHtml(item.channel_key || 'no channel') + '</div>'
             + '  <p class="summary">' + escapeHtml(item.summary || '(no summary)') + '</p>'

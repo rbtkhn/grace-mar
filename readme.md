@@ -4,7 +4,7 @@
 
 ## Concept
 
-The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. It captures who the person is (identity, personality, voice) and what they can do (Record-bound skills, knowledge, approved evidence). Separate work territories handle planning and execution without redefining the Record itself. We create avatars of ourselves; the fork is one: queryable, evidence-grounded, gated. Over time, it becomes a living cognitive record that can be queried, emulated, and preserved — extended memory that remembers what the user has chosen to document.
+The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. The **Record** is not a single blob: it has **four first-class surfaces** — **SELF** (identity + **SELF-KNOWLEDGE** in IX-A/B/C), **SELF-LIBRARY** (governed **reference** domains, including **CIV-MEM**), **SKILLS** (capability), and **EVIDENCE** (activity and artifacts). Identity and library are **separate**: civilization-scale reference lives in SELF-LIBRARY, not in SELF-KNOWLEDGE. The fork also tracks what the companion can do (skills) and what happened (evidence). Work territories handle planning and execution without redefining the Record. Queryable, evidence-grounded, gated.
 
 The fork grows only through what the user explicitly provides. An optional emulation layer (Telegram and/or WeChat bots) acts as an observation window and teaching/tutoring interface — a channel through which the user selectively exposes thoughts and learns from the fork's voice.
 
@@ -23,15 +23,15 @@ Core modules:
 | **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
 | **WORK LAYER** | `work-*` territories and instance work contexts | Planning, execution, delivery, and tool-using work outside the self-skill taxonomy |
 
-Post-seed growth is organized into a **three-dimension mind model**:
+Within **SELF**, post-seed growth uses a **three-dimension mind model** (**SELF-KNOWLEDGE** in IX-A, curiosity in IX-B, personality in IX-C). That model describes **identity**, not the **SELF-LIBRARY** reference layer.
 
 | Dimension | What it captures |
 |---------|-----------------|
-| **Knowledge** (IX-A) | Facts entering awareness through observation |
+| **Knowledge** (IX-A) | Identity-facing facts (SELF-KNOWLEDGE) — not domain corpora |
 | **Curiosity** (IX-B) | Topics that catch attention, engagement signals |
 | **Personality** (IX-C) | Observed behavioral patterns, art style, speech traits |
 
-See [Architecture](docs/architecture.md) for full details.
+See [Architecture](docs/architecture.md) and [boundary-self-knowledge-self-library](docs/boundary-self-knowledge-self-library.md).
 
 ## Gated Pipeline
 
@@ -317,6 +317,8 @@ python3 scripts/assert_canonical_paths.py --user grace-mar
 python3 scripts/validate-integrity.py --user grace-mar --json
 python3 -m pytest tests/ -v --tb=short
 ```
+
+`validate-integrity.py` includes **SELF-KNOWLEDGE vs SELF-LIBRARY** checks (IX-A corpus-style violations) and validates **`proposal_class`** on gate candidates when present. Optional: `--require-proposal-class` to enforce explicit `proposal_class` on every pending candidate ([IFP §3.5](docs/identity-fork-protocol.md)). Standalone: `python3 scripts/validate_identity_library_boundary.py -u grace-mar`.
 
 **Performance (tier 1, CI):** `python scripts/run_perf_local.py` or covered by `pytest tests/test_perf_local.py`. Tiers 2–5 (exports, LLM, HTTP, load): [docs/perf-budgets.md](docs/perf-budgets.md).
 

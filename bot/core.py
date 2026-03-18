@@ -803,6 +803,7 @@ def _next_candidate_id() -> str:
 
 ALLOWED_MIND_CATEGORIES = {"knowledge", "curiosity", "personality"}
 REQUIRED_ANALYST_FIELDS = {
+    "proposal_class",
     "mind_category",
     "signal_type",
     "summary",
@@ -811,6 +812,15 @@ REQUIRED_ANALYST_FIELDS = {
     "prompt_section",
     "prompt_addition",
 }
+
+ALLOWED_ANALYST_PROPOSAL_CLASS = frozenset({
+    "SELF_KNOWLEDGE_ADD",
+    "SELF_KNOWLEDGE_REVISE",
+    "SELF_LIBRARY_ADD",
+    "SELF_LIBRARY_REVISE",
+    "CIV_MEM_ADD",
+    "CIV_MEM_REVISE",
+})
 
 
 def _parse_top_level_yaml(analysis_yaml: str) -> dict[str, str]:
@@ -842,6 +852,9 @@ def _validate_analysis_yaml(analysis_yaml: str) -> tuple[bool, str]:
     mind_category = (parsed.get("mind_category") or "").strip().lower()
     if mind_category not in ALLOWED_MIND_CATEGORIES:
         return False, f"invalid mind_category: {mind_category}"
+    pc = (parsed.get("proposal_class") or "").strip()
+    if pc and pc not in ALLOWED_ANALYST_PROPOSAL_CLASS:
+        return False, f"invalid proposal_class: {pc}"
     priority = (parsed.get("priority_score") or "").strip()
     if priority:
         if not priority.isdigit() or not (1 <= int(priority) <= 5):

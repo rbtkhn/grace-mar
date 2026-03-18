@@ -293,6 +293,7 @@ If NO signal detected, respond with exactly: NONE
 
 If a signal IS detected, respond with ONLY this YAML (no markdown fences, no extra text):
 
+proposal_class: SELF_KNOWLEDGE_ADD
 mind_category: <knowledge|curiosity|personality>
 signal_type: <type>
 priority_score: <1-5>

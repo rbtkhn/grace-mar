@@ -10,6 +10,8 @@ Checks:
   5. recursion-gate candidates have required shape
   6. ID format and required section shape checks for SELF/SKILLS
   7. Derived export freshness and runtime portability contract checks
+  8. SELF-KNOWLEDGE vs SELF-LIBRARY — IX-A topic length / corpus keywords (identity/library boundary)
+  9. recursion-gate proposal_class value valid when present
 
 Usage:
   python scripts/validate-integrity.py
@@ -34,6 +36,16 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 from recursion_gate_review import split_gate_sections
+from validate_identity_library_boundary import collect_identity_library_violations
+
+ALLOWED_PROPOSAL_CLASS = frozenset({
+    "SELF_KNOWLEDGE_ADD",
+    "SELF_KNOWLEDGE_REVISE",
+    "SELF_LIBRARY_ADD",
+    "SELF_LIBRARY_REVISE",
+    "CIV_MEM_ADD",
+    "CIV_MEM_REVISE",
+})
 
 
 def extract_yaml_blocks(content: str, section_marker: str | None = None) -> list[str]:
@@ -207,6 +219,38 @@ def validate_recursion_gate(user_dirs: list[Path]) -> list[str]:
     return errors
 
 
+def validate_gate_proposal_class(
+    user_dirs: list[Path], *, require_proposal_class: bool
+) -> list[str]:
+    errors: list[str] = []
+    for user_dir in user_dirs:
+        pr_path = user_dir / "recursion-gate.md"
+        content = _safe_read(pr_path)
+        if "## Candidates" not in content:
+            continue
+        candidates_section, _ = split_gate_sections(content)
+        for m in re.finditer(
+            r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", candidates_section, re.DOTALL
+        ):
+            cid, yaml_block = m.groups()
+            if "status: pending" not in yaml_block:
+                continue
+            pcm = re.search(r"^proposal_class:\s*(\S+)\s*$", yaml_block, re.MULTILINE)
+            if pcm:
+                v = pcm.group(1).strip().strip("\"'")
+                if v not in ALLOWED_PROPOSAL_CLASS:
+                    errors.append(
+                        f"{pr_path.relative_to(REPO_ROOT)} {cid} invalid proposal_class "
+                        f"'{v}' (see identity-fork-protocol §3.5)"
+                    )
+            elif require_proposal_class:
+                errors.append(
+                    f"{pr_path.relative_to(REPO_ROOT)} {cid} pending: missing proposal_class "
+                    f"(use --no-require-proposal-class or add proposal_class per IFP §3.5)"
+                )
+    return errors
+
+
 def validate_cross_ref(evidence_ids: set[str], act_ids: set[str]) -> list[str]:
     return [f"Orphan evidence_id reference: {eid}" for eid in sorted(evidence_ids) if eid not in act_ids]
 
@@ -347,18 +391,29 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
     return errors
 
 
-def run_validation(users_dir: Path, user: str | None, min_evidence_tier: int) -> list[str]:
+def run_validation(
+    users_dir: Path,
+    user: str | None,
+    min_evidence_tier: int,
+    *,
+    require_proposal_class: bool = False,
+) -> list[str]:
     user_dirs = _iter_user_dirs(users_dir, user)
     if not user_dirs:
         return [f"No user directories found for users_dir={users_dir} user={user or '(all)'}"]
 
     all_errors: list[str] = []
+    for ud in user_dirs:
+        all_errors.extend(collect_identity_library_violations(ud, repo_root=REPO_ROOT))
     self_errors, evidence_ids = validate_self(user_dirs)
     all_errors.extend(self_errors)
     ev_errors, act_ids = validate_evidence(user_dirs, min_evidence_tier=min_evidence_tier)
     all_errors.extend(ev_errors)
     all_errors.extend(validate_cross_ref(evidence_ids, act_ids))
     all_errors.extend(validate_recursion_gate(user_dirs))
+    all_errors.extend(
+        validate_gate_proposal_class(user_dirs, require_proposal_class=require_proposal_class)
+    )
     all_errors.extend(validate_id_format(user_dirs))
     all_errors.extend(validate_self_sections(user_dirs))
     all_errors.extend(validate_skills_sections(user_dirs))
@@ -378,6 +433,11 @@ def main() -> int:
     )
     parser.add_argument("--json", action="store_true", help="Emit JSON result")
     parser.add_argument("--changed-only", action="store_true", help="Reserved for CI mode")
+    parser.add_argument(
+        "--require-proposal-class",
+        action="store_true",
+        help="Fail if any pending gate candidate omits proposal_class (IFP §3.5)",
+    )
     args = parser.parse_args()
 
     users_dir = Path(args.users_dir)
@@ -389,7 +449,12 @@ def main() -> int:
             print(payload["errors"][0], file=sys.stderr)
         return 1
 
-    errors = run_validation(users_dir, args.user.strip() or None, args.min_evidence_tier)
+    errors = run_validation(
+        users_dir,
+        args.user.strip() or None,
+        args.min_evidence_tier,
+        require_proposal_class=args.require_proposal_class,
+    )
     ok = not errors
     if args.json:
         print(json.dumps({"ok": ok, "errors": errors}, ensure_ascii=True))

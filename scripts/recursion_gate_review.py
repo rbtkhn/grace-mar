@@ -317,6 +317,20 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
         profile_target = _extract_scalar(yaml_body, "profile_target")
         prompt_section = _extract_scalar(yaml_body, "prompt_section")
         events = _pipeline_events_for_candidate(user_id, candidate_id)
+        raw_pc = (_extract_scalar(yaml_body, "proposal_class") or "").strip()
+        if raw_pc:
+            eff_pc, pc_inferred = raw_pc, False
+        else:
+            mc = (_extract_scalar(yaml_body, "mind_category") or "").lower()
+            if mc == "knowledge":
+                eff_pc = "SELF_KNOWLEDGE_ADD"
+            elif mc == "curiosity":
+                eff_pc = "SELF_KNOWLEDGE_ADD"
+            elif mc == "personality":
+                eff_pc = "SELF_KNOWLEDGE_ADD"
+            else:
+                eff_pc = "SELF_KNOWLEDGE_ADD"
+            pc_inferred = True
         row = {
             "id": candidate_id,
             "title": title,
@@ -326,6 +340,9 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
             "channel_key": channel_key,
             "territory": territory,
             "territory_label": "WAP" if territory == TERRITORY_WAP else "Companion",
+            "proposal_class": eff_pc,
+            "proposal_class_raw": raw_pc or None,
+            "proposal_class_inferred": pc_inferred,
             "source": _extract_scalar(yaml_body, "source"),
             "candidate_source": _extract_scalar(yaml_body, "candidate_source"),
             "artifact_path": _extract_scalar(yaml_body, "artifact_path"),

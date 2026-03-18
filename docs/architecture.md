@@ -8,22 +8,19 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions of 
 
 ## Core Principle
 
-The cognitive fork separates **who the companion is** from **what the companion can do**, recording both as structured, evidence-grounded data that grows through interaction.
+The cognitive fork records **identity** (**SELF** + **SELF-KNOWLEDGE**), **reference** (**SELF-LIBRARY**, including **CIV-MEM**), **capability** (**SKILLS**), and **evidence** — as structured, evidence-grounded data. Identity and library are **different surfaces**: domain corpora belong in SELF-LIBRARY, not in IX-A. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     COGNITIVE FORK                          │
-├─────────────────────────┬───────────────────────────────────┤
-│         SELF            │            SKILLS                 │
-│   (who they ARE)        │      (what they CAN DO)           │
-├─────────────────────────┼───────────────────────────────────┤
-│ • Personality           │ • Academic knowledge              │
-│ • Linguistic style      │ • Practical abilities             │
-│ • Life narrative        │ • Creative works                  │
-│ • Preferences           │ • Domain expertise                │
-│ • Values                │ • Problem-solving approaches      │
-│ • Reasoning patterns    │ • Demonstrated competencies       │
-└─────────────────────────┴───────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────┐
+│                           COGNITIVE FORK                                     │
+├──────────────────┬────────────────────┬────────────────────────────────────┤
+│      SELF        │      SKILLS        │        SELF-LIBRARY                 │
+│  identity +      │  what the Record   │  governed reference (not identity)  │
+│  SELF-KNOWLEDGE  │  can evidence      │  · return-to sources                │
+│  (IX-A/B/C)      │  they CAN DO       │  · CIV-MEM subdomain → CMC lookup   │
+├──────────────────┴────────────────────┴────────────────────────────────────┤
+│  EVIDENCE — READ/WRITE/CREATE/ACT logs (provenance, immutable where set)   │
+└────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---

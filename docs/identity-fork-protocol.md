@@ -144,6 +144,13 @@ proposal_class: CIV_MEM_ADD   # example
 
 Implementations may warn when `mind_category: knowledge` candidates look like domain dumps without `CIV_MEM_*` routing to library. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
 
+**Bot analyst:** Staged YAML includes `proposal_class: SELF_KNOWLEDGE_ADD` by default (conversation → identity queue). Library/civ-mem edits are usually **operator-staged** with `CIV_MEM_ADD` / `SELF_LIBRARY_ADD`. The Approval Inbox shows `proposal_class` (explicit or inferred).
+</think>
+
+
+<｜tool▁calls▁begin｜><｜tool▁call▁begin｜>
+Shell
+
 ---
 
 ## 4. Gated Staging Contract
