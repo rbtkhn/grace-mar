@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WAP internal dashboard</title>
+  <style>
+    :root {
+      --bg: #14110f;
+      --panel: #211b18;
+      --text: #f3eee8;
+      --muted: #b6a99d;
+      --accent: #7cb896;
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; padding: 1rem; line-height: 1.45; }
+    h1 { font-size: 1.35rem; margin: 0 0 0.35rem; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem; max-width: 48rem; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 1rem; margin-bottom: 1rem; }
+    label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.25rem; }
+    input, select, textarea, button {
+      font: inherit; border-radius: 8px; border: 1px solid var(--border);
+      background: #13100e; color: var(--text); padding: 0.5rem 0.65rem; width: 100%; max-width: 100%;
+    }
+    textarea { min-height: 6rem; font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    textarea.tall { min-height: 14rem; }
+    button { width: auto; cursor: pointer; margin-top: 0.5rem; background: rgba(124,184,150,0.2); color: var(--accent); border-color: rgba(124,184,150,0.35); }
+    button.secondary { background: transparent; color: var(--muted); }
+    .row { display: grid; gap: 0.75rem; margin-bottom: 0.75rem; }
+    @media (min-width: 640px) { .row.cols-2 { grid-template-columns: 1fr 1fr; } }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    th, td { text-align: left; padding: 0.45rem 0.5rem; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; }
+    tr { cursor: pointer; }
+    tr:hover { background: rgba(255,255,255,0.04); }
+    .badge { display: inline-block; padding: 0.15rem 0.45rem; border-radius: 6px; font-size: 0.75rem; background: rgba(255,255,255,0.08); }
+    .links a { color: var(--accent); margin-right: 0.75rem; font-size: 0.88rem; }
+    #setupScreen { max-width: 24rem; }
+    .err { color: #d98b8e; font-size: 0.88rem; margin-top: 0.5rem; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+  <div id="setupScreen">
+    <h1>WAP dashboard</h1>
+    <p class="sub">Internal only. Enter the token from your operator (WAP_DASHBOARD_TOKEN).</p>
+    <label for="tok">Token</label>
+    <input id="tok" type="password" autocomplete="off" placeholder="paste token">
+    <button type="button" id="saveTok">Continue</button>
+    <p class="err hidden" id="setupErr"></p>
+  </div>
+
+  <div id="mainApp" class="hidden">
+    <h1>WAP internal dashboard</h1>
+    <p class="sub">Create jobs → run Cursor skills → paste output → mark shipped. See <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/wap-dashboard.md" style="color:var(--accent)">docs/wap-dashboard.md</a>.</p>
+
+    <div class="panel links">
+      <strong>Quick links (repo)</strong><br>
+      <a href="https://github.com/rbtkhn/grace-mar/blob/main/.cursor/skills/massie-x-news-search-draft/SKILL.md" target="_blank" rel="noopener">Massie X news skill</a>
+      <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-political-consulting/account-x.md" target="_blank" rel="noopener">account-x (Massie)</a>
+      <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-political-consulting/khanna-account-x.md" target="_blank" rel="noopener">khanna-account-x</a>
+      <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-political-consulting/content-queue.md" target="_blank" rel="noopener">content-queue.md</a>
+    </div>
+
+    <div class="panel">
+      <h2 style="margin:0 0 0.75rem;font-size:1rem;">New job</h2>
+      <div class="row cols-2">
+        <div>
+          <label for="client_slug">Client</label>
+          <select id="client_slug">
+            <option value="massie">massie</option>
+            <option value="khanna">khanna</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+        <div>
+          <label for="workflow">Workflow</label>
+          <select id="workflow">
+            <option value="news_scan">news_scan</option>
+            <option value="x_drafts">x_drafts</option>
+            <option value="brief_snippet">brief_snippet</option>
+            <option value="asymmetry_hook">asymmetry_hook</option>
+            <option value="other">other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <label for="context">Context / prompt for Cursor</label>
+        <textarea id="context" placeholder="Topic, angle, links to cover…"></textarea>
+      </div>
+      <div class="row">
+        <label for="urls">URLs (optional, one per line)</label>
+        <textarea id="urls" rows="3" placeholder="https://…"></textarea>
+      </div>
+      <button type="button" id="createJob">Create job</button>
+      <span class="err hidden" id="createErr"></span>
+    </div>
+
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+        <h2 style="margin:0;font-size:1rem;">Jobs</h2>
+        <button type="button" class="secondary" id="refresh">Refresh</button>
+      </div>
+      <div style="overflow-x:auto;margin-top:0.75rem;">
+        <table>
+          <thead><tr><th>When</th><th>Client</th><th>Workflow</th><th>Status</th><th>ID</th></tr></thead>
+          <tbody id="jobRows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel hidden" id="detailPanel">
+      <h2 style="margin:0 0 0.75rem;font-size:1rem;">Job <span id="detailId"></span></h2>
+      <div class="row cols-2">
+        <div>
+          <label>Status</label>
+          <select id="detailStatus">
+            <option value="new">new</option>
+            <option value="ran_in_cursor">ran_in_cursor</option>
+            <option value="output_pasted">output_pasted</option>
+            <option value="shipped">shipped</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <label for="detailContext">Context</label>
+        <textarea id="detailContext"></textarea>
+      </div>
+      <div class="row">
+        <label for="detailUrls">URLs</label>
+        <textarea id="detailUrls" rows="2"></textarea>
+      </div>
+      <div class="row">
+        <label for="detailOutput">Output (paste from Cursor)</label>
+        <textarea id="detailOutput" class="tall"></textarea>
+      </div>
+      <button type="button" id="saveJob">Save job</button>
+      <span class="err hidden" id="detailErr"></span>
+    </div>
+  </div>
+
+  <script>
+(function () {
+  const GH = 'https://github.com/rbtkhn/grace-mar/blob/main';
+  const LS_KEY = 'wap_dashboard_token';
+
+  function getToken() {
+    const q = new URLSearchParams(location.search).get('t');
+    if (q) { sessionStorage.setItem(LS_KEY, q); history.replaceState({}, '', '/wap'); return q; }
+    return sessionStorage.getItem(LS_KEY) || '';
+  }
+
+  function headers() {
+    return {
+      'Content-Type': 'application/json',
+      'X-Wap-Token': getToken()
+    };
+  }
+
+  async function api(path, opts) {
+    const r = await fetch(path, Object.assign({ headers: headers() }, opts));
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(j.error || r.statusText);
+    return j;
+  }
+
+  const setupScreen = document.getElementById('setupScreen');
+  const mainApp = document.getElementById('mainApp');
+  const setupErr = document.getElementById('setupErr');
+
+  document.getElementById('saveTok').onclick = async function () {
+    const t = document.getElementById('tok').value.trim();
+    if (!t) { setupErr.textContent = 'Token required'; setupErr.classList.remove('hidden'); return; }
+    sessionStorage.setItem(LS_KEY, t);
+    setupErr.classList.add('hidden');
+    try {
+      await api('/api/wap/jobs?limit=1');
+      setupScreen.classList.add('hidden');
+      mainApp.classList.remove('hidden');
+      loadJobs();
+    } catch (e) {
+      sessionStorage.removeItem(LS_KEY);
+      setupErr.textContent = e.message || String(e);
+      setupErr.classList.remove('hidden');
+    }
+  };
+
+  if (getToken()) {
+    (async function () {
+      try {
+        await api('/api/wap/jobs?limit=1');
+        setupScreen.classList.add('hidden');
+        mainApp.classList.remove('hidden');
+        loadJobs();
+      } catch (e) {
+        sessionStorage.removeItem(LS_KEY);
+      }
+    })();
+  }
+
+  let selectedId = null;
+
+  async function loadJobs() {
+    const { jobs } = await api('/api/wap/jobs?limit=100');
+    const tb = document.getElementById('jobRows');
+    tb.innerHTML = jobs.map(function (j) {
+      const when = (j.created_at || '').slice(0, 16).replace('T', ' ');
+      return '<tr data-id="' + j.id + '"><td>' + when + '</td><td>' + (j.client_slug || '') + '</td><td>' + (j.workflow || '') + '</td><td><span class="badge">' + (j.status || '') + '</span></td><td style="font-family:monospace;font-size:0.75rem">' + j.id + '</td></tr>';
+    }).join('');
+    tb.querySelectorAll('tr').forEach(function (tr) {
+      tr.onclick = function () { openDetail(tr.dataset.id, jobs); };
+    });
+  }
+
+  function openDetail(id, jobs) {
+    const j = jobs.find(function (x) { return x.id === id; });
+    if (!j) return;
+    selectedId = id;
+    document.getElementById('detailPanel').classList.remove('hidden');
+    document.getElementById('detailId').textContent = id;
+    document.getElementById('detailStatus').value = j.status || 'new';
+    document.getElementById('detailContext').value = j.context || '';
+    document.getElementById('detailUrls').value = j.urls || '';
+    document.getElementById('detailOutput').value = j.output || '';
+    document.getElementById('detailErr').classList.add('hidden');
+    document.getElementById('detailPanel').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.getElementById('refresh').onclick = function () { loadJobs().catch(function (e) { alert(e.message); }); };
+
+  document.getElementById('createJob').onclick = async function () {
+    const el = document.getElementById('createErr');
+    el.classList.add('hidden');
+    try {
+      let client = document.getElementById('client_slug').value;
+      if (client === 'other') client = prompt('Client slug?') || 'other';
+      await api('/api/wap/jobs', {
+        method: 'POST',
+        body: JSON.stringify({
+          client_slug: client,
+          workflow: document.getElementById('workflow').value,
+          context: document.getElementById('context').value,
+          urls: document.getElementById('urls').value
+        })
+      });
+      document.getElementById('context').value = '';
+      document.getElementById('urls').value = '';
+      await loadJobs();
+    } catch (e) {
+      el.textContent = e.message;
+      el.classList.remove('hidden');
+    }
+  };
+
+  document.getElementById('saveJob').onclick = async function () {
+    const el = document.getElementById('detailErr');
+    el.classList.add('hidden');
+    if (!selectedId) return;
+    try {
+      await api('/api/wap/jobs/' + encodeURIComponent(selectedId), {
+        method: 'PATCH',
+        body: JSON.stringify({
+          status: document.getElementById('detailStatus').value,
+          context: document.getElementById('detailContext').value,
+          urls: document.getElementById('detailUrls').value,
+          output: document.getElementById('detailOutput').value
+        })
+      });
+      await loadJobs();
+    } catch (e) {
+      el.textContent = e.message;
+      el.classList.remove('hidden');
+    }
+  };
+})();
+  </script>
+</body>
+</html>

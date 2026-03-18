@@ -10,6 +10,8 @@
 
 | Need | File |
 |------|------|
+| Operator checklist (brief, monitoring, pilot week) | [massie-ky4-operator-checklist.md](massie-ky4-operator-checklist.md) |
+| Issue asymmetry map (primary + general) | [massie-issue-asymmetry.md](massie-issue-asymmetry.md) |
 | Bio, race, issues, opposition | [principal-profile.md](../principal-profile.md) |
 | Primary calendar | [calendar-2026.md](../calendar-2026.md) |
 | Opposition living doc | [opposition-brief.md](../opposition-brief.md) |

@@ -15,6 +15,8 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-political-consulting` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar` |
+| `massie-x-news-search-draft` | Real-time news search + suggested @shadowcampain X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/massie-x-news-search-draft/SKILL.md` |
+| `wap-dashboard` | Internal miniapp UI at `/wap` — WAP job tracker (token: `WAP_DASHBOARD_TOKEN`) | [wap-dashboard.md](wap-dashboard.md) |
 
 ---
 
@@ -22,9 +24,10 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 1. Start with `daily-warmup` when opening a new work block or a new agent thread.
 2. Run `wap-pulse` when the day includes campaign work, brief prep, or X/content operations.
-3. Use `weekly-brief-run` for the actual WAP brief cycle after checking source freshness.
-4. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
-5. End or resume a session with `handoff-check`.
+3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
+4. Use `weekly-brief-run` for the actual WAP brief cycle after checking source freshness.
+5. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
+6. End or resume a session with `handoff-check`.
 
 ---
 

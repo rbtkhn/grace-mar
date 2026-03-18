@@ -4,11 +4,12 @@
 - **HTML profile** — Read-only. View identity, pipeline, SKILLS, benchmarks. No input, no chat.
 - **Telegram** — Bidirectional. User and Grace-Mar exchange messages; "we did X" invokes the pipeline. The primary conversation channel.
 
-Grace-Mar has three web surfaces on the Mini App host (plus the static dashboard):
+Grace-Mar has several web surfaces on the Mini App host (plus the static dashboard):
 
 - **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Available at **https://grace-mar.com**.
 - **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
 - **Family hub** — `/app` on the Mini App server: chat, log activities (“we did X”), and parent-gated review + merge. See below.
+- **WAP internal dashboard** — `/wap`: token-gated job tracker for work-political-consulting (SMM + operator). See [wap-dashboard.md](wap-dashboard.md).
 
 ## Architecture
 
@@ -91,6 +92,12 @@ On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Min
 **Review tab:** Parent enters **`OPERATOR_FETCH_SECRET`** once per browser session; then uses the same gate + merge-approved flow as [Operator Console](operator-console.md). Kids do not need the operator secret for Chat or Log.
 
 **Security:** Anyone with `FAMILY_APP_TOKEN` can chat and submit activities (rate-limit at reverse proxy if needed). Rotate the token if the link leaks. Merge still requires the operator secret.
+
+### WAP internal dashboard (`/wap`)
+
+**Env:** Set **`WAP_DASHBOARD_TOKEN`** to a long random string. Optional **`WAP_JOBS_PATH`** — absolute path or path relative to repo root for the jobs JSON file (default `data/wap_jobs.json`). On Render, jobs are **ephemeral** unless you mount a persistent disk and point `WAP_JOBS_PATH` there.
+
+**Use:** Open `https://<host>/wap?t=<WAP_DASHBOARD_TOKEN>` (token is stored in the browser session). Create jobs, paste Cursor outputs, update status. **Full spec:** [wap-dashboard.md](wap-dashboard.md).
 
 ## 3. Bot (Webhook Mode)
 

@@ -27,6 +27,10 @@ Pods/
 *.swo
 .DS_Store
 
+# WAP internal dashboard job store (local dev; do not commit)
+data/wap_jobs.json
+data/wap_jobs.json.tmp
+
 # Python
 __pycache__/
 *.pyc

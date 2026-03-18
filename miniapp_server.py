@@ -15,6 +15,7 @@ Real-time exchanges are appended to users/<user>/session-transcript.md (same as 
 SELF-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 Family hub: FAMILY_APP_TOKEN, routes /app, /api/family/*.
+WAP internal dashboard: WAP_DASHBOARD_TOKEN, routes /wap, /api/wap/jobs.
 """
 
 import asyncio
@@ -22,10 +23,11 @@ import json
 import logging
 import os
 import re
+import secrets
 import subprocess
 import sys
 import threading
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -70,6 +72,7 @@ RECURSION_GATE_PATH = USER_DIR / "recursion-gate.md"
 PIPELINE_EVENTS_PATH = USER_DIR / "pipeline-events.jsonl"
 OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
 FAMILY_APP_TOKEN = os.getenv("FAMILY_APP_TOKEN", "").strip()
+WAP_DASHBOARD_TOKEN = os.getenv("WAP_DASHBOARD_TOKEN", "").strip()
 OPERATOR_NAME = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web").strip() or "operator-web"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
@@ -281,7 +284,7 @@ def family_hub():
 def _cors(resp):
     resp.headers["Access-Control-Allow-Origin"] = "*"
     resp.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Family-Token"
+    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Family-Token, X-Wap-Token"
     return resp
 
 
@@ -296,6 +299,121 @@ def _operator_auth():
     if token != OPERATOR_FETCH_SECRET:
         return False, (jsonify({"error": "Invalid secret"}), 403)
     return True, None
+
+
+def _wap_jobs_path() -> Path:
+    raw = os.getenv("WAP_JOBS_PATH", "").strip()
+    if raw:
+        p = Path(raw)
+        return p if p.is_absolute() else (REPO_ROOT / p)
+    return REPO_ROOT / "data" / "wap_jobs.json"
+
+
+def _wap_load_jobs() -> list[dict]:
+    path = _wap_jobs_path()
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data if isinstance(data, list) else []
+    except Exception:
+        logger.exception("wap jobs load failed")
+        return []
+
+
+def _wap_save_jobs(jobs: list[dict]) -> None:
+    path = _wap_jobs_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(jobs, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
+def _wap_auth():
+    """Require WAP_DASHBOARD_TOKEN via Bearer or X-Wap-Token."""
+    if not WAP_DASHBOARD_TOKEN:
+        return False, (jsonify({"error": "WAP_DASHBOARD_TOKEN not configured"}), 503)
+    auth = (request.headers.get("Authorization") or "").strip()
+    header_tok = (request.headers.get("X-Wap-Token") or "").strip()
+    if auth.startswith("Bearer "):
+        token = auth[7:].strip()
+    else:
+        token = header_tok
+    if not token or token != WAP_DASHBOARD_TOKEN:
+        return False, (jsonify({"error": "X-Wap-Token or Authorization: Bearer required"}), 401)
+    return True, None
+
+
+@app.route("/wap")
+def wap_dashboard():
+    """Internal WAP job tracker for SMM + operator. Token on API; bookmark /wap?t=..."""
+    return send_from_directory("miniapp", "wap-dashboard.html")
+
+
+@app.route("/api/wap/jobs", methods=["GET", "POST", "OPTIONS"])
+def wap_jobs():
+    if request.method == "OPTIONS":
+        return "", 204
+    ok, err = _wap_auth()
+    if not ok:
+        return err
+    if request.method == "GET":
+        limit = min(int(request.args.get("limit") or 100), 500)
+        jobs = _wap_load_jobs()
+        jobs.sort(key=lambda j: j.get("created_at") or "", reverse=True)
+        return jsonify({"jobs": jobs[:limit]})
+    payload = request.get_json(silent=True) or {}
+    client_slug = (payload.get("client_slug") or "").strip()
+    workflow = (payload.get("workflow") or "").strip()
+    if not client_slug or not workflow:
+        return jsonify({"error": "client_slug and workflow required"}), 400
+    now = datetime.now(timezone.utc).isoformat()
+    job = {
+        "id": f"wap-{datetime.now(timezone.utc).strftime('%Y%m%d')}-{secrets.token_hex(4)}",
+        "created_at": now,
+        "updated_at": now,
+        "client_slug": client_slug,
+        "workflow": workflow,
+        "context": (payload.get("context") or "").strip(),
+        "urls": (payload.get("urls") or "").strip(),
+        "status": "new",
+        "output": "",
+    }
+    jobs = _wap_load_jobs()
+    jobs.append(job)
+    _wap_save_jobs(jobs)
+    return jsonify({"job": job}), 201
+
+
+@app.route("/api/wap/jobs/<job_id>", methods=["PATCH", "OPTIONS"])
+def wap_job_patch(job_id: str):
+    if request.method == "OPTIONS":
+        return "", 204
+    ok, err = _wap_auth()
+    if not ok:
+        return err
+    payload = request.get_json(silent=True) or {}
+    jobs = _wap_load_jobs()
+    found = None
+    for i, j in enumerate(jobs):
+        if j.get("id") == job_id:
+            found = i
+            break
+    if found is None:
+        return jsonify({"error": "job not found"}), 404
+    job = dict(jobs[found])
+    if "status" in payload:
+        job["status"] = str(payload["status"]).strip() or job["status"]
+    if "output" in payload:
+        job["output"] = str(payload["output"])
+    if "context" in payload:
+        job["context"] = str(payload["context"])
+    if "urls" in payload:
+        job["urls"] = str(payload["urls"])
+    job["updated_at"] = datetime.now(timezone.utc).isoformat()
+    jobs[found] = job
+    _wap_save_jobs(jobs)
+    return jsonify({"job": job})
 
 
 @app.route("/operator/session-transcript", methods=["GET"])
