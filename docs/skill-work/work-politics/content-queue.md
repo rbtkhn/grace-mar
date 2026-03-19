@@ -1,4 +1,4 @@
-# Content queue — @shadowcampain
+# Content queue — @america_first_ky
 
 Structured queue for X / content operations.
 
@@ -21,7 +21,7 @@ This is a `WORK` queue, not a Record queue. Drafts here do not imply posting and
 |--------|---------|
 | `idea` | Worth drafting; not written yet |
 | `draft` | Draft requested or partially prepared |
-| `review` | Ready for Jonathan / companion review |
+| `review` | Ready for Xavier / companion review |
 | `posted` | Published by human operator |
 
 ---
@@ -30,5 +30,5 @@ This is a `WORK` queue, not a Record queue. Drafts here do not imply posting and
 
 1. Add or update queue items here.
 2. Ask the agent for drafts by `ID` or `Topic`.
-3. Jonathan or the companion reviews and posts.
+3. Xavier or the companion reviews and posts.
 4. If a posting milestone matters for audit continuity, stage it through `RECURSION-GATE`.

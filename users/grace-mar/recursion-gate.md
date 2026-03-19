@@ -28,6 +28,50 @@
 
 ## Candidates
 
+### CANDIDATE-0087 (WAP — triangulated analytical lenses methodology)
+
+```yaml
+status: pending
+timestamp: 2026-03-19 12:00:00
+channel_key: operator:wap:us-ky4-massie
+territory: work-politics
+source: operator — WORK methodology adopted (doc-only path in git; optional IX-A WORK line for audit)
+source_exchange:
+  operator: "Added docs/skill-work/work-politics/analytical-lenses/ (manifest + three lenses + template); weekly-brief-template §7; README principles + operator path. Lenses are WORK-only; no Voice prompt change."
+  grace_mar: "[Optional merge — companion approves if a minimal IX-A WORK pointer is desired for Record continuity]"
+mind_category: knowledge
+signal_type: wap_milestone
+priority_score: 3
+summary: WAP — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "WORK (operator only): Political-consulting briefs may use triangulated analytical lenses (structural, operational-diplomatic, institutional-domestic); see docs/skill-work/work-politics/analytical-lenses/. Not campaign advice to the companion; not Voice knowledge."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+```
+
+### CANDIDATE-0088 (WAP — work-strategy modules: energy-chokepoint, synthesis, guardrails)
+
+```yaml
+status: pending
+timestamp: 2026-03-19
+channel_key: operator:work-strategy
+territory: work-politics
+source: operator — WORK-strategy modules and pipeline docs (doc-only in git; optional skills.md update after approval)
+source_exchange:
+  operator: "Added docs/skill-work/work-strategy/modules/energy-chokepoint, economic-blowback; current-events-analysis, manifest-principles, persuasive-content-pipeline, synthesis-engine; prototypes/mind-synthesis.py. Lenses, modules, guardrails are WORK-only."
+  grace_mar: "[On approval: apply skills.md bullets manually or extend process_approved_candidates to support skills.md; no direct edit to skills.md in this change set.]"
+mind_category: knowledge
+signal_type: wap_milestone
+priority_score: 3
+summary: WORK-strategy — energy-chokepoint monitoring, mind-synthesis (after three lenses), economic-blowback guardrail; pipeline and principles docs. Optional skills.md capability note on approval (manual or script).
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "WORK (operator only): Strategy lane uses energy-chokepoint module for energy-related events (CIV-MEM precedent), triangulated lenses + synthesis-engine for current-events, economic-blowback guardrail for inflation/oil content; see docs/skill-work/work-strategy/. Not Voice knowledge."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+skills_bullets_suggested: |
+  If companion approves and merge script supports skills.md (or manual update): add under work-strategy — Specialist lenses: mind-mearsheimer, mind-mercouris, mind-barnes (triangulated via work-politics/analytical-lenses). Modules: energy-chokepoint monitoring & economic-blowback guardrail. Guardrails: manifest-principles.md + economic-blowback/guardrail-test.md. Pipeline: persuasive-content-pipeline.md.
+```
+
 ### CANDIDATE-0062 (Checkpoint — Casa Bonita history & engagement)
 
 ```yaml

@@ -110,7 +110,7 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **[clients/](clients/)** | Per-client sheets; [clients/_template.md](clients/_template.md), [clients/massie-ky4.md](clients/massie-ky4.md). |
 | **[principal-profile.md](principal-profile.md)** | Principal bio, district, current race, key issues, opposition. Update as race and context change. |
 | **[ky-4-district-history-report.md](ky-4-district-history-report.md)** | Full history of KY-4 seat (1803–present): all holders, ideological ranking vs Massie, who rose (VP, 4 governors, Senator, HOF), infamous (Desha). Offer to campaign: 0.1 BTC. |
-| **[account-x.md](account-x.md)** | X account **@shadowcampain** (Thomas Massie Shadow Campaign Manager) — prototype Massie campaign as demo for sale; Jonathan (SMM) operates; 0.1 BTC base + 0.1 BTC win bonus; respond to Massie, boost engagement, sway opinion, recursive learning. |
+| **[account-x.md](account-x.md)** | X account **@america_first_ky** (America First KY) — prototype message-support channel as demo for sale; Jonathan (SMM) operates; 0.1 BTC base + 0.1 BTC win bonus; respond to Massie, boost engagement, sway opinion, recursive learning. |
 | **[smm-workspace.md](smm-workspace.md)** | One-link entry point for SMM: all core + reference docs. Share with Jonathan. |
 | **[smm-access-checklist.md](smm-access-checklist.md)** | Pre–Day 1: companion verifies X account access and handoff readiness. |
 | **[smm-onboarding-packet.md](smm-onboarding-packet.md)** | SMM start-here: links to account-x, smm-training, principal-profile, opposition-brief. Read first. |
@@ -131,16 +131,20 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
 | **[metrics.md](metrics.md)** | Quantitative metrics across the territory: revenue, funnel, deliverables, territory health, efficiency. Priority set + full set; sources (revenue-log, Fiverr, etc.). |
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: dashboard schema, file map, and operating rhythm. |
 | **[brief-source-registry.md](brief-source-registry.md)** | Structured source intake and freshness tracker for weekly briefs. |
-| **[content-queue.md](content-queue.md)** | Structured X/content workflow queue for `@shadowcampain`. |
+| **[content-queue.md](content-queue.md)** | Structured X/content workflow queue for `@america_first_ky`. |
 | **[outreach-workspace.md](outreach-workspace.md)** | Canonical outreach entrypoint: offer, proof, segment, funnel, and objection workflow. |
 | **[offers.md](offers.md)** | Current WAP offers and default outcome-first framing. |
 | **[proof-ledger.md](proof-ledger.md)** | Reusable proof fragments and operational outcomes for outreach. |
 | **[target-registry.md](target-registry.md)** | Narrow target segments and lead-source logic. |
 | **[outreach-funnel.md](outreach-funnel.md)** | Lightweight outreach pipeline and stage tracking. |
 | **[objection-log.md](objection-log.md)** | Structured learning from objections and reply friction. |
-| **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @shadowcampain, (3) first $1k deliverable, (4) scale or repeat. |
+| **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @america_first_ky, (3) first $1k deliverable, (4) scale or repeat. |
 | **[simple-in-long-term-speculation.md](simple-in-long-term-speculation.md)** | Long-term speculation: effect of "simple in, more work out" on development and potential of the system. |
 | **[wap-candidate-template.md](wap-candidate-template.md)** | Paste-ready RECURSION-GATE YAML for WAP milestones; territory + batch merge commands. |
+| **[analytical-lenses/manifest.md](analytical-lenses/manifest.md)** | Triangulated **WORK-only** editorial lenses (structural / operational–diplomatic / institutional–domestic); logging and gate rules. |
+| **[analytical-lenses/template-three-lenses.md](analytical-lenses/template-three-lenses.md)** | Paste block for briefs and threads (three lenses + synthesis + tensions). |
+| **[daily-brief-template.md](daily-brief-template.md)** | Pointer to **work-strategy** daily brief (WAP + strategy). |
+| **[../work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json)** | RSS URLs + W/S keyword lists for `generate_wap_daily_brief.py`. |
 
 ---
 
@@ -153,9 +157,10 @@ Grace-Mar can support revenue when someone pays for campaign content — e.g. Th
    `python scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>`  
    `python scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json`  
    Companion-approved rows stay in the gate until you run `--territory companion` or `all`.
-5. **Shadow only** — No autonomous posting. The X account "Thomas Massie Shadow Campaign Manager" is operated by Jonathan (SMM); the agent drafts tweets and threads for Jonathan to review and post.
+5. **Shadow only** — No autonomous posting. The X account "America First KY (Unofficial)" is operated by Xavier (SMM); the agent drafts tweets and threads for Xavier to review and post.
 6. **Evidence-grounded** — Milestones (“we did X”) stage as ACT- evidence; merge only after approval.
-7. **Simple in, more work out** — Think like a child: short prompts, one step at a time. The agent fills in the how and does the drafting. Better.
+7. **Triangulated lenses (current events)** — For full weekly briefs and heavy analytical drafts, run the three **WORK-only** lenses on the same neutral fact summary; surface tensions; finalize synthesis under human sign-off. See [analytical-lenses/manifest.md](analytical-lenses/manifest.md) and [weekly-brief-template.md](weekly-brief-template.md) §7.
+8. **Simple in, more work out** — Think like a child: short prompts, one step at a time. The agent fills in the how and does the drafting. Better.
 
 ---
 
@@ -171,8 +176,10 @@ Use this order when actively running the territory:
 4. Generate a first-pass brief (includes **§0 Recency slice**):  
    `python scripts/generate_wap_weekly_brief.py -u grace-mar --start YYYY-MM-DD -o docs/skill-work/work-politics/weekly-brief-YYYY-MM-DD.md`  
    Then run the **live 7d/30d pass** and replace §0 with three dated bullets. Latest artifact: [weekly-brief-2026-03-09.md](weekly-brief-2026-03-09.md).
-5. Use [content-queue.md](content-queue.md) as the working queue for `@shadowcampain`.
-6. Stage WAP milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.
+4b. **Daily horizon (WAP + work-strategy):** `python scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, WAP snapshot + [work-strategy/daily-brief-focus.md](../work-strategy/daily-brief-focus.md). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline.
+5. Use [content-queue.md](content-queue.md) as the working queue for `@america_first_ky`.
+6. For full briefs, complete [weekly-brief-template.md](weekly-brief-template.md) **§7 Triangulation** using [analytical-lenses/](analytical-lenses/manifest.md).
+7. Stage WAP milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.
 
 ---
 
@@ -199,7 +206,7 @@ Use this order when the work block is about learning which WAP offer and buyer s
 | **Message discipline** | Draft talking points, Q&A, and message memos aligned with documented positions; flag inconsistencies. |
 | **Schedule/events** | Track key dates (filing, debates, primaries), district events, and legislative calendar. |
 | **Research** | Look up votes, statements, and context; cite sources; stage findings as candidates when they should enter the Record. |
-| **X (Twitter)** | Draft tweets, threads, and replies for the account "Thomas Massie Shadow Campaign Manager." Jonathan (SMM) reviews and posts; agent never posts directly. See [account-x.md](account-x.md). |
+| **X (Twitter)** | Draft tweets, threads, and replies for the account "America First KY (Unofficial)." Jonathan (SMM) reviews and posts; agent never posts directly. See [account-x.md](account-x.md). |
 
 ---
 
@@ -211,7 +218,7 @@ Use this order when the work block is about learning which WAP offer and buyer s
 | **Weekly brief template** | Standard structure for “this week” briefs (news, votes, opposition, social, key dates). Consistent format; you know what to expect. | Added — [weekly-brief-template.md](weekly-brief-template.md) |
 | **Operator workspace** | One WAP entrypoint for dashboard schema, source registry, content queue, and workflow rhythm. | Added — [workspace.md](workspace.md) |
 | **Brief source registry** | Structured list of what feeds the weekly brief and what still needs refresh. | Added — [brief-source-registry.md](brief-source-registry.md) |
-| **Content queue** | Structured X/content workflow for `@shadowcampain` with `idea` → `posted` status. | Added — [content-queue.md](content-queue.md) |
+| **Content queue** | Structured X/content workflow for `@america_first_ky` with `idea` → `posted` status. | Added — [content-queue.md](content-queue.md) |
 | **Message bank** | Approved or draft talking points by issue (war powers, Epstein, Trump opposition). Keeps X and briefs on-message; update via pipeline. | Optional — add when you want a single source of truth for lines. |
 | **RECURSION-GATE sync** | Doc vs gate lanes, weekly rhythm, WAP template — [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md). | Added |
 | **District context** | KY-4 basics: counties, demographics, local issues, local media. Improves district-focused messaging and briefs. | Optional — add when you want district one-pager. |
@@ -228,3 +235,4 @@ Use this order when the work block is about learning which WAP offer and buyer s
 
 - [AGENTS.md](../../../AGENTS.md) — Knowledge boundary, gated pipeline
 - [Architecture](../../architecture.md) — Record structure, WORK container
+- [work-strategy/common-inputs.md](../work-strategy/common-inputs.md) — Common inputs into work-politics and work-strategy (event ingest, daily brief, neutral fact summary, three lenses, gate)

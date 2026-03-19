@@ -2,8 +2,8 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-16T16:51:31.012818",
-  "checksum": "bacf25d97ed7a0b4b725895794f61e99668ed4d0dd3429382ab0497dd0b7f686",
+  "generated_at": "2026-03-19T09:54:43.794892",
+  "checksum": "5c43372f69aaa0c78c4a723a9e7eb7d58afe9385cdb5ca69b4ca3f73a8217e25",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
     "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
@@ -121,7 +121,7 @@
   "intent_snapshot": {
     "ok": false,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-16T16:51:31.012108",
+    "generated_at": "2026-03-19T09:54:43.794846",
     "error": "missing intent.md at /Users/robertkuhne/Documents/grace-mar/users/grace-mar/intent.md",
     "goals": {},
     "tradeoff_rules": [],

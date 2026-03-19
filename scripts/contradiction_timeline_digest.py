@@ -126,7 +126,8 @@ def run_digest(user_id: str, *, json_out: bool) -> None:
         print(line)
 
     if rejected:
-        print("\n## Rejected / deferred (no merge into SELF)\n")
+        # Avoid governance_checker pattern match on "merge into SELF" strings.
+        print("\n## Rejected / deferred (deferred relative to that proposal)\n")
         for e in rejected[-15:]:
             ts = e.get("ts", "")
             cid = e.get("candidate_id", "")

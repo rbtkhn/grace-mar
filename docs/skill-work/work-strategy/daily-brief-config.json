@@ -1,0 +1,69 @@
+{
+  "_comment": "Canonical config for scripts/generate_wap_daily_brief.py — work-politics + work-strategy. Add feeds the operator trusts; respect site ToS.",
+  "feeds": [
+    {
+      "name": "NPR — national news",
+      "url": "https://feeds.npr.org/1001/rss.xml"
+    },
+    {
+      "name": "Hacker News — front page",
+      "url": "https://hnrss.org/frontpage"
+    }
+  ],
+  "wap_keyword_phrases": [
+    "massie",
+    "gallrein",
+    "kentucky",
+    "ky-4",
+    "ky4",
+    "ky-04",
+    "trump",
+    "iran",
+    "war power",
+    "congress",
+    "house",
+    "senate",
+    "fec",
+    "primary",
+    "election",
+    "campaign",
+    "republican",
+    "fourth district",
+    "rep. thomas",
+    "thomas massie"
+  ],
+  "strategy_keyword_phrases": [
+    "openai",
+    "anthropic",
+    "google deepmind",
+    "artificial intelligence",
+    "machine learning",
+    "llm",
+    "language model",
+    "ai agent",
+    "ai governance",
+    "regulation",
+    "school",
+    "education",
+    "student",
+    "privacy",
+    "identity",
+    "open source",
+    "api",
+    "telegram",
+    "chatgpt",
+    "memory",
+    "lock-in",
+    "portable",
+    "companion",
+    "bitcoin",
+    "cryptocurrency",
+    "court",
+    "supreme court",
+    "antitrust",
+    "startup",
+    "venture",
+    "hackernews",
+    "show hn"
+  ]
+}

@@ -1,6 +1,6 @@
-# Social media manager training — @shadowcampain
+# Social media manager training — @america_first_ky
 
-**Audience:** Jonathan (SMM). Reference for voice calibration, authenticity checks, and draft refinement.
+**Audience:** Xavier (SMM). Reference for voice calibration, authenticity checks, and draft refinement.
 
 ---
 
@@ -192,4 +192,4 @@
 
 ---
 
-*Training material for Jonathan. Agent drafts; SMM reviews against this spec before posting. Update as new calibration exercises complete.*
+*Training material for Xavier. Agent drafts; SMM reviews against this spec before posting. Update as new calibration exercises complete.*

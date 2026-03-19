@@ -951,11 +951,20 @@ entries:
     observation: "When imagining hypothetical threat (dinosaurs still alive), responds with fear and avoidance — would be scared to go outside. Drawing and sentence show cause-effect: dinosaur outside, house/fence as safety. Values safety; clear emotional reasoning."
     evidence_id: ACT-0037
     curated_by: user
-    provenance: human_approved  - id: PER-0007
+    provenance: human_approved
+
+  - id: PER-0007
     date: 2026-02-25
     type: observed
     observation: "Values learning from the past — sees history as a way to make better choices, solve problems, and be kinder to each other."
     evidence_id: ACT-0040
+    provenance: human_approved
+
+  - id: PER-0008
+    date: 2026-03-16
+    type: value
+    observation: "Appreciation for Earth as a home and the uniqueness of life."
+    evidence_id: ACT-0046
     provenance: human_approved
 
 

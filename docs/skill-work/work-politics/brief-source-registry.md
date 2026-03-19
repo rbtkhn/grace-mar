@@ -18,6 +18,7 @@ Update `Last checked` when you review a source. `Status` is for operator workflo
 | FEC filings / notices | live external | FEC reporting surfaces | Spending, pre-primary filing, 48-hour notices | weekly |  | watch | Use when refreshing spending summary |
 | Local KY news | live external | district / Kentucky press | District narrative, earned media, local events | weekly |  | watch | Add specific outlets as workflow stabilizes |
 | **Recency pass (operator)** | workflow | See § Recency pass below | Forces brief to lean on **last 7–30 days**, not stale SEO | **every weekly brief** | 2026-03-14 | ready | Scaffold + generator §0; live bullets still operator |
+| **Daily brief (WAP + work-strategy)** | script + JSON | [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md), [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), `scripts/generate_wap_daily_brief.py` | RSS ingest + **W** (campaign) + **S** (product/governance) scores; WAP snapshot + strategy focus doc | **daily** (operator schedule) |  | watch | Not Voice; not SELF; complete synthesis in output before ship |
 
 ---
 

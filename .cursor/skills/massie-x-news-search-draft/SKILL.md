@@ -1,11 +1,11 @@
 ---
 name: massie-x-news-search-draft
-description: Runs real-time web news search on KY-4 / Massie-relevant topics and outputs cited news briefs plus suggested X post drafts for the shadow campaign account (@shadowcampain). Use when the operator asks for Massie X ideas from today's news, real-time news hooks, tweet drafts from current events, or shadow-campaign social copy tied to breaking stories.
+description: Runs real-time web news search on KY-4 / Massie-relevant topics and outputs cited news briefs plus suggested X post drafts for the independent analysis account (@america_first_ky). Use when the operator asks for Massie X ideas from today's news, real-time news hooks, tweet drafts from current events, or unofficial analysis social copy tied to breaking stories.
 ---
 
 # Massie X — real-time news search and draft posts
 
-Use this skill when drafting **suggested** X (Twitter) content for the **Thomas Massie Shadow Campaign Manager** account. The agent **searches the live web** for recent stories, then produces **draft-only** posts for human review. **No autonomous posting.**
+Use this skill when drafting **suggested** X (Twitter) content for the **America First KY** account (@america_first_ky). The agent **searches the live web** for recent stories, then produces **draft-only** posts for human review. **No autonomous posting.**
 
 ## Canonical context (read as needed)
 
@@ -19,8 +19,8 @@ Use this skill when drafting **suggested** X (Twitter) content for the **Thomas 
 
 | Rule | Detail |
 |------|--------|
-| **Draft only** | Output is for **Jonathan** (SMM) to edit and post from @shadowcampain. Never imply the post is live. |
-| **Not the principal** | Do not write as Rep. Massie or as official campaign. Shadow = analysis + context + message support. |
+| **Draft only** | Output is for **Xavier** (SMM) to edit and post from @america_first_ky. Never imply the post is live. |
+| **Not the principal** | Do not write as Rep. Massie or as official campaign. Unofficial analysis = analysis + context + message support. |
 | **Cite everything** | Every factual claim in the news brief and every hook in a draft must trace to a **search result URL** (or principal-profile / house.gov if static). No unsourced speculation. |
 | **Documented positions** | Tie posts to **documented** Massie stances (profile, votes, public quotes). If the story doesn’t map, say “no clean Massie hook” and offer neutral context-only drafts or skip. |
 | **Doctrine pass** | Prefer engineer/farmer, anti-waste, anti-surveillance/war framing; one KY-4-plain sentence per idea; avoid forced culture-war cosplay. |
@@ -34,6 +34,7 @@ If the operator gave no topic, default searches:
 
 - `Thomas Massie KY-4` OR `Massie Congress` (last few days)
 - `KY-4 House primary 2026` OR `Ed Gallrein`
+- `from:RepThomasMassie OR site:x.com RepThomasMassie` (his latest X posts)
 - One national lane tied to profile: e.g. `Iran war powers Congress`, `Epstein files DOJ`, or `FISA House vote` (pick what’s timely)
 
 If they named a topic, run **2–4 focused queries** on that topic plus one KY-4 race query.
@@ -60,7 +61,7 @@ Deliver in this order:
 
 - Short table or bullets: story | why it matters for KY-4 / Massie | URL
 
-**B. Draft posts — `DRAFT — NOT POSTED — @shadowcampain`**
+**B. Draft posts — `DRAFT — NOT POSTED — @america_first_ky`**
 
 For each idea:
 
@@ -79,7 +80,7 @@ For each idea:
 
 ### 5. Close the loop
 
-- Remind: **Jonathan approves** before any post.
+- Remind: **Xavier approves** before any post.
 - If useful: suggest logging in [content-queue.md](docs/skill-work/work-politics/content-queue.md) as idea → draft.
 
 ## Output template (copy-paste)

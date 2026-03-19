@@ -1,6 +1,6 @@
 # SMM onboarding packet — start here
 
-**For:** Social media manager operating @shadowcampain  
+**For:** Social media manager operating @america_first_ky  
 **Role:** Implement the X strategy for Thomas Massie (KY-4); agent drafts, you review and post.
 
 Read this first. Then follow the [Day 1 checklist](smm-day1-checklist.md).
@@ -30,7 +30,7 @@ Read this first. Then follow the [Day 1 checklist](smm-day1-checklist.md).
 
 ## 3. Quick reference
 
-**Account:** @shadowcampain  
+**Account:** @america_first_ky  
 **Principal:** Thomas Massie (R-KY-4)  
 **Election:** KY-4 primary May 19, 2026  
 

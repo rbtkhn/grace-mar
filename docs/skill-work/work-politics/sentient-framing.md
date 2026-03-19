@@ -12,7 +12,7 @@ The territory has everything it needs to *be* the shadow campaign function:
 
 | Dimension | What the territory contains |
 |-----------|------------------------------|
-| **Identity** | Shadow campaign manager; @shadowcampain (prototype Massie campaign, demo for sale); Jonathan (SMM) innermost loop; offer (briefs, research, message discipline, X copy). |
+| **Identity** | Shadow campaign manager; @america_first_ky (prototype message-support channel, demo for sale); Xavier (SMM) innermost loop; offer (briefs, research, message discipline, X copy). |
 | **Memory** | Principal profile, calendar, opposition brief, Iran brief, weekly template, message bank (when added). No need to fetch “who is the principal” from elsewhere—it’s in the territory. |
 | **Interface to the world** | X account; Fiverr gig; draft email to campaign; Bitcoin address and price (0.1 BTC). Humans engage at the border; the territory responds with artifacts. |
 | **Revenue** | Seed ($50k); revenue log; allocations (art $10k, plan $40k); Fiverr $100 microtask. The territory knows what came in, what went out, what’s committed. |

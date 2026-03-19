@@ -23,7 +23,7 @@ Use this file when you want one place to understand:
 | **Territory blockers** | Stale docs, placeholder-heavy research surfaces, missing WAP gate rhythm | Derived from `calendar-2026.md`, `opposition-brief.md`, `principal-profile.md`, `revenue-log.md`, `brief-source-registry.md`, `content-queue.md`, `users/grace-mar/recursion-gate.md` |
 | **Pending WAP gate items** | WAP-only `RECURSION-GATE` review | `users/grace-mar/recursion-gate.md` via territory filter |
 | **Brief readiness** | What sources feed the weekly brief and what still needs checking | `brief-source-registry.md` |
-| **Content queue** | X / content workflow state for `@shadowcampain` | `content-queue.md` |
+| **Content queue** | X / content workflow state for `@america_first_ky` | `content-queue.md` |
 | **Revenue / offer state** | Revenue totals, BTC/SMM commitments, active commercial surfaces | `revenue-log.md`, `fiverr-microtask-100.md`, `account-x.md` |
 | **Outreach learning** | Offer framing, proof, target segments, funnel, and objections | `outreach-workspace.md`, `offers.md`, `proof-ledger.md`, `target-registry.md`, `outreach-funnel.md`, `objection-log.md` |
 | **Next actions** | Highest-leverage companion/operator actions now | Derived from the sections above |

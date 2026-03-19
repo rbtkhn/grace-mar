@@ -55,3 +55,7 @@
 {"ts": "2026-02-24T14:08:19.313848", "channel_key": "test:voice_authenticity:1", "bucket": "analyst", "prompt_tokens": 1587, "completion_tokens": 120, "total_tokens": 1707, "model": "gpt-4o-mini"}
 {"ts": "2026-02-24T14:08:20.236330", "channel_key": "test:voice_authenticity:2", "bucket": "main", "prompt_tokens": 3395, "completion_tokens": 57, "total_tokens": 3452, "model": "gpt-4o"}
 {"ts": "2026-02-24T14:08:21.672172", "channel_key": "test:voice_authenticity:3", "bucket": "main", "prompt_tokens": 3398, "completion_tokens": 63, "total_tokens": 3461, "model": "gpt-4o"}
+{"ts": "2026-03-16T16:53:14.369085", "channel_key": "test:voice_authenticity:1", "bucket": "main", "prompt_tokens": 4223, "completion_tokens": 62, "total_tokens": 4285, "model": "gpt-4o"}
+{"ts": "2026-03-16T16:53:17.220048", "channel_key": "test:voice_authenticity:1", "bucket": "analyst", "prompt_tokens": 1756, "completion_tokens": 113, "total_tokens": 1869, "model": "gpt-4o-mini"}
+{"ts": "2026-03-16T16:53:18.756024", "channel_key": "test:voice_authenticity:2", "bucket": "main", "prompt_tokens": 4224, "completion_tokens": 40, "total_tokens": 4264, "model": "gpt-4o"}
+{"ts": "2026-03-16T16:53:19.970438", "channel_key": "test:voice_authenticity:3", "bucket": "main", "prompt_tokens": 4227, "completion_tokens": 39, "total_tokens": 4266, "model": "gpt-4o"}

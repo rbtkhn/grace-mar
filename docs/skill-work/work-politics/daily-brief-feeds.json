@@ -1,0 +1,4 @@
+{
+  "_deprecated": "Use docs/skill-work/work-strategy/daily-brief-config.json (work-politics + work-strategy). This file is only a fallback if the strategy config is missing.",
+  "feeds": []
+}

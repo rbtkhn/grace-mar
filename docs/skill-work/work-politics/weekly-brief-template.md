@@ -58,4 +58,23 @@ Use this structure when the companion requests a weekly brief. Fill each section
 
 ---
 
+### 7. Triangulation — analytical lenses (mandatory for full briefs)
+
+Run **after** §0–§6 drafts exist or in parallel on the same **neutral fact summary** (dated, sourced bullets shared across lenses).
+
+1. **Structural (long horizon)** — [analytical-lenses/lens-structural-realism.md](analytical-lenses/lens-structural-realism.md)  
+2. **Operational / diplomatic (near term)** — [analytical-lenses/lens-operational-diplomatic.md](analytical-lenses/lens-operational-diplomatic.md)  
+3. **Institutional / domestic** — [analytical-lenses/lens-institutional-domestic.md](analytical-lenses/lens-institutional-domestic.md)
+
+**Synthesis (operator / Grace-Mar core):**
+
+- Highlight **convergence** (high-confidence shared implications).
+- **Surface productive tensions** — where lenses disagree, say so explicitly (do not smooth over).
+- Optional table format: Structural | Operational | Institutional | **Operator synthesis**
+- Paste-ready block: [analytical-lenses/template-three-lenses.md](analytical-lenses/template-three-lenses.md)
+
+**Governance:** Lenses are **WORK only**; see [analytical-lenses/manifest.md](analytical-lenses/manifest.md) (logging, no `self-evidence` trace dumps, human sign-off for ship).
+
+---
+
 *Agent fills this when you ask for “weekly brief for [date range].”*

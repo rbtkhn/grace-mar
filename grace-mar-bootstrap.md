@@ -191,6 +191,8 @@ python3 scripts/harness_warmup.py -u grace-mar --compact
 python3 scripts/generate_gate_dashboard.py -u grace-mar   # pending queue HTML (human door)
 ```
 
+**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary.
+
 ### OpenClaw
 ```bash
 python3 integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event

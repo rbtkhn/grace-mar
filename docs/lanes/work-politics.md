@@ -25,3 +25,11 @@
 ## Weekly minimum
 
 Registry refresh → `generate_wap_weekly_brief.py` → live recency pass → doc-only vs staged note. See [WEEKLY-RHYTHM.md](WEEKLY-RHYTHM.md).
+
+## Full briefs — triangulation
+
+When running a **full** weekly brief (not doc-only), complete [weekly-brief-template §7](../skill-work/work-politics/weekly-brief-template.md) — three **WORK-only** lenses on one neutral fact summary; surface tensions. See [analytical-lenses/manifest](../skill-work/work-politics/analytical-lenses/manifest.md).
+
+## Daily horizon (optional)
+
+`python scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — **WAP + work-strategy**, dual W/S scores. [work-strategy/daily-brief-template.md](../skill-work/work-strategy/daily-brief-template.md).

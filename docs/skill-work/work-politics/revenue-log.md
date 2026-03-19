@@ -31,8 +31,8 @@ Append-only record of revenue and seed capital. Companion-led; for internal/Reco
 
 | Amount | Recipient | Note |
 |--------|-----------|------|
-| **0.1 BTC** | Jonathan (social media manager) | Base: implement @shadowcampain X plan through election (KY-4 primary May 19, 2026). Hired 2026-03. |
-| **0.1 BTC** | Jonathan | Bonus: if Massie wins primary. |
+| **0.1 BTC** | Xavier (social media manager) | Base: implement @america_first_ky X plan through election (KY-4 primary May 19, 2026). Hired 2026-03. |
+| **0.1 BTC** | Xavier | Bonus: if Massie wins primary. |
 
 ---
 
