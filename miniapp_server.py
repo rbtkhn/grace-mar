@@ -64,7 +64,7 @@ from bot.core import (
 from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
 from scripts import process_approved_candidates as pac
 from scripts.recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
-from scripts.work_american_politics_ops import get_wap_snapshot
+from scripts.work_politics_ops import get_wap_snapshot
 from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
 app = Flask(__name__, static_folder="miniapp", static_url_path="")
@@ -263,7 +263,7 @@ def operator_inbox():
 
 @app.route("/operator/wap")
 def operator_wap():
-    """Browser ops surface for work-political-consulting."""
+    """Browser ops surface for work-politics."""
     return send_from_directory("miniapp", "operator-wap.html")
 
 
@@ -581,7 +581,7 @@ def operator_gate_candidates():
 
 @app.route("/operator/wap-status", methods=["GET"])
 def operator_wap_status():
-    """Return structured work-political-consulting operator state."""
+    """Return structured work-politics operator state."""
     ok, err = _operator_auth()
     if not ok:
         return err
@@ -590,7 +590,7 @@ def operator_wap_status():
 
 @app.route("/operator/wap-brief", methods=["GET"])
 def operator_wap_brief():
-    """Return a generated weekly brief scaffold for work-political-consulting."""
+    """Return a generated weekly brief scaffold for work-politics."""
     ok, err = _operator_auth()
     if not ok:
         return err

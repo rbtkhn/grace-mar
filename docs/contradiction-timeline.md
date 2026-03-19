@@ -11,7 +11,7 @@
 | Layer | Role in the timeline |
 |-------|----------------------|
 | **Git** | Immutable ordering of merges into `self.md`, `skills.md`, `self-library.md`, `self-evidence.md` |
-| **Pipeline** | `pipeline-events.jsonl` — `staged` → `applied` / `rejected` links **candidate_id** → **evidence_id** (ACT-*) |
+| **Pipeline** | `pipeline-events.jsonl` — `staged` → `applied` / `rejected`; schema 2 adds **ix_entry_id** (LEARN/CUR/PER), **surface**, **summary_snippet**. See [pipeline-events-schema.md](pipeline-events-schema.md). |
 | **EVIDENCE** | ACT entries hold **mind_category**, **summary** — proxy for “what changed” |
 | **Contradiction spec** | Resolution types (`growth`, `correction`, `context`, `reject_new`, `exception`) become **timeline states** once encoded on entries |
 

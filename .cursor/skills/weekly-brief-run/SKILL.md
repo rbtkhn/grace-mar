@@ -1,6 +1,6 @@
 ---
 name: weekly-brief-run
-description: Run the work-political-consulting weekly brief workflow with readiness checks, blocker reporting, and scaffold generation. Use when preparing the weekly brief, checking if sources are fresh enough, or asking for a first-pass campaign brief.
+description: Run the work-politics weekly brief workflow with readiness checks, blocker reporting, and scaffold generation. Use when preparing the weekly brief, checking if sources are fresh enough, or asking for a first-pass campaign brief.
 ---
 
 # Weekly Brief Run
@@ -48,5 +48,5 @@ Focus on:
 ## Related files
 
 - `docs/operator-skills.md`
-- `docs/skill-work/work-political-consulting/brief-source-registry.md`
-- `docs/skill-work/work-political-consulting/content-queue.md`
+- `docs/skill-work/work-politics/brief-source-registry.md`
+- `docs/skill-work/work-politics/content-queue.md`

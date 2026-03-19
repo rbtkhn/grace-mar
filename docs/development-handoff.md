@@ -2,7 +2,7 @@
 
 Use this file to resume development quickly in a new agent conversation.
 
-**Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-build-ai** (OpenClaw + companion gate); read `docs/skill-work/work-build-ai/README.md` then `docs/openclaw-integration.md`.
+**Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`.
 
 Last updated: 2026-03-16
 
@@ -155,7 +155,7 @@ Last updated: 2026-03-16
 - **Current doctrine:** WRITE remains the cleaner pure skill-container model; THINK may carry clearly labeled overlays when needed for context or work-horizon interpretation.
 
 ### WAP ↔ RECURSION-GATE sync (2026-03-12)
-- **docs/skill-work/work-political-consulting/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
+- **docs/skill-work/work-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
 - **wap-candidate-template.md** — paste-ready WAP YAML.
 
 ### Trajectory export + RL boundary (2026-03-12)
@@ -167,7 +167,7 @@ Last updated: 2026-03-16
 - **`docs/openclaw-rl-boundary.md`** — Added a canonical next-state signal model: evaluative vs directive signals, workflow/policy vs Record adaptation, and the rule that next-state signals may improve process and harness behavior but must not update identity surfaces ungated.
 
 ### Territory lens / WAP vs companion (2026-03-12)
-- **`scripts/recursion_gate_territory.py`** — `territory: work-political-consulting` or `channel_key: operator:wap` → WAP.
+- **`scripts/recursion_gate_territory.py`** — `territory: work-politics` or `channel_key: operator:wap` → WAP.
 - **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|wap|companion`.
 - **`process_approved_candidates`** — `--territory wap|companion|all` — batch merge only that slice; receipt must use same flag.
 
@@ -213,7 +213,7 @@ Last updated: 2026-03-16
 ### Comprehension lock-in positioning (2026-03-12)
 - **design-notes §2.5** — Enterprise synthesis / comprehension lock-in; Grace-Mar counter (portable, gate-kept Record + export).
 - **implementable-insights §10** — Actionable mapping; summary table row.
-- **work-build-ai README** — Invariant adjacent paragraph; principle 6 portable synthesis.
+- **work-dev README** — Invariant adjacent paragraph; principle 6 portable synthesis.
 - **openclaw-integration** — Overview subsection on comprehension lock-in and portability.
 
 ### Feedback loop fast wins (2026-03-09)
@@ -272,21 +272,21 @@ Last updated: 2026-03-16
 - **Vocabulary cleanup:** `integrations/openclaw_hook.py` now emits `runtime_compat_export` for pipeline-level export audit instead of the older OpenClaw-specific name.
 - **Second consumer path:** `integrations/export_hook.py --target cursor` now exports the canonical runtime bundle directly for Cursor/Codex/Claude-style runtime consumers, proving the bundle is not OpenClaw-only.
 
-### work-political-consulting operator surface (2026-03-14)
-- **New WAP entrypoint:** `docs/skill-work/work-political-consulting/workspace.md` now defines the operator schema and canonical file map for the territory.
+### work-politics operator surface (2026-03-14)
+- **New WAP entrypoint:** `docs/skill-work/work-politics/workspace.md` now defines the operator schema and canonical file map for the territory.
 - **Structured WAP workflow docs:** `brief-source-registry.md` tracks weekly-brief source readiness, and `content-queue.md` tracks `@shadowcampain` content state (`idea` → `posted`).
-- **New ops module:** `scripts/work_american_politics_ops.py` derives campaign status, document freshness, WAP gate state, blockers, revenue summary, and next actions from existing WAP docs plus the canonical gate.
+- **New ops module:** `scripts/work_politics_ops.py` derives campaign status, document freshness, WAP gate state, blockers, revenue summary, and next actions from existing WAP docs plus the canonical gate.
 - **New browser surface:** `miniapp/operator-wap.html` plus `/operator/wap-status` and `/operator/wap-brief` in `miniapp_server.py` provide an authenticated WAP console without creating a second queue.
 - **New brief loop:** `scripts/generate_wap_weekly_brief.py` produces a first-pass weekly brief scaffold from the WAP registry, principal profile, opposition brief, calendar, and content queue.
 - **Canonical workflow docs refreshed:** `README.md`, `metrics.md`, `account-x.md`, and `smm-workspace.md` now point operators toward the workspace, content queue, and brief-generation path rather than prose-only operation.
 
-### work-political-consulting outreach system v1 (2026-03-14)
-- **New outreach entrypoint:** `docs/skill-work/work-political-consulting/outreach-workspace.md` defines outreach as a market-learning surface, not a mass-email engine.
+### work-politics outreach system v1 (2026-03-14)
+- **New outreach entrypoint:** `docs/skill-work/work-politics/outreach-workspace.md` defines outreach as a market-learning surface, not a mass-email engine.
 - **Offer + proof surfaces:** `offers.md` and `proof-ledger.md` now hold bounded offer framing and reusable operational proof lines.
 - **Target + learning surfaces:** `target-registry.md`, `outreach-funnel.md`, and `objection-log.md` define who outreach is for, what happened by stage, and what objections are teaching us.
 - **WAP docs aligned:** `workspace.md`, `README.md`, and `metrics.md` now include outreach as part of the canonical territory workflow.
 
-### work-political-consulting partner channel v1 (2026-03-14)
+### work-politics partner channel v1 (2026-03-14)
 - **Second outreach lane:** WAP outreach now explicitly supports both direct and partner-led paths inside `outreach-workspace.md`.
 - **Partner framing added:** `offers.md` now includes partner-facing diagnostic framing, and `target-registry.md` now includes partner segments such as boutique consultants and campaign-adjacent operators.
 - **Tracking updated:** `outreach-funnel.md`, `objection-log.md`, `proof-ledger.md`, `README.md`, and `metrics.md` now distinguish direct versus partner-led learning and partner-safe proof use.
@@ -346,7 +346,7 @@ Last updated: 2026-03-16
 
 - Bot: `bot/bot.py`, `bot/lookup_cmc.py` (may be unrelated to work-build-ai).
 - Users: `users/grace-mar/self-library.md`; refreshed/generated artifacts (manifest, fork-manifest, llms.txt, intent_snapshot, runtime-bundle, compute-ledger, pipeline-events, session-transcript, recursion-gate.md) — commit only if you intend to snapshot state.
-- Docs: civilization-memory (README, essays, book/, notes/), library-integration.md, work-political-consulting (workspace.md, uare-ai-competitive-notes), and various untracked (federal-ethics-pledge, memo-ai-policy-babel, speech-day-one, vance-first-hours, etc.).
+- Docs: civilization-memory (README, essays, book/, notes/), library-integration.md, work-politics (workspace.md, uare-ai-competitive-notes), and various untracked (federal-ethics-pledge, memo-ai-policy-babel, speech-day-one, vance-first-hours, etc.).
 - Scripts: build_civmem_inrepo_index.py, library_shelf_tables.py, reorder_library_by_shelf.py (untracked).
 - Submodule: repos/civilization_memory (m).
 

@@ -15,6 +15,9 @@ Usage:
 Closed-loop verification (optional):
     python scripts/emit_pipeline_event.py export_used none export_id=abc123 used_in_openclaw=true
     python scripts/emit_pipeline_event.py merge_feedback CANDIDATE-0040 helpful=true
+
+Rich payloads (schema 2 fields, safe for special chars):
+    python scripts/emit_pipeline_event.py -u grace-mar --merge-json '{"event_schema":2,"ix_entry_id":"LEARN-0042"}' applied CANDIDATE-0040
 """
 
 import argparse
@@ -40,6 +43,12 @@ def main() -> None:
         "candidate_id",
         help="Candidate id, or 'none' when event is not candidate-specific",
     )
+    parser.add_argument(
+        "--merge-json",
+        metavar="JSON",
+        default=None,
+        help="JSON object merged into the event (after base fields; extras still override)",
+    )
     parser.add_argument("extras", nargs="*", help="Extra key=value fields")
     args = parser.parse_args()
 
@@ -52,7 +61,18 @@ def main() -> None:
         candidate_id = None
 
     events_path = REPO_ROOT / "users" / args.user / "pipeline-events.jsonl"
-    extras = {}
+    merge: dict = {}
+    if args.merge_json:
+        try:
+            parsed = json.loads(args.merge_json)
+        except json.JSONDecodeError as e:
+            print(f"Invalid --merge-json: {e}", file=sys.stderr)
+            sys.exit(1)
+        if not isinstance(parsed, dict):
+            print("--merge-json must be a JSON object", file=sys.stderr)
+            sys.exit(1)
+        merge = parsed
+    extras: dict[str, str] = {}
     for arg in args.extras:
         if "=" in arg:
             k, v = arg.split("=", 1)
@@ -61,6 +81,7 @@ def main() -> None:
         "ts": datetime.now().isoformat(),
         "event": event_type,
         "candidate_id": candidate_id,
+        **merge,
         **extras,
     }
     events_path.parent.mkdir(parents=True, exist_ok=True)

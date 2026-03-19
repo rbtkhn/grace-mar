@@ -2,8 +2,8 @@
 """
 Territory lens for RECURSION-GATE pending candidates.
 
-WPC (work-political-consulting): territory: work-political-consulting
-  OR legacy territory: work-american-politics
+WPC (work-politics): territory: work-politics
+  OR legacy: work-political-consulting, work-american-politics
   OR channel_key: operator:wap (or operator:wap:*)
 
 CLI flag remains --territory wap (alias). Everything else = companion.
@@ -14,13 +14,13 @@ from __future__ import annotations
 import re
 
 # Canonical territory string for new and migrated YAML
-TERRITORY_WAP = "work-political-consulting"
-TERRITORY_WAP_LEGACY = "work-american-politics"
+TERRITORY_WAP = "work-politics"
+TERRITORY_WAP_LEGACY = ("work-political-consulting", "work-american-politics")
 CHANNEL_WAP_PREFIX = "operator:wap"
 
 
 def territory_from_yaml_block(yaml_body: str) -> str:
-    """Return TERRITORY_WAP (politics consulting bucket) or 'companion'."""
+    """Return TERRITORY_WAP (politics bucket) or 'companion'."""
     ck = re.search(r"^channel_key:\s*(.+)$", yaml_body, re.MULTILINE)
     if ck:
         k = ck.group(1).strip().strip("\"'").lower()
@@ -29,10 +29,11 @@ def territory_from_yaml_block(yaml_body: str) -> str:
     tm = re.search(r"^territory:\s*(.+)$", yaml_body, re.MULTILINE)
     if tm:
         t = tm.group(1).strip().strip("\"'")
-        if t == TERRITORY_WAP or t == TERRITORY_WAP_LEGACY or t.lower() in (
+        if t == TERRITORY_WAP or t in TERRITORY_WAP_LEGACY or t.lower() in (
             "wap",
             "work_american_politics",
             "work_political_consulting",
+            "work_politics",
         ):
             return TERRITORY_WAP
     return "companion"

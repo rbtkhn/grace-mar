@@ -239,7 +239,7 @@
     api('/operator/gate-candidates?status=approved').then(function(data) {
       var items = data.items || [];
       var n = items.length;
-      var WAP = 'work-political-consulting';
+      var WAP = 'work-politics';
       var comp = items.filter(function(i) { return (i.territory || '') !== WAP; }).length;
       document.getElementById('approvedCount').textContent = n + ' approved (waiting merge) · ' + comp + ' companion';
     }).catch(function() {

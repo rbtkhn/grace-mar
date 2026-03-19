@@ -15,7 +15,7 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
    ```bash
    python3 scripts/harness_warmup.py -u grace-mar
    ```
-   Use `--compact` if the operator prefers one paragraph. **`--territory wap`** = work-political-consulting pending only; **`companion`** = Record pending only (see `recursion_gate_territory.py`).
+   Use `--compact` if the operator prefers one paragraph. **`--territory wap`** = work-politics pending only; **`companion`** = Record pending only (see `recursion_gate_territory.py`).
 
 2. **Include the command output** in your reply (paste verbatim or as a fenced markdown block) so the thread carries the same snapshot.
 
@@ -27,7 +27,7 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 ## Relation to bootstrap
 
-`grace-mar-bootstrap.md` = **procedure** (what to read, work-build-ai, commands). Warmup = **current state** (pending candidates, last ACT, session tail). They stack: bootstrap orients; warmup grounds.
+`grace-mar-bootstrap.md` = **procedure** (what to read, work-dev, commands). Warmup = **current state** (pending candidates, last ACT, session tail). They stack: bootstrap orients; warmup grounds.
 
 ## Do not
 

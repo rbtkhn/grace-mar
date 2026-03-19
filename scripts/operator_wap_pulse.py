@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a concise operator pulse for work-political-consulting.
+Generate a concise operator pulse for work-politics.
 """
 
 from __future__ import annotations
@@ -9,10 +9,10 @@ import argparse
 
 try:
     from generate_wap_weekly_brief import build_wap_weekly_brief
-    from work_american_politics_ops import get_wap_snapshot
+    from work_politics_ops import get_wap_snapshot
 except ImportError:
     from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
-    from scripts.work_american_politics_ops import get_wap_snapshot
+    from scripts.work_politics_ops import get_wap_snapshot
 
 
 def build_wap_pulse(user_id: str = "grace-mar", include_brief_preview: bool = False) -> str:

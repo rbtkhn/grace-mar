@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a first-pass weekly brief scaffold for work-political-consulting.
+Generate a first-pass weekly brief scaffold for work-politics.
 """
 
 from __future__ import annotations
@@ -11,12 +11,12 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-political-consulting"
+WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-politics"
 
 try:
-    from work_american_politics_ops import get_wap_snapshot
+    from work_politics_ops import get_wap_snapshot
 except ImportError:
-    from scripts.work_american_politics_ops import get_wap_snapshot
+    from scripts.work_politics_ops import get_wap_snapshot
 
 
 def _read(path: Path) -> str:
@@ -90,7 +90,7 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
     assembled = datetime.now().strftime("%Y-%m-%d")
 
     lines = [
-        "# Weekly brief — work-political-consulting",
+        "# Weekly brief — work-politics",
         "",
         f"## Week of {date_range}",
         "",
@@ -159,7 +159,7 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate work-political-consulting weekly brief scaffold")
+    parser = argparse.ArgumentParser(description="Generate work-politics weekly brief scaffold")
     parser.add_argument("--start", default="", help="Week start date (YYYY-MM-DD). Defaults to current week.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default="", help="Optional output file")

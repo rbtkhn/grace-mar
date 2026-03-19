@@ -17,7 +17,7 @@
 | What | Where |
 |------|--------|
 | Repo | `repos/civilization_memory/` |
-| Protocol in grace-mar | [civ-mem-draft-protocol.md](../skill-work/work-political-consulting/civ-mem-draft-protocol.md) |
+| Protocol in grace-mar | [civ-mem-draft-protocol.md](../skill-work/work-politics/civ-mem-draft-protocol.md) |
 
 ## Weekly minimum
 

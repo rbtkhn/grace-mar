@@ -38,4 +38,4 @@
 
 **One line:** **STATE** = the present moment and the options it surfaces; it doesn’t write the long-term record unless explicitly relayed. **SCHOLAR** = the long-term learning ledger that records and preserves tensions and only affects the canonical layer when a human accepts its output.
 
-**Product evolution:** STATE can be evolved into an **assistant brain product for heads of state** — see [state-evolved-assistant-brain-heads-of-state.md](../../skill-work/work-political-consulting/state-evolved-assistant-brain-heads-of-state.md).
+**Product evolution:** STATE can be evolved into an **assistant brain product for heads of state** — see [state-evolved-assistant-brain-heads-of-state.md](../../skill-work/work-politics/state-evolved-assistant-brain-heads-of-state.md).

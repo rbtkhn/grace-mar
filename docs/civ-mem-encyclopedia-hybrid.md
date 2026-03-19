@@ -49,4 +49,4 @@ Bulk LIB adds = **RECURSION-GATE** when Voice should honor new return-to sources
 ## See also
 
 - [library-integration.md](library-integration.md)
-- [skill-work/work-political-consulting/civ-mem-draft-protocol.md](skill-work/work-political-consulting/civ-mem-draft-protocol.md)
+- [skill-work/work-politics/civ-mem-draft-protocol.md](skill-work/work-politics/civ-mem-draft-protocol.md)

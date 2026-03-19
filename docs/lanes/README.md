@@ -5,7 +5,7 @@
 | Lane | North star doc | Canonical workspace |
 |------|----------------|---------------------|
 | **Record (companion)** | [record-companion.md](record-companion.md) | `users/grace-mar/`, gate, Voice |
-| **Political consulting (WPC)** | [work-political-consulting.md](work-political-consulting.md) | `docs/skill-work/work-political-consulting/` |
+| **Political consulting (WPC)** | [work-politics.md](work-politics.md) | `docs/skill-work/work-politics/` |
 | **Civilization Memory (civ-mem)** | [civilization-memory.md](civilization-memory.md) | `repos/civilization_memory/` |
 | **Operator cognition** | [operator-cognition.md](operator-cognition.md) | Cursor rules, think vs ship |
 

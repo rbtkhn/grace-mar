@@ -17,10 +17,10 @@ from pathlib import Path
 
 try:
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
-    from work_american_politics_ops import get_wap_snapshot
+    from work_politics_ops import get_wap_snapshot
 except ImportError:
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
-    from scripts.work_american_politics_ops import get_wap_snapshot
+    from scripts.work_politics_ops import get_wap_snapshot
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"

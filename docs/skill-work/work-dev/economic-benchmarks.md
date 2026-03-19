@@ -1,0 +1,99 @@
+# Economic Benchmarks — work-dev
+
+Benchmarks to track cost, value flow, and gate health for the Grace-Mar ↔ OpenClaw integration.
+
+---
+
+## How to read status
+
+Every metric is labeled with exactly one of:
+
+| Label | Meaning |
+|-------|---------|
+| **instrumented** | Data is emitted automatically; the metric can be computed from repo-local data. |
+| **manual** | Data exists or can be gathered by running a command or checklist; not automated. |
+| **planned** | Not yet implemented; intended for a future release. |
+| **blocked** | Not possible with current setup (e.g. needs external logs, or dependency not in place). |
+
+Do not treat **planned** or **blocked** metrics as observable until instrumentation exists.
+
+---
+
+## Current instrumentation status
+
+| Surface | Status | Notes |
+|--------|--------|-------|
+| Export audit events | instrumented | `runtime_compat_export` events and harness audit are emitted by `openclaw_hook.py`. |
+| Handback advisory events | instrumented | `intent_constitutional_critique` events are emitted by `openclaw_stage.py`. |
+| OpenClaw-specific candidate provenance | instrumented | Preserved end-to-end in candidate blocks when staging via `openclaw_stage` → `/stage`. |
+| Merge attribution from OpenClaw handback | instrumented | Candidate-level `candidate_source` and provenance fields in recursion-gate. |
+| Compute-ledger export / handback cost | planned | Integration scripts do not currently emit compute-ledger rows. |
+| Session continuity read verification | instrumented | `scripts/continuity_read_log.py` writes a proof-of-read log at startup. |
+
+---
+
+## Priority Five (instrument first)
+
+| Metric | Description | Source | Status |
+|--------|-------------|--------|--------|
+| **Handback count per week** | Number of `openclaw_stage` invocations | pipeline-events.jsonl, event logs | instrumented |
+| **Record growth from OpenClaw** | ACT-* entries or merged Record growth attributable to OpenClaw handback | self-evidence.md, self.md, event trail | blocked |
+| **Merge rate from handback** | Approved / total OpenClaw-sourced candidates | recursion-gate.md + candidate_source | instrumented |
+| **Cost per export / handback** | Token or execution cost for `openclaw_hook` / `openclaw_stage` | compute-ledger.jsonl | planned |
+| **Time in gate** | Days from stage to approve/reject for OpenClaw-sourced candidates | recursion-gate.md timestamps + staged events | instrumented |
+
+---
+
+## Full Benchmark Set
+
+### Integration cost
+
+| Metric | Description | Source | Status |
+|--------|-------------|--------|--------|
+| Export cost per run | Token or execution cost for identity export (`openclaw_hook`) | compute-ledger.jsonl | planned |
+| Handback cost per stage | Token or execution cost for `openclaw_stage` | compute-ledger.jsonl | planned |
+| Export frequency | Exports per week | pipeline events, harness events | instrumented |
+| Handback frequency | `openclaw_stage` invocations per week | pipeline-events.jsonl, event logs | instrumented |
+
+### Value flows
+
+| Metric | Description | Source | Status |
+|--------|-------------|--------|--------|
+| Record → OpenClaw delivery | Exports actually consumed in OpenClaw sessions | export events + external OpenClaw session logs | blocked |
+| OpenClaw → Record capture | ACT-* entries or merge artifacts attributable to OpenClaw handback | self-evidence.md + event trail | blocked |
+| IX growth from handback | New IX-A/B/C entries merged from OpenClaw-sourced candidates | self.md + event trail | blocked |
+| Merge rate from OpenClaw | Approved / total OpenClaw-sourced candidates | recursion-gate.md + candidate_source | instrumented |
+
+### Gate health
+
+| Metric | Description | Source | Status |
+|--------|-------------|--------|--------|
+| Time in gate (OpenClaw-sourced) | Days from stage to approve/reject | recursion-gate.md timestamps + staged events | instrumented |
+| Rejection rate (OpenClaw) | Rejected / total OpenClaw-sourced | recursion-gate.md + candidate_source | instrumented |
+| Constitutional advisory flags | `advisory_flagged` events from handback | pipeline-events.jsonl | instrumented |
+
+### Efficiency
+
+| Metric | Description | Source | Status |
+|--------|-------------|--------|--------|
+| Export latency | Time from trigger to export completion | `scripts/run_perf_suite.py --tier 2` (export_prp, manifest, runtime_bundle, fork) | instrumented via perf suite |
+| Handback latency | Time from `openclaw_stage` to staged candidate | script timing or wrapper logs | manual |
+| Session continuity reads | Proof that SESSION-LOG, RECURSION-GATE, EVIDENCE were read before OpenClaw | continuity-log.jsonl | instrumented |
+
+### Utilization
+
+| Metric | Description | Source | Status |
+|--------|-------------|--------|--------|
+| Sessions with export | OpenClaw sessions that use a fresh export | OpenClaw logs | blocked |
+| Sessions with handback | OpenClaw sessions that trigger `openclaw_stage` | event logs | instrumented |
+| Handback-to-merge ratio | Merged records / handback invocations | pipeline events + merge trail | instrumented |
+
+---
+
+## Instrumentation Notes
+
+- **pipeline-events.jsonl** — Export and advisory events are emitted; candidate attribution uses recursion-gate.md `candidate_source` and provenance fields.
+- **recursion-gate.md** — OpenClaw-sourced candidates carry `candidate_source: openclaw` and optional artifact/constitution metadata for gate metrics.
+- **continuity-log.jsonl** — Written by `scripts/continuity_read_log.py` at startup; one line per proof-of-read (session-log, recursion-gate, self-evidence).
+- **compute-ledger.jsonl** — `openclaw_hook` and `openclaw_stage` do not currently emit cost rows (planned).
+- **Aggregation script** — Optional: `scripts/openclaw_benchmarks.py` to summarize metrics from the above sources.

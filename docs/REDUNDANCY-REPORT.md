@@ -15,7 +15,7 @@ def _read(path: Path) -> str:
 (or `if not path.exists(): return ""` then `return path.read_text(...)`)
 
 **Files (sample):**  
-`process_approved_candidates.py`, `harness_warmup.py`, `export_prp.py`, `export_view.py`, `export_fork.py`, `export_symbolic.py`, `export_curriculum.py`, `export_manifest.py`, `export_intent_snapshot.py`, `export_engagement_profile.py`, `export_user_identity.py`, `recursion_gate_review.py`, `metrics.py`, `generate_profile.py`, `session_brief.py`, `operator_blocker_report.py`, `parse_we_did.py`, `openclaw_heartbeat.py`, `pending_dedup_hint.py`, `fork_checksum.py`, `measure_growth_and_density.py`, `generate_wap_weekly_brief.py`, `proposal_brief.py`, `load_alpha_school_benchmarks.py`, `export_runtime_bundle.py`, `work_american_politics_ops.py`, `generate_lesson_prompt.py`, `bot/retriever.py`, and others.
+`process_approved_candidates.py`, `harness_warmup.py`, `export_prp.py`, `export_view.py`, `export_fork.py`, `export_symbolic.py`, `export_curriculum.py`, `export_manifest.py`, `export_intent_snapshot.py`, `export_engagement_profile.py`, `export_user_identity.py`, `recursion_gate_review.py`, `metrics.py`, `generate_profile.py`, `session_brief.py`, `operator_blocker_report.py`, `parse_we_did.py`, `openclaw_heartbeat.py`, `pending_dedup_hint.py`, `fork_checksum.py`, `measure_growth_and_density.py`, `generate_wap_weekly_brief.py`, `proposal_brief.py`, `load_alpha_school_benchmarks.py`, `export_runtime_bundle.py`, `work_politics_ops.py`, `generate_lesson_prompt.py`, `bot/retriever.py`, and others.
 
 **Reuse already present:**  
 `operator_handoff_check.py` and `operator_daily_warmup.py` import `_read` from `harness_warmup`; `export_manifest` imports from `export_intent_snapshot`.

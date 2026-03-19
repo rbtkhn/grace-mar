@@ -1,6 +1,6 @@
 # WAP internal dashboard (SMM + operator)
 
-**Purpose:** Internal web surface for **work-political-consulting** — you and the social media manager track **jobs** (news scan, X drafts, brief hooks) without losing work when a Cursor thread closes. **Not** a client portal in v1; **not** autonomous posting or LLM-on-server (unless added later).
+**Purpose:** Internal web surface for **work-politics** — you and the social media manager track **jobs** (news scan, X drafts, brief hooks) without losing work when a Cursor thread closes. **Not** a client portal in v1; **not** autonomous posting or LLM-on-server (unless added later).
 
 **URL (when deployed):** `https://<miniapp-host>/wap`  
 **Auth:** `WAP_DASHBOARD_TOKEN` — send as `X-Wap-Token: <token>` or `Authorization: Bearer <token>`, or bookmark `https://<host>/wap?t=<token>`.
@@ -24,7 +24,7 @@
 2. In Cursor, run the matching skill (e.g. `.cursor/skills/massie-x-news-search-draft/SKILL.md`) with that context.
 3. Paste agent output into the job; set status **output_pasted**.
 4. Edit and post from X (@shadowcampain); set status **shipped** when done.
-5. Keep [content-queue.md](skill-work/work-political-consulting/content-queue.md) in sync for content state (idea → posted).
+5. Keep [content-queue.md](skill-work/work-politics/content-queue.md) in sync for content state (idea → posted).
 
 ---
 
@@ -49,6 +49,6 @@ Statuses: `new` → `ran_in_cursor` → `output_pasted` → `shipped`.
 
 ## Related
 
-- [consulting-charter.md](skill-work/work-political-consulting/consulting-charter.md) — human approves public ship.
+- [consulting-charter.md](skill-work/work-politics/consulting-charter.md) — human approves public ship.
 - [miniapp-setup.md](miniapp-setup.md) — deploy and env vars.
-- [smm-workspace.md](skill-work/work-political-consulting/smm-workspace.md) — SMM entry point.
+- [smm-workspace.md](skill-work/work-politics/smm-workspace.md) — SMM entry point.

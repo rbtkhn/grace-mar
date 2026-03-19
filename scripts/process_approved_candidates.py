@@ -3,8 +3,8 @@
 Process approved pipeline candidates: merge into SELF, EVIDENCE, prompt; run export_prp; optionally push.
 After --apply, stderr reminds to refresh OpenClaw / external USER.md if --export-openclaw was not used.
 
-Territory batch merge (work-political-consulting vs companion):
-    --territory wap        # territory: work-political-consulting (or legacy) or channel_key: operator:wap
+Territory batch merge (work-politics vs companion):
+    --territory wap        # territory: work-politics (or legacy) or channel_key: operator:wap
     --territory companion  # only the rest
     --territory all        # default — every approved row in Candidates section
     Generate receipt and apply with the same --territory so candidate_ids match.
@@ -579,8 +579,8 @@ def merge_candidate_in_memory(
     prompt_content: str,
     today: str,
     evidence_tier: int,
-) -> tuple[str, str, str, str]:
-    """Merge one candidate into in-memory content; returns updated contents + act_id."""
+) -> tuple[str, str, str, str, str]:
+    """Merge one candidate into in-memory content; returns contents + act_id + ix_entry_id (LEARN/CUR/PER)."""
 
     # 1. Create ACT entry
     act_id = _next_id(evidence_content, "ACT")
@@ -670,7 +670,7 @@ def merge_candidate_in_memory(
             prompt_section,
             c["prompt_addition"],
         )
-    return self_content, evidence_content, prompt_content, act_id
+    return self_content, evidence_content, prompt_content, act_id, entry_id
 
 
 def move_to_processed(content: str, candidate_blocks: list[str]) -> str:
@@ -708,19 +708,52 @@ def _transactional_write(files: dict[Path, str]) -> None:
         raise
 
 
-def _emit_applied_event(candidate_id: str, evidence_id: str, approved_by: str) -> None:
+def _safe_pipeline_str(s: str, max_len: int) -> str:
+    t = (s or "").replace("\n", " ").replace("\r", " ").strip()
+    return t[:max_len] if len(t) > max_len else t
+
+
+def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str) -> None:
+    block = c.get("block") or ""
+    cat = (c.get("mind_category") or "").lower()
+    pt = c.get("profile_target") or ""
+    if "knowledge" in cat or "IX-A" in pt.upper():
+        surface = "SELF_KNOWLEDGE"
+    elif "curiosity" in cat or "IX-B" in pt.upper():
+        surface = "SELF_CURIOSITY"
+    else:
+        surface = "SELF_PERSONALITY"
+    pc = (_yaml_get(block, "proposal_class") or _yaml_get(block, "evidence_ref") or "").strip()
+    if not pc:
+        pc = "SELF_KNOWLEDGE_ADD"
+    had_conflicts = bool(
+        re.search(r"contradictions_detected|conflicts_detected|CONFLICT:", block, re.I)
+    )
+    ch = (c.get("channel_key") or "operator:cli").strip() or "operator:cli"
+    merge_payload = {
+        "event_schema": 2,
+        "evidence_id": act_id,
+        "ix_entry_id": ix_entry_id,
+        "mind_category": _safe_pipeline_str(c.get("mind_category") or "", 80),
+        "profile_target": _safe_pipeline_str(pt, 120),
+        "summary_snippet": _safe_pipeline_str(c.get("summary") or "", 300),
+        "proposal_class": _safe_pipeline_str(pc, 80),
+        "had_conflicts": had_conflicts,
+        "surface": surface,
+        "source": "process_approved_candidates",
+        "actor": _safe_pipeline_str(approved_by, 120),
+        "channel_key": _safe_pipeline_str(ch, 100),
+    }
     subprocess.run(
         [
             sys.executable,
             "scripts/emit_pipeline_event.py",
             "--user",
             USER_ID,
+            "--merge-json",
+            json.dumps(merge_payload, ensure_ascii=False),
             "applied",
-            candidate_id,
-            f"evidence_id={evidence_id}",
-            "source=process_approved_candidates",
-            f"actor={approved_by}",
-            "channel_key=operator:cli",
+            c["id"],
         ],
         cwd=REPO_ROOT,
         check=False,
@@ -847,7 +880,7 @@ def main() -> None:
     if not approved:
         print(
             f"No approved candidates to process (territory={args.territory}). "
-            "Approve rows in recursion-gate above ## Processed; WAP rows need territory: work-political-consulting (or legacy) or channel_key: operator:wap."
+            "Approve rows in recursion-gate above ## Processed; WAP rows need territory: work-politics (or legacy) or channel_key: operator:wap."
         )
         return
 
@@ -907,7 +940,7 @@ def main() -> None:
     }
     intent_profile = _load_intent_profile()
     blocks_to_move: list[str] = []
-    applied_candidates: list[tuple[dict, str]] = []  # (c, act_id) for emit + SELF-ARCHIVE
+    applied_candidates: list[tuple[dict, str, str]] = []  # (c, act_id, ix_entry_id)
     pre_checksum_ok, pre_checksum = _compute_fork_checksum()
     if not pre_checksum_ok:
         _emit_validation_failure(None, f"checksum_pre_failed: {pre_checksum}", args.approved_by.strip())
@@ -945,11 +978,11 @@ def main() -> None:
                 f"rule={conflict.get('rule_id')} source={candidate_source} "
                 f"strategy={conflict.get('conflict_strategy')} reason={conflict.get('reason')}"
             )
-        self_content, evidence_content, prompt_content, act_id = merge_candidate_in_memory(
+        self_content, evidence_content, prompt_content, act_id, ix_entry_id = merge_candidate_in_memory(
             c, self_content, evidence_content, prompt_content, today, evidence_tier=min_tier
         )
         blocks_to_move.append(c["full_match"])
-        applied_candidates.append((c, act_id))
+        applied_candidates.append((c, act_id, ix_entry_id))
 
     # Move blocks from Candidates to Processed in recursion-gate.md
     for block in blocks_to_move:
@@ -1001,8 +1034,8 @@ def main() -> None:
             merged_at=receipt_event.get("merged_at"),
         )
 
-        for c, act_id in applied_candidates:
-            _emit_applied_event(c["id"], act_id, args.approved_by.strip())
+        for c, act_id, ix_entry_id in applied_candidates:
+            _emit_applied_event(c, act_id, ix_entry_id, args.approved_by.strip())
 
         post_ok, post_reason = _run_integrity_validation(min_tier)
         if not post_ok:
@@ -1013,7 +1046,7 @@ def main() -> None:
         if pre_checksum == after_checksum:
             raise RuntimeError("checksum unchanged after merge; expected state change")
 
-        for c, act_id in applied_candidates:
+        for c, act_id, _ix in applied_candidates:
             _append_self_archive_entry(
                 c["id"],
                 act_id,

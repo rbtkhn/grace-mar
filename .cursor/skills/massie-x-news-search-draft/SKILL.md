@@ -9,11 +9,11 @@ Use this skill when drafting **suggested** X (Twitter) content for the **Thomas 
 
 ## Canonical context (read as needed)
 
-- Account rules, tone, workflow: [docs/skill-work/work-political-consulting/account-x.md](docs/skill-work/work-political-consulting/account-x.md)
-- Principal positions (do not invent): [docs/skill-work/work-political-consulting/principal-profile.md](docs/skill-work/work-political-consulting/principal-profile.md)
-- Opposition snapshot: [docs/skill-work/work-political-consulting/opposition-brief.md](docs/skill-work/work-political-consulting/opposition-brief.md)
-- Doctrine filter: [docs/skill-work/work-political-consulting/clients/massie-ky4-operator-checklist.md](docs/skill-work/work-political-consulting/clients/massie-ky4-operator-checklist.md)
-- Issue wedges (optional hooks): [docs/skill-work/work-political-consulting/clients/massie-issue-asymmetry.md](docs/skill-work/work-political-consulting/clients/massie-issue-asymmetry.md)
+- Account rules, tone, workflow: [docs/skill-work/work-politics/account-x.md](docs/skill-work/work-politics/account-x.md)
+- Principal positions (do not invent): [docs/skill-work/work-politics/principal-profile.md](docs/skill-work/work-politics/principal-profile.md)
+- Opposition snapshot: [docs/skill-work/work-politics/opposition-brief.md](docs/skill-work/work-politics/opposition-brief.md)
+- Doctrine filter: [docs/skill-work/work-politics/clients/massie-ky4-operator-checklist.md](docs/skill-work/work-politics/clients/massie-ky4-operator-checklist.md)
+- Issue wedges (optional hooks): [docs/skill-work/work-politics/clients/massie-issue-asymmetry.md](docs/skill-work/work-politics/clients/massie-issue-asymmetry.md)
 
 ## Hard guardrails
 
@@ -80,7 +80,7 @@ For each idea:
 ### 5. Close the loop
 
 - Remind: **Jonathan approves** before any post.
-- If useful: suggest logging in [content-queue.md](docs/skill-work/work-political-consulting/content-queue.md) as idea → draft.
+- If useful: suggest logging in [content-queue.md](docs/skill-work/work-politics/content-queue.md) as idea → draft.
 
 ## Output template (copy-paste)
 

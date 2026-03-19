@@ -9,7 +9,7 @@ Grace-Mar has several web surfaces on the Mini App host (plus the static dashboa
 - **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Available at **https://grace-mar.com**.
 - **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
 - **Family hub** — `/app` on the Mini App server: chat, log activities (“we did X”), and parent-gated review + merge. See below.
-- **WAP internal dashboard** — `/wap`: token-gated job tracker for work-political-consulting (SMM + operator). See [wap-dashboard.md](wap-dashboard.md).
+- **WAP internal dashboard** — `/wap`: token-gated job tracker for work-politics (SMM + operator). See [wap-dashboard.md](wap-dashboard.md).
 
 ## Architecture
 

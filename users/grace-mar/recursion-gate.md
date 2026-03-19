@@ -20,7 +20,7 @@
 >
 > Machine-written by **`bot/core.py`** (Telegram, WeChat, activity reports) and by **operator scripts** that stage here — only edit the `status` field (and optional rejection notes).
 >
-> **Territory (WAP vs companion):** For **work-political-consulting** candidates, set **`territory: work-political-consulting`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
+> **Territory (WAP vs companion):** For **work-politics** candidates, set **`territory: work-politics`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
 >
 > **Invariant:** Every **pending** or **approved-not-yet-merged** candidate must sit **above** `## Processed`. The bot inserts new blocks immediately before `## Processed`. If anything pending appears below Processed, move it up or merge will not see it.
 
@@ -65,7 +65,7 @@ action: PER-0008 added to IX-C; bot/prompt.py YOUR PERSONALITY updated; ACT-0046
 status: approved
 timestamp: 2026-03-14 13:30:00
 channel_key: operator:wap:us-ky4-massie
-territory: work-political-consulting
+territory: work-politics
 source: operator — WPC ops milestone (doc + generator)
 source_exchange:
   operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass."
@@ -75,7 +75,7 @@ signal_type: wap_milestone
 priority_score: 3
 summary: WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py
 profile_target: IX-A. KNOWLEDGE
-suggested_entry: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-political-consulting/. Not campaign advice to the companion."
+suggested_entry: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-politics/. Not campaign advice to the companion."
 prompt_section: YOUR KNOWLEDGE
 prompt_addition: none
 ```

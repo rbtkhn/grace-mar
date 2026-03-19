@@ -405,7 +405,7 @@ def main() -> int:
     pending_section = (
         f"**Territory lens:** `{args.territory}` — **{pending_count}** pending (this lens). "
         f"WAP **{len(wap_rows)}** · Companion **{len(comp_rows)}**. "
-        f"`--territory wap` = work-political-consulting only. Type `/review` in Telegram to see them."
+        f"`--territory wap` = work-politics only. Type `/review` in Telegram to see them."
     )
     if pending_stale:
         pending_section += "\n\nYou have candidates waiting — consider bringing them into the Record (type /review)."

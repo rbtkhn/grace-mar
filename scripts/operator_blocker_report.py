@@ -148,7 +148,7 @@ def main() -> int:
         "--territory",
         choices=("all", "wap", "companion"),
         default="all",
-        help="Pending lens: wap = work-political-consulting only; companion = Record only; all = both sections",
+        help="Pending lens: wap = work-politics only; companion = Record only; all = both sections",
     )
     args = parser.parse_args()
 
@@ -182,7 +182,7 @@ def main() -> int:
             f"**Pending by territory:** WAP {len(wap_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
         )
         lines.append(
-            f"_Lens:_ `--territory wap` | `--territory companion` | `all` (default). WAP = `territory: work-political-consulting` or `channel_key: operator:wap`."
+            f"_Lens:_ `--territory wap` | `--territory companion` | `all` (default). WAP = `territory: work-politics` or `channel_key: operator:wap`."
         )
     else:
         lines.append(f"**Territory lens:** {args.territory} ({len(pending)} pending)")
@@ -221,7 +221,7 @@ def main() -> int:
 
     # Staged candidates
     if args.territory == "all" and (wap_pending or companion_pending):
-        lines.append("## Staged — work-political-consulting (WAP)")
+        lines.append("## Staged — work-politics (WAP)")
         if not wap_pending:
             lines.append("- None")
         else:

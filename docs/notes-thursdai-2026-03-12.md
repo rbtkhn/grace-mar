@@ -6,7 +6,7 @@
 
 ## Why keep this in-repo
 
-Grace-Mar already runs **OpenClaw**, **gated pipeline**, **work-political-consulting**, and **civ-mem**. This episode clusters several trends that touch those surfaces: autonomous research loops, orchestration, skills, security, and “always-on” agents.
+Grace-Mar already runs **OpenClaw**, **gated pipeline**, **work-politics**, and **civ-mem**. This episode clusters several trends that touch those surfaces: autonomous research loops, orchestration, skills, security, and “always-on” agents.
 
 ---
 
@@ -23,7 +23,7 @@ Grace-Mar already runs **OpenClaw**, **gated pipeline**, **work-political-consul
 | **ACP (Agent Client Protocol)** | Emerging **agent ↔ editor** standard (cf. MCP). Relevant if Cursor/OpenClaw integration deepens — track, don’t rush adopt. |
 | **Paperclip / Symphony** | **Heartbeat = markdown state** (what to do each wake). Maps to session continuity: agents are “Memento”-like without persistent self unless we write it (Record + MEMORY). |
 | **Paperclip token burn** | Always-on loops **cost**; schedule and caps for operator budgets. |
-| **Last 30 Days skill (Matt Van Horn)** | **Time-scoped social/recent web** research pattern — strong fit for **WAP weekly brief** and freshness ([brief-source-registry](skill-work/work-political-consulting/brief-source-registry.md)). Optional install for operator; not Voice knowledge. |
+| **Last 30 Days skill (Matt Van Horn)** | **Time-scoped social/recent web** research pattern — strong fit for **WAP weekly brief** and freshness ([brief-source-registry](skill-work/work-politics/brief-source-registry.md)). Optional install for operator; not Voice knowledge. |
 | **Nemotron 3 Super / Nvidia $26B open-source line** | Civ-mem + open weights narrative; **civ-mem** already a lookup surface. No change to Abby boundary. |
 | **Grok 4.20 quiet API / price** | Frontier noise vs shipping; **evals** before trusting long-context claims. |
 | **Gemini + Mixedbread embeddings** | Multimodal + retrieval race — relevant if Grace-Mar adds RAG beyond LIBRARY; gated. |

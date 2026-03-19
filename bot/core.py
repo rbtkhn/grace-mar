@@ -908,6 +908,34 @@ def _format_staging_meta_yaml(staging_meta: dict | None) -> str:
     return "\n".join(lines) + ("\n" if lines else "")
 
 
+def _pipeline_event_fields_from_candidate_yaml(yaml_blob: str) -> dict[str, object]:
+    """Flat analyst/gate YAML keys for richer pipeline-events (schema 2)."""
+    out: dict[str, object] = {}
+    if not (yaml_blob or "").strip():
+        return out
+    for key, maxlen in (
+        ("mind_category", 80),
+        ("profile_target", 120),
+        ("proposal_class", 80),
+        ("signal_type", 60),
+    ):
+        m = re.search(rf"^{re.escape(key)}:\s*(.+)$", yaml_blob, re.MULTILINE)
+        if not m:
+            continue
+        v = m.group(1).strip()
+        if len(v) >= 2 and v[0] in "\"'" and v[-1] == v[0]:
+            v = v[1:-1]
+        out[key] = (v[: maxlen - 1] + "…") if len(v) > maxlen else v
+    sm = re.search(r"^summary:\s*(.+)$", yaml_blob, re.MULTILINE)
+    if sm:
+        s = sm.group(1).strip()
+        if len(s) >= 2 and s[0] in "\"'" and s[-1] == s[0]:
+            s = s[1:-1]
+        s = s.replace("\n", " ").replace("\r", " ").strip()
+        out["summary_snippet"] = (s[:279] + "…") if len(s) > 280 else s
+    return out
+
+
 def _stage_candidate(
     analysis_yaml: str,
     user_message: str,
@@ -958,7 +986,15 @@ channel_key: {channel_key}
     else:
         content = content.rstrip() + "\n\n## Candidates\n\n" + block + "\n## Processed\n\n"
     RECURSION_GATE_PATH.write_text(content, encoding="utf-8")
-    emit_pipeline_event("staged", candidate_id, channel_key=channel_key)
+    enrich = _pipeline_event_fields_from_candidate_yaml(analysis_yaml)
+    emit_pipeline_event(
+        "staged",
+        candidate_id,
+        channel_key=channel_key,
+        event_schema=2,
+        conflicts_detected=len(conflicts) > 0,
+        **enrich,
+    )
     return True
 
 
@@ -1514,8 +1550,21 @@ def update_candidate_status(
     new_content, n = re.subn(pattern, replacement, content, count=1)
     if n == 0:
         return False
+    block_m = re.search(
+        rf"### {re.escape(candidate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```",
+        content,
+        re.DOTALL,
+    )
+    yaml_blob = block_m.group(1) if block_m else ""
+    enrich = _pipeline_event_fields_from_candidate_yaml(yaml_blob)
     RECURSION_GATE_PATH.write_text(new_content)
-    kwargs: dict[str, object] = {}
+    kwargs: dict[str, object] = {
+        "event_schema": 2,
+        "conflicts_detected_at_stage": bool(
+            re.search(r"conflicts_detected:\s*\n\s*count:\s*[1-9]\d*", yaml_blob)
+        ),
+        **enrich,
+    }
     if status == "rejected" and rejection_reason:
         kwargs["rejection_reason"] = rejection_reason
     if channel_key:

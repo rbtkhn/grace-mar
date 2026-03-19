@@ -1,0 +1,46 @@
+# Brief source registry — work-politics
+
+Structured intake surface for the weekly brief.
+
+Update `Last checked` when you review a source. `Status` is for operator workflow, not Record truth.
+
+---
+
+| Source | Kind | Path / surface | Use for | Cadence | Last checked | Status | Notes |
+|--------|------|----------------|---------|---------|--------------|--------|-------|
+| KY election calendar | official | `calendar-2026.md` | Key dates, compliance reminders, GOTV timing | weekly | 2026-03-14 | ready | Canonical local copy of election + FEC timing |
+| Principal profile | territory doc | `principal-profile.md` | Baseline race context, principal posture, issue grounding | weekly | 2026-03-14 | ready | Refresh if principal posture or race context changes |
+| Opposition brief | territory doc | `opposition-brief.md` | Gallrein, Trump/MAGA, spending, narrative lines | twice-weekly | 2026-03-14 | needs_refresh | Still contains placeholders; update before relying on it heavily |
+| Iran / war powers brief | issue brief | `iran-foreign-policy-brief.md` | War powers, Iran, Massie quotes, issue messaging | as-needed | 2026-03-14 | ready | Deepest issue brief currently in territory |
+| Revenue log | ops doc | `revenue-log.md` | Commercial/revenue continuity, active commitments | weekly | 2026-03-14 | ready | Use for revenue / offer status section |
+| @RepThomasMassie X | live external | principal public X feed | Social highlights, current principal messaging | daily |  | watch | External source; check live before writing final brief |
+| Gallrein / opposition social | live external | X, local campaign surfaces | Opposition narrative and activity | daily |  | watch | Track only with citations |
+| FEC filings / notices | live external | FEC reporting surfaces | Spending, pre-primary filing, 48-hour notices | weekly |  | watch | Use when refreshing spending summary |
+| Local KY news | live external | district / Kentucky press | District narrative, earned media, local events | weekly |  | watch | Add specific outlets as workflow stabilizes |
+| **Recency pass (operator)** | workflow | See § Recency pass below | Forces brief to lean on **last 7–30 days**, not stale SEO | **every weekly brief** | 2026-03-14 | ready | Scaffold + generator §0; live bullets still operator |
+
+---
+
+## Recency pass (last 7–30 days)
+
+**Goal:** At least one full pass of the brief where every external bullet is **grounded in the last 7–30 days** (not evergreen search).
+
+| Step | Action |
+|------|--------|
+| 1 | Pick window: **7d** (tight) or **30d** (standard) for this cycle. |
+| 2 | **Principal X** — scroll @RepThomasMassie for the window only; note dates on bullets. |
+| 3 | **Opposition / race** — X search + one local outlet archive filtered by date; same window. |
+| 4 | **National hooks** (Iran, votes, etc.) — filter Google News or trusted feed by **Past week** / **Past month**. |
+| 5 | Log in brief: `Recency window: [7d \| 30d] · checked [date]` |
+
+**Optional skill:** Install **Last 30 Days** (Matt Van Horn) in **your** coding agent if you want scripted social/recent-web pull; still **cite + companion approves** anything that becomes client-facing. Not Voice knowledge.
+
+---
+
+## Status meaning
+
+| Status | Meaning |
+|--------|---------|
+| `ready` | Local doc/source is usable now |
+| `watch` | External source to check during refresh |
+| `needs_refresh` | Local doc exists but still needs human update before heavy reuse |

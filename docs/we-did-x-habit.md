@@ -43,6 +43,6 @@ You don't have to name every tiny action. Focus on: **calls, readings, decisions
 
 - **Pipeline:** [pipeline-map.md](pipeline-map.md) — "We [did X]" → Cursor → PENDING.
 - **Weekly rhythm:** [operator-weekly-review.md](operator-weekly-review.md) — Process the gate weekly; "we did X" keeps it fed.
-- **Prep:** [prep-before-call-abc.md](skill-work/work-political-consulting/prep-before-call-abc.md) — After the call, if it's Record-worthy, say "we did X" and stage.
+- **Prep:** [prep-before-call-abc.md](skill-work/work-politics/prep-before-call-abc.md) — After the call, if it's Record-worthy, say "we did X" and stage.
 
 **One line:** After real activity, say "we did X." The agent stages; you approve when you process the gate. The gate reflects life.

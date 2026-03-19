@@ -114,7 +114,7 @@
   </div>
   <div class="filters" role="tablist">
     <button type="button" class="active" data-filter="all">All</button>
-    <button type="button" data-filter="work-political-consulting">WAP</button>
+    <button type="button" data-filter="work-politics">WAP</button>
     <button type="button" data-filter="companion">Companion</button>
     <button type="button" data-filter="quick_merge_eligible">Quick merge</button>
     <button type="button" data-filter="manual_escalate">Escalate</button>
@@ -133,7 +133,7 @@
           var t = card.getAttribute('data-territory');
           var risk = card.getAttribute('data-risk');
           var show = f === 'all'
-            || (f === 'companion' && t !== 'work-political-consulting')
+            || (f === 'companion' && t !== 'work-politics')
             || t === f
             || risk === f;
           card.classList.toggle('hidden', !show);

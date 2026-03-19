@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Run a disciplined weekly brief workflow for work-political-consulting.
+Run a disciplined weekly brief workflow for work-politics.
 
 This wrapper adds readiness checks and a stable operator-facing output around
 the existing weekly brief scaffold generator.
@@ -13,10 +13,10 @@ from pathlib import Path
 
 try:
     from generate_wap_weekly_brief import build_wap_weekly_brief
-    from work_american_politics_ops import get_wap_snapshot
+    from work_politics_ops import get_wap_snapshot
 except ImportError:
     from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
-    from scripts.work_american_politics_ops import get_wap_snapshot
+    from scripts.work_politics_ops import get_wap_snapshot
 
 
 def _write_output(path_text: str, content: str) -> str:
@@ -105,7 +105,7 @@ def build_weekly_brief_run(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run the work-political-consulting weekly brief workflow.")
+    parser = argparse.ArgumentParser(description="Run the work-politics weekly brief workflow.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--start", default="", help="Week start date (YYYY-MM-DD). Defaults to current week.")
     parser.add_argument("--allow-stale-sources", action="store_true", help="Emit the scaffold even if sources need refresh.")

@@ -414,7 +414,7 @@ books_read:
 
   - id: LEARN-0040
     date: 2026-03-14
-    topic: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-political-consulting/. Not campaign ad"
+    topic: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-politics/. Not campaign ad"
     source: pipeline merge
     evidence_id: ACT-0045
     provenance: human_approved

@@ -18,7 +18,7 @@
 
 ## Use in Grace-Mar
 
-- **Assistant brain (STATE-evolved):** Fixed perspectives A/B/C map to Legitimacy (Mercouris-like), Structure (Mearsheimer-like), Liability/mechanism (Barnes-like). Optional D = civ-mem lens when corpus is ingested. See [state-evolved-assistant-brain-heads-of-state.md](../../skill-work/work-political-consulting/state-evolved-assistant-brain-heads-of-state.md) and [concept-cognitive-polyphony.md](../notes/concept-cognitive-polyphony.md) § For Grace-Mar.
+- **Assistant brain (STATE-evolved):** Fixed perspectives A/B/C map to Legitimacy (Mercouris-like), Structure (Mearsheimer-like), Liability/mechanism (Barnes-like). Optional D = civ-mem lens when corpus is ingested. See [state-evolved-assistant-brain-heads-of-state.md](../../skill-work/work-politics/state-evolved-assistant-brain-heads-of-state.md) and [concept-cognitive-polyphony.md](../notes/concept-cognitive-polyphony.md) § For Grace-Mar.
 - **Polyphonic cognition:** These profiles define the **named voices** that implement "multiple perspectives, tensions preserved, no single resolution." See [concept-cognitive-polyphony.md](../notes/concept-cognitive-polyphony.md) § Implementation: upstream (three minds).
 - **Reference only:** The full linguistic fingerprints (hedging, pivots, metaphors, etc.) are in the source files. For Grace-Mar's product, the **roles and focus** (legitimacy, structure, liability) are what matter unless we implement voice-specific output.
 

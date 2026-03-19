@@ -113,7 +113,17 @@ def run_digest(user_id: str, *, json_out: bool) -> None:
         ts = e.get("ts", "")
         cid = e.get("candidate_id", "")
         aid = e.get("evidence_id", "")
-        print(f"- **{ts}** merged `{cid}` → evidence **`{aid}`** (resolved path: entered Record)")
+        ix = e.get("ix_entry_id") or ""
+        surf = e.get("surface") or ""
+        snip = (e.get("summary_snippet") or "").strip()
+        tail = f" → SELF **`{ix}`**" if ix else ""
+        if surf:
+            tail += f" ({surf})"
+        line = f"- **{ts}** `{cid}` → evidence **`{aid}`**{tail}"
+        if snip:
+            show = snip if len(snip) <= 120 else snip[:117] + "…"
+            line += f" — _{show}_"
+        print(line)
 
     if rejected:
         print("\n## Rejected / deferred (no merge into SELF)\n")

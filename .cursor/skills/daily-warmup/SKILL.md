@@ -40,4 +40,4 @@ Return a short operator brief with:
 ## Related files
 
 - `docs/operator-skills.md`
-- `docs/skill-work/work-political-consulting/workspace.md`
+- `docs/skill-work/work-politics/workspace.md`

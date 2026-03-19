@@ -1,5 +1,9 @@
 # work-build-ai
 
+**→ Merged into [work-dev](../work-dev/README.md).** This folder is kept for legacy links; canonical content and operator entrypoint live in **work-dev**.
+
+---
+
 **Objective:** Connect Grace-Mar (Record + Voice) with OpenClaw (personal agent workspace) so the Record feeds OpenClaw's identity layer, session continuity spans both systems, and OpenClaw artifacts can feed the grace-mar pipeline — with the companion always as gate.
 
 ---

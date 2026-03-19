@@ -11,10 +11,10 @@ from pathlib import Path
 
 try:
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read
-    from work_american_politics_ops import get_wap_snapshot
+    from work_politics_ops import get_wap_snapshot
 except ImportError:
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read
-    from scripts.work_american_politics_ops import get_wap_snapshot
+    from scripts.work_politics_ops import get_wap_snapshot
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"
@@ -51,9 +51,9 @@ def _classify_change(path_line: str) -> tuple[str, str]:
     ):
         return "operator_workflow", path
     if (
-        "work-political-consulting" in path
+        "work-politics" in path
         or "operator-wap" in path
-        or "work_american_politics" in path
+        or "work_politics" in path
         or "generate_wap_weekly_brief.py" in path
     ):
         return "wap_operations", path
