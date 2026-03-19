@@ -4,14 +4,16 @@ Use this file to resume development quickly in a new agent conversation.
 
 **Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`.
 
-Last updated: 2026-03-16
+Last updated: 2026-03
+
+**AutoGen / multi-agent exploration (2026-03):** Assessment complete — [`docs/feedback-autogen-exploration-2026-03-assessment.md`](feedback-autogen-exploration-2026-03-assessment.md). Design + constraints: [`docs/exploration-multi-agent-deliberation.md`](exploration-multi-agent-deliberation.md). Minimal prototype (Path 1, draft-only): `exploration/autogen-deliberation/`. Original feedback: [`docs/feedback-autogen-exploration-2026-03.md`](feedback-autogen-exploration-2026-03.md).
 
 ---
 
 ## Current Baseline
 
 - Branch: `main`
-- Latest pushed commit: `f3b27f2` (intent-governance + OpenClaw + curiosity merge batch)
+- Latest pushed commit: see `git log -1 --oneline` (after last push to `main`)
 - Core invariants active: Sovereign Merge Rule, knowledge boundary, evidence linkage, **companion** merge authority (see Terminology below).
 
 ---
