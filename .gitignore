@@ -68,6 +68,9 @@ users/grace-mar/artifacts/civ-mem-encyclopedia/ENCYCLOPEDIA.content.md
 users/grace-mar/artifacts/civ-mem-encyclopedia/lib-stubs.docs.yaml
 users/grace-mar/artifacts/civ-mem-encyclopedia/lib-stubs.content.yaml
 
+# Exploration: deliberation drafts (non-canonical; local only)
+exploration/autogen-deliberation/output/*.md
+
 # Misc
 *.pem
 .vercel

@@ -16,6 +16,7 @@
 | **Narrative & differentiation** | [WHITE-PAPER](white-paper.md) | Full story, positioning, technical model. |
 | **Business** | [BUSINESS-PROSPECTUS](business-prospectus.md), [BUSINESS-ROADMAP](business-roadmap.md) | Market, revenue, roadmap. |
 | **Implementation** | [AGENTS](agents.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
+| **Exploration (multi-agent)** | [exploration-multi-agent-deliberation](exploration-multi-agent-deliberation.md) | Design and optional prototype for AutoGen-style deliberation; not production. |
 
 ---
 
