@@ -1,9 +1,21 @@
 {
-  "_comment": "Canonical config for scripts/generate_wap_daily_brief.py — work-politics + work-strategy. Add feeds the operator trusts; respect site ToS.",
+  "_comment": "Canonical config for scripts/generate_wap_daily_brief.py — work-politics + work-strategy. Feeds: NPR/HN baseline + NBC Politics + Capitol (The Hill, Roll Call) for House/campaign/KY race density. If a feed 403s from the script UA, swap URL or remove. Respect site ToS.",
   "feeds": [
     {
       "name": "NPR — national news",
       "url": "https://feeds.npr.org/1001/rss.xml"
+    },
+    {
+      "name": "NBC News — politics",
+      "url": "https://feeds.nbcnews.com/nbcnews/public/politics"
+    },
+    {
+      "name": "The Hill — politics",
+      "url": "https://thehill.com/feed/"
+    },
+    {
+      "name": "Roll Call — Congress",
+      "url": "https://www.rollcall.com/feed/"
     },
     {
       "name": "Hacker News — front page",
@@ -13,13 +25,31 @@
   "wap_keyword_phrases": [
     "massie",
     "gallrein",
+    "ed gallrein",
+    "thomas massie",
+    "rep. massie",
+    "rep massie",
+    "representative massie",
     "kentucky",
     "ky-4",
     "ky4",
     "ky-04",
+    "4th district",
+    "fourth district",
+    "kentucky 4th",
+    "congressional district",
+    "northern kentucky",
+    "nky",
+    "covington",
+    "boone county",
+    "campbell county",
+    "louisville",
+    "lexington",
+    "bowling green",
     "trump",
     "iran",
     "war power",
+    "war powers",
     "congress",
     "house",
     "senate",
@@ -28,9 +58,12 @@
     "election",
     "campaign",
     "republican",
-    "fourth district",
-    "rep. thomas",
-    "thomas massie"
+    "endorsement",
+    "incumbent",
+    "challenge",
+    "house race",
+    "congressional",
+    "maga"
   ],
   "strategy_keyword_phrases": [
     "openai",
