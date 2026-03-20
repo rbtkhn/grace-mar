@@ -699,3 +699,8 @@
 > CANDIDATE-0086 → ACT-0046
 > Voice authenticity test — Earth as favorite planet; appreciation for Earth as home and the uniqueness of life. PER-0008 added to IX-C; bot/prompt.py YOUR PERSONALITY updated.
 > user: "What's your favorite planet?" grace_mar: "I think Earth is my favorite planet because it's where we live, and it's the only planet with life. It's so full of animals and people and cool places. But I also think Mars is interesting because scientists say there used to be oceans and trees there. What about you? Do you have a favorite planet?"
+
+**[2026-03-20 07:58:51]** `APPROVED` (Operator)
+> CANDIDATE-0089 → ACT-0047
+> WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
+> operator: "Added docs/skill-work/work-politics/america-first-ky/ (guardrail-stress-test.md, stress-test-brief-template.md, AGENT-SESSION-BRIEF.md). Explicitly NOT governance_checker enforcement; no skills.md direct edit; no routine self-evidence traces." grace_mar: "[Optional merge — companion approves if minimal IX-A WORK line or skills.md bullet is desired]"

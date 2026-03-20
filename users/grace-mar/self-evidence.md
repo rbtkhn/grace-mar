@@ -1448,6 +1448,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0047
+    date: 2026-03-20
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only"
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

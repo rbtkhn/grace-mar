@@ -72,29 +72,6 @@ skills_bullets_suggested: |
   If companion approves and merge script supports skills.md (or manual update): add under work-strategy — Specialist lenses: mind-mearsheimer, mind-mercouris, mind-barnes (triangulated via work-politics/analytical-lenses). Modules: energy-chokepoint monitoring & economic-blowback guardrail. Guardrails: manifest-principles.md + economic-blowback/guardrail-test.md. Pipeline: persuasive-content-pipeline.md.
 ```
 
-### CANDIDATE-0089 (WAP — america-first-ky guardrail stress-test methodology)
-
-```yaml
-status: pending
-timestamp: 2026-03-19
-channel_key: operator:wap:us-ky4-massie
-territory: work-politics
-source: operator — WORK doc-only: Mount Sinai–inspired factorial stress-test framework for high-stakes Massie / @usa_first_ky outputs
-source_exchange:
-  operator: "Added docs/skill-work/work-politics/america-first-ky/ (guardrail-stress-test.md, stress-test-brief-template.md, AGENT-SESSION-BRIEF.md). Explicitly NOT governance_checker enforcement; no skills.md direct edit; no routine self-evidence traces."
-  grace_mar: "[Optional merge — companion approves if minimal IX-A WORK line or skills.md bullet is desired]"
-mind_category: knowledge
-signal_type: wap_milestone
-priority_score: 3
-summary: WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
-profile_target: IX-A. KNOWLEDGE
-suggested_entry: "WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checker enforcement."
-prompt_section: YOUR KNOWLEDGE
-prompt_addition: none
-skills_bullets_suggested: |
-  If companion approves and merge script supports skills.md (or manual update): under work-politics — Factorial guardrail stress-testing for high-stakes outputs (war powers, ethics, cartel-economy, border+civil liberties): docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md. Operator-enforced; optional emit_pipeline_event stress_test_*.
-```
-
 ### CANDIDATE-0062 (Checkpoint — Casa Bonita history & engagement)
 
 ```yaml
@@ -116,6 +93,29 @@ summary: Casa Bonita history — user rejected.
 ```
 
 ## Processed
+
+### CANDIDATE-0089 (WAP — america-first-ky guardrail stress-test methodology)
+
+```yaml
+status: approved
+timestamp: 2026-03-19
+channel_key: operator:wap:us-ky4-massie
+territory: work-politics
+source: operator — WORK doc-only: Mount Sinai–inspired factorial stress-test framework for high-stakes Massie / @usa_first_ky outputs
+source_exchange:
+  operator: "Added docs/skill-work/work-politics/america-first-ky/ (guardrail-stress-test.md, stress-test-brief-template.md, AGENT-SESSION-BRIEF.md). Explicitly NOT governance_checker enforcement; no skills.md direct edit; no routine self-evidence traces."
+  grace_mar: "[Optional merge — companion approves if minimal IX-A WORK line or skills.md bullet is desired]"
+mind_category: knowledge
+signal_type: wap_milestone
+priority_score: 3
+summary: WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
+profile_target: IX-A. KNOWLEDGE
+suggested_entry: "WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checker enforcement."
+prompt_section: YOUR KNOWLEDGE
+prompt_addition: none
+skills_bullets_suggested: |
+  If companion approves and merge script supports skills.md (or manual update): under work-politics — Factorial guardrail stress-testing for high-stakes outputs (war powers, ethics, cartel-economy, border+civil liberties): docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md. Operator-enforced; optional emit_pipeline_event stress_test_*.
+```
 
 ### CANDIDATE-0086 (Test — voice authenticity: Earth as home)
 

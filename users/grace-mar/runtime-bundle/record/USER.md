@@ -433,6 +433,13 @@ books_read:
     evidence_id: ACT-0045
     provenance: human_approved
 
+  - id: LEARN-0041
+    date: 2026-03-20
+    topic: "WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checke"
+    source: pipeline merge
+    evidence_id: ACT-0047
+    provenance: human_approved
+
 
 ```
 
