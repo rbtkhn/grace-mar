@@ -16,6 +16,7 @@ Checks:
   8. SELF-KNOWLEDGE vs SELF-LIBRARY — IX-A topic length / corpus keywords (identity/library boundary)
   9. recursion-gate proposal_class value valid when present
   10. Optional --strict-self-library: fail if self-library.md missing
+  11. Library Domain Registry (docs/self-library-domains.json) — required fields and routable domain ids
 
 Human output prints an **Identity / library boundary** section first; JSON includes **identity_library_boundary**.
 
@@ -46,6 +47,7 @@ from validate_identity_library_boundary import (
     collect_identity_library_violations,
     collect_self_library_file_warnings,
 )
+from validate_library_domain_registry import validate_library_domain_registry
 
 ALLOWED_PROPOSAL_CLASS = frozenset({
     "SELF_KNOWLEDGE_ADD",
@@ -413,6 +415,9 @@ def run_validation(
         msg = f"No user directories found for users_dir={users_dir} user={user or '(all)'}"
         return [msg], {"ix_a_violations": [], "self_library_missing_warnings": [], "ix_a_ok": True, "self_library_files_ok": True}
 
+    all_errors: list[str] = []
+    all_errors.extend(validate_library_domain_registry(REPO_ROOT))
+
     ix_boundary: list[str] = []
     for ud in user_dirs:
         ix_boundary.extend(collect_identity_library_violations(ud, repo_root=REPO_ROOT))
@@ -421,7 +426,7 @@ def run_validation(
     for ud in user_dirs:
         library_warnings.extend(collect_self_library_file_warnings(ud, REPO_ROOT))
 
-    all_errors: list[str] = list(ix_boundary)
+    all_errors.extend(ix_boundary)
     if strict_self_library:
         all_errors.extend(library_warnings)
 

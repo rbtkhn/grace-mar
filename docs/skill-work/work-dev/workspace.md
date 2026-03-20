@@ -30,6 +30,7 @@ Use this file when you want one place to understand:
 | File | Role |
 |------|------|
 | `README.md` | Territory doctrine, scope, and invariants |
+| `three-compounding-loops.md` | Record vs WORK vs CI loops — how compounding works and where drafts must not become canon |
 | `integration-status.md` | Honest implemented/partial/documented-only status table |
 | `known-gaps.md` | Current spec-to-implementation gaps and suggested fixes |
 | `provenance-checklist.md` | Repeatable verification path for export, handback, and audit |

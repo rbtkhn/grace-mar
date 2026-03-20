@@ -21,7 +21,7 @@ Grace-Mar now names four portable harness lanes:
 
 | Lane | Role | Canonical status | Primary surfaces |
 |------|------|------------------|------------------|
-| **record** | Companion-owned truth | Canonical | `self.md` (identity + SELF-KNOWLEDGE), `skills.md`, `self-evidence.md`, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP — see [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md) |
+| **record** | Companion-owned truth | Canonical | `self.md` (identity + SELF-KNOWLEDGE), `skills.md`, `self-evidence.md`, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP — see [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md); library domains indexed in [self-library-domains.md](self-library-domains.md) |
 | **runtime** | Live-session continuity | Non-canonical | `memory.md`, `session-transcript.md`, warmup output, session-log tail |
 | **audit** | Replay, integrity, provenance | Append-only operational history | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
 | **policy** | Intent and constitutional constraints | Canonical policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared rules |
@@ -116,6 +116,8 @@ Anything else writing SELF/EVIDENCE/prompt should be treated as **policy violati
 ## Harness events (audit stream)
 
 Optional append-only **`users/<id>/harness-events.jsonl`**: merge applied, OpenClaw export, etc. — Cursor-style replay without chat. See `scripts/harness_events.py`; emitted by merge hook and OpenClaw hook when configured.
+
+**Correlate audit + gate for a candidate:** [harness-replay.md](harness-replay.md) — `python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-nnnn` pulls `pipeline-events.jsonl`, `harness-events.jsonl`, `merge-receipts.jsonl`, and the matching YAML block from `recursion-gate.md` (pending or **Processed**). Does not reconstruct full LLM prompts unless logged elsewhere.
 
 Recommended generic action vocabulary:
 - `runtime_bundle_export`

@@ -20,5 +20,6 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 | **SELF-KNOWLEDGE** | Identity-facing knowledge in SELF — what the companion knows *about herself* (IX-A and related); not domain corpora. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). |
 | **SELF-LIBRARY** | Reference-facing governed library (`self-library.md`): return-to sources and domain shelves. **Parallel to identity**, not a subset of SELF-KNOWLEDGE. |
 | **CIV-MEM** | Civilizational-memory **sub-library** inside SELF-LIBRARY (LIB scopes + hybrid corpus). Never treated as SELF-KNOWLEDGE. |
+| **Library Domain Registry** | Canonical index (`docs/self-library-domains.md` + `.json`) of **installed reference domains** (e.g. CIV-MEM, LIB entries): surface, authority, invocation, mutation policy, freshness. Routable domains must be declared here. See [self-library-domains.md](self-library-domains.md). |
 
 For full terminology and invariants, see [conceptual-framework.md](conceptual-framework.md), [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), and [canonical-paths.md](canonical-paths.md).

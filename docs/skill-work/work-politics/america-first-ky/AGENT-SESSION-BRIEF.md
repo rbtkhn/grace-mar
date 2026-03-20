@@ -26,6 +26,9 @@ A terminal one-liner has been shared that:
 | Proactive loop | [proactive-loop.md](proactive-loop.md) — scheduled-loop discipline, gated primitives, loop logging |
 | Daily loop template | [templates/daily-loop-brief.md](templates/daily-loop-brief.md) |
 | Loop history (WORK) | [loop-history.md](loop-history.md) — append-only; not `self-evidence.md` |
+| Massie WORK voice | [massie-advisor-prompt.md](massie-advisor-prompt.md) — not `bot/prompt.py` |
+| Cron / habit examples | [scheduled-habit.md](scheduled-habit.md) |
+| Loop event helper | [emit_loop_event.py](../../../scripts/emit_loop_event.py) — subprocess wrapper for `loop_cycle_*` |
 | Framework | [guardrail-stress-test.md](guardrail-stress-test.md) |
 | Template | [stress-test-brief-template.md](stress-test-brief-template.md) |
 | Index | [README.md](README.md) |
@@ -56,6 +59,8 @@ A terminal one-liner has been shared that:
    - e.g. `scripts/scaffold_stress_test_brief.py` that copies the template to `docs/skill-work/work-politics/america-first-ky/stress-test-brief-YYYY-MM-DD.md` with issue slug.  
    - Must not write Record files.  
    - **Done:** [scaffold_stress_test_brief.py](../../../../scripts/scaffold_stress_test_brief.py)
+
+   **Daily loop brief:** [scaffold_daily_loop_brief.py](../../../../scripts/scaffold_daily_loop_brief.py) copies [templates/daily-loop-brief.md](templates/daily-loop-brief.md) to a dated file (optional slug). **Done.**
 
 3. **Pipeline events**  
    - Document only; operators run `emit_pipeline_event.py` with types like `stress_test_passed` / `stress_test_failed`. No change **required** to `emit_pipeline_event.py` (it already accepts arbitrary `event_type`).  

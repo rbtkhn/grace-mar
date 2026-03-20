@@ -26,6 +26,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | Doc / file | Purpose |
 |------------|---------|
 | **This README** | Objective, scope, and principles for work-dev (includes former work-build-ai). |
+| **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: current state, blockers, next actions, and file map. |
 | **[integration-status.md](integration-status.md)** | Implemented vs partial vs documented-only status table for the integration. |
 | **[known-gaps.md](known-gaps.md)** | Explicit spec-to-implementation gaps and suggested fixes. |

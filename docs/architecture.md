@@ -118,7 +118,7 @@ Contains who the companion IS — their identity, story, and way of being in the
 | `users/[id]/self-library.md` | Canonical **governed library**: LIB entries, scopes, lookup routing. **Reference-facing**, not identity. |
 | `users/[id]/SELF-LIBRARY/` | Navigator docs: domain index, **CIV-MEM** subdomain description (links to corpus + LIB stubs). |
 
-**CIV-MEM** — Sub-library within SELF-LIBRARY: civilizational / historical / cultural reference material (LIB rows + `docs/civilization-memory/`, hybrid encyclopedia, CMC). Routing to CMC = lookup into this domain, not into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), [library-integration.md](library-integration.md).
+**CIV-MEM** — Sub-library within SELF-LIBRARY: civilizational / historical / cultural reference material (LIB rows + `docs/civilization-memory/`, hybrid encyclopedia, CMC). Routing to CMC = lookup into this domain, not into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), [library-integration.md](library-integration.md). **Domain registry:** [self-library-domains.md](self-library-domains.md) lists installed library domains (metadata, routing, mutation policy).
 
 ### Contents
 

@@ -2,7 +2,7 @@
 
 **Purpose:** Canonical ontology for identity-facing vs reference-facing Record content. **Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md).
 
-**See also:** [glossary.md](glossary.md), [library-integration.md](library-integration.md), [cmc-routing.md](cmc-routing.md).
+**See also:** [glossary.md](glossary.md), [library-integration.md](library-integration.md), [cmc-routing.md](cmc-routing.md), [self-library-domains.md](self-library-domains.md) (Library Domain Registry — canonical index of reference domains).
 
 ---
 

@@ -1,0 +1,67 @@
+{
+  "registry_version": 1,
+  "updated": "2026-03-20",
+  "governance_rule": "No library domain may be routable unless it is declared in this registry with surface, authority level, and mutation_policy. Routing code and docs should reference domain id and routing_docs.",
+  "domains": [
+    {
+      "id": "civ_mem",
+      "name": "CIV-MEM",
+      "what": "Civilizational-memory reference domain: CMC codex plus LIB-scoped hybrid corpus under SELF-LIBRARY. Not identity.",
+      "surface": "record_library",
+      "surface_detail": "Subdomain of SELF-LIBRARY; CIV-MEM LIB rows + civilization-memory paths",
+      "authority": "canonical",
+      "invocation": "query_triggered",
+      "invocation_detail": "should_route_to_cmc() in bot/lookup_cmc.py; orchestration in bot/core.py; rules in docs/cmc-routing.md",
+      "mutation_policy": "retrieval_only",
+      "mutation_detail": "Hits are reference retrieval; identity updates only via separate gated IX-A merge if ever",
+      "freshness": {
+        "last_refresh": "2026-03-20",
+        "evidence_coverage": "codex + self-library.md LIB entries with civ-mem scopes",
+        "staleness": "review_when_cmc_or_corpus_changes"
+      },
+      "owner": "record",
+      "routing_docs": ["docs/cmc-routing.md", "docs/library-integration.md"],
+      "code_refs": ["bot/lookup_cmc.py", "bot/core.py"]
+    },
+    {
+      "id": "lib_entries",
+      "name": "LIB entries (self-library.md)",
+      "what": "Active LIB rows in YAML: return-to sources, canon, influence, and scoped shelves (Theology, History, etc.) excluding pure CIV-MEM routing which is civ_mem.",
+      "surface": "record_library",
+      "surface_detail": "users/[id]/self-library.md Entries YAML",
+      "authority": "canonical",
+      "invocation": "query_triggered",
+      "invocation_detail": "Analyst summary of LIB text in lookup flow before CMC/web; see library-integration.md",
+      "mutation_policy": "retrieval_primary_stage_for_perimeter",
+      "mutation_detail": "Runtime retrieval from entry text; perimeter changes to LIB rows go through gate",
+      "freshness": {
+        "last_refresh": "2026-03-20",
+        "evidence_coverage": "per-entry read_id / EVIDENCE links where set",
+        "staleness": "operator_review_weekly_suggested"
+      },
+      "owner": "record",
+      "routing_docs": ["docs/library-integration.md", "docs/library-schema.md"],
+      "code_refs": ["bot/core.py"]
+    },
+    {
+      "id": "books",
+      "name": "Books shelf (example)",
+      "what": "Thematic shelf for books and long-form return-to: same physical storage as LIB entries; distinguished by scope tags in library.",
+      "surface": "record_library",
+      "surface_detail": "LIB rows with book-related scope; not a separate runtime table",
+      "authority": "advisory",
+      "invocation": "manual_or_title_trigger",
+      "invocation_detail": "Operator tags scopes; lookup matches analyst summary",
+      "mutation_policy": "retrieval_and_stage_suggestions",
+      "mutation_detail": "New books enter via gate as LIB rows",
+      "freshness": {
+        "last_refresh": "2026-03-18",
+        "evidence_coverage": "READ-* links when present",
+        "staleness": "advisory"
+      },
+      "owner": "record",
+      "routing_docs": ["docs/library-integration.md"],
+      "code_refs": []
+    }
+  ]
+}

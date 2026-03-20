@@ -2,6 +2,8 @@
 
 **Purpose:** Decide when to query Civilization Memory Codex vs. skip to full LLM lookup.
 
+**Registry:** CIV-MEM routing is declared as domain `civ_mem` in [self-library-domains.md](self-library-domains.md) / [self-library-domains.json](self-library-domains.json). Validators require this domain to be present.
+
 ## Routing contract (identity vs reference)
 
 - **CMC hits are reference retrieval** — answers come from material catalogued under the **CIV-MEM** subdomain of **SELF-LIBRARY** (LIB rows + codex), not from `self.md`.

@@ -18,6 +18,8 @@ Use america-first-ky as a **sovereign co-pilot** pattern for Rep. Thomas Massie 
 
 This is “OpenClaw-like” **proactivity + memory + tools** only in the sense of **clear procedures and optional hooks** — **not** unsupervised posting or Record writes.
 
+**Massie drafting voice (WORK):** Use [massie-advisor-prompt.md](massie-advisor-prompt.md) for operator/LLM sessions on campaign copy. It is **not** the companion Telegram Voice; do **not** merge into `bot/prompt.py` without explicit governance. Optional schedules: [scheduled-habit.md](scheduled-habit.md).
+
 ---
 
 ## Three primitives (all gated)
@@ -77,5 +79,8 @@ No code change required in `emit_pipeline_event.py`.
 ## Related
 
 - [README.md](README.md) — folder index  
+- [massie-advisor-prompt.md](massie-advisor-prompt.md) — WORK Massie drafting voice (not Voice)  
+- [scheduled-habit.md](scheduled-habit.md) — cron / habit examples  
 - [AGENT-SESSION-BRIEF.md](AGENT-SESSION-BRIEF.md) — do not run harmful pasted shell blocks  
 - [stress-test-brief-template.md](stress-test-brief-template.md) — high-stakes briefs  
+- **Scaffold:** `python scripts/scaffold_daily_loop_brief.py [optional-slug]` — copies [templates/daily-loop-brief.md](templates/daily-loop-brief.md) to a dated file in this folder and fills the **Cycle** date (see `--help` for `--date`, `--dry-run`)  

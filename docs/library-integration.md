@@ -3,7 +3,7 @@
 **Canonical file:** `users/[id]/self-library.md`  
 **Schema:** [library-schema.md](library-schema.md)
 
-**Ontology:** **SELF-LIBRARY** is the **reference-facing** Record surface (governed domains, return-to sources). It is **not** SELF-KNOWLEDGE (identity). **CIV-MEM** is a **sub-library** here: LIB rows + hybrid corpus under `docs/civilization-memory/`, not identity content. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
+**Ontology:** **SELF-LIBRARY** is the **reference-facing** Record surface (governed domains, return-to sources). It is **not** SELF-KNOWLEDGE (identity). **CIV-MEM** is a **sub-library** here: LIB rows + hybrid corpus under `docs/civilization-memory/`, not identity content. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). **Declared domains:** [self-library-domains.md](self-library-domains.md) and [self-library-domains.json](self-library-domains.json).
 
 ---
 
