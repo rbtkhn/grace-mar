@@ -24,6 +24,8 @@
 
 WAP lives in **two places**: this folder (**docs**, working truth) and **`users/grace-mar/recursion-gate.md`** (gated merges into SELF / EVIDENCE / prompt). Optimal sync = **know which lane** and **touch the gate on a rhythm**.
 
+**Audit replay (WAP example):** [harness-replay-wap-demo.md](harness-replay-wap-demo.md) — run `replay_harness_event.py` on a WAP `CANDIDATE-*` and read pipeline / harness / receipts alongside gate YAML.
+
 ### Doc-only (no candidate)
 
 Keep in git only when:
