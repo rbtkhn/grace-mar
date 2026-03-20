@@ -5,6 +5,8 @@ Generate a standard **daily brief** for work-politics + work-strategy:
   - WAP snapshot (calendar, gate, blockers)
   - Work-strategy focus (operator markdown)
   - Optional RSS ingest (configurable), dual keyword scores: **W** (campaign), **S** (product/AI/governance)
+  - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale`
+    in config — extra phrase lists for scoring **only** (no translation API; zero-API mode).
 
 Config (default):
   docs/skill-work/work-strategy/daily-brief-config.json
@@ -105,13 +107,41 @@ def _default_config_path() -> Path:
     return LEGACY_FEEDS_JSON
 
 
-def _load_full_config(path: Path) -> tuple[list[dict[str, str]], tuple[str, ...], tuple[str, ...]]:
+def _phrases_tuple(raw: object, fallback: tuple[str, ...]) -> tuple[str, ...]:
+    if isinstance(raw, list) and raw:
+        return tuple(str(x).lower() for x in raw)
+    return fallback
+
+
+def _locale_phrase_map(data: dict, key: str) -> dict[str, tuple[str, ...]]:
+    """Map locale code -> extra keyword phrases (merged at score time with global lists)."""
+    raw = data.get(key) if isinstance(data, dict) else None
+    if not isinstance(raw, dict):
+        return {}
+    out: dict[str, tuple[str, ...]] = {}
+    for k, v in raw.items():
+        lc = str(k).lower().strip()
+        if not lc or not isinstance(v, list):
+            continue
+        out[lc] = tuple(str(x).lower() for x in v)
+    return out
+
+
+def _load_full_config(
+    path: Path,
+) -> tuple[
+    list[dict[str, str]],
+    tuple[str, ...],
+    tuple[str, ...],
+    dict[str, tuple[str, ...]],
+    dict[str, tuple[str, ...]],
+]:
     if not path.exists():
-        return [], DEFAULT_WAP_PHRASES, DEFAULT_STRATEGY_PHRASES
+        return [], DEFAULT_WAP_PHRASES, DEFAULT_STRATEGY_PHRASES, {}, {}
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
-        return [], DEFAULT_WAP_PHRASES, DEFAULT_STRATEGY_PHRASES
+        return [], DEFAULT_WAP_PHRASES, DEFAULT_STRATEGY_PHRASES, {}, {}
     feeds_raw = data.get("feeds") if isinstance(data, dict) else None
     feeds: list[dict[str, str]] = []
     if isinstance(feeds_raw, list):
@@ -120,15 +150,16 @@ def _load_full_config(path: Path) -> tuple[list[dict[str, str]], tuple[str, ...]
                 continue
             url = str(row.get("url", "")).strip()
             name = str(row.get("name", "")).strip() or url
+            loc = str(row.get("locale", "en") or "en").strip().lower() or "en"
             if url:
-                feeds.append({"name": name, "url": url})
+                feeds.append({"name": name, "url": url, "locale": loc})
     wap_t = data.get("wap_keyword_phrases") if isinstance(data, dict) else None
     strat_t = data.get("strategy_keyword_phrases") if isinstance(data, dict) else None
-    wap = tuple(str(x).lower() for x in wap_t) if isinstance(wap_t, list) and wap_t else DEFAULT_WAP_PHRASES
-    strat = (
-        tuple(str(x).lower() for x in strat_t) if isinstance(strat_t, list) and strat_t else DEFAULT_STRATEGY_PHRASES
-    )
-    return feeds, wap, strat
+    wap = _phrases_tuple(wap_t, DEFAULT_WAP_PHRASES)
+    strat = _phrases_tuple(strat_t, DEFAULT_STRATEGY_PHRASES)
+    wap_loc = _locale_phrase_map(data, "wap_keyword_phrases_by_locale")
+    strat_loc = _locale_phrase_map(data, "strategy_keyword_phrases_by_locale")
+    return feeds, wap, strat, wap_loc, strat_loc
 
 
 def _extract_strategy_focus() -> str:
@@ -301,7 +332,7 @@ def build_daily_brief(
 ) -> str:
     assembled = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    feeds, wap_phrases, strategy_phrases = _load_full_config(config_path)
+    feeds, wap_phrases, strategy_phrases, wap_by_locale, strategy_by_locale = _load_full_config(config_path)
     snapshot = get_wap_snapshot(user_id)
     primary = snapshot["campaign_status"]
     gate = snapshot["gate"]
@@ -371,6 +402,9 @@ def build_daily_brief(
                 fetch_errors.append(fdef["name"])
                 continue
             parsed = _parse_feed_xml(raw, fdef["name"])
+            loc = str(fdef.get("locale", "en") or "en").strip().lower() or "en"
+            for it in parsed:
+                it["locale"] = loc
             all_items.extend(parsed)
         if fetch_errors:
             lines.append(f"_Fetch failed for: {', '.join(fetch_errors)}._")
@@ -382,8 +416,11 @@ def build_daily_brief(
     all_items = _filter_recent(all_items, max_age_hours if fetch_feeds else 0)
     for it in all_items:
         blob = str(it.get("text_blob", ""))
-        it["score_w"] = _score_keywords(blob, wap_phrases)
-        it["score_s"] = _score_keywords(blob, strategy_phrases)
+        loc = str(it.get("locale", "en") or "en").strip().lower() or "en"
+        w_extra = wap_by_locale.get(loc, ())
+        s_extra = strategy_by_locale.get(loc, ())
+        it["score_w"] = _score_keywords(blob, wap_phrases) + _score_keywords(blob, w_extra)
+        it["score_s"] = _score_keywords(blob, strategy_phrases) + _score_keywords(blob, s_extra)
         it["score_sum"] = int(it["score_w"]) + int(it["score_s"])
 
     def _sort_key(x: dict[str, object]) -> tuple[int, int, int, float]:
@@ -395,7 +432,8 @@ def build_daily_brief(
 
     if fetch_feeds and all_items:
         lines.append(
-            "Ranked by **W+S** (W = work-politics keywords, S = work-strategy keywords) then recency. "
+            "Ranked by **W+S** (global keyword lists + `wap_keyword_phrases_by_locale` / "
+            "`strategy_keyword_phrases_by_locale` for each feed `locale`) then recency. "
             "Tune phrases in config JSON."
         )
         lines.append("")
@@ -406,13 +444,15 @@ def build_daily_brief(
             title = it.get("title", "")
             link = it.get("link", "")
             feed = it.get("feed", "")
+            loc = str(it.get("locale", "en") or "en").strip().lower() or "en"
             sw = int(it.get("score_w", 0))
             ss = int(it.get("score_s", 0))
             sd = it.get("sort_date")
             date_note = ""
             if isinstance(sd, datetime):
                 date_note = f" · _{sd.strftime('%Y-%m-%d %H:%M UTC')}_"
-            lines.append(f"- **[W:{sw} S:{ss}]** [{title}]({link}) — _{feed}_{date_note}")
+            loc_note = f" · _{loc}_" if loc != "en" else ""
+            lines.append(f"- **[W:{sw} S:{ss}]** [{title}]({link}) — _{feed}_{loc_note}{date_note}")
             shown += 1
         lines.append("")
     elif fetch_feeds and not all_items and feeds:
