@@ -1,5 +1,5 @@
 {
-  "_comment": "Canonical config for scripts/generate_wap_daily_brief.py — work-politics + work-strategy. Feeds: NPR/HN baseline + NBC Politics + Capitol (The Hill, Roll Call) for House/campaign/KY race density. If a feed 403s from the script UA, swap URL or remove. Respect site ToS.",
+  "_comment": "Canonical config for scripts/generate_wap_daily_brief.py — work-politics + work-strategy. US feeds: NPR, NBC Politics, The Hill, Roll Call, HN. Foreign-language: Le Monde (FR), Der Spiegel (DE), BBC Mundo (ES), France 24 (AR) — EU / LatAm / MENA angles; W+S scores lean on English loanwords and proper nouns in titles. If a feed 403s from the script UA, swap URL or remove. Respect site ToS.",
   "feeds": [
     {
       "name": "NPR — national news",
@@ -16,6 +16,22 @@
     {
       "name": "Roll Call — Congress",
       "url": "https://www.rollcall.com/feed/"
+    },
+    {
+      "name": "Le Monde — français (France / monde)",
+      "url": "https://www.lemonde.fr/rss/une.xml"
+    },
+    {
+      "name": "Der Spiegel — Deutsch (Schlagzeilen)",
+      "url": "https://www.spiegel.de/schlagzeilen/index.rss"
+    },
+    {
+      "name": "BBC Mundo — español (Américas / global)",
+      "url": "https://feeds.bbci.co.uk/mundo/rss.xml"
+    },
+    {
+      "name": "France 24 — العربية (MENA)",
+      "url": "https://www.france24.com/ar/rss"
     },
     {
       "name": "Hacker News — front page",
@@ -63,7 +79,21 @@
     "challenge",
     "house race",
     "congressional",
-    "maga"
+    "maga",
+    "gaza",
+    "ukraine",
+    "nato",
+    "otan",
+    "netanyahu",
+    "europe",
+    "european union",
+    "brussels",
+    "middle east",
+    "china",
+    "russia",
+    "putin",
+    "venezuela",
+    "israel"
   ],
   "strategy_keyword_phrases": [
     "openai",
