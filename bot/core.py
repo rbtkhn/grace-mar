@@ -73,6 +73,11 @@ try:
 except ImportError:
     from scripts.recursion_gate_review import get_review_candidate, parse_review_candidates
 
+try:
+    from pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
+except ImportError:
+    from scripts.pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
+
 logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -137,12 +142,15 @@ def _log_tokens(
 def emit_pipeline_event(event_type: str, candidate_id: str | None = None, **kwargs: object) -> None:
     """Append a pipeline event (staged, approved, rejected, applied, etc.)."""
     try:
-        event = {
+        event: dict[str, object] = {
             "ts": datetime.now().isoformat(),
             "event": event_type,
             "candidate_id": candidate_id,
             **kwargs,
         }
+        event.setdefault("event_id", new_pipeline_event_id(USER_ID))
+        event.setdefault("fork_id", USER_ID)
+        event.setdefault("envelope_version", ENVELOPE_VERSION)
         with _ledger_lock:
             with open(PIPELINE_EVENTS_PATH, "a") as f:
                 f.write(json.dumps(event) + "\n")
@@ -951,6 +959,7 @@ def _stage_candidate(
             None,
             channel_key=channel_key,
             reason=reason,
+            replay_mode="proposal",
         )
         return False
     candidate_id = _next_candidate_id()
@@ -993,6 +1002,7 @@ channel_key: {channel_key}
         channel_key=channel_key,
         event_schema=2,
         conflicts_detected=len(conflicts) > 0,
+        replay_mode="proposal",
         **enrich,
     )
     return True
@@ -1447,6 +1457,7 @@ operator_prompt: "choose keep_rule | revise_rule | scope_rule | gather_more_evid
         source_agents=f"{left_source},{right_source}",
         window_days=window_days,
         source="core:stage_intent_debate_packet",
+        replay_mode="debate",
     )
     return {
         "ok": True,
@@ -1498,6 +1509,7 @@ def resolve_intent_debate_packet(
         actor=actor or None,
         channel_key=channel_key or None,
         source="core:resolve_intent_debate_packet",
+        replay_mode="debate",
     )
     return {"ok": True, "debate_id": debate_id, "resolution": safe_resolution}
 
@@ -1573,6 +1585,7 @@ def update_candidate_status(
         kwargs["actor"] = actor
     if source:
         kwargs["source"] = source
+    kwargs["replay_mode"] = "gate"
     emit_pipeline_event(status, candidate_id, **kwargs)
     return True
 
@@ -1598,7 +1611,7 @@ def get_response(channel_key: str, user_message: str) -> str:
     if WE_DID_PATTERN.search(user_message.strip()):
         archive("ACTIVITY REPORT", channel_key, user_message)
         staged = analyze_activity_report(user_message, channel_key)
-        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key, replay_mode="dyad")
         count = len(get_pending_candidates())
         if staged:
             return f"got it! i added that to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review to see them."
@@ -1616,7 +1629,7 @@ def get_response(channel_key: str, user_message: str) -> str:
         else:
             synthetic = "we did a checkpoint — companion requested to save state; no conversation since session start yet."
         staged = analyze_activity_report(synthetic, channel_key)
-        emit_pipeline_event("dyad:checkpoint_request", None, channel_key=channel_key)
+        emit_pipeline_event("dyad:checkpoint_request", None, channel_key=channel_key, replay_mode="dyad")
         count = len(get_pending_candidates())
         reply = (
             f"got it! i added a checkpoint to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review"
@@ -1632,7 +1645,7 @@ def get_response(channel_key: str, user_message: str) -> str:
         synthetic = f"we did a chat in an external LLM (ChatGPT, Claude, PRP, etc). here is the checkpoint or transcript:\n\n{stripped}"
         archive("CHECKPOINT HANDBACK", channel_key, stripped[:500] + ("..." if len(stripped) > 500 else ""))
         staged = analyze_activity_report(synthetic, channel_key)
-        emit_pipeline_event("dyad:checkpoint_handback", None, channel_key=channel_key)
+        emit_pipeline_event("dyad:checkpoint_handback", None, channel_key=channel_key, replay_mode="dyad")
         count = len(get_pending_candidates())
         if staged:
             return f"got it! i read that checkpoint and added it to your record. you have {count} thing{'s' if count != 1 else ''} to review — type /review"
@@ -1651,7 +1664,13 @@ def get_response(channel_key: str, user_message: str) -> str:
         short_answer = (answer[:200] + "…") if len(answer) > 200 else answer
         synthetic = f"we looked up '{question}' and learned: {short_answer}"
         staged = analyze_activity_report(synthetic, channel_key)
-        emit_pipeline_event("dyad:lookup_save_proposal", None, channel_key=channel_key, question=question[:80])
+        emit_pipeline_event(
+            "dyad:lookup_save_proposal",
+            None,
+            channel_key=channel_key,
+            question=question[:80],
+            replay_mode="dyad",
+        )
         count = len(get_pending_candidates())
         archive("USER", channel_key, user_message)
         archive("GRACE-MAR (lookup save)", channel_key, "added to review")
@@ -1670,7 +1689,14 @@ def get_response(channel_key: str, user_message: str) -> str:
         archive("LOOKUP REQUEST", channel_key, question)
 
         assistant_message, lookup_source = _lookup_with_library_first(question, channel_key)
-        emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, question=question[:100], lookup_source=lookup_source)
+        emit_pipeline_event(
+            "dyad:lookup",
+            None,
+            channel_key=channel_key,
+            question=question[:100],
+            lookup_source=lookup_source,
+            replay_mode="dyad",
+        )
 
         # Agentic: propose adding to record so companion can say yes
         proposal = " want me to add this to your record so we remember it? say yes!"
@@ -1770,7 +1796,15 @@ def run_export_curriculum(user_id: str | None = None, audience: str | None = Non
 def run_lookup(question: str, channel_key: str = "miniapp") -> str:
     """Public entry point for lookup. Used by Mini App."""
     result, lookup_source = _lookup_with_library_first(question, channel_key)
-    emit_pipeline_event("dyad:lookup", None, channel_key=channel_key, source="miniapp", question=question[:100], lookup_source=lookup_source)
+    emit_pipeline_event(
+        "dyad:lookup",
+        None,
+        channel_key=channel_key,
+        source="miniapp",
+        question=question[:100],
+        lookup_source=lookup_source,
+        replay_mode="dyad",
+    )
     return result
 
 
@@ -1817,7 +1851,7 @@ def run_grounded_response(
         if u := getattr(response, "usage", None):
             _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
         reply = response.choices[0].message.content.strip()
-        emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp")
+        emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp", replay_mode="dyad")
         return reply
     except Exception:
         logger.exception("Grounded response error")

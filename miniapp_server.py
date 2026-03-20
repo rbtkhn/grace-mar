@@ -462,7 +462,7 @@ def operator_observations():
     pending = get_pending_candidates()
     count = len(pending)
     if staged:
-        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key, replay_mode="dyad")
         message = f"Added to your record. You have {count} thing{'s' if count != 1 else ''} to review."
     else:
         message = f"Nothing new to add right now. You have {count} in review."
@@ -502,7 +502,7 @@ def operator_artifacts():
     try:
         staged = analyze_activity_report(text, channel_key, staging_meta={"artifact_path": rel_path})
         if staged:
-            emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+            emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key, replay_mode="dyad")
     except Exception as e:
         logger.warning("artifact observation staging failed: %s", e)
     pending = len(get_pending_candidates())
@@ -652,6 +652,7 @@ def operator_gate_candidate_action(candidate_id: str):
             actor=OPERATOR_NAME,
             source=source,
             decision="defer",
+            replay_mode="gate",
         )
         return jsonify({"ok": True, "action": action, "candidate": row})
 
@@ -677,6 +678,7 @@ def operator_gate_candidate_action(candidate_id: str):
         actor=OPERATOR_NAME,
         source=source,
         decision="quick_merge",
+        replay_mode="gate",
     )
     return jsonify({"ok": True, "action": action, "message": message, "candidate_id": candidate_id})
 
@@ -758,6 +760,7 @@ def operator_merge_approved():
         source="miniapp_server:merge_approved",
         territory=territory,
         merged_count=len(ids),
+        replay_mode="merge",
     )
     return jsonify({
         "ok": True,
@@ -914,7 +917,7 @@ def family_activity():
     pending = get_pending_candidates()
     count = len(pending)
     if staged:
-        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key)
+        emit_pipeline_event("dyad:activity_report", None, channel_key=channel_key, replay_mode="dyad")
     return jsonify({
         "ok": True,
         "staged": staged,

@@ -823,6 +823,7 @@ async def intent_review_command(update: Update, context: ContextTypes.DEFAULT_TY
         actor=f"telegram:{update.effective_user.id}" if update.effective_user else None,
         window_days=window_days,
         suggestion_count=len(summary.get("suggested_updates") or []),
+        replay_mode="policy",
     )
     await update.message.reply_text(_format_intent_review(summary))
 

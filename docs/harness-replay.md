@@ -14,6 +14,8 @@ Grace-Mar separates **record**, **runtime**, **audit**, and **policy** ([harness
 | `recursion-gate.md` | Current **or** **Processed** candidate YAML (if still in file) |
 | `self-evidence.md` | ACT line if `--evidence` given |
 
+New pipeline/harness lines include **`event_id`**, **`fork_id`**, **`envelope_version`**, and often **`replay_mode`** (`proposal` / `merge` / `gate`, …). Older lines omit these; the replay report adds an **Audit envelope** section when `event_id` is present.
+
 **Limitations**
 
 - **Voice answers:** Full SYSTEM prompt + retrieval trace per message is **not** stored in harness-events by default. Use **session-transcript** tail (`--transcript-snippet`) only as a **hint**—it may be redacted or huge.

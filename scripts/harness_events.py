@@ -13,6 +13,11 @@ import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
+try:
+    from pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
+except ImportError:
+    from scripts.pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
+
 _lock = threading.Lock()
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -34,6 +39,9 @@ def append_harness_event(
     try:
         rec: dict[str, object] = {
             "ts": datetime.now(timezone.utc).isoformat(),
+            "event_id": new_pipeline_event_id(user_id),
+            "fork_id": user_id,
+            "envelope_version": ENVELOPE_VERSION,
             "harness_id": harness_id,
             "action": action,
         }

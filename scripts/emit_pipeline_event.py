@@ -2,7 +2,9 @@
 """
 Append a pipeline event to pipeline-events.jsonl.
 
-Used by operator scripts and maintenance jobs.
+Each line includes **event_id**, **fork_id** (user id), **envelope_version** (see
+`pipeline_event_envelope.py`) unless overridden via `--merge-json`. Used by operator
+scripts and maintenance jobs.
 
 Usage:
     python scripts/emit_pipeline_event.py applied CANDIDATE-0040 evidence_id=ACT-0014
@@ -28,6 +30,11 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+try:
+    from pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
+except ImportError:
+    from scripts.pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
 
 
 def main() -> None:
@@ -84,6 +91,10 @@ def main() -> None:
         **merge,
         **extras,
     }
+    fork = args.user.strip() or "grace-mar"
+    event.setdefault("event_id", new_pipeline_event_id(fork))
+    event.setdefault("fork_id", fork)
+    event.setdefault("envelope_version", ENVELOPE_VERSION)
     events_path.parent.mkdir(parents=True, exist_ok=True)
     with open(events_path, "a", encoding="utf-8") as f:
         f.write(json.dumps(event) + "\n")

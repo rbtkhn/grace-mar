@@ -145,6 +145,16 @@ def build_report(
             gate_body = gate_path.read_text(encoding="utf-8", errors="ignore")
         yaml_block = _find_candidate_yaml(gate_body, candidate_id) if gate_path.is_file() else None
 
+        env_rows = [r for r in pl_f if r.get("event_id")]
+        if env_rows:
+            lines.extend(["", "## Audit envelope (pipeline rows with `event_id`)", ""])
+            for r in env_rows:
+                rm = r.get("replay_mode")
+                rm_s = f" — replay_mode=`{rm}`" if rm else ""
+                lines.append(
+                    f"- `{r.get('event_id')}` — **{r.get('event')}**{rm_s} — envelope v{r.get('envelope_version', '?')}"
+                )
+
         lines.extend(
             [
                 "",

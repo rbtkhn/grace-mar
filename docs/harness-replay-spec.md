@@ -109,10 +109,12 @@ Start with a **single event page** (or markdown report):
 
 | Capability | Today (`scripts/replay_harness_event.py`) | North star |
 |------------|-------------------------------------------|------------|
-| Proposal / merge correlation | Candidate ID + gate YAML + pipeline + harness + receipts | Same, plus structured envelope and refs |
+| Proposal / merge correlation | Candidate ID + gate YAML + pipeline + harness + receipts | Same, plus cross-step refs (`parent_event_id`, etc.) |
 | Answer replay | Not built; transcript optional | Full prompt assembly + routing + tools |
 | Validator linkage | Manual follow-up | `validator_refs` in envelope |
-| Event ID | Derive from candidate / bundle / timestamp | Stable `event_id` across steps |
+| Event ID | **`event_id`** on new `pipeline-events.jsonl` and `harness-events.jsonl` lines (`evt_YYYYMMDD_HHMMSS_<hex>`), plus **`fork_id`**, **`envelope_version`**, optional **`replay_mode`** (`proposal` \| `merge` \| `gate` \| `debate` \| `dyad` \| `policy`) | Richer envelope with `record_refs`, `routing`, … |
+
+Emitted by: `scripts/emit_pipeline_event.py`, `bot/core.emit_pipeline_event`, `scripts/harness_events.append_harness_event`. Older JSONL lines omit these fields; readers should treat them as optional.
 
 Operational doc: [harness-replay.md](harness-replay.md).
 

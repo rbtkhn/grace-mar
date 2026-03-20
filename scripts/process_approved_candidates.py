@@ -743,6 +743,7 @@ def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str
         "source": "process_approved_candidates",
         "actor": _safe_pipeline_str(approved_by, 120),
         "channel_key": _safe_pipeline_str(ch, 100),
+        "replay_mode": "merge",
     }
     subprocess.run(
         [
@@ -1032,6 +1033,7 @@ def main() -> None:
             candidate_ids=receipt.get("candidate_ids"),
             approved_by=receipt.get("approved_by"),
             merged_at=receipt_event.get("merged_at"),
+            replay_mode="merge",
         )
 
         for c, act_id, ix_entry_id in applied_candidates:
