@@ -13,5 +13,6 @@
 7. **Authorized analytical lenses** — Only the three lenses (structural, operational-diplomatic, institutional-domestic) per [work-politics/analytical-lenses](../work-politics/analytical-lenses/manifest.md); read-only, triangulated.
 8. **Energy-chokepoint monitoring** — Mandatory for all multipolar/energy-related events; must cite ≥1 historical CIV-MEM precedent (e.g. 1973 embargo) where relevant. See [modules/energy-chokepoint/manifest.md](modules/energy-chokepoint/manifest.md).
 9. **Verifiable deliberation (optional receipt)** — For heavy runs, attach a [verifiable-personal-ai deliberation receipt](modules/verifiable-personal-ai/deliberation-receipt-template.md) so steps, sources, and sign-off are traceable in WORK docs; does not prove LLM correctness and does not replace the gate.
+10. **WAP pilot proactive loops** — Scheduled or recurring Massie-pilot runs follow [america-first-ky/proactive-loop.md](../work-politics/america-first-ky/proactive-loop.md) (WORK-only; same gate and human sign-off as other WAP drafts).
 
 Discipline is operator/process; no automated enforcement of these principles beyond tooling that blocks direct Record writes.

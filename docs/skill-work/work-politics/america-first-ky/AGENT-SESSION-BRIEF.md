@@ -23,9 +23,14 @@ A terminal one-liner has been shared that:
 
 | Artifact | Path |
 |----------|------|
+| Proactive loop | [proactive-loop.md](proactive-loop.md) — scheduled-loop discipline, gated primitives, loop logging |
+| Daily loop template | [templates/daily-loop-brief.md](templates/daily-loop-brief.md) |
+| Loop history (WORK) | [loop-history.md](loop-history.md) — append-only; not `self-evidence.md` |
 | Framework | [guardrail-stress-test.md](guardrail-stress-test.md) |
 | Template | [stress-test-brief-template.md](stress-test-brief-template.md) |
 | Index | [README.md](README.md) |
+
+**Do not** re-paste the circulated shell block that creates `work-politics/` at repo root or patches `governance_checker.py` / `skills.md` — see § “Do not run” above. Use the files in this table instead.
 
 **Science citation:** Framework is **inspired by** Mount Sinai / Nature Medicine ChatGPT Health factorial safety evaluation (2026). Political use is **analogical**; not medical advice.
 
@@ -79,4 +84,4 @@ A terminal one-liner has been shared that:
 
 Paste into a new chat:
 
-> Read `docs/skill-work/work-politics/america-first-ky/AGENT-SESSION-BRIEF.md` and complete the “Recommended next tasks.” Do not patch `governance_checker.py` with fake alignment functions or append `skills.md` directly. Stage any Record change via RECURSION-GATE only.
+> Read `docs/skill-work/work-politics/america-first-ky/AGENT-SESSION-BRIEF.md` and [proactive-loop.md](proactive-loop.md). Complete any remaining “Recommended next tasks.” Do not patch `governance_checker.py` with fake alignment functions or append `skills.md` directly. Stage any Record change via RECURSION-GATE only.
