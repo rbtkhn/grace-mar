@@ -75,6 +75,14 @@ At least **weekly** (e.g. before weekly brief): either **one work-politics candi
 
 **[wap-candidate-template.md](wap-candidate-template.md)** — paste-ready YAML; name artifacts in `summary` (`iran-foreign-policy-brief.md`, `revenue-log` row).
 
+### Operational SQLite engine (optional)
+
+WORK-lane state **beside** the gate (not a replacement): clients, engagements, an operator review queue (`WPR-*` ids), and funnel events. Stored at **`users/<id>/work-politics/work-politics.db`** (local; gitignored). Implementation: [`scripts/work_politics_engine.py`](../../../scripts/work_politics_engine.py). **RECURSION-GATE** remains canonical for `CANDIDATE-*` and merges via `process_approved_candidates.py`; optional `approved_candidate_id` on a review row can reference a gate id after companion merge.
+
+- **HTTP:** [`gate-review-app.py`](../../../gate-review-app.py) exposes JSON under `/api/work-politics/*` when the app runs with `OPERATOR_SECRET` (same auth as gate review).
+- **Metrics:** [metrics-dashboard.py](../../../metrics-dashboard.py) shows 30d funnel revenue and pending WPR items when Streamlit is available.
+- **Seed:** `python scripts/bootstrap_work_politics.py` — dev convenience for KY-4 client + sample engagement (operator must set compliance cleared; not legal advice).
+
 ---
 
 ## Lifecycle
@@ -107,6 +115,8 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | Doc / file | Purpose |
 |------------|---------|
 | **This README** | Objective, scope, principles, gate convention. |
+| **[work-politics-strategic-memo.md](work-politics-strategic-memo.md)** | Strategic framing: what this territory is, why it matters, architectural weaknesses, bottom-line judgment. |
+| **[scripts/work_politics_engine.py](../../../scripts/work_politics_engine.py)** | Optional SQLite WORK layer (clients, WPR review queue, funnel); see [§ Operational SQLite engine](#operational-sqlite-engine-optional). |
 | **[consulting-charter.md](consulting-charter.md)** | Umbrella mission, service lines, pricing, phase note. |
 | **[sell-civ-mem-federal-executive.md](sell-civ-mem-federal-executive.md)** | How to sell the civ-mem / Condition framework to the federal executive branch (NSC, DPC, speechwriting, transition): value prop, offers, target buyers, federal sales path. |
 | **[civ-mem-federal-workflow-integration.md](civ-mem-federal-workflow-integration.md)** | Imagine: civ-mem integrated into the workflow of all federal jobs — onboarding, one question in checklists, optional memo field, engagement lens, leadership dev, interagency, procurement, LMS; available not mandatory. |

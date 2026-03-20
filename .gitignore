@@ -27,6 +27,9 @@ Pods/
 *.swo
 .DS_Store
 
+# Work-politics SQLite workflow state (local; do not commit)
+users/*/work-politics/*.db
+
 # Work-politics internal dashboard job store (local dev; do not commit)
 data/wap_jobs.json
 data/wap_jobs.json.tmp

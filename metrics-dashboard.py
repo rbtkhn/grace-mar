@@ -6,6 +6,7 @@ Run from repo root: streamlit run metrics-dashboard.py
 Deploy on Render as a web service (streamlit run --server.port 8501 metrics-dashboard.py).
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -64,5 +65,41 @@ if drift.total_conflicts > 0:
     st.write(f"Conflicts: {drift.total_conflicts}")
     if drift.rejection_categories:
         st.json(drift.rejection_categories)
+
+try:
+    from work_politics_engine import WorkPoliticsEngine
+
+    wp = WorkPoliticsEngine(user_id=os.getenv("GRACE_MAR_USER_ID", "grace-mar"))
+    wp.init_db()
+
+    st.subheader("Work-politics")
+    metrics_wp = wp.funnel_metrics(days=30)
+
+    col_a, col_b = st.columns(2)
+    with col_a:
+        st.metric("30d work-politics revenue", f"${metrics_wp['total_revenue_usd']:.2f}")
+    with col_b:
+        pending_wp = len(wp.list_review_queue(status="pending"))
+        st.metric("Pending work-politics review items", pending_wp)
+
+    stage_rows = []
+    for stage, data in metrics_wp["stages"].items():
+        stage_rows.append(
+            {
+                "stage": stage,
+                "total": data["total"],
+                "revenue_usd": round(data["revenue"], 2),
+                "outcomes": data["outcomes"],
+            }
+        )
+
+    if stage_rows:
+        st.write(stage_rows)
+    else:
+        st.caption("No work-politics funnel data yet.")
+except ImportError:
+    st.caption("work_politics_engine not available.")
+except Exception as e:
+    st.warning(f"Work-politics metrics: {e}")
 
 st.caption("Data from users/grace-mar (recursion-gate, self.md, pipeline-events). Regenerate profile for latest.")

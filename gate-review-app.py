@@ -29,8 +29,13 @@ USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 OPERATOR_SECRET = os.getenv("OPERATOR_SECRET", "").strip() or os.getenv("OPERATOR_FETCH_SECRET", "").strip()
 
 from repo_io import assert_canonical_record_layout  # noqa: E402
+from work_politics_engine import NotFound, PolicyViolation, WorkPoliticsEngine  # noqa: E402
 
 assert_canonical_record_layout(USER_ID, context="gate-review-app")
+
+# WORK-lane SQLite state for work-politics (clients, review queue, funnel). Not RECURSION-GATE.
+WP = WorkPoliticsEngine(USER_ID, REPO_ROOT)
+WP.init_db()
 
 
 def _auth():
@@ -135,17 +140,17 @@ def index():
         method: 'POST',
         headers: {{ 'Content-Type': 'application/json' }},
         body: JSON.stringify({{ candidate_id: cid, action: action }})
-      }}).then(function(r) { return r.json(); }).then(function(data) {{
+      }}).then(function(r) {{ return r.json(); }}).then(function(data) {{
         if (data.error) {{ alert(data.error); btn.disabled = false; return; }}
         var card = btn.closest('.card');
         if (card) card.remove();
       }}).catch(function() {{ btn.disabled = false; }});
     }}
     document.querySelectorAll('.btn.approve').forEach(function(btn) {{
-      btn.onclick = function() { doAction(btn.getAttribute('data-id'), 'approve', btn); }};
+      btn.onclick = function() {{ doAction(btn.getAttribute('data-id'), 'approve', btn); }};
     }});
     document.querySelectorAll('.btn.reject').forEach(function(btn) {{
-      btn.onclick = function() { doAction(btn.getAttribute('data-id'), 'reject', btn); }};
+      btn.onclick = function() {{ doAction(btn.getAttribute('data-id'), 'reject', btn); }};
     }});
   </script>
 </body>
@@ -211,6 +216,145 @@ def api_candidates():
     from recursion_gate_review import filter_review_candidates, parse_review_candidates
     rows = filter_review_candidates(parse_review_candidates(USER_ID), status="pending")
     return jsonify({"user_id": USER_ID, "count": len(rows), "items": rows})
+
+
+@app.route("/api/work-politics/review")
+def api_work_politics_review():
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    client_id = (request.args.get("client_id") or "").strip() or None
+    try:
+        items = WP.list_review_queue(status="pending", client_id=client_id)
+        return jsonify({"user_id": USER_ID, "count": len(items), "items": items})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/work-politics/client", methods=["POST"])
+def api_work_politics_client():
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or {}
+    try:
+        cid = WP.create_or_update_client(
+            client_slug=payload["client_slug"],
+            display_name=payload["display_name"],
+            channel_key=payload["channel_key"],
+            principal_type=payload.get("principal_type", "candidate"),
+            compliance_status=payload.get("compliance_status", "pending"),
+            reviewed_by=os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web"),
+            notes=payload.get("notes") or {},
+            active=bool(payload.get("active", True)),
+        )
+        return jsonify({"ok": True, "client_id": cid})
+    except KeyError as e:
+        return jsonify({"error": f"missing field: {e.args[0]}"}), 400
+    except PolicyViolation as e:
+        return jsonify({"error": str(e)}), 400
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/work-politics/engagement", methods=["POST"])
+def api_work_politics_engagement():
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or {}
+    try:
+        engagement_id, decision = WP.submit_engagement(
+            client_id=payload["client_id"],
+            title=payload["title"],
+            work_type=payload["work_type"],
+            created_by=os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web"),
+            public_attribution=bool(payload.get("public_attribution", False)),
+            record_touch=bool(payload.get("record_touch", False)),
+            metadata=payload.get("metadata") or {},
+        )
+        return jsonify(
+            {
+                "ok": True,
+                "engagement_id": engagement_id,
+                "requires_review": decision.requires_review,
+                "policy_reason": decision.reason,
+            }
+        )
+    except KeyError as e:
+        return jsonify({"error": f"missing field: {e.args[0]}"}), 400
+    except PolicyViolation as e:
+        return jsonify({"error": str(e)}), 400
+    except NotFound as e:
+        return jsonify({"error": str(e)}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/work-politics/review-action", methods=["POST"])
+def api_work_politics_review_action():
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or {}
+    review_id = (payload.get("review_id") or "").strip()
+    action_type = (payload.get("action") or "").strip().lower()
+    operator_name = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web").strip() or "operator-web"
+
+    if not review_id.startswith("WPR-"):
+        return jsonify({"error": "invalid review_id"}), 400
+
+    try:
+        if action_type == "approve":
+            WP.approve_review(
+                review_id=review_id,
+                reviewed_by=operator_name,
+                approved_candidate_id=(payload.get("approved_candidate_id") or "").strip() or None,
+                review_note=(payload.get("review_note") or "").strip() or None,
+            )
+            return jsonify({"ok": True, "action": "approved"})
+
+        if action_type == "reject":
+            WP.reject_review(
+                review_id=review_id,
+                reviewed_by=operator_name,
+                review_note=(payload.get("review_note") or "").strip(),
+            )
+            return jsonify({"ok": True, "action": "rejected"})
+
+        return jsonify({"error": "action must be approve or reject"}), 400
+    except PolicyViolation as e:
+        return jsonify({"error": str(e)}), 400
+    except NotFound as e:
+        return jsonify({"error": str(e)}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/work-politics/funnel-event", methods=["POST"])
+def api_work_politics_funnel_event():
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    payload = request.get_json(silent=True) or {}
+    try:
+        event_id = WP.log_funnel_event(
+            stage=payload["stage"],
+            outcome=payload.get("outcome"),
+            source=payload.get("source"),
+            client_id=payload.get("client_id"),
+            engagement_id=payload.get("engagement_id"),
+            amount_usd=payload.get("amount_usd"),
+            notes=payload.get("notes") or {},
+            event_ts=payload.get("event_ts"),
+        )
+        return jsonify({"ok": True, "event_id": event_id})
+    except KeyError as e:
+        return jsonify({"error": f"missing field: {e.args[0]}"}), 400
+    except NotFound as e:
+        return jsonify({"error": str(e)}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == "__main__":
