@@ -1,8 +1,8 @@
-# X account — America First KY (Unofficial Analysis & Message Support)
+# X account — America First Kentucky (Unofficial Analysis & Message Support)
 
-**Account identity:** Operate the X (Twitter) account **"America First KY"** (handle `@america_first_ky`) as **unofficial independent analysis & message support** for Rep. Thomas Massie (R-KY-4). Not the official campaign, not an office, and not the principal speaking in his official capacity.
+**Account identity:** Operate the X (Twitter) account **"America First Kentucky"** (handle `@usa_first_ky`) as **unofficial independent analysis & message support** for Rep. Thomas Massie (R-KY-4). Not the official campaign, not an office, and not the principal speaking in his official capacity.
 
-**Strategic role:** The `@america_first_ky` account is a **prototype message-support channel** — a live demo that proves the workflow (briefs, research, message discipline, X drafts). The same offer can be sold to other campaigns once demonstrated in the wild.
+**Strategic role:** The `@usa_first_ky` account is a **prototype message-support channel** — a live demo that proves the workflow (briefs, research, message discipline, X drafts). The same offer can be sold to other campaigns once demonstrated in the wild.
 
 ---
 
@@ -10,8 +10,8 @@
 
 | Field | Value |
 |-------|--------|
-| **Handle** | **@america_first_ky** |
-| **Display name** | America First KY (Unofficial) |
+| **Handle** | **@usa_first_ky** |
+| **Display name** | America First Kentucky (Unofficial) |
 | **Bio** | One-line: "Unofficial independent analysis & message support for KY-4 (Thomas Massie). Not affiliated with any campaign or office." |
 | **Operator** | **Xavier** (social media manager). Agent drafts; Xavier implements and posts. |
 
@@ -65,6 +65,8 @@
 
 **Working queue:** use [content-queue.md](content-queue.md) to track what is only an idea, what is in draft, what is ready for review, and what has already been posted.
 
+**High-stakes briefs:** For war powers, ethics / insider framing, high-claim “cartel economy” copy, or border + civil liberties in a hot news window — complete [america-first-ky/stress-test-brief-template.md](america-first-ky/stress-test-brief-template.md) (see [guardrail-stress-test.md](america-first-ky/guardrail-stress-test.md)) before Xavier ships. Optional dated scaffold: `python scripts/scaffold_stress_test_brief.py <issue-slug>`.
+
 ---
 
 ## SMM onboarding
@@ -85,4 +87,4 @@ Voice calibration: [smm-training.md](smm-training.md). SMM reviews drafts agains
 
 ---
 
-*Account is operated by Xavier (SMM). Agent drafts; Xavier posts. No autonomous posting. X: @america_first_ky.*
+*Account is operated by Xavier (SMM). Agent drafts; Xavier posts. No autonomous posting. X: @usa_first_ky.*

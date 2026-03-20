@@ -30,7 +30,7 @@
 
 5.5 **Synthesis (after three minds)**
    - Run [synthesis-engine](synthesis-engine.md) (e.g. `prototypes/mind-synthesis.py`).
-   - Output block: **Convergence** | **Productive Tensions** | **Grace-Mar Synthesis**.
+   - Output block: **Convergence** | **Productive Tensions** | **Campaign Synthesis**.
    - Do **not** run synthesis at ingest (step 1.5); only here after the three minds.
 
 5.6 **Deliberation receipt (optional)**

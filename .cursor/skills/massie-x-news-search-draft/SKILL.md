@@ -1,11 +1,11 @@
 ---
 name: massie-x-news-search-draft
-description: Runs real-time web news search on KY-4 / Massie-relevant topics and outputs cited news briefs plus suggested X post drafts for the independent analysis account (@america_first_ky). Use when the operator asks for Massie X ideas from today's news, real-time news hooks, tweet drafts from current events, or unofficial analysis social copy tied to breaking stories.
+description: Runs real-time web news search on KY-4 / Massie-relevant topics and outputs cited news briefs plus suggested X post drafts for the independent analysis account (@usa_first_ky). Use when the operator asks for Massie X ideas from today's news, real-time news hooks, tweet drafts from current events, or unofficial analysis social copy tied to breaking stories.
 ---
 
 # Massie X — real-time news search and draft posts
 
-Use this skill when drafting **suggested** X (Twitter) content for the **America First KY** account (@america_first_ky). The agent **searches the live web** for recent stories, then produces **draft-only** posts for human review. **No autonomous posting.**
+Use this skill when drafting **suggested** X (Twitter) content for the **America First Kentucky** account (@usa_first_ky). The agent **searches the live web** for recent stories, then produces **draft-only** posts for human review. **No autonomous posting.**
 
 ## Canonical context (read as needed)
 
@@ -19,7 +19,7 @@ Use this skill when drafting **suggested** X (Twitter) content for the **America
 
 | Rule | Detail |
 |------|--------|
-| **Draft only** | Output is for **Xavier** (SMM) to edit and post from @america_first_ky. Never imply the post is live. |
+| **Draft only** | Output is for **Xavier** (SMM) to edit and post from @usa_first_ky. Never imply the post is live. |
 | **Not the principal** | Do not write as Rep. Massie or as official campaign. Unofficial analysis = analysis + context + message support. |
 | **Cite everything** | Every factual claim in the news brief and every hook in a draft must trace to a **search result URL** (or principal-profile / house.gov if static). No unsourced speculation. |
 | **Documented positions** | Tie posts to **documented** Massie stances (profile, votes, public quotes). If the story doesn’t map, say “no clean Massie hook” and offer neutral context-only drafts or skip. |
@@ -61,7 +61,7 @@ Deliver in this order:
 
 - Short table or bullets: story | why it matters for KY-4 / Massie | URL
 
-**B. Draft posts — `DRAFT — NOT POSTED — @america_first_ky`**
+**B. Draft posts — `DRAFT — NOT POSTED — @usa_first_ky`**
 
 For each idea:
 

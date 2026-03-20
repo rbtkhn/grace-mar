@@ -8,10 +8,10 @@
 
 | Step | Action | Done |
 |------|--------|------|
-| 1 | Log into @america_first_ky on X (Twitter). Confirm you can view the feed and post. | [ ] |
+| 1 | Log into @usa_first_ky on X (Twitter). Confirm you can view the feed and post. | [ ] |
 | 2 | If 2FA is enabled: ensure Xavier will receive codes, or add his device/number before handoff. | [ ] |
 | 3 | Prepare credentials for Xavier: login email, password (or reset link), 2FA method. Use secure channel (Signal, in-person, etc.). | [ ] |
-| 4 | If Xavier will use his own device: send invite to add @america_first_ky to his X app, or provide login instructions. | [ ] |
+| 4 | If Xavier will use his own device: send invite to add @usa_first_ky to his X app, or provide login instructions. | [ ] |
 | 5 | Verify Xavier can log in and post a test tweet (then delete if desired). | [ ] |
 
 ---

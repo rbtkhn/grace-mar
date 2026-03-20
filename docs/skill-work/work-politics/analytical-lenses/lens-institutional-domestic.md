@@ -15,7 +15,7 @@
 
 ## Inspired-by note (not affiliation)
 
-This lens is **named for a style** of legal–populist critique often associated with **Robert Barnes**. Grace-Mar **does not** claim endorsement, representation, or partnership. Use for **structured questions** about domestic power, not as legal advice.
+This lens is **named for a style** of legal–populist critique often associated with **Robert Barnes**. This campaign analysis workflow **does not** claim endorsement, representation, or partnership. Use for **structured questions** about domestic power, not as legal advice.
 
 ---
 

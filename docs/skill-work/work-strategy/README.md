@@ -35,7 +35,7 @@ python scripts/generate_wap_daily_brief.py -u grace-mar \
 
 Default config path: `docs/skill-work/work-strategy/daily-brief-config.json`.
 
-**Operator habit:** Starting Cursor with **“good morning”** is wired in [.cursor/skills/daily-warmup/SKILL.md](../../.cursor/skills/daily-warmup/SKILL.md) and [grace-mar-bootstrap.md](../../grace-mar-bootstrap.md) as the cue to run warmup + **always** generate today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (read-only otherwise until you direct).
+**Operator habit:** Starting Cursor with **“good morning”** is wired in [.cursor/skills/daily-warmup/SKILL.md](../../.cursor/skills/daily-warmup/SKILL.md) and the bootstrap guide as the cue to run warmup + **always** generate today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (read-only otherwise until you direct).
 
 ---
 

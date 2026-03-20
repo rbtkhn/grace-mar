@@ -23,7 +23,7 @@
 1. Open `/wap` with token; create a **new job** (client, workflow type, context, optional URLs).
 2. In Cursor, run the matching skill (e.g. `.cursor/skills/massie-x-news-search-draft/SKILL.md`) with that context.
 3. Paste agent output into the job; set status **output_pasted**.
-4. Edit and post from X (@america_first_ky); set status **shipped** when done.
+4. Edit and post from X (@usa_first_ky); set status **shipped** when done.
 5. Keep [content-queue.md](skill-work/work-politics/content-queue.md) in sync for content state (idea → posted).
 
 ---

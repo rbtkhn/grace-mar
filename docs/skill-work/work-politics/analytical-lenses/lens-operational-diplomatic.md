@@ -15,7 +15,7 @@
 
 ## Inspired-by note (not affiliation)
 
-This lens is **named for a style** of granular geopolitical commentary often associated with **Alexander Mercouris**. Grace-Mar **does not** claim endorsement, representation, or partnership. Use as **one editorial angle** among three, not as a sole source of truth.
+This lens is **named for a style** of granular geopolitical commentary often associated with **Alexander Mercouris**. This campaign analysis workflow **does not** claim endorsement, representation, or partnership. Use as **one editorial angle** among three, not as a sole source of truth.
 
 ---
 

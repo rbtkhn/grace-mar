@@ -77,4 +77,17 @@ Run **after** §0–§6 drafts exist or in parallel on the same **neutral fact s
 
 ---
 
+### 8. High-stakes guardrail stress-test (when risk is elevated)
+
+If §1–§7 (or the companion’s request) touches **war powers**, **congressional ethics / insider-trading**, **cartel-economy claims with legal bite**, or **border + civil liberties** in a volatile window — **before** final sign-off, complete a factorial stress-test brief:
+
+- **Template:** [america-first-ky/stress-test-brief-template.md](america-first-ky/stress-test-brief-template.md)  
+- **Method:** [america-first-ky/guardrail-stress-test.md](america-first-ky/guardrail-stress-test.md) (four failure modes, variation table, pass/fail)
+
+**Scaffold (optional):** `python scripts/scaffold_stress_test_brief.py <issue-slug>` writes a dated copy under `america-first-ky/` (WORK only; does not touch the Record).
+
+Low-stakes engagement posts can skip §8 unless the operator wants extra discipline.
+
+---
+
 *Agent fills this when you ask for “weekly brief for [date range].”*

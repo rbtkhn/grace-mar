@@ -1,6 +1,6 @@
 # Mind Synthesis Engine (Auto + Human-gated)
 
-**Status:** WORK only. Read-only on Record. Output is draft; final synthesis by Grace-Mar core (operator) and gated for any merge.
+**Status:** WORK only. Read-only on Record. Output is draft; final synthesis by the operator and gated for any merge.
 
 ## When it runs
 
@@ -10,14 +10,14 @@ After the three analytical lenses ([work-politics/analytical-lenses](../work-pol
 
 1. **Convergence score (0–1)** — % of shared conclusions across the three lens outputs.
 2. **Tension flags** — List contradictions with brief explanation (do not flatten).
-3. **Grace-Mar Synthesis template** — Draft block that always ends with “Individuals can stay curious by…” (or equivalent invitational close).
-4. **Required output block** for every explainer-article / social-thread: **Convergence** | **Productive Tensions** | **Grace-Mar Synthesis**.
+3. **Campaign Synthesis template** — Draft block that always ends with “Individuals can stay curious by…” (or equivalent invitational close).
+4. **Required output block** for every explainer-article / social-thread: **Convergence** | **Productive Tensions** | **Campaign Synthesis**.
 
 ## Rules
 
 - Read-only on Record; synthesis output is draft only.
 - Log to WORK docs (briefs, session notes, module output); optional ACT- only when the companion approves a candidate that creates an audit line. Do **not** append full deliberation traces to `self-evidence.md`.
-- Final synthesis and any ship decision: Grace-Mar core (operator) + human sign-off; gated via RECURSION-GATE for any Record or public use.
+- Final synthesis and any ship decision: operator + human sign-off; gated via RECURSION-GATE for any Record or public use.
 
 ## Prototype
 

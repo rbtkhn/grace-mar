@@ -1,6 +1,6 @@
 # SMM workspace — one-link entry point
 
-**For:** Xavier (SMM), @america_first_ky  
+**For:** Xavier (SMM), @usa_first_ky  
 **Use:** Start here. All links in one place.
 
 ---
@@ -15,7 +15,7 @@
 
 | # | Doc | What |
 |---|-----|------|
-| 1 | [account-x.md](account-x.md) | Account spec, handle @america_first_ky, guidelines, X strategy |
+| 1 | [account-x.md](account-x.md) | Account spec, handle @usa_first_ky, guidelines, X strategy |
 | 2 | [content-queue.md](content-queue.md) | What content is in `idea`, `draft`, `review`, or `posted` state |
 | 3 | [smm-training.md](smm-training.md) | Massie voice, ally/adversary research, tactics, review checklist |
 | 4 | [principal-profile.md](principal-profile.md) | Who Massie is, race, issues, opposition |
@@ -36,7 +36,7 @@
 
 ## Quick ref
 
-**Account:** @america_first_ky  
+**Account:** @usa_first_ky  
 **Principal:** Thomas Massie (R-KY-4)  
 **Election:** KY-4 primary May 19, 2026  
 **Your job:** Respond to Massie, boost engagement, sway opinion. Agent drafts; you review and post.

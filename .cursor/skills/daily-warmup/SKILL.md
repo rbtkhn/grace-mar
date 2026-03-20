@@ -17,11 +17,11 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md
    ```
    Include the output path in your reply and a short summary (top WAP + strategy headlines, next actions).
-3. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@america_first_ky`.
+3. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@usa_first_ky`.
 4. Return the warmup brief (priorities, gate, WAP, integrity) plus:
    - daily-brief summary (with output path)
    - X scan top links (short)
-   - 1–2 draft post candidates for `@america_first_ky` (still draft-only; human approval required)
+   - 1–2 draft post candidates for `@usa_first_ky` (still draft-only; human approval required)
 5. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
 ## Run this first
@@ -47,7 +47,7 @@ Return a short operator brief with:
 - WAP blockers or next actions
 - integrity status
 - local worktree noise only if it matters for the next move
-- (Optional) X scan top links + 1–2 draft post candidates for `@america_first_ky` (draft-only)
+- (Optional) X scan top links + 1–2 draft post candidates for `@usa_first_ky` (draft-only)
 
 ## Guardrails
 

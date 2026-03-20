@@ -15,7 +15,7 @@
 
 ## Inspired-by note (not affiliation)
 
-This lens is **named for a style** of international-relations analysis often associated with **John Mearsheimer** (offensive / structural realism). Grace-Mar **does not** claim endorsement, representation, or partnership with any scholar or public figure. The operator uses this card as a **checklist for one family of questions**, not as impersonation.
+This lens is **named for a style** of international-relations analysis often associated with **John Mearsheimer** (offensive / structural realism). This campaign analysis workflow **does not** claim endorsement, representation, or partnership with any scholar or public figure. The operator uses this card as a **checklist for one family of questions**, not as impersonation.
 
 ---
 

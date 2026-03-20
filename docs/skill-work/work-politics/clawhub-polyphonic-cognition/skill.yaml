@@ -3,7 +3,7 @@
 
 name: polyphonic-cognition-protocol
 version: 1.0.0
-author: grace-mar  # Replace with your ClawHub username when publishing
+author: campaign-workflow  # Replace with your ClawHub username when publishing
 description: Run fixed-perspective decision options (A/B/C/D). From civ-mem STATE; surfaces legitimacy, structure, liability, and optional civ-mem lens. No single recommendation. Instructions only; no code, no data exfil.
 
 license: MIT

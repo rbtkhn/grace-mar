@@ -1,7 +1,7 @@
 # Civ-mem → speech / policy — human-always-approves
 
 **Territory:** work-politics (WAP)  
-**Corpus:** `civilization_memory` (CMC), indexed via `tools/cmc-index-search.py`. **Essay canon (grace-mar–owned):** edit `docs/civilization-memory/essays/` in this repo; regen encyclopedia from there. Submodule remains optional for tools/full index.  
+**Corpus:** `civilization_memory` (CMC), indexed via `tools/cmc-index-search.py`. **Essay canon (repo-owned):** edit `docs/civilization-memory/essays/` in this repo; regen encyclopedia from there. Submodule remains optional for tools/full index.
 **Invariant:** Retrieval and drafting may be automated; **no external release** without explicit human approval on **that exact artifact**.
 
 ---

@@ -108,7 +108,7 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 
 | Metric | Description | Source |
 |--------|-------------|--------|
-| X followers / engagement | @america_first_ky followers; likes, RTs, replies. | X analytics. |
+| X followers / engagement | @usa_first_ky followers; likes, RTs, replies. | X analytics. |
 | Email response rate | Campaign outreach: replies / sent. | Companion log. |
 | Cost per acquisition | If running paid lead gen: spend / new paid client. | Ad spend + revenue-log. |
 

@@ -39,7 +39,7 @@ Design content so that **every layer is shareable** and **each layer pulls to th
 | **L2: One idea** | 30-sec video, carousel (3–5 slides), short post | "Peace isn't the reward. Peace is the condition. Here's what that means in one sentence." | "Read the one-pager" / "Ask your clergy to read this" → L4 |
 | **L3: Three ideas** | 90-sec video, one-pager (single page) | Door + seam + children's question. | "Read the letter summary" / "Share with your tradition" → L5 |
 | **L4: Full summary** | 2–3 page letter summary, 3–5 min read | Executive summary of the Condition: two propositions, seam, ask, children's question. | "Read the full letter" / "Send to your religious leader" → L5 |
-| **L5: Full letter** | Full [THE-SIMPLE-CONDITION](https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/THE-SIMPLE-CONDITION.md) or pamphlet | For clergy, scholars, committed readers. | "Use the pulpit reading" / "Teach the children's question" |
+| **L5: Full letter** | Full [THE-SIMPLE-CONDITION](../../../civilization-memory/essays/THE-SIMPLE-CONDITION.md) or pamphlet | For clergy, scholars, committed readers. | "Use the pulpit reading" / "Teach the children's question" |
 
 **Rule:** Every asset at L1–L4 ends with a single, clear next step. No "follow us" without "and do this."
 

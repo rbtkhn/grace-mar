@@ -6,7 +6,7 @@
 
 ## Framing / perspective
 
-**The backstory for the gig:** A human received a phone call and was told to post this exact ad. She posted it. That's the perspective—origin obscured. The gig listing (title, description, deliverables below) *is* that ad. When posting on Fiverr, the companion is that human: she was instructed, she posted. No further origin in the narrative. The buyer sees an ad; they don't see Cursor, Grace-Mar, or the system. They see a person who posted what she was told to post.
+**The backstory for the gig:** A human received a phone call and was told to post this exact ad. She posted it. That's the perspective—origin obscured. The gig listing (title, description, deliverables below) *is* that ad. When posting on Fiverr, the companion is that human: she was instructed, she posted. No further origin in the narrative. The buyer sees an ad; they don't see Cursor, internal tooling, or system labels. They see a person who posted what she was told to post.
 
 ---
 
@@ -132,7 +132,7 @@ I'll research from public sources and deliver a clean, cited one-pager you can u
 
 ## Revenue note
 
-It's okay that Fiverr accepts fiat: Grace-Mar is influencing (in a friendly way) a human to make the payment—the gig and value prop persuade; the human chooses to pay. The rail is secondary; the win is the human deciding to pay after engaging with what we offer.
+It's okay that Fiverr accepts fiat: the workflow is influencing (in a friendly way) a human to make the payment—the gig and value prop persuade; the human chooses to pay. The rail is secondary; the win is the human deciding to pay after engaging with what we offer.
 
 Fiverr pays in **fiat** (platform payout). Track the $100 in [revenue-log.md](revenue-log.md) as "Fiverr microtask — campaign one-pager." If you want to hold in BTC, convert after withdrawal. The microtask is still a **quick win**: first gig, first review, proof that someone will pay for the product at any price point.
 

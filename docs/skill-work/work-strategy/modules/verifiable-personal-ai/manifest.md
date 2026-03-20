@@ -34,4 +34,4 @@
 
 ## Inspired-by (disclaimer)
 
-“Verifiable” here means **operator-documented traceability**, not ECCVCC-style consensus. External projects (e.g. decentralized AI mainnets) are **not** endorsed; this module is Grace-Mar WORK methodology only.
+“Verifiable” here means **operator-documented traceability**, not ECCVCC-style consensus. External projects (e.g. decentralized AI mainnets) are **not** endorsed; this module is campaign WORK methodology only.

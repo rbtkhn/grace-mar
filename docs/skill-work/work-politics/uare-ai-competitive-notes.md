@@ -82,7 +82,7 @@
 
 ---
 
-## Use for grace-mar positioning
+## Use for campaign positioning
 
 - **Shared ground:** User-owned, evidence-from-you-only, anti-hallucination ("I don't know"), identity that outlives model churn, values and voice.
 - **Differentiation:** Open repo, portable PRP/.grace, explicit human gate (RECURSION-GATE), no vendor lock-in, optional local/offline, developer- and research-friendly; Uare is proprietary SaaS, no public export format, no visible gated-merge workflow.

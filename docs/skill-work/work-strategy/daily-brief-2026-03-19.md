@@ -28,7 +28,7 @@ _Operator WORK product. Complete synthesis below; cite sources before any public
 
 _From `docs/skill-work/work-strategy/daily-brief-focus.md` § Active focus._
 
-- Grace-Mar / Companion Self positioning: portable Record, human-only merge, Voice boundary.
+- Campaign/companion positioning: portable Record, human-only merge, Voice boundary.
 - OpenClaw ↔ repo handback and export provenance (see [work-dev workspace](../work-dev/workspace.md)).
 - AI-in-schools and identity-substrate narrative vs Alpha-style bundles (see [work-alpha-school](../work-alpha-school/README.md), [work-dev offers](../work-dev/offers.md)).
 - Optional: federal / state AI governance headlines when relevant to offers or civ-mem work.

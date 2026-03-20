@@ -17,7 +17,7 @@
 
 2.5 **Triangulation (mandatory)**
    - Invoke the three analytical lenses per [work-politics/analytical-lenses](../work-politics/analytical-lenses/manifest.md).
-   - Then run [synthesis-engine](synthesis-engine.md) (e.g. `prototypes/mind-synthesis.py`) to produce the **Convergence** | **Productive Tensions** | **Grace-Mar Synthesis** block.
+   - Then run [synthesis-engine](synthesis-engine.md) (e.g. `prototypes/mind-synthesis.py`) to produce the **Convergence** | **Productive Tensions** | **Campaign Synthesis** block.
 
 3. **Draft Generation**
    - Consolidate into markdown draft + citations; stage for approval.

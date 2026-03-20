@@ -21,7 +21,7 @@ Run all **three** on the **same neutral fact summary** when using this framework
 ## Rules (human-enforced)
 
 1. **Parallel inputs** — Each lens answers from the same neutral fact summary (no lens-specific cherry-picking of unrelated facts).
-2. **Outputs are drafts** — Grace-Mar core / operator performs final synthesis; nothing ships without human sign-off ([consulting-charter.md](../consulting-charter.md), [civ-mem-draft-protocol.md](../civ-mem-draft-protocol.md)).
+2. **Outputs are drafts** — the operator performs final synthesis; nothing ships without human sign-off ([consulting-charter.md](../consulting-charter.md), [civ-mem-draft-protocol.md](../civ-mem-draft-protocol.md)).
 3. **Contradictions are signal** — Where lenses disagree, **surface the tension**; do not flatten for narrative smoothness. Aligns with contradiction preservation in the [CONTRADICTION-ENGINE-SPEC](../../../CONTRADICTION-ENGINE-SPEC.md) spirit.
 4. **No automated governance hooks** — This workflow is **not** enforced by `governance_checker.py` (that script scans Python for risky Record writes). Discipline is operator/process.
 5. **Logging** — Do **not** append full deliberation traces to `self-evidence.md`. Use:

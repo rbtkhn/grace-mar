@@ -6,7 +6,7 @@
 
 ## Before you start
 
-- [ ] You have X (Twitter) account access for @america_first_ky (login, 2FA if applicable)
+- [ ] You have X (Twitter) account access for @usa_first_ky (login, 2FA if applicable)
 - [ ] You have access to this repo or the onboarding docs (companion provides)
 
 ---
@@ -22,7 +22,7 @@
 
 ## Midday: access and baseline
 
-- [ ] Log into @america_first_ky on X; confirm you can view and post
+- [ ] Log into @usa_first_ky on X; confirm you can view and post
 - [ ] Capture baseline metrics (companion or you): follower count, recent engagement — for "before/after" in 30 days
 
 ---

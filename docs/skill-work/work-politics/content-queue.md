@@ -1,4 +1,4 @@
-# Content queue — @america_first_ky
+# Content queue — @usa_first_ky
 
 Structured queue for X / content operations.
 

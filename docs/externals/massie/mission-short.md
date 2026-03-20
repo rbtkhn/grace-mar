@@ -1,0 +1,3 @@
+# Mission - America First Kentucky
+
+America First Kentucky is sovereign constitutional intelligence built to support Rep. Thomas Massie and independent leaders who put principle over power. We provide strategic clarity, rapid principled messaging, and long-term vision for constitutional leadership. Our mission is simple: end blank-check wars and restore war powers to Congress, eliminate insider corruption and congressional self-dealing, and dismantle the cartel economy crushing working families while securing the border and defending civil liberties. We do not replace human leadership; we strengthen it with wisdom, speed, and integrity. This is independent leadership for the digital age.

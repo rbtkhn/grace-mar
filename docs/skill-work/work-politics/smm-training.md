@@ -1,4 +1,4 @@
-# Social media manager training — @america_first_ky
+# Social media manager training — @usa_first_ky
 
 **Audience:** Xavier (SMM). Reference for voice calibration, authenticity checks, and draft refinement.
 
