@@ -151,8 +151,10 @@ def build_report(
             for r in env_rows:
                 rm = r.get("replay_mode")
                 rm_s = f" — replay_mode=`{rm}`" if rm else ""
+                par = r.get("parent_event_id")
+                par_s = f" — parent=`{par}`" if par else ""
                 lines.append(
-                    f"- `{r.get('event_id')}` — **{r.get('event')}**{rm_s} — envelope v{r.get('envelope_version', '?')}"
+                    f"- `{r.get('event_id')}` — **{r.get('event')}**{rm_s}{par_s} — envelope v{r.get('envelope_version', '?')}"
                 )
 
         lines.extend(

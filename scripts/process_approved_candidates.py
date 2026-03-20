@@ -31,7 +31,9 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
+from emit_pipeline_event import append_pipeline_event
 from harness_events import append_harness_event
+from pipeline_correlation import find_staged_event_id_for_candidate
 from recursion_gate_review import split_gate_sections
 from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
 
@@ -713,7 +715,7 @@ def _safe_pipeline_str(s: str, max_len: int) -> str:
     return t[:max_len] if len(t) > max_len else t
 
 
-def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str) -> None:
+def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str) -> dict:
     block = c.get("block") or ""
     cat = (c.get("mind_category") or "").lower()
     pt = c.get("profile_target") or ""
@@ -730,7 +732,7 @@ def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str
         re.search(r"contradictions_detected|conflicts_detected|CONFLICT:", block, re.I)
     )
     ch = (c.get("channel_key") or "operator:cli").strip() or "operator:cli"
-    merge_payload = {
+    merge_payload: dict = {
         "event_schema": 2,
         "evidence_id": act_id,
         "ix_entry_id": ix_entry_id,
@@ -744,22 +746,12 @@ def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str
         "actor": _safe_pipeline_str(approved_by, 120),
         "channel_key": _safe_pipeline_str(ch, 100),
         "replay_mode": "merge",
+        "candidate_ref": f"recursion-gate.md#{c['id']}",
     }
-    subprocess.run(
-        [
-            sys.executable,
-            "scripts/emit_pipeline_event.py",
-            "--user",
-            USER_ID,
-            "--merge-json",
-            json.dumps(merge_payload, ensure_ascii=False),
-            "applied",
-            c["id"],
-        ],
-        cwd=REPO_ROOT,
-        check=False,
-        capture_output=True,
-    )
+    parent = find_staged_event_id_for_candidate(PROFILE_DIR / "pipeline-events.jsonl", c["id"])
+    if parent:
+        merge_payload["parent_event_id"] = parent
+    return append_pipeline_event(USER_ID, "applied", c["id"], merge=merge_payload)
 
 
 def _run_openclaw_export(
@@ -1025,19 +1017,35 @@ def main() -> None:
         }
         _append_merge_receipt(receipt_event)
         print(f"Merge receipt appended: {MERGE_RECEIPTS_PATH}")
+
+        applied_pipeline_event_ids: list[str] = []
+        staged_parent_event_ids: list[str] = []
+        for c, act_id, ix_entry_id in applied_candidates:
+            ev = _emit_applied_event(c, act_id, ix_entry_id, args.approved_by.strip())
+            eid = ev.get("event_id")
+            if eid:
+                applied_pipeline_event_ids.append(str(eid))
+            pid = ev.get("parent_event_id")
+            if pid and str(pid) not in staged_parent_event_ids:
+                staged_parent_event_ids.append(str(pid))
+
+        harness_kw: dict = {
+            "path": str(MERGE_RECEIPTS_PATH.relative_to(REPO_ROOT)),
+            "candidate_ids": receipt.get("candidate_ids"),
+            "approved_by": receipt.get("approved_by"),
+            "merged_at": receipt_event.get("merged_at"),
+            "replay_mode": "merge",
+        }
+        if applied_pipeline_event_ids:
+            harness_kw["applied_pipeline_event_ids"] = applied_pipeline_event_ids
+        if staged_parent_event_ids:
+            harness_kw["staged_parent_event_ids"] = staged_parent_event_ids
         append_harness_event(
             USER_ID,
             "process_approved_candidates",
             "merge_applied",
-            path=str(MERGE_RECEIPTS_PATH.relative_to(REPO_ROOT)),
-            candidate_ids=receipt.get("candidate_ids"),
-            approved_by=receipt.get("approved_by"),
-            merged_at=receipt_event.get("merged_at"),
-            replay_mode="merge",
+            **harness_kw,
         )
-
-        for c, act_id, ix_entry_id in applied_candidates:
-            _emit_applied_event(c, act_id, ix_entry_id, args.approved_by.strip())
 
         post_ok, post_reason = _run_integrity_validation(min_tier)
         if not post_ok:

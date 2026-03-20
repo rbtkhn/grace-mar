@@ -78,6 +78,11 @@ try:
 except ImportError:
     from scripts.pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
 
+try:
+    from pipeline_correlation import find_staged_event_id_for_candidate
+except ImportError:
+    from scripts.pipeline_correlation import find_staged_event_id_for_candidate
+
 logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -1003,6 +1008,7 @@ channel_key: {channel_key}
         event_schema=2,
         conflicts_detected=len(conflicts) > 0,
         replay_mode="proposal",
+        candidate_ref=f"recursion-gate.md#{candidate_id}",
         **enrich,
     )
     return True
@@ -1586,6 +1592,10 @@ def update_candidate_status(
     if source:
         kwargs["source"] = source
     kwargs["replay_mode"] = "gate"
+    kwargs["candidate_ref"] = f"recursion-gate.md#{candidate_id}"
+    parent = find_staged_event_id_for_candidate(PIPELINE_EVENTS_PATH, candidate_id)
+    if parent:
+        kwargs["parent_event_id"] = parent
     emit_pipeline_event(status, candidate_id, **kwargs)
     return True
 

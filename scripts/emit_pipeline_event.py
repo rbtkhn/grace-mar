@@ -37,6 +37,41 @@ except ImportError:
     from scripts.pipeline_event_envelope import ENVELOPE_VERSION, new_pipeline_event_id
 
 
+def append_pipeline_event(
+    user_id: str,
+    event_type: str,
+    candidate_id: str | None,
+    *,
+    merge: dict | None = None,
+    extras: dict[str, str] | None = None,
+) -> dict:
+    """
+    Append one JSON line to users/<user_id>/pipeline-events.jsonl.
+    Returns the full event dict (includes event_id). Prefer this over subprocess from
+    process_approved_candidates so callers can correlate IDs.
+    """
+    fork = user_id.strip() or "grace-mar"
+    cid = candidate_id.strip() if candidate_id else None
+    if cid and cid.lower() == "none":
+        cid = None
+    et = event_type.lower().strip()
+    event: dict = {
+        "ts": datetime.now().isoformat(),
+        "event": et,
+        "candidate_id": cid,
+        **(merge or {}),
+        **(extras or {}),
+    }
+    event.setdefault("event_id", new_pipeline_event_id(fork))
+    event.setdefault("fork_id", fork)
+    event.setdefault("envelope_version", ENVELOPE_VERSION)
+    events_path = REPO_ROOT / "users" / user_id / "pipeline-events.jsonl"
+    events_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(events_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(event, ensure_ascii=False) + "\n")
+    return event
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Append event to pipeline ledger.")
     parser.add_argument(
@@ -67,7 +102,6 @@ def main() -> None:
     if candidate_id and candidate_id.lower() == "none":
         candidate_id = None
 
-    events_path = REPO_ROOT / "users" / args.user / "pipeline-events.jsonl"
     merge: dict = {}
     if args.merge_json:
         try:
@@ -84,20 +118,7 @@ def main() -> None:
         if "=" in arg:
             k, v = arg.split("=", 1)
             extras[k] = v
-    event = {
-        "ts": datetime.now().isoformat(),
-        "event": event_type,
-        "candidate_id": candidate_id,
-        **merge,
-        **extras,
-    }
-    fork = args.user.strip() or "grace-mar"
-    event.setdefault("event_id", new_pipeline_event_id(fork))
-    event.setdefault("fork_id", fork)
-    event.setdefault("envelope_version", ENVELOPE_VERSION)
-    events_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(events_path, "a", encoding="utf-8") as f:
-        f.write(json.dumps(event) + "\n")
+    append_pipeline_event(args.user, event_type, candidate_id, merge=merge, extras=extras)
     print(f"Emitted {event_type} {candidate_id or '(none)'} for {args.user}")
 
 

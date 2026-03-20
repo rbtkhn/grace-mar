@@ -113,8 +113,10 @@ Start with a **single event page** (or markdown report):
 | Answer replay | Not built; transcript optional | Full prompt assembly + routing + tools |
 | Validator linkage | Manual follow-up | `validator_refs` in envelope |
 | Event ID | **`event_id`** on new `pipeline-events.jsonl` and `harness-events.jsonl` lines (`evt_YYYYMMDD_HHMMSS_<hex>`), plus **`fork_id`**, **`envelope_version`**, optional **`replay_mode`** (`proposal` \| `merge` \| `gate` \| `debate` \| `dyad` \| `policy`) | Richer envelope with `record_refs`, `routing`, … |
+| Staged → merge chain | **`parent_event_id`** on `applied` / `approved` / `rejected` lines when a matching prior **`staged`** row has **`event_id`**; **`candidate_ref`** (`recursion-gate.md#CANDIDATE-…`) on staged, gate, and applied | Full graph in one envelope |
+| Merge batch (harness) | **`applied_pipeline_event_ids`** and **`staged_parent_event_ids`** on `merge_applied` (after per-candidate `applied` lines are written) | Single batch points at pipeline ids |
 
-Emitted by: `scripts/emit_pipeline_event.py`, `bot/core.emit_pipeline_event`, `scripts/harness_events.append_harness_event`. Older JSONL lines omit these fields; readers should treat them as optional.
+Emitted by: `scripts/emit_pipeline_event.py`, `bot/core.emit_pipeline_event`, `scripts/harness_events.append_harness_event`, `scripts/process_approved_candidates.py` (`append_pipeline_event`). Older JSONL lines omit these fields; readers should treat them as optional.
 
 Operational doc: [harness-replay.md](harness-replay.md).
 
