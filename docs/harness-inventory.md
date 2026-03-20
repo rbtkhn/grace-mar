@@ -117,7 +117,7 @@ Anything else writing SELF/EVIDENCE/prompt should be treated as **policy violati
 
 Optional append-only **`users/<id>/harness-events.jsonl`**: merge applied, OpenClaw export, etc. — Cursor-style replay without chat. See `scripts/harness_events.py`; emitted by merge hook and OpenClaw hook when configured.
 
-**Correlate audit + gate for a candidate:** [harness-replay.md](harness-replay.md) — `python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-nnnn` pulls `pipeline-events.jsonl`, `harness-events.jsonl`, `merge-receipts.jsonl`, and the matching YAML block from `recursion-gate.md` (pending or **Processed**). Does not reconstruct full LLM prompts unless logged elsewhere.
+**Correlate audit + gate for a candidate:** [harness-replay.md](harness-replay.md) — `python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-nnnn` pulls `pipeline-events.jsonl`, `harness-events.jsonl`, `merge-receipts.jsonl`, and the matching YAML block from `recursion-gate.md` (pending or **Processed**). Does not reconstruct full LLM prompts unless logged elsewhere. **Vision** (answer / proposal / merge replay, event envelope): [harness-replay-spec.md](harness-replay-spec.md).
 
 Recommended generic action vocabulary:
 - `runtime_bundle_export`

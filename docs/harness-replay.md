@@ -1,6 +1,8 @@
 # Harness event replay
 
-**Purpose:** Reconstruct **audit-lane** context for a **staged proposal** (candidate) or **bundle** export—**not** a full neural “why did the model say X” trace unless that was logged elsewhere.
+**North star (full causal debugger):** See [harness-replay-spec.md](harness-replay-spec.md) — three modes (answer / proposal / merge), future event envelope, UI shape, and pairing with the [boundary review queue](boundary-review-queue.md).
+
+**Purpose (this CLI):** Reconstruct **audit-lane** context for a **staged proposal** (candidate) or **bundle** export—**not** a full neural “why did the model say X” trace unless that was logged elsewhere.
 
 Grace-Mar separates **record**, **runtime**, **audit**, and **policy** ([harness-inventory.md](harness-inventory.md)). Replay pulls from the **audit** lane:
 
@@ -34,5 +36,6 @@ Output is **markdown** to stdout; redirect to a file for tickets.
 
 ## Related
 
+- [harness-replay-spec.md](harness-replay-spec.md) — product spec and roadmap
 - [harness-inventory.md](harness-inventory.md) — audit stream vocabulary
 - [operator-weekly-review.md](operator-weekly-review.md) — gate rhythm

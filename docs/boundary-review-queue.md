@@ -51,6 +51,7 @@ Every item keeps **evidence links** (`evidence_id`, `intake_evidence_id`, ACT-*)
 ## Related
 
 - [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md) — ontology.
+- [harness-replay-spec.md](harness-replay-spec.md) — causal replay (why the system routed here); complements boundary queue (where things should go).
 - [operator-weekly-review.md](operator-weekly-review.md) — rhythm.
 - `scripts/recursion_gate_review.py` — `boundary_review` on each candidate row.
 - `miniapp/operator-inbox.html` — displays boundary warnings.
