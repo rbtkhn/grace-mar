@@ -574,6 +574,24 @@ def _append_self_archive_entry(
     _write(SELF_ARCHIVE_PATH, new_content)
 
 
+def _append_session_log_for_merge(candidate_ids: list[str], approved_by: str) -> None:
+    """Append one line per merged candidate under ## Pipeline merge (automated)."""
+    path = PROFILE_DIR / "session-log.md"
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    lines = "\n".join(
+        f"- {ts} | pipeline merge | {cid} | approved by {approved_by}" for cid in candidate_ids
+    )
+    section = "\n\n## Pipeline merge (automated)\n\n"
+    existing = _read(path)
+    if not existing.strip():
+        _write(path, f"# SESSION LOG — {USER_ID}\n\n{section.strip()}\n\n{lines}\n")
+        return
+    if "## Pipeline merge (automated)" not in existing:
+        _write(path, existing.rstrip() + section + lines + "\n")
+    else:
+        _write(path, existing.rstrip() + "\n" + lines + "\n")
+
+
 def merge_candidate_in_memory(
     c: dict,
     self_content: str,
@@ -1092,6 +1110,11 @@ def main() -> None:
                 _extract_source_exchange_snippet(c["block"]),
             )
         print("SELF-ARCHIVE updated.")
+        try:
+            _append_session_log_for_merge([c["id"] for c, _, _ in applied_candidates], args.approved_by.strip())
+            print("session-log.md updated.")
+        except OSError as exc:
+            print(f"Warning: session-log append failed: {exc}", file=sys.stderr)
         if args.export_openclaw:
             export_ok, export_msg = _run_openclaw_export(
                 user_id=USER_ID,

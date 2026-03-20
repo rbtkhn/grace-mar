@@ -174,6 +174,13 @@ python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --ge
 python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json
 ```
 
+**Atomic orchestration (optional):** same merge semantics as `--quick` / gate quick-merge — `scripts/atomic_integrate.py` adds preflight, disk backup under `users/<id>/.integration-backups/`, optional `validate-integrity.py` after success, and a JSON receipt under `users/<id>/integration-receipts/`. Example (candidate must already be `approved` in the gate):
+
+```bash
+python3 scripts/atomic_integrate.py -u grace-mar --candidate-id CANDIDATE-XXXX --approved-by <name> --apply
+# Dry run (preflight + receipt only): omit --apply
+```
+
 ### Intent and integrity
 ```bash
 python3 scripts/export_intent_snapshot.py --user grace-mar

@@ -27,6 +27,10 @@ Pods/
 *.swo
 .DS_Store
 
+# Atomic integrate — local backups & receipts (merge semantics unchanged)
+users/*/.integration-backups/
+users/*/integration-receipts/
+
 # Work-politics SQLite workflow state (local; do not commit)
 users/*/work-politics/*.db
 

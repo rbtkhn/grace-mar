@@ -165,12 +165,14 @@ What "good" looks like for Grace-Mar:
 
 When pipeline candidates are approved, **merge** into all of these together. **Merge only via script:** The agent must **not** edit `self.md`, `self-evidence.md`, `recursion-gate.md`, `session-log.md`, or `bot/prompt.py` directly. It must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow: `--generate-receipt` then `--apply --receipt`). This prevents five-file drift and preserves the audit trail. Only the script performs the atomic update across all files.
 
+**Optional orchestration:** `scripts/atomic_integrate.py` runs the same merge (`--quick` / receipt-based semantics) with extra disk backups and a JSON receipt; it does not replace `process_approved_candidates.py`.
+
 | File | What to update |
 |------|---------------|
 | `users/[id]/self.md` | New entries merged into IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
 | `users/[id]/self-evidence.md` | New activity log entry (ACT-XXXX) |
 | `users/[id]/recursion-gate.md` | Move candidates from Candidates to Processed |
-| `users/[id]/session-log.md` | New session record |
+| `users/[id]/session-log.md` | New session record; pipeline merges append lines under `## Pipeline merge (automated)` |
 | `users/[id]/self-archive.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/pipeline-events.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
