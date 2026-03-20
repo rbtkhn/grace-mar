@@ -39,7 +39,7 @@ Civilization memory has **no monetary purpose**. Its purpose is **pure understan
 - **Curriculum design** — source material for `work-alpha-school` history sequencing, reading paths, or comparison units
 - **Strategic analogy** — external historical context for institutional, political, or civilizational pattern analysis
 - **Work support** — input for `work-civ-mem`, `work-politics`, operator research, and strategy writing  
-  - WAP: [civ-mem-draft-protocol.md](../work-politics/civ-mem-draft-protocol.md) (human-always-approves on any ship)
+  - work-politics: [civ-mem-draft-protocol.md](../work-politics/civ-mem-draft-protocol.md) (human-always-approves on any ship)
 - **Library and canon support** — a return-to reference source inside `self-library`
 
 ### Safe vs unsafe boundary

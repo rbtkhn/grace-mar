@@ -46,12 +46,13 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
         duplicate_note = ""
         if r.get("duplicate_hints"):
             duplicate_note = f'<p class="hint">{html.escape(r["duplicate_hints"][0])}</p>'
+        pill_slug = "wap" if r.get("territory") == TERRITORY_WAP else "companion"
         cards.append(
             f"""
     <article class="card" data-territory="{html.escape(r['territory'])}" data-risk="{html.escape(r['risk_tier'])}">
       <header>
         <span class="id">{html.escape(r['id'])}</span>
-        <span class="pill pill-{r['territory_label'].lower()}">{html.escape(r['territory_label'])}</span>
+        <span class="pill pill-{pill_slug}">{html.escape(r['territory_label'])}</span>
         <span class="pill pill-risk">{html.escape(r['risk_tier'])}</span>
         <span class="age" title="since timestamp">{html.escape(_age_label(r['age_days']))}</span>
       </header>
@@ -177,12 +178,12 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
   <p class="sub">Read-only view of <code>{html.escape(gate_rel)}</code> · edit status in the markdown file, then merge. Generated {html.escape(gen)}</p>
   <div class="stats">
     <span class="stat"><strong>{n}</strong> pending</span>
-    <span class="stat">WAP <strong>{wap_n}</strong></span>
+    <span class="stat">Work-politics <strong>{wap_n}</strong></span>
     <span class="stat">Companion <strong>{comp_n}</strong></span>
   </div>
   <div class="filters" role="tablist">
     <button type="button" class="active" data-filter="all">All</button>
-    <button type="button" data-filter="{html.escape(TERRITORY_WAP)}">WAP</button>
+    <button type="button" data-filter="{html.escape(TERRITORY_WAP)}">Work-politics</button>
     <button type="button" data-filter="companion">Companion</button>
     <button type="button" data-filter="quick_merge_eligible">Quick merge</button>
     <button type="button" data-filter="manual_escalate">Escalate</button>

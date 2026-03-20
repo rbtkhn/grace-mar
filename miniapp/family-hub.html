@@ -173,7 +173,7 @@
         <div class="mergeRow">
           <button type="button" class="primary" id="mergeCompanion">Merge approved (companion)</button>
           <button type="button" id="mergeAll">Merge all</button>
-          <button type="button" id="mergeWap">Merge WAP only</button>
+          <button type="button" id="mergeWap">Merge work-politics only</button>
         </div>
         <div id="mergeMsg" class="logOk" style="margin-bottom:0.75rem;"></div>
         <div id="gateCards" class="cards"></div>
@@ -458,7 +458,7 @@
   }
 
   function doMerge(territory) {
-    var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'WAP' : 'all';
+    var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'work-politics' : 'all';
     if (!confirm('Merge all APPROVED for "' + label + '" into the Record?')) return;
     fetch('/operator/gate-candidates/merge-approved', {
       method: 'POST',

@@ -25,7 +25,7 @@ def build_wap_pulse(user_id: str = "grace-mar", include_brief_preview: bool = Fa
     docs = snapshot["doc_statuses"]
 
     lines = [
-        "# WAP pulse",
+        "# Work-politics pulse",
         "",
         f"- Territory: `{snapshot['territory']}`",
         f"- Principal: {snapshot['principal']['name']} ({snapshot['principal']['district']})",
@@ -47,7 +47,7 @@ def build_wap_pulse(user_id: str = "grace-mar", include_brief_preview: bool = Fa
             "",
             f"- Brief sources: ready={brief['status_counts'].get('ready', 0)}, watch={brief['status_counts'].get('watch', 0)}, needs_refresh={brief['status_counts'].get('needs_refresh', 0)}",
             f"- Content queue: idea={content['status_counts'].get('idea', 0)}, draft={content['status_counts'].get('draft', 0)}, review={content['status_counts'].get('review', 0)}, posted={content['status_counts'].get('posted', 0)}",
-            f"- Pending WAP gate items: {gate['pending_count']}",
+            f"- Pending work-politics gate items: {gate['pending_count']}",
             "",
             "## Blockers",
             "",
@@ -57,7 +57,7 @@ def build_wap_pulse(user_id: str = "grace-mar", include_brief_preview: bool = Fa
         for item in blockers:
             lines.append(f"- {item['title']} -> {item['action']}")
     else:
-        lines.append("- No WAP blockers detected.")
+        lines.append("- No work-politics blockers detected.")
 
     lines.extend(["", "## Doc freshness", ""])
     for doc in docs:
@@ -82,7 +82,7 @@ def build_wap_pulse(user_id: str = "grace-mar", include_brief_preview: bool = Fa
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate a WAP operator pulse.")
+    parser = argparse.ArgumentParser(description="Generate a work-politics operator pulse.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--brief-preview", action="store_true", help="Append the top of the weekly brief scaffold.")
     args = parser.parse_args()

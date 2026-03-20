@@ -12,7 +12,7 @@ This repo **does not** implement clinical triage. We **borrow** the *epistemic* 
 
 | In scope | Out of scope |
 |----------|----------------|
-| WAP briefs, X draft packages, opposition memos labeled high-stakes | Automated merge into SELF / EVIDENCE |
+| work-politics briefs, X draft packages, opposition memos labeled high-stakes | Automated merge into SELF / EVIDENCE |
 | Operator- and SMM-enforced checklists | `governance_checker.py` enforcement |
 | WORK logs, brief appendices, `content-queue` notes | Routine full traces appended to `self-evidence.md` |
 | Optional pipeline events (`stress_test_proposed`, etc.) via `emit_pipeline_event.py` | Fabricated Python hooks in `governance_checker.py` |

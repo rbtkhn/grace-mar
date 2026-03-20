@@ -1,4 +1,4 @@
-# Client template — WAP
+# Client template — work-politics
 
 Copy to `clients/<jurisdiction>-<slug>.md`. One active client per file.
 

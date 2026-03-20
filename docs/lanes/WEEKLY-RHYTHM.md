@@ -7,7 +7,7 @@ Run **once per week** (e.g. same calendar slot). Tick what you did; skip lanes t
 | 1 | **Record** | Open `recursion-gate.md` — pending count 0 or explicit decisions (approve / reject / defer) | ☐ |
 | 2 | **Record** | If companion had Voice milestones: stage or note **doc-only this week** (README WPC rhythm idea) | ☐ |
 | 3 | **WPC** | Refresh [brief-source-registry](../skill-work/work-politics/brief-source-registry.md); run brief generator + **§0 recency** live pass | ☐ |
-| 4 | **WPC** | One line in head: **doc-only** vs **one WAP candidate staged** | ☐ |
+| 4 | **WPC** | One line in head: **doc-only** vs **one work-politics candidate staged** | ☐ |
 | 5 | **Civ-mem** | If active: one retrieval or index sanity check; no ship without human approval | ☐ |
 | 6 | **Operator** | Skim [operator-cognition.md](operator-cognition.md) north star — still true? | ☐ |
 | 7 | **Repo** | `python3 scripts/harness_warmup.py -u grace-mar --compact` pasted or run | ☐ |

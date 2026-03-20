@@ -2,7 +2,7 @@
 """
 Structured operator state for work-politics (CLI: wap).
 
-Builds a dashboard-friendly snapshot from WAP docs and the canonical gate.
+Builds a dashboard-friendly snapshot from work-politics docs and the canonical gate.
 """
 
 from __future__ import annotations
@@ -228,8 +228,8 @@ def _territory_blockers(user_id: str) -> list[dict[str, str]]:
         blockers.append(
             {
                 "kind": "gate_rhythm",
-                "title": "No live WAP candidates in RECURSION-GATE",
-                "action": "Confirm this is a doc-only week or stage one WAP milestone so audit continuity stays current.",
+                "title": "No live work-politics candidates in RECURSION-GATE",
+                "action": "Confirm this is a doc-only week or stage one work-politics milestone so audit continuity stays current.",
             }
         )
     if _brief_readiness()["needs_refresh"]:

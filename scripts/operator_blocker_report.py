@@ -179,10 +179,10 @@ def main() -> int:
     lines.append(f"**User:** {user_id}")
     if args.territory == "all":
         lines.append(
-            f"**Pending by territory:** WAP {len(wap_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
+            f"**Pending by territory:** work-politics {len(wap_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
         )
         lines.append(
-            f"_Lens:_ `--territory wap` | `--territory companion` | `all` (default). WAP = `territory: work-politics` or `channel_key: operator:wap`."
+            f"_Lens:_ `--territory wap` | `--territory companion` | `all` (default). Work-politics territory = `territory: work-politics` or `channel_key: operator:wap`."
         )
     else:
         lines.append(f"**Territory lens:** {args.territory} ({len(pending)} pending)")
@@ -221,7 +221,7 @@ def main() -> int:
 
     # Staged candidates
     if args.territory == "all" and (wap_pending or companion_pending):
-        lines.append("## Staged — work-politics (WAP)")
+        lines.append("## Staged — work-politics")
         if not wap_pending:
             lines.append("- None")
         else:

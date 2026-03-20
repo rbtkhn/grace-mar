@@ -1,7 +1,7 @@
 # Civ-mem test run — 2026-03-14
 
 **Status:** DRAFT — NOT APPROVED FOR RELEASE (G3 open)  
-**Principal context:** WAP / Rep. Massie shadow-campaign support (tone: constitutional restraint, Congress’s role).  
+**Principal context:** work-politics / Rep. Massie shadow-campaign support (tone: constitutional restraint, Congress’s role).  
 **Purpose:** Exercise **human-always-approves** pipeline once end-to-end.
 
 ---

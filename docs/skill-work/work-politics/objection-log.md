@@ -1,4 +1,4 @@
-# WAP objection log
+# work-politics objection log
 
 Structured learning surface for outreach replies, calls, and proposal friction.
 

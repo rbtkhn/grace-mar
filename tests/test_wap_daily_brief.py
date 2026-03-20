@@ -22,7 +22,7 @@ CONFIG = REPO / "docs" / "skill-work" / "work-strategy" / "daily-brief-config.js
 
 @pytest.mark.skipif(not CONFIG.exists(), reason="daily-brief-config.json not in tree")
 def test_build_daily_brief_no_fetch_smoke():
-    """Offline path: WAP snapshot + strategy focus + empty RSS section; must not raise."""
+    """Offline path: work-politics snapshot + strategy focus + empty RSS section; must not raise."""
     text = build_daily_brief(
         "grace-mar",
         fetch_feeds=False,
@@ -33,7 +33,7 @@ def test_build_daily_brief_no_fetch_smoke():
         max_per_feed_override=None,
     )
     assert text.startswith("# Daily brief")
-    assert "## 1. Work-politics (WAP) snapshot" in text
+    assert "## 1. Work-politics snapshot" in text
     assert "## 1b. Work-strategy focus" in text
     assert "## 2. Headlines (ingested RSS)" in text
     assert "RSS skipped" in text

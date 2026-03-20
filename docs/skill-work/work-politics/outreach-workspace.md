@@ -1,4 +1,4 @@
-# WAP outreach workspace
+# work-politics outreach workspace
 
 Canonical operator entrypoint for outreach inside `work-politics`.
 
@@ -36,7 +36,7 @@ Use it to learn:
 | `target-registry.md` | Narrow target segments and lead-source logic |
 | `outreach-funnel.md` | Stage-by-stage outreach tracking |
 | `objection-log.md` | Structured learning from replies and meetings |
-| `workspace.md` | Broader WAP operator workspace for campaign operations |
+| `workspace.md` | Broader work-politics operator workspace for campaign operations |
 
 ---
 
@@ -58,7 +58,7 @@ Use it to learn:
 | Lane | When to use | What it optimizes for |
 |------|-------------|------------------------|
 | **Direct** | Warm or semi-warm conversations with likely buyers | Fast learning about buyer pain, offer fit, and language |
-| **Partner-led** | When a trusted intermediary already serves likely WAP buyers | Borrowed authority, warmer intros, and faster trust |
+| **Partner-led** | When a trusted intermediary already serves likely work-politics buyers | Borrowed authority, warmer intros, and faster trust |
 
 ---
 
@@ -91,6 +91,6 @@ Use this when talking to a consultant, agency, or adjacent operator who already 
 
 - Keep outreach bounded, truthful, and companion-led.
 - Do not overclaim technical maturity.
-- Do not frame WAP primarily as "AI automation."
+- Do not frame work-politics primarily as "AI automation."
 - In the partner lane, make the partner feel safer and more useful, not responsible for a risky handoff.
 - Political trust and discretion matter more than clever outbound tricks.

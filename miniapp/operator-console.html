@@ -140,7 +140,7 @@
       <p class="sub" style="margin-top:0;">After you approve items (here or in Telegram), merge them into the permanent Record in one step.</p>
       <button id="mergeCompanion" class="good" type="button">Merge approved (companion)</button>
       <button id="mergeAll" type="button">Merge approved (all)</button>
-      <button id="mergeWap" type="button">Merge approved (WAP only)</button>
+      <button id="mergeWap" type="button">Merge approved (work-politics only)</button>
       <div id="mergeMsg" class="msg" style="display:none;"></div>
     </div>
     <div id="gateCards" class="cards"></div>
@@ -239,15 +239,15 @@
     api('/operator/gate-candidates?status=approved').then(function(data) {
       var items = data.items || [];
       var n = items.length;
-      var WAP = 'work-politics';
-      var comp = items.filter(function(i) { return (i.territory || '') !== WAP; }).length;
+      var territoryWorkPolitics = 'work-politics';
+      var comp = items.filter(function(i) { return (i.territory || '') !== territoryWorkPolitics; }).length;
       document.getElementById('approvedCount').textContent = n + ' approved (waiting merge) · ' + comp + ' companion';
     }).catch(function() {
       document.getElementById('approvedCount').textContent = '';
     });
   }
   function doMerge(territory) {
-    var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'WAP' : 'all';
+    var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'work-politics' : 'all';
     if (!confirm('Merge all APPROVED candidates for territory "' + label + '" into the Record? This updates self.md, evidence, and prompt.')) return;
     var el = document.getElementById('mergeMsg');
     showMsg(el, 'Merging…', false);

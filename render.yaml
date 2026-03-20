@@ -29,6 +29,6 @@ services:
       - key: FAMILY_APP_TOKEN
         sync: false  # Optional: enables /app family hub (chat + log + parent-gated review). Bookmark https://<host>/app?t=<token>
       - key: WAP_DASHBOARD_TOKEN
-        sync: false  # Optional: internal WAP job dashboard at /wap (SMM + operator). API: X-Wap-Token or Bearer
+        sync: false  # Optional: internal work-politics job dashboard at /wap (SMM + operator). API: X-Wap-Token or Bearer
       - key: WAP_JOBS_PATH
         sync: false  # Optional: path to wap_jobs.json; default data/wap_jobs.json (ephemeral on Render unless on persistent disk)

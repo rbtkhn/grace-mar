@@ -2,7 +2,7 @@
 """
 Generate a standard **daily brief** for work-politics + work-strategy:
 
-  - WAP snapshot (calendar, gate, blockers)
+  - Work-politics snapshot (calendar, gate, blockers)
   - Work-strategy focus (operator markdown)
   - Optional RSS ingest (configurable), dual keyword scores: **W** (campaign), **S** (product/AI/governance)
   - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale`
@@ -716,10 +716,10 @@ def build_daily_brief(
         "",
         "_Operator WORK product. Complete synthesis below; cite sources before any public use._",
         "",
-        "## 1. Work-politics (WAP) snapshot",
+        "## 1. Work-politics snapshot",
         "",
         f"- **Primary:** {primary.get('primary_date')} — **days until:** {primary.get('days_until_primary')}",
-        f"- **WAP gate:** {gate.get('pending_count', 0)} pending candidate(s)",
+        f"- **Work-politics gate:** {gate.get('pending_count', 0)} pending candidate(s)",
         "",
         "### Upcoming (from calendar)",
         "",
@@ -893,7 +893,7 @@ def build_daily_brief(
         s_titles = [str(all_items[0].get("title", ""))]
 
     lines.extend(["## 3. Lead themes (auto-stub — replace after reading)", ""])
-    lines.append("### WAP/campaign angle")
+    lines.append("### Work-politics / campaign angle")
     if w_titles and any(w_titles):
         for t in w_titles:
             if t:
@@ -927,11 +927,11 @@ def build_daily_brief(
             "",
             "## 5. Operator synthesis",
             "",
-            "**WAP:** _paragraph_",
+            "**Work-politics:** _paragraph_",
             "",
             "**Work-strategy:** _paragraph_",
             "",
-            "## 6. Next actions (WAP snapshot)",
+            "## 6. Next actions (work-politics snapshot)",
             "",
         ]
     )
@@ -962,7 +962,7 @@ def main() -> int:
     parser.add_argument(
         "--config",
         default="",
-        help=f"JSON config (default: {DEFAULT_CONFIG.relative_to(REPO_ROOT)} if present, else legacy WAP feeds JSON)",
+        help=f"JSON config (default: {DEFAULT_CONFIG.relative_to(REPO_ROOT)} if present, else legacy work-politics feeds JSON)",
     )
     parser.add_argument(
         "--feeds",

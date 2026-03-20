@@ -164,7 +164,7 @@
       <select id="territoryFilter">
         <option value="">All territories</option>
         <option value="companion">Companion</option>
-        <option value="work-politics">WAP</option>
+        <option value="work-politics">Work-politics</option>
       </select>
       <label class="row" style="margin-left: 0.5rem;"><select id="sortBy">
         <option value="newest">Newest first</option>
@@ -201,7 +201,7 @@
     <div class="row">
       <button type="button" id="mergeCompanion" class="good">Merge approved (companion)</button>
       <button type="button" id="mergeAll" class="primary">Merge approved (all)</button>
-      <button type="button" id="mergeWap">Merge approved (WAP only)</button>
+      <button type="button" id="mergeWap">Merge approved (work-politics only)</button>
     </div>
     <div id="inboxMergeMsg" class="meta" style="margin-top:0.5rem;"></div>
   </section>
@@ -527,7 +527,7 @@
       };
 
       function doMergeInbox(territory) {
-        var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'WAP' : 'all';
+        var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'work-politics' : 'all';
         if (!confirm('Merge all APPROVED candidates for "' + label + '" into the Record?')) return;
         var msgEl = document.getElementById('inboxMergeMsg');
         msgEl.textContent = 'Merging…';

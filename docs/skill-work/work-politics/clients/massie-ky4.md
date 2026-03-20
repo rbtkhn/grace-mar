@@ -22,7 +22,7 @@
 
 ## Compliance
 
-US federal House race — FEC / campaign counsel as handled by principal campaign. WAP delivers operator-side briefs and drafts; **human-always-approves** public ship.
+US federal House race — FEC / campaign counsel as handled by principal campaign. work-politics delivers operator-side briefs and drafts; **human-always-approves** public ship.
 
 **Checklist:** [compliance-checklist.md](../compliance-checklist.md) — federal rows reviewed by operator as needed.
 

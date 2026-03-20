@@ -94,7 +94,7 @@ def build_wap_weekly_brief(start_text: str = "", user_id: str = "grace-mar") -> 
         "",
         f"## Week of {date_range}",
         "",
-        "_This is a first-pass scaffold built from documented WAP surfaces. Refresh live sources and citations before treating it as final._",
+        "_This is a first-pass scaffold built from documented work-politics surfaces. Refresh live sources and citations before treating it as final._",
         "",
         "### 0. Recency slice (required)",
         "",

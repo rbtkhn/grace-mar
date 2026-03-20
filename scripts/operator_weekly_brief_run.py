@@ -58,7 +58,7 @@ def build_weekly_brief_run(
         f"- Brief sources to watch: {watch_sources}",
         f"- Brief sources needing refresh: {needs_refresh}",
         f"- Content items in motion: {len(content.get('next_items') or [])}",
-        f"- Pending WAP gate items: {snapshot['gate']['pending_count']}",
+        f"- Pending work-politics gate items: {snapshot['gate']['pending_count']}",
         "",
         "## Blocking items",
         "",

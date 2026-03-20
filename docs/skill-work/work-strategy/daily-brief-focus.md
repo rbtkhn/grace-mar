@@ -15,5 +15,5 @@ Edit this list when your **strategy lane** shifts (product, partnerships, policy
 
 ## Non-goals (this file)
 
-- KY-4 race tactics (use [work-politics](../work-politics/README.md) and WAP snapshot for that).
+- KY-4 race tactics (use [work-politics](../work-politics/README.md) and work-politics snapshot for that).
 - Anything that should become the child’s IX without a gate candidate.

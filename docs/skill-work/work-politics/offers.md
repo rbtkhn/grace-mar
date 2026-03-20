@@ -1,4 +1,4 @@
-# WAP offers
+# work-politics offers
 
 Canonical offer surface for `work-politics`.
 
@@ -7,7 +7,7 @@ Use this file to keep outreach outcome-first:
 - lead with campaign usefulness, not tooling
 - keep the first ask low-risk
 - make promises concrete and bounded
-- do not claim maturity or scale beyond what WAP can actually deliver
+- do not claim maturity or scale beyond what work-politics can actually deliver
 
 ---
 

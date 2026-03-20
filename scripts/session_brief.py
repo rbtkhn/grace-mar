@@ -347,7 +347,7 @@ def main() -> int:
         ]
         if args.territory == "all":
             lines.append(
-                f"**Split:** WAP {len(wap_rows)} · Companion {len(comp_rows)} — use `--territory wap` or `companion`"
+                f"**Split:** work-politics {len(wap_rows)} · Companion {len(comp_rows)} — use `--territory wap` or `companion`"
             )
         lines.extend(
             [
@@ -404,7 +404,7 @@ def main() -> int:
     # Build brief
     pending_section = (
         f"**Territory lens:** `{args.territory}` — **{pending_count}** pending (this lens). "
-        f"WAP **{len(wap_rows)}** · Companion **{len(comp_rows)}**. "
+        f"work-politics **{len(wap_rows)}** · Companion **{len(comp_rows)}**. "
         f"`--territory wap` = work-politics only. Type `/review` in Telegram to see them."
     )
     if pending_stale:

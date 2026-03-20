@@ -2,7 +2,7 @@
 
 ## Week of 2026-03-09 to 2026-03-15
 
-_This is a first-pass scaffold built from documented WAP surfaces. Refresh live sources and citations before treating it as final._
+_This is a first-pass scaffold built from documented work-politics surfaces. Refresh live sources and citations before treating it as final._
 
 ### 0. Recency slice (required)
 

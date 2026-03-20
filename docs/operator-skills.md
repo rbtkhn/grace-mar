@@ -25,7 +25,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 1. Start with `daily-warmup` when opening a new work block or a new agent thread.
 2. Run `wap-pulse` when the day includes campaign work, brief prep, or X/content operations.
 3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
-4. Use `weekly-brief-run` for the actual WAP brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
+4. Use `weekly-brief-run` for the actual work-politics brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
 5. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
 6. End or resume a session with `handoff-check`.
 
@@ -39,7 +39,7 @@ Must answer:
 
 - What needs attention first?
 - Are there pending gate items?
-- Is WAP blocked or stale?
+- Is work-politics blocked or stale?
 - Is repo integrity healthy?
 - Is the worktree noisy enough to affect the next move?
 
@@ -51,7 +51,7 @@ Must answer:
 - What is stale or blocking?
 - Is the weekly brief ready to generate?
 - What content is moving?
-- Are there live WAP gate items?
+- Are there live work-politics gate items?
 
 ### `weekly-brief-run`
 
@@ -92,7 +92,7 @@ python3 scripts/operator_daily_warmup.py -u grace-mar
 python3 scripts/operator_wap_pulse.py -u grace-mar
 ```
 
-Use the first output to choose the work block. Use the second to choose the WAP action inside that block.
+Use the first output to choose the work block. Use the second to choose the work-politics action inside that block.
 
 For a fuller operator pass:
 
@@ -109,7 +109,7 @@ Use `weekly-brief-run` when the first two workflows say the territory is ready t
 ## Guardrails
 
 - These skills are read-only summaries over canonical files.
-- `users/grace-mar/recursion-gate.md`, `self.md`, `self-evidence.md`, and WAP docs remain the source of truth.
-- WAP remains a `WORK` surface; Record changes still require staged approval and merge flow.
+- `users/grace-mar/recursion-gate.md`, `self.md`, `self-evidence.md`, and work-politics docs remain the source of truth.
+- work-politics remains a `WORK` surface; Record changes still require staged approval and merge flow.
 - `weekly-brief-run` produces a first-pass scaffold, not final-use campaign output.
 - `handoff-check` should treat runtime audit noise separately from meaningful worktree changes.

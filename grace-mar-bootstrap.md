@@ -158,18 +158,18 @@ git status
 python3 scripts/metrics.py
 python3 scripts/session_brief.py --user grace-mar
 python3 scripts/session_brief.py --user grace-mar --minimal
-python3 scripts/session_brief.py -u grace-mar --minimal --territory wap   # WAP pending only
+python3 scripts/session_brief.py -u grace-mar --minimal --territory wap   # work-politics pending only
 python3 scripts/pending_dedup_hint.py -u grace-mar
 python3 scripts/report_lookup_sources.py -u grace-mar   # dyad:lookup distribution (library vs full)
-python3 scripts/operator_blocker_report.py -u grace-mar --stale-days 3   # WAP + companion sections by default
-python3 scripts/operator_blocker_report.py -u grace-mar --territory wap  # WAP-only pending
+python3 scripts/operator_blocker_report.py -u grace-mar --stale-days 3   # work-politics + companion sections by default
+python3 scripts/operator_blocker_report.py -u grace-mar --territory wap  # work-politics-only pending
 ```
 
 ### Pipeline merge (receipt-based)
 ```bash
 python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by <name>
 python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by <name> --receipt /tmp/receipt.json
-# WAP-only batch (same --territory for generate + apply):
+# work-politics-only batch (same --territory for generate + apply):
 python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>
 python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json
 ```
@@ -186,7 +186,7 @@ pip install pre-commit && pre-commit install && pre-commit install --hook-type c
 ```bash
 python3 scripts/harness_warmup.py -u grace-mar
 python3 scripts/harness_warmup.py -u grace-mar --fresh-judge   # clean context for new thread / advanced model
-python3 scripts/harness_warmup.py -u grace-mar --territory wap   # WAP pending only in paste
+python3 scripts/harness_warmup.py -u grace-mar --territory wap   # work-politics pending only in paste
 python3 scripts/harness_warmup.py -u grace-mar --compact
 python3 scripts/generate_gate_dashboard.py -u grace-mar   # pending queue HTML (human door)
 ```

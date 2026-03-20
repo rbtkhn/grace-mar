@@ -1,6 +1,6 @@
 # Civ-mem → speech / policy — human-always-approves
 
-**Territory:** work-politics (WAP)  
+**Territory:** work-politics  
 **Corpus:** `civilization_memory` (CMC), indexed via `tools/cmc-index-search.py`. **Essay canon (repo-owned):** edit `docs/civilization-memory/essays/` in this repo; regen encyclopedia from there. Submodule remains optional for tools/full index.
 **Invariant:** Retrieval and drafting may be automated; **no external release** without explicit human approval on **that exact artifact**.
 
@@ -44,6 +44,6 @@ See [civ-mem-test-run-2026-03-14.md](civ-mem-test-run-2026-03-14.md) for a worke
 
 ---
 
-## Sync with WAP README
+## Sync with work-politics README
 
 Aligns with: *Human approves all public-facing content and strategy.* Civ-mem adds: **corpus-informed drafts still require the same approvals** — CMC is input, not authorization.

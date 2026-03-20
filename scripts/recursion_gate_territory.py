@@ -15,6 +15,8 @@ import re
 
 # Canonical territory string for new and migrated YAML
 TERRITORY_WAP = "work-politics"
+# Human-facing label for dashboards / review UIs (matches "Companion" casing)
+TERRITORY_LABEL_WAP = "Work-politics"
 TERRITORY_WAP_LEGACY = ("work-political-consulting", "work-american-politics")
 CHANNEL_WAP_PREFIX = "operator:wap"
 

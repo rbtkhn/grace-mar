@@ -1,4 +1,4 @@
-# WAP compliance checklist (pre-engagement)
+# work-politics compliance checklist (pre-engagement)
 
 **Not legal advice.** Operator + qualified counsel answer these before paid work or public attribution. Repo tracks **gates only**; answers live outside git if sensitive.
 

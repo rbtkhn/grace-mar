@@ -14,9 +14,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 try:
-    from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+    from recursion_gate_territory import TERRITORY_LABEL_WAP, TERRITORY_WAP, territory_from_yaml_block
 except ImportError:
-    from scripts.recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP, TERRITORY_WAP, territory_from_yaml_block
 try:
     from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 except ImportError:
@@ -418,7 +418,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
             "age_days": _age_days(timestamp),
             "channel_key": channel_key,
             "territory": territory,
-            "territory_label": "WAP" if territory == TERRITORY_WAP else "Companion",
+            "territory_label": TERRITORY_LABEL_WAP if territory == TERRITORY_WAP else "Companion",
             "proposal_class": eff_pc,
             "proposal_class_raw": raw_pc or None,
             "proposal_class_inferred": pc_inferred,

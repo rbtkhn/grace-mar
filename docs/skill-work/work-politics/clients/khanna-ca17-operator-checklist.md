@@ -1,12 +1,12 @@
 # Khanna CA-17 — operator checklist (work-politics)
 
-**Purpose:** Calibrate work-politics for the Ro Khanna shadow campaign demo. Human-always-approves public ship; WAP territory + `channel_key` `operator:wap:us-ca17-khanna`. See [khanna-ca17.md](khanna-ca17.md) for client index.
+**Purpose:** Calibrate work-politics for the Ro Khanna shadow campaign demo. Human-always-approves public ship; work-politics territory + `channel_key` `operator:wap:us-ca17-khanna`. See [khanna-ca17.md](khanna-ca17.md) for client index.
 
 ---
 
 ## Doctrine filter (every artifact)
 
-Before shipping or merging WAP candidates for Khanna, ask:
+Before shipping or merging work-politics candidates for Khanna, ask:
 
 - Does this strengthen **worker-first, anti-captured-by-billionaires, anti-stupid-war** framing?
 - Does it avoid **lazy “tech-bro” caricature** or culture-war cosplay that flattens CA-17?

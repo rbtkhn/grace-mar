@@ -18,7 +18,7 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    ```
    Include the output path in your reply and a short summary (top work-politics + strategy headlines, next actions).
 3. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@usa_first_ky`.
-4. Return the warmup brief (priorities, gate, WAP, integrity) plus:
+4. Return the warmup brief (priorities, gate, work-politics, integrity) plus:
    - daily-brief summary (with output path)
    - X scan top links (short)
    - 1–2 draft post candidates for `@usa_first_ky` (still draft-only; human approval required)

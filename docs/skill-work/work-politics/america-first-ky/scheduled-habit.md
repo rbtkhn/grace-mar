@@ -47,7 +47,7 @@ python3 scripts/emit_pipeline_event.py -u grace-mar loop_cycle_started none terr
 ## Example crontab lines (illustrative)
 
 ```cron
-# 06:05 local — daily WAP/strategy brief (adjust path and user)
+# 06:05 local — daily work-politics/strategy brief (adjust path and user)
 5 6 * * * cd /path/to/grace-mar && /usr/bin/python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +\%Y-\%m-\%d).md >> /tmp/grace-mar-brief.log 2>&1
 
 # 06:10 — optional loop event audit trail only

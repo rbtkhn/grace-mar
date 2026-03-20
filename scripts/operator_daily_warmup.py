@@ -3,7 +3,7 @@
 Generate a compact daily operator warmup for Grace-Mar.
 
 This is an operator workflow surface. It summarizes continuity state,
-WAP status, repo integrity, and local worktree noise without changing
+Work-politics status, repo integrity, and local worktree noise without changing
 the Record or processing the gate.
 """
 
@@ -75,7 +75,7 @@ def _priority_list(
             f"Review {len(pending_all)} pending gate candidate(s) in `users/grace-mar/recursion-gate.md` before they go stale."
         )
     if pending_wap:
-        priorities.append("Handle live WAP gate items before creating more territory continuity.")
+        priorities.append("Handle live work-politics gate items before creating more territory continuity.")
 
     blockers = wap_snapshot.get("territory_blockers") or []
     if blockers:
@@ -100,7 +100,7 @@ def _priority_list(
         deduped.append(item)
 
     if not deduped:
-        deduped.append("No urgent blockers detected. Pick the next highest-value WAP or architecture task.")
+        deduped.append("No urgent blockers detected. Pick the next highest-value work-politics or architecture task.")
     return deduped[:3]
 
 
@@ -129,7 +129,7 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
         "",
         f"- Generated: {ts}",
         f"- User: `{user_id}`",
-        f"- Gate pending: {len(pending_all)} total ({len(pending_wap)} WAP, {len(pending_companion)} companion)",
+        f"- Gate pending: {len(pending_all)} total ({len(pending_wap)} work-politics, {len(pending_companion)} companion)",
         f"- Last activity: {last_activity}",
         f"- Integrity: {'PASS' if not integrity_errors else f'FAIL ({len(integrity_errors)} issue(s))'}",
         f"- Worktree: {'clean' if not dirty_files else f'{len(dirty_files)} changed file(s)'}",
@@ -149,7 +149,7 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     lines.extend(
         [
             "",
-            "## WAP snapshot",
+            "## Work-politics snapshot",
             "",
             f"- Primary date: {primary_label} ({days_until_primary} day(s) remaining)",
             f"- Territory blockers: {len(wap_snapshot.get('territory_blockers') or [])}",

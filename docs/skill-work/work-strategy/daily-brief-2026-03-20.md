@@ -7,10 +7,10 @@
 
 _Operator WORK product. Complete synthesis below; cite sources before any public use._
 
-## 1. Work-politics (WAP) snapshot
+## 1. Work-politics (work-politics) snapshot
 
 - **Primary:** May 19, 2026 — **days until:** 59
-- **WAP gate:** 2 pending candidate(s)
+- **work-politics gate:** 2 pending candidate(s)
 
 ### Upcoming (from calendar)
 
@@ -62,7 +62,7 @@ Ranked by **W+S** (W = work-politics keywords, S = work-strategy keywords) then 
 
 ## 3. Lead themes (auto-stub — replace after reading)
 
-### WAP/campaign angle
+### work-politics/campaign angle
 - Trump is dismantling democracy, reports find. And, Treasury to take over student loans
 - An immigration court few have heard of is quietly shaping policy behind the scenes
 - He's one reason why aid cuts weren't as dire for the HIV population as predicted
@@ -89,11 +89,11 @@ For **campaign-facing** copy, use [work-politics analytical-lenses](../work-poli
 
 ## 5. Operator synthesis
 
-**WAP:** _paragraph_
+**work-politics:** _paragraph_
 
 **Work-strategy:** _paragraph_
 
-## 6. Next actions (WAP snapshot)
+## 6. Next actions (work-politics snapshot)
 
 - Prepare for **Voter registration deadline** (in-person and mail; mail = postmark) on **Apr 20, 2026**.
 - Refresh Gallrein, Trump/MAGA, and spending lines before relying on the brief heavily.

@@ -67,6 +67,7 @@ def index():
         territory = html.escape(r.get("territory", ""))
         risk = html.escape(r.get("risk_tier", ""))
         label = html.escape(r.get("territory_label", ""))
+        pill_slug = "wap" if r.get("territory") == TERRITORY_WAP else "companion"
         age = _age_label(r.get("age_days"))
         channel = html.escape(r.get("channel_key") or "—")
         ts = html.escape(r.get("timestamp") or "—")
@@ -74,7 +75,7 @@ def index():
         cards.append(
             f'<article class="card" data-territory="{territory}" data-risk="{risk}">'
             f'<header><span class="id">{cid}</span>'
-            f'<span class="pill pill-{label.lower()}">{label}</span>'
+            f'<span class="pill pill-{pill_slug}">{label}</span>'
             f'<span class="pill pill-risk">{risk}</span>'
             f'<span class="age">{age}</span></header>'
             f'<p class="summary">{summary}</p>{hint}'
@@ -93,7 +94,7 @@ def index():
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Gate review — {html.escape(USER_ID)}</title>
   <style>
-    :root {{ --bg: #0f1419; --card: #1a2332; --text: #e8ecf1; --muted: #8b9cb3; --accent: #c17f59; --good: #7dc09a; --danger: #dd8e91; }}
+    :root {{ --bg: #0f1419; --card: #1a2332; --text: #e8ecf1; --muted: #8b9cb3; --accent: #c17f59; --good: #7dc09a; --danger: #dd8e91; --wap: #c4a574; --companion: #7eb8da; }}
     * {{ box-sizing: border-box; }}
     body {{ margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; padding: 1.25rem; }}
     h1 {{ font-size: 1.35rem; margin: 0 0 0.25rem; }}
@@ -122,7 +123,7 @@ def index():
   <p class="sub">Approve or reject pending candidates. Merge runs via process_approved_candidates.</p>
   <div class="stats">
     <span class="stat"><strong>{n}</strong> pending</span>
-    <span class="stat">WAP <strong>{wap_n}</strong></span>
+    <span class="stat">Work-politics <strong>{wap_n}</strong></span>
     <span class="stat">Companion <strong>{comp_n}</strong></span>
   </div>
   <div class="grid" id="grid">{rows_html}</div>

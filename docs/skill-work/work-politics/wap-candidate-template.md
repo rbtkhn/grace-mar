@@ -1,6 +1,6 @@
-# WAP candidate template (RECURSION-GATE)
+# work-politics candidate template (RECURSION-GATE)
 
-Paste a new `### CANDIDATE-XXXX` block **above** `## Processed` in `users/grace-mar/recursion-gate.md` (or let the bot stage; then add missing fields). Replace `XXXX` with the next id (match repo sequence). **Territory** is required so WAP pending shows under `--territory wap` and batch merge works.
+Paste a new `### CANDIDATE-XXXX` block **above** `## Processed` in `users/grace-mar/recursion-gate.md` (or let the bot stage; then add missing fields). Replace `XXXX` with the next id (match repo sequence). **Territory** is required so work-politics pending shows under `--territory wap` and batch merge works.
 
 ### `channel_key` — multi-client convention
 
@@ -23,7 +23,7 @@ Align with [clients/_template.md](clients/_template.md) and [README § Gate conv
 Use when you want a **merge receipt** and **ACT-** (or prompt slice) without bloating Abby’s IX with campaign content — tune `suggested_entry` and `profile_target` to what companion actually wants in SELF.
 
 **Header line (in recursion-gate.md):**  
-`### CANDIDATE-XXXX (WAP — <short label>)`
+`### CANDIDATE-XXXX (work-politics — <short label>)`
 
 **YAML body (paste under header):**
 
@@ -32,14 +32,14 @@ status: pending
 timestamp: YYYY-MM-DD HH:MM:SS
 channel_key: operator:wap:us-ky4-massie   # or operator:wap:<jurisdiction>-<slug> — see above
 territory: work-politics
-source: operator — companion approved WAP milestone
+source: operator — companion approved work-politics milestone
 source_exchange:
   operator: "Shipped / locked: docs/skill-work/work-politics/<file>.md — <one line>"
-  grace_mar: "[WAP milestone — merge for ACT / audit only unless IX requested]"
+  grace_mar: "[work-politics milestone — merge for ACT / audit only unless IX requested]"
 mind_category: knowledge
 signal_type: we_did / wap_milestone
 priority_score: 3
-summary: WAP — <artifact> v<N> | optional revenue-log row REF
+summary: work-politics — <artifact> v<N> | optional revenue-log row REF
 profile_target: IX-A. KNOWLEDGE
 suggested_entry: "Milestone only — see WORK doc path (minimal IX if needed)"
 prompt_section: YOUR KNOWLEDGE
@@ -53,7 +53,7 @@ prompt_addition: none
 Add to `summary` or `source_exchange`:
 
 ```yaml
-summary: WAP — iran-brief v2 | revenue-log 2026-03-xx
+summary: work-politics — iran-brief v2 | revenue-log 2026-03-xx
 ```
 
 ```yaml
@@ -66,7 +66,7 @@ source_exchange:
 ## Commands (after approve)
 
 ```bash
-# WAP-only batch
+# work-politics-only batch
 python scripts/process_approved_candidates.py -u grace-mar --territory wap \
   --generate-receipt /tmp/wap.json --approved-by "<name>"
 python scripts/process_approved_candidates.py -u grace-mar --territory wap \

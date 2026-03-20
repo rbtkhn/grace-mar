@@ -6,7 +6,7 @@
 
 - At least one **weekly brief** per active week with **§0 recency** (7d or 30d) filled from live sources.
 - `opposition-brief` / registry rows not stale beyond what you accept.
-- **Doc-only** weeks explicit — or one **WAP gate candidate** when milestones matter for audit.
+- **Doc-only** weeks explicit — or one **work-politics gate candidate** when milestones matter for audit.
 
 ## Never without approval
 
@@ -32,4 +32,4 @@ When running a **full** weekly brief (not doc-only), complete [weekly-brief-temp
 
 ## Daily horizon (optional)
 
-`python scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — **WAP + work-strategy**, dual W/S scores. [work-strategy/daily-brief-template.md](../skill-work/work-strategy/daily-brief-template.md).
+`python scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — **work-politics + work-strategy**, dual W/S scores. [work-strategy/daily-brief-template.md](../skill-work/work-strategy/daily-brief-template.md).

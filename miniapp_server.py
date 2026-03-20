@@ -15,7 +15,7 @@ Real-time exchanges are appended to users/<user>/session-transcript.md (same as 
 SELF-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 Family hub: FAMILY_APP_TOKEN, routes /app, /api/family/*.
-WAP internal dashboard: WAP_DASHBOARD_TOKEN, routes /wap, /api/wap/jobs.
+Work-politics internal dashboard (env `WAP_DASHBOARD_TOKEN`), routes `/wap`, `/api/wap/jobs`.
 """
 
 import asyncio
@@ -335,7 +335,7 @@ def _wap_save_jobs(jobs: list[dict]) -> None:
 
 
 def _wap_auth():
-    """Require WAP_DASHBOARD_TOKEN via Bearer or X-Wap-Token."""
+    """Require dashboard token (env WAP_DASHBOARD_TOKEN) via Bearer or X-Wap-Token."""
     if not WAP_DASHBOARD_TOKEN:
         return False, (jsonify({"error": "WAP_DASHBOARD_TOKEN not configured"}), 503)
     auth = (request.headers.get("Authorization") or "").strip()
@@ -351,7 +351,7 @@ def _wap_auth():
 
 @app.route("/wap")
 def wap_dashboard():
-    """Internal WAP job tracker for SMM + operator. Token on API; bookmark /wap?t=..."""
+    """Internal work-politics job tracker for SMM + operator. Token on API; bookmark /wap?t=..."""
     return send_from_directory("miniapp", "wap-dashboard.html")
 
 

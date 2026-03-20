@@ -58,4 +58,4 @@ A viral campaign to end the Iran war by (1) individuating Iranians ("see the fac
 
 ## Governance
 
-Per WAP/civ-mem protocol: **Human approves all public ship.** Drafts can be machine-generated; publication and attribution stay with operator/principal. You retain full control over what you post; this brief is guidance, not a script.
+Per work-politics/civ-mem protocol: **Human approves all public ship.** Drafts can be machine-generated; publication and attribution stay with operator/principal. You retain full control over what you post; this brief is guidance, not a script.

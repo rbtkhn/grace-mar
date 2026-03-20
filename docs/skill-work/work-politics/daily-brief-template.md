@@ -1,6 +1,6 @@
 # Daily brief — work-politics (legacy pointer)
 
-The **combined** daily brief (WAP + work-strategy, dual **W/S** scores) now lives under **work-strategy**:
+The **combined** daily brief (work-politics + work-strategy, dual **W/S** scores) now lives under **work-strategy**:
 
 - **Spec:** [../work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md)
 - **Config:** [../work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json)

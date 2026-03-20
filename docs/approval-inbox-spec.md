@@ -103,7 +103,7 @@ These are computed at render time and are not written back into the queue:
 
 ```yaml
 risk_tier: quick_merge_eligible | review_batch | manual_escalate
-territory_label: Companion | WAP | other
+territory_label: Companion | Work-politics | other
 age_days: integer
 has_conflict_markers: true | false
 has_prompt_change: true | false
@@ -226,7 +226,7 @@ Required saved views:
 - `All pending`
 - `Quick approvals`
 - `Needs judgment`
-- `WAP`
+- `Work-politics`
 - `Companion`
 - `Approved awaiting merge`
 

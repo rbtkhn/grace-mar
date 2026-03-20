@@ -10,7 +10,7 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 |--------|--------|-------|
 | Revenue totals from `revenue-log.md` | Instrumented | Read by the work-politics operator surface. |
 | Key primary dates from `calendar-2026.md` | Instrumented | Read by the work-politics operator surface. |
-| WAP gate pending count | Instrumented | Derived from `RECURSION-GATE` with WAP territory filter. |
+| work-politics gate pending count | Instrumented | Derived from `RECURSION-GATE` with work-politics territory filter. |
 | Brief source readiness | Instrumented | Driven by `brief-source-registry.md`. |
 | X/content queue state | Instrumented | Driven by `content-queue.md`. |
 | Outreach funnel stages | Manual | Tracked in `outreach-funnel.md`. |
@@ -90,7 +90,7 @@ Metrics to track across the territory: revenue, funnel, deliverables, territory 
 | Allocation vs budget | Allocated / total seed (or / total revenue) — are we on plan? | revenue-log.md allocations vs [seed-allocation-plan.md](seed-allocation-plan.md). |
 | Brief source readiness | Count of `ready` / `watch` / `needs_refresh` rows in [brief-source-registry.md](brief-source-registry.md). | brief-source-registry.md |
 | Content queue flow | Count by status (`idea`, `draft`, `review`, `posted`) in [content-queue.md](content-queue.md). | content-queue.md |
-| WAP gate rhythm | Pending WAP candidates and whether the territory has live gated continuity this week. | `users/grace-mar/recursion-gate.md` with WAP filter |
+| work-politics gate rhythm | Pending work-politics candidates and whether the territory has live gated continuity this week. | `users/grace-mar/recursion-gate.md` with work-politics filter |
 
 ---
 

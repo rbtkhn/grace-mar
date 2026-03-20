@@ -900,7 +900,7 @@ def main() -> None:
     if not approved:
         print(
             f"No approved candidates to process (territory={args.territory}). "
-            "Approve rows in recursion-gate above ## Processed; WAP rows need territory: work-politics (or legacy) or channel_key: operator:wap."
+            "Approve rows in recursion-gate above ## Processed; work-politics rows need territory: work-politics (or legacy) or channel_key: operator:wap."
         )
         return
 

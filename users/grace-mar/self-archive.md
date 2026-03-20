@@ -693,7 +693,7 @@
 **[2026-03-14 13:29:21]** `APPROVED` (Operator)
 > CANDIDATE-0085 → ACT-0045
 > WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py
-> operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass." grace_mar: "[WAP milestone — approve for ACT audit trail; IX optional/minimal]"
+> operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass." grace_mar: "[work-politics milestone — approve for ACT audit trail; IX optional/minimal]"
 
 **[2026-03-16]** `APPROVED` (operator)
 > CANDIDATE-0086 → ACT-0046
@@ -702,12 +702,12 @@
 
 **[2026-03-20 07:58:51]** `APPROVED` (Operator)
 > CANDIDATE-0089 → ACT-0047
-> WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
+> work-politics — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
 > operator: "Added docs/skill-work/work-politics/america-first-ky/ (guardrail-stress-test.md, stress-test-brief-template.md, AGENT-SESSION-BRIEF.md). Explicitly NOT governance_checker enforcement; no skills.md direct edit; no routine self-evidence traces." grace_mar: "[Optional merge — companion approves if minimal IX-A WORK line or skills.md bullet is desired]"
 
 **[2026-03-20 08:07:12]** `APPROVED` (Operator)
 > CANDIDATE-0087 → ACT-0048
-> WAP — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line
+> work-politics — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line
 > operator: "Added docs/skill-work/work-politics/analytical-lenses/ (manifest + three lenses + template); weekly-brief-template §7; README principles + operator path. Lenses are WORK-only; no Voice prompt change." grace_mar: "[Optional merge — companion approves if a minimal IX-A WORK pointer is desired for Record continuity]"
 
 **[2026-03-20 08:07:12]** `APPROVED` (Operator)

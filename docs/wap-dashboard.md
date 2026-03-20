@@ -1,4 +1,4 @@
-# WAP internal dashboard (SMM + operator)
+# work-politics internal dashboard (SMM + operator)
 
 **Purpose:** Internal web surface for **work-politics** — you and the social media manager track **jobs** (news scan, X drafts, brief hooks) without losing work when a Cursor thread closes. **Not** a client portal in v1; **not** autonomous posting or LLM-on-server (unless added later).
 

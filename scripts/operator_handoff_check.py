@@ -97,7 +97,7 @@ def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blocker
     if dominant == "wap_operations":
         return (
             "wap operations",
-            "Resume WAP work with `python3 scripts/operator_wap_pulse.py -u grace-mar` and then run the brief workflow if ready.",
+            "Resume work-politics work with `python3 scripts/operator_wap_pulse.py -u grace-mar` and then run the brief workflow if ready.",
         )
     if dominant == "record_pipeline":
         return (
@@ -167,7 +167,7 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
     else:
         lines.append("- No runtime-only local noise detected.")
 
-    lines.extend(["", "## WAP continuity", ""])
+    lines.extend(["", "## Work-politics continuity", ""])
     lines.append(f"- Territory blockers: {len(wap_snapshot.get('territory_blockers') or [])}")
     for action in (wap_snapshot.get("next_actions") or [])[:3]:
         lines.append(f"- {action}")
