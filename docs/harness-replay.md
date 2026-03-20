@@ -29,6 +29,7 @@ New pipeline/harness lines include **`event_id`**, **`fork_id`**, **`envelope_ve
 ```bash
 python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-0089
 python scripts/replay_harness_event.py -u grace-mar --bundle-id 5229e838372b
+python scripts/replay_harness_event.py -u grace-mar --event-id evt_20260320_120000_a1b2c3d4
 python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-0085 --evidence ACT-0024 --transcript-snippet
 ```
 

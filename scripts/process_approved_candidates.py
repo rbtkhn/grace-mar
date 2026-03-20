@@ -715,6 +715,32 @@ def _safe_pipeline_str(s: str, max_len: int) -> str:
     return t[:max_len] if len(t) > max_len else t
 
 
+def _record_refs_for_applied(user_id: str, surface: str, profile_target: str, proposal_class: str) -> list[str]:
+    """Repo-relative paths for replay / boundary debugging (not a full merge file list)."""
+    base = f"users/{user_id}"
+    pt = (profile_target or "").upper()
+    pc = (proposal_class or "").upper()
+    refs: list[str] = []
+    if any(tok in pc for tok in ("SELF_LIBRARY", "CIV_MEM", "LIBRARY_")):
+        refs.append(f"{base}/self-library.md")
+    if surface == "SELF_KNOWLEDGE" or "IX-A" in pt:
+        refs.append(f"{base}/self.md#IX-A")
+    elif surface == "SELF_CURIOSITY" or "IX-B" in pt:
+        refs.append(f"{base}/self.md#IX-B")
+    else:
+        refs.append(f"{base}/self.md#IX-C")
+    if "SKILLS" in pc:
+        refs.append(f"{base}/skills.md")
+    refs.append(f"{base}/self-evidence.md")
+    out: list[str] = []
+    seen: set[str] = set()
+    for r in refs:
+        if r not in seen:
+            seen.add(r)
+            out.append(r)
+    return out
+
+
 def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str) -> dict:
     block = c.get("block") or ""
     cat = (c.get("mind_category") or "").lower()
@@ -751,6 +777,7 @@ def _emit_applied_event(c: dict, act_id: str, ix_entry_id: str, approved_by: str
     parent = find_staged_event_id_for_candidate(PROFILE_DIR / "pipeline-events.jsonl", c["id"])
     if parent:
         merge_payload["parent_event_id"] = parent
+    merge_payload["record_refs"] = _record_refs_for_applied(USER_ID, surface, pt, pc)
     return append_pipeline_event(USER_ID, "applied", c["id"], merge=merge_payload)
 
 

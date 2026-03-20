@@ -6,6 +6,7 @@ Does not reconstruct full LLM prompts unless logged elsewhere. See docs/harness-
 
   python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-0089
   python scripts/replay_harness_event.py -u grace-mar --bundle-id abc123
+  python scripts/replay_harness_event.py -u grace-mar --event-id evt_20260320_120000_a1b2c3d4
 """
 
 from __future__ import annotations
@@ -76,6 +77,32 @@ def _filter_merge_receipts(rows: list[dict], candidate_id: str) -> list[dict]:
     return out
 
 
+def _find_pipeline_row_by_event_id(rows: list[dict], event_id: str) -> dict | None:
+    want = event_id.strip()
+    for r in rows:
+        if str(r.get("event_id") or "") == want:
+            return r
+    return None
+
+
+def _harness_rows_for_event_id(hv: list[dict], eid: str) -> list[dict]:
+    """Harness rows whose event_id matches or that list this id in merge correlation fields."""
+    want = eid.strip()
+    out: list[dict] = []
+    for r in hv:
+        if str(r.get("event_id") or "") == want:
+            out.append(r)
+            continue
+        apl = r.get("applied_pipeline_event_ids")
+        if isinstance(apl, list) and want in [str(x) for x in apl]:
+            out.append(r)
+            continue
+        spl = r.get("staged_parent_event_ids")
+        if isinstance(spl, list) and want in [str(x) for x in spl]:
+            out.append(r)
+    return out
+
+
 def _find_candidate_yaml(gate_text: str, candidate_id: str) -> str | None:
     """Match `### CANDIDATE-nnn` blocks in active or Processed sections (full file)."""
     want = candidate_id.strip().upper()
@@ -107,11 +134,22 @@ def _transcript_hint(transcript_path: Path, max_lines: int = 40) -> str:
     return "\n".join(tail)
 
 
+def _footer_block() -> list[str]:
+    return [
+        "",
+        "---",
+        "",
+        "_Audit lane only. For identity truth, use approved Record files; for full prompt traces, see product logging policy._",
+        "",
+    ]
+
+
 def build_report(
     user_id: str,
     *,
     candidate_id: str = "",
     bundle_id: str = "",
+    event_id: str = "",
     evidence_id: str = "",
     transcript_snippet: bool = False,
 ) -> str:
@@ -134,16 +172,52 @@ def build_report(
         "",
     ]
 
-    if candidate_id:
-        lines.append(f"**Candidate:** `{candidate_id.strip().upper()}`")
-        pl_f = _filter_pipeline(pl, candidate_id)
-        hv_f = _filter_harness(hv, candidate_id, None)
-        mr_f = _filter_merge_receipts(mr, candidate_id)
+    cid = (candidate_id or "").strip()
+    bid = (bundle_id or "").strip()
+    eid = (event_id or "").strip()
+
+    if not eid and not cid and not bid:
+        lines.append("_Specify `--candidate`, `--bundle-id`, or `--event-id`._")
+        lines.extend(_footer_block())
+        return "\n".join(lines)
+
+    if eid:
+        anchor = _find_pipeline_row_by_event_id(pl, eid)
+        if not anchor:
+            lines.append(f"_No pipeline row with `event_id` `{eid}`._")
+            lines.extend(_footer_block())
+            return "\n".join(lines)
+        lines.append(f"**Lookup:** `event_id` = `{eid}`")
+        lines.extend(
+            [
+                "",
+                "## Anchored pipeline row",
+                "",
+                "```json",
+                json.dumps(anchor, indent=2, ensure_ascii=True),
+                "```",
+            ]
+        )
+        hv_a = _harness_rows_for_event_id(hv, eid)
+        lines.extend(["", "## harness-events.jsonl (rows referencing this event_id)", ""])
+        if hv_a:
+            for r in hv_a:
+                lines.append(f"- `{r.get('ts')}` — `{json.dumps(r, ensure_ascii=True)}`")
+        else:
+            lines.append("_No matching lines._")
+        if not cid and anchor.get("candidate_id"):
+            cid = str(anchor.get("candidate_id") or "").strip()
+
+    if cid:
+        lines.append(f"**Candidate:** `{cid.upper()}`")
+        pl_f = _filter_pipeline(pl, cid)
+        hv_f = _filter_harness(hv, cid, None)
+        mr_f = _filter_merge_receipts(mr, cid)
 
         gate_body = ""
         if gate_path.is_file():
             gate_body = gate_path.read_text(encoding="utf-8", errors="ignore")
-        yaml_block = _find_candidate_yaml(gate_body, candidate_id) if gate_path.is_file() else None
+        yaml_block = _find_candidate_yaml(gate_body, cid) if gate_path.is_file() else None
 
         env_rows = [r for r in pl_f if r.get("event_id")]
         if env_rows:
@@ -156,6 +230,9 @@ def build_report(
                 lines.append(
                     f"- `{r.get('event_id')}` — **{r.get('event')}**{rm_s}{par_s} — envelope v{r.get('envelope_version', '?')}"
                 )
+                rr = r.get("record_refs")
+                if isinstance(rr, list) and rr:
+                    lines.append(f"  - record_refs: {', '.join(str(x) for x in rr[:16])}")
 
         lines.extend(
             [
@@ -211,27 +288,17 @@ def build_report(
             else:
                 lines.append("_Missing or empty._")
 
-    elif bundle_id:
-        lines.append(f"**Bundle id:** `{bundle_id}`")
-        hv_f = _filter_harness(hv, "", bundle_id)
+    if bid:
+        lines.append(f"**Bundle id:** `{bid}`")
+        hv_fb = _filter_harness(hv, "", bid)
         lines.extend(["", "## harness-events.jsonl (bundle_id)", ""])
-        if hv_f:
-            for r in hv_f:
+        if hv_fb:
+            for r in hv_fb:
                 lines.append(f"- `{r.get('ts')}` — `{json.dumps(r, ensure_ascii=True)}`")
         else:
             lines.append("_No matching lines._")
-    else:
-        lines.append("_Specify `--candidate` or `--bundle-id`._")
 
-    lines.extend(
-        [
-            "",
-            "---",
-            "",
-            "_Audit lane only. For identity truth, use approved Record files; for full prompt traces, see product logging policy._",
-            "",
-        ]
-    )
+    lines.extend(_footer_block())
     return "\n".join(lines)
 
 
@@ -240,6 +307,11 @@ def main() -> int:
     ap.add_argument("-u", "--user", default="grace-mar", help="User id")
     ap.add_argument("--candidate", default="", help="CANDIDATE-nnnn")
     ap.add_argument("--bundle-id", default="", help="Harness bundle_id")
+    ap.add_argument(
+        "--event-id",
+        default="",
+        help="Single pipeline event_id (evt_…); optional candidate follow-on from row",
+    )
     ap.add_argument("--evidence", default="", metavar="ACT-nnnn", help="Optional: show hint line from self-evidence.md")
     ap.add_argument(
         "--transcript-snippet",
@@ -248,13 +320,14 @@ def main() -> int:
     )
     ap.add_argument("-o", "--output", default="", help="Write markdown to this path")
     args = ap.parse_args()
-    if not args.candidate.strip() and not args.bundle_id.strip():
-        print("Provide --candidate or --bundle-id", file=sys.stderr)
+    if not args.candidate.strip() and not args.bundle_id.strip() and not args.event_id.strip():
+        print("Provide --candidate, --bundle-id, or --event-id", file=sys.stderr)
         return 1
     text = build_report(
         args.user.strip(),
         candidate_id=args.candidate.strip(),
         bundle_id=args.bundle_id.strip(),
+        event_id=args.event_id.strip(),
         evidence_id=args.evidence.strip(),
         transcript_snippet=args.transcript_snippet,
     )
