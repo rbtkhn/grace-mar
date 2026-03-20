@@ -1,14 +1,12 @@
 """Tests for personality conflict detection (demo / regression)."""
 
-import sys
-from pathlib import Path
+# Import via package path only. Do not prepend REPO/bot to sys.path — that makes
+# `import bot` load bot/bot.py as a top-level module and breaks `from .core` in bot/bot.py
+# for later tests (e.g. test_voice importing bot.prompt).
 
 import pytest
 
-REPO = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(REPO / "bot"))
-
-from conflict_check import check_conflicts, format_conflicts_for_yaml  # noqa: E402
+from bot.conflict_check import check_conflicts, format_conflicts_for_yaml
 
 
 def test_personality_non_personality_skipped():
