@@ -1,4 +1,4 @@
-# WAP consulting charter
+# Work-politics consulting charter
 
 **Territory:** `work-politics` (umbrella for political consulting ops)  
 **Not legal advice.** Entity formation (LLC, etc.) is operator/counsel.

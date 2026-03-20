@@ -12,7 +12,7 @@ A single browser page (served by the Mini App server) with four tabs:
 |-----|--------|
 | **Observe** | Submit an observation (same pipeline as saying "we did X" in Telegram). Text is sent to the analyst; any staged candidate appears in the Gate tab. No need to open or edit `recursion-gate.md`. |
 | **Upload** | Upload a file to `users/<id>/artifacts/` and optionally add a note. The note is submitted as an observation so the analyst can stage a candidate linking the artifact. |
-| **Gate** | View pending candidates; Approve / Reject / Quick merge. After approval, **Merge approved (companion)** / **(all)** / **(WAP only)** runs `process_approved_candidates` on the server — same as the CLI receipt flow, without pasting commands. |
+| **Gate** | View pending candidates; Approve / Reject / Quick merge. After approval, **Merge approved (companion)** / **(all)** / **(work-politics territory only)** runs `process_approved_candidates` on the server — same as the CLI receipt flow, without pasting commands. |
 | **Timeline** | Read-only view of recent pipeline events (staged, applied, etc.) from `pipeline-events.jsonl`. Fork history at a glance without opening markdown. |
 
 ---
@@ -36,7 +36,7 @@ Gate actions and **Merge approved** go through the same APIs as the CLI. Merges 
 | `/operator/artifacts` | POST | Upload file + optional observation → save to artifacts, stage if signal |
 | `/operator/gate-candidates` | GET | List candidates (filter by status, etc.) |
 | `/operator/gate-candidates/<id>/action` | POST | approve / reject / defer / quick_merge |
-| `/operator/gate-candidates/merge-approved` | POST | Body `{"territory":"companion"|"wap"|"all"}`. Batch-merge all **approved** candidates in that slice (default `companion` = non-WAP). Runs `process_approved_candidates --apply` with a server-generated receipt. |
+| `/operator/gate-candidates/merge-approved` | POST | Body `{"territory":"companion"|"wap"|"all"}`. Batch-merge all **approved** candidates in that slice (default `companion` = non–work-politics territory). Runs `process_approved_candidates --apply` with a server-generated receipt. |
 | `/operator/timeline` | GET | Recent pipeline events (read-only) |
 
 Authentication: `Authorization: Bearer <OPERATOR_FETCH_SECRET>` (or `OPERATOR_SECRET` where used).

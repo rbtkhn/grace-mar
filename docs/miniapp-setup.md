@@ -9,7 +9,7 @@ Grace-Mar has several web surfaces on the Mini App host (plus the static dashboa
 - **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Available at **https://grace-mar.com**.
 - **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
 - **Family hub** — `/app` on the Mini App server: chat, log activities (“we did X”), and parent-gated review + merge. See below.
-- **WAP internal dashboard** — `/wap`: token-gated job tracker for work-politics (SMM + operator). See [wap-dashboard.md](wap-dashboard.md).
+- **Work-politics internal dashboard** — `/wap`: token-gated job tracker (SMM + operator). See [wap-dashboard.md](wap-dashboard.md).
 
 ## Architecture
 
@@ -75,7 +75,7 @@ Mini App exchanges are appended to `users/<user>/session-transcript.md` (real-ti
 
 On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Mini App is lost between deploys unless you add a separate step to persist it (e.g. push to repo). Local dev writes to disk as usual.
 
-**Operator Console — merge from browser:** Gate tab and Inbox can run **Merge approved (companion)** / **(all)** / **(WAP)**, which invokes `process_approved_candidates` on the server. That requires a **writable clone** of the repo; ephemeral-only hosts may fail merges. Use the CLI from your laptop, or attach a persistent disk, if web merge errors out.
+**Operator Console — merge from browser:** Gate tab and Inbox can run **Merge approved (companion)** / **(all)** / **(work-politics territory)**, which invokes `process_approved_candidates` on the server. That requires a **writable clone** of the repo; ephemeral-only hosts may fail merges. Use the CLI from your laptop, or attach a persistent disk, if web merge errors out.
 
 ### Family hub (`/app`)
 
@@ -93,7 +93,7 @@ On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Min
 
 **Security:** Anyone with `FAMILY_APP_TOKEN` can chat and submit activities (rate-limit at reverse proxy if needed). Rotate the token if the link leaks. Merge still requires the operator secret.
 
-### WAP internal dashboard (`/wap`)
+### Work-politics internal dashboard (`/wap`)
 
 **Env:** Set **`WAP_DASHBOARD_TOKEN`** to a long random string. Optional **`WAP_JOBS_PATH`** — absolute path or path relative to repo root for the jobs JSON file (default `data/wap_jobs.json`). On Render, jobs are **ephemeral** unless you mount a persistent disk and point `WAP_JOBS_PATH` there.
 

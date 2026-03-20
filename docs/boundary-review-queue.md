@@ -18,7 +18,7 @@ As the fork grows, the main risk is **right data, wrong surface** (identity vs l
 | **SELF-LIBRARY** | `SELF_LIBRARY_ADD` / `REVISE` | `self-library.md` |
 | **CIV-MEM** | `CIV_MEM_ADD` / `REVISE` | LIB rows + civ-mem corpus |
 | **SKILLS** | (future explicit class or evidence-linked) | `skills.md`, skill-think/write |
-| **WORK-LAYER** | WAP / operator work artifacts | `work-*.md`, territories |
+| **WORK-LAYER** | Work-politics / operator work artifacts | `work-*.md`, territories |
 
 ---
 

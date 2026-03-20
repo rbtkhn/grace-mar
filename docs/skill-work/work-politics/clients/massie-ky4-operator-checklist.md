@@ -1,12 +1,12 @@
 # Massie KY-4 — operator checklist (work-politics)
 
-**Purpose:** Calibrate work-politics for the Thomas Massie campaign. Human-always-approves public ship; WAP territory + `channel_key` `operator:wap:us-ky4-massie`. See [massie-ky4.md](massie-ky4.md) for canonical links.
+**Purpose:** Calibrate work-politics for the Thomas Massie campaign. Human-always-approves public ship; work-politics territory + `channel_key` `operator:wap:us-ky4-massie`. See [massie-ky4.md](massie-ky4.md) for canonical links.
 
 ---
 
 ## Doctrine filter (every artifact)
 
-Before shipping or merging WAP candidates, ask:
+Before shipping or merging work-politics candidates, ask:
 
 - Does this strengthen **engineer/farmer, anti-waste, anti-surveillance/war** framing?
 - Does it avoid **forced culture-war cosplay** that isn’t Massie?
@@ -58,10 +58,10 @@ Align with [generate_wap_weekly_brief](../../../../scripts/generate_wap_weekly_b
 
 | Day | Actions |
 |-----|---------|
-| **Mon** | Log weekend activity (“we did X”); monitoring pass; stage 3–5 WAP gate notes if useful. |
+| **Mon** | Log weekend activity (“we did X”); monitoring pass; stage 3–5 work-politics gate notes if useful. |
 | **Tue** | Draft brief §1–4; doctrine pass. |
 | **Wed** | Fundraising + field; one-line pre-buttals; stage drafts — **no public ship without approval**. |
-| **Thu** | Gate review; merge **WAP** only for Massie; brief to decision-maker. |
+| **Thu** | Gate review; merge **work-politics territory** only for Massie (`--territory wap`); brief to decision-maker. |
 | **Fri** | Final brief + three next-week priorities; retro monitoring list. |
 
 ---

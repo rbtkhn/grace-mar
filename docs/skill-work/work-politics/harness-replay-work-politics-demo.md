@@ -1,12 +1,12 @@
 # Harness Event Replay — work-politics demonstration
 
-This walks through **Harness Event Replay** on a **real WAP candidate** already in `users/grace-mar/`. It shows how **audit lane** (`pipeline-events.jsonl`, `harness-events.jsonl`, `merge-receipts.jsonl`) lines up with **gate YAML** (`territory: work-politics`, `channel_key: operator:wap:*`) and **EVIDENCE** (`ACT-*`).
+This walks through **Harness Event Replay** on a **real work-politics candidate** already in `users/grace-mar/`. It shows how **audit lane** (`pipeline-events.jsonl`, `harness-events.jsonl`, `merge-receipts.jsonl`) lines up with **gate YAML** (`territory: work-politics`, `channel_key: operator:wap:*`) and **EVIDENCE** (`ACT-*`).
 
 Full spec: [harness-replay-spec.md](../../harness-replay-spec.md) · CLI: [harness-replay.md](../../harness-replay.md).
 
 ---
 
-## Command (WAP example)
+## Command (work-politics example)
 
 Use a candidate that was staged under **work-politics** with a Massie / KY lane `channel_key`:
 
@@ -28,15 +28,15 @@ python scripts/replay_harness_event.py -u grace-mar --candidate CANDIDATE-0087 -
 
 ## What you should see (structure)
 
-| Section | WAP signal |
+| Section | work-politics signal |
 |--------|------------|
-| **recursion-gate.md (YAML)** | `territory: work-politics`, `channel_key: operator:wap:us-ky4-massie`, WAP summary / `profile_target` |
+| **recursion-gate.md (YAML)** | `territory: work-politics`, `channel_key: operator:wap:us-ky4-massie`, summary / `profile_target` |
 | **pipeline-events.jsonl** | `intent_constitutional_critique` (pre-merge), **`applied`** rows with `channel_key: operator:wap:us-ky4-massie`, `proposal_class`, `surface` |
 | **harness-events.jsonl** | `merge_applied` from `process_approved_candidates`, path to `merge-receipts.jsonl` |
-| **merge-receipts.jsonl** | **`territory": "wap"`**, `candidate_ids`, `checksum_before`, timestamps |
+| **merge-receipts.jsonl** | **`territory": "wap"`** (short token in JSON), `candidate_ids`, `checksum_before`, timestamps |
 | **self-evidence.md** | Hint line for **`ACT-0048`** when `--evidence` is set |
 
-That answers: *“Which harness steps touched this WAP merge, and what did the gate say?”* — not *“what did the model think?”* (no full prompt in audit by default).
+That answers: *“Which harness steps touched this work-politics merge, and what did the gate say?”* — not *“what did the model think?”* (no full prompt in audit by default).
 
 ---
 
@@ -53,11 +53,11 @@ Report header and gate excerpt (structure only — run the command above for ful
   status: approved
   channel_key: operator:wap:us-ky4-massie
   territory: work-politics
-  summary: WAP — triangulated analytical lenses …
+  summary: work-politics — triangulated analytical lenses …
   profile_target: IX-A. KNOWLEDGE
 ```
 
-Pipeline rows include **intent_constitutional_critique** and **`applied`** with WAP `channel_key` and `ACT-0048`. Harness lists **`merge_applied`** batches; receipts show **`territory": "wap"`** and paired candidate IDs (e.g. with CANDIDATE-0088 in the same batch).
+Pipeline rows include **intent_constitutional_critique** and **`applied`** with work-politics `channel_key` and `ACT-0048`. Harness lists **`merge_applied`** batches; receipts show **`territory": "wap"`** and paired candidate IDs (e.g. with CANDIDATE-0088 in the same batch).
 
 ---
 
@@ -70,12 +70,12 @@ Merges **after** the pipeline envelope work add per-line metadata. When present 
 - **`parent_event_id`** (links **`applied`** to the earlier **`staged`** row when both have ids)
 - **`record_refs`** on **`applied`** (repo paths such as `users/grace-mar/self.md#IX-A`, `self-evidence.md`)
 
-**Work-politics** rows still show WAP identity through **`channel_key`** / **`territory`** in the gate block and pipeline JSON — the envelope adds **stable ids** for tickets and replay.
+**Work-politics** rows are identifiable through **`channel_key`** / **`territory`** in the gate block and pipeline JSON — the envelope adds **stable ids** for tickets and replay.
 
 ---
 
 ## Related
 
-- [README.md](README.md) — WAP scope and gate rhythm
+- [README.md](README.md) — work-politics scope and gate rhythm
 - [boundary-review-queue.md](../../boundary-review-queue.md) — where things should go vs replay (why they went there)
 - `scripts/replay_harness_event.py` — implementation

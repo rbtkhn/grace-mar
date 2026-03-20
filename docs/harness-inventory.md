@@ -32,7 +32,7 @@ This naming matters for portability: a runtime can carry `runtime` and `audit` l
 
 ## Pending candidates dashboard (human door)
 
-Read-only HTML generated from `recursion-gate.md` so you can **scan** pending IDs, WAP vs Companion, age, and channel — without scrolling infinite chat.
+Read-only HTML generated from `recursion-gate.md` so you can **scan** pending IDs, work-politics vs companion, age, and channel — without scrolling infinite chat.
 
 ```bash
 python scripts/generate_gate_dashboard.py -u grace-mar

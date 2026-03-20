@@ -31,4 +31,4 @@ This lens is **named for a style** of legal–populist critique often associated
 
 Institutional focus can miss battlefield or alliance dynamics; pair with operational and structural lenses.
 
-**Not legal advice.** WAP operates under [compliance-checklist.md](../compliance-checklist.md); counsel when needed.
+**Not legal advice.** Work-politics work operates under [compliance-checklist.md](../compliance-checklist.md); counsel when needed.

@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, WAP status, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation.
+description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation.
 ---
 
 # Daily Warmup
@@ -16,7 +16,7 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    ```bash
    python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md
    ```
-   Include the output path in your reply and a short summary (top WAP + strategy headlines, next actions).
+   Include the output path in your reply and a short summary (top work-politics + strategy headlines, next actions).
 3. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@usa_first_ky`.
 4. Return the warmup brief (priorities, gate, WAP, integrity) plus:
    - daily-brief summary (with output path)
@@ -44,7 +44,7 @@ Return a short operator brief with:
 
 - top 3 priorities
 - gate state and whether anything needs review now
-- WAP blockers or next actions
+- work-politics blockers or next actions
 - integrity status
 - local worktree noise only if it matters for the next move
 - (Optional) X scan top links + 1–2 draft post candidates for `@usa_first_ky` (draft-only)
@@ -59,4 +59,4 @@ Return a short operator brief with:
 
 - `docs/operator-skills.md`
 - `docs/skill-work/work-politics/workspace.md`
-- `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` (high-stakes WAP messaging discipline; weekly brief §8)
+- `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` (high-stakes work-politics messaging discipline; weekly brief §8)

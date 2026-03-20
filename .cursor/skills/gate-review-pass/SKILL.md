@@ -35,7 +35,7 @@ Keep the output recommendation-oriented:
 ## Guardrails
 
 - This workflow does not approve, reject, or merge anything by itself.
-- Keep companion and WAP items distinct when that affects review.
+- Keep companion and work-politics items distinct when that affects review.
 - Treat duplicate hints as prompts to verify, not proof that a candidate should be rejected.
 
 ## Related files

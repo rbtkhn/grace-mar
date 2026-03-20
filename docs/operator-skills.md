@@ -10,13 +10,13 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 | Skill | Purpose | Default command |
 |------|---------|-----------------|
-| `daily-warmup` | Repo-wide operator warmup: gate state, WAP status, integrity, local worktree noise, and top priorities | `python3 scripts/operator_daily_warmup.py -u grace-mar` |
+| `daily-warmup` | Repo-wide operator warmup: gate state, work-politics status, integrity, local worktree noise, and top priorities | `python3 scripts/operator_daily_warmup.py -u grace-mar` |
 | `wap-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_wap_pulse.py -u grace-mar` |
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar` |
 | `massie-x-news-search-draft` | Real-time news search + suggested @usa_first_ky X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/massie-x-news-search-draft/SKILL.md` |
-| `wap-dashboard` | Internal miniapp UI at `/wap` — WAP job tracker (token: `WAP_DASHBOARD_TOKEN`) | [wap-dashboard.md](wap-dashboard.md) |
+| `wap-dashboard` | Internal miniapp UI at `/wap` — work-politics job tracker (token: `WAP_DASHBOARD_TOKEN`) | [wap-dashboard.md](wap-dashboard.md) |
 
 ---
 

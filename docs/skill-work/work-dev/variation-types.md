@@ -1,6 +1,6 @@
 # Variation types — factorial stress library (work-dev)
 
-**Purpose:** Reusable **stressors** for factorial-style evaluation: same base scenario, one controlled change per clone. Use for OpenClaw workflows, WAP briefs, enterprise agent flows, or any consequential automation.
+**Purpose:** Reusable **stressors** for factorial-style evaluation: same base scenario, one controlled change per clone. Use for OpenClaw workflows, work-politics briefs, enterprise agent flows, or any consequential automation.
 
 **Companion doc:** [agent-reliability-playbook.md](agent-reliability-playbook.md).
 

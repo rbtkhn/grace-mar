@@ -20,8 +20,8 @@ Use this file when you want one place to understand:
 | **Campaign status** | Principal, phase, days until primary, next critical dates | `principal-profile.md`, `calendar-2026.md` |
 | **Active clients** | Multi-client consulting view: who is active, jurisdiction, channel_key | [clients/](clients/) + per-client sheets |
 | **Compliance blockers** | Per-jurisdiction open items before new paid work | [compliance-checklist.md](compliance-checklist.md) + client templates |
-| **Territory blockers** | Stale docs, placeholder-heavy research surfaces, missing WAP gate rhythm | Derived from `calendar-2026.md`, `opposition-brief.md`, `principal-profile.md`, `revenue-log.md`, `brief-source-registry.md`, `content-queue.md`, `users/grace-mar/recursion-gate.md` |
-| **Pending WAP gate items** | WAP-only `RECURSION-GATE` review | `users/grace-mar/recursion-gate.md` via territory filter |
+| **Territory blockers** | Stale docs, placeholder-heavy research surfaces, missing work-politics gate rhythm | Derived from `calendar-2026.md`, `opposition-brief.md`, `principal-profile.md`, `revenue-log.md`, `brief-source-registry.md`, `content-queue.md`, `users/grace-mar/recursion-gate.md` |
+| **Pending work-politics gate items** | Work-politics-only `RECURSION-GATE` review | `users/grace-mar/recursion-gate.md` via territory filter |
 | **Brief readiness** | What sources feed the weekly brief and what still needs checking | `brief-source-registry.md` |
 | **Content queue** | X / content workflow state for `@usa_first_ky` | `content-queue.md` |
 | **Revenue / offer state** | Revenue totals, BTC/SMM commitments, active commercial surfaces | `revenue-log.md`, `fiverr-microtask-100.md`, `account-x.md` |
@@ -76,9 +76,9 @@ Use this file when you want one place to understand:
 1. **"We did X" → stage** — After calls, readings, decisions, milestones, say "we did X" so the agent stages to RECURSION-GATE; the gate stays current. See [we-did-x-habit.md](../../we-did-x-habit.md).
 2. Refresh `brief-source-registry.md` before the weekly brief.
 3. Review `content-queue.md` before asking for post drafts.
-4. Use the WAP dashboard/operator surface for territory blockers and next actions.
+4. Use the work-politics dashboard/operator surface for territory blockers and next actions.
 5. Use `outreach-workspace.md` when the work block is about offer testing, proof, and buyer learning rather than campaign execution.
-6. Stage WAP milestones through `RECURSION-GATE` when something should become audited continuity or Record-adjacent knowledge.
+6. Stage work-politics milestones through `RECURSION-GATE` when something should become audited continuity or Record-adjacent knowledge.
 
 ---
 

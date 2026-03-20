@@ -1,4 +1,4 @@
-# WAP outreach funnel
+# Work-politics outreach funnel
 
 Lightweight funnel tracker for `work-politics`.
 

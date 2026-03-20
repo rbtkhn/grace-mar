@@ -20,7 +20,7 @@ Summarize:
 - recently committed work
 - meaningful local changes still in progress
 - runtime-only noise that should stay uncommitted
-- WAP continuity if relevant
+- work-politics continuity if relevant
 - the best next re-entry prompt
 
 ## Guardrails

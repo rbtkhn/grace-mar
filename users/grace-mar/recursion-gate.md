@@ -20,7 +20,7 @@
 >
 > Machine-written by **`bot/core.py`** (Telegram, WeChat, activity reports) and by **operator scripts** that stage here — only edit the `status` field (and optional rejection notes).
 >
-> **Territory (WAP vs companion):** For **work-politics** candidates, set **`territory: work-politics`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (WAP only) or `--territory companion` (Record only). Same file, different lens.
+> **Territory (work-politics vs companion):** For **work-politics** candidates, set **`territory: work-politics`** or **`channel_key: operator:wap`** (optionally `operator:wap:brief-name`). Operator tools then filter: `python scripts/operator_blocker_report.py -u grace-mar --territory wap` (work-politics territory only) or `--territory companion` (Record only). Same file, different lens.
 >
 > **Invariant:** Every **pending** or **approved-not-yet-merged** candidate must sit **above** `## Processed`. The bot inserts new blocks immediately before `## Processed`. If anything pending appears below Processed, move it up or merge will not see it.
 
@@ -50,7 +50,7 @@ summary: Casa Bonita history — user rejected.
 
 ## Processed
 
-### CANDIDATE-0087 (WAP — triangulated analytical lenses methodology)
+### CANDIDATE-0087 (work-politics — triangulated analytical lenses methodology)
 
 ```yaml
 status: approved
@@ -64,13 +64,13 @@ source_exchange:
 mind_category: knowledge
 signal_type: wap_milestone
 priority_score: 3
-summary: WAP — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line
+summary: work-politics — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line
 profile_target: IX-A. KNOWLEDGE
 suggested_entry: "WORK (operator only): Political-consulting briefs may use triangulated analytical lenses (structural, operational-diplomatic, institutional-domestic); see docs/skill-work/work-politics/analytical-lenses/. Not campaign advice to the companion; not Voice knowledge."
 prompt_section: YOUR KNOWLEDGE
 prompt_addition: none
 ```
-### CANDIDATE-0088 (WAP — work-strategy modules: energy-chokepoint, synthesis, guardrails)
+### CANDIDATE-0088 (work-politics — work-strategy modules: energy-chokepoint, synthesis, guardrails)
 
 ```yaml
 status: approved
@@ -93,7 +93,7 @@ skills_bullets_suggested: |
   If companion approves and merge script supports skills.md (or manual update): add under work-strategy — Specialist lenses: mind-mearsheimer, mind-mercouris, mind-barnes (triangulated via work-politics/analytical-lenses). Modules: energy-chokepoint monitoring & economic-blowback guardrail. Guardrails: manifest-principles.md + economic-blowback/guardrail-test.md. Pipeline: persuasive-content-pipeline.md.
 ```
 
-### CANDIDATE-0089 (WAP — america-first-ky guardrail stress-test methodology)
+### CANDIDATE-0089 (work-politics — america-first-ky guardrail stress-test methodology)
 
 ```yaml
 status: approved
@@ -107,7 +107,7 @@ source_exchange:
 mind_category: knowledge
 signal_type: wap_milestone
 priority_score: 3
-summary: WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
+summary: work-politics — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
 profile_target: IX-A. KNOWLEDGE
 suggested_entry: "WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checker enforcement."
 prompt_section: YOUR KNOWLEDGE
@@ -125,7 +125,7 @@ channel_key: test:voice_authenticity:1
 action: PER-0008 added to IX-C; bot/prompt.py YOUR PERSONALITY updated; ACT-0046 added to EVIDENCE.
 ```
 
-### CANDIDATE-0085 (WAP — weekly brief + recency workflow)
+### CANDIDATE-0085 (work-politics — weekly brief + recency workflow)
 
 ```yaml
 status: approved
@@ -135,7 +135,7 @@ territory: work-politics
 source: operator — WPC ops milestone (doc + generator)
 source_exchange:
   operator: "Shipped: brief-source-registry § Recency pass; weekly-brief-template §0; generate_wap_weekly_brief.py §0; weekly-brief-2026-03-09.md; README operator step 4. Rhythm = every brief cycle runs 7d/30d live pass."
-  grace_mar: "[WAP milestone — approve for ACT audit trail; IX optional/minimal]"
+  grace_mar: "[work-politics milestone — approve for ACT audit trail; IX optional/minimal]"
 mind_category: knowledge
 signal_type: wap_milestone
 priority_score: 3

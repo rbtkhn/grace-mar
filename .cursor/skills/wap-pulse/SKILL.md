@@ -1,9 +1,9 @@
 ---
 name: wap-pulse
-description: Generate a work-politics pulse with campaign status, blockers, doc freshness, gate rhythm, content queue state, and next actions. Use when checking WAP readiness, preparing the weekly brief, asking what is stale, or requesting a territory status sweep.
+description: Generate a work-politics pulse with campaign status, blockers, doc freshness, gate rhythm, content queue state, and next actions. Use when checking work-politics readiness, preparing the weekly brief, asking what is stale, or requesting a territory status sweep.
 ---
 
-# WAP Pulse
+# Work-politics pulse
 
 Use this skill when the operator wants a territory-specific status pass instead of a full repo warmup.
 
@@ -29,14 +29,14 @@ Keep the response focused on:
 - blockers and stale docs
 - brief readiness
 - content queue state
-- pending WAP gate items
+- pending work-politics gate items
 - next actions
 - **High-stakes flag:** if the week’s work includes war powers, ethics/insider, high-claim cartel economy, or border + civil liberties messaging, note that **weekly brief §8** / `america-first-ky` stress-test may be required before ship (see `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md`).
 
 ## Guardrails
 
 - This is a WORK-territory surface, not a second queue.
-- Do not turn WAP observations into Record edits without the normal gate flow.
+- Do not turn work-politics observations into Record edits without the normal gate flow.
 - If blockers are all doc-freshness issues, say that plainly instead of overstating urgency.
 
 ## Related files

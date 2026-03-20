@@ -1,4 +1,4 @@
-# WAP target registry
+# Work-politics target registry
 
 Canonical target-segment surface for `work-politics`.
 
@@ -25,9 +25,9 @@ Start narrow:
 
 ## Partner segments
 
-These are not end buyers. They are trusted intermediaries who may introduce WAP into warmer client relationships.
+These are not end buyers. They are trusted intermediaries who may introduce work-politics work into warmer client relationships.
 
-| Partner type | Who they already serve | Why fit | What they gain by introducing WAP | Lead-source ideas | Quality notes | Status |
+| Partner type | Who they already serve | Why fit | What they gain by introducing work-politics | Lead-source ideas | Quality notes | Status |
 |-------------|------------------------|---------|-----------------------------------|-------------------|---------------|--------|
 | **Boutique political consultants** | Campaigns and principals | Already deal with clients who have briefing and message workflow pain | Another way to help clients without building a new internal workflow offering from scratch | Consultant rosters, political vendor directories, warm introductions | Highest-fit first partner type because the client problems are already adjacent | **active_test** |
 | **Campaign-adjacent communications or media operators** | Campaigns, advocacy groups, or issue-driven teams | Often see message prep, source triage, and follow-up pain up close | Can offer a workflow clarity diagnostic without owning implementation themselves | Agency sites, issue-media ecosystems, referrals | Good when the client pain is around prep and coordination rather than core campaign strategy | **researching** |

@@ -29,7 +29,7 @@ Run all **three** on the **same neutral fact summary** when using this framework
    - **`session-transcript.md`** / operator logs for session continuity, and/or
    - **Optional ACT- milestone** via RECURSION-GATE when the companion wants an audit line (“we published triangulated brief vN”) — merge only after approval and `process_approved_candidates.py`.
 6. **Knowledge boundary** — Lenses do not expand what the Voice “knows.” Do not compile lens personas into `bot/prompt.py` unless the companion gates that explicitly ([knowledge-boundary-framework.md](../../../knowledge-boundary-framework.md)).
-7. **CIV-MEM** — Final synthesis may cite governed library / CMC lookups like any other WAP draft; citations do not auto-enter the Record.
+7. **CIV-MEM** — Final synthesis may cite governed library / CMC lookups like any other work-politics draft; citations do not auto-enter the Record.
 
 ---
 
@@ -41,7 +41,7 @@ Lens labels reference **well-known analytical styles** for operator clarity only
 
 ## Optional Record pointer (`skills.md`)
 
-If the companion wants a **capability note** linking to this methodology, add it via **RECURSION-GATE** (stage → approve → `process_approved_candidates.py`). Do **not** edit `skills.md` directly without that path. A pending WAP candidate may exist for a minimal IX-A WORK line + audit; a dedicated skills claim would require a candidate shaped for whatever the merge script supports (today: primarily SELF IX / prompt / EVIDENCE).
+If the companion wants a **capability note** linking to this methodology, add it via **RECURSION-GATE** (stage → approve → `process_approved_candidates.py`). Do **not** edit `skills.md` directly without that path. A pending work-politics candidate may exist for a minimal IX-A WORK line + audit; a dedicated skills claim would require a candidate shaped for whatever the merge script supports (today: primarily SELF IX / prompt / EVIDENCE).
 
 ---
 

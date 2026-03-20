@@ -1,7 +1,7 @@
 # Audit: work-dev and work-politics alignment
 
 **Date:** 2026-03-18  
-**Scope:** Governance, structure, RECURSION-GATE usage, operator paths, cross-references, and gaps between `docs/skill-work/work-dev/` and `docs/skill-work/work-politics/` (WAP).
+**Scope:** Governance, structure, RECURSION-GATE usage, operator paths, cross-references, and gaps between `docs/skill-work/work-dev/` and `docs/skill-work/work-politics/` (work-politics territory).
 
 ---
 
