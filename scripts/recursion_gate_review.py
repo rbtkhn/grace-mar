@@ -486,6 +486,8 @@ def filter_review_candidates(
     if territory:
         if territory == "companion":
             out = [row for row in out if row.get("territory") != TERRITORY_WAP]
+        elif territory == "wap":
+            out = [row for row in out if row.get("territory") == TERRITORY_WAP]
         else:
             out = [row for row in out if row.get("territory") == territory]
     return out
