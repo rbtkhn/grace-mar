@@ -1458,6 +1458,26 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0048
+    date: 2026-03-20
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "WAP — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line"
+    curated_by: user
+    evidence_tier: 3
+
+  - id: ACT-0049
+    date: 2026-03-20
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: knowledge
+    source: pipeline merge
+    summary: "WORK-strategy — energy-chokepoint monitoring, mind-synthesis (after three lenses), economic-blowback guardrail; pipeline and principles docs. Optional skills.md capability note on approval (manual or "
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.

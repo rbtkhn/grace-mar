@@ -704,3 +704,13 @@
 > CANDIDATE-0089 → ACT-0047
 > WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only
 > operator: "Added docs/skill-work/work-politics/america-first-ky/ (guardrail-stress-test.md, stress-test-brief-template.md, AGENT-SESSION-BRIEF.md). Explicitly NOT governance_checker enforcement; no skills.md direct edit; no routine self-evidence traces." grace_mar: "[Optional merge — companion approves if minimal IX-A WORK line or skills.md bullet is desired]"
+
+**[2026-03-20 08:07:12]** `APPROVED` (Operator)
+> CANDIDATE-0087 → ACT-0048
+> WAP — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line
+> operator: "Added docs/skill-work/work-politics/analytical-lenses/ (manifest + three lenses + template); weekly-brief-template §7; README principles + operator path. Lenses are WORK-only; no Voice prompt change." grace_mar: "[Optional merge — companion approves if a minimal IX-A WORK pointer is desired for Record continuity]"
+
+**[2026-03-20 08:07:12]** `APPROVED` (Operator)
+> CANDIDATE-0088 → ACT-0049
+> WORK-strategy — energy-chokepoint monitoring, mind-synthesis (after three lenses), economic-blowback guardrail; pipeline and principles docs. Optional skills.md capability note on approval (manual or script).
+> operator: "Added docs/skill-work/work-strategy/modules/energy-chokepoint, economic-blowback; current-events-analysis, manifest-principles, persuasive-content-pipeline, synthesis-engine; prototypes/mind-synthesis.py. Lenses, modules, guardrails are WORK-only." grace_mar: "[On approval: apply skills.md bullets manually or extend process_approved_candidates to support skills.md; no direct edit to ski

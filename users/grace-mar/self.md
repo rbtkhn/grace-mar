@@ -426,6 +426,20 @@ books_read:
     evidence_id: ACT-0047
     provenance: human_approved
 
+  - id: LEARN-0042
+    date: 2026-03-20
+    topic: "WORK (operator only): Political-consulting briefs may use triangulated analytical lenses (structural, operational-diplomatic, institutional-domestic); see docs/skill-work/work-politics/analytical-lens"
+    source: pipeline merge
+    evidence_id: ACT-0048
+    provenance: human_approved
+
+  - id: LEARN-0043
+    date: 2026-03-20
+    topic: "WORK (operator only): Strategy lane uses energy-chokepoint module for energy-related events (prior documented precedent in work-strategy), triangulated lenses + synthesis-engine for current-events, ec"
+    source: pipeline merge
+    evidence_id: ACT-0049
+    provenance: human_approved
+
 
 ```
 
