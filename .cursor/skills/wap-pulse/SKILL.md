@@ -31,6 +31,7 @@ Keep the response focused on:
 - content queue state
 - pending WAP gate items
 - next actions
+- **High-stakes flag:** if the week’s work includes war powers, ethics/insider, high-claim cartel economy, or border + civil liberties messaging, note that **weekly brief §8** / `america-first-ky` stress-test may be required before ship (see `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md`).
 
 ## Guardrails
 
@@ -42,5 +43,7 @@ Keep the response focused on:
 
 - `docs/operator-skills.md`
 - `docs/skill-work/work-politics/workspace.md`
+- `docs/skill-work/work-politics/weekly-brief-template.md`
 - `docs/skill-work/work-politics/brief-source-registry.md`
 - `docs/skill-work/work-politics/content-queue.md`
+- `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md`

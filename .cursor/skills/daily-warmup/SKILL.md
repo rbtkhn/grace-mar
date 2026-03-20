@@ -59,3 +59,4 @@ Return a short operator brief with:
 
 - `docs/operator-skills.md`
 - `docs/skill-work/work-politics/workspace.md`
+- `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` (high-stakes WAP messaging discipline; weekly brief §8)

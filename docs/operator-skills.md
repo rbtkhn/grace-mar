@@ -25,7 +25,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 1. Start with `daily-warmup` when opening a new work block or a new agent thread.
 2. Run `wap-pulse` when the day includes campaign work, brief prep, or X/content operations.
 3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
-4. Use `weekly-brief-run` for the actual WAP brief cycle after checking source freshness.
+4. Use `weekly-brief-run` for the actual WAP brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
 5. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
 6. End or resume a session with `handoff-check`.
 
@@ -61,6 +61,7 @@ Must answer:
 - What must be refreshed first?
 - Was a scaffold emitted or intentionally withheld?
 - What human review is still required before use?
+- If the brief touches high-stakes areas (see `weekly-brief-template.md` §8), has the operator been pointed at the factorial stress-test template and framework under `docs/skill-work/work-politics/america-first-ky/`?
 
 ### `gate-review-pass`
 
