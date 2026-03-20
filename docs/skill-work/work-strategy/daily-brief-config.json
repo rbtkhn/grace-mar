@@ -1,50 +1,67 @@
 {
-  "_comment": "daily-brief-config: feeds may set locale (ISO-style: en, fr, de, es, ar). Scoring = global wap_keyword_phrases + wap_keyword_phrases_by_locale[locale]; same for strategy. No translation API — locale lists are for substring match on native headlines. Respect site ToS.",
+  "_comment": "daily-brief-config: feeds may set locale (ISO-style: en, fr, de, es, ar). Optional tier 1–3 + ingest_caps limit items per feed (newest first) before W+S ranking. Per-feed max_items overrides tier. Scoring = global wap_keyword_phrases + wap_keyword_phrases_by_locale[locale]; same for strategy. No translation API — locale lists are for substring match on native headlines. Respect site ToS.",
+  "ingest_caps": {
+    "default_max_items_per_feed": 12,
+    "max_items_by_tier": {
+      "1": 14,
+      "2": 10,
+      "3": 6
+    }
+  },
   "feeds": [
     {
       "name": "NPR — national news",
       "url": "https://feeds.npr.org/1001/rss.xml",
-      "locale": "en"
+      "locale": "en",
+      "tier": 1
     },
     {
       "name": "NBC News — politics",
       "url": "https://feeds.nbcnews.com/nbcnews/public/politics",
-      "locale": "en"
+      "locale": "en",
+      "tier": 1
     },
     {
       "name": "The Hill — politics",
       "url": "https://thehill.com/feed/",
-      "locale": "en"
+      "locale": "en",
+      "tier": 1
     },
     {
       "name": "Roll Call — Congress",
       "url": "https://www.rollcall.com/feed/",
-      "locale": "en"
+      "locale": "en",
+      "tier": 1
     },
     {
       "name": "Le Monde — français (France / monde)",
       "url": "https://www.lemonde.fr/rss/une.xml",
-      "locale": "fr"
+      "locale": "fr",
+      "tier": 2
     },
     {
       "name": "Der Spiegel — Deutsch (Schlagzeilen)",
       "url": "https://www.spiegel.de/schlagzeilen/index.rss",
-      "locale": "de"
+      "locale": "de",
+      "tier": 2
     },
     {
       "name": "BBC Mundo — español (Américas / global)",
       "url": "https://feeds.bbci.co.uk/mundo/rss.xml",
-      "locale": "es"
+      "locale": "es",
+      "tier": 2
     },
     {
       "name": "France 24 — العربية (MENA)",
       "url": "https://www.france24.com/ar/rss",
-      "locale": "ar"
+      "locale": "ar",
+      "tier": 2
     },
     {
       "name": "Hacker News — front page",
       "url": "https://hnrss.org/frontpage",
-      "locale": "en"
+      "locale": "en",
+      "tier": 3
     }
   ],
   "wap_keyword_phrases": [
@@ -290,5 +307,13 @@
       "بيانات",
       "تنظيم"
     ]
+  },
+  "story_dedupe": {
+    "enabled": true,
+    "min_anchors": 2,
+    "jaccard_min": 0.38,
+    "min_shared_anchors": 2,
+    "max_items_for_clustering": 260,
+    "max_alsos_per_cluster": 4
   }
 }

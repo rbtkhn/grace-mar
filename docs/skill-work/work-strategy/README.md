@@ -11,7 +11,7 @@
 | Artifact | Role |
 |----------|------|
 | **[common-inputs.md](common-inputs.md)** | Shared inputs into work-politics and work-strategy (event ingest, RSS, neutral fact summary, three lenses, gate, operator). |
-| **[daily-brief-config.json](daily-brief-config.json)** | Feeds (`locale` per feed) + global + per-locale keyword lists (`wap_keyword_phrases_by_locale`, `strategy_keyword_phrases_by_locale`) for `generate_wap_daily_brief.py` — **W+S** scoring only; no translation API. |
+| **[daily-brief-config.json](daily-brief-config.json)** | Feeds (`locale` per feed) + global + per-locale keyword lists (`wap_keyword_phrases_by_locale`, `strategy_keyword_phrases_by_locale`) for `generate_wap_daily_brief.py` — **W+S** scoring only; no translation API. **`ingest_caps`** + per-feed **`tier`** (1–3) and optional **`max_items`** cap each feed **before** ranking (newest first), so one noisy RSS does not dominate. Optional **`story_dedupe`** clusters headlines that share enough `story_anchor_phrases` overlap (Jaccard + shared anchors) so the same crisis in EN/FR/DE/ES/AR does not flood §2; tune thresholds or pass `--no-story-dedupe` for a flat list. CLI **`--max-per-feed N`** overrides every feed’s cap. |
 | **[daily-brief-focus.md](daily-brief-focus.md)** | Operator-maintained bullets: what the strategy lane is watching (product, partners, policy). |
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → Triangulation → Synthesis (WORK only). |
@@ -36,6 +36,10 @@ python scripts/generate_wap_daily_brief.py -u grace-mar \
 Default config path: `docs/skill-work/work-strategy/daily-brief-config.json`.
 
 **Foreign-language feeds:** Each feed may set `"locale": "fr"` (etc.). Phrases in `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale` are **added** to the global lists when scoring that feed’s items (substring match on the original headline). Non-`en` locales are shown in the headline line (`· _fr_`). Tuning those lists is the **zero-API** way to align ranking with non-English copy; a future optional path could add translated-title scratch for scoring only.
+
+**Ingest volume:** `ingest_caps.default_max_items_per_feed` and `max_items_by_tier` apply when a feed has no explicit `max_items`. Tier **1** = core US/congress feeds; **2** = international language feeds; **3** = long-tail (e.g. HN). Explicit `max_items` on a feed wins over tier.
+
+**Same-story grouping:** After ranking, items can be clustered by anchor overlap on `title + link` (default anchor list in the script; optional `story_anchor_phrases` in JSON extends it). This is **not** semantic dedupe—raise `jaccard_min` / `min_shared_anchors` if clusters feel loose; disable via config `story_dedupe.enabled: false` or CLI `--no-story-dedupe`.
 
 **Operator habit:** Starting Cursor with **“good morning”** is wired in [.cursor/skills/daily-warmup/SKILL.md](../../.cursor/skills/daily-warmup/SKILL.md) and the bootstrap guide as the cue to run warmup + **always** generate today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (read-only otherwise until you direct).
 

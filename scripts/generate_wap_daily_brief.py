@@ -7,6 +7,8 @@ Generate a standard **daily brief** for work-politics + work-strategy:
   - Optional RSS ingest (configurable), dual keyword scores: **W** (campaign), **S** (product/AI/governance)
   - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale`
     in config — extra phrase lists for scoring **only** (no translation API; zero-API mode).
+  - Optional **`ingest_caps`**: per-feed `max_items` and/or `tier` (1–3) with `default_max_items_per_feed` + `max_items_by_tier`
+    so high-volume feeds do not dominate before W+S ranking.
 
 Config (default):
   docs/skill-work/work-strategy/daily-brief-config.json
@@ -60,6 +62,82 @@ DEFAULT_WAP_PHRASES: tuple[str, ...] = (
     "rep. thomas",
     "thomas massie",
 )
+
+# Cross-language “story” anchors (substring match on title+URL blob). Merged with config `story_anchor_phrases`.
+DEFAULT_STORY_ANCHORS: tuple[str, ...] = (
+    "trump",
+    "biden",
+    "iran",
+    "israel",
+    "gaza",
+    "hamas",
+    "nato",
+    "otan",
+    "ukraine",
+    "russia",
+    "putin",
+    "china",
+    "syria",
+    "yemen",
+    "lebanon",
+    "iraq",
+    "afghanistan",
+    "kiev",
+    "kyiv",
+    "tehran",
+    "hezbollah",
+    "massie",
+    "gallrein",
+    "kentucky",
+    "congress",
+    "senate",
+    "netanyahu",
+    "venezuela",
+    "taiwan",
+    "north korea",
+    "guerre",
+    "krieg",
+    "guerra",
+    "حرب",
+    "إيران",
+    "ترامب",
+    "إسرائيل",
+    "غزة",
+    "أوكرانيا",
+    "روسيا",
+    "الناتو",
+    "حماس",
+    "طهران",
+    "واشنطن",
+    "الكونغرس",
+    "diplomatie",
+    "diplomacy",
+    "sanctions",
+    "sanktionen",
+    "sanciones",
+    "pentagon",
+    "pentagone",
+    "washington",
+    "moyen-orient",
+    "nahost",
+    "oriente medio",
+    "middle east",
+)
+
+DEFAULT_STORY_DEDUPE: dict[str, object] = {
+    "enabled": True,
+    "min_anchors": 2,
+    "jaccard_min": 0.38,
+    "min_shared_anchors": 2,
+    "max_items_for_clustering": 260,
+    "max_alsos_per_cluster": 4,
+}
+
+# Before global W+S ranking: max items kept per feed (after recency sort within feed).
+DEFAULT_INGEST_CAPS: dict[str, object] = {
+    "default_max_items_per_feed": 12,
+    "max_items_by_tier": {1: 14, 2: 10, 3: 6},
+}
 
 DEFAULT_STRATEGY_PHRASES: tuple[str, ...] = (
     "openai",
@@ -127,23 +205,145 @@ def _locale_phrase_map(data: dict, key: str) -> dict[str, tuple[str, ...]]:
     return out
 
 
+def _merge_story_anchors(data: dict) -> tuple[str, ...]:
+    extra = data.get("story_anchor_phrases") if isinstance(data, dict) else None
+    merged: list[str] = []
+    seen: set[str] = set()
+    for p in DEFAULT_STORY_ANCHORS:
+        pl = p.lower()
+        if pl not in seen:
+            seen.add(pl)
+            merged.append(pl)
+    if isinstance(extra, list):
+        for x in extra:
+            pl = str(x).lower().strip()
+            if pl and pl not in seen:
+                seen.add(pl)
+                merged.append(pl)
+    return tuple(merged)
+
+
+def _load_story_dedupe(data: dict) -> dict[str, object]:
+    out = dict(DEFAULT_STORY_DEDUPE)
+    raw = data.get("story_dedupe") if isinstance(data, dict) else None
+    if isinstance(raw, dict):
+        for k in out:
+            if k in raw:
+                out[k] = raw[k]
+    return out
+
+
+def _normalize_tier_caps(raw: object, defaults: dict[int, int]) -> dict[int, int]:
+    out = dict(defaults)
+    if not isinstance(raw, dict):
+        return out
+    for k, v in raw.items():
+        try:
+            ki = int(k)
+            out[ki] = int(v)
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
+def _load_ingest_caps(data: dict) -> dict[str, object]:
+    base = dict(DEFAULT_INGEST_CAPS)
+    raw_tm = base["max_items_by_tier"]
+    if not isinstance(raw_tm, dict):
+        tier_defaults: dict[int, int] = {1: 14, 2: 10, 3: 6}
+    else:
+        tier_defaults = {int(k): int(v) for k, v in raw_tm.items()}
+    raw = data.get("ingest_caps") if isinstance(data, dict) else None
+    if not isinstance(raw, dict):
+        base["max_items_by_tier"] = tier_defaults
+        return base
+    if "default_max_items_per_feed" in raw:
+        try:
+            base["default_max_items_per_feed"] = max(1, int(raw["default_max_items_per_feed"]))
+        except (TypeError, ValueError):
+            pass
+    base["max_items_by_tier"] = _normalize_tier_caps(raw.get("max_items_by_tier"), tier_defaults)
+    return base
+
+
+def _effective_feed_cap(feed: dict[str, object], caps: dict[str, object], override: int | None) -> int:
+    if override is not None and override > 0:
+        return override
+    explicit = feed.get("max_items")
+    if explicit is not None:
+        try:
+            v = int(explicit)
+            if v > 0:
+                return v
+        except (TypeError, ValueError):
+            pass
+    tier_map = caps.get("max_items_by_tier")
+    if isinstance(tier_map, dict):
+        try:
+            tr = int(feed.get("tier", 2))
+        except (TypeError, ValueError):
+            tr = 2
+        if tr in tier_map:
+            try:
+                return max(1, int(tier_map[tr]))
+            except (TypeError, ValueError):
+                pass
+    try:
+        return max(1, int(caps.get("default_max_items_per_feed", 12)))
+    except (TypeError, ValueError):
+        return 12
+
+
+def _sort_feed_items_by_recency(items: list[dict[str, object]]) -> list[dict[str, object]]:
+    """Newest first; undated last (stable within groups)."""
+
+    def _key(it: dict[str, object]) -> tuple[int, float]:
+        sd = it.get("sort_date")
+        if isinstance(sd, datetime):
+            return (0, sd.timestamp())
+        return (1, 0.0)
+
+    return sorted(items, key=_key, reverse=True)
+
+
 def _load_full_config(
     path: Path,
 ) -> tuple[
-    list[dict[str, str]],
+    list[dict[str, object]],
     tuple[str, ...],
     tuple[str, ...],
     dict[str, tuple[str, ...]],
     dict[str, tuple[str, ...]],
+    tuple[str, ...],
+    dict[str, object],
+    dict[str, object],
 ]:
     if not path.exists():
-        return [], DEFAULT_WAP_PHRASES, DEFAULT_STRATEGY_PHRASES, {}, {}
+        return (
+            [],
+            DEFAULT_WAP_PHRASES,
+            DEFAULT_STRATEGY_PHRASES,
+            {},
+            {},
+            DEFAULT_STORY_ANCHORS,
+            dict(DEFAULT_STORY_DEDUPE),
+            dict(DEFAULT_INGEST_CAPS),
+        )
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
-        return [], DEFAULT_WAP_PHRASES, DEFAULT_STRATEGY_PHRASES, {}, {}
+        return (
+            [],
+            DEFAULT_WAP_PHRASES,
+            DEFAULT_STRATEGY_PHRASES,
+            {},
+            {},
+            DEFAULT_STORY_ANCHORS,
+            dict(DEFAULT_STORY_DEDUPE),
+            dict(DEFAULT_INGEST_CAPS),
+        )
     feeds_raw = data.get("feeds") if isinstance(data, dict) else None
-    feeds: list[dict[str, str]] = []
+    feeds: list[dict[str, object]] = []
     if isinstance(feeds_raw, list):
         for row in feeds_raw:
             if not isinstance(row, dict):
@@ -151,15 +351,34 @@ def _load_full_config(
             url = str(row.get("url", "")).strip()
             name = str(row.get("name", "")).strip() or url
             loc = str(row.get("locale", "en") or "en").strip().lower() or "en"
+            tier = 2
+            tr = row.get("tier")
+            if tr is not None:
+                try:
+                    tier = int(tr)
+                except (TypeError, ValueError):
+                    tier = 2
+            max_items_raw = row.get("max_items")
             if url:
-                feeds.append({"name": name, "url": url, "locale": loc})
+                feeds.append(
+                    {
+                        "name": name,
+                        "url": url,
+                        "locale": loc,
+                        "tier": tier,
+                        "max_items": max_items_raw,
+                    }
+                )
     wap_t = data.get("wap_keyword_phrases") if isinstance(data, dict) else None
     strat_t = data.get("strategy_keyword_phrases") if isinstance(data, dict) else None
     wap = _phrases_tuple(wap_t, DEFAULT_WAP_PHRASES)
     strat = _phrases_tuple(strat_t, DEFAULT_STRATEGY_PHRASES)
     wap_loc = _locale_phrase_map(data, "wap_keyword_phrases_by_locale")
     strat_loc = _locale_phrase_map(data, "strategy_keyword_phrases_by_locale")
-    return feeds, wap, strat, wap_loc, strat_loc
+    story_anchors = _merge_story_anchors(data) if isinstance(data, dict) else DEFAULT_STORY_ANCHORS
+    story_dedupe = _load_story_dedupe(data) if isinstance(data, dict) else dict(DEFAULT_STORY_DEDUPE)
+    ingest_caps = _load_ingest_caps(data) if isinstance(data, dict) else dict(DEFAULT_INGEST_CAPS)
+    return feeds, wap, strat, wap_loc, strat_loc, story_anchors, story_dedupe, ingest_caps
 
 
 def _extract_strategy_focus() -> str:
@@ -302,6 +521,150 @@ def _score_keywords(hay: str, phrases: tuple[str, ...]) -> int:
     return score
 
 
+def _story_anchor_set(blob: str, phrases: tuple[str, ...]) -> frozenset[str]:
+    """Which anchor phrases appear as substrings in blob (already lowercased)."""
+    matched: set[str] = set()
+    for phrase in phrases:
+        if phrase in blob:
+            matched.add(phrase)
+    return frozenset(matched)
+
+
+def _jaccard(a: frozenset[str], b: frozenset[str]) -> float:
+    if not a and not b:
+        return 1.0
+    u = len(a | b)
+    if u == 0:
+        return 0.0
+    return len(a & b) / u
+
+
+class _UnionFind:
+    def __init__(self, n: int) -> None:
+        self._p = list(range(n))
+
+    def find(self, x: int) -> int:
+        while self._p[x] != x:
+            self._p[x] = self._p[self._p[x]]
+            x = self._p[x]
+        return x
+
+    def union(self, a: int, b: int) -> None:
+        ra, rb = self.find(a), self.find(b)
+        if ra != rb:
+            self._p[rb] = ra
+
+
+def _cluster_story_items(
+    items: list[dict[str, object]],
+    story_anchors: tuple[str, ...],
+    opts: dict[str, object],
+) -> tuple[list[list[dict[str, object]]], list[dict[str, object]]]:
+    """
+    Group items that likely cover the same story (anchor overlap).
+    Returns (multi-item clusters, singletons). Clusters sorted by max score_sum.
+    """
+    max_n = int(opts.get("max_items_for_clustering", 260) or 260)
+    min_anchors = int(opts.get("min_anchors", 2) or 2)
+    jaccard_min = float(opts.get("jaccard_min", 0.38) or 0.38)
+    min_shared = int(opts.get("min_shared_anchors", 2) or 2)
+
+    n = min(len(items), max_n)
+    asets: list[frozenset[str]] = []
+    for it in items:
+        blob = str(it.get("text_blob", ""))
+        asets.append(_story_anchor_set(blob, story_anchors))
+
+    # Eligible row indices 0..n-1 with enough anchors
+    eligible_pos = [i for i in range(n) if len(asets[i]) >= min_anchors]
+    m = len(eligible_pos)
+    if m < 2:
+        return [], list(items)
+
+    uf = _UnionFind(m)
+    for a in range(m):
+        for b in range(a + 1, m):
+            ia, ib = eligible_pos[a], eligible_pos[b]
+            sa, sb = asets[ia], asets[ib]
+            inter = len(sa & sb)
+            if inter < min_shared:
+                continue
+            if _jaccard(sa, sb) < jaccard_min:
+                continue
+            uf.union(a, b)
+
+    buckets: dict[int, list[int]] = {}
+    for pos in range(m):
+        root = uf.find(pos)
+        buckets.setdefault(root, []).append(eligible_pos[pos])
+
+    multi: list[list[int]] = [sorted(set(g)) for g in buckets.values() if len(g) >= 2]
+    in_multi: set[int] = set()
+    for g in multi:
+        in_multi.update(g)
+
+    clusters: list[list[dict[str, object]]] = []
+    for g in multi:
+        cluster_items = [items[i] for i in g]
+
+        def _prim_key(x: dict[str, object]) -> tuple[int, int, int, float]:
+            sd = x.get("sort_date")
+            ts = float(sd.timestamp()) if isinstance(sd, datetime) else 0.0
+            return (int(x.get("score_sum", 0)), int(x.get("score_w", 0)), int(x.get("score_s", 0)), ts)
+
+        cluster_items.sort(key=_prim_key, reverse=True)
+        clusters.append(cluster_items)
+
+    clusters.sort(
+        key=lambda c: (
+            int(c[0].get("score_sum", 0)),
+            int(c[0].get("score_w", 0)),
+            len(c),
+        ),
+        reverse=True,
+    )
+
+    singletons: list[dict[str, object]] = []
+    covered = set(in_multi)
+    for i, it in enumerate(items):
+        if i not in covered:
+            singletons.append(it)
+
+    return clusters, singletons
+
+
+def _cluster_label(cluster: list[dict[str, object]], story_anchors: tuple[str, ...]) -> str:
+    union_a: set[str] = set()
+    for it in cluster:
+        blob = str(it.get("text_blob", ""))
+        union_a |= set(_story_anchor_set(blob, story_anchors))
+    if not union_a:
+        return "cluster"
+    # Short readable label (Latin-heavy; Arabic anchors may appear)
+    parts = sorted(union_a)[:5]
+    return " · ".join(parts)
+
+
+def _headline_md_line(it: dict[str, object], *, also: bool = False) -> str:
+    title = it.get("title", "")
+    link = it.get("link", "")
+    feed = it.get("feed", "")
+    loc = str(it.get("locale", "en") or "en").strip().lower() or "en"
+    sw = int(it.get("score_w", 0))
+    ss = int(it.get("score_s", 0))
+    sd = it.get("sort_date")
+    date_note = ""
+    if isinstance(sd, datetime):
+        date_note = f" · _{sd.strftime('%Y-%m-%d %H:%M UTC')}_"
+    loc_note = f" · _{loc}_" if loc != "en" else ""
+    if also:
+        return (
+            f"- **Also** — [{title}]({link}) — _{feed}_{loc_note} · "
+            f"_W:{sw} S:{ss}_{date_note}"
+        )
+    return f"- **[W:{sw} S:{ss}]** [{title}]({link}) — _{feed}_{loc_note}{date_note}"
+
+
 def _filter_recent(items: list[dict[str, object]], max_age_hours: int) -> list[dict[str, object]]:
     if max_age_hours <= 0:
         return items
@@ -329,10 +692,14 @@ def build_daily_brief(
     config_path: Path,
     max_age_hours: int,
     max_items_display: int,
+    story_dedupe_enabled: bool = True,
+    max_per_feed_override: int | None = None,
 ) -> str:
     assembled = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    feeds, wap_phrases, strategy_phrases, wap_by_locale, strategy_by_locale = _load_full_config(config_path)
+    feeds, wap_phrases, strategy_phrases, wap_by_locale, strategy_by_locale, story_anchors, story_dedupe, ingest_caps = (
+        _load_full_config(config_path)
+    )
     snapshot = get_wap_snapshot(user_id)
     primary = snapshot["campaign_status"]
     gate = snapshot["gate"]
@@ -397,15 +764,17 @@ def build_daily_brief(
             )
             lines.append("")
         for fdef in feeds:
-            raw = _fetch_feed(fdef["url"])
+            raw = _fetch_feed(str(fdef["url"]))
             if raw is None:
-                fetch_errors.append(fdef["name"])
+                fetch_errors.append(str(fdef["name"]))
                 continue
-            parsed = _parse_feed_xml(raw, fdef["name"])
+            parsed = _parse_feed_xml(raw, str(fdef["name"]))
             loc = str(fdef.get("locale", "en") or "en").strip().lower() or "en"
             for it in parsed:
                 it["locale"] = loc
-            all_items.extend(parsed)
+            parsed = _sort_feed_items_by_recency(parsed)
+            cap = _effective_feed_cap(fdef, ingest_caps, max_per_feed_override)
+            all_items.extend(parsed[:cap])
         if fetch_errors:
             lines.append(f"_Fetch failed for: {', '.join(fetch_errors)}._")
             lines.append("")
@@ -430,38 +799,92 @@ def build_daily_brief(
 
     all_items.sort(key=_sort_key, reverse=True)
 
+    dedupe_effective = (
+        fetch_feeds
+        and bool(all_items)
+        and story_dedupe_enabled
+        and bool(story_dedupe.get("enabled", True))
+    )
+    if dedupe_effective:
+        clusters, singletons_render = _cluster_story_items(all_items, story_anchors, story_dedupe)
+    else:
+        clusters = []
+        singletons_render = list(all_items)
+
     if fetch_feeds and all_items:
         lines.append(
             "Ranked by **W+S** (global keyword lists + `wap_keyword_phrases_by_locale` / "
             "`strategy_keyword_phrases_by_locale` for each feed `locale`) then recency. "
+            "Each feed is **recency-sorted** then **capped** (`ingest_caps`: per-feed `max_items` and/or `tier` → "
+            "`max_items_by_tier`; CLI `--max-per-feed N` overrides all feeds). "
+            "Optional **same-story** grouping uses `story_anchor_phrases` overlap (Jaccard + shared anchors). "
             "Tune phrases in config JSON."
         )
         lines.append("")
-        shown = 0
-        for it in all_items:
-            if shown >= max_items_display:
-                break
-            title = it.get("title", "")
-            link = it.get("link", "")
-            feed = it.get("feed", "")
-            loc = str(it.get("locale", "en") or "en").strip().lower() or "en"
-            sw = int(it.get("score_w", 0))
-            ss = int(it.get("score_s", 0))
-            sd = it.get("sort_date")
-            date_note = ""
-            if isinstance(sd, datetime):
-                date_note = f" · _{sd.strftime('%Y-%m-%d %H:%M UTC')}_"
-            loc_note = f" · _{loc}_" if loc != "en" else ""
-            lines.append(f"- **[W:{sw} S:{ss}]** [{title}]({link}) — _{feed}_{loc_note}{date_note}")
-            shown += 1
-        lines.append("")
+        if dedupe_effective:
+            lines.append(
+                "_Same-story clusters use anchor overlap on titles (proper nouns / crisis terms); "
+                "not neural / semantic dedupe._"
+            )
+            lines.append("")
+            shown = 0
+            max_alsos = int(story_dedupe.get("max_alsos_per_cluster", 4) or 4)
+            if clusters:
+                lines.append("#### Same-story (multilingual)")
+                lines.append("")
+                for cl in clusters:
+                    if shown >= max_items_display:
+                        break
+                    label = _cluster_label(cl, story_anchors)
+                    lines.append(f"**{label}** — _{len(cl)} sources_")
+                    lines.append("")
+                    for j, it in enumerate(cl):
+                        if shown >= max_items_display:
+                            break
+                        if j == 0:
+                            lines.append(_headline_md_line(it, also=False))
+                        elif j <= max_alsos:
+                            lines.append(_headline_md_line(it, also=True))
+                        else:
+                            break
+                        shown += 1
+                    lines.append("")
+            if clusters and singletons_render:
+                lines.append("#### Other headlines")
+                lines.append("")
+            for it in singletons_render:
+                if shown >= max_items_display:
+                    break
+                lines.append(_headline_md_line(it, also=False))
+                shown += 1
+            lines.append("")
+        else:
+            shown = 0
+            for it in all_items:
+                if shown >= max_items_display:
+                    break
+                lines.append(_headline_md_line(it, also=False))
+                shown += 1
+            lines.append("")
     elif fetch_feeds and not all_items and feeds:
         lines.append("_No items parsed or all outside recency window._ Try `--max-age-hours` or check feed URLs.")
         lines.append("")
 
-    # Top titles per lane
-    top_w = sorted(all_items, key=lambda x: (int(x.get("score_w", 0)), int(x.get("score_sum", 0))), reverse=True)
-    top_s = sorted(all_items, key=lambda x: (int(x.get("score_s", 0)), int(x.get("score_sum", 0))), reverse=True)
+    # Top titles per lane (dedupe: one line per cluster + singletons)
+    if dedupe_effective:
+        theme_pool: list[dict[str, object]] = [c[0] for c in clusters] + singletons_render
+    else:
+        theme_pool = list(all_items)
+    top_w = sorted(
+        theme_pool,
+        key=lambda x: (int(x.get("score_w", 0)), int(x.get("score_sum", 0))),
+        reverse=True,
+    )
+    top_s = sorted(
+        theme_pool,
+        key=lambda x: (int(x.get("score_s", 0)), int(x.get("score_sum", 0))),
+        reverse=True,
+    )
     w_titles = [str(x.get("title", "")) for x in top_w[:3] if int(x.get("score_w", 0)) > 0]
     s_titles = [str(x.get("title", "")) for x in top_s[:3] if int(x.get("score_s", 0)) > 0]
     if not w_titles and all_items:
@@ -548,6 +971,18 @@ def main() -> int:
     )
     parser.add_argument("--max-age-hours", type=int, default=36, help="RSS recency window (default 36h; 0 = off)")
     parser.add_argument("--max-items", type=int, default=20, help="Max headline lines (default 20)")
+    parser.add_argument(
+        "--no-story-dedupe",
+        action="store_true",
+        help="Disable same-story clustering (flat headline list)",
+    )
+    parser.add_argument(
+        "--max-per-feed",
+        type=int,
+        default=0,
+        metavar="N",
+        help="Override ingest cap for every feed (0 = use config per-feed / tier)",
+    )
     args = parser.parse_args()
     if args.feeds and not args.config:
         config_path = Path(args.feeds)
@@ -561,6 +996,8 @@ def main() -> int:
         config_path=config_path,
         max_age_hours=args.max_age_hours,
         max_items_display=args.max_items,
+        story_dedupe_enabled=not args.no_story_dedupe,
+        max_per_feed_override=(args.max_per_feed if args.max_per_feed > 0 else None),
     )
     if args.output:
         out = Path(args.output)
