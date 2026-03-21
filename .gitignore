@@ -31,6 +31,9 @@ Pods/
 users/*/.integration-backups/
 users/*/integration-receipts/
 
+# Operator depth-hint dedupe state (local)
+users/*/.operator_depth_hint_state.json
+
 # Work-politics SQLite workflow state (local; do not commit)
 users/*/work-politics/*.db
 

@@ -17,9 +17,11 @@ from pathlib import Path
 
 try:
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
+    from operator_depth_hint import velocity_oneliner
     from work_politics_ops import get_wap_snapshot
 except ImportError:
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
+    from scripts.operator_depth_hint import velocity_oneliner
     from scripts.work_politics_ops import get_wap_snapshot
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -148,6 +150,10 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
 
     lines.extend(
         [
+            "",
+            "## Pipeline velocity (operator depth)",
+            "",
+            f"- {velocity_oneliner(user_id)}",
             "",
             "## Work-politics snapshot",
             "",

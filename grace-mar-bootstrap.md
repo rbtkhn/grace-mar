@@ -181,6 +181,20 @@ python3 scripts/atomic_integrate.py -u grace-mar --candidate-id CANDIDATE-XXXX -
 # Dry run (preflight + receipt only): omit --apply
 ```
 
+**Verify receipt vs disk (optional):** confirm files still match `after_hashes` from a successful integration receipt:
+
+```bash
+python3 scripts/verify_integration_receipt.py --receipt users/grace-mar/integration-receipts/integration-receipt-*.json
+# Compare to a committed revision instead of working tree:
+python3 scripts/verify_integration_receipt.py --receipt path/to/receipt.json --git-ref HEAD
+```
+
+**Operator merge ritual (optional):** run integrity, then your merge command, then integrity again (use `--skip-integrity` on `atomic_integrate` so validation is not duplicated in the middle):
+
+```bash
+./scripts/operator_merge_once.sh -- python3 scripts/atomic_integrate.py -u grace-mar --candidate-id CANDIDATE-XXXX --approved-by <name> --apply --skip-integrity
+```
+
 ### Intent and integrity
 ```bash
 python3 scripts/export_intent_snapshot.py --user grace-mar
@@ -199,7 +213,7 @@ python3 scripts/generate_gate_dashboard.py -u grace-mar   # pending queue HTML (
 echo "paste text" | python3 scripts/stage_gate_candidate.py -u grace-mar   # stage stdin as pending candidate (approve + merge separately)
 ```
 
-**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary.
+**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary. `operator_daily_warmup.py` includes a **pipeline velocity** line (merge/approval counts); after bursts of merges, run `python3 scripts/operator_depth_hint.py -u grace-mar` to emit a harness hint when velocity crosses a new tier (see `docs/skill-work/work-dev/README.md`).
 
 ### OpenClaw
 ```bash
