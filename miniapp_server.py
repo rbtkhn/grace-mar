@@ -63,7 +63,7 @@ from bot.core import (
 )
 from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
 from scripts import process_approved_candidates as pac
-from scripts.recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+from scripts.recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
 from scripts.work_politics_ops import get_wap_snapshot
 from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
@@ -693,13 +693,13 @@ def operator_merge_approved():
     if not ok:
         return err
     payload = request.get_json(silent=True) or {}
-    territory = (payload.get("territory") or "companion").strip().lower()
-    if territory not in ("companion", "wap", "all"):
-        return jsonify({"error": "territory must be companion, wap, or all"}), 400
+    territory = normalize_territory_cli((payload.get("territory") or "companion").strip().lower())
+    if territory not in ("companion", "work-politics", "all"):
+        return jsonify({"error": "territory must be companion, work-politics (or wap/wp), or all"}), 400
 
     pac._set_user(USER_ID)
     approved = pac.get_approved_in_candidates()
-    if territory == "wap":
+    if territory == "work-politics":
         approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
     elif territory == "companion":
         approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]

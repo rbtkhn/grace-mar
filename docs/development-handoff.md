@@ -170,8 +170,8 @@ Last updated: 2026-03
 
 ### Territory lens / work-politics vs companion (2026-03-12)
 - **`scripts/recursion_gate_territory.py`** — `territory: work-politics` or `channel_key: operator:wap` → work-politics.
-- **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|wap|companion`.
-- **`process_approved_candidates`** — `--territory wap|companion|all` — batch merge only that slice; receipt must use same flag.
+- **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|work-politics|companion` (aliases `wap`, `wp`).
+- **`process_approved_candidates`** — `--territory work-politics|companion|all` — batch merge only that slice; receipt must use same flag (receipt `territory` is `work-politics` for work-politics merges).
 
 ### Recursion-gate multi-channel docs (2026-03-12)
 - **recursion-gate.md** header, **operator-brief**, **architecture** — explicit: one gate per user, all channels; `channel_key`.

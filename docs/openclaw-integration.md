@@ -166,7 +166,7 @@ To **log** that the recommended files were read at session start (for audit or v
 python scripts/continuity_read_log.py -u grace-mar
 ```
 
-This appends one JSONL line to `users/[id]/continuity-log.jsonl` with timestamp, `user_id`, `files_read` (session-log.md, recursion-gate.md, self-evidence.md), and `missing` if any file was absent. It does not modify the Record. Add this to your OpenClaw startup script or run it manually before starting work. Use `--dry-run` to print the payload without writing.
+This appends one JSONL line to `users/[id]/continuity-log.jsonl` with timestamp, `user_id`, `files_read` (session-log.md, recursion-gate.md, self-evidence.md), and `missing` if any file was absent. It does not modify the Record. Add this to your OpenClaw startup script or run it manually before starting work. Use `--dry-run` to print the payload without writing. **CI:** `tests/test_continuity_read_log.py` runs `--dry-run` for `grace-mar` on every pytest pass (push/PR) so the script and continuity paths keep working.
 
 ### Any harness startup (Cursor, Codex, Claude Code, new chat)
 

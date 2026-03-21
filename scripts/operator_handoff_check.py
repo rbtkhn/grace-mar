@@ -83,7 +83,7 @@ def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blocker
         if wap_blockers:
             return (
                 "wap operations",
-                "Start with `python3 scripts/operator_wap_pulse.py -u grace-mar` and address the first blocker.",
+                "Start with `python3 scripts/operator_work_politics_pulse.py -u grace-mar` and address the first blocker.",
             )
         return (
             "stable baseline",
@@ -97,7 +97,7 @@ def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blocker
     if dominant == "wap_operations":
         return (
             "wap operations",
-            "Resume work-politics work with `python3 scripts/operator_wap_pulse.py -u grace-mar` and then run the brief workflow if ready.",
+            "Resume work-politics work with `python3 scripts/operator_work_politics_pulse.py -u grace-mar` and then run the brief workflow if ready.",
         )
     if dominant == "record_pipeline":
         return (

@@ -107,7 +107,7 @@ Use this order when the question is how work-dev could become a real company rat
 
 ## Cross-references
 
-Other work territories (e.g. [work-politics](../work-politics/README.md)) share the same RECURSION-GATE and companion-approval rule; they use territory tags for batch merge (e.g. `--territory wap`).
+Other work territories (e.g. [work-politics](../work-politics/README.md)) share the same RECURSION-GATE and companion-approval rule; they use territory tags for batch merge (e.g. `--territory work-politics`).
 
 - [OpenClaw Integration Guide](../../openclaw-integration.md) — Full spec
 - [Crypto roadmap](../../crypto-roadmap.md) — authority, settlement, and access layer

@@ -21,7 +21,7 @@ Use this file when you want one place to understand:
 | **Pipeline-level export audit** | Implemented via `runtime_compat_export` events and harness events |
 | **Constitution advisory event** | Implemented via `intent_constitutional_critique` event emission |
 | **End-to-end provenance** | Implemented: OpenClaw payload (source=openclaw_stage) flows as staging_meta into gate; candidate blocks carry candidate_source, artifact_*, constitution_*; recursion_gate_review parses them for review/benchmarks |
-| **Session continuity enforcement** | Documented and recommended, but not verified by a repo-local runtime hook |
+| **Session continuity** | Proof-of-read script + CI dry-run check (`tests/test_continuity_read_log.py`); live JSONL append when invoked; OpenClaw startup wiring still operator-side |
 
 ---
 
@@ -80,16 +80,16 @@ Crypto belongs adjacent to these lanes as a future **authority / settlement / ac
 | Blocker | Why it matters |
 |---------|----------------|
 | ~~**Handback provenance is not preserved cleanly into `recursion-gate.md`**~~ | Resolved: OpenClaw payload sets candidate_source + artifact/constitution fields in gate (handback_server + core + recursion_gate_review). |
-| **Benchmark docs overstate current instrumentation** | Makes it too easy to confuse desired observability with actual emitted data |
-| **Session continuity is checklist-level, not verified runtime behavior** | Weakens one of the territory's stated core roles |
+| **Benchmark docs overstate current instrumentation** | Mitigated: `economic-benchmarks.md` distinguishes automatic pipeline emission vs manual/derivation; re-audit after hook changes |
+| **Live continuity JSONL is opt-in** | CI verifies script + files; appending to `continuity-log.jsonl` on each OpenClaw session still requires wrapper or habit |
 
 ---
 
 ## Next actions
 
 1. ~~Preserve OpenClaw-specific provenance end-to-end from `openclaw_stage.py` through `/stage` into staged candidates.~~ Done.
-2. Mark benchmark rows as instrumented, manual, planned, or blocked instead of implying they all exist today.
-3. Decide whether continuity should remain checklist-based or gain a verifiable startup/logging surface.
+2. ~~Mark benchmark rows as instrumented, manual, planned, or blocked instead of implying they all exist today.~~ Done (see `economic-benchmarks.md` definitions and tables).
+3. ~~CI wiring for `continuity_read_log.py`~~ Done (`tests/test_continuity_read_log.py`). Optional: OpenClaw startup wrapper for real JSONL appends each session.
 
 ---
 

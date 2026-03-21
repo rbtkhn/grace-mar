@@ -25,7 +25,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
-from recursion_gate_territory import pending_by_territory
+from recursion_gate_territory import normalize_territory_cli, pending_by_territory
 STALE_PENDING_DAYS = 3
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
@@ -70,9 +70,9 @@ def _last_activities(evidence_content: str, n: int) -> list[dict]:
 
 
 def _pending_candidate_ids(pr_content: str, territory: str = "all") -> list[str]:
-    """All pending IDs — full file. territory: all | wap | companion."""
+    """All pending IDs — full file. territory: normalized all | work-politics | companion."""
     wap, companion = pending_by_territory(pr_content)
-    if territory == "wap":
+    if territory == "work-politics":
         return [r["id"] for r in wap]
     if territory == "companion":
         return [r["id"] for r in companion]
@@ -304,11 +304,12 @@ def main() -> int:
     )
     parser.add_argument(
         "--territory",
-        choices=("all", "wap", "companion"),
+        choices=("all", "wap", "wp", "work-politics", "companion"),
         default="all",
-        help="Pending lens: wap | companion | all (default). Same as operator_blocker_report.",
+        help="Pending lens: work-politics (or wap/wp) | companion | all (default). Same as operator_blocker_report.",
     )
     args = parser.parse_args()
+    territory = normalize_territory_cli(args.territory)
 
     users_dir = Path(args.users_dir)
     if not users_dir.exists():
@@ -336,18 +337,18 @@ def main() -> int:
         pr_content = _read(user_dir / "recursion-gate.md")
         evidence_content = _read(user_dir / "self-evidence.md")
         wap_rows, comp_rows = pending_by_territory(pr_content)
-        n = _pending_count_full(pr_content, args.territory)
-        ids = _pending_candidate_ids(pr_content, args.territory)
+        n = _pending_count_full(pr_content, territory)
+        ids = _pending_candidate_ids(pr_content, territory)
         last_act = _last_act_oneliner(evidence_content)
         lines = [
             "# Session brief (minimal)",
             "",
-            f"**Territory lens:** {args.territory}",
+            f"**Territory lens:** {territory}",
             f"**Pending (this lens):** {n} — {', '.join(ids) if ids else 'none'}",
         ]
-        if args.territory == "all":
+        if territory == "all":
             lines.append(
-                f"**Split:** work-politics {len(wap_rows)} · Companion {len(comp_rows)} — use `--territory wap` or `companion`"
+                f"**Split:** work-politics {len(wap_rows)} · Companion {len(comp_rows)} — use `--territory work-politics` or `companion`"
             )
         lines.extend(
             [
@@ -374,7 +375,7 @@ def main() -> int:
 
     activities = _last_activities(evidence_content, LAST_N_ACTIVITIES)
     wap_rows, comp_rows = pending_by_territory(pr_content)
-    pending_count = _pending_count_full(pr_content, args.territory)
+    pending_count = _pending_count_full(pr_content, territory)
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
     from_record = _from_the_record_topics(self_content)
@@ -403,9 +404,9 @@ def main() -> int:
 
     # Build brief
     pending_section = (
-        f"**Territory lens:** `{args.territory}` — **{pending_count}** pending (this lens). "
+        f"**Territory lens:** `{territory}` — **{pending_count}** pending (this lens). "
         f"work-politics **{len(wap_rows)}** · Companion **{len(comp_rows)}**. "
-        f"`--territory wap` = work-politics only. Type `/review` in Telegram to see them."
+        f"`--territory work-politics` = work-politics only. Type `/review` in Telegram to see them."
     )
     if pending_stale:
         pending_section += "\n\nYou have candidates waiting — consider bringing them into the Record (type /review)."

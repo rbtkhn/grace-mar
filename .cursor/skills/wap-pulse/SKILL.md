@@ -10,7 +10,7 @@ Use this skill when the operator wants a territory-specific status pass instead 
 ## Default command
 
 ```bash
-python3 scripts/operator_wap_pulse.py -u grace-mar
+python3 scripts/operator_work_politics_pulse.py -u grace-mar
 ```
 
 ## Optional brief preview
@@ -18,7 +18,7 @@ python3 scripts/operator_wap_pulse.py -u grace-mar
 When the operator also wants to see the top of the next scaffold:
 
 ```bash
-python3 scripts/operator_wap_pulse.py -u grace-mar --brief-preview
+python3 scripts/operator_work_politics_pulse.py -u grace-mar --brief-preview
 ```
 
 ## What to return

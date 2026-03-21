@@ -19,7 +19,7 @@ Use a narrower review lens when needed:
 
 ```bash
 python3 scripts/operator_gate_review_pass.py -u grace-mar --territory companion
-python3 scripts/operator_gate_review_pass.py -u grace-mar --territory wap
+python3 scripts/operator_gate_review_pass.py -u grace-mar --territory work-politics
 ```
 
 ## What to return

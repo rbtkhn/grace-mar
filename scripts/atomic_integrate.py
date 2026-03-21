@@ -28,6 +28,7 @@ _SCRIPTS = REPO_ROOT / "scripts"
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
+from recursion_gate_territory import normalize_territory_cli  # noqa: E402
 from repo_io import assert_canonical_record_layout, profile_dir  # noqa: E402
 
 UTC = timezone.utc
@@ -86,7 +87,7 @@ def _preflight(user_id: str, candidate_id: str, territory: str) -> None:
 
     _set_user(user_id)
     approved = get_approved_in_candidates()
-    if territory == "wap":
+    if territory == "work-politics":
         from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block  # noqa: E402
 
         approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
@@ -310,7 +311,7 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument(
         "--territory",
-        choices=("all", "wap", "companion"),
+        choices=("all", "wap", "wp", "work-politics", "companion"),
         default="all",
         help="Same as process_approved_candidates --territory (default all)",
     )
@@ -324,6 +325,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    territory = normalize_territory_cli(args.territory)
     cid = args.candidate_id.strip()
     if not cid.upper().startswith("CANDIDATE-"):
         print("candidate-id must look like CANDIDATE-XXXX", file=sys.stderr)
@@ -333,7 +335,7 @@ def main() -> int:
         cid,
         args.approved_by.strip(),
         apply=bool(args.apply),
-        territory=args.territory,
+        territory=territory,
         skip_integrity=bool(args.skip_integrity),
     )
 

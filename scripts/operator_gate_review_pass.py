@@ -9,10 +9,10 @@ import argparse
 
 try:
     from recursion_gate_review import filter_review_candidates, parse_review_candidates
-    from recursion_gate_territory import TERRITORY_LABEL_WAP
+    from recursion_gate_territory import TERRITORY_LABEL_WAP, normalize_territory_cli
 except ImportError:
     from scripts.recursion_gate_review import filter_review_candidates, parse_review_candidates
-    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP
+    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP, normalize_territory_cli
 
 STALE_DAYS = 7
 
@@ -114,9 +114,15 @@ def build_gate_review_pass(user_id: str = "grace-mar", territory: str = "all") -
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate a recommendation-oriented RECURSION-GATE review pass.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
-    parser.add_argument("--territory", choices=("all", "companion", "wap"), default="all", help="Territory lens")
+    parser.add_argument(
+        "--territory",
+        choices=("all", "companion", "wap", "wp", "work-politics"),
+        default="all",
+        help="Territory lens",
+    )
     args = parser.parse_args()
-    print(build_gate_review_pass(user_id=args.user, territory=args.territory))
+    territory = normalize_territory_cli(args.territory)
+    print(build_gate_review_pass(user_id=args.user, territory=territory))
     return 0
 
 

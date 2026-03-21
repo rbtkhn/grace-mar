@@ -11,7 +11,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 | Skill | Purpose | Default command |
 |------|---------|-----------------|
 | `daily-warmup` | Repo-wide operator warmup: gate state, work-politics status, integrity, local worktree noise, and top priorities | `python3 scripts/operator_daily_warmup.py -u grace-mar` |
-| `wap-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_wap_pulse.py -u grace-mar` |
+| `wap-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy: `operator_wap_pulse.py`) |
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar` |
@@ -89,7 +89,7 @@ When you want the same leverage pattern as the video workflow, run these in para
 
 ```bash
 python3 scripts/operator_daily_warmup.py -u grace-mar
-python3 scripts/operator_wap_pulse.py -u grace-mar
+python3 scripts/operator_work_politics_pulse.py -u grace-mar
 ```
 
 Use the first output to choose the work block. Use the second to choose the work-politics action inside that block.
@@ -98,7 +98,7 @@ For a fuller operator pass:
 
 ```bash
 python3 scripts/operator_daily_warmup.py -u grace-mar
-python3 scripts/operator_wap_pulse.py -u grace-mar
+python3 scripts/operator_work_politics_pulse.py -u grace-mar
 python3 scripts/operator_gate_review_pass.py -u grace-mar
 ```
 

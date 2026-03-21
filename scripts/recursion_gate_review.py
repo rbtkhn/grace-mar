@@ -14,9 +14,19 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 try:
-    from recursion_gate_territory import TERRITORY_LABEL_WAP, TERRITORY_WAP, territory_from_yaml_block
+    from recursion_gate_territory import (
+        TERRITORY_LABEL_WAP,
+        TERRITORY_WAP,
+        normalize_territory_cli,
+        territory_from_yaml_block,
+    )
 except ImportError:
-    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP, TERRITORY_WAP, territory_from_yaml_block
+    from scripts.recursion_gate_territory import (
+        TERRITORY_LABEL_WAP,
+        TERRITORY_WAP,
+        normalize_territory_cli,
+        territory_from_yaml_block,
+    )
 try:
     from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 except ImportError:
@@ -483,10 +493,11 @@ def filter_review_candidates(
         out = [row for row in out if row.get("status") == status]
     if risk_tier:
         out = [row for row in out if row.get("risk_tier") == risk_tier]
-    if territory:
+    if territory and territory != "all":
+        territory = normalize_territory_cli(territory)
         if territory == "companion":
             out = [row for row in out if row.get("territory") != TERRITORY_WAP]
-        elif territory == "wap":
+        elif territory == "work-politics":
             out = [row for row in out if row.get("territory") == TERRITORY_WAP]
         else:
             out = [row for row in out if row.get("territory") == territory]

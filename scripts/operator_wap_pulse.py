@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Generate a concise operator pulse for work-politics.
+
+Preferred entrypoint: `scripts/operator_work_politics_pulse.py` (this file is the implementation + legacy name).
 """
 
 from __future__ import annotations

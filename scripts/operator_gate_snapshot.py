@@ -14,8 +14,10 @@ from pathlib import Path
 
 try:
     from recursion_gate_review import filter_review_candidates, parse_review_candidates
+    from recursion_gate_territory import normalize_territory_cli
 except ImportError:
     from scripts.recursion_gate_review import filter_review_candidates, parse_review_candidates
+    from scripts.recursion_gate_territory import normalize_territory_cli
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -74,7 +76,7 @@ def main() -> int:
     parser.add_argument("-u", "--user", default="grace-mar", help="User id")
     parser.add_argument(
         "--territory",
-        choices=("all", "companion", "wap"),
+        choices=("all", "companion", "wap", "wp", "work-politics"),
         default="all",
         help="Filter by territory",
     )
@@ -86,7 +88,8 @@ def main() -> int:
         help="Show last N pending candidates (default: 10)",
     )
     args = parser.parse_args()
-    print(build_snapshot(user_id=args.user, territory=args.territory, last_n=args.last))
+    territory = normalize_territory_cli(args.territory)
+    print(build_snapshot(user_id=args.user, territory=territory, last_n=args.last))
     return 0
 
 

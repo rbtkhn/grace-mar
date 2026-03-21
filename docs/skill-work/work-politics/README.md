@@ -1,8 +1,8 @@
 # work-politics
 
-**Rename (2026):** Formerly `work-american-politics`, then `work-political-consulting`. **RECURSION-GATE** territory string is now **`work-politics`**; CLI remains `--territory wap`. Legacy YAML with `territory: work-american-politics` or `territory: work-political-consulting` still counts as **work-politics territory** until edited ([`recursion_gate_territory.py`](../../../scripts/recursion_gate_territory.py)).
+**Rename (2026):** Formerly `work-american-politics`, then `work-political-consulting`. **RECURSION-GATE** territory string is now **`work-politics`**. **CLI preferred:** `--territory work-politics` (aliases: `wap`, `wp`). Receipt JSON uses **`"territory": "work-politics"`** for new merges; legacy receipts may still say `"wap"`. Legacy YAML with `territory: work-american-politics` or `territory: work-political-consulting` still counts as **work-politics territory** until edited ([`recursion_gate_territory.py`](../../../scripts/recursion_gate_territory.py)).
 
-**Prose vs technical tokens:** In writing, prefer **work-politics** (or **work-politics territory**). Reserve **`wap`** for machine-stable strings only: `--territory wap`, receipt JSON `"territory": "wap"`, and `channel_key` values like `operator:wap:…`. Avoid the informal acronym **WAP** in documentation and UI copy.
+**Prose vs technical tokens:** In writing, prefer **work-politics** (or **work-politics territory**). Reserve **`operator:wap:…`** for stable `channel_key` prefixes. Avoid the informal acronym **WAP** in documentation and UI copy.
 
 **Objective:** **Political consulting** umbrella — US federal, **state**, **local**; **international** only after [compliance-checklist.md](compliance-checklist.md) sign-off. AI-assisted briefs, opposition tracking, message discipline, content ops; **human approves** all public ship. **Primary client (Phase 1):** Thomas Massie (R-KY-4) shadow campaign. Companion-led; no autonomous political action.
 
@@ -43,7 +43,7 @@ Keep in git only when:
 
 ### Territory (required for work-politics rows)
 
-Every work-politics candidate must include **`territory: work-politics`** so reports and **`--territory wap`** batch merge stay clean.
+Every work-politics candidate must include **`territory: work-politics`** so reports and **`--territory work-politics`** batch merge stay clean.
 
 ### Gate convention — `channel_key` (multi-client)
 
@@ -159,7 +159,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | **[analytical-lenses/manifest.md](analytical-lenses/manifest.md)** | Triangulated **WORK-only** editorial lenses (structural / operational–diplomatic / institutional–domestic); logging and gate rules. |
 | **[analytical-lenses/template-three-lenses.md](analytical-lenses/template-three-lenses.md)** | Paste block for briefs and threads (three lenses + synthesis + tensions). |
 | **[daily-brief-template.md](daily-brief-template.md)** | Pointer to **work-strategy** daily brief (work-politics + strategy). |
-| **[../work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json)** | RSS URLs + W/S keyword lists for `generate_wap_daily_brief.py`. |
+| **[../work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json)** | RSS URLs + W/S keyword lists for `generate_work_politics_daily_brief.py`. |
 
 ---
 
@@ -168,9 +168,9 @@ This workflow can support revenue when someone pays for campaign content — e.g
 1. **Companion sovereignty** — Campaign strategy and public positioning are the companion’s. The agent supports with research and drafts; it does not direct.
 2. **Knowledge boundary** — Briefs and Voice responses use documented Record content and cited sources. No unsourced or inferred political claims.
 3. **Gated pipeline** — New campaign-relevant facts or claims (opposition research, issue positions) enter the Record only via staging and companion approval.
-4. **RECURSION-GATE territory** — work-politics candidates (see [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md)): add **`territory: work-politics`** or **`channel_key: operator:wap`** so operator tools can filter work-politics vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory wap` | `companion` | `all`). **Batch merge work-politics only:** approve work-politics rows, then  
-   `python scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>`  
-   `python scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json`  
+4. **RECURSION-GATE territory** — work-politics candidates (see [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md)): add **`territory: work-politics`** or **`channel_key: operator:wap`** so operator tools can filter work-politics vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory work-politics` | `companion` | `all`; aliases `wap`, `wp`). **Batch merge work-politics only:** approve work-politics rows, then
+   `python scripts/process_approved_candidates.py -u grace-mar --territory work-politics --generate-receipt /tmp/work-politics-receipt.json --approved-by <name>`
+   `python scripts/process_approved_candidates.py -u grace-mar --territory work-politics --apply --approved-by <name> --receipt /tmp/work-politics-receipt.json`
    Companion-approved rows stay in the gate until you run `--territory companion` or `all`.
 5. **Shadow only** — No autonomous posting. The X account "America First Kentucky (Unofficial)" is operated by Xavier (SMM); the agent drafts tweets and threads for Xavier to review and post.
 6. **Evidence-grounded** — Milestones (“we did X”) stage as ACT- evidence; merge only after approval.
@@ -190,9 +190,9 @@ Use this order when actively running the territory:
 2. Use the work-politics operator surface at `/operator/wap` to see campaign status, blockers, work-politics gate items, content queue, and next actions in one place.
 3. Refresh [brief-source-registry.md](brief-source-registry.md) before generating the weekly brief.
 4. Generate a first-pass brief (includes **§0 Recency slice**):  
-   `python scripts/generate_wap_weekly_brief.py -u grace-mar --start YYYY-MM-DD -o docs/skill-work/work-politics/weekly-brief-YYYY-MM-DD.md`  
+   `python scripts/generate_work_politics_weekly_brief.py -u grace-mar --start YYYY-MM-DD -o docs/skill-work/work-politics/weekly-brief-YYYY-MM-DD.md`  
    Then run the **live 7d/30d pass** and replace §0 with three dated bullets. Latest artifact: [weekly-brief-2026-03-09.md](weekly-brief-2026-03-09.md).
-4b. **Daily horizon (work-politics + work-strategy):** `python scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, work-politics snapshot + [work-strategy/daily-brief-focus.md](../work-strategy/daily-brief-focus.md). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline.
+4b. **Daily horizon (work-politics + work-strategy):** `python scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, work-politics snapshot + [work-strategy/daily-brief-focus.md](../work-strategy/daily-brief-focus.md). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline.
 5. Use [content-queue.md](content-queue.md) as the working queue for `@usa_first_ky`.
 6. For full briefs, complete [weekly-brief-template.md](weekly-brief-template.md) **§7 Triangulation** using [analytical-lenses/](analytical-lenses/manifest.md).
 7. Stage work-politics milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.

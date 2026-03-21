@@ -6,7 +6,8 @@ WPC (work-politics): territory: work-politics
   OR legacy: work-political-consulting, work-american-politics
   OR channel_key: operator:wap (or operator:wap:*)
 
-CLI flag remains --territory wap (alias). Everything else = companion.
+CLI: --territory work-politics (preferred), or legacy aliases wap / wp.
+Everything else = companion.
 """
 
 from __future__ import annotations
@@ -19,6 +20,26 @@ TERRITORY_WAP = "work-politics"
 TERRITORY_LABEL_WAP = "Work-politics"
 TERRITORY_WAP_LEGACY = ("work-political-consulting", "work-american-politics")
 CHANNEL_WAP_PREFIX = "operator:wap"
+
+# CLI/API tokens that mean "work-politics bucket" (merge receipts prefer work-politics).
+TERRITORY_CLI_WORK_POLITICS_ALIASES = frozenset({"wap", "wp", "work-politics"})
+
+
+def normalize_territory_cli(s: str) -> str:
+    """
+    Normalize --territory (or HTTP/API) values.
+
+    Maps wap, wp, work-politics -> work-politics. Leaves all and companion unchanged.
+    """
+    key = (s or "").strip().lower()
+    if key in TERRITORY_CLI_WORK_POLITICS_ALIASES:
+        return TERRITORY_WAP
+    return key
+
+
+def territory_cli_argparse_choices() -> tuple[str, ...]:
+    """Allowed values for argparse --territory across operator scripts."""
+    return ("all", "companion", "wap", "wp", "work-politics")
 
 
 def territory_from_yaml_block(yaml_body: str) -> str:

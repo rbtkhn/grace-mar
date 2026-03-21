@@ -23,7 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
-from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+from recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
 
 
 def _read(path: Path) -> str:
@@ -146,11 +146,12 @@ def main() -> int:
     )
     parser.add_argument(
         "--territory",
-        choices=("all", "wap", "companion"),
+        choices=("all", "wap", "wp", "work-politics", "companion"),
         default="all",
-        help="Pending lens: wap = work-politics only; companion = Record only; all = both sections",
+        help="Pending lens: work-politics (or wap/wp) only; companion = Record only; all = both sections",
     )
     args = parser.parse_args()
+    territory = normalize_territory_cli(args.territory)
 
     user_id = args.user
     profile_dir = REPO_ROOT / "users" / user_id
@@ -164,9 +165,9 @@ def main() -> int:
     all_pending = _extract_pending_candidates(recursion_gate)
     wap_pending = [c for c in all_pending if c.get("territory") == TERRITORY_WAP]
     companion_pending = [c for c in all_pending if c.get("territory") != TERRITORY_WAP]
-    if args.territory == "wap":
+    if territory == "work-politics":
         pending = wap_pending
-    elif args.territory == "companion":
+    elif territory == "companion":
         pending = companion_pending
     else:
         pending = all_pending
@@ -177,15 +178,15 @@ def main() -> int:
     lines.append("# Operator Blocker Report")
     lines.append("")
     lines.append(f"**User:** {user_id}")
-    if args.territory == "all":
+    if territory == "all":
         lines.append(
             f"**Pending by territory:** work-politics {len(wap_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
         )
         lines.append(
-            f"_Lens:_ `--territory wap` | `--territory companion` | `all` (default). Work-politics territory = `territory: work-politics` or `channel_key: operator:wap`."
+            f"_Lens:_ `--territory work-politics` | `--territory companion` | `all` (default). Work-politics territory = `territory: work-politics` or `channel_key: operator:wap`."
         )
     else:
-        lines.append(f"**Territory lens:** {args.territory} ({len(pending)} pending)")
+        lines.append(f"**Territory lens:** {territory} ({len(pending)} pending)")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -220,7 +221,7 @@ def main() -> int:
     lines.append("")
 
     # Staged candidates
-    if args.territory == "all" and (wap_pending or companion_pending):
+    if territory == "all" and (wap_pending or companion_pending):
         lines.append("## Staged — work-politics")
         if not wap_pending:
             lines.append("- None")
@@ -250,7 +251,7 @@ def main() -> int:
                 age_note = ""
                 if c.get("timestamp"):
                     age_note = f" ({c['timestamp'].strftime('%Y-%m-%d')})"
-                tag = f" [{c.get('territory', '?')}]" if args.territory == "all" else ""
+                tag = f" [{c.get('territory', '?')}]" if territory == "all" else ""
                 lines.append(f"- **{c['id']}**{age_note}{tag} — {s}")
         lines.append("")
     lines.append("**Action:** Review in recursion-gate.md; approve or reject.")

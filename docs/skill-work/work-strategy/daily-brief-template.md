@@ -10,7 +10,7 @@
 ## Generate
 
 ```bash
-python scripts/generate_wap_daily_brief.py -u grace-mar \
+python scripts/generate_work_politics_daily_brief.py -u grace-mar \
   -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md
 ```
 

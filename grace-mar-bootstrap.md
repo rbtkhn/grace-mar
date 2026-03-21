@@ -158,11 +158,11 @@ git status
 python3 scripts/metrics.py
 python3 scripts/session_brief.py --user grace-mar
 python3 scripts/session_brief.py --user grace-mar --minimal
-python3 scripts/session_brief.py -u grace-mar --minimal --territory wap   # work-politics pending only
+python3 scripts/session_brief.py -u grace-mar --minimal --territory work-politics   # work-politics pending only (aliases: wap, wp)
 python3 scripts/pending_dedup_hint.py -u grace-mar
 python3 scripts/report_lookup_sources.py -u grace-mar   # dyad:lookup distribution (library vs full)
 python3 scripts/operator_blocker_report.py -u grace-mar --stale-days 3   # work-politics + companion sections by default
-python3 scripts/operator_blocker_report.py -u grace-mar --territory wap  # work-politics-only pending
+python3 scripts/operator_blocker_report.py -u grace-mar --territory work-politics  # work-politics-only pending
 ```
 
 ### Pipeline merge (receipt-based)
@@ -170,8 +170,8 @@ python3 scripts/operator_blocker_report.py -u grace-mar --territory wap  # work-
 python3 scripts/process_approved_candidates.py --user grace-mar --generate-receipt /tmp/receipt.json --approved-by <name>
 python3 scripts/process_approved_candidates.py --user grace-mar --apply --approved-by <name> --receipt /tmp/receipt.json
 # work-politics-only batch (same --territory for generate + apply):
-python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --generate-receipt /tmp/wap.json --approved-by <name>
-python3 scripts/process_approved_candidates.py -u grace-mar --territory wap --apply --approved-by <name> --receipt /tmp/wap.json
+python3 scripts/process_approved_candidates.py -u grace-mar --territory work-politics --generate-receipt /tmp/work-politics-receipt.json --approved-by <name>
+python3 scripts/process_approved_candidates.py -u grace-mar --territory work-politics --apply --approved-by <name> --receipt /tmp/work-politics-receipt.json
 ```
 
 **Atomic orchestration (optional):** same merge semantics as `--quick` / gate quick-merge — `scripts/atomic_integrate.py` adds preflight, disk backup under `users/<id>/.integration-backups/`, optional `validate-integrity.py` after success, and a JSON receipt under `users/<id>/integration-receipts/`. Example (candidate must already be `approved` in the gate):
@@ -207,13 +207,13 @@ pip install pre-commit && pre-commit install && pre-commit install --hook-type c
 ```bash
 python3 scripts/harness_warmup.py -u grace-mar
 python3 scripts/harness_warmup.py -u grace-mar --fresh-judge   # clean context for new thread / advanced model
-python3 scripts/harness_warmup.py -u grace-mar --territory wap   # work-politics pending only in paste
+python3 scripts/harness_warmup.py -u grace-mar --territory work-politics   # work-politics pending only in paste
 python3 scripts/harness_warmup.py -u grace-mar --compact
 python3 scripts/generate_gate_dashboard.py -u grace-mar   # pending queue HTML (human door)
 echo "paste text" | python3 scripts/stage_gate_candidate.py -u grace-mar   # stage stdin as pending candidate (approve + merge separately)
 ```
 
-**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary. `operator_daily_warmup.py` includes a **pipeline velocity** line (merge/approval counts); after bursts of merges, run `python3 scripts/operator_depth_hint.py -u grace-mar` to emit a harness hint when velocity crosses a new tier (see `docs/skill-work/work-dev/README.md`).
+**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary. `operator_daily_warmup.py` includes a **pipeline velocity** line (merge/approval counts); after bursts of merges, run `python3 scripts/operator_depth_hint.py -u grace-mar` to emit a harness hint when velocity crosses a new tier (see `docs/skill-work/work-dev/README.md`).
 
 ### OpenClaw
 ```bash

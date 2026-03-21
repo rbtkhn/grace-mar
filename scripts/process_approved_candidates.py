@@ -4,7 +4,7 @@ Process approved pipeline candidates: merge into SELF, EVIDENCE, prompt; run exp
 After --apply, stderr reminds to refresh OpenClaw / external USER.md if --export-openclaw was not used.
 
 Territory batch merge (work-politics vs companion):
-    --territory wap        # territory: work-politics (or legacy) or channel_key: operator:wap
+    --territory work-politics  # preferred (aliases: wap, wp)
     --territory companion  # only the rest
     --territory all        # default — every approved row in Candidates section
     Generate receipt and apply with the same --territory so candidate_ids match.
@@ -35,7 +35,7 @@ from emit_pipeline_event import append_pipeline_event
 from harness_events import append_harness_event
 from pipeline_correlation import find_staged_event_id_for_candidate
 from recursion_gate_review import split_gate_sections
-from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block
+from recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
@@ -887,11 +887,12 @@ def main() -> None:
     ap.add_argument("--openclaw-api-key", default="", help="OpenClaw post API key (if destination=post)")
     ap.add_argument(
         "--territory",
-        choices=("all", "wap", "companion"),
+        choices=("all", "wap", "wp", "work-politics", "companion"),
         default="all",
-        help="Merge only approved candidates in this territory (wap = politics consulting; companion = rest). Receipt must match.",
+        help="Merge only approved candidates in this territory (work-politics = wap/wp aliases; companion = rest). Receipt must match.",
     )
     args = ap.parse_args()
+    territory = normalize_territory_cli(args.territory)
     _set_user(args.user)
     dry_run = not args.apply
 
@@ -903,9 +904,9 @@ def main() -> None:
             raise SystemExit("--approved-by is required with --quick")
 
     approved = get_approved_in_candidates()
-    if args.territory == "wap":
+    if territory == "work-politics":
         approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
-    elif args.territory == "companion":
+    elif territory == "companion":
         approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]
     if args.quick.strip():
         quick_id = args.quick.strip()
@@ -917,7 +918,7 @@ def main() -> None:
 
     if not approved:
         print(
-            f"No approved candidates to process (territory={args.territory}). "
+            f"No approved candidates to process (territory={territory}). "
             "Approve rows in recursion-gate above ## Processed; work-politics rows need territory: work-politics (or legacy) or channel_key: operator:wap."
         )
         return
@@ -925,15 +926,15 @@ def main() -> None:
     if args.generate_receipt:
         if not args.approved_by.strip():
             raise SystemExit("--approved-by is required with --generate-receipt")
-        receipt = _build_receipt(approved, args.approved_by, args.territory)
+        receipt = _build_receipt(approved, args.approved_by, territory)
         receipt["min_evidence_tier"] = max(args.min_evidence_tier, MIN_EVIDENCE_TIER)
         out_path = Path(args.generate_receipt)
         out_path.parent.mkdir(parents=True, exist_ok=True)
         out_path.write_text(json.dumps(receipt, indent=2) + "\n", encoding="utf-8")
-        print(f"Wrote receipt template: {out_path} (territory={args.territory}, {len(approved)} id(s))")
+        print(f"Wrote receipt template: {out_path} (territory={territory}, {len(approved)} id(s))")
         return
 
-    print(f"Found {len(approved)} approved candidate(s) (territory={args.territory}).")
+    print(f"Found {len(approved)} approved candidate(s) (territory={territory}).")
     if dry_run:
         for c in approved:
             print(f"  [DRY RUN] would merge {c['id']}: {c['summary'][:60]}...")
@@ -947,7 +948,7 @@ def main() -> None:
         raise SystemExit("--receipt is required with --apply (or use --quick for single-candidate)")
 
     if args.quick.strip():
-        receipt = _build_receipt(approved, args.approved_by.strip(), args.territory)
+        receipt = _build_receipt(approved, args.approved_by.strip(), territory)
         receipt["min_evidence_tier"] = max(args.min_evidence_tier, MIN_EVIDENCE_TIER)
     else:
         receipt_path = Path(args.receipt)

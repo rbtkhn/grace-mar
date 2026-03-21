@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """
 Generate a first-pass weekly brief scaffold for work-politics.
+
+Preferred entrypoint: `scripts/generate_work_politics_weekly_brief.py` (this file is the implementation + legacy name).
 """
 
 from __future__ import annotations

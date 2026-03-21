@@ -14,7 +14,7 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
 1. Run the warmup commands below (warmup + harness when instance state matters).
 2. **Always** run today’s combined daily brief and write it to the repo:
    ```bash
-   python3 scripts/generate_wap_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md
+   python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md
    ```
    Include the output path in your reply and a short summary (top work-politics + strategy headlines, next actions).
 3. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@usa_first_ky`.
