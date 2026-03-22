@@ -7,7 +7,13 @@
 
 ## Start here
 
-→ **[smm-onboarding-packet.md](smm-onboarding-packet.md)** — Read first. Then **[smm-day1-checklist.md](smm-day1-checklist.md)**.
+→ **[smm-xavier-handbook.md](smm-xavier-handbook.md)** — **Single spine for Xavier:** training + business context, rhythm, tools, escalation (read this first or alongside the packet).
+
+→ **[smm-onboarding-packet.md](smm-onboarding-packet.md)** — Canonical doc list. Then **[smm-day1-checklist.md](smm-day1-checklist.md)**.
+
+→ **[smm-onboarding-curriculum.md](smm-onboarding-curriculum.md)** — Full training path (M0–M5), learning outcomes, links to externals SMM pack and stress-test tools.
+
+→ **[Externals: SMM training hub](../../externals/massie/smm-training/README.md)** — Day-1 quickstart, week-1 ramp, daily rhythm, content playbook, approvals, KPIs, templates.
 
 ---
 

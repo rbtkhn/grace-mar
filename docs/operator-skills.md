@@ -4,6 +4,12 @@ Project-local workflow skills for Grace-Mar operator routines.
 
 These skills package recurring "morning coffee" and territory pulse workflows into reusable commands for Cursor agents. They do not change the gated merge rule, and they do not create new memory lanes. They are read-only workflow surfaces over canonical repo state.
 
+## Contextual stewardship
+
+- **Agents have no cross-thread institutional memory.** Authority for the Record stays **on-disk files** + **gated pipeline** (`agents.md`, RECURSION-GATE, companion-approved merges) — not chat summaries or model recall.
+- **Skills are weather reports, not policy.** They surface state; they do not replace reading `recursion-gate.md` / `self-evidence.md` when decisions are on the line.
+- **Encoded judgment** = gate workflow + receipts + CI/tests you run before ship — not prompt length alone.
+
 ---
 
 ## Included skills

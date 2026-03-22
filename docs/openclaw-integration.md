@@ -25,6 +25,10 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 
 Enterprise AI products increasingly aim to become the **system of record for organizational understanding** — synthesis across CRM, code, chat, and docs. That layer is hard to export; **comprehension lock-in** is switching cost from *understanding*, not just from data tables. Grace-Mar is the **companion-scale inverse**: the **Record** (git, human-approved merges) is canonical; **OpenClaw consumes exports** (USER.md, intent snapshot, PRP) — it does not own the fork. Refresh exports after pipeline merges so downstream workspaces stay aligned; if you ever leave OpenClaw, **SELF + EVIDENCE + PRP** remain. See [design-notes §2.5](design-notes.md#25-control-grid-vs-grace-mar--sovereignty-as-positioning), [implementable-insights §10](implementable-insights.md#10-comprehension-lock-in-vs-companion-owned-synthesis).
 
+### Safety story (visible state)
+
+Users fear **silent failure** — changes that felt real in chat but never became canonical. Grace-Mar’s comfort layer is **inspectable state**: **pending vs approved** in RECURSION-GATE, **merge receipts**, **last ACT-** / session merge lines, pipeline **`staged` vs `applied`** — so **OpenClaw staging** is never mistaken for **Record merge**. Strategy: **audit continuity** is a primary story, not admin trivia. See [safety-story-ux.md](skill-work/work-dev/safety-story-ux.md).
+
 ---
 
 ## 1. Record as Identity Source
@@ -136,6 +140,8 @@ Each line: `turn`, `role`, `channel`, `text`, `ts`, `user_id`, and optionally `p
 ---
 
 ## 2. Session Continuity (Startup Checklist)
+
+**Contract framing:** Continuity is **explicit steps** (read these paths and/or run these scripts); CI keeps the proof-of-read path healthy. It is **not** an implicit promise that “the agent remembers.” See [session-continuity-contract.md](skill-work/work-dev/session-continuity-contract.md) in work-dev.
 
 When running in a shared workspace or OpenClaw session, read these grace-mar files **before** starting work:
 

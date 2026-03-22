@@ -126,9 +126,11 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | **[ky-4-district-history-report.md](ky-4-district-history-report.md)** | Full history of KY-4 seat (1803–present): all holders, ideological ranking vs Massie, who rose (VP, 4 governors, Senator, HOF), infamous (Desha). Offer to campaign: 0.1 BTC. |
 | **[account-x.md](account-x.md)** | X account **@usa_first_ky** (America First Kentucky) — prototype message-support channel as demo for sale; Xavier (SMM) operates; 0.1 BTC base + 0.1 BTC win bonus; respond to Massie, boost engagement, sway opinion, recursive learning. |
 | **[smm-workspace.md](smm-workspace.md)** | One-link entry point for SMM: all core + reference docs. Share with Xavier. |
+| **[smm-xavier-handbook.md](smm-xavier-handbook.md)** | Xavier single spine: training + business context, rhythm, tools, escalation. |
 | **[america-first-ky/](america-first-ky/README.md)** | Factorial **guardrail stress-test** methodology (Mount Sinai–inspired) for high-stakes briefs; WORK-only; [AGENT-SESSION-BRIEF.md](america-first-ky/AGENT-SESSION-BRIEF.md) for next implementation session. |
 | **[smm-access-checklist.md](smm-access-checklist.md)** | Pre–Day 1: companion verifies X account access and handoff readiness. |
 | **[smm-onboarding-packet.md](smm-onboarding-packet.md)** | SMM start-here: links to account-x, smm-training, principal-profile, opposition-brief. Read first. |
+| **[smm-onboarding-curriculum.md](smm-onboarding-curriculum.md)** | SMM training curriculum: learning outcomes, modules M0–M5, assessments, links to externals pack + doctrine + stress-test. |
 | **[smm-day1-checklist.md](smm-day1-checklist.md)** | Day 1 runbook: orientation, access, baseline metrics, first posts, contact/workflow. |
 | **[smm-training.md](smm-training.md)** | SMM training: Massie's authentic X voice (verified @RepThomasMassie), ally/adversary research, tactics, review checklist. |
 | **[smm-job-description.md](smm-job-description.md)** | Formal job description for social media manager; informal Telegram message version for recruitment. |
@@ -160,6 +162,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | **[analytical-lenses/template-three-lenses.md](analytical-lenses/template-three-lenses.md)** | Paste block for briefs and threads (three lenses + synthesis + tensions). |
 | **[daily-brief-template.md](daily-brief-template.md)** | Pointer to **work-strategy** daily brief (work-politics + strategy). |
 | **[../work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json)** | RSS URLs + W/S keyword lists for `generate_work_politics_daily_brief.py`. |
+| **[../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md)** | Themes from tech/business discourse (e.g. enterprise AI trust, inference/fabs, labor memes) — **work-politics** use only with **cited** sources; see doc guardrails. |
 
 ---
 
@@ -192,7 +195,7 @@ Use this order when actively running the territory:
 4. Generate a first-pass brief (includes **§0 Recency slice**):  
    `python scripts/generate_work_politics_weekly_brief.py -u grace-mar --start YYYY-MM-DD -o docs/skill-work/work-politics/weekly-brief-YYYY-MM-DD.md`  
    Then run the **live 7d/30d pass** and replace §0 with three dated bullets. Latest artifact: [weekly-brief-2026-03-09.md](weekly-brief-2026-03-09.md).
-4b. **Daily horizon (work-politics + work-strategy):** `python scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, work-politics snapshot + [work-strategy/daily-brief-focus.md](../work-strategy/daily-brief-focus.md). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline.
+4b. **Daily horizon (work-politics + work-strategy):** `python scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, work-politics snapshot + [work-strategy/daily-brief-focus.md](../work-strategy/daily-brief-focus.md). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline. Optional context from long-form media: [work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) (themes only — not a fact source for public copy).
 5. Use [content-queue.md](content-queue.md) as the working queue for `@usa_first_ky`.
 6. For full briefs, complete [weekly-brief-template.md](weekly-brief-template.md) **§7 Triangulation** using [analytical-lenses/](analytical-lenses/manifest.md).
 7. Stage work-politics milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.

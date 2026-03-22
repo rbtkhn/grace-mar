@@ -41,6 +41,12 @@ Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/ch
 - **Preserve** contradiction + provenance; don’t flatten tensions in companion files.
 - **Prefer** small PR-sized commits; run checks below before claiming done.
 
+### Contextual stewardship (operator)
+
+- **Human** holds load-bearing context (tacit boundaries, what must not be crossed); new agent threads **do not** inherit institutional memory.
+- **Encoded judgment** = RECURSION-GATE + pipeline / merge receipts + **tests** (e.g. counterfactual harness, voice checks, `validate-integrity`) — not bigger prompts alone.
+- **Warmup / pasted digests** = orientation only; canonical truth remains `users/grace-mar/*.md` and `agents.md`.
+
 ### Safe optimization targets (high value, low sovereignty risk)
 
 - **Tests / CI:** `scripts/run_counterfactual_harness.py`, `scripts/test_voice_linguistic_authenticity.py`, `validate-integrity.py`, `governance_checker.py`

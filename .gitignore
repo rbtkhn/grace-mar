@@ -44,6 +44,7 @@ data/wap_jobs.json.tmp
 # Python
 __pycache__/
 *.pyc
+.venv-md2pdf/
 
 # Logs
 *.log

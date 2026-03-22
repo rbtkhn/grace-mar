@@ -1,6 +1,7 @@
 # SMM Day 1 checklist
 
-**Purpose:** Clear runbook for your first day. Check off as you go.
+**Purpose:** Clear runbook for your first day. Check off as you go.  
+**Curriculum:** You are completing **[M0 — Orientation & access](smm-onboarding-curriculum.md#module-map)**; full module map is in [smm-onboarding-curriculum.md](smm-onboarding-curriculum.md).
 
 ---
 
@@ -14,9 +15,10 @@
 ## Morning: orientation
 
 - [ ] Read [smm-onboarding-packet.md](smm-onboarding-packet.md) top to bottom
+- [ ] Read [smm-training.md](smm-training.md) **from the top** — **US politics basics**, **who Massie is**, **who Khanna is** (do not skip if you are new to US civics); then voice + checklist
 - [ ] Read [account-x.md](account-x.md) — account spec, guidelines, X strategy
 - [ ] Skim [principal-profile.md](principal-profile.md) — who Massie is, key issues
-- [ ] Skim [smm-training.md](smm-training.md) — voice section and review checklist
+- [ ] Skim [khanna-principal-profile.md](khanna-principal-profile.md) once — why Khanna appears in training (demo / war-powers overlap); not your main X lane unless assigned
 
 ---
 
@@ -40,7 +42,8 @@
 
 - [ ] Confirm workflow: how do you request new drafts? (Companion, Telegram, etc.)
 - [ ] Note any questions for companion
-- [ ] You're set for Week 1
+- [ ] Skim [externals: week-1 ramp](../../externals/massie/smm-training/week-1-ramp-plan.md) so you know what’s coming (optional but recommended)
+- [ ] You're set for Week 1 — next: [M1–M5 in curriculum](smm-onboarding-curriculum.md)
 
 ---
 

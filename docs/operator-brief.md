@@ -58,6 +58,14 @@ Position yourself as a **co-learner** with the companion. AI evolves quickly; yo
 
 ---
 
+## Contextual stewardship
+
+- **New agent threads have no institutional memory.** You hold load-bearing context (tacit boundaries, what must not enter the Record). Truth is **files in the repo** plus what passed **RECURSION-GATE** — not a model’s recall of prior chats.
+- **Judgment gets encoded** in the pipeline: staged candidates, merge receipts, pipeline events, and **tests** (integrity, counterfactual harness when prompts change) — not longer prompts alone.
+- **Warmup output and briefs** orient you; when something matters, read **`users/grace-mar/recursion-gate.md`** and related files — do not treat a summary as authority.
+
+---
+
 ## The "We did X" Ritual — Recognition & Accountability
 
 When something worth recording happens (a drawing, a story, something learned, a new interest), the operator or companion sends a message that starts with **"we"** and an activity verb. The bot treats it as an activity report, stages candidates to the review queue, and the companion approves what enters the Record.
@@ -73,6 +81,8 @@ When something worth recording happens (a drawing, a story, something learned, a
 ## Session continuity & RECURSION-GATE
 
 Keep the loop closed so the Record and the review queue stay in sync.
+
+- **Safety story (not “trust the chat”):** Comfort comes from **visible state** — what’s **pending** vs **approved**, **merge receipts**, **last evidence / merge** — and knowing **OpenClaw only stages** until the companion approves. Same fear class as silent prod drift; treat **audit continuity** as a primary story. See [safety-story-ux.md](skill-work/work-dev/safety-story-ux.md).
 
 - **Before each session:** Skim SESSION-LOG and **RECURSION-GATE** (or run `python3 scripts/session_brief.py -u grace-mar` for a short brief, or `python3 scripts/operator_blocker_report.py -u grace-mar` for a fuller blocker report — includes **stale pending** so old candidates don’t sit forever). Note how many candidates are waiting.
 - **work-politics vs companion lens:** Pending split by territory — **`--territory work-politics`** (aliases `wap`, `wp`) = work-politics only (`territory: work-politics` or `channel_key: operator:wap` on the YAML); **`--territory companion`** = Abby Record only. Same on `session_brief`, `harness_warmup`, `operator_blocker_report`. Default `all` shows both sections in the blocker report.

@@ -2,6 +2,72 @@
 
 **Audience:** Xavier (SMM). Reference for voice calibration, authenticity checks, and draft refinement.
 
+**Do not assume US politics:** If any term below is new, read this section before the voice section. Full bios and updates: [principal-profile.md](principal-profile.md) (Massie), [khanna-principal-profile.md](khanna-principal-profile.md) (Khanna).
+
+---
+
+## US politics — minimum viable context (no prior knowledge assumed)
+
+### What “Congress” is (federal)
+
+The **United States Congress** is the national legislature. It has two chambers:
+
+| Chamber | What it is | Rough size |
+|---------|------------|------------|
+| **House of Representatives** | Elected from **local districts** (one member per district). Terms are **two years**. | 435 voting members |
+| **Senate** | Two senators per **state** (not district-based the same way). Terms are **six years**. | 100 members |
+
+**Thomas Massie** and **Ro Khanna** are both members of the **House** — they are **U.S. Representatives**, not senators.
+
+### President vs Congress (why “war powers” comes up)
+
+The **President** runs the executive branch and is **commander-in-chief** of the military. **Congress** is supposed to **declare war** and **authorize** major uses of force. When people argue about **war powers**, they are arguing about **whether Congress must vote** before or while the US uses military force — not about liking or disliking troops.
+
+### Elections you will hear about
+
+| Term | Meaning |
+|------|--------|
+| **Primary** | Party voters choose who runs under that party’s label in the general election. Massie’s **2026 Republican primary** (KY-4) is a major storyline. |
+| **General election** | The final contest (e.g. November in federal election years) between nominees (and sometimes independents). |
+| **Incumbent** | The person already in the office running again. |
+
+### “Republican” vs “Democrat” (simple)
+
+- **Republican (“R”)** and **Democrat (“D”)** are the two major parties. They disagree on a lot.  
+- **They can still work together on specific bills** (e.g. war-powers resolutions). Cross-party sponsorship does **not** mean Massie “became a Democrat” or Khanna “became a Republican.”
+
+---
+
+## Who is **Thomas Massie**? (primary focus for @usa_first_ky)
+
+| Fact | Detail |
+|------|--------|
+| **Who** | U.S. Representative for **Kentucky’s 4th Congressional District (KY-4)** — northern Kentucky / Cincinnati metro / river counties; mix of urban, suburban, and rural. |
+| **Party** | **Republican**, often described as **libertarian-leaning** (limited government, civil liberties, skepticism of foreign wars and waste). |
+| **Background** | MIT-trained **engineer**; inventor/entrepreneur; **cattle farmer** in Kentucky; former local judge-executive. |
+| **What the account does** | [@usa_first_ky](account-x.md) is **unofficial** message support — you amplify **documented** positions and record; you do **not** speak as Massie or his official campaign. |
+| **2026 race (high level)** | He faces a **Republican primary** challenge; **Donald Trump** has endorsed his opponent and attacked Massie. That feud is central to **narrative and risk** — handle with **principle + receipts**, not random partisan insults. |
+
+**Canonical detail:** [principal-profile.md](principal-profile.md).
+
+---
+
+## Who is **Ro Khanna**? (second lane — demo / training only)
+
+You need to know Khanna because (1) **work-politics** uses a **two-party demo** (Massie + Khanna) to show the same *workflow* applies across ideologies, and (2) he and Massie have **real legislative overlap** on some issues (notably **war powers**).
+
+| Fact | Detail |
+|------|--------|
+| **Who** | U.S. Representative for **California’s 17th District (CA-17)** — **Silicon Valley** (South Bay / East Bay tech corridor). |
+| **Party** | **Democrat**, progressive / **worker-first** framing in a **wealthy tech district**. |
+| **Background** | Lawyer; former Commerce official; taught economics at Stanford. |
+| **Overlap with Massie** | Co-sponsor / partner on **war powers** and **Epstein-related transparency** efforts in the documented record — **bipartisan on those issues**, not on everything else. |
+| **2026** | He has a **Democratic primary** challenge partly fueled by **wealth-tax** and **tech-donor** tensions. |
+
+**Unless the companion assigns Khanna-specific posting,** your **day-to-day X work** for this engagement is still **Massie / KY-4 / @usa_first_ky**. Khanna appears in **briefs, demos, and training** so you don’t confuse “we mention Khanna” with “we run his social account.”
+
+**Canonical detail:** [khanna-principal-profile.md](khanna-principal-profile.md).
+
 ---
 
 ## Massie's authentic X voice (verified via @RepThomasMassie)

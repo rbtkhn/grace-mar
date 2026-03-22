@@ -23,6 +23,18 @@
 - **Always** prefer evidence: votes, public statements, links to sources.
 - **You** are the human gate for publish — no automated posting on your credentials without your review.
 
+## Repo-canonical training (work-politics)
+
+For the **structured curriculum** (learning outcomes, M0–M5, doctrine, stress-test pointers), use the territory docs:
+
+- [smm-onboarding-curriculum.md](../../../skill-work/work-politics/smm-onboarding-curriculum.md)
+- [smm-onboarding-packet.md](../../../skill-work/work-politics/smm-onboarding-packet.md)
+- [smm-training.md](../../../skill-work/work-politics/smm-training.md) (voice + review checklist)
+
+This folder is the **extended** hub (cadence, KPIs, templates). The two together are the full onboarding stack.
+
+---
+
 ## Related external docs (parent folder)
 
 - [Mission](../mission-short.md) — brand line for America First Kentucky

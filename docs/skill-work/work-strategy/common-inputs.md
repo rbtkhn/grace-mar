@@ -16,6 +16,7 @@
 | **CIV-MEM / governed library** | Lookups and citations | Both pipelines may cite historical precedent (e.g. 1973 embargo); citations do not auto-enter the Record. |
 | **RECURSION-GATE** | `users/grace-mar/recursion-gate.md` | Single queue. work-politics candidates use `territory: work-politics` or `channel_key: operator:wap`; strategy uses e.g. `channel_key: operator:work-strategy`. Same gate, same merge script; territory filter for batch review. |
 | **Operator / companion** | Human sign-off, approval, synthesis | Final synthesis and any ship decision are human. No autonomous Record merge or public ship. |
+| **External tech scan (optional)** | [external-tech-scan.md](external-tech-scan.md) — operator-maintained themes from keynotes/podcasts | **Narrative vocabulary** and partner positioning — **not** a fact source for campaign copy. Conflicts with headlines → prefer cited news. |
 
 ---
 

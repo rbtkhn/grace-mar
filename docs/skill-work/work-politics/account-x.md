@@ -71,7 +71,10 @@
 
 ## SMM onboarding
 
-**New hire?** Start with [smm-onboarding-packet.md](smm-onboarding-packet.md), then [smm-day1-checklist.md](smm-day1-checklist.md).
+**New hire (Xavier)?** Start with **[smm-xavier-handbook.md](smm-xavier-handbook.md)**, then [smm-onboarding-packet.md](smm-onboarding-packet.md) and [smm-day1-checklist.md](smm-day1-checklist.md).
+
+**Full curriculum (modules, outcomes, assessments):** [smm-onboarding-curriculum.md](smm-onboarding-curriculum.md).  
+**Extended pack (rhythm, KPIs, templates):** [externals/massie/smm-training/README.md](../../externals/massie/smm-training/README.md).
 
 Voice calibration: [smm-training.md](smm-training.md). SMM reviews drafts against Massie's verified voice before posting.
 

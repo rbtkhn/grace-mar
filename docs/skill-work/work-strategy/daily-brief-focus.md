@@ -2,7 +2,7 @@
 
 Edit this list when your **strategy lane** shifts (product, partnerships, policy, research). It is pasted into each generated daily brief.
 
-**Last refreshed:** 2026-03-19
+**Last refreshed:** 2026-03-21
 
 ---
 
@@ -12,6 +12,7 @@ Edit this list when your **strategy lane** shifts (product, partnerships, policy
 - OpenClaw ↔ repo handback and export provenance (see [work-dev workspace](../work-dev/workspace.md)).
 - AI-in-schools and identity-substrate narrative vs Alpha-style bundles (see [work-alpha-school](../work-alpha-school/README.md), [work-dev offers](../work-dev/offers.md)).
 - Optional: federal / state AI governance headlines when relevant to offers or civ-mem work.
+- Long-form tech discourse (GTC-class, Moonshots-class): themes distilled in [external-tech-scan.md](external-tech-scan.md) — use for **strategy vocabulary** and **keyword-season** tuning in [daily-brief-config.json](daily-brief-config.json); **not** unsourced brief facts.
 
 ## Non-goals (this file)
 

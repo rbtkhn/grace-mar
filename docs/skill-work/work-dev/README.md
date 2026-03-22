@@ -34,6 +34,9 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **[provenance-checklist.md](provenance-checklist.md)** | Repeatable verification path for export, handback, and audit integrity. |
 | **[openclaw-integration.md](../../openclaw-integration.md)** | Full integration guide — export, continuity, handback, staging, permission summary. |
 | **[economic-benchmarks.md](economic-benchmarks.md)** | Benchmarks for cost, value flow, and gate health — priority five and full set. |
+| **[quality-gates-narrative.md](quality-gates-narrative.md)** | Evals as **product**: “green = within boundary” map (harness, integrity, continuity CI, gate health) + partner one-liner; future dashboard concept. |
+| **[session-continuity-contract.md](session-continuity-contract.md)** | Continuity as **explicit contract**: which files, which scripts, what CI proves — **not** “the agent remembers.” |
+| **[safety-story-ux.md](safety-story-ux.md)** | **Safety story** as product: visible pending/approved, receipts, staged vs merged — audit continuity as primary comfort, not admin trivia. |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |
 | **[offers.md](offers.md)** | First-pass business-layer offers and commercial framing. |
 | **[target-registry.md](target-registry.md)** | Buyer segments for the future company path. |
@@ -56,10 +59,11 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 1. **Companion sovereignty** — Merge authority stays with the companion. OpenClaw stages; companion approves.
 2. **Knowledge boundary** — Voice responses use only what is documented in the Record. No LLM inference into identity facts.
 3. **Stage-only automation** — OpenClaw skills may read, analyze, and stage candidates. They may not merge into SELF, EVIDENCE, or prompt.
-4. **Session continuity** — When running shared workspace, read SESSION-LOG, RECURSION-GATE, and recent EVIDENCE before starting. Keep the loop closed.
+4. **Session continuity** — **Contract, not vibes:** read `session-log.md`, `recursion-gate.md`, and recent `self-evidence.md` (or run `continuity_read_log.py` / `harness_warmup.py` as documented). Do not assume the agent remembers; see [session-continuity-contract.md](session-continuity-contract.md).
 5. **Handback provenance** — Inbound staging includes advisory constitutional check against INTENT; events emitted for audit.
 6. **Portable synthesis** — Merge-approved truth in-repo; refresh exports after merges so OpenClaw never becomes the only place “who the companion is” lives.
 7. **Agent reliability** — Do not treat chain-of-thought or internal traces as audit. For consequential agent work outside the companion Voice, use **tail scenarios**, **factorial variations**, and **deterministic checks** (see [agent-reliability-playbook.md](agent-reliability-playbook.md)).
+8. **Visible safety state** — Users fear **silent failure**; foreground **pending vs approved**, **receipts**, **last merge**, **OpenClaw staged vs Record merged** — not chat-only reassurance. See [safety-story-ux.md](safety-story-ux.md).
 
 ---
 
@@ -88,6 +92,9 @@ Use this order when actively working on the territory:
 4. Use [provenance-checklist.md](provenance-checklist.md) when validating export or handback behavior.
 5. Use [economic-benchmarks.md](economic-benchmarks.md) only with its current instrumentation labels in mind.
 6. For agent eval posture on Voice, run `python scripts/run_counterfactual_harness.py` (includes anchoring-stress probes CF-ANCH-*).
+7. For **how evals are packaged as product** (operator + partner narrative), read [quality-gates-narrative.md](quality-gates-narrative.md).
+8. For **session continuity as explicit steps** (files / scripts / CI vs implicit memory), read [session-continuity-contract.md](session-continuity-contract.md).
+9. For **audit continuity as the safety story** (visible pipeline state vs “trust the chat”), read [safety-story-ux.md](safety-story-ux.md).
 
 ---
 
@@ -102,6 +109,7 @@ Use this order when the question is how work-dev could become a real company rat
 5. Use [delivery-playbook.md](delivery-playbook.md) to keep implementation bounded.
 6. Use [partner-channel.md](partner-channel.md) for borrowed-authority growth paths.
 7. Log real objections in [objection-log.md](objection-log.md).
+8. For **partner-facing safety framing** (silent-failure class, inspectable state), pull lines from [proof-ledger.md](proof-ledger.md) and [safety-story-ux.md](safety-story-ux.md).
 
 ---
 

@@ -21,7 +21,7 @@ Use this file when you want one place to understand:
 | **Pipeline-level export audit** | Implemented via `runtime_compat_export` events and harness events |
 | **Constitution advisory event** | Implemented via `intent_constitutional_critique` event emission |
 | **End-to-end provenance** | Implemented: OpenClaw payload (source=openclaw_stage) flows as staging_meta into gate; candidate blocks carry candidate_source, artifact_*, constitution_*; recursion_gate_review parses them for review/benchmarks |
-| **Session continuity** | Proof-of-read script + CI dry-run check (`tests/test_continuity_read_log.py`); live JSONL append when invoked; OpenClaw startup wiring still operator-side |
+| **Session continuity** | **Contract:** [session-continuity-contract.md](session-continuity-contract.md) — files + `continuity_read_log.py` + CI (`tests/test_continuity_read_log.py`); not “agent remembers.” Live JSONL append when script invoked; OpenClaw startup wiring still operator-side |
 
 ---
 
@@ -40,6 +40,8 @@ Use this file when you want one place to understand:
 | `offers.md` | Business-layer offers and commercial framing |
 | `target-registry.md` | Buyer segments for the business layer |
 | `proof-ledger.md` | Reusable proof lines for client or partner conversations |
+| `session-continuity-contract.md` | Explicit continuity steps vs implicit memory (files, scripts, CI) |
+| `safety-story-ux.md` | Visible pipeline state as user-facing safety story (pending/approved, receipts, staged vs merged) |
 | `engagement-model.md` | Commercial packaging and sequencing |
 | `delivery-playbook.md` | Service delivery phases |
 | `claude-code-wat-crosswalk.md` | WAT / agentic IDE ↔ delivery, reliability, handover |

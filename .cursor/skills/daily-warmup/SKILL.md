@@ -54,6 +54,7 @@ Return a short operator brief with:
 - This is read-only planning. Do not merge or stage just because the warmup mentions candidates.
 - If integrity fails, surface that before optional improvements.
 - Treat `users/grace-mar/recursion-gate.md` and `self-evidence.md` as canonical, not the summary.
+- **Contextual stewardship:** Agents have no cross-thread institutional memory; authority for the Record is **on-disk files + gated pipeline** — not model recall or chat summary.
 
 ## Related files
 
