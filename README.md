@@ -93,12 +93,21 @@ The model fetches the Portable Record Prompt from the repo and responds as Abby.
 
 ```
 grace-mar/
-├── readme.md                        # This file
-├── bootstrap-url.txt                # URL bootstrap instruction (paste into LLM)
-├── grace-mar-llm.txt              # PRP for any LLM (raw URL target, grace-mar.com/llm)
-├── agents.md                        # AI coding assistant guardrails
-├── grace-mar-bootstrap.md           # Session bootstrap for Cursor
+├── README.md                        # This file
+├── grace-mar-llm.txt                # PRP for any LLM (raw URL target, grace-mar.com/llm)
+├── AGENTS.md                        # AI coding assistant guardrails
+├── CONTRIBUTING.md                  # Contribution and pipeline rules
+├── LICENSE                          # MIT (code); see license-record for Record data
+├── .env.example                     # Non-secret env var names (copy to .env)
+├── bootstrap/                       # Session bootstrap + template pointers
+│   ├── bootstrap-url.txt          # URL bootstrap instruction (paste into LLM)
+│   ├── grace-mar-bootstrap.md       # Session bootstrap for Cursor
+│   └── companion-self-bootstrap.md  # Template companion-self bootstrap (reference)
 ├── .cursor/rules/grace-mar.mdc      # Cursor-specific governance rule
+├── apps/
+│   ├── miniapp_server.py            # Q&A server (Flask: / + /api/ask) — deploy to Railway/Render
+│   ├── gate-review-app.py           # Operator gate review dashboard (port 5001)
+│   └── metrics-dashboard.py         # Streamlit metrics (optional)
 ├── docs/
 │   ├── grace-mar-core.md            # Canonical governance (v2.0)
 │   ├── architecture.md              # Full system architecture
@@ -133,13 +142,13 @@ grace-mar/
 │   └── emit_pipeline_event.py       # Emit pipeline events (applied, rejected with reason)
 ├── integrations/
 │   └── openclaw_hook.py             # Export Record for OpenClaw session continuity
+├── research/                        # Experiments, prototypes, newsletters, vendor repos (see research/README.md)
 ├── profile/
 │   └── index.html                   # Fork profile (run generate_profile.py to refresh)
 ├── miniapp/
 │   └── index.html                   # Q&A Mini App UI
-├── miniapp_server.py                # Q&A server (Flask: / + /api/ask) — deploy to Railway/Render
-├── procfile                         # For miniapp_server deployment
-├── requirements.txt                 # miniapp_server deps
+├── procfile                         # For miniapp deployment (`python apps/miniapp_server.py`)
+├── requirements.txt                 # miniapp + shared Python deps
 ├── bot/
 │   ├── core.py                      # Shared emulation logic (Telegram + WeChat)
 │   ├── bot.py                       # Telegram bot
@@ -174,7 +183,7 @@ Docs refer to **SELF**, **EVIDENCE**, and the **gate** as concepts. **On disk, o
 | Pipeline staging (pending candidates) | `recursion-gate.md` |
 | Gated archive (approved voice + activity) | `self-archive.md` |
 
-**Not used:** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md` — those spellings break scripts. Full spec: [docs/canonical-paths.md](docs/canonical-paths.md). **Migrate:** `python scripts/migrate_legacy_user_filenames.py --user grace-mar --apply`. **Check:** `python scripts/assert_canonical_paths.py --user grace-mar`. Bots and `miniapp_server` **fail at startup** if `self.md`, `self-evidence.md`, or `recursion-gate.md` are missing (set `GRACE_MAR_SKIP_PATH_CHECK=1` only if you must).
+**Not used:** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md` — those spellings break scripts. Full spec: [docs/canonical-paths.md](docs/canonical-paths.md). **Migrate:** `python scripts/migrate_legacy_user_filenames.py --user grace-mar --apply`. **Check:** `python scripts/assert_canonical_paths.py --user grace-mar`. Bots and `apps/miniapp_server.py` **fail at startup** if `self.md`, `self-evidence.md`, or `recursion-gate.md` are missing (set `GRACE_MAR_SKIP_PATH_CHECK=1` only if you must).
 
 ## Key Documents
 
@@ -188,7 +197,9 @@ Docs refer to **SELF**, **EVIDENCE**, and the **gate** as concepts. **On disk, o
 | [PDF Setup](docs/pdf-setup.md) | Render White Paper and Prospectus to PDF (Pandoc + Eisvogel) |
 | [OpenClaw Integration](docs/openclaw-integration.md) | Record as identity layer, session continuity |
 | [Design Notes](docs/design-notes.md) | White paper & business proposal input (positioning, agent-web insights) |
-| [agents.md](agents.md) | Guardrails for AI coding assistants |
+| [AGENTS.md](AGENTS.md) | Guardrails for AI coding assistants |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contributing code/docs; pipeline and merge rules |
+| [LICENSE](LICENSE) | MIT license for code and tooling; [license-record](license-record) for Record data |
 | [Rejection Feedback](docs/rejection-feedback.md) | Learning from pipeline rejections |
 | [Portability](docs/portability.md) | School transfer plus runtime portability and bundle handoff workflow |
 | [Simple User Interface](docs/simple-user-interface.md) | Chat-based workflow for families (no GitHub) |
@@ -357,7 +368,7 @@ See [docs/id-taxonomy.md](docs/id-taxonomy.md) for identifier prefixes and relat
 
 ## For AI Coding Assistants
 
-Read [agents.md](agents.md) before making any changes. Critical constraints:
+Read [AGENTS.md](AGENTS.md) before making any changes. Critical constraints:
 
 - **Never leak LLM knowledge** into the fork's profile or emulation
 - **Never commit profile changes** without user approval through the gated pipeline

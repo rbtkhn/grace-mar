@@ -5,10 +5,10 @@ recent recursion-gate candidates; output is DRAFT only. No merge. No writes to
 Record or gate. Optional AutoGen; dry-run works without it.
 
 Usage:
-  python exploration/autogen-deliberation/run_deliberation.py -u grace-mar
-  python exploration/autogen-deliberation/run_deliberation.py -u grace-mar --dry-run
+  python research/exploration/autogen-deliberation/run_deliberation.py -u grace-mar
+  python research/exploration/autogen-deliberation/run_deliberation.py -u grace-mar --dry-run
 
-Output: exploration/autogen-deliberation/output/deliberation-draft-YYYYMMDD.md
+Output: research/exploration/autogen-deliberation/output/deliberation-draft-YYYYMMDD.md
 """
 
 from __future__ import annotations
@@ -20,10 +20,10 @@ from pathlib import Path
 
 
 def _repo_root() -> Path:
-    """Resolve repo root (parent of exploration/)."""
+    """Resolve repo root (parent of research/)."""
     script_dir = Path(__file__).resolve().parent
-    # exploration/autogen-deliberation/ -> repo root is script_dir.parent.parent
-    return script_dir.parent.parent
+    # research/exploration/autogen-deliberation/ -> repo root is three levels up
+    return script_dir.parent.parent.parent
 
 
 def _load_self(repo_root: Path, user_id: str) -> str:

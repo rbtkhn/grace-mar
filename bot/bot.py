@@ -9,7 +9,7 @@ Usage (local polling):
     2. pip install -r bot/requirements.txt
     3. python -m bot.bot   # from repo root
 
-For production: use webhook mode via miniapp_server (see docs/telegram-webhook-setup.md).
+For production: use webhook mode via apps/miniapp_server.py (see docs/telegram-webhook-setup.md).
 """
 # Allow running as script: python bot/bot.py (simulate package for relative imports)
 if __package__ is None:

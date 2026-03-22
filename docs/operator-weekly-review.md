@@ -55,6 +55,6 @@ If you spot a gap, stage a candidate to RECURSION-GATE manually (or describe it 
 
 ## Integration
 
-- **agents.md** — Operator in Pipeline mode follows this rhythm when processing.
+- **AGENTS.md** — Operator in Pipeline mode follows this rhythm when processing.
 - **SECOND-BRAIN-PATTERNS** — Pattern 4 (Weekly Review) and Pattern 5 (Two-Minute Rule) apply.
 - **Meet them where they are** — If resistance notes exist in MEMORY, honor them; don't push.

@@ -6,7 +6,7 @@
 
 **Scope:** Conceptual and terminology alignment. Structure/template compliance (instance vs repo) is in [AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE](audit-grace-mar-vs-companion-self-template.md).
 
-**Authority:** CONCEPTUAL-FRAMEWORK § companion self; agents.md § Record and Voice; [ID-TAXONOMY § Companion self contains](id-taxonomy.md#companion-self-contains).
+**Authority:** CONCEPTUAL-FRAMEWORK § companion self; AGENTS.md § Record and Voice; [ID-TAXONOMY § Companion self contains](id-taxonomy.md#companion-self-contains).
 
 **Date:** 2026-02-26
 
@@ -23,7 +23,7 @@
 
 | Location | Companion self / self-* usage | Status |
 |----------|-------------------------------|--------|
-| **agents.md** | Defines companion self, lists self-* components, points to ID-TAXONOMY; tricameral mind | ✅ Strong |
+| **AGENTS.md** | Defines companion self, lists self-* components, points to ID-TAXONOMY; tricameral mind | ✅ Strong |
 | **CONCEPTUAL-FRAMEWORK** | § companion self, "Companion self contains" list, self-voice as output channel; §8 tricameral | ✅ Strong |
 | **ID-TAXONOMY** | "Companion self contains" table; standard labels self-skill-*, self-library, self-archive, self-memory, self-voice | ✅ Canonical |
 | **SKILLS-MODULARITY** | Full module set (self-knowledge, self-personality, self-curiosity, self-library, self-skill-*); links to ID-TAXONOMY | ✅ Strong |
@@ -95,4 +95,4 @@
 
 ---
 
-*Audit performed per CONCEPTUAL-FRAMEWORK (companion self), agents.md, and ID-TAXONOMY. Re-run after material changes to concept or taxonomy.*
+*Audit performed per CONCEPTUAL-FRAMEWORK (companion self), AGENTS.md, and ID-TAXONOMY. Re-run after material changes to concept or taxonomy.*

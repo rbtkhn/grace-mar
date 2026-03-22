@@ -41,7 +41,7 @@ open users/grace-mar/gate-dashboard.html   # or double-click in Finder
 
 Regenerate after any gate change. Does not write the gate; does not merge. Safe to host statically (no secrets in file — only gate excerpts you already have locally).
 
-**Interactive gate review (gate-review-app.py):** A Flask app in the repo root that serves a live list of pending candidates with Approve/Reject buttons. Actions update `recursion-gate.md` and, for low-risk approvals, run quick-merge via `process_approved_candidates`. Protect with `OPERATOR_SECRET` (or `OPERATOR_FETCH_SECRET`). Run from repo root: `python gate-review-app.py` (port 5001). Can be deployed alongside miniapp_server on Render. See [approval-inbox-spec.md](approval-inbox-spec.md).
+**Interactive gate review (`apps/gate-review-app.py`):** A Flask app under `apps/` that serves a live list of pending candidates with Approve/Reject buttons. Actions update `recursion-gate.md` and, for low-risk approvals, run quick-merge via `process_approved_candidates`. Protect with `OPERATOR_SECRET` (or `OPERATOR_FETCH_SECRET`). Run from repo root: `python apps/gate-review-app.py` (port 5001). Can be deployed alongside `apps/miniapp_server.py` on Render. See [approval-inbox-spec.md](approval-inbox-spec.md).
 
 ---
 

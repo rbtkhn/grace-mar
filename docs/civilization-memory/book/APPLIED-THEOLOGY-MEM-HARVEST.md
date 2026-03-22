@@ -3,7 +3,7 @@
 **Purpose:** Harvest the MEM corpus (by civilization) for insights to integrate into Applied Theology Part 2 (Illustrations from practice) and the *Source* line. One section per civilization; each section includes support/illustration, blade encoding, structural tension (if any), and **Insights to integrate**.
 
 **Date:** March 2026  
-**Corpus:** [repos/civilization_memory/content/civilizations/](repos/civilization_memory/content/civilizations/) — RUSSIA, PERSIA, CHINA, INDIA, ROME, ISLAM, GERMANY, FRANCE, ANGLIA, AMERICA.  
+**Corpus:** [research/repos/civilization_memory/content/civilizations/](../../../research/repos/civilization_memory/content/civilizations/) — RUSSIA, PERSIA, CHINA, INDIA, ROME, ISLAM, GERMANY, FRANCE, ANGLIA, AMERICA.  
 **Criteria:** Condition, seam, face vs category, one subject many tongues, law/form, no explicit contradiction (per APPLIED-THEOLOGY-TEST-MEM-PERSIA).
 
 ---

@@ -4,12 +4,12 @@ Generate a weekly digest (newsletter) from journal.md and optional curiosity (IX
 
 Pulls public-suitable journal entries and optionally curiosity dimension for a simple
 markdown or HTML digest. Intended for cron (e.g. GitHub Actions weekly) that commits
-to newsletter/ or sends via SendGrid/X.
+to research/newsletter/ or sends via SendGrid/X.
 
 Usage:
     python scripts/generate_newsletter.py
-    python scripts/generate_newsletter.py --user grace-mar --output newsletter/digest-2026-03-16.md
-    python scripts/generate_newsletter.py --format html --output newsletter/digest.html
+    python scripts/generate_newsletter.py --user grace-mar --output research/newsletter/digest-2026-03-16.md
+    python scripts/generate_newsletter.py --format html --output research/newsletter/digest.html
 """
 
 import argparse

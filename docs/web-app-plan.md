@@ -68,7 +68,7 @@ Grace-mar.com becomes the **primary front door** for Grace-Mar:
 | **Export** | Trigger export (PRP, curriculum_profile, etc.) from web; download. |
 | **Auth** | **Partial:** Shared family token + operator secret for review; not full login/OAuth. |
 
-**Tech:** `miniapp/family-hub.html`, `miniapp_server.py` family routes.
+**Tech:** `miniapp/family-hub.html`, `apps/miniapp_server.py` family routes.
 
 **Dependencies:** Pipeline scripts; user dir structure.
 

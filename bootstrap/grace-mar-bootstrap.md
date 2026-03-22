@@ -21,7 +21,7 @@ Paste both outputs (or the full non-compact block). **Canonical state is on disk
 
 | # | File | Why |
 |---|------|-----|
-| 1 | `agents.md` | Sovereign merge, knowledge boundary, Lexile, MEMORY vs Record, file-update protocol |
+| 1 | `AGENTS.md` | Sovereign merge, knowledge boundary, Lexile, MEMORY vs Record, file-update protocol |
 | 2 | `docs/harness-inventory.md` | What may write where; bot/core audit; two doors / one book |
 | 3 | `docs/architecture.md` (§ System boundaries) | Voice = model + harness; non-goals |
 | 4 | `docs/identity-fork-protocol.md` | Stage → approve → merge; never direct SELF/EVIDENCE without gate |
@@ -36,7 +36,7 @@ Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/ch
 
 - **Do not** merge into `users/*/self.md`, `self-evidence.md`, or `bot/prompt.py` without companion approval (stage only).
 - **Do not** add undocumented facts into the Record or SYSTEM prompt (knowledge boundary).
-- **Do not** raise Lexile ceiling without writing-sample evidence (agents.md).
+- **Do not** raise Lexile ceiling without writing-sample evidence (AGENTS.md).
 - **Do not** bypass pre-commit: Record-facing edits in gated paths need commit message **`[gated-merge]`** (or hook will block).
 - **Preserve** contradiction + provenance; don’t flatten tensions in companion files.
 - **Prefer** small PR-sized commits; run checks below before claiming done.
@@ -45,7 +45,7 @@ Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/ch
 
 - **Human** holds load-bearing context (tacit boundaries, what must not be crossed); new agent threads **do not** inherit institutional memory.
 - **Encoded judgment** = RECURSION-GATE + pipeline / merge receipts + **tests** (e.g. counterfactual harness, voice checks, `validate-integrity`) — not bigger prompts alone.
-- **Warmup / pasted digests** = orientation only; canonical truth remains `users/grace-mar/*.md` and `agents.md`.
+- **Warmup / pasted digests** = orientation only; canonical truth remains `users/grace-mar/*.md` and `AGENTS.md`.
 
 ### Safe optimization targets (high value, low sovereignty risk)
 
@@ -93,7 +93,7 @@ End of session: update **`docs/development-handoff.md`**, commit, push if reques
 
 ## 1) First-Run Checklist (Do This First)
 
-1. Read `agents.md` (guardrails and merge authority rules).
+1. Read `AGENTS.md` (guardrails and merge authority rules).
 2. Read `docs/readme.md` (document map and hierarchy).
 3. Read `docs/identity-fork-protocol.md` (canonical protocol contract).
 4. Run `git status` and note uncommitted work.
@@ -111,7 +111,7 @@ If working on companion profile operations (not work-dev), also read:
 
 ## 2) Non-Negotiable Rules
 
-- **Tricameral mind** — Grace-Mar is a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. Grace-Mar serves the companion; the companion serves Grace-Mar. See agents.md and `docs/conceptual-framework.md` §8.
+- **Tricameral mind** — Grace-Mar is a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. Grace-Mar serves the companion; the companion serves Grace-Mar. See AGENTS.md and `docs/conceptual-framework.md` §8.
 - Sovereign Merge Rule: **agent may stage; agent may not merge without explicit companion approval**.
 - Knowledge boundary: no undocumented facts enter the Record.
 - Evidence linkage: profile claims must trace to evidence artifacts.
@@ -251,7 +251,7 @@ python3 scripts/handback_server.py
 
 ## 6) Primary File Map
 
-- `agents.md` — development guardrails and policy.
+- `AGENTS.md` — development guardrails and policy.
 - `docs/readme.md` — canonical doc map.
 - `docs/identity-fork-protocol.md` — protocol compact.
 - `docs/architecture.md` — system implementation model.

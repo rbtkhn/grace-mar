@@ -3,7 +3,7 @@
 **Purpose:** Handoff for a new agent session to **assess** this feedback. The feedback compares grace-mar’s cognitive-fork design to multi-agent patterns (AutoGen/AG2) and suggests hybrid exploration paths. No commitment to implement; assess alignment, risks, and where this would live.
 
 **Date captured:** 2026-03  
-**Assessed:** See [feedback-autogen-exploration-2026-03-assessment.md](feedback-autogen-exploration-2026-03-assessment.md). Design and minimal prototype: [exploration-multi-agent-deliberation.md](exploration-multi-agent-deliberation.md); prototype under `exploration/autogen-deliberation/`.
+**Assessed:** See [feedback-autogen-exploration-2026-03-assessment.md](feedback-autogen-exploration-2026-03-assessment.md). Design and minimal prototype: [exploration-multi-agent-deliberation.md](exploration-multi-agent-deliberation.md); prototype under `research/exploration/autogen-deliberation/`.
 
 ---
 
@@ -29,7 +29,7 @@ It contrasts grace-mar (singleton-centric, governed, evidential) with **AutoGen/
 | **EVIDENCE + recursion-gate** | Controlled evolution; no emergent drift; changes require explicit user/operator approval |
 
 **Repo anchors to verify:**  
-`docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `agents.md` (Sovereign Merge Rule, knowledge boundary), `docs/boundary-self-knowledge-self-library.md`.
+`docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `AGENTS.md` (Sovereign Merge Rule, knowledge boundary), `docs/boundary-self-knowledge-self-library.md`.
 
 ---
 
@@ -53,7 +53,7 @@ It contrasts grace-mar (singleton-centric, governed, evidential) with **AutoGen/
 
 - **Phase 7 (emergent cognition)** is live → fork is beyond pure seeding; multi-agent deliberation could simulate “emergence” without identity bleed.
 - Recent work: runtime consumer, approval inbox, OpenClaw integration → bridges to external harnesses already exist; AutoGen could test **multi-module coordination inside the fork** (e.g. IX-B “debating” with IX-A on new proposals).
-- No AutoGen in repo yet; analyst prompts, PRP, agent manifest exports are cited as compatible. **agents.md** guardrails (no leakage, no unapproved changes) align with wrapping AutoGen in a **sandboxed, read-only** mode around the Record.
+- No AutoGen in repo yet; analyst prompts, PRP, agent manifest exports are cited as compatible. **AGENTS.md** guardrails (no leakage, no unapproved changes) align with wrapping AutoGen in a **sandboxed, read-only** mode around the Record.
 
 ---
 
@@ -81,7 +81,7 @@ It contrasts grace-mar (singleton-centric, governed, evidential) with **AutoGen/
 When assessing this feedback, the next agent should:
 
 1. **Verify claims**  
-   - Confirm the “current grace-mar” summary (SELF, SELF-LIBRARY, SKILLS, EVIDENCE, gate) against `docs/architecture.md`, `docs/conceptual-framework.md`, and `agents.md`.  
+   - Confirm the “current grace-mar” summary (SELF, SELF-LIBRARY, SKILLS, EVIDENCE, gate) against `docs/architecture.md`, `docs/conceptual-framework.md`, and `AGENTS.md`.  
    - Confirm Phase 7 and “emergent cognition” wording and intent.  
    - Confirm that analyst prompts, PRP, and export manifest are as described (read-only consumption, no merge from AutoGen).
 
@@ -104,7 +104,7 @@ When assessing this feedback, the next agent should:
 
 | Topic | Location |
 |-------|----------|
-| Governance, merge rule, knowledge boundary | `agents.md` |
+| Governance, merge rule, knowledge boundary | `AGENTS.md` |
 | Architecture, harness, non-goals | `docs/architecture.md` |
 | Tricameral mind, Record, companion | `docs/conceptual-framework.md` |
 | Contradiction engine constraints | `docs/CONTRADICTION-ENGINE-SPEC.md` §2 |
@@ -123,7 +123,7 @@ Copy-paste this to start the assessment:
 ```
 Assess the feedback in docs/feedback-autogen-exploration-2026-03.md:
 
-1. Verify the "current grace-mar" description against architecture.md, conceptual-framework.md, and agents.md.
+1. Verify the "current grace-mar" description against architecture.md, conceptual-framework.md, and AGENTS.md.
 2. Check each of the three exploration paths against the Sovereign Merge Rule, knowledge boundary, and CONTRADICTION-ENGINE-SPEC §2. Can any path write to the Record without the gate? (It must not.)
 3. Recommend: (a) design-only doc, (b) minimal prototype (where and how), or (c) defer. If (a) or (b), say where in the repo it should live (work-dev, design-notes, or new exploration doc).
 4. List concrete risks (identity bleed, dependency creep, scope) and how to keep them bounded.

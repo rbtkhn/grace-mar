@@ -101,7 +101,7 @@
     },
     "RECURSION-GATE": {
       "type": "object",
-      "description": "Staging area; format documented in agents.md"
+      "description": "Staging area; format documented in AGENTS.md"
     }
   },
   "exports": {

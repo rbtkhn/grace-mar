@@ -2,7 +2,7 @@
 
 **Status:** Initial baseline snapshot. This is a lightweight first audit of the local `civilization_memory` repository from the Grace-Mar stewardship territory.
 
-**Target repo:** `repos/civilization_memory`  
+**Target repo:** `research/repos/civilization_memory`  
 **Purpose:** Establish the first management baseline: what is already strong, what appears active, and what likely needs recurring stewardship attention.
 
 ---

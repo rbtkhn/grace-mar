@@ -10,7 +10,7 @@
 - [approval-inbox-spec.md](approval-inbox-spec.md)
 - [contradiction-resolution.md](contradiction-resolution.md)
 - [contradiction-timeline.md](contradiction-timeline.md) (time-ordered view; pipeline + git)
-- [gate-review-app.py](../gate-review-app.py)
+- [apps/gate-review-app.py](../apps/gate-review-app.py)
 - [scripts/generate_gate_dashboard.py](../scripts/generate_gate_dashboard.py)
 
 **See also (template):** [companion-self CONTRADICTION-ENGINE-SPEC](https://github.com/rbtkhn/companion-self/blob/main/docs/CONTRADICTION-ENGINE-SPEC.md) — instance-agnostic mirror.
@@ -494,7 +494,7 @@ These fields are not written back to canonical queue text unless a deliberate sc
 
 ## 13. API Surface
 
-The contradiction engine should be exposed as helper endpoints on the **operator review layer** (e.g. [gate-review-app.py](../gate-review-app.py) or the browser inbox described in [approval-inbox-spec.md](approval-inbox-spec.md)), not necessarily the companion Mini App server.
+The contradiction engine should be exposed as helper endpoints on the **operator review layer** (e.g. [apps/gate-review-app.py](../apps/gate-review-app.py) or the browser inbox described in [approval-inbox-spec.md](approval-inbox-spec.md)), not necessarily the companion Mini App server.
 
 ### 13.1 `GET /api/review/conflicts`
 

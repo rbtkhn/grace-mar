@@ -4,7 +4,7 @@
 
 **Purpose:** define a first-class approval inbox for `RECURSION-GATE` that reduces operator fatigue without weakening the Sovereign Merge Rule.
 
-**Primary sources:** `docs/identity-fork-protocol.md`, `docs/pipeline-map.md`, `docs/operator-weekly-review.md`, `docs/web-app-plan.md`, `docs/miniapp-setup.md`, `users/grace-mar/recursion-gate.md`, `bot/core.py`, `bot/bot.py`, `scripts/process_approved_candidates.py`, `scripts/generate_gate_dashboard.py`, `miniapp_server.py`
+**Primary sources:** `docs/identity-fork-protocol.md`, `docs/pipeline-map.md`, `docs/operator-weekly-review.md`, `docs/web-app-plan.md`, `docs/miniapp-setup.md`, `users/grace-mar/recursion-gate.md`, `bot/core.py`, `bot/bot.py`, `scripts/process_approved_candidates.py`, `scripts/generate_gate_dashboard.py`, `apps/miniapp_server.py`
 
 ---
 
@@ -361,7 +361,7 @@ This keeps rejection data usable for future operator-fatigue analysis.
 
 ## 12. API Surface
 
-The first implementation should add authenticated operator endpoints to `miniapp_server.py`.
+The first implementation should add authenticated operator endpoints to `apps/miniapp_server.py`.
 
 ### 12.1 Read endpoints
 

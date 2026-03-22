@@ -46,7 +46,7 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 **Insight:** Grace-Mar implements "learning" as human-gated writes to SELF/EVIDENCE; the model does not edit its own memory or weights.
 
 **Implementable actions:**
-- State this in protocol and architecture. See [IDENTITY-FORK-PROTOCOL § 2.1](identity-fork-protocol.md) and agents.md.
+- State this in protocol and architecture. See [IDENTITY-FORK-PROTOCOL § 2.1](identity-fork-protocol.md) and AGENTS.md.
 - Reject any design that lets the model write directly to SELF or EVIDENCE without staging and approval.
 
 **Status:** Documented in IDENTITY-FORK-PROTOCOL and AGENTS.
@@ -119,7 +119,7 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 **Implementable actions:**
 - When upgrading models or adding agentic layers: (1) keep Sovereign Merge Rule and staging; (2) keep knowledge boundary and abstention; (3) document any new "goal" the system can pursue and ensure it is bounded (e.g. "suggest next question" not "maximize engagement").
 
-**Status:** Invariants already in agents.md and GRACE-MAR-CORE; re-assert on any major capability upgrade.
+**Status:** Invariants already in AGENTS.md and GRACE-MAR-CORE; re-assert on any major capability upgrade.
 
 ---
 
@@ -223,12 +223,12 @@ Concrete takeaways from external discourse (Claws, AGI/harness discussions) that
 | # | Insight | Where implemented / documented |
 |---|--------|--------------------------------|
 | 1 | Voice = model + harness | ARCHITECTURE § System boundaries and harness |
-| 2 | Continual learning = human-gated writes | IDENTITY-FORK-PROTOCOL, agents.md |
+| 2 | Continual learning = human-gated writes | IDENTITY-FORK-PROTOCOL, AGENTS.md |
 | 3 | Explicit non-goals / no autonomous optimizer | ARCHITECTURE § System boundaries and harness |
 | 4 | Config via skills (add channel = skill) | adding-a-channel.md |
 | 5 | Small auditable surface | Design principle; DEVELOPMENT-HANDOFF |
 | 6 | Forkable + optional skills | PORTABILITY, ADDING-A-CHANNEL |
-| 7 | Sovereign Record regardless of model | agents.md, GRACE-MAR-CORE; re-assert on upgrades |
+| 7 | Sovereign Record regardless of model | AGENTS.md, GRACE-MAR-CORE; re-assert on upgrades |
 | 8 | Capability dissipation — focus on integration | dyad:lookup source tracking; report_lookup_sources.py |
 | 9 | Speed as advantage | Operational principle; this doc |
 | 10 | Comprehension lock-in vs portable Record | design-notes §2.5; openclaw-integration; work-build-ai README; this doc |

@@ -15,7 +15,7 @@
 | **Interpretation & intent** | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), this file (DESIGN-NOTES) | Why we built it this way; design principles; objections answered. Federalist-style commentary. |
 | **Narrative & differentiation** | [WHITE-PAPER](white-paper.md) | Full story, positioning, technical model. |
 | **Business** | [BUSINESS-PROSPECTUS](business-prospectus.md), [BUSINESS-ROADMAP](business-roadmap.md) | Market, revenue, roadmap. |
-| **Implementation** | [AGENTS](agents.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
+| **Implementation** | [AGENTS](AGENTS.md), [ARCHITECTURE](architecture.md) | Guardrails for AI and developers; system design. |
 | **Exploration (multi-agent)** | [exploration-multi-agent-deliberation](exploration-multi-agent-deliberation.md) | Design and optional prototype for AutoGen-style deliberation; not production. |
 
 ---
@@ -57,7 +57,7 @@ The cognitive fork model (capture → stage → approve → merge; three-dimensi
 
 Grace-Mar encodes principles: "Never leak LLM knowledge," "Meet the user where they are," "The user is the gate," "Calibrated abstention." These scale across novel situations. Rigid rules would not. The analyst prompt gives the LLM principles (detect knowledge/curiosity/personality); it does not hard-code classification rules.
 
-**White paper implication:** Governance documents (agents.md, CONCEPTUAL-FRAMEWORK) are principles-based; they enable agents and integrators to interpret correctly in context. This reduces brittleness and supports long-term maintainability.
+**White paper implication:** Governance documents (AGENTS.md, CONCEPTUAL-FRAMEWORK) are principles-based; they enable agents and integrators to interpret correctly in context. This reduces brittleness and supports long-term maintainability.
 
 ### 2.3 Agent Builds, Agent Maintains — With a Boundary
 
@@ -637,7 +637,7 @@ Common objections to the protocol or to Grace-Mar, with short answers and citati
 | **Why evidence-linked?** | Claims without artifacts are unverifiable; evidence grounds confidence and resists drift and LLM leak. | [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) §3.3; [CONCEPTUAL-FRAMEWORK](conceptual-framework.md) §5. |
 | **Why not just use a chatbot?** | A generic chatbot has no persistent, user-owned identity. The Record is the asset; the Voice is one interface; export lets schools and agents consume identity without owning it. | [DESIGN-NOTES](design-notes.md) §1; [BUSINESS-PROSPECTUS](business-prospectus.md). |
 | **Why so much process (stage, review, merge)?** | Process controls outcome. Without structured control, outputs degrade; the pipeline enforces bounded context, facts-first staging, and a human gate. | [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) §2.1. |
-| **Why not auto-sync from platforms (e.g. Khan, school LMS)?** | The user is the gate. Nothing enters the Record without being written and approved; auto-merge would bypass sovereignty. Platforms can feed *candidates*; the user approves. | [AGENTS](agents.md) §2 (Sovereign Merge Rule); [CONCEPTUAL-FRAMEWORK](conceptual-framework.md) invariant 25. |
+| **Why not auto-sync from platforms (e.g. Khan, school LMS)?** | The user is the gate. Nothing enters the Record without being written and approved; auto-merge would bypass sovereignty. Platforms can feed *candidates*; the user approves. | [AGENTS](AGENTS.md) §2 (Sovereign Merge Rule); [CONCEPTUAL-FRAMEWORK](conceptual-framework.md) invariant 25. |
 
 ---
 

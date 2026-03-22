@@ -5,7 +5,7 @@ Governance checker: scan for principle violations.
 Aligns with white paper §8: "agent as potential adversary," 70/30 sovereignty.
 Use as pre-commit hook or in CI to catch violations before merge.
 
-Principles (from agents.md, design-notes):
+Principles (from AGENTS.md, design-notes):
   - Never leak LLM knowledge
   - The user is the gate (no merge without approval)
   - Calibrated abstention (say "I don't know" when outside knowledge)

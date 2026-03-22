@@ -4,8 +4,8 @@
 
 **Purpose:** Minimal prototype for an internal deliberation loop: read-only ingest of Record + recent recursion-gate candidates; output is **draft only** for operator review. No merge path. No writes to Record or gate.
 
-**Design doc:** [docs/exploration-multi-agent-deliberation.md](../../docs/exploration-multi-agent-deliberation.md)  
-**Assessment:** [docs/feedback-autogen-exploration-2026-03-assessment.md](../../docs/feedback-autogen-exploration-2026-03-assessment.md)
+**Design doc:** [docs/exploration-multi-agent-deliberation.md](../../../docs/exploration-multi-agent-deliberation.md)  
+**Assessment:** [docs/feedback-autogen-exploration-2026-03-assessment.md](../../../docs/feedback-autogen-exploration-2026-03-assessment.md)
 
 ---
 
@@ -23,13 +23,13 @@ From repo root:
 
 ```bash
 # With optional AutoGen (pip install pyautogen or autogen)
-python exploration/autogen-deliberation/run_deliberation.py -u grace-mar
+python research/exploration/autogen-deliberation/run_deliberation.py -u grace-mar
 
 # Dry run (no AutoGen): loads self + gate snippet, writes placeholder draft
-python exploration/autogen-deliberation/run_deliberation.py -u grace-mar --dry-run
+python research/exploration/autogen-deliberation/run_deliberation.py -u grace-mar --dry-run
 ```
 
-Output is written to `exploration/autogen-deliberation/output/deliberation-draft-YYYYMMDD.md`. Review the draft; if you want to stage any part as a candidate, use the normal pipeline (manual edit of `recursion-gate.md` or existing staging flow).
+Output is written to `research/exploration/autogen-deliberation/output/deliberation-draft-YYYYMMDD.md`. Review the draft; if you want to stage any part as a candidate, use the normal pipeline (manual edit of `recursion-gate.md` or existing staging flow).
 
 ---
 

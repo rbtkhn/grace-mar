@@ -1,6 +1,6 @@
 # Merging Upgrades from Companion-Self (Template → Instance)
 
-**Purpose:** Grace-Mar is a private **instance** and working tool; companion-self is the upstream **template** repo and live public/open-source product surface. When the template is updated (concept, protocol, seed, schema), this doc describes how to pull those changes into grace-mar without overwriting the Record. Structural improvements proven inside grace-mar may later be generalized back into companion-self, but instance data and private workflows remain in grace-mar. See [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §5 for the contract. For a side-by-side overview of instance vs template, see [grace-mar vs companion-self](grace-mar-vs-companion-self.md).
+**Purpose:** Grace-Mar is a private **instance** and working tool; companion-self is the upstream **template** repo and live public/open-source product surface. When the template is updated (concept, protocol, seed, schema), this doc describes how to pull those changes into grace-mar without overwriting the Record. Structural improvements proven inside grace-mar may later be generalized back into companion-self, but instance data and private workflows remain in grace-mar. See [COMPANION-SELF-BOOTSTRAP](../bootstrap/companion-self-bootstrap.md) §5 for the contract. For a side-by-side overview of instance vs template, see [grace-mar vs companion-self](grace-mar-vs-companion-self.md).
 
 **Workspace boundary:** All grace-mar modifications—including merges from companion-self—are done in **this (grace-mar) workspace**. Do not edit grace-mar from a companion-self workspace; there, grace-mar is read-only reference. When you perform the merge checklist below, you are in the grace-mar workspace; companion-self is pulled or opened for reference only. See companion-self [COMPANION-SELF-BOOTSTRAP](https://github.com/rbtkhn/companion-self/blob/main/companion-self-bootstrap.md) §7.
 
@@ -23,7 +23,7 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 | `docs/instance-patterns.md` | Template guidance for instance variants and advanced patterns |
 | `users/_template/` | Template scaffold for new instances; reference-only in grace-mar (do not copy into `users/grace-mar/`) |
 | `docs/CONTRADICTION-ENGINE-SPEC.md`, `docs/contradiction-resolution.md`, `docs/approval-inbox-spec.md` | Contradiction engine + gate review surface; grace-mar has instance-specific copies—compare on sync |
-| Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `agents.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
+| Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `AGENTS.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.
 
@@ -90,4 +90,4 @@ If mixed, split the change: upstream the reusable layer to `companion-self`; kee
 
 - **companion-self-bootstrap.md** §5 — Contract: safe to sync, never overwrite, process.
 - **operator-weekly-review.md** — Optional step: periodic template sync when template or instance change.
-- **agents.md** — Template-level rules; when updated in companion-self, sync into grace-mar per this doc.
+- **AGENTS.md** — Template-level rules; when updated in companion-self, sync into grace-mar per this doc.

@@ -1,6 +1,6 @@
 # In Civ-Mem: Difference Between STATE and SCHOLAR
 
-**Purpose:** Clarify the distinction between **STATE** and **SCHOLAR** in the civilization_memory (CMC) model. These are internal operating modes of the *upstream* CMC system (e.g. `repos/civilization_memory` content/civilizations/CHINA). Grace-Mar’s copy in `docs/civilization-memory/` holds essays and notes; the STATE/SCHOLAR design comes from the upstream canon and is summarized here for reference. Full lessons for Grace-Mar: [docs/notes-cmc-substance.md](../../notes-cmc-substance.md).
+**Purpose:** Clarify the distinction between **STATE** and **SCHOLAR** in the civilization_memory (CMC) model. These are internal operating modes of the *upstream* CMC system (e.g. `research/repos/civilization_memory` content/civilizations/CHINA). Grace-Mar’s copy in `docs/civilization-memory/` holds essays and notes; the STATE/SCHOLAR design comes from the upstream canon and is summarized here for reference. Full lessons for Grace-Mar: [docs/notes-cmc-substance.md](../../notes-cmc-substance.md).
 
 ---
 

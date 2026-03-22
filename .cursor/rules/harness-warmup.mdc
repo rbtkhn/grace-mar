@@ -27,9 +27,9 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 ## Relation to bootstrap
 
-`grace-mar-bootstrap.md` = **procedure** (what to read, work-dev, commands). Warmup = **current state** (pending candidates, last ACT, session tail). They stack: bootstrap orients; warmup grounds.
+`bootstrap/grace-mar-bootstrap.md` = **procedure** (what to read, work-dev, commands). Warmup = **current state** (pending candidates, last ACT, session tail). They stack: bootstrap orients; warmup grounds.
 
-**Stewardship:** Treat warmup output as a **weather report**, not policy — policy lives in `agents.md`, RECURSION-GATE, and companion-approved merges.
+**Stewardship:** Treat warmup output as a **weather report**, not policy — policy lives in `AGENTS.md`, RECURSION-GATE, and companion-approved merges.
 
 ## Do not
 

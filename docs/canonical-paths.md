@@ -30,4 +30,4 @@ Scripts and the bot resolve paths under `users/[id]/` using these names. If the 
 
 **Migration:** `python scripts/migrate_legacy_user_filenames.py --user <id> --dry-run` then `--apply`. If both `PENDING-REVIEW.md` and `recursion-gate.md` exist, use `--merge-pending-review` to append or resolve manually.
 
-**Startup:** Telegram bot, WeChat bot, `miniapp_server`, and `gate-review-app` call `assert_canonical_record_layout()` and **exit with an error** if any required file is missing. Override only for special environments: `GRACE_MAR_SKIP_PATH_CHECK=1`.
+**Startup:** Telegram bot, WeChat bot, `apps/miniapp_server.py`, and `apps/gate-review-app.py` call `assert_canonical_record_layout()` and **exit with an error** if any required file is missing. Override only for special environments: `GRACE_MAR_SKIP_PATH_CHECK=1`.

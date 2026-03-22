@@ -62,7 +62,7 @@ This gives you a portable Record and a queryable Voice without a school contract
 | Operator/facilitator onboarding | [OPERATOR-BRIEF](operator-brief.md) |
 | Weekly pipeline rhythm | [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md) |
 | Handing the Record to a school | [PORTABILITY](portability.md) |
-| Technical setup (self-host) | [ARCHITECTURE](architecture.md), [agents.md](../agents.md), [PIPELINE-MAP](pipeline-map.md) |
+| Technical setup (self-host) | [ARCHITECTURE](architecture.md), [AGENTS.md](../AGENTS.md), [PIPELINE-MAP](pipeline-map.md) |
 
 ---
 

@@ -23,6 +23,13 @@ jobs:
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
           pip install -r bot/requirements.txt 2>/dev/null || true
+          pip install -e .
+
+      - name: Verify grace-mar package CLI
+        run: |
+          python -c "from pathlib import Path; from grace_mar.repo_io import repo_root; r = repo_root(); assert (r / 'users').is_dir(), r"
+          grace-mar --help
+          grace-mar warmup -u grace-mar --compact | head -1
 
       - name: Run pytest
         run: pytest tests/ -v --tb=short

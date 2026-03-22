@@ -49,7 +49,7 @@ Run **N** instances of the same app, each with its own bot token and user ID.
 
 - **Render / Railway / Fly:** One service per bot; each service has its own env and webhook URL. Set each bot’s webhook in BotFather to its service URL (e.g. `https://grace-mar-abby.onrender.com/telegram/webhook`).
 - **Single machine:** Run N processes (e.g. N systemd units or Docker containers), each with its own env. Use a reverse proxy (nginx, Caddy) to route by hostname or path to the right process, and set each bot’s webhook to the corresponding URL.
-- **Local dev:** Run `python -m bot.bot` (or miniapp_server) in two terminals with different `.env` files (or `GRACE_MAR_USER_ID=abby TELEGRAM_BOT_TOKEN=... python -m bot.bot`).
+- **Local dev:** Run `python -m bot.bot` (or `apps/miniapp_server.py`) in two terminals with different `.env` files (or `GRACE_MAR_USER_ID=abby TELEGRAM_BOT_TOKEN=... python -m bot.bot`).
 
 **Pros:** No code changes. Same codebase, same “central” logic; only config differs per bot.  
 **Cons:** N deployments to operate; profile today is single-user (you’d open one profile per user or add multi-user later).

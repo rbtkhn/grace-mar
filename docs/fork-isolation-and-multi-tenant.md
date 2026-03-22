@@ -86,7 +86,7 @@ Retention is expressed in **fork config** (e.g. `memory_ttl_days`, `archive_rota
 ## 6. Deployment
 
 - **Single process, single fork (pilot):** One server process with `GRACE_MAR_USER_ID=grace-mar`. All requests are for that fork. No routing; paths and permissions are as today.
-- **Single process, multi-fork:** One server (e.g. miniapp_server, gate-review) with tenant resolution: fork ID from URL path (e.g. `/operator/grace-mar/console`), subdomain (e.g. `grace-mar.grace-mar.com`), or header (e.g. `X-Fork-Id`). Each request resolves `profile_dir(fork_id)` and uses that fork’s config and permissions. No cross-fork access.
+- **Single process, multi-fork:** One server (e.g. `apps/miniapp_server.py`, `apps/gate-review-app.py`) with tenant resolution: fork ID from URL path (e.g. `/operator/grace-mar/console`), subdomain (e.g. `grace-mar.grace-mar.com`), or header (e.g. `X-Fork-Id`). Each request resolves `profile_dir(fork_id)` and uses that fork’s config and permissions. No cross-fork access.
 - **One process per fork:** Each fork runs in its own process (or container) with its own `GRACE_MAR_USER_ID`. Simple isolation; operational cost scales with fork count. Good for strict isolation or when quotas/retention are enforced at the process boundary.
 
 The filesystem and permissions model support all three; deployment chooses one.

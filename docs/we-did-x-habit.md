@@ -2,7 +2,7 @@
 
 **Purpose:** Make it a **habit** that after real activity you say **"we did X"** so the agent runs signal detection and stages candidates to RECURSION-GATE. The gate then reflects real activity and doesn't go stale.
 
-**Rule (agents.md):** When the companion says **"we [did X]"**, it is a pipeline invocation. Immediately run signal detection and stage candidates. Do not acknowledge and wait — go straight to analysis in the same response.
+**Rule (AGENTS.md):** When the companion says **"we [did X]"**, it is a pipeline invocation. Immediately run signal detection and stage candidates. Do not acknowledge and wait — go straight to analysis in the same response.
 
 ---
 

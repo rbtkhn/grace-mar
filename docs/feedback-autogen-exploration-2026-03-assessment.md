@@ -11,22 +11,22 @@ The feedback’s summary table (SELF, SELF-LIBRARY, SKILLS, EVIDENCE + recursion
 
 | Feedback claim | Repo anchor | Verdict |
 |----------------|-------------|--------|
-| **SELF:** IX-A/B/C as "immutable core identity" | architecture.md (SELF + SELF-KNOWLEDGE, IX-A/B/C); conceptual-framework (Record evolves via merge); agents.md (gate, history preserved) | **Mostly correct, one nuance:** SELF is the governed *core* of identity and does not change without the gate. It is not literally immutable: it evolves through approved merges with history preserved (conceptual-framework, agents.md §5a). Prefer wording: "governed core identity" or "identity that only changes through the gate." |
+| **SELF:** IX-A/B/C as "immutable core identity" | architecture.md (SELF + SELF-KNOWLEDGE, IX-A/B/C); conceptual-framework (Record evolves via merge); AGENTS.md (gate, history preserved) | **Mostly correct, one nuance:** SELF is the governed *core* of identity and does not change without the gate. It is not literally immutable: it evolves through approved merges with history preserved (conceptual-framework, AGENTS.md §5a). Prefer wording: "governed core identity" or "identity that only changes through the gate." |
 | **SELF-LIBRARY:** including CIV-MEM as read-only reference | architecture.md (Module 1b, SELF-LIBRARY, CIV-MEM subdomain); boundary-self-knowledge-self-library | **Correct.** Reference-facing, not identity; CIV-MEM is a sub-library for lookup. |
 | **SKILLS:** THINK/WRITE as capability modules | architecture.md (SKILLS); conceptual-framework (self-skill-think, self-skill-write); skills-modularity | **Correct.** |
-| **EVIDENCE + recursion-gate:** controlled evolution; no emergent drift; changes require explicit user/operator approval | agents.md §2 (Sovereign Merge Rule: stage only, no merge without approval); architecture (explicit non-goals: no merge without companion approval); CONTRADICTION-ENGINE-SPEC §2 | **Correct.** |
+| **EVIDENCE + recursion-gate:** controlled evolution; no emergent drift; changes require explicit user/operator approval | AGENTS.md §2 (Sovereign Merge Rule: stage only, no merge without approval); architecture (explicit non-goals: no merge without companion approval); CONTRADICTION-ENGINE-SPEC §2 | **Correct.** |
 
 **Phase 7 / emergent cognition:** Confirmed. Wording appears in `readme.md`, `grace-mar-bootstrap.md`, `development-handoff.md`, `session-log.md`: "moment of cognitive bifurcation," "emergent cognition" (not "emergent consciousness"). Fork has graduated from pure seeding to growth-through-use; Record + Voice operate as a coherent presence from the system.
 
-**Analyst prompts, PRP, export manifest:** Confirmed. Analyst stages to RECURSION-GATE only (agents.md); export scripts produce read-only artifacts (PRP, manifest); no merge path from exports. AutoGen as consumer of export would be read-only at runtime unless a separate, gated staging step is defined.
+**Analyst prompts, PRP, export manifest:** Confirmed. Analyst stages to RECURSION-GATE only (AGENTS.md); export scripts produce read-only artifacts (PRP, manifest); no merge path from exports. AutoGen as consumer of export would be read-only at runtime unless a separate, gated staging step is defined.
 
 ---
 
 ## 2. Exploration paths vs. Sovereign Merge Rule, knowledge boundary, CONTRADICTION-ENGINE-SPEC §2
 
-**Sovereign Merge Rule (agents.md §2):** Agent may stage; it may not merge. All profile changes require staging then companion approval; merge only via `process_approved_candidates.py --apply`.
+**Sovereign Merge Rule (AGENTS.md §2):** Agent may stage; it may not merge. All profile changes require staging then companion approval; merge only via `process_approved_candidates.py --apply`.
 
-**Knowledge boundary (agents.md §1):** Only documented profile content; no LLM leakage; no merge of undocumented knowledge.
+**Knowledge boundary (AGENTS.md §1):** Only documented profile content; no LLM leakage; no merge of undocumented knowledge.
 
 **CONTRADICTION-ENGINE-SPEC §2:** Agent may stage, may not merge; `recursion-gate.md` is canonical; no second source of truth; contradiction flow = staged candidate + derived analysis + operator resolution + deterministic merge.
 
@@ -86,8 +86,8 @@ The feedback’s summary table (SELF, SELF-LIBRARY, SKILLS, EVIDENCE + recursion
 
 - **(b) Minimal prototype (optional)**  
   - If a prototype is desired, limit it to **Path 1 (internal deliberation loop)** as the most contained: read-only ingest of `self.md` + recent `recursion-gate.md`; output = markdown only; no writes to repo Record or gate.  
-  - **Where:** Under a clearly experimental path, e.g. `scripts/exploration/` or `exploration/autogen-deliberation/` at repo root, with a README stating it is exploration, not part of the core pipeline. Do not add AutoGen to `bot/` or to `scripts/process_approved_candidates.py`.  
-  - **How:** Single script or small module that (1) loads self.md + optional recursion-gate snippet, (2) runs a small GroupChat (or equivalent) with fixed roles, (3) prints or writes to a **non-canonical** file (e.g. `exploration/output/deliberation-draft-YYYYMMDD.md`) for operator review. Staging into `recursion-gate.md` remains a separate, manual or existing pipeline step.
+  - **Where:** Under a clearly experimental path, e.g. `scripts/exploration/` or `research/exploration/autogen-deliberation/`, with a README stating it is exploration, not part of the core pipeline. Do not add AutoGen to `bot/` or to `scripts/process_approved_candidates.py`.  
+  - **How:** Single script or small module that (1) loads self.md + optional recursion-gate snippet, (2) runs a small GroupChat (or equivalent) with fixed roles, (3) prints or writes to a **non-canonical** file (e.g. `research/exploration/output/deliberation-draft-YYYYMMDD.md`) for operator review. Staging into `recursion-gate.md` remains a separate, manual or existing pipeline step.
 
 - **(c) Defer**  
   - Defer if the goal is zero new dependencies and no extra moving parts. The feedback is still useful as an assessed handoff; the design-only doc preserves the option to implement later.
@@ -102,7 +102,7 @@ The feedback’s summary table (SELF, SELF-LIBRARY, SKILLS, EVIDENCE + recursion
 |------|-------------|----------------------|
 | **Identity bleed** | Deliberation or runtime agents are perceived as "the" Record or Voice; their output is merged without clear provenance; council voices blur with the companion’s documented self. | (1) All deliberation/runtime output labeled as "proposed" / "candidate" / "draft"; (2) merge only via `process_approved_candidates.py`; (3) no AutoGen (or any new layer) in the merge script or in direct edits to Record files; (4) provenance on merged content (e.g. `source: autogen_deliberation` or `runtime_experiment`) so identity remains traceable. |
 | **Dependency creep** | AutoGen (or similar) becomes required for the core pipeline, harness, or release. | (1) Treat AutoGen as **optional/experimental**; (2) core pipeline (`bot/`, analyst, `process_approved_candidates.py`, recursion-gate) has **zero** AutoGen imports; (3) exploration lives in a separate dir/script; (4) docs and README state that the exploration is not required for operation. |
-| **Scope creep** | Prototype or design is treated as production; exploration logic moves into the gate or the bot. | (1) Keep exploration in a dedicated area (`docs/exploration-*.md`, `scripts/exploration/` or `exploration/`); (2) label all exploration docs and code as "exploration" / "experimental"; (3) do not integrate deliberation or AutoGen into `bot/`, `scripts/process_approved_candidates.py`, or recursion-gate logic without an explicit design change and approval. |
+| **Scope creep** | Prototype or design is treated as production; exploration logic moves into the gate or the bot. | (1) Keep exploration in a dedicated area (`docs/exploration-*.md`, `scripts/exploration/` or `research/exploration/`); (2) label all exploration docs and code as "exploration" / "experimental"; (3) do not integrate deliberation or AutoGen into `bot/`, `scripts/process_approved_candidates.py`, or recursion-gate logic without an explicit design change and approval. |
 
 **Additional risk — staging volume (Path 2):** If the runtime stages aggressively, the queue can grow and dilute review quality. **Mitigation:** Define a staging policy (e.g. operator reviews session log and stages only selected outcomes; or batch staging with explicit "review before merge" and optional caps).
 

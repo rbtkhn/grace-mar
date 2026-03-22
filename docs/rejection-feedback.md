@@ -45,6 +45,6 @@ Do not over-tighten — some rejections are subjective. Use feedback to reduce c
 
 ## See Also
 
-- agents.md § Gated Pipeline
+- AGENTS.md § Gated Pipeline
 - pipeline-map.md
 - bot/prompt.py (ANALYST_PROMPT)

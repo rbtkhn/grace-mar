@@ -6,17 +6,17 @@ Shows the lookup flow: LIBRARY → CMC → full LLM.
 Run with CMC cloned and index built for a real demonstration.
 
   # Clone and build CMC first:
-  git clone https://github.com/rbtkhn/civilization_memory.git repos/civilization_memory
-  cd repos/civilization_memory && python3 tools/cmc-index-search.py build
+  git clone https://github.com/rbtkhn/civilization_memory.git research/repos/civilization_memory
+  cd research/repos/civilization_memory && python3 tools/cmc-index-search.py build
 
   # Then run demo (set path if not sibling):
-  CIVILIZATION_MEMORY_PATH=./repos/civilization_memory python3 scripts/demo_cmc_lookup.py
+  CIVILIZATION_MEMORY_PATH=./research/repos/civilization_memory python3 scripts/demo_cmc_lookup.py
 
   # Full end-to-end (LIBRARY → CMC → REPHRASE) — requires OPENAI_API_KEY:
-  CIVILIZATION_MEMORY_PATH=./repos/civilization_memory python3 scripts/demo_cmc_lookup.py --full
+  CIVILIZATION_MEMORY_PATH=./research/repos/civilization_memory python3 scripts/demo_cmc_lookup.py --full
 
   # Test routing (off-scope question skips CMC):
-  CIVILIZATION_MEMORY_PATH=./repos/civilization_memory python3 scripts/demo_cmc_lookup.py "how do you spell elephant"
+  CIVILIZATION_MEMORY_PATH=./research/repos/civilization_memory python3 scripts/demo_cmc_lookup.py "how do you spell elephant"
 """
 
 import os
@@ -64,9 +64,9 @@ def main():
     else:
         print("CMC path: not found")
         print("\nSetup:")
-        print("  1. Clone: git clone https://github.com/rbtkhn/civilization_memory.git repos/civilization_memory")
-        print("  2. Build: cd repos/civilization_memory && python3 tools/cmc-index-search.py build")
-        print("  3. Set:   export CIVILIZATION_MEMORY_PATH=$(pwd)/repos/civilization_memory")
+        print("  1. Clone: git clone https://github.com/rbtkhn/civilization_memory.git research/repos/civilization_memory")
+        print("  2. Build: cd research/repos/civilization_memory && python3 tools/cmc-index-search.py build")
+        print("  3. Set:   export CIVILIZATION_MEMORY_PATH=$(pwd)/research/repos/civilization_memory")
         print("\nLookup flow when CMC is available:")
         print("  LIBRARY (books) → miss")
         print("  CMC (civilizational history) → query → snippets")

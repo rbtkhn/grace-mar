@@ -151,7 +151,7 @@ Input (conversation, artifact, "we did X")
 | Work layer | This doc §2a, §5a; [SKILLS-TEMPLATE § II-A](skills-template.md#ii-a-separate-work--execution-layer), [ID-TAXONOMY](id-taxonomy.md#work-layer-labels) |
 | Standard labels (self-skill-*) | [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-) |
 | Analyst vs. skill modules (IX-A/B/C) | [SKILLS-TEMPLATE § III](skills-template.md#iii-skill-interactions-and-the-self), [ARCHITECTURE § Multi-Dimension Signals](architecture.md#multi-dimension-signals) |
-| Record and Voice | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [AGENTS](agents.md) |
+| Record and Voice | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [AGENTS](AGENTS.md) |
 | Pipeline and merge | [PIPELINE-MAP](pipeline-map.md), [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) |
 | THINK/READ vs SELF IX (no auto-merge) | This doc §5; [we-read-think-self-pipeline.md](we-read-think-self-pipeline.md) |
 

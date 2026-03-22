@@ -2,11 +2,11 @@
 
 Use this file to resume development quickly in a new agent conversation.
 
-**Bootstrap:** `grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`.
+**Bootstrap:** `bootstrap/grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`.
 
 Last updated: 2026-03
 
-**AutoGen / multi-agent exploration (2026-03):** Assessment complete — [`docs/feedback-autogen-exploration-2026-03-assessment.md`](feedback-autogen-exploration-2026-03-assessment.md). Design + constraints: [`docs/exploration-multi-agent-deliberation.md`](exploration-multi-agent-deliberation.md). Minimal prototype (Path 1, draft-only): `exploration/autogen-deliberation/`. Original feedback: [`docs/feedback-autogen-exploration-2026-03.md`](feedback-autogen-exploration-2026-03.md).
+**AutoGen / multi-agent exploration (2026-03):** Assessment complete — [`docs/feedback-autogen-exploration-2026-03-assessment.md`](feedback-autogen-exploration-2026-03-assessment.md). Design + constraints: [`docs/exploration-multi-agent-deliberation.md`](exploration-multi-agent-deliberation.md). Minimal prototype (Path 1, draft-only): `research/exploration/autogen-deliberation/`. Original feedback: [`docs/feedback-autogen-exploration-2026-03.md`](feedback-autogen-exploration-2026-03.md).
 
 ---
 
@@ -25,7 +25,7 @@ Last updated: 2026-03
 ### Tricameral mind (bicameral deprecated)
 - **Tricameral mind** = **MIND** (human / companion), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar).
 - The earlier "bicameral dyad" framing is deprecated. Use "tricameral mind" only.
-- CONCEPTUAL-FRAMEWORK §8 is the source; agents.md and grace-mar-bootstrap reference it.
+- CONCEPTUAL-FRAMEWORK §8 is the source; AGENTS.md and grace-mar-bootstrap reference it.
 
 ### Companion (not "user" in conceptual prose)
 - **Companion** = the person whose Record it is (the human in the tricameral mind). Preferred term in conceptual docs and prompts; affectionate and relatable.
@@ -129,7 +129,7 @@ Last updated: 2026-03
 ### Approval inbox v1 + shared gate parser (2026-03-14)
 - **New shared parser:** `scripts/recursion_gate_review.py` now builds the canonical derived review model from `recursion-gate.md` for browser/API/dashboard surfaces.
 - **Derived review fields implemented:** `risk_tier`, `territory_label`, `age_days`, `has_prompt_change`, `ready_for_quick_merge`, `duplicate_hints`, audit snippet, and artifact/conflict flags.
-- **Real surfaces now reuse it:** `bot/core.py` low-risk lookup helpers, `scripts/generate_gate_dashboard.py`, and `miniapp_server.py` all read the same candidate model instead of maintaining separate regex logic.
+- **Real surfaces now reuse it:** `bot/core.py` low-risk lookup helpers, `scripts/generate_gate_dashboard.py`, and `apps/miniapp_server.py` all read the same candidate model instead of maintaining separate regex logic.
 - **New operator surface:** `miniapp/operator-inbox.html` plus authenticated `/operator/gate-candidates` and `/operator/gate-candidates/<id>/action` endpoints provide browser review with approve, reject, defer, and quick-merge actions. **Operator Console** (`/operator/console`, see [operator-console.md](operator-console.md)) adds submit observations, upload artifacts, gate review, and fork timeline without editing markdown.
 - **Important parser correctness fix:** queue consumers now split on the actual `## Processed` section heading rather than header prose mentioning that string; this hardens dashboard, inbox, merge, heartbeat, and validation paths.
 
@@ -278,7 +278,7 @@ Last updated: 2026-03
 - **New work-politics entrypoint:** `docs/skill-work/work-politics/workspace.md` now defines the operator schema and canonical file map for the territory.
 - **Structured work-politics workflow docs:** `brief-source-registry.md` tracks weekly-brief source readiness, and `content-queue.md` tracks `@usa_first_ky` content state (`idea` → `posted`).
 - **New ops module:** `scripts/work_politics_ops.py` derives campaign status, document freshness, work-politics gate state, blockers, revenue summary, and next actions from existing work-politics docs plus the canonical gate.
-- **New browser surface:** `miniapp/operator-wap.html` plus `/operator/wap-status` and `/operator/wap-brief` in `miniapp_server.py` provide an authenticated work-politics console without creating a second queue.
+- **New browser surface:** `miniapp/operator-wap.html` plus `/operator/wap-status` and `/operator/wap-brief` in `apps/miniapp_server.py` provide an authenticated work-politics console without creating a second queue.
 - **New brief loop:** `scripts/generate_wap_weekly_brief.py` produces a first-pass weekly brief scaffold from the work-politics registry, principal profile, opposition brief, calendar, and content queue.
 - **Canonical workflow docs refreshed:** `README.md`, `metrics.md`, `account-x.md`, and `smm-workspace.md` now point operators toward the workspace, content queue, and brief-generation path rather than prose-only operation.
 
@@ -350,7 +350,7 @@ Last updated: 2026-03
 - Users: `users/grace-mar/self-library.md`; refreshed/generated artifacts (manifest, fork-manifest, llms.txt, intent_snapshot, runtime-bundle, compute-ledger, pipeline-events, session-transcript, recursion-gate.md) — commit only if you intend to snapshot state.
 - Docs: civilization-memory (README, essays, book/, notes/), library-integration.md, work-politics (workspace.md, uare-ai-competitive-notes), and various untracked (federal-ethics-pledge, memo-ai-policy-babel, speech-day-one, vance-first-hours, etc.).
 - Scripts: build_civmem_inrepo_index.py, library_shelf_tables.py, reorder_library_by_shelf.py (untracked).
-- Submodule: repos/civilization_memory (m).
+- Submodule: research/repos/civilization_memory (m).
 
 If the companion/operator asks to commit, include all modified and new files from that session.
 

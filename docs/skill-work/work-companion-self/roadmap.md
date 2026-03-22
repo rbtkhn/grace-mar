@@ -68,7 +68,7 @@
 
 | Deliverable | Description |
 |-------------|-------------|
-| **Approved scope** | Companion defines: e.g., "docs/ only, no agents.md or identity-fork-protocol" or "typos, formatting, non-governance doc updates only." |
+| **Approved scope** | Companion defines: e.g., "docs/ only, no AGENTS.md or identity-fork-protocol" or "typos, formatting, non-governance doc updates only." |
 | **Sync detection** | Grace-Mar detects template changes; proposes sync (diff, paths). Companion approves; Grace-Mar applies to grace-mar (or stages for operator). Never overwrites Record or instance-specific content. |
 | **Autonomous submit** | Within scope: Grace-Mar opens PRs or pushes to fork; companion-self maintainer (or CI) reviews. Grace-Mar does not merge; human gate upstream. |
 | **Escalation** | Changes outside scope → Phase 2/3 flow (proposal, companion approval). |

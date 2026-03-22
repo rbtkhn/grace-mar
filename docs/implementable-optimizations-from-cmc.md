@@ -44,7 +44,7 @@ Strengthen the existing line ("If the signal could support an alternative interp
   - `scope:` or `constraint:` (optional) — when this belief does not apply or would be invalid (e.g. "Only for pre-modern steppe cases" or "If X then this narrows"). Free text or a short list.
 - **Usage:** No requirement to backfill existing entries. New pipeline merges may add `scope` or `constraint` when the candidate implies a boundary (e.g. from analyst "alternative interpretation" note). Prompt and PRP export can ignore the field initially; it is for audit and future use.
 
-**Files:** `docs/self-template.md`, optionally `docs/evidence-template.md`; `agents.md` File Update Protocol table could mention "optional scope/constraint when merging."
+**Files:** `docs/self-template.md`, optionally `docs/evidence-template.md`; `AGENTS.md` File Update Protocol table could mention "optional scope/constraint when merging."
 
 **Scope:** Documentation and optional field; no change to `process_approved_candidates.py` logic unless we later want to copy `constraint` from candidate YAML into SELF.
 

@@ -1,4 +1,4 @@
-# Weekly newsletter digest — generate and commit to newsletter/
+# Weekly newsletter digest — generate and commit to research/newsletter/
 name: Newsletter digest
 
 on:
@@ -19,12 +19,12 @@ jobs:
 
       - name: Generate digest
         run: |
-          python scripts/generate_newsletter.py --user grace-mar --output newsletter/digest-$(date +%Y-%m-%d).md
-          python scripts/generate_newsletter.py --user grace-mar --format html --output newsletter/digest-latest.html
+          python scripts/generate_newsletter.py --user grace-mar --output research/newsletter/digest-$(date +%Y-%m-%d).md
+          python scripts/generate_newsletter.py --user grace-mar --format html --output research/newsletter/digest-latest.html
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add newsletter/
+          git add research/newsletter/
           git diff --staged --quiet || (git commit -m "chore: weekly newsletter digest [automated]" && git push)

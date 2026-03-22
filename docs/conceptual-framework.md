@@ -230,12 +230,12 @@ Mind holds the reins; the Record reflects; the Voice renders. The Record does no
 ## 11. File Map for AI Parsing
 
 ```
-agents.md                  → AI guardrails, rules, what not to do
+AGENTS.md                  → AI guardrails, rules, what not to do
 docs/conceptual-framework.md → This file — core distinctions
 docs/grace-mar-core.md     → Canonical governance (absolute authority)
 docs/architecture.md       → Full system design
 docs/knowledge-boundary-framework.md → Quantifying and describing the knowledge boundary; treatment of information
-grace-mar-bootstrap.md     → Session bootstrap, quick start
+bootstrap/grace-mar-bootstrap.md → Session bootstrap, quick start
 .cursor/rules/grace-mar.mdc → Cursor-specific rule (users/**)
 ```
 

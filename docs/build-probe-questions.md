@@ -4,7 +4,7 @@
 
 **Status:** Design proposal. No implementation yet.
 
-**Governed by:** [SKILLS-TEMPLATE](skills-template.md) (WORK section / BUILD container), [agents.md](../agents.md) (knowledge boundary, stage-only).
+**Governed by:** [SKILLS-TEMPLATE](skills-template.md) (WORK section / BUILD container), [AGENTS.md](../AGENTS.md) (knowledge boundary, stage-only).
 
 ---
 

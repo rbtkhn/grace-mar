@@ -1,6 +1,6 @@
 # Companion-Self Developer Plan — Minimal Docs and Implementation Checklist
 
-**Audience:** Developer (or agent) working in the **companion-self** repo. Use this plan to implement the minimum viable template. Source: [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §3; reference implementation: [grace-mar](https://github.com/rbtkhn/grace-mar).
+**Audience:** Developer (or agent) working in the **companion-self** repo. Use this plan to implement the minimum viable template. Source: [COMPANION-SELF-BOOTSTRAP](../bootstrap/companion-self-bootstrap.md) §3; reference implementation: [grace-mar](https://github.com/rbtkhn/grace-mar).
 
 ---
 
@@ -98,7 +98,7 @@ All minimal docs can be **extracted and generalized** from grace-mar. Do not cop
   - **Done when:** Repo contains only template content.
 
 - [ ] **F2. Bootstrap and grace-mar**
-  - Ensure companion-self-bootstrap.md remains at repo root and §8 (source material) still points to correct grace-mar paths.
+  - Ensure `bootstrap/companion-self-bootstrap.md` stays in sync and §8 (source material) still points to correct grace-mar paths.
   - **Done when:** Next agent or developer can open companion-self, read bootstrap + this plan, and continue.
 
 ---
@@ -107,7 +107,7 @@ All minimal docs can be **extracted and generalized** from grace-mar. Do not cop
 
 ```
 companion-self/
-├── companion-self-bootstrap.md   # Already present
+├── bootstrap/companion-self-bootstrap.md   # Copy lives in grace-mar for reference
 ├── readme.md                     # A1
 ├── docs/
 │   ├── concept.md                # B1 (or conceptual-framework.md)
@@ -139,4 +139,4 @@ Optional: `users/_template/` scaffold and HOW-INSTANCES-CONSUME-UPGRADES complet
 
 ---
 
-**Reference:** [COMPANION-SELF-BOOTSTRAP](../companion-self-bootstrap.md) §3 (What to Create), §7 (First-Run Agent Instructions), §8 (Grace-Mar source material).
+**Reference:** [COMPANION-SELF-BOOTSTRAP](../bootstrap/companion-self-bootstrap.md) §3 (What to Create), §7 (First-Run Agent Instructions), §8 (Grace-Mar source material).

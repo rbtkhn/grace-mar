@@ -2,7 +2,7 @@
 
 **Purpose:** A **time-ordered view** of how the Record evolved: when a belief, preference, skill claim, or library fact **changed**, what **evidence** (ACT-*, READ-*, gate candidate) **triggered** the change, and whether a **contradiction** was **resolved**, **deferred** (e.g. rejected candidate), or **still open**. Aligns with **git history** + **gated pipeline** + [contradiction-resolution.md](contradiction-resolution.md).
 
-**See also:** [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md), [agents.md](../agents.md) (contradiction preservation).
+**See also:** [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md), [AGENTS.md](../AGENTS.md) (contradiction preservation).
 
 ---
 

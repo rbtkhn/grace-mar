@@ -13,7 +13,7 @@
 | **`minds/`** | Three mind profiles ported from upstream (Mercouris, Mearsheimer, Barnes): polyphonic cognition implementation; reference for STATE-evolved assistant brain. See [minds/README.md](minds/README.md). |
 | **`content/`** | Optional — add chunked or expanded material later (gitignored large regen can mirror here if you want). |
 
-**Upstream:** `repos/civilization_memory/` may remain a **sibling project** or submodule for tools, apps, and history. **LIBRARY + encyclopedia regen default to this folder**, not the submodule.
+**Upstream:** `research/repos/civilization_memory/` may remain a **sibling project** or submodule for tools, apps, and history. **LIBRARY + encyclopedia regen default to this folder**, not the submodule.
 
 **Regen fat file (essays):**
 

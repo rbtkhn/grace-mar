@@ -1,8 +1,8 @@
 # Three minds (polyphonic cognition implementation)
 
-**Purpose:** This folder holds the **three mind profiles** ported from upstream CMC (`repos/civilization_memory/docs/templates/`). They are the **specific implementation** of polyphonic cognition in civ-mem: named perspectives, fixed roles, fixed option slots (A/B/C).
+**Purpose:** This folder holds the **three mind profiles** ported from upstream CMC (`research/repos/civilization_memory/docs/templates/`). They are the **specific implementation** of polyphonic cognition in civ-mem: named perspectives, fixed roles, fixed option slots (A/B/C).
 
-**Provenance:** Copied from upstream. Canonical source: `repos/civilization_memory/docs/templates/CIV–MIND–*.md`. Grace-Mar does not run the CMC console or MEMs; these files are **reference** for the STATE-evolved assistant brain and for the concept of polyphonic cognition.
+**Provenance:** Copied from upstream. Canonical source: `research/repos/civilization_memory/docs/templates/CIV–MIND–*.md`. Grace-Mar does not run the CMC console or MEMs; these files are **reference** for the STATE-evolved assistant brain and for the concept of polyphonic cognition.
 
 ---
 
@@ -26,6 +26,6 @@
 
 ## Upstream
 
-- **Repo:** `repos/civilization_memory`
+- **Repo:** `research/repos/civilization_memory`
 - **Templates:** `docs/templates/CIV–MIND–MERCOURIS.md`, `CIV–MIND–MEARSHEIMER.md`, `CIV–MIND–BARNES.md`
 - **Governance:** CIV–MEM–CORE, CIV–MIND–TEMPLATE. MERCOURIS is primary; MEARSHEIMER advisory; BARNES catalyst. Every MEM must satisfy a Barnes dimension (or N/A).

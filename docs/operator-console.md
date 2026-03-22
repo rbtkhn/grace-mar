@@ -19,12 +19,12 @@ A single browser page (served by the Mini App server) with four tabs:
 
 ## How to use
 
-1. **Run the server** (e.g. `python miniapp_server.py` or your deployed Mini App URL).
+1. **Run the server** (e.g. `python apps/miniapp_server.py` or your deployed Mini App URL).
 2. **Open the console:** `/operator/console` (e.g. `https://your-host/operator/console`).
 3. **Enter the operator secret** (same as `OPERATOR_FETCH_SECRET`). You can bookmark with `?token=...` or use Save to store it in the browser.
 4. Use **Observe** to add observations, **Upload** for artifacts, **Gate** to review and approve/reject, **Timeline** to see recent activity.
 
-Gate actions and **Merge approved** go through the same APIs as the CLI. Merges write `self.md`, `self-evidence.md`, `recursion-gate.md`, prompt, PRP export, etc. **Hosting:** merge-from-browser only works if `miniapp_server.py` runs with a **writable git checkout** of the repo (many PaaS disks are ephemeral or read-only — use a persistent volume or run merge from a machine with the repo). Approve/reject alone only edit `recursion-gate.md`.
+Gate actions and **Merge approved** go through the same APIs as the CLI. Merges write `self.md`, `self-evidence.md`, `recursion-gate.md`, prompt, PRP export, etc. **Hosting:** merge-from-browser only works if `apps/miniapp_server.py` runs with a **writable git checkout** of the repo (many PaaS disks are ephemeral or read-only — use a persistent volume or run merge from a machine with the repo). Approve/reject alone only edit `recursion-gate.md`.
 
 ---
 

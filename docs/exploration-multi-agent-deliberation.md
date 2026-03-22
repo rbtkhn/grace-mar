@@ -17,7 +17,7 @@
 | **Determinism** | Very high (gates, validation) | Medium (emergent) | Final integration remains gated; AutoGen used only for pre-proposal ideation |
 | **Runtime** | OpenClaw, Telegram, export manifests | Async, tool-calling, code exec | Export manifest + PRP bootstrap agents that read Record only |
 
-**Invariant:** Any future agentic or orchestration layer must keep merge authority human-only (architecture.md; agents.md §2). This exploration respects that: deliberation may suggest; only the companion may approve and merge.
+**Invariant:** Any future agentic or orchestration layer must keep merge authority human-only (architecture.md; AGENTS.md §2). This exploration respects that: deliberation may suggest; only the companion may approve and merge.
 
 ---
 
@@ -25,8 +25,8 @@
 
 All exploration paths must preserve:
 
-- **Sovereign Merge Rule (agents.md §2):** Agent may stage; it may not merge. Merge only via `process_approved_candidates.py --apply` after companion approval.
-- **Knowledge boundary (agents.md §1):** No LLM knowledge leakage; only documented profile content; no merge of undocumented facts.
+- **Sovereign Merge Rule (AGENTS.md §2):** Agent may stage; it may not merge. Merge only via `process_approved_candidates.py --apply` after companion approval.
+- **Knowledge boundary (AGENTS.md §1):** No LLM knowledge leakage; only documented profile content; no merge of undocumented facts.
 - **CONTRADICTION-ENGINE-SPEC §2:** `recursion-gate.md` remains the canonical queue; no second source of truth; contradiction flow = staged candidate + derived analysis + operator resolution + deterministic merge.
 - **No write to Record from exploration:** No AutoGen (or any deliberation) code path may write to `self.md`, `self-evidence.md`, `bot/prompt.py`, or call the merge script. Output is **draft**; staging into `recursion-gate.md` is a separate, human-reviewed step.
 
@@ -37,9 +37,9 @@ All exploration paths must preserve:
 ### Path 1: Internal deliberation loop (prototype)
 
 - **Idea:** Small GroupChat-style loop (e.g. Guardian, Validator, Explorer, Writer) with read-only ingest of `self.md` + recent `recursion-gate.md` candidates.
-- **Output:** Staged markdown for user review (no auto-apply). Draft written to a non-canonical file (e.g. `exploration/autogen-deliberation/output/deliberation-draft-*.md`).
+- **Output:** Staged markdown for user review (no auto-apply). Draft written to a non-canonical file (e.g. `research/exploration/autogen-deliberation/output/deliberation-draft-*.md`).
 - **Goal:** Reasoning depth before the gate without losing control.
-- **Implementation:** Minimal prototype under `exploration/autogen-deliberation/`; optional dependency on AutoGen; no merge path in code.
+- **Implementation:** Minimal prototype under `research/exploration/autogen-deliberation/`; optional dependency on AutoGen; no merge path in code.
 
 ### Path 2: Runtime consumption experiment
 
@@ -67,5 +67,5 @@ All exploration paths must preserve:
 ## 5. Where this lives
 
 - **Design:** This doc (`docs/exploration-multi-agent-deliberation.md`).
-- **Prototype (Path 1):** `exploration/autogen-deliberation/` — README + script; output to `exploration/autogen-deliberation/output/`; no writes to Record or gate.
+- **Prototype (Path 1):** `research/exploration/autogen-deliberation/` — README + script; output to `research/exploration/autogen-deliberation/output/`; no writes to Record or gate.
 - **Assessment and rationale:** [feedback-autogen-exploration-2026-03-assessment.md](feedback-autogen-exploration-2026-03-assessment.md).

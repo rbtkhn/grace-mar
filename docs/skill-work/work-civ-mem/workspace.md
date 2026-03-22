@@ -9,7 +9,7 @@
 
 1. Read [`README.md`](README.md) for territory scope and boundary.
 2. Read [`roadmap.md`](roadmap.md) for the current phase.
-3. Check the target repo overview: [`repos/civilization_memory/README.md`](../../../repos/civilization_memory/README.md).
+3. Check the target repo overview: [`research/repos/civilization_memory/README.md`](../../../research/repos/civilization_memory/README.md).
 
 ---
 
@@ -17,11 +17,11 @@
 
 | Surface | Why it matters |
 |---------|----------------|
-| `repos/civilization_memory/README.md` | High-level structure, operating modes, validation commands |
-| `repos/civilization_memory/docs/` | Governance, architecture, guides, templates, **taxonomy.md**, **essays/** |
-| `repos/civilization_memory/content/` | Civilizational memory corpus, scholar ledgers, archive |
-| `repos/civilization_memory/tools/` | CMC console and related application surfaces |
-| `repos/civilization_memory/scripts/` | Validation, indexing, and maintenance scripts |
+| `research/repos/civilization_memory/README.md` | High-level structure, operating modes, validation commands |
+| `research/repos/civilization_memory/docs/` | Governance, architecture, guides, templates, **taxonomy.md**, **essays/** |
+| `research/repos/civilization_memory/content/` | Civilizational memory corpus, scholar ledgers, archive |
+| `research/repos/civilization_memory/tools/` | CMC console and related application surfaces |
+| `research/repos/civilization_memory/scripts/` | Validation, indexing, and maintenance scripts |
 
 ---
 

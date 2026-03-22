@@ -72,7 +72,7 @@ Other useful commands:
 
 If someone else runs Grace-Mar for you, they use the Operator Console (or command line) to **merge** approved items into the record. You still approve in Telegram; they tap **Merge approved (companion)** when ready.
 
-If you run everything yourself, see [operator-console.md](operator-console.md), [agents.md](../agents.md), and [PIPELINE-MAP](pipeline-map.md).
+If you run everything yourself, see [operator-console.md](operator-console.md), [AGENTS.md](../AGENTS.md), and [PIPELINE-MAP](pipeline-map.md).
 
 ---
 

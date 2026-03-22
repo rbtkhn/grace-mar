@@ -8,7 +8,7 @@ Deploy to Railway, Render, or run locally with ngrok for Telegram testing.
 
 Usage:
     pip install flask python-dotenv openai python-telegram-bot
-    OPENAI_API_KEY=... python miniapp_server.py
+    OPENAI_API_KEY=... python apps/miniapp_server.py
 
 Set PORT (default 5000) for hosting. Enable CORS if Mini App is on a different origin.
 Real-time exchanges are appended to users/<user>/session-transcript.md (same as Telegram).
@@ -33,7 +33,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from flask import Flask, jsonify, redirect, request, send_from_directory
 
-REPO_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
 load_dotenv(REPO_ROOT / ".env")
@@ -67,7 +67,11 @@ from scripts.recursion_gate_territory import TERRITORY_WAP, normalize_territory_
 from scripts.work_politics_ops import get_wap_snapshot
 from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
-app = Flask(__name__, static_folder="miniapp", static_url_path="")
+app = Flask(
+    __name__,
+    static_folder=str(REPO_ROOT / "miniapp"),
+    static_url_path="",
+)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 USER_DIR = REPO_ROOT / "users" / USER_ID

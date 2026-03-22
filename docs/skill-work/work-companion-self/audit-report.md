@@ -18,7 +18,7 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skills-template.md
   - docs/evidence-template.md
   - docs/memory-template.md
-  - agents.md
+  - AGENTS.md
   - docs/skill-work/README.md
   - docs/skill-work/sample-lesson-prompt-grace-mar.txt
   - docs/skill-work/work-alpha-school/README.md

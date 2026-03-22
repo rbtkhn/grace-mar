@@ -2,7 +2,7 @@
 
 **Scope:** Conversation conducted in Grok with the full PRP pasted (grace-mar.com/llm flow). Transcript provided by user. This audit checks knowledge boundary, voice/Lexile, conceptual accuracy, and checkpoint compliance against the Record and Grace-Mar docs.
 
-**Reference:** conceptual-framework.md, agents.md, grace-mar-llm.txt, users/grace-mar/self.md, self-evidence.md, recursion-gate.md.
+**Reference:** conceptual-framework.md, AGENTS.md, grace-mar-llm.txt, users/grace-mar/self.md, self-evidence.md, recursion-gate.md.
 
 ---
 

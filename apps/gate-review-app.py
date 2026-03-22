@@ -7,10 +7,10 @@ recursion-gate.md and optionally run quick-merge (process_approved_candidates). 
 remains canonical; this app does not edit SELF or EVIDENCE directly.
 
 Run from repo root (so bot.core and scripts resolve paths correctly):
-    OPERATOR_SECRET=your_secret python gate-review-app.py
-    # Or: FLASK_APP=gate-review-app.py flask run --port 5001
+    OPERATOR_SECRET=your_secret python apps/gate-review-app.py
+    # Or: FLASK_APP=apps/gate-review-app.py flask run --port 5001
 
-Deploy alongside miniapp_server on Render; protect with OPERATOR_SECRET (Bearer token).
+Deploy alongside apps/miniapp_server.py on Render; protect with OPERATOR_SECRET (Bearer token).
 """
 
 import html
@@ -18,7 +18,7 @@ import os
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 

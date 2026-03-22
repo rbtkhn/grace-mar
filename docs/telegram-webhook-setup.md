@@ -56,7 +56,7 @@ The miniapp will register the webhook on startup. The bot will work immediately.
 
 ## Local Development
 
-- **With webhook locally:** Use ngrok to expose your machine, set `WEBHOOK_BASE_URL=https://your-ngrok-url.ngrok.io`, run `python miniapp_server.py`
+- **With webhook locally:** Use ngrok to expose your machine, set `WEBHOOK_BASE_URL=https://your-ngrok-url.ngrok.io`, run `python apps/miniapp_server.py`
 - **With polling:** Run `python -m bot.bot` (or `python bot/bot.py`) — but **do not** run the bot on Render at the same time, or you'll get a conflict
 
 ---

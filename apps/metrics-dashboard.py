@@ -2,15 +2,15 @@
 """
 Interactive metrics dashboard — pipeline health, Record completeness, optional growth/density.
 
-Run from repo root: streamlit run metrics-dashboard.py
-Deploy on Render as a web service (streamlit run --server.port 8501 metrics-dashboard.py).
+Run from repo root: streamlit run apps/metrics-dashboard.py
+Deploy on Render as a web service (streamlit run --server.port 8501 apps/metrics-dashboard.py).
 """
 
 import os
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 

@@ -17,7 +17,7 @@ COPY bot/ bot/
 COPY scripts/ scripts/
 COPY miniapp/ miniapp/
 COPY users/ users/
-COPY gate-review-app.py miniapp_server.py .
+COPY apps/ apps/
 
 EXPOSE 5000 5001
-CMD ["python", "miniapp_server.py"]
+CMD ["python", "apps/miniapp_server.py"]

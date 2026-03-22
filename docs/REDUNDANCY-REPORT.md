@@ -45,7 +45,7 @@ PROFILE_DIR = REPO_ROOT / "users" / user_id   # or REPO_ROOT / "users" / "grace-
 os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 ```
 
-(or `default="grace-mar"` in argparse) appears in **40+** places: bot (core, retriever, bot.py), miniapp_server, and most scripts that take `-u` / `--user`.
+(or `default="grace-mar"` in argparse) appears in **40+** places: bot (core, retriever, bot.py), `apps/miniapp_server.py`, and most scripts that take `-u` / `--user`.
 
 **Recommendation:** Centralize in one place, e.g. `scripts/_common.py` or `bot/conf.py`:  
 `DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"`.  
@@ -117,7 +117,7 @@ or `sys.path.insert(0, str(REPO_ROOT))`.
 
 **Where:** Some conceptual overlap between:
 
-- `agents.md` (guardrails, pipeline, tricameral)
+- `AGENTS.md` (guardrails, pipeline, tricameral)
 - `docs/grace-mar-core.md` (governance)
 - `docs/conceptual-framework.md` (Record, Voice, terminology)
 - `docs/architecture.md` (system design)

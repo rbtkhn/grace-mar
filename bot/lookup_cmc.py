@@ -8,8 +8,9 @@ Routing: Only attempt CMC when the question matches CMC scope (LIB-0064). Otherw
 skip straight to full LLM lookup — avoids wasted subprocess calls and wrong-source answers.
 
 Sources (in order):
-  1. External CMC repo at CIVILIZATION_MEMORY_PATH or ../civilization_memory (sibling)
-     Index: cd CMC && python3 tools/cmc-index-search.py build
+  1. External CMC repo: CIVILIZATION_MEMORY_PATH, or in-repo `research/repos/civilization_memory/`,
+     or sibling `../civilization_memory`
+     Index: cd <CMC> && python3 tools/cmc-index-search.py build
   2. In-repo docs/civilization-memory (when external repo absent)
      Index: python scripts/build_civmem_inrepo_index.py build
 
@@ -26,7 +27,11 @@ from pathlib import Path
 logger = logging.getLogger(__name__)
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_CMC_PATH = REPO_ROOT.parent / "civilization_memory"
+_CMC_CANDIDATES = (
+    REPO_ROOT / "research" / "repos" / "civilization_memory",
+    REPO_ROOT / "repos" / "civilization_memory",  # legacy layout
+    REPO_ROOT.parent / "civilization_memory",
+)
 INREPO_CIVMEM_DIR = REPO_ROOT / "docs" / "civilization-memory"
 INREPO_INDEX_PATH = INREPO_CIVMEM_DIR / ".cache" / "inrepo_index.json"
 
@@ -38,8 +43,11 @@ def _get_cmc_path() -> Path | None:
         p = Path(path).resolve()
         if p.is_dir():
             return p
-    p = DEFAULT_CMC_PATH.resolve()
-    return p if p.is_dir() else None
+    for candidate in _CMC_CANDIDATES:
+        p = candidate.resolve()
+        if p.is_dir():
+            return p
+    return None
 
 
 # Negative triggers: if question matches, never route to CMC.

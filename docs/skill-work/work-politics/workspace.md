@@ -54,7 +54,7 @@ Use this file when you want one place to understand:
 | `uare-ai-competitive-notes.md` | Uare.ai (Eternos): blog excerpts, LoCascio/Mayfield/Boldstart quotes; pitch comparison and differentiation |
 | `lessons-solo-founder-ai-video.md` | Lessons from solo-founder/AI-talent video: taste vs conviction, speed of control, coordination proxy, blocked by overhead; mapped to assistant brain |
 | `lessons-perplexity-computer-video.md` | Lessons from Perplexity Computer video: skills, sub-agents, Model Council vs us, memory, integrations, visual output; actionable takeaways |
-| `lessons-deepseek-insider-self-improving-agents.md` | Lessons from DeepSeek Insider (John Wang): sovereign layer vs self-improving agents, memory/bounded session, input-grounded A/B/C, human learning; positioning |
+| `lessons-deepseek-insider-self-improving-AGENTS.md` | Lessons from DeepSeek Insider (John Wang): sovereign layer vs self-improving agents, memory/bounded session, input-grounded A/B/C, human learning; positioning |
 | `lessons-openclaw-skills-video.md` | Lessons from OpenClaw skills video: Larry (constraints from failure), review vs mad dog, Anti-AI slop, Mission Control complementary, security; protocol output quality |
 | `actionable-features-and-insights.md` | Actionable features (instinct-as-input, reversibility, contradiction badge, post-decision), copy snippets, process items; priority order |
 | `civ-mem-test-run-*.md` | Dated test runs (DRAFT until signed) |

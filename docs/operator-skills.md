@@ -6,7 +6,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 ## Contextual stewardship
 
-- **Agents have no cross-thread institutional memory.** Authority for the Record stays **on-disk files** + **gated pipeline** (`agents.md`, RECURSION-GATE, companion-approved merges) — not chat summaries or model recall.
+- **Agents have no cross-thread institutional memory.** Authority for the Record stays **on-disk files** + **gated pipeline** (`AGENTS.md`, RECURSION-GATE, companion-approved merges) — not chat summaries or model recall.
 - **Skills are weather reports, not policy.** They surface state; they do not replace reading `recursion-gate.md` / `self-evidence.md` when decisions are on the line.
 - **Encoded judgment** = gate workflow + receipts + CI/tests you run before ship — not prompt length alone.
 

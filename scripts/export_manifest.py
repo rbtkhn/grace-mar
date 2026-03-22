@@ -164,7 +164,7 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
             "SKILLS": {"type": "object", "description": "Record-bound capability containers (THINK, WRITE)"},
             "WORK": {"type": "object", "description": "Separate work / execution context (territories, plans, delivery state)"},
             "EVIDENCE": {"type": "object", "description": "Activity log, writing, creation; immutable once captured"},
-            "RECURSION-GATE": {"type": "object", "description": "Staging area; format documented in agents.md"},
+            "RECURSION-GATE": {"type": "object", "description": "Staging area; format documented in AGENTS.md"},
         },
         "exports": {
             "user.md": "python scripts/export_user_identity.py -u " + user_id,

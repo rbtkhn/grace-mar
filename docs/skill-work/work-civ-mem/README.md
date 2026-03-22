@@ -105,6 +105,6 @@ python3 tools/cmc-index-search.py query "your terms"
 ## Cross-references
 
 - [`docs/skill-work/README.md`](../README.md) — parent work territory index
-- [`repos/civilization_memory/README.md`](../../../repos/civilization_memory/README.md) — managed repository overview
+- [`research/repos/civilization_memory/README.md`](../../../research/repos/civilization_memory/README.md) — managed repository overview
 - [`docs/cmc-routing.md`](../../cmc-routing.md) — current Grace-Mar routing surface that already references CMC
 - [`docs/development-handoff.md`](../../development-handoff.md) — active territory and session continuity

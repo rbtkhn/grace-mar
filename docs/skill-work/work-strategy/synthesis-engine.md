@@ -21,4 +21,4 @@ After the three analytical lenses ([work-politics/analytical-lenses](../work-pol
 
 ## Prototype
 
-See [prototypes/mind-synthesis.py](../../../prototypes/mind-synthesis.py) (repo root). In production, may call LLM wrapper; output remains draft until operator approves.
+See [research/prototypes/mind-synthesis.py](../../../research/prototypes/mind-synthesis.py). In production, may call LLM wrapper; output remains draft until operator approves.

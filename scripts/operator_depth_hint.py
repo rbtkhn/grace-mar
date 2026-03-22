@@ -41,7 +41,7 @@ TIER_THRESHOLDS: tuple[tuple[int, int, int], ...] = (
 
 HINT_BODY = (
     "High pipeline velocity — consider work-dev operator depth: "
-    "`docs/skill-work/work-dev/workspace.md`, `grace-mar-bootstrap.md` (merge ritual + receipts), "
+    "`docs/skill-work/work-dev/workspace.md`, `bootstrap/grace-mar-bootstrap.md` (merge ritual + receipts), "
     "`scripts/operator_merge_once.sh`, `docs/skill-work/work-dev/README.md` § Operator path."
 )
 

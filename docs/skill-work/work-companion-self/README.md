@@ -79,4 +79,4 @@ Implied meaning:
 - [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md) — Template → instance flow
 - [AUDIT-COMPANION-SELF](../../AUDIT-COMPANION-SELF.md) — Concept alignment
 - [audit-grace-mar-vs-companion-self-template](../../audit-grace-mar-vs-companion-self-template.md) — Instance vs template
-- [COMPANION-SELF-BOOTSTRAP](../../../companion-self-bootstrap.md) — Workspace boundary, sync contract
+- [COMPANION-SELF-BOOTSTRAP](../../../bootstrap/companion-self-bootstrap.md) — Workspace boundary, sync contract

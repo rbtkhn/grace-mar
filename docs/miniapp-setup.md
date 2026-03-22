@@ -38,13 +38,13 @@ The Q&A app consists of:
 
 - Static UI: `miniapp/index.html`
 - API: `POST /api/ask` with `{ "message": "..." }` → `{ "response": "..." }`
-- Server: `miniapp_server.py` serves both
+- Server: `apps/miniapp_server.py` serves both
 
 ### Run locally
 
 ```bash
 pip install -r requirements.txt
-OPENAI_API_KEY=sk-... python miniapp_server.py
+OPENAI_API_KEY=sk-... python apps/miniapp_server.py
 ```
 
 Open http://localhost:5000 for the Q&A Mini App. For the **family hub**, set `FAMILY_APP_TOKEN` in `.env`, restart, then open http://localhost:5000/app and paste the token (or use `/app?t=<token>` once).
@@ -67,7 +67,7 @@ ngrok http 5000
 **Render**
 
 - **Option A — Blueprint:** Add `render.yaml` to your repo. In Render Dashboard → New → Blueprint, connect the repo. Both the Mini App (web) and the bot (worker) will be created. Set env vars in each service’s Environment tab.
-- **Option B — Manual:** New Web Service, connect repo. Build: `pip install -r requirements.txt`. Start: `python miniapp_server.py`. Set `OPENAI_API_KEY`, and optionally `GITHUB_TOKEN`, `GRACE_MAR_REPO`.
+- **Option B — Manual:** New Web Service, connect repo. Build: `pip install -r requirements.txt`. Start: `python apps/miniapp_server.py`. Set `OPENAI_API_KEY`, and optionally `GITHUB_TOKEN`, `GRACE_MAR_REPO`.
 
 ### Archive (session transcript)
 
@@ -79,7 +79,7 @@ On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Min
 
 ### Family hub (`/app`)
 
-**Env:** Set **`FAMILY_APP_TOKEN`** to a long random string (same host as `miniapp_server.py`). Optional bookmark: `https://<host>/app?t=<FAMILY_APP_TOKEN>` — the app stores the token in the browser after the first load.
+**Env:** Set **`FAMILY_APP_TOKEN`** to a long random string (same host as `apps/miniapp_server.py`). Optional bookmark: `https://<host>/app?t=<FAMILY_APP_TOKEN>` — the app stores the token in the browser after the first load.
 
 **APIs (require header `X-Family-Token: <FAMILY_APP_TOKEN>`):**
 

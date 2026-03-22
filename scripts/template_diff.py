@@ -32,7 +32,7 @@ TEMPLATE_FILES_GRACE_MAR = [
     "docs/skills-template.md",
     "docs/evidence-template.md",
     "docs/memory-template.md",
-    "agents.md",
+    "AGENTS.md",
 ]
 
 

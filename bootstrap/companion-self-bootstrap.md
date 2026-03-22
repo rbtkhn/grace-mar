@@ -104,7 +104,7 @@ If you need to extract or generalize content for companion-self, the canonical s
 
 - Concept: `docs/conceptual-framework.md`, `docs/architecture.md`
 - Protocol: `docs/identity-fork-protocol.md`
-- Governance: `agents.md` (template-level rules: pipeline, knowledge boundary, operating modes)
+- Governance: `AGENTS.md` (template-level rules: pipeline, knowledge boundary, operating modes)
 - Seed / lifecycle: `docs/architecture.md` (Fork Lifecycle, Seeding), `docs/operator-brief.md`
 - Schema templates: `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`
 - Modularity (module set, skill-write as voice shaper): `docs/skills-modularity.md`

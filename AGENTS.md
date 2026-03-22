@@ -1,4 +1,4 @@
-# agents.md — AI Coding Assistant Guardrails
+# AGENTS.md — AI Coding Assistant Guardrails
 
 This file defines rules for any AI coding assistant working on this repository.
 
@@ -210,9 +210,9 @@ A single artifact can populate all three dimensions.
 
 ```
 grace-mar/
-├── agents.md                    # This file — AI assistant guardrails
-├── readme.md                    # Project overview
-├── grace-mar-bootstrap.md       # Session bootstrap for Cursor
+├── AGENTS.md                    # This file — AI assistant guardrails
+├── README.md                    # Project overview
+├── bootstrap/grace-mar-bootstrap.md  # Session bootstrap for Cursor
 ├── .cursor/rules/grace-mar.mdc  # Cursor-specific governance rule
 ├── docs/
 │   ├── grace-mar-core.md       # Canonical governance (v2.0)

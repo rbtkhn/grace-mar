@@ -52,7 +52,7 @@
 | **CLI** | `openclaw_hook.py`, `openclaw_stage.py`, export commands. | `generate_wap_weekly_brief.py`, `process_approved_candidates.py --territory wap`, receipt flow. |
 | **Harness warmup** | `harness_warmup.py`; `--territory wap` = work-politics pending only; `companion` = Record pending only. | Same; work-politics uses warmup for “pending work-politics gate items.” |
 | **Lanes** | No `docs/lanes/work-dev.md`. | **docs/lanes/work-politics.md** — north star, done looks like, weekly minimum. |
-| **Bootstrap** | Default session focus in `grace-mar-bootstrap.md` is work-dev (README + openclaw-integration). | work-politics is “other” focus; operator finds work-politics via lanes and workspace. |
+| **Bootstrap** | Default session focus in `bootstrap/grace-mar-bootstrap.md` is work-dev (README + openclaw-integration). | work-politics is “other” focus; operator finds work-politics via lanes and workspace. |
 
 **Verdict:** work-dev is the default bootstrap focus; work-politics has a dedicated lane and weekly rhythm. No conflict; optional improvement: add `docs/lanes/work-dev.md` for parity if you want a “north star” for dev territory.
 

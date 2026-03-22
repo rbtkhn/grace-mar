@@ -329,7 +329,7 @@ We have proposed a protocol for companion-owned, evidence-linked identity: a Rec
 | [GRACE-MAR-CORE](grace-mar-core.md) | Canonical governance |
 | [ARCHITECTURE](architecture.md) | Technical design |
 | [WHITE-PAPER](white-paper.md) | Full narrative |
-| [AGENTS](agents.md) | Implementation guardrails |
+| [AGENTS](AGENTS.md) | Implementation guardrails |
 
 ---
 
