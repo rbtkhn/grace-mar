@@ -41,7 +41,7 @@ Canonical labels for the separate work / execution layer:
 | Standard label | Scope | Location | Description |
 |----------------|-------|----------|-------------|
 | **work-territory** | Reusable execution domain | `docs/skill-work/work-*/` | A self-contained work domain such as `work-dev`, `work-politics`, or `work-human-teacher` |
-| **work-context** | Instance-specific work state | `users/[id]/work-*.md` | Live instance work file such as `work-alpha-school.md`; separate from SKILLS |
+| **work-context** | Instance-specific work state | `users/[id]/work-*.md` | Live instance work files such as `work-alpha-school.md`, `work-jiang.md`; separate from SKILLS |
 
 **Historical compatibility:** `BUILD` remains an internal legacy term attached to older docs, evidence, and analyses. `CREATE-*` and `ACT-*` remain valid evidence IDs and are not renamed by this taxonomy change.
 

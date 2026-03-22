@@ -1,5 +1,5 @@
 {
-  "_comment": "daily-brief-config: feeds may set locale (ISO-style: en, fr, de, es, ar). Optional tier 1–3 + ingest_caps limit items per feed (newest first) before W+S ranking. Per-feed max_items overrides tier. Scoring = global wap_keyword_phrases + wap_keyword_phrases_by_locale[locale]; same for strategy. No translation API — locale lists are for substring match on native headlines. Respect site ToS.",
+  "_comment": "daily-brief-config: feeds may set locale (ISO-style: en, fr, de, es, ar). Optional tier 1–3 + ingest_caps limit items per feed (newest first) before W+S+G ranking. W/S = campaign + strategy keyword lists; G = geo_military (defaults in generate_wap_daily_brief.py + optional geo_military_keyword_phrases_extra). Per-feed max_items overrides tier. No translation API — locale lists are substring match on native headlines. Respect site ToS.",
   "ingest_caps": {
     "default_max_items_per_feed": 12,
     "max_items_by_tier": {
@@ -9,6 +9,24 @@
     }
   },
   "feeds": [
+    {
+      "name": "Reuters — World",
+      "url": "https://feeds.reuters.com/reuters/worldNews",
+      "locale": "en",
+      "tier": 1
+    },
+    {
+      "name": "BBC News — World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "locale": "en",
+      "tier": 1
+    },
+    {
+      "name": "Defense One — All",
+      "url": "https://www.defenseone.com/rss/all/",
+      "locale": "en",
+      "tier": 1
+    },
     {
       "name": "NPR — national news",
       "url": "https://feeds.npr.org/1001/rss.xml",
@@ -120,6 +138,20 @@
     "putin",
     "venezuela",
     "israel"
+  ],
+  "geo_military_keyword_phrases_extra": [
+    "idf",
+    "hezbollah",
+    "houthis",
+    "houthi",
+    "red sea",
+    "taiwan strait",
+    "south china sea",
+    "indo-pacific",
+    "special operation",
+    "counterterrorism",
+    "war zone",
+    "armed forces"
   ],
   "strategy_keyword_phrases": [
     "openai",

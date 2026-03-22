@@ -58,7 +58,9 @@ This is WORK-only documentation; it does not merge into the Record.
 ## Related files
 
 - `docs/operator-skills.md`
-- `docs/skill-work/work-politics/weekly-brief-template.md`
+- `docs/skill-work/work-politics/weekly-brief-template.md` (includes §1b geo/military + §1c civ-mem depth)
+- `docs/skill-work/work-strategy/daily-brief-config.json` (feeds + `geo_military_keyword_phrases_extra`)
 - `docs/skill-work/work-politics/brief-source-registry.md`
 - `docs/skill-work/work-politics/content-queue.md`
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md`
+- `docs/skill-work/work-politics/civ-mem-draft-protocol.md`

@@ -1,0 +1,18 @@
+{
+  "channel_url": "https://www.youtube.com/@PredictiveHistory/videos",
+  "generated_at_utc": "2026-03-22T15:54:54Z",
+  "video_count": 1,
+  "transcripts_attempted": 1,
+  "videos": [
+    {
+      "video_id": "nOQqGy4boBY",
+      "title": "Game Theory #14:  The Law of Proximity",
+      "upload_date": "",
+      "url": "https://www.youtube.com/watch?v=nOQqGy4boBY",
+      "transcript_file": "transcripts/nOQqGy4boBY_Game-Theory-14-The-Law-of-Proximity.txt",
+      "status": "ok",
+      "language": "en",
+      "error": null
+    }
+  ]
+}

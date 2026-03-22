@@ -237,6 +237,7 @@ grace-mar/
         ├── skill-think.md      # THINK, MATH, CHINESE containers
         ├── skill-write.md      # WRITE container
         ├── work-alpha-school.md # WORK context (separate from SKILLS)
+        ├── work-jiang.md        # WORK — Jiang project
         ├── self-evidence.md         # Activity log
         ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
         ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)

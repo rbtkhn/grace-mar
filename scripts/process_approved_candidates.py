@@ -29,8 +29,15 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
+_SRC = REPO_ROOT / "src"
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
+if str(_SRC) not in sys.path:
+    sys.path.insert(0, str(_SRC))
+
+from grace_mar.merge.evidence_log import append_act_entry, upsert_reading_list_entry
+from grace_mar.merge.prompt_sync import insert_prompt_addition, rebuild_observation_sections_from_self
+from grace_mar.merge.self_ix import insert_ix_a_entry, insert_ix_b_entry, insert_ix_c_entry
 from emit_pipeline_event import append_pipeline_event
 from harness_events import append_harness_event
 from pipeline_correlation import find_staged_event_id_for_candidate
@@ -89,43 +96,6 @@ def _prp_output_path() -> Path:
     if USER_ID == "grace-mar":
         return PRP_PATH
     return PROFILE_DIR / f"{USER_ID}-llm.txt"
-
-
-PROMPT_SECTION_HEADERS = {
-    "YOUR KNOWLEDGE": "## YOUR KNOWLEDGE (from observations)",
-    "YOUR CURIOSITY": "## YOUR CURIOSITY (what catches your attention)",
-    "YOUR PERSONALITY": "## YOUR PERSONALITY (observed)",
-}
-
-
-def _insert_prompt_addition(prompt_content: str, prompt_section: str, addition: str) -> str:
-    """
-    Insert prompt addition under an explicit section header.
-    Falls back to previous anchors only if section header is missing.
-    """
-    line = f"- {addition.strip()}"
-    if not addition.strip() or line in prompt_content:
-        return prompt_content
-
-    section_key = (prompt_section or "").strip().upper()
-    header = PROMPT_SECTION_HEADERS.get(section_key)
-    if header and header in prompt_content:
-        start = prompt_content.find(header)
-        next_header = prompt_content.find("\n## ", start + len(header))
-        if next_header == -1:
-            next_header = len(prompt_content)
-        section_block = prompt_content[start:next_header]
-        if line in section_block:
-            return prompt_content
-        insertion = f"{header}\n\n{line}\n"
-        return prompt_content.replace(header + "\n", insertion, 1)
-
-    # Legacy fallback anchors for compatibility with historical prompt layouts.
-    if section_key == "YOUR KNOWLEDGE":
-        return prompt_content.replace("## WHAT YOU LOVE", line + "\n\n## WHAT YOU LOVE", 1)
-    if section_key in ("YOUR CURIOSITY", "YOUR PERSONALITY"):
-        return prompt_content.replace("## HOW YOU HANDLE THINGS", line + "\n\n## HOW YOU HANDLE THINGS", 1)
-    return prompt_content
 
 
 def _utc_now_iso() -> str:
@@ -509,6 +479,8 @@ def get_approved_in_candidates() -> list[dict]:
             "suggested_entry": _yaml_get(block, "suggested_entry") or "",
             "prompt_section": _yaml_get(block, "prompt_section") or "",
             "prompt_addition": _yaml_get(block, "prompt_addition") or "none",
+            "prompt_merge_mode": (_yaml_get(block, "prompt_merge_mode") or "").strip().lower(),
+            "evidence_record_type": (_yaml_get(block, "evidence_record_type") or "act").strip().lower(),
             "channel_key": _yaml_get(block, "channel_key") or "telegram",
             "intake_evidence_id": intake,
         })
@@ -602,29 +574,43 @@ def merge_candidate_in_memory(
 ) -> tuple[str, str, str, str, str]:
     """Merge one candidate into in-memory content; returns contents + act_id + ix_entry_id (LEARN/CUR/PER)."""
 
+    prompt_merge_mode = (c.get("prompt_merge_mode") or "").strip().lower()
+    evidence_record_type = (c.get("evidence_record_type") or "act").strip().lower()
+
     # 1. Create ACT entry
     act_id = _next_id(evidence_content, "ACT")
     source_exchange = _yaml_get(c["block"], "source_exchange")
     source = "pipeline merge (Telegram approve)" if not source_exchange else "pipeline merge"
+    if evidence_record_type == "read":
+        activity_type = "reading — curated"
+    elif evidence_record_type == "write":
+        activity_type = "writing — curated"
+    else:
+        activity_type = "knowledge — curated observation"
+
     act_entry = f'''
   - id: {act_id}
     date: {today}
     modality: text (pipeline merge)
-    activity_type: knowledge — curated observation
+    activity_type: {activity_type}
     mind_category: {c["mind_category"]}
     source: {source}
     summary: "{c["summary"][:200].replace(chr(34), "'")}"
     curated_by: user
     evidence_tier: {evidence_tier}
 '''
-    # Insert before "## VI. ATTESTATION LOG" or at end of ACT entries
-    att_m = re.search(r"\n## VI\. ATTESTATION LOG", evidence_content)
-    if att_m:
-        evidence_content = (
-            evidence_content[: att_m.start()] + act_entry + evidence_content[att_m.start() :]
+    evidence_content = append_act_entry(evidence_content, act_entry)
+
+    if evidence_record_type == "read":
+        read_id = _next_id(evidence_content, "READ")
+        evidence_content = upsert_reading_list_entry(
+            evidence_content,
+            read_id=read_id,
+            title=(c.get("suggested_entry") or c.get("summary") or "")[:500],
+            evidence_tier=evidence_tier,
+            status="completed",
         )
-    else:
-        evidence_content += act_entry
+
     # 2. Add to SELF
     cat = c["mind_category"].lower()
     safe_entry = (c["suggested_entry"] or "")[:200].replace('"', "'")
@@ -643,10 +629,7 @@ def merge_candidate_in_memory(
 {intake_line}    provenance: human_approved
 
 '''
-        # Find IX-A yaml block, insert before closing ```
-        ix_a = re.search(r"(### IX-A\. KNOWLEDGE.*?```yaml\n.*?)(\n```)", self_content, re.DOTALL)
-        if ix_a:
-            self_content = self_content[: ix_a.end(1)] + new_entry + self_content[ix_a.start(2) :]
+        self_content = insert_ix_a_entry(self_content, new_entry)
     elif "curiosity" in cat or "IX-B" in c["profile_target"]:
         entry_id = _next_id(self_content, "CUR")
         new_entry = f'''  - id: {entry_id}
@@ -659,9 +642,7 @@ def merge_candidate_in_memory(
 {intake_line}    provenance: human_approved
 
 '''
-        ix_b = re.search(r"(### IX-B\. CURIOSITY.*?```yaml\n.*?)(\n```)", self_content, re.DOTALL)
-        if ix_b:
-            self_content = self_content[: ix_b.end(1)] + new_entry + self_content[ix_b.start(2) :]
+        self_content = insert_ix_b_entry(self_content, new_entry)
     else:
         entry_id = _next_id(self_content, "PER")
         new_entry = f'''  - id: {entry_id}
@@ -672,11 +653,12 @@ def merge_candidate_in_memory(
 {intake_line}    provenance: human_approved
 
 '''
-        ix_c = re.search(r"(### IX-C\..*?```yaml\n.*?)(\n```)", self_content, re.DOTALL)
-        if ix_c:
-            self_content = self_content[: ix_c.end(1)] + new_entry + self_content[ix_c.start(2) :]
-    # 3. Update prompt.py if prompt_addition is not "none"
-    if c["prompt_addition"] and c["prompt_addition"].lower() != "none":
+        self_content = insert_ix_c_entry(self_content, new_entry)
+
+    # 3. Update prompt.py: optional rebuild from IX, else append-style addition
+    if prompt_merge_mode == "rebuild_ix":
+        prompt_content = rebuild_observation_sections_from_self(prompt_content, self_content)
+    elif c["prompt_addition"] and c["prompt_addition"].lower() != "none":
         prompt_section = c.get("prompt_section") or ""
         if not prompt_section:
             if "knowledge" in cat:
@@ -685,7 +667,7 @@ def merge_candidate_in_memory(
                 prompt_section = "YOUR CURIOSITY"
             else:
                 prompt_section = "YOUR PERSONALITY"
-        prompt_content = _insert_prompt_addition(
+        prompt_content = insert_prompt_addition(
             prompt_content,
             prompt_section,
             c["prompt_addition"],

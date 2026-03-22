@@ -1,7 +1,7 @@
 # skill-think — grace-mar
 
 Intake, learning, comprehension (multimodal).
-Part of SKILLS. See [skill-write](skill-write.md), [work-alpha-school](work-alpha-school.md).
+Part of SKILLS. See [skill-write](skill-write.md), [work-alpha-school](work-alpha-school.md), [work-jiang](work-jiang.md).
 
 **Module intent:** THINK captures capability from evidence. When WORK has horizon goals (e.g. SAT ≥ 1200), THINK prioritizes content and assessments that move the companion toward those goals. WORK reads THINK state to measure progress. Human-gated; evidence-linked.
 

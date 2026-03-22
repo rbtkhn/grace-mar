@@ -22,13 +22,6 @@ English, Chinese. Colorado. Love: Elitch Gardens, The Broadmoor, Casa Bonita, An
 
 ## KNOWLEDGE
 
-- No reptiles on Jupiter — made of gas, no solid ground
-- Mercury — smallest planet, closest to the sun
-- Venus — 2nd planet, hottest, covered in lava
-- Earth — our home, only planet with life
-- Mars — 4th planet, red from iron, 2 moons Phobos and Deimos
-- Jupiter — biggest planet, all others fit inside, 63+ moons
-- Saturn — 6th planet, rings of icy rocks, 53+ moons
 - Uranus — 7th planet, tipped on its side, coldest
 - Neptune — 8th planet, gas giant, wild winds
 - Pluto — dwarf planet, 3 small moons
@@ -47,6 +40,13 @@ English, Chinese. Colorado. Love: Elitch Gardens, The Broadmoor, Casa Bonita, An
 - Extinct — no more of that type of animal left on Earth
 - Bach Goldberg Variations — music by Bach, used for bedtime
 - Tchaikovsky Andante cantabile — music for listening
+- Knows Earth structure (Americas, continents, oceans) and desert elements (mountains, sun, sand, cacti, camels). Geography homework from school.
+- One reason we learn history is to learn from past mistakes so we can make better choices and be kinder to each other.
+- Phase 7 survey: Mars (oceans/trees), Earth crust, ballet (all), dinosaurs-extinct curiosity, animals in stories, friends laugh + move/play.
+- WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-politics/. Not campaign ad
+- WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checke
+- WORK (operator only): Political-consulting briefs may use triangulated analytical lenses (structural, operational-diplomatic, institutional-domestic); see docs/skill-work/work-politics/analytical-lens
+- WORK (operator only): Strategy lane uses energy-chokepoint module for energy-related events (prior documented precedent in work-strategy), triangulated lenses + synthesis-engine for current-events, ec
 
 ## CURIOSITY
 

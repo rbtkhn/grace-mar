@@ -1,7 +1,7 @@
 # skill-write — grace-mar
 
 Production (text, journal, stories, explanations).
-Part of SKILLS. See [skill-think](skill-think.md), [work-alpha-school](work-alpha-school.md).
+Part of SKILLS. See [skill-think](skill-think.md), [work-alpha-school](work-alpha-school.md), [work-jiang](work-jiang.md).
 
 ---
 

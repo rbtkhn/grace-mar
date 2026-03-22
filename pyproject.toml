@@ -23,6 +23,11 @@ miniapp = [
 reflect = [
   "openai>=1.0",
 ]
+# Channel video listing + caption download for operator research (not Voice / not Record).
+youtube-research = [
+  "yt-dlp>=2024.1",
+  "youtube-transcript-api>=0.6.2",
+]
 
 [project.scripts]
 grace-mar = "grace_mar.cli:main"

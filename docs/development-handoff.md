@@ -407,11 +407,10 @@ python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
 If **validate-integrity** reports stale derived exports or runtime bundle:
 
 ```bash
-python3 scripts/fork_checksum.py --manifest && \
-python3 scripts/export_manifest.py -u grace-mar && \
-python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt && \
-python3 scripts/export_runtime_bundle.py -u grace-mar -o users/grace-mar/runtime-bundle
+python3 scripts/refresh_derived_exports.py -u grace-mar
 ```
+
+(This runs `export_prp`, `export_manifest`, `fork_checksum --manifest`, and `export_runtime_bundle` in the same order as `process_approved_candidates.py` after a merge.)
 
 ---
 

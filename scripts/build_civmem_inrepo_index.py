@@ -84,18 +84,45 @@ def query_index(index: dict, question: str, limit: int = 5) -> list[str]:
     """
     Score entries by term overlap with question; return list of snippet strings.
     """
+    rows = query_index_entries(index, question, limit=limit)
+    return [r["snippet"] for r in rows if r.get("snippet", "").strip()]
+
+
+def query_index_entries(index: dict, question: str, limit: int = 5) -> list[dict[str, object]]:
+    """
+    Score entries by term overlap with question; return ranked rows with path for provenance.
+    """
     q_tokens = _tokenize(question)
     if not q_tokens:
         return []
-    scored = []
+    scored: list[tuple[int, str, str]] = []
     for e in index.get("entries", []):
         text = (e.get("title", "") + " " + e.get("snippet", "")).lower()
         doc_tokens = _tokenize(text)
         overlap = len(q_tokens & doc_tokens)
         if overlap > 0:
-            scored.append((overlap, e.get("snippet", "")))
+            path = str(e.get("path", "") or "")
+            snip = str(e.get("snippet", "") or "")
+            scored.append((overlap, path, snip))
     scored.sort(key=lambda x: -x[0])
-    return [s for _, s in scored[:limit] if s.strip()]
+    out: list[dict[str, object]] = []
+    for o, path, snip in scored[:limit]:
+        out.append({"overlap": o, "path": path, "snippet": snip[:600]})
+    return out
+
+
+def query_inrepo_civmem(question: str, *, limit: int = 3) -> list[dict[str, object]]:
+    """
+    Load the on-disk inrepo index (if present) and return ranked matches.
+    Used by daily brief / operator tools — not Voice truth; historical depth only.
+    """
+    if not INDEX_PATH.is_file():
+        return []
+    try:
+        index = json.loads(INDEX_PATH.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return []
+    return query_index_entries(index, question, limit=limit)
 
 
 def main() -> int:

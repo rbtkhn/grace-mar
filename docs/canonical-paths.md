@@ -17,8 +17,11 @@
 | Session / interaction history | `users/[id]/session-log.md` |
 | Capability containers (THINK, WRITE, etc.) | `users/[id]/skills.md` |
 | Curated references, canon | `users/[id]/self-library.md` |
+| Intent (goals, tradeoffs — YAML in fenced block; see [intent-template.md](intent-template.md)) | `users/[id]/intent.md` |
 
 All paths are **lowercase** with hyphens where used (e.g. `self-evidence.md`, `recursion-gate.md`).
+
+**`intent.md`:** Not required by `assert_canonical_record_layout()` for minimal bot startup; when present it is the canonical source for `export_intent_snapshot` / manifest policy and clears export **degraded** mode when valid.
 
 ---
 

@@ -21,6 +21,22 @@ Use this structure when the companion requests a weekly brief. Fill each section
 
 ---
 
+### 1b. Geopolitical & military (live + analysis)
+
+- Use the daily brief generator’s **§2a** (*G-ranked* defense / world / conflict headlines) as the **live** spine.
+- Add **one paragraph of operator analysis**: what it implies for KY-4 messaging (e.g. war powers, restraint, spending, alliances) — tie to [principal-profile](principal-profile.md) and [analytical-lenses](analytical-lenses/manifest.md), not unsourced speculation.
+- **Sources:** URLs from RSS rows; verify numbers and quotes before ship.
+
+---
+
+### 1c. Civ-mem depth (structural evidence — not breaking news)
+
+- Run `python3 scripts/build_civmem_inrepo_index.py build` if needed; use **§2b** from the daily brief (*civ-mem depth hooks*) or query the index for overlaps with your §1 / §1b themes.
+- Use MEM-style parallels to **strengthen logic** (long-horizon patterns, institutional mechanics). Tag provenance `{CMC: path}` per [civ-mem-draft-protocol](civ-mem-draft-protocol.md).
+- **Does not** satisfy §0 recency requirements and **does not** replace dated news citations for campaign facts.
+
+---
+
 ### 2. Principal (Massie)
 
 - Votes or statements this week (with links).

@@ -1,12 +1,9 @@
 # Grace-Mar Record — Agent Manifest
 
 User: grace-mar
-Checksum: 0b176537cfda0a123bb8d4046d31d657f36ca22ebeebd23d4ff5bed6d2d32612
-Generated: 2026-03-20T08:07:11.789267
+Checksum: 4be5dd997969168b1e646ed4840a4fddcfee4aa5c609adbac127ecfe66d3a580
+Generated: 2026-03-22T07:10:15.872675
 Runtime mode: adjunct_runtime
-
-## Degraded Mode
-- enabled: true (intent.md missing or invalid; policy export remains advisory-only until intent is restored)
 
 ## Readable
 Agents may read (for personalization, session continuity):

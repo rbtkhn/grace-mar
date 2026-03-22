@@ -17,7 +17,10 @@ SKILLS_PATHS = [
     PROFILE_DIR / "skill-think.md",
     PROFILE_DIR / "skill-write.md",
 ]
-WORK_PATHS = [PROFILE_DIR / "work-alpha-school.md"]
+WORK_PATHS = [
+    PROFILE_DIR / "work-alpha-school.md",
+    PROFILE_DIR / "work-jiang.md",
+]
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
 # In-process cache for load_record_chunks (invalidated when any source file mtime changes)

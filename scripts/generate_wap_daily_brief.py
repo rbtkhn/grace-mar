@@ -6,7 +6,8 @@ Generate a standard **daily brief** for work-politics + work-strategy.
 
   - Work-politics snapshot (calendar, gate, blockers)
   - Work-strategy focus (operator markdown)
-  - Optional RSS ingest (configurable), dual keyword scores: **W** (campaign), **S** (product/AI/governance)
+  - Optional RSS ingest (configurable), keyword scores: **W** (campaign), **S** (product/AI/governance), **G** (geo/military)
+  - §**2a** / §**2b**: G-ranked headline digest + optional **civ-mem** token overlap (`docs/civilization-memory/`, index build script) — historical depth, not breaking news
   - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale`
     in config — extra phrase lists for scoring **only** (no translation API; zero-API mode).
   - Optional **`ingest_caps`**: per-feed `max_items` and/or `tier` (1–3) with `default_max_items_per_feed` + `max_items_by_tier`
@@ -25,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import html
+import importlib.util
 import json
 import re
 import urllib.error
@@ -140,6 +142,52 @@ DEFAULT_INGEST_CAPS: dict[str, object] = {
     "default_max_items_per_feed": 12,
     "max_items_by_tier": {1: 14, 2: 10, 3: 6},
 }
+
+# Geopolitical / military — extra W-adjacent scoring lane (G). Tune in daily-brief-config.json.
+DEFAULT_GEO_MILITARY_PHRASES: tuple[str, ...] = (
+    "pentagon",
+    "defense department",
+    "ministry of defence",
+    "ministry of defense",
+    "naval",
+    "navy",
+    "air force",
+    "army",
+    "marine",
+    "nato",
+    "mobilization",
+    "mobilisation",
+    "mobilize",
+    "invasion",
+    "ceasefire",
+    "truce",
+    "sanctions",
+    "blockade",
+    "submarine",
+    "carrier",
+    "missile",
+    "ballistic",
+    "cruise missile",
+    "drone",
+    "airstrike",
+    "air strike",
+    "troops",
+    "deployment",
+    "border",
+    "front line",
+    "war crime",
+    "humanitarian",
+    "peacekeeping",
+    "security council",
+    "un security",
+    "war powers",
+    "authorization for use",
+    "aegis",
+    "fleet",
+    "fighter jet",
+    "shelling",
+    "artillery",
+)
 
 DEFAULT_STRATEGY_PHRASES: tuple[str, ...] = (
     "openai",
@@ -319,6 +367,8 @@ def _load_full_config(
     tuple[str, ...],
     dict[str, object],
     dict[str, object],
+    tuple[str, ...],
+    dict[str, tuple[str, ...]],
 ]:
     if not path.exists():
         return (
@@ -330,6 +380,8 @@ def _load_full_config(
             DEFAULT_STORY_ANCHORS,
             dict(DEFAULT_STORY_DEDUPE),
             dict(DEFAULT_INGEST_CAPS),
+            DEFAULT_GEO_MILITARY_PHRASES,
+            {},
         )
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
@@ -343,6 +395,8 @@ def _load_full_config(
             DEFAULT_STORY_ANCHORS,
             dict(DEFAULT_STORY_DEDUPE),
             dict(DEFAULT_INGEST_CAPS),
+            DEFAULT_GEO_MILITARY_PHRASES,
+            {},
         )
     feeds_raw = data.get("feeds") if isinstance(data, dict) else None
     feeds: list[dict[str, object]] = []
@@ -380,7 +434,23 @@ def _load_full_config(
     story_anchors = _merge_story_anchors(data) if isinstance(data, dict) else DEFAULT_STORY_ANCHORS
     story_dedupe = _load_story_dedupe(data) if isinstance(data, dict) else dict(DEFAULT_STORY_DEDUPE)
     ingest_caps = _load_ingest_caps(data) if isinstance(data, dict) else dict(DEFAULT_INGEST_CAPS)
-    return feeds, wap, strat, wap_loc, strat_loc, story_anchors, story_dedupe, ingest_caps
+    geo_t = data.get("geo_military_keyword_phrases") if isinstance(data, dict) else None
+    if isinstance(geo_t, list) and geo_t:
+        geo = _phrases_tuple(geo_t, DEFAULT_GEO_MILITARY_PHRASES)
+    else:
+        geo = tuple(DEFAULT_GEO_MILITARY_PHRASES)
+        extra = data.get("geo_military_keyword_phrases_extra") if isinstance(data, dict) else None
+        if isinstance(extra, list):
+            seen = set(geo)
+            add: list[str] = []
+            for x in extra:
+                pl = str(x).lower().strip()
+                if pl and pl not in seen:
+                    seen.add(pl)
+                    add.append(pl)
+            geo = geo + tuple(add)
+    geo_loc = _locale_phrase_map(data, "geo_military_keyword_phrases_by_locale") if isinstance(data, dict) else {}
+    return feeds, wap, strat, wap_loc, strat_loc, story_anchors, story_dedupe, ingest_caps, geo, geo_loc
 
 
 def _extract_strategy_focus() -> str:
@@ -609,10 +679,16 @@ def _cluster_story_items(
     for g in multi:
         cluster_items = [items[i] for i in g]
 
-        def _prim_key(x: dict[str, object]) -> tuple[int, int, int, float]:
+        def _prim_key(x: dict[str, object]) -> tuple[int, int, int, int, float]:
             sd = x.get("sort_date")
             ts = float(sd.timestamp()) if isinstance(sd, datetime) else 0.0
-            return (int(x.get("score_sum", 0)), int(x.get("score_w", 0)), int(x.get("score_s", 0)), ts)
+            return (
+                int(x.get("score_sum", 0)),
+                int(x.get("score_w", 0)),
+                int(x.get("score_s", 0)),
+                int(x.get("score_g", 0)),
+                ts,
+            )
 
         cluster_items.sort(key=_prim_key, reverse=True)
         clusters.append(cluster_items)
@@ -654,6 +730,7 @@ def _headline_md_line(it: dict[str, object], *, also: bool = False) -> str:
     loc = str(it.get("locale", "en") or "en").strip().lower() or "en"
     sw = int(it.get("score_w", 0))
     ss = int(it.get("score_s", 0))
+    sg = int(it.get("score_g", 0))
     sd = it.get("sort_date")
     date_note = ""
     if isinstance(sd, datetime):
@@ -662,9 +739,125 @@ def _headline_md_line(it: dict[str, object], *, also: bool = False) -> str:
     if also:
         return (
             f"- **Also** — [{title}]({link}) — _{feed}_{loc_note} · "
-            f"_W:{sw} S:{ss}_{date_note}"
+            f"_W:{sw} S:{ss} G:{sg}_{date_note}"
         )
-    return f"- **[W:{sw} S:{ss}]** [{title}]({link}) — _{feed}_{loc_note}{date_note}"
+    return f"- **[W:{sw} S:{ss} G:{sg}]** [{title}]({link}) — _{feed}_{loc_note}{date_note}"
+
+
+def _import_query_inrepo_civmem():
+    try:
+        from scripts.build_civmem_inrepo_index import query_inrepo_civmem
+
+        return query_inrepo_civmem
+    except ImportError:
+        pass
+    path = REPO_ROOT / "scripts" / "build_civmem_inrepo_index.py"
+    spec = importlib.util.spec_from_file_location("build_civmem_inrepo_index", path)
+    if spec is None or spec.loader is None:
+        return None
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return getattr(mod, "query_inrepo_civmem", None)
+
+
+def _civ_mem_boost_query(title: str) -> str:
+    """Bias token overlap toward statecraft / institutions (not theology manuscripts)."""
+    base = (title or "").strip()
+    # In-repo advisory minds (Mearsheimer / Mercouris) tokenize well for IR overlap; keeps §2b off pure theology.
+    return (
+        base[:220]
+        + " mearsheimer mercouris ukraine iran nato war realism statecraft institutions"
+        " alliance congress security middle east diplomacy"
+    )
+
+
+def _civ_mem_resonance_lines(
+    seed_titles: list[str],
+    *,
+    limit_per_seed: int = 2,
+    max_rows: int = 8,
+) -> list[str]:
+    """
+    Map headline text to in-repo civ-mem essay snippets (historical depth, not current truth).
+    Deprioritizes `book/` manuscript paths when `minds/` or `notes/research-brief*` hits exist.
+    """
+    fn = _import_query_inrepo_civmem()
+    if fn is None:
+        return ["- _Civ-mem query module not loadable._"]
+    out: list[str] = []
+    seen_paths: set[str] = set()
+
+    def _path_rank(path: str) -> int:
+        p = path.lower()
+        if p.startswith("minds/") or p.startswith("notes/research-brief"):
+            return 2
+        if p.startswith("essays/") or p.startswith("notes/"):
+            return 1
+        if p.startswith("book/"):
+            return 0
+        return 1
+
+    for title in seed_titles:
+        if len(out) >= max_rows:
+            break
+        q = _civ_mem_boost_query(title)
+        if len(q) < 24:
+            continue
+        raw = fn(q[:400], limit=max(8, limit_per_seed * 4))
+        ranked = sorted(
+            raw,
+            key=lambda r: (_path_rank(str(r.get("path", ""))), int(r.get("overlap", 0) or 0)),
+            reverse=True,
+        )
+        book_fallback = [r for r in raw if str(r.get("path", "")).startswith("book/")]
+        non_book = [r for r in ranked if not str(r.get("path", "")).startswith("book/")]
+        rows = non_book if non_book else book_fallback
+        rows = rows[: limit_per_seed * 2]
+        no_readme = [r for r in rows if str(r.get("path", "")) != "README.md"]
+        rows = no_readme if no_readme else rows
+        for row in rows:
+            if len(out) >= max_rows:
+                break
+            path = str(row.get("path", "") or "")
+            if path in seen_paths:
+                continue
+            seen_paths.add(path)
+            snip = str(row.get("snippet", "") or "").replace("\n", " ").strip()
+            if len(snip) > 220:
+                snip = snip[:217] + "..."
+            ov = int(row.get("overlap", 0) or 0)
+            out.append(f"- **{{CMC: `{path}`}}** (overlap {ov}) — _{snip}_")
+    if len(out) < 2 and fn is not None:
+        raw = fn(
+            "mearsheimer mercouris ukraine iran nato war realism institutions statecraft military alliance congress",
+            limit=12,
+        )
+        ranked = sorted(
+            raw,
+            key=lambda r: (_path_rank(str(r.get("path", ""))), int(r.get("overlap", 0) or 0)),
+            reverse=True,
+        )
+        non_book = [r for r in ranked if not str(r.get("path", "")).startswith("book/")]
+        pool = non_book if non_book else ranked
+        pool = [r for r in pool if str(r.get("path", "")) != "README.md"] or pool
+        for row in pool[:4]:
+            if len(out) >= max_rows:
+                break
+            path = str(row.get("path", "") or "")
+            if path in seen_paths:
+                continue
+            seen_paths.add(path)
+            snip = str(row.get("snippet", "") or "").replace("\n", " ").strip()
+            if len(snip) > 220:
+                snip = snip[:217] + "..."
+            ov = int(row.get("overlap", 0) or 0)
+            out.append(f"- **{{CMC: `{path}`}}** (overlap {ov}) — _{snip}_")
+    if not out:
+        return [
+            "- _No in-repo civ-mem matches (build index: `python3 scripts/build_civmem_inrepo_index.py build`)._",
+            "- _Treat as optional depth for triangulation — not a substitute for dated news citations._",
+        ]
+    return out
 
 
 def _filter_recent(items: list[dict[str, object]], max_age_hours: int) -> list[dict[str, object]]:
@@ -696,12 +889,23 @@ def build_daily_brief(
     max_items_display: int,
     story_dedupe_enabled: bool = True,
     max_per_feed_override: int | None = None,
+    civmem_hooks: bool = True,
+    max_geo_headlines: int = 14,
 ) -> str:
     assembled = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    feeds, wap_phrases, strategy_phrases, wap_by_locale, strategy_by_locale, story_anchors, story_dedupe, ingest_caps = (
-        _load_full_config(config_path)
-    )
+    (
+        feeds,
+        wap_phrases,
+        strategy_phrases,
+        wap_by_locale,
+        strategy_by_locale,
+        story_anchors,
+        story_dedupe,
+        ingest_caps,
+        geo_phrases,
+        geo_by_locale,
+    ) = _load_full_config(config_path)
     snapshot = get_wap_snapshot(user_id)
     primary = snapshot["campaign_status"]
     gate = snapshot["gate"]
@@ -790,14 +994,22 @@ def build_daily_brief(
         loc = str(it.get("locale", "en") or "en").strip().lower() or "en"
         w_extra = wap_by_locale.get(loc, ())
         s_extra = strategy_by_locale.get(loc, ())
+        g_extra = geo_by_locale.get(loc, ())
         it["score_w"] = _score_keywords(blob, wap_phrases) + _score_keywords(blob, w_extra)
         it["score_s"] = _score_keywords(blob, strategy_phrases) + _score_keywords(blob, s_extra)
-        it["score_sum"] = int(it["score_w"]) + int(it["score_s"])
+        it["score_g"] = _score_keywords(blob, geo_phrases) + _score_keywords(blob, g_extra)
+        it["score_sum"] = int(it["score_w"]) + int(it["score_s"]) + int(it["score_g"])
 
-    def _sort_key(x: dict[str, object]) -> tuple[int, int, int, float]:
+    def _sort_key(x: dict[str, object]) -> tuple[int, int, int, int, float]:
         sd = x.get("sort_date")
         ts = float(sd.timestamp()) if isinstance(sd, datetime) else 0.0
-        return (int(x.get("score_sum", 0)), int(x.get("score_w", 0)), int(x.get("score_s", 0)), ts)
+        return (
+            int(x.get("score_sum", 0)),
+            int(x.get("score_w", 0)),
+            int(x.get("score_s", 0)),
+            int(x.get("score_g", 0)),
+            ts,
+        )
 
     all_items.sort(key=_sort_key, reverse=True)
 
@@ -815,8 +1027,8 @@ def build_daily_brief(
 
     if fetch_feeds and all_items:
         lines.append(
-            "Ranked by **W+S** (global keyword lists + `wap_keyword_phrases_by_locale` / "
-            "`strategy_keyword_phrases_by_locale` for each feed `locale`) then recency. "
+            "Ranked by **W+S+G** (global keyword lists + per-`locale` maps for W/S; **G** = "
+            "`geo_military_keyword_phrases`) then recency. "
             "Each feed is **recency-sorted** then **capped** (`ingest_caps`: per-feed `max_items` and/or `tier` → "
             "`max_items_by_tier`; CLI `--max-per-feed N` overrides all feeds). "
             "Optional **same-story** grouping uses `story_anchor_phrases` overlap (Jaccard + shared anchors). "
@@ -893,6 +1105,49 @@ def build_daily_brief(
         w_titles = [str(all_items[0].get("title", ""))]
     if not s_titles and all_items:
         s_titles = [str(all_items[0].get("title", ""))]
+
+    if fetch_feeds and all_items:
+        lines.extend(
+            [
+                "## 2a. Geopolitical & military (G-ranked)",
+                "",
+                "_**G** = matches on `geo_military_keyword_phrases` (+ optional locale lists in config). "
+                "Supports triangulation and war-powers messaging — **verify** claims against primary sources._",
+                "",
+            ]
+        )
+        geo_sorted = sorted(
+            all_items,
+            key=lambda x: (int(x.get("score_g", 0)), int(x.get("score_w", 0))),
+            reverse=True,
+        )
+        geo_picks = [it for it in geo_sorted if int(it.get("score_g", 0)) > 0][:max_geo_headlines]
+        if geo_picks:
+            for it in geo_picks:
+                lines.append(_headline_md_line(it, also=False))
+            lines.append("")
+        else:
+            lines.append(
+                "_No headlines crossed the G keyword threshold this window — expand `geo_military_keyword_phrases` "
+                "or check defense/world feeds._"
+            )
+            lines.append("")
+        if civmem_hooks:
+            lines.extend(
+                [
+                    "## 2b. Civ-mem depth hooks (in-repo essays — not breaking news)",
+                    "",
+                    "_Token overlap against `docs/civilization-memory/` (build: `python3 scripts/build_civmem_inrepo_index.py build`). "
+                    "**Historical / structural** depth only — not a substitute for dated news. "
+                    "See [civ-mem-draft-protocol](../work-politics/civ-mem-draft-protocol.md). Public copy still needs human approval._",
+                    "",
+                ]
+            )
+            seed_titles = [str(x.get("title", "")) for x in geo_picks[:3] if x.get("title")]
+            if not seed_titles:
+                seed_titles = [t for t in w_titles[:3] if t]
+            lines.extend(_civ_mem_resonance_lines(seed_titles))
+            lines.append("")
 
     lines.extend(["## 3. Lead themes (auto-stub — replace after reading)", ""])
     lines.append("### Work-politics / campaign angle")
@@ -985,6 +1240,18 @@ def main() -> int:
         metavar="N",
         help="Override ingest cap for every feed (0 = use config per-feed / tier)",
     )
+    parser.add_argument(
+        "--no-civmem",
+        action="store_true",
+        help="Skip §2b civ-mem depth hooks (in-repo essay overlap)",
+    )
+    parser.add_argument(
+        "--max-geo-lines",
+        type=int,
+        default=14,
+        metavar="N",
+        help="Max lines in §2a geopolitical & military block (default 14)",
+    )
     args = parser.parse_args()
     if args.feeds and not args.config:
         config_path = Path(args.feeds)
@@ -1000,6 +1267,8 @@ def main() -> int:
         max_items_display=args.max_items,
         story_dedupe_enabled=not args.no_story_dedupe,
         max_per_feed_override=(args.max_per_feed if args.max_per_feed > 0 else None),
+        civmem_hooks=not args.no_civmem,
+        max_geo_headlines=max(1, args.max_geo_lines),
     )
     if args.output:
         out = Path(args.output)

@@ -12,7 +12,7 @@ Status: EMPTY
 | **skill-think** | [skill-think.md](skill-think.md) | Intake, learning, comprehension (THINK, MATH, CHINESE) |
 | **skill-write** | [skill-write.md](skill-write.md) | Production (text, journal, stories) |
 
-**WORK** (separate from SKILLS): [work-alpha-school.md](work-alpha-school.md) — making, planning, execution, creation, school context.
+**WORK** (separate from SKILLS): [work-alpha-school.md](work-alpha-school.md) — school context; [work-jiang.md](work-jiang.md) — Jiang project.
 
 ---
 

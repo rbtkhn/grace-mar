@@ -405,54 +405,7 @@ books_read:
   - title: "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale"
     source: LIB-0133
   - title: "The Best of Debussy / Classical Piano Music"
-    source: LIB-0134  - id: LEARN-0037
-    date: 2026-02-26
-    topic: "Knows Earth structure (Americas, continents, oceans) and desert elements (mountains, sun, sand, cacti, camels). Geography homework from school."
-    source: pipeline merge
-    evidence_id: ACT-0042
-    provenance: human_approved
-
-  - id: LEARN-0038
-    date: 2026-02-26
-    topic: "One reason we learn history is to learn from past mistakes so we can make better choices and be kinder to each other."
-    source: pipeline merge
-    evidence_id: ACT-0043
-    provenance: human_approved
-
-  - id: LEARN-0039
-    date: 2026-02-27
-    topic: "Phase 7 survey: Mars (oceans/trees), Earth crust, ballet (all), dinosaurs-extinct curiosity, animals in stories, friends laugh + move/play."
-    source: pipeline merge
-    evidence_id: ACT-0044
-    provenance: human_approved
-
-  - id: LEARN-0040
-    date: 2026-03-14
-    topic: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-politics/. Not campaign ad"
-    source: pipeline merge
-    evidence_id: ACT-0045
-    provenance: human_approved
-
-  - id: LEARN-0041
-    date: 2026-03-20
-    topic: "WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checke"
-    source: pipeline merge
-    evidence_id: ACT-0047
-    provenance: human_approved
-
-  - id: LEARN-0042
-    date: 2026-03-20
-    topic: "WORK (operator only): Political-consulting briefs may use triangulated analytical lenses (structural, operational-diplomatic, institutional-domestic); see docs/skill-work/work-politics/analytical-lens"
-    source: pipeline merge
-    evidence_id: ACT-0048
-    provenance: human_approved
-
-  - id: LEARN-0043
-    date: 2026-03-20
-    topic: "WORK (operator only): Strategy lane uses energy-chokepoint module for energy-related events (prior documented precedent in work-strategy), triangulated lenses + synthesis-engine for current-events, ec"
-    source: pipeline merge
-    evidence_id: ACT-0049
-    provenance: human_approved
+    source: LIB-0134
 
 
 ```
@@ -758,6 +711,55 @@ entries:
     her_understanding: "Tchaikovsky wrote Andante cantabile; it's beautiful music to listen to, like The Nutcracker and Swan Lake."
     evidence_id: ACT-0039
     curated_by: user
+    provenance: human_approved
+
+  - id: LEARN-0037
+    date: 2026-02-26
+    topic: "Knows Earth structure (Americas, continents, oceans) and desert elements (mountains, sun, sand, cacti, camels). Geography homework from school."
+    source: pipeline merge
+    evidence_id: ACT-0042
+    provenance: human_approved
+
+  - id: LEARN-0038
+    date: 2026-02-26
+    topic: "One reason we learn history is to learn from past mistakes so we can make better choices and be kinder to each other."
+    source: pipeline merge
+    evidence_id: ACT-0043
+    provenance: human_approved
+
+  - id: LEARN-0039
+    date: 2026-02-27
+    topic: "Phase 7 survey: Mars (oceans/trees), Earth crust, ballet (all), dinosaurs-extinct curiosity, animals in stories, friends laugh + move/play."
+    source: pipeline merge
+    evidence_id: ACT-0044
+    provenance: human_approved
+
+  - id: LEARN-0040
+    date: 2026-03-14
+    topic: "WORK (operator only): Political-consulting territory now requires a recency slice each weekly brief (7d or 30d) and logs assembled date; see docs/skill-work/work-politics/. Not campaign ad"
+    source: pipeline merge
+    evidence_id: ACT-0045
+    provenance: human_approved
+
+  - id: LEARN-0041
+    date: 2026-03-20
+    topic: "WORK (operator only): High-stakes america-first-ky briefs may use factorial stress-test protocol (docs/skill-work/work-politics/america-first-ky/). Not Voice knowledge; not automated governance_checke"
+    source: pipeline merge
+    evidence_id: ACT-0047
+    provenance: human_approved
+
+  - id: LEARN-0042
+    date: 2026-03-20
+    topic: "WORK (operator only): Political-consulting briefs may use triangulated analytical lenses (structural, operational-diplomatic, institutional-domestic); see docs/skill-work/work-politics/analytical-lens"
+    source: pipeline merge
+    evidence_id: ACT-0048
+    provenance: human_approved
+
+  - id: LEARN-0043
+    date: 2026-03-20
+    topic: "WORK (operator only): Strategy lane uses energy-chokepoint module for energy-related events (prior documented precedent in work-strategy), triangulated lenses + synthesis-engine for current-events, ec"
+    source: pipeline merge
+    evidence_id: ACT-0049
     provenance: human_approved
 
 ```

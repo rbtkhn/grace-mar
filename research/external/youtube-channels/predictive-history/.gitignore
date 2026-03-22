@@ -1,0 +1,2 @@
+# Large transcript dumps; keep index.json / README unless you explicitly want text in git
+transcripts/*.txt
