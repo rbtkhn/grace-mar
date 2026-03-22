@@ -40,6 +40,7 @@ Civilization memory has **no monetary purpose**. Its purpose is **pure understan
 - **Strategic analogy** — external historical context for institutional, political, or civilizational pattern analysis
 - **Work support** — input for `work-civ-mem`, `work-politics`, operator research, and strategy writing  
   - work-politics: [civ-mem-draft-protocol.md](../work-politics/civ-mem-draft-protocol.md) (human-always-approves on any ship)
+  - work-jiang: [CIV-MEM-LENS.md](../../../research/external/work-jiang/CIV-MEM-LENS.md) — lattice for lecture analysis + registries (reference only; not Record)
 - **Library and canon support** — a return-to reference source inside `self-library`
 
 ### Safe vs unsafe boundary

@@ -2,6 +2,12 @@
 
 **Purpose:** Operator research corpus (YouTube captions). **Not** part of the companion Record; do not merge into SELF or treat as Voice knowledge.
 
+## Full channel listing (no downloads)
+
+Human-readable table of **all** videos on the channel (regenerate after new uploads):
+
+- [CHANNEL-VIDEO-INDEX.md](CHANNEL-VIDEO-INDEX.md) — full table: `video_id`, title, watch URL; built via `--dry-run` playlist walk (re-run when the channel grows).
+
 ## Generate / refresh
 
 From repo root (install deps first: `pip install -e ".[youtube-research]"`):

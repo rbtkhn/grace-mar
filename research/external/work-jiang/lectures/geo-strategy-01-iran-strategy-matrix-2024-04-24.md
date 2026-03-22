@@ -4,8 +4,8 @@
 **Audience:** Chinese high school students  
 **Date (stated in session):** 24 April 2024  
 **Topic:** Iran’s geopolitical strategy under US/Israeli military dominance — asymmetrical warfare, Operation True Promise, and a four-part “strategy matrix” for Iranian action.  
-**Source:** YouTube (add canonical URL when archived).  
-**Transcript:** Below is operator-supplied text (likely ASR); wording preserved for traceability; normalize in a later editorial pass if needed.
+**Source (canonical recording):** [Predictive History — Geo-Strategy #1: Iran’s Strategy Matrix](https://www.youtube.com/watch?v=xEEpOxqdU5E) (`@PredictiveHistory`).  
+**Transcript:** Below is operator-supplied text (likely ASR from the full classroom session); wording preserved for traceability; normalize in a later editorial pass if needed. Shorter channel edits (e.g. third-party “Prof Jiang Media” clips) may excerpt the same material but are not the primary archive pointer.
 
 ---
 
