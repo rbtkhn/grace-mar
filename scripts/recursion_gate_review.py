@@ -487,12 +487,16 @@ def filter_review_candidates(
     status: str = "",
     risk_tier: str = "",
     territory: str = "",
+    signal_type: str = "",
 ) -> list[dict]:
     out = rows
     if status:
         out = [row for row in out if row.get("status") == status]
     if risk_tier:
         out = [row for row in out if row.get("risk_tier") == risk_tier]
+    if signal_type:
+        st = signal_type.strip().lower()
+        out = [row for row in out if (row.get("signal_type") or "").strip().lower() == st]
     if territory and territory != "all":
         territory = normalize_territory_cli(territory)
         if territory == "companion":

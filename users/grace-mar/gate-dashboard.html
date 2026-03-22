@@ -106,7 +106,7 @@
 </head>
 <body>
   <h1>Pending candidates</h1>
-  <p class="sub">Read-only view of <code>users/grace-mar/recursion-gate.md</code> · edit status in the markdown file, then merge. Generated 2026-03-20 22:13 UTC</p>
+  <p class="sub">Read-only view of <code>users/grace-mar/recursion-gate.md</code> · edit status in the markdown file, then merge. Generated 2026-03-22 02:47 UTC</p>
   <div class="stats">
     <span class="stat"><strong>0</strong> pending</span>
     <span class="stat">Work-politics <strong>0</strong></span>
@@ -118,6 +118,7 @@
     <button type="button" data-filter="companion">Companion</button>
     <button type="button" data-filter="quick_merge_eligible">Quick merge</button>
     <button type="button" data-filter="manual_escalate">Escalate</button>
+    <button type="button" data-filter="reflection">Reflection</button>
   </div>
   <div class="grid" id="grid">
 <p class="empty">No pending candidates. Edit <code>recursion-gate.md</code> to approve/reject, then merge.</p>
@@ -132,10 +133,12 @@
         document.querySelectorAll('.card').forEach(function(card) {
           var t = card.getAttribute('data-territory');
           var risk = card.getAttribute('data-risk');
+          var sig = card.getAttribute('data-signal') || '';
           var show = f === 'all'
             || (f === 'companion' && t !== 'work-politics')
             || t === f
-            || risk === f;
+            || risk === f
+            || (f === 'reflection' && sig === 'reflection-cycle');
           card.classList.toggle('hidden', !show);
         });
       });

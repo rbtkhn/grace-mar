@@ -58,7 +58,11 @@ def index():
     from recursion_gate_territory import TERRITORY_WAP
 
     rows = parse_review_candidates(USER_ID)
-    pending = filter_review_candidates(rows, status="pending")
+    signal_filter = (request.args.get("signal") or "").strip().lower()
+    fc_kwargs: dict = {}
+    if signal_filter == "reflection":
+        fc_kwargs["signal_type"] = "reflection-cycle"
+    pending = filter_review_candidates(rows, status="pending", **fc_kwargs)
     n = len(pending)
     wap_n = sum(1 for r in pending if r.get("territory") == TERRITORY_WAP)
     comp_n = n - wap_n
@@ -77,8 +81,9 @@ def index():
         channel = html.escape(r.get("channel_key") or "—")
         ts = html.escape(r.get("timestamp") or "—")
         quick = "true" if r.get("ready_for_quick_merge") else "false"
+        sig = html.escape((r.get("signal_type") or "").strip())
         cards.append(
-            f'<article class="card" data-territory="{territory}" data-risk="{risk}">'
+            f'<article class="card" data-territory="{territory}" data-risk="{risk}" data-signal="{sig}">'
             f'<header><span class="id">{cid}</span>'
             f'<span class="pill pill-{pill_slug}">{label}</span>'
             f'<span class="pill pill-risk">{risk}</span>'
@@ -126,6 +131,7 @@ def index():
 <body>
   <h1>Gate review</h1>
   <p class="sub">Approve or reject pending candidates. Merge runs via process_approved_candidates.</p>
+  <p class="sub">Filter: <a href="/">All</a> · <a href="/?signal=reflection">Reflection only</a></p>
   <div class="stats">
     <span class="stat"><strong>{n}</strong> pending</span>
     <span class="stat">Work-politics <strong>{wap_n}</strong></span>

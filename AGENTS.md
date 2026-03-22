@@ -243,6 +243,7 @@ grace-mar/
         ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging
+        ├── reflection-proposals/  # Operator reflection cycle outputs (REFLECT-*.md); not canonical Record
         ├── pipeline-events.jsonl  # Append-only pipeline audit log
         ├── harness-events.jsonl    # Optional harness audit (merge/export); see docs/harness-inventory.md
         ├── compute-ledger.jsonl   # Token usage (energy ledger)

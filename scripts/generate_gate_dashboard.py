@@ -47,9 +47,10 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
         if r.get("duplicate_hints"):
             duplicate_note = f'<p class="hint">{html.escape(r["duplicate_hints"][0])}</p>'
         pill_slug = "wap" if r.get("territory") == TERRITORY_WAP else "companion"
+        sig = html.escape((r.get("signal_type") or "").strip())
         cards.append(
             f"""
-    <article class="card" data-territory="{html.escape(r['territory'])}" data-risk="{html.escape(r['risk_tier'])}">
+    <article class="card" data-territory="{html.escape(r['territory'])}" data-risk="{html.escape(r['risk_tier'])}" data-signal="{sig}">
       <header>
         <span class="id">{html.escape(r['id'])}</span>
         <span class="pill pill-{pill_slug}">{html.escape(r['territory_label'])}</span>
@@ -187,6 +188,7 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
     <button type="button" data-filter="companion">Companion</button>
     <button type="button" data-filter="quick_merge_eligible">Quick merge</button>
     <button type="button" data-filter="manual_escalate">Escalate</button>
+    <button type="button" data-filter="reflection">Reflection</button>
   </div>
   <div class="grid" id="grid">
 {rows_html}
@@ -201,10 +203,12 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
         document.querySelectorAll('.card').forEach(function(card) {{
           var t = card.getAttribute('data-territory');
           var risk = card.getAttribute('data-risk');
+          var sig = card.getAttribute('data-signal') || '';
           var show = f === 'all'
             || (f === 'companion' && t !== '{TERRITORY_WAP}')
             || t === f
-            || risk === f;
+            || risk === f
+            || (f === 'reflection' && sig === 'reflection-cycle');
           card.classList.toggle('hidden', !show);
         }});
       }});

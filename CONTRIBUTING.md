@@ -30,6 +30,8 @@ grace-mar warmup -u grace-mar --compact
 
 Mini App / bot dependencies are optional: `pip install -e ".[miniapp]"` (see `[project.optional-dependencies]` in `pyproject.toml`). Most scripts still run with `python scripts/...` without an editable install.
 
+**Reflection cycle (operator):** `pip install -e ".[reflect]"` — see [docs/reflection-cycle.md](docs/reflection-cycle.md). `grace-mar reflect -u grace-mar --dry-run` writes `users/<id>/reflection-proposals/` only; `--append` stages candidates into `recursion-gate.md`.
+
 ## Questions
 
 Open a discussion or issue on [GitHub](https://github.com/rbtkhn/grace-mar) for tooling and docs; instance-specific Record content is not something to “fix” without the companion’s process.

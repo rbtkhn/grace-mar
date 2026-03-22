@@ -20,6 +20,9 @@ miniapp = [
   "python-dotenv>=1.0",
   "python-telegram-bot>=21.0",
 ]
+reflect = [
+  "openai>=1.0",
+]
 
 [project.scripts]
 grace-mar = "grace_mar.cli:main"

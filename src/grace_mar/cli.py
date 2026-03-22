@@ -14,7 +14,8 @@ def main() -> int:
         print(
             "Usage: grace-mar <command> [args...]\n\n"
             "Commands:\n"
-            "  warmup   → scripts/harness_warmup.py (e.g. grace-mar warmup -u grace-mar)\n",
+            "  warmup   → scripts/harness_warmup.py (e.g. grace-mar warmup -u grace-mar)\n"
+            "  reflect  → scripts/reflection_cycle.py (evidence-grounded gate proposals)\n",
             file=sys.stderr,
         )
         return 0 if argv and argv[0] in ("-h", "--help") else 2
@@ -24,6 +25,9 @@ def main() -> int:
     root = repo_root()
     if cmd == "warmup":
         script = root / "scripts" / "harness_warmup.py"
+        return subprocess.call([sys.executable, str(script), *rest])
+    if cmd == "reflect":
+        script = root / "scripts" / "reflection_cycle.py"
         return subprocess.call([sys.executable, str(script), *rest])
 
     print(f"Unknown command: {cmd}", file=sys.stderr)
