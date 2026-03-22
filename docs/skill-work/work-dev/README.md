@@ -37,6 +37,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **[quality-gates-narrative.md](quality-gates-narrative.md)** | Evals as **product**: “green = within boundary” map (harness, integrity, continuity CI, gate health) + partner one-liner; future dashboard concept. |
 | **[session-continuity-contract.md](session-continuity-contract.md)** | Continuity as **explicit contract**: which files, which scripts, what CI proves — **not** “the agent remembers.” |
 | **[safety-story-ux.md](safety-story-ux.md)** | **Safety story** as product: visible pending/approved, receipts, staged vs merged — audit continuity as primary comfort, not admin trivia. |
+| **[external-signals.md](external-signals.md)** | Moonshots / GTC–class discourse → **work-dev** lens (OpenClaw, enterprise trust, inference economics, portability); links shared [external-tech-scan](../work-strategy/external-tech-scan.md). |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |
 | **[offers.md](offers.md)** | First-pass business-layer offers and commercial framing. |
 | **[target-registry.md](target-registry.md)** | Buyer segments for the future company path. |
@@ -95,6 +96,7 @@ Use this order when actively working on the territory:
 7. For **how evals are packaged as product** (operator + partner narrative), read [quality-gates-narrative.md](quality-gates-narrative.md).
 8. For **session continuity as explicit steps** (files / scripts / CI vs implicit memory), read [session-continuity-contract.md](session-continuity-contract.md).
 9. For **audit continuity as the safety story** (visible pipeline state vs “trust the chat”), read [safety-story-ux.md](safety-story-ux.md).
+10. For **long-form tech media** (podcasts, keynotes) translated into integration + offers vocabulary — not as specs — read [external-signals.md](external-signals.md) and the shared table in [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md).
 
 ---
 

@@ -10,9 +10,10 @@
 
 ## Why this file exists
 
-work-politics and work-strategy share one **daily horizon** ([common-inputs.md](common-inputs.md)). Operators sometimes ingest long-form media (e.g. Moonshots-class episodes on GTC, frontier labs, labor markets). That content is **opinion + narrative**, but it can still sharpen:
+work-politics, work-strategy, and **work-dev** share one operator reality; long-form media is optional color. Operators sometimes ingest long-form media (e.g. Moonshots-class episodes on GTC, frontier labs, labor markets). That content is **opinion + narrative**, but it can still sharpen:
 
 - **work-strategy** — product, governance, and partner vocabulary (enterprise trust, inference economics, agent runtimes).
+- **work-dev** — Grace-Mar ⟷ OpenClaw integration, export/portability, evals-as-product — see [external-signals.md](../work-dev/external-signals.md) for the **work-dev-only** lens on this table.
 - **work-politics** — **only where** a theme intersects policy, economy, or voter-facing narrative (energy, jobs, industrial policy, AI regulation) — still **triangulated** and **sourced** before ship.
 
 ---

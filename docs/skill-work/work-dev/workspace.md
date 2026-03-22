@@ -42,6 +42,7 @@ Use this file when you want one place to understand:
 | `proof-ledger.md` | Reusable proof lines for client or partner conversations |
 | `session-continuity-contract.md` | Explicit continuity steps vs implicit memory (files, scripts, CI) |
 | `safety-story-ux.md` | Visible pipeline state as user-facing safety story (pending/approved, receipts, staged vs merged) |
+| `external-signals.md` | Transcript/keynote-class discourse → work-dev lens (OpenClaw, trust, inference); pairs with work-strategy `external-tech-scan.md` |
 | `engagement-model.md` | Commercial packaging and sequencing |
 | `delivery-playbook.md` | Service delivery phases |
 | `claude-code-wat-crosswalk.md` | WAT / agentic IDE ↔ delivery, reliability, handover |
