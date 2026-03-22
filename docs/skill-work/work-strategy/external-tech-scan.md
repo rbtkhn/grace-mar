@@ -10,7 +10,7 @@
 
 ## Why this file exists
 
-work-politics, work-strategy, and **work-dev** share one operator reality; long-form media is optional color. Operators sometimes ingest long-form media (e.g. Moonshots-class episodes on GTC, frontier labs, labor markets). That content is **opinion + narrative**, but it can still sharpen:
+work-politics, work-strategy, and **work-dev** share one operator reality; long-form media is optional color. Operators sometimes ingest long-form media (e.g. Moonshots-class episodes on GTC, frontier labs, labor markets; **economics-of-AI** interviews on “next 1,000 days,” macro shock, sovereign AI). That content is **opinion + narrative**, but it can still sharpen:
 
 - **work-strategy** — product, governance, and partner vocabulary (enterprise trust, inference economics, agent runtimes).
 - **work-dev** — Grace-Mar ⟷ OpenClaw integration, export/portability, evals-as-product — see [external-signals.md](../work-dev/external-signals.md) for the **work-dev-only** lens on this table.
@@ -29,6 +29,9 @@ work-politics, work-strategy, and **work-dev** share one operator reality; long-
 | **Labor / CS pipeline** | Anecdotal **placement collapse** + **credential vs demonstrated work** memes in tech Twitter/podcasts. | Hiring narrative for **builder** operators; **not** labor economics proof. | Voter/economy copy **only** with BLS, Fed, or established journalism — treat podcast stats as **unverified**. |
 | **Physical AI / robotics** | “Atoms” market vs “bits”; autonomy platforms. | Future offers (logistics, robotics) — speculative. | Defense, manufacturing, jobs — **triangulate** per [analytical-lenses](../work-politics/analytical-lenses/manifest.md). |
 | **Abundance / UBI–UHI** | Distribution of productivity windfalls; narrative vs evidence for belief change. | Engagement model, long-horizon positioning. | Policy rhetoric only when principal or brief explicitly engages; avoid freelancing philosophy. |
+| **Economics-of-AI / “post-human labor” macro** | Claims that **monetary policy, employment, and utility** assumptions break when **agents** absorb marginal GDP; **deflation**, **issuance for “being human,”** small-firm + AI. | work-strategy **horizon** language; [work-dev external-signals](../work-dev/external-signals.md) (economics-of-AI / 1000 days section); **not** a product roadmap. | Only with **cited** econ sources and principal-aligned issues — never podcast macro as fact. |
+| **Sovereign / local / personal coordinator AI** | “**Your** stack coordinates cloud models”; open protocol; vs **digital feudalism** or **fragmentation** framings. | Portable identity + **staging vs merge** story; overlaps OpenClaw handback. | Foreign / state AI policy only when **brief** demands it and **sources** exist. |
+| **Agency vs stateless models** | Hard-takeoff debate tied to **persistent agency** vs **blank session**. | Why **audit logs and gate** matter — [work-dev safety story](../work-dev/safety-story-ux.md). | N/A unless regulating autonomous systems — source-driven. |
 
 ---
 

@@ -1,14 +1,14 @@
-# External signals — work-dev lens (Moonshots / GTC–class discourse)
+# External signals — work-dev lens (long-form tech / economics discourse)
 
-**Purpose:** Apply long-form tech/business media the operator may ingest (e.g. Moonshots-class episodes on Nvidia, OpenClaw, frontier labs, inference economics, fabs) to the **Grace-Mar ⟷ OpenClaw** territory — **integration, offers, and partner vocabulary** — without treating podcasts as **engineering specifications**.
+**Purpose:** Apply long-form media the operator may ingest — e.g. **Moonshots / GTC–class** (infra, OpenClaw), **economics-of-AI interviews** (e.g. “next 1,000 days,” *Last Economy*–class arguments) — to the **Grace-Mar ⟷ OpenClaw** territory: **integration, offers, and partner vocabulary**. **Not** engineering specifications.
 
-**Shared theme table (non-canonical):** [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) — same discourse, three lenses (work-strategy, work-politics, **work-dev**).
+**Shared theme table (non-canonical):** [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) — work-strategy, work-politics, **work-dev**.
 
 **Last refreshed:** 2026-03-21
 
 ---
 
-## What work-dev should take away
+## What work-dev should take away (infra / platform scan)
 
 | Discourse theme (rough) | work-dev use |
 |---------------------------|--------------|
@@ -18,6 +18,21 @@
 | **Ecosystem at the edges** (platform + partners) | Reinforces **comprehension lock-in** positioning in this README: **Record + export** portable; vendor runtime is **not** canonical identity. |
 | **Organizational / workflow automation** memes | **Counter-position:** recursive optimization in *their* stack ≠ merge into *your* fork — **companion gate** and [session-continuity-contract.md](session-continuity-contract.md) stay the differentiator. |
 | **Supply chain / fab geopolitics** (silicon bottleneck) | **Analogy only:** “who can ship” matters — parallel is **who owns merge + export** (git, PRP, bundle), not who has the loudest model. |
+
+---
+
+## What work-dev should take away (economics-of-AI / “1000 days” scan)
+
+*Example source class: interviews on macro shock, “competent intelligence,” sovereign or local AI, personal coordinator agents — opinion, not forecast.*
+
+| Discourse theme (rough) | work-dev use |
+|---------------------------|--------------|
+| **Personal AI as coordinator** (“Jarvis” calls frontier APIs) | Aligns with **OpenClaw as adapter**: runtime coordinates tools; **Record** remains canonical identity **if** merge + export stay companion-governed — **not** the vendor’s narrative alone. |
+| **Third-party default = cognitive colonialism** (phrasing in discourse) | Marketing language for **comprehension lock-in**: same fear class as **silent failure** — maps to portable export + [safety-story-ux.md](safety-story-ux.md). |
+| **Stateless models / no skin in the game** (until given agency) | Explains why **chat is not audit**: **persisted** state is in **git** (SELF, RECURSION-GATE, receipts) — [session-continuity-contract.md](session-continuity-contract.md). |
+| **Sovereign / community / state-champion stacks** (open protocol, local) | **Different problem** (public sector, currency) but **shared buyer language** for “**who owns the stack**” — Grace-Mar’s answer remains **companion + repo**, not a national coin narrative. |
+| **Small team + AI** (6–12 people, “skin in the game”) | **Offers / engagement** vocabulary: boutique operator + tooling — consistent with [offers.md](offers.md); does not change **integration-status** facts. |
+| **Deflation / Fed transmission / “money for being human”** | **Macro** — useful for partner **context** only; **no** policy claims from Grace-Mar Voice without Record + gate. |
 
 ---
 
