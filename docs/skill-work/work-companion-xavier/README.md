@@ -6,7 +6,7 @@
 
 This folder (everything **above** that `companion-xavier/` child) is **not** Xavier’s Record. It holds **SEED-MANIFEST**, **LEAKAGE-CHECKLIST**, **ALIGNMENT**, handoff notes, and operator-facing navigation so you can reason about the seed without opening her tree first.
 
-**Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md) · [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md) (upstream template parity)
+**Read first:** [INDEX.md](INDEX.md) · [ALIGNMENT.md](ALIGNMENT.md) · [LANES.md](LANES.md) · [TERMS-XAVIER.md](TERMS-XAVIER.md) · [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md) (upstream template parity) · [Boundary audit](../../audit-boundary-grace-mar-companion-xavier-companion-self.md) (grace-mar · companion-self · companion-xavier)
 
 **Never copy** `users/grace-mar/**` into the companion-xavier instance tree. See [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md).
 

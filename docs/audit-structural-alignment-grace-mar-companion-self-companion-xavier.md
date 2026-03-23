@@ -1,6 +1,6 @@
 # Audit: Structural and formatting alignment (grace-mar · companion-self · companion-xavier)
 
-**Purpose:** Single place to compare **structure** (paths, repos, forks) and **formatting** (terminology, capitalization, naming) across three surfaces: the **grace-mar** instance, the **companion-self** template, and the **companion-xavier** instance (subtree in grace-mar). **Governed by:** [glossary.md](glossary.md), [canonical-paths.md](canonical-paths.md), [id-taxonomy.md](id-taxonomy.md), [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md).
+**Purpose:** Single place to compare **structure** (paths, repos, forks) and **formatting** (terminology, capitalization, naming) across three surfaces: the **grace-mar** instance, the **companion-self** template, and the **companion-xavier** instance (subtree in grace-mar). **Normative boundaries** (what may cross, hard lines): [audit-boundary-grace-mar-companion-xavier-companion-self.md](audit-boundary-grace-mar-companion-xavier-companion-self.md). **Governed by:** [glossary.md](glossary.md), [canonical-paths.md](canonical-paths.md), [id-taxonomy.md](id-taxonomy.md), [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md).
 
 **Scope:** Layout expectations, canonical filenames, hyphenated system names, **SELF-LIBRARY** merge policy, and **Record** boundaries. Not a security or UX audit.
 
