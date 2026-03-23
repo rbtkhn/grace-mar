@@ -3,23 +3,30 @@
 Rotate self-archive.md when it exceeds size or entry count.
 
 SELF-ARCHIVE is gated (appended only on merge). This script rotates the main file
-when it grows large; rotated chunks go to archives/SELF-ARCHIVE-YYYY-MM.md.
-Keeps the last KEEP_RECENT entries in the main file. Run manually or via cron.
+when it grows large; rotated chunks go to archives/SELF-ARCHIVE-YYYY-MM.md (or
+``.md.gz`` when ``--compress``). Keeps the last KEEP_RECENT entries in the main file.
 
-Thresholds:
-  - MAX_BYTES: 1 MB
-  - MAX_ENTRIES: 2500
-  - KEEP_RECENT: 2000 entries
+**Gzip:** Tools that read monthly archives must open ``.md.gz`` (e.g. ``gzip.open``)
+or decompress first. Plain ``.md`` archives from older runs are unchanged.
+
+Threshold defaults can be set in ``config/fork-config.json`` (see ``archive_*`` keys).
 
 Usage:
     python scripts/rotate_telegram_archive.py          # Dry run (report only)
     python scripts/rotate_telegram_archive.py --apply  # Perform rotation
+    python scripts/rotate_telegram_archive.py --apply --compress  # Rotated months as .md.gz
 """
 
 import argparse
+import gzip
 import os
 import re
 from pathlib import Path
+
+try:
+    from fork_config import load_fork_config
+except ImportError:
+    from scripts.fork_config import load_fork_config
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
@@ -53,6 +60,7 @@ def rotate_archive(
     max_bytes: int = MAX_BYTES,
     max_entries: int = MAX_ENTRIES,
     keep_recent: int = KEEP_RECENT,
+    compress: bool = False,
 ) -> dict:
     archive_path = REPO_ROOT / "users" / user_id / "self-archive.md"
     archives_dir = REPO_ROOT / "users" / user_id / "archives"
@@ -87,15 +95,28 @@ def rotate_archive(
             ym = get_entry_ym(block) or "unknown"
             by_month.setdefault(ym, []).append(block)
         for ym, entries in by_month.items():
-            dest = archives_dir / f"SELF-ARCHIVE-{ym}.md"
             header_ym = f"# SELF-ARCHIVE — {ym}\n\n> Rotated from main archive. Append-only.\n\n---\n\n"
-            if dest.exists():
-                existing = dest.read_text(encoding="utf-8")
-                if not existing.rstrip().endswith("\n\n"):
-                    existing += "\n\n"
-                dest.write_text(existing + "\n\n".join(entries) + "\n\n", encoding="utf-8")
+            if compress:
+                dest = archives_dir / f"SELF-ARCHIVE-{ym}.md.gz"
+                if dest.exists():
+                    with gzip.open(dest, "rt", encoding="utf-8") as zf:
+                        existing = zf.read()
+                    if not existing.rstrip().endswith("\n\n"):
+                        existing += "\n\n"
+                    body = existing + "\n\n".join(entries) + "\n\n"
+                else:
+                    body = header_ym + "\n\n".join(entries) + "\n\n"
+                with gzip.open(dest, "wt", encoding="utf-8") as zf:
+                    zf.write(body)
             else:
-                dest.write_text(header_ym + "\n\n".join(entries) + "\n\n", encoding="utf-8")
+                dest = archives_dir / f"SELF-ARCHIVE-{ym}.md"
+                if dest.exists():
+                    existing = dest.read_text(encoding="utf-8")
+                    if not existing.rstrip().endswith("\n\n"):
+                        existing += "\n\n"
+                    dest.write_text(existing + "\n\n".join(entries) + "\n\n", encoding="utf-8")
+                else:
+                    dest.write_text(header_ym + "\n\n".join(entries) + "\n\n", encoding="utf-8")
         new_body = "\n\n".join(kept) + ("\n\n" if kept else "")
         archive_path.write_text(header + new_body, encoding="utf-8")
 
@@ -105,23 +126,52 @@ def rotate_archive(
         "kept": len(kept),
         "size_bytes": size,
         "applied": apply,
+        "compress": compress,
     }
 
 
 def main() -> None:
+    cfg = load_fork_config()
     parser = argparse.ArgumentParser(description="Rotate conversation archive when too large")
     parser.add_argument("--apply", "-a", action="store_true", help="Perform rotation (default: dry run)")
     parser.add_argument("--user", "-u", default=DEFAULT_USER_ID, help="User id")
-    parser.add_argument("--max-bytes", type=int, default=MAX_BYTES, help="Archive size threshold in bytes")
-    parser.add_argument("--max-entries", type=int, default=MAX_ENTRIES, help="Archive entry-count threshold")
-    parser.add_argument("--keep-recent", type=int, default=KEEP_RECENT, help="How many recent entries to keep")
+    parser.add_argument(
+        "--max-bytes",
+        type=int,
+        default=None,
+        help=f"Archive size threshold in bytes (default: config or {MAX_BYTES})",
+    )
+    parser.add_argument(
+        "--max-entries",
+        type=int,
+        default=None,
+        help="Archive entry-count threshold (default: config archive_rotation_trigger_entries / archive_max_entries or "
+        f"{MAX_ENTRIES})",
+    )
+    parser.add_argument(
+        "--keep-recent",
+        type=int,
+        default=None,
+        help=f"How many recent entries to keep (default: config or {KEEP_RECENT})",
+    )
+    parser.add_argument(
+        "--compress",
+        action="store_true",
+        help="Write rotated monthly chunks as .md.gz under archives/ (smaller on disk; not plain-text in git)",
+    )
     args = parser.parse_args()
+    max_bytes = args.max_bytes if args.max_bytes is not None else int(cfg.get("archive_max_bytes", MAX_BYTES))
+    max_entries = args.max_entries if args.max_entries is not None else int(
+        cfg.get("archive_rotation_trigger_entries") or cfg.get("archive_max_entries") or MAX_ENTRIES
+    )
+    keep_recent = args.keep_recent if args.keep_recent is not None else int(cfg.get("archive_keep_recent", KEEP_RECENT))
     result = rotate_archive(
         user_id=args.user,
         apply=args.apply,
-        max_bytes=args.max_bytes,
-        max_entries=args.max_entries,
-        keep_recent=args.keep_recent,
+        max_bytes=max_bytes,
+        max_entries=max_entries,
+        keep_recent=keep_recent,
+        compress=args.compress,
     )
     if result.get("reason") == "archive_not_found":
         print("Archive not found, nothing to do.")

@@ -16,10 +16,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 try:
+    from fork_config import load_fork_config
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
     from operator_depth_hint import velocity_oneliner
     from work_politics_ops import get_wap_snapshot
 except ImportError:
+    from scripts.fork_config import load_fork_config
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
     from scripts.operator_depth_hint import velocity_oneliner
     from scripts.work_politics_ops import get_wap_snapshot
@@ -115,6 +117,8 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     pending_all = _pending_candidates(recursion_gate, "all")
     pending_wap = _pending_candidates(recursion_gate, "wap")
     pending_companion = _pending_candidates(recursion_gate, "companion")
+    fork_cfg = load_fork_config()
+    max_pending = fork_cfg.get("max_pending_candidates")
     last_activity = _last_activity_oneliner(evidence) or "_none parsed_"
     session_tail = _session_lines_tail(session, 3)
     wap_snapshot = get_wap_snapshot(user_id)
@@ -132,13 +136,21 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
         f"- Generated: {ts}",
         f"- User: `{user_id}`",
         f"- Gate pending: {len(pending_all)} total ({len(pending_wap)} work-politics, {len(pending_companion)} companion)",
-        f"- Last activity: {last_activity}",
-        f"- Integrity: {'PASS' if not integrity_errors else f'FAIL ({len(integrity_errors)} issue(s))'}",
-        f"- Worktree: {'clean' if not dirty_files else f'{len(dirty_files)} changed file(s)'}",
-        "",
-        "## Top priorities",
-        "",
     ]
+    if max_pending is not None and len(pending_all) > int(max_pending):
+        lines.append(
+            f"- **Gate backlog:** {len(pending_all)} pending exceeds `max_pending_candidates` ({max_pending}) in `config/fork-config.json` — review or merge soon."
+        )
+    lines.extend(
+        [
+            f"- Last activity: {last_activity}",
+            f"- Integrity: {'PASS' if not integrity_errors else f'FAIL ({len(integrity_errors)} issue(s))'}",
+            f"- Worktree: {'clean' if not dirty_files else f'{len(dirty_files)} changed file(s)'}",
+            "",
+            "## Top priorities",
+            "",
+        ]
+    )
     for item in _priority_list(
         pending_all=pending_all,
         pending_wap=pending_wap,

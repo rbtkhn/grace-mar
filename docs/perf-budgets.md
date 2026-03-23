@@ -32,6 +32,16 @@ python scripts/run_perf_suite.py --tier 1 2 -o users/grace-mar/artifacts/perf-re
 
 **Nightly / manual:** Run tiers 1–3 weekly or before releases; store `-o` JSON for trending. CI runs tier 1 only.
 
+### Baseline regression check (pre-release / after perf work)
+
+After changes to gate parsing, the keyword retriever, or rate limiting, run tier 1 with `--check-baseline` so over-budget steps fail fast:
+
+```bash
+python scripts/run_perf_suite.py --tier 1 -u grace-mar --check-baseline
+```
+
+If timings improve on your **reference machine** (document class, CPU, disk), you may **tighten** values in [scripts/perf/baselines.json](../scripts/perf/baselines.json) and commit; if CI runners are slower, keep generous p95 or use `--baseline-slack` for tier 3 only.
+
 ---
 
 ## Tier summary
@@ -52,7 +62,7 @@ Adjust [scripts/perf/baselines.json](../scripts/perf/baselines.json) after measu
 
 | Step | Description | Default baseline (generous) | Notes |
 |------|-------------|----------------------------|--------|
-| 1.1 | Parse recursion-gate | 2000 ms | Grows with queue size |
+| 1.1 | Parse recursion-gate | 500 ms | Indexed pipeline-events read; gate file size still matters |
 | 1.2 | SYSTEM_PROMPT char count | (info only) | Track regression if prompt balloons |
 | 1.3 | Retriever `retrieve()` | 500 ms | Keyword index over SELF/SKILLS/EVIDENCE |
 | 1.4 | Rate-limit lock (2000 unique keys, total wall) | 800 ms | |

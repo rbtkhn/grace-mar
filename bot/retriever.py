@@ -3,9 +3,13 @@ Lightweight retriever over SELF, SKILLS, EVIDENCE.
 
 Used for grounded answering: fetch relevant chunks so responses can cite source IDs.
 Keyword + section heuristics — no embeddings.
+
+Tier 1.3 (`run_perf_suite.py`) benchmarks this module. Vector / Chroma indexing for
+semantic search is separate — see `scripts/index_record.py`.
 """
 
 import os
+import pickle
 import re
 from pathlib import Path
 
@@ -23,9 +27,13 @@ WORK_PATHS = [
 ]
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
+DISK_CACHE_PATH = PROFILE_DIR / ".cache" / "retriever_chunks.pkl"
+
 # In-process cache for load_record_chunks (invalidated when any source file mtime changes)
 _chunks_cache: list[tuple[str, str]] | None = None
 _chunks_mtime: float = 0.0
+# token -> chunk row indices (aligned with _chunks_cache); rebuilt with chunks
+_chunks_inv: dict[str, set[int]] | None = None
 
 
 def _read(path: Path) -> str:
@@ -69,18 +77,61 @@ def _all_record_paths() -> list[Path]:
     return [SELF_PATH] + list(SKILLS_PATHS) + list(WORK_PATHS) + [EVIDENCE_PATH]
 
 
+def _source_fingerprint(paths: list[Path]) -> tuple[tuple[str, float, int], ...]:
+    """Stable fingerprint from path, mtime, size — invalidates disk cache when Record files change."""
+    out: list[tuple[str, float, int]] = []
+    for p in sorted(paths, key=lambda x: str(x)):
+        if p.exists():
+            st = p.stat()
+            out.append((str(p.resolve()), st.st_mtime, st.st_size))
+        else:
+            out.append((str(p.resolve()), 0.0, 0))
+    return tuple(out)
+
+
+def _build_inverted_index(chunks: list[tuple[str, str]]) -> dict[str, set[int]]:
+    inv: dict[str, set[int]] = {}
+    for i, (_, text) in enumerate(chunks):
+        for t in _tokenize(text):
+            inv.setdefault(t, set()).add(i)
+    return inv
+
+
 def load_record_chunks() -> list[tuple[str, str]]:
-    """Load all chunks from SELF, SKILLS, EVIDENCE. Uses in-process cache when valid (env GRACE_MAR_RETRIEVER_CACHE=0 to disable)."""
-    global _chunks_cache, _chunks_mtime
+    """Load all chunks from SELF, SKILLS, EVIDENCE.
+
+    Caching: in-process (``GRACE_MAR_RETRIEVER_CACHE=0`` disables); optional disk
+    pickle under ``users/<id>/.cache/retriever_chunks.pkl`` (``GRACE_MAR_RETRIEVER_DISK_CACHE=0`` disables).
+    """
+    global _chunks_cache, _chunks_mtime, _chunks_inv
     paths = _all_record_paths()
     max_mt = _max_mtime(paths)
+    fp = _source_fingerprint(paths)
+
     if (
         os.getenv("GRACE_MAR_RETRIEVER_CACHE", "1") != "0"
         and _chunks_cache is not None
         and max_mt > 0
         and max_mt == _chunks_mtime
     ):
+        if _chunks_inv is None:
+            _chunks_inv = _build_inverted_index(_chunks_cache)
         return _chunks_cache
+
+    disk_ok = os.getenv("GRACE_MAR_RETRIEVER_DISK_CACHE", "1") != "0"
+    if disk_ok and DISK_CACHE_PATH.exists():
+        try:
+            payload = pickle.loads(DISK_CACHE_PATH.read_bytes())
+            if payload.get("fp") == fp:
+                _chunks_cache = payload["chunks"]
+                _chunks_inv = payload.get("inv")
+                if not _chunks_inv:
+                    _chunks_inv = _build_inverted_index(_chunks_cache)
+                _chunks_mtime = max_mt
+                return _chunks_cache
+        except (OSError, pickle.UnpicklingError, TypeError, KeyError, AttributeError):
+            pass
+
     chunks: list[tuple[str, str]] = []
     if SELF_PATH.exists():
         chunks.extend(_extract_chunks(_read(SELF_PATH), "SELF"))
@@ -92,8 +143,23 @@ def load_record_chunks() -> list[tuple[str, str]]:
             chunks.extend(_extract_chunks(_read(p), "WORK"))
     if EVIDENCE_PATH.exists():
         chunks.extend(_extract_chunks(_read(EVIDENCE_PATH), "EVIDENCE"))
+
+    _chunks_inv = _build_inverted_index(chunks)
     _chunks_cache = chunks
     _chunks_mtime = max_mt
+
+    if disk_ok:
+        try:
+            DISK_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+            DISK_CACHE_PATH.write_bytes(
+                pickle.dumps(
+                    {"fp": fp, "chunks": chunks, "inv": _chunks_inv},
+                    protocol=pickle.HIGHEST_PROTOCOL,
+                )
+            )
+        except OSError:
+            pass
+
     return chunks
 
 
@@ -152,8 +218,24 @@ def retrieve(query: str, top_k: int = 5) -> list[tuple[str, str]]:
     query_tokens = set(_tokenize(query))
     if not query_tokens:
         return []
+
+    use_inv = os.getenv("GRACE_MAR_RETRIEVER_INVERTED_INDEX", "1") != "0"
+    global _chunks_inv
+    if _chunks_inv is None:
+        _chunks_inv = _build_inverted_index(chunks)
+
+    if use_inv:
+        cand_idx: set[int] = set()
+        for t in query_tokens:
+            cand_idx |= _chunks_inv.get(t, set())
+        if not cand_idx:
+            return []
+        to_score = [chunks[i] for i in sorted(cand_idx)]
+    else:
+        to_score = chunks
+
     scored: list[tuple[float, str, str]] = []
-    for chunk_id, text in chunks:
+    for chunk_id, text in to_score:
         score = _score_chunk(query, query_tokens, chunk_id, text)
         if score > 0:
             scored.append((score, chunk_id, text))

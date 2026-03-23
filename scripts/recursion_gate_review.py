@@ -235,11 +235,15 @@ def _age_days(raw_ts: str) -> int | None:
     return max(0, (datetime.now(timezone.utc) - dt).days)
 
 
-def _pipeline_events_for_candidate(user_id: str, candidate_id: str) -> list[dict]:
+def _pipeline_events_index(user_id: str) -> dict[str, list[dict]]:
+    """
+    Single read of pipeline-events.jsonl: map candidate_id -> last 8 events (chronological order).
+    Used by parse_review_candidates once per call instead of O(candidates × file_size).
+    """
     events_path = _profile_dir(user_id) / "pipeline-events.jsonl"
     if not events_path.exists():
-        return []
-    events: list[dict] = []
+        return {}
+    by_cid: dict[str, list[dict]] = {}
     for line in events_path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line:
@@ -248,10 +252,18 @@ def _pipeline_events_for_candidate(user_id: str, candidate_id: str) -> list[dict
             row = json.loads(line)
         except json.JSONDecodeError:
             continue
-        if not isinstance(row, dict) or row.get("candidate_id") != candidate_id:
+        if not isinstance(row, dict):
             continue
-        events.append(row)
-    return events[-8:]
+        cid = row.get("candidate_id")
+        if not cid:
+            continue
+        by_cid.setdefault(str(cid), []).append(row)
+    return {cid: rows[-8:] for cid, rows in by_cid.items()}
+
+
+def _pipeline_events_for_candidate(user_id: str, candidate_id: str) -> list[dict]:
+    """Last 8 pipeline events for one candidate (reads index built from full file once)."""
+    return _pipeline_events_index(user_id).get(candidate_id, [])
 
 
 def _has_advisory_flagged(events: list[dict]) -> bool:
@@ -393,6 +405,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
     self_path = _profile_dir(user_id) / "self.md"
     content = _read(gate_path)
     self_text = _read(self_path)
+    pipeline_by_candidate = _pipeline_events_index(user_id)
     rows: list[dict] = []
     for match in _candidate_matches(content):
         candidate_id = match.group(1)
@@ -405,7 +418,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
         prompt_addition = _extract_block(yaml_body, "prompt_addition")
         profile_target = _extract_scalar(yaml_body, "profile_target")
         prompt_section = _extract_scalar(yaml_body, "prompt_section")
-        events = _pipeline_events_for_candidate(user_id, candidate_id)
+        events = pipeline_by_candidate.get(candidate_id, [])
         raw_pc = (_extract_scalar(yaml_body, "proposal_class") or "").strip()
         if raw_pc:
             eff_pc, pc_inferred = raw_pc, False

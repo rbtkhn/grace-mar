@@ -1,0 +1,7 @@
+{
+  "max_pending_candidates": 12,
+  "archive_max_entries": 2500,
+  "archive_max_bytes": 1000000,
+  "archive_keep_recent": 2000,
+  "archive_rotation_trigger_entries": 2200
+}

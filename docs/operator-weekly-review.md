@@ -20,6 +20,7 @@ Block time weekly — e.g. Sunday evening or Monday morning. All steps optional 
 | 6 | **Optional: Gap Hunter** — When reviewing an exchange, ask: *What's missing in the Record for this exchange?* Surfaces candidates the analyst might have missed. Stage to RECURSION-GATE if you find gaps. | ~5 min |
 | 7 | **Optional: PRP refresh** — If merges were applied, run `python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt` and commit. Keeps the anchor in sync. | ~2 min |
 | 8 | **Optional: Template sync** — When companion-self (template) has been updated, pull upgrades into grace-mar per [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md): diff template paths, merge into grace-mar's docs, validate, log the sync. Not needed every week; do when template or instance governance changes. | ~10 min |
+| 9 | **Optional: Growth / density pulse** — `python scripts/measure_growth_and_density.py` (add `--min-avg-words N` for automation). Optional: `python scripts/measure_uniqueness.py`. | ~2 min |
 
 ---
 

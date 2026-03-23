@@ -16,9 +16,11 @@ Cognitive density:
   - Dimension balance (IX-A : IX-B : IX-C)
 """
 
+import argparse
 import json
 import re
 import subprocess
+import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -133,6 +135,16 @@ def growth_from_git(self_path: Path) -> list[tuple[str, int, int, int]]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Measure cognitive growth and density (IX entries).")
+    parser.add_argument(
+        "--min-avg-words",
+        type=float,
+        default=None,
+        metavar="N",
+        help="Exit with code 1 if average words per IX entry is below N (automation / weekly cron).",
+    )
+    args = parser.parse_args()
+
     self_path = PROFILE_DIR / "self.md"
     evidence_path = PROFILE_DIR / "self-evidence.md"
     events_path = PROFILE_DIR / "pipeline-events.jsonl"
@@ -142,7 +154,7 @@ def main() -> None:
 
     if not entries:
         print("No IX entries found in self.md")
-        return
+        sys.exit(1 if args.min_avg_words is not None else 0)
 
     # Growth rate from dates
     dates = [e["date"] for e in entries]
@@ -208,6 +220,13 @@ def main() -> None:
     print(f"Dimension balance:    IX-A:IX-B:IX-C = {balance}")
 
     print()
+
+    if args.min_avg_words is not None and avg_words < args.min_avg_words:
+        print(
+            f"Below average-words floor: {avg_words:.1f} < {args.min_avg_words} (see --min-avg-words).",
+            file=sys.stderr,
+        )
+        sys.exit(1)
 
 
 if __name__ == "__main__":

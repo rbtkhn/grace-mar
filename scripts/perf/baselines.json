@@ -1,6 +1,6 @@
 {
   "_comment": "p95 budgets in ms unless noted. null = skip check. Update after run_perf_suite on reference machine.",
-  "1.1_parse_gate_ms_p95": 2000,
+  "1.1_parse_gate_ms_p95": 500,
   "1.3_retrieve_ms_p95": 500,
   "1.4_rate_limit_total_ms": 800,
   "2.1_generate_profile_ms_p95": 120000,

@@ -32,6 +32,11 @@ Mini App / bot dependencies are optional: `pip install -e ".[miniapp]"` (see `[p
 
 **Reflection cycle (operator):** `pip install -e ".[reflect]"` — see [docs/reflection-cycle.md](docs/reflection-cycle.md). `grace-mar reflect -u grace-mar --dry-run` writes `users/<id>/reflection-proposals/` only; `--append` stages candidates into `recursion-gate.md`.
 
+## Performance
+
+- Budgets and tier meanings: [docs/perf-budgets.md](docs/perf-budgets.md).
+- Local check against committed baselines: `python scripts/run_perf_suite.py --tier 1 -u grace-mar --check-baseline` (run before releases or after changing `scripts/recursion_gate_review.py`, `bot/retriever.py`, or `scripts/perf/baselines.json`).
+
 ## Questions
 
 Open a discussion or issue on [GitHub](https://github.com/rbtkhn/grace-mar) for tooling and docs; instance-specific Record content is not something to “fix” without the companion’s process.
