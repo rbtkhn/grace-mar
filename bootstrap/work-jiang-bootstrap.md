@@ -37,7 +37,7 @@ Skim as needed: `.github/workflows/work-jiang.yml` (generator order), `research/
 
 ## Scope reminder
 
-- **Lane:** **Geo-Strategy** lecture series — `lectures/geo-strategy-*.md` (#1–#12) unless the task names another series.
+- **Lane:** **Geo-Strategy** — `lectures/geo-strategy-*.md` (#1–#12); **Civilization** — `lectures/civilization-*.md` + `civ-*` in `metadata/sources.yaml` when the task is that series. Default book tranche is Volume 1 (Geo-Strategy) unless the task says otherwise.
 - **work-jiang is operator research** until content is merged through the gated pipeline into the Record; do not treat corpus as Voice knowledge.
 
 ---

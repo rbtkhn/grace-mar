@@ -1,6 +1,12 @@
 # BOOK ARCHITECTURE
 
-**Project:** Jiang book / site
+**Project:** Predictive History, Volume 1: Geo-Strategy
+
+## Series and volume
+
+**Series:** Predictive History — multivolume work; **one volume per lecture series**.
+
+**Volume 1:** Geo-Strategy (this book’s primary lecture corpus).
 
 ## Thesis
 
@@ -8,7 +14,7 @@ Jiang offers a civilizational philosophy that links culture, power, education, a
 
 ## Book promise
 
-This project explains Jiang's philosophy clearly enough for general readers, then tests it analytically using transcript-backed evidence, CIV-MEM framing, and selected real-world applications.
+This volume explains Jiang's philosophy clearly enough for general readers, then tests it analytically using transcript-backed evidence, CIV-MEM framing, and selected real-world applications. The multivolume work Predictive History devotes one book to each lecture series; this volume draws on the Geo-Strategy series.
 
 ## Audience
 

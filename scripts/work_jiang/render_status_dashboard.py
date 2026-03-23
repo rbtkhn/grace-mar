@@ -34,6 +34,10 @@ def count_geo_lectures() -> int:
     return len(list((WORK_DIR / "lectures").glob("geo-strategy-*.md")))
 
 
+def count_civilization_lectures() -> int:
+    return len(list((WORK_DIR / "lectures").glob("civilization-*.md")))
+
+
 def main() -> int:
     sources = load_yaml(WORK_DIR / "metadata" / "sources.yaml").get("sources", [])
     chapters = load_yaml(WORK_DIR / "metadata" / "chapter-queue.yaml").get("chapter_queue", [])
@@ -43,6 +47,7 @@ def main() -> int:
     infl_links = load_yaml(WORK_DIR / "metadata" / "influence-links.yaml")
 
     lecture_count = count_geo_lectures()
+    civ_lecture_count = count_civilization_lectures()
     analysis_count = len(list((WORK_DIR / "analysis").glob("*.md")))
     # exclude .gitkeep if counted as file - glob *.md only real files
     missing_analysis = [s["source_id"] for s in sources if s["status"]["analysis"] != "complete"]
@@ -95,6 +100,7 @@ def main() -> int:
         "## Corpus",
         "",
         f"- **Geo-Strategy lectures:** {lecture_count}",
+        f"- **Civilization series lectures (curated files):** {civ_lecture_count}",
         f"- **Analysis memos:** {analysis_count}",
         f"- **Missing analysis:** {len(missing_analysis)} ({', '.join(missing_analysis) if missing_analysis else 'none'})",
         "",

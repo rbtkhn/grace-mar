@@ -1,11 +1,12 @@
 # work-jiang — external research
 
-Operator-curated **source texts** for the Jiang book/site project (not Voice knowledge until merged through the gate).
+Operator-curated **source texts** for the Jiang book/site project (not Voice knowledge until merged through the gate). The book line is **Predictive History** — a **multivolume** work with **one volume per lecture series**; the material in this tree is **Volume 1 (Geo-Strategy)** unless a path or note names another series.
 
 | Kind | Path |
 |------|------|
-| Lecture notes + transcripts | [lectures/](lectures/) — Geo-Strategy **#1–#12** only (e.g. [Geo-Strategy #1](lectures/geo-strategy-01-iran-strategy-matrix-2024-04-24.md) … [#12 — Psychohistory (END)](lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md)) |
+| Lecture notes + transcripts | [lectures/](lectures/) — **Geo-Strategy** **#1–#12** (e.g. [#1](lectures/geo-strategy-01-iran-strategy-matrix-2024-04-24.md) … [#12](lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md)); **Civilization** series — `civilization-*.md` + `civ-*` rows in `metadata/sources.yaml` (separate volume; see [WORKFLOW-transcripts.md](WORKFLOW-transcripts.md) § Multi-series) |
 | Book / thesis / queue | [BOOK-ARCHITECTURE.md](BOOK-ARCHITECTURE.md), [THESIS-MAP.md](THESIS-MAP.md), [CHAPTER-QUEUE.md](CHAPTER-QUEUE.md), [STATUS.md](STATUS.md), [metadata/](metadata/) |
+| Book front matter | [PREFACE.md](PREFACE.md), [INTRODUCTION.md](INTRODUCTION.md) |
 | Concept dictionary | [CONCEPT-DICTIONARY.md](CONCEPT-DICTIONARY.md), `metadata/concepts.yaml`, `metadata/concept-mentions.yaml` |
 | Claims ledger | [CLAIMS-OVERVIEW.md](CLAIMS-OVERVIEW.md), [claims/registry/claims.jsonl](claims/registry/claims.jsonl), [claims/README.md](claims/README.md) |
 | Chapter evidence packs | [evidence-packs/](evidence-packs/) — one file per book chapter (`ch01.md` …) |

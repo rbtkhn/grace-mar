@@ -4,7 +4,7 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 ## Purpose
 
-**Deliver a book and/or website** that articulates and analyzes **Jiang’s unique philosophy** — clear enough for readers to understand the system, and analytic enough to show how claims connect and where they meet the world.
+**Deliver a book and/or website** under the multivolume title **Predictive History** (one volume per lecture series) that articulates and analyzes **Jiang’s unique philosophy** — clear enough for readers to understand the system, and analytic enough to show how claims connect and where they meet the world. Current repo tranche: **Volume 1 — Geo-Strategy**.
 
 **Method (operator work, not Voice knowledge until merged through the gate):**
 
@@ -66,7 +66,7 @@ life_mission_ref: "self.md § VI VALUES (life_mission)"
 
 ## Operator schedule (Jiang lane)
 
-- **Lecture series order (Predictive History / book work):** (1) **Geo-Strategy** — curated in `research/external/work-jiang/lectures/`. (2) **Civilization** — second series; **transcripts:** operator upload next (integrate via [WORKFLOW-transcripts.md](../../research/external/work-jiang/WORKFLOW-transcripts.md) and channel index under `research/external/youtube-channels/predictive-history/`).
+- **Lecture series order (Predictive History / book work):** (1) **Geo-Strategy** — curated in `research/external/work-jiang/lectures/` (`geo-strategy-*.md`). (2) **Civilization** — second series; **transcript intake in progress** — add curated files as `civilization-*.md`, register `civ-*` sources in `metadata/sources.yaml`, same pipeline as Geo-Strategy ([WORKFLOW-transcripts.md](../../research/external/work-jiang/WORKFLOW-transcripts.md) § Multi-series; channel pulls under `research/external/youtube-channels/predictive-history/`).
 
 ---
 

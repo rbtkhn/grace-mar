@@ -42,6 +42,19 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
 
 2. **Register intent** — note in your tracker or `work-jiang.md` **WORK GOALS** / `near_term` which series or episode IDs you are processing this week (operator choice).
 
+### Multi-series (Predictive History)
+
+The umbrella book line is **Predictive History** — **one volume per lecture series**. Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata.
+
+| Series | `series` (in `metadata/sources.yaml`) | `source_id` pattern | Curated lecture filename pattern |
+|--------|----------------------------------------|---------------------|----------------------------------|
+| Geo-Strategy | `geo-strategy` | `geo-01` … | `lectures/geo-strategy-NN-*.md` |
+| Civilization | `civilization` | `civ-01` … | `lectures/civilization-NN-*.md` |
+
+- Add each processed episode to **`metadata/sources.yaml`** with stable `video_id`, paths, and status flags (same shape as Geo-Strategy rows).
+- **Analysis memos** — same convention as Geo-Strategy (`analysis/<video_id>-<short-slug>.md`); include `series` / `source_id` in front matter when normalizing.
+- **Intellectual chronology** (`metadata/chronology.yaml`) is currently scoped to the **Geo-Strategy** arc; Civilization sources do **not** need to appear there until you extend chronology for that volume (validator: every `geo-*` source must be covered; `civ-*` registers elsewhere).
+
 ---
 
 ## 3. Phase B — Normalize & link

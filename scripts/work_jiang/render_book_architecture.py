@@ -35,10 +35,26 @@ def render(data: dict) -> str:
     chapters = data["book"]["chapters"]
     appendix = data.get("appendix") or {}
     website = data.get("website") or {}
+    series_title = project.get("series_title")
+    volume = project.get("volume") or {}
     lines = [
         "# BOOK ARCHITECTURE",
         "",
         f"**Project:** {project['title']}",
+    ]
+    if series_title and isinstance(volume, dict) and volume.get("lecture_series"):
+        vol_n = volume.get("number")
+        ls = volume.get("lecture_series")
+        vol_line = f"**Volume {vol_n}:** {ls}" if vol_n is not None else f"**Volume:** {ls}"
+        lines += [
+            "",
+            "## Series and volume",
+            "",
+            f"**Series:** {series_title} — multivolume work; **one volume per lecture series**.",
+            "",
+            f"{vol_line} (this book’s primary lecture corpus).",
+        ]
+    lines += [
         "",
         "## Thesis",
         "",

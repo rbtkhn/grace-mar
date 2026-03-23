@@ -1,14 +1,20 @@
 # Machine-readable book architecture for work-jiang (Geo-Strategy corpus → book/site).
+# Multivolume umbrella: Predictive History — one volume per lecture series.
 # Render: python scripts/work_jiang/render_book_architecture.py
 
 project:
   id: work-jiang
-  title: "Jiang book / site"
+  series_title: "Predictive History"
+  volume:
+    number: 1
+    lecture_series: "Geo-Strategy"
+  title: "Predictive History, Volume 1: Geo-Strategy"
   thesis_one_sentence: "Jiang offers a civilizational philosophy that links culture, power, education, and historical agency into one system."
   promise_paragraph: >
-    This project explains Jiang's philosophy clearly enough for general readers,
+    This volume explains Jiang's philosophy clearly enough for general readers,
     then tests it analytically using transcript-backed evidence, CIV-MEM framing,
-    and selected real-world applications.
+    and selected real-world applications. The multivolume work Predictive History
+    devotes one book to each lecture series; this volume draws on the Geo-Strategy series.
   audience:
     primary: "serious general readers interested in history, philosophy, and geopolitics"
     secondary:

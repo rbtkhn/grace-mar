@@ -51,6 +51,8 @@ def main() -> int:
     claim_ids = load_claim_ids()
 
     sources = load_yaml(WORK_DIR / "metadata" / "sources.yaml").get("sources") or []
+    all_source_ids = {s["source_id"] for s in sources if s.get("source_id")}
+    # Chronology YAML (currently Geo-Strategy arc) must cover every geo-* source; other series register separately.
     geo_ids = {s["source_id"] for s in sources if (s.get("source_id") or "").startswith("geo-")}
 
     # Quotes + chapter links
@@ -127,7 +129,7 @@ def main() -> int:
                     errors.append(f"Duplicate source_id {gid} across periods")
                 seen_geo.add(gid)
                 union_geo.add(gid)
-                if gid not in geo_ids:
+                if gid not in all_source_ids:
                     errors.append(f"Period {pid} unknown source_id {gid}")
 
         missing = geo_ids - union_geo

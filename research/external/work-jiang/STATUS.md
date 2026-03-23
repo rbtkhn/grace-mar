@@ -5,6 +5,7 @@
 ## Corpus
 
 - **Geo-Strategy lectures:** 12
+- **Civilization series lectures (curated files):** 0
 - **Analysis memos:** 11
 - **Missing analysis:** 1 (geo-01)
 
