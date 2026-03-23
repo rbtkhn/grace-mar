@@ -14,6 +14,8 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 Nothing in this file is Record truth for the Voice until merged through the gated pipeline. Human-gated.
 
+**Membrane (normative):** [research/external/work-jiang/README.md § Boundaries](../../research/external/work-jiang/README.md#boundaries-membrane) — research corpus vs Record, candidates vs quotes, validators as gate.
+
 ---
 
 ## Context objectives

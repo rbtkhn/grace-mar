@@ -18,6 +18,7 @@ Operator- and agent-facing checklist so multi-step Jiang work stays reviewable a
 2. **Scope** — Confirm lane: **Geo-Strategy** (`lectures/geo-strategy-*.md`, not other lecture lanes unless the task says so). If the thread also touches Record/pipeline/Voice, run harness warmup per repo rules and paste output once.
 3. **Plan alignment** — If work maps to phased PRs (quotes → counter-readings → chronology → validator/CI), name commits or branches to those phases so bisect stays cheap.
 4. **Lane** — Explicit **Ship** (implement, wire CI) vs **Think** (design only); mixed threads should state which.
+5. **Membrane** — Canonical boundary rules live in `research/external/work-jiang/README.md` § **Boundaries (membrane)** — link to it instead of duplicating policy in session replies. Validators are enforcement; see § Guardrails below.
 
 ## Canonical verify block (repo root)
 
@@ -69,8 +70,10 @@ Trim the block if the task truly doesn’t touch comparative layer or upstream g
 
 - Do not treat `quote-candidates.yaml` as polished quotes for prose.
 - Do not merge Record/profile from this lane without the gated pipeline; work-jiang is operator research unless explicitly merged elsewhere.
+- Full **may / must not** table and warmup rule: `research/external/work-jiang/README.md` § Boundaries (membrane).
 
 ## Related
 
-- `research/external/work-jiang/README.md` — Production pipeline and comparative layer section
+- `research/external/work-jiang/README.md` — § Boundaries (membrane); production pipeline; comparative layer
+- `docs/audit-boundary-grace-mar-companion-xavier-companion-self.md` — grace-mar · companion-self · companion-xavier (instance-wide; not Jiang data rules)
 - `scripts/work_jiang/validate_comparative_layer.py` — Gates for high-priority analysis chapters and chronology

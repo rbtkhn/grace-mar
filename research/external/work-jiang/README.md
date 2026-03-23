@@ -22,6 +22,22 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 
 See [users/grace-mar/work-jiang.md](../../../users/grace-mar/work-jiang.md) for project purpose and method.
 
+## Boundaries (membrane)
+
+Normative rules for this tree — **canonical here**; do not restate long policy in `users/grace-mar/work-jiang.md` except short pointers.
+
+| May cross | Must stay separate |
+|-----------|-------------------|
+| **Operator research → book/site artifacts** — YAML, renders, evidence packs, dashboards | **Record / Voice / IX** — nothing here is companion truth until it passes [RECURSION-GATE](../../../users/grace-mar/recursion-gate.md) and merge scripts (see [AGENTS.md](../../../AGENTS.md)) |
+| **Curated layer** — hand-edited `metadata/quotes.yaml`, `metadata/chronology.yaml`, claims registry | **Scored noise** — `metadata/quote-candidates.yaml` is machine-assist only; do not treat as polished quotations |
+| **Argument layer** — concepts, claims, thesis links, packs | **Comparative layer** — quotes, counter-readings, chronology — keep generators and validators in sync; do not skip comparative validators if you touched that YAML |
+
+**Enforcement:** Run the [production pipeline](#production-pipeline-book--site) after metadata or script edits. `validate_work_jiang.py`, `validate_argument_layer.py`, and `validate_comparative_layer.py` are the membrane — treat failures like CI failures before stacking more changes.
+
+**Repo-wide context:** How grace-mar relates to template and other instance lanes (not Jiang-specific) lives in [docs/audit-boundary-grace-mar-companion-xavier-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-xavier-companion-self.md).
+
+**Session:** If a thread edits `users/grace-mar/` (SELF, gate, pipeline) or merges narrative into companion-facing Record files, run `python3 scripts/harness_warmup.py -u grace-mar` once and paste the output in that thread.
+
 ## Production pipeline (book / site)
 
 From repo root (requires `pyyaml`, e.g. `pip install -r requirements-dev.txt`):
