@@ -10,6 +10,23 @@ quotes:
     these two things what must Iran show to China and Russia in order to get China
     and Russia involved in this conflict if you're China and Russia you're an investor
     right Why will why will I invest in you Iran
+  text_raw: make sure that it's able to obtain oil from the Middle East China right
+    now is getting most of its oil from the Middle East okay um but it will take time
+    for Russia and China to get to get themselves involved for russan trying to to
+    to get themselves involved in this conflict Iran must prove two things what are
+    these two things what must Iran show to China and Russia in order to get China
+    and Russia involved in this conflict if you're China and Russia you're an investor
+    right Why will why will I invest in you Iran
+  text_clean: make sure that it's able to obtain oil from the Middle East China right
+    now is getting most of its oil from the Middle East okay um but it will take time
+    for Russia and China to get to get themselves involved for russan trying to to
+    to get themselves involved in this conflict Iran must prove two things what are
+    these two things what must Iran show to China and Russia in order to get China
+    and Russia involved in this conflict if you're China and Russia you're an investor
+    right Why will why will I invest in you Iran
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -20,7 +37,8 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0002
   source_id: geo-01
   analysis_id: null
@@ -31,6 +49,23 @@ quotes:
     okay Russia will not come out and say we support um Iran never um before before
     this war happens Russia and China could if they choose sign a treaty with Iran
     saying that if if anyone attacks you
+  text_raw: basis okay so so China would probably provide weapons and material but
+    this will not impact the relationship between China and the uh United States okay
+    and during this war China will maintain a position of what we call Strategic ambiguity
+    and all this is saying is that China is not going to say that we support Iran
+    okay Russia will not come out and say we support um Iran never um before before
+    this war happens Russia and China could if they choose sign a treaty with Iran
+    saying that if if anyone attacks you
+  text_clean: basis okay so so China would probably provide weapons and material but
+    this will not impact the relationship between China and the uh United States okay
+    and during this war China will maintain a position of what we call Strategic ambiguity
+    and all this is saying is that China is not going to say that we support Iran
+    okay Russia will not come out and say we support um Iran never um before before
+    this war happens Russia and China could if they choose sign a treaty with Iran
+    saying that if if anyone attacks you
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -40,7 +75,8 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0003
   source_id: geo-03
   analysis_id: null
@@ -51,6 +87,23 @@ quotes:
     okay do you understand this what we call the Petro dollar and the idea here is
     that look every economy needs oil to to um run right you need oil as the basis
     of your economy and so after America went off
+  text_raw: on domestic expenses okay so they needed to transition out of the gold
+    standard but if you trans transition out of the gold standard then how do you
+    um ensure the US dollar is worth something how do you ensure the intricate worth
+    of the US dollar so they transition from the gold Center to what do you guys know
+    oil okay do you understand this what we call the Petro dollar and the idea here
+    is that look every economy needs oil to to um run right you need oil as the basis
+    of your economy and so after America went off
+  text_clean: on domestic expenses okay so they needed to transition out of the gold
+    standard but if you trans transition out of the gold standard then how do you
+    um ensure the US dollar is worth something how do you ensure the intricate worth
+    of the US dollar so they transition from the gold Center to what do you guys know
+    oil okay do you understand this what we call the Petro dollar and the idea here
+    is that look every economy needs oil to to um run right you need oil as the basis
+    of your economy and so after America went off
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids: []
@@ -58,7 +111,8 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0004
   source_id: geo-04
   analysis_id: null
@@ -69,6 +123,23 @@ quotes:
     Israel in fact Iran's Iran's major enemy is Saudi Arabia these two are bitter
     Rivals and to understand why we have to look at their history okay so the year
     is 1979 at the the start of of at the start
+  text_raw: must demonstrate it still is the military hegemon of the world and therefore
+    I can do this by um invading Iran okay today we look at the third and final force
+    driving conflict in the Middle East and it's really the conflict between s Arabia
+    and Iran most people think that Iran Iran's major enemy in the Middle East is
+    Israel in fact Iran's Iran's major enemy is Saudi Arabia these two are bitter
+    Rivals and to understand why we have to look at their history okay so the year
+    is 1979 at the the start of of at the start
+  text_clean: must demonstrate it still is the military hegemon of the world and therefore
+    I can do this by um invading Iran okay today we look at the third and final force
+    driving conflict in the Middle East and it's really the conflict between s Arabia
+    and Iran most people think that Iran Iran's major enemy in the Middle East is
+    Israel in fact Iran's Iran's major enemy is Saudi Arabia these two are bitter
+    Rivals and to understand why we have to look at their history okay so the year
+    is 1979 at the the start of of at the start
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -79,7 +150,8 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0005
   source_id: geo-04
   analysis_id: geo-04
@@ -89,6 +161,21 @@ quotes:
     Narrative thread: **1979** → **proxies** (Iraq, Syria, Yemen) → **Yemen** as **wake-up**
     → **US** alignment via **Trump/Kushner**, **Abraham Accords**, **Soleimani**;
     **second Trump term** → **war** or **escalation** likely.'
+  text_raw: 'Third **driver** of US–Middle East **Iran** pressure: **Saudi–Iran**
+    **rivalry** (religious **Sunni–Shia**, **oil** economics, **regional** influence)
+    and **Saudi** **strategic vulnerability** → **incentive** to enlist **US** to
+    **fight Iran**. Narrative thread: **1979** → **proxies** (Iraq, Syria, Yemen)
+    → **Yemen** as **wake-up** → **US** alignment via **Trump/Kushner**, **Abraham
+    Accords**, **Soleimani**; **second Trump term** → **war** or **escalation** likely.'
+  text_clean: 'Third **driver** of US–Middle East **Iran** pressure: **Saudi–Iran**
+    **rivalry** (religious **Sunni–Shia**, **oil** economics, **regional** influence)
+    and **Saudi** **strategic vulnerability** → **incentive** to enlist **US** to
+    **fight Iran**. Narrative thread: **1979** → **proxies** (Iraq, Syria, Yemen)
+    → **Yemen** as **wake-up** → **US** alignment via **Trump/Kushner**, **Abraham
+    Accords**, **Soleimani**; **second Trump term** → **war** or **escalation** likely.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids:
@@ -99,7 +186,8 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0006
   source_id: geo-04
   analysis_id: null
@@ -108,6 +196,19 @@ quotes:
     **Today:** (3) **Saudi–Iran** as core **Middle East** rivalry — lecture argues
     Iran’s **primary** regional adversary is **Saudi Arabia**, not **Israel** (contested
     framing in policy discourse).'
+  text_raw: '**Series recap:** Reasons for US **Iran** pressure so far: (1) **Israel
+    Lobby** / Christian Zionist timeline; (2) **Empire** / dollar hegemony / **Ukraine**
+    stress. **Today:** (3) **Saudi–Iran** as core **Middle East** rivalry — lecture
+    argues Iran’s **primary** regional adversary is **Saudi Arabia**, not **Israel**
+    (contested framing in policy discourse).'
+  text_clean: '**Series recap:** Reasons for US **Iran** pressure so far: (1) **Israel
+    Lobby** / Christian Zionist timeline; (2) **Empire** / dollar hegemony / **Ukraine**
+    stress. **Today:** (3) **Saudi–Iran** as core **Middle East** rivalry — lecture
+    argues Iran’s **primary** regional adversary is **Saudi Arabia**, not **Israel**
+    (contested framing in policy discourse).'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -118,7 +219,8 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0007
   source_id: geo-03
   analysis_id: null
@@ -126,6 +228,17 @@ quotes:
     **dollar reserve** + **gold backing**; **1971** Nixon off gold → **petrodollar**
     (oil priced in dollars) as value anchor; **1991** USSR collapse → US **global
     rule-setting** and **trade** narrative.'
+  text_raw: '**Monetary / geopolitical history (lecture):** **Bretton Woods (1944)**
+    → **dollar reserve** + **gold backing**; **1971** Nixon off gold → **petrodollar**
+    (oil priced in dollars) as value anchor; **1991** USSR collapse → US **global
+    rule-setting** and **trade** narrative.'
+  text_clean: '**Monetary / geopolitical history (lecture):** **Bretton Woods (1944)**
+    → **dollar reserve** + **gold backing**; **1971** Nixon off gold → **petrodollar**
+    (oil priced in dollars) as value anchor; **1991** USSR collapse → US **global
+    rule-setting** and **trade** narrative.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -134,7 +247,8 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0008
   source_id: geo-08
   analysis_id: null
@@ -145,6 +259,23 @@ quotes:
     manifest themselves is uh through Trump okay so basically Trump is their champion
     and privately um there's a man named Jared Kushner who is Trump's son-in-law he's
     married to um Trump's fa daughter um
+  text_raw: East is actually not between Israel and Iran but between Saudi Arabia
+    and Iran for Israel Iran is a security threat because it it supports hasah and
+    Hamas but for Saudi Arabia um Iran represents a threat to its very existance okay
+    so Saudi Arabia must resolve the Iran problem soon right now how these three forces
+    manifest themselves is uh through Trump okay so basically Trump is their champion
+    and privately um there's a man named Jared Kushner who is Trump's son-in-law he's
+    married to um Trump's fa daughter um
+  text_clean: East is actually not between Israel and Iran but between Saudi Arabia
+    and Iran for Israel Iran is a security threat because it it supports hasah and
+    Hamas but for Saudi Arabia um Iran represents a threat to its very existance okay
+    so Saudi Arabia must resolve the Iran problem soon right now how these three forces
+    manifest themselves is uh through Trump okay so basically Trump is their champion
+    and privately um there's a man named Jared Kushner who is Trump's son-in-law he's
+    married to um Trump's fa daughter um
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -153,7 +284,8 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0009
   source_id: geo-09
   analysis_id: null
@@ -164,6 +296,23 @@ quotes:
     Ukraine is desperately short of Manpower okay the average age of their soldiers
     right now is over 40 they have men in their 60s who are fighting in the front
     lines um emanu macron of France um have
+  text_raw: believe that it's because Russia is not doing so well in Ukraine they
+    lack Manpower and and so they need to mobilize their society to fully win the
+    war in Ukraine okay another explanation is that PL uh Putin knows that NATO is
+    preparing to send reinforcements to Ukraine remember that because of um last Summer's
+    offensive Ukraine is desperately short of Manpower okay the average age of their
+    soldiers right now is over 40 they have men in their 60s who are fighting in the
+    front lines um emanu macron of France um have
+  text_clean: believe that it's because Russia is not doing so well in Ukraine they
+    lack Manpower and and so they need to mobilize their society to fully win the
+    war in Ukraine okay another explanation is that PL uh Putin knows that NATO is
+    preparing to send reinforcements to Ukraine remember that because of um last Summer's
+    offensive Ukraine is desperately short of Manpower okay the average age of their
+    soldiers right now is over 40 they have men in their 60s who are fighting in the
+    front lines um emanu macron of France um have
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -172,7 +321,8 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0010
   source_id: geo-02
   analysis_id: geo-02
@@ -180,6 +330,17 @@ quotes:
     defense, ally pressure, Israel Lobby), with the lecture spending most of its time
     building **theology and history** so students can interpret **Christian Zionism**
     and **dispensational** eschatology as forces in **US–Israel–Iran** politics.
+  text_raw: Explain **why the US may invade Iran** by way of **three drivers** (empire
+    defense, ally pressure, Israel Lobby), with the lecture spending most of its time
+    building **theology and history** so students can interpret **Christian Zionism**
+    and **dispensational** eschatology as forces in **US–Israel–Iran** politics.
+  text_clean: Explain **why the US may invade Iran** by way of **three drivers** (empire
+    defense, ally pressure, Israel Lobby), with the lecture spending most of its time
+    building **theology and history** so students can interpret **Christian Zionism**
+    and **dispensational** eschatology as forces in **US–Israel–Iran** politics.
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids:
@@ -191,8 +352,35 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
 - quote_id: q-0011
+  source_id: civ-20
+  analysis_id: civ-20
+  text: '- [Civilization #18 — Great Pyramid](../lectures/civilization-18-the-great-pyramid-as-ancient-egypts-manhattan-project.md),
+    [Civilization #19 — Gilgamesh](../lectures/civilization-19-gilgamesh-and-mesopotamias-quest-for-immortality.md)
+    — Egypt/Sumer as dialectic contrast for IVC religion.'
+  text_raw: '- [Civilization #18 — Great Pyramid](../lectures/civilization-18-the-great-pyramid-as-ancient-egypts-manhattan-project.md),
+    [Civilization #19 — Gilgamesh](../lectures/civilization-19-gilgamesh-and-mesopotamias-quest-for-immortality.md)
+    — Egypt/Sumer as dialectic contrast for IVC religion.'
+  text_clean: '- [Civilization #18 — Great Pyramid](../lectures/civilization-18-the-great-pyramid-as-ancient-egypts-manhattan-project.md),
+    [Civilization #19 — Gilgamesh](../lectures/civilization-19-gilgamesh-and-mesopotamias-quest-for-immortality.md)
+    — Egypt/Sumer as dialectic contrast for IVC religion.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
+  quote_type: analysis
+  themes: []
+  concept_ids:
+  - religious-legitimacy
+  - civ-formation
+  chapter_ids:
+  - ch02
+  rank: 5
+  speaker: Jiang Xueqin
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0012
   source_id: geo-01
   analysis_id: null
   text: okay does that make sense there are many people most people in America do
@@ -202,6 +390,23 @@ quotes:
     France and Germany want to involve itself right okay does that make sense so these
     are the four major goals of Iran and it must accomplish all four goals if it is
     to survive in an invasion okay so from
+  text_raw: okay does that make sense there are many people most people in America
+    do not support a war against Iran and so Iran needs to encourage this internal
+    descent okay it can also create conflict between NATO and the United States okay
+    because obviously America will want NATO involved in its invasion of Iran but
+    why would France and Germany want to involve itself right okay does that make
+    sense so these are the four major goals of Iran and it must accomplish all four
+    goals if it is to survive in an invasion okay so from
+  text_clean: okay does that make sense there are many people most people in America
+    do not support a war against Iran and so Iran needs to encourage this internal
+    descent okay it can also create conflict between NATO and the United States okay
+    because obviously America will want NATO involved in its invasion of Iran but
+    why would France and Germany want to involve itself right okay does that make
+    sense so these are the four major goals of Iran and it must accomplish all four
+    goals if it is to survive in an invasion okay so from
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -210,8 +415,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0012
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0013
   source_id: geo-01
   analysis_id: null
   text: sense of fairness and Justice right what Israel did was wrong it attacked
@@ -221,6 +427,23 @@ quotes:
     response okay does that make sense right and the last thing is weaken the enemy
     why would why would this weaken the enemy well because after Iran attacked Israel
     Israel wanted to show a strong
+  text_raw: sense of fairness and Justice right what Israel did was wrong it attacked
+    an embassy of Iran Damascus that's against that's that that is against international
+    law and Iran to save face uh to pursue Justice thre some rockets at Israel okay
+    so most people think that Iran's response was show restraint and it was a measured
+    response okay does that make sense right and the last thing is weaken the enemy
+    why would why would this weaken the enemy well because after Iran attacked Israel
+    Israel wanted to show a strong
+  text_clean: sense of fairness and Justice right what Israel did was wrong it attacked
+    an embassy of Iran Damascus that's against that's that that is against international
+    law and Iran to save face uh to pursue Justice thre some rockets at Israel okay
+    so most people think that Iran's response was show restraint and it was a measured
+    response okay does that make sense right and the last thing is weaken the enemy
+    why would why would this weaken the enemy well because after Iran attacked Israel
+    Israel wanted to show a strong
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -229,8 +452,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0013
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0014
   source_id: geo-03
   analysis_id: null
   text: the gold standard these countries in the Middle East meaning Saudi Arabia
@@ -240,6 +464,23 @@ quotes:
     what we call the Petr dollar and this is really the basic is uh for the value
     of the US dollar today okay so then what happened is that in 1991 the um Soviet
     Union fell and now America was in charge of the
+  text_raw: the gold standard these countries in the Middle East meaning Saudi Arabia
+    but other countries as well agreed that you could buy oil using US dollars so
+    um the idea is okay before if you had a million dollars a million US Dollars you
+    could change convert that to Gold okay and now you can convert it to oil and this
+    what we call the Petr dollar and this is really the basic is uh for the value
+    of the US dollar today okay so then what happened is that in 1991 the um Soviet
+    Union fell and now America was in charge of the
+  text_clean: the gold standard these countries in the Middle East meaning Saudi Arabia
+    but other countries as well agreed that you could buy oil using US dollars so
+    um the idea is okay before if you had a million dollars a million US Dollars you
+    could change convert that to Gold okay and now you can convert it to oil and this
+    what we call the Petr dollar and this is really the basic is uh for the value
+    of the US dollar today okay so then what happened is that in 1991 the um Soviet
+    Union fell and now America was in charge of the
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -249,8 +490,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0014
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0015
   source_id: geo-08
   analysis_id: null
   text: okay so um Iran what does Iran want to do what what does Iran want to do or
@@ -260,6 +502,23 @@ quotes:
     if the US invades it has to lose the war okay it will lose the war because the
     re guard can just send suicide bombers against the United States okay now let's
     look at Israel okay we know that the United
+  text_raw: okay so um Iran what does Iran want to do what what does Iran want to
+    do or the basically the Revolutionary G Corp what do they want to do ex me they
+    want to kill as many Americans as possible okay you understand they want to force
+    an American Landing Invasion okay so Iran wants to force a US invasion knowing
+    that if the US invades it has to lose the war okay it will lose the war because
+    the re guard can just send suicide bombers against the United States okay now
+    let's look at Israel okay we know that the United
+  text_clean: okay so um Iran what does Iran want to do what what does Iran want to
+    do or the basically the Revolutionary G Corp what do they want to do ex me they
+    want to kill as many Americans as possible okay you understand they want to force
+    an American Landing Invasion okay so Iran wants to force a US invasion knowing
+    that if the US invades it has to lose the war okay it will lose the war because
+    the re guard can just send suicide bombers against the United States okay now
+    let's look at Israel okay we know that the United
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -268,8 +527,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0015
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0016
   source_id: geo-08
   analysis_id: null
   text: States wants to top of Iran we know that Iran wants to force a US invasion
@@ -279,6 +539,23 @@ quotes:
     so you you you want Iran defeated okay and then what do you want to happen you
     want Iran defeated you want the prox defeated and then what what do you want to
     happen do you want the United States to
+  text_raw: States wants to top of Iran we know that Iran wants to force a US invasion
+    to defeat the the the Americans to humiliate the Americans and and um exact revenge
+    for what happened in the past okay what does Israel want to do what is is Israel's
+    optimal outcome you guys know if you're Israel what do you want to happen Okay
+    so you you you want Iran defeated okay and then what do you want to happen you
+    want Iran defeated you want the prox defeated and then what what do you want to
+    happen do you want the United States to
+  text_clean: States wants to top of Iran we know that Iran wants to force a US invasion
+    to defeat the the the Americans to humiliate the Americans and and um exact revenge
+    for what happened in the past okay what does Israel want to do what is is Israel's
+    optimal outcome you guys know if you're Israel what do you want to happen Okay
+    so you you you want Iran defeated okay and then what do you want to happen you
+    want Iran defeated you want the prox defeated and then what what do you want to
+    happen do you want the United States to
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -287,8 +564,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0016
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0017
   source_id: geo-09
   analysis_id: null
   text: warrior culture and the reason why is that throughout most of Chinese history
@@ -298,6 +576,23 @@ quotes:
     feel threatened by anyone and therefore it doesn't have a Weare culture does that
     make sense but Russia is a huge country that's been invaded multiple times and
     all these invasions were traumatic for
+  text_raw: warrior culture and the reason why is that throughout most of Chinese
+    history China was the dominant power the hamon okay also China is surrounded by
+    natural defenses right so to the uh East you have the sea to the South and to
+    the West you have mountains to the north you have the Great Wall okay so China
+    doesn't feel threatened by anyone and therefore it doesn't have a Weare culture
+    does that make sense but Russia is a huge country that's been invaded multiple
+    times and all these invasions were traumatic for
+  text_clean: warrior culture and the reason why is that throughout most of Chinese
+    history China was the dominant power the hamon okay also China is surrounded by
+    natural defenses right so to the uh East you have the sea to the South and to
+    the West you have mountains to the north you have the Great Wall okay so China
+    doesn't feel threatened by anyone and therefore it doesn't have a Weare culture
+    does that make sense but Russia is a huge country that's been invaded multiple
+    times and all these invasions were traumatic for
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -306,8 +601,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0017
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0018
   source_id: geo-02
   analysis_id: null
   text: '**Closing thesis (stated):** Some US Christians treat Israel/Jews as **instruments**
@@ -315,6 +611,19 @@ quotes:
     nation” soul) feeds foreign-policy/military culture; Israel can **use** Christian
     Zionism for regional aims; **religious worldview** thus frames US–Iran–Israel
     dynamics (war as potentially **advancing prophecy** for some actors).'
+  text_raw: '**Closing thesis (stated):** Some US Christians treat Israel/Jews as
+    **instruments** toward Jesus’s return; US **founding narrative** (Bible supremacy,
+    “Christian nation” soul) feeds foreign-policy/military culture; Israel can **use**
+    Christian Zionism for regional aims; **religious worldview** thus frames US–Iran–Israel
+    dynamics (war as potentially **advancing prophecy** for some actors).'
+  text_clean: '**Closing thesis (stated):** Some US Christians treat Israel/Jews as
+    **instruments** toward Jesus’s return; US **founding narrative** (Bible supremacy,
+    “Christian nation” soul) feeds foreign-policy/military culture; Israel can **use**
+    Christian Zionism for regional aims; **religious worldview** thus frames US–Iran–Israel
+    dynamics (war as potentially **advancing prophecy** for some actors).'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -325,13 +634,23 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0018
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0019
   source_id: geo-03
   analysis_id: null
   text: '**Ukraine:** Russian invasion as **challenge to American empire** narrative
     (“paper tiger”); US must **stop Russia**; war going badly for US/Ukraine in lecture’s
     telling.'
+  text_raw: '**Ukraine:** Russian invasion as **challenge to American empire** narrative
+    (“paper tiger”); US must **stop Russia**; war going badly for US/Ukraine in lecture’s
+    telling.'
+  text_clean: '**Ukraine:** Russian invasion as **challenge to American empire** narrative
+    (“paper tiger”); US must **stop Russia**; war going badly for US/Ukraine in lecture’s
+    telling.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -342,8 +661,9 @@ quotes:
   - ch02
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0019
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0020
   source_id: geo-04
   analysis_id: null
   text: '**Religion:** **Sunni** (majority globally; **Saudi** leadership of holy
@@ -351,6 +671,19 @@ quotes:
     shorthand); **Iran** “export” of revolution vs **Saudi** **Wahhabi** pact (1744)
     and later **export** of **Wahhabism** (e.g. **bin Laden** / **Afghanistan** /
     **al-Qaeda** narrative).'
+  text_raw: '**Religion:** **Sunni** (majority globally; **Saudi** leadership of holy
+    cities) vs **Shia** (**Iran**); **succession** dispute after Prophet (lecture’s
+    shorthand); **Iran** “export” of revolution vs **Saudi** **Wahhabi** pact (1744)
+    and later **export** of **Wahhabism** (e.g. **bin Laden** / **Afghanistan** /
+    **al-Qaeda** narrative).'
+  text_clean: '**Religion:** **Sunni** (majority globally; **Saudi** leadership of
+    holy cities) vs **Shia** (**Iran**); **succession** dispute after Prophet (lecture’s
+    shorthand); **Iran** “export” of revolution vs **Saudi** **Wahhabi** pact (1744)
+    and later **export** of **Wahhabism** (e.g. **bin Laden** / **Afghanistan** /
+    **al-Qaeda** narrative).'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -361,14 +694,26 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0020
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0021
   source_id: geo-01
   analysis_id: null
   text: '**Later threads in same session (for cross-refs):** rules of engagement among
     major powers before a hypothetical war; “strategic ambiguity” for China/Russia;
     US empire risks (overextension, debt, civil unrest); Israel as regional military
     power and hubris; Trump / timing / Israel lobby reserved for future classes.'
+  text_raw: '**Later threads in same session (for cross-refs):** rules of engagement
+    among major powers before a hypothetical war; “strategic ambiguity” for China/Russia;
+    US empire risks (overextension, debt, civil unrest); Israel as regional military
+    power and hubris; Trump / timing / Israel lobby reserved for future classes.'
+  text_clean: '**Later threads in same session (for cross-refs):** rules of engagement
+    among major powers before a hypothetical war; “strategic ambiguity” for China/Russia;
+    US empire risks (overextension, debt, civil unrest); Israel as regional military
+    power and hubris; Trump / timing / Israel lobby reserved for future classes.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -379,12 +724,20 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0021
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0022
   source_id: geo-03
   analysis_id: geo-03
   text: 9. **Ukraine:** Russia challenges **invincibility**; US/Ukraine position **bad**;
     threatens dollar **confidence** narrative.
+  text_raw: 9. **Ukraine:** Russia challenges **invincibility**; US/Ukraine position
+    **bad**; threatens dollar **confidence** narrative.
+  text_clean: 9. **Ukraine:** Russia challenges **invincibility**; US/Ukraine position
+    **bad**; threatens dollar **confidence** narrative.
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids:
@@ -394,14 +747,26 @@ quotes:
   - ch02
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0022
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0023
   source_id: geo-10
   analysis_id: null
   text: '**Forward** **predictions** **(3–4** **years):** **Drag** **Ukraine;** **Iran**
     **provocation** **under** **Russian** **nuclear** **umbrella** **(hypothetical);**
     **North** **Korea** **pressure;** **BRICS** **currency/trading** **system;** **Russia–China**
     **“hug”** **/** **neutrality.**'
+  text_raw: '**Forward** **predictions** **(3–4** **years):** **Drag** **Ukraine;**
+    **Iran** **provocation** **under** **Russian** **nuclear** **umbrella** **(hypothetical);**
+    **North** **Korea** **pressure;** **BRICS** **currency/trading** **system;** **Russia–China**
+    **“hug”** **/** **neutrality.**'
+  text_clean: '**Forward** **predictions** **(3–4** **years):** **Drag** **Ukraine;**
+    **Iran** **provocation** **under** **Russian** **nuclear** **umbrella** **(hypothetical);**
+    **North** **Korea** **pressure;** **BRICS** **currency/trading** **system;** **Russia–China**
+    **“hug”** **/** **neutrality.**'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -411,8 +776,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0023
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0024
   source_id: geo-03
   analysis_id: null
   text: and the theory here is that if you do it this way then all countries will
@@ -422,6 +788,23 @@ quotes:
     States and trying to trade right um so China makes all these cheap goods for American
     consumers but unfortunately Chinese consumers don't have enough purchasing power
     to buy American Technology right
+  text_raw: and the theory here is that if you do it this way then all countries will
+    become rich okay so let me explain why all right so let's look at uh us and China
+    okay so what China's really good at is cheap labor United States what what United
+    States is really good at is TE technology right okay so the idea is that United
+    States and trying to trade right um so China makes all these cheap goods for American
+    consumers but unfortunately Chinese consumers don't have enough purchasing power
+    to buy American Technology right
+  text_clean: and the theory here is that if you do it this way then all countries
+    will become rich okay so let me explain why all right so let's look at uh us and
+    China okay so what China's really good at is cheap labor United States what what
+    United States is really good at is TE technology right okay so the idea is that
+    United States and trying to trade right um so China makes all these cheap goods
+    for American consumers but unfortunately Chinese consumers don't have enough purchasing
+    power to buy American Technology right
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids: []
@@ -429,8 +812,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0024
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0025
   source_id: geo-03
   analysis_id: null
   text: would want to feel good themselves always okay so it so when you are an Empire
@@ -440,6 +824,23 @@ quotes:
     they could be wrong okay does that make sense Jack okay any more questions okay
     uh the American Empire has been building for a long time okay so you can make
     the argument that the Empire really
+  text_raw: would want to feel good themselves always okay so it so when you are an
+    Empire you want to be stupid and arrogant because it makes you feel good does
+    that make sense okay but that's why Empires collapse because once they have too
+    much power they become stupid and arrogant and they refuse to consider the possibility
+    that they could be wrong okay does that make sense Jack okay any more questions
+    okay uh the American Empire has been building for a long time okay so you can
+    make the argument that the Empire really
+  text_clean: would want to feel good themselves always okay so it so when you are
+    an Empire you want to be stupid and arrogant because it makes you feel good does
+    that make sense okay but that's why Empires collapse because once they have too
+    much power they become stupid and arrogant and they refuse to consider the possibility
+    that they could be wrong okay does that make sense Jack okay any more questions
+    okay uh the American Empire has been building for a long time okay so you can
+    make the argument that the Empire really
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -448,8 +849,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0025
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0026
   source_id: geo-04
   analysis_id: null
   text: of 1979 Saudi Arabia and Iran are good friends okay so let's look at a map
@@ -459,6 +861,23 @@ quotes:
     and Iran were very good friends uh they had a lot of similar similarities they
     were both monarchies they were ruled by a king um they were secular they relied
     on American power to defend itself and they
+  text_raw: of 1979 Saudi Arabia and Iran are good friends okay so let's look at a
+    map of the Middle East Iran is here uh it's next to Iraq uh Saudi Arabia is down
+    here uh then this is Egypt um you have Yemen here Oman this is the straight of
+    humus and this is the SE Canal okay uh theed SE basically and in 1979 uh Saudi
+    Arabia and Iran were very good friends uh they had a lot of similar similarities
+    they were both monarchies they were ruled by a king um they were secular they
+    relied on American power to defend itself and they
+  text_clean: of 1979 Saudi Arabia and Iran are good friends okay so let's look at
+    a map of the Middle East Iran is here uh it's next to Iraq uh Saudi Arabia is
+    down here uh then this is Egypt um you have Yemen here Oman this is the straight
+    of humus and this is the SE Canal okay uh theed SE basically and in 1979 uh Saudi
+    Arabia and Iran were very good friends uh they had a lot of similar similarities
+    they were both monarchies they were ruled by a king um they were secular they
+    relied on American power to defend itself and they
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -468,8 +887,9 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0026
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0027
   source_id: geo-05
   analysis_id: null
   text: will bring Jesus back to Earth Earth and establish the kingdom of heaven and
@@ -479,6 +899,23 @@ quotes:
     pushing for war in Iran escalating tensions in Iran okay so Nikki Hy okay what's
     also interesting is okay in January 2019 basically the primary is over Trump has
     won everything okay but in January
+  text_raw: will bring Jesus back to Earth Earth and establish the kingdom of heaven
+    and therefore they want as much conflict in the Middle East as possible okay so
+    all this is telling us is that if nikii becomes vice president her main responsibility
+    will be to agitate for war against Iran okay she'll be the one in the white house
+    pushing for war in Iran escalating tensions in Iran okay so Nikki Hy okay what's
+    also interesting is okay in January 2019 basically the primary is over Trump has
+    won everything okay but in January
+  text_clean: will bring Jesus back to Earth Earth and establish the kingdom of heaven
+    and therefore they want as much conflict in the Middle East as possible okay so
+    all this is telling us is that if nikii becomes vice president her main responsibility
+    will be to agitate for war against Iran okay she'll be the one in the white house
+    pushing for war in Iran escalating tensions in Iran okay so Nikki Hy okay what's
+    also interesting is okay in January 2019 basically the primary is over Trump has
+    won everything okay but in January
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -488,8 +925,9 @@ quotes:
   - ch01
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0027
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0028
   source_id: geo-07
   analysis_id: null
   text: uh king of of Iran okay that's the first reason but the second reason is they
@@ -499,6 +937,23 @@ quotes:
     of the Sha in November of 1979 300 to 500 students college students stormed the
     US Embassy and took it over and held 53 Americans as hostages okay and they demanded
     the Sha be returned to Iran to stand
+  text_raw: uh king of of Iran okay that's the first reason but the second reason
+    is they were afraid that the Sha had gone to America to win America's support
+    for uh a invasion of the country the Sha was trying to get America to invade Iran
+    and put him back in power which which happened in 1953 okay and so to counter
+    the threat of the Sha in November of 1979 300 to 500 students college students
+    stormed the US Embassy and took it over and held 53 Americans as hostages okay
+    and they demanded the Sha be returned to Iran to stand
+  text_clean: uh king of of Iran okay that's the first reason but the second reason
+    is they were afraid that the Sha had gone to America to win America's support
+    for uh a invasion of the country the Sha was trying to get America to invade Iran
+    and put him back in power which which happened in 1953 okay and so to counter
+    the threat of the Sha in November of 1979 300 to 500 students college students
+    stormed the US Embassy and took it over and held 53 Americans as hostages okay
+    and they demanded the Sha be returned to Iran to stand
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -507,8 +962,9 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0028
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0029
   source_id: geo-07
   analysis_id: null
   text: that you do which means have special forces okay it is suicide to attack America
@@ -518,6 +974,23 @@ quotes:
     enough then America will eventually get get angry enough to send an invas Force
     against Iran does that make sense okay any more questions is this clear is this
     clear to you guys the logic here
+  text_raw: that you do which means have special forces okay it is suicide to attack
+    America uh in the open so what Iran needs to do is Trick America into invading
+    Iran and then America would lose for sure okay and that's something that we'll
+    discuss next week but that but that's what they have to do and again if they provoke
+    America enough then America will eventually get get angry enough to send an invas
+    Force against Iran does that make sense okay any more questions is this clear
+    is this clear to you guys the logic here
+  text_clean: that you do which means have special forces okay it is suicide to attack
+    America uh in the open so what Iran needs to do is Trick America into invading
+    Iran and then America would lose for sure okay and that's something that we'll
+    discuss next week but that but that's what they have to do and again if they provoke
+    America enough then America will eventually get get angry enough to send an invas
+    Force against Iran does that make sense okay any more questions is this clear
+    is this clear to you guys the logic here
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -526,8 +999,9 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0029
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0030
   source_id: geo-08
   analysis_id: null
   text: stay in the Middle East what happens if United States what happens if United
@@ -537,6 +1011,23 @@ quotes:
     now control the entire Middle East so the timal outcome for Israel is Iran and
     United States are both destroyed okay you understand how about how about Saudi
     Arabia what is their optimal optimal outcome
+  text_raw: stay in the Middle East what happens if United States what happens if
+    United States and Iran both lose the war mean Iran is destroyed as a country the
+    United States is destroyed as a military presence in the Middle East what would
+    happen Israel becomes the top dog in the Middle East do you understand okay Israel
+    can now control the entire Middle East so the timal outcome for Israel is Iran
+    and United States are both destroyed okay you understand how about how about Saudi
+    Arabia what is their optimal optimal outcome
+  text_clean: stay in the Middle East what happens if United States what happens if
+    United States and Iran both lose the war mean Iran is destroyed as a country the
+    United States is destroyed as a military presence in the Middle East what would
+    happen Israel becomes the top dog in the Middle East do you understand okay Israel
+    can now control the entire Middle East so the timal outcome for Israel is Iran
+    and United States are both destroyed okay you understand how about how about Saudi
+    Arabia what is their optimal optimal outcome
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -546,13 +1037,42 @@ quotes:
   - ch03
   rank: 5
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0030
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0031
+  source_id: civ-20
+  analysis_id: civ-20
+  text: '- **raw_transcript:** operator paste → [lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md](../lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md)'
+  text_raw: '- **raw_transcript:** operator paste → [lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md](../lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md)'
+  text_clean: '- **raw_transcript:** operator paste → [lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md](../lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md)'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
+  quote_type: analysis
+  themes: []
+  concept_ids:
+  - civ-formation
+  chapter_ids:
+  - ch02
+  rank: 5
+  speaker: Jiang Xueqin
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0032
   source_id: geo-03
   analysis_id: null
   text: '**Framing (series):** Picks up after **Israel Lobby** (prior class): today’s
     reason for US **Iran** pressure is **defense of empire** — America as **global
     empire** post-1991 must protect **imperial** status.'
+  text_raw: '**Framing (series):** Picks up after **Israel Lobby** (prior class):
+    today’s reason for US **Iran** pressure is **defense of empire** — America as
+    **global empire** post-1991 must protect **imperial** status.'
+  text_clean: '**Framing (series):** Picks up after **Israel Lobby** (prior class):
+    today’s reason for US **Iran** pressure is **defense of empire** — America as
+    **global empire** post-1991 must protect **imperial** status.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -562,13 +1082,23 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0031
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0033
   source_id: geo-02
   analysis_id: geo-02
   text: 7. **Strategic:** Israel can **leverage** Christian Zionism for **US** support;
     **US** may frame **Israel vs Iran** as **religious duty**; some actors treat **war**
     as **advancing prophecy**.
+  text_raw: 7. **Strategic:** Israel can **leverage** Christian Zionism for **US**
+    support; **US** may frame **Israel vs Iran** as **religious duty**; some actors
+    treat **war** as **advancing prophecy**.
+  text_clean: 7. **Strategic:** Israel can **leverage** Christian Zionism for **US**
+    support; **US** may frame **Israel vs Iran** as **religious duty**; some actors
+    treat **war** as **advancing prophecy**.
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids:
@@ -578,12 +1108,20 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0032
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0034
   source_id: geo-04
   analysis_id: geo-04
   text: '- [Geo-Strategy #3](../lectures/geo-strategy-03-how-empire-is-destroying-america.md)
     — **empire** / **dollar** / **Iran** **invasion** **motivation**.'
+  text_raw: '- [Geo-Strategy #3](../lectures/geo-strategy-03-how-empire-is-destroying-america.md)
+    — **empire** / **dollar** / **Iran** **invasion** **motivation**.'
+  text_clean: '- [Geo-Strategy #3](../lectures/geo-strategy-03-how-empire-is-destroying-america.md)
+    — **empire** / **dollar** / **Iran** **invasion** **motivation**.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids:
@@ -593,12 +1131,20 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0033
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0035
   source_id: geo-03
   analysis_id: geo-03
   text: 5. **Monetary history:** Bretton Woods reserve dollar + gold; 1971; **petrodollar**;
     1991 unipolar moment + **trade** theory.
+  text_raw: 5. **Monetary history:** Bretton Woods reserve dollar + gold; 1971; **petrodollar**;
+    1991 unipolar moment + **trade** theory.
+  text_clean: 5. **Monetary history:** Bretton Woods reserve dollar + gold; 1971;
+    **petrodollar**; 1991 unipolar moment + **trade** theory.
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids: []
@@ -606,8 +1152,9 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0034
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0036
   source_id: geo-01
   analysis_id: null
   text: these and then you that's like $10 million and then you have 10,000 of these
@@ -617,6 +1164,23 @@ quotes:
     the American aircraft carriers okay and um the true promise actually showed us
     that the Iranians would probably use a strategy and the reason why is that the
     total package the strike package that thein
+  text_raw: these and then you that's like $10 million and then you have 10,000 of
+    these and that's another $10 million okay so it will cost you maybe $20 million
+    to blow up an air a$1 billion aircraft carrier does that make sense and this is
+    why Iran want would win a war because Iran would employ as Asal Warfare Jon SWS
+    against the American aircraft carriers okay and um the true promise actually showed
+    us that the Iranians would probably use a strategy and the reason why is that
+    the total package the strike package that thein
+  text_clean: these and then you that's like $10 million and then you have 10,000
+    of these and that's another $10 million okay so it will cost you maybe $20 million
+    to blow up an air a$1 billion aircraft carrier does that make sense and this is
+    why Iran want would win a war because Iran would employ as Asal Warfare Jon SWS
+    against the American aircraft carriers okay and um the true promise actually showed
+    us that the Iranians would probably use a strategy and the reason why is that
+    the total package the strike package that thein
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -625,8 +1189,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0035
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0037
   source_id: geo-01
   analysis_id: null
   text: that Iran is going to do from now until the actual Invasion will be to accomplish
@@ -636,6 +1201,23 @@ quotes:
     is willing to resist the invasion and it turns out that even though the Iranians
     right now are divided okay there's a lot of opposition towards the current government
     in Iran um as some of you
+  text_raw: that Iran is going to do from now until the actual Invasion will be to
+    accomplish all four goals at once and it must if it is to survive a fullscale
+    American Invasion okay does that make sense all right so you have the population
+    what does this mean okay it means that you win the war depending on how much your
+    population is willing to resist the invasion and it turns out that even though
+    the Iranians right now are divided okay there's a lot of opposition towards the
+    current government in Iran um as some of you
+  text_clean: that Iran is going to do from now until the actual Invasion will be
+    to accomplish all four goals at once and it must if it is to survive a fullscale
+    American Invasion okay does that make sense all right so you have the population
+    what does this mean okay it means that you win the war depending on how much your
+    population is willing to resist the invasion and it turns out that even though
+    the Iranians right now are divided okay there's a lot of opposition towards the
+    current government in Iran um as some of you
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -644,8 +1226,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0036
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0038
   source_id: geo-01
   analysis_id: null
   text: okay BP and the idea is that this company would be responsible for extracting
@@ -655,6 +1238,23 @@ quotes:
     that much money out of it okay it's basically stealing so for decades the Iranians
     have been trying to renegotiate the deal in 1953 the democratically elected government
     of Iran said to the British
+  text_raw: okay BP and the idea is that this company would be responsible for extracting
+    and selling all the oil and but unfortunately the deal was that Iran Persia would
+    only get 16% of profits okay they only got 16% of profits so the Iranians are
+    very upset about this it's their oil it's their resource but they're not getting
+    that much money out of it okay it's basically stealing so for decades the Iranians
+    have been trying to renegotiate the deal in 1953 the democratically elected government
+    of Iran said to the British
+  text_clean: okay BP and the idea is that this company would be responsible for extracting
+    and selling all the oil and but unfortunately the deal was that Iran Persia would
+    only get 16% of profits okay they only got 16% of profits so the Iranians are
+    very upset about this it's their oil it's their resource but they're not getting
+    that much money out of it okay it's basically stealing so for decades the Iranians
+    have been trying to renegotiate the deal in 1953 the democratically elected government
+    of Iran said to the British
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -663,8 +1263,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0037
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0039
   source_id: geo-03
   analysis_id: null
   text: defend its Imperial status so let's examine what an Empire means for America
@@ -674,6 +1275,23 @@ quotes:
     lot of factories produce weapons and after World War III these factories produce
     consumer goods cars electronics to sell to the world and this made um the American
     workers the wealthiest and most well
+  text_raw: defend its Imperial status so let's examine what an Empire means for America
+    so from 1950 to 1980 America's economy was mainly focused on manufacturing factories
+    okay so um manufacturing as a share of GDP was 40% it made 40% of profits okay
+    and and employed 30% of the workforce so during World War II uh America had a
+    lot of factories produce weapons and after World War III these factories produce
+    consumer goods cars electronics to sell to the world and this made um the American
+    workers the wealthiest and most well
+  text_clean: defend its Imperial status so let's examine what an Empire means for
+    America so from 1950 to 1980 America's economy was mainly focused on manufacturing
+    factories okay so um manufacturing as a share of GDP was 40% it made 40% of profits
+    okay and and employed 30% of the workforce so during World War II uh America had
+    a lot of factories produce weapons and after World War III these factories produce
+    consumer goods cars electronics to sell to the world and this made um the American
+    workers the wealthiest and most well
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -682,8 +1300,9 @@ quotes:
   - ch02
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0038
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0040
   source_id: geo-03
   analysis_id: null
   text: does that make sense any more questions okay so so so so Jack asks a great
@@ -693,6 +1312,23 @@ quotes:
     have something called huis right Imperial huis which means that they cannot imagine
     the possibility of losing a war okay so why is that okay there are two reasons
     okay there are two reasons the
+  text_raw: does that make sense any more questions okay so so so so Jack asks a great
+    question which is like listen if going to if going to e to Iran is all about restoring
+    confidence in United States well if America loses the war then that would destroy
+    even more confidence okay and so this is this is the problem of Empires empir
+    have something called huis right Imperial huis which means that they cannot imagine
+    the possibility of losing a war okay so why is that okay there are two reasons
+    okay there are two reasons the
+  text_clean: does that make sense any more questions okay so so so so Jack asks a
+    great question which is like listen if going to if going to e to Iran is all about
+    restoring confidence in United States well if America loses the war then that
+    would destroy even more confidence okay and so this is this is the problem of
+    Empires empir have something called huis right Imperial huis which means that
+    they cannot imagine the possibility of losing a war okay so why is that okay there
+    are two reasons okay there are two reasons the
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -702,8 +1338,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0039
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0041
   source_id: geo-04
   analysis_id: null
   text: water it's very impressive but it's all on the coast and guess what guys the
@@ -713,6 +1350,23 @@ quotes:
     learned three things okay the first thing it learned is that if it wants to defeat
     their enemies the houthis the syrians and the Iraqis they brought they also need
     to be able to defeat Iran okay
+  text_raw: water it's very impressive but it's all on the coast and guess what guys
+    the coast uh so Iran can blow blow these plants and then the hudies can blow these
+    plants as well okay so Saudi Arabia basically lost this war because the houthis
+    could inflict massive economic damage on Saudi Arabia so from this war Saudi Arabia
+    learned three things okay the first thing it learned is that if it wants to defeat
+    their enemies the houthis the syrians and the Iraqis they brought they also need
+    to be able to defeat Iran okay
+  text_clean: water it's very impressive but it's all on the coast and guess what
+    guys the coast uh so Iran can blow blow these plants and then the hudies can blow
+    these plants as well okay so Saudi Arabia basically lost this war because the
+    houthis could inflict massive economic damage on Saudi Arabia so from this war
+    Saudi Arabia learned three things okay the first thing it learned is that if it
+    wants to defeat their enemies the houthis the syrians and the Iraqis they brought
+    they also need to be able to defeat Iran okay
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -721,8 +1375,9 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0040
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0042
   source_id: geo-04
   analysis_id: null
   text: Kushner left office Jared Kushner set up a private Equity Fund and MBS and
@@ -731,6 +1386,21 @@ quotes:
     doing exactly what the Saudis want which is to inflame tensions with Iran okay
     and um this suggests that if in November Trump wins a second term it is very possible
     that Trump will declare war on Iran or at the very least continue to escalate
+  text_raw: Kushner left office Jared Kushner set up a private Equity Fund and MBS
+    and the stud government invested $2 billion in into the fun okay does that make
+    sense so um we don't know how we don't know this for sure but it seems like Trump
+    is doing exactly what the Saudis want which is to inflame tensions with Iran okay
+    and um this suggests that if in November Trump wins a second term it is very possible
+    that Trump will declare war on Iran or at the very least continue to escalate
+  text_clean: Kushner left office Jared Kushner set up a private Equity Fund and MBS
+    and the stud government invested $2 billion in into the fun okay does that make
+    sense so um we don't know how we don't know this for sure but it seems like Trump
+    is doing exactly what the Saudis want which is to inflame tensions with Iran okay
+    and um this suggests that if in November Trump wins a second term it is very possible
+    that Trump will declare war on Iran or at the very least continue to escalate
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -739,8 +1409,9 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0041
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0043
   source_id: geo-07
   analysis_id: null
   text: um as as well as Shia militia in um Iraq okay and so all the money that the
@@ -750,6 +1421,23 @@ quotes:
     in Iran who are like why are we doing this again what what if we withdrew from
     the Middle East and just f Fus on our own economy then Israel Saudi Arabia and
     United States would have a reason to
+  text_raw: um as as well as Shia militia in um Iraq okay and so all the money that
+    the Russ G Corp makes in Iran is then sent to this AIS of resistance to create
+    conflict against Saudi Arabia United States and Israel okay does that make sense
+    but so you can imagine that there's some people and there are actually a lot of
+    people in Iran who are like why are we doing this again what what if we withdrew
+    from the Middle East and just f Fus on our own economy then Israel Saudi Arabia
+    and United States would have a reason to
+  text_clean: um as as well as Shia militia in um Iraq okay and so all the money that
+    the Russ G Corp makes in Iran is then sent to this AIS of resistance to create
+    conflict against Saudi Arabia United States and Israel okay does that make sense
+    but so you can imagine that there's some people and there are actually a lot of
+    people in Iran who are like why are we doing this again what what if we withdrew
+    from the Middle East and just f Fus on our own economy then Israel Saudi Arabia
+    and United States would have a reason to
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -759,8 +1447,9 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0042
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0044
   source_id: geo-08
   analysis_id: null
   text: America's like oh Iran is only one month away from a nuclear bomb they've
@@ -770,6 +1459,23 @@ quotes:
     uh possess a nuclear bomb they won't use it why not that's right um the reality
     is that there's only one way that America can win this war against Iran okay they
     can just nuke the country and America will
+  text_raw: America's like oh Iran is only one month away from a nuclear bomb they've
+    been saying this for the past 10 years so do you understand when Trump gives a
+    speech there's absolutely no evidence that any of this is true okay but this is
+    how he'll explain the invasion okay all right and chances are that even if tan
+    uh possess a nuclear bomb they won't use it why not that's right um the reality
+    is that there's only one way that America can win this war against Iran okay they
+    can just nuke the country and America will
+  text_clean: America's like oh Iran is only one month away from a nuclear bomb they've
+    been saying this for the past 10 years so do you understand when Trump gives a
+    speech there's absolutely no evidence that any of this is true okay but this is
+    how he'll explain the invasion okay all right and chances are that even if tan
+    uh possess a nuclear bomb they won't use it why not that's right um the reality
+    is that there's only one way that America can win this war against Iran okay they
+    can just nuke the country and America will
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -778,8 +1484,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0043
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0045
   source_id: geo-09
   analysis_id: null
   text: consumerism and these are all lies they're hypocrisies that have fooled the
@@ -789,6 +1496,23 @@ quotes:
     so why does Putin believe this well um in the late 80s the Soviet Union had basically
     lost the Cold War and they lost the Cold War because their Elite basically gave
     up they no longer believe
+  text_raw: consumerism and these are all lies they're hypocrisies that have fooled
+    the Russian people and have corrupted the Russian soul and destroyed Russian civilization
+    and because Russians are abandoning their soul their civilization their Nation
+    this is why this is happening right does that make sense that is Putin's argument
+    so why does Putin believe this well um in the late 80s the Soviet Union had basically
+    lost the Cold War and they lost the Cold War because their Elite basically gave
+    up they no longer believe
+  text_clean: consumerism and these are all lies they're hypocrisies that have fooled
+    the Russian people and have corrupted the Russian soul and destroyed Russian civilization
+    and because Russians are abandoning their soul their civilization their Nation
+    this is why this is happening right does that make sense that is Putin's argument
+    so why does Putin believe this well um in the late 80s the Soviet Union had basically
+    lost the Cold War and they lost the Cold War because their Elite basically gave
+    up they no longer believe
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -798,8 +1522,9 @@ quotes:
   - ch02
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0044
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0046
   source_id: geo-09
   analysis_id: null
   text: end of History because it is a system that achieves what the elites want and
@@ -809,6 +1534,23 @@ quotes:
     the civilizations is the Russian civilization okay so when you impose slav on
     Russians they become corrupt they become alcoholics and they refuse to have babies
     that is why Russia is failing as
+  text_raw: end of History because it is a system that achieves what the elites want
+    and the masses are unwilling and unable to protest and rebel okay does that make
+    sense it's a perfect system okay so but there are certain civilizations that rebel
+    against slavery intrinsically it is in their nature to rebel against slavery and
+    one of the civilizations is the Russian civilization okay so when you impose slav
+    on Russians they become corrupt they become alcoholics and they refuse to have
+    babies that is why Russia is failing as
+  text_clean: end of History because it is a system that achieves what the elites
+    want and the masses are unwilling and unable to protest and rebel okay does that
+    make sense it's a perfect system okay so but there are certain civilizations that
+    rebel against slavery intrinsically it is in their nature to rebel against slavery
+    and one of the civilizations is the Russian civilization okay so when you impose
+    slav on Russians they become corrupt they become alcoholics and they refuse to
+    have babies that is why Russia is failing as
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -818,8 +1560,44 @@ quotes:
   - ch02
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0045
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0047
+  source_id: civ-20
+  analysis_id: civ-20
+  text: 'Answer **three questions** about the Indus Valley (Harappan) civilization:
+    **what made IVC distinct**, **why it declined**, and **its legacy for the West**.
+    The lecture frames IVC as the **Middle Bronze Age** outlier—peaceful, egalitarian,
+    urban—in contrast to Egypt and Sumer, and advances a **proto-Buddhism** hypothesis
+    for its opaque religion. Decline is attributed to **4.2 ka event**, trade collapse,
+    elite/rat-utopia tensions, and steppe assimilation rather than simple invasion.'
+  text_raw: 'Answer **three questions** about the Indus Valley (Harappan) civilization:
+    **what made IVC distinct**, **why it declined**, and **its legacy for the West**.
+    The lecture frames IVC as the **Middle Bronze Age** outlier—peaceful, egalitarian,
+    urban—in contrast to Egypt and Sumer, and advances a **proto-Buddhism** hypothesis
+    for its opaque religion. Decline is attributed to **4.2 ka event**, trade collapse,
+    elite/rat-utopia tensions, and steppe assimilation rather than simple invasion.'
+  text_clean: 'Answer **three questions** about the Indus Valley (Harappan) civilization:
+    **what made IVC distinct**, **why it declined**, and **its legacy for the West**.
+    The lecture frames IVC as the **Middle Bronze Age** outlier—peaceful, egalitarian,
+    urban—in contrast to Egypt and Sumer, and advances a **proto-Buddhism** hypothesis
+    for its opaque religion. Decline is attributed to **4.2 ka event**, trade collapse,
+    elite/rat-utopia tensions, and steppe assimilation rather than simple invasion.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
+  quote_type: analysis
+  themes: []
+  concept_ids:
+  - religious-legitimacy
+  - civ-formation
+  chapter_ids:
+  - ch02
+  rank: 4
+  speaker: Jiang Xueqin
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0048
   source_id: geo-05
   analysis_id: geo-05
   text: Explain **2020** **Biden** **win** via **coalition** + **suburban** **shift**;
@@ -828,6 +1606,21 @@ quotes:
     **VP** to **replay** **Harris** **redemption** **narrative** and **unlock** **suburbs**.
     **Hedges:** **Vance** **alternative**; **model** **testing**; **VP** **prediction**
     **falsifiable**.
+  text_raw: Explain **2020** **Biden** **win** via **coalition** + **suburban** **shift**;
+    argue **2024** **Trump** **favored** by **coalition** **fraying** + **enthusiasm**
+    **gap**; **main** **forecast** — **Trump** **wins** and **picks** **Nikki Haley**
+    **VP** to **replay** **Harris** **redemption** **narrative** and **unlock** **suburbs**.
+    **Hedges:** **Vance** **alternative**; **model** **testing**; **VP** **prediction**
+    **falsifiable**.
+  text_clean: Explain **2020** **Biden** **win** via **coalition** + **suburban**
+    **shift**; argue **2024** **Trump** **favored** by **coalition** **fraying** +
+    **enthusiasm** **gap**; **main** **forecast** — **Trump** **wins** and **picks**
+    **Nikki Haley** **VP** to **replay** **Harris** **redemption** **narrative** and
+    **unlock** **suburbs**. **Hedges:** **Vance** **alternative**; **model** **testing**;
+    **VP** **prediction** **falsifiable**.
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: analysis
   themes: []
   concept_ids:
@@ -836,8 +1629,9 @@ quotes:
   - ch02
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0046
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0049
   source_id: geo-02
   analysis_id: null
   text: '**Christianity (compressed):** Jesus, minimal historical detail; core narrative
@@ -846,6 +1640,21 @@ quotes:
     **Augustine** and *City of God* / *Confessions* as moves to **establishment**
     Christianity and downplay imminent Second Coming (amillennial-style reading of
     the “thousand years”).'
+  text_raw: '**Christianity (compressed):** Jesus, minimal historical detail; core
+    narrative — crucifixion, resurrection, **Second Coming**, kingdom of heaven. Early
+    appeal: revolutionary / egalitarian / anti-authority “lottery ticket” for the
+    oppressed. **Augustine** and *City of God* / *Confessions* as moves to **establishment**
+    Christianity and downplay imminent Second Coming (amillennial-style reading of
+    the “thousand years”).'
+  text_clean: '**Christianity (compressed):** Jesus, minimal historical detail; core
+    narrative — crucifixion, resurrection, **Second Coming**, kingdom of heaven. Early
+    appeal: revolutionary / egalitarian / anti-authority “lottery ticket” for the
+    oppressed. **Augustine** and *City of God* / *Confessions* as moves to **establishment**
+    Christianity and downplay imminent Second Coming (amillennial-style reading of
+    the “thousand years”).'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -855,8 +1664,9 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0047
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0050
   source_id: geo-08
   analysis_id: null
   text: '**Drivers:** **AIPAC** **+** **CUFI** **scale;** **empire** **/** **Wall**
@@ -865,6 +1675,21 @@ quotes:
     **fund** **(lecture).** **Trump** **first** **term:** **JCPOA** **exit,** **Jerusalem**
     **embassy,** **Khashoggi** **framing,** **Abraham** **Accords,** **Soleimani**
     **strike.**'
+  text_raw: '**Drivers:** **AIPAC** **+** **CUFI** **scale;** **empire** **/** **Wall**
+    **Street;** **Saudi** **vs** **Iran** **as** **existential** **regional** **frame**
+    **(series** **thread).** **Kushner** **links** **Netanyahu,** **MBS,** **$2B**
+    **fund** **(lecture).** **Trump** **first** **term:** **JCPOA** **exit,** **Jerusalem**
+    **embassy,** **Khashoggi** **framing,** **Abraham** **Accords,** **Soleimani**
+    **strike.**'
+  text_clean: '**Drivers:** **AIPAC** **+** **CUFI** **scale;** **empire** **/** **Wall**
+    **Street;** **Saudi** **vs** **Iran** **as** **existential** **regional** **frame**
+    **(series** **thread).** **Kushner** **links** **Netanyahu,** **MBS,** **$2B**
+    **fund** **(lecture).** **Trump** **first** **term:** **JCPOA** **exit,** **Jerusalem**
+    **embassy,** **Khashoggi** **framing,** **Abraham** **Accords,** **Soleimani**
+    **strike.**'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -874,8 +1699,9 @@ quotes:
   - ch03
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0048
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0051
   source_id: geo-09
   analysis_id: null
   text: '**Intellectual** **arc:** **Fukuyama** **/** **“end** **of** **history”**
@@ -885,6 +1711,23 @@ quotes:
     **postwar** **worker-centric** **West** **→** **1980s** **“revolt** **of** **the**
     **elite,”** **CEO** **pay** **multiple** **story,** **shift** **to** **consumer**
     **citizen.**'
+  text_raw: '**Intellectual** **arc:** **Fukuyama** **/** **“end** **of** **history”**
+    **+** **Hegelian** **dialectic** **sketch** **→** **consumerism** **as** **liberal-democratic**
+    **core** **→** **historical** **answers** **(war,** **religion,** **civilization)**
+    **and** **abstraction** **→** **capitalism’s** **critique** **→** **Marx** **→**
+    **postwar** **worker-centric** **West** **→** **1980s** **“revolt** **of** **the**
+    **elite,”** **CEO** **pay** **multiple** **story,** **shift** **to** **consumer**
+    **citizen.**'
+  text_clean: '**Intellectual** **arc:** **Fukuyama** **/** **“end** **of** **history”**
+    **+** **Hegelian** **dialectic** **sketch** **→** **consumerism** **as** **liberal-democratic**
+    **core** **→** **historical** **answers** **(war,** **religion,** **civilization)**
+    **and** **abstraction** **→** **capitalism’s** **critique** **→** **Marx** **→**
+    **postwar** **worker-centric** **West** **→** **1980s** **“revolt** **of** **the**
+    **elite,”** **CEO** **pay** **multiple** **story,** **shift** **to** **consumer**
+    **citizen.**'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -894,8 +1737,9 @@ quotes:
   - ch02
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0049
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0052
   source_id: geo-05
   analysis_id: null
   text: '**Suburbs:** **Swing** geography; **2020** shift to **Biden** — **reasons:**
@@ -903,6 +1747,19 @@ quotes:
     Floyd** **military** response; **COVID** **competence**; **Kamala Harris** **VP**
     — **debate** **attack** on **Biden** **busing** then **reconciliation** → **“empathy**
     / **listener** / **no grudges**” **narrative** **vs** **Trump**.'
+  text_raw: '**Suburbs:** **Swing** geography; **2020** shift to **Biden** — **reasons:**
+    **media** / **Trump** **divisive** narrative, **Russian** **asset** story, **George
+    Floyd** **military** response; **COVID** **competence**; **Kamala Harris** **VP**
+    — **debate** **attack** on **Biden** **busing** then **reconciliation** → **“empathy**
+    / **listener** / **no grudges**” **narrative** **vs** **Trump**.'
+  text_clean: '**Suburbs:** **Swing** geography; **2020** shift to **Biden** — **reasons:**
+    **media** / **Trump** **divisive** narrative, **Russian** **asset** story, **George
+    Floyd** **military** response; **COVID** **competence**; **Kamala Harris** **VP**
+    — **debate** **attack** on **Biden** **busing** then **reconciliation** → **“empathy**
+    / **listener** / **no grudges**” **narrative** **vs** **Trump**.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -912,13 +1769,23 @@ quotes:
   - ch02
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0050
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0053
   source_id: geo-05
   analysis_id: null
   text: '**Haley & Iran (lecture):** Post-UN **wealth**; **United Against a Nuclear
     Iran**; **Adelson** / **Boeing** board / **Christians United for Israel** — **framed**
     as **VP** **role** **pushing** **Iran** **confrontation**.'
+  text_raw: '**Haley & Iran (lecture):** Post-UN **wealth**; **United Against a Nuclear
+    Iran**; **Adelson** / **Boeing** board / **Christians United for Israel** — **framed**
+    as **VP** **role** **pushing** **Iran** **confrontation**.'
+  text_clean: '**Haley & Iran (lecture):** Post-UN **wealth**; **United Against a
+    Nuclear Iran**; **Adelson** / **Boeing** board / **Christians United for Israel**
+    — **framed** as **VP** **role** **pushing** **Iran** **confrontation**.'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -927,8 +1794,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0051
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0054
   source_id: geo-05
   analysis_id: null
   text: '**2024 Biden headwinds (lecture):** **Inflation** hurting **poor**; **illegal
@@ -936,6 +1804,19 @@ quotes:
     **strain**; **Gaza** → **young** **protest** / **sit-out**; **Black** **support**
     **erosion** in polls; **college** **Democrats** **less** **enthusiastic** (Ukraine,
     Gaza, age); **women** still **Democratic** (e.g. **abortion**).'
+  text_raw: '**2024 Biden headwinds (lecture):** **Inflation** hurting **poor**; **illegal
+    immigration** doubling (lecture figures); **Ukraine** spending vs **domestic**
+    **strain**; **Gaza** → **young** **protest** / **sit-out**; **Black** **support**
+    **erosion** in polls; **college** **Democrats** **less** **enthusiastic** (Ukraine,
+    Gaza, age); **women** still **Democratic** (e.g. **abortion**).'
+  text_clean: '**2024 Biden headwinds (lecture):** **Inflation** hurting **poor**;
+    **illegal immigration** doubling (lecture figures); **Ukraine** spending vs **domestic**
+    **strain**; **Gaza** → **young** **protest** / **sit-out**; **Black** **support**
+    **erosion** in polls; **college** **Democrats** **less** **enthusiastic** (Ukraine,
+    Gaza, age); **women** still **Democratic** (e.g. **abortion**).'
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids: []
@@ -943,8 +1824,9 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0052
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.
+- quote_id: q-0055
   source_id: geo-06
   analysis_id: null
   text: Empire and it's refusing to spend the necessary resources to protect the Empire
@@ -952,6 +1834,19 @@ quotes:
     it has 475 these 475 ships must go around all around the world to protect shipping
     lanes okay the US military in 19 in 1991 during the first person Gulf War had
     two million soldiers today has one 1.
+  text_raw: Empire and it's refusing to spend the necessary resources to protect the
+    Empire so for example the US Navy okay 1945 it had 7,600 ships today guess what
+    guys it has 475 these 475 ships must go around all around the world to protect
+    shipping lanes okay the US military in 19 in 1991 during the first person Gulf
+    War had two million soldiers today has one 1.
+  text_clean: Empire and it's refusing to spend the necessary resources to protect
+    the Empire so for example the US Navy okay 1945 it had 7,600 ships today guess
+    what guys it has 475 these 475 ships must go around all around the world to protect
+    shipping lanes okay the US military in 19 in 1991 during the first person Gulf
+    War had two million soldiers today has one 1.
+  transcript_source: raw
+  status: cleaned
+  verification: unverified
   quote_type: lecture
   themes: []
   concept_ids:
@@ -960,56 +1855,5 @@ quotes:
   - ch01
   rank: 4
   speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0053
-  source_id: geo-02
-  analysis_id: geo-02
-  text: 'See [CIV-MEM-LENS.md](../CIV-MEM-LENS.md) for methodology. This lecture is
-    a strong fit: **empire**, **religion as institution**, **alliance seams**, and
-    **founding memory** are all foregrounded.'
-  quote_type: analysis
-  themes: []
-  concept_ids:
-  - empire-order
-  - religious-legitimacy
-  - middle-east-alliance
-  chapter_ids:
-  - ch01
-  rank: 4
-  speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0054
-  source_id: geo-02
-  analysis_id: null
-  text: '**Framing:** Continues the “US–Iran war” arc: invasion is treated as eventual;
-    this class gives **three reasons** — (1) US must defend its empire, (2) **allies**
-    (especially Saudi Arabia and Israel) pressure the US toward war, (3) the **Israel
-    Lobby**. The bulk of the lecture builds toward (3) by explaining **Christianity**
-    and **end-times theologies** first.'
-  quote_type: lecture
-  themes: []
-  concept_ids:
-  - empire-order
-  - religious-legitimacy
-  - saudi-iran-axis
-  chapter_ids:
-  - ch03
-  rank: 4
-  speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
-- quote_id: q-0055
-  source_id: geo-06
-  analysis_id: null
-  text: '**Next** **class** **(channel** **order** **varies):** **terrain** **/**
-    **Iran** **war** **template** **—** **developed** **in** **Geo-Strategy** **#8**
-    **[*The** **Iran** **Trap*](https://www.youtube.com/watch?v=7y_hbz6loEo)**; **#7**
-    **on** **channel** **is** **Raisi** **helicopter** **episode**.'
-  quote_type: lecture
-  themes: []
-  concept_ids:
-  - saudi-iran-axis
-  chapter_ids:
-  - ch01
-  rank: 4
-  speaker: Jiang Xueqin
-  notes: ASR/transcript line; verify phrasing before scholarly citation.
+  notes: ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped
+    as cleaned, not draft_safe.

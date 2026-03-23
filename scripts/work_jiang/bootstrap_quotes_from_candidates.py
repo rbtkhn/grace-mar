@@ -1,7 +1,6 @@
 """One-time / operator tool: build metadata/quotes.yaml from quote-candidates + sources.
 
-Curators should edit quotes.yaml by hand after bootstrap. Not run in default CI.
-"""
+Curators should edit quotes.yaml by hand after bootstrap. Not run in default CI."""
 from __future__ import annotations
 
 import argparse
@@ -12,6 +11,21 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
+
+VERIFY_MARKERS = ("[verify:", "[unclear]")
+
+
+def contains_verify_markers(text: str) -> bool:
+    return any(marker in text for marker in VERIFY_MARKERS)
+
+
+def infer_quote_status(text_clean: str, verification: str | None = None) -> str:
+    if contains_verify_markers(text_clean):
+        return "cleaned"
+    if verification == "verified_against_audio":
+        return "verified"
+    return "cleaned"
+
 
 # ch03 = analysis chapter (empire + religion + strategic imagination); keep regex narrower than generic "empire".
 CH03 = re.compile(
@@ -118,19 +132,26 @@ def main() -> int:
             ch03_count += 1
 
         qid = f"q-{len(picked) + 1:04d}"
+        text_raw = text
+        text_clean = re.sub(r"\s+", " ", text_raw).strip()
         picked.append(
             {
                 "quote_id": qid,
                 "source_id": sid,
                 "analysis_id": aid,
-                "text": text,
+                "text": text_clean,
+                "text_raw": text_raw,
+                "text_clean": text_clean,
+                "transcript_source": "raw",
+                "status": infer_quote_status(text_clean),
+                "verification": "unverified",
                 "quote_type": "lecture" if "lectures/" in rel else "analysis",
                 "themes": [],
-                "concept_ids": guess_concepts(text),
+                "concept_ids": guess_concepts(text_clean),
                 "chapter_ids": chapters,
                 "rank": min(5, max(1, int(round(c.get("score") or 1)))),
                 "speaker": "Jiang Xueqin",
-                "notes": "ASR/transcript line; verify phrasing before scholarly citation.",
+                "notes": "ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped as cleaned, not draft_safe.",
             }
         )
 
@@ -148,21 +169,29 @@ def main() -> int:
             sid, aid = map_path_to_source(rel, sources)
             if not sid:
                 continue
-            if any(p.get("text") == text for p in picked):
+            text_raw = text
+            text_clean = re.sub(r"\s+", " ", text_raw).strip()
+            if any((p.get("text_clean") or p.get("text")) == text_clean for p in picked):
                 continue
+
             picked.append(
                 {
                     "quote_id": f"q-{len(picked) + 1:04d}",
                     "source_id": sid,
                     "analysis_id": aid,
-                    "text": text,
+                    "text": text_clean,
+                    "text_raw": text_raw,
+                    "text_clean": text_clean,
+                    "transcript_source": "raw",
+                    "status": infer_quote_status(text_clean),
+                    "verification": "unverified",
                     "quote_type": "lecture" if "lectures/" in rel else "analysis",
                     "themes": [],
-                    "concept_ids": guess_concepts(text),
+                    "concept_ids": guess_concepts(text_clean),
                     "chapter_ids": ["ch03"],
                     "rank": min(5, max(1, int(round(c.get("score") or 1)))),
                     "speaker": "Jiang Xueqin",
-                    "notes": "ASR/transcript line; verify phrasing before scholarly citation.",
+                    "notes": "ASR/transcript line; verify phrasing before scholarly citation. Auto-bootstrapped as cleaned, not draft_safe.",
                 }
             )
             ch03_count += 1

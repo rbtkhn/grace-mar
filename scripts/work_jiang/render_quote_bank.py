@@ -1,6 +1,7 @@
 """Render QUOTE-BANK.md from metadata/quotes.yaml."""
 from __future__ import annotations
 
+import argparse
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -13,6 +14,9 @@ QUOTES = WORK_DIR / "metadata" / "quotes.yaml"
 CONCEPTS = WORK_DIR / "metadata" / "concepts.yaml"
 OUT = WORK_DIR / "QUOTE-BANK.md"
 
+ALLOWED_DEFAULT_STATUSES = {"draft_safe"}
+ALLOWED_WITH_VERIFIED = {"draft_safe", "verified"}
+
 
 def load_yaml(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
@@ -20,6 +24,11 @@ def load_yaml(path: Path) -> dict:
 
 
 def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--include-verified", action="store_true", help="Include verified quotes in addition to draft_safe quotes.")
+    args = ap.parse_args()
+    allowed_statuses = ALLOWED_WITH_VERIFIED if args.include_verified else ALLOWED_DEFAULT_STATUSES
+
     errors: list[str] = []
     qdoc = load_yaml(QUOTES)
     quotes = qdoc.get("quotes") or []
@@ -28,11 +37,21 @@ def main() -> int:
 
     by_ch: dict[str, list[dict]] = defaultdict(list)
     incomplete: list[dict] = []
-    for row in quotes:
-        text = (row.get("text") or "").strip()
+    visible_count = 0
+
+    for raw_row in quotes:
+        status = (raw_row.get("status") or "").strip()
+        if status not in allowed_statuses:
+            continue
+
+        row = dict(raw_row)
+        text = (row.get("text_clean") or row.get("text") or "").strip()
         if not text:
             incomplete.append(row)
             continue
+        row["text"] = text
+        visible_count += 1
+
         for ch in row.get("chapter_ids") or ["ch01"]:
             by_ch[ch].append(row)
         for cid in row.get("concept_ids") or []:
@@ -42,9 +61,10 @@ def main() -> int:
     lines = [
         "# Quotation bank — work-jiang (Geo-Strategy)",
         "",
-        "Curated lines from transcript-backed lectures and analysis memos. Wording may follow ASR; check notes before final citation.",
+        "Curated lines from transcript-backed lectures and analysis memos.",
+        "Default view includes only draft-safe quotes unless --include-verified is used.",
         "",
-        f"**Total quotes:** {len(quotes)}",
+        f"**Visible quotes:** {visible_count}",
         "",
     ]
 
@@ -55,7 +75,7 @@ def main() -> int:
         for row in sorted(by_ch[ch], key=lambda r: r.get("quote_id") or ""):
             qid = row.get("quote_id") or "?"
             src = row.get("source_id") or "?"
-            body = (row.get("text") or "").strip()
+            body = (row.get("text_clean") or row.get("text") or "").strip()
             lines.append(f"- **`{qid}`** (`{src}`) — {body}")
             note = (row.get("notes") or "").strip()
             if note:

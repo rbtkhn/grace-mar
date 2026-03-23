@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 LECTURES = WORK_DIR / "lectures"
 ANALYSIS = WORK_DIR / "analysis"
+QUOTES = WORK_DIR / "metadata" / "quotes.yaml"
 
 GEO_LECTURE = re.compile(r"^geo-strategy-(\d{2})-(.+)\.md$", re.I)
 CIV_LECTURE = re.compile(r"^civilization-(\d{2})-(.+)\.md$", re.I)
@@ -68,8 +69,14 @@ def chapter_draft_exists(item: dict) -> bool:
     return bool(p) and (WORK_DIR / p).exists()
 
 
-def curated_quote_count_for_chapter(cid: str, quote_links: dict) -> int:
-    return len(quote_links.get(cid, []))
+def count_chapter_quotes_by_status(quotes: list[dict], chapter_id: str, statuses: set[str]) -> int:
+    total = 0
+    for q in quotes:
+        if (q.get("status") or "") not in statuses:
+            continue
+        if chapter_id in (q.get("chapter_ids") or []):
+            total += 1
+    return total
 
 
 def assert_safe_output_path(path: Path) -> None:
@@ -247,7 +254,8 @@ def main() -> int:
                     errors.append(f"{path.name}: invalid chapter_candidates entry {cand}")
 
     # Chapter validation from book-architecture.yaml (canonical source)
-    quote_links = load(WORK_DIR / "metadata" / "chapter-quote-links.yaml").get("chapter_quote_links") or {}
+    qdoc = load(QUOTES) if QUOTES.exists() else {}
+    quotes = qdoc.get("quotes") or []
     src_by = {s["source_id"]: s for s in sources}
     chapters = (architecture.get("book") or {}).get("chapters") or []
     for item in chapters:
@@ -256,18 +264,25 @@ def main() -> int:
         sids = item.get("source_ids") or chapter_map.get(cid, {}).get("source_ids") or []
 
         if status == "research_ready":
-            with_analysis = sum(1 for s in sources if s["source_id"] in sids and s["status"]["analysis"] == "complete")
+            with_analysis = sum(
+                1 for s in sources if s["source_id"] in sids and s["status"].get("analysis") == "complete"
+            )
             if sids and with_analysis == 0:
                 errors.append(
                     f"Chapter {cid} marked research_ready but no mapped source has complete analysis"
                 )
             if not chapter_evidence_pack_exists(cid):
                 errors.append(f"Chapter {cid} marked research_ready but evidence pack is missing")
-            if curated_quote_count_for_chapter(cid, quote_links) < 5:
+            draft_safe_count = count_chapter_quotes_by_status(quotes, cid, {"draft_safe"})
+            if draft_safe_count < 3:
                 errors.append(
-                    f"Chapter {cid} marked research_ready but has fewer than 5 curated quotes"
+                    f"Chapter {cid} marked research_ready but has fewer than 3 draft_safe quotes"
                 )
+
         if status in {"ready_for_outline", "outline_complete", "research_ready", "drafting", "draft_complete", "review", "done"}:
+            trusted_quote_count = count_chapter_quotes_by_status(quotes, cid, {"verified", "draft_safe"})
+            if trusted_quote_count == 0:
+                errors.append(f"Chapter {cid} status={status} but has no verified/draft_safe quotes")
             if not chapter_outline_exists(item):
                 errors.append(
                     f"Chapter {cid} status={status} but outline_path is missing or file does not exist"
