@@ -517,3 +517,74 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: civ-26
+  video_id: za30rbC3tTg
+  title: 'Civilization #26: Constantine''s Monotheistic Revolution'
+  canonical_url: https://www.youtube.com/watch?v=za30rbC3tTg
+  lecture_path: lectures/civilization-26-constantine-s-monotheistic-revolution.md
+  analysis_path: null
+  series: civilization
+  episode: 26
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-27
+  video_id: GdbZBVUIVDE
+  title: 'Civilization #27: Augustine''s Empire of God'
+  canonical_url: https://www.youtube.com/watch?v=GdbZBVUIVDE
+  lecture_path: lectures/civilization-27-augustine-s-empire-of-god.md
+  analysis_path: null
+  series: civilization
+  episode: 27
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-28
+  video_id: C9rzPGJ0wm4
+  title: 'Civilization #28: Muhammad''s Revolution of God'
+  canonical_url: https://www.youtube.com/watch?v=C9rzPGJ0wm4
+  lecture_path: lectures/civilization-28-muhammad-s-revolution-of-god.md
+  analysis_path: null
+  series: civilization
+  episode: 28
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-29
+  video_id: GfqJi0qevok
+  title: 'Civilization #29: Dante''s Divine Comedy and the Liberation of the Human
+    Imagination'
+  canonical_url: https://www.youtube.com/watch?v=GfqJi0qevok
+  lecture_path: lectures/civilization-29-dante-s-divine-comedy-and-the-liberation-of-the-human-imagination.md
+  analysis_path: null
+  series: civilization
+  episode: 29
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-30
+  video_id: asbKjezwIJM
+  title: 'Civilization #30: Dante as the Second Coming of Homer'
+  canonical_url: https://www.youtube.com/watch?v=asbKjezwIJM
+  lecture_path: lectures/civilization-30-dante-as-the-second-coming-of-homer.md
+  analysis_path: null
+  series: civilization
+  episode: 30
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started

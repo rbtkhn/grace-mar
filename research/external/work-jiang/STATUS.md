@@ -5,9 +5,9 @@
 ## Corpus
 
 - **Geo-Strategy lectures:** 12
-- **Civilization series lectures (curated files):** 25
+- **Civilization series lectures (curated files):** 30
 - **Analysis memos:** 12
-- **Missing analysis:** 25 (geo-01, civ-01, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-21, civ-22, civ-23, civ-24, civ-25)
+- **Missing analysis:** 30 (geo-01, civ-01, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-21, civ-22, civ-23, civ-24, civ-25, civ-26, civ-27, civ-28, civ-29, civ-30)
 
 ## Book architecture
 

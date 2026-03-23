@@ -218,6 +218,8 @@ Before treating a memo as “done for this sprint”:
 
 | Goal | Command |
 |------|---------|
+| **Ingest one lecture** (stdin / `--file` / `--fetch`) | `python3 scripts/work_jiang/ingest_lecture.py civilization 25 --file path.txt` · `cat t.txt \| python3 scripts/work_jiang/ingest_lecture.py civ 25` · `python3 scripts/work_jiang/ingest_lecture.py geo 3 --fetch` |
+| **Post-ingest refresh** (registry + backlog + dashboard) | `python3 scripts/work_jiang/refresh_after_ingest.py` (also runs at end of `ingest_lecture.py` unless `--no-refresh`) |
 | List channel videos | `python3 scripts/fetch_youtube_channel_transcripts.py --dry-run --limit 200` |
 | Pull transcripts | `python3 scripts/fetch_youtube_channel_transcripts.py --resume --output-dir research/external/youtube-channels/predictive-history` |
 | Manifest | `research/external/youtube-channels/predictive-history/index.json` |
