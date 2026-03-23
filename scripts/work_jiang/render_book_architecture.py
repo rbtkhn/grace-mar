@@ -110,8 +110,19 @@ def render(data: dict) -> str:
             f"- **Kind:** {ch['kind']}",
             f"- **Priority:** {ch['priority']}",
             f"- **Target words:** {ch.get('target_words', '')}",
-            f"- **Status:** {ch['status']}",
+            f"- **Status:** {ch.get('status', '')}",
+            f"- **Owner:** {ch.get('owner', '')}",
+            f"- **Sprint:** {ch.get('sprint', '')}",
         ]
+        blocking = ch.get("blocking") or []
+        if blocking:
+            lines.append(f"- **Blocking:** {', '.join(blocking)}")
+        outline_path = ch.get("outline_path")
+        draft_path = ch.get("draft_path")
+        if outline_path:
+            lines.append(f"- **Outline:** `{outline_path}`")
+        if draft_path:
+            lines.append(f"- **Draft:** `{draft_path}`")
         if pred_line:
             lines.append(pred_line)
         lines.append("")

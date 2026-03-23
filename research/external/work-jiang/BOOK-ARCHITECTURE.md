@@ -47,7 +47,12 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** ready_for_outline
+- **Owner:** operator
+- **Sprint:** 2026-W13
+- **Blocking:** Close analysis gap for geo-01
+- **Outline:** `chapters/ch01/outline.md`
+- **Draft:** `chapters/ch01/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS01-001, jiang-GS01-002, jiang-GS01-003`
 
 ### ch02 — Geo-Strategy #2: Christian Zionism and the Middle East Conflict
@@ -56,7 +61,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch02/outline.md`
+- **Draft:** `chapters/ch02/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS02-001, jiang-GS02-002, jiang-GS02-003`
 
 ### ch03 — Geo-Strategy #3: How Empire Is Destroying America
@@ -65,7 +74,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch03/outline.md`
+- **Draft:** `chapters/ch03/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS03-001, jiang-GS03-002, jiang-GS03-003`
 
 ### ch04 — Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran
@@ -74,7 +87,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch04/outline.md`
+- **Draft:** `chapters/ch04/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS04-001, jiang-GS04-002, jiang-GS04-003`
 
 ### ch05 — Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)
@@ -83,7 +100,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch05/outline.md`
+- **Draft:** `chapters/ch05/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS05-001, jiang-GS05-002, jiang-GS05-003`
 
 ### ch06 — Geo-Strategy #6: America’s Imperial Hubris
@@ -92,7 +113,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch06/outline.md`
+- **Draft:** `chapters/ch06/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS06-001, jiang-GS06-002, jiang-GS06-003`
 
 ### ch07 — Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?
@@ -101,7 +126,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch07/outline.md`
+- **Draft:** `chapters/ch07/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS07-001, jiang-GS07-002, jiang-GS07-003`
 
 ### ch08 — Geo-Strategy #8: The Iran Trap
@@ -110,7 +139,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch08/outline.md`
+- **Draft:** `chapters/ch08/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS08-001, jiang-GS08-002, jiang-GS08-003`
 
 ### ch09 — Geo-Strategy #9: Putin’s War for the Soul of Russia
@@ -119,7 +152,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch09/outline.md`
+- **Draft:** `chapters/ch09/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS09-001, jiang-GS09-002, jiang-GS09-003`
 
 ### ch10 — Geo-Strategy #10: Putin’s Strategic Imagination
@@ -128,7 +165,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch10/outline.md`
+- **Draft:** `chapters/ch10/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS10-001, jiang-GS10-002, jiang-GS10-003`
 
 ### ch11 — Geo-Strategy #11: The Second American Civil War
@@ -137,7 +178,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch11/outline.md`
+- **Draft:** `chapters/ch11/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS11-001, jiang-GS11-002, jiang-GS11-003`
 
 ### ch12 — Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)
@@ -146,7 +191,11 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** not_started
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch12/outline.md`
+- **Draft:** `chapters/ch12/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS12-001, jiang-GS12-002, jiang-GS12-003`
 
 ## Appendix

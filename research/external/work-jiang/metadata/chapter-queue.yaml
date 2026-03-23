@@ -1,3 +1,5 @@
+# DEPRECATED: Chapter status now lives in metadata/book-architecture.yaml.
+# This file is kept for reference only. render_chapter_queue.py reads from book-architecture.yaml.
 # Production order: chapters follow lecture order (ch01 = Geo-Strategy #1 … ch12 = #12).
 chapter_queue:
   - chapter_id: ch01

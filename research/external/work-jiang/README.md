@@ -14,6 +14,7 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 | Concept dictionary | [CONCEPT-DICTIONARY.md](CONCEPT-DICTIONARY.md), `metadata/concepts.yaml`, `metadata/concept-mentions.yaml` |
 | Claims ledger | [CLAIMS-OVERVIEW.md](CLAIMS-OVERVIEW.md), [claims/registry/claims.jsonl](claims/registry/claims.jsonl), [claims/README.md](claims/README.md) |
 | Chapter evidence packs | [evidence-packs/](evidence-packs/) — one file per book chapter (`ch01.md` …) |
+| Analysis backlog | [ANALYSIS-BACKLOG.md](ANALYSIS-BACKLOG.md) — priority-ordered sources missing analysis |
 | Karpathy / No Priors (work-dev, not Jiang) | See [work-dev research-no-priors-karpathy-end-of-coding.md](../../docs/skill-work/work-dev/research-no-priors-karpathy-end-of-coding.md) and [research/external/work-dev/transcripts/](../work-dev/transcripts/) |
 | Channel machine pulls | [../youtube-channels/predictive-history/](../youtube-channels/predictive-history/) |
 | Transcript intake & analysis workflow | [WORKFLOW-transcripts.md](WORKFLOW-transcripts.md) |
@@ -24,7 +25,7 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 | Influence over time (metrics snapshots) | [influence-tracking/README.md](influence-tracking/README.md) |
 | Prediction accuracy (forecast registry) | [prediction-tracking/README.md](prediction-tracking/README.md) |
 | Divergence from mainstream (comparison registry) | [divergence-tracking/README.md](divergence-tracking/README.md) |
-| Quotation bank (rendered) | [QUOTE-BANK.md](QUOTE-BANK.md), `metadata/quotes.yaml` |
+| Quotation bank (rendered) | [QUOTE-BANK.md](QUOTE-BANK.md), `metadata/quotes.yaml`, `metadata/quote-index.yaml` |
 | Counter-readings | [COUNTER-READINGS.md](COUNTER-READINGS.md), [counter-readings/README.md](counter-readings/README.md) |
 | Intellectual chronology | [INTELLECTUAL-CHRONOLOGY.md](INTELLECTUAL-CHRONOLOGY.md), `metadata/chronology.yaml` |
 
@@ -49,6 +50,12 @@ Normative rules for this tree — **canonical here**; do not restate long policy
 **New agent thread:** [bootstrap/work-jiang-bootstrap.md](../../bootstrap/work-jiang-bootstrap.md) — paste-in checklist, read order, verify block reference.
 
 ## Production pipeline (book / site)
+
+**Single rebuild:** `python3 scripts/work_jiang/rebuild_all.py` runs registry, renders, and validators in order. CI uses this.
+
+**Chapter status:** `metadata/book-architecture.yaml` is the single source of truth. Rendered markdown (CHAPTER-QUEUE.md, BOOK-ARCHITECTURE.md, STATUS.md, ANALYSIS-BACKLOG.md) is read-only output.
+
+**Scaffold a chapter:** `python3 scripts/work_jiang/create_chapter_scaffold.py --chapter-id ch01`
 
 From repo root (requires `pyyaml`, e.g. `pip install -r requirements-dev.txt`):
 

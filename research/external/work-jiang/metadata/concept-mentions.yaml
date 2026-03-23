@@ -19,6 +19,7 @@ generated_from:
 - analysis/LctUcVqhhns-geo-strategy-04-analysis.md
 - analysis/LsRGvKxfLts-geo-strategy-07-analysis.md
 - analysis/_blj8zKdKgA-geo-strategy-03-analysis.md
+- analysis/cvI8rukoda8-civilization-20-analysis.md
 - analysis/exRK-85630k-geo-strategy-05-analysis.md
 - analysis/lkKrZq4YdqY-geo-strategy-02-analysis.md
 - analysis/s_k6esWheqA-geo-strategy-12-psychohistory-analysis.md
@@ -58,11 +59,11 @@ concepts:
     financialization: 11
     dollar system: 1
 - concept_id: saudi-iran-axis
-  total_mentions_estimated: 165
+  total_mentions_estimated: 167
   by_phrase:
     Saudi Arabia vs Iran: 0
     Saudi: 152
-    Gulf: 9
+    Gulf: 11
     axis of resistance: 4
 - concept_id: electoral-coalition
   total_mentions_estimated: 45
@@ -208,7 +209,7 @@ untracked_high_frequency_tokens:
 - token: really
   count: 138
 - token: three
-  count: 128
+  count: 129
 - token: country
   count: 127
 - token: idea
@@ -224,7 +225,7 @@ untracked_high_frequency_tokens:
 - token: much
   count: 119
 - token: time
-  count: 110
+  count: 111
 - token: basically
   count: 110
 - token: ukraine

@@ -163,7 +163,7 @@ prediction_links:
     strike already occurred without full war — define escalation threshold.'
   evidence_urls: []
   source_id: geo-04
-  chapter_ids:
+  chapter_ids: &id008
   - ch04
 - prediction_id: jiang-GS05-002
   video_id: exRK-85630k
@@ -182,7 +182,7 @@ prediction_links:
     Trump win duplicates theme of jiang-GS03-001.'
   evidence_urls: []
   source_id: geo-05
-  chapter_ids:
+  chapter_ids: &id009
   - ch05
 - prediction_id: jiang-GS06-001
   video_id: JieFC4Yww4o
@@ -202,7 +202,7 @@ prediction_links:
     a dated binary event prediction.'
   evidence_urls: []
   source_id: geo-06
-  chapter_ids:
+  chapter_ids: &id010
   - ch06
 - prediction_id: jiang-GS07-001
   video_id: LsRGvKxfLts
@@ -225,7 +225,7 @@ prediction_links:
     accident default thesis.'
   evidence_urls: []
   source_id: geo-07
-  chapter_ids:
+  chapter_ids: &id011
   - ch07
 - prediction_id: jiang-GS08-001
   video_id: 7y_hbz6loEo
@@ -246,7 +246,7 @@ prediction_links:
     be explicit in book.
   evidence_urls: []
   source_id: geo-08
-  chapter_ids:
+  chapter_ids: &id012
   - ch08
 - prediction_id: jiang-GS09-001
   video_id: AEPSUC-UQ5k
@@ -448,3 +448,224 @@ prediction_links:
   evidence_urls: []
   source_id: geo-12
   chapter_ids: *id007
+- prediction_id: jiang-GS02-003
+  video_id: lkKrZq4YdqY
+  lecture_ref: lectures/geo-strategy-02-christian-zionism-middle-east-conflict.md
+  upload_date: '20240508'
+  excerpt: three reasons ... (1) US must defend its empire, (2) allies ... pressure
+    the US toward war, (3) the Israel Lobby
+  claim_summary: US–Iran war pressure is structurally driven by empire defense, allied
+    pressure, and Israel-lobby dynamics (not a single-factor story).
+  claim_type: interpretive
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Book uses as organizing claim for Part II scoring rubrics; falsify
+    via counterfactual policy histories only indirectly.
+  evidence_urls: []
+  source_id: geo-02
+  chapter_ids: *id002
+- prediction_id: jiang-GS04-002
+  video_id: LctUcVqhhns
+  lecture_ref: lectures/geo-strategy-04-saudi-arabia-trump-card-against-iran.md
+  upload_date: '20240515'
+  excerpt: Saudi cannot defeat Iran alone → needs US
+  claim_summary: Saudi Arabia cannot defeat Iran in a regional war alone; escalation
+    logic pulls the United States in as security guarantor.
+  claim_type: conditional
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Evaluate if major Saudi–Iran hot war occurs without US combat role
+    vs with US intervention.
+  evidence_urls: []
+  source_id: geo-04
+  chapter_ids: *id008
+- prediction_id: jiang-GS04-003
+  video_id: LctUcVqhhns
+  lecture_ref: lectures/geo-strategy-04-saudi-arabia-trump-card-against-iran.md
+  upload_date: '20240515'
+  excerpt: Iran’s primary regional adversary is Saudi Arabia, not Israel (contested
+    framing)
+  claim_summary: In Middle East rivalry framing, Iran’s primary regional adversary
+    is Saudi Arabia more than Israel (lecture thesis).
+  claim_type: interpretive
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Expert surveys differ; book Part II can compare to mainstream IR
+    summaries.
+  evidence_urls: []
+  source_id: geo-04
+  chapter_ids: *id008
+- prediction_id: jiang-GS05-001
+  video_id: exRK-85630k
+  lecture_ref: lectures/geo-strategy-05-why-trump-will-win-nikki-haley-vp.md
+  upload_date: '20240517'
+  excerpt: Trump wins November
+  claim_summary: Trump wins the 2024 US presidential election (stated as core prediction
+    in this lecture).
+  claim_type: event
+  evaluation_window:
+    start: '2024-11-01'
+    end: '2024-11-30'
+  resolution_status: supported
+  resolved_at_utc: null
+  outcome_notes: Same outcome as jiang-GS03-001; retained per chapter for end-of-chapter
+    scorecard in lecture order.
+  evidence_urls: []
+  source_id: geo-05
+  chapter_ids: *id009
+- prediction_id: jiang-GS05-003
+  video_id: exRK-85630k
+  lecture_ref: lectures/geo-strategy-05-why-trump-will-win-nikki-haley-vp.md
+  upload_date: '20240517'
+  excerpt: If Trump returns and pushes war with Iran, will the US military implement
+    it? ... yes — institutional path dependence from 2003
+  claim_summary: If civilian leadership orders a major Iran campaign, the US military
+    institution is likely to execute (path dependence from post-2003 shock-and-awe
+    culture).
+  claim_type: conditional
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: 'Developed further in Geo-Strategy #6; pair with civil–military case
+    studies in Part II.'
+  evidence_urls: []
+  source_id: geo-05
+  chapter_ids: *id009
+- prediction_id: jiang-GS06-002
+  video_id: JieFC4Yww4o
+  lecture_ref: lectures/geo-strategy-06-americas-imperial-hubris.md
+  upload_date: '20240522'
+  excerpt: US vs China shipbuilding ... ratio
+  claim_summary: US naval shipbuilding capacity lags strategic demand vs peer competitor
+    (China) — sustained vulnerability in long industrial competition.
+  claim_type: trend
+  evaluation_window:
+    start: '2028-01-01'
+    end: '2040-12-31'
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Verify lecture figures against USNI/CBO; trend metric TBD in Part
+    II.
+  evidence_urls: []
+  source_id: geo-06
+  chapter_ids: *id010
+- prediction_id: jiang-GS06-003
+  video_id: JieFC4Yww4o
+  lecture_ref: lectures/geo-strategy-06-americas-imperial-hubris.md
+  upload_date: '20240522'
+  excerpt: shock and awe ... you can only do this once
+  claim_summary: Post-2003 shock-and-awe template overfits ‘easy’ desert decapitation
+    cases and underperforms when repeated against prepared/mountainous theaters.
+  claim_type: interpretive
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Pairs with jiang-GS06-001 / Iran Trap; adjudicate with military historians
+    in Part II.
+  evidence_urls: []
+  source_id: geo-06
+  chapter_ids: *id010
+- prediction_id: jiang-GS07-002
+  video_id: LsRGvKxfLts
+  lecture_ref: lectures/geo-strategy-07-who-killed-iranian-president-ebrahim-raisi.md
+  upload_date: '20240524'
+  excerpt: 'three problems of analysis: little information; false information; official
+    narrative'
+  claim_summary: Under sparse evidence, adversary and factional-assassination hypotheses
+    remain hard to falsify quickly (epistemic limits claim).
+  claim_type: interpretive
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Meta-claim; Part II can compare to post-crash investigations and
+    reporting consensus.
+  evidence_urls: []
+  source_id: geo-07
+  chapter_ids: *id011
+- prediction_id: jiang-GS07-003
+  video_id: LsRGvKxfLts
+  lecture_ref: lectures/geo-strategy-07-who-killed-iranian-president-ebrahim-raisi.md
+  upload_date: '20240524'
+  excerpt: late June election / July runoff as upcoming from taping
+  claim_summary: Iran holds a presidential special-election cycle on schedule after
+    Raisi’s death (timing claim, June–July 2024).
+  claim_type: event
+  evaluation_window:
+    start: '2024-06-01'
+    end: '2024-07-31'
+  resolution_status: supported
+  resolved_at_utc: null
+  outcome_notes: Elections occurred; winner was Pezeshkian, not Mokhber (see jiang-GS07-001).
+  evidence_urls: []
+  source_id: geo-07
+  chapter_ids: *id011
+- prediction_id: jiang-GS08-002
+  video_id: 7y_hbz6loEo
+  lecture_ref: lectures/geo-strategy-08-the-iran-trap.md
+  upload_date: '20240529'
+  excerpt: mass ... encirclement ... supply ... mountainous Iran
+  claim_summary: A US invasion scenario against Iran faces mass, encirclement, and
+    supply-line constraints unlike 2003 Iraq (Iran Trap thesis).
+  claim_type: interpretive
+  evaluation_window: null
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: War-game style; only fully testable if large-scale invasion attempted.
+  evidence_urls: []
+  source_id: geo-08
+  chapter_ids: *id012
+- prediction_id: jiang-GS08-003
+  video_id: 7y_hbz6loEo
+  lecture_ref: lectures/geo-strategy-08-the-iran-trap.md
+  upload_date: '20240529'
+  excerpt: AIPAC + CUFI scale; empire / Wall Street; Saudi vs Iran
+  claim_summary: Three US drivers toward Iran war — Israel lobby organizations, financial/empire
+    interests, Saudi–Iran rivalry — stay jointly salient in US politics.
+  claim_type: trend
+  evaluation_window:
+    start: '2025-01-01'
+    end: '2030-12-31'
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Part II can track salience via budgets, votes, Gulf crises.
+  evidence_urls: []
+  source_id: geo-08
+  chapter_ids: *id012
+- prediction_id: jiang-GS09-003
+  video_id: AEPSUC-UQ5k
+  lecture_ref: lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md
+  upload_date: '20240531'
+  excerpt: Russia China alignment ... BRICS
+  claim_summary: Russia–China strategic alignment deepens versus US-led bloc over
+    the 2020s–2030s (shared institutions, sanctions hedging, coordination).
+  claim_type: trend
+  evaluation_window:
+    start: '2026-01-01'
+    end: '2035-12-31'
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: 'Metrics: trade, arms, joint exercises, BRICS institutions; overlaps
+    bundle in GS10.'
+  evidence_urls: []
+  source_id: geo-09
+  chapter_ids: *id004
+- prediction_id: jiang-GS10-003
+  video_id: B_al2wgk49Y
+  lecture_ref: lectures/geo-strategy-10-putins-strategic-imagination.md
+  upload_date: '20240605'
+  excerpt: North Korea more belligerent vs US alliance
+  claim_summary: Within the 3–4 year bundle window, North Korea remains or becomes
+    more belligerent toward US alliance posture (tests, rhetoric, or crises).
+  claim_type: time_bounded
+  evaluation_window:
+    start: '2027-06-05'
+    end: '2028-06-05'
+  resolution_status: pending
+  resolved_at_utc: null
+  outcome_notes: Sub-claim of jiang-GS10-001; score separately in Part II if desired.
+  evidence_urls: []
+  source_id: geo-10
+  chapter_ids: *id005

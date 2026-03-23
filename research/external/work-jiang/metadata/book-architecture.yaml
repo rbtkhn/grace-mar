@@ -56,12 +56,21 @@ book:
       kind: exposition
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-01]
       analysis_ids: []
       prediction_ids: [jiang-GS01-001, jiang-GS01-002, jiang-GS01-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: ready_for_outline
+      owner: operator
+      sprint: "2026-W13"
+      blocking:
+        - "Close analysis gap for geo-01"
+      next_action: "Draft chapter outline"
+      outline_path: "chapters/ch01/outline.md"
+      draft_path: "chapters/ch01/draft.md"
+      analysis_ready: false
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch02
       title: "Geo-Strategy #2: Christian Zionism and the Middle East Conflict"
@@ -69,12 +78,20 @@ book:
       kind: exposition
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-02]
       analysis_ids: []
       prediction_ids: [jiang-GS02-001, jiang-GS02-002, jiang-GS02-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch02/outline.md"
+      draft_path: "chapters/ch02/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch03
       title: "Geo-Strategy #3: How Empire Is Destroying America"
@@ -82,12 +99,20 @@ book:
       kind: exposition
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-03]
       analysis_ids: []
       prediction_ids: [jiang-GS03-001, jiang-GS03-002, jiang-GS03-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch03/outline.md"
+      draft_path: "chapters/ch03/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch04
       title: "Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran"
@@ -95,12 +120,20 @@ book:
       kind: exposition
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-04]
       analysis_ids: []
       prediction_ids: [jiang-GS04-001, jiang-GS04-002, jiang-GS04-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch04/outline.md"
+      draft_path: "chapters/ch04/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch05
       title: "Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)"
@@ -108,12 +141,20 @@ book:
       kind: exposition
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-05]
       analysis_ids: []
       prediction_ids: [jiang-GS05-001, jiang-GS05-002, jiang-GS05-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch05/outline.md"
+      draft_path: "chapters/ch05/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch06
       title: "Geo-Strategy #6: America’s Imperial Hubris"
@@ -121,12 +162,20 @@ book:
       kind: exposition
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-06]
       analysis_ids: []
       prediction_ids: [jiang-GS06-001, jiang-GS06-002, jiang-GS06-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch06/outline.md"
+      draft_path: "chapters/ch06/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch07
       title: "Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?"
@@ -134,12 +183,20 @@ book:
       kind: analysis
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-07]
       analysis_ids: []
       prediction_ids: [jiang-GS07-001, jiang-GS07-002, jiang-GS07-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch07/outline.md"
+      draft_path: "chapters/ch07/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch08
       title: "Geo-Strategy #8: The Iran Trap"
@@ -147,12 +204,20 @@ book:
       kind: analysis
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-08]
       analysis_ids: []
       prediction_ids: [jiang-GS08-001, jiang-GS08-002, jiang-GS08-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch08/outline.md"
+      draft_path: "chapters/ch08/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch09
       title: "Geo-Strategy #9: Putin’s War for the Soul of Russia"
@@ -160,12 +225,20 @@ book:
       kind: analysis
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-09]
       analysis_ids: []
       prediction_ids: [jiang-GS09-001, jiang-GS09-002, jiang-GS09-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch09/outline.md"
+      draft_path: "chapters/ch09/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch10
       title: "Geo-Strategy #10: Putin’s Strategic Imagination"
@@ -173,12 +246,20 @@ book:
       kind: analysis
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-10]
       analysis_ids: []
       prediction_ids: [jiang-GS10-001, jiang-GS10-002, jiang-GS10-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch10/outline.md"
+      draft_path: "chapters/ch10/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch11
       title: "Geo-Strategy #11: The Second American Civil War"
@@ -186,12 +267,20 @@ book:
       kind: analysis
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-11]
       analysis_ids: []
       prediction_ids: [jiang-GS11-001, jiang-GS11-002, jiang-GS11-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch11/outline.md"
+      draft_path: "chapters/ch11/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
     - id: ch12
       title: "Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)"
@@ -199,12 +288,20 @@ book:
       kind: analysis
       priority: high
       target_words: 2800
-      source_ids: []
+      source_ids: [geo-12]
       analysis_ids: []
       prediction_ids: [jiang-GS12-001, jiang-GS12-002, jiang-GS12-003]
       divergence_ids: []
       applications: []
-      status: not_started
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch12/outline.md"
+      draft_path: "chapters/ch12/draft.md"
+      analysis_ready: true
+      quotes_ready: true
       requires_prediction_review: false
 
 appendix:

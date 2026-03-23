@@ -5,15 +5,15 @@
 ## Corpus
 
 - **Geo-Strategy lectures:** 12
-- **Civilization series lectures (curated files):** 20
-- **Analysis memos:** 11
-- **Missing analysis:** 21 (geo-01, civ-01, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-20)
+- **Civilization series lectures (curated files):** 25
+- **Analysis memos:** 12
+- **Missing analysis:** 25 (geo-01, civ-01, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-21, civ-22, civ-23, civ-24, civ-25)
 
 ## Book architecture
 
 - **Project status:** outline_in_progress
 - **Chapters defined:** 12
-- **Chapters in queue:** 12
+- **Chapters in queue:** 12 (from book-architecture.yaml)
 - **Chapters research-ready or ready for outline:** 12
 - **Chapters with blockers listed:** 1
 - **Evidence packs present:** 12 / 12 chapters
@@ -21,7 +21,7 @@
 ## Registries
 
 - **Predictions (raw jsonl):** 37
-- **Predictions linked (metadata):** 24
+- **Predictions linked (metadata):** 37
 - **Unresolved / pending predictions (heuristic):** 33
 - **Divergences (raw jsonl):** 38
 - **Divergences linked (metadata):** 38

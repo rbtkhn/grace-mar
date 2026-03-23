@@ -438,9 +438,79 @@ sources:
   title: 'Civilization #20: The Proto-Buddhists of the Indus Valley (Harappan) Civilization'
   canonical_url: https://www.youtube.com/watch?v=cvI8rukoda8
   lecture_path: lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md
-  analysis_path: null
+  analysis_path: analysis/cvI8rukoda8-civilization-20-analysis.md
   series: civilization
   episode: 20
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: civ-21
+  video_id: RkpGrRUgjnk
+  title: 'Civilization #21: The Apology of King David of Israel'
+  canonical_url: https://www.youtube.com/watch?v=RkpGrRUgjnk
+  lecture_path: lectures/civilization-21-the-apology-of-king-david-of-israel.md
+  analysis_path: null
+  series: civilization
+  episode: 21
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-22
+  video_id: GhLd_h1QsL4
+  title: 'Civilization #22: The Literary Genesis of the Yahwist'
+  canonical_url: https://www.youtube.com/watch?v=GhLd_h1QsL4
+  lecture_path: lectures/civilization-22-the-literary-genesis-of-the-yahwist.md
+  analysis_path: null
+  series: civilization
+  episode: 22
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-23
+  video_id: HvVTNTPzq7E
+  title: 'Civilization #23: Cyrus the Great as Messiah'
+  canonical_url: https://www.youtube.com/watch?v=HvVTNTPzq7E
+  lecture_path: lectures/civilization-23-cyrus-the-great-as-messiah.md
+  analysis_path: null
+  series: civilization
+  episode: 23
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-24
+  video_id: _bXHBT5NTfc
+  title: 'Civilization #24: Resurrecting the Gnostic Jesus'
+  canonical_url: https://www.youtube.com/watch?v=_bXHBT5NTfc
+  lecture_path: lectures/civilization-24-resurrecting-the-gnostic-jesus.md
+  analysis_path: null
+  series: civilization
+  episode: 24
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-25
+  video_id: kuMhSFXnr5I
+  title: 'Civilization #25: Paul of Tarsus, Messiah of Rome'
+  canonical_url: https://www.youtube.com/watch?v=kuMhSFXnr5I
+  lecture_path: lectures/civilization-25-paul-of-tarsus-messiah-of-rome.md
+  analysis_path: null
+  series: civilization
+  episode: 25
   themes: []
   status:
     transcript: complete

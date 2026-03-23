@@ -1,4 +1,4 @@
-"""Render CHAPTER-QUEUE.md from metadata/chapter-queue.yaml + book-architecture titles."""
+"""Render CHAPTER-QUEUE.md from metadata/book-architecture.yaml (canonical source)."""
 from __future__ import annotations
 
 import sys
@@ -8,7 +8,6 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
-QUEUE_PATH = WORK_DIR / "metadata" / "chapter-queue.yaml"
 ARCH_PATH = WORK_DIR / "metadata" / "book-architecture.yaml"
 OUT = WORK_DIR / "CHAPTER-QUEUE.md"
 
@@ -19,39 +18,35 @@ def load(path: Path) -> dict:
 
 
 def main() -> int:
-    q = load(QUEUE_PATH).get("chapter_queue") or []
     arch = load(ARCH_PATH)
-    titles = {
-        c["id"]: c.get("title", "")
-        for c in (arch.get("book") or {}).get("chapters") or []
-    }
+    chapters = (arch.get("book") or {}).get("chapters") or []
     lines = [
         "# CHAPTER QUEUE",
         "",
         "Production order and blockers for the Jiang book/site lane.",
         "",
     ]
-    for item in q:
-        cid = item.get("chapter_id", "")
-        title = item.get("title") or titles.get(cid, cid)
+    for ch in chapters:
+        cid = ch.get("id", "")
+        title = ch.get("title", cid)
         lines += [
             f"## {cid} — {title}",
             "",
-            f"- **Status:** {item.get('status', '')}",
-            f"- **Owner:** {item.get('owner', '')}",
-            f"- **Sprint:** {item.get('sprint', '')}",
+            f"- **Status:** {ch.get('status', '')}",
+            f"- **Owner:** {ch.get('owner', '')}",
+            f"- **Sprint:** {ch.get('sprint', '')}",
             "",
         ]
-        bi = item.get("blocking_items") or []
-        if bi:
+        blocking = ch.get("blocking") or []
+        if blocking:
             lines.append("**Blocking:**")
-            for b in bi:
+            for b in blocking:
                 lines.append(f"- {b}")
             lines.append("")
-        lines.append(f"**Next action:** {item.get('next_action', '')}")
+        lines.append(f"**Next action:** {ch.get('next_action', '')}")
         lines.append("")
     lines.append(
-        "*Generated from `metadata/chapter-queue.yaml` — run "
+        "*Generated from `metadata/book-architecture.yaml` — run "
         "`python scripts/work_jiang/render_chapter_queue.py` after edits.*"
     )
     lines.append("")

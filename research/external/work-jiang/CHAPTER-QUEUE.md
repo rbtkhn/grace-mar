@@ -15,7 +15,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch02 — Geo-Strategy #2: Christian Zionism and the Middle East Conflict
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -23,7 +23,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch03 — Geo-Strategy #3: How Empire Is Destroying America
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -31,7 +31,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch04 — Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -39,7 +39,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch05 — Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -47,7 +47,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch06 — Geo-Strategy #6: America’s Imperial Hubris
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -55,7 +55,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch07 — Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -63,7 +63,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch08 — Geo-Strategy #8: The Iran Trap
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -71,7 +71,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch09 — Geo-Strategy #9: Putin’s War for the Soul of Russia
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -79,7 +79,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch10 — Geo-Strategy #10: Putin’s Strategic Imagination
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -87,7 +87,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch11 — Geo-Strategy #11: The Second American Civil War
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
@@ -95,10 +95,10 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch12 — Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)
 
-- **Status:** research_ready
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W14
 
 **Next action:** Assemble excerpts and argument spine
 
-*Generated from `metadata/chapter-queue.yaml` — run `python scripts/work_jiang/render_chapter_queue.py` after edits.*
+*Generated from `metadata/book-architecture.yaml` — run `python scripts/work_jiang/render_chapter_queue.py` after edits.*

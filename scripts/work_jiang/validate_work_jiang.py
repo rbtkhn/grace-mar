@@ -16,6 +16,25 @@ ANALYSIS = WORK_DIR / "analysis"
 GEO_LECTURE = re.compile(r"^geo-strategy-(\d{2})-(.+)\.md$", re.I)
 CIV_LECTURE = re.compile(r"^civilization-(\d{2})-(.+)\.md$", re.I)
 
+VALID_STATUSES = [
+    "not_started",
+    "analysis_missing",
+    "analysis_complete",
+    "ready_for_outline",
+    "outline_complete",
+    "research_ready",
+    "drafting",
+    "draft_complete",
+    "review",
+    "done",
+]
+
+FORBIDDEN_EXPORT_PREFIXES = [
+    "users/grace-mar/self.md",
+    "users/grace-mar/self-evidence.md",
+    "users/grace-mar/recursion-gate.md",
+]
+
 
 def load(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
@@ -35,12 +54,102 @@ def parse_frontmatter(text: str) -> dict | None:
         return None
 
 
+def chapter_evidence_pack_exists(cid: str) -> bool:
+    return (WORK_DIR / "evidence-packs" / f"{cid}.md").exists()
+
+
+def chapter_outline_exists(item: dict) -> bool:
+    p = item.get("outline_path")
+    return bool(p) and (WORK_DIR / p).exists()
+
+
+def chapter_draft_exists(item: dict) -> bool:
+    p = item.get("draft_path")
+    return bool(p) and (WORK_DIR / p).exists()
+
+
+def curated_quote_count_for_chapter(cid: str, quote_links: dict) -> int:
+    return len(quote_links.get(cid, []))
+
+
+def assert_safe_output_path(path: Path) -> None:
+    """Raise if path would write into Record. Used by membrane validator."""
+    p = path.as_posix()
+    for prefix in FORBIDDEN_EXPORT_PREFIXES:
+        if prefix in p:
+            raise ValueError(f"Unsafe export target for work-jiang lane: {p}")
+
+
+def check_rendered_status_drift(architecture: dict, errors: list[str]) -> None:
+    """Verify CHAPTER-QUEUE.md and BOOK-ARCHITECTURE.md status match book-architecture.yaml."""
+    expected = {
+        c["id"]: c.get("status", "")
+        for c in (architecture.get("book") or {}).get("chapters") or []
+    }
+    for path_name, header_pat, status_prefix in [
+        ("CHAPTER-QUEUE.md", re.compile(r"^## (ch\d+)"), "- **Status:**"),
+        ("BOOK-ARCHITECTURE.md", re.compile(r"^### (ch\d+)"), "- **Status:**"),
+    ]:
+        path = WORK_DIR / path_name
+        if not path.exists():
+            continue
+        lines = path.read_text(encoding="utf-8").splitlines()
+        current_cid = None
+        for line in lines:
+            m = header_pat.match(line)
+            if m:
+                current_cid = m.group(1)
+                continue
+            if current_cid and status_prefix in line:
+                val = line.split("**Status:**", 1)[-1].strip()
+                exp = expected.get(current_cid)
+                if exp is not None and val != exp:
+                    errors.append(
+                        f"{path_name} status for {current_cid} is {val!r}, "
+                        f"book-architecture.yaml has {exp!r} — re-run renderers"
+                    )
+                current_cid = None
+
+
+def check_membrane(errors: list[str]) -> None:
+    """Scan work_jiang scripts for forbidden Record path writes."""
+    scripts_dir = ROOT / "scripts" / "work_jiang"
+    if not scripts_dir.exists():
+        return
+    skip = {"validate_work_jiang.py"}  # defines FORBIDDEN_EXPORT_PREFIXES
+    for py_path in scripts_dir.glob("*.py"):
+        if py_path.name in skip:
+            continue
+        try:
+            text = py_path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for prefix in FORBIDDEN_EXPORT_PREFIXES:
+            if prefix in text:
+                errors.append(
+                    f"scripts/work_jiang/{py_path.name} contains forbidden path "
+                    f"prefix {prefix!r} — work-jiang must not write to Record"
+                )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--require-analysis-frontmatter",
         action="store_true",
         help="Fail if any analysis memo lacks parseable YAML front matter.",
+    )
+    parser.add_argument(
+        "--check-drift",
+        action="store_true",
+        default=True,
+        help="Verify rendered markdown status matches book-architecture.yaml (default: True).",
+    )
+    parser.add_argument(
+        "--no-check-drift",
+        action="store_false",
+        dest="check_drift",
+        help="Skip rendered status drift check.",
     )
     args = parser.parse_args()
 
@@ -137,22 +246,42 @@ def main() -> int:
                 if cand not in valid_ch:
                     errors.append(f"{path.name}: invalid chapter_candidates entry {cand}")
 
-    cq = load(WORK_DIR / "metadata" / "chapter-queue.yaml").get("chapter_queue") or []
-    for item in cq:
-        cid = item.get("chapter_id")
-        if cid and cid not in chapter_ids:
-            errors.append(f"chapter-queue references unknown chapter: {cid}")
-        if (item.get("status") or "") == "research_ready":
-            mapped = chapter_map.get(cid) or {}
-            sids = mapped.get("source_ids") or []
-            with_analysis = 0
-            for s in sources:
-                if s["source_id"] in sids and s["status"]["analysis"] == "complete":
-                    with_analysis += 1
+    # Chapter validation from book-architecture.yaml (canonical source)
+    quote_links = load(WORK_DIR / "metadata" / "chapter-quote-links.yaml").get("chapter_quote_links") or {}
+    src_by = {s["source_id"]: s for s in sources}
+    chapters = (architecture.get("book") or {}).get("chapters") or []
+    for item in chapters:
+        cid = item.get("id", "")
+        status = (item.get("status") or "").strip()
+        sids = item.get("source_ids") or chapter_map.get(cid, {}).get("source_ids") or []
+
+        if status == "research_ready":
+            with_analysis = sum(1 for s in sources if s["source_id"] in sids and s["status"]["analysis"] == "complete")
             if sids and with_analysis == 0:
                 errors.append(
                     f"Chapter {cid} marked research_ready but no mapped source has complete analysis"
                 )
+            if not chapter_evidence_pack_exists(cid):
+                errors.append(f"Chapter {cid} marked research_ready but evidence pack is missing")
+            if curated_quote_count_for_chapter(cid, quote_links) < 5:
+                errors.append(
+                    f"Chapter {cid} marked research_ready but has fewer than 5 curated quotes"
+                )
+        if status in {"ready_for_outline", "outline_complete", "research_ready", "drafting", "draft_complete", "review", "done"}:
+            if not chapter_outline_exists(item):
+                errors.append(
+                    f"Chapter {cid} status={status} but outline_path is missing or file does not exist"
+                )
+        if status in {"drafting", "draft_complete", "review", "done"}:
+            if not chapter_draft_exists(item):
+                errors.append(
+                    f"Chapter {cid} status={status} but draft_path is missing or file does not exist"
+                )
+
+    if args.check_drift:
+        check_rendered_status_drift(architecture, errors)
+
+    check_membrane(errors)
 
     for err in errors:
         print(f"ERROR: {err}", file=sys.stderr)
