@@ -43,5 +43,8 @@ jobs:
       - name: Validate integrity
         run: python scripts/validate-integrity.py --user grace-mar
 
+      - name: Fork lifecycle unit tests
+        run: pytest tests/test_fork_lifecycle.py -v --tb=short
+
       - name: Governance check
         run: python scripts/governance_checker.py

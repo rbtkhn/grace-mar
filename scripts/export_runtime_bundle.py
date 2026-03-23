@@ -248,6 +248,53 @@ def export_runtime_bundle(
     for rel_path in copied_audit_paths:
         derived_paths.append(out_dir / rel_path)
 
+    fork_history_paths: list[str] = []
+    fh_dir = out_dir / "fork-history"
+    fh_dir.mkdir(parents=True, exist_ok=True)
+    for src_name in ("fork_state.json", "drift-report.json", "fork-lineage.jsonl"):
+        src = profile_dir / src_name
+        if src.is_file():
+            dst = fh_dir / src_name
+            dst.write_bytes(src.read_bytes())
+            fork_history_paths.append(str(dst.relative_to(out_dir)))
+            derived_paths.append(dst)
+    snap_dir = profile_dir / "snapshots"
+    if snap_dir.is_dir():
+        snaps = sorted(snap_dir.glob("*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        if snaps:
+            latest = snaps[0]
+            (fh_dir / "latest-snapshot.json").write_bytes(latest.read_bytes())
+            fork_history_paths.append("fork-history/latest-snapshot.json")
+            derived_paths.append(fh_dir / "latest-snapshot.json")
+    sess_root = profile_dir / "sessions"
+    if sess_root.is_dir():
+        all_sess = sorted(sess_root.rglob("session-*.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+        for i, sp in enumerate(all_sess[:12]):
+            sub = fh_dir / f"session-recent-{i+1:02d}.json"
+            sub.write_bytes(sp.read_bytes())
+            fork_history_paths.append(str(sub.relative_to(out_dir)))
+            derived_paths.append(sub)
+
+    fork_history_meta: dict = {
+        "phase": "unknown",
+        "session_count": 0,
+        "merge_count": 0,
+        "last_snapshot_tag": "",
+        "drift_score": None,
+    }
+    fs_path = profile_dir / "fork_state.json"
+    if fs_path.is_file():
+        try:
+            fs = json.loads(fs_path.read_text(encoding="utf-8"))
+            fork_history_meta["phase"] = str(fs.get("phase") or "")
+            c = fs.get("counters") or {}
+            fork_history_meta["session_count"] = int(c.get("session_count", 0))
+            fork_history_meta["merge_count"] = int(c.get("merge_count", 0))
+            fork_history_meta["last_snapshot_tag"] = str(fs.get("last_snapshot_tag") or "")
+            fork_history_meta["drift_score"] = fs.get("drift_score")
+        except (json.JSONDecodeError, OSError, TypeError, ValueError):
+            pass
+
     bundle_payload = {
         "format": "grace-mar-runtime-bundle",
         "version": "1.0",
@@ -283,6 +330,11 @@ def export_runtime_bundle(
                 "canonical": False,
                 "note": "Append-only replay and provenance surfaces.",
                 "paths": copied_audit_paths,
+            },
+            "fork_history": {
+                "canonical": False,
+                "note": "Fork lifecycle state, lineage tail, recent sessions — not identity truth.",
+                "paths": fork_history_paths,
             },
         },
         "canonical_instance_note": (

@@ -19,11 +19,13 @@ Requires repo root as cwd. For merge-from-Telegram: run this after approving in 
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import subprocess
 import sys
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 
@@ -55,6 +57,25 @@ SELF_ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
 PRP_PATH = REPO_ROOT / "grace-mar-llm.txt"
 MERGE_RECEIPTS_PATH = PROFILE_DIR / "merge-receipts.jsonl"
 MIN_EVIDENCE_TIER = 3
+
+ALLOWED_ORIGIN = frozenset(
+    {
+        "seed_capture",
+        "session_interaction",
+        "operator_observation",
+        "artifact_ingest",
+        "parent_merge",
+        "self_library_curation",
+    }
+)
+ALLOWED_LINEAGE_CLASS = frozenset(
+    {
+        "fork_native",
+        "real_world_update",
+        "boundary_reclassification",
+        "snapshot_only",
+    }
+)
 
 
 def _read(path: Path) -> str:
@@ -106,16 +127,64 @@ def _canonical_candidate_ids(candidates: list[dict]) -> list[str]:
     return sorted(c["id"] for c in candidates)
 
 
+def _merge_receipt_line_count() -> int:
+    if not MERGE_RECEIPTS_PATH.is_file():
+        return 0
+    return len([ln for ln in MERGE_RECEIPTS_PATH.read_text(encoding="utf-8").splitlines() if ln.strip()])
+
+
+def _prev_receipt_hash_from_file() -> str:
+    if not MERGE_RECEIPTS_PATH.is_file():
+        return ""
+    lines = [ln for ln in MERGE_RECEIPTS_PATH.read_text(encoding="utf-8").splitlines() if ln.strip()]
+    if not lines:
+        return ""
+    try:
+        last = json.loads(lines[-1])
+        return str(last.get("receipt_hash") or "")
+    except json.JSONDecodeError:
+        return ""
+
+
+def _receipt_body_hash(receipt: dict) -> str:
+    body = {k: v for k, v in receipt.items() if k != "receipt_hash"}
+    payload = json.dumps(body, sort_keys=True, ensure_ascii=True)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
+
+
 def _build_receipt(approved: list[dict], approved_by: str, territory: str = "all") -> dict:
+    from grace_mar.fork_state import load_fork_state
+
+    n = _merge_receipt_line_count() + 1
+    receipt_id = f"MR-{n:04d}"
+    session_ids = sorted(
+        {str(c.get("session_id") or "").strip() for c in approved if str(c.get("session_id") or "").strip()}
+    )
+    lineage_summary = dict(Counter((c.get("lineage_class") or "").strip() or "fork_native" for c in approved))
+    try:
+        st = load_fork_state(REPO_ROOT, USER_ID)
+    except OSError:
+        st = None
+    fork_phase_before = str((st or {}).get("phase") or "interact")
+    fork_phase_after = fork_phase_before
+    if fork_phase_before == "merge_pending":
+        fork_phase_after = "interact"
     r = {
+        "receipt_id": receipt_id,
         "user_id": USER_ID,
         "approved_by": approved_by.strip(),
         "approved_at": _utc_now_iso(),
         "min_evidence_tier": MIN_EVIDENCE_TIER,
         "candidate_ids": _canonical_candidate_ids(approved),
+        "session_ids": session_ids,
+        "fork_phase_before": fork_phase_before,
+        "fork_phase_after": fork_phase_after,
+        "lineage_summary": lineage_summary,
+        "prev_receipt_hash": _prev_receipt_hash_from_file(),
     }
     if territory and territory != "all":
         r["territory"] = territory
+    r["receipt_hash"] = _receipt_body_hash(r)
     return r
 
 
@@ -488,8 +557,30 @@ def get_approved_in_candidates() -> list[dict]:
             "evidence_record_type": (_yaml_get(block, "evidence_record_type") or "act").strip().lower(),
             "channel_key": _yaml_get(block, "channel_key") or "telegram",
             "intake_evidence_id": intake,
+            "origin": (_yaml_get(block, "origin") or "").strip(),
+            "lineage_class": (_yaml_get(block, "lineage_class") or "").strip(),
+            "session_id": (_yaml_get(block, "session_id") or "").strip(),
+            "operator_source": (_yaml_get(block, "operator_source") or "").strip(),
         })
     return approved
+
+
+def _validate_lifecycle_for_merge(approved: list[dict]) -> tuple[bool, str]:
+    """Require origin, lineage_class, and session_id or operator_source on each candidate."""
+    for c in approved:
+        oid = (c.get("origin") or "").strip()
+        lc = (c.get("lineage_class") or "").strip()
+        sid = (c.get("session_id") or "").strip()
+        ops = (c.get("operator_source") or "").strip()
+        if _is_meta_infra_candidate(c):
+            continue
+        if oid not in ALLOWED_ORIGIN:
+            return False, f"{c['id']}: origin must be one of {sorted(ALLOWED_ORIGIN)}"
+        if lc not in ALLOWED_LINEAGE_CLASS:
+            return False, f"{c['id']}: lineage_class must be one of {sorted(ALLOWED_LINEAGE_CLASS)}"
+        if not sid and not ops:
+            return False, f"{c['id']}: session_id or operator_source required"
+    return True, ""
 
 
 def _channel_label(channel_key: str) -> str:
@@ -878,6 +969,11 @@ def main() -> None:
         default="all",
         help="Merge only approved candidates in this territory (work-politics = wap/wp aliases; companion = rest). Receipt must match.",
     )
+    ap.add_argument(
+        "--require-lifecycle-fields",
+        action="store_true",
+        help="Require origin, lineage_class, and session_id|operator_source on each merged candidate (fork history)",
+    )
     args = ap.parse_args()
     territory = normalize_territory_cli(args.territory)
     _set_user(args.user)
@@ -909,6 +1005,11 @@ def main() -> None:
             "Approve rows in recursion-gate above ## Processed; work-politics rows need territory: work-politics (or legacy) or channel_key: operator:wap."
         )
         return
+
+    if args.require_lifecycle_fields:
+        ok_lc, reason_lc = _validate_lifecycle_for_merge(approved)
+        if not ok_lc:
+            raise SystemExit(f"lifecycle validation failed: {reason_lc}")
 
     if args.generate_receipt:
         if not args.approved_by.strip():
@@ -1058,6 +1159,21 @@ def main() -> None:
         }
         _append_merge_receipt(receipt_event)
         print(f"Merge receipt appended: {MERGE_RECEIPTS_PATH}")
+
+        try:
+            from grace_mar.fork_lifecycle import merge_checkpoint
+
+            merge_checkpoint(
+                REPO_ROOT,
+                USER_ID,
+                {
+                    "receipt_id": receipt.get("receipt_id"),
+                    "merge_receipt_id": receipt.get("receipt_id"),
+                    "candidate_ids": receipt.get("candidate_ids"),
+                },
+            )
+        except Exception as exc:
+            print(f"Warning: fork lifecycle checkpoint skipped: {exc}", file=sys.stderr)
 
         applied_pipeline_event_ids: list[str] = []
         staged_parent_event_ids: list[str] = []

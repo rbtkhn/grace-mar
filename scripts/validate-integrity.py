@@ -58,6 +58,26 @@ ALLOWED_PROPOSAL_CLASS = frozenset({
     "CIV_MEM_REVISE",
 })
 
+VALID_FORK_PHASES = frozenset({"seed", "interact", "diverge", "merge_pending", "snapshotted"})
+LIFECYCLE_ORIGINS = frozenset(
+    {
+        "seed_capture",
+        "session_interaction",
+        "operator_observation",
+        "artifact_ingest",
+        "parent_merge",
+        "self_library_curation",
+    }
+)
+LIFECYCLE_CLASSES = frozenset(
+    {
+        "fork_native",
+        "real_world_update",
+        "boundary_reclassification",
+        "snapshot_only",
+    }
+)
+
 
 def extract_yaml_blocks(content: str, section_marker: str | None = None) -> list[str]:
     """Extract YAML blocks from markdown. If section_marker given, only blocks after it."""
@@ -402,6 +422,82 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
     return errors
 
 
+def _yaml_scalar(block: str, key: str) -> str:
+    m = re.search(rf"^{key}:\s*(.+?)(?:\n|$)", block, re.MULTILINE)
+    if not m:
+        return ""
+    return m.group(1).strip().strip('"\'')
+
+
+def validate_fork_lifecycle(
+    user_dirs: list[Path],
+    *,
+    strict: bool,
+) -> tuple[list[str], list[str], dict]:
+    """fork_state.json presence/phase; optional strict pending-candidate lineage fields."""
+    errors: list[str] = []
+    warnings: list[str] = []
+    info: dict[str, dict] = {}
+    for ud in user_dirs:
+        fid = ud.name
+        fs_path = ud / "fork_state.json"
+        if not fs_path.is_file():
+            warnings.append(
+                f"{fid}: fork_state.json missing — run: python scripts/fork_lifecycle.py init -u {fid}"
+            )
+            info[fid] = {"phase": None, "drift_score": None}
+            continue
+        try:
+            data = json.loads(fs_path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as e:
+            errors.append(f"{fs_path.relative_to(REPO_ROOT)}: invalid fork_state.json ({e})")
+            continue
+        phase = str(data.get("phase") or "")
+        if phase not in VALID_FORK_PHASES:
+            errors.append(f"{fid}: fork_state.json invalid phase {phase!r}")
+        drift = data.get("drift_score")
+        try:
+            drift_f = float(drift) if drift is not None else None
+        except (TypeError, ValueError):
+            drift_f = None
+        info[fid] = {"phase": phase, "drift_score": drift_f}
+
+        drift_path = ud / "drift-report.json"
+        if strict and drift_path.is_file():
+            try:
+                dr = json.loads(drift_path.read_text(encoding="utf-8"))
+                age = dr.get("computed_at")
+                if not age:
+                    warnings.append(f"{fid}: drift-report.json missing computed_at")
+            except (json.JSONDecodeError, OSError):
+                errors.append(f"{fid}: drift-report.json unreadable")
+
+        if not strict:
+            continue
+        gate_path = ud / "recursion-gate.md"
+        content = _safe_read(gate_path)
+        if "## Candidates" not in content:
+            continue
+        candidates_section, _ = split_gate_sections(content)
+        for m in re.finditer(
+            r"### (CANDIDATE-\d+).*?```yaml\n(.*?)```", candidates_section, re.DOTALL
+        ):
+            cid, yaml_block = m.group(1), m.group(2)
+            if "status: pending" not in yaml_block:
+                continue
+            origin = _yaml_scalar(yaml_block, "origin")
+            lclass = _yaml_scalar(yaml_block, "lineage_class")
+            sid = _yaml_scalar(yaml_block, "session_id")
+            ops = _yaml_scalar(yaml_block, "operator_source")
+            if not origin or origin not in LIFECYCLE_ORIGINS:
+                errors.append(f"{cid}: pending candidate missing or invalid origin (strict-lifecycle)")
+            if not lclass or lclass not in LIFECYCLE_CLASSES:
+                errors.append(f"{cid}: pending candidate missing or invalid lineage_class (strict-lifecycle)")
+            if not sid and not ops:
+                errors.append(f"{cid}: pending candidate needs session_id or operator_source (strict-lifecycle)")
+    return errors, warnings, info
+
+
 def run_validation(
     users_dir: Path,
     user: str | None,
@@ -409,6 +505,7 @@ def run_validation(
     *,
     require_proposal_class: bool = False,
     strict_self_library: bool = False,
+    strict_lifecycle: bool = False,
 ) -> tuple[list[str], dict]:
     user_dirs = _iter_user_dirs(users_dir, user)
     if not user_dirs:
@@ -444,11 +541,21 @@ def run_validation(
     all_errors.extend(validate_skills_sections(user_dirs))
     all_errors.extend(validate_derived_exports(user_dirs))
 
+    lc_errors, lc_warnings, lc_info = validate_fork_lifecycle(user_dirs, strict=strict_lifecycle)
+    all_errors.extend(lc_errors)
+    lifecycle_report = {
+        "phase": {k: v.get("phase") for k, v in lc_info.items()},
+        "drift_score": {k: v.get("drift_score") for k, v in lc_info.items()},
+        "errors": lc_errors,
+        "warnings": lc_warnings,
+    }
+
     boundary_report = {
         "ix_a_violations": ix_boundary,
         "self_library_missing_warnings": library_warnings,
         "ix_a_ok": len(ix_boundary) == 0,
         "self_library_files_ok": len(library_warnings) == 0,
+        "fork_lifecycle": lifecycle_report,
     }
     return all_errors, boundary_report
 
@@ -475,6 +582,11 @@ def main() -> int:
         action="store_true",
         help="Fail if self.md exists but self-library.md is missing (CMC/LIB surface)",
     )
+    parser.add_argument(
+        "--strict-lifecycle",
+        action="store_true",
+        help="Enforce fork_state.json, pending candidate lineage fields, drift report shape",
+    )
     args = parser.parse_args()
 
     users_dir = Path(args.users_dir)
@@ -492,6 +604,7 @@ def main() -> int:
         args.min_evidence_tier,
         require_proposal_class=args.require_proposal_class,
         strict_self_library=args.strict_self_library,
+        strict_lifecycle=args.strict_lifecycle,
     )
     ok = not errors
     if args.json:
@@ -499,6 +612,7 @@ def main() -> int:
             "ok": ok,
             "errors": errors,
             "identity_library_boundary": boundary,
+            "fork_lifecycle": boundary.get("fork_lifecycle") or {},
         }
         print(json.dumps(payload, ensure_ascii=True))
     else:

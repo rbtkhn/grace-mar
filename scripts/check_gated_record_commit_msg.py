@@ -2,12 +2,12 @@
 """
 commit-msg hook: staged changes to gated Record paths require an explicit token.
 
-Gated paths (pipeline merge targets + PRP anchor):
-  users/*/self.md, self-evidence.md, self-archive.md, merge-receipts.jsonl
+Gated paths (pipeline merge targets + PRP anchor + canonical skills/library):
+  users/*/self.md, self-evidence.md, self-archive.md, skills.md, self-library.md, merge-receipts.jsonl
   bot/prompt.py
   grace-mar-llm.txt, users/*/*-llm.txt
 
-Allow commit if message contains [gated-merge] or merge via process_approved_candidates.
+Allow commit if message contains [gated-merge], process_approved_candidates, MERGE-RECEIPT:, or SNAPSHOT:.
 Emergency: ALLOW_GATED_RECORD_EDIT=1
 
 Install: pre-commit install --hook-type commit-msg
@@ -33,7 +33,14 @@ def _is_gated(rel: str) -> bool:
     if len(parts) < 3 or parts[0] != "users":
         return False
     name = parts[-1]
-    if name in ("self.md", "self-evidence.md", "self-archive.md", "merge-receipts.jsonl"):
+    if name in (
+        "self.md",
+        "self-evidence.md",
+        "self-archive.md",
+        "skills.md",
+        "self-library.md",
+        "merge-receipts.jsonl",
+    ):
         return True
     if name.endswith("-llm.txt"):
         return True
@@ -44,6 +51,10 @@ def _allowed_message(msg: str) -> bool:
     if "[gated-merge]" in msg:
         return True
     if "process_approved_candidates" in msg:
+        return True
+    if "MERGE-RECEIPT:" in msg:
+        return True
+    if "SNAPSHOT:" in msg:
         return True
     return False
 
