@@ -20,6 +20,9 @@ Examples:
     --output-dir research/external/youtube-channels/predictive-history
 
   python3 scripts/fetch_youtube_channel_transcripts.py --limit 5 --dry-run
+
+  # Full channel episode list in index.json only (no transcript downloads):
+  python3 scripts/fetch_youtube_channel_transcripts.py --index-only
 """
 
 from __future__ import annotations
@@ -73,12 +76,13 @@ def _list_videos(channel_url: str, *, limit: int | None) -> list[dict[str, str]]
         vid = e.get("id") or ""
         if not vid:
             continue
+        dur = e.get("duration")
         out.append(
             {
                 "id": vid,
                 "title": (e.get("title") or "").strip() or vid,
                 "upload_date": (e.get("upload_date") or "").strip(),
-                "duration": str(e.get("duration") or ""),
+                "duration": str(dur) if dur is not None else "",
                 "url": f"https://www.youtube.com/watch?v={vid}",
             }
         )
@@ -192,6 +196,11 @@ def main() -> int:
     )
     parser.add_argument("--sleep", type=float, default=0.4, help="Seconds between transcript requests")
     parser.add_argument("--dry-run", action="store_true", help="Only list video IDs and titles")
+    parser.add_argument(
+        "--index-only",
+        action="store_true",
+        help="Write index.json from channel listing only (no transcript downloads)",
+    )
     parser.add_argument("--resume", action="store_true", help="Skip videos that already have a .txt file")
     args = parser.parse_args()
 
@@ -209,6 +218,58 @@ def main() -> int:
     if args.dry_run:
         for v in videos:
             print(f"{v['id']}\t{v['title']}")
+        return 0
+
+    if args.index_only:
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        index_rows: list[dict[str, object]] = []
+        for v in videos:
+            index_rows.append(
+                {
+                    "video_id": v["id"],
+                    "title": v["title"],
+                    "upload_date": v.get("upload_date") or "",
+                    "duration_seconds": v.get("duration") or "",
+                    "url": v["url"],
+                    "transcript_file": None,
+                    "status": "listed_only",
+                    "language": None,
+                    "error": None,
+                }
+            )
+        index_path = out_root / "index.json"
+        payload = {
+            "channel_url": args.channel,
+            "generated_at_utc": ts,
+            "video_count": len(videos),
+            "transcripts_attempted": 0,
+            "index_mode": "listing_only",
+            "videos": index_rows,
+        }
+        index_path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+        md_path = out_root / "CHANNEL-VIDEO-INDEX.md"
+        md_lines = [
+            "# Predictive History (@PredictiveHistory) — full video index",
+            "",
+            f"- **channel:** {args.channel}",
+            f"- **video_count:** {len(videos)}",
+            f"- **generated_at_utc:** {ts}",
+            "- **method:** `python3 scripts/fetch_youtube_channel_transcripts.py --index-only` (playlist walk; no transcripts downloaded)",
+            "",
+            "| # | video_id | title | duration_s | url |",
+            "|---:|---|-----|---:|-----|",
+        ]
+        for i, v in enumerate(videos, start=1):
+            title = (v["title"] or "").replace("|", "\\|")
+            dur = v.get("duration") or ""
+            md_lines.append(
+                f"| {i} | `{v['id']}` | {title} | {dur} | {v['url']} |"
+            )
+        md_path.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
+        print(
+            f"Wrote {index_path} and {md_path} ({len(videos)} videos, no transcripts fetched)",
+            file=sys.stderr,
+        )
         return 0
 
     index: list[dict[str, object]] = []

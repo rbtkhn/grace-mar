@@ -21,6 +21,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar` |
+| `work-jiang-feature-checklist` | Branch hygiene, scope, canonical verify block, and commit granularity for `research/external/work-jiang` + `scripts/work_jiang/` | Agent: follow `.cursor/skills/work-jiang-feature-checklist/SKILL.md` |
 | `massie-x-news-search-draft` | Real-time news search + suggested @usa_first_ky X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/massie-x-news-search-draft/SKILL.md` |
 | `wap-dashboard` | Internal miniapp UI at `/wap` — work-politics job tracker (token: `WAP_DASHBOARD_TOKEN`) | [wap-dashboard.md](wap-dashboard.md) |
 
@@ -88,6 +89,15 @@ Must answer:
 - What meaningful local work is still in progress?
 - What looks like runtime-only noise?
 - What is the best first prompt for the next session?
+
+### `work-jiang-feature-checklist`
+
+Must answer:
+
+- Is the working tree clean enough to review (unrelated untracks isolated)?
+- Does scope stay in the Geo-Strategy lane unless the task says otherwise?
+- Was the full verify block (or an explicitly justified subset) run before ship?
+- Are commits or phases aligned to the plan (quotes / counter-readings / chronology / CI)?
 
 ---
 

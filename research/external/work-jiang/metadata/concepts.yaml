@@ -1,0 +1,261 @@
+# Canonical vocabulary for work-jiang (Geo-Strategy corpus). Render: scripts/work_jiang/render_concept_dictionary.py
+concepts:
+  - concept_id: civ-formation
+    term: "civilizational formation"
+    aliases: ["formation", "civilization formation"]
+    working_definition: "How a civilization shapes citizens, narratives, and institutions over time."
+    stronger_definition: ""
+    tensions: ["State-led vs bottom-up formation"]
+    related_concepts: ["strategic-imagination", "education-narrative"]
+    first_seen_source_id: geo-03
+    source_ids: [geo-03, geo-09]
+    analysis_ids: [geo-03, geo-09]
+    chapter_ids: [ch02]
+    status: draft
+
+  - concept_id: strategic-imagination
+    term: "strategic imagination"
+    aliases: ["strategic imagination", "great-power imagination"]
+    working_definition: "How leaders and publics picture futures, enemies, and legitimate action."
+    stronger_definition: ""
+    tensions: ["Rational actor vs mythic framing"]
+    related_concepts: ["empire-order", "psychohistory-metaphor"]
+    first_seen_source_id: geo-10
+    source_ids: [geo-10, geo-11]
+    analysis_ids: [geo-10, geo-11]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: asymmetrical-warfare
+    term: "asymmetrical warfare"
+    aliases: ["asymmetric warfare", "asymmetry"]
+    working_definition: "Weaker side trades cost, flexibility, and narrative against a stronger military."
+    stronger_definition: ""
+    tensions: ["Moral framing vs material advantage"]
+    related_concepts: ["iran-strategy-matrix", "empire-hubris"]
+    first_seen_source_id: geo-01
+    source_ids: [geo-01, geo-08]
+    analysis_ids: [geo-08]
+    chapter_ids: [ch01]
+    status: draft
+
+  - concept_id: christian-zionism
+    term: "Christian Zionism"
+    aliases: ["Christian Zionism", "dispensational"]
+    working_definition: "Political-theological stance tying US support for Israel to prophecy and end-times narrative."
+    stronger_definition: ""
+    tensions: ["Instrumental vs sincere belief"]
+    related_concepts: ["religious-legitimacy", "middle-east-alliance"]
+    first_seen_source_id: geo-02
+    source_ids: [geo-02]
+    analysis_ids: [geo-02]
+    chapter_ids: [ch01, ch03]
+    status: draft
+
+  - concept_id: empire-order
+    term: "empire"
+    aliases: ["imperial", "Pax Americana", "empire defense"]
+    working_definition: "US-led order: bases, alliances, dollar, and narrative of indispensability."
+    stronger_definition: ""
+    tensions: ["Liberal rhetoric vs coercion"]
+    related_concepts: ["financialization-empire", "asymmetrical-warfare"]
+    first_seen_source_id: geo-03
+    source_ids: [geo-03, geo-06]
+    analysis_ids: [geo-03, geo-06]
+    chapter_ids: [ch02, ch03]
+    status: draft
+
+  - concept_id: financialization-empire
+    term: "financialization"
+    aliases: ["financialization", "dollar system"]
+    working_definition: "Domestic and global economy tilted toward finance, debt, and dollar plumbing."
+    stronger_definition: ""
+    tensions: ["Prosperity vs hollowed middle"]
+    related_concepts: ["empire-order"]
+    first_seen_source_id: geo-03
+    source_ids: [geo-03]
+    analysis_ids: [geo-03]
+    chapter_ids: [ch02]
+    status: draft
+
+  - concept_id: saudi-iran-axis
+    term: "Saudi Arabia vs Iran"
+    aliases: ["Saudi", "Gulf", "axis of resistance"]
+    working_definition: "Regional rivalry as proxy chessboard for US, Israel, and energy politics."
+    stronger_definition: ""
+    tensions: ["Sunni–Shia frame vs state interest"]
+    related_concepts: ["middle-east-alliance", "iran-strategy-matrix"]
+    first_seen_source_id: geo-04
+    source_ids: [geo-04, geo-08]
+    analysis_ids: [geo-04, geo-08]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: electoral-coalition
+    term: "electoral coalition"
+    aliases: ["Trump coalition", "VP pick", "Haley"]
+    working_definition: "How US presidential campaigns assemble factions; VP as bridge."
+    stronger_definition: ""
+    tensions: ["Base vs swing constituencies"]
+    related_concepts: []
+    first_seen_source_id: geo-05
+    source_ids: [geo-05]
+    analysis_ids: [geo-05]
+    chapter_ids: [ch02]
+    status: draft
+
+  - concept_id: empire-hubris
+    term: "imperial hubris"
+    aliases: ["hubris", "shock and awe", "Millennium Challenge"]
+    working_definition: "Overconfidence and rigidity in dominant militaries; war games as allegory."
+    stronger_definition: ""
+    tensions: ["Dominance narrative vs adaptability"]
+    related_concepts: ["asymmetrical-warfare"]
+    first_seen_source_id: geo-06
+    source_ids: [geo-06, geo-01]
+    analysis_ids: [geo-06]
+    chapter_ids: [ch01]
+    status: draft
+
+  - concept_id: iran-strategy-matrix
+    term: "Iran strategy matrix"
+    aliases: ["strategy matrix", "four goals"]
+    working_definition: "Jiang’s four-part checklist for Iranian grand strategy under pressure."
+    stronger_definition: ""
+    tensions: ["Ideal-type vs messy politics"]
+    related_concepts: ["asymmetrical-warfare", "operation-true-promise"]
+    first_seen_source_id: geo-01
+    source_ids: [geo-01]
+    analysis_ids: []
+    chapter_ids: [ch01]
+    status: draft
+
+  - concept_id: operation-true-promise
+    term: "Operation True Promise"
+    aliases: ["True Promise", "April 2024 strikes"]
+    working_definition: "Iran’s calibrated retaliation framing vs Israel/US interception narrative."
+    stronger_definition: ""
+    tensions: ["Damage vs signaling"]
+    related_concepts: ["asymmetrical-warfare"]
+    first_seen_source_id: geo-01
+    source_ids: [geo-01]
+    analysis_ids: []
+    chapter_ids: [ch01]
+    status: draft
+
+  - concept_id: raisi-scenario
+    term: "Raisi helicopter incident"
+    aliases: ["Raisi", "IRGC", "helicopter crash"]
+    working_definition: "Speculative strategic reading of leadership loss and factional dynamics."
+    stronger_definition: ""
+    tensions: ["Accident vs intent (unresolved)"]
+    related_concepts: ["iran-strategy-matrix"]
+    first_seen_source_id: geo-07
+    source_ids: [geo-07]
+    analysis_ids: [geo-07]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: iran-trap
+    term: "Iran trap"
+    aliases: ["invasion scenario", "regime change"]
+    working_definition: "How escalation dynamics could pull the US into large-scale war."
+    stronger_definition: ""
+    tensions: ["Deterrence vs entrapment"]
+    related_concepts: ["christian-zionism", "middle-east-alliance"]
+    first_seen_source_id: geo-08
+    source_ids: [geo-08]
+    analysis_ids: [geo-08]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: putinism-soul
+    term: "Putinism and the soul of Russia"
+    aliases: ["Putin", "consumerism", "soul of Russia"]
+    working_definition: "Civilizational narrative tying regime legitimacy to culture and resistance to Western models."
+    stronger_definition: ""
+    tensions: ["Organic vs authoritarian packaging"]
+    related_concepts: ["strategic-imagination"]
+    first_seen_source_id: geo-09
+    source_ids: [geo-09]
+    analysis_ids: [geo-09]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: stalin-game-theory
+    term: "Stalin and game theory"
+    aliases: ["game theory", "Stalin", "strategic patience"]
+    working_definition: "Pedagogical analogy for patience, information asymmetry, and nested commitments."
+    stronger_definition: ""
+    tensions: ["Historical analogy vs formal game theory"]
+    related_concepts: ["strategic-imagination"]
+    first_seen_source_id: geo-10
+    source_ids: [geo-10]
+    analysis_ids: [geo-10]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: second-civil-war
+    term: "Second American Civil War"
+    aliases: ["civil war", "domestic conflict", "polarization"]
+    working_definition: "Forecast frame: violence, legitimacy crisis, and federal fracture risks."
+    stronger_definition: ""
+    tensions: ["Metaphor vs literal war"]
+    related_concepts: ["empire-order"]
+    first_seen_source_id: geo-11
+    source_ids: [geo-11]
+    analysis_ids: [geo-11]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: psychohistory-metaphor
+    term: "psychohistory"
+    aliases: ["Psychohistory", "supervised learning", "forecasting AI"]
+    working_definition: "Asimov-inspired hook: modeling society; lecture ties to ML pedagogy and hope."
+    stronger_definition: ""
+    tensions: ["Science fiction vs empirical social science"]
+    related_concepts: ["strategic-imagination"]
+    first_seen_source_id: geo-12
+    source_ids: [geo-12]
+    analysis_ids: [geo-12]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: education-narrative
+    term: "education and narrative"
+    aliases: ["education", "narrative formation", "school"]
+    working_definition: "How pedagogy and story shape citizen loyalty and historical self-understanding."
+    stronger_definition: ""
+    tensions: ["Liberation vs discipline"]
+    related_concepts: ["civ-formation"]
+    first_seen_source_id: geo-03
+    source_ids: [geo-03, geo-12]
+    analysis_ids: [geo-03, geo-12]
+    chapter_ids: [ch01, ch02]
+    status: draft
+
+  - concept_id: religious-legitimacy
+    term: "religious legitimacy"
+    aliases: ["theology", "sacred", "dispensational premillennialism"]
+    working_definition: "Sacred language and prophecy as resources for political alignment."
+    stronger_definition: ""
+    tensions: ["Universal ethics vs particular mission"]
+    related_concepts: ["christian-zionism", "empire-order"]
+    first_seen_source_id: geo-02
+    source_ids: [geo-02, geo-06]
+    analysis_ids: [geo-02, geo-06]
+    chapter_ids: [ch03]
+    status: draft
+
+  - concept_id: middle-east-alliance
+    term: "Middle East alliances"
+    aliases: ["Israel Lobby", "allies", "Saudi Arabia"]
+    working_definition: "How US ties to Israel and Gulf states constrain Iran policy."
+    stronger_definition: ""
+    tensions: ["Values alliance vs energy security"]
+    related_concepts: ["saudi-iran-axis", "christian-zionism"]
+    first_seen_source_id: geo-02
+    source_ids: [geo-02, geo-04]
+    analysis_ids: [geo-02, geo-04]
+    chapter_ids: [ch03]
+    status: draft

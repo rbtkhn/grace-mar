@@ -11,6 +11,8 @@ Use this skill at the start of a work block when the operator wants a quick plan
 
 When the operator begins with **"good morning"** (or clearly the same intent), treat it as a **daily session start**:
 
+**Work-jiang (Jiang) standing note:** The first curated lecture series in-repo is **Geo-Strategy** (`research/external/work-jiang/lectures/`). The **second** series is **Civilization** (channel naming). When the operator is about to upload or integrate **Civilization** transcripts, mention it in the brief (next step: raw pulls under `research/external/youtube-channels/predictive-history/`, then curated files per [WORKFLOW-transcripts.md](../../../research/external/work-jiang/WORKFLOW-transcripts.md)). See also `users/grace-mar/work-jiang.md` § Operator schedule.
+
 1. Run the warmup commands below (warmup + harness when instance state matters).
 2. **Always** run today’s combined daily brief and write it to the repo:
    ```bash
@@ -22,6 +24,7 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    - daily-brief summary (with output path)
    - X scan top links (short)
    - 1–2 draft post candidates for `@usa_first_ky` (still draft-only; human approval required)
+   - If **Civilization** transcripts are pending or just landed, one line on that (upload/integrate status).
 5. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
 ## Run this first

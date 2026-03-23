@@ -1,0 +1,16 @@
+chapter_links:
+  ch03:
+  - cr-0001
+thesis_links:
+  t01:
+  - cr-0002
+  t02:
+  - cr-0003
+  t03:
+  - cr-0004
+claim_links:
+  clm-0008:
+  - cr-0005
+concept_links:
+  empire-order:
+  - cr-0006

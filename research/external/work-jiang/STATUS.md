@@ -15,6 +15,7 @@
 - **Chapters in queue:** 3
 - **Chapters research-ready or ready for outline:** 3
 - **Chapters with blockers listed:** 1
+- **Evidence packs present:** 3 / 3 chapters
 
 ## Registries
 

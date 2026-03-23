@@ -1,0 +1,87 @@
+# Intellectual chronology — hand-curated periods over the Geo-Strategy lecture arc (geo-01 … geo-12).
+# Each geo source appears in exactly one period. Render: scripts/work_jiang/render_intellectual_chronology.py
+
+periods:
+  - period_id: p-mideast-empire
+    label: "Middle East matrix, religion, and empire foundations"
+    source_ids:
+      - geo-01
+      - geo-02
+      - geo-03
+      - geo-04
+    dominant_concepts:
+      - iran-strategy-matrix
+      - christian-zionism
+      - financialization-empire
+      - saudi-iran-axis
+    dominant_claims:
+      - clm-0005
+      - clm-0007
+      - clm-0009
+      - clm-0011
+    shifts:
+      - "Moves from Iran’s strategic ‘matrix’ and asymmetry toward US empire and dollar/petrodollar framing."
+    continuities:
+      - "Religious and alliance language stays entangled with great-power competition across episodes."
+    tensions:
+      - "Instrumental vs sincere readings of religious politics."
+    chapter_ids:
+      - ch01
+      - ch03
+    notes: "Foundational arc for religion–empire coupling and regional rivalry."
+
+  - period_id: p-domestic-escalation
+    label: "Domestic coalitions, hubris, and escalation toward Iran"
+    source_ids:
+      - geo-05
+      - geo-06
+      - geo-07
+      - geo-08
+    dominant_concepts:
+      - electoral-coalition
+      - empire-hubris
+      - raisi-scenario
+      - iran-trap
+    dominant_claims:
+      - clm-0012
+      - clm-0013
+      - clm-0014
+      - clm-0016
+    shifts:
+      - "Foregrounds US electoral coalitions and VP logic, then imperial hubris and Iran escalation ladders."
+    continuities:
+      - "Deterrence and narrative remain paired with material constraints."
+    tensions:
+      - "Leadership accidents vs structural rivalry explanations."
+    chapter_ids:
+      - ch01
+      - ch03
+    notes: "Bridges US politics to Middle East escalation scenarios."
+
+  - period_id: p-imagination-polycrisis
+    label: "Strategic imagination, civil discord, and long-horizon forecasting"
+    source_ids:
+      - geo-09
+      - geo-10
+      - geo-11
+      - geo-12
+    dominant_concepts:
+      - putinism-soul
+      - strategic-imagination
+      - second-civil-war
+      - psychohistory-metaphor
+    dominant_claims:
+      - clm-0017
+      - clm-0018
+      - clm-0019
+      - clm-0020
+    shifts:
+      - "Turns from regional chessboards to civilizational soul, nested games, and domestic fracture metaphors."
+    continuities:
+      - "Education and narrative formation stay central as ‘psychohistory’ and ML pedagogy appear."
+    tensions:
+      - "Strong prediction rhetoric vs calibrated uncertainty."
+    chapter_ids:
+      - ch02
+      - ch03
+    notes: "Closing arc foregrounds imagination, polarization, and long-range prediction."

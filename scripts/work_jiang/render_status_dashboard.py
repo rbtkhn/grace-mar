@@ -77,6 +77,16 @@ def main() -> int:
     ]
     blocked = [c for c in chapters if c.get("blocking_items")]
 
+    pack_dir = WORK_DIR / "evidence-packs"
+    expected_ch = {c.get("id") for c in arch_ch if c.get("id")}
+    pack_files = list(pack_dir.glob("ch*.md")) if pack_dir.exists() else []
+    pack_ids = set()
+    for p in pack_files:
+        # ch01.md -> ch01
+        stem = p.stem
+        if stem.startswith("ch"):
+            pack_ids.add(stem)
+
     lines = [
         "# work-jiang — status",
         "",
@@ -95,6 +105,7 @@ def main() -> int:
         f"- **Chapters in queue:** {len(chapters)}",
         f"- **Chapters research-ready or ready for outline:** {len(ready_now)}",
         f"- **Chapters with blockers listed:** {len(blocked)}",
+        f"- **Evidence packs present:** {len(pack_ids & expected_ch)} / {len(expected_ch)} chapters",
         "",
         "## Registries",
         "",

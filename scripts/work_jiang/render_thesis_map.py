@@ -42,6 +42,9 @@ def render(data: dict) -> str:
     for sc in t.get("subclaims") or []:
         lines.append(f"### {sc.get('id')} — {sc.get('claim', '')}")
         lines.append("")
+        lc = sc.get("linked_claim_ids") or []
+        if lc:
+            lines.append(f"- **Linked claims:** {', '.join(f'`{x}`' for x in lc)}")
         ss = sc.get("support_sources") or []
         sa = sc.get("support_analysis") or []
         if ss:

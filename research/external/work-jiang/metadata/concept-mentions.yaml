@@ -1,0 +1,235 @@
+generated_from:
+- lectures/geo-strategy-01-iran-strategy-matrix-2024-04-24.md
+- lectures/geo-strategy-02-christian-zionism-middle-east-conflict.md
+- lectures/geo-strategy-03-how-empire-is-destroying-america.md
+- lectures/geo-strategy-04-saudi-arabia-trump-card-against-iran.md
+- lectures/geo-strategy-05-why-trump-will-win-nikki-haley-vp.md
+- lectures/geo-strategy-06-americas-imperial-hubris.md
+- lectures/geo-strategy-07-who-killed-iranian-president-ebrahim-raisi.md
+- lectures/geo-strategy-08-the-iran-trap.md
+- lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md
+- lectures/geo-strategy-10-putins-strategic-imagination.md
+- lectures/geo-strategy-11-the-second-american-civil-war.md
+- lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md
+- analysis/7y_hbz6loEo-geo-strategy-08-analysis.md
+- analysis/AEPSUC-UQ5k-geo-strategy-09-analysis.md
+- analysis/B_al2wgk49Y-geo-strategy-10-analysis.md
+- analysis/Go1bMQKnJBQ-geo-strategy-11-analysis.md
+- analysis/JieFC4Yww4o-geo-strategy-06-analysis.md
+- analysis/LctUcVqhhns-geo-strategy-04-analysis.md
+- analysis/LsRGvKxfLts-geo-strategy-07-analysis.md
+- analysis/_blj8zKdKgA-geo-strategy-03-analysis.md
+- analysis/exRK-85630k-geo-strategy-05-analysis.md
+- analysis/lkKrZq4YdqY-geo-strategy-02-analysis.md
+- analysis/s_k6esWheqA-geo-strategy-12-psychohistory-analysis.md
+concepts:
+- concept_id: civ-formation
+  total_mentions_estimated: 25
+  by_phrase:
+    civilizational formation: 0
+    formation: 25
+    civilization formation: 0
+- concept_id: strategic-imagination
+  total_mentions_estimated: 14
+  by_phrase:
+    strategic imagination: 7
+    great-power imagination: 0
+- concept_id: asymmetrical-warfare
+  total_mentions_estimated: 13
+  by_phrase:
+    asymmetrical warfare: 8
+    asymmetric warfare: 0
+    asymmetry: 5
+- concept_id: christian-zionism
+  total_mentions_estimated: 70
+  by_phrase:
+    Christian Zionism: 22
+    dispensational: 26
+- concept_id: empire-order
+  total_mentions_estimated: 238
+  by_phrase:
+    empire: 209
+    imperial: 22
+    Pax Americana: 5
+    empire defense: 2
+- concept_id: financialization-empire
+  total_mentions_estimated: 23
+  by_phrase:
+    financialization: 11
+    dollar system: 1
+- concept_id: saudi-iran-axis
+  total_mentions_estimated: 165
+  by_phrase:
+    Saudi Arabia vs Iran: 0
+    Saudi: 152
+    Gulf: 9
+    axis of resistance: 4
+- concept_id: electoral-coalition
+  total_mentions_estimated: 45
+  by_phrase:
+    electoral coalition: 0
+    Trump coalition: 0
+    VP pick: 0
+    Haley: 45
+- concept_id: empire-hubris
+  total_mentions_estimated: 62
+  by_phrase:
+    imperial hubris: 6
+    hubris: 46
+    shock and awe: 6
+    Millennium Challenge: 4
+- concept_id: iran-strategy-matrix
+  total_mentions_estimated: 14
+  by_phrase:
+    Iran strategy matrix: 3
+    strategy matrix: 7
+    four goals: 4
+- concept_id: operation-true-promise
+  total_mentions_estimated: 9
+  by_phrase:
+    Operation True Promise: 3
+    True Promise: 6
+    April 2024 strikes: 0
+- concept_id: raisi-scenario
+  total_mentions_estimated: 45
+  by_phrase:
+    Raisi helicopter incident: 0
+    Raisi: 18
+    IRGC: 26
+    helicopter crash: 1
+- concept_id: iran-trap
+  total_mentions_estimated: 3
+  by_phrase:
+    Iran trap: 3
+    invasion scenario: 0
+    regime change: 0
+- concept_id: putinism-soul
+  total_mentions_estimated: 186
+  by_phrase:
+    Putinism and the soul of Russia: 0
+    Putin: 162
+    consumerism: 21
+    soul of Russia: 3
+- concept_id: stalin-game-theory
+  total_mentions_estimated: 51
+  by_phrase:
+    Stalin and game theory: 0
+    game theory: 17
+    Stalin: 34
+    strategic patience: 0
+- concept_id: second-civil-war
+  total_mentions_estimated: 55
+  by_phrase:
+    Second American Civil War: 4
+    civil war: 43
+    domestic conflict: 0
+    polarization: 8
+- concept_id: psychohistory-metaphor
+  total_mentions_estimated: 26
+  by_phrase:
+    psychohistory: 13
+    Psychohistory: 13
+    supervised learning: 0
+    forecasting AI: 0
+- concept_id: education-narrative
+  total_mentions_estimated: 38
+  by_phrase:
+    education and narrative: 0
+    education: 5
+    narrative formation: 0
+    school: 33
+- concept_id: religious-legitimacy
+  total_mentions_estimated: 12
+  by_phrase:
+    religious legitimacy: 0
+    theology: 5
+    sacred: 4
+    dispensational premillennialism: 3
+- concept_id: middle-east-alliance
+  total_mentions_estimated: 148
+  by_phrase:
+    Middle East alliances: 0
+    Israel Lobby: 21
+    allies: 12
+    Saudi Arabia: 115
+untracked_high_frequency_tokens:
+- token: okay
+  count: 2654
+- token: right
+  count: 668
+- token: people
+  count: 381
+- token: it's
+  count: 381
+- token: does
+  count: 375
+- token: that's
+  count: 367
+- token: sense
+  count: 280
+- token: want
+  count: 263
+- token: united
+  count: 222
+- token: world
+  count: 222
+- token: first
+  count: 221
+- token: states
+  count: 210
+- token: there's
+  count: 178
+- token: thing
+  count: 177
+- token: going
+  count: 176
+- token: military
+  count: 175
+- token: know
+  count: 172
+- token: don't
+  count: 155
+- token: guys
+  count: 155
+- token: against
+  count: 151
+- token: china
+  count: 150
+- token: think
+  count: 147
+- token: understand
+  count: 146
+- token: problem
+  count: 144
+- token: they're
+  count: 143
+- token: you're
+  count: 141
+- token: really
+  count: 138
+- token: three
+  count: 128
+- token: country
+  count: 127
+- token: idea
+  count: 126
+- token: money
+  count: 126
+- token: question
+  count: 126
+- token: actually
+  count: 125
+- token: reason
+  count: 122
+- token: much
+  count: 119
+- token: time
+  count: 110
+- token: basically
+  count: 110
+- token: ukraine
+  count: 110
+- token: believe
+  count: 109
+- token: fight
+  count: 108
