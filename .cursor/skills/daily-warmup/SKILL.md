@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation.
+description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, KY-4 polling and Polymarket snapshot, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation.
 ---
 
 # Daily Warmup
@@ -19,13 +19,15 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md
    ```
    Include the output path in your reply and a short summary (top work-politics + strategy headlines, next actions).
-3. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@usa_first_ky`.
-4. Return the warmup brief (priorities, gate, work-politics, integrity) plus:
+3. **Polling + prediction markets (standard):** Follow [docs/skill-work/work-politics/polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md). **Fetch** the two canonical Polymarket pages (KY-04 GOP primary + GE party); **search** for any **independent** public horserace polls (Massie vs Gallrein) from the last ~30 days. Return a **compact block**: implied probabilities + **volume**, named public poll **or** “no independent poll found,” and a **one-line caveat** (markets ≠ polls; ignore Polymarket AI narrative blurbs; cite URLs). Update **`Last checked`** in that doc when you materially refresh numbers (same day is enough to set the date).
+4. Run the `.cursor/skills/massie-x-news-search-draft/SKILL.md` flow to do a daily web scan of Massie-relevant news and **his latest X posts**, producing **draft-only** candidate posts for `@usa_first_ky`.
+5. Return the warmup brief (priorities, gate, work-politics, integrity) plus:
    - daily-brief summary (with output path)
+   - **polling + Polymarket block** (step 3)
    - X scan top links (short)
    - 1–2 draft post candidates for `@usa_first_ky` (still draft-only; human approval required)
    - If **Civilization** transcripts are pending or just landed, one line on that (upload/integrate status).
-5. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
+6. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
 ## Run this first
 
@@ -50,7 +52,8 @@ Return a short operator brief with:
 - work-politics blockers or next actions
 - integrity status
 - local worktree noise only if it matters for the next move
-- (Optional) X scan top links + 1–2 draft post candidates for `@usa_first_ky` (draft-only)
+- **KY-4 polling + Polymarket** (required for “good morning”): implied odds + volume + independent poll status + caveats — see [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md)
+- X scan top links + 1–2 draft post candidates for `@usa_first_ky` (draft-only; required when running the Massie X skill step)
 
 ## Guardrails
 
@@ -62,5 +65,6 @@ Return a short operator brief with:
 ## Related files
 
 - `docs/operator-skills.md`
+- `docs/skill-work/work-politics/polling-and-markets.md` (KY-4 polling + Polymarket — good morning standard)
 - `docs/skill-work/work-politics/workspace.md`
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` (high-stakes work-politics messaging discipline; weekly brief §8)

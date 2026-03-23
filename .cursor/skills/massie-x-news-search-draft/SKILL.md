@@ -14,6 +14,7 @@ Use this skill when drafting **suggested** X (Twitter) content for the **America
 - Opposition snapshot: [docs/skill-work/work-politics/opposition-brief.md](docs/skill-work/work-politics/opposition-brief.md)
 - Doctrine filter: [docs/skill-work/work-politics/clients/massie-ky4-operator-checklist.md](docs/skill-work/work-politics/clients/massie-ky4-operator-checklist.md)
 - Issue wedges (optional hooks): [docs/skill-work/work-politics/clients/massie-issue-asymmetry.md](docs/skill-work/work-politics/clients/massie-issue-asymmetry.md)
+- Polling + Polymarket (good morning routine): [docs/skill-work/work-politics/polling-and-markets.md](docs/skill-work/work-politics/polling-and-markets.md) — if you cite odds or polls in X copy, **caveat** (markets ≠ vote shares; internals ≠ public polls).
 
 ## Hard guardrails
 

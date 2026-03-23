@@ -206,6 +206,10 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     lines.extend(
         [
             "",
+            "## Good morning — KY-4 polling + prediction markets",
+            "",
+            "- Standard with **daily-warmup** (`good morning`): agent pulls **Polymarket** (KY-04 GOP primary + GE party) + web search for **independent** horserace polls per `docs/skill-work/work-politics/polling-and-markets.md`. Not included in this script output — run the skill steps after this command.",
+            "",
             "## Guardrail",
             "",
             "- Read-only summary only. Do not merge Record changes without companion approval.",

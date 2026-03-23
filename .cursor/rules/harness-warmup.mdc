@@ -19,6 +19,8 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 2. **Include the command output** in your reply (paste verbatim or as a fenced markdown block) so the thread carries the same snapshot.
 
+**Full “good morning” stack:** When the operator is doing a **daily session start** (see `.cursor/skills/daily-warmup/SKILL.md`), also run that skill’s steps — including **KY-4 polling + Polymarket** per `docs/skill-work/work-politics/polling-and-markets.md` — not only harness output.
+
 ## When you may skip
 
 - Operator says they’re only editing unrelated code/docs with no gate/evidence context.
