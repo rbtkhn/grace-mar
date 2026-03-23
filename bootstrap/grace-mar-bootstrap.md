@@ -88,6 +88,7 @@ End of session: update **`docs/development-handoff.md`**, commit, push if reques
 7. Use §5 OpenClaw commands and §6 work-dev / OpenClaw file map below.
 
 **Other session focus:**
+- If **work-jiang** (Jiang book/site operator lane), read **`bootstrap/work-jiang-bootstrap.md`** then `research/external/work-jiang/README.md` § Boundaries and the work-jiang feature checklist skill.
 - If **extension-focused** (not work-dev), read §1 then **extension/readme.md** and skim `extension/`. Use §5 Extension commands and §6 Extension file map below.
 
 ---
