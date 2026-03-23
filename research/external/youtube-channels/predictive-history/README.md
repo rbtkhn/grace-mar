@@ -2,6 +2,33 @@
 
 **Purpose:** Operator research corpus (YouTube captions). **Not** part of the companion Record; do not merge into SELF or treat as Voice knowledge.
 
+## Pipeline layout
+
+| Layer | Role |
+|-------|------|
+| `scripts/youtube_transcripts/` | Library: discovery, tiers, quality, hash, manifest |
+| `scripts/fetch_youtube_channel_transcripts.py` | CLI (sync; no Redis required) |
+| `scripts/enqueue_youtube_transcripts.py` | Enqueue per-video jobs (RQ + Redis) |
+| `scripts/run_transcript_rq_worker.py` | RQ worker process |
+| `transcript_manifest.json` | Per-video `content_hash`, `quality`, `source_tier`, timestamps |
+| `index.json` | Human/CI-facing index (CLI writes; enqueue does **not** — rebuild after queue jobs) |
+
+**Transcript tiers (in order):** (1) `youtube-transcript-api` timedtext → (2) yt-dlp WebVTT (manual preferred, then auto) → (3) optional `whisper.cpp` on local audio (`WHISPER_CPP_BIN`, `WHISPER_CPP_MODEL`, `--enable-whisper`).
+
+**Quality:** Heuristic score `0..1` per transcript; `TRANSCRIPT_MIN_QUALITY` (default `0.35`) gates low scores; `--keep-low-quality` writes `needs_review` instead of `rejected_low_quality`.
+
+**Dedup:** `content_hash` = SHA-256 of `video_id | pipeline_version | normalized text`. Skip unchanged fetches when manifest hash matches and status was `ok` (unless `--force`).
+
+## Environment variables
+
+| Variable | Purpose |
+|----------|---------|
+| `GOOGLE_API_KEY` or `YOUTUBE_DATA_API_KEY` | Optional `videos.list` for extra snippet/duration |
+| `TRANSCRIPT_MIN_QUALITY` | Default minimum quality (default `0.35`) |
+| `REDIS_URL` | RQ enqueue/worker (default `redis://localhost:6379/0`) |
+| `WHISPER_CPP_BIN` | Path to whisper.cpp CLI (default `whisper-cli`) |
+| `WHISPER_CPP_MODEL` | Path to `.bin` model (required for tier 3) |
+
 ## Full channel listing (no downloads)
 
 Human-readable table of **all** videos on the channel (regenerate after new uploads):
@@ -17,9 +44,11 @@ python3 scripts/fetch_youtube_channel_transcripts.py --index-only \
   --output-dir research/external/youtube-channels/predictive-history
 ```
 
-## Generate / refresh
+The entry script adds `scripts/` to `sys.path` so `youtube_transcripts` imports resolve.
 
-From repo root (install deps first: `pip install -e ".[youtube-research]"`):
+## Generate / refresh (sync CLI)
+
+From repo root (install deps: `pip install -e ".[youtube-research]"`):
 
 ```bash
 python3 scripts/fetch_youtube_channel_transcripts.py \
@@ -27,13 +56,53 @@ python3 scripts/fetch_youtube_channel_transcripts.py \
   --output-dir research/external/youtube-channels/predictive-history
 ```
 
-- **`transcripts/`** — one `.txt` per video (metadata header + plain text).
-- **`index.json`** — machine-readable manifest with status per video (after full fetch) or listing-only rows after `--index-only`.
+- **`transcripts/`** — one `.txt` per video (header includes `quality`, `source_tier` when available).
+- **`index.json`** — machine-readable rows per video.
+- **`transcript_manifest.json`** — dedup + manifest state.
 
-Options: `--limit N` (test), `--dry-run` (print TSV to stdout only), `--index-only` (write `index.json` + `CHANNEL-VIDEO-INDEX.md`), `--resume` (skip existing files), `--languages en,zh-CN`, `--sleep 0.5`.
+**Inputs:** `--channel` URL (default Predictive History), or `--input path/to/urls.txt` (one channel, playlist, or watch URL per line). **Playlist URLs** are supported.
+
+**Options:** `--limit N`, `--dry-run`, `--index-only`, `--resume` (skip existing `.txt`), `--force`, `--languages`, `--languages-tier2`, `--sleep`, `--enable-whisper`, `--keep-low-quality`, `--max-attempts-listing`.
+
+## Redis + RQ (optional)
+
+Install: `pip install -e ".[transcript-pipeline]"`
+
+Start Redis (example):
+
+```bash
+docker compose -f docker-compose.transcripts.yml up -d
+export REDIS_URL=redis://127.0.0.1:6379/0
+```
+
+Enqueue jobs (one per video):
+
+```bash
+python3 scripts/enqueue_youtube_transcripts.py --limit 5
+```
+
+Run worker(s):
+
+```bash
+python3 scripts/run_transcript_rq_worker.py
+```
+
+**Manifest locking:** Jobs take a file lock on `transcript_manifest.json` while updating it (parallel workers serialize manifest writes).
+
+**Rebuild `index.json` after RQ:** run the sync CLI over the same scope with `--resume` so it skips re-downloads but refreshes `index.json`:
+
+```bash
+python3 scripts/fetch_youtube_channel_transcripts.py \
+  --channel "https://www.youtube.com/@PredictiveHistory/videos" \
+  --output-dir research/external/youtube-channels/predictive-history
+```
+
+## Daily / cron refresh
+
+Use the same CLI; optional `--since-last-run` is not implemented — use manifest `last_run_utc` in `transcript_manifest.json` manually or re-run `--index-only` to detect new IDs, then fetch.
 
 ## Git
 
 Transcript text can be large; by default **`transcripts/*.txt` is gitignored**. Commit **`index.json`** if you want a pointer without blobs, or remove the ignore rule if you intentionally version text.
 
-Respect YouTube’s Terms of Service and creator rights; use for analysis, not republication, unless you have rights to do so.
+Respect YouTube’s Terms of Service and creator rights; use for analysis, not republication, unless you have rights to do so. Whisper tier downloads audio locally; ensure your use complies with copyright and platform rules.

@@ -1,0 +1,17 @@
+# Optional Redis for RQ transcript workers (operator machine).
+# Usage: docker compose -f docker-compose.transcripts.yml up -d
+# Then: export REDIS_URL=redis://127.0.0.1:6379/0
+#   python3 scripts/enqueue_youtube_transcripts.py --limit 5
+#   python3 scripts/run_transcript_rq_worker.py
+version: "3.9"
+services:
+  redis-transcripts:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - transcript-redis-data:/data
+
+volumes:
+  transcript-redis-data:

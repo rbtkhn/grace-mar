@@ -26,8 +26,8 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
 
 ## 2. Phase A — Acquire & register
 
-1. **Refresh channel index (optional but recommended)**  
-   From repo root (deps: `pip install -e ".[youtube-research]"` or `yt-dlp` + `youtube-transcript-api`):
+1. **Fetch transcripts (sync CLI)** — Implementation lives in `scripts/youtube_transcripts/`; wrapper: `scripts/fetch_youtube_channel_transcripts.py`.  
+   Deps: `pip install -e ".[youtube-research]"` (`yt-dlp`, `youtube-transcript-api`). Optional tiers: yt-dlp WebVTT, `whisper.cpp` (`--enable-whisper`, `WHISPER_CPP_*`). Optional metadata: `GOOGLE_API_KEY` / `YOUTUBE_DATA_API_KEY` for YouTube Data API v3 snippet/duration.
 
    ```bash
    python3 scripts/fetch_youtube_channel_transcripts.py \
@@ -36,11 +36,16 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
      --resume --sleep 0.5
    ```
 
+   - **`--input urls.txt`** — one channel, playlist, or watch URL per line (multi-series / multi-playlist).  
    - **`--dry-run --limit 200`** — list IDs/titles without downloading (queue planning).  
    - **`--resume`** — skip videos that already have a non-trivial `.txt`.  
-   - Output: `transcripts/*.txt` with header (`video_id`, `title`, `url`, `language`, `fetched_at_utc`) + `index.json` manifest.
+   - **`--force`** — refetch even when manifest hash matches.  
+   - **`transcript_manifest.json`** — `content_hash`, `quality`, `source_tier`, timestamps (dedup / incremental).  
+   - Output: `transcripts/*.txt` + `index.json` + manifest. See [predictive-history/README.md](../../youtube-channels/predictive-history/README.md) for RQ/Redis, env vars, and rebuild-after-queue.
 
-2. **Register intent** — note in your tracker or `work-jiang.md` **WORK GOALS** / `near_term` which series or episode IDs you are processing this week (operator choice).
+2. **Optional parallel queue** — `pip install -e ".[transcript-pipeline]"`, Redis (`docker compose -f docker-compose.transcripts.yml up -d`), then `scripts/enqueue_youtube_transcripts.py` + `scripts/run_transcript_rq_worker.py`. Re-run the sync CLI afterward to refresh `index.json` (or use `--resume` to avoid re-downloads).
+
+3. **Register intent** — note in your tracker or `work-jiang.md` **WORK GOALS** / `near_term` which series or episode IDs you are processing this week (operator choice).
 
 ### Multi-series (Predictive History)
 
