@@ -28,6 +28,8 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **This README** | Objective, scope, and principles for work-dev (includes former work-build-ai). |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: current state, blockers, next actions, and file map. |
+| **[INTEGRATION-PROGRAM.md](INTEGRATION-PROGRAM.md)** | **One-loop spec:** read order → export → stage-only → merge; script index; companion gate invariant. |
+| **[PARALLEL-MACRO-ACTIONS.md](PARALLEL-MACRO-ACTIONS.md)** | Non-interfering parallel agent branches; `scripts/integration_macro_actions.py`. |
 | **[operator_depth_hint.py](../../../scripts/operator_depth_hint.py)** | When pipeline velocity (approvals / merges in a rolling window) crosses tiers, emit a harness hint toward depth docs; `operator_daily_warmup` prints a one-liner summary. Operator-only; not part of the Record. |
 | **[integration-status.md](integration-status.md)** | Implemented vs partial vs documented-only status table for the integration. |
 | **[known-gaps.md](known-gaps.md)** | Explicit spec-to-implementation gaps and suggested fixes. |
@@ -39,6 +41,8 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **[safety-story-ux.md](safety-story-ux.md)** | **Safety story** as product: visible pending/approved, receipts, staged vs merged — audit continuity as primary comfort, not admin trivia. |
 | **[external-signals.md](external-signals.md)** | Moonshots / GTC–class discourse → **work-dev** lens (OpenClaw, enterprise trust, inference economics, portability); links shared [external-tech-scan](../work-strategy/external-tech-scan.md). |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |
+| **[research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md)** | No Priors / Karpathy — agents, claws, auto-research, “end of coding”; transcript in [work-jiang research](../../../research/external/work-jiang/lectures/); work-dev alignment table + guardrails. |
+| **[research-agent-readable-writable-commerce.md](research-agent-readable-writable-commerce.md)** | McKinsey / agent commerce / “agent readable & writable” stack; transcript in [work-dev research](../../../research/external/work-dev/transcripts/); positioning + guardrails. |
 | **[offers.md](offers.md)** | First-pass business-layer offers and commercial framing. |
 | **[target-registry.md](target-registry.md)** | Buyer segments for the future company path. |
 | **[proof-ledger.md](proof-ledger.md)** | Reusable proof lines from internal work and future client work. |
@@ -96,7 +100,7 @@ Use this order when actively working on the territory:
 7. For **how evals are packaged as product** (operator + partner narrative), read [quality-gates-narrative.md](quality-gates-narrative.md).
 8. For **session continuity as explicit steps** (files / scripts / CI vs implicit memory), read [session-continuity-contract.md](session-continuity-contract.md).
 9. For **audit continuity as the safety story** (visible pipeline state vs “trust the chat”), read [safety-story-ux.md](safety-story-ux.md).
-10. For **long-form tech media** (podcasts, keynotes) translated into integration + offers vocabulary — not as specs — read [external-signals.md](external-signals.md) and the shared table in [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md).
+10. For **long-form tech media** (podcasts, keynotes) translated into integration + offers vocabulary — not as specs — read [external-signals.md](external-signals.md) and the shared table in [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md). Example ingest: [research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md) (No Priors / Karpathy — agents, claws, auto-research).
 
 ---
 

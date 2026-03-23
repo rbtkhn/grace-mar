@@ -19,6 +19,14 @@ Every metric is labeled with exactly one of:
 
 Do not treat **planned** or **blocked** metrics as observable until instrumentation exists.
 
+### Third-party / narrative “market temperature”
+
+Analyst headlines and third-party TAM figures (e.g. McKinsey-style agent-commerce sizing) are **not** Grace-Mar instrumentation. Treat them as **external narrative / discourse** — useful for framing conversations, **not** as internal benchmarks, revenue truth, or automated metrics. They belong in research notes and partner talk, not in `pipeline-events.jsonl` or gate math unless you explicitly add a separate, labeled manual capture.
+
+| Surface | Status | Notes |
+|--------|--------|-------|
+| Third-party market / TAM narratives | **manual** (narrative only) | Not instrumented in-repo; never substitute for Priority Five or integration tables above. See [research-agent-readable-writable-commerce.md](research-agent-readable-writable-commerce.md) for ingested discourse with the same boundary. |
+
 ---
 
 ## Current instrumentation status

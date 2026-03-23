@@ -1,0 +1,8 @@
+# work-dev — external research
+
+Operator-curated **source transcripts** and notes that inform **`docs/skill-work/work-dev/`** (Grace-Mar ⟷ OpenClaw, export, gate). Not Voice knowledge until merged through the pipeline.
+
+| Kind | Path |
+|------|------|
+| Transcripts (ASR) | [transcripts/](transcripts/) — e.g. [McKinsey / agent commerce / agent-readable stack](transcripts/mckinsey-trillion-agent-sales-agent-readable-asr.txt) |
+| Derived insights | [../../docs/skill-work/work-dev/](../../docs/skill-work/work-dev/) — `research-*.md` |

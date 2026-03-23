@@ -4,7 +4,7 @@
 
 **Shared theme table (non-canonical):** [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) — work-strategy, work-politics, **work-dev**.
 
-**Last refreshed:** 2026-03-21
+**Last refreshed:** 2026-03-23
 
 ---
 
@@ -41,6 +41,8 @@
 - **Partner / investor conversations:** [offers.md](offers.md), [proof-ledger.md](proof-ledger.md), [partner-channel.md](partner-channel.md).
 - **Integration truth:** [integration-status.md](integration-status.md), [known-gaps.md](known-gaps.md) — **always** win over podcast hype when they conflict.
 - **Operator rhythm:** [workspace.md](workspace.md); daily horizon still driven by [../work-strategy/daily-brief-focus.md](../work-strategy/daily-brief-focus.md) + RSS config, not by transcript titles alone.
+- **Karpathy / No Priors (agents, claws, auto-research):** [research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md) — work-dev alignment table; full ASR transcript under [work-jiang](../../../research/external/work-jiang/lectures/karpathy-end-of-coding-no-priors-agents-transcript.txt).
+- **McKinsey / agent commerce (agent readable & writable):** [research-agent-readable-writable-commerce.md](research-agent-readable-writable-commerce.md) — structural precondition, MCP vs deep stack, platform risk; ASR under [work-dev transcripts](../../../research/external/work-dev/transcripts/mckinsey-trillion-agent-sales-agent-readable-asr.txt).
 
 ---
 

@@ -30,6 +30,8 @@ Use this file when you want one place to understand:
 | File | Role |
 |------|------|
 | `README.md` | Territory doctrine, scope, and invariants |
+| `INTEGRATION-PROGRAM.md` | Single-page OpenClaw ⟷ Grace-Mar loop (read / export / stage / merge) |
+| `PARALLEL-MACRO-ACTIONS.md` | Parallel macro-action branches + merge order discipline |
 | `three-compounding-loops.md` | Record vs WORK vs CI loops — how compounding works and where drafts must not become canon |
 | `integration-status.md` | Honest implemented/partial/documented-only status table |
 | `known-gaps.md` | Current spec-to-implementation gaps and suggested fixes |
@@ -37,6 +39,8 @@ Use this file when you want one place to understand:
 | `economic-benchmarks.md` | Metrics and instrumentation reality |
 | `../../openclaw-integration.md` | Full integration guide and architecture-level contract |
 | `research-moonshots-237.md` | Research notes and ecosystem framing |
+| `research-no-priors-karpathy-end-of-coding.md` | No Priors / Karpathy — agents, claws, auto-research; links to work-jiang transcript + work-dev takeaways |
+| `research-agent-readable-writable-commerce.md` | McKinsey / agent commerce / readable-writable stack; transcript under `research/external/work-dev/transcripts/` |
 | `offers.md` | Business-layer offers and commercial framing |
 | `target-registry.md` | Buyer segments for the business layer |
 | `proof-ledger.md` | Reusable proof lines for client or partner conversations |

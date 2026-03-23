@@ -4,7 +4,7 @@
 
 **Status:** Working notes. **Not** Record truth. **Not** a substitute for cited news in briefs. When something matters for a deliverable, **confirm** against primary sources and [brief-source-registry.md](../work-politics/brief-source-registry.md).
 
-**Last refreshed:** 2026-03-21
+**Last refreshed:** 2026-03-23
 
 ---
 
@@ -32,6 +32,8 @@ work-politics, work-strategy, and **work-dev** share one operator reality; long-
 | **Economics-of-AI / “post-human labor” macro** | Claims that **monetary policy, employment, and utility** assumptions break when **agents** absorb marginal GDP; **deflation**, **issuance for “being human,”** small-firm + AI. | work-strategy **horizon** language; [work-dev external-signals](../work-dev/external-signals.md) (economics-of-AI / 1000 days section); **not** a product roadmap. | Only with **cited** econ sources and principal-aligned issues — never podcast macro as fact. |
 | **Sovereign / local / personal coordinator AI** | “**Your** stack coordinates cloud models”; open protocol; vs **digital feudalism** or **fragmentation** framings. | Portable identity + **staging vs merge** story; overlaps OpenClaw handback. | Foreign / state AI policy only when **brief** demands it and **sources** exist. |
 | **Agency vs stateless models** | Hard-takeoff debate tied to **persistent agency** vs **blank session**. | Why **audit logs and gate** matter — [work-dev safety story](../work-dev/safety-story-ux.md). | N/A unless regulating autonomous systems — source-driven. |
+| **Agentic coding / “end of coding”** | Elite practitioner narrative: **macro-actions**, parallel harnesses, **claws** (persistent loops), **auto-research** on verifiable metrics; token throughput as bottleneck. | [work-dev research-no-priors-karpathy](../work-dev/research-no-priors-karpathy-end-of-coding.md); OpenClaw-class **temperature** only — [integration-status](../work-dev/integration-status.md) wins on facts. | Jobs / regulation only with **cited** sources — not podcast macro as fact. |
+| **Agent-readable / agent-writable commerce** | **Structural** stack (not chat wrap); anti-bot → **pro-agent** traffic; **MCP ≠** full readiness; incumbents **slow**; McKinsey-class **$1T** orchestrated sales as **market narrative**. | [work-dev research-agent-readable-writable-commerce](../work-dev/research-agent-readable-writable-commerce.md); **portable Record + export** vs vendor lock-in; honest **integration-status**. | Policy / economy copy only with **cited** sources — not YouTube McKinsey lines as fact. |
 
 ---
 

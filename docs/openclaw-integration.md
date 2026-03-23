@@ -1,5 +1,7 @@
 # OpenClaw Integration Guide
 
+**One-loop operator checklist:** [skill-work/work-dev/INTEGRATION-PROGRAM.md](skill-work/work-dev/INTEGRATION-PROGRAM.md) — read order, export, stage-only, merge, script index. **Parallel branches:** [PARALLEL-MACRO-ACTIONS.md](skill-work/work-dev/PARALLEL-MACRO-ACTIONS.md), `python scripts/integration_macro_actions.py`.
+
 How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent workspace) so that:
 - The Record feeds OpenClaw's identity layer (who it serves)
 - Session continuity spans both systems
@@ -397,6 +399,8 @@ python scripts/export_fork.py -u grace-mar -o handoff-fork.json
 ## Research
 
 - [work-dev/research-moonshots-237.md](skill-work/work-dev/research-moonshots-237.md) — Moonshots #237 (Alex Finn): identity, memory, security, hierarchy.
+- [work-dev/research-no-priors-karpathy-end-of-coding.md](skill-work/work-dev/research-no-priors-karpathy-end-of-coding.md) — Karpathy / No Priors: agents, claws, auto-research.
+- [work-dev/research-agent-readable-writable-commerce.md](skill-work/work-dev/research-agent-readable-writable-commerce.md) — Agent-readable / agent-writable commerce stack (McKinsey-class discourse; positioning only).
 
 ---
 

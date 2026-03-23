@@ -81,10 +81,11 @@ End of session: update **`docs/development-handoff.md`**, commit, push if reques
 **Default session focus — work-dev (continue here):**
 1. Read §1 (first-run checklist).
 2. Read **`docs/skill-work/work-dev/README.md`** — objective, companion gate invariant, principles (merges former work-build-ai).
-3. Read **`docs/openclaw-integration.md`** — export, session continuity, inbound staging, staging automation.
-4. Skim **`integrations/openclaw_hook.py`**, **`integrations/openclaw_stage.py`**, **`scripts/export_user_identity.py`**.
-5. Optional: **`docs/skill-work/work-dev/economic-benchmarks.md`**, **`research-moonshots-237.md`**.
-6. Use §5 OpenClaw commands and §6 work-dev / OpenClaw file map below.
+3. Read **`docs/skill-work/work-dev/INTEGRATION-PROGRAM.md`** — one-loop read / export / stage-only / merge; optional **`docs/skill-work/work-dev/PARALLEL-MACRO-ACTIONS.md`** if running parallel agent branches (`python scripts/integration_macro_actions.py`).
+4. Read **`docs/openclaw-integration.md`** — export, session continuity, inbound staging, staging automation.
+5. Skim **`integrations/openclaw_hook.py`**, **`integrations/openclaw_stage.py`**, **`scripts/export_user_identity.py`**.
+6. Optional: **`docs/skill-work/work-dev/economic-benchmarks.md`**, **`research-moonshots-237.md`**.
+7. Use §5 OpenClaw commands and §6 work-dev / OpenClaw file map below.
 
 **Other session focus:**
 - If **extension-focused** (not work-dev), read §1 then **extension/readme.md** and skim `extension/`. Use §5 Extension commands and §6 Extension file map below.
@@ -98,7 +99,7 @@ End of session: update **`docs/development-handoff.md`**, commit, push if reques
 3. Read `docs/identity-fork-protocol.md` (canonical protocol contract).
 4. Run `git status` and note uncommitted work.
 5. Read `docs/development-handoff.md` (current state and next tasks).
-6. **work-dev** — Read `docs/skill-work/work-dev/README.md`; then `docs/openclaw-integration.md` if continuing integration work.
+6. **work-dev** — Read `docs/skill-work/work-dev/README.md`, then **`docs/skill-work/work-dev/INTEGRATION-PROGRAM.md`** (single-loop spec); then `docs/openclaw-integration.md` if continuing integration work. For parallel branches, see **`docs/skill-work/work-dev/PARALLEL-MACRO-ACTIONS.md`**.
 7. **Companion-self audit** — Read `docs/audit-companion-self.md` (concept alignment: companion self, self-* taxonomy, tricameral). Optionally read `docs/audit-grace-mar-vs-companion-self-template.md` (instance vs template repo). Note any drift; if material changes have been made since the audit date, re-run or update the audit.
 
 If working on companion profile operations (not work-dev), also read:
@@ -135,6 +136,8 @@ If working on companion profile operations (not work-dev), also read:
 
 ### work-dev (active continuation)
 - **Territory:** `docs/skill-work/work-dev/` — Record ↔ OpenClaw; stage-only handback; companion gate invariant (never control-grid). Merges former work-build-ai.
+- **One-loop spec:** `docs/skill-work/work-dev/INTEGRATION-PROGRAM.md` — read order, export, stage, merge, script index.
+- **Parallel macro-actions:** `docs/skill-work/work-dev/PARALLEL-MACRO-ACTIONS.md` — `python scripts/integration_macro_actions.py branches|checklist`.
 - **Next:** See `docs/development-handoff.md`; extend hooks, staging automation, benchmarks, or Moonshots takeaways as handoff specifies.
 
 ---
@@ -143,7 +146,7 @@ If working on companion profile operations (not work-dev), also read:
 
 When loaded in a fresh session, offer these options:
 
-1. **work-dev** (default — OpenClaw integration, export, staging, session continuity; read work-dev README + openclaw-integration)
+1. **work-dev** (default — OpenClaw integration, export, staging, session continuity; read work-dev README + **INTEGRATION-PROGRAM** + openclaw-integration)
 2. **Run session** (chat-first companion interaction; no auto-merge)
 3. **Pipeline operations** (stage/review/apply approved candidates)
 4. **Intent governance** (audit/review/debate packet workflows)
@@ -273,6 +276,8 @@ python3 scripts/handback_server.py
 
 **work-dev / OpenClaw (default continuation):**
 - `docs/skill-work/work-dev/README.md` — territory objective; companion gate invariant; principles; quick ref commands.
+- `docs/skill-work/work-dev/INTEGRATION-PROGRAM.md` — **single-page loop:** read order → export → stage-only → merge; script index.
+- `docs/skill-work/work-dev/PARALLEL-MACRO-ACTIONS.md` — parallel agent branches; `python scripts/integration_macro_actions.py`.
 - `docs/skill-work/work-dev/economic-benchmarks.md` — cost/value/gate health metrics.
 - `docs/skill-work/work-dev/research-moonshots-237.md` — identity, memory, hierarchy; actionable takeaways.
 - `docs/openclaw-integration.md` — canonical integration guide (export, session continuity, inbound staging, staging automation).

@@ -21,6 +21,18 @@ This is an internal proof bank:
 | **BUILD-AI-PROOF-0005** | Quality gates narrative | Counterfactual harness, integrity, continuity CI, and gate-health docs framed as **visible boundary checks**, not engineering chores | "Our evals are the product — they show the fork stays inside the companion's knowledge boundary and governance rules, not just that the model ran." | **external_summary_ok** | Pair with [quality-gates-narrative.md](quality-gates-narrative.md); do not imply a shipped dashboard UI until one exists. |
 | **BUILD-AI-PROOF-0006** | Session continuity contract | Continuity documented as **files + scripts + CI**, not implicit agent memory | "Continuity isn't 'the AI remembers' — it's which files you read, which script you run, and CI proving that path still works." | **external_summary_ok** | Pair with [session-continuity-contract.md](session-continuity-contract.md). |
 | **BUILD-AI-PROOF-0007** | Safety story UX | Pending vs approved, receipts, pipeline staged/applied, last merge — **audit continuity** framed as primary user comfort, not admin trivia | "We treat audit trails as the product — you always see what's waiting, what merged, and what OpenClaw only staged, so you're not guessing from chat." | **external_summary_ok** | Pair with [safety-story-ux.md](safety-story-ux.md); do not imply a shipped unified dashboard until one exists. |
+| **BUILD-AI-PROOF-0008** | Third-party market discourse | Large vendor TAM / agent-commerce headlines are labeled **narrative temperature**, not internal metrics | "We separate analyst headlines from our own instrumentation — third-party market numbers are for context, not our ledger." | **external_summary_ok** | Pair with [economic-benchmarks.md](economic-benchmarks.md) § third-party narrative; do not cite McKinsey-style figures as Grace-Mar truth. |
+| **BUILD-AI-PROOF-0009** | Agent-ready data vs canonical Record | MCP and messy enterprise data ≠ a governed identity export; portable Record + gate stays the contract | "Agent-ready commerce still needs a clean identity contract and a human gate — plumbing alone doesn't make messy data canonical." | **external_summary_ok** | Aligns with [research-agent-readable-writable-commerce.md](research-agent-readable-writable-commerce.md); avoid claiming we instrument vendor TAM. |
+| **BUILD-AI-PROOF-0010** | Partner positioning (one loop) | Export + stage-only handback + merge separation | "We deliver a portable Record, stage handback for review, and keep merge on the human side — that's the whole loop in three clauses." | **external_summary_ok** | Pair with [INTEGRATION-PROGRAM.md](INTEGRATION-PROGRAM.md). |
+
+### Partner one-liners (pasteable)
+
+Use only when bounded by the proof rows above:
+
+1. "Portable identity export, stage-only handback, human merge — we don't let downstream tools silently write canonical truth."
+2. "Third-party trillion-dollar headlines are market temperature for us, not numbers on our dashboard."
+3. "Continuity is which files you read and which script proves it — not implicit chat memory."
+4. "MCP over messy data isn't the same as a governed fork; we own the export contract and the gate."
 
 ---
 
