@@ -147,4 +147,5 @@ By end of Week 1 you should be able to:
 - **Full pack PDF (recommended for Xavier):** [smm-xavier-handbook-bundle.pdf](smm-xavier-handbook-bundle.pdf) — **mission first**, then this handbook plus linked training materials in one file. Built from [smm-xavier-handbook-bundle.md](smm-xavier-handbook-bundle.md) (generated; do not edit by hand).
 - **Slim handbook-only HTML:** `python3 scripts/handbook_md_to_print_html.py docs/skill-work/work-politics/smm-xavier-handbook.md -o docs/skill-work/work-politics/smm-xavier-handbook-print.html` → open in browser → **Print → Save as PDF**.
 - **Regenerate bundle + full PDF** (HTML + PDF on macOS with Chrome): from repo root run  
-  `./scripts/generate_smm_xavier_pdf.sh`
+  `./scripts/generate_smm_xavier_pdf.sh`  
+  If the PDF step fails in a **sandboxed** tool environment, run the same command on your **Mac** (Chrome required), or open `smm-xavier-handbook-bundle-print.html` in a browser → **Print → Save as PDF**. For noisy or failed Chrome runs, `CHROME_PDF_VERBOSE=1 ./scripts/generate_smm_xavier_pdf.sh` prints Chrome’s stderr.
