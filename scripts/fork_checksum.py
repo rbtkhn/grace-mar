@@ -7,22 +7,34 @@ the fork's documented state at a given moment.
 
 Usage:
     python scripts/fork_checksum.py
-    python scripts/fork_checksum.py --append   # Append (ts, checksum) to fork-checksum-log.txt
-    python scripts/fork_checksum.py --manifest  # Write fork-manifest.json (checksum, IX counts, pipeline stats)
+    python scripts/fork_checksum.py -u xavier
+    python scripts/fork_checksum.py --append   # Append to users/<id>/fork-checksum-log.txt
+    python scripts/fork_checksum.py --manifest  # Write users/<id>/fork-manifest.json
+    python scripts/fork_checksum.py -u grace-mar --manifest
+
+Default user: GRACE_MAR_USER_ID or grace-mar.
 """
+
+from __future__ import annotations
 
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
 from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
 BOT_DIR = REPO_ROOT / "bot"
-LOG_PATH = PROFILE_DIR / "fork-checksum-log.txt"
+
+# Imported after REPO_ROOT so repo_io can load
+from repo_io import profile_dir as _profile_dir
+
+
+def _default_user_id() -> str:
+    return (os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar")
 
 
 def _read(path: Path) -> str:
@@ -37,16 +49,15 @@ def _canonicalize(text: str) -> bytes:
     return normalized.encode("utf-8")
 
 
-def compute_checksum() -> str:
-    """Compute SHA-256 of fork state."""
+def compute_checksum(pd: Path) -> str:
+    """Compute SHA-256 of fork state for users/<id>/."""
     parts = []
-    parts.append(_read(PROFILE_DIR / "self.md"))
-    parts.append(_read(PROFILE_DIR / "self-evidence.md"))
-    # Key prompt sections that embed fork state
+    parts.append(_read(pd / "self.md"))
+    parts.append(_read(pd / "self-evidence.md"))
+    # Key prompt sections that embed fork state (shared bot — same extract for all forks)
     prompt_path = BOT_DIR / "prompt.py"
     if prompt_path.exists():
         content = prompt_path.read_text()
-        # Extract SYSTEM_PROMPT content (between triple quotes)
         m = re.search(r'SYSTEM_PROMPT\s*=\s*"""(.*?)"""', content, re.DOTALL)
         if m:
             parts.append(m.group(1).strip())
@@ -65,9 +76,9 @@ def _ix_counts(content: str) -> tuple[int, int, int]:
     return a, b, c
 
 
-def _pipeline_stats() -> tuple[int, int, str]:
+def _pipeline_stats(pd: Path) -> tuple[int, int, str]:
     """Return (applied, rejected, last_applied_ts) from pipeline-events.jsonl."""
-    events_path = PROFILE_DIR / "pipeline-events.jsonl"
+    events_path = pd / "pipeline-events.jsonl"
     applied = rejected = 0
     last_ts = ""
     if events_path.exists():
@@ -89,12 +100,13 @@ def _pipeline_stats() -> tuple[int, int, str]:
     return applied, rejected, last_ts
 
 
-def write_manifest(checksum: str) -> None:
+def write_manifest(pd: Path, checksum: str) -> None:
     """Write fork-manifest.json with checksum, IX counts, pipeline stats."""
-    self_content = _read(PROFILE_DIR / "self.md")
+    self_content = _read(pd / "self.md")
     ix_a, ix_b, ix_c = _ix_counts(self_content)
-    pipeline_applied, pipeline_rejected, last_applied_ts = _pipeline_stats()
+    pipeline_applied, pipeline_rejected, last_applied_ts = _pipeline_stats(pd)
     manifest = {
+        "user_id": pd.name,
         "checksum": checksum,
         "ix_a_count": ix_a,
         "ix_b_count": ix_b,
@@ -104,27 +116,36 @@ def write_manifest(checksum: str) -> None:
         "last_applied_ts": last_applied_ts or None,
         "generated_at": datetime.now().isoformat(),
     }
-    manifest_path = PROFILE_DIR / "fork-manifest.json"
-    PROFILE_DIR.mkdir(parents=True, exist_ok=True)
+    manifest_path = pd / "fork-manifest.json"
+    pd.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {manifest_path}", file=sys.stderr)
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Compute fork state checksum")
+    parser.add_argument(
+        "-u",
+        "--user",
+        default=_default_user_id(),
+        help="Fork id under users/<id>/ (default: GRACE_MAR_USER_ID or grace-mar)",
+    )
     parser.add_argument("--append", "-a", action="store_true", help="Append to fork-checksum-log.txt")
     parser.add_argument("--manifest", "-m", action="store_true", help="Write fork-manifest.json")
     args = parser.parse_args()
-    checksum = compute_checksum()
+    uid = (args.user or "").strip() or "grace-mar"
+    pd = _profile_dir(uid)
+    checksum = compute_checksum(pd)
     print(checksum)
+    log_path = pd / "fork-checksum-log.txt"
     if args.append:
         ts = datetime.now().isoformat()
-        PROFILE_DIR.mkdir(parents=True, exist_ok=True)
-        with open(LOG_PATH, "a") as f:
+        pd.mkdir(parents=True, exist_ok=True)
+        with open(log_path, "a", encoding="utf-8") as f:
             f.write(f"{ts} {checksum}\n")
-        print(f"Appended to {LOG_PATH}", file=sys.stderr)
+        print(f"Appended to {log_path}", file=sys.stderr)
     if args.manifest:
-        write_manifest(checksum)
+        write_manifest(pd, checksum)
 
 
 if __name__ == "__main__":

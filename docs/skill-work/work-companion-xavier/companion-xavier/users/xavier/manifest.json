@@ -2,7 +2,7 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "xavier",
-  "generated_at": "2026-03-23T09:15:50.894107",
+  "generated_at": "2026-03-23T09:55:17.178829",
   "checksum": "626adc1fc7158f326e328bc0a296d4fdacdb591c9eb7e4bc44a7831a30d37633",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
@@ -120,7 +120,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "xavier",
-    "generated_at": "2026-03-23T09:15:50.893351",
+    "generated_at": "2026-03-23T09:55:17.178293",
     "source": "users/xavier/intent.md",
     "goals": {
       "primary": "null",

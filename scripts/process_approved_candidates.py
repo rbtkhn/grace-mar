@@ -491,7 +491,7 @@ def _emit_constitutional_revision_suggested(
 
 def _compute_fork_checksum() -> tuple[bool, str]:
     result = subprocess.run(
-        [sys.executable, "scripts/fork_checksum.py"],
+        [sys.executable, "scripts/fork_checksum.py", "-u", USER_ID],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -919,7 +919,7 @@ def _run_openclaw_export(
 def _refresh_derived_exports() -> None:
     commands = [
         [sys.executable, "scripts/export_manifest.py", "-u", USER_ID, "-o", str(PROFILE_DIR)],
-        [sys.executable, "scripts/fork_checksum.py", "--manifest"],
+        [sys.executable, "scripts/fork_checksum.py", "-u", USER_ID, "--manifest"],
         [sys.executable, "scripts/export_runtime_bundle.py", "-u", USER_ID, "-o", str(PROFILE_DIR / "runtime-bundle")],
     ]
     for cmd in commands:

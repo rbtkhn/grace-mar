@@ -19,7 +19,7 @@ Run **once per week** (e.g. same calendar slot). Tick what you did; skip lanes t
 ```bash
 python3 scripts/validate-integrity.py --user grace-mar
 python3 scripts/export_manifest.py -u grace-mar -o users/grace-mar
-python3 scripts/fork_checksum.py --manifest
+python3 scripts/fork_checksum.py -u grace-mar --manifest
 ```
 
 (Or run full merge postflight if you processed the gate.)

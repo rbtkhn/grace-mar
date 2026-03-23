@@ -2,7 +2,7 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-22T07:10:16.172766",
+  "generated_at": "2026-03-23T09:55:24.646777",
   "checksum": "4be5dd997969168b1e646ed4840a4fddcfee4aa5c609adbac127ecfe66d3a580",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
@@ -120,7 +120,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-22T07:10:16.170692",
+    "generated_at": "2026-03-23T09:55:24.643899",
     "source": "users/grace-mar/intent.md",
     "goals": {
       "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",

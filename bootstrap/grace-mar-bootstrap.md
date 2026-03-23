@@ -68,7 +68,7 @@ python3 scripts/test_voice_linguistic_authenticity.py
 If **validate-integrity** reports stale derived exports or runtime bundle, run:
 
 ```bash
-python3 scripts/fork_checksum.py --manifest && \
+python3 scripts/fork_checksum.py -u grace-mar --manifest && \
 python3 scripts/export_manifest.py -u grace-mar && \
 python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt && \
 python3 scripts/export_runtime_bundle.py -u grace-mar -o users/grace-mar/runtime-bundle

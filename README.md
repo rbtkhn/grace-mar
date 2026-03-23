@@ -259,8 +259,10 @@ The Record is user-owned. When changing schools, the user brings their Record. G
 Compute a checksum of the fork state (SELF + EVIDENCE + prompt) and optionally write a manifest for the profile Disclosure view:
 
 ```bash
-python scripts/fork_checksum.py              # Print checksum
-python scripts/fork_checksum.py --manifest   # Also write users/grace-mar/fork-manifest.json
+python scripts/fork_checksum.py                    # Print checksum (default: GRACE_MAR_USER_ID or grace-mar)
+python scripts/fork_checksum.py -u xavier          # Checksum for users/xavier/
+python scripts/fork_checksum.py --manifest         # Write users/<id>/fork-manifest.json
+python scripts/fork_checksum.py -u grace-mar --manifest
 ```
 
 Export the fork to JSON with the same ontology as [architecture.md](docs/architecture.md): top-level **`self`** (full identity markdown), **`self_knowledge`** (IX-A slice = SELF-KNOWLEDGE), **`self_library`** (with nested **`civ_mem`** = CIV-MEM subdomain of SELF-LIBRARY), **`skills`**, **`evidence`**, plus **`library.raw`** when using full export. See `scripts/export_fork.py` (`version` 1.1+).
