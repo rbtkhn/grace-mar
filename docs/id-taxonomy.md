@@ -59,6 +59,19 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 
 Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
 
+### Capitalization and format
+
+Use these rules everywhere docs list companion-self components (the `self-*` standard labels).
+
+| Kind | Rule | Examples |
+|------|------|----------|
+| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
+| **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log in `self-archive.md`) |
+| **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-library.md`, `self-evidence.md`, `self-archive.md` |
+| **Planned WORK coordination** | Not part of companion self; same label shape as other `self-*` files | **`self-work`** → `users/[id]/self-work.md` (operator coordination; **not** SELF-KNOWLEDGE) |
+
+**Do not** use sentence case (**Self-voice**) or mixed-case (**Self-Knowledge**) for standard labels. **Voice** and **Record** remain capitalized when meaning the product interfaces (tricameral mind), not as `self-voice` spelled with two capitals.
+
 ---
 
 ## Companion self contains
@@ -148,4 +161,4 @@ These are optional enrichment fields, not a schema migration requirement. The co
 
 ---
 
-*Last updated: February 2026*
+*Last updated: March 2026*

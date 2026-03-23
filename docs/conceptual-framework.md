@@ -50,11 +50,13 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 
 **Companion self.** A single phrase can refer to both sides of the dyad: **companion self**. It means (1) *the companion's self* — the human's self, externalized in the Record (their knowledge, curiosity, personality); and (2) *the self that companions* — the Record and Voice that accompany the human and speak when queried. The ambiguity is intentional. The Record is not a separate person but the companion's self, documented and queryable; and it is the self that is present alongside them. Use "companion self" when one term should hold both meanings. **Companion self = human–computer tricameral cognition:** Mind (human, sovereign), Record + Voice (computer-held documented self and its queryable interface).
 
-**Companion self contains:**
+**Named systems (hyphenated):** **companion-self** and **companion-xavier** are **always hyphenated** when naming the **template repository** or a **named instance** as an **intelligence-system entity**. That spelling is **not** interchangeable with **companion self** (two words), the **conceptual** dyad above. See [glossary.md](glossary.md).
+
+**Companion self contains:** (order and capitalization: [ID-TAXONOMY](id-taxonomy.md#capitalization-and-format))
 - **self-knowledge** (self.md IX-A) — **SELF-KNOWLEDGE**: identity-facing facts about the companion, not civilization-scale reference corpora
-- **self-skill-write**, **self-skill-think** (skills.md)
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
+- **self-skill-think**, **self-skill-write** (skills.md)
 - **self-archive** (self-archive.md)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
 - **self-memory** (memory.md)
@@ -62,7 +64,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 
 **Boundary:** SELF-KNOWLEDGE (IX-A, etc.) answers *who she is*. SELF-LIBRARY answers *what governed reference she carries*. Do not collapse library domains into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
 
-The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, approved evidence, and self-library (including CIV-MEM-scoped lookup). Self-voice is the single output channel for the companion self.
+The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, approved evidence, and self-library (including CIV-MEM-scoped lookup). **self-voice** is the single output channel for the companion self.
 
 **Work is adjacent, not inside the self-skill set.** Work territories and instance work contexts may use broader tools and model capability to plan or execute tasks, but they become part of the Record only through staged, approved evidence.
 

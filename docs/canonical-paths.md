@@ -21,6 +21,8 @@
 
 All paths are **lowercase** with hyphens where used (e.g. `self-evidence.md`, `recursion-gate.md`).
 
+**`self-*` labels in prose:** Standard companion-self component names (**self-knowledge**, **self-library**, …) and formal surfaces (**SELF-KNOWLEDGE**, **SELF-LIBRARY**) are defined in [id-taxonomy.md — Capitalization and format](id-taxonomy.md#capitalization-and-format).
+
 **`intent.md`:** Not required by `assert_canonical_record_layout()` for minimal bot startup; when present it is the canonical source for `export_intent_snapshot` / manifest policy and clears export **degraded** mode when valid.
 
 ---

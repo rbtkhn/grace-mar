@@ -89,20 +89,20 @@ The operator may run an internal **daily brief** script and a **Massie news scan
 
 ---
 
-## 6a. Companion-self beta — build your own fork (optional second track)
+## 6a. Companion-self — your own fork (co-primary with a posting floor)
 
-The operator uses a **companion-self** architecture: a **Record** (documented self) + **Voice** (queryable emulation) + **human gate** for what becomes durable truth. **Grace-Mar** is one **instance** of that system (one person’s fork). You are invited to **beta-test** the same stack by running **your own** instance — **your** Record, **your** identity lane — **in parallel** with @usa_first_ky work.
+The operator uses a **companion-self** architecture: a **Record** (documented self) + **Voice** (queryable emulation) + **human gate** for what becomes durable truth. **Grace-Mar** is one **instance** of that system (one person’s fork). You run **your own** instance — **your** Record, **your** identity lane — **alongside** @usa_first_ky. **Learning by doing here is a strategic priority:** it is how you become maximally useful to the **business** (product literacy, credible feedback, future client-facing work), not only to one race account.
 
 | Topic | What it means |
 |--------|----------------|
-| **Purpose** | You learn the product from the inside; the companion gets **real feedback** (onboarding friction, clarity, “would I trust this?”) from someone who is not the pilot companion. |
+| **Purpose** | You learn the product from the inside; the companion gets **real feedback** (onboarding friction, clarity, trust). You build **embodied** understanding of gate, boundary, and workflow — the fastest path to operator-aligned execution. |
+| **Priority vs X** | **Companion-self track is co-primary** with SMM work: both matter. The **operational floor** for @usa_first_ky is non-negotiable: keep **[content-queue](content-queue.md)** honest, hit **calendar / registration / primary** obligations the companion sets, and **never silently drop** the queue — the companion and you define **minimum viable posting** so this lane gets protected time without surprise gaps. |
 | **Separation** | SMM work is **work-politics** (Massie lane, drafts, X). Your companion-self instance is **private** — it does **not** feed Massie copy, and **nothing** from your fork merges into Grace-Mar’s Record without a separate gated pipeline. |
-| **Template** | New instances start from the public template: [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self). Grace-Mar is the **reference instance** ([grace-mar vs companion-self](../../grace-mar-vs-companion-self.md)); you do **not** need grace-mar access to try the template. |
-| **Feedback** | Periodic notes to the companion are enough: what confused you, what broke, what felt valuable — **no obligation** to share private Record content. |
+| **Repository (sovereignty)** | **Recommended:** a **separate repository under your control** (your GitHub account or org) — not the operator’s grace-mar repo. **Fork** (or “Use template”) from [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self), add **`upstream`** = companion-self to pull template upgrades over time, and keep **only** `users/<your-id>/` in **your** repo. That gives you **sovereign** remotes, secrets, and history; it avoids any accidental mixing with the operator’s Record. You do **not** need push access to grace-mar. |
+| **Template** | New instances start from the public template: [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self). Grace-Mar is the **reference instance** ([grace-mar vs companion-self](../../grace-mar-vs-companion-self.md)) — read-only **concept** reference; your live instance lives in **your** repo. |
+| **Feedback** | Periodic notes to the companion: what confused you, what broke, what felt valuable — **no obligation** to share private Record content beyond what helps improve the product. |
 
-**Practical start (when the companion green-lights):** Clone the template, follow companion-self **bootstrap / seed** docs, use your own `users/<your-id>/` namespace. Bots and Telegram are optional; the core is **documented self + gate**. The operator can point you at the same **multi-root** workflow (`grace-mar.code-workspace` pattern) if you work adjacent to their repo — or you stay **template-only** on your machine.
-
-This lane is **optional** and must **not** crowd out primary posting duties or deadline work for the race.
+**Practical start:** Create **your** repo from the template → clone locally → follow companion-self **bootstrap / seed** docs → populate **your** `users/<your-id>/` only. Bots and Telegram are optional; the core is **documented self + gate**. The operator may point you at a **multi-root** workflow on **your** machine (e.g. open your companion-self clone next to a local **read-only** grace-mar checkout **only** if you need to compare docs — never copy `users/grace-mar/`). **Schedule** companion-self blocks like any other high-priority work so they do not only happen “when X is quiet.”
 
 ---
 
@@ -152,7 +152,7 @@ By end of Week 1 you should be able to:
 | [clients/massie-issue-asymmetry.md](clients/massie-issue-asymmetry.md) | Wedge ideas (with companion) |
 | [iran-foreign-policy-brief.md](iran-foreign-policy-brief.md) | Iran / war powers depth |
 | [calendar-2026.md](calendar-2026.md) | Dates |
-| §6a (this doc) | Companion-self **beta** — your own fork (optional) |
+| §6a (this doc) | Companion-self — your own fork (**co-primary** with posting floor) |
 
 ---
 

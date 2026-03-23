@@ -1,0 +1,11 @@
+{
+  "checksum": "0000000000000000000000000000000000000000000000000000000000000000",
+  "ix_a_count": 0,
+  "ix_b_count": 0,
+  "ix_c_count": 0,
+  "pipeline_applied": 0,
+  "pipeline_rejected": 0,
+  "last_applied_ts": null,
+  "generated_at": "2026-03-23T00:00:00",
+  "note": "Placeholder at seed — run fork_checksum when PROFILE_DIR supports multi-fork."
+}

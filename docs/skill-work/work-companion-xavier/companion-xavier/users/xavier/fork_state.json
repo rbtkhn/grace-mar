@@ -1,0 +1,23 @@
+{
+  "fork_id": "xavier",
+  "phase": "seed",
+  "seed_commit": "",
+  "last_session_id": "",
+  "last_session_commit": "",
+  "last_snapshot_tag": "",
+  "drift_score": 0.0,
+  "created_at": "2026-03-23T16:16:46Z",
+  "updated_at": "2026-03-23T16:16:46Z",
+  "counters": {
+    "session_count": 0,
+    "merge_count": 0,
+    "snapshot_count": 0,
+    "session_seq": 0
+  },
+  "policies": {
+    "allow_divergence": true,
+    "merge_requires_human": true,
+    "max_unreviewed_sessions": 25,
+    "snapshot_drift_threshold": 0.45
+  }
+}

@@ -63,6 +63,8 @@ Two input channels feed the pipeline:
 
 This repo is a **live instance** (one person’s cognitive fork). The **template** for creating new instances is [companion-self](https://github.com/rbtkhn/companion-self). For a side-by-side comparison — purpose, relationship, and one-sentence summaries — see [grace-mar vs companion-self](docs/grace-mar-vs-companion-self.md).
 
+**companion-xavier (seed):** The logical instance tree for the Xavier fork lives under [`docs/skill-work/work-companion-xavier/companion-xavier/`](docs/skill-work/work-companion-xavier/companion-xavier/README.md). Repo root [`users/xavier`](users/xavier) may symlink there for tooling (see [`work-companion-xavier/SEED-MANIFEST.md`](docs/skill-work/work-companion-xavier/SEED-MANIFEST.md)).
+
 **Edit companion-self next to grace-mar:** Open **`grace-mar.code-workspace`** in Cursor/VS Code (multi-root: this repo + `./companion-self`). Clone the template into `companion-self/` at the repo root; `scripts/template_diff.py` defaults to that path. See [MERGING-FROM-COMPANION-SELF](docs/merging-from-companion-self.md) §0.
 
 ### Fork isolation and multi-tenant design

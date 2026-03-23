@@ -1,9 +1,9 @@
-# Analysis: Grace-Mar Self-Knowledge (IX-A)
+# Analysis: Grace-Mar self-knowledge (IX-A)
 
 **Purpose:** Analyze the **self-knowledge** dimension (IX-A) of the Grace-Mar Record — scope, sources, evidence linkage, and alignment with the companion-self model.
 
 **Source:** `users/grace-mar/self.md` § IX-A. KNOWLEDGE.  
-**Canonical definition:** Facts that entered awareness through observation (AGENTS.md, ID-TAXONOMY, CONCEPTUAL-FRAMEWORK). Self-knowledge = self.md IX-A; standard label **self-knowledge**. IX-A includes books and media consumed (from self-evidence.md § I. READING LIST (READ-nnn) or self-library engagement/influence state).
+**Canonical definition:** Facts that entered awareness through observation (AGENTS.md, ID-TAXONOMY, CONCEPTUAL-FRAMEWORK). **self-knowledge** = `self.md` IX-A. IX-A includes books and media consumed (from self-evidence.md § I. READING LIST (READ-nnn) or self-library engagement/influence state).
 
 **Date:** 2026-02-26
 
@@ -24,7 +24,7 @@ All entries conform to the protocol: facts only, traceable to an activity (ACT-*
 
 ## 2. Topic Clusters
 
-Self-knowledge in the Record clusters as follows:
+**self-knowledge** in the Record clusters as follows:
 
 | Cluster | LEARN IDs | Count | Representative topics |
 |---------|-----------|--------|------------------------|
@@ -83,7 +83,7 @@ Evidence linkage is consistent: every LEARN entry has exactly one `evidence_id` 
 
 | Criterion | Status |
 |----------|--------|
-| **Self-knowledge = IX-A** | ✅ ID-TAXONOMY and CONCEPTUAL-FRAMEWORK: self-knowledge is self.md IX-A. |
+| **self-knowledge** (= IX-A) | ✅ ID-TAXONOMY and CONCEPTUAL-FRAMEWORK: **self-knowledge** is `self.md` IX-A. |
 | **Evidence linkage** | ✅ Every LEARN entry has `evidence_id`. |
 | **Knowledge boundary** | ✅ Only documented facts; no LLM leak. Sources are bot lookup, conversation, school, KBCP, companion report. |
 | **Gated pipeline** | ✅ All entries merged after staging and approval (SESSION-LOG and SELF-ARCHIVE reflect this). |

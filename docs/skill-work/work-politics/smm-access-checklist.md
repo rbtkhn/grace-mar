@@ -16,15 +16,16 @@
 
 ---
 
-## Task 2 (optional): Companion-self beta tester invite
+## Task 2: Companion-self instance (priority development track)
 
-**Purpose:** Xavier may run the **companion-self** template to build **her own** cognitive fork (private Record + Voice), separate from Massie SMM work — see [smm-xavier-handbook.md](smm-xavier-handbook.md) §6a. This does **not** block Day 1 X access.
+**Purpose:** Xavier runs the **companion-self** template to build **her own** cognitive fork (private Record + Voice) — **co-primary** with @usa_first_ky, with an explicit **posting floor** (see handbook §6a). Learning by doing is the main path to **business**-aligned product literacy. This does **not** block Day 1 X access (Task 1 still comes first for login).
 
 | Step | Action | Done |
 |------|--------|------|
-| 1 | Companion confirms Xavier is invited as a **beta tester** (feedback on onboarding/UX; no requirement to share private Record content). | [ ] |
-| 2 | Share link to template repo: [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self) and (if helpful) [grace-mar vs companion-self](../../grace-mar-vs-companion-self.md). | [ ] |
-| 3 | Xavier: GitHub account + local `git clone` when ready; follow template bootstrap docs — **own** `users/<id>/`, not grace-mar. | [ ] |
+| 1 | Companion confirms Xavier is invited as **beta tester + operator-in-training** (feedback on onboarding/UX; optional sharing of process-level notes — not required private Record content). | [ ] |
+| 2 | Agree **minimum viable @usa_first_ky** (queue updates, calendar obligations) so companion-self time is **scheduled**, not only “when X is quiet.” | [ ] |
+| 3 | Share link to template repo: [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self) and (if helpful) [grace-mar vs companion-self](../../grace-mar-vs-companion-self.md). | [ ] |
+| 4 | Xavier: GitHub account; **fork or template** [companion-self](https://github.com/rbtkhn/companion-self) into **her own repo** (sovereign remote); clone locally; follow bootstrap — **own** `users/<id>/` only, never operator’s grace-mar Record. | [ ] |
 
 ---
 

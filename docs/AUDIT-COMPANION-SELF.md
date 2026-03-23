@@ -15,7 +15,7 @@
 ## 1. Canonical Definition (Reference)
 
 - **Companion self** = (1) the companion's self (human's self, externalized in the Record) + (2) the self that companions (Record + Voice that accompany the human). Ambiguity intentional. **Companion self = human–computer tricameral cognition.**
-- **Companion self contains:** self-knowledge (IX-A), self-curiosity (IX-B), self-personality (IX-C), self-skill-write, self-skill-think, self-skill-work, self-archive, self-library, self-memory, self-voice. See ID-TAXONOMY.
+- **Companion self contains:** **self-knowledge** (IX-A), **self-curiosity** (IX-B), **self-personality** (IX-C), **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** — see [ID-TAXONOMY](id-taxonomy.md) § Companion self contains and § Capitalization. (Legacy docs may cite **self-skill-work**; current canon uses work territories and `work-*.md`, not a self-skill for WORK.)
 
 ---
 

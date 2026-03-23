@@ -33,7 +33,7 @@
 
 | Doc | Use when |
 |-----|----------|
-| [smm-xavier-handbook.md](smm-xavier-handbook.md) §6a | **Companion-self beta** — optional second track to run your own fork (template + separation from @usa_first_ky) |
+| [smm-xavier-handbook.md](smm-xavier-handbook.md) §6a | **Companion-self** — your own fork (**co-primary** with @usa_first_ky posting floor; template + separation) |
 | [smm-job-description.md](smm-job-description.md) | Formal role, comp (0.1 BTC base + 0.1 win bonus) |
 | [iran-foreign-policy-brief.md](iran-foreign-policy-brief.md) | Iran / war-powers context, Massie quotes |
 | [calendar-2026.md](calendar-2026.md) | Key dates (primary May 19, early vote, etc.) |

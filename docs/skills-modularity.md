@@ -12,14 +12,14 @@
 
 The Record (and the companion self) is composed of the following modules. Together they define who the companion is and what the Record can evidence about what they can do; the Voice and any written profile are functions of this set.
 
-| Module | Standard label | Location | Scope |
-|--------|----------------|----------|--------|
-| **Self-knowledge** | self-knowledge | self.md IX-A | Facts that entered awareness (post-seed knowledge) |
-| **Self-personality** | self-personality | self.md IX-C | Observed behavioral patterns, values, speech traits, art style |
-| **Self-curiosity** | self-curiosity | self.md IX-B | Topics that catch attention (post-seed curiosity) |
-| **Self-library** | self-library | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first for answers |
-| **Self-skill-think** | self-skill-think | skills.md THINK container | Intake, learning, comprehension (multimodal) |
-| **Self-skill-write** | self-skill-write | skills.md WRITE container | Production (text, journal, stories); linguistic style source |
+| Module (standard label) | Location | Scope |
+|-------------------------|----------|--------|
+| **self-knowledge** | self.md IX-A | Facts that entered awareness (post-seed knowledge) |
+| **self-personality** | self.md IX-C | Observed behavioral patterns, values, speech traits, art style |
+| **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
+| **self-library** | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first for answers |
+| **self-skill-think** | skills.md THINK container | Intake, learning, comprehension (multimodal) |
+| **self-skill-write** | skills.md WRITE container | Production (text, journal, stories); linguistic style source |
 
 Additional Record components (self-archive, self-memory, evidence logs) are defined in [ID-TAXONOMY](id-taxonomy.md#companion-self-contains). The Voice renders the full Record when it speaks; it draws on all of the above as appropriate.
 
@@ -124,7 +124,7 @@ Input (conversation, artifact, "we did X")
 
 ## 5a. Identity vs instrument: Record skills and work
 
-**Self-knowledge (IX-A)** is an aspect of **identity** — what the companion knows (who they are). **Work** is an **instrument** for accomplishing tasks and projects.
+**self-knowledge** (IX-A) is an aspect of **identity** — what the companion knows (who they are). **Work** is an **instrument** for accomplishing tasks and projects.
 
 - **IX-A shapes Record skill boundaries.** THINK (intake, comprehension) and WRITE (production, expression) are Record-bound and should stay aligned with what the companion knows and how the companion writes.
 - **IX-A does not bound the work layer in the same way.** Work territories may use broader model capability, tools, APIs, and external systems to help plan or execute tasks.
