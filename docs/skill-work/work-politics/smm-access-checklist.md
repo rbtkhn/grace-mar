@@ -16,6 +16,18 @@
 
 ---
 
+## Task 2 (optional): Companion-self beta tester invite
+
+**Purpose:** Xavier may run the **companion-self** template to build **her own** cognitive fork (private Record + Voice), separate from Massie SMM work — see [smm-xavier-handbook.md](smm-xavier-handbook.md) §6a. This does **not** block Day 1 X access.
+
+| Step | Action | Done |
+|------|--------|------|
+| 1 | Companion confirms Xavier is invited as a **beta tester** (feedback on onboarding/UX; no requirement to share private Record content). | [ ] |
+| 2 | Share link to template repo: [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self) and (if helpful) [grace-mar vs companion-self](../../grace-mar-vs-companion-self.md). | [ ] |
+| 3 | Xavier: GitHub account + local `git clone` when ready; follow template bootstrap docs — **own** `users/<id>/`, not grace-mar. | [ ] |
+
+---
+
 ## Handoff note
 
 Xavier needs: login + 2FA method. Companion decides when to send (e.g. Day 1 morning or day before). Document the handoff channel here:

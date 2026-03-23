@@ -89,6 +89,23 @@ The operator may run an internal **daily brief** script and a **Massie news scan
 
 ---
 
+## 6a. Companion-self beta — build your own fork (optional second track)
+
+The operator uses a **companion-self** architecture: a **Record** (documented self) + **Voice** (queryable emulation) + **human gate** for what becomes durable truth. **Grace-Mar** is one **instance** of that system (one person’s fork). You are invited to **beta-test** the same stack by running **your own** instance — **your** Record, **your** identity lane — **in parallel** with @usa_first_ky work.
+
+| Topic | What it means |
+|--------|----------------|
+| **Purpose** | You learn the product from the inside; the companion gets **real feedback** (onboarding friction, clarity, “would I trust this?”) from someone who is not the pilot companion. |
+| **Separation** | SMM work is **work-politics** (Massie lane, drafts, X). Your companion-self instance is **private** — it does **not** feed Massie copy, and **nothing** from your fork merges into Grace-Mar’s Record without a separate gated pipeline. |
+| **Template** | New instances start from the public template: [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self). Grace-Mar is the **reference instance** ([grace-mar vs companion-self](../../grace-mar-vs-companion-self.md)); you do **not** need grace-mar access to try the template. |
+| **Feedback** | Periodic notes to the companion are enough: what confused you, what broke, what felt valuable — **no obligation** to share private Record content. |
+
+**Practical start (when the companion green-lights):** Clone the template, follow companion-self **bootstrap / seed** docs, use your own `users/<your-id>/` namespace. Bots and Telegram are optional; the core is **documented self + gate**. The operator can point you at the same **multi-root** workflow (`grace-mar.code-workspace` pattern) if you work adjacent to their repo — or you stay **template-only** on your machine.
+
+This lane is **optional** and must **not** crowd out primary posting duties or deadline work for the race.
+
+---
+
 ## 7. Tools you’ll touch
 
 | Tool | Purpose |
@@ -135,6 +152,7 @@ By end of Week 1 you should be able to:
 | [clients/massie-issue-asymmetry.md](clients/massie-issue-asymmetry.md) | Wedge ideas (with companion) |
 | [iran-foreign-policy-brief.md](iran-foreign-policy-brief.md) | Iran / war powers depth |
 | [calendar-2026.md](calendar-2026.md) | Dates |
+| §6a (this doc) | Companion-self **beta** — your own fork (optional) |
 
 ---
 
