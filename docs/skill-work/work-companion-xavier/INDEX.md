@@ -6,6 +6,7 @@
 | [SEED-MANIFEST.md](SEED-MANIFEST.md) | What ships in v1; placeholder flags |
 | [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) | Pre-merge operator checks |
 | [ALIGNMENT.md](ALIGNMENT.md) | Three-way alignment (template · grace-mar · xavier) |
+| [Boundary audit](../../audit-boundary-grace-mar-companion-xavier-companion-self.md) | Normative boundaries (Record · template · instance; may / must not) |
 | [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) | Pinned template / scaffold source |
 | [LANES.md](LANES.md) | WORK (client) vs Record (fork) vs library |
 | [TERMS-XAVIER.md](TERMS-XAVIER.md) | Short glossary |
