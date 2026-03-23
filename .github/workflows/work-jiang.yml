@@ -29,6 +29,9 @@ jobs:
       - name: Install PyYAML
         run: pip install "pyyaml>=6.0"
 
+      - name: Install pytest (lecture-analysis unit tests)
+        run: pip install "pytest>=7.0"
+
       - name: Regenerate registry and renders
         run: |
           python3 scripts/work_jiang/build_source_registry.py
@@ -57,6 +60,18 @@ jobs:
 
       - name: Validate comparative layer
         run: python3 scripts/work_jiang/validate_comparative_layer.py
+
+      - name: Validate lecture analysis JSON fixture
+        run: python3 scripts/work_jiang/validate_lecture_analysis_json.py research/external/work-jiang/fixtures/lecture_analysis_valid_min.json
+
+      - name: Pytest lecture analysis JSON
+        run: pytest tests/test_lecture_analysis_json.py -q
+
+      - name: Rebuild registry SQLite (materialized)
+        run: python3 scripts/work_jiang/rebuild_registry_db.py
+
+      - name: Check registry DB
+        run: python3 scripts/work_jiang/rebuild_registry_db.py --check
 
       - name: Source coverage (warnings only)
         run: python3 scripts/work_jiang/check_source_coverage.py

@@ -73,7 +73,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-02
   chapter_ids: &id002
-  - ch01
+  - ch02
 - prediction_id: jiang-GS02-002
   video_id: lkKrZq4YdqY
   lecture_ref: lectures/geo-strategy-02-christian-zionism-middle-east-conflict.md
@@ -109,7 +109,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-03
   chapter_ids: &id003
-  - ch01
+  - ch03
 - prediction_id: jiang-GS03-002
   video_id: _blj8zKdKgA
   lecture_ref: lectures/geo-strategy-03-how-empire-is-destroying-america.md
@@ -164,7 +164,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-04
   chapter_ids:
-  - ch02
+  - ch04
 - prediction_id: jiang-GS05-002
   video_id: exRK-85630k
   lecture_ref: lectures/geo-strategy-05-why-trump-will-win-nikki-haley-vp.md
@@ -183,7 +183,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-05
   chapter_ids:
-  - ch02
+  - ch05
 - prediction_id: jiang-GS06-001
   video_id: JieFC4Yww4o
   lecture_ref: lectures/geo-strategy-06-americas-imperial-hubris.md
@@ -203,7 +203,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-06
   chapter_ids:
-  - ch02
+  - ch06
 - prediction_id: jiang-GS07-001
   video_id: LsRGvKxfLts
   lecture_ref: lectures/geo-strategy-07-who-killed-iranian-president-ebrahim-raisi.md
@@ -226,7 +226,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-07
   chapter_ids:
-  - ch03
+  - ch07
 - prediction_id: jiang-GS08-001
   video_id: 7y_hbz6loEo
   lecture_ref: lectures/geo-strategy-08-the-iran-trap.md
@@ -247,7 +247,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-08
   chapter_ids:
-  - ch03
+  - ch08
 - prediction_id: jiang-GS09-001
   video_id: AEPSUC-UQ5k
   lecture_ref: lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md
@@ -267,7 +267,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-09
   chapter_ids: &id004
-  - ch03
+  - ch09
 - prediction_id: jiang-GS09-002
   video_id: AEPSUC-UQ5k
   lecture_ref: lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md
@@ -306,7 +306,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-10
   chapter_ids: &id005
-  - ch03
+  - ch10
 - prediction_id: jiang-GS10-002
   video_id: B_al2wgk49Y
   lecture_ref: lectures/geo-strategy-10-putins-strategic-imagination.md
@@ -342,7 +342,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-11
   chapter_ids: &id006
-  - ch03
+  - ch11
 - prediction_id: jiang-GS11-002
   video_id: Go1bMQKnJBQ
   lecture_ref: lectures/geo-strategy-11-the-second-american-civil-war.md
@@ -414,7 +414,7 @@ prediction_links:
   evidence_urls: []
   source_id: geo-12
   chapter_ids: &id007
-  - ch03
+  - ch12
 - prediction_id: jiang-GS12-002
   video_id: s_k6esWheqA
   lecture_ref: lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md

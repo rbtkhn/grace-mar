@@ -2,6 +2,8 @@
 
 **Purpose:** When building the book/site, mark where Jiang’s **stated claims** **depart** from **named** mainstream or consensus positions — without treating “mainstream” as morally true or false. This is **operator research** (clarity + fair comparison), **not** Voice knowledge until merged through the gate.
 
+**Volume II (Civilization):** The second book pass for that strand is **Part II — Divergence**, not prediction adjudication. See [`book/PART-II-CIVILIZATION-DIVERGENCE.md`](../book/PART-II-CIVILIZATION-DIVERGENCE.md) and [`CHAPTER-DIVERGENCE-BOX.md`](../CHAPTER-DIVERGENCE-BOX.md).
+
 **Hard rule:** Always tag **whose** mainstream you mean (jurisdiction, discipline, or institution). “Mainstream” without a scope is vague.
 
 ---
@@ -49,6 +51,8 @@ Fields (typical):
 - `jiang_claim`, `mainstream_anchor`, `mainstream_summary`
 - `divergence_type`, `strength`
 - `evidence_notes`, `sources_mainstream` (array), `sources_jiang` (optional; usually lecture URL)
+
+**SQLite:** the same rebuild script indexes divergences into [../registry/work_jiang_metrics.sqlite](../registry/README.md) for ad hoc SQL; JSONL stays canonical.
 
 ---
 

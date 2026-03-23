@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "summary": "Test fixture for CI validation.",
+  "key_claims": [
+    {
+      "claim_text": "Example claim.",
+      "claim_type": "interpretation",
+      "confidence": "low"
+    }
+  ],
+  "predictions": [
+    {
+      "claim_summary": "Something may happen in a window.",
+      "claim_type": "time_bounded",
+      "resolution_status": "pending"
+    }
+  ],
+  "divergences_from_prior": [
+    {
+      "jiang_claim": "Example divergence from mainstream framing."
+    }
+  ],
+  "open_questions": ["What metric?"],
+  "cross_links": [
+    {
+      "target": "geo-strategy-01-iran-strategy-matrix-2024-04-24.md",
+      "relation": "extends"
+    }
+  ],
+  "source": { "video_id": "xEEpOxqdU5E", "source_id": "geo-01" }
+}

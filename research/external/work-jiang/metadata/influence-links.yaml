@@ -15,7 +15,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-02
   chapter_ids:
-  - ch01
+  - ch02
 - captured_at_utc: '2026-03-22T17:11:56Z'
   video_id: xEEpOxqdU5E
   url: https://www.youtube.com/watch?v=xEEpOxqdU5E
@@ -49,7 +49,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-03
   chapter_ids:
-  - ch01
+  - ch03
 - captured_at_utc: '2026-03-22T18:14:38Z'
   video_id: LctUcVqhhns
   url: https://www.youtube.com/watch?v=LctUcVqhhns
@@ -66,7 +66,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-04
   chapter_ids:
-  - ch02
+  - ch04
 - captured_at_utc: '2026-03-22T18:22:48Z'
   video_id: exRK-85630k
   url: https://www.youtube.com/watch?v=exRK-85630k
@@ -83,7 +83,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-05
   chapter_ids:
-  - ch02
+  - ch05
 - captured_at_utc: '2026-03-22T18:28:05Z'
   video_id: JieFC4Yww4o
   url: https://www.youtube.com/watch?v=JieFC4Yww4o
@@ -100,7 +100,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-06
   chapter_ids:
-  - ch02
+  - ch06
 - captured_at_utc: '2026-03-22T18:32:45Z'
   video_id: LsRGvKxfLts
   url: https://www.youtube.com/watch?v=LsRGvKxfLts
@@ -117,7 +117,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-07
   chapter_ids:
-  - ch03
+  - ch07
 - captured_at_utc: '2026-03-22T18:38:21Z'
   video_id: 7y_hbz6loEo
   url: https://www.youtube.com/watch?v=7y_hbz6loEo
@@ -134,7 +134,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-08
   chapter_ids:
-  - ch03
+  - ch08
 - captured_at_utc: '2026-03-22T18:41:19Z'
   video_id: AEPSUC-UQ5k
   url: https://www.youtube.com/watch?v=AEPSUC-UQ5k
@@ -151,7 +151,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-09
   chapter_ids:
-  - ch03
+  - ch09
 - captured_at_utc: '2026-03-22T18:47:06Z'
   video_id: B_al2wgk49Y
   url: https://www.youtube.com/watch?v=B_al2wgk49Y
@@ -168,7 +168,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-10
   chapter_ids:
-  - ch03
+  - ch10
 - captured_at_utc: '2026-03-22T18:51:15Z'
   video_id: Go1bMQKnJBQ
   url: https://www.youtube.com/watch?v=Go1bMQKnJBQ
@@ -185,7 +185,7 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-11
   chapter_ids:
-  - ch03
+  - ch11
 - captured_at_utc: '2026-03-22T18:54:10Z'
   video_id: s_k6esWheqA
   url: https://www.youtube.com/watch?v=s_k6esWheqA
@@ -202,4 +202,4 @@ influence_links:
   tool_version: 2026.03.17
   source_id: geo-12
   chapter_ids:
-  - ch03
+  - ch12

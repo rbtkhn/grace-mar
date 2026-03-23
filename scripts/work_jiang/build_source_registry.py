@@ -1,4 +1,4 @@
-"""Scan geo-strategy lectures + analysis; write metadata/sources.yaml."""
+"""Scan Geo-Strategy + Civilization lectures + analysis; write metadata/sources.yaml."""
 from __future__ import annotations
 
 import re
@@ -14,6 +14,7 @@ OUT = WORK_DIR / "metadata" / "sources.yaml"
 SOURCE_MAP = WORK_DIR / "metadata" / "source-map.yaml"
 
 GEO_NAME = re.compile(r"^geo-strategy-(\d+)-", re.I)
+CIV_NAME = re.compile(r"^civilization-(\d+)-", re.I)
 WATCH_RE = re.compile(r"watch\?v=([A-Za-z0-9_-]{11})")
 VIDEO_IN_NAME = re.compile(r"^([A-Za-z0-9_-]{11})-")
 
@@ -93,6 +94,44 @@ def main() -> int:
 
     for s in sources:
         s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "missing"
+
+    civ_paths = sorted(
+        LECTURES.glob("civilization-*.md"),
+        key=lambda p: int(CIV_NAME.match(p.name).group(1)) if CIV_NAME.match(p.name) else 0,
+    )
+    for lecture in civ_paths:
+        m = CIV_NAME.match(lecture.name)
+        if not m:
+            continue
+        ep = int(m.group(1))
+        source_id = f"civ-{ep:02d}"
+        vid = extract_video_id_from_lecture(lecture)
+        matched = analysis_for_video(analysis_by_vid, vid)
+        analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
+        analysis_status = "complete" if matched else "missing"
+        sources.append(
+            {
+                "source_id": source_id,
+                "video_id": vid,
+                "title": title_from_lecture(lecture),
+                "canonical_url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
+                "lecture_path": str(lecture.relative_to(WORK_DIR)),
+                "analysis_path": analysis_path,
+                "series": "civilization",
+                "episode": ep,
+                "themes": [],
+                "status": {
+                    "transcript": "complete",
+                    "curated_lecture": "complete",
+                    "analysis": analysis_status,
+                    "chapter_mapping": "missing",
+                },
+            }
+        )
+
+    for s in sources:
+        if s["source_id"].startswith("civ-"):
+            s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(

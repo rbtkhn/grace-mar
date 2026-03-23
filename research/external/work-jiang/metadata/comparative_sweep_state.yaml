@@ -1,0 +1,8 @@
+# Comparative sweep cursor — operator-maintained.
+# Run: python3 scripts/work_jiang/run_comparative_sweep.py
+
+last_sweep_at_utc: null
+last_source_id_processed: null
+batch_size_n: 3
+included_series:
+  - geo-strategy

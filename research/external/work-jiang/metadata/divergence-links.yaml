@@ -24,7 +24,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=lkKrZq4YdqY
   source_id: geo-02
   chapter_ids: &id001
-  - ch01
+  - ch02
 - divergence_id: div-GS02-002
   video_id: lkKrZq4YdqY
   lecture_ref: lectures/geo-strategy-02-christian-zionism-middle-east-conflict.md
@@ -119,7 +119,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=_blj8zKdKgA
   source_id: geo-03
   chapter_ids: &id002
-  - ch01
+  - ch03
 - divergence_id: div-GS03-002
   video_id: _blj8zKdKgA
   lecture_ref: lectures/geo-strategy-03-how-empire-is-destroying-america.md
@@ -185,7 +185,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=LctUcVqhhns
   source_id: geo-04
   chapter_ids: &id003
-  - ch02
+  - ch04
 - divergence_id: div-GS04-002
   video_id: LctUcVqhhns
   lecture_ref: lectures/geo-strategy-04-saudi-arabia-trump-card-against-iran.md
@@ -250,7 +250,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=exRK-85630k
   source_id: geo-05
   chapter_ids: &id004
-  - ch02
+  - ch05
 - divergence_id: div-GS05-002
   video_id: exRK-85630k
   lecture_ref: lectures/geo-strategy-05-why-trump-will-win-nikki-haley-vp.md
@@ -297,7 +297,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=JieFC4Yww4o
   source_id: geo-06
   chapter_ids: &id005
-  - ch02
+  - ch06
 - divergence_id: div-GS06-002
   video_id: JieFC4Yww4o
   lecture_ref: lectures/geo-strategy-06-americas-imperial-hubris.md
@@ -367,7 +367,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=LsRGvKxfLts
   source_id: geo-07
   chapter_ids: &id006
-  - ch03
+  - ch07
 - divergence_id: div-GS07-002
   video_id: LsRGvKxfLts
   lecture_ref: lectures/geo-strategy-07-who-killed-iranian-president-ebrahim-raisi.md
@@ -431,7 +431,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=7y_hbz6loEo
   source_id: geo-08
   chapter_ids: &id007
-  - ch03
+  - ch08
 - divergence_id: div-GS08-002
   video_id: 7y_hbz6loEo
   lecture_ref: lectures/geo-strategy-08-the-iran-trap.md
@@ -495,7 +495,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=AEPSUC-UQ5k
   source_id: geo-09
   chapter_ids: &id008
-  - ch03
+  - ch09
 - divergence_id: div-GS09-002
   video_id: AEPSUC-UQ5k
   lecture_ref: lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md
@@ -562,7 +562,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=B_al2wgk49Y
   source_id: geo-10
   chapter_ids: &id009
-  - ch03
+  - ch10
 - divergence_id: div-GS10-002
   video_id: B_al2wgk49Y
   lecture_ref: lectures/geo-strategy-10-putins-strategic-imagination.md
@@ -654,7 +654,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=Go1bMQKnJBQ
   source_id: geo-11
   chapter_ids: &id010
-  - ch03
+  - ch11
 - divergence_id: div-GS11-002
   video_id: Go1bMQKnJBQ
   lecture_ref: lectures/geo-strategy-11-the-second-american-civil-war.md
@@ -766,7 +766,7 @@ divergence_links:
   - https://www.youtube.com/watch?v=s_k6esWheqA
   source_id: geo-12
   chapter_ids: &id011
-  - ch03
+  - ch12
 - divergence_id: div-GS12-002
   video_id: s_k6esWheqA
   lecture_ref: lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md

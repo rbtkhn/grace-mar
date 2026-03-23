@@ -167,3 +167,283 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: civ-01
+  video_id: Jjqf9T59uY0
+  title: 'Civilization #1: Explaining Humanity''s Transition to Agriculture'
+  canonical_url: https://www.youtube.com/watch?v=Jjqf9T59uY0
+  lecture_path: lectures/civilization-01-explaining-humanitys-transition-to-agriculture.md
+  analysis_path: null
+  series: civilization
+  episode: 1
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-02
+  video_id: x1E5rRmCiT4
+  title: 'Civilization #2: Religion and the Dawn of Society'
+  canonical_url: https://www.youtube.com/watch?v=x1E5rRmCiT4
+  lecture_path: lectures/civilization-02-religion-and-the-dawn-of-society.md
+  analysis_path: null
+  series: civilization
+  episode: 2
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-03
+  video_id: VanPH0GFTsA
+  title: 'Civilization #3: The Religious Imagination'
+  canonical_url: https://www.youtube.com/watch?v=VanPH0GFTsA
+  lecture_path: lectures/civilization-03-the-religious-imagination.md
+  analysis_path: null
+  series: civilization
+  episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-04
+  video_id: RaT_ZUDjHrM
+  title: 'Civilization #4: The Paradise Lost of Marija Gimbutas'
+  canonical_url: https://www.youtube.com/watch?v=RaT_ZUDjHrM
+  lecture_path: lectures/civilization-04-the-paradise-lost-of-marija-gimbutas.md
+  analysis_path: null
+  series: civilization
+  episode: 4
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-05
+  video_id: J4HTFJWl5D8
+  title: 'Civilization #5: The Yamnaya Conquest of Europe'
+  canonical_url: https://www.youtube.com/watch?v=J4HTFJWl5D8
+  lecture_path: lectures/civilization-05-the-yamnaya-conquest-of-europe.md
+  analysis_path: null
+  series: civilization
+  episode: 5
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-06
+  video_id: QwfB-vXXKWU
+  title: 'Civilization #6: Elite Overproduction and the Bronze Age Collapse'
+  canonical_url: https://www.youtube.com/watch?v=QwfB-vXXKWU
+  lecture_path: lectures/civilization-06-elite-overproduction-and-the-bronze-age-collapse.md
+  analysis_path: null
+  series: civilization
+  episode: 6
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-07
+  video_id: 677rmlRgvLQ
+  title: 'Civilization #7: Homer''s Iliad and the Birth of Greek Civilization'
+  canonical_url: https://www.youtube.com/watch?v=677rmlRgvLQ
+  lecture_path: lectures/civilization-07-homers-iliad-and-the-birth-of-greek-civilization.md
+  analysis_path: null
+  series: civilization
+  episode: 7
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-08
+  video_id: NpNCQ_gNqdE
+  title: 'Civilization #8: Rat Utopia and the Peloponnesian War'
+  canonical_url: https://www.youtube.com/watch?v=NpNCQ_gNqdE
+  lecture_path: lectures/civilization-08-rat-utopia-and-the-peloponnesian-war.md
+  analysis_path: null
+  series: civilization
+  episode: 8
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-09
+  video_id: 96hzWlozdHw
+  title: 'Civilization #9: Aeschylus, Sophocles, and Euripides as Prophets of Democracy'
+  canonical_url: https://www.youtube.com/watch?v=96hzWlozdHw
+  lecture_path: lectures/civilization-09-aeschylus-sophocles-and-euripides-as-prophets-of-democracy.md
+  analysis_path: null
+  series: civilization
+  episode: 9
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-10
+  video_id: LWlTtdNww_k
+  title: 'Civilization #10: The Trial of Socrates and Plato''s Allegory of the Cave'
+  canonical_url: https://www.youtube.com/watch?v=LWlTtdNww_k
+  lecture_path: lectures/civilization-10-the-trial-of-socrates-and-platos-allegory-of-the-cave.md
+  analysis_path: null
+  series: civilization
+  episode: 10
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-11
+  video_id: l6AroD58jkE
+  title: 'Civilization #11: The Greatness of Philip II of Macedon'
+  canonical_url: https://www.youtube.com/watch?v=l6AroD58jkE
+  lecture_path: lectures/civilization-11-the-greatness-of-philip-ii-of-macedon.md
+  analysis_path: null
+  series: civilization
+  episode: 11
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-12
+  video_id: iTuRB48Of9Y
+  title: 'Civilization #12: The Tyranny of Alexander the Great'
+  canonical_url: https://www.youtube.com/watch?v=iTuRB48Of9Y
+  lecture_path: lectures/civilization-12-the-tyranny-of-alexander-the-great.md
+  analysis_path: null
+  series: civilization
+  episode: 12
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-13
+  video_id: WoTOxE4DTFA
+  title: 'Civilization #13: Aristotle and the Greek Legacy'
+  canonical_url: https://www.youtube.com/watch?v=WoTOxE4DTFA
+  lecture_path: lectures/civilization-13-aristotle-and-the-greek-legacy.md
+  analysis_path: null
+  series: civilization
+  episode: 13
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-14
+  video_id: TdcE7XGDayo
+  title: 'Civilization #14: Hannibal Barca, Lucius Brutus, and the Triumph of Rome'
+  canonical_url: https://www.youtube.com/watch?v=TdcE7XGDayo
+  lecture_path: lectures/civilization-14-hannibal-barca-lucius-brutus-and-the-triumph-of-rome.md
+  analysis_path: null
+  series: civilization
+  episode: 14
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-15
+  video_id: F8qQgsEFGgc
+  title: 'Civilization #15: The Myth-Making Genius of Julius Caesar'
+  canonical_url: https://www.youtube.com/watch?v=F8qQgsEFGgc
+  lecture_path: lectures/civilization-15-the-myth-making-genius-of-julius-caesar.md
+  analysis_path: null
+  series: civilization
+  episode: 15
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-16
+  video_id: Dc54IquR7ik
+  title: 'Civilization #16: Julius Caesar''s Will and Octavian''s Birth of Empire'
+  canonical_url: https://www.youtube.com/watch?v=Dc54IquR7ik
+  lecture_path: lectures/civilization-16-julius-caesars-will-and-octavians-birth-of-empire.md
+  analysis_path: null
+  series: civilization
+  episode: 16
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-17
+  video_id: myTurqU7NxU
+  title: 'Civilization #17: Homer, Virgil, and the War for the Soul of Rome'
+  canonical_url: https://www.youtube.com/watch?v=myTurqU7NxU
+  lecture_path: lectures/civilization-17-homer-virgil-and-the-war-for-the-soul-of-rome.md
+  analysis_path: null
+  series: civilization
+  episode: 17
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-18
+  video_id: KSSSCznYrGo
+  title: 'Civilization #18: The Great Pyramid as Ancient Egypt''s Manhattan Project'
+  canonical_url: https://www.youtube.com/watch?v=KSSSCznYrGo
+  lecture_path: lectures/civilization-18-the-great-pyramid-as-ancient-egypts-manhattan-project.md
+  analysis_path: null
+  series: civilization
+  episode: 18
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-19
+  video_id: e92jyBMmAyM
+  title: 'Civilization #19: Gilgamesh and Mesopotamia''s Quest for Immortality'
+  canonical_url: https://www.youtube.com/watch?v=e92jyBMmAyM
+  lecture_path: lectures/civilization-19-gilgamesh-and-mesopotamias-quest-for-immortality.md
+  analysis_path: null
+  series: civilization
+  episode: 19
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: civ-20
+  video_id: cvI8rukoda8
+  title: 'Civilization #20: The Proto-Buddhists of the Indus Valley (Harappan) Civilization'
+  canonical_url: https://www.youtube.com/watch?v=cvI8rukoda8
+  lecture_path: lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md
+  analysis_path: null
+  series: civilization
+  episode: 20
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started

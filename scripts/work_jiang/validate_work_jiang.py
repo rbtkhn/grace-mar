@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import sys
 from pathlib import Path
 
@@ -9,7 +10,11 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
+LECTURES = WORK_DIR / "lectures"
 ANALYSIS = WORK_DIR / "analysis"
+
+GEO_LECTURE = re.compile(r"^geo-strategy-(\d{2})-(.+)\.md$", re.I)
+CIV_LECTURE = re.compile(r"^civilization-(\d{2})-(.+)\.md$", re.I)
 
 
 def load(path: Path) -> dict:
@@ -58,6 +63,61 @@ def main() -> int:
 
     sources = load(WORK_DIR / "metadata" / "sources.yaml").get("sources", [])
     source_ids = {s["source_id"] for s in sources}
+
+    lecture_paths_seen: list[str] = []
+    for s in sources:
+        lp = s.get("lecture_path")
+        if not lp:
+            continue
+        lecture_paths_seen.append(lp)
+        abs_lecture = WORK_DIR / lp
+        if not abs_lecture.is_file():
+            errors.append(f"Missing lecture file for {s.get('source_id')}: {lp}")
+            continue
+        name = Path(lp).name
+        series = s.get("series")
+        ep = s.get("episode")
+        if ep is None:
+            errors.append(f"{s.get('source_id')}: missing episode for lecture_path")
+            continue
+        if series == "geo-strategy":
+            m = GEO_LECTURE.match(name)
+            if not m:
+                errors.append(
+                    f"{s['source_id']}: lecture filename must match "
+                    f"geo-strategy-NN-<slug>.md (NN two digits), got {name!r}"
+                )
+            elif int(m.group(1)) != int(ep):
+                errors.append(
+                    f"{s['source_id']}: filename episode {m.group(1)} != episode {ep}"
+                )
+        elif series == "civilization":
+            m = CIV_LECTURE.match(name)
+            if not m:
+                errors.append(
+                    f"{s['source_id']}: lecture filename must match "
+                    f"civilization-NN-<slug>.md (NN two digits), got {name!r}"
+                )
+            elif int(m.group(1)) != int(ep):
+                errors.append(
+                    f"{s['source_id']}: filename episode {m.group(1)} != episode {ep}"
+                )
+    dup_lp = [p for p in set(lecture_paths_seen) if lecture_paths_seen.count(p) > 1]
+    for p in sorted(dup_lp):
+        errors.append(f"Duplicate lecture_path in sources: {p}")
+
+    registered_lectures = {s["lecture_path"] for s in sources if s.get("lecture_path")}
+    for pattern, label in (
+        ("geo-strategy-*.md", "geo-strategy"),
+        ("civilization-*.md", "civilization"),
+    ):
+        for path in sorted(LECTURES.glob(pattern)):
+            rel = path.relative_to(WORK_DIR).as_posix()
+            if rel not in registered_lectures:
+                errors.append(
+                    f"Lecture on disk not listed in metadata/sources.yaml: {rel} ({label})"
+                )
+
     for ch, data in chapter_map.items():
         for sid in data.get("source_ids") or []:
             if sid not in source_ids:

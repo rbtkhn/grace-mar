@@ -2,7 +2,7 @@
 
 Production order and blockers for the Jiang book/site lane.
 
-## ch01 — What Jiang’s philosophy is
+## ch01 — Geo-Strategy #1: Iran’s Strategy Matrix
 
 - **Status:** ready_for_outline
 - **Owner:** operator
@@ -10,11 +10,10 @@ Production order and blockers for the Jiang book/site lane.
 
 **Blocking:**
 - Close analysis gap for geo-01
-- Lock thesis sentence in thesis-map.yaml
 
 **Next action:** Draft chapter outline
 
-## ch02 — Civilization, education, and historical agency
+## ch02 — Geo-Strategy #2: Christian Zionism and the Middle East Conflict
 
 - **Status:** research_ready
 - **Owner:** operator
@@ -22,7 +21,79 @@ Production order and blockers for the Jiang book/site lane.
 
 **Next action:** Assemble excerpts and argument spine
 
-## ch03 — Empire, religion, and strategic imagination
+## ch03 — Geo-Strategy #3: How Empire Is Destroying America
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch04 — Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch05 — Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch06 — Geo-Strategy #6: America’s Imperial Hubris
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch07 — Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch08 — Geo-Strategy #8: The Iran Trap
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch09 — Geo-Strategy #9: Putin’s War for the Soul of Russia
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch10 — Geo-Strategy #10: Putin’s Strategic Imagination
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch11 — Geo-Strategy #11: The Second American Civil War
+
+- **Status:** research_ready
+- **Owner:** operator
+- **Sprint:** 2026-W14
+
+**Next action:** Assemble excerpts and argument spine
+
+## ch12 — Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)
 
 - **Status:** research_ready
 - **Owner:** operator

@@ -2,6 +2,8 @@
 
 **Purpose:** Log **forecast-like claims** from Jiang’s talks (especially Geo-Strategy / Predictive History), then **periodically resolve** them against **dated, citable** world events — for **operator research** and book/site honesty. **Not** Record truth until merged through the gate.
 
+**Scope:** **Geo-Strategy (Volume I)** is the primary target for Part II prediction adjudication. The **Civilization** strand (Volume II) uses **Part II — Divergence** instead — see [`book/PART-II-CIVILIZATION-DIVERGENCE.md`](../book/PART-II-CIVILIZATION-DIVERGENCE.md) and [`divergence-tracking/README.md`](../divergence-tracking/README.md).
+
 **What this is not:** A scoreboard to “debunk” or “prove” a person. It is a **discipline**: separate **strong predictions** (falsifiable, time-bounded) from **models / heuristics** (still useful if a specific forecast misses).
 
 ---
@@ -58,6 +60,8 @@ Each line is one object. Required fields:
 - `evidence_urls` — list of strings
 
 Optional: `superseded_by`, `related_prediction_ids`, `accuracy_note` (why partial/ambiguous).
+
+**SQLite query index (generated, not canonical):** from repo root, `python3 scripts/work_jiang/rebuild_registry_db.py` builds [../registry/work_jiang_metrics.sqlite](../registry/README.md) from both JSONL files. Query examples: `python3 scripts/work_jiang/query_predictions.py --status contradicted`. JSONL remains source of truth; edit rows there, then rebuild.
 
 ---
 

@@ -1,5 +1,6 @@
 # Machine-readable book architecture for work-jiang (Geo-Strategy corpus → book/site).
 # Multivolume umbrella: Predictive History — one volume per lecture series.
+# This volume: one book chapter per lecture (12 chapters = 12 Geo-Strategy sessions).
 # Render: python scripts/work_jiang/render_book_architecture.py
 
 project:
@@ -11,54 +12,196 @@ project:
   title: "Predictive History, Volume 1: Geo-Strategy"
   thesis_one_sentence: "Jiang offers a civilizational philosophy that links culture, power, education, and historical agency into one system."
   promise_paragraph: >
-    This volume explains Jiang's philosophy clearly enough for general readers,
-    then tests it analytically using transcript-backed evidence, CIV-MEM framing,
-    and selected real-world applications. The multivolume work Predictive History
-    devotes one book to each lecture series; this volume draws on the Geo-Strategy series.
+    Part I follows Jiang’s Geo-Strategy lectures in order: one chapter per class session,
+    transcript-backed, with the same cumulative arc as the original teaching.
+    Each Part I chapter ends with at least three clearly stated predictions drawn from the
+    registry (prediction_id + short claim) for that lecture.
+    Part II, after Chapter 12, uses a deep web and news search against the prediction registry
+    to adjudicate each claim where evidence allows: triangulation across independent sources,
+    time-stamped reporting, and explicit handling of claim types (event vs conditional vs trend
+    vs interpretive). It closes with an overall evaluation of how the lecture series’s
+    forecasts held up—without pretending philosophy reduces to a ledger.
   audience:
     primary: "serious general readers interested in history, philosophy, and geopolitics"
     secondary:
       - "researchers of civilizational thought"
-      - "readers of Jiang's channel seeking a structured synthesis"
+      - "readers of Jiang's channel seeking a structured path that mirrors the classroom order"
   status: outline_in_progress
+
+# Convention for prose drafts: see CHAPTER-PREDICTION-BOX.md
+chapter_end_predictions:
+  min_per_chapter: 3
+  registry_path: prediction-tracking/registry/predictions.jsonl
+  instruction: >
+    End each Part I chapter with a boxed subsection "Predictions (this lecture)" listing
+    the three prediction_ids below (or more if added later), each with one-sentence claim_summary.
+
+part_2:
+  title: "Part II — Analyzing Jiang's predictions"
+  after_chapter: ch12
+  description: >
+    Deep web and news search against the Part I prediction registry: for each claim, gather
+    time-stamped, citable reporting and triangulate across independent lines of evidence where
+    stakes warrant. Score resolved vs pending vs not evaluable; separate antecedent and
+    consequent for conditional claims; weight trend and interpretive claims by explicit
+    metrics or label them honestly. Record internal tensions between chapters. Finish with an
+    overall evaluation—coverage, hit rate where adjudicable, and what would update confidence
+    in the framework as a whole.
 
 book:
   chapters:
     - id: ch01
-      title: "What Jiang’s philosophy is"
-      purpose: "State the system in plain language before critique."
+      title: "Geo-Strategy #1: Iran’s Strategy Matrix"
+      purpose: "Book chapter for lecture 1 — asymmetry, strategy matrix, Operation True Promise."
       kind: exposition
       priority: high
-      target_words: 3000
+      target_words: 2800
       source_ids: []
       analysis_ids: []
-      prediction_ids: []
+      prediction_ids: [jiang-GS01-001, jiang-GS01-002, jiang-GS01-003]
       divergence_ids: []
       applications: []
       status: not_started
       requires_prediction_review: false
     - id: ch02
-      title: "Civilization, education, and historical agency"
-      purpose: "Explain Jiang’s deeper view of formation and power."
+      title: "Geo-Strategy #2: Christian Zionism and the Middle East Conflict"
+      purpose: "Book chapter for lecture 2 — Christianity, end-times frames, Israel lobby thread."
       kind: exposition
       priority: high
-      target_words: 3500
+      target_words: 2800
       source_ids: []
       analysis_ids: []
-      prediction_ids: []
+      prediction_ids: [jiang-GS02-001, jiang-GS02-002, jiang-GS02-003]
       divergence_ids: []
       applications: []
       status: not_started
       requires_prediction_review: false
     - id: ch03
-      title: "Empire, religion, and strategic imagination"
-      purpose: "Show how Jiang connects metaphysics and geopolitical order."
-      kind: analysis
+      title: "Geo-Strategy #3: How Empire Is Destroying America"
+      purpose: "Book chapter for lecture 3 — empire, dollar, financialization, Iran war arc."
+      kind: exposition
       priority: high
-      target_words: 3500
+      target_words: 2800
       source_ids: []
       analysis_ids: []
-      prediction_ids: []
+      prediction_ids: [jiang-GS03-001, jiang-GS03-002, jiang-GS03-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch04
+      title: "Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran"
+      purpose: "Book chapter for lecture 4 — Saudi–Iran rivalry and regional frame."
+      kind: exposition
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS04-001, jiang-GS04-002, jiang-GS04-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch05
+      title: "Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)"
+      purpose: "Book chapter for lecture 5 — electoral prediction and coalition logic."
+      kind: exposition
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS05-001, jiang-GS05-002, jiang-GS05-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch06
+      title: "Geo-Strategy #6: America’s Imperial Hubris"
+      purpose: "Book chapter for lecture 6 — military culture, shock-and-awe, path dependence."
+      kind: exposition
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS06-001, jiang-GS06-002, jiang-GS06-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch07
+      title: "Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?"
+      purpose: "Book chapter for lecture 7 — epistemic limits, accident vs adversary readings."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS07-001, jiang-GS07-002, jiang-GS07-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch08
+      title: "Geo-Strategy #8: The Iran Trap"
+      purpose: "Book chapter for lecture 8 — drivers toward war, scenario and trap logic."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS08-001, jiang-GS08-002, jiang-GS08-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch09
+      title: "Geo-Strategy #9: Putin’s War for the Soul of Russia"
+      purpose: "Book chapter for lecture 9 — mobilization, sovereignty narrative, Russia frame."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS09-001, jiang-GS09-002, jiang-GS09-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch10
+      title: "Geo-Strategy #10: Putin’s Strategic Imagination"
+      purpose: "Book chapter for lecture 10 — strategic imagination, historical analogy, forecasts."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS10-001, jiang-GS10-002, jiang-GS10-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch11
+      title: "Geo-Strategy #11: The Second American Civil War"
+      purpose: "Book chapter for lecture 11 — polarization, violence culture, civil-war framing."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS11-001, jiang-GS11-002, jiang-GS11-003]
+      divergence_ids: []
+      applications: []
+      status: not_started
+      requires_prediction_review: false
+    - id: ch12
+      title: "Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)"
+      purpose: "Book chapter for lecture 12 — finale: psychohistory metaphor, AI, hope, method."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: []
+      analysis_ids: []
+      prediction_ids: [jiang-GS12-001, jiang-GS12-002, jiang-GS12-003]
       divergence_ids: []
       applications: []
       status: not_started

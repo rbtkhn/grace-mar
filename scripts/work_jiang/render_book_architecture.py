@@ -71,8 +71,38 @@ def render(data: dict) -> str:
     sec = project.get("audience", {}).get("secondary") or []
     for s in sec:
         lines.append(f"- **Secondary:** {s}")
-    lines += ["", "## Chapters", ""]
+    cep = data.get("chapter_end_predictions") or {}
+    if cep:
+        lines += [
+            "",
+            "## End-of-chapter predictions (Part I)",
+            "",
+            f"- **Minimum per chapter:** {cep.get('min_per_chapter', 3)}",
+            f"- **Registry:** `{cep.get('registry_path', '')}`",
+            "",
+            str(cep.get("instruction") or "").strip(),
+            "",
+        ]
+    part2 = data.get("part_2") or {}
+    if part2:
+        after = part2.get("after_chapter") or "ch12"
+        lines += [
+            "",
+            "## Part II (after Part I)",
+            "",
+            f"### {part2.get('title', 'Part II')}",
+            "",
+            f"**Begins after:** `{after}`",
+            "",
+            str(part2.get("description") or "").strip(),
+            "",
+        ]
+    lines += ["", "## Chapters (Part I)", ""]
     for ch in chapters:
+        pred_ids = ch.get("prediction_ids") or []
+        pred_line = ""
+        if pred_ids:
+            pred_line = f"- **Prediction IDs (chapter-end box):** `{', '.join(pred_ids)}`"
         lines += [
             f"### {ch['id']} — {ch['title']}",
             "",
@@ -81,8 +111,10 @@ def render(data: dict) -> str:
             f"- **Priority:** {ch['priority']}",
             f"- **Target words:** {ch.get('target_words', '')}",
             f"- **Status:** {ch['status']}",
-            "",
         ]
+        if pred_line:
+            lines.append(pred_line)
+        lines.append("")
     items = appendix.get("items") or []
     if items:
         lines += ["## Appendix", ""]

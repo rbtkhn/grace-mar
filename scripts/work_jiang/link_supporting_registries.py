@@ -1,13 +1,24 @@
-"""Join predictions/divergences/influence JSONL to source_id and chapter_id; write metadata/*-links.yaml."""
+"""Join predictions/divergences/influence JSONL to source_id and chapter_id; write metadata/*-links.yaml.
+
+Predictions/divergences load from canonical JSONL by default. Set WORK_JIANG_REGISTRY_PREFER_SQLITE=1
+(after rebuild_registry_db.py) to read the materialized SQLite payloads instead — same row shape.
+"""
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
+
+_SCRIPTS_WJ = ROOT / "scripts" / "work_jiang"
+if str(_SCRIPTS_WJ) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_WJ))
+
+from registry_db import load_divergences_for_link, load_predictions_for_link
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -76,7 +87,7 @@ def main() -> int:
             }
         )
 
-    divergences = load_jsonl(WORK_DIR / "divergence-tracking" / "registry" / "divergences.jsonl")
+    divergences = load_divergences_for_link()
     out_div = []
     for row in divergences:
         sid = resolve_source(row, by_video, by_lecture)

@@ -1,5 +1,7 @@
 # Work-jiang — systematic transcript intake & analysis
 
+**Primary purpose:** Build the book **Predictive History** and propagate its ideas. Everything else in this lane—transcripts, registries, metrics, analysis artifacts—is **derivative or supportive** of that purpose.
+
 Operator research for the Jiang book/site lane. **Not** Record truth until merged through the gate. See [users/grace-mar/work-jiang.md](../../../users/grace-mar/work-jiang.md) for project purpose.
 
 ---
@@ -49,12 +51,23 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
 
 ### Multi-series (Predictive History)
 
-The umbrella book line is **Predictive History** — **one volume per lecture series**. Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata.
+The umbrella book line is **Predictive History** — **one volume per lecture series**. Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata. For **Volume II** (Civilization), **Part II** is **Divergence** (historiographic comparison via `divergence-tracking`), not the Geo-Strategy **prediction** pass — see [book/VOLUME-II-CIVILIZATION.md](book/VOLUME-II-CIVILIZATION.md).
 
 | Series | `series` (in `metadata/sources.yaml`) | `source_id` pattern | Curated lecture filename pattern |
 |--------|----------------------------------------|---------------------|----------------------------------|
 | Geo-Strategy | `geo-strategy` | `geo-01` … | `lectures/geo-strategy-NN-*.md` |
 | Civilization | `civilization` | `civ-01` … | `lectures/civilization-NN-*.md` |
+
+**Curated lecture filename & slug (canonical rules):**
+
+- **One file per episode.** The path under `lectures/` is the stable key for sorting and tooling:  
+  **`lectures/<series-prefix>-<NN>-<kebab-slug>.md`**
+  - **`<series-prefix>`** — exactly `geo-strategy` or `civilization` (matches `series` in `sources.yaml`).
+  - **`<NN>`** — **two-digit** episode index (`01`–`99`), zero-padded. It **must** match the numeric **`episode`** field for that row in `metadata/sources.yaml` (e.g. `episode: 4` → `…-04-…`).
+  - **`<kebab-slug>`** — lowercase words separated by **hyphens**, ASCII; short human-readable topic (may include a date fragment for geo, e.g. `2024-04-24`). It does **not** need to mirror the YouTube title character-for-character.
+- **Display title vs filename.** The first markdown **`# `** heading is the **display title** (usually aligned with the YouTube title). It may differ from `<kebab-slug>`; **`scripts/work_jiang/build_source_registry.py`** takes the title from the **first `# ` line** when rebuilding `sources.yaml`.
+- **Do not** embed `video_id` in the curated lecture filename (optional for **analysis** memos only); join key remains **`video_id`** inside the file and in YAML.
+- After adding a file, run **`python3 scripts/work_jiang/build_source_registry.py`** and **`python3 scripts/work_jiang/validate_work_jiang.py`** — the validator checks filename ↔ `episode` ↔ `series` and orphan `lectures/*.md` files.
 
 - Add each processed episode to **`metadata/sources.yaml`** with stable `video_id`, paths, and status flags (same shape as Geo-Strategy rows).
 - **Analysis memos** — same convention as Geo-Strategy (`analysis/<video_id>-<short-slug>.md`); include `series` / `source_id` in front matter when normalizing.
@@ -76,6 +89,20 @@ For each target video:
    - Speaker, audience, date (if stated), topic, **canonical Source** line  
    - Short **At a glance** before dumping full transcript  
    - **Tags** line for retrieval
+
+5. **ASR orthography pass (recommended)** — After pasting the full transcript under `## Full transcript`, run the normalizer so recurring mis-hearings (e.g. “Granicus”, “Memnon of Rhodes”, “Thebes” vs “thieves” on Civilization strands) are fixed without hand-editing every line:
+   ```bash
+   # from repo root; dry-run first (default) — reports substitution counts
+   python3 scripts/work_jiang/normalize_lecture_transcript_asr.py \
+     research/external/work-jiang/lectures/<slug>.md
+
+   python3 scripts/work_jiang/normalize_lecture_transcript_asr.py \
+     research/external/work-jiang/lectures/<slug>.md --write
+   ```
+   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only (detected from filename). Override with `--series civilization|geo-strategy|none`.
+   - **Scope:** Only the markdown **below** `## Full transcript` is rewritten unless you pass `--whole-file` (avoid touching curated topic headers).
+   - **Tables:** Edit `scripts/work_jiang/asr_transcript_replacements.py` when a new episode introduces a systematic ASR error; keep longest phrases first in each list (the script sorts by length, but order matters for identical prefixes).
+   - **Not automatic truth:** This is a **readability** aid; spot-check names and add manual fixes for one-off errors.
 
 ---
 
@@ -100,6 +127,16 @@ Fill the **analysis memo** (see appendix template) with:
 - **Claims** — numbered; tag each as observation / interpretation / forecast where helpful.  
 - **References** — events, books, wars, other lectures (internal cross-links by slug or video_id).  
 - **Open questions** — what is left ambiguous or deferred to “future class.”
+
+**Machine-readable JSON (recommended for LLM + registries):** add a sidecar `analysis/<video_id>-<slug>-analysis.json` per [lecture-analysis-json-schema.md](../../../docs/skill-work/work-jiang/lecture-analysis-json-schema.md). Validate with:
+
+```bash
+python3 scripts/work_jiang/validate_lecture_analysis_json.py path/to/-analysis.json
+```
+
+Optional: `python3 scripts/work_jiang/ingest_analysis_json_to_staging.py` to draft staging rows before editing `predictions.jsonl` / `divergences.jsonl`.
+
+**Series plugins:** see [extractors.md](../../../docs/skill-work/work-jiang/extractors.md) — `scripts/work_jiang/extractors/`.
 
 ---
 
@@ -184,6 +221,13 @@ Before treating a memo as “done for this sprint”:
 | List channel videos | `python3 scripts/fetch_youtube_channel_transcripts.py --dry-run --limit 200` |
 | Pull transcripts | `python3 scripts/fetch_youtube_channel_transcripts.py --resume --output-dir research/external/youtube-channels/predictive-history` |
 | Manifest | `research/external/youtube-channels/predictive-history/index.json` |
+| Validate analysis JSON | `python3 scripts/work_jiang/validate_lecture_analysis_json.py …/-analysis.json` |
+| Rebuild prediction/divergence SQLite | `python3 scripts/work_jiang/rebuild_registry_db.py` |
+| Query predictions (SQLite) | `python3 scripts/work_jiang/query_predictions.py --status contradicted` |
+| Comparative sweep memo + gate draft | `python3 scripts/work_jiang/run_comparative_sweep.py` |
+| Migrate memo / JSON versions | `python3 scripts/work_jiang/migrate_analysis_memo.py --dry-run analysis/` |
+| Lazy bump JSON schema major | `python3 scripts/work_jiang/validate_lecture_analysis_json.py --write-bump-major path/-analysis.json` |
+| Optional GPU / API / registry env | [OFFLOAD-ENV.md](OFFLOAD-ENV.md) |
 
 ---
 

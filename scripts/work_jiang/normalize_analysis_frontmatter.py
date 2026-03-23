@@ -62,6 +62,14 @@ def build_frontmatter(path: Path, by_vid: dict[str, dict], body: str) -> dict:
     source_id = src["source_id"] if src else None
     canon = (src or {}).get("canonical_url") or extract_canonical_url(body)
     episode = (src or {}).get("episode")
+    sidecar_json = path.with_suffix(".json")
+    rel_json = None
+    if sidecar_json.exists():
+        try:
+            rel_json = str(sidecar_json.relative_to(WORK_DIR))
+        except ValueError:
+            rel_json = str(sidecar_json)
+
     return {
         "analysis_id": source_id or path.stem,
         "video_id": vid or "",
@@ -69,6 +77,8 @@ def build_frontmatter(path: Path, by_vid: dict[str, dict], body: str) -> dict:
         "canonical_url": canon,
         "series": "geo-strategy",
         "episode": episode,
+        "memo_format_version": 1,
+        "analysis_json_path": rel_json,
         "chapter_candidates": [],
         "appendix_candidates": [],
         "themes": [],

@@ -131,6 +131,19 @@ entries:
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/WRITING-THE-BOOK-AND-DEATH.md"
     added_at: 2026-03-15
     notes: "Essay: the most interesting activity is writing the book; we need not fear death or seek eternal life; the good is in the doing. Making-with, LLM-using; purpose = memory; put down the blade so more of that activity can happen."
+  - id: LIB-0149
+    title: "Predictive History"
+    author: "Jiang"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["predictive_history", "work_jiang", "geo_strategy", "philosophy", "civilization_memory", "IR"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/work-jiang/BOOK-ARCHITECTURE.md"
+    added_at: 2026-03-23
+    notes: "Multivolume book project in operator lane (one volume per lecture series); Volume 1 Geo-Strategy in progress. Working corpus under research/external/work-jiang/; this LIB row is the canonical SELF-LIBRARY index. Voice uses only what the gated pipeline merges; CIV-MEM is analytic lattice, not identity."
 
   # --- Physics/biology ---
 

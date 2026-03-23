@@ -6,6 +6,8 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 **Deliver a book and/or website** under the multivolume title **Predictive History** (one volume per lecture series) that articulates and analyzes **Jiang’s unique philosophy** — clear enough for readers to understand the system, and analytic enough to show how claims connect and where they meet the world. Current repo tranche: **Volume 1 — Geo-Strategy**.
 
+**Canonical library index:** The book is catalogued in [self-library](self-library.md) as **LIB-0149** (SELF-LIBRARY is reference-facing; the working manuscript and research corpus stay under `research/external/work-jiang/` until material is merged through the gate).
+
 **Method (operator work, not Voice knowledge until merged through the gate):**
 
 1. **Lecture transcripts** — primary text: systematic capture and close reading of his talks (e.g. channel pulls under `research/external/youtube-channels/predictive-history/`), tagged and excerpted for themes, definitions, and internal consistency.

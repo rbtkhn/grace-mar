@@ -3,6 +3,11 @@
 # Then: export REDIS_URL=redis://127.0.0.1:6379/0
 #   python3 scripts/enqueue_youtube_transcripts.py --limit 5
 #   python3 scripts/run_transcript_rq_worker.py
+#
+# GPU profile (optional): whisper.cpp / local LLM with NVIDIA runtime on Linux host.
+#   docker compose -f docker-compose.transcripts.yml --profile gpu up -d whisper-gpu
+# Requires nvidia-container-toolkit and a GPU-capable image for your workload.
+# Env reference: research/external/work-jiang/OFFLOAD-ENV.md (TRANSCRIPT_WHISPER_BACKEND, WORK_JIANG_ANALYSIS_LLM).
 version: "3.9"
 services:
   redis-transcripts:
@@ -13,5 +18,20 @@ services:
     volumes:
       - transcript-redis-data:/data
 
+  whisper-gpu:
+    profiles: ["gpu"]
+    image: nvidia/cuda:12.2.0-runtime-ubuntu22.04
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    command: ["sleep", "infinity"]
+    volumes:
+      - whisper-models:/models
+
 volumes:
   transcript-redis-data:
+  whisper-models:
