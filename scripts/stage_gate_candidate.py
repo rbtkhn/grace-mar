@@ -21,11 +21,13 @@ from __future__ import annotations
 import argparse
 import os
 import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+SCORE_SCRIPT = REPO_ROOT / "scripts" / "score_gate_candidates.py"
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
@@ -85,6 +87,7 @@ def build_block(
     channel_key: str,
     territory: str | None,
     timestamp: str,
+    proposal_class: str | None = None,
 ) -> str:
     summary_one = summary.strip().replace("\n", " ")[:500]
     if len(summary_one) > 200:
@@ -102,6 +105,8 @@ def build_block(
     ]
     if territory:
         lines.append(f"territory: {territory}")
+    if proposal_class:
+        lines.append(f"proposal_class: {proposal_class}")
     lines.extend(
         [
             "source: operator — scripts/stage_gate_candidate.py",
@@ -158,6 +163,16 @@ def main() -> int:
         help="Override channel_key (default: operator:cursor:stage-paste or operator:wap:stage-paste)",
     )
     ap.add_argument("--dry-run", action="store_true", help="Print block to stdout; do not write")
+    ap.add_argument(
+        "--proposal-class",
+        default=None,
+        help="Optional YAML proposal_class (e.g. SIMULATION_RESULT for fork simulations)",
+    )
+    ap.add_argument(
+        "--auto-score",
+        action="store_true",
+        help="After writing, run score_gate_candidates.py for this user (heuristic hints)",
+    )
     args = ap.parse_args()
 
     if args.file:
@@ -205,6 +220,7 @@ def main() -> int:
         channel_key=channel_key,
         territory=territory,
         timestamp=ts,
+        proposal_class=args.proposal_class,
     )
 
     if args.dry_run:
@@ -220,6 +236,13 @@ def main() -> int:
 
     gate_path.write_text(new_full, encoding="utf-8")
     print(f"{gate_path}: inserted {cid}")
+    if args.auto_score and SCORE_SCRIPT.is_file():
+        subprocess.run(
+            [sys.executable, str(SCORE_SCRIPT), "-u", args.user],
+            check=False,
+        )
+    elif args.auto_score:
+        print(f"Missing {SCORE_SCRIPT}, skipping --auto-score", file=sys.stderr)
     return 0
 
 

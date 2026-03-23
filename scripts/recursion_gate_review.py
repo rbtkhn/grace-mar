@@ -501,6 +501,7 @@ def filter_review_candidates(
     risk_tier: str = "",
     territory: str = "",
     signal_type: str = "",
+    proposal_class_substr: str = "",
 ) -> list[dict]:
     out = rows
     if status:
@@ -510,6 +511,14 @@ def filter_review_candidates(
     if signal_type:
         st = signal_type.strip().lower()
         out = [row for row in out if (row.get("signal_type") or "").strip().lower() == st]
+    if proposal_class_substr:
+        pcs = proposal_class_substr.strip().lower()
+        out = [
+            row
+            for row in out
+            if pcs
+            in f"{row.get('proposal_class_raw') or ''} {row.get('proposal_class') or ''}".lower()
+        ]
     if territory and territory != "all":
         territory = normalize_territory_cli(territory)
         if territory == "companion":

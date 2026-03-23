@@ -434,6 +434,11 @@ def _compute_fork_checksum() -> tuple[bool, str]:
     return True, checksum_lines[-1].strip()
 
 
+def _is_meta_infra_candidate(candidate: dict) -> bool:
+    """META_INFRA: infrastructure proposal — no SELF/EVIDENCE/prompt merge."""
+    return (_yaml_get(candidate.get("block", ""), "proposal_class") or "").strip().upper() == "META_INFRA"
+
+
 def _validate_candidate_before_merge(candidate: dict, min_evidence_tier: int) -> tuple[bool, str]:
     block = candidate.get("block", "")
     summary = (candidate.get("summary") or "").strip()
@@ -968,6 +973,14 @@ def main() -> None:
         raise SystemExit(f"checksum pre-merge failed: {pre_checksum}")
 
     for c in approved:
+        if _is_meta_infra_candidate(c):
+            blocks_to_move.append(c["full_match"])
+            applied_candidates.append((c, "META-INFRA", "META-INFRA"))
+            print(
+                f"[META_INFRA] {c['id']}: moving to Processed without SELF/EVIDENCE/prompt merge — "
+                "apply infra patch manually (see docs/meta-class-proposals.md)."
+            )
+            continue
         candidate_ok, candidate_reason = _validate_candidate_before_merge(c, min_tier)
         if not candidate_ok:
             _emit_validation_failure(c["id"], candidate_reason, args.approved_by.strip())
@@ -1081,7 +1094,10 @@ def main() -> None:
         after_ok, after_checksum = _compute_fork_checksum()
         if not after_ok:
             raise RuntimeError(f"checksum post-merge failed: {after_checksum}")
-        if pre_checksum == after_checksum:
+        all_meta = applied_candidates and all(
+            _is_meta_infra_candidate(c) for c, _act, _ix in applied_candidates
+        )
+        if pre_checksum == after_checksum and not all_meta:
             raise RuntimeError("checksum unchanged after merge; expected state change")
 
         for c, act_id, _ix in applied_candidates:

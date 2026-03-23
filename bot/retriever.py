@@ -14,7 +14,17 @@ import re
 from pathlib import Path
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
-PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
+
+
+def _resolve_profile_dir() -> Path:
+    """Default: repo users/<USER_ID>. Override: absolute path via GRACE_MAR_PROFILE_DIR (git snapshot / simulation)."""
+    override = os.getenv("GRACE_MAR_PROFILE_DIR", "").strip()
+    if override:
+        return Path(override).expanduser().resolve()
+    return Path(__file__).resolve().parent.parent / "users" / USER_ID
+
+
+PROFILE_DIR = _resolve_profile_dir()
 SELF_PATH = PROFILE_DIR / "self.md"
 SKILLS_PATHS = [
     PROFILE_DIR / "skills.md",
@@ -118,7 +128,11 @@ def load_record_chunks() -> list[tuple[str, str]]:
             _chunks_inv = _build_inverted_index(_chunks_cache)
         return _chunks_cache
 
-    disk_ok = os.getenv("GRACE_MAR_RETRIEVER_DISK_CACHE", "1") != "0"
+    # Snapshot dirs: default disk cache off unless explicitly enabled (avoid writing under materialized trees).
+    if os.getenv("GRACE_MAR_PROFILE_DIR", "").strip():
+        disk_ok = os.getenv("GRACE_MAR_RETRIEVER_DISK_CACHE", "0") != "0"
+    else:
+        disk_ok = os.getenv("GRACE_MAR_RETRIEVER_DISK_CACHE", "1") != "0"
     if disk_ok and DISK_CACHE_PATH.exists():
         try:
             payload = pickle.loads(DISK_CACHE_PATH.read_bytes())

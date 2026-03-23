@@ -279,7 +279,12 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
 
     Returns a single string suitable for pasting into any LLM.
     """
-    profile_dir = REPO_ROOT / "users" / user_id
+    override = os.getenv("GRACE_MAR_PROFILE_DIR", "").strip()
+    profile_dir = (
+        Path(override).expanduser().resolve()
+        if override
+        else REPO_ROOT / "users" / user_id
+    )
     self_content = _read(profile_dir / "self.md")
     evidence_content = _read(profile_dir / "self-evidence.md")
 

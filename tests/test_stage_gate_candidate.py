@@ -54,3 +54,18 @@ def test_build_block_work_politics_territory():
 def test_insert_raises_without_processed():
     with pytest.raises(ValueError, match="## Processed"):
         insert_before_processed("no marker", "x")
+
+
+def test_build_block_proposal_class():
+    b = build_block(
+        candidate_id="CANDIDATE-0001",
+        title="t",
+        summary="sum",
+        body="line",
+        mind_category="knowledge",
+        channel_key="operator:cursor:stage-paste",
+        territory=None,
+        timestamp="2026-01-01 12:00:00",
+        proposal_class="SIMULATION_RESULT",
+    )
+    assert "proposal_class: SIMULATION_RESULT" in b
