@@ -6,6 +6,20 @@
 
 ---
 
+## 0. Editable companion-self from this repo (multi-root + `template_diff`)
+
+1. **Clone or submodule** the template into **`companion-self/`** at the root of this repository (sibling to `bot/`, `docs/`, etc.):
+   - **Clone (simplest):** `git clone https://github.com/rbtkhn/companion-self.git companion-self`
+   - **Submodule (tracked pin):** remove `/companion-self/` from `.gitignore` if present, then  
+     `git submodule add https://github.com/rbtkhn/companion-self.git companion-self`  
+     and commit the submodule metadata.
+2. **Open the multi-root workspace** in Cursor / VS Code: **File → Open Workspace from File…** → choose **`grace-mar.code-workspace`**. You get two roots: **grace-mar** (`.`) and **companion-self** (`./companion-self`).
+3. **Template diff default path:** `python scripts/template_diff.py` uses **`./companion-self`** (under the grace-mar repo root). Override with `--companion-self /path` or **`GRACE_MAR_COMPANION_SELF`**. If `companion-self/` is missing and clone is enabled, the script still clones into that path (same as before).
+
+The default clone-on-miss behavior targets **`./companion-self`** instead of `/tmp/companion-self`, so edits and diffs stay inside your tree when you use the workspace file.
+
+---
+
 ## 1. Template sync surfaces (safe to sync)
 
 Use the live template repo's manifest and upgrade docs as the source of truth. Grace-mar keeps local copies or instance-specific equivalents where useful, but not every template path must exist verbatim in the instance. **When companion-self adds or renames files, update this section and the audit.**

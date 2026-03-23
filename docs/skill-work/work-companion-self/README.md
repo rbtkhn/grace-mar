@@ -26,7 +26,7 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 |------------|---------|
 | **This README** | Objective, purpose, and principles. |
 | **[roadmap.md](roadmap.md)** | Phased roadmap: read/audit → suggest → stage PRs → (future) autonomous within bounds. |
-| **[audit-report.md](audit-report.md)** | Latest template diff (grace-mar paths). Run: `python scripts/template_diff.py -o docs/skill-work/work-companion-self/audit-report.md` |
+| **[audit-report.md](audit-report.md)** | Latest template diff (grace-mar paths). Run: `python scripts/template_diff.py -o docs/skill-work/work-companion-self/audit-report.md` (default template path: `./companion-self`; see [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md) §0) |
 | **[audit-report-manifest.md](audit-report-manifest.md)** | Latest template diff (companion-self manifest paths). Run: `python scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
 
 ---

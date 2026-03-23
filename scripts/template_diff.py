@@ -11,17 +11,27 @@ paths from companion-self template-manifest.json (companion-self canonical paths
 Usage:
     python scripts/template_diff.py
     python scripts/template_diff.py --companion-self /path/to/companion-self
+    GRACE_MAR_COMPANION_SELF=/path/to/repo python scripts/template_diff.py
     python scripts/template_diff.py --instance /path/to/grace-mar --brief
     python scripts/template_diff.py --use-manifest -o audit-report.md
 """
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def _default_companion_self_root() -> Path:
+    """Prefer GRACE_MAR_COMPANION_SELF, else repo-local companion-self/ (see docs/merging-from-companion-self.md §0)."""
+    env = os.environ.get("GRACE_MAR_COMPANION_SELF", "").strip()
+    if env:
+        return Path(env).expanduser().resolve()
+    return REPO_ROOT / "companion-self"
 
 # Grace-mar MERGING-FROM-COMPANION-SELF §1 (instance expects these paths)
 TEMPLATE_FILES_GRACE_MAR = [
@@ -138,8 +148,11 @@ def main() -> None:
         "--companion-self",
         "-c",
         type=Path,
-        default=Path("/tmp/companion-self"),
-        help="Path to companion-self repo (cloned if missing)",
+        default=None,
+        help=(
+            "Path to companion-self repo (cloned if missing unless --no-clone). "
+            "Default: $GRACE_MAR_COMPANION_SELF or ./companion-self under grace-mar root."
+        ),
     )
     parser.add_argument("--instance", "-i", type=Path, default=REPO_ROOT, help="Path to grace-mar (instance) repo")
     parser.add_argument("--clone", action="store_true", default=True, help="Clone companion-self if missing (default: True)")
@@ -149,7 +162,7 @@ def main() -> None:
     parser.add_argument("--output", "-o", type=Path, help="Write report to file")
     args = parser.parse_args()
 
-    cs_root = args.companion_self
+    cs_root = args.companion_self if args.companion_self is not None else _default_companion_self_root()
     if args.clone and not cs_root.exists():
         cs_root = _ensure_companion_self(cs_root)
     elif not cs_root.exists():

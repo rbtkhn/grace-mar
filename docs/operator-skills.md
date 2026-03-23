@@ -31,7 +31,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 ## Suggested daily pattern
 
-1. Start with `daily-warmup` when opening a new work block or a new agent thread. On **“good morning”**, the agent also pulls **Polymarket** (KY-04 primary + GE party) and checks for **independent** public horserace polls per [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md).
+1. Start with `daily-warmup` when opening a new work block or a new agent thread. On **“good morning”**, the agent also pulls **Polymarket** (KY-04 primary + GE party) and checks for **independent** public horserace polls per [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md). **Cadence:** Monday = full routine; Tue–Fri = lighter; Sunday ≈ 10 min week-ahead (FEC, registration, brief registry); Friday adds a two-line post-mortem — see `.cursor/skills/daily-warmup/SKILL.md` § Cadence by weekday.
 2. Run `wap-pulse` when the day includes campaign work, brief prep, or X/content operations.
 3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
 4. Use `weekly-brief-run` for the actual work-politics brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.

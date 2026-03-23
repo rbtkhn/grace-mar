@@ -20,6 +20,10 @@ Pods/
 .env.local
 .env.*.local
 
+# Local companion-self checkout for multi-root workspace (grace-mar.code-workspace).
+# Remove this line if you use `git submodule add … companion-self` and want it tracked.
+/companion-self/
+
 # IDE
 .idea/
 .vscode/
