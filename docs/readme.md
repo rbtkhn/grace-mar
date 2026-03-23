@@ -16,6 +16,7 @@
 | **Web app** | [WEB-APP-PLAN](web-app-plan.md) | Grace-mar.com development plan; phases, tech, dependencies. See [DESIGN-ROADMAP](design-roadmap.md) for related features. |
 | **Intent schema** | [INTENT-TEMPLATE](intent-template.md) | Machine-readable goal hierarchy, trade-offs, and escalation rules. |
 | **Session/development handoff** | [DEVELOPMENT-HANDOFF](development-handoff.md) | Latest engineering state and restart checklist for new agent conversations. |
+| **work-jiang session bootstrap** | [WORK-JIANG-BOOTSTRAP](../bootstrap/work-jiang-bootstrap.md) | New agent thread on Jiang research lane: read order, membrane, verify block, warmup when Record/gate touched. |
 | **Lanes (north stars + weekly rhythm)** | [lanes/README](lanes/README.md), [WEEKLY-RHYTHM](lanes/WEEKLY-RHYTHM.md) | One screen per lane (Record, WPC, civ-mem, operator); single weekly checklist. |
 | **Library ↔ system** | [LIBRARY-INTEGRATION](library-integration.md) | Lookup order (library → CMC → full), scope/priority, shelves, operator script. |
 | **Civ-mem encyclopedia (hybrid)** | [civ-mem-encyclopedia-hybrid](civ-mem-encyclopedia-hybrid.md) | Fat `ENCYCLOPEDIA.md` + regen; **owned essays** [civilization-memory/README](civilization-memory/README.md). |

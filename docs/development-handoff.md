@@ -2,7 +2,7 @@
 
 Use this file to resume development quickly in a new agent conversation.
 
-**Bootstrap:** `bootstrap/grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`.
+**Bootstrap:** `bootstrap/grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`. **work-jiang (Jiang book/site lane):** `bootstrap/work-jiang-bootstrap.md` — read order, membrane, verify block, skill link.
 
 Last updated: 2026-03
 

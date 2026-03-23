@@ -38,6 +38,8 @@ Normative rules for this tree — **canonical here**; do not restate long policy
 
 **Session:** If a thread edits `users/grace-mar/` (SELF, gate, pipeline) or merges narrative into companion-facing Record files, run `python3 scripts/harness_warmup.py -u grace-mar` once and paste the output in that thread.
 
+**New agent thread:** [bootstrap/work-jiang-bootstrap.md](../../bootstrap/work-jiang-bootstrap.md) — paste-in checklist, read order, verify block reference.
+
 ## Production pipeline (book / site)
 
 From repo root (requires `pyyaml`, e.g. `pip install -r requirements-dev.txt`):
