@@ -68,6 +68,7 @@ Record each merge from template so you can see when grace-mar was last updated a
 
 | Date | Companion-self (commit or tag) | Paths updated |
 |------|---------------------------------|---------------|
+| 2026-03-23 | *(pending)* | **Grace-mar:** [work-companion-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](skill-work/work-companion-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md) — operator checklist + proposed template body for companion-self PR (`users/_template/self-library.md` governance + empty `entries`). **Upstream PR not merged yet.** |
 | *(no recorded baseline yet)* | — | Before claiming full alignment, record the companion-self commit/tag or `template-version.json` value used for the sync |
 
 ---

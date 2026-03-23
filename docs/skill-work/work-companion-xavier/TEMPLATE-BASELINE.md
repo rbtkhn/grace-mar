@@ -6,6 +6,6 @@
 |-------|--------|
 | **Scaffold date** | 2026-03-23 |
 | **Source** | In-repo [users/_template/README.md](../../../users/_template/README.md) + [canonical-paths.md](../../../canonical-paths.md) |
-| **companion-self git** | Update this row when you clone [companion-self](https://github.com/rbtkhn/companion-self) at a specific tag/SHA for template parity |
+| **companion-self git** | **Pending** — after [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md) PR merges, pin **`main` @ &lt;SHA&gt;** here. |
 
-**Note:** Land **SELF-LIBRARY** governance merge into companion-self (`users/_template/self-library.md`) upstream when ready; this subtree’s `self-library.md` should stay **aligned** with that package (no grace-mar rows).
+**Note:** Land **SELF-LIBRARY** template alignment per [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md); this subtree’s `self-library.md` stays **aligned** with that package (no grace-mar LIB rows).

@@ -9,6 +9,7 @@
 | [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) | Pinned template / scaffold source |
 | [LANES.md](LANES.md) | WORK (client) vs Record (fork) vs library |
 | [TERMS-XAVIER.md](TERMS-XAVIER.md) | Short glossary |
+| [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md) | Upstream PR: template `self-library.md` governance + empty `entries` (rec. 4) |
 | [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md) | Operator checklist after MCQ |
 | [GOOD-MORNING.md](GOOD-MORNING.md) | Session 0 prerequisite + rhythm |
 | **Subtree** [companion-xavier/README.md](companion-xavier/README.md) | Xavier tree root |
