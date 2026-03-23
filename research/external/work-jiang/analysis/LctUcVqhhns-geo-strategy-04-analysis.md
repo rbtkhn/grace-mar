@@ -1,3 +1,17 @@
+---
+analysis_id: geo-04
+video_id: LctUcVqhhns
+source_id: geo-04
+canonical_url: https://www.youtube.com/watch?v=LctUcVqhhns
+series: geo-strategy
+episode: 4
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran
 
 - **video_id:** `LctUcVqhhns`

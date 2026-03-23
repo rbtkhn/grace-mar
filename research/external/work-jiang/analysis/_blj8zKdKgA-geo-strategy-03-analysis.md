@@ -1,3 +1,17 @@
+---
+analysis_id: geo-03
+video_id: _blj8zKdKgA
+source_id: geo-03
+canonical_url: https://www.youtube.com/watch?v=_blj8zKdKgA
+series: geo-strategy
+episode: 3
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #3: How Empire Is Destroying America
 
 - **video_id:** `_blj8zKdKgA`

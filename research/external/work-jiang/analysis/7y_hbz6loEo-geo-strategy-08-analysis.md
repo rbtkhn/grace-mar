@@ -1,3 +1,17 @@
+---
+analysis_id: geo-08
+video_id: 7y_hbz6loEo
+source_id: geo-08
+canonical_url: https://www.youtube.com/watch?v=7y_hbz6loEo
+series: geo-strategy
+episode: 8
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #8: The Iran Trap
 
 - **video_id:** `7y_hbz6loEo`

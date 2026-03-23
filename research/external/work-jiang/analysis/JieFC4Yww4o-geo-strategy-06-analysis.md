@@ -1,3 +1,17 @@
+---
+analysis_id: geo-06
+video_id: JieFC4Yww4o
+source_id: geo-06
+canonical_url: https://www.youtube.com/watch?v=JieFC4Yww4o
+series: geo-strategy
+episode: 6
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #6: America's Imperial Hubris
 
 - **video_id:** `JieFC4Yww4o`

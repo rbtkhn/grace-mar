@@ -12,7 +12,7 @@ For each video you care about, you want **three layers** on disk (names are conv
 |-------|---------|------------------|
 | **Raw caption pull** | Machine transcript + provenance header | `research/external/youtube-channels/predictive-history/transcripts/` (often **gitignored**; see channel README) |
 | **Curated lecture file** | Human-readable archive: metadata, “at a glance,” optional full ASR, **canonical YouTube URL** | `research/external/work-jiang/lectures/<slug>.md` |
-| **Analysis memo** | Structured read: claims, tags, lattice crosswalk, tensions, dependencies | `research/external/work-jiang/analysis/<video_id>-<short-slug>.md` (or append sections in one rolling doc — pick one pattern and keep it) |
+| **Analysis memo** | Structured read: claims, tags, lattice crosswalk, tensions, dependencies | `research/external/work-jiang/analysis/<video_id>-<short-slug>.md` (or append sections in one rolling doc — pick one pattern and keep it). Prefer **YAML front matter** (`chapter_candidates`, `source_id`, …) via `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` after `build_source_registry.py` so book/site metadata stays machine-readable. |
 
 Keeping **raw** and **curated** separate avoids mixing YouTube caption noise with your editorial summary.
 

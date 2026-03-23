@@ -4,5 +4,5 @@ Operator-curated **source transcripts** and notes that inform **`docs/skill-work
 
 | Kind | Path |
 |------|------|
-| Transcripts (ASR) | [transcripts/](transcripts/) — e.g. [McKinsey / agent commerce / agent-readable stack](transcripts/mckinsey-trillion-agent-sales-agent-readable-asr.txt) |
+| Transcripts (ASR) | [transcripts/](transcripts/) — e.g. [McKinsey / agent commerce](transcripts/mckinsey-trillion-agent-sales-agent-readable-asr.txt); [Karpathy / No Priors — memo](transcripts/karpathy-end-of-coding-no-priors-agents-autoresearch.md) + [full ASR](transcripts/karpathy-end-of-coding-no-priors-agents-transcript.txt) |
 | Derived insights | [../../docs/skill-work/work-dev/](../../docs/skill-work/work-dev/) — `research-*.md` |

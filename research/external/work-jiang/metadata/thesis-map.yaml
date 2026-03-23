@@ -1,0 +1,21 @@
+# Sub-theses and evidence hooks. Render: python scripts/work_jiang/render_thesis_map.py
+
+thesis:
+  master_claim: "Jiang’s philosophy is best understood as a civilizational theory of formation, legitimacy, and strategic action."
+  subclaims:
+    - id: t01
+      claim: "Education and narrative formation are constitutive, not secondary."
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []
+    - id: t02
+      claim: "Religious imagination and empire remain structurally linked in modern power."
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []
+    - id: t03
+      claim: "Jiang’s framework generates testable historical and predictive claims."
+      support_sources: []
+      support_analysis: []
+      vulnerabilities:
+        - "Needs explicit scorecard support"

@@ -39,7 +39,7 @@ Use this file when you want one place to understand:
 | `economic-benchmarks.md` | Metrics and instrumentation reality |
 | `../../openclaw-integration.md` | Full integration guide and architecture-level contract |
 | `research-moonshots-237.md` | Research notes and ecosystem framing |
-| `research-no-priors-karpathy-end-of-coding.md` | No Priors / Karpathy — agents, claws, auto-research; links to work-jiang transcript + work-dev takeaways |
+| `research-no-priors-karpathy-end-of-coding.md` | No Priors / Karpathy — agents, claws, auto-research; links to work-dev transcripts + work-dev takeaways |
 | `research-agent-readable-writable-commerce.md` | McKinsey / agent commerce / readable-writable stack; transcript under `research/external/work-dev/transcripts/` |
 | `offers.md` | Business-layer offers and commercial framing |
 | `target-registry.md` | Buyer segments for the business layer |

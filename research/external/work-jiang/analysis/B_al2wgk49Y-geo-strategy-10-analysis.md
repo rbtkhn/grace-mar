@@ -1,3 +1,17 @@
+---
+analysis_id: geo-10
+video_id: B_al2wgk49Y
+source_id: geo-10
+canonical_url: https://www.youtube.com/watch?v=B_al2wgk49Y
+series: geo-strategy
+episode: 10
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #10: Putin's Strategic Imagination
 
 - **video_id:** `B_al2wgk49Y`

@@ -1,3 +1,17 @@
+---
+analysis_id: geo-05
+video_id: exRK-85630k
+source_id: geo-05
+canonical_url: https://www.youtube.com/watch?v=exRK-85630k
+series: geo-strategy
+episode: 5
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)
 
 - **video_id:** `exRK-85630k`

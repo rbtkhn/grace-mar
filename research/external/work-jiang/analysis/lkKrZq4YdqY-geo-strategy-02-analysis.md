@@ -1,3 +1,17 @@
+---
+analysis_id: geo-02
+video_id: lkKrZq4YdqY
+source_id: geo-02
+canonical_url: https://www.youtube.com/watch?v=lkKrZq4YdqY
+series: geo-strategy
+episode: 2
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #2: Christian Zionism and the Middle East Conflict
 
 - **video_id:** `lkKrZq4YdqY`

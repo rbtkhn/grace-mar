@@ -1,0 +1,16 @@
+# Map book chapters (and appendix buckets) to source_id values from sources.yaml.
+# Run: python scripts/work_jiang/build_source_registry.py
+
+chapter_map:
+  ch01:
+    source_ids: [geo-01, geo-02, geo-03]
+  ch02:
+    source_ids: [geo-04, geo-05, geo-06]
+  ch03:
+    source_ids: [geo-07, geo-08, geo-09, geo-10, geo-11, geo-12]
+
+appendix_map:
+  predictions:
+    source_ids: [geo-01, geo-05, geo-07, geo-08, geo-11, geo-12]
+  divergences:
+    source_ids: []

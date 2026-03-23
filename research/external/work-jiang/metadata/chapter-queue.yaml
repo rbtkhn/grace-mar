@@ -1,0 +1,26 @@
+chapter_queue:
+  - chapter_id: ch01
+    title: "What Jiang’s philosophy is"
+    status: ready_for_outline
+    blocking_items:
+      - "Close analysis gap for geo-01"
+      - "Lock thesis sentence in thesis-map.yaml"
+    next_action: "Draft chapter outline"
+    owner: operator
+    sprint: "2026-W13"
+
+  - chapter_id: ch02
+    title: "Civilization, education, and historical agency"
+    status: research_ready
+    blocking_items: []
+    next_action: "Assemble excerpts and argument spine"
+    owner: operator
+    sprint: "2026-W14"
+
+  - chapter_id: ch03
+    title: "Empire, religion, and strategic imagination"
+    status: research_ready
+    blocking_items: []
+    next_action: "Assemble excerpts and argument spine"
+    owner: operator
+    sprint: "2026-W14"

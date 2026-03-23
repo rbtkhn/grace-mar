@@ -1,3 +1,17 @@
+---
+analysis_id: geo-09
+video_id: AEPSUC-UQ5k
+source_id: geo-09
+canonical_url: https://www.youtube.com/watch?v=AEPSUC-UQ5k
+series: geo-strategy
+episode: 9
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #9: Putin's War for the Soul of Russia
 
 - **video_id:** `AEPSUC-UQ5k`

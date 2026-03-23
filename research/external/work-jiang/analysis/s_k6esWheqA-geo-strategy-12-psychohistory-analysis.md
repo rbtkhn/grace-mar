@@ -1,3 +1,17 @@
+---
+analysis_id: geo-12
+video_id: s_k6esWheqA
+source_id: geo-12
+canonical_url: https://www.youtube.com/watch?v=s_k6esWheqA
+series: geo-strategy
+episode: 12
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)
 
 - **video_id:** `s_k6esWheqA`

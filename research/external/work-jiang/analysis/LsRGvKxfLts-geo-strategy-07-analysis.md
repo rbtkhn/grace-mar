@@ -1,3 +1,17 @@
+---
+analysis_id: geo-07
+video_id: LsRGvKxfLts
+source_id: geo-07
+canonical_url: https://www.youtube.com/watch?v=LsRGvKxfLts
+series: geo-strategy
+episode: 7
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?
 
 - **video_id:** `LsRGvKxfLts`

@@ -1,3 +1,17 @@
+---
+analysis_id: geo-11
+video_id: Go1bMQKnJBQ
+source_id: geo-11
+canonical_url: https://www.youtube.com/watch?v=Go1bMQKnJBQ
+series: geo-strategy
+episode: 11
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
 # Analysis — Geo-Strategy #11: The Second American Civil War
 
 - **video_id:** `Go1bMQKnJBQ`

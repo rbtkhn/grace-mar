@@ -41,7 +41,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **[safety-story-ux.md](safety-story-ux.md)** | **Safety story** as product: visible pending/approved, receipts, staged vs merged — audit continuity as primary comfort, not admin trivia. |
 | **[external-signals.md](external-signals.md)** | Moonshots / GTC–class discourse → **work-dev** lens (OpenClaw, enterprise trust, inference economics, portability); links shared [external-tech-scan](../work-strategy/external-tech-scan.md). |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |
-| **[research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md)** | No Priors / Karpathy — agents, claws, auto-research, “end of coding”; transcript in [work-jiang research](../../../research/external/work-jiang/lectures/); work-dev alignment table + guardrails. |
+| **[research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md)** | No Priors / Karpathy — agents, claws, auto-research, “end of coding”; transcript in [work-dev transcripts](../../../research/external/work-dev/transcripts/); work-dev alignment table + guardrails. |
 | **[research-agent-readable-writable-commerce.md](research-agent-readable-writable-commerce.md)** | McKinsey / agent commerce / “agent readable & writable” stack; transcript in [work-dev research](../../../research/external/work-dev/transcripts/); positioning + guardrails. |
 | **[offers.md](offers.md)** | First-pass business-layer offers and commercial framing. |
 | **[target-registry.md](target-registry.md)** | Buyer segments for the future company path. |

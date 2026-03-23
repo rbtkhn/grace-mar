@@ -2,8 +2,8 @@
 
 **Source:** The End of Coding: Andrej Karpathy on Agents, AutoResearch, and the Loopy Era of AI — **No Priors** (podcast / YouTube).  
 **Guest:** Andrej Karpathy  
-**Transcript (operator ASR, full text):** [karpathy-end-of-coding-no-priors-agents-transcript.txt](../../../research/external/work-jiang/lectures/karpathy-end-of-coding-no-priors-agents-transcript.txt)  
-**Memo (summary + tags):** [karpathy-end-of-coding-no-priors-agents-autoresearch.md](../../../research/external/work-jiang/lectures/karpathy-end-of-coding-no-priors-agents-autoresearch.md)  
+**Transcript (operator ASR, full text):** [karpathy-end-of-coding-no-priors-agents-transcript.txt](../../../research/external/work-dev/transcripts/karpathy-end-of-coding-no-priors-agents-transcript.txt)  
+**Memo (summary + tags):** [karpathy-end-of-coding-no-priors-agents-autoresearch.md](../../../research/external/work-dev/transcripts/karpathy-end-of-coding-no-priors-agents-autoresearch.md)  
 
 **Ingested for:** `work-dev` — integration vocabulary, OpenClaw-class positioning, reliability/evals framing, **not** product requirements.
 

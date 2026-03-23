@@ -1,0 +1,169 @@
+sources:
+- source_id: geo-01
+  video_id: xEEpOxqdU5E
+  title: 'Geo-Strategy #1: Iran’s Strategy Matrix'
+  canonical_url: https://www.youtube.com/watch?v=xEEpOxqdU5E
+  lecture_path: lectures/geo-strategy-01-iran-strategy-matrix-2024-04-24.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 1
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: complete
+- source_id: geo-02
+  video_id: lkKrZq4YdqY
+  title: 'Geo-Strategy #2: Christian Zionism and the Middle East Conflict'
+  canonical_url: https://www.youtube.com/watch?v=lkKrZq4YdqY
+  lecture_path: lectures/geo-strategy-02-christian-zionism-middle-east-conflict.md
+  analysis_path: analysis/lkKrZq4YdqY-geo-strategy-02-analysis.md
+  series: geo-strategy
+  episode: 2
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-03
+  video_id: _blj8zKdKgA
+  title: 'Geo-Strategy #3: How Empire Is Destroying America'
+  canonical_url: https://www.youtube.com/watch?v=_blj8zKdKgA
+  lecture_path: lectures/geo-strategy-03-how-empire-is-destroying-america.md
+  analysis_path: analysis/_blj8zKdKgA-geo-strategy-03-analysis.md
+  series: geo-strategy
+  episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-04
+  video_id: LctUcVqhhns
+  title: 'Geo-Strategy #4: Saudi Arabia’s Trump Card Against Iran'
+  canonical_url: https://www.youtube.com/watch?v=LctUcVqhhns
+  lecture_path: lectures/geo-strategy-04-saudi-arabia-trump-card-against-iran.md
+  analysis_path: analysis/LctUcVqhhns-geo-strategy-04-analysis.md
+  series: geo-strategy
+  episode: 4
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-05
+  video_id: exRK-85630k
+  title: 'Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)'
+  canonical_url: https://www.youtube.com/watch?v=exRK-85630k
+  lecture_path: lectures/geo-strategy-05-why-trump-will-win-nikki-haley-vp.md
+  analysis_path: analysis/exRK-85630k-geo-strategy-05-analysis.md
+  series: geo-strategy
+  episode: 5
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-06
+  video_id: JieFC4Yww4o
+  title: 'Geo-Strategy #6: America''s Imperial Hubris'
+  canonical_url: https://www.youtube.com/watch?v=JieFC4Yww4o
+  lecture_path: lectures/geo-strategy-06-americas-imperial-hubris.md
+  analysis_path: analysis/JieFC4Yww4o-geo-strategy-06-analysis.md
+  series: geo-strategy
+  episode: 6
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-07
+  video_id: LsRGvKxfLts
+  title: 'Geo-Strategy #7: Who Killed Iranian President Ebrahim Raisi?'
+  canonical_url: https://www.youtube.com/watch?v=LsRGvKxfLts
+  lecture_path: lectures/geo-strategy-07-who-killed-iranian-president-ebrahim-raisi.md
+  analysis_path: analysis/LsRGvKxfLts-geo-strategy-07-analysis.md
+  series: geo-strategy
+  episode: 7
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-08
+  video_id: 7y_hbz6loEo
+  title: 'Geo-Strategy #8: The Iran Trap'
+  canonical_url: https://www.youtube.com/watch?v=7y_hbz6loEo
+  lecture_path: lectures/geo-strategy-08-the-iran-trap.md
+  analysis_path: analysis/7y_hbz6loEo-geo-strategy-08-analysis.md
+  series: geo-strategy
+  episode: 8
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-09
+  video_id: AEPSUC-UQ5k
+  title: 'Geo-Strategy #9: Putin''s War for the Soul of Russia'
+  canonical_url: https://www.youtube.com/watch?v=AEPSUC-UQ5k
+  lecture_path: lectures/geo-strategy-09-putins-war-for-the-soul-of-russia.md
+  analysis_path: analysis/AEPSUC-UQ5k-geo-strategy-09-analysis.md
+  series: geo-strategy
+  episode: 9
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-10
+  video_id: B_al2wgk49Y
+  title: 'Geo-Strategy #10: Putin''s Strategic Imagination'
+  canonical_url: https://www.youtube.com/watch?v=B_al2wgk49Y
+  lecture_path: lectures/geo-strategy-10-putins-strategic-imagination.md
+  analysis_path: analysis/B_al2wgk49Y-geo-strategy-10-analysis.md
+  series: geo-strategy
+  episode: 10
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-11
+  video_id: Go1bMQKnJBQ
+  title: 'Geo-Strategy #11: The Second American Civil War'
+  canonical_url: https://www.youtube.com/watch?v=Go1bMQKnJBQ
+  lecture_path: lectures/geo-strategy-11-the-second-american-civil-war.md
+  analysis_path: analysis/Go1bMQKnJBQ-geo-strategy-11-analysis.md
+  series: geo-strategy
+  episode: 11
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: geo-12
+  video_id: s_k6esWheqA
+  title: 'Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)'
+  canonical_url: https://www.youtube.com/watch?v=s_k6esWheqA
+  lecture_path: lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md
+  analysis_path: analysis/s_k6esWheqA-geo-strategy-12-psychohistory-analysis.md
+  series: geo-strategy
+  episode: 12
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
