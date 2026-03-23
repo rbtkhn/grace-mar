@@ -60,16 +60,24 @@ If this template ships an **example corpus** for operators (e.g. public-domain s
 
 ---
 
+## PR status (2026-03-23)
+
+**Opened:** branch [`template-self-library-governance`](https://github.com/rbtkhn/companion-self/tree/template-self-library-governance) — tip **`288b4386684e076df894536624308e69305ae229`**. Create PR: https://github.com/rbtkhn/companion-self/compare/main...template-self-library-governance  
+
+**Upstream changes in that branch:** minimal `users/_template/self-library.md`; legacy LIB rows moved to `docs/self-library-example-corpus-grace-mar-derived.md`; `template-manifest.json` + `how-instances-consume-upgrades.md` updated.
+
+**After merge to `main`:** update [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) with merge SHA; refresh this section.
+
+---
+
 ## PR checklist (operator)
 
 | Step | Action |
 |------|--------|
-| 1 | Clone companion-self: `git clone https://github.com/rbtkhn/companion-self.git` (or open existing `companion-self/` root from [MERGING-FROM-COMPANION-SELF](../../../merging-from-companion-self.md) §0). |
-| 2 | Branch: e.g. `template-self-library-governance`. |
-| 3 | Apply proposed body above; relocate legacy LIB bulk per **Proposed direction**. |
-| 4 | Open PR on **rbtkhn/companion-self**; description: link this file + [boundary-self-knowledge-self-library.md](../../../boundary-self-knowledge-self-library.md) (grace-mar). |
-| 5 | After merge, note **commit SHA** in [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) and [MERGING-FROM-COMPANION-SELF §3](../../../merging-from-companion-self.md) sync log. |
-| 6 | Re-diff **grace-mar** `docs/skill-work/work-companion-xavier/companion-xavier/users/xavier/self-library.md` — should stay **wording-aligned** with template (no grace-mar LIB rows). |
+| 1 | ~~Clone / branch~~ — **Done** (see PR status above). |
+| 2 | Open the GitHub PR from `template-self-library-governance` → `main`; review. |
+| 3 | After merge, note **merge commit SHA** in [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) and [MERGING-FROM-COMPANION-SELF §3](../../../merging-from-companion-self.md) sync log. |
+| 4 | Re-diff **grace-mar** `docs/skill-work/work-companion-xavier/companion-xavier/users/xavier/self-library.md` — keep **wording-aligned** with merged template (no grace-mar LIB rows). |
 
 ---
 
