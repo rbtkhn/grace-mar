@@ -166,6 +166,7 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("zinsky", "Zelenskyy"),
     # Zoroastrianism (geo-15, -16)
     ("Zorashinism", "Zoroastrianism"),
+    ("Zorashianism", "Zoroastrianism"),
     ("Zorastronism", "Zoroastrianism"),
     # messianic (geo-15, -17)
     ("misinic", "messianic"),
@@ -257,13 +258,16 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("udeimmonia", "eudaimonia"),
     ("Youmonia", "eudaimonia"),
     ("ulmonia", "eudaimonia"),
-    # Monotheism (SH01, SH02)
+    # Monotheism / monotheistic (SH01, SH02, SH05)
+    ("montheistic", "monotheistic"),
     ("montheism", "monotheism"),
     ("monetism", "monotheism"),
     # Polytheistic / monotheistic — ASR "polyphasic"/"monophasic" are real words,
-    # so use phrase context
+    # so use phrase context; "polyphysic"/"politistic" are not real words
     ("three great monophasic religions", "three great monotheistic religions"),
     ("the polyphasic system", "the polytheistic system"),
+    ("polyphysic", "polytheistic"),
+    ("politistic", "polytheistic"),
     # Gnosticism (SH04)
     ("Nostism", "Gnosticism"),
     # Synchronicity (SH04)
@@ -281,6 +285,47 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("elite overp production", "elite overproduction"),
     # Petty bourgeoisie (SH02)
     ("petty boujo", "petty bourgeoisie"),
+    # Rumsfeld (SH06) — supplement existing "Donald russfield" entries
+    ("Rumsfield", "Rumsfeld"),
+    # Martin Seligman (SH06)
+    ("Martin Sigloman", "Martin Seligman"),
+    # Sidney Gottlieb (SH06)
+    ("Sydney Gobble", "Sidney Gottlieb"),
+    ("Sime Gobbley", "Sidney Gottlieb"),
+    # Abu Ghraib (SH06)
+    ("Abu Grabi", "Abu Ghraib"),
+    # Guantánamo Bay (SH06)
+    ("Guanton Bay", "Guantánamo Bay"),
+    # Harappan (SH06)
+    ("Harapen", "Harappan"),
+    # Mesopotamia (SH06)
+    ("Mesoptitania", "Mesopotamia"),
+    ("Mesopotitania", "Mesopotamia"),
+    # Apophis — Egyptian serpent (SH06); "Opus" skipped (real word)
+    ("Opthus", "Apophis"),
+    ("Oythus", "Apophis"),
+    # Jane Mayer (SH06)
+    ("Jay Mir", "Jane Mayer"),
+    # Dissenters (SH07)
+    ("denters", "dissenters"),
+    # Johns Hopkins (SH07) — missing 's'
+    ("John Hopkins", "Johns Hopkins"),
+    # Richard Feynman (SH07)
+    ("Richard Feman", "Richard Feynman"),
+    # Gini coefficient (SH07)
+    ("genie coefficient", "Gini coefficient"),
+    # James B. Conant (SH07)
+    ("James B. Conit", "James B. Conant"),
+    # Pulitzer Prize (SH07)
+    ("politer prize", "Pulitzer Prize"),
+    # Tim Geithner (SH07)
+    ("Tim Gner", "Tim Geithner"),
+    # Ivy League (SH07) — "Ivory" ASR error
+    ("Ivory League", "Ivy League"),
+    # utilitarian (SH07)
+    ("utarian", "utilitarian"),
+    # soulless (SH07)
+    ("soless", "soulless"),
     # Generic ASR glitches (SH01–04)
     ("moratorum", "moratorium"),
     ("healthare", "healthcare"),
