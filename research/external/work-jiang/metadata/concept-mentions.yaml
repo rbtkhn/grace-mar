@@ -12,6 +12,13 @@ generated_from:
 - lectures/geo-strategy-11-the-second-american-civil-war.md
 - lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md
 - lectures/geo-strategy-13-us-iran-war-incoming.md
+- lectures/geo-strategy-14-wwiii-begins-lets-game-theory.md
+- lectures/geo-strategy-15-the-messianic-calling.md
+- lectures/geo-strategy-16-newtons-divine-plan.md
+- lectures/geo-strategy-17-the-universal-law-of-game-theory.md
+- lectures/geo-strategy-18-is-putin-the-ubermensch.md
+- lectures/geo-strategy-19-when-eschatologies-converge.md
+- lectures/geo-strategy-20-why-the-west-is-doomed.md
 - analysis/7y_hbz6loEo-geo-strategy-08-analysis.md
 - analysis/AEPSUC-UQ5k-geo-strategy-09-analysis.md
 - analysis/B_al2wgk49Y-geo-strategy-10-analysis.md
@@ -24,12 +31,13 @@ generated_from:
 - analysis/exRK-85630k-geo-strategy-05-analysis.md
 - analysis/lkKrZq4YdqY-geo-strategy-02-analysis.md
 - analysis/s_k6esWheqA-geo-strategy-12-psychohistory-analysis.md
+- analysis/xEEpOxqdU5E-geo-strategy-01-analysis.md
 concepts:
 - concept_id: civ-formation
-  total_mentions_estimated: 25
+  total_mentions_estimated: 32
   by_phrase:
     civilizational formation: 0
-    formation: 25
+    formation: 32
     civilization formation: 0
 - concept_id: strategic-imagination
   total_mentions_estimated: 14
@@ -37,22 +45,22 @@ concepts:
     strategic imagination: 7
     great-power imagination: 0
 - concept_id: asymmetrical-warfare
-  total_mentions_estimated: 13
+  total_mentions_estimated: 19
   by_phrase:
-    asymmetrical warfare: 8
+    asymmetrical warfare: 10
     asymmetric warfare: 0
-    asymmetry: 5
+    asymmetry: 9
 - concept_id: christian-zionism
-  total_mentions_estimated: 70
+  total_mentions_estimated: 139
   by_phrase:
-    Christian Zionism: 22
-    dispensational: 26
+    Christian Zionism: 53
+    dispensational: 33
 - concept_id: empire-order
-  total_mentions_estimated: 238
+  total_mentions_estimated: 375
   by_phrase:
-    empire: 209
-    imperial: 22
-    Pax Americana: 5
+    empire: 340
+    imperial: 25
+    Pax Americana: 8
     empire defense: 2
 - concept_id: financialization-empire
   total_mentions_estimated: 23
@@ -60,37 +68,37 @@ concepts:
     financialization: 11
     dollar system: 1
 - concept_id: saudi-iran-axis
-  total_mentions_estimated: 176
+  total_mentions_estimated: 181
   by_phrase:
     Saudi Arabia vs Iran: 0
-    Saudi: 161
-    Gulf: 11
+    Saudi: 165
+    Gulf: 12
     axis of resistance: 4
 - concept_id: electoral-coalition
-  total_mentions_estimated: 45
+  total_mentions_estimated: 46
   by_phrase:
     electoral coalition: 0
     Trump coalition: 0
     VP pick: 0
-    Haley: 45
+    Haley: 46
 - concept_id: empire-hubris
-  total_mentions_estimated: 62
+  total_mentions_estimated: 65
   by_phrase:
     imperial hubris: 6
-    hubris: 46
+    hubris: 47
     shock and awe: 6
-    Millennium Challenge: 4
+    Millennium Challenge: 6
 - concept_id: iran-strategy-matrix
-  total_mentions_estimated: 14
+  total_mentions_estimated: 18
   by_phrase:
-    Iran strategy matrix: 3
-    strategy matrix: 7
+    Iran strategy matrix: 4
+    strategy matrix: 10
     four goals: 4
 - concept_id: operation-true-promise
-  total_mentions_estimated: 9
+  total_mentions_estimated: 15
   by_phrase:
-    Operation True Promise: 3
-    True Promise: 6
+    Operation True Promise: 6
+    True Promise: 9
     April 2024 strikes: 0
 - concept_id: raisi-scenario
   total_mentions_estimated: 45
@@ -100,138 +108,138 @@ concepts:
     IRGC: 26
     helicopter crash: 1
 - concept_id: iran-trap
-  total_mentions_estimated: 6
+  total_mentions_estimated: 11
   by_phrase:
     Iran trap: 3
     invasion scenario: 0
-    regime change: 3
+    regime change: 8
 - concept_id: putinism-soul
-  total_mentions_estimated: 202
+  total_mentions_estimated: 282
   by_phrase:
     Putinism and the soul of Russia: 0
-    Putin: 178
+    Putin: 258
     consumerism: 21
     soul of Russia: 3
 - concept_id: stalin-game-theory
-  total_mentions_estimated: 58
+  total_mentions_estimated: 113
   by_phrase:
     Stalin and game theory: 0
-    game theory: 24
-    Stalin: 34
+    game theory: 52
+    Stalin: 61
     strategic patience: 0
 - concept_id: second-civil-war
-  total_mentions_estimated: 58
+  total_mentions_estimated: 73
   by_phrase:
-    Second American Civil War: 4
-    civil war: 46
+    Second American Civil War: 6
+    civil war: 59
     domestic conflict: 0
     polarization: 8
 - concept_id: psychohistory-metaphor
-  total_mentions_estimated: 26
+  total_mentions_estimated: 28
   by_phrase:
-    psychohistory: 13
-    Psychohistory: 13
+    psychohistory: 14
+    Psychohistory: 14
     supervised learning: 0
     forecasting AI: 0
 - concept_id: education-narrative
-  total_mentions_estimated: 38
+  total_mentions_estimated: 52
   by_phrase:
     education and narrative: 0
-    education: 5
+    education: 6
     narrative formation: 0
-    school: 33
+    school: 46
 - concept_id: religious-legitimacy
-  total_mentions_estimated: 12
+  total_mentions_estimated: 13
   by_phrase:
     religious legitimacy: 0
     theology: 5
-    sacred: 4
+    sacred: 5
     dispensational premillennialism: 3
 - concept_id: middle-east-alliance
-  total_mentions_estimated: 160
+  total_mentions_estimated: 165
   by_phrase:
     Middle East alliances: 0
     Israel Lobby: 21
-    allies: 16
-    Saudi Arabia: 123
+    allies: 18
+    Saudi Arabia: 126
 untracked_high_frequency_tokens:
 - token: okay
-  count: 2678
+  count: 2878
 - token: right
-  count: 681
+  count: 734
 - token: it's
-  count: 404
-- token: people
-  count: 391
+  count: 566
 - token: that's
-  count: 383
+  count: 517
+- token: people
+  count: 516
 - token: does
-  count: 379
-- token: sense
-  count: 280
-- token: want
-  count: 266
+  count: 406
 - token: world
-  count: 238
+  count: 393
+- token: want
+  count: 352
 - token: first
-  count: 230
-- token: united
-  count: 227
-- token: states
-  count: 215
-- token: military
-  count: 187
-- token: there's
-  count: 183
-- token: going
-  count: 183
-- token: know
-  count: 181
-- token: thing
-  count: 178
-- token: china
-  count: 174
-- token: think
-  count: 166
-- token: don't
-  count: 164
+  count: 322
 - token: really
-  count: 159
-- token: against
-  count: 155
-- token: guys
-  count: 155
+  count: 286
+- token: sense
+  count: 283
+- token: going
+  count: 279
+- token: united
+  count: 267
+- token: states
+  count: 259
+- token: know
+  count: 240
+- token: there's
+  count: 236
+- token: thing
+  count: 222
+- token: don't
+  count: 220
+- token: military
+  count: 216
+- token: china
+  count: 216
 - token: they're
-  count: 152
-- token: understand
-  count: 148
-- token: problem
-  count: 147
-- token: you're
-  count: 142
-- token: question
-  count: 135
+  count: 214
+- token: against
+  count: 210
+- token: think
+  count: 209
 - token: three
-  count: 135
-- token: money
-  count: 132
-- token: country
-  count: 130
-- token: idea
-  count: 129
-- token: much
-  count: 128
-- token: reason
-  count: 126
-- token: actually
-  count: 125
+  count: 208
+- token: understand
+  count: 196
 - token: time
-  count: 117
+  count: 184
+- token: much
+  count: 169
+- token: you're
+  count: 169
+- token: question
+  count: 166
+- token: problem
+  count: 162
+- token: guys
+  count: 156
+- token: what's
+  count: 154
 - token: believe
-  count: 112
+  count: 153
+- token: actually
+  count: 153
+- token: idea
+  count: 151
+- token: let's
+  count: 149
+- token: reason
+  count: 147
+- token: he's
+  count: 145
 - token: ukraine
-  count: 112
-- token: society
-  count: 112
-- token: basically
-  count: 111
+  count: 144
+- token: money
+  count: 140

@@ -61,7 +61,7 @@ book:
       prediction_ids: [jiang-GS01-001, jiang-GS01-002, jiang-GS01-003]
       divergence_ids: []
       applications: []
-      status: ready_for_outline
+      status: analysis_complete
       owner: operator
       sprint: "2026-W13"
       blocking:

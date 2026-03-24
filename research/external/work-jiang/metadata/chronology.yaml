@@ -85,3 +85,32 @@ periods:
       - ch02
       - ch03
     notes: "Closing arc foregrounds imagination, polarization, and long-range prediction."
+
+  - period_id: p-geo-resume-extension
+    label: "Secret History extension and comparative continuation"
+    source_ids:
+      - geo-13
+      - geo-14
+      - geo-15
+      - geo-16
+      - geo-17
+      - geo-18
+      - geo-19
+      - geo-20
+    dominant_concepts:
+      - empire-order
+      - strategic-imagination
+      - civ-formation
+    dominant_claims:
+      - clm-0009
+      - clm-0018
+      - clm-0020
+    shifts:
+      - "Extends from geopolitics toward longer historical and civilizational scaffolding."
+    continuities:
+      - "Narrative formation and strategic framing remain central across the added sources."
+    tensions:
+      - "High abstraction and broad synthesis can outrun source-specific evidence density."
+    chapter_ids:
+      - ch03
+    notes: "Bridge period to keep chronology coverage complete as new geo sources are ingested."

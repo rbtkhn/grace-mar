@@ -47,7 +47,7 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Kind:** exposition
 - **Priority:** high
 - **Target words:** 2800
-- **Status:** ready_for_outline
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W13
 - **Blocking:** Close analysis gap for geo-01

@@ -4,7 +4,7 @@ Production order and blockers for the Jiang book/site lane.
 
 ## ch01 — Geo-Strategy #1: Iran’s Strategy Matrix
 
-- **Status:** ready_for_outline
+- **Status:** analysis_complete
 - **Owner:** operator
 - **Sprint:** 2026-W13
 
