@@ -116,6 +116,57 @@ def test_normalize_civ_new_proper_names() -> None:
         assert n >= 1, f"{raw!r} should have at least 1 substitution"
 
 
+def test_normalize_secret_history_common_tier() -> None:
+    """Secret History audit 2026-03-24: common-tier replacements for SH01-04."""
+    cases = [
+        ("Emmanuel Kant", "Immanuel Kant"),
+        ("Oswalt Spangler", "Oswald Spengler"),
+        ("Thomas Pikid Pikid", "Thomas Piketty"),
+        ("Heggo", "Hegel"),
+        ("Hego", "Hegel"),
+        ("Frederick Hegel", "Friedrich Hegel"),
+        ("Dantain", "Dante"),
+        ("Leonitis", "Leonidas"),
+        ("Thermopily", "Thermopylae"),
+        ("phoenetians", "Phoenicians"),
+        ("constant genians", "Carthaginians"),
+        ("Dianesis", "Dionysus"),
+        ("Edypus", "Oedipus"),
+        ("the nomena", "the noumena"),
+        ("udeimmonia", "eudaimonia"),
+        ("montheism", "monotheism"),
+        ("Nostism", "Gnosticism"),
+        ("synchronosity", "synchronicity"),
+        ("metocratic", "meritocratic"),
+        ("Euphania", "euthanasia"),
+        ("Euthan Asia", "euthanasia"),
+        ("moratorum", "moratorium"),
+        ("rebellous", "rebellious"),
+        ("fraction reserve", "fractional reserve"),
+        ("diads", "dyads"),
+        ("elite overp production", "elite overproduction"),
+        ("petty boujo", "petty bourgeoisie"),
+    ]
+    for raw, expected in cases:
+        out, n = normalize_transcript_text(raw, series=None)
+        assert expected in out, f"{raw!r} → expected {expected!r}, got {out!r}"
+        assert n >= 1, f"{raw!r} should have at least 1 substitution"
+
+
+def test_normalize_secret_history_no_false_positives() -> None:
+    """Real words that resemble SH garbles must not be replaced."""
+    safe = [
+        "The polyphasic sleep schedule is efficient.",
+        "A monophasic approach requires one long sleep.",
+        "The nomad crossed the desert.",
+        "She found the gist of the argument.",
+    ]
+    for text in safe:
+        out, n = normalize_transcript_text(text, series=None)
+        assert out == text, f"False positive: {text!r} → {out!r}"
+        assert n == 0
+
+
 def test_normalize_geo_does_not_apply_thieves_to_thebes(tmp_path: Path) -> None:
     """Geo uses common tier only — 'thieves' is not bulk-replaced."""
     p = tmp_path / "geo-strategy-99-test.md"

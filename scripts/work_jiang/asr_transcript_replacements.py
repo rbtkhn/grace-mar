@@ -220,6 +220,75 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("exclusion dominance", "escalation dominance"),
     ("possible deniability", "plausible deniability"),
     ("esquetology", "eschatology"),
+    # --- Secret History audit 2026-03-24 (common tier: safe for all series) ---
+    # Immanuel Kant (SH01, SH04)
+    ("Emmanuel Kant", "Immanuel Kant"),
+    ("Emanuel Kant", "Immanuel Kant"),
+    # Oswald Spengler (SH02)
+    ("Oswalt Spangler", "Oswald Spengler"),
+    ("Oswald Spangler", "Oswald Spengler"),
+    # Thomas Piketty (SH02)
+    ("Thomas Pikid Pikid", "Thomas Piketty"),
+    ("Pikody", "Piketty"),
+    # Hegel (SH04)
+    ("Frederick Hegel", "Friedrich Hegel"),
+    ("Heggo", "Hegel"),
+    ("Hego", "Hegel"),
+    # Dante (SH04)
+    ("Dantain", "Dante"),
+    # Leonidas (SH04)
+    ("Leonitis", "Leonidas"),
+    # Thermopylae (SH04)
+    ("Thermopily", "Thermopylae"),
+    # Phoenicians (SH04)
+    ("phoenetians", "Phoenicians"),
+    ("Infineticians", "Phoenicians"),
+    # Carthaginians (SH04)
+    ("constant genians", "Carthaginians"),
+    # Calhoun (SH02)
+    ("Cahoun", "Calhoun"),
+    # Dionysus (SH01)
+    ("Dianesis", "Dionysus"),
+    # Oedipus (SH01)
+    ("Edypus", "Oedipus"),
+    # Noumena (SH01) — "nomina" skipped (valid Latin word)
+    ("the nomena", "the noumena"),
+    # Eudaimonia (SH01) — "udonia" in civ tier; these longer forms safe for common
+    ("udeimmonia", "eudaimonia"),
+    ("Youmonia", "eudaimonia"),
+    ("ulmonia", "eudaimonia"),
+    # Monotheism (SH01, SH02)
+    ("montheism", "monotheism"),
+    ("monetism", "monotheism"),
+    # Polytheistic / monotheistic — ASR "polyphasic"/"monophasic" are real words,
+    # so use phrase context
+    ("three great monophasic religions", "three great monotheistic religions"),
+    ("the polyphasic system", "the polytheistic system"),
+    # Gnosticism (SH04)
+    ("Nostism", "Gnosticism"),
+    # Synchronicity (SH04)
+    ("synchronosity", "synchronicity"),
+    # Meritocratic (SH02)
+    ("metocratic", "meritocratic"),
+    # Euthanasia (SH03)
+    ("Euphania", "euthanasia"),
+    ("Euthan Asia", "euthanasia"),
+    ("insunasia", "euthanasia"),
+    ("insunia", "euthanasia"),
+    # Dianne Feinstein (SH03)
+    ("Dian Feinstein", "Dianne Feinstein"),
+    # Elite overproduction (SH02)
+    ("elite overp production", "elite overproduction"),
+    # Petty bourgeoisie (SH02)
+    ("petty boujo", "petty bourgeoisie"),
+    # Generic ASR glitches (SH01–04)
+    ("moratorum", "moratorium"),
+    ("healthare", "healthcare"),
+    ("rebellous", "rebellious"),
+    ("fraction reserve", "fractional reserve"),
+    ("Azteex", "Aztecs"),
+    ("diads", "dyads"),
+    ("analyical model", "analytical model"),
 ]
 
 # Greek / ancient history strand only — run when filename matches civilization-*.md

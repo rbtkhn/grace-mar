@@ -9,11 +9,15 @@
 1. [Scope](#1-scope-kickoff--edit-when-you-start-a-pass)
 2. [Preconditions](#2-preconditions-check-before-auditing)
 3. [Targeted verification](#3-targeted-verification-what-to-actually-check)
-4. [Findings log](#4-findings-log-append-rows) — 177 rows, 20 episodes, 2026-03-24
+4. [Findings log — Geo-Strategy](#4-findings-log-append-rows) — 177 rows, 20 episodes, 2026-03-24
    - [Highest-impact patterns](#highest-impact-patterns)
    - [Candidate recurring replacements](#candidate-recurring-replacements)
-5. [Commands reference](#5-commands-reference)
-6. [Related](#related)
+5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — 62 substitutions, 4 verbatim episodes, 2026-03-24
+   - [Secret History highest-impact patterns](#secret-history-highest-impact-patterns)
+   - [Secret History candidate replacements](#secret-history-candidate-replacements)
+   - [Secret History scope limitation](#secret-history-scope-limitation)
+6. [Commands reference](#6-commands-reference)
+7. [Related](#related)
 
 ---
 
@@ -21,11 +25,13 @@
 
 | Field | Your choice |
 |-------|-------------|
-| **Series** | `geo-strategy` |
+| **Series** | `geo-strategy`, `secret-history` |
 | **Depth** | **B** — all in-scope episodes, targeted signals only |
 | **Session / date** | 2026-03-24 |
 
-**First pass complete:** Geo-Strategy, depth B, 20 episodes (geo-strategy-01 through -20).
+**Passes complete:**
+- Geo-Strategy, depth B, 20 episodes (geo-strategy-01 through -20).
+- Secret History, depth B, 4 verbatim episodes (secret-history-01 through -04); SH05-28 contain analytical summaries, not verbatim ASR text.
 
 ---
 
@@ -271,7 +277,77 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 ---
 
-## 5. Commands reference
+## 5. Findings log — Secret History (Volume III)
+
+**Date:** 2026-03-24 | **Scope:** secret-history-01 through -04 (verbatim `## Full transcript`) | **Depth:** B | **Normalization applied:** 62 substitutions via `normalize_lecture_transcript_asr.py --write`
+
+**Scope limitation:** Only SH01-04 have verbatim ASR-derived `## Full transcript` sections. SH05-28 contain operator-written analytical lecture-arc summaries — no ASR text to audit. Raw YouTube captions for all 28 episodes were blocked by 429 rate limits (error stubs only). If verbatim transcripts are populated for SH05-28 in future, re-run this pipeline.
+
+| Date | Lecture file | Signal type | Before (short) | After / fix | Verified how |
+|------|--------------|-------------|------------------|-------------|--------------|
+| 2026-03-24 | secret-history-01 | Proper name | "Emmanuel Kant" / "Emanuel K" | Immanuel Kant | Known philosopher; ASR garbles first name |
+| 2026-03-24 | secret-history-01 | Domain vocab | "the nomina" / "the nomena" | the noumena | Kantian philosophy; ASR phonetic collapse |
+| 2026-03-24 | secret-history-01 | Domain vocab | "the polyphasic system" | the polytheistic system | Context: religious systems comparison |
+| 2026-03-24 | secret-history-01 | Domain vocab | "three great monophasic religions" | three great monotheistic religions | Context: Abrahamic religions |
+| 2026-03-24 | secret-history-01 | Domain vocab | "montheism" / "monetism" (×4) | monotheism | Recurring across SH01-02 |
+| 2026-03-24 | secret-history-01 | Proper name | "Dianesis" | Dionysus | Greek god |
+| 2026-03-24 | secret-history-01 | Proper name | "Edypus" | Oedipus | Greek mythological figure |
+| 2026-03-24 | secret-history-01 | Foreign term | "udeimmonia" / "Youmonia" / "ulmonia" | eudaimonia | Greek philosophical term; 3 garbled forms |
+| 2026-03-24 | secret-history-01 | Domain vocab | "analyical model" (×3) | analytical model | Recurring garble |
+| 2026-03-24 | secret-history-01 | Domain vocab | "fraction reserve" | fractional reserve | Banking/economics term |
+| 2026-03-24 | secret-history-01 | Proper name | "Azteex" | Aztecs | Civilization name |
+| 2026-03-24 | secret-history-02 | Proper name | "Thomas Pikid Pikid" / "Pikody" | Thomas Piketty | Economist |
+| 2026-03-24 | secret-history-02 | Proper name | "Oswalt Spangler" / "Oswald Spangler" | Oswald Spengler | Historian; surname garbled |
+| 2026-03-24 | secret-history-02 | Domain vocab | "metocratic" | meritocratic | Political term |
+| 2026-03-24 | secret-history-02 | Domain vocab | "elite overp production" | elite overproduction | Turchin's concept |
+| 2026-03-24 | secret-history-02 | Foreign term | "petty boujo" | petty bourgeoisie | French term garbled |
+| 2026-03-24 | secret-history-02 | Proper name | "Cahoun" | Calhoun | John B. Calhoun; rat utopia |
+| 2026-03-24 | secret-history-03 | Proper name | "Dian Feinstein" | Dianne Feinstein | US Senator |
+| 2026-03-24 | secret-history-03 | Domain vocab | "Euphania" / "Euthan Asia" / "insunasia" / "insunia" (×5+) | euthanasia | Classic ASR error; many garbled forms |
+| 2026-03-24 | secret-history-03 | Domain vocab | "moratorum" | moratorium | Policy term |
+| 2026-03-24 | secret-history-03 | Domain vocab | "healthare" | healthcare | Typo-class garble |
+| 2026-03-24 | secret-history-03 | Domain vocab | "rebellous" | rebellious | Adjective garble |
+| 2026-03-24 | secret-history-04 | Proper name | "phoenetians" / "Infineticians" | Phoenicians | Ancient people; 2 garbled forms |
+| 2026-03-24 | secret-history-04 | Proper name | "constant genians" | Carthaginians | Ancient people |
+| 2026-03-24 | secret-history-04 | Proper name | "Leonitis" (×2) | Leonidas | Spartan king |
+| 2026-03-24 | secret-history-04 | Proper name | "Heggo" / "Hego" | Hegel | Philosopher |
+| 2026-03-24 | secret-history-04 | Proper name | "Frederick Hegel" | Friedrich Hegel | First name garbled |
+| 2026-03-24 | secret-history-04 | Proper name | "Dantain" | Dante | Poet/philosopher |
+| 2026-03-24 | secret-history-04 | Place name | "Thermopily" | Thermopylae | Battle site |
+| 2026-03-24 | secret-history-04 | Domain vocab | "Nostism" | Gnosticism | Religious/philosophical movement |
+| 2026-03-24 | secret-history-04 | Domain vocab | "synchronosity" (×3) | synchronicity | Jungian term |
+| 2026-03-24 | secret-history-04 | Domain vocab | "diads" | dyads | Philosophical pairs |
+
+### Secret History highest-impact patterns
+
+- **Philosophical vocabulary** (~40% of findings): noumena, eudaimonia, Gnosticism, synchronicity, monotheism, polytheistic — ASR struggles with Greek/Latin philosophical terms.
+- **Proper names** (~35%): Kant, Spengler, Piketty, Hegel, Dante, Leonidas, Phoenicians, Carthaginians — similar to geo-strategy and civilization patterns.
+- **Medical/policy terms** (~15%): euthanasia (5+ garbled forms in SH03 alone), moratorium, healthcare.
+- **SH04 densest:** 24 substitutions — heavy philosophical and ancient Greek content.
+- **SH01 second densest:** 16 substitutions — Kant, eudaimonia, monotheism cluster.
+
+### Secret History candidate replacements
+
+All 62 substitutions implemented via 53 new entries added to `COMMON_REPLACEMENTS` in `asr_transcript_replacements.py` (common tier, safe for all series). No secret-history-specific tier created — the volume of verbatim text (4 lectures) does not justify a dedicated tier.
+
+**Not automated (too risky for string replacement):**
+
+| Term | ASR form(s) | Why skipped |
+|------|------------|-------------|
+| monad | "nomad", "Mona", "Monet", "Monach" | Real English words; would cause false positives |
+| Geist | "gist", "guys" | Real English words |
+| nous | "news" | Real English word |
+| Kant | "Kai" | Real name |
+| Dante | "Donna", "Donnie" | Real names |
+| divine sun | "divine son" | Both are valid phrases; context-dependent |
+
+### Secret History scope limitation
+
+SH05-28 `## Full transcript` sections contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text. These summaries do not carry ASR artifacts and cannot be audited with the raw-vs-curated diff method. If verbatim transcripts are populated for SH05-28 from raw YouTube captions in future, the full pipeline can be re-run.
+
+---
+
+## 6. Commands reference
 
 ```bash
 # Tests

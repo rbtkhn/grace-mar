@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "pipeline_version": "1.0.0",
-  "last_run_utc": "2026-03-24T16:59:38Z",
+  "last_run_utc": "2026-03-24T17:28:30Z",
   "videos": {
     "HIoYQBbBllk": {
       "content_hash": "9b0c7e55b6d96a9492415fbe5876f3083c0a759c64c01d30cfe7269f0e60a591",
@@ -402,6 +402,134 @@
       "status": "skipped_existing",
       "error": null,
       "last_updated_utc": "2026-03-24T16:59:38Z"
+    },
+    "ZPrecJHUOUs": {
+      "content_hash": "e4652fe03b919ce8db66054893516558be5d84aac74c16c61cf6a30564a1a493",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T17:22:27Z"
+    },
+    "WFWizN3QoPg": {
+      "content_hash": "56c09a6db88d065a189e93fb61fa0c20f4db2ff17724c2a9fc1827962237876d",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T17:22:39Z"
+    },
+    "lt8XLz78ZvY": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:26:28Z"
+    },
+    "K-_l9jBGo74": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:26:37Z"
+    },
+    "0g3yo1DjiLM": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:26:47Z"
+    },
+    "BtlWoqWLm9Q": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:26:56Z"
+    },
+    "EgGfQdv_rPc": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:27:05Z"
+    },
+    "6PdfD44DkqA": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:27:14Z"
+    },
+    "JU_8fJjtGxA": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:27:23Z"
+    },
+    "hk_yhi3-prw": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:27:35Z"
+    },
+    "9MURGjjG4aA": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:27:44Z"
+    },
+    "ihh1fdW4-cA": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:27:53Z"
+    },
+    "LvHsg5qtDs8": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:28:03Z"
+    },
+    "VtnRA-GNKM8": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:28:12Z"
+    },
+    "FJF8oD_5c_w": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:28:21Z"
+    },
+    "JpTI2gFYWrU": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-24T17:28:30Z"
     }
   }
 }
