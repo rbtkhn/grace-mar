@@ -14,3 +14,22 @@ Jiang has resumed the Geo-Strategy lecture series. Geo-Strategy #12 was previous
 3. Add rows to `metadata/sources.yaml` (geo-13, geo-14, …) with `video_id`, `lecture_path`, etc.
 4. Ingest lectures per [WORKFLOW-transcripts.md](WORKFLOW-transcripts.md)
 5. Decide volume placement (Volume I extended vs. new appendix / Volume Ia)
+
+## 2026-03-24 — Volume III naming
+
+Volume Three title set by operator: **Secret History**.
+
+**Next setup steps:**
+1. Define the lecture corpus boundary for Volume III (`sources.yaml` series key + lecture filename convention).
+2. Add a Volume III method note (Part I chapter discipline and Part II evaluation mode).
+3. Decide whether Volume III uses prediction adjudication, divergence, or a separate Part II method.
+
+## 2026-03-24 — Volume IV and V naming
+
+Volume Four title set by operator: **Game Theory**.  
+Volume Five title set by operator: **Great Books**.
+
+**Next setup steps:**
+1. Define lecture corpus boundaries for Volumes IV and V (`sources.yaml` series keys + lecture filename conventions).
+2. Add method notes for each volume (Part I chapter discipline and Part II evaluation mode).
+3. Decide chapter-end box type per volume (prediction, divergence, or a dedicated box template).

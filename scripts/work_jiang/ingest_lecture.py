@@ -46,6 +46,8 @@ def _series_prefix(series: str) -> str:
     s = series.lower().replace("_", "-")
     if s in ("civilization", "civ"):
         return "civilization"
+    if s in ("secret-history", "secret", "sh"):
+        return "secret-history"
     if s in ("geo-strategy", "geo"):
         return "geo-strategy"
     raise ValueError(series)
@@ -111,6 +113,9 @@ def _build_markdown(
     if series_prefix == "civilization":
         series_label = "Civilization"
         series_md = f"**Series:** {series_label} **#{episode}**"
+    elif series_prefix == "secret-history":
+        series_label = "Secret History"
+        series_md = f"**Series:** {series_label} **#{episode}**"
     else:
         series_label = "Geo-Strategy"
         if episode == 12:
@@ -163,7 +168,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "series",
-        help="civilization|civ|geo-strategy|geo",
+        help="civilization|civ|secret-history|secret|sh|geo-strategy|geo",
     )
     parser.add_argument("episode", type=int, help="Episode number (1–99+)")
     parser.add_argument(
@@ -225,7 +230,12 @@ def main() -> int:
         parser.error("Provide --file, --fetch, or pipe transcript on stdin")
 
     sprefix = _series_prefix(args.series)
-    lookup_series = "civilization" if sprefix == "civilization" else "geo-strategy"
+    if sprefix == "civilization":
+        lookup_series = "civilization"
+    elif sprefix == "secret-history":
+        lookup_series = "secret-history"
+    else:
+        lookup_series = "geo-strategy"
     row = lookup_series_episode(lookup_series, args.episode, index_path=args.index)
     if not row:
         print(

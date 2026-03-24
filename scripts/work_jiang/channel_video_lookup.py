@@ -19,6 +19,8 @@ DEFAULT_INDEX = (
 
 # Civilization #22: ... (ASCII or fullwidth colon; optional END, BONUS, etc.)
 CIV_EP_RE = re.compile(r"^Civilization\s*#(\d+)\s*[:：]\s*", re.I)
+# Secret History #3: ... (ASCII or fullwidth colon)
+SH_EP_RE = re.compile(r"^Secret\s+History\s*#(\d+)\s*[:：]\s*", re.I)
 # Geo-Strategy #N: — not "Geo-Strategy Update"
 GEO_EP_RE = re.compile(r"^Geo-Strategy\s*#\s*(\d+)\s*[:：]\s*", re.I)
 # Channel index uses "Geo-Strategy END:" for the finale (book line = #12).
@@ -69,6 +71,18 @@ def lookup_civilization(episode: int, *, index_path: Path | None = None) -> tupl
     return _pick_best_duplicate(candidates)
 
 
+def lookup_secret_history(episode: int, *, index_path: Path | None = None) -> tuple[str, str] | None:
+    """Return (video_id, youtube_title) for Secret History #episode, or None."""
+    candidates: list[tuple[str, str]] = []
+    for vid, title in parse_channel_index_rows(index_path):
+        m = SH_EP_RE.match(title)
+        if m and int(m.group(1)) == episode:
+            candidates.append((vid, title))
+    if not candidates:
+        return None
+    return _pick_best_duplicate(candidates)
+
+
 def lookup_geo_strategy(episode: int, *, index_path: Path | None = None) -> tuple[str, str] | None:
     """Return (video_id, youtube_title) for Geo-Strategy #episode (not Update series), or None."""
     candidates: list[tuple[str, str]] = []
@@ -91,14 +105,18 @@ def lookup_series_episode(
     series: str, episode: int, *, index_path: Path | None = None
 ) -> tuple[str, str] | None:
     """
-    series: 'civilization' | 'civ' | 'geo-strategy' | 'geo'
+    series: 'civilization'|'civ'|'secret-history'|'sh'|'geo-strategy'|'geo'
     """
     s = series.lower().replace("_", "-")
     if s in ("civilization", "civ"):
         return lookup_civilization(episode, index_path=index_path)
+    if s in ("secret-history", "secret", "sh"):
+        return lookup_secret_history(episode, index_path=index_path)
     if s in ("geo-strategy", "geo"):
         return lookup_geo_strategy(episode, index_path=index_path)
-    raise ValueError(f"Unknown series: {series!r} (use civilization|civ|geo-strategy|geo)")
+    raise ValueError(
+        f"Unknown series: {series!r} (use civilization|civ|secret-history|sh|geo-strategy|geo)"
+    )
 
 
 def youtube_title_to_heading(youtube_title: str, series: str, episode: int) -> str:
@@ -109,6 +127,11 @@ def youtube_title_to_heading(youtube_title: str, series: str, episode: int) -> s
         if m:
             rest = youtube_title[m.end() :].strip()
             return f"Civilization #{episode}: {rest}" if rest else f"Civilization #{episode}"
+    if s in ("secret-history", "secret", "sh"):
+        m = SH_EP_RE.match(youtube_title)
+        if m:
+            rest = youtube_title[m.end() :].strip()
+            return f"Secret History #{episode}: {rest}" if rest else f"Secret History #{episode}"
     if s in ("geo-strategy", "geo"):
         if episode == 12:
             m_end = GEO_END_RE.match(youtube_title.strip())
@@ -141,6 +164,7 @@ def youtube_title_to_slug(youtube_title: str, series: str, episode: int) -> str:
         base = trimmed
     # Remove leading "Civilization #N:" / "Geo-Strategy #N:"
     base = re.sub(r"^Civilization\s*#\d+[A-Za-z]*\s*[:：]\s*", "", base, flags=re.I)
+    base = re.sub(r"^Secret\s+History\s*#\d+\s*[:：]\s*", "", base, flags=re.I)
     base = re.sub(r"^Geo-Strategy\s*#\d+\s*\(END\)\s*[:：]\s*", "", base, flags=re.I)
     base = re.sub(r"^Geo-Strategy\s*#\d+\s*[:：]\s*", "", base, flags=re.I)
     base = base.strip()

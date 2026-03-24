@@ -57,12 +57,13 @@ The umbrella book line is **Predictive History** — **one volume per lecture se
 |--------|----------------------------------------|---------------------|----------------------------------|
 | Geo-Strategy | `geo-strategy` | `geo-01` … | `lectures/geo-strategy-NN-*.md` |
 | Civilization | `civilization` | `civ-01` … | `lectures/civilization-NN-*.md` |
+| Secret History (Vol. III) | `secret-history` | `sh-01` … | `lectures/secret-history-NN-*.md` |
 
 **Curated lecture filename & slug (canonical rules):**
 
 - **One file per episode.** The path under `lectures/` is the stable key for sorting and tooling:  
   **`lectures/<series-prefix>-<NN>-<kebab-slug>.md`**
-  - **`<series-prefix>`** — exactly `geo-strategy` or `civilization` (matches `series` in `sources.yaml`).
+  - **`<series-prefix>`** — exactly `geo-strategy`, `civilization`, or `secret-history` (matches `series` in `sources.yaml`).
   - **`<NN>`** — **two-digit** episode index (`01`–`99`), zero-padded. It **must** match the numeric **`episode`** field for that row in `metadata/sources.yaml` (e.g. `episode: 4` → `…-04-…`).
   - **`<kebab-slug>`** — lowercase words separated by **hyphens**, ASCII; short human-readable topic (may include a date fragment for geo, e.g. `2024-04-24`). It does **not** need to mirror the YouTube title character-for-character.
 - **Display title vs filename.** The first markdown **`# `** heading is the **display title** (usually aligned with the YouTube title). It may differ from `<kebab-slug>`; **`scripts/work_jiang/build_source_registry.py`** takes the title from the **first `# ` line** when rebuilding `sources.yaml`.
@@ -230,7 +231,7 @@ Before treating a memo as “done for this sprint”:
 
 | Goal | Command |
 |------|---------|
-| **Ingest one lecture** (stdin / `--file` / `--fetch`) | `python3 scripts/work_jiang/ingest_lecture.py civilization 25 --file path.txt` · `cat t.txt \| python3 scripts/work_jiang/ingest_lecture.py civ 25` · `python3 scripts/work_jiang/ingest_lecture.py geo 3 --fetch` |
+| **Ingest one lecture** (stdin / `--file` / `--fetch`) | `python3 scripts/work_jiang/ingest_lecture.py civilization 25 --file path.txt` · `cat t.txt \| python3 scripts/work_jiang/ingest_lecture.py civ 25` · `python3 scripts/work_jiang/ingest_lecture.py geo 3 --fetch` · `python3 scripts/work_jiang/ingest_lecture.py secret-history 1 --fetch` |
 | **Post-ingest refresh** (registry + backlog + dashboard) | `python3 scripts/work_jiang/refresh_after_ingest.py` (also runs at end of `ingest_lecture.py` unless `--no-refresh`) |
 | List channel videos | `python3 scripts/fetch_youtube_channel_transcripts.py --dry-run --limit 200` |
 | Pull transcripts | `python3 scripts/fetch_youtube_channel_transcripts.py --resume --output-dir research/external/youtube-channels/predictive-history` |

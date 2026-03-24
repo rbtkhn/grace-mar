@@ -4,7 +4,7 @@ Sources missing or needing analysis, ordered by priority.
 
 | source_id | series | lecture_title | analysis | civmem | psy-hist | mapped_chapters | priority_score | reason |
 |-----------|--------|---------------|----------|--------|----------|-----------------|----------------|--------|
-| geo-01 | geo-strategy | Geo-Strategy #1: Iran’s Strategy Matrix | missing | missing | missing | ch01 | 180 | blocks next chapter in queue; mapped to ch01; geo-series; analysis missing |
+| geo-01 | geo-strategy | Geo-Strategy #1: Iran’s Strategy Matrix | complete | missing | missing | ch01 | 170 | blocks next chapter in queue; mapped to ch01; geo-series |
 | geo-02 | geo-strategy | Geo-Strategy #2: Christian Zionism and t… | complete | missing | missing | ch02 | 170 | blocks next chapter in queue; mapped to ch02; geo-series |
 | geo-03 | geo-strategy | Geo-Strategy #3: How Empire Is Destroyin… | complete | missing | missing | ch03 | 170 | blocks next chapter in queue; mapped to ch03; geo-series |
 | geo-04 | geo-strategy | Geo-Strategy #4: Saudi Arabia’s Trump Ca… | complete | missing | missing | ch04 | 170 | blocks next chapter in queue; mapped to ch04; geo-series |

@@ -1,0 +1,33 @@
+# Predictive History — Volume V: Great Books
+
+**Corpus:** TBD (to be mapped in `metadata/sources.yaml`)  
+**Status:** title registered; scope definition pending.
+
+## Volume intent
+
+Volume V extends the Predictive History multivolume architecture with the working title **Great Books**. Part I should preserve lecture order and argument flow, while Part II should apply an explicit and documented evaluation method.
+
+## Setup checklist
+
+1. Define series key and corpus boundary in `metadata/sources.yaml`.
+2. Establish lecture filename pattern under `lectures/`.
+3. Declare Part I chapter mapping policy (one chapter per lecture unless exceptions are documented).
+4. Choose Part II evaluation mode:
+   - prediction adjudication, or
+   - divergence analysis, or
+   - a distinct method with criteria.
+5. Add chapter box template reference (prediction, divergence, or new box type).
+
+## Relation to other volumes
+
+| Volume | Series | Part I close |
+|--------|--------|--------------|
+| I | Geo-Strategy | Predictions |
+| II | Civilization | Divergence |
+| III | Secret History | TBD |
+| IV | Game Theory | TBD |
+| V | Great Books | TBD (set during setup) |
+
+---
+
+*Operator lane — not Voice knowledge until merged through the gate.*

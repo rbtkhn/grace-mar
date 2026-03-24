@@ -45,3 +45,15 @@ Throughout, the book returns to the same discipline: **stay close to what each s
 ## Sister volume — Civilization (Volume II)
 
 The **Civilization** lecture series is **Volume II** in the same multivolume line. Its **Part II** is **Divergence** (how claims compare to named scholarly or mainstream frames), **not** a prediction pass like Geo-Strategy Part II. Overview: [`book/VOLUME-II-CIVILIZATION.md`](book/VOLUME-II-CIVILIZATION.md); method: [`book/PART-II-CIVILIZATION-DIVERGENCE.md`](book/PART-II-CIVILIZATION-DIVERGENCE.md).
+
+## Future volume — Secret History (Volume III)
+
+**Secret History** is registered as **Volume III** in the Predictive History line. Scope, corpus boundaries, and Part II method are tracked in [`book/VOLUME-III-SECRET-HISTORY.md`](book/VOLUME-III-SECRET-HISTORY.md).
+
+## Future volume — Game Theory (Volume IV)
+
+**Game Theory** is registered as **Volume IV** in the Predictive History line. Scope, corpus boundaries, and Part II method are tracked in [`book/VOLUME-IV-GAME-THEORY.md`](book/VOLUME-IV-GAME-THEORY.md).
+
+## Future volume — Great Books (Volume V)
+
+**Great Books** is registered as **Volume V** in the Predictive History line. Scope, corpus boundaries, and Part II method are tracked in [`book/VOLUME-V-GREAT-BOOKS.md`](book/VOLUME-V-GREAT-BOOKS.md).

@@ -4,14 +4,14 @@ sources:
   title: 'Geo-Strategy #1: Iran’s Strategy Matrix'
   canonical_url: https://www.youtube.com/watch?v=xEEpOxqdU5E
   lecture_path: lectures/geo-strategy-01-iran-strategy-matrix-2024-04-24.md
-  analysis_path: null
+  analysis_path: analysis/xEEpOxqdU5E-geo-strategy-01-analysis.md
   series: geo-strategy
   episode: 1
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: geo-02
   video_id: lkKrZq4YdqY
