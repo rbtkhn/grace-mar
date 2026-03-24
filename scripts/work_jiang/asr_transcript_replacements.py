@@ -1,5 +1,9 @@
 """Phrase and token replacements for Predictive History ASR transcripts.
 
+**SSOT split:** This file is the single source of truth for *replacement content*
+(the phrase tables). *Which tiers run for which lecture series* lives in
+``asr_light_clean.py`` (e.g. civilization vs geo-strategy vs common-only).
+
 Edit this file when systematic mis-hearings show up on new ingests.
 Replacement order is applied longest-first within each tier to avoid
 partial matches (handled by the normalizer).

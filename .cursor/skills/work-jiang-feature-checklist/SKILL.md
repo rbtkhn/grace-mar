@@ -51,7 +51,7 @@ Trim the block if the task truly doesn’t touch comparative layer or upstream g
 
 ## Lecture transcript ingest (optional step)
 
-When adding or updating `lectures/*.md` with pasted ASR, run the orthography pass (dry-run first, then `--write`): `python3 scripts/work_jiang/normalize_lecture_transcript_asr.py research/external/work-jiang/lectures/<slug>.md`. Tables live in `scripts/work_jiang/asr_transcript_replacements.py`; workflow detail in `research/external/work-jiang/WORKFLOW-transcripts.md` (Phase B §5). After raw YouTube captions exist under `predictive-history/transcripts/`, optional: `python3 scripts/work_jiang/sync_verbatim_transcripts.py --write` to refresh `verbatim-transcripts/` for diffing (see `verbatim-transcripts/README.md`).
+When adding or updating `lectures/*.md` with pasted ASR, run the orthography pass (dry-run first, then `--write`): `python3 scripts/work_jiang/normalize_lecture_transcript_asr.py research/external/work-jiang/lectures/<slug>.md`. Tables live in `scripts/work_jiang/asr_transcript_replacements.py`; workflow detail in `research/external/work-jiang/WORKFLOW-transcripts.md` (Phase B §5). After raw YouTube captions exist under `predictive-history/transcripts/`, optional: `python3 scripts/work_jiang/sync_verbatim_transcripts.py --dry-run` then `--write` to refresh `verbatim-transcripts/` for diffing (see `verbatim-transcripts/README.md`). Targeted ASR audit: `research/external/work-jiang/ASR-AUDIT-LOG.md` and `python3 scripts/work_jiang/check_asr_audit_preconditions.py`.
 
 ## Data model reminders
 

@@ -10,8 +10,11 @@ One markdown file per curated lecture in [`../lectures/`](../lectures/), **same 
 2. From repo root:
 
    ```bash
+   python3 scripts/work_jiang/sync_verbatim_transcripts.py --dry-run
    python3 scripts/work_jiang/sync_verbatim_transcripts.py --write
    ```
+
+   Default is dry-run when `--write` is omitted; `--dry-run` is explicit (same mode). Do not combine `--write` and `--dry-run`.
 
    Use `--force` to overwrite existing files. Use `--only-glob 'civilization-31*'` to scope. Use `--fail-on-missing-raw` in CI only if raw transcripts are present in the environment.
 

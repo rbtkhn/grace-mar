@@ -86,6 +86,7 @@ For each target video:
 
    ```bash
    python3 scripts/work_jiang/sync_verbatim_transcripts.py
+   python3 scripts/work_jiang/sync_verbatim_transcripts.py --dry-run
    python3 scripts/work_jiang/sync_verbatim_transcripts.py --write
    ```
 
@@ -120,6 +121,8 @@ If an episode needs **caption-faithful** excerpts in git without committing the 
    - **Tables:** Edit `scripts/work_jiang/asr_transcript_replacements.py` when a new episode introduces a systematic ASR error; keep longest phrases first in each list (the script sorts by length, but order matters for identical prefixes).
    - **Not automatic truth:** This is a **readability** aid; spot-check names and add manual fixes for one-off errors.
    - **Shared logic:** Replacement tables apply through `scripts/work_jiang/asr_light_clean.py` (also used by `sync_verbatim_transcripts.py` for the verbatim layer).
+
+6. **ASR audit (targeted)** — For pull-quotes, names, numbers, and sensitive lines, follow [ASR-AUDIT-LOG.md](ASR-AUDIT-LOG.md): set **series** and depth **A/B/C**, run preconditions (`scripts/work_jiang/check_asr_audit_preconditions.py`), then the rubric’s targeted verification table; append fixes to the findings log. See [ASR-VERIFICATION-RUBRIC.md](ASR-VERIFICATION-RUBRIC.md).
 
 ---
 

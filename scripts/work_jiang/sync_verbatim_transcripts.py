@@ -12,6 +12,7 @@ Populate raw captions first (see ``research/external/youtube-channels/predictive
 Examples::
 
     python3 scripts/work_jiang/sync_verbatim_transcripts.py
+    python3 scripts/work_jiang/sync_verbatim_transcripts.py --dry-run
     python3 scripts/work_jiang/sync_verbatim_transcripts.py --write
     python3 scripts/work_jiang/sync_verbatim_transcripts.py --write --only-glob 'geo-strategy-01*'
 """
@@ -122,7 +123,12 @@ def main() -> int:
     )
     ap.add_argument("--only-glob", default=None, help="fnmatch pattern against lecture basename")
     ap.add_argument("--limit", type=int, default=0, help="max lectures to process (0 = all)")
-    ap.add_argument("--write", action="store_true", help="write verbatim files (default: dry-run)")
+    ap.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="plan only; do not write (default when --write is omitted; explicit for audits)",
+    )
+    ap.add_argument("--write", action="store_true", help="write verbatim files")
     ap.add_argument(
         "--force",
         action="store_true",
@@ -134,6 +140,8 @@ def main() -> int:
         help="exit with code 2 if any lecture has no matching raw transcript file",
     )
     args = ap.parse_args()
+    if args.write and args.dry_run:
+        ap.error("Cannot use --write and --dry-run together")
 
     work = args.work_dir.resolve()
     lect_dir = work / "lectures"
