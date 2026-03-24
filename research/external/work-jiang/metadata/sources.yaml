@@ -1444,3 +1444,45 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: sh-24
+  video_id: TEdVhyE8pO0
+  title: 'Secret History #24: Empire of Church'
+  canonical_url: https://www.youtube.com/watch?v=TEdVhyE8pO0
+  lecture_path: lectures/secret-history-24-empire-of-church.md
+  analysis_path: null
+  series: secret-history
+  episode: 24
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-25
+  video_id: B5FtHagng8c
+  title: 'Secret History #25: Capital of Evil'
+  canonical_url: https://www.youtube.com/watch?v=B5FtHagng8c
+  lecture_path: lectures/secret-history-25-capital-of-evil.md
+  analysis_path: null
+  series: secret-history
+  episode: 25
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-26
+  video_id: kULUM_eB8KI
+  title: 'Secret History #26: Faith of Evil'
+  canonical_url: https://www.youtube.com/watch?v=kULUM_eB8KI
+  lecture_path: lectures/secret-history-26-faith-of-evil.md
+  analysis_path: null
+  series: secret-history
+  episode: 26
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
