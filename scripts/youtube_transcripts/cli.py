@@ -193,6 +193,7 @@ def run(argv: list[str] | None = None) -> int:
             enable_whisper=args.enable_whisper,
             force=args.force,
             manifest=manifest,
+            sleep_s=args.sleep,
             resume=args.resume,
         )
         index_rows.append(result_to_index_row(res))
