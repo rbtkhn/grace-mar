@@ -22,6 +22,7 @@
 - [ ] **Coverage report (optional):** from repo root, `python3 scripts/work_jiang/check_asr_audit_preconditions.py` (add `--strict` to fail CI if any in-scope lecture lacks raw).
 - [ ] **Tooling sanity:** `pytest tests/test_normalize_lecture_transcript_asr.py -q`
 - [ ] **Verbatim diff layer (optional):** `python3 scripts/work_jiang/sync_verbatim_transcripts.py --dry-run --only-glob '<pattern>'` then `--write` — see [verbatim-transcripts/README.md](verbatim-transcripts/README.md).
+- [ ] **Jiang fingerprint (optional, read-only):** If [JIANG-LECTURE-FINGERPRINT.md](JIANG-LECTURE-FINGERPRINT.md) is populated, use it in **lane 2** only to judge lecturer-typical phrasing vs caption error — not as a book or Record authority.
 
 ---
 

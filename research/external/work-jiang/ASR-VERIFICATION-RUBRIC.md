@@ -1,10 +1,14 @@
 # ASR / transcript verification rubric (work-jiang)
 
-**Version:** 1.1 (2026-03-24)  
+**Version:** 1.2 (2026-03-24)  
 **Purpose:** Clear, actionable criteria for verifying and improving automatic speech recognition (ASR) and caption text used in the *Predictive History* book pipeline.  
 **Scope:** Geo-Strategy, Civilization, and Secret History lecture transcripts. **Operator research only** — never merge into the Grace-Mar companion Record.
 
 Use this rubric to avoid treating paraphrase, summary, or bad ASR as a direct quotation.
+
+## Subagent boundary: Jiang fingerprint (lane 2 only)
+
+**Linguistic–cognitive fingerprint** — corpus-derived notes on how Jiang typically sounds (phrasing, rhetoric, ASR collision patterns) — may live in [JIANG-LECTURE-FINGERPRINT.md](JIANG-LECTURE-FINGERPRINT.md). Treat that file as **read-only guidance for lane 2** (caption fetch is separate; ASR audit and curated `## Full transcript` fixes use the fingerprint to separate **caption error** from **lecturer-typical** delivery). It is **not** a fourth publishing lane: it does **not** substitute for book-chapter assembly (lane 3) or companion Record governance.
 
 ---
 
@@ -264,6 +268,7 @@ Transcripts are for **internal research and analysis** only. Respect YouTube Ter
 
 - [WORKFLOW-transcripts.md](WORKFLOW-transcripts.md) — layers and Phase B verbatim step  
 - [ASR-AUDIT-LOG.md](ASR-AUDIT-LOG.md) — scope, preconditions, findings table  
+- [JIANG-LECTURE-FINGERPRINT.md](JIANG-LECTURE-FINGERPRINT.md) — optional corpus-derived lecture register (read-only for lane 2 audit)  
 - `scripts/work_jiang/check_asr_audit_preconditions.py` — lecture ↔ raw caption coverage (`--strict` optional)  
 - [../youtube-channels/predictive-history/README.md](../youtube-channels/predictive-history/README.md) — fetch CLI  
 - [../youtube-channels/predictive-history/transcripts/README.md](../youtube-channels/predictive-history/transcripts/README.md) — gitignored raw cache  
