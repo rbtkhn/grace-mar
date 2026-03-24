@@ -1416,3 +1416,31 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: sh-22
+  video_id: pp0E1gb80WQ
+  title: 'Secret History #22: The Divine Spark of Jesus'
+  canonical_url: https://www.youtube.com/watch?v=pp0E1gb80WQ
+  lecture_path: lectures/secret-history-22-the-divine-spark-of-jesus.md
+  analysis_path: null
+  series: secret-history
+  episode: 22
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-23
+  video_id: 6XGAc_OqCbU
+  title: 'Secret History #23: The Organization of Evil'
+  canonical_url: https://www.youtube.com/watch?v=6XGAc_OqCbU
+  lecture_path: lectures/secret-history-23-the-organization-of-evil.md
+  analysis_path: null
+  series: secret-history
+  episode: 23
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
