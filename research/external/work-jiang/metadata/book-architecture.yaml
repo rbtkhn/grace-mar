@@ -26,6 +26,14 @@ project:
     secondary:
       - "researchers of civilizational thought"
       - "readers of Jiang's channel seeking a structured path that mirrors the classroom order"
+  channel_context:
+    platform: YouTube
+    handle: "@PredictiveHistory"
+    subscribers_at_snapshot: 2_110_000
+    snapshot_date: "2026-03-24"
+    avg_views_per_video: 480_000
+    growth_note: "~2,100 new subs/day; 820K gained in last 30 days"
+    niche_position: "Fastest-rising long-form history/geopolitics lecture channel"
   status: outline_in_progress
 
 # Convention for prose drafts: see CHAPTER-PREDICTION-BOX.md
