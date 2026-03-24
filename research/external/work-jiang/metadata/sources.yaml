@@ -1486,3 +1486,31 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: sh-27
+  video_id: ZPrecJHUOUs
+  title: 'Secret History #27: Empire of Evil'
+  canonical_url: https://www.youtube.com/watch?v=ZPrecJHUOUs
+  lecture_path: lectures/secret-history-27-empire-of-evil.md
+  analysis_path: null
+  series: secret-history
+  episode: 27
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-28
+  video_id: WFWizN3QoPg
+  title: 'Secret History #28: Pax Judaica'
+  canonical_url: https://www.youtube.com/watch?v=WFWizN3QoPg
+  lecture_path: lectures/secret-history-28-pax-judaica.md
+  analysis_path: null
+  series: secret-history
+  episode: 28
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started

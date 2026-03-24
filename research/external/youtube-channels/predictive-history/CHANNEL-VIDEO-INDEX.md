@@ -29,6 +29,7 @@
 | 20 | `TsD-8FGA84A` | Great Books #1:  Secrets of the Universe | 2719.0 | https://www.youtube.com/watch?v=TsD-8FGA84A |
 | 21 | `hE4l9WyLF3U` | Game Theory #1:  The Dating Game | 2973.0 | https://www.youtube.com/watch?v=hE4l9WyLF3U |
 | 22 | `WFWizN3QoPg` | Secret History #END:  Pax Judaica | 5958.0 | https://www.youtube.com/watch?v=WFWizN3QoPg |
+| 22a | `WFWizN3QoPg` | Secret History #28:  Pax Judaica | 5958.0 | https://www.youtube.com/watch?v=WFWizN3QoPg |
 | 23 | `ZPrecJHUOUs` | Secret History #27:  Empire of Evil | 5262.0 | https://www.youtube.com/watch?v=ZPrecJHUOUs |
 | 24 | `kULUM_eB8KI` | Secret History #26:  Faith of Evil | 5100.0 | https://www.youtube.com/watch?v=kULUM_eB8KI |
 | 25 | `B5FtHagng8c` | Secret History #25:  Capital of Evil | 4229.0 | https://www.youtube.com/watch?v=B5FtHagng8c |
