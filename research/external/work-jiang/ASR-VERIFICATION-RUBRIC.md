@@ -1,6 +1,6 @@
 # ASR / transcript verification rubric (work-jiang)
 
-**Version:** 1.0 (2026-03-24)  
+**Version:** 1.1 (2026-03-24)  
 **Purpose:** Clear, actionable criteria for verifying and improving automatic speech recognition (ASR) and caption text used in the *Predictive History* book pipeline.  
 **Scope:** Geo-Strategy, Civilization, and Secret History lecture transcripts. **Operator research only** — never merge into the Grace-Mar companion Record.
 
@@ -90,28 +90,75 @@ Implementation: tables in `asr_transcript_replacements.py` (longest matches firs
 
 ---
 
-## Common ASR error types and verification checklist
+## Common ASR error types and verification checklist (expanded)
 
-1. **Proper names and domain terms (highest priority)**  
-   Jiang-specific and classical names (e.g. Memnon of Rhodes, Granicus, Thebes), geopolitical and historical terms.  
-   **Action:** Spot mishearings; add **systematic** repeats to `asr_transcript_replacements.py` (and tests when behavior should not regress).
+**Goal:** Systematically catch errors that hurt **entity recognition**, **historical accuracy**, **strategic concepts**, and **quote reliability**. Prioritize **proper names** and **meaning-altering** mistakes.
 
-2. **Homophones and phonetic confusions**  
-   there/their, numbers vs words in dates/counts, etc.  
-   **Action:** Compare to audio or raw captions in context.
+### 1. Proper names and domain-specific terms (highest priority)
 
-3. **Punctuation and sentence boundaries**  
-   Run-ons, capitalization; fillers (“um,” “uh”).  
-   **Action:** Light cleanup is optional in verbatim; curated layer may preserve or edit for readability—do not confuse with verified quotation.
+Most damaging: they break linking, quotes, and CIV-MEM / claims alignment.
 
-4. **Repetition and hallucination**  
-   **Action:** Flag low-confidence spans; extra care when tier is Whisper or low `quality`.
+**Examples (caption text vs intended referent):**
 
-5. **Speaker, accent, noise**  
-   **Action:** Prefer manual-caption tiers when available; Whisper as last resort.
+- **Thebes** misheard as “thieves,” “these,” “the bees,” “the B’s” (Civilization tier may correct toward Thebes; see series rules below).
+- **Memnon of Rhodes** → “memnon of roads,” “memon of Rhodes,” “mem non of roads,” etc.
+- **Granicus** → “Granikos,” “Granny kiss,” “Gran I guess,” etc.
+- **Jiang** → “Jung,” “John,” “Chang,” “Jang,” etc.
+- **Place names:** e.g. Carpathian Mountains → “her patient mountains”; Galicia → garbled fragments; Przemyśl → phonetic spellings.
+- **Strategy / civilization vocabulary:** “seam” → “seem,” “scene”; “formation” → “for nation,” “foremation”; “legitimacy” → “legit am a see,” etc.
+- **Empires and battles:** Macedon → “mass a don”; Achaemenid → many fragmentations.
 
-6. **Geo-Strategy protections**  
-   Never auto-map “thieves” → “Thebes” on geo files. Watch strategy jargon, numbers, dates, proper nouns against video or raw `.txt`.
+**Verification action:**
+
+- Spot-check **first mention** and other high-stakes occurrences against the **video** (or raw `.txt` aligned to the same audio).
+- Add **recurring** mis-hearings to `asr_transcript_replacements.py` and extend `tests/test_normalize_lecture_transcript_asr.py` when behavior must not regress.
+- **Unresolved or one-off cases:** record in [ASR-AUDIT-LOG.md](ASR-AUDIT-LOG.md), in curated lecture notes, or in an analysis memo. Do **not** rely on hand-editing **generated** verbatim YAML for durable notes—`sync_verbatim_transcripts.py --write` overwrites those files unless the pipeline is extended (e.g. merged `asr_notes`).
+
+**Geo-Strategy reminder:** Never apply civilization-only “thieves” → Thebes logic on `geo-strategy-*` files. Verify strategy jargon, numbers, dates, and proper nouns against video or raw captions.
+
+### 2. Homophones, phonetic confusions, and near-misses
+
+**Examples:**
+
+- Standard confusions: there / their / they’re; to / two / too; its / it’s; affect / effect; weather / whether.
+- **Numbers:** “four” vs “for”; “one” vs “won”; “eight” vs “ate”; “fourteen” vs “for teen.”
+- **Strategy register:** “war” vs “were”; “peace” vs “piece”; “siege” vs “seize.”
+- **Contextual absurdities:** e.g. “Jews” vs “juice”; “well to do” vs “work to do”; “with yeast” vs “was seized.”
+
+**Verification action:** Read suspect sentences **aloud** while watching the **timestamped** video; use surrounding lecture context to disambiguate.
+
+### 3. Disfluencies, fillers, repetitions, and hallucinations
+
+**Examples:** “um,” “uh,” “you know,” “like,” “so” (retained, doubled, or invented); stutter loops (“co co co”); phrases **not** in the audio; self-repairs dropped or mangled.
+
+**Verification action:**
+
+- **Verbatim layer:** Prefer fidelity; remove only **clear** hallucinations (judgment call; document if disputed).
+- **Curated layer:** Readable cleanup under `## Full transcript` when editorial policy allows.
+
+### 4. Punctuation, sentence boundaries, and capitalization
+
+**Examples:** run-ons; missing periods after pauses; wrong capitalization after fillers or breaths; comma vs period in rapid speech.
+
+**Verification action:** Minimal change in verbatim; human judgment in curated text. Do not treat lightly edited curated lines as **verified** quotations without a caption/audio check.
+
+### 5. Pace, accent, and pronunciation
+
+**Examples:** fast speech dropping clusters; stress mis-parsed (“be-CAUSE” → nonsense); accent-driven vowel/consonant reductions; pauses filled with spurious connectors.
+
+**Verification action:** Prefer **manual** YouTube captions when available. Treat **Whisper** or low `quality` / `needs_review` tiers as **lower confidence** for quotes and claims.
+
+### 6. Misdirected ASR logic and contextual bias
+
+**Examples:** plausible-sounding but wrong substitutions (e.g. “gold chains” vs “coats, suits”); organization read as a person; **negation** dropped or inserted; fabric / family / policy phrases conflated.
+
+**Verification action:** Cross-check **logical consistency** with the video. Re-read any line that feeds **quote candidates** or **claims** if the ASR “sounds too smooth.”
+
+### 7. Technical and audio-quality issues
+
+**Examples:** off-mic or quiet speech → dropped phrases; background noise → insertions; cheap auto-captions → higher baseline error rate.
+
+**Verification action:** Use `source_tier` and `quality` from the raw transcript header when present. **Re-fetch** with `--force` when YouTube replaces or improves captions.
 
 ---
 
