@@ -19,6 +19,15 @@
 
 **Dedup:** `content_hash` = SHA-256 of `video_id | pipeline_version | normalized text`. Skip unchanged fetches when manifest hash matches and status was `ok` (unless `--force`).
 
+## Raw transcripts (ASR audit trail)
+
+Fetched caption text is written under [`transcripts/`](transcripts/) as `*.txt`. Those files are **gitignored** to avoid huge commits; keep them **on your machine** (or CI artifact) to diff against curated `work-jiang/lectures/*.md` and to verify lines before they become book quotations.
+
+- **Layout and commands:** [transcripts/README.md](transcripts/README.md)
+- **When to verify:** [work-jiang/ASR-VERIFICATION-RUBRIC.md](../../work-jiang/ASR-VERIFICATION-RUBRIC.md) (in-repo path: `research/external/work-jiang/ASR-VERIFICATION-RUBRIC.md`)
+
+You can still commit **`index.json`** and **`transcript_manifest.json`** as lightweight pointers and dedup state.
+
 ## Environment variables
 
 | Variable | Purpose |

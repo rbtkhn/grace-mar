@@ -27,7 +27,8 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 | Influence over time (metrics snapshots) | [influence-tracking/README.md](influence-tracking/README.md) |
 | Prediction accuracy (forecast registry) | [prediction-tracking/README.md](prediction-tracking/README.md) |
 | Divergence from mainstream (comparison registry) | [divergence-tracking/README.md](divergence-tracking/README.md) |
-| Quotation bank (rendered) | [QUOTE-BANK.md](QUOTE-BANK.md), `metadata/quotes.yaml`, `metadata/quote-index.yaml` |
+| Quotation bank (rendered) | [QUOTE-BANK.md](QUOTE-BANK.md), `metadata/quotes.yaml`, `metadata/quote-index.yaml`; machine candidates: `metadata/quote-candidates.yaml` (Geo-Strategy + `analysis/*.md`), `metadata/quote-candidates-secret-history.yaml`, `metadata/quote-candidates-civilization.yaml` — from `extract_quote_candidates.py` |
+| ASR / verbatim discipline | [ASR-VERIFICATION-RUBRIC.md](ASR-VERIFICATION-RUBRIC.md); raw captions: [../youtube-channels/predictive-history/transcripts/README.md](../youtube-channels/predictive-history/transcripts/README.md) |
 | Counter-readings | [COUNTER-READINGS.md](COUNTER-READINGS.md), [counter-readings/README.md](counter-readings/README.md) |
 | Intellectual chronology | [INTELLECTUAL-CHRONOLOGY.md](INTELLECTUAL-CHRONOLOGY.md), `metadata/chronology.yaml` |
 
@@ -88,6 +89,6 @@ python3 scripts/work_jiang/scaffold_outputs.py               # chapter/site stub
 
 **Argument layer (concepts + claims + packs):** edit `metadata/concepts.yaml` and `claims/registry/claims.jsonl`; keep `linked_claim_ids` on each thesis subclaim in `metadata/thesis-map.yaml` in sync with claims. Single pack: `python3 scripts/work_jiang/build_evidence_pack.py --chapter ch02`.
 
-**Comparative layer (quotes + counter-readings + chronology):** curated `metadata/quotes.yaml` (bootstrap helper: `python3 scripts/work_jiang/bootstrap_quotes_from_candidates.py` after refreshing candidates); renders [QUOTE-BANK.md](QUOTE-BANK.md), [COUNTER-READINGS.md](COUNTER-READINGS.md), [INTELLECTUAL-CHRONOLOGY.md](INTELLECTUAL-CHRONOLOGY.md); link YAML under `metadata/chapter-quote-links.yaml` and `metadata/counter-reading-links.yaml`. CI runs `validate_comparative_layer.py` after the argument-layer validator.
+**Comparative layer (quotes + counter-readings + chronology):** curated `metadata/quotes.yaml` (bootstrap helper: `python3 scripts/work_jiang/bootstrap_quotes_from_candidates.py` after refreshing candidates; use `--candidates metadata/quote-candidates-secret-history.yaml` or `quote-candidates-civilization.yaml` when seeding Vol. III / II without overwriting geo-first curation); renders [QUOTE-BANK.md](QUOTE-BANK.md), [COUNTER-READINGS.md](COUNTER-READINGS.md), [INTELLECTUAL-CHRONOLOGY.md](INTELLECTUAL-CHRONOLOGY.md); link YAML under `metadata/chapter-quote-links.yaml` and `metadata/counter-reading-links.yaml`. CI runs `validate_comparative_layer.py` after the argument-layer validator.
 
 Optional: `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` after adding analysis memos. Optional: `python3 scripts/work_jiang/update_work_jiang_lane.py --write` to sync `users/grace-mar/work-jiang.md` WORK Container status.

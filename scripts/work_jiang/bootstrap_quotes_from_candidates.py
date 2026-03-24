@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import sys
 from pathlib import Path
 
 import yaml
@@ -107,13 +108,44 @@ def skip_prose(text: str) -> bool:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(
+        description="Bootstrap metadata/quotes.yaml from a quote-candidates*.yaml file.",
+    )
     ap.add_argument("--count", type=int, default=55)
+    ap.add_argument(
+        "--candidates",
+        type=Path,
+        default=None,
+        help=(
+            "Path to quote candidates YAML (default: metadata/quote-candidates.yaml). "
+            "Use metadata/quote-candidates-secret-history.yaml or "
+            "metadata/quote-candidates-civilization.yaml for other volumes; "
+            "review and merge into quotes.yaml by hand if you already have geo quotes."
+        ),
+    )
     args = ap.parse_args()
 
+    cand_path: Path = args.candidates or (WORK_DIR / "metadata" / "quote-candidates.yaml")
+    if args.candidates and not cand_path.is_absolute():
+        cwd_p = Path.cwd() / cand_path
+        wj_p = WORK_DIR / cand_path
+        if cwd_p.is_file():
+            cand_path = cwd_p.resolve()
+        elif wj_p.is_file():
+            cand_path = wj_p.resolve()
+        else:
+            cand_path = cand_path.resolve()
+
     sources = load_yaml(WORK_DIR / "metadata" / "sources.yaml").get("sources") or []
-    cand_doc = load_yaml(WORK_DIR / "metadata" / "quote-candidates.yaml")
+    cand_doc = load_yaml(cand_path)
     candidates = cand_doc.get("candidates") or []
+    if not candidates:
+        try:
+            disp = str(cand_path.relative_to(ROOT))
+        except ValueError:
+            disp = str(cand_path)
+        print(f"No candidates in {disp}", file=sys.stderr)
+        return 1
 
     picked: list[dict] = []
     ch03_count = 0

@@ -43,7 +43,8 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
    - **`--resume`** — skip videos that already have a non-trivial `.txt`.  
    - **`--force`** — refetch even when manifest hash matches.  
    - **`transcript_manifest.json`** — `content_hash`, `quality`, `source_tier`, timestamps (dedup / incremental).  
-   - Output: `transcripts/*.txt` + `index.json` + manifest. See [predictive-history/README.md](../../youtube-channels/predictive-history/README.md) for RQ/Redis, env vars, and rebuild-after-queue.
+   - Output: `transcripts/*.txt` + `index.json` + manifest. See [predictive-history/README.md](../../youtube-channels/predictive-history/README.md) for RQ/Redis, env vars, and rebuild-after-queue.  
+   - **ASR fidelity:** Raw `.txt` lives under `predictive-history/transcripts/` (often gitignored). Use it to detect/fix caption errors before quoting in the book — see [ASR-VERIFICATION-RUBRIC.md](ASR-VERIFICATION-RUBRIC.md) and [predictive-history/transcripts/README.md](../../youtube-channels/predictive-history/transcripts/README.md).
 
 2. **Optional parallel queue** — `pip install -e ".[transcript-pipeline]"`, Redis (`docker compose -f docker-compose.transcripts.yml up -d`), then `scripts/enqueue_youtube_transcripts.py` + `scripts/run_transcript_rq_worker.py`. Re-run the sync CLI afterward to refresh `index.json` (or use `--resume` to avoid re-downloads).
 
@@ -81,6 +82,10 @@ The umbrella book line is **Predictive History** — **one volume per lecture se
 For each target video:
 
 1. **Stable key** — use **`video_id`** (11 chars) as the join key between `index.json`, raw `.txt`, curated lecture, and analysis memo.
+
+### Optional: verbatim appendix in curated lecture
+
+If an episode needs **caption-faithful** excerpts in git without committing the full transcript file, append the section from [templates/verbatim-appendix-snippet.md](templates/verbatim-appendix-snippet.md). Full bulk captions remain in `predictive-history/transcripts/*.txt` (local).
 
 2. **Canonical URL** — `https://www.youtube.com/watch?v=<video_id>` unless you have a playlist-specific URL; prefer **`@PredictiveHistory`** uploads when that is the source of truth (verify title/series match; avoid unrelated fan edits).
 

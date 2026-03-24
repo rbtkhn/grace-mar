@@ -1,4 +1,5 @@
 generated_by: scripts/work_jiang/extract_quote_candidates.py
+series: geo-strategy
 candidates:
 - path: lectures/geo-strategy-01-iran-strategy-matrix-2024-04-24.md
   line_number: 68
