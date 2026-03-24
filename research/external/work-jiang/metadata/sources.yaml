@@ -1332,3 +1332,87 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: sh-16
+  video_id: 4ehovUNrSrw
+  title: 'Secret History #16: The Big Bang of Greek Civilization'
+  canonical_url: https://www.youtube.com/watch?v=4ehovUNrSrw
+  lecture_path: lectures/secret-history-16-the-big-bang-of-greek-civilization.md
+  analysis_path: null
+  series: secret-history
+  episode: 16
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-17
+  video_id: PlMNq44tBG0
+  title: 'Secret History #17: Literary Genesis'
+  canonical_url: https://www.youtube.com/watch?v=PlMNq44tBG0
+  lecture_path: lectures/secret-history-17-literary-genesis.md
+  analysis_path: null
+  series: secret-history
+  episode: 17
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-18
+  video_id: dELEdxh0ceg
+  title: 'Secret History #18: Thus Spoke Zarathustra'
+  canonical_url: https://www.youtube.com/watch?v=dELEdxh0ceg
+  lecture_path: lectures/secret-history-18-thus-spoke-zarathustra.md
+  analysis_path: null
+  series: secret-history
+  episode: 18
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-19
+  video_id: 3t0MeVBD24I
+  title: 'Secret History #19: Dawn of the Jews'
+  canonical_url: https://www.youtube.com/watch?v=3t0MeVBD24I
+  lecture_path: lectures/secret-history-19-dawn-of-the-jews.md
+  analysis_path: null
+  series: secret-history
+  episode: 19
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-20
+  video_id: z0AwFin83lo
+  title: 'Secret History #20: The Hellenistic World'
+  canonical_url: https://www.youtube.com/watch?v=z0AwFin83lo
+  lecture_path: lectures/secret-history-20-the-hellenistic-world.md
+  analysis_path: null
+  series: secret-history
+  episode: 20
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-21
+  video_id: Y-gXVzwbFMU
+  title: 'Secret History #21: Roman Anti-Civilization'
+  canonical_url: https://www.youtube.com/watch?v=Y-gXVzwbFMU
+  lecture_path: lectures/secret-history-21-roman-anti-civilization.md
+  analysis_path: null
+  series: secret-history
+  episode: 21
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
