@@ -116,10 +116,254 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("PHX", "phalanx"),
     # tokens
     ("permania", "Parmenion"),
+    # --- Geo-strategy audit 2026-03-24 (common tier: safe for all series) ---
+    # Strait of Hormuz (geo-01, -04, -07, -08, -13, -14)
+    ("the trade of humus", "the Strait of Hormuz"),
+    ("the street of Humus", "the Strait of Hormuz"),
+    ("the straight of humus", "the Strait of Hormuz"),
+    ("straight of humus", "Strait of Hormuz"),
+    ("strait of homus", "Strait of Hormuz"),
+    ("street of Humus", "Strait of Hormuz"),
+    # Qasem Soleimani (geo-01, -04, -07, -08)
+    ("Kasam salamani", "Qasem Soleimani"),
+    ("Kasam salamini", "Qasem Soleimani"),
+    ("salamani", "Soleimani"),
+    ("solomani", "Soleimani"),
+    ("salamini", "Soleimani"),
+    # Netanyahu (geo-05, -08, -15, -17)
+    ("Nanyahu", "Netanyahu"),
+    ("Nan yahu", "Netanyahu"),
+    ("nanyu", "Netanyahu"),
+    ("natany", "Netanyahu"),
+    ("Natanya", "Netanyahu"),
+    # Hezbollah (geo-01, -04, -07)
+    ("hesah", "Hezbollah"),
+    ("heson", "Hezbollah"),
+    # Houthis / Yemen (geo-01, -07)
+    ("hthis in Yaman", "Houthis in Yemen"),
+    ("hoovies in y man", "Houthis in Yemen"),
+    ("hufi", "Houthi"),
+    # Bretton Woods (geo-03, -10)
+    ("Breton Woods", "Bretton Woods"),
+    ("Brendon woods", "Bretton Woods"),
+    ("Bron Woods", "Bretton Woods"),
+    # Ayatollah (geo-14, -15)
+    ("Yatollah", "Ayatollah"),
+    ("Aatollah", "Ayatollah"),
+    ("Alatollah", "Ayatollah"),
+    ("Alatia", "Ayatollah"),
+    # Khamenei (geo-07)
+    ("mosta Kami", "Mojtaba Khamenei"),
+    ("mosab kamani", "Mojtaba Khamenei"),
+    ("MOBA Kami", "Mojtaba Khamenei"),
+    ("Musta Kami", "Mojtaba Khamenei"),
+    ("maaba kamani", "Mojtaba Khamenei"),
+    ("kamani", "Khamenei"),
+    ("camani", "Khamenei"),
+    # Zelenskyy (geo-08)
+    ("zalinski", "Zelenskyy"),
+    ("zilinski", "Zelenskyy"),
+    ("zinsky", "Zelenskyy"),
+    # Zoroastrianism (geo-15, -16)
+    ("Zorashinism", "Zoroastrianism"),
+    ("Zorastronism", "Zoroastrianism"),
+    # messianic (geo-15, -17)
+    ("misinic", "messianic"),
+    ("mezanite", "messianic"),
+    ("mezzating", "messianic"),
+    # Nikki Haley (geo-05, -08, -11)
+    ("Niki Hill hilly", "Nikki Haley"),
+    ("niiki heli", "Nikki Haley"),
+    ("Nikki Hy", "Nikki Haley"),
+    ("niiki Hy", "Nikki Haley"),
+    # Rumsfeld / Wolfowitz (geo-06)
+    ("Donald russfield", "Donald Rumsfeld"),
+    ("Ron field", "Rumsfeld"),
+    ("Paul wolitz", "Paul Wolfowitz"),
+    ("Wolford", "Wolfowitz"),
+    # de-Baathification (geo-13 — only unambiguous garble form)
+    ("debuffification", "de-Baathification"),
+    # Ebrahim Raisi (geo-07)
+    ("Ibraham razy", "Ebrahim Raisi"),
+    ("Ibraham Ry", "Ebrahim Raisi"),
+    # Mahsa Amini (geo-07)
+    ("masah ameni", "Mahsa Amini"),
+    # Other proper names (multi-episode)
+    ("Sheldon elderson", "Sheldon Adelson"),
+    ("sandel elderson", "Sheldon Adelson"),
+    ("Jamal Hashi", "Jamal Khashoggi"),
+    ("jerk Kushner", "Jared Kushner"),
+    ("the Mckender thesis", "the Mackinder thesis"),
+    ("Barbarosa", "Barbarossa"),
+    ("bar Barosa", "Barbarossa"),
+    ("Constantinopole", "Constantinople"),
+    ("Consipole", "Constantinople"),
+    ("Caranopole", "Constantinople"),
+    ("Haga Sophia", "Hagia Sophia"),
+    ("Aragon of Turkey", "Erdoğan of Turkey"),
+    ("Frederick Nichi", "Friedrich Nietzsche"),
+    ("reproachment", "rapprochement"),
+    ("encircumment", "encirclement"),
+    ("synretatization", "syncretization"),
+    ("Neestoran Christianity", "Nestorian Christianity"),
+    ("hijgemony", "hegemony"),
+    ("Leo Toy Story", "Leo Tolstoy"),
+    ("John Maynor kings", "John Maynard Keynes"),
+    ("Libby the Roman historian", "Livy the Roman historian"),
+    ("Gerald art Ford", "Gerald R. Ford"),
+    # Homophones (geo-strategy register)
+    ("ear defense", "air defense"),
+    ("ear power", "air power"),
+    ("ear Supremacy", "air supremacy"),
+    ("ear supery", "air supremacy"),
+    ("military insulations", "military installations"),
+    ("exclusion dominance", "escalation dominance"),
+    ("possible deniability", "plausible deniability"),
+    ("esquetology", "eschatology"),
 ]
 
 # Greek / ancient history strand only — run when filename matches civilization-*.md
 CIVILIZATION_REPLACEMENTS: list[tuple[str, str]] = [
+    # --- Bug fix 2026-03-24: the old ("thians","Thebans") rule was too aggressive ---
+    # It matched inside Parthians, Corinthians, Scythians, etc. Removed below;
+    # specific patterns added instead. fix_civilization_thieves handles thieves→Thebes.
+    ("parthians", "Parthians"),
+    # --- Civilization audit 2026-03-24: recurring proper names ---
+    # Brutus (civ-16, -27) — "Buddhist" / "Buddhas" is a devastating ASR swap
+    ("Lucius junus Buddhas", "Lucius Junius Brutus"),
+    ("Lucius Junius Buddhas", "Lucius Junius Brutus"),
+    ("Marcus buddhis", "Marcus Brutus"),
+    ("Marcus buddist", "Marcus Brutus"),
+    ("Marcus Buddhas", "Marcus Brutus"),
+    ("Decimus buddhis", "Decimus Brutus"),
+    ("Decimus Buddhas", "Decimus Brutus"),
+    # Cassius (civ-16)
+    ("casassus", "Cassius"),
+    ("Casas", "Cassius"),
+    # Cicero (civ-16)
+    ("cisero", "Cicero"),
+    ("ciso", "Cicero"),
+    ("Cyro", "Cicero"),
+    # Sulla (civ-16)
+    ("Sola", "Sulla"),
+    # Agrippa (civ-16)
+    ("agria", "Agrippa"),
+    ("AG gria", "Agrippa"),
+    # Lepidus (civ-16)
+    ("leopardus", "Lepidus"),
+    ("lepus", "Lepidus"),
+    # Aeneid / Aeneas (civ-17) — highest-frequency garbles
+    ("the inad", "the Aeneid"),
+    ("the India", "the Aeneid"),
+    # Dido (civ-17)
+    ("queen ditto", "queen Dido"),
+    # Etruscans (civ-32)
+    ("truskin", "Etruscan"),
+    ("ausans", "Etruscans"),
+    # Pyrrhus (civ-32)
+    ("pyrus", "Pyrrhus"),
+    ("pyus", "Pyrrhus"),
+    # Sejanus (civ-32)
+    ("sanus", "Sejanus"),
+    ("sanis", "Sejanus"),
+    ("shanus", "Sejanus"),
+    # Germanicus (civ-32)
+    ("jericus", "Germanicus"),
+    # Praetorian Guard (civ-32)
+    ("ptan guard", "Praetorian Guard"),
+    ("patan guard", "Praetorian Guard"),
+    # Caracalla (civ-32)
+    ("kakala", "Caracalla"),
+    ("car kala", "Caracalla"),
+    # Romulus Augustulus (civ-32)
+    ("Romus Augustus", "Romulus Augustulus"),
+    # Diocletian (civ-33)
+    ("de Clan", "Diocletian"),
+    ("dark Clan", "Diocletian"),
+    # Belisarius (civ-33)
+    ("bis serus", "Belisarius"),
+    # Theodosian (civ-33)
+    ("FI Doan walls", "Theodosian walls"),
+    ("fi Doan", "Theodosian"),
+    # Ottoman (civ-33)
+    ("aroman Turks", "Ottoman Turks"),
+    # Tarquinius Superbus (civ-33)
+    ("tanius Superbus", "Tarquinius Superbus"),
+    # Voltaire (civ-34)
+    ("voler", "Voltaire"),
+    # Carolingian (civ-34, -35)
+    ("Carolian", "Carolingian"),
+    ("coral legian Empire", "Carolingian Empire"),
+    ("Corian Empire", "Carolingian Empire"),
+    # Aachen (civ-34)
+    ("Akin Cathedral", "Aachen Cathedral"),
+    # Nicene (civ-34)
+    ("nine creed", "Nicene Creed"),
+    # Magyars (civ-35)
+    ("mag yards", "Magyars"),
+    # Novgorod (civ-35)
+    ("novag grad", "Novgorod"),
+    ("novad", "Novgorod"),
+    # Scipio Africanus (civ-35)
+    ("cpio africanist", "Scipio Africanus"),
+    # Umayyad (civ-37)
+    ("omaya calipat", "Umayyad Caliphate"),
+    ("omantic calat", "Umayyad Caliphate"),
+    # Sumerians (civ-19) — common-tier safe since used across series
+    ("Samarian", "Sumerian"),
+    ("samarians", "Sumerians"),
+    # Sargon of Akkad (civ-19)
+    ("Saron of aad", "Sargon of Akkad"),
+    ("Saron the great", "Sargon the Great"),
+    # Enkidu (civ-19)
+    ("eadu", "Enkidu"),
+    ("anadu", "Enkidu"),
+    ("enadu", "Enkidu"),
+    # Marduk (civ-19)
+    ("mardock", "Marduk"),
+    # cuneiform (civ-19)
+    ("Kun form", "cuneiform"),
+    ("kuna form", "cuneiform"),
+    # Bathsheba (civ-21)
+    ("basba", "Bathsheba"),
+    ("basiba", "Bathsheba"),
+    ("bisha", "Bathsheba"),
+    # Gnosticism (civ-24) — "narcissism" is a real word, only fix in compound
+    # Sadducees (civ-24)
+    ("seduces", "Sadducees"),
+    # Nicaea (civ-25)
+    ("nessia", "Nicaea"),
+    # Theodosius (civ-25)
+    ("feel dois", "Theodosius"),
+    # Charlemagne (civ-27)
+    ("Charlamagne", "Charlemagne"),
+    # Manichaeism (civ-27)
+    ("manism", "Manichaeism"),
+    # Khufu (civ-18)
+    ("curfew", "Khufu"),
+    # Imhotep (civ-18)
+    ("imot", "Imhotep"),
+    # Egyptologists (civ-18)
+    ("otologists", "Egyptologists"),
+    # Cortés (civ-44)
+    ("Hernand Cortez", "Hernán Cortés"),
+    ("conquestadors", "conquistadors"),
+    # Crimean War (civ-46+) — "Korean war" in 19th-century context
+    ("Korean war", "Crimean War"),
+    # Ibn Fadlan (civ-36)
+    ("ibben fadlin", "Ibn Fadlan"),
+    ("ibben Fallon", "Ibn Fadlan"),
+    # Paul Gauguin (civ-36)
+    ("Paul Goan", "Paul Gauguin"),
+    ("Paul go gain", "Paul Gauguin"),
+    # Fukuyama (civ-27, -31)
+    ("fukayama", "Fukuyama"),
+    # Thomas Piketty (civ-31)
+    ("tominus py", "Thomas Piketty"),
+    # iconoclasm (civ-34)
+    ("iconic clasm", "iconoclasm"),
+    # eudaimonia (shared)
+    ("udonia", "eudaimonia"),
     ("Sacred Band of Thieves", "Sacred Band of Thebes"),
     ("sacred Band of Thieves", "Sacred Band of Thebes"),
     ("sacred ban of Thieves", "Sacred Band of Thebes"),
@@ -133,7 +377,10 @@ CIVILIZATION_REPLACEMENTS: list[tuple[str, str]] = [
     ("palan war", "Peloponnesian War"),
     ("pelian war", "Peloponnesian War"),
     ("theevans", "Thebans"),
-    ("thians", "Thebans"),
+    (" thians ", " Thebans "),
+    (" thians,", " Thebans,"),
+    (" thians.", " Thebans."),
+    ("the thians", "the Thebans"),
     ("primarily uh by a\nthe great", "primarily uh by Alexander the Great"),
     ("how did a the great", "how did Alexander the Great"),
     ("ex ex the great", "Alexander the Great"),

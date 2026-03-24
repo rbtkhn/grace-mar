@@ -224,7 +224,7 @@ only priests could preach the Bible. You
 you had to be ordained and authorized by
 the church in order to be able to tell
 what Christianity meant.
-Okay. Um, you had to recite nine creed
+Okay. Um, you had to recite Nicene Creed
 which is a holy trinity. Okay. So
 remember we discussed the holy trinity,
 the idea of monotheism and this is the

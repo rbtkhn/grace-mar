@@ -36,10 +36,10 @@ continuation of the Roman Empire in
 Western
 Europe so the um when we think about the
 Holy Roman Empire in the west we think
-of the famous voler uh quotation about
-the Holy Roman Empire voler is um a very
+of the famous Voltaire uh quotation about
+the Holy Roman Empire Voltaire is um a very
 famous French Enlightenment thinker we
-will talk about voler when we get to the
+will talk about Voltaire when we get to the
 Enlightenment what he said was the Holy
 Roman Empire was in no way holy nor
 Roman nor an Empire and this sounds
@@ -49,7 +49,7 @@ this class is actually this is very true
 okay so um the Holy Roman Empire was
 started in the year
 800 um when the Frankish King
-Charlamagne was crowned Holy Roman
+Charlemagne was crowned Holy Roman
 Emperor by Pope Leo theii in
 Rome okay and this marked a turning
 point
@@ -73,7 +73,7 @@ were allow that they had the power to
 anoint Emperors okay so that's a topic
 we are looking at today all right so
 let's first look at Mo charlamagne's
-motivations Charlamagne um his name
+motivations Charlemagne um his name
 means Charles the great and he is of the
 Frankish uh Empire
 and he was able to unite most of Europe
@@ -87,10 +87,10 @@ would also pave the way for feudalism in
 Europe and these are topics we'll
 discuss later on uh in the class okay in
 the
-semester um um what Charlamagne is most
+semester um um what Charlemagne is most
 celebrated for um is the fact that he
-started something called the Carolian
-Renaissance Carolian is the name of his
+started something called the Carolingian
+Renaissance Carolingian is the name of his
 family and the Renaissance is this um
 period of peace and prosperity in Europe
 um and he's most famous for the building
@@ -127,7 +127,7 @@ visit the
 cathedral okay so these buildings were
 designed to be
 Eternal Okay so so um before I talk
-about Charlamagne and why he chose to be
+about Charlemagne and why he chose to be
 Crown Holy Roman Emperor I need to give
 you a little bit background about the
 geography of Europe now if we if we look
@@ -226,7 +226,7 @@ authority over their
 Kingdom and it was very hard to compel
 them
 to um listen to your Authority
-Charlamagne had at at at that time the
+Charlemagne had at at at that time the
 greatest army in Europe but even then he
 was still compelled to uh
 cooperate with the other kings okay so
@@ -243,7 +243,7 @@ legitimate
 ruler you cannot compel them you must
 win their hearts and
 Minds okay and this explains why
-Charlamagne would want to be crowned by
+Charlemagne would want to be crowned by
 the pope because the pope did have
 legitimacy he did have authority because
 the pope was the leader of the Catholic
@@ -350,7 +350,7 @@ study them next class okay but now
 they're bought brought into the OR bit
 of this new Frankish Empire okay but
 again and and this is the Frankish
-Empire at the time of Charlamagne when
+Empire at the time of Charlemagne when
 he creates the Holy Roman Empire but
 again because this is not really an
 Empire it's more of a confederation it
@@ -364,7 +364,7 @@ Confederacy where each King has voting
 power okay so this is not a her title
 this is something that you are elected
 to okay so after the death of
-Charlamagne um a couple decades later
+Charlemagne um a couple decades later
 after his death the Empire splits into
 three
 okay and even though um on paper this
@@ -901,8 +901,8 @@ one's in a position to enforce Doctrine
 on others now Conant Paul want because
 it's a capital of the Empire it wants to
 impose Orthodoxy on others and this is
-what leads to the idea of the nine creed
-remember the nine creed is the idea of
+what leads to the idea of the Nicene Creed
+remember the Nicene Creed is the idea of
 the Holy
 Trinity and at this time when the nine
 creed is for
@@ -915,7 +915,7 @@ as a source of its legitimacy therefore
 it will over the decades embark on
 Military expeditions to enforce nine
 creed on all the centers eventually the
-nine creed will triumph over other
+Nicene Creed will triumph over other
 Doctrine okay so uh the Catholic
 church is able to build legitimacy and
 Power by imposing
@@ -929,7 +929,7 @@ is declining other churches especially
 in Rome they want now to assert their
 local
 autonomy okay so this created a major
-controversy called iconic clasm iconic
+controversy called iconoclasm iconic
 clasm ionm just means that conapo
 believes that God should not be
 celebrated in images you cannot paint
@@ -947,8 +947,8 @@ independence not only does Rome want to
 maintain its independence it wants to
 regain its lost
 Authority okay and that's why when
-Charlamagne comes
-along the church sees Charlamagne as the
+Charlemagne comes
+along the church sees Charlemagne as the
 perfect opportunity to reassert its
 dominance it's it's uh dominance over
 the idea of legitimacy okay right and so
@@ -1008,7 +1008,7 @@ sense
 all
 right any questions about
 this okay so let's summarize okay let's
-go back to the year 800 when Charlamagne
+go back to the year 800 when Charlemagne
 he's in St Peter's
 Basilica and he's been
 crowned holy woman Empire by Leo III why
@@ -1037,7 +1037,7 @@ differenti we are Christians and
 everyone else is Pagan or Infidel or
 heretic differentiation we are not not
 the bantine Empire okay so
-Charlamagne is trying to create
+Charlemagne is trying to create
 legitimacy unity and
 differentiation with the Holy Roman
 Empire
@@ -1164,7 +1164,7 @@ celebrate God on Earth okay and the City
 of God in other words becomes the
 basis of the Holy Roman
 Empire in other words
-Charlamagne and Leo work together work
+Charlemagne and Leo work together work
 together to create the Holy Roman
 Empire in order to achieve Austin's
 vision
@@ -1173,7 +1173,7 @@ it's intellectual blueprint for the Holy
 Roman Empire okay does that make sense
 guys in fact what's really interesting
 is
-Charlamagne who apparently was
+Charlemagne who apparently was
 illiterate I'm not completely sure but
 apparently he was illiterate every day
 he had the city of God read to him

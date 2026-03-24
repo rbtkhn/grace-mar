@@ -1521,7 +1521,7 @@ temple of worship. So you're not allowed
 to to seduce your servants. Okay? So
 this is extremely
 subversive painting that at the same
-time seduces us. It almost begs us to do
+time Sadducees us. It almost begs us to do
 do the same thing. Okay? It's trying to
 demonstrate our own sexual deprevity and
 our own sexual

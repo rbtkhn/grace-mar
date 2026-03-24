@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "pipeline_version": "1.0.0",
-  "last_run_utc": "2026-03-24T00:24:01Z",
+  "last_run_utc": "2026-03-24T16:59:38Z",
   "videos": {
     "HIoYQBbBllk": {
       "content_hash": "9b0c7e55b6d96a9492415fbe5876f3083c0a759c64c01d30cfe7269f0e60a591",
@@ -182,6 +182,226 @@
       "error": null,
       "last_updated_utc": "2026-03-24T00:24:01Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:24:01Z"
+    },
+    "xEEpOxqdU5E": {
+      "content_hash": "a4746128a3fa1e2989479acf29c61208878dbe4511b91f7f98ffef9873030b74",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:33:51Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:33:51Z"
+    },
+    "lkKrZq4YdqY": {
+      "content_hash": "c48c83a96bcad4a29c71c3c5262866bc161dbc80f3af85155d040886c2e69669",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:33:54Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:33:54Z"
+    },
+    "_blj8zKdKgA": {
+      "content_hash": "6207d73763d970a9403a8b4e225d4f97583dd4dd337a822036e4ea3a386bc4e1",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:33:57Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:33:57Z"
+    },
+    "LctUcVqhhns": {
+      "content_hash": "e2a585dd06144b6e28d746e6450b01913a939ba1aad4e67b86cfd8bb123e44bc",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:01Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:01Z"
+    },
+    "exRK-85630k": {
+      "content_hash": "93f9c7f1aa4586fd5f7663f8d42331986ac34fedf45ba9b4c885741ab5969853",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:04Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:04Z"
+    },
+    "JieFC4Yww4o": {
+      "content_hash": "b06fb51e4b290078512bb93ea617c51dc4de0f986519ff941b7edc5fc8d7487f",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:07Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:07Z"
+    },
+    "LsRGvKxfLts": {
+      "content_hash": "d8cfd3575c54d091cdf51713917114784d0ed287fae277636da9c5caa95bf339",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:10Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:10Z"
+    },
+    "7y_hbz6loEo": {
+      "content_hash": "cbc31cc396b0b44c19ebe692e88cb00d1ce34147176ee79a56208176eae7aeb1",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:12Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:12Z"
+    },
+    "AEPSUC-UQ5k": {
+      "content_hash": "ab0246d72f8d179e0d4b04ba3ee270f06c6c3f9ac4e86f2f676f64e5afbefa3f",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:15Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:15Z"
+    },
+    "B_al2wgk49Y": {
+      "content_hash": "243a3db87a0b1dc806d28a1aa227696ab5281b1f227be1df902e97d88d32054a",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:19Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:19Z"
+    },
+    "Go1bMQKnJBQ": {
+      "content_hash": "2dee3db6314187137b909e8aaf49e170e18d0f2ea2341c88a0a6b4d248a98494",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:22Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:22Z"
+    },
+    "s_k6esWheqA": {
+      "content_hash": "3a6fe4dcb513e251d28fa0335f4687a6481e46e890efe25ddee7f21f96050e16",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:25Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:25Z"
+    },
+    "8XdL-7tAqnU": {
+      "content_hash": "1844185c533296a46c0f701ac8c2d6ea543a342c4172a96f6e44d027a1056445",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:28Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:28Z"
+    },
+    "N4cs-8mrP_s": {
+      "content_hash": "e2ddf61862bd4df582064104c3e066620a01fd7faa4eb98728fd10487c1a5d8d",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:31Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:31Z"
+    },
+    "bc9adtiIN_k": {
+      "content_hash": "7bf633cbf60eda01a5ba3aa509fa53c5ad94931b47bad7f86dab8c97be14bc33",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:34Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:34Z"
+    },
+    "Kw-TiN6dEcM": {
+      "content_hash": "ddf6a0ae2ff79f8d79c21446787f7ee3e9859a0ca2a5d2faeb7d1789b708673c",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:37Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:37Z"
+    },
+    "5I2VPYPJJ68": {
+      "content_hash": "2d6209e692b7b22004423fcac0142b5d4d73f04c1d96b00a8013bc1f37876d3d",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:40Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:40Z"
+    },
+    "ZgvAHZqaawA": {
+      "content_hash": "0025c660df1a2e989653aa93a8d889525e644747d8e97cc2c9449b3adaef4736",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:43Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:43Z"
+    },
+    "YQ-xg1nIbMs": {
+      "content_hash": "abfb73e4ab261ba0a7f943caec6d937c7ed9b380488a86383790e2c32e9346e6",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:46Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:46Z"
+    },
+    "E83dpuyvpiM": {
+      "content_hash": "b31cb0ccd29218616e5f6858ca3a7f8215b96b460f68056195605d489d1a05d1",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:34:50Z",
+      "last_successful_fetch_at_utc": "2026-03-24T16:34:50Z"
+    },
+    "m24LnQ-Ksjk": {
+      "content_hash": "5de381572463da4e62205d73b6ad0e839315945264963e90775226287fa39010",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:59:13Z"
+    },
+    "cylkQPsfFRY": {
+      "content_hash": "6bd404b1764a693dd795aba8bbbed98d590afcdc2ff0ee648e9a3e0567c8f7eb",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:59:19Z"
+    },
+    "tquo1UsC5Nw": {
+      "content_hash": "bed90d941a40ac25fae06c2e1120c1014d840f8bf139388289055a941b0271cf",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:59:25Z"
+    },
+    "QtqfIjK1GAc": {
+      "content_hash": "22f8258d4d7a06b3f64e64e43eafe4a14c164f117190863d91c2817d6f79cea4",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:59:32Z"
+    },
+    "_gH4PvIni5E": {
+      "content_hash": "3275aa31024672da5164a6d12a709f29b49d475059b91c3553031ff498622fa9",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-24T16:59:38Z"
     }
   }
 }

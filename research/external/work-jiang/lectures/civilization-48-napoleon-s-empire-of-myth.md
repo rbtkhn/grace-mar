@@ -1259,7 +1259,7 @@ balance of power in Europe it works
 extremely well the uh Napoleon 1815 at
 the battle of water and after that
 there's no more wars in Europe okay
-until maybe 1856 during the Korean war
+until maybe 1856 during the Crimean War
 okay that's like 40 50 years so it's an
 incredibly successful
 formula. The problem though is this. If
@@ -1316,7 +1316,7 @@ Revolution marks a radical turning point
 in history. Okay, French Revolution
 marks the beginning of liberalism,
 modernity,
-uh humanism, a lot of great things that
+uh huManichaeism, a lot of great things that
 now define our modern world. Okay, we
 would not be living in the world that we
 live in today because sorry, we would

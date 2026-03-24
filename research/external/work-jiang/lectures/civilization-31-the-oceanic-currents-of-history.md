@@ -411,7 +411,7 @@ this is not true but back then when they
 came up with this history they thought
 it was true and um if you know a little
 bit about current history then you'll
-know about a man named Francis fukayama
+know about a man named Francis Fukuyama
 who is an American who works for the
 government and he wrote something called
 the end of History which is an essay
@@ -1239,7 +1239,7 @@ self-reliance
 Independence this is true throughout the
 Borderland okay if you if we were to go
 back to the Mongolia during the time of
-gangas Khan if we were if we were to go
+Genghis Khan if we were if we were to go
 back to the the European north of the
 time of
 Vikings these are cultures that

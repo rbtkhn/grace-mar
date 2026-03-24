@@ -143,11 +143,11 @@ mainland um across the agatic is of
 course Italy um and the dominant power
 actually in Italy at this time are not
 the Romans but but but a culture
-civilization we call the truskin and the
-truskin for the longest time were
+civilization we call the Etruscan and the
+Etruscan for the longest time were
 dominant over the Romans in fact some
 people believe that Rome was originally
-a colony of the ausans and the First
+a colony of the Etruscans and the First
 Kings of Rome were actually rusian
 princes
 okay um and then over
@@ -322,7 +322,7 @@ okay so Liberty the the Roman word for
 this is of course
 libertas all right the second idea value
 U of the Greeks is the idea of
-udonia udonia is the pursuit of human
+eudaimonia eudaimonia is the pursuit of human
 flourishing to be the best that you can
 be to be better than your peers and to
 win respect for Europe peers to seek
@@ -341,9 +341,9 @@ the high God to favor the Trojans okay
 this is treason this is
 sedition and for the Greeks this is good
 because what's important is to win
-udonia you in order to achieve udonia
+eudaimonia you in order to achieve eudaimonia
 can do anything because that's what
-matters okay and the idea of udonia if
+matters okay and the idea of eudaimonia if
 you think about it it's what led to
 greatek creativity because everyone saw
 society as a competition and they want
@@ -352,7 +352,7 @@ best okay but if you think about it also
 leads to
 corruption
 um um and selfishness okay so the womans
-didn't like udonia but instead their
+didn't like eudaimonia but instead their
 highest virtue was the idea of repu
 and this is where we get the word
 Republic from Republic means for the
@@ -586,17 +586,17 @@ able to draw soldiers from all the all
 of the P Italian
 Peninsula um from 280 to
 272 uh BCE there's something called the
-p p Wars pyus who was uh a Greek king
+p p Wars Pyrrhus who was uh a Greek king
 came to the aid of the Greek colonies in
 Italy okay these Greeks were complaining
 and saying the Romans are bullying us
 can someone please help us and build us
-a Greek Empire so pyus comes and attacks
+a Greek Empire so Pyrrhus comes and attacks
 the Romans and he won every
 battle the Romans were terrible soldiers
 he had the best soldiers in the world
 and he was winning every battle and at
-one at at a certain point pyrus said
+one at at a certain point Pyrrhus said
 okay we're killing a lot of Romans but
 if I win one more battle if I just win
 one more battle I'm going to run out
@@ -833,45 +833,45 @@ that is a Roman tradition where uh you
 can adopt someone outside the family to
 be your here okay and that um and
 then after tiaris died um Augustus
-anointed jericus to be his successor and
+anointed Germanicus to be his successor and
 germanicus was
 considered um an extremely talented and
 capable leader okay the problem though
 is that Tiberius who is now Emperor
 didn't like the fact
 that
-jericus was appointed his successor he
+Germanicus was appointed his successor he
 wanted to anoint his own
 successor okay so Tiberius what he did
 that was very sneaky was he got he made
 a man named
-sanus the head of the uh ptan guard and
-the patan guard was basically the secret
+Sejanus the head of the uh Praetorian Guard and
+the Praetorian Guard was basically the secret
 police of Rome and so Janice because he
 was very ambitious he start to kill not
 just germanicus but everyone in
-germanicus family shanus wanted to be
+germanicus family Sejanus wanted to be
 the he to
-tiberias and then after um sanus was
+tiberias and then after um Sejanus was
 done killing everyone basically in
 janica's
 family tiberious had him
 killed okay this is a very common uh
 pattern in imperial history okay um
-after sanus was killed there's a per of
-sanis allies his children were killed
-and everyone who supports sanis was
+after Sejanus was killed there's a per of
+Sejanus allies his children were killed
+and everyone who supports Sejanus was
 interrogated by the Senate and put to
 death and most of these
 people claim innocence I had nothing to
 do withan I was forced into an alliance
-with sanis okay now there's one person a
+with Sejanus okay now there's one person a
 Roman noal man named Marcus
 tanus who in 31 CE he appeared before
 the for his
 trial and he decided on a different
 strategy everyone else before him claim
-I had nothing to do with sanis and the
+I had nothing to do with Sejanus and the
 sen didn't believe them and they were
 all killed okay so Marcus tannus tries
 to different strategy and this is
@@ -888,10 +888,10 @@ anything done if I if I want to become
 wealthy I had to become a friend of su
 Jenis and why did I do this and why was
 this right because it is not up to me to
-question or or think about why sanus is
+question or or think about why Sejanus is
 a friend of the emperor all I need to
 know was the emperor favor
-sanis and is my duty to obey the emperor
+Sejanus and is my duty to obey the emperor
 and therefore I became his
 friend okay that was his logic now let's
 look at what tus wrote okay and it's
@@ -905,7 +905,7 @@ gods have made Sovereign Arbiter of
 things okay it's not my place to ever
 question the
 emperor if the emperor made
-shanus his right-hand man I now must
+Sejanus his right-hand man I now must
 also obey
 Janis if the emperor wants me to to
 marry a dog I will go marry a
@@ -1063,8 +1063,8 @@ longer want want to be Republic we want
 to be an
 Empire okay and the way he resolved this
 issue is in
-212 the emperor kakala issued the idct
-of car kala which made
+212 the emperor Caracalla issued the idct
+of Caracalla which made
 everyone in Roman Empire a citizen so he
 basically destroyed the idea of
 citizenship if everyone can be a citizen
@@ -1139,7 +1139,7 @@ was a senate That was supposed to make
 the decisions in reality it was the
 Emperor who was in charge because the
 emperor controlled the Army and he
-controlled the ptan guard which is secet
+controlled the Praetorian Guard which is secet
 police so he could kill Senators who
 disobeyed him okay and this was always a
 very complex

@@ -82,7 +82,7 @@ basically these Germanic Gothic tribes
 from the north it also had a major
 adversary in the Persian Empire uh at
 this time they were fighting against the
-parthians uh but later on they would
+parThebans uh but later on they would
 fight against what is what we call the
 sassanian Persian
 Empire um and so this was not a really
@@ -125,7 +125,7 @@ the 3rd
 Century um there it really seemed the
 Roman Empire was on a brink of complete
 implosion then a military genius by name
-of uh de Clan he re reunit the Empire
+of uh Diocletian he re reunit the Empire
 and he recognized
 we basically needed to change the system
 and we needed to make radical changes in
@@ -238,7 +238,7 @@ with God as we discussed uh one more
 popular interpretations explanations is
 the idea of arianism where Jesus is a
 less Divinity to God the Council of
-nessia Nakia established the idea of the
+Nicaea Nakia established the idea of the
 Holy Trinity which is that God Jesus and
 holy spirit are are co-equal they are
 separate but they are co-equal we call
@@ -254,11 +254,11 @@ religion of the Roman Empire as well as
 the ideaa of heresy okay especially the
 idea of
 irism um he also built something called
-the FI Doan walls which makes Conant
+the Theodosian walls which makes Conant
 basically impenetrable okay it makes it
 a impenetrable Fortress and allows it U
 Conant to stand for a thousand years
-okay as you can see from the F fi Doan
+okay as you can see from the F Theodosian
 walls um it's huge okay this is just a
 person you can see that there are two
 walls there's a m protecting it um so
@@ -309,7 +309,7 @@ and this is the year 565 at this point
 the emperor is Justinian and at this
 point the one who is leading the
 military of the byzantines his name is
-bis serus and he's considered the last
+Belisarius and he's considered the last
 great Roman general okay his military
 genius is on par with that of Julius
 Caesar Hannibal all the great generals
@@ -355,7 +355,7 @@ themselves had a lot of personal
 conflict in fact um towards the end of
 his life bis Serius was actually tried
 for treason and there were many times
-when bis serus was on military campaign
+when Belisarius was on military campaign
 it was clear that Justinian was trying
 to sabotage him because obviously if
 your Emperor you're afraid that uh your
@@ -560,7 +560,7 @@ didn't work and this led to what we call
 the crisis of the 3rd century when
 basically the Roman Empire was about to
 collapse okay and again as we said a a a
-governor a a commander named dark Clan
+governor a a commander named Diocletian
 he saved the Roman Empire by reuniting
 okay and at this point he's like this
 system doesn't work what we need to do
@@ -889,7 +889,7 @@ Hector but also think about
 luria
 Lua lucrecia remember is the woman Noble
 woman who is raped by uh the son of uh
-tanius Superbus the last king of Rome
+Tarquinius Superbus the last king of Rome
 and this is what starts the uh Rebellion
 that uh overthrow the Roman
 monarchy lucrecia is raped and then she
@@ -1276,7 +1276,7 @@ Asian-American right guess what guess
 who else belongs in that group Indian
 people Vietnamese people Japanese people
 Korean people that makes no sense we
-know that in in uh Asia the Indian
+know that in in uh Asia the Aeneidn
 culture is vastly different from the
 Japanese culture which is vastly
 different from the Korean culture and
@@ -1380,7 +1380,7 @@ all right and these civil wars were
 eventually lead to something called the
 Holy Roman Empire which is something
 like the uh which which is what
-Charlamagne or the Franks will create
+Charlemagne or the Franks will create
 and this will lead interesting for us to
 the to the rise of the
 Vikings okay the Vikings are important

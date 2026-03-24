@@ -172,11 +172,11 @@ expanded to and remember this process
 takes less than 100 years which is
 remarkable
 um the the OM calipat was about 700 okay
-so let's just compare the omaya calipat
+so let's just compare the Umayyad Caliphate
 with other Empires including the tongue
 okay the tongue really is the height of
 chin chinaese civilization but as you
-can see the omantic calat um really is
+can see the Umayyad Caliphate um really is
 the largest Empire in the world at this
 time and eventually they will also
 become the wealthiest Empire um at this
@@ -375,7 +375,7 @@ Wisdom this is where the three major
 creative civilizations would meet and
 exchange ideas right the Greeks the Jews
 and the Persians they would also take
-ideas from the Indian tradition and the
+ideas from the Aeneidn tradition and the
 Chinese tradition as
 well um the major literature or literary
 work that we still have today from the

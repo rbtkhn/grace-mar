@@ -125,7 +125,7 @@ come together to debate and argue of the
 future of the community and as such the
 individual is someone who stands out
 okay the word they use is yonia or
-ar okay udonia means flourishing you can
+ar okay eudaimonia means flourishing you can
 only flourish if you're standing out
 among a group of men a is proving Your
 Excellence among a group of men and so
@@ -461,7 +461,7 @@ questions that this painting from Paul
 Goan captures okay where do we come from
 where what are we where are we going
 every culture is trying to Grapple with
-these three questions Paul go gain I'm
+these three questions Paul Gauguin I'm
 not sure if you know who he is he is a
 very famous French artist he started off
 actually as a financier a stock broker
@@ -560,14 +560,14 @@ on the funeral they just burn away the
 money
 okay so what's also important for us to
 remember is there is a funeral director
-there's a woman who uh ibben fadlin
+there's a woman who uh Ibn Fadlan
 calls the angel of death who was
 coordinating and orchestrating this
 funeral during the course of this
 funeral there are things that happened
 that actually disgust him okay so so
 before we continue let please keep in
-mind that ibben Fallon he's an observer
+mind that Ibn Fadlan he's an observer
 he doesn't speak the Lang language he
 doesn't know culture so he doesn't exact
 exactly know what's going on second of

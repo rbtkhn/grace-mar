@@ -49,10 +49,10 @@ determines the nature of the political
 system in societies in nations. Okay. So
 the four specific examples we've looked
 at are Sparta, Athens, Macedonia, and
-Rome. Because Sparta had a hoplight
+Rome. Because Sparta had a hoplite
 army, it became an oligarchy. Okay,
 oligarchy means rule by the
-few. the rule by the elite and hoplights
+few. the rule by the elite and hoplites
 were farmers who could afford their own
 armor and weaponry. Okay. Um, Athens had
 a navy and so it was a democracy and the
@@ -100,21 +100,21 @@ Greece do when uh the polices were
 fighting each other in very much the
 same way that the waring states were
 fighting each other in China uh the main
-uh soldier is called the hoplight. The
-hoplight means shield in
+uh soldier is called the hoplite. The
+hoplite means shield in
 uh Greek. And um the thing about the
-hoplight that's very important is that
+hoplite that's very important is that
 it was a self-suffic self-sufficient
 soldier, meaning that most of the time
 the he was a farmer, but when there was
 a war, he would grab his armor and his
 shield and his spear and he would go to
 war. You didn't need a
-economy to allow the hoplight to exist.
+economy to allow the hoplite to exist.
 Okay, this this was a self-sufficient
 system.
 Um over time the Macedonians will take
-the hoplight formation and turn it into
+the hoplite formation and turn it into
 the Macedonian phallax. Um and the
 Romans will have their legion. Okay. Now
 the difference between the Macedonians
@@ -187,7 +187,7 @@ power over the local um
 areas. This changes in 1453. Okay. In
 the city of Constantinople. So for about
 close to a thousand years,
-Constantinopole was the wealthiest most
+Constantinople was the wealthiest most
 powerful city in Europe. They are the
 heroes to the Roman Empire. They
 consider themselves the Eastern Roman
@@ -201,7 +201,7 @@ besiege the city. Okay. But in 1453 this
 changes because the Ottoman Turks come
 in with
 cannons and they lelay siege to
-Constantinopole and they destroy the
+Constantinople and they destroy the
 walls and this was
 unimaginable before and so it's
 gunpowder that allows the Ottomans to

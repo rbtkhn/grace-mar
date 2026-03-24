@@ -100,7 +100,7 @@ competition means that there is a lot of
 conflict between them they're they are
 Waring against each other for dominance
 in their
-region okay and in this process this
+regent okay and in this process this
 will give rise to the ideas the
 technology the values the culture that
 will underpin China civilization for the
@@ -189,7 +189,7 @@ they're using Warfare as a means to
 maintain the social order
 and that's why Warfare is extremely
 heavily regulated okay and so let's
-think about the pelian war between
+think about the Peloponnesian War between
 Athens and
 Sparta uh when we looked at the war we
 know that the pal pipan war was
@@ -1363,7 +1363,7 @@ always bureaucrats scholar
 officials right and this propag is so
 effective that eventually Europeans will
 stop will will start to mimic this
-propaganda so voler the French
+propaganda so Voltaire the French
 Enlightenment thinker says that Chinese
 have have the best system because they
 allow only the educated to rule not

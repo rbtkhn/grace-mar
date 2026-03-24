@@ -31,7 +31,7 @@ um the European conquest of the new
 world, meaning North and South
 America. Um and um so these people who
 start to conquer the new world are
-called the conquestadors, which is
+called the conquistadors, which is
 Spanish for conquerors. These are
 mercenaries. They're bandits. They're
 lower lowerass people who have to leave
@@ -622,7 +622,7 @@ salivate. Okay, so this is a another
 shot of Tennopekan.
 Um, eventually the Aztecs were conquered
 by one man with maybe a few hundred
-soldiers. His name is Hernand Cortez and
+soldiers. His name is Hernán Cortés and
 he's an adventurer. He did not have
 permission from Spain to go and conquer
 the Aztecs. He just did so because he

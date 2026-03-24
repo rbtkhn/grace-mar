@@ -357,8 +357,8 @@ science. Okay. So these are the major
 thinkers of the renaissance. um the
 philosophy, the value system that
 underpins all this artistic production
-is the idea of humanism. Okay, so what
-is humanism and how is it different from
+is the idea of huManichaeism. Okay, so what
+is huManichaeism and how is it different from
 um Christianity? Okay, so these are the
 three major differences guys. Okay, so
 let's let's look at them. If you're a
@@ -381,7 +381,7 @@ flourish? How do I make the most out of
 my talents? How do I have the best
 possible life on earth? Okay, so the
 Greek word is
-udimonia. All right. So, humanism is
+udimonia. All right. So, huManichaeism is
 actually a return to the values and
 belief systems of classical Greece. Now,
 last major difference is um Christians
@@ -392,7 +392,7 @@ we make the world we live in today
 beautiful and truthful? Okay. So these
 are the three major differences that
 separate Christians from humanists. And
-what this will and what humanism will
+what this will and what huManichaeism will
 represent is a radical re rein reintor
 sorry
 reorientation
@@ -1568,7 +1568,7 @@ values that he creates, the values that
 he expresses in divine comedy will
 become the basis for modernity.
 Especially the idea of individuality of
-humanism.
+huManichaeism.
 Right? What is individual? An individual
 is someone who celebrates himself and
 pursues his or her curiosity to explore

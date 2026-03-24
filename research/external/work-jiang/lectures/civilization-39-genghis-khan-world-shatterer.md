@@ -124,7 +124,7 @@ greatest conqueror in human history so
 uh the the statistic that surprised
 everyone is one out of 200 males today
 um they are a direct descendant of
-gangas Khan so that's that's like 16
+Genghis Khan so that's that's like 16
 million people okay 16 million males in
 the world are direct descendants of um
 Gus Khan right so that is the reputation
@@ -231,7 +231,7 @@ Mongols centuries later is the Russian
 Empire okay the Russian Empire will take
 over a lot of Mongol uh
 territory um because it is so large um
-after the death of gangas Khan and his
+after the death of Genghis Khan and his
 son uh agade the Mong Empire will
 Splinter
 into four
@@ -460,7 +460,7 @@ the son here to his Empire which will
 cause great difficulties when gangas
 Khan dies okay but that just shows you
 the generosity um of this man eventually
-gangas Khan will run into conflict with
+Genghis Khan will run into conflict with
 jamoka and the two are competing for
 control of the Mongol World gas Khan
 kills him to um achieve his
@@ -728,10 +728,10 @@ that's also true for Philip of Macedon
 so um Philip of Macedon he is a prince
 of
 Macedon and at this time in the Greek
-World thieves was a dominant military
-power thieves defeated maedon in a
-battle and thieves demanded hostages so
-Philip was sent as a hostage to thieves
+World Thebes was a dominant military
+power Thebes defeated Macedon in a
+battle and Thebes demanded hostages so
+Philip was sent as a hostage to Thebes
 where he is now mentored by the greatest
 military strategist all this time named
 IIM my noce okay and so Philip II is
@@ -741,7 +741,7 @@ innovations of this time from the
 greatest general of this time and then
 what he will do is he will return to
 Macedon reorganize the Macedon Army and
-then take them to conquer thieves as
+then take them to conquer Thebes as
 well as the entire uh Greek world at the
 Battle of Shia okay
 well this pattern is also true for
@@ -762,7 +762,7 @@ Civil War in which um Julius Caesar will
 defeat his mentor Pompei at the Battle
 of
 farcas okay very similar pattern well
-the same is also true for gangas Khan he
+the same is also true for Genghis Khan he
 is mentored by two Chieftain jamaka and
 too and he will defeat both in order to
 gain leadership of the Mongol world so
@@ -810,7 +810,7 @@ four ultimately they are able to conquer
 the world because they develop a
 professional meritocratic and Innovative
 Army okay what does professional mean it
-means that look at Saron the great a
+means that look at Sargon the Great a
 Saron of akid at this time there were no
 professional
 soldiers um most people were farmers and
@@ -837,8 +837,8 @@ to conquer the subaran city states which
 again were walled by adopting Siege
 Warfare which was unheard of before okay
 and the same is true for Phillip Julius
-Caesar and gangas Khan right so again
-gangas Khan fits into a pattern here of
+Caesar and Genghis Khan right so again
+Genghis Khan fits into a pattern here of
 what these great conquerors look like
 does this make sense to you guys
 any

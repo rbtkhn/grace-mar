@@ -41,6 +41,81 @@ def test_normalize_civilization_replaces_granicus() -> None:
     assert n >= 1
 
 
+def test_normalize_geo_common_tier_proper_names() -> None:
+    """Geo-strategy common-tier replacements fix recurring proper-name garbles."""
+    cases = [
+        ("the straight of humus", "the Strait of Hormuz"),
+        ("Kasam salamani", "Qasem Soleimani"),
+        ("Nanyahu", "Netanyahu"),
+        ("hesah", "Hezbollah"),
+        ("Breton Woods", "Bretton Woods"),
+        ("Aatollah", "Ayatollah"),
+        ("zalinski", "Zelenskyy"),
+        ("Zorashinism", "Zoroastrianism"),
+        ("misinic", "messianic"),
+        ("niiki heli", "Nikki Haley"),
+        ("Donald russfield", "Donald Rumsfeld"),
+        ("debuffification", "de-Baathification"),
+        ("the Mckender thesis", "the Mackinder thesis"),
+        ("Barbarosa", "Barbarossa"),
+        ("Leo Toy Story", "Leo Tolstoy"),
+        ("esquetology", "eschatology"),
+        ("possible deniability", "plausible deniability"),
+        ("exclusion dominance", "escalation dominance"),
+        ("ear defense", "air defense"),
+        ("military insulations", "military installations"),
+    ]
+    for raw, expected in cases:
+        out, n = normalize_transcript_text(raw, series="geo-strategy")
+        assert expected in out, f"{raw!r} → expected {expected!r}, got {out!r}"
+        assert n >= 1, f"{raw!r} should have at least 1 substitution"
+
+
+def test_normalize_geo_common_tier_does_not_false_positive() -> None:
+    """Real English words that look like ASR garbles must NOT be replaced globally."""
+    safe_words = [
+        "The deification of emperors was common in Rome.",
+        "They carried bricks to the construction site.",
+        "The APAC region showed strong growth.",
+    ]
+    for text in safe_words:
+        out, n = normalize_transcript_text(text, series="geo-strategy")
+        assert out == text, f"False positive: {text!r} was changed to {out!r}"
+        assert n == 0
+
+
+def test_normalize_civ_parthians_not_mangled() -> None:
+    """The thians→Thebans rule must not corrupt 'parthians' into 'parThebans'."""
+    text = "the parthians attacked from the east"
+    out, n = normalize_transcript_text(text, series="civilization")
+    assert "parThebans" not in out, f"Bug: 'parthians' became {out!r}"
+    assert "Parthians" in out
+
+
+def test_normalize_civ_new_proper_names() -> None:
+    """Civilization audit 2026-03-24: new replacement entries work."""
+    cases = [
+        ("casassus", "Cassius"),
+        ("cisero", "Cicero"),
+        ("truskin", "Etruscan"),
+        ("pyrus", "Pyrrhus"),
+        ("de Clan", "Diocletian"),
+        ("bis serus", "Belisarius"),
+        ("voler", "Voltaire"),
+        ("samarians", "Sumerians"),
+        ("eadu", "Enkidu"),
+        ("mardock", "Marduk"),
+        ("Charlamagne", "Charlemagne"),
+        ("conquestadors", "conquistadors"),
+        ("udonia", "eudaimonia"),
+        ("fukayama", "Fukuyama"),
+    ]
+    for raw, expected in cases:
+        out, n = normalize_transcript_text(raw, series="civilization")
+        assert expected in out, f"{raw!r} → expected {expected!r}, got {out!r}"
+        assert n >= 1, f"{raw!r} should have at least 1 substitution"
+
+
 def test_normalize_geo_does_not_apply_thieves_to_thebes(tmp_path: Path) -> None:
     """Geo uses common tier only — 'thieves' is not bulk-replaced."""
     p = tmp_path / "geo-strategy-99-test.md"

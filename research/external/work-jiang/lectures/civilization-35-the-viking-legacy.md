@@ -111,12 +111,12 @@ invaded or attacked or pillaged from
 everyone basically okay so the three
 main Invaders are the Vikings who come
 in from the north but then you have
-people call the mag yards
+people call the Magyars
 who are the modern name hungarians
 coming in from the east from the south
 comes the Arabs okay next week we will
 do the Arabs the mards uh just just that
-you know who the mag yards are they are
+you know who the Magyars are they are
 just the most recent iteration of the
 Proto indo-europeans they have NAA
 remember uh last semester we discussed
@@ -132,7 +132,7 @@ just the most recent uh iteration of
 this culture okay same as the Hunts same
 as the gos same as the jtic
 people um what's interesting about the
-mag yards is that they are mainly a land
+Magyars is that they are mainly a land
 people mean they ride horses into battle
 and for and during the Viking age they
 were extremely successful pen
@@ -162,12 +162,12 @@ will do is they will
 extend over to the east as well where
 they will found two major settlements
 the first is ke Kei uh in modern day
-Ukraine as well as novag grad okay so
+Ukraine as well as Novgorod okay so
 they are going going into the dener as
 well as the vocal why are they here um
 there's some pillaging but mainly it's
 for trade purposes because if you look
-at where they are in KF and novad it it
+at where they are in KF and Novgorod it it
 gives them access to three major cental
 of global wealth the first of course is
 the b b Empire in conop which we um
@@ -228,8 +228,8 @@ Ireland okay and as and what they will
 also do is they will settle down in
 Normandy and the reason why is they keep
 on attacking northern Europe mainly the
-coral legian Empire um and Charles
-simple the king um of the Corian Empire
+Carolingian Empire um and Charles
+simple the king um of the Carolingian Empire
 he will defeat them in a battle and then
 he will give them land in Normandy so
 Normandy means land of the Norse people
@@ -736,10 +736,10 @@ lose a lot of battles and still continue
 the fight so think about when Alexander
 invaded
 Persia he had already defeated the
-Persians at the Battle of Isis but
+Persians at the Battle of Issus but
 Darius was able to go deeper into his
 Empire and assemble another large army
-for the Battle of guaga okay and Darius
+for the Battle of Gaugamela okay and Darius
 could have could have when he lost that
 battle he could have also built a third
 Army But ultimately he was assassinated
@@ -930,7 +930,7 @@ the beginning of a Viking age why did
 the Vikings go attack these monasteries
 and there are different theories okay
 the most popular theory is that as
-Charlamagne and this Holy Roman Empire
+Charlemagne and this Holy Roman Empire
 um expand it it threatened Scandinavia
 and so the Vikings had to come out and
 challenge him okay that's the most
@@ -960,7 +960,7 @@ themselves so after the collapse of the
 Roman Empire wealth was much more
 distribute distributed but as these
 kingdoms start to arise under
-Charlamagne then wealth became much more
+Charlemagne then wealth became much more
 concentrated okay so these monasteries
 they are universities they are places of
 worship and of learning but much more
@@ -1199,7 +1199,7 @@ discuss
 politics and as a result the
 individual is someone who stands out
 okay that's why we have Concepts ER and
-udonia in this community you are an
+eudaimonia in this community you are an
 individual you are the best individual
 if you can speak the best if you can
 argue the best if you can stand
