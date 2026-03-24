@@ -173,5 +173,5 @@ CIVILIZATION_REPLACEMENTS: list[tuple[str, str]] = [
     ("kingom", "kingdom"),
     ("multip okay", "multiple okay"),
     ("amphibolis", "Amphipolis"),
-    # Remaining “thieves” → Thebes: handled in normalize_lecture_transcript_asr.fix_civilization_thieves
+    # Remaining “thieves” → Thebes: handled in asr_light_clean.fix_civilization_thieves
 ]

@@ -13,6 +13,7 @@ For each video you care about, you want **three layers** on disk (names are conv
 | Layer | Purpose | Typical location |
 |-------|---------|------------------|
 | **Raw caption pull** | Machine transcript + provenance header | `research/external/youtube-channels/predictive-history/transcripts/` (often **gitignored**; see channel README) |
+| **Lightly-cleaned verbatim** | Caption body + same systematic ASR replacements as curated (`asr_light_clean`); one file per lecture for **diff** vs curated / `## Full transcript` | `research/external/work-jiang/verbatim-transcripts/<same-basename-as-lecture>.md` — **generated** by `scripts/work_jiang/sync_verbatim_transcripts.py`; bodies usually **gitignored** (see [verbatim-transcripts/README.md](verbatim-transcripts/README.md)) |
 | **Curated lecture file** | Human-readable archive: metadata, “at a glance,” optional full ASR, **canonical YouTube URL** | `research/external/work-jiang/lectures/<slug>.md` |
 | **Analysis memo** | Structured read: claims, tags, lattice crosswalk, tensions, dependencies | `research/external/work-jiang/analysis/<video_id>-<short-slug>.md` (or append sections in one rolling doc — pick one pattern and keep it). Prefer **YAML front matter** (`chapter_candidates`, `source_id`, …) via `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` after `build_source_registry.py` so book/site metadata stays machine-readable. |
 
@@ -81,7 +82,16 @@ The umbrella book line is **Predictive History** — **one volume per lecture se
 
 For each target video:
 
-1. **Stable key** — use **`video_id`** (11 chars) as the join key between `index.json`, raw `.txt`, curated lecture, and analysis memo.
+0. **Sync lightly-cleaned verbatim files (after raw captions exist)** — Builds `verbatim-transcripts/<slug>.md` from `predictive-history/transcripts/{video_id}_*.txt`, matched to `lectures/<slug>.md` via `watch?v=` / `youtu.be/` URL. Default is dry-run (prints plan); `--write` creates files. Use for **diffing** caption text vs curated prose without opening raw headers by hand.
+
+   ```bash
+   python3 scripts/work_jiang/sync_verbatim_transcripts.py
+   python3 scripts/work_jiang/sync_verbatim_transcripts.py --write
+   ```
+
+   See [verbatim-transcripts/README.md](verbatim-transcripts/README.md). Flow: **fetch raw** (Phase A) → **sync verbatim** → **diff** vs curated / rubric ([ASR-VERIFICATION-RUBRIC.md](ASR-VERIFICATION-RUBRIC.md)).
+
+1. **Stable key** — use **`video_id`** (11 chars) as the join key between `index.json`, raw `.txt`, curated lecture, analysis memo, and verbatim file.
 
 ### Optional: verbatim appendix in curated lecture
 
@@ -109,6 +119,7 @@ If an episode needs **caption-faithful** excerpts in git without committing the 
    - **Scope:** Only the markdown **below** `## Full transcript` is rewritten unless you pass `--whole-file` (avoid touching curated topic headers).
    - **Tables:** Edit `scripts/work_jiang/asr_transcript_replacements.py` when a new episode introduces a systematic ASR error; keep longest phrases first in each list (the script sorts by length, but order matters for identical prefixes).
    - **Not automatic truth:** This is a **readability** aid; spot-check names and add manual fixes for one-off errors.
+   - **Shared logic:** Replacement tables apply through `scripts/work_jiang/asr_light_clean.py` (also used by `sync_verbatim_transcripts.py` for the verbatim layer).
 
 ---
 

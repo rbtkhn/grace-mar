@@ -11,10 +11,9 @@ from pathlib import Path
 _WJ = Path(__file__).resolve().parents[1] / "scripts" / "work_jiang"
 sys.path.insert(0, str(_WJ))
 
+from asr_light_clean import fix_civilization_thieves, normalize_transcript_text  # noqa: E402
 from normalize_lecture_transcript_asr import (  # noqa: E402
     FULL_TRANSCRIPT_HEADING,
-    fix_civilization_thieves,
-    normalize_section,
     run_file,
     split_full_transcript,
 )
@@ -36,7 +35,7 @@ def test_fix_civilization_thieves_article() -> None:
 
 def test_normalize_civilization_replaces_granicus() -> None:
     raw = "at the battle of granticus in 334"
-    out, n = normalize_section(raw, series="civilization")
+    out, n = normalize_transcript_text(raw, series="civilization")
     assert "Granicus" in out
     assert "granticus" not in out.lower()
     assert n >= 1
@@ -58,6 +57,6 @@ def test_normalize_geo_does_not_apply_thieves_to_thebes(tmp_path: Path) -> None:
         + "\n",
         encoding="utf-8",
     )
-    assert run_file(p, whole_file=False, series_override="geo-strategy", dry_run=True) == 0
+    assert run_file(p, whole_file=False, series="geo-strategy", dry_run=True) == 0
     text = p.read_text(encoding="utf-8")
     assert "thieves" in text  # unchanged for geo

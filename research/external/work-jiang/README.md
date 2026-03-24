@@ -29,6 +29,7 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 | Divergence from mainstream (comparison registry) | [divergence-tracking/README.md](divergence-tracking/README.md) |
 | Quotation bank (rendered) | [QUOTE-BANK.md](QUOTE-BANK.md), `metadata/quotes.yaml`, `metadata/quote-index.yaml`; machine candidates: `metadata/quote-candidates.yaml` (Geo-Strategy + `analysis/*.md`), `metadata/quote-candidates-secret-history.yaml`, `metadata/quote-candidates-civilization.yaml` — from `extract_quote_candidates.py` |
 | ASR / verbatim discipline | [ASR-VERIFICATION-RUBRIC.md](ASR-VERIFICATION-RUBRIC.md); raw captions: [../youtube-channels/predictive-history/transcripts/README.md](../youtube-channels/predictive-history/transcripts/README.md) |
+| Lightly-cleaned verbatim (generated) | [verbatim-transcripts/README.md](verbatim-transcripts/README.md) — `python3 scripts/work_jiang/sync_verbatim_transcripts.py --write` after fetching raw `.txt` |
 | Counter-readings | [COUNTER-READINGS.md](COUNTER-READINGS.md), [counter-readings/README.md](counter-readings/README.md) |
 | Intellectual chronology | [INTELLECTUAL-CHRONOLOGY.md](INTELLECTUAL-CHRONOLOGY.md), `metadata/chronology.yaml` |
 

@@ -19,7 +19,6 @@ Examples::
 from __future__ import annotations
 
 import argparse
-import re
 import sys
 from pathlib import Path
 
@@ -27,66 +26,9 @@ _WJ_DIR = Path(__file__).resolve().parent
 if str(_WJ_DIR) not in sys.path:
     sys.path.insert(0, str(_WJ_DIR))
 
-from asr_transcript_replacements import CIVILIZATION_REPLACEMENTS, COMMON_REPLACEMENTS
+from asr_light_clean import detect_series, normalize_transcript_text
 
 FULL_TRANSCRIPT_HEADING = "## Full transcript"
-
-
-def detect_series(path: Path) -> str | None:
-    name = path.name.lower()
-    if name.startswith("civilization-"):
-        return "civilization"
-    if name.startswith("geo-strategy-"):
-        return "geo-strategy"
-    return None
-
-
-def _sort_by_length(pairs: list[tuple[str, str]]) -> list[tuple[str, str]]:
-    return sorted(pairs, key=lambda x: len(x[0]), reverse=True)
-
-
-def apply_ordered_replacements(text: str, pairs: list[tuple[str, str]]) -> tuple[str, int]:
-    """Return (new_text, number of non-overlapping substring replacements)."""
-    count = 0
-    ordered = _sort_by_length(pairs)
-    for old, new in ordered:
-        if not old:
-            continue
-        n = text.count(old)
-        if n:
-            text = text.replace(old, new)
-            count += n
-    return text, count
-
-
-def fix_civilization_thieves(text: str) -> tuple[str, int]:
-    """Map ASR 'thieves' → Thebes without leaving 'the Thebes'."""
-    count = 0
-    for pat, repl in (
-        (r"(?i)\bthe thieves\b", "Thebes"),
-        (r"(?i)\bthieves\b", "Thebes"),
-    ):
-        n = len(re.findall(pat, text))
-        if n:
-            text = re.sub(pat, repl, text)
-            count += n
-    return text, count
-
-
-def normalize_section(
-    text: str,
-    *,
-    series: str | None,
-) -> tuple[str, int]:
-    total = 0
-    text, n = apply_ordered_replacements(text, COMMON_REPLACEMENTS)
-    total += n
-    if series == "civilization":
-        text, n = apply_ordered_replacements(text, CIVILIZATION_REPLACEMENTS)
-        total += n
-        text, n = fix_civilization_thieves(text)
-        total += n
-    return text, total
 
 
 def split_full_transcript(md: str) -> tuple[str, str | None, str]:
@@ -108,14 +50,13 @@ def run_file(
     path: Path,
     *,
     whole_file: bool,
-    series_override: str | None,
+    series: str | None,
     dry_run: bool,
 ) -> int:
     raw = path.read_text(encoding="utf-8")
-    series = series_override or detect_series(path)
 
     if whole_file:
-        new_body, n = normalize_section(raw, series=series)
+        new_body, n = normalize_transcript_text(raw, series=series)
         if n == 0:
             print(f"{path}: no substitutions (series={series!r})", file=sys.stderr)
             return 0
@@ -129,7 +70,7 @@ def run_file(
         print(f"{path}: no '{FULL_TRANSCRIPT_HEADING}' — use --whole-file or add heading", file=sys.stderr)
         return 1
 
-    new_body, n = normalize_section(body, series=series)
+    new_body, n = normalize_transcript_text(body, series=series)
     if n == 0:
         print(f"{path}: no substitutions in transcript section (series={series!r})", file=sys.stderr)
         return 0
@@ -172,16 +113,15 @@ def main() -> int:
         print(f"Not a file: {path}", file=sys.stderr)
         return 1
 
-    series_map = {
-        "auto": detect_series(path),
-        "civilization": "civilization",
-        "geo-strategy": "geo-strategy",
-        "none": None,
-    }
-    series = series_map[args.series]
+    if args.series == "auto":
+        series_resolved: str | None = detect_series(path)
+    elif args.series == "none":
+        series_resolved = None
+    else:
+        series_resolved = args.series
 
     dry_run = not args.write
-    return run_file(path, whole_file=args.whole_file, series_override=series, dry_run=dry_run)
+    return run_file(path, whole_file=args.whole_file, series=series_resolved, dry_run=dry_run)
 
 
 if __name__ == "__main__":
