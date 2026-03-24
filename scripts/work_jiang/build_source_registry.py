@@ -41,12 +41,36 @@ def analysis_for_video(analysis_by_vid: dict[str, Path], video_id: str | None) -
 
 def main() -> int:
     analysis_by_vid: dict[str, Path] = {}
+    civmem_by_source: dict[str, Path] = {}
+    psyhist_by_source: dict[str, Path] = {}
     for p in ANALYSIS.glob("*.md"):
         if p.name == ".gitkeep":
             continue
         m = VIDEO_IN_NAME.match(p.name)
         if m:
             analysis_by_vid[m.group(1)] = p
+            continue
+        if p.name.endswith("-civmem-analysis.md"):
+            sid = p.stem.removesuffix("-civmem-analysis")
+            civmem_by_source[sid] = p
+            continue
+        if p.name.endswith("-psy-hist-analysis.md"):
+            sid = p.stem.removesuffix("-psy-hist-analysis")
+            psyhist_by_source[sid] = p
+
+    def analysis_for_source(
+        vid: str | None,
+        sid: str,
+    ) -> tuple[Path | None, str]:
+        """Return (path, analysis_status). Prefer video_id match, then civmem, then psy-hist."""
+        matched = analysis_for_video(analysis_by_vid, vid)
+        if matched:
+            return matched, "complete"
+        if sid in civmem_by_source:
+            return civmem_by_source[sid], "complete"
+        if sid in psyhist_by_source:
+            return psyhist_by_source[sid], "complete"
+        return None, "missing"
 
     lecture_paths = sorted(
         LECTURES.glob("geo-strategy-*.md"),
@@ -60,9 +84,8 @@ def main() -> int:
         ep = int(m.group(1))
         source_id = f"geo-{ep:02d}"
         vid = extract_video_id_from_lecture(lecture)
-        matched = analysis_for_video(analysis_by_vid, vid)
+        matched, analysis_status = analysis_for_source(vid, source_id)
         analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
-        analysis_status = "complete" if matched else "missing"
         sources.append(
             {
                 "source_id": source_id,
@@ -106,9 +129,8 @@ def main() -> int:
         ep = int(m.group(1))
         source_id = f"civ-{ep:02d}"
         vid = extract_video_id_from_lecture(lecture)
-        matched = analysis_for_video(analysis_by_vid, vid)
+        matched, analysis_status = analysis_for_source(vid, source_id)
         analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
-        analysis_status = "complete" if matched else "missing"
         sources.append(
             {
                 "source_id": source_id,

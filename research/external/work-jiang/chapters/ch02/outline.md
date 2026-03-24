@@ -14,14 +14,26 @@
 
 ## Key quotations
 
-- [q-0018]
-- [q-0021]
-- [q-0037]
-- [q-0043]
-- [q-0044]
-- … and 3 more (see chapter-quote-links)
+- [q-0011]
+- [q-0019]
+- [q-0022]
+- [q-0031]
+- [q-0039]
+- … and 6 more (see chapter-quote-links)
 
 ## Analysis
+
+### CIV-MEM Reading
+
+(placeholder)
+
+### PSY-HIST Reading
+
+(placeholder)
+
+### Integrated Operator Thesis
+
+(placeholder)
 
 ### Strengths
 

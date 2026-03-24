@@ -11,6 +11,7 @@ generated_from:
 - lectures/geo-strategy-10-putins-strategic-imagination.md
 - lectures/geo-strategy-11-the-second-american-civil-war.md
 - lectures/geo-strategy-12-psychohistory-the-science-of-imagining-the-future.md
+- lectures/geo-strategy-13-us-iran-war-incoming.md
 - analysis/7y_hbz6loEo-geo-strategy-08-analysis.md
 - analysis/AEPSUC-UQ5k-geo-strategy-09-analysis.md
 - analysis/B_al2wgk49Y-geo-strategy-10-analysis.md
@@ -59,10 +60,10 @@ concepts:
     financialization: 11
     dollar system: 1
 - concept_id: saudi-iran-axis
-  total_mentions_estimated: 167
+  total_mentions_estimated: 176
   by_phrase:
     Saudi Arabia vs Iran: 0
-    Saudi: 152
+    Saudi: 161
     Gulf: 11
     axis of resistance: 4
 - concept_id: electoral-coalition
@@ -99,30 +100,30 @@ concepts:
     IRGC: 26
     helicopter crash: 1
 - concept_id: iran-trap
-  total_mentions_estimated: 3
+  total_mentions_estimated: 6
   by_phrase:
     Iran trap: 3
     invasion scenario: 0
-    regime change: 0
+    regime change: 3
 - concept_id: putinism-soul
-  total_mentions_estimated: 186
+  total_mentions_estimated: 202
   by_phrase:
     Putinism and the soul of Russia: 0
-    Putin: 162
+    Putin: 178
     consumerism: 21
     soul of Russia: 3
 - concept_id: stalin-game-theory
-  total_mentions_estimated: 51
+  total_mentions_estimated: 58
   by_phrase:
     Stalin and game theory: 0
-    game theory: 17
+    game theory: 24
     Stalin: 34
     strategic patience: 0
 - concept_id: second-civil-war
-  total_mentions_estimated: 55
+  total_mentions_estimated: 58
   by_phrase:
     Second American Civil War: 4
-    civil war: 43
+    civil war: 46
     domestic conflict: 0
     polarization: 8
 - concept_id: psychohistory-metaphor
@@ -147,90 +148,90 @@ concepts:
     sacred: 4
     dispensational premillennialism: 3
 - concept_id: middle-east-alliance
-  total_mentions_estimated: 148
+  total_mentions_estimated: 160
   by_phrase:
     Middle East alliances: 0
     Israel Lobby: 21
-    allies: 12
-    Saudi Arabia: 115
+    allies: 16
+    Saudi Arabia: 123
 untracked_high_frequency_tokens:
 - token: okay
-  count: 2654
+  count: 2678
 - token: right
-  count: 668
-- token: people
-  count: 381
+  count: 681
 - token: it's
-  count: 381
-- token: does
-  count: 375
+  count: 404
+- token: people
+  count: 391
 - token: that's
-  count: 367
+  count: 383
+- token: does
+  count: 379
 - token: sense
   count: 280
 - token: want
-  count: 263
-- token: united
-  count: 222
+  count: 266
 - token: world
-  count: 222
+  count: 238
 - token: first
-  count: 221
+  count: 230
+- token: united
+  count: 227
 - token: states
-  count: 210
-- token: there's
-  count: 178
-- token: thing
-  count: 177
-- token: going
-  count: 176
+  count: 215
 - token: military
-  count: 175
+  count: 187
+- token: there's
+  count: 183
+- token: going
+  count: 183
 - token: know
-  count: 172
+  count: 181
+- token: thing
+  count: 178
+- token: china
+  count: 174
+- token: think
+  count: 166
 - token: don't
+  count: 164
+- token: really
+  count: 159
+- token: against
   count: 155
 - token: guys
   count: 155
-- token: against
-  count: 151
-- token: china
-  count: 150
-- token: think
-  count: 147
-- token: understand
-  count: 146
-- token: problem
-  count: 144
 - token: they're
-  count: 143
+  count: 152
+- token: understand
+  count: 148
+- token: problem
+  count: 147
 - token: you're
-  count: 141
-- token: really
-  count: 138
-- token: three
-  count: 129
-- token: country
-  count: 127
-- token: idea
-  count: 126
-- token: money
-  count: 126
+  count: 142
 - token: question
+  count: 135
+- token: three
+  count: 135
+- token: money
+  count: 132
+- token: country
+  count: 130
+- token: idea
+  count: 129
+- token: much
+  count: 128
+- token: reason
   count: 126
 - token: actually
   count: 125
-- token: reason
-  count: 122
-- token: much
-  count: 119
 - token: time
-  count: 111
-- token: basically
-  count: 110
-- token: ukraine
-  count: 110
+  count: 117
 - token: believe
-  count: 109
-- token: fight
-  count: 108
+  count: 112
+- token: ukraine
+  count: 112
+- token: society
+  count: 112
+- token: basically
+  count: 111

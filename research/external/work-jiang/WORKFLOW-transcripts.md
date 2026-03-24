@@ -146,8 +146,20 @@ Run any subset per video; order is flexible.
 
 1. **Internal consistency** — Do definitions stay stable? Do later claims depend on earlier ones?  
 2. **CIV-MEM lattice** — Follow [CIV-MEM-LENS.md](CIV-MEM-LENS.md): **conditions**, **institutions**, **seams**, **continuity/memory**, **time structure**, **decline/stress**, then **multi-perspective**. [work-civ-mem](../../../docs/skill-work/work-civ-mem/README.md) / [`docs/civilization-memory/`](../../../docs/civilization-memory/README.md) are **retrieval surfaces** for analogy and vocabulary — not automatic truth; tag `{CMC: path}` if corpus text enters a shippable draft ([civ-mem-draft-protocol](../../../docs/skill-work/work-politics/civ-mem-draft-protocol.md)).  
-3. **Current-events grounding (optional)** — One short paragraph: where abstract claims meet a concrete episode; flag **ship** vs **draft** if anything could become public copy.  
-4. **Book/site placement** — Outline hook: which chapter or site section this feeds; duplicates or contradictions vs other memos.
+3. **PSY-HIST lattice** — Follow [PSY-HIST-LENS.md](PSY-HIST-LENS.md): **macro variables**, **psychological inertia**, **cycle phase**, **Seldon crisis**, **predictability horizon**, **steering levers**, **validation protocol**. Dual-lens with CIV-MEM; see dual-lens workflow below.  
+4. **Current-events grounding (optional)** — One short paragraph: where abstract claims meet a concrete episode; flag **ship** vs **draft** if anything could become public copy.  
+5. **Book/site placement** — Outline hook: which chapter or site section this feeds; duplicates or contradictions vs other memos.
+
+### Dual-lens (CIV-MEM + PSY-HIST) workflow
+
+**Why dual-lens?** CIV-MEM answers *what is structured, by whom, and where are the seams?* — conditions, institutions, continuity, decline. PSY-HIST answers *what is predictable, over what horizon, and what are the leverage points?* — macro variables, cycle phase, Seldon crisis, steering levers. Together they produce an Integrated Operator Thesis: structure (CIV-MEM) + prediction/steering (PSY-HIST).
+
+LLM-generated lens memos land in `analysis/pending/`; human review before promotion.
+
+1. **Generate** — `python3 scripts/work_jiang/generate_civmem_memo.py --lecture <source_id>` and/or `generate_psy_hist_memo.py`, or `generate_dual_lenses.py --lecture <source_id>` for both.  
+2. **Review** — Edit the draft in `analysis/pending/`; set `review_status: approved` in frontmatter.  
+3. **Promote** — `python3 scripts/work_jiang/promote_reviewed_memo.py --id <source_id> --lens civ-mem` (or `--lens psy-hist`).  
+4. **Rebuild** — Promote runs `build_source_registry` and `rebuild_all`; or run manually after batch promotion.
 
 ---
 
@@ -227,6 +239,11 @@ Before treating a memo as “done for this sprint”:
 | Rebuild prediction/divergence SQLite | `python3 scripts/work_jiang/rebuild_registry_db.py` |
 | Query predictions (SQLite) | `python3 scripts/work_jiang/query_predictions.py --status contradicted` |
 | Comparative sweep memo + gate draft | `python3 scripts/work_jiang/run_comparative_sweep.py` |
+| Generate CIV-MEM memo (draft → pending) | `python3 scripts/work_jiang/generate_civmem_memo.py --lecture civ-21` |
+| Generate PSY-HIST memo (draft → pending) | `python3 scripts/work_jiang/generate_psy_hist_memo.py --lecture geo-12` |
+| Generate both lenses | `python3 scripts/work_jiang/generate_dual_lenses.py --lecture geo-12` |
+| Promote reviewed memo | `python3 scripts/work_jiang/promote_reviewed_memo.py --id civ-21 --lens civ-mem` |
+| Create dual-lens chapter scaffold | `python3 scripts/work_jiang/create_chapter_scaffold.py --chapter-id ch01 --dual-lens` |
 | Migrate memo / JSON versions | `python3 scripts/work_jiang/migrate_analysis_memo.py --dry-run analysis/` |
 | Lazy bump JSON schema major | `python3 scripts/work_jiang/validate_lecture_analysis_json.py --write-bump-major path/-analysis.json` |
 | Optional GPU / API / registry env | [OFFLOAD-ENV.md](OFFLOAD-ENV.md) |

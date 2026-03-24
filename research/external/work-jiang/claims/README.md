@@ -14,6 +14,18 @@ Structured **philosophical and empirical claims** attributed to the Geo-Strategy
 | `scope` | `personal`, `civilizational`, `geopolitical`, `educational`, `religious`, `institutional` |
 | `status` | `captured`, `supported`, `contested`, `pending_resolution`, `retired` |
 
+## Optional PSY-HIST fields
+
+When a claim is extracted from or informed by PSY-HIST lens analysis, you may add:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `psycho_phase` | string | Cycle phase, e.g. `overextension`, `growth`, `crisis`, `collapse` |
+| `seldon_flag` | boolean | True if the claim maps to a Seldon-crisis window (high-leverage intervention) |
+| `horizon_years` | integer | Predictability window in years (e.g. 20 for a multi-decade forecast) |
+
+No migration of existing rows; new claims may include these.
+
 ## Relationship to thesis
 
 - [`metadata/thesis-map.yaml`](../metadata/thesis-map.yaml) lists `linked_claim_ids` per subclaim.

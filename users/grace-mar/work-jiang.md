@@ -36,7 +36,7 @@ Nothing in this file is Record truth for the Voice until merged through the gate
 status: OUTLINE_ACTIVE
 edge: "Philosophy book + site; transcript-driven; civ-mem lattice; current-events grounding"
 gaps: []
-notes: "See research/external/work-jiang/STATUS.md and BOOK-ARCHITECTURE.md for live production state."
+notes: "See research/external/work-jiang/STATUS.md and BOOK-ARCHITECTURE.md for live production state. Geo-Strategy series resumed 2026-03-23; geo-13+ pending ingest."
 ```
 <!-- WORK-JIANG-CONTAINER-END -->
 

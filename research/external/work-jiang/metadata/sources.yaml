@@ -167,6 +167,118 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: geo-13
+  video_id: 8XdL-7tAqnU
+  title: 'Geo-Strategy #13: US-Iran War Incoming'
+  canonical_url: https://www.youtube.com/watch?v=8XdL-7tAqnU
+  lecture_path: lectures/geo-strategy-13-us-iran-war-incoming.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 13
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-14
+  video_id: N4cs-8mrP_s
+  title: 'Geo-Strategy #14: WWIII Begins, Let''s Game Theory'
+  canonical_url: https://www.youtube.com/watch?v=N4cs-8mrP_s
+  lecture_path: lectures/geo-strategy-14-wwiii-begins-lets-game-theory.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 14
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-15
+  video_id: bc9adtiIN_k
+  title: 'Geo-Strategy #15: The Messianic Calling'
+  canonical_url: https://www.youtube.com/watch?v=bc9adtiIN_k
+  lecture_path: lectures/geo-strategy-15-the-messianic-calling.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 15
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-16
+  video_id: Kw-TiN6dEcM
+  title: 'Geo-Strategy #16: Newton''s Divine Plan'
+  canonical_url: https://www.youtube.com/watch?v=Kw-TiN6dEcM
+  lecture_path: lectures/geo-strategy-16-newtons-divine-plan.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 16
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-17
+  video_id: 5I2VPYPJJ68
+  title: 'Geo-Strategy #17: The Universal Law of Game Theory'
+  canonical_url: https://www.youtube.com/watch?v=5I2VPYPJJ68
+  lecture_path: lectures/geo-strategy-17-the-universal-law-of-game-theory.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 17
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-18
+  video_id: ZgvAHZqaawA
+  title: 'Geo-Strategy #18: Is Putin the Ubermensch?'
+  canonical_url: https://www.youtube.com/watch?v=ZgvAHZqaawA
+  lecture_path: lectures/geo-strategy-18-is-putin-the-ubermensch.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 18
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-19
+  video_id: YQ-xg1nIbMs
+  title: 'Geo-Strategy #19: When Eschatologies Converge'
+  canonical_url: https://www.youtube.com/watch?v=YQ-xg1nIbMs
+  lecture_path: lectures/geo-strategy-19-when-eschatologies-converge.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 19
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
+- source_id: geo-20
+  video_id: E83dpuyvpiM
+  title: 'Geo-Strategy #20: Why the West is Doomed'
+  canonical_url: https://www.youtube.com/watch?v=E83dpuyvpiM
+  lecture_path: lectures/geo-strategy-20-why-the-west-is-doomed.md
+  analysis_path: null
+  series: geo-strategy
+  episode: 20
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: missing
 - source_id: civ-01
   video_id: Jjqf9T59uY0
   title: 'Civilization #1: Explaining Humanity''s Transition to Agriculture'
