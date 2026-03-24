@@ -1121,3 +1121,214 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: sh-01
+  video_id: lt8XLz78ZvY
+  title: 'Secret History #1: How Power Works (4K Re-Upload with Audio Fixed)'
+  canonical_url: https://www.youtube.com/watch?v=lt8XLz78ZvY
+  lecture_path: lectures/secret-history-01-how-power-works.md
+  analysis_path: null
+  series: secret-history
+  episode: 1
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-02
+  video_id: K-_l9jBGo74
+  title: 'Secret History #2: How Societies Collapse'
+  canonical_url: https://www.youtube.com/watch?v=K-_l9jBGo74
+  lecture_path: lectures/secret-history-02-how-societies-collapse.md
+  analysis_path: null
+  series: secret-history
+  episode: 2
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-03
+  video_id: 0g3yo1DjiLM
+  title: 'Secret History #3: Death by Gerontocracy'
+  canonical_url: https://www.youtube.com/watch?v=0g3yo1DjiLM
+  lecture_path: lectures/secret-history-03-death-by-gerontocracy.md
+  analysis_path: null
+  series: secret-history
+  episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-04
+  video_id: BtlWoqWLm9Q
+  title: 'Secret History #4: How Evil Triumphs'
+  canonical_url: https://www.youtube.com/watch?v=BtlWoqWLm9Q
+  lecture_path: lectures/secret-history-04-how-evil-triumphs.md
+  analysis_path: null
+  series: secret-history
+  episode: 4
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-05
+  video_id: EgGfQdv_rPc
+  title: 'Secret History #5: The Birth of Evil'
+  canonical_url: https://www.youtube.com/watch?v=EgGfQdv_rPc
+  lecture_path: lectures/secret-history-05-the-birth-of-evil.md
+  analysis_path: null
+  series: secret-history
+  episode: 5
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-06
+  video_id: 6PdfD44DkqA
+  title: 'Secret History #6: The Psychology of Evil (Graphic and Disturbing, Viewer
+    Discretion Advised)'
+  canonical_url: https://www.youtube.com/watch?v=6PdfD44DkqA
+  lecture_path: lectures/secret-history-06-the-psychology-of-evil-graphic-and-disturbing-viewer-discretion-advised.md
+  analysis_path: null
+  series: secret-history
+  episode: 6
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-07
+  video_id: JU_8fJjtGxA
+  title: 'Secret History #7: Death by Meritocracy'
+  canonical_url: https://www.youtube.com/watch?v=JU_8fJjtGxA
+  lecture_path: lectures/secret-history-07-death-by-meritocracy.md
+  analysis_path: null
+  series: secret-history
+  episode: 7
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-08
+  video_id: hk_yhi3-prw
+  title: 'Secret History #8: Death by Bureaucracy'
+  canonical_url: https://www.youtube.com/watch?v=hk_yhi3-prw
+  lecture_path: lectures/secret-history-08-death-by-bureaucracy.md
+  analysis_path: null
+  series: secret-history
+  episode: 8
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-09
+  video_id: 9MURGjjG4aA
+  title: 'Secret History #9: The Theory of Everything'
+  canonical_url: https://www.youtube.com/watch?v=9MURGjjG4aA
+  lecture_path: lectures/secret-history-09-the-theory-of-everything.md
+  analysis_path: null
+  series: secret-history
+  episode: 9
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-10
+  video_id: ihh1fdW4-cA
+  title: 'Secret History #10: The Conspiracy of Evil'
+  canonical_url: https://www.youtube.com/watch?v=ihh1fdW4-cA
+  lecture_path: lectures/secret-history-10-the-conspiracy-of-evil.md
+  analysis_path: null
+  series: secret-history
+  episode: 10
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-11
+  video_id: LvHsg5qtDs8
+  title: 'Secret History #11: Dawn of the Human Imagination'
+  canonical_url: https://www.youtube.com/watch?v=LvHsg5qtDs8
+  lecture_path: lectures/secret-history-11-dawn-of-the-human-imagination.md
+  analysis_path: null
+  series: secret-history
+  episode: 11
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-12
+  video_id: VtnRA-GNKM8
+  title: 'Secret History #12: Heaven on Earth'
+  canonical_url: https://www.youtube.com/watch?v=VtnRA-GNKM8
+  lecture_path: lectures/secret-history-12-heaven-on-earth.md
+  analysis_path: null
+  series: secret-history
+  episode: 12
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-13
+  video_id: FJF8oD_5c_w
+  title: 'Secret History #13: Mandate of Heaven'
+  canonical_url: https://www.youtube.com/watch?v=FJF8oD_5c_w
+  lecture_path: lectures/secret-history-13-mandate-of-heaven.md
+  analysis_path: null
+  series: secret-history
+  episode: 13
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-14
+  video_id: JpTI2gFYWrU
+  title: 'Secret History #14: Legacy of the Steppes'
+  canonical_url: https://www.youtube.com/watch?v=JpTI2gFYWrU
+  lecture_path: lectures/secret-history-14-legacy-of-the-steppes.md
+  analysis_path: null
+  series: secret-history
+  episode: 14
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: sh-15
+  video_id: rkt0HQOogHE
+  title: 'Secret History #15: Capital and the Bronze Age Collapse'
+  canonical_url: https://www.youtube.com/watch?v=rkt0HQOogHE
+  lecture_path: lectures/secret-history-15-capital-and-the-bronze-age-collapse.md
+  analysis_path: null
+  series: secret-history
+  episode: 15
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started

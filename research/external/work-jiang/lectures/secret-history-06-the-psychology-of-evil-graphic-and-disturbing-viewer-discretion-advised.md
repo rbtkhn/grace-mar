@@ -1,0 +1,73 @@
+# Secret History #6: The Psychology of Evil (Graphic and Disturbing, Viewer Discretion Advised)
+
+**Speaker:** Jiang Xueqin  
+**Audience:** Chinese high school students  
+**Series:** Secret History **#6**  
+**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Topic:** TBD — one-paragraph summary after listen.
+
+**Source (canonical recording):** [Predictive History — Secret History #6: The Psychology of Evil (Graphic and Disturbing, Viewer Discretion Advised)](https://www.youtube.com/watch?v=6PdfD44DkqA) (`@PredictiveHistory`).  
+**Transcript:** Operator-supplied text (file); wording preserved for traceability; run `normalize_lecture_transcript_asr.py` after editorial pass if needed.
+
+---
+
+## At a glance
+
+- TBD after listen.
+
+---
+
+## Concepts named in lecture (tags)
+
+`tbd`
+
+---
+
+## Full transcript
+
+Secret History #6: The Psychology of Evil (Graphic and Disturbing, Viewer Discretion Advised)
+
+Lecture arc:
+- Continues the secret-society unit, now focused on "mind control" as a strategic tool.
+- Opens with recap of prior conceptual scaffolding: mind->matter frame, metaphorical cognition, and intuition vs counterintuitive modern epistemology.
+- Connects those ideas to mechanisms of social control in mass civilization.
+
+Civilizational framing:
+- Compares four early mass societies (China, Indus Valley, Mesopotamia, Egypt) as distinct social-control solutions:
+  - China: bureaucracy/examination regime.
+  - Indus: religion-centered egalitarian order.
+  - Mesopotamia: war as organizing structure.
+  - Egypt: divine kingship centered on Pharaoh.
+- Core claim: every mass society solves social-control constraints with scalable psychological-political systems.
+
+Leadership/psychology thesis:
+- Rejects mainstream leadership virtues as explanatory core.
+- Proposes three operative traits for durable rule: unpredictability, high stress tolerance, low empathy.
+- Reframes these as dissociation (and, in lecture rhetoric, multiple-personality/psychopathy language).
+- Game-theory framing: elite competition favors actors who can inhabit multiple alliances and role-selves.
+
+Egypt section (speculative reconstruction):
+- Reads Ra/Osiris/Horus mythology as a ritual script rather than literal cosmology.
+- Claims ritualized trauma + altered states could condition identity partitioning in royal subjects.
+- Presents "Isis" caretaker/controller figure and sensory triggers (especially smell) as control channels.
+- Instructor repeatedly marks this as theory/speculation due to limited evidence.
+
+Programming model:
+- Uses "Monkey Island" thought experiment and muscle-memory analogy to argue humans are conditionable.
+- Suggests ritual/drug/trauma sequences can produce programmable behavioral responses.
+- Emphasizes role-switching across environments as baseline human plasticity, with elite conditioning as extreme case.
+
+Modern-state continuity claim:
+- Links ancient model to post-9/11 detention/abuse narratives (Abu Ghraib, Guantanamo, enhanced interrogation).
+- References learned helplessness discourse, CIA-linked contractor psychology, and extremist blowback debates.
+- Claims such systems may produce rather than suppress radicalization.
+
+MK Ultra and contemporary systems:
+- Uses MK Ultra as historical anchor for state interest in behavior control.
+- Extends argument toward modern infrastructures (social media, pharmacology, mass psychology) as diffuse programming environments.
+- Distinguishes documented history from speculative extrapolation while urging skepticism.
+
+Class close:
+- Reiterates key takeaway: social control is a persistent civilizational problem; techniques mutate but pattern persists.
+- Handles Q&A on heaven/hell, near-death experiences, and infrastructure control with explicit caveat language ("theory/speculation").
+- Ends with preview that mass media/education/psychology will expand the framework in later sessions.

@@ -1,4 +1,4 @@
-"""Scan Geo-Strategy + Civilization lectures + analysis; write metadata/sources.yaml."""
+"""Scan work-jiang lectures + analysis; write metadata/sources.yaml."""
 from __future__ import annotations
 
 import re
@@ -15,6 +15,7 @@ SOURCE_MAP = WORK_DIR / "metadata" / "source-map.yaml"
 
 GEO_NAME = re.compile(r"^geo-strategy-(\d+)-", re.I)
 CIV_NAME = re.compile(r"^civilization-(\d+)-", re.I)
+SH_NAME = re.compile(r"^secret-history-(\d+)-", re.I)
 WATCH_RE = re.compile(r"watch\?v=([A-Za-z0-9_-]{11})")
 VIDEO_IN_NAME = re.compile(r"^([A-Za-z0-9_-]{11})-")
 
@@ -151,8 +152,43 @@ def main() -> int:
             }
         )
 
+    sh_paths = sorted(
+        LECTURES.glob("secret-history-*.md"),
+        key=lambda p: int(SH_NAME.match(p.name).group(1)) if SH_NAME.match(p.name) else 0,
+    )
+    for lecture in sh_paths:
+        m = SH_NAME.match(lecture.name)
+        if not m:
+            continue
+        ep = int(m.group(1))
+        source_id = f"sh-{ep:02d}"
+        vid = extract_video_id_from_lecture(lecture)
+        matched, analysis_status = analysis_for_source(vid, source_id)
+        analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
+        sources.append(
+            {
+                "source_id": source_id,
+                "video_id": vid,
+                "title": title_from_lecture(lecture),
+                "canonical_url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
+                "lecture_path": str(lecture.relative_to(WORK_DIR)),
+                "analysis_path": analysis_path,
+                "series": "secret-history",
+                "episode": ep,
+                "themes": [],
+                "status": {
+                    "transcript": "complete",
+                    "curated_lecture": "complete",
+                    "analysis": analysis_status,
+                    "chapter_mapping": "missing",
+                },
+            }
+        )
+
     for s in sources:
         if s["source_id"].startswith("civ-"):
+            s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
+        if s["source_id"].startswith("sh-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
