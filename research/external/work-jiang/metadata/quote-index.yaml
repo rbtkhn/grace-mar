@@ -4,7 +4,7 @@ quotes:
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: make sure that it's able to obtain oil from the Middle East China right
     now is getting most of its oil from the Middle East okay um but it will take time
@@ -29,7 +29,7 @@ quotes:
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: basis okay so so China would probably provide weapons and material but
     this will not impact the relationship between China and the uh United States okay
@@ -53,7 +53,7 @@ quotes:
   source_id: geo-03
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: on domestic expenses okay so they needed to transition out of the gold
     standard but if you trans transition out of the gold standard then how do you
@@ -75,7 +75,7 @@ quotes:
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: must demonstrate it still is the military hegemon of the world and therefore
     I can do this by um invading Iran okay today we look at the third and final force
@@ -100,7 +100,7 @@ quotes:
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: 'Third **driver** of US–Middle East **Iran** pressure: **Saudi–Iran**
     **rivalry** (religious **Sunni–Shia**, **oil** economics, **regional** influence)
@@ -123,7 +123,7 @@ quotes:
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Series recap:** Reasons for US **Iran** pressure so far: (1) **Israel
     Lobby** / Christian Zionist timeline; (2) **Empire** / dollar hegemony / **Ukraine**
@@ -144,7 +144,7 @@ quotes:
   source_id: geo-03
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Monetary / geopolitical history (lecture):** **Bretton Woods (1944)**
     → **dollar reserve** + **gold backing**; **1971** Nixon off gold → **petrodollar**
@@ -161,7 +161,7 @@ quotes:
   source_id: geo-08
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: East is actually not between Israel and Iran but between Saudi Arabia
     and Iran for Israel Iran is a security threat because it it supports hasah and
@@ -184,7 +184,7 @@ quotes:
   source_id: geo-09
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: believe that it's because Russia is not doing so well in Ukraine they
     lack Manpower and and so they need to mobilize their society to fully win the
@@ -207,7 +207,7 @@ quotes:
   source_id: geo-02
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: Explain **why the US may invade Iran** by way of **three drivers** (empire
     defense, ally pressure, Israel Lobby), with the lecture spending most of its time
@@ -224,10 +224,26 @@ quotes:
   - religious-legitimacy
   - saudi-iran-axis
 - quote_id: q-0011
+  source_id: civ-20
+  chapter_ids:
+  - ch02
+  status: cleaned
+  speaker: Jiang Xueqin
+  text_raw: '- [Civilization #18 — Great Pyramid](../lectures/civilization-18-the-great-pyramid-as-ancient-egypts-manhattan-project.md),
+    [Civilization #19 — Gilgamesh](../lectures/civilization-19-gilgamesh-and-mesopotamias-quest-for-immortality.md)
+    — Egypt/Sumer as dialectic contrast for IVC religion.'
+  text_clean: '- [Civilization #18 — Great Pyramid](../lectures/civilization-18-the-great-pyramid-as-ancient-egypts-manhattan-project.md),
+    [Civilization #19 — Gilgamesh](../lectures/civilization-19-gilgamesh-and-mesopotamias-quest-for-immortality.md)
+    — Egypt/Sumer as dialectic contrast for IVC religion.'
+  timestamp: ''
+  theme_tags:
+  - religious-legitimacy
+  - civ-formation
+- quote_id: q-0012
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: okay does that make sense there are many people most people in America
     do not support a war against Iran and so Iran needs to encourage this internal
@@ -246,11 +262,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0012
+- quote_id: q-0013
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: sense of fairness and Justice right what Israel did was wrong it attacked
     an embassy of Iran Damascus that's against that's that that is against international
@@ -269,11 +285,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0013
+- quote_id: q-0014
   source_id: geo-03
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: the gold standard these countries in the Middle East meaning Saudi Arabia
     but other countries as well agreed that you could buy oil using US dollars so
@@ -293,11 +309,11 @@ quotes:
   theme_tags:
   - saudi-iran-axis
   - middle-east-alliance
-- quote_id: q-0014
+- quote_id: q-0015
   source_id: geo-08
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: okay so um Iran what does Iran want to do what what does Iran want to
     do or the basically the Revolutionary G Corp what do they want to do ex me they
@@ -316,11 +332,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0015
+- quote_id: q-0016
   source_id: geo-08
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: States wants to top of Iran we know that Iran wants to force a US invasion
     to defeat the the the Americans to humiliate the Americans and and um exact revenge
@@ -339,11 +355,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0016
+- quote_id: q-0017
   source_id: geo-09
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: warrior culture and the reason why is that throughout most of Chinese
     history China was the dominant power the hamon okay also China is surrounded by
@@ -362,11 +378,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - putinism-soul
-- quote_id: q-0017
+- quote_id: q-0018
   source_id: geo-02
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Closing thesis (stated):** Some US Christians treat Israel/Jews as
     **instruments** toward Jesus’s return; US **founding narrative** (Bible supremacy,
@@ -383,11 +399,11 @@ quotes:
   - christian-zionism
   - saudi-iran-axis
   - education-narrative
-- quote_id: q-0018
+- quote_id: q-0019
   source_id: geo-03
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Ukraine:** Russian invasion as **challenge to American empire** narrative
     (“paper tiger”); US must **stop Russia**; war going badly for US/Ukraine in lecture’s
@@ -400,11 +416,11 @@ quotes:
   - empire-order
   - putinism-soul
   - education-narrative
-- quote_id: q-0019
+- quote_id: q-0020
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Religion:** **Sunni** (majority globally; **Saudi** leadership of holy
     cities) vs **Shia** (**Iran**); **succession** dispute after Prophet (lecture’s
@@ -421,11 +437,11 @@ quotes:
   - religious-legitimacy
   - saudi-iran-axis
   - education-narrative
-- quote_id: q-0020
+- quote_id: q-0021
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Later threads in same session (for cross-refs):** rules of engagement
     among major powers before a hypothetical war; “strategic ambiguity” for China/Russia;
@@ -440,11 +456,11 @@ quotes:
   - empire-order
   - empire-hubris
   - putinism-soul
-- quote_id: q-0021
+- quote_id: q-0022
   source_id: geo-03
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: 9. **Ukraine:** Russia challenges **invincibility**; US/Ukraine position
     **bad**; threatens dollar **confidence** narrative.
@@ -454,11 +470,11 @@ quotes:
   theme_tags:
   - putinism-soul
   - education-narrative
-- quote_id: q-0022
+- quote_id: q-0023
   source_id: geo-10
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Forward** **predictions** **(3–4** **years):** **Drag** **Ukraine;**
     **Iran** **provocation** **under** **Russian** **nuclear** **umbrella** **(hypothetical);**
@@ -472,11 +488,11 @@ quotes:
   theme_tags:
   - saudi-iran-axis
   - putinism-soul
-- quote_id: q-0023
+- quote_id: q-0024
   source_id: geo-03
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: and the theory here is that if you do it this way then all countries will
     become rich okay so let me explain why all right so let's look at uh us and China
@@ -494,11 +510,11 @@ quotes:
     power to buy American Technology right
   timestamp: ''
   theme_tags: []
-- quote_id: q-0024
+- quote_id: q-0025
   source_id: geo-03
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: would want to feel good themselves always okay so it so when you are an
     Empire you want to be stupid and arrogant because it makes you feel good does
@@ -517,11 +533,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - empire-order
-- quote_id: q-0025
+- quote_id: q-0026
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: of 1979 Saudi Arabia and Iran are good friends okay so let's look at a
     map of the Middle East Iran is here uh it's next to Iraq uh Saudi Arabia is down
@@ -541,11 +557,11 @@ quotes:
   theme_tags:
   - saudi-iran-axis
   - middle-east-alliance
-- quote_id: q-0026
+- quote_id: q-0027
   source_id: geo-05
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: will bring Jesus back to Earth Earth and establish the kingdom of heaven
     and therefore they want as much conflict in the Middle East as possible okay so
@@ -565,11 +581,11 @@ quotes:
   theme_tags:
   - saudi-iran-axis
   - middle-east-alliance
-- quote_id: q-0027
+- quote_id: q-0028
   source_id: geo-07
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: uh king of of Iran okay that's the first reason but the second reason
     is they were afraid that the Sha had gone to America to win America's support
@@ -588,11 +604,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0028
+- quote_id: q-0029
   source_id: geo-07
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: that you do which means have special forces okay it is suicide to attack
     America uh in the open so what Iran needs to do is Trick America into invading
@@ -611,11 +627,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0029
+- quote_id: q-0030
   source_id: geo-08
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: stay in the Middle East what happens if United States what happens if
     United States and Iran both lose the war mean Iran is destroyed as a country the
@@ -635,11 +651,22 @@ quotes:
   theme_tags:
   - saudi-iran-axis
   - middle-east-alliance
-- quote_id: q-0030
+- quote_id: q-0031
+  source_id: civ-20
+  chapter_ids:
+  - ch02
+  status: cleaned
+  speaker: Jiang Xueqin
+  text_raw: '- **raw_transcript:** operator paste → [lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md](../lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md)'
+  text_clean: '- **raw_transcript:** operator paste → [lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md](../lectures/civilization-20-the-proto-buddhists-of-the-indus-valley-harappan-civilization.md)'
+  timestamp: ''
+  theme_tags:
+  - civ-formation
+- quote_id: q-0032
   source_id: geo-03
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Framing (series):** Picks up after **Israel Lobby** (prior class):
     today’s reason for US **Iran** pressure is **defense of empire** — America as
@@ -651,11 +678,11 @@ quotes:
   theme_tags:
   - empire-order
   - saudi-iran-axis
-- quote_id: q-0031
+- quote_id: q-0033
   source_id: geo-02
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: 7. **Strategic:** Israel can **leverage** Christian Zionism for **US**
     support; **US** may frame **Israel vs Iran** as **religious duty**; some actors
@@ -667,11 +694,11 @@ quotes:
   theme_tags:
   - christian-zionism
   - saudi-iran-axis
-- quote_id: q-0032
+- quote_id: q-0034
   source_id: geo-04
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '- [Geo-Strategy #3](../lectures/geo-strategy-03-how-empire-is-destroying-america.md)
     — **empire** / **dollar** / **Iran** **invasion** **motivation**.'
@@ -681,11 +708,11 @@ quotes:
   theme_tags:
   - empire-order
   - saudi-iran-axis
-- quote_id: q-0033
+- quote_id: q-0035
   source_id: geo-03
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: 5. **Monetary history:** Bretton Woods reserve dollar + gold; 1971; **petrodollar**;
     1991 unipolar moment + **trade** theory.
@@ -693,11 +720,11 @@ quotes:
     **petrodollar**; 1991 unipolar moment + **trade** theory.
   timestamp: ''
   theme_tags: []
-- quote_id: q-0034
+- quote_id: q-0036
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: these and then you that's like $10 million and then you have 10,000 of
     these and that's another $10 million okay so it will cost you maybe $20 million
@@ -716,11 +743,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0035
+- quote_id: q-0037
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: that Iran is going to do from now until the actual Invasion will be to
     accomplish all four goals at once and it must if it is to survive a fullscale
@@ -739,11 +766,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0036
+- quote_id: q-0038
   source_id: geo-01
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: okay BP and the idea is that this company would be responsible for extracting
     and selling all the oil and but unfortunately the deal was that Iran Persia would
@@ -762,11 +789,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0037
+- quote_id: q-0039
   source_id: geo-03
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: defend its Imperial status so let's examine what an Empire means for America
     so from 1950 to 1980 America's economy was mainly focused on manufacturing factories
@@ -785,11 +812,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - empire-order
-- quote_id: q-0038
+- quote_id: q-0040
   source_id: geo-03
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: does that make sense any more questions okay so so so so Jack asks a great
     question which is like listen if going to if going to e to Iran is all about restoring
@@ -809,11 +836,11 @@ quotes:
   theme_tags:
   - empire-order
   - saudi-iran-axis
-- quote_id: q-0039
+- quote_id: q-0041
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: water it's very impressive but it's all on the coast and guess what guys
     the coast uh so Iran can blow blow these plants and then the hudies can blow these
@@ -832,11 +859,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0040
+- quote_id: q-0042
   source_id: geo-04
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: Kushner left office Jared Kushner set up a private Equity Fund and MBS
     and the stud government invested $2 billion in into the fun okay does that make
@@ -853,11 +880,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0041
+- quote_id: q-0043
   source_id: geo-07
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: um as as well as Shia militia in um Iraq okay and so all the money that
     the Russ G Corp makes in Iran is then sent to this AIS of resistance to create
@@ -877,11 +904,11 @@ quotes:
   theme_tags:
   - saudi-iran-axis
   - middle-east-alliance
-- quote_id: q-0042
+- quote_id: q-0044
   source_id: geo-08
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: America's like oh Iran is only one month away from a nuclear bomb they've
     been saying this for the past 10 years so do you understand when Trump gives a
@@ -900,11 +927,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0043
+- quote_id: q-0045
   source_id: geo-09
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: consumerism and these are all lies they're hypocrisies that have fooled
     the Russian people and have corrupted the Russian soul and destroyed Russian civilization
@@ -924,11 +951,11 @@ quotes:
   theme_tags:
   - putinism-soul
   - civ-formation
-- quote_id: q-0044
+- quote_id: q-0046
   source_id: geo-09
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: end of History because it is a system that achieves what the elites want
     and the masses are unwilling and unable to protest and rebel okay does that make
@@ -948,11 +975,33 @@ quotes:
   theme_tags:
   - putinism-soul
   - civ-formation
-- quote_id: q-0045
+- quote_id: q-0047
+  source_id: civ-20
+  chapter_ids:
+  - ch02
+  status: cleaned
+  speaker: Jiang Xueqin
+  text_raw: 'Answer **three questions** about the Indus Valley (Harappan) civilization:
+    **what made IVC distinct**, **why it declined**, and **its legacy for the West**.
+    The lecture frames IVC as the **Middle Bronze Age** outlier—peaceful, egalitarian,
+    urban—in contrast to Egypt and Sumer, and advances a **proto-Buddhism** hypothesis
+    for its opaque religion. Decline is attributed to **4.2 ka event**, trade collapse,
+    elite/rat-utopia tensions, and steppe assimilation rather than simple invasion.'
+  text_clean: 'Answer **three questions** about the Indus Valley (Harappan) civilization:
+    **what made IVC distinct**, **why it declined**, and **its legacy for the West**.
+    The lecture frames IVC as the **Middle Bronze Age** outlier—peaceful, egalitarian,
+    urban—in contrast to Egypt and Sumer, and advances a **proto-Buddhism** hypothesis
+    for its opaque religion. Decline is attributed to **4.2 ka event**, trade collapse,
+    elite/rat-utopia tensions, and steppe assimilation rather than simple invasion.'
+  timestamp: ''
+  theme_tags:
+  - religious-legitimacy
+  - civ-formation
+- quote_id: q-0048
   source_id: geo-05
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: Explain **2020** **Biden** **win** via **coalition** + **suburban** **shift**;
     argue **2024** **Trump** **favored** by **coalition** **fraying** + **enthusiasm**
@@ -969,11 +1018,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - education-narrative
-- quote_id: q-0046
+- quote_id: q-0049
   source_id: geo-02
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Christianity (compressed):** Jesus, minimal historical detail; core
     narrative — crucifixion, resurrection, **Second Coming**, kingdom of heaven. Early
@@ -991,11 +1040,11 @@ quotes:
   theme_tags:
   - religious-legitimacy
   - education-narrative
-- quote_id: q-0047
+- quote_id: q-0050
   source_id: geo-08
   chapter_ids:
   - ch03
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Drivers:** **AIPAC** **+** **CUFI** **scale;** **empire** **/** **Wall**
     **Street;** **Saudi** **vs** **Iran** **as** **existential** **regional** **frame**
@@ -1013,11 +1062,11 @@ quotes:
   theme_tags:
   - empire-order
   - saudi-iran-axis
-- quote_id: q-0048
+- quote_id: q-0051
   source_id: geo-09
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Intellectual** **arc:** **Fukuyama** **/** **“end** **of** **history”**
     **+** **Hegelian** **dialectic** **sketch** **→** **consumerism** **as** **liberal-democratic**
@@ -1037,11 +1086,11 @@ quotes:
   theme_tags:
   - religious-legitimacy
   - civ-formation
-- quote_id: q-0049
+- quote_id: q-0052
   source_id: geo-05
   chapter_ids:
   - ch02
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Suburbs:** **Swing** geography; **2020** shift to **Biden** — **reasons:**
     **media** / **Trump** **divisive** narrative, **Russian** **asset** story, **George
@@ -1057,11 +1106,11 @@ quotes:
   theme_tags:
   - putinism-soul
   - education-narrative
-- quote_id: q-0050
+- quote_id: q-0053
   source_id: geo-05
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**Haley & Iran (lecture):** Post-UN **wealth**; **United Against a Nuclear
     Iran**; **Adelson** / **Boeing** board / **Christians United for Israel** — **framed**
@@ -1072,11 +1121,11 @@ quotes:
   timestamp: ''
   theme_tags:
   - saudi-iran-axis
-- quote_id: q-0051
+- quote_id: q-0054
   source_id: geo-05
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: '**2024 Biden headwinds (lecture):** **Inflation** hurting **poor**; **illegal
     immigration** doubling (lecture figures); **Ukraine** spending vs **domestic**
@@ -1090,11 +1139,11 @@ quotes:
     Gaza, age); **women** still **Democratic** (e.g. **abortion**).'
   timestamp: ''
   theme_tags: []
-- quote_id: q-0052
+- quote_id: q-0055
   source_id: geo-06
   chapter_ids:
   - ch01
-  status: candidate
+  status: cleaned
   speaker: Jiang Xueqin
   text_raw: Empire and it's refusing to spend the necessary resources to protect the
     Empire so for example the US Navy okay 1945 it had 7,600 ships today guess what
@@ -1109,58 +1158,3 @@ quotes:
   timestamp: ''
   theme_tags:
   - empire-order
-- quote_id: q-0053
-  source_id: geo-02
-  chapter_ids:
-  - ch01
-  status: candidate
-  speaker: Jiang Xueqin
-  text_raw: 'See [CIV-MEM-LENS.md](../CIV-MEM-LENS.md) for methodology. This lecture
-    is a strong fit: **empire**, **religion as institution**, **alliance seams**,
-    and **founding memory** are all foregrounded.'
-  text_clean: 'See [CIV-MEM-LENS.md](../CIV-MEM-LENS.md) for methodology. This lecture
-    is a strong fit: **empire**, **religion as institution**, **alliance seams**,
-    and **founding memory** are all foregrounded.'
-  timestamp: ''
-  theme_tags:
-  - empire-order
-  - religious-legitimacy
-  - middle-east-alliance
-- quote_id: q-0054
-  source_id: geo-02
-  chapter_ids:
-  - ch03
-  status: candidate
-  speaker: Jiang Xueqin
-  text_raw: '**Framing:** Continues the “US–Iran war” arc: invasion is treated as
-    eventual; this class gives **three reasons** — (1) US must defend its empire,
-    (2) **allies** (especially Saudi Arabia and Israel) pressure the US toward war,
-    (3) the **Israel Lobby**. The bulk of the lecture builds toward (3) by explaining
-    **Christianity** and **end-times theologies** first.'
-  text_clean: '**Framing:** Continues the “US–Iran war” arc: invasion is treated as
-    eventual; this class gives **three reasons** — (1) US must defend its empire,
-    (2) **allies** (especially Saudi Arabia and Israel) pressure the US toward war,
-    (3) the **Israel Lobby**. The bulk of the lecture builds toward (3) by explaining
-    **Christianity** and **end-times theologies** first.'
-  timestamp: ''
-  theme_tags:
-  - empire-order
-  - religious-legitimacy
-  - saudi-iran-axis
-- quote_id: q-0055
-  source_id: geo-06
-  chapter_ids:
-  - ch01
-  status: candidate
-  speaker: Jiang Xueqin
-  text_raw: '**Next** **class** **(channel** **order** **varies):** **terrain** **/**
-    **Iran** **war** **template** **—** **developed** **in** **Geo-Strategy** **#8**
-    **[*The** **Iran** **Trap*](https://www.youtube.com/watch?v=7y_hbz6loEo)**; **#7**
-    **on** **channel** **is** **Raisi** **helicopter** **episode**.'
-  text_clean: '**Next** **class** **(channel** **order** **varies):** **terrain**
-    **/** **Iran** **war** **template** **—** **developed** **in** **Geo-Strategy**
-    **#8** **[*The** **Iran** **Trap*](https://www.youtube.com/watch?v=7y_hbz6loEo)**;
-    **#7** **on** **channel** **is** **Raisi** **helicopter** **episode**.'
-  timestamp: ''
-  theme_tags:
-  - saudi-iran-axis
