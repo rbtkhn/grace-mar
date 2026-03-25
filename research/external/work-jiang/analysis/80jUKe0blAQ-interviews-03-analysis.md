@@ -62,7 +62,8 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 ## Cross-refs
 
 - [Interviews #2 — Dimitri Lascaris](uHIdRgFypNo-interviews-02-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
-- [Interviews #4 — Tucker Carlson](2K2nQsTTjQE-interviews-04-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** (later chronologically).
+- [Interviews #4 — Nima](JyHoh97yhWU-interviews-04-analysis.md) — **WWIII** **/** **Greater** **Israel** **/** **GCC** **(Mar** **8)**.
+- [Interviews #5 — Tucker Carlson](2K2nQsTTjQE-interviews-05-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** (later chronologically).
 - [lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups

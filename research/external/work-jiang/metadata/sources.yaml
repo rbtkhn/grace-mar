@@ -2013,14 +2013,29 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-04
-  video_id: 2K2nQsTTjQE
-  title: 'Interviews #4: Tucker Carlson — Iran War, Energy, and Global Order'
-  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
-  publication_date: 2026-03-20
-  lecture_path: lectures/interviews-04-tucker-carlson-iran-war-and-global-order.md
-  analysis_path: analysis/2K2nQsTTjQE-interviews-04-analysis.md
+  video_id: JyHoh97yhWU
+  title: 'Interviews #4: Nima — Is This WW3? The Greater Israel Project'
+  canonical_url: https://www.youtube.com/watch?v=JyHoh97yhWU
+  publication_date: 2026-03-08
+  lecture_path: lectures/interviews-04-nima-is-this-ww3-greater-israel-project.md
+  analysis_path: analysis/JyHoh97yhWU-interviews-04-analysis.md
   series: interviews
   episode: 4
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: vi-05
+  video_id: 2K2nQsTTjQE
+  title: 'Interviews #5: Tucker Carlson — Iran War, Energy, and Global Order'
+  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
+  publication_date: 2026-03-20
+  lecture_path: lectures/interviews-05-tucker-carlson-iran-war-and-global-order.md
+  analysis_path: analysis/2K2nQsTTjQE-interviews-05-analysis.md
+  series: interviews
+  episode: 5
   themes: []
   status:
     transcript: complete
