@@ -1,3 +1,30 @@
+# Interviews #3: Glenn Diesen — Great Power Wars Over a New World Order
+
+**Speaker:** Jiang Xueqin (guest); Glenn Diesen (host)  
+**Audience:** Long-form interview (public channel)  
+**Series:** Predictive History · Volume VI — Interviews **#3**  
+**Date (YouTube upload):** 2026-01-26  
+**Topic:** US empire, BRICS and middle powers, Trump and NATO, meritocracy and elite failure, East Asia, Iran, Canada and sovereignty.
+
+**Source (canonical recording):** [YouTube — Jiang Xueqin: Great Power Wars Over a New World Order](https://www.youtube.com/watch?v=80jUKe0blAQ) (`80jUKe0blAQ`).  
+**Transcript:** Operator-supplied text (edited for readability); speaker labels preserved.
+
+---
+
+## At a glance
+
+- Carney/Davos and middle powers vs US NSS; vassal framing, Trump as elite-breakup, Minneapolis / ICE, NATO reshaping, Europe decline, Rorty (1998) strongman prediction, neoliberalism roots, 1930s parallel, East Asia demographic and savings pessimism, Solzhenitsyn / Harvard, Iran regime resilience and color playbook, Canada and sovereignty.
+
+---
+
+## Concepts named (tags)
+
+`empire` `brics` `multilateralism` `nato` `meritocracy` `neoliberalism` `east-asia` `iran` `great-power-war`
+
+---
+
+## Full transcript
+
 **GLENN DIESEN:** Welcome back. We are very privileged today to be joined by Professor Jiang, who has been spot on in several of his predictions, looking at historical patterns and game theory to predict the direction of geopolitics. Thank you as always for coming back on.
 
 **JIANG XUEQIN:** Thanks, Glenn.

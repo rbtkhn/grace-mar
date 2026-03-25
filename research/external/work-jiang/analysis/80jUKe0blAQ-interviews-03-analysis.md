@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-02
+analysis_id: vi-03
 video_id: 80jUKe0blAQ
-source_id: vi-02
+source_id: vi-03
 canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
 series: interviews
-episode: 2
+episode: 3
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #2: Glenn Diesen — Great Power Wars Over a New World Order
+# Analysis — Interviews #3: Glenn Diesen — Great Power Wars Over a New World Order
 
 - **video_id:** `80jUKe0blAQ`
 - **canonical_url:** https://www.youtube.com/watch?v=80jUKe0blAQ
-- **series / episode:** Predictive History · Volume VI — Interviews #2
-- **raw_transcript:** [lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #3
+- **raw_transcript:** [lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -61,8 +61,9 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 
 ## Cross-refs
 
-- [Interviews #1](2K2nQsTTjQE-interviews-01-analysis.md) (Tucker Carlson) — **Iran** **/** **GCC** **thread** **continuity**.
-- [lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md)
+- [Interviews #2 — Dimitri Lascaris](uHIdRgFypNo-interviews-02-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
+- [Interviews #4 — Tucker Carlson](2K2nQsTTjQE-interviews-04-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** (later chronologically).
+- [lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups
 

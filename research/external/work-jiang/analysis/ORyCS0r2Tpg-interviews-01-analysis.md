@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-03
+analysis_id: vi-01
 video_id: ORyCS0r2Tpg
-source_id: vi-03
+source_id: vi-01
 canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
 series: interviews
-episode: 3
+episode: 1
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
+# Analysis — Interviews #1: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
 
 - **video_id:** `ORyCS0r2Tpg`
 - **canonical_url:** https://www.youtube.com/watch?v=ORyCS0r2Tpg
-- **series / episode:** Predictive History · Volume VI — Interviews #3
-- **raw_transcript:** [lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #1
+- **raw_transcript:** [lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -63,10 +63,11 @@ Forward-looking **2026** **interview**: **US–China** **April** **summit** as *
 
 ## Cross-refs
 
-- [Interviews #2 — Great Power Wars](80jUKe0blAQ-interviews-02-analysis.md) (same host) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
-- [lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- [Interviews #2 — Dimitri Lascaris](uHIdRgFypNo-interviews-02-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
+- [Interviews #3 — Great Power Wars](80jUKe0blAQ-interviews-03-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
+- [lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 
 ## Follow-ups
 
 - **If** **YouTube** **metadata** **differs** **on** **exact** **upload** **date**, **add** **to** **lecture** **header**.
-- **Optional:** **cross-link** **to** **predictions** **/** **divergence** **registry** **when** **book** **lane** **maps** **vi-03**.
+- **Optional:** **cross-link** **to** **predictions** **/** **divergence** **registry** **when** **book** **lane** **maps** **vi-01**.

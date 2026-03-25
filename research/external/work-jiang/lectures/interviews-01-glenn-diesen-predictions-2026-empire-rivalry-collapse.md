@@ -1,8 +1,9 @@
-# Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
+# Interviews #1: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
 
 **Speaker:** Jiang Xueqin (guest); Glenn Diesen (host)  
 **Audience:** Long-form interview (public channel)  
-**Series:** Predictive History · Volume VI — Interviews **#3**  
+**Series:** Predictive History · Volume VI — Interviews **#1**  
+**Date (YouTube upload):** 2026-01-05  
 **Topic:** 2026 outlook — US–China April summit, dollar and commodities, AI and financialization, Japan–China, Europe/NATO and Odessa, Venezuela and hemispheric strategy, Iran endgame.
 
 **Source (canonical recording):** [YouTube — Jiang Xueqin: Predictions for 2026 - Empire, Rivalry & Collapse](https://www.youtube.com/watch?v=ORyCS0r2Tpg) (`ORyCS0r2Tpg`).  

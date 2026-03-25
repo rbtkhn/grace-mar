@@ -1968,11 +1968,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-01
-  video_id: 2K2nQsTTjQE
-  title: 'Interviews #1: Tucker Carlson — Iran War, Energy, and Global Order'
-  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
-  lecture_path: lectures/interviews-01-tucker-carlson-iran-war-and-global-order.md
-  analysis_path: analysis/2K2nQsTTjQE-interviews-01-analysis.md
+  video_id: ORyCS0r2Tpg
+  title: 'Interviews #1: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
+  canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
+  publication_date: 2026-01-05
+  lecture_path: lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md
+  analysis_path: analysis/ORyCS0r2Tpg-interviews-01-analysis.md
   series: interviews
   episode: 1
   themes: []
@@ -1982,11 +1983,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-02
-  video_id: 80jUKe0blAQ
-  title: 'Interviews #2: Glenn Diesen — Great Power Wars Over a New World Order'
-  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
-  lecture_path: lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md
-  analysis_path: analysis/80jUKe0blAQ-interviews-02-analysis.md
+  video_id: uHIdRgFypNo
+  title: 'Interviews #2: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China'
+  canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
+  publication_date: 2026-01-22
+  lecture_path: lectures/interviews-02-dimitri-lascaris-trump-iran-davos-canada-china.md
+  analysis_path: analysis/uHIdRgFypNo-interviews-02-analysis.md
   series: interviews
   episode: 2
   themes: []
@@ -1996,13 +1998,29 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-03
-  video_id: ORyCS0r2Tpg
-  title: 'Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
-  canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
-  lecture_path: lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md
-  analysis_path: analysis/ORyCS0r2Tpg-interviews-03-analysis.md
+  video_id: 80jUKe0blAQ
+  title: 'Interviews #3: Glenn Diesen — Great Power Wars Over a New World Order'
+  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
+  publication_date: 2026-01-26
+  lecture_path: lectures/interviews-03-glenn-diesen-great-power-wars-new-world-order.md
+  analysis_path: analysis/80jUKe0blAQ-interviews-03-analysis.md
   series: interviews
   episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: vi-04
+  video_id: 2K2nQsTTjQE
+  title: 'Interviews #4: Tucker Carlson — Iran War, Energy, and Global Order'
+  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
+  publication_date: 2026-03-20
+  lecture_path: lectures/interviews-04-tucker-carlson-iran-war-and-global-order.md
+  analysis_path: analysis/2K2nQsTTjQE-interviews-04-analysis.md
+  series: interviews
+  episode: 4
   themes: []
   status:
     transcript: complete
