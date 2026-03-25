@@ -2074,3 +2074,33 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: not_started
+- source_id: vi-08
+  video_id: 4Ql24Z8SIeE
+  title: 'Interviews #8: Breaking Points (Krystal & Saagar) — US WILL LOSE Iran War'
+  canonical_url: https://www.youtube.com/watch?v=4Ql24Z8SIeE
+  publication_date: 2026-03-02
+  lecture_path: lectures/interviews-08-breaking-points-krystal-saagar-us-will-lose-iran-war.md
+  analysis_path: analysis/4Ql24Z8SIeE-interviews-08-analysis.md
+  series: interviews
+  episode: 8
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: vi-09
+  video_id: XRk5VSEzJ4Y
+  title: 'Interviews #9: Cyrus Janssen — The World Is About to Change'
+  canonical_url: https://www.youtube.com/watch?v=XRk5VSEzJ4Y
+  publication_date: 2025-10-30
+  lecture_path: lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md
+  analysis_path: analysis/XRk5VSEzJ4Y-interviews-09-analysis.md
+  series: interviews
+  episode: 9
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started

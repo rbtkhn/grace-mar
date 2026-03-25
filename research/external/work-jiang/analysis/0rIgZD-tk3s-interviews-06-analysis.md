@@ -60,6 +60,8 @@ quality_level: draft
 
 - [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **NSS** **/** **elite** **frames** **(Jan** **26)** **before** **March** **cluster**.
 - [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Tucker** **/** **Qatar** **thread** **referenced** **in** **dialogue** **(Mar** **20)**.
+- [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **same** **Iran** **/** **GCC** **/** **attrition** **themes** **;** **YouTube** **upload** **Mar** **2** **(before** **this** **episode** **in** **calendar** **)** **;** **registry** **`vi-08`** **.**
+- [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **game** **theory** **;** **Middle** **East** **/** **Ukraine** **/** **Taiwan** **;** **upload** **Oct** **2025** **;** **registry** **`vi-09`** **.**
 - [lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md](../lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md)
 
 ## Follow-ups

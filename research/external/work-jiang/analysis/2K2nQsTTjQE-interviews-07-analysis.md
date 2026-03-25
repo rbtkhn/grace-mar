@@ -12,7 +12,7 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #8: Tucker Carlson — Iran War and Global Order
+# Analysis — Interviews #7: Tucker Carlson — Iran War and Global Order
 
 - **video_id:** `2K2nQsTTjQE`
 - **canonical_url:** https://www.youtube.com/watch?v=2K2nQsTTjQE
@@ -62,6 +62,8 @@ The interview extends **Predictive History** themes into **long-form Q&A**: the 
 ## Cross-refs
 
 - Geo-Strategy / Game Theory lectures on **Iran**, **GCC**, **dollar** — map as needed when **book** **lane** **assigns** **vi-** chapters.
+- [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **earlier** **YouTube** **upload** **(Mar** **2)** **than** **this** **interview** **;** **same** **cluster** **themes** **;** **registry** **`vi-08`** **after** **`vi-07`** **.**
+- [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **broad** **game-theory** **interview** **(Oct** **2025** **upload)** **;** **registry** **`vi-09`** **.**
 - [lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md)
 
 ## Follow-ups
