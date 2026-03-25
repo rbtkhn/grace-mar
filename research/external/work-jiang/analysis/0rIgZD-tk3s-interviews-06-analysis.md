@@ -42,7 +42,7 @@ quality_level: draft
 ## Internal tensions (if any)
 
 - **Heavy** **rumor** **and** **hypothesis** **layer** **(82nd,** **false** **flags,** **hotel** **prices)** **—** **tier** **epistemics** **in** **book** **lane**.
-- **Substantial** **overlap** **with** **Interviews** **#7** **(same** **host,** **adjacent** **day)** **—** **dedupe** **or** **cross-map** **when** **assigning** **chapters**.
+- **Former** **duplicate** **YouTube** **clip** **(short** **upload** **`JyHoh97yhWU`)** **removed** **from** **corpus** **;** **canonical** **interview** **is** **this** **full** **recording** **only.**
 
 ## Registry table (stub)
 
@@ -59,8 +59,7 @@ quality_level: draft
 ## Cross-refs
 
 - [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **NSS** **/** **elite** **frames** **(Jan** **26)** **before** **March** **cluster**.
-- [Interviews #7 — Nima — WW3 / Greater Israel](JyHoh97yhWU-interviews-07-analysis.md) — **same** **host** **/** **next** **day** **;** **theme** **overlap** **(WWIII,** **Hormuz,** **GCC,** **12-day** **war)**.
-- [Interviews #8 — Tucker Carlson](2K2nQsTTjQE-interviews-08-analysis.md) — **Tucker** **/** **Qatar** **thread** **referenced** **in** **dialogue** **(Mar** **20)**.
+- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Tucker** **/** **Qatar** **thread** **referenced** **in** **dialogue** **(Mar** **20)**.
 - [lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md](../lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md)
 
 ## Follow-ups

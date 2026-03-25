@@ -63,9 +63,8 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 
 - [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **pause** **/** **NSS** **read** **(Jan** **18)**.
 - [Interviews #4 — Dimitri Lascaris](uHIdRgFypNo-interviews-04-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
-- [Interviews #6 — Nima — Iran war watershed](0rIgZD-tk3s-interviews-06-analysis.md) — **Dialogue** **Works** **(Mar** **7)** **;** **Hormuz** **/** **Greater** **Israel** **/** **GCC** **mirage** **thread**.
-- [Interviews #7 — Nima — WW3 / Greater Israel](JyHoh97yhWU-interviews-07-analysis.md) — **follow-on** **Nima** **episode** **(Mar** **8)**.
-- [Interviews #8 — Tucker Carlson](2K2nQsTTjQE-interviews-08-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** (later chronologically).
+- [Interviews #6 — Nima — Iran war watershed](0rIgZD-tk3s-interviews-06-analysis.md) — **Dialogue** **Works** **(Mar** **7)** **;** **Hormuz** **/** **Greater** **Israel** **/** **GCC** **mirage** **thread** **(full** **recording** **;** **short** **clip** **`JyHoh97yhWU`** **not** **in** **corpus)**.
+- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** **(Mar** **20)**.
 - [lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups

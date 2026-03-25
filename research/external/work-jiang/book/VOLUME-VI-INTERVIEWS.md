@@ -9,7 +9,7 @@
 
 | Range | `source_id` | Lecture path pattern |
 |-------|-------------|----------------------|
-| Interviews #1–#8 | `vi-01` … `vi-08` | `lectures/interviews-NN-*.md` (`NN` = chronological order) |
+| Interviews #1–#7 | `vi-01` … `vi-07` | `lectures/interviews-NN-*.md` (`NN` = chronological order) |
 
 **Analysis memos:** `{video_id}-interviews-NN-analysis.md` when a YouTube `watch?v=` link exists in the lecture file; otherwise `interviews-NN-analysis.md` (no leading video id).
 

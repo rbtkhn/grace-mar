@@ -8,6 +8,7 @@
 **Topic:** WWIII framing and ground-troop escalation; Hormuz and Asian oil; Ukraine→Iran arc; Greater Israel / Kingdom of David; Mossad false-flag rumors (GCC, Tucker/Qatar); US empire, 2008, sanctions and Nord Stream; GCC as imperial constructs; Bahrain/Dubai/Saudi fragility; 12-day war, media blackout, need for US ground troops; transcript ends mid-segment as provided.
 
 **Source (canonical recording):** [YouTube](https://www.youtube.com/watch?v=0rIgZD-tk3s) (`0rIgZD-tk3s`).  
+**Note:** A shorter YouTube upload (`JyHoh97yhWU`) repackages part of this conversation; the corpus uses **only** this full Dialogue Works recording (~86 min).  
 **Transcript:** Operator-supplied clean read; speaker labels preserved.
 
 ---
