@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `Ft2CuowGuYc`
 - **canonical_url:** https://www.youtube.com/watch?v=Ft2CuowGuYc
 - **series / episode:** Predictive History · Great Books #2
-- **raw_transcript:** caption pull → [lectures/great-books-02-homer-and-the-invention-of-the-human.md](../lectures/great-books-02-homer-and-the-invention-of-the-human.md)
+- **raw_transcript:** operator YouTube capture → [lectures/great-books-02-homer-and-the-invention-of-the-human.md](../lectures/great-books-02-homer-and-the-invention-of-the-human.md)
 
 ## Placeholder
 
