@@ -25,7 +25,7 @@ Volume V extends the Predictive History multivolume architecture with the workin
 | I | Geo-Strategy | Predictions |
 | II | Civilization | Divergence |
 | III | Secret History | TBD |
-| IV | Game Theory | TBD |
+| IV | Game Theory | TBD (Part II method; sources #1–#15 ingested) |
 | V | Great Books | TBD (set during setup) |
 
 ---

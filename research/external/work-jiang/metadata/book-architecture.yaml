@@ -1,6 +1,8 @@
 # Machine-readable book architecture for work-jiang (Geo-Strategy corpus → book/site).
 # Multivolume umbrella: Predictive History — one volume per lecture series.
-# This volume: one book chapter per lecture (12 chapters = 12 Geo-Strategy sessions).
+# Top-level project + book: Volume I (Geo-Strategy) — SSOT for render_book_architecture.py,
+# validate_work_jiang drift checks, CHAPTER-QUEUE, etc.
+# volume_4_game_theory: Volume IV stub (Game Theory #1–#15) — not read by those scripts until promoted.
 # Render: python scripts/work_jiang/render_book_architecture.py
 
 project:
@@ -329,3 +331,349 @@ website:
       title: "Core thesis"
     - id: web-predictions
       title: "Predictions"
+
+# --- Volume IV (Game Theory) — stub; keep top-level keys as Volume I until this block is promoted ---
+volume_4_game_theory:
+  project:
+    id: work-jiang-volume-4
+    series_title: "Predictive History"
+    volume:
+      number: 4
+      lecture_series: "Game Theory"
+    title: "Predictive History, Volume 4: Game Theory"
+    thesis_one_sentence: "TBD — set when Part I book thesis is drafted (lecture-faithful arc for Game Theory #1–#15)."
+    promise_paragraph: >
+      Part I follows Jiang’s Game Theory lectures #1–#15 in broadcast order, transcript-backed
+      (`lectures/game-theory-NN-*.md`, registry `gt-01` … `gt-15` in `metadata/sources.yaml`).
+      Part II evaluation mode not yet chosen (prediction adjudication, divergence, or other);
+      see `book/VOLUME-IV-GAME-THEORY.md`.
+    audience:
+      primary: "serious general readers interested in history, philosophy, and geopolitics"
+      secondary:
+        - "readers following the Game Theory classroom series on @PredictiveHistory"
+    channel_context:
+      platform: YouTube
+      handle: "@PredictiveHistory"
+    status: sources_ingested_book_stub
+  part_2:
+    title: "Part II — method TBD"
+    after_chapter: gt-ch15
+    description: >
+      To be defined with Volume IV Part II policy. No prediction_id or divergence_id wiring in this stub.
+  book:
+    chapters:
+      - id: gt-ch01
+        title: "Game Theory #1: The Dating Game"
+        purpose: "Book chapter for lecture 1 — dating/status game frame; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-01]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch01/outline.md
+        draft_path: chapters-vol4/gt-ch01/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch02
+        title: "Game Theory #2: Why Schools Suck"
+        purpose: "Book chapter for lecture 2 — education and incentive design; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-02]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch02/outline.md
+        draft_path: chapters-vol4/gt-ch02/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch03
+        title: "Game Theory #3: Rich Dad, Poor Dad"
+        purpose: "Book chapter for lecture 3 — wealth frame and game structure; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-03]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch03/outline.md
+        draft_path: chapters-vol4/gt-ch03/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch04
+        title: "Game Theory #4: The Immigration Trap"
+        purpose: "Book chapter for lecture 4 — migration and coordination games; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-04]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch04/outline.md
+        draft_path: chapters-vol4/gt-ch04/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch05
+        title: "Game Theory #5: The World Game"
+        purpose: "Book chapter for lecture 5 — global game board; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-05]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch05/outline.md
+        draft_path: chapters-vol4/gt-ch05/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch06
+        title: "Game Theory #6: The World's Bank"
+        purpose: "Book chapter for lecture 6 — money, hierarchy, and rules; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-06]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch06/outline.md
+        draft_path: chapters-vol4/gt-ch06/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch07
+        title: "Game Theory #7: America's Game"
+        purpose: "Book chapter for lecture 7 — US empire and strategy culture; outline TBD."
+        kind: exposition
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-07]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch07/outline.md
+        draft_path: chapters-vol4/gt-ch07/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch08
+        title: "Game Theory #8: Communist Specter"
+        purpose: "Book chapter for lecture 8 — ideology and coalition logic; outline TBD."
+        kind: analysis
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-08]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch08/outline.md
+        draft_path: chapters-vol4/gt-ch08/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch09
+        title: "Game Theory #9: The US-Iran War"
+        purpose: "Book chapter for lecture 9 — war as strategic game; outline TBD."
+        kind: analysis
+        priority: high
+        target_words: 2800
+        source_ids: [gt-09]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch09/outline.md
+        draft_path: chapters-vol4/gt-ch09/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch10
+        title: "Game Theory #10: The Law of Asymmetry"
+        purpose: "Book chapter for lecture 10 — asymmetry in conflict; outline TBD."
+        kind: analysis
+        priority: high
+        target_words: 2800
+        source_ids: [gt-10]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch10/outline.md
+        draft_path: chapters-vol4/gt-ch10/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch11
+        title: "Game Theory #11: The Law of Escalation"
+        purpose: "Book chapter for lecture 11 — escalation dynamics; outline TBD."
+        kind: analysis
+        priority: high
+        target_words: 2800
+        source_ids: [gt-11]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch11/outline.md
+        draft_path: chapters-vol4/gt-ch11/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch12
+        title: "Game Theory #12: The Law of Eschatological Convergence"
+        purpose: "Book chapter for lecture 12 — end-times narratives as coordination; outline TBD."
+        kind: analysis
+        priority: high
+        target_words: 2800
+        source_ids: [gt-12]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch12/outline.md
+        draft_path: chapters-vol4/gt-ch12/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch13
+        title: "Game Theory #13: Epstein's World"
+        purpose: "Book chapter for lecture 13 — networks and constructed reality; outline TBD."
+        kind: analysis
+        priority: medium
+        target_words: 2800
+        source_ids: [gt-13]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch13/outline.md
+        draft_path: chapters-vol4/gt-ch13/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch14
+        title: "Game Theory #14: The Law of Proximity"
+        purpose: "Book chapter for lecture 14 — domestic vs distant games; outline TBD."
+        kind: analysis
+        priority: high
+        target_words: 2800
+        source_ids: [gt-14]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch14/outline.md
+        draft_path: chapters-vol4/gt-ch14/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false
+      - id: gt-ch15
+        title: "Game Theory #15: The Return of History"
+        purpose: "Book chapter for lecture 15 — post-unipolar order and resilience; outline TBD."
+        kind: analysis
+        priority: high
+        target_words: 2800
+        source_ids: [gt-15]
+        analysis_ids: []
+        prediction_ids: []
+        divergence_ids: []
+        applications: []
+        status: outline_pending
+        owner: operator
+        sprint: TBD
+        blocking: []
+        next_action: "Draft chapter outline after VOLUME-IV Part II method is set"
+        outline_path: chapters-vol4/gt-ch15/outline.md
+        draft_path: chapters-vol4/gt-ch15/draft.md
+        analysis_ready: false
+        quotes_ready: false
+        requires_prediction_review: false

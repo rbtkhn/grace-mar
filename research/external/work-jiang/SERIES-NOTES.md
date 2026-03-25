@@ -32,4 +32,8 @@ Volume Five title set by operator: **Great Books**.
 **Next setup steps:**
 1. Define lecture corpus boundaries for Volumes IV and V (`sources.yaml` series keys + lecture filename conventions).
 2. Add method notes for each volume (Part I chapter discipline and Part II evaluation mode).
+
+## 2026-03-25 — Volume IV (Game Theory) source corpus
+
+**Game Theory #1–#15** ingested: `gt-01` … `gt-15` in `metadata/sources.yaml`, matching `@PredictiveHistory` channel index (no **#16** at snapshot). Validator clean. Book lane: analysis, chapter mapping, Part II mode still per [book/VOLUME-IV-GAME-THEORY.md](book/VOLUME-IV-GAME-THEORY.md).
 3. Decide chapter-end box type per volume (prediction, divergence, or a dedicated box template).
