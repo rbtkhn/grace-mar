@@ -1622,3 +1622,108 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: gt-01
+  video_id: hE4l9WyLF3U
+  title: 'Game Theory #1: The Dating Game'
+  canonical_url: https://www.youtube.com/watch?v=hE4l9WyLF3U
+  publication_date: 2026-01-06
+  lecture_path: lectures/game-theory-01-the-dating-game.md
+  analysis_path: null
+  series: game-theory
+  episode: 1
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-02
+  video_id: kS-muAuq62E
+  title: 'Game Theory #2: Why Schools Suck'
+  canonical_url: https://www.youtube.com/watch?v=kS-muAuq62E
+  publication_date: 2026-01-08
+  lecture_path: lectures/game-theory-02-why-schools-suck.md
+  analysis_path: null
+  series: game-theory
+  episode: 2
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-03
+  video_id: MX93U4KzA28
+  title: 'Game Theory #3: Rich Dad, Poor Dad'
+  canonical_url: https://www.youtube.com/watch?v=MX93U4KzA28
+  publication_date: 2026-01-13
+  lecture_path: lectures/game-theory-03-rich-dad-poor-dad.md
+  analysis_path: null
+  series: game-theory
+  episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-04
+  video_id: 35HRPLVyF0g
+  title: 'Game Theory #4: The Immigration Trap'
+  canonical_url: https://www.youtube.com/watch?v=35HRPLVyF0g
+  publication_date: 2026-01-15
+  lecture_path: lectures/game-theory-04-the-immigration-trap.md
+  analysis_path: null
+  series: game-theory
+  episode: 4
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-05
+  video_id: ybufqRY77PQ
+  title: 'Game Theory #5: The World Game'
+  canonical_url: https://www.youtube.com/watch?v=ybufqRY77PQ
+  publication_date: 2026-01-20
+  lecture_path: lectures/game-theory-05-the-world-game.md
+  analysis_path: null
+  series: game-theory
+  episode: 5
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-06
+  video_id: CbamEcNuDXo
+  title: 'Game Theory #6: The World''s Bank'
+  canonical_url: https://www.youtube.com/watch?v=CbamEcNuDXo
+  publication_date: 2026-01-22
+  lecture_path: lectures/game-theory-06-the-worlds-bank.md
+  analysis_path: null
+  series: game-theory
+  episode: 6
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-07
+  video_id: ijnkCt1QK6k
+  title: 'Game Theory #7: America''s Game'
+  canonical_url: https://www.youtube.com/watch?v=ijnkCt1QK6k
+  publication_date: 2026-01-27
+  lecture_path: lectures/game-theory-07-americas-game.md
+  analysis_path: null
+  series: game-theory
+  episode: 7
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started

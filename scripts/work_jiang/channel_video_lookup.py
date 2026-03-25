@@ -119,7 +119,7 @@ def lookup_series_episode(
     series: str, episode: int, *, index_path: Path | None = None
 ) -> tuple[str, str] | None:
     """
-    series: 'civilization'|'civ'|'secret-history'|'sh'|'geo-strategy'|'geo'
+    series: 'civilization'|'civ'|'secret-history'|'sh'|'geo-strategy'|'geo'|'game-theory'|'gt'
     """
     s = series.lower().replace("_", "-")
     if s in ("civilization", "civ"):
@@ -128,8 +128,10 @@ def lookup_series_episode(
         return lookup_secret_history(episode, index_path=index_path)
     if s in ("geo-strategy", "geo"):
         return lookup_geo_strategy(episode, index_path=index_path)
+    if s in ("game-theory", "gt"):
+        return lookup_game_theory(episode, index_path=index_path)
     raise ValueError(
-        f"Unknown series: {series!r} (use civilization|civ|secret-history|sh|geo-strategy|geo)"
+        f"Unknown series: {series!r} (use civilization|civ|secret-history|sh|geo-strategy|geo|game-theory|gt)"
     )
 
 
