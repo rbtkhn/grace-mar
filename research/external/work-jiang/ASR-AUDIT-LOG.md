@@ -12,7 +12,7 @@
 4. [Findings log — Geo-Strategy](#4-findings-log-append-rows) — 177 rows, 20 episodes, 2026-03-24
    - [Highest-impact patterns](#highest-impact-patterns)
    - [Candidate recurring replacements](#candidate-recurring-replacements)
-5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–13 verbatim+audited; SH14–28 pending verbatim, 2026-03-24
+5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–15 verbatim+audited; SH16–28 pending verbatim, 2026-03-24
    - [Secret History highest-impact patterns](#secret-history-highest-impact-patterns)
    - [Secret History candidate replacements](#secret-history-candidate-replacements)
    - [Secret History scope limitation](#secret-history-scope-limitation)
@@ -31,8 +31,8 @@
 
 **Passes complete:**
 - Geo-Strategy, depth B, 20 episodes (geo-strategy-01 through -20).
-- Secret History, depth B, **13** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -13): normalized, manually audited, pytest green.
-- Secret History **next:** SH14–28 still have operator-written analytical outlines under `## Full transcript` (not caption-verbatim) until pasted. Raw YouTube `.txt` exists for all 28 — paste verbatim body when ready, then repeat: `normalize_lecture_transcript_asr.py <file> --write` → targeted audit → `StrReplace` → `pytest tests/test_normalize_lecture_transcript_asr.py -q`.
+- Secret History, depth B, **15** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -15): normalized where run, manually audited, pytest green.
+- Secret History **next:** **SH16–28** still have operator-written analytical outlines under `## Full transcript` (not caption-verbatim) until pasted. Raw YouTube `.txt` exists for all 28 — paste verbatim body when ready, then repeat: `normalize_lecture_transcript_asr.py <file> --write` → targeted audit → `StrReplace` → `pytest tests/test_normalize_lecture_transcript_asr.py -q`.
 
 ---
 
@@ -291,7 +291,11 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 **SH13 (2026-03-24):** Verbatim transcript in `secret-history-13-mandate-of-heaven.md` (*Mandate of Heaven*); manual ASR pass for Sumer vs “Samaria,” Göbekli Tepe / Çatalhöyük, *Enuma Elish* / Gilgamesh / Marduk cluster, university joke (Middlebury), Mesopotamia geography, Hesiod / dynastic-cycle Q&A, and debate between sheep and grain; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer: **0**; pytest green.
 
-**SH14–28:** `## Full transcript` is still the **analytical lecture-arc stub** until verbatim is pasted. **Next operator action:** replace stub with YouTube verbatim text → run normalizer `--write` → audit → extend `COMMON_REPLACEMENTS` only for safe patterns → pytest.
+**SH14 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-14-legacy-of-the-steppes.md` (*Legacy of the Steppes*); initial normalizer `--write` **1** common-tier substitution; heavy in-file pass for **steppes** (ASR “steps”), Genghis Khan, Qin/Zhou/Spring and Autumn, Confucius/Laozi, Uruk, Indus Valley, Yamnaya/Proto-Indo-European/Indo-European cluster, Marija Gimbutas, David W. Anthony / *The Horse, the Wheel, and Language*, Xiongnu, Scythians/Medes, Timur, Mosuo, Romulus/Remus, guest-host / Männerbund, caste/Dravidian, and myth line (Trito/storm god); no new `COMMON_REPLACEMENTS` tuples (too many false-positive risks on “steps”). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH15 (2026-03-24):** Verbatim transcript in `secret-history-15-capital-and-the-bronze-age-collapse.md` (*Capital and the Bronze Age Collapse*); initial normalizer `--write` **3** common-tier substitutions; manual pass for Indus/Shang/Hittite/Mycenaean/Aegean/Uruk/Çatalhöyük/BMAC/Uluburun/Eric Cline *1177 B.C.*, proto-capitalism wording, altruism/utilitarianism, David Graeber, Atlantic/brain-scan block, Troy/Sea Peoples/Mesopotamia resilience, and Greek Dark Age → polis/Homer bridge; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH16–28:** `## Full transcript` is still the **analytical lecture-arc stub** until verbatim is pasted. **Next operator action:** replace stub with YouTube verbatim text → run normalizer `--write` → audit → extend `COMMON_REPLACEMENTS` only for safe patterns → pytest.
 
 **Raw captions:** Available under `research/external/youtube-channels/predictive-history/transcripts/` for all 28 Secret History video IDs (verify with `check_asr_audit_preconditions.py --only-glob 'secret-history-*' -v`).
 
@@ -351,6 +355,17 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 | 2026-03-24 | secret-history-13 | Mythology | "Uranus marries Ria" | Cronus marries Rhea | Hesiod / Theogony narrative |
 | 2026-03-24 | secret-history-13 | ASR | "Aadian Empire" / "found the" | Akkadian Empire / founded the | Sargon |
 | 2026-03-24 | secret-history-13 | ASR | "monarch here" / "King Mard " | Marduk / King Marduk | *Enuma Elish* block |
+| 2026-03-24 | secret-history-15 | ASR / place | "Indis" / "Inis Valley" / "Shan dynasty" | Indus / Indus Valley / Shang dynasty | Bronze Age map + China |
+| 2026-03-24 | secret-history-15 | ASR / ancient | "Masonia" / "Msian" / "Minian" / "Elo Bun" | Mycenae / Mycenaean / Uluburun | Aegean + shipwreck |
+| 2026-03-24 | secret-history-15 | ASR / book | "Eric Klein" / "17 1177" | Eric Cline / *1177 B.C.* | Collapse scholarship |
+| 2026-03-24 | secret-history-15 | ASR / site | "Kak Hoyak" / "Katy Hoyek" / "Bmac" | Çatalhöyük / BMAC | Comparative archaeology |
+| 2026-03-24 | secret-history-15 | ASR / period | "branch" / "branches" (metal) | bronze / Bronze Age | Homophone cluster |
+| 2026-03-24 | secret-history-15 | ASR / magazine | "Atletic Monthly" / "brain scandals" | *The Atlantic* / (brain scans) | Modern analogy block |
+| 2026-03-24 | secret-history-14 | ASR / geography | "steps" / "steps people" | steppes / steppe peoples | Systematic caption error |
+| 2026-03-24 | secret-history-14 | ASR / history | "Genghask Khan" / "theQing" / "chunu" | Genghis Khan / Qin / Chunqiu | Names + periods |
+| 2026-03-24 | secret-history-14 | ASR / PIE | "Yamaya" / "Indo-Uropean" / "Shunu" | Yamnaya / Indo-European / Xiongnu | Linguistics + frontier |
+| 2026-03-24 | secret-history-14 | Book / scholar | "Will and Language" / "Harvard" / "Morabon" | *Wheel, and Language* / Anthony / Männerbund | Anthony + kinship term |
+| 2026-03-24 | secret-history-14 | ASR / myth | "Ramlas" / "Third men" / storm. Got | Romulus / Trito / storm god | Roman + PIE myth |
 
 ### Secret History highest-impact patterns
 
@@ -362,7 +377,7 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 ### Secret History candidate replacements
 
-SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). All common tier; no secret-history-specific tier.
+SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). SH14: in-file only (no new tuples; “steps”→steppes not automated). SH15: in-file only (no new tuples). All common tier; no secret-history-specific tier.
 
 **Not automated (too risky for string replacement):**
 
@@ -377,7 +392,7 @@ SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `CO
 
 ### Secret History scope limitation
 
-**SH14–SH28** `## Full transcript` sections still contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text — until pasted. When each file is replaced with pasted caption text, re-run the pipeline (normalizer → manual audit → replacements → pytest).
+**SH16–SH28:** `## Full transcript` sections still contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text — until pasted. When each file is replaced with pasted caption text, re-run the pipeline (normalizer → manual audit → replacements → pytest).
 
 ---
 
