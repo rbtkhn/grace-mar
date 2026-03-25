@@ -67,6 +67,7 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 - [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** **(Mar** **20)**.
 - [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **Krystal** **/** **Saagar** **;** **2024** **predictions** **recap** **;** **upload** **2026-03-02** **(see** **memo** **for** **registry** **vs** **date** **ordering)** **.**
 - [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **game** **theory** **survey** **;** **upload** **2025-10-30** **;** **registry** **`vi-09`** **.**
+- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **war** **;** **upload** **2026-03-09** **;** **registry** **`vi-10`** **.**
 - [lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups

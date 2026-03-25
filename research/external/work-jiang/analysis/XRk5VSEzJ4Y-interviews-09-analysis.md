@@ -58,6 +58,7 @@ quality_level: draft
 ## Cross-refs
 
 - [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **Iran** **war** **;** **overlapping** **themes** **;** **later** **YouTube** **date** **in** **corpus** **.**
+- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **war** **;** **eschatology** **;** **later** **registry** **index** **.**
 - [lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md](../lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md)
 
 ## Follow-ups

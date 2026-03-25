@@ -2104,3 +2104,18 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: not_started
+- source_id: vi-10
+  video_id: o1DElACHNRo
+  title: 'Interviews #10: SNEAKO — The End of the World'
+  canonical_url: https://www.youtube.com/watch?v=o1DElACHNRo
+  publication_date: 2026-03-09
+  lecture_path: lectures/interviews-10-sneako-end-of-the-world.md
+  analysis_path: analysis/o1DElACHNRo-interviews-10-analysis.md
+  series: interviews
+  episode: 10
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started

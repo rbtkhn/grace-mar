@@ -64,6 +64,7 @@ The interview extends **Predictive History** themes into **long-form Q&A**: the 
 - Geo-Strategy / Game Theory lectures on **Iran**, **GCC**, **dollar** — map as needed when **book** **lane** **assigns** **vi-** chapters.
 - [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **earlier** **YouTube** **upload** **(Mar** **2)** **than** **this** **interview** **;** **same** **cluster** **themes** **;** **registry** **`vi-08`** **after** **`vi-07`** **.**
 - [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **broad** **game-theory** **interview** **(Oct** **2025** **upload)** **;** **registry** **`vi-09`** **.**
+- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **/** **GCC** **/** **false-flag** **cluster** **;** **registry** **`vi-10`** **.**
 - [lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md)
 
 ## Follow-ups
