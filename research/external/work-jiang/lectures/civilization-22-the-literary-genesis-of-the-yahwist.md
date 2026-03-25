@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#22**  
-**Date (YouTube upload):** (from metadata)  
+**Date (YouTube upload):** 2024-12-10 (from metadata)  
 **Topic:** **Hebrew Bible continued — cosmology not chronology.** Bible timeline (Adam/Eve → Noah → Abraham → Moses → Joshua → Judges → Saul → David); archaeology finds no evidence before David. Three imperatives: **legitimacy** (poet God + poet King; four covenants — Noah, Abraham, Moses conditional, David unconditional); **cohesion** (Canaan chaos; synchronization — Abraham/Isaac/Jacob = three tribes; Moses = Egyptian priests; Judges = local heroes); **differentiation** (Israelites at war with everyone). Why Bible conquered world: **literary genius.** Court historian vs **Yahwist** — female author of Genesis, Homer/Plato/Dante stature; possibly daughter/granddaughter of David; Enheduanna precedent. Stories: **Adam and Eve** (Tree of Knowledge = capacity to learn; Tree of Life; God lied, God shows remorse; domestic comedy); **Cain and Abel** (God as bad parent; Mark of Cain; faith = argue with God); **Jacob and Rachel/Leah** (economy, irony). "In the beginning there was the word." Next: Zoroastrianism.
 
 **Source (canonical recording):** [Predictive History — Civilization #22: The Literary Genesis of the Yahwist](https://www.youtube.com/watch?v=GhLd_h1QsL4) (`@PredictiveHistory`).  

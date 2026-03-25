@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#27**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2024-12-31
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Civilization #27: Augustine's Empire of God](https://www.youtube.com/watch?v=GdbZBVUIVDE) (`@PredictiveHistory`).  

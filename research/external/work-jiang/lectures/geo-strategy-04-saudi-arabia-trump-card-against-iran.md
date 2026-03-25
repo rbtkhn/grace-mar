@@ -2,7 +2,7 @@
 
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students (class session)  
-**Date (stated in session):** not stated (upload **2024-05-15**; frames **November** election as upcoming — i.e. before Nov 2024)  
+**Date (stated in session):** 15 May 2024
 **Topic:** Third driver of US–Iran tension: **Saudi Arabia–Iran** rivalry (religious, economic, geopolitical); **proxy conflicts** (Iraq, Syria, Yemen); **Saudi strategic vulnerability** and interest in **US** fighting **Iran**; **Obama** pivot / **JCPOA**; **MBS**, **Trump–Kushner** alignment, **Abraham Accords**; **Khashoggi**, **Soleimani** strike; closing link of **Trump second term** to **escalation or war** with Iran.  
 **Source (canonical recording):** [Predictive History — Geo-Strategy #4: Saudi Arabia's Trump Card Against Iran](https://www.youtube.com/watch?v=LctUcVqhhns) (`@PredictiveHistory`).  
 **Transcript:** Operator-supplied text (likely ASR); wording preserved; names and numbers should be **verified** (e.g. **Jared** Kushner, **Khashoggi**, **Soleimani**); “**World War II**” at end may mean **WWIII** or **metaphor** (ASR).

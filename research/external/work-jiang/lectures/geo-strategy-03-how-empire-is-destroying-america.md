@@ -2,7 +2,7 @@
 
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students (class session)  
-**Date (stated in session):** not stated (semester framed; includes “November” election prediction)  
+**Date (stated in session):** 10 May 2024
 **Topic:** US **financialization**, **empire** after the Cold War, **dollar / Bretton Woods / petrodollar**, global **capital flows** to the US, **debt** and **asset bubbles**, **Ukraine** as challenge to US invincibility, **reindustrialization** barriers, and **Iran invasion** as a plausible “restore empire credibility / petrodollar / lanes” move — closing on **imperial hubris** and addiction to **easy money**.  
 **Source (canonical recording):** [Predictive History — Geo-Strategy #3: How Empire is Destroying America](https://www.youtube.com/watch?v=_blj8zKdKgA) (`@PredictiveHistory`).  
 **Transcript:** Operator-supplied text (likely ASR); wording preserved for traceability; **numerical figures** (GDP, debt ratios, equity shares) should be **verified against primary sources** before scholarly citation; ASR may mis-hear magnitudes (e.g. “World War **III**” almost certainly **World War II**; “133%” for Germany in 1900 may be **13%**).  

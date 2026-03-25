@@ -2,7 +2,7 @@
 
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students (class session)  
-**Date (stated in session):** not stated (upload **2024-05-17**; **November** election framed as upcoming)  
+**Date (stated in session):** 17 May 2024
 **Topic:** **Electoral** analysis: why **Biden** won **2020**; why **2024** **coalition** may **fray**; **suburbs** as **swing**; **Trump** path via **Nikki Haley** as **VP** (parallel to **Biden–Harris** “redemption” narrative); **Haley**’s **donors** / **Iran**-focused **organizations**; **theater** (WWE analogy) vs real **rivalry**; **Biden** “**basement**” strategy limits; **model-testing** via **predictions**. Lecture also names **JD Vance** as **plausible** **alternative** VP.  
 **Source (canonical recording):** [Predictive History — Geo-Strategy #5: Why Trump Will Win (And Pick Nikki Haley as VP)](https://www.youtube.com/watch?v=exRK-85630k) (`@PredictiveHistory`).  
 **Transcript:** Operator-supplied text (likely ASR); preserve wording; **historical outcome (post-hoc):** **Trump** won **Nov 2024**; **VP** was **JD Vance**, not **Haley** — use for **prediction-registry** resolution, not Voice knowledge.

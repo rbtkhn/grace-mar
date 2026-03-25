@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#23**  
-**Date (YouTube upload):** (from metadata)  
+**Date (YouTube upload):** 2024-12-12 (from metadata)  
 **Topic:** **Overview of Judaism (1010 BCE–present); Cyrus and Zoroastrianism.** First Temple (1010–586): polytheistic, monarchy, open/tolerant; David + Yahwist + Temple. Second Temple (539 BCE–70 CE): henotheistic, priesthood, purity; Jews vs Israelites; 586 Babylon destroys Temple, captivity; Cyrus releases Jews 539, called **Messiah** in Bible. Mesopotamia: Lugalzagesi defies gods; Sargon of Akkad; cycle of violence. **Cyrus the Great:** mercy, divide-and-rule, federation (peace, trade, postal system); satraps. **Zoroastrianism:** Ahura Mazda vs evil; truth vs lie; eschatology (first); best religion (grandness, completeness, unity); administrators. Strategic return: Samaritans vs Jews; **Ezra** (~443): divorce foreign wives, unify J/E/P/D into Bible, Moses replaces David. Three mergers: eschatology, good vs evil, Messiah/Son of Man → Christianity. Next: Jesus.
 
 **Source (canonical recording):** [Predictive History — Civilization #23: Cyrus the Great as Messiah](https://www.youtube.com/watch?v=HvVTNTPzq7E) (`@PredictiveHistory`).  

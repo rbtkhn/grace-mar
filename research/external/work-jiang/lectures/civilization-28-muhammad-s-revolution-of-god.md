@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#28**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-01-02
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Civilization #28: Muhammad's Revolution of God](https://www.youtube.com/watch?v=C9rzPGJ0wm4) (`@PredictiveHistory`).  

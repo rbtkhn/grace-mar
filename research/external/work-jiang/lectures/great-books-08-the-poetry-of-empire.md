@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Great Books **#8**  
-**Date (YouTube upload):** TBD  
+**Date (YouTube upload):** 2026-03-25
 **Topic:** Virgil’s anti-Homer: piety over love; love as poison; imperial duty and the political architecture behind the Aeneid.
 
 **Source (canonical recording):** [Predictive History — Great Books #8: The Poetry of Empire](https://www.youtube.com/watch?v=YXTRlvFIRt8) (`@PredictiveHistory`).  

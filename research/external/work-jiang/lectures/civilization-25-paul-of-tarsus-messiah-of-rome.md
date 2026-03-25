@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#25**  
-**Date (YouTube upload):** (from metadata)  
+**Date (YouTube upload):** 2024-12-19 (from metadata)  
 **Topic:** **Paul as founder of Christianity.** Review: Jesus three layers vs biblical Jesus (atonement, second coming). Bible conflates Jesus with Socrates (persecuted truth-teller) + Julius Caesar (betrayed); Hellenized Jews. **Paul:** Tarsus, Roman citizen, Pharisee; Damascus moment; never met Jesus. Changes: faith not works; organization/churches; circumcision optional. James the Just vs Paul; Ebionites. Paul in Jerusalem → mob → Romans save him ("I am a Roman citizen") → Rome. Acts ending: Paul in Rome, threatens Jewish leaders, teaches "without hindrance." Paul as Roman spy thesis: undermines Jewish fanaticism (purity, persecution complex, coming Messiah) → assimilate into Empire. Faith = belief; miracles; tradition > Bible. Acts = apology for Paul (same author as Luke). Next: monotheism.
 
 **Source (canonical recording):** [Predictive History — Civilization #25: Paul of Tarsus, Messiah of Rome](https://www.youtube.com/watch?v=kuMhSFXnr5I) (`@PredictiveHistory`).  

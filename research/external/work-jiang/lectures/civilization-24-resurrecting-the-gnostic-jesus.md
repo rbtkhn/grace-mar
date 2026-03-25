@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#24**  
-**Date (YouTube upload):** (from metadata)  
+**Date (YouTube upload):** 2024-12-17 (from metadata)  
 **Topic:** **Historical vs biblical Jesus; Gnosticism.** Historical: born 4 BCE Galilee, John the Baptist, healing, crucified 30–33 CE. Biblical: Son of God, virgin Mary, 12 apostles, Kingdom of Heaven, forgiveness; curtain torn = God released; standard atonement/original sin. Problems: original sin contradicts Yahwist Adam/Eve; "Jews killed Jesus" historically wrong (Sadducees/Pharisees/Essenes; Pontius Pilate violent thug). Context: 167 Antiochus desecrates temple; 63 BCE Pompey; **apocalyptic eschatology.** Religions in Levant: Plato, Zoroastrianism, Buddhism/Hinduism, Cynicism, pagan Dionysian. **Gnosticism** (not Christianity): three layers (secret/inner/public); Gospel of Thomas (Nag Hammadi 1945). Secret: Monad → Sophia defies → monster (Yahweh) creates world; divine spark; "light within a man of light"; "make the two one." Romans killed Jesus → martyrdom → hero. Paul founded Christianity; Jesus founded Gnosticism. Next: Paul.
 
 **Source (canonical recording):** [Predictive History — Civilization #24: Resurrecting the Gnostic Jesus](https://www.youtube.com/watch?v=_bXHBT5NTfc) (`@PredictiveHistory`).  

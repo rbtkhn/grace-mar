@@ -2,7 +2,7 @@
 
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students (class session)  
-**Date (stated in session):** not stated  
+**Date (stated in session):** 8 May 2024
 **Topic:** Why the US may invade Iran — empire defense, ally pressure, and the “Israel Lobby” — developed through a compressed history of Christianity, eschatology, Christian Zionism, and their intersection with US foreign policy and Middle East conflict.  
 **Source (canonical recording):** [Predictive History — Geo-Strategy #2: Christian Zionism and the Middle East Conflict](https://www.youtube.com/watch?v=lkKrZq4YdqY) (`@PredictiveHistory`).  
 **Transcript:** Operator-supplied text (likely ASR); wording preserved for traceability; normalize in a later editorial pass if needed.
