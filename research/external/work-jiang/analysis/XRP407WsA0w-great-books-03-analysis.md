@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `XRP407WsA0w`
 - **canonical_url:** https://www.youtube.com/watch?v=XRP407WsA0w
 - **series / episode:** Predictive History · Great Books #3
-- **raw_transcript:** caption pull → [lectures/great-books-03-poets-and-prophets.md](../lectures/great-books-03-poets-and-prophets.md)
+- **raw_transcript:** operator YouTube capture → [lectures/great-books-03-poets-and-prophets.md](../lectures/great-books-03-poets-and-prophets.md)
 
 ## Placeholder
 
