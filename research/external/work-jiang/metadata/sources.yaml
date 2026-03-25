@@ -1802,3 +1802,48 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: gt-13
+  video_id: aQSDSqdlFxk
+  title: 'Game Theory #13: Epstein''s World'
+  canonical_url: https://www.youtube.com/watch?v=aQSDSqdlFxk
+  publication_date: 2026-03-17
+  lecture_path: lectures/game-theory-13-epsteins-world.md
+  analysis_path: null
+  series: game-theory
+  episode: 13
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-14
+  video_id: nOQqGy4boBY
+  title: 'Game Theory #14: The Law of Proximity'
+  canonical_url: https://www.youtube.com/watch?v=nOQqGy4boBY
+  publication_date: 2026-03-19
+  lecture_path: lectures/game-theory-14-the-law-of-proximity.md
+  analysis_path: null
+  series: game-theory
+  episode: 14
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-15
+  video_id: zAer-Mqe7tQ
+  title: 'Game Theory #15: The Return of History'
+  canonical_url: https://www.youtube.com/watch?v=zAer-Mqe7tQ
+  publication_date: 2026-03-24
+  lecture_path: lectures/game-theory-15-the-return-of-history.md
+  analysis_path: null
+  series: game-theory
+  episode: 15
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
