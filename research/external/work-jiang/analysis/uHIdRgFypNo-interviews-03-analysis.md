@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-02
+analysis_id: vi-03
 video_id: uHIdRgFypNo
-source_id: vi-02
+source_id: vi-03
 canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
 series: interviews
-episode: 2
+episode: 3
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #2: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China
+# Analysis — Interviews #3: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China
 
 - **video_id:** `uHIdRgFypNo`
 - **canonical_url:** https://www.youtube.com/watch?v=uHIdRgFypNo
-- **series / episode:** Predictive History · Volume VI — Interviews #2
-- **raw_transcript:** [lectures/interviews-02-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-02-dimitri-lascaris-trump-iran-davos-canada-china.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #3
+- **raw_transcript:** [lectures/interviews-03-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-03-dimitri-lascaris-trump-iran-davos-canada-china.md)
 - **upload_date (YouTube):** 20260122
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -60,9 +60,9 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #1 — Predictions 2026](ORyCS0r2Tpg-interviews-01-analysis.md) — **forward** **2026** **agenda** **(April** **summit** **etc.)**.
-- [Interviews #3 — Great Power Wars](80jUKe0blAQ-interviews-03-analysis.md) — **Carney** **/** **NATO** **deep** **dive** **days** **later**.
-- [lectures/interviews-02-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-02-dimitri-lascaris-trump-iran-davos-canada-china.md)
+- [Interviews #2 — Predictions 2026](ORyCS0r2Tpg-interviews-02-analysis.md) — **forward** **2026** **agenda** **(April** **summit** **etc.)**.
+- [Interviews #4 — Great Power Wars](80jUKe0blAQ-interviews-04-analysis.md) — **Carney** **/** **NATO** **deep** **dive** **days** **later**.
+- [lectures/interviews-03-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-03-dimitri-lascaris-trump-iran-davos-canada-china.md)
 
 ## Follow-ups
 

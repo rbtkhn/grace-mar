@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-01
+analysis_id: vi-02
 video_id: ORyCS0r2Tpg
-source_id: vi-01
+source_id: vi-02
 canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
 series: interviews
-episode: 1
+episode: 2
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #1: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
+# Analysis — Interviews #2: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
 
 - **video_id:** `ORyCS0r2Tpg`
 - **canonical_url:** https://www.youtube.com/watch?v=ORyCS0r2Tpg
-- **series / episode:** Predictive History · Volume VI — Interviews #1
-- **raw_transcript:** [lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #2
+- **raw_transcript:** [lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -63,11 +63,12 @@ Forward-looking **2026** **interview**: **US–China** **April** **summit** as *
 
 ## Cross-refs
 
-- [Interviews #2 — Dimitri Lascaris](uHIdRgFypNo-interviews-02-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
-- [Interviews #3 — Great Power Wars](80jUKe0blAQ-interviews-03-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
-- [lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-01-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- [Interviews #1 — West’s Civilizational Collapse](GSSIm9xNRAE-interviews-01-analysis.md) — **same** **host** **/** **civilizational** **decline** **frame** **(Nov** **2025)**.
+- [Interviews #3 — Dimitri Lascaris](uHIdRgFypNo-interviews-03-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
+- [Interviews #4 — Great Power Wars](80jUKe0blAQ-interviews-04-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
+- [lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 
 ## Follow-ups
 
 - **If** **YouTube** **metadata** **differs** **on** **exact** **upload** **date**, **add** **to** **lecture** **header**.
-- **Optional:** **cross-link** **to** **predictions** **/** **divergence** **registry** **when** **book** **lane** **maps** **vi-01**.
+- **Optional:** **cross-link** **to** **predictions** **/** **divergence** **registry** **when** **book** **lane** **maps** **vi-02**.

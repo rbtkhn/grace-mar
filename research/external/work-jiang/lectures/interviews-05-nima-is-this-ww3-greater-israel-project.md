@@ -1,8 +1,8 @@
-# Interviews #4: Nima — Is This WW3? The Greater Israel Project
+# Interviews #5: Nima — Is This WW3? The Greater Israel Project
 
 **Speaker:** Jiang Xueqin (guest); Nima (host)  
 **Audience:** Long-form interview (public channel)  
-**Series:** Predictive History · Volume VI — Interviews **#4**  
+**Series:** Predictive History · Volume VI — Interviews **#5**  
 **Date (YouTube upload):** 2026-03-08  
 **Title (YouTube):** Jiang Xueqin: Is This WW3? The Greater Israel Project: Truth or Conspiracy?  
 **Topic:** Iran–US war escalation, ground troops and WWIII framing, Hormuz and Asian oil, Greater Israel / Kingdom of David, GCC fragility, Mossad false-flag rumors, US empire and 2008 / Ukraine, Israel media blackout and “12-day war” narrative.
