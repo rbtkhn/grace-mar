@@ -1995,3 +1995,17 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: not_started
+- source_id: vi-03
+  video_id: ORyCS0r2Tpg
+  title: 'Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
+  canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
+  lecture_path: lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md
+  analysis_path: analysis/ORyCS0r2Tpg-interviews-03-analysis.md
+  series: interviews
+  episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
