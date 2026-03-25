@@ -1,0 +1,70 @@
+---
+analysis_id: vi-02
+video_id: 80jUKe0blAQ
+source_id: vi-02
+canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
+series: interviews
+episode: 2
+chapter_candidates: []
+appendix_candidates: []
+themes: []
+status: complete
+quality_level: draft
+---
+
+# Analysis — Interviews #2: Glenn Diesen — Great Power Wars Over a New World Order
+
+- **video_id:** `80jUKe0blAQ`
+- **canonical_url:** https://www.youtube.com/watch?v=80jUKe0blAQ
+- **series / episode:** Predictive History · Volume VI — Interviews #2
+- **raw_transcript:** [lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md)
+- **analyzed_at:** 2026-03-25 (operator)
+
+## Thesis / aim
+
+The interview frames **US–China** and **middle-power** dynamics through **Carney/Davos** vs **Trump/NSS**, **elite** “consensus” **illusion**, **Trump** as **elite**-replacement project, **NATO** and **Europe** **reshaping**, **meritocracy** **critique** (Yale), **Rorty** **1998** **strongman** **path**, **neoliberalism** **roots**, **1930s** **parallel**, **East Asia** **demographic** / **savings** **limits**, **Solzhenitsyn** **Harvard**, **Iran** **regime** **resilience** and **color** **playbook**, **Canada** **sovereignty** and **hypothetical** **Alberta** **wedge**.
+
+## Defined terms (speaker usage)
+
+- **Vassalization** — Allies’ **Treasuries** / **wealth** as **subordinate** to **US** **control** in **NSS** **logic**.
+- **Trump world order** — Replace **Davos** **elite** with **new** **elite**; **NATO** **leadership** **swap**; **Europe** **right** **populist** **vector**.
+- **Rorty (1998)** — **Suburban** **electoral** **crack** → **strongmen** **after** **globalization** **stress**.
+
+## Claims (numbered)
+
+1. **Carney** **WEF** **speech** = **middle** **powers** **+** **BRICS** **multilateral** **gold** **blockchain** **imagery** vs **US** **empire** **tactics** in **NSS**.
+2. **Trump** as **outsider** **rupturing** **Davos** **club**; **elite** **seeks** **new** **alignment** **narratives**.
+3. **Domestic** **US** **faction** **story** (**Minneapolis**, **ICE**, **Silicon** **Valley** **vs** **Wall** **Street**) **ties** to **federal** **bureaucracy** **war**.
+4. **Greenland** **as** **NATO** **humiliation** **play**; **Europe** **right** **parties** **named** as **Trump** **interlocutors**.
+5. **Meritocracy** **critique** → **elite** **blindness** **post-2016**; **Rorty** **quoted** **as** **predictive**.
+6. **China** **no** **replacement** **hegemon** **wish**; **multilateral** **order** **breakdown** without **clear** **successor**.
+7. **East** **Asia** **pessimism**: **fertility**, **exports**, **oil**, **historical** **rivalry**.
+8. **Iran** **breakup** **thesis** **vs** **Persian** **/** **Shia** **resilience** **martyrdom** **frame**; **Mossad** **/** **color** **playbook** **claims**.
+9. **Canada** **/ sovereignty** **/ Maduro** **example** — **international** **law** **vs** **power** **facade**.
+
+## Internal tensions (if any)
+
+- **Speculative** **claims** **(ICE** **as** **Gestapo**, **third** **term** **logic**, **Alberta** **referendum** **scenario**) **mix** **with** **analytical** **history** **frames** — **layer** **as** **hypothesis** **in** **book** **lane**.
+- **Interview** **is** **argumentative**; **not** **all** **assertions** **are** **equally** **evidence-backed**.
+
+## CIV-MEM lattice (full pass)
+
+| Slot | Notes |
+|------|--------|
+| **Conditions** | **G7** **/** **BRICS** **competition**, **tariffs**, **WEF** **discourse**, **NSS** **text**. |
+| **Institutions** | **NATO**, **EU**, **ICE**, **Pentagon**, **Federal** **bureaucracy**. |
+| **Seams** | **Elite** **vs** **populist**; **US** **allies** **vs** **Washington**; **East** **Asia** **triad**. |
+| **Continuity / memory** | **1948** **Kennan** **memorandum** **reference**; **Brzezinski** **hegemony** **uniqueness**; **Rorty** **1998**. |
+| **Time structure** | **1970s** **golden** **age** **vs** **post-Reagan** **neoliberalism**; **1930s** **parallel** **warning**. |
+| **Decline / stress** | **Europe** **demographic** **/** **cultural** **reproduction**; **student** **mental** **health** **(China)** **cited**. |
+| **Multi-perspective** | **Realist** **empire**, **cultural** **civilizational**, **elite** **theory** **—** **interleaved**. |
+
+## Cross-refs
+
+- [Interviews #1](2K2nQsTTjQE-interviews-01-analysis.md) (Tucker Carlson) — **Iran** **/** **GCC** **thread** **continuity**.
+- [lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md)
+
+## Follow-ups
+
+- **Optional:** **YouTube** **metadata** **(publish** **date)** **into** **frontmatter** **if** **book** **lane** **needs** **it**.
+- **Normalize** **names** **(e.g.** **Rene** **Good** **spelling)** **if** **primary** **sources** **differ**.

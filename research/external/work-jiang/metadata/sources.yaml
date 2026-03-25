@@ -1981,3 +1981,17 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: not_started
+- source_id: vi-02
+  video_id: 80jUKe0blAQ
+  title: 'Interviews #2: Glenn Diesen — Great Power Wars Over a New World Order'
+  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
+  lecture_path: lectures/interviews-02-glenn-diesen-great-power-wars-new-world-order.md
+  analysis_path: analysis/80jUKe0blAQ-interviews-02-analysis.md
+  series: interviews
+  episode: 2
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
