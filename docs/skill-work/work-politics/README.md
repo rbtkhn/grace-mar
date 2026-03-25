@@ -4,6 +4,8 @@
 
 **Prose vs technical tokens:** In writing, prefer **work-politics** (or **work-politics territory**). Reserve **`operator:wap:…`** for stable `channel_key` prefixes. Avoid the informal acronym **WAP** in documentation and UI copy.
 
+**GitHub / gate CI:** [LANE-CI.md](LANE-CI.md) — PR labels, when **`lane/cross`** applies, canonical `### CANDIDATE-*` paste shape, and the paste-snippet CLI.
+
 **Objective:** **Political consulting** umbrella — US federal, **state**, **local**; **international** only after [compliance-checklist.md](compliance-checklist.md) sign-off. AI-assisted briefs, opposition tracking, message discipline, content ops; **human approves** all public ship. **Primary client (Phase 1):** Thomas Massie (R-KY-4) shadow campaign. Companion-led; no autonomous political action.
 
 ---

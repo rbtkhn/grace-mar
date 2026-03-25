@@ -125,6 +125,20 @@ def test_infer_mixed_two_lanes() -> None:
     )
 
 
+def test_infer_work_strategy_lane() -> None:
+    doc = load_lanes(REPO_ROOT / "lanes.yaml")
+    assert (
+        infer_dominant(
+            [
+                "docs/skill-work/work-strategy/README.md",
+                "research/prototypes/mind-synthesis.py",
+            ],
+            doc,
+        )
+        == "work-strategy"
+    )
+
+
 def test_infer_unclassified() -> None:
     doc = {"lanes": {"a": {"owned_paths": ["only-a/**"]}}}
     assert infer_dominant([], doc) == "unclassified"

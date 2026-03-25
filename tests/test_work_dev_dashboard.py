@@ -97,7 +97,7 @@ def test_build_dashboard_provenance_from_recursion_gate(tmp_path: Path) -> None:
     gate = root / "users" / "u1" / "recursion-gate.md"
     # Two pending blocks: full metadata vs minimal
     gate.write_text(
-        """## Candidates\n\n### C1\n```yaml\nstatus: pending\ncandidate_source: \"openclaw\"\nartifact_path: \"a\"\nartifact_sha256: \"x\"\ncontinuity_receipt_path: \"r.json\"\nconstitution_check_status: \"ok\"\n```\n\n### C2\n```yaml\nstatus: pending\ncandidate_source: \"x\"\n```\n\n## Processed\n\n""",
+        """## Candidates\n\n### CANDIDATE-1\n```yaml\nstatus: pending\ncandidate_source: \"openclaw\"\nartifact_path: \"a\"\nartifact_sha256: \"x\"\ncontinuity_receipt_path: \"r.json\"\nconstitution_check_status: \"ok\"\n```\n\n### CANDIDATE-2\n```yaml\nstatus: pending\ncandidate_source: \"x\"\n```\n\n## Processed\n\n""",
         encoding="utf-8",
     )
     d = build_dashboard(user_id="u1", repo_root=root)

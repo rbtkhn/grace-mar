@@ -1,0 +1,32 @@
+# When a PR has no lane/* label, comment with an inferred lane (does not block merge).
+name: Lane label hint
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  hint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PyYAML
+        run: pip install "pyyaml>=6.0"
+
+      - name: Comment inferred lane if label missing
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/pr_lane_label_hint.py

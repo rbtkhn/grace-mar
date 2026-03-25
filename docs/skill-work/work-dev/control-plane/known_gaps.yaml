@@ -15,7 +15,7 @@ items:
     status: open
     related_integration_ids: []
     notes:
-      - See variation-types.md; CLI scripts/work_dev/generate_scenarios.py and run_scenario_matrix.py; baselines under docs/skill-work/work-dev/scenarios/baseline_scenarios/.
+      - See variation-types.md; CLI scripts/work_dev/generate_scenarios.py (factorial matrix, JSON v2) and run_scenario_matrix.py (per-row pytest hints); baselines under docs/skill-work/work-dev/scenarios/baseline_scenarios/.
 
   - id: BUILD-AI-GAP-007
     area: Progressive autonomy metrics

@@ -77,6 +77,9 @@ users/*/.cache/
 # Continuity preflight receipts (local only; do not commit)
 runtime/continuity/receipts/*.json
 
+# Optional gate staging analytics sidecars (JSON mirror of staged candidate metadata)
+users/*/gate-staging/*.json
+
 # Shadow autonomy decisions (local only)
 runtime/autonomy/shadow_decisions.jsonl
 

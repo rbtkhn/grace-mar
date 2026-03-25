@@ -47,6 +47,8 @@ Use this file when you want one place to understand:
 | `session-continuity-contract.md` | Explicit continuity steps vs implicit memory (files, scripts, CI) |
 | `safety-story-ux.md` | Visible pipeline state as user-facing safety story (pending/approved, receipts, staged vs merged) |
 | `external-signals.md` | Transcript/keynote-class discourse → work-dev lens (OpenClaw, trust, inference); pairs with work-strategy `external-tech-scan.md` |
+| `agentic-environment-principles.md` | Environment-first debugging: policy + continuity + gate + observability before prompt; canonical files before clever retrieval; “boring” high-leverage work |
+| `agent-surface-template.yaml` | Structured checklist: runtime / orchestration / interface + Grace-Mar trust; `scripts/work_dev/agent_surface_checklist.py` |
 | `engagement-model.md` | Commercial packaging and sequencing |
 | `delivery-playbook.md` | Service delivery phases |
 | `claude-code-wat-crosswalk.md` | WAT / agentic IDE ↔ delivery, reliability, handover |
@@ -58,6 +60,7 @@ Use this file when you want one place to understand:
 
 ## Operator path
 
+0. When debugging agent vs repo behavior, read `agentic-environment-principles.md` (environment before prompt).
 1. Open `integration-status.md` to see what is implemented, partial, or only documented.
 2. Read `known-gaps.md` before assuming a workflow is operational.
 3. Use `provenance-checklist.md` when validating export, handback, or merge-followthrough behavior.

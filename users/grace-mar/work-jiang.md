@@ -18,6 +18,8 @@ Nothing in this file is Record truth for the Voice until merged through the gate
 
 **Membrane (normative):** [research/external/work-jiang/README.md § Boundaries](../../research/external/work-jiang/README.md#boundaries-membrane) — research corpus vs Record, candidates vs quotes, validators as gate.
 
+**Repo CI:** PRs that only touch work-jiang paths should use label **`lane/work-jiang`**. When pasting into `recursion-gate.md`, use the canonical **`### CANDIDATE-*`** block shape (see [work-jiang lane + gate CI](../../docs/skill-work/work-jiang/LANE-CI.md)).
+
 ---
 
 ## Context objectives

@@ -4,6 +4,8 @@
 
 **Not** a replacement for territory READMEs. **Not** Record truth. Companion gate and knowledge boundary rules still apply.
 
+**GitHub / gate CI:** [LANE-CI.md](LANE-CI.md) — label **`lane/work-strategy`**, gate paste convention (`territory: work-politics` + `channel_key: operator:work-strategy` when using the WAP bucket), paste-snippet CLI.
+
 ---
 
 ## Contents

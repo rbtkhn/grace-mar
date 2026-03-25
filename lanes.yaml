@@ -25,6 +25,7 @@ lanes:
       - "scripts/work_dev/**"
       - "scripts/check_lane_scope.py"
       - "scripts/resolve_pr_lane.py"
+      - "scripts/pr_lane_label_hint.py"
       - "scripts/infer_lane_from_paths.py"
       - "scripts/continuity_preflight.py"
       - "scripts/continuity_read_log.py"
@@ -49,6 +50,7 @@ lanes:
       - "tests/test_lane_scope.py"
       - "tests/test_surface_aliases.py"
       - "tests/test_resolve_pr_lane.py"
+      - "tests/test_gate_block_parser.py"
       - "tests/test_operator_daily_warmup.py"
       - "tests/test_operator_depth_hint.py"
       - "tests/test_check_integration_readiness.py"
@@ -67,10 +69,12 @@ lanes:
       - "tests/test_diagnostics_report.py"
       - "bot/core.py"
       - ".github/workflows/lane-scope.yml"
+      - ".github/workflows/lane-pr-hint.yml"
       - ".github/pull_request_template.md"
     allowed_shared_paths:
       - ".github/pull_request_template.md"
       - ".github/workflows/lane-scope.yml"
+      - ".github/workflows/lane-pr-hint.yml"
       - ".github/workflows/test.yml"
       - "lanes.yaml"
       - "docs/skill-work/work-dev/lane-scope-checklist.md"
@@ -120,10 +124,24 @@ lanes:
       - "scripts/operator_wap_pulse.py"
       - "scripts/operator_blocker_report.py"
       - "scripts/work_politics_ops.py"
+      - "scripts/emit_work_politics_gate_paste_snippet.py"
       - "tests/test_wap_*.py"
     allowed_shared_paths:
       - "lanes.yaml"
       - ".github/workflows/lane-scope.yml"
+      - ".github/workflows/lane-pr-hint.yml"
+      - ".github/pull_request_template.md"
+    forbidden_paths: []
+
+  work-strategy:
+    owned_paths:
+      - "docs/skill-work/work-strategy/**"
+      - "research/prototypes/mind-synthesis.py"
+      - "scripts/emit_work_strategy_gate_paste_snippet.py"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/workflows/lane-pr-hint.yml"
       - ".github/pull_request_template.md"
     forbidden_paths: []
 
@@ -137,6 +155,8 @@ lanes:
       - "scripts/atomic_integrate.py"
       - "scripts/harness_warmup.py"
       - "scripts/recursion_gate_review.py"
+      - "scripts/gate_block_parser.py"
+      - "scripts/gate_staging_sidecar.py"
       - "scripts/recursion_gate_territory.py"
       - "scripts/emit_pipeline_event.py"
       - "grace-mar-llm.txt"

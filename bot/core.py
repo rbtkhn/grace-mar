@@ -83,6 +83,11 @@ try:
 except ImportError:
     from scripts.pipeline_correlation import find_staged_event_id_for_candidate
 
+try:
+    from gate_staging_sidecar import write_gate_staging_sidecar
+except ImportError:
+    from scripts.gate_staging_sidecar import write_gate_staging_sidecar
+
 logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -1020,6 +1025,17 @@ channel_key: {channel_key}
         candidate_ref=f"recursion-gate.md#{candidate_id}",
         **enrich,
     )
+    try:
+        repo_root = PROFILE_DIR.parent.parent
+        write_gate_staging_sidecar(
+            repo_root,
+            USER_ID,
+            candidate_id=candidate_id,
+            channel_key=channel_key,
+            staging_meta=staging_meta,
+        )
+    except OSError:
+        logger.debug("gate staging sidecar write failed", exc_info=True)
     return True
 
 

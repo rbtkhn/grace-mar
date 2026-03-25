@@ -32,6 +32,19 @@ try:
 except ImportError:
     from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 
+try:
+    from gate_block_parser import (
+        iter_candidate_yaml_blocks,
+        pending_candidates_region,
+        split_gate_sections,
+    )
+except ImportError:
+    from scripts.gate_block_parser import (
+        iter_candidate_yaml_blocks,
+        pending_candidates_region,
+        split_gate_sections,
+    )
+
 _read = read_path
 _profile_dir = profile_dir
 DEFAULT_USER = DEFAULT_USER_ID
@@ -118,28 +131,6 @@ def _extract_block(yaml_body: str, key: str) -> str:
     return "\n".join(out).strip()
 
 
-def _candidate_matches(full_md: str) -> list[re.Match[str]]:
-    active, _processed = split_gate_sections(full_md)
-    return list(
-        re.finditer(
-            r"### (CANDIDATE-\d+)(?:\s*\(([^)]*)\))?\s*\n```yaml\n(.*?)```",
-            active,
-            re.DOTALL,
-        )
-    )
-
-
-def split_gate_sections(full_md: str) -> tuple[str, str]:
-    """
-    Split at the actual `## Processed` heading, not header prose mentioning it.
-    Returns (active_section, processed_section_without_heading).
-    """
-    marker = re.search(r"^## Processed\s*$", full_md, re.MULTILINE)
-    if not marker:
-        return full_md, ""
-    return full_md[: marker.start()], full_md[marker.end() :]
-
-
 def _parse_candidates_metrics_shape(section: str) -> list[dict]:
     """Parse a gate section into list of dicts with id, status, outcome (for metrics)."""
     result: list[dict] = []
@@ -163,16 +154,9 @@ def parse_gate_for_metrics(content: str) -> tuple[list[dict], list[dict]]:
     Parse recursion-gate content into (pending_list, processed_list) for pipeline health.
     Each item has id, status, and outcome when present. Use from metrics.py.
     """
-    candidates_section, processed_section = split_gate_sections(content)
-    # Pending = only the slice between ## Candidates and ## Processed
-    idx_c = content.find("## Candidates")
-    idx_p = content.find("## Processed")
-    if idx_c >= 0 and idx_p > idx_c:
-        pending_section = content[idx_c:idx_p]
-    elif idx_c >= 0:
-        pending_section = content[idx_c:]
-    else:
-        pending_section = ""
+    processed_tail = split_gate_sections(content)[1]
+    pending_section = pending_candidates_region(content)
+    processed_section = processed_tail
     pending = _parse_candidates_metrics_shape(pending_section)
     processed = _parse_candidates_metrics_shape(processed_section)
     return pending, processed
@@ -181,12 +165,7 @@ def parse_gate_for_metrics(content: str) -> tuple[list[dict], list[dict]]:
 def _parse_candidates_dashboard_shape(section: str) -> list[dict]:
     """Parse pending section into list of {id, summary, mind_category, priority_score} for dashboard/profile."""
     result: list[dict] = []
-    for m in re.finditer(
-        r"^### (CANDIDATE-\d+)(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```",
-        section,
-        re.MULTILINE | re.DOTALL,
-    ):
-        cid, yaml_body = m.group(1), m.group(2)
+    for cid, _title, yaml_body in iter_candidate_yaml_blocks(section):
         result.append({
             "id": cid,
             "summary": _extract_scalar(yaml_body, "summary").strip().strip('"'),
@@ -201,14 +180,7 @@ def parse_gate_pending_for_dashboard(content: str) -> tuple[int, list[dict]]:
     Parse recursion-gate content into (pending_count, pending_candidates) for profile/dashboard.
     Each candidate has id, summary, mind_category, priority_score. Use from generate_profile.py.
     """
-    idx_c = content.find("## Candidates")
-    idx_p = content.find("## Processed")
-    if idx_c >= 0 and idx_p > idx_c:
-        pending_section = content[idx_c:idx_p]
-    elif idx_c >= 0:
-        pending_section = content[idx_c:]
-    else:
-        pending_section = ""
+    pending_section = pending_candidates_region(content)
     candidates = _parse_candidates_dashboard_shape(pending_section)
     return len(candidates), candidates
 
@@ -406,11 +378,9 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
     content = _read(gate_path)
     self_text = _read(self_path)
     pipeline_by_candidate = _pipeline_events_index(user_id)
+    active, _ = split_gate_sections(content)
     rows: list[dict] = []
-    for match in _candidate_matches(content):
-        candidate_id = match.group(1)
-        title = (match.group(2) or "").strip()
-        yaml_body = match.group(3)
+    for candidate_id, title, yaml_body in iter_candidate_yaml_blocks(active):
         status = _extract_scalar(yaml_body, "status") or "pending"
         channel_key = _extract_scalar(yaml_body, "channel_key")
         timestamp = _extract_scalar(yaml_body, "timestamp")

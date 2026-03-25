@@ -1,0 +1,36 @@
+# Agent surface evaluation — template
+#
+# Use when comparing agent products or new integration shells (see agentic-environment-principles.md).
+# Three axes from ecosystem framing: where it runs, who orchestrates, interface contract.
+# Plus Grace-Mar trust fields: Record authority, staging, gate.
+
+version: 1
+integration_name: ""
+evaluated_at: "" # optional ISO-8601 date
+
+# Axis 1 — Where compute and primary data live (privacy, security surface, ops burden)
+runtime:
+  placement: "" # local | cloud | hybrid
+  data_residency_notes: ""
+
+# Axis 2 — Who routes models / tools / sub-agents (cost, lock-in, quality trade-offs)
+orchestration:
+  who_decides: "" # self | vendor | hybrid
+  notes: ""
+
+# Axis 3 — How you drive it (habits, channels, assumptions about the user)
+interface:
+  channels: [] # e.g. [telegram, desktop, cli, web]
+  notes: ""
+
+# Grace-Mar — identity and governance (companion sovereign Record; stage-only automation)
+grace_mar:
+  record_authority: companion # companion | not_applicable
+  staging_surface: "" # e.g. integrations/openclaw_stage.py / HTTP /stage
+  merge_requires_companion_gate: true
+  continuity_contract: "" # e.g. session-continuity-contract.md paths or not_applicable
+  observability: "" # e.g. runtime/observability/*.jsonl or unknown
+
+decision:
+  fit_summary: "" # one paragraph
+  proceed: "" # yes | no | pilot

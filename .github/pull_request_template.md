@@ -12,6 +12,7 @@
 | work-jiang research lane | `lane/work-jiang` |
 | companion Record / users / bot prompt | `lane/companion-record` |
 | work-politics scripts/docs | `lane/work-politics` |
+| work-strategy docs / daily-brief config / strategy modules | `lane/work-strategy` |
 | work-companion-xavier docs | `lane/work-companion-xavier` |
 | repo infra (workflows, pyproject, broad tooling) | `lane/infra` |
 
@@ -23,7 +24,7 @@ If the diff **intentionally crosses lanes**, also add **`lane/cross`** and fill 
 
 - [ ] This PR is **work-dev** only — label `lane/work-dev`
 - [ ] This PR is **work-jiang** only — label `lane/work-jiang`
-- [ ] This PR is **companion-record** / **work-politics** / **infra** / **work-companion-xavier** only — matching `lane/...`
+- [ ] This PR is **companion-record** / **work-politics** / **work-strategy** / **infra** / **work-companion-xavier** only — matching `lane/...`
 - [ ] This PR **intentionally crosses lanes** — labels `lane/cross` + one primary `lane/...` + justification below
 
 ### Cross-lane justification

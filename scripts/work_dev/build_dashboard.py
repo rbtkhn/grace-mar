@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from collections import Counter
 from datetime import datetime, timezone
@@ -21,6 +20,8 @@ import yaml
 _SCRIPTS = Path(__file__).resolve().parent.parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
+
+from gate_block_parser import mean_pending_provenance_from_path  # noqa: E402
 
 from work_dev.dashboard_models import DashboardSummary  # noqa: E402
 
@@ -149,7 +150,7 @@ def build_dashboard(*, user_id: str, repo_root: Path) -> DashboardSummary:
     lane_n = count_jsonl_events(obs / "lane_scope.jsonl", event_name="lane_violation")
     cont_n = count_jsonl_events(obs / "continuity_blocks.jsonl", event_name="continuity_block")
 
-    gate_score = provenance_score_from_recursion_gate(gate_path)
+    gate_score = mean_pending_provenance_from_path(gate_path)
     if gate_score is not None:
         prov = gate_score
         from_gate = True

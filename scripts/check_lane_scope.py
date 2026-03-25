@@ -256,6 +256,35 @@ def main() -> int:
 
     for m in msgs:
         print(m)
+    if code != 0 and files and not args.accept_any_lane:
+        try:
+            from infer_lane_from_paths import infer_dominant
+
+            dom = infer_dominant(files, doc)
+            lanes_keys = doc.get("lanes") or {}
+            if dom in lanes_keys:
+                print(
+                    f"\nlane-scope hint: diff infers `{dom}` — add GitHub label `lane/{dom}` if that matches.",
+                    file=sys.stderr,
+                )
+            elif dom == "mixed":
+                print(
+                    "\nlane-scope hint: diff spans multiple lanes — add `lane/cross` and justification, "
+                    "or split the PR.",
+                    file=sys.stderr,
+                )
+            else:
+                print(
+                    f"\nlane-scope hint: paths did not resolve to one lane (got `{dom}`). "
+                    "Choose `lane/<id>` from the PR template.",
+                    file=sys.stderr,
+                )
+        except Exception:
+            pass
+        print(
+            "lane-scope hint: template at `.github/pull_request_template.md`.\n",
+            file=sys.stderr,
+        )
     return code
 
 

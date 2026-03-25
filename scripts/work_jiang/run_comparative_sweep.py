@@ -18,10 +18,50 @@ WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 _WJ_SCRIPTS = ROOT / "scripts" / "work_jiang"
 if str(_WJ_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_WJ_SCRIPTS))
+_SCRIPTS_ROOT = ROOT / "scripts"
+if str(_SCRIPTS_ROOT) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_ROOT))
 STATE_PATH = WORK_DIR / "metadata" / "comparative_sweep_state.yaml"
 ANALYSIS_DIR = WORK_DIR / "analysis"
 CLAIMS_PATH = WORK_DIR / "claims" / "registry" / "claims.jsonl"
 GATE_STAGING = ROOT / "users" / "grace-mar" / "recursion-gate-staging"
+DEFAULT_GATE_USER = "grace-mar"
+
+
+def _paste_snippet_markdown(ts: str, ts_full: str, sweep_md_rel: str, *, user_id: str) -> str:
+    """Canonical ### CANDIDATE-* block for pasting into recursion-gate (next id from current gate)."""
+    from stage_gate_candidate import next_candidate_id
+
+    gate_path = ROOT / "users" / user_id / "recursion-gate.md"
+    content = (
+        gate_path.read_text(encoding="utf-8")
+        if gate_path.is_file()
+        else "## Candidates\n\n## Processed\n"
+    )
+    cid = next_candidate_id(content)
+    summary = (
+        f"work-jiang comparative sweep {ts}: see {sweep_md_rel}; replace with concrete gate YAML after review."
+    )
+    safe_summary = '"' + summary.replace("\\", "\\\\").replace('"', '\\"') + '"'
+    return "\n".join(
+        [
+            f"<!-- Canonical gate paste — sweep {ts} — id chosen from next free CANDIDATE-* in gate -->",
+            "",
+            f"### {cid}",
+            "```yaml",
+            "status: pending",
+            f"timestamp: {ts_full}",
+            "channel_key: operator:work-jiang",
+            "territory: companion",
+            "mind_category: knowledge",
+            "priority_score: 6",
+            f"summary: {safe_summary}",
+            "```",
+            "",
+            "_Edit before paste. Docs: docs/skill-work/work-jiang/LANE-CI.md_",
+            "",
+        ]
+    )
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -102,6 +142,8 @@ def main() -> int:
 
     out_md = WORK_DIR / "analysis" / f"comparative-sweep-{ts}.md"
     gate_yaml = GATE_STAGING / f"work-jiang-sweep-{ts}.yaml"
+    sweep_md_rel = str(out_md.relative_to(ROOT))
+    paste_md = GATE_STAGING / f"work-jiang-sweep-{ts}.paste-snippet.md"
 
     gate_body = "\n".join(
         [
@@ -121,12 +163,17 @@ def main() -> int:
     if args.dry_run:
         print(f"Would write: {out_md}")
         print(f"Would write: {gate_yaml}")
+        print(f"Would write: {paste_md}")
         return 0
 
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_md.write_text("\n".join(sections) + "\n", encoding="utf-8")
     GATE_STAGING.mkdir(parents=True, exist_ok=True)
     gate_yaml.write_text(gate_body + "\n", encoding="utf-8")
+    paste_md.write_text(
+        _paste_snippet_markdown(ts, ts_full, sweep_md_rel, user_id=DEFAULT_GATE_USER),
+        encoding="utf-8",
+    )
 
     state["last_sweep_at_utc"] = ts_full
     state["last_source_id_processed"] = state.get("last_source_id_processed")
@@ -134,6 +181,7 @@ def main() -> int:
 
     print(f"Wrote {out_md}")
     print(f"Wrote {gate_yaml}")
+    print(f"Wrote {paste_md}")
     print(f"Updated {STATE_PATH}")
     return 0
 
