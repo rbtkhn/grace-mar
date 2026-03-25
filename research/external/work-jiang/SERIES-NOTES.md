@@ -36,4 +36,8 @@ Volume Five title set by operator: **Great Books**.
 ## 2026-03-25 — Volume IV (Game Theory) source corpus
 
 **Game Theory #1–#15** ingested: `gt-01` … `gt-15` in `metadata/sources.yaml`, matching `@PredictiveHistory` channel index (no **#16** at snapshot). Validator clean. Book lane: analysis, chapter mapping, Part II mode still per [book/VOLUME-IV-GAME-THEORY.md](book/VOLUME-IV-GAME-THEORY.md).
+
+## Volume V (Great Books) — next ingest
+
+Handoff for wiring `great-books` / `gb-*` / `lectures/great-books-NN-*.md` and ingesting channel **Great Books #1–#7**: [HANDOFF-volume-v-great-books-ingest.md](HANDOFF-volume-v-great-books-ingest.md).
 3. Decide chapter-end box type per volume (prediction, divergence, or a dedicated box template).
