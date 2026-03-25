@@ -9,6 +9,7 @@ Examples::
     python3 scripts/work_jiang/ingest_lecture.py civilization 25 --file raw.txt
     cat raw.txt | python3 scripts/work_jiang/ingest_lecture.py civ 25
     python3 scripts/work_jiang/ingest_lecture.py gt 1 --file raw.txt
+    python3 scripts/work_jiang/ingest_lecture.py gb 1 --file raw.txt
     python3 scripts/work_jiang/ingest_lecture.py geo 3 --fetch
     python3 scripts/work_jiang/ingest_lecture.py civ 26 --fetch --asr --no-refresh
 """
@@ -53,6 +54,8 @@ def _series_prefix(series: str) -> str:
         return "geo-strategy"
     if s in ("game-theory", "gt"):
         return "game-theory"
+    if s in ("great-books", "gb"):
+        return "great-books"
     raise ValueError(series)
 
 
@@ -122,6 +125,9 @@ def _build_markdown(
     elif series_prefix == "game-theory":
         series_label = "Game Theory"
         series_md = f"**Series:** {series_label} **#{episode}**"
+    elif series_prefix == "great-books":
+        series_label = "Great Books"
+        series_md = f"**Series:** {series_label} **#{episode}**"
     else:
         series_label = "Geo-Strategy"
         if episode == 12:
@@ -174,7 +180,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "series",
-        help="civilization|civ|secret-history|secret|sh|geo-strategy|geo|game-theory|gt",
+        help="civilization|civ|secret-history|secret|sh|geo-strategy|geo|game-theory|gt|great-books|gb",
     )
     parser.add_argument("episode", type=int, help="Episode number (1–99+)")
     parser.add_argument(
@@ -242,6 +248,8 @@ def main() -> int:
         lookup_series = "secret-history"
     elif sprefix == "game-theory":
         lookup_series = "game-theory"
+    elif sprefix == "great-books":
+        lookup_series = "great-books"
     else:
         lookup_series = "geo-strategy"
     row = lookup_series_episode(lookup_series, args.episode, index_path=args.index)

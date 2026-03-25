@@ -1847,3 +1847,108 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: gb-01
+  video_id: TsD-8FGA84A
+  title: 'Great Books #1: Secrets of the Universe'
+  canonical_url: https://www.youtube.com/watch?v=TsD-8FGA84A
+  publication_date: 2026-01-07
+  lecture_path: lectures/great-books-01-secrets-of-the-universe.md
+  analysis_path: analysis/TsD-8FGA84A-great-books-01-analysis.md
+  series: great-books
+  episode: 1
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: gb-02
+  video_id: Ft2CuowGuYc
+  title: 'Great Books #2: Homer and the Invention of the Human'
+  canonical_url: https://www.youtube.com/watch?v=Ft2CuowGuYc
+  publication_date: 2026-01-14
+  lecture_path: lectures/great-books-02-homer-and-the-invention-of-the-human.md
+  analysis_path: analysis/Ft2CuowGuYc-great-books-02-analysis.md
+  series: great-books
+  episode: 2
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: gb-03
+  video_id: XRP407WsA0w
+  title: 'Great Books #3: Poets and Prophets'
+  canonical_url: https://www.youtube.com/watch?v=XRP407WsA0w
+  publication_date: 2026-01-21
+  lecture_path: lectures/great-books-03-poets-and-prophets.md
+  analysis_path: analysis/XRP407WsA0w-great-books-03-analysis.md
+  series: great-books
+  episode: 3
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: gb-04
+  video_id: dkzr5A8IlLA
+  title: 'Great Books #4: The Conscious Universe'
+  canonical_url: https://www.youtube.com/watch?v=dkzr5A8IlLA
+  publication_date: 2026-01-28
+  lecture_path: lectures/great-books-04-the-conscious-universe.md
+  analysis_path: analysis/dkzr5A8IlLA-great-books-04-analysis.md
+  series: great-books
+  episode: 4
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: gb-05
+  video_id: gXlcR7uHHdA
+  title: 'Great Books #5: The Odyssey'
+  canonical_url: https://www.youtube.com/watch?v=gXlcR7uHHdA
+  publication_date: 2026-03-04
+  lecture_path: lectures/great-books-05-the-odyssey.md
+  analysis_path: analysis/gXlcR7uHHdA-great-books-05-analysis.md
+  series: great-books
+  episode: 5
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: gb-06
+  video_id: aS-NfPSPMu8
+  title: 'Great Books #6: The Intimacy of Love'
+  canonical_url: https://www.youtube.com/watch?v=aS-NfPSPMu8
+  publication_date: 2026-03-11
+  lecture_path: lectures/great-books-06-the-intimacy-of-love.md
+  analysis_path: analysis/aS-NfPSPMu8-great-books-06-analysis.md
+  series: great-books
+  episode: 6
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: gb-07
+  video_id: EBWTRvjZ1dw
+  title: 'Great Books #7: The Anti-Homer'
+  canonical_url: https://www.youtube.com/watch?v=EBWTRvjZ1dw
+  publication_date: 2026-03-18
+  lecture_path: lectures/great-books-07-the-anti-homer.md
+  analysis_path: analysis/EBWTRvjZ1dw-great-books-07-analysis.md
+  series: great-books
+  episode: 7
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started

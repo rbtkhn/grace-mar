@@ -2,7 +2,8 @@
 
 Civilization lectures use common + civilization replacement tiers; geo-strategy uses common
 only; **secret-history** uses common + ``SECRET_HISTORY_REPLACEMENTS`` (Roman/SH Volume III);
-**game-theory** uses common + ``GAME_THEORY_REPLACEMENTS`` (Volume IV; table may start empty)."""
+**game-theory** uses common + ``GAME_THEORY_REPLACEMENTS`` (Volume IV; table may start empty);
+**great-books** uses common + ``GREAT_BOOKS_REPLACEMENTS`` (Volume V; table may start empty)."""
 
 from __future__ import annotations
 
@@ -13,6 +14,7 @@ from asr_transcript_replacements import (
     CIVILIZATION_REPLACEMENTS,
     COMMON_REPLACEMENTS,
     GAME_THEORY_REPLACEMENTS,
+    GREAT_BOOKS_REPLACEMENTS,
     SECRET_HISTORY_REPLACEMENTS,
 )
 
@@ -28,6 +30,8 @@ def detect_series_from_basename(name: str) -> str | None:
         return "secret-history"
     if n.startswith("game-theory-"):
         return "game-theory"
+    if n.startswith("great-books-"):
+        return "great-books"
     return None
 
 
@@ -86,5 +90,8 @@ def normalize_transcript_text(
         total += n
     elif series == "game-theory":
         text, n = apply_ordered_replacements(text, GAME_THEORY_REPLACEMENTS)
+        total += n
+    elif series == "great-books":
+        text, n = apply_ordered_replacements(text, GREAT_BOOKS_REPLACEMENTS)
         total += n
     return text, total

@@ -1,7 +1,7 @@
 # Predictive History — Volume V: Great Books
 
-**Corpus:** TBD (to be mapped in `metadata/sources.yaml`)  
-**Status:** title registered; scope definition pending.
+**Corpus:** `metadata/sources.yaml` — `gb-01` … `gb-07` (Great Books **#1–#7**); curated files `lectures/great-books-NN-*.md`  
+**Status:** first ingest batch **#1–#7** complete (registry + tooling); Part I chapter mapping and Part II method still open.
 
 ## Volume intent
 
@@ -9,8 +9,8 @@ Volume V extends the Predictive History multivolume architecture with the workin
 
 ## Setup checklist
 
-1. Define series key and corpus boundary in `metadata/sources.yaml`.
-2. Establish lecture filename pattern under `lectures/`.
+1. ~~Define series key and corpus boundary in `metadata/sources.yaml`.~~ Done — `series: great-books`, `gb-*`, first batch **#1–#7**.
+2. ~~Establish lecture filename pattern under `lectures/`.~~ Done — `great-books-NN-<slug>.md`.
 3. Declare Part I chapter mapping policy (one chapter per lecture unless exceptions are documented).
 4. Choose Part II evaluation mode:
    - prediction adjudication, or
