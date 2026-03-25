@@ -32,6 +32,8 @@ def get_extractor_class(*, series_id: str | None = None, source_id: str | None =
             return GeoStrategyExtractor
         if source_id.startswith("civ-"):
             return CivilizationExtractor
+        if source_id.startswith("vi-"):
+            return PredictiveHistoryExtractor
     override = os.environ.get("WORK_JIANG_EXTRACTOR_SERIES", "").strip()
     if override and override in _EXTRACTORS:
         return _EXTRACTORS[override]

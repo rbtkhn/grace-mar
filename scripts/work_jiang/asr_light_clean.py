@@ -32,6 +32,8 @@ def detect_series_from_basename(name: str) -> str | None:
         return "game-theory"
     if n.startswith("great-books-"):
         return "great-books"
+    if n.startswith("interviews-"):
+        return "interviews"
     return None
 
 

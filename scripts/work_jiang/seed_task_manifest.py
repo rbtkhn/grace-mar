@@ -39,6 +39,7 @@ def lecture_glob_from_source_id(source_id: str) -> str:
             "sh": "secret-history",
             "gt": "game-theory",
             "gb": "great-books",
+            "vi": "interviews",
         }
         series = prefix_map.get(prefix, prefix)
         return f"lectures/{series}-{num}-*.md"

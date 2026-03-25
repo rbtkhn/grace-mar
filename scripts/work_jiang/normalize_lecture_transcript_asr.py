@@ -9,6 +9,7 @@ Geo-Strategy lectures use the common tier only.
 Secret History (``secret-history-*.md``) uses common + Roman / Volume III phrase tier.
 Game Theory (``game-theory-*.md``) uses common + Volume IV phrase tier (may be empty until ingests).
 Great Books (``great-books-*.md``) uses common + Volume V phrase tier (may be empty until ingests).
+Interviews (``interviews-*.md``, Volume VI) use the common tier only unless extended later.
 
 Examples::
 
@@ -95,6 +96,7 @@ def main() -> int:
             "secret-history",
             "game-theory",
             "great-books",
+            "interviews",
             "none",
         ),
         default="auto",

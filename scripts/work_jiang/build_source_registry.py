@@ -18,6 +18,9 @@ CIV_NAME = re.compile(r"^civilization-(\d+)-", re.I)
 SH_NAME = re.compile(r"^secret-history-(\d+)-", re.I)
 GT_NAME = re.compile(r"^game-theory-(\d+)-", re.I)
 GB_NAME = re.compile(r"^great-books-(\d+)-", re.I)
+INTERVIEWS_NAME = re.compile(r"^interviews-(\d+)-", re.I)
+# Analysis memo without leading YouTube id (operator transcript only)
+INTERVIEWS_ANALYSIS_NOVID = re.compile(r"^interviews-(\d+)-analysis\.md$", re.I)
 WATCH_RE = re.compile(r"watch\?v=([A-Za-z0-9_-]{11})")
 VIDEO_IN_NAME = re.compile(r"^([A-Za-z0-9_-]{11})-")
 
@@ -97,6 +100,7 @@ def main() -> int:
     analysis_by_vid: dict[str, Path] = {}
     civmem_by_source: dict[str, Path] = {}
     psyhist_by_source: dict[str, Path] = {}
+    interviews_analysis_by_ep: dict[int, Path] = {}
     for p in ANALYSIS.glob("*.md"):
         if p.name == ".gitkeep":
             continue
@@ -111,6 +115,10 @@ def main() -> int:
         if p.name.endswith("-psy-hist-analysis.md"):
             sid = p.stem.removesuffix("-psy-hist-analysis")
             psyhist_by_source[sid] = p
+            continue
+        m_iv = INTERVIEWS_ANALYSIS_NOVID.match(p.name)
+        if m_iv:
+            interviews_analysis_by_ep[int(m_iv.group(1))] = p
 
     def analysis_for_source(
         vid: str | None,
@@ -120,6 +128,11 @@ def main() -> int:
         matched = analysis_for_video(analysis_by_vid, vid)
         if matched:
             return matched, "complete"
+        if sid.startswith("vi-"):
+            ep = int(sid.split("-", 1)[1])
+            p_iv = interviews_analysis_by_ep.get(ep)
+            if p_iv:
+                return p_iv, "complete"
         if sid in civmem_by_source:
             return civmem_by_source[sid], "complete"
         if sid in psyhist_by_source:
@@ -304,6 +317,39 @@ def main() -> int:
             }
         )
 
+    interview_paths = sorted(
+        LECTURES.glob("interviews-*.md"),
+        key=lambda p: int(INTERVIEWS_NAME.match(p.name).group(1)) if INTERVIEWS_NAME.match(p.name) else 0,
+    )
+    for lecture in interview_paths:
+        m = INTERVIEWS_NAME.match(lecture.name)
+        if not m:
+            continue
+        ep = int(m.group(1))
+        source_id = f"vi-{ep:02d}"
+        vid = extract_video_id_from_lecture(lecture)
+        matched, analysis_status = analysis_for_source(vid, source_id)
+        analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
+        sources.append(
+            {
+                "source_id": source_id,
+                "video_id": vid,
+                "title": title_from_lecture(lecture),
+                "canonical_url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
+                "lecture_path": str(lecture.relative_to(WORK_DIR)),
+                "analysis_path": analysis_path,
+                "series": "interviews",
+                "episode": ep,
+                "themes": [],
+                "status": {
+                    "transcript": "complete",
+                    "curated_lecture": "complete",
+                    "analysis": analysis_status,
+                    "chapter_mapping": "missing",
+                },
+            }
+        )
+
     for s in sources:
         if s["source_id"].startswith("civ-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
@@ -312,6 +358,8 @@ def main() -> int:
         if s["source_id"].startswith("gt-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
         if s["source_id"].startswith("gb-"):
+            s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
+        if s["source_id"].startswith("vi-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
 
     merge_preserved_fields_from_previous_yaml(sources, OUT)

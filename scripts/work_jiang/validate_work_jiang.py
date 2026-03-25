@@ -18,6 +18,7 @@ GEO_LECTURE = re.compile(r"^geo-strategy-(\d{2})-(.+)\.md$", re.I)
 CIV_LECTURE = re.compile(r"^civilization-(\d{2})-(.+)\.md$", re.I)
 GAME_LECTURE = re.compile(r"^game-theory-(\d{2})-(.+)\.md$", re.I)
 GREAT_BOOKS_LECTURE = re.compile(r"^great-books-(\d{2})-(.+)\.md$", re.I)
+INTERVIEWS_LECTURE = re.compile(r"^interviews-(\d{2})-(.+)\.md$", re.I)
 
 VALID_STATUSES = [
     "not_started",
@@ -242,6 +243,17 @@ def main() -> int:
                 errors.append(
                     f"{s['source_id']}: filename episode {m.group(1)} != episode {ep}"
                 )
+        elif series == "interviews":
+            m = INTERVIEWS_LECTURE.match(name)
+            if not m:
+                errors.append(
+                    f"{s['source_id']}: lecture filename must match "
+                    f"interviews-NN-<slug>.md (NN two digits), got {name!r}"
+                )
+            elif int(m.group(1)) != int(ep):
+                errors.append(
+                    f"{s['source_id']}: filename episode {m.group(1)} != episode {ep}"
+                )
     dup_lp = [p for p in set(lecture_paths_seen) if lecture_paths_seen.count(p) > 1]
     for p in sorted(dup_lp):
         errors.append(f"Duplicate lecture_path in sources: {p}")
@@ -252,6 +264,7 @@ def main() -> int:
         ("civilization-*.md", "civilization"),
         ("game-theory-*.md", "game-theory"),
         ("great-books-*.md", "great-books"),
+        ("interviews-*.md", "interviews"),
     ):
         for path in sorted(LECTURES.glob(pattern)):
             rel = path.relative_to(WORK_DIR).as_posix()
