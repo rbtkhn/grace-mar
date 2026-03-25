@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-02
+analysis_id: vi-03
 video_id: ORyCS0r2Tpg
-source_id: vi-02
+source_id: vi-03
 canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
 series: interviews
-episode: 2
+episode: 3
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #2: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
+# Analysis — Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)
 
 - **video_id:** `ORyCS0r2Tpg`
 - **canonical_url:** https://www.youtube.com/watch?v=ORyCS0r2Tpg
-- **series / episode:** Predictive History · Volume VI — Interviews #2
-- **raw_transcript:** [lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #3
+- **raw_transcript:** [lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -63,13 +63,13 @@ Forward-looking **2026** **interview**: **US–China** **April** **summit** as *
 
 ## Cross-refs
 
-- [Interviews #1 — West’s Civilizational Collapse](GSSIm9xNRAE-interviews-01-analysis.md) — **same** **host** **/** **civilizational** **decline** **frame** **(Nov** **2025)**.
-- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **2026** **flashpoint** **/** **NSS** **(Jan** **18)**.
-- [Interviews #4 — Dimitri Lascaris](uHIdRgFypNo-interviews-04-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
-- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
-- [lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
+- [Interviews #2 — West’s Civilizational Collapse](GSSIm9xNRAE-interviews-02-analysis.md) — **same** **host** **/** **civilizational** **decline** **frame** **(Nov** **2025)**.
+- [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **2026** **flashpoint** **/** **NSS** **(Jan** **18)**.
+- [Interviews #5 — Dimitri Lascaris](uHIdRgFypNo-interviews-05-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
+- [Interviews #6 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
+- [lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 
 ## Follow-ups
 
 - **If** **YouTube** **metadata** **differs** **on** **exact** **upload** **date**, **add** **to** **lecture** **header**.
-- **Optional:** **cross-link** **to** **predictions** **/** **divergence** **registry** **when** **book** **lane** **maps** **vi-02**.
+- **Optional:** **cross-link** **to** **predictions** **/** **divergence** **registry** **when** **book** **lane** **maps** **Glenn** **Diesen** **ladder** **(e.g.** **`vi-02`** **→** **`vi-03`)** **.**

@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-01
+analysis_id: vi-02
 video_id: GSSIm9xNRAE
-source_id: vi-01
+source_id: vi-02
 canonical_url: https://www.youtube.com/watch?v=GSSIm9xNRAE
 series: interviews
-episode: 1
+episode: 2
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #1: Glenn Diesen — The West's Civilizational Collapse
+# Analysis — Interviews #2: Glenn Diesen — The West's Civilizational Collapse
 
 - **video_id:** `GSSIm9xNRAE`
 - **canonical_url:** https://www.youtube.com/watch?v=GSSIm9xNRAE
-- **series / episode:** Predictive History · Volume VI — Interviews #1
-- **raw_transcript:** [lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #2
+- **raw_transcript:** [lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md)
 - **upload_date (YouTube):** 20251124
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -65,10 +65,10 @@ Long-form **civilizational** **interview**: **three** **factors** (**energy**, *
 
 ## Cross-refs
 
-- [Interviews #2 — Predictions 2026](ORyCS0r2Tpg-interviews-02-analysis.md) — **forward** **macro** **/** **US–China** **(Jan** **2026)**.
-- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **WWIII** **frame** **/** **empire** **collapse** **(Jan** **2026)**.
-- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **same** **host** **cluster** **as** **Glenn** **Diesen** **;** **empire** **/** **NATO** **/** **elite** **themes**.
-- [lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md)
+- [Interviews #3 — Predictions 2026](ORyCS0r2Tpg-interviews-03-analysis.md) — **forward** **macro** **/** **US–China** **(Jan** **2026)**.
+- [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **WWIII** **frame** **/** **empire** **collapse** **(Jan** **2026)**.
+- [Interviews #6 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) — **same** **host** **cluster** **as** **Glenn** **Diesen** **;** **empire** **/** **NATO** **/** **elite** **themes**.
+- [lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md)
 
 ## Follow-ups
 

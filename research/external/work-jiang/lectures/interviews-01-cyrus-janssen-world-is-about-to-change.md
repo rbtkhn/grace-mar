@@ -1,13 +1,11 @@
-# Interviews #9: Cyrus Janssen — The World Is About to Change
+# Interviews #1: Cyrus Janssen — The World Is About to Change
 
 **Speaker:** Jiang Xueqin (guest); Cyrus Janssen (host)  
 **Audience:** Cyrus Janssen (long-form studio interview)  
-**Series:** Predictive History · Volume VI — Interviews **#9**  
+**Series:** Predictive History · Volume VI — Interviews **#1**  
 **Date (YouTube upload):** 2025-10-30  
 **Title (YouTube):** Professor Jiang Xueqin: The World Is About to Change  
 **Topic:** Game theory and geopolitics; Middle East as trade hub, oil, eschatology; Israel–Hamas ceasefire skepticism; Russia–Ukraine (NATO, sunk cost, Odessa); US–China (Trump–Xi, rare earths, “mafia state”); Taiwan invasion game-theory case against; closing on Ukraine/Middle East flash points vs geophysical risks (ice age, magnetic pole shift).
-
-**Note:** YouTube upload **2025-10-30** predates many Volume VI interviews in calendar order; **`vi-09`** follows corpus intake sequence after **`vi-08`**.
 
 **Source (canonical recording):** [YouTube](https://www.youtube.com/watch?v=XRk5VSEzJ4Y) (`XRk5VSEzJ4Y`).  
 **Transcript:** Operator-supplied clean read; speaker labels as provided.

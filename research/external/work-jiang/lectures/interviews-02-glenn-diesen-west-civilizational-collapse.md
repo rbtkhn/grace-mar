@@ -1,8 +1,8 @@
-# Interviews #1: Glenn Diesen — The West's Civilizational Collapse
+# Interviews #2: Glenn Diesen — The West's Civilizational Collapse
 
 **Speaker:** Jiang Xueqin (guest); Glenn Diesen (host)  
 **Audience:** Long-form interview (public channel)  
-**Series:** Predictive History · Volume VI — Interviews **#1**  
+**Series:** Predictive History · Volume VI — Interviews **#2**  
 **Date (YouTube upload):** 2025-11-24  
 **Topic:** Civilizational rise/decline (energy, openness, cohesion); Western decline and polarization; Turchin / Piketty / Spengler; 2008 and financialization; Roman populism and Trump; Ukraine/NATO; US–China; Russia–China–Iran; Pax Judea / capital thesis.
 

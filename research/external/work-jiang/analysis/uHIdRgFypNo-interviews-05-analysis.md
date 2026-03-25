@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-04
+analysis_id: vi-05
 video_id: uHIdRgFypNo
-source_id: vi-04
+source_id: vi-05
 canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
 series: interviews
-episode: 4
+episode: 5
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #4: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China
+# Analysis — Interviews #5: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China
 
 - **video_id:** `uHIdRgFypNo`
 - **canonical_url:** https://www.youtube.com/watch?v=uHIdRgFypNo
-- **series / episode:** Predictive History · Volume VI — Interviews #4
-- **raw_transcript:** [lectures/interviews-04-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-04-dimitri-lascaris-trump-iran-davos-canada-china.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #5
+- **raw_transcript:** [lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md)
 - **upload_date (YouTube):** 20260122
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -60,10 +60,10 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #2 — Predictions 2026](ORyCS0r2Tpg-interviews-02-analysis.md) — **forward** **2026** **agenda** **(April** **summit** **etc.)**.
-- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **pause** **/** **game** **theory** **(Jan** **18)**.
-- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **Carney** **/** **NATO** **deep** **dive** **days** **later**.
-- [lectures/interviews-04-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-04-dimitri-lascaris-trump-iran-davos-canada-china.md)
+- [Interviews #3 — Predictions 2026](ORyCS0r2Tpg-interviews-03-analysis.md) — **forward** **2026** **agenda** **(April** **summit** **etc.)**.
+- [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **pause** **/** **game** **theory** **(Jan** **18)**.
+- [Interviews #6 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) — **Carney** **/** **NATO** **deep** **dive** **days** **later**.
+- [lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md](../lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md)
 
 ## Follow-ups
 

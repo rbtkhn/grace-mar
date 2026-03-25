@@ -1,8 +1,8 @@
-# Interviews #10: SNEAKO — The End of the World
+# Interviews #9: SNEAKO — The End of the World
 
 **Speaker:** Jiang Xueqin (guest); SNEAKO (host)  
 **Audience:** SNEAKO (long-form interview)  
-**Series:** Predictive History · Volume VI — Interviews **#10**  
+**Series:** Predictive History · Volume VI — Interviews **#9**  
 **Date (YouTube upload):** 2026-03-09  
 **Title (YouTube):** SNEAKO Interviews Professor Jiang: The End of the World  
 **Topic:** Israel / US / Iran war dynamics; Greater Israel; false flags (GCC, Qatar, Azerbaijan, Al-Aqsa, carrier); proxies vs ground invasion (Kurds, Kharg); draft; GCC mirage and petrodollar; Patrick Bet-David / coordinated campaign; nuclear strike discount; Turkey, Pakistan, Japan; eschatology (Chabad, Kabbalah, Pax Judaica); consciousness / NDE closing; war predictions (draft, National Guard, midterms).

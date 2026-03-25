@@ -1,8 +1,8 @@
-# Interviews #4: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China
+# Interviews #5: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China
 
 **Speaker:** Jiang Xueqin (guest); Dimitri Lascaris (host)  
 **Audience:** Reason to Resist (long-form interview)  
-**Series:** Predictive History · Volume VI — Interviews **#4**  
+**Series:** Predictive History · Volume VI — Interviews **#5**  
 **Date (YouTube upload):** 2026-01-22  
 **Title (YouTube):** Trump's War on Iran / Davos / Canada-China Relations w/ Prof. Jiang Xueqin of Predictive History  
 **Topic:** Iran escalation and air campaign, Strait of Hormuz, China–Iran support and red lines, Carney Davos “values-based realism,” Canada–China trade (EVs, canola), BIS / central banks, Huawei, Meng Wanzhou legacy.

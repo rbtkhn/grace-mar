@@ -1,8 +1,8 @@
-# Interviews #6: Nima (Dialogue Works) — The Iran War: The Watershed Moment That Changed the Middle East Forever
+# Interviews #8: Nima (Dialogue Works) — The Iran War: The Watershed Moment That Changed the Middle East Forever
 
 **Speaker:** Jiang Xueqin (guest); Nima (host)  
 **Audience:** Dialogue Works (long-form interview)  
-**Series:** Predictive History · Volume VI — Interviews **#6**  
+**Series:** Predictive History · Volume VI — Interviews **#8**  
 **Date (YouTube upload):** 2026-03-07  
 **Title (YouTube):** Jiang Xueqin: The Iran War: The Watershed Moment That Changed the Middle East Forever  
 **Topic:** WWIII framing and ground-troop escalation; Hormuz and Asian oil; Ukraine→Iran arc; Greater Israel / Kingdom of David; Mossad false-flag rumors (GCC, Tucker/Qatar); US empire, 2008, sanctions and Nord Stream; GCC as imperial constructs; Bahrain/Dubai/Saudi fragility; 12-day war, media blackout, need for US ground troops; transcript ends mid-segment as provided.

@@ -1968,12 +1968,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-01
-  video_id: GSSIm9xNRAE
-  title: 'Interviews #1: Glenn Diesen — The West''s Civilizational Collapse'
-  canonical_url: https://www.youtube.com/watch?v=GSSIm9xNRAE
-  publication_date: 2025-11-24
-  lecture_path: lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md
-  analysis_path: analysis/GSSIm9xNRAE-interviews-01-analysis.md
+  video_id: XRk5VSEzJ4Y
+  title: 'Interviews #1: Cyrus Janssen — The World Is About to Change'
+  canonical_url: https://www.youtube.com/watch?v=XRk5VSEzJ4Y
+  publication_date: 2025-10-30
+  lecture_path: lectures/interviews-01-cyrus-janssen-world-is-about-to-change.md
+  analysis_path: analysis/XRk5VSEzJ4Y-interviews-01-analysis.md
   series: interviews
   episode: 1
   themes: []
@@ -1983,12 +1983,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-02
-  video_id: ORyCS0r2Tpg
-  title: 'Interviews #2: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
-  canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
-  publication_date: 2026-01-05
-  lecture_path: lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md
-  analysis_path: analysis/ORyCS0r2Tpg-interviews-02-analysis.md
+  video_id: GSSIm9xNRAE
+  title: 'Interviews #2: Glenn Diesen — The West''s Civilizational Collapse'
+  canonical_url: https://www.youtube.com/watch?v=GSSIm9xNRAE
+  publication_date: 2025-11-24
+  lecture_path: lectures/interviews-02-glenn-diesen-west-civilizational-collapse.md
+  analysis_path: analysis/GSSIm9xNRAE-interviews-02-analysis.md
   series: interviews
   episode: 2
   themes: []
@@ -1998,13 +1998,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-03
-  video_id: H5lCJ0D4DpY
-  title: 'Interviews #3: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire
-    Collapse'
-  canonical_url: https://www.youtube.com/watch?v=H5lCJ0D4DpY
-  publication_date: 2026-01-18
-  lecture_path: lectures/interviews-03-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md
-  analysis_path: analysis/H5lCJ0D4DpY-interviews-03-analysis.md
+  video_id: ORyCS0r2Tpg
+  title: 'Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
+  canonical_url: https://www.youtube.com/watch?v=ORyCS0r2Tpg
+  publication_date: 2026-01-05
+  lecture_path: lectures/interviews-03-glenn-diesen-predictions-2026-empire-rivalry-collapse.md
+  analysis_path: analysis/ORyCS0r2Tpg-interviews-03-analysis.md
   series: interviews
   episode: 3
   themes: []
@@ -2014,12 +2013,13 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-04
-  video_id: uHIdRgFypNo
-  title: 'Interviews #4: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China'
-  canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
-  publication_date: 2026-01-22
-  lecture_path: lectures/interviews-04-dimitri-lascaris-trump-iran-davos-canada-china.md
-  analysis_path: analysis/uHIdRgFypNo-interviews-04-analysis.md
+  video_id: H5lCJ0D4DpY
+  title: 'Interviews #4: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire
+    Collapse'
+  canonical_url: https://www.youtube.com/watch?v=H5lCJ0D4DpY
+  publication_date: 2026-01-18
+  lecture_path: lectures/interviews-04-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md
+  analysis_path: analysis/H5lCJ0D4DpY-interviews-04-analysis.md
   series: interviews
   episode: 4
   themes: []
@@ -2029,12 +2029,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-05
-  video_id: 80jUKe0blAQ
-  title: 'Interviews #5: Glenn Diesen — Great Power Wars Over a New World Order'
-  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
-  publication_date: 2026-01-26
-  lecture_path: lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md
-  analysis_path: analysis/80jUKe0blAQ-interviews-05-analysis.md
+  video_id: uHIdRgFypNo
+  title: 'Interviews #5: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China'
+  canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
+  publication_date: 2026-01-22
+  lecture_path: lectures/interviews-05-dimitri-lascaris-trump-iran-davos-canada-china.md
+  analysis_path: analysis/uHIdRgFypNo-interviews-05-analysis.md
   series: interviews
   episode: 5
   themes: []
@@ -2044,13 +2044,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-06
-  video_id: 0rIgZD-tk3s
-  title: 'Interviews #6: Nima (Dialogue Works) — The Iran War: The Watershed Moment
-    That Changed the Middle East Forever'
-  canonical_url: https://www.youtube.com/watch?v=0rIgZD-tk3s
-  publication_date: 2026-03-07
-  lecture_path: lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md
-  analysis_path: analysis/0rIgZD-tk3s-interviews-06-analysis.md
+  video_id: 80jUKe0blAQ
+  title: 'Interviews #6: Glenn Diesen — Great Power Wars Over a New World Order'
+  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
+  publication_date: 2026-01-26
+  lecture_path: lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md
+  analysis_path: analysis/80jUKe0blAQ-interviews-06-analysis.md
   series: interviews
   episode: 6
   themes: []
@@ -2060,12 +2059,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-07
-  video_id: 2K2nQsTTjQE
-  title: 'Interviews #7: Tucker Carlson — Iran War, Energy, and Global Order'
-  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
-  publication_date: 2026-03-20
-  lecture_path: lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md
-  analysis_path: analysis/2K2nQsTTjQE-interviews-07-analysis.md
+  video_id: 4Ql24Z8SIeE
+  title: 'Interviews #7: Breaking Points (Krystal & Saagar) — US WILL LOSE Iran War'
+  canonical_url: https://www.youtube.com/watch?v=4Ql24Z8SIeE
+  publication_date: 2026-03-02
+  lecture_path: lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md
+  analysis_path: analysis/4Ql24Z8SIeE-interviews-07-analysis.md
   series: interviews
   episode: 7
   themes: []
@@ -2075,12 +2074,13 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-08
-  video_id: 4Ql24Z8SIeE
-  title: 'Interviews #8: Breaking Points (Krystal & Saagar) — US WILL LOSE Iran War'
-  canonical_url: https://www.youtube.com/watch?v=4Ql24Z8SIeE
-  publication_date: 2026-03-02
-  lecture_path: lectures/interviews-08-breaking-points-krystal-saagar-us-will-lose-iran-war.md
-  analysis_path: analysis/4Ql24Z8SIeE-interviews-08-analysis.md
+  video_id: 0rIgZD-tk3s
+  title: 'Interviews #8: Nima (Dialogue Works) — The Iran War: The Watershed Moment
+    That Changed the Middle East Forever'
+  canonical_url: https://www.youtube.com/watch?v=0rIgZD-tk3s
+  publication_date: 2026-03-07
+  lecture_path: lectures/interviews-08-nima-iran-war-watershed-middle-east-forever.md
+  analysis_path: analysis/0rIgZD-tk3s-interviews-08-analysis.md
   series: interviews
   episode: 8
   themes: []
@@ -2090,12 +2090,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-09
-  video_id: XRk5VSEzJ4Y
-  title: 'Interviews #9: Cyrus Janssen — The World Is About to Change'
-  canonical_url: https://www.youtube.com/watch?v=XRk5VSEzJ4Y
-  publication_date: 2025-10-30
-  lecture_path: lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md
-  analysis_path: analysis/XRk5VSEzJ4Y-interviews-09-analysis.md
+  video_id: o1DElACHNRo
+  title: 'Interviews #9: SNEAKO — The End of the World'
+  canonical_url: https://www.youtube.com/watch?v=o1DElACHNRo
+  publication_date: 2026-03-09
+  lecture_path: lectures/interviews-09-sneako-end-of-the-world.md
+  analysis_path: analysis/o1DElACHNRo-interviews-09-analysis.md
   series: interviews
   episode: 9
   themes: []
@@ -2105,12 +2105,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-10
-  video_id: o1DElACHNRo
-  title: 'Interviews #10: SNEAKO — The End of the World'
-  canonical_url: https://www.youtube.com/watch?v=o1DElACHNRo
-  publication_date: 2026-03-09
-  lecture_path: lectures/interviews-10-sneako-end-of-the-world.md
-  analysis_path: analysis/o1DElACHNRo-interviews-10-analysis.md
+  video_id: 2K2nQsTTjQE
+  title: 'Interviews #10: Tucker Carlson — Iran War, Energy, and Global Order'
+  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
+  publication_date: 2026-03-20
+  lecture_path: lectures/interviews-10-tucker-carlson-iran-war-and-global-order.md
+  analysis_path: analysis/2K2nQsTTjQE-interviews-10-analysis.md
   series: interviews
   episode: 10
   themes: []

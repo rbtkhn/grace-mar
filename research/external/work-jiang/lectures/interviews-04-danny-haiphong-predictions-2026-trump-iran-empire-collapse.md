@@ -1,8 +1,8 @@
-# Interviews #3: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire Collapse
+# Interviews #4: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire Collapse
 
 **Speaker:** Jiang Xueqin (guest); Danny Haiphong (host)  
 **Audience:** Long-form interview (public channel)  
-**Series:** Predictive History · Volume VI — Interviews **#3**  
+**Series:** Predictive History · Volume VI — Interviews **#4**  
 **Date (YouTube upload):** 2026-01-18  
 **Topic:** Iran pause and color-revolution sequence (Starlink, protests); Trump optics vs military limits (Prosperity Guardian, Houthis); Iran “game theory” (propaganda, bombs, dollars vs faith, terrain, decentralization); NSS misread, China blockade frame, imperial overstretch; transcript ends mid-segment as provided.
 

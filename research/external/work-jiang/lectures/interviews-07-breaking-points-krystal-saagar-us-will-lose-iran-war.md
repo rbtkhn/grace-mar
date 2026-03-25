@@ -1,13 +1,11 @@
-# Interviews #8: Breaking Points (Krystal & Saagar) — US WILL LOSE Iran War
+# Interviews #7: Breaking Points (Krystal & Saagar) — US WILL LOSE Iran War
 
 **Speaker:** Jiang Xueqin (guest); Krystal Ball & Saagar Enjeti (hosts)  
 **Audience:** Breaking Points (long-form interview)  
-**Series:** Predictive History · Volume VI — Interviews **#8**  
+**Series:** Predictive History · Volume VI — Interviews **#7**  
 **Date (YouTube upload):** 2026-03-02  
 **Title (YouTube):** Professor Jiang Predicts: US WILL LOSE Iran War  
 **Topic:** 2024 predictions recap (Trump, Iran war, US loss); attrition, GCC / Hormuz / desalination, petrodollar and AI bubble; interceptor asymmetry and multipolarity; ground troops and regime change; Saudi / Israel / WaPo narrative; Trump calculus (hubris, bribery, eschatology / secret-society frame).
-
-**Note:** Upload date is **before** Interviews #6–#7 (Nima, Tucker) in calendar order; **`vi-08`** follows corpus intake sequence after `vi-07`.
 
 **Source (canonical recording):** [YouTube](https://www.youtube.com/watch?v=4Ql24Z8SIeE) (`4Ql24Z8SIeE`).  
 **Transcript:** Operator-supplied clean read; speaker labels as provided.

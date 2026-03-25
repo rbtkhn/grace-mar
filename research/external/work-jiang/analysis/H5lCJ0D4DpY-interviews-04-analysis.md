@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-03
+analysis_id: vi-04
 video_id: H5lCJ0D4DpY
-source_id: vi-03
+source_id: vi-04
 canonical_url: https://www.youtube.com/watch?v=H5lCJ0D4DpY
 series: interviews
-episode: 3
+episode: 4
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #3: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire Collapse
+# Analysis — Interviews #4: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire Collapse
 
 - **video_id:** `H5lCJ0D4DpY`
 - **canonical_url:** https://www.youtube.com/watch?v=H5lCJ0D4DpY
-- **series / episode:** Predictive History · Volume VI — Interviews #3
-- **raw_transcript:** [lectures/interviews-03-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md](../lectures/interviews-03-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #4
+- **raw_transcript:** [lectures/interviews-04-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md](../lectures/interviews-04-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md)
 - **upload_date (YouTube):** 20260118
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -62,10 +62,10 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #2 — Predictions 2026 (Glenn Diesen)](ORyCS0r2Tpg-interviews-02-analysis.md) — **same-year** **2026** **forecast** **cluster** **(Jan** **5)**.
-- [Interviews #4 — Dimitri Lascaris](uHIdRgFypNo-interviews-04-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **(Jan** **22)**.
-- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **NSS** **/** **Carney** **/** **Trump** **(Jan** **26)**.
-- [lectures/interviews-03-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md](../lectures/interviews-03-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md)
+- [Interviews #3 — Predictions 2026 (Glenn Diesen)](ORyCS0r2Tpg-interviews-03-analysis.md) — **same-year** **2026** **forecast** **cluster** **(Jan** **5)**.
+- [Interviews #5 — Dimitri Lascaris](uHIdRgFypNo-interviews-05-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **(Jan** **22)**.
+- [Interviews #6 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) — **NSS** **/** **Carney** **/** **Trump** **(Jan** **26)**.
+- [lectures/interviews-04-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md](../lectures/interviews-04-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md)
 
 ## Follow-ups
 

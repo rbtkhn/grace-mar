@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-06
+analysis_id: vi-08
 video_id: 0rIgZD-tk3s
-source_id: vi-06
+source_id: vi-08
 canonical_url: https://www.youtube.com/watch?v=0rIgZD-tk3s
 series: interviews
-episode: 6
+episode: 8
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #6: Nima (Dialogue Works) — The Iran War: The Watershed Moment That Changed the Middle East Forever
+# Analysis — Interviews #8: Nima (Dialogue Works) — The Iran War: The Watershed Moment That Changed the Middle East Forever
 
 - **video_id:** `0rIgZD-tk3s`
 - **canonical_url:** https://www.youtube.com/watch?v=0rIgZD-tk3s
-- **series / episode:** Predictive History · Volume VI — Interviews #6
-- **raw_transcript:** [lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md](../lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #8
+- **raw_transcript:** [lectures/interviews-08-nima-iran-war-watershed-middle-east-forever.md](../lectures/interviews-08-nima-iran-war-watershed-middle-east-forever.md)
 - **upload_date (YouTube):** 20260307
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -58,12 +58,12 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **NSS** **/** **elite** **frames** **(Jan** **26)** **before** **March** **cluster**.
-- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Tucker** **/** **Qatar** **thread** **referenced** **in** **dialogue** **(Mar** **20)**.
-- [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **same** **Iran** **/** **GCC** **/** **attrition** **themes** **;** **YouTube** **upload** **Mar** **2** **(before** **this** **episode** **in** **calendar** **)** **;** **registry** **`vi-08`** **.**
-- [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **game** **theory** **;** **Middle** **East** **/** **Ukraine** **/** **Taiwan** **;** **upload** **Oct** **2025** **;** **registry** **`vi-09`** **.**
-- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **war** **deep** **dive** **;** **false** **flags** **,** **GCC** **,** **Greater** **Israel** **;** **upload** **Mar** **2026** **;** **registry** **`vi-10`** **.**
-- [lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md](../lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md)
+- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) — **NSS** **/** **elite** **frames** **(Jan** **26)** **before** **March** **cluster**.
+- [Interviews #10 — Tucker Carlson](2K2nQsTTjQE-interviews-10-analysis.md) — **Tucker** **/** **Qatar** **thread** **referenced** **in** **dialogue** **(Mar** **20)**.
+- [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **same** **Iran** **/** **GCC** **/** **attrition** **themes** **;** **YouTube** **upload** **Mar** **2** **(before** **this** **episode** **)** **;** **`vi-07`** **.**
+- [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **;** **Middle** **East** **/** **Ukraine** **/** **Taiwan** **;** **upload** **Oct** **2025** **;** **`vi-01`** **.**
+- [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **deep** **dive** **;** **false** **flags** **,** **GCC** **,** **Greater** **Israel** **;** **upload** **Mar** **2026** **;** **`vi-09`** **.**
+- [lectures/interviews-08-nima-iran-war-watershed-middle-east-forever.md](../lectures/interviews-08-nima-iran-war-watershed-middle-east-forever.md)
 
 ## Follow-ups
 

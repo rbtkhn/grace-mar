@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-10
+analysis_id: vi-09
 video_id: o1DElACHNRo
-source_id: vi-10
+source_id: vi-09
 canonical_url: https://www.youtube.com/watch?v=o1DElACHNRo
 series: interviews
-episode: 10
+episode: 9
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #10: SNEAKO — The End of the World
+# Analysis — Interviews #9: SNEAKO — The End of the World
 
 - **video_id:** `o1DElACHNRo`
 - **canonical_url:** https://www.youtube.com/watch?v=o1DElACHNRo
-- **series / episode:** Predictive History · Volume VI — Interviews #10
-- **raw_transcript:** [lectures/interviews-10-sneako-end-of-the-world.md](../lectures/interviews-10-sneako-end-of-the-world.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #9
+- **raw_transcript:** [lectures/interviews-09-sneako-end-of-the-world.md](../lectures/interviews-09-sneako-end-of-the-world.md)
 - **upload_date (YouTube):** 20260309
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -57,9 +57,9 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #6 — Nima (Dialogue Works)](0rIgZD-tk3s-interviews-06-analysis.md) — **overlapping** **false-flag** **,** **GCC** **,** **Greater** **Israel** **,** **Kharg** **/** **Hormuz** **themes** **.**
-- [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **Iran** **war** **,** **GCC** **,** **draft** **.**
-- [lectures/interviews-10-sneako-end-of-the-world.md](../lectures/interviews-10-sneako-end-of-the-world.md)
+- [Interviews #8 — Nima (Dialogue Works)](0rIgZD-tk3s-interviews-08-analysis.md) — **overlapping** **false-flag** **,** **GCC** **,** **Greater** **Israel** **,** **Kharg** **/** **Hormuz** **themes** **.**
+- [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **Iran** **war** **,** **GCC** **,** **draft** **.**
+- [lectures/interviews-09-sneako-end-of-the-world.md](../lectures/interviews-09-sneako-end-of-the-world.md)
 
 ## Follow-ups
 

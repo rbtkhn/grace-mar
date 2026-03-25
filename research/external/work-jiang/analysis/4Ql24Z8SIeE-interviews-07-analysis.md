@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-08
+analysis_id: vi-07
 video_id: 4Ql24Z8SIeE
-source_id: vi-08
+source_id: vi-07
 canonical_url: https://www.youtube.com/watch?v=4Ql24Z8SIeE
 series: interviews
-episode: 8
+episode: 7
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #8: Breaking Points — US WILL LOSE Iran War
+# Analysis — Interviews #7: Breaking Points — US WILL LOSE Iran War
 
 - **video_id:** `4Ql24Z8SIeE`
 - **canonical_url:** https://www.youtube.com/watch?v=4Ql24Z8SIeE
-- **series / episode:** Predictive History · Volume VI — Interviews #8
-- **raw_transcript:** [lectures/interviews-08-breaking-points-krystal-saagar-us-will-lose-iran-war.md](../lectures/interviews-08-breaking-points-krystal-saagar-us-will-lose-iran-war.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #7
+- **raw_transcript:** [lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md](../lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md)
 - **upload_date (YouTube):** 20260302
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -43,7 +43,7 @@ quality_level: draft
 
 ## Internal tensions (if any)
 
-- **Registry** **`vi-08`** **vs** **calendar** **:** **YouTube** **upload** **2026-03-02** **precedes** **Nima** **(Mar** **7)** **and** **Tucker** **(Mar** **20)** **in** **corpus** **;** **lecture** **header** **notes** **intake** **sequence** **.**
+- **Chronology** **:** **YouTube** **upload** **2026-03-02** **—** **after** **`vi-06`** **,** **before** **`vi-08`** **/** **`vi-09`** **/** **`vi-10`** **in** **upload** **order** **.**
 - **Heavy** **conspiratorial** **/** **eschatological** **closing** **—** **book** **lane** **should** **tier** **epistemics** **.**
 
 ## CIV-MEM lattice (stub)
@@ -56,11 +56,10 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **later** **long-form** **;** **overlapping** **GCC** **/** **Iran** **/** **dollar** **themes** **.**
-- [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **game** **theory** **frame** **;** **Middle** **East** **/** **Ukraine** **/** **US–China** **;** **YouTube** **upload** **Oct** **2025** **(see** **memo** **for** **registry** **ordering)** **.**
-- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **war** **;** **draft** **,** **false** **flags** **,** **GCC** **;** **Mar** **2026** **upload** **.**
-- [lectures/interviews-08-breaking-points-krystal-saagar-us-will-lose-iran-war.md](../lectures/interviews-08-breaking-points-krystal-saagar-us-will-lose-iran-war.md)
+- [Interviews #10 — Tucker Carlson](2K2nQsTTjQE-interviews-10-analysis.md) — **later** **long-form** **;** **overlapping** **GCC** **/** **Iran** **/** **dollar** **themes** **.**
+- [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **frame** **;** **Middle** **East** **/** **Ukraine** **/** **US–China** **;** **YouTube** **upload** **Oct** **2025** **(earliest** **in** **corpus)** **.**
+- [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **;** **draft** **,** **false** **flags** **,** **GCC** **;** **Mar** **2026** **upload** **.**
+- [lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md](../lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md)
 
 ## Follow-ups
 
-- **Optional** **:** **reorder** **registry** **by** **strict** **upload** **date** **(would** **insert** **this** **between** **`vi-05`** **and** **`vi-06`)** **if** **book** **lane** **requires** **chronological** **`interviews-NN`** **.**

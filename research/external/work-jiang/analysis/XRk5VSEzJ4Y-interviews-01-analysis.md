@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-09
+analysis_id: vi-01
 video_id: XRk5VSEzJ4Y
-source_id: vi-09
+source_id: vi-01
 canonical_url: https://www.youtube.com/watch?v=XRk5VSEzJ4Y
 series: interviews
-episode: 9
+episode: 1
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #9: Cyrus Janssen — The World Is About to Change
+# Analysis — Interviews #1: Cyrus Janssen — The World Is About to Change
 
 - **video_id:** `XRk5VSEzJ4Y`
 - **canonical_url:** https://www.youtube.com/watch?v=XRk5VSEzJ4Y
-- **series / episode:** Predictive History · Volume VI — Interviews #9
-- **raw_transcript:** [lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md](../lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #1
+- **raw_transcript:** [lectures/interviews-01-cyrus-janssen-world-is-about-to-change.md](../lectures/interviews-01-cyrus-janssen-world-is-about-to-change.md)
 - **upload_date (YouTube):** 20251030
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -43,7 +43,7 @@ quality_level: draft
 
 ## Internal tensions (if any)
 
-- **Registry** **`vi-09`** **vs** **calendar** **:** **Upload** **2025-10-30** **predates** **most** **Volume** **VI** **interviews** **;** **lecture** **header** **notes** **intake** **sequence** **.**
+- **Chronology** **:** **Upload** **2025-10-30** **—** **earliest** **in** **Volume** **VI** **corpus** **;** **`interviews-01`** **/** **`vi-01`** **match** **upload** **order** **.**
 - **Historical** **/** **geophysical** **claims** **mix** **with** **game-theory** **forecasting** **—** **tier** **rumors** **,** **ideology** **,** **and** **analysis** **separately** **for** **book** **lane** **.**
 
 ## CIV-MEM lattice (stub)
@@ -57,10 +57,9 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **Iran** **war** **;** **overlapping** **themes** **;** **later** **YouTube** **date** **in** **corpus** **.**
-- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **war** **;** **eschatology** **;** **later** **registry** **index** **.**
-- [lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md](../lectures/interviews-09-cyrus-janssen-world-is-about-to-change.md)
+- [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **Iran** **war** **;** **overlapping** **themes** **;** **later** **YouTube** **upload** **in** **corpus** **.**
+- [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **;** **eschatology** **;** **later** **in** **upload** **sequence** **.**
+- [lectures/interviews-01-cyrus-janssen-world-is-about-to-change.md](../lectures/interviews-01-cyrus-janssen-world-is-about-to-change.md)
 
 ## Follow-ups
 
-- **Optional** **:** **strict** **chronological** **reindex** **of** **`interviews-NN`** **if** **book** **lane** **requires** **upload** **date** **ordering** **(this** **episode** **would** **sit** **early** **in** **2025–2026** **sequence)** **.**

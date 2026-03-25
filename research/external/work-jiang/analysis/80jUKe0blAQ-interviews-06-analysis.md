@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-05
+analysis_id: vi-06
 video_id: 80jUKe0blAQ
-source_id: vi-05
+source_id: vi-06
 canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
 series: interviews
-episode: 5
+episode: 6
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #5: Glenn Diesen — Great Power Wars Over a New World Order
+# Analysis — Interviews #6: Glenn Diesen — Great Power Wars Over a New World Order
 
 - **video_id:** `80jUKe0blAQ`
 - **canonical_url:** https://www.youtube.com/watch?v=80jUKe0blAQ
-- **series / episode:** Predictive History · Volume VI — Interviews #5
-- **raw_transcript:** [lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #6
+- **raw_transcript:** [lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -61,14 +61,14 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 
 ## Cross-refs
 
-- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **pause** **/** **NSS** **read** **(Jan** **18)**.
-- [Interviews #4 — Dimitri Lascaris](uHIdRgFypNo-interviews-04-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
-- [Interviews #6 — Nima — Iran war watershed](0rIgZD-tk3s-interviews-06-analysis.md) — **Dialogue** **Works** **(Mar** **7)** **;** **Hormuz** **/** **Greater** **Israel** **/** **GCC** **mirage** **thread** **(full** **recording** **;** **short** **clip** **`JyHoh97yhWU`** **not** **in** **corpus)**.
-- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** **(Mar** **20)**.
-- [Interviews #8 — Breaking Points](4Ql24Z8SIeE-interviews-08-analysis.md) — **Krystal** **/** **Saagar** **;** **2024** **predictions** **recap** **;** **upload** **2026-03-02** **(see** **memo** **for** **registry** **vs** **date** **ordering)** **.**
-- [Interviews #9 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-09-analysis.md) — **game** **theory** **survey** **;** **upload** **2025-10-30** **;** **registry** **`vi-09`** **.**
-- [Interviews #10 — SNEAKO](o1DElACHNRo-interviews-10-analysis.md) — **Iran** **war** **;** **upload** **2026-03-09** **;** **registry** **`vi-10`** **.**
-- [lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md)
+- [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **pause** **/** **NSS** **read** **(Jan** **18)**.
+- [Interviews #5 — Dimitri Lascaris](uHIdRgFypNo-interviews-05-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
+- [Interviews #8 — Nima — Iran war watershed](0rIgZD-tk3s-interviews-08-analysis.md) — **Dialogue** **Works** **(Mar** **7)** **;** **Hormuz** **/** **Greater** **Israel** **/** **GCC** **mirage** **thread** **(full** **recording** **;** **short** **clip** **`JyHoh97yhWU`** **not** **in** **corpus)**.
+- [Interviews #10 — Tucker Carlson](2K2nQsTTjQE-interviews-10-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** **(Mar** **20)**.
+- [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **Krystal** **/** **Saagar** **;** **2024** **predictions** **recap** **;** **upload** **2026-03-02** **.**
+- [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **survey** **;** **upload** **2025-10-30** **;** **`vi-01`** **.**
+- [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **;** **upload** **2026-03-09** **;** **`vi-09`** **.**
+- [lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-06-glenn-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups
 
