@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `aS-NfPSPMu8`
 - **canonical_url:** https://www.youtube.com/watch?v=aS-NfPSPMu8
 - **series / episode:** Predictive History · Great Books #6
-- **raw_transcript:** caption pull → [lectures/great-books-06-the-intimacy-of-love.md](../lectures/great-books-06-the-intimacy-of-love.md)
+- **raw_transcript:** operator YouTube capture → [lectures/great-books-06-the-intimacy-of-love.md](../lectures/great-books-06-the-intimacy-of-love.md)
 
 ## Placeholder
 
