@@ -1727,3 +1727,78 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: gt-08
+  video_id: axqDLhWs93Q
+  title: 'Game Theory #8: Communist Specter'
+  canonical_url: https://www.youtube.com/watch?v=axqDLhWs93Q
+  publication_date: 2026-01-29
+  lecture_path: lectures/game-theory-08-communist-specter.md
+  analysis_path: null
+  series: game-theory
+  episode: 8
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-09
+  video_id: jIS2eB-rGv0
+  title: 'Game Theory #9: The US-Iran War'
+  canonical_url: https://www.youtube.com/watch?v=jIS2eB-rGv0
+  publication_date: 2026-03-03
+  lecture_path: lectures/game-theory-09-the-us-iran-war.md
+  analysis_path: null
+  series: game-theory
+  episode: 9
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-10
+  video_id: t5oisJiorsU
+  title: 'Game Theory #10: The Law of Asymmetry'
+  canonical_url: https://www.youtube.com/watch?v=t5oisJiorsU
+  publication_date: 2026-03-05
+  lecture_path: lectures/game-theory-10-the-law-of-asymmetry.md
+  analysis_path: null
+  series: game-theory
+  episode: 10
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-11
+  video_id: fz-Dan7NRss
+  title: 'Game Theory #11: The Law of Escalation'
+  canonical_url: https://www.youtube.com/watch?v=fz-Dan7NRss
+  publication_date: 2026-03-10
+  lecture_path: lectures/game-theory-11-the-law-of-escalation.md
+  analysis_path: null
+  series: game-theory
+  episode: 11
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
+- source_id: gt-12
+  video_id: spg58Glfz68
+  title: 'Game Theory #12: The Law of Eschatological Convergence'
+  canonical_url: https://www.youtube.com/watch?v=spg58Glfz68
+  publication_date: 2026-03-12
+  lecture_path: lectures/game-theory-12-the-law-of-eschatological-convergence.md
+  analysis_path: null
+  series: game-theory
+  episode: 12
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
