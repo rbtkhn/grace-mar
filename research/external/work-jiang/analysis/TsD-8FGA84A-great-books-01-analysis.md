@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `TsD-8FGA84A`
 - **canonical_url:** https://www.youtube.com/watch?v=TsD-8FGA84A
 - **series / episode:** Predictive History · Great Books #1
-- **raw_transcript:** caption pull → [lectures/great-books-01-secrets-of-the-universe.md](../lectures/great-books-01-secrets-of-the-universe.md)
+- **raw_transcript:** operator YouTube capture → [lectures/great-books-01-secrets-of-the-universe.md](../lectures/great-books-01-secrets-of-the-universe.md)
 
 ## Placeholder
 
