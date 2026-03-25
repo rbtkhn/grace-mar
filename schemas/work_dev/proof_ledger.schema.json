@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "work_dev_proof_ledger",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "entries"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "context", "external_use_status", "summary"],
+        "properties": {
+          "id": { "type": "string" },
+          "context": { "type": "string" },
+          "external_use_status": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    }
+  }
+}

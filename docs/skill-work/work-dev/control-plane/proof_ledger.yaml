@@ -1,0 +1,18 @@
+version: 1
+entries:
+  - id: BUILD-AI-PROOF-0001
+    context: OpenClaw integration architecture
+    external_use_status: external_summary_ok
+    summary: Separate canonical identity from runtime continuity.
+  - id: BUILD-AI-PROOF-0004
+    context: Operatorization pass
+    external_use_status: internal_preferred
+    summary: Distinguish implemented vs documented-only behavior.
+  - id: BUILD-AI-PROOF-0005
+    context: Quality gates narrative
+    external_use_status: external_summary_ok
+    summary: Evals as visible boundary checks.
+  - id: BUILD-AI-PROOF-0006
+    context: Session continuity contract
+    external_use_status: external_summary_ok
+    summary: Continuity is files plus scripts plus CI, not chat memory.

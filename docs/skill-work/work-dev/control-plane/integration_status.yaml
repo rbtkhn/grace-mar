@@ -1,0 +1,129 @@
+# Machine-readable integration status (source for generated docs).
+# Edit this file; run: python scripts/work_dev/render_control_plane_docs.py
+version: 1
+items:
+  - id: identity_export_openclaw_hook
+    title: Identity export via openclaw_hook.py
+    surface: export
+    status: implemented
+    source_of_truth:
+      - integrations/openclaw_hook.py
+      - docs/openclaw-integration.md
+    notes:
+      - Export path exists and emits runtime compatibility audit events.
+
+  - id: runtime_bundle_export
+    title: Runtime bundle export for OpenClaw consumption
+    surface: export
+    status: implemented
+    source_of_truth:
+      - integrations/openclaw_hook.py
+      - scripts/export_runtime_bundle.py
+    notes:
+      - OpenClaw consumes the generic runtime bundle contract.
+
+  - id: pipeline_export_audit
+    title: Pipeline-level export audit (runtime_compat_export)
+    surface: export
+    status: implemented
+    source_of_truth:
+      - integrations/openclaw_hook.py
+    notes:
+      - Aligns with portable runtime contract naming.
+
+  - id: stage_only_handback
+    title: Stage-only handback via openclaw_stage.py
+    surface: handback
+    status: implemented
+    source_of_truth:
+      - integrations/openclaw_stage.py
+      - scripts/handback_server.py
+    notes:
+      - Merge authority stays human-gated.
+
+  - id: constitution_advisory_events
+    title: Constitution advisory event emission
+    surface: handback
+    status: implemented
+    source_of_truth:
+      - integrations/openclaw_stage.py
+    notes:
+      - intent_constitutional_critique events before staging.
+
+  - id: openclaw_provenance_metadata
+    title: OpenClaw provenance in staged candidate metadata
+    surface: gate
+    status: implemented
+    source_of_truth:
+      - integrations/openclaw_stage.py
+      - scripts/handback_server.py
+      - bot/core.py
+    notes:
+      - candidate_source, artifact_*, constitution_* in gate YAML.
+
+  - id: openclaw_gate_review_tracking
+    title: OpenClaw source tracking for gate review
+    surface: gate
+    status: implemented
+    source_of_truth:
+      - scripts/recursion_gate_review.py
+    notes:
+      - parse_review_candidates extracts OpenClaw fields.
+
+  - id: session_continuity_checklist
+    title: Session continuity startup checklist
+    surface: runtime_continuity
+    status: implemented
+    source_of_truth:
+      - docs/openclaw-integration.md
+      - docs/skill-work/work-dev/README.md
+    notes:
+      - Human checklist before OpenClaw work.
+
+  - id: session_continuity_verification
+    title: Session continuity read verification and receipts
+    surface: runtime_continuity
+    status: implemented
+    source_of_truth:
+      - scripts/continuity_read_log.py
+      - scripts/continuity_preflight.py
+      - scripts/verify_continuity_receipt.py
+      - scripts/require_continuity_for_handback.py
+      - scripts/handback_server.py
+      - tests/test_continuity_read_log.py
+      - tests/test_continuity_receipts.py
+      - tests/test_handback_requires_continuity.py
+    notes:
+      - Preflight receipts required for OpenClaw /stage (428 without). JSONL append still operator-side.
+
+  - id: compute_ledger_export_handback
+    title: Compute-ledger cost instrumentation for export/handback
+    surface: observability
+    status: partial
+    source_of_truth:
+      - docs/skill-work/work-dev/economic-benchmarks.md
+      - scripts/emit_compute_ledger.py
+      - integrations/openclaw_hook.py
+      - integrations/openclaw_stage.py
+      - scripts/export_runtime_bundle.py
+      - scripts/handback_server.py
+    notes:
+      - Integration paths append ledger rows (operation, runtime, wall_ms, bytes_processed). Token-level costs for these paths may still be zero.
+
+  - id: local_local_topology
+    title: Local-local topology guidance
+    surface: ops
+    status: implemented
+    source_of_truth:
+      - docs/openclaw-integration.md
+    notes:
+      - Preferred topology documented.
+
+  - id: vps_caveat
+    title: VPS caveat handling
+    surface: ops
+    status: documented_only
+    source_of_truth:
+      - docs/openclaw-integration.md
+    notes:
+      - Risks documented; limited technical enforcement for remote handback.

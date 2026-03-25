@@ -74,6 +74,12 @@ users/*/.chroma/
 # Keyword retriever disk cache (bot/retriever.py)
 users/*/.cache/
 
+# Continuity preflight receipts (local only; do not commit)
+runtime/continuity/receipts/*.json
+
+# Shadow autonomy decisions (local only)
+runtime/autonomy/shadow_decisions.jsonl
+
 # Local runtime/export noise
 users/*/user.md
 users/*/harness-events.jsonl

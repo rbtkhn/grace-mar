@@ -2,6 +2,8 @@
 
 Current-state table for the Grace-Mar ↔ OpenClaw integration.
 
+**Machine-readable:** [control-plane/integration_status.yaml](control-plane/integration_status.yaml) — generated copy: [generated/integration-status.generated.md](generated/integration-status.generated.md).
+
 Status vocabulary:
 
 - `implemented`
@@ -24,8 +26,8 @@ Status vocabulary:
 | **OpenClaw-specific provenance preserved into staged candidate metadata** | `implemented` | `integrations/openclaw_stage.py`, `scripts/handback_server.py`, `bot/core.py`, `users/grace-mar/recursion-gate.md` | When `source=openclaw_stage`, server passes staging_meta; _stage_candidate writes candidate_source, artifact_path, artifact_sha256, constitution_check_status, constitution_rule_ids into the candidate YAML block. |
 | **OpenClaw-specific source tracking for gate review / benchmarks** | `implemented` | `scripts/recursion_gate_review.py`, `pipeline-events.jsonl` | parse_review_candidates extracts candidate_source, artifact_*, constitution_* from gate; dashboards and benchmarks can filter by openclaw. |
 | **Session continuity startup checklist** | `implemented` | `docs/openclaw-integration.md`, `docs/skill-work/work-dev/README.md` | Checklist plus optional proof-of-read script. |
-| **Session continuity read verification** | `partial` | `scripts/continuity_read_log.py`, `users/[id]/continuity-log.jsonl`, `tests/test_continuity_read_log.py` | When run without `--dry-run`, appends one JSONL line (ts, files_read, missing). **CI:** pytest runs `--dry-run` for `grace-mar` and asserts the three continuity files exist (push/PR). **OpenClaw:** still wire into startup for real session JSONL appends. |
-| **Compute-ledger cost instrumentation for export/handback** | `documented_only` | `economic-benchmarks.md` | Benchmarks expect it, but the integration scripts do not emit compute-ledger entries. |
+| **Session continuity read verification** | `implemented` | `scripts/continuity_read_log.py`, `scripts/continuity_preflight.py`, `scripts/verify_continuity_receipt.py`, `scripts/require_continuity_for_handback.py`, `scripts/handback_server.py`, `users/[id]/continuity-log.jsonl`, `tests/test_continuity_read_log.py`, `tests/test_continuity_receipts.py`, `tests/test_handback_requires_continuity.py` | **Preflight receipts:** `continuity_preflight.py` hashes `session-log.md`, `recursion-gate.md`, `self-evidence.md` into `runtime/continuity/receipts/*.json` (local, gitignored). **`/stage` (OpenClaw):** `handback_server` returns **428** without a valid receipt (default TTL 12h). **JSONL append:** still operator-side for `continuity_read_log.py` without `--dry-run`. |
+| **Compute-ledger cost instrumentation for export/handback** | `partial` | `economic-benchmarks.md`, `scripts/emit_compute_ledger.py`, `integrations/openclaw_hook.py`, `integrations/openclaw_stage.py`, `scripts/export_runtime_bundle.py`, `scripts/handback_server.py` | Integration operations append `compute-ledger.jsonl` rows (`bucket: integration`, `operation`, `wall_ms`, `bytes_processed`). Full token accounting for export/handback may still be incomplete. |
 | **Local-local topology guidance** | `implemented` | `docs/openclaw-integration.md`, research notes | Preferred topology is clearly documented. |
 | **VPS caveat handling** | `documented_only` | `docs/openclaw-integration.md`, research notes | Risks are documented, but there is no additional technical enforcement for remote handback paths. |
 

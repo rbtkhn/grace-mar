@@ -1,0 +1,6 @@
+scenario_id: false_recall
+failure_family: model_answers_outside_record
+severity: high
+required_checks:
+  - voice_abstention_or_lookup_prompt
+description: Runtime implies memory without reading canonical files.

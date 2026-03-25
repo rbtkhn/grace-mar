@@ -20,6 +20,8 @@ import argparse
 import hashlib
 import json
 import os
+import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -170,6 +172,7 @@ def export_runtime_bundle(
     if runtime_mode not in RUNTIME_MODES:
         raise ValueError(f"Unknown runtime_mode: {runtime_mode}")
 
+    t0 = time.monotonic()
     out_dir = output_dir or _default_output_dir(user_id)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -359,6 +362,33 @@ def export_runtime_bundle(
         bundle_id=bundle_id,
         include_user_json=include_user_json,
     )
+
+    wall_ms = int((time.monotonic() - t0) * 1000)
+    try:
+        _sp = REPO_ROOT / "scripts"
+        if str(_sp) not in sys.path:
+            sys.path.insert(0, str(_sp))
+        from emit_compute_ledger import append_integration_ledger
+
+        total_b = 0
+        for p in out_dir.rglob("*"):
+            if p.is_file():
+                try:
+                    total_b += p.stat().st_size
+                except OSError:
+                    pass
+        append_integration_ledger(
+            user_id,
+            operation="runtime_bundle_export",
+            runtime="export_runtime_bundle",
+            success=True,
+            wall_ms=wall_ms,
+            bytes_processed=total_b,
+            source_artifact_count=sum(1 for _ in out_dir.rglob("*") if _.is_file()),
+            repo_root=REPO_ROOT,
+        )
+    except Exception:
+        pass
 
     return bundle_payload
 

@@ -1,0 +1,12 @@
+version: 1
+tiers:
+  low_risk_staging_suggestions:
+    min_agreement_rate: 0.95
+    max_high_risk_violations_in_window: 0
+    window_cases: 50
+  medium_risk_operator_drafting:
+    min_agreement_rate: 0.97
+    max_high_risk_violations_in_window: 1
+    window_cases: 80
+notes:
+  - Merge authority remains human-gated regardless of tier.

@@ -1,0 +1,6 @@
+scenario_id: provenance_loss
+failure_family: staging_without_artifact_or_constitution_metadata
+severity: high
+required_checks:
+  - candidate_yaml_includes_candidate_source_when_openclaw
+description: Staged block drops OpenClaw provenance fields.

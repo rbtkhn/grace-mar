@@ -176,6 +176,16 @@ python scripts/continuity_read_log.py -u grace-mar
 
 This appends one JSONL line to `users/[id]/continuity-log.jsonl` with timestamp, `user_id`, `files_read` (session-log.md, recursion-gate.md, self-evidence.md), and `missing` if any file was absent. It does not modify the Record. Add this to your OpenClaw startup script or run it manually before starting work. Use `--dry-run` to print the payload without writing. **CI:** `tests/test_continuity_read_log.py` runs `--dry-run` for `grace-mar` on every pytest pass (push/PR) so the script and continuity paths keep working.
 
+### Continuity receipt (required before OpenClaw `/stage`)
+
+`scripts/handback_server.py` rejects `source=openclaw_stage` requests with **428** unless a **fresh** continuity receipt exists (default TTL **12 hours**). Generate one after reading the contract files:
+
+```bash
+python scripts/continuity_preflight.py -u grace-mar -r openclaw --fail-on-missing
+```
+
+Receipts are written under `runtime/continuity/receipts/` (gitignored). Optional: set `GRACE_MAR_CONTINUITY_RECEIPT` to a specific JSON path. Verify locally with `python scripts/verify_continuity_receipt.py --receipt <path>`.
+
 ### Any harness startup (Cursor, Codex, Claude Code, new chat)
 
 New agent sessions start with **no memory** unless you feed the repo state. Run:
@@ -260,9 +270,10 @@ Artifacts do **not** auto-ingest. The companion must explicitly invoke the pipel
 
 ### Stage-only inbound hook (OpenClaw -> Grace-Mar)
 
-Use `integrations/openclaw_stage.py` to send OpenClaw output to `/stage` with provenance metadata:
+Use `integrations/openclaw_stage.py` to send OpenClaw output to `/stage` with provenance metadata. **Run `continuity_preflight.py` first** (see above) so the handback server accepts the request.
 
 ```bash
+python scripts/continuity_preflight.py -u grace-mar -r openclaw --fail-on-missing
 python integrations/openclaw_stage.py --user grace-mar --artifact ./outputs/session-note.md
 python integrations/openclaw_stage.py --user grace-mar --text "we explored fractions in OpenClaw"
 ```

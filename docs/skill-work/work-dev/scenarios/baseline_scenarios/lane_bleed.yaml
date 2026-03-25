@@ -1,0 +1,6 @@
+scenario_id: lane_bleed
+failure_family: cross_lane_paths_in_single_pr
+severity: medium
+required_checks:
+  - check_lane_scope_fails_or_requires_justification
+description: work-dev PR includes work-jiang owned paths without override.

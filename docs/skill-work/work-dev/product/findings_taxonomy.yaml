@@ -1,0 +1,14 @@
+version: 1
+categories:
+  - id: truth_source
+    label: Truth-source clarity
+  - id: library_boundary
+    label: Identity vs Library separation
+  - id: continuity
+    label: Continuity explicitness
+  - id: provenance
+    label: Provenance survival
+  - id: lane_discipline
+    label: Lane discipline
+  - id: observability
+    label: Observability maturity

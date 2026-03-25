@@ -16,6 +16,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -166,8 +167,28 @@ def stage_openclaw(
     req.add_header("Content-Type", "application/json")
     if api_key:
         req.add_header("X-Api-Key", api_key)
+    t0 = time.monotonic()
     with urlopen(req, timeout=30) as resp:
         result = json.loads(resp.read().decode("utf-8"))
+    wall_ms = int((time.monotonic() - t0) * 1000)
+    try:
+        if str(_SCRIPTS) not in sys.path:
+            sys.path.insert(0, str(_SCRIPTS))
+        from emit_compute_ledger import append_integration_ledger
+
+        sz = artifact.stat().st_size if artifact and artifact.is_file() else 0
+        append_integration_ledger(
+            user_id,
+            operation="openclaw_stage_http",
+            runtime="openclaw",
+            success=bool(result.get("ok")),
+            wall_ms=wall_ms,
+            bytes_processed=sz + len(content.encode("utf-8")),
+            source_artifact_count=1 if artifact else 0,
+            repo_root=REPO_ROOT,
+        )
+    except Exception:
+        pass
     if append_harness_event:
         append_harness_event(
             user_id,

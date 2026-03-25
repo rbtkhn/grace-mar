@@ -1,0 +1,169 @@
+# Lane ownership for scope checks (work-dev integration program).
+# Used by scripts/check_lane_scope.py and scripts/infer_lane_from_paths.py.
+#
+# Rules:
+# - A file may appear in only one lane's owned_paths (first match wins for inference).
+# - forbidden_paths for a lane reject paths even if another lane owns them.
+# - allowed_shared_paths are permitted in any lane when listed for that lane.
+# - Paths not matching the active lane's owned_paths + allowed_shared_paths are violations
+#   unless --allow-cross-lane with non-empty --justification.
+#
+# Add lanes (work-politics, companion-record) so typical grace-mar PRs need not always
+# use cross-lane override.
+
+version: 1
+lanes:
+  work-dev:
+    owned_paths:
+      - "lanes.yaml"
+      - "docs/skill-work/work-dev/**"
+      - "docs/skill-work/work-build-ai/integration-status.md"
+      - "examples/diagnostics/**"
+      - "scripts/surface_aliases.py"
+      - "docs/openclaw-integration.md"
+      - "schemas/work_dev/**"
+      - "scripts/work_dev/**"
+      - "scripts/check_lane_scope.py"
+      - "scripts/infer_lane_from_paths.py"
+      - "scripts/continuity_preflight.py"
+      - "scripts/continuity_read_log.py"
+      - "scripts/verify_continuity_receipt.py"
+      - "scripts/require_continuity_for_handback.py"
+      - "scripts/verify_integration_receipt.py"
+      - "scripts/check_integration_readiness.py"
+      - "scripts/emit_compute_ledger.py"
+      - "scripts/export_runtime_bundle.py"
+      - "scripts/handback_server.py"
+      - "scripts/operator_depth_hint.py"
+      - "scripts/operator_daily_warmup.py"
+      - "integrations/**"
+      - "runtime/continuity/**"
+      - "runtime/autonomy/**"
+      - "runtime/compute-ledger/**"
+      - "research/external/work-dev/**"
+      - "artifacts/work_dev_dashboard.json"
+      - "artifacts/work_dev_dashboard.md"
+      - "examples/diagnostics/**"
+      - "tests/test_lane_scope.py"
+      - "tests/test_operator_daily_warmup.py"
+      - "tests/test_operator_depth_hint.py"
+      - "tests/test_check_integration_readiness.py"
+      - "tests/test_verify_integration_receipt.py"
+      - "tests/test_continuity_read_log.py"
+      - "tests/test_continuity_receipts.py"
+      - "tests/test_handback_requires_continuity.py"
+      - "tests/test_continuity_receipts.py"
+      - "tests/test_work_dev_control_plane.py"
+      - "tests/test_work_dev_dashboard.py"
+      - "tests/test_scenario_generation.py"
+      - "tests/test_scenario_matrix.py"
+      - "tests/test_shadow_decision_log.py"
+      - "tests/test_autonomy_tiers.py"
+      - "tests/test_compute_ledger.py"
+      - "tests/test_diagnostics_report.py"
+      - "bot/core.py"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/pull_request_template.md"
+    allowed_shared_paths:
+      - ".github/pull_request_template.md"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/workflows/test.yml"
+      - "lanes.yaml"
+      - "docs/skill-work/work-dev/lane-scope-checklist.md"
+      - "docs/development-handoff.md"
+      - "AGENTS.md"
+      - "README.md"
+      - "grace-mar-bootstrap.md"
+      - "bootstrap/grace-mar-bootstrap.md"
+    forbidden_paths:
+      - "docs/skill-work/work-jiang/**"
+      - "research/external/work-jiang/**"
+      - "scripts/work_jiang/**"
+      - "users/*/work-jiang.md"
+
+  work-jiang:
+    owned_paths:
+      - "docs/skill-work/work-jiang/**"
+      - "research/external/work-jiang/**"
+      - "scripts/work_jiang/**"
+      - "users/*/work-jiang.md"
+      - ".github/workflows/work-jiang.yml"
+      - "tests/test_work_jiang*.py"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/pull_request_template.md"
+    forbidden_paths:
+      - "users/grace-mar/self.md"
+      - "users/grace-mar/self-evidence.md"
+      - "bot/prompt.py"
+
+  work-companion-xavier:
+    owned_paths:
+      - "docs/skill-work/work-companion-xavier/**"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/pull_request_template.md"
+    forbidden_paths: []
+
+  work-politics:
+    owned_paths:
+      - "docs/skill-work/work-politics/**"
+      - "scripts/generate_work_politics_*.py"
+      - "scripts/generate_wap_*.py"
+      - "scripts/operator_work_politics_pulse.py"
+      - "scripts/operator_wap_pulse.py"
+      - "scripts/operator_blocker_report.py"
+      - "scripts/work_politics_ops.py"
+      - "tests/test_wap_*.py"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/pull_request_template.md"
+    forbidden_paths: []
+
+  companion-record:
+    owned_paths:
+      - "users/**"
+      - "bot/prompt.py"
+      - "bot/bot.py"
+      - "bot/wechat_bot.py"
+      - "scripts/process_approved_candidates.py"
+      - "scripts/atomic_integrate.py"
+      - "scripts/harness_warmup.py"
+      - "scripts/recursion_gate_review.py"
+      - "scripts/recursion_gate_territory.py"
+      - "scripts/emit_pipeline_event.py"
+      - "grace-mar-llm.txt"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/pull_request_template.md"
+      - ".github/workflows/**"
+      - "tests/**"
+      - "docs/**"
+      - "bot/requirements.txt"
+    forbidden_paths:
+      - "research/external/work-jiang/**"
+
+  infra:
+    owned_paths:
+      - ".github/**"
+      - "scripts/assert_canonical_paths.py"
+      - "scripts/governance_checker.py"
+      - "scripts/validate-integrity.py"
+      - "scripts/validate_identity_library_boundary.py"
+      - "scripts/export_fork.py"
+      - "scripts/export_prp.py"
+      - "requirements.txt"
+      - "requirements-dev.txt"
+      - "pyproject.toml"
+      - "setup.cfg"
+      - ".pre-commit-config.yaml"
+      - "docs/glossary.md"
+      - "docs/conceptual-framework.md"
+      - "docs/architecture.md"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/pull_request_template.md"
+    forbidden_paths: []

@@ -14,7 +14,7 @@ The fork grows only through what the user explicitly provides. An optional emula
 
 **The fork has four canonical Record surfaces: SELF, SELF-LIBRARY, SKILLS, and EVIDENCE.** That replaces any older “two core modules” (SELF vs SKILLS only) framing. **IX-A / IX-B / IX-C** live under **SELF / SELF-KNOWLEDGE** — not under SELF-LIBRARY.
 
-**Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE**.
+**Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE**. In customer-facing prose you may use **Library** as the display name for **SELF-LIBRARY** (see [docs/glossary.md](docs/glossary.md), `scripts/surface_aliases.py`).
 
 > **SELF** concerns **identity** and **SELF-KNOWLEDGE** (who she is, what she knows about herself). **SELF-LIBRARY** is the **governed reference layer** attached to the fork (return-to sources, domain shelves). **CIV-MEM** is the **civilizational-memory domain within SELF-LIBRARY** — not part of identity. See [docs/boundary-self-knowledge-self-library.md](docs/boundary-self-knowledge-self-library.md).
 

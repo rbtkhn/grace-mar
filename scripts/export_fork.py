@@ -29,6 +29,11 @@ try:
 except ImportError:
     from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 
+try:
+    from surface_aliases import library_export_labels
+except ImportError:
+    from scripts.surface_aliases import library_export_labels
+
 
 def _parse_self_summary(content: str) -> dict:
     """Minimal summary: name, age, lexile, IX counts."""
@@ -158,6 +163,7 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
             "skills": "capability",
             "evidence": "activity / provenance logs",
         },
+        "surface_labels": library_export_labels(),
         "summary": {
             "self": _parse_self_summary(self_raw) if self_raw else {},
             "evidence": _parse_evidence_summary(evidence_raw) if evidence_raw else {},

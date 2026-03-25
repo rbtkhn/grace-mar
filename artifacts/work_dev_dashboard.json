@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-03-25T15:46:51Z",
+  "integration_status_counts": {
+    "implemented": 10,
+    "partial": 1,
+    "documented_only": 1
+  },
+  "pipeline_event_counts": {
+    "staged": 14,
+    "applied": 35,
+    "intent_constitutional_critique": 14,
+    "approved": 2,
+    "dyad:checkpoint_request": 2,
+    "validation_failed": 7,
+    "openclaw_export": 1,
+    "rejected": 2
+  },
+  "provenance_completeness_score": 1.0,
+  "lane_violation_count": 0,
+  "continuity_block_count": 0,
+  "gap_ids_open": [
+    "BUILD-AI-GAP-005"
+  ],
+  "notes": [
+    "Lane violations and continuity blocks require CI/runtime feeds; scores are partial.",
+    "Regenerate after editing control-plane YAML."
+  ]
+}

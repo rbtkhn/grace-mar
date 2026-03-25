@@ -22,6 +22,7 @@ Deploy alongside the bot or as a separate service. See extension/readme.md for b
 
 import os
 import sys
+import time
 from pathlib import Path
 from ipaddress import ip_address
 
@@ -52,6 +53,17 @@ def _is_authorized() -> bool:
     if API_KEY and header_key == API_KEY:
         return True
     return _is_loopback_request()
+
+
+def _continuity_gate_openclaw(user_id: str) -> tuple[bool, str, dict]:
+    """Require a fresh continuity receipt before OpenClaw staging."""
+    scripts_dir = REPO_ROOT / "scripts"
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    from require_continuity_for_handback import assert_continuity_ok
+
+    uid = (user_id or os.getenv("GRACE_MAR_USER_ID", "grace-mar")).strip()
+    return assert_continuity_ok(uid, "openclaw")
 
 
 def _run_handback(content: str) -> bool:
@@ -130,6 +142,12 @@ def stage() -> tuple:
     if not content:
         return jsonify({"ok": False, "error": "empty content"}), 400
 
+    cont_meta: dict = {}
+    if source == "openclaw_stage":
+        ok_c, err_c, cont_meta = _continuity_gate_openclaw(user_id)
+        if not ok_c:
+            return jsonify({"ok": False, "error": err_c, "continuity_required": True}), 428
+
     staging_meta = None
     if source == "openclaw_stage":
         staging_meta = {"candidate_source": "openclaw"}
@@ -139,6 +157,15 @@ def stage() -> tuple:
             val = (data.get(key) or "").strip()
             if val:
                 staging_meta[key] = val
+        rp = (cont_meta.get("continuity_receipt_path") or "").strip()
+        if rp:
+            staging_meta["continuity_receipt_path"] = rp
+        staging_meta["continuity_receipt_valid"] = (
+            "true" if cont_meta.get("continuity_receipt_valid") else "false"
+        )
+        ca = (cont_meta.get("continuity_checked_at") or "").strip()
+        if ca:
+            staging_meta["continuity_checked_at"] = ca
 
     if not staging_meta:
         meta_parts = []
@@ -157,7 +184,29 @@ def stage() -> tuple:
         return jsonify({"ok": False, "error": f"content too long (max {MAX_CONTENT} chars)"}), 400
 
     try:
+        t0 = time.monotonic()
         staged, pending_count = _run_stage(content, user_id=user_id, staging_meta=staging_meta)
+        if source == "openclaw_stage":
+            wall_ms = int((time.monotonic() - t0) * 1000)
+            try:
+                sdir = REPO_ROOT / "scripts"
+                if str(sdir) not in sys.path:
+                    sys.path.insert(0, str(sdir))
+                from emit_compute_ledger import append_integration_ledger
+
+                uid = (user_id or os.getenv("GRACE_MAR_USER_ID", "grace-mar")).strip()
+                append_integration_ledger(
+                    uid,
+                    operation="handback_openclaw_stage",
+                    runtime="openclaw",
+                    success=True,
+                    wall_ms=wall_ms,
+                    bytes_processed=len(content.encode("utf-8")),
+                    source_artifact_count=1,
+                    repo_root=REPO_ROOT,
+                )
+            except Exception:
+                pass
         return jsonify({
             "ok": True,
             "staged": staged,

@@ -1,0 +1,7 @@
+scenario_id: continuity_failure
+failure_family: missing_or_stale_continuity_receipt
+severity: high
+required_checks:
+  - handback_returns_428_without_receipt
+  - verify_continuity_receipt_ttl
+description: OpenClaw /stage without valid continuity preflight.

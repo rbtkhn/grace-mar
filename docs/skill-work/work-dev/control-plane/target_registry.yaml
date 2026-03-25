@@ -1,0 +1,29 @@
+version: 1
+segments:
+  - id: ai_native_small_teams
+    label: AI-native small teams
+    buyer_role: Founder; product lead; technical operator
+    status: active_test
+    notes:
+      - Fast movers; memory and workflow pain.
+
+  - id: boutique_ai_consultancies
+    label: Boutique AI consultancies / implementation shops
+    buyer_role: Owner; solutions lead
+    status: active_test
+    notes:
+      - Diagnostics and partner implementation fit.
+
+  - id: multi_runtime_teams
+    label: Multi-runtime technical teams
+    buyer_role: CTO; engineering manager; AI lead
+    status: researching
+    notes:
+      - Portability and truth-source clarity.
+
+  - id: governance_sensitive
+    label: Governance-sensitive operators
+    buyer_role: COO; chief of staff; operations lead
+    status: researching
+    notes:
+      - Human approval and auditability.

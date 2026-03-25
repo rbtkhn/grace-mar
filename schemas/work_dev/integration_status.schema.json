@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "work_dev_integration_status",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "items"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "surface", "status", "source_of_truth", "notes"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9_]+$" },
+          "title": { "type": "string", "minLength": 1 },
+          "surface": { "type": "string", "minLength": 1 },
+          "status": {
+            "type": "string",
+            "enum": ["implemented", "partial", "documented_only", "needs_verification", "blocked"]
+          },
+          "source_of_truth": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

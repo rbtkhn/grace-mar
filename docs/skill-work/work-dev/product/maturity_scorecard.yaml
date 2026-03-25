@@ -1,0 +1,14 @@
+version: 1
+dimensions:
+  - id: truth_source
+    weight: 1.0
+  - id: library_boundary
+    weight: 1.0
+  - id: continuity
+    weight: 1.0
+  - id: provenance
+    weight: 1.0
+  - id: lane_discipline
+    weight: 0.8
+  - id: observability
+    weight: 0.8

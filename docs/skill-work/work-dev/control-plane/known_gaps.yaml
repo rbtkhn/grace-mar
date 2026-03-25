@@ -1,0 +1,26 @@
+# Named gaps (aligns with known-gaps.md).
+version: 1
+items:
+  - id: BUILD-AI-GAP-001
+    area: Handback provenance
+    problem: Historical collapse of OpenClaw metadata at /stage
+    status: closed
+    related_integration_ids: []
+    notes:
+      - Resolved; provenance end-to-end into gate.
+
+  - id: BUILD-AI-GAP-005
+    area: Factorial scenario library
+    problem: No productized scenario matrix CLI for client agents
+    status: open
+    related_integration_ids: []
+    notes:
+      - See variation-types.md; CLI scripts/work_dev/generate_scenarios.py and run_scenario_matrix.py; baselines under docs/skill-work/work-dev/scenarios/baseline_scenarios/.
+
+  - id: BUILD-AI-GAP-007
+    area: Progressive autonomy metrics
+    problem: No shadow-mode instrumentation for tier promotion
+    status: planned
+    related_integration_ids: []
+    notes:
+      - scripts/work_dev/log_shadow_decision.py, evaluate_autonomy_tiers.py; docs/skill-work/work-dev/autonomy/.

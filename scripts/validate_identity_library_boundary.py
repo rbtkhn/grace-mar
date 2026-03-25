@@ -2,7 +2,8 @@
 """
 SELF-KNOWLEDGE vs SELF-LIBRARY: IX-A must not hold domain/corpus dumps.
 
-Used standalone and by validate-integrity.py. See docs/boundary-self-knowledge-self-library.md
+User-facing copy may say "Library" for SELF-LIBRARY; validators and file paths stay canonical.
+See scripts/surface_aliases.py. See docs/boundary-self-knowledge-self-library.md
 
   python3 scripts/validate_identity_library_boundary.py -u grace-mar
 """

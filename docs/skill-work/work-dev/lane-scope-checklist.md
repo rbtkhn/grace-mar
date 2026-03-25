@@ -13,6 +13,10 @@ Use this before opening a PR or committing in `work-dev` lane.
 - `git status --short` and verify all staged paths belong to `work-dev` scope.
 - `git diff --name-only --cached` and scan for accidental lane bleed.
 - Run targeted tests for changed `work-dev` scripts/docs.
+- Mechanical check (see repo root [`lanes.yaml`](../../../lanes.yaml)):
+  - `python scripts/check_lane_scope.py --lane work-dev --diff origin/main...HEAD`
+  - Override only with `--allow-cross-lane --justification "…"`.
+- Infer lane from paths: `python scripts/infer_lane_from_paths.py path1 path2`
 
 ## Path ownership hints
 

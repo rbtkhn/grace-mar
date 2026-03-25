@@ -48,3 +48,6 @@ jobs:
 
       - name: Governance check
         run: python scripts/governance_checker.py
+
+      - name: Validate work-dev control plane
+        run: python scripts/work_dev/validate_control_plane.py

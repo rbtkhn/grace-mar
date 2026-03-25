@@ -1,0 +1,7 @@
+# Factorial scenario base schema (BUILD-AI-GAP-005).
+version: 1
+required_fields:
+  - scenario_id
+  - failure_family
+  - severity
+  - required_checks

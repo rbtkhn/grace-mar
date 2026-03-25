@@ -14,6 +14,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import time
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -131,6 +132,39 @@ def _post_export(post_url: str, user_id: str, files: list[Path], api_key: str = 
     urlopen(req, timeout=30)
 
 
+def _append_openclaw_export_ledger(
+    user_id: str,
+    files: list[Path],
+    *,
+    success: bool,
+    t0: float,
+) -> None:
+    wall_ms = int((time.monotonic() - t0) * 1000)
+    total_bytes = 0
+    for f in files:
+        try:
+            total_bytes += f.stat().st_size
+        except OSError:
+            continue
+    try:
+        if str(_SCRIPTS) not in sys.path:
+            sys.path.insert(0, str(_SCRIPTS))
+        from emit_compute_ledger import append_integration_ledger
+
+        append_integration_ledger(
+            user_id,
+            operation="openclaw_export",
+            runtime="openclaw",
+            success=success,
+            wall_ms=wall_ms,
+            bytes_processed=total_bytes,
+            source_artifact_count=len(files),
+            repo_root=REPO_ROOT,
+        )
+    except Exception:
+        pass
+
+
 def run_openclaw_export(
     user_id: str,
     output: Path | None,
@@ -140,12 +174,14 @@ def run_openclaw_export(
     api_key: str,
     emit_event: bool,
 ) -> int:
+    t0 = time.monotonic()
     out_dir = output or (REPO_ROOT / "users" / user_id)
     rc = run_export("openclaw", out_dir, user_id, openclaw_format=fmt)
     files = _collect_export_files(out_dir, fmt)
     if rc != 0:
         if emit_event:
             _emit_openclaw_event(user_id, out_dir, fmt, files, status="failed", error=f"export_exit={rc}")
+        _append_openclaw_export_ledger(user_id, files, success=False, t0=t0)
         return rc
     if destination == "post":
         if not post_url.strip():
@@ -153,6 +189,7 @@ def run_openclaw_export(
             if emit_event:
                 _emit_openclaw_event(user_id, out_dir, fmt, files, status="failed", error=err)
             print(err, file=sys.stderr)
+            _append_openclaw_export_ledger(user_id, files, success=False, t0=t0)
             return 2
         try:
             _post_export(post_url, user_id, files, api_key=api_key.strip())
@@ -161,6 +198,7 @@ def run_openclaw_export(
             if emit_event:
                 _emit_openclaw_event(user_id, out_dir, fmt, files, status="failed", error=err)
             print(err, file=sys.stderr)
+            _append_openclaw_export_ledger(user_id, files, success=False, t0=t0)
             return 3
     if emit_event:
         _emit_openclaw_event(user_id, out_dir, fmt, files, status="ok")
@@ -177,6 +215,7 @@ def run_openclaw_export(
             bundle_id=_bundle_id(out_dir),
             pipeline_event=bool(emit_event),
         )
+    _append_openclaw_export_ledger(user_id, files, success=True, t0=t0)
     return 0
 
 

@@ -1,0 +1,28 @@
+# Default PR gate: work-dev lane scope (see lanes.yaml).
+name: Lane scope
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  work-dev-lane:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PyYAML
+        run: pip install "pyyaml>=6.0"
+
+      - name: Check changed files fit a single declared lane
+        run: |
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          python scripts/check_lane_scope.py --accept-any-lane --diff "${BASE}...${HEAD}"

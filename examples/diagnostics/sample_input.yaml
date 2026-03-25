@@ -1,0 +1,10 @@
+system_name: grace-mar
+canonical_truth_source:
+  - users/grace-mar/self.md
+  - users/grace-mar/self-library.md
+runtimes:
+  - openclaw
+handback_path:
+  - integrations/openclaw_stage.py
+  - scripts/handback_server.py
+  - scripts/process_approved_candidates.py

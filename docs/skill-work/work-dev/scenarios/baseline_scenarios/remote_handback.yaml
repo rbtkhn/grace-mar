@@ -1,0 +1,7 @@
+scenario_id: remote_handback
+failure_family: untrusted_vps_staging_path
+severity: high
+required_checks:
+  - handback_uses_api_key_off_loopback
+  - provenance_preserved_in_candidate_yaml
+description: VPS or non-loopback staging without trust boundaries.

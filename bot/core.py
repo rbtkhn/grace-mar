@@ -910,7 +910,16 @@ def _format_staging_meta_yaml(staging_meta: dict | None) -> str:
     """Emit optional YAML lines for OpenClaw/handback provenance (candidate_source, artifact_*, constitution_*)."""
     if not staging_meta:
         return ""
-    allowed = ("candidate_source", "artifact_path", "artifact_sha256", "constitution_check_status", "constitution_rule_ids")
+    allowed = (
+        "candidate_source",
+        "artifact_path",
+        "artifact_sha256",
+        "constitution_check_status",
+        "constitution_rule_ids",
+        "continuity_receipt_path",
+        "continuity_receipt_valid",
+        "continuity_checked_at",
+    )
     lines = []
     for k in allowed:
         v = staging_meta.get(k)
