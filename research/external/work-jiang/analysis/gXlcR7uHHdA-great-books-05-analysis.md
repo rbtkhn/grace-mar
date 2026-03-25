@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `gXlcR7uHHdA`
 - **canonical_url:** https://www.youtube.com/watch?v=gXlcR7uHHdA
 - **series / episode:** Predictive History · Great Books #5
-- **raw_transcript:** caption pull → [lectures/great-books-05-the-odyssey.md](../lectures/great-books-05-the-odyssey.md)
+- **raw_transcript:** operator YouTube capture → [lectures/great-books-05-the-odyssey.md](../lectures/great-books-05-the-odyssey.md)
 
 ## Placeholder
 
