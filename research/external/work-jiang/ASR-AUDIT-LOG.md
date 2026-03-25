@@ -12,7 +12,7 @@
 4. [Findings log — Geo-Strategy](#4-findings-log-append-rows) — 177 rows, 20 episodes, 2026-03-24
    - [Highest-impact patterns](#highest-impact-patterns)
    - [Candidate recurring replacements](#candidate-recurring-replacements)
-5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — 62 substitutions, 4 verbatim episodes, 2026-03-24
+5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–13 verbatim+audited; SH14–28 pending verbatim, 2026-03-24
    - [Secret History highest-impact patterns](#secret-history-highest-impact-patterns)
    - [Secret History candidate replacements](#secret-history-candidate-replacements)
    - [Secret History scope limitation](#secret-history-scope-limitation)
@@ -31,7 +31,8 @@
 
 **Passes complete:**
 - Geo-Strategy, depth B, 20 episodes (geo-strategy-01 through -20).
-- Secret History, depth B, 4 verbatim episodes (secret-history-01 through -04); SH05-28 contain analytical summaries, not verbatim ASR text.
+- Secret History, depth B, **13** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -13): normalized, manually audited, pytest green.
+- Secret History **next:** SH14–28 still have operator-written analytical outlines under `## Full transcript` (not caption-verbatim) until pasted. Raw YouTube `.txt` exists for all 28 — paste verbatim body when ready, then repeat: `normalize_lecture_transcript_asr.py <file> --write` → targeted audit → `StrReplace` → `pytest tests/test_normalize_lecture_transcript_asr.py -q`.
 
 ---
 
@@ -39,7 +40,8 @@
 
 - [x] **Raw captions:** 20/20 geo-strategy `.txt` fetched via `--input geo-strategy-urls.txt --resume` (2026-03-24).
 - [x] **Coverage report:** `check_asr_audit_preconditions.py --only-glob 'geo-strategy-*'` → 20 scanned, 20 found, 0 missing.
-- [x] **Tooling sanity:** `pytest tests/test_normalize_lecture_transcript_asr.py -q` (pending — run after findings logged).
+- [x] **Tooling sanity:** `pytest tests/test_normalize_lecture_transcript_asr.py -q` → 10 passed (2026-03-24).
+- [x] **Secret History raw coverage:** `check_asr_audit_preconditions.py --only-glob 'secret-history-*'` → 28 scanned, 28 raw `.txt` found, 0 missing.
 - [x] **Verbatim diff layer:** `sync_verbatim_transcripts.py --write --only-glob 'geo-strategy-*'` → 20 written, 0 missing raw. Series detected as `geo-strategy` (common tier only).
 - [ ] **Jiang fingerprint (optional, read-only):** [JIANG-LECTURE-FINGERPRINT.md](JIANG-LECTURE-FINGERPRINT.md) scaffold present but not populated.
 
@@ -279,9 +281,19 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 ## 5. Findings log — Secret History (Volume III)
 
-**Date:** 2026-03-24 | **Scope:** secret-history-01 through -04 (verbatim `## Full transcript`) | **Depth:** B | **Normalization applied:** 62 substitutions via `normalize_lecture_transcript_asr.py --write`
+**Date:** 2026-03-24 | **Scope (row-level table):** secret-history-01 through -04 only | **Depth:** B | **Normalization (SH01–04):** 62 substitutions via `normalize_lecture_transcript_asr.py --write`
 
-**Scope limitation:** Only SH01-04 have verbatim ASR-derived `## Full transcript` sections. SH05-28 contain operator-written analytical lecture-arc summaries — no ASR text to audit. Raw YouTube captions for all 28 episodes were blocked by 429 rate limits (error stubs only). If verbatim transcripts are populated for SH05-28 in future, re-run this pipeline.
+**SH05–SH10 (verbatim complete; row log not expanded here):** Caption-faithful `## Full transcript` sections are present; `normalize_lecture_transcript_asr.py` dry-run reports **0** pending automated substitutions in the transcript section (2026-03-24). Targeted manual pass (proper names, numbers, risky homophones) completed per [ASR-VERIFICATION-RUBRIC.md](ASR-VERIFICATION-RUBRIC.md). Episodes: `secret-history-05-the-birth-of-evil.md` through `secret-history-10-the-conspiracy-of-evil.md`.
+
+**SH11 (2026-03-24):** Verbatim YouTube transcript pasted into `secret-history-11-dawn-of-the-human-imagination.md`; manual ASR pass + **12** new `COMMON_REPLACEMENTS` tuples (vine→divine phrases, von Petzinger, Van Gogh, Micronesia, Darwinism/survival-of-fittest phrases, fear→theory of evolution marker); remaining fixes applied in-file (e.g. Altamira, Graeber/Wengrow, *The Dawn of Everything*, broad-scale/Paleolithic quote, Romito 2, nomadic societies). Dry-run normalizer: **0** pending substitutions; pytest green.
+
+**SH12 (2026-03-24):** Verbatim transcript in `secret-history-12-heaven-on-earth.md`; **11** new `COMMON_REPLACEMENTS` tuples (synesthesia, primitive/fittish, Constantinople standing, Aachen Cathedral, Manhattan project, Euler, Turnbull, Wade Davis book title, succession crisis, Graeber/Wengrow *Dawn* phrase); heavy in-file fixes for Göbekli Tepe / Çatalhöyük / Karahan Tepe / Barasana / molimo / Amazon ethnography quotes. Dry-run normalizer: **0**; pytest green.
+
+**SH13 (2026-03-24):** Verbatim transcript in `secret-history-13-mandate-of-heaven.md` (*Mandate of Heaven*); manual ASR pass for Sumer vs “Samaria,” Göbekli Tepe / Çatalhöyük, *Enuma Elish* / Gilgamesh / Marduk cluster, university joke (Middlebury), Mesopotamia geography, Hesiod / dynastic-cycle Q&A, and debate between sheep and grain; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer: **0**; pytest green.
+
+**SH14–28:** `## Full transcript` is still the **analytical lecture-arc stub** until verbatim is pasted. **Next operator action:** replace stub with YouTube verbatim text → run normalizer `--write` → audit → extend `COMMON_REPLACEMENTS` only for safe patterns → pytest.
+
+**Raw captions:** Available under `research/external/youtube-channels/predictive-history/transcripts/` for all 28 Secret History video IDs (verify with `check_asr_audit_preconditions.py --only-glob 'secret-history-*' -v`).
 
 | Date | Lecture file | Signal type | Before (short) | After / fix | Verified how |
 |------|--------------|-------------|------------------|-------------|--------------|
@@ -317,6 +329,28 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 | 2026-03-24 | secret-history-04 | Domain vocab | "Nostism" | Gnosticism | Religious/philosophical movement |
 | 2026-03-24 | secret-history-04 | Domain vocab | "synchronosity" (×3) | synchronicity | Jungian term |
 | 2026-03-24 | secret-history-04 | Domain vocab | "diads" | dyads | Philosophical pairs |
+| 2026-03-24 | secret-history-11 | Homophone / theology | "the vine" (×10+ in ASR) | the divine | ASR systematic; Q&A "connected to the vine" |
+| 2026-03-24 | secret-history-11 | Proper name | "Genevie von Piter" | Genevieve von Petzinger | Archaeologist |
+| 2026-03-24 | secret-history-11 | Proper name | "Ventang go" | Van Gogh | Painter |
+| 2026-03-24 | secret-history-11 | Place | "Micronia" | Micronesia | Pacific islands |
+| 2026-03-24 | secret-history-11 | Domain vocab | "Darism" / "surround the fittest" | Darwinism / survival of the fittest | Lecture register |
+| 2026-03-24 | secret-history-11 | Phrase | "the fear of evolution marked" | the theory of evolution marked | Turning-point sentence |
+| 2026-03-24 | secret-history-11 | Book / authors | "David Grabber and David Wangro" / "that done everything" | David Graeber and David Wengrow / *The Dawn of Everything* | Burial-care quote |
+| 2026-03-24 | secret-history-11 | Quote fix | "balance appraisals" / "huntergather" / "p paleothic" | broad-scale appraisals / hunter-gatherer / Paleolithic | Aligns with published wording |
+| 2026-03-24 | secret-history-11 | Archaeology | "Roma 2" / "bureau site" | Romito 2 / burial site | Ice Age dwarf burial |
+| 2026-03-24 | secret-history-12 | ASR | "symphysicia" | synesthesia | Mixed senses; Beethoven |
+| 2026-03-24 | secret-history-12 | ASR / sites | "K paintings" / "go tepe" / "Kak Hoyak" / "Katak" | cave paintings / Göbekli Tepe / Çatalhöyük | Site names |
+| 2026-03-24 | secret-history-12 | ASR | "serial computer" (Pacific Q&A) | in a boat in the Pacific | Rebuts student; context |
+| 2026-03-24 | secret-history-12 | ASR | "Kenapole" / "still instant" | Constantinople / still standing | Hagia Sophia |
+| 2026-03-24 | secret-history-12 | ASR | "Minute Manhattan project" | The Manhattan project | 20th-c. nuclear program |
+| 2026-03-24 | secret-history-12 | ASR | "Leonard Uler" / "Colin Turbo" | Leonhard Euler / Colin Turnbull | Names |
+| 2026-03-24 | secret-history-12 | Book / quote | "thought of everything" / Grabber/Wangro | *The Dawn of Everything* / Graeber & Wengrow | Intro to ethnography block |
+| 2026-03-24 | secret-history-12 | ASR | "rice rivers" (Barasana myth) | rise to rivers | Creation narrative |
+| 2026-03-24 | secret-history-13 | ASR / place | "Samaria" (×many) / duplicate Sumer | Sumer | Map + trade-hub context; ASR homophone |
+| 2026-03-24 | secret-history-13 | ASR | "Marist" / "Mesopotain" / "Mesopotania" / "emir lash" | Middlebury / Mesopotamia / Mesopotamia / Enuma Elish | Lecture joke + two epics |
+| 2026-03-24 | secret-history-13 | Mythology | "Uranus marries Ria" | Cronus marries Rhea | Hesiod / Theogony narrative |
+| 2026-03-24 | secret-history-13 | ASR | "Aadian Empire" / "found the" | Akkadian Empire / founded the | Sargon |
+| 2026-03-24 | secret-history-13 | ASR | "monarch here" / "King Mard " | Marduk / King Marduk | *Enuma Elish* block |
 
 ### Secret History highest-impact patterns
 
@@ -328,7 +362,7 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 ### Secret History candidate replacements
 
-All 62 substitutions implemented via 53 new entries added to `COMMON_REPLACEMENTS` in `asr_transcript_replacements.py` (common tier, safe for all series). No secret-history-specific tier created — the volume of verbatim text (4 lectures) does not justify a dedicated tier.
+SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). All common tier; no secret-history-specific tier.
 
 **Not automated (too risky for string replacement):**
 
@@ -343,7 +377,7 @@ All 62 substitutions implemented via 53 new entries added to `COMMON_REPLACEMENT
 
 ### Secret History scope limitation
 
-SH05-28 `## Full transcript` sections contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text. These summaries do not carry ASR artifacts and cannot be audited with the raw-vs-curated diff method. If verbatim transcripts are populated for SH05-28 from raw YouTube captions in future, the full pipeline can be re-run.
+**SH14–SH28** `## Full transcript` sections still contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text — until pasted. When each file is replaced with pasted caption text, re-run the pipeline (normalizer → manual audit → replacements → pytest).
 
 ---
 
@@ -356,6 +390,7 @@ pytest tests/test_normalize_lecture_transcript_asr.py -q
 # Coverage (lectures with YouTube URL vs raw .txt)
 python3 scripts/work_jiang/check_asr_audit_preconditions.py
 python3 scripts/work_jiang/check_asr_audit_preconditions.py --only-glob 'geo-strategy-*'
+python3 scripts/work_jiang/check_asr_audit_preconditions.py --only-glob 'secret-history-*'
 python3 scripts/work_jiang/check_asr_audit_preconditions.py --strict   # exit 1 if gaps
 
 # Verbatim layer (example: Geo-Strategy)

@@ -356,6 +356,34 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("analy model", "analytical model"),
     ("flash eating", "flesh-eating"),
     ("flesheating", "flesh-eating"),
+    # --- Secret History SH11 (2026-03-24): divine vs ASR "vine" ---
+    ("channeling the vine", "channeling the divine"),
+    ("connected to the vine", "connected to the divine"),
+    ("connection to the vine", "connection to the divine"),
+    ("connection with the vine", "connection with the divine"),
+    ("removed from the vine", "removed from the divine"),
+    ("return to the vine", "return to the divine"),
+    # --- Secret History SH11: names / places / book ---
+    ("Genevie von Piter", "Genevieve von Petzinger"),
+    ("Ventang go", "Van Gogh"),
+    ("Micronia", "Micronesia"),
+    ("Darism came", "Darwinism came"),
+    ("Darwin's theory of surround the fittest", "Darwin's theory of survival of the fittest"),
+    ("the fear of evolution marked", "the theory of evolution marked"),
+    # --- Secret History SH12 (2026-03-24) ---
+    ("symphysicia", "synesthesia"),
+    ("primive people", "primitive people"),
+    ("printive cultures", "primitive cultures"),
+    ("survival of the fittish.", "survival of the fittest."),
+    ("Kenapole.", "Constantinople."),
+    ("It's still instant.", "It's still standing."),
+    ("Aken Cathedral", "Aachen Cathedral"),
+    ("Minute Manhattan project.", "The Manhattan project."),
+    ("Leonard Uler", "Leonhard Euler"),
+    ("Colin Turbo", "Colin Turnbull"),
+    ("the wayfinders by Wayade Davis", "The Wayfinders by Wade Davis"),
+    ("secession crisis", "succession crisis"),
+    ("This is a thought of everything uh by David Grabber and David Wangro", "This is The Dawn of Everything by David Graeber and David Wengrow"),
 ]
 
 # Greek / ancient history strand only — run when filename matches civilization-*.md

@@ -146,6 +146,22 @@ def test_normalize_secret_history_common_tier() -> None:
         ("diads", "dyads"),
         ("elite overp production", "elite overproduction"),
         ("petty boujo", "petty bourgeoisie"),
+        # SH11 (2026-03-24)
+        ("connected to the vine", "connected to the divine"),
+        ("channeling the vine", "channeling the divine"),
+        ("Genevie von Piter", "Genevieve von Petzinger"),
+        ("Ventang go", "Van Gogh"),
+        ("Micronia", "Micronesia"),
+        ("Darism came", "Darwinism came"),
+        ("Darwin's theory of surround the fittest", "Darwin's theory of survival of the fittest"),
+        ("the fear of evolution marked", "the theory of evolution marked"),
+        # SH12 (2026-03-24)
+        ("symphysicia", "synesthesia"),
+        ("Kenapole.", "Constantinople."),
+        ("Minute Manhattan project.", "The Manhattan project."),
+        ("Leonard Uler", "Leonhard Euler"),
+        ("Colin Turbo", "Colin Turnbull"),
+        ("secession crisis", "succession crisis"),
     ]
     for raw, expected in cases:
         out, n = normalize_transcript_text(raw, series=None)
