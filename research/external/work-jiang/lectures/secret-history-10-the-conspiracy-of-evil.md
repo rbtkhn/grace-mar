@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#10**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-10-17  
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Secret History #10: The Conspiracy of Evil](https://www.youtube.com/watch?v=ihh1fdW4-cA) (`@PredictiveHistory`).  

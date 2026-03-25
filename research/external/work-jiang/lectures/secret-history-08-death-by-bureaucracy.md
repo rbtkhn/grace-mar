@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#8**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-10-11  
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Secret History #8: Death by Bureaucracy](https://www.youtube.com/watch?v=hk_yhi3-prw) (`@PredictiveHistory`).  

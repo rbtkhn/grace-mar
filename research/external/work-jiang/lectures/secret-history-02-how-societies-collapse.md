@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#2**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-08-22  
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Secret History #2: How Societies Collapse](https://www.youtube.com/watch?v=K-_l9jBGo74) (`@PredictiveHistory`).  

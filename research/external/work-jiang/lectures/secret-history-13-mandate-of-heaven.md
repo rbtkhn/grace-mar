@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#13**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-10-29  
 **Topic:** Civilization as elite-justifying hierarchy vs temple-first alternative; Sumer and *Enuma Elish*; Gilgamesh and myth consolidation; Hesiod; debate between sheep and grain; mandate of heaven.
 
 **Source (canonical recording):** [Predictive History — Secret History #13: Mandate of Heaven](https://www.youtube.com/watch?v=FJF8oD_5c_w) (`@PredictiveHistory`).  

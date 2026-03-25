@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#11**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-10-21  
 **Topic:** Human history as imagination, empathy, and ritual — Darwin critiqued; Ice Age and cave art; preliterate intuition; disability, care, and the divine.
 
 **Source (canonical recording):** [Predictive History — Secret History #11: Dawn of the Human Imagination](https://www.youtube.com/watch?v=LvHsg5qtDs8) (`@PredictiveHistory`).  

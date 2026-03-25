@@ -25,6 +25,8 @@ SH_EP_RE = re.compile(r"^Secret\s+History\s*#(\d+)\s*[:：]\s*", re.I)
 GEO_EP_RE = re.compile(r"^Geo-Strategy\s*#\s*(\d+)\s*[:：]\s*", re.I)
 # Channel index uses "Geo-Strategy END:" for the finale (book line = #12).
 GEO_END_RE = re.compile(r"^Geo-Strategy\s+END\s*[:：]\s*", re.I)
+# Game Theory #N: ... (Volume IV)
+GT_EP_RE = re.compile(r"^Game\s+Theory\s*#(\d+)\s*[:：]\s*", re.I)
 
 
 def parse_channel_index_rows(index_path: Path | None = None) -> list[tuple[str, str]]:
@@ -76,6 +78,18 @@ def lookup_secret_history(episode: int, *, index_path: Path | None = None) -> tu
     candidates: list[tuple[str, str]] = []
     for vid, title in parse_channel_index_rows(index_path):
         m = SH_EP_RE.match(title)
+        if m and int(m.group(1)) == episode:
+            candidates.append((vid, title))
+    if not candidates:
+        return None
+    return _pick_best_duplicate(candidates)
+
+
+def lookup_game_theory(episode: int, *, index_path: Path | None = None) -> tuple[str, str] | None:
+    """Return (video_id, youtube_title) for Game Theory #episode, or None."""
+    candidates: list[tuple[str, str]] = []
+    for vid, title in parse_channel_index_rows(index_path):
+        m = GT_EP_RE.match(title.strip())
         if m and int(m.group(1)) == episode:
             candidates.append((vid, title))
     if not candidates:
@@ -142,6 +156,11 @@ def youtube_title_to_heading(youtube_title: str, series: str, episode: int) -> s
         if m:
             rest = youtube_title[m.end() :].strip()
             return f"Geo-Strategy #{episode}: {rest}" if rest else f"Geo-Strategy #{episode}"
+    if s in ("game-theory", "gt"):
+        m = GT_EP_RE.match(youtube_title.strip())
+        if m:
+            rest = youtube_title.strip()[m.end() :].strip()
+            return f"Game Theory #{episode}: {rest}" if rest else f"Game Theory #{episode}"
     return youtube_title
 
 
@@ -167,6 +186,7 @@ def youtube_title_to_slug(youtube_title: str, series: str, episode: int) -> str:
     base = re.sub(r"^Secret\s+History\s*#\d+\s*[:：]\s*", "", base, flags=re.I)
     base = re.sub(r"^Geo-Strategy\s*#\d+\s*\(END\)\s*[:：]\s*", "", base, flags=re.I)
     base = re.sub(r"^Geo-Strategy\s*#\d+\s*[:：]\s*", "", base, flags=re.I)
+    base = re.sub(r"^Game\s+Theory\s*#\d+\s*[:：]\s*", "", base, flags=re.I)
     base = base.strip()
     slug = re.sub(r"[^a-z0-9]+", "-", base.lower()).strip("-")
     return slug or f"episode-{episode:02d}"

@@ -12,7 +12,7 @@
 4. [Findings log — Geo-Strategy](#4-findings-log-append-rows) — 177 rows, 20 episodes, 2026-03-24
    - [Highest-impact patterns](#highest-impact-patterns)
    - [Candidate recurring replacements](#candidate-recurring-replacements)
-5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–21 verbatim+audited; SH22–28 pending verbatim, 2026-03-24
+5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–28 verbatim+audited, 2026-03-24
    - [Secret History highest-impact patterns](#secret-history-highest-impact-patterns)
    - [Secret History candidate replacements](#secret-history-candidate-replacements)
    - [Secret History scope limitation](#secret-history-scope-limitation)
@@ -31,8 +31,8 @@
 
 **Passes complete:**
 - Geo-Strategy, depth B, 20 episodes (geo-strategy-01 through -20).
-- Secret History, depth B, **21** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -21): normalized where run, manually audited, pytest green.
-- Secret History **next:** **SH22–28** still have operator-written analytical outlines under `## Full transcript` (not caption-verbatim) where not yet pasted. Raw YouTube `.txt` exists for all 28 — paste verbatim body when ready, then repeat: `normalize_lecture_transcript_asr.py <file> --write` → targeted audit → `StrReplace` → `pytest tests/test_normalize_lecture_transcript_asr.py -q`.
+- Secret History, depth B, **28** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -28): normalized where run, manually audited, pytest green.
+- Secret History Volume III transcript ingest: **complete** (no further verbatim paste queue for SH01–28).
 
 ---
 
@@ -407,6 +407,59 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 | 2026-03-24 | secret-history-21 | ASR / Gaul | "Alicia" / "gic tribes" | Alesia / Gallic | Caesar campaign |
 | 2026-03-24 | secret-history-21 | ASR / myth | "Inas" / "Kisha" / "Lucricia" / "Kentinius" / "Buddhist" (Brutus) | Aeneas / Creusa / Lucretia / Collatinus / Brutus | Foundation myths |
 | 2026-03-24 | secret-history-21 | ASR / *Aeneid* | "Prime" / "Pry" / "Iniad" | Priam / Priam / Aeneid | Virgil quotation block |
+| 2026-03-24 | secret-history-22 | ASR / names | "Alexand" / "Ibionites" / "Escariat" / "Pontious Pilot" | Alexander / Ebionites / Iscariot / Pontius Pilate | Opening + Passion cluster |
+| 2026-03-24 | secret-history-22 | ASR / sects | "seduces" / Essenes garble ("who the scenes") | Sadducees / Essenes + John the Baptist | Jewish groups block |
+| 2026-03-24 | secret-history-22 | ASR / terms | "crucification" / "romance" (Romans) / "N Hamadi" / "gospel of humus" | crucifixion / Romans / Nag Hammadi / Gospel of Thomas | High-frequency |
+| 2026-03-24 | secret-history-22 | ASR / literature | "Petroles" / "Petroas" / "Roomie" / "Kara Mazoff" / "Dossi" | Patroclus / Rumi / Karamazov / Dostoevsky | Iliad + GP + Dostoevsky |
+| 2026-03-24 | secret-history-22 | ASR / modern | "Elas" / "Elmas" / "Alan Musk" / "Ellen Musk" | Elon (Musk) | Sermon on the Mount coda |
+| 2026-03-24 | secret-history-22 | ASR / Dante | "Dian's" / "Beatric" / "Petric" / "Chief Joy" / "sale of godness" | Dante's / Beatrice / Chief Good / seal of goodness | *Paradiso* block; avoid `Beatric`→`Beatrice` double-replace |
+| 2026-03-24 | secret-history-22 | ASR / scripture | "p pack pagans" / "evadors" / "his son to rise" / "mouth moth" | even pagans / evildoers / his sun / moth and rust | Matthew 5–7 cluster |
+| 2026-03-24 | secret-history-22 | Narrative | Ingest: operator paste + chunk merge; normalize 2 auto subs then ~40 targeted manual fixes; pytest 14 pass | SH22 complete | Verbatim pipeline |
+| 2026-03-24 | secret-history-23 | ASR / names | "Zorusta" / "helanized" / "montheists" / "Dionis" / "eukarist" | Zarathustra / Hellenized / monotheists / Dionysus / Eucharist | Opening + Hellenism cluster |
+| 2026-03-24 | secret-history-23 | ASR / terms | "esquetology" / "patter familias" / "paraphras" / "Goffs" | eschatology / pater familias / paterfamilias / Goths | Paul thesis block |
+| 2026-03-24 | secret-history-23 | ASR / scripture | "Pott" / "flocked" / "Pilot" / "wo a crown" / "superstition" (circumcision) | Pilate / flogged / Pilate / wove a crown / circumcision | John + Acts |
+| 2026-03-24 | secret-history-23 | ASR / Paul | "sustry" / "wing" / "Cphas" / "feudal" / "may a few" | sophistry / win / Cephas / futile / many of you | 1 Corinthians |
+| 2026-03-24 | secret-history-23 | ASR / misc | "Ray Croc" / "Austin" / "Oxen" / "freedom of well" | Ray Kroc / Augustine / Augustine / freedom of will | Franchise + Augustine |
+| 2026-03-24 | secret-history-23 | Narrative | Ingest: 3 chunk files; normalize 3 auto subs; manual pass; pytest 14; `sync_verbatim_transcripts --force` | SH23 complete | Verbatim pipeline |
+| 2026-03-24 | secret-history-24 | ASR / Byzantine | "Bison" / "Bisantine" / "Conanopole" / "Kanole" / "Kimple" | Byzantine / Byzantine / Constantinople / Constantinople / Constantinople | High-frequency geography |
+| 2026-03-24 | secret-history-24 | ASR / Rome–church | "Petricians" / "Sula" / "August of Caesar" / "acquisition" | Patricians / Sulla / Augustus Caesar / Inquisition | Republic → empire |
+| 2026-03-24 | secret-history-24 | ASR / doctrine | "christologology" / "Neestorans" / "Nikia" / "Arinism" | Christology / Nestorians / Nicaea / Arianism | Christology + Trinity block |
+| 2026-03-24 | secret-history-24 | ASR / Islam | "Mohamad" / "hommer" / "polymer" / "kebab" | Muhammad / Homer / Paul / Kaaba | Messenger + Hajj |
+| 2026-03-24 | secret-history-24 | ASR / Persia | "Sassin" / "Assassin" (empire) / "Shongu" | Sassanid / Sassanid / Xiongnu | Steppe push + empires |
+| 2026-03-24 | secret-history-24 | Phrase / coherence | "assassin says" / "Protestants help" / duplicate Caesarea / "Constantinople like um is safe" | Sassanid says / Byzantines help / single Caesarea / Constantinople is safe; rest falls | Wikipedia read-aloud + lecturer fixes |
+| 2026-03-24 | secret-history-24 | Narrative | Ingest: 2 chunk files; normalize 2 auto subs; manual pass; pytest 14; `sync_verbatim_transcripts` (verbatim layer present) | SH24 complete | Verbatim pipeline |
+| 2026-03-24 | secret-history-25 | ASR / class terms | "lender" / "present" / "Lenor" / "land of class" | landlord / peasant / landlord / landlord class | Opening framing |
+| 2026-03-24 | secret-history-25 | ASR / experiments | "Mgrim" / "Sly Mram" / "Solomon Ash" / "ci societies" | Milgram / Milgram / Solomon Asch / secret societies | Yale + conformity |
+| 2026-03-24 | secret-history-25 | ASR / economics | "grainery" / "greenery" / "boom buzz" / "boom bus" / "olarchies" | granary / granary / boom-bust / boom-bust / oligarchies | Macro cycle block |
+| 2026-03-24 | secret-history-25 | ASR / Reformation | "prostate" / "procformation" / "pro reformation" / "Kelvin" / "covenant" | Protestant Reformation / Protestant Reformation / Protestant / Calvin / Calvin | Catholic vs Protestant |
+| 2026-03-24 | secret-history-25 | ASR / geography | "Vanish" / "Marses" / "carinapole" / "Genua" | Venice / marshes / Constantinople / Genoa | Venice PPT |
+| 2026-03-24 | secret-history-25 | ASR / misc | "Hasbirds" / "Dutch East India's" / "power company" / "Laoya" / "Loyal" | Habsburgs / Dutch East India Company / joint-stock / Loyola / Loyola | VOC + Jesuits |
+| 2026-03-24 | secret-history-25 | ASR / Anglo-Dutch | "Henry VII" (pope split) / "boring the money" / "William orange" | Henry VIII / borrowing / William of Orange | England reformation arc |
+| 2026-03-24 | secret-history-25 | Phrase / coherence | "wealthy, that's necessarily a good" / "Napoleon defeated England six times" / "bounce to society" | not necessarily; Napoleon won many battles; belong to the right society | Meaning + Napoleon garble |
+| 2026-03-24 | secret-history-25 | ASR / modern | "Chachi BT" / "Bren and Wood" / "solver to oil" / "transational" | ChatGPT / Bretton Woods / dollar to oil / transnational | Closing US dollar block |
+| 2026-03-24 | secret-history-25 | ASR / psychology | "disassociation" / "forget your handler" / "chocolate marijuana" | dissociation / is your handler / hashish (cannabis) | Trauma Q&A |
+| 2026-03-24 | secret-history-25 | Narrative | Ingest: operator paste + assembled body; normalize 0 auto subs; manual pass; pytest 14; `sync_verbatim_transcripts` if raw `B5FtHagng8c` present | SH25 complete | Verbatim pipeline |
+| 2026-03-24 | secret-history-26 | ASR / Jewish history | "seducies" / "seduces" / "helenic" / "helic" / "Makabian" / "Mcabes" | Sadducees / Sadducees / Hellenistic / Hellenistic / Maccabean / Maccabees | Opening + temple arc |
+| 2026-03-24 | secret-history-26 | ASR / terms | "esquetological" / "alastic mosque" / "mezanic" / "lone sharks" / "Alanderus" | eschatological / al-Aqsa / messianic / loan sharks / al-Andalus | Rome + Spain |
+| 2026-03-24 | secret-history-26 | ASR / Poland | "Polish Lutheran Commonwealth" | Polish-Lithuanian Commonwealth | Repeated |
+| 2026-03-24 | secret-history-26 | ASR / Sabbatai | "Zai Zevi" / "Zab Zi" / "Zabia" / "Domai" / "Anatkurk" / "wallet" / "meant age" / "rebetic" | Sabbatai Zevi / Sabbatai Zevi / Sabbatai Zevi / Dönmeh / Atatürk / wanton / messianic age / rabbinic | High-frequency |
+| 2026-03-24 | secret-history-26 | ASR / Frank | "pregnant is not Judaism" / "Frankus" / "Franken" / "Francis ideology" | Frankism is not Judaism / Frankists / Frank / Frankist | Closing block |
+| 2026-03-24 | secret-history-26 | ASR / literature | "Gerta" / "Foust" / "Messets" / "false" / "fouls" / "Yates" / "Cracker's" | Goethe / Faust / Mephistopheles / Faust / Faust / Yeats / Frank's | Faust + Illuminati rumor |
+| 2026-03-24 | secret-history-26 | ASR / misc | "Louis Bandis" / "Brendai" / "slight of hand" / "atonement" (oral law) | Louis Brandeis / Brandeis / sleight of hand / Oral Torah | US + Frank |
+| 2026-03-24 | secret-history-26 | Narrative | Ingest: 4-part transcript merge; normalize 1 auto sub; manual pass; pytest 14; `sync_verbatim_transcripts --force` if raw `kULUM_eB8KI` present | SH26 complete | Verbatim pipeline |
+| 2026-03-24 | secret-history-27 | ASR / empire | "Sabatine Frankets" / "17 Frankas" / "Nepolic" / "sub foods" / "Maji" / "transational" | Sabbatean Frankists / Sabbatean Frankists / Napoleonic / subterfuge / Meiji / transnational | Opening British strategy |
+| 2026-03-24 | secret-history-27 | ASR / Ottoman | "Art Oman" / "Dome" / "a domain" / "what the do" | Ottoman / Dönmeh / the Dönmeh / what they did | Crimean debt arc |
+| 2026-03-24 | secret-history-27 | ASR / philosophy | "John lock" / "Banam" / "Charles Darin" / "utitarianism" | Locke / Bentham / Darwin / utilitarianism | Empiricism block |
+| 2026-03-24 | secret-history-27 | ASR / Disraeli | "Conan Conins" / "Benjamin Deseli" / "this Israeli" / "Connor speak" | Coningsby / Disraeli / Disraeli / Coningsby | Novel readings |
+| 2026-03-24 | secret-history-27 | ASR / Russia | "bullshiks" / "Bviks" / "dimensions" / "reigned on debt" / "Leontrosky" | Bolsheviks / Bolsheviks / Mensheviks / reneged on debt / Leon Trotsky | Revolution + civil war |
+| 2026-03-24 | secret-history-27 | ASR / Marx–Freud | "Markx" / "Muel Buchanan" / "what we kind of say" / "wisteria" / "edifo" | Marx / Mikhail Bakunin / Bakunin says / hysteria / Oedipus | Closing ideology block |
+| 2026-03-24 | secret-history-27 | Narrative | Ingest: transcript extracted from session JSONL + header merge; normalize 3 auto subs; bulk+targeted manual pass; pytest 14; `sync_verbatim_transcripts --force` raw `ZPrecJHUOUs` | SH27 complete | Verbatim pipeline |
+| 2026-03-24 | secret-history-28 | ASR / names | "Weisshot" / "Weishob" / "Illumati" / "Mayor Rothschild" | Weishaupt / Weishaupt / Illuminati / Mayer Rothschild | Illuminati block |
+| 2026-03-24 | secret-history-28 | ASR / theology | "esquetology" / "Mesig age" / "Gog and Mog" / "Alaxak" | eschatology / messianic age / Gog and Magog / Al-Aqsa | Eschatology strands |
+| 2026-03-24 | secret-history-28 | ASR / Pax | "Pak Judeica" / "Paka" / "purea" / "pastor" (resistance) | Pax Judaica / Pax Judaica / Pax Judaica / Pax Judaica | Repeated phrase |
+| 2026-03-24 | secret-history-28 | ASR / history | "Kesler" / "Bisantines" / "Kazar" | Koestler / Byzantines / Khazar | Khazar read-aloud |
+| 2026-03-24 | secret-history-28 | ASR / tech | "Steve Wnak" / "Huard Packard" / "ChachiBT" / "Thomas and he wrote" | Wozniak / Hewlett-Packard / ChatGPT / Thomas Kuhn | Silicon Valley |
+| 2026-03-24 | secret-history-28 | Narrative | Ingest: transcript extracted from session JSONL + header merge; normalize 14 auto subs; bulk+targeted manual pass; pytest 14; `sync_verbatim_transcripts --force` raw `WFWizN3QoPg` | SH28 complete | Verbatim pipeline |
 
 ### Secret History highest-impact patterns
 
@@ -418,7 +471,7 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 ### Secret History candidate replacements
 
-SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). SH14: in-file only (no new tuples; “steps”→steppes not automated). SH15: in-file only (no new tuples). SH16: in-file only (no new tuples; Greek epic name density too high for blind automation). SH17: in-file only (no new tuples; “Job”→Joab and Uriah clusters too context-sensitive for blind automation). SH18: in-file only (no new tuples; Ahura Mazda / Zarathustra string density too high for blind automation). SH19: in-file only (no new tuples; Qin/Qing and Levant/Biblical proper-name density too high for blind automation). SH20: in-file only (no new tuples; “the way” vs Wei / Thebes vs thieves too context-sensitive for blind automation). SH21: in-file only (no new tuples; Cannae/historian-name homophones and Livy quotation density too high for blind automation). All common tier; no secret-history-specific tier.
+SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). SH14: in-file only (no new tuples; “steps”→steppes not automated). SH15: in-file only (no new tuples). SH16: in-file only (no new tuples; Greek epic name density too high for blind automation). SH17: in-file only (no new tuples; “Job”→Joab and Uriah clusters too context-sensitive for blind automation). SH18: in-file only (no new tuples; Ahura Mazda / Zarathustra string density too high for blind automation). SH19: in-file only (no new tuples; Qin/Qing and Levant/Biblical proper-name density too high for blind automation). SH20: in-file only (no new tuples; “the way” vs Wei / Thebes vs thieves too context-sensitive for blind automation). SH21: in-file only (no new tuples; Cannae/historian-name homophones and Livy quotation density too high for blind automation). SH22: in-file only (no new tuples; Jesus/Dante/Dostoevsky proper-name density + `Beatric` substring hazard). SH23: in-file only (no new tuples; Paul/circumcision/Pilate homophone clusters). SH24: in-file only (no new tuples; Byzantine/Sassanid/Nicaea Qur’an-read-aloud density + “assassin”→Sassanid context hazard). SH25: in-file only (no new tuples; Milgram/Protestant/merchant-oligarchy dense proper names + “capital” vs “Capitol” homophone hazard). SH26: in-file only (no new tuples; Jewish/Frankist proper-name density + “seductive”→Sadducees substring hazard + `Frank`/`Frankist`/`Francis` disambiguation). SH27: in-file only (no new tuples; British-philosophy + Russian-Revolution + *Coningsby* read-aloud density + `Frank`/`Frankist`/`Franks`/`Israeli`/`Disraeli` disambiguation). SH28: in-file only (no new tuples; finale density: Weishaupt/Illuminati variants + `Pax Judaica` homophone clusters + Koestler/Khazar read-aloud + Silicon Valley names + `Pax`/`pastor`/`pack` context disambiguation). All common tier; no secret-history-specific tier.
 
 **Not automated (too risky for string replacement):**
 
@@ -433,7 +486,7 @@ SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `CO
 
 ### Secret History scope limitation
 
-**SH22–SH28:** Where not yet pasted, `## Full transcript` sections may still contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text — until pasted. When each file is replaced with pasted caption text, re-run the pipeline (normalizer → manual audit → replacements → pytest).
+**SH01–28:** Verbatim `## Full transcript` ingest for Secret History Volume III is complete (2026-03-24). Further edits are editorial only (normalizer + targeted audit), not outline replacement.
 
 ---
 

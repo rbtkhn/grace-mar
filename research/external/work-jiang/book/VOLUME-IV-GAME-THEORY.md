@@ -1,7 +1,7 @@
 # Predictive History — Volume IV: Game Theory
 
-**Corpus:** TBD (to be mapped in `metadata/sources.yaml`)  
-**Status:** title registered; scope definition pending.
+**Corpus:** `series: game-theory` in `metadata/sources.yaml`; `source_id` pattern `gt-01` …; curated files `lectures/game-theory-NN-*.md` (wired in `build_source_registry.py`, `validate_work_jiang.py`, ASR normalizer).  
+**Status:** title registered; ingest transcripts as they ship; Part II method still TBD (see setup checklist below).
 
 ## Volume intent
 
@@ -9,7 +9,7 @@ Volume IV extends the Predictive History multivolume architecture with the worki
 
 ## Setup checklist
 
-1. Define series key and corpus boundary in `metadata/sources.yaml`.
+1. ~~Define series key and corpus boundary in `metadata/sources.yaml`.~~ **Done:** `series: game-theory`, `source_id` `gt-NN`, filenames `lectures/game-theory-NN-*.md`.
 2. Establish lecture filename pattern under `lectures/`.
 3. Declare Part I chapter mapping policy (one chapter per lecture unless exceptions are documented).
 4. Choose Part II evaluation mode:

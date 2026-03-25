@@ -11,7 +11,11 @@ from pathlib import Path
 _WJ = Path(__file__).resolve().parents[1] / "scripts" / "work_jiang"
 sys.path.insert(0, str(_WJ))
 
-from asr_light_clean import fix_civilization_thieves, normalize_transcript_text  # noqa: E402
+from asr_light_clean import (  # noqa: E402
+    detect_series_from_basename,
+    fix_civilization_thieves,
+    normalize_transcript_text,
+)
 from normalize_lecture_transcript_asr import (  # noqa: E402
     FULL_TRANSCRIPT_HEADING,
     run_file,
@@ -38,6 +42,19 @@ def test_normalize_civilization_replaces_granicus() -> None:
     out, n = normalize_transcript_text(raw, series="civilization")
     assert "Granicus" in out
     assert "granticus" not in out.lower()
+    assert n >= 1
+
+
+def test_detect_series_game_theory_basename() -> None:
+    assert detect_series_from_basename("game-theory-01-intro.md") == "game-theory"
+    assert detect_series_from_basename("Game-Theory-02-Foo.md") == "game-theory"
+
+
+def test_normalize_game_theory_common_tier_like_geo() -> None:
+    """Volume IV uses common tier plus optional GAME_THEORY_REPLACEMENTS (often empty)."""
+    raw = "the straight of humus"
+    out, n = normalize_transcript_text(raw, series="game-theory")
+    assert "Strait of Hormuz" in out
     assert n >= 1
 
 

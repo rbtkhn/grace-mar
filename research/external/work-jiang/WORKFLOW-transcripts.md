@@ -60,12 +60,13 @@ The umbrella book line is **Predictive History** — **one volume per lecture se
 | Geo-Strategy | `geo-strategy` | `geo-01` … | `lectures/geo-strategy-NN-*.md` |
 | Civilization | `civilization` | `civ-01` … | `lectures/civilization-NN-*.md` |
 | Secret History (Vol. III) | `secret-history` | `sh-01` … | `lectures/secret-history-NN-*.md` |
+| Game Theory (Vol. IV) | `game-theory` | `gt-01` … | `lectures/game-theory-NN-*.md` |
 
 **Curated lecture filename & slug (canonical rules):**
 
 - **One file per episode.** The path under `lectures/` is the stable key for sorting and tooling:  
   **`lectures/<series-prefix>-<NN>-<kebab-slug>.md`**
-  - **`<series-prefix>`** — exactly `geo-strategy`, `civilization`, or `secret-history` (matches `series` in `sources.yaml`).
+  - **`<series-prefix>`** — exactly `geo-strategy`, `civilization`, `secret-history`, or `game-theory` (matches `series` in `sources.yaml`).
   - **`<NN>`** — **two-digit** episode index (`01`–`99`), zero-padded. It **must** match the numeric **`episode`** field for that row in `metadata/sources.yaml` (e.g. `episode: 4` → `…-04-…`).
   - **`<kebab-slug>`** — lowercase words separated by **hyphens**, ASCII; short human-readable topic (may include a date fragment for geo, e.g. `2024-04-24`). It does **not** need to mirror the YouTube title character-for-character.
 - **Display title vs filename.** The first markdown **`# `** heading is the **display title** (usually aligned with the YouTube title). It may differ from `<kebab-slug>`; **`scripts/work_jiang/build_source_registry.py`** takes the title from the **first `# ` line** when rebuilding `sources.yaml`.
@@ -127,7 +128,7 @@ If an episode needs **caption-faithful** excerpts in git without committing the 
    python3 scripts/work_jiang/normalize_lecture_transcript_asr.py \
      research/external/work-jiang/lectures/<slug>.md --write
    ```
-   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only; `secret-history-*.md` gets **common** + **Secret History** (Roman / Volume III phrases — see `SECRET_HISTORY_REPLACEMENTS` in `asr_transcript_replacements.py`). Detected from filename unless you override with `--series civilization|geo-strategy|secret-history|none`.
+   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only; `secret-history-*.md` gets **common** + **Secret History** (Roman / Volume III phrases — see `SECRET_HISTORY_REPLACEMENTS` in `asr_transcript_replacements.py`); `game-theory-*.md` gets **common** + **Game Theory** (Volume IV — see `GAME_THEORY_REPLACEMENTS`, often empty until ingests). Detected from filename unless you override with `--series civilization|geo-strategy|secret-history|game-theory|none`.
    - **Scope:** Only the markdown **below** `## Full transcript` is rewritten unless you pass `--whole-file` (avoid touching curated topic headers).
    - **Tables:** Edit `scripts/work_jiang/asr_transcript_replacements.py` when a new episode introduces a systematic ASR error; keep longest phrases first in each list (the script sorts by length, but order matters for identical prefixes).
    - **Not automatic truth:** This is a **readability** aid; spot-check names and add manual fixes for one-off errors.

@@ -2,7 +2,7 @@
 
 **SSOT split:** This file is the single source of truth for *replacement content*
 (the phrase tables). *Which tiers run for which lecture series* lives in
-``asr_light_clean.py`` (civilization vs geo-strategy vs secret-history vs common-only).
+``asr_light_clean.py`` (civilization vs geo-strategy vs secret-history vs game-theory vs common-only).
 
 Edit this file when systematic mis-hearings show up on new ingests.
 Replacement order is applied longest-first within each tier to avoid
@@ -726,3 +726,7 @@ SECRET_HISTORY_REPLACEMENTS: list[tuple[str, str]] = [
     ("pyrus is defeating", "Pyrrhus is defeating"),
     ("pyrus hands", "Pyrrhus's hands"),
 ]
+
+# Applied when ``series == "game-theory"`` (filename ``game-theory-*`` on auto).
+# Start empty; add systematic mis-hearings after Volume IV ingests.
+GAME_THEORY_REPLACEMENTS: list[tuple[str, str]] = []

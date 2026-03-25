@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#12**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-10-24  
 **Topic:** "Heaven on earth" as shared sacred purpose — Ice Age to early temples (Göbekli Tepe, Jericho, Çatalhöyük), monumental architecture, Polynesian wayfinding, Graeber/Wengrow and Wade Davis ethnography, ritual ecology.
 
 **Source (canonical recording):** [Predictive History — Secret History #12: Heaven on Earth](https://www.youtube.com/watch?v=VtnRA-GNKM8) (`@PredictiveHistory`).  

@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#3**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-08-29  
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Secret History #3: Death by Gerontocracy](https://www.youtube.com/watch?v=0g3yo1DjiLM) (`@PredictiveHistory`).  

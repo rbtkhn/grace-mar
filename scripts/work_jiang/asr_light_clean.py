@@ -1,7 +1,8 @@
 """Shared ASR light-cleaning for work-jiang transcript text (curated or raw caption body).
 
 Civilization lectures use common + civilization replacement tiers; geo-strategy uses common
-only; **secret-history** uses common + ``SECRET_HISTORY_REPLACEMENTS`` (Roman/SH Volume III)."""
+only; **secret-history** uses common + ``SECRET_HISTORY_REPLACEMENTS`` (Roman/SH Volume III);
+**game-theory** uses common + ``GAME_THEORY_REPLACEMENTS`` (Volume IV; table may start empty)."""
 
 from __future__ import annotations
 
@@ -11,6 +12,7 @@ from pathlib import Path
 from asr_transcript_replacements import (
     CIVILIZATION_REPLACEMENTS,
     COMMON_REPLACEMENTS,
+    GAME_THEORY_REPLACEMENTS,
     SECRET_HISTORY_REPLACEMENTS,
 )
 
@@ -24,6 +26,8 @@ def detect_series_from_basename(name: str) -> str | None:
         return "geo-strategy"
     if n.startswith("secret-history-"):
         return "secret-history"
+    if n.startswith("game-theory-"):
+        return "game-theory"
     return None
 
 
@@ -79,5 +83,8 @@ def normalize_transcript_text(
         total += n
     elif series == "secret-history":
         text, n = apply_ordered_replacements(text, SECRET_HISTORY_REPLACEMENTS)
+        total += n
+    elif series == "game-theory":
+        text, n = apply_ordered_replacements(text, GAME_THEORY_REPLACEMENTS)
         total += n
     return text, total

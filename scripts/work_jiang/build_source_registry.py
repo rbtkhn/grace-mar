@@ -16,6 +16,7 @@ SOURCE_MAP = WORK_DIR / "metadata" / "source-map.yaml"
 GEO_NAME = re.compile(r"^geo-strategy-(\d+)-", re.I)
 CIV_NAME = re.compile(r"^civilization-(\d+)-", re.I)
 SH_NAME = re.compile(r"^secret-history-(\d+)-", re.I)
+GT_NAME = re.compile(r"^game-theory-(\d+)-", re.I)
 WATCH_RE = re.compile(r"watch\?v=([A-Za-z0-9_-]{11})")
 VIDEO_IN_NAME = re.compile(r"^([A-Za-z0-9_-]{11})-")
 
@@ -38,6 +39,57 @@ def analysis_for_video(analysis_by_vid: dict[str, Path], video_id: str | None) -
     if not video_id:
         return None
     return analysis_by_vid.get(video_id)
+
+
+_SOURCE_KEY_ORDER = (
+    "source_id",
+    "video_id",
+    "title",
+    "canonical_url",
+    "publication_date",
+    "lecture_path",
+    "analysis_path",
+    "series",
+    "episode",
+    "themes",
+    "status",
+)
+
+
+def reorder_source_dict(s: dict) -> None:
+    """Stable YAML key order for sources.yaml (human-friendly diffs)."""
+    rest = {k: v for k, v in s.items() if k not in _SOURCE_KEY_ORDER}
+    new = {k: s[k] for k in _SOURCE_KEY_ORDER if k in s}
+    new.update(rest)
+    s.clear()
+    s.update(new)
+
+
+def merge_preserved_fields_from_previous_yaml(sources: list[dict], previous_path: Path) -> None:
+    """Keep hand-maintained fields (e.g. publication_date, themes) across registry rebuilds."""
+    if not previous_path.is_file():
+        return
+    try:
+        prev_doc = yaml.safe_load(previous_path.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError:
+        return
+    by_id = {
+        s["source_id"]: s
+        for s in (prev_doc.get("sources") or [])
+        if isinstance(s, dict) and s.get("source_id")
+    }
+    for s in sources:
+        p = by_id.get(s["source_id"])
+        if not p:
+            continue
+        pd = p.get("publication_date")
+        if pd is not None:
+            s["publication_date"] = pd
+        th = p.get("themes")
+        if th:
+            s["themes"] = list(th)
+    for s in sources:
+        reorder_source_dict(s)
 
 
 def main() -> int:
@@ -185,11 +237,48 @@ def main() -> int:
             }
         )
 
+    gt_paths = sorted(
+        LECTURES.glob("game-theory-*.md"),
+        key=lambda p: int(GT_NAME.match(p.name).group(1)) if GT_NAME.match(p.name) else 0,
+    )
+    for lecture in gt_paths:
+        m = GT_NAME.match(lecture.name)
+        if not m:
+            continue
+        ep = int(m.group(1))
+        source_id = f"gt-{ep:02d}"
+        vid = extract_video_id_from_lecture(lecture)
+        matched, analysis_status = analysis_for_source(vid, source_id)
+        analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
+        sources.append(
+            {
+                "source_id": source_id,
+                "video_id": vid,
+                "title": title_from_lecture(lecture),
+                "canonical_url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
+                "lecture_path": str(lecture.relative_to(WORK_DIR)),
+                "analysis_path": analysis_path,
+                "series": "game-theory",
+                "episode": ep,
+                "themes": [],
+                "status": {
+                    "transcript": "complete",
+                    "curated_lecture": "complete",
+                    "analysis": analysis_status,
+                    "chapter_mapping": "missing",
+                },
+            }
+        )
+
     for s in sources:
         if s["source_id"].startswith("civ-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
         if s["source_id"].startswith("sh-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
+        if s["source_id"].startswith("gt-"):
+            s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
+
+    merge_preserved_fields_from_previous_yaml(sources, OUT)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(

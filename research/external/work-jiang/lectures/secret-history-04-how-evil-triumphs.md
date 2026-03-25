@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#4**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-08-29  
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Secret History #4: How Evil Triumphs](https://www.youtube.com/watch?v=BtlWoqWLm9Q) (`@PredictiveHistory`).  

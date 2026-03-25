@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Secret History **#6**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-09-11  
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Secret History #6: The Psychology of Evil (Graphic and Disturbing, Viewer Discretion Advised)](https://www.youtube.com/watch?v=6PdfD44DkqA) (`@PredictiveHistory`).  

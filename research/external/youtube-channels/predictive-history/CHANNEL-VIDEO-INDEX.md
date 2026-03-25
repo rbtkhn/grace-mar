@@ -2,15 +2,8 @@
 
 - **channel:** https://www.youtube.com/@PredictiveHistory/videos
 - **video_count:** 135
-- **generated_at_utc:** 2026-03-24T15:16:10Z
+- **generated_at_utc:** 2026-03-25T06:08:56Z
 - **method:** index-only (no transcripts downloaded)
-- **subscribers:** 2,110,000
-- **total_views:** ~64.4M
-- **avg_views_per_video:** ~480K
-- **channel_created:** 2023-06-20
-- **metrics_snapshot_date:** 2026-03-24
-- **30d_sub_gain:** ~820K
-- **30d_view_gain:** ~23M
 
 | # | video_id | title | duration_s | url |
 |---:|---|-----|---:|-----|

@@ -7,6 +7,7 @@ and topic lines stay untouched unless you pass ``--whole-file``.
 Civilization lectures get an extra replacement tier (ancient Greek names/places).
 Geo-Strategy lectures use the common tier only.
 Secret History (``secret-history-*.md``) uses common + Roman / Volume III phrase tier.
+Game Theory (``game-theory-*.md``) uses common + Volume IV phrase tier (may be empty until ingests).
 
 Examples::
 
@@ -86,7 +87,7 @@ def main() -> int:
     parser.add_argument("path", type=Path, help="Curated lecture .md under work-jiang/lectures/")
     parser.add_argument(
         "--series",
-        choices=("auto", "civilization", "geo-strategy", "secret-history", "none"),
+        choices=("auto", "civilization", "geo-strategy", "secret-history", "game-theory", "none"),
         default="auto",
         help="Replacement tier: auto from filename, or force one series; none = common only.",
     )
