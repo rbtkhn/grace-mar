@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-03-25T15:46:51Z",
+  "generated_at": "2026-03-25T16:14:48Z",
   "integration_status_counts": {
-    "implemented": 10,
-    "partial": 1,
+    "implemented": 11,
+    "partial": 2,
     "documented_only": 1
   },
   "pipeline_event_counts": {
@@ -16,13 +16,14 @@
     "rejected": 2
   },
   "provenance_completeness_score": 1.0,
+  "provenance_from_gate": false,
   "lane_violation_count": 0,
-  "continuity_block_count": 0,
+  "continuity_block_count": 1,
   "gap_ids_open": [
     "BUILD-AI-GAP-005"
   ],
   "notes": [
-    "Lane violations and continuity blocks require CI/runtime feeds; scores are partial.",
+    "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
     "Regenerate after editing control-plane YAML."
   ]
 }

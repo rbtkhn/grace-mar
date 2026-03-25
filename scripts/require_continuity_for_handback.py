@@ -117,3 +117,27 @@ def assert_continuity_ok(
         ttl_hours=ttl_hours,
         explicit_path=explicit_receipt,
     )
+
+
+def append_continuity_block_event(
+    repo_root: Path,
+    *,
+    user_id: str,
+    reason: str,
+    source: str = "openclaw_stage",
+) -> None:
+    """Append one structured continuity_block line for dashboards (non-fatal if IO fails)."""
+    try:
+        p = repo_root / "runtime" / "observability" / "continuity_blocks.jsonl"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        event: dict[str, Any] = {
+            "event": "continuity_block",
+            "user_id": user_id,
+            "reason": reason,
+            "source": source,
+            "ts": datetime.now(timezone.utc).isoformat(),
+        }
+        with p.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(event, ensure_ascii=False) + "\n")
+    except OSError:
+        pass

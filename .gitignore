@@ -80,6 +80,9 @@ runtime/continuity/receipts/*.json
 # Shadow autonomy decisions (local only)
 runtime/autonomy/shadow_decisions.jsonl
 
+# Operator/runtime observability feeds (lane scope, continuity blocks)
+runtime/observability/*.jsonl
+
 # Local runtime/export noise
 users/*/user.md
 users/*/harness-events.jsonl

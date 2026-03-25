@@ -133,7 +133,7 @@ def test_infer_unclassified() -> None:
 
 def test_check_any_lane_matches_work_jiang() -> None:
     doc = load_lanes(REPO_ROOT / "lanes.yaml")
-    code, msgs = check_any_lane(
+    code, msgs, _matched = check_any_lane(
         ["research/external/work-jiang/metadata/sources.yaml"],
         doc,
     )
@@ -143,7 +143,7 @@ def test_check_any_lane_matches_work_jiang() -> None:
 
 def test_check_any_lane_mixed_fails() -> None:
     doc = load_lanes(REPO_ROOT / "lanes.yaml")
-    code, _ = check_any_lane(
+    code, _, _matched = check_any_lane(
         [
             "docs/skill-work/work-dev/README.md",
             "research/external/work-jiang/README.md",

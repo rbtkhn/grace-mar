@@ -80,21 +80,40 @@ items:
     notes:
       - Human checklist before OpenClaw work.
 
-  - id: session_continuity_verification
-    title: Session continuity read verification and receipts
+  - id: session_continuity_receipts
+    title: Session continuity receipt enforcement (handback)
     surface: runtime_continuity
     status: implemented
     source_of_truth:
-      - scripts/continuity_read_log.py
       - scripts/continuity_preflight.py
       - scripts/verify_continuity_receipt.py
       - scripts/require_continuity_for_handback.py
       - scripts/handback_server.py
-      - tests/test_continuity_read_log.py
       - tests/test_continuity_receipts.py
       - tests/test_handback_requires_continuity.py
     notes:
-      - Preflight receipts required for OpenClaw /stage (428 without). JSONL append still operator-side.
+      - Fresh valid receipt required for OpenClaw /stage (428 without valid receipt).
+
+  - id: session_continuity_event_logging
+    title: Session continuity block / event logging (observability feed)
+    surface: runtime_continuity
+    status: partial
+    source_of_truth:
+      - runtime/observability/continuity_blocks.jsonl
+      - scripts/require_continuity_for_handback.py
+      - tests/test_handback_requires_continuity.py
+    notes:
+      - Structured block events append when handback denies /stage; feed is local/gitignored unless exported.
+
+  - id: session_continuity_read_log
+    title: Session continuity read log (operator)
+    surface: runtime_continuity
+    status: implemented
+    source_of_truth:
+      - scripts/continuity_read_log.py
+      - tests/test_continuity_read_log.py
+    notes:
+      - Human-readable read log; separate from receipt enforcement.
 
   - id: compute_ledger_export_handback
     title: Compute-ledger cost instrumentation for export/handback

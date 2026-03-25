@@ -146,6 +146,18 @@ def stage() -> tuple:
     if source == "openclaw_stage":
         ok_c, err_c, cont_meta = _continuity_gate_openclaw(user_id)
         if not ok_c:
+            try:
+                from require_continuity_for_handback import append_continuity_block_event
+
+                uid = (user_id or os.getenv("GRACE_MAR_USER_ID", "grace-mar")).strip()
+                append_continuity_block_event(
+                    REPO_ROOT,
+                    user_id=uid,
+                    reason=err_c,
+                    source="openclaw_stage",
+                )
+            except Exception:
+                pass
             return jsonify({"ok": False, "error": err_c, "continuity_required": True}), 428
 
     staging_meta = None

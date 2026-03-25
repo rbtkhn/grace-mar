@@ -1,4 +1,4 @@
-# Default PR gate: work-dev lane scope (see lanes.yaml).
+# PR gate: changed files must fit the lane declared on the PR (see lanes.yaml).
 name: Lane scope
 
 on:
@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  work-dev-lane:
+  lane-scope:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +21,24 @@ jobs:
       - name: Install PyYAML
         run: pip install "pyyaml>=6.0"
 
-      - name: Check changed files fit a single declared lane
+      - name: Resolve PR lane from labels
+        run: python scripts/resolve_pr_lane.py
+
+      - name: Check changed files fit declared lane
+        env:
+          GRACE_MAR_LOG_LANE_VIOLATIONS: "1"
         run: |
           BASE="${{ github.event.pull_request.base.sha }}"
           HEAD="${{ github.event.pull_request.head.sha }}"
-          python scripts/check_lane_scope.py --accept-any-lane --diff "${BASE}...${HEAD}"
+          if [ "${ALLOW_CROSS_LANE}" = "true" ]; then
+            python scripts/check_lane_scope.py \
+              --lane "${PR_LANE}" \
+              --diff "${BASE}...${HEAD}" \
+              --append-observability \
+              --allow-cross-lane
+          else
+            python scripts/check_lane_scope.py \
+              --lane "${PR_LANE}" \
+              --diff "${BASE}...${HEAD}" \
+              --append-observability
+          fi

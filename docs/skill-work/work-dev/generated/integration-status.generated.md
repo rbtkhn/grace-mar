@@ -14,7 +14,9 @@ Status vocabulary: `implemented`, `partial`, `documented_only`, `needs_verificat
 | `pipeline_export_audit` | Pipeline-level export audit (runtime_compat_export) | export | `implemented` |
 | `runtime_bundle_export` | Runtime bundle export for OpenClaw consumption | export | `implemented` |
 | `session_continuity_checklist` | Session continuity startup checklist | runtime_continuity | `implemented` |
-| `session_continuity_verification` | Session continuity read verification and receipts | runtime_continuity | `implemented` |
+| `session_continuity_event_logging` | Session continuity block / event logging (observability feed) | runtime_continuity | `partial` |
+| `session_continuity_read_log` | Session continuity read log (operator) | runtime_continuity | `implemented` |
+| `session_continuity_receipts` | Session continuity receipt enforcement (handback) | runtime_continuity | `implemented` |
 | `stage_only_handback` | Stage-only handback via openclaw_stage.py | handback | `implemented` |
 | `vps_caveat` | VPS caveat handling | ops | `documented_only` |
 
@@ -74,11 +76,23 @@ Status vocabulary: `implemented`, `partial`, `documented_only`, `needs_verificat
 - **Source of truth:** `docs/openclaw-integration.md`, `docs/skill-work/work-dev/README.md`
 - Human checklist before OpenClaw work.
 
-### `session_continuity_verification`
+### `session_continuity_event_logging`
+
+- **Status:** `partial`
+- **Source of truth:** `runtime/observability/continuity_blocks.jsonl`, `scripts/require_continuity_for_handback.py`, `tests/test_handback_requires_continuity.py`
+- Structured block events append when handback denies /stage; feed is local/gitignored unless exported.
+
+### `session_continuity_read_log`
 
 - **Status:** `implemented`
-- **Source of truth:** `scripts/continuity_read_log.py`, `scripts/continuity_preflight.py`, `scripts/verify_continuity_receipt.py`, `scripts/require_continuity_for_handback.py`, `scripts/handback_server.py`, `tests/test_continuity_read_log.py`, `tests/test_continuity_receipts.py`, `tests/test_handback_requires_continuity.py`
-- Preflight receipts required for OpenClaw /stage (428 without). JSONL append still operator-side.
+- **Source of truth:** `scripts/continuity_read_log.py`, `tests/test_continuity_read_log.py`
+- Human-readable read log; separate from receipt enforcement.
+
+### `session_continuity_receipts`
+
+- **Status:** `implemented`
+- **Source of truth:** `scripts/continuity_preflight.py`, `scripts/verify_continuity_receipt.py`, `scripts/require_continuity_for_handback.py`, `scripts/handback_server.py`, `tests/test_continuity_receipts.py`, `tests/test_handback_requires_continuity.py`
+- Fresh valid receipt required for OpenClaw /stage (428 without valid receipt).
 
 ### `stage_only_handback`
 
