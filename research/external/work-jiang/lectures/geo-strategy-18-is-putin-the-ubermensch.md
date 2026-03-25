@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#18** — YouTube title: "Geo-Strategy Update #6: Is Putin the Ubermensch?"  
-**Date (stated in session):** Israelis resuming air strikes; NATO resuming Ukraine arms; Trump 50-day ultimatum to Putin.  
+**Date (stated in session):** 18 July 2025
 **Topic:** **Putin hypothesis** — three self-defeating US policies (Ukraine offensive strategy, sanctions unifying Russian elite, Nord Stream); counterfactual game theory; Putin biography (grandfather Spiridon cook to Lenin/Stalin, mother baptized him); Stalin as messiah, Orthodox Church, third Rome; Paisios prophecy (Russia-Turkey war, Constantinople); Odessa as final NATO trap; Hegel/Nietzsche Ubermensch; collective unconscious; three predictions (Odessa, Russia-China fallout, Russia defends Iran).
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #6: Is Putin the Ubermensch?](https://www.youtube.com/watch?v=ZgvAHZqaawA) (`@PredictiveHistory`).  

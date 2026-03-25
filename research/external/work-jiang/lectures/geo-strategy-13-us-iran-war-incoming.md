@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord community (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#13** — first episode after #12 (END); YouTube title: "Geo-Strategy Update: US-Iran War Incoming"  
-**Date (stated in session):** War in Middle East "blowing up"; US bombing Iran imminent ("next couple of days")  
+**Date (stated in session):** 18 June 2025
 **Topic:** **US-Iran war analysis** — American regime-change strategy (decapitation, economic sabotage, sectarian violence); Iraq 2003 debaathification; bombs/propaganda/money; Iran's strategic advantages (geography, Persian identity, Iraqi lesson); Saudi/Hormuz/American-base vulnerabilities; three unknowns (Supreme Leader assassination, Putin's response, China); game theory as analytical model; Discord community announcement.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update: US-Iran War Incoming](https://www.youtube.com/watch?v=8XdL-7tAqnU) (`@PredictiveHistory`).  

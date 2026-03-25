@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students  
 **Series:** Civilization **#30**  
-**Date (YouTube upload):** TBD (fill from YouTube / metadata)  
+**Date (YouTube upload):** 2025-01-14
 **Topic:** TBD — one-paragraph summary after listen.
 
 **Source (canonical recording):** [Predictive History — Civilization #30: Dante as the Second Coming of Homer](https://www.youtube.com/watch?v=asbKjezwIJM) (`@PredictiveHistory`).  

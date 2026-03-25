@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#19** — YouTube title: "Geo-Strategy Update #7: When Eschatologies Converge"  
-**Date (stated in session):** Hybrid warfare (90% unseen); regime-change pressure on Iran; water shortage in Tehran.  
+**Date (stated in session):** 1 August 2025
 **Topic:** **Eschatology drives geopolitics** — six traditions (Zoroastrian, Judaic, Protestant Christian Zionist, Islamic, Orthodox, Catholic); Dugin, *Foundations of Geopolitics*; convergence points (Middle East conflict, America/China absent, antichrist, Dome of the Rock, tribulation); 10–20 year forecast (US retreat, Odessa siege, Turkey collapse, Byzantine restoration, Greater Israel, Mahdi, Putin as unifier); baby boomers and Western decline.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #7: When Eschatologies Converge](https://www.youtube.com/watch?v=YQ-xg1nIbMs) (`@PredictiveHistory`).  

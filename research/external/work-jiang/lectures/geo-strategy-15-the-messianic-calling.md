@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#15** — YouTube title: "Geo-Strategy Update #3: The Messianic Calling"  
-**Date (stated in session):** Ceasefire announced in Middle East; war still seen as inevitable.  
+**Date (stated in session):** 25 June 2025
 **Topic:** **Messianic calling as driver of war** — ceasefire as narrative shaping; Trump, Ayatollah, Netanyahu as messianic figures; three characteristics (divine energy, fearlessness/immortality, persecution complex); Ayatollah's mission (Zoroastrian/Shia eschatology, kill great Satan, free Muslim world); Trump's mission (destroy globalists, MAGA, American republic restoration); Netanyahu's mission (Kingdom of David restoration, Greater Israel); Christian Zionists and prophecy; Isaac Newton teaser for next video.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #3: The Messianic Calling](https://www.youtube.com/watch?v=bc9adtiIN_k) (`@PredictiveHistory`).  

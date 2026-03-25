@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#14** — YouTube title: "Geo-Strategy Update #2: WWIII Begins, Let's Game Theory"  
-**Date (stated in session):** Trump ordered bombing of three Iranian nuclear facilities "last night"; war begun.  
+**Date (stated in session):** 22 June 2025
 **Topic:** **Game-theory analysis of US-Iran war** — will US use ground troops? Iran's interests (national unity, trap Americans, global Muslim leadership); escalation ladder and escalation dominance; bully metaphor (calibrating attack to trap hegemon); Israel's divergent interests (Greater Israel, absorb CENTCOM); America vs. American Empire; Trump's game (destroy empire, third term); all three players want ground troops; eschatology teaser for next video.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #2: WWIII Begins, Let's Game Theory](https://www.youtube.com/watch?v=N4cs-8mrP_s) (`@PredictiveHistory`).  

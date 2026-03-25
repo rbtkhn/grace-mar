@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#16** — YouTube title: "Geo-Strategy Update #4: Newton's Divine Plan"  
-**Date (stated in session):** Ceasefire; things quiet; Iranian retaliation muted (empty bases in Qatar).  
+**Date (stated in session):** 28 June 2025
 **Topic:** **Christian Zionism and Isaac Newton** — Iranian muted response as strategy to infuriate population (Livy/Roman legion analogy); premillennial dispensationalism; three things that must happen (US ground invasion of Iran, Dome of the Rock destroyed, Jews return to Israel); Newton as theologian first (alchemy, Bible, occult); Newton's laws as ontological proof of God; secret societies, Knights Templar; master of Royal Mint, first British intelligence; Christian Zionism embedded in Anglo-American Empire; Orthodox Jews vs. Zionism; Muhammad as Jewish Messiah teaser.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #4: Newton's Divine Plan](https://www.youtube.com/watch?v=Kw-TiN6dEcM) (`@PredictiveHistory`).  

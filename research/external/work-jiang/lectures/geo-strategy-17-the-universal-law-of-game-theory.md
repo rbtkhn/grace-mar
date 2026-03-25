@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#17** — YouTube title: "Geo-Strategy Update #5: The Universal Law of Game Theory"  
-**Date (stated in session):** Netanyahu visiting Washington; escalation expected.  
+**Date (stated in session):** 11 July 2025
 **Topic:** **Universal law of game theory** — four factions (Christian Zionists, Zionists, global financial elite, American Empire); mountain metaphor; mass × energy × coordination (coordination weighted 3×, energy 2×); subconscious vs. conscious coordination; why conspiracies fail; individual games (energy only), team sports, nation-states (US, Germany, Japan, Israel); power of story (allegory of cave, crucifixion, second coming); 600 CE parallel (Byzantines, Sassanians, Muhammad as Jewish Messiah, Constitution of Medina); Putin/Ubermensch teaser.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #5: The Universal Law of Game Theory](https://www.youtube.com/watch?v=5I2VPYPJJ68) (`@PredictiveHistory`).  

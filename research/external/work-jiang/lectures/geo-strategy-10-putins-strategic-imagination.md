@@ -2,7 +2,7 @@
 
 **Speaker:** Jiang Xueqin  
 **Audience:** Chinese high school students (class session)  
-**Date (stated in session):** references **current** **events** **(tariffs,** **Gaza** **framing,** **etc.);** **upload** **2024-06-05**  
+**Date (stated in session):** 5 June 2024
 **Topic:** **Putin’s** **plan** **to** **“destroy** **the** **American** **Empire”** **via** **three** **kill** **conditions** **(overextension/hubris,** **debt/dollar,** **civil** **discord);** **Ukraine** **/** **Israel–Gaza** **/** **BRICS** **/** **Russia–China** **/** **Iran** **/** **North** **Korea** **predictions;** **3–4** **year** **forecast** **menu;** **extended** **Stalin** **/** **Barbarossa** **“game** **theory”** **reinterpretation;** **Lend-Lease** **stats;** **“Russian** **strategic** **imagination”** **(intuition,** **imagination,** **multiple** **personalities);** **British** **vs** **Russian** **mind** **(narrow/broad,** **empiricism/mysticism,** **logic/intuition);** **literature** **comparison;** **next** **class:** **American** **Civil** **War** **(per** **closing).**  
 **Source (canonical recording):** [Predictive History — Geo-Strategy #10: Putin's Strategic Imagination](https://www.youtube.com/watch?v=B_al2wgk49Y) (`@PredictiveHistory`).  
 **Transcript:** YouTube **auto-captions** **(en-orig** **json3)** **via** **yt-dlp,** **normalized** **to** **plain** **text;** **wording** **preserved** **as** **delivered.** **Contested** **historical** **claims** **(Stalin/Hitler,** **Oct** **7** **attribution,** **North** **Stream,** **poll** **statistics,** **Lend-Lease** **magnitudes)** **—** **verify** **before** **scholarly** **use**; **Gaza** **wording** **reflects** **lecture** **only.**

@@ -3,7 +3,7 @@
 **Speaker:** Jiang Xueqin  
 **Audience:** Discord / YouTube (post-Geo-Strategy #12; series resumed)  
 **Series:** **Geo-Strategy** **#20** — YouTube title: "Geo-Strategy Update #8: Why the West is Doomed"  
-**Date (stated in session):** Canadian society decline; immigration surge; personal narrative (1983 immigrant, Yale, father's story).  
+**Date (stated in session):** 8 August 2025
 **Topic:** **Baby boomers and Western collapse** — Canada as case study (three religions: environmentalism, multiculturalism, bureaucratism); three drivers (resource export, entrepreneurship, immigration); baby boomers (selfish, long-lived, wedded to empire); empire = old sacrifice young; rat utopia (Calhoun); elite overproduction; truth-telling as only response.
 
 **Source (canonical recording):** [Predictive History — Geo-Strategy Update #8: Why the West is Doomed](https://www.youtube.com/watch?v=E83dpuyvpiM) (`@PredictiveHistory`).  
