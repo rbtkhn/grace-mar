@@ -183,6 +183,73 @@ def test_normalize_secret_history_no_false_positives() -> None:
         assert n == 0
 
 
+def test_detect_series_secret_history() -> None:
+    from asr_light_clean import detect_series_from_basename
+
+    assert detect_series_from_basename("secret-history-21-roman.md") == "secret-history"
+    assert detect_series_from_basename("civilization-01-x.md") == "civilization"
+
+
+def test_normalize_secret_history_tier_roman_phrases() -> None:
+    """Secret-history tier applies Volume III Roman / Cannae / Polybius garbles."""
+    cases = [
+        ("after Brontage collapse", "after Bronze Age collapse"),
+        ("the battle of Kaine", "the battle of Cannae"),
+        ("Palibius okay Palibius", "Polybius okay Polybius"),
+        ("It's called a grain do.", "It's called a grain dole."),
+        ("Then you have Solo.", "Then you have Sulla."),
+    ]
+    for raw, expected in cases:
+        out, n = normalize_transcript_text(raw, series="secret-history")
+        assert expected in out, f"{raw!r} → expected substring {expected!r}, got {out!r}"
+        assert n >= 1, f"{raw!r} should trigger at least one replacement"
+
+
+def test_normalize_secret_history_tier_does_not_break_plain_english() -> None:
+    """Secret-history tier must not rewrite unrelated sentences."""
+    text = "The solo guitar piece was beautiful."
+    out, n = normalize_transcript_text(text, series="secret-history")
+    assert out == text
+    assert n == 0
+
+
+def test_merge_lecture_transcript_replaces_body_only(tmp_path: Path) -> None:
+    import subprocess
+
+    repo_root = Path(__file__).resolve().parents[1]
+    lec = tmp_path / "secret-history-99-merge-test.md"
+    lec.write_text(
+        textwrap.dedent(
+            f"""
+            # Title
+
+            **Topic:** filled
+
+            ---
+
+            {FULL_TRANSCRIPT_HEADING}
+
+            OLD BODY
+            """
+        ).strip()
+        + "\n",
+        encoding="utf-8",
+    )
+    frag = tmp_path / "frag.txt"
+    frag.write_text("NEW LINE ONE\nNEW LINE TWO", encoding="utf-8")
+
+    merge = repo_root / "scripts" / "work_jiang" / "merge_lecture_transcript.py"
+    subprocess.run(
+        [sys.executable, str(merge), str(lec), "-f", str(frag), "--write"],
+        cwd=str(repo_root),
+        check=True,
+    )
+    text = lec.read_text(encoding="utf-8")
+    assert "OLD BODY" not in text
+    assert "NEW LINE ONE" in text
+    assert "**Topic:** filled" in text
+
+
 def test_normalize_geo_does_not_apply_thieves_to_thebes(tmp_path: Path) -> None:
     """Geo uses common tier only — 'thieves' is not bulk-replaced."""
     p = tmp_path / "geo-strategy-99-test.md"

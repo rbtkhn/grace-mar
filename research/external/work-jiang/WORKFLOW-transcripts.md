@@ -107,6 +107,17 @@ If an episode needs **caption-faithful** excerpts in git without committing the 
    - Short **At a glance** before dumping full transcript  
    - **Tags** line for retrieval
 
+   **Large paste / multi-part transcript:** Replace only the `## Full transcript` body in an existing file by piping or listing fragments (no `_c1.txt` chunk files required in the repo):
+
+   ```bash
+   cat part1.txt part2.txt | python3 scripts/work_jiang/merge_lecture_transcript.py \
+     research/external/work-jiang/lectures/<slug>.md --write
+
+   python3 scripts/work_jiang/merge_lecture_transcript.py lectures/<slug>.md -f a.txt -f b.txt --write --normalize
+   ```
+
+   `merge_lecture_transcript.py` preserves front matter; `--normalize` runs `normalize_lecture_transcript_asr.py --write` after the merge.
+
 5. **ASR orthography pass (recommended)** — After pasting the full transcript under `## Full transcript`, run the normalizer so recurring mis-hearings (e.g. “Granicus”, “Memnon of Rhodes”, “Thebes” vs “thieves” on Civilization strands) are fixed without hand-editing every line:
    ```bash
    # from repo root; dry-run first (default) — reports substitution counts
@@ -116,7 +127,7 @@ If an episode needs **caption-faithful** excerpts in git without committing the 
    python3 scripts/work_jiang/normalize_lecture_transcript_asr.py \
      research/external/work-jiang/lectures/<slug>.md --write
    ```
-   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only (detected from filename). Override with `--series civilization|geo-strategy|none`.
+   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only; `secret-history-*.md` gets **common** + **Secret History** (Roman / Volume III phrases — see `SECRET_HISTORY_REPLACEMENTS` in `asr_transcript_replacements.py`). Detected from filename unless you override with `--series civilization|geo-strategy|secret-history|none`.
    - **Scope:** Only the markdown **below** `## Full transcript` is rewritten unless you pass `--whole-file` (avoid touching curated topic headers).
    - **Tables:** Edit `scripts/work_jiang/asr_transcript_replacements.py` when a new episode introduces a systematic ASR error; keep longest phrases first in each list (the script sorts by length, but order matters for identical prefixes).
    - **Not automatic truth:** This is a **readability** aid; spot-check names and add manual fixes for one-off errors.

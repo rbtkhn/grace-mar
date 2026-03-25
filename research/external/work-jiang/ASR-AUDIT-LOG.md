@@ -12,7 +12,7 @@
 4. [Findings log — Geo-Strategy](#4-findings-log-append-rows) — 177 rows, 20 episodes, 2026-03-24
    - [Highest-impact patterns](#highest-impact-patterns)
    - [Candidate recurring replacements](#candidate-recurring-replacements)
-5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–15 verbatim+audited; SH16–28 pending verbatim, 2026-03-24
+5. [Findings log — Secret History (Volume III)](#5-findings-log--secret-history-volume-iii) — row log SH01–04 (62 norm. subs); SH05–21 verbatim+audited; SH22–28 pending verbatim, 2026-03-24
    - [Secret History highest-impact patterns](#secret-history-highest-impact-patterns)
    - [Secret History candidate replacements](#secret-history-candidate-replacements)
    - [Secret History scope limitation](#secret-history-scope-limitation)
@@ -31,8 +31,8 @@
 
 **Passes complete:**
 - Geo-Strategy, depth B, 20 episodes (geo-strategy-01 through -20).
-- Secret History, depth B, **15** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -15): normalized where run, manually audited, pytest green.
-- Secret History **next:** **SH16–28** still have operator-written analytical outlines under `## Full transcript` (not caption-verbatim) until pasted. Raw YouTube `.txt` exists for all 28 — paste verbatim body when ready, then repeat: `normalize_lecture_transcript_asr.py <file> --write` → targeted audit → `StrReplace` → `pytest tests/test_normalize_lecture_transcript_asr.py -q`.
+- Secret History, depth B, **21** verbatim ASR-derived `## Full transcript` episodes (secret-history-01 through -21): normalized where run, manually audited, pytest green.
+- Secret History **next:** **SH22–28** still have operator-written analytical outlines under `## Full transcript` (not caption-verbatim) where not yet pasted. Raw YouTube `.txt` exists for all 28 — paste verbatim body when ready, then repeat: `normalize_lecture_transcript_asr.py <file> --write` → targeted audit → `StrReplace` → `pytest tests/test_normalize_lecture_transcript_asr.py -q`.
 
 ---
 
@@ -295,7 +295,19 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 **SH15 (2026-03-24):** Verbatim transcript in `secret-history-15-capital-and-the-bronze-age-collapse.md` (*Capital and the Bronze Age Collapse*); initial normalizer `--write` **3** common-tier substitutions; manual pass for Indus/Shang/Hittite/Mycenaean/Aegean/Uruk/Çatalhöyük/BMAC/Uluburun/Eric Cline *1177 B.C.*, proto-capitalism wording, altruism/utilitarianism, David Graeber, Atlantic/brain-scan block, Troy/Sea Peoples/Mesopotamia resilience, and Greek Dark Age → polis/Homer bridge; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer after audit: **0**; pytest green.
 
-**SH16–28:** `## Full transcript` is still the **analytical lecture-arc stub** until verbatim is pasted. **Next operator action:** replace stub with YouTube verbatim text → run normalizer `--write` → audit → extend `COMMON_REPLACEMENTS` only for safe patterns → pytest.
+**SH16 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-16-the-big-bang-of-greek-civilization.md` (*The Big Bang of Greek Civilization*); initial normalizer `--write` **2** common-tier substitutions (pre–manual pass); heavy in-file pass for Mycenaean/Aegean/polis/Linear B, alphabet/syllabary/ideogram, Trojan War cast (Agamemnon, Menelaus, Patroclus, Priam, Thetis, Odysseus), Fagles quotation blocks, Julian Jaynes / Kant / Hegel / Narby / Descartes, Anna Karenina / Tolstoy / Woolf, steppe/livestock comment block; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH17 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-17-literary-genesis.md` (*Literary Genesis*); normalizer dry-run **0** common-tier hits pre-audit; heavy in-file pass for Bronze Age / Levant / Aegean / Mycenaean / Canaan, Philistines, nomadic pastoralists, Sigmund Freud, Esau/Laban/Leah/Rachel, serpent/Eden diction, Sodom–Gomorrah negotiation quote, **Joab** vs ASR “Job,” Abner, Hebron, Rabbah, Bathsheba/Uriah/Hittite, Nathan parable, Tanakh/Torah structure, “hill people” vs “heal,” Uriah name cluster, cherubim/sword Eden exit; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only; “Job”→Joab too context-dense for blind automation). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH18 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-18-thus-spoke-zarathustra.md` (*Thus Spoke Zarathustra*); initial normalizer `--write` **9** common-tier substitutions (pre–manual pass); heavy in-file pass for Zoroastrianism / Zarathustra / Ahura Mazda / Asha–druj, Achaemenid, Kant categorical imperative, Avestan/Gathas, Rumi, Nietzsche / *Thus Spoke Zarathustra* long quotation block, Bronze Age/mines, choir/cave metaphors; transcript ends mid-sentence (“I’ll see you guys next”) as pasted; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only; Ahura Mazda vs “our master” context-sensitive). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH19 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-19-dawn-of-the-jews.md` (*Dawn of the Jews*); initial normalizer `--write` **2** common-tier substitutions (pre–manual pass); heavy in-file pass for Warring States / Qin vs ASR “Qing,” Uruk / Tigris–Euphrates, Lugalzagesi / Umma / Akkad / Sargon, Akkadian vs “Canadian,” Achaemenid vs “Academic,” Zoroastrianism cluster, Cyrus / Alexander / Artaxerxes, Ezra–Nehemiah / Zerubbabel / Babylonian royal names, Balfour / Rothschild, Yehud vs “Yahoo,” Levant homophones, divide-and-rule vs “divine rule,” biblical quote fixes (word of the Lord, freewill offerings, weeping), Sun Tzu attribution, *Der Judenstaat* / Theodor Herzl; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only; geopolitical thesis wording preserved). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH20 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-20-the-hellenistic-world.md` (*The Hellenistic World*); initial normalizer `--write` **11** common-tier substitutions (pre–manual pass); heavy in-file pass for Warring States / Qin / Zhao–Wei–Chu (avoid false “the way” → Wei), Uruk, Lugalzagesi, Akkad, hoplites / helots / polis, Thebes vs “thieves,” Peloponnesian War, Thermopylae / Salamis / Plataea, Themistocles, Herodotus, Mardonius / Pausanias quotes, Delian League / Parthenon, Thucydides / Pericles / Melian dialogue excerpt, Philip II / Chaeronea / phalanx, Alexander / Persepolis / Thebes / Siwa (Zeus-Ammon), Diadochi (Ptolemy / Seleucid), Plato vs Aristotle (telos, prime mover), Library of Alexandria / Mouseion / Septuagint, syncretism; careful repair where blind “the way” replacements broke sentences; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH21 (2026-03-24):** Verbatim operator-supplied transcript in `secret-history-21-roman-anti-civilization.md` (*Roman Anti-Civilization*); initial normalizer `--write` **4** common-tier substitutions (pre–manual pass); heavy in-file pass for Bronze Age / Etruscan / Magna Graecia, hoplites / legions / legionaries, Pyrrhus / Epirus / Italy sail, Punic Wars, Trebia / Trasimene / Cannae ASR variants (“canal,” “Kaine,” “canine”), Hannibal Barca, Polybius vs Livy (Augustus commissions Livy), optimates / populares, grain dole, Social War, Tiberius Gracchus, Marius / Sulla, Alesia / Gallic tribes, Caesar / Pompey / Pharsalus / Actium, Aeneas / Creusa, Romulus / Remus, rape of the Sabines, Lucretia / Collatinus / Tarquin / Brutus / Mucius Scaevola, *Aeneid* / Virgil block (Priam / Polites / Pyrrhus / Neoptolemus; Euripides *Trojan Women*), Q&A names; thesis wording and skepticism preserved; no new `COMMON_REPLACEMENTS` tuples (fixes in-file only). Dry-run normalizer after audit: **0**; pytest green.
+
+**SH22–28:** `## Full transcript` is still the **analytical lecture-arc stub** where not yet pasted. **Next operator action:** replace stub with YouTube verbatim text → run normalizer `--write` → audit → extend `COMMON_REPLACEMENTS` only for safe patterns → pytest.
 
 **Raw captions:** Available under `research/external/youtube-channels/predictive-history/transcripts/` for all 28 Secret History video IDs (verify with `check_asr_audit_preconditions.py --only-glob 'secret-history-*' -v`).
 
@@ -366,6 +378,35 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 | 2026-03-24 | secret-history-14 | ASR / PIE | "Yamaya" / "Indo-Uropean" / "Shunu" | Yamnaya / Indo-European / Xiongnu | Linguistics + frontier |
 | 2026-03-24 | secret-history-14 | Book / scholar | "Will and Language" / "Harvard" / "Morabon" | *Wheel, and Language* / Anthony / Männerbund | Anthony + kinship term |
 | 2026-03-24 | secret-history-14 | ASR / myth | "Ramlas" / "Third men" / storm. Got | Romulus / Trito / storm god | Roman + PIE myth |
+| 2026-03-24 | secret-history-16 | ASR / Greek | "Eggman" / "Minanian" / "AGNC" / "polus" | Agamemnon / Mycenaean / Aegean / polis | High-frequency name garbles |
+| 2026-03-24 | secret-history-16 | ASR / epic | "Petroles" / "Prime" / "Pry" / "Fetus" | Patroclus / Priam / Priam / Thetis | Iliad cast |
+| 2026-03-24 | secret-history-16 | ASR / scholar | "Julian James" / "bicchimeal" / "Jurian Narby" | Julian Jaynes / bicameral / Jeremy Narby | Consciousness block |
+| 2026-03-24 | secret-history-16 | ASR / novelists | "Anakarina" / "Toy Stoy" / "Virginia Wolf" | Anna Karenina / Tolstoy / Woolf | Modern lit coda |
+| 2026-03-24 | secret-history-17 | ASR / proper | "Simon Freud" / "Leavant" / "Canine" / "Minian" | Sigmund Freud / Levant / Canaan / Mycenaean | Geography + figures |
+| 2026-03-24 | secret-history-17 | ASR / biblical | "Job" (David’s general) / "Amnner" / "Bash Sheba" / "Uria" | Joab / Abner / Bathsheba / Uriah | David narrative cluster |
+| 2026-03-24 | secret-history-17 | ASR / phrase | "roasted from the couch" / "reverenc the Ammonites" | rose from the couch / advanced against the Ammonites | Bathsheba scene |
+| 2026-03-24 | secret-history-18 | ASR / religion | "Zorashinism" / "Persian Aid" / "montheism" | Zoroastrianism / Achaemenid / monotheism | Core terms |
+| 2026-03-24 | secret-history-18 | ASR / names | "Roomie" / "Nichi" / "Zorusta" | Rumi / Nietzsche / Zarathustra | High-frequency garbles |
+| 2026-03-24 | secret-history-18 | ASR / philosophy | "noose" / "monatic" / "category imperative" | nous / monad is / categorical imperative | Cosmology + Kant |
+| 2026-03-24 | secret-history-19 | ASR / China | "theQing" / "waring states" / "Qin empire" | Qin / warring states / Qin | Map period; systematic ASR |
+| 2026-03-24 | secret-history-19 | ASR / Mesopotamia | "Uric" / "Canadian Empire" / "Luga Luga Zagazi" | Uruk / Akkadian Empire / Lugalzagesi | Geography + empire names |
+| 2026-03-24 | secret-history-19 | ASR / Persia | "Persian Academic" / "Zoroastronism" / "Syus" / "Action the Great" | Achaemenid / Zoroastrianism / Cyrus / Alexander | High-frequency |
+| 2026-03-24 | secret-history-19 | ASR / Bible–politics | "Balfford" / "Rothst" / "province of Yahoo" | Balfour / Rothschild / Yehud | Modern parallel + province |
+| 2026-03-24 | secret-history-19 | Phrase / grammar | "divine rule" (imperial strategy) | divide-and-rule | Homophone in lecture argument |
+| 2026-03-24 | secret-history-19 | ASR / misc | "right atmosphere" / "esquetological" / "nation stones" | right hemisphere / eschatological / nation states | Q&A + method terms |
+| 2026-03-24 | secret-history-20 | ASR / China | "theQing" / "waring" / "jou way chew" | Qin / warring / Zhao, Wei, Chu | Systematic; watch "the way" → Wei false positives |
+| 2026-03-24 | secret-history-20 | ASR / Greece | "thieves" / "Pelpedian" / "Fezicles" | Thebes / Peloponnesian / Themistocles | High-frequency |
+| 2026-03-24 | secret-history-20 | ASR / battles | "Ferupi" / "Salamus" / "Palia" | Thermopylae / Salamis / Plataea | Persian Wars cluster |
+| 2026-03-24 | secret-history-20 | ASR / names | "fusidities" / "Parthonon" / "Sherania" | Thucydides / Parthenon / Chaeronea | Empire + war narrative |
+| 2026-03-24 | secret-history-20 | ASR / philosophy | "tilos" / "Decart" / "empiricis" | telos / Descartes / empiricism | Plato–Aristotle block |
+| 2026-03-24 | secret-history-20 | ASR / Hellenistic | "Henistic" / "Septuagent" / "Tommy" (Ptolemy) | Hellenistic / Septuagint / Ptolemy | Successor + library |
+| 2026-03-24 | secret-history-21 | ASR / Rome | "Brontage" / "truskin" / "Atrusian" / "marinian" | Bronze Age / Etruscan / Etruscan / Magna Graecia | Opening geography |
+| 2026-03-24 | secret-history-21 | ASR / battles | "Trivia" / "Tresamine" / "Kaine" / "canal" / "canine" | Trebia / Trasimene / Cannae / Cannae / Cannae | Hannibal campaign cluster |
+| 2026-03-24 | secret-history-21 | ASR / names | "Palibius" / "Palibus" / "Libby" (historian) | Polybius / Polybius / Livy | Greek vs Roman lens; commission |
+| 2026-03-24 | secret-history-21 | ASR / civil war | "Solo" / "Solah" / "Farcus" / "farceless" / "Ottomates" / "Pompei" | Sulla / Sulla / Pharsalus / Pharsalus / optimates / Pompey | Late Republic |
+| 2026-03-24 | secret-history-21 | ASR / Gaul | "Alicia" / "gic tribes" | Alesia / Gallic | Caesar campaign |
+| 2026-03-24 | secret-history-21 | ASR / myth | "Inas" / "Kisha" / "Lucricia" / "Kentinius" / "Buddhist" (Brutus) | Aeneas / Creusa / Lucretia / Collatinus / Brutus | Foundation myths |
+| 2026-03-24 | secret-history-21 | ASR / *Aeneid* | "Prime" / "Pry" / "Iniad" | Priam / Priam / Aeneid | Virgil quotation block |
 
 ### Secret History highest-impact patterns
 
@@ -377,7 +418,7 @@ Terms that recur across 3+ episodes and are candidates for `asr_transcript_repla
 
 ### Secret History candidate replacements
 
-SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). SH14: in-file only (no new tuples; “steps”→steppes not automated). SH15: in-file only (no new tuples). All common tier; no secret-history-specific tier.
+SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `COMMON_REPLACEMENTS` tuples (vine/divine phrases, Petzinger, Van Gogh, Micronesia, Darwin phrases). SH12: +11 tuples. SH13: in-file only (no new tuples). SH14: in-file only (no new tuples; “steps”→steppes not automated). SH15: in-file only (no new tuples). SH16: in-file only (no new tuples; Greek epic name density too high for blind automation). SH17: in-file only (no new tuples; “Job”→Joab and Uriah clusters too context-sensitive for blind automation). SH18: in-file only (no new tuples; Ahura Mazda / Zarathustra string density too high for blind automation). SH19: in-file only (no new tuples; Qin/Qing and Levant/Biblical proper-name density too high for blind automation). SH20: in-file only (no new tuples; “the way” vs Wei / Thebes vs thieves too context-sensitive for blind automation). SH21: in-file only (no new tuples; Cannae/historian-name homophones and Livy quotation density too high for blind automation). All common tier; no secret-history-specific tier.
 
 **Not automated (too risky for string replacement):**
 
@@ -392,7 +433,7 @@ SH01–04: 62 automated substitutions via 53 entries (2026-03-24). SH11: +12 `CO
 
 ### Secret History scope limitation
 
-**SH16–SH28:** `## Full transcript` sections still contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text — until pasted. When each file is replaced with pasted caption text, re-run the pipeline (normalizer → manual audit → replacements → pytest).
+**SH22–SH28:** Where not yet pasted, `## Full transcript` sections may still contain operator-written **lecture-arc analytical summaries** (structured outlines, bullet-point core claims) — not verbatim ASR-derived text — until pasted. When each file is replaced with pasted caption text, re-run the pipeline (normalizer → manual audit → replacements → pytest).
 
 ---
 
