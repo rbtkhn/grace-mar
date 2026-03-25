@@ -1,8 +1,8 @@
-# Interviews #6: Tucker Carlson — Iran War, Energy, and Global Order
+# Interviews #7: Tucker Carlson — Iran War, Energy, and Global Order
 
 **Speaker:** Jiang Xueqin (guest); Tucker Carlson (host)  
 **Audience:** Tucker Carlson show (long-form interview)  
-**Series:** Predictive History · Volume VI — Interviews **#6**  
+**Series:** Predictive History · Volume VI — Interviews **#7**  
 **Date (YouTube upload):** 2026-03-20  
 **Title (YouTube):** Political Prophet Predicts the Next Phase in Iran, Trump’s War Plan, & Israel’s Plot to Sabotage It  
 **Topic:** Iran war trajectory, energy and GCC, East Asia, eschatology, Western civilization.

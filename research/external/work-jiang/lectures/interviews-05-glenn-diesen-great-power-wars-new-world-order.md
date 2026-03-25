@@ -1,8 +1,8 @@
-# Interviews #4: Glenn Diesen — Great Power Wars Over a New World Order
+# Interviews #5: Glenn Diesen — Great Power Wars Over a New World Order
 
 **Speaker:** Jiang Xueqin (guest); Glenn Diesen (host)  
 **Audience:** Long-form interview (public channel)  
-**Series:** Predictive History · Volume VI — Interviews **#4**  
+**Series:** Predictive History · Volume VI — Interviews **#5**  
 **Date (YouTube upload):** 2026-01-26  
 **Topic:** US empire, BRICS and middle powers, Trump and NATO, meritocracy and elite failure, East Asia, Iran, Canada and sovereignty.
 

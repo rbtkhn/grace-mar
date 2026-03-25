@@ -1998,12 +1998,13 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-03
-  video_id: uHIdRgFypNo
-  title: 'Interviews #3: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China'
-  canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
-  publication_date: 2026-01-22
-  lecture_path: lectures/interviews-03-dimitri-lascaris-trump-iran-davos-canada-china.md
-  analysis_path: analysis/uHIdRgFypNo-interviews-03-analysis.md
+  video_id: H5lCJ0D4DpY
+  title: 'Interviews #3: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire
+    Collapse'
+  canonical_url: https://www.youtube.com/watch?v=H5lCJ0D4DpY
+  publication_date: 2026-01-18
+  lecture_path: lectures/interviews-03-danny-haiphong-predictions-2026-trump-iran-empire-collapse.md
+  analysis_path: analysis/H5lCJ0D4DpY-interviews-03-analysis.md
   series: interviews
   episode: 3
   themes: []
@@ -2013,12 +2014,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-04
-  video_id: 80jUKe0blAQ
-  title: 'Interviews #4: Glenn Diesen — Great Power Wars Over a New World Order'
-  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
-  publication_date: 2026-01-26
-  lecture_path: lectures/interviews-04-glenn-diesen-great-power-wars-new-world-order.md
-  analysis_path: analysis/80jUKe0blAQ-interviews-04-analysis.md
+  video_id: uHIdRgFypNo
+  title: 'Interviews #4: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China'
+  canonical_url: https://www.youtube.com/watch?v=uHIdRgFypNo
+  publication_date: 2026-01-22
+  lecture_path: lectures/interviews-04-dimitri-lascaris-trump-iran-davos-canada-china.md
+  analysis_path: analysis/uHIdRgFypNo-interviews-04-analysis.md
   series: interviews
   episode: 4
   themes: []
@@ -2028,12 +2029,12 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-05
-  video_id: JyHoh97yhWU
-  title: 'Interviews #5: Nima — Is This WW3? The Greater Israel Project'
-  canonical_url: https://www.youtube.com/watch?v=JyHoh97yhWU
-  publication_date: 2026-03-08
-  lecture_path: lectures/interviews-05-nima-is-this-ww3-greater-israel-project.md
-  analysis_path: analysis/JyHoh97yhWU-interviews-05-analysis.md
+  video_id: 80jUKe0blAQ
+  title: 'Interviews #5: Glenn Diesen — Great Power Wars Over a New World Order'
+  canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
+  publication_date: 2026-01-26
+  lecture_path: lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md
+  analysis_path: analysis/80jUKe0blAQ-interviews-05-analysis.md
   series: interviews
   episode: 5
   themes: []
@@ -2043,14 +2044,29 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-06
-  video_id: 2K2nQsTTjQE
-  title: 'Interviews #6: Tucker Carlson — Iran War, Energy, and Global Order'
-  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
-  publication_date: 2026-03-20
-  lecture_path: lectures/interviews-06-tucker-carlson-iran-war-and-global-order.md
-  analysis_path: analysis/2K2nQsTTjQE-interviews-06-analysis.md
+  video_id: JyHoh97yhWU
+  title: 'Interviews #6: Nima — Is This WW3? The Greater Israel Project'
+  canonical_url: https://www.youtube.com/watch?v=JyHoh97yhWU
+  publication_date: 2026-03-08
+  lecture_path: lectures/interviews-06-nima-is-this-ww3-greater-israel-project.md
+  analysis_path: analysis/JyHoh97yhWU-interviews-06-analysis.md
   series: interviews
   episode: 6
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: vi-07
+  video_id: 2K2nQsTTjQE
+  title: 'Interviews #7: Tucker Carlson — Iran War, Energy, and Global Order'
+  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
+  publication_date: 2026-03-20
+  lecture_path: lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md
+  analysis_path: analysis/2K2nQsTTjQE-interviews-07-analysis.md
+  series: interviews
+  episode: 7
   themes: []
   status:
     transcript: complete

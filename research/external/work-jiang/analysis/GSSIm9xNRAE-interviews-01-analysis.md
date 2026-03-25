@@ -66,7 +66,8 @@ Long-form **civilizational** **interview**: **three** **factors** (**energy**, *
 ## Cross-refs
 
 - [Interviews #2 — Predictions 2026](ORyCS0r2Tpg-interviews-02-analysis.md) — **forward** **macro** **/** **US–China** **(Jan** **2026)**.
-- [Interviews #4 — Great Power Wars](80jUKe0blAQ-interviews-04-analysis.md) — **same** **host** **;** **empire** **/** **NATO** **/** **elite** **themes**.
+- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **WWIII** **frame** **/** **empire** **collapse** **(Jan** **2026)**.
+- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **same** **host** **cluster** **as** **Glenn** **Diesen** **;** **empire** **/** **NATO** **/** **elite** **themes**.
 - [lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md](../lectures/interviews-01-glenn-diesen-west-civilizational-collapse.md)
 
 ## Follow-ups

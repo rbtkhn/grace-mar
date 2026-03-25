@@ -64,8 +64,9 @@ Forward-looking **2026** **interview**: **US–China** **April** **summit** as *
 ## Cross-refs
 
 - [Interviews #1 — West’s Civilizational Collapse](GSSIm9xNRAE-interviews-01-analysis.md) — **same** **host** **/** **civilizational** **decline** **frame** **(Nov** **2025)**.
-- [Interviews #3 — Dimitri Lascaris](uHIdRgFypNo-interviews-03-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
-- [Interviews #4 — Great Power Wars](80jUKe0blAQ-interviews-04-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
+- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **2026** **flashpoint** **/** **NSS** **(Jan** **18)**.
+- [Interviews #4 — Dimitri Lascaris](uHIdRgFypNo-interviews-04-analysis.md) — **Iran** **/** **Hormuz** **/** **Carney** **Davos** **(Jan** **22)**.
+- [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) (Glenn Diesen) — **Carney**, **NATO**, **Trump** **themes** **carry** **forward**.
 - [lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md](../lectures/interviews-02-glenn-diesen-predictions-2026-empire-rivalry-collapse.md)
 
 ## Follow-ups

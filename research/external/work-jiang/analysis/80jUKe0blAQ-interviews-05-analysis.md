@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-04
+analysis_id: vi-05
 video_id: 80jUKe0blAQ
-source_id: vi-04
+source_id: vi-05
 canonical_url: https://www.youtube.com/watch?v=80jUKe0blAQ
 series: interviews
-episode: 4
+episode: 5
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #4: Glenn Diesen — Great Power Wars Over a New World Order
+# Analysis — Interviews #5: Glenn Diesen — Great Power Wars Over a New World Order
 
 - **video_id:** `80jUKe0blAQ`
 - **canonical_url:** https://www.youtube.com/watch?v=80jUKe0blAQ
-- **series / episode:** Predictive History · Volume VI — Interviews #4
-- **raw_transcript:** [lectures/interviews-04-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-04-glenn-diesen-great-power-wars-new-world-order.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #5
+- **raw_transcript:** [lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md)
 - **analyzed_at:** 2026-03-25 (operator)
 
 ## Thesis / aim
@@ -61,10 +61,11 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 
 ## Cross-refs
 
-- [Interviews #3 — Dimitri Lascaris](uHIdRgFypNo-interviews-03-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
-- [Interviews #5 — Nima](JyHoh97yhWU-interviews-05-analysis.md) — **WWIII** **/** **Greater** **Israel** **/** **GCC** **(Mar** **8)**.
-- [Interviews #6 — Tucker Carlson](2K2nQsTTjQE-interviews-06-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** (later chronologically).
-- [lectures/interviews-04-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-04-glenn-diesen-great-power-wars-new-world-order.md)
+- [Interviews #3 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-03-analysis.md) — **Iran** **pause** **/** **NSS** **read** **(Jan** **18)**.
+- [Interviews #4 — Dimitri Lascaris](uHIdRgFypNo-interviews-04-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
+- [Interviews #6 — Nima](JyHoh97yhWU-interviews-06-analysis.md) — **WWIII** **/** **Greater** **Israel** **/** **GCC** **(Mar** **8)**.
+- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** (later chronologically).
+- [lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md](../lectures/interviews-05-glenn-diesen-great-power-wars-new-world-order.md)
 
 ## Follow-ups
 
