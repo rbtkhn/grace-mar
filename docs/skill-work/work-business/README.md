@@ -1,6 +1,6 @@
 # work-business
 
-**Objective:** Business and market research — deep dives on companies, technologies, and commercial/competitive landscape. Supports operator strategy, partnership evaluation, and positioning. **WORK only**; not Record truth. Any merge to Record (e.g. capability notes) goes through RECURSION-GATE + companion approval.
+**Objective:** Business and market research — deep dives on companies, technologies, and commercial/competitive landscape; plus **Grace Gems** (Etsy) operator docs under [grace-gems](grace-gems/). Supports operator strategy, partnership evaluation, and positioning. **WORK only**; not Record truth. Any merge to Record (e.g. capability notes) goes through RECURSION-GATE + companion approval.
 
 ---
 
@@ -21,12 +21,14 @@
 | Doc / file | Purpose |
 |------------|---------|
 | **This README** | Territory scope, purpose, boundaries. |
+| **[grace-gems/](grace-gems/)** | **Grace Gems** (Etsy) — shop context, roadmap, agent-encoding, message-assist calibration, market research, workflow reminders. Canonical operator entry: [grace-gems/README.md](grace-gems/README.md). |
 | **[worldland-decentralized-ai-mainnet-2026-03.md](worldland-decentralized-ai-mainnet-2026-03.md)** | Deep research: WorldLand / LiberVance — Decentralized Cloud Native AI Mainnet (MANify, ECCVCC, GIST pilot, triangulation + synthesis). March 2026. |
 
 ---
 
 ## Cross-references
 
+- [work-grace-gems](work-grace-gems/README.md) — Legacy path; redirects to **grace-gems** above.
 - [work-strategy](work-strategy/) — Shared daily horizon, pipeline (current-events-analysis, persuasive-content-pipeline), [common-inputs](work-strategy/common-inputs.md).
 - [work-dev](work-dev/) — OpenClaw, identity export, handback; potential integration with business research outputs.
 - [AGENTS.md](../../../AGENTS.md) — Knowledge boundary, gated pipeline, no direct Record writes.

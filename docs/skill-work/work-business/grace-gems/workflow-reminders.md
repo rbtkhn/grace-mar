@@ -1,4 +1,4 @@
-# Work-grace-gems — Workflow reminders
+# Grace Gems — Workflow reminders
 
 Recurring tasks for Grace Gems LLC. Operator-led; no automation. Use your own calendar or reminder system to trigger each cycle.
 

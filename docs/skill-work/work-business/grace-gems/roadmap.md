@@ -1,4 +1,4 @@
-# Skill-work-grace-gems — Roadmap
+# Grace Gems — Roadmap
 
 **Status:** Phase 0 (Record context). Phases 1–3 are aspirational; implementation aligns with AGENTS rules (gated pipeline, knowledge boundary, companion sovereignty).
 

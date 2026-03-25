@@ -36,8 +36,8 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-companion-self/README.md
   - docs/skill-work/work-companion-self/roadmap.md
   - docs/skill-work/work-curate-library/README.md
-  - docs/skill-work/work-grace-gems/README.md
-  - docs/skill-work/work-grace-gems/roadmap.md
+  - docs/skill-work/work-business/grace-gems/README.md
+  - docs/skill-work/work-business/grace-gems/roadmap.md
   - docs/skill-work/work-health-fitness/README.md
   - docs/skill-work/work-health-fitness/roadmap.md
   - docs/skill-work/work-human-teacher/README.md

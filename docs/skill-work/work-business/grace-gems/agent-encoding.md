@@ -133,7 +133,7 @@ Apply when drafting messages, listing copy, or FAQ responses. Agent uses these; 
 
 ### Context assembly for message-assist
 
-1. **Load** — agent-encoding.md (meta-rules, glossary, tone guidelines), skill-work README (policies), [message-assist-calibration.md](message-assist-calibration.md) if present.
+1. **Load** — agent-encoding.md (meta-rules, glossary, tone guidelines), Grace Gems README in work-business/grace-gems (policies), [message-assist-calibration.md](message-assist-calibration.md) if present.
 2. **Include** — Provenance table if message mentions a stone; care-by-stone (Phase 2) if message asks about care.
 3. **Exclude** — Anything not documented in Record. No LLM inference.
 4. **Output** — Draft reply only; no preamble. Human copies and sends.
