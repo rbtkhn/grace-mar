@@ -8,6 +8,11 @@ version: 1
 integration_name: ""
 evaluated_at: "" # optional ISO-8601 date
 
+# Which workload shape this integration matches (optional; leave blank if unknown).
+# coding_harness = IC/project tools + human judgment; dark_factory = spec→eval, minimal human mid-flight;
+# auto_research = optimize a metric; workflow_orchestration = multi-role handoffs at scale.
+agent_species: "" # coding_harness | dark_factory | auto_research | workflow_orchestration
+
 # Axis 1 — Where compute and primary data live (privacy, security surface, ops burden)
 runtime:
   placement: "" # local | cloud | hybrid

@@ -47,8 +47,8 @@ Use this file when you want one place to understand:
 | `session-continuity-contract.md` | Explicit continuity steps vs implicit memory (files, scripts, CI) |
 | `safety-story-ux.md` | Visible pipeline state as user-facing safety story (pending/approved, receipts, staged vs merged) |
 | `external-signals.md` | Transcript/keynote-class discourse → work-dev lens (OpenClaw, trust, inference); pairs with work-strategy `external-tech-scan.md` |
-| `agentic-environment-principles.md` | Environment-first debugging: policy + continuity + gate + observability before prompt; canonical files before clever retrieval; “boring” high-leverage work |
-| `agent-surface-template.yaml` | Structured checklist: runtime / orchestration / interface + Grace-Mar trust; `scripts/work_dev/agent_surface_checklist.py` |
+| `agentic-environment-principles.md` | Environment-first debugging; §5 **a/b/c** (residency + roles, bounded runtime, pipeline vs local memory) |
+| `agent-surface-template.yaml` | Structured checklist: runtime / orchestration / interface + Grace-Mar trust; optional `agent_species`; `scripts/work_dev/agent_surface_checklist.py` |
 | `engagement-model.md` | Commercial packaging and sequencing |
 | `delivery-playbook.md` | Service delivery phases |
 | `claude-code-wat-crosswalk.md` | WAT / agentic IDE ↔ delivery, reliability, handover |

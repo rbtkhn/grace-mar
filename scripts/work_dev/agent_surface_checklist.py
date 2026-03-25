@@ -33,6 +33,16 @@ REQUIRED_GRACE = (
     "continuity_contract",
 )
 
+# Four-species taxonomy (production agent patterns); optional field in YAML.
+ALLOWED_AGENT_SPECIES = frozenset(
+    {
+        "coding_harness",
+        "dark_factory",
+        "auto_research",
+        "workflow_orchestration",
+    }
+)
+
 
 def validate_doc(data: dict) -> list[str]:
     errors: list[str] = []
@@ -46,6 +56,15 @@ def validate_doc(data: dict) -> list[str]:
                 errors.append(f"missing grace_mar.{key}")
     elif "grace_mar" in data:
         errors.append("grace_mar must be a mapping")
+
+    raw = data.get("agent_species")
+    if raw is not None and str(raw).strip():
+        s = str(raw).strip()
+        if s not in ALLOWED_AGENT_SPECIES:
+            errors.append(
+                "agent_species must be one of "
+                f"{sorted(ALLOWED_AGENT_SPECIES)} or empty, got {s!r}"
+            )
     return errors
 
 
