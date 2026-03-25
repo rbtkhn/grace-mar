@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-07
+analysis_id: vi-08
 video_id: 2K2nQsTTjQE
-source_id: vi-07
+source_id: vi-08
 canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
 series: interviews
-episode: 7
+episode: 8
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #6: Tucker Carlson — Iran War and Global Order
+# Analysis — Interviews #8: Tucker Carlson — Iran War and Global Order
 
 - **video_id:** `2K2nQsTTjQE`
 - **canonical_url:** https://www.youtube.com/watch?v=2K2nQsTTjQE
-- **series / episode:** Predictive History · Volume VI — Interviews #6
-- **raw_transcript:** [lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #8
+- **raw_transcript:** [lectures/interviews-08-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-08-tucker-carlson-iran-war-and-global-order.md)
 - **upload_date (YouTube):** 20260320
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -62,7 +62,7 @@ The interview extends **Predictive History** themes into **long-form Q&A**: the 
 ## Cross-refs
 
 - Geo-Strategy / Game Theory lectures on **Iran**, **GCC**, **dollar** — map as needed when **book** **lane** **assigns** **vi-** chapters.
-- [lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md)
+- [lectures/interviews-08-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-08-tucker-carlson-iran-war-and-global-order.md)
 
 ## Follow-ups
 

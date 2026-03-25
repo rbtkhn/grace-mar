@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-06
+analysis_id: vi-07
 video_id: JyHoh97yhWU
-source_id: vi-06
+source_id: vi-07
 canonical_url: https://www.youtube.com/watch?v=JyHoh97yhWU
 series: interviews
-episode: 6
+episode: 7
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #6: Nima — Is This WW3? The Greater Israel Project
+# Analysis — Interviews #7: Nima — Is This WW3? The Greater Israel Project
 
 - **video_id:** `JyHoh97yhWU`
 - **canonical_url:** https://www.youtube.com/watch?v=JyHoh97yhWU
-- **series / episode:** Predictive History · Volume VI — Interviews #6
-- **raw_transcript:** [lectures/interviews-06-nima-is-this-ww3-greater-israel-project.md](../lectures/interviews-06-nima-is-this-ww3-greater-israel-project.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #7
+- **raw_transcript:** [lectures/interviews-07-nima-is-this-ww3-greater-israel-project.md](../lectures/interviews-07-nima-is-this-ww3-greater-israel-project.md)
 - **upload_date (YouTube):** 20260308
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -60,9 +60,10 @@ Host **Nima** **interview** **on** **Iran–US** **war** **as** **already** **WW
 
 ## Cross-refs
 
+- [Interviews #6 — Nima — Iran war watershed](0rIgZD-tk3s-interviews-06-analysis.md) — **same** **host** **/** **Dialogue** **Works** **(Mar** **7)** **;** **overlapping** **themes** **(Hormuz,** **Greater** **Israel,** **12-day** **war)**.
 - [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-05-analysis.md) — **Carney** **/** **NATO** **(Jan** **26)** **same** **month** **cluster** **as** **lead-up**.
-- [Interviews #7 — Tucker Carlson](2K2nQsTTjQE-interviews-07-analysis.md) — **Greater** **Israel** **/** **GCC** **/** **Tucker** **rumor** **threads** **(Mar** **20)**.
-- [lectures/interviews-06-nima-is-this-ww3-greater-israel-project.md](../lectures/interviews-06-nima-is-this-ww3-greater-israel-project.md)
+- [Interviews #8 — Tucker Carlson](2K2nQsTTjQE-interviews-08-analysis.md) — **Greater** **Israel** **/** **GCC** **/** **Tucker** **rumor** **threads** **(Mar** **20)**.
+- [lectures/interviews-07-nima-is-this-ww3-greater-israel-project.md](../lectures/interviews-07-nima-is-this-ww3-greater-israel-project.md)
 
 ## Follow-ups
 

@@ -2044,12 +2044,13 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-06
-  video_id: JyHoh97yhWU
-  title: 'Interviews #6: Nima — Is This WW3? The Greater Israel Project'
-  canonical_url: https://www.youtube.com/watch?v=JyHoh97yhWU
-  publication_date: 2026-03-08
-  lecture_path: lectures/interviews-06-nima-is-this-ww3-greater-israel-project.md
-  analysis_path: analysis/JyHoh97yhWU-interviews-06-analysis.md
+  video_id: 0rIgZD-tk3s
+  title: 'Interviews #6: Nima (Dialogue Works) — The Iran War: The Watershed Moment
+    That Changed the Middle East Forever'
+  canonical_url: https://www.youtube.com/watch?v=0rIgZD-tk3s
+  publication_date: 2026-03-07
+  lecture_path: lectures/interviews-06-nima-iran-war-watershed-middle-east-forever.md
+  analysis_path: analysis/0rIgZD-tk3s-interviews-06-analysis.md
   series: interviews
   episode: 6
   themes: []
@@ -2059,14 +2060,29 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-07
-  video_id: 2K2nQsTTjQE
-  title: 'Interviews #7: Tucker Carlson — Iran War, Energy, and Global Order'
-  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
-  publication_date: 2026-03-20
-  lecture_path: lectures/interviews-07-tucker-carlson-iran-war-and-global-order.md
-  analysis_path: analysis/2K2nQsTTjQE-interviews-07-analysis.md
+  video_id: JyHoh97yhWU
+  title: 'Interviews #7: Nima — Is This WW3? The Greater Israel Project'
+  canonical_url: https://www.youtube.com/watch?v=JyHoh97yhWU
+  publication_date: 2026-03-08
+  lecture_path: lectures/interviews-07-nima-is-this-ww3-greater-israel-project.md
+  analysis_path: analysis/JyHoh97yhWU-interviews-07-analysis.md
   series: interviews
   episode: 7
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: vi-08
+  video_id: 2K2nQsTTjQE
+  title: 'Interviews #8: Tucker Carlson — Iran War, Energy, and Global Order'
+  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
+  publication_date: 2026-03-20
+  lecture_path: lectures/interviews-08-tucker-carlson-iran-war-and-global-order.md
+  analysis_path: analysis/2K2nQsTTjQE-interviews-08-analysis.md
+  series: interviews
+  episode: 8
   themes: []
   status:
     transcript: complete
