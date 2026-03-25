@@ -17,7 +17,7 @@ quality_level: draft
 - **video_id:** `EBWTRvjZ1dw`
 - **canonical_url:** https://www.youtube.com/watch?v=EBWTRvjZ1dw
 - **series / episode:** Predictive History · Great Books #7
-- **raw_transcript:** caption pull → [lectures/great-books-07-the-anti-homer.md](../lectures/great-books-07-the-anti-homer.md)
+- **raw_transcript:** operator YouTube capture → [lectures/great-books-07-the-anti-homer.md](../lectures/great-books-07-the-anti-homer.md)
 
 ## Placeholder
 
