@@ -326,6 +326,25 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("utarian", "utilitarian"),
     # soulless (SH07)
     ("soless", "soulless"),
+    # Franz Kafka (SH08)
+    ("France Kafka", "Franz Kafka"),
+    # Hannah Arendt (SH08) — ASR garbles + gender swap
+    ("Henry Rant is a", "Hannah Arendt is a"),
+    ("Hannah Rant", "Hannah Arendt"),
+    # quiet quitting (SH08) — "quite" is real-word collision but phrase is unambiguous
+    ("quite quitting", "quiet quitting"),
+    # totalitarianism (SH08)
+    ("totitarianism", "totalitarianism"),
+    # consumerist (SH08)
+    ("consumerous", "consumerist"),
+    # high modernist ideology — James C. Scott (SH08)
+    ("high marers ideology", "high modernist ideology"),
+    # Peter Turchin (SH02) — ASR garbles
+    ("Peter Church", "Peter Turchin"),
+    # Tang dynasty (SH02)
+    ("the Ting dynasty", "the Tang dynasty"),
+    # Axel Rudakubana (SH03) — Southport attacker
+    ("Axel Ruda Kubana", "Axel Rudakubana"),
     # Generic ASR glitches (SH01–04)
     ("moratorum", "moratorium"),
     ("healthare", "healthcare"),
@@ -334,6 +353,9 @@ COMMON_REPLACEMENTS: list[tuple[str, str]] = [
     ("Azteex", "Aztecs"),
     ("diads", "dyads"),
     ("analyical model", "analytical model"),
+    ("analy model", "analytical model"),
+    ("flash eating", "flesh-eating"),
+    ("flesheating", "flesh-eating"),
 ]
 
 # Greek / ancient history strand only — run when filename matches civilization-*.md
