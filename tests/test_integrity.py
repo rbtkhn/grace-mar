@@ -11,7 +11,13 @@ SCRIPTS = REPO_ROOT / "scripts"
 def test_validate_integrity_exits_zero():
     """validate-integrity.py exits 0 when record is valid."""
     result = subprocess.run(
-        [sys.executable, str(SCRIPTS / "validate-integrity.py"), "--user", "grace-mar"],
+        [
+            sys.executable,
+            str(SCRIPTS / "validate-integrity.py"),
+            "--user",
+            "grace-mar",
+            "--require-proposal-class",
+        ],
         cwd=REPO_ROOT,
         capture_output=True,
         text=True,
@@ -38,6 +44,7 @@ def test_validate_integrity_json_mode():
             str(SCRIPTS / "validate-integrity.py"),
             "--user",
             "grace-mar",
+            "--require-proposal-class",
             "--json",
         ],
         cwd=REPO_ROOT,

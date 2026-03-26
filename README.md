@@ -339,7 +339,7 @@ python3 scripts/validate-integrity.py --user grace-mar --json
 python3 -m pytest tests/ -v --tb=short
 ```
 
-`validate-integrity.py` includes **SELF-KNOWLEDGE vs SELF-LIBRARY** checks (IX-A corpus-style violations) and validates **`proposal_class`** on gate candidates when present. Optional: `--require-proposal-class` to enforce explicit `proposal_class` on every pending candidate ([IFP §3.5](docs/identity-fork-protocol.md)). Standalone: `python3 scripts/validate_identity_library_boundary.py -u grace-mar`.
+`validate-integrity.py` includes **SELF-KNOWLEDGE vs SELF-LIBRARY** checks (IX-A corpus-style violations) and validates **`proposal_class`** on gate candidates when present. GitHub Actions runs `--require-proposal-class` for `grace-mar`; locally, add the same flag for strict queues ([IFP §3.5](docs/identity-fork-protocol.md)). **Merge-time:** `process_approved_candidates.py --apply` refuses to write if the merged `self.md` would violate IX-A boundary rules. Standalone: `python3 scripts/validate_identity_library_boundary.py -u grace-mar`.
 
 **Performance (tier 1, CI):** `python scripts/run_perf_local.py` or covered by `pytest tests/test_perf_local.py`. Tiers 2–5 (exports, LLM, HTTP, load): [docs/perf-budgets.md](docs/perf-budgets.md).
 

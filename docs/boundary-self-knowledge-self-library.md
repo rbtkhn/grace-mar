@@ -56,5 +56,6 @@ Operational surface for **classification at the identity/library boundary**: hin
 
 ## Validation
 
-- **`scripts/validate-integrity.py`** (default CI path) runs IX-A boundary checks via `collect_identity_library_violations` — failures block integrity pass. Also validates `proposal_class` when present on gate candidates; optional `--require-proposal-class` for strict queues.
+- **`scripts/validate-integrity.py`** (default CI path) runs IX-A boundary checks via `collect_identity_library_violations` — failures block integrity pass. Also validates `proposal_class` when present on gate candidates; CI uses `--require-proposal-class` for `grace-mar` so every **pending** candidate must declare `proposal_class`.
 - **`scripts/validate_identity_library_boundary.py`** — same IX-A rules standalone (exit 1 if violations).
+- **`scripts/process_approved_candidates.py --apply`** — after merging approved candidates **in memory**, runs the same IX-A rules on the merged `self.md` preview; violations **block the write** (merge aborts before disk update). Shared rules live in `scripts/identity_library_boundary_rules.py` (also used by `recursion_gate_review` boundary hints).

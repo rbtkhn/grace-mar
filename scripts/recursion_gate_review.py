@@ -28,6 +28,11 @@ except ImportError:
         territory_from_yaml_block,
     )
 try:
+    from identity_library_boundary_rules import gate_suggested_reference_surface
+except ImportError:
+    from scripts.identity_library_boundary_rules import gate_suggested_reference_surface
+
+try:
     from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
 except ImportError:
     from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
@@ -329,21 +334,10 @@ def _compute_boundary_review(row: dict) -> dict:
     target = "SELF-KNOWLEDGE"
     suggested = "SELF-KNOWLEDGE"
     reasons: list[str] = []
-    civ_words = re.search(
-        r"\b(rome|roman|romans|egypt|egyptian|dynasty|empire|empires|civilization|"
-        r"civilizations|pharaoh|pharaohs|mesopotamia|byzantine|ottoman|encyclopedia|corpus|codex)\b",
-        text,
-        re.I,
-    )
-    lib_id = re.search(r"LIB-\d{4}", text, re.I)
-    long_ref = len(text.strip()) > 140
-
-    if lib_id:
-        suggested = "SELF-LIBRARY"
-        reasons.append("mentions LIB- entry")
-    elif civ_words and long_ref:
-        suggested = "CIV-MEM / SELF-LIBRARY"
-        reasons.append("civilization/history-domain vocabulary + length")
+    surf, surf_reasons = gate_suggested_reference_surface(text)
+    if surf:
+        suggested = surf
+        reasons.extend(surf_reasons)
 
     misfiled = None
     if suggested != "SELF-KNOWLEDGE":

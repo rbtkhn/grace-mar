@@ -56,6 +56,8 @@ ALLOWED_PROPOSAL_CLASS = frozenset({
     "SELF_LIBRARY_REVISE",
     "CIV_MEM_ADD",
     "CIV_MEM_REVISE",
+    "META_INFRA",
+    "SIMULATION_RESULT",
 })
 
 VALID_FORK_PHASES = frozenset({"seed", "interact", "diverge", "merge_pending", "snapshotted"})

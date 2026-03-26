@@ -45,6 +45,7 @@ from harness_events import append_harness_event
 from pipeline_correlation import find_staged_event_id_for_candidate
 from recursion_gate_review import split_gate_sections
 from recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
+from identity_library_boundary_rules import collect_ix_a_violations_from_self_md
 from repo_io import CANONICAL_EVIDENCE_BASENAME
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
@@ -1140,6 +1141,22 @@ def main() -> None:
         )
         blocks_to_move.append(c["full_match"])
         applied_candidates.append((c, act_id, ix_entry_id))
+
+    rel_self = f"users/{USER_ID}/self.md"
+    boundary_viol = collect_ix_a_violations_from_self_md(self_content, rel_path=rel_self)
+    if boundary_viol:
+        for v in boundary_viol:
+            print(v, file=sys.stderr)
+        _emit_validation_failure(
+            None,
+            "merge_preview_identity_library_boundary: " + boundary_viol[0][:300],
+            args.approved_by.strip(),
+        )
+        raise SystemExit(
+            "merge blocked: post-merge self.md would violate SELF-KNOWLEDGE vs SELF-LIBRARY "
+            f"({len(boundary_viol)} IX-A issue(s)). Fix IX-A topics or reject candidates; see "
+            "docs/boundary-self-knowledge-self-library.md"
+        )
 
     # Move blocks from Candidates to Processed in recursion-gate.md
     for block in blocks_to_move:

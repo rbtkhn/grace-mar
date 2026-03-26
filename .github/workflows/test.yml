@@ -41,7 +41,7 @@ jobs:
         run: python scripts/assert_canonical_paths.py --user grace-mar
 
       - name: Validate integrity
-        run: python scripts/validate-integrity.py --user grace-mar
+        run: python scripts/validate-integrity.py --user grace-mar --require-proposal-class
 
       - name: Fork lifecycle unit tests
         run: pytest tests/test_fork_lifecycle.py -v --tb=short

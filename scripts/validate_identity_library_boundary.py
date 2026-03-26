@@ -11,30 +11,12 @@ See scripts/surface_aliases.py. See docs/boundary-self-knowledge-self-library.md
 from __future__ import annotations
 
 import argparse
-import re
 import sys
 from pathlib import Path
 
+from identity_library_boundary_rules import collect_ix_a_violations_from_self_md
+
 REPO = Path(__file__).resolve().parents[1]
-TOPIC_MAX = 380
-CORPUS_HINT = re.compile(
-    r"\b(encyclopedia|corpus|codex|CIV-MEM|CMC|ENCYCLOPEDIA\.md|"
-    r"civilization.memory|full.text.of|see\s+docs/civilization-memory)\b",
-    re.I,
-)
-# CIV-MEM / library paths must not appear in IX-A topics (belongs in self-library.md)
-PATH_LEAK = re.compile(
-    r"docs/civilization-memory[/\"'\s]|artifacts/civ-mem|lib-stubs\.yaml|/civ-mem-encyclopedia",
-    re.I,
-)
-
-
-def _ix_a_block(self_md: str) -> str:
-    i = self_md.find("### IX-A")
-    if i < 0:
-        return ""
-    j = self_md.find("### IX-B", i)
-    return self_md[i : j if j > 0 else i + 15000]
 
 
 def collect_identity_library_violations(
@@ -52,31 +34,7 @@ def collect_identity_library_violations(
     if not path.is_file():
         return []
     text = path.read_text(encoding="utf-8", errors="replace")
-    block = _ix_a_block(text)
-    out: list[str] = []
-    for m in re.finditer(
-        r"topic:\s*[\"']([^\"']{1,8000})[\"']|topic:\s*([^\n]+)",
-        block,
-    ):
-        topic = (m.group(1) or m.group(2) or "").strip().strip('"').strip("'")
-        long_ = len(topic) > TOPIC_MAX
-        corpus = bool(CORPUS_HINT.search(topic))
-        path_leak = bool(PATH_LEAK.search(topic))
-        if not long_ and not corpus and not path_leak:
-            continue
-        bits = []
-        if long_:
-            bits.append(f"length {len(topic)}>{TOPIC_MAX}")
-        if corpus:
-            bits.append("corpus/library keyword")
-        if path_leak:
-            bits.append("CIV-MEM/library path in identity topic")
-        snippet = (topic[:120] + "…") if len(topic) > 120 else topic
-        out.append(
-            f"{rel(path)} IX-A ({', '.join(bits)}): SELF-LIBRARY/CIV-MEM not "
-            f"SELF-KNOWLEDGE — {snippet}"
-        )
-    return out
+    return collect_ix_a_violations_from_self_md(text, rel_path=rel(path))
 
 
 def collect_self_library_file_warnings(user_dir: Path, repo_root: Path) -> list[str]:
