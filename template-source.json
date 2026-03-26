@@ -1,0 +1,15 @@
+{
+  "companionSelfCommit": "b455508efc4f7f76ba9ddefd51ac84613009e06c",
+  "templateVersion": "0.2.2",
+  "syncedAt": "2026-03-26T00:00:00Z",
+  "syncedBy": "manual-sync-pack-update",
+  "syncedPaths": [
+    "docs/skill-work/self-work/sync-pack/README.md",
+    "docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md",
+    "docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md"
+  ],
+  "templateUpstream": {
+    "repo": "https://github.com/rbtkhn/companion-self",
+    "ref": "main"
+  }
+}

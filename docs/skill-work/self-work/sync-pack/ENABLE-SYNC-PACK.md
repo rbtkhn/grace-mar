@@ -6,10 +6,7 @@ Use this runbook to enable manual sync for a new instance.
 
 ## 1) Choose source territory
 
-Pick one or more source territories to mirror, for example:
-
-- `docs/skill-work/work-dev/`
-- `docs/skill-work/work-politics/`
+Pick one or more source territories to mirror.
 
 ---
 
@@ -50,6 +47,7 @@ Update local interface docs (typically):
 - instance `INDEX.md`
 - any seed-context link page
 - optional `GOOD-MORNING.md` routine
+- if needed, copy/adapt `INITIAL-GOOD-MORNING.md` sequence
 
 ---
 
@@ -57,8 +55,6 @@ Update local interface docs (typically):
 
 - **starter mode (default):** contract + log only
 - **training mode (optional):** add `SYNC-DAILY.md` + staleness guardrail
-
-Use training mode only when onboarding load justifies extra structure.
 
 ---
 
