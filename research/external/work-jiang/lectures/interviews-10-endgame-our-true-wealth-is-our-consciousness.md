@@ -8,7 +8,7 @@
 **Topic:** Biography (Yale, journalism), US politics and media, rules-based order and empire, AI and consciousness, technomarxism, Iran war and Middle East, education and great books, meaning and free will.
 
 **Source (canonical recording):** [YouTube](https://www.youtube.com/watch?v=rsi7cDRUrmE) (`rsi7cDRUrmE`).  
-**Transcript:** YouTube English captions, normalized (timestamps and markup stripped; continuous read without speaker diarization).
+**Transcript:** YouTube English captions, normalized (timestamps and markup stripped). **Opening** segments are speaker-labeled; **main body** follows caption paragraphs (speakers often merged in source).
 
 ---
 
@@ -26,31 +26,42 @@
 
 ## Full transcript
 
-techno Marxarxism. That's the world we're going into. They want a numb and indifferent
+### Trailer and consciousness (clip)
+
+**Jiang Xueqin:** techno Marxarxism. That's the world we're going into. They want a numb and indifferent
 population that they can enslave, that they can rule over, who are complacent. What they
 want is compliancy. I feel sorry for these people because the way the world is going, I
 don't think that they are psychologically equipped to survive. The entire universe is
 watching what we do. We are all connected to the entire universe. And each of us can be a
-beautiful ray of light if we will it, if we choose it to be.
+beautiful ray of light if we will it, if we choose it to be. What power is is the capacity
+to direct and focus our attention. And before for the longest time, the best and easiest way
+to focus our attention was money, right? So wealth isn't money. What wealth is is our
+attention, our consciousness. towards you matter, but you have to choose to matter. You have
+to believe that you matter. And honestly, I think it's a message that the elite have
+purposefully hid from us.
 
-What power is is the capacity to direct and focus our attention. And before for the longest
-time, the best and easiest way to focus our attention was money, right? So wealth isn't
-money. What wealth is is our attention, our consciousness. towards you matter, but you have
-to choose to matter. You have to believe that you matter. And honestly, I think it's a
-message that the elite have purposefully hid from us.
+### Channel promo and introduction
 
-Hi friends, it's a pleasure to tell you that my book What It Takes Southeast Asia has been
+**Host (Endgame):** Hi friends, it's a pleasure to tell you that my book What It Takes Southeast Asia has been
 released in English and Bahasa Indonesia. You can buy it through books.game.id or at any of
 these stores. Now back to the show. Hi friends. So today we're honored to uh be graced by
 Jang Suin who has uh given lots of analyses about what's happening around the world. Jang,
-thank you so much for gracing our show. Thanks so much for inviting me. Yeah, I want to
-start out with how you grew up.
+thank you so much for gracing our show.
 
-Uh you grew up in Canada and you've uh you've you know mentioned that you know you you were
+**Jiang Xueqin:** Thanks so much for inviting me.
+
+**Host (Endgame):** Yeah, I want to start out with how you grew up.
+
+### Conversation (captions)
+
+_YouTube captions do not separate speakers; paragraphs below follow the published English subtitles (same text as before). Use for search and book lane; optional manual pass for Host/Jiang if needed._
+
+**Host (Endgame):** Uh you grew up in Canada and you've uh you've you know mentioned that you know you you were
 not at the top of the class but you were up there within the top echelon. Uh and then you
-decided to go to Yale and and tell us what shaped your early educational journey, right? So
-um I grew up as an immigrant in Toronto, Canada and my parents were very poor and they were
-not well educated. So we would have qualified for um welfare.
+decided to go to Yale and and tell us what shaped your early educational journey, right?
+
+**Jiang Xueqin:** So um I grew up as an immigrant in Toronto, Canada and my parents were very poor and they
+were not well educated. So we would have qualified for um welfare.
 
 You know, Canada has a very nice social service uh system and welfare is actually very very
 nice. But my parents didn't speak English. They didn't know the system. So, we actually

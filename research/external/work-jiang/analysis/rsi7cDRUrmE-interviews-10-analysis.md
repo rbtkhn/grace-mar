@@ -51,4 +51,4 @@ quality_level: draft
 
 ## Follow-ups
 
-- **Optional:** **speaker-labeled** **pass** **on** **transcript** **(** **Host** **vs** **Jiang** **)** **if** **book** **lane** **wants** **dialogue** **clarity** **.**
+- **Opening** **and** **first** **Q/A** **are** **speaker-labeled** **in** **the** **lecture** **file** **;** **main** **body** **remains** **caption** **paragraphs** **(** **optional** **manual** **Host** **/** **Jiang** **pass** **)** **.**
