@@ -124,6 +124,8 @@ When labor no longer defines value, identity needs new units. The fork uses **kn
 
 **Evidence-grounding = confidence-grounding.** The Record traces claims to artifacts — "you wrote this," "you drew this," "you said this." That grounds self-view in demonstrated competence rather than affirmation. Alpha builds confidence through test scores and mastery; the fork builds it through evidence. Different paths to the same outcome: a grounded sense of capability.
 
+**Alpha School mastery (optional design lens).** Mastery-based progression, ~2-hour academic screen ceiling, and "no gaps before advancing" are discussed as **external reference** mapped to this architecture (gate, evidence, WORK compression) in [alpha-mastery-adaptation.md](alpha-mastery-adaptation.md) — not as product claims for Grace-Mar. The underlying **Bloom / 2 Sigma** vocabulary is in [bloom-mastery-adaptation.md](bloom-mastery-adaptation.md).
+
 ---
 
 ## 6. Merge, Not Add

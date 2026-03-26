@@ -10,6 +10,8 @@ This submodule consolidates Alpha School reference material and the template's *
 
 | Doc / file | Purpose |
 |------------|---------|
+| **[alpha-mastery-adaptation.md](../../alpha-mastery-adaptation.md)** | **Philosophy bridge:** Alpha mastery model (90% gates, 2-hour block, Time Back) mapped to RECURSION-GATE, skill-think/write, WORK/jiang-compress, and evidence — design vocabulary, not verified Alpha outcomes. |
+| **[bloom-mastery-adaptation.md](../../bloom-mastery-adaptation.md)** | **Bloom / 2 Sigma layer:** mastery-before-advance and tutoring analogy on the same architecture; Alpha doc is one operationalization. |
 | **[alpha-school-reference.md](alpha-school-reference.md)** | Short reference: status of benchmarks (external, unverified, optional); how instances use metrics (Student UI, Export, Curriculum); 2-hour design constraint; **Record-driven prompts** (3–5 lessons via ChatGPT/Grok, transcript → skill-think). |
 | **[alpha-school-benchmarks.yaml](alpha-school-benchmarks.yaml)** | **Structured benchmark data**: `target_market`, `success_metrics`, benchmarks (screen time, SAT, engagement, 2-hour block, value_creation). Evidence IDs and confidence; machine-friendly. Use for tooling and calibration. See *YAML usage* below. |
 | **[insights-alpha-moonshots-233-for-business.md](insights-alpha-moonshots-233-for-business.md)** | Alpha/Moonshots #233 insights for business plan, white paper, and GTM (THINK/WRITE/WORK narrative). Optional for instances. |
