@@ -66,6 +66,12 @@ The good-morning brief can offer to run `harness_warmup` after the intention pro
 
 ---
 
+## See also
+
+- [alpha-mastery-adaptation.md](alpha-mastery-adaptation.md) — Alpha mastery philosophy mapped to the gate, evidence, and seed `minimal-core` progress units (`behavioral-change`, `identity-coherence`, `evidence-quality`).
+
+---
+
 ## Template upstream
 
 `companion-self` may adopt a variant of these scripts later. Instance sync contract: [merging-from-companion-self.md](merging-from-companion-self.md).
