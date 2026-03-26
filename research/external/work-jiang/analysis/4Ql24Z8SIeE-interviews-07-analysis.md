@@ -56,7 +56,8 @@ quality_level: draft
 
 ## Cross-refs
 
-- [Interviews #10 — Tucker Carlson](2K2nQsTTjQE-interviews-10-analysis.md) — **later** **long-form** **;** **overlapping** **GCC** **/** **Iran** **/** **dollar** **themes** **.**
+- [Interviews #10 — Endgame](rsi7cDRUrmE-interviews-10-analysis.md) — **Mar** **16** **upload** **;** **consciousness** **/** **AI** **/** **education** **themes** **.**
+- [Interviews #11 — Tucker Carlson](2K2nQsTTjQE-interviews-11-analysis.md) — **later** **long-form** **(Mar** **20)** **;** **overlapping** **GCC** **/** **Iran** **/** **dollar** **themes** **.**
 - [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **frame** **;** **Middle** **East** **/** **Ukraine** **/** **US–China** **;** **YouTube** **upload** **Oct** **2025** **(earliest** **in** **corpus)** **.**
 - [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **;** **draft** **,** **false** **flags** **,** **GCC** **;** **Mar** **2026** **upload** **.**
 - [lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md](../lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md)

@@ -1,10 +1,10 @@
 ---
-analysis_id: vi-10
+analysis_id: vi-11
 video_id: 2K2nQsTTjQE
-source_id: vi-10
+source_id: vi-11
 canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
 series: interviews
-episode: 10
+episode: 11
 chapter_candidates: []
 appendix_candidates: []
 themes: []
@@ -12,12 +12,12 @@ status: complete
 quality_level: draft
 ---
 
-# Analysis — Interviews #10: Tucker Carlson — Iran War and Global Order
+# Analysis — Interviews #11: Tucker Carlson — Iran War and Global Order
 
 - **video_id:** `2K2nQsTTjQE`
 - **canonical_url:** https://www.youtube.com/watch?v=2K2nQsTTjQE
-- **series / episode:** Predictive History · Volume VI — Interviews #10
-- **raw_transcript:** [lectures/interviews-10-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-10-tucker-carlson-iran-war-and-global-order.md)
+- **series / episode:** Predictive History · Volume VI — Interviews #11
+- **raw_transcript:** [lectures/interviews-11-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-11-tucker-carlson-iran-war-and-global-order.md)
 - **upload_date (YouTube):** 20260320
 - **analyzed_at:** 2026-03-25 (operator)
 
@@ -62,10 +62,11 @@ The interview extends **Predictive History** themes into **long-form Q&A**: the 
 ## Cross-refs
 
 - Geo-Strategy / Game Theory lectures on **Iran**, **GCC**, **dollar** — map as needed when **book** **lane** **assigns** **vi-** chapters.
-- [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **earlier** **YouTube** **upload** **(Mar** **2)** **than** **this** **interview** **;** **same** **cluster** **themes** **;** **`vi-07`** **before** **`vi-10`** **.**
+- [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **earlier** **YouTube** **upload** **(Mar** **2)** **than** **this** **interview** **;** **same** **cluster** **themes** **;** **`vi-07`** **before** **`vi-11`** **.**
+- [Interviews #10 — Endgame](rsi7cDRUrmE-interviews-10-analysis.md) — **earlier** **upload** **(Mar** **16)** **;** **consciousness** **/** **AI** **/** **education** **cluster** **before** **this** **Tucker** **interview** **.**
 - [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **broad** **game-theory** **interview** **(Oct** **2025** **upload)** **;** **`vi-01`** **.**
 - [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **/** **GCC** **/** **false-flag** **cluster** **;** **`vi-09`** **.**
-- [lectures/interviews-10-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-10-tucker-carlson-iran-war-and-global-order.md)
+- [lectures/interviews-11-tucker-carlson-iran-war-and-global-order.md](../lectures/interviews-11-tucker-carlson-iran-war-and-global-order.md)
 
 ## Follow-ups
 

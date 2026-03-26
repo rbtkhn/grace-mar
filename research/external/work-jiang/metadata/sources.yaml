@@ -2105,14 +2105,29 @@ sources:
     analysis: complete
     chapter_mapping: not_started
 - source_id: vi-10
-  video_id: 2K2nQsTTjQE
-  title: 'Interviews #10: Tucker Carlson — Iran War, Energy, and Global Order'
-  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
-  publication_date: 2026-03-20
-  lecture_path: lectures/interviews-10-tucker-carlson-iran-war-and-global-order.md
-  analysis_path: analysis/2K2nQsTTjQE-interviews-10-analysis.md
+  video_id: rsi7cDRUrmE
+  title: 'Interviews #10: Endgame — Our True Wealth Is Our Consciousness'
+  canonical_url: https://www.youtube.com/watch?v=rsi7cDRUrmE
+  publication_date: 2026-03-16
+  lecture_path: lectures/interviews-10-endgame-our-true-wealth-is-our-consciousness.md
+  analysis_path: analysis/rsi7cDRUrmE-interviews-10-analysis.md
   series: interviews
   episode: 10
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
+- source_id: vi-11
+  video_id: 2K2nQsTTjQE
+  title: 'Interviews #11: Tucker Carlson — Iran War, Energy, and Global Order'
+  canonical_url: https://www.youtube.com/watch?v=2K2nQsTTjQE
+  publication_date: 2026-03-20
+  lecture_path: lectures/interviews-11-tucker-carlson-iran-war-and-global-order.md
+  analysis_path: analysis/2K2nQsTTjQE-interviews-11-analysis.md
+  series: interviews
+  episode: 11
   themes: []
   status:
     transcript: complete

@@ -64,7 +64,8 @@ The interview frames **US–China** and **middle-power** dynamics through **Carn
 - [Interviews #4 — Danny Haiphong — Iran / empire](H5lCJ0D4DpY-interviews-04-analysis.md) — **Iran** **pause** **/** **NSS** **read** **(Jan** **18)**.
 - [Interviews #5 — Dimitri Lascaris](uHIdRgFypNo-interviews-05-analysis.md) — **Carney** **/** **Canada–China** **(Jan** **22)**.
 - [Interviews #8 — Nima — Iran war watershed](0rIgZD-tk3s-interviews-08-analysis.md) — **Dialogue** **Works** **(Mar** **7)** **;** **Hormuz** **/** **Greater** **Israel** **/** **GCC** **mirage** **thread** **(full** **recording** **;** **short** **clip** **`JyHoh97yhWU`** **not** **in** **corpus)**.
-- [Interviews #10 — Tucker Carlson](2K2nQsTTjQE-interviews-10-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** **(Mar** **20)**.
+- [Interviews #10 — Endgame](rsi7cDRUrmE-interviews-10-analysis.md) — **consciousness** **/** **media** **/** **empire** **frame** **(Mar** **16)** **.**
+- [Interviews #11 — Tucker Carlson](2K2nQsTTjQE-interviews-11-analysis.md) — **Iran** **/** **GCC** **thread** **continuity** **(Mar** **20)**.
 - [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **Krystal** **/** **Saagar** **;** **2024** **predictions** **recap** **;** **upload** **2026-03-02** **.**
 - [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **survey** **;** **upload** **2025-10-30** **;** **`vi-01`** **.**
 - [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **;** **upload** **2026-03-09** **;** **`vi-09`** **.**

@@ -59,7 +59,8 @@ quality_level: draft
 ## Cross-refs
 
 - [Interviews #5 — Great Power Wars](80jUKe0blAQ-interviews-06-analysis.md) — **NSS** **/** **elite** **frames** **(Jan** **26)** **before** **March** **cluster**.
-- [Interviews #10 — Tucker Carlson](2K2nQsTTjQE-interviews-10-analysis.md) — **Tucker** **/** **Qatar** **thread** **referenced** **in** **dialogue** **(Mar** **20)**.
+- [Interviews #10 — Endgame](rsi7cDRUrmE-interviews-10-analysis.md) — **later** **interview** **in** **corpus** **(Mar** **16)** **;** **Tucker** **mentioned** **in** **dialogue** **.**
+- [Interviews #11 — Tucker Carlson](2K2nQsTTjQE-interviews-11-analysis.md) — **dedicated** **Tucker** **interview** **(Mar** **20)** **;** **Qatar** **thread** **.**
 - [Interviews #7 — Breaking Points](4Ql24Z8SIeE-interviews-07-analysis.md) — **same** **Iran** **/** **GCC** **/** **attrition** **themes** **;** **YouTube** **upload** **Mar** **2** **(before** **this** **episode** **)** **;** **`vi-07`** **.**
 - [Interviews #1 — Cyrus Janssen](XRk5VSEzJ4Y-interviews-01-analysis.md) — **game** **theory** **;** **Middle** **East** **/** **Ukraine** **/** **Taiwan** **;** **upload** **Oct** **2025** **;** **`vi-01`** **.**
 - [Interviews #9 — SNEAKO](o1DElACHNRo-interviews-09-analysis.md) — **Iran** **war** **deep** **dive** **;** **false** **flags** **,** **GCC** **,** **Greater** **Israel** **;** **upload** **Mar** **2026** **;** **`vi-09`** **.**
