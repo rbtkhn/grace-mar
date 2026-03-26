@@ -19,7 +19,7 @@ Mirror grace-mar **daily-warmup** cadence in *shape* — edit for Xavier’s lan
 
 | # | Task |
 |---|------|
-| 1 | Open the grace-mar repo in Cursor; navigate to `docs/skill-work/work-companion-xavier/companion-xavier/`. |
+| 1 | Open the grace-mar repo in Cursor; navigate to `docs/skill-work/work-xavier/companion-xavier/`. |
 | 2 | Open `companion-xavier/README.md`; read top to bottom. |
 | 3 | Open `users/xavier/self.md` (repo root if symlinked). Skim — **IX empty** until gate merges survey outputs. |
 | 4 | Command palette → Terminal → `pwd` / `ls` (or `dir` on Windows). |

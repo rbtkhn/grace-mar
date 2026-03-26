@@ -7,7 +7,7 @@
 | Root | Path | v1 note |
 |------|------|---------|
 | work-politics | [docs/skill-work/work-politics/](../../work-politics/) | **Links** from [seed-context README](companion-xavier/docs/seed-context/README.md); not full copy of territory |
-| work-companion-xavier | This folder | Interface + policy |
+| work-xavier | This folder | Interface + policy |
 | work-dev | [docs/skill-work/work-dev/](../../work-dev/) | Linked from seed-context |
 | work-business | [docs/skill-work/work-business/](../../work-business/) | Linked from seed-context |
 | self-work | [docs/skill-work/self-work/](../self-work/) | Territory README + pattern; instance file under `users/xavier/self-work.md` is **placeholder** |
@@ -25,7 +25,7 @@
 
 | Artifact | Purpose |
 |----------|---------|
-| `users/xavier` → `../docs/skill-work/work-companion-xavier/companion-xavier/users/xavier` (symlink from repo `users/`) | So `scripts/validate-integrity.py --user xavier` and tooling resolve [canonical paths](../../canonical-paths.md) |
+| `users/xavier` → `../docs/skill-work/work-xavier/companion-xavier/users/xavier` (symlink from repo `users/`) | So `scripts/validate-integrity.py --user xavier` and tooling resolve [canonical paths](../../canonical-paths.md) |
 
 ## Explicit non-goals (v1)
 

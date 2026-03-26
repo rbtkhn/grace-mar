@@ -23,8 +23,8 @@
 | Boundary | grace-mar | companion-self | companion-xavier |
 |----------|-----------|----------------|------------------|
 | **Fork namespace** | `users/grace-mar/` only | `users/_template/` only (scaffold, not a person) | `users/xavier/` only |
-| **Cross-fork Record copy** | — | — | **Forbidden:** no `users/grace-mar/**` content in Xavier tree ([LEAKAGE-CHECKLIST](skill-work/work-companion-xavier/LEAKAGE-CHECKLIST.md), [check script](../scripts/check_companion_xavier_leakage.py)) |
-| **Template → instance** | Merges via [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md); **never** overwrite live Record wholesale | Source of **structure** and **protocol** | Scaffold from **template baseline**, not from grace-mar Record ([ALIGNMENT](skill-work/work-companion-xavier/ALIGNMENT.md)) |
+| **Cross-fork Record copy** | — | — | **Forbidden:** no `users/grace-mar/**` content in Xavier tree ([LEAKAGE-CHECKLIST](skill-work/work-xavier/LEAKAGE-CHECKLIST.md), [check script](../scripts/check_companion_xavier_leakage.py)) |
+| **Template → instance** | Merges via [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md); **never** overwrite live Record wholesale | Source of **structure** and **protocol** | Scaffold from **template baseline**, not from grace-mar Record ([ALIGNMENT](skill-work/work-xavier/ALIGNMENT.md)) |
 | **Instance → template** | Structural / instance-agnostic improvements may **propose** upstream PRs | Accepts PRs; remains **generic** | Does **not** push Xavier Record into template |
 | **SELF-KNOWLEDGE vs SELF-LIBRARY** | IX vs `self-library.md` rows — [boundary doc](boundary-self-knowledge-self-library.md) | Template teaches the same rule | Seed: **governance + empty `entries:`**; no grace-mar LIB ids |
 | **WORK vs Record** | `docs/skill-work/work-*`, `users/*/self-work.md` coordination — not IX | N/A (docs) | Client/job docs **linked**, not merged into `self.md` without gate |
@@ -40,7 +40,7 @@
 | **Protocol & docs** | IFP, glossary, architecture concepts — sync **companion-self → grace-mar** per merge doc; **companion-xavier** mirrors **approved** manifest paths only. |
 | **SELF-LIBRARY governance** | Same **instance-agnostic** `self-library.md` **shape** (governance + empty `entries:`) on template **and** Xavier seed — **not** grace-mar’s LIB row corpus. |
 | **Scripts / exports** | `GRACE_MAR_USER_ID=xavier` resolves `users/xavier/`; exports are **per-fork** ([fork isolation](fork-isolation-and-multi-tenant.md)). |
-| **Operator staging** | `docs/skill-work/work-companion-xavier/` holds **contracts** (manifest, leakage) — **not** Xavier’s Record body. |
+| **Operator staging** | `docs/skill-work/work-xavier/` holds **contracts** (manifest, leakage) — **not** Xavier’s Record body. |
 
 ---
 
@@ -57,10 +57,10 @@
 
 ## 5. companion-xavier **inside** grace-mar (monorepo boundary)
 
-The **work-companion-xavier** folder is a **membrane**:
+The **work-xavier** folder is a **membrane**:
 
 - **Toward grace-mar:** Does not hold `users/grace-mar/` data.
-- **Toward companion-xavier subtree:** Only **manifest-approved** material; [SEED-MANIFEST](skill-work/work-companion-xavier/SEED-MANIFEST.md).
+- **Toward companion-xavier subtree:** Only **manifest-approved** material; [SEED-MANIFEST](skill-work/work-xavier/SEED-MANIFEST.md).
 
 So: **one repo**, **two fork namespaces** (`grace-mar`, `xavier`) — **no** shared writable Record between them ([fork isolation §1](fork-isolation-and-multi-tenant.md)).
 
@@ -70,14 +70,14 @@ So: **one repo**, **two fork namespaces** (`grace-mar`, `xavier`) — **no** sha
 
 - [ ] **Namespaces:** `users/grace-mar/` and `users/xavier/` are disjoint; symlink `users/xavier` resolves only to Xavier subtree.
 - [ ] **Leakage:** [check_companion_xavier_leakage.py](../scripts/check_companion_xavier_leakage.py) passes; spot-check no `grace-mar` identity in Xavier files.
-- [ ] **Template pin:** [TEMPLATE-BASELINE](skill-work/work-companion-xavier/TEMPLATE-BASELINE.md) reflects **companion-self `main`** commit used for scaffold alignment.
+- [ ] **Template pin:** [TEMPLATE-BASELINE](skill-work/work-xavier/TEMPLATE-BASELINE.md) reflects **companion-self `main`** commit used for scaffold alignment.
 - [ ] **Gate:** No hand-merge into Xavier `self.md`; Session 0 → candidates → approve → script.
-- [ ] **WORK vs Record:** [LANES](skill-work/work-companion-xavier/LANES.md) understood for client vs identity.
+- [ ] **WORK vs Record:** [LANES](skill-work/work-xavier/LANES.md) understood for client vs identity.
 
 ---
 
 ## 7. Verdict
 
-**Proper boundaries are well-defined** in repo policy: **fork isolation** (namespace per companion), **template upstream** (companion-self without live Record), **monorepo membrane** (work-companion-xavier + leakage checks), and **IFP** (stage → approve → merge). **Drift risk** is operational: copying prose, rushing Session 0 merges, or conflating **work-politics** client copy with **Xavier** — countered by **LEAKAGE-CHECKLIST**, **LANES**, and **gated pipeline**.
+**Proper boundaries are well-defined** in repo policy: **fork isolation** (namespace per companion), **template upstream** (companion-self without live Record), **monorepo membrane** (work-xavier + leakage checks), and **IFP** (stage → approve → merge). **Drift risk** is operational: copying prose, rushing Session 0 merges, or conflating **work-politics** client copy with **Xavier** — countered by **LEAKAGE-CHECKLIST**, **LANES**, and **gated pipeline**.
 
 **Related:** [audit-structural-alignment-grace-mar-companion-self-companion-xavier.md](audit-structural-alignment-grace-mar-companion-self-companion-xavier.md) · [audit-companion-self.md](audit-companion-self.md) · [conceptual-framework.md](conceptual-framework.md) (Record vs fork, tricameral mind).

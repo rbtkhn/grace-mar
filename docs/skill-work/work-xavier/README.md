@@ -1,8 +1,8 @@
-# work-companion-xavier — interface (grace-mar ↔ companion-xavier)
+# work-xavier — interface (grace-mar ↔ companion-xavier)
 
 **Purpose:** Staging and **contracts** for the **companion-xavier** logical instance, which lives in this repo as a **subtree**:
 
-`docs/skill-work/work-companion-xavier/companion-xavier/`
+`docs/skill-work/work-xavier/companion-xavier/`
 
 This folder (everything **above** that `companion-xavier/` child) is **not** Xavier’s Record. It holds **SEED-MANIFEST**, **LEAKAGE-CHECKLIST**, **ALIGNMENT**, handoff notes, and operator-facing navigation so you can reason about the seed without opening her tree first.
 

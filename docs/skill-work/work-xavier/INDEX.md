@@ -1,4 +1,4 @@
-# work-companion-xavier — quick index
+# work-xavier — quick index
 
 | Doc | Role |
 |-----|------|

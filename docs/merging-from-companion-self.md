@@ -68,7 +68,7 @@ Record each merge from template so you can see when grace-mar was last updated a
 
 | Date | Companion-self (commit or tag) | Paths updated |
 |------|---------------------------------|---------------|
-| 2026-03-23 | companion-self **`main` @ `288b438`** | **Merged:** SELF-LIBRARY template governance (`users/_template/self-library.md` + example corpus doc). [Commit](https://github.com/rbtkhn/companion-self/commit/288b4386684e076df894536624308e69305ae229). Grace-mar: [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](skill-work/work-companion-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md), [TEMPLATE-BASELINE](skill-work/work-companion-xavier/TEMPLATE-BASELINE.md). |
+| 2026-03-23 | companion-self **`main` @ `288b438`** | **Merged:** SELF-LIBRARY template governance (`users/_template/self-library.md` + example corpus doc). [Commit](https://github.com/rbtkhn/companion-self/commit/288b4386684e076df894536624308e69305ae229). Grace-mar: [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](skill-work/work-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md), [TEMPLATE-BASELINE](skill-work/work-xavier/TEMPLATE-BASELINE.md). |
 | *(no recorded baseline yet)* | — | Before claiming full alignment, record the companion-self commit/tag or `template-version.json` value used for the sync |
 
 ---

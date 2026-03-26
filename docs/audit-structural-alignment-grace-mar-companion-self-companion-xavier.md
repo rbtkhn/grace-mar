@@ -8,7 +8,7 @@
 
 **As of:** 2026-03-23
 
-**companion-self baseline:** [`main` @ `288b438`](https://github.com/rbtkhn/companion-self/commit/288b4386684e076df894536624308e69305ae229) — SELF-LIBRARY template governance (see [TEMPLATE-BASELINE](skill-work/work-companion-xavier/TEMPLATE-BASELINE.md), [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT](skill-work/work-companion-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md)).
+**companion-self baseline:** [`main` @ `288b438`](https://github.com/rbtkhn/companion-self/commit/288b4386684e076df894536624308e69305ae229) — SELF-LIBRARY template governance (see [TEMPLATE-BASELINE](skill-work/work-xavier/TEMPLATE-BASELINE.md), [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT](skill-work/work-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md)).
 
 ---
 
@@ -17,8 +17,8 @@
 | Surface | Repo / path | Role |
 |---------|-------------|------|
 | **companion-self** | [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self) | **Template** — `users/_template/`, protocol docs, **upstream** for instances. **Always hyphenated** as a **system name** ([glossary.md](glossary.md)). |
-| **grace-mar** | This repository; `users/grace-mar/` | **Reference instance** — live Record; operator staging for Xavier (`docs/skill-work/work-companion-xavier/`). |
-| **companion-xavier** | **Subtree:** `docs/skill-work/work-companion-xavier/companion-xavier/`; **`users/xavier`** → subtree (symlink at repo root). Optional **export** to a separate remote later. | **Logical instance** — same IFP paths as template; **no** grace-mar Record copy. |
+| **grace-mar** | This repository; `users/grace-mar/` | **Reference instance** — live Record; operator staging for Xavier (`docs/skill-work/work-xavier/`). |
+| **companion-xavier** | **Subtree:** `docs/skill-work/work-xavier/companion-xavier/`; **`users/xavier`** → subtree (symlink at repo root). Optional **export** to a separate remote later. | **Logical instance** — same IFP paths as template; **no** grace-mar Record copy. |
 
 ---
 
@@ -50,7 +50,7 @@ Canonical paths are **lowercase** ([canonical-paths.md](canonical-paths.md)). **
 |------|-----------|----------------|------------------|
 | **companion-self** / **companion-xavier** (hyphenated) | [AGENTS.md](../AGENTS.md), [glossary.md](glossary.md) | System/repo name | Named instance (subtree) |
 | **companion self** (two words) | Conceptual dyad only | Same | Same |
-| **self-*** labels ([id-taxonomy.md](id-taxonomy.md#capitalization-and-format)) | **self-knowledge**, **self-library**, … | Template + docs should match | [TERMS-XAVIER](skill-work/work-companion-xavier/TERMS-XAVIER.md), seed docs |
+| **self-*** labels ([id-taxonomy.md](id-taxonomy.md#capitalization-and-format)) | **self-knowledge**, **self-library**, … | Template + docs should match | [TERMS-XAVIER](skill-work/work-xavier/TERMS-XAVIER.md), seed docs |
 | **SELF-KNOWLEDGE** / **SELF-LIBRARY** (formal surfaces) | Boundary docs | IFP + template | Same protocol |
 
 **Verdict (formatting):** Rules are **centralized** in glossary + id-taxonomy. **Drift risk:** older or generated files (e.g. `manifest.json` strings) may still say `grace-mar-llm.txt` in non–grace-mar forks — acceptable as **artifact** until per-fork export labels are generalized; **prose** in Xavier territory should stay consistent.
@@ -61,7 +61,7 @@ Canonical paths are **lowercase** ([canonical-paths.md](canonical-paths.md)). **
 
 | Area | grace-mar | companion-self | companion-xavier (seed) |
 |------|-----------|----------------|-------------------------|
-| Full `docs/skill-work/*` | Many territories | Narrower / submodule docs | **Interface + links:** [seed-context README](skill-work/work-companion-xavier/companion-xavier/docs/seed-context/README.md) → monorepo paths; not a full mirror of grace-mar |
+| Full `docs/skill-work/*` | Many territories | Narrower / submodule docs | **Interface + links:** [seed-context README](skill-work/work-xavier/companion-xavier/docs/seed-context/README.md) → monorepo paths; not a full mirror of grace-mar |
 
 **Verdict:** companion-xavier is **intentionally smaller** than grace-mar’s skill-work tree; alignment is **manifest + operator docs**, not file-for-file parity.
 
@@ -106,6 +106,6 @@ Canonical paths are **lowercase** ([canonical-paths.md](canonical-paths.md)). **
 | **SELF-LIBRARY (governance)** | ✅ Template updated on `main` (`288b438`); grace-mar retains **live** LIB rows | ✅ Empty shelf + governance; **aligned** with template **policy** |
 | **Terminology** | ✅ Glossary + id-taxonomy | ✅ Wired in interface docs |
 | **Record isolation** | N/A | ✅ No grace-mar Record in instance tree; CI leakage check |
-| **Upstream** | grace-mar pulls template per merge doc | Scaffold + [TEMPLATE-BASELINE](skill-work/work-companion-xavier/TEMPLATE-BASELINE.md) pins companion-self **commit** |
+| **Upstream** | grace-mar pulls template per merge doc | Scaffold + [TEMPLATE-BASELINE](skill-work/work-xavier/TEMPLATE-BASELINE.md) pins companion-self **commit** |
 
 **Conclusion:** **Structural and formatting alignment** for the three surfaces is **good** as of **2026-03-23**: companion-self **template** carries the **neutral** `self-library` scaffold; **grace-mar** remains the **reference instance** with full Record; **companion-xavier** in-repo matches **path + governance** expectations with **explicit** leakage controls. **Re-audit** after major companion-self template releases or companion-xavier **export** to a standalone repo.

@@ -2,7 +2,7 @@
 """
 Fail if grace-mar Record paths appear under companion-xavier instance tree.
 
-Scans: docs/skill-work/work-companion-xavier/companion-xavier/users/xavier/
+Scans: docs/skill-work/work-xavier/companion-xavier/users/xavier/
 """
 
 from __future__ import annotations
@@ -15,7 +15,7 @@ TARGET = (
     REPO_ROOT
     / "docs"
     / "skill-work"
-    / "work-companion-xavier"
+    / "work-xavier"
     / "companion-xavier"
     / "users"
     / "xavier"

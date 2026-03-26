@@ -9,7 +9,7 @@
 | SELF-LIBRARY governance | `users/_template/self-library.md` (target) | grace-mar corpus is separate | Same **instance-agnostic** governance slice as template — **empty entries** at seed |
 | Record boundary | No live user data | **Never** copy into xavier subtree | Subtree is **not** grace-mar |
 
-**grace-mar monorepo:** Operator staging + **companion-xavier** subtree under `docs/skill-work/work-companion-xavier/companion-xavier/`.
+**grace-mar monorepo:** Operator staging + **companion-xavier** subtree under `docs/skill-work/work-xavier/companion-xavier/`.
 
 **Optional later:** `git subtree split` or private remote — document when pursued.
 
