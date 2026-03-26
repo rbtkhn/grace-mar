@@ -7,6 +7,12 @@ Short, plain-language definitions used in `work-xavier`.
 - **Record**  
   The durable identity files for a companion (what is treated as true after approval).
 
+- **self-knowledge**  
+  The "facts and understanding" part of durable Record growth.
+
+- **self-identity**  
+  Durable identity commitments (who I am becoming, boundaries, role commitments). Optional split surface in some instances.
+
 - **Gate / recursion-gate**  
   The review queue where proposed identity updates are staged before approval.
 

@@ -11,6 +11,8 @@
 3. **Gate** — Operator stages candidates from survey; Xavier approves; merge via `process_approved_candidates.py` (not hand-edit to SELF).
 4. **Good morning** — [../GOOD-MORNING.md](../GOOD-MORNING.md) ten tasks **after** Session 0.
 
+Optional split growth model: use `self-knowledge` for learned facts and `self-identity` for durable identity commitments.
+
 **MVP:** Markdown + gate. Voice/bot optional.
 
 **Symlink:** Repo root `users/xavier` may point here — see [../SEED-MANIFEST.md](../SEED-MANIFEST.md).

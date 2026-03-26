@@ -74,7 +74,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 
 | Module | Contains | Purpose |
 |--------|----------|---------|
-| **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C); **SELF-KNOWLEDGE** = identity-facing IX-A | Who they ARE |
+| **SELF** | Identity, personality, preferences, values, narrative, post-seed growth (IX-A, IX-B, IX-C), and optional split durable identity commitments (`self-identity.md`); **SELF-KNOWLEDGE** = identity-facing knowledge | Who they ARE |
 | **SELF-LIBRARY** | `self-library.md` — governed reference domains; **CIV-MEM** = subdomain | What governed reference the fork carries (**not** identity) |
 | **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
 | **EVIDENCE** | Activity log, writing log, creation log, media log | Raw artifacts; immutable once captured |
@@ -87,6 +87,7 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 | Dimension | Section | What it captures |
 |---------|---------|------------------|
 | **IX-A** | SELF-KNOWLEDGE | Identity-facing facts entering awareness (from conversation, READ-nnn, teaching). **Not** civilization corpora or domain libraries — those live in **SELF-LIBRARY** (CIV-MEM subdomain). |
+| **IX-A-identity (optional split)** | self-identity | Durable identity commitments (boundaries, role-level commitments, long-horizon identity direction) when instances choose split surfaces. |
 | **IX-B** | Curiosity | Topics that catch attention, engagement signals |
 | **IX-C** | Personality | Observed behavioral patterns, speech traits, emotional patterns, aesthetic tendencies, and value expressions; contradictions preserved with provenance |
 

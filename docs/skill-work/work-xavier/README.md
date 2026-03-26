@@ -28,7 +28,7 @@ This folder (everything **above** that `companion-xavier/` child) is **not** Xav
 
 1. **Primary output:** `companion-xavier` is the product; `work-xavier` is the shared execution interface.
 2. **Mirror scope:** mirror workflow docs, runbooks, checklists, and project ops artifacts; do **not** mirror identity Record prose across forks.
-3. **System of record:** durable identity truth lives in `companion-xavier/users/xavier/*` and enters only through gated merge.
+3. **System of record:** durable identity truth lives in `companion-xavier/users/xavier/*` and enters only through gated merge. Optional split model: `self-knowledge` (facts) and `self-identity` (durable commitments).
 4. **Directionality:** default canonical flow is from approved/maintained interface docs into mirrored copies; conflicts require human resolution.
 5. **Ownership (RACI):** agent drafts, Xavier/operator reviews, companion approves gated merges, human approves public ship.
 6. **Promotion path:** draft -> `recursion-gate.md` candidates -> approval/rejection -> `process_approved_candidates.py --apply`.

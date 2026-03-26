@@ -65,9 +65,9 @@ Use these rules everywhere docs list companion-self components (the `self-*` sta
 
 | Kind | Rule | Examples |
 |------|------|----------|
-| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
+| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
 | **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log in `self-archive.md`) |
-| **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-library.md`, `self-evidence.md`, `self-archive.md` |
+| **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-identity.md` (optional split surface), `self-library.md`, `self-evidence.md`, `self-archive.md` |
 | **Planned WORK coordination** | Not part of companion self; same label shape as other `self-*` files | **`self-work`** → `users/[id]/self-work.md` (operator coordination; **not** SELF-KNOWLEDGE) |
 
 **Do not** use sentence case (**Self-voice**) or mixed-case (**Self-Knowledge**) for standard labels. **Voice** and **Record** remain capitalized when meaning the product interfaces (tricameral mind), not as `self-voice` spelled with two capitals.
@@ -81,6 +81,7 @@ The **companion self** (the documented self + the self that companions) is compo
 | Component | Location | Description |
 |-----------|----------|-------------|
 | **self-knowledge** | self.md IX-A | **SELF-KNOWLEDGE** — identity-facing facts; from observation, READ-nnn, teaching. Domain corpora → **SELF-LIBRARY** / CIV-MEM, not IX-A dumps. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md). |
+| **self-identity** | self-identity.md (optional) | Durable identity commitments — boundaries, role-level commitments, long-horizon direction — when an instance uses the split surface; gated like the rest of the Record. See [canonical-paths.md](canonical-paths.md), [identity-fork-protocol.md](identity-fork-protocol.md). |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
 | **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
