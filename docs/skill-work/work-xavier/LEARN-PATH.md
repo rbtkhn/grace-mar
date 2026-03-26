@@ -10,6 +10,7 @@
 1. **Stage A — Orientation (Day 1, 30-45 min)**
    - Read core purpose + boundary docs
    - Complete Session 0 capture
+   - Initialize `work-business/xavier` starter pack from survey + business docs
    - Understand gate flow (no hand merge)
 
 2. **Stage B — Guided operations (Week 1)**
@@ -45,4 +46,16 @@
 - Stage B complete when Xavier can run one full post cycle with checklists and manual ship.
 - Stage C complete when one full week closes with KPI + budget + retro entries.
 - Stage D complete when Xavier can explain mirror scope, gate flow, and escalation rules unaided.
+
+---
+
+## Survey -> learning-path wiring rule
+
+Use Session 0 outputs to choose the first learning objective in Stage B:
+
+- If Section F emphasizes unclear direction/resources, start with **LO-01** + **LO-05** basics.
+- If Section F emphasizes delivery/growth goals, start with **LO-03** + **LO-05**.
+- If Section E/G signals risk or boundary uncertainty, start with **LO-02** + **LO-06**.
+
+This keeps early learning work aligned with Xavier's stated business goals and constraints.
 

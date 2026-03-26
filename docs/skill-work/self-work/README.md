@@ -14,6 +14,19 @@
 
 **Decision rule:** Lane-specific → that `work-*` doc. Cross-lane sequencing → `self-work.md`. Identity facts → `self.md` + gate.
 
+---
+
+## Optional template module: territory sync pack
+
+Use [sync-pack/README.md](sync-pack/README.md) for a reusable manual sync pattern across instances.
+
+Includes:
+
+- contract template (`SYNC-CONTRACT.template.md`)
+- log template (`SYNC-LOG.template.md`)
+- optional daily aggregator (`SYNC-DAILY.template.md`, training mode)
+- enablement runbook (`ENABLE-SYNC-PACK.md`)
+
 **Instance file:** [users/grace-mar/self-work.md](../../../users/grace-mar/self-work.md) (grace-mar) · companion-xavier subtree: `companion-xavier/users/xavier/self-work.md` (placeholder at seed).
 
 **Upstream:** companion-self template should add `users/_template/self-work.md` + this README when merged.

@@ -16,6 +16,15 @@
 | [first-good-morning-runbook.md](first-good-morning-runbook.md) | First-load onboarding script + checklist (new Cursor user) |
 | [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md) | Beginner-first first session flow (no terminal required) |
 | [LEARN-PATH.md](LEARN-PATH.md) | Progressive learning path from onboarding to advanced operator |
+| [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) | Beginner-safe control plane for learning outcomes and behavior quality (Green/Yellow/Red) |
+| [SYNC-DAILY.md](SYNC-DAILY.md) | Xavier-only single-surface daily sync snapshot (work-dev + work-politics) |
+| [../self-work/sync-pack/README.md](../self-work/sync-pack/README.md) | Template sync-pack reference used by Xavier daily template-alignment check |
+| [work-dev-mirror/README.md](work-dev-mirror/README.md) | Xavier mirror of `work-dev` practices (beginner-safe) |
+| [work-dev-mirror/SYNC-CONTRACT.md](work-dev-mirror/SYNC-CONTRACT.md) | Daily manual sync rules from Grace-Mar `work-dev` into Xavier mirror |
+| [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md) | Daily sync-check ledger (status + proposed updates) |
+| [work-politics-mirror/README.md](work-politics-mirror/README.md) | Xavier mirror of `work-politics` sync workflow |
+| [work-politics-mirror/SYNC-CONTRACT.md](work-politics-mirror/SYNC-CONTRACT.md) | Daily manual sync rules from Grace-Mar `work-politics` |
+| [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md) | Daily `work-politics` sync-check ledger |
 | [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md) | Copy/paste prompt library for drafting, stress-test, and week close |
 | [CHECKLISTS.md](CHECKLISTS.md) | Pre-post, stress-test, week-close, and Record-safety checklists |
 | [GLOSSARY-FOR-BEGINNERS.md](GLOSSARY-FOR-BEGINNERS.md) | Plain-language definitions for key process terms |
@@ -26,3 +35,4 @@
 | **Subtree** [companion-xavier/README.md](companion-xavier/README.md) | Xavier tree root |
 | **Survey** [companion-xavier/docs/seed-survey/seed-survey-initiation.md](companion-xavier/docs/seed-survey/seed-survey-initiation.md) | MCQ instrument |
 | **Capture** [companion-xavier/docs/seed-survey/seed-survey-capture.md](companion-xavier/docs/seed-survey/seed-survey-capture.md) | Answer grid (do not edit instrument) |
+| **Business intake workspace** [../work-business/xavier/README.md](../work-business/xavier/README.md) | WORK-only starter pack populated from survey + uploaded business docs |

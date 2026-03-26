@@ -13,7 +13,9 @@ This folder (everything **above** that `companion-xavier/` child) is **not** Xav
 **Session 0:** [companion-xavier/docs/seed-survey/seed-survey-initiation.md](companion-xavier/docs/seed-survey/seed-survey-initiation.md) (MCQ) **before** first good morning — [GOOD-MORNING.md](GOOD-MORNING.md), [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md).
 **First-load onboarding:** [first-good-morning-runbook.md](first-good-morning-runbook.md) — operator script + Xavier startup script + completion checklist.
 **No-terminal first day:** [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md) — beginner-safe flow for first session.
-**Learning system:** [LEARN-PATH.md](LEARN-PATH.md) · [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md) · [CHECKLISTS.md](CHECKLISTS.md) · [GLOSSARY-FOR-BEGINNERS.md](GLOSSARY-FOR-BEGINNERS.md)
+**Learning system:** [LEARN-PATH.md](LEARN-PATH.md) · [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) · [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md) · [CHECKLISTS.md](CHECKLISTS.md) · [GLOSSARY-FOR-BEGINNERS.md](GLOSSARY-FOR-BEGINNERS.md)
+**Daily sync surface (Xavier-only):** [SYNC-DAILY.md](SYNC-DAILY.md) — single-page work-dev + work-politics sync status.
+**work-dev mirror:** [work-dev-mirror/README.md](work-dev-mirror/README.md) — beginner-safe translation of `work-dev` operating patterns for Xavier.
 
 **Execution pack (current):** [content-plan-week1-2026-03-24.md](content-plan-week1-2026-03-24.md) — KY-4 week plan with post cards, stress-test matrix, and human-approval ship protocol.
 **3-month budget spec:** [content-spec-3-month-10000-budget.md](content-spec-3-month-10000-budget.md) — 12-week cadence, KPI definitions, escalation rules, and hard-cap `$10,000` allocation.

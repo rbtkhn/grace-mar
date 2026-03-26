@@ -73,7 +73,8 @@ If unclear at any step, pause and ask before posting or merging.
 | 2 | Open `docs/skill-work/work-xavier/INDEX.md` | Xavier | [ ] |
 | 3 | Open `docs/skill-work/work-xavier/GOOD-MORNING.md` | Xavier | [ ] |
 | 4 | Open `docs/skill-work/work-xavier/SESSION-0-OPERATOR.md` | Xavier + Operator | [ ] |
-| 5 | Complete `seed-survey-capture.md` rows (Q1-28) | Xavier | [ ] |
+| 5 | Complete `seed-survey-capture.md` rows (Q1-31) | Xavier | [ ] |
+| 5a | Initialize `docs/skill-work/work-business/xavier/` starter pack from survey + business docs | Xavier + Operator | [ ] |
 | 6 | Confirm no hand-edits to `users/xavier/self.md` | Operator | [ ] |
 | 7 | Stage first candidate set in `users/xavier/recursion-gate.md` | Operator | [ ] |
 | 8 | Xavier reviews/approves candidates | Xavier | [ ] |

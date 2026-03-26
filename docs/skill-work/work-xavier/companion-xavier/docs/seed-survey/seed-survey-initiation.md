@@ -1,6 +1,6 @@
 # Seed survey — Session 0 (MCQ) — companion-xavier
 
-**Purpose:** Bootstrap **IX-B (curiosity)**, **IX-C (personality)**, **intent / economic** signals as **candidates** — **not** direct merges. Answers are **self-reported**; stage with `provenance: seed_survey_mcq` until behavior or artifacts confirm.
+**Purpose:** Bootstrap **IX-B (curiosity)** and **IX-C (personality)** first, plus business-intent signals, as **candidates** — **not** direct merges. Answers are **self-reported**; stage with `provenance: seed_survey_mcq` until behavior or artifacts confirm.
 
 **Rules:** Choose **one** letter per question unless marked **multi-select**. Record answers in [seed-survey-capture.md](seed-survey-capture.md). **Do not** paste answers straight into `self.md`.
 
@@ -55,7 +55,7 @@
 
 ---
 
-## C. Work domain (IX-A adjacency — declarative)
+## C. Work domain & skills baseline (IX-B/IX-C adjacent)
 
 **Q6** Which **have you directly worked in**? *(pick one primary)*
 
@@ -71,6 +71,17 @@
 - **B)** Business daytime  
 - **C)** Evenings  
 - **D)** Split / unpredictable  
+
+**Q7a (multi-select)** Current professional skills you can already execute with confidence?
+
+- **A)** Research and source verification  
+- **B)** Writing/editing short-form social copy  
+- **C)** Thread strategy and message framing  
+- **D)** KPI tracking / reporting / dashboards  
+- **E)** Client communication / stakeholder updates  
+- **F)** Ops and process documentation  
+- **G)** Basic tooling/automation with AI  
+- **H)** Unsure / still early  
 
 ---
 
@@ -161,81 +172,120 @@
 
 ---
 
-## F. Economic / intent (not IX unless stated as identity)
+## F. Business dreams, objectives, and resources (primary IX-B input + intent)
 
-**Q19** Hours per week you **hope** to spend on **client / EA** work in the next 90 days:
+**Q19** Which long-term direction best matches your **business dream** right now?
+
+- **A)** Build an independent AI-enabled consulting practice  
+- **B)** Become a top-tier operator in political/media strategy  
+- **C)** Build digital products / tools as a founder path  
+- **D)** Hybrid (client services now, product later)  
+- **E)** Still exploring  
+
+**Q20** Main **90-day business objective** (pick one):
+
+- **A)** Build consistent operating rhythm and delivery quality  
+- **B)** Grow client trust and measurable outcomes  
+- **C)** Expand skills quickly for larger responsibility  
+- **D)** Build portfolio/proof assets for future offers  
+- **E)** Clarify direction before scaling work
+
+**Q21** Hours per week you **hope** to spend on **client / EA** work in the next 90 days:
 
 - **A)** Under 10  
 - **B)** 10–20  
 - **C)** 20–30  
 - **D)** 30+  
-- **E)** Unsure  
+- **E)** Unsure
 
-**Q20** Hours per week for **building your fork / companion-self-aligned** work:
+**Q22** Hours per week for **building your fork / companion-self-aligned** work:
 
 - **A)** Under 5  
 - **B)** 5–10  
 - **C)** 10–20  
 - **D)** 20+  
-- **E)** Unsure  
+- **E)** Unsure
 
-**Q21** Appetite for **future paid client work** similar to current lane:
+**Q23** Which resources do you have today to support your goal? *(pick strongest constraint-aware option)*
+
+- **A)** Time + focus, limited money/tools  
+- **B)** Some money/tools, limited time  
+- **C)** Strong operator support, limited independent confidence  
+- **D)** Independent confidence, limited structure  
+- **E)** Not sure yet
+
+**Q24** Appetite for **future paid client work** similar to current lane:
 
 - **A)** High — want more  
 - **B)** Moderate — selective  
 - **C)** Low — focus on fork  
-- **D)** Unclear  
+- **D)** Unclear
 
-**Q22** Comfort discussing **rates / billing** with operator:
+**Q25** Comfort discussing **rates / billing** with operator:
 
 - **A)** Comfortable  
 - **B)** Somewhat  
 - **C)** Prefer not to lead  
-- **D)** Not applicable yet  
+- **D)** Not applicable yet
 
-**Q23** Primary **economic** goal for the next year (pick closest):
+**Q26** Primary **economic** goal for the next year (pick closest):
 
 - **A)** Replace or match a job segment  
 - **B)** Side income  
 - **C)** Learning / portfolio — money secondary  
-- **D)** Not decided  
+- **D)** Not decided
 
 ---
 
 ## G. Risk & compliance (IX-C / WORK boundary)
 
-**Q24** When instructions conflict with your judgment:
+**Q27** When instructions conflict with your judgment:
 
 - **A)** Follow instructions  
 - **B)** Pause and ask  
 - **C)** Propose alternative  
-- **D)** Depends on stakes  
+- **D)** Depends on stakes
 
-**Q25** Handling **private** campaign or client details inside the fork:
+**Q28** Handling **private** campaign or client details inside the fork:
 
 - **A)** Minimize — keep WORK notes separate  
 - **B)** OK in gated Record if approved  
 - **C)** Prefer operator-held only  
-- **D)** Still forming policy  
+- **D)** Still forming policy
 
 ---
 
 ## H. Closure
 
-**Q26** Confidence you can finish **Session 0** today without splitting:
+**Q29** Confidence you can finish **Session 0** today without splitting:
 
 - **A)** High  
 - **B)** Medium — may pause  
-- **C)** Low — need async  
+- **C)** Low — need async
 
-**Q27** Preferred follow-up after survey:
+**Q30** Preferred follow-up after survey:
 
 - **A)** Short operator call  
 - **B)** Async written recap only  
 - **C)** Screen share walk of gate  
-- **D)** No preference  
+- **D)** No preference
 
-**Q28** Anything else to flag? *(optional one line in capture file — not a substitute for MCQ)*
+**Q31** Anything else to flag? *(optional one line in capture file — not a substitute for MCQ)*
+
+---
+
+## I. Business document intake handoff (populate WORK)
+
+After Q1-Q31 are captured, run this handoff:
+
+1. Open or create `docs/skill-work/work-business/xavier/`.
+2. Add/attach Xavier's business docs (offers, SOPs, KPI sheets, planning notes, briefs).
+3. Build three starter files:
+   - `source-index.md`
+   - `objectives-and-constraints.md`
+   - `week-0-priority-stack.md`
+4. Use survey Section F answers (business dream/objective/resources) as initialization inputs.
+5. Keep this in WORK docs; identity updates still require gate approval.
 
 ---
 
@@ -246,10 +296,10 @@ Use this when staging **candidates** (not automatic merges). Adjust labels to ma
 | Q range | Primary staging |
 |---------|-----------------|
 | A–B | IX-A adjacency (language/education/tools) — keep **low-stakes**; optional LEARN-* if curiosity implied |
-| C | IX-A work domain — declarative only |
+| C | Skills + work baseline -> primarily IX-B (what she wants to learn next) and IX-C (work style under load) |
 | D | IX-B — CUR-* / LEARN-* topic buckets |
 | E | IX-C — PER-* facets (see situational stems) |
-| F | **intent.md** / operator planning — not IX unless she states as identity |
+| F | Primary feed for IX-B (business curiosity/objective direction) + `intent.md` planning notes |
 | G–H | Mixed — PER-* or WORK policy notes |
 
 **Provenance:** `seed_survey_mcq` · **evidence_strength:** `single_signal` until non-survey evidence exists.
@@ -260,7 +310,7 @@ Use this when staging **candidates** (not automatic merges). Adjust labels to ma
 
 | If staging | `mind_category` |
 |------------|-----------------|
-| Topic / learning | `curiosity` |
+| Topic / learning / business objective | `curiosity` |
 | Style / under load / feedback | `personality` |
 | Declarative fact about self (survey) | `knowledge` |
 

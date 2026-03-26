@@ -2,7 +2,7 @@
 
 **Do not edit** [seed-survey-initiation.md](seed-survey-initiation.md). Record answers here (or in a copy).
 
-| Q# | Letter (A–E) | Notes (optional) |
+| Q# | Letter(s) | Notes (optional) |
 |----|--------------|------------------|
 | 1 | | |
 | 2 | | |
@@ -32,5 +32,8 @@
 | 26 | | |
 | 27 | | |
 | 28 | | |
+| 29 | | |
+| 30 | | |
+| 31 | | |
 
-**After completion:** Operator stages candidates per survey appendix mapping; **no** hand-merge into `self.md`.
+**After completion:** Operator stages candidates per survey appendix mapping with priority on **IX-B curiosity** and **IX-C personality** signals; **no** hand-merge into `self.md`.

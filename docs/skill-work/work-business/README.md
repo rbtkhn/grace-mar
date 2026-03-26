@@ -21,6 +21,7 @@
 | Doc / file | Purpose |
 |------------|---------|
 | **This README** | Territory scope, purpose, boundaries. |
+| **[xavier/](xavier/)** | Xavier business intake workspace seeded from Session 0 survey + uploaded business docs (WORK-only starter pack). |
 | **[grace-gems/](grace-gems/)** | **Grace Gems** (Etsy) — shop context, roadmap, agent-encoding, message-assist calibration, market research, workflow reminders. Canonical operator entry: [grace-gems/README.md](grace-gems/README.md). |
 | **[worldland-decentralized-ai-mainnet-2026-03.md](worldland-decentralized-ai-mainnet-2026-03.md)** | Deep research: WorldLand / LiberVance — Decentralized Cloud Native AI Mainnet (MANify, ECCVCC, GIST pilot, triangulation + synthesis). March 2026. |
 

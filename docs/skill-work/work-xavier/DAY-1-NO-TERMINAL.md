@@ -20,7 +20,7 @@ Open:
 - `companion-xavier/docs/seed-survey/seed-survey-initiation.md` (read only)
 - `companion-xavier/docs/seed-survey/seed-survey-capture.md` (edit here)
 
-Fill all rows (Q1-Q28) in capture.  
+Fill all rows (Q1-Q31) in capture.  
 Do not edit initiation file.
 
 ---
@@ -49,7 +49,27 @@ Rules:
 
 ---
 
-## Step 4 — Review checklist before saving
+## Step 4 — Initialize business workspace (no terminal)
+
+Open `docs/skill-work/work-business/xavier/README.md`, then ask Cursor AI:
+
+```text
+Use my Session 0 capture and any business docs I provided to initialize work-business/xavier starter files.
+
+Create:
+- docs/skill-work/work-business/xavier/source-index.md
+- docs/skill-work/work-business/xavier/objectives-and-constraints.md
+- docs/skill-work/work-business/xavier/week-0-priority-stack.md
+
+Rules:
+- WORK only (no self.md edits)
+- cite source file names for each extracted claim
+- keep recommendations concrete and 7-day actionable
+```
+
+---
+
+## Step 5 — Review checklist before saving
 
 - [ ] Candidates are in `recursion-gate.md` only
 - [ ] `self.md` unchanged
@@ -58,13 +78,13 @@ Rules:
 
 ---
 
-## Step 5 — Log completion
+## Step 6 — Log completion
 
 Add one line to:
 - `companion-xavier/users/xavier/session-log.md`
 
 Template:
-- `YYYY-MM-DD: Day 1 no-terminal onboarding complete; Session 0 captured; candidates staged for review.`
+- `YYYY-MM-DD: Day 1 no-terminal onboarding complete; Session 0 captured; candidates staged; work-business/xavier starter pack initialized.`
 
 ---
 
