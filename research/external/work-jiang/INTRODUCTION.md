@@ -52,7 +52,7 @@ The **Civilization** lecture series is **Volume II** in the same multivolume lin
 
 ## Future volume — Game Theory (Volume IV)
 
-**Game Theory** is registered as **Volume IV** in the Predictive History line. Lecture **sources** **#1–#15** are ingested in-repo (`gt-01`–`gt-15`); book Part I drafts, analysis files, chapter mapping, and Part II method are tracked in [`book/VOLUME-IV-GAME-THEORY.md`](book/VOLUME-IV-GAME-THEORY.md).
+**Game Theory** is registered as **Volume IV** in the Predictive History line. Lecture **sources** **#1–#16** are ingested in-repo (`gt-01`–`gt-16`); book Part I drafts, analysis files, chapter mapping, and Part II method are tracked in [`book/VOLUME-IV-GAME-THEORY.md`](book/VOLUME-IV-GAME-THEORY.md).
 
 ## Future volume — Great Books (Volume V)
 

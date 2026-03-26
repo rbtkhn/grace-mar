@@ -1,5 +1,7 @@
 # GOOD-MORNING — companion-xavier (`fork_id`: xavier)
 
+**First-ever session?** Start with [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md), then [first-good-morning-runbook.md](first-good-morning-runbook.md), then return here for normal rhythm.
+
 **Prerequisite:** **Session 0** complete — [seed-survey-initiation.md](companion-xavier/docs/seed-survey/seed-survey-initiation.md) (all MCQs answered and saved). **Do not** start the ten beginner tasks until Session 0 is done.
 
 ## Daily rhythm (shape)

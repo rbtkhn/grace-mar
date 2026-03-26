@@ -1847,6 +1847,21 @@ sources:
     curated_lecture: complete
     analysis: missing
     chapter_mapping: not_started
+- source_id: gt-16
+  video_id: 0aASxQrJYuo
+  title: 'Game Theory #16: Pax Judaica Rising'
+  canonical_url: https://www.youtube.com/watch?v=0aASxQrJYuo
+  publication_date: 2026-03-26
+  lecture_path: lectures/game-theory-16-pax-judaica-rising.md
+  analysis_path: analysis/0aASxQrJYuo-game-theory-16-analysis.md
+  series: game-theory
+  episode: 16
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: not_started
 - source_id: gb-01
   video_id: TsD-8FGA84A
   title: 'Great Books #1: Secrets of the Universe'
