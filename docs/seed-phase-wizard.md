@@ -2,6 +2,8 @@
 
 **Purpose:** Operator-facing bootstrap and daily start ritual under canonical instance paths. **Governed by:** gated pipeline — these tools do **not** write `self.md`, `self-archive.md`, or `bot/prompt.py`; durable Record changes use [identity-fork-protocol.md](identity-fork-protocol.md).
 
+**Template alignment:** Companion-self **Seed Phase v2** (JSON artifacts + schemas) is documented separately; see [companion-self-seed-phase-v2-mapping.md](companion-self-seed-phase-v2-mapping.md) for how this wizard relates to that protocol.
+
 ---
 
 ## Scripts

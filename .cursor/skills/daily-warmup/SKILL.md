@@ -28,6 +28,8 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
 
 **Work-jiang (Jiang) standing note:** The first curated lecture series in-repo is **Geo-Strategy** (`research/external/work-jiang/lectures/`). The **second** series is **Civilization** (channel naming). When the operator is about to upload or integrate **Civilization** transcripts, mention it in the brief (next step: raw pulls under `research/external/youtube-channels/predictive-history/`, then curated files per [WORKFLOW-transcripts.md](../../../research/external/work-jiang/WORKFLOW-transcripts.md)). See also `users/grace-mar/work-jiang.md` § Operator schedule.
 
+**Alpha / mastery lens (optional):** If the operator ties the day to **mastery gates**, **2-hour academic ceiling**, or **“Time Back”**, point at [alpha-mastery-adaptation.md](../../../docs/alpha-mastery-adaptation.md) and optional `python3 scripts/good-morning-brief.py` / `reflection-proposals/DAILY-INTENTION-*.md` — design vocabulary, not school product claims.
+
 1. Run the warmup commands below (warmup + harness when instance state matters).
 2. **Always** run today’s combined daily brief and write it to the repo:
    ```bash

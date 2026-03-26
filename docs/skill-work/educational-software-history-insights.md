@@ -6,6 +6,8 @@
 
 **Design principles (Grace-Mar):** Meet where they are, gated pipeline, knowledge boundary, companion sovereignty, evidence-based.
 
+**Companion mapping:** For Alpha mastery mechanics ↔ RECURSION-GATE, skill-think/write, and work-jiang compression, see [alpha-mastery-adaptation.md](../alpha-mastery-adaptation.md).
+
 ---
 
 ## Executive Summary

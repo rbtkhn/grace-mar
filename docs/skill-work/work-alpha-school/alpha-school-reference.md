@@ -1,5 +1,7 @@
 # Alpha School Reference (Skill-Work-Alpha-School Submodule)
 
+**Mastery philosophy ↔ fork:** For how Alpha’s mastery mechanics (90% progression gates, 80–85% in-lesson band, 2-hour block, Time Back) relate to **RECURSION-GATE**, **skill-think/write**, **WORK**, and **Jiang compression**, see **[alpha-mastery-adaptation.md](../../alpha-mastery-adaptation.md)**.
+
 **Companion-Self template.** **** is a tool designed for its **target market**:
 
 - **Alpha School families** — at or considering Alpha School

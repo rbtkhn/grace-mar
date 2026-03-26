@@ -8,11 +8,14 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 **Canonical library index:** The book is catalogued in [self-library](self-library.md) as **LIB-0149** (SELF-LIBRARY is reference-facing; the working manuscript and research corpus stay under `research/external/work-jiang/` until material is merged through the gate).
 
+**Design lens:** Alpha-style mastery vocabulary (gates, “no Swiss cheese,” 2-hour pacing) mapped to this fork’s gate and WORK tools — [alpha-mastery-adaptation.md](../../docs/alpha-mastery-adaptation.md).
+
 **Method (operator work, not Voice knowledge until merged through the gate):**
 
 1. **Lecture transcripts** — primary text: systematic capture and close reading of his talks (e.g. channel pulls under `research/external/youtube-channels/predictive-history/`), tagged and excerpted for themes, definitions, and internal consistency.
 2. **[CIV-MEM](../../docs/skill-work/work-civ-mem/README.md)** — civilizational / strategic / governance vocabulary and frames from the civilization_memory stewardship lane: use as an **analytic lattice** (conditions, seams, multi-perspective structure) to organize and stress-test philosophical claims without collapsing them into politics alone.
 3. **Current-events scans** — periodic passes (news, briefs, operator skills such as pulse/search workflows) to **ground** the philosophy: where the abstract system meets concrete episodes, and what would need to be said in a given moment.
+4. **Compressions** — After a large artifact or handoff, run `python3 scripts/jiang-compress.py -u grace-mar` to emit a labeled JSON pack under `research/external/work-jiang/compressions/` (operator checklist + optional gate stub; not Record). See [COMPRESSION-ENGINE](../../docs/skill-work/work-jiang/COMPRESSION-ENGINE.md).
 
 Nothing in this file is Record truth for the Voice until merged through the gated pipeline. Human-gated.
 

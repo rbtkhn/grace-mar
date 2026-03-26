@@ -14,6 +14,7 @@ Operator- and agent-facing checklist so multi-step Jiang work stays reviewable a
 
 ## Before implementation
 
+0. **Large handoff / artifact** — Consider compressing into `research/external/work-jiang/compressions/` with `python3 scripts/jiang-compress.py -u <fork-id>` ([COMPRESSION-ENGINE.md](../../../docs/skill-work/work-jiang/COMPRESSION-ENGINE.md)); optional gate stub only if Record merge is intended.
 1. **Branch and tree** — Prefer a dedicated branch. Glance at `git status`: unrelated untracked paths (`claims/`, `evidence-packs/`, etc.) make review harder; stash, commit, exclude locally, or isolate before stacking new changes.
 2. **Scope** — Confirm lane: **Geo-Strategy** (`lectures/geo-strategy-*.md`, not other lecture lanes unless the task says so). If the thread also touches Record/pipeline/Voice, run harness warmup per repo rules and paste output once.
 3. **Plan alignment** — If work maps to phased PRs (quotes → counter-readings → chronology → validator/CI), name commits or branches to those phases so bisect stays cheap.
@@ -79,6 +80,7 @@ When adding or updating `lectures/*.md` with pasted ASR, run the orthography pas
 
 ## Related
 
+- [COMPRESSION-ENGINE.md](../../../docs/skill-work/work-jiang/COMPRESSION-ENGINE.md) — Jiang Compression Engine v1 (`scripts/jiang-compress.py`)
 - `research/external/work-jiang/README.md` — § Boundaries (membrane); production pipeline; comparative layer
 - `docs/audit-boundary-grace-mar-companion-xavier-companion-self.md` — grace-mar · companion-self · companion-xavier (instance-wide; not Jiang data rules)
 - `scripts/work_jiang/validate_comparative_layer.py` — Gates for high-priority analysis chapters and chronology
