@@ -54,7 +54,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 | Standard label | File | Description |
 |----------------|------|-------------|
 | **self-library** | users/[id]/self-library.md | **SELF-LIBRARY** — reference-facing governed domains (not SELF-KNOWLEDGE); **CIV-MEM** = sub-library (scopes + corpus); gated pipeline |
-| **self-archive** | users/[id]/self-archive.md | Gated log of approved activity (voice and non-voice); appended only on merge |
+| **self-archive** | *(deprecated path)* | **Canonical:** gated approved log inside **`self-evidence.md` § VIII**. Optional `self-archive.md` stub for old links; do not append there. |
 | **self-memory** | users/[id]/memory.md | Ephemeral context in **short / medium / long** horizons (see [memory-template.md](memory-template.md)); not part of the Record; optional; Voice loads short→long with caps |
 
 Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
@@ -66,7 +66,7 @@ Use these rules everywhere docs list companion-self components (the `self-*` sta
 | Kind | Rule | Examples |
 |------|------|----------|
 | **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
-| **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log in `self-archive.md`) |
+| **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log — `self-evidence.md` § VIII; legacy `self-archive.md` stub only) |
 | **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-identity.md` (optional split surface), `self-library.md`, `self-evidence.md`, `self-archive.md` |
 | **Planned WORK coordination** | Not part of companion self; same label shape as other `self-*` files | **`self-work`** → `users/[id]/self-work.md` (operator coordination; **not** SELF-KNOWLEDGE) |
 
@@ -86,7 +86,7 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
 | **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
-| **self-archive** | self-archive.md | Gated log of approved activity |
+| **self-archive** | `self-evidence.md` § VIII | Gated approved log (voice + non-voice); standalone `self-archive.md` deprecated |
 | **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
 | **self-memory** | memory.md | Ephemeral session context (not part of Record) |
 | **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self |

@@ -13,7 +13,8 @@
 | Identity + three-dimension mind (IX-A/B/C) | `users/[id]/self.md` |
 | Durable identity commitments (optional split surface) | `users/[id]/self-identity.md` |
 | Activity log (ACT-*, READ-*, WRITE-*, CREATE-*) | `users/[id]/self-evidence.md` |
-| Gated log of approved activity (voice + non-voice) | `users/[id]/self-archive.md` |
+| Gated approved activity (voice + non-voice) | **`self-evidence.md` § `## VIII. GATED APPROVED LOG (SELF-ARCHIVE)`** — appended only by `process_approved_candidates.py` |
+| `self-archive.md` (legacy pointer) | Optional stub only — **do not append**; use § VIII above. Legacy instances may still rotate standalone file until migrated. |
 | Pipeline staging (candidates above `## Processed`) | `users/[id]/recursion-gate.md` |
 | Session / interaction history | `users/[id]/session-log.md` |
 | Capability containers (THINK, WRITE, etc.) | `users/[id]/skills.md` |

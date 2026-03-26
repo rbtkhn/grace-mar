@@ -82,7 +82,7 @@ meta_artifact_path: users/grace-mar/artifacts/meta-diffs/CANDIDATE-0090.patch
 
 ## Merge pipeline behavior
 
-On **`META_INFRA` + `approved`**, the merge script **skips** SELF/EVIDENCE/prompt updates for that candidate and still **moves** the block to **Processed**, emits a pipeline event, and updates session/self-archive with a **META-INFRA** marker. See [`scripts/process_approved_candidates.py`](../scripts/process_approved_candidates.py).
+On **`META_INFRA` + `approved`**, the merge script **skips** SELF/EVIDENCE/prompt updates for that candidate and still **moves** the block to **Processed**, emits a pipeline event, and updates session / **self-evidence § VIII** with a **META-INFRA** marker. See [`scripts/process_approved_candidates.py`](../scripts/process_approved_candidates.py).
 
 ---
 

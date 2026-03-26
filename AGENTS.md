@@ -172,17 +172,16 @@ When pipeline candidates are approved, **merge** into all of these together. **M
 | File | What to update |
 |------|---------------|
 | `users/[id]/self.md` | New entries merged into IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
-| `users/[id]/self-evidence.md` | New activity log entry (ACT-XXXX) |
+| `users/[id]/self-evidence.md` | New activity log entry (ACT-XXXX) **and** append **§ VIII. GATED APPROVED LOG** per merged candidate (gated; only `scripts/process_approved_candidates.py` writes § VIII) |
 | `users/[id]/recursion-gate.md` | Move candidates from Candidates to Processed |
 | `users/[id]/session-log.md` | New session record; pipeline merges append lines under `## Pipeline merge (automated)` |
-| `users/[id]/self-archive.md` | Append APPROVED entry per merged candidate (gated; only `scripts/process_approved_candidates.py` writes here) |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/pipeline-events.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
 | **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-llm.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
 
 **Merge only via script.** When the companion approves candidates, the agent must **not** edit self.md, self-evidence.md, or bot/prompt.py directly. The agent must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt-based flow: `--generate-receipt` then `--apply --receipt <path>`). Merging is performed only by the script; this preserves five-file consistency and the audit trail.
 
-**Real-time log vs gated archive:** The bot and Mini App append to `users/[id]/session-transcript.md` (raw conversation log for operator continuity). SELF-ARCHIVE is **not** written in real time; it is appended only when candidates are merged (same gate as SELF/EVIDENCE). SELF-ARCHIVE holds voice entries and other approved activities (e.g. operator actions, non-voice).
+**Real-time log vs gated approved log:** The bot and Mini App append to `users/[id]/session-transcript.md` (raw conversation log for operator continuity). The **gated approved log** is **not** written in real time; it is appended only when candidates are merged — as **`self-evidence.md` § VIII** (same gate as SELF/EVIDENCE). It holds voice-related approved summaries and other merge-line activity. Standalone `self-archive.md` is **deprecated** (pointer stub only); see [canonical-paths.md](docs/canonical-paths.md).
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 
@@ -250,7 +249,7 @@ grace-mar/
         ├── pipeline-events.jsonl  # Append-only pipeline audit log
         ├── harness-events.jsonl    # Optional harness audit (merge/export); see docs/harness-inventory.md
         ├── compute-ledger.jsonl   # Token usage (energy ledger)
-        ├── self-archive.md            # self-archive — gated log of approved activity (voice + non-voice) — private
+        ├── self-archive.md            # optional stub — gated approved log is self-evidence.md § VIII
         ├── journal.md                # Daily highlights — public-suitable, shareable
 │   └── archives/             # Rotated chunks (self-archive-YYYY-MM.md)
         └── artifacts/          # Raw files (writing, artwork)

@@ -53,7 +53,6 @@ SELF_PATH = PROFILE_DIR / "self.md"
 EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 INTENT_PATH = PROFILE_DIR / "intent.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
-SELF_ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
 PRP_PATH = REPO_ROOT / "grace-mar-llm.txt"
 MERGE_RECEIPTS_PATH = PROFILE_DIR / "merge-receipts.jsonl"
 MIN_EVIDENCE_TIER = 3
@@ -102,7 +101,7 @@ def _next_id(content: str, prefix: str) -> str:
 
 def _set_user(user_id: str) -> None:
     """Configure per-user paths for this invocation."""
-    global USER_ID, PROFILE_DIR, RECURSION_GATE_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH, SELF_ARCHIVE_PATH
+    global USER_ID, PROFILE_DIR, RECURSION_GATE_PATH, SELF_PATH, EVIDENCE_PATH, INTENT_PATH, MERGE_RECEIPTS_PATH
     USER_ID = user_id.strip()
     PROFILE_DIR = REPO_ROOT / "users" / USER_ID
     RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
@@ -110,7 +109,6 @@ def _set_user(user_id: str) -> None:
     EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
     INTENT_PATH = PROFILE_DIR / "intent.md"
     MERGE_RECEIPTS_PATH = PROFILE_DIR / "merge-receipts.jsonl"
-    SELF_ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
 
 
 def _prp_output_path() -> Path:
@@ -610,23 +608,40 @@ def _extract_source_exchange_snippet(block: str, max_chars: int = 600) -> str:
     return (out[:max_chars] + "...") if len(out) > max_chars else out
 
 
-def _self_archive_header() -> str:
+# Gated approved log: consolidated into self-evidence.md § VIII (replaces standalone self-archive.md).
+GATED_LOG_SECTION = "## VIII. GATED APPROVED LOG (SELF-ARCHIVE)"
+_END_FILE_LINE = re.compile(r"(?m)^END OF FILE.*$")
+
+
+def _gated_log_section_prologue() -> str:
     return (
-        "# SELF-ARCHIVE\n\n"
-        "> Append-only log of approved activity for the self (voice and non-voice). "
-        "Content is written here only when candidates are merged via process_approved_candidates. "
-        "Telegram, WeChat, Mini App today; eventually email, X, and other platform channels.\n\n---\n\n"
+        "\n\n"
+        + GATED_LOG_SECTION
+        + "\n\n"
+        + "> Append-only log of approved activity for the self (voice and non-voice). "
+        + "Written only when candidates are merged via process_approved_candidates. "
+        + "Consolidated from standalone `self-archive.md` (see docs/canonical-paths.md).\n\n"
+        + "---\n\n"
     )
 
 
-def _append_self_archive_entry(
+def _ensure_gated_log_section(evidence: str) -> str:
+    if GATED_LOG_SECTION in evidence:
+        return evidence
+    m = _END_FILE_LINE.search(evidence)
+    if m:
+        return evidence[: m.start()].rstrip() + _gated_log_section_prologue() + evidence[m.start() :]
+    return evidence.rstrip() + _gated_log_section_prologue()
+
+
+def _append_gated_evidence_log_entry(
     candidate_id: str,
     act_id: str,
     channel_key: str,
     summary: str,
     source_snippet: str,
 ) -> None:
-    """Append one APPROVED entry to SELF-ARCHIVE (gated merge path only)."""
+    """Append one APPROVED entry to self-evidence.md § VIII (gated merge path only)."""
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     label = _channel_label(channel_key)
     lines = [f"**[{ts}]** `APPROVED` ({label})\n", f"> {candidate_id} → {act_id}\n", f"> {summary[:300]}\n"]
@@ -635,11 +650,17 @@ def _append_self_archive_entry(
             lines.append(f"> {line[:400]}\n")
     lines.append("\n")
     block = "".join(lines)
-    content = _read(SELF_ARCHIVE_PATH) if SELF_ARCHIVE_PATH.exists() else ""
+    content = _read(EVIDENCE_PATH)
     if not content.strip():
-        content = _self_archive_header()
-    new_content = content.rstrip() + "\n\n" + block.strip() + "\n"
-    _write(SELF_ARCHIVE_PATH, new_content)
+        raise OSError(f"EVIDENCE missing or empty: {EVIDENCE_PATH}")
+    content = _ensure_gated_log_section(content)
+    m = _END_FILE_LINE.search(content)
+    if m:
+        insertion = "\n" + block.strip() + "\n"
+        new_content = content[: m.start()] + insertion + content[m.start() :]
+    else:
+        new_content = content.rstrip() + "\n\n" + block.strip() + "\n"
+    _write(EVIDENCE_PATH, new_content)
 
 
 def _append_session_log_for_merge(candidate_ids: list[str], approved_by: str) -> None:
@@ -1217,14 +1238,14 @@ def main() -> None:
             raise RuntimeError("checksum unchanged after merge; expected state change")
 
         for c, act_id, _ix in applied_candidates:
-            _append_self_archive_entry(
+            _append_gated_evidence_log_entry(
                 c["id"],
                 act_id,
                 c.get("channel_key") or "telegram",
                 c["summary"],
                 _extract_source_exchange_snippet(c["block"]),
             )
-        print("SELF-ARCHIVE updated.")
+        print("self-evidence.md § VIII (gated approved log) updated.")
         try:
             _append_session_log_for_merge([c["id"] for c, _, _ in applied_candidates], args.approved_by.strip())
             print("session-log.md updated.")

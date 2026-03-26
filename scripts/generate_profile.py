@@ -294,7 +294,7 @@ def collect_data() -> ProfileData:
         PROFILE_DIR / "skill-think.md",
         PROFILE_DIR / "skill-write.md",
     ]
-    archive_path = PROFILE_DIR / "self-archive.md"
+    archive_path = PROFILE_DIR / "self-archive.md"  # legacy; gated log is self-evidence § VIII
     session_transcript_path = PROFILE_DIR / "session-transcript.md"
     library_path = PROFILE_DIR / "self-library.md"
     journal_path = PROFILE_DIR / "journal.md"
@@ -306,7 +306,7 @@ def collect_data() -> ProfileData:
     skills_content = "\n".join(
         p.read_text() for p in skills_paths if p.exists()
     )
-    archive_content = archive_path.read_text() if archive_path.exists() else ""
+    archive_raw = archive_path.read_text() if archive_path.exists() else ""
     transcript_content = session_transcript_path.read_text() if session_transcript_path.exists() else ""
     library_content = library_path.read_text() if library_path.exists() else ""
     journal_content = journal_path.read_text() if journal_path.exists() else ""
@@ -326,7 +326,15 @@ def collect_data() -> ProfileData:
     personality_samples = seed_personality + personality_ix
     library_entries = parse_library(library_content)
     journal_entries = parse_journal(journal_content)
-    recent = parse_archive(transcript_content or archive_content, limit=15)
+    gated_viii = ""
+    if evidence_content and "## VIII. GATED APPROVED LOG" in evidence_content:
+        gated_viii = evidence_content[evidence_content.index("## VIII. GATED APPROVED LOG") :]
+    archive_for_recent = archive_raw
+    if (not archive_for_recent.strip()) or (
+        archive_for_recent.lstrip().lower().startswith("# self-archive.md (deprecated)")
+    ):
+        archive_for_recent = gated_viii
+    recent = parse_archive(transcript_content or archive_for_recent, limit=15)
 
     last_activity = "—"
     if recursion_gate_path.exists():

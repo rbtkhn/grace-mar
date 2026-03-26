@@ -57,7 +57,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
 - **self-skill-think**, **self-skill-write** (skills.md)
-- **self-archive** (self-archive.md)
+- **self-archive** (gated approved log: **`self-evidence.md` § VIII**; standalone `self-archive.md` deprecated)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
 - **self-memory** (memory.md) — ephemeral **short / medium / long** horizons for session continuity and meta pointers; not Record (see [memory-template.md](memory-template.md))
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)

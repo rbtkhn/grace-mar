@@ -739,4 +739,10 @@ Before accepting attestation:
 
 ---
 
+## Addendum (grace-mar instance layout): § VIII gated approved log
+
+Instance `self-evidence.md` files may include **## VIII. GATED APPROVED LOG (SELF-ARCHIVE)** after attestation/metrics sections. That block is **append-only** on pipeline merge (`process_approved_candidates.py`). It consolidates what was previously a separate `self-archive.md`. See [canonical-paths.md](canonical-paths.md).
+
+---
+
 END OF FILE — EVIDENCE–TEMPLATE v2.0

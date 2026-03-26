@@ -105,7 +105,7 @@ flowchart TB
 
 | Script | Writes |
 |--------|--------|
-| `process_approved_candidates.py` | SELF, EVIDENCE, prompt, recursion-gate, self-archive, PRP, merge-receipts |
+| `process_approved_candidates.py` | SELF, EVIDENCE (incl. § VIII gated log), prompt, recursion-gate, PRP, merge-receipts |
 | `export_prp.py` | PRP file |
 | Operator scripts staging | RECURSION-GATE only (parse_we_did, calibrate_from_miss) |
 

@@ -149,7 +149,7 @@ def _session_transcript_header() -> str:
 
 
 def _append_to_session_transcript(blocks: str) -> None:
-    """Append exchange to session-transcript.md (real-time log). self-archive.md is gated (merge only)."""
+    """Append exchange to session-transcript.md (real-time log). Gated approved log is self-evidence § VIII (merge only)."""
     try:
         SESSION_TRANSCRIPT_PATH.parent.mkdir(parents=True, exist_ok=True)
         if not SESSION_TRANSCRIPT_PATH.exists():
@@ -161,7 +161,7 @@ def _append_to_session_transcript(blocks: str) -> None:
 
 
 def _archive_miniapp(user_message: str, reply: str, is_lookup: bool = False, lookup_question: str | None = None) -> None:
-    """Append exchange to session-transcript.md (same policy as bot: real-time log; self-archive.md only on merge). Runs in background."""
+    """Append exchange to session-transcript.md (same policy as bot: real-time log; § VIII only on merge). Runs in background."""
     blocks = _format_archive_block("USER", user_message)
     if is_lookup and lookup_question:
         blocks += _format_archive_block("LOOKUP REQUEST", lookup_question)
