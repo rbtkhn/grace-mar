@@ -53,7 +53,7 @@ Use this when you have updates in companion-self that should flow into grace-mar
 
 | Step | Action |
 |------|--------|
-| 1 | **Get template state** — Clone or pull companion-self (e.g. `git clone https://github.com/rbtkhn/companion-self.git /tmp/companion-self` or open in a sibling directory). Note the commit or tag you're syncing from. |
+| 1 | **Get template state** — Clone or pull companion-self (e.g. `git clone https://github.com/rbtkhn/companion-self.git companion-self` at repo root per §0, or another path with `GRACE_MAR_COMPANION_SELF`). Note the commit or tag you're syncing from. |
 | 2 | **Read template inventory** — Check `template-manifest.json`, `template-version.json`, and `how-instances-consume-upgrades.md` in companion-self so you know the current upstream surface before comparing individual files. |
 | 3 | **Diff mapped paths** — Compare template files with grace-mar's same-name copies or instance-side equivalents. `docs/skill-work/work-companion-self/audit-report-manifest.md` and `scripts/template_diff.py` can help. |
 | 4 | **Merge into grace-mar** — For each area where the template is ahead, update grace-mar's mirrored file or instance-side equivalent. Resolve any instance-specific additions in grace-mar (keep them). Do **not** overwrite `users/grace-mar/` or instance config. |
@@ -69,20 +69,21 @@ Record each merge from template so you can see when grace-mar was last updated a
 | Date | Companion-self (commit or tag) | Paths updated |
 |------|---------------------------------|---------------|
 | 2026-03-26 | — (grace-mar-only) | **Added:** [docs/seed-phase-wizard.md](seed-phase-wizard.md), `scripts/seed-phase-wizard.py`, `scripts/good-morning-brief.py` — operator seed + morning brief under `users/<id>/`; does not replace template `docs/seed-phase.md`; companion-self may port an adapted version later. |
+| 2026-03-26 | companion-self **`main` @ `87628a5`** (manifest diff only) | **Refreshed:** [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) via `python3 scripts/template_diff.py --use-manifest -o …`. Not a content merge from template. |
 | 2026-03-23 | companion-self **`main` @ `288b438`** | **Merged:** SELF-LIBRARY template governance (`users/_template/self-library.md` + example corpus doc). [Commit](https://github.com/rbtkhn/companion-self/commit/288b4386684e076df894536624308e69305ae229). Grace-mar: [COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](skill-work/work-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md), [TEMPLATE-BASELINE](skill-work/work-xavier/TEMPLATE-BASELINE.md). |
-| *(no recorded baseline yet)* | — | Before claiming full alignment, record the companion-self commit/tag or `template-version.json` value used for the sync |
+| *(baseline for governance merges)* | **`288b438`** | Recorded in [TEMPLATE-BASELINE.md](skill-work/work-xavier/TEMPLATE-BASELINE.md). Re-run manifest diff after each material template pull; `main` tip may advance beyond this pin. |
 
 ---
 
-## 4. Future: optional diff script
+## 4. Diff script (implemented)
 
-When companion-self has stable content, a small script could:
+[`scripts/template_diff.py`](../scripts/template_diff.py) compares companion-self and grace-mar:
 
-- Accept two roots (companion-self and grace-mar) and a list of template paths.
-- Report which paths differ (and optionally show a short diff).
-- **Not** overwrite anything; operator still performs the merge.
+- Default template root: `$GRACE_MAR_COMPANION_SELF` or `./companion-self` (see §0); clones shallow `main` if missing unless `--no-clone`.
+- **`--use-manifest`** — paths from companion-self `template-manifest.json`, plus a recursive pass over `docs/skill-work/` in both repos.
+- **`--output <file>`** — write the report; commit [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) when refreshing the audit.
 
-Placeholder: `scripts/template_diff.py` or similar, to be added when useful.
+It **does not** overwrite instance files; operator merges by hand per §2.
 
 ---
 

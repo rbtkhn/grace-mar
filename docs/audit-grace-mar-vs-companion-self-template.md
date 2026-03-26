@@ -28,10 +28,10 @@ From the bootstrap and merge doc, an **instance** (e.g. grace-mar) is expected t
 | `users/<id>/` with one companion | `users/grace-mar/` present | ✅ |
 | self.md | Present | ✅ |
 | skills.md | Present | ✅ |
-| self-evidence.md | Present | ✅ |
+| self-archive.md | Present — canonical **EVIDENCE** (activity spine + § VIII gated approved log per [canonical-paths.md](canonical-paths.md)) | ✅ |
+| self-evidence.md | Optional compatibility pointer only; tooling prefers `self-archive.md` ([AGENTS.md](../AGENTS.md)) | ✅ (if present) |
 | recursion-gate.md | Present | ✅ |
 | memory.md | Optional; present | ✅ |
-| self-archive.md | Present (gated; written only on merge) | ✅ |
 | session-transcript.md / SESSION-LOG | Present | ✅ |
 | pipeline-events.jsonl | Present | ✅ |
 | self-library.md | Present | ✅ |
@@ -122,8 +122,8 @@ Grace-mar remains strongly aligned on the first layer. The second layer is now *
 ### 7.1 Audit drift to fix
 
 - **Local audit verdict is too strong:** Earlier wording said all template paths exist in grace-mar. That is no longer accurate against the live template manifest.
-- **Template sync log is still empty:** There is no recorded baseline showing which companion-self commit, tag, or template version grace-mar is aligned to.
-- **Manifest-first sync contract not yet fully internalized:** Grace-mar now acknowledges manifest-driven sync, but older audit artifacts still reflect pre-manifest assumptions.
+- **Template sync log / manifest diff:** [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md) §3 now records governance merges and manifest-diff refreshes; [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) is regenerated with `template_diff.py --use-manifest`. Governance baseline remains pinned in [TEMPLATE-BASELINE.md](skill-work/work-xavier/TEMPLATE-BASELINE.md) (`288b438`) while `main` may move — re-run the diff after pulls.
+- **Manifest-first sync contract not yet fully internalized:** Grace-mar now acknowledges manifest-driven sync, but operator habit should treat `template-manifest.json` + diff report as the first stop on each sync.
 - **users/_template/ in template repo:** Correctly absent in grace-mar as a live instance path. This is not a defect, but the audit should distinguish template-only scaffolds from missing instance mirrors.
 
 ### 7.2 Instance-only vs template
@@ -151,9 +151,9 @@ Grace-mar remains strongly aligned on the first layer. The second layer is now *
 | Protocol compliance | ✅ Aligned |
 | Schema / template paths | ⚠️ Partial |
 | Governance & operating modes | ✅ Aligned |
-| Gaps | Sync contract and local audit artifacts lag the live template manifest |
+| Gaps | Path-level parity with template `main` remains partial; manifest diff report is refreshed on a schedule or after template pulls |
 
-**Conclusion:** Grace-mar remains a valid **reference implementation** of the companion-self model, and it is still aligned on concept, protocol, and governance. However, the local sync docs and audit story were ahead of the live public template becoming concrete. The current state is best described as **conceptually aligned, operationally stale**: the instance is sound, but the documented sync surface should be refreshed against the live template manifest before claiming full path-level alignment.
+**Conclusion:** Grace-mar remains a valid **reference implementation** of the companion-self model, and it is still aligned on concept, protocol, and governance. **Path-level** alignment is partial by design (instance WORK tree is much larger than the template). The operator refreshes [audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) against companion-self `main` to see drift; governance merges stay pinned per [TEMPLATE-BASELINE.md](skill-work/work-xavier/TEMPLATE-BASELINE.md) until a new merge is recorded.
 
 ---
 

@@ -137,6 +137,9 @@ def run_diff(
         status = _compare_file(t, i)
         result[status].append(rel)
 
+    for key in result:
+        result[key] = sorted(set(result[key]))
+
     return result
 
 
