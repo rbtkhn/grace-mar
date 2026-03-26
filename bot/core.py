@@ -359,6 +359,88 @@ def _load_library() -> list[dict]:
     return entries
 
 
+# memory.md — three horizons (docs/memory-template.md). Order and caps limit prompt size.
+_MEMORY_HORIZON_ORDER = ("short", "medium", "long")
+_MEMORY_HORIZON_LABELS = {
+    "short": "Short-term (session / day)",
+    "medium": "Medium-term (days–weeks)",
+    "long": "Long-term (meta — pointers and process, not durable Record facts)",
+}
+_MEMORY_MAX_LINES = {"short": 45, "medium": 28, "long": 18}
+
+
+def _memory_header_horizon(line: str) -> str | None:
+    """If line opens a horizon section, return 'short'|'medium'|'long'. Else None."""
+    if not line.startswith("## "):
+        return None
+    title = line[3:].strip()
+    if "(" in title:
+        title = title.split("(", 1)[0].strip()
+    key = title.lower().replace(" ", "-")
+    if key == "short-term":
+        return "short"
+    if key == "medium-term":
+        return "medium"
+    if key == "long-term":
+        return "long"
+    return None
+
+
+def _filter_memory_line(line: str) -> bool:
+    s = line.strip()
+    if not s:
+        return False
+    if "(optional" in s.lower():
+        return False
+    if s.startswith("> "):
+        return False
+    if s.lower().startswith("last rotated:"):
+        return False
+    return True
+
+
+def _filter_memory_lines(lines: list[str]) -> list[str]:
+    return [ln for ln in lines if _filter_memory_line(ln)]
+
+
+def _truncate_memory_lines(lines: list[str], max_lines: int) -> list[str]:
+    if len(lines) <= max_lines:
+        return lines
+    extra = len(lines) - max_lines
+    return lines[:max_lines] + [f"... ({extra} more lines omitted for prompt cap)"]
+
+
+def _parse_memory_horizons(content: str) -> tuple[bool, dict[str, list[str]], list[str]]:
+    """
+    Returns (horizon_mode, buckets, preamble).
+    horizon_mode True if any ## Short-term / Medium-term / Long-term header was seen.
+    """
+    lines = content.splitlines()
+    buckets: dict[str, list[str]] = {"short": [], "medium": [], "long": []}
+    preamble: list[str] = []
+    current: str | None = None
+    saw_horizon = False
+
+    for line in lines:
+        h = _memory_header_horizon(line)
+        if h:
+            saw_horizon = True
+            current = h
+            continue
+        if line.startswith("## "):
+            if current:
+                buckets[current].append(line)
+            else:
+                preamble.append(line)
+            continue
+        if current:
+            buckets[current].append(line)
+        else:
+            preamble.append(line)
+
+    return saw_horizon, buckets, preamble
+
+
 def _load_memory_appendix() -> str:
     """Load memory.md if present. Returns appendix for system prompt, or empty string."""
     if not MEMORY_PATH.exists():
@@ -366,20 +448,34 @@ def _load_memory_appendix() -> str:
     content = MEMORY_PATH.read_text(encoding="utf-8").strip()
     if not content:
         return ""
-    lines = content.splitlines()
-    # Skip placeholders; require at least one line of real content
-    useful = []
-    for line in lines:
-        s = line.strip()
-        if not s or "(optional" in s.lower() or s.startswith("> ") or s.startswith("Last rotated:"):
-            continue
-        useful.append(line)
-    # Must have content beyond headers
-    has_content = any(not s.startswith("#") for s in [l.strip() for l in useful])
-    if not has_content:
-        return ""
-    block = "\n".join(useful)
-    # When Resistance Notes section has content beyond placeholder, prime Voice to honor it
+
+    saw_horizon, buckets, preamble = _parse_memory_horizons(content)
+
+    if saw_horizon:
+        pre_f = _filter_memory_lines(preamble)
+        for k in _MEMORY_HORIZON_ORDER:
+            buckets[k] = _filter_memory_lines(buckets[k])
+        if pre_f:
+            sep = [""] if buckets["short"] else []
+            buckets["short"] = pre_f + sep + buckets["short"]
+        parts: list[str] = []
+        for k in _MEMORY_HORIZON_ORDER:
+            body = _truncate_memory_lines(buckets[k], _MEMORY_MAX_LINES[k])
+            if not body:
+                continue
+            label = _MEMORY_HORIZON_LABELS[k]
+            parts.append(f"### {label}\n" + "\n".join(body))
+        if not parts:
+            return ""
+        block = "\n\n".join(parts)
+    else:
+        lines = content.splitlines()
+        useful = [ln for ln in lines if _filter_memory_line(ln)]
+        has_content = any(not s.startswith("#") for s in [l.strip() for l in useful])
+        if not has_content:
+            return ""
+        block = "\n".join(useful)
+
     resistance_hint = ""
     if "## Resistance Notes" in block or "## resistance notes" in block.lower():
         resistance_hint = " If Resistance Notes list topics: do not bring them up unprompted. If the user raises them, meet them where they are—change topic or offer alternatives if they seem resistant. Do not push."
@@ -387,7 +483,7 @@ def _load_memory_appendix() -> str:
 
 ## SESSION CONTEXT (ephemeral — SELF is authoritative)
 
-The following is ephemeral session context. Use it to refine tone and continuity. If it conflicts with SELF, follow SELF. Do not cite factual content from this section.
+The following is ephemeral session context in time horizons (short → long). Long-term here means session habits and pointers — not a substitute for SELF. Use it to refine tone and continuity. If it conflicts with SELF, follow SELF. Do not cite factual content from this section as Record truth.
 """ + resistance_hint + """
 
 """ + block

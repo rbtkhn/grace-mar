@@ -55,7 +55,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 |----------------|------|-------------|
 | **self-library** | users/[id]/self-library.md | **SELF-LIBRARY** — reference-facing governed domains (not SELF-KNOWLEDGE); **CIV-MEM** = sub-library (scopes + corpus); gated pipeline |
 | **self-archive** | users/[id]/self-archive.md | Gated log of approved activity (voice and non-voice); appended only on merge |
-| **self-memory** | users/[id]/memory.md | Ephemeral session context — tone, recent topics, calibrations; not part of the Record; optional |
+| **self-memory** | users/[id]/memory.md | Ephemeral context in **short / medium / long** horizons (see [memory-template.md](memory-template.md)); not part of the Record; optional; Voice loads short→long with caps |
 
 Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
 

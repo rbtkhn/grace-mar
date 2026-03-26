@@ -59,7 +59,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-skill-think**, **self-skill-write** (skills.md)
 - **self-archive** (self-archive.md)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
-- **self-memory** (memory.md)
+- **self-memory** (memory.md) — ephemeral **short / medium / long** horizons for session continuity and meta pointers; not Record (see [memory-template.md](memory-template.md))
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
 **Boundary:** SELF-KNOWLEDGE (IX-A, etc.) answers *who she is*. SELF-LIBRARY answers *what governed reference she carries*. Do not collapse library domains into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).

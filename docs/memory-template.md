@@ -1,10 +1,10 @@
-# MEMORY–TEMPLATE v1.0
+# MEMORY–TEMPLATE v2.0
 
 Ephemeral Session Context · Not Part of the Record
 
-Status: ACTIVE
-Version: 1.0
-Last Update: February 2026
+Status: ACTIVE  
+Version: 2.0  
+Last Update: March 2026
 
 **Governed by**: [GRACE-MAR-CORE v2.0](grace-mar-core.md)
 
@@ -12,17 +12,19 @@ Last Update: February 2026
 
 ## I. PURPOSE
 
-The MEMORY module holds **ephemeral session/working context** — tone, recent topics, and calibrations — used to prime the Voice and improve continuity between sessions. MEMORY is **not part of the Record**. It refines; it does not override SELF.
+The MEMORY module (**self-memory**, file `memory.md`) holds **ephemeral context** at **three horizons** — short, medium, and long — used to prime the Voice and improve continuity. MEMORY is **not part of the Record**. It refines; it does not override SELF.
+
+**Horizon ≠ authority.** Long-term here means **how you run sessions** (pointers, habits, rotation policy), **not** a second copy of durable identity or facts. Those belong in **SELF**, **self-evidence**, and the **gate**.
 
 ### MEMORY is
 
-- Session-level context (tone, focus, recent topics)
-- Calibrations (e.g. "user asked for shorter answers today")
-- Optional — the system runs normally if memory.md is absent
+- **Short-term** — session / day: tone, immediate thread, calibrations, resistance for *this* stretch
+- **Medium-term** — days to a few weeks: open loops, sprint-level notes, hypotheses **explicitly labeled** as such
+- **Long-term (still non-Record)** — months: **meta only** — rotation habits, pointers to where durable truth lives (`self.md`, `self-work.md`), standing *process* preferences — not stable facts
 
 ### MEMORY is NOT
 
-- A shadow Record — no facts, identity claims, or knowledge
+- A shadow Record — no durable facts, identity claims, or knowledge (use IX-A/B/C + gate)
 - A staging area for the pipeline — that is RECURSION-GATE
 - A substitute for SELF — SELF is authoritative; MEMORY defers
 
@@ -30,39 +32,40 @@ The MEMORY module holds **ephemeral session/working context** — tone, recent t
 
 ## II. HIERARCHY
 
-**SELF is authoritative.** When MEMORY conflicts with SELF, follow SELF. MEMORY refines tone and focus; it does not override identity, knowledge, or personality.
+**SELF is authoritative.** When MEMORY conflicts with SELF, follow SELF.
+
+**Promotion rule:** If a line **survives weeks** or **repeats across sessions** and sounds like Record content, **stage a candidate** (LEARN / CUR / PER / self-identity per protocol) — do **not** “upgrade” it to long-term MEMORY instead of the gate.
 
 ---
 
 ## III. CONTENT SCOPE
 
-MEMORY may contain only:
+| Horizon | Allowed | Avoid |
+|---------|---------|--------|
+| **Short-term** | Tone, recent thread topics, session calibrations, resistance notes | Facts that belong in IX-A; interests that belong in IX-B |
+| **Medium-term** | Open loops, “mid-project” reminders, operator coordination cues | Copy-pasting SELF; internals as if public truth |
+| **Long-term** | “Last rotated” policy, links to canonical files, session *process* | Knowledge claims, personality claims, user quotes |
 
-| Section | Allowed | Example |
-|---------|---------|---------|
-| **Tone** | Calibrations for current session | `playful`, `calm`, `focused`, `tired` |
-| **Recent Topics** | Topics of recent conversation | `frogs`, `solar system`, `art project` |
-| **Calibrations** | Session-specific preferences | `shorter answers today`, `more questions than usual` |
-| **Resistance Notes** (optional) | Topics to avoid or handle gently | `resistance on school questions`, `deflected when asked about X` |
+MEMORY must NOT contain (any horizon):
 
-MEMORY must NOT contain:
-
-- Facts or knowledge claims
-- Identity or personality claims
-- User quotes or verbatim content
-- Anything that would require the gated pipeline if it entered the Record
+- Facts or knowledge claims that belong in **SELF**
+- Identity or personality claims that belong in **SELF** or **self-identity.md**
+- User quotes or verbatim content intended as Record
+- Anything that would require the gated pipeline if it were true in-character
 
 ---
 
-## IV. LIFESPAN
+## IV. LIFESPAN & DECAY
 
-MEMORY is ephemeral. Implement a rotation policy:
+| Horizon | Suggested span | Action |
+|---------|----------------|--------|
+| **Short** | Hours–2 days | Clear or trim at session end / daily |
+| **Medium** | Days–few weeks | Weekly prune; promote to gate if it’s really Record |
+| **Long** | Until you revise | Quarterly review; must stay meta/pointers only |
 
-- **Daily** — Clear or rotate at start of day
-- **Weekly** — Prune entries older than 7 days
-- **Session-scoped** — Clear at session end (if used for single-session only)
+Document policy in the file header / **Long-term** block. Optional: `expires: YYYY-MM-DD` on bullets (operator honor system).
 
-Document the chosen policy in the MEMORY file header. Include timestamps on entries when helpful.
+The Voice loads horizons in order (**short → medium → long**) with **per-section line caps** in code to limit prompt size.
 
 ---
 
@@ -74,28 +77,36 @@ Document the chosen policy in the MEMORY file header. Include timestamps on entr
 
 ---
 
-## VI. TEMPLATE STRUCTURE
+## VI. TEMPLATE STRUCTURE (three horizons)
+
+Use these **exact** top-level headers so the bot can bucket content: `## Short-term`, `## Medium-term`, `## Long-term`.
+
+Legacy files that only use `## Tone`, `## Recent Topics`, etc. (no horizon headers) still work: the whole file is treated as one block (backward compatible).
 
 ```markdown
 # MEMORY — Ephemeral Session Context
 
-> Not part of the Record. SELF is authoritative. Rotate: [daily|weekly|session].
+> Not part of the Record. SELF is authoritative.
 
 Last rotated: YYYY-MM-DD
 
-## Tone
+## Short-term
 
-(optional: current tone calibration)
+(session / day — tone, thread, calibrations, resistance)
 
-## Recent Topics
+## Medium-term
 
-(optional: topics from recent conversations)
+(days–weeks — open loops, labeled hypotheses)
 
-## Calibrations
+## Long-term
 
-(optional: session-specific preferences)
-
-## Resistance Notes
-
-(optional: topics to avoid or handle gently — e.g. "resistance on school questions"; use to avoid retriggering next session)
+(meta — rotation policy, pointers to self.md / self-work.md; no durable facts)
 ```
+
+Optional: keep **## Resistance Notes** under **Short-term** or as its own `##` subsection under Short-term (subsections stay inside Short-term).
+
+---
+
+## VII. LEGACY (v1.0) — single block
+
+If you omit horizon headers, you may keep the older shape (`## Tone`, `## Recent Topics`, `## Calibrations`, `## Resistance Notes`). The loader will pass the filtered file through as before.

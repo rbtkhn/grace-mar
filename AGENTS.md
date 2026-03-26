@@ -114,9 +114,9 @@ Nothing enters the Record without being written and approved. If it isn't docume
 
 ### 11. MEMORY (Ephemeral Context)
 
-MEMORY (`users/[id]/memory.md`) holds session/working context — tone, recent topics, calibrations. It is **not part of the Record**.
+MEMORY (`users/[id]/memory.md`, **self-memory**) holds ephemeral context at **short / medium / long** horizons (session → weeks → meta/pointers only). It is **not part of the Record**.
 
-- **Scope:** Tone, recent topics, session-specific calibrations only. No facts, identity claims, or knowledge.
+- **Scope:** Tone, thread continuity, calibrations, open loops, and long-horizon **process/pointers** — not durable facts or identity (those stay in SELF + gate). See `docs/memory-template.md` v2.0.
 - **Hierarchy:** SELF is authoritative. When MEMORY conflicts with SELF, follow SELF. MEMORY refines; it does not override.
 - **Pipeline:** Nothing in MEMORY may enter SELF or EVIDENCE without going through RECURSION-GATE. The analyst stages to RECURSION-GATE only; it does NOT write to MEMORY.
 - **Lifespan:** Ephemeral. Rotate or prune per policy (weekly recommended). MEMORY is optional; the system runs normally if absent.
