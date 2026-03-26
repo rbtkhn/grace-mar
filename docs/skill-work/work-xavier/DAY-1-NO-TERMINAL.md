@@ -20,7 +20,7 @@ Open:
 - `companion-xavier/docs/seed-survey/seed-survey-initiation.md` (read only)
 - `companion-xavier/docs/seed-survey/seed-survey-capture.md` (edit here)
 
-Fill all rows (Q1-Q31) in capture.  
+Fill all rows (Q1-Q30) in capture.  
 Do not edit initiation file.
 
 ---

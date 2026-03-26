@@ -34,6 +34,5 @@
 | 28 | | |
 | 29 | | |
 | 30 | | |
-| 31 | | |
 
 **After completion:** Operator stages candidates per survey appendix mapping with priority on **IX-B curiosity** and **IX-C personality** signals; **no** hand-merge into `self.md`.

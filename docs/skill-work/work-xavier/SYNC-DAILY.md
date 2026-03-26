@@ -54,3 +54,13 @@ and run a forced relevance scan before any other optimization tasks.
   - 
 - action timing: `today` / `weekly batch`
 
+---
+
+## Daily Ops handoff
+
+- ops-card status: `not started` / `drafted` / `finalized`
+- selected top sync action:
+- selected top execution action:
+- selected top gate action:
+- card path: [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md)
+

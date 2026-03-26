@@ -1,282 +1,280 @@
 # Seed survey — Session 0 (MCQ) — companion-xavier
 
-**Purpose:** Bootstrap **IX-B (curiosity)** and **IX-C (personality)** first, plus business-intent signals, as **candidates** — **not** direct merges. Answers are **self-reported**; stage with `provenance: seed_survey_mcq` until behavior or artifacts confirm.
+**Purpose:** Bootstrap **IX-B (curiosity)** and **IX-C (personality)** first, plus key WORK operating context, as **candidates** — **not** direct merges.
 
 **Rules:** Choose **one** letter per question unless marked **multi-select**. Record answers in [seed-survey-capture.md](seed-survey-capture.md). **Do not** paste answers straight into `self.md`.
 
-**Time:** ~25–35 minutes · **~30 questions**
+**Time:** ~20–30 minutes · **30 multiple-choice questions**
 
 ---
 
-## A. Language, locale, education (IX-A adjacency — low-stakes)
+## A. Baseline and tools
 
 **Q1** Primary language for technical reading?
 
 - **A)** English only  
-- **B)** English + one other language comfortably  
+- **B)** English + one other language  
 - **C)** Prefer non-English for dense docs  
 - **D)** Use translation tools often  
 
-**Q2** Highest level of formal education completed?
+**Q2** Broad field closest to your training/work?
 
-- **A)** High school or equivalent  
-- **B)** Some college  
-- **C)** Bachelor’s  
-- **D)** Graduate degree or higher  
-- **E)** Prefer not to say  
-
-**Q3** Broad field closest to your training or work?
-
-- **A)** Communications / media / writing  
-- **B)** Technology / engineering / data  
-- **C)** Politics / government / campaigns  
-- **D)** Business / operations / EA  
+- **A)** Communications/media/writing  
+- **B)** Technology/engineering/data  
+- **C)** Politics/government/campaigns  
+- **D)** Business/operations/EA  
 - **E)** Other or mixed  
 
----
+**Q3 (multi-select)** Which tools do you use weekly?
 
-## B. Tool literacy (calibration — multi-select)
+- **A)** Google Workspace  
+- **B)** Markdown/plain text  
+- **C)** Git  
+- **D)** Python/scripting  
+- **E)** Chat tools  
+- **F)** None of these yet  
 
-**Q4 (multi-select)** Which do you use **at least weekly**? *(Check all that apply — record letters, e.g. A,C,E)*
-
-- **A)** Google Workspace (Docs/Sheets/Drive)  
-- **B)** Markdown / plain-text notes  
-- **C)** Git (any host)  
-- **D)** Python or similar scripting  
-- **E)** Telegram or similar chat  
-- **F)** None of the above yet  
-
-**Q5** Cursor or similar AI IDE experience?
+**Q4** Cursor or AI IDE experience?
 
 - **A)** None  
 - **B)** Tried a few times  
 - **C)** Regular user  
-- **D)** Daily driver  
+- **D)** Daily user  
 
 ---
 
-## C. Work domain & skills baseline (IX-B/IX-C adjacent)
+## B. Work context and capacity
 
-**Q6** Which **have you directly worked in**? *(pick one primary)*
+**Q5** Primary work background today:
 
-- **A)** Executive / virtual assistant  
-- **B)** Social media / content  
-- **C)** Campaigns / grassroots  
-- **D)** None of these yet  
+- **A)** Executive/virtual assistant  
+- **B)** Social/content operations  
+- **C)** Campaign/politics operations  
+- **D)** None yet  
 - **E)** Other client-facing role  
 
-**Q7** Typical availability for **focused** deep work (best fit):
+**Q6 (multi-select)** Skills you can execute with confidence:
+
+- **A)** Research/source verification  
+- **B)** Short-form writing/editing  
+- **C)** Messaging/frame strategy  
+- **D)** KPI reporting/tracking  
+- **E)** Client communication  
+- **F)** Process/checklist documentation  
+- **G)** Basic AI/tooling automation  
+- **H)** Still early  
+
+**Q7** Typical focused-work window:
 
 - **A)** Early morning  
-- **B)** Business daytime  
+- **B)** Daytime  
 - **C)** Evenings  
-- **D)** Split / unpredictable  
+- **D)** Split/unpredictable  
 
-**Q7a (multi-select)** Current professional skills you can already execute with confidence?
+**Q8** Realistic focused capacity per week:
 
-- **A)** Research and source verification  
-- **B)** Writing/editing short-form social copy  
-- **C)** Thread strategy and message framing  
-- **D)** KPI tracking / reporting / dashboards  
-- **E)** Client communication / stakeholder updates  
-- **F)** Ops and process documentation  
-- **G)** Basic tooling/automation with AI  
-- **H)** Unsure / still early  
+- **A)** 3–5 hours  
+- **B)** 6–10 hours  
+- **C)** 11–15 hours  
+- **D)** 16+ hours  
+- **E)** Unpredictable  
 
 ---
 
-## D. Curiosity — topic buckets (IX-B)
+## C. Curiosity and learning
 
-**Q8 (multi-select)** Topics you want the fork to **help you track or learn**? *(letters)*
+**Q9 (multi-select)** Topics you want the fork to help track/learn:
 
-- **A)** AI / ML / agents  
-- **B)** U.S. civics / institutions  
-- **C)** Kentucky / regional politics  
-- **D)** Product / builder tools  
-- **E)** Writing & rhetoric  
-- **F)** Other (note in capture file)  
+- **A)** AI/agents  
+- **B)** U.S. civics/institutions  
+- **C)** Kentucky/regional politics  
+- **D)** Product/builder tools  
+- **E)** Writing/rhetoric  
+- **F)** Other (note in capture)  
 
-**Q9** Learning pace preference:
+**Q10** Learning pace preference:
 
-- **A)** Wide skim — many topics shallowly  
-- **B)** Few topics deeply  
+- **A)** Broad and shallow  
+- **B)** Narrow and deep  
 - **C)** Project-driven only  
 - **D)** Unsure  
 
-**Q10** Preferred input format:
+**Q11** Preferred learning input:
 
-- **A)** Short threads / bullet briefs  
-- **B)** Long docs / PDFs  
+- **A)** Short briefs  
+- **B)** Long docs  
 - **C)** Video  
-- **D)** Hands-on labs  
+- **D)** Hands-on practice  
 
-**Q11** Structured learning cadence you’d **want** (not yet commitments):
+**Q12** Preferred cadence:
 
 - **A)** Daily touch  
 - **B)** Weekly block  
-- **C)** Only when client work allows  
+- **C)** Only when work allows  
 - **D)** No fixed cadence yet  
-
-**Q12** Biggest **open question** about the job or product (pick closest):
-
-- **A)** Scope / what “good” looks like  
-- **B)** Tools / stack  
-- **C)** Time / priorities  
-- **D)** Relationship with operator / client  
-- **E)** None yet  
 
 ---
 
-## E. Personality — situational (IX-C)
+## D. Personality and working style
 
-**Q13** When **overwhelmed**, you usually:
+**Q13** When overwhelmed, you usually:
 
-- **A)** Freeze until the list shrinks  
+- **A)** Freeze  
 - **B)** Push through alone  
 - **C)** Ask for help early  
-- **D)** Switch tasks to regain momentum  
+- **D)** Switch tasks  
 
-**Q14** Feedback style you **prefer**:
+**Q14** Preferred feedback style:
 
 - **A)** Blunt and short  
-- **B)** Sandwich (positive–fix–positive)  
+- **B)** Sandwich  
 - **C)** Written async  
 - **D)** Live conversation  
 
-**Q15** New **unclear** task — you usually:
+**Q15** Unclear task default:
 
 - **A)** Research first  
 - **B)** Try a small experiment  
 - **C)** Escalate early  
 - **D)** Mix of B and C  
 
-**Q16** Borderline social post — you lean:
+**Q16** High-stakes uncertainty default:
 
-- **A)** Conservative — cut risk  
-- **B)** Ask approver first  
-- **C)** Comfortable with edge cases if aligned with voice  
-- **D)** Strongly avoid posting  
+- **A)** Escalate immediately  
+- **B)** One quick pass then escalate  
+- **C)** Keep working until mostly resolved  
+- **D)** Depends on stakes/deadline  
 
-**Q17** Written tone you **like** for your own public-facing notes:
+**Q17** Biggest stress failure mode:
 
-- **A)** Direct  
-- **B)** Diplomatic  
-- **C)** Short  
-- **D)** Elaborated  
+- **A)** Over-editing/slow shipping  
+- **B)** Rushed shipping/weak checks  
+- **C)** Task switching/no closure  
+- **D)** Freeze/avoidance  
 
-**Q18** Notes formatting preference:
+**Q18** Fastest recovery action:
 
-- **A)** Minimal  
-- **B)** Rich headings / structure  
-- **C)** No strong preference  
+- **A)** 10-minute reset + one next step  
+- **B)** Ask operator for priority reset  
+- **C)** Simplify to smallest shippable draft  
+- **D)** Pause and resume next day  
+
+**Q19** Work that gives you most energy:
+
+- **A)** Research/synthesis  
+- **B)** Writing/messaging  
+- **C)** Process/checklists  
+- **D)** Reporting/KPI  
+
+**Q20** Work you avoid most:
+
+- **A)** Source verification  
+- **B)** Budget/KPI logging  
+- **C)** Risk/stress-test pass  
+- **D)** Escalation/approval messaging  
 
 ---
 
-## F. Business dreams, objectives, and resources (primary IX-B input + intent)
+## E. Business goals and resources
 
-**Q19** Which long-term direction best matches your **business dream** right now?
+**Q21** Long-term business direction:
 
-- **A)** Build an independent AI-enabled consulting practice  
-- **B)** Become a top-tier operator in political/media strategy  
-- **C)** Build digital products / tools as a founder path  
-- **D)** Hybrid (client services now, product later)  
+- **A)** Independent AI-enabled consulting  
+- **B)** Top-tier operator in political/media strategy  
+- **C)** Build products/tools  
+- **D)** Hybrid: client now, product later  
 - **E)** Still exploring  
 
-**Q20** Main **90-day business objective** (pick one):
+**Q22** Main 90-day objective:
 
-- **A)** Build consistent operating rhythm and delivery quality  
-- **B)** Grow client trust and measurable outcomes  
-- **C)** Expand skills quickly for larger responsibility  
-- **D)** Build portfolio/proof assets for future offers  
-- **E)** Clarify direction before scaling work
+- **A)** Consistent operating rhythm  
+- **B)** Better measurable client outcomes  
+- **C)** Skill growth for bigger responsibility  
+- **D)** Portfolio/proof assets  
+- **E)** Clarify direction first  
 
-**Q21** Hours per week you **hope** to spend on **client / EA** work in the next 90 days:
+**Q23** Client/EA hours target next 90 days:
 
 - **A)** Under 10  
 - **B)** 10–20  
 - **C)** 20–30  
 - **D)** 30+  
-- **E)** Unsure
+- **E)** Unsure  
 
-**Q22** Hours per week for **building your fork / companion-self-aligned** work:
+**Q24** Companion-self build hours target:
 
 - **A)** Under 5  
 - **B)** 5–10  
 - **C)** 10–20  
 - **D)** 20+  
-- **E)** Unsure
+- **E)** Unsure  
 
-**Q23** Which resources do you have today to support your goal? *(pick strongest constraint-aware option)*
+**Q25** Current strongest constraint profile:
 
-- **A)** Time + focus, limited money/tools  
-- **B)** Some money/tools, limited time  
-- **C)** Strong operator support, limited independent confidence  
-- **D)** Independent confidence, limited structure  
-- **E)** Not sure yet
+- **A)** Time/focus strong, money/tools limited  
+- **B)** Money/tools available, time limited  
+- **C)** Operator support strong, independent confidence limited  
+- **D)** Independent confidence strong, structure limited  
+- **E)** Not sure yet  
 
-**Q24** Appetite for **future paid client work** similar to current lane:
+**Q26** Primary economic goal (1 year):
 
-- **A)** High — want more  
-- **B)** Moderate — selective  
-- **C)** Low — focus on fork  
-- **D)** Unclear
-
-**Q25** Comfort discussing **rates / billing** with operator:
-
-- **A)** Comfortable  
-- **B)** Somewhat  
-- **C)** Prefer not to lead  
-- **D)** Not applicable yet
-
-**Q26** Primary **economic** goal for the next year (pick closest):
-
-- **A)** Replace or match a job segment  
+- **A)** Replace/match job segment  
 - **B)** Side income  
-- **C)** Learning / portfolio — money secondary  
-- **D)** Not decided
+- **C)** Learning/portfolio first  
+- **D)** Not decided  
 
 ---
 
-## G. Risk & compliance (IX-C / WORK boundary)
+## F. Risk, decision rights, and compliance
 
-**Q27** When instructions conflict with your judgment:
+**Q27 (multi-select)** Decision rights Xavier should hold by default:
 
-- **A)** Follow instructions  
-- **B)** Pause and ask  
-- **C)** Propose alternative  
-- **D)** Depends on stakes
+- **A)** Draft structure/first pass  
+- **B)** Tone/style refinement  
+- **C)** Final factual claim selection  
+- **D)** Publish/send decision  
+- **E)** Budget/spend decisions  
+- **F)** None yet (operator-led)  
 
-**Q28** Handling **private** campaign or client details inside the fork:
+**Q28** Biggest source-integrity risk:
 
-- **A)** Minimize — keep WORK notes separate  
+- **A)** Skip citations under pressure  
+- **B)** Weak/secondhand sources  
+- **C)** Mix assumptions with facts  
+- **D)** Lose source links during edits  
+
+**Q29** Preferred citation style:
+
+- **A)** Inline short tags  
+- **B)** End-of-draft source list  
+- **C)** Linked source table  
+- **D)** No preference yet  
+
+**Q30** Private campaign/client details in fork:
+
+- **A)** Minimize; keep WORK notes separate  
 - **B)** OK in gated Record if approved  
 - **C)** Prefer operator-held only  
-- **D)** Still forming policy
+- **D)** Policy still forming  
 
 ---
 
-## H. Closure
+## Optional enrichment (recommended)
 
-**Q29** Confidence you can finish **Session 0** today without splitting:
+If useful for personalization, add optional notes/docs in `seed-survey-capture.md`:
 
-- **A)** High  
-- **B)** Medium — may pause  
-- **C)** Low — need async
+- fuller context for any answer where you chose "depends" or "unsure"
+- one example artifact (brief, SOP, KPI sheet, sample post) under WORK docs
+- one short note: "what good looks like in 90 days"
 
-**Q30** Preferred follow-up after survey:
-
-- **A)** Short operator call  
-- **B)** Async written recap only  
-- **C)** Screen share walk of gate  
-- **D)** No preference
-
-**Q31** Anything else to flag? *(optional one line in capture file — not a substitute for MCQ)*
+These enrichments help personalize workflows but do **not** bypass gate rules.
 
 ---
 
-## I. Business document intake handoff (populate WORK)
+## G. Business document intake handoff (populate WORK)
 
-After Q1-Q31 are captured, run this handoff:
+After Q1-Q30 are captured, run this handoff:
 
 1. Open or create `docs/skill-work/work-business/xavier/`.
 2. Add/attach Xavier's business docs (offers, SOPs, KPI sheets, planning notes, briefs).
@@ -284,34 +282,31 @@ After Q1-Q31 are captured, run this handoff:
    - `source-index.md`
    - `objectives-and-constraints.md`
    - `week-0-priority-stack.md`
-4. Use survey Section F answers (business dream/objective/resources) as initialization inputs.
+4. Use Section E answers as initialization inputs.
 5. Keep this in WORK docs; identity updates still require gate approval.
 
 ---
 
 ## Appendix A — Operator mapping (candidate kinds)
 
-Use this when staging **candidates** (not automatic merges). Adjust labels to match your `recursion-gate` conventions.
-
 | Q range | Primary staging |
 |---------|-----------------|
-| A–B | IX-A adjacency (language/education/tools) — keep **low-stakes**; optional LEARN-* if curiosity implied |
-| C | Skills + work baseline -> primarily IX-B (what she wants to learn next) and IX-C (work style under load) |
-| D | IX-B — CUR-* / LEARN-* topic buckets |
-| E | IX-C — PER-* facets (see situational stems) |
-| F | Primary feed for IX-B (business curiosity/objective direction) + `intent.md` planning notes |
-| G–H | Mixed — PER-* or WORK policy notes |
+| A–B | Baseline and skill signals -> mostly IX-B (learning direction) + IX-C (work style) |
+| C | IX-B curiosity and learning cadence |
+| D | IX-C personality under load and execution behavior |
+| E | IX-B business curiosity/objective direction + WORK planning notes |
+| F | IX-C decision/risk profile + WORK operating config |
 
 **Provenance:** `seed_survey_mcq` · **evidence_strength:** `single_signal` until non-survey evidence exists.
 
 ---
 
-## Appendix B — Example option → `mind_category` hint
+## Appendix B — Example option -> `mind_category` hint
 
 | If staging | `mind_category` |
 |------------|-----------------|
 | Topic / learning / business objective | `curiosity` |
-| Style / under load / feedback | `personality` |
-| Declarative fact about self (survey) | `knowledge` |
+| Style / stress / decision behavior | `personality` |
+| Declarative baseline facts | `knowledge` |
 
 Full IFP: [identity-fork-protocol.md](../../../../../identity-fork-protocol.md).

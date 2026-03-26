@@ -16,6 +16,7 @@ Mirror grace-mar **daily-warmup** cadence in *shape* — edit for Xavier’s lan
 6. Run daily `work-politics` mirror sync check — [work-politics-mirror/SYNC-CONTRACT.md](work-politics-mirror/SYNC-CONTRACT.md).
 7. Update unified sync snapshot — [SYNC-DAILY.md](SYNC-DAILY.md).
 8. Run template-alignment sync check against [self-work/sync-pack](../self-work/sync-pack/README.md).
+9. Publish final daily run plan in [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md).
 
 **Distinguish:** “Good morning” here = **her** Record + **her** work stack. Massie/client material is **WORK**, not SELF.
 
@@ -149,6 +150,38 @@ Rules:
 - Scope to one small, finishable change per day.
 - Prefer improvements to runbooks, checklists, source discipline, and weekly execution quality.
 - No changes to identity truth files unless through gated candidate flow.
+
+## Required daily output: Daily Ops Card (final step)
+
+After all sync/alignment checks, complete [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md).
+
+The card must include:
+
+- one top sync action
+- one top execution action
+- one top gate action
+- explicit stop condition (to prevent maintenance overrun)
+- timeboxed `0-30`, `30-60`, `60-90` plan
+- risk + escalation trigger
+
+### No-terminal card prompt (copy/paste)
+
+```text
+Build my Daily Ops Card for today using:
+- SYNC-DAILY status
+- work-dev and work-politics sync outputs
+- template-alignment status
+- today's suggested development path
+
+Write/update:
+- docs/skill-work/work-xavier/DAILY-OPS-CARD.md
+
+Rules:
+- pick exactly one top action in each category (sync, execution, gate)
+- make each done condition objectively checkable
+- include a stop condition to prevent over-maintenance
+- keep plan runnable in 90 minutes total
+```
 
 ## First good morning — ten beginner tasks
 

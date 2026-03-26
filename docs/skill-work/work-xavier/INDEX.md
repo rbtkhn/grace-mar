@@ -15,9 +15,12 @@
 | [GOOD-MORNING.md](GOOD-MORNING.md) | Session 0 prerequisite + rhythm |
 | [first-good-morning-runbook.md](first-good-morning-runbook.md) | First-load onboarding script + checklist (new Cursor user) |
 | [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md) | Beginner-first first session flow (no terminal required) |
+| [COMPANION-XAVIER-DELETION-READINESS.md](COMPANION-XAVIER-DELETION-READINESS.md) | Pass/fail checklist before deleting companion-xavier surface |
+| [COMPANION-XAVIER-DRY-RUN-PROMPTS.md](COMPANION-XAVIER-DRY-RUN-PROMPTS.md) | Ordered prompt set for clean-room bootstrap validation |
 | [LEARN-PATH.md](LEARN-PATH.md) | Progressive learning path from onboarding to advanced operator |
 | [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) | Beginner-safe control plane for learning outcomes and behavior quality (Green/Yellow/Red) |
 | [SYNC-DAILY.md](SYNC-DAILY.md) | Xavier-only single-surface daily sync snapshot (work-dev + work-politics) |
+| [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md) | Final daily execution card (top sync/execution/gate actions + 90-min plan) |
 | [../self-work/sync-pack/README.md](../self-work/sync-pack/README.md) | Template sync-pack reference used by Xavier daily template-alignment check |
 | [work-dev-mirror/README.md](work-dev-mirror/README.md) | Xavier mirror of `work-dev` practices (beginner-safe) |
 | [work-dev-mirror/SYNC-CONTRACT.md](work-dev-mirror/SYNC-CONTRACT.md) | Daily manual sync rules from Grace-Mar `work-dev` into Xavier mirror |
