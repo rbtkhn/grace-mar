@@ -335,7 +335,7 @@ def main() -> int:
 
     if args.minimal:
         pr_content = _read(user_dir / "recursion-gate.md")
-        evidence_content = _read(user_dir / "self-evidence.md")
+        evidence_content = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
         wap_rows, comp_rows = pending_by_territory(pr_content)
         n = _pending_count_full(pr_content, territory)
         ids = _pending_candidate_ids(pr_content, territory)
@@ -367,7 +367,7 @@ def main() -> int:
         print("\n".join(lines))
         return 0
 
-    evidence_content = _read(user_dir / "self-evidence.md")
+    evidence_content = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
     pr_content = _read(user_dir / "recursion-gate.md")
     self_content = _read(user_dir / "self.md")
     wisdom_content = _read(WISDOM_PATH)

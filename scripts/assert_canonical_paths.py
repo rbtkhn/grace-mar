@@ -2,8 +2,8 @@
 """
 Assert that a user directory has the canonical path layout (lowercase filenames).
 
-Required: self.md, self-evidence.md, recursion-gate.md
-Optional: self-archive.md (checked if --strict).
+Required: self.md, self-archive.md, recursion-gate.md
+Optional: self-evidence.md (compatibility pointer; checked if --strict).
 
 Usage:
   python scripts/assert_canonical_paths.py
@@ -26,7 +26,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 from repo_io import CANONICAL_RECORD_FILES_REQUIRED  # noqa: E402
 
 REQUIRED = CANONICAL_RECORD_FILES_REQUIRED
-OPTIONAL_STRICT = ("self-archive.md",)
+OPTIONAL_STRICT = ("self-evidence.md",)
 
 
 def main() -> int:
@@ -35,7 +35,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Assert canonical user paths exist.")
     parser.add_argument("--user", default="grace-mar", help="User id under users/")
     parser.add_argument("--users-dir", type=Path, default=DEFAULT_USERS_DIR, help="Users directory")
-    parser.add_argument("--strict", action="store_true", help="Also require self-archive.md")
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Also require self-evidence.md (optional compatibility pointer)",
+    )
     args = parser.parse_args()
     user_dir = args.users_dir / args.user
     if not user_dir.is_dir():

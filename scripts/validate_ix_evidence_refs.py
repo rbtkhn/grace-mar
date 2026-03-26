@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Warn if SELF IX entries reference missing ACT-* or READ-* in self-evidence.md.
+Warn if SELF IX entries reference missing ACT-* or READ-* in canonical EVIDENCE (self-archive.md).
 
 Non-blocking: exit 0. Run manually or from CI as advisory.
 
@@ -41,12 +41,17 @@ def main() -> int:
     args = p.parse_args()
     base = REPO / "users" / args.user
     self_path = base / "self.md"
-    ev_path = base / "self-evidence.md"
+    ev_path = base / "self-archive.md"
+    ev_compat = base / "self-evidence.md"
     if not self_path.is_file():
         print(f"skip: missing {self_path}", file=sys.stderr)
         return 0
     self_content = self_path.read_text(encoding="utf-8", errors="replace")
-    ev_content = ev_path.read_text(encoding="utf-8", errors="replace") if ev_path.is_file() else ""
+    ev_content = ""
+    if ev_path.is_file():
+        ev_content = ev_path.read_text(encoding="utf-8", errors="replace")
+    elif ev_compat.is_file():
+        ev_content = ev_compat.read_text(encoding="utf-8", errors="replace")
 
     act_ids = set(re.findall(r"\b(ACT-\d+)\b", ev_content))
     read_uc = {m.group(1).upper() for m in re.finditer(r"\b(READ-[\w-]+)\b", ev_content, re.I)}
@@ -60,7 +65,7 @@ def main() -> int:
         for rid in _collect_ids(block, "intake_evidence_id"):
             if rid.upper().startswith("READ-") and rid.upper() not in read_uc:
                 print(
-                    f"WARN: IX intake_evidence_id {rid} not found as READ-* in self-evidence.md"
+                    f"WARN: IX intake_evidence_id {rid} not found as READ-* in EVIDENCE (self-archive.md)"
                 )
                 warnings += 1
 

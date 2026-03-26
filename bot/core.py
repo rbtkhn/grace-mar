@@ -68,6 +68,15 @@ load_dotenv()
 SCRIPTS_DIR = Path(__file__).resolve().parent.parent / "scripts"
 if str(SCRIPTS_DIR) not in os.sys.path:
     os.sys.path.insert(0, str(SCRIPTS_DIR))
+from record_index import (  # noqa: E402
+    MemoryHorizonIndex,
+    build_evidence_index,
+    build_memory_horizon_index,
+    memory_buckets_from_index,
+    slice_evidence_section,
+)
+from repo_io import CANONICAL_EVIDENCE_BASENAME  # noqa: E402
+
 try:
     from recursion_gate_review import get_review_candidate, parse_review_candidates
 except ImportError:
@@ -98,9 +107,10 @@ MAX_HISTORY = 20
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = Path(__file__).resolve().parent.parent / "users" / USER_ID
-ARCHIVE_PATH = PROFILE_DIR / "self-archive.md"
-ARCHIVE_REPO_PATH = f"users/{USER_ID}/self-archive.md"  # repo-relative for GitHub API
-# Real-time conversation log (operator continuity). Gated content goes to SELF-ARCHIVE only on merge.
+SELF_PATH = PROFILE_DIR / "self.md"
+EVIDENCE_PATH = PROFILE_DIR / CANONICAL_EVIDENCE_BASENAME
+EVIDENCE_REPO_REL_PATH = f"users/{USER_ID}/{CANONICAL_EVIDENCE_BASENAME}"  # GitHub Contents API
+# Real-time conversation log (operator continuity). Gated § VIII is written only on merge.
 SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "session-transcript.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
@@ -280,7 +290,7 @@ def _append_via_github_api(block: str) -> None:
         return
     try:
         owner, repo = GRACE_MAR_REPO.split("/", 1)
-        url = f"https://api.github.com/repos/{owner}/{repo}/contents/{ARCHIVE_REPO_PATH}"
+        url = f"https://api.github.com/repos/{owner}/{repo}/contents/{EVIDENCE_REPO_REL_PATH}"
         req = Request(
             url,
             headers={"Authorization": f"Bearer {GITHUB_TOKEN}", "Accept": "application/vnd.github+json"},
@@ -368,22 +378,8 @@ _MEMORY_HORIZON_LABELS = {
 }
 _MEMORY_MAX_LINES = {"short": 45, "medium": 28, "long": 18}
 
-
-def _memory_header_horizon(line: str) -> str | None:
-    """If line opens a horizon section, return 'short'|'medium'|'long'. Else None."""
-    if not line.startswith("## "):
-        return None
-    title = line[3:].strip()
-    if "(" in title:
-        title = title.split("(", 1)[0].strip()
-    key = title.lower().replace(" ", "-")
-    if key == "short-term":
-        return "short"
-    if key == "medium-term":
-        return "medium"
-    if key == "long-term":
-        return "long"
-    return None
+# Invalidated when memory.md mtime/size changes (see scripts/record_index.py).
+_MEMORY_INDEX_CACHE: tuple[float, int, MemoryHorizonIndex] | None = None
 
 
 def _filter_memory_line(line: str) -> bool:
@@ -410,46 +406,30 @@ def _truncate_memory_lines(lines: list[str], max_lines: int) -> list[str]:
     return lines[:max_lines] + [f"... ({extra} more lines omitted for prompt cap)"]
 
 
-def _parse_memory_horizons(content: str) -> tuple[bool, dict[str, list[str]], list[str]]:
-    """
-    Returns (horizon_mode, buckets, preamble).
-    horizon_mode True if any ## Short-term / Medium-term / Long-term header was seen.
-    """
-    lines = content.splitlines()
-    buckets: dict[str, list[str]] = {"short": [], "medium": [], "long": []}
-    preamble: list[str] = []
-    current: str | None = None
-    saw_horizon = False
-
-    for line in lines:
-        h = _memory_header_horizon(line)
-        if h:
-            saw_horizon = True
-            current = h
-            continue
-        if line.startswith("## "):
-            if current:
-                buckets[current].append(line)
-            else:
-                preamble.append(line)
-            continue
-        if current:
-            buckets[current].append(line)
-        else:
-            preamble.append(line)
-
-    return saw_horizon, buckets, preamble
-
-
 def _load_memory_appendix() -> str:
     """Load memory.md if present. Returns appendix for system prompt, or empty string."""
+    global _MEMORY_INDEX_CACHE
     if not MEMORY_PATH.exists():
+        _MEMORY_INDEX_CACHE = None
         return ""
+    st = MEMORY_PATH.stat()
     content = MEMORY_PATH.read_text(encoding="utf-8").strip()
     if not content:
+        _MEMORY_INDEX_CACHE = None
         return ""
 
-    saw_horizon, buckets, preamble = _parse_memory_horizons(content)
+    if (
+        _MEMORY_INDEX_CACHE is not None
+        and _MEMORY_INDEX_CACHE[0] == st.st_mtime
+        and _MEMORY_INDEX_CACHE[1] == st.st_size
+    ):
+        idx = _MEMORY_INDEX_CACHE[2]
+    else:
+        idx = build_memory_horizon_index(content)
+        _MEMORY_INDEX_CACHE = (st.st_mtime, st.st_size, idx)
+
+    saw_horizon = idx.saw_horizon
+    buckets, preamble = memory_buckets_from_index(idx)
 
     if saw_horizon:
         pre_f = _filter_memory_lines(preamble)
@@ -487,10 +467,6 @@ The following is ephemeral session context in time horizons (short → long). Lo
 """ + resistance_hint + """
 
 """ + block
-
-
-SELF_PATH = PROFILE_DIR / "self.md"
-EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
 
 
 def _load_recency_context() -> str:
@@ -540,8 +516,15 @@ def _load_recency_context() -> str:
 
     if EVIDENCE_PATH.exists():
         content = EVIDENCE_PATH.read_text(encoding="utf-8")
-        # Extract WRITE, ACT, CREATE entries — take highest id numbers (most recent)
-        id_matches = list(re.finditer(r"id:\s+(WRITE|ACT|CREATE)-(\d+)", content, re.IGNORECASE))
+        ev_idx = build_evidence_index(content)
+        # Limit scan to Writing / Creation / Activity sections (skip I, IV, VI–VIII) for speed on large files
+        frags = [
+            slice_evidence_section(content, ev_idx, r)
+            for r in ("II", "III", "V")
+        ]
+        joined = "\n\n".join(f for f in frags if f.strip())
+        scan = joined if joined.strip() else content
+        id_matches = list(re.finditer(r"id:\s+(WRITE|ACT|CREATE)-(\d+)", scan, re.IGNORECASE))
         if id_matches:
             # Get unique entry ids and sort by number descending
             seen: set[str] = set()

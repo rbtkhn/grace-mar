@@ -49,7 +49,7 @@ emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source
 
 ### 2.2 ARCHIVE event types
 
-Parse **`self-evidence.md` § VIII (GATED APPROVED LOG)** (or legacy `self-archive.md` if not migrated) for:
+Parse **`self-archive.md` § VIII (GATED APPROVED LOG)** (or legacy `self-evidence.md` § VIII if not migrated) for:
 - `LOOKUP REQUEST` — User triggered lookup (question stored)
 - `GRACE-MAR (lookup)` — Lookup response delivered
 - `ACTIVITY REPORT` — "We did X" feeding

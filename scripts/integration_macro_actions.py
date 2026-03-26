@@ -60,7 +60,7 @@ def cmd_checklist(args: argparse.Namespace) -> int:
         [
             "- [ ] Merge order: **1 → 2 → … → n** into integration or `main` (rebase if needed).",
             "- [ ] RECURSION-GATE / pipeline: stage on branch; **merge Record only via** `process_approved_candidates.py` **after approval**.",
-            "- [ ] No simultaneous edits to gated files (`self.md`, `self-evidence.md`, `recursion-gate.md`, `bot/prompt.py`) without single-owner sequencing.",
+            "- [ ] No simultaneous edits to gated files (`self.md`, `self-archive.md`, `recursion-gate.md`, `bot/prompt.py`) without single-owner sequencing.",
             "",
         ]
     )

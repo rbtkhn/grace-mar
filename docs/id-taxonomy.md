@@ -10,15 +10,15 @@
 
 | Prefix | Scope | Location | Description |
 |--------|-------|----------|-------------|
-| **ACT-** | Activity | self-evidence.md § V. ACTIVITY LOG | Raw activity records — bot exchanges, physical artifacts, lookups |
+| **ACT-** | Activity | self-archive.md § V. ACTIVITY LOG | Raw activity records — bot exchanges, physical artifacts, lookups |
 | **LEARN-** | Knowledge | self.md IX-A | Facts that entered awareness (post-seed) |
 | **CUR-** | Curiosity | self.md IX-B | Topics that caught attention (post-seed) |
 | **PER-** | Personality | self.md IX-C | Observed personality entries (post-seed): behavior, speech/style, emotional patterns, aesthetic tendencies, value expressions |
 | **CANDIDATE-** | Pipeline | recursion-gate.md | Staged signals awaiting approve/reject |
-| **WRITE-** | Evidence | self-evidence.md § II. WRITING LOG | Writing samples, journals, stories |
-| **READ-** | Evidence | self-evidence.md § I. READING LIST | Books, articles consumed |
-| **CREATE-** | Evidence | self-evidence.md § III. CREATION LOG | Artwork, collages, creative output |
-| **MEDIA-** | Evidence | self-evidence.md § IV. MEDIA LOG | Movies, shows, games (survey + mentions) |
+| **WRITE-** | Evidence | self-archive.md § II. WRITING LOG | Writing samples, journals, stories |
+| **READ-** | Evidence | self-archive.md § I. READING LIST | Books, articles consumed |
+| **CREATE-** | Evidence | self-archive.md § III. CREATION LOG | Artwork, collages, creative output |
+| **MEDIA-** | Evidence | self-archive.md § IV. MEDIA LOG | Movies, shows, games (survey + mentions) |
 | **LIB-** | Library | users/[id]/self-library.md | Approved library entries spanning references, canon works, and influential media |
 
 ---
@@ -54,8 +54,8 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 | Standard label | File | Description |
 |----------------|------|-------------|
 | **self-library** | users/[id]/self-library.md | **SELF-LIBRARY** — reference-facing governed domains (not SELF-KNOWLEDGE); **CIV-MEM** = sub-library (scopes + corpus); gated pipeline |
-| **self-archive** | *(deprecated path)* | **Canonical:** gated approved log inside **`self-evidence.md` § VIII**. Optional `self-archive.md` stub for old links; do not append there. |
-| **self-memory** | users/[id]/memory.md | Ephemeral context in **short / medium / long** horizons (see [memory-template.md](memory-template.md)); not part of the Record; optional; Voice loads short→long with caps |
+| **self-archive** | On-disk **`self-archive.md`** | **Canonical EVIDENCE file:** full activity log + **`self-archive.md` § VIII** (gated approved). **Chronological** across entries; **expansive, multicategory, multimodal** (typed sections, ids, media, artifacts). Optional `self-evidence.md` = compatibility pointer only. |
+| **self-memory** | users/[id]/memory.md | Ephemeral context in **short / medium / long** horizons (see [memory-template.md](memory-template.md)); **chronological** prose thread; **narrower** than self-archive (no multicategory evidence spine); not part of the Record; optional; Voice loads short→long with caps |
 
 Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
 
@@ -66,7 +66,7 @@ Use these rules everywhere docs list companion-self components (the `self-*` sta
 | Kind | Rule | Examples |
 |------|------|----------|
 | **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
-| **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log — `self-evidence.md` § VIII; legacy `self-archive.md` stub only) |
+| **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log — `self-archive.md` § VIII; full EVIDENCE on disk) |
 | **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-identity.md` (optional split surface), `self-library.md`, `self-evidence.md`, `self-archive.md` |
 | **Planned WORK coordination** | Not part of companion self; same label shape as other `self-*` files | **`self-work`** → `users/[id]/self-work.md` (operator coordination; **not** SELF-KNOWLEDGE) |
 
@@ -86,9 +86,9 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
 | **self-skill-write** | skills.md § WRITE Container | Production capability |
 | **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
-| **self-archive** | `self-evidence.md` § VIII | Gated approved log (voice + non-voice); standalone `self-archive.md` deprecated |
+| **self-archive** | `self-archive.md` (full file) | **EVIDENCE** — chronological, **multicategory** activity spine + § VIII gated approved (voice + non-voice) |
 | **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
-| **self-memory** | memory.md | Ephemeral session context (not part of Record) |
+| **self-memory** | memory.md | Ephemeral session context; **chronological** prose; narrower than EVIDENCE / self-archive (not part of Record) |
 | **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self |
 
 **Adjacent but separate:** work territories and instance work contexts may use full LLM/tool capability and may produce artifacts or staged candidates, but they are not part of the self-skill taxonomy and do not automatically enter the Record.

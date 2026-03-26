@@ -113,7 +113,7 @@ def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blocker
 def build_handoff_check(user_id: str = "grace-mar") -> str:
     user_dir = USERS_DIR / user_id
     recursion_gate = _read(user_dir / "recursion-gate.md")
-    evidence = _read(user_dir / "self-evidence.md")
+    evidence = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
     gate_pending = _pending_candidates(recursion_gate, "all")
     last_activity = _last_activity_oneliner(evidence) or "_none parsed_"
     wap_snapshot = get_wap_snapshot(user_id)

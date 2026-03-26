@@ -2,7 +2,7 @@
 """
 Measure cognitive growth rate and cognitive density of the fork.
 
-Uses self.md, self-evidence.md, and optionally git history.
+Uses self.md, self-archive.md (EVIDENCE), and optionally git history.
 
 Growth rate:
   - IX entries per day (from date: fields in self.md)
@@ -146,7 +146,7 @@ def main() -> None:
     args = parser.parse_args()
 
     self_path = PROFILE_DIR / "self.md"
-    evidence_path = PROFILE_DIR / "self-evidence.md"
+    evidence_path = PROFILE_DIR / "self-archive.md"
     events_path = PROFILE_DIR / "pipeline-events.jsonl"
 
     content = _read(self_path)

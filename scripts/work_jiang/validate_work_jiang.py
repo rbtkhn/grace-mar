@@ -35,6 +35,7 @@ VALID_STATUSES = [
 
 FORBIDDEN_EXPORT_PREFIXES = [
     "users/grace-mar/self.md",
+    "users/grace-mar/self-archive.md",
     "users/grace-mar/self-evidence.md",
     "users/grace-mar/recursion-gate.md",
 ]

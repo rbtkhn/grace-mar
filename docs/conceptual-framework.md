@@ -57,9 +57,9 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
 - **self-skill-think**, **self-skill-write** (skills.md)
-- **self-archive** (gated approved log: **`self-evidence.md` § VIII**; standalone `self-archive.md` deprecated)
+- **self-archive** (`self-archive.md`) — canonical **EVIDENCE**: full activity spine (READ / WRITE / CREATE / ACT / media) **plus** § VIII gated approved log; **chronological within and across entries**, and **expansive, multicategory, multimodal** (typed sections, ids, artifacts, merges through the gate)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
-- **self-memory** (memory.md) — ephemeral **short / medium / long** horizons for session continuity and meta pointers; not Record (see [memory-template.md](memory-template.md))
+- **self-memory** (memory.md) — ephemeral **short / medium / long** horizons for session continuity and meta pointers; **mostly chronological** (time-ordered thread within horizons); **narrower and primarily textual** than self-archive; not Record (see [memory-template.md](memory-template.md))
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
 **Boundary:** SELF-KNOWLEDGE (IX-A, etc.) answers *who she is*. SELF-LIBRARY answers *what governed reference she carries*. Do not collapse library domains into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
@@ -68,7 +68,7 @@ The Voice renders the full Record when it speaks: it can draw on self-knowledge,
 
 **Work is adjacent, not inside the self-skill set.** Work territories and instance work contexts may use broader tools and model capability to plan or execute tasks, but they become part of the Record only through staged, approved evidence.
 
-The structure is intentionally layered: three-dimension mind (knowledge, curiosity, personality), two Record-bound skill modules (think, write), supporting stores (archive, library, memory), and the Voice that speaks the Record.
+The structure is intentionally layered: three-dimension mind (knowledge, curiosity, personality), two Record-bound skill modules (think, write), supporting stores (**self-archive** as **chronological, expansive, multicategory, multimodal** EVIDENCE; **self-library**; **self-memory** as **chronological** but **slim** session prose), and the Voice that speaks the Record.
 
 See [ID-TAXONOMY](id-taxonomy.md) for standard labels and locations.
 

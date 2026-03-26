@@ -15,7 +15,7 @@ What it pulls
 | Source              | What you get                                              |
 |---------------------|-----------------------------------------------------------|
 | recursion-gate.md   | Count of **pending** candidates + IDs + one-line summaries |
-| self-evidence.md    | **Last ACT-*** activity (date + summary/topic)            |
+| self-archive.md     | **Last ACT-*** activity (date + summary/topic)            |
 | session-log.md      | **Tail** of non-noise lines (recent operator/session notes)|
 
 When to run
@@ -172,7 +172,7 @@ def main() -> int:
         return 1
 
     pr = read_path(user_dir / "recursion-gate.md")
-    evidence = read_path(user_dir / "self-evidence.md")
+    evidence = read_path(user_dir / "self-archive.md") or read_path(user_dir / "self-evidence.md")
     session = read_path(user_dir / "session-log.md")
 
     wap_n = len(pending_by_territory(pr)[0])
@@ -193,7 +193,7 @@ def main() -> int:
             f"- **Gate:** `users/{args.user}/recursion-gate.md`\n"
             f"- **Last merge receipt:** `users/{args.user}/merge-receipts.jsonl` (tail) — "
             f"{receipt_one or '_no receipts yet_'}\n"
-            f"- **SELF / EVIDENCE:** `users/{args.user}/self.md`, `self-evidence.md`\n\n"
+            f"- **SELF / EVIDENCE:** `users/{args.user}/self.md`, `self-archive.md`\n\n"
             "---\n\n"
         )
 
@@ -257,7 +257,7 @@ def main() -> int:
             "",
             "### For the agent",
             "",
-            f"- Canonical paths: `users/{args.user}/self.md`, `self-evidence.md`, `recursion-gate.md`, `session-log.md`.",
+            f"- Canonical paths: `users/{args.user}/self.md`, `self-archive.md`, `recursion-gate.md`, `session-log.md`.",
             "- **Do not merge** without companion approval. Stage-only handback: `integrations/openclaw_stage.py`.",
             "- After approved merges: refresh PRP / OpenClaw export if this instance uses them.",
             "",

@@ -151,7 +151,7 @@ def export_curriculum(
         for p in ["skills.md", "skill-think.md", "skill-write.md"]
     )
     work_content = _read(profile_dir / "work-alpha-school.md")
-    evidence_content = _read(profile_dir / "self-evidence.md")
+    evidence_content = _read(profile_dir / "self-archive.md")
     library_content = _read(profile_dir / "self-library.md")
 
     identity_block = re.search(r"## I\. IDENTITY(.*?)(?=## |\Z)", self_content, re.DOTALL)

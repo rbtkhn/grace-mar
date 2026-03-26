@@ -65,12 +65,12 @@ A single artifact can populate all three dimensions simultaneously.
 
 When candidates are approved, merge into ALL of these together. **Canonical paths** (lowercase): [canonical-paths.md](docs/canonical-paths.md).
 - `users/[id]/self.md` — profile entries (IX-A, IX-B, IX-C)
-- `users/[id]/self-evidence.md` — activity log entry
+- `users/[id]/self-archive.md` — EVIDENCE (activity log + § VIII gated approved)
 - `users/[id]/recursion-gate.md` — move candidates to Processed
 - `users/[id]/session-log.md` — session record
 - `bot/prompt.py` — emulation prompt (knowledge, curiosity, personality sections + analyst dedup list)
 
-**Merge only via script.** Do not edit self.md, self-evidence.md, or prompt directly on approval. Instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow). Cursor sessions must not perform manual merge.
+**Merge only via script.** Do not edit self.md, self-archive.md, or prompt directly on approval. Instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow). Cursor sessions must not perform manual merge.
 
 ---
 
@@ -162,10 +162,10 @@ Canonical paths are **lowercase**; see [canonical-paths.md](docs/canonical-paths
 users/[user-id]/
 ├── self.md                  # Who they ARE (identity + three-dimension mind)
 ├── skills.md                # What they CAN DO
-├── self-evidence.md        # Raw activities and evidence log
+├── self-archive.md          # EVIDENCE — raw activities + § VIII gated approved log
+├── self-evidence.md         # optional compatibility pointer
 ├── session-log.md           # Interaction history
 ├── recursion-gate.md        # Pipeline staging (candidates + processed)
-├── self-archive.md          # Gated log of approved activity (voice + non-voice)
 └── artifacts/               # Raw files (writing samples, artwork)
 ```
 

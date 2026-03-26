@@ -91,7 +91,7 @@ def create_snapshot(
 
     record_files = {
         "self.md": profile / "self.md",
-        "self-evidence.md": profile / "self-evidence.md",
+        "self-archive.md": profile / "self-archive.md",
         "self-library.md": profile / "self-library.md",
         "skills.md": profile / "skills.md",
     }

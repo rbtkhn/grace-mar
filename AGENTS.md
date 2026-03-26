@@ -65,7 +65,7 @@ The emulated self can only know what is explicitly documented in its profile (`u
 3. **Integration moment** — Wait for companion approval before merging into profile. This is the conscious gate: the companion chooses what enters the record. Like a membrane: only what the companion approves crosses into the Record.
 4. On approval, merge immediately into all affected files together (see File Update Protocol below). **One gate:** When the user says "approve" or approves candidates, process right away — do not wait for a separate "process the review queue" command.
 
-**Never** merge directly into self.md, self-evidence.md, or prompt.py without staging and approval. See `docs/identity-fork-protocol.md` for the full protocol spec. **Companion-reported content** (e.g. "we listened to X", "merge X into grace-mar") must be staged as candidate(s) in RECURSION-GATE and merged only after companion approval — do not merge on report alone.
+**Never** merge directly into self.md, self-archive.md (EVIDENCE), or prompt.py without staging and approval. See `docs/identity-fork-protocol.md` for the full protocol spec. **Companion-reported content** (e.g. "we listened to X", "merge X into grace-mar") must be staged as candidate(s) in RECURSION-GATE and merged only after companion approval — do not merge on report alone.
 **Reference implementation note:** Grace-Mar runs in manual-gate mode. No autonomous merge path is enabled.
 
 ### 3. The "we" Convention
@@ -114,7 +114,7 @@ Nothing enters the Record without being written and approved. If it isn't docume
 
 ### 11. MEMORY (Ephemeral Context)
 
-MEMORY (`users/[id]/memory.md`, **self-memory**) holds ephemeral context at **short / medium / long** horizons (session → weeks → meta/pointers only). It is **not part of the Record**.
+MEMORY (`users/[id]/memory.md`, **self-memory**) holds ephemeral context at **short / medium / long** horizons (session → weeks → meta/pointers only). It is **mostly chronological** (time-ordered prose within those horizons). **EVIDENCE** (`self-archive.md`) is **also chronological** (dated spine across logs) but **more expansive** — **multicategory** (READ / WRITE / CREATE / ACT / media / § VIII) and **multimodal** (structured entries, artifacts). MEMORY is **not part of the Record**; it is **narrower and mostly textual** than EVIDENCE.
 
 - **Scope:** Tone, thread continuity, calibrations, open loops, and long-horizon **process/pointers** — not durable facts or identity (those stay in SELF + gate). See `docs/memory-template.md` v2.0.
 - **Hierarchy:** SELF is authoritative. When MEMORY conflicts with SELF, follow SELF. MEMORY refines; it does not override.
@@ -165,23 +165,23 @@ What "good" looks like for Grace-Mar:
 
 ## File Update Protocol
 
-When pipeline candidates are approved, **merge** into all of these together. **Merge only via script:** The agent must **not** edit `self.md`, `self-evidence.md`, `recursion-gate.md`, `session-log.md`, or `bot/prompt.py` directly. It must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow: `--generate-receipt` then `--apply --receipt`). This prevents five-file drift and preserves the audit trail. Only the script performs the atomic update across all files.
+When pipeline candidates are approved, **merge** into all of these together. **Merge only via script:** The agent must **not** edit `self.md`, `self-archive.md`, `recursion-gate.md`, `session-log.md`, or `bot/prompt.py` directly. It must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt flow: `--generate-receipt` then `--apply --receipt`). This prevents five-file drift and preserves the audit trail. Only the script performs the atomic update across all files.
 
 **Optional orchestration:** `scripts/atomic_integrate.py` runs the same merge (`--quick` / receipt-based semantics) with extra disk backups and a JSON receipt; it does not replace `process_approved_candidates.py`.
 
 | File | What to update |
 |------|---------------|
 | `users/[id]/self.md` | New entries merged into IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
-| `users/[id]/self-evidence.md` | New activity log entry (ACT-XXXX) **and** append **§ VIII. GATED APPROVED LOG** per merged candidate (gated; only `scripts/process_approved_candidates.py` writes § VIII) |
+| `users/[id]/self-archive.md` | Canonical **EVIDENCE**: new activity log entry (ACT-XXXX) **and** append **§ VIII. GATED APPROVED LOG** per merged candidate (gated; only `scripts/process_approved_candidates.py` writes § VIII) |
 | `users/[id]/recursion-gate.md` | Move candidates from Candidates to Processed |
 | `users/[id]/session-log.md` | New session record; pipeline merges append lines under `## Pipeline merge (automated)` |
 | `bot/prompt.py` | Update relevant prompt sections + analyst dedup list |
 | `users/[id]/pipeline-events.jsonl` | Append `applied` event per candidate: `python scripts/emit_pipeline_event.py applied CANDIDATE-XXXX evidence_id=ACT-YYYY` |
 | **PRP** | Regenerate: `python scripts/export_prp.py -u [id] -o grace-mar-llm.txt` (or repo default). Commit if changed. Keeps anchor in sync with Record. |
 
-**Merge only via script.** When the companion approves candidates, the agent must **not** edit self.md, self-evidence.md, or bot/prompt.py directly. The agent must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt-based flow: `--generate-receipt` then `--apply --receipt <path>`). Merging is performed only by the script; this preserves five-file consistency and the audit trail.
+**Merge only via script.** When the companion approves candidates, the agent must **not** edit self.md, self-archive.md, or bot/prompt.py directly. The agent must instruct the operator to run `python scripts/process_approved_candidates.py --apply` (or the receipt-based flow: `--generate-receipt` then `--apply --receipt <path>`). Merging is performed only by the script; this preserves five-file consistency and the audit trail.
 
-**Real-time log vs gated approved log:** The bot and Mini App append to `users/[id]/session-transcript.md` (raw conversation log for operator continuity). The **gated approved log** is **not** written in real time; it is appended only when candidates are merged — as **`self-evidence.md` § VIII** (same gate as SELF/EVIDENCE). It holds voice-related approved summaries and other merge-line activity. Standalone `self-archive.md` is **deprecated** (pointer stub only); see [canonical-paths.md](docs/canonical-paths.md).
+**Real-time log vs gated approved log:** The bot and Mini App append to `users/[id]/session-transcript.md` (raw conversation log for operator continuity). The **gated approved log** is **not** written in real time; it is appended only when candidates are merged — as **`self-archive.md` § VIII** (same gate as SELF/EVIDENCE). It holds voice-related approved summaries and other merge-line activity. Optional **`self-evidence.md`** is a **compatibility pointer** only; see [canonical-paths.md](docs/canonical-paths.md).
 
 The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when processing the queue.
 
@@ -239,7 +239,8 @@ grace-mar/
         ├── skill-write.md      # WRITE container
         ├── work-alpha-school.md # WORK context (separate from SKILLS)
         ├── work-jiang.md        # WORK — Jiang project
-        ├── self-evidence.md         # Activity log
+        ├── self-archive.md          # EVIDENCE — activity log + § VIII gated approved
+        ├── self-evidence.md         # optional compatibility pointer (canonical body is self-archive.md)
         ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
         ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)
         ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)
@@ -249,9 +250,8 @@ grace-mar/
         ├── pipeline-events.jsonl  # Append-only pipeline audit log
         ├── harness-events.jsonl    # Optional harness audit (merge/export); see docs/harness-inventory.md
         ├── compute-ledger.jsonl   # Token usage (energy ledger)
-        ├── self-archive.md            # optional stub — gated approved log is self-evidence.md § VIII
         ├── journal.md                # Daily highlights — public-suitable, shareable
-│   └── archives/             # Rotated chunks (self-archive-YYYY-MM.md)
+        ├── archives/             # Rotated chunks (SELF-ARCHIVE-YYYY-MM.md)
         └── artifacts/          # Raw files (writing, artwork)
 ```
 
@@ -284,4 +284,4 @@ The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality in
 - Use "cognitive twin" (use "cognitive fork")
 - Call the Voice an "oracle" or the Record "commanding" — use mirror, reflect, voice, record
 - Let terminology drift — when editing CONCEPTUAL-FRAMEWORK, AGENTS, or templates, prefer Record (not fork) and Voice (not bot) in conceptual prose; correct inconsistencies
-- **Do not** use legacy on-disk names (`SELF.md`, `EVIDENCE.md`, `PENDING-REVIEW.md`, …) — canonical paths are **`self.md`**, **`self-evidence.md`**, **`recursion-gate.md`**, **`self-archive.md`** ([canonical-paths.md](docs/canonical-paths.md))
+- **Do not** use legacy on-disk names (`SELF.md`, `EVIDENCE.md`, `PENDING-REVIEW.md`, …) — canonical paths are **`self.md`**, **`self-archive.md`** (EVIDENCE), **`recursion-gate.md`** ([canonical-paths.md](docs/canonical-paths.md))

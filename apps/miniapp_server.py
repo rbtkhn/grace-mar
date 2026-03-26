@@ -149,7 +149,7 @@ def _session_transcript_header() -> str:
 
 
 def _append_to_session_transcript(blocks: str) -> None:
-    """Append exchange to session-transcript.md (real-time log). Gated approved log is self-evidence § VIII (merge only)."""
+    """Append exchange to session-transcript.md (real-time log). Gated approved log is self-archive.md § VIII (merge only)."""
     try:
         SESSION_TRANSCRIPT_PATH.parent.mkdir(parents=True, exist_ok=True)
         if not SESSION_TRANSCRIPT_PATH.exists():

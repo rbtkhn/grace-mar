@@ -5,7 +5,7 @@ alwaysApply: true
 
 # Harness warmup (Grace-Mar)
 
-New Cursor threads have **no memory** of `recursion-gate`, `self-evidence`, or `session-log`. Warmup fixes that.
+New Cursor threads have **no memory** of `recursion-gate`, `self-archive` (EVIDENCE), or `session-log`. Warmup fixes that.
 
 ## When to run
 

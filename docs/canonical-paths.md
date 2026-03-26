@@ -12,16 +12,16 @@
 |--------|-----------------|
 | Identity + three-dimension mind (IX-A/B/C) | `users/[id]/self.md` |
 | Durable identity commitments (optional split surface) | `users/[id]/self-identity.md` |
-| Activity log (ACT-*, READ-*, WRITE-*, CREATE-*) | `users/[id]/self-evidence.md` |
-| Gated approved activity (voice + non-voice) | **`self-evidence.md` § `## VIII. GATED APPROVED LOG (SELF-ARCHIVE)`** — appended only by `process_approved_candidates.py` |
-| `self-archive.md` (legacy pointer) | Optional stub only — **do not append**; use § VIII above. Legacy instances may still rotate standalone file until migrated. |
+| Activity log (ACT-*, READ-*, WRITE-*, CREATE-*) + gated approved log § VIII | **`users/[id]/self-archive.md`** — single canonical **EVIDENCE** file |
+| `self-evidence.md` | **Optional compatibility pointer** for old bookmarks; tooling reads **`self-archive.md`**. Do not rely on this path for new instances. |
+| Gated approved activity (voice + non-voice) | **`self-archive.md` § `## VIII. GATED APPROVED LOG (SELF-ARCHIVE)`** — appended only by `process_approved_candidates.py` |
 | Pipeline staging (candidates above `## Processed`) | `users/[id]/recursion-gate.md` |
 | Session / interaction history | `users/[id]/session-log.md` |
 | Capability containers (THINK, WRITE, etc.) | `users/[id]/skills.md` |
 | Curated references, canon | `users/[id]/self-library.md` |
 | Intent (goals, tradeoffs — YAML in fenced block; see [intent-template.md](intent-template.md)) | `users/[id]/intent.md` |
 
-All paths are **lowercase** with hyphens where used (e.g. `self-evidence.md`, `recursion-gate.md`).
+All paths are **lowercase** with hyphens where used (e.g. `self-archive.md`, `recursion-gate.md`).
 
 **`self-*` labels in prose:** Standard companion-self component names (**self-knowledge**, **self-identity**, **self-library**, …) and formal surfaces (**SELF-KNOWLEDGE**, **SELF-LIBRARY**) are defined in [id-taxonomy.md — Capitalization and format](id-taxonomy.md#capitalization-and-format).
 

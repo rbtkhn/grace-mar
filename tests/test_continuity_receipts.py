@@ -21,7 +21,7 @@ from verify_continuity_receipt import verify_receipt_file  # noqa: E402
 def test_build_receipt_hashes_user_files(tmp_path: Path) -> None:
     ud = tmp_path / "users" / "u1"
     ud.mkdir(parents=True)
-    for name in ("session-log.md", "recursion-gate.md", "self-evidence.md"):
+    for name in ("session-log.md", "recursion-gate.md", "self-archive.md"):
         (ud / name).write_text(f"content-{name}\n", encoding="utf-8")
     receipt, errs = build_receipt(
         user_id="u1",
@@ -85,7 +85,7 @@ def test_verify_receipt_hash_mismatch(tmp_path: Path) -> None:
 def test_verify_receipt_ok(tmp_path: Path) -> None:
     ud = tmp_path / "users" / "u1"
     ud.mkdir(parents=True)
-    for name in ("session-log.md", "recursion-gate.md", "self-evidence.md"):
+    for name in ("session-log.md", "recursion-gate.md", "self-archive.md"):
         (ud / name).write_text(f"x-{name}", encoding="utf-8")
     receipt, _ = build_receipt(
         user_id="u1",

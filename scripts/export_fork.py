@@ -6,7 +6,7 @@ Ontology in export (v1.1+): **self_knowledge** (IX-A slice = SELF-KNOWLEDGE), **
 (with **civ_mem.lib_entry_ids** = CIV-MEM subdomain of SELF-LIBRARY), plus **self**, **skills**,
 **evidence**, **library.raw**. See docs/boundary-self-knowledge-self-library.md.
 
-Reads self.md, skills.md, self-evidence.md, and self-library.md for the given user and optionally
+Reads self.md, skills.md, self-archive.md (EVIDENCE), and self-library.md for the given user and optionally
 fork-manifest.json / manifest.json, then writes structured JSON for backup, portability,
 or external tooling.
 
@@ -140,14 +140,15 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     user_dir = profile_dir(user_id)
     self_path = user_dir / "self.md"
     skills_path = user_dir / "skills.md"
-    evidence_path = user_dir / "self-evidence.md"
+    evidence_path = user_dir / "self-archive.md"
+    evidence_compat = user_dir / "self-evidence.md"
     library_path = user_dir / "self-library.md"
     fork_manifest_path = user_dir / "fork-manifest.json"
     agent_manifest_path = user_dir / "manifest.json"
 
     self_raw = read_path(self_path)
     skills_raw = read_path(skills_path)
-    evidence_raw = read_path(evidence_path)
+    evidence_raw = read_path(evidence_path) or read_path(evidence_compat)
     library_raw = read_path(library_path)
 
     civ_ids = _civ_mem_lib_ids(library_raw or "")

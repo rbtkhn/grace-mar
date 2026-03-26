@@ -16,7 +16,7 @@ def test_record_refs_ix_a_knowledge():
     refs = fn("grace-mar", "SELF_KNOWLEDGE", "IX-A. KNOWLEDGE", "SELF_KNOWLEDGE_ADD")
     joined = " ".join(refs)
     assert "self.md#IX-A" in joined
-    assert "self-evidence.md" in joined
+    assert "self-archive.md" in joined
 
 
 def test_record_refs_library_class():

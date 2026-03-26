@@ -111,7 +111,7 @@ def _priority_list(
 def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     user_dir = USERS_DIR / user_id
     recursion_gate = _read(user_dir / "recursion-gate.md")
-    evidence = _read(user_dir / "self-evidence.md")
+    evidence = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
     session = _read(user_dir / "session-log.md")
 
     pending_all = _pending_candidates(recursion_gate, "all")

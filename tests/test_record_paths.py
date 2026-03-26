@@ -12,6 +12,7 @@ if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
 from repo_io import (  # noqa: E402
+    CANONICAL_EVIDENCE_BASENAME,
     CANONICAL_RECORD_FILES_REQUIRED,
     assert_canonical_record_layout,
     missing_canonical_record_files,
@@ -22,7 +23,7 @@ from repo_io import (  # noqa: E402
 def test_constants_match_documented_triple():
     assert CANONICAL_RECORD_FILES_REQUIRED == (
         "self.md",
-        "self-evidence.md",
+        CANONICAL_EVIDENCE_BASENAME,
         "recursion-gate.md",
     )
 
@@ -54,7 +55,7 @@ def test_assert_raises_when_required_file_missing(monkeypatch, tmp_path):
     fake_users.mkdir()
     (fake_users / "tmpfork").mkdir()
     (fake_users / "tmpfork" / "self.md").write_text("x", encoding="utf-8")
-    (fake_users / "tmpfork" / "self-evidence.md").write_text("x", encoding="utf-8")
+    (fake_users / "tmpfork" / CANONICAL_EVIDENCE_BASENAME).write_text("x", encoding="utf-8")
     # recursion-gate.md missing
 
     import repo_io as ri

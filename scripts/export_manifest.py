@@ -41,7 +41,7 @@ def _compute_checksum(profile_dir: Path) -> str:
 
     parts = []
     parts.append(_read(profile_dir / "self.md"))
-    parts.append(_read(profile_dir / "self-evidence.md"))
+    parts.append(_read(profile_dir / "self-archive.md"))
     prompt_path = BOT_DIR / "prompt.py"
     if prompt_path.exists():
         content = prompt_path.read_text()

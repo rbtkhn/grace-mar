@@ -53,7 +53,7 @@ def compute_checksum(pd: Path) -> str:
     """Compute SHA-256 of fork state for users/<id>/."""
     parts = []
     parts.append(_read(pd / "self.md"))
-    parts.append(_read(pd / "self-evidence.md"))
+    parts.append(_read(pd / "self-archive.md") or _read(pd / "self-evidence.md"))
     # Key prompt sections that embed fork state (shared bot — same extract for all forks)
     prompt_path = BOT_DIR / "prompt.py"
     if prompt_path.exists():

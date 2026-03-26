@@ -32,7 +32,7 @@ INTEGRATION_SCRIPTS = (
     REPO_ROOT / "integrations" / "openclaw_stage.py",
 )
 CONTINUITY_SCRIPT = REPO_ROOT / "scripts" / "continuity_read_log.py"
-CONTINUITY_FILES = ("session-log.md", "recursion-gate.md", "self-evidence.md")
+CONTINUITY_FILES = ("session-log.md", "recursion-gate.md", "self-archive.md")
 
 
 def _load_module_no_main(path: Path, name: str) -> None:

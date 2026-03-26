@@ -1,4 +1,4 @@
-"""Gated approved log rotation (self-evidence § VIII or legacy self-archive)."""
+"""Gated approved log rotation (self-archive.md § VIII or legacy paths)."""
 
 import gzip
 
@@ -32,7 +32,7 @@ def test_rotate_embedded_viii_compress_writes_gz(tmp_path, monkeypatch):
     uid = "rot-test"
     ud = tmp_path / "users" / uid
     ud.mkdir(parents=True)
-    (ud / "self-evidence.md").write_text(_evidence_with_viii(6), encoding="utf-8")
+    (ud / "self-archive.md").write_text(_evidence_with_viii(6), encoding="utf-8")
 
     r = ra.rotate_archive(
         user_id=uid,
@@ -43,7 +43,7 @@ def test_rotate_embedded_viii_compress_writes_gz(tmp_path, monkeypatch):
         compress=True,
     )
     assert r["rotated"] >= 1
-    assert r.get("source") == "self-evidence"
+    assert r.get("source") == "self-archive.md"
     gz = ud / "archives" / "SELF-ARCHIVE-2024-01.md.gz"
     assert gz.is_file()
     with gzip.open(gz, "rt", encoding="utf-8") as f:

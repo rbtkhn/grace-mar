@@ -29,4 +29,4 @@ Last rotated: 2026-03-26
 ## Long-term
 
 - **Rotation:** prefer weekly prune of Short/Medium; review Long-term quarterly for drift into “shadow Record.”
-- **Durable truth:** `users/grace-mar/self.md`, optional `self-identity.md`; activity spine: `self-evidence.md`; operator threads: `self-work.md`.
+- **Durable truth:** `users/grace-mar/self.md`, optional `self-identity.md`; activity spine: `self-archive.md` (EVIDENCE); operator threads: `self-work.md`.

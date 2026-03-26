@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Quick snapshot of RECURSION-GATE: pending count, last N candidates with one-line summary,
-and optional last merge recency (last ACT-* date from self-evidence).
+and optional last merge recency (last ACT-* date from EVIDENCE / self-archive.md).
 
 Use at start of session or when checking "what's in the queue?" without opening recursion-gate.md.
 """
@@ -23,8 +23,11 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def _last_act_date(user_id: str) -> str | None:
-    """Return the most recent ACT-* date from self-evidence Activity Log, or None."""
-    evidence_path = REPO_ROOT / "users" / user_id / "self-evidence.md"
+    """Return the most recent ACT-* date from EVIDENCE Activity Log, or None."""
+    root = REPO_ROOT / "users" / user_id
+    evidence_path = root / "self-archive.md"
+    if not evidence_path.exists():
+        evidence_path = root / "self-evidence.md"
     if not evidence_path.exists():
         return None
     text = evidence_path.read_text(encoding="utf-8")

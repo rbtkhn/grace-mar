@@ -12,9 +12,11 @@ Last Update: March 2026
 
 ## I. PURPOSE
 
-The MEMORY module (**self-memory**, file `memory.md`) holds **ephemeral context** at **three horizons** — short, medium, and long — used to prime the Voice and improve continuity. MEMORY is **not part of the Record**. It refines; it does not override SELF.
+The MEMORY module (**self-memory**, file `memory.md`) holds **ephemeral context** at **three horizons** — short, medium, and long — used to prime the Voice and improve continuity. Content is **mostly chronological**: within each horizon, entries read as a **time-ordered prose thread** (what happened lately, what is open now). That is a **slim** chronology — not **multicategory** structured evidence (no READ-/ACT- sections, no artifact spine). MEMORY is **not part of the Record**. It refines; it does not override SELF.
 
-**Horizon ≠ authority.** Long-term here means **how you run sessions** (pointers, habits, rotation policy), **not** a second copy of durable identity or facts. Those belong in **SELF**, **self-evidence**, and the **gate**.
+**Horizon ≠ authority.** Long-term here means **how you run sessions** (pointers, habits, rotation policy), **not** a second copy of durable identity or facts. Those belong in **SELF**, **EVIDENCE** (`self-archive.md`), and the **gate**.
+
+**Contrast with self-archive (EVIDENCE).** Canonical **self-archive.md** is **also chronological** (dated entries, list ordering, ACT/READ progression within each log) but **far more expansive**: **multicategory** (separate sections and id families for reading, writing, creation, activity, media, § VIII) and **multimodal** (artifact paths, YAML, gated approved blocks) — all **durable Record** once merged. **MEMORY** is deliberately **narrow**: mostly prose across three horizons for session continuity and meta pointers — chronology without that **category spine** or multimodal evidence shape. It does not substitute for evidence, artifacts, or the activity log.
 
 ### MEMORY is
 

@@ -25,7 +25,7 @@ def fake_repo(tmp_path: Path) -> tuple[Path, str]:
     uid = "testuser"
     ur = r / "users" / uid
     ur.mkdir(parents=True)
-    for name in ("self.md", "self-evidence.md", "recursion-gate.md", "session-log.md"):
+    for name in ("self.md", "self-archive.md", "recursion-gate.md", "session-log.md"):
         (ur / name).write_text(f"# {name}\n", encoding="utf-8")
     (r / "testuser-llm.txt").write_text("prp\n", encoding="utf-8")
     return r, uid

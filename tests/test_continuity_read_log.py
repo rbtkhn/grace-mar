@@ -11,7 +11,7 @@ import pytest
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = REPO_ROOT / "scripts" / "continuity_read_log.py"
-REQUIRED_FILES = ("session-log.md", "recursion-gate.md", "self-evidence.md")
+REQUIRED_FILES = ("session-log.md", "recursion-gate.md", "self-archive.md")
 
 
 def test_continuity_read_log_dry_run_grace_mar() -> None:

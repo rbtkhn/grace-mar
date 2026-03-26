@@ -167,8 +167,11 @@ def validate_evidence(user_dirs: list[Path], min_evidence_tier: int) -> tuple[li
     errors: list[str] = []
     act_ids: set[str] = set()
     for user_dir in user_dirs:
-        ev_path = user_dir / "self-evidence.md"
+        ev_path = user_dir / "self-archive.md"
         content = _safe_read(ev_path)
+        if not content.strip():
+            ev_path = user_dir / "self-evidence.md"
+            content = _safe_read(ev_path)
         if "## V. ACTIVITY LOG" not in content:
             continue
 
@@ -298,7 +301,7 @@ ID_PATTERNS = {
 def validate_id_format(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     for user_dir in user_dirs:
-        for fname in ("self.md", "self-evidence.md", "recursion-gate.md"):
+        for fname in ("self.md", "self-archive.md", "recursion-gate.md"):
             path = user_dir / fname
             content = _safe_read(path)
             if not content:
@@ -355,7 +358,7 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
         source_paths = [
             user_dir / "self.md",
             user_dir / "skills.md",
-            user_dir / "self-evidence.md",
+            user_dir / "self-archive.md",
             user_dir / "self-library.md",
             user_dir / "intent.md",
             prompt_path,

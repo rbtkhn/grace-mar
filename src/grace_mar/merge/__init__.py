@@ -1,4 +1,4 @@
-"""Surface-aware merge mutators for self.md, self-evidence.md, and prompt projection."""
+"""Surface-aware merge mutators for self.md, self-archive.md (EVIDENCE), and prompt projection."""
 
 from grace_mar.merge.evidence_log import append_act_entry, insert_reading_list_entry, upsert_reading_list_entry
 from grace_mar.merge.prompt_sync import insert_prompt_addition, rebuild_observation_sections_from_self

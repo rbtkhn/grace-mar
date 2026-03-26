@@ -64,7 +64,7 @@ def main() -> int:
         return 1
 
     pr = _read(user_dir / "recursion-gate.md")
-    evidence = _read(user_dir / "self-evidence.md")
+    evidence = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
     session = _read(user_dir / "session-log.md")
 
     pending = _pending_count(pr)

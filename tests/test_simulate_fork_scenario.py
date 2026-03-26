@@ -30,7 +30,7 @@ def _minimal_profile(tmp_path: Path) -> Path:
         "skill-write.md",
         "work-alpha-school.md",
         "work-jiang.md",
-        "self-evidence.md",
+        "self-archive.md",
     ):
         (prof / n).write_text("", encoding="utf-8")
     return prof

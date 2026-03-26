@@ -8,7 +8,8 @@ This folder documents **required filenames** for a Grace-Mar instance. It is **n
 |------|------|
 | `self.md` | SELF — identity + IX-A/B/C |
 | `skills.md` | SKILLS |
-| `self-evidence.md` | EVIDENCE activity log |
+| `self-archive.md` | EVIDENCE — activity log + § VIII gated approved |
+| `self-evidence.md` | optional compatibility pointer to `self-archive.md` |
 | `recursion-gate.md` | Pipeline staging |
 | `session-log.md` | Session history |
 | `self-archive.md` | Gated approved activity log |

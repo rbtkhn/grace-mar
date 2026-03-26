@@ -23,7 +23,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_USER = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
-FILES = ["session-log.md", "recursion-gate.md", "self-evidence.md"]
+FILES = ["session-log.md", "recursion-gate.md", "self-archive.md"]
 
 
 def main() -> int:

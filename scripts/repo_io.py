@@ -19,9 +19,10 @@ DEFAULT_USER_ID = (os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace
 
 # Authoritative on-disk names under users/<id>/. Docs may say SELF/EVIDENCE as concepts;
 # filenames are always these. See docs/canonical-paths.md.
+CANONICAL_EVIDENCE_BASENAME = "self-archive.md"
 CANONICAL_RECORD_FILES_REQUIRED: tuple[str, ...] = (
     "self.md",
-    "self-evidence.md",
+    CANONICAL_EVIDENCE_BASENAME,
     "recursion-gate.md",
 )
 

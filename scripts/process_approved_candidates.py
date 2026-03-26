@@ -45,12 +45,13 @@ from harness_events import append_harness_event
 from pipeline_correlation import find_staged_event_id_for_candidate
 from recursion_gate_review import split_gate_sections
 from recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
+from repo_io import CANONICAL_EVIDENCE_BASENAME
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
 RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
 SELF_PATH = PROFILE_DIR / "self.md"
-EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
+EVIDENCE_PATH = PROFILE_DIR / CANONICAL_EVIDENCE_BASENAME
 INTENT_PATH = PROFILE_DIR / "intent.md"
 PROMPT_PATH = REPO_ROOT / "bot" / "prompt.py"
 PRP_PATH = REPO_ROOT / "grace-mar-llm.txt"
@@ -106,7 +107,7 @@ def _set_user(user_id: str) -> None:
     PROFILE_DIR = REPO_ROOT / "users" / USER_ID
     RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
     SELF_PATH = PROFILE_DIR / "self.md"
-    EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
+    EVIDENCE_PATH = PROFILE_DIR / CANONICAL_EVIDENCE_BASENAME
     INTENT_PATH = PROFILE_DIR / "intent.md"
     MERGE_RECEIPTS_PATH = PROFILE_DIR / "merge-receipts.jsonl"
 
@@ -608,7 +609,7 @@ def _extract_source_exchange_snippet(block: str, max_chars: int = 600) -> str:
     return (out[:max_chars] + "...") if len(out) > max_chars else out
 
 
-# Gated approved log: consolidated into self-evidence.md § VIII (replaces standalone self-archive.md).
+# Gated approved log: self-archive.md § VIII (canonical EVIDENCE file; self-evidence.md optional compat pointer).
 GATED_LOG_SECTION = "## VIII. GATED APPROVED LOG (SELF-ARCHIVE)"
 _END_FILE_LINE = re.compile(r"(?m)^END OF FILE.*$")
 
@@ -620,7 +621,7 @@ def _gated_log_section_prologue() -> str:
         + "\n\n"
         + "> Append-only log of approved activity for the self (voice and non-voice). "
         + "Written only when candidates are merged via process_approved_candidates. "
-        + "Consolidated from standalone `self-archive.md` (see docs/canonical-paths.md).\n\n"
+        + "Lives in this file as § VIII (see docs/canonical-paths.md).\n\n"
         + "---\n\n"
     )
 
@@ -641,7 +642,7 @@ def _append_gated_evidence_log_entry(
     summary: str,
     source_snippet: str,
 ) -> None:
-    """Append one APPROVED entry to self-evidence.md § VIII (gated merge path only)."""
+    """Append one APPROVED entry to self-archive.md § VIII (gated merge path only)."""
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     label = _channel_label(channel_key)
     lines = [f"**[{ts}]** `APPROVED` ({label})\n", f"> {candidate_id} → {act_id}\n", f"> {summary[:300]}\n"]
@@ -848,7 +849,7 @@ def _record_refs_for_applied(user_id: str, surface: str, profile_target: str, pr
         refs.append(f"{base}/self.md#IX-C")
     if "SKILLS" in pc:
         refs.append(f"{base}/skills.md")
-    refs.append(f"{base}/self-evidence.md")
+    refs.append(f"{base}/self-archive.md")
     out: list[str] = []
     seen: set[str] = set()
     for r in refs:
@@ -1245,7 +1246,7 @@ def main() -> None:
                 c["summary"],
                 _extract_source_exchange_snippet(c["block"]),
             )
-        print("self-evidence.md § VIII (gated approved log) updated.")
+        print("self-archive.md § VIII (gated approved log) updated.")
         try:
             _append_session_log_for_merge([c["id"] for c, _, _ in applied_candidates], args.approved_by.strip())
             print("session-log.md updated.")

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Scaffold a WRITE-* or CREATE-* evidence block for users/grace-mar/self-evidence.md.
+Scaffold a WRITE-* or CREATE-* evidence block for users/<id>/self-archive.md (canonical EVIDENCE).
 
 Given an artifact path (and optional title, context, evidence_tier), generates the correct
-YAML block. Infers next ID from existing id: WRITE-N / id: CREATE-N in self-evidence.md.
+YAML block. Infers next ID from existing id: WRITE-N / id: CREATE-N in that file.
 Follows docs/pipeline-map.md artifact naming and docs/evidence-template.md structure.
 
 Usage:
@@ -139,9 +139,12 @@ def main() -> None:
     args = ap.parse_args()
 
     user_id = args.user.strip()
-    evidence_path = REPO_ROOT / "users" / user_id / "self-evidence.md"
+    root = REPO_ROOT / "users" / user_id
+    evidence_path = root / "self-archive.md"
     if not evidence_path.exists():
-        print(f"Error: {evidence_path} not found", file=sys.stderr)
+        evidence_path = root / "self-evidence.md"
+    if not evidence_path.exists():
+        print(f"Error: no self-archive.md or self-evidence.md under {root}", file=sys.stderr)
         sys.exit(1)
 
     content = evidence_path.read_text(encoding="utf-8")

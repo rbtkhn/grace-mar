@@ -118,7 +118,9 @@ def _bundle_id(user_id: str, runtime_mode: str, generated_at: str) -> str:
 
 def _warmup_text(user_id: str) -> str:
     profile_dir = _profile_dir(user_id)
-    evidence_path = profile_dir / "self-evidence.md"
+    evidence_path = profile_dir / "self-archive.md"
+    if not evidence_path.exists():
+        evidence_path = profile_dir / "self-evidence.md"
     session_log_path = profile_dir / "session-log.md"
 
     pending_ids = [row["id"] for row in parse_review_candidates(user_id) if row.get("status") == "pending"]
@@ -226,7 +228,7 @@ def export_runtime_bundle(
     source_paths = {
         "self": profile_dir / "self.md",
         "skills": profile_dir / "skills.md",
-        "evidence": profile_dir / "self-evidence.md",
+        "evidence": profile_dir / "self-archive.md",
         "library": profile_dir / "self-library.md",
         "intent": profile_dir / "intent.md",
         "session_log": profile_dir / "session-log.md",

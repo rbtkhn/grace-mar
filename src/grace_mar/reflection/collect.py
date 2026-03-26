@@ -123,14 +123,18 @@ def collect_bundle(
         rel = f"users/{user_id}/{name}"
         bundle.slices.append(TextSlice(rel, start, end, "\n".join(chunk), note=f"last {len(chunk)} lines"))
 
-    # self-evidence — last ~120 lines
-    se_path = profile / "self-evidence.md"
-    if se_path.exists():
-        lines = _read_lines(se_path)
+    # EVIDENCE (self-archive.md) — last ~120 lines; legacy self-evidence.md if archive missing
+    ev_path = profile / "self-archive.md"
+    ev_rel = f"users/{user_id}/self-archive.md"
+    if not ev_path.exists():
+        ev_path = profile / "self-evidence.md"
+        ev_rel = f"users/{user_id}/self-evidence.md"
+    if ev_path.exists():
+        lines = _read_lines(ev_path)
         chunk, start, end = _tail_lines(lines, 120)
         bundle.slices.append(
             TextSlice(
-                f"users/{user_id}/self-evidence.md",
+                ev_rel,
                 start,
                 end,
                 "\n".join(chunk),

@@ -158,7 +158,9 @@ def build_report(
     harness_path = prof / "harness-events.jsonl"
     merge_path = prof / "merge-receipts.jsonl"
     gate_path = prof / "recursion-gate.md"
-    evidence_path = prof / "self-evidence.md"
+    evidence_path = prof / "self-archive.md"
+    if not evidence_path.is_file():
+        evidence_path = prof / "self-evidence.md"
     transcript_path = prof / "session-transcript.md"
 
     pl = _read_jsonl(pipeline_path)
@@ -274,7 +276,7 @@ def build_report(
             lines.append("_No matching lines._")
 
         if evidence_id:
-            lines.extend(["", "## self-evidence.md (hint line)", ""])
+            lines.extend(["", "## EVIDENCE / self-archive.md (hint line)", ""])
             snip = _evidence_snippet(evidence_path, evidence_id.strip().upper())
             lines.append(snip or f"_No line containing `{evidence_id}` found._")
 
@@ -312,7 +314,7 @@ def main() -> int:
         default="",
         help="Single pipeline event_id (evt_…); optional candidate follow-on from row",
     )
-    ap.add_argument("--evidence", default="", metavar="ACT-nnnn", help="Optional: show hint line from self-evidence.md")
+    ap.add_argument("--evidence", default="", metavar="ACT-nnnn", help="Optional: show hint line from self-archive.md")
     ap.add_argument(
         "--transcript-snippet",
         action="store_true",

@@ -11,7 +11,19 @@ semantic search is separate — see `scripts/index_record.py`.
 import os
 import pickle
 import re
+import sys
 from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = REPO_ROOT / "scripts"
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from record_index import (  # noqa: E402
+    ROMAN_TO_SECTION_LABEL,
+    build_evidence_index,
+    evidence_section_for_offset,
+)
+from repo_io import CANONICAL_EVIDENCE_BASENAME  # noqa: E402
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
@@ -35,9 +47,11 @@ WORK_PATHS = [
     PROFILE_DIR / "work-alpha-school.md",
     PROFILE_DIR / "work-jiang.md",
 ]
-EVIDENCE_PATH = PROFILE_DIR / "self-evidence.md"
+EVIDENCE_PATH = PROFILE_DIR / CANONICAL_EVIDENCE_BASENAME
 
 DISK_CACHE_PATH = PROFILE_DIR / ".cache" / "retriever_chunks.pkl"
+# Bump when chunk text shape changes (e.g. EVIDENCE section tags).
+_RETRIEVER_DISK_CACHE_VERSION = 2
 
 # In-process cache for load_record_chunks (invalidated when any source file mtime changes)
 _chunks_cache: list[tuple[str, str]] | None = None
@@ -80,6 +94,38 @@ def _extract_chunks(content: str, source: str) -> list[tuple[str, str]]:
         if compact:
             text = compact[:700]
             chunks.append((chunk_id, f"[{chunk_id}] ({source}) {text}"))
+    return chunks
+
+
+def _extract_chunks_evidence(content: str, ev_index) -> list[tuple[str, str]]:
+    """EVIDENCE chunks with section tag (I–VIII) for lexical routing."""
+    chunks: list[tuple[str, str]] = []
+    id_pattern = re.compile(
+        r"id:\s+(LEARN-\d+|CUR-\d+|PER-\d+|ACT-\d+|READ-\d+|WRITE-\d+|CREATE-\d+|MEDIA-\d+)",
+        re.IGNORECASE,
+    )
+    seen: set[str] = set()
+    for m in id_pattern.finditer(content):
+        chunk_id = m.group(1).upper()
+        if chunk_id in seen:
+            continue
+        seen.add(chunk_id)
+        span = ev_index.entry_spans.get(chunk_id)
+        if span:
+            block = content[span[0] : span[1]].strip()
+        else:
+            start = m.start()
+            next_m = id_pattern.search(content, m.end())
+            end = next_m.start() if next_m else min(len(content), start + 1200)
+            block = content[start:end].strip()
+        compact = re.sub(r"\s+", " ", block)
+        if not compact:
+            continue
+        text = compact[:700]
+        roman = evidence_section_for_offset(ev_index, m.start())
+        sec = ROMAN_TO_SECTION_LABEL.get(roman or "", "")
+        tag = f"EVIDENCE · {sec}" if sec else "EVIDENCE"
+        chunks.append((chunk_id, f"[{chunk_id}] ({tag}) {text}"))
     return chunks
 
 
@@ -136,7 +182,7 @@ def load_record_chunks() -> list[tuple[str, str]]:
     if disk_ok and DISK_CACHE_PATH.exists():
         try:
             payload = pickle.loads(DISK_CACHE_PATH.read_bytes())
-            if payload.get("fp") == fp:
+            if payload.get("fp") == fp and payload.get("v") == _RETRIEVER_DISK_CACHE_VERSION:
                 _chunks_cache = payload["chunks"]
                 _chunks_inv = payload.get("inv")
                 if not _chunks_inv:
@@ -156,7 +202,9 @@ def load_record_chunks() -> list[tuple[str, str]]:
         if p.exists():
             chunks.extend(_extract_chunks(_read(p), "WORK"))
     if EVIDENCE_PATH.exists():
-        chunks.extend(_extract_chunks(_read(EVIDENCE_PATH), "EVIDENCE"))
+        ev_raw = _read(EVIDENCE_PATH)
+        ev_idx = build_evidence_index(ev_raw)
+        chunks.extend(_extract_chunks_evidence(ev_raw, ev_idx))
 
     _chunks_inv = _build_inverted_index(chunks)
     _chunks_cache = chunks
@@ -167,7 +215,12 @@ def load_record_chunks() -> list[tuple[str, str]]:
             DISK_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
             DISK_CACHE_PATH.write_bytes(
                 pickle.dumps(
-                    {"fp": fp, "chunks": chunks, "inv": _chunks_inv},
+                    {
+                        "v": _RETRIEVER_DISK_CACHE_VERSION,
+                        "fp": fp,
+                        "chunks": chunks,
+                        "inv": _chunks_inv,
+                    },
                     protocol=pickle.HIGHEST_PROTOCOL,
                 )
             )
@@ -216,6 +269,24 @@ def _score_chunk(query: str, query_tokens: set[str], chunk_id: str, text: str) -
         score += 1.2
     if any(x in q for x in ("personality", "how am i", "what am i like")) and chunk_id.startswith("PER-"):
         score += 1.2
+
+    # EVIDENCE section routing (tag from _extract_chunks_evidence)
+    tl = text
+    if "book" in q or "read " in q or "reading" in q or "finished" in q:
+        if "EVIDENCE · Reading" in tl:
+            score += 1.4
+    if "wrote" in q or "writing" in q or "journal" in q:
+        if "EVIDENCE · Writing" in tl:
+            score += 1.4
+    if "drew" in q or "drawing" in q or "art" in q or "create" in q:
+        if "EVIDENCE · Creation" in tl:
+            score += 1.3
+    if "movie" in q or "show" in q or "media" in q:
+        if "EVIDENCE · Media" in tl:
+            score += 1.3
+    if "activity" in q or "act-" in q or "pipeline" in q or "merge" in q:
+        if "EVIDENCE · Activity" in tl or "EVIDENCE · Gated" in tl:
+            score += 1.2
 
     # Light recency preference within same id family.
     m = re.search(r"-(\d+)$", chunk_id)

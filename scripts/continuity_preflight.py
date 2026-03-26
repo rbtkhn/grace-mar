@@ -35,7 +35,7 @@ def build_receipt(
     """Return receipt dict and list of error strings (empty if ok)."""
     errors: list[str] = []
     user_dir = repo_root / "users" / user_id
-    required_names = ("session-log.md", "recursion-gate.md", "self-evidence.md")
+    required_names = ("session-log.md", "recursion-gate.md", "self-archive.md")
     entries: list[dict[str, str]] = []
     for name in required_names:
         rel = f"users/{user_id}/{name}"

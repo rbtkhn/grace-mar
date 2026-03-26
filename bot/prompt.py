@@ -1,7 +1,7 @@
 """
 System prompt for Grace-Mar's cognitive fork emulation.
 
-Built from grace-mar self.md, skills.md, and self-evidence.md.
+Built from grace-mar self.md, skills.md, and self-archive.md (EVIDENCE).
 This prompt instructs the LLM to respond as Grace-Mar would —
 a 6-year-old girl in Colorado, based on documented evidence.
 

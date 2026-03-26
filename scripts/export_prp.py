@@ -271,7 +271,7 @@ def _build_personality(personality: dict, ix_c: list[str]) -> str:
 
 def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> str:
     """
-    Build the Portable Record Prompt (PRP) from self.md and self-evidence.md.
+    Build the Portable Record Prompt (PRP) from self.md and self-archive.md (EVIDENCE).
 
     Args:
         user_id: User profile id (e.g. grace-mar).
@@ -286,7 +286,7 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
         else REPO_ROOT / "users" / user_id
     )
     self_content = _read(profile_dir / "self.md")
-    evidence_content = _read(profile_dir / "self-evidence.md")
+    evidence_content = _read(profile_dir / "self-archive.md") or _read(profile_dir / "self-evidence.md")
 
     if not self_content:
         return f"# Portable Record Prompt — {user_id}\n\nNo self.md found at {profile_dir / 'self.md'}.\n"

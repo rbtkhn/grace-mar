@@ -2,9 +2,9 @@
 """
 Rotate the gated approved log when it exceeds size or entry count.
 
-**Primary:** `self-evidence.md` § **## VIII. GATED APPROVED LOG (SELF-ARCHIVE)** (merge script appends here).
+**Primary:** `self-archive.md` § **## VIII. GATED APPROVED LOG (SELF-ARCHIVE)** (merge script appends here; full EVIDENCE body lives in this file).
 
-**Legacy:** If § VIII is absent, falls back to standalone `self-archive.md` (pre-migration instances).
+**Legacy:** If § VIII is absent in `self-archive.md`, check `self-evidence.md` § VIII (pre-migration), then standalone archive-style `self-archive.md` without evidence sections.
 
 Rotated chunks go to `archives/SELF-ARCHIVE-YYYY-MM.md` (or `.md.gz` with ``--compress``).
 
@@ -59,15 +59,17 @@ def get_entry_ym(block: str) -> str | None:
 
 
 def _rotate_embedded_gated_log(
-    evidence_path: Path,
+    record_path: Path,
     archives_dir: Path,
     apply: bool,
     max_bytes: int,
     max_entries: int,
     keep_recent: int,
     compress: bool,
+    *,
+    source_label: str = "self-archive.md",
 ) -> dict:
-    content = evidence_path.read_text(encoding="utf-8")
+    content = record_path.read_text(encoding="utf-8")
     if GATED_LOG_SECTION not in content:
         return {"ok": False, "rotated": 0, "kept": 0, "reason": "no_gated_section"}
 
@@ -88,7 +90,7 @@ def _rotate_embedded_gated_log(
             "kept": n,
             "size_bytes": size,
             "reason": "within_limits",
-            "source": "self-evidence",
+            "source": source_label,
         }
 
     to_rotate = n - keep_recent
@@ -105,7 +107,7 @@ def _rotate_embedded_gated_log(
             ym = get_entry_ym(block) or "unknown"
             by_month.setdefault(ym, []).append(block)
         for ym, entries in by_month.items():
-            header_ym = f"# SELF-ARCHIVE — {ym}\n\n> Rotated from self-evidence § VIII. Append-only.\n\n---\n\n"
+            header_ym = f"# SELF-ARCHIVE — {ym}\n\n> Rotated from {source_label} § VIII. Append-only.\n\n---\n\n"
             if compress:
                 dest = archives_dir / f"SELF-ARCHIVE-{ym}.md.gz"
                 if dest.exists():
@@ -130,7 +132,7 @@ def _rotate_embedded_gated_log(
         new_body = "\n\n".join(kept) + ("\n\n" if kept else "")
         new_gated = header + new_body
         new_full = prefix + new_gated.rstrip() + ("\n\n" if suffix.strip() else "\n") + suffix.lstrip("\n")
-        evidence_path.write_text(new_full, encoding="utf-8")
+        record_path.write_text(new_full, encoding="utf-8")
 
     return {
         "ok": True,
@@ -139,7 +141,7 @@ def _rotate_embedded_gated_log(
         "size_bytes": size,
         "applied": apply,
         "compress": compress,
-        "source": "self-evidence",
+        "source": source_label,
     }
 
 
@@ -225,26 +227,43 @@ def rotate_archive(
     compress: bool = False,
 ) -> dict:
     ud = REPO_ROOT / "users" / user_id
-    evidence_path = ud / "self-evidence.md"
     archive_path = ud / "self-archive.md"
+    evidence_compat = ud / "self-evidence.md"
     archives_dir = ud / "archives"
 
-    if evidence_path.exists():
-        ev_text = evidence_path.read_text(encoding="utf-8")
-        if GATED_LOG_SECTION in ev_text:
+    if archive_path.exists():
+        arch_text = archive_path.read_text(encoding="utf-8")
+        if GATED_LOG_SECTION in arch_text:
             return _rotate_embedded_gated_log(
-                evidence_path,
+                archive_path,
                 archives_dir,
                 apply,
                 max_bytes,
                 max_entries,
                 keep_recent,
                 compress,
+                source_label="self-archive.md",
+            )
+
+    if evidence_compat.exists():
+        ev_text = evidence_compat.read_text(encoding="utf-8")
+        if GATED_LOG_SECTION in ev_text:
+            return _rotate_embedded_gated_log(
+                evidence_compat,
+                archives_dir,
+                apply,
+                max_bytes,
+                max_entries,
+                keep_recent,
+                compress,
+                source_label="self-evidence.md (legacy)",
             )
 
     if archive_path.exists():
         txt = archive_path.read_text(encoding="utf-8").strip()
-        if txt.startswith("# self-archive.md (deprecated)"):
+        if txt.startswith("# self-archive.md (deprecated)") or txt.startswith(
+            "# self-archive.md (compatibility"
+        ):
             return {"ok": True, "rotated": 0, "kept": 0, "reason": "archive_stub_only"}
         if "**[" in txt or txt.startswith("# SELF-ARCHIVE"):
             return _rotate_legacy_standalone(
@@ -262,7 +281,7 @@ def rotate_archive(
 
 def main() -> None:
     cfg = load_fork_config()
-    parser = argparse.ArgumentParser(description="Rotate gated approved log (self-evidence § VIII or legacy self-archive)")
+    parser = argparse.ArgumentParser(description="Rotate gated approved log (self-archive.md § VIII or legacy paths)")
     parser.add_argument("--apply", "-a", action="store_true", help="Perform rotation (default: dry run)")
     parser.add_argument("--user", "-u", default=DEFAULT_USER_ID, help="User id")
     parser.add_argument(
@@ -307,7 +326,10 @@ def main() -> None:
         print("No gated log (§ VIII) or legacy archive found, nothing to do.")
         return
     if result.get("reason") == "archive_stub_only":
-        print("self-archive.md is a deprecation stub; gated log is in self-evidence § VIII.")
+        print(
+            "self-archive.md looks like a stub; canonical EVIDENCE should be the full self-archive.md "
+            "or (legacy) § VIII in self-evidence.md."
+        )
         return
     if result.get("reason") == "within_limits":
         src = result.get("source", "archive")

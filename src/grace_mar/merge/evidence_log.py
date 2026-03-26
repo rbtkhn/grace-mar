@@ -1,4 +1,4 @@
-"""Structured insertion into self-evidence.md (ACTIVITY LOG, READING LIST)."""
+"""Structured insertion into canonical EVIDENCE (self-archive.md; ACTIVITY LOG, READING LIST)."""
 
 from __future__ import annotations
 
