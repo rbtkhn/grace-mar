@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, KY-4 polling and Polymarket snapshot, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation. For good night / end of session, use the Good night section (handoff check — not the morning stack).
+description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, KY-4 polling and Polymarket snapshot, repo integrity, top priorities, and a required multiple-choice block for the **grace-mar** operator (always including audit **grace-mar vs companion-self** + module leakage / boundary check). Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation. For good night / end of session, use the Good night section (handoff check — not the morning stack).
 ---
 
 # Daily Warmup
@@ -18,7 +18,7 @@ Default rhythm (operator can override any day):
 | **Sunday** | **Week ahead (~10 min)** | Not a full good morning. Focus: **FEC / compliance dates** and **voter registration** from the daily brief calendar + [brief-source-registry.md](../../../docs/skill-work/work-politics/brief-source-registry.md) (`needs_refresh`, `watch`). Optional: skim `wap-pulse` / weekly-brief readiness. |
 | **Friday** | **Lighter + post-mortem** | Same as Tue–Fri **plus** two lines at the end of the reply: **(1)** What repeated this week? **(2)** What to drop from the routine? |
 
-If the operator says **“good morning”** on a **Sunday**, default to **week-ahead** mode unless they ask for the full Monday stack.
+If the operator says **“good morning”** on a **Sunday**, default to **week-ahead** mode unless they ask for the full Monday stack. Still include the **multiple-choice** block (can be shorter) with the **two fixed options** (audit grace-mar vs companion-self; leakage / boundaries in this repo).
 
 ---
 
@@ -44,7 +44,35 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    - X scan top links (short)
    - 1–2 draft post candidates for `@usa_first_ky` (still draft-only; human approval required)
    - If **Civilization** transcripts are pending or just landed, one line on that (upload/integrate status).
-6. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
+6. **Multiple choice (required):** Always end with a **short MCQ** (at least **four** labeled options) for “what to lean into next” **in this grace-mar repo / instance.** **Two options are fixed every time** (below): (1) audit **grace-mar** against **companion-self** (upstream template), (2) leakage / boundary check **within grace-mar**; fill the rest from context (gate backlog, integrity failures, work-dev, work-jiang, work-politics, etc.).
+7. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
+
+---
+
+## Good morning — multiple choice (required)
+
+Every **good morning** reply must include a **multiple-choice block** so the operator can pick a focus in one tap. Options apply to **this grace-mar instance** (this repo), not abstract “any fork.” Use **A/B/C/D** (add E/F if needed). **Minimum four options.**
+
+### Always include these two (wording may vary; meaning must not)
+
+| Fixed slot | Topic | Operator hooks |
+|------------|--------|----------------|
+| **1** | **Audit grace-mar against companion-self** | **Instance vs upstream template:** compare **grace-mar** (reference instance in this repo) to the **companion-self** template — structure, protocol, drift. Run `python scripts/template_diff.py` (default template path `./companion-self` if cloned beside repo; see script `--help`) → refresh [`docs/skill-work/work-companion-self/audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). |
+| **2** | **Leakage / boundary check (grace-mar repo)** | **Inside this monorepo:** `python scripts/check_companion_xavier_leakage.py`; spot-check no **grace-mar** Record/identity in wrong namespaces. Context: [audit-boundary-grace-mar-companion-xavier-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-xavier-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). |
+
+### Other options (rotate by context)
+
+Examples: clear **integrity** failures from `operator_daily_warmup`, **RECURSION-GATE** review, **work-dev** integration gap, **work-jiang** chapter/transcript queue, **weekly brief** prep, **content-queue** for `@usa_first_ky`. Tailor to what the warmup surfaced.
+
+**Example shape (illustrative):**
+
+```markdown
+**Today — pick one (grace-mar):**
+- **A.** Audit **grace-mar** vs **companion-self** — run `template_diff.py`, refresh `audit-report.md` / manifest report
+- **B.** Leakage / boundaries — run `check_companion_xavier_leakage.py` + skills-modularity spot-check
+- **C.** … (context-specific)
+- **D.** … (context-specific)
+```
 
 ---
 
@@ -93,6 +121,7 @@ Return a short operator brief with:
 - local worktree noise only if it matters for the next move
 - **KY-4 polling + Polymarket** (required for “good morning”): implied odds + volume + independent poll status + caveats — see [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md)
 - X scan top links + 1–2 draft post candidates for `@usa_first_ky` (draft-only; required when running the Massie X skill step)
+- **Multiple choice** (required for “good morning”): at least four options for **grace-mar**, **always** including **audit grace-mar against companion-self** and **leakage / boundary check** — see [Good morning — multiple choice](#good-morning--multiple-choice-required)
 
 ## Guardrails
 

@@ -1,0 +1,18 @@
+# work-dev — sources
+
+YouTube channels and podcasts the operator tracks for **work-dev framing** (integration, offers, partner vocabulary). **Not** Record truth and **not** a substitute for [integration-status.md](integration-status.md) — see [external-signals.md](external-signals.md).
+
+**Principle:** [Work modules — authorized sources lists](../work-modules-sources-principle.md).
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| AI News & Strategy Daily (Nate B Jones) | https://www.youtube.com/@NateBJones | AI news and strategy with a builder / PM / career lens |
+| Peter Diamandis | https://www.youtube.com/@peterdiamandis | Long-horizon exponential and moonshot discourse |
+
+Add rows above or below as you like.
+
+**Video list (titles + publication dates):** from repo root, with `yt-dlp` installed (`pip install -e ".[youtube-research]"`), run  
+`python3 scripts/fetch_youtube_channel_transcripts.py --channel "<URL>/videos" --index-only --enrich-metadata -o <output-dir>`  
+Outputs `CHANNEL-VIDEO-INDEX.md` and `index.json`. Use `--enrich-metadata` so dates are filled (flat listing alone often omits them).
+
+**Parallel (work-politics):** [../work-politics/work-politics-sources.md](../work-politics/work-politics-sources.md)

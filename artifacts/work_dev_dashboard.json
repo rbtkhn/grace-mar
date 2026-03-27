@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-25T16:28:17Z",
+  "generated_at": "2026-03-27T16:15:40Z",
   "integration_status_counts": {
     "implemented": 11,
     "partial": 2,
@@ -19,9 +19,7 @@
   "provenance_from_gate": false,
   "lane_violation_count": 0,
   "continuity_block_count": 1,
-  "gap_ids_open": [
-    "BUILD-AI-GAP-005"
-  ],
+  "gap_ids_open": [],
   "notes": [
     "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
     "Regenerate after editing control-plane YAML."

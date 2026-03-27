@@ -30,5 +30,6 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 
 ## Cross-references
 
+- **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md) (`*-sources.md` per `work-*` territory).
 - [Concept](../concept.md), [Architecture](../architecture.md).
 - [MERGING-FROM-COMPANION-SELF](../merging-from-companion-self.md) — Template paths; re-sync this folder from companion-self when upgrading.

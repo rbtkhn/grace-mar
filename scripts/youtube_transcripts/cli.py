@@ -20,6 +20,14 @@ def _parse_langs(s: str) -> list[str]:
     return [x.strip() for x in s.split(",") if x.strip()]
 
 
+def _format_upload_date(raw: str) -> str:
+    """yt-dlp often returns YYYYMMDD; normalize to YYYY-MM-DD for tables."""
+    s = (raw or "").strip()
+    if len(s) == 8 and s.isdigit():
+        return f"{s[:4]}-{s[4:6]}-{s[6:8]}"
+    return s
+
+
 def run(argv: list[str] | None = None) -> int:
     from youtube_transcripts.discovery import list_videos, load_inputs_from_file
     from youtube_transcripts.manifest_io import load_manifest, manifest_path, save_manifest
@@ -60,6 +68,11 @@ def run(argv: list[str] | None = None) -> int:
         "--index-only",
         action="store_true",
         help="Write index.json from listing only (no transcript downloads)",
+    )
+    parser.add_argument(
+        "--enrich-metadata",
+        action="store_true",
+        help="With --index-only: one yt-dlp metadata fetch per video so upload_date is filled (flat lists often omit it). Slower; uses --sleep between videos.",
     )
     parser.add_argument("--resume", action="store_true", help="Skip videos with existing .txt (size>50)")
     parser.add_argument(
@@ -125,6 +138,24 @@ def run(argv: list[str] | None = None) -> int:
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     if args.index_only:
+        if args.enrich_metadata:
+            from youtube_transcripts.metadata import fetch_metadata_ytdlp
+
+            for i, v in enumerate(videos):
+                info = fetch_metadata_ytdlp(v["id"], max_attempts=args.max_attempts_listing)
+                if isinstance(info, dict) and info:
+                    ud = (info.get("upload_date") or "").strip()
+                    if ud:
+                        v["upload_date"] = ud
+                    t = (info.get("title") or "").strip()
+                    if t:
+                        v["title"] = t
+                    dur = info.get("duration")
+                    if dur is not None:
+                        v["duration"] = str(dur)
+                if args.sleep > 0 and i + 1 < len(videos):
+                    time.sleep(args.sleep)
+
         index_rows: list[dict[str, object]] = []
         for v in videos:
             index_rows.append(
@@ -155,21 +186,33 @@ def run(argv: list[str] | None = None) -> int:
         }
         index_path.write_text(json.dumps(payload, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
         md_path = out_root / "CHANNEL-VIDEO-INDEX.md"
+        ch = inputs[0] if inputs else args.channel
+        if args.enrich_metadata:
+            date_note = (
+                "- **upload_date:** per-video yt-dlp metadata (`--enrich-metadata`); shown as YYYY-MM-DD when parseable."
+            )
+        else:
+            date_note = (
+                "- **upload_date:** often **empty** under flat channel listing; re-run with "
+                "`--index-only --enrich-metadata` to fill dates (one metadata fetch per video, slower)."
+            )
         md_lines = [
-            "# Predictive History (@PredictiveHistory) — full video index",
+            "# Channel video index",
             "",
-            f"- **channel:** {inputs[0] if inputs else args.channel}",
+            f"- **channel:** {ch}",
             f"- **video_count:** {len(videos)}",
             f"- **generated_at_utc:** {ts}",
             "- **method:** index-only (no transcripts downloaded)",
+            date_note,
             "",
-            "| # | video_id | title | duration_s | url |",
-            "|---:|---|-----|---:|-----|",
+            "| # | video_id | title | upload_date | duration_s | url |",
+            "|---:|---|-----|-----|---:|-----|",
         ]
         for i, v in enumerate(videos, start=1):
             title = (v["title"] or "").replace("|", "\\|")
             dur = v.get("duration") or ""
-            md_lines.append(f"| {i} | `{v['id']}` | {title} | {dur} | {v['url']} |")
+            udate = _format_upload_date(str(v.get("upload_date") or ""))
+            md_lines.append(f"| {i} | `{v['id']}` | {title} | {udate} | {dur} | {v['url']} |")
         md_path.write_text("\n".join(md_lines) + "\n", encoding="utf-8")
         print(
             f"Wrote {index_path} and {md_path} ({len(videos)} videos, no transcripts fetched)",

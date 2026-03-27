@@ -37,7 +37,7 @@ Analyst headlines and third-party TAM figures (e.g. McKinsey-style agent-commerc
 | Handback advisory events | instrumented | `intent_constitutional_critique` events are emitted by `openclaw_stage.py`. |
 | OpenClaw-specific candidate provenance | instrumented | Preserved end-to-end in candidate blocks when staging via `openclaw_stage` → `/stage`. |
 | Merge attribution from OpenClaw handback | instrumented | Candidate-level `candidate_source` and provenance fields written into `recursion-gate.md` at stage time. |
-| Compute-ledger export / handback cost | planned | Integration scripts do not currently emit compute-ledger rows. |
+| Compute-ledger export / handback cost | partial | Rows append on export/stage/handback (`operation`, `wall_ms`, `bytes_processed`). Token columns stay zero unless the host sets `GRACE_MAR_INTEGRATION_*` env vars (see `scripts/emit_compute_ledger.py`). |
 | Session continuity read verification | manual | Live proof-of-read: `continuity_read_log.py` appends to `continuity-log.jsonl` when invoked (not on every OpenClaw session unless wired). **CI contract:** `tests/test_continuity_read_log.py` exercises `--dry-run` and required files for `grace-mar` on every test run. |
 
 ---
@@ -49,7 +49,7 @@ Analyst headlines and third-party TAM figures (e.g. McKinsey-style agent-commerc
 | **Handback count per week** | Number of `openclaw_stage` invocations | pipeline-events.jsonl, event logs | instrumented |
 | **Record growth from OpenClaw** | ACT-* entries or merged Record growth attributable to OpenClaw handback | self-evidence.md, self.md, event trail | blocked |
 | **Merge rate from handback** | Approved / total OpenClaw-sourced candidates | recursion-gate.md + candidate_source | manual |
-| **Cost per export / handback** | Token or execution cost for `openclaw_hook` / `openclaw_stage` | compute-ledger.jsonl | planned |
+| **Cost per export / handback** | Token or execution cost for `openclaw_hook` / `openclaw_stage` | compute-ledger.jsonl | partial (wall/bytes automatic; tokens via env or manual) |
 | **Time in gate** | Days from stage to approve/reject for OpenClaw-sourced candidates | recursion-gate.md timestamps + staged events | manual |
 
 ---
@@ -60,8 +60,8 @@ Analyst headlines and third-party TAM figures (e.g. McKinsey-style agent-commerc
 
 | Metric | Description | Source | Status |
 |--------|-------------|--------|--------|
-| Export cost per run | Token or execution cost for identity export (`openclaw_hook`) | compute-ledger.jsonl | planned |
-| Handback cost per stage | Token or execution cost for `openclaw_stage` | compute-ledger.jsonl | planned |
+| Export cost per run | Token or execution cost for identity export (`openclaw_hook`) | compute-ledger.jsonl | partial (same as table above) |
+| Handback cost per stage | Token or execution cost for `openclaw_stage` | compute-ledger.jsonl | partial (same as table above) |
 | Export frequency | Exports per week | pipeline events, harness events | instrumented |
 | Handback frequency | `openclaw_stage` invocations per week | pipeline-events.jsonl, event logs | instrumented |
 
@@ -105,5 +105,5 @@ Analyst headlines and third-party TAM figures (e.g. McKinsey-style agent-commerc
 - **pipeline-events.jsonl** — Export and advisory events are emitted; candidate attribution uses recursion-gate.md `candidate_source` and provenance fields.
 - **recursion-gate.md** — OpenClaw-sourced candidates carry `candidate_source: openclaw` and optional artifact/constitution metadata for gate metrics.
 - **continuity-log.jsonl** — Written by `scripts/continuity_read_log.py` when invoked; one line per proof-of-read (session-log, recursion-gate, self-evidence). Gitignored. **CI:** `tests/test_continuity_read_log.py` does not append; it validates `--dry-run` output and that those paths exist under `users/grace-mar/`.
-- **compute-ledger.jsonl** — `openclaw_hook` and `openclaw_stage` do not currently emit cost rows (planned).
+- **compute-ledger.jsonl** — Integration paths append rows (`bucket: integration`, `operation`, `wall_ms`, `bytes_processed`). Populate `prompt_tokens` / `completion_tokens` / `model` via `GRACE_MAR_INTEGRATION_*` when the OpenClaw host reports usage; otherwise those fields stay zero.
 - **Aggregation script** — Planned: `scripts/openclaw_benchmarks.py` (not in repo yet) would summarize metrics from the above sources.

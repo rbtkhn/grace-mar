@@ -16,7 +16,7 @@
           "id": { "type": "string", "minLength": 1 },
           "area": { "type": "string" },
           "problem": { "type": "string" },
-          "status": { "type": "string", "enum": ["open", "closed", "planned"] },
+          "status": { "type": "string", "enum": ["open", "closed", "planned", "partial"] },
           "related_integration_ids": {
             "type": "array",
             "items": { "type": "string" }

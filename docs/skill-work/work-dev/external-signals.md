@@ -4,6 +4,8 @@
 
 **Shared theme table (non-canonical):** [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) — work-strategy, work-politics, **work-dev**.
 
+**Operator-maintained channels / podcasts:** [work-dev-sources.md](work-dev-sources.md) (add rows by hand). **Convention:** [work-modules-sources-principle.md](../work-modules-sources-principle.md).
+
 **Last refreshed:** 2026-03-23
 
 ---

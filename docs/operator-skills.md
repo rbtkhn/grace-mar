@@ -16,7 +16,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 | Skill | Purpose | Default command |
 |------|---------|-----------------|
-| `daily-warmup` | Repo-wide operator warmup: gate state, work-politics status, **Predictive History morning momentum** (work-jiang pulse + rotating sparks), **KY-4 polling + Polymarket** (see [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md)), integrity, local worktree noise, and top priorities | `python3 scripts/operator_daily_warmup.py -u grace-mar` + agent steps in `.cursor/skills/daily-warmup/SKILL.md` |
+| `daily-warmup` | Repo-wide operator warmup: gate state, work-politics status, **Predictive History morning momentum** (work-jiang pulse + rotating sparks), **KY-4 polling + Polymarket** (see [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md)), integrity, local worktree noise, top priorities, and a **multiple-choice focus block** for **grace-mar** (≥4 options; **always** includes **audit grace-mar vs companion-self** + **leakage / boundary check**) | `python3 scripts/operator_daily_warmup.py -u grace-mar` + agent steps in `.cursor/skills/daily-warmup/SKILL.md` |
 | `wap-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy: `operator_wap_pulse.py`) |
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
@@ -31,7 +31,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 ## Suggested daily pattern
 
-1. Start with `daily-warmup` when opening a new work block or a new agent thread. On **“good morning”**, the agent also pulls **Polymarket** (KY-04 primary + GE party) and checks for **independent** public horserace polls per [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md). **Cadence:** Monday = full routine; Tue–Fri = lighter; Sunday ≈ 10 min week-ahead (FEC, registration, brief registry); Friday adds a two-line post-mortem — see `.cursor/skills/daily-warmup/SKILL.md` § Cadence by weekday. On **“good night”** (session end), run **`handoff-check`** only — see `.cursor/skills/daily-warmup/SKILL.md` § Good night (not the morning stack).
+1. Start with `daily-warmup` when opening a new work block or a new agent thread. On **“good morning”**, the agent also pulls **Polymarket** (KY-04 primary + GE party) and checks for **independent** public horserace polls per [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md), and returns an **MCQ** for **grace-mar** with the two fixed options (**audit grace-mar vs companion-self** + **leakage / boundary**) — see `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice*. **Cadence:** Monday = full routine; Tue–Fri = lighter; Sunday ≈ 10 min week-ahead (FEC, registration, brief registry); Friday adds a two-line post-mortem — see `.cursor/skills/daily-warmup/SKILL.md` § Cadence by weekday. On **“good night”** (session end), run **`handoff-check`** only — see `.cursor/skills/daily-warmup/SKILL.md` § Good night (not the morning stack).
 2. Run `wap-pulse` when the day includes campaign work, brief prep, or X/content operations.
 3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
 4. Use `weekly-brief-run` for the actual work-politics brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
@@ -52,6 +52,7 @@ Must answer:
 - Is repo integrity healthy?
 - Is the worktree noisy enough to affect the next move?
 - **Good morning:** What are **Polymarket** implied odds + **volume** (KY-04 GOP primary and GE party markets), and is there a **named independent** horserace poll — or explicitly none? (Caveats: markets ≠ polls; cite URLs; ignore Polymarket AI blurbs — [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md).)
+- **Good morning:** **Multiple choice** (≥4 options) for **grace-mar** — must always offer **audit grace-mar against companion-self** (`template_diff.py` / [work-companion-self/audit-report.md](skill-work/work-companion-self/audit-report.md)) and **leakage / boundary check** (`check_companion_xavier_leakage.py` / boundary docs). See `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice*.
 
 ### `wap-pulse`
 

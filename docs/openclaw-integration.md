@@ -176,6 +176,15 @@ python scripts/continuity_read_log.py -u grace-mar
 
 This appends one JSONL line to `users/[id]/continuity-log.jsonl` with timestamp, `user_id`, `files_read` (session-log.md, recursion-gate.md, self-evidence.md), and `missing` if any file was absent. It does not modify the Record. Add this to your OpenClaw startup script or run it manually before starting work. Use `--dry-run` to print the payload without writing. **CI:** `tests/test_continuity_read_log.py` runs `--dry-run` for `grace-mar` on every pytest pass (push/PR) so the script and continuity paths keep working.
 
+**Session wrapper (optional):** to log continuity and then start your OpenClaw command in one step:
+
+```bash
+chmod +x scripts/openclaw_session_continuity.sh   # once
+scripts/openclaw_session_continuity.sh your-openclaw-command arg1 arg2
+```
+
+`GRACE_MAR_USER_ID` defaults to `grace-mar` if unset.
+
 ### Continuity receipt (required before OpenClaw `/stage`)
 
 `scripts/handback_server.py` rejects `source=openclaw_stage` requests with **428** unless a **fresh** continuity receipt exists (default TTL **12 hours**). Generate one after reading the contract files:

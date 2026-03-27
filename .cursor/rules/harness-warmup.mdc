@@ -19,7 +19,7 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 2. **Include the command output** in your reply (paste verbatim or as a fenced markdown block) so the thread carries the same snapshot.
 
-**Full “good morning” stack:** When the operator is doing a **daily session start** (see `.cursor/skills/daily-warmup/SKILL.md`), also run that skill’s steps — including **KY-4 polling + Polymarket** per `docs/skill-work/work-politics/polling-and-markets.md` — not only harness output.
+**Full “good morning” stack:** When the operator is doing a **daily session start** (see `.cursor/skills/daily-warmup/SKILL.md`), also run that skill’s steps — including **KY-4 polling + Polymarket** per `docs/skill-work/work-politics/polling-and-markets.md` — not only harness output. That skill requires a **multiple-choice focus block** (≥4 options) for **grace-mar**, **always** including **audit grace-mar against companion-self** and **leakage / boundary check** — see the skill § *Good morning — multiple choice*.
 
 **“Good night” (session end):** When the operator says **good night** or equivalent, follow `.cursor/skills/daily-warmup/SKILL.md` § **Good night** — run **`python3 scripts/operator_handoff_check.py -u grace-mar`** and paste the output. Do **not** substitute the full good-morning stack unless they ask for it.
 

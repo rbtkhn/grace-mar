@@ -2,7 +2,7 @@
 
 # work-dev dashboard
 
-- **Generated:** `2026-03-25T16:28:17Z`
+- **Generated:** `2026-03-27T16:15:40Z`
 
 ## Reliability
 
@@ -10,7 +10,7 @@
 
 ## Boundary health
 
-- Open gap IDs: BUILD-AI-GAP-005
+- Open gap IDs: _(none)_
 - Lane violation count (observability feed): 0
 - Continuity block count (observability feed): 1
 

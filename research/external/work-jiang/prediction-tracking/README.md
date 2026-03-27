@@ -86,6 +86,12 @@ Classify predictions by **what kind of civilizational object** is at stake (inva
 
 ---
 
+## Optional prediction-market crosswalk
+
+Some analyses may link structured predictions to **real** markets (e.g. Polymarket) for implied-probability comparison. That step is **optional**, runs **after** extraction, and uses **safeguards** (no forced fit, liquidity + resolution caveats). See **[PREDICTION-MARKETS-INTEGRATION.md](PREDICTION-MARKETS-INTEGRATION.md)**.
+
+---
+
 ## Related
 
 - [WORKFLOW-transcripts.md](../WORKFLOW-transcripts.md) — transcript + analysis layers  

@@ -64,6 +64,9 @@ CHECK_TO_TESTS: dict[str, list[str]] = {
         "tests/test_gate_block_parser.py",
         "tests/test_handback_requires_continuity.py",
     ],
+    "handback_analysis": [
+        "tests/test_validate_handback_analysis.py",
+    ],
     # Baseline aliases — provenance_loss.yaml
     "candidate_yaml_includes_candidate_source_when_openclaw": [
         "tests/test_gate_block_parser.py",

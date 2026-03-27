@@ -47,6 +47,7 @@ Use this file when you want one place to understand:
 | `session-continuity-contract.md` | Explicit continuity steps vs implicit memory (files, scripts, CI) |
 | `safety-story-ux.md` | Visible pipeline state as user-facing safety story (pending/approved, receipts, staged vs merged) |
 | `external-signals.md` | Transcript/keynote-class discourse → work-dev lens (OpenClaw, trust, inference); pairs with work-strategy `external-tech-scan.md` |
+| `work-dev-sources.md` | Authorized sources list for work-dev framing (not integration truth); see [work-modules-sources-principle.md](../work-modules-sources-principle.md); parallel: [../work-politics/work-politics-sources.md](../work-politics/work-politics-sources.md) |
 | `agentic-environment-principles.md` | Environment-first debugging; §5 **a/b/c** (residency + roles, bounded runtime, pipeline vs local memory) |
 | `agent-surface-template.yaml` | Structured checklist: runtime / orchestration / interface + Grace-Mar trust; optional `agent_species`; `scripts/work_dev/agent_surface_checklist.py` |
 | `engagement-model.md` | Commercial packaging and sequencing |
@@ -91,7 +92,7 @@ Crypto belongs adjacent to these lanes as a future **authority / settlement / ac
 |---------|----------------|
 | ~~**Handback provenance is not preserved cleanly into `recursion-gate.md`**~~ | Resolved: OpenClaw payload sets candidate_source + artifact/constitution fields in gate (handback_server + core + recursion_gate_review). |
 | **Benchmark docs overstate current instrumentation** | Mitigated: `economic-benchmarks.md` distinguishes automatic pipeline emission vs manual/derivation; re-audit after hook changes |
-| **Live continuity JSONL is opt-in** | CI verifies script + files; appending to `continuity-log.jsonl` on each OpenClaw session still requires wrapper or habit |
+| **Live continuity JSONL is opt-in** | CI verifies script + files; `scripts/openclaw_session_continuity.sh` logs then execs the command; habit still required if not wired into OpenClaw |
 
 ---
 
@@ -99,7 +100,7 @@ Crypto belongs adjacent to these lanes as a future **authority / settlement / ac
 
 1. ~~Preserve OpenClaw-specific provenance end-to-end from `openclaw_stage.py` through `/stage` into staged candidates.~~ Done.
 2. ~~Mark benchmark rows as instrumented, manual, planned, or blocked instead of implying they all exist today.~~ Done (see `economic-benchmarks.md` definitions and tables).
-3. ~~CI wiring for `continuity_read_log.py`~~ Done (`tests/test_continuity_read_log.py`). Optional: OpenClaw startup wrapper for real JSONL appends each session.
+3. ~~CI wiring for `continuity_read_log.py`~~ Done (`tests/test_continuity_read_log.py`). ~~Optional: OpenClaw startup wrapper~~ `scripts/openclaw_session_continuity.sh` appends JSONL then runs the rest of the command.
 
 ---
 

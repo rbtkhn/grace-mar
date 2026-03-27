@@ -3,6 +3,11 @@
 Append one integration/export row to users/<id>/compute-ledger.jsonl.
 
 Extends the Voice ledger shape with optional integration fields (operation, runtime, wall_ms, …).
+
+Optional token fields (when the host OpenClaw or wrapper supplies usage out-of-band):
+  GRACE_MAR_INTEGRATION_PROMPT_TOKENS, GRACE_MAR_INTEGRATION_COMPLETION_TOKENS,
+  GRACE_MAR_INTEGRATION_TOTAL_TOKENS, GRACE_MAR_INTEGRATION_MODEL
+When set, these override the default zero/empty token columns and set token_accounting="env".
 """
 
 from __future__ import annotations
@@ -14,6 +19,28 @@ from pathlib import Path
 from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def _integration_token_fields_from_env() -> dict[str, Any]:
+    """Merge optional LLM usage from env into ledger row (integration paths have no direct API hook)."""
+    out: dict[str, Any] = {}
+    pt = os.getenv("GRACE_MAR_INTEGRATION_PROMPT_TOKENS", "").strip()
+    ct = os.getenv("GRACE_MAR_INTEGRATION_COMPLETION_TOKENS", "").strip()
+    tt = os.getenv("GRACE_MAR_INTEGRATION_TOTAL_TOKENS", "").strip()
+    model = os.getenv("GRACE_MAR_INTEGRATION_MODEL", "").strip()
+    if pt.isdigit():
+        out["prompt_tokens"] = int(pt)
+    if ct.isdigit():
+        out["completion_tokens"] = int(ct)
+    if tt.isdigit():
+        out["total_tokens"] = int(tt)
+    elif "prompt_tokens" in out and "completion_tokens" in out:
+        out["total_tokens"] = out["prompt_tokens"] + out["completion_tokens"]
+    if model:
+        out["model"] = model
+    if out:
+        out["token_accounting"] = "env"
+    return out
 
 
 def append_integration_ledger(
@@ -46,6 +73,7 @@ def append_integration_ledger(
         "bytes_processed": bytes_processed,
         "source_artifact_count": source_artifact_count,
     }
+    rec.update(_integration_token_fields_from_env())
     if extra:
         rec.update(extra)
     path.parent.mkdir(parents=True, exist_ok=True)

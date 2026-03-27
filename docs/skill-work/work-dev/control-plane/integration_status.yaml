@@ -111,9 +111,10 @@ items:
     status: implemented
     source_of_truth:
       - scripts/continuity_read_log.py
+      - scripts/openclaw_session_continuity.sh
       - tests/test_continuity_read_log.py
     notes:
-      - Human-readable read log; separate from receipt enforcement.
+      - Human-readable read log; separate from receipt enforcement. Optional shell wrapper appends JSONL then execs the rest of the command.
 
   - id: compute_ledger_export_handback
     title: Compute-ledger cost instrumentation for export/handback
@@ -127,7 +128,7 @@ items:
       - scripts/export_runtime_bundle.py
       - scripts/handback_server.py
     notes:
-      - Integration paths append ledger rows (operation, runtime, wall_ms, bytes_processed). Token-level costs for these paths may still be zero.
+      - Integration paths append ledger rows (operation, runtime, wall_ms, bytes_processed). Optional token fields via GRACE_MAR_INTEGRATION_PROMPT_TOKENS, GRACE_MAR_INTEGRATION_COMPLETION_TOKENS, GRACE_MAR_INTEGRATION_TOTAL_TOKENS, GRACE_MAR_INTEGRATION_MODEL.
 
   - id: local_local_topology
     title: Local-local topology guidance

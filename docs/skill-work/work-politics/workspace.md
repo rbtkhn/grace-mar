@@ -39,6 +39,7 @@ Use this file when you want one place to understand:
 | `compliance-checklist.md` | Pre-engagement gates (FEC, state, FARA, intl) |
 | `clients/` | Per-client index; [clients/massie-ky4.md](clients/massie-ky4.md) = primary client |
 | `brief-source-registry.md` | Structured intake and freshness tracker for weekly brief inputs |
+| `work-politics-sources.md` | Operator list of channels / podcasts for work-politics framing (not cited brief sources by default) |
 | `content-queue.md` | Structured X/content operations queue |
 | `weekly-brief-template.md` | Output shape for the campaign brief |
 | `civ-mem-draft-protocol.md` | Civ-mem → speech/policy; human-always-approves gates |

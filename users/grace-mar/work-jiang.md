@@ -10,6 +10,8 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 **Design lens:** Alpha-style mastery vocabulary (gates, “no Swiss cheese,” 2-hour pacing) mapped to this fork’s gate and WORK tools — [alpha-mastery-adaptation.md](../../docs/alpha-mastery-adaptation.md).
 
+**Authorized sources (operator list):** [work-jiang-sources.md](../../docs/skill-work/work-jiang/work-jiang-sources.md) — convention: [work-modules-sources-principle.md](../../docs/skill-work/work-modules-sources-principle.md).
+
 **Method (operator work, not Voice knowledge until merged through the gate):**
 
 1. **Lecture transcripts** — primary text: systematic capture and close reading of his talks (e.g. channel pulls under `research/external/youtube-channels/predictive-history/`), tagged and excerpted for themes, definitions, and internal consistency.

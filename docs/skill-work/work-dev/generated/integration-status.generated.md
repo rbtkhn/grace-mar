@@ -26,7 +26,7 @@ Status vocabulary: `implemented`, `partial`, `documented_only`, `needs_verificat
 
 - **Status:** `partial`
 - **Source of truth:** `docs/skill-work/work-dev/economic-benchmarks.md`, `scripts/emit_compute_ledger.py`, `integrations/openclaw_hook.py`, `integrations/openclaw_stage.py`, `scripts/export_runtime_bundle.py`, `scripts/handback_server.py`
-- Integration paths append ledger rows (operation, runtime, wall_ms, bytes_processed). Token-level costs for these paths may still be zero.
+- Integration paths append ledger rows (operation, runtime, wall_ms, bytes_processed). Optional token fields via GRACE_MAR_INTEGRATION_PROMPT_TOKENS, GRACE_MAR_INTEGRATION_COMPLETION_TOKENS, GRACE_MAR_INTEGRATION_TOTAL_TOKENS, GRACE_MAR_INTEGRATION_MODEL.
 
 ### `constitution_advisory_events`
 
@@ -85,8 +85,8 @@ Status vocabulary: `implemented`, `partial`, `documented_only`, `needs_verificat
 ### `session_continuity_read_log`
 
 - **Status:** `implemented`
-- **Source of truth:** `scripts/continuity_read_log.py`, `tests/test_continuity_read_log.py`
-- Human-readable read log; separate from receipt enforcement.
+- **Source of truth:** `scripts/continuity_read_log.py`, `scripts/openclaw_session_continuity.sh`, `tests/test_continuity_read_log.py`
+- Human-readable read log; separate from receipt enforcement. Optional shell wrapper appends JSONL then execs the rest of the command.
 
 ### `session_continuity_receipts`
 
