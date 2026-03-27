@@ -2,7 +2,7 @@
 
 **Objective:** Eventually enable Grace-Mar to autonomously manage and improve the companion-self codebase — and to maintain proper sync between companion-self and grace-mar.
 
-Companion-self is both the **concept** (companion's self + self that companions, self-* taxonomy, tricameral mind) and the **template repo** ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)). Grace-Mar is a private instance and working tool built from that template. This submodule scopes: (1) **sync** — keeping grace-mar aligned with companion-self; (2) **contribution back** — proposing improvements upstream.
+Companion-self is both the **concept** (companion's self + self that companions, self-* taxonomy, triadic cognition) and the **template repo** ([github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self)). Grace-Mar is a private instance and working tool built from that template. This submodule scopes: (1) **sync** — keeping grace-mar aligned with companion-self; (2) **contribution back** — proposing improvements upstream.
 
 **Canonical framing:** `companion-self` is the upstream template and public architecture for sovereign, evidence-grounded cognitive forks. `grace-mar` is the private proving ground and active instance: a working tool where structural ideas are tested against real use. Improvements developed in `grace-mar` that are structural, reusable, and instance-agnostic may be merged back into `companion-self`; Record content, private workflows, and instance-specific state remain private to `grace-mar`.
 
@@ -30,6 +30,7 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 | **[audit-report-manifest.md](audit-report-manifest.md)** | Latest template diff (companion-self manifest paths). Run: `python scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
 | **[TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md)** | Pinned companion-self commit for governance merges (`288b438` baseline). |
 | **[COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md)** | SELF-LIBRARY template alignment notes (merged upstream). |
+| **[CURSOR-PERSONAS-RULES-SKILLS.md](CURSOR-PERSONAS-RULES-SKILLS.md)** | Product spec: **template contributor** vs **new instance owner** — which `.cursor` rules and skills to add in companion-self (phase 1 vs 2). |
 | **§ [Three-track alignment](#three-track-alignment-operator-policy)** | Operator policy: governance/protocol diffs, manifest rhythm, optional DESIGN upstream. |
 
 ---
@@ -39,7 +40,7 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 1. **Gated pipeline** — Grace-Mar may read, analyze, suggest, and stage. Companion (or template maintainer) approves before merge into companion-self or sync (template→instance). AGENTS: agent may stage; it may not merge.
 2. **Sync: never overwrite Record** — When merging template into grace-mar, never overwrite `users/grace-mar/`, instance config, or Record. Per [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md).
 3. **Knowledge boundary** — Grace-Mar contributes only from documented Record and instance experience. No leaking LLM knowledge into template.
-4. **Template-first** — Changes proposed to companion-self must align with template governance (concept, self-* taxonomy, tricameral). Instance-specific content stays in grace-mar.
+4. **Template-first** — Changes proposed to companion-self must align with template governance (concept, self-* taxonomy, triadic cognition). Instance-specific content stays in grace-mar.
 5. **Audit trail** — Proposals, PRs, sync events, and contributions are tracked. Provenance preserved.
 6. **Companion sovereignty** — "Autonomous" means Grace-Mar operates within approved scope (e.g., docs only, scripts only, specific paths). Companion sets boundaries.
 
