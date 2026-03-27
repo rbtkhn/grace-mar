@@ -37,6 +37,8 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 | `docs/instance-patterns.md` | Template guidance for instance variants and advanced patterns |
 | `users/_template/` | Template scaffold for new instances; reference-only in grace-mar (do not copy into `users/grace-mar/`) |
 | `docs/CONTRADICTION-ENGINE-SPEC.md`, `docs/contradiction-resolution.md`, `docs/approval-inbox-spec.md` | Contradiction engine + gate review surface; grace-mar has instance-specific copies—compare on sync |
+| `docs/change-review.md`, `docs/contradiction-policy.md`, `docs/change-types.md`, `docs/change-review-lifecycle.md` | Change-review doctrine (post-seed); `template-manifest.json` → `change_review` |
+| `schema-registry/change-*.v1.json`, `schema-registry/identity-diff.v1.json` | Change-review JSON Schemas; listed under `change_review.schemas` in the manifest |
 | Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `AGENTS.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.
@@ -68,6 +70,7 @@ Record each merge from template so you can see when grace-mar was last updated a
 
 | Date | Companion-self (commit or tag) | Paths updated |
 |------|---------------------------------|---------------|
+| 2026-03-26 | companion-self **`template-v0.3.2`** / **`main` @ `0475ed1`** | **Change review PR1+PR2:** doctrine docs (`docs/change-review.md`, `contradiction-policy.md`, `change-types.md`, `change-review-lifecycle.md`), five `schema-registry/*change*` + `identity-diff.v1.json`, README + `how-instances-consume-upgrades.md`, `template-manifest.json` `change_review` + `schemas`, `docs/schema-record-api.md`, template version **0.3.2**. Grace-mar: sync surfaces logged in §1; instance contradiction docs remain authoritative for the live fork—compare on next merge. |
 | 2026-03-26 | companion-self **`main` @ `a679f95`** (local clone; push upstream separately) | **Seed Phase v2** in template: `docs/seed-phase*.md`, `schema-registry/seed-*.v1.json`, `users/_template/seed-phase/`, `users/demo/seed-phase/`, `scripts/validate-seed-phase.py`, CI workflow. Grace-Mar mapping: [companion-self-seed-phase-v2-mapping.md](companion-self-seed-phase-v2-mapping.md). |
 | 2026-03-26 | — (grace-mar-only) | **Added:** [docs/seed-phase-wizard.md](seed-phase-wizard.md), `scripts/seed-phase-wizard.py`, `scripts/good-morning-brief.py` — operator seed + morning brief under `users/<id>/`; does not replace template `docs/seed-phase.md`; companion-self may port an adapted version later. |
 | 2026-03-26 | companion-self **`main` @ `87628a5`** (manifest diff only) | **Refreshed:** [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) via `python3 scripts/template_diff.py --use-manifest -o …`. Not a content merge from template. |

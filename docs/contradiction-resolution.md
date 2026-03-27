@@ -4,7 +4,7 @@
 
 **Status:** Specification for approved improvement #2 (Contradiction surfacing). Conflict detection in staging is implemented (`bot/conflict_check.py`, `bot/conflict_rules.yaml`).
 
-**See also:** [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md) (governed identity-diff workflow, UI, merge, audit), [contradiction-timeline.md](contradiction-timeline.md) (when things changed, evidence, resolved/deferred/open), [anti-cheating.md](anti-cheating.md), [AGENTS.md](../AGENTS.md) (immutability rules)
+**See also:** [companion-self change-review (template doctrine)](https://github.com/rbtkhn/companion-self/blob/main/docs/change-review.md), [contradiction-policy](https://github.com/rbtkhn/companion-self/blob/main/docs/contradiction-policy.md), [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md) (governed identity-diff workflow, UI, merge, audit), [contradiction-timeline.md](contradiction-timeline.md) (when things changed, evidence, resolved/deferred/open), [anti-cheating.md](anti-cheating.md), [AGENTS.md](../AGENTS.md) (immutability rules)
 
 ---
 

@@ -13,7 +13,7 @@
 - [apps/gate-review-app.py](../apps/gate-review-app.py)
 - [scripts/generate_gate_dashboard.py](../scripts/generate_gate_dashboard.py)
 
-**See also (template):** [companion-self CONTRADICTION-ENGINE-SPEC](https://github.com/rbtkhn/companion-self/blob/main/docs/CONTRADICTION-ENGINE-SPEC.md) — instance-agnostic mirror.
+**See also (template):** [change-review](https://github.com/rbtkhn/companion-self/blob/main/docs/change-review.md) (governed self-revision doctrine v1), [contradiction-policy](https://github.com/rbtkhn/companion-self/blob/main/docs/contradiction-policy.md), [change-types](https://github.com/rbtkhn/companion-self/blob/main/docs/change-types.md), [change-review-lifecycle](https://github.com/rbtkhn/companion-self/blob/main/docs/change-review-lifecycle.md), [companion-self CONTRADICTION-ENGINE-SPEC](https://github.com/rbtkhn/companion-self/blob/main/docs/CONTRADICTION-ENGINE-SPEC.md) — instance-agnostic mirror; template spec operationalizes the doctrine.
 
 ---
 
