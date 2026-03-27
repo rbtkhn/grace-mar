@@ -20,14 +20,14 @@ from typing import List, Tuple
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Headings must appear as ## level-2 (substring match allows "(reference only)" suffixes).
-CANONICAL_H2 = (
-    "Principles",
-    "Color Palette",
-    "Typography",
-    "Spacing Rules",
-    "Component Library",
-    "Rules for Agents",
+# Each tuple is one required section: any listed phrase may appear in the ## heading (substring match).
+H2_ALTERNATIVES: Tuple[Tuple[str, ...], ...] = (
+    ("Principles",),
+    ("Color Palette",),
+    ("Typography",),
+    ("Spacing Rules", "Spacing & Layout"),
+    ("Component Library", "Component Patterns"),
+    ("Rules for Agents",),
 )
 
 REQUIRED_HEX_IN_FILE = ("#0A84FF", "#0F0F0F", "#E0E0E0")
@@ -50,6 +50,18 @@ def _h2_present(required: str, headings: List[str]) -> bool:
         if r in h.lower():
             return True
     return False
+
+
+def _h2_group_satisfied(alternatives: Tuple[str, ...], headings: List[str]) -> bool:
+    return any(_h2_present(alt, headings) for alt in alternatives)
+
+
+def _section_after_any_h2(content: str, title_prefixes: Tuple[str, ...]) -> str | None:
+    for prefix in title_prefixes:
+        block = _section_after_h2(content, prefix)
+        if block is not None:
+            return block
+    return None
 
 
 def _section_after_h2(content: str, title_prefix: str) -> str | None:
@@ -99,9 +111,14 @@ class DesignMDValidator:
         if not headings:
             self.errors.append("No ## (level-2) headings found")
             return
-        missing = [c for c in CANONICAL_H2 if not _h2_present(c, headings)]
-        if missing:
-            self.errors.append(f"Missing or unmatched H2 sections (expected phrases): {', '.join(missing)}")
+        missing_labels: List[str] = []
+        for alts in H2_ALTERNATIVES:
+            if not _h2_group_satisfied(alts, headings):
+                missing_labels.append(alts[0])
+        if missing_labels:
+            self.errors.append(
+                f"Missing or unmatched H2 sections (expected phrases): {', '.join(missing_labels)}"
+            )
 
     def validate_color_palette(self, content: str) -> None:
         cl = content.lower()
@@ -116,7 +133,7 @@ class DesignMDValidator:
             self.warnings.append("Color Palette section: no #RRGGBB hex codes found")
 
     def validate_spacing(self, content: str) -> None:
-        block = _section_after_h2(content, "Spacing Rules")
+        block = _section_after_any_h2(content, ("Spacing Rules", "Spacing & Layout"))
         if block is None:
             return
         low = block.lower()
