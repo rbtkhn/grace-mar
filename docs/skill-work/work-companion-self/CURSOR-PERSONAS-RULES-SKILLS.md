@@ -6,6 +6,8 @@
 
 **Status (phase 1):** Implemented in the **companion-self** repo — `template-data-layers.mdc`, `users-tree-guard.mdc`, `generalize-from-reference.mdc`; skills `companion-self-first-hour`, `promote-from-grace-mar`; README Contents bullet for `.cursor/`. Phase 2 (instance owner) remains spec-only.
 
+**Seed integration:** New instances record Cursor preset **intent** in **`seed_intake.json`** → optional **`cursor_operator_profile`** (validated by `seed-intake.v1.json`). See companion-self [docs/cursor-pack-from-seed.md](https://github.com/rbtkhn/companion-self/blob/main/docs/cursor-pack-from-seed.md). Generator script is still TBD; intake is the survey hook.
+
 ---
 
 ## Phase 1 (ship first) — Persona: **Template contributor**
