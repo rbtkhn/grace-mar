@@ -2,7 +2,7 @@
 
 User: grace-mar
 Checksum: 1f356a09b7d6cb208fae9e9d92a2fa94f8552ff11322587bb2cf740b9b0f058a
-Generated: 2026-03-27T09:46:13.197016
+Generated: 2026-03-27T11:36:19.694084
 Runtime mode: adjunct_runtime
 
 ## Readable
@@ -43,7 +43,7 @@ Agents may stage candidates only. Merge requires user approval.
 
 ## Exports
 
-  user.md: python scripts/export_user_identity.py -u grace-mar
+  users/grace-mar/openclaw-user.md: python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md
   manifest: python scripts/export_manifest.py -u grace-mar
   fork_json: python scripts/export_fork.py -o fork-export.json
   intent_snapshot: python scripts/export_intent_snapshot.py -u grace-mar

@@ -2,6 +2,8 @@
 
 This repository is primarily a **live cognitive-fork instance** (grace-mar) with a gated pipeline. External contributions are welcome for **code and docs**; changes to the **Record** (identity, evidence, gate) follow companion rules.
 
+**Filename conventions:** [docs/naming-convention.md](docs/naming-convention.md) (lowercase docs, reserved `AGENTS.md`, OpenClaw export path).
+
 ## Before you start
 
 1. Read [AGENTS.md](AGENTS.md) — knowledge boundary, sovereign merge rule, file-update protocol, and what assistants may not do.

@@ -190,7 +190,7 @@ Alpha's homeschool pilot: same platform, 1x results vs. 2.6x at full Alpha. Moti
 ### 4.6 Integration Surface
 
 Grace-Mar exposes:
-- **Identity export** — `export_user_identity.py` → user.md / SOUL.md (and Alpha/Incept-compatible format).
+- **Identity export** — `export_user_identity.py` → `users/<id>/openclaw-user.md` or SOUL.md (and Alpha/Incept-compatible format).
 - **Staging contract** — RECURSION-GATE format; agents may stage, never merge.
 - **Session continuity** — SESSION-LOG, RECURSION-GATE, EVIDENCE as startup checklist.
 - **Future: Agent manifest** — llms.txt-style discoverability: what's readable, writable, schema.
@@ -428,7 +428,7 @@ At Grace-Mar, the "organization" is the **companion** and their purpose. Intent 
 - **Making the companion's purpose machine-readable and actionable** — not just what the Record *knows* (context: SELF, SKILLS, EVIDENCE) but what the companion and Record should *want* and how to resolve tradeoffs when they appear.
 - **INTENT.md / intent schema** — Goals (primary, secondary, tertiary), tradeoff rules (e.g. when tone indicates frustration → prioritize empathy over brevity), escalation boundaries, never-autonomous actions. This is exactly "tenant translated into decision boundaries" and "encoded judgment" that the video describes. See [INTENT-TEMPLATE](intent-template.md).
 - **Sovereign Merge Rule** — Only the companion may merge. Agents stage; they do not decide what enters the Record. The companion is the intent layer: they hold goals, values, and the authority to approve. So the "organizational intent" is the companion's intent, enforced by the gate.
-- **Downstream alignment** — Intent snapshot and constitution prefix in exports (e.g. OpenClaw user.md) so agents that consume the Record also receive goal/tradeoff context. Advisory constitutional checks on inbound staging (e.g. OpenClaw handback) flag conflicts; they don't auto-block, but they close the loop.
+- **Downstream alignment** — Intent snapshot and constitution prefix in exports (e.g. OpenClaw `openclaw-user.md` / `USER.md`) so agents that consume the Record also receive goal/tradeoff context. Advisory constitutional checks on inbound staging (e.g. OpenClaw handback) flag conflicts; they don't auto-block, but they close the loop.
 
 **Why this matters for Grace-Mar:** Without an intent layer, a Voice or downstream agent could optimize for measurable proxies (e.g. short replies, high throughput) and undermine what actually matters to the companion (relationship, authenticity, growth). INTENT + gated pipeline ensures that what gets optimized for is what the companion has explicitly encoded and approved — and that tradeoffs (e.g. when to be efficient vs when to be generous) are discoverable and actionable, not left to implicit "humans just know."
 

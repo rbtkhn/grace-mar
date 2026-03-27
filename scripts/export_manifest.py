@@ -167,7 +167,9 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
             "RECURSION-GATE": {"type": "object", "description": "Staging area; format documented in AGENTS.md"},
         },
         "exports": {
-            "user.md": "python scripts/export_user_identity.py -u " + user_id,
+            f"users/{user_id}/openclaw-user.md": "python scripts/export_user_identity.py -u "
+            + user_id
+            + f" -o users/{user_id}/openclaw-user.md",
             "manifest": "python scripts/export_manifest.py -u " + user_id,
             "fork_json": "python scripts/export_fork.py -o fork-export.json",
             "intent_snapshot": "python scripts/export_intent_snapshot.py -u " + user_id,

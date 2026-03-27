@@ -282,9 +282,9 @@ python3 scripts/handback_server.py
 - `docs/skill-work/work-dev/economic-benchmarks.md` — cost/value/gate health metrics.
 - `docs/skill-work/work-dev/research-moonshots-237.md` — identity, memory, hierarchy; actionable takeaways.
 - `docs/openclaw-integration.md` — canonical integration guide (export, session continuity, inbound staging, staging automation).
-- `integrations/openclaw_hook.py` — outbound export (Record → user.md / SOUL.md); md+manifest, json+md; emits pipeline event.
+- `integrations/openclaw_hook.py` — outbound export (Record → `users/<id>/openclaw-user.md` / SOUL.md); md+manifest, json+md; emits pipeline event.
 - `integrations/openclaw_stage.py` — inbound staging (OpenClaw output → /stage); advisory constitutional check; stage-only, never merge.
-- `scripts/export_user_identity.py` — identity-only export for user.md / SOUL.md.
+- `scripts/export_user_identity.py` — identity-only export for `users/<id>/openclaw-user.md` / SOUL.md.
 - `integrations/export_hook.py` — shared export logic; openclaw target.
 - Session continuity: read `users/grace-mar/session-log.md`, `recursion-gate.md`, last EVIDENCE before OpenClaw sessions.
 

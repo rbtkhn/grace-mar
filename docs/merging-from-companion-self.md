@@ -14,7 +14,8 @@
      `git submodule add https://github.com/rbtkhn/companion-self.git companion-self`  
      and commit the submodule metadata.
 2. **Open the multi-root workspace** in Cursor / VS Code: **File → Open Workspace from File…** → choose **`grace-mar.code-workspace`**. You get two roots: **grace-mar** (`.`) and **companion-self** (`./companion-self`).
-3. **Template diff default path:** `python scripts/template_diff.py` uses **`./companion-self`** (under the grace-mar repo root). Override with `--companion-self /path` or **`GRACE_MAR_COMPANION_SELF`**. If `companion-self/` is missing and clone is enabled, the script still clones into that path (same as before).
+3. **Template workspace filename (companion-self repo only):** If the upstream template still uses a long name such as `companion-self-and-grace-mar.code-workspace`, rename it in **companion-self** to `companion-self.code-workspace` or `template.code-workspace` and update template README links there. Grace-mar’s own workspace file stays **`grace-mar.code-workspace`**. See [naming-convention.md](naming-convention.md).
+4. **Template diff default path:** `python scripts/template_diff.py` uses **`./companion-self`** (under the grace-mar repo root). Override with `--companion-self /path` or **`GRACE_MAR_COMPANION_SELF`**. If `companion-self/` is missing and clone is enabled, the script still clones into that path (same as before).
 
 The default clone-on-miss behavior targets **`./companion-self`** instead of `/tmp/companion-self`, so edits and diffs stay inside your tree when you use the workspace file.
 
@@ -42,6 +43,7 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 | `schema-registry/change-*.v1.json`, `schema-registry/identity-diff.v1.json` | Change-review JSON Schemas; listed under `change_review.schemas` in the manifest |
 | Grace-mar mirrors | Same four doctrine files under `docs/` (banner points to template); schemas under `docs/schemas/` (`change-proposal.v1.json`, …, `identity-diff.v1.json`) for local tooling and diffs |
 | Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `AGENTS.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
+| Instance naming | [naming-convention.md](naming-convention.md) — lowercase docs, reserved `AGENTS.md`, OpenClaw export path, template workspace note |
 
 **Never overwrite with template:** `users/grace-mar/` (the Record), instance-specific bot/config (e.g. Telegram token, render.yaml), PRP output paths (e.g. grace-mar-llm.txt). Instance-only docs (e.g. PROFILE-DEPLOY, NAMECHEAP-GUIDE, OPERATOR-WEEKLY-REVIEW) stay in grace-mar unless you explicitly promote them to the template.
 

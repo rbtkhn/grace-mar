@@ -146,7 +146,7 @@ To keep the working tree readable, treat the following as **local operational ar
 - `users/<id>/harness-events.jsonl`
 - `users/<id>/runtime-bundle/runtime/*`
 - `users/<id>/runtime-bundle/audit/*.jsonl`
-- `users/<id>/user.md` when generated as a local compatibility export
+- `users/<id>/openclaw-user.md` when generated as the OpenClaw identity export (grace-mar: `users/grace-mar/openclaw-user.md`)
 
 Canonical truth still lives in the source files those artifacts come from. Commit these generated runtime files only when you intentionally want to refresh an example or compatibility snapshot.
 

@@ -1,7 +1,8 @@
 # USER — Grace-Mar Record Export
 
 > Identity source for OpenClaw. Exported from grace-mar Record (self.md).
-> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o user.md`
+> Canonical path in this repo: `users/grace-mar/openclaw-user.md`.
+> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md`
 
 ---
 

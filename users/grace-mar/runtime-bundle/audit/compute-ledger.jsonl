@@ -59,3 +59,4 @@
 {"ts": "2026-03-16T16:53:17.220048", "channel_key": "test:voice_authenticity:1", "bucket": "analyst", "prompt_tokens": 1756, "completion_tokens": 113, "total_tokens": 1869, "model": "gpt-4o-mini"}
 {"ts": "2026-03-16T16:53:18.756024", "channel_key": "test:voice_authenticity:2", "bucket": "main", "prompt_tokens": 4224, "completion_tokens": 40, "total_tokens": 4264, "model": "gpt-4o"}
 {"ts": "2026-03-16T16:53:19.970438", "channel_key": "test:voice_authenticity:3", "bucket": "main", "prompt_tokens": 4227, "completion_tokens": 39, "total_tokens": 4266, "model": "gpt-4o"}
+{"ts": "2026-03-27T16:46:13.766994+00:00", "channel_key": "export_runtime_bundle:integration", "bucket": "integration", "prompt_tokens": 0, "completion_tokens": 0, "total_tokens": 0, "model": "", "operation": "runtime_bundle_export", "runtime": "export_runtime_bundle", "success": true, "wall_ms": 144, "bytes_processed": 449881, "source_artifact_count": 17}

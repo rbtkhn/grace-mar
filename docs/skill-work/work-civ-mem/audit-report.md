@@ -12,7 +12,7 @@
 | Area | Observation |
 |------|-------------|
 | **Repo framing** | `README.md` clearly defines structure, file taxonomy, operating modes, and governance principles. |
-| **Governance emphasis** | The repo is governance-heavy by design and makes that explicit in `CONTRIBUTING.md`. |
+| **Governance emphasis** | The repo is governance-heavy by design and makes that explicit in `contributing.md`. |
 | **Validation path** | The repo exposes concrete local checks: governance checks, corpus validation, and index/search commands. |
 | **Mode clarity** | The rule surface strongly defines mode contracts (`WRITE`, `LEARN`, `IMAGINE`, `STATE`, `SYSTEM`) and reduces ambiguity about how the system should behave. |
 | **Canonical posture** | Additivity, contradiction preservation, and plain-text canon are consistently present in the top-level framing. |
@@ -22,7 +22,7 @@
 ## Immediate stewardship observations
 
 1. **The repo already has a strong self-description.**  
-   At the top level, `README.md` and `CONTRIBUTING.md` do a good job explaining structure, contribution discipline, and validation.
+   At the top level, `README.md` and `contributing.md` do a good job explaining structure, contribution discipline, and validation.
 
 2. **The governance/rules surface appears extensive.**  
    Even a small sample of the `.cursor/rules/` layer shows a large and detailed operating doctrine. This is a strength, but it also increases maintenance burden and drift risk over time.
@@ -55,7 +55,7 @@
    Identify the minimal set of files that actually govern contribution, validation, and runtime expectations.
 
 3. **Check for doc/tool alignment**  
-   Compare README + CONTRIBUTING promises against the real scripts and console entrypoints.
+   Compare README + contributing.md promises against the real scripts and console entrypoints.
 
 4. **Watch for rule consolidation opportunities**  
    If rule overlap is high, future stewardship may benefit from reducing sprawl without weakening doctrine.

@@ -9,6 +9,7 @@ and post-seed growth (IX-A, IX-B, IX-C).
 
 Usage:
     python scripts/export_user_identity.py --user grace-mar
+    python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md
     python scripts/export_user_identity.py -u grace-mar -o ../openclaw/USER.md
 """
 
@@ -56,7 +57,7 @@ def export_user_identity(user_id: str = "grace-mar") -> str:
         "# USER — Grace-Mar Record Export",
         "",
         "> Identity source for OpenClaw. Exported from grace-mar Record (self.md).",
-        "> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o USER.md`",
+        "> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md`",
         "",
         "---",
         "",

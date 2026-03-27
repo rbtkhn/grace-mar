@@ -14,7 +14,7 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 
 | Use Case | What it does | Permission |
 |----------|--------------|------------|
-| **Record as identity source** | Export SELF → user.md or SOUL.md | Export script (read-only) |
+| **Record as identity source** | Export SELF → `users/<id>/openclaw-user.md` (this repo) or OpenClaw’s `user.md` / SOUL.md | Export script (read-only) |
 | **Session continuity** | OpenClaw reads SESSION-LOG, RECURSION-GATE, EVIDENCE | Read-only |
 | **Artifacts as evidence** | OpenClaw outputs → "we did X" → pipeline | User invokes pipeline |
 | **Staging automation** | OpenClaw skill/cron stages to RECURSION-GATE | Stage only, never merge |
@@ -35,14 +35,14 @@ Users fear **silent failure** — changes that felt real in chat but never becam
 
 ## 1. Record as Identity Source
 
-The grace-mar Record (self.md + selected SKILLS) can populate OpenClaw's `user.md` or `SOUL.md` so the agent knows who it serves.
+The grace-mar Record (self.md + selected SKILLS) can populate OpenClaw's `user.md` or `SOUL.md` so the agent knows who it serves. **In this repository** the committed export path is **`users/grace-mar/openclaw-user.md`** (same content shape; copy or symlink into OpenClaw as `user.md` if needed). See [naming-convention.md](naming-convention.md).
 
 OpenClaw practitioners often "tell OpenClaw everything" — mission, goals, context — by hand. Grace-Mar provides a **canonical, evidence-linked identity layer** instead: the Record is the single source of truth, gated by the companion, and grows only through approved merges. Export replaces ad hoc briefing with a structured profile.
 
 ### Export Script
 
 ```bash
-python scripts/export_user_identity.py --user grace-mar
+python scripts/export_user_identity.py --user grace-mar -o users/grace-mar/openclaw-user.md
 python scripts/export_runtime_bundle.py --user grace-mar --mode adjunct_runtime -o ./runtime-bundle
 ```
 
@@ -95,7 +95,7 @@ If used, such memory belongs in the runtime bundle's `runtime/` lane and should 
 
 | Approach | When to use |
 |----------|-------------|
-| **Manual** | Run export and paste into user.md when profile changes |
+| **Manual** | Run export to `users/grace-mar/openclaw-user.md` (or `-o` elsewhere) and sync into OpenClaw’s `user.md` when profile changes |
 | **Pre-session** | Run export as part of OpenClaw startup before agent runs |
 | **Cron** | Export on commit (e.g. post-merge hook) if workspace is shared |
 
@@ -360,7 +360,7 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 
 | Action | Agent | User |
 |--------|-------|------|
-| Export Record → user.md | ✅ (read + transform) | — |
+| Export Record → `openclaw-user.md` / OpenClaw `user.md` | ✅ (read + transform) | — |
 | Read SESSION-LOG, RECURSION-GATE, EVIDENCE | ✅ | ✅ |
 | Stage candidates to RECURSION-GATE | ✅ | ✅ |
 | Approve/reject candidates | ❌ | ✅ |
@@ -379,6 +379,7 @@ Signal detection follows the same logic as `bot/prompt.py` ANALYST_PROMPT:
 
 **Export identity:**
 ```bash
+python scripts/export_user_identity.py --user grace-mar -o users/grace-mar/openclaw-user.md
 python scripts/export_user_identity.py --user grace-mar -o openclaw/user.md
 python integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
 python scripts/export_runtime_bundle.py --user grace-mar --mode adjunct_runtime -o openclaw/runtime-bundle

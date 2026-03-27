@@ -250,7 +250,7 @@ Last updated: 2026-03
 
 ### OpenClaw integration upgrades
 - Outbound export includes `intent_snapshot.json`.
-- `user.md` export gets constitution context prefix when intent is available.
+- `users/grace-mar/openclaw-user.md` export gets constitution context prefix when intent is available.
 - Inbound OpenClaw staging performs advisory constitutional check and emits events.
 
 ### Portable harness first pass (2026-03-14)

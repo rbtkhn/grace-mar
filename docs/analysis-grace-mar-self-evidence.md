@@ -101,7 +101,7 @@ Raw evidence → pipeline → SELF/SKILLS. EVIDENCE is canonical; SELF and SKILL
 | symbolic_identity.json | Symbolic identity export | By design |
 | fork-manifest.json | Fork manifest | By design |
 | manifest.json | Manifest export | By design |
-| user.md | OpenClaw export | By design — regenerable from SELF |
+| users/grace-mar/openclaw-user.md | OpenClaw export | By design — regenerable from SELF |
 
 Exports duplicate content by design; they are outputs for different consumers. Not redundant in the problematic sense.
 

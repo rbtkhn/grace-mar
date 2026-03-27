@@ -2,7 +2,7 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-27T09:46:13.197016",
+  "generated_at": "2026-03-27T11:36:19.694084",
   "checksum": "1f356a09b7d6cb208fae9e9d92a2fa94f8552ff11322587bb2cf740b9b0f058a",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
@@ -104,7 +104,7 @@
     }
   },
   "exports": {
-    "user.md": "python scripts/export_user_identity.py -u grace-mar",
+    "users/grace-mar/openclaw-user.md": "python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md",
     "manifest": "python scripts/export_manifest.py -u grace-mar",
     "fork_json": "python scripts/export_fork.py -o fork-export.json",
     "intent_snapshot": "python scripts/export_intent_snapshot.py -u grace-mar",
@@ -120,7 +120,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-27T09:46:13.194072",
+    "generated_at": "2026-03-27T11:36:19.692186",
     "source": "users/grace-mar/intent.md",
     "goals": {
       "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",

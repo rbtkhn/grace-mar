@@ -128,7 +128,7 @@ These are planning assumptions, not validated outcomes. Prospectus updates shoul
 | Protocol + architecture | Implemented |
 | grace-mar instance | Active |
 | Gate + pipeline | Live in reference implementation |
-| Export surfaces | Implemented (`user.md`, PRP, manifest) |
+| Export surfaces | Implemented (`users/grace-mar/openclaw-user.md`, PRP, manifest) |
 
 ### Proof Pack to Publish (investor/integration readiness)
 

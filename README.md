@@ -99,8 +99,8 @@ The model fetches the Portable Record Prompt from the repo and responds as Abby.
 grace-mar/
 ├── README.md                        # This file
 ├── grace-mar-llm.txt                # PRP for any LLM (raw URL target, grace-mar.com/llm)
-├── AGENTS.md                        # AI coding assistant guardrails
-├── CONTRIBUTING.md                  # Contribution and pipeline rules
+├── AGENTS.md                        # AI coding assistant guardrails (reserved name; see docs/naming-convention.md)
+├── contributing.md                 # Contribution and pipeline rules
 ├── LICENSE                          # MIT (code); see license-record for Record data
 ├── .env.example                     # Non-secret env var names (copy to .env)
 ├── bootstrap/                       # Session bootstrap + template pointers
@@ -133,7 +133,7 @@ grace-mar/
 │   ├── generate_profile.py        # Profile page generator
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes fork-manifest.json)
 │   ├── export_fork.py               # Export fork to portable JSON
-│   ├── export_user_identity.py      # Record → user.md / SOUL.md for OpenClaw
+│   ├── export_user_identity.py      # Record → users/<id>/openclaw-user.md (or SOUL.md) for OpenClaw
 │   ├── export_prp.py                # Record → Portable Record Prompt (pasteable into any LLM)
 │   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
 │   ├── export_runtime_bundle.py     # Runtime-neutral bundle (record/runtime/audit/policy)
@@ -172,7 +172,8 @@ grace-mar/
         ├── artifacts/               # Raw files (writing, artwork)
         ├── seed-phase-2-survey.md   # Seed phase 2 survey data
         ├── seed-phase-3-survey.md   # Seed phase 3 survey data
-        └── survey-capture.md        # Survey capture data
+        ├── survey-capture.md        # Survey capture data
+        └── openclaw-user.md        # OpenClaw identity export (export_user_identity.py -o …)
 ```
 
 ### Canonical filenames (`users/<id>/`)
@@ -202,7 +203,8 @@ Docs refer to **SELF**, **EVIDENCE**, and the **gate** as concepts. **On disk, o
 | [OpenClaw Integration](docs/openclaw-integration.md) | Record as identity layer, session continuity |
 | [Design Notes](docs/design-notes.md) | White paper & business proposal input (positioning, agent-web insights) |
 | [AGENTS.md](AGENTS.md) | Guardrails for AI coding assistants |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contributing code/docs; pipeline and merge rules |
+| [contributing.md](contributing.md) | Contributing code/docs; pipeline and merge rules |
+| [Naming convention](docs/naming-convention.md) | Filenames, reserved `AGENTS.md`, template workspace note, OpenClaw export path |
 | [LICENSE](LICENSE) | MIT license for code and tooling; [license-record](license-record) for Record data |
 | [Rejection Feedback](docs/rejection-feedback.md) | Learning from pipeline rejections |
 | [Portability](docs/portability.md) | School transfer plus runtime portability and bundle handoff workflow |
