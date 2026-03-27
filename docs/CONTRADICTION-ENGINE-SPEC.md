@@ -226,6 +226,10 @@ Example:
 * `operator_note`
 * `resolved_by`
 
+### 7.3 Alignment with `identity-diff.v1` (change-review)
+
+Template JSON Schema: [`docs/schemas/identity-diff.v1.json`](schemas/identity-diff.v1.json). The **CONFLICT-*** sidecar ([`conflict-object.schema.json`](schemas/conflict-object.schema.json)) supports detection and triage; **`identity-diff`** is the governed before/after envelope for operator-facing review. Map conceptually: existing vs incoming narrative → `before` / `after` objects; evidence and candidate references → `evidenceRefs` and linkage from a parent change proposal (same schema family under `docs/schemas/`).
+
 ---
 
 ## 8. Scoring Model

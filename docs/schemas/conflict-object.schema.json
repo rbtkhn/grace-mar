@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://grace-mar.local/schemas/conflict-object.schema.json",
   "title": "Grace-Mar contradiction object",
-  "description": "Derived sidecar for identity-diff review. See docs/CONTRADICTION-ENGINE-SPEC.md §7.",
+  "description": "Derived sidecar for identity-diff review. See docs/CONTRADICTION-ENGINE-SPEC.md §7. For the governed before/after JSON envelope used in change-review, see identity-diff.v1.json in this directory.",
   "type": "object",
   "required": [
     "conflict_id",
