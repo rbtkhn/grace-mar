@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/change-decision.v1.json",
+  "title": "Companion-Self Change Decision v1",
+  "description": "Decision record for a governed change proposal.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "decisionId",
+    "proposalId",
+    "decidedAt",
+    "decision",
+    "decisionReason"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "decisionId": {
+      "type": "string",
+      "pattern": "^decision-[a-zA-Z0-9._-]+$"
+    },
+    "proposalId": {
+      "type": "string",
+      "pattern": "^proposal-[a-zA-Z0-9._-]+$"
+    },
+    "decidedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "deferred",
+        "rejected",
+        "superseded"
+      ]
+    },
+    "decisionReason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blockingContradictions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "requiredFollowups": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "appliesTo": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    }
+  }
+}

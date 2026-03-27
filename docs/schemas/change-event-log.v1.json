@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/change-event-log.v1.json",
+  "title": "Companion-Self Change Event Log v1",
+  "description": "Event history for governed change-review actions.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "userSlug",
+    "events"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "userSlug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "eventId",
+          "timestamp",
+          "eventType",
+          "ref",
+          "summary"
+        ],
+        "properties": {
+          "eventId": {
+            "type": "string",
+            "pattern": "^event-[a-zA-Z0-9._-]+$"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "eventType": {
+            "type": "string",
+            "enum": [
+              "proposal_created",
+              "proposal_classified",
+              "diff_generated",
+              "decision_made",
+              "diff_applied",
+              "diff_reverted",
+              "proposal_superseded"
+            ]
+          },
+          "ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

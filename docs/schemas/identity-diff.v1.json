@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/identity-diff.v1.json",
+  "title": "Companion-Self Identity Diff v1",
+  "description": "Visible before/after comparison for a governed change proposal.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "diffId",
+    "userSlug",
+    "category",
+    "before",
+    "after",
+    "changeSummary",
+    "evidenceRefs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "diffId": {
+      "type": "string",
+      "pattern": "^diff-[a-zA-Z0-9._-]+$"
+    },
+    "userSlug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "identity",
+        "curiosity",
+        "pedagogy",
+        "expression",
+        "memory_governance",
+        "safety",
+        "preference"
+      ]
+    },
+    "before": {
+      "type": "object"
+    },
+    "after": {
+      "type": "object"
+    },
+    "changeSummary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conflictNote": {
+      "type": "string"
+    },
+    "confidenceDelta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "before",
+        "after"
+      ],
+      "properties": {
+        "before": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "after": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "evidenceRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
