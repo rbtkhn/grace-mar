@@ -38,6 +38,7 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 | `users/_template/` | Template scaffold for new instances; reference-only in grace-mar (do not copy into `users/grace-mar/`) |
 | `docs/CONTRADICTION-ENGINE-SPEC.md`, `docs/contradiction-resolution.md`, `docs/approval-inbox-spec.md` | Contradiction engine + gate review surface; grace-mar has instance-specific copies—compare on sync |
 | `docs/change-review.md`, `docs/contradiction-policy.md`, `docs/change-types.md`, `docs/change-review-lifecycle.md` | Change-review doctrine (post-seed); `template-manifest.json` → `change_review` |
+| `docs/change-review-validation.md` | Operator doc: validation rules and commands for `validate-change-review.py` (grace-mar may mirror under `docs/` for instance operators) |
 | `schema-registry/change-*.v1.json`, `schema-registry/identity-diff.v1.json` | Change-review JSON Schemas; listed under `change_review.schemas` in the manifest |
 | Grace-mar mirrors | Same four doctrine files under `docs/` (banner points to template); schemas under `docs/schemas/` (`change-proposal.v1.json`, …, `identity-diff.v1.json`) for local tooling and diffs |
 | Grace-mar equivalents | `docs/conceptual-framework.md`, `docs/architecture.md`, `docs/self-template.md`, `docs/skills-template.md`, `docs/evidence-template.md`, `docs/memory-template.md`, `AGENTS.md` remain valid instance-side mirrors or elaborations when aligned conceptually |
@@ -65,12 +66,30 @@ Use this when you have updates in companion-self that should flow into grace-mar
 
 ---
 
+## 2a. Merge slice — routine template hygiene
+
+When companion-self moves quickly, prefer **small, scoped merges** over rare “catch-up” merges. Each slice should be one reviewable purpose (e.g. one doc, one schema file, one script), then log §3 and commit with the **template SHA** in the commit body.
+
+| Step | Action |
+|------|--------|
+| 1 | **Pin** — `git -C companion-self pull` (or fetch); note `HEAD` and `template-version.json` (`templateVersion`, `gitTag`). |
+| 2 | **Diff** — `python3 scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
+| 3 | **Choose one slice** — e.g. one `docs/` file, `schema-registry/` file, or validator; skip `app/` unless you run the template student app. |
+| 4 | **Merge by hand** — copy or edit per §2; never bulk-overwrite `users/grace-mar/`. |
+| 5 | **Validate** — `python3 scripts/validate-integrity.py --user grace-mar --json`; run merged validators if you pulled them (e.g. `validate-change-review.py` on demo paths). |
+| 6 | **Log + commit** — §3 row; optional update [`template-source.json`](../template-source.json) (`companionSelfCommit`, `templateVersion`, `mergedAt` / `syncedAt`). |
+
+**Operator verification (ongoing):** There is **no** `validate-template-sync.py` in companion-self as of template **0.4.0**; template **manifest integrity** is `node scripts/validate-template.js` (see companion-self `how-instances-consume-upgrades.md` § Auditability). Instances record merges in §3 and/or `template-source.json`; do not assume tools from informal narratives until they exist on `main`.
+
+---
+
 ## 3. Template sync log
 
 Record each merge from template so you can see when grace-mar was last updated and what changed.
 
 | Date | Companion-self (commit or tag) | Paths updated |
 |------|---------------------------------|---------------|
+| 2026-03-27 | companion-self **`template-v0.4.0`** / **`main` @ `3eaf7b17090ae1e8d497856544febf397cb4e98a`** | **Merge slice (docs):** [docs/change-review-validation.md](change-review-validation.md) from template (validator commands + scope). **Refreshed** [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) via `template_diff.py --use-manifest`. **Note:** Template has no `validate-template-sync.py`; use `node scripts/validate-template.js` in template repo for manifest path checks per upstream § Auditability. |
 | 2026-03-26 | companion-self **`template-v0.3.4`** / **`main` @ `4df99a4`** | **Student app:** `GET /api/change-review?profile=demo`, **`/change-review`** page, nav links; README + `readme-student-app.md`. Template **0.3.4**. Instance merge: optional pull for operators who run the template app. |
 | 2026-03-26 | companion-self **`template-v0.3.3`** / **`main` @ `9a042b0`** | **Change-review demo + validator:** `scripts/validate-change-review.py`, `users/demo/change-review/*`, manifest `change_review.validator`, template **0.3.3**. Grace-mar: on-disk mirrors of doctrine docs + `docs/schemas/` change-review v1 schemas; contradiction docs link to local mirrors. |
 | 2026-03-26 | companion-self **`template-v0.3.2`** / **`main` @ `0475ed1`** | **Change review PR1+PR2:** doctrine docs (`docs/change-review.md`, `contradiction-policy.md`, `change-types.md`, `change-review-lifecycle.md`), five `schema-registry/*change*` + `identity-diff.v1.json`, README + `how-instances-consume-upgrades.md`, `template-manifest.json` `change_review` + `schemas`, `docs/schema-record-api.md`, template version **0.3.2**. Grace-mar: sync surfaces logged in §1; instance contradiction docs remain authoritative for the live fork—compare on next merge. |

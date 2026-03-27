@@ -1,12 +1,15 @@
 {
-  "companionSelfCommit": "b455508efc4f7f76ba9ddefd51ac84613009e06c",
-  "templateVersion": "0.2.2",
-  "syncedAt": "2026-03-26T00:00:00Z",
-  "syncedBy": "manual-sync-pack-update",
+  "companionSelfCommit": "3eaf7b17090ae1e8d497856544febf397cb4e98a",
+  "templateVersion": "0.4.0",
+  "syncedAt": "2026-03-27T12:00:00Z",
+  "syncedBy": "merge-slice-change-review-validation-plus-manifest-audit",
   "syncedPaths": [
     "docs/skill-work/self-work/sync-pack/README.md",
     "docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md",
-    "docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md"
+    "docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md",
+    "docs/change-review-validation.md",
+    "docs/merging-from-companion-self.md",
+    "docs/skill-work/work-companion-self/audit-report-manifest.md"
   ],
   "templateUpstream": {
     "repo": "https://github.com/rbtkhn/companion-self",

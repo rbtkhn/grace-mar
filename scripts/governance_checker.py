@@ -32,7 +32,7 @@ LLM_LEAK_PATTERNS = [
 ]
 
 # Files/dirs to skip
-SKIP_DIRS = {".git", "node_modules", "__pycache__", "tools", ".cursor"}
+SKIP_DIRS = {".git", "node_modules", "__pycache__", "tools", ".cursor", ".venv", ".venv-md2pdf"}
 SKIP_FILES = {"governance_checker.py"}  # Don't flag self
 
 # Only these paths may write to self.md or self-archive.md (EVIDENCE). Staging to RECURSION-GATE is allowed from bot.
