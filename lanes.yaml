@@ -106,6 +106,15 @@ lanes:
       - "users/grace-mar/self-evidence.md"
       - "bot/prompt.py"
 
+  work-xavier:
+    owned_paths:
+      - "docs/skill-work/work-xavier/**"
+    allowed_shared_paths:
+      - "lanes.yaml"
+      - ".github/workflows/lane-scope.yml"
+      - ".github/pull_request_template.md"
+    forbidden_paths: []
+
   work-politics:
     owned_paths:
       - "docs/skill-work/work-politics/**"

@@ -2,8 +2,8 @@
 
 | Field | Value |
 |-------|--------|
-| **Generated** | 2026-03-26 |
-| **Companion-self HEAD** (local clone used for diff) | [`87628a5`](https://github.com/rbtkhn/companion-self/commit/87628a548e08ed32adeb5d030bbdb1e5a1af0221) |
+| **Generated** | 2026-03-27 |
+| **Companion-self HEAD** (local clone used for diff) | [`3eaf7b1`](https://github.com/rbtkhn/companion-self/commit/3eaf7b1) |
 | **Command** | `python3 scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
 
 Default clone path: `./companion-self` (gitignored). For a **pinned** governance baseline vs `main` tip, see [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md).
@@ -20,9 +20,15 @@ Paths: companion-self template-manifest.json
 
 ### Pull needed (in template, not in instance)
   - bridges/bridge-schema.json
+  - docs/change-review-validation.md
   - docs/instance-patterns.md
   - docs/layer-map.json
   - docs/long-term-objective.md
+  - docs/seed-phase-artifacts.md
+  - docs/seed-phase-confidence-model.md
+  - docs/seed-phase-readiness.md
+  - docs/seed-phase-stages.md
+  - docs/seed-phase-validation.md
   - docs/seed-phase.md
   - docs/self-identity/intent-coherence-checklist.md
   - docs/self-library-example-corpus-grace-mar-derived.md
@@ -33,13 +39,41 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/skill-work-human-teacher/README.md
   - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md
   - docs/system-tensions-and-mysteries.md
+  - schema-registry/change-decision.v1.json
+  - schema-registry/change-event-log.v1.json
+  - schema-registry/change-proposal.v1.json
+  - schema-registry/change-review-queue.v1.json
+  - schema-registry/identity-diff.v1.json
   - schema-registry/v1-core.json
   - scripts/gate-guardian.js
+  - scripts/generate-identity-diff.py
   - scripts/generate-provenance.js
+  - scripts/generate-seed-dossier.py
   - scripts/layer-enforcer.py
+  - scripts/requirements-seed-phase.txt
   - scripts/truth-density-score.py
+  - scripts/validate-change-review.py
   - scripts/validate-record-boundaries.py
+  - scripts/validate-seed-phase.py
   - users/_template/recursion-gate.md
+  - users/_template/review-queue/README.md
+  - users/_template/review-queue/change_event_log.json
+  - users/_template/review-queue/change_review_queue.json
+  - users/_template/review-queue/decisions/.gitkeep
+  - users/_template/review-queue/diffs/.gitkeep
+  - users/_template/review-queue/proposals/.gitkeep
+  - users/_template/seed-phase/README.md
+  - users/_template/seed-phase/seed-phase-manifest.json
+  - users/_template/seed-phase/seed_confidence_map.json
+  - users/_template/seed-phase/seed_curiosity.json
+  - users/_template/seed-phase/seed_dossier.md
+  - users/_template/seed-phase/seed_expression.json
+  - users/_template/seed-phase/seed_identity.json
+  - users/_template/seed-phase/seed_intake.json
+  - users/_template/seed-phase/seed_memory_contract.json
+  - users/_template/seed-phase/seed_pedagogy.json
+  - users/_template/seed-phase/seed_readiness.json
+  - users/_template/seed-phase/seed_trial_report.json
   - users/_template/self-curiosity.md
   - users/_template/self-evidence.md
   - users/_template/self-identity.md
@@ -52,11 +86,34 @@ Paths: companion-self template-manifest.json
   - users/_template/self-skill-write.md
   - users/_template/self-work.md
   - users/_template/self.md
+  - users/demo/review-queue/README.md
+  - users/demo/review-queue/change_event_log.json
+  - users/demo/review-queue/change_review_queue.json
+  - users/demo/review-queue/decisions/decision-demo-001.json
+  - users/demo/review-queue/derived/pedagogy-draft-v2.json
+  - users/demo/review-queue/diffs/diff-001.json
+  - users/demo/review-queue/proposals/proposal-demo-001.json
+  - users/demo/seed-phase/README.md
+  - users/demo/seed-phase/seed-phase-manifest.json
+  - users/demo/seed-phase/seed_confidence_map.json
+  - users/demo/seed-phase/seed_curiosity.json
+  - users/demo/seed-phase/seed_dossier.md
+  - users/demo/seed-phase/seed_expression.json
+  - users/demo/seed-phase/seed_identity.json
+  - users/demo/seed-phase/seed_intake.json
+  - users/demo/seed-phase/seed_memory_contract.json
+  - users/demo/seed-phase/seed_pedagogy.json
+  - users/demo/seed-phase/seed_readiness.json
+  - users/demo/seed-phase/seed_trial_report.json
 
 ### Differ (both exist, content differs)
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/approval-inbox-spec.md
+  - docs/change-review-lifecycle.md
+  - docs/change-review.md
+  - docs/change-types.md
   - docs/concept.md
+  - docs/contradiction-policy.md
   - docs/contradiction-resolution.md
   - docs/identity-fork-protocol.md
   - docs/skill-work/README.md
@@ -106,7 +163,9 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-civ-mem/audit-report.md
   - docs/skill-work/work-civ-mem/roadmap.md
   - docs/skill-work/work-civ-mem/workspace.md
+  - docs/skill-work/work-companion-self/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md
   - docs/skill-work/work-companion-self/README.md
+  - docs/skill-work/work-companion-self/TEMPLATE-BASELINE.md
   - docs/skill-work/work-companion-self/audit-report-manifest.md
   - docs/skill-work/work-companion-self/audit-report.md
   - docs/skill-work/work-companion-self/roadmap.md
@@ -126,6 +185,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/control-plane/proof_ledger.yaml
   - docs/skill-work/work-dev/control-plane/target_registry.yaml
   - docs/skill-work/work-dev/delivery-playbook.md
+  - docs/skill-work/work-dev/discourse-sources.md
   - docs/skill-work/work-dev/economic-benchmarks.md
   - docs/skill-work/work-dev/engagement-model.md
   - docs/skill-work/work-dev/exercise-agent-visibility.md
@@ -135,6 +195,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/generated/known-gaps.generated.md
   - docs/skill-work/work-dev/generated/proof-ledger.generated.md
   - docs/skill-work/work-dev/generated/target-registry.generated.md
+  - docs/skill-work/work-dev/handback-analysis-checklist.md
   - docs/skill-work/work-dev/integration-status.md
   - docs/skill-work/work-dev/known-gaps.md
   - docs/skill-work/work-dev/lane-scope-checklist.md
@@ -154,6 +215,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/safety-story-ux.md
   - docs/skill-work/work-dev/scenarios/baseline_scenarios/continuity_failure.yaml
   - docs/skill-work/work-dev/scenarios/baseline_scenarios/false_recall.yaml
+  - docs/skill-work/work-dev/scenarios/baseline_scenarios/handback_tail_stress.yaml
   - docs/skill-work/work-dev/scenarios/baseline_scenarios/lane_bleed.yaml
   - docs/skill-work/work-dev/scenarios/baseline_scenarios/provenance_loss.yaml
   - docs/skill-work/work-dev/scenarios/baseline_scenarios/reasoning_action_mismatch.yaml
@@ -163,6 +225,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/target-registry.md
   - docs/skill-work/work-dev/three-compounding-loops.md
   - docs/skill-work/work-dev/variation-types.md
+  - docs/skill-work/work-dev/work-dev-sources.md
   - docs/skill-work/work-dev/workspace.md
   - docs/skill-work/work-grace-gems/README.md
   - docs/skill-work/work-health-fitness/README.md
@@ -175,7 +238,9 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-jiang/LANE-CI.md
   - docs/skill-work/work-jiang/extractors.md
   - docs/skill-work/work-jiang/lecture-analysis-json-schema.md
+  - docs/skill-work/work-jiang/work-jiang-sources.md
   - docs/skill-work/work-lesson-generation-walkthrough.md
+  - docs/skill-work/work-modules-sources-principle.md
   - docs/skill-work/work-politics/LANE-CI.md
   - docs/skill-work/work-politics/README.md
   - docs/skill-work/work-politics/account-x.md
@@ -243,6 +308,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-politics/polling-and-markets.md
   - docs/skill-work/work-politics/polyphonic-cognition-protocol-skill.md
   - docs/skill-work/work-politics/prep-before-call-abc.md
+  - docs/skill-work/work-politics/principal-portrait-literary-sketch.md
   - docs/skill-work/work-politics/principal-profile.md
   - docs/skill-work/work-politics/proof-ledger.md
   - docs/skill-work/work-politics/revenue-log.md
@@ -293,6 +359,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-politics/wap-candidate-template.md
   - docs/skill-work/work-politics/weekly-brief-2026-03-09.md
   - docs/skill-work/work-politics/weekly-brief-template.md
+  - docs/skill-work/work-politics/work-politics-sources.md
   - docs/skill-work/work-politics/work-politics-strategic-memo.md
   - docs/skill-work/work-politics/workspace.md
   - docs/skill-work/work-strategy/LANE-CI.md
@@ -306,7 +373,9 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-strategy/daily-brief-2026-03-23.md
   - docs/skill-work/work-strategy/daily-brief-2026-03-24.md
   - docs/skill-work/work-strategy/daily-brief-2026-03-26.md
+  - docs/skill-work/work-strategy/daily-brief-2026-03-27.md
   - docs/skill-work/work-strategy/daily-brief-focus.md
+  - docs/skill-work/work-strategy/daily-brief-jiang-layer.md
   - docs/skill-work/work-strategy/daily-brief-template.md
   - docs/skill-work/work-strategy/external-tech-scan.md
   - docs/skill-work/work-strategy/manifest-principles.md
@@ -316,8 +385,42 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-strategy/modules/verifiable-personal-ai/manifest.md
   - docs/skill-work/work-strategy/persuasive-content-pipeline.md
   - docs/skill-work/work-strategy/synthesis-engine.md
-  - docs/skill-work/work-companion-self/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md
-  - docs/skill-work/work-companion-self/TEMPLATE-BASELINE.md
+  - docs/skill-work/work-xavier/ALIGNMENT.md
+  - docs/skill-work/work-xavier/CHECKLISTS.md
+  - docs/skill-work/work-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md
+  - docs/skill-work/work-xavier/COMPANION-XAVIER-DELETION-READINESS.md
+  - docs/skill-work/work-xavier/COMPANION-XAVIER-DRY-RUN-PROMPTS.md
+  - docs/skill-work/work-xavier/DAILY-OPS-CARD.md
+  - docs/skill-work/work-xavier/DAY-1-NO-TERMINAL.md
+  - docs/skill-work/work-xavier/GLOSSARY-FOR-BEGINNERS.md
+  - docs/skill-work/work-xavier/GOOD-MORNING.md
+  - docs/skill-work/work-xavier/INDEX.md
+  - docs/skill-work/work-xavier/INSTANCE-PATHS.md
+  - docs/skill-work/work-xavier/LANES.md
+  - docs/skill-work/work-xavier/LEAKAGE-CHECKLIST.md
+  - docs/skill-work/work-xavier/LEARN-PATH.md
+  - docs/skill-work/work-xavier/LEARNING-OBJECTIVES-CONTROL-PLANE.md
+  - docs/skill-work/work-xavier/PROMPT-PATTERNS.md
+  - docs/skill-work/work-xavier/README.md
+  - docs/skill-work/work-xavier/SEED-MANIFEST.md
+  - docs/skill-work/work-xavier/SESSION-0-OPERATOR.md
+  - docs/skill-work/work-xavier/SYNC-DAILY.md
+  - docs/skill-work/work-xavier/TEMPLATE-BASELINE.md
+  - docs/skill-work/work-xavier/TERMS-XAVIER.md
+  - docs/skill-work/work-xavier/content-plan-week1-2026-03-24.md
+  - docs/skill-work/work-xavier/content-spec-3-month-10000-budget.md
+  - docs/skill-work/work-xavier/first-good-morning-runbook.md
+  - docs/skill-work/work-xavier/week2-execution-2026-03-31.md
+  - docs/skill-work/work-xavier/week2-kpi-budget-log-2026-03-31.md
+  - docs/skill-work/work-xavier/work-dev-mirror/NO-TERMINAL-OPERATING-PROMPTS.md
+  - docs/skill-work/work-xavier/work-dev-mirror/README.md
+  - docs/skill-work/work-xavier/work-dev-mirror/RELIABILITY-CHECKLIST.md
+  - docs/skill-work/work-xavier/work-dev-mirror/SYNC-CONTRACT.md
+  - docs/skill-work/work-xavier/work-dev-mirror/SYNC-LOG.md
+  - docs/skill-work/work-xavier/work-dev-mirror/USE-NOW-VS-LATER.md
+  - docs/skill-work/work-xavier/work-politics-mirror/README.md
+  - docs/skill-work/work-xavier/work-politics-mirror/SYNC-CONTRACT.md
+  - docs/skill-work/work-xavier/work-politics-mirror/SYNC-LOG.md
 
 ### Same (no action)
   - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
@@ -326,4 +429,4 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-LOG.template.md
 
-Summary: same=5 differ=10 only_template=33 only_instance=252
+Summary: same=5 differ=14 only_template=86 only_instance=298

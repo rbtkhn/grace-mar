@@ -63,7 +63,7 @@ Two input channels feed the pipeline:
 
 This repo is a **live instance** (one person’s cognitive fork). The **template** for creating new instances is [companion-self](https://github.com/rbtkhn/companion-self). For a side-by-side comparison — purpose, relationship, and one-sentence summaries — see [grace-mar vs companion-self](docs/grace-mar-vs-companion-self.md).
 
-**Additional instances:** New companions bootstrap from the [companion-self](https://github.com/rbtkhn/companion-self) template in **their own repositories**; they are not hosted inside the grace-mar repo.
+**Additional instances:** New companions bootstrap from the [companion-self](https://github.com/rbtkhn/companion-self) template in **their own repositories**; they are not hosted inside the grace-mar repo. The **work-xavier** folder under [docs/skill-work/work-xavier/](docs/skill-work/work-xavier/README.md) is an **operator/advisor work module** in grace-mar (mirrors, runbooks) — not a copy of someone else’s Record.
 
 **Edit companion-self next to grace-mar:** Open **`grace-mar.code-workspace`** in Cursor/VS Code (multi-root: this repo + `./companion-self`). Clone the template into `companion-self/` at the repo root; `scripts/template_diff.py` defaults to that path. See [MERGING-FROM-COMPANION-SELF](docs/merging-from-companion-self.md) §0.
 
