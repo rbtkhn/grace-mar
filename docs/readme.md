@@ -25,6 +25,8 @@
 | **We read / THINK vs IX** | [WE-READ-THINK-SELF-PIPELINE](we-read-think-self-pipeline.md) | After shared reading: log READ + THINK; stage IX separately; optional `intake_evidence_id` on candidates. |
 | **Using Grace-Mar without a school** | [USING-GRACE-MAR-WITHOUT-A-SCHOOL](using-grace-mar-without-a-school.md) | Homeschool / standalone: who it's for, core loop, "we did X" + /review, export, optional stack (e.g. Grace-Mar + Khan/IXL). |
 | **Audits** | [audit-companion-self](audit-companion-self.md), [AUDIT-GRACE-MAR-VS-COMPANION-SELF-TEMPLATE](audit-grace-mar-vs-companion-self-template.md), [audit-structural-alignment-grace-mar-companion-self](audit-structural-alignment-grace-mar-companion-self.md), [audit-boundary-grace-mar-companion-self](audit-boundary-grace-mar-companion-self.md) | Companion-self concept alignment; instance vs template; structure + formatting; **normative boundaries** (Record · template; what may cross). |
+| **work-xavier (advisor module)** | [work-xavier/README](skill-work/work-xavier/README.md) | Operator project lane for advising Xavier; **not** her instance repo. Her Record is **companion-xavier** (separate GitHub repo). |
+| **Cross-instance boundary** | [cross-instance-boundary.md](cross-instance-boundary.md) | Two-repo contract; optional `check_forbidden_path_strings.py` for **peer** repos only. |
 | **Feedback loops** | [feedback-loops](feedback-loops.md) | Proposal brief, calibrate-on-miss, low-friction approval, closed-loop verification, oversight cadence. |
 
 **Hierarchy:** The protocol (IDENTITY-FORK-PROTOCOL) is the thing to implement. CORE is governance. CONCEPTUAL-FRAMEWORK and DESIGN-NOTES interpret and explain intent. WHITE-PAPER and prospectus are narrative and business.

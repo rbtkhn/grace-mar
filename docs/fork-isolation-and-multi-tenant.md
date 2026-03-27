@@ -120,7 +120,13 @@ Omit keys for no limit or default. Scripts that need quotas or retention call `l
 
 ---
 
-## 8. Summary
+## 8. Cross-instance collaboration (separate repos)
+
+When a companion’s fork lives in **another repository** (e.g. peer instance from companion-self), mentor and peer still follow **one protocol per fork**, but **no shared `users/` tree**. Boundaries, optional leakage scans, and advisor work modules are spelled out in [cross-instance-boundary.md](cross-instance-boundary.md).
+
+---
+
+## 9. Summary
 
 | Concern | Design choice |
 |--------|----------------|
@@ -131,4 +137,4 @@ Omit keys for no limit or default. Scripts that need quotas or retention call `l
 | **Export/import** | Export always scoped to one fork; import writes only to target fork. |
 | **Deployment** | Single-fork (pilot), single-process multi-fork, or one-process-per-fork; same filesystem model. |
 
-The pilot remains single-user with `GRACE_MAR_USER_ID` defaulting to `grace-mar`. The same codebase and repo layout support multiple forks with clean boundaries; adding a second fork is then configuration and routing, not a rewrite.
+The pilot remains single-user with `GRACE_MAR_USER_ID` defaulting to `grace-mar`. The same codebase and repo layout support multiple forks with clean boundaries; adding a second fork is then configuration and routing, not a rewrite. For **two repositories** (mentor + external peer), see §8 and [cross-instance-boundary.md](cross-instance-boundary.md).
