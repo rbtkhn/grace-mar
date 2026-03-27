@@ -4,22 +4,33 @@
 
 # MEMORY — Ephemeral Session Context
 
-> Not part of the Record. SELF is authoritative. Rotate: weekly.
+> Not part of the Record. SELF is authoritative. See docs/memory-template.md v2.0 (three horizons).
 
-Last rotated: 2026-02-22
+Last rotated: 2026-03-26
 
-## Tone
+## Short-term
+
+### Tone
 
 (optional: current tone calibration — e.g. playful, calm, focused)
 
-## Recent Topics
+### Recent Topics
 
-- Companion listened to Bach Goldberg Variations for bedtime tonight; we also listened to Tchaikovsky Andante cantabile (2026-02-24).
+- Companion listened to Bach Goldberg Variations for bedtime; Tchaikovsky Andante cantabile (2026-02-24). (Thread continuity — durable reading/music lives in EVIDENCE + SELF when merged.)
 
-## Calibrations
+### Calibrations
 
 (optional: session-specific preferences — e.g. shorter answers, more questions)
 
-## Resistance Notes
+### Resistance Notes
 
-(optional: topics to avoid or handle gently — e.g. "resistance on school questions"; use to avoid retriggering next session)
+(optional: topics to avoid or handle gently — e.g. resistance on school questions)
+
+## Medium-term
+
+(open loops, sprint-level notes — prune weekly; if it becomes stable Record, stage a candidate instead of letting it live here)
+
+## Long-term
+
+- **Rotation:** prefer weekly prune of Short/Medium; review Long-term quarterly for drift into “shadow Record.”
+- **Durable truth:** `users/grace-mar/self.md`, optional `self-identity.md`; activity spine: `self-archive.md` (EVIDENCE); operator threads: `self-work.md`.
