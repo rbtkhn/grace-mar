@@ -117,7 +117,7 @@ or `sys.path.insert(0, str(REPO_ROOT))`.
 
 **Where:** Some conceptual overlap between:
 
-- `AGENTS.md` (guardrails, pipeline, tricameral)
+- `AGENTS.md` (guardrails, pipeline, triadic cognition)
 - `docs/grace-mar-core.md` (governance)
 - `docs/conceptual-framework.md` (Record, Voice, terminology)
 - `docs/architecture.md` (system design)

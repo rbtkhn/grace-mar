@@ -98,6 +98,6 @@
 1. **Gated pipeline** — Grace-Mar stages; companion approves. Merge into companion-self requires human gate. Sync (template→instance) also requires companion approval before apply.
 2. **Sync: never overwrite Record** — Template merge into grace-mar never overwrites `users/grace-mar/`, instance config, or Record. Per MERGING-FROM-COMPANION-SELF.
 3. **Knowledge boundary** — Contributions based on Record and instance evidence only. No LLM knowledge leak.
-4. **Template governance** — Proposals align with companion-self concept, self-* taxonomy, tricameral framing.
+4. **Template governance** — Proposals align with companion-self concept, self-* taxonomy, triadic cognition.
 5. **Instance/template boundary** — Instance-specific content stays in grace-mar. Template gets only generic improvements.
 6. **Companion sovereignty** — Companion sets scope, pause, override. "Autonomous" = within approved bounds.

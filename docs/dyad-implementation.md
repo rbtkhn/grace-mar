@@ -1,6 +1,6 @@
-# Dyad Implementation — Tricameral Mind (MIND, RECORD, VOICE)
+# Dyad Implementation — Triadic Cognition (MIND, RECORD, VOICE)
 
-Specific implementations to track and encourage tricameral-mind activity (MIND consulting and feeding RECORD/VOICE). Builds on existing infrastructure.
+Specific implementations to track and encourage **triadic cognition** (MIND consulting and feeding RECORD/VOICE). Builds on existing infrastructure. *Tricameral mind* is a synonym in older references.
 
 ---
 

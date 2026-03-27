@@ -26,7 +26,7 @@
 | **Write: post, reply, DM** | Voice posting, or Mind posting with Record context | **Deferred.** Public posts are permanent and platform-dependent; conflicts with "Voice speaks only when queried" if automated. |
 | **Write: like, bookmark** | Save items for later matching | Could support "bookmark → stage" flow without posting. |
 
-**Tricameral alignment:**
+**Triadic alignment:**
 
 - **MIND** — Decides what to follow, what to approve from staged X-sourced candidates; can post *as themselves* from a linked account if desired (out of scope for automation).
 - **RECORD** — Enriched by approved X-sourced candidates (e.g. new curiosity, links) via existing gated pipeline. No direct X write from Record.
@@ -92,7 +92,7 @@ No change to `bot/core.py` for feed-only: no X channel in `get_response`. Only i
 
 ## 6. Recommendation
 
-1. **Implement feed consumer only** — Follow/list or bookmarks → match to Record (IX-B, LIBRARY) → stage to RECURSION-GATE → Mind approves. Aligns with Design Roadmap §4 and tricameral mind (X feeds RECORD, gated by MIND; VOICE not on X).
+1. **Implement feed consumer only** — Follow/list or bookmarks → match to Record (IX-B, LIBRARY) → stage to RECURSION-GATE → Mind approves. Aligns with Design Roadmap §4 and triadic cognition (X feeds RECORD, gated by MIND; VOICE not on X).
 2. **Reuse patterns** — Staging like OpenClaw (stage-only script or `/stage`), existing pipeline and merge flow, `channel_key` for X.
 3. **Defer** — X as conversational channel (DM), Voice posting, and any write path until there is a clear product need and compliance path.
 4. **Document** — Add "X feed" to DESIGN-ROADMAP §4 and any integration table (e.g. OPENCLAW-INTEGRATION style) once we add an implementation ticket.

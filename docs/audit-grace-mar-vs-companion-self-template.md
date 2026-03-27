@@ -53,7 +53,7 @@ The template concept (Mind + Record + Voice; cognitive fork; sovereign merge; kn
 | Concept | Where in grace-mar | Status |
 |---------|--------------------|--------|
 | Record = documented self; Voice = speaks Record | CONCEPTUAL-FRAMEWORK, AGENTS, ARCHITECTURE | ✅ |
-| Tricameral mind (Mind, Record, Voice) | AGENTS, CONCEPTUAL-FRAMEWORK, prompt/PRP | ✅ |
+| Triadic cognition (Mind, Record, Voice); tricameral mind synonym | AGENTS, CONCEPTUAL-FRAMEWORK, prompt/PRP | ✅ |
 | Fork, not twin | CONCEPTUAL-FRAMEWORK, AGENTS | ✅ |
 | Knowledge boundary (no LLM leak) | AGENTS §1, KNOWLEDGE-BOUNDARY-FRAMEWORK, prompt | ✅ |
 | Sovereign merge (companion gates) | AGENTS §2, IDENTITY-FORK-PROTOCOL | ✅ |

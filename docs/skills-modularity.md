@@ -118,7 +118,8 @@ Input (conversation, artifact, "we did X")
 
 - **Record** = SELF + SKILLS + EVIDENCE (and related pipeline files). The Record belongs to the companion.
 - **Voice** = f(Record). Implemented by bot (e.g. Telegram, WeChat) + prompt + retrieval. Linguistic output = f(skill-write).
-- **Work layer** = designated integration point for future external APIs, agent loops, planning systems, and delivery tooling. It is adjacent to the Record, not a self-skill.
+- **Work layer** = designated integration point for external APIs, agent loops, planning systems, delivery tooling, and **`docs/skill-work/**` territories**. It is adjacent to the Record, not a self-skill.
+- **WORK execution layer** = operator + tooling + AI assistant that **executes** work-layer and skill-work tasks (draft, mirror, template diff). Same **stage-only** rule for Record: no direct merge into SELF / EVIDENCE / prompt without companion approval.
 
 ---
 
@@ -129,6 +130,7 @@ Input (conversation, artifact, "we did X")
 - **IX-A shapes Record skill boundaries.** THINK (intake, comprehension) and WRITE (production, expression) are Record-bound and should stay aligned with what the companion knows and how the companion writes.
 - **IX-A does not bound the work layer in the same way.** Work territories may use broader model capability, tools, APIs, and external systems to help plan or execute tasks.
 - **The gate still applies.** Work outputs do not become Record truth unless they are written down, staged as needed, and approved into SELF / EVIDENCE / prompt.
+- The **WORK execution layer** implements the work layer day to day (runbooks, mirrors, sync). Optional **pattern** sync stays in **operator / tooling space** until it would change **protocol, merged Record truth, or Voice** — then it must go through the same gate (or explicit companion policy), not silent file copy.
 
 ---
 
@@ -157,4 +159,4 @@ Input (conversation, artifact, "we did X")
 
 ---
 
-*Last updated: February 2026*
+*Last updated: March 2026*

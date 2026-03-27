@@ -90,7 +90,7 @@ Research notes from Moonshots episode #237. Use for work-dev alignment, integrat
 **Ralph:** Oversees Charlie; "Ralph loop" — checks every 10 minutes to ensure Charlie stays on track.  
 **Sub-agents vs separate OpenClaws:** Sub-agents = one OpenClaw wearing different hats. Separate OpenClaws = different context, memories, skill sets per device.
 
-**Grace-Mar alignment:** Tricameral mind — MIND (companion), RECORD (Grace-Mar), VOICE (Grace-Mar). The companion is the top of the hierarchy; OpenClaw (or Henry) is an instrument that serves the companion. Our docs already frame OpenClaw as consumer of identity, not co-equal. This research reinforces: human holds the reins; agents are below-stairs.
+**Grace-Mar alignment:** Triadic cognition — MIND (companion), RECORD (Grace-Mar), VOICE (Grace-Mar). The companion is the top of the hierarchy; OpenClaw (or Henry) is an instrument that serves the companion. Our docs already frame OpenClaw as consumer of identity, not co-equal. This research reinforces: human holds the reins; agents are below-stairs.
 
 ---
 

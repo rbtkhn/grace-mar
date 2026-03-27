@@ -106,7 +106,7 @@ When assessing this feedback, the next agent should:
 |-------|----------|
 | Governance, merge rule, knowledge boundary | `AGENTS.md` |
 | Architecture, harness, non-goals | `docs/architecture.md` |
-| Tricameral mind, Record, companion | `docs/conceptual-framework.md` |
+| Triadic cognition, Record, companion | `docs/conceptual-framework.md` |
 | Contradiction engine constraints | `docs/CONTRADICTION-ENGINE-SPEC.md` §2 |
 | OpenClaw, export, handback | `docs/openclaw-integration.md`, `docs/skill-work/work-dev/README.md` |
 | Pipeline events, staging | `docs/pipeline-events-schema.md`, `bot/core.py` (emit_pipeline_event, _stage_candidate) |

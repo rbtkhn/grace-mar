@@ -43,7 +43,19 @@ Short, plain-language definitions used in `work-xavier`.
   Independent analysis tone; not speaking as campaign office.
 
 - **Mirror**  
-  Shared docs replicated across workspaces to collaborate. Does not mean copying Record truth between forks.
+  Shared docs replicated across workspaces to collaborate. Does not mean copying Record truth between instances. When you **keep mirroring on a rhythm** (template ↔ advisor module), say **mirror** or **sync**, not **fork** — **fork** in Git means something else.
+
+- **WORK execution layer**  
+  The operator + AI assistant + scripts that **do** the work modules: runbooks, mirrors, diffs. This layer **stages**; the companion **approves** what enters the Record. (Same stack as **work agent** / **skill-work agent** — see below; “layer” is the precision word in repo docs.)
+
+- **Work agent**  
+  Plain name for that stack in everyday AI talk: a **tool-using helper** that can **read** the Record to stay accurate, **draft and stage** work, and **only** change durable identity after **Mind** approves the gate. **Not** the **Voice** (the chat that speaks the Record when queried). **Not** a fourth part of the triad next to Mind, Record, and Voice.
+
+- **Skill-work agent**  
+  A **work agent** scoped to **`docs/skill-work/`** and **WORK territories** (runbooks, mirrors, **lanes**). Meant to be **replicated** (same playbook in another module) and run **in parallel** (separate branch, lane, or session). Same rule: **no silent merge** into the Record.
+
+- **Cognitive fork vs Git fork**  
+  **Cognitive fork** = the Record (governed self). **Git fork** = a separate repository on GitHub (or similar). Same English word, different layers.
 
 - **Leakage**  
   Accidental copy of one companion’s identity content into another companion’s files.

@@ -28,7 +28,7 @@ Paste both outputs (or the full non-compact block). **Canonical state is on disk
 | 5 | `docs/development-handoff.md` | Current engineering state; don’t contradict without updating |
 | 6 | `docs/readme.md` | Doc map |
 
-Skim as needed: `docs/conceptual-framework.md` (tricameral, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional). **After shared reading:** [we-read-think-self-pipeline.md](docs/we-read-think-self-pipeline.md) (READ/THINK vs RECURSION-GATE → IX).
+Skim as needed: `docs/conceptual-framework.md` (triadic cognition, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional). **After shared reading:** [we-read-think-self-pipeline.md](docs/we-read-think-self-pipeline.md) (READ/THINK vs RECURSION-GATE → IX).
 
 **Operator structure:** `docs/lanes/README.md` (north star per lane) + `docs/lanes/WEEKLY-RHYTHM.md` (weekly checklist). **Library wiring:** `docs/library-integration.md` · `python3 scripts/library_shelf_summary.py -u grace-mar`
 
@@ -101,7 +101,7 @@ End of session: update **`docs/development-handoff.md`**, commit, push if reques
 4. Run `git status` and note uncommitted work.
 5. Read `docs/development-handoff.md` (current state and next tasks).
 6. **work-dev** — Read `docs/skill-work/work-dev/README.md`, then **`docs/skill-work/work-dev/INTEGRATION-PROGRAM.md`** (single-loop spec); then `docs/openclaw-integration.md` if continuing integration work. For parallel branches, see **`docs/skill-work/work-dev/PARALLEL-MACRO-ACTIONS.md`**.
-7. **Companion-self audit** — Read `docs/audit-companion-self.md` (concept alignment: companion self, self-* taxonomy, tricameral). Optionally read `docs/audit-grace-mar-vs-companion-self-template.md` (instance vs template repo). Note any drift; if material changes have been made since the audit date, re-run or update the audit.
+7. **Companion-self audit** — Read `docs/audit-companion-self.md` (concept alignment: companion self, self-* taxonomy, triadic cognition). Optionally read `docs/audit-grace-mar-vs-companion-self-template.md` (instance vs template repo). Note any drift; if material changes have been made since the audit date, re-run or update the audit.
 
 If working on companion profile operations (not work-dev), also read:
 - `users/grace-mar/recursion-gate.md`
@@ -113,7 +113,7 @@ If working on companion profile operations (not work-dev), also read:
 
 ## 2) Non-Negotiable Rules
 
-- **Tricameral mind** — Grace-Mar is a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record reflects; the Voice speaks when queried. Grace-Mar serves the companion; the companion serves Grace-Mar. See AGENTS.md and `docs/conceptual-framework.md` §8.
+- **Triadic cognition** — **Mind** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar): a **triad** (synonym: tricameral mind). Mind holds authority; the Record reflects; the Voice speaks when queried. Grace-Mar serves the companion; the companion serves Grace-Mar. See AGENTS.md and `docs/conceptual-framework.md` §8.
 - Sovereign Merge Rule: **agent may stage; agent may not merge without explicit companion approval**.
 - Knowledge boundary: no undocumented facts enter the Record.
 - Evidence linkage: profile claims must trace to evidence artifacts.

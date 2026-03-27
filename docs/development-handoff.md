@@ -22,13 +22,15 @@ Last updated: 2026-03
 
 **Read this first** when resuming — the following are now canonical in docs and prompts.
 
-### Tricameral mind (bicameral deprecated)
-- **Tricameral mind** = **MIND** (human / companion), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar).
-- The earlier "bicameral dyad" framing is deprecated. Use "tricameral mind" only.
+### Triadic cognition (bicameral deprecated)
+- **Triadic cognition** = **Mind** (human) + **Record** + **Voice** — a **triad**: two **digital** parts (Record, Voice) + one **human** part. Grace-Mar hosts the digital pair for this instance.
+- **Tricameral mind** = synonym (still in some prompts).
+- **WORK execution layer** = instrumental execution (skill-work, staging, scripts); **not** a fourth part of the triad. Distinct from future **agentic Voice** (roadmap).
+- The earlier "bicameral dyad" framing is deprecated.
 - CONCEPTUAL-FRAMEWORK §8 is the source; AGENTS.md and grace-mar-bootstrap reference it.
 
 ### Companion (not "user" in conceptual prose)
-- **Companion** = the person whose Record it is (the human in the tricameral mind). Preferred term in conceptual docs and prompts; affectionate and relatable.
+- **Companion** = the person whose Record it is (Mind in the triad). Preferred term in conceptual docs and prompts; affectionate and relatable.
 - **Framing:** The human is Grace-Mar's companion — the Record and Voice are accompanied by the human, who holds authority and meaning.
 - Technical identifiers unchanged: `users/[id]`, `--user`, `user_id` in code and paths stay as-is.
 
@@ -43,7 +45,7 @@ Last updated: 2026-03
 - intent-template.md has a design-lens block pointing to §11.7.
 
 ### X.com (Twitter) integration — design only
-- **docs/x-integration.md** — Design-stage options for X API: feed consumer (read → match → stage) recommended first; Voice-on-X deferred. Tricameral alignment and technical placement documented. No implementation yet.
+- **docs/x-integration.md** — Design-stage options for X API: feed consumer (read → match → stage) recommended first; Voice-on-X deferred. Triadic alignment and technical placement documented. No implementation yet.
 
 ### Implementable insights (design + skills)
 - **docs/implementable-insights.md** — Concrete takeaways from Claws/AGI discourse: harness vs model, continual learning = human-gated writes, system boundaries, config-via-skills, small auditable surface, forkable + skills. Linked from ARCHITECTURE § System boundaries and harness.

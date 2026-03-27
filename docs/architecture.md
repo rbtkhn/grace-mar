@@ -750,7 +750,7 @@ The cognitive fork can optionally power an **emulation** — a live conversation
 
 ### THINK/WRITE Refinement in Emulation
 
-For tricameral-mind clarity (MIND, RECORD, VOICE):
+For triadic-cognition clarity (MIND, RECORD, VOICE):
 
 - `THINK` is the intake function that processes text, video, music/audio, images, and mixed media into evidence-linked signals.
 - Those signals feed the **Record** through the gated pipeline.

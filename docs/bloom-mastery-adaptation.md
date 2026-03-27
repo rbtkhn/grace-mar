@@ -31,7 +31,7 @@ This codebase is **not** a learning management system. The analogy is **adult, s
 | Practice / articulation | THINK vs WRITE containers | [`users/<id>/skill-think.md`](../users/grace-mar/skill-think.md), [`users/<id>/skill-write.md`](../users/grace-mar/skill-write.md) ([canonical-paths.md](canonical-paths.md)) |
 | Time back | Intention + memory horizons + WORK lanes | good-morning-brief, [memory-template.md](memory-template.md), WORK files under `users/<id>/` |
 | Variation reduction | Layer boundaries and identity/library rules | [AGENTS.md](../AGENTS.md), [conceptual-framework.md](conceptual-framework.md), [scripts/identity_library_boundary_rules.py](../scripts/identity_library_boundary_rules.py) — **no** `layer-enforcer.py` or `truth-density-score.py` unless added later |
-| 1:1 tutoring analog | Recursive Record + Voice (queried, bounded) | [conceptual-framework.md](conceptual-framework.md) (tricameral mind, pipeline) |
+| 1:1 tutoring analog | Recursive Record + Voice (queried, bounded) | [conceptual-framework.md](conceptual-framework.md) (triadic cognition, pipeline) |
 
 ---
 

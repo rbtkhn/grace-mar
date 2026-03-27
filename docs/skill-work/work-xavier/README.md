@@ -14,6 +14,18 @@
 
 **Portability:** Patterns in this module are intended to be **mirrored or adapted** for other companion-self operator/agent workspaces; the instance Record stays in each companion’s repo.
 
+### Record, Voice, and WORK execution (this folder)
+
+- **Record** — Lived identity under `users/<id>/` in **her** instance repo; durable truth enters only through **her** recursion-gate and merge script.
+- **Voice** — Speaks the Record when queried; bounded by what is merged and by prompt rules.
+- **WORK execution** — Operator, AI assistant, and scripts running **WORK modules** (this folder, mirrors, Cursor workflows): drafts, plans, and **optional ongoing sync** of pattern docs with a source tree. This layer does **not** own the Record; anything that changes identity or Voice obligations must surface as **candidates** in **her** `recursion-gate.md` (or explicit companion-approved policy), not as silent edits to `self.md`.
+
+### Words we use (avoid confusion)
+
+- **Cognitive fork / Record** — The governed self (Identity Fork Protocol). Not “a copy of someone else’s markdown tree.”
+- **Git repository / instance repo** — Where that Record lives (e.g. `companion-xavier`). “Fork” on GitHub is **hosting**; it is not the same word as **cognitive fork**.
+- **Mirror / track / sync** — Use for `work-*` **advisor** layouts you keep **aligned over time** with a golden source. Prefer this over **“fork once”** when you mean **ongoing** alignment.
+
 ---
 
 ## Governance contract (compact)
@@ -22,6 +34,6 @@
 2. **Primary output (her repo):** `companion-xavier` (or her chosen repo name) = her instance; durable identity truth enters only through **her** gate and merge script.
 3. **Mirror scope:** Mirror workflow docs and ops artifacts **here** for your advisory cadence; do **not** mirror identity Record prose across repos without her pipeline.
 4. **Directionality:** Approved patterns flow from grace-mar skill-work into mirrors; conflicts require human resolution.
-5. **Ownership (RACI):** agent drafts; Xavier / operator review; companion approves gated merges **in her repo** for identity; you approve public ship for your content.
+5. **Ownership (RACI):** operator / AI assistant drafts; Xavier / operator review; companion approves gated merges **in her repo** for identity; you approve public ship for your content.
 6. **Promotion path (her repo):** candidate → `recursion-gate.md` → approval → `process_approved_candidates.py --apply`.
 7. **Security boundary:** no secrets in shared mirror docs.

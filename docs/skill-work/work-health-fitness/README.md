@@ -48,6 +48,6 @@ Additional users: add `health-fitness-profile-<slug>.md` in `users/grace-mar/` a
 
 ## Cross-references
 
-- [Architecture](../../architecture.md) — Tricameral mind, companion sovereignty
+- [Architecture](../../architecture.md) — Triadic cognition, companion sovereignty
 - [AGENTS.md](../../../AGENTS.md) — Rule 7 (meet where they are), gated pipeline
 - [CHAT-FIRST-DESIGN](../../chat-first-design.md) — Deliver within chat; bounded sessions

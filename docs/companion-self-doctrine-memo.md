@@ -35,7 +35,7 @@ The system is designed for a world in which many AIs may speak, recommend, plan,
 
 ## Record, Voice, Gate
 
-Companion Self is built on a tricameral model:
+Companion Self is built on **triadic cognition** (synonym: tricameral model):
 
 - **Mind**: the human companion, sovereign and conscious
 - **Record**: the documented self, stored as structured identity plus evidence

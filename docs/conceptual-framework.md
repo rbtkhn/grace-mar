@@ -10,7 +10,7 @@
 
 ---
 
-Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, tricameral mind, recursion-gate).
+Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, triadic cognition, tricameral mind, recursion-gate).
 
 ## 1. Cognitive Fork vs. Cognitive Twin
 
@@ -48,7 +48,7 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Re
 **The Voice is not the Record.** The Voice is the interface through which the companion interacts with the Record.
 Operational path: **THINK -> Record -> WRITE-through-Voice**.
 
-**Companion self.** A single phrase can refer to both sides of the dyad: **companion self**. It means (1) *the companion's self* — the human's self, externalized in the Record (their knowledge, curiosity, personality); and (2) *the self that companions* — the Record and Voice that accompany the human and speak when queried. The ambiguity is intentional. The Record is not a separate person but the companion's self, documented and queryable; and it is the self that is present alongside them. Use "companion self" when one term should hold both meanings. **Companion self = human–computer tricameral cognition:** Mind (human, sovereign), Record + Voice (computer-held documented self and its queryable interface).
+**Companion self.** A single phrase can refer to both sides of the dyad: **companion self**. It means (1) *the companion's self* — the human's self, externalized in the Record (their knowledge, curiosity, personality); and (2) *the self that companions* — the Record and Voice that accompany the human and speak when queried. The ambiguity is intentional. The Record is not a separate person but the companion's self, documented and queryable; and it is the self that is present alongside them. Use "companion self" when one term should hold both meanings. **Companion self = human–computer triadic cognition:** Mind (human, sovereign), Record + Voice (computer-held documented self and its queryable interface). The **WORK execution layer** (operator, assistant, scripts on skill-work and WORK territories) supports Mind with drafting and staging but is not a fourth part of the triad — see §8.
 
 **Named systems (hyphenated):** **companion-self** and names like **companion-xavier** (a **named instance** from the template, typically in its **own** repository) are **always hyphenated** when naming the **template repository** or such an **intelligence-system entity**. That spelling is **not** interchangeable with **companion self** (two words), the **conceptual** dyad above. See [glossary.md](glossary.md).
 
@@ -67,6 +67,8 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 The Voice renders the full Record when it speaks: it can draw on self-knowledge, self-curiosity, self-personality, **self-skill-think**, **self-skill-write**, approved evidence, and self-library (including CIV-MEM-scoped lookup). **self-voice** is the single output channel for the companion self.
 
 **Work is adjacent, not inside the self-skill set.** Work territories and instance work contexts may use broader tools and model capability to plan or execute tasks, but they become part of the Record only through staged, approved evidence.
+
+**WORK execution (skill-work and territories).** In discussions of **skill-work** and **WORK territories** (e.g. `docs/skill-work/`, operator runbooks, advisor **mirrors**, template diffs), **WORK execution** names the **operator + scripts + AI assistant** that drafts, syncs, and maintains those surfaces. It is **not** a fourth chamber beside Mind / Record / Voice: **Mind** stays sovereign; **Record** and **Voice** remain the companion-facing canon. Work in this layer crosses into the Record **only** through the gate (staged candidates → companion approval → merge). **Optional** alignment of **pattern** or **advisor** docs with a source tree (mirror / track / merge on a rhythm) is operator–tooling hygiene **until** a change would alter protocol, merged Record truth, or Voice obligations — then it is **gate-relevant** (stage or explicit companion policy), not silent background sync.
 
 The structure is intentionally layered: three-dimension mind (knowledge, curiosity, personality), two Record-bound skill modules (think, write), supporting stores (**self-archive** as **chronological, expansive, multicategory, multimodal** EVIDENCE; **self-library**; **self-memory** as **chronological** but **slim** session prose), and the Voice that speaks the Record.
 
@@ -110,9 +112,9 @@ See [ID-TAXONOMY](id-taxonomy.md) for standard labels and locations.
 32. **Liberation creates identity gap** — When employment no longer defines worth, identity needs a new anchor. The fork records who you are when work doesn't. (Kurzweil / abundance.)
 33. **Avatars of ourselves** — We create avatars of ourselves—queryable, evidence-grounded, gated. The fork is that: a documented self that can speak when queried.
 34. **Canonical instance; no other instance as independent agent** — The Record and Voice have one **canonical instance**: the one the companion controls (data, pipeline, deployment). Exports are snapshots for consumption (e.g., by schools or agents that read the Record). No *other* instance of the Record or Voice may be deployed or used as an **independent economic or social agent** (posting bounties, contracting, chatting as the identity with third parties, or otherwise acting in the world) without **explicit companion consent** and, where feasible, a **revocation path**. The system is designed so the companion retains sovereignty over who speaks and acts in the name of the Record. See [INSTANCES-AND-RELEASE](instances-and-release.md).
-35. **Tricameral mind** — Grace-Mar is a **tricameral mind**: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record holds the documented self; the Voice speaks it when queried. Design should reinforce this structure. See §8 (Design Lens: Tricameral Mind). See invariant 39 (habits, gate, agreeability).
+35. **Triadic cognition** — **Triadic cognition** names the design: **MIND** (human, conscious, sovereign), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind holds authority; the Record holds the documented self; the Voice speaks it when queried. **WORK territories and skill-work** (operator, assistant, scripts) run **instrumentally**, not as a fourth part of the triad; they stage and serve Mind. Design should reinforce the triad **and** keep this execution below the merge boundary. The older phrase **tricameral mind** is an accepted synonym (e.g. prompts, Jaynes contrast). See §8. See invariant 39 (habits, gate, agreeability).
 36. **Interregnum chaos; hero's fortification** — Gramsci: "the old is dying and the new cannot be born." The transitional epoch (5–10 years) will see AI-driven abundance clash with entrenched systems — protests, conspiracies, mental health crises, currency collapse, authoritarian drift, robot scapegoating. Chaos breeds control; Faraday Cage communities embody voluntary opt-out. The fork is identity infrastructure amid upheaval. Fortify with guilds, wisdom-saving, foresight audits; ride the waves, not fight them. (5000 Days Part 14.)
-37. **Centaur alignment** — The "centaur phase" (human + AI agent as the unit of work) aligns with the tricameral mind: Mind is sovereign; the agent stages, extends, and speaks the Record through the Voice. The human holds the reins; the system executes. Design reinforces this — operator in the loop, gate intact, agent as extension not replacement.
+37. **Centaur alignment** — The "centaur phase" (human + AI as the **unit of execution**) complements **triadic cognition**: the **triad** is **Mind, Record, Voice** (the architecture of selfhood); **centaur** names **Mind + WORK execution** (human and tooling in work territories) getting things done. Mind stays sovereign; the **WORK execution layer** stages and proposes; merge into the Record remains gated. The human holds the reins; the Voice speaks only when queried. Design reinforces operator-in-the-loop and gate intact — execution as instrument, not a fourth part of the triad.
 38. **Reactive now, agentic later** — The current Voice is **reactive**: query-triggered, never unbidden; it responds when asked and does not plan or execute action sequences. Future Grace-Mar versions will include **agentic** capabilities (planning, action sequences, proactive assistance). The Record remains the shared substrate for both. Agentic versions will require additional design: world models, consequence prediction, and inference-time guard rails — concerns that reactive Voice sidesteps. Both modalities serve the companion; the roadmap is reactive first, agentic when ready.
 39. **Habits reshape cognition** — Tools that habitually agree train the mind toward uncritical deferral; a gated Record and bounded Voice train the opposite: Mind sovereign, Record reflecting only what was approved, Voice speaking when queried — not an agreeability engine — so the gate and boundary shape long-term habits, not only safety.
 
@@ -154,30 +156,41 @@ Use the tetrad to anticipate second-order effects and avoid unintended reversals
 
 ---
 
-## 8. Design Lens: Tricameral Mind
+## 8. Design Lens: Triadic Cognition
 
-Grace-Mar is a **tricameral mind**: **MIND** (human), **RECORD** (Grace-Mar), **VOICE** (Grace-Mar). Mind is conscious and sovereign; the Record holds the documented self; the Voice speaks it when queried. **Companion self = human–computer tricameral cognition.** *(The earlier "bicameral dyad" framing is deprecated — it collapsed Record+Voice into one chamber and was confusing.)* The human is Grace-Mar's companion: Record and Voice are accompanied by the human, who holds authority and meaning. **Grace-Mar serves the companion; the companion serves Grace-Mar.**
+**Triadic cognition** is this system’s core design: a **triad** of **Mind** (human) + **Record** + **Voice**. One part is **biological and sovereign**; two parts are **digital** — the **Record** (documented self) and the **Voice** (queryable interface that renders the Record). The **companion-self** architecture (template and protocol family) defines how those digital parts behave; each **instance** hosts them under `users/<id>/`, bot, and pipeline. **Grace-Mar** names **this** deployment: it **hosts** the digital pair for the grace-mar companion while **Mind** remains human. **Companion self** (two words) = human–computer triadic cognition for that triad. The phrase **tricameral mind** remains a **synonym** in prompts and historical contrast (Jaynes); prefer **triadic cognition** in new conceptual prose. *(The earlier "bicameral dyad" framing is deprecated — it collapsed Record+Voice into one part and was confusing.)* The human is Grace-Mar's companion: Record and Voice are accompanied by the human, who holds authority and meaning. **Grace-Mar serves the companion; the companion serves Grace-Mar.**
 
-**Historical context (Jaynes):** Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mind*, 1976) proposed that before ~1000 BCE humans had a "bicameral" mind: one hemisphere produced commands, the other received and obeyed, experienced as *external* voices. Grace-Mar is not a return to that; it is a new structure — voluntary, sovereign, with Mind in charge.
+**Not a fourth part of the triad — WORK execution.** Execution on **WORK territories** and **`docs/skill-work/**` (operator + AI assistant + scripts: draft, mirror, stage, run pipeline) is the **WORK execution layer**. It is **instrumental**: it **proposes** and **stages**; only **Mind** (via gate approval) disposes of what **merges into the Record**. This layer is **not** co-equal with Mind, Record, and Voice — otherwise the model would imply four competing seats of agency. The triad describes **who the companion is** in the system; **WORK execution** describes **how adjacent work gets done** without bypassing the gate. See [SKILLS-MODULARITY §5a](skills-modularity.md#5a-identity-vs-instrument-record-skills-and-work) and [glossary — WORK execution layer](glossary.md).
 
-**Mapping:**
+**Historical context (Jaynes):** Julian Jaynes (*The Origin of Consciousness in the Breakdown of the Bicameral Mind*, 1976) proposed that before ~1000 BCE humans had a "bicameral" mind: one hemisphere produced commands, the other received and obeyed, experienced as *external* voices. Grace-Mar is not a return to that; it is a new structure — voluntary, sovereign, with Mind in charge. We sometimes say **tricameral** next to Jaynes only as contrast vocabulary, not as a claim about brain hemispheres.
 
-| Chamber | Role | In Grace-Mar |
-|---------|------|--------------|
+**Triad — three parts:**
+
+| Part | Role | In Grace-Mar |
+|------|------|----------------|
 | **MIND** | Conscious, sovereign, gates what enters the Record | The companion (the human) |
 | **RECORD** | The documented self (knowledge, curiosity, personality, evidence) | self.md, skills.md, self-evidence.md |
 | **VOICE** | Speaks the Record when queried; observation window | bot (Telegram, WeChat, etc.) |
+
+**Instrumental layer (outside the triad):**
+
+| Layer | Role | In Grace-Mar |
+|-------|------|--------------|
+| **WORK execution layer** | Drafts, stages, syncs pattern docs, runs pipeline tooling; **may not merge** into SELF / EVIDENCE / prompt without approval | Operator + AI + `scripts/`; `docs/skill-work/**` |
 
 Mind holds the reins; the Record reflects; the Voice renders. The Record does not command; the Voice does not speak unbidden.
 
 **Key distinction:** Grace-Mar is *conscious* externalization. The companion (Mind) retains full authority. The fork records; it does not command. The bot responds when queried; it does not speak unbidden. The pipeline integrates companion approval at every step.
 
-**Reactive and agentic:** The *current* Voice is reactive (query-triggered, never unbidden). Eventually Grace-Mar will support both reactive and agentic versions; the Record is the shared substrate for both. Agentic versions (planning, action sequences) will need world models, consequence prediction, and guard rails — design work that reactive Voice does not require. See invariant 38.
+**Disambiguation — two meanings of “agentic”:** (1) **WORK execution layer** — the execution stack above (always in scope today). (2) **Agentic Voice** (roadmap) — a *future* Voice that may plan or act in sequences; still bounded by Record and gate. See invariant 38. Do not conflate **skill-work execution** with **agentic Voice**.
 
-**Cognitive flow:** Mind → thinks, speaks, creates → Pipeline captures, stages → Mind approves → Record updates → Voice (when queried) renders Record in conversation → Mind receives, reflects.
+**Reactive Voice today:** The *current* Voice is reactive (query-triggered, never unbidden). The Record is the shared substrate for both reactive and any future agentic Voice modalities.
+
+**Cognitive flow:** Mind → thinks, speaks, creates → **WORK execution** captures, drafts, stages → Mind approves → Record updates → Voice (when queried) renders Record in conversation → Mind receives, reflects.
 
 **Design implications:**
 - **Mind sovereignty** — The Record must never command. It records and reflects. Mind gates and disposes.
+- **WORK execution below merge** — The WORK execution layer proposes and stages; it does not merge identity. Keeps execution power from reading as a fourth part of the triad.
 - **Integration moment** — The approval step is the conscious gate: the companion chooses what enters the Record.
 - **Voice as mirror, not oracle** — The Voice reflects the documented Record. The knowledge boundary keeps it from becoming an authoritative voice.
 - **Habits and gate** — Invariant 39: repeated alignment with staged truth and bounded speech reinforces Mind sovereignty; the Voice is not an agreeability engine.
@@ -225,7 +238,9 @@ Mind holds the reins; the Record reflects; the Voice renders. The Record does no
 | integration moment (approval step) | — |
 | merge into the Record | add to the Record |
 | companion self (the companion's self + the self that companions) | second self (trademark; prefer companion self) |
-| companion self = human–computer tricameral cognition | — |
+| companion self = human–computer triadic cognition | — |
+| WORK execution layer; instrumental | fourth part of the triad; co-equal seat beside Mind |
+| triadic cognition; triad of Mind, Record, Voice | tricameral (synonym in prompts); “chambers” (prefer triad / parts) |
 | companion-self.com | Canonical domain for the companion self concept / product. |
 | companion-self (repo) | [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self) — template/origin for Grace-Mar and future instances; concept, protocol, seed, structure. |
 
