@@ -4,6 +4,8 @@
 
 This folder holds **submodules** that support WORK, the Record, and instances: reference material (Alpha School), and related content. Cloned from [companion-self docs/skill-work](https://github.com/rbtkhn/companion-self/tree/main/docs/skill-work). Each submodule has its own README.
 
+**Dual-repo:** Shared entrypoints (`README.md`, some `work-*` roots) may **diff** against template after merges. Check [work-companion-self/audit-report-manifest.md](work-companion-self/audit-report-manifest.md) or run `python3 scripts/template_diff.py --no-clone --use-manifest -b`.
+
 ---
 
 ## Submodules

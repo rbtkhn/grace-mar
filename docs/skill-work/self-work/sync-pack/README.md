@@ -8,6 +8,8 @@ This pack is optional and review-first.
 
 **Canonical public upstream:** [companion-self](https://github.com/rbtkhn/companion-self) (instances should sync from upstream repo + pinned ref when needed).
 
+**Same path in template:** [companion-self sync-pack README](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/self-work/sync-pack/README.md) — run `template_diff.py --use-manifest` if either side changes.
+
 ---
 
 ## What this includes

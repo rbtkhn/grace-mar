@@ -1,7 +1,5 @@
 # Change Review Lifecycle
 
-**Grace-Mar:** Mirror of the [companion-self template](https://github.com/rbtkhn/companion-self/blob/main/docs/change-review-lifecycle.md). See [merging-from-companion-self.md](merging-from-companion-self.md).
-
 Companion-Self template · Proposal-to-decision flow
 
 ---
@@ -89,7 +87,7 @@ Review may:
 - reject
 - supersede an earlier proposal
 
-High-impact child-facing or policy-colliding changes should not bypass this step.
+High-impact user-facing or policy-colliding changes should not bypass this step.
 
 ---
 

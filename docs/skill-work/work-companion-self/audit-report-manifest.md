@@ -7,11 +7,8 @@ Paths: companion-self template-manifest.json
 ### Differ (both exist, content differs)
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/approval-inbox-spec.md
-  - docs/change-review-lifecycle.md
+  - docs/change-review-validation.md
   - docs/change-review.md
-  - docs/change-types.md
-  - docs/concept.md
-  - docs/contradiction-policy.md
   - docs/contradiction-resolution.md
   - docs/identity-fork-protocol.md
   - docs/layer-map.json
@@ -20,6 +17,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/self-work/sync-pack/README.md
   - docs/skill-work/work-business/README.md
   - docs/skill-work/work-dev/README.md
+  - users/_template/review-queue/README.md
 
 ### Instance additions (in instance, not in template)
   - docs/skill-work/educational-software-history-insights.md
@@ -58,11 +56,15 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-business/grace-gems/workflow-reminders.md
   - docs/skill-work/work-business/worldland-decentralized-ai-mainnet-2026-03.md
   - docs/skill-work/work-business/xavier/README.md
+  - docs/skill-work/work-career/README.md
+  - docs/skill-work/work-career/job-opportunity-review-template.md
+  - docs/skill-work/work-career/skill-demo-worksheet.md
   - docs/skill-work/work-civ-mem/README.md
   - docs/skill-work/work-civ-mem/audit-report.md
   - docs/skill-work/work-civ-mem/roadmap.md
   - docs/skill-work/work-civ-mem/workspace.md
   - docs/skill-work/work-companion-self/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md
+  - docs/skill-work/work-companion-self/CURSOR-PERSONAS-RULES-SKILLS.md
   - docs/skill-work/work-companion-self/README.md
   - docs/skill-work/work-companion-self/TEMPLATE-BASELINE.md
   - docs/skill-work/work-companion-self/audit-report-manifest.md
@@ -83,6 +85,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/control-plane/known_gaps.yaml
   - docs/skill-work/work-dev/control-plane/proof_ledger.yaml
   - docs/skill-work/work-dev/control-plane/target_registry.yaml
+  - docs/skill-work/work-dev/creative-pipeline.md
   - docs/skill-work/work-dev/delivery-playbook.md
   - docs/skill-work/work-dev/discourse-sources.md
   - docs/skill-work/work-dev/economic-benchmarks.md
@@ -122,6 +125,8 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/scenarios/scenario_schema.yaml
   - docs/skill-work/work-dev/session-continuity-contract.md
   - docs/skill-work/work-dev/target-registry.md
+  - docs/skill-work/work-dev/templates/creative-brief.md
+  - docs/skill-work/work-dev/templates/specification-precision.md
   - docs/skill-work/work-dev/three-compounding-loops.md
   - docs/skill-work/work-dev/variation-types.md
   - docs/skill-work/work-dev/work-dev-sources.md
@@ -323,7 +328,10 @@ Paths: companion-self template-manifest.json
 
 ### Same (no action)
   - bridges/bridge-schema.json
-  - docs/change-review-validation.md
+  - docs/change-review-lifecycle.md
+  - docs/change-types.md
+  - docs/concept.md
+  - docs/contradiction-policy.md
   - docs/instance-patterns.md
   - docs/long-term-objective.md
   - docs/seed-phase-artifacts.md
@@ -334,9 +342,6 @@ Paths: companion-self template-manifest.json
   - docs/seed-phase.md
   - docs/self-identity/intent-coherence-checklist.md
   - docs/self-library-example-corpus-grace-mar-derived.md
-  - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
-  - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
-  - docs/skill-work/self-work/sync-pack/SYNC-CONTRACT.template.md
-  ... and 75 more
+  ... and 77 more
 
-Summary: same=90 differ=15 only_template=0 only_instance=298
+Summary: same=92 differ=13 only_template=0 only_instance=305

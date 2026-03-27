@@ -5,6 +5,8 @@
 **Scope:** `recursion-gate.md`, review UI, merge logic, temporal validity, and audit events.  
 **Non-Goal:** replace the canonical queue, bypass the human gate, or introduce autonomous merge authority.
 
+**Template alignment:** Companion-self publishes a shorter, instance-agnostic [CONTRADICTION-ENGINE-SPEC](https://github.com/rbtkhn/companion-self/blob/main/docs/CONTRADICTION-ENGINE-SPEC.md) (~240 lines, portable doctrine). **This file is the Grace-Mar reference extension** (implementation detail, apps, scripts). When syncing from template, merge updates into opening goals and constraints without dropping instance-specific sections below.
+
 **Primary sources:**  
 - [readme.md](../readme.md)
 - [approval-inbox-spec.md](approval-inbox-spec.md)

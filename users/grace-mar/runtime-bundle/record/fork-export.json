@@ -1,7 +1,7 @@
 {
   "version": "1.1",
   "format": "grace-mar-fork-export",
-  "generated_at": "2026-03-27T11:36:19.954566",
+  "generated_at": "2026-03-27T15:28:47.049736",
   "user_id": "grace-mar",
   "ontology": {
     "self": "full identity markdown (`self.md`)",
@@ -72,21 +72,21 @@
   },
   "fork_manifest": {
     "user_id": "grace-mar",
-    "checksum": "1f356a09b7d6cb208fae9e9d92a2fa94f8552ff11322587bb2cf740b9b0f058a",
+    "checksum": "ba429e6a25e435648f4a52e9d18822afa84838200bcc12fce374898971f94d5c",
     "ix_a_count": 43,
     "ix_b_count": 15,
     "ix_c_count": 8,
     "pipeline_applied": 37,
     "pipeline_rejected": 2,
     "last_applied_ts": "2026-03-20T08:07:12.551688",
-    "generated_at": "2026-03-27T09:46:13.429422"
+    "generated_at": "2026-03-27T15:28:46.787390"
   },
   "agent_manifest": {
     "version": "1.2",
     "grace_mar": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-27T11:36:19.694084",
-    "checksum": "1f356a09b7d6cb208fae9e9d92a2fa94f8552ff11322587bb2cf740b9b0f058a",
+    "generated_at": "2026-03-27T15:28:46.439570",
+    "checksum": "ba429e6a25e435648f4a52e9d18822afa84838200bcc12fce374898971f94d5c",
     "runtime_mode": "adjunct_runtime",
     "runtime_modes": {
       "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
@@ -203,7 +203,7 @@
     "intent_snapshot": {
       "ok": true,
       "user_id": "grace-mar",
-      "generated_at": "2026-03-27T11:36:19.692186",
+      "generated_at": "2026-03-27T15:28:46.437106",
       "source": "users/grace-mar/intent.md",
       "goals": {
         "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",

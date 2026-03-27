@@ -1,7 +1,5 @@
 # Change Types
 
-**Grace-Mar:** Mirror of the [companion-self template](https://github.com/rbtkhn/companion-self/blob/main/docs/change-types.md). See [merging-from-companion-self.md](merging-from-companion-self.md).
-
 Companion-Self template · Governed change scopes
 
 ---

@@ -1,5 +1,7 @@
 # self-work — territory (WORK coordination)
 
+**Template path:** [companion-self `docs/skill-work/self-work/README.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/self-work/README.md) — reconcile with `scripts/template_diff.py --use-manifest` after upstream edits.
+
 **Purpose:** One **cross-lane dashboard** per fork: `users/<id>/self-work.md` — **objectives**, **active threads**, **history**, **strategy**. **Not** [IX-A/B/C](../../self-template.md) identity content (that stays in `self.md` + gate).
 
 ## Clarity: skill-work vs self-work vs self.md

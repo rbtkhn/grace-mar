@@ -1,5 +1,7 @@
 # work-business
 
+**Template mirror:** [companion-self `work-business/README.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-business/README.md) — grace-mar adds territories (e.g. grace-gems); diff is expected; align shared boilerplate when syncing.
+
 **Objective:** Business and market research — deep dives on companies, technologies, and commercial/competitive landscape; plus **Grace Gems** (Etsy) operator docs under [grace-gems](grace-gems/). Supports operator strategy, partnership evaluation, and positioning. **WORK only**; not Record truth. Any merge to Record (e.g. capability notes) goes through RECURSION-GATE + companion approval.
 
 ---

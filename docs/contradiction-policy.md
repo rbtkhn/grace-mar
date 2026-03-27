@@ -1,7 +1,5 @@
 # Contradiction Policy
 
-**Grace-Mar:** Mirror of the [companion-self template](https://github.com/rbtkhn/companion-self/blob/main/docs/contradiction-policy.md). See [merging-from-companion-self.md](merging-from-companion-self.md).
-
 Companion-Self template · Contradiction classification and resolution policy
 
 ---
@@ -154,7 +152,7 @@ The system may defer, annotate, or constrain the active state, but should not pr
 
 Human review is strongly recommended when:
 
-- the change affects a child-facing educational mode
+- the change affects a high-trust interaction mode (e.g. sensitive or policy-bound contexts)
 - the change alters boundaries or safety posture
 - the change materially affects identity or pedagogy
 - the confidence delta is large

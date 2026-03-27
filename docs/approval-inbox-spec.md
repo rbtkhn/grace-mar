@@ -1,5 +1,7 @@
 # Approval Inbox Spec
 
+**Portable baseline (companion-self):** [approval-inbox-spec.md](https://github.com/rbtkhn/companion-self/blob/main/docs/approval-inbox-spec.md) — goal, constraints, non-goals, instance mapping (template, March 2026). The sections below are the **Grace-Mar extended** spec (UX, APIs, current file paths).
+
 **Status:** implementation-ready product spec
 
 **Purpose:** define a first-class approval inbox for `RECURSION-GATE` that reduces operator fatigue without weakening the Sovereign Merge Rule.

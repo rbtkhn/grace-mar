@@ -1,5 +1,7 @@
 # work-dev
 
+**Template mirror:** [companion-self `work-dev/README.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-dev/README.md) — grace-mar merges former work-build-ai here; reconcile opening sections when syncing portable doctrine.
+
 **Objective:** Connect Grace-Mar (Record + Voice) with OpenClaw (personal agent workspace) so the Record feeds OpenClaw's identity layer, session continuity spans both systems, and OpenClaw artifacts can feed the grace-mar pipeline — with the companion always as gate.
 
 This territory **merges** the former **work-build-ai** (same scope, same invariants). All work-build-ai content lives here; references elsewhere may still say "work-build-ai" for legacy links.
