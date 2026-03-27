@@ -16,7 +16,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 | Skill | Purpose | Default command |
 |------|---------|-----------------|
-| `daily-warmup` | Repo-wide operator warmup: **Step 1** automated actions (warmup + harness, daily brief per cadence, **KY-4 polling + Polymarket**, Massie X scan, brief body), then **Step 2** fixed **A–E** menu: **A** template audit, **B** boundary audit, **C** continue most recent work module, **D** context pick, **E** formally end good morning session (not good night) — see [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md) and `.cursor/skills/daily-warmup/SKILL.md` | `python3 scripts/operator_daily_warmup.py -u grace-mar` + agent steps in `.cursor/skills/daily-warmup/SKILL.md` |
+| `daily-warmup` | **Good morning:** **Step 1** (warmup + harness, daily brief per cadence, **KY-4 polling + Polymarket**, Massie X, brief body) + **Step 2** **A–E** (template audit, boundary, continue work module, context D, **E** end morning meeting). **Good night:** **Step 1** `operator_handoff_check.py` + summary + **Step 2** **A–E** (gate tomorrow, boundary/integrity, night closeout lane, context D, **E** end night session). See [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md) and `.cursor/skills/daily-warmup/SKILL.md` | Morning: `operator_daily_warmup.py` + agent steps; night: `operator_handoff_check.py` + agent steps |
 | `wap-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy: `operator_wap_pulse.py`) |
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
@@ -36,7 +36,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
 4. Use `weekly-brief-run` for the actual work-politics brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
 5. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
-6. End or resume a session with `handoff-check` (operator says **good night** → run it by default; see `daily-warmup` skill § Good night).
+6. End the day with **good night**: **`handoff-check`** output is **Step 1**; agent then shows **good night A–E** (**E** = formally end night session). To resume mid-thread without full night flow, use `handoff-check` alone per `.cursor/skills/handoff-check/SKILL.md`.
 
 ---
 
@@ -53,6 +53,7 @@ Must answer:
 - Is the worktree noisy enough to affect the next move?
 - **Good morning:** What are **Polymarket** implied odds + **volume** (KY-04 GOP primary and GE party markets), and is there a **named independent** horserace poll — or explicitly none? (Caveats: markets ≠ polls; cite URLs; ignore Polymarket AI blurbs — [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md).)
 - **Good morning:** After **Step 1**, fixed **A–E** menu — **A** template audit (`template_diff.py` / [work-companion-self/audit-report.md](skill-work/work-companion-self/audit-report.md)), **B** boundary check ([audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), fork isolation), **C** continue most recent work module, **D** context pick, **E** formally end morning meeting. See `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice (A–E required)*.
+- **Good night:** After **Step 1** (`operator_handoff_check.py` + paragraph), fixed **A–E** — **A** gate tomorrow-first, **B** boundary/integrity, **C** night closeout lane (Jiang / handoff block), **D** context pick, **E** formally end night session. See `.cursor/skills/daily-warmup/SKILL.md` § *Good night — multiple choice (A–E required)*.
 
 ### `wap-pulse`
 

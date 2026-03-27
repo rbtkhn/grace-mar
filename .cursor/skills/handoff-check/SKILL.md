@@ -1,13 +1,13 @@
 ---
 name: handoff-check
-description: Generate a stop/resume handoff summary with recent commits, meaningful local work, runtime noise, RECURSION-GATE pending detail (counts, capped list, proposed review/merge steps — read-only), Predictive History night closeout (work-jiang momentum block from operator_handoff_check), and a suggested re-entry prompt. Use when ending a session, resuming work after a break, or checking what is safe to ignore before committing or pushing. Triggered by "good night" / session end per daily-warmup skill § Good night.
+description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **good night**, this script is **daily-warmup Step 1**; **Step 2** is the fixed **A–E** night menu in daily-warmup § *Good night — multiple choice*. Also use when resuming work or checking safe-to-ignore before commit/push.
 ---
 
 # Handoff Check
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset:** When the operator says **good night** (session end), the agent should run this workflow by default — see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § **Good night**.
+**Preset:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–E menu) — see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § **Good night** and § *Good night — multiple choice (A–E required)*.
 
 ## Default command
 
