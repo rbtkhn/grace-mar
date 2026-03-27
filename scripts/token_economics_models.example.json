@@ -1,0 +1,12 @@
+{
+  "_comment": "Copy to token_economics_models.json and refresh prices; vendor rates change often. See docs/skill-work/work-dev/economic-benchmarks.md",
+  "models": {
+    "example-frontier-input": { "usd_per_million_tokens": 5.0 },
+    "example-frontier-output": { "usd_per_million_tokens": 15.0 },
+    "example-mini": { "usd_per_million_tokens": 0.5 }
+  },
+  "weights": {
+    "example-frontier-input": 0.4,
+    "example-mini": 0.6
+  }
+}

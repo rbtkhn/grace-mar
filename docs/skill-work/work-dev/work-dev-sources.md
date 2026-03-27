@@ -6,7 +6,7 @@ YouTube channels and podcasts the operator tracks for **work-dev framing** (inte
 
 | Source | URL | Notes |
 |--------|-----|-------|
-| AI News & Strategy Daily (Nate B Jones) | https://www.youtube.com/@NateBJones | AI news and strategy with a builder / PM / career lens |
+| AI News & Strategy Daily (Nate B Jones) | https://www.youtube.com/@NateBJones | AI news and strategy with a builder / PM / career lens; **digest (seven skills / K-shaped market):** [transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md](../../../research/external/work-dev/transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md) |
 | Peter Diamandis | https://www.youtube.com/@peterdiamandis | Long-horizon exponential and moonshot discourse |
 
 Add rows above or below as you like.
