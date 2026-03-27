@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "channel_slug": "nate-b-jones",
+  "channel_url": "https://www.youtube.com/@NateBJones/videos",
+  "source_index_generated_at_utc": "2026-03-27T17:59:09Z",
+  "catalog_rendered_at_utc": "2026-03-27T18:11:06Z",
+  "video_count": 30,
+  "videos": [
+    {
+      "video_id": "CDClFY-R0dI",
+      "title": "A Markdown File Just Replaced Your Most Expensive Design Meeting. (Google Stitch)",
+      "url": "https://www.youtube.com/watch?v=CDClFY-R0dI",
+      "upload_date": "",
+      "duration_seconds": "1775.0",
+      "ingested": true,
+      "ingestion_artifacts": [
+        "research/external/work-dev/transcripts/nate-b-jones-google-stitch-design-markdown-meeting-transcript-2026.txt"
+      ],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "4cuT-LKcmWs",
+      "title": "The AI Job Market Split in Two. One Side Pays $400K and Can't Hire Fast Enough.",
+      "url": "https://www.youtube.com/watch?v=4cuT-LKcmWs",
+      "upload_date": "",
+      "duration_seconds": "1539.0",
+      "ingested": true,
+      "ingestion_artifacts": [
+        "research/external/work-dev/transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md"
+      ],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "YpPcDHc3e9U",
+      "title": "Tobi L\u00fctke Made a 20-Year-Old Codebase 53% Faster Overnight. Here's How.",
+      "url": "https://www.youtube.com/watch?v=YpPcDHc3e9U",
+      "upload_date": "",
+      "duration_seconds": "1775.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "7AO4w4Y_L24",
+      "title": "Nvidia Just Open-Sourced What OpenAI Wants You to Pay Consultants For.",
+      "url": "https://www.youtube.com/watch?v=7AO4w4Y_L24",
+      "upload_date": "",
+      "duration_seconds": "1587.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "b7IS4C9QALc",
+      "title": "I Mapped Where Every AI Agent Actually Sits. Most People Pick Wrong.",
+      "url": "https://www.youtube.com/watch?v=b7IS4C9QALc",
+      "upload_date": "",
+      "duration_seconds": "1512.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "BE4RclIGDmY",
+      "title": "McKinsey Says $1 Trillion In Sales Will Go Through AI Agents. Most Businesses Are Invisible.",
+      "url": "https://www.youtube.com/watch?v=BE4RclIGDmY",
+      "upload_date": "",
+      "duration_seconds": "1667.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "awV2kJzh8zk",
+      "title": "Your AI Agent Fails 97.5% of Real Work. The Fix Isn't Coding.",
+      "url": "https://www.youtube.com/watch?v=awV2kJzh8zk",
+      "upload_date": "",
+      "duration_seconds": "1767.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "vqnAOV8NMZ4",
+      "title": "Anthropic Just Gave Your AI Agent the One Thing OpenClaw Has. Without the Risk.",
+      "url": "https://www.youtube.com/watch?v=vqnAOV8NMZ4",
+      "upload_date": "",
+      "duration_seconds": "2010.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "3FbqaD1MCUA",
+      "title": "Perplexity Computer Is Incredible. It Won't Matter. Here's Why.",
+      "url": "https://www.youtube.com/watch?v=3FbqaD1MCUA",
+      "upload_date": "",
+      "duration_seconds": "1805.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "4HeS_C02yAE",
+      "title": "ChatGPT Health Identified Respiratory Failure. Then It Said Wait.",
+      "url": "https://www.youtube.com/watch?v=4HeS_C02yAE",
+      "upload_date": "",
+      "duration_seconds": "1413.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "QT7W_uHjqWE",
+      "title": "Anthropic Didn't Build a New Browser. They Did Something Smarter.",
+      "url": "https://www.youtube.com/watch?v=QT7W_uHjqWE",
+      "upload_date": "",
+      "duration_seconds": "1334.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "8lwnJZy4cO0",
+      "title": "Claude Code Wiped 2.5 Years of Data. The Engineer Who Built It Couldn't Stop It.",
+      "url": "https://www.youtube.com/watch?v=8lwnJZy4cO0",
+      "upload_date": "",
+      "duration_seconds": "1290.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "zCW-k5fFRgQ",
+      "title": "She quit, picked up AI, and shipped in 30 days what her team planned for Q3.",
+      "url": "https://www.youtube.com/watch?v=zCW-k5fFRgQ",
+      "upload_date": "",
+      "duration_seconds": "2259.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "u-giatW9mYU",
+      "title": "AI Made Every Company 10x More Productive. The Ones Cutting Headcount Are Telling on Themselves.",
+      "url": "https://www.youtube.com/watch?v=u-giatW9mYU",
+      "upload_date": "",
+      "duration_seconds": "1193.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "japT66frdhM",
+      "title": "One Simple System Gave All My AI Tools a Memory. Here's How.",
+      "url": "https://www.youtube.com/watch?v=japT66frdhM",
+      "upload_date": "",
+      "duration_seconds": "1615.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "lbfoNxoHl2o",
+      "title": "4,000 People Lost Their Jobs At Block. Dorsey Blamed AI. Here's What Actually Happened.",
+      "url": "https://www.youtube.com/watch?v=lbfoNxoHl2o",
+      "upload_date": "",
+      "duration_seconds": "1352.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "LO0Ws-l6brg",
+      "title": "4 AI Labs Built the Same System Without Talking to Each Other (And Nobody's Discussing Why)",
+      "url": "https://www.youtube.com/watch?v=LO0Ws-l6brg",
+      "upload_date": "",
+      "duration_seconds": "1635.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "-FhtPUkXKO4",
+      "title": "Stop accepting AI output that \"looks right.\" The other 17% is everything and nobody is ready for it.",
+      "url": "https://www.youtube.com/watch?v=-FhtPUkXKO4",
+      "upload_date": "",
+      "duration_seconds": "1255.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "iY7BDpZWJbE",
+      "title": "Claude Blackmailed Its Developers. Here's Why the System Hasn't Collapsed Yet.",
+      "url": "https://www.youtube.com/watch?v=iY7BDpZWJbE",
+      "upload_date": "",
+      "duration_seconds": "1945.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "hnwM01CpzmA",
+      "title": "45 People, $200M Revenue. The Question Nobody's Asking About AI and Your Team Size.",
+      "url": "https://www.youtube.com/watch?v=hnwM01CpzmA",
+      "upload_date": "",
+      "duration_seconds": "1545.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "-_vL1KXd2rc",
+      "title": "GPT-5.4 Let Mickey Mouse Into a Production Database. Nobody Noticed. (What This Means For Your Work)",
+      "url": "https://www.youtube.com/watch?v=-_vL1KXd2rc",
+      "upload_date": "",
+      "duration_seconds": "2258.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "09sFAO7pklo",
+      "title": "Claude Code vs Codex: The Decision That Compounds Every Week You Delay That Nobody Is Talking About",
+      "url": "https://www.youtube.com/watch?v=09sFAO7pklo",
+      "upload_date": "",
+      "duration_seconds": "1795.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "JYcidOS9ozU",
+      "title": "OpenAI Leaked GPT-5.4. It's a Distraction. (The AI Lock-In No One Is Talking About)",
+      "url": "https://www.youtube.com/watch?v=JYcidOS9ozU",
+      "upload_date": "",
+      "duration_seconds": "1774.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "O7SSQfiPDXA",
+      "title": "Everyone You Know Is About to Try Claude (I Showed 3 People for 5 Minutes \u2014 All 3 Switched)",
+      "url": "https://www.youtube.com/watch?v=O7SSQfiPDXA",
+      "upload_date": "",
+      "duration_seconds": "1256.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "pTtueIqrg0Q",
+      "title": "Dario Amodei Made One Mistake. Sam Altman Got $110 Billion. Here's the Full Story.",
+      "url": "https://www.youtube.com/watch?v=pTtueIqrg0Q",
+      "upload_date": "",
+      "duration_seconds": "1580.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "2JiMmye2ezg",
+      "title": "You Don't Need SaaS. The $0.10 System That Replaced My AI Workflow (45 Min No-Code Build)",
+      "url": "https://www.youtube.com/watch?v=2JiMmye2ezg",
+      "upload_date": "",
+      "duration_seconds": "1816.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "RnjgLlQTMf0",
+      "title": "Why Every AI Skill You Learned 6 Months Ago Is Already Wrong (And What Is Replacing Them)",
+      "url": "https://www.youtube.com/watch?v=RnjgLlQTMf0",
+      "upload_date": "",
+      "duration_seconds": "1724.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "2ghhiPLg-jg",
+      "title": "My 10-Year-Old Vibe Codes. She Also Does Math by Hand. Why That's the Only Strategy That Works.",
+      "url": "https://www.youtube.com/watch?v=2ghhiPLg-jg",
+      "upload_date": "",
+      "duration_seconds": "1781.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "BpibZSMGtdY",
+      "title": "'Prompting' Just Split Into 4 Skills. You Only Know One. Here's Why You Need the Other 3 in 2026.",
+      "url": "https://www.youtube.com/watch?v=BpibZSMGtdY",
+      "upload_date": "",
+      "duration_seconds": "2472.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "q6pbQ5li5Cg",
+      "title": "Don't Fall For the Stock Market Hype. The $7,000 Raise AI Is Giving You (That Nobody Mentions)",
+      "url": "https://www.youtube.com/watch?v=q6pbQ5li5Cg",
+      "upload_date": "",
+      "duration_seconds": "1952.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    }
+  ]
+}

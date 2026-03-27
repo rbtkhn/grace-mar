@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://grace-mar.local/schemas/ai-jobs.manual.json",
+  "title": "Manual AI job opportunity list (operator)",
+  "description": "Array of job objects maintained by hand or merged from CSV export. Not Record truth.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["title", "company", "url", "source", "date_added"],
+    "properties": {
+      "title": { "type": "string" },
+      "company": { "type": "string" },
+      "url": { "type": "string", "format": "uri" },
+      "source": { "type": "string", "description": "Board name or 'manual'" },
+      "date_added": { "type": "string", "description": "ISO-8601 date or datetime" },
+      "notes": { "type": "string" },
+      "skill_tags": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "e.g. agentic, eval-harness, guardrails"
+      },
+      "status": {
+        "type": "string",
+        "description": "e.g. interested, applied, closed, rejected"
+      }
+    },
+    "additionalProperties": true
+  }
+}

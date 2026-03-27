@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "operator_note": "Add a by_video_id entry when a Peter H. Diamandis episode is manually ingested (transcript or memo under research/external/work-dev/transcripts/).",
+  "by_video_id": {}
+}

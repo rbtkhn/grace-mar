@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "channel_slug": "peter-h-diamandis",
+  "channel_url": "https://www.youtube.com/@peterdiamandis/videos",
+  "source_index_generated_at_utc": "2026-03-27T17:59:16Z",
+  "catalog_rendered_at_utc": "2026-03-27T18:02:26Z",
+  "video_count": 30,
+  "videos": [
+    {
+      "video_id": "wMLcIWLlcWg",
+      "title": "Elon Enters the Chip Race, the S&P 500 Repricing, and Human Drivers Will Become Illegal | EP #242",
+      "url": "https://www.youtube.com/watch?v=wMLcIWLlcWg",
+      "upload_date": "",
+      "duration_seconds": "7798.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "DpwmmXmzvfo",
+      "title": "Eric Schmidt: Singularity's Arrival, 92-Gigawatt Problem & Recursive Self-Improvement Timeline | 241",
+      "url": "https://www.youtube.com/watch?v=DpwmmXmzvfo",
+      "upload_date": "",
+      "duration_seconds": "2630.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "uOGHXAfvK8w",
+      "title": "NVIDIA's $1 Trillion Prediction, Anthropic Beats OpenAI, Tesla vs. TSMC & The CS Job Collapse | 240",
+      "url": "https://www.youtube.com/watch?v=uOGHXAfvK8w",
+      "upload_date": "",
+      "duration_seconds": "8223.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "N5KCm_55xeQ",
+      "title": "Elon Musk: The Economy Will Be 10x the Size in 10 Years  | #239",
+      "url": "https://www.youtube.com/watch?v=N5KCm_55xeQ",
+      "upload_date": "",
+      "duration_seconds": "1445.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "b47oqZEeRGU",
+      "title": "Announcing: $3.5M+ Future Vision XPRIZE",
+      "url": "https://www.youtube.com/watch?v=b47oqZEeRGU",
+      "upload_date": "",
+      "duration_seconds": "60.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "qP73cGLQmCU",
+      "title": "OpenClaw Explained: Baby AGI, Security Threats, Mac Mini Became Everyone's Supercomputer | #237",
+      "url": "https://www.youtube.com/watch?v=qP73cGLQmCU",
+      "upload_date": "",
+      "duration_seconds": "5367.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "toE56X2h0wk",
+      "title": "Andrew Yang: UBI Before UHI, Solving Job Loss, and the Future of Work | #236",
+      "url": "https://www.youtube.com/watch?v=toE56X2h0wk",
+      "upload_date": "",
+      "duration_seconds": "6076.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "T8X6kp-pcKs",
+      "title": "Amazon's $35B AGI Ultimatum to OpenAI & Anthropic Drops AI Safety | EP #235",
+      "url": "https://www.youtube.com/watch?v=T8X6kp-pcKs",
+      "upload_date": "",
+      "duration_seconds": "8186.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "dmtvGKuRE64",
+      "title": "Anthropic vs. The Pentagon, Claude Outpaces ChatGPT, and Consulting Gets Replaced | #234",
+      "url": "https://www.youtube.com/watch?v=dmtvGKuRE64",
+      "upload_date": "",
+      "duration_seconds": "7743.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "X94eBT-VZnc",
+      "title": "This $40M AI Company Is Using AI Tutors to Teach 2 Hours/Day | #233",
+      "url": "https://www.youtube.com/watch?v=X94eBT-VZnc",
+      "upload_date": "",
+      "duration_seconds": "5685.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "C1GLT9_tag0",
+      "title": "Ben Horowitz: xAI Executive Exodus, Apple's AI Crisis, The Pace of AI | EP #232",
+      "url": "https://www.youtube.com/watch?v=C1GLT9_tag0",
+      "upload_date": "",
+      "duration_seconds": "6691.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "6P0uTDGDr-I",
+      "title": "AI CEOs Come Online: Sam Altman's Replacement Plan, Job Loss & 'Solve Everything' Launches |EP #230",
+      "url": "https://www.youtube.com/watch?v=6P0uTDGDr-I",
+      "upload_date": "",
+      "duration_seconds": "7805.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "S_fXhVT67Uw",
+      "title": "The Humanoid Takeover: $50T Market, Figure's Full Body Autonomy, and Robots in Dorms #229",
+      "url": "https://www.youtube.com/watch?v=S_fXhVT67Uw",
+      "upload_date": "",
+      "duration_seconds": "6228.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "L2rkXjd1WgM",
+      "title": "The Frontier Labs War: Opus 4.6, GPT 5.3 Codex, and the SuperBowl Ads Debacle | EP 228",
+      "url": "https://www.youtube.com/watch?v=L2rkXjd1WgM",
+      "upload_date": "",
+      "duration_seconds": "7253.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "JlB852LGRJk",
+      "title": "OpenClaw Debate: AI Personhood, Proof of AGI, and the \u2018Rights\u2019 Framework | EP #227",
+      "url": "https://www.youtube.com/watch?v=JlB852LGRJk",
+      "upload_date": "",
+      "duration_seconds": "8010.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "VoW13oUTTV0",
+      "title": "Cathie Wood: \u201cAI and Bitcoin Are Moving Faster Than We Expected\u201d | EP #226",
+      "url": "https://www.youtube.com/watch?v=VoW13oUTTV0",
+      "upload_date": "",
+      "duration_seconds": "7074.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "hGRiklWYMas",
+      "title": "Davos 2026: The US-China AI Race, GPU Diplomacy, and Robots Walking the Streets | #225",
+      "url": "https://www.youtube.com/watch?v=hGRiklWYMas",
+      "upload_date": "",
+      "duration_seconds": "6037.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "DTgrzlQtOd0",
+      "title": "Claude Code Ends SaaS, the Gemini + Siri Partnership, and Math Finally Solves AI | #224",
+      "url": "https://www.youtube.com/watch?v=DTgrzlQtOd0",
+      "upload_date": "",
+      "duration_seconds": "6583.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "8iWSNwIRazc",
+      "title": "The Singularity Countdown: AGI by 2029, Humans Merge with AI, Intelligence 1000x | Ray Kurzweil",
+      "url": "https://www.youtube.com/watch?v=8iWSNwIRazc",
+      "upload_date": "",
+      "duration_seconds": "5971.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "mAtmWhYQvnI",
+      "title": "Tony Robbins Takes AI's Hardest Questions: Job Loss, Purpose, and The Hard Times Ahead | 222",
+      "url": "https://www.youtube.com/watch?v=mAtmWhYQvnI",
+      "upload_date": "",
+      "duration_seconds": "6477.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "2WTFuSeYJ6o",
+      "title": "The 2026 Timeline: AGI Arrival, Safety Concerns, Robotaxi Fleets & Hyperscaler Timelines | 221",
+      "url": "https://www.youtube.com/watch?v=2WTFuSeYJ6o",
+      "upload_date": "",
+      "duration_seconds": "7259.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "RSNuB9pj9P8",
+      "title": "Elon Musk on AGI Timeline, US vs China, Job Markets, Clean Energy & Humanoid Robots | 220",
+      "url": "https://www.youtube.com/watch?v=RSNuB9pj9P8",
+      "upload_date": "",
+      "duration_seconds": "10330.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "7q3fhBR3z-A",
+      "title": "AI Investor Panel: Where Smart Money Is Actually Going in AI | EP 219",
+      "url": "https://www.youtube.com/watch?v=7q3fhBR3z-A",
+      "upload_date": "",
+      "duration_seconds": "1925.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "7GFKB0oKd9A",
+      "title": "Which Industries Survive AI, The New AI Benchmarks, and the 2026 Recursive Learning Timeline | #218",
+      "url": "https://www.youtube.com/watch?v=7GFKB0oKd9A",
+      "upload_date": "",
+      "duration_seconds": "4853.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "NHAzpG95ptI",
+      "title": "2026 Predictions: AI Automates Knowledge Work, Autonomous Robots & AI CEO Billionaires | EP #217",
+      "url": "https://www.youtube.com/watch?v=NHAzpG95ptI",
+      "upload_date": "",
+      "duration_seconds": "4151.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "XWGnWcmns_M",
+      "title": "Mustafa Suleyman: The AGI Race Is Fake, Building Safe Superintelligence & the Agentic Economy | #216",
+      "url": "https://www.youtube.com/watch?v=XWGnWcmns_M",
+      "upload_date": "",
+      "duration_seconds": "5099.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "z6U-jqHzBqY",
+      "title": "GPT 5.2 Release, Corporate Collapse in 2026, and 1.1M Job Loss | EP #215",
+      "url": "https://www.youtube.com/watch?v=z6U-jqHzBqY",
+      "upload_date": "",
+      "duration_seconds": "7327.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "zGD5mv-XKU0",
+      "title": "China's Rise, GPT-5.2, Anthropic IPO & the Battle for AI Trust w/ Emad, Salim, Dave & AWG | EP #214",
+      "url": "https://www.youtube.com/watch?v=zGD5mv-XKU0",
+      "upload_date": "",
+      "duration_seconds": "7184.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "QHyHENuIfcc",
+      "title": "Unlocking AGI: How Life Changes for Everyone w/ Jack Hidary, Salim Ismail & Dave Blundin | EP #213",
+      "url": "https://www.youtube.com/watch?v=QHyHENuIfcc",
+      "upload_date": "",
+      "duration_seconds": "1866.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    },
+    {
+      "video_id": "WNaHRiRg5CA",
+      "title": "New AGI Timeline, AI Could Automate 57% of US Jobs, and Claude Consciousness w/ Naveen, Salim & AWG",
+      "url": "https://www.youtube.com/watch?v=WNaHRiRg5CA",
+      "upload_date": "",
+      "duration_seconds": "7367.0",
+      "ingested": false,
+      "ingestion_artifacts": [],
+      "ingested_at_utc": null
+    }
+  ]
+}

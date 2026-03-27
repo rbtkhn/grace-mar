@@ -48,6 +48,8 @@ Use this file when you want one place to understand:
 | `safety-story-ux.md` | Visible pipeline state as user-facing safety story (pending/approved, receipts, staged vs merged) |
 | `external-signals.md` | Transcript/keynote-class discourse → work-dev lens (OpenClaw, trust, inference); pairs with work-strategy `external-tech-scan.md` |
 | `work-dev-sources.md` | Authorized sources list for work-dev framing (not integration truth); see [work-modules-sources-principle.md](../work-modules-sources-principle.md); parallel: [../work-politics/work-politics-sources.md](../work-politics/work-politics-sources.md) |
+| `../work-career/README.md` | **AI career prep (operator lane):** manual job JSON/CSV, skill worksheet, opportunity-review template; `scripts/work_career/` — not Record truth |
+| `creative-pipeline.md` | **Agent-augmented creative workflow:** brief template, `DESIGN.md`, `scripts/validate-design-md.py`, artifacts under `users/grace-mar/artifacts/creative/` — not Record truth until gated |
 | `agentic-environment-principles.md` | Environment-first debugging; §5 **a/b/c** (residency + roles, bounded runtime, pipeline vs local memory) |
 | `agent-surface-template.yaml` | Structured checklist: runtime / orchestration / interface + Grace-Mar trust; optional `agent_species`; `scripts/work_dev/agent_surface_checklist.py` |
 | `engagement-model.md` | Commercial packaging and sequencing |

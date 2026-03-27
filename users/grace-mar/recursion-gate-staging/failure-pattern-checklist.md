@@ -2,7 +2,7 @@
 
 Run on **major** proposals, large OpenClaw handbacks, or multi-step agent runs before elevating content toward merge. **Not** Record truth — a discipline aid only.
 
-**Related:** [agent-reliability-playbook.md](../../../docs/skill-work/work-dev/agent-reliability-playbook.md); digest [nate-b-jones-ai-job-market-seven-skills-2026.md](../../../research/external/work-dev/transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md).
+**Related:** [agent-reliability-playbook.md](../../../docs/skill-work/work-dev/agent-reliability-playbook.md); digest [nate-b-jones-ai-job-market-seven-skills-2026.md](../../../research/external/work-dev/transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md); [creative-pipeline.md](../../../docs/skill-work/work-dev/creative-pipeline.md) (visual / UI work).
 
 ---
 
@@ -18,6 +18,7 @@ Run on **major** proposals, large OpenClaw handbacks, or multi-step agent runs b
 - [ ] **Reversibility** — Can we undo (draft vs committed / irreversible action)?
 - [ ] **Frequency** — How often does this path run? Scale of exposure?
 - [ ] **Verifiability** — **Functional** correctness provable, not only “sounds right”?
+- [ ] **`DESIGN.md` changes** — If [`users/grace-mar/DESIGN.md`](../DESIGN.md) changed, run `python3 scripts/validate-design-md.py` (see creative pipeline).
 
 ---
 

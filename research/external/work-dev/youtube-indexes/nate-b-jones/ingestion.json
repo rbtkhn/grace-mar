@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "operator_note": "Edit by_video_id when you add a transcript or digest for an episode. fetch_youtube_channel_transcripts.py does not overwrite this file.",
+  "by_video_id": {
+    "CDClFY-R0dI": {
+      "ingested": true,
+      "artifacts": [
+        "research/external/work-dev/transcripts/nate-b-jones-google-stitch-design-markdown-meeting-transcript-2026.txt"
+      ]
+    },
+    "4cuT-LKcmWs": {
+      "ingested": true,
+      "artifacts": [
+        "research/external/work-dev/transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md"
+      ]
+    }
+  }
+}

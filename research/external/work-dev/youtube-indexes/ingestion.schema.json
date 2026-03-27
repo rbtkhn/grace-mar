@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "grace-mar-youtube-ingestion",
+  "title": "work-dev YouTube manual ingestion tracking",
+  "type": "object",
+  "required": ["schema_version", "by_video_id"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "const": 1 },
+    "operator_note": {
+      "type": "string",
+      "description": "Optional free-text note (e.g. ingest backlog plan)."
+    },
+    "by_video_id": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["ingested"],
+        "additionalProperties": false,
+        "properties": {
+          "ingested": {
+            "type": "boolean",
+            "description": "True after operator has manually curated material into the repo (digest, ASR, memo)."
+          },
+          "artifacts": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Repo-relative paths from repository root."
+          },
+          "ingested_at_utc": {
+            "type": "string",
+            "description": "Optional ISO-8601 date (YYYY-MM-DD or full timestamp)."
+          }
+        }
+      }
+    }
+  }
+}
