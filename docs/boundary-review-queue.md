@@ -2,6 +2,8 @@
 
 **Purpose:** Make **classification and review at the Record boundary** a first-class product surface — not just storage. **Governed by:** gated pipeline, [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), [identity-fork-protocol.md](identity-fork-protocol.md) `proposal_class`.
 
+**Not a replacement for the gate:** **`recursion-gate.md`** remains the **default staging surface** for routine candidates (IX-A/B/C lines, analyst output). The **boundary review** story is about **where a staged line belongs** (SELF vs SELF-LIBRARY vs CIV-MEM, etc.) and **when** to escalate to **material change-review** — not about deleting or bypassing the gate. For the split between gate workflow and change-review queue, see [gate-vs-change-review.md](gate-vs-change-review.md) and IFP §4.3 (material change escalation).
+
 ---
 
 ## Problem
@@ -45,6 +47,16 @@ As the fork grows, the main risk is **right data, wrong surface** (identity vs l
 ## Evidence and trust
 
 Every item keeps **evidence links** (`evidence_id`, `intake_evidence_id`, ACT-*) as today. Boundary queue **does not merge** — it **explains and warns** until the companion approves. Same sovereign rule: **no merge without approval**.
+
+---
+
+## Escalation rule
+
+1. **Routine:** Candidate stays in **`recursion-gate.md`**; companion approves or rejects; merge via `process_approved_candidates.py` (or equivalent).
+2. **Boundary ambiguity:** Use **`proposal_class`**, **boundary hints** (`recursion_gate_review`), and the Approval Inbox to **reclassify** before merge.
+3. **Material change** (contradiction, cross-surface move needing audit, policy/prompt shift): **Escalate** to **`users/<id>/review-queue/`** — structured proposals, decisions, diffs — per companion-self [change-review](https://github.com/rbtkhn/companion-self/blob/main/docs/change-review.md) semantics. Optional bridge: `python3 scripts/export_gate_to_review_queue.py --user <id> --candidate-id <id>`.
+
+Escalation **does not** auto-merge; it adds **process** before governed state changes. See [identity-fork-protocol.md](identity-fork-protocol.md) §4.3.
 
 ---
 

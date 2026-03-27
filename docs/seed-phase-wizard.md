@@ -6,6 +6,23 @@
 
 ---
 
+## Canonical stage mapping (Seed Phase v2)
+
+Companion-self defines **stages 0–7** as the portable formation pipeline ([companion-self `docs/seed-phase-stages.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/seed-phase-stages.md)):
+
+0. **Intake** — constraints, context, `seed_intake.json`  
+1. **Identity Scaffold** — `seed_identity.json`  
+2. **Curiosity Scaffold** — `seed_curiosity.json`  
+3. **Pedagogy Scaffold** — `seed_pedagogy.json`  
+4. **Expression Scaffold** — `seed_expression.json`  
+5. **Memory Contract** — `seed_memory_contract.json`  
+6. **Trial Interactions** — `seed_trial_report.json`  
+7. **Readiness Gate** — `seed_readiness.json`, dossier  
+
+**Wizard disclaimer:** `seed-phase-wizard.py` is an **instance** operator tool (reflection proposals, `seed/minimal-core.json`, MEMORY tone, completion marker). It **does not** emit the full template JSON set by itself. Use the mapping doc when reconciling wizard output with template validation or future export tooling.
+
+---
+
 ## Scripts
 
 | Script | Role |

@@ -54,8 +54,21 @@ Two input channels feed the pipeline:
 
 **Phase:** Active instance (emergent cognition, active pipeline)
 **Active fork (pilot):** grace-mar (fork name: Grace-Mar). Runtime defaults to a single fork via `GRACE_MAR_USER_ID` (default `grace-mar`); the filesystem and permissions model support multiple isolated forks — see [Fork isolation and multi-tenant design](docs/fork-isolation-and-multi-tenant.md).
-**Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **profile** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product). **Template/origin:** Grace-Mar is an **instance** of the companion-self template; the template repo (concept, protocol, seed, structure) is [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self).
-**Seeding:** Complete (6 phases — identity, personality, academics, creativity, writing voice, core personality). **Seed Phase 7:** Moment of cognitive bifurcation — graduation to emergent cognition (2026-02-27).
+**Domain:** [grace-mar.com](https://grace-mar.com) (canonical project domain; **profile** at https://grace-mar.com); [companion-self.com](https://companion-self.com) (companion self concept / product). **Template/origin:** Grace-Mar is an **instance** of the companion-self template; the template repo (concept, protocol, seed, structure) is [github.com/rbtkhn/companion-self](https://github.com/rbtkhn/companion-self). **Instance sync:** [`instance-contract.json`](instance-contract.json), [docs/template-sync-status.md](docs/template-sync-status.md).
+**Seeding / Seed Phase v2 mapping:** The **companion-self** template defines **Seed Phase v2** — eight canonical **pre-activation** stages (0–7) with JSON artifacts and readiness gating. Grace-Mar completed formation before that vocabulary was frozen; older README language referred to “six phases” plus a **bifurcation** milestone. For **alignment**, treat companion-self as the **canonical stage map**:
+
+| Stage | Name (template) |
+|-------|-----------------|
+| **0** | Intake |
+| **1** | Identity Scaffold |
+| **2** | Curiosity Scaffold |
+| **3** | Pedagogy Scaffold |
+| **4** | Expression Scaffold |
+| **5** | Memory Contract |
+| **6** | Trial Interactions |
+| **7** | Readiness Gate |
+
+**Instance milestone (historical):** Moment of cognitive bifurcation — graduation to emergent cognition (2026-02-27). Details: [companion-self-seed-phase-v2-mapping.md](docs/companion-self-seed-phase-v2-mapping.md), [seed-phase-wizard.md](docs/seed-phase-wizard.md).
 **Emulation:** Active via Telegram bot; WeChat optional (see `bot/wechat-setup.md`)
 **Pipeline:** Active — knowledge, curiosity, and personality dimensions populated
 

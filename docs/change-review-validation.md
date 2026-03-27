@@ -19,6 +19,18 @@ Validation exists to ensure that:
 
 ---
 
+## Gate → review-queue bridge (grace-mar)
+
+To escalate a **single** `recursion-gate.md` candidate into a structured change-review **proposal** (without merging the Record):
+
+```bash
+python3 scripts/export_gate_to_review_queue.py --user <fork_id> --candidate-id CANDIDATE-XXXX
+```
+
+Then validate with `validate-change-review.py` (often `--allow-empty` until decisions and diffs exist). See [gate-vs-change-review.md](gate-vs-change-review.md).
+
+---
+
 ## Validator
 
 Use:

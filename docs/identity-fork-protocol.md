@@ -158,10 +158,13 @@ Shell
 
 ### 4.1 Workflow
 
-1. **Detect** — Identify profile-relevant signals (knowledge, curiosity, personality)
-2. **Stage** — Write candidates to RECURSION-GATE (or equivalent staging area)
-3. **Review** — User approves, rejects, or modifies
-4. **Merge** — Approved changes integrated into SELF, EVIDENCE, SESSION-LOG, prompt
+1. **Detect** — Identify profile-relevant signals (knowledge, curiosity, personality) from conversation, activity, or operator input.
+2. **Stage** — Write candidates to **RECURSION-GATE** (or equivalent staging area). The agent may stage; it may not merge.
+3. **Triage** — Classify each candidate (for example `proposal_class`, boundary hints). See [boundary-review-queue.md](boundary-review-queue.md).
+4. **Review** — Split into **simple gate approval** (routine IX-A/B/C lines, evidence-linked) vs **material change** that needs extended review (see §4.3). Routine items: approve, reject, or modify at the gate.
+5. **Merge** — Approved changes integrated into SELF, EVIDENCE, SESSION-LOG, and prompt per File Update Protocol (script-driven merge in the reference implementation).
+
+**Gate vs change-review:** The recursion gate is the **default** path for candidate lines. The **change-review queue** is for escalated, material edits (contradictions, cross-surface moves, policy shifts). See [gate-vs-change-review.md](gate-vs-change-review.md).
 
 ### 4.2 Review Checklist (before approving)
 
@@ -171,13 +174,24 @@ Shell
 
 **Pre-merge / pre-release condition checklist:** For a full condition-first checklist (all Record changes from RECURSION-GATE, companion approval, knowledge boundary, evidence linkage, File Update Protocol), see [condition-checklist.md](condition-checklist.md).
 
-### 4.3 Staging Interface
+### 4.3 Material change escalation
+
+Use **extended change-review** (structured queue, proposals, decisions, diffs — see companion-self **change-review** docs and [boundary-review-queue.md](boundary-review-queue.md)) when an edit is **not** a straightforward gate candidate, for example:
+
+- **Contradiction or revision** of durable identity commitments, safety posture, or memory governance that affects how the Record behaves.
+- **Cross-surface relocation** (identity vs SELF-LIBRARY vs CIV-MEM vs skills) where a simple approve would hide audit need.
+- **Policy or prompt** changes that alter abstention, lookup, or boundary behavior beyond a single IX line.
+- **Operator/companion request** to treat a gate item as material (explicit escalation).
+
+Escalation **does not** bypass the sovereign merge rule. It adds **process and provenance** before merge. Bridge tooling may copy a gate candidate into a review-queue proposal (see `scripts/export_gate_to_review_queue.py`).
+
+### 4.4 Staging Interface
 
 - Agents may **append** to the staging area
 - Agents may **not** modify or delete from canonical Record
 - Staging format: machine-readable (YAML/JSON) with candidate ID, mind category, signal type, proposed action
 
-### 4.4 Merge Authority
+### 4.5 Merge Authority
 
 Merge is performed only by:
 - The companion
