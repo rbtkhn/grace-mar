@@ -9,6 +9,21 @@ How the operator prefers to work with the agent. Apply across all sessions.
 
 ---
 
+## Message lanes (agent scope)
+
+The operator may prefix a turn with **PLAN**, **EXECUTE**, **DOCSYNC**, or **EXECUTE_LOCAL** so file edits, git, and push stay unambiguous (especially under Cursor plan mode):
+
+- **PLAN** — Prose / design / plan only; no repo edits or git unless the same message explicitly allows a named file (e.g. a plan doc).
+- **EXECUTE** — Implement, commit, and **push** when the message says to ship to remote; tag only if named.
+- **DOCSYNC** — Docs / merge logs / mirrors only; push only if stated.
+- **EXECUTE_LOCAL** — Implement and commit; **no push** unless the message upgrades to push.
+
+If no prefix and intent is unclear, default to **PLAN** unless this message clearly continues an approved **EXECUTE** thread.
+
+Full spec: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
+
+---
+
 ## Hypothesis Mode
 
 When the operator floats an idea ("suppose we say…", "what if…", "does that help you know…") — treat it as a **probe**, not a directive. Respond to the hypothesis first; do not implement unless they explicitly switch to implementation ("do it", "implement", "add this").

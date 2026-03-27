@@ -17,6 +17,7 @@
 |------|--------|
 | Creative heuristics | `.cursor/rules/operator-creative-process.mdc` |
 | Operator style | `.cursor/rules/operator-style.mdc` |
+| Per-message agent lanes (PLAN / EXECUTE / …) | [operator-agent-lanes.md](../operator-agent-lanes.md) |
 
 ## Weekly minimum
 
