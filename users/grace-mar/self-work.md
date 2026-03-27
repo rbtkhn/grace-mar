@@ -8,7 +8,7 @@
 
 ## Objectives
 
-- Support **companion-xavier** seed and Session 0 MCQ handoff — see [work-xavier](../../docs/skill-work/work-xavier/README.md).
+- **Template / instances:** Additional companions bootstrap from [companion-self](https://github.com/rbtkhn/companion-self) in **their own repos** — not hosted here. Grace-mar tracks template sync via [MERGING-FROM-COMPANION-SELF](../../docs/merging-from-companion-self.md) and [work-companion-self](../../docs/skill-work/work-companion-self/README.md).
 - **work-strategy** (daily horizon, synthesis pipeline, modules): doc / config PRs → label **`lane/work-strategy`**; gate paste → [work-strategy LANE-CI](../../docs/skill-work/work-strategy/LANE-CI.md).
 - Keep **work-politics** client lanes coherent with Record boundaries (no client copy into SELF without gate). **Repo CI:** work-politics–themed PRs → label **`lane/work-politics`**; gate paste shape → [work-politics LANE-CI](../../docs/skill-work/work-politics/LANE-CI.md).
 

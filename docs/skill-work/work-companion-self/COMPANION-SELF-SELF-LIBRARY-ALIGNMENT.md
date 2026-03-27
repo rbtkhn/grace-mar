@@ -2,9 +2,9 @@
 
 **Purpose:** Make **`users/_template/self-library.md`** in [companion-self](https://github.com/rbtkhn/companion-self) an **instance-agnostic governance package** (boundary + schema + **empty `entries:`**), aligned with:
 
-- Populate companion-xavier seed plan **§1b** / scope table (SELF-LIBRARY governance merged to **template** and **Xavier** seed),
-- [boundary-self-knowledge-self-library.md](../../../boundary-self-knowledge-self-library.md) (grace-mar canonical ontology),
-- [companion-xavier `self-library.md`](companion-xavier/users/xavier/self-library.md) (already minimal in grace-mar).
+- New instances bootstrapped from **companion-self** (SELF-LIBRARY governance on **template** `main`),
+- [boundary-self-knowledge-self-library.md](../../boundary-self-knowledge-self-library.md) (grace-mar canonical ontology),
+- The companion-self template [`users/_template/self-library.md`](https://github.com/rbtkhn/companion-self/blob/main/users/_template/self-library.md) (governance + empty shelf).
 
 This doc lives in **grace-mar** because the **PR is opened on companion-self**; grace-mar tracks the **intent** and **proposed file body** for operators.
 
@@ -75,10 +75,10 @@ If this template ships an **example corpus** for operators (e.g. public-domain s
 | 1 | ~~Merge to companion-self `main`~~ — **Done** (`288b438`). |
 | 2 | Optional: delete remote branch `template-self-library-governance` on GitHub if still present. |
 | 3 | ~~TEMPLATE-BASELINE + MERGING-FROM~~ — **Updated** in grace-mar. |
-| 4 | Periodic: re-diff **grace-mar** Xavier `self-library.md` vs [companion-self template](https://github.com/rbtkhn/companion-self/blob/main/users/_template/self-library.md). |
+| 4 | Periodic: re-diff grace-mar `users/grace-mar/self-library.md` vs [companion-self template](https://github.com/rbtkhn/companion-self/blob/main/users/_template/self-library.md) when auditing template drift. |
 
 ---
 
-## Relation to Xavier (grace-mar)
+## Relation to other instances
 
-No change required to **Xavier’s** `self-library.md` for this alignment doc unless the **template** wording improves; then copy the **same** governance paragraph into the subtree for parity.
+Additional companions deploy from **companion-self** in **their own repositories**; they are not hosted inside the grace-mar repo. Each instance’s `self-library.md` should stay aligned with **template governance** on `main`; apply template wording improvements in that instance’s workspace when the template updates.

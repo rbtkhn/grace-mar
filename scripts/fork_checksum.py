@@ -7,7 +7,7 @@ the fork's documented state at a given moment.
 
 Usage:
     python scripts/fork_checksum.py
-    python scripts/fork_checksum.py -u xavier
+    python scripts/fork_checksum.py -u <fork_id>
     python scripts/fork_checksum.py --append   # Append to users/<id>/fork-checksum-log.txt
     python scripts/fork_checksum.py --manifest  # Write users/<id>/fork-manifest.json
     python scripts/fork_checksum.py -u grace-mar --manifest

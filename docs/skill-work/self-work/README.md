@@ -27,6 +27,6 @@ Includes:
 - optional daily aggregator (`SYNC-DAILY.template.md`, training mode)
 - enablement runbook (`ENABLE-SYNC-PACK.md`)
 
-**Instance file:** [users/grace-mar/self-work.md](../../../users/grace-mar/self-work.md) (grace-mar) · companion-xavier subtree: `companion-xavier/users/xavier/self-work.md` (placeholder at seed).
+**Instance file:** [users/grace-mar/self-work.md](../../../users/grace-mar/self-work.md) (grace-mar). Other companions keep `self-work.md` in **their own** instance repos.
 
 **Upstream:** companion-self template should add `users/_template/self-work.md` + this README when merged.

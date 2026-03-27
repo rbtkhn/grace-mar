@@ -82,5 +82,5 @@ When adding or updating `lectures/*.md` with pasted ASR, run the orthography pas
 
 - [COMPRESSION-ENGINE.md](../../../docs/skill-work/work-jiang/COMPRESSION-ENGINE.md) — Jiang Compression Engine v1 (`scripts/jiang-compress.py`)
 - `research/external/work-jiang/README.md` — § Boundaries (membrane); production pipeline; comparative layer
-- `docs/audit-boundary-grace-mar-companion-xavier-companion-self.md` — grace-mar · companion-self · companion-xavier (instance-wide; not Jiang data rules)
+- `docs/audit-boundary-grace-mar-companion-self.md` — grace-mar · companion-self (instance-wide; not Jiang data rules)
 - `scripts/work_jiang/validate_comparative_layer.py` — Gates for high-priority analysis chapters and chronology

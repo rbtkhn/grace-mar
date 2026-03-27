@@ -74,5 +74,5 @@ Add comparative validators when quotes, counter-readings, or chronology YAML cha
 
 ## Related
 
-- [docs/audit-boundary-grace-mar-companion-xavier-companion-self.md](../docs/audit-boundary-grace-mar-companion-xavier-companion-self.md) — instance-wide grace-mar · template · companion-xavier (not Jiang data rules)
+- [docs/audit-boundary-grace-mar-companion-self.md](../docs/audit-boundary-grace-mar-companion-self.md) — instance-wide grace-mar · template boundaries (not Jiang data rules)
 - [bootstrap/grace-mar-bootstrap.md](grace-mar-bootstrap.md) — full-repo / work-dev default session

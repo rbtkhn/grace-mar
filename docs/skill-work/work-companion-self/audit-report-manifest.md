@@ -6,7 +6,7 @@
 | **Companion-self HEAD** (local clone used for diff) | [`87628a5`](https://github.com/rbtkhn/companion-self/commit/87628a548e08ed32adeb5d030bbdb1e5a1af0221) |
 | **Command** | `python3 scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
 
-Default clone path: `./companion-self` (gitignored). For a **pinned** governance baseline vs `main` tip, see [TEMPLATE-BASELINE.md](../work-xavier/TEMPLATE-BASELINE.md).
+Default clone path: `./companion-self` (gitignored). For a **pinned** governance baseline vs `main` tip, see [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md).
 
 **How to read this:** “Instance additions” lists every `docs/skill-work/**` file in grace-mar absent in the template (expected: instance WORK tree is larger). “Pull needed” is template-only or renamed template paths worth porting or mapping. Template `docs/skill-work/skill-work-*` names differ from grace-mar `work-*` layout — compare content, not only path equality.
 
@@ -316,61 +316,8 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-strategy/modules/verifiable-personal-ai/manifest.md
   - docs/skill-work/work-strategy/persuasive-content-pipeline.md
   - docs/skill-work/work-strategy/synthesis-engine.md
-  - docs/skill-work/work-xavier/ALIGNMENT.md
-  - docs/skill-work/work-xavier/CHECKLISTS.md
-  - docs/skill-work/work-xavier/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md
-  - docs/skill-work/work-xavier/COMPANION-XAVIER-DELETION-READINESS.md
-  - docs/skill-work/work-xavier/COMPANION-XAVIER-DRY-RUN-PROMPTS.md
-  - docs/skill-work/work-xavier/DAILY-OPS-CARD.md
-  - docs/skill-work/work-xavier/DAY-1-NO-TERMINAL.md
-  - docs/skill-work/work-xavier/GLOSSARY-FOR-BEGINNERS.md
-  - docs/skill-work/work-xavier/GOOD-MORNING.md
-  - docs/skill-work/work-xavier/INDEX.md
-  - docs/skill-work/work-xavier/LANES.md
-  - docs/skill-work/work-xavier/LEAKAGE-CHECKLIST.md
-  - docs/skill-work/work-xavier/LEARN-PATH.md
-  - docs/skill-work/work-xavier/LEARNING-OBJECTIVES-CONTROL-PLANE.md
-  - docs/skill-work/work-xavier/PROMPT-PATTERNS.md
-  - docs/skill-work/work-xavier/README.md
-  - docs/skill-work/work-xavier/SEED-MANIFEST.md
-  - docs/skill-work/work-xavier/SESSION-0-OPERATOR.md
-  - docs/skill-work/work-xavier/SYNC-DAILY.md
-  - docs/skill-work/work-xavier/TEMPLATE-BASELINE.md
-  - docs/skill-work/work-xavier/TERMS-XAVIER.md
-  - docs/skill-work/work-xavier/companion-xavier/CHANGELOG.md
-  - docs/skill-work/work-xavier/companion-xavier/README.md
-  - docs/skill-work/work-xavier/companion-xavier/docs/seed-context/README.md
-  - docs/skill-work/work-xavier/companion-xavier/docs/seed-survey/seed-survey-capture.md
-  - docs/skill-work/work-xavier/companion-xavier/docs/seed-survey/seed-survey-initiation.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/FORK-ID.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/intent.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/llms.txt
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/memory.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/recursion-gate.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/self-archive.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/self-evidence.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/self-library.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/self-work.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/self.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/session-log.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/skill-think.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/skill-write.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/skills.md
-  - docs/skill-work/work-xavier/companion-xavier/users/xavier/xavier-llm.txt
-  - docs/skill-work/work-xavier/content-plan-week1-2026-03-24.md
-  - docs/skill-work/work-xavier/content-spec-3-month-10000-budget.md
-  - docs/skill-work/work-xavier/first-good-morning-runbook.md
-  - docs/skill-work/work-xavier/week2-execution-2026-03-31.md
-  - docs/skill-work/work-xavier/week2-kpi-budget-log-2026-03-31.md
-  - docs/skill-work/work-xavier/work-dev-mirror/NO-TERMINAL-OPERATING-PROMPTS.md
-  - docs/skill-work/work-xavier/work-dev-mirror/README.md
-  - docs/skill-work/work-xavier/work-dev-mirror/RELIABILITY-CHECKLIST.md
-  - docs/skill-work/work-xavier/work-dev-mirror/SYNC-CONTRACT.md
-  - docs/skill-work/work-xavier/work-dev-mirror/SYNC-LOG.md
-  - docs/skill-work/work-xavier/work-dev-mirror/USE-NOW-VS-LATER.md
-  - docs/skill-work/work-xavier/work-politics-mirror/README.md
-  - docs/skill-work/work-xavier/work-politics-mirror/SYNC-CONTRACT.md
-  - docs/skill-work/work-xavier/work-politics-mirror/SYNC-LOG.md
+  - docs/skill-work/work-companion-self/COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md
+  - docs/skill-work/work-companion-self/TEMPLATE-BASELINE.md
 
 ### Same (no action)
   - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
@@ -379,4 +326,4 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-LOG.template.md
 
-Summary: same=5 differ=10 only_template=33 only_instance=305
+Summary: same=5 differ=10 only_template=33 only_instance=252

@@ -63,7 +63,7 @@ Two input channels feed the pipeline:
 
 This repo is a **live instance** (one person’s cognitive fork). The **template** for creating new instances is [companion-self](https://github.com/rbtkhn/companion-self). For a side-by-side comparison — purpose, relationship, and one-sentence summaries — see [grace-mar vs companion-self](docs/grace-mar-vs-companion-self.md).
 
-**companion-xavier (seed):** The logical instance tree for the Xavier fork lives under [`docs/skill-work/work-xavier/companion-xavier/`](docs/skill-work/work-xavier/companion-xavier/README.md). Repo root [`users/xavier`](users/xavier) may symlink there for tooling (see [`work-xavier/SEED-MANIFEST.md`](docs/skill-work/work-xavier/SEED-MANIFEST.md)).
+**Additional instances:** New companions bootstrap from the [companion-self](https://github.com/rbtkhn/companion-self) template in **their own repositories**; they are not hosted inside the grace-mar repo.
 
 **Edit companion-self next to grace-mar:** Open **`grace-mar.code-workspace`** in Cursor/VS Code (multi-root: this repo + `./companion-self`). Clone the template into `companion-self/` at the repo root; `scripts/template_diff.py` defaults to that path. See [MERGING-FROM-COMPANION-SELF](docs/merging-from-companion-self.md) §0.
 
@@ -260,7 +260,7 @@ Compute a checksum of the fork state (SELF + EVIDENCE + prompt) and optionally w
 
 ```bash
 python scripts/fork_checksum.py                    # Print checksum (default: GRACE_MAR_USER_ID or grace-mar)
-python scripts/fork_checksum.py -u xavier          # Checksum for users/xavier/
+python scripts/fork_checksum.py -u grace-mar       # Checksum for users/grace-mar/
 python scripts/fork_checksum.py --manifest         # Write users/<id>/fork-manifest.json
 python scripts/fork_checksum.py -u grace-mar --manifest
 ```

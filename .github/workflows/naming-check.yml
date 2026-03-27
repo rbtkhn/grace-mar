@@ -18,6 +18,3 @@ jobs:
 
       - name: Check for deprecated COG-EM naming
         run: python scripts/check_deprecated_naming.py
-
-      - name: Companion-xavier instance tree leakage check
-        run: python scripts/check_companion_xavier_leakage.py

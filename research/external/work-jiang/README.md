@@ -52,7 +52,7 @@ Normative rules for this tree — **canonical here**; do not restate long policy
 
 **Enforcement:** Run the [production pipeline](#production-pipeline-book--site) after metadata or script edits. `validate_work_jiang.py`, `validate_argument_layer.py`, and `validate_comparative_layer.py` are the membrane — treat failures like CI failures before stacking more changes.
 
-**Repo-wide context:** How grace-mar relates to template and other instance lanes (not Jiang-specific) lives in [docs/audit-boundary-grace-mar-companion-xavier-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-xavier-companion-self.md).
+**Repo-wide context:** How grace-mar relates to the template (not Jiang-specific) lives in [docs/audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md).
 
 **Session:** If a thread edits `users/grace-mar/` (SELF, gate, pipeline) or merges narrative into companion-facing Record files, run `python3 scripts/harness_warmup.py -u grace-mar` once and paste the output in that thread.
 

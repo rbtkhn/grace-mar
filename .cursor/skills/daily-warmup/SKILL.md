@@ -58,7 +58,7 @@ Every **good morning** reply must include a **multiple-choice block** so the ope
 | Fixed slot | Topic | Operator hooks |
 |------------|--------|----------------|
 | **1** | **Audit grace-mar against companion-self** | **Instance vs upstream template:** compare **grace-mar** (reference instance in this repo) to the **companion-self** template — structure, protocol, drift. Run `python scripts/template_diff.py` (default template path `./companion-self` if cloned beside repo; see script `--help`) → refresh [`docs/skill-work/work-companion-self/audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). |
-| **2** | **Leakage / boundary check (grace-mar repo)** | **Inside this monorepo:** `python scripts/check_companion_xavier_leakage.py`; spot-check no **grace-mar** Record/identity in wrong namespaces. Context: [audit-boundary-grace-mar-companion-xavier-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-xavier-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). |
+| **2** | **Leakage / boundary check (grace-mar repo)** | Spot-check fork isolation: no **grace-mar** Record/identity copied into wrong trees; context: [audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). |
 
 ### Other options (rotate by context)
 
@@ -69,7 +69,7 @@ Examples: clear **integrity** failures from `operator_daily_warmup`, **RECURSION
 ```markdown
 **Today — pick one (grace-mar):**
 - **A.** Audit **grace-mar** vs **companion-self** — run `template_diff.py`, refresh `audit-report.md` / manifest report
-- **B.** Leakage / boundaries — run `check_companion_xavier_leakage.py` + skills-modularity spot-check
+- **B.** Leakage / boundaries — fork-isolation spot-check + skills-modularity review
 - **C.** … (context-specific)
 - **D.** … (context-specific)
 ```

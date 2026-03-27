@@ -52,7 +52,7 @@ Must answer:
 - Is repo integrity healthy?
 - Is the worktree noisy enough to affect the next move?
 - **Good morning:** What are **Polymarket** implied odds + **volume** (KY-04 GOP primary and GE party markets), and is there a **named independent** horserace poll — or explicitly none? (Caveats: markets ≠ polls; cite URLs; ignore Polymarket AI blurbs — [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md).)
-- **Good morning:** **Multiple choice** (≥4 options) for **grace-mar** — must always offer **audit grace-mar against companion-self** (`template_diff.py` / [work-companion-self/audit-report.md](skill-work/work-companion-self/audit-report.md)) and **leakage / boundary check** (`check_companion_xavier_leakage.py` / boundary docs). See `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice*.
+- **Good morning:** **Multiple choice** (≥4 options) for **grace-mar** — must always offer **audit grace-mar against companion-self** (`template_diff.py` / [work-companion-self/audit-report.md](skill-work/work-companion-self/audit-report.md)) and **leakage / boundary check** ([audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), fork isolation). See `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice*.
 
 ### `wap-pulse`
 

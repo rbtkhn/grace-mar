@@ -122,7 +122,7 @@ Grace-mar remains strongly aligned on the first layer. The second layer is now *
 ### 7.1 Audit drift to fix
 
 - **Local audit verdict is too strong:** Earlier wording said all template paths exist in grace-mar. That is no longer accurate against the live template manifest.
-- **Template sync log / manifest diff:** [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md) §3 now records governance merges and manifest-diff refreshes; [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) is regenerated with `template_diff.py --use-manifest`. Governance baseline remains pinned in [TEMPLATE-BASELINE.md](skill-work/work-xavier/TEMPLATE-BASELINE.md) (`288b438`) while `main` may move — re-run the diff after pulls.
+- **Template sync log / manifest diff:** [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md) §3 now records governance merges and manifest-diff refreshes; [work-companion-self/audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) is regenerated with `template_diff.py --use-manifest`. Governance baseline remains pinned in [TEMPLATE-BASELINE.md](skill-work/work-companion-self/TEMPLATE-BASELINE.md) (`288b438`) while `main` may move — re-run the diff after pulls.
 - **Manifest-first sync contract not yet fully internalized:** Grace-mar now acknowledges manifest-driven sync, but operator habit should treat `template-manifest.json` + diff report as the first stop on each sync.
 - **users/_template/ in template repo:** Correctly absent in grace-mar as a live instance path. This is not a defect, but the audit should distinguish template-only scaffolds from missing instance mirrors.
 
@@ -153,7 +153,7 @@ Grace-mar remains strongly aligned on the first layer. The second layer is now *
 | Governance & operating modes | ✅ Aligned |
 | Gaps | Path-level parity with template `main` remains partial; manifest diff report is refreshed on a schedule or after template pulls |
 
-**Conclusion:** Grace-mar remains a valid **reference implementation** of the companion-self model, and it is still aligned on concept, protocol, and governance. **Path-level** alignment is partial by design (instance WORK tree is much larger than the template). The operator refreshes [audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) against companion-self `main` to see drift; governance merges stay pinned per [TEMPLATE-BASELINE.md](skill-work/work-xavier/TEMPLATE-BASELINE.md) until a new merge is recorded.
+**Conclusion:** Grace-mar remains a valid **reference implementation** of the companion-self model, and it is still aligned on concept, protocol, and governance. **Path-level** alignment is partial by design (instance WORK tree is much larger than the template). The operator refreshes [audit-report-manifest.md](skill-work/work-companion-self/audit-report-manifest.md) against companion-self `main` to see drift; governance merges stay pinned per [TEMPLATE-BASELINE.md](skill-work/work-companion-self/TEMPLATE-BASELINE.md) until a new merge is recorded.
 
 ---
 
