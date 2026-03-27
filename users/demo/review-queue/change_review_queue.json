@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "userSlug": "demo",
+  "queueGeneratedAt": "2026-03-26T15:00:00Z",
+  "items": [
+    {
+      "proposalId": "proposal-demo-001",
+      "status": "approved",
+      "priority": "low",
+      "summary": "Pedagogy refinement: shorter worked examples (demo)."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-identity.v1.json",
+  "title": "seed_identity",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "identity", "confidence", "issues"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "companion_name",
+        "role_definition",
+        "relationship_stance",
+        "voice_boundaries",
+        "non_goals",
+        "invariant_values"
+      ],
+      "properties": {
+        "companion_name": { "type": "string" },
+        "role_definition": { "type": "string" },
+        "relationship_stance": { "type": "string" },
+        "voice_boundaries": { "type": "array", "items": { "type": "string" } },
+        "non_goals": { "type": "array", "items": { "type": "string" } },
+        "invariant_values": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["identity_confidence"],
+      "properties": {
+        "identity_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "issues": { "type": "array", "items": { "type": "string" } }
+  }
+}

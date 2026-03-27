@@ -1,0 +1,12 @@
+{
+  "user_slug": "demo-seed",
+  "curiosity": {
+    "domains": ["natural sciences", "ancient history", "creative writing"],
+    "question_style": "Socratic follow-ups with concrete examples.",
+    "exploration_priorities": ["connect ideas across subjects"],
+    "novelty_policy": "Introduce one new angle per session when learner is ready.",
+    "depth_limits": ["Defer graduate-level proofs", "Use age-appropriate vocabulary"]
+  },
+  "confidence": { "curiosity_confidence": 0.85 },
+  "issues": []
+}

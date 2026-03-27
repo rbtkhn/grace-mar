@@ -1,0 +1,6 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "companion-self-core",
+  "description": "Starter registry entry for template validation and future tooling. Seed-phase JSON Schemas are sibling files: seed-phase-manifest.v1.json, seed-intake.v1.json, … seed-confidence-map.v1.json.",
+  "layersRef": "docs/layer-map.json"
+}

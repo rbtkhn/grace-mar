@@ -1,0 +1,530 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schemaVersion": 1,
+  "description": "Canonical list of template paths instances may sync. Single source of truth for audit; update when adding or renaming paths.",
+  "canonicalAsOf": "2026-03-26",
+  "templateVersion": "0.3.4",
+  "paths": [
+    {
+      "path": "docs/concept.md",
+      "description": "Concept: Record, Voice, education structure, knowledge boundary, invariants, long-term objectives.",
+      "optional": false
+    },
+    {
+      "path": "docs/identity-fork-protocol.md",
+      "description": "Protocol: Sovereign Merge Rule, schema (SELF, self-skill-*, self-evidence), evidence linking.",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase.md",
+      "description": "Seed Phase v2 entrypoint: formation pipeline before activation; links to stage/readiness/confidence/artifact specs.",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase-stages.md",
+      "description": "Canonical seed stages 0–7 (intake through readiness gate).",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase-readiness.md",
+      "description": "Readiness gate: blocking vs non-blocking, thresholds, re-run after upgrade.",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase-confidence-model.md",
+      "description": "Confidence categories, numeric bands, mapping to artifacts.",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase-artifacts.md",
+      "description": "Seed artifact file set; layout under _template and demo; validation pointers.",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase-validation.md",
+      "description": "How to run validate-seed-phase.py strict vs placeholder mode.",
+      "optional": false
+    },
+    {
+      "path": "docs/long-term-objective.md",
+      "description": "Permanent system rules (democratize Alpha-style education; sovereignty; knowledge boundary).",
+      "optional": false
+    },
+    {
+      "path": "docs/skill-work/README.md",
+      "description": "Skill-work parent index (submodules: skill-work-alpha-school, skill-work-human-teacher).",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/skill-work-alpha-school/alpha-school-reference.md",
+      "description": "Alpha School reference (skill-work-alpha-school submodule): benchmarks, 2-hour screen-time target, equivalent metrics.",
+      "optional": false
+    },
+    {
+      "path": "docs/skill-work/skill-work-alpha-school/alpha-school-benchmarks.yaml",
+      "description": "Structured Alpha benchmarks (YAML) with evidence IDs; optional comparison targets.",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/skill-work-alpha-school/insights-alpha-moonshots-233-for-business.md",
+      "description": "Alpha/Moonshots #233 insights for business plan and white paper (skill-work-alpha-school submodule).",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md",
+      "description": "Human teaching/learning objectives (skill-work-human-teacher submodule): read and modulate skill-think.",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/skill-work-human-teacher/README.md",
+      "description": "Skill-work-human-teacher submodule index.",
+      "optional": true
+    },
+    {
+      "path": "docs/instance-patterns.md",
+      "description": "Instance patterns and reference implementation (Grace-Mar variations, analyst contract, staging format).",
+      "optional": false
+    },
+    {
+      "path": "docs/contradiction-resolution.md",
+      "description": "Conflict resolution types; preserve history; advisory conflict check; links to engine spec.",
+      "optional": false
+    },
+    {
+      "path": "docs/approval-inbox-spec.md",
+      "description": "Review surface for recursion-gate; derived UI; contradiction escalation; reference Grace-Mar inbox.",
+      "optional": false
+    },
+    {
+      "path": "docs/CONTRADICTION-ENGINE-SPEC.md",
+      "description": "Contradiction engine: identity-diff object, classification, API shape, temporal validity, audit.",
+      "optional": false
+    },
+    {
+      "path": "docs/change-review.md",
+      "description": "Change review v1 doctrine entrypoint: post-seed governed self-revision (provenance, states, gate).",
+      "optional": false
+    },
+    {
+      "path": "docs/contradiction-policy.md",
+      "description": "Contradiction classes, resolution semantics, blocking vs non-blocking, policy priority during change review.",
+      "optional": false
+    },
+    {
+      "path": "docs/change-types.md",
+      "description": "Canonical change scopes for proposals (identity, pedagogy, upgrade_collision, etc.).",
+      "optional": false
+    },
+    {
+      "path": "docs/change-review-lifecycle.md",
+      "description": "Change-review lifecycle: detect through log; non-goals vs canonical queue and human gate.",
+      "optional": false
+    },
+    {
+      "path": "schema-registry/change-proposal.v1.json",
+      "description": "Change-review: structured proposal for governed post-seed change.",
+      "optional": false
+    },
+    {
+      "path": "schema-registry/change-decision.v1.json",
+      "description": "Change-review: decision record for a proposal.",
+      "optional": false
+    },
+    {
+      "path": "schema-registry/identity-diff.v1.json",
+      "description": "Change-review: before/after diff payload (generic object shapes in v1).",
+      "optional": false
+    },
+    {
+      "path": "schema-registry/change-review-queue.v1.json",
+      "description": "Change-review: queue summary of proposals.",
+      "optional": false
+    },
+    {
+      "path": "schema-registry/change-event-log.v1.json",
+      "description": "Change-review: audit event log entries.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self.md",
+      "description": "SELF schema/structure scaffold for new users only.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-knowledge.md",
+      "description": "IX-A: what they've learned (self-knowledge) scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-identity.md",
+      "description": "Durable identity commitments scaffold (identity, boundaries, role commitments).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-curiosity.md",
+      "description": "IX-B: what they're curious about (self-curiosity) scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-personality.md",
+      "description": "IX-C: voice, preferences, values (self-personality) scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-skill-think.md",
+      "description": "THINK (self-skill-think) scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-skill-write.md",
+      "description": "WRITE (self-skill-write) scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-skill-work.md",
+      "description": "WORK (self-skill-work) scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-work.md",
+      "description": "Cross-lane self-work control-plane scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-evidence.md",
+      "description": "Evidence schema/structure scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/recursion-gate.md",
+      "description": "Recursive-gate staging scaffold (candidates at the gate).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/self-memory.md",
+      "description": "Ephemeral context scaffold.",
+      "optional": true
+    },
+    {
+      "path": "users/_template/self-library.md",
+      "description": "SELF-LIBRARY scaffold: governance + empty entries; reference-facing shelf (not IX-A).",
+      "optional": true
+    },
+    {
+      "path": "docs/self-library-example-corpus-grace-mar-derived.md",
+      "description": "Optional legacy LIB row example (grace-mar-derived); not the default template shelf.",
+      "optional": true
+    },
+    {
+      "path": "docs/system-tensions-and-mysteries.md",
+      "description": "Canonical 10 challenges + 5 open mysteries; evolution rules for template and instances.",
+      "optional": false
+    },
+    {
+      "path": "docs/layer-map.json",
+      "description": "Layer labels, forbidden crossing globs for mechanical checks.",
+      "optional": false
+    },
+    {
+      "path": "docs/self-identity/intent-coherence-checklist.md",
+      "description": "Checklist: durable identity vs operational self-work vs ephemeral memory.",
+      "optional": true
+    },
+    {
+      "path": "scripts/validate-record-boundaries.py",
+      "description": "Validates optional YAML frontmatter on users/**/*.md when present.",
+      "optional": false
+    },
+    {
+      "path": "scripts/layer-enforcer.py",
+      "description": "Enforces docs/layer-map.json forbiddenCrossings globs.",
+      "optional": false
+    },
+    {
+      "path": "scripts/gate-guardian.js",
+      "description": "Interactive human gate; skipped when CI=true or --yes.",
+      "optional": true
+    },
+    {
+      "path": "scripts/generate-provenance.js",
+      "description": "Writes state/provenance/record-docs-summary.json for users/ and docs/ (output gitignored).",
+      "optional": true
+    },
+    {
+      "path": "scripts/truth-density-score.py",
+      "description": "Heuristic must-persist token density under users/.",
+      "optional": true
+    },
+    {
+      "path": "scripts/validate-seed-phase.py",
+      "description": "Validates seed-phase artifact dirs against schema-registry (strict or --allow-placeholders).",
+      "optional": false
+    },
+    {
+      "path": "scripts/validate-change-review.py",
+      "description": "Validates users/<id>/review-queue trees against change-review schemas (strict or --allow-empty for template scaffold).",
+      "optional": false
+    },
+    {
+      "path": "scripts/generate-identity-diff.py",
+      "description": "Renders a human-readable Markdown file from one identity-diff JSON artifact.",
+      "optional": false
+    },
+    {
+      "path": "scripts/generate-seed-dossier.py",
+      "description": "Generates seed_dossier.md from seed JSON artifacts.",
+      "optional": false
+    },
+    {
+      "path": "scripts/requirements-seed-phase.txt",
+      "description": "pip deps for seed-phase validation (jsonschema).",
+      "optional": true
+    },
+    {
+      "path": "schema-registry/v1-core.json",
+      "description": "Starter schema registry manifest pointer.",
+      "optional": true
+    },
+    {
+      "path": "users/_template/seed-phase/README.md",
+      "description": "Seed-phase artifact scaffold README (pre-activation).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed-phase-manifest.json",
+      "description": "Seed-phase manifest placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_intake.json",
+      "description": "Seed intake placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_identity.json",
+      "description": "Seed identity placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_curiosity.json",
+      "description": "Seed curiosity placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_pedagogy.json",
+      "description": "Seed pedagogy placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_expression.json",
+      "description": "Seed expression placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_memory_contract.json",
+      "description": "Seed memory contract placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_trial_report.json",
+      "description": "Seed trial report placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_readiness.json",
+      "description": "Seed readiness placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_confidence_map.json",
+      "description": "Seed confidence map placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_dossier.md",
+      "description": "Seed dossier placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/README.md",
+      "description": "Demo seed-phase README (synthetic).",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed-phase-manifest.json",
+      "description": "Demo seed-phase manifest.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_intake.json",
+      "description": "Demo seed intake.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_identity.json",
+      "description": "Demo seed identity.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_curiosity.json",
+      "description": "Demo seed curiosity.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_pedagogy.json",
+      "description": "Demo seed pedagogy.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_expression.json",
+      "description": "Demo seed expression.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_memory_contract.json",
+      "description": "Demo seed memory contract.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_trial_report.json",
+      "description": "Demo seed trial report.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_readiness.json",
+      "description": "Demo seed readiness.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_confidence_map.json",
+      "description": "Demo seed confidence map.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_dossier.md",
+      "description": "Demo seed dossier.",
+      "optional": false
+    },
+    {
+      "path": "docs/change-review-validation.md",
+      "description": "How to validate review-queue artifacts and generate Markdown diffs.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/review-queue/README.md",
+      "description": "Template review-queue scaffold README.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/review-queue/change_review_queue.json",
+      "description": "Template change-review queue placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/review-queue/change_event_log.json",
+      "description": "Template change event log placeholder.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/review-queue/proposals/.gitkeep",
+      "description": "Tracks empty proposals directory in template scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/review-queue/decisions/.gitkeep",
+      "description": "Tracks empty decisions directory in template scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/_template/review-queue/diffs/.gitkeep",
+      "description": "Tracks empty diffs directory in template scaffold.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/README.md",
+      "description": "Demo review-queue README (synthetic).",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/change_review_queue.json",
+      "description": "Demo change-review queue JSON.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/change_event_log.json",
+      "description": "Demo change event log JSON.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/proposals/proposal-demo-001.json",
+      "description": "Demo change proposal JSON.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/decisions/decision-demo-001.json",
+      "description": "Demo change decision JSON.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/diffs/diff-001.json",
+      "description": "Demo identity diff JSON.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/review-queue/derived/pedagogy-draft-v2.json",
+      "description": "Demo proposed-state stub referenced by proposal.",
+      "optional": false
+    },
+    {
+      "path": "bridges/bridge-schema.json",
+      "description": "Minimal bridge confidence JSON schema stub.",
+      "optional": true
+    }
+  ],
+  "seed_phase": {
+    "version": "2.0.0",
+    "entrypoint": "docs/seed-phase.md",
+    "stage_spec": "docs/seed-phase-stages.md",
+    "readiness_spec": "docs/seed-phase-readiness.md",
+    "confidence_spec": "docs/seed-phase-confidence-model.md",
+    "artifacts_spec": "docs/seed-phase-artifacts.md",
+    "schemas": {
+      "seed_phase_manifest": "schema-registry/seed-phase-manifest.v1.json",
+      "seed_intake": "schema-registry/seed-intake.v1.json",
+      "seed_identity": "schema-registry/seed-identity.v1.json",
+      "seed_curiosity": "schema-registry/seed-curiosity.v1.json",
+      "seed_pedagogy": "schema-registry/seed-pedagogy.v1.json",
+      "seed_expression": "schema-registry/seed-expression.v1.json",
+      "seed_memory_contract": "schema-registry/seed-memory-contract.v1.json",
+      "seed_trial_report": "schema-registry/seed-trial-report.v1.json",
+      "seed_readiness": "schema-registry/seed-readiness.v1.json",
+      "seed_confidence_map": "schema-registry/seed-confidence-map.v1.json"
+    },
+    "validator": "scripts/validate-seed-phase.py",
+    "dossier_generator": "scripts/generate-seed-dossier.py"
+  },
+  "change_review": {
+    "version": "1.0.0",
+    "entrypoint": "docs/change-review.md",
+    "contradiction_policy": "docs/contradiction-policy.md",
+    "change_types": "docs/change-types.md",
+    "lifecycle": "docs/change-review-lifecycle.md",
+    "lifecycle_integration": {
+      "seed_phase": "docs/seed-phase.md",
+      "seed_readiness": "docs/seed-phase-readiness.md",
+      "bootstrap": "companion-self-bootstrap.md",
+      "bootstrap_continue": "bootstrap-continue.md",
+      "upgrade_doctrine": "how-instances-consume-upgrades.md",
+      "instance_patterns": "docs/instance-patterns.md"
+    },
+    "schemas": {
+      "change_proposal": "schema-registry/change-proposal.v1.json",
+      "change_decision": "schema-registry/change-decision.v1.json",
+      "identity_diff": "schema-registry/identity-diff.v1.json",
+      "change_review_queue": "schema-registry/change-review-queue.v1.json",
+      "change_event_log": "schema-registry/change-event-log.v1.json"
+    },
+    "validator": "scripts/validate-change-review.py",
+    "diff_generator": "scripts/generate-identity-diff.py"
+  }
+}

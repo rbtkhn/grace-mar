@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "seed_phase_version": "2.0.0",
+  "user_slug": "demo-seed",
+  "status": "ready",
+  "stages": [
+    { "id": "intake", "status": "complete", "notes": "Synthetic demo intake" },
+    { "id": "identity", "status": "complete" },
+    { "id": "curiosity", "status": "complete" },
+    { "id": "pedagogy", "status": "complete" },
+    { "id": "expression", "status": "complete" },
+    { "id": "memory_contract", "status": "complete" },
+    { "id": "trials", "status": "complete" },
+    { "id": "readiness", "status": "complete" }
+  ],
+  "artifacts": {
+    "seed_intake": "seed_intake.json",
+    "seed_identity": "seed_identity.json",
+    "seed_curiosity": "seed_curiosity.json",
+    "seed_pedagogy": "seed_pedagogy.json",
+    "seed_expression": "seed_expression.json",
+    "seed_memory_contract": "seed_memory_contract.json",
+    "seed_trial_report": "seed_trial_report.json",
+    "seed_readiness": "seed_readiness.json",
+    "seed_confidence_map": "seed_confidence_map.json"
+  },
+  "confidence_summary": {
+    "overall": 0.88
+  },
+  "generated_at": "2026-03-26T12:00:00Z"
+}

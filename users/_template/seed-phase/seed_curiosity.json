@@ -1,0 +1,12 @@
+{
+  "user_slug": "TODO",
+  "curiosity": {
+    "domains": ["TODO"],
+    "question_style": "TODO",
+    "exploration_priorities": [],
+    "novelty_policy": "TODO",
+    "depth_limits": []
+  },
+  "confidence": { "curiosity_confidence": 0.0 },
+  "issues": ["TODO"]
+}

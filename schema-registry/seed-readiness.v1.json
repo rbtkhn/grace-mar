@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-readiness.v1.json",
+  "title": "seed_readiness",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "readiness", "stage_completion"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "readiness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "decision",
+        "readiness_score",
+        "blocking_issues",
+        "non_blocking_issues",
+        "recommended_next_actions"
+      ],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["pass", "conditional_pass", "fail"]
+        },
+        "readiness_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "blocking_issues": { "type": "array", "items": { "type": "string" } },
+        "non_blocking_issues": { "type": "array", "items": { "type": "string" } },
+        "recommended_next_actions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "stage_completion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "intake",
+        "identity",
+        "curiosity",
+        "pedagogy",
+        "expression",
+        "memory_contract",
+        "trials"
+      ],
+      "properties": {
+        "intake": { "type": "string", "enum": ["complete", "incomplete"] },
+        "identity": { "type": "string", "enum": ["complete", "incomplete"] },
+        "curiosity": { "type": "string", "enum": ["complete", "incomplete"] },
+        "pedagogy": { "type": "string", "enum": ["complete", "incomplete"] },
+        "expression": { "type": "string", "enum": ["complete", "incomplete"] },
+        "memory_contract": { "type": "string", "enum": ["complete", "incomplete"] },
+        "trials": { "type": "string", "enum": ["complete", "incomplete"] }
+      }
+    }
+  }
+}

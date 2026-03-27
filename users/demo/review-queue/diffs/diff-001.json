@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1.0.0",
+  "diffId": "diff-001",
+  "userSlug": "demo",
+  "category": "pedagogy",
+  "before": {
+    "summary": "Default scaffold: full example then practice."
+  },
+  "after": {
+    "summary": "Shorter example block, then practice with optional hint ladder."
+  },
+  "changeSummary": "Tighten initial example length; keep hint ladder optional.",
+  "conflictNote": "No direct contradiction with safety or memory policy in demo.",
+  "confidenceDelta": {
+    "before": 0.72,
+    "after": 0.81
+  },
+  "evidenceRefs": [
+    "session-demo-activation-01"
+  ]
+}

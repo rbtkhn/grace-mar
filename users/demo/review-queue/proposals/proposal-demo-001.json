@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "proposalId": "proposal-demo-001",
+  "userSlug": "demo",
+  "createdAt": "2026-03-26T12:00:00Z",
+  "primaryScope": "pedagogy",
+  "secondaryScopes": [
+    "expression"
+  ],
+  "changeType": "refinement",
+  "priorStateRef": "users/demo/seed-phase/seed_pedagogy.json#v1",
+  "proposedStateRef": "derived/pedagogy-draft-v2.json",
+  "supportingEvidence": [
+    {
+      "type": "interaction",
+      "ref": "session-demo-activation-01",
+      "summary": "Interaction quality improved when the companion used guided questioning instead of short declarative correction."
+    }
+  ],
+  "riskLevel": "low",
+  "confidenceDelta": {
+    "before": 0.72,
+    "after": 0.81
+  },
+  "status": "proposed",
+  "notes": "Demo only."
+}

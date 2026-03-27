@@ -1,0 +1,12 @@
+{
+  "user_slug": "TODO",
+  "expression": {
+    "writing_cadence": "TODO",
+    "length_norms": "TODO",
+    "format_preferences": [],
+    "example_preferences": [],
+    "tone_envelope": ["TODO"]
+  },
+  "confidence": { "expression_confidence": 0.0 },
+  "issues": ["TODO"]
+}

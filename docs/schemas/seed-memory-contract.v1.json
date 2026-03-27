@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-memory-contract.v1.json",
+  "title": "seed_memory_contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "memory_contract", "confidence", "issues"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "memory_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "memory_classes",
+        "retention_rules",
+        "deletion_rules",
+        "sensitive_categories",
+        "editable_regions",
+        "protected_regions",
+        "provenance_rules"
+      ],
+      "properties": {
+        "memory_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "identity",
+              "preferences",
+              "learning_progress",
+              "projects",
+              "constraints"
+            ]
+          },
+          "minItems": 1
+        },
+        "retention_rules": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "deletion_rules": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "sensitive_categories": { "type": "array", "items": { "type": "string" } },
+        "editable_regions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "protected_regions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "provenance_rules": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["memory_confidence"],
+      "properties": {
+        "memory_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "issues": { "type": "array", "items": { "type": "string" } }
+  }
+}

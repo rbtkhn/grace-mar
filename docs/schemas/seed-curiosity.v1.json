@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-curiosity.v1.json",
+  "title": "seed_curiosity",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "curiosity", "confidence", "issues"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "curiosity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domains",
+        "question_style",
+        "exploration_priorities",
+        "novelty_policy",
+        "depth_limits"
+      ],
+      "properties": {
+        "domains": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+        "question_style": { "type": "string" },
+        "exploration_priorities": { "type": "array", "items": { "type": "string" } },
+        "novelty_policy": { "type": "string" },
+        "depth_limits": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["curiosity_confidence"],
+      "properties": {
+        "curiosity_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "issues": { "type": "array", "items": { "type": "string" } }
+  }
+}

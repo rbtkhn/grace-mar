@@ -1,0 +1,17 @@
+{
+  "user_slug": "TODO",
+  "confidence_map": {
+    "identity": 0.0,
+    "curiosity": 0.0,
+    "pedagogy": 0.0,
+    "expression": 0.0,
+    "memory_governance": 0.0,
+    "interaction_stability": 0.0,
+    "overall": 0.0
+  },
+  "bands": {
+    "low_max": 0.39,
+    "medium_max": 0.74,
+    "high_max": 1.0
+  }
+}

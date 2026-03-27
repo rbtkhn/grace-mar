@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-intake.v1.json",
+  "title": "seed_intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "age_band", "primary_use_cases", "constraints", "education_focus", "completion"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "age_band": {
+      "type": "string",
+      "enum": ["child", "teen", "adult", "mixed", "unspecified"]
+    },
+    "primary_use_cases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "constraints": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed_domains",
+        "disallowed_domains",
+        "tone_preferences",
+        "safety_notes"
+      ],
+      "properties": {
+        "allowed_domains": { "type": "array", "items": { "type": "string" } },
+        "disallowed_domains": { "type": "array", "items": { "type": "string" } },
+        "tone_preferences": { "type": "array", "items": { "type": "string" } },
+        "safety_notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "education_focus": { "type": "array", "items": { "type": "string" } },
+    "completion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coverage_score", "contradictions"],
+      "properties": {
+        "coverage_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "contradictions": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

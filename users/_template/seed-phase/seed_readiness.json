@@ -1,0 +1,19 @@
+{
+  "user_slug": "TODO",
+  "readiness": {
+    "decision": "fail",
+    "readiness_score": 0.0,
+    "blocking_issues": ["Seed phase not complete"],
+    "non_blocking_issues": [],
+    "recommended_next_actions": ["Complete stages per docs/seed-phase-stages.md"]
+  },
+  "stage_completion": {
+    "intake": "incomplete",
+    "identity": "incomplete",
+    "curiosity": "incomplete",
+    "pedagogy": "incomplete",
+    "expression": "incomplete",
+    "memory_contract": "incomplete",
+    "trials": "incomplete"
+  }
+}

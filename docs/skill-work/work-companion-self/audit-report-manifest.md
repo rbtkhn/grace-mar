@@ -4,93 +4,6 @@ Companion-self: /Users/robertkuhne/Documents/grace-mar/companion-self
 Instance (grace-mar): /Users/robertkuhne/Documents/grace-mar
 Paths: companion-self template-manifest.json
 
-### Pull needed (in template, not in instance)
-  - bridges/bridge-schema.json
-  - docs/instance-patterns.md
-  - docs/layer-map.json
-  - docs/long-term-objective.md
-  - docs/seed-phase-artifacts.md
-  - docs/seed-phase-confidence-model.md
-  - docs/seed-phase-readiness.md
-  - docs/seed-phase-stages.md
-  - docs/seed-phase-validation.md
-  - docs/seed-phase.md
-  - docs/self-identity/intent-coherence-checklist.md
-  - docs/self-library-example-corpus-grace-mar-derived.md
-  - docs/skill-work/skill-work-alpha-school/README.md
-  - docs/skill-work/skill-work-alpha-school/alpha-school-benchmarks.yaml
-  - docs/skill-work/skill-work-alpha-school/alpha-school-reference.md
-  - docs/skill-work/skill-work-alpha-school/insights-alpha-moonshots-233-for-business.md
-  - docs/skill-work/skill-work-human-teacher/README.md
-  - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md
-  - docs/system-tensions-and-mysteries.md
-  - schema-registry/change-decision.v1.json
-  - schema-registry/change-event-log.v1.json
-  - schema-registry/change-proposal.v1.json
-  - schema-registry/change-review-queue.v1.json
-  - schema-registry/identity-diff.v1.json
-  - schema-registry/v1-core.json
-  - scripts/gate-guardian.js
-  - scripts/generate-identity-diff.py
-  - scripts/generate-provenance.js
-  - scripts/generate-seed-dossier.py
-  - scripts/layer-enforcer.py
-  - scripts/requirements-seed-phase.txt
-  - scripts/truth-density-score.py
-  - scripts/validate-change-review.py
-  - scripts/validate-record-boundaries.py
-  - scripts/validate-seed-phase.py
-  - users/_template/recursion-gate.md
-  - users/_template/review-queue/README.md
-  - users/_template/review-queue/change_event_log.json
-  - users/_template/review-queue/change_review_queue.json
-  - users/_template/review-queue/decisions/.gitkeep
-  - users/_template/review-queue/diffs/.gitkeep
-  - users/_template/review-queue/proposals/.gitkeep
-  - users/_template/seed-phase/README.md
-  - users/_template/seed-phase/seed-phase-manifest.json
-  - users/_template/seed-phase/seed_confidence_map.json
-  - users/_template/seed-phase/seed_curiosity.json
-  - users/_template/seed-phase/seed_dossier.md
-  - users/_template/seed-phase/seed_expression.json
-  - users/_template/seed-phase/seed_identity.json
-  - users/_template/seed-phase/seed_intake.json
-  - users/_template/seed-phase/seed_memory_contract.json
-  - users/_template/seed-phase/seed_pedagogy.json
-  - users/_template/seed-phase/seed_readiness.json
-  - users/_template/seed-phase/seed_trial_report.json
-  - users/_template/self-curiosity.md
-  - users/_template/self-evidence.md
-  - users/_template/self-identity.md
-  - users/_template/self-knowledge.md
-  - users/_template/self-library.md
-  - users/_template/self-memory.md
-  - users/_template/self-personality.md
-  - users/_template/self-skill-think.md
-  - users/_template/self-skill-work.md
-  - users/_template/self-skill-write.md
-  - users/_template/self-work.md
-  - users/_template/self.md
-  - users/demo/review-queue/README.md
-  - users/demo/review-queue/change_event_log.json
-  - users/demo/review-queue/change_review_queue.json
-  - users/demo/review-queue/decisions/decision-demo-001.json
-  - users/demo/review-queue/derived/pedagogy-draft-v2.json
-  - users/demo/review-queue/diffs/diff-001.json
-  - users/demo/review-queue/proposals/proposal-demo-001.json
-  - users/demo/seed-phase/README.md
-  - users/demo/seed-phase/seed-phase-manifest.json
-  - users/demo/seed-phase/seed_confidence_map.json
-  - users/demo/seed-phase/seed_curiosity.json
-  - users/demo/seed-phase/seed_dossier.md
-  - users/demo/seed-phase/seed_expression.json
-  - users/demo/seed-phase/seed_identity.json
-  - users/demo/seed-phase/seed_intake.json
-  - users/demo/seed-phase/seed_memory_contract.json
-  - users/demo/seed-phase/seed_pedagogy.json
-  - users/demo/seed-phase/seed_readiness.json
-  - users/demo/seed-phase/seed_trial_report.json
-
 ### Differ (both exist, content differs)
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/approval-inbox-spec.md
@@ -101,6 +14,7 @@ Paths: companion-self template-manifest.json
   - docs/contradiction-policy.md
   - docs/contradiction-resolution.md
   - docs/identity-fork-protocol.md
+  - docs/layer-map.json
   - docs/skill-work/README.md
   - docs/skill-work/self-work/README.md
   - docs/skill-work/self-work/sync-pack/README.md
@@ -408,11 +322,21 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-xavier/work-politics-mirror/SYNC-LOG.md
 
 ### Same (no action)
+  - bridges/bridge-schema.json
   - docs/change-review-validation.md
+  - docs/instance-patterns.md
+  - docs/long-term-objective.md
+  - docs/seed-phase-artifacts.md
+  - docs/seed-phase-confidence-model.md
+  - docs/seed-phase-readiness.md
+  - docs/seed-phase-stages.md
+  - docs/seed-phase-validation.md
+  - docs/seed-phase.md
+  - docs/self-identity/intent-coherence-checklist.md
+  - docs/self-library-example-corpus-grace-mar-derived.md
   - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
   - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
   - docs/skill-work/self-work/sync-pack/SYNC-CONTRACT.template.md
-  - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
-  - docs/skill-work/self-work/sync-pack/SYNC-LOG.template.md
+  ... and 75 more
 
-Summary: same=6 differ=14 only_template=85 only_instance=298
+Summary: same=90 differ=15 only_template=0 only_instance=298

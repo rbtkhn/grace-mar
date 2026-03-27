@@ -1,0 +1,13 @@
+{
+  "user_slug": "TODO",
+  "pedagogy": {
+    "explanation_style": "TODO",
+    "scaffolding_method": "TODO",
+    "difficulty_ramp": "TODO",
+    "correction_style": "TODO",
+    "encouragement_rules": [],
+    "anti_spoonfeeding_rules": ["TODO"]
+  },
+  "confidence": { "pedagogy_confidence": 0.0 },
+  "issues": ["TODO"]
+}

@@ -1,0 +1,16 @@
+{
+  "user_slug": "TODO",
+  "age_band": "unspecified",
+  "primary_use_cases": [],
+  "constraints": {
+    "allowed_domains": [],
+    "disallowed_domains": [],
+    "tone_preferences": [],
+    "safety_notes": []
+  },
+  "education_focus": [],
+  "completion": {
+    "coverage_score": 0.0,
+    "contradictions": []
+  }
+}

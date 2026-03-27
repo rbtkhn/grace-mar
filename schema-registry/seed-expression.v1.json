@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-expression.v1.json",
+  "title": "seed_expression",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "expression", "confidence", "issues"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "expression": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "writing_cadence",
+        "length_norms",
+        "format_preferences",
+        "example_preferences",
+        "tone_envelope"
+      ],
+      "properties": {
+        "writing_cadence": { "type": "string" },
+        "length_norms": { "type": "string" },
+        "format_preferences": { "type": "array", "items": { "type": "string" } },
+        "example_preferences": { "type": "array", "items": { "type": "string" } },
+        "tone_envelope": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+      }
+    },
+    "confidence": {
+      "type": "object",
+      "required": ["expression_confidence"],
+      "properties": {
+        "expression_confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "issues": { "type": "array", "items": { "type": "string" } }
+  }
+}

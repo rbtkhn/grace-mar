@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "seed_phase_version": "2.0.0",
+  "user_slug": "TODO",
+  "status": "in_progress",
+  "stages": [
+    { "id": "intake", "status": "in_progress" },
+    { "id": "identity", "status": "pending" },
+    { "id": "curiosity", "status": "pending" },
+    { "id": "pedagogy", "status": "pending" },
+    { "id": "expression", "status": "pending" },
+    { "id": "memory_contract", "status": "pending" },
+    { "id": "trials", "status": "pending" },
+    { "id": "readiness", "status": "pending" }
+  ],
+  "artifacts": {
+    "seed_intake": "seed_intake.json",
+    "seed_identity": "seed_identity.json",
+    "seed_curiosity": "seed_curiosity.json",
+    "seed_pedagogy": "seed_pedagogy.json",
+    "seed_expression": "seed_expression.json",
+    "seed_memory_contract": "seed_memory_contract.json",
+    "seed_trial_report": "seed_trial_report.json",
+    "seed_readiness": "seed_readiness.json",
+    "seed_confidence_map": "seed_confidence_map.json"
+  },
+  "confidence_summary": {
+    "overall": 0.0
+  },
+  "generated_at": "2026-03-26T00:00:00Z"
+}

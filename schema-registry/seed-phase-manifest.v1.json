@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-phase-manifest.v1.json",
+  "title": "seed_phase_manifest",
+  "description": "Top-level index of seed phase artifacts and status.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "seed_phase_version",
+    "user_slug",
+    "status",
+    "stages",
+    "artifacts",
+    "confidence_summary",
+    "generated_at"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "pattern": "^1\\.0\\.0$" },
+    "seed_phase_version": { "type": "string" },
+    "user_slug": { "type": "string", "minLength": 1 },
+    "status": {
+      "type": "string",
+      "enum": ["in_progress", "ready", "blocked", "activated"]
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "status"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "enum": [
+              "intake",
+              "identity",
+              "curiosity",
+              "pedagogy",
+              "expression",
+              "memory_contract",
+              "trials",
+              "readiness"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "in_progress", "complete", "blocked"]
+          },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "confidence_summary": {
+      "type": "object",
+      "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+    },
+    "generated_at": { "type": "string", "format": "date-time" }
+  }
+}

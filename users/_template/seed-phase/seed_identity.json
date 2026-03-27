@@ -1,0 +1,13 @@
+{
+  "user_slug": "TODO",
+  "identity": {
+    "companion_name": "TODO",
+    "role_definition": "TODO",
+    "relationship_stance": "TODO",
+    "voice_boundaries": ["TODO"],
+    "non_goals": ["TODO"],
+    "invariant_values": ["TODO"]
+  },
+  "confidence": { "identity_confidence": 0.0 },
+  "issues": ["TODO: complete identity scaffold"]
+}

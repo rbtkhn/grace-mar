@@ -1,0 +1,14 @@
+{
+  "user_slug": "TODO",
+  "memory_contract": {
+    "memory_classes": ["identity"],
+    "retention_rules": ["TODO"],
+    "deletion_rules": ["TODO"],
+    "sensitive_categories": [],
+    "editable_regions": ["TODO"],
+    "protected_regions": ["TODO"],
+    "provenance_rules": ["TODO"]
+  },
+  "confidence": { "memory_confidence": 0.0 },
+  "issues": ["TODO"]
+}

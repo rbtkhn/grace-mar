@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/change-review-queue.v1.json",
+  "title": "Companion-Self Change Review Queue v1",
+  "description": "Canonical queue surface for governed change proposals.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "userSlug",
+    "queueGeneratedAt",
+    "items"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "userSlug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "queueGeneratedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "proposalId",
+          "status",
+          "priority",
+          "summary"
+        ],
+        "properties": {
+          "proposalId": {
+            "type": "string",
+            "pattern": "^proposal-[a-zA-Z0-9._-]+$"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "proposed",
+              "under_review",
+              "approved",
+              "deferred",
+              "rejected",
+              "superseded"
+            ]
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "low",
+              "medium",
+              "high"
+            ]
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

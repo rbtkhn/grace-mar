@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-trial-report.v1.json",
+  "title": "seed_trial_report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_slug", "trials", "stability_score", "safety_fit_score", "issues"],
+  "properties": {
+    "user_slug": { "type": "string", "minLength": 1 },
+    "trials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["trial_id", "scenario_type", "result", "notes"],
+        "properties": {
+          "trial_id": { "type": "string" },
+          "scenario_type": {
+            "type": "string",
+            "enum": [
+              "tutoring",
+              "curiosity",
+              "correction",
+              "ambiguity",
+              "refusal",
+              "tone"
+            ]
+          },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "conditional", "fail"]
+          },
+          "notes": { "type": "string" }
+        }
+      },
+      "minItems": 1
+    },
+    "stability_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "safety_fit_score": { "type": "number", "minimum": 0, "maximum": 1 },
+    "issues": { "type": "array", "items": { "type": "string" } }
+  }
+}

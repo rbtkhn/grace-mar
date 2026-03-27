@@ -1,0 +1,2 @@
+# Optional: seed-phase validation (CI installs via pip)
+jsonschema>=4.22.0

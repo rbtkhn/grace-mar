@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.0.0",
+  "decisionId": "decision-demo-001",
+  "proposalId": "proposal-demo-001",
+  "decidedAt": "2026-03-26T14:00:00Z",
+  "decision": "approved",
+  "decisionReason": "The new evidence is consistent across multiple interactions and improves guided problem-solving performance without conflicting with seed-phase safety or memory-governance constraints.",
+  "blockingContradictions": [],
+  "requiredFollowups": [],
+  "appliesTo": [
+    "self-skill-think.md",
+    "self-personality.md"
+  ]
+}
