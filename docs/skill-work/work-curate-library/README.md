@@ -31,7 +31,7 @@ self-library is **gated**: entries enter through the pipeline (staging → compa
 
 1. **Alignment with Record** — Scope and topics should align with IX-A (knowledge), IX-B (curiosity), and skills edge. New entries can extend the edge but should not drift far from documented interests.
 2. **Lane clarity** — Decide whether a source is primarily `reference`, `canon`, or `influence` before adding it. Do not collapse all three into one undifferentiated list.
-3. **Lookup quality** — Active `reference` entries must be usable for lookup: clear scope, correct type, and appropriate `lookup_priority`.
+3. **Lookup quality** — Active `reference` entries must be usable for lookup: clear scope, correct type, and appropriate `lookup_priority` (`preferred` > `high` > `medium` > `low` > `none` in the analyst summary).
 4. **Deprecation** — When a source is superseded or no longer relevant, set `status: deprecated`; do not delete. Preserves provenance.
 5. **Gated pipeline** — Additions pass through pending candidates in `recursion-gate.md`. Companion approves before merge into self-library.
 

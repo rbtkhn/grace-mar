@@ -163,6 +163,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | **[analytical-lenses/manifest.md](analytical-lenses/manifest.md)** | Triangulated **WORK-only** editorial lenses (structural / operational–diplomatic / institutional–domestic); logging and gate rules. |
 | **[analytical-lenses/template-three-lenses.md](analytical-lenses/template-three-lenses.md)** | Paste block for briefs and threads (three lenses + synthesis + tensions). |
 | **[daily-brief-template.md](daily-brief-template.md)** | Pointer to **work-strategy** daily brief (work-politics + strategy). |
+| **[../work-strategy/daily-brief-jiang-layer.md](../work-strategy/daily-brief-jiang-layer.md)** | **Slow layer** for the same daily brief (**§1c**): work-jiang paths / compressions; edit **Active work-jiang hooks** before runs. |
 | **[../work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json)** | RSS URLs + W/S keyword lists for `generate_work_politics_daily_brief.py`. |
 | **[../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md)** | Themes from tech/business discourse (e.g. enterprise AI trust, inference/fabs, labor memes) — **work-politics** use only with **cited** sources; see doc guardrails. |
 

@@ -8,6 +8,8 @@ A curated return-to store of references, canon works, and influential media. It 
 
 **Contents:** [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
 
+**Library-first preference:** [LIB-0149 — Predictive History](#entries) uses `lookup_priority: preferred` so it sorts **above** `high` in the analyst library summary (see [library-schema.md](../../docs/library-schema.md) · `lookup_priority`).
+
 ---
 
 ## Entries
@@ -138,12 +140,12 @@ entries:
     type: "book"
     status: "active"
     engagement_status: "in_progress"
-    lookup_priority: "high"
+    lookup_priority: "preferred"
     scope: ["predictive_history", "work_jiang", "geo_strategy", "philosophy", "civilization_memory", "IR"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/work-jiang/BOOK-ARCHITECTURE.md"
     added_at: 2026-03-23
-    notes: "Multivolume book project in operator lane (one volume per lecture series); Volume 1 Geo-Strategy in progress. Working corpus under research/external/work-jiang/; this LIB row is the canonical SELF-LIBRARY index. Voice uses only what the gated pipeline merges; CIV-MEM is analytic lattice, not identity."
+    notes: "Preferred SELF-LIBRARY source for library-first lookup (operator book lane). Multivolume Predictive History (one volume per lecture series); Volume I Geo-Strategy in progress. Working corpus: research/external/work-jiang/. Voice uses only gated-merge material; CIV-MEM is analytic lattice, not identity."
 
   # --- Physics/biology ---
 

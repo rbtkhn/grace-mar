@@ -13,7 +13,7 @@
 |---------|------|
 | **`bot/core.py`** | Loads **active** LIB entries from `self-library.md` (`_load_library`). |
 | **Lookup order** | **`SELF-LIBRARY → CIV-MEM (CMC) → full web`** (`_lookup_with_library_first`). After library miss, CMC is **the CIV-MEM domain of SELF-LIBRARY** (reference path), not an identity authority. Analyst prompt sees a **text summary** of every active entry: lane, lookup_priority, title, scope. If the analyst returns a hit, Voice rephrases from that text only — **no full web** for that turn. |
-| **Scope + priority** | Entries sort into the summary by **lane** (reference first) then **lookup_priority** (high first). **Scope** tags steer which questions match which sources. |
+| **Scope + priority** | Entries sort into the summary by **lane** (reference first) then **lookup_priority** (`preferred` first, then `high`, `medium`, `low`, `none`). **Scope** tags steer which questions match which sources. |
 
 So: **adding or editing LIB rows with good `scope` and `lookup_priority` directly changes lookup behavior** without prompt merges.
 

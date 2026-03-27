@@ -26,8 +26,9 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 |---------|--------|
 | **1. work-politics snapshot** | `get_wap_snapshot()` |
 | **1b. Work-strategy** | [daily-brief-focus.md](daily-brief-focus.md) + pointers to work-dev |
+| **1c. Two horizons (fast vs slow)** | Operator prose in generator + [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) § **Active work-jiang hooks** — **slow** structural pointers (work-jiang); **fast** = §2 RSS + §1 |
 | **2. Headlines** | RSS; each line `[W:x S:y]` ranked by **W+S** then recency |
-| **3. Lead themes** | work-politics-heavy vs strategy-heavy stubs from top titles |
+| **3. Lead themes** | **W** campaign angle, **S** strategy angle, **slow** work-jiang stub (tie §1c to today’s headlines) |
 | **4. Triangulation** | [work-politics analytical lenses](../work-politics/analytical-lenses/template-three-lenses.md) when the lead is political |
 | **5–6** | Operator synthesis + work-politics next actions |
 

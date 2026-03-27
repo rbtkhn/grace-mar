@@ -7,6 +7,7 @@ Generate a standard **daily brief** for work-politics + work-strategy.
   - Work-politics snapshot (calendar, gate, blockers)
   - Work-strategy focus (operator markdown)
   - Optional RSS ingest (configurable), keyword scores: **W** (campaign), **S** (product/AI/governance), **G** (geo/military)
+  - §**1c**: **Two horizons** — fast (RSS §2) vs **slow** (work-jiang); body from [work-strategy/daily-brief-jiang-layer.md](docs/skill-work/work-strategy/daily-brief-jiang-layer.md) § Active work-jiang hooks
   - §**2a** / §**2b**: G-ranked headline digest + optional **civ-mem** token overlap (`docs/civilization-memory/`, index build script) — historical depth, not breaking news
   - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale`
     in config — extra phrase lists for scoring **only** (no translation API; zero-API mode).
@@ -42,6 +43,7 @@ STRATEGY_DIR = REPO_ROOT / "docs" / "skill-work" / "work-strategy"
 DEFAULT_CONFIG = STRATEGY_DIR / "daily-brief-config.json"
 LEGACY_FEEDS_JSON = WAP_DIR / "daily-brief-feeds.json"
 STRATEGY_FOCUS_MD = STRATEGY_DIR / "daily-brief-focus.md"
+JIANG_LAYER_MD = STRATEGY_DIR / "daily-brief-jiang-layer.md"
 DEFAULT_UA = "Grace-Mar-work-daily-brief/1.0 (+local research; contact: operator)"
 
 DEFAULT_WAP_PHRASES: tuple[str, ...] = (
@@ -461,6 +463,31 @@ def _extract_strategy_focus() -> str:
     body = (m.group(1).strip() if m else text)[:4000]
     if not body.strip():
         return "_Edit `daily-brief-focus.md` § Active focus._"
+    out: list[str] = []
+    for ln in body.splitlines():
+        s = ln.strip()
+        if not s:
+            continue
+        out.append(s if s.startswith("- ") else f"- {s}")
+    return "\n".join(out)
+
+
+def _extract_jiang_layer() -> str:
+    """§ Active work-jiang hooks from daily-brief-jiang-layer.md (slow structural pointers)."""
+    if not JIANG_LAYER_MD.exists():
+        return (
+            "_No `docs/skill-work/work-strategy/daily-brief-jiang-layer.md` yet — "
+            "create it from the template in work-strategy._"
+        )
+    text = JIANG_LAYER_MD.read_text(encoding="utf-8")
+    m = re.search(
+        r"## Active work-jiang hooks\s*\n+(.*?)(?=\n## |\Z)",
+        text,
+        re.DOTALL | re.IGNORECASE,
+    )
+    body = (m.group(1).strip() if m else "")[:4000]
+    if not body.strip():
+        return "_Edit `daily-brief-jiang-layer.md` § Active work-jiang hooks._"
     out: list[str] = []
     for ln in body.splitlines():
         s = ln.strip()
@@ -952,7 +979,23 @@ def build_daily_brief(
     lines.extend(
         [
             "",
-            "_Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md), [work-strategy/README.md](../../work-strategy/README.md)._",
+            "## 1c. Two horizons — fast vs slow",
+            "",
+            "**Fast (same brief):** §**2** RSS headlines + §**1** snapshot — news cycle, principal-adjacent hooks, scored **W / S / G**.",
+            "",
+            "**Slow (work-jiang):** lecture extractions, compression JSON, comparative sweeps — **structural** context; not a substitute for dated facts. "
+            f"Prefer [SELF-LIBRARY](../../../users/{user_id}/self-library.md) entries (e.g. reference / `lookup_priority`) when library-first lookup applies.",
+            "",
+            "_From `docs/skill-work/work-strategy/daily-brief-jiang-layer.md` § Active work-jiang hooks._",
+            "",
+        ]
+    )
+    for line in _extract_jiang_layer().splitlines():
+        lines.append(line)
+    lines.extend(
+        [
+            "",
+            "_Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md), [work-strategy/README.md](README.md)._",
             "",
             "## 2. Headlines (ingested RSS)",
             "",
@@ -1171,6 +1214,13 @@ def build_daily_brief(
 
     lines.extend(
         [
+            "",
+            "### Slow structural layer (work-jiang)",
+            "",
+            "_Not dated news — patterns from lecture extractions, `jiang-compress` JSON, comparative sweeps. "
+            "Connect to **§1c** hooks when drafting campaign or opposition copy; cite sources if anything ships publicly._",
+            "",
+            "**Replace:** 2–3 sentences — which slow pattern applies to today’s **W** angle, or why none does.",
             "",
             "## 4. Triangulation (when lead is political)",
             "",

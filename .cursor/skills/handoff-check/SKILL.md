@@ -1,6 +1,6 @@
 ---
 name: handoff-check
-description: Generate a stop/resume handoff summary with recent commits, meaningful local work, runtime noise, gate continuity, and a suggested re-entry prompt. Use when ending a session, resuming work after a break, or checking what is safe to ignore before committing or pushing. Triggered by "good night" / session end per daily-warmup skill § Good night.
+description: Generate a stop/resume handoff summary with recent commits, meaningful local work, runtime noise, RECURSION-GATE pending detail (counts, capped list, proposed review/merge steps — read-only), Predictive History night closeout (work-jiang momentum block from operator_handoff_check), and a suggested re-entry prompt. Use when ending a session, resuming work after a break, or checking what is safe to ignore before committing or pushing. Triggered by "good night" / session end per daily-warmup skill § Good night.
 ---
 
 # Handoff Check
@@ -19,6 +19,8 @@ python3 scripts/operator_handoff_check.py -u grace-mar
 
 Summarize:
 
+- **RECURSION-GATE** — pending totals (work-politics vs companion), listed items if any (script caps long queues), and the script’s **proposed** processing steps (`operator_gate_review_pass` → approve/reject in-file → `process_approved_candidates.py`); remind that **merge requires companion approval**
+- **Predictive History (work-jiang)** — **`## Predictive History — night closeout`**: where the lane rests, suggested first lever tomorrow, rotating **Spark** (edit `research/external/work-jiang/metadata/warmup-sparks.yaml`), optional rebuild ritual; still read-only / not Record
 - recently committed work
 - meaningful local changes still in progress
 - runtime-only noise that should stay uncommitted

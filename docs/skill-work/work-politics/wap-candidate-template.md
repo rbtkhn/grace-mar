@@ -32,6 +32,9 @@ status: pending
 timestamp: YYYY-MM-DD HH:MM:SS
 channel_key: operator:wap:us-ky4-massie   # or operator:wap:<jurisdiction>-<slug> — see above
 territory: work-politics
+# Optional — traceability to work-jiang research artifacts (merge script ignores if unused).
+# Repo-relative path(s); use one string or YAML list. Examples: compressions/*.json, *.paste-snippet.md
+jiang_ref: ""
 source: operator — companion approved work-politics milestone
 source_exchange:
   operator: "Shipped / locked: docs/skill-work/work-politics/<file>.md — <one line>"

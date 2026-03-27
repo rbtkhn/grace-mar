@@ -1,0 +1,16 @@
+# Optional sparks for work-jiang morning/night warmup pulses (operator-editable).
+# Picked by day-of-year rotation when present; falls back to built-in lists if empty.
+morning:
+  - "One claim from yesterday's reading — state it in a single sentence, then one sentence on what would falsify it."
+  - "Open THESIS-MAP.md and follow one arrow you have not stress-tested yet."
+  - "Take the front lecture in CHAPTER-QUEUE: what's the smallest 'next action' you could finish in 25 minutes?"
+  - "Pick one geo-strategy vs civilization contrast: where do the two series disagree in tone or method?"
+  - "Scan STATUS.md 'Next actions' — do item #1 or demote it with one line why."
+  - "Find one quote-candidate you would *not* put in the book; what rule does it violate?"
+  - "Write three bullet 'reader takeaways' for ch01 as if the chapter were already done (fantasy outline)."
+night:
+  - "One thing that moved the book today — even a file save or a validator green — name it."
+  - "What do you want the thread to *not* forget tomorrow about Predictive History?"
+  - "If you did nothing else in the Jiang lane this week, what would still count as a win?"
+  - "Close with one line: 'Tomorrow's first lever is ___' (from STATUS or CHAPTER-QUEUE)."
+  - "Rate today's Jiang energy 1–5; if <4, what one constraint lifted would raise it?"

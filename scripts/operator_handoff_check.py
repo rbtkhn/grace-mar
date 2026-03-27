@@ -1,23 +1,42 @@
 #!/usr/bin/env python3
 """
 Generate a stop/resume handoff summary for the current repo state.
+
+Includes a dedicated RECURSION-GATE section: pending counts by territory (work-politics vs
+companion), up to a capped list of pending candidate IDs and summaries, and proposed next
+steps to review/approve/merge via process_approved_candidates (read-only — this script does
+not merge). Intended for good-night / handoff-check workflows.
 """
 
 from __future__ import annotations
 
 import argparse
 import subprocess
+import sys
 from pathlib import Path
 
 try:
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read
+    from recursion_gate_territory import TERRITORY_LABEL_WAP, pending_by_territory
     from work_politics_ops import get_wap_snapshot
 except ImportError:
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read
+    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP, pending_by_territory
     from scripts.work_politics_ops import get_wap_snapshot
+
+# Max pending rows to list verbatim before collapsing (good night / handoff stays scannable).
+_GATE_PENDING_DISPLAY_CAP = 12
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"
+_SCRIPTS = REPO_ROOT / "scripts"
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+try:
+    from work_jiang.warmup_jiang_pulse import build_night_pulse_lines
+except ImportError:
+    build_night_pulse_lines = None  # type: ignore[misc, assignment]
 
 RUNTIME_NOISE_MARKERS = (
     "users/grace-mar/pipeline-events.jsonl",
@@ -60,6 +79,72 @@ def _classify_change(path_line: str) -> tuple[str, str]:
     if path.startswith("users/") or "recursion_gate" in path or path == "bot/prompt.py":
         return "record_pipeline", path
     return "repo_misc", path
+
+
+def _gate_detail_lines(recursion_gate_md: str, user_id: str) -> list[str]:
+    """Human-readable pending queue + proposed merge steps (read-only; does not merge)."""
+    gate_rel = f"users/{user_id}/recursion-gate.md"
+    wap_rows, companion_rows = pending_by_territory(recursion_gate_md)
+    total = len(wap_rows) + len(companion_rows)
+    lines: list[str] = [
+        "## RECURSION-GATE (pending)",
+        "",
+        f"- **Total pending:** {total} (work-politics: {len(wap_rows)} · companion: {len(companion_rows)})",
+        f"- **Canonical file:** `{gate_rel}`",
+        "",
+    ]
+    if total == 0:
+        lines.extend(
+            [
+                "_No pending candidates above `## Processed`._",
+                "",
+                "## Proposed: processing pipeline (when you have new candidates)",
+                "",
+                "1. Stage or confirm candidates in `recursion-gate.md` (pending, above Processed).",
+                "2. Review: open the gate file or run "
+                f"`python3 scripts/operator_gate_review_pass.py -u {user_id}` for a recommendation-oriented pass.",
+                "3. Set `status: approved` or `status: rejected` per companion/operator policy.",
+                "4. Merge approved candidates only: "
+                f"`python3 scripts/process_approved_candidates.py -u {user_id} --apply` "
+                "(or the receipt flow in AGENTS.md). **Record changes require companion approval.**",
+                "",
+            ]
+        )
+        return lines
+
+    combined: list[tuple[str, dict]] = [
+        *[(TERRITORY_LABEL_WAP, r) for r in wap_rows],
+        *[("Companion", r) for r in companion_rows],
+    ]
+    lines.append("### Pending items")
+    lines.append("")
+    shown = 0
+    for label, row in combined:
+        if shown >= _GATE_PENDING_DISPLAY_CAP:
+            rest = total - shown
+            lines.append(f"- _… and {rest} more — open `{gate_rel}` for full list._")
+            break
+        cid = row.get("id") or "?"
+        summary = (row.get("summary") or "(no summary)")[:160]
+        lines.append(f"- **{cid}** [{label}] — {summary}")
+        shown += 1
+    lines.extend(
+        [
+            "",
+            "## Proposed: complete processing (this handoff does not merge)",
+            "",
+            f"1. **Review** each pending row in `{gate_rel}` "
+            f"or run `python3 scripts/operator_gate_review_pass.py -u {user_id}`.",
+            "2. **Decide** `status: approved` or `status: rejected` (companion policy for Record-facing items).",
+            "3. **Apply** approved merges only: "
+            f"`python3 scripts/process_approved_candidates.py -u {user_id} --apply` "
+            "(or `--generate-receipt` / `--apply --receipt` per AGENTS.md).",
+            "4. **Verify** pending count is zero: re-run this script or `python3 scripts/harness_warmup.py -u "
+            f"{user_id}`.",
+            "",
+        ]
+    )
+    return lines
 
 
 def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blockers: list[dict]) -> tuple[str, str]:
@@ -140,12 +225,33 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
         "",
         f"- User: `{user_id}`",
         f"- Last activity: {last_activity}",
-        f"- Pending gate items: {len(gate_pending)}",
+        f"- Pending gate items: {len(gate_pending)} (detail below)",
         f"- Active thread guess: {thread_label}",
         "",
-        "## Recently committed",
-        "",
     ]
+    lines.extend(_gate_detail_lines(recursion_gate, user_id))
+    lines.append("")
+    if build_night_pulse_lines is not None:
+        try:
+            lines.extend(build_night_pulse_lines(user_id))
+        except Exception:
+            lines.append("## Predictive History — night closeout")
+            lines.append("")
+            lines.append("_Jiang night pulse skipped (could not read work-jiang paths)._")
+            lines.append("")
+    else:
+        lines.append("## Predictive History — night closeout")
+        lines.append("")
+        lines.append(
+            "_Run `python3 scripts/work_jiang/warmup_jiang_pulse.py -u %s --night` if import failed._" % user_id
+        )
+        lines.append("")
+    lines.extend(
+        [
+            "## Recently committed",
+            "",
+        ]
+    )
 
     if recent_commits:
         for line in recent_commits:

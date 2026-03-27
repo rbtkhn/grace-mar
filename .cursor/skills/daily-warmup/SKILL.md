@@ -26,7 +26,7 @@ If the operator says **“good morning”** on a **Sunday**, default to **week-a
 
 When the operator begins with **"good morning"** (or clearly the same intent), treat it as a **daily session start** — **unless** [cadence](#cadence-by-weekday) says week-ahead (Sunday) or a lighter tier (Tue–Fri); then scale steps below accordingly.
 
-**Work-jiang (Jiang) standing note:** The first curated lecture series in-repo is **Geo-Strategy** (`research/external/work-jiang/lectures/`). The **second** series is **Civilization** (channel naming). When the operator is about to upload or integrate **Civilization** transcripts, mention it in the brief (next step: raw pulls under `research/external/youtube-channels/predictive-history/`, then curated files per [WORKFLOW-transcripts.md](../../../research/external/work-jiang/WORKFLOW-transcripts.md)). See also `users/grace-mar/work-jiang.md` § Operator schedule.
+**Work-jiang (Predictive History) — built-in momentum:** `python3 scripts/operator_daily_warmup.py` now appends **`## Predictive History — morning momentum`** (WORK container, STATUS/CHAPTER-QUEUE nudge, rotating **Spark**, dive links). **Customize sparks** in [`research/external/work-jiang/metadata/warmup-sparks.yaml`](../../../research/external/work-jiang/metadata/warmup-sparks.yaml) (operator voice; day-of-year rotation). Standalone: `python3 scripts/work_jiang/warmup_jiang_pulse.py -u grace-mar`. Context: first curated series **Geo-Strategy**; second **Civilization** — when integrating Civilization transcripts, mention raw pulls under `research/external/youtube-channels/predictive-history/` and [WORKFLOW-transcripts.md](../../../research/external/work-jiang/WORKFLOW-transcripts.md); see `users/grace-mar/work-jiang.md` § Operator schedule.
 
 **Alpha / mastery lens (optional):** If the operator ties the day to **mastery gates**, **2-hour academic ceiling**, or **“Time Back”**, point at [alpha-mastery-adaptation.md](../../../docs/alpha-mastery-adaptation.md) and optional `python3 scripts/good-morning-brief.py` / `reflection-proposals/DAILY-INTENTION-*.md` — design vocabulary, not school product claims.
 
@@ -60,8 +60,8 @@ When the operator says **"good night"**, **"goodnight"**, or clearly the same in
 python3 scripts/operator_handoff_check.py -u grace-mar
 ```
 
-1. **Include the command output** in your reply (paste verbatim or as a fenced markdown block).
-2. Summarize in one short paragraph: what moved today (if known from the thread), what is parked, and the **suggested re-entry prompt** from the script output.
+1. **Include the command output** in your reply (paste verbatim or as a fenced markdown block). The script embeds **`## RECURSION-GATE (pending)`** (counts, optional item list, proposed merge steps) and **`## Predictive History — night closeout`** (lane status, tomorrow’s lever, rotating spark, optional `rebuild_all` ritual). Treat merge steps as **guidance only** — no merge without companion approval.
+2. Summarize in one short paragraph: what moved today (if known from the thread), what is parked, **gate + Jiang lane** carryovers, and the **suggested re-entry prompt** from the script output.
 3. Stay read-only: no merge, stage, or commit as part of good night.
 
 Full spec: [`.cursor/skills/handoff-check/SKILL.md`](../handoff-check/SKILL.md).

@@ -39,7 +39,7 @@ entries:
     scope: []                     # optional: topics this source covers (for query routing)
     engagement_status: planned    # planned | in_progress | consumed | recurring | available | trusted | primary
     read_id: null                 # optional: READ-XXXX if also in Reading List (evidence link)
-    lookup_priority: low          # high | medium | low | none
+    lookup_priority: low          # preferred | high | medium | low | none
     source: manual                # manual | path | url (for future RAG/indexing)
     url: ""                       # optional: canonical website, repository, or source page
     pd_url: ""                    # optional: Project Gutenberg, Wikisource, etc.
@@ -64,7 +64,7 @@ entries:
 | **scope** | No | List of topics (e.g. `[space, science, animals]`) for query routing |
 | **engagement_status** | Yes | Current relationship to the source: `planned`, `in_progress`, `consumed`, `recurring`, `available`, `trusted`, or `primary` |
 | **read_id** | No | READ-XXXX if this book is in EVIDENCE Reading List (evidence link when consumed) |
-| **lookup_priority** | No | `high`, `medium`, `low`, or `none` |
+| **lookup_priority** | No | `preferred` (sorts above all other priorities in library summary), `high`, `medium`, `low`, or `none` |
 | **source** | Yes | `manual` (no indexed content yet), `path`, or `url` for future RAG |
 | **url** | No | Canonical website, repository, or source page for the entry |
 | **pd_url** | No | URL to complete public domain text (Project Gutenberg, Wikisource) — for retrieval and RAG |

@@ -2,7 +2,7 @@
 
 **Purpose:** Standard **good morning** intel for the Massie shadow / work-politics lane: **horserace polling** (when it exists) and **prediction-market prices** (Polymarket). This is **operator WORK product**, not Record truth and not Voice knowledge.
 
-**Last checked:** 2026-03-26
+**Last checked:** 2026-03-27
 
 ---
 

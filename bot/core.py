@@ -786,7 +786,7 @@ def process_homework_answer(channel_key: str, user_reply: str) -> tuple[str, boo
 def _library_summary() -> str:
     entries = _load_library()
     lines = []
-    priority_rank = {"high": 0, "medium": 1, "low": 2, "none": 3}
+    priority_rank = {"preferred": 0, "high": 1, "medium": 2, "low": 3, "none": 4}
     lane_rank = {"reference": 0, "canon": 1, "influence": 2}
     entries = sorted(
         entries,

@@ -12,6 +12,7 @@ from __future__ import annotations
 import argparse
 import json
 import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -28,6 +29,14 @@ except ImportError:
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"
+_SCRIPTS = REPO_ROOT / "scripts"
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+
+try:
+    from work_jiang.warmup_jiang_pulse import build_morning_pulse_lines
+except ImportError:
+    build_morning_pulse_lines = None  # type: ignore[misc, assignment]
 
 
 def _git_status_lines() -> list[str]:
@@ -160,9 +169,23 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     ):
         lines.append(f"- {item}")
 
+    lines.append("")
+    if build_morning_pulse_lines is not None:
+        try:
+            lines.extend(build_morning_pulse_lines(user_id))
+        except Exception:
+            lines.append("## Predictive History — morning momentum")
+            lines.append("")
+            lines.append("_Jiang pulse skipped (could not read work-jiang paths)._")
+            lines.append("")
+    else:
+        lines.append("## Predictive History — morning momentum")
+        lines.append("")
+        lines.append("_Run `python3 scripts/work_jiang/warmup_jiang_pulse.py -u %s` if import failed._" % user_id)
+        lines.append("")
+
     lines.extend(
         [
-            "",
             "## Pipeline velocity (operator depth)",
             "",
             f"- {velocity_oneliner(user_id)}",
