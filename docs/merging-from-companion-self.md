@@ -81,6 +81,8 @@ When companion-self moves quickly, prefer **small, scoped merges** over rare “
 | 5 | **Validate** — `python3 scripts/validate-integrity.py --user grace-mar --json`; run merged validators if you pulled them (e.g. `validate-change-review.py` on demo paths). |
 | 6 | **Log + commit** — §3 row; optional update [`template-source.json`](../template-source.json) (`companionSelfCommit`, `templateVersion`, `mergedAt` / `syncedAt`). |
 
+**Alignment triage:** For governance-first review (behavior vs wording-only diffs, manifest rhythm, optional DESIGN/validator upstream), see [work-companion-self/README.md § Three-track alignment](skill-work/work-companion-self/README.md#three-track-alignment-operator-policy).
+
 **Operator verification (ongoing):** There is **no** `validate-template-sync.py` in companion-self as of template **0.4.0**; template **manifest integrity** is `node scripts/validate-template.js` (see companion-self `how-instances-consume-upgrades.md` § Auditability). Instances record merges in §3 and/or `template-source.json`; do not assume tools from informal narratives until they exist on `main`.
 
 ---

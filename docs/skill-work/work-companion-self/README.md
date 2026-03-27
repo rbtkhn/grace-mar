@@ -30,6 +30,7 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 | **[audit-report-manifest.md](audit-report-manifest.md)** | Latest template diff (companion-self manifest paths). Run: `python scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
 | **[TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md)** | Pinned companion-self commit for governance merges (`288b438` baseline). |
 | **[COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md)** | SELF-LIBRARY template alignment notes (merged upstream). |
+| **§ [Three-track alignment](#three-track-alignment-operator-policy)** | Operator policy: governance/protocol diffs, manifest rhythm, optional DESIGN upstream. |
 
 ---
 
@@ -41,6 +42,39 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 4. **Template-first** — Changes proposed to companion-self must align with template governance (concept, self-* taxonomy, tricameral). Instance-specific content stays in grace-mar.
 5. **Audit trail** — Proposals, PRs, sync events, and contributions are tracked. Provenance preserved.
 6. **Companion sovereignty** — "Autonomous" means Grace-Mar operates within approved scope (e.g., docs only, scripts only, specific paths). Companion sets boundaries.
+
+---
+
+## Three-track alignment (operator policy)
+
+Grace-mar and companion-self are **not** chasing full file parity. Use these three tracks when the template moves or when you audit drift.
+
+### Track 1 — Shared governance and protocol
+
+**Goal:** No silent **behavioral** drift on gate semantics, merge rules, evidence linkage, or knowledge boundary — so new instances that fork the template are not misled.
+
+- After each **material** companion-self bump, review the **“Differ (both exist, content differs)”** section in the manifest report (especially `docs/identity-fork-protocol.md` and related gate / boundary docs).
+- **Prioritize diffs that change behavior** (what companions, operators, or tooling must *do*). Defer or batch **wording-only** cleanups unless they remove ambiguity about behavior.
+- When grace-mar uses a **different filename** than the template but the same idea (e.g. `conceptual-framework.md` vs `concept.md`), prefer an explicit **mapping sentence** in the sync log or merge slice notes over duplicating files.
+
+### Track 2 — Manifest-first rhythm
+
+**Goal:** Template inventory drives what to compare; audits stay current without merge theater.
+
+1. Pull or pin companion-self `main` (or your target tag); note `HEAD` / `template-version.json`.
+2. Refresh the audit artifact:
+   `python3 scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md`
+3. Reconcile **only** slices that matter for **protocol, schemas, validators, or operator-facing contract** — per [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md) §2a (small merges, hand merge, log §3).
+4. Do not treat a long **“instance additions”** list as debt; instance-only `docs/skill-work/**` is expected.
+
+### Track 3 — DESIGN.md and `validate-design-md.py` (optional upstream)
+
+**Goal:** Either promote instance-proven UI spec to the template **once**, or keep it **instance-local** without implied parity.
+
+- **Upstream port:** If new instances should share the same agent-readable UI tokens and checks, open a single companion-self change set: template-appropriate `DESIGN.md` (e.g. under `users/_template/` or `docs/`) + optional validator under `scripts/`, wired in template CI if desired.
+- **Instance-local:** Keep [`users/grace-mar/DESIGN.md`](../../../users/grace-mar/DESIGN.md) and [`scripts/validate-design-md.py`](../../../scripts/validate-design-md.py) only in grace-mar; do not block template sync on DESIGN parity.
+
+This track is **discretionary** — unlike Track 1 and 2, it is not a recurring merge obligation.
 
 ---
 
