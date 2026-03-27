@@ -17,6 +17,8 @@
 | **Committees** | House Transportation & Infrastructure; House Judiciary. |
 | **Personal** | Married (Rhonda); four children; cattle farm in Kentucky. |
 
+**Literary portrait (WORK):** Optional long-form narrative tone reference — [principal-portrait-literary-sketch.md](principal-portrait-literary-sketch.md). **Not** a fact source; do not treat as Voice or default X copy; verify any datable claim before public ship.
+
 ---
 
 ## Current race (2026)

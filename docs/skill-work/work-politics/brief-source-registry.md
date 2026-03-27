@@ -21,6 +21,7 @@ Update `Last checked` when you review a source. `Status` is for operator workflo
 | **Independent primary horserace polls** | live external | Search + [Ballotpedia](https://ballotpedia.org/) / outlets | Named pollster + toplines when published | as released |  | watch | Distinct from campaign internals; see [polling-and-markets.md](polling-and-markets.md) |
 | **Recency pass (operator)** | workflow | See § Recency pass below | Forces brief to lean on **last 7–30 days**, not stale SEO | **every weekly brief** | 2026-03-14 | ready | Scaffold + generator §0; live bullets still operator |
 | **Daily brief (work-politics + work-strategy)** | script + JSON | [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md), [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), [work-strategy/daily-brief-jiang-layer.md](../work-strategy/daily-brief-jiang-layer.md), `scripts/generate_wap_daily_brief.py` | RSS ingest + **W** (campaign) + **S** (product/governance) scores; snapshot + strategy focus + **§1c** work-jiang hooks (slow layer) | **daily** (operator schedule) |  | watch | Not Voice; not SELF; complete synthesis in output before ship |
+| **Principal literary sketch** | operator narrative | [principal-portrait-literary-sketch.md](principal-portrait-literary-sketch.md) | Long-form tone / message DNA only — **not** weekly fact intake; verify before donor or explainer copy ships | as-needed |  | draft | Churchill-register prose; see doc § claims to verify |
 
 ---
 

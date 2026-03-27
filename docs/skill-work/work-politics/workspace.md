@@ -59,6 +59,7 @@ Use this file when you want one place to understand:
 | `actionable-features-and-insights.md` | Actionable features (instinct-as-input, reversibility, contradiction badge, post-decision), copy snippets, process items; priority order |
 | `civ-mem-test-run-*.md` | Dated test runs (DRAFT until signed) |
 | `principal-profile.md` | Principal baseline |
+| `principal-portrait-literary-sketch.md` | Optional long-form literary portrait (WORK); tone / narrative reference — not factual baseline |
 | `opposition-brief.md` | Living opposition tracker |
 | `calendar-2026.md` | Election and compliance calendar |
 | `revenue-log.md` | Revenue and allocation continuity |
