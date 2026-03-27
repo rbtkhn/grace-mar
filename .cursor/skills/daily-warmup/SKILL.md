@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, KY-4 polling and Polymarket snapshot, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation.
+description: Generate a Grace-Mar morning coffee or daily operator warmup with gate state, work-politics status, KY-4 polling and Polymarket snapshot, repo integrity, and top priorities. Use when the operator says good morning, when starting a new thread, planning the day, asking what to work on next, or requesting a pulse check before implementation. For good night / end of session, use the Good night section (handoff check — not the morning stack).
 ---
 
 # Daily Warmup
@@ -45,6 +45,28 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    - 1–2 draft post candidates for `@usa_first_ky` (still draft-only; human approval required)
    - If **Civilization** transcripts are pending or just landed, one line on that (upload/integrate status).
 6. Stay read-only otherwise: no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
+
+---
+
+## "Good night" = end session here
+
+When the operator says **"good night"**, **"goodnight"**, or clearly the same intent (signing off for the day, closing the session), treat it as a **session end**, not a daily start.
+
+**Do not** run the full [Good morning](#good-morning--start-here) stack (no daily brief generation, no Polymarket / Massie X pass, no `operator_daily_warmup.py` / `harness_warmup.py` as the main flow) **unless** they explicitly ask for morning-style output in the same message.
+
+**Do** run the **handoff check** so the next thread can resume cleanly:
+
+```bash
+python3 scripts/operator_handoff_check.py -u grace-mar
+```
+
+1. **Include the command output** in your reply (paste verbatim or as a fenced markdown block).
+2. Summarize in one short paragraph: what moved today (if known from the thread), what is parked, and the **suggested re-entry prompt** from the script output.
+3. Stay read-only: no merge, stage, or commit as part of good night.
+
+Full spec: [`.cursor/skills/handoff-check/SKILL.md`](../handoff-check/SKILL.md).
+
+---
 
 ## Run this first
 

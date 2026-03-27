@@ -1,11 +1,13 @@
 ---
 name: handoff-check
-description: Generate a stop/resume handoff summary with recent commits, meaningful local work, runtime noise, gate continuity, and a suggested re-entry prompt. Use when ending a session, resuming work after a break, or checking what is safe to ignore before committing or pushing.
+description: Generate a stop/resume handoff summary with recent commits, meaningful local work, runtime noise, gate continuity, and a suggested re-entry prompt. Use when ending a session, resuming work after a break, or checking what is safe to ignore before committing or pushing. Triggered by "good night" / session end per daily-warmup skill § Good night.
 ---
 
 # Handoff Check
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
+
+**Preset:** When the operator says **good night** (session end), the agent should run this workflow by default — see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § **Good night**.
 
 ## Default command
 
