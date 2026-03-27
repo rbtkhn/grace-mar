@@ -37,6 +37,10 @@ Volume Five title set by operator: **Great Books**.
 
 **Game Theory #1–#16** ingested: `gt-01` … `gt-16` in `metadata/sources.yaml`, including **Game Theory #16: Pax Judaica Rising** (`0aASxQrJYuo`). Validator clean. Book lane: analysis, chapter mapping, Part II mode still per [book/VOLUME-IV-GAME-THEORY.md](book/VOLUME-IV-GAME-THEORY.md).
 
+## 2026-03-27 — Cross-volume book quality doctrine
+
+Added [book/BOOK-QUALITY-DOCTRINE.md](book/BOOK-QUALITY-DOCTRINE.md) as a continuity anchor for future agent sessions. Doctrine integrates ten editorial upgrades (argument map, thesis openings, steelman/rebuttal, falsification lines, voice charter) under a strict **no scope expansion** rule.
+
 ## Volume V (Great Books) — next ingest
 
 Handoff for wiring `great-books` / `gb-*` / `lectures/great-books-NN-*.md` and ingesting channel **Great Books #1–#7**: [HANDOFF-volume-v-great-books-ingest.md](HANDOFF-volume-v-great-books-ingest.md).
