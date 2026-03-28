@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E** (morning **A** = template + boundary audit combined); after **A–D** choices, **re-offer full A–E** until **E** closes the morning session. **Good morning light** / **good morning minimal** supported. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E**; after **A–D**, **re-offer full A–E** until **E** closes the night session. Good morning **E** is not good night; good night **E** is not the next day’s good morning.
+description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E** (repeat **good morning** same day OK for reorientation; **E** closes only the current meeting). Morning **A** = template + boundary audit combined; **B** work-dev + [work-dev-sources.md](docs/skill-work/work-dev/work-dev-sources.md); **C** work-strategy / work-jiang / work-politics; **D** system pick; **E** end morning → normal workflow. After **A–D**, **re-offer full A–E** until **E**. **Good morning light** / **minimal** for lighter repeat passes. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E** (night **A–C** / **E** as before; night **D** = same *system pick — productive or hygiene* style as morning **D**, scoped to handoff/closeout). Good morning **E** is not good night; good night **E** is not the next day’s good morning.
 ---
 
 # Daily Warmup
@@ -27,20 +27,28 @@ If the operator says **“good morning”** on a **Sunday**, default to **week-a
 - Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
 - **Skip** full **polling + Polymarket** ([polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md)) and the **Massie X** skill (`.cursor/skills/massie-x-news-search-draft/SKILL.md`).
 - **Daily brief:** same as Tue–Fri — generate only if today’s file is missing; else one-line pointer to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md`.
-- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–E** (do not omit **E**). On later turns, **A–D** executes the track then **re-offers full A–E** until **E**.
+- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–E** (do not omit **E**). On later turns, **A–D** executes the track then **re-offers full A–E** until **E**. **Track B:** prefer a **lighter** real-time pass over [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md) (e.g. spot-check one or two listed sources) instead of a full sweep.
 
 **“Good morning minimal”** (or clear equivalent):
 
 - Run **`harness_warmup.py`** only when instance state matters; **do not** run `operator_daily_warmup.py` unless the operator asks.
 - **Skip** daily brief generation, Polymarket, and Massie X unless explicitly requested.
 - Optional **one-line** gate pointer (e.g. pending count from warmup output if already pasted, or “see `users/grace-mar/recursion-gate.md`”).
-- Still output **full Step 2 A–E**. On later turns, **A–D** then **re-offer full A–E** until **E** (same as full/light good morning).
+- Still output **full Step 2 A–E**. On later turns, **A–D** then **re-offer full A–E** until **E** (same as full/light good morning). **Track B:** **do not** run a broad web sweep; give **one** suggested work-dev next step from repo context + a **single** optional real-time check if the operator later chooses **B**.
 
 ---
 
 ## "Good morning" = start here (two steps)
 
 When the operator begins with **"good morning"** (or clearly the same intent), treat it as opening a **good morning session**. **Scale Step 1** using **[explicit phrases](#explicit-phrases-override-default-cadence-when-stated)** when the operator used one; otherwise use **[cadence by weekday](#cadence-by-weekday)** (Sunday → week-ahead; Tue–Fri → lighter; Monday → full). **Step 2** (A–E menu) always follows Step 1.
+
+### Multiple good mornings per day (reorientation)
+
+The operator may say **good morning** **more than once per calendar day** whenever they need **reorientation** toward the most productive tasks — not only at literal day start. **Each** new **good morning** runs **Step 1** again (at the cadence or explicit phrase for that message) and starts a **new** A–E cycle. **E** closes only the **current** morning meeting in this thread; it does **not** imply a one-per-day limit.
+
+**Habit (optional):** For a **second or later** pass the same day when heavy intel was already run, the operator can say **good morning light** or **good morning minimal** to skip or shorten Polymarket, Putin, and Massie X while still refreshing `operator_daily_warmup.py` / `harness_warmup.py` (when used) and the A–E menu. If they use plain **good morning** again, run Step 1 at full cadence for that day — they may want refreshed markets and scans.
+
+If **good morning** arrives **before** the prior morning session reached **E**, treat it as a **reorientation restart:** run Step 1 again, then offer a fresh A–E (use thread context to label B/C/D).
 
 ### Step 1 — Automated actions (run first; paste outputs)
 
@@ -67,7 +75,7 @@ Immediately **after** Step 1 content, output the fixed **A–E** menu (see [Good
 
 When the operator later sends **A**, **B**, **C**, or **D** (or equivalent), **execute that track** without re-running Step 1 unless they say **good morning** again. **After** that track’s content, **always output the full A–E morning menu again** (same roles as [Good morning — multiple choice](#good-morning--multiple-choice-ae-required)). The good morning session stays **open** until **E** — do not skip the menu on A–D turns.
 
-When the operator sends **E** (or “end morning meeting” / clear equivalent): **formally close** the good morning session — short acknowledgment (one or two sentences). **Do not** run Step 1 automated stack on subsequent turns until the next **good morning**. **E is not good night** — no required `operator_handoff_check.py` unless they also invoke **Good night** below.
+When the operator sends **E** (or “end morning meeting” / clear equivalent): **formally close** the good morning session — short acknowledgment (one or two sentences). **Do not** run Step 1 automated stack on subsequent turns until the next **good morning** (which may be **later the same day** for reorientation). **E is not good night** — no required `operator_handoff_check.py` unless they also invoke **Good night** below.
 
 ---
 
@@ -77,21 +85,21 @@ The **first** good morning reply ends **Step 2** with **exactly five options —
 
 | Letter | Role | What it means when chosen |
 |--------|------|---------------------------|
-| **A** | **Template + boundary audit** | **Combined (always both when A is chosen):** (1) **Template — grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`; default `./companion-self` if cloned beside repo) → refresh [`audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). (2) **Boundary — leakage / isolation in this repo:** spot-check that **grace-mar** Record/identity is not copied into wrong trees; [audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). Optional: `python3 scripts/validate-integrity.py --user grace-mar` if Step 1 or thread flagged drift (report only unless operator asks to fix). (3) **Required closing block — reconciliation code:** per [work-companion-self § Reconciliation code audit](../../../docs/skill-work/work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream): **Upstream** (grace-mar → companion-self) and **Downstream** (companion-self → grace-mar) bullets with **concrete paths** (scripts, validators, CI, hooks), or **`Reconciliation code: none`** with one-line rationale. |
-| **B** | **Continue most recent work module** | Resume the **most plausible active WORK lane** — infer from this thread (if obvious), else `users/grace-mar/session-log.md` tail, warmup/Jiang hints, or recent activity in `docs/skill-work/work-*` / `users/grace-mar/work-*.md`. **Label B** with a **concrete guess** (e.g. “continue **work-jiang** transcript queue”); operator may correct. |
-| **C** | **System choice (context)** | **One** option chosen from today’s surface: e.g. RECURSION-GATE review, integrity fix, work-dev gap, weekly brief prep, content-queue for `@usa_first_ky` — whatever Step 1 surfaced as highest leverage **that is not** already A/B. |
-| **D** | **Compliance / sources pulse** | Light pass: [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md) **Last checked** / stale cues; [brief-source-registry.md](../../../docs/skill-work/work-politics/brief-source-registry.md) `needs_refresh` / `watch`; optional FEC/calendar line from daily brief + registry — read-only unless operator asks to edit. |
-| **E** | **End morning meeting** | **Formally closes** the good morning session (see **Step 2** under [Good morning = start here](#good-morning--start-here-two-steps)). Not handoff / not good night unless they say so separately. |
+| **A** | **Template + boundary audit** | **Unchanged — combined when A is chosen:** (1) **Template — grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`; default `./companion-self` if cloned beside repo) → refresh [`audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). (2) **Boundary — leakage / isolation:** spot-check that **grace-mar** Record/identity is not copied into wrong trees; [audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). Optional: `python3 scripts/validate-integrity.py --user grace-mar` if Step 1 or thread flagged drift (report only unless operator asks to fix). (3) **Required closing — reconciliation code:** per [work-companion-self § Reconciliation code audit](../../../docs/skill-work/work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream): **Upstream** (grace-mar → companion-self) and **Downstream** (companion-self → grace-mar) bullets with **concrete paths** (scripts, validators, CI, hooks), or **`Reconciliation code: none`** with one-line rationale. |
+| **B** | **Work-dev — next step + sources refresh** | **Territory:** `docs/skill-work/work-dev/` (integration / OpenClaw / export–stage–merge rhythm — [INTEGRATION-PROGRAM.md](../../../docs/skill-work/work-dev/INTEGRATION-PROGRAM.md), [README.md](../../../docs/skill-work/work-dev/README.md)). **Always read** [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md) (authorized channel/podcast list). **Real-time search / fetch:** web-check listed sources (home pages, recent posts, “still active”) so the operator sees **current** signal, not only disk. Deliver: **(1)** short **delta** vs what the doc implies (stale URL, renamed show, one-line per notable change), **(2)** **one** concrete **suggested next step** (e.g. run export script, update a doc row, open a staging checklist — read-only unless operator switches to ship). **Edits** to `work-dev-sources.md` only when the operator approves implementation. |
+| **C** | **Work-strategy / work-jiang / work-politics — next step** | Pick **exactly one** lane by leverage from Step 1 + thread + `users/grace-mar/session-log.md` / `work-*.md`: **work-strategy** (`docs/skill-work/work-strategy/` — daily brief, Putin watch, calendar), **work-jiang** (`research/external/work-jiang/`, `users/grace-mar/work-jiang.md`, Predictive History), or **work-politics** (`docs/skill-work/work-politics/` — polling, brief registry, campaign, Massie X queue). **State which lane** in the first line, then **one** actionable next step (read-only unless operator ships). |
+| **D** | **System pick — productive or hygiene** | **Not** repeating A/B/C: the single best **alternative** next move from repo state — e.g. RECURSION-GATE review ([gate-review-pass](../gate-review-pass/SKILL.md)), `validate-integrity.py`, commit/push grouping, weekly-brief prep, derived-export refresh, worktree noise triage, or content-queue hygiene. One clear recommendation + optional second line “if you only have 5 minutes.” Read-only unless operator asks to implement. |
+| **E** | **End good morning → normal workflow** | **Formally closes** the good morning session (see **Step 2** under [Good morning = start here](#good-morning--start-here-two-steps)). Transition to normal chat/work until the next **good morning**. Not handoff / not good night unless they say so separately. |
 
-**Example shape (C/D filled from context; B shows a guessed lane):**
+**Example shape (B/C/D show inferred labels; adjust each turn):**
 
 ```markdown
 **Good morning — pick one:**
 - **A.** Template + boundary audit — `template_diff` / audit reports + leakage / fork isolation / skills-modularity (combined when chosen)
-- **B.** Continue **work-jiang** — chapter queue + Predictive History momentum *(adjust label to match inference)*
-- **C.** **Gate review** — clear top pending RECURSION-GATE items *(example only)*
-- **D.** **Sources pulse** — brief-source-registry + polling doc freshness *(example only)*
-- **E.** **End morning meeting** — close good morning session; normal work until next “good morning”
+- **B.** Work-dev — next step + **real-time** pass on [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md) *(name the suggested step after you choose B)*
+- **C.** **Work-jiang** — next step *(or work-strategy / work-politics — one lane only when chosen)*
+- **D.** **System pick** — e.g. gate review, integrity, or repo hygiene *(fill from state when chosen)*
+- **E.** **End good morning** — close session; normal workflow until next “good morning”
 ```
 
 When the operator chooses **A**, the reply must end the audit section with a **Reconciliation code** block, for example:
@@ -149,17 +157,17 @@ Every **good night** reply ends **Step 2** with **exactly five options — A thr
 | **A** | **Gate — tomorrow first** | Deepen **RECURSION-GATE** from handoff output: top **1–3** pending items, suggested **review order** for next session, pointer to `operator_gate_review_pass` / in-file approve → `process_approved_candidates.py` — **read-only** reminders; **no merge** without companion approval. |
 | **B** | **Boundary / integrity** | Quick pass: **fork isolation** / leakage ([audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md)) or run **`python3 scripts/validate-integrity.py --user grace-mar`** (or `--json`) if handoff or thread flagged drift; report only unless operator asks to fix. |
 | **C** | **Night closeout lane** | Act on **`## Predictive History — night closeout`** from handoff: Jiang lane rest position, **Spark** / `rebuild_all` ritual if relevant, optional pointer to `users/grace-mar/session-log.md` or `work-jiang.md` for tomorrow — still **not** Record merge unless pipeline invoked. |
-| **D** | **System choice (context)** | **One** night-specific lever from handoff + thread: e.g. **commit grouping** advice, **push** caution, **weekly brief** carryover, **work-politics** inbox, `@usa_first_ky` draft queue for morning — whatever Step 1 surfaced as highest leverage **that is not** already A/B/C. |
+| **D** | **System pick — productive or hygiene** | **Same style as good morning D**, night-scoped: the single best **alternative** closeout move from handoff + thread **that is not** already A/B/C — e.g. **commit / push hygiene** (grouping, what to commit vs ignore, push caution), **derived-export refresh** (`refresh_derived_exports.py` + integrity), **weekly-brief** carryover for tomorrow, **work-politics** inbox or `@usa_first_ky` draft queue for morning, **light gate queue skim** only if **A** was not chosen and handoff still warrants a non-deep ordering note. One clear recommendation + optional “if you only have 5 minutes.” Read-only unless operator asks to implement. |
 | **E** | **End night session** | **Formally closes** the good night session (see **Step 2** under [“Good night” = end session here (two steps)](#good-night--end-session-here-two-steps)). Does **not** run morning stack; next **automated** morning block awaits **good morning**. |
 
-**Example shape (D filled from context):**
+**Example shape (D shows one system pick when chosen):**
 
 ```markdown
 **Good night — pick one:**
 - **A.** Gate — tomorrow first (top pending + review order; merge = companion approval only)
 - **B.** Boundary / integrity — quick isolation check or `validate-integrity.py`
 - **C.** Night closeout — work-jiang / Predictive History carryover from handoff block
-- **D.** **Push hygiene** — uncommitted mix; what to commit vs ignore *(example only)*
+- **D.** **System pick** — productive or hygiene *(e.g. commit/push grouping, derived exports, morning draft queue — fill from handoff when chosen)*
 - **E.** **End night session** — close good night; no rerun handoff until next “good night”
 ```
 
