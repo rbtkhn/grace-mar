@@ -13,7 +13,7 @@ Last updated: 2026-03-28
 ## Current Baseline
 
 - Branch: `main`
-- Latest pushed commit: `12468db` (handoff update); confirm with `git log -1 --oneline` after your next push
+- Latest pushed commit: see `git log -1 --oneline` (after last push to `main`)
 - **Active clone path** (top-level): _(paste output of `git rev-parse --show-toplevel` in the grace-mar repo you edit)_
 - **companion-self path** (if used today): _(e.g. sibling `…/companion-self` or nested `…/grace-mar/companion-self`; omit if not in play)_
 - Core invariants active: Sovereign Merge Rule, knowledge boundary, evidence linkage, **companion** merge authority (see Terminology below).
