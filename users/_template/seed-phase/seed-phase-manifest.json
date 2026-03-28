@@ -22,7 +22,8 @@
     "seed_memory_contract": "seed_memory_contract.json",
     "seed_trial_report": "seed_trial_report.json",
     "seed_readiness": "seed_readiness.json",
-    "seed_confidence_map": "seed_confidence_map.json"
+    "seed_confidence_map": "seed_confidence_map.json",
+    "work_dev_seed": "work_dev_seed.json"
   },
   "confidence_summary": {
     "overall": 0.0

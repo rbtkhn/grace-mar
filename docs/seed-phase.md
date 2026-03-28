@@ -117,6 +117,7 @@ Why this matters: the repo already treats seed phase as a defined artifact pipel
 | Readiness | [seed-phase-readiness.md](seed-phase-readiness.md) |
 | Confidence | [seed-phase-confidence-model.md](seed-phase-confidence-model.md) |
 | Artifacts | [seed-phase-artifacts.md](seed-phase-artifacts.md) |
+| Survey prompts | [seed-phase-survey.md](seed-phase-survey.md) |
 | Validation | [seed-phase-validation.md](seed-phase-validation.md) |
 | Schemas | `schema-registry/seed-*.v1.json` |
 | Validator | `scripts/validate-seed-phase.py` |

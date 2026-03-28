@@ -26,6 +26,7 @@ JSON_FILES = [
     "seed_trial_report.json",
     "seed_readiness.json",
     "seed_confidence_map.json",
+    "work_dev_seed.json",
 ]
 
 
@@ -93,6 +94,23 @@ def main() -> None:
             "## Confidence Map",
             "",
             f"Overall **{cm.get('overall', '')}**.",
+            "",
+            "## Work dev context",
+            "",
+        ]
+    )
+    wd = data["work_dev_seed.json"]
+    lines.append(
+        f"Status **{wd.get('status', '')}**; involvement **{wd.get('development_involvement', '')}**; "
+        f"evidence_basis **{wd.get('evidence_basis', '')}**."
+    )
+    if wd.get("active_focuses"):
+        lines.append("")
+        lines.append("Focuses: " + "; ".join(wd["active_focuses"]))
+    if wd.get("notes"):
+        lines.extend(["", wd["notes"].strip()])
+    lines.extend(
+        [
             "",
             "## Blocking Issues",
             "",

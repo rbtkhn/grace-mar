@@ -1,48 +1,62 @@
 # Seed Dossier
 
-**user_slug:** demo-seed  
-**Synthetic demo** — not a live Record.
+**user_slug:** demo-seed
 
 ## Status
 
-Ready for illustration only. `seed_readiness.json` decision: **pass**.
+Manifest status: **ready**. Readiness decision: **pass** (score 0.88).
 
 ## Stage Progress
 
-All stages 0–6 complete; readiness gate complete. See `seed-phase-manifest.json`.
+- **intake**: complete
+- **identity**: complete
+- **curiosity**: complete
+- **pedagogy**: complete
+- **expression**: complete
+- **memory_contract**: complete
+- **trials**: complete
+- **readiness**: complete
 
 ## Identity Summary
 
-**Demo Tutor** — supportive learning companion for a teen; peer-mentor stance; human holds authority.
+**Demo Tutor** — Supportive learning companion for a teen learner.
 
 ## Curiosity Summary
 
-Domains: natural sciences, ancient history, creative writing. Socratic follow-ups with concrete examples.
+natural sciences, ancient history, creative writing
 
 ## Pedagogy Summary
 
-Concrete-then-abstract explanations; scaffolding via worked example; anti-spoonfeeding rules active.
+Concrete-then-abstract; short paragraphs.
 
 ## Expression Summary
 
-Short replies by default; bulleted steps for procedures; warm, clear tone.
+Short daily check-ins; longer weekly reflection optional.
 
 ## Memory Governance Summary
 
-Five memory classes declared; deletion rules for guardian requests; sensitive categories flagged.
+identity, preferences, learning_progress, projects, constraints
 
 ## Confidence Map
 
-Overall **0.88** (high band). See `seed_confidence_map.json`.
+Overall **0.88**.
+
+## Work dev context
+
+Status **initialized**; involvement **regular**; evidence_basis **seed_survey**.
+
+Focuses: seed phase alignment; OpenClaw handback
+
+Synthetic demo values for validation and docs.
 
 ## Blocking Issues
 
-None (demo).
+- None
 
 ## Recommended Next Actions
 
-Use this folder only as a **shape reference**; activate real instances per instance repo bootstrap.
+- Activate instance with demo user dir separate from this seed-phase folder.
 
 ## Activation Recommendation
 
-**Demo only — do not treat as authorization to ship a live minor-facing system without real review.**
+**Pass** — eligible for activation per operator policy.

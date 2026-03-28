@@ -28,6 +28,7 @@ REQUIRED_FILES = [
     "seed_trial_report.json",
     "seed_readiness.json",
     "seed_confidence_map.json",
+    "work_dev_seed.json",
     "seed_dossier.md",
 ]
 
@@ -42,6 +43,7 @@ SCHEMA_BY_FILE = {
     "seed_trial_report.json": "schema-registry/seed-trial-report.v1.json",
     "seed_readiness.json": "schema-registry/seed-readiness.v1.json",
     "seed_confidence_map.json": "schema-registry/seed-confidence-map.v1.json",
+    "work_dev_seed.json": "schema-registry/work-dev-seed.v1.json",
 }
 
 # Manifest "artifacts" object uses logical keys -> filename values
@@ -55,6 +57,7 @@ EXPECTED_ARTIFACT_KEYS = {
     "seed_trial_report",
     "seed_readiness",
     "seed_confidence_map",
+    "work_dev_seed",
 }
 
 

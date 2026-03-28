@@ -1,0 +1,16 @@
+{
+  "status": "initialized",
+  "development_involvement": "regular",
+  "development_role_modes": ["builder", "researcher"],
+  "primary_repos": ["grace-mar"],
+  "systems_or_products": ["cognitive fork runtime"],
+  "preferred_languages": ["Python", "Markdown"],
+  "preferred_tools": ["Cursor", "git"],
+  "work_modes": ["implementation", "documentation", "research"],
+  "technical_research_areas": ["LLM tooling", "governance"],
+  "active_focuses": ["seed phase alignment", "OpenClaw handback"],
+  "important_constraints": ["gated Record merges only"],
+  "companion_help_priorities": ["planning", "review_and_critique"],
+  "notes": "Synthetic demo values for validation and docs.",
+  "evidence_basis": "seed_survey"
+}
