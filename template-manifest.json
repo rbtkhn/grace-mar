@@ -498,7 +498,8 @@
       "seed_memory_contract": "schema-registry/seed-memory-contract.v1.json",
       "seed_trial_report": "schema-registry/seed-trial-report.v1.json",
       "seed_readiness": "schema-registry/seed-readiness.v1.json",
-      "seed_confidence_map": "schema-registry/seed-confidence-map.v1.json"
+      "seed_confidence_map": "schema-registry/seed-confidence-map.v1.json",
+      "work_dev_seed": "schema-registry/work-dev-seed.v1.json"
     },
     "validator": "scripts/validate-seed-phase.py",
     "dossier_generator": "scripts/generate-seed-dossier.py"
