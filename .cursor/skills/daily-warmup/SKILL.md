@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E**; after **A–D** choices, **re-offer full A–E** until **E** closes the morning session. **Good morning light** / **good morning minimal** supported. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E**; after **A–D**, **re-offer full A–E** until **E** closes the night session. Good morning **E** is not good night; good night **E** is not the next day’s good morning.
+description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E** (morning **A** = template + boundary audit combined); after **A–D** choices, **re-offer full A–E** until **E** closes the morning session. **Good morning light** / **good morning minimal** supported. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E**; after **A–D**, **re-offer full A–E** until **E** closes the night session. Good morning **E** is not good night; good night **E** is not the next day’s good morning.
 ---
 
 # Daily Warmup
@@ -77,21 +77,29 @@ The **first** good morning reply ends **Step 2** with **exactly five options —
 
 | Letter | Role | What it means when chosen |
 |--------|------|---------------------------|
-| **A** | **Template audit** | **Grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`; default `./companion-self` if cloned beside repo) → refresh [`audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). |
-| **B** | **Boundary audit** | **Leakage / isolation in this repo:** spot-check that **grace-mar** Record/identity is not copied into wrong trees; [audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). |
-| **C** | **Continue most recent work module** | Resume the **most plausible active WORK lane** — infer from this thread (if obvious), else `users/grace-mar/session-log.md` tail, warmup/Jiang hints, or recent activity in `docs/skill-work/work-*` / `users/grace-mar/work-*.md`. **Label C** with a **concrete guess** (e.g. “continue **work-jiang** transcript queue”); operator may correct. |
-| **D** | **System choice (context)** | **One** option chosen from today’s surface: e.g. RECURSION-GATE review, integrity fix, work-dev gap, weekly brief prep, content-queue for `@usa_first_ky` — whatever Step 1 surfaced as highest leverage **that is not** already A/B/C. |
+| **A** | **Template + boundary audit** | **Combined (always both when A is chosen):** (1) **Template — grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`; default `./companion-self` if cloned beside repo) → refresh [`audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). (2) **Boundary — leakage / isolation in this repo:** spot-check that **grace-mar** Record/identity is not copied into wrong trees; [audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). Optional: `python3 scripts/validate-integrity.py --user grace-mar` if Step 1 or thread flagged drift (report only unless operator asks to fix). (3) **Required closing block — reconciliation code:** per [work-companion-self § Reconciliation code audit](../../../docs/skill-work/work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream): **Upstream** (grace-mar → companion-self) and **Downstream** (companion-self → grace-mar) bullets with **concrete paths** (scripts, validators, CI, hooks), or **`Reconciliation code: none`** with one-line rationale. |
+| **B** | **Continue most recent work module** | Resume the **most plausible active WORK lane** — infer from this thread (if obvious), else `users/grace-mar/session-log.md` tail, warmup/Jiang hints, or recent activity in `docs/skill-work/work-*` / `users/grace-mar/work-*.md`. **Label B** with a **concrete guess** (e.g. “continue **work-jiang** transcript queue”); operator may correct. |
+| **C** | **System choice (context)** | **One** option chosen from today’s surface: e.g. RECURSION-GATE review, integrity fix, work-dev gap, weekly brief prep, content-queue for `@usa_first_ky` — whatever Step 1 surfaced as highest leverage **that is not** already A/B. |
+| **D** | **Compliance / sources pulse** | Light pass: [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md) **Last checked** / stale cues; [brief-source-registry.md](../../../docs/skill-work/work-politics/brief-source-registry.md) `needs_refresh` / `watch`; optional FEC/calendar line from daily brief + registry — read-only unless operator asks to edit. |
 | **E** | **End morning meeting** | **Formally closes** the good morning session (see **Step 2** under [Good morning = start here](#good-morning--start-here-two-steps)). Not handoff / not good night unless they say so separately. |
 
-**Example shape (D filled from context; C shows a guessed lane):**
+**Example shape (C/D filled from context; B shows a guessed lane):**
 
 ```markdown
 **Good morning — pick one:**
-- **A.** Template audit — grace-mar vs companion-self (`template_diff`, audit reports)
-- **B.** Boundary audit — leakage / fork isolation / skills-modularity
-- **C.** Continue **work-jiang** — chapter queue + Predictive History momentum *(adjust label to match inference)*
-- **D.** **Gate review** — clear top pending RECURSION-GATE items *(example only)*
+- **A.** Template + boundary audit — `template_diff` / audit reports + leakage / fork isolation / skills-modularity (combined when chosen)
+- **B.** Continue **work-jiang** — chapter queue + Predictive History momentum *(adjust label to match inference)*
+- **C.** **Gate review** — clear top pending RECURSION-GATE items *(example only)*
+- **D.** **Sources pulse** — brief-source-registry + polling doc freshness *(example only)*
 - **E.** **End morning meeting** — close good morning session; normal work until next “good morning”
+```
+
+When the operator chooses **A**, the reply must end the audit section with a **Reconciliation code** block, for example:
+
+```markdown
+### Reconciliation code
+- **Upstream (grace-mar → companion-self):** *(specific paths + one line each, or “none — …”)*
+- **Downstream (companion-self → grace-mar):** *(specific paths + adopt command if any, or “none — …”)*
 ```
 
 ---

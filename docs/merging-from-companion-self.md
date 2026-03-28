@@ -120,6 +120,8 @@ Record each merge from template so you can see when grace-mar was last updated a
 
 It **does not** overwrite instance files; operator merges by hand per §2.
 
+When an operator or agent runs a **template + boundary audit** (e.g. daily-warmup good morning **A**), the narrative should close with **specific upstream / downstream recommendations for reconciliation code** — `scripts/`, validators, CI, hooks — not only doc drift. Spec: [work-companion-self/README — Reconciliation code audit](skill-work/work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream).
+
 ---
 
 ## 5. Deciding whether a Grace-Mar change should go upstream
