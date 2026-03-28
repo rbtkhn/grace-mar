@@ -74,6 +74,8 @@ python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt && \
 python3 scripts/export_runtime_bundle.py -u grace-mar -o users/grace-mar/runtime-bundle
 ```
 
+When **editorial or lane work** and **regeneration-only** changes land in the same session, prefer **separate commits** for derived exports (PRP, manifest, runtime bundle, ledger) so review and handoff stay scannable.
+
 End of session: update **`docs/development-handoff.md`**, commit, push if requested.
 
 ---
@@ -90,6 +92,22 @@ End of session: update **`docs/development-handoff.md`**, commit, push if reques
 **Other session focus:**
 - If **work-jiang** (Jiang book/site operator lane), read **`bootstrap/work-jiang-bootstrap.md`** then `research/external/work-jiang/README.md` § Boundaries and the work-jiang feature checklist skill.
 - If **extension-focused** (not work-dev), read §1 then **extension/readme.md** and skim `extension/`. Use §5 Extension commands and §6 Extension file map below.
+
+---
+
+## Working trees and authority
+
+Commits and pushes apply to **the repository whose root you are in**. Do not assume two checkouts match.
+
+- **This repo** (this `grace-mar` clone) — canonical tree for instance work you intend to ship **here** (companion files under `users/grace-mar/`, work-dev, work-jiang under `research/external/work-jiang/`, bot, docs, scripts).
+- **`companion-self`** (template / upstream) — **separate clone**. Its `main`, remotes, and PRs refer to **that** tree only. Before merging or pushing there, run `git status`, `git remote -v`, and `git branch --show-current` **in that directory**.
+- **Nested vs sibling:** If the template clone lives **inside** this repo (e.g. `grace-mar/companion-self`) or as a **sibling** folder, note the path in [`docs/development-handoff.md`](docs/development-handoff.md) (Current Baseline) or paste it at session start so the next thread does not guess which tree is authoritative.
+
+**Session paste (run in the clone you are editing):**
+
+```bash
+pwd && git rev-parse --show-toplevel && git branch --show-current && git remote -v
+```
 
 ---
 

@@ -45,6 +45,15 @@ RUNTIME_NOISE_MARKERS = (
     "runtime-bundle/audit/",
 )
 
+# Regenerated exports / integrity-adjacent — batch-commit or refresh; not "lane editorial" work.
+EXPORT_CHURN_MARKERS = (
+    "compute-ledger.jsonl",
+    "grace-mar-llm.txt",
+    "fork-manifest.json",
+    "/manifest.json",
+    "/llms.txt",
+)
+
 
 def _run_git(*args: str) -> list[str]:
     proc = subprocess.run(
@@ -63,6 +72,8 @@ def _classify_change(path_line: str) -> tuple[str, str]:
     path = path_line[3:] if len(path_line) > 3 else path_line
     if any(marker in path for marker in RUNTIME_NOISE_MARKERS):
         return "runtime_noise", path
+    if any(marker in path for marker in EXPORT_CHURN_MARKERS):
+        return "export_churn", path
     if (
         path.startswith(".cursor/skills/")
         or path == "docs/operator-skills.md"
@@ -206,11 +217,14 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
     status_lines = _run_git("status", "--short")
     recent_commits = _run_git("log", "--oneline", "-3")
     runtime_noise: list[str] = []
+    export_churn: list[str] = []
     meaningful_changes: list[str] = []
     for line in status_lines:
         category, _path = _classify_change(line)
         if category == "runtime_noise":
             runtime_noise.append(line)
+        elif category == "export_churn":
+            export_churn.append(line)
         else:
             meaningful_changes.append(line)
 
@@ -266,6 +280,19 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
     else:
         lines.append("- No meaningful local changes detected.")
 
+    lines.extend(["", "## Derived / export churn", ""])
+    if export_churn:
+        lines.append(
+            "_Regenerated or integrity-adjacent files — often safe to batch-commit separately "
+            "from editorial work, or refresh via bootstrap verify block (`export_prp`, "
+            "`export_manifest`, `validate-integrity`)._"
+        )
+        lines.append("")
+        for line in export_churn[:12]:
+            lines.append(f"- `{line}`")
+    else:
+        lines.append("- No derived / export churn detected in `git status`.")
+
     lines.extend(["", "## Runtime noise", ""])
     if runtime_noise:
         for line in runtime_noise[:10]:
@@ -286,7 +313,8 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
             "",
             "## Guardrail",
             "",
-            "- Treat runtime noise separately from meaningful local work before committing or pushing.",
+            "- Treat **derived / export churn** and **runtime noise** separately from meaningful "
+            "local work before committing or pushing.",
             "- This workflow summarizes stop/resume state only; it does not stage, commit, or merge anything.",
             "",
         ]

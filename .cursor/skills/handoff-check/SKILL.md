@@ -23,6 +23,7 @@ Summarize:
 - **Predictive History (work-jiang)** — **`## Predictive History — night closeout`**: where the lane rests, suggested first lever tomorrow, rotating **Spark** (edit `research/external/work-jiang/metadata/warmup-sparks.yaml`), optional rebuild ritual; still read-only / not Record
 - recently committed work
 - meaningful local changes still in progress
+- **`## Derived / export churn`** — PRP, manifest, ledger, etc. (regenerate or batch-commit vs editorial work)
 - runtime-only noise that should stay uncommitted
 - work-politics continuity if relevant
 - the best next re-entry prompt

@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Grace-Mar operator rhythm: **Good morning** = Step 1 (warmup, brief, Polymarket, Massie X) + Step 2 fixed **A–E** (template audit, boundary, continue work module, context D, **E** = end morning meeting). **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 fixed **A–E** (gate prep, boundary/integrity, night closeout lane, context D, **E** = formally end night session). Good morning **E** is not good night; good night **E** is not the next day’s good morning.
+description: Grace-Mar operator rhythm: **Good morning** = Step 1 (warmup, brief, Polymarket, Massie X) + Step 2 fixed **A–E**. Explicit **good morning light** (skip Polymarket + Massie X) and **good morning minimal** (harness-only + A–E). **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 fixed **A–E**. Good morning **E** is not good night; good night **E** is not the next day’s good morning.
 ---
 
 # Daily Warmup
@@ -20,11 +20,27 @@ Default rhythm (operator can override any day):
 
 If the operator says **“good morning”** on a **Sunday**, default to **week-ahead** mode unless they ask for the full Monday stack. Still run **Step 1** scaled to that mode, then **Step 2** with the full **A–E** menu (labels can be shorter; meanings unchanged).
 
+### Explicit phrases (override default cadence when stated)
+
+**“Good morning light”** (or clear equivalent):
+
+- Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
+- **Skip** full **polling + Polymarket** ([polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md)) and the **Massie X** skill (`.cursor/skills/massie-x-news-search-draft/SKILL.md`).
+- **Daily brief:** same as Tue–Fri — generate only if today’s file is missing; else one-line pointer to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md`.
+- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–E** (do not omit **E**).
+
+**“Good morning minimal”** (or clear equivalent):
+
+- Run **`harness_warmup.py`** only when instance state matters; **do not** run `operator_daily_warmup.py` unless the operator asks.
+- **Skip** daily brief generation, Polymarket, and Massie X unless explicitly requested.
+- Optional **one-line** gate pointer (e.g. pending count from warmup output if already pasted, or “see `users/grace-mar/recursion-gate.md`”).
+- Still output **full Step 2 A–E**.
+
 ---
 
 ## "Good morning" = start here (two steps)
 
-When the operator begins with **"good morning"** (or clearly the same intent), treat it as opening a **good morning session** — **unless** [cadence](#cadence-by-weekday) says week-ahead (Sunday) or a lighter tier (Tue–Fri); then **scale Step 1** accordingly. **Step 2** (A–E menu) always follows Step 1.
+When the operator begins with **"good morning"** (or clearly the same intent), treat it as opening a **good morning session**. **Scale Step 1** using **[explicit phrases](#explicit-phrases-override-default-cadence-when-stated)** when the operator used one; otherwise use **[cadence by weekday](#cadence-by-weekday)** (Sunday → week-ahead; Tue–Fri → lighter; Monday → full). **Step 2** (A–E menu) always follows Step 1.
 
 ### Step 1 — Automated actions (run first; paste outputs)
 
