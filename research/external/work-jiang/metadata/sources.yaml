@@ -185,14 +185,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=8XdL-7tAqnU
   publication_date: 2025-06-18
   lecture_path: lectures/geo-strategy-13-us-iran-war-incoming.md
-  analysis_path: null
+  analysis_path: analysis/8XdL-7tAqnU-geo-strategy-13-analysis.md
   series: geo-strategy
   episode: 13
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: missing
 - source_id: geo-14
   video_id: N4cs-8mrP_s

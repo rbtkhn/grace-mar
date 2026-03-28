@@ -13,7 +13,17 @@
 
 ## At a glance
 
-- TBD after full analysis (CIV-MEM / PSY-HIST pass).
+**Thesis:** US **“regime change”** in the Middle East = **social breakdown**, not a clean swap — **Iraq 2003** + **de-Baathification** as the template. Current Iran pressure fits the same **three pillars** (**decapitation**, **economic/infrastructure sabotage**, **sectarian division**), summarized as **bombs / propaganda / money**.
+
+**Iranian edge (lecture):** **Mountain geography** + **size** vs Iraq; **Persian identity** + **memory of Iraq’s ruin**; **strategic flexibility** vs a US path that **requires** leadership kill, **internal revolt**, and **minority** mobilization. **Asymmetric targets:** Saudi **desalination** + **oil fields**, **Strait of Hormuz**, **US regional bases** — framed as **less predictable** pain than US air campaign.
+
+**Nukes:** Argued **unlikely** (taboo, credibility cost, implied **Putin** constraint via back channels — unverified in transcript).
+
+**Three watch variables:** (1) **Supreme Leader** assassination / **succession** crisis; (2) **Russia** — quiet alignment, possible **trap** via **US ground invasion** + **sunk cost** → domestic US strain (speculative chain); (3) **China** — **limited** public role; **oil** dependence vs **regime-stability** priority (lecture tension noted).
+
+**Meta:** **Game theory** as the public methodology going forward; **Discord** rollout; caution on **YouTube** censorship + possible **Rumble** move.
+
+**Analysis memo:** [analysis/8XdL-7tAqnU-geo-strategy-13-analysis.md](../analysis/8XdL-7tAqnU-geo-strategy-13-analysis.md) (CIV-MEM pass, 2026-03-28).
 
 ---
 
