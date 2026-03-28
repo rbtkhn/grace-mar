@@ -189,7 +189,7 @@ grace-mar/
         └── openclaw-user.md        # OpenClaw identity export (export_user_identity.py -o …)
 ```
 
-**Template scaffold (`users/_template/`):** Documents filenames for new instances (aligned with the [companion-self](https://github.com/rbtkhn/companion-self) template). Includes **`work-dev.md`** — a blank work-layer module filled only from seed survey, explicit input, or governed updates; distinct from **`self-skill-work`** (capability claims) and from operator-facing **`docs/skill-work/work-dev/`** (integration territory). See [users/_template/README.md](users/_template/README.md).
+**Template scaffold (`users/_template/`):** Documents filenames for new instances (aligned with the [companion-self](https://github.com/rbtkhn/companion-self) template). Includes **`work-dev.md`** and **`work-business.md`** — blank work-layer modules filled only from seed survey, explicit input, or governed updates; distinct from **`self-skill-work`** and from operator **`docs/skill-work/work-dev/`** / **`work-business/`**. See [users/_template/README.md](users/_template/README.md).
 
 ### Canonical filenames (`users/<id>/`)
 

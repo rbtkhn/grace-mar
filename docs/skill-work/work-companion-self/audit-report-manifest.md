@@ -11,17 +11,28 @@ Paths: companion-self template-manifest.json
   - docs/change-review.md
   - docs/contradiction-resolution.md
   - docs/identity-fork-protocol.md
+  - docs/instance-patterns.md
   - docs/layer-map.json
+  - docs/seed-phase-artifacts.md
+  - docs/seed-phase-stages.md
+  - docs/seed-phase.md
   - docs/skill-work/README.md
   - docs/skill-work/self-work/README.md
   - docs/skill-work/self-work/sync-pack/README.md
   - docs/skill-work/work-business/README.md
   - docs/skill-work/work-dev/README.md
+  - scripts/generate-seed-dossier.py
   - users/_template/review-queue/README.md
+  - users/_template/seed-phase/README.md
+  - users/_template/seed-phase/seed_intake.json
+  - users/demo/seed-phase/seed_dossier.md
+  - users/demo/seed-phase/seed_intake.json
+  - users/demo/seed-phase/work_dev_seed.json
 
 ### Instance additions (in instance, not in template)
   - docs/skill-work/educational-software-history-insights.md
   - docs/skill-work/lesson-rules-config.yaml
+  - docs/skill-work/repo-platform-index.md
   - docs/skill-work/sample-lesson-prompt-grace-mar.txt
   - docs/skill-work/work-alpha-school/README.md
   - docs/skill-work/work-alpha-school/academic-literature-elementary-pedagogy.md
@@ -209,6 +220,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-politics/outreach-funnel.md
   - docs/skill-work/work-politics/outreach-workspace.md
   - docs/skill-work/work-politics/past-performance-assistant-brain.md
+  - docs/skill-work/work-politics/pol-candidate-template.md
   - docs/skill-work/work-politics/polling-and-markets.md
   - docs/skill-work/work-politics/polyphonic-cognition-protocol-skill.md
   - docs/skill-work/work-politics/prep-before-call-abc.md
@@ -260,7 +272,6 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-politics/state-evolved-assistant-brain-heads-of-state.md
   - docs/skill-work/work-politics/target-registry.md
   - docs/skill-work/work-politics/uare-ai-competitive-notes.md
-  - docs/skill-work/work-politics/pol-candidate-template.md
   - docs/skill-work/work-politics/weekly-brief-2026-03-09.md
   - docs/skill-work/work-politics/weekly-brief-template.md
   - docs/skill-work/work-politics/work-politics-sources.md
@@ -281,6 +292,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-strategy/daily-brief-2026-03-28.md
   - docs/skill-work/work-strategy/daily-brief-focus.md
   - docs/skill-work/work-strategy/daily-brief-jiang-layer.md
+  - docs/skill-work/work-strategy/daily-brief-putin-watch.md
   - docs/skill-work/work-strategy/daily-brief-template.md
   - docs/skill-work/work-strategy/external-tech-scan.md
   - docs/skill-work/work-strategy/manifest-principles.md
@@ -333,16 +345,16 @@ Paths: companion-self template-manifest.json
   - docs/change-types.md
   - docs/concept.md
   - docs/contradiction-policy.md
-  - docs/instance-patterns.md
   - docs/long-term-objective.md
-  - docs/seed-phase-artifacts.md
   - docs/seed-phase-confidence-model.md
   - docs/seed-phase-readiness.md
-  - docs/seed-phase-stages.md
   - docs/seed-phase-validation.md
-  - docs/seed-phase.md
   - docs/self-identity/intent-coherence-checklist.md
   - docs/self-library-example-corpus-grace-mar-derived.md
-  ... and 77 more
+  - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
+  - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
+  - docs/skill-work/self-work/sync-pack/SYNC-CONTRACT.template.md
+  - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
+  ... and 73 more
 
-Summary: same=92 differ=13 only_template=0 only_instance=306
+Summary: same=88 differ=23 only_template=0 only_instance=308

@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/work-business-seed.v1.json",
+  "title": "work_business_seed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "business_involvement",
+    "business_role_modes",
+    "active_focuses",
+    "evidence_basis"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["uninitialized", "initialized"]
+    },
+    "business_involvement": {
+      "type": "string",
+      "enum": ["none", "light", "regular", "core"]
+    },
+    "business_role_modes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "founder",
+          "operator",
+          "investor",
+          "advisor",
+          "employee",
+          "side_project",
+          "student_entrepreneur",
+          "researcher_commercial",
+          "other"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "primary_ventures_or_brands": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "markets_or_sectors": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "commerce_surfaces": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "none",
+          "etsy_or_marketplace",
+          "saas",
+          "consulting_services",
+          "content_or_media",
+          "nonprofit_earned_revenue",
+          "physical_goods",
+          "other"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "business_activity_modes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "market_research",
+          "competitive_analysis",
+          "positioning",
+          "fundraising",
+          "partnerships",
+          "operations",
+          "sales",
+          "product_strategy",
+          "content_marketing",
+          "regulatory_compliance",
+          "ecommerce_ops",
+          "other"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "research_or_interest_areas": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "active_focuses": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "important_constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "companion_help_priorities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "brainstorming",
+          "planning",
+          "market_research",
+          "positioning",
+          "pitch_review",
+          "partnership_mapping",
+          "prioritization",
+          "business_writing",
+          "ecommerce_ops",
+          "competitive_intel",
+          "other"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "notes": {
+      "type": "string",
+      "default": ""
+    },
+    "evidence_basis": {
+      "type": "string",
+      "enum": ["none", "seed_survey", "explicit_user_input", "mixed"]
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "companionSelfCommit": "3eaf7b17090ae1e8d497856544febf397cb4e98a",
+  "companionSelfCommit": "a08650a98c30277aa219c3bfc3ef02d78504a2c4",
   "templateVersion": "0.4.0",
-  "syncedAt": "2026-03-27T17:30:00Z",
-  "syncedBy": "schema-validator-parity-manifest-complete",
+  "syncedAt": "2026-03-28T00:00:00Z",
+  "syncedBy": "work-business-seed-parity-audit-manifest",
   "syncedPaths": [
     "schema-registry/",
     "template-manifest.json",

@@ -211,6 +211,16 @@
       "optional": true
     },
     {
+      "path": "users/_template/work-business.md",
+      "description": "WORK user module: business/commercial context; seeded via work_business_seed.json (not docs/skill-work/work-business/).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/work-dev.md",
+      "description": "WORK user module: development/technical context; seeded via work_dev_seed.json (not docs/skill-work/work-dev/).",
+      "optional": false
+    },
+    {
       "path": "docs/self-library-example-corpus-grace-mar-derived.md",
       "description": "Optional legacy LIB row example (grace-mar-derived); not the default template shelf.",
       "optional": true
@@ -341,6 +351,16 @@
       "optional": false
     },
     {
+      "path": "users/_template/seed-phase/work_business_seed.json",
+      "description": "Work-business seed placeholder (promotes to work-business.md on activation).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/work_dev_seed.json",
+      "description": "Work-dev seed placeholder (promotes to work-dev.md on activation).",
+      "optional": false
+    },
+    {
       "path": "users/_template/seed-phase/seed_dossier.md",
       "description": "Seed dossier placeholder.",
       "optional": false
@@ -398,6 +418,16 @@
     {
       "path": "users/demo/seed-phase/seed_confidence_map.json",
       "description": "Demo seed confidence map.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/work_business_seed.json",
+      "description": "Demo work-business seed (synthetic).",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/work_dev_seed.json",
+      "description": "Demo work-dev seed (synthetic).",
       "optional": false
     },
     {
@@ -499,6 +529,7 @@
       "seed_trial_report": "schema-registry/seed-trial-report.v1.json",
       "seed_readiness": "schema-registry/seed-readiness.v1.json",
       "seed_confidence_map": "schema-registry/seed-confidence-map.v1.json",
+      "work_business_seed": "schema-registry/work-business-seed.v1.json",
       "work_dev_seed": "schema-registry/work-dev-seed.v1.json"
     },
     "validator": "scripts/validate-seed-phase.py",

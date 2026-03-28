@@ -49,6 +49,14 @@ Focuses: seed phase alignment; OpenClaw handback
 
 Synthetic demo values for validation and docs.
 
+## Work business context
+
+Status **initialized**; involvement **light**; evidence_basis **seed_survey**.
+
+Focuses: launch checklist; pricing experiments
+
+Synthetic demo values for validation and docs.
+
 ## Blocking Issues
 
 - None

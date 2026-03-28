@@ -26,6 +26,7 @@ JSON_FILES = [
     "seed_trial_report.json",
     "seed_readiness.json",
     "seed_confidence_map.json",
+    "work_business_seed.json",
     "work_dev_seed.json",
 ]
 
@@ -109,6 +110,23 @@ def main() -> None:
         lines.append("Focuses: " + "; ".join(wd["active_focuses"]))
     if wd.get("notes"):
         lines.extend(["", wd["notes"].strip()])
+    lines.extend(
+        [
+            "",
+            "## Work business context",
+            "",
+        ]
+    )
+    wb = data["work_business_seed.json"]
+    lines.append(
+        f"Status **{wb.get('status', '')}**; involvement **{wb.get('business_involvement', '')}**; "
+        f"evidence_basis **{wb.get('evidence_basis', '')}**."
+    )
+    if wb.get("active_focuses"):
+        lines.append("")
+        lines.append("Focuses: " + "; ".join(wb["active_focuses"]))
+    if wb.get("notes"):
+        lines.extend(["", wb["notes"].strip()])
     lines.extend(
         [
             "",

@@ -23,6 +23,7 @@
     "seed_trial_report": "seed_trial_report.json",
     "seed_readiness": "seed_readiness.json",
     "seed_confidence_map": "seed_confidence_map.json",
+    "work_business_seed": "work_business_seed.json",
     "work_dev_seed": "work_dev_seed.json"
   },
   "confidence_summary": {
