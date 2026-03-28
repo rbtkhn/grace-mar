@@ -7,10 +7,10 @@
   "last_snapshot_tag": "",
   "drift_score": 0.0025,
   "created_at": "2026-03-23T03:24:22Z",
-  "updated_at": "2026-03-23T03:26:27Z",
+  "updated_at": "2026-03-28T23:53:50Z",
   "counters": {
     "session_count": 0,
-    "merge_count": 0,
+    "merge_count": 1,
     "snapshot_count": 0,
     "session_seq": 0
   },

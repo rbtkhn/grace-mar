@@ -1478,6 +1478,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0050
+    date: 2026-03-28
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: curiosity
+    source: pipeline merge
+    summary: "IX-B — learning modality signal; pairs with school/parent scaffolding; not duplicate of topic lists (space, art, etc.)."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.
@@ -2232,4 +2242,9 @@ update_source: Tchaikovsky Andante cantabile (ACT-0039)
 > operator: "Added docs/skill-work/work-strategy/modules/energy-chokepoint, economic-blowback; current-events-analysis, manifest-principles, persuasive-content-pipeline, synthesis-engine; prototypes/mind-synthesis.py. Lenses, modules, guardrails are WORK-only." grace_mar: "[On approval: apply skills.md bullets manually or extend process_approved_candidates to support skills.md; no direct edit to ski
 
 
+
+**[2026-03-28 16:53:50]** `APPROVED` (Operator)
+> CANDIDATE-0092 → ACT-0050
+> IX-B — learning modality signal; pairs with school/parent scaffolding; not duplicate of topic lists (space, art, etc.).
+> survey_log: "Q2 When something is hard to learn, what helps most? B — Someone explaining out loud"
 END OF FILE — EVIDENCE grace-mar v0.1

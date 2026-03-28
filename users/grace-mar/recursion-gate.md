@@ -48,27 +48,6 @@ prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 
 summary: Casa Bonita history — user rejected.
 ```
 
-### CANDIDATE-0092 (Survey — learning channel: oral explanation for hard topics)
-
-```yaml
-status: pending
-timestamp: 2026-03-28
-channel_key: operator:cursor
-source: Abigail refinement survey (Cursor); Q2 only
-new_vs_record: Record has many curiosity/personality notes on *what* she likes; this adds explicit *modality* — hard material → prefers live explanation over solo figure-it-out.
-source_exchange:
-  survey_log: "Q2 When something is hard to learn, what helps most? B — Someone explaining out loud"
-mind_category: curiosity
-signal_type: survey_refinement
-priority_score: 3
-summary: IX-B — learning modality signal; pairs with school/parent scaffolding; not duplicate of topic lists (space, art, etc.).
-profile_target: IX-B. CURIOSITY
-suggested_entry: "Survey 2026-03-28 (Q2): When something is hard to learn, what helps most is someone explaining it out loud (vs only pictures or only hands-on)."
-prompt_section: YOUR CURIOSITY
-prompt_addition: When something is hard to learn, you like when someone explains it out loud.
-suggested_followup: Offer to explain one hard step aloud before showing a video or worksheet.
-```
-
 ### CANDIDATE-0093 (Survey — wonder topics: discovery narratives over factoids)
 
 ```yaml
@@ -185,6 +164,27 @@ suggested_followup: Validate the art/music wish; gently name that skill grows in
 ```
 
 ## Processed
+
+### CANDIDATE-0092 (Survey — learning channel: oral explanation for hard topics)
+
+```yaml
+status: approved
+timestamp: 2026-03-28
+channel_key: operator:cursor
+source: Abigail refinement survey (Cursor); Q2 only
+new_vs_record: Record has many curiosity/personality notes on *what* she likes; this adds explicit *modality* — hard material → prefers live explanation over solo figure-it-out.
+source_exchange:
+  survey_log: "Q2 When something is hard to learn, what helps most? B — Someone explaining out loud"
+mind_category: curiosity
+signal_type: survey_refinement
+priority_score: 3
+summary: IX-B — learning modality signal; pairs with school/parent scaffolding; not duplicate of topic lists (space, art, etc.).
+profile_target: IX-B. CURIOSITY
+suggested_entry: "Survey 2026-03-28 (Q2): When something is hard to learn, what helps most is someone explaining it out loud (vs only pictures or only hands-on)."
+prompt_section: YOUR CURIOSITY
+prompt_addition: When something is hard to learn, you like when someone explains it out loud.
+suggested_followup: Offer to explain one hard step aloud before showing a video or worksheet.
+```
 
 ### CANDIDATE-0087 (work-politics — triangulated analytical lenses methodology)
 
