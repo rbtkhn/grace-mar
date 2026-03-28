@@ -78,7 +78,6 @@ def _materialize_git_ref(*, repo_root: Path, git_ref: str, user_id: str, dest: P
     rel_base = f"users/{user_id}"
     names = [
         "self.md",
-        "skills.md",
         "skill-think.md",
         "skill-write.md",
         "work-alpha-school.md",
@@ -93,6 +92,16 @@ def _materialize_git_ref(*, repo_root: Path, git_ref: str, user_id: str, dest: P
         )
         if r.returncode == 0 and (r.stdout or "").strip():
             (dest / name).write_text(r.stdout, encoding="utf-8")
+    for sk_name in ("self-skills.md", "skills.md"):
+        obj = f"{git_ref}:{rel_base}/{sk_name}"
+        r = subprocess.run(
+            ["git", "-C", str(repo_root), "show", obj],
+            capture_output=True,
+            text=True,
+        )
+        if r.returncode == 0 and (r.stdout or "").strip():
+            (dest / sk_name).write_text(r.stdout, encoding="utf-8")
+            break
     # Canonical EVIDENCE is self-archive.md; historical refs may only have self-evidence.md.
     for src in ("self-archive.md", "self-evidence.md"):
         if (dest / "self-archive.md").exists():

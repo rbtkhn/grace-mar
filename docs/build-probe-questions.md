@@ -30,7 +30,7 @@ Questions should target one or more of these BUILD dimensions. All content must 
 Questions MUST be generated only from:
 
 - **self.md** — Identity, preferences (favorites, activities), interests, values, reasoning patterns, narrative, **art patterns** (VIII or IX-C), IX-A (knowledge), IX-B (curiosity), IX-C (personality).
-- **skills.md** — BUILD container: edge, creation dimensions (originality, elaboration, flexibility), planning/execution (if any), gaps.
+- **self-skills.md** — BUILD container: edge, creation dimensions (originality, elaboration, flexibility), planning/execution (if any), gaps.
 - **self-evidence.md** — Recent CREATE-* and ACT-* entries (titles, descriptions, dimensions already captured).
 - **Archive** (optional) — Recent conversation snippets so questions don’t repeat what was just discussed.
 

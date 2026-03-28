@@ -54,4 +54,4 @@ python scripts/validate-integrity.py --user grace-mar --strict-lifecycle --json
 
 ## Gated edits
 
-Commit messages for direct edits to canonical files (`self.md`, `self-evidence.md`, `skills.md`, `self-library.md`, …) must include `[gated-merge]`, `process_approved_candidates`, `MERGE-RECEIPT:`, or `SNAPSHOT:` — see `scripts/check_gated_record_commit_msg.py`.
+Commit messages for direct edits to canonical files (`self.md`, **`self-archive.md`**, `self-skills.md`, `skills.md`, `self-evidence.md`, `self-library.md`, …) must include `[gated-merge]`, `process_approved_candidates`, `MERGE-RECEIPT:`, or `SNAPSHOT:` — see `scripts/check_gated_record_commit_msg.py`.

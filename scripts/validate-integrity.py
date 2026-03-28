@@ -48,6 +48,7 @@ from validate_identity_library_boundary import (
     collect_self_library_file_warnings,
 )
 from validate_library_domain_registry import validate_library_domain_registry
+from repo_io import resolve_surface_markdown_path, self_skills_layout_warnings
 
 ALLOWED_PROPOSAL_CLASS = frozenset({
     "SELF_KNOWLEDGE_ADD",
@@ -340,7 +341,10 @@ def validate_skills_sections(user_dirs: list[Path]) -> list[str]:
     skills_markers = ["## II. CAPABILITY CLAIMS", "## III. CAPABILITY GAPS"]
     skill_files = ["skill-think.md", "skill-write.md"]
     for user_dir in user_dirs:
-        skills_path = user_dir / "skills.md"
+        try:
+            skills_path = resolve_surface_markdown_path(user_dir, "self_skills")
+        except ValueError:
+            continue
         content = _safe_read(skills_path)
         if not content:
             continue
@@ -357,9 +361,10 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     prompt_path = REPO_ROOT / "bot" / "prompt.py"
     for user_dir in user_dirs:
+        skills_path = resolve_surface_markdown_path(user_dir, "self_skills")
         source_paths = [
             user_dir / "self.md",
-            user_dir / "skills.md",
+            skills_path,
             user_dir / "self-archive.md",
             user_dir / "self-library.md",
             user_dir / "intent.md",
@@ -515,7 +520,13 @@ def run_validation(
     user_dirs = _iter_user_dirs(users_dir, user)
     if not user_dirs:
         msg = f"No user directories found for users_dir={users_dir} user={user or '(all)'}"
-        return [msg], {"ix_a_violations": [], "self_library_missing_warnings": [], "ix_a_ok": True, "self_library_files_ok": True}
+        return [msg], {
+            "ix_a_violations": [],
+            "self_library_missing_warnings": [],
+            "surface_layout_warnings": [],
+            "ix_a_ok": True,
+            "self_library_files_ok": True,
+        }
 
     all_errors: list[str] = []
     all_errors.extend(validate_library_domain_registry(REPO_ROOT))
@@ -527,6 +538,10 @@ def run_validation(
     library_warnings: list[str] = []
     for ud in user_dirs:
         library_warnings.extend(collect_self_library_file_warnings(ud, REPO_ROOT))
+
+    surface_layout_warnings: list[str] = []
+    for ud in user_dirs:
+        surface_layout_warnings.extend(self_skills_layout_warnings(ud))
 
     all_errors.extend(ix_boundary)
     if strict_self_library:
@@ -558,6 +573,7 @@ def run_validation(
     boundary_report = {
         "ix_a_violations": ix_boundary,
         "self_library_missing_warnings": library_warnings,
+        "surface_layout_warnings": surface_layout_warnings,
         "ix_a_ok": len(ix_boundary) == 0,
         "self_library_files_ok": len(library_warnings) == 0,
         "fork_lifecycle": lifecycle_report,
@@ -617,6 +633,7 @@ def main() -> int:
             "ok": ok,
             "errors": errors,
             "identity_library_boundary": boundary,
+            "surface_layout_warnings": boundary.get("surface_layout_warnings") or [],
             "fork_lifecycle": boundary.get("fork_lifecycle") or {},
         }
         print(json.dumps(payload, ensure_ascii=True))
@@ -633,6 +650,8 @@ def main() -> int:
             for w in boundary.get("self_library_missing_warnings") or []:
                 tag = "FAIL" if args.strict_self_library else "WARN"
                 print(f"  {tag}: {w}")
+        for w in boundary.get("surface_layout_warnings") or []:
+            print(f"  WARN (surface layout): {w}")
         print()
         if ok:
             print("Integrity check passed (all checks).")

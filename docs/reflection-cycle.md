@@ -37,7 +37,7 @@ Use `--append-all` for up to five proposals (default append count is three). Use
 
 - Candidates use numeric ids (`CANDIDATE-####`) so [`process_approved_candidates.py`](../scripts/process_approved_candidates.py) and dashboards keep working.
 - `mind_category` is always one of `knowledge` / `curiosity` / `personality` for automated merge into `self.md` + evidence.
-- Proposals that target **`skills.md`**, **`intent_snapshot.json`**, or **SELF-LIBRARY** structural edits should say so in `suggested_entry` and be treated as **manual** follow-up (same pattern as other operator milestones).
+- Proposals that target **`self-skills.md`** (or legacy `skills.md`), **`intent_snapshot.json`**, or **SELF-LIBRARY** structural edits should say so in `suggested_entry` and be treated as **manual** follow-up (same pattern as other operator milestones).
 
 ## Review surfaces
 

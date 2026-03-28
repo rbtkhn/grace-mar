@@ -7,6 +7,7 @@ Legacy (wrong)          -> Canonical (authoritative)
   EVIDENCE.md           -> self-evidence.md
   ARCHIVE.md            -> self-archive.md
   SKILLS.md             -> skills.md
+  skills.md             -> self-skills.md (capability index; if self-skills.md absent)
   PENDING-REVIEW.md     -> recursion-gate.md (only if recursion-gate.md absent;
                           if both exist, abort unless --merge-pending-review)
 
@@ -30,6 +31,7 @@ RENAMES: list[tuple[str, str]] = [
     ("EVIDENCE.md", "self-evidence.md"),
     ("ARCHIVE.md", "self-archive.md"),
     ("SKILLS.md", "skills.md"),
+    ("skills.md", "self-skills.md"),
 ]
 
 

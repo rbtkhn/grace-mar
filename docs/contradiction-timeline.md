@@ -10,7 +10,7 @@
 
 | Layer | Role in the timeline |
 |-------|----------------------|
-| **Git** | Immutable ordering of merges into `self.md`, `skills.md`, `self-library.md`, `self-evidence.md` |
+| **Git** | Immutable ordering of merges into `self.md`, `self-skills.md`, `self-library.md`, **`self-archive.md`** (EVIDENCE) |
 | **Pipeline** | `pipeline-events.jsonl` — `staged` → `applied` / `rejected`; schema 2 adds **ix_entry_id** (LEARN/CUR/PER), **surface**, **summary_snippet**. See [pipeline-events-schema.md](pipeline-events-schema.md). |
 | **EVIDENCE** | ACT entries hold **mind_category**, **summary** — proxy for “what changed” |
 | **Contradiction spec** | Resolution types (`growth`, `correction`, `context`, `reject_new`, `exception`) become **timeline states** once encoded on entries |
@@ -56,7 +56,7 @@
 python3 scripts/contradiction_timeline_digest.py -u grace-mar
 ```
 
-Prints a **markdown digest**: applied / rejected pipeline events plus recent **git touches** to `self.md`, `skills.md`, `self-library.md`. Use as input to a dashboard or weekly review.
+Prints a **markdown digest**: applied / rejected pipeline events plus recent **git touches** to `self.md`, `self-skills.md`, `self-library.md`. Use as input to a dashboard or weekly review.
 
 ---
 

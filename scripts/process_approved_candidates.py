@@ -849,7 +849,7 @@ def _record_refs_for_applied(user_id: str, surface: str, profile_target: str, pr
     else:
         refs.append(f"{base}/self.md#IX-C")
     if "SKILLS" in pc:
-        refs.append(f"{base}/skills.md")
+        refs.append(f"{base}/self-skills.md")
     refs.append(f"{base}/self-archive.md")
     out: list[str] = []
     seen: set[str] = set()

@@ -25,7 +25,7 @@ def _minimal_profile(tmp_path: Path) -> Path:
         encoding="utf-8",
     )
     for n in (
-        "skills.md",
+        "self-skills.md",
         "skill-think.md",
         "skill-write.md",
         "work-alpha-school.md",

@@ -6,7 +6,7 @@ Single place for **what each component owns**, **where state lives**, and **what
 
 ## Two doors, one book
 
-**Book** = canonical files in git: `recursion-gate.md` (queue), then after merge `self.md`, `self-evidence.md`, `bot/prompt.py`, PRP. Chat threads are **not** the ledger — they are a **keyhole**. Anything that matters must land in a file the companion approves.
+**Book** = canonical files in git: `recursion-gate.md` (queue), then after merge `self.md`, **`self-archive.md`** (EVIDENCE), `bot/prompt.py`, PRP. Chat threads are **not** the ledger — they are a **keyhole**. Anything that matters must land in a file the companion approves.
 
 | Door | Who | How |
 |------|-----|-----|
@@ -21,7 +21,7 @@ Grace-Mar now names four portable harness lanes:
 
 | Lane | Role | Canonical status | Primary surfaces |
 |------|------|------------------|------------------|
-| **record** | Companion-owned truth | Canonical | `self.md` (identity + SELF-KNOWLEDGE), `skills.md`, `self-evidence.md`, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP — see [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md); library domains indexed in [self-library-domains.md](self-library-domains.md) |
+| **record** | Companion-owned truth | Canonical | `self.md` (identity + SELF-KNOWLEDGE), `self-skills.md`, **`self-archive.md`** (EVIDENCE body), optional `self-evidence.md` pointer, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP — see [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md); library domains indexed in [self-library-domains.md](self-library-domains.md) |
 | **runtime** | Live-session continuity | Non-canonical | `memory.md`, `session-transcript.md`, warmup output, session-log tail |
 | **audit** | Replay, integrity, provenance | Append-only operational history | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
 | **policy** | Intent and constitutional constraints | Canonical policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared rules |
@@ -97,7 +97,7 @@ flowchart TB
 | `users/<id>/homework-ledger.jsonl` | append | Homework probe ledger |
 | Temp file | write + delete | Whisper transcription only |
 
-**Read-only from bot for Record context:** `self.md`, `self-evidence.md`, `self-library.md`, `memory.md` (lookup / library / conflict checks). **No direct write** to SELF, EVIDENCE, or `bot/prompt.py` from core.py.
+**Read-only from bot for Record context:** `self.md`, **`self-archive.md`** (EVIDENCE; optional `self-evidence.md` pointer), `self-library.md`, `memory.md` (lookup / library / conflict checks). **No direct write** to SELF, EVIDENCE, or `bot/prompt.py` from core.py.
 
 ---
 

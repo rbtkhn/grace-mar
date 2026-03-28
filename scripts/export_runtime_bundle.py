@@ -35,6 +35,7 @@ try:
     from export_user_identity import export_user_identity, export_user_identity_json
     from harness_events import append_harness_event
     from recursion_gate_review import parse_review_candidates
+    from repo_io import resolve_surface_markdown_path
 except ImportError:
     from scripts.export_fork import export_fork
     from scripts.export_intent_snapshot import export_intent_snapshot
@@ -43,6 +44,7 @@ except ImportError:
     from scripts.export_user_identity import export_user_identity, export_user_identity_json
     from scripts.harness_events import append_harness_event
     from scripts.recursion_gate_review import parse_review_candidates
+    from scripts.repo_io import resolve_surface_markdown_path
 
 
 RUNTIME_MODES = {
@@ -225,10 +227,14 @@ def export_runtime_bundle(
             dst.write_bytes(src.read_bytes())
             copied_audit_paths.append(str(dst.relative_to(out_dir)))
 
+    skills_resolved = resolve_surface_markdown_path(profile_dir, "self_skills")
+    evidence_resolved = resolve_surface_markdown_path(profile_dir, "self_evidence")
     source_paths = {
         "self": profile_dir / "self.md",
-        "skills": profile_dir / "skills.md",
-        "evidence": profile_dir / "self-archive.md",
+        "skills": skills_resolved,
+        "self_skills": skills_resolved,
+        "evidence": evidence_resolved,
+        "self_evidence": evidence_resolved,
         "library": profile_dir / "self-library.md",
         "intent": profile_dir / "intent.md",
         "session_log": profile_dir / "session-log.md",

@@ -28,4 +28,4 @@ def test_record_refs_library_class():
 def test_record_refs_skills():
     fn = getattr(pac, "_record_refs_for_applied")
     refs = fn("grace-mar", "SELF_PERSONALITY", "", "SKILLS_CLAIM")
-    assert any("skills.md" in r for r in refs)
+    assert any("self-skills.md" in r for r in refs)

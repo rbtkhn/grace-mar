@@ -27,7 +27,7 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Re
 
 | Concept | What it means | Applies to |
 |---------|---------------|------------|
-| **The Record is its own entity** | The Record (fork) started from a snapshot of the real person but has its own trajectory. It accumulates knowledge the real person may not have (e.g., approved lookups, school artifacts). It does not "mimic" or "replicate" the person. | The Record (self.md, skills.md, self-evidence.md) |
+| **The Record is its own entity** | The Record (fork) started from a snapshot of the real person but has its own trajectory. It accumulates knowledge the real person may not have (e.g., approved lookups, school artifacts). It does not "mimic" or "replicate" the person. | The Record (`self.md`, `self-skills.md`, `self-archive.md` EVIDENCE body; optional `self-evidence.md` pointer) |
 | **Emulation** | The Voice (bot) *renders* the Record in conversation. When you query the Voice, the LLM generates responses constrained by the Record's profile. That rendering is "emulation." | The Telegram bot (`bot/bot.py`) |
 
 **Summary:**
@@ -41,7 +41,7 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Re
 
 | Component | Location | Role |
 |-----------|----------|------|
-| **The Record** (fork) | Inside the companion's mind (their mental model, made explicit and structured). Data: `users/[id]/self.md`, skills.md, self-evidence.md | The documented self |
+| **The Record** (fork) | Inside the companion's mind (their mental model, made explicit and structured). Data: `users/[id]/self.md`, `self-skills.md`, **`self-archive.md`** (EVIDENCE); optional `self-evidence.md` pointer | The documented self |
 | **The Voice** (bot) | `bot/bot.py` — Telegram interface | Observation window; queryable voice of the Record; teaching/tutoring (answers, explains, helps learn) — responds when queried, never unbidden |
 | **LLM** | External (OpenAI, etc.) | Generates text; constrained by SYSTEM_PROMPT (Record profile) |
 
@@ -56,7 +56,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-knowledge** (self.md IX-A) — **SELF-KNOWLEDGE**: identity-facing facts about the companion, not civilization-scale reference corpora
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
-- **self-skill-think**, **self-skill-write** (skills.md)
+- **self-skill-think**, **self-skill-write** (`self-skills.md` capability index; subfiles `skill-think.md` / `skill-write.md`)
 - **self-archive** (`self-archive.md`) — canonical **EVIDENCE**: full activity spine (READ / WRITE / CREATE / ACT / media) **plus** § VIII gated approved log; **chronological within and across entries**, and **expansive, multicategory, multimodal** (typed sections, ids, artifacts, merges through the gate)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
 - **self-memory** (memory.md) — ephemeral **short / medium / long** horizons for session continuity and meta pointers; **mostly chronological** (time-ordered thread within horizons); **narrower and primarily textual** than self-archive; not Record (see [memory-template.md](memory-template.md))
@@ -169,7 +169,7 @@ Use the tetrad to anticipate second-order effects and avoid unintended reversals
 | Part | Role | In Grace-Mar |
 |------|------|----------------|
 | **MIND** | Conscious, sovereign, gates what enters the Record | The companion (the human) |
-| **RECORD** | The documented self (knowledge, curiosity, personality, evidence) | self.md, skills.md, self-evidence.md |
+| **RECORD** | The documented self (knowledge, curiosity, personality, evidence) | `self.md`, `self-skills.md`, **`self-archive.md`** (EVIDENCE body) |
 | **VOICE** | Speaks the Record when queried; observation window | bot (Telegram, WeChat, etc.) |
 
 **Instrumental layer (outside the triad):**

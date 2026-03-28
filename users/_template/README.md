@@ -7,12 +7,11 @@ This folder documents **required filenames** for a Grace-Mar instance. It is **n
 | File | Role |
 |------|------|
 | `self.md` | SELF — identity + IX-A/B/C |
-| `skills.md` | SKILLS |
+| `self-skills.md` | SKILLS — capability index (legacy `skills.md` still resolved until migrated) |
 | `self-archive.md` | EVIDENCE — activity log + § VIII gated approved |
 | `self-evidence.md` | optional compatibility pointer to `self-archive.md` |
 | `recursion-gate.md` | Pipeline staging |
 | `session-log.md` | Session history |
-| `self-archive.md` | Gated approved activity log |
 | `self-library.md` | SELF-LIBRARY (optional) |
 
 A future subdirectory layout is discussed in [docs/adr/0001-users-directory-layout-future.md](../../docs/adr/0001-users-directory-layout-future.md); until then, keep the flat layout.

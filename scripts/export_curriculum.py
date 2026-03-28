@@ -22,6 +22,11 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+try:
+    from repo_io import resolve_surface_markdown_path
+except ImportError:
+    from scripts.repo_io import resolve_surface_markdown_path
+
 
 def _read(path: Path) -> str:
     if not path.exists():
@@ -146,9 +151,10 @@ def export_curriculum(
     """Build curriculum-oriented export for adaptive curriculum engines."""
     profile_dir = REPO_ROOT / "users" / user_id
     self_content = _read(profile_dir / "self.md")
+    skills_primary = resolve_surface_markdown_path(profile_dir, "self_skills")
     skills_content = "\n".join(
-        _read(profile_dir / p)
-        for p in ["skills.md", "skill-think.md", "skill-write.md"]
+        _read(p)
+        for p in [skills_primary, profile_dir / "skill-think.md", profile_dir / "skill-write.md"]
     )
     work_content = _read(profile_dir / "work-alpha-school.md")
     evidence_content = _read(profile_dir / "self-archive.md")

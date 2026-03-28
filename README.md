@@ -14,7 +14,7 @@ The fork grows only through what the user explicitly provides. An optional emula
 
 **The fork has four canonical Record surfaces: SELF, SELF-LIBRARY, SKILLS, and EVIDENCE.** That replaces any older “two core modules” (SELF vs SKILLS only) framing. **IX-A / IX-B / IX-C** live under **SELF / SELF-KNOWLEDGE** — not under SELF-LIBRARY.
 
-**Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE**. In customer-facing prose you may use **Library** as the display name for **SELF-LIBRARY** (see [docs/glossary.md](docs/glossary.md), `scripts/surface_aliases.py`).
+**Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE**. Customer-facing display labels map to machine keys in **`scripts/surface_aliases.py`**: **Library** (SELF-LIBRARY / `self_library`), **Skills** (capability index / `self_skills`), **Evidence** (activity log body on `self-archive.md` / `self_evidence`). See [docs/glossary.md](docs/glossary.md).
 
 > **SELF** concerns **identity** and **SELF-KNOWLEDGE** (who she is, what she knows about herself). **SELF-LIBRARY** is the **governed reference layer** attached to the fork (return-to sources, domain shelves). **CIV-MEM** is the **civilizational-memory domain within SELF-LIBRARY** — not part of identity. See [docs/boundary-self-knowledge-self-library.md](docs/boundary-self-knowledge-self-library.md).
 
@@ -176,11 +176,11 @@ grace-mar/
 └── users/
     └── grace-mar/                   # Active instance (first companion)
         ├── self.md                  # Identity + three-dimension mind
-        ├── skills.md                # Capability containers
-        ├── self-evidence.md              # Activity log
+        ├── self-skills.md           # Capability index (THINK/WRITE containers; legacy `skills.md` still read)
         ├── session-log.md           # Interaction history
         ├── recursion-gate.md        # Pipeline staging
-        ├── self-archive.md         # Gated log of approved activity (voice + non-voice) — private
+        ├── self-archive.md          # EVIDENCE — activity log + § VIII gated approved (canonical body)
+        ├── self-evidence.md         # Optional compatibility pointer (not the EVIDENCE body)
         ├── journal.md               # Daily highlights — public-suitable, shareable
         ├── artifacts/               # Raw files (writing, artwork)
         ├── seed-phase-2-survey.md   # Seed phase 2 survey data
@@ -196,12 +196,13 @@ Docs refer to **SELF**, **EVIDENCE**, and the **gate** as concepts. **On disk, o
 | Concept | Authoritative path |
 |---------|-------------------|
 | SELF (identity + IX-A/B/C) | `self.md` |
-| SKILLS | `skills.md` |
-| Activity / evidence log | `self-evidence.md` |
+| SKILLS (capability index) | `self-skills.md` (legacy `skills.md` is still resolved until removed) |
+| Activity / evidence log (canonical body) | `self-archive.md` |
+| Optional EVIDENCE pointer (compat) | `self-evidence.md` |
 | Pipeline staging (pending candidates) | `recursion-gate.md` |
-| Gated archive (approved voice + activity) | `self-archive.md` |
+| Gated archive (approved voice + activity) | `self-archive.md` § VIII |
 
-**Not used:** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md` — those spellings break scripts. Full spec: [docs/canonical-paths.md](docs/canonical-paths.md). **Migrate:** `python scripts/migrate_legacy_user_filenames.py --user grace-mar --apply`. **Check:** `python scripts/assert_canonical_paths.py --user grace-mar`. Bots and `apps/miniapp_server.py` **fail at startup** if `self.md`, `self-evidence.md`, or `recursion-gate.md` are missing (set `GRACE_MAR_SKIP_PATH_CHECK=1` only if you must).
+**Not used:** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md` — those spellings break scripts. Full spec: [docs/canonical-paths.md](docs/canonical-paths.md). **Migrate:** `python scripts/migrate_legacy_user_filenames.py --user grace-mar --apply` (includes `skills.md` → `self-skills.md` when the target is absent). **Check:** `python scripts/assert_canonical_paths.py --user grace-mar`. Bots and `apps/miniapp_server.py` **fail at startup** if `self.md`, `self-archive.md`, or `recursion-gate.md` are missing (set `GRACE_MAR_SKIP_PATH_CHECK=1` only if you must).
 
 ## Key Documents
 

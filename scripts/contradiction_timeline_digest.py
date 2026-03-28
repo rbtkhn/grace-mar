@@ -25,9 +25,10 @@ except ImportError:
 RECORD_FILES = (
     "self.md",
     "self-archive.md",
-    "self-evidence.md",  # legacy path; still scanned for git history
+    "self-evidence.md",  # optional pointer; still scanned for git history
     "self-library.md",
-    "skills.md",
+    "self-skills.md",
+    "skills.md",  # legacy capability index
     "skill-think.md",
     "skill-write.md",
 )

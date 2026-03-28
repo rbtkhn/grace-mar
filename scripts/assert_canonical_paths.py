@@ -12,6 +12,10 @@ Usage:
 
 Exit: 0 if all required (and optional when --strict) paths exist; 1 otherwise.
 Set GRACE_MAR_SKIP_PATH_CHECK=1 to skip (exit 0 without checking).
+
+Advisory: prints WARN to stderr for legacy `skills.md` / duplicate capability index
+(see `repo_io.self_skills_layout_warnings`). Strict canonical skills: set
+`GRACE_MAR_REQUIRE_CANONICAL_SELF_SKILLS=1` (enforced in `assert_canonical_record_layout`).
 """
 
 import argparse
@@ -23,7 +27,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
-from repo_io import CANONICAL_RECORD_FILES_REQUIRED  # noqa: E402
+from repo_io import CANONICAL_RECORD_FILES_REQUIRED, self_skills_layout_warnings  # noqa: E402
 
 REQUIRED = CANONICAL_RECORD_FILES_REQUIRED
 OPTIONAL_STRICT = ("self-evidence.md",)
@@ -56,6 +60,8 @@ def main() -> int:
     if missing:
         print(f"assert_canonical_paths: missing under {user_dir}: {', '.join(missing)}", file=sys.stderr)
         return 1
+    for w in self_skills_layout_warnings(user_dir):
+        print(f"assert_canonical_paths: WARN — {w}", file=sys.stderr)
     return 0
 
 

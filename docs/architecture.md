@@ -45,7 +45,7 @@ Grace-Mar's harness is portable because it separates **canonical truth** from **
 
 | Lane | What it contains | Canonical? | Typical files |
 |------|------------------|------------|---------------|
-| **record** | Companion-owned identity, evidence, and **reference library** (distinct surfaces) | Yes | `self.md` (identity + SELF-KNOWLEDGE), `skills.md`, `self-evidence.md`, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP exports |
+| **record** | Companion-owned identity, evidence, and **reference library** (distinct surfaces) | Yes | `self.md` (identity + SELF-KNOWLEDGE), `self-skills.md`, **`self-archive.md`** (EVIDENCE body), optional `self-evidence.md` pointer, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP exports |
 | **runtime** | Continuity aids for a live session | No | `memory.md`, `session-transcript.md`, warmup digests, session-log tails |
 | **audit** | Replay, provenance, operational traces | No, but append-only | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
 | **policy** | Intent and constitutional alignment surfaces | Yes for policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared constraints |
@@ -648,11 +648,11 @@ GitHub Repository (rbtkhn/grace-mar)
 ├── users/
 │   └── grace-mar/
 │       ├── self.md          # Identity record
-│       ├── skills.md        # Capability record
-│       ├── self-evidence.md      # Activity logs
+│       ├── self-skills.md   # Capability index (legacy skills.md still resolved)
+│       ├── self-archive.md  # EVIDENCE — activity log + § VIII gated approved (canonical body)
+│       ├── self-evidence.md # Optional compatibility pointer (not the EVIDENCE body)
 │       ├── memory.md        # self-memory — ephemeral session context (optional; not part of Record)
 │       ├── session-log.md   # Interaction history
-│       ├── self-archive.md   # self-archive — gated log of approved activity (voice and non-voice) from all channels — Telegram, WeChat, Mini App today; eventually email, X, others (private)
 │       ├── journal.md       # Daily highlights (public-suitable, shareable)
 │       └── artifacts/       # Raw files (writing, artwork)
 └── (future users...)
@@ -814,7 +814,7 @@ User ↔ Bot conversation
   User approves/rejects
        │
        ▼
-  self.md, self-evidence.md, prompt.py updated
+  self.md, self-archive.md (EVIDENCE), prompt.py updated
 ```
 
 **Multiple bots:** You can run several Telegram bots (one per person) from the same codebase and shared LLM: each process uses a different `TELEGRAM_BOT_TOKEN` and `GRACE_MAR_USER_ID`, pointing at different `users/<id>/` profiles. See [MULTI-BOT-CENTRAL-MODEL](multi-bot-central-model.md).
@@ -836,7 +836,7 @@ User: "we learned about volcanoes today" [+ optional artifact]
   User approves/rejects
        │
        ▼
-  self.md, self-evidence.md, prompt.py updated
+  self.md, self-archive.md (EVIDENCE), prompt.py updated
 ```
 
 ### The "we" Convention
@@ -871,7 +871,7 @@ The analyst (automated or manual) detects three categories of signal:
 1. **Signal detection** — Identify profile-relevant information in the input
 2. **Candidate staging** — Write structured candidates to `recursion-gate.md` with analysis and recommendations
 3. **User review** — User approves, rejects, or modifies each candidate
-4. **Relay to record** — Approved candidates are merged into `self.md` (profile), `self-evidence.md` (evidence log), `bot/prompt.py` (emulation prompt), and `session-log.md` (history). This step is the **relay**: raw input has been gated and now crosses into the permanent Record.
+4. **Relay to record** — Approved candidates are merged into `self.md` (profile), **`self-archive.md`** (canonical EVIDENCE / activity log + § VIII), `bot/prompt.py` (emulation prompt), and `session-log.md` (history). This step is the **relay**: raw input has been gated and now crosses into the permanent Record.
 
 ### Candidate Structure
 

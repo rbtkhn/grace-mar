@@ -29,8 +29,8 @@ Canonical labels for the Record-bound SKILLS modules when referring to the compa
 
 | Standard label | Module | Location | Description |
 |----------------|--------|----------|-------------|
-| **self-skill-write** | WRITE | skills.md § WRITE Container | Production — journal, stories, explanations; primary data source for SELF linguistic style |
-| **self-skill-think** | THINK | skills.md § THINK Container | Intake, learning, comprehension (multimodal); feeds SELF interests and preferences |
+| **self-skill-write** | WRITE | self-skills.md § WRITE Container | Production — journal, stories, explanations; primary data source for SELF linguistic style |
+| **self-skill-think** | THINK | self-skills.md § THINK Container | Intake, learning, comprehension (multimodal); feeds SELF interests and preferences |
 
 Use these labels in prose, tooling, and external references where a single token is needed. The Record-bound skill modules are **THINK** (intake, learning, comprehension) and **WRITE** (production, expression). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged; READ-nnn feeds the THINK container (Reading List).
 
@@ -84,8 +84,8 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-identity** | self-identity.md (optional) | Durable identity commitments — boundaries, role-level commitments, long-horizon direction — when an instance uses the split surface; gated like the rest of the Record. See [canonical-paths.md](canonical-paths.md), [identity-fork-protocol.md](identity-fork-protocol.md). |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
 | **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
-| **self-skill-write** | skills.md § WRITE Container | Production capability |
-| **self-skill-think** | skills.md § THINK Container | Intake, learning, comprehension capability |
+| **self-skill-write** | self-skills.md § WRITE Container | Production capability |
+| **self-skill-think** | self-skills.md § THINK Container | Intake, learning, comprehension capability |
 | **self-archive** | `self-archive.md` (full file) | **EVIDENCE** — chronological, **multicategory** activity spine + § VIII gated approved (voice + non-voice) |
 | **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
 | **self-memory** | memory.md | Ephemeral session context; **chronological** prose; narrower than EVIDENCE / self-archive (not part of Record) |

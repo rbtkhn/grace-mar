@@ -107,7 +107,7 @@ All instance files live in the repo under **`users/grace-mar/`**. The Record its
 | File | What it is |
 |------|------------|
 | **self.md** | Who the companion is — identity, preferences, interests, knowledge (IX-A), curiosity (IX-B), personality (IX-C). |
-| **skills.md** | What the Record can show they can do — THINK and WRITE capability and edges. |
+| **self-skills.md** | What the Record can show they can do — THINK and WRITE capability and edges (legacy `skills.md` still resolved). |
 | **self-evidence.md** | Activity log — ACT-*, WRITE-*, CREATE-* entries; raw evidence the Record is built on. |
 | **recursion-gate.md** | **Multi-channel staging** (Telegram, WeChat, operator, tests — see each row’s `channel_key`). One queue per user; **nothing is in the Record until you approve and merge.** |
 | **session-transcript.md** | Raw conversation log (every message), for operator continuity. Not part of the Record. |

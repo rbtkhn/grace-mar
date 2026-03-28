@@ -18,8 +18,8 @@ The Record (and the companion self) is composed of the following modules. Togeth
 | **self-personality** | self.md IX-C | Observed behavioral patterns, values, speech traits, art style |
 | **self-curiosity** | self.md IX-B | Topics that catch attention (post-seed curiosity) |
 | **self-library** | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first for answers |
-| **self-skill-think** | skills.md THINK container | Intake, learning, comprehension (multimodal) |
-| **self-skill-write** | skills.md WRITE container | Production (text, journal, stories); linguistic style source |
+| **self-skill-think** | self-skills.md THINK container | Intake, learning, comprehension (multimodal) |
+| **self-skill-write** | self-skills.md WRITE container | Production (text, journal, stories); linguistic style source |
 
 Additional Record components (self-archive, self-memory, evidence logs) are defined in [ID-TAXONOMY](id-taxonomy.md#companion-self-contains). The Voice renders the full Record when it speaks; it draws on all of the above as appropriate.
 

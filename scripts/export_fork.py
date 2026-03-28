@@ -6,7 +6,8 @@ Ontology in export (v1.1+): **self_knowledge** (IX-A slice = SELF-KNOWLEDGE), **
 (with **civ_mem.lib_entry_ids** = CIV-MEM subdomain of SELF-LIBRARY), plus **self**, **skills**,
 **evidence**, **library.raw**. See docs/boundary-self-knowledge-self-library.md.
 
-Reads self.md, skills.md, self-archive.md (EVIDENCE), and self-library.md for the given user and optionally
+Reads self.md, self-skills.md (or legacy skills.md), self-archive.md (EVIDENCE; optional self-evidence.md
+pointer), and self-library.md for the given user and optionally
 fork-manifest.json / manifest.json, then writes structured JSON for backup, portability,
 or external tooling.
 
@@ -25,9 +26,9 @@ from datetime import datetime
 from pathlib import Path
 
 try:
-    from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
+    from repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID, resolve_surface_markdown_path
 except ImportError:
-    from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID
+    from scripts.repo_io import read_path, REPO_ROOT, profile_dir, DEFAULT_USER_ID, resolve_surface_markdown_path
 
 try:
     from surface_aliases import library_export_labels
@@ -139,21 +140,20 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     """Build the fork export structure."""
     user_dir = profile_dir(user_id)
     self_path = user_dir / "self.md"
-    skills_path = user_dir / "skills.md"
-    evidence_path = user_dir / "self-archive.md"
-    evidence_compat = user_dir / "self-evidence.md"
+    skills_path = resolve_surface_markdown_path(user_dir, "self_skills")
+    evidence_path = resolve_surface_markdown_path(user_dir, "self_evidence")
     library_path = user_dir / "self-library.md"
     fork_manifest_path = user_dir / "fork-manifest.json"
     agent_manifest_path = user_dir / "manifest.json"
 
     self_raw = read_path(self_path)
     skills_raw = read_path(skills_path)
-    evidence_raw = read_path(evidence_path) or read_path(evidence_compat)
+    evidence_raw = read_path(evidence_path)
     library_raw = read_path(library_path)
 
     civ_ids = _civ_mem_lib_ids(library_raw or "")
     out = {
-        "version": "1.1",
+        "version": "1.2",
         "format": "grace-mar-fork-export",
         "generated_at": datetime.now().isoformat(),
         "user_id": user_id,
@@ -161,10 +161,20 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
             "self": "full identity markdown (`self.md`)",
             "self_knowledge": "IX-A slice only — SELF-KNOWLEDGE; identity-facing",
             "self_library": "reference-facing; civ_mem nested object = CIV-MEM subdomain of SELF-LIBRARY",
-            "skills": "capability",
-            "evidence": "activity / provenance logs",
+            "self_skills": "capability index (`self-skills.md`; legacy `skills.md`)",
+            "self_evidence": "activity / provenance logs (`self-archive.md`; optional `self-evidence.md` pointer)",
+            "skills": "deprecated mirror of self_skills",
+            "evidence": "deprecated mirror of self_evidence",
         },
         "surface_labels": library_export_labels(),
+        "_compat": {
+            "deprecated_keys": {
+                "skills": "self_skills",
+                "evidence": "self_evidence",
+                "library": "self_library",
+            },
+            "surface_registry": "scripts/surface_aliases.py",
+        },
         "summary": {
             "self": _parse_self_summary(self_raw) if self_raw else {},
             "evidence": _parse_evidence_summary(evidence_raw) if evidence_raw else {},
@@ -186,6 +196,8 @@ def export_fork(user_id: str = "grace-mar", include_raw: bool = True) -> dict:
     }
     if include_raw:
         out["self"] = {"raw": self_raw}
+        out["self_skills"] = {"raw": skills_raw}
+        out["self_evidence"] = {"raw": evidence_raw}
         out["skills"] = {"raw": skills_raw}
         out["evidence"] = {"raw": evidence_raw}
         out["library"] = {"raw": library_raw}
@@ -219,15 +231,19 @@ def export_obsidian(data: dict, out_path: Path) -> None:
         {"type": "self", "user_id": data.get("user_id", ""), "generated_at": data.get("generated_at", "")},
         data.get("self", {}).get("raw", "(no self)"),
     )
+    skills_raw = (data.get("self_skills") or data.get("skills") or {}).get("raw", "(no skills)")
     write_md(
         "Skills",
         {"type": "skills", "user_id": data.get("user_id", "")},
-        data.get("skills", {}).get("raw", "(no skills)"),
+        skills_raw,
+    )
+    evidence_raw_obs = (data.get("self_evidence") or data.get("evidence") or {}).get(
+        "raw", "(no evidence)"
     )
     write_md(
         "Evidence",
         {"type": "evidence", "read_count": ev_sum.get("read_count", 0), "write_count": ev_sum.get("write_count", 0), "create_count": ev_sum.get("create_count", 0)},
-        data.get("evidence", {}).get("raw", "(no evidence)"),
+        evidence_raw_obs,
     )
     write_md(
         "Library",

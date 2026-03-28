@@ -39,7 +39,7 @@ Run **N** instances of the same app, each with its own bot token and user ID.
 **Steps:**
 
 1. **Create N bots in BotFather** (e.g. @GraceMarAbby_bot, @GraceMarDad_bot). Get a token per bot.
-2. **Create N user profiles** under `users/`: e.g. `users/abby/`, `users/dad/` with self.md, skills.md, self-evidence.md, etc. (Copy from companion-self's `users/_template/` or derive from companion-self schema.)
+2. **Create N user profiles** under `users/`: e.g. `users/abby/`, `users/dad/` with self.md, self-skills.md, **self-archive.md** (EVIDENCE), etc. (Copy from companion-self's `users/_template/` or derive from companion-self schema.)
 3. **Deploy N times**, each with its own env:
    - Instance 1: `TELEGRAM_BOT_TOKEN=<token_abby>`, `GRACE_MAR_USER_ID=abby`
    - Instance 2: `TELEGRAM_BOT_TOKEN=<token_dad>`, `GRACE_MAR_USER_ID=dad`

@@ -23,7 +23,7 @@ from record_index import (  # noqa: E402
     build_evidence_index,
     evidence_section_for_offset,
 )
-from repo_io import CANONICAL_EVIDENCE_BASENAME  # noqa: E402
+from repo_io import CANONICAL_EVIDENCE_BASENAME, resolve_surface_markdown_path  # noqa: E402
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
@@ -39,7 +39,7 @@ def _resolve_profile_dir() -> Path:
 PROFILE_DIR = _resolve_profile_dir()
 SELF_PATH = PROFILE_DIR / "self.md"
 SKILLS_PATHS = [
-    PROFILE_DIR / "skills.md",
+    resolve_surface_markdown_path(PROFILE_DIR, "self_skills"),
     PROFILE_DIR / "skill-think.md",
     PROFILE_DIR / "skill-write.md",
 ]

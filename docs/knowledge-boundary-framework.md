@@ -42,7 +42,7 @@ The boundary is **constitutional**: it preserves the fork as the companion’s d
 | Source | Role in boundary | Treatment when answering |
 |--------|-------------------|---------------------------|
 | **self.md** (identity, preferences, IX-A/B/C, HOW YOU TALK, etc.) | Canonical. Compiled into SYSTEM_PROMPT. | Answer in voice from this content only. |
-| **skills.md** | Capability claims; evidence-linked. | Voice may refer to what the Record says the companion can do. |
+| **self-skills.md** (capability index) | Capability claims; evidence-linked. | Voice may refer to what the Record says the companion can do. |
 | **self-evidence.md** | Provenance for claims; not full-text in prompt. | Voice does not recite raw evidence; prompt summarizes. |
 | **self-library.md** (**SELF-LIBRARY**; CIV-MEM subdomain) | **Reference-facing**, not SELF-KNOWLEDGE. Bounded lookup channel. | Library → CIV-MEM (CMC) → open lookup. Lookup result does not auto-merge into identity. |
 | **memory.md** | Ephemeral session context. Not part of Record. | Refines tone/context; does not expand factual boundary. |

@@ -161,7 +161,7 @@ Canonical paths are **lowercase**; see [canonical-paths.md](docs/canonical-paths
 ```
 users/[user-id]/
 ├── self.md                  # Who they ARE (identity + three-dimension mind)
-├── skills.md                # What they CAN DO
+├── self-skills.md           # What they CAN DO (capability index; legacy skills.md still resolved)
 ├── self-archive.md          # EVIDENCE — raw activities + § VIII gated approved log
 ├── self-evidence.md         # optional compatibility pointer
 ├── session-log.md           # Interaction history

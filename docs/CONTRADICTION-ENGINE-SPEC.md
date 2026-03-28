@@ -142,7 +142,7 @@ Canonical sources remain:
 
 - `users/<id>/recursion-gate.md`
 - `users/<id>/self.md`
-- `users/<id>/skills.md`
+- `users/<id>/self-skills.md` (legacy `skills.md` still resolved)
 - `users/<id>/self-evidence.md`
 - `users/<id>/pipeline-events.jsonl`
 

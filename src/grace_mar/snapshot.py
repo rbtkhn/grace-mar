@@ -89,11 +89,17 @@ def create_snapshot(
         if r.returncode != 0:
             raise RuntimeError(f"validate-integrity failed: {r.stderr or r.stdout[:500]}")
 
+    _scripts = repo_root / "scripts"
+    if str(_scripts) not in sys.path:
+        sys.path.insert(0, str(_scripts))
+    from repo_io import resolve_surface_markdown_path  # noqa: E402
+
+    skills_resolved = resolve_surface_markdown_path(profile, "self_skills")
     record_files = {
         "self.md": profile / "self.md",
         "self-archive.md": profile / "self-archive.md",
         "self-library.md": profile / "self-library.md",
-        "skills.md": profile / "skills.md",
+        "self-skills.md": skills_resolved,
     }
     checksums: dict[str, str] = {}
     for name, p in record_files.items():

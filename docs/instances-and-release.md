@@ -14,7 +14,7 @@
 
 | Artifact | Contents | Can act independently? |
 |----------|----------|------------------------|
-| **Record snapshot** | self.md, skills.md, self-evidence.md (or export: `users/<id>/openclaw-user.md`, fork JSON) | No — data only. Becomes actor only if consumed by a runtime. |
+| **Record snapshot** | self.md, self-skills.md, **self-archive.md** (EVIDENCE body; optional self-evidence.md pointer) (or export: `users/<id>/openclaw-user.md`, fork JSON) | No — data only. Becomes actor only if consumed by a runtime. |
 | **Voice instance** | Record + SYSTEM_PROMPT (and analyst/lookup logic) + LLM API + channel (Telegram, WeChat, API) | Yes — responds to queries, can be wired to payments, bounties, or other agents. |
 | **Released instance** | Record snapshot + Voice logic deployed elsewhere (different host, platform, or agent mesh) | Yes — runs without the user's gate; may diverge, be updated by third parties, or take economic/social action. |
 

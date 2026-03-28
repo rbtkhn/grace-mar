@@ -290,8 +290,13 @@ def collect_data() -> ProfileData:
     self_path = PROFILE_DIR / "self.md"
     archive_path = PROFILE_DIR / "self-archive.md"  # canonical EVIDENCE + § VIII
     evidence_compat = PROFILE_DIR / "self-evidence.md"  # optional pointer / legacy
+    try:
+        from repo_io import resolve_surface_markdown_path
+    except ImportError:
+        from scripts.repo_io import resolve_surface_markdown_path
+
     skills_paths = [
-        PROFILE_DIR / "skills.md",
+        resolve_surface_markdown_path(PROFILE_DIR, "self_skills"),
         PROFILE_DIR / "skill-think.md",
         PROFILE_DIR / "skill-write.md",
     ]

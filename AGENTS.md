@@ -188,7 +188,7 @@ The bot emits `staged` events automatically. Emit `applied` (or `rejected`) when
 
 **Post-merge PRP refresh:** After merging into SELF, EVIDENCE, or prompt, run the export script. If the output differs from the committed PRP file, commit the update. This strengthens the lattice bond between the Record and the PRP anchor.
 
-**Gated commit hook (optional):** If pre-commit is installed with `pre-commit install --hook-type commit-msg`, commits that stage `users/*/self.md`, `self-evidence.md`, `self-archive.md`, `merge-receipts.jsonl`, `bot/prompt.py`, or PRP `*-llm.txt` must include **`[gated-merge]`** in the commit message (or mention `process_approved_candidates`). That matches pipeline merges. Emergency bypass: `ALLOW_GATED_RECORD_EDIT=1`. See `scripts/check_gated_record_commit_msg.py`.
+**Gated commit hook (optional):** If pre-commit is installed with `pre-commit install --hook-type commit-msg`, commits that stage `users/*/self.md`, `self-skills.md`, `skills.md`, `self-evidence.md`, `self-archive.md`, `merge-receipts.jsonl`, `bot/prompt.py`, or PRP `*-llm.txt` must include **`[gated-merge]`** in the commit message (or mention `process_approved_candidates`). That matches pipeline merges. Emergency bypass: `ALLOW_GATED_RECORD_EDIT=1`. See `scripts/check_gated_record_commit_msg.py`.
 
 **Provenance on IX entries:** When merging new entries into IX-A, IX-B, or IX-C, include `provenance: human_approved` (content passed the gated pipeline). Existing entries may use `curated_by: companion` as equivalent. Optionally record `source:` (e.g. `bot lookup`, `bot conversation`, `operator`) to indicate origin. Optionally add `scope:` or `constraint:` when the candidate implies a boundary (when the belief does not apply or would be invalid). Do not backfill old entries unless the companion requests it.
 
@@ -235,7 +235,7 @@ grace-mar/
 └── users/
     └── grace-mar/              # Active instance (first companion)
         ├── self.md             # Identity + three-dimension mind
-        ├── skills.md           # Capability index (Claims, Gaps, Struggles, Milestones)
+        ├── self-skills.md      # Capability index (Claims, Gaps, Struggles, Milestones); legacy `skills.md` resolved until migrated
         ├── skill-think.md      # THINK, MATH, CHINESE containers
         ├── skill-write.md      # WRITE container
         ├── work-alpha-school.md # WORK context (separate from SKILLS)
@@ -285,4 +285,4 @@ The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality in
 - Use "cognitive twin" (use "cognitive fork")
 - Call the Voice an "oracle" or the Record "commanding" — use mirror, reflect, voice, record
 - Let terminology drift — when editing CONCEPTUAL-FRAMEWORK, AGENTS, or templates, prefer Record (not fork) and Voice (not bot) in conceptual prose; correct inconsistencies
-- **Do not** use legacy on-disk names (`SELF.md`, `EVIDENCE.md`, `PENDING-REVIEW.md`, …) — canonical paths are **`self.md`**, **`self-archive.md`** (EVIDENCE), **`recursion-gate.md`** ([canonical-paths.md](docs/canonical-paths.md))
+- **Do not** use legacy on-disk names (`SELF.md`, `EVIDENCE.md`, `PENDING-REVIEW.md`, …) — canonical paths are **`self.md`**, **`self-skills.md`** (capability index; legacy `skills.md` until migrated), **`self-archive.md`** (EVIDENCE), **`recursion-gate.md`** ([canonical-paths.md](docs/canonical-paths.md))

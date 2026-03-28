@@ -3,7 +3,7 @@
 commit-msg hook: staged changes to gated Record paths require an explicit token.
 
 Gated paths (pipeline merge targets + PRP anchor + canonical skills/library):
-  users/*/self.md, self-evidence.md, self-archive.md, skills.md, self-library.md, merge-receipts.jsonl
+  users/*/self.md, self-evidence.md, self-archive.md, self-skills.md, skills.md, self-library.md, merge-receipts.jsonl
   bot/prompt.py
   grace-mar-llm.txt, users/*/*-llm.txt
 
@@ -37,6 +37,7 @@ def _is_gated(rel: str) -> bool:
         "self.md",
         "self-evidence.md",
         "self-archive.md",
+        "self-skills.md",
         "skills.md",
         "self-library.md",
         "merge-receipts.jsonl",
