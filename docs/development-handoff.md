@@ -4,7 +4,7 @@ Use this file to resume development quickly in a new agent conversation.
 
 **Bootstrap:** `bootstrap/grace-mar-bootstrap.md` defaults to **work-dev** (OpenClaw + companion gate); read `docs/skill-work/work-dev/README.md` then `docs/openclaw-integration.md`. **work-jiang (Jiang book/site lane):** `bootstrap/work-jiang-bootstrap.md` — read order, membrane, verify block, skill link.
 
-Last updated: 2026-03
+Last updated: 2026-03-28
 
 **AutoGen / multi-agent exploration (2026-03):** Assessment complete — [`docs/feedback-autogen-exploration-2026-03-assessment.md`](feedback-autogen-exploration-2026-03-assessment.md). Design + constraints: [`docs/exploration-multi-agent-deliberation.md`](exploration-multi-agent-deliberation.md). Minimal prototype (Path 1, draft-only): `research/exploration/autogen-deliberation/`. Original feedback: [`docs/feedback-autogen-exploration-2026-03.md`](feedback-autogen-exploration-2026-03.md).
 
@@ -17,6 +17,16 @@ Last updated: 2026-03
 - **Active clone path** (top-level): _(paste output of `git rev-parse --show-toplevel` in the grace-mar repo you edit)_
 - **companion-self path** (if used today): _(e.g. sibling `…/companion-self` or nested `…/grace-mar/companion-self`; omit if not in play)_
 - Core invariants active: Sovereign Merge Rule, knowledge boundary, evidence linkage, **companion** merge authority (see Terminology below).
+
+### Session tail — 2026-03-28 (operator)
+
+- **Workflow / operator ergonomics (grace-mar):** Multi-root anchor in bootstrap; `docs/operator-agent-lanes.md` git workflow + post-push compare URL + plan-vs-git; `scripts/github_compare_url.py`; `operator_handoff_check` **Derived / export churn** bucket; daily-warmup **good morning light / minimal**; **good morning + good night:** after **A–D**, re-offer full **A–E** until **E** (skill + `harness-warmup.mdc` + handoff-check skill).
+- **Template sync:** companion-self **pushed** — `self-work` + `sync-pack` README upgrades, IFP full-spec link fix (`identity-fork-protocol.md` on grace-mar). Grace-mar: `merging-from-companion-self.md` IFP short-form vs full spec note; aligned instance `self-work` / `sync-pack` copy; refreshed template audit reports.
+- **work-jiang:** Volume VII Substack essays + `essay-*` analysis memos (prior commits on `main`).
+- **Work-politics / strategy:** `daily-brief-2026-03-28.md`; `polling-and-markets.md` **Last checked** refreshed.
+- **Gate:** 0 pending (confirm in `recursion-gate.md`).
+- **Jiang lane:** `OUTLINE_ACTIVE` — suggested next lever: ch01 chapter outline (`research/external/work-jiang/STATUS.md`).
+- **Re-entry:** `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (3 WAP territory blockers) or `operator_daily_warmup.py` / `harness_warmup.py` per thread; paste handoff block from `operator_handoff_check.py` when starting cold.
 
 ---
 
@@ -346,17 +356,11 @@ Last updated: 2026-03
 
 ## Current Uncommitted Work (At Time of This Handoff)
 
-**Committed this session (2026-03-16):** work-build-ai (OpenClaw provenance end-to-end, benchmark honesty labels, continuity proof-of-read script), and docs (derived-export refresh one-liner in bootstrap + handoff).
+**As of 2026-03-28:** `git status` clean on `main` (no local commits pending push after last session push). **Re-verify** before acting: `git status` and `git log origin/main..HEAD`.
 
-**Still uncommitted (run `git status` to confirm):**
+**Nested `companion-self/` clone:** May carry separate local WIP; `git -C companion-self status` before template PRs.
 
-- Bot: `bot/bot.py`, `bot/lookup_cmc.py` (may be unrelated to work-build-ai).
-- Users: `users/grace-mar/self-library.md`; refreshed/generated artifacts (manifest, fork-manifest, llms.txt, intent_snapshot, runtime-bundle, compute-ledger, pipeline-events, session-transcript, recursion-gate.md) — commit only if you intend to snapshot state.
-- Docs: civilization-memory (README, essays, book/, notes/), library-integration.md, work-politics (workspace.md, uare-ai-competitive-notes), and various untracked (federal-ethics-pledge, memo-ai-policy-babel, speech-day-one, vance-first-hours, etc.).
-- Scripts: build_civmem_inrepo_index.py, library_shelf_tables.py, reorder_library_by_shelf.py (untracked).
-- Submodule: research/repos/civilization_memory (m).
-
-If the companion/operator asks to commit, include all modified and new files from that session.
+If new work appears, commit in themed slices (docs vs exports vs Record-adjacent) per `docs/operator-agent-lanes.md`.
 
 ---
 
