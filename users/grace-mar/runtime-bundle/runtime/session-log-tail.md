@@ -3,8 +3,6 @@
 > Non-canonical runtime continuity aid derived from `session-log.md`.
 
 ```
-```yaml
-date: 2026-03-14
 participants: operator (Cursor)
 method: harness_warmup follow-up — gate pass on pending test candidates
 activity_type: pipeline — reject duplicate lane
@@ -23,4 +21,6 @@ evidence_tier: 5
 **Processed:** CANDIDATE-0086 (voice authenticity — favorite planet). PER-0008 added to IX-C; ACT-0046 added to EVIDENCE; bot/prompt.py YOUR PERSONALITY updated. Earth as home and uniqueness of life.
 ---
 END OF FILE — SESSION LOG grace-mar
+## Pipeline merge (automated)
+- 2026-03-28 16:53:51 | pipeline merge | CANDIDATE-0092 | approved by companion
 ```

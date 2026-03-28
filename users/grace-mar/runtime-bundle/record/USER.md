@@ -929,6 +929,15 @@ entries:
     evidence_id: ACT-0050
     provenance: human_approved
 
+  - id: CUR-0017
+    date: 2026-03-28
+    topic: "Survey 2026-03-28 (Q4): For wonder topics (rocks, space, animals), prefers longer stories about how people figured things out over only short cool facts."
+    trigger: pipeline merge
+    response_signal: approved
+    intensity: 3
+    evidence_id: ACT-0051
+    provenance: human_approved
+
 
 ```
 
