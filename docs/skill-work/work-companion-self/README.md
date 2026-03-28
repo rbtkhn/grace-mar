@@ -6,6 +6,10 @@ Companion-self is both the **concept** (companion's self + self that companions,
 
 **Canonical framing:** `companion-self` is the upstream template and public architecture for sovereign, evidence-grounded cognitive forks. `grace-mar` is the private proving ground and active instance: a working tool where structural ideas are tested against real use. Improvements developed in `grace-mar` that are structural, reusable, and instance-agnostic may be merged back into `companion-self`; Record content, private workflows, and instance-specific state remain private to `grace-mar`.
 
+## Related territory: integration / OpenClaw (not template merge)
+
+**[`work-dev`](../work-dev/README.md)** — Record export, OpenClaw handback (stage-only), session continuity contract, integration status, provenance. Template sync does **not** replace integration work; cross-check exports after material template merges per [INTEGRATION-PROGRAM.md](../work-dev/INTEGRATION-PROGRAM.md) if exports or hooks drift.
+
 ---
 
 ## Purpose
@@ -76,6 +80,21 @@ Grace-mar and companion-self are **not** chasing full file parity. Use these thr
 - **Instance-local:** Keep [`users/grace-mar/DESIGN.md`](../../../users/grace-mar/DESIGN.md) and [`scripts/validate-design-md.py`](../../../scripts/validate-design-md.py) only in grace-mar; do not block template sync on DESIGN parity.
 
 This track is **discretionary** — unlike Track 1 and 2, it is not a recurring merge obligation.
+
+---
+
+## Reconciliation code audit (upstream and downstream)
+
+Any **template + boundary audit** (including [daily-warmup](../../../.cursor/skills/daily-warmup/SKILL.md) good morning **A**) should end with an explicit **reconciliation code** subsection — not only doc drift. **Reconciliation code** means scripts, validators, CI recipes, manifest/index tooling, or hooks that **compare, merge, validate, or sync** template ↔ instance.
+
+| Direction | Question | Be specific |
+|-----------|----------|-------------|
+| **Upstream** (grace-mar → companion-self) | What instance-hardened tooling should **all** template consumers get? | Repo-relative paths in **grace-mar** (e.g. `scripts/…`), one-line **why**, suggested **companion-self** target path if known (e.g. `scripts/`, `.github/workflows/`). |
+| **Downstream** (companion-self → grace-mar) | What does the template ship that grace-mar should **adopt** to stay aligned? | Paths in **companion-self** (e.g. `node scripts/validate-template.js`), **how** to pull (merge slice, copy, flag parity), and any **command** the operator should run. |
+
+If there is **no** tooling delta this pass, state **`Reconciliation code: none`** and one line (e.g. “manifest diff was docs-only; `template_diff.py` unchanged on both sides”).
+
+This block is **advisory** — it does not merge or open PRs; it gives the operator a checklist for the next sync or upstream PR.
 
 ---
 

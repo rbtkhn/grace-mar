@@ -10,6 +10,10 @@ Use this file when you want one place to understand:
 - how the territory could become a real business
 - what should be checked next
 
+## Related territory: template sync (not OpenClaw)
+
+**[`work-companion-self`](../work-companion-self/README.md)** — grace-mar ↔ companion-self drift, `template_diff.py`, manifest audits, upstream PRs. Use that folder for **template governance**; use **this** folder for **OpenClaw / exports / continuity / CI**. See also [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md).
+
 ---
 
 ## Current state summary
@@ -30,6 +34,7 @@ Use this file when you want one place to understand:
 | File | Role |
 |------|------|
 | `README.md` | Territory doctrine, scope, and invariants |
+| `../work-companion-self/README.md` | Template sync, audit reports, reconciliation-code audit guidance |
 | `INTEGRATION-PROGRAM.md` | Single-page OpenClaw ⟷ Grace-Mar loop (read / export / stage / merge) |
 | `PARALLEL-MACRO-ACTIONS.md` | Parallel macro-action branches + merge order discipline |
 | `three-compounding-loops.md` | Record vs WORK vs CI loops — how compounding works and where drafts must not become canon |
