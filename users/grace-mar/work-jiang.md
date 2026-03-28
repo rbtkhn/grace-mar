@@ -4,7 +4,7 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 ## Purpose
 
-**Deliver a book and/or website** under the multivolume title **Predictive History** (one volume per lecture series) that articulates and analyzes **Jiang’s unique philosophy** — clear enough for readers to understand the system, and analytic enough to show how claims connect and where they meet the world. Current repo tranche: **Volume 1 — Geo-Strategy**.
+**Deliver a book and/or website** under the multivolume title **Predictive History** (one volume per primary corpus—lecture series for Volumes I–V; **Volume VI — Interviews** for long-form dialogue on any channel) that articulates and analyzes **Jiang’s unique philosophy** — clear enough for readers to understand the system, and analytic enough to show how claims connect and where they meet the world. Current repo tranche: **Volume 1 — Geo-Strategy**.
 
 **Canonical library index:** The book is catalogued in [self-library](self-library.md) as **LIB-0149** (SELF-LIBRARY is reference-facing; the working manuscript and research corpus stay under `research/external/work-jiang/` until material is merged through the gate).
 
@@ -36,16 +36,18 @@ Nothing in this file is Record truth for the Voice until merged through the gate
 
 ---
 
-## WORK Container
+## Instance work context (YAML)
 
-<!-- WORK-JIANG-CONTAINER-START -->
+Machine-oriented snapshot for scripts and agents — [skills-modularity](../../../docs/skills-modularity.md) §2a (*Instance work context*). Not Record. Optional: `python3 scripts/work_jiang/update_work_jiang_lane.py --write` refreshes `status` from book metadata.
+
+<!-- work_jiang.context.yaml WORK_JIANG_CONTEXT_V1 -->
 ```yaml
 status: OUTLINE_ACTIVE
 edge: "Philosophy book + site; transcript-driven; civ-mem lattice; current-events grounding"
 gaps: []
 notes: "See research/external/work-jiang/STATUS.md and BOOK-ARCHITECTURE.md for live production state. Geo-Strategy series resumed 2026-03-23; geo-13+ pending ingest."
 ```
-<!-- WORK-JIANG-CONTAINER-END -->
+<!-- /work_jiang.context.yaml WORK_JIANG_CONTEXT_V1 -->
 
 ---
 

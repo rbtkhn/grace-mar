@@ -17,6 +17,9 @@ For each video you care about, you want **three layers** on disk (names are conv
 | **Curated lecture file** | Human-readable archive: metadata, “at a glance,” optional full ASR, **canonical YouTube URL** | `research/external/work-jiang/lectures/<slug>.md` |
 | **Analysis memo** | Structured read: claims, tags, lattice crosswalk, tensions, dependencies | `research/external/work-jiang/analysis/<video_id>-<short-slug>.md` (or append sections in one rolling doc — pick one pattern and keep it). Prefer **YAML front matter** (`chapter_candidates`, `source_id`, …) via `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` after `build_source_registry.py` so book/site metadata stays machine-readable. |
 
+| **Substack essay (curated)** | **Volume VII** — full post text for search / diff / claim work; operator-ingested | `research/external/work-jiang/substack/essays/<slug>.md` — see [substack/essays/README.md](substack/essays/README.md), [book/VOLUME-VII-SUBSTACK.md](book/VOLUME-VII-SUBSTACK.md) |
+| **Substack analysis memo** | Same memo shape as lecture analysis; links to essay file | `research/external/work-jiang/analysis/ss-<slug>-analysis.md` — **not** in `metadata/sources.yaml` unless you later add a registry row; `normalize_analysis_frontmatter.py` does **not** auto-fill these (filename is not a YouTube id). |
+
 Keeping **raw** and **curated** separate avoids mixing YouTube caption noise with your editorial summary.
 
 **Longitudinal influence (optional):** To track how **public engagement** with Jiang material changes over time (views, likes, comment counts, channel subscribers), use [influence-tracking/README.md](influence-tracking/README.md) and `scripts/snapshot_youtube_video_metrics.py` → append-only `influence-tracking/snapshots/video-metrics.jsonl`. This measures **attention proxies**, not “impact” in a causal sense.
@@ -53,7 +56,7 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
 
 ### Multi-series (Predictive History)
 
-The umbrella book line is **Predictive History** — **one volume per lecture series**. Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata. For **Volume II** (Civilization), **Part II** is **Divergence** (historiographic comparison via `divergence-tracking`), not the Geo-Strategy **prediction** pass — see [book/VOLUME-II-CIVILIZATION.md](book/VOLUME-II-CIVILIZATION.md).
+The umbrella book line is **Predictive History** — **one volume per primary corpus** (lecture series for Volumes I–V; **Volume VI** is long-form **interviews**—see [book/VOLUME-VI-INTERVIEWS.md](book/VOLUME-VI-INTERVIEWS.md); **Volume VII** is **Substack essays**—see [book/VOLUME-VII-SUBSTACK.md](book/VOLUME-VII-SUBSTACK.md)). Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata. For **Volume II** (Civilization), **Part II** is **Divergence** (historiographic comparison via `divergence-tracking`), not the Geo-Strategy **prediction** pass — see [book/VOLUME-II-CIVILIZATION.md](book/VOLUME-II-CIVILIZATION.md).
 
 | Series | `series` (in `metadata/sources.yaml`) | `source_id` pattern | Curated lecture filename pattern |
 |--------|----------------------------------------|---------------------|----------------------------------|
@@ -62,12 +65,13 @@ The umbrella book line is **Predictive History** — **one volume per lecture se
 | Secret History (Vol. III) | `secret-history` | `sh-01` … | `lectures/secret-history-NN-*.md` |
 | Game Theory (Vol. IV) | `game-theory` | `gt-01` … | `lectures/game-theory-NN-*.md` |
 | Great Books (Vol. V) | `great-books` | `gb-01` … | `lectures/great-books-NN-*.md` |
+| Interviews (Vol. VI) | `interviews` | `vi-01` … | `lectures/interviews-NN-*.md` |
 
 **Curated lecture filename & slug (canonical rules):**
 
 - **One file per episode.** The path under `lectures/` is the stable key for sorting and tooling:  
   **`lectures/<series-prefix>-<NN>-<kebab-slug>.md`**
-  - **`<series-prefix>`** — exactly `geo-strategy`, `civilization`, `secret-history`, `game-theory`, or `great-books` (matches `series` in `sources.yaml`).
+  - **`<series-prefix>`** — exactly `geo-strategy`, `civilization`, `secret-history`, `game-theory`, `great-books`, or `interviews` (matches `series` in `sources.yaml`).
   - **`<NN>`** — **two-digit** episode index (`01`–`99`), zero-padded. It **must** match the numeric **`episode`** field for that row in `metadata/sources.yaml` (e.g. `episode: 4` → `…-04-…`).
   - **`<kebab-slug>`** — lowercase words separated by **hyphens**, ASCII; short human-readable topic (may include a date fragment for geo, e.g. `2024-04-24`). It does **not** need to mirror the YouTube title character-for-character.
 - **Display title vs filename.** The first markdown **`# `** heading is the **display title** (usually aligned with the YouTube title). It may differ from `<kebab-slug>`; **`scripts/work_jiang/build_source_registry.py`** takes the title from the **first `# ` line** when rebuilding `sources.yaml`.
@@ -129,7 +133,7 @@ If an episode needs **caption-faithful** excerpts in git without committing the 
    python3 scripts/work_jiang/normalize_lecture_transcript_asr.py \
      research/external/work-jiang/lectures/<slug>.md --write
    ```
-   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only; `secret-history-*.md` gets **common** + **Secret History** (Roman / Volume III phrases — see `SECRET_HISTORY_REPLACEMENTS` in `asr_transcript_replacements.py`); `game-theory-*.md` gets **common** + **Game Theory** (Volume IV — see `GAME_THEORY_REPLACEMENTS`, often empty until ingests); `great-books-*.md` gets **common** + **Great Books** (Volume V — see `GREAT_BOOKS_REPLACEMENTS`, often empty until ingests). Detected from filename unless you override with `--series civilization|geo-strategy|secret-history|game-theory|great-books|none`.
+   - **Series:** `civilization-*.md` gets **common** + **Civilization** replacement tiers; `geo-strategy-*.md` gets **common** only; `secret-history-*.md` gets **common** + **Secret History** (Roman / Volume III phrases — see `SECRET_HISTORY_REPLACEMENTS` in `asr_transcript_replacements.py`); `game-theory-*.md` gets **common** + **Game Theory** (Volume IV — see `GAME_THEORY_REPLACEMENTS`, often empty until ingests); `great-books-*.md` gets **common** + **Great Books** (Volume V — see `GREAT_BOOKS_REPLACEMENTS`, often empty until ingests); `interviews-*.md` gets **common** only (Volume VI — see `normalize_lecture_transcript_asr.py`). Detected from filename unless you override with `--series civilization|geo-strategy|secret-history|game-theory|great-books|interviews|none`.
    - **Scope:** Only the markdown **below** `## Full transcript` is rewritten unless you pass `--whole-file` (avoid touching curated topic headers).
    - **Tables:** Edit `scripts/work_jiang/asr_transcript_replacements.py` when a new episode introduces a systematic ASR error; keep longest phrases first in each list (the script sorts by length, but order matters for identical prefixes).
    - **Not automatic truth:** This is a **readability** aid; spot-check names and add manual fixes for one-off errors.

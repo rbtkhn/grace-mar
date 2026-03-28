@@ -23,6 +23,7 @@ def main() -> int:
     )
     parser.add_argument("--predictions", type=Path, default=None)
     parser.add_argument("--divergences", type=Path, default=None)
+    parser.add_argument("--patterns", type=Path, default=None)
     parser.add_argument(
         "--check",
         action="store_true",
@@ -39,11 +40,15 @@ def main() -> int:
 
         c = sqlite3.connect(str(db))
         cur = c.execute(
-            "SELECT name FROM sqlite_master WHERE type='table' AND name IN ('predictions','divergences')"
+            "SELECT name FROM sqlite_master WHERE type='table' AND name IN "
+            "('predictions','divergences','patterns')"
         )
-        rows = cur.fetchall()
+        rows = {r[0] for r in cur.fetchall()}
         c.close()
-        if len(rows) < 2:
+        if not {"predictions", "divergences"}.issubset(rows):
+            print("INCOMPLETE_SCHEMA")
+            return 1
+        if "patterns" not in rows:
             print("INCOMPLETE_SCHEMA")
             return 1
         print("OK")
@@ -52,6 +57,7 @@ def main() -> int:
     rebuild_from_jsonl(
         predictions_path=args.predictions,
         divergences_path=args.divergences,
+        patterns_path=args.patterns,
         db_path=args.db,
     )
     print(f"Rebuilt {args.db or DEFAULT_DB}")

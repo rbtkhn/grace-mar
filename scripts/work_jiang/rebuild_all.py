@@ -30,6 +30,7 @@ STEPS = [
     ["python3", "scripts/work_jiang/validate_work_jiang.py", "--require-analysis-frontmatter"],
     ["python3", "scripts/work_jiang/validate_argument_layer.py"],
     ["python3", "scripts/work_jiang/validate_comparative_layer.py"],
+    ["python3", "scripts/work_jiang/validate_patterns_registry.py"],
 ]
 
 

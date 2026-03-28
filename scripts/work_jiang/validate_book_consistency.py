@@ -24,6 +24,10 @@ from pathlib import Path
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+_SCRIPTS_WJ = Path(__file__).resolve().parent
+if str(_SCRIPTS_WJ) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS_WJ))
+
 WORK_JIANG = REPO_ROOT / "research" / "external" / "work-jiang"
 ARCH_PATH = WORK_JIANG / "metadata" / "book-architecture.yaml"
 PREDICTIONS_PATH = WORK_JIANG / "prediction-tracking" / "registry" / "predictions.jsonl"
@@ -193,6 +197,22 @@ def check_cross_references(chapters: list[dict], report: ValidationReport) -> No
                 report.error(f"{ch['id']}: cross-reference to Chapter {ref_num} but {ref_id} not in architecture")
 
 
+def check_patterns_registry(report: ValidationReport) -> None:
+    """Validate pattern-tracking/registry/patterns.jsonl (IDs, prediction links, recurrence)."""
+    from validate_patterns_registry import PATTERNS_PATH, run_validation
+
+    if not PATTERNS_PATH.exists():
+        report.warn("pattern-tracking/registry/patterns.jsonl missing; skipping pattern checks")
+        return
+    errors, warnings = run_validation()
+    for w in warnings:
+        report.warn(f"patterns: {w}")
+    for e in errors:
+        report.error(f"patterns: {e}")
+    if not errors:
+        report.note("patterns registry validated")
+
+
 def check_task_health(report: ValidationReport) -> None:
     """Check for stale claimed tasks and orphan submissions."""
     states = load_task_states()
@@ -250,6 +270,7 @@ def run_checks(chapter_filter: str | None = None) -> ValidationReport:
 
     check_prediction_ids(chapters, report)
     check_divergence_ids(chapters, report)
+    check_patterns_registry(report)
     check_chapter_completeness(chapters, report)
     check_cross_references(chapters, report)
     check_task_health(report)

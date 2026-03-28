@@ -1,5 +1,7 @@
 # Predictive History — Volume VI: Interviews
 
+**Book line:** Volume VI is a **full volume** of the **Predictive History** multivolume book (same editorial discipline as lecture volumes: Part I follows the corpus in order; Part II method TBD in this file as the lane matures).
+
 **Scope:** Volume VI includes **curated long-form interviews** with Jiang Xueqin — **any host or channel** (not limited to Predictive History–hosted shows). Same chapter pattern as below.
 
 **Corpus:** `series: interviews` in `metadata/sources.yaml`; `source_id` `vi-NN` matches **`interviews-NN`** (same index as `build_source_registry.py`). Curated files `lectures/interviews-NN-*.md` (wired in `build_source_registry.py`, `validate_work_jiang.py`, ASR normalizer).  
@@ -20,5 +22,6 @@
 | Volume | Series | Notes |
 |--------|--------|--------|
 | VI | Interviews | Curated long-form **dialogue / Q&A** (any show); same **Predictive History** intellectual frame as lecture volumes |
+| VII | Substack | **Written** essays (newsletter); corpus under `substack/essays/` — see [VOLUME-VII-SUBSTACK.md](VOLUME-VII-SUBSTACK.md) |
 
 See also [VOLUME-IV-GAME-THEORY.md](VOLUME-IV-GAME-THEORY.md) for the multivolume **stub** pattern.

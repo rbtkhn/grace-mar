@@ -677,3 +677,34 @@ volume_4_game_theory:
         analysis_ready: false
         quotes_ready: false
         requires_prediction_review: false
+
+# --- Volume VII (Substack essays) — stub; top-level `book` remains Volume I until promoted ---
+volume_7_substack:
+  project:
+    id: work-jiang-volume-7
+    series_title: "Predictive History"
+    volume:
+      number: 7
+      corpus: "Substack (Predictive History newsletter)"
+    title: "Predictive History, Volume 7: Substack Essays"
+    thesis_one_sentence: "TBD — set when Part I book thesis is drafted (essay-faithful arc; publication order)."
+    promise_paragraph: >
+      Part I follows Jiang’s Substack essays in publication order, text-backed
+      (`substack/essays/<slug>.md`; see `book/VOLUME-VII-SUBSTACK.md`).
+      Part II evaluation mode not yet chosen. Registry wiring into
+      `metadata/sources.yaml` is optional until the operator promotes this block.
+    audience:
+      primary: "serious general readers interested in history, philosophy, and geopolitics"
+      secondary:
+        - "readers following Predictive History on Substack"
+    channel_context:
+      platform: Substack
+      publication: "https://predictivehistory.substack.com/"
+    status: corpus_mirror_operator_maintained
+  part_2:
+    title: "Part II — method TBD"
+    after_chapter: ss-last
+    description: >
+      To be defined with Volume VII Part II policy.
+  book:
+    chapters: []

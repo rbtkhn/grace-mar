@@ -2,7 +2,8 @@
 """
 Read-only 'momentum' snippets for operator good morning / good night — Predictive History lane.
 
-Pulls WORK container + STATUS / CHAPTER-QUEUE hints and rotates optional sparks from
+Pulls `users/<id>/work-jiang.md` **Instance work context (YAML)** (see skills-modularity §2a) plus
+STATUS / CHAPTER-QUEUE hints and rotates optional sparks from
 research/external/work-jiang/metadata/warmup-sparks.yaml (operator-editable).
 
 Does not write the Record or touch the gate.
@@ -22,7 +23,17 @@ SPARKS_PATH = WORK_DIR / "metadata" / "warmup-sparks.yaml"
 STATUS_PATH = WORK_DIR / "STATUS.md"
 CHAPTER_QUEUE_PATH = WORK_DIR / "CHAPTER-QUEUE.md"
 
-CONTAINER_RE = re.compile(
+# Primary: <!-- work_jiang.context.yaml WORK_JIANG_CONTEXT_V1 --> ... <!-- /work_jiang.context.yaml WORK_JIANG_CONTEXT_V1 -->
+_INSTANCE_CONTEXT_V1_RE = re.compile(
+    r"<!--\s*work_jiang\.context\.yaml\s+WORK_JIANG_CONTEXT_V1\s*-->\s*```yaml\s*\n(.*?)```\s*<!--\s*/work_jiang\.context\.yaml\s+WORK_JIANG_CONTEXT_V1\s*-->",
+    re.DOTALL | re.IGNORECASE,
+)
+# Legacy fenced blocks (older work-jiang.md shapes)
+_LEGACY_HEARTBEAT_RE = re.compile(
+    r"<!--\s*WORK-JIANG-HEARTBEAT-START\s*-->\s*```yaml\s*\n(.*?)```\s*<!--\s*WORK-JIANG-HEARTBEAT-END\s*-->",
+    re.DOTALL | re.IGNORECASE,
+)
+_LEGACY_CONTAINER_RE = re.compile(
     r"<!--\s*WORK-JIANG-CONTAINER-START\s*-->\s*```yaml\s*\n(.*?)```\s*<!--\s*WORK-JIANG-CONTAINER-END\s*-->",
     re.DOTALL | re.IGNORECASE,
 )
@@ -70,8 +81,12 @@ def _pick_spark(lines: list[str]) -> str:
     return lines[_ordinal_day() % len(lines)]
 
 
-def _parse_work_container(work_jiang_md: str) -> dict[str, str]:
-    m = CONTAINER_RE.search(work_jiang_md)
+def _parse_instance_work_context_yaml(work_jiang_md: str) -> dict[str, str]:
+    m = (
+        _INSTANCE_CONTEXT_V1_RE.search(work_jiang_md)
+        or _LEGACY_HEARTBEAT_RE.search(work_jiang_md)
+        or _LEGACY_CONTAINER_RE.search(work_jiang_md)
+    )
     if not m:
         return {}
     raw = m.group(1).strip()
@@ -124,7 +139,7 @@ def _corpus_oneliner(status_md: str) -> str:
 def build_morning_pulse_lines(user_id: str) -> list[str]:
     profile = ROOT / "users" / user_id / "work-jiang.md"
     wj = profile.read_text(encoding="utf-8") if profile.is_file() else ""
-    container = _parse_work_container(wj)
+    ctx = _parse_instance_work_context_yaml(wj)
     status = STATUS_PATH.read_text(encoding="utf-8") if STATUS_PATH.is_file() else ""
     queue = CHAPTER_QUEUE_PATH.read_text(encoding="utf-8") if CHAPTER_QUEUE_PATH.is_file() else ""
 
@@ -141,13 +156,19 @@ def build_morning_pulse_lines(user_id: str) -> list[str]:
         "_Operator lane — not Voice knowledge until merged through the gate._",
         "",
     ]
-    if container.get("status"):
-        edge = container.get("edge", "")
-        lines.append(f"- **WORK pulse:** `{container['status']}`" + (f" — {edge}" if edge else ""))
+    if ctx.get("status"):
+        edge = ctx.get("edge", "")
+        lines.append(
+            f"- **Instance context:** `{ctx['status']}`" + (f" — {edge}" if edge else "")
+        )
     else:
-        lines.append("- **WORK pulse:** (add/update WORK container in `users/{0}/work-jiang.md`)".format(user_id))
-    if container.get("notes"):
-        lines.append(f"- **Notes:** {container['notes']}")
+        lines.append(
+            "- **Instance context:** (add `## Instance work context (YAML)` with "
+            "`work_jiang.context.yaml` / `WORK_JIANG_CONTEXT_V1` markers in "
+            "`users/{0}/work-jiang.md`)".format(user_id)
+        )
+    if ctx.get("notes"):
+        lines.append(f"- **Notes:** {ctx['notes']}")
     if corpus:
         lines.append(f"- **Corpus snapshot:** {corpus}")
     if next_status:
@@ -170,7 +191,7 @@ def build_morning_pulse_lines(user_id: str) -> list[str]:
 def build_night_pulse_lines(user_id: str) -> list[str]:
     profile = ROOT / "users" / user_id / "work-jiang.md"
     wj = profile.read_text(encoding="utf-8") if profile.is_file() else ""
-    container = _parse_work_container(wj)
+    ctx = _parse_instance_work_context_yaml(wj)
     status = STATUS_PATH.read_text(encoding="utf-8") if STATUS_PATH.is_file() else ""
     queue = CHAPTER_QUEUE_PATH.read_text(encoding="utf-8") if CHAPTER_QUEUE_PATH.is_file() else ""
 
@@ -186,8 +207,8 @@ def build_night_pulse_lines(user_id: str) -> list[str]:
         "_Same membrane: research lane only; no merge in this workflow._",
         "",
     ]
-    if container.get("status"):
-        lines.append(f"- **Where the lane rests:** `{container['status']}`")
+    if ctx.get("status"):
+        lines.append(f"- **Where the lane rests:** `{ctx['status']}`")
     if next_status or (ch_id and ch_next):
         lever = next_status or f"{ch_id}: {ch_next}"
         lines.append(f"- **Tomorrow's first lever (suggested):** {lever}")

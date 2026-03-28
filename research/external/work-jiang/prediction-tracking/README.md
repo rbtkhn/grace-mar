@@ -76,6 +76,10 @@ Optional: `superseded_by`, `related_prediction_ids`, `accuracy_note` (why partia
 
 [Influence tracking](../influence-tracking/README.md) measures **attention** (views/likes). Prediction tracking measures **forecast fit** — orthogonal; spikes in views do not validate claims.
 
+## Relation to pattern tracking
+
+Cross-lecture **mechanisms / scripts** (not single-shot forecasts) live in [`../pattern-tracking/README.md`](../pattern-tracking/README.md). Prediction rows may list `linked_pattern_ids` in a future schema extension; today, patterns carry **`linked_prediction_ids`** back into this registry.
+
 ## Relation to divergence tracking
 
 [Divergence tracking](../divergence-tracking/README.md) asks whether a claim **matches how a field usually frames** the same topic. A prediction can be **wrong** and still **mainstream**, or **right** but **heterodox** — use both registries.

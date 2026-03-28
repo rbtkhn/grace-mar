@@ -193,8 +193,12 @@ def _extract_chinese_edge(think_content: str) -> str:
 
 
 def _extract_work_edge(work_content: str) -> str:
-    # Compatibility: current work files still use the historical "WORK Container" heading.
-    block = _section(work_content, "WORK Context") or _section(work_content, "WORK Container") or ""
+    block = (
+        _section(work_content, "Instance work context (YAML)")
+        or _section(work_content, "WORK Context")
+        or _section(work_content, "WORK Container")
+        or ""
+    )
     m = re.search(r'edge:\s*["\']([^"\']+)["\']', block)
     return m.group(1).strip() if m else "Narrative creation from prompts; plan 3 steps for a small project"
 

@@ -42,6 +42,12 @@ def init_schema(conn: sqlite3.Connection) -> None:
         );
         CREATE INDEX IF NOT EXISTS idx_div_video ON divergences(video_id);
         CREATE INDEX IF NOT EXISTS idx_div_type ON divergences(divergence_type);
+
+        CREATE TABLE IF NOT EXISTS patterns (
+            pattern_id TEXT PRIMARY KEY,
+            payload TEXT NOT NULL
+        );
+        CREATE INDEX IF NOT EXISTS idx_pat_id ON patterns(pattern_id);
         """
     )
     conn.commit()
@@ -51,6 +57,7 @@ def rebuild_from_jsonl(
     *,
     predictions_path: Path | None = None,
     divergences_path: Path | None = None,
+    patterns_path: Path | None = None,
     db_path: Path | None = None,
 ) -> None:
     pred_p = predictions_path or (
@@ -59,10 +66,14 @@ def rebuild_from_jsonl(
     div_p = divergences_path or (
         ROOT / "research/external/work-jiang/divergence-tracking/registry/divergences.jsonl"
     )
+    pat_p = patterns_path or (
+        ROOT / "research/external/work-jiang/pattern-tracking/registry/patterns.jsonl"
+    )
     conn = connect(db_path)
     init_schema(conn)
     conn.execute("DELETE FROM predictions")
     conn.execute("DELETE FROM divergences")
+    conn.execute("DELETE FROM patterns")
 
     if pred_p.exists():
         with pred_p.open("r", encoding="utf-8") as f:
@@ -109,6 +120,19 @@ def rebuild_from_jsonl(
                     ),
                 )
 
+    if pat_p.exists():
+        with pat_p.open("r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                row = json.loads(line)
+                patid = row.get("pattern_id") or ""
+                conn.execute(
+                    "INSERT INTO patterns (pattern_id, payload) VALUES (?,?)",
+                    (patid, json.dumps(row, ensure_ascii=True)),
+                )
+
     conn.commit()
     conn.close()
 
@@ -135,6 +159,31 @@ def load_predictions_for_link(*, prefer_sqlite: bool | None = None) -> list[dict
         return []
     out = []
     with pred_p.open("r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                out.append(json.loads(line))
+    return out
+
+
+def load_patterns_for_link(*, prefer_sqlite: bool | None = None) -> list[dict]:
+    """Load pattern rows for link_supporting_registries (JSONL canonical; optional SQLite read)."""
+    prefer = _env_prefer_sqlite() if prefer_sqlite is None else prefer_sqlite
+    pat_p = ROOT / "research/external/work-jiang/pattern-tracking/registry/patterns.jsonl"
+    if prefer and DEFAULT_DB.exists():
+        conn = connect()
+        cur = conn.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='patterns'")
+        if cur.fetchone():
+            out: list[dict] = []
+            for row in conn.execute("SELECT payload FROM patterns"):
+                out.append(json.loads(row[0]))
+            conn.close()
+            return out
+        conn.close()
+    if not pat_p.exists():
+        return []
+    out = []
+    with pat_p.open("r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line:

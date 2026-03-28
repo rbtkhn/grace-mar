@@ -1,4 +1,4 @@
-"""Join predictions/divergences/influence JSONL to source_id and chapter_id; write metadata/*-links.yaml.
+"""Join predictions/divergences/patterns/influence JSONL to source_id and chapter_id; write metadata/*-links.yaml.
 
 Predictions/divergences load from canonical JSONL by default. Set WORK_JIANG_REGISTRY_PREFER_SQLITE=1
 (after rebuild_registry_db.py) to read the materialized SQLite payloads instead — same row shape.
@@ -18,7 +18,11 @@ _SCRIPTS_WJ = ROOT / "scripts" / "work_jiang"
 if str(_SCRIPTS_WJ) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS_WJ))
 
-from registry_db import load_divergences_for_link, load_predictions_for_link
+from registry_db import (
+    load_divergences_for_link,
+    load_patterns_for_link,
+    load_predictions_for_link,
+)
 
 
 def load_jsonl(path: Path) -> list[dict]:
@@ -101,6 +105,28 @@ def main() -> int:
         chs = source_to_chapters.get(sid, []) if sid else []
         out_inf.append({**row, "source_id": sid, "chapter_ids": chs})
 
+    patterns = load_patterns_for_link()
+    out_pat = []
+    for row in patterns:
+        sids: list[str] = []
+        for hook in row.get("evidence_hooks") or []:
+            if not isinstance(hook, dict):
+                continue
+            sid = resolve_source(hook, by_video, by_lecture)
+            if sid:
+                sids.append(sid)
+        chs_set: set[str] = set()
+        for sid in sids:
+            for ch in source_to_chapters.get(sid, []) or []:
+                chs_set.add(ch)
+        out_pat.append(
+            {
+                **row,
+                "resolved_source_ids": sids,
+                "chapter_ids": sorted(chs_set),
+            }
+        )
+
     meta = WORK_DIR / "metadata"
     meta.mkdir(parents=True, exist_ok=True)
     (meta / "prediction-links.yaml").write_text(
@@ -115,9 +141,13 @@ def main() -> int:
         yaml.safe_dump({"influence_links": out_inf}, sort_keys=False, allow_unicode=True),
         encoding="utf-8",
     )
+    (meta / "pattern-links.yaml").write_text(
+        yaml.safe_dump({"pattern_links": out_pat}, sort_keys=False, allow_unicode=True),
+        encoding="utf-8",
+    )
     print(
         f"Wrote prediction-links ({len(out_pred)}), divergence-links ({len(out_div)}), "
-        f"influence-links ({len(out_inf)})"
+        f"influence-links ({len(out_inf)}), pattern-links ({len(out_pat)})"
     )
     return 0
 

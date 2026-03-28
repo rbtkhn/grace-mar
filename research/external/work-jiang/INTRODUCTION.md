@@ -4,7 +4,7 @@ The **Preface** explains why this book exists and how it treats evidence. This *
 
 ## Predictive History (series) and this volume
 
-The umbrella title for the multivolume project is **Predictive History**. Each volume corresponds to **one lecture series** so readers can follow a single arc of talks from exposition through analysis without mixing corpora. **This volume** is **Volume 1 — Geo-Strategy**; the chapter plan and evidence packs here refer to that series unless noted otherwise.
+The umbrella title for the multivolume project is **Predictive History**. Each numbered volume corresponds to **one primary corpus**—usually a **lecture series**; **Volume VI** is **long-form interviews** with Jiang (any host or channel), still one chapter per session in upload order; **Volume VII** is the **Substack** essay corpus (written newsletter), ordered by publication date in the operator’s curated mirror—so readers can follow a single arc from exposition through analysis without mixing corpora. **This volume** is **Volume 1 — Geo-Strategy**; the chapter plan and evidence packs here refer to that series unless noted otherwise.
 
 ## The argument in brief
 
@@ -57,3 +57,11 @@ The **Civilization** lecture series is **Volume II** in the same multivolume lin
 ## Future volume — Great Books (Volume V)
 
 **Great Books** is registered as **Volume V** in the Predictive History line. Scope, corpus boundaries, and Part II method are tracked in [`book/VOLUME-V-GREAT-BOOKS.md`](book/VOLUME-V-GREAT-BOOKS.md).
+
+## Volume VI — Interviews (same book line)
+
+**Interviews** is **Volume VI**: curated **long-form dialogue / Q&A** with Jiang on **any** show or channel, in **YouTube publication order**—the same **Predictive History** intellectual frame as the lecture volumes, with **one book chapter per interview** unless `metadata/source-map.yaml` documents an exception. Corpus keys, filenames, and registry wiring are in [`book/VOLUME-VI-INTERVIEWS.md`](book/VOLUME-VI-INTERVIEWS.md).
+
+## Volume VII — Substack essays (same book line)
+
+**Substack** is **Volume VII**: curated **essay / newsletter** posts on [Predictive History (Substack)](https://predictivehistory.substack.com/), mirrored under `substack/essays/<slug>.md` for analysis and crosswalk to lectures. **Not** wired into `metadata/sources.yaml` by default. Scope, ordering, and analysis pattern are in [`book/VOLUME-VII-SUBSTACK.md`](book/VOLUME-VII-SUBSTACK.md).

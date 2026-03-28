@@ -1,4 +1,4 @@
-"""Refresh WORK Container status line in users/grace-mar/work-jiang.md from metadata."""
+"""Refresh `status` in users/grace-mar/work-jiang.md Instance work context (YAML) from metadata."""
 from __future__ import annotations
 
 import argparse
@@ -44,26 +44,39 @@ def main() -> int:
     new_status = lane_status(arch, q)
 
     text = LANE.read_text(encoding="utf-8")
+    # Primary: work_jiang.context.yaml WORK_JIANG_CONTEXT_V1
     pattern = re.compile(
-        r"(<!-- WORK-JIANG-CONTAINER-START -->\s*\n```yaml\n)(status: )(\w+)",
+        r"(<!--\s*work_jiang\.context\.yaml\s+WORK_JIANG_CONTEXT_V1\s*-->\s*\n```yaml\n)(status: )(\w+)",
     )
-    if not pattern.search(text):
+    legacy = re.compile(
+        r"(<!--\s*WORK-JIANG-(?:CONTAINER|HEARTBEAT)-START\s*-->\s*\n```yaml\n)(status: )(\w+)",
+    )
+    if pattern.search(text):
+
+        def repl(m: re.Match) -> str:
+            return f"{m.group(1)}{m.group(2)}{new_status}"
+
+        new_text = pattern.sub(repl, text, count=1)
+    elif legacy.search(text):
+
+        def repl_leg(m: re.Match) -> str:
+            return f"{m.group(1)}{m.group(2)}{new_status}"
+
+        new_text = legacy.sub(repl_leg, text, count=1)
+    else:
         print(
-            "No WORK-JIANG-CONTAINER markers found; add "
-            "<!-- WORK-JIANG-CONTAINER-START --> ... <!-- WORK-JIANG-CONTAINER-END --> "
-            "around the WORK Container yaml in work-jiang.md"
+            "No instance work context markers found; add "
+            "<!-- work_jiang.context.yaml WORK_JIANG_CONTEXT_V1 --> ... "
+            "<!-- /work_jiang.context.yaml WORK_JIANG_CONTEXT_V1 --> "
+            "around the yaml fence in work-jiang.md (see skills-modularity §2a)."
         )
         return 1
 
-    def repl(m: re.Match) -> str:
-        return f"{m.group(1)}{m.group(2)}{new_status}"
-
-    new_text = pattern.sub(repl, text, count=1)
     if args.write:
         LANE.write_text(new_text, encoding="utf-8")
-        print(f"Set WORK Container status to {new_status}")
+        print(f"Set instance work context status to {new_status}")
     else:
-        print(f"Would set WORK Container status to {new_status} (use --write)")
+        print(f"Would set instance work context status to {new_status} (use --write)")
     return 0
 
 
