@@ -4,7 +4,7 @@ Process approved pipeline candidates: merge into SELF, EVIDENCE, prompt; run exp
 After --apply, stderr reminds to refresh OpenClaw / external USER.md if --export-openclaw was not used.
 
 Territory batch merge (work-politics vs companion):
-    --territory work-politics  # preferred (aliases: wap, wp)
+    --territory work-politics  # preferred (aliases: pol, wp; legacy: wap)
     --territory companion  # only the rest
     --territory all        # default — every approved row in Candidates section
     Generate receipt and apply with the same --territory so candidate_ids match.
@@ -44,7 +44,7 @@ from emit_pipeline_event import append_pipeline_event
 from harness_events import append_harness_event
 from pipeline_correlation import find_staged_event_id_for_candidate
 from recursion_gate_review import split_gate_sections
-from recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
+from recursion_gate_territory import TERRITORY_WORK_POLITICS, normalize_territory_cli, territory_from_yaml_block
 from identity_library_boundary_rules import collect_ix_a_violations_from_self_md
 from repo_io import CANONICAL_EVIDENCE_BASENAME
 
@@ -988,9 +988,9 @@ def main() -> None:
     ap.add_argument("--openclaw-api-key", default="", help="OpenClaw post API key (if destination=post)")
     ap.add_argument(
         "--territory",
-        choices=("all", "wap", "wp", "work-politics", "companion"),
+        choices=("all", "pol", "wap", "wp", "work-politics", "companion"),
         default="all",
-        help="Merge only approved candidates in this territory (work-politics = wap/wp aliases; companion = rest). Receipt must match.",
+        help="Merge only approved candidates in this territory (work-politics = pol/wp aliases; legacy wap; companion = rest). Receipt must match.",
     )
     ap.add_argument(
         "--require-lifecycle-fields",
@@ -1011,9 +1011,9 @@ def main() -> None:
 
     approved = get_approved_in_candidates()
     if territory == "work-politics":
-        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WORK_POLITICS]
     elif territory == "companion":
-        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WORK_POLITICS]
     if args.quick.strip():
         quick_id = args.quick.strip()
         if not quick_id.upper().startswith("CANDIDATE-"):
@@ -1025,7 +1025,7 @@ def main() -> None:
     if not approved:
         print(
             f"No approved candidates to process (territory={territory}). "
-            "Approve rows in recursion-gate above ## Processed; work-politics rows need territory: work-politics (or legacy) or channel_key: operator:wap."
+            "Approve rows in recursion-gate above ## Processed; work-politics rows need territory: work-politics (or legacy) or channel_key: operator:pol / operator:wap."
         )
         return
 

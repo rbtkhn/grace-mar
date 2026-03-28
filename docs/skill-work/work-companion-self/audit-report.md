@@ -259,7 +259,7 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-politics/state-evolved-assistant-brain-heads-of-state.md
   - docs/skill-work/work-politics/target-registry.md
   - docs/skill-work/work-politics/uare-ai-competitive-notes.md
-  - docs/skill-work/work-politics/wap-candidate-template.md
+  - docs/skill-work/work-politics/pol-candidate-template.md
   - docs/skill-work/work-politics/weekly-brief-2026-03-09.md
   - docs/skill-work/work-politics/weekly-brief-template.md
   - docs/skill-work/work-politics/work-politics-sources.md

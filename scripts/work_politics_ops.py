@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Structured operator state for work-politics (CLI: wap).
+Structured operator state for work-politics (CLI shorthand: pol / work-politics).
 
 Builds a dashboard-friendly snapshot from work-politics docs and the canonical gate.
 """
@@ -13,13 +13,13 @@ from pathlib import Path
 
 try:
     from recursion_gate_review import parse_review_candidates
-    from recursion_gate_territory import TERRITORY_WAP
+    from recursion_gate_territory import TERRITORY_WORK_POLITICS
 except ImportError:
     from scripts.recursion_gate_review import parse_review_candidates
-    from scripts.recursion_gate_territory import TERRITORY_WAP
+    from scripts.recursion_gate_territory import TERRITORY_WORK_POLITICS
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-politics"
+WORK_POLITICS_DIR = REPO_ROOT / "docs" / "skill-work" / "work-politics"
 
 
 def _read(path: Path) -> str:
@@ -84,7 +84,7 @@ def _days_until(date_text: str) -> int | None:
 
 
 def _extract_primary_date() -> dict[str, object]:
-    calendar_path = WAP_DIR / "calendar-2026.md"
+    calendar_path = WORK_POLITICS_DIR / "calendar-2026.md"
     content = _read(calendar_path)
     match = re.search(r"\*\*Primary election day:\*\* .*?\*\*(\w+ \d{1,2}, \d{4})\*\*", content)
     label = match.group(1) if match else "May 19, 2026"
@@ -95,7 +95,7 @@ def _extract_primary_date() -> dict[str, object]:
 
 
 def _calendar_rows(limit: int = 4) -> list[dict[str, object]]:
-    rows = _parse_markdown_table(_read(WAP_DIR / "calendar-2026.md"))
+    rows = _parse_markdown_table(_read(WORK_POLITICS_DIR / "calendar-2026.md"))
     upcoming: list[dict[str, object]] = []
     for row in rows:
         date_text = row.get("Date", "")
@@ -115,7 +115,7 @@ def _calendar_rows(limit: int = 4) -> list[dict[str, object]]:
 
 
 def _revenue_summary() -> dict[str, object]:
-    rows = _parse_markdown_table(_read(WAP_DIR / "revenue-log.md"))
+    rows = _parse_markdown_table(_read(WORK_POLITICS_DIR / "revenue-log.md"))
     total_revenue = 0.0
     revenue_events = 0
     btc_commitments = 0
@@ -137,11 +137,11 @@ def _revenue_summary() -> dict[str, object]:
 
 
 def _brief_sources() -> list[dict[str, str]]:
-    return _parse_markdown_table(_read(WAP_DIR / "brief-source-registry.md"))
+    return _parse_markdown_table(_read(WORK_POLITICS_DIR / "brief-source-registry.md"))
 
 
 def _content_queue() -> list[dict[str, str]]:
-    return _parse_markdown_table(_read(WAP_DIR / "content-queue.md"))
+    return _parse_markdown_table(_read(WORK_POLITICS_DIR / "content-queue.md"))
 
 
 def _brief_readiness() -> dict[str, object]:
@@ -178,12 +178,12 @@ def _content_summary() -> dict[str, object]:
 
 def _doc_statuses() -> list[dict[str, object]]:
     files = [
-        ("Principal profile", WAP_DIR / "principal-profile.md"),
-        ("Opposition brief", WAP_DIR / "opposition-brief.md"),
-        ("Calendar", WAP_DIR / "calendar-2026.md"),
-        ("Revenue log", WAP_DIR / "revenue-log.md"),
-        ("Brief source registry", WAP_DIR / "brief-source-registry.md"),
-        ("Content queue", WAP_DIR / "content-queue.md"),
+        ("Principal profile", WORK_POLITICS_DIR / "principal-profile.md"),
+        ("Opposition brief", WORK_POLITICS_DIR / "opposition-brief.md"),
+        ("Calendar", WORK_POLITICS_DIR / "calendar-2026.md"),
+        ("Revenue log", WORK_POLITICS_DIR / "revenue-log.md"),
+        ("Brief source registry", WORK_POLITICS_DIR / "brief-source-registry.md"),
+        ("Content queue", WORK_POLITICS_DIR / "content-queue.md"),
     ]
     out: list[dict[str, object]] = []
     for label, path in files:
@@ -199,9 +199,9 @@ def _doc_statuses() -> list[dict[str, object]]:
     return out
 
 
-def _wap_gate_items(user_id: str) -> list[dict]:
+def _work_politics_gate_items(user_id: str) -> list[dict]:
     rows = parse_review_candidates(user_id)
-    return [row for row in rows if row.get("territory") == TERRITORY_WAP]
+    return [row for row in rows if row.get("territory") == TERRITORY_WORK_POLITICS]
 
 
 def _territory_blockers(user_id: str) -> list[dict[str, str]]:
@@ -223,8 +223,8 @@ def _territory_blockers(user_id: str) -> list[dict[str, str]]:
                     "action": f"Review `{doc['path']}` and confirm it still matches the live campaign context.",
                 }
             )
-    wap_items = _wap_gate_items(user_id)
-    if not wap_items:
+    politics_items = _work_politics_gate_items(user_id)
+    if not politics_items:
         blockers.append(
             {
                 "kind": "gate_rhythm",
@@ -263,13 +263,13 @@ def _next_actions(user_id: str) -> list[str]:
     return actions[:4]
 
 
-def get_wap_snapshot(user_id: str = "grace-mar") -> dict[str, object]:
+def get_work_politics_snapshot(user_id: str = "grace-mar") -> dict[str, object]:
     primary = _extract_primary_date()
     brief = _brief_readiness()
     content = _content_summary()
-    pending_items = _wap_gate_items(user_id)
+    pending_items = _work_politics_gate_items(user_id)
     return {
-        "territory": TERRITORY_WAP,
+        "territory": TERRITORY_WORK_POLITICS,
         "principal": {
             "name": "Thomas Massie",
             "district": "KY-4",
@@ -290,8 +290,10 @@ def get_wap_snapshot(user_id: str = "grace-mar") -> dict[str, object]:
         },
         "territory_blockers": _territory_blockers(user_id),
         "next_actions": _next_actions(user_id),
-        "workspace_path": str((WAP_DIR / "workspace.md").relative_to(REPO_ROOT)),
+        "workspace_path": str((WORK_POLITICS_DIR / "workspace.md").relative_to(REPO_ROOT)),
     }
 
 
-__all__ = ["get_wap_snapshot"]
+get_wap_snapshot = get_work_politics_snapshot  # deprecated alias
+
+__all__ = ["get_work_politics_snapshot", "get_wap_snapshot"]

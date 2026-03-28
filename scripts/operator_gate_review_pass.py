@@ -9,10 +9,10 @@ import argparse
 
 try:
     from recursion_gate_review import filter_review_candidates, parse_review_candidates
-    from recursion_gate_territory import TERRITORY_LABEL_WAP, normalize_territory_cli
+    from recursion_gate_territory import TERRITORY_LABEL_WORK_POLITICS, normalize_territory_cli
 except ImportError:
     from scripts.recursion_gate_review import filter_review_candidates, parse_review_candidates
-    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP, normalize_territory_cli
+    from scripts.recursion_gate_territory import TERRITORY_LABEL_WORK_POLITICS, normalize_territory_cli
 
 STALE_DAYS = 7
 
@@ -38,14 +38,14 @@ def build_gate_review_pass(user_id: str = "grace-mar", territory: str = "all") -
         if row not in quick_merge and row not in manual_escalate and row not in stale and row not in duplicates
     ]
     companion_count = sum(1 for row in pending if row.get("territory_label") == "Companion")
-    wap_count = sum(1 for row in pending if row.get("territory_label") == TERRITORY_LABEL_WAP)
+    politics_count = sum(1 for row in pending if row.get("territory_label") == TERRITORY_LABEL_WORK_POLITICS)
 
     lines = [
         "# Gate review pass",
         "",
         f"- User: `{user_id}`",
         f"- Territory filter: `{territory}`",
-        f"- Pending candidates: {len(pending)} ({companion_count} companion, {wap_count} work-politics)",
+        f"- Pending candidates: {len(pending)} ({companion_count} companion, {politics_count} work-politics)",
         "",
         "## Approve now",
         "",
@@ -116,7 +116,7 @@ def main() -> int:
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument(
         "--territory",
-        choices=("all", "companion", "wap", "wp", "work-politics"),
+        choices=("all", "companion", "pol", "wap", "wp", "work-politics"),
         default="all",
         help="Territory lens",
     )

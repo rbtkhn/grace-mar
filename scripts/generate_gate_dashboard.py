@@ -23,7 +23,7 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
-from recursion_gate_territory import TERRITORY_WAP
+from recursion_gate_territory import TERRITORY_WORK_POLITICS
 from recursion_gate_review import parse_review_candidates
 
 DEFAULT_USER = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
@@ -38,15 +38,15 @@ def _age_label(age_days: int | None) -> str:
 def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
     gen = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     n = len(rows)
-    wap_n = sum(1 for r in rows if r["territory"] == TERRITORY_WAP)
-    comp_n = n - wap_n
+    politics_n = sum(1 for r in rows if r["territory"] == TERRITORY_WORK_POLITICS)
+    comp_n = n - politics_n
 
     cards = []
     for r in rows:
         duplicate_note = ""
         if r.get("duplicate_hints"):
             duplicate_note = f'<p class="hint">{html.escape(r["duplicate_hints"][0])}</p>'
-        pill_slug = "wap" if r.get("territory") == TERRITORY_WAP else "companion"
+        pill_slug = "pol" if r.get("territory") == TERRITORY_WORK_POLITICS else "companion"
         sig = html.escape((r.get("signal_type") or "").strip())
         cards.append(
             f"""
@@ -82,7 +82,7 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
       --card: #1a2332;
       --text: #e8ecf1;
       --muted: #8b9cb3;
-      --wap: #c4a574;
+      --pol: #c4a574;
       --companion: #7eb8da;
       --accent: #c17f59;
     }}
@@ -153,7 +153,7 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
       font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em;
       padding: 0.2rem 0.5rem; border-radius: 4px;
     }}
-    .pill-wap {{ background: rgba(196,165,116,.2); color: var(--wap); }}
+    .pill-pol {{ background: rgba(196,165,116,.2); color: var(--pol); }}
     .pill-companion {{ background: rgba(126,184,218,.15); color: var(--companion); }}
     .pill-risk {{ background: rgba(193,127,89,.14); color: var(--accent); }}
     .age {{ margin-left: auto; color: var(--muted); font-size: 0.8rem; }}
@@ -179,12 +179,12 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
   <p class="sub">Read-only view of <code>{html.escape(gate_rel)}</code> · edit status in the markdown file, then merge. Generated {html.escape(gen)}</p>
   <div class="stats">
     <span class="stat"><strong>{n}</strong> pending</span>
-    <span class="stat">Work-politics <strong>{wap_n}</strong></span>
+    <span class="stat">Work-politics <strong>{politics_n}</strong></span>
     <span class="stat">Companion <strong>{comp_n}</strong></span>
   </div>
   <div class="filters" role="tablist">
     <button type="button" class="active" data-filter="all">All</button>
-    <button type="button" data-filter="{html.escape(TERRITORY_WAP)}">Work-politics</button>
+    <button type="button" data-filter="{html.escape(TERRITORY_WORK_POLITICS)}">Work-politics</button>
     <button type="button" data-filter="companion">Companion</button>
     <button type="button" data-filter="quick_merge_eligible">Quick merge</button>
     <button type="button" data-filter="manual_escalate">Escalate</button>
@@ -205,7 +205,7 @@ def build_html(user_id: str, rows: list[dict], gate_rel: str) -> str:
           var risk = card.getAttribute('data-risk');
           var sig = card.getAttribute('data-signal') || '';
           var show = f === 'all'
-            || (f === 'companion' && t !== '{TERRITORY_WAP}')
+            || (f === 'companion' && t !== '{TERRITORY_WORK_POLITICS}')
             || t === f
             || risk === f
             || (f === 'reflection' && sig === 'reflection-cycle');

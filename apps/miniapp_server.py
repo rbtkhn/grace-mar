@@ -15,7 +15,7 @@ Real-time exchanges are appended to users/<user>/session-transcript.md (same as 
 SELF-ARCHIVE is updated only when candidates are merged via process_approved_candidates (gated).
 For Telegram webhook: TELEGRAM_BOT_TOKEN, WEBHOOK_BASE_URL (or RENDER_EXTERNAL_URL on Render).
 Family hub: FAMILY_APP_TOKEN, routes /app, /api/family/*.
-Work-politics internal dashboard (env `WAP_DASHBOARD_TOKEN`), routes `/wap`, `/api/wap/jobs`.
+Work-politics internal dashboard (env `POL_DASHBOARD_TOKEN` or legacy `WAP_DASHBOARD_TOKEN`), routes `/pol`, `/wap` (legacy), `/api/pol/jobs`, `/api/wap/jobs` (legacy).
 """
 
 import asyncio
@@ -63,8 +63,8 @@ from bot.core import (
 )
 from scripts.recursion_gate_review import filter_review_candidates, get_review_candidate, parse_review_candidates
 from scripts import process_approved_candidates as pac
-from scripts.recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
-from scripts.work_politics_ops import get_wap_snapshot
+from scripts.recursion_gate_territory import TERRITORY_WORK_POLITICS, normalize_territory_cli, territory_from_yaml_block
+from scripts.work_politics_ops import get_work_politics_snapshot
 from scripts.generate_wap_weekly_brief import build_wap_weekly_brief
 
 app = Flask(
@@ -81,7 +81,9 @@ RECURSION_GATE_PATH = USER_DIR / "recursion-gate.md"
 PIPELINE_EVENTS_PATH = USER_DIR / "pipeline-events.jsonl"
 OPERATOR_FETCH_SECRET = os.getenv("OPERATOR_FETCH_SECRET", "").strip()
 FAMILY_APP_TOKEN = os.getenv("FAMILY_APP_TOKEN", "").strip()
-WAP_DASHBOARD_TOKEN = os.getenv("WAP_DASHBOARD_TOKEN", "").strip()
+POL_DASHBOARD_TOKEN = (
+    os.getenv("POL_DASHBOARD_TOKEN", "").strip() or os.getenv("WAP_DASHBOARD_TOKEN", "").strip()
+)
 OPERATOR_NAME = os.getenv("GRACE_MAR_OPERATOR_NAME", "operator-web").strip() or "operator-web"
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 WEBHOOK_BASE_URL = (
@@ -265,10 +267,11 @@ def operator_inbox():
     return send_from_directory("miniapp", "operator-inbox.html")
 
 
+@app.route("/operator/pol")
 @app.route("/operator/wap")
-def operator_wap():
+def operator_pol_console():
     """Browser ops surface for work-politics."""
-    return send_from_directory("miniapp", "operator-wap.html")
+    return send_from_directory("miniapp", "operator-pol.html")
 
 
 @app.route("/i/<token>")
@@ -293,7 +296,9 @@ def family_hub():
 def _cors(resp):
     resp.headers["Access-Control-Allow-Origin"] = "*"
     resp.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
-    resp.headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization, X-Family-Token, X-Wap-Token"
+    resp.headers["Access-Control-Allow-Headers"] = (
+        "Content-Type, Authorization, X-Family-Token, X-Pol-Token, X-Wap-Token"
+    )
     return resp
 
 
@@ -311,7 +316,7 @@ def _operator_auth():
 
 
 def _wap_jobs_path() -> Path:
-    raw = os.getenv("WAP_JOBS_PATH", "").strip()
+    raw = (os.getenv("POL_JOBS_PATH", "").strip() or os.getenv("WAP_JOBS_PATH", "").strip())
     if raw:
         p = Path(raw)
         return p if p.is_absolute() else (REPO_ROOT / p)
@@ -339,28 +344,32 @@ def _wap_save_jobs(jobs: list[dict]) -> None:
 
 
 def _wap_auth():
-    """Require dashboard token (env WAP_DASHBOARD_TOKEN) via Bearer or X-Wap-Token."""
-    if not WAP_DASHBOARD_TOKEN:
-        return False, (jsonify({"error": "WAP_DASHBOARD_TOKEN not configured"}), 503)
+    """Require dashboard token (POL_DASHBOARD_TOKEN or legacy WAP_DASHBOARD_TOKEN) via Bearer, X-Pol-Token, or X-Wap-Token."""
+    if not POL_DASHBOARD_TOKEN:
+        return False, (jsonify({"error": "POL_DASHBOARD_TOKEN (or WAP_DASHBOARD_TOKEN) not configured"}), 503)
     auth = (request.headers.get("Authorization") or "").strip()
-    header_tok = (request.headers.get("X-Wap-Token") or "").strip()
+    header_tok = (
+        (request.headers.get("X-Pol-Token") or "").strip() or (request.headers.get("X-Wap-Token") or "").strip()
+    )
     if auth.startswith("Bearer "):
         token = auth[7:].strip()
     else:
         token = header_tok
-    if not token or token != WAP_DASHBOARD_TOKEN:
-        return False, (jsonify({"error": "X-Wap-Token or Authorization: Bearer required"}), 401)
+    if not token or token != POL_DASHBOARD_TOKEN:
+        return False, (jsonify({"error": "X-Pol-Token, X-Wap-Token, or Authorization: Bearer required"}), 401)
     return True, None
 
 
+@app.route("/pol")
 @app.route("/wap")
-def wap_dashboard():
-    """Internal work-politics job tracker for SMM + operator. Token on API; bookmark /wap?t=..."""
-    return send_from_directory("miniapp", "wap-dashboard.html")
+def pol_dashboard():
+    """Internal work-politics job tracker for SMM + operator. Token on API; bookmark /pol?t=..."""
+    return send_from_directory("miniapp", "pol-dashboard.html")
 
 
+@app.route("/api/pol/jobs", methods=["GET", "POST", "OPTIONS"])
 @app.route("/api/wap/jobs", methods=["GET", "POST", "OPTIONS"])
-def wap_jobs():
+def pol_jobs():
     if request.method == "OPTIONS":
         return "", 204
     ok, err = _wap_auth()
@@ -378,7 +387,7 @@ def wap_jobs():
         return jsonify({"error": "client_slug and workflow required"}), 400
     now = datetime.now(timezone.utc).isoformat()
     job = {
-        "id": f"wap-{datetime.now(timezone.utc).strftime('%Y%m%d')}-{secrets.token_hex(4)}",
+        "id": f"pol-{datetime.now(timezone.utc).strftime('%Y%m%d')}-{secrets.token_hex(4)}",
         "created_at": now,
         "updated_at": now,
         "client_slug": client_slug,
@@ -394,8 +403,9 @@ def wap_jobs():
     return jsonify({"job": job}), 201
 
 
+@app.route("/api/pol/jobs/<job_id>", methods=["PATCH", "OPTIONS"])
 @app.route("/api/wap/jobs/<job_id>", methods=["PATCH", "OPTIONS"])
-def wap_job_patch(job_id: str):
+def pol_job_patch(job_id: str):
     if request.method == "OPTIONS":
         return "", 204
     ok, err = _wap_auth()
@@ -583,17 +593,19 @@ def operator_gate_candidates():
     return jsonify({"user_id": USER_ID, "count": len(rows), "items": rows})
 
 
+@app.route("/operator/pol-status", methods=["GET"])
 @app.route("/operator/wap-status", methods=["GET"])
-def operator_wap_status():
+def operator_pol_status():
     """Return structured work-politics operator state."""
     ok, err = _operator_auth()
     if not ok:
         return err
-    return jsonify(get_wap_snapshot(USER_ID))
+    return jsonify(get_work_politics_snapshot(USER_ID))
 
 
+@app.route("/operator/pol-brief", methods=["GET"])
 @app.route("/operator/wap-brief", methods=["GET"])
-def operator_wap_brief():
+def operator_pol_brief():
     """Return a generated weekly brief scaffold for work-politics."""
     ok, err = _operator_auth()
     if not ok:
@@ -699,14 +711,14 @@ def operator_merge_approved():
     payload = request.get_json(silent=True) or {}
     territory = normalize_territory_cli((payload.get("territory") or "companion").strip().lower())
     if territory not in ("companion", "work-politics", "all"):
-        return jsonify({"error": "territory must be companion, work-politics (or wap/wp), or all"}), 400
+        return jsonify({"error": "territory must be companion, work-politics (or pol/wp; legacy wap), or all"}), 400
 
     pac._set_user(USER_ID)
     approved = pac.get_approved_in_candidates()
     if territory == "work-politics":
-        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WORK_POLITICS]
     elif territory == "companion":
-        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WORK_POLITICS]
 
     if not approved:
         return jsonify({

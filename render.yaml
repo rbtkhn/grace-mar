@@ -28,7 +28,11 @@ services:
         sync: false  # Optional: when set, GET /operator/session-transcript and /operator/recursion-gate return live files (Bearer token). Use scripts/fetch_operator_files.py from Cursor to pull chat into local repo.
       - key: FAMILY_APP_TOKEN
         sync: false  # Optional: enables /app family hub (chat + log + parent-gated review). Bookmark https://<host>/app?t=<token>
+      - key: POL_DASHBOARD_TOKEN
+        sync: false  # Optional: internal work-politics job dashboard at /pol (SMM + operator). API: X-Pol-Token, X-Wap-Token, or Bearer
+      - key: POL_JOBS_PATH
+        sync: false  # Optional: path to jobs JSON; default data/wap_jobs.json (ephemeral on Render unless on persistent disk)
       - key: WAP_DASHBOARD_TOKEN
-        sync: false  # Optional: internal work-politics job dashboard at /wap (SMM + operator). API: X-Wap-Token or Bearer
+        sync: false  # Legacy alias if POL_DASHBOARD_TOKEN unset
       - key: WAP_JOBS_PATH
-        sync: false  # Optional: path to wap_jobs.json; default data/wap_jobs.json (ephemeral on Render unless on persistent disk)
+        sync: false  # Legacy alias if POL_JOBS_PATH unset

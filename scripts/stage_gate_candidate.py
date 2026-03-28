@@ -35,9 +35,9 @@ if str(_SCRIPTS) not in sys.path:
 from repo_io import profile_dir, read_path
 
 try:
-    from recursion_gate_territory import TERRITORY_WAP
+    from recursion_gate_territory import TERRITORY_WORK_POLITICS
 except ImportError:
-    from scripts.recursion_gate_territory import TERRITORY_WAP
+    from scripts.recursion_gate_territory import TERRITORY_WORK_POLITICS
 
 DEFAULT_USER = "grace-mar"
 
@@ -192,7 +192,7 @@ def main() -> int:
     title = args.title or _slug_title(summary)
 
     if args.territory == "work-politics":
-        territory = TERRITORY_WAP
+        territory = TERRITORY_WORK_POLITICS
         channel_key = args.channel_key or "operator:wap:stage-paste"
     else:
         territory = None

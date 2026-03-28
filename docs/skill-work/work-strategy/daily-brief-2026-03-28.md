@@ -51,6 +51,15 @@ _From `docs/skill-work/work-strategy/daily-brief-jiang-layer.md` § Active work-
 
 _Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md), [work-strategy/README.md](README.md)._
 
+## 1d. Putin — last 48 hours
+
+_Window ~2026-03-26 12:00 UTC → 2026-03-28 12:00 UTC. Operator WORK; cite before public use. Procedure: [daily-brief-putin-watch.md](daily-brief-putin-watch.md)._
+
+- **2026-03-28 — Murmansk (International Arctic Forum context per Reuters):** Speaking to seamen, Putin floated a **temporary international administration** for Ukraine — “under the auspices of the **U.N., the United States, European countries and our partners**” — to hold **elections** and install a government “enjoying the trust of the people,” then negotiate a **peace treaty**. He said Russia favors peaceful settlement “**but not at our expense**,” that Russian forces hold the **“strategic initiative”** along the line of contact, and that he believes **Trump “sincerely”** wants to end the war. He also said Russia is ready to cooperate with **many countries, including North Korea**, to help end the war (Western/Ukrainian reporting on DPRK troops is contested). [Reuters](https://www.reuters.com/world/europe/putin-suggests-possibility-placing-ukraine-under-temporary-administration-2025-03-27/) (dateline Mar 28, 2026; URL slug dated 2025).
+- **2026-03-27 — National Guard (Rosgvardiya):** Putin told the service to **react promptly** to current threats and coordinate with the armed forces and regions. [RIA Novosti (RU)](https://ria.ru/20260327/putin-2083391282.html).
+- **2026-03-27 — Security Council:** Videoconference with **permanent members**; Kremlin published a **transcript** (European relations and Ukraine on the agenda per listing). [Kremlin.ru transcript page](http://kremlin.ru/events/president/transcripts/79425).
+- **2026-03-26 — RSPP congress:** Emphasis on **sovereignty**, **macroeconomic stability** despite restrictions, honoring **budget commitments to citizens**, and **trust-based** government–business ties amid global uncertainty. [TASS](https://tass.com/economy/2107609).
+
 ## 2. Headlines (ingested RSS)
 
 _Fetch failed for: Reuters — World._

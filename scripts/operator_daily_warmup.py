@@ -20,12 +20,12 @@ try:
     from fork_config import load_fork_config
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
     from operator_depth_hint import velocity_oneliner
-    from work_politics_ops import get_wap_snapshot
+    from work_politics_ops import get_work_politics_snapshot
 except ImportError:
     from scripts.fork_config import load_fork_config
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read, _session_lines_tail
     from scripts.operator_depth_hint import velocity_oneliner
-    from scripts.work_politics_ops import get_wap_snapshot
+    from scripts.work_politics_ops import get_work_politics_snapshot
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"
@@ -75,9 +75,9 @@ def _integrity_errors(user_id: str) -> list[str]:
 def _priority_list(
     *,
     pending_all: list[tuple[str, str]],
-    pending_wap: list[tuple[str, str]],
+    pending_politics: list[tuple[str, str]],
     integrity_errors: list[str],
-    wap_snapshot: dict[str, object],
+    politics_snapshot: dict[str, object],
     dirty_files: list[str],
 ) -> list[str]:
     priorities: list[str] = []
@@ -87,16 +87,16 @@ def _priority_list(
         priorities.append(
             f"Review {len(pending_all)} pending gate candidate(s) in `users/grace-mar/recursion-gate.md` before they go stale."
         )
-    if pending_wap:
+    if pending_politics:
         priorities.append("Handle live work-politics gate items before creating more territory continuity.")
 
-    blockers = wap_snapshot.get("territory_blockers") or []
+    blockers = politics_snapshot.get("territory_blockers") or []
     if blockers:
         first = blockers[0]
         if isinstance(first, dict) and first.get("action"):
             priorities.append(str(first["action"]))
 
-    next_actions = wap_snapshot.get("next_actions") or []
+    next_actions = politics_snapshot.get("next_actions") or []
     for action in next_actions:
         if isinstance(action, str):
             priorities.append(action)
@@ -124,19 +124,19 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     session = _read(user_dir / "session-log.md")
 
     pending_all = _pending_candidates(recursion_gate, "all")
-    pending_wap = _pending_candidates(recursion_gate, "wap")
+    pending_politics = _pending_candidates(recursion_gate, "pol")
     pending_companion = _pending_candidates(recursion_gate, "companion")
     fork_cfg = load_fork_config()
     max_pending = fork_cfg.get("max_pending_candidates")
     last_activity = _last_activity_oneliner(evidence) or "_none parsed_"
     session_tail = _session_lines_tail(session, 3)
-    wap_snapshot = get_wap_snapshot(user_id)
+    politics_snapshot = get_work_politics_snapshot(user_id)
     integrity_errors = _integrity_errors(user_id)
     dirty_files = _git_status_lines()
-    content_counts = (wap_snapshot.get("content_queue") or {}).get("status_counts") or {}
-    brief_counts = (wap_snapshot.get("brief_readiness") or {}).get("status_counts") or {}
-    primary_label = ((wap_snapshot.get("campaign_status") or {}).get("primary_date")) or "unknown"
-    days_until_primary = ((wap_snapshot.get("campaign_status") or {}).get("days_until_primary"))
+    content_counts = (politics_snapshot.get("content_queue") or {}).get("status_counts") or {}
+    brief_counts = (politics_snapshot.get("brief_readiness") or {}).get("status_counts") or {}
+    primary_label = ((politics_snapshot.get("campaign_status") or {}).get("primary_date")) or "unknown"
+    days_until_primary = ((politics_snapshot.get("campaign_status") or {}).get("days_until_primary"))
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
     lines = [
@@ -144,7 +144,7 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
         "",
         f"- Generated: {ts}",
         f"- User: `{user_id}`",
-        f"- Gate pending: {len(pending_all)} total ({len(pending_wap)} work-politics, {len(pending_companion)} companion)",
+        f"- Gate pending: {len(pending_all)} total ({len(pending_politics)} work-politics, {len(pending_companion)} companion)",
     ]
     if max_pending is not None and len(pending_all) > int(max_pending):
         lines.append(
@@ -162,9 +162,9 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     )
     for item in _priority_list(
         pending_all=pending_all,
-        pending_wap=pending_wap,
+        pending_politics=pending_politics,
         integrity_errors=integrity_errors,
-        wap_snapshot=wap_snapshot,
+        politics_snapshot=politics_snapshot,
         dirty_files=dirty_files,
     ):
         lines.append(f"- {item}")
@@ -193,7 +193,7 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
             "## Work-politics snapshot",
             "",
             f"- Primary date: {primary_label} ({days_until_primary} day(s) remaining)",
-            f"- Territory blockers: {len(wap_snapshot.get('territory_blockers') or [])}",
+            f"- Territory blockers: {len(politics_snapshot.get('territory_blockers') or [])}",
             f"- Brief readiness: ready={brief_counts.get('ready', 0)}, watch={brief_counts.get('watch', 0)}, needs_refresh={brief_counts.get('needs_refresh', 0)}",
             f"- Content queue: idea={content_counts.get('idea', 0)}, draft={content_counts.get('draft', 0)}, review={content_counts.get('review', 0)}, posted={content_counts.get('posted', 0)}",
             "",

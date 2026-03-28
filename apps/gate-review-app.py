@@ -55,7 +55,7 @@ def _age_label(age_days):
 def index():
     """Serve gate review UI with pending candidates and Approve/Reject buttons."""
     from recursion_gate_review import filter_review_candidates, parse_review_candidates
-    from recursion_gate_territory import TERRITORY_WAP
+    from recursion_gate_territory import TERRITORY_WORK_POLITICS
 
     rows = parse_review_candidates(USER_ID)
     signal_filter = (request.args.get("signal") or "").strip().lower()
@@ -64,8 +64,8 @@ def index():
         fc_kwargs["signal_type"] = "reflection-cycle"
     pending = filter_review_candidates(rows, status="pending", **fc_kwargs)
     n = len(pending)
-    wap_n = sum(1 for r in pending if r.get("territory") == TERRITORY_WAP)
-    comp_n = n - wap_n
+    politics_n = sum(1 for r in pending if r.get("territory") == TERRITORY_WORK_POLITICS)
+    comp_n = n - politics_n
 
     cards = []
     for r in pending:
@@ -76,7 +76,7 @@ def index():
         territory = html.escape(r.get("territory", ""))
         risk = html.escape(r.get("risk_tier", ""))
         label = html.escape(r.get("territory_label", ""))
-        pill_slug = "wap" if r.get("territory") == TERRITORY_WAP else "companion"
+        pill_slug = "pol" if r.get("territory") == TERRITORY_WORK_POLITICS else "companion"
         age = _age_label(r.get("age_days"))
         channel = html.escape(r.get("channel_key") or "—")
         ts = html.escape(r.get("timestamp") or "—")
@@ -104,7 +104,7 @@ def index():
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Gate review — {html.escape(USER_ID)}</title>
   <style>
-    :root {{ --bg: #0f1419; --card: #1a2332; --text: #e8ecf1; --muted: #8b9cb3; --accent: #c17f59; --good: #7dc09a; --danger: #dd8e91; --wap: #c4a574; --companion: #7eb8da; }}
+    :root {{ --bg: #0f1419; --card: #1a2332; --text: #e8ecf1; --muted: #8b9cb3; --accent: #c17f59; --good: #7dc09a; --danger: #dd8e91; --pol: #c4a574; --companion: #7eb8da; }}
     * {{ box-sizing: border-box; }}
     body {{ margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; padding: 1.25rem; }}
     h1 {{ font-size: 1.35rem; margin: 0 0 0.25rem; }}
@@ -134,7 +134,7 @@ def index():
   <p class="sub">Filter: <a href="/">All</a> · <a href="/?signal=reflection">Reflection only</a></p>
   <div class="stats">
     <span class="stat"><strong>{n}</strong> pending</span>
-    <span class="stat">Work-politics <strong>{wap_n}</strong></span>
+    <span class="stat">Work-politics <strong>{politics_n}</strong></span>
     <span class="stat">Companion <strong>{comp_n}</strong></span>
   </div>
   <div class="grid" id="grid">{rows_html}</div>

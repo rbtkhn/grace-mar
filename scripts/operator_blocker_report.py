@@ -23,7 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
-from recursion_gate_territory import TERRITORY_WAP, normalize_territory_cli, territory_from_yaml_block
+from recursion_gate_territory import TERRITORY_WORK_POLITICS, normalize_territory_cli, territory_from_yaml_block
 
 
 def _read(path: Path) -> str:
@@ -146,7 +146,7 @@ def main() -> int:
     )
     parser.add_argument(
         "--territory",
-        choices=("all", "wap", "wp", "work-politics", "companion"),
+        choices=("all", "pol", "wap", "wp", "work-politics", "companion"),
         default="all",
         help="Pending lens: work-politics (or wap/wp) only; companion = Record only; all = both sections",
     )
@@ -163,10 +163,10 @@ def main() -> int:
     pipeline_events = _read_pipeline_events(profile_dir / "pipeline-events.jsonl", args.events)
 
     all_pending = _extract_pending_candidates(recursion_gate)
-    wap_pending = [c for c in all_pending if c.get("territory") == TERRITORY_WAP]
-    companion_pending = [c for c in all_pending if c.get("territory") != TERRITORY_WAP]
+    politics_pending = [c for c in all_pending if c.get("territory") == TERRITORY_WORK_POLITICS]
+    companion_pending = [c for c in all_pending if c.get("territory") != TERRITORY_WORK_POLITICS]
     if territory == "work-politics":
-        pending = wap_pending
+        pending = politics_pending
     elif territory == "companion":
         pending = companion_pending
     else:
@@ -180,7 +180,7 @@ def main() -> int:
     lines.append(f"**User:** {user_id}")
     if territory == "all":
         lines.append(
-            f"**Pending by territory:** work-politics {len(wap_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
+            f"**Pending by territory:** work-politics {len(politics_pending)} · Companion {len(companion_pending)} · Total {len(all_pending)}"
         )
         lines.append(
             f"_Lens:_ `--territory work-politics` | `--territory companion` | `all` (default). Work-politics territory = `territory: work-politics` or `channel_key: operator:wap`."
@@ -221,12 +221,12 @@ def main() -> int:
     lines.append("")
 
     # Staged candidates
-    if territory == "all" and (wap_pending or companion_pending):
+    if territory == "all" and (politics_pending or companion_pending):
         lines.append("## Staged — work-politics")
-        if not wap_pending:
+        if not politics_pending:
             lines.append("- None")
         else:
-            for c in wap_pending:
+            for c in politics_pending:
                 s = (c["summary"] or "(no summary)")[:100]
                 lines.append(f"- **{c['id']}** — {s}")
         lines.append("")

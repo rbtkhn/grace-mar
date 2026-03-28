@@ -17,12 +17,12 @@ from pathlib import Path
 
 try:
     from harness_warmup import _last_activity_oneliner, _pending_candidates, _read
-    from recursion_gate_territory import TERRITORY_LABEL_WAP, pending_by_territory
-    from work_politics_ops import get_wap_snapshot
+    from recursion_gate_territory import TERRITORY_LABEL_WORK_POLITICS, pending_by_territory
+    from work_politics_ops import get_work_politics_snapshot
 except ImportError:
     from scripts.harness_warmup import _last_activity_oneliner, _pending_candidates, _read
-    from scripts.recursion_gate_territory import TERRITORY_LABEL_WAP, pending_by_territory
-    from scripts.work_politics_ops import get_wap_snapshot
+    from scripts.recursion_gate_territory import TERRITORY_LABEL_WORK_POLITICS, pending_by_territory
+    from scripts.work_politics_ops import get_work_politics_snapshot
 
 # Max pending rows to list verbatim before collapsing (good night / handoff stays scannable).
 _GATE_PENDING_DISPLAY_CAP = 12
@@ -82,11 +82,12 @@ def _classify_change(path_line: str) -> tuple[str, str]:
         return "operator_workflow", path
     if (
         "work-politics" in path
+        or         "operator-pol" in path
         or "operator-wap" in path
         or "work_politics" in path
         or "generate_wap_weekly_brief.py" in path
     ):
-        return "wap_operations", path
+        return "work_politics_lane", path
     if path.startswith("users/") or "recursion_gate" in path or path == "bot/prompt.py":
         return "record_pipeline", path
     return "repo_misc", path
@@ -95,12 +96,12 @@ def _classify_change(path_line: str) -> tuple[str, str]:
 def _gate_detail_lines(recursion_gate_md: str, user_id: str) -> list[str]:
     """Human-readable pending queue + proposed merge steps (read-only; does not merge)."""
     gate_rel = f"users/{user_id}/recursion-gate.md"
-    wap_rows, companion_rows = pending_by_territory(recursion_gate_md)
-    total = len(wap_rows) + len(companion_rows)
+    politics_rows, companion_rows = pending_by_territory(recursion_gate_md)
+    total = len(politics_rows) + len(companion_rows)
     lines: list[str] = [
         "## RECURSION-GATE (pending)",
         "",
-        f"- **Total pending:** {total} (work-politics: {len(wap_rows)} · companion: {len(companion_rows)})",
+        f"- **Total pending:** {total} (work-politics: {len(politics_rows)} · companion: {len(companion_rows)})",
         f"- **Canonical file:** `{gate_rel}`",
         "",
     ]
@@ -124,7 +125,7 @@ def _gate_detail_lines(recursion_gate_md: str, user_id: str) -> list[str]:
         return lines
 
     combined: list[tuple[str, dict]] = [
-        *[(TERRITORY_LABEL_WAP, r) for r in wap_rows],
+        *[(TERRITORY_LABEL_WORK_POLITICS, r) for r in politics_rows],
         *[("Companion", r) for r in companion_rows],
     ]
     lines.append("### Pending items")
@@ -158,10 +159,10 @@ def _gate_detail_lines(recursion_gate_md: str, user_id: str) -> list[str]:
     return lines
 
 
-def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blockers: list[dict]) -> tuple[str, str]:
+def _active_thread(meaningful_changes: list[str], gate_pending: int, politics_blockers: list[dict]) -> tuple[str, str]:
     counts = {
         "operator_workflow": 0,
-        "wap_operations": 0,
+        "work_politics_lane": 0,
         "record_pipeline": 0,
         "repo_misc": 0,
     }
@@ -176,9 +177,9 @@ def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blocker
                 "gate continuity",
                 "Start with `python3 scripts/operator_gate_review_pass.py -u grace-mar` to review pending candidates.",
             )
-        if wap_blockers:
+        if politics_blockers:
             return (
-                "wap operations",
+                "work-politics lane",
                 "Start with `python3 scripts/operator_work_politics_pulse.py -u grace-mar` and address the first blocker.",
             )
         return (
@@ -190,9 +191,9 @@ def _active_thread(meaningful_changes: list[str], gate_pending: int, wap_blocker
             "operator workflow stack",
             "Resume the operator workflow pass and either test or commit the local workflow files.",
         )
-    if dominant == "wap_operations":
+    if dominant == "work_politics_lane":
         return (
-            "wap operations",
+            "work-politics lane",
             "Resume work-politics work with `python3 scripts/operator_work_politics_pulse.py -u grace-mar` and then run the brief workflow if ready.",
         )
     if dominant == "record_pipeline":
@@ -212,7 +213,7 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
     evidence = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
     gate_pending = _pending_candidates(recursion_gate, "all")
     last_activity = _last_activity_oneliner(evidence) or "_none parsed_"
-    wap_snapshot = get_wap_snapshot(user_id)
+    politics_snapshot = get_work_politics_snapshot(user_id)
 
     status_lines = _run_git("status", "--short")
     recent_commits = _run_git("log", "--oneline", "-3")
@@ -231,7 +232,7 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
     thread_label, reentry_prompt = _active_thread(
         meaningful_changes,
         gate_pending=len(gate_pending),
-        wap_blockers=wap_snapshot.get("territory_blockers") or [],
+        politics_blockers=politics_snapshot.get("territory_blockers") or [],
     )
 
     lines = [
@@ -301,8 +302,8 @@ def build_handoff_check(user_id: str = "grace-mar") -> str:
         lines.append("- No runtime-only local noise detected.")
 
     lines.extend(["", "## Work-politics continuity", ""])
-    lines.append(f"- Territory blockers: {len(wap_snapshot.get('territory_blockers') or [])}")
-    for action in (wap_snapshot.get("next_actions") or [])[:3]:
+    lines.append(f"- Territory blockers: {len(politics_snapshot.get('territory_blockers') or [])}")
+    for action in (politics_snapshot.get("next_actions") or [])[:3]:
         lines.append(f"- {action}")
 
     lines.extend(["", "## Next re-entry prompt", ""])

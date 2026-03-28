@@ -211,7 +211,7 @@
 
       function loadStatus() {
         setError('');
-        return fetch('/operator/wap-status', { headers: authHeaders() })
+        return fetch('/operator/pol-status', { headers: authHeaders() })
           .then(function(response) {
             return response.json().then(function(data) {
               if (!response.ok) throw new Error(data.error || 'Could not load work-politics status');
@@ -273,7 +273,7 @@
       }
 
       function loadBrief() {
-        return fetch('/operator/wap-brief', { headers: authHeaders() })
+        return fetch('/operator/pol-brief', { headers: authHeaders() })
           .then(function(response) {
             return response.text().then(function(text) {
               if (!response.ok) throw new Error(text || 'Could not load brief preview');

@@ -29,7 +29,7 @@ BUNDLE_PARTS: list[tuple[str, Path]] = [
     ("Content queue — @usa_first_ky", REPO / "docs/skill-work/work-politics/content-queue.md"),
     ("Calendar — KY-4 2026", REPO / "docs/skill-work/work-politics/calendar-2026.md"),
     ("Iran / foreign policy — Massie context", REPO / "docs/skill-work/work-politics/iran-foreign-policy-brief.md"),
-    ("WAP internal dashboard (/wap)", REPO / "docs/wap-dashboard.md"),
+    ("Work-politics internal dashboard (/pol)", REPO / "docs/pol-dashboard.md"),
     ("Externals — Day 1 quickstart", REPO / "docs/externals/massie/smm-training/day-1-quickstart.md"),
     ("Externals — Week 1 ramp", REPO / "docs/externals/massie/smm-training/week-1-ramp-plan.md"),
     ("Externals — Daily operating rhythm", REPO / "docs/externals/massie/smm-training/daily-operating-rhythm.md"),

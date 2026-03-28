@@ -52,12 +52,12 @@ def build_snippet(
             f"channel_key: {channel_key}",
             f"territory: {territory}",
             "mind_category: knowledge",
-            "signal_type: wap_milestone",
+            "signal_type: pol_milestone",
             "priority_score: 6",
             f"summary: {safe_summary}",
             "```",
             "",
-            "_Add source, source_exchange, suggested_entry, profile_target per docs/skill-work/work-politics/wap-candidate-template.md if using WAP bucket._",
+            "_Add source, source_exchange, suggested_entry, profile_target per docs/skill-work/work-politics/pol-candidate-template.md if using work-politics channel_key bucket._",
             "",
         ]
     )

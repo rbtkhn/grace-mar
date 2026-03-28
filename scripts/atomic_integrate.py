@@ -91,13 +91,13 @@ def _preflight(user_id: str, candidate_id: str, territory: str) -> None:
     _set_user(user_id)
     approved = get_approved_in_candidates()
     if territory == "work-politics":
-        from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block  # noqa: E402
+        from recursion_gate_territory import TERRITORY_WORK_POLITICS, territory_from_yaml_block  # noqa: E402
 
-        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WAP]
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) == TERRITORY_WORK_POLITICS]
     elif territory == "companion":
-        from recursion_gate_territory import TERRITORY_WAP, territory_from_yaml_block  # noqa: E402
+        from recursion_gate_territory import TERRITORY_WORK_POLITICS, territory_from_yaml_block  # noqa: E402
 
-        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WAP]
+        approved = [c for c in approved if territory_from_yaml_block(c["block"]) != TERRITORY_WORK_POLITICS]
     ids = {c["id"] for c in approved}
     if candidate_id not in ids:
         raise AtomicIntegrateError(
@@ -314,7 +314,7 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument(
         "--territory",
-        choices=("all", "wap", "wp", "work-politics", "companion"),
+        choices=("all", "pol", "wap", "wp", "work-politics", "companion"),
         default="all",
         help="Same as process_approved_candidates --territory (default all)",
     )

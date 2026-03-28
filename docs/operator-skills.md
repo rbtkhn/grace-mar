@@ -17,13 +17,13 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 | Skill | Purpose | Default command |
 |------|---------|-----------------|
 | `daily-warmup` | **Good morning:** **Step 1** (warmup + harness, daily brief per cadence, **KY-4 polling + Polymarket**, Massie X, brief body) + **Step 2** **A–E** (template audit, boundary, continue work module, context D, **E** end morning meeting). **Good night:** **Step 1** `operator_handoff_check.py` + summary + **Step 2** **A–E** (gate tomorrow, boundary/integrity, night closeout lane, context D, **E** end night session). See [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md) and `.cursor/skills/daily-warmup/SKILL.md` | Morning: `operator_daily_warmup.py` + agent steps; night: `operator_handoff_check.py` + agent steps |
-| `wap-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy: `operator_wap_pulse.py`) |
+| `pol-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy script name: `operator_wap_pulse.py`) |
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with **RECURSION-GATE pending detail**, **Predictive History night closeout** (work-jiang), recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar` |
 | `work-jiang-feature-checklist` | Branch hygiene, scope, canonical verify block, and commit granularity for `research/external/work-jiang` + `scripts/work_jiang/` | Agent: follow `.cursor/skills/work-jiang-feature-checklist/SKILL.md` |
 | `massie-x-news-search-draft` | Real-time news search + suggested @usa_first_ky X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/massie-x-news-search-draft/SKILL.md` |
-| `wap-dashboard` | Internal miniapp UI at `/wap` — work-politics job tracker (token: `WAP_DASHBOARD_TOKEN`) | [wap-dashboard.md](wap-dashboard.md) |
+| `pol-dashboard` | Internal miniapp UI at `/pol` (legacy `/wap`) — work-politics job tracker (token: `POL_DASHBOARD_TOKEN` or legacy `WAP_DASHBOARD_TOKEN`) | [pol-dashboard.md](pol-dashboard.md) |
 
 **Stale derived exports** (manifest, PRP, fork-manifest, runtime bundle): `python3 scripts/refresh_derived_exports.py -u grace-mar` then `python3 scripts/validate-integrity.py --user grace-mar --json`. See [development-handoff.md § Quick Resume](development-handoff.md#quick-resume-commands).
 
@@ -32,7 +32,7 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 ## Suggested daily pattern
 
 1. Start with `daily-warmup` when opening a new work block or a new agent thread. On **“good morning”**, the agent runs **Step 1** (including **Polymarket** KY-04 primary + GE party and **independent** polls per [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md)), then **Step 2**: fixed **A–E** menu (**A** template audit, **B** boundary audit, **C** continue latest work module, **D** context, **E** end morning meeting) — see `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice (A–E required)*. **Cadence:** Monday = full routine; Tue–Fri = lighter; Sunday ≈ 10 min week-ahead (FEC, registration, brief registry); Friday adds a two-line post-mortem — see `.cursor/skills/daily-warmup/SKILL.md` § Cadence by weekday. On **“good night”** (day / session end), **Step 1** = `operator_handoff_check.py` + summary, then **Step 2** = **good night A–E** — see `.cursor/skills/daily-warmup/SKILL.md` § Good night (not the morning stack). **Good morning E** closes only the morning meeting, not the day.
-2. Run `wap-pulse` when the day includes campaign work, brief prep, or X/content operations.
+2. Run `pol-pulse` when the day includes campaign work, brief prep, or X/content operations.
 3. Use `massie-x-news-search-draft` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
 4. Use `weekly-brief-run` for the actual work-politics brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
 5. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
@@ -55,7 +55,7 @@ Must answer:
 - **Good morning:** After **Step 1**, fixed **A–E** menu — **A** template audit (`template_diff.py` / [work-companion-self/audit-report.md](skill-work/work-companion-self/audit-report.md)), **B** boundary check ([audit-boundary-grace-mar-companion-self.md](audit-boundary-grace-mar-companion-self.md), fork isolation), **C** continue most recent work module, **D** context pick, **E** formally end morning meeting. See `.cursor/skills/daily-warmup/SKILL.md` § *Good morning — multiple choice (A–E required)*.
 - **Good night:** After **Step 1** (`operator_handoff_check.py` + paragraph), fixed **A–E** — **A** gate tomorrow-first, **B** boundary/integrity, **C** night closeout lane (Jiang / handoff block), **D** context pick, **E** formally end night session. See `.cursor/skills/daily-warmup/SKILL.md` § *Good night — multiple choice (A–E required)*.
 
-### `wap-pulse`
+### `pol-pulse`
 
 Must answer:
 

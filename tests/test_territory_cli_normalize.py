@@ -17,6 +17,8 @@ from recursion_gate_territory import (  # noqa: E402
 
 
 def test_normalize_maps_aliases_to_work_politics() -> None:
+    assert normalize_territory_cli("pol") == "work-politics"
+    assert normalize_territory_cli("POL") == "work-politics"
     assert normalize_territory_cli("wap") == "work-politics"
     assert normalize_territory_cli("WAP") == "work-politics"
     assert normalize_territory_cli("wp") == "work-politics"
@@ -30,4 +32,5 @@ def test_normalize_leaves_companion_and_all() -> None:
 
 def test_argparse_choices_include_aliases() -> None:
     assert "work-politics" in territory_cli_argparse_choices()
+    assert "pol" in territory_cli_argparse_choices()
     assert "wap" in territory_cli_argparse_choices()

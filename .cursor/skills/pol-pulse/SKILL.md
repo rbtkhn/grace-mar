@@ -1,5 +1,5 @@
 ---
-name: wap-pulse
+name: pol-pulse
 description: Generate a work-politics pulse with campaign status, blockers, doc freshness, gate rhythm, content queue state, and next actions. Use when checking work-politics readiness, preparing the weekly brief, asking what is stale, or requesting a territory status sweep.
 ---
 

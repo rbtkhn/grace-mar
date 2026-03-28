@@ -50,12 +50,12 @@ def build_snippet(
             f"channel_key: {channel_key}",
             "territory: work-politics",
             "mind_category: knowledge",
-            "signal_type: wap_milestone",
+            "signal_type: pol_milestone",
             "priority_score: 6",
             f"summary: {safe_summary}",
             "```",
             "",
-            "_Add source_exchange, suggested_entry, profile_target per docs/skill-work/work-politics/wap-candidate-template.md before paste._",
+            "_Add source_exchange, suggested_entry, profile_target per docs/skill-work/work-politics/pol-candidate-template.md before paste._",
             "",
         ]
     )
@@ -66,7 +66,7 @@ def main() -> int:
     ap.add_argument("-u", "--user", default=DEFAULT_USER, help="Companion user id (default: grace-mar)")
     ap.add_argument(
         "--channel-key",
-        default="operator:wap:us-ky4-massie",
+        default="operator:pol:us-ky4-massie",
         help="channel_key for this milestone (see work-politics README gate convention)",
     )
     ap.add_argument(

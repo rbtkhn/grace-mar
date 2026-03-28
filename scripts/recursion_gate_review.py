@@ -15,15 +15,17 @@ from pathlib import Path
 
 try:
     from recursion_gate_territory import (
-        TERRITORY_LABEL_WAP,
-        TERRITORY_WAP,
+        TERRITORY_LABEL_WORK_POLITICS,
+        TERRITORY_WORK_POLITICS,
+        channel_key_is_work_politics,
         normalize_territory_cli,
         territory_from_yaml_block,
     )
 except ImportError:
     from scripts.recursion_gate_territory import (
-        TERRITORY_LABEL_WAP,
-        TERRITORY_WAP,
+        TERRITORY_LABEL_WORK_POLITICS,
+        TERRITORY_WORK_POLITICS,
+        channel_key_is_work_politics,
         normalize_territory_cli,
         territory_from_yaml_block,
     )
@@ -294,7 +296,7 @@ def _compute_boundary_review(row: dict) -> dict:
     """
     territory = row.get("territory") or ""
     ch = (row.get("channel_key") or "").lower()
-    if territory == TERRITORY_WAP or "wap" in ch or "work-political" in ch:
+    if territory == TERRITORY_WORK_POLITICS or channel_key_is_work_politics(ch) or "work-political" in ch:
         return {
             "target_surface": "WORK-LAYER",
             "suggested_surface": "WORK-LAYER",
@@ -405,7 +407,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
             "age_days": _age_days(timestamp),
             "channel_key": channel_key,
             "territory": territory,
-            "territory_label": TERRITORY_LABEL_WAP if territory == TERRITORY_WAP else "Companion",
+            "territory_label": TERRITORY_LABEL_WORK_POLITICS if territory == TERRITORY_WORK_POLITICS else "Companion",
             "proposal_class": eff_pc,
             "proposal_class_raw": raw_pc or None,
             "proposal_class_inferred": pc_inferred,
@@ -490,9 +492,9 @@ def filter_review_candidates(
     if territory and territory != "all":
         territory = normalize_territory_cli(territory)
         if territory == "companion":
-            out = [row for row in out if row.get("territory") != TERRITORY_WAP]
+            out = [row for row in out if row.get("territory") != TERRITORY_WORK_POLITICS]
         elif territory == "work-politics":
-            out = [row for row in out if row.get("territory") == TERRITORY_WAP]
+            out = [row for row in out if row.get("territory") == TERRITORY_WORK_POLITICS]
         else:
             out = [row for row in out if row.get("territory") == territory]
     return out

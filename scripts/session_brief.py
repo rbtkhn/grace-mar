@@ -71,12 +71,12 @@ def _last_activities(evidence_content: str, n: int) -> list[dict]:
 
 def _pending_candidate_ids(pr_content: str, territory: str = "all") -> list[str]:
     """All pending IDs — full file. territory: normalized all | work-politics | companion."""
-    wap, companion = pending_by_territory(pr_content)
+    politics, companion = pending_by_territory(pr_content)
     if territory == "work-politics":
-        return [r["id"] for r in wap]
+        return [r["id"] for r in politics]
     if territory == "companion":
         return [r["id"] for r in companion]
-    return [r["id"] for r in wap + companion]
+    return [r["id"] for r in politics + companion]
 
 
 def _pending_count_full(pr_content: str, territory: str = "all") -> int:
@@ -304,9 +304,9 @@ def main() -> int:
     )
     parser.add_argument(
         "--territory",
-        choices=("all", "wap", "wp", "work-politics", "companion"),
+        choices=("all", "pol", "wap", "wp", "work-politics", "companion"),
         default="all",
-        help="Pending lens: work-politics (or wap/wp) | companion | all (default). Same as operator_blocker_report.",
+        help="Pending lens: work-politics (or pol/wp; legacy wap) | companion | all (default). Same as operator_blocker_report.",
     )
     args = parser.parse_args()
     territory = normalize_territory_cli(args.territory)
@@ -336,7 +336,7 @@ def main() -> int:
     if args.minimal:
         pr_content = _read(user_dir / "recursion-gate.md")
         evidence_content = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
-        wap_rows, comp_rows = pending_by_territory(pr_content)
+        politics_rows, comp_rows = pending_by_territory(pr_content)
         n = _pending_count_full(pr_content, territory)
         ids = _pending_candidate_ids(pr_content, territory)
         last_act = _last_act_oneliner(evidence_content)
@@ -348,7 +348,7 @@ def main() -> int:
         ]
         if territory == "all":
             lines.append(
-                f"**Split:** work-politics {len(wap_rows)} · Companion {len(comp_rows)} — use `--territory work-politics` or `companion`"
+                f"**Split:** work-politics {len(politics_rows)} · Companion {len(comp_rows)} — use `--territory work-politics` or `companion`"
             )
         lines.extend(
             [
@@ -374,7 +374,7 @@ def main() -> int:
     library_content = _read(user_dir / LIBRARY_PATH_REL)
 
     activities = _last_activities(evidence_content, LAST_N_ACTIVITIES)
-    wap_rows, comp_rows = pending_by_territory(pr_content)
+    politics_rows, comp_rows = pending_by_territory(pr_content)
     pending_count = _pending_count_full(pr_content, territory)
     ix_b = _ix_b_topics(self_content)
     wisdom = _wisdom_questions(wisdom_content, ix_b, WISDOM_COUNT)
@@ -405,7 +405,7 @@ def main() -> int:
     # Build brief
     pending_section = (
         f"**Territory lens:** `{territory}` — **{pending_count}** pending (this lens). "
-        f"work-politics **{len(wap_rows)}** · Companion **{len(comp_rows)}**. "
+        f"work-politics **{len(politics_rows)}** · Companion **{len(comp_rows)}**. "
         f"`--territory work-politics` = work-politics only. Type `/review` in Telegram to see them."
     )
     if pending_stale:

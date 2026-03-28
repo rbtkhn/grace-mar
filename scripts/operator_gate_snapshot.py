@@ -79,7 +79,7 @@ def main() -> int:
     parser.add_argument("-u", "--user", default="grace-mar", help="User id")
     parser.add_argument(
         "--territory",
-        choices=("all", "companion", "wap", "wp", "work-politics"),
+        choices=("all", "companion", "pol", "wap", "wp", "work-politics"),
         default="all",
         help="Filter by territory",
     )

@@ -28,7 +28,7 @@ def test_build_operator_daily_warmup_includes_depth_and_polling_reminder(
     monkeypatch.setattr(odw, "load_fork_config", lambda: {"max_pending_candidates": 10})
     monkeypatch.setattr(
         odw,
-        "get_wap_snapshot",
+        "get_work_politics_snapshot",
         lambda _uid: {
             "campaign_status": {"primary_date": "May 19, 2026", "days_until_primary": 54},
             "territory_blockers": [{"action": "Address blocker alpha."}],

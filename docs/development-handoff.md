@@ -26,7 +26,7 @@ Last updated: 2026-03-28
 - **Work-politics / strategy:** `daily-brief-2026-03-28.md`; `polling-and-markets.md` **Last checked** refreshed.
 - **Gate:** 0 pending (confirm in `recursion-gate.md`).
 - **Jiang lane:** `OUTLINE_ACTIVE` — suggested next lever: ch01 chapter outline (`research/external/work-jiang/STATUS.md`).
-- **Re-entry:** `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (3 WAP territory blockers) or `operator_daily_warmup.py` / `harness_warmup.py` per thread; paste handoff block from `operator_handoff_check.py` when starting cold.
+- **Re-entry:** `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (work-politics territory blockers) or `operator_daily_warmup.py` / `harness_warmup.py` per thread; paste handoff block from `operator_handoff_check.py` when starting cold.
 
 ---
 
@@ -172,7 +172,7 @@ Last updated: 2026-03-28
 
 ### work-politics ↔ RECURSION-GATE sync (2026-03-12)
 - **docs/skill-work/work-politics/README.md** — § Sync with RECURSION-GATE (doc vs gate, rhythm, IX vs ACT).
-- **wap-candidate-template.md** — paste-ready work-politics YAML.
+- **pol-candidate-template.md** — paste-ready work-politics YAML.
 
 ### Trajectory export + RL boundary (2026-03-12)
 - **`scripts/export_conversation_trajectories.py`** — session-transcript → JSONL; optional pipeline_events attach.
@@ -183,8 +183,8 @@ Last updated: 2026-03-28
 - **`docs/openclaw-rl-boundary.md`** — Added a canonical next-state signal model: evaluative vs directive signals, workflow/policy vs Record adaptation, and the rule that next-state signals may improve process and harness behavior but must not update identity surfaces ungated.
 
 ### Territory lens / work-politics vs companion (2026-03-12)
-- **`scripts/recursion_gate_territory.py`** — `territory: work-politics` or `channel_key: operator:wap` → work-politics.
-- **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|work-politics|companion` (aliases `wap`, `wp`).
+- **`scripts/recursion_gate_territory.py`** — `territory: work-politics` or `channel_key: operator:pol` / legacy `operator:wap` → work-politics.
+- **`operator_blocker_report`** / **`session_brief`** / **`harness_warmup`** — `--territory all|work-politics|companion` (aliases `pol`, `wp`; legacy `wap`).
 - **`process_approved_candidates`** — `--territory work-politics|companion|all` — batch merge only that slice; receipt must use same flag (receipt `territory` is `work-politics` for work-politics merges).
 
 ### Recursion-gate multi-channel docs (2026-03-12)
@@ -292,7 +292,7 @@ Last updated: 2026-03-28
 - **New work-politics entrypoint:** `docs/skill-work/work-politics/workspace.md` now defines the operator schema and canonical file map for the territory.
 - **Structured work-politics workflow docs:** `brief-source-registry.md` tracks weekly-brief source readiness, and `content-queue.md` tracks `@usa_first_ky` content state (`idea` → `posted`).
 - **New ops module:** `scripts/work_politics_ops.py` derives campaign status, document freshness, work-politics gate state, blockers, revenue summary, and next actions from existing work-politics docs plus the canonical gate.
-- **New browser surface:** `miniapp/operator-wap.html` plus `/operator/wap-status` and `/operator/wap-brief` in `apps/miniapp_server.py` provide an authenticated work-politics console without creating a second queue.
+- **New browser surface:** `miniapp/operator-pol.html` plus `/operator/pol-status` and `/operator/pol-brief` (legacy `/operator/wap*`) in `apps/miniapp_server.py` provide an authenticated work-politics console without creating a second queue.
 - **New brief loop:** `scripts/generate_wap_weekly_brief.py` produces a first-pass weekly brief scaffold from the work-politics registry, principal profile, opposition brief, calendar, and content queue.
 - **Canonical workflow docs refreshed:** `README.md`, `metrics.md`, `account-x.md`, and `smm-workspace.md` now point operators toward the workspace, content queue, and brief-generation path rather than prose-only operation.
 

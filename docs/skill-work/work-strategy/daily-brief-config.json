@@ -1,5 +1,5 @@
 {
-  "_comment": "daily-brief-config: feeds may set locale (ISO-style: en, fr, de, es, ar). Optional tier 1–3 + ingest_caps limit items per feed (newest first) before W+S+G ranking. W/S = campaign + strategy keyword lists; G = geo_military (defaults in generate_wap_daily_brief.py + optional geo_military_keyword_phrases_extra). Per-feed max_items overrides tier. No translation API — locale lists are substring match on native headlines. Respect site ToS.",
+  "_comment": "daily-brief-config: feeds may set locale (ISO-style: en, fr, de, es, ar). Optional tier 1–3 + ingest_caps limit items per feed (newest first) before W+S+G ranking. W/S = campaign (pol_keyword_phrases) + strategy keyword lists; G = geo_military (defaults in generate_wap_daily_brief.py + optional geo_military_keyword_phrases_extra). Legacy key wap_keyword_phrases is accepted if pol_* absent. Per-feed max_items overrides tier. No translation API — locale lists are substring match on native headlines. Respect site ToS.",
   "ingest_caps": {
     "default_max_items_per_feed": 12,
     "max_items_by_tier": {
@@ -82,7 +82,7 @@
       "tier": 3
     }
   ],
-  "wap_keyword_phrases": [
+  "pol_keyword_phrases": [
     "massie",
     "gallrein",
     "ed gallrein",
@@ -187,7 +187,7 @@
     "hackernews",
     "show hn"
   ],
-  "wap_keyword_phrases_by_locale": {
+  "pol_keyword_phrases_by_locale": {
     "fr": [
       "guerre",
       "iran",

@@ -15,7 +15,7 @@ Default rhythm (operator can override any day):
 |-----|------|-------------|
 | **Monday** | **Full** | Complete [“Good morning”](#good-morning--start-here-two-steps) flow: operator + harness, **generate** daily brief, polling + Polymarket, Massie X scan + 1–2 drafts. |
 | **Tuesday–Friday** | **Lighter** | `operator_daily_warmup.py` + `harness_warmup.py` (when instance state matters). **Polling + Polymarket** stays (compact). **Daily brief:** generate only if missing for today, else one-line pointer to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md`. **Massie X:** shorten to **top story links** (or one draft) unless the content queue / news cycle demands more. |
-| **Sunday** | **Week ahead (~10 min)** | Not a full good morning. Focus: **FEC / compliance dates** and **voter registration** from the daily brief calendar + [brief-source-registry.md](../../../docs/skill-work/work-politics/brief-source-registry.md) (`needs_refresh`, `watch`). Optional: skim `wap-pulse` / weekly-brief readiness. |
+| **Sunday** | **Week ahead (~10 min)** | Not a full good morning. Focus: **FEC / compliance dates** and **voter registration** from the daily brief calendar + [brief-source-registry.md](../../../docs/skill-work/work-politics/brief-source-registry.md) (`needs_refresh`, `watch`). Optional: skim `pol-pulse` / weekly-brief readiness. |
 | **Friday** | **Lighter + post-mortem** | Same as Tue–Fri **plus** two lines at the end of the reply: **(1)** What repeated this week? **(2)** What to drop from the routine? |
 
 If the operator says **“good morning”** on a **Sunday**, default to **week-ahead** mode unless they ask for the full Monday stack. Still run **Step 1** scaled to that mode, then **Step 2** with the full **A–E** menu (labels can be shorter; meanings unchanged).
@@ -55,8 +55,9 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
    ```
    **Tue–Fri (lighter):** generate only if missing for today; else one-line pointer to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md`. **Sunday (week-ahead):** lean on calendar + brief-source-registry; brief step optional/minimal.
 3. **Polling + prediction markets:** Follow [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md). **Fetch** the two canonical Polymarket pages (KY-04 GOP primary + GE party); **search** for independent public horserace polls (Massie vs Gallrein) in the last ~30 days. **Compact block:** implied probabilities + **volume**, named poll **or** “no independent poll found,” **one-line caveat**, URLs. Update **`Last checked`** in that doc when you materially refresh numbers.
-4. **Massie X:** Run `.cursor/skills/massie-x-news-search-draft/SKILL.md` (full or shortened per cadence): web scan + latest X posts; **draft-only** posts for `@usa_first_ky`.
-5. In the reply body, deliver the **warmup brief** (priorities, gate, work-politics, integrity): daily-brief path + summary, polling + Polymarket block, X links + 1–2 drafts (if applicable), optional Civilization transcript line.
+4. **Putin — last 48 hours:** Follow [daily-brief-putin-watch.md](../../../docs/skill-work/work-strategy/daily-brief-putin-watch.md). **Web scan** Kremlin events/transcripts plus major wires; **compact block** (bullets + URLs) in the reply. Target paste: generated daily brief **§1d** (`## 1d. Putin — last 48 hours`). **Good morning light / minimal:** include only if the operator asked for full morning intel or strategy/geo lane; otherwise one line pointing at §1d procedure.
+5. **Massie X:** Run `.cursor/skills/massie-x-news-search-draft/SKILL.md` (full or shortened per cadence): web scan + latest X posts; **draft-only** posts for `@usa_first_ky`.
+6. In the reply body, deliver the **warmup brief** (priorities, gate, work-politics, integrity): daily-brief path + summary, polling + Polymarket block, **Putin 48h block**, X links + 1–2 drafts (if applicable), optional Civilization transcript line.
 
 **Step 1 guardrail:** Stay read-only — no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
@@ -180,6 +181,7 @@ Return a short operator brief with:
 - integrity status
 - local worktree noise only if it matters for the next move
 - **KY-4 polling + Polymarket** (required for “good morning”): implied odds + volume + independent poll status + caveats — see [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md)
+- **Putin — last 48 hours** (required for full “good morning”; optional for **good morning light** per Step 1 §4): see [daily-brief-putin-watch.md](../../../docs/skill-work/work-strategy/daily-brief-putin-watch.md)
 - X scan top links + 1–2 draft post candidates for `@usa_first_ky` (draft-only; required when running the Massie X skill step)
 - **Step 2 — A–E menu** (required for “good morning”): fixed **A–E** as in [Good morning — multiple choice (A–E required)](#good-morning--multiple-choice-ae-required)
 - **Good night:** handoff script output + summary (**Step 1**), then **Step 2 — A–E** as in [Good night — multiple choice (A–E required)](#good-night--multiple-choice-ae-required)

@@ -44,7 +44,7 @@
 <body>
   <div id="setupScreen">
     <h1>Work-politics dashboard</h1>
-    <p class="sub">Internal only. Enter the token from your operator (`WAP_DASHBOARD_TOKEN`).</p>
+    <p class="sub">Internal only. Enter the token from your operator (`POL_DASHBOARD_TOKEN` or legacy `WAP_DASHBOARD_TOKEN`).</p>
     <label for="tok">Token</label>
     <input id="tok" type="password" autocomplete="off" placeholder="paste token">
     <button type="button" id="saveTok">Continue</button>
@@ -53,7 +53,7 @@
 
   <div id="mainApp" class="hidden">
     <h1>Work-politics internal dashboard</h1>
-    <p class="sub">Create jobs → run Cursor skills → paste output → mark shipped. See <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/wap-dashboard.md" style="color:var(--accent)">docs/wap-dashboard.md</a>.</p>
+    <p class="sub">Create jobs → run Cursor skills → paste output → mark shipped. See <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/pol-dashboard.md" style="color:var(--accent)">docs/pol-dashboard.md</a>.</p>
 
     <div class="panel links">
       <strong>Quick links (repo)</strong><br>
@@ -143,18 +143,20 @@
   <script>
 (function () {
   const GH = 'https://github.com/rbtkhn/grace-mar/blob/main';
-  const LS_KEY = 'wap_dashboard_token';
+  const LS_KEY = 'pol_dashboard_token';
 
   function getToken() {
     const q = new URLSearchParams(location.search).get('t');
-    if (q) { sessionStorage.setItem(LS_KEY, q); history.replaceState({}, '', '/wap'); return q; }
+    if (q) { sessionStorage.setItem(LS_KEY, q); history.replaceState({}, '', '/pol'); return q; }
     return sessionStorage.getItem(LS_KEY) || '';
   }
 
   function headers() {
+    const t = getToken();
     return {
       'Content-Type': 'application/json',
-      'X-Wap-Token': getToken()
+      'X-Pol-Token': t,
+      'X-Wap-Token': t,
     };
   }
 
@@ -175,7 +177,7 @@
     sessionStorage.setItem(LS_KEY, t);
     setupErr.classList.add('hidden');
     try {
-      await api('/api/wap/jobs?limit=1');
+      await api('/api/pol/jobs?limit=1');
       setupScreen.classList.add('hidden');
       mainApp.classList.remove('hidden');
       loadJobs();
@@ -189,7 +191,7 @@
   if (getToken()) {
     (async function () {
       try {
-        await api('/api/wap/jobs?limit=1');
+        await api('/api/pol/jobs?limit=1');
         setupScreen.classList.add('hidden');
         mainApp.classList.remove('hidden');
         loadJobs();
@@ -202,7 +204,7 @@
   let selectedId = null;
 
   async function loadJobs() {
-    const { jobs } = await api('/api/wap/jobs?limit=100');
+    const { jobs } = await api('/api/pol/jobs?limit=100');
     const tb = document.getElementById('jobRows');
     tb.innerHTML = jobs.map(function (j) {
       const when = (j.created_at || '').slice(0, 16).replace('T', ' ');
@@ -235,7 +237,7 @@
     try {
       let client = document.getElementById('client_slug').value;
       if (client === 'other') client = prompt('Client slug?') || 'other';
-      await api('/api/wap/jobs', {
+      await api('/api/pol/jobs', {
         method: 'POST',
         body: JSON.stringify({
           client_slug: client,
@@ -258,7 +260,7 @@
     el.classList.add('hidden');
     if (!selectedId) return;
     try {
-      await api('/api/wap/jobs/' + encodeURIComponent(selectedId), {
+      await api('/api/pol/jobs/' + encodeURIComponent(selectedId), {
         method: 'PATCH',
         body: JSON.stringify({
           status: document.getElementById('detailStatus').value,

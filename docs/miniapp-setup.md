@@ -9,7 +9,7 @@ Grace-Mar has several web surfaces on the Mini App host (plus the static dashboa
 - **Dashboard** — Full profile view (Knowledge, Skills, Curiosity, Personality, Library, Disclosure). **Browser only, read-only.** Available at **https://grace-mar.com**.
 - **Q&A Mini App** — Interactive Q&A with Grace-Mar. Runs as a **Telegram Mini App** and can also be opened in a browser. Bidirectional (ask questions, get answers).
 - **Family hub** — `/app` on the Mini App server: chat, log activities (“we did X”), and parent-gated review + merge. See below.
-- **Work-politics internal dashboard** — `/wap`: token-gated job tracker (SMM + operator). See [wap-dashboard.md](wap-dashboard.md).
+- **Work-politics internal dashboard** — `/pol` (legacy `/wap`): token-gated job tracker (SMM + operator). See [pol-dashboard.md](pol-dashboard.md).
 
 ## Architecture
 
@@ -93,11 +93,11 @@ On Render, the filesystem is ephemeral, so SESSION-TRANSCRIPT written by the Min
 
 **Security:** Anyone with `FAMILY_APP_TOKEN` can chat and submit activities (rate-limit at reverse proxy if needed). Rotate the token if the link leaks. Merge still requires the operator secret.
 
-### Work-politics internal dashboard (`/wap`)
+### Work-politics internal dashboard (`/pol`)
 
-**Env:** Set **`WAP_DASHBOARD_TOKEN`** to a long random string. Optional **`WAP_JOBS_PATH`** — absolute path or path relative to repo root for the jobs JSON file (default `data/wap_jobs.json`). On Render, jobs are **ephemeral** unless you mount a persistent disk and point `WAP_JOBS_PATH` there.
+**Env:** Set **`POL_DASHBOARD_TOKEN`** (or legacy **`WAP_DASHBOARD_TOKEN`**) to a long random string. Optional **`POL_JOBS_PATH`** / **`WAP_JOBS_PATH`** — absolute path or path relative to repo root for the jobs JSON file (default `data/wap_jobs.json`). On Render, jobs are **ephemeral** unless you mount a persistent disk and point the jobs path there.
 
-**Use:** Open `https://<host>/wap?t=<WAP_DASHBOARD_TOKEN>` (token is stored in the browser session). Create jobs, paste Cursor outputs, update status. **Full spec:** [wap-dashboard.md](wap-dashboard.md).
+**Use:** Open `https://<host>/pol?t=<token>` (token is stored in the browser session). Create jobs, paste Cursor outputs, update status. **Full spec:** [pol-dashboard.md](pol-dashboard.md).
 
 ## 3. Bot (Webhook Mode)
 

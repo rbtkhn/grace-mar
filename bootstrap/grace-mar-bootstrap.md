@@ -186,7 +186,7 @@ git status
 python3 scripts/metrics.py
 python3 scripts/session_brief.py --user grace-mar
 python3 scripts/session_brief.py --user grace-mar --minimal
-python3 scripts/session_brief.py -u grace-mar --minimal --territory work-politics   # work-politics pending only (aliases: wap, wp)
+python3 scripts/session_brief.py -u grace-mar --minimal --territory work-politics   # work-politics pending only (aliases: pol, wp; legacy wap)
 python3 scripts/pending_dedup_hint.py -u grace-mar
 python3 scripts/report_lookup_sources.py -u grace-mar   # dyad:lookup distribution (library vs full)
 python3 scripts/operator_blocker_report.py -u grace-mar --stale-days 3   # work-politics + companion sections by default

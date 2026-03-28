@@ -9,7 +9,7 @@ Generate a standard **daily brief** for work-politics + work-strategy.
   - Optional RSS ingest (configurable), keyword scores: **W** (campaign), **S** (product/AI/governance), **G** (geo/military)
   - §**1c**: **Two horizons** — fast (RSS §2) vs **slow** (work-jiang); body from [work-strategy/daily-brief-jiang-layer.md](docs/skill-work/work-strategy/daily-brief-jiang-layer.md) § Active work-jiang hooks
   - §**2a** / §**2b**: G-ranked headline digest + optional **civ-mem** token overlap (`docs/civilization-memory/`, index build script) — historical depth, not breaking news
-  - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `wap_keyword_phrases_by_locale` / `strategy_keyword_phrases_by_locale`
+  - Per-feed `locale` (e.g. fr, de, es, ar, en) plus `pol_keyword_phrases_by_locale` (legacy: `wap_*`) / `strategy_keyword_phrases_by_locale`
     in config — extra phrase lists for scoring **only** (no translation API; zero-API mode).
   - Optional **`ingest_caps`**: per-feed `max_items` and/or `tier` (1–3) with `default_max_items_per_feed` + `max_items_by_tier`
     so high-volume feeds do not dominate before W+S ranking.
@@ -427,11 +427,15 @@ def _load_full_config(
                         "max_items": max_items_raw,
                     }
                 )
-    wap_t = data.get("wap_keyword_phrases") if isinstance(data, dict) else None
+    pol_t = data.get("pol_keyword_phrases") if isinstance(data, dict) else None
+    if pol_t is None and isinstance(data, dict):
+        pol_t = data.get("wap_keyword_phrases")
     strat_t = data.get("strategy_keyword_phrases") if isinstance(data, dict) else None
-    wap = _phrases_tuple(wap_t, DEFAULT_WAP_PHRASES)
+    wap = _phrases_tuple(pol_t, DEFAULT_WAP_PHRASES)
     strat = _phrases_tuple(strat_t, DEFAULT_STRATEGY_PHRASES)
-    wap_loc = _locale_phrase_map(data, "wap_keyword_phrases_by_locale")
+    wap_loc = _locale_phrase_map(data, "pol_keyword_phrases_by_locale")
+    if not wap_loc and isinstance(data, dict):
+        wap_loc = _locale_phrase_map(data, "wap_keyword_phrases_by_locale")
     strat_loc = _locale_phrase_map(data, "strategy_keyword_phrases_by_locale")
     story_anchors = _merge_story_anchors(data) if isinstance(data, dict) else DEFAULT_STORY_ANCHORS
     story_dedupe = _load_story_dedupe(data) if isinstance(data, dict) else dict(DEFAULT_STORY_DEDUPE)
@@ -996,6 +1000,10 @@ def build_daily_brief(
         [
             "",
             "_Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md), [work-strategy/README.md](README.md)._",
+            "",
+            "## 1d. Putin — last 48 hours",
+            "",
+            "_Filled at **good morning** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md): web scan (Kremlin schedule/transcripts, Reuters, BBC, TASS/RIA as needed), **48h** rolling window, **bullets + URLs**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._",
             "",
             "## 2. Headlines (ingested RSS)",
             "",

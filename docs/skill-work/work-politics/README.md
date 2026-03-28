@@ -1,8 +1,8 @@
 # work-politics
 
-**Rename (2026):** Formerly `work-american-politics`, then `work-political-consulting`. **RECURSION-GATE** territory string is now **`work-politics`**. **CLI preferred:** `--territory work-politics` (aliases: `wap`, `wp`). Receipt JSON uses **`"territory": "work-politics"`** for new merges; legacy receipts may still say `"wap"`. Legacy YAML with `territory: work-american-politics` or `territory: work-political-consulting` still counts as **work-politics territory** until edited ([`recursion_gate_territory.py`](../../../scripts/recursion_gate_territory.py)).
+**Rename (2026):** Formerly `work-american-politics`, then `work-political-consulting`. **RECURSION-GATE** territory string is now **`work-politics`**. **CLI preferred:** `--territory work-politics` (shorthand **`pol`** or **`wp`**; legacy **`wap`** still accepted). Receipt JSON uses **`"territory": "work-politics"`** for new merges. Legacy YAML with `territory: work-american-politics` or `territory: work-political-consulting` still counts as **work-politics territory** until edited ([`recursion_gate_territory.py`](../../../scripts/recursion_gate_territory.py)).
 
-**Prose vs technical tokens:** In writing, prefer **work-politics** (or **work-politics territory**). Reserve **`operator:wap:…`** for stable `channel_key` prefixes. Avoid the informal acronym **WAP** in documentation and UI copy.
+**Prose vs technical tokens:** In writing, prefer **work-politics** (or **work-politics territory**). Use **`operator:pol:…`** for new `channel_key` prefixes; **`operator:wap:…`** remains valid for older rows. Avoid the informal acronym **WAP** in documentation and UI copy.
 
 **GitHub / gate CI:** [LANE-CI.md](LANE-CI.md) — PR labels, when **`lane/cross`** applies, canonical `### CANDIDATE-*` paste shape, and the paste-snippet CLI.
 
@@ -40,7 +40,7 @@ Keep in git only when:
 ### Stage to RECURSION-GATE when
 
 1. **Voice / PRP should reflect it** — companion wants the fork to “know” something for queries (then merge touches prompt or IX — still companion-approved).
-2. **Paid or milestone audit** — deliverable closed, revenue event, “we shipped X” → **ACT-** trail; use [wap-candidate-template.md](wap-candidate-template.md).
+2. **Paid or milestone audit** — deliverable closed, revenue event, “we shipped X” → **ACT-** trail; use [pol-candidate-template.md](pol-candidate-template.md).
 3. **Explicit companion approval** of a fact for the Record — same gated rule as Abby pipeline; no merge on agent say-so alone.
 
 ### Territory (required for work-politics rows)
@@ -53,12 +53,12 @@ Encode **jurisdiction + client slug** so milestones stay sortable without new te
 
 | Pattern | Example | Use |
 |---------|---------|-----|
-| `operator:wap:<jurisdiction>-<slug>` | `operator:wap:us-ky4-massie` | Default |
-| `operator:wap:us-state-<ST>-<slug>` | `operator:wap:us-state-tx-senate-smith` | State |
-| `operator:wap:us-local-<ST>-<city>-<slug>` | `operator:wap:us-local-oh-toledo-mayor` | Local |
-| `operator:wap:intl-<CC>-<slug>` | `operator:wap:intl-gb-council` | International (only if compliance cleared) |
+| `operator:pol:<jurisdiction>-<slug>` | `operator:pol:us-ky4-massie` | Default (preferred) |
+| `operator:pol:us-state-<ST>-<slug>` | `operator:pol:us-state-tx-senate-smith` | State |
+| `operator:pol:us-local-<ST>-<city>-<slug>` | `operator:pol:us-local-oh-toledo-mayor` | Local |
+| `operator:pol:intl-<CC>-<slug>` | `operator:pol:intl-gb-council` | International (only if compliance cleared) |
 
-**Invariant:** `territory` stays **`work-politics`** for all rows above. See [clients/_template.md](clients/_template.md), [wap-candidate-template.md](wap-candidate-template.md).
+**Invariant:** `territory` stays **`work-politics`** for all rows above. See [clients/_template.md](clients/_template.md), [pol-candidate-template.md](pol-candidate-template.md).
 
 ### IX vs ACT (policy)
 
@@ -75,7 +75,7 @@ At least **weekly** (e.g. before weekly brief): either **one work-politics candi
 
 ### Template
 
-**[wap-candidate-template.md](wap-candidate-template.md)** — paste-ready YAML; name artifacts in `summary` (`iran-foreign-policy-brief.md`, `revenue-log` row).
+**[pol-candidate-template.md](pol-candidate-template.md)** — paste-ready YAML; name artifacts in `summary` (`iran-foreign-policy-brief.md`, `revenue-log` row).
 
 ### Operational SQLite engine (optional)
 
@@ -161,7 +161,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | **[objection-log.md](objection-log.md)** | Structured learning from objections and reply friction. |
 | **[next-4-tasks-1k.md](next-4-tasks-1k.md)** | Next 4 tasks at ~$1,000 each (BTC or fiat), in sequence after Fiverr is posted: (1) get gig in front of buyers, (2) professionalize @usa_first_ky, (3) first $1k deliverable, (4) scale or repeat. |
 | **[simple-in-long-term-speculation.md](simple-in-long-term-speculation.md)** | Long-term speculation: effect of "simple in, more work out" on development and potential of the system. |
-| **[wap-candidate-template.md](wap-candidate-template.md)** | Paste-ready RECURSION-GATE YAML for work-politics milestones; territory + batch merge commands. |
+| **[pol-candidate-template.md](pol-candidate-template.md)** | Paste-ready RECURSION-GATE YAML for work-politics milestones; territory + batch merge commands. |
 | **[analytical-lenses/manifest.md](analytical-lenses/manifest.md)** | Triangulated **WORK-only** editorial lenses (structural / operational–diplomatic / institutional–domestic); logging and gate rules. |
 | **[analytical-lenses/template-three-lenses.md](analytical-lenses/template-three-lenses.md)** | Paste block for briefs and threads (three lenses + synthesis + tensions). |
 | **[daily-brief-template.md](daily-brief-template.md)** | Pointer to **work-strategy** daily brief (work-politics + strategy). |
@@ -176,7 +176,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 1. **Companion sovereignty** — Campaign strategy and public positioning are the companion’s. The agent supports with research and drafts; it does not direct.
 2. **Knowledge boundary** — Briefs and Voice responses use documented Record content and cited sources. No unsourced or inferred political claims.
 3. **Gated pipeline** — New campaign-relevant facts or claims (opposition research, issue positions) enter the Record only via staging and companion approval.
-4. **RECURSION-GATE territory** — work-politics candidates (see [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md)): add **`territory: work-politics`** or **`channel_key: operator:wap`** so operator tools can filter work-politics vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory work-politics` | `companion` | `all`; aliases `wap`, `wp`). **Batch merge work-politics only:** approve work-politics rows, then
+4. **RECURSION-GATE territory** — work-politics candidates (see [§ Sync](#sync-with-recursion-gate), [pol-candidate-template.md](pol-candidate-template.md)): add **`territory: work-politics`** and **`channel_key: operator:pol:…`** (or legacy `operator:wap:…`) so operator tools can filter work-politics vs companion pending (`operator_blocker_report`, `session_brief`, `harness_warmup` — `--territory work-politics` | `companion` | `all`; aliases **`pol`**, `wp`, legacy `wap`). **Batch merge work-politics only:** approve work-politics rows, then
    `python scripts/process_approved_candidates.py -u grace-mar --territory work-politics --generate-receipt /tmp/work-politics-receipt.json --approved-by <name>`
    `python scripts/process_approved_candidates.py -u grace-mar --territory work-politics --apply --approved-by <name> --receipt /tmp/work-politics-receipt.json`
    Companion-approved rows stay in the gate until you run `--territory companion` or `all`.
@@ -195,12 +195,12 @@ This workflow can support revenue when someone pays for campaign content — e.g
 Use this order when actively running the territory:
 
 1. Open [workspace.md](workspace.md) for the file map and canonical operator path.
-2. Use the work-politics operator surface at `/operator/wap` to see campaign status, blockers, work-politics gate items, content queue, and next actions in one place.
+2. Use the work-politics operator surface at **`/operator/pol`** (legacy **`/operator/wap`**) to see campaign status, blockers, work-politics gate items, content queue, and next actions in one place.
 3. Refresh [brief-source-registry.md](brief-source-registry.md) before generating the weekly brief.
 4. Generate a first-pass brief (includes **§0 Recency slice**):  
    `python scripts/generate_work_politics_weekly_brief.py -u grace-mar --start YYYY-MM-DD -o docs/skill-work/work-politics/weekly-brief-YYYY-MM-DD.md`  
    Then run the **live 7d/30d pass** and replace §0 with three dated bullets. Latest artifact: [weekly-brief-2026-03-09.md](weekly-brief-2026-03-09.md).
-4b. **Daily horizon (work-politics + work-strategy):** `python scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, snapshot + [daily-brief-focus.md](../work-strategy/daily-brief-focus.md) + **§1c** [daily-brief-jiang-layer.md](../work-strategy/daily-brief-jiang-layer.md) (work-jiang hooks). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline. Optional long-form themes: [work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) (not a fact source for public copy). Optional gate traceability: `jiang_ref` on [wap-candidate-template.md](wap-candidate-template.md).
+4b. **Daily horizon (work-politics + work-strategy):** `python scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` — RSS from [work-strategy/daily-brief-config.json](../work-strategy/daily-brief-config.json), dual **W/S** scores, snapshot + [daily-brief-focus.md](../work-strategy/daily-brief-focus.md) + **§1c** [daily-brief-jiang-layer.md](../work-strategy/daily-brief-jiang-layer.md) (work-jiang hooks). See [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). Use `--no-fetch` offline. Optional long-form themes: [work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md) (not a fact source for public copy). Optional gate traceability: `jiang_ref` on [pol-candidate-template.md](pol-candidate-template.md).
 5. Use [content-queue.md](content-queue.md) as the working queue for `@usa_first_ky`.
 6. For full briefs, complete [weekly-brief-template.md](weekly-brief-template.md) **§7 Triangulation** using [analytical-lenses/](analytical-lenses/manifest.md).
 7. Stage work-politics milestones through `RECURSION-GATE` when they should become audited continuity or Record-adjacent knowledge.
@@ -244,7 +244,7 @@ Use this order when the work block is about learning which work-politics offer a
 | **Brief source registry** | Structured list of what feeds the weekly brief and what still needs refresh. | Added — [brief-source-registry.md](brief-source-registry.md) |
 | **Content queue** | Structured X/content workflow for `@usa_first_ky` with `idea` → `posted` status. | Added — [content-queue.md](content-queue.md) |
 | **Message bank** | Approved or draft talking points by issue (war powers, Epstein, Trump opposition). Keeps X and briefs on-message; update via pipeline. | Optional — add when you want a single source of truth for lines. |
-| **RECURSION-GATE sync** | Doc vs gate lanes, weekly rhythm, work-politics template — [§ Sync](#sync-with-recursion-gate), [wap-candidate-template.md](wap-candidate-template.md). | Added |
+| **RECURSION-GATE sync** | Doc vs gate lanes, weekly rhythm, work-politics template — [§ Sync](#sync-with-recursion-gate), [pol-candidate-template.md](pol-candidate-template.md). | Added |
 | **District context** | KY-4 basics: counties, demographics, local issues, local media. Improves district-focused messaging and briefs. | Optional — add when you want district one-pager. |
 | **FEC / compliance reminders** | Tie calendar to reminders: 48-hour notices window, pre-primary report due. So we don’t miss deadlines. | Optional — add to workflow-reminders or calendar. |
 | **Debate prep (if primary debate)** | If KY-4 has a debate: date in calendar; one-pager for prep (opposition lines, principal’s best answers) and post-debate (narrative, X angles). | Optional — add when debate is confirmed. |
