@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Grace-Mar operator rhythm: **Good morning** = Step 1 (warmup, brief, Polymarket, Massie X) + Step 2 fixed **A–E**. Explicit **good morning light** (skip Polymarket + Massie X) and **good morning minimal** (harness-only + A–E). **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 fixed **A–E**. Good morning **E** is not good night; good night **E** is not the next day’s good morning.
+description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E**; after **A–D** choices, **re-offer full A–E** until **E** closes the morning session. **Good morning light** / **good morning minimal** supported. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E**; after **A–D**, **re-offer full A–E** until **E** closes the night session. Good morning **E** is not good night; good night **E** is not the next day’s good morning.
 ---
 
 # Daily Warmup
@@ -27,14 +27,14 @@ If the operator says **“good morning”** on a **Sunday**, default to **week-a
 - Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
 - **Skip** full **polling + Polymarket** ([polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md)) and the **Massie X** skill (`.cursor/skills/massie-x-news-search-draft/SKILL.md`).
 - **Daily brief:** same as Tue–Fri — generate only if today’s file is missing; else one-line pointer to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md`.
-- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–E** (do not omit **E**).
+- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–E** (do not omit **E**). On later turns, **A–D** executes the track then **re-offers full A–E** until **E**.
 
 **“Good morning minimal”** (or clear equivalent):
 
 - Run **`harness_warmup.py`** only when instance state matters; **do not** run `operator_daily_warmup.py` unless the operator asks.
 - **Skip** daily brief generation, Polymarket, and Massie X unless explicitly requested.
 - Optional **one-line** gate pointer (e.g. pending count from warmup output if already pasted, or “see `users/grace-mar/recursion-gate.md`”).
-- Still output **full Step 2 A–E**.
+- Still output **full Step 2 A–E**. On later turns, **A–D** then **re-offer full A–E** until **E** (same as full/light good morning).
 
 ---
 
@@ -64,7 +64,7 @@ When the operator begins with **"good morning"** (or clearly the same intent), t
 
 Immediately **after** Step 1 content, output the fixed **A–E** menu (see [Good morning — multiple choice (A–E required)](#good-morning--multiple-choice-ae-required)). **Do not** omit **E**.
 
-When the operator later sends **A**, **B**, **C**, or **D** (or equivalent), **execute that track** without re-running Step 1 unless they say **good morning** again.
+When the operator later sends **A**, **B**, **C**, or **D** (or equivalent), **execute that track** without re-running Step 1 unless they say **good morning** again. **After** that track’s content, **always output the full A–E morning menu again** (same roles as [Good morning — multiple choice](#good-morning--multiple-choice-ae-required)). The good morning session stays **open** until **E** — do not skip the menu on A–D turns.
 
 When the operator sends **E** (or “end morning meeting” / clear equivalent): **formally close** the good morning session — short acknowledgment (one or two sentences). **Do not** run Step 1 automated stack on subsequent turns until the next **good morning**. **E is not good night** — no required `operator_handoff_check.py` unless they also invoke **Good night** below.
 
@@ -72,7 +72,7 @@ When the operator sends **E** (or “end morning meeting” / clear equivalent):
 
 ## Good morning — multiple choice (A–E required)
 
-Every **good morning** reply ends **Step 2** with **exactly five options — A through E**. Wording may vary; **roles must not**.
+The **first** good morning reply ends **Step 2** with **exactly five options — A through E**. **Each follow-up** after the operator chooses **A**, **B**, **C**, or **D** must also end with the **same full A–E menu** (until **E** closes the session). Wording may vary; **roles must not**.
 
 | Letter | Role | What it means when chosen |
 |--------|------|---------------------------|
@@ -119,7 +119,7 @@ Full spec: [`.cursor/skills/handoff-check/SKILL.md`](../handoff-check/SKILL.md).
 
 Immediately **after** Step 1, output the fixed **A–E** menu (see [Good night — multiple choice (A–E required)](#good-night--multiple-choice-ae-required)). **Do not** omit **E**.
 
-When the operator later sends **A**, **B**, **C**, or **D** (or equivalent), **execute that track** without re-running **Step 1** (`operator_handoff_check.py`) unless they ask for a **fresh handoff** or say **good night** again.
+When the operator later sends **A**, **B**, **C**, or **D** (or equivalent), **execute that track** without re-running **Step 1** (`operator_handoff_check.py`) unless they ask for a **fresh handoff** or say **good night** again. **After** that track’s content, **always output the full A–E night menu again** (same roles as [Good night — multiple choice](#good-night--multiple-choice-ae-required)). The good night session stays **open** until **E** — do not skip the menu on A–D turns.
 
 When the operator sends **E** (or “end night session” / clear equivalent): **formally close** the good night session — short acknowledgment (one or two sentences). **Do not** re-run the full good night **Step 1** stack on subsequent turns until the next **good night**. **Next calendar start** for morning automation is **good morning** (not implied by **E**).
 

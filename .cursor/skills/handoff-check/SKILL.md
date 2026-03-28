@@ -7,7 +7,9 @@ description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictiv
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–E menu) — see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § **Good night** and § *Good night — multiple choice (A–E required)*.
+**Preset — good night:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–E menu) — see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § **Good night** and § *Good night — multiple choice (A–E required)*. On follow-up turns, **A–D** runs the track then **re-offers the full A–E menu** until **E** ends the night session.
+
+**Good morning (related):** After **A–D**, **re-offer the full A–E morning menu** each turn until **E** — same loop as good night; see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Good morning — multiple choice (A–E required)*.
 
 ## Default command
 
