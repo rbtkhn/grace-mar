@@ -1,6 +1,6 @@
 ---
 source_kind: substack_essay
-predictive_history_volume: 7
+essays_volume: 7
 substack_slug: world-war-iii-begins
 canonical_url: https://predictivehistory.substack.com/p/world-war-iii-begins
 title: "World War III Begins"

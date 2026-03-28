@@ -1,6 +1,6 @@
 ---
 source_kind: substack_essay
-predictive_history_volume: 7
+essays_volume: 7
 substack_slug: countdown-to-iran
 canonical_url: https://predictivehistory.substack.com/p/countdown-to-iran
 title: "Countdown to Iran"

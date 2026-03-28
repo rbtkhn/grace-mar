@@ -22,6 +22,6 @@
 | Volume | Series | Notes |
 |--------|--------|--------|
 | VI | Interviews | Curated long-form **dialogue / Q&A** (any show); same **Predictive History** intellectual frame as lecture volumes |
-| VII | Substack | **Written** essays (newsletter); corpus under `substack/essays/` — see [VOLUME-VII-SUBSTACK.md](VOLUME-VII-SUBSTACK.md) |
+| VII | Essays | **Written** newsletter (Predictive History on Substack); corpus under `substack/essays/` — see [VOLUME-VII-ESSAYS.md](VOLUME-VII-ESSAYS.md) |
 
 See also [VOLUME-IV-GAME-THEORY.md](VOLUME-IV-GAME-THEORY.md) for the multivolume **stub** pattern.

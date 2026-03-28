@@ -41,9 +41,9 @@ Volume Five title set by operator: **Great Books**.
 
 Added [book/BOOK-QUALITY-DOCTRINE.md](book/BOOK-QUALITY-DOCTRINE.md) as a continuity anchor for future agent sessions. Doctrine integrates ten editorial upgrades (argument map, thesis openings, steelman/rebuttal, falsification lines, voice charter) under a strict **no scope expansion** rule.
 
-## 2026-03-27 — Volume VII (Substack essays)
+## 2026-03-27 — Volume VII — Essays (written newsletter)
 
-**Predictive History** Substack posts are registered as **Volume VII** of the multivolume line. Corpus: `substack/essays/<slug>.md`; scope: [book/VOLUME-VII-SUBSTACK.md](book/VOLUME-VII-SUBSTACK.md); stub in `metadata/book-architecture.yaml` under `volume_7_substack`. Crosswalk: [substack/README.md](substack/README.md). Optional next step: add `sources.yaml` rows (`ss-*` or similar) if prediction-registry / chapter-map parity with lectures is desired.
+**Essays** (Predictive History newsletter on Substack) are registered as **Volume VII** of the multivolume line. Corpus: `substack/essays/<slug>.md`; scope: [book/VOLUME-VII-ESSAYS.md](book/VOLUME-VII-ESSAYS.md); stub in `metadata/book-architecture.yaml` under `volume_7_essays`. Crosswalk: [substack/README.md](substack/README.md). Optional next step: add `sources.yaml` rows (`essay-*` or similar) if prediction-registry / chapter-map parity with lectures is desired.
 
 ## Volume V (Great Books) — next ingest
 

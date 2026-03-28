@@ -17,8 +17,8 @@ For each video you care about, you want **three layers** on disk (names are conv
 | **Curated lecture file** | Human-readable archive: metadata, “at a glance,” optional full ASR, **canonical YouTube URL** | `research/external/work-jiang/lectures/<slug>.md` |
 | **Analysis memo** | Structured read: claims, tags, lattice crosswalk, tensions, dependencies | `research/external/work-jiang/analysis/<video_id>-<short-slug>.md` (or append sections in one rolling doc — pick one pattern and keep it). Prefer **YAML front matter** (`chapter_candidates`, `source_id`, …) via `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` after `build_source_registry.py` so book/site metadata stays machine-readable. |
 
-| **Substack essay (curated)** | **Volume VII** — full post text for search / diff / claim work; operator-ingested | `research/external/work-jiang/substack/essays/<slug>.md` — see [substack/essays/README.md](substack/essays/README.md), [book/VOLUME-VII-SUBSTACK.md](book/VOLUME-VII-SUBSTACK.md) |
-| **Substack analysis memo** | Same memo shape as lecture analysis; links to essay file | `research/external/work-jiang/analysis/ss-<slug>-analysis.md` — **not** in `metadata/sources.yaml` unless you later add a registry row; `normalize_analysis_frontmatter.py` does **not** auto-fill these (filename is not a YouTube id). |
+| **Volume VII essay (curated)** | **Essays** (Predictive History newsletter on Substack) — full post text for search / diff / claim work; operator-ingested (files under `substack/essays/`) | `research/external/work-jiang/substack/essays/<slug>.md` — see [substack/essays/README.md](substack/essays/README.md), [book/VOLUME-VII-ESSAYS.md](book/VOLUME-VII-ESSAYS.md) |
+| **Volume VII analysis memo** (`essay-*`) | Same memo shape as lecture analysis; links to essay file | `research/external/work-jiang/analysis/essay-<slug>-analysis.md` — **not** in `metadata/sources.yaml` unless you later add a registry row; `normalize_analysis_frontmatter.py` does **not** auto-fill these (filename is not a YouTube id). |
 
 Keeping **raw** and **curated** separate avoids mixing YouTube caption noise with your editorial summary.
 
@@ -56,7 +56,7 @@ Keeping **raw** and **curated** separate avoids mixing YouTube caption noise wit
 
 ### Multi-series (Predictive History)
 
-The umbrella book line is **Predictive History** — **one volume per primary corpus** (lecture series for Volumes I–V; **Volume VI** is long-form **interviews**—see [book/VOLUME-VI-INTERVIEWS.md](book/VOLUME-VI-INTERVIEWS.md); **Volume VII** is **Substack essays**—see [book/VOLUME-VII-SUBSTACK.md](book/VOLUME-VII-SUBSTACK.md)). Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata. For **Volume II** (Civilization), **Part II** is **Divergence** (historiographic comparison via `divergence-tracking`), not the Geo-Strategy **prediction** pass — see [book/VOLUME-II-CIVILIZATION.md](book/VOLUME-II-CIVILIZATION.md).
+The umbrella book line is **Predictive History** — **one volume per primary corpus** (lecture series for Volumes I–V; **Volume VI** is long-form **interviews**—see [book/VOLUME-VI-INTERVIEWS.md](book/VOLUME-VI-INTERVIEWS.md); **Volume VII** is **Essays**—see [book/VOLUME-VII-ESSAYS.md](book/VOLUME-VII-ESSAYS.md)). Geo-Strategy and **Civilization** are separate corpora; keep them distinct on disk and in metadata. For **Volume II** (Civilization), **Part II** is **Divergence** (historiographic comparison via `divergence-tracking`), not the Geo-Strategy **prediction** pass — see [book/VOLUME-II-CIVILIZATION.md](book/VOLUME-II-CIVILIZATION.md).
 
 | Series | `series` (in `metadata/sources.yaml`) | `source_id` pattern | Curated lecture filename pattern |
 |--------|----------------------------------------|---------------------|----------------------------------|

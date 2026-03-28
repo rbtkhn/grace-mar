@@ -1,7 +1,7 @@
 ---
-analysis_id: ss-vietnam-redux
+analysis_id: essay-vietnam-redux
 source_kind: substack
-predictive_history_volume: 7
+essays_volume: 7
 substack_slug: vietnam-redux
 canonical_url: https://predictivehistory.substack.com/p/vietnam-redux
 publication_date: "2026-03-14"
@@ -16,13 +16,13 @@ quality_level: draft
 memo_format_version: 1
 ---
 
-# Analysis — Predictive History · Volume VII — Substack: Vietnam Redux
+# Analysis — Predictive History · Volume VII — Essays: Vietnam Redux
 
 - **substack_slug:** `vietnam-redux`
 - **canonical_url:** https://predictivehistory.substack.com/p/vietnam-redux
 - **publication_date:** 2026-03-14
 - **essay (curated text):** [substack/essays/vietnam-redux.md](../substack/essays/vietnam-redux.md)
-- **crosswalk:** [substack/README.md](../substack/README.md) (middle section — March 2026 arc)
+- **crosswalk:** [substack/README.md](../substack/README.md) (thirtieth-from-last in file order; **last** is **Vision, Mission, Goals**)
 - **analyzed_at:** *(operator)*
 
 ## Thesis / aim
@@ -51,8 +51,8 @@ memo_format_version: 1
 
 ## Cross-refs
 
-- [ss-the-acceleration-analysis.md](ss-the-acceleration-analysis.md) — prior week in arc
-- [ss-the-us-iran-end-game-analysis.md](ss-the-us-iran-end-game-analysis.md) — following week
+- [essay-the-acceleration-analysis.md](essay-the-acceleration-analysis.md) — prior week in arc
+- [essay-the-us-iran-end-game-analysis.md](essay-the-us-iran-end-game-analysis.md) — following week
 
 ## Follow-ups
 

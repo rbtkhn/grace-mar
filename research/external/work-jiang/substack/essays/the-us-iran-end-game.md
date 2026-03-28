@@ -1,6 +1,6 @@
 ---
 source_kind: substack_essay
-predictive_history_volume: 7
+essays_volume: 7
 substack_slug: the-us-iran-end-game
 canonical_url: https://predictivehistory.substack.com/p/the-us-iran-end-game
 title: "The US-Iran End Game"
