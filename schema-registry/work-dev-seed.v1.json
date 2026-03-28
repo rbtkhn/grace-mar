@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/work-dev-seed.v1.json",
+  "title": "work_dev_seed",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "development_involvement",
+    "development_role_modes",
+    "active_focuses",
+    "evidence_basis"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["uninitialized", "initialized"]
+    },
+    "development_involvement": {
+      "type": "string",
+      "enum": ["none", "light", "regular", "core"]
+    },
+    "development_role_modes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "builder",
+          "architect",
+          "debugger",
+          "reviewer",
+          "researcher",
+          "integrator",
+          "other"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "primary_repos": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "systems_or_products": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "preferred_languages": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "preferred_tools": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "work_modes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "feature_design",
+          "implementation",
+          "debugging",
+          "architecture",
+          "refactoring",
+          "documentation",
+          "integration",
+          "research",
+          "code_review",
+          "other"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "technical_research_areas": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "active_focuses": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "important_constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "companion_help_priorities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "brainstorming",
+          "planning",
+          "code_generation",
+          "review_and_critique",
+          "debugging",
+          "architecture_mapping",
+          "repo_audits",
+          "prioritization",
+          "technical_writing",
+          "other"
+        ]
+      },
+      "uniqueItems": true,
+      "default": []
+    },
+    "notes": {
+      "type": "string",
+      "default": ""
+    },
+    "evidence_basis": {
+      "type": "string",
+      "enum": ["none", "seed_survey", "explicit_user_input", "mixed"]
+    }
+  }
+}
