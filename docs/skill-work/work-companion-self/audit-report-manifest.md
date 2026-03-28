@@ -278,6 +278,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-strategy/daily-brief-2026-03-24.md
   - docs/skill-work/work-strategy/daily-brief-2026-03-26.md
   - docs/skill-work/work-strategy/daily-brief-2026-03-27.md
+  - docs/skill-work/work-strategy/daily-brief-2026-03-28.md
   - docs/skill-work/work-strategy/daily-brief-focus.md
   - docs/skill-work/work-strategy/daily-brief-jiang-layer.md
   - docs/skill-work/work-strategy/daily-brief-template.md
@@ -344,4 +345,4 @@ Paths: companion-self template-manifest.json
   - docs/self-library-example-corpus-grace-mar-derived.md
   ... and 77 more
 
-Summary: same=92 differ=13 only_template=0 only_instance=305
+Summary: same=92 differ=13 only_template=0 only_instance=306

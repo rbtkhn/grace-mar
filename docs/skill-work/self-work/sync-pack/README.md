@@ -8,7 +8,7 @@ This pack is optional and review-first.
 
 **Canonical public upstream:** [companion-self](https://github.com/rbtkhn/companion-self) (instances should sync from upstream repo + pinned ref when needed).
 
-**Same path in template:** [companion-self sync-pack README](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/self-work/sync-pack/README.md) — run `template_diff.py --use-manifest` if either side changes.
+**Canonical (template):** [companion-self sync-pack README](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/self-work/sync-pack/README.md). Run `python3 scripts/template_diff.py --use-manifest` if either side changes.
 
 ---
 
@@ -34,14 +34,14 @@ Companion closeout pair:
 
 ## Deterministic upgrade path (instance-side)
 
-From `grace-mar` repo root:
+This repo ships `scripts/upgrade-from-template.py`. From **this** repository root, with companion-self at `companion-self/`:
 
 ```bash
 python3 scripts/upgrade-from-template.py --dry-run
 python3 scripts/upgrade-from-template.py
 ```
 
-This updates sync-pack files from local `../companion-self` and refreshes `template-source.json`.
+That refreshes sync-pack files from the pinned template checkout and updates `template-source.json` when present. Other instances: see companion-self [sync-pack README](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/self-work/sync-pack/README.md) and [how-instances-consume-upgrades.md](../../../../how-instances-consume-upgrades.md).
 
 ---
 

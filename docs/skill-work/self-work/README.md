@@ -31,4 +31,4 @@ Includes:
 
 **Instance file:** [users/grace-mar/self-work.md](../../../users/grace-mar/self-work.md) (grace-mar). Other companions keep `self-work.md` in **their own** instance repos.
 
-**Upstream:** companion-self template should add `users/_template/self-work.md` + this README when merged.
+**Upstream:** companion-self should carry `users/_template/self-work.md` when a default starter is promoted; template [self-work README](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/self-work/README.md) is canonical for portable doctrine (clarity table, sync-pack pointer).

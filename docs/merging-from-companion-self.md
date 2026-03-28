@@ -31,7 +31,7 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 | `template-version.json` | Template version / release marker for recording sync baseline |
 | `how-instances-consume-upgrades.md` | Companion-self's instance upgrade contract; compare with this doc when drift appears |
 | `docs/concept.md` | Template concept doc; grace-mar may mirror this into its broader concept docs rather than a same-named file |
-| `docs/identity-fork-protocol.md` | Protocol: stage → approve → merge; evidence linkage |
+| `docs/identity-fork-protocol.md` | Protocol: stage → approve → merge; evidence linkage (template **short form**; see IFP note below) |
 | `docs/seed-phase.md` | Template seed-phase definition; grace-mar currently expresses this through ARCHITECTURE and operator docs |
 | `docs/long-term-objective.md` | Template-level long-term objective / system rule |
 | `docs/two-hour-screentime-target.md` | Template-level screen time constraint / philosophy |
@@ -50,6 +50,10 @@ Use the live template repo's manifest and upgrade docs as the source of truth. G
 **Useful rule:** Treat `grace-mar` as the proving ground and `companion-self` as the reusable base. If a change is structural and instance-agnostic, it may be a candidate to merge back upstream later. If it depends on live Record state, private operator routines, or local deployment quirks, keep it instance-only.
 
 **Current alignment note:** The live companion-self repo contains template-only paths that do not need one-to-one copies in grace-mar, but they do need explicit acknowledgment in audits and sync notes. Use `docs/skill-work/work-companion-self/audit-report-manifest.md` as the current path-level reference until a newer diff is generated.
+
+### Identity Fork Protocol (IFP) — short form vs full spec
+
+Companion-self ships **`docs/identity-fork-protocol.md` as a short-form summary** with a pointer to the reference implementation. Grace-mar holds the **canonical full IFP v1.0** at the same path (`docs/identity-fork-protocol.md`) — much longer, normative for this instance. **Do not overwrite** grace-mar’s file with the template short form during template→instance sync. If the template summary changes, merge **selective** clarifications by hand, or promote an updated full spec to companion-self only as a deliberate release. Upstream link in the template must target `docs/identity-fork-protocol.md` (not a legacy `IDENTITY-FORK-PROTOCOL.md` filename).
 
 ---
 
