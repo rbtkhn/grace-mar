@@ -5,6 +5,8 @@
 **URL (when deployed):** `https://<miniapp-host>/pol` (legacy **`/wap`** still works)  
 **Auth:** `POL_DASHBOARD_TOKEN` (or legacy `WAP_DASHBOARD_TOKEN`) — send as `X-Pol-Token` / `X-Wap-Token` or `Authorization: Bearer <token>`, or bookmark `https://<host>/pol?t=<token>`.
 
+**Daily rhythm cards:** The dashboard includes a static **A–E** reference strip (good morning / good night Cursor menu roles) plus links to [work-menu-conventions.md](skill-work/work-menu-conventions.md), [daily-warmup SKILL](../.cursor/skills/daily-warmup/SKILL.md), and [suggest_morning_forks.py](../scripts/suggest_morning_forks.py). No server logic — glanceable only.
+
 ---
 
 ## Environment

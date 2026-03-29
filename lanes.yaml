@@ -17,6 +17,7 @@ lanes:
     owned_paths:
       - "lanes.yaml"
       - "docs/skill-work/work-dev/**"
+      - "docs/skill-work/work-menu-conventions.md"
       - "docs/skill-work/work-build-ai/integration-status.md"
       - "examples/diagnostics/**"
       - "scripts/surface_aliases.py"
@@ -38,6 +39,9 @@ lanes:
       - "scripts/handback_server.py"
       - "scripts/operator_depth_hint.py"
       - "scripts/operator_daily_warmup.py"
+      - "scripts/suggest_morning_forks.py"
+      - "scripts/log_operator_choice.py"
+      - "scripts/good-morning-brief.py"
       - "integrations/**"
       - "runtime/continuity/**"
       - "runtime/observability/**"
@@ -53,6 +57,9 @@ lanes:
       - "tests/test_gate_block_parser.py"
       - "tests/test_operator_daily_warmup.py"
       - "tests/test_operator_depth_hint.py"
+      - "tests/test_suggest_morning_forks.py"
+      - "tests/test_log_operator_choice.py"
+      - "tests/test_menu_choice_evolution.py"
       - "tests/test_check_integration_readiness.py"
       - "tests/test_verify_integration_receipt.py"
       - "tests/test_continuity_read_log.py"
@@ -117,6 +124,7 @@ lanes:
 
   work-politics:
     owned_paths:
+      - "miniapp/pol-dashboard.html"
       - "docs/skill-work/work-politics/**"
       - "scripts/generate_work_politics_*.py"
       - "scripts/generate_wap_*.py"

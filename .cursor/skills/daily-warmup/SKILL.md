@@ -64,6 +64,7 @@ If **good morning** arrives **before** the prior morning session reached **E**, 
 **Alpha / mastery lens (optional):** If the operator ties the day to **mastery gates**, **2-hour academic ceiling**, or **“Time Back”**, point at [alpha-mastery-adaptation.md](../../../docs/alpha-mastery-adaptation.md) and optional `python3 scripts/good-morning-brief.py` / `reflection-proposals/DAILY-INTENTION-*.md` — design vocabulary, not school product claims.
 
 1. Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`** (see [Run this first](#run-this-first)).
+   - **Ranked morning forks (deterministic, optional paste):** `python3 scripts/suggest_morning_forks.py -u grace-mar` prints the top 3 forks from gate + pipeline-events + self-memory + session-log signals; add `--markdown` or `-o path.md` for doc-shaped output. The same block appears when running `python3 scripts/good-morning-brief.py`. Conventions: [work-menu-conventions.md](../../../docs/skill-work/work-menu-conventions.md).
 2. **Daily brief:** Per cadence — **Monday / full day:** generate today’s file:
    ```bash
    python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md

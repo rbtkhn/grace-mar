@@ -39,6 +39,13 @@
     #setupScreen { max-width: 24rem; }
     .err { color: #d98b8e; font-size: 0.88rem; margin-top: 0.5rem; }
     .hidden { display: none !important; }
+    .card-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); margin-top: 0.5rem; }
+    .card {
+      border: 1px solid var(--border); border-radius: 10px; padding: 0.75rem;
+      background: rgba(0,0,0,0.2); font-size: 0.85rem;
+    }
+    .card strong { display: block; color: var(--accent); margin-bottom: 0.35rem; font-size: 0.95rem; }
+    .card .meta { color: var(--muted); font-size: 0.78rem; margin-top: 0.35rem; }
   </style>
 </head>
 <body>
@@ -54,6 +61,23 @@
   <div id="mainApp" class="hidden">
     <h1>Work-politics internal dashboard</h1>
     <p class="sub">Create jobs → run Cursor skills → paste output → mark shipped. See <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/pol-dashboard.md" style="color:var(--accent)">docs/pol-dashboard.md</a>.</p>
+
+    <div class="panel">
+      <h2 style="margin:0 0 0.5rem;font-size:1rem;">Daily rhythm — Cursor A–E (reference)</h2>
+      <p class="sub" style="margin-bottom:0.5rem;">Glanceable pivots for good morning / good night. Full procedure: daily-warmup skill in repo.</p>
+      <div class="card-grid">
+        <div class="card"><strong>A</strong>Template + boundary audit <span class="meta">~20–40m · work-companion-self</span></div>
+        <div class="card"><strong>B</strong>Work-dev + sources <span class="meta">work-dev-sources.md</span></div>
+        <div class="card"><strong>C</strong>One WORK lane <span class="meta">strategy / jiang / politics</span></div>
+        <div class="card"><strong>D</strong>System pick <span class="meta">hygiene / survey / gate</span></div>
+        <div class="card"><strong>E</strong>End morning / night slice <span class="meta">closes current menu loop</span></div>
+      </div>
+      <p class="links" style="margin-top:0.75rem;">
+        <a href="https://github.com/rbtkhn/grace-mar/blob/main/.cursor/skills/daily-warmup/SKILL.md" target="_blank" rel="noopener">daily-warmup SKILL.md</a>
+        <a href="https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-menu-conventions.md" target="_blank" rel="noopener">work-menu-conventions.md</a>
+        <a href="https://github.com/rbtkhn/grace-mar/blob/main/scripts/suggest_morning_forks.py" target="_blank" rel="noopener">suggest_morning_forks.py</a>
+      </p>
+    </div>
 
     <div class="panel links">
       <strong>Quick links (repo)</strong><br>

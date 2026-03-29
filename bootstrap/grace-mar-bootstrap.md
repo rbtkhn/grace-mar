@@ -243,6 +243,8 @@ echo "paste text" | python3 scripts/stage_gate_candidate.py -u grace-mar   # sta
 
 **Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary. `operator_daily_warmup.py` includes a **pipeline velocity** line (merge/approval counts); after bursts of merges, run `python3 scripts/operator_depth_hint.py -u grace-mar` to emit a harness hint when velocity crosses a new tier (see `docs/skill-work/work-dev/README.md`).
 
+**Ranked morning forks:** `python3 scripts/suggest_morning_forks.py -u grace-mar` (or `--markdown` / `-o docs/skill-work/work-strategy/morning-forks-$(date +%Y-%m-%d).md`). Ritual CLI: `python3 scripts/good-morning-brief.py` embeds the same top-3 block. Menu conventions: [docs/skill-work/work-menu-conventions.md](docs/skill-work/work-menu-conventions.md). Log a pick: `python3 scripts/log_operator_choice.py -u grace-mar --context GOOD_MORNING --picked 1`.
+
 ### OpenClaw
 ```bash
 python3 integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event

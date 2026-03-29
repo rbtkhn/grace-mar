@@ -189,6 +189,21 @@ def run_brief(*, repo_root: Path, user_id: str, skip_warmup_prompt: bool) -> Non
         out = save_daily_intention(profile, today, daily)
         print(f"{Colors.OKGREEN}Saved{Colors.ENDC} {out.relative_to(repo_root)}")
 
+    print(f"\n{Colors.BOLD}Ranked morning forks (deterministic){Colors.ENDC}")
+    try:
+        from suggest_morning_forks import build_fork_scores
+
+        ranked = build_fork_scores(user_id)
+        for i, (_sc, _fid, title, why) in enumerate(ranked[:3], 1):
+            print(f"  {i}. {title}")
+            print(f"     {Colors.OKBLUE}{why}{Colors.ENDC}")
+        print(
+            f"  {Colors.OKBLUE}Markdown / file:{Colors.ENDC} "
+            f"python3 scripts/suggest_morning_forks.py -u {user_id} --markdown"
+        )
+    except Exception as exc:
+        print(f"  {Colors.WARNING}(fork ranking skipped: {exc}){Colors.ENDC}")
+
     print(f"\n{Colors.BOLD}Suggested session shapes{Colors.ENDC}")
     options = [
         "Deep work — one skill domain",
