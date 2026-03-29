@@ -21,6 +21,7 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/self-template.md
   - docs/skill-work/educational-software-history-insights.md
   - docs/skill-work/lesson-rules-config.yaml
+  - docs/skill-work/repo-platform-index.md
   - docs/skill-work/sample-lesson-prompt-grace-mar.txt
   - docs/skill-work/work-alpha-school/README.md
   - docs/skill-work/work-alpha-school/academic-literature-elementary-pedagogy.md
@@ -143,6 +144,7 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-jiang/lecture-analysis-json-schema.md
   - docs/skill-work/work-jiang/work-jiang-sources.md
   - docs/skill-work/work-lesson-generation-walkthrough.md
+  - docs/skill-work/work-menu-conventions.md
   - docs/skill-work/work-modules-sources-principle.md
   - docs/skill-work/work-politics/LANE-CI.md
   - docs/skill-work/work-politics/README.md
@@ -208,6 +210,7 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-politics/outreach-funnel.md
   - docs/skill-work/work-politics/outreach-workspace.md
   - docs/skill-work/work-politics/past-performance-assistant-brain.md
+  - docs/skill-work/work-politics/pol-candidate-template.md
   - docs/skill-work/work-politics/polling-and-markets.md
   - docs/skill-work/work-politics/polyphonic-cognition-protocol-skill.md
   - docs/skill-work/work-politics/prep-before-call-abc.md
@@ -259,14 +262,17 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-politics/state-evolved-assistant-brain-heads-of-state.md
   - docs/skill-work/work-politics/target-registry.md
   - docs/skill-work/work-politics/uare-ai-competitive-notes.md
-  - docs/skill-work/work-politics/pol-candidate-template.md
   - docs/skill-work/work-politics/weekly-brief-2026-03-09.md
   - docs/skill-work/work-politics/weekly-brief-template.md
   - docs/skill-work/work-politics/work-politics-sources.md
   - docs/skill-work/work-politics/work-politics-strategic-memo.md
   - docs/skill-work/work-politics/workspace.md
   - docs/skill-work/work-strategy/LANE-CI.md
+  - docs/skill-work/work-strategy/LEARN_MODE_OPERATOR_PROMPT.md
+  - docs/skill-work/work-strategy/LEARN_MODE_RULES.md
   - docs/skill-work/work-strategy/README.md
+  - docs/skill-work/work-strategy/STRATEGY.md
+  - docs/skill-work/work-strategy/civilizational-strategy-surface.md
   - docs/skill-work/work-strategy/common-inputs.md
   - docs/skill-work/work-strategy/current-events-analysis.md
   - docs/skill-work/work-strategy/daily-brief-2026-03-19.md
@@ -280,13 +286,19 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-strategy/daily-brief-2026-03-28.md
   - docs/skill-work/work-strategy/daily-brief-focus.md
   - docs/skill-work/work-strategy/daily-brief-jiang-layer.md
+  - docs/skill-work/work-strategy/daily-brief-putin-watch.md
   - docs/skill-work/work-strategy/daily-brief-template.md
   - docs/skill-work/work-strategy/external-tech-scan.md
   - docs/skill-work/work-strategy/manifest-principles.md
+  - docs/skill-work/work-strategy/minds/README.md
+  - docs/skill-work/work-strategy/minds/mind-barnes.md
+  - docs/skill-work/work-strategy/minds/mind-mearsheimer.md
+  - docs/skill-work/work-strategy/minds/mind-mercouris.md
   - docs/skill-work/work-strategy/modules/economic-blowback/guardrail-test.md
   - docs/skill-work/work-strategy/modules/energy-chokepoint/manifest.md
   - docs/skill-work/work-strategy/modules/verifiable-personal-ai/deliberation-receipt-template.md
   - docs/skill-work/work-strategy/modules/verifiable-personal-ai/manifest.md
+  - docs/skill-work/work-strategy/multi-agent-fork-generator.md
   - docs/skill-work/work-strategy/persuasive-content-pipeline.md
   - docs/skill-work/work-strategy/synthesis-engine.md
   - docs/skill-work/work-xavier/ALIGNMENT.md
@@ -340,4 +352,4 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/skill-work-human-teacher/README.md
   - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md
 
-Summary: same=11 differ=6 only_template=0 only_instance=313
+Summary: same=11 differ=6 only_template=0 only_instance=325

@@ -9,6 +9,7 @@ Paths: companion-self template-manifest.json
   - docs/approval-inbox-spec.md
   - docs/change-review-validation.md
   - docs/change-review.md
+  - docs/concept.md
   - docs/contradiction-resolution.md
   - docs/identity-fork-protocol.md
   - docs/instance-patterns.md
@@ -25,6 +26,7 @@ Paths: companion-self template-manifest.json
   - users/_template/review-queue/README.md
   - users/_template/seed-phase/README.md
   - users/_template/seed-phase/seed_intake.json
+  - users/_template/self-memory.md
   - users/demo/seed-phase/seed_dossier.md
   - users/demo/seed-phase/seed_intake.json
   - users/demo/seed-phase/work_dev_seed.json
@@ -155,6 +157,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-jiang/lecture-analysis-json-schema.md
   - docs/skill-work/work-jiang/work-jiang-sources.md
   - docs/skill-work/work-lesson-generation-walkthrough.md
+  - docs/skill-work/work-menu-conventions.md
   - docs/skill-work/work-modules-sources-principle.md
   - docs/skill-work/work-politics/LANE-CI.md
   - docs/skill-work/work-politics/README.md
@@ -278,7 +281,11 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-politics/work-politics-strategic-memo.md
   - docs/skill-work/work-politics/workspace.md
   - docs/skill-work/work-strategy/LANE-CI.md
+  - docs/skill-work/work-strategy/LEARN_MODE_OPERATOR_PROMPT.md
+  - docs/skill-work/work-strategy/LEARN_MODE_RULES.md
   - docs/skill-work/work-strategy/README.md
+  - docs/skill-work/work-strategy/STRATEGY.md
+  - docs/skill-work/work-strategy/civilizational-strategy-surface.md
   - docs/skill-work/work-strategy/common-inputs.md
   - docs/skill-work/work-strategy/current-events-analysis.md
   - docs/skill-work/work-strategy/daily-brief-2026-03-19.md
@@ -296,10 +303,15 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-strategy/daily-brief-template.md
   - docs/skill-work/work-strategy/external-tech-scan.md
   - docs/skill-work/work-strategy/manifest-principles.md
+  - docs/skill-work/work-strategy/minds/README.md
+  - docs/skill-work/work-strategy/minds/mind-barnes.md
+  - docs/skill-work/work-strategy/minds/mind-mearsheimer.md
+  - docs/skill-work/work-strategy/minds/mind-mercouris.md
   - docs/skill-work/work-strategy/modules/economic-blowback/guardrail-test.md
   - docs/skill-work/work-strategy/modules/energy-chokepoint/manifest.md
   - docs/skill-work/work-strategy/modules/verifiable-personal-ai/deliberation-receipt-template.md
   - docs/skill-work/work-strategy/modules/verifiable-personal-ai/manifest.md
+  - docs/skill-work/work-strategy/multi-agent-fork-generator.md
   - docs/skill-work/work-strategy/persuasive-content-pipeline.md
   - docs/skill-work/work-strategy/synthesis-engine.md
   - docs/skill-work/work-xavier/ALIGNMENT.md
@@ -343,7 +355,6 @@ Paths: companion-self template-manifest.json
   - bridges/bridge-schema.json
   - docs/change-review-lifecycle.md
   - docs/change-types.md
-  - docs/concept.md
   - docs/contradiction-policy.md
   - docs/long-term-objective.md
   - docs/seed-phase-confidence-model.md
@@ -355,6 +366,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
   - docs/skill-work/self-work/sync-pack/SYNC-CONTRACT.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
-  ... and 73 more
+  - docs/skill-work/self-work/sync-pack/SYNC-LOG.template.md
+  ... and 71 more
 
-Summary: same=88 differ=23 only_template=0 only_instance=308
+Summary: same=86 differ=25 only_template=0 only_instance=318
