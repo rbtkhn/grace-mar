@@ -2,8 +2,10 @@
 """
 Refresh all derived artifacts checked by validate-integrity.py (derived export freshness).
 
-Run after Record/prompt edits when `validate-integrity.py` reports stale exports or runtime bundle.
-Same order as `process_approved_candidates.py` post-merge exports.
+`process_approved_candidates.py` runs this automatically before merge integrity preflight, so
+manual refresh is mainly for local edits, CI, or recovery when `validate-integrity.py` reports staleness.
+
+Same order as `process_approved_candidates.py` post-merge exports (post-merge also re-runs PRP + subset refresh).
 
   python3 scripts/refresh_derived_exports.py -u grace-mar
   python3 scripts/validate-integrity.py --user grace-mar

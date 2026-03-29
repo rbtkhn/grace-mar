@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Process approved pipeline candidates: merge into SELF, EVIDENCE, prompt; run export_prp; optionally push.
+Before merge apply, runs refresh_derived_exports.py so integrity preflight cannot fail on stale manifest/PRP.
 After --apply, stderr reminds to refresh OpenClaw / external USER.md if --export-openclaw was not used.
 
 Territory batch merge (work-politics vs companion):
@@ -955,6 +956,25 @@ def _refresh_derived_exports() -> None:
         )
 
 
+def _refresh_derived_exports_preflight() -> None:
+    """Align manifest/PRP/bundle with canonical sources before validate-integrity preflight."""
+    cmd = [
+        sys.executable,
+        str(REPO_ROOT / "scripts" / "refresh_derived_exports.py"),
+        "-u",
+        USER_ID,
+    ]
+    try:
+        subprocess.run(cmd, cwd=REPO_ROOT, check=True, capture_output=True, text=True)
+    except subprocess.CalledProcessError as e:
+        detail = (e.stderr or e.stdout or "").strip()
+        raise SystemExit(
+            "preflight derived-export refresh failed"
+            + (f": {detail}" if detail else "")
+            + f"\nRun manually: python3 scripts/refresh_derived_exports.py -u {USER_ID}"
+        ) from e
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--user", "-u", default=USER_ID, help="User id (default: GRACE_MAR_USER_ID or grace-mar)")
@@ -1070,6 +1090,9 @@ def main() -> None:
     if not ok:
         raise SystemExit(f"invalid receipt: {reason}")
     min_tier = max(int(receipt.get("min_evidence_tier", args.min_evidence_tier)), MIN_EVIDENCE_TIER)
+
+    print("Preflight: refreshing derived exports (PRP, manifest, fork-manifest, runtime bundle)...")
+    _refresh_derived_exports_preflight()
 
     preflight_ok, preflight_reason = _run_integrity_validation(min_tier)
     if not preflight_ok:

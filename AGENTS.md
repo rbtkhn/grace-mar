@@ -170,6 +170,8 @@ When pipeline candidates are approved, **merge** into all of these together. **M
 
 **Optional orchestration:** `scripts/atomic_integrate.py` runs the same merge (`--quick` / receipt-based semantics) with extra disk backups and a JSON receipt; it does not replace `process_approved_candidates.py`.
 
+**Derived exports before merge:** `process_approved_candidates.py` runs `scripts/refresh_derived_exports.py` for the target user immediately before integrity preflight, so a stale `manifest.json` / PRP / runtime bundle cannot block merges after prior Record or prompt edits (operators need not run refresh by hand first).
+
 | File | What to update |
 |------|---------------|
 | `users/[id]/self.md` | New entries merged into IX-A (Knowledge), IX-B (Curiosity), and/or IX-C (Personality) |
