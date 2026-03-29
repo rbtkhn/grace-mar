@@ -19,7 +19,16 @@ import re
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from _domain_surface_links import (
+    assert_domain_surface_links_rebased,
+    rebase_domain_surface_markdown,
+)
+
+REPO_ROOT = _SCRIPT_DIR.parent
 TEMPLATE_PATH = REPO_ROOT / "_template" / "DOMAIN.md"
 
 
@@ -65,6 +74,8 @@ def create_domain(domain_raw: str) -> bool:
     content = content.replace("{{DOMAIN}}", domain_upper)
     content = content.replace("{{DOMAIN_LOWER}}", domain_lower)
     content = content.replace("{{DOMAIN_TITLE}}", domain_title)
+    content = rebase_domain_surface_markdown(content, file_path, REPO_ROOT)
+    assert_domain_surface_links_rebased(content, file_path)
 
     file_path.write_text(content, encoding="utf-8")
     print(f"Created: {file_path.relative_to(REPO_ROOT)}")

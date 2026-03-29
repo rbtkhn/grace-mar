@@ -108,3 +108,6 @@ research/exploration/autogen-deliberation/output/*.md
 # Misc
 *.pem
 .vercel
+
+# Domain migration backups (migrate-to-domain-surface.py; local only)
+backups/
