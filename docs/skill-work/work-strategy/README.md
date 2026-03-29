@@ -19,6 +19,7 @@
 | **[daily-brief-jiang-layer.md](daily-brief-jiang-layer.md)** | **Slow layer** pointers (work-jiang) embedded in the daily brief as **§1c** — compressions, sweep snippets, lecture tracks; not breaking news. |
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → Triangulation → Synthesis (WORK only). |
+| **[civilizational-strategy-surface.md](civilizational-strategy-surface.md)** | WORK-only ledger: CORE / SCHOLAR-style heuristics / **WS–MEM** execution log for history & geopolitics; not CMC, not Record. |
 | **[manifest-principles.md](manifest-principles.md)** | Operator principles (truth > persuasion, triangulation, energy-chokepoint mandatory, etc.). |
 | **[persuasive-content-pipeline.md](persuasive-content-pipeline.md)** | Ingest → energy-chokepoint flags → Council → Triangulation → Draft; staged for approval. |
 | **[synthesis-engine.md](synthesis-engine.md)** | Spec for mind-synthesis after three lenses; prototype: `research/prototypes/mind-synthesis.py`. |
