@@ -77,7 +77,7 @@ When an instance (e.g. Grace-Mar) merges upgrades from companion-self, it should
 | `users/_template/self-skill-work.md` | WORK (self-skill-work) scaffold. |
 | `users/_template/self-evidence.md` | Evidence schema/structure scaffold. |
 | `users/_template/recursion-gate.md` | Recursive-gate staging scaffold (candidates at the gate). |
-| `users/_template/self-memory.md` | Ephemeral context scaffold (optional). |
+| `users/_template/self-memory.md` | Self-memory scaffold (short/medium/long; non-Record; optional). |
 | `users/_template/self-library.md` | SELF-LIBRARY scaffold: governance + **empty `entries:`**; add LIB rows via gate. Optional bulk example: `docs/self-library-example-corpus-grace-mar-derived.md`. |
 | `docs/self-library-example-corpus-grace-mar-derived.md` | Optional grace-mar-derived LIB list for operators who want a trimmable starting shelf (not default for new instances). |
 

@@ -50,7 +50,7 @@ Rough correspondence (instance today — not a one-to-one file rename):
 | `seed_identity.json` | `SEED-founding-intent.md` + SELF baseline (post-gate) | Template artifact is **pre**-Record; SELF merge is **post**-activation gate. |
 | `seed_curiosity.json` | IX-B seeds via pipeline | Same separation: formation vs merged Record. |
 | `seed_pedagogy.json` / `seed_expression.json` | Voice/prompt stance (post-merge) + operator reflection | Largely **post-activation** in grace-mar; template front-loads scaffolds. |
-| `seed_memory_contract.json` | [memory-template.md](memory-template.md) + policy in AGENTS / operator practice | Instance MEMORY is ephemeral; governed memory rules still align to template concepts. |
+| `seed_memory_contract.json` | [memory-template.md](memory-template.md) + policy in AGENTS / operator practice | Instance MEMORY is **non-Record** / rotatable (short–long horizons); rules align to template. |
 | `seed_trial_report.json` | Operator trials + bot conversation (informal) | Template encodes structured trials; instance may adopt JSON when syncing. |
 | `seed_readiness.json` / dossier | Operator judgment + RECURSION-GATE | Template encodes **explicit** readiness JSON; instance may adopt when syncing docs. |
 

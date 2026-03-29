@@ -1,6 +1,6 @@
-# self-memory — Ephemeral Session Context (Template)
+# self-memory — Template (continuity, not Record)
 
-**Template only. Not part of the Record.** Copy this structure when creating a new user directory in an instance repo. self-memory holds tone, recent topics, calibrations for continuity between sessions. Optional. Rotate weekly (or when large); optional: note **Last rotated:** date in the header. When self-memory conflicts with SELF, SELF wins.
+**Template only. Not part of the Record.** Live instances use **`users/<id>/memory.md`** (see [memory-template.md](../../docs/memory-template.md)): **short / medium / long** horizons. **Ephemeral** in governance means **non-gated and rotatable**, not “only session-length.” Optional. Prune per horizon; optional **Last rotated:** in header. When MEMORY conflicts with SELF, SELF wins.
 
 ---
 
@@ -28,4 +28,4 @@
 
 ---
 
-*Do not use this file as a live self-memory in the template. Copy to `users/<new_id>/self-memory.md` in an instance if the instance uses ephemeral session context.*
+*Do not use this file as a live MEMORY in the template. Copy structure to `users/<new_id>/memory.md` when the instance uses self-memory.*

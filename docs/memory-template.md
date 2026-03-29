@@ -1,6 +1,6 @@
 # MEMORY–TEMPLATE v2.0
 
-Ephemeral Session Context · Not Part of the Record
+Self-memory · Short / medium / long horizons · Not part of the Record
 
 Status: ACTIVE  
 Version: 2.0  
@@ -12,7 +12,9 @@ Last Update: March 2026
 
 ## I. PURPOSE
 
-The MEMORY module (**self-memory**, file `memory.md`) holds **ephemeral context** at **three horizons** — short, medium, and long — used to prime the Voice and improve continuity. Content is **mostly chronological**: within each horizon, entries read as a **time-ordered prose thread** (what happened lately, what is open now). That is a **slim** chronology — not **multicategory** structured evidence (no READ-/ACT- sections, no artifact spine). MEMORY is **not part of the Record**. It refines; it does not override SELF.
+The MEMORY module (**self-memory**, file `memory.md`) holds **continuity context** at **three horizons** — short, medium, and long — used to prime the Voice and improve continuity. Content is **mostly chronological**: within each horizon, entries read as a **time-ordered prose thread** (what happened lately, what is open now). That is a **slim** chronology — not **multicategory** structured evidence (no READ-/ACT- sections, no artifact spine). MEMORY is **not part of the Record**. It refines; it does not override SELF.
+
+**“Ephemeral” in governance docs** means **outside the gated Record** and **intended to be rotated or pruned** — **not** a synonym for “short-term only.” All three horizons (including **long**) are still MEMORY, not SELF; **long** is for **meta** (pointers, habits, where truth lives), not for smuggling durable identity or facts without the gate.
 
 **Horizon ≠ authority.** Long-term here means **how you run sessions** (pointers, habits, rotation policy), **not** a second copy of durable identity or facts. Those belong in **SELF**, **EVIDENCE** (`self-archive.md`), and the **gate**.
 

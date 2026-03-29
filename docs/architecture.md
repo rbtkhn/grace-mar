@@ -651,7 +651,7 @@ GitHub Repository (rbtkhn/grace-mar)
 │       ├── self-skills.md   # Capability index (legacy skills.md still resolved)
 │       ├── self-archive.md  # EVIDENCE — activity log + § VIII gated approved (canonical body)
 │       ├── self-evidence.md # Optional compatibility pointer (not the EVIDENCE body)
-│       ├── memory.md        # self-memory — ephemeral session context (optional; not part of Record)
+│       ├── memory.md        # self-memory — short/medium/long continuity (optional; not part of Record)
 │       ├── session-log.md   # Interaction history
 │       ├── journal.md       # Daily highlights (public-suitable, shareable)
 │       └── artifacts/       # Raw files (writing, artwork)
@@ -678,9 +678,9 @@ Every session that updates user data:
 2. Commit with descriptive message
 3. Push to GitHub
 
-### MEMORY (Ephemeral Session Context)
+### MEMORY (Self-memory)
 
-memory.md (**self-memory**) holds ephemeral session context — tone, recent topics, calibrations — to improve continuity between sessions. It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. MEMORY may be rotated or pruned (weekly recommended). Optional; the system runs normally if absent. See [MEMORY-TEMPLATE](memory-template.md).
+memory.md (**self-memory**) holds **short-, medium-, and long-horizon** continuity — session tone and thread, multi-day open loops, and long-horizon **meta/pointers** (not a second Record). **Ephemeral** here means **non-canonical and rotatable**, not “only intraday.” It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. Rotate or prune per horizon (see [MEMORY-TEMPLATE](memory-template.md)). Optional; the system runs normally if absent.
 
 ### JOURNAL (Shareable Daily Highlights)
 

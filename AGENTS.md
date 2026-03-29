@@ -113,14 +113,15 @@ When the emulated self encounters a topic outside its documented knowledge, it m
 
 Nothing enters the Record without being written and approved. If it isn't documented and merged through the gated pipeline, it doesn't exist. See CONCEPTUAL-FRAMEWORK invariant 25.
 
-### 11. MEMORY (Ephemeral Context)
+### 11. MEMORY (Self-memory — continuity, not Record)
 
-MEMORY (`users/[id]/memory.md`, **self-memory**) holds ephemeral context at **short / medium / long** horizons (session → weeks → meta/pointers only). It is **mostly chronological** (time-ordered prose within those horizons). **EVIDENCE** (`self-archive.md`) is **also chronological** (dated spine across logs) but **more expansive** — **multicategory** (READ / WRITE / CREATE / ACT / media / § VIII) and **multimodal** (structured entries, artifacts). MEMORY is **not part of the Record**; it is **narrower and mostly textual** than EVIDENCE.
+MEMORY (`users/[id]/memory.md`, **self-memory**) holds **continuity context** at **short / medium / long** horizons (session → weeks → long-term **meta/pointers and process only** — see `docs/memory-template.md`). It is **mostly chronological** (time-ordered prose within those horizons). **EVIDENCE** (`self-archive.md`) is **also chronological** (dated spine across logs) but **more expansive** — **multicategory** (READ / WRITE / CREATE / ACT / media / § VIII) and **multimodal** (structured entries, artifacts). MEMORY is **not part of the Record**; it is **narrower and mostly textual** than EVIDENCE.
 
+- **“Ephemeral” (governance):** Means **outside the gated Record** and **expected to rotate or prune** — **not** “only short-term.” Long-horizon MEMORY is still non-authoritative versus SELF; durable facts and identity belong in SELF + gate, not in MEMORY as substitute Record.
 - **Scope:** Tone, thread continuity, calibrations, open loops, and long-horizon **process/pointers** — not durable facts or identity (those stay in SELF + gate). See `docs/memory-template.md` v2.0.
 - **Hierarchy:** SELF is authoritative. When MEMORY conflicts with SELF, follow SELF. MEMORY refines; it does not override.
 - **Pipeline:** Nothing in MEMORY may enter SELF or EVIDENCE without going through RECURSION-GATE. The analyst stages to RECURSION-GATE only; it does NOT write to MEMORY.
-- **Lifespan:** Ephemeral. Rotate or prune per policy (weekly recommended). MEMORY is optional; the system runs normally if absent.
+- **Lifespan:** Rotate or prune per horizon (short often; medium weekly; long quarterly — see template). MEMORY is optional; the system runs normally if absent.
 
 See `docs/memory-template.md`.
 
@@ -246,7 +247,7 @@ grace-mar/
         ├── self-evidence.md         # optional compatibility pointer (canonical body is self-archive.md)
         ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
         ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)
-        ├── memory.md           # self-memory — ephemeral session context (optional; not part of Record)
+        ├── memory.md           # self-memory — short/medium/long continuity (optional; not part of Record; rotatable)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging
         ├── reflection-proposals/  # Operator reflection cycle outputs (REFLECT-*.md); not canonical Record

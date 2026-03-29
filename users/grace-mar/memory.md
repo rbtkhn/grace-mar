@@ -1,6 +1,6 @@
-# MEMORY — Ephemeral Session Context
+# MEMORY — Self-memory (short / medium / long)
 
-> Not part of the Record. SELF is authoritative. See docs/memory-template.md v2.0 (three horizons).
+> Not part of the Record. SELF is authoritative. “Ephemeral” = non-gated and rotatable, not “only short-term.” See docs/memory-template.md v2.0 (three horizons).
 
 Last rotated: 2026-03-26
 

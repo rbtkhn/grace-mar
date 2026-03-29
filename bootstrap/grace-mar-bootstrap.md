@@ -135,7 +135,7 @@ If working on companion profile operations (not work-dev), also read:
 - Sovereign Merge Rule: **agent may stage; agent may not merge without explicit companion approval**.
 - Knowledge boundary: no undocumented facts enter the Record.
 - Evidence linkage: profile claims must trace to evidence artifacts.
-- Record authority: `SELF/SKILLS/EVIDENCE` are canonical; MEMORY is ephemeral.
+- Record authority: `SELF/SKILLS/EVIDENCE` are canonical; MEMORY is **non-Record** and **rotatable** (short/medium/long horizons — “ephemeral” means not gated truth, not “only short-term”).
 - Preserve contradictions with provenance; do not flatten tension.
 
 ---

@@ -135,7 +135,7 @@ Instances should support: (1) **Reversibility** — rollback or undo of Record c
 | **Record** | `users/<id>/self.md`, `self-knowledge.md`, `self-curiosity.md`, `self-personality.md`, `self-skill-think.md`, `self-skill-write.md`, `self-skill-work.md`, self-evidence.md |
 | **Voice** | Bot or other interface (lives in the instance repo; not in this template) |
 | **Staging** | recursion-gate — candidates at the gate, before merge. To process the gate: [Identity Fork Protocol](identity-fork-protocol.md) § Process the gate. |
-| **Ephemeral context** | self-memory.md (optional; not part of the Record) |
+| **Continuity (non-Record)** | `memory.md` (**self-memory**): short/medium/long horizons; optional; rotatable; not gated Record (see [memory-template.md](memory-template.md)) |
 
 This template defines concept, protocol, and seed phase. Bot code and Record data live in instance repos only.
 

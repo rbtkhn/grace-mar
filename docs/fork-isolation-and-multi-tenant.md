@@ -65,7 +65,7 @@ Retention defines how long data is kept and when it is rotated or pruned. Per-fo
 
 | Data | Rule | Default (pilot) |
 |------|------|------------------|
-| **MEMORY** | Ephemeral; prune entries older than TTL | e.g. 14 days (see `rotate_context.py`) |
+| **MEMORY** | Non-Record; prune/rotate per policy (short/medium/long horizons — see [memory-template.md](memory-template.md)) | e.g. TTL scripts (see `rotate_context.py`); long horizon stays **meta/pointers** |
 | **SELF-ARCHIVE** | Rotate when size/count threshold | e.g. ~1 MB or 2,500 entries (see `rotate_telegram_archive.py`) |
 | **Session transcript** | Optional trim or rotate | Keep all (or cap size) |
 | **Pipeline events** | Optional trim oldest | Keep all (or cap lines) |

@@ -181,5 +181,5 @@ notes:
 ## After the survey
 
 - Log the session in **session-log.md** (e.g. "Session 0XX — Companion artistic style survey") with date, method, and summary of responses.
-- Optionally add a short summary to **memory.md** (e.g. "Companion art: prefers X, creates when Y") if it helps session continuity; MEMORY is ephemeral.
+- Optionally add a short summary to **memory.md** (e.g. "Companion art: prefers X, creates when Y") if it helps session continuity; MEMORY is **non-Record** and prunable (see [memory-template.md](../memory-template.md)) — not a substitute for gated SELF entries.
 - No pipeline staging unless you later define a companion Record and merge policy.

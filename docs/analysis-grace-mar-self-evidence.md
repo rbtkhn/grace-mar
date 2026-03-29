@@ -73,7 +73,7 @@ Raw evidence → pipeline → SELF/SKILLS. EVIDENCE is canonical; SELF and SKILL
 | File | Purpose | Redundancy |
 |------|---------|------------|
 | session-transcript.md | Raw conversation log, operator continuity | None — different lifecycle from self-archive |
-| memory.md | Ephemeral session context | None |
+| memory.md | Self-memory: short/medium/long continuity; non-Record, rotatable | None |
 | companion-context.md | Companion artistic style, personality | None — human context, not Record |
 
 ### Seed / Survey
