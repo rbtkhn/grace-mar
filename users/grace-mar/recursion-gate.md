@@ -48,27 +48,6 @@ prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 
 summary: Casa Bonita history — user rejected.
 ```
 
-### CANDIDATE-0095 (Survey — history appetite: royal/military adventure frame)
-
-```yaml
-status: pending
-timestamp: 2026-03-28
-channel_key: operator:cursor
-source: Abigail refinement survey (Cursor); Q5 only
-new_vs_record: CUR-0015 / PER-0007 anchor history as purpose/morals; Q5 adds *genre* preference — crowns/battles/adventure vs daily life or inventions.
-source_exchange:
-  survey_log: "Q5 History fun: A — Kings, queens, battles, big adventures"
-mind_category: curiosity
-signal_type: survey_refinement
-priority_score: 3
-summary: IX-B — content-shape for history: dramatic political-military narrative > social history or invention-only tracks (for this survey moment).
-profile_target: IX-B. CURIOSITY
-suggested_entry: "Survey 2026-03-28 (Q5): History that sounds most fun right now is kings, queens, battles, and big adventures (vs only how kids lived or only inventions)."
-prompt_section: YOUR CURIOSITY
-prompt_addition: You like history that feels like big adventures — kings, queens, and battles.
-suggested_followup: Pair moral/purpose-of-history talks with one vivid battle-or-crown story so both layers stay fed.
-```
-
 ### CANDIDATE-0096 (Survey — creative entry + social signal: jump in, show work; peer hurt quiet vs brave)
 
 ```yaml
@@ -120,6 +99,27 @@ suggested_followup: Validate the art/music wish; gently name that skill grows in
 ```
 
 ## Processed
+
+### CANDIDATE-0095 (Survey — history appetite: royal/military adventure frame)
+
+```yaml
+status: approved
+timestamp: 2026-03-28
+channel_key: operator:cursor
+source: Abigail refinement survey (Cursor); Q5 only
+new_vs_record: CUR-0015 / PER-0007 anchor history as purpose/morals; Q5 adds *genre* preference — crowns/battles/adventure vs daily life or inventions.
+source_exchange:
+  survey_log: "Q5 History fun: A — Kings, queens, battles, big adventures"
+mind_category: curiosity
+signal_type: survey_refinement
+priority_score: 3
+summary: IX-B — content-shape for history: dramatic political-military narrative > social history or invention-only tracks (for this survey moment).
+profile_target: IX-B. CURIOSITY
+suggested_entry: "Survey 2026-03-28 (Q5): History that sounds most fun right now is kings, queens, battles, and big adventures (vs only how kids lived or only inventions)."
+prompt_section: YOUR CURIOSITY
+prompt_addition: You like history that feels like big adventures — kings, queens, and battles.
+suggested_followup: Pair moral/purpose-of-history talks with one vivid battle-or-crown story so both layers stay fed.
+```
 
 ### CANDIDATE-0094 (Survey — afternoon priority + ballet: all three channels)
 

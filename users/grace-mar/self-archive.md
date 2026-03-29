@@ -1508,6 +1508,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0053
+    date: 2026-03-28
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: curiosity
+    source: pipeline merge
+    summary: "IX-B — content-shape for history: dramatic political-military narrative > social history or invention-only tracks (for this survey moment)."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.
@@ -2277,4 +2287,9 @@ update_source: Tchaikovsky Andante cantabile (ACT-0039)
 > CANDIDATE-0094 → ACT-0052
 > IX-B — (1) forced ranking: creative/performance beats space-only and nature-only for a long learning block. (2) No single “hook”: narrative, kinesthetic, and auditory layers all load-bearing for ballet/classical.
 > survey_log: | Q1 Afternoon learning: C — art, drawing, music, ballet Q3 Ballet/classical: all of the above — story, dancing, and music together
+
+**[2026-03-28 17:01:51]** `APPROVED` (Operator)
+> CANDIDATE-0095 → ACT-0053
+> IX-B — content-shape for history: dramatic political-military narrative > social history or invention-only tracks (for this survey moment).
+> survey_log: "Q5 History fun: A — Kings, queens, battles, big adventures"
 END OF FILE — EVIDENCE grace-mar v0.1

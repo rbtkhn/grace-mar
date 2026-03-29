@@ -1,8 +1,8 @@
 # Grace-Mar Record — Agent Manifest
 
 User: grace-mar
-Checksum: 505dbb0d0b3cab7caf30a09a7e80811f4ef8bd8b715857b2f528b3c6011128de
-Generated: 2026-03-28T16:59:53.272717
+Checksum: c91ac9affb481e0bb08ec61de7a041f80f8cfd89f9b1aadd03eb777050cbe28b
+Generated: 2026-03-28T17:01:50.705366
 Runtime mode: adjunct_runtime
 
 ## Readable

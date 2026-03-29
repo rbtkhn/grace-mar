@@ -933,6 +933,15 @@ entries:
     evidence_id: ACT-0052
     provenance: human_approved
 
+  - id: CUR-0019
+    date: 2026-03-28
+    topic: "Survey 2026-03-28 (Q5): History that sounds most fun right now is kings, queens, battles, and big adventures (vs only how kids lived or only inventions)."
+    trigger: pipeline merge
+    response_signal: approved
+    intensity: 3
+    evidence_id: ACT-0053
+    provenance: human_approved
+
 
 ```
 

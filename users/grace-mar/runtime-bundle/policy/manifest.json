@@ -2,8 +2,8 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-28T16:59:53.272717",
-  "checksum": "505dbb0d0b3cab7caf30a09a7e80811f4ef8bd8b715857b2f528b3c6011128de",
+  "generated_at": "2026-03-28T17:01:50.705366",
+  "checksum": "c91ac9affb481e0bb08ec61de7a041f80f8cfd89f9b1aadd03eb777050cbe28b",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
     "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
@@ -120,7 +120,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-28T16:59:53.268893",
+    "generated_at": "2026-03-28T17:01:50.703112",
     "source": "users/grace-mar/intent.md",
     "goals": {
       "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",
