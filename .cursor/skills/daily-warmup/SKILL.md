@@ -1,6 +1,6 @@
 ---
 name: daily-warmup
-description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E** (repeat **good morning** same day OK for reorientation; **E** closes only the current meeting). Morning **A** = template + boundary audit combined; **B** work-dev + [work-dev-sources.md](docs/skill-work/work-dev/work-dev-sources.md); **C** work-strategy / work-jiang / work-politics; **D** system pick; **E** end morning → normal workflow. After **A–D**, **re-offer full A–E** until **E**. **Good morning light** / **minimal** for lighter repeat passes. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E** (night **A–C** / **E** as before; night **D** = same *system pick — productive or hygiene* style as morning **D**, scoped to handoff/closeout). Good morning **E** is not good night; good night **E** is not the next day’s good morning.
+description: Grace-Mar operator rhythm: **Good morning** = Step 1 + Step 2 **A–E** (repeat **good morning** same day OK for reorientation; **E** closes only the current meeting). Morning **A** = template + boundary audit combined; **B** work-dev + [work-dev-sources.md](docs/skill-work/work-dev/work-dev-sources.md); **C** work-strategy / work-jiang / work-politics; **D** system pick (includes optional **companion IX-B / IX-C survey wave** — stage to gate only); **E** end morning → normal workflow. After **A–D**, **re-offer full A–E** until **E**. **Good morning survey** = same Step 1 cadence + brief flags **D** survey track (see § Companion survey). **Good morning light** / **minimal** for lighter repeat passes. **Good night** = Step 1 (`operator_handoff_check.py` + summary) + Step 2 **A–E** (night **A–C** / **E** as before; night **D** = same *system pick — productive or hygiene* style as morning **D**, scoped to handoff/closeout). Good morning **E** is not good night; good night **E** is not the next day’s good morning.
 ---
 
 # Daily Warmup
@@ -35,6 +35,13 @@ If the operator says **“good morning”** on a **Sunday**, default to **week-a
 - **Skip** daily brief generation, Polymarket, and Massie X unless explicitly requested.
 - Optional **one-line** gate pointer (e.g. pending count from warmup output if already pasted, or “see `users/grace-mar/recursion-gate.md`”).
 - Still output **full Step 2 A–E**. On later turns, **A–D** then **re-offer full A–E** until **E** (same as full/light good morning). **Track B:** **do not** run a broad web sweep; give **one** suggested work-dev next step from repo context + a **single** optional real-time check if the operator later chooses **B**.
+
+**“Good morning survey”** (or **“good morning + survey”** / clear equivalent):
+
+- Run **Step 1** using the same **[cadence by weekday](#cadence-by-weekday)** or **[explicit phrases](#explicit-phrases-override-default-cadence-when-stated)** as if they had said plain **good morning** (they may combine with **good morning light** or **minimal** — apply both: thin work-politics steps *and* survey intent).
+- In the **Step 1 warmup brief**, add a short **Companion survey** block (2–4 lines): purpose (IX-B / IX-C refinement), suggested cadence hint (e.g. **monthly micro** 3–5 questions vs **quarterly** deeper pass), pointer that execution is **menu D** this session unless they choose another letter first.
+- **Step 2** remains the **same fixed A–E** menu (do not add letters). When the operator chooses **D**, run **[Companion survey track](#companion-survey-track-good-morning)** as the **D** track for that turn (unless they explicitly steer D to something else in the same message, e.g. “D but gate review only”).
+- **Pipeline:** survey work **stages** `recursion-gate.md` candidates only — **no merge** without companion approval; same rule as the rest of this skill.
 
 ---
 
@@ -88,7 +95,7 @@ The **first** good morning reply ends **Step 2** with **exactly five options —
 | **A** | **Template + boundary audit** | **Unchanged — combined when A is chosen:** (1) **Template — grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`; default `./companion-self` if cloned beside repo) → refresh [`audit-report.md`](../../../docs/skill-work/work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../../../docs/skill-work/work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../../docs/audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../../docs/merging-from-companion-self.md), [work-companion-self/README.md](../../../docs/skill-work/work-companion-self/README.md). (2) **Boundary — leakage / isolation:** spot-check that **grace-mar** Record/identity is not copied into wrong trees; [audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md), [fork isolation](../../../docs/fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../../docs/skills-modularity.md). Optional: `python3 scripts/validate-integrity.py --user grace-mar` if Step 1 or thread flagged drift (report only unless operator asks to fix). (3) **Required closing — reconciliation code:** per [work-companion-self § Reconciliation code audit](../../../docs/skill-work/work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream): **Upstream** (grace-mar → companion-self) and **Downstream** (companion-self → grace-mar) bullets with **concrete paths** (scripts, validators, CI, hooks), or **`Reconciliation code: none`** with one-line rationale. |
 | **B** | **Work-dev — next step + sources refresh** | **Territory:** `docs/skill-work/work-dev/` (integration / OpenClaw / export–stage–merge rhythm — [INTEGRATION-PROGRAM.md](../../../docs/skill-work/work-dev/INTEGRATION-PROGRAM.md), [README.md](../../../docs/skill-work/work-dev/README.md)). **Always read** [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md) (authorized channel/podcast list). **Real-time search / fetch:** web-check listed sources (home pages, recent posts, “still active”) so the operator sees **current** signal, not only disk. Deliver: **(1)** short **delta** vs what the doc implies (stale URL, renamed show, one-line per notable change), **(2)** **one** concrete **suggested next step** (e.g. run export script, update a doc row, open a staging checklist — read-only unless operator switches to ship). **Edits** to `work-dev-sources.md` only when the operator approves implementation. |
 | **C** | **Work-strategy / work-jiang / work-politics — next step** | Pick **exactly one** lane by leverage from Step 1 + thread + `users/grace-mar/session-log.md` / `work-*.md`: **work-strategy** (`docs/skill-work/work-strategy/` — daily brief, Putin watch, calendar), **work-jiang** (`research/external/work-jiang/`, `users/grace-mar/work-jiang.md`, Predictive History), or **work-politics** (`docs/skill-work/work-politics/` — polling, brief registry, campaign, Massie X queue). **State which lane** in the first line, then **one** actionable next step (read-only unless operator ships). |
-| **D** | **System pick — productive or hygiene** | **Not** repeating A/B/C: the single best **alternative** next move from repo state — e.g. RECURSION-GATE review ([gate-review-pass](../gate-review-pass/SKILL.md)), `validate-integrity.py`, commit/push grouping, weekly-brief prep, derived-export refresh, worktree noise triage, or content-queue hygiene. One clear recommendation + optional second line “if you only have 5 minutes.” Read-only unless operator asks to implement. |
+| **D** | **System pick — productive or hygiene** | **Not** repeating A/B/C: the single best **alternative** next move from repo state — e.g. RECURSION-GATE review ([gate-review-pass](../gate-review-pass/SKILL.md)), `validate-integrity.py`, commit/push grouping, weekly-brief prep, derived-export refresh, worktree noise triage, content-queue hygiene, or **[companion IX-B / IX-C survey wave](#companion-survey-track-good-morning)** (questions + gate drafts, merge only after companion approve). If the operator opened with **good morning survey**, **default D** to the companion survey track unless a higher-urgency hygiene item (e.g. integrity failure) clearly wins. One clear recommendation + optional second line “if you only have 5 minutes.” Read-only unless operator asks to implement. |
 | **E** | **End good morning → normal workflow** | **Formally closes** the good morning session (see **Step 2** under [Good morning = start here](#good-morning--start-here-two-steps)). Transition to normal chat/work until the next **good morning**. Not handoff / not good night unless they say so separately. |
 
 **Example shape (B/C/D show inferred labels; adjust each turn):**
@@ -98,7 +105,7 @@ The **first** good morning reply ends **Step 2** with **exactly five options —
 - **A.** Template + boundary audit — `template_diff` / audit reports + leakage / fork isolation / skills-modularity (combined when chosen)
 - **B.** Work-dev — next step + **real-time** pass on [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md) *(name the suggested step after you choose B)*
 - **C.** **Work-jiang** — next step *(or work-strategy / work-politics — one lane only when chosen)*
-- **D.** **System pick** — e.g. gate review, integrity, or repo hygiene *(fill from state when chosen)*
+- **D.** **System pick** — e.g. gate review, integrity, repo hygiene, or **companion survey** (IX-B / IX-C → gate drafts) *(fill from state when chosen; [survey track](#companion-survey-track-good-morning) when “good morning survey” or operator picks survey under D)*
 - **E.** **End good morning** — close session; normal workflow until next “good morning”
 ```
 
@@ -109,6 +116,24 @@ When the operator chooses **A**, the reply must end the audit section with a **R
 - **Upstream (grace-mar → companion-self):** *(specific paths + one line each, or “none — …”)*
 - **Downstream (companion-self → grace-mar):** *(specific paths + adopt command if any, or “none — …”)*
 ```
+
+---
+
+## Companion survey track (good morning)
+
+**When:** Operator chose **D** and the system pick is survey, or they began with **[good morning survey](#explicit-phrases-override-default-cadence-when-stated)** and then chose **D** (or steered **D** to survey).
+
+**Goal:** Refresh **self-curiosity (IX-B)** and **self-personality (IX-C)** on a **cadence** (typical: **monthly micro** 3–5 questions, or **quarterly** longer refinement), without bypassing the gated pipeline.
+
+**Operator / agent actions (read-only unless operator switches to ship):**
+
+1. **Scope** — Pick one wave type: **micro** (few questions, one candidate per answer cluster) vs **theme** (one candidate synthesizing a short battery). Prefer **split candidates** (one mergeable gate block per theme) like the Abigail refinement pattern: `CANDIDATE-0092`–`0097`-style rows in `users/grace-mar/recursion-gate.md` (survey_log in `source_exchange`, `new_vs_record` filled, `channel_key` e.g. `operator:cursor` or `telegram:…`).
+2. **Grounding** — Each staged block must carry **literal companion answers** (or transcript pointer) under `source_exchange`; no inferred facts beyond the log (see `recursion-gate.md` merge checklist + AGENTS gated pipeline).
+3. **Draft** — Output **ready-to-paste YAML blocks** with `status: pending` for operator/companion review; or, if operator pastes a `survey_log`, map Q clusters → candidates with `suggested_entry` / `prompt_addition` aligned to IX-B vs IX-C.
+4. **Close the loop** — Optionally suggest **one** `suggested_followup` the Voice or parent can try in real life after merges (stored in candidate YAML); optional one-line note in `session-log.md` only if operator asks to record the run.
+5. **Merge** — Companion **approve** in gate → operator runs `python3 scripts/process_approved_candidates.py -u grace-mar --quick CANDIDATE-XXXX --approved-by companion` (or receipt flow). **Agent does not merge** without approval.
+
+**Cadence hint for Step 1:** If helpful, mention “last survey wave” from recent **Processed** blocks or session memory — optional; do not block the track if unknown.
 
 ---
 

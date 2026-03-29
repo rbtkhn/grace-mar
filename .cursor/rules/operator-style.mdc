@@ -60,3 +60,11 @@ The operator's mind jumps: forward and back, in and out, topic to topic. They li
 When the operator asks to "think about", "consider", "does that help", or explores conceptually — **answer in prose**. Do not edit files unless implementation is clearly requested.
 
 If unclear whether they want implementation or discussion, prefer **answer over edit**. Do not be over-eager with edits.
+
+---
+
+## RECURSION-GATE — approve handling
+
+- **Offering review:** When presenting a pending candidate for a companion/operator decision, always include **`CANDIDATE-XXXX`** and a **one-line summary** (from the gate block `summary:` field, or a single line distilled from the ### heading + YAML).
+- **Acting on “approve”:** Before editing `recursion-gate.md` or running `process_approved_candidates.py`, **echo** the candidate id(s) you will merge and the **same one-line summary** per id as an explicit confirmation. If the message does not name an id and **more than one** candidate could apply (or thread context is thin), **list the plausible ids + one-line summaries** and ask which to merge — do not guess.
+- **Sequencing:** Apply gate file edits **before** invoking the merge script in the same turn (no parallel edit + merge); wait for the file write to complete, then run the script.
