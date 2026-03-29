@@ -4,7 +4,7 @@
 
 **Scope (read first):** This file is **WORK-only** operator documentation under [work-strategy](README.md). It is **not** the companion **Record**, **not** Voice knowledge, and **not** a deployment of [civilization_memory](../../../research/repos/civilization_memory/) STATE/SCHOLAR/MEM machinery. Section names **borrow** that vocabulary for **local ledger shape** only. [work-civ-mem](../work-civ-mem/README.md) remains the stewardship surface for the external CMC repo; this surface is for **operator judgment** on history, geopolitics, and grand-strategy framing. Nothing here enters SELF or EVIDENCE except via **RECURSION-GATE** and companion approval.
 
-**Version:** 2026-03-29 (SCHOLAR ledger format refresh)  
+**Version:** 2026-03-29 (SCHOLAR ledger format refresh; LEARN MODE cross-links)  
 **Last gated update:** _TBD_ (use when a milestone was merged through the gate into Record or logged as approved operator strategy artifact)  
 **Status:** Active
 
@@ -177,5 +177,5 @@
 
 - **Morning brief:** Pull §I + recent WS–MEM for geopolitical context alongside [daily brief](README.md#daily-brief).  
 - **WORK menu generation:** Forks grounded in this doc + civ-mem reference; see [work-menu-conventions.md](../work-menu-conventions.md).  
-- **Learn mode:** After analysis, append lessons to §III.  
+- **Learn mode:** Follow [LEARN_MODE_RULES.md](LEARN_MODE_RULES.md) (Tri-Frame, extraction format); then append lessons/heuristics to §III SCHOLAR and **WS–MEM** as appropriate.  
 - **Strategy review:** Periodic operator session; gate only when promoting to Record or logging milestones.
