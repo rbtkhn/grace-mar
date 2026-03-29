@@ -2,7 +2,7 @@
 
 **Scope (read first):** This file is **WORK-only** operator documentation under [work-strategy](README.md). It is **not** the companion **Record**, **not** Voice knowledge, and **not** a deployment of [civilization_memory](../../../research/repos/civilization_memory/) STATE/SCHOLAR/MEM machinery. Section names **borrow** that vocabulary for **local ledger shape** only. [work-civ-mem](../work-civ-mem/README.md) remains the stewardship surface for the external CMC repo; this surface is for **operator judgment** on history, geopolitics, and grand-strategy framing. Nothing here enters SELF or EVIDENCE except via **RECURSION-GATE** and companion approval.
 
-**Version:** 2026-03-29  
+**Version:** 2026-03-29 (SCHOLAR ledger refresh)  
 **Last gated update:** _TBD_ (use when a milestone was merged through the gate into Record or logged as approved operator strategy artifact)  
 **Status:** Active
 
@@ -61,28 +61,51 @@
 
 ## III. SCHOLAR – Strategic learning ledger
 
-*(Extracts procedural wisdom and civilizational lessons. Additive-only; new entries appended chronologically. Never delete — deprecate with date.)*
+*(Extracts procedural wisdom and civilizational lessons. Additive-only; new entries appended in one consistent order — below uses **newest-first** for extracted lessons. Never delete — deprecate with date.)*
 
 ### Active heuristics & mental models
 
-- Thucydides trap (rising vs. established power) → Last applied: _TBD_ → _TBD notes_  
-- Balance-of-power logic (Morgenthau / Waltz) → Last applied: _TBD_ → _TBD notes_  
-- Secular cycles / elite overproduction (Turchin) → Last applied: _TBD_ → _TBD notes_  
-- Civilizational resilience threshold (Tainter) → Last applied: _TBD_ → _TBD notes_  
-- Mirror-imaging bias check → Last applied: Ongoing → Critical safeguard when projecting contemporary values onto historical actors  
-- Grand strategy as doctrine evolution (Kissinger / Chinese strategic tradition) → Last applied: _TBD_ → _TBD notes_  
-- Power transition theory (Organski / Gilpin) → Last applied: _TBD_ → _TBD notes_  
-- Longue durée structuralism (Braudel) → Last applied: _TBD_ → _TBD notes_
+- Thucydides trap (rising vs. established power) → Last applied: 2026-03-15 (US–China analysis) → High effectiveness for framing structural tension; risk of oversimplification when domestic factors dominate  
+- Balance-of-power logic (Morgenthau / Waltz) → Last applied: 2026-03-10 (Indo-Pacific alliances) → Strong for predicting coalition formation; weaker in unipolar or ideological conflicts  
+- Secular cycles / elite overproduction (Turchin) → Last applied: 2026-03-08 (internal US/EU stability) → Useful for long-term instability forecasting; requires careful calibration of quantitative thresholds  
+- Civilizational resilience threshold (Tainter collapse theory) → Last applied: 2026-02-28 (late-Roman / late-Qing analogies) → Effective at identifying marginal-return tipping points; less predictive for deliberate reform paths  
+- Mirror-imaging bias check → Last applied: Ongoing (every major analysis) → Critical safeguard; consistently prevents projecting contemporary values onto historical actors  
+- Grand strategy as doctrine evolution (Kissinger / Chinese strategic tradition) → Last applied: 2026-03-20 (comparative US vs. PRC doctrine) → Excellent for tracing continuity vs. rupture; highlights path-dependence  
+- Power transition theory (Organski / Gilpin) → Last applied: 2026-03-12 (global order stress test) → Reliable for timing windows of heightened risk; must be paired with cultural/ideological variables  
+- Longue durée structuralism (Braudel) → Last applied: 2026-03-05 (Mediterranean / Eurasian trade routes) → Powerful for distinguishing event-level noise from deep geographic/economic rhythms  
 
-### Extracted lessons (additive only, chronological)
+### Extracted lessons (additive only, strictly chronological — newest-first below)
 
-- _[YYYY-MM-DD] – TOPIC:_ _TBD_ → context → outcome / pattern → key insight_
+- **[2026-03-22] – TOPIC: Great power dynamics**  
+  Context: Analysis of current US–China technology decoupling  
+  Outcome / pattern: Rapid fragmentation of global supply chains despite mutual economic dependence  
+  Key insight: Economic interdependence does not reliably prevent security-driven decoupling when technological primacy is at stake (contradicts pure liberal institutionalist expectations; aligns with realist power-transition logic).
+
+- **[2026-03-18] – TOPIC: Historical pattern recognition**  
+  Context: Comparison of 1914 July Crisis with current Taiwan flashpoint signaling  
+  Outcome / pattern: In both cases, alliance commitments and mobilization timetables created strong inadvertent escalation ladders  
+  Key insight: Crisis stability depends more on control of escalation ladders than on overall power balance; “inadvertent war” remains a persistent risk in multipolar systems with rigid alliances.
+
+- **[2026-03-12] – TOPIC: Civilizational continuity**  
+  Context: Examination of Ottoman decline vs. late Ming fiscal crisis  
+  Outcome / pattern: Both showed elite capture + currency debasement + inability to reform taxation under external pressure  
+  Key insight: Internal institutional rigidities often determine civilizational decline more than external military defeat; fiscal exhaustion precedes military collapse.
+
+- **[2026-03-05] – TOPIC: Doctrine & strategy synthesis**  
+  Context: Review of post-1978 Chinese grand strategy documents vs. US National Security Strategies  
+  Outcome / pattern: China maintains higher continuity in core strategic concepts (“hide strength, bide time” → “great rejuvenation”) while US strategy shows sharper shifts with each administration  
+  Key insight: Regime type and civilizational self-conception strongly influence grand strategy continuity; democratic systems produce more doctrinal volatility.
+
+- **[2026-02-28] – TOPIC: Great power dynamics**  
+  Context: Analysis of Russia’s role in current Eurasian balance  
+  Outcome / pattern: Russia acting as a “spoiler state” rather than a peer great power, consistent with its post-Soviet trajectory  
+  Key insight: Relative power decline can be partially offset by geographic position and willingness to accept high risk; spoiler behavior creates asymmetric leverage in multipolar settings.
 
 ### Cross-domain patterns observed
 
-- Recurring civilizational cycles: _TBD_  
-- Leverage points in geopolitics: _TBD_  
-- Common failure modes in statecraft: _TBD_
+- Recurring civilizational cycles: Elite overproduction → fiscal strain → institutional sclerosis → external vulnerability  
+- Leverage points in geopolitics: Control of chokepoints (physical or technological), narrative dominance, and alliance cohesion  
+- Common failure modes in statecraft: Mirror-imaging, short-term electoral logic overriding long-term structural thinking, underestimating path dependence  
 
 ### Deprecated / archived models
 

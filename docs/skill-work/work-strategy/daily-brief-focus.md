@@ -2,7 +2,7 @@
 
 Edit this list when your **strategy lane** shifts (product, partnerships, policy, research). It is pasted into each generated daily brief.
 
-**Last refreshed:** 2026-03-21
+**Last refreshed:** 2026-03-29
 
 ---
 
