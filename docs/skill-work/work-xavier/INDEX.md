@@ -32,9 +32,11 @@
 | [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md) | Copy/paste prompt library |
 | [CHECKLISTS.md](CHECKLISTS.md) | Process checklists |
 | [GLOSSARY-FOR-BEGINNERS.md](GLOSSARY-FOR-BEGINNERS.md) | Plain-language definitions |
-| [content-plan-week1-2026-03-24.md](content-plan-week1-2026-03-24.md) | Week 1 execution plan |
+| [content-plan-week1-2026-03-24.md](content-plan-week1-2026-03-24.md) | Week 1 X plan (audit-corrected `.docx` import) |
+| [content-plan-week2-2026-03-31.md](content-plan-week2-2026-03-31.md) | Week 2 X plan (audit-corrected `.docx` import) |
 | [content-spec-3-month-10000-budget.md](content-spec-3-month-10000-budget.md) | 12-week + budget spec |
-| [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md) | Week 2 operational plan |
+| [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md) | Week 2 budget + KPI envelope (points at Week 2 content plan) |
 | [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md) | Week 2 tracking sheet |
+| [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Operator rubric to evaluate Xavier vs the content plans |
 | **Her instance (external repo)** | Seed survey, `users/xavier/`, gate — **not** paths inside grace-mar; create from [companion-self](https://github.com/rbtkhn/companion-self) |
 | **Business intake** [../work-business/xavier/README.md](../work-business/xavier/README.md) | WORK-only starter pack in grace-mar |

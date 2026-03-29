@@ -84,6 +84,8 @@ For Week 1 startup, choose the initial LO using Session 0 seed survey themes (es
 - [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md)
 - [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md)
 - [CHECKLISTS.md](CHECKLISTS.md)
+- [content-plan-week2-2026-03-31.md](content-plan-week2-2026-03-31.md)
 - [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md)
 - [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md)
+- [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md)
 

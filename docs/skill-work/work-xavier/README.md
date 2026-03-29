@@ -1,6 +1,6 @@
 # work-xavier — advisor / project module (grace-mar)
 
-**Purpose:** **WORK territory** in the grace-mar repo for operating the **Xavier advisory project** — contracts, mirrors, runbooks, content plans, and operator navigation. This is the layer **you** work in when coaching a human counterpart; it is **not** Xavier’s sovereign **Record** repository.
+**Purpose:** **WORK territory** in the grace-mar repo for coordinating work with **Xavier** as **employee / business partner** (SMM and related execution) — contracts, mirrors, runbooks, content plans, operator navigation, and **capability evaluation** against those plans ([xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md)). This is the layer **you** work in together; it is **not** Xavier’s sovereign **Record** repository.
 
 **Separate concern — `companion-xavier` (her repo):** Xavier’s **instance** (Identity Fork Protocol paths under `users/<id>/`, gate, seed survey, Voice), when she creates it from [companion-self](https://github.com/rbtkhn/companion-self), lives in **her own GitHub repository** (often named like **companion-xavier**). That code and Record **do not** need to be copied into grace-mar. This folder documents how grace-mar interfaces with that work **without** hosting her fork.
 

@@ -184,7 +184,11 @@ No escalation bypass is allowed for time pressure.
 ## 9) Week 1 linkage
 
 Week of March 24, 2026 details remain in:
-- [content-plan-week1-2026-03-24.md](content-plan-week1-2026-03-24.md)
+- [content-plan-week1-2026-03-24.md](content-plan-week1-2026-03-24.md) (audit-corrected operator import)
+
+Week of March 31, 2026 (Week 2) details:
+- [content-plan-week2-2026-03-31.md](content-plan-week2-2026-03-31.md) (audit-corrected operator import)
+- Budget/KPI envelope: [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md)
 
 This 3-month spec governs budget, cadence, and approval protocol across the full primary ramp.
 

@@ -35,7 +35,7 @@
 |---|---|
 | A | [README.md](README.md) -> [INDEX.md](INDEX.md) -> [DAY-1-NO-TERMINAL.md](DAY-1-NO-TERMINAL.md) |
 | B | [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md) -> [CHECKLISTS.md](CHECKLISTS.md) -> [GLOSSARY-FOR-BEGINNERS.md](GLOSSARY-FOR-BEGINNERS.md) |
-| C | [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md) -> [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md) |
+| C | [content-plan-week2-2026-03-31.md](content-plan-week2-2026-03-31.md) -> [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md) -> [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md) |
 | D | [LANES.md](LANES.md) -> [ALIGNMENT.md](ALIGNMENT.md) -> [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) |
 
 ---
