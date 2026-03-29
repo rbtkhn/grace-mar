@@ -80,6 +80,6 @@ They **stack**: you can be in **Think** cognitively and still send **`PLAN`** so
 
 ## See also
 
-- [Operator style](../.cursor/rules/operator-style.mdc) (always-on; links here)
+- [Operator style](../.cursor/rules/operator-style.mdc) (always-on; links here) — includes **WORK modules — multiple choice**: labeled next-step options on most turns when working in work-strategy / work-politics / work-jiang / work-dev unless the operator opts out or a fixed menu (e.g. daily-warmup) already applies. **Rationale** (in-rule): lower operator cognitive load (selection vs path enumeration) and use assistant **parallel cognition** to prefetch plausible branches.
 - [Operator cognition — North star](lanes/operator-cognition.md)
 - [Bootstrap — Working trees and authority](../bootstrap/grace-mar-bootstrap.md#working-trees-and-authority)

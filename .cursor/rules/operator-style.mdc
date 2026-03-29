@@ -55,6 +55,19 @@ The operator's mind jumps: forward and back, in and out, topic to topic. They li
 
 ---
 
+## WORK modules — multiple choice (assistant behavior)
+
+When the operator is clearly working in any **WORK** lane — **work-strategy**, **work-politics**, **work-jiang**, **work-dev** (`docs/skill-work/**`, `research/external/work-jiang/` operator scope, `users/*/work-*.md`, related scripts) — end **most substantive turns** with a short **multiple-choice block**: **3–5 labeled options** (e.g. **A–E**), each a **real fork** (depth vs breadth, which artifact, next command, cross-lane handoff), not filler.
+
+**Rationale:** Menus **reduce operator cognitive load** by shifting **path enumeration** (expensive) to the assistant; the operator mainly **selects** among prefetched branches (**A+C**-style combinations welcome). They also use the assistant’s **parallel cognition** — sketching **several plausible next futures** in one turn with different costs and commitments — so judgment can precede without the operator serializing the whole decision tree.
+
+- **Follow the pick:** If they answer with a letter (or **A+C**), next turn executes that branch and **re-offers** a fresh menu at the end unless they say **no menu** / **no options**.
+- **Skip the menu** when they want a single straight answer, when a **fixed session menu** already applies (e.g. daily-warmup **A–E**), or when they explicitly opt out.
+
+Full lane prefixes: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
+
+---
+
 ## Answer vs Edit
 
 When the operator asks to "think about", "consider", "does that help", or explores conceptually — **answer in prose**. Do not edit files unless implementation is clearly requested.
