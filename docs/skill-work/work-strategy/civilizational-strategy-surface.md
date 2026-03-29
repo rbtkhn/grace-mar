@@ -1,8 +1,10 @@
 # STRATEGY — Civilizational History & Geopolitics Strategy Surface
 
+**Shorthand:** This file is the operator **STRATEGY** ledger (civilizational history and geopolitics; WORK-only).
+
 **Scope (read first):** This file is **WORK-only** operator documentation under [work-strategy](README.md). It is **not** the companion **Record**, **not** Voice knowledge, and **not** a deployment of [civilization_memory](../../../research/repos/civilization_memory/) STATE/SCHOLAR/MEM machinery. Section names **borrow** that vocabulary for **local ledger shape** only. [work-civ-mem](../work-civ-mem/README.md) remains the stewardship surface for the external CMC repo; this surface is for **operator judgment** on history, geopolitics, and grand-strategy framing. Nothing here enters SELF or EVIDENCE except via **RECURSION-GATE** and companion approval.
 
-**Version:** 2026-03-29 (SCHOLAR ledger refresh)  
+**Version:** 2026-03-29 (SCHOLAR cross-domain patterns expanded)  
 **Last gated update:** _TBD_ (use when a milestone was merged through the gate into Record or logged as approved operator strategy artifact)  
 **Status:** Active
 
@@ -103,9 +105,23 @@
 
 ### Cross-domain patterns observed
 
-- Recurring civilizational cycles: Elite overproduction → fiscal strain → institutional sclerosis → external vulnerability  
-- Leverage points in geopolitics: Control of chokepoints (physical or technological), narrative dominance, and alliance cohesion  
-- Common failure modes in statecraft: Mirror-imaging, short-term electoral logic overriding long-term structural thinking, underestimating path dependence  
+*(Additive-only. These are synthesized observations that span multiple lanes and heuristics.)*
+
+- **Internal decay precedes external vulnerability:** Across Roman, Ottoman, Ming, and late Soviet cases, elite overproduction, fiscal rigidities, and institutional sclerosis consistently weakened the state internally long before decisive military defeats. External shocks often acted as accelerators rather than root causes.
+
+- **Alliance rigidity as escalation engine:** Rigid alliance structures (1914, NATO expansion debates, modern Indo-Pacific pacts) repeatedly create inadvertent escalation ladders even when no single actor desires major war. Control of escalation timing frequently matters more than raw power distribution.
+
+- **Technological or economic primacy drives decoupling:** When a rising power challenges the established leader in critical technologies or resource control (Britain–Germany naval race, US–Japan 1930s, current US–China chip/AI competition), economic interdependence tends to fracture faster than liberal theories predict.
+
+- **Path dependence in grand strategy:** Civilizations with strong doctrinal continuity (imperial China, post-1945 US until ~2016, modern PRC) show slower adaptation but higher long-term coherence. Systems with frequent leadership turnover (many democratic great powers) exhibit higher doctrinal volatility and shorter strategic memory.
+
+- **Geography as destiny modifier:** Maritime vs. continental powers display predictable differences in risk tolerance, alliance behavior, and time horizons. Island/sea powers (Britain, US, historical Venice) favor naval projection and offshore balancing; continental powers prioritize buffer zones and land dominance.
+
+- **Spoiler states exploit multipolarity:** Declining or mid-tier actors (historical Venice in Mediterranean, modern Russia in Eurasia) can exert disproportionate influence by acting as spoilers rather than direct competitors, especially when great powers are distracted by peer rivalry.
+
+- **Narrative control as force multiplier:** Successful rising powers invest heavily in reinterpreting historical legitimacy (PRC “century of humiliation” narrative, historical Mongol integration of conquered histories). Losing narrative dominance often accelerates relative decline even before material power shifts.
+
+- **Mirror-imaging as recurrent blind spot:** Projecting contemporary moral, economic, or strategic assumptions onto historical actors (or current adversaries) has repeatedly led to strategic surprise across eras — from appeasement policies in the 1930s to misreading revisionist intentions today.
 
 ### Deprecated / archived models
 
