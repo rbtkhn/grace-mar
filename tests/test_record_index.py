@@ -1,4 +1,4 @@
-"""Deterministic indexes for EVIDENCE (self-archive) and memory.md horizons."""
+"""Deterministic indexes for EVIDENCE (self-archive) and self-memory horizons."""
 
 from __future__ import annotations
 

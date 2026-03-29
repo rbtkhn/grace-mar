@@ -19,7 +19,7 @@ Grace-Mar exports can package four distinct lanes:
 | Lane | Meaning | Canonical? |
 |------|---------|------------|
 | **record** | identity, skills, evidence, library, PRP | Yes |
-| **runtime** | warmup, `memory.md`, session continuity aids | No |
+| **runtime** | warmup, `self-memory.md`, session continuity aids | No |
 | **audit** | event logs, merge receipts, checksum/freshness surfaces | Append-only operational history |
 | **policy** | intent rules and machine-readable alignment surfaces | Canonical policy, not identity |
 
@@ -97,7 +97,7 @@ Exports include a generation timestamp. The Record schema (SELF, SKILLS, EVIDENC
 | `users/[id]/self.md` | Identity, interests, personality, IX-A/B/C |
 | `users/[id]/skills.md` | THINK and WRITE Record skill status |
 | `users/[id]/self-evidence.md` | Activity log (full fork export only) |
-| `users/[id]/memory.md` | Runtime continuity only; not canonical identity |
+| `users/[id]/self-memory.md` | Runtime continuity only; not canonical identity |
 | `users/[id]/runtime-bundle/` | Portable package for downstream runtimes; includes record/runtime/audit/policy lanes |
 | `users/[id]/pipeline-events.jsonl` | Audit trail for staging, merge, validation, export |
 | `users/[id]/merge-receipts.jsonl` | Merge provenance and approval replay |

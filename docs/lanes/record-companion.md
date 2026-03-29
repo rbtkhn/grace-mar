@@ -20,7 +20,7 @@
 | Staging | `users/grace-mar/recursion-gate.md` |
 | Identity + IX | `users/grace-mar/self.md` |
 | Activity log | `users/grace-mar/self-evidence.md` |
-| Continuity / tone (non-Record) | `users/grace-mar/memory.md` — short/medium/long horizons; rotatable |
+| Continuity / tone (non-Record) | `users/grace-mar/self-memory.md` — short/medium/long horizons; rotatable |
 
 ## Weekly minimum
 

@@ -131,7 +131,7 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
             "runtime": {
                 "canonical": False,
                 "surfaces": [
-                    "memory.md",
+                    "self-memory.md",
                     "session-transcript.md",
                     "session-log tail",
                     "warmup digest",

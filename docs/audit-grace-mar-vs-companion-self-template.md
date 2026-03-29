@@ -31,7 +31,7 @@ From the bootstrap and merge doc, an **instance** (e.g. grace-mar) is expected t
 | self-archive.md | Present — canonical **EVIDENCE** (activity spine + § VIII gated approved log per [canonical-paths.md](canonical-paths.md)) | ✅ |
 | self-evidence.md | Optional compatibility pointer only; tooling prefers `self-archive.md` ([AGENTS.md](../AGENTS.md)) | ✅ (if present) |
 | recursion-gate.md | Present | ✅ |
-| memory.md | Optional; present | ✅ |
+| self-memory.md (template: `users/_template/self-memory.md`) | Optional; present | ✅ |
 | session-transcript.md / SESSION-LOG | Present | ✅ |
 | pipeline-events.jsonl | Present | ✅ |
 | self-library.md | Present | ✅ |

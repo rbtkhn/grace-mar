@@ -20,7 +20,7 @@ users/<fork_id>/
 ├── session-log.md
 ├── session-transcript.md
 ├── self-archive.md
-├── memory.md
+├── self-memory.md
 ├── pipeline-events.jsonl
 ├── artifacts/
 ├── fork-config.json   # optional: quotas, retention, overrides (see §7)

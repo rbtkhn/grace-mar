@@ -47,7 +47,7 @@ This codebase is **not** a school stack. The analogy is **adult, self-directed, 
 | Adaptive loop | **Analyst → gate → merge** and **Voice** grounded in profile — feedback is tied to **documented** state, not generic model knowledge. |
 | Evidence of what you did | **self-archive.md** (EVIDENCE), **ACT-** / **READ-** spine, artifacts — confidence from **artifacts**, parallel to Alpha’s tests but **governed by the companion** ([conceptual-framework.md](conceptual-framework.md) — evidence-grounding). |
 | Two-hour ceiling (screen academics) | **Optional benchmark** in YAML; design constraint for **Record-driven lessons** and operator pacing — not a mandate for every instance. |
-| “Time Back” | **Intention** files ([seed-phase-wizard.md](seed-phase-wizard.md), [good-morning-brief.py](../scripts/good-morning-brief.py)), **memory.md** horizons, and explicit **WORK** lanes so durable identity work is not drowned by busywork. |
+| “Time Back” | **Intention** files ([seed-phase-wizard.md](seed-phase-wizard.md), [good-morning-brief.py](../scripts/good-morning-brief.py)), **self-memory** horizons, and explicit **WORK** lanes so durable identity work is not drowned by busywork. |
 
 **Three recursive pillars (informal mapping)**
 

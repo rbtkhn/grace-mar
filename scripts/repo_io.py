@@ -130,6 +130,14 @@ def resolve_surface_markdown_path(
     return canon
 
 
+def resolve_self_memory_path(user_dir: Path) -> Path:
+    """
+    Canonical continuity file: self-memory.md. Legacy memory.md is still read if present
+    and self-memory.md is absent (same pattern as skills.md → self-skills.md).
+    """
+    return resolve_surface_markdown_path(user_dir, "self_memory", prefer_existing=True)
+
+
 def read_surface_markdown(user_dir: Path, canonical_key: str) -> str:
     """Read UTF-8 content for a surface; empty string if resolved path missing."""
     try:

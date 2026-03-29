@@ -125,7 +125,7 @@ python scripts/process_approved_candidates.py --apply --approved-by <name> --rec
 - Session logs (temporal, not identity)
 - RECURSION-GATE (staging, not canonical)
 
-Exception: the **runtime bundle** may include bounded continuity aids such as warmup output or `memory.md`, but only inside the explicit `runtime/` lane and only with non-canonical labeling.
+Exception: the **runtime bundle** may include bounded continuity aids such as warmup output or `self-memory.md`, but only inside the explicit `runtime/` lane and only with non-canonical labeling.
 
 ### Trajectory export (optional RL / research)
 

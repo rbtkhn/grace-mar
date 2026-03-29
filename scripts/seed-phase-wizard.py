@@ -3,7 +3,7 @@
 Seed Phase Wizard — grace-mar adapted
 
 Interactive operator bootstrap under users/<id>/ (reflection-proposals, seed/,
-memory.md touches). Does **not** write SELF or EVIDENCE: durable facts enter only
+self-memory.md touches). Does **not** write SELF or EVIDENCE: durable facts enter only
 through RECURSION-GATE and approval per docs/identity-fork-protocol.md.
 
 Usage:
@@ -27,7 +27,7 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
-from repo_io import CANONICAL_RECORD_FILES_REQUIRED, DEFAULT_USER_ID
+from repo_io import CANONICAL_RECORD_FILES_REQUIRED, DEFAULT_USER_ID, resolve_self_memory_path
 
 
 class Colors:
@@ -75,7 +75,7 @@ def canonical_record_ready(repo_root: Path, user_id: str) -> bool:
 
 
 def append_good_morning_tone_memory(profile: Path, tone: str, *, when: str, repo_root: Path) -> None:
-    mem = profile / "memory.md"
+    mem = resolve_self_memory_path(profile)
     block = (
         f"\n\n### Seed wizard (operator)\n"
         f"*Written by seed-phase-wizard at {when} — ephemeral; not Record. "
@@ -87,7 +87,7 @@ def append_good_morning_tone_memory(profile: Path, tone: str, *, when: str, repo
         mem.write_text(existing + block + "\n", encoding="utf-8")
     else:
         mem.write_text(
-            "# MEMORY — Ephemeral Session Context\n\n"
+            "# MEMORY — Self-memory (short / medium / long)\n\n"
             "> Not part of the Record. See docs/memory-template.md.\n\n"
             "## Short-term\n\n## Medium-term\n\n## Long-term\n"
             + block

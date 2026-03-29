@@ -1,5 +1,5 @@
 """
-Deterministic indexes for canonical EVIDENCE (self-archive.md) and self-memory (memory.md).
+Deterministic indexes for canonical EVIDENCE (self-archive.md) and self-memory (self-memory.md; legacy memory.md).
 
 - Evidence: Roman section spans (I–VIII) + entry id → character span for fast slice / lookup.
 - Memory: horizon line ranges (short / medium / long) + preamble; same semantics as bot/core.py.
@@ -114,7 +114,7 @@ def _memory_header_horizon_key(line: str) -> str | None:
 
 @dataclass
 class MemoryHorizonIndex:
-    """Line-based index into memory.md (0-based line indices, end exclusive)."""
+    """Line-based index into self-memory content (0-based line indices, end exclusive)."""
 
     lines: list[str]
     saw_horizon: bool

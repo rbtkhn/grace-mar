@@ -3,7 +3,8 @@ Record surface registry: internal machine keys, on-disk stems, display labels, l
 
 - Canonical EVIDENCE body: users/<id>/self-archive.md (not self-evidence.md; pointer optional).
 - SELF-KNOWLEDGE (IX-A/B/C) primarily lives in self.md — self_knowledge is a logical export bucket.
-- Display names (Library, Skills, Evidence) are for customer-facing copy; see README + docs/glossary.md.
+- Display names (Library, Skills, Evidence, Memory) are for customer-facing copy; see README + docs/glossary.md.
+- Self-memory on disk: **self-memory.md**; legacy **memory.md** remains readable via `legacy_file_stems`.
 """
 
 from __future__ import annotations
@@ -62,6 +63,13 @@ SURFACES: Dict[str, SurfaceDef] = {
         legacy_keys=("evidence",),
         # body is self-archive.md; self-evidence.md is optional pointer (handled in repo_io resolve)
         legacy_file_stems=(),
+    ),
+    "self_memory": SurfaceDef(
+        canonical_key="self_memory",
+        canonical_file_stem="self-memory",
+        display_name="Memory",
+        legacy_keys=("memory",),
+        legacy_file_stems=("memory",),
     ),
 }
 

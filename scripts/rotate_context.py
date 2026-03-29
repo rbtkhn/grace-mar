@@ -20,6 +20,11 @@ from rotate_telegram_archive import rotate_archive
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 
+_SCRIPTS = REPO_ROOT / "scripts"
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from repo_io import profile_dir, resolve_self_memory_path  # noqa: E402
+
 
 def _parse_dated_line(line: str) -> tuple[datetime | None, str]:
     m = re.match(r"^(\s*[-*]\s*)\[(\d{4}-\d{2}-\d{2})\](.*)$", line)
@@ -33,7 +38,7 @@ def _parse_dated_line(line: str) -> tuple[datetime | None, str]:
 
 
 def rotate_memory(user_id: str, ttl_days: int, apply: bool) -> dict:
-    memory_path = REPO_ROOT / "users" / user_id / "memory.md"
+    memory_path = resolve_self_memory_path(profile_dir(user_id))
     if not memory_path.exists():
         return {"ok": True, "memory_removed": 0, "reason": "memory_not_found"}
 

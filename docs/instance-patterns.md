@@ -20,7 +20,7 @@ The template stays code-light and protocol-first; Grace-Mar diverges in several 
 | **Staging format** | recursion-gate.json (JSON array) | pending-review.md (YAML/markdown blocks). |
 | **Analyst** | Out of scope for 6 weeks | LLM analyst runs on conversation and "we did X"; stages candidates automatically. |
 | **Voice** | Not implemented | Telegram + WeChat bots. |
-| **Continuity vs archive** | `memory.md` (self-memory: short/medium/long; non-Record, optional) | `self-archive.md` (EVIDENCE / gated log, rotation when large). |
+| **Continuity vs archive** | `self-memory.md` (short/medium/long; non-Record, optional) | `self-archive.md` (EVIDENCE / gated log, rotation when large). |
 | **Lesson delivery** | Optional: prompt generator + any LLM | **LLM-lesson method:** Record-derived prompts pasted into ChatGPT, Grok, or any LLM; 3–5 personalized lessons per day; transcript flows into skill-think for processing. No bot install; often easier for many users than a dedicated bot. Grace-Mar may offer both. See [Alpha School reference (skill-work-alpha-school)](skill-work/skill-work-alpha-school/alpha-school-reference.md) §4.1. |
 
 ---

@@ -3,7 +3,6 @@
 > Non-canonical runtime continuity aid derived from `session-log.md`.
 
 ```
-```
 **Rejected:** CANDIDATE-0083 (stories/imagination/adventure) — duplicate IX-C; already covered (stories favorite, imagination, storytelling). CANDIDATE-0084 (Mars facts) — duplicate IX-A; Mars/Olympus Mons/Phobos/Deimos already in Record. No SELF, EVIDENCE ACT, or prompt.py changes. `rejected` events appended to pipeline-events.jsonl.
 ---
 ### SESSION 030 — Gate: CANDIDATE-0086 approved (Earth as home)
@@ -23,4 +22,5 @@ END OF FILE — SESSION LOG grace-mar
 - 2026-03-28 16:59:54 | pipeline merge | CANDIDATE-0094 | approved by companion
 - 2026-03-28 17:01:51 | pipeline merge | CANDIDATE-0095 | approved by companion
 - 2026-03-28 17:02:50 | pipeline merge | CANDIDATE-0096 | approved by companion
+- 2026-03-28 17:03:51 | pipeline merge | CANDIDATE-0097 | approved by companion
 ```

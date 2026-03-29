@@ -75,7 +75,7 @@ A single **append-only event envelope** across pipeline steps would unify correl
   "input_ref": "msg_abc123",
   "record_refs": ["users/grace-mar/self.md#IX-A"],
   "library_refs": ["users/grace-mar/self-library.md#CIV-MEM"],
-  "runtime_refs": ["memory.md#tail"],
+  "runtime_refs": ["self-memory.md#tail"],
   "policy_refs": ["intent.md"],
   "routing": {
     "classifier": "cmc-routing",

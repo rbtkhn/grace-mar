@@ -55,7 +55,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 |----------------|------|-------------|
 | **self-library** | users/[id]/self-library.md | **SELF-LIBRARY** — reference-facing governed domains (not SELF-KNOWLEDGE); **CIV-MEM** = sub-library (scopes + corpus); gated pipeline |
 | **self-archive** | On-disk **`self-archive.md`** | **Canonical EVIDENCE file:** full activity log + **`self-archive.md` § VIII** (gated approved). **Chronological** across entries; **expansive, multicategory, multimodal** (typed sections, ids, media, artifacts). Optional `self-evidence.md` = compatibility pointer only. |
-| **self-memory** | users/[id]/memory.md | **Short / medium / long** horizons for continuity (see [memory-template.md](memory-template.md)); **governance-ephemeral** = outside gated Record, rotatable — **not** “short-term only”; **chronological** prose; **narrower** than self-archive (no multicategory evidence spine); optional; Voice loads short→long with caps |
+| **self-memory** | users/[id]/self-memory.md (legacy: `memory.md`) | **Short / medium / long** horizons for continuity (see [memory-template.md](memory-template.md)); **governance-ephemeral** = outside gated Record, rotatable — **not** “short-term only”; **chronological** prose; **narrower** than self-archive (no multicategory evidence spine); optional; Voice loads short→long with caps |
 
 Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
 
@@ -88,7 +88,7 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-skill-think** | self-skills.md § THINK Container | Intake, learning, comprehension capability |
 | **self-archive** | `self-archive.md` (full file) | **EVIDENCE** — chronological, **multicategory** activity spine + § VIII gated approved (voice + non-voice) |
 | **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
-| **self-memory** | memory.md | Short/medium/long continuity; **non-Record** and prunable (not “only session-length”); **chronological** prose; narrower than EVIDENCE / self-archive |
+| **self-memory** | self-memory.md | Short/medium/long continuity; **non-Record** and prunable (not “only session-length”); **chronological** prose; narrower than EVIDENCE / self-archive |
 | **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self |
 
 **Adjacent but separate:** work territories and instance work contexts may use full LLM/tool capability and may produce artifacts or staged candidates, but they are not part of the self-skill taxonomy and do not automatically enter the Record.

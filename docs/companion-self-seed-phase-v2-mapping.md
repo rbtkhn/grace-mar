@@ -11,7 +11,7 @@ Align mental models between the **template** ([companion-self](https://github.co
 | Surface | Repo | Role |
 |---------|------|------|
 | Seed Phase v2 JSON artifacts | companion-self `users/_template/seed-phase/`, `users/demo/seed-phase/` | Pre-activation **formation** package; schemas in `schema-registry/seed-*.v1.json`. |
-| `seed-phase-wizard.py` | grace-mar | Interactive **instance** bootstrap: `reflection-proposals/`, `users/<id>/seed/minimal-core.json`, `memory.md` tone — **does not** replace template seed JSON set. |
+| `seed-phase-wizard.py` | grace-mar | Interactive **instance** bootstrap: `reflection-proposals/`, `users/<id>/seed/minimal-core.json`, `self-memory.md` tone — **does not** replace template seed JSON set. |
 
 Neither replaces the other: the template defines **portable, validatable** artifacts; Grace-Mar defines **live operator workflow** under canonical instance paths.
 

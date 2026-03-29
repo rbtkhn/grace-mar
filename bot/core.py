@@ -75,7 +75,7 @@ from record_index import (  # noqa: E402
     memory_buckets_from_index,
     slice_evidence_section,
 )
-from repo_io import CANONICAL_EVIDENCE_BASENAME  # noqa: E402
+from repo_io import CANONICAL_EVIDENCE_BASENAME, resolve_self_memory_path  # noqa: E402
 
 try:
     from recursion_gate_review import get_review_candidate, parse_review_candidates
@@ -115,7 +115,6 @@ SESSION_TRANSCRIPT_PATH = PROFILE_DIR / "session-transcript.md"
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN", "").strip()
 GRACE_MAR_REPO = os.getenv("GRACE_MAR_REPO", "rbtkhn/grace-mar").strip()
 RECURSION_GATE_PATH = PROFILE_DIR / "recursion-gate.md"
-MEMORY_PATH = PROFILE_DIR / "memory.md"
 LIBRARY_PATH = PROFILE_DIR / "self-library.md"
 COMPUTE_LEDGER_PATH = PROFILE_DIR / "compute-ledger.jsonl"
 PIPELINE_EVENTS_PATH = PROFILE_DIR / "pipeline-events.jsonl"
@@ -369,7 +368,7 @@ def _load_library() -> list[dict]:
     return entries
 
 
-# memory.md — three horizons (docs/memory-template.md). Order and caps limit prompt size.
+# self-memory.md (legacy: memory.md) — three horizons (docs/memory-template.md). Order and caps limit prompt size.
 _MEMORY_HORIZON_ORDER = ("short", "medium", "long")
 _MEMORY_HORIZON_LABELS = {
     "short": "Short-term (session / day)",
@@ -378,7 +377,7 @@ _MEMORY_HORIZON_LABELS = {
 }
 _MEMORY_MAX_LINES = {"short": 45, "medium": 28, "long": 18}
 
-# Invalidated when memory.md mtime/size changes (see scripts/record_index.py).
+# Invalidated when self-memory path mtime/size changes (see scripts/record_index.py).
 _MEMORY_INDEX_CACHE: tuple[float, int, MemoryHorizonIndex] | None = None
 
 
@@ -407,13 +406,14 @@ def _truncate_memory_lines(lines: list[str], max_lines: int) -> list[str]:
 
 
 def _load_memory_appendix() -> str:
-    """Load memory.md if present. Returns appendix for system prompt, or empty string."""
+    """Load self-memory if present (self-memory.md; legacy memory.md). Returns appendix for system prompt, or empty string."""
     global _MEMORY_INDEX_CACHE
-    if not MEMORY_PATH.exists():
+    mem_path = resolve_self_memory_path(PROFILE_DIR)
+    if not mem_path.exists():
         _MEMORY_INDEX_CACHE = None
         return ""
-    st = MEMORY_PATH.stat()
-    content = MEMORY_PATH.read_text(encoding="utf-8").strip()
+    st = mem_path.stat()
+    content = mem_path.read_text(encoding="utf-8").strip()
     if not content:
         _MEMORY_INDEX_CACHE = None
         return ""

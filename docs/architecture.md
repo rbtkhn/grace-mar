@@ -46,11 +46,11 @@ Grace-Mar's harness is portable because it separates **canonical truth** from **
 | Lane | What it contains | Canonical? | Typical files |
 |------|------------------|------------|---------------|
 | **record** | Companion-owned identity, evidence, and **reference library** (distinct surfaces) | Yes | `self.md` (identity + SELF-KNOWLEDGE), `self-skills.md`, **`self-archive.md`** (EVIDENCE body), optional `self-evidence.md` pointer, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP exports |
-| **runtime** | Continuity aids for a live session | No | `memory.md`, `session-transcript.md`, warmup digests, session-log tails |
+| **runtime** | Continuity aids for a live session | No | `self-memory.md` (bundle/runtime lane may mirror as `self-memory.md`), `session-transcript.md`, warmup digests, session-log tails |
 | **audit** | Replay, provenance, operational traces | No, but append-only | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
 | **policy** | Intent and constitutional alignment surfaces | Yes for policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared constraints |
 
-The runtime lane is portable, but it is **not** Record truth. A downstream runtime may consume `memory.md` or a warmup block for continuity, yet only the Record lane defines who Grace-Mar is. This keeps runtime swaps possible without making any one harness the owner of memory.
+The runtime lane is portable, but it is **not** Record truth. A downstream runtime may consume `self-memory.md` (or legacy `memory.md`) or a warmup block for continuity, yet only the Record lane defines who Grace-Mar is. This keeps runtime swaps possible without making any one harness the owner of memory.
 
 ### Runtime modes
 
@@ -651,7 +651,7 @@ GitHub Repository (rbtkhn/grace-mar)
 │       ├── self-skills.md   # Capability index (legacy skills.md still resolved)
 │       ├── self-archive.md  # EVIDENCE — activity log + § VIII gated approved (canonical body)
 │       ├── self-evidence.md # Optional compatibility pointer (not the EVIDENCE body)
-│       ├── memory.md        # self-memory — short/medium/long continuity (optional; not part of Record)
+│       ├── self-memory.md   # self-memory — short/medium/long continuity (optional; not part of Record)
 │       ├── session-log.md   # Interaction history
 │       ├── journal.md       # Daily highlights (public-suitable, shareable)
 │       └── artifacts/       # Raw files (writing, artwork)
@@ -680,7 +680,7 @@ Every session that updates user data:
 
 ### MEMORY (Self-memory)
 
-memory.md (**self-memory**) holds **short-, medium-, and long-horizon** continuity — session tone and thread, multi-day open loops, and long-horizon **meta/pointers** (not a second Record). **Ephemeral** here means **non-canonical and rotatable**, not “only intraday.” It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. Rotate or prune per horizon (see [MEMORY-TEMPLATE](memory-template.md)). Optional; the system runs normally if absent.
+`self-memory.md` (**self-memory**; legacy `memory.md`) holds **short-, medium-, and long-horizon** continuity — session tone and thread, multi-day open loops, and long-horizon **meta/pointers** (not a second Record). **Ephemeral** here means **non-canonical and rotatable**, not “only intraday.” It is **not part of the Record**. SELF is authoritative; when MEMORY conflicts with SELF, follow SELF. Rotate or prune per horizon (see [MEMORY-TEMPLATE](memory-template.md)). Optional; the system runs normally if absent.
 
 ### JOURNAL (Shareable Daily Highlights)
 

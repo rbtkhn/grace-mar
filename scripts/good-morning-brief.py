@@ -28,6 +28,8 @@ _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
+from repo_io import resolve_self_memory_path  # noqa: E402
+
 from repo_io import CANONICAL_EVIDENCE_BASENAME, DEFAULT_USER_ID
 
 
@@ -147,7 +149,7 @@ def run_brief(*, repo_root: Path, user_id: str, skip_warmup_prompt: bool) -> Non
         instance_name = str(minimal_core.get("instanceName") or user_id)
 
     tone = "analytical-crisp"
-    mem_path = profile / "memory.md"
+    mem_path = resolve_self_memory_path(profile)
     if mem_path.is_file():
         try:
             mem_text = mem_path.read_text(encoding="utf-8", errors="replace")

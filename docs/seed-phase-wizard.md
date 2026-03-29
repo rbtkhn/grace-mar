@@ -27,7 +27,7 @@ Companion-self defines **stages 0–7** as the portable formation pipeline ([com
 
 | Script | Role |
 |--------|------|
-| [`scripts/seed-phase-wizard.py`](../scripts/seed-phase-wizard.py) | Interactive wizard: reflection-proposals, `seed/minimal-core.json`, `memory.md` tone note, `SEED-PHASE-COMPLETED.json` |
+| [`scripts/seed-phase-wizard.py`](../scripts/seed-phase-wizard.py) | Interactive wizard: reflection-proposals, `seed/minimal-core.json`, `self-memory.md` tone note, `SEED-PHASE-COMPLETED.json` |
 | [`scripts/good-morning-brief.py`](../scripts/good-morning-brief.py) | Short morning ritual; optional daily intention file under `reflection-proposals/` |
 
 Run from repository root:
@@ -56,7 +56,7 @@ python3 scripts/good-morning-brief.py --skip-warmup-prompt      # non-interactiv
 | `reflection-proposals/SEED-tensions-note.md` | No | Optional tensions annotation |
 | `reflection-proposals/DAILY-INTENTION-YYYY-MM-DD.md` | No | Written by good-morning-brief |
 | `seed/minimal-core.json` | No | **Facts listed here are not merged into IX-A** — stage LEARN / candidates |
-| `memory.md` (append) | No (MEMORY) | Seed wizard appends good-morning tone; see [memory-template.md](memory-template.md) |
+| `self-memory.md` (append) | No (MEMORY) | Seed wizard appends good-morning tone; see [memory-template.md](memory-template.md) |
 | `SEED-PHASE-COMPLETED.json` | No | Marker + suggested next steps |
 
 There is **no** top-level `Record/` directory; evidence spine is `self-archive.md`.

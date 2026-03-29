@@ -59,7 +59,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-skill-think**, **self-skill-write** (`self-skills.md` capability index; subfiles `skill-think.md` / `skill-write.md`)
 - **self-archive** (`self-archive.md`) — canonical **EVIDENCE**: full activity spine (READ / WRITE / CREATE / ACT / media) **plus** § VIII gated approved log; **chronological within and across entries**, and **expansive, multicategory, multimodal** (typed sections, ids, artifacts, merges through the gate)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
-- **self-memory** (memory.md) — **short / medium / long** horizons for continuity and meta pointers; **governance-ephemeral** (outside gate, prunable) **≠** “short-term only”; **mostly chronological** (time-ordered thread within horizons); **narrower and primarily textual** than self-archive; not Record (see [memory-template.md](memory-template.md))
+- **self-memory** (`self-memory.md`; legacy `memory.md`) — **short / medium / long** horizons for continuity and meta pointers; **governance-ephemeral** (outside gate, prunable) **≠** “short-term only”; **mostly chronological** (time-ordered thread within horizons); **narrower and primarily textual** than self-archive; not Record (see [memory-template.md](memory-template.md))
 - **self-voice** (Voice / bot — queryable interface that speaks the Record when queried)
 
 **Boundary:** SELF-KNOWLEDGE (IX-A, etc.) answers *who she is*. SELF-LIBRARY answers *what governed reference she carries*. Do not collapse library domains into identity. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).

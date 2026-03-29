@@ -19,6 +19,7 @@
 | Session / interaction history | `users/[id]/session-log.md` |
 | Capability index (THINK, WRITE, etc.) | **`users/[id]/self-skills.md`** — legacy `skills.md` is still read if present (see `scripts/repo_io.py` `resolve_surface_markdown_path`) |
 | Curated references, canon | `users/[id]/self-library.md` |
+| Self-memory (continuity — short/medium/long; not Record) | **`users/[id]/self-memory.md`** — standard label **self-memory**. Legacy instances may still have **`memory.md`**; readers resolve **self-memory first**, then **memory.md**, via `scripts/repo_io.py` `resolve_self_memory_path`. |
 | Intent (goals, tradeoffs — YAML in fenced block; see [intent-template.md](intent-template.md)) | `users/[id]/intent.md` |
 
 All paths are **lowercase** with hyphens where used (e.g. `self-archive.md`, `recursion-gate.md`).
@@ -33,7 +34,7 @@ All paths are **lowercase** with hyphens where used (e.g. `self-archive.md`, `re
 
 Scripts and the bot resolve paths under `users/[id]/` using these names. If the expected files are missing, tooling should fail loudly. See `scripts/assert_canonical_paths.py` and env `GRACE_MAR_SKIP_PATH_CHECK` for optional skip.
 
-**Legacy (do not create new):** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md`, `SKILLS.md` (uppercase), and **`skills.md`** (old capability index name) are **not** canonical for new work — use **`self-skills.md`**. The migration script renames `skills.md` → `self-skills.md` when the canonical file is absent.
+**Legacy (do not create new):** `SELF.md`, `EVIDENCE.md`, `ARCHIVE.md`, `PENDING-REVIEW.md`, `SKILLS.md` (uppercase), **`skills.md`** (old capability index name), and **`memory.md`** (old self-memory filename) are **not** canonical for new work — use **`self-skills.md`** and **`self-memory.md`**. The migration script renames `skills.md` → `self-skills.md` and **`memory.md` → `self-memory.md`** when the canonical file is absent.
 
 **Surface registry:** Internal keys and display labels (`self_skills` → Skills, `self_evidence` → Evidence, etc.) live in **`scripts/surface_aliases.py`**.
 

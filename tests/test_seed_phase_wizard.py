@@ -53,7 +53,7 @@ def test_append_good_morning_creates_memory(tmp_path):
     mod.append_good_morning_tone_memory(
         prof, "warm-direct", when="2026-01-01T00:00:00Z", repo_root=repo
     )
-    mem = (prof / "memory.md").read_text(encoding="utf-8")
+    mem = (prof / "self-memory.md").read_text(encoding="utf-8")
     assert "warm-direct" in mem
     assert "Seed wizard" in mem
 
@@ -63,11 +63,11 @@ def test_append_good_morning_appends_existing(tmp_path):
     repo = tmp_path / "repo"
     prof = mod.user_profile_dir(repo, "u1")
     prof.mkdir(parents=True)
-    (prof / "memory.md").write_text("# MEMORY\n\n## Long-term\n\n- x\n", encoding="utf-8")
+    (prof / "self-memory.md").write_text("# MEMORY\n\n## Long-term\n\n- x\n", encoding="utf-8")
     mod.append_good_morning_tone_memory(
         prof, "curious-playful", when="2026-02-01T00:00:00Z", repo_root=repo
     )
-    text = (prof / "memory.md").read_text(encoding="utf-8")
+    text = (prof / "self-memory.md").read_text(encoding="utf-8")
     assert "curious-playful" in text
     assert "- x" in text
 
