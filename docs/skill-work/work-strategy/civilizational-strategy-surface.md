@@ -4,7 +4,7 @@
 
 **Scope (read first):** This file is **WORK-only** operator documentation under [work-strategy](README.md). It is **not** the companion **Record**, **not** Voice knowledge, and **not** a deployment of [civilization_memory](../../../research/repos/civilization_memory/) STATE/SCHOLAR/MEM machinery. Section names **borrow** that vocabulary for **local ledger shape** only. [work-civ-mem](../work-civ-mem/README.md) remains the stewardship surface for the external CMC repo; this surface is for **operator judgment** on history, geopolitics, and grand-strategy framing. Nothing here enters SELF or EVIDENCE except via **RECURSION-GATE** and companion approval.
 
-**Version:** 2026-03-29 (SCHOLAR cross-domain patterns expanded)  
+**Version:** 2026-03-29 (SCHOLAR ledger format refresh)  
 **Last gated update:** _TBD_ (use when a milestone was merged through the gate into Record or logged as approved operator strategy artifact)  
 **Status:** Active
 
@@ -61,71 +61,62 @@
 - Active capabilities: _TBD_  
 - Known blind spots: _TBD_
 
-## III. SCHOLAR – Strategic learning ledger
+## III. SCHOLAR – Strategic Learning Ledger
 
-*(Extracts procedural wisdom and civilizational lessons. Additive-only; new entries appended in one consistent order — below uses **newest-first** for extracted lessons. Never delete — deprecate with date.)*
+(Extracts procedural wisdom and civilizational lessons. All entries additive-only.)
 
-### Active heuristics & mental models
+- **Active Heuristics & Mental Models**  
+  (Additive-only. New entries appended chronologically. Never delete — only deprecate with dated reason.  
+  Format: Model → Last applied (date + context) → Effectiveness note + explicit limitations + contradiction flags)
 
-- Thucydides trap (rising vs. established power) → Last applied: 2026-03-15 (US–China analysis) → High effectiveness for framing structural tension; risk of oversimplification when domestic factors dominate  
-- Balance-of-power logic (Morgenthau / Waltz) → Last applied: 2026-03-10 (Indo-Pacific alliances) → Strong for predicting coalition formation; weaker in unipolar or ideological conflicts  
-- Secular cycles / elite overproduction (Turchin) → Last applied: 2026-03-08 (internal US/EU stability) → Useful for long-term instability forecasting; requires careful calibration of quantitative thresholds  
-- Civilizational resilience threshold (Tainter collapse theory) → Last applied: 2026-02-28 (late-Roman / late-Qing analogies) → Effective at identifying marginal-return tipping points; less predictive for deliberate reform paths  
-- Mirror-imaging bias check → Last applied: Ongoing (every major analysis) → Critical safeguard; consistently prevents projecting contemporary values onto historical actors  
-- Grand strategy as doctrine evolution (Kissinger / Chinese strategic tradition) → Last applied: 2026-03-20 (comparative US vs. PRC doctrine) → Excellent for tracing continuity vs. rupture; highlights path-dependence  
-- Power transition theory (Organski / Gilpin) → Last applied: 2026-03-12 (global order stress test) → Reliable for timing windows of heightened risk; must be paired with cultural/ideological variables  
-- Longue durée structuralism (Braudel) → Last applied: 2026-03-05 (Mediterranean / Eurasian trade routes) → Powerful for distinguishing event-level noise from deep geographic/economic rhythms  
+  - Thucydides Trap (rising vs. established power) → Last applied: 2026-03-15 (US-China technology decoupling analysis) → Effectiveness: High for detecting structural rivalry onset and framing security dilemmas; Limitation: Frequently oversimplifies when domestic elite overproduction or fiscal rigidities dominate the causal chain (contradicts pure realist assumptions; must be paired with Turchin-style cycles)  
+  - Secular Cycles / Elite Overproduction (Turchin) → Last applied: 2026-03-08 (internal stability scan of US and EU polities) → Effectiveness: Strong for forecasting multi-generational instability windows (50–200 years); Limitation: Quantitative thresholds require careful calibration against specific civilizational fiscal and institutional data; weak predictor of deliberate reform success  
+  - Longue Durée Structuralism (Braudel) → Last applied: 2026-03-05 (Eurasian trade route and geographic continuity analysis) → Effectiveness: Excellent at distinguishing ephemeral event-level noise from deep geographic, climatic, and economic rhythms; Limitation: Systematically underweights deliberate doctrinal choices and individual agency (contradicts Kissinger-style grand strategy emphasis)  
+  - Spoiler-State Leverage → Last applied: 2026-02-28 (Russia’s role in current Eurasian balance) → Effectiveness: High in multipolar or distracted great-power environments; Limitation: Model breaks when the spoiler actor acquires near-peer material capabilities or ideological appeal; risk of underestimating spoiler-to-peer transitions  
+  - Doctrine Continuity vs. Volatility → Last applied: 2026-03-20 (comparative US post-1945 vs. PRC post-1978 grand strategy evolution) → Effectiveness: Powerful predictor of long-term strategic coherence and path dependence; Limitation: Must weight regime type against deeper civilizational self-conception; democratic systems show higher volatility but occasional bursts of adaptive creativity  
+  - Mirror-Imaging Bias Check → Last applied: Ongoing (applied to every major geopolitical assessment) → Effectiveness: Critical recurring safeguard against strategic surprise; Limitation: Difficult to fully eliminate due to unconscious cultural embedding; requires deliberate counter-check protocols  
 
-### Extracted lessons (additive only, strictly chronological — newest-first below)
+- **Extracted Lessons** (additive only, strictly chronological — append new entries consistently)
+  
+  - **[2026-03-22] – TOPIC: Great Power Dynamics**  
+    Context: Analysis of current US-China technology decoupling  
+    Outcome / Pattern: Rapid fragmentation of global supply chains despite high mutual economic dependence  
+    Key Insight: Economic interdependence does not reliably deter security-driven decoupling when technological primacy is at stake (contradicts pure liberal institutionalist expectations; aligns with realist power-transition logic)
 
-- **[2026-03-22] – TOPIC: Great power dynamics**  
-  Context: Analysis of current US–China technology decoupling  
-  Outcome / pattern: Rapid fragmentation of global supply chains despite mutual economic dependence  
-  Key insight: Economic interdependence does not reliably prevent security-driven decoupling when technological primacy is at stake (contradicts pure liberal institutionalist expectations; aligns with realist power-transition logic).
+  - **[2026-03-18] – TOPIC: Historical Pattern Recognition**  
+    Context: Comparison of 1914 July Crisis with current Taiwan flashpoint signaling  
+    Outcome / Pattern: Alliance commitments and mobilization timetables created strong inadvertent escalation ladders in both cases  
+    Key Insight: Crisis stability depends more on control of escalation ladders than on overall power balance; “inadvertent war” remains a persistent risk in multipolar systems with rigid alliances
 
-- **[2026-03-18] – TOPIC: Historical pattern recognition**  
-  Context: Comparison of 1914 July Crisis with current Taiwan flashpoint signaling  
-  Outcome / pattern: In both cases, alliance commitments and mobilization timetables created strong inadvertent escalation ladders  
-  Key insight: Crisis stability depends more on control of escalation ladders than on overall power balance; “inadvertent war” remains a persistent risk in multipolar systems with rigid alliances.
+  - **[2026-03-12] – TOPIC: Civilizational Continuity**  
+    Context: Examination of Ottoman decline vs. late Ming fiscal crisis  
+    Outcome / Pattern: Both showed elite capture + currency debasement + inability to reform taxation under external pressure  
+    Key Insight: Internal institutional rigidities often determine civilizational decline more than external military defeat; fiscal exhaustion precedes military collapse
 
-- **[2026-03-12] – TOPIC: Civilizational continuity**  
-  Context: Examination of Ottoman decline vs. late Ming fiscal crisis  
-  Outcome / pattern: Both showed elite capture + currency debasement + inability to reform taxation under external pressure  
-  Key insight: Internal institutional rigidities often determine civilizational decline more than external military defeat; fiscal exhaustion precedes military collapse.
+  - **[2026-03-05] – TOPIC: Doctrine & Strategy Synthesis**  
+    Context: Review of post-1978 Chinese grand strategy documents vs. US National Security Strategies  
+    Outcome / Pattern: China maintains higher continuity in core strategic concepts while US strategy shows sharper shifts with each administration  
+    Key Insight: Regime type and civilizational self-conception strongly influence grand strategy continuity; democratic systems produce more doctrinal volatility
 
-- **[2026-03-05] – TOPIC: Doctrine & strategy synthesis**  
-  Context: Review of post-1978 Chinese grand strategy documents vs. US National Security Strategies  
-  Outcome / pattern: China maintains higher continuity in core strategic concepts (“hide strength, bide time” → “great rejuvenation”) while US strategy shows sharper shifts with each administration  
-  Key insight: Regime type and civilizational self-conception strongly influence grand strategy continuity; democratic systems produce more doctrinal volatility.
+  - **[2026-02-28] – TOPIC: Great Power Dynamics**  
+    Context: Analysis of Russia’s role in current Eurasian balance  
+    Outcome / Pattern: Russia acting as a “spoiler state” rather than a peer great power, consistent with its post-Soviet trajectory  
+    Key Insight: Relative power decline can be partially offset by geographic position and willingness to accept high risk; spoiler behavior creates asymmetric leverage in multipolar settings
 
-- **[2026-02-28] – TOPIC: Great power dynamics**  
-  Context: Analysis of Russia’s role in current Eurasian balance  
-  Outcome / pattern: Russia acting as a “spoiler state” rather than a peer great power, consistent with its post-Soviet trajectory  
-  Key insight: Relative power decline can be partially offset by geographic position and willingness to accept high risk; spoiler behavior creates asymmetric leverage in multipolar settings.
+- **Cross-Domain Patterns Observed**  
+  (Additive-only. Synthesized observations spanning multiple lanes and heuristics.)
 
-### Cross-domain patterns observed
+  - **Internal Decay Precedes External Vulnerability**: Across Roman, Ottoman, Ming, and late Soviet cases, elite overproduction, fiscal rigidities, and institutional sclerosis consistently weakened the state internally long before decisive military defeats. External shocks often acted as accelerators rather than root causes.  
+  - **Alliance Rigidity as Escalation Engine**: Rigid alliance structures repeatedly create inadvertent escalation ladders even when no single actor desires major war. Control of escalation timing frequently matters more than raw power distribution.  
+  - **Technological or Economic Primacy Drives Decoupling**: When a rising power challenges the established leader in critical technologies or resource control, economic interdependence fractures faster than liberal theories predict.  
+  - **Path Dependence in Grand Strategy**: Civilizations with strong doctrinal continuity show slower adaptation but higher long-term coherence; systems with frequent leadership turnover exhibit higher doctrinal volatility.  
+  - **Geography as Destiny Modifier**: Maritime vs. continental powers display predictable differences in risk tolerance, alliance behavior, and time horizons.  
+  - **Spoiler States Exploit Multipolarity**: Declining or mid-tier actors can exert disproportionate influence by acting as spoilers, especially when great powers are distracted by peer rivalry.  
+  - **Narrative Control as Force Multiplier**: Successful rising powers invest heavily in reinterpreting historical legitimacy; losing narrative dominance often accelerates relative decline.  
+  - **Mirror-Imaging as Recurrent Blind Spot**: Projecting contemporary assumptions onto historical actors or current adversaries repeatedly leads to strategic surprise.
 
-*(Additive-only. These are synthesized observations that span multiple lanes and heuristics.)*
-
-- **Internal decay precedes external vulnerability:** Across Roman, Ottoman, Ming, and late Soviet cases, elite overproduction, fiscal rigidities, and institutional sclerosis consistently weakened the state internally long before decisive military defeats. External shocks often acted as accelerators rather than root causes.
-
-- **Alliance rigidity as escalation engine:** Rigid alliance structures (1914, NATO expansion debates, modern Indo-Pacific pacts) repeatedly create inadvertent escalation ladders even when no single actor desires major war. Control of escalation timing frequently matters more than raw power distribution.
-
-- **Technological or economic primacy drives decoupling:** When a rising power challenges the established leader in critical technologies or resource control (Britain–Germany naval race, US–Japan 1930s, current US–China chip/AI competition), economic interdependence tends to fracture faster than liberal theories predict.
-
-- **Path dependence in grand strategy:** Civilizations with strong doctrinal continuity (imperial China, post-1945 US until ~2016, modern PRC) show slower adaptation but higher long-term coherence. Systems with frequent leadership turnover (many democratic great powers) exhibit higher doctrinal volatility and shorter strategic memory.
-
-- **Geography as destiny modifier:** Maritime vs. continental powers display predictable differences in risk tolerance, alliance behavior, and time horizons. Island/sea powers (Britain, US, historical Venice) favor naval projection and offshore balancing; continental powers prioritize buffer zones and land dominance.
-
-- **Spoiler states exploit multipolarity:** Declining or mid-tier actors (historical Venice in Mediterranean, modern Russia in Eurasia) can exert disproportionate influence by acting as spoilers rather than direct competitors, especially when great powers are distracted by peer rivalry.
-
-- **Narrative control as force multiplier:** Successful rising powers invest heavily in reinterpreting historical legitimacy (PRC “century of humiliation” narrative, historical Mongol integration of conquered histories). Losing narrative dominance often accelerates relative decline even before material power shifts.
-
-- **Mirror-imaging as recurrent blind spot:** Projecting contemporary moral, economic, or strategic assumptions onto historical actors (or current adversaries) has repeatedly led to strategic surprise across eras — from appeasement policies in the 1930s to misreading revisionist intentions today.
-
-### Deprecated / archived models
-
-- _(none yet — add with reason and date when deprecating)_
+- **Deprecated / Archived Models** (with reason and date)  
+  _(Leave empty until needed — add entries here only when explicitly deprecating a model.)_
 
 ## IV. WS–MEM – Strategy execution & analysis memory (WORK-local)
 
