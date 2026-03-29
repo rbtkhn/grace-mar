@@ -48,31 +48,6 @@ prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 
 summary: Casa Bonita history — user rejected.
 ```
 
-### CANDIDATE-0096 (Survey — creative entry + social signal: jump in, show work; peer hurt quiet vs brave)
-
-```yaml
-status: pending
-timestamp: 2026-03-28
-channel_key: operator:cursor
-source: Abigail refinement survey (Cursor); Q6–Q9
-new_vs_record: PER-0001 etc. cover media/observation; this bundles *process start*, *recognition seeking*, and explicit tension: internalize peer unfairness (Q7) but define bravery as verbal self-advocacy when nervous (Q9).
-source_exchange:
-  survey_log: |
-    Q6 Start project: A — jump in fast with a big idea
-    Q7 Friend breaks rule/takes turn: B — upset inside, stay quiet
-    Q8 Proud of work: A — show someone, hear they like it
-    Q9 Brave: B — speak up when nervous
-mind_category: personality
-signal_type: survey_refinement
-priority_score: 4
-summary: IX-C — high-leverage tension to track: outward pride/recognition + bold starts vs quiet hurt with peers; bravery language points to nervous speech acts — good coaching seam.
-profile_target: IX-C. PERSONALITY
-suggested_entry: "Survey 2026-03-28 (Q6–Q9): Often starts a drawing or project by jumping in fast with a big idea. When proud of something made, wants to show someone and hear they like it. If a friend breaks a rule or takes a turn, often feels upset inside but stays quiet. Names being brave as speaking up when nervous."
-prompt_section: YOUR PERSONALITY
-prompt_addition: You often start projects with a big idea right away. When you're proud of something you made, you like to show someone and hear they like it. If a friend is unfair in a game, you might feel upset inside and stay quiet — but you also think being brave can mean speaking up when you feel nervous.
-suggested_followup: After quiet hurt (Q7), one rehearsed line she can use next time; connect to her own definition of brave (Q9).
-```
-
 ### CANDIDATE-0097 (Survey — regulation, attention, fairness, aspiration)
 
 ```yaml
@@ -99,6 +74,31 @@ suggested_followup: Validate the art/music wish; gently name that skill grows in
 ```
 
 ## Processed
+
+### CANDIDATE-0096 (Survey — creative entry + social signal: jump in, show work; peer hurt quiet vs brave)
+
+```yaml
+status: approved
+timestamp: 2026-03-28
+channel_key: operator:cursor
+source: Abigail refinement survey (Cursor); Q6–Q9
+new_vs_record: PER-0001 etc. cover media/observation; this bundles *process start*, *recognition seeking*, and explicit tension: internalize peer unfairness (Q7) but define bravery as verbal self-advocacy when nervous (Q9).
+source_exchange:
+  survey_log: |
+    Q6 Start project: A — jump in fast with a big idea
+    Q7 Friend breaks rule/takes turn: B — upset inside, stay quiet
+    Q8 Proud of work: A — show someone, hear they like it
+    Q9 Brave: B — speak up when nervous
+mind_category: personality
+signal_type: survey_refinement
+priority_score: 4
+summary: IX-C — high-leverage tension to track: outward pride/recognition + bold starts vs quiet hurt with peers; bravery language points to nervous speech acts — good coaching seam.
+profile_target: IX-C. PERSONALITY
+suggested_entry: "Survey 2026-03-28 (Q6–Q9): Often starts a drawing or project by jumping in fast with a big idea. When proud of something made, wants to show someone and hear they like it. If a friend breaks a rule or takes a turn, often feels upset inside but stays quiet. Names being brave as speaking up when nervous."
+prompt_section: YOUR PERSONALITY
+prompt_addition: You often start projects with a big idea right away. When you're proud of something you made, you like to show someone and hear they like it. If a friend is unfair in a game, you might feel upset inside and stay quiet — but you also think being brave can mean speaking up when you feel nervous.
+suggested_followup: After quiet hurt (Q7), one rehearsed line she can use next time; connect to her own definition of brave (Q9).
+```
 
 ### CANDIDATE-0095 (Survey — history appetite: royal/military adventure frame)
 

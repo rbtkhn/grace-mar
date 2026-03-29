@@ -1012,6 +1012,13 @@ entries:
     evidence_id: ACT-0046
     provenance: human_approved
 
+  - id: PER-0009
+    date: 2026-03-28
+    type: observed
+    observation: "Survey 2026-03-28 (Q6–Q9): Often starts a drawing or project by jumping in fast with a big idea. When proud of something made, wants to show someone and hear they like it. If a friend breaks a rule or"
+    evidence_id: ACT-0054
+    provenance: human_approved
+
 
 ```
 

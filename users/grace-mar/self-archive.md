@@ -1518,6 +1518,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0054
+    date: 2026-03-28
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: personality
+    source: pipeline merge
+    summary: "IX-C — high-leverage tension to track: outward pride/recognition + bold starts vs quiet hurt with peers; bravery language points to nervous speech acts — good coaching seam."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.
@@ -2292,4 +2302,9 @@ update_source: Tchaikovsky Andante cantabile (ACT-0039)
 > CANDIDATE-0095 → ACT-0053
 > IX-B — content-shape for history: dramatic political-military narrative > social history or invention-only tracks (for this survey moment).
 > survey_log: "Q5 History fun: A — Kings, queens, battles, big adventures"
+
+**[2026-03-28 17:02:50]** `APPROVED` (Operator)
+> CANDIDATE-0096 → ACT-0054
+> IX-C — high-leverage tension to track: outward pride/recognition + bold starts vs quiet hurt with peers; bravery language points to nervous speech acts — good coaching seam.
+> survey_log: | Q6 Start project: A — jump in fast with a big idea Q7 Friend breaks rule/takes turn: B — upset inside, stay quiet Q8 Proud of work: A — show someone, hear they like it Q9 Brave: B — speak up when nervous
 END OF FILE — EVIDENCE grace-mar v0.1
