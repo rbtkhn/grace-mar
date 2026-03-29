@@ -1528,6 +1528,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0055
+    date: 2026-03-28
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: personality
+    source: pipeline merge
+    summary: "IX-C — co-regulation menu (solo + connection); classroom/attention realism; moral focus on intentional harm; wish for frictionless excellence in art/music (coach: process vs outcome)."
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.
@@ -2307,4 +2317,9 @@ update_source: Tchaikovsky Andante cantabile (ACT-0039)
 > CANDIDATE-0096 → ACT-0054
 > IX-C — high-leverage tension to track: outward pride/recognition + bold starts vs quiet hurt with peers; bravery language points to nervous speech acts — good coaching seam.
 > survey_log: | Q6 Start project: A — jump in fast with a big idea Q7 Friend breaks rule/takes turn: B — upset inside, stay quiet Q8 Proud of work: A — show someone, hear they like it Q9 Brave: B — speak up when nervous
+
+**[2026-03-28 17:03:51]** `APPROVED` (Operator)
+> CANDIDATE-0097 → ACT-0055
+> IX-C — co-regulation menu (solo + connection); classroom/attention realism; moral focus on intentional harm; wish for frictionless excellence in art/music (coach: process vs outcome).
+> survey_log: | Q10 Tired/grumpy: A and B — quiet alone and closeness/trust Q11 Boring lesson: A — mind drifts to other thoughts Q12 Unfair: B — mean on purpose Q13 Superpower: B — make beautiful art or music easily
 END OF FILE — EVIDENCE grace-mar v0.1

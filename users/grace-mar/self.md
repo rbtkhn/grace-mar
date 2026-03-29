@@ -1019,6 +1019,13 @@ entries:
     evidence_id: ACT-0054
     provenance: human_approved
 
+  - id: PER-0010
+    date: 2026-03-28
+    type: observed
+    observation: "Survey 2026-03-28 (Q10–Q13): When tired or grumpy, both quiet time alone and closeness with someone trusted help. When a lesson or story feels boring, mind drifts to other thoughts. Feels mean-on-purp"
+    evidence_id: ACT-0055
+    provenance: human_approved
+
 
 ```
 
