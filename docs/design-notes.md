@@ -190,7 +190,7 @@ Alpha's homeschool pilot: same platform, 1x results vs. 2.6x at full Alpha. Moti
 ### 4.6 Integration Surface
 
 Grace-Mar exposes:
-- **Identity export** — `export_user_identity.py` → `users/<id>/openclaw-user.md` or SOUL.md (and Alpha/Incept-compatible format).
+- **Identity export** — `export_user_identity.py` → `users/<id>/openclaw-user.md` or OpenClaw `SOUL.md` / `user.md` (and Alpha/Incept-compatible format); conceptually the **self** export.
 - **Staging contract** — RECURSION-GATE format; agents may stage, never merge.
 - **Session continuity** — SESSION-LOG, RECURSION-GATE, EVIDENCE as startup checklist.
 - **Future: Agent manifest** — llms.txt-style discoverability: what's readable, writable, schema.

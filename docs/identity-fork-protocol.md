@@ -226,7 +226,7 @@ Enables discoverability without full access:
 
 ### 6.2 Export Formats
 
-- **user.md / SOUL.md** — Condensed identity for agent consumption (OpenClaw, etc.)
+- **user.md / SOUL.md** (OpenClaw filenames) — Condensed **self** / identity for agent consumption
 - **manifest.json** — Machine-readable schema, readable/writable surfaces, checksum
 - **intent_snapshot.json** — Machine-readable intent rules (goals, trade-offs, escalation, `applies_to`, `priority`, `conflict_strategy`)
 - **fork JSON** — Full export for backup, portability, or migration

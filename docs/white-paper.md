@@ -190,7 +190,7 @@ The emulated self (Voice) can only reference what is in the profile. When outsid
 
 ### Export = Agent-Consumable Identity
 
-The Record exports to user.md, SOUL.md, and future Alpha/Incept-compatible formats. Structured markdown, schema, manifest. Designed for consumption by software — tutors, platforms, agents.
+The Record exports to OpenClaw `user.md` / `SOUL.md` (identity filenames) and future Alpha/Incept-compatible formats — the companion **self** in agent-consumable form. Structured markdown, schema, manifest. Designed for consumption by software — tutors, platforms, agents.
 
 ---
 

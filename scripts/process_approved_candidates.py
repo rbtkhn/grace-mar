@@ -1316,7 +1316,7 @@ def main() -> None:
         else:
             print(
                 "grace-mar: merge complete — PRP updated in-repo. If you use OpenClaw or any external copy of "
-                "USER.md/SOUL, refresh or it is stale: "
+                "OpenClaw USER.md / identity export, refresh or it is stale: "
                 f"python3 integrations/openclaw_hook.py --user {USER_ID} --format md+manifest --emit-event",
                 file=sys.stderr,
             )

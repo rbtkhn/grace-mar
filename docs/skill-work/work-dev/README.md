@@ -12,7 +12,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 
 | Role | Description |
 |------|-------------|
-| **Record as identity source** | Export SELF → user.md or SOUL.md so OpenClaw knows who it serves. Constitution prefix from INTENT. |
+| **Record as identity source** | Export **SELF** (Record) → OpenClaw `user.md` or `SOUL.md` (their filenames) so the agent has the companion **self** / identity layer. Constitution prefix from INTENT. |
 | **Session continuity** | OpenClaw reads SESSION-LOG, RECURSION-GATE, EVIDENCE before starting work. |
 | **Artifacts as evidence** | OpenClaw outputs → "we did X" → pipeline. User invokes; operator stages; companion approves. |
 | **Staging automation** | OpenClaw skill/cron can stage to RECURSION-GATE. Stage only; never merge. |

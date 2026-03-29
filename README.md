@@ -146,7 +146,7 @@ grace-mar/
 │   ├── generate_profile.py        # Profile page generator
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes fork-manifest.json)
 │   ├── export_fork.py               # Export fork to portable JSON
-│   ├── export_user_identity.py      # Record → users/<id>/openclaw-user.md (or SOUL.md) for OpenClaw
+│   ├── export_user_identity.py      # Record (SELF) → openclaw-user.md / OpenClaw user.md for identity
 │   ├── export_prp.py                # Record → Portable Record Prompt (pasteable into any LLM)
 │   ├── export_manifest.py           # Agent manifest (manifest.json, llms.txt)
 │   ├── export_runtime_bundle.py     # Runtime-neutral bundle (record/runtime/audit/policy)

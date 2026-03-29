@@ -58,6 +58,16 @@
 - Example:  
   `python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md`
 
+### Do not confuse self.md with OpenClaw SOUL.md or user.md
+
+| File | Role |
+|------|------|
+| **`users/<id>/self.md`** | Canonical **Record / SELF** — gated merges only; source of truth. |
+| **`users/<id>/openclaw-user.md`** | **Derived** export in this repo (agent-readable slice). |
+| **`user.md` / `SOUL.md`** (OpenClaw tree) | Optional **downstream filenames** some OpenClaw layouts use for that same derived content — **not** a replacement for `self.md` and **not** the SELF module on disk. |
+
+Grace-Mar vocabulary: prefer **self** / **SELF** / **Record** for the companion identity system; use **`SOUL.md` only** when naming OpenClaw’s literal file path.
+
 ---
 
 ## Contributing doc

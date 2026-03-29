@@ -32,7 +32,7 @@ Research notes from Moonshots episode #237. Use for work-dev alignment, integrat
 
 **Alex Finn's advice:** "Tell OpenClaw everything about yourself, your career, your goals, your ambitions, things going on in your personal life. Then say: based on what you know about me and my missions and objectives, what are five high-lever tasks you can do right now?"
 
-**Implication:** OpenClaw expects and benefits from a rich identity substrate. Today users manually "drill in" mission statements and context. Grace-Mar's Record → user.md / SOUL.md export is exactly that substrate — but **structured, evidence-linked, companion-owned, and gated**. Differentiation: Grace-Mar provides the *canonical* identity layer; companion controls what enters it.
+**Implication:** OpenClaw expects and benefits from a rich identity substrate. Today users manually "drill in" mission statements and context. Grace-Mar's Record → OpenClaw `user.md` / `SOUL.md` (**self** / identity export) is exactly that substrate — but **structured, evidence-linked, companion-owned, and gated**. Differentiation: Grace-Mar provides the *canonical* identity layer; companion controls what enters it.
 
 **Apple vision (Alex):** Integrate OpenClaw into macOS — Apple knows you (Apple ID), builds widgets on the fly, "build me the apps I need when I need them." Grace-Mar's model inverts: identity comes from companion-owned Record, not vendor-held data.
 
@@ -40,7 +40,7 @@ Research notes from Moonshots episode #237. Use for work-dev alignment, integrat
 
 ## 3. Memory Architecture
 
-**OpenClaw memory:** "It's just a bunch of markdown files on your computer. That's it. Memory, soul, instructions, agent — it's just a bunch of markdown files."
+**OpenClaw memory (paraphrased for Grace-Mar vocabulary):** Described as markdown on disk — memory, **self** (identity), instructions, agent, bundled as files. *(Third-party wording sometimes used other terms; here **self** matches SELF / Record language in this repo.)*
 
 **Alignment:** Grace-Mar Record (SELF, EVIDENCE, SKILLS, etc.) is also markdown. Shared substrate. Export formats (user.md, manifest) fit OpenClaw's consumption model.
 

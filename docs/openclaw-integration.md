@@ -14,7 +14,7 @@ How to connect GRACE-MAR (cognitive fork / Record) with OpenClaw (personal agent
 
 | Use Case | What it does | Permission |
 |----------|--------------|------------|
-| **Record as identity source** | Export SELF → `users/<id>/openclaw-user.md` (this repo) or OpenClaw’s `user.md` / SOUL.md | Export script (read-only) |
+| **Record as identity source** | Export SELF → `users/<id>/openclaw-user.md` (this repo) or OpenClaw’s `user.md` / `SOUL.md` (their filenames; conceptually the companion **self** export) | Export script (read-only) |
 | **Session continuity** | OpenClaw reads SESSION-LOG, RECURSION-GATE, EVIDENCE | Read-only |
 | **Artifacts as evidence** | OpenClaw outputs → "we did X" → pipeline | User invokes pipeline |
 | **Staging automation** | OpenClaw skill/cron stages to RECURSION-GATE | Stage only, never merge |
@@ -35,7 +35,9 @@ Users fear **silent failure** — changes that felt real in chat but never becam
 
 ## 1. Record as Identity Source
 
-The grace-mar Record (self.md + selected SKILLS) can populate OpenClaw's `user.md` or `SOUL.md` so the agent knows who it serves. **In this repository** the committed export path is **`users/grace-mar/openclaw-user.md`** (same content shape; copy or symlink into OpenClaw as `user.md` if needed). See [naming-convention.md](naming-convention.md).
+**Naming:** **SELF** / **Record** = canonical content in **`self.md`** (gated). **`SOUL.md`** and **`user.md`** here mean **optional OpenClaw-side filenames** for a **derived** export — not a second canonical Record file. See [naming-convention.md — self.md vs OpenClaw filenames](naming-convention.md#do-not-confuse-selfmd-with-openclaw-soulmd-or-usermd).
+
+The grace-mar Record (self.md + selected SKILLS) can populate OpenClaw's `user.md` or `SOUL.md` (OpenClaw naming) so the agent knows who it serves — i.e. the companion **self** / identity slice. **In this repository** the committed export path is **`users/grace-mar/openclaw-user.md`** (same content shape; copy or symlink into OpenClaw as `user.md` if needed). See [naming-convention.md](naming-convention.md).
 
 OpenClaw practitioners often "tell OpenClaw everything" — mission, goals, context — by hand. Grace-Mar provides a **canonical, evidence-linked identity layer** instead: the Record is the single source of truth, gated by the companion, and grows only through approved merges. Export replaces ad hoc briefing with a structured profile.
 
@@ -52,7 +54,7 @@ Or use the integration hook (supports format + event emission):
 python integrations/openclaw_hook.py --user grace-mar --format md+manifest --emit-event
 ```
 
-Output: Markdown suitable for `user.md` or `SOUL.md`, containing:
+Output: Markdown suitable for OpenClaw `user.md` or `SOUL.md` (identity files), containing:
 - Identity (name, age, languages, location)
 - Preferences and interests
 - Linguistic style and vocabulary level

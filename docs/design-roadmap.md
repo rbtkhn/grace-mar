@@ -83,7 +83,7 @@
 **Rationale:** OpenClaw (personal AI assistant, runs on your machine, WhatsApp/Telegram/Discord/Signal/iMessage, persistent memory, skills/plugins, open source) can use the Grace-Mar Record as its identity layer. Session continuity spans both systems; OpenClaw artifacts can feed the grace-mar pipeline via "we did X."
 
 **Scope:**
-- **Record as identity** — Export SELF → user.md / SOUL.md via `scripts/export_user_identity.py`. OpenClaw knows who it serves.
+- **Record as identity** — From **`self.md`** (SELF / Record), run `scripts/export_user_identity.py` → committed path `users/<id>/openclaw-user.md`; copy/symlink into OpenClaw as **`user.md`** or **`SOUL.md`** only if that runtime expects those names. OpenClaw consumes a **derived** identity file — not a rename or merge of `self.md`.
 - **Session continuity** — Before starting, read SESSION-LOG, RECURSION-GATE, last EVIDENCE entries. Close the cybernetic loop.
 - **Artifacts as evidence** — OpenClaw outputs (writing, drawings, summaries) → user invokes "we did X" → pipeline stages → user approves.
 - **Staging automation** — OpenClaw skill/cron may stage candidates to RECURSION-GATE; **never** merge. User remains the gate.

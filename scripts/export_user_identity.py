@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """
-Export the grace-mar Record to USER.md or SOUL.md format for OpenClaw.
+Export the grace-mar Record (SELF) to OpenClaw identity markdown.
+
+Output is often named USER.md or SOUL.md in OpenClaw docs (external naming);
+conceptually this is the companion **self** / identity export.
 
 Reads users/[id]/self.md and produces a condensed, agent-friendly markdown
 file suitable for OpenClaw's identity layer. Use this so the agent knows
@@ -43,7 +46,7 @@ def _subsection(content: str, title: str) -> str | None:
 
 def export_user_identity(user_id: str = "grace-mar") -> str:
     """
-    Build USER.md / SOUL.md compatible markdown from the Record.
+    Build OpenClaw-compatible identity markdown from the Record (SELF).
 
     Returns a single string suitable for writing to a file.
     """
@@ -126,7 +129,7 @@ def export_user_identity_json(user_id: str = "grace-mar") -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Export grace-mar Record to USER.md / SOUL.md for OpenClaw"
+        description="Export grace-mar Record (SELF) to OpenClaw identity markdown (e.g. USER.md / SOUL.md)"
     )
     parser.add_argument("--user", "-u", default="grace-mar", help="User id (e.g. grace-mar)")
     parser.add_argument(
