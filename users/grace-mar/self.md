@@ -924,6 +924,15 @@ entries:
     evidence_id: ACT-0051
     provenance: human_approved
 
+  - id: CUR-0018
+    date: 2026-03-28
+    topic: "Survey 2026-03-28 (Q1,Q3): Given a whole afternoon, top pick is art, drawing, music, and ballet (over space-only or animals/nature-only). For ballet and classical music, cares about the story, the dan"
+    trigger: pipeline merge
+    response_signal: approved
+    intensity: 3
+    evidence_id: ACT-0052
+    provenance: human_approved
+
 
 ```
 

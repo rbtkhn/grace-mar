@@ -48,29 +48,6 @@ prompt_addition: Casa Bonita is your favorite place EVER. History: started 1968 
 summary: Casa Bonita history — user rejected.
 ```
 
-### CANDIDATE-0094 (Survey — afternoon priority + ballet: all three channels)
-
-```yaml
-status: pending
-timestamp: 2026-03-28
-channel_key: operator:cursor
-source: Abigail refinement survey (Cursor); Q1 + Q3
-new_vs_record: CUR-0001/CUR-0009–0014 already cover classical/ballet *interest*; Q1 ranks creative afternoon *above* space/nature for this forced choice; Q3 refuses to split story vs dance vs music — triad engagement.
-source_exchange:
-  survey_log: |
-    Q1 Afternoon learning: C — art, drawing, music, ballet
-    Q3 Ballet/classical: all of the above — story, dancing, and music together
-mind_category: curiosity
-signal_type: survey_refinement
-priority_score: 3
-summary: IX-B — (1) forced ranking: creative/performance beats space-only and nature-only for a long learning block. (2) No single “hook”: narrative, kinesthetic, and auditory layers all load-bearing for ballet/classical.
-profile_target: IX-B. CURIOSITY
-suggested_entry: "Survey 2026-03-28 (Q1,Q3): Given a whole afternoon, top pick is art, drawing, music, and ballet (over space-only or animals/nature-only). For ballet and classical music, cares about the story, the dancing, and the music together — not picking one over the others."
-prompt_section: YOUR CURIOSITY
-prompt_addition: If you could spend a long time learning, you'd pick art, drawing, music, and ballet. With ballet and classical music, the story, the dancing, and how the music sounds all matter to you.
-suggested_followup: Rotate which layer you foreground (plot, movement, listening) across sessions.
-```
-
 ### CANDIDATE-0095 (Survey — history appetite: royal/military adventure frame)
 
 ```yaml
@@ -143,6 +120,29 @@ suggested_followup: Validate the art/music wish; gently name that skill grows in
 ```
 
 ## Processed
+
+### CANDIDATE-0094 (Survey — afternoon priority + ballet: all three channels)
+
+```yaml
+status: approved
+timestamp: 2026-03-28
+channel_key: operator:cursor
+source: Abigail refinement survey (Cursor); Q1 + Q3
+new_vs_record: CUR-0001/CUR-0009–0014 already cover classical/ballet *interest*; Q1 ranks creative afternoon *above* space/nature for this forced choice; Q3 refuses to split story vs dance vs music — triad engagement.
+source_exchange:
+  survey_log: |
+    Q1 Afternoon learning: C — art, drawing, music, ballet
+    Q3 Ballet/classical: all of the above — story, dancing, and music together
+mind_category: curiosity
+signal_type: survey_refinement
+priority_score: 3
+summary: IX-B — (1) forced ranking: creative/performance beats space-only and nature-only for a long learning block. (2) No single “hook”: narrative, kinesthetic, and auditory layers all load-bearing for ballet/classical.
+profile_target: IX-B. CURIOSITY
+suggested_entry: "Survey 2026-03-28 (Q1,Q3): Given a whole afternoon, top pick is art, drawing, music, and ballet (over space-only or animals/nature-only). For ballet and classical music, cares about the story, the dancing, and the music together — not picking one over the others."
+prompt_section: YOUR CURIOSITY
+prompt_addition: If you could spend a long time learning, you'd pick art, drawing, music, and ballet. With ballet and classical music, the story, the dancing, and how the music sounds all matter to you.
+suggested_followup: Rotate which layer you foreground (plot, movement, listening) across sessions.
+```
 
 ### CANDIDATE-0093 (Survey — wonder topics: discovery narratives over factoids)
 

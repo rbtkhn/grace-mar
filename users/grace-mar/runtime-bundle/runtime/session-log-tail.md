@@ -3,7 +3,6 @@
 > Non-canonical runtime continuity aid derived from `session-log.md`.
 
 ```
-participants: operator (Cursor)
 method: harness_warmup follow-up — gate pass on pending test candidates
 activity_type: pipeline — reject duplicate lane
 evidence_tier: 5
@@ -23,4 +22,5 @@ evidence_tier: 5
 END OF FILE — SESSION LOG grace-mar
 ## Pipeline merge (automated)
 - 2026-03-28 16:53:51 | pipeline merge | CANDIDATE-0092 | approved by companion
+- 2026-03-28 16:55:08 | pipeline merge | CANDIDATE-0093 | approved by companion
 ```

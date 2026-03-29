@@ -1498,6 +1498,16 @@ activities:
     curated_by: user
     evidence_tier: 3
 
+  - id: ACT-0052
+    date: 2026-03-28
+    modality: text (pipeline merge)
+    activity_type: knowledge — curated observation
+    mind_category: curiosity
+    source: pipeline merge
+    summary: "IX-B — (1) forced ranking: creative/performance beats space-only and nature-only for a long learning block. (2) No single “hook”: narrative, kinesthetic, and auditory layers all load-bearing for balle"
+    curated_by: user
+    evidence_tier: 3
+
 ## VI. ATTESTATION LOG
 
 Third-party confirmations.
@@ -2262,4 +2272,9 @@ update_source: Tchaikovsky Andante cantabile (ACT-0039)
 > CANDIDATE-0093 → ACT-0051
 > IX-B — epistemic taste; “how we know” / discovery story > bullet facts for wonder domains.
 > survey_log: "Q4 Wonder topics (rocks, space, animals): B — Longer stories about how people figured it out"
+
+**[2026-03-28 16:59:54]** `APPROVED` (Operator)
+> CANDIDATE-0094 → ACT-0052
+> IX-B — (1) forced ranking: creative/performance beats space-only and nature-only for a long learning block. (2) No single “hook”: narrative, kinesthetic, and auditory layers all load-bearing for ballet/classical.
+> survey_log: | Q1 Afternoon learning: C — art, drawing, music, ballet Q3 Ballet/classical: all of the above — story, dancing, and music together
 END OF FILE — EVIDENCE grace-mar v0.1
