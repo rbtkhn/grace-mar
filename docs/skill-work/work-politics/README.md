@@ -152,6 +152,7 @@ This workflow can support revenue when someone pays for campaign content — e.g
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: dashboard schema, file map, and operating rhythm. |
 | **[brief-source-registry.md](brief-source-registry.md)** | Structured source intake and freshness tracker for weekly briefs. |
 | **[work-politics-sources.md](work-politics-sources.md)** | Authorized sources list for work-politics framing (not principal-profile or Record truth); [work-modules principle](../work-modules-sources-principle.md). |
+| **[work-politics-history.md](work-politics-history.md)** | Append-only **operator log** for this lane (briefs, ship notes, milestones); not Record — [work-modules-history-principle.md](../work-modules-history-principle.md). |
 | **[content-queue.md](content-queue.md)** | Structured X/content workflow queue for `@usa_first_ky`. |
 | **[outreach-workspace.md](outreach-workspace.md)** | Canonical outreach entrypoint: offer, proof, segment, funnel, and objection workflow. |
 | **[offers.md](offers.md)** | Current work-politics offers and default outcome-first framing. |

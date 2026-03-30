@@ -34,6 +34,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 ## Cross-references
 
 - **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md) (`*-sources.md` per `work-*` territory).
+- **Work modules — territory history logs:** [work-modules-history-principle.md](work-modules-history-principle.md) (`*-history.md` per `work-*` territory; append-only operator notes per lane).
 - [Concept](../concept.md), [Architecture](../architecture.md).
 - [MERGING-FROM-COMPANION-SELF](../merging-from-companion-self.md) — Template paths; re-sync this folder from companion-self when upgrading.
 - **[repo-platform-index.md](repo-platform-index.md)** — Map: work-dev (integration) vs work-companion-self (template sync); no merge.

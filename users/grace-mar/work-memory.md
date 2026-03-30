@@ -6,6 +6,7 @@
 
 - **`session-transcript.md`** — raw operator/bot lines and optional `### [WORK-choice]` blocks from [`log_operator_choice.py`](../../../scripts/log_operator_choice.py).
 - **`session-log.md`** — structured companion/operator interaction history and pipeline notes.
+- **Per-lane logs** — `docs/skill-work/work-*/work-*-history.md` (e.g. [work-dev-history.md](../../docs/skill-work/work-dev/work-dev-history.md)); append **territory-scoped** milestones there. Convention: [work-modules-history-principle.md](../../docs/skill-work/work-modules-history-principle.md).
 
 ---
 

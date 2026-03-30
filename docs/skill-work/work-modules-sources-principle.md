@@ -22,3 +22,5 @@
 Other `work-*` territories should add a `*-sources.md` when the operator wants explicit provenance for external discourse.
 
 **Renote:** `discourse-sources.md` in work-dev was renamed to **`work-dev-sources.md`** to match this convention; old links may use a stub redirect file.
+
+**See also:** [work-modules-history-principle.md](work-modules-history-principle.md) — append-only **`work-*-history.md`** logs per territory (distinct from this sources list).
