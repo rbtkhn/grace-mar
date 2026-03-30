@@ -17,9 +17,17 @@
 
 ---
 
-## Good morning routine (agent)
+## When to run (agent)
 
-Run **after** `operator_daily_warmup.py` / `harness_warmup.py` and **with** the [daily-warmup skill](../../../.cursor/skills/daily-warmup/SKILL.md) “good morning” flow.
+Run this block **only** when:
+
+- The operator chose **good morning menu E → work-politics** (intel path — not survey-only), **or**
+- The operator explicitly requested KY-4 / Polymarket / polls in the **same** message as good morning, **or**
+- They asked ad hoc for a markets/polls refresh outside good morning.
+
+**Do not** run as part of good morning **Step 1** (token discipline — [daily-warmup skill](../../../.cursor/skills/daily-warmup/SKILL.md) defers internet intel until **E / work-politics** or explicit request).
+
+After `operator_daily_warmup.py` / `harness_warmup.py` when helpful for context, but **fetch/search steps** belong in the **E / work-politics** turn (or explicit request), not the first paste.
 
 1. **Fetch** the two Polymarket URLs above (or equivalent fetch). Report **implied %** and **volume** from the **price row / order book**, not from Polymarket’s **AI “Market Context”** blurb (blurbs can be wrong on names, dates, and poll citations).
 2. **Search** the public web for **independent** KY-4 primary polling: e.g. named pollsters, university polls, or major outlets reporting **toplines + methodology**. If none in the last ~30 days, say so plainly.
