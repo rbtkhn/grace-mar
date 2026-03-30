@@ -83,6 +83,22 @@ Full lane prefixes: [docs/operator-agent-lanes.md](../../docs/operator-agent-lan
 
 ---
 
+## Skill discovery (optional close)
+
+**Goal:** Treat **new skills** as something the system *notices* — most skills are **discovered** from repeated success, then formalized.
+
+**When to offer (one line, not a second menu):** After this turn **completed** a substantive **EXECUTE**, **EXECUTE_LOCAL**, or **DOCSYNC** request (agent **committed**; **push** too if the lane required it), and the work was **more than a trivial one-file typo fix**, offer **one** optional closing line unless:
+
+- the operator said **no menu** / **no options**, or
+- a **fixed session menu** already applies (**good morning** / **good night** **A–F**), or
+- the turn was **PLAN**-only or **read-only**.
+
+**Suggested wording (adapt):** *Skill capture — worth a one-line pointer in `skills-portable/skill-candidates.md` or a draft under `skills-portable/_drafts/`? Say yes, not now, or ignore.*
+
+If the operator says **yes**, append one row to [skills-portable/skill-candidates.md](../../skills-portable/skill-candidates.md) (or draft in `_drafts/` if they want the fuller step). Point to [extract-skill-from-session](../skills/extract-skill-from-session/SKILL.md) when they want a session-shaped **SKILL.md**. Good night menu **E** may include the same ladder (backlog line, extract skill, `_drafts/` promote path). Full ladder: [skills-portable/README.md](../../skills-portable/README.md) (Discovery ladder).
+
+---
+
 ## Answer vs Edit
 
 When the operator asks to "think about", "consider", "does that help", or explores conceptually — **answer in prose**. Do not edit files unless implementation is clearly requested.

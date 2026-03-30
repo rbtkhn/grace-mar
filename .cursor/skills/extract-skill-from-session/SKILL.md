@@ -38,7 +38,8 @@ Use this skill when the operator has just completed (or is in the middle of) a t
    - No fluff; assume the agent is capable.
 
 5. **Create the skill file**
-   - Path: `.cursor/skills/<skill-name>/SKILL.md` (project) or suggest `~/.cursor/skills/<skill-name>/SKILL.md` (personal).
+   - **grace-mar portable ladder:** Prefer a **portable** core under `skills-portable/_drafts/<skill-name>/SKILL.md` (then promote to `skills-portable/<skill-name>/` + `manifest.yaml` + `sync_portable_skills.py` per [skills-portable/README.md](../../skills-portable/README.md)). Log a one-liner first in [skills-portable/skill-candidates.md](../../skills-portable/skill-candidates.md) when the operator only wants a pointer.
+   - **Direct Cursor skill:** `.cursor/skills/<skill-name>/SKILL.md` (project) or `~/.cursor/skills/<skill-name>/SKILL.md` (personal) when not using the portable pipeline.
    - YAML frontmatter with `name` and `description`, then markdown body.
    - Keep SKILL.md under 500 lines; put long reference in a separate file if needed.
 

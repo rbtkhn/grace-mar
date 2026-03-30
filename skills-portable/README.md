@@ -25,3 +25,17 @@ python3 scripts/sync_portable_skills.py --verify
 3. Keep `description` as **one line** (many hosts break multi-line YAML).
 
 **Spec:** [_schema.md](_schema.md) · **Manifest:** [manifest.yaml](manifest.yaml)
+
+---
+
+## Discovery ladder (capture → ship)
+
+Goal: **skills are discovered** from repeated success; the repo makes capture **low cost**.
+
+| Step | Where | Action |
+|------|--------|--------|
+| **1 — Pointer** | [skill-candidates.md](skill-candidates.md) | One table row: date, working name, trigger phrase, pointer (commit / “this thread”). |
+| **2 — Draft** | [_drafts/](_drafts/) | Full near-final portable `SKILL.md`; no manifest yet. |
+| **3 — Listed** | `skills-portable/<skill>/` + `manifest.yaml` | Portable core + appendix path; run `sync_portable_skills.py`. |
+
+**Triggers (assistant):** After a substantive **EXECUTE** / **EXECUTE_LOCAL** / **DOCSYNC** ship (commit, push when requested), offer **one optional** skill-capture line unless a **fixed session menu** (e.g. good morning / good night **A–F**) applies or the operator said **no menu**. Good night menu **E** may include skill backlog + [extract-skill-from-session](../../.cursor/skills/extract-skill-from-session/SKILL.md). See [.cursor/rules/operator-style.mdc](../../.cursor/rules/operator-style.mdc) and [docs/operator-agent-lanes.md](../docs/operator-agent-lanes.md).

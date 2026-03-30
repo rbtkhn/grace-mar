@@ -31,6 +31,7 @@ Summarize:
 - runtime-only noise that should stay uncommitted
 - work-politics continuity if relevant
 - the best next re-entry prompt
+- **Skill discovery (one line, optional):** If the thread had a repeatable multi-step workflow, mention [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md) and good night menu **E** (system pick) for backlog / [extract-skill-from-session](../extract-skill-from-session/SKILL.md) — do not block the handoff on it.
 
 ## Guardrails
 

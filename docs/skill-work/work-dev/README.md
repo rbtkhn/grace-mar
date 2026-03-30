@@ -45,6 +45,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **[operator-heartbeat-external-model-prompt.md](operator-heartbeat-external-model-prompt.md)** | Portable **non-repo** operator prompt (accurate gate/staging vs merge); use when no `AGENTS.md` / harness. |
 | **[cursor-vscode-grace-mar-tasks.json](cursor-vscode-grace-mar-tasks.json)** | Snippet to merge into local `.vscode/tasks.json` — re-entry stack + `--receipt` tasks. |
 | **[skills-portable/](../../../skills-portable/README.md)** | **Portable Cursor skills** (pilot + manifest); sync into `.cursor/skills/` via `python3 scripts/sync_portable_skills.py` (`--verify`, `--dry-run`). |
+| **[skill-candidates.md](../../../skills-portable/skill-candidates.md)** | **Skill discovery** backlog (one-line pointers); ladder continues in `_drafts/` then manifest ([README § Discovery ladder](../../../skills-portable/README.md)). |
 | **[safety-story-ux.md](safety-story-ux.md)** | **Safety story** as product: visible pending/approved, receipts, staged vs merged — audit continuity as primary comfort, not admin trivia. |
 | **[external-signals.md](external-signals.md)** | Moonshots / GTC–class discourse → **work-dev** lens (OpenClaw, enterprise trust, inference economics, portability); links shared [external-tech-scan](../work-strategy/external-tech-scan.md). |
 | **[work-dev-sources.md](work-dev-sources.md)** | Authorized sources list (channels / podcasts) for operator framing; not integration truth. |

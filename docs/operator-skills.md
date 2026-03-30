@@ -27,6 +27,8 @@ These skills package recurring "morning coffee" and territory pulse workflows in
 
 **Stale derived exports** (manifest, PRP, fork-manifest, runtime bundle): `python3 scripts/refresh_derived_exports.py -u grace-mar` then `python3 scripts/validate-integrity.py --user grace-mar --json`. See [development-handoff.md § Quick Resume](development-handoff.md#quick-resume-commands).
 
+**Skill discovery:** Pointer backlog [skills-portable/skill-candidates.md](../skills-portable/skill-candidates.md), draft lane `skills-portable/_drafts/`, ladder in [skills-portable/README.md](../skills-portable/README.md). After substantive **EXECUTE** / **DOCSYNC** ships, optional one-line prompt per [.cursor/rules/operator-style.mdc](../.cursor/rules/operator-style.mdc) (Skill discovery). Good night menu **E** and **handoff-check** summary may mention the same.
+
 ---
 
 ## Suggested daily pattern

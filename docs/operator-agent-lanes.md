@@ -18,16 +18,19 @@ These lanes govern **tooling and git scope** for the turn, not Abby’s persona 
 - Implement the agreed scope; run checks the operator asked for (tests, linters, `validate-template`, etc.).
 - **`git commit`** when there are changes; **`git push`** when the message includes shipping to remote (name the branch or say “push”).
 - **Tags** (e.g. `template-v0.x.x`) only if the operator states them in the message.
+- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **good morning** / **good night** **A–F** applies or the operator said **no menu**.
 
 ### `DOCSYNC`
 
 - **Documentation only:** merge logs, mirrors, README, operator docs, cross-links.
 - Keep the diff narrow to docs (and explicitly named files).
 - **Push** only if the operator says to push in the same message.
+- Same **optional skill-discovery** close as **EXECUTE** when the doc pass was substantive multi-file or clearly procedural (see **EXECUTE** bullet).
 
 ### `EXECUTE_LOCAL`
 
 - Same as **EXECUTE** for implementation and **commit**, but **do not push** unless the operator upgrades the lane in-message (e.g. “now push”).
+- Same **optional skill-discovery** close as **EXECUTE** when the ship is substantive (see above).
 
 ---
 
