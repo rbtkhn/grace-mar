@@ -81,8 +81,15 @@ See [work-strategy/multi-agent-fork-generator.md](work-strategy/multi-agent-fork
 
 ---
 
+## 8. Dated filenames and CLI dates
+
+Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `morning-forks-*.md`) use **`YYYY-MM-DD`** in the basename unless the doc names a compact id pattern. Full rules, UTC timestamps, and **`YYYYMMDD`** exceptions: [Date and time formats](../date-time-conventions.md).
+
+---
+
 ## See also
 
 - [Operator–agent lanes](../../operator-agent-lanes.md)
 - [Daily warmup skill](../../../.cursor/skills/daily-warmup/SKILL.md)
 - [Bootstrap — good morning](../../../bootstrap/grace-mar-bootstrap.md)
+- [Date and time formats](../date-time-conventions.md)

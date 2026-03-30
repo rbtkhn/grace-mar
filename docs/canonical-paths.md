@@ -2,6 +2,8 @@
 
 **Purpose:** Single source of truth for per-user file paths. All tooling and docs should use these **lowercase** paths. No uppercase filenames (e.g. `SELF.md`, `EVIDENCE.md`) are canonical.
 
+**See also:** [Date and time formats](date-time-conventions.md) — `YYYY-MM-DD` for dated artifacts and CLI vs compact ids (`YYYYMMDD`, directory sharding).
+
 **Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md), [Identity Fork Protocol](identity-fork-protocol.md)
 
 ---

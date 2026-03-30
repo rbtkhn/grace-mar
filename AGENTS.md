@@ -211,7 +211,7 @@ A single artifact can populate all three dimensions.
 
 ## Repository Structure
 
-**Canonical user paths** (lowercase filenames): [docs/canonical-paths.md](docs/canonical-paths.md).
+**Canonical user paths** (lowercase filenames): [docs/canonical-paths.md](docs/canonical-paths.md). **Dated filenames and CLI dates:** [docs/date-time-conventions.md](docs/date-time-conventions.md).
 
 ```
 grace-mar/
