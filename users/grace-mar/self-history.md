@@ -35,16 +35,23 @@ Choose one rhythm and stick to it (document changes here if you switch):
 - **Append-only gazette** — new **`## YYYY-MM-DD`** sections only; older blocks stay frozen.
 - **Periodic rebuild** — regenerate from sources on a schedule; note rebuild date in a header comment line if useful.
 
-Semi-automation (optional, later): script concatenates **`work-*-history`** sorted by date; operator adds **COMPANION:** lines from approved spine.
+**Semi-automation:** [`scripts/draft_self_history.py`](../../scripts/draft_self_history.py) — draft **WORK** / **COMPANION** markdown from `work-*-history.md` and `self-archive.md` § V (`--dry-run` default; `--write` to refresh log sections).
+
+### Initial population (2026-03-30)
+
+- **COMPANION strategy:** **3a — monthly rollup** from merged **`users/grace-mar/self-archive.md` § V. ACTIVITY LOG** (YAML `activities`); not § VIII transcript; not pending gate.
+- **WORK strategy:** Copy from **`docs/skill-work/work-*/*-history.md`** logs as of same date; note empty lanes explicitly.
 
 ---
 
 ## Log — WORK (aggregate)
 
-_(Dense rollup from `docs/skill-work/work-*/*-history.md`. Prefer `WORK:<territory>` on each bullet or block.)_
+- **WORK:work-dev — 2026-03-30** — Huang / Lex #494 digest + OpenClaw/Grace-Mar diff: `research/external/work-dev/transcripts/lex-fridman-494-jensen-huang-DIGEST.md`; README index row; commits through `51de012` (source: [work-dev-history.md](../../docs/skill-work/work-dev/work-dev-history.md)).
+- **WORK:meta — 2026-03-30** — No dated `## Log` entries yet in other `docs/skill-work/work-*/*-history.md` territories (work-politics, work-jiang, work-strategy, work-business, work-career, work-companion-self, work-curate-library, work-health-fitness, work-human-teacher, work-xavier, work-civ-mem, work-alpha-school).
 
 ---
 
 ## Log — COMPANION (gate-approved)
 
-_(Summaries or pointers **only** from merged Record / EVIDENCE. Tag `COMPANION:`; cite ACT / § VIII / IX where possible.)_
+- **COMPANION: 2026-02** — 44 activities in `self-archive.md` § V (`ACT-0001`–`ACT-0044`). Canonical: [self-archive.md](self-archive.md) **§ V. ACTIVITY LOG**.
+- **COMPANION: 2026-03** — 11 activities in `self-archive.md` § V (`ACT-0045`–`ACT-0055`). Canonical: [self-archive.md](self-archive.md) **§ V. ACTIVITY LOG**.

@@ -35,4 +35,4 @@
 
 **Cross-reference:** Authorized sources lists — [work-modules-sources-principle.md](work-modules-sources-principle.md).
 
-**Optional downstream rollup:** Per-instance **`users/[id]/self-history.md`** may **densely aggregate** these territory logs into one timeline alongside a **gate-approved companion** thread — **derived**, not Record; see [canonical-paths.md](../canonical-paths.md) and **AGENTS.md** § 11a.
+**Optional downstream rollup:** Per-instance **`users/[id]/self-history.md`** may **densely aggregate** these territory logs into one timeline alongside a **gate-approved companion** thread — **derived**, not Record; see [canonical-paths.md](../canonical-paths.md) and **AGENTS.md** § 11a. Regenerate log bodies with **`python3 scripts/draft_self_history.py -u <id>`** (`--dry-run` default stdout; **`--write`** replaces log sections; **`--companion-style per-act --max N`** for line-by-line ACT index).
