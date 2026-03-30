@@ -50,6 +50,42 @@
 
 ---
 
+## OpenClaw / Grace-Mar diff (adopt vs reject)
+
+Huang’s frame is **platform vendor + planetary AI factory + CUDA moat**. Grace-Mar’s frame is **companion-owned Record**, **reactive Voice**, **instrumental WORK execution layer**, and **manual gate** (`AGENTS.md`, `docs/conceptual-framework.md`). The table below is **operator judgment**, not mergeable Record content.
+
+### Adopt (translate, don’t copy)
+
+| Huang idea | Grace-Mar translation |
+|------------|------------------------|
+| Extreme co-design | Co-optimize **gate → merge script → self / archive / session-log / prompt / PRP / exports** together; avoid “fix only `bot/prompt.py`.” |
+| Org mirrors product | Cursor **rules + skills + lanes** should trace to **artifacts** (handoff, warmup, gate review), not a generic chat box. |
+| Collective problem attack | **Design reviews** when changing **agent boundaries**, OpenClaw-adjacent exports, or **gated file** touch lists — multiple lenses (security, Record, ops). |
+| Install base / habit | Prefer **one canonical path** (e.g. `scripts/process_approved_candidates.py`, harness entrypoints) that people **actually run** over elegant one-offs. |
+| Inference = thinking = expensive | **Agent turns and tool loops** cost latency, money, and attention — budget them; don’t assume “inference is free after training.” |
+| Specification as coding | **Gate YAML**, **lane prefixes**, **skill steps** are **authored systems** — tune **specificity** to audience (companion vs operator). |
+| Intelligence vs humanity | **Capability** (models, agents) ≠ **care, dignity, gate authority** — keep **Voice** and **companion merge** non-negotiable vs “helpful autopilot.” |
+| Two-of-three (data / exec / external) | Useful **mental model** for **scoping agent powers**; map to **tool allowlists**, **no secrets in trajectories**, **RL boundary** — see `docs/openclaw-rl-boundary.md`. |
+| Next-state / feedback loops | Huang’s **agentic → data → training** loop is **vendor-scale**; here, **next-state signals** improve **workflow/policy**, **not** ungated **SELF** — same doc, § principles. |
+
+### Reject or hold lightly
+
+| Huang / episode thread | Why it does not transfer cleanly |
+|------------------------|----------------------------------|
+| **Moat = CUDA install base** | Grace-Mar does not compete on **developer lock-in**. Sovereignty is **companion approval + git audit**, not **platform share**. |
+| **AI factory / token GDP** | Useful metaphor for **industry**; **Record** is **not** a revenue factory — avoid reframing **identity** as **commodity output**. |
+| **Belief-shaping at GTC scale** | **Incremental narrative** in-repo is good; **keynote diplomacy** across hundreds of CEOs is **not** our operating mode. |
+| **OpenShell / NemoClaw as shipped truth** | **Vendor roadmap** and **marketing labels** — verify against **current upstream** before treating as architecture for this instance. |
+| **“AGI now” / billion-dollar flash** | **Definitional stunt**; **no** impact on **gate**, **Lexile**, or **knowledge boundary** rules. |
+| **Trust without contract (TSMC anecdote)** | **Personal trust** ≠ **governance** here; **contracts** are **markdown law + scripts + companion merge** — informal hero stories don’t replace protocol. |
+| **Scale solves everything** | **More compute** does not bypass **minors**, **staging accuracy**, or **companion merge** — see RL boundary and `AGENTS.md` **Critical Rules**. |
+
+### One-line synthesis
+
+**Borrow systems thinking and co-design discipline; reject moat-factory framing for the Record; treat OpenClaw-class stacks as adjacent tooling under explicit boundaries, not as a second triad seat.**
+
+---
+
 ## Related in-repo
 
 - [work-dev README](../README.md)  
