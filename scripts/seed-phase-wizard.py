@@ -245,7 +245,7 @@ def run_wizard(
             "Stage knowledge via RECURSION-GATE; merge with process_approved_candidates.py after approval",
             "python3 scripts/harness_warmup.py -u " + instance + " --compact",
             "python3 scripts/good-morning-brief.py -u " + instance,
-            "For full morning stack see .cursor/skills/daily-warmup/SKILL.md",
+            "For full morning stack see .cursor/skills/operator-cadence/SKILL.md",
             "Template sync: docs/merging-from-companion-self.md",
         ],
     }

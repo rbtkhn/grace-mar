@@ -33,7 +33,7 @@
 ## Orientation
 
 - **Daily intention** (optional): append via `jiang-compress.py` or hand-edit `reflection-proposals/DAILY-INTENTION-YYYY-MM-DD.md`
-- **Good morning context:** [good-morning-brief.py](../../../scripts/good-morning-brief.py)
+- **Hey context:** [good-morning-brief.py](../../../scripts/good-morning-brief.py)
 
 ---
 

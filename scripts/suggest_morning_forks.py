@@ -92,14 +92,14 @@ def build_fork_scores(user_id: str) -> list[tuple[float, str, str, str]]:
         gscore = 1.5
     forks.append((gscore, "gate", "Gate + pipeline — review / merge rhythm", why_g))
 
-    # 2 — Daily warmup + brief (always relevant)
+    # 2 — Operator cadence + brief (always relevant)
     wscore = 4.0 + _score_keyword(blob, "good morning", "warmup", "brief", "polling")
     forks.append(
         (
             float(wscore),
             "warmup",
-            "Daily warmup stack — harness + operator_daily_warmup + brief",
-            "Fixed A–E session shape; see .cursor/skills/daily-warmup/SKILL.md",
+            "Operator cadence stack — harness + operator_daily_warmup + brief",
+            "Fixed A–E session shape; see .cursor/skills/operator-cadence/SKILL.md",
         )
     )
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Operator re-entry stack — run handoff check, daily warmup, and harness warmup in one paste.
+Operator re-entry stack — run handoff check, operator_daily_warmup, and harness warmup in one paste.
 
-Handoff and daily warmup overlap somewhat (gate counts, dirty paths); this is for convenience.
+Handoff and operator_daily_warmup overlap somewhat (gate counts, dirty paths); this is for convenience.
 
 Usage:
     python3 scripts/operator_reentry_stack.py -u grace-mar
@@ -26,7 +26,7 @@ def _run(argv: list[str]) -> int:
 
 
 def main() -> int:
-    p = argparse.ArgumentParser(description="Run operator handoff + daily warmup + harness warmup (read-only).")
+    p = argparse.ArgumentParser(description="Run operator handoff + operator_daily_warmup + harness warmup (read-only).")
     p.add_argument("-u", "--user", default="grace-mar", help="User id (default grace-mar)")
     p.add_argument(
         "--compact",

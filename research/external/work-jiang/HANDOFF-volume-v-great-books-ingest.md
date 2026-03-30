@@ -1,5 +1,7 @@
 # Handoff — Volume V (Great Books) transcript ingest
 
+**Post-handoff:** `sources.yaml` and `lectures/` now include **gb-08** / **Great Books #8** (`great-books-08-the-poetry-of-empire.md`). The body below still records the original **#1–#7** channel snapshot and procedure.
+
 **Re-entry prompt (paste into a new agent thread):**
 
 > Ingest **Predictive History Volume V — Great Books**: wire `series: great-books`, `gb-*` sources, and `lectures/great-books-NN-*.md` per `HANDOFF-volume-v-great-books-ingest.md`. Then add lectures **#1–#7** from `@PredictiveHistory` (video IDs in that doc), operator transcripts as needed, `build_source_registry`, ASR normalizer, `validate_work_jiang.py --require-analysis-frontmatter`, set `publication_date` from `yt-dlp`, commit work-jiang only.

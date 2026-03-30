@@ -229,9 +229,9 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     lines.extend(
         [
             "",
-            "## Good morning — KY-4 polling + prediction markets (lazy)",
+            "## Hey — KY-4 polling + prediction markets (lazy)",
             "",
-            "- With **daily-warmup** (`good morning`): **Polymarket** + independent poll **web search** + Massie X run **only** after **menu E → work-politics** (or explicit same-message request), per `docs/skill-work/work-politics/polling-and-markets.md` — **not** in Step 1. This script does not fetch markets; follow the skill after this command.",
+            "- With **operator-cadence** (`hey`): **Polymarket** + independent poll **web search** + Massie X run **only** after **menu E → work-politics** (or explicit same-message request), per `docs/skill-work/work-politics/polling-and-markets.md` — **not** in Step 1. This script does not fetch markets; follow the skill after this command.",
             "",
             "## Guardrail",
             "",
