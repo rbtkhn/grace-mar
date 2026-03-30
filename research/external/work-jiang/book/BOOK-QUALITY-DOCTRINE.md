@@ -81,3 +81,9 @@ When editing `INTRODUCTION`, `BOOK-ARCHITECTURE`, `CHAPTER-QUEUE`, chapter draft
 - apply this doctrine by default;
 - do not expand corpus requirements unless operator explicitly asks;
 - prefer replacing weak prose over appending new prose.
+
+---
+
+## Related
+
+- [PUBLISHING.md](PUBLISHING.md) — serial volume releases, prior-volume reader assumption, cross-volume references, single-repo corpus.

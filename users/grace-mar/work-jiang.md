@@ -12,6 +12,8 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 **Authorized sources (operator list):** [work-jiang-sources.md](../../docs/skill-work/work-jiang/work-jiang-sources.md) — convention: [work-modules-sources-principle.md](../../docs/skill-work/work-modules-sources-principle.md).
 
+**Publishing (serial releases, one repo):** [PUBLISHING.md](../../research/external/work-jiang/book/PUBLISHING.md) — ship **one volume at a time**; assume readers **may have prior volumes**; **cross-volume references** allowed; **all corpora** stay in `research/external/work-jiang/`.
+
 **Method (operator work, not Voice knowledge until merged through the gate):**
 
 1. **Lecture transcripts** — primary text: systematic capture and close reading of his talks (e.g. channel pulls under `research/external/youtube-channels/predictive-history/`), tagged and excerpted for themes, definitions, and internal consistency.
