@@ -76,4 +76,4 @@ Grace-mar paths and doc links for this repository (from `.cursor/skills/portable
 
 **Verify defaults (this manifest):** portable bodies must not contain the substrings `users/grace-mar/` or `process_approved_candidates` — keep those in this appendix or other host docs, not in `skills-portable/*/SKILL.md` bodies.
 
-**Pilot reference:** [massie-x-news-search-draft](../massie-x-news-search-draft/SKILL.md) (generated) and `skills-portable/massie-x-news-search-draft/SKILL.md` (source).
+**Pilot reference:** [politics-massie](../politics-massie/SKILL.md) (generated) and `skills-portable/politics-massie/SKILL.md` (source).

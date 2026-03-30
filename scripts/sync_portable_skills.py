@@ -6,7 +6,7 @@ Usage:
     python3 scripts/sync_portable_skills.py
     python3 scripts/sync_portable_skills.py --dry-run
     python3 scripts/sync_portable_skills.py --verify
-    python3 scripts/sync_portable_skills.py --skill massie-x-news-search-draft
+    python3 scripts/sync_portable_skills.py --skill politics-massie
 """
 
 from __future__ import annotations

@@ -112,7 +112,7 @@ The operator uses a **companion-self** architecture: a **Record** (documented se
 |------|---------|
 | **X (@usa_first_ky)** | Publish, reply, quote-tweet. |
 | **[content-queue.md](content-queue.md)** | Truth for what stage each content idea is in. |
-| **Agent / Cursor skills** (operator-run) | Drafts and news scans — you **review**, you **post**. Skill example: `.cursor/skills/massie-x-news-search-draft/SKILL.md`. |
+| **Agent / Cursor skills** (operator-run) | Drafts and news scans — you **review**, you **post**. Skill example: `.cursor/skills/politics-massie/SKILL.md`. |
 | **WAP dashboard** | Optional job log + paste area for agent output. |
 
 ---

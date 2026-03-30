@@ -101,7 +101,7 @@ The operator may run an internal **daily brief** script and a **Massie news scan
 |------|---------|
 | **X (@usa_first_ky)** | Publish, reply, quote-tweet. |
 | **[content-queue.md](content-queue.md)** | Truth for what stage each content idea is in. |
-| **Agent / Cursor skills** (operator-run) | Drafts and news scans — you **review**, you **post**. Skill example: `.cursor/skills/massie-x-news-search-draft/SKILL.md`. |
+| **Agent / Cursor skills** (operator-run) | Drafts and news scans — you **review**, you **post**. Skill example: `.cursor/skills/politics-massie/SKILL.md`. |
 | **WAP dashboard** | Optional job log + paste area for agent output. |
 
 ---
@@ -943,7 +943,7 @@ By the end of **Week 2**, the SMM can:
 
 When the **companion or operator** runs the Cursor skill **Massie X — real-time news search and draft posts**, output is **draft-only** for SMM review. SMM still applies [smm-training.md](smm-training.md) and account rules before any publish.
 
-- Skill: `.cursor/skills/massie-x-news-search-draft/SKILL.md` (repo root)
+- Skill: `.cursor/skills/politics-massie/SKILL.md` (repo root)
 - Operator dashboard (paste outputs): [wap-dashboard.md](../../wap-dashboard.md)
 
 ---
@@ -1353,7 +1353,7 @@ U.S. foreign policy must respect the Constitution: Congress declares war and aut
 ### SMM daily workflow
 
 1. Open `/wap` with token; create a **new job** (client, workflow type, context, optional URLs).
-2. In Cursor, run the matching skill (e.g. `.cursor/skills/massie-x-news-search-draft/SKILL.md`) with that context.
+2. In Cursor, run the matching skill (e.g. `.cursor/skills/politics-massie/SKILL.md`) with that context.
 3. Paste agent output into the job; set status **output_pasted**.
 4. Edit and post from X (@usa_first_ky); set status **shipped** when done.
 5. Keep [content-queue.md](skill-work/work-politics/content-queue.md) in sync for content state (idea → posted).

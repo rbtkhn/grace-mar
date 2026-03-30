@@ -47,7 +47,7 @@ By the end of **Week 2**, the SMM can:
 
 When the **companion or operator** runs the Cursor skill **Massie X — real-time news search and draft posts**, output is **draft-only** for SMM review. SMM still applies [smm-training.md](smm-training.md) and account rules before any publish.
 
-- Skill: `.cursor/skills/massie-x-news-search-draft/SKILL.md` (repo root)
+- Skill: `.cursor/skills/politics-massie/SKILL.md` (repo root)
 - Operator dashboard (paste outputs): [wap-dashboard.md](../../wap-dashboard.md)
 
 ---

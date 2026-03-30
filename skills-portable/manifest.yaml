@@ -1,9 +1,9 @@
 # Portable skills → Cursor assembly (see scripts/sync_portable_skills.py)
 skills:
-  - name: massie-x-news-search-draft
-    source: massie-x-news-search-draft/SKILL.md
-    appendix: .cursor/skills/massie-x-news-search-draft/CURSOR_APPENDIX.md
-    target: .cursor/skills/massie-x-news-search-draft/SKILL.md
+  - name: politics-massie
+    source: politics-massie/SKILL.md
+    appendix: .cursor/skills/politics-massie/CURSOR_APPENDIX.md
+    target: .cursor/skills/politics-massie/SKILL.md
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
