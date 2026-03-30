@@ -17,6 +17,6 @@
 
 ## Log
 
-<!-- Example (delete or replace):
-| 2026-03-29 | example-skill-name | After EXECUTE ship of multi-file docs | commit abc1234 |
--->
+| Date | Working name | Trigger | Pointer |
+|------|--------------|---------|---------|
+| 2026-03-29 | portable-skills-sync | After changing `skills-portable/**`, `manifest.yaml`, or a `CURSOR_APPENDIX.md`; before commit — run `--verify` then sync | `scripts/sync_portable_skills.py`; scaffold commits `2d2f2b5`, discovery wiring `6c74036` |
