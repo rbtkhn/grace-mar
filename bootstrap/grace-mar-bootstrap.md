@@ -109,6 +109,21 @@ Commits and pushes apply to **the repository whose root you are in**. Do not ass
 pwd && git rev-parse --show-toplevel && git branch --show-current && git remote -v
 ```
 
+
+---
+
+## Re-entry stack (operator)
+
+For a **cold Cursor thread** when instance state matters (gate, pipeline, `users/grace-mar/`, handoff):
+
+| Step | Command / pointer |
+|------|-------------------|
+| One paste (overlapping summaries by design) | `python3 scripts/operator_reentry_stack.py -u grace-mar` — add `--compact` for a shorter harness tail |
+| One-line snapshot | `python3 scripts/harness_warmup.py -u grace-mar --receipt` (optional `--territory work-politics` or `companion`) |
+| Good morning / good night | `.cursor/skills/daily-warmup/SKILL.md` (fixed **A–F**) — not replaced by a universal “heartbeat first line” rule |
+| Optional GWS | `docs/skill-work/work-dev/google-workspace-cli-operator.md` — attach `.cursor/rules/gws-cli-recipes.mdc` when using `gws` |
+| VS Code / Cursor Tasks | Copy tasks from `docs/skill-work/work-dev/cursor-vscode-grace-mar-tasks.json` into your local `.vscode/tasks.json` (`.vscode/` is gitignored here) |
+
 ---
 
 ## 1) First-Run Checklist (Do This First)
@@ -241,7 +256,7 @@ python3 scripts/generate_gate_dashboard.py -u grace-mar   # pending queue HTML (
 echo "paste text" | python3 scripts/stage_gate_candidate.py -u grace-mar   # stage stdin as pending candidate (approve + merge separately)
 ```
 
-**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters) and **always** generate [work-strategy daily brief](docs/skill-work/work-strategy/daily-brief-template.md): `python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. Return warmup snapshot + brief path + short headline/next-action summary. `operator_daily_warmup.py` includes a **pipeline velocity** line (merge/approval counts); after bursts of merges, run `python3 scripts/operator_depth_hint.py -u grace-mar` to emit a harness hint when velocity crosses a new tier (see `docs/skill-work/work-dev/README.md`).
+**Operator rhythm — "good morning":** First message of the day can be just that; the agent should run [daily-warmup skill](.cursor/skills/daily-warmup/SKILL.md) (`operator_daily_warmup.py` + `harness_warmup.py` when state matters). **Daily brief:** generate with `python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md` (output stem **`daily-brief-` + ISO date + `.md`**, e.g. `daily-brief-2026-03-29.md`) **only when the operator chooses good morning menu C** (see [daily-brief-template.md](docs/skill-work/work-strategy/daily-brief-template.md)); Step 1 does **not** run the generator. Return warmup snapshot + (after **C**) brief path + headline/next-action summary. `operator_daily_warmup.py` includes a **pipeline velocity** line (merge/approval counts); after bursts of merges, run `python3 scripts/operator_depth_hint.py -u grace-mar` to emit a harness hint when velocity crosses a new tier (see `docs/skill-work/work-dev/README.md`).
 
 **Ranked morning forks:** `python3 scripts/suggest_morning_forks.py -u grace-mar` (or `--markdown` / `-o docs/skill-work/work-strategy/morning-forks-$(date +%Y-%m-%d).md`). Ritual CLI: `python3 scripts/good-morning-brief.py` embeds the same top-3 block. Menu conventions: [docs/skill-work/work-menu-conventions.md](docs/skill-work/work-menu-conventions.md). Log a pick: `python3 scripts/log_operator_choice.py -u grace-mar --context GOOD_MORNING --picked 1`.
 

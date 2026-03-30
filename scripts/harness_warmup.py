@@ -36,12 +36,14 @@ Usage
     python scripts/harness_warmup.py -u grace-mar --compact
     python scripts/harness_warmup.py -u grace-mar --tail 8
     python scripts/harness_warmup.py -u grace-mar --fresh-judge   # clean-context handoff
+    python scripts/harness_warmup.py -u grace-mar --receipt      # one-line reentry snapshot (gate + last ACT + git HEAD)
 """
 
 from __future__ import annotations
 
 import argparse
 import re
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -57,6 +59,24 @@ except ImportError:
 
 _read = read_path  # backward compat for operator_daily_warmup, operator_handoff_check
 DEFAULT_TAIL = 12
+_REPO_ROOT = _SCRIPTS.parent
+
+
+def _git_head_short() -> str:
+    """Short git SHA for reentry line; unknown if not a git checkout."""
+    try:
+        r = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=str(_REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        if r.returncode == 0 and r.stdout.strip():
+            return r.stdout.strip()
+    except (OSError, subprocess.TimeoutExpired):
+        pass
+    return "unknown"
 
 
 def _session_lines_tail(session_md: str, n: int) -> list[str]:
@@ -164,6 +184,11 @@ def main() -> int:
         action="store_true",
         help="Prefix: ignore prior-thread assumptions; canonical state is on disk (gate + last merge receipt)",
     )
+    parser.add_argument(
+        "--receipt",
+        action="store_true",
+        help="Print one machine-friendly reentry line (gate counts, last ACT, git HEAD) and exit",
+    )
     args = parser.parse_args()
     territory = normalize_territory_cli(args.territory)
 
@@ -184,6 +209,17 @@ def main() -> int:
     tail = _session_lines_tail(session, max(1, args.tail))
     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
     receipt_one = _last_merge_receipt_line(user_dir)
+
+    if args.receipt:
+        gith = _git_head_short()
+        gate_label = "clean" if pending_n == 0 else f"{pending_n} pending"
+        act_bit = last_act or "none"
+        print(
+            f"**Reentry** — recursion-gate: {gate_label} "
+            f"(view={territory}; work-politics={politics_n}; companion={comp_n}) "
+            f"| last_ACTIVITY: {act_bit} | commit: {gith} | user: {args.user}"
+        )
+        return 0
 
     fresh_block = ""
     if args.fresh_judge:

@@ -1,21 +1,23 @@
 ---
 name: handoff-check
-description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **good night**, this script is **daily-warmup Step 1**; **Step 2** is the fixed **A–E** night menu in daily-warmup § *Good night — multiple choice*. Also use when resuming work or checking safe-to-ignore before commit/push.
+description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **good night**, this script is **daily-warmup Step 1**; **Step 2** is the fixed **A–F** night menu — **A–D** match good morning (**D** = RECURSION-GATE); **E** = night system pick. See daily-warmup § *Good night*, § *Shared A–C*, § *Shared D*. Also use when resuming work or checking safe-to-ignore before commit/push.
 ---
 
 # Handoff Check
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset — good night:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–E menu) — see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § **Good night** and § *Good night — multiple choice (A–E required)*. On follow-up turns, **A–D** runs the track then **re-offers the full A–E menu** until **E** ends the night session.
+**Preset — good night:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–F menu) — **A–D** match good morning; see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Shared A–C*, § *Shared D*, § **Good night**, and § *Good night — multiple choice (A–F required)*. On follow-up turns, **A–E** runs the track then **re-offers the full A–F menu** until **F** ends the night session.
 
-**Good morning (related):** After **A–D**, **re-offer the full A–E morning menu** each turn until **E** — same loop as good night; see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Good morning — multiple choice (A–E required)*.
+**Good morning (related):** After **A–E**, **re-offer the full A–F morning menu** each turn until **F** — same loop shape as good night (morning **D** = RECURSION-GATE; night **E** = system pick); see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Good morning — multiple choice (A–F required)*.
 
 ## Default command
 
 ```bash
 python3 scripts/operator_handoff_check.py -u grace-mar
 ```
+
+**Cold-thread stack (optional):** `python3 scripts/operator_reentry_stack.py -u grace-mar` runs handoff check, then `operator_daily_warmup.py`, then `harness_warmup.py` (add `--compact` for a shorter harness). **One-line snapshot:** `python3 scripts/harness_warmup.py -u grace-mar --receipt`. See `bootstrap/grace-mar-bootstrap.md` § Re-entry stack.
 
 ## What to return
 

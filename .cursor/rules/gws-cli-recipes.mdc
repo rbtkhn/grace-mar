@@ -1,0 +1,14 @@
+---
+description: Optional Google Workspace CLI pointers — attach when using gws; not always on
+alwaysApply: false
+---
+
+# GWS CLI (optional)
+
+Operator-only continuity tooling. **Not** Record truth; **not** a replacement for `harness_warmup.py` or the gate.
+
+- **Full runbook:** `docs/skill-work/work-dev/google-workspace-cli-operator.md`
+- **Config:** local `.env.gws.local` (see `.gitignore` — `.env.*.local` is ignored).
+- **Logging:** use a local work-dev log file; do **not** treat `users/grace-mar/session-log.md` as an operator tooling audit trail.
+
+When the operator says to use GWS, follow that doc’s guardrails (read-only first, no secrets in git).
