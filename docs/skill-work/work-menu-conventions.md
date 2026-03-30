@@ -89,6 +89,7 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 
 ## See also
 
+- **Fixed session menu (good morning / good night):** not the 3–5 WORK pattern — use **daily-warmup** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). Roles: [.cursor/skills/daily-warmup/SKILL.md](../../../.cursor/skills/daily-warmup/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
 - [Daily warmup skill](../../../.cursor/skills/daily-warmup/SKILL.md)
 - [Bootstrap — good morning](../../../bootstrap/grace-mar-bootstrap.md)

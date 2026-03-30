@@ -1,15 +1,15 @@
 ---
 name: handoff-check
-description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **good night**, this script is **daily-warmup Step 1**; **Step 2** is the fixed **A–F** night menu — **A–D** match good morning (**D** = RECURSION-GATE); **E** = night system pick. See daily-warmup § *Good night*, § *Shared A–C*, § *Shared D*. Also use when resuming work or checking safe-to-ignore before commit/push.
+description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **good night**, this script is **daily-warmup Step 1**; **Step 2** is the fixed **A–H** night menu — **A–D** match good morning (**D** = RECURSION-GATE); **E** = night system pick; **G** = Jiang/PH; **H** = skills pipeline; **F** = end night. See daily-warmup § *Good night*, § *Shared A–C*, § *Shared D*, § *Shared G-H*. Also use when resuming work or checking safe-to-ignore before commit/push.
 ---
 
 # Handoff Check
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset — good night:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–F menu) — **A–D** match good morning; see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Shared A–C*, § *Shared D*, § **Good night**, and § *Good night — multiple choice (A–F required)*. On follow-up turns, **A–E** runs the track then **re-offers the full A–F menu** until **F** ends the night session.
+**Preset — good night:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–H menu) — **A–D** match good morning; see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Shared A–C*, § *Shared D*, § *Shared G-H*, § **Good night**, and § *Good night — multiple choice (A–H required)*. On follow-up turns, **A,B,C,D,E,G, or H** runs the track then **re-offers the full A–H menu** until **F** ends the night session.
 
-**Good morning (related):** After **A–E**, **re-offer the full A–F morning menu** each turn until **F** — same loop shape as good night (morning **D** = RECURSION-GATE; night **E** = system pick); see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Good morning — multiple choice (A–F required)*.
+**Good morning (related):** After **A,B,C,D,E,G, or H**, **re-offer the full A–H morning menu** each turn until **F** — same loop shape as good night (morning **D** = RECURSION-GATE; night **E** = system pick); see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Good morning — multiple choice (A–H required)*.
 
 ## Default command
 
@@ -31,7 +31,7 @@ Summarize:
 - runtime-only noise that should stay uncommitted
 - work-politics continuity if relevant
 - the best next re-entry prompt
-- **Skill discovery (one line, optional):** If the thread had a repeatable multi-step workflow, mention [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md) and good night menu **E** (system pick) for backlog / [extract-skill-from-session](../extract-skill-from-session/SKILL.md) — do not block the handoff on it.
+- **Skill discovery (one line, optional):** If the thread had a repeatable multi-step workflow, mention [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md) and good night menu **H** (skills / meta pipeline) / [extract-skill-from-session](../extract-skill-from-session/SKILL.md) — do not block the handoff on it.
 
 ## Guardrails
 
