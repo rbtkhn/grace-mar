@@ -24,7 +24,7 @@ except ImportError:
     from scripts.recursion_gate_territory import TERRITORY_LABEL_WORK_POLITICS, pending_by_territory
     from scripts.work_politics_ops import get_work_politics_snapshot
 
-# Max pending rows to list verbatim before collapsing (good night / handoff stays scannable).
+# Max pending rows to list verbatim before collapsing (closeout handoff stays scannable).
 _GATE_PENDING_DISPLAY_CAP = 12
 
 REPO_ROOT = Path(__file__).resolve().parent.parent

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Read-only 'momentum' snippets for operator good morning / good night — Predictive History lane.
+Read-only 'momentum' snippets for operator hey (work-start and closeout) — Predictive History lane.
 
 Pulls `users/<id>/work-jiang.md` **Instance work context (YAML)** (see skills-modularity §2a) plus
 STATUS / CHAPTER-QUEUE hints and rotates optional sparks from

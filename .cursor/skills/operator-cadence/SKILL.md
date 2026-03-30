@@ -56,7 +56,7 @@ If the operator says **“hey”** on a **Sunday**, default to **week-ahead** mo
 
 ## "Hey" = start here (two steps)
 
-When the operator begins with **"hey"** (or clearly the same intent), treat it as opening a **hey session**. If the message **clearly means closeout** (signing off, end of session, good night, etc.), skip ahead to **[Hey — closeout](#hey-closeout-session-end)** — **Step 1** there is handoff-first. Otherwise **scale work-start Step 1** using **[explicit phrases](#explicit-phrases-override-default-cadence-when-stated)** when the operator used one, or **[cadence by weekday](#cadence-by-weekday)** (Sunday → week-ahead; Tue–Fri → lighter; Monday → full). **Step 2** (A–H menu) always follows Step 1.
+When the operator begins with **"hey"** (or clearly the same intent), treat it as opening a **hey session**. If the message **clearly means closeout** (signing off, end of session, wrapping the day, etc.), skip ahead to **[Hey — closeout](#hey-closeout-session-end)** — **Step 1** there is handoff-first. Otherwise **scale work-start Step 1** using **[explicit phrases](#explicit-phrases-override-default-cadence-when-stated)** when the operator used one, or **[cadence by weekday](#cadence-by-weekday)** (Sunday → week-ahead; Tue–Fri → lighter; Monday → full). **Step 2** (A–H menu) always follows Step 1.
 
 ### Multiple heys per day (reorientation)
 
@@ -182,7 +182,7 @@ When the operator chooses **A**, the reply must end the audit section with a **R
 
 ## Hey — closeout (session end, same skill)
 
-When the operator says **`hey`** and **clearly means closeout** (signing off, end of session, good night, wrapping the day, etc.) — **same trigger, same skill** — treat it as the **closeout** path. **Do not** run the full [work-start Step 1](#hey--start-here-two-steps) stack (no daily brief generation, no Polymarket / Massie X pass, no `operator_daily_warmup.py` / `harness_warmup.py` as the main flow) **unless** they explicitly ask for that full stack in the **same** message.
+When the operator says **`hey`** and **clearly means closeout** (signing off, end of session, wrapping the day, done for now, etc.) — **same trigger, same skill** — treat it as the **closeout** path. **Do not** run the full [work-start Step 1](#hey--start-here-two-steps) stack (no daily brief generation, no Polymarket / Massie X pass, no `operator_daily_warmup.py` / `harness_warmup.py` as the main flow) **unless** they explicitly ask for that full stack in the **same** message.
 
 ### Step 1 — Automated actions (handoff; paste output)
 
