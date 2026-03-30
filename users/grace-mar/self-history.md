@@ -35,7 +35,7 @@ Choose one rhythm and stick to it (document changes here if you switch):
 - **Append-only gazette** — new **`## YYYY-MM-DD`** sections only; older blocks stay frozen.
 - **Periodic rebuild** — regenerate from sources on a schedule; note rebuild date in a header comment line if useful.
 
-**Semi-automation:** [`scripts/draft_self_history.py`](../../scripts/draft_self_history.py) — draft **WORK** / **COMPANION** markdown from `work-*-history.md` and `self-archive.md` § V (`--dry-run` default; `--write` to refresh log sections).
+**Semi-automation:** [`scripts/draft_self_history.py`](../../scripts/draft_self_history.py) — draft **WORK** / **COMPANION** markdown from `work-*-history.md` and `self-archive.md` § V (default: print to stdout; **`--write`** refreshes log sections from `## Log — WORK (aggregate)` through EOF).
 
 ### Initial population (2026-03-30)
 

@@ -4,7 +4,7 @@ Draft WORK / COMPANION markdown blocks for users/<id>/self-history.md from:
   - docs/skill-work/work-*/*-history.md (## Log bullets)
   - users/<id>/self-archive.md § V ACTIVITY LOG (YAML activities)
 
-Default: print to stdout (--dry-run). Use --write to replace log sections in self-history.md.
+Default: print drafted log sections to stdout. Use --write to replace log sections in self-history.md.
 
 Examples:
   python3 scripts/draft_self_history.py -u grace-mar
@@ -23,7 +23,6 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SKILL_WORK = REPO_ROOT / "docs" / "skill-work"
 
-SECTION_V_START = "## V. ACTIVITY LOG"
 LOG_HEADING = "## Log — WORK (aggregate)"
 COMPANION_HEADING = "## Log — COMPANION (gate-approved)"
 
