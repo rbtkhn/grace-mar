@@ -1,15 +1,14 @@
 ---
 name: massie-x-news-search-draft
-description: 'Draft-only X copy for @usa_first_ky (unofficial KY-4 analysis): real-time web search, cited news briefs, suggested posts—operator must approve before any post; never auto-post or publish. Triggers: Massie X, tweet draft, KY-4 news today, breaking story hooks, usa_first_ky.'
+description: "Draft-only X copy for @usa_first_ky (unofficial KY-4 analysis): real-time web search, cited news briefs, suggested posts—operator must approve before any post; never auto-post or publish. Triggers: Massie X, tweet draft, KY-4 news today, breaking story hooks, usa_first_ky."
 portable: true
 version: 1.0.0
 tags:
-- operator
-- work-politics
-- social
-portable_source: skills-portable/massie-x-news-search-draft/SKILL.md
-synced_by: sync_portable_skills.py
+  - operator
+  - work-politics
+  - social
 ---
+
 # Massie X — real-time news search and draft posts
 
 Use this skill when drafting **suggested** X (Twitter) content for the **America First Kentucky** account (@usa_first_ky). The agent **searches the live web** for recent stories, then produces **draft-only** posts for human review. **No autonomous posting.**
@@ -120,20 +119,3 @@ For each idea:
 ## When search is thin
 
 Say so plainly. Offer: (1) broaden query, (2) pivot to evergreen wedge from your asymmetry doc with a fresh headline from search, or (3) wait for next news cycle.
-
-
-## Cursor / grace-mar instance
-
-Use these paths **in this repository** when applying the portable skill. Replace with your own tree when forking.
-
-| Topic | Path |
-|--------|------|
-| Account rules, tone, workflow | [account-x.md](../../../docs/skill-work/work-politics/account-x.md) |
-| Principal positions | [principal-profile.md](../../../docs/skill-work/work-politics/principal-profile.md) |
-| Opposition snapshot | [opposition-brief.md](../../../docs/skill-work/work-politics/opposition-brief.md) |
-| Doctrine filter | [massie-ky4-operator-checklist.md](../../../docs/skill-work/work-politics/clients/massie-ky4-operator-checklist.md) |
-| Issue wedges | [massie-issue-asymmetry.md](../../../docs/skill-work/work-politics/clients/massie-issue-asymmetry.md) |
-| Polling + Polymarket | [polling-and-markets.md](../../../docs/skill-work/work-politics/polling-and-markets.md) |
-| Content queue (optional log) | [content-queue.md](../../../docs/skill-work/work-politics/content-queue.md) |
-
-**SMM label in portable body:** In grace-mar, **Xavier** = SMM role for @usa_first_ky (see account-x doc).
