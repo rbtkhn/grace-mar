@@ -2,7 +2,7 @@
 
 > **Append-only** log for the **work-xavier** territory (advisor module, mirrors, runbooks — **not** Xavier’s Record). **Rotatable.**
 
-**Instance-wide `hey` cadence:** [work-memory.md](../../../users/grace-mar/work-memory.md).
+**Operator rhythm:** [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) (**`hey`**). **Per-lane milestones:** this file — see [work-modules-history-principle.md](../work-modules-history-principle.md).
 
 ## How to append
 

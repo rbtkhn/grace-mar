@@ -252,7 +252,6 @@ grace-mar/
         ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
         ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)
         ├── self-memory.md      # self-memory — short/medium/long continuity (optional; not part of Record; rotatable)
-        ├── work-memory.md      # Append-only log of hey-triggered operator sessions (WORK; optional; not part of Record)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging
         ├── reflection-proposals/  # Operator reflection cycle outputs (REFLECT-*.md); not canonical Record

@@ -2,7 +2,7 @@
 
 > **Append-only** log for the **work-politics** territory (briefs, campaign assets, WPC, KY-4 / Massie lane). **Not** Record truth; **not** companion [self-memory](../../../users/grace-mar/self-memory.md). **Rotatable.**
 
-**Distinct from:** [work-politics-sources.md](work-politics-sources.md). **Instance-wide `hey` cadence:** [work-memory.md](../../../users/grace-mar/work-memory.md).
+**Distinct from:** [work-politics-sources.md](work-politics-sources.md). **Operator rhythm:** [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) (**`hey`**). **Per-lane log:** this file — [work-modules-history-principle.md](../work-modules-history-principle.md).
 
 ## How to append
 

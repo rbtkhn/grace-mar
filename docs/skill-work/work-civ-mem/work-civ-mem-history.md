@@ -2,7 +2,7 @@
 
 > **Append-only** log for the **work-civ-mem** territory (`civilization_memory` stewardship, audits, drift, contribution prep). **Not** Record truth for Grace-Mar companion. **Rotatable.**
 
-**Instance-wide `hey` cadence:** [work-memory.md](../../../users/grace-mar/work-memory.md).
+**Operator rhythm:** [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) (**`hey`**). **Per-lane milestones:** this file — see [work-modules-history-principle.md](../work-modules-history-principle.md).
 
 ## How to append
 

@@ -2,7 +2,7 @@
 
 > **Append-only** log for the **work-strategy** territory (daily brief config, cross-territory strategy, `daily-brief-focus`, RSS / scoring hooks). **Not** Record truth; **not** companion [self-memory](../../../users/grace-mar/self-memory.md). **Rotatable.**
 
-**Distinct from:** instance-wide [work-memory.md](../../../users/grace-mar/work-memory.md) (**`hey`** only). **Lane CI:** [LANE-CI.md](LANE-CI.md).
+**Distinct from:** **Lane CI:** [LANE-CI.md](LANE-CI.md). **Operator rhythm:** [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) (**`hey`**). **Per-lane log:** this file — [work-modules-history-principle.md](../work-modules-history-principle.md).
 
 ## How to append
 

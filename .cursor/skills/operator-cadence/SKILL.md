@@ -10,9 +10,9 @@ description: "Grace-Mar operator cadence and tempo. Single trigger: hey (modifie
 
 Use this skill when the operator wants a **paced** work block: repo-grounded snapshot, fixed **A–H** menu, and weekday-aware **cadence** (tempo), not ad-hoc drift.
 
-### Work-memory (optional log — **`hey`** is the trigger)
+### Session trail (optional — **`hey`** is the trigger)
 
-Sessions begin when the operator says **`hey`** (optional modifiers: **`hey light`**, **`hey minimal`**, **`hey survey`**). Log whether Step 1 was **work-start** or **closeout** in work-memory when you keep a trail. To keep an **append-only** log (trigger phrase, Step 1 scripts, **A–H** path, artifacts, optional “recursion feed”), maintain [`users/grace-mar/work-memory.md`](../../../users/grace-mar/work-memory.md). **Not** the gated Record; **not** [`self-memory`](../../../users/grace-mar/self-memory.md). See [canonical-paths.md](../../../docs/canonical-paths.md) and [work-menu-conventions.md](../../../docs/skill-work/work-menu-conventions.md) (choice journal vs work-memory).
+Sessions begin when the operator says **`hey`** (optional modifiers: **`hey light`**, **`hey minimal`**, **`hey survey`**). To keep a trail: use **`users/<id>/session-transcript.md`** (raw continuity; **`log_operator_choice.py`** for **`[WORK-choice]`** menu picks) and/or append dated bullets to the relevant **`docs/skill-work/work-*/*-history.md`** files per [work-modules-history-principle.md](../../../docs/skill-work/work-modules-history-principle.md). **Not** the gated Record; **not** [`self-memory`](../../../users/grace-mar/self-memory.md). See [work-menu-conventions.md](../../../docs/skill-work/work-menu-conventions.md).
 
 ## Cadence by weekday
 
