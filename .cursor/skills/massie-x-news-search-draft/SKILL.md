@@ -1,6 +1,6 @@
 ---
 name: massie-x-news-search-draft
-description: Runs real-time web news search on KY-4 / Massie-relevant topics and outputs cited news briefs plus suggested X post drafts for the independent analysis account (@usa_first_ky). Use when the operator asks for Massie X ideas from today's news, real-time news hooks, tweet drafts from current events, or unofficial analysis social copy tied to breaking stories.
+description: "Draft-only X copy for @usa_first_ky (unofficial KY-4 analysis): real-time web search, cited news briefs, suggested posts—operator must approve before any post; never auto-post or publish. Triggers: Massie X, tweet draft, KY-4 news today, breaking story hooks, usa_first_ky."
 ---
 
 # Massie X — real-time news search and draft posts

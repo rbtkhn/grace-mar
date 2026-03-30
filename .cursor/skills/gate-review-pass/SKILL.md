@@ -1,6 +1,6 @@
 ---
 name: gate-review-pass
-description: Generate a recommendation-oriented RECURSION-GATE review summary with quick-merge candidates, duplicate hints, stale items, and escalation signals. Use when reviewing pending candidates, checking gate backlog, or deciding what should be approved, deferred, or investigated next.
+description: "Read-only RECURSION-GATE review pass: ordered recommendations, duplicate/stale hints, escalation signals—companion decides; never merge into SELF/EVIDENCE/prompt or run process_approved_candidates without explicit companion approval and per-candidate id+summary echo (AGENTS). Triggers: review gate backlog, pending CANDIDATE-XXXX, what to approve defer or investigate next, gate-review-pass."
 ---
 
 # Gate Review Pass
