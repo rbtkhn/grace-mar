@@ -22,6 +22,7 @@
 | Capability index (THINK, WRITE, etc.) | **`users/[id]/self-skills.md`** — legacy `skills.md` is still read if present (see `scripts/repo_io.py` `resolve_surface_markdown_path`) |
 | Curated references, canon | `users/[id]/self-library.md` |
 | Self-memory (continuity — short/medium/long; not Record) | **`users/[id]/self-memory.md`** — standard label **self-memory**. Legacy instances may still have **`memory.md`**; readers resolve **self-memory first**, then **memory.md**, via `scripts/repo_io.py` `resolve_self_memory_path`. |
+| Self-history (derived dual log — not Record) | **`users/[id]/self-history.md`** — optional **systematic** timeline: **WORK** aggregate from **`docs/skill-work/work-*/*-history.md`** plus **gate-approved** **COMPANION** thread (pointers/summaries from merged **SELF/EVIDENCE** only). **Derived gazette**; not a merge bypass. See file header fence. |
 | Intent (goals, tradeoffs — YAML in fenced block; see [intent-template.md](intent-template.md)) | `users/[id]/intent.md` |
 
 All paths are **lowercase** with hyphens where used (e.g. `self-archive.md`, `recursion-gate.md`).

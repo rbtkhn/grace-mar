@@ -129,6 +129,10 @@ MEMORY (**self-memory**, canonical path `users/[id]/self-memory.md`; legacy `mem
 
 See `docs/memory-template.md`.
 
+### 11a. Self-history (derived dual log — not Record)
+
+**`self-history`** (`users/[id]/self-history.md`, optional) is a **derived** timeline: **(1)** dense consolidation of **`docs/skill-work/work-*/*-history.md`** (**WORK** stream) and **(2)** **gate-approved** companion-relevant lines (**COMPANION** stream — from merged **SELF/EVIDENCE** only, not pending candidates). It is **not** authoritative identity truth; **SELF** and merged **EVIDENCE** remain canonical. **Nothing** becomes Record fact **only** because it appears here — pipeline and companion approval rules are unchanged. See [canonical-paths.md](docs/canonical-paths.md) and the file’s header fence.
+
 ---
 
 ## Permission Boundaries
@@ -252,6 +256,7 @@ grace-mar/
         ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
         ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)
         ├── self-memory.md      # self-memory — short/medium/long continuity (optional; not part of Record; rotatable)
+        ├── self-history.md     # Derived dual log: WORK aggregate + gate-approved companion thread (optional; not Record)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging
         ├── reflection-proposals/  # Operator reflection cycle outputs (REFLECT-*.md); not canonical Record

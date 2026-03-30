@@ -132,11 +132,12 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
                 "canonical": False,
                 "surfaces": [
                     "self-memory.md",
+                    "self-history.md",
                     "session-transcript.md",
                     "session-log tail",
                     "warmup digest",
                 ],
-                "note": "Continuity aids only. Do not treat as Record truth.",
+                "note": "Continuity aids only. Do not treat as Record truth. self-history is a derived dual log (WORK aggregate + approved companion thread), not canonical identity.",
             },
             "audit": {
                 "canonical": False,

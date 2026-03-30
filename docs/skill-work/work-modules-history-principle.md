@@ -34,3 +34,5 @@
 **Legacy / merged territories** (no dedicated history file; use **work-dev** or parent): `work-build-ai` → work-dev; `work-grace-gems` → work-business/grace-gems (log in **work-business-history** or gem-specific notes).
 
 **Cross-reference:** Authorized sources lists — [work-modules-sources-principle.md](work-modules-sources-principle.md).
+
+**Optional downstream rollup:** Per-instance **`users/[id]/self-history.md`** may **densely aggregate** these territory logs into one timeline alongside a **gate-approved companion** thread — **derived**, not Record; see [canonical-paths.md](../canonical-paths.md) and **AGENTS.md** § 11a.
