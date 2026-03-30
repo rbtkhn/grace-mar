@@ -10,6 +10,8 @@
 | `.cursor/skills/<skill-name>/CURSOR_APPENDIX.md` | **grace-mar only:** repo paths, script commands, internal doc links |
 | `.cursor/skills/<skill-name>/SKILL.md` | **Generated** — do not hand-edit; run sync (see below) |
 
+**In-repo examples:** `massie-x-news-search-draft` (content skill) · `portable-skills-sync` (pipeline skill — use when changing this layout).
+
 **Regenerate Cursor skill files**
 
 ```bash

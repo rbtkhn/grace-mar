@@ -19,4 +19,4 @@
 
 | Date | Working name | Trigger | Pointer |
 |------|--------------|---------|---------|
-| 2026-03-29 | portable-skills-sync | After changing `skills-portable/**`, `manifest.yaml`, or a `CURSOR_APPENDIX.md`; before commit — run `--verify` then sync | `scripts/sync_portable_skills.py`; scaffold commits `2d2f2b5`, discovery wiring `6c74036` |
+| 2026-03-29 | portable-skills-sync | *(promoted)* — use skill **`portable-skills-sync`** (`.cursor/skills/portable-skills-sync/SKILL.md`); same trigger | `skills-portable/portable-skills-sync/SKILL.md` + manifest |
