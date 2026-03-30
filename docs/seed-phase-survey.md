@@ -4,7 +4,28 @@
 
 Operators use these prompts to collect answers that map into seed-phase JSON artifacts. This doc is **not** the live Record.
 
+**New to roles, the gate, or the triad?** Read [start-here.md](start-here.md) first—including **[Choose your path](start-here.md#choose-your-path)** (A–F)—then return here to capture answers.
+
 See [seed-phase-artifacts.md](seed-phase-artifacts.md) for the file layout and [seed-phase.md](seed-phase.md) for the protocol.
+
+<a id="calibrate-from-your-start-here-path"></a>
+
+## Calibrate from your start-here path
+
+Use this table after you pick **A–F** on [start-here — Choose your path](start-here.md#choose-your-path). These hints **only** shape how you read and prioritize questions; they do **not** change JSON schemas, required artifacts, or validation.
+
+| Pick | Who | How to use this survey |
+|------|-----|-------------------------|
+| **A** | Companion | Normally you complete this **with** your operator. Focus free text on **comfort, boundaries, and topics to avoid** (maps well to `important_constraints` and `notes`). Let the operator handle enum fields and file names—you sanity-check meaning, not syntax. |
+| **B** | Parent or guardian | Read **[work-dev](#work-dev-seed-survey)** Q9–10 and **[work-business](#work-business-seed-survey)** Q9 **first** as guardrail prompts. The operator transcribes into JSON; you align on **who approves**, **who has repo access**, and **what must not be implied** about the companion. Skim the rest only if the companion has real dev or business exposure. |
+| **C** | Operator | **Default path:** work through **[work-dev](#work-dev-seed-survey)** and **[work-business](#work-business-seed-survey)** as the instance needs. If **time-boxed**: do **work-dev** first when the fork is dev-heavy; **work-business** first when commerce is central. Always fill **`important_constraints`** (and equivalents) in each section you use. |
+| **D** | Technical contributor | Prioritize **work-dev** with **strict** enum mapping per the tables. For **work-business**: at minimum Q1 (`business_involvement`), Q9 (constraints), Q10 (focuses); expand the full block unless `business_involvement` is `none`. |
+| **E** | Curious visitor | **Skip this file** unless you step into an operator role. Concepts live on [start-here](start-here.md) and [conceptual-framework.md](conceptual-framework.md). |
+| **F** | Journalist / blogger | **Not interview copy.** Do not publish answers or infer private facts without **operator and companion** consent. Use [start-here door F](start-here.md#door-f) and cited links there; treat this doc as **internal formation** only. |
+
+**Combos:** **B then C** — apply row **B**, then row **C** for capture order. **C with D** — follow **C** ordering; apply **D** enum discipline on work-dev.
+
+**Optional artifact field:** When you create or update **`seed_intake.json`**, you may set **`start_here_pick`** to **`A`**–**`F`** to record which path was chosen (reproducibility for operators and tooling). It is **not** companion identity data—omit the key if unknown.
 
 ---
 

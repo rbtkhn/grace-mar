@@ -55,7 +55,7 @@ Default config path: `docs/skill-work/work-strategy/daily-brief-config.json`.
 
 **Same-story grouping:** After ranking, items can be clustered by anchor overlap on `title + link` (default anchor list in the script; optional `story_anchor_phrases` in JSON extends it). This is **not** semantic dedupe—raise `jaccard_min` / `min_shared_anchors` if clusters feel loose; disable via config `story_dedupe.enabled: false` or CLI `--no-story-dedupe`.
 
-**Operator habit:** Starting Cursor with **“good morning”** runs warmup in [.cursor/skills/daily-warmup/SKILL.md](../../.cursor/skills/daily-warmup/SKILL.md) (see bootstrap). **Generating** today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` is **good morning menu C** — Step 1 does **not** run the generator.
+**Operator habit:** Starting Cursor with **“hey”** runs warmup in [.cursor/skills/operator-cadence/SKILL.md](../../.cursor/skills/operator-cadence/SKILL.md) (see bootstrap). **Generating** today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` is **hey menu C** — Step 1 does **not** run the generator.
 
 ---
 

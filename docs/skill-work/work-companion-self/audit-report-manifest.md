@@ -19,9 +19,11 @@ Paths: companion-self template-manifest.json
   - docs/seed-phase.md
   - docs/skill-work/README.md
   - docs/skill-work/self-work/README.md
+  - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
   - docs/skill-work/self-work/sync-pack/README.md
   - docs/skill-work/work-business/README.md
   - docs/skill-work/work-dev/README.md
+  - docs/skill-work/work-dev/git-branch-hygiene.md
   - scripts/generate-seed-dossier.py
   - users/_template/review-queue/README.md
   - users/_template/seed-phase/README.md
@@ -110,12 +112,14 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-dev/generated/known-gaps.generated.md
   - docs/skill-work/work-dev/generated/proof-ledger.generated.md
   - docs/skill-work/work-dev/generated/target-registry.generated.md
+  - docs/skill-work/work-dev/google-workspace-cli-operator.md
   - docs/skill-work/work-dev/handback-analysis-checklist.md
   - docs/skill-work/work-dev/integration-status.md
   - docs/skill-work/work-dev/known-gaps.md
   - docs/skill-work/work-dev/lane-scope-checklist.md
   - docs/skill-work/work-dev/objection-log.md
   - docs/skill-work/work-dev/offers.md
+  - docs/skill-work/work-dev/operator-heartbeat-external-model-prompt.md
   - docs/skill-work/work-dev/partner-channel.md
   - docs/skill-work/work-dev/product/diagnostics_report_template.md
   - docs/skill-work/work-dev/product/diagnostics_spec.md
@@ -337,6 +341,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-xavier/TEMPLATE-BASELINE.md
   - docs/skill-work/work-xavier/TERMS-XAVIER.md
   - docs/skill-work/work-xavier/content-plan-week1-2026-03-24.md
+  - docs/skill-work/work-xavier/content-plan-week2-2026-03-31.md
   - docs/skill-work/work-xavier/content-spec-3-month-10000-budget.md
   - docs/skill-work/work-xavier/first-good-morning-runbook.md
   - docs/skill-work/work-xavier/week2-execution-2026-03-31.md
@@ -350,6 +355,7 @@ Paths: companion-self template-manifest.json
   - docs/skill-work/work-xavier/work-politics-mirror/README.md
   - docs/skill-work/work-xavier/work-politics-mirror/SYNC-CONTRACT.md
   - docs/skill-work/work-xavier/work-politics-mirror/SYNC-LOG.md
+  - docs/skill-work/work-xavier/xavier-smm-capability-rubric.md
 
 ### Same (no action)
   - bridges/bridge-schema.json
@@ -363,10 +369,10 @@ Paths: companion-self template-manifest.json
   - docs/self-identity/intent-coherence-checklist.md
   - docs/self-library-example-corpus-grace-mar-derived.md
   - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
-  - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
   - docs/skill-work/self-work/sync-pack/SYNC-CONTRACT.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-LOG.template.md
-  ... and 71 more
+  - docs/skill-work/skill-work-alpha-school/README.md
+  ... and 70 more
 
-Summary: same=86 differ=25 only_template=0 only_instance=318
+Summary: same=85 differ=27 only_template=0 only_instance=322

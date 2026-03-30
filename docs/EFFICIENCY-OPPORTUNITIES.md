@@ -56,9 +56,9 @@ Brief scan for at least 2% efficiency gains. Focus: I/O reduction, duplicate wor
 
 ## 6. **Harness warmup / operator_daily_warmup — Shared gate read**
 
-**Issue:** Both read `recursion-gate.md` and compute pending (warmup uses `pending_by_territory`; daily warmup has its own `_pending_candidates`). If both run in the same script or sequence, gate is read twice.
+**Issue:** Both read `recursion-gate.md` and compute pending (harness warmup uses `pending_by_territory`; `operator_daily_warmup` has its own `_pending_candidates`). If both run in the same script or sequence, gate is read twice.
 
-**Fix:** If daily warmup ever calls or is composed with harness_warmup (or vice versa), pass the gate content or a shared “gate state” instead of reading twice. Otherwise leave as is.
+**Fix:** If `operator_daily_warmup` ever calls or is composed with harness_warmup (or vice versa), pass the gate content or a shared “gate state” instead of reading twice. Otherwise leave as is.
 
 **Impact:** ≥2% only when both run in the same session; otherwise negligible.
 

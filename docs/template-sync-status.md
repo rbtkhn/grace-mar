@@ -38,7 +38,7 @@ Living document for **alignment** between this **instance** and the [companion-s
 - **[CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md)** — grace-mar **reference extension** (~760+ lines); companion-self ~240-line portable baseline. Opening **Template alignment** paragraph documents the split.
 - **[approval-inbox-spec.md](approval-inbox-spec.md)** — **Portable baseline** link + grace-mar extended UX/API spec.
 - **Historical seed narrative** vs Seed Phase v2 numbered stages — [companion-self-seed-phase-v2-mapping.md](companion-self-seed-phase-v2-mapping.md).
-- **Operator tooling** (harness, work-jiang, daily warmup) — instance-specific; not required to match template minimal student app.
+- **Operator tooling** (harness, work-jiang, operator cadence / `operator_daily_warmup`) — instance-specific; not required to match template minimal student app.
 - **`docs/skill-work/work-*`** — large **instance-only** trees (work-build-ai legacy, generated dashboards, etc.); entrypoint READMEs carry **template mirror** links for diff hygiene.
 
 ---

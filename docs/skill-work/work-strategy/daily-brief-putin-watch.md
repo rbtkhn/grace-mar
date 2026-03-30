@@ -1,8 +1,8 @@
-# Putin — last 48 hours (good morning menu C / daily brief)
+# Putin — last 48 hours (hey menu C / daily brief)
 
 **Purpose:** Standing **operator WORK** slice for the daily brief: **Vladimir Putin’s public statements and visible activity** in a **rolling 48-hour** window (not Record truth, not Voice knowledge).
 
-**When:** When the operator chooses **good morning menu C** (Daily brief) in the [daily-warmup skill](../../../.cursor/skills/daily-warmup/SKILL.md): run the **web scan**, then write the **compact block** (bullets + URLs) into **§1d** (`## 1d. Putin — last 48 hours`) **in the daily brief file** after `generate_work_politics_daily_brief.py` (or when refreshing an existing today’s file). Step 1 **good morning** does **not** run this scan — it is part of **C** only.
+**When:** When the operator chooses **hey menu C** (Daily brief) in the [operator-cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md): run the **web scan**, then write the **compact block** (bullets + URLs) into **§1d** (`## 1d. Putin — last 48 hours`) **in the daily brief file** after `generate_work_politics_daily_brief.py` (or when refreshing an existing today’s file). Step 1 **hey** does **not** run this scan — it is part of **C** only.
 
 ---
 

@@ -20,7 +20,7 @@ Any `FAIL` means keep `companion-xavier` as validation harness.
 - [ ] Create a fresh instance from `companion-self` (no Xavier subtree copied).
 - [ ] Complete seed survey and capture without custom docs.
 - [ ] Initialize WORK intake from survey + uploaded docs.
-- [ ] Run first `good morning` with:
+- [ ] Run first `hey` with:
   - [ ] `work-dev` sync check
   - [ ] `work-politics` sync check
   - [ ] template alignment check (GitHub upstream)

@@ -32,6 +32,11 @@
       }
     },
     "education_focus": { "type": "array", "items": { "type": "string" } },
+    "start_here_pick": {
+      "type": "string",
+      "description": "Optional: which start-here Choose your path (A–F) the reader selected before seed formation; navigation metadata only, not Record truth.",
+      "enum": ["A", "B", "C", "D", "E", "F"]
+    },
     "completion": {
       "type": "object",
       "additionalProperties": false,

@@ -22,4 +22,4 @@ flowchart LR
   Upstream --> TemplateRepo
 ```
 
-**Audits that touch both tooling and docs:** use [daily-warmup](../../.cursor/skills/daily-warmup/SKILL.md) good morning **A** and the **reconciliation code** checklist in [work-companion-self/README.md — Reconciliation code audit](work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream).
+**Audits that touch both tooling and docs:** use [operator-cadence](../../.cursor/skills/operator-cadence/SKILL.md) hey **A** and the **reconciliation code** checklist in [work-companion-self/README.md — Reconciliation code audit](work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream).

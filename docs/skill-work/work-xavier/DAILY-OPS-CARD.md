@@ -1,6 +1,6 @@
 # Daily Ops Card (xavier)
 
-Use this as the final required output of `good morning`.
+Use this as the final required output of `hey`.
 
 Keep it short, concrete, and runnable.
 

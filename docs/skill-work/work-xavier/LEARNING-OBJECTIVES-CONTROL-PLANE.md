@@ -57,9 +57,9 @@
 
 ---
 
-## 3a) Daily bridge from good morning to objectives
+## 3a) Daily bridge from hey to objectives
 
-Each daily `good morning` should include one suggested `work-xavier` development path:
+Each daily `hey` should include one suggested `work-xavier` development path:
 - map it to exactly one LO (`LO-01`..`LO-06`)
 - map it to exactly one business-skill outcome
 - define 1-2 same-day observable completion checks

@@ -4,6 +4,8 @@
 
 These files are **pre-activation formation outputs**. They are **not** the live Record (`self.md`, `self-evidence`, IX files). After activation, instance repos use the **gated pipeline** to merge evidence into the Record.
 
+**Orientation:** [start-here.md](start-here.md) — [Choose your path](start-here.md#choose-your-path) (A–F), then [survey calibration](seed-phase-survey.md#calibrate-from-your-start-here-path) when capturing seeds.
+
 ---
 
 ## Canonical layout
@@ -22,7 +24,7 @@ Two reference trees in this repo:
 | File | Stage(s) | Role |
 |------|----------|------|
 | `seed-phase-manifest.json` | All | Index: versions, status, artifact paths, optional changelog. |
-| `seed_intake.json` | 0 | Intake, constraints, education focus, completion metrics. |
+| `seed_intake.json` | 0 | Intake, constraints, education focus, completion metrics. Optional **`start_here_pick`** (`A`–`F`): which [start-here Choose your path](start-here.md#choose-your-path) was used before formation (navigation metadata; validated by `seed-intake.v1.json`). |
 | `seed_identity.json` | 1 | Identity scaffold + confidence. |
 | `seed_curiosity.json` | 2 | Curiosity scaffold + confidence. |
 | `seed_pedagogy.json` | 3 | Pedagogy scaffold + confidence. |

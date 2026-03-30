@@ -8,9 +8,11 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/identity-fork-protocol.md
   - docs/skill-work/README.md
   - docs/skill-work/self-work/README.md
+  - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
   - docs/skill-work/self-work/sync-pack/README.md
   - docs/skill-work/work-business/README.md
   - docs/skill-work/work-dev/README.md
+  - docs/skill-work/work-dev/git-branch-hygiene.md
 
 ### Instance additions (in instance, not in template)
   - AGENTS.md
@@ -97,12 +99,14 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-dev/generated/known-gaps.generated.md
   - docs/skill-work/work-dev/generated/proof-ledger.generated.md
   - docs/skill-work/work-dev/generated/target-registry.generated.md
+  - docs/skill-work/work-dev/google-workspace-cli-operator.md
   - docs/skill-work/work-dev/handback-analysis-checklist.md
   - docs/skill-work/work-dev/integration-status.md
   - docs/skill-work/work-dev/known-gaps.md
   - docs/skill-work/work-dev/lane-scope-checklist.md
   - docs/skill-work/work-dev/objection-log.md
   - docs/skill-work/work-dev/offers.md
+  - docs/skill-work/work-dev/operator-heartbeat-external-model-prompt.md
   - docs/skill-work/work-dev/partner-channel.md
   - docs/skill-work/work-dev/product/diagnostics_report_template.md
   - docs/skill-work/work-dev/product/diagnostics_spec.md
@@ -324,6 +328,7 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-xavier/TEMPLATE-BASELINE.md
   - docs/skill-work/work-xavier/TERMS-XAVIER.md
   - docs/skill-work/work-xavier/content-plan-week1-2026-03-24.md
+  - docs/skill-work/work-xavier/content-plan-week2-2026-03-31.md
   - docs/skill-work/work-xavier/content-spec-3-month-10000-budget.md
   - docs/skill-work/work-xavier/first-good-morning-runbook.md
   - docs/skill-work/work-xavier/week2-execution-2026-03-31.md
@@ -337,11 +342,11 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/work-xavier/work-politics-mirror/README.md
   - docs/skill-work/work-xavier/work-politics-mirror/SYNC-CONTRACT.md
   - docs/skill-work/work-xavier/work-politics-mirror/SYNC-LOG.md
+  - docs/skill-work/work-xavier/xavier-smm-capability-rubric.md
   - docs/skills-template.md
 
 ### Same (no action)
   - docs/skill-work/self-work/sync-pack/ENABLE-SYNC-PACK.md
-  - docs/skill-work/self-work/sync-pack/INITIAL-GOOD-MORNING.md
   - docs/skill-work/self-work/sync-pack/SYNC-CONTRACT.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-DAILY.template.md
   - docs/skill-work/self-work/sync-pack/SYNC-LOG.template.md
@@ -352,4 +357,4 @@ Paths: grace-mar MERGING-FROM-COMPANION-SELF
   - docs/skill-work/skill-work-human-teacher/README.md
   - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md
 
-Summary: same=11 differ=6 only_template=0 only_instance=325
+Summary: same=10 differ=8 only_template=0 only_instance=329

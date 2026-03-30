@@ -16,7 +16,7 @@ Never auto-apply Record changes.
 
 ## Daily good-morning sync check
 
-Each `good morning`, run a `work-politics` relevance scan and return:
+Each `hey`, run a `work-politics` relevance scan and return:
 
 1. **No relevant updates**, or
 2. **Relevant updates found** (top updates to mirror)

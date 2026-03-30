@@ -47,7 +47,7 @@ When in doubt, default to Session (conversational, no merges).
 
 **Proposal format:** One paragraph with: (1) Scope — what's in, what's out; (2) Approach — high-level steps or method; (3) Files — paths to create or modify. Trivial fixes (typos, obvious corrections) may skip proposal.
 
-**Edit restraint:** When the operator asks to "think about", "consider", or explores conceptually — answer in prose. Do not edit files unless implementation is clearly requested ("do it", "implement", "add this"). If unclear, prefer answer over edit.
+**Edit restraint:** When the operator asks to "think about", "consider", or explores conceptually — answer in prose. **Perhaps** / **maybe** (or clear equivalent) means they want **opinion and tradeoffs first**, not an implicit implement — see `.cursor/rules/operator-style.mdc` (Hypothesis Mode / Perhaps–maybe). Do not edit files unless implementation is clearly requested ("do it", "implement", "add this"). If unclear, prefer answer over edit.
 
 ---
 
@@ -248,6 +248,7 @@ grace-mar/
         ├── self-library.md     # SELF-LIBRARY — reference-facing governed domains; CIV-MEM subdomain; not SELF-KNOWLEDGE
         ├── SELF-LIBRARY/       # Navigator: INDEX.md, CIV-MEM.md (optional; points at self-library + corpus)
         ├── self-memory.md      # self-memory — short/medium/long continuity (optional; not part of Record; rotatable)
+        ├── work-memory.md      # Append-only log of hey-triggered operator sessions (WORK; optional; not part of Record)
         ├── session-log.md      # Interaction history
         ├── recursion-gate.md   # Pipeline staging
         ├── reflection-proposals/  # Operator reflection cycle outputs (REFLECT-*.md); not canonical Record

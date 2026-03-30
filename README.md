@@ -2,6 +2,8 @@
 
 **Grace-Mar** — A system that creates and maintains cognitive forks: versioned, evidence-grounded records of an individual's cognitive development, initialized from a real person and growing through curated interactions over a lifetime. **Terminology:** [docs/glossary.md](docs/glossary.md).
 
+**New here?** Plain-language orientation and audience paths: [docs/start-here.md](docs/start-here.md) — quick pick [Choose your path](docs/start-here.md#choose-your-path) (A–F).
+
 ## Concept
 
 The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. The **Record** is not a single blob: it has **four first-class surfaces** — **SELF** (identity, including **SELF-KNOWLEDGE** and optional **self-identity** split commitments), **SELF-LIBRARY** (governed **reference** domains, including **CIV-MEM**), **SKILLS** (capability), and **EVIDENCE** (activity and artifacts). Identity and library are **separate**: civilization-scale reference lives in SELF-LIBRARY, not in SELF-KNOWLEDGE. The fork also tracks what the companion can do (skills) and what happened (evidence). Work territories handle planning and execution without redefining the Record. Queryable, evidence-grounded, gated.
@@ -380,14 +382,14 @@ python scripts/index_record.py query "space Jupiter" -u grace-mar
 python scripts/session_brief.py
 ```
 
-**Seed phase & good morning** — operator bootstrap and short daily ritual (does not merge the Record; use RECURSION-GATE for durable truth):
+**Seed phase & hey** — operator bootstrap and short daily ritual (does not merge the Record; use RECURSION-GATE for durable truth):
 
 ```bash
 python3 scripts/seed-phase-wizard.py -u grace-mar
 python3 scripts/good-morning-brief.py -u grace-mar
 ```
 
-See [docs/seed-phase-wizard.md](docs/seed-phase-wizard.md). Full stack: [.cursor/skills/daily-warmup/SKILL.md](.cursor/skills/daily-warmup/SKILL.md) and `python3 scripts/harness_warmup.py -u grace-mar`.
+See [docs/seed-phase-wizard.md](docs/seed-phase-wizard.md). Full stack: [.cursor/skills/operator-cadence/SKILL.md](.cursor/skills/operator-cadence/SKILL.md) and `python3 scripts/harness_warmup.py -u grace-mar`.
 
 **CMC (Civilization Memory) integration** — when lookup gets a LIBRARY miss, the bot queries [civilization_memory](https://github.com/rbtkhn/civilization_memory) for historical/civilizational questions. Routing: only questions matching CMC scope (Rome, China, ancient civilizations, history, etc.) hit CMC; others skip to full LLM. See [docs/cmc-routing.md](docs/cmc-routing.md). Setup:
 

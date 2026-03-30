@@ -113,11 +113,13 @@ Why this matters: the repo already treats seed phase as a defined artifact pipel
 
 | Resource | Path |
 |----------|------|
+| Plain-language orientation (roles, gate, triad) | [start-here.md](start-here.md) |
 | Stage spec | [seed-phase-stages.md](seed-phase-stages.md) |
 | Readiness | [seed-phase-readiness.md](seed-phase-readiness.md) |
 | Confidence | [seed-phase-confidence-model.md](seed-phase-confidence-model.md) |
 | Artifacts | [seed-phase-artifacts.md](seed-phase-artifacts.md) |
 | Survey prompts | [seed-phase-survey.md](seed-phase-survey.md) |
+| Optional intake metadata | `seed_intake.json` **`start_here_pick`** (`A`–`F`) — [start-here Choose your path](start-here.md#choose-your-path); navigation only |
 | Validation | [seed-phase-validation.md](seed-phase-validation.md) |
 | Schemas | `schema-registry/seed-*.v1.json` |
 | Validator | `scripts/validate-seed-phase.py` |

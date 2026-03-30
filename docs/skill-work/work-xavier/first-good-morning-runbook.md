@@ -23,7 +23,7 @@ Do not:
 
 ## 2) Operator script (read/send to Xavier)
 
-Good morning, Xavier.
+Hey, Xavier.
 
 Today is your first load in `companion-xavier`.  
 This is orientation, not performance.
@@ -50,7 +50,7 @@ Your only goal today is to understand the structure and complete first setup saf
 
 ## 3) Xavier startup script (what she sees)
 
-Good morning, Xavier. Welcome to your first session.
+Hey, Xavier. Welcome to your first session.
 
 Today is orientation and setup:
 1. Learn the workspace layout
@@ -79,7 +79,7 @@ If unclear at any step, pause and ask before posting or merging.
 | 7 | Stage first candidate set in `users/xavier/recursion-gate.md` | Operator | [ ] |
 | 8 | Xavier reviews/approves candidates | Xavier | [ ] |
 | 9 | Run merge script only after approval | Operator | [ ] |
-| 10 | Add session-log line: first good morning complete | Xavier | [ ] |
+| 10 | Add session-log line: first hey complete | Xavier | [ ] |
 
 ---
 

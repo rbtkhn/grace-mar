@@ -1,5 +1,6 @@
 {
   "user_slug": "demo-seed",
+  "start_here_pick": "C",
   "age_band": "teen",
   "primary_use_cases": ["homework support", "curiosity questions"],
   "constraints": {

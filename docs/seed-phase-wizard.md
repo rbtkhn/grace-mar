@@ -2,6 +2,8 @@
 
 **Purpose:** Operator-facing bootstrap and daily start ritual under canonical instance paths. **Governed by:** gated pipeline — these tools do **not** write `self.md`, `self-archive.md`, or `bot/prompt.py`; durable Record changes use [identity-fork-protocol.md](identity-fork-protocol.md).
 
+**Orientation:** For companion vs operator, the triad, and why merges wait for approval, see [start-here.md](start-here.md)—use **[Choose your path](start-here.md#choose-your-path)** (A–F) before long reads. For structured seed questions that map to JSON artifacts, see [seed-phase-survey.md](seed-phase-survey.md), including **[Calibrate from your start-here path](seed-phase-survey.md#calibrate-from-your-start-here-path)** so question order matches who is in the room.
+
 **Template alignment:** Companion-self **Seed Phase v2** (JSON artifacts + schemas) is documented separately; see [companion-self-seed-phase-v2-mapping.md](companion-self-seed-phase-v2-mapping.md) for how this wizard relates to that protocol.
 
 ---
@@ -20,6 +22,8 @@ Companion-self defines **stages 0–7** as the portable formation pipeline ([com
 7. **Readiness Gate** — `seed_readiness.json`, dossier  
 
 **Wizard disclaimer:** `seed-phase-wizard.py` is an **instance** operator tool (reflection proposals, `seed/minimal-core.json`, MEMORY tone, completion marker). It **does not** emit the full template JSON set by itself. Use the mapping doc when reconciling wizard output with template validation or future export tooling.
+
+**`start_here_pick` (A–F):** The wizard **does not** prompt for which [start-here Choose your path](start-here.md#choose-your-path) letter was used. That keeps the interactive flow lighter; optional **`start_here_pick`** on `seed_intake.json` is **operator-set by hand** when filling template JSON—see [seed-phase-survey — Calibrate](seed-phase-survey.md#calibrate-from-your-start-here-path). **Revisit:** add a wizard question only when in-repo tooling **reads** the field (e.g. dossier or automation).
 
 ---
 
@@ -76,12 +80,12 @@ If the instance directory is incomplete, validators are **skipped** with a messa
 
 ## Full morning stack
 
-For RECURSION-GATE state, session tail, and work-politics pulse, use the **daily warmup** skill and harness:
+For RECURSION-GATE state, session tail, and work-politics pulse, use the **operator cadence** skill and harness:
 
-- [`.cursor/skills/daily-warmup/SKILL.md`](../.cursor/skills/daily-warmup/SKILL.md)
+- [`.cursor/skills/operator-cadence/SKILL.md`](../.cursor/skills/operator-cadence/SKILL.md)
 - `python3 scripts/harness_warmup.py -u <id> [--compact]`
 
-The good-morning brief can offer to run `harness_warmup` after the intention prompt.
+The operator cadence flow can offer to run `harness_warmup` after the intention prompt.
 
 ---
 
