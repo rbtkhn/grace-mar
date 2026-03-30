@@ -2,6 +2,8 @@
 
 **Purpose:** One dated file: **work-politics snapshot** + **work-strategy focus** + **RSS ingest** with **two relevance scores** (W = campaign/KY-4, S = product/governance/tech), then operator synthesis.
 
+**Filename (canonical):** `daily-brief-YYYY-MM-DD.md` in this directory — stem `daily-brief-`, ISO date, `.md` only. Example: `daily-brief-2026-03-29.md`. Do not use other prefixes (e.g. `wap-`) or date formats for dated outputs. Repository-wide date rules: [date-time-conventions.md](../../date-time-conventions.md).
+
 **Canonical config:** [daily-brief-config.json](daily-brief-config.json)  
 **Strategy focus bullets:** [daily-brief-focus.md](daily-brief-focus.md)
 
