@@ -6,6 +6,21 @@
 
 ---
 
+## Daily operator cadence
+
+The operator may **upload one or more transcripts per day** for **work-strategy** topics of interest (paste in chat: **episode title**, optional **watch URL**, **body text**). Ingest pattern:
+
+| Step | What |
+|------|------|
+| **File** | New `*.md` in this folder — kebab-case slug from title (optional date prefix `YYYY-MM-DD-` if you want sort-by-day). |
+| **Header** | Source, URL (or “pin when known”), **ingested** date, participants. |
+| **Body** | Short **Perceiver** neutral summary (≤200 words) + optional **strategy hooks** table + **full transcript** with light ASR cleanup. |
+| **Git** | Commit when the digest should live in-repo (operator may say **EXECUTE** / **DOCSYNC** for push). |
+
+Same guardrails as below: research upstream, not Record; verify numbers before ship-facing copy.
+
+---
+
 ## Layout
 
 | Pattern | Use |
