@@ -1,5 +1,6 @@
 ---
 name: work-jiang-feature-checklist
+preferred_activation: jiang check
 description: >-
   Structured workflow for research/external/work-jiang features: branch hygiene,
   scope boundaries, canonical verify commands, and commit granularity aligned to
@@ -9,6 +10,8 @@ description: >-
 ---
 
 # work-jiang feature checklist
+
+**Preferred activation (operator):** say **`jiang check`**.
 
 Operator- and agent-facing checklist so multi-step Jiang work stays reviewable and doesn’t fight context limits or a noisy working tree.
 

@@ -1,9 +1,12 @@
 ---
 name: extract-skill-from-session
+preferred_activation: save skill
 description: After a successful multi-step task or workflow in Cursor, codify it as a Cursor skill (SKILL.md) so the same workflow can be invoked again. Use when the user says "add a skill from this," "turn this into a skill," "save this as a skill," or wants to reuse a workflow from the current or a recent session.
 ---
 
 # Extract Skill From Session
+
+**Preferred activation (operator):** say **`save skill`** (or **`skill from session`**).
 
 Use this skill when the operator has just completed (or is in the middle of) a task that worked well and wants it captured as a reusable Cursor skill — the same idea as "turn this into a skill" in Claude Co-work: never repeat the instructions manually again.
 

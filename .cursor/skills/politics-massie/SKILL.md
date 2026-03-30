@@ -1,5 +1,6 @@
 ---
 name: politics-massie
+preferred_activation: massie x
 description: 'Draft-only X copy for @usa_first_ky (unofficial KY-4 analysis): real-time web search, cited news briefs, suggested posts—operator must approve before any post; never auto-post or publish. Triggers: politics-massie, Massie X, tweet draft, KY-4 news today, breaking story hooks, usa_first_ky.'
 portable: true
 version: 1.1.0
@@ -11,6 +12,8 @@ portable_source: skills-portable/politics-massie/SKILL.md
 synced_by: sync_portable_skills.py
 ---
 # Massie X — real-time news search and draft posts
+
+**Preferred activation (operator):** say **`massie x`**.
 
 Use this skill when drafting **suggested** X (Twitter) content for the **America First Kentucky** account (@usa_first_ky). The agent **searches the live web** for recent stories, then produces **draft-only** posts for human review. **No autonomous posting.**
 

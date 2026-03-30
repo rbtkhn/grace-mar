@@ -1,9 +1,12 @@
 ---
 name: pol-pulse
+preferred_activation: pol pulse
 description: Generate a work-politics pulse with campaign status, blockers, doc freshness, gate rhythm, content queue state, and next actions. Use when checking work-politics readiness, preparing the weekly brief, asking what is stale, or requesting a territory status sweep.
 ---
 
 # Work-politics pulse
+
+**Preferred activation (operator):** say **`pol pulse`**.
 
 Use this skill when the operator wants a territory-specific status pass instead of a full repo warmup.
 

@@ -1,9 +1,12 @@
 ---
 name: gate-review-pass
+preferred_activation: gate review
 description: "Read-only RECURSION-GATE review pass: ordered recommendations, duplicate/stale hints, escalation signals—companion decides; never merge into SELF/EVIDENCE/prompt or run process_approved_candidates without explicit companion approval and per-candidate id+summary echo (AGENTS). Triggers: review gate backlog, pending CANDIDATE-XXXX, what to approve defer or investigate next, gate-review-pass."
 ---
 
 # Gate Review Pass
+
+**Preferred activation (operator):** say **`gate review`**.
 
 Use this skill when the operator wants a structured review pass over pending candidates without taking action yet.
 

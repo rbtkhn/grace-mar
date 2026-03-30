@@ -1,9 +1,12 @@
 ---
 name: weekly-brief-run
+preferred_activation: weekly brief
 description: Run the work-politics weekly brief workflow with readiness checks, blocker reporting, and scaffold generation. Use when preparing the weekly brief, checking if sources are fresh enough, or asking for a first-pass campaign brief.
 ---
 
 # Weekly Brief Run
+
+**Preferred activation (operator):** say **`weekly brief`**.
 
 Use this skill when the operator wants a disciplined weekly brief routine rather than a raw generator call.
 
