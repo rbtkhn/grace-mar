@@ -4,7 +4,7 @@
 
 **Governed by:** [GRACE-MAR-CORE v2.0](grace-mar-core.md)
 
-**See also:** [ARCHITECTURE](architecture.md), [SIMPLE-USER-INTERFACE](simple-user-interface.md), [harness-inventory § Two doors](harness-inventory.md#two-doors-one-book)
+**See also:** [ARCHITECTURE](architecture.md), [SIMPLE-USER-INTERFACE](simple-user-interface.md), [prompt-humane-purpose](prompt-humane-purpose.md) (AGENTS §8 — stance of prompts about the companion), [harness-inventory § Two doors](harness-inventory.md#two-doors-one-book)
 
 ---
 

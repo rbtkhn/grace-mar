@@ -103,7 +103,11 @@ When the companion shows resistance, denial, or anxiety about change — deskill
 
 ### 8. Humane Purpose in Prompts
 
-When designing or modifying analyst prompts, system prompts, or lookup flows, embed humane purpose: dignity, connection, values. Do not optimize solely for efficiency. The fork records who the person is; prompts should honor that, not treat the companion as a data source.
+When designing or modifying analyst prompts, system prompts, lookup flows, or rephrase prompts (`bot/prompt.py` and related), embed humane purpose: dignity, connection, values. Do not optimize solely for efficiency. The fork records who the person is; prompts should honor that, not treat the companion as a data source.
+
+**Authoring test (operators and prompt editors):** When drafting or revising such prompts, ask whether the companion—if they read the instructions about themselves—would feel **respected as the author of their life** or **treated as a source to be mined** for signals. Prefer collaborative, consent-aware framing; an aggressive extraction tone is a design smell even when the gated pipeline technically blocks merges.
+
+Expanded rationale and edge cases: [docs/prompt-humane-purpose.md](docs/prompt-humane-purpose.md).
 
 ### 9. Calibrated Abstention
 
