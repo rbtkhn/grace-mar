@@ -20,13 +20,13 @@ Last updated: 2026-03-28
 
 ### Session tail — 2026-03-28 (operator)
 
-- **Workflow / operator ergonomics (grace-mar):** Multi-root anchor in bootstrap; `docs/operator-agent-lanes.md` git workflow + post-push compare URL + plan-vs-git; `scripts/github_compare_url.py`; `operator_handoff_check` **Derived / export churn** bucket; daily-warmup **good morning light / minimal**; **good morning + good night:** after **A,B,C,D,E,G, or H**, re-offer full **A–H** until **F** (skill + `harness-warmup.mdc` + handoff-check skill).
+- **Workflow / operator ergonomics (grace-mar):** Multi-root anchor in bootstrap; `docs/operator-agent-lanes.md` git workflow + post-push compare URL + plan-vs-git; `scripts/github_compare_url.py`; `operator_handoff_check` **Derived / export churn** bucket; operator-cadence **hey light / minimal**; **hey** (work-start and closeout): after **A,B,C,D,E,G, or H**, re-offer full **A–H** until **F** (skill + `harness-warmup.mdc` + handoff-check skill).
 - **Template sync:** companion-self **pushed** — `self-work` + `sync-pack` README upgrades, IFP full-spec link fix (`identity-fork-protocol.md` on grace-mar). Grace-mar: `merging-from-companion-self.md` IFP short-form vs full spec note; aligned instance `self-work` / `sync-pack` copy; refreshed template audit reports.
 - **work-jiang:** Volume VII Substack essays + `essay-*` analysis memos (prior commits on `main`).
 - **Work-politics / strategy:** `daily-brief-2026-03-28.md`; `polling-and-markets.md` **Last checked** refreshed.
 - **Gate:** 0 pending (confirm in `recursion-gate.md`).
 - **Jiang lane:** `OUTLINE_ACTIVE` — suggested next lever: ch01 chapter outline (`research/external/work-jiang/STATUS.md`).
-- **Re-entry:** `python3 scripts/operator_reentry_stack.py -u grace-mar` (handoff + daily warmup + harness; optional `--compact`) or run scripts individually; one-line snapshot: `python3 scripts/harness_warmup.py -u grace-mar --receipt`. Work-politics pulse: `python3 scripts/operator_work_politics_pulse.py -u grace-mar`. Index: `bootstrap/grace-mar-bootstrap.md` § Re-entry stack.
+- **Re-entry:** `python3 scripts/operator_reentry_stack.py -u grace-mar` (handoff + `operator_daily_warmup` + harness; optional `--compact`) or run scripts individually; one-line snapshot: `python3 scripts/harness_warmup.py -u grace-mar --receipt`. Work-politics pulse: `python3 scripts/operator_work_politics_pulse.py -u grace-mar`. Index: `bootstrap/grace-mar-bootstrap.md` § Re-entry stack.
 
 ---
 

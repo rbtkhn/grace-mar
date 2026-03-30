@@ -64,6 +64,8 @@ python3 scripts/log_operator_choice.py -u grace-mar --context WORK --picked A --
 
 Appends `### [WORK-choice]` blocks to **`users/<id>/session-transcript.md`** (operator continuity, not gated Record).
 
+**`hey` session summaries (work-memory):** Sessions started with **`hey`** (work-start vs closeout; optional light, minimal, survey) can be summarized in a dedicated **append-only** log — **`users/<id>/work-memory.md`** — with trigger phrase, Step 1, menu path, artifacts, optional recursion feed. Distinct from **`session-transcript.md`** (raw/script fragments) and **`self-memory.md`** (companion continuity). See [canonical paths](../canonical-paths.md).
+
 **Aggregate after ~30 days:**
 
 ```bash
@@ -89,8 +91,9 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 
 ## See also
 
-- **Fixed session menu (good morning / good night):** not the 3–5 WORK pattern — use **daily-warmup** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). Roles: [.cursor/skills/daily-warmup/SKILL.md](../../../.cursor/skills/daily-warmup/SKILL.md).
+- **Fixed session menu (hey — work-start and closeout):** not the 3–5 WORK pattern — use **operator-cadence** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). Roles: [.cursor/skills/operator-cadence/SKILL.md](../../../.cursor/skills/operator-cadence/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
-- [Daily warmup skill](../../../.cursor/skills/daily-warmup/SKILL.md)
-- [Bootstrap — good morning](../../../bootstrap/grace-mar-bootstrap.md)
+- [Operator cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md)
+- [Work-memory](../../users/grace-mar/work-memory.md) (grace-mar hey log — pattern: `users/<id>/work-memory.md`)
+- [Bootstrap — hey](../../../bootstrap/grace-mar-bootstrap.md)
 - [Date and time formats](../date-time-conventions.md)

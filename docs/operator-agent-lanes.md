@@ -18,7 +18,7 @@ These lanes govern **tooling and git scope** for the turn, not Abby’s persona 
 - Implement the agreed scope; run checks the operator asked for (tests, linters, `validate-template`, etc.).
 - **`git commit`** when there are changes; **`git push`** when the message includes shipping to remote (name the branch or say “push”).
 - **Tags** (e.g. `template-v0.x.x`) only if the operator states them in the message.
-- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **good morning** / **good night** **A–H** applies or the operator said **no menu**.
+- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **hey** **A–H** applies or the operator said **no menu**.
 
 ### `DOCSYNC`
 
@@ -84,6 +84,6 @@ They **stack**: you can be in **Think** cognitively and still send **`PLAN`** so
 ## See also
 
 - [WORK menu conventions](skill-work/work-menu-conventions.md) — evidence links, heuristic tags, choice logging (`session-transcript`), optional multi-agent note.
-- [Operator style](../.cursor/rules/operator-style.mdc) (always-on; links here) — includes **WORK modules — multiple choice**: labeled next-step options on most turns when working in work-strategy / work-politics / work-jiang / work-dev unless the operator opts out or a fixed menu (e.g. daily-warmup) already applies. **Rationale** (in-rule): lower operator cognitive load (selection vs path enumeration) and use assistant **parallel cognition** to prefetch plausible branches. **No faux “done”** in those menus — work **switches**, it does not end; options are pivots to other real work.
+- [Operator style](../.cursor/rules/operator-style.mdc) (always-on; links here) — includes **WORK modules — multiple choice**: labeled next-step options on most turns when working in work-strategy / work-politics / work-jiang / work-dev unless the operator opts out or a fixed menu (e.g. operator-cadence) already applies. **Rationale** (in-rule): lower operator cognitive load (selection vs path enumeration) and use assistant **parallel cognition** to prefetch plausible branches. **No faux “done”** in those menus — work **switches**, it does not end; options are pivots to other real work.
 - [Operator cognition — North star](lanes/operator-cognition.md)
 - [Bootstrap — Working trees and authority](../bootstrap/grace-mar-bootstrap.md#working-trees-and-authority)

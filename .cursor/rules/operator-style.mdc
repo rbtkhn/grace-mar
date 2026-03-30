@@ -29,7 +29,7 @@ Full spec: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
 - **Roles:** You are an **operator-facing assistant** in this repo. The **companion** holds merge authority over the Record; **Grace-Mar** names the instance/system — do not collapse those into “extension of Grace-Mar” as a stand-in for the companion.
 - **RECURSION-GATE:** **Staging** candidates in `users/[id]/recursion-gate.md` is normal pipeline/operator work. **Merging** into `self.md`, `self-archive.md`, and `bot/prompt.py` is **only** via `scripts/process_approved_candidates.py` (or the receipt flow in AGENTS.md) after companion approval — no ad-hoc profile merges.
 - **MEMORY** (`self-memory.md`) is **not** the Record; see AGENTS.md for hierarchy vs SELF.
-- **Session menus:** When `.cursor/skills/daily-warmup/SKILL.md` applies (good morning / good night), use its fixed **A–H** menu (present **A,B,C,D,E,G,H,F** — **F** ends session); otherwise WORK lanes use **3–5** options and operator-style menus. Say **no menu** / **no options** to opt out.
+- **Session menus:** When `.cursor/skills/operator-cadence/SKILL.md` applies (**hey** — work-start or closeout), use its fixed **A–H** menu (present **A,B,C,D,E,G,H,F** — **F** ends session); otherwise WORK lanes use **3–5** options and operator-style menus. Say **no menu** / **no options** to opt out.
 
 Optional **Google Workspace CLI** (operator-only, non-Record): full recipes and logging live in `docs/skill-work/work-dev/google-workspace-cli-operator.md`. Attach `.cursor/rules/gws-cli-recipes.mdc` in Cursor when using `gws`.
 
@@ -38,6 +38,8 @@ Optional **Google Workspace CLI** (operator-only, non-Record): full recipes and 
 ## Hypothesis Mode
 
 When the operator floats an idea ("suppose we say…", "what if…", "does that help you know…") — treat it as a **probe**, not a directive. Respond to the hypothesis first; do not implement unless they explicitly switch to implementation ("do it", "implement", "add this").
+
+**Perhaps / maybe:** When the operator leads with **perhaps** or **maybe** (or clear equivalent), they want **opinion, tradeoffs, and a recommendation first** — **Think lane**, not an implicit request to edit the repo or run ship. Answer in prose; do not implement unless they then direct execution (same verbs as above, or **EXECUTE** / **DOCSYNC** per lane).
 
 ---
 
@@ -77,7 +79,7 @@ When the operator is clearly working in any **WORK** lane — **work-strategy**,
 **Conventions (detail):** [docs/skill-work/work-menu-conventions.md](../../docs/skill-work/work-menu-conventions.md) — evidence links / `CANDIDATE-XXXX`, optional heuristic tags (`~15m`, `high-leverage`), **combo** line when two branches merge cleanly, choice logging via `scripts/log_operator_choice.py` (session-transcript, not MEMORY).
 
 - **Follow the pick:** If they answer with a letter (or **A+C**), next turn executes that branch and **re-offers** a fresh menu at the end unless they say **no menu** / **no options**.
-- **Skip the menu** when they want a single straight answer, when a **fixed session menu** already applies (e.g. daily-warmup **A–H**), or when they explicitly opt out.
+- **Skip the menu** when they want a single straight answer, when a **fixed session menu** already applies (e.g. operator-cadence **A–H**), or when they explicitly opt out.
 
 Full lane prefixes: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
 
@@ -90,12 +92,12 @@ Full lane prefixes: [docs/operator-agent-lanes.md](../../docs/operator-agent-lan
 **When to offer (one line, not a second menu):** After this turn **completed** a substantive **EXECUTE**, **EXECUTE_LOCAL**, or **DOCSYNC** request (agent **committed**; **push** too if the lane required it), and the work was **more than a trivial one-file typo fix**, offer **one** optional closing line unless:
 
 - the operator said **no menu** / **no options**, or
-- a **fixed session menu** already applies (**good morning** / **good night** **A–H**), or
+- a **fixed session menu** already applies (**hey** **A–H**), or
 - the turn was **PLAN**-only or **read-only**.
 
 **Suggested wording (adapt):** *Skill capture — worth a one-line pointer in `skills-portable/skill-candidates.md` or a draft under `skills-portable/_drafts/`? Say yes, not now, or ignore.*
 
-If the operator says **yes**, append one row to [skills-portable/skill-candidates.md](../../skills-portable/skill-candidates.md) (or draft in `_drafts/` if they want the fuller step). Point to [extract-skill-from-session](../skills/extract-skill-from-session/SKILL.md) when they want a session-shaped **SKILL.md**. Good morning / good night menu **H** is the dedicated skills / meta pipeline slot; **E** (night system pick) may still mention backlog in one line. Full ladder: [skills-portable/README.md](../../skills-portable/README.md) (Discovery ladder).
+If the operator says **yes**, append one row to [skills-portable/skill-candidates.md](../../skills-portable/skill-candidates.md) (or draft in `_drafts/` if they want the fuller step). Point to [extract-skill-from-session](../skills/extract-skill-from-session/SKILL.md) when they want a session-shaped **SKILL.md**. **Hey** menu **H** is the dedicated skills / meta pipeline slot; **E** (closeout system pick) may still mention backlog in one line. Full ladder: [skills-portable/README.md](../../skills-portable/README.md) (Discovery ladder).
 
 ---
 

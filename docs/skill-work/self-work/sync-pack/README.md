@@ -27,10 +27,10 @@ Default initial **hey** (startup) order:
 2) work-dev sync (optional, if established) + next-step suggestions,
 3) work-business sync (optional, if established) + next-step suggestions.
 
-**Hey night** closeout trio (same contracts; legacy filenames on disk):
+**Closeout** trio (same contracts; legacy filenames on disk):
 - [Startup / hey rhythm spec](../../../good-morning-brief-spec.md)
 - [Closeout template](../../../good-night-template.md)
-- [Closeout / hey night spec](../../../good-night-brief-spec.md)
+- [Closeout spec](../../../good-night-brief-spec.md)
 
 ---
 

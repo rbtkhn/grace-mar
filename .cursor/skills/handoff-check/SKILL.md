@@ -1,15 +1,18 @@
 ---
 name: handoff-check
-description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **good night**, this script is **daily-warmup Step 1**; **Step 2** is the fixed **A–H** night menu — **A–D** match good morning (**D** = RECURSION-GATE); **E** = night system pick; **G** = Jiang/PH; **H** = skills pipeline; **F** = end night. See daily-warmup § *Good night*, § *Shared A–C*, § *Shared D*, § *Shared G-H*. Also use when resuming work or checking safe-to-ignore before commit/push.
+preferred_activation: handoff check
+description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **closeout hey** (same trigger **hey**, signing-off intent), this script is **operator-cadence Step 1**; **Step 2** is the fixed **A–H** menu — **A–D** match work-start **hey** (**D** = RECURSION-GATE); **E** = system pick; **G** = Jiang/PH; **H** = skills pipeline; **F** = end closeout. See operator-cadence § *Hey — closeout*, § *Shared A–C*, § *Shared D*, § *Shared G-H*. Also use when resuming work or checking safe-to-ignore before commit/push.
 ---
 
 # Handoff Check
 
+**Preferred activation (operator):** say **`handoff check`** (or **`use handoff-check`**).
+
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset — good night:** When the operator says **good night** (session end), the agent runs **good night Step 1** (this command + summary) then **good night Step 2** (A–H menu) — **A–D** match good morning; see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Shared A–C*, § *Shared D*, § *Shared G-H*, § **Good night**, and § *Good night — multiple choice (A–H required)*. On follow-up turns, **A,B,C,D,E,G, or H** runs the track then **re-offers the full A–H menu** until **F** ends the night session.
+**Preset — closeout:** When the operator says **`hey`** with **closeout intent** (session end, signing off), the agent runs **closeout Step 1** (this command + summary) then **closeout Step 2** (A–H menu) — **A–D** match work-start **hey**; see [operator-cadence/SKILL.md](../operator-cadence/SKILL.md) § *Shared A–C*, § *Shared D*, § *Shared G-H*, § **Hey — closeout**, and § **Hey — closeout — multiple choice**. On follow-up turns, **A,B,C,D,E,G, or H** runs the track then **re-offers the full A–H menu** until **F** ends the closeout pass.
 
-**Good morning (related):** After **A,B,C,D,E,G, or H**, **re-offer the full A–H morning menu** each turn until **F** — same loop shape as good night (morning **D** = RECURSION-GATE; night **E** = system pick); see [daily-warmup/SKILL.md](../daily-warmup/SKILL.md) § *Good morning — multiple choice (A–H required)*.
+**Work-start hey (related):** After **A,B,C,D,E,G, or H**, **re-offer the full A–H menu** each turn until **F** — same loop shape as closeout (work-start **D** = RECURSION-GATE; closeout **E** = system pick); see [operator-cadence/SKILL.md](../operator-cadence/SKILL.md) § *Hey — multiple choice (A–H required)*.
 
 ## Default command
 
@@ -31,7 +34,7 @@ Summarize:
 - runtime-only noise that should stay uncommitted
 - work-politics continuity if relevant
 - the best next re-entry prompt
-- **Skill discovery (one line, optional):** If the thread had a repeatable multi-step workflow, mention [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md) and good night menu **H** (skills / meta pipeline) / [extract-skill-from-session](../extract-skill-from-session/SKILL.md) — do not block the handoff on it.
+- **Skill discovery (one line, optional):** If the thread had a repeatable multi-step workflow, mention [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md) and **menu H** (skills / meta pipeline) / [extract-skill-from-session](../extract-skill-from-session/SKILL.md) — do not block the handoff on it.
 
 ## Guardrails
 

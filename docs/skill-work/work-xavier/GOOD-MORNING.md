@@ -1,4 +1,6 @@
-# GOOD-MORNING — Xavier instance (`fork_id`: xavier, **her repo**)
+# HEY (daily rhythm) — Xavier instance (`fork_id`: xavier, **her repo**)
+
+*Filename `GOOD-MORNING.md` is legacy; grace-mar operator activation is **hey** only (work-start vs closeout intent) — mirror that vocabulary in chat.*
 
 **Where Record paths live:** [INSTANCE-PATHS.md](INSTANCE-PATHS.md). Run harness / integrity / gate steps **in Xavier’s `companion-xavier` repository**, not in grace-mar.
 
@@ -8,7 +10,7 @@
 
 ## Daily rhythm (shape)
 
-Mirror grace-mar **daily-warmup** cadence in *shape* — edit for Xavier’s lanes (companion-self build + EA/SMM client work when applicable):
+Mirror grace-mar **operator-cadence** cadence in *shape* — edit for Xavier’s lanes (companion-self build + EA/SMM client work when applicable):
 
 1. Optional: `python3 scripts/operator_daily_warmup.py -u xavier` (if bundled in template).
 2. `python3 scripts/harness_warmup.py -u xavier` — gate / session tail snapshot.
@@ -20,11 +22,11 @@ Mirror grace-mar **daily-warmup** cadence in *shape* — edit for Xavier’s lan
 8. Run template-alignment sync check against [self-work/sync-pack](../self-work/sync-pack/README.md).
 9. Publish final daily run plan in [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md).
 
-**Distinguish:** “Good morning” here = **her** Record + **her** work stack. Massie/client material is **WORK**, not SELF.
+**Distinguish:** “Hey” here = **her** Record + **her** work stack. Massie/client material is **WORK**, not SELF.
 
 ## Required daily output: work-dev sync check
 
-Each `good morning` should include:
+Each `hey` should include:
 
 - `work-dev sync status:` no relevant updates / relevant updates found / blocked
 - if relevant updates found: up to 5 proposed `work-dev-mirror` file updates with one-line reason each
@@ -52,7 +54,7 @@ Output:
 
 ## Required daily output: work-politics sync check
 
-Each `good morning` should include:
+Each `hey` should include:
 
 - `work-politics sync status:` no relevant updates / relevant updates found / blocked
 - if relevant updates found: up to 5 proposed `work-politics-mirror` file updates with one-line reason each
@@ -80,7 +82,7 @@ Output:
 
 ## Required daily output: unified sync snapshot
 
-Each `good morning` should update [SYNC-DAILY.md](SYNC-DAILY.md) with:
+Each `hey` should update [SYNC-DAILY.md](SYNC-DAILY.md) with:
 
 - both mirror statuses
 - top scored candidate updates
@@ -91,7 +93,7 @@ Staleness rule (Xavier-only):
 
 ## Required daily output: template alignment sync check
 
-Each `good morning` should include:
+Each `hey` should include:
 
 - `template upstream:` repo + ref used for this check
 - `template sync alignment status:` aligned / minor drift / major drift
@@ -130,7 +132,7 @@ Output:
 
 ## Required daily output: suggested development path
 
-Every `good morning` should include one **suggested change/development path** for `work-xavier` that directs Xavier toward:
+Every `hey` should include one **suggested change/development path** for `work-xavier` that directs Xavier toward:
 
 1. one **learning objective** from [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md), and  
 2. one **business skill outcome** (content execution, sourcing discipline, stress-test judgment, KPI/budget ops, or escalation quality).
@@ -185,7 +187,7 @@ Rules:
 - keep plan runnable in 90 minutes total
 ```
 
-## First good morning — ten beginner tasks
+## First hey — ten beginner tasks
 
 **Prerequisite:** Session 0 (MCQ) **complete.**
 
@@ -200,6 +202,6 @@ Rules:
 | 7 | Open [LANES.md](LANES.md) — WORK vs Record once. |
 | 8 | Ask the AI to summarize **her** repo’s `AGENTS.md` (or the companion-self template copy): what may the agent do without approval vs what requires approval? |
 | 9 | Optional: run harness + warmup from **her** repo root; paste output to a scratch note. |
-| 10 | Add one line to **her** `users/xavier/session-log.md`: date + “Session 0 complete; first good morning tasks 1–10 done.” |
+| 10 | Add one line to **her** `users/xavier/session-log.md`: date + “Session 0 complete; first hey tasks 1–10 done.” |
 
 **Operator:** Pair first run with a short screen share if steps 4–6 stall.
