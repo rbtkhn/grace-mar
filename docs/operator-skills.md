@@ -28,6 +28,7 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `portable-skills-sync` | **sync skills** | Portable core: `skills-portable/portable-skills-sync/`. |
 | `extract-skill-from-session` | **save skill** | Alt: **skill from session**. |
 | `pros-and-cons` | **unpack** | Alt: **pros cons**. |
+| `fact-check` | **fact check** | Alt: **verify this**, **check this claim**. |
 | `pol-dashboard` (doc/runbook) | **pol dash** | No `SKILL.md`; miniapp + [pol-dashboard.md](pol-dashboard.md). |
 
 ---
@@ -42,6 +43,7 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with **RECURSION-GATE pending detail**, **Predictive History night closeout** (work-jiang), recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar`; cold paste stack: `python3 scripts/operator_reentry_stack.py -u grace-mar` (`--compact` optional); one-liner: `python3 scripts/harness_warmup.py -u grace-mar --receipt` |
 | `pros-and-cons` | When a proposal is **unclear** or the operator wants **pros/cons / unpack / tradeoffs**: plain-language **restate**, then **pros**, **cons**, **disproportion**, **recommendation** (Think lane; no ship unless asked) | Agent: follow `.cursor/skills/pros-and-cons/SKILL.md` |
+| `fact-check` | **Verify** pasted or named claims with **web sources**, verdict table (**supported / contradicted / unclear / out of scope**), confidence + caveats; **not** Record merge unless gated pipeline | Agent: follow `.cursor/skills/fact-check/SKILL.md` |
 | `work-jiang-feature-checklist` | Branch hygiene, scope, canonical verify block, and commit granularity for `research/external/work-jiang` + `scripts/work_jiang/` | Agent: follow `.cursor/skills/work-jiang-feature-checklist/SKILL.md` |
 | `politics-massie` | Real-time news search + suggested @usa_first_ky X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/politics-massie/SKILL.md` |
 | `portable-skills-sync` | Regenerate Cursor `SKILL.md` from `skills-portable/` + `manifest.yaml` + `CURSOR_APPENDIX.md`; run `--verify` before commit | `python3 scripts/sync_portable_skills.py --verify` then sync; agent: `.cursor/skills/portable-skills-sync/SKILL.md` |
