@@ -21,3 +21,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: skill-narrative
+    source: skill-narrative/SKILL.md
+    appendix: .cursor/skills/skill-narrative/CURSOR_APPENDIX.md
+    target: .cursor/skills/skill-narrative/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates

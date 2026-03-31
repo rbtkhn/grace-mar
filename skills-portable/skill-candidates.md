@@ -21,3 +21,4 @@
 |------|--------------|---------|---------|
 | 2026-03-29 | portable-skills-sync | *(promoted)* — use skill **`portable-skills-sync`** (`.cursor/skills/portable-skills-sync/SKILL.md`); same trigger | `skills-portable/portable-skills-sync/SKILL.md` + manifest |
 | 2026-03-31 | work-jiang-ingest-fallback | *(promoted)* — use skill **`work-jiang-ingest-fallback`** (`.cursor/skills/work-jiang-ingest-fallback/SKILL.md`); same trigger | `skills-portable/work-jiang-ingest-fallback/SKILL.md` + manifest |
+| 2026-03-31 | skill-narrative | *(promoted)* — use skill **`skill-narrative`** (`.cursor/skills/skill-narrative/SKILL.md`); trigger `narrative loop` | `skills-portable/skill-narrative/SKILL.md` + manifest |
