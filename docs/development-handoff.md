@@ -20,7 +20,7 @@ Last updated: 2026-03-28
 
 ### Session tail — 2026-03-28 (operator)
 
-- **Workflow / operator ergonomics (grace-mar):** Multi-root anchor in bootstrap; `docs/operator-agent-lanes.md` git workflow + post-push compare URL + plan-vs-git; `scripts/github_compare_url.py`; `operator_handoff_check` **Derived / export churn** bucket; operator-cadence **hey light / minimal**; **hey** (work-start and closeout): after **A,B,C,D,E,G, or H**, re-offer full **A–H** until **F** (skill + `harness-warmup.mdc` + handoff-check skill).
+- **Workflow / operator ergonomics (grace-mar):** Multi-root anchor in bootstrap; `docs/operator-agent-lanes.md` git workflow + post-push compare URL + plan-vs-git; `scripts/github_compare_url.py`; `operator_handoff_check` **Derived / export churn** bucket; operator-cadence **coffee light / minimal**; **coffee** (work-start and closeout; legacy **hey** still works): after **A,B,C,D, or H**, re-offer full **A–H** by default; concrete work-lane picks under **E** or **G** exit to normal workflow unless the operator says **`stay in coffee`** (skill + `harness-warmup.mdc` + handoff-check skill).
 - **Template sync:** companion-self **pushed** — `self-work` + `sync-pack` README upgrades, IFP full-spec link fix (`identity-fork-protocol.md` on grace-mar). Grace-mar: `merging-from-companion-self.md` IFP short-form vs full spec note; aligned instance `self-work` / `sync-pack` copy; refreshed template audit reports.
 - **work-jiang:** Volume VII Substack essays + `essay-*` analysis memos (prior commits on `main`).
 - **Work-politics / strategy:** `daily-brief-2026-03-28.md`; `polling-and-markets.md` **Last checked** refreshed.

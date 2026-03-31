@@ -18,7 +18,7 @@ These lanes govern **tooling and git scope** for the turn, not Abby’s persona 
 - Implement the agreed scope; run checks the operator asked for (tests, linters, `validate-template`, etc.).
 - **`git commit`** when there are changes; **`git push`** when the message includes shipping to remote (name the branch or say “push”).
 - **Tags** (e.g. `template-v0.x.x`) only if the operator states them in the message.
-- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **hey** **A–H** applies or the operator said **no menu**.
+- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **coffee** **A–H** applies (legacy **hey** still works) or the operator said **no menu**.
 
 ### `DOCSYNC`
 

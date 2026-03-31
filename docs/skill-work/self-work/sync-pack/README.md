@@ -20,15 +20,15 @@ This pack is optional and review-first.
 - `SYNC-LOG.template.md` - append-only sync check ledger
 - `SYNC-DAILY.template.md` - optional single-page daily sync surface (training mode)
 - `ENABLE-SYNC-PACK.md` - step-by-step enablement runbook
-- `INITIAL-GOOD-MORNING.md` — legacy filename; template sequence for first **hey** / startup sync routine
+- `INITIAL-GOOD-MORNING.md` — legacy filename; template sequence for first **coffee** / startup sync routine (legacy **hey** wording may still appear in older copies)
 
-Default initial **hey** (startup) order:
+Default initial **coffee** (startup) order:
 1) template alignment (optional),
 2) work-dev sync (optional, if established) + next-step suggestions,
 3) work-business sync (optional, if established) + next-step suggestions.
 
 **Closeout** trio (same contracts; legacy filenames on disk):
-- [Startup / hey rhythm spec](../../../good-morning-brief-spec.md)
+- [Startup / coffee rhythm spec](../../../good-morning-brief-spec.md)
 - [Closeout template](../../../good-night-template.md)
 - [Closeout spec](../../../good-night-brief-spec.md)
 

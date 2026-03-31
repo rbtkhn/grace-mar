@@ -1,4 +1,4 @@
-# Initial hey process (template)
+# Initial coffee process (template)
 
 Use this sequence for a new instance bootstrapping from `companion-self`.
 
@@ -31,7 +31,7 @@ All steps are optional except where already established in the instance.
 ## Suggested output block
 
 ```md
-### Initial hey sync summary
+### Initial coffee sync summary
 - Template alignment: <aligned/minor drift/major drift>
 - work-dev sync: <not established/no relevant updates/relevant updates found>
 - work-dev next steps:

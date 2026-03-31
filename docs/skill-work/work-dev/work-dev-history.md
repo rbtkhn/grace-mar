@@ -2,7 +2,7 @@
 
 > **Append-only** log for the **work-dev** territory (OpenClaw, integration, exports, harness, transcripts). **Not** Record truth; **not** companion [self-memory](../../../users/grace-mar/self-memory.md). **Rotatable** — prune older sections when the file grows.
 
-**Distinct from:** [work-dev-sources.md](work-dev-sources.md) (authorized sources only). **Operator rhythm:** [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) (**`hey`**). **Per-lane log:** this file — [work-modules-history-principle.md](../work-modules-history-principle.md).
+**Distinct from:** [work-dev-sources.md](work-dev-sources.md) (authorized sources only). **Operator rhythm:** [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) (**`coffee`**; legacy **`hey`** still works). **Per-lane log:** this file — [work-modules-history-principle.md](../work-modules-history-principle.md).
 
 ## How to append
 

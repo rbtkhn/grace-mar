@@ -11,7 +11,7 @@
 
 **Fence:** History files document **what the operator did or noted in this lane** — not what is canonically true. Facts about the companion belong in the gated Record; integration status belongs in tables such as [work-dev/integration-status.md](work-dev/integration-status.md).
 
-**Relation to operator rhythm:** Sessions opened with **`hey`** follow [operator-cadence](../../.cursor/skills/operator-cadence/SKILL.md). There is **no** dedicated instance-wide **`work-memory.md`** file: append **per-territory** milestones under **`docs/skill-work/work-*/*-history.md`**. Raw continuity and **`[WORK-choice]`** blocks may still go to **`users/[id]/session-transcript.md`** (see `log_operator_choice.py`). **`*-history.md`** is **per-lane** breadcrumbs (e.g. “ingested Karpathy digest,” “weekly brief run,” “Jiang CI change”) so ML or humans can scan **where** work landed without merging lanes.
+**Relation to operator rhythm:** Sessions opened with **`coffee`** follow [operator-cadence](../../.cursor/skills/operator-cadence/SKILL.md); legacy **`hey`** still works as an alias. There is **no** dedicated instance-wide **`work-memory.md`** file: append **per-territory** milestones under **`docs/skill-work/work-*/*-history.md`**. Raw continuity and **`[WORK-choice]`** blocks may still go to **`users/[id]/session-transcript.md`** (see `log_operator_choice.py`). **`*-history.md`** is **per-lane** breadcrumbs (e.g. “ingested Karpathy digest,” “weekly brief run,” “Jiang CI change”) so ML or humans can scan **where** work landed without merging lanes.
 
 **Existing logs:**
 
