@@ -28,3 +28,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: repo-hygiene-pass
+    source: repo-hygiene-pass/SKILL.md
+    appendix: .cursor/skills/repo-hygiene-pass/CURSOR_APPENDIX.md
+    target: .cursor/skills/repo-hygiene-pass/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates
