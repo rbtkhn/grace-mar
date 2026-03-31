@@ -105,9 +105,19 @@ Start with a **single event page** (or markdown report):
 
 ---
 
+## v1 synthesis layer (schemas + library)
+
+Implemented artifacts (compact interpretation over raw JSONL; does **not** replace append-only logs):
+
+- **Schemas:** `schema-registry/harness-replay-event.v1.json`, `schema-registry/answer-provenance.v1.json` (mirrors under `docs/schemas/`).
+- **Code:** `src/grace_mar/replay/` — loaders prefer `users/<id>/` audit files and fall back to `runtime-bundle/audit/` when root files are missing or empty; `build_report` powers `scripts/replay_harness_event.py`; `build_replay_events` / `infer_answer_provenance` / `replay_provenance_summary` feed **Streamlit** (`apps/metrics-dashboard.py` — “Replay and Provenance”) and **`scripts/session_brief.py`** summaries.
+- **Derived JSON (optional):** `python scripts/session_brief.py -u <id> --write-replay-artifacts` writes timestamped files under `users/<id>/artifacts/replay/` (not Record truth).
+
+**Answer-level replay** remains limited until prompt assembly and message correlation IDs are logged; v1 emphasizes **proposal / merge / pipeline** visibility and **heuristic** lane mix (see `weights_are_heuristic` on answer-provenance).
+
 ## Current implementation vs north star
 
-| Capability | Today (`scripts/replay_harness_event.py`) | North star |
+| Capability | Today (`scripts/replay_harness_event.py` + `grace_mar.replay`) | North star |
 |------------|-------------------------------------------|------------|
 | Proposal / merge correlation | Candidate ID + gate YAML + pipeline + harness + receipts | Same, plus cross-step refs (`parent_event_id`, etc.) |
 | Answer replay | Not built; transcript optional | Full prompt assembly + routing + tools |

@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/harness-replay-event.v1.json",
+  "title": "Harness Replay Event v1",
+  "description": "Compact interpretation of one replayable pipeline/gate step; does not replace raw JSONL.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "user_slug",
+    "timestamp",
+    "event_type",
+    "source_refs",
+    "record_refs",
+    "runtime_refs",
+    "policy_refs",
+    "artifact_refs",
+    "summary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_id": {
+      "type": ["string", "null"]
+    },
+    "source_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pipeline_event_ids",
+        "merge_receipt_keys",
+        "compute_ledger_ids",
+        "lineage_ids"
+      ],
+      "properties": {
+        "pipeline_event_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "merge_receipt_keys": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "compute_ledger_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "lineage_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "record_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "runtime_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "policy_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -12,6 +12,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 import streamlit as st
@@ -101,5 +102,45 @@ except ImportError:
     st.caption("work_politics_engine not available.")
 except Exception as e:
     st.warning(f"Work-politics metrics: {e}")
+
+st.subheader("Replay and provenance")
+st.caption(
+    "Synthesis from audit JSONL (profile root, runtime-bundle fallback). "
+    "Weights are heuristic — not per-message model attribution. See docs/harness-replay-spec.md."
+)
+try:
+    from repo_io import profile_dir
+
+    _uid = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
+    _prof = profile_dir(_uid)
+    from grace_mar.replay.synthesis import build_replay_events, replay_provenance_summary
+
+    summary = replay_provenance_summary(_prof, REPO_ROOT)
+    prov = summary["provenance"]
+    counts = prov.get("class_counts") or {}
+    st.metric("Pipeline rows (loaded)", summary["total_pipeline_rows"])
+    st.metric("Synthesized replay events (tail)", summary["total_replay_synthesized"])
+    st.metric("Harness rows (loaded)", summary["total_harness_rows"])
+    st.metric("Unresolved heuristic (recent window)", summary["unresolved_provenance_recent_window"])
+    st.write("**Answer source mix (heuristic, recent window):**")
+    st.json(
+        {
+            "dominant_class": prov.get("answer_class"),
+            "record_weight_estimated": prov.get("record_weight_estimated"),
+            "runtime_weight_estimated": prov.get("runtime_weight_estimated"),
+            "policy_weight_estimated": prov.get("policy_weight_estimated"),
+            "audit_weight_estimated": prov.get("audit_weight_estimated"),
+            "class_counts": counts,
+        }
+    )
+    st.write("**Top pipeline event types (last 500 lines):**")
+    st.json(dict(summary["top_event_categories"]))
+    replay_tail = build_replay_events(_prof, REPO_ROOT, limit=20)
+    st.write("**Latest replay events (tail of pipeline, max 20 shown):**")
+    st.dataframe(replay_tail, use_container_width=True)
+    st.write("**Full provenance aggregate (same as mix above):**")
+    st.json(prov)
+except Exception as e:
+    st.warning(f"Replay / provenance: {e}")
 
 st.caption("Data from users/grace-mar (recursion-gate, self.md, pipeline-events). Regenerate profile for latest.")

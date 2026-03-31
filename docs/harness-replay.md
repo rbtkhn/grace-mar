@@ -4,6 +4,8 @@
 
 **Purpose (this CLI):** Reconstruct **audit-lane** context for a **staged proposal** (candidate) or **bundle** export—**not** a full neural “why did the model say X” trace unless that was logged elsewhere.
 
+**Implementation:** `scripts/replay_harness_event.py` calls `grace_mar.replay.build_report`. Loaders read `users/<id>/*.jsonl` first and fall back to `runtime-bundle/audit/` when a root file is missing or empty ([architecture.md](architecture.md) — profile root vs bundle).
+
 Grace-Mar separates **record**, **runtime**, **audit**, and **policy** ([harness-inventory.md](harness-inventory.md)). Replay pulls from the **audit** lane:
 
 | Source | What it explains |

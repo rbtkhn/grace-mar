@@ -151,6 +151,16 @@
       "optional": false
     },
     {
+      "path": "schema-registry/harness-replay-event.v1.json",
+      "description": "Compact replay step derived from pipeline/audit JSONL (interpretation layer).",
+      "optional": false
+    },
+    {
+      "path": "schema-registry/answer-provenance.v1.json",
+      "description": "Heuristic lane-mix summary for recent pipeline activity (not token attribution).",
+      "optional": false
+    },
+    {
       "path": "users/_template/self.md",
       "description": "SELF schema/structure scaffold for new users only.",
       "optional": false
@@ -560,7 +570,9 @@
       "identity_diff": "schema-registry/identity-diff.v1.json",
       "change_review_queue": "schema-registry/change-review-queue.v1.json",
       "change_event_log": "schema-registry/change-event-log.v1.json",
-      "boundary_classification": "schema-registry/boundary-classification.v1.json"
+      "boundary_classification": "schema-registry/boundary-classification.v1.json",
+      "harness_replay_event": "schema-registry/harness-replay-event.v1.json",
+      "answer_provenance": "schema-registry/answer-provenance.v1.json"
     },
     "validator": "scripts/validate-change-review.py",
     "diff_generator": "scripts/generate-identity-diff.py"

@@ -47,10 +47,12 @@ Grace-Mar's harness is portable because it separates **canonical truth** from **
 |------|------------------|------------|---------------|
 | **record** | Companion-owned identity, evidence, and **reference library** (distinct surfaces) | Yes | `self.md` (identity + SELF-KNOWLEDGE), `self-skills.md`, **`self-archive.md`** (EVIDENCE body), optional `self-evidence.md` pointer, `self-library.md` (SELF-LIBRARY; CIV-MEM subdomain), PRP exports |
 | **runtime** | Continuity aids for a live session | No | `self-memory.md` (bundle/runtime lane may mirror as `self-memory.md`), `session-transcript.md`, warmup digests, session-log tails |
-| **audit** | Replay, provenance, operational traces | No, but append-only | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json` |
+| **audit** | Replay, provenance, operational traces | No, but append-only | `pipeline-events.jsonl`, `merge-receipts.jsonl`, `compute-ledger.jsonl`, `harness-events.jsonl`, `fork-manifest.json`, `fork-lineage.jsonl` (lifecycle / export trail; audit-adjacent) |
 | **policy** | Intent and constitutional alignment surfaces | Yes for policy, not identity | `intent.md`, `intent_snapshot.json`, manifest-declared constraints |
 
 The runtime lane is portable, but it is **not** Record truth. A downstream runtime may consume `self-memory.md` (or legacy `memory.md`) or a warmup block for continuity, yet only the Record lane defines who Grace-Mar is. This keeps runtime swaps possible without making any one harness the owner of memory.
+
+**Profile root vs `runtime-bundle/`.** For a live instance, audit and runtime files under `users/<id>/` are canonical. A **`runtime-bundle/`** subtree may mirror the same names (e.g. `runtime-bundle/audit/pipeline-events.jsonl`) for portable export. Loaders that synthesize replay views should prefer the profile root and fall back to the bundle when a root file is missing or empty, so snapshots are not double-counted.
 
 ### Runtime modes
 

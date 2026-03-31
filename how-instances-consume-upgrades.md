@@ -63,6 +63,8 @@ When an instance (e.g. Grace-Mar) merges upgrades from companion-self, it should
 | `schema-registry/change-review-queue.v1.json` | Change-review JSON Schema: queue summary. |
 | `schema-registry/change-event-log.v1.json` | Change-review JSON Schema: audit event log. |
 | `schema-registry/boundary-classification.v1.json` | Persisted boundary hint snapshot per gate candidate (optional `review-queue/boundary-classifications/`). |
+| `schema-registry/harness-replay-event.v1.json` | Compact replay step derived from audit JSONL (`grace_mar.replay`). |
+| `schema-registry/answer-provenance.v1.json` | Heuristic lane-mix summary for recent pipeline rows. |
 | `scripts/validate-change-review.py` | Validates `users/<id>/review-queue/` trees against change-review schemas (`--allow-empty` for empty template scaffold; `--allow-missing-decisions` when proposals and diffs exist but decisions do not). |
 | `scripts/generate-identity-diff.py` | Renders Markdown from one `identity-diff` JSON file. |
 | `docs/change-review-validation.md` | Operator doc: validation rules and commands. |

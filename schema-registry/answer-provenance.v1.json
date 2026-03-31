@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/answer-provenance.v1.json",
+  "title": "Answer Provenance v1",
+  "description": "Heuristic interpretation of recent audit activity by lane; not token-level model attribution.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema_version",
+    "provenance_id",
+    "user_slug",
+    "timestamp",
+    "answer_class",
+    "weights_are_heuristic"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "provenance_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "session_id": {
+      "type": ["string", "null"]
+    },
+    "answer_class": {
+      "type": "string",
+      "enum": [
+        "record_backed",
+        "runtime_backed",
+        "mixed",
+        "policy_shaped",
+        "audit_only",
+        "unresolved"
+      ]
+    },
+    "record_weight_estimated": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "runtime_weight_estimated": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "policy_weight_estimated": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "audit_weight_estimated": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "weights_are_heuristic": {
+      "type": "boolean",
+      "const": true
+    },
+    "record_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "runtime_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "policy_refs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "class_counts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

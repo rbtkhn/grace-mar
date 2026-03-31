@@ -25,6 +25,8 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
+if str(REPO_ROOT / "src") not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT / "src"))
 from recursion_gate_territory import normalize_territory_cli, pending_by_territory
 STALE_PENDING_DAYS = 3
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
@@ -259,6 +261,36 @@ def _library_titles(library_content: str, n: int = 3) -> list[str]:
     return titles
 
 
+def _replay_brief_lines(user_dir: Path, repo_root: Path) -> list[str]:
+    """Synthesis summary from grace_mar.replay (optional; fails soft)."""
+    try:
+        from grace_mar.replay.synthesis import replay_provenance_summary
+
+        s = replay_provenance_summary(user_dir, repo_root)
+        prov = s["provenance"]
+        lines = [
+            "## Replay & provenance (audit synthesis)",
+            "",
+            f"- Pipeline rows: **{s['total_pipeline_rows']}** · synthesized replay slice: **{s['total_replay_synthesized']}** · harness rows: **{s['total_harness_rows']}**",
+            f"- Dominant heuristic class (recent window): **{prov.get('answer_class')}**",
+            f"- Estimated weights: record {prov.get('record_weight_estimated')} · runtime {prov.get('runtime_weight_estimated')} · policy {prov.get('policy_weight_estimated')} · audit/unresolved {prov.get('audit_weight_estimated')} _(heuristic)_",
+            f"- Unresolved heuristic count (recent tail): **{s['unresolved_provenance_recent_window']}**",
+        ]
+        if s["top_event_categories"]:
+            top = ", ".join(f"{k}×{v}" for k, v in s["top_event_categories"][:6])
+            lines.append(f"- Top pipeline event types: {top}")
+        rs = s["recent_staged"]
+        if rs:
+            last = rs[-1]
+            lines.append(
+                f"- Most recent **staged** row: `{last.get('event')}` — candidate `{last.get('candidate_id')}` at `{last.get('ts')}`"
+            )
+        lines.extend(["", f"_{prov.get('notes', '')}_", ""])
+        return lines
+    except Exception as exc:
+        return ["## Replay & provenance (audit synthesis)", "", f"_(unavailable: {exc})_", ""]
+
+
 def _intent_primary_goal(user_dir: Path) -> str | None:
     """Load primary goal from intent.md if present."""
     path = user_dir / "intent.md"
@@ -322,6 +354,13 @@ def main() -> int:
     if not user_dir or not user_dir.is_dir():
         print("No user dir found.", file=sys.stderr)
         return 1
+
+    if args.write_replay_artifacts:
+        from grace_mar.replay.synthesis import write_replay_artifacts
+
+        rp, pp = write_replay_artifacts(user_dir, REPO_ROOT)
+        print(f"Wrote {rp}\n{pp}")
+        return 0
 
     if args.reminder:
         text = build_operator_reminder(
@@ -452,6 +491,7 @@ def main() -> int:
     else:
         lines.append("(see docs/wisdom-questions.md)")
     lines.append("")
+    lines.extend(_replay_brief_lines(user_dir, REPO_ROOT))
     print("\n".join(lines))
     return 0
 
