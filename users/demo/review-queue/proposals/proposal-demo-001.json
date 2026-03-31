@@ -23,5 +23,14 @@
     "after": 0.81
   },
   "status": "proposed",
-  "notes": "Demo only."
+  "notes": "Demo only.",
+  "targetSurface": "self",
+  "suggestedSurface": "self",
+  "canonicalPath": "users/demo/skill-think.md",
+  "materiality": "low",
+  "reviewType": "routine",
+  "boundaryStatus": "clear",
+  "requiresReclassification": false,
+  "queueSummary": "Pedagogy refinement: shorter worked examples (demo).",
+  "proposalClass": "identity"
 }

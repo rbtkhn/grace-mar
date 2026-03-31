@@ -52,6 +52,8 @@ Two input channels feed the pipeline:
 - **Bot (automated)** — Telegram and/or WeChat conversations analyzed by an LLM analyst
 - **Operator (manual)** — real-world observations (school work, art, conversations) brought directly by the user
 
+Governed changes are reviewed through a **canonical change-review object** that unifies proposal, queue, and decision state across the gate-review workflow (see `schema-registry/change-*.v1.json`, `docs/identity-fork-protocol.md` §4.1.1, and `apps/gate-review-app.py`).
+
 ## Status
 
 **Phase:** Active instance (emergent cognition, active pipeline)

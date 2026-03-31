@@ -70,7 +70,7 @@ That writes a proposal JSON, a **`derived/`** snapshot, and updates the queue an
 python3 scripts/validate-change-review.py users/<fork_id>/review-queue --allow-empty
 ```
 
-(`--allow-empty` is often needed until **decisions/** and **diffs/** contain matching artifacts; see [change-review-validation.md](change-review-validation.md).)
+Use `--allow-empty` while **decisions/** and/or **diffs/** are still empty. When **proposals/** and **diffs/** both have files but **decisions/** is still empty, prefer `--allow-missing-decisions` for stricter checks without stub decision files. See [change-review-validation.md](change-review-validation.md).
 
 ---
 

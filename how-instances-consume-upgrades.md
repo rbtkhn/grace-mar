@@ -62,7 +62,7 @@ When an instance (e.g. Grace-Mar) merges upgrades from companion-self, it should
 | `schema-registry/identity-diff.v1.json` | Change-review JSON Schema: before/after diff payload. |
 | `schema-registry/change-review-queue.v1.json` | Change-review JSON Schema: queue summary. |
 | `schema-registry/change-event-log.v1.json` | Change-review JSON Schema: audit event log. |
-| `scripts/validate-change-review.py` | Validates `users/<id>/review-queue/` trees against change-review schemas (`--allow-empty` for template scaffold). |
+| `scripts/validate-change-review.py` | Validates `users/<id>/review-queue/` trees against change-review schemas (`--allow-empty` for empty template scaffold; `--allow-missing-decisions` when proposals and diffs exist but decisions do not). |
 | `scripts/generate-identity-diff.py` | Renders Markdown from one `identity-diff` JSON file. |
 | `docs/change-review-validation.md` | Operator doc: validation rules and commands. |
 | `users/demo/review-queue/*` | Demo review-queue tree + README for change-review validation (not a live Record). |

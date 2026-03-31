@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Web-based gate review dashboard — approve/reject pending RECURSION-GATE candidates.
+Web-based gate review dashboard — pending RECURSION-GATE candidates (canonical review shape).
 
-Serves a live view of pending candidates with Approve/Reject buttons. Actions update
-recursion-gate.md and optionally run quick-merge (process_approved_candidates). Gate
-remains canonical; this app does not edit SELF or EVIDENCE directly.
+Supports approve, reject, defer, and reclassify (proposal_class via target surface mapping).
+Actions update recursion-gate.md; merge runs via process_approved_candidates. Gate remains
+canonical; this app does not edit SELF or EVIDENCE directly.
 
 Run from repo root (so bot.core and scripts resolve paths correctly):
     OPERATOR_SECRET=your_secret python apps/gate-review-app.py
@@ -36,6 +36,17 @@ assert_canonical_record_layout(USER_ID, context="gate-review-app")
 # WORK-lane SQLite state for work-politics (clients, review queue, funnel). Not RECURSION-GATE.
 WP = WorkPoliticsEngine(USER_ID, REPO_ROOT)
 WP.init_db()
+
+from gate_review_normalize import normalize_review_item  # noqa: E402
+
+_RECLASSIFY_SURFACE_OPTIONS = (
+    ("self", "self (IX / identity-facing)"),
+    ("self_library", "self_library"),
+    ("civ_mem", "civ_mem"),
+    ("skills", "skills"),
+    ("evidence", "evidence"),
+    ("work_layer", "work_layer"),
+)
 
 
 def _auth():
@@ -69,31 +80,62 @@ def index():
 
     cards = []
     for r in pending:
+        norm = normalize_review_item(r)
         dup = r.get("duplicate_hints") or []
         hint = f'<p class="hint">{html.escape(dup[0])}</p>' if dup else ""
         cid = html.escape(r["id"])
-        summary = html.escape(r.get("summary") or "(no summary)")
+        raw_id = r["id"]
+        summary = html.escape(norm["summary"])
         territory = html.escape(r.get("territory", ""))
-        risk = html.escape(r.get("risk_tier", ""))
+        risk_tier = html.escape(r.get("risk_tier", ""))
         label = html.escape(r.get("territory_label", ""))
         pill_slug = "pol" if r.get("territory") == TERRITORY_WORK_POLITICS else "companion"
         age = _age_label(r.get("age_days"))
-        channel = html.escape(r.get("channel_key") or "—")
-        ts = html.escape(r.get("timestamp") or "—")
+        channel = html.escape(str(norm["channel_key"]))
+        ts = html.escape(str(norm["timestamp"]))
         quick = "true" if r.get("ready_for_quick_merge") else "false"
         sig = html.escape((r.get("signal_type") or "").strip())
+        pc = html.escape(norm["proposal_class"])
+        tsurf = html.escape(norm["target_surface"])
+        mat = html.escape(norm["materiality"])
+        rvt = html.escape(norm["review_type"])
+        recl = "yes" if norm["requires_reclassification"] else "no"
+        pill_recl = "pill-warn" if norm["requires_reclassification"] else "pill-ok"
+        cur_surf = norm["target_surface"]
+        select_opts = "".join(
+            f'<option value="{html.escape(v)}"'
+            f'{" selected" if v == cur_surf else ""}>'
+            f"{html.escape(lbl)}</option>"
+            for v, lbl in _RECLASSIFY_SURFACE_OPTIONS
+        )
         cards.append(
-            f'<article class="card" data-territory="{territory}" data-risk="{risk}" data-signal="{sig}">'
+            f'<article class="card" data-territory="{territory}" data-risk="{risk_tier}" data-signal="{sig}" data-candidate-id="{html.escape(raw_id)}">'
             f'<header><span class="id">{cid}</span>'
             f'<span class="pill pill-{pill_slug}">{label}</span>'
-            f'<span class="pill pill-risk">{risk}</span>'
+            f'<span class="pill pill-risk-tier">{risk_tier}</span>'
             f'<span class="age">{age}</span></header>'
+            f'<div class="pill-row">'
+            f'<span class="pill pill-meta" title="proposal_class">{pc}</span>'
+            f'<span class="pill pill-meta" title="target_surface">{tsurf}</span>'
+            f'<span class="pill pill-meta" title="materiality">{mat}</span>'
+            f'<span class="pill pill-meta" title="review_type">{rvt}</span>'
+            f'<span class="pill pill-meta {pill_recl}" title="requires_reclassification">reclassify: {recl}</span>'
+            f"</div>"
             f'<p class="summary">{summary}</p>{hint}'
             f'<footer><span class="meta">{channel}</span><span class="meta">{ts}</span></footer>'
             f'<div class="actions">'
             f'<button type="button" class="btn approve" data-id="{cid}" data-quick="{quick}">Approve</button>'
             f'<button type="button" class="btn reject" data-id="{cid}">Reject</button>'
-            f'</div></article>'
+            f'<button type="button" class="btn defer" data-id="{cid}">Defer</button>'
+            f"</div>"
+            f'<details class="reclass-details"><summary>Reclassify</summary>'
+            f'<div class="reclass-form">'
+            f'<label class="reclass-label">Target surface (maps to proposal_class)'
+            f'<select class="reclass-surface">{select_opts}</select></label>'
+            f'<textarea class="reclass-note" rows="2" placeholder="Optional review note (audit trail)"></textarea>'
+            f'<button type="button" class="btn reclassify" data-id="{cid}">Apply reclassify</button>'
+            f"</div></details>"
+            f"</article>"
         )
     rows_html = "\n".join(cards) if cards else '<p class="empty">No pending candidates.</p>'
 
@@ -116,6 +158,10 @@ def index():
     .card header {{ display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.6rem; }}
     .id {{ font-weight: 600; font-family: monospace; font-size: 0.9rem; color: var(--accent); }}
     .pill {{ font-size: 0.7rem; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 4px; }}
+    .pill-row {{ display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.5rem; }}
+    .pill-meta {{ background: rgba(255,255,255,.08); color: var(--muted); text-transform: none; font-size: 0.65rem; }}
+    .pill-warn {{ background: rgba(221,142,145,0.25); color: var(--danger); }}
+    .pill-ok {{ background: rgba(125,192,154,0.15); color: var(--good); }}
     .age {{ margin-left: auto; color: var(--muted); font-size: 0.8rem; }}
     .summary {{ margin: 0; }}
     .hint {{ margin: 0.6rem 0 0; color: var(--muted); font-size: 0.82rem; }}
@@ -124,13 +170,20 @@ def index():
     .btn {{ padding: 0.4rem 0.8rem; border-radius: 8px; border: none; cursor: pointer; font-size: 0.9rem; }}
     .btn.approve {{ background: rgba(125,192,154,0.2); color: var(--good); }}
     .btn.reject {{ background: rgba(221,142,145,0.2); color: var(--danger); }}
+    .btn.defer {{ background: rgba(139,156,179,0.2); color: var(--muted); }}
+    .btn.reclassify {{ background: rgba(193,127,89,0.25); color: var(--accent); }}
     .btn:disabled {{ opacity: 0.5; cursor: not-allowed; }}
+    .reclass-details {{ margin-top: 0.65rem; font-size: 0.85rem; color: var(--muted); }}
+    .reclass-details summary {{ cursor: pointer; color: var(--accent); }}
+    .reclass-form {{ display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem; }}
+    .reclass-label {{ display: flex; flex-direction: column; gap: 0.25rem; color: var(--text); }}
+    .reclass-surface, .reclass-note {{ background: var(--bg); color: var(--text); border: 1px solid rgba(255,255,255,.12); border-radius: 6px; padding: 0.35rem; font-size: 0.85rem; }}
     .empty {{ color: var(--muted); }}
   </style>
 </head>
 <body>
   <h1>Gate review</h1>
-  <p class="sub">Approve or reject pending candidates. Merge runs via process_approved_candidates.</p>
+  <p class="sub">Approve, reject, defer, or reclassify pending candidates. Normalized review fields show surface, materiality, and review type. Merge runs via process_approved_candidates.</p>
   <p class="sub">Filter: <a href="/">All</a> · <a href="/?signal=reflection">Reflection only</a></p>
   <div class="stats">
     <span class="stat"><strong>{n}</strong> pending</span>
@@ -140,16 +193,27 @@ def index():
   <div class="grid" id="grid">{rows_html}</div>
   <script>
     var secret = document.location.search.match(/token=([^&]+)/) ? decodeURIComponent(document.location.search.match(/token=([^&]+)/)[1]) : '';
-    function doAction(cid, action, btn) {{
+    function headers() {{
+      var h = {{ 'Content-Type': 'application/json' }};
+      if (secret) h['Authorization'] = 'Bearer ' + secret;
+      return h;
+    }}
+    function removeCard(btn) {{
+      var card = btn.closest('.card');
+      if (card) card.remove();
+    }}
+    function doAction(cid, action, btn, extra) {{
       btn.disabled = true;
+      var body = {{ candidate_id: cid, action: action }};
+      if (extra) for (var k in extra) body[k] = extra[k];
       fetch('/action', {{
         method: 'POST',
-        headers: {{ 'Content-Type': 'application/json' }},
-        body: JSON.stringify({{ candidate_id: cid, action: action }})
+        headers: headers(),
+        body: JSON.stringify(body)
       }}).then(function(r) {{ return r.json(); }}).then(function(data) {{
         if (data.error) {{ alert(data.error); btn.disabled = false; return; }}
-        var card = btn.closest('.card');
-        if (card) card.remove();
+        if (action === 'reclassify') {{ location.reload(); return; }}
+        removeCard(btn);
       }}).catch(function() {{ btn.disabled = false; }});
     }}
     document.querySelectorAll('.btn.approve').forEach(function(btn) {{
@@ -158,6 +222,17 @@ def index():
     document.querySelectorAll('.btn.reject').forEach(function(btn) {{
       btn.onclick = function() {{ doAction(btn.getAttribute('data-id'), 'reject', btn); }};
     }});
+    document.querySelectorAll('.btn.defer').forEach(function(btn) {{
+      btn.onclick = function() {{ doAction(btn.getAttribute('data-id'), 'defer', btn); }};
+    }});
+    document.querySelectorAll('.btn.reclassify').forEach(function(btn) {{
+      btn.onclick = function() {{
+        var card = btn.closest('.card');
+        var surf = card.querySelector('.reclass-surface').value;
+        var note = card.querySelector('.reclass-note').value;
+        doAction(btn.getAttribute('data-id'), 'reclassify', btn, {{ new_surface: surf, review_note: note }});
+      }};
+    }});
   </script>
 </body>
 </html>"""
@@ -165,16 +240,21 @@ def index():
 
 @app.route("/action", methods=["POST"])
 def action():
-    """Apply approve or reject; update recursion-gate and optionally quick-merge."""
+    """Apply approve, reject, defer, or reclassify; update recursion-gate and optionally quick-merge."""
     if not _auth():
         return jsonify({"error": "Unauthorized"}), 401
-    from bot.core import is_low_risk_candidate, quick_merge_candidate, update_candidate_status
+    from bot.core import (
+        is_low_risk_candidate,
+        quick_merge_candidate,
+        reclassify_gate_candidate,
+        update_candidate_status,
+    )
 
     payload = request.get_json(silent=True) or {}
     candidate_id = (payload.get("candidate_id") or "").strip()
     action_type = (payload.get("action") or "").strip().lower()
-    if action_type not in ("approve", "reject"):
-        return jsonify({"error": "action must be approve or reject"}), 400
+    if action_type not in ("approve", "reject", "defer", "reclassify"):
+        return jsonify({"error": "action must be approve, reject, defer, or reclassify"}), 400
     if not candidate_id.startswith("CANDIDATE-"):
         return jsonify({"error": "invalid candidate_id"}), 400
 
@@ -190,38 +270,104 @@ def action():
     if action_type == "reject":
         reason = (payload.get("rejection_reason") or "").strip() or None
         ok = update_candidate_status(
-            candidate_id, "rejected",
-            rejection_reason=reason, channel_key=channel_key, actor=operator_name, source=source,
+            candidate_id,
+            "rejected",
+            rejection_reason=reason,
+            channel_key=channel_key,
+            actor=operator_name,
+            source=source,
         )
         if not ok:
             return jsonify({"error": f"could not reject {candidate_id}"}), 409
         return jsonify({"ok": True, "action": "rejected"})
 
+    if action_type == "defer":
+        if row.get("status") != "pending":
+            return jsonify({"error": f"{candidate_id} already {row.get('status')}"}), 409
+        ok = update_candidate_status(
+            candidate_id,
+            "deferred",
+            channel_key=channel_key,
+            actor=operator_name,
+            source=source,
+        )
+        if not ok:
+            return jsonify({"error": f"could not defer {candidate_id}"}), 409
+        return jsonify({"ok": True, "action": "deferred"})
+
+    if action_type == "reclassify":
+        if row.get("status") != "pending":
+            return jsonify({"error": f"{candidate_id} already {row.get('status')}"}), 409
+        new_surface = (payload.get("new_surface") or "").strip() or None
+        new_pc = (payload.get("new_proposal_class") or "").strip() or None
+        review_note = (payload.get("review_note") or "").strip() or None
+        if not new_surface and not new_pc:
+            return jsonify({"error": "new_surface or new_proposal_class required for reclassify"}), 400
+        ok = reclassify_gate_candidate(
+            candidate_id,
+            new_proposal_class=new_pc,
+            new_surface=new_surface,
+            review_note=review_note,
+            channel_key=channel_key,
+            actor=operator_name,
+            source=source,
+        )
+        if not ok:
+            return jsonify({"error": f"could not reclassify {candidate_id} (invalid class or not pending)"}), 409
+        return jsonify({"ok": True, "action": "reclassified"})
+
     if row.get("status") != "pending":
         return jsonify({"error": f"{candidate_id} already {row.get('status')}"}), 409
+    low_risk = is_low_risk_candidate(candidate_id)
     ok = update_candidate_status(
-        candidate_id, "approved",
-        channel_key=channel_key, actor=operator_name, source=source,
+        candidate_id,
+        "approved",
+        channel_key=channel_key,
+        actor=operator_name,
+        source=source,
     )
     if not ok:
         return jsonify({"error": f"could not approve {candidate_id}"}), 409
-    if is_low_risk_candidate(candidate_id):
+    if low_risk:
         try:
             merge_ok, msg = quick_merge_candidate(candidate_id, operator_name)
-            return jsonify({"ok": True, "action": "approved", "merged": merge_ok, "message": msg[:80] if msg else ""})
+            return jsonify(
+                {
+                    "ok": True,
+                    "action": "approved",
+                    "merged": merge_ok,
+                    "message": msg[:80] if msg else "",
+                }
+            )
         except Exception as e:
             return jsonify({"ok": True, "action": "approved", "merged": False, "message": str(e)[:80]})
-    return jsonify({"ok": True, "action": "approved", "merged": False, "message": "Run process_approved_candidates.py --apply to merge."})
+    return jsonify(
+        {
+            "ok": True,
+            "action": "approved",
+            "merged": False,
+            "message": "Run process_approved_candidates.py --apply to merge.",
+        }
+    )
 
 
 @app.route("/api/candidates")
 def api_candidates():
-    """JSON list of pending candidates for external UIs."""
+    """JSON list of pending candidates for external UIs (raw + normalized review shape)."""
     if not _auth():
         return jsonify({"error": "Unauthorized"}), 401
     from recursion_gate_review import filter_review_candidates, parse_review_candidates
+
     rows = filter_review_candidates(parse_review_candidates(USER_ID), status="pending")
-    return jsonify({"user_id": USER_ID, "count": len(rows), "items": rows})
+    normalized = [normalize_review_item(r) for r in rows]
+    return jsonify(
+        {
+            "user_id": USER_ID,
+            "count": len(rows),
+            "items": rows,
+            "items_normalized": normalized,
+        }
+    )
 
 
 @app.route("/api/work-politics/review")

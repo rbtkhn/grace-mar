@@ -33,14 +33,39 @@
       "type": "string",
       "enum": [
         "approved",
-        "deferred",
         "rejected",
+        "deferred",
+        "reclassified",
+        "split",
         "superseded"
       ]
     },
     "decisionReason": {
       "type": "string",
       "minLength": 1
+    },
+    "reviewedBy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "previousSurface": {
+      "type": "string",
+      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+    },
+    "newSurface": {
+      "type": "string",
+      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+    },
+    "materialityAtDecision": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "reviewNotes": {
+      "type": "string"
     },
     "blockingContradictions": {
       "type": "array",

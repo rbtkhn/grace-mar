@@ -146,13 +146,6 @@ proposal_class: CIV_MEM_ADD   # example
 Implementations may warn when `mind_category: knowledge` candidates look like domain dumps without `CIV_MEM_*` routing to library. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).
 
 **Bot analyst:** Staged YAML includes `proposal_class: SELF_KNOWLEDGE_ADD` by default (conversation → identity queue). Library/civ-mem edits are usually **operator-staged** with `CIV_MEM_ADD` / `SELF_LIBRARY_ADD`. The Approval Inbox shows `proposal_class` (explicit or inferred).
-</think>
-
-
-<｜tool▁calls▁begin｜><｜tool▁call▁begin｜>
-Shell
-
----
 
 ## 4. Gated Staging Contract
 
@@ -165,6 +158,21 @@ Shell
 5. **Merge** — Approved changes integrated into SELF, EVIDENCE, SESSION-LOG, and prompt per File Update Protocol (script-driven merge in the reference implementation).
 
 **Gate vs change-review:** The recursion gate is the **default** path for candidate lines. The **change-review queue** is for escalated, material edits (contradictions, cross-surface moves, policy shifts). See [gate-vs-change-review.md](gate-vs-change-review.md).
+
+### 4.1.1 Canonical Change Review Object
+
+Every materially important governed change can be represented as **one normalized review object** (operator UIs such as `apps/gate-review-app.py`, JSON under `schema-registry/change-*.v1.json`, and `users/<id>/review-queue/`). That object ties together:
+
+- **Scope** — what kind of change it is (`primaryScope`, `changeType`, and gate `proposal_class` / mind semantics)
+- **Target surface** — where it should land (`self`, `self_library`, `civ_mem`, `skills`, `evidence`, `work_layer`)
+- **Materiality** — how much reviewer attention it deserves (`low` through `critical`)
+- **Review type** — which workflow applies (`routine`, `extended`, `boundary`, `policy`, `collision`)
+- **Evidence** — supporting references and counts
+- **Confidence** — optional before/after or delta when recorded
+- **Current status** — e.g. pending, deferred, approved (gate YAML and/or queue item)
+- **Decision record** — when written, a `change-decision.v1.json` row (including reclassify/defer outcomes)
+
+**RECURSION-GATE** stays the default staging source of truth for candidates. Normalization maps gate rows + boundary hints onto this object without replacing companion sovereignty or the merge script.
 
 ### 4.2 Review Checklist (before approving)
 

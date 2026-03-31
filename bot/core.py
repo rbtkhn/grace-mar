@@ -1651,6 +1651,136 @@ def list_unresolved_debate_packets() -> list[dict[str, object]]:
     return out
 
 
+_GATE_RECLASSIFY_SURFACE_TO_PROPOSAL_CLASS: dict[str, str] = {
+    "self": "SELF_KNOWLEDGE_ADD",
+    "self_library": "SELF_LIBRARY_ADD",
+    "civ_mem": "CIV_MEM_ADD",
+    "skills": "SELF_KNOWLEDGE_ADD",
+    "evidence": "SELF_KNOWLEDGE_ADD",
+    "work_layer": "META_INFRA",
+}
+
+_GATE_ALLOWED_PROPOSAL_CLASS_RECLASSIFY = frozenset(
+    {
+        "SELF_KNOWLEDGE_ADD",
+        "SELF_KNOWLEDGE_REVISE",
+        "SELF_LIBRARY_ADD",
+        "SELF_LIBRARY_REVISE",
+        "CIV_MEM_ADD",
+        "CIV_MEM_REVISE",
+        "META_INFRA",
+        "SIMULATION_RESULT",
+    }
+)
+
+
+def _read_candidate_yaml_blob(candidate_id: str) -> tuple[str, str] | tuple[None, None]:
+    """Return (full_file_content, yaml_blob) for candidate block, or (None, None)."""
+    if not RECURSION_GATE_PATH.exists():
+        return None, None
+    content = RECURSION_GATE_PATH.read_text(encoding="utf-8")
+    block_m = re.search(
+        rf"### {re.escape(candidate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n(.*?)```",
+        content,
+        re.DOTALL,
+    )
+    if not block_m:
+        return None, None
+    return content, block_m.group(1)
+
+
+def _write_candidate_yaml_blob(candidate_id: str, full_content: str, new_yaml_body: str) -> bool:
+    pattern = rf"(### {re.escape(candidate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n)(.*?)(\n```)"
+    m = re.search(pattern, full_content, re.DOTALL)
+    if not m:
+        return False
+    replacement = m.group(1) + new_yaml_body + m.group(3)
+    updated = full_content[: m.start()] + replacement + full_content[m.end() :]
+    RECURSION_GATE_PATH.write_text(updated, encoding="utf-8")
+    return True
+
+
+def _replace_yaml_scalar_line(yaml_body: str, key: str, new_value: str) -> str:
+    """Set or insert `key: value` (single-line scalar)."""
+    safe = re.sub(r"[\n\r]", " ", new_value.strip())[:200]
+    line_re = re.compile(rf"^{re.escape(key)}:\s*.+$", re.MULTILINE)
+    new_line = f"{key}: {safe}"
+    if line_re.search(yaml_body):
+        return line_re.sub(new_line, yaml_body, count=1)
+    stripped = yaml_body.rstrip()
+    if stripped:
+        return stripped + "\n" + new_line + "\n"
+    return new_line + "\n"
+
+
+def reclassify_gate_candidate(
+    candidate_id: str,
+    *,
+    new_proposal_class: str | None = None,
+    new_surface: str | None = None,
+    review_note: str | None = None,
+    channel_key: str | None = None,
+    actor: str | None = None,
+    source: str | None = None,
+) -> bool:
+    """
+    Update proposal_class on a pending gate candidate (operator reclassify).
+    Either new_proposal_class (must be an allowed IFP class) or new_surface
+    (mapped to a default proposal_class) must be set. Status stays pending.
+    """
+    prev_pc = ""
+    if new_proposal_class:
+        pc = new_proposal_class.strip().upper().replace(" ", "_")
+    elif new_surface:
+        surf = new_surface.strip().lower()
+        pc = _GATE_RECLASSIFY_SURFACE_TO_PROPOSAL_CLASS.get(surf)
+        if not pc:
+            return False
+    else:
+        return False
+    if pc not in _GATE_ALLOWED_PROPOSAL_CLASS_RECLASSIFY:
+        return False
+
+    content, yaml_blob = _read_candidate_yaml_blob(candidate_id)
+    if content is None or yaml_blob is None:
+        return False
+    if not re.search(r"^status:\s*pending\s*$", yaml_blob, re.MULTILINE):
+        return False
+    pcm = re.search(r"^proposal_class:\s*(\S+)\s*$", yaml_blob, re.MULTILINE)
+    if pcm:
+        prev_pc = pcm.group(1).strip().strip("\"'")
+
+    updated_body = _replace_yaml_scalar_line(yaml_blob, "proposal_class", pc)
+    if not _write_candidate_yaml_blob(candidate_id, content, updated_body):
+        return False
+
+    enrich = _pipeline_event_fields_from_candidate_yaml(updated_body)
+    kwargs: dict[str, object] = {
+        "event_schema": 2,
+        "conflicts_detected_at_stage": bool(
+            re.search(r"conflicts_detected:\s*\n\s*count:\s*[1-9]\d*", updated_body)
+        ),
+        **enrich,
+        "previous_proposal_class": prev_pc or None,
+        "new_proposal_class": pc,
+        "replay_mode": "gate",
+        "candidate_ref": f"recursion-gate.md#{candidate_id}",
+    }
+    if review_note:
+        kwargs["review_note"] = review_note[:2000]
+    if channel_key:
+        kwargs["channel_key"] = channel_key
+    if actor:
+        kwargs["actor"] = actor
+    if source:
+        kwargs["source"] = source
+    parent = find_staged_event_id_for_candidate(PIPELINE_EVENTS_PATH, candidate_id)
+    if parent:
+        kwargs["parent_event_id"] = parent
+    emit_pipeline_event("gate_reclassified", candidate_id, **kwargs)
+    return True
+
+
 def update_candidate_status(
     candidate_id: str,
     status: str,
@@ -1659,14 +1789,15 @@ def update_candidate_status(
     actor: str | None = None,
     source: str | None = None,
 ) -> bool:
-    """Update candidate status (approved/rejected) in recursion-gate.md.
+    """Update candidate status (approved/rejected/deferred) in recursion-gate.md.
     For rejected, optional rejection_reason is stored in PIPELINE-EVENTS for learning.
+    Deferred removes the item from pending review filters while keeping the block under Candidates.
     """
-    if status not in ("approved", "rejected"):
+    if status not in ("approved", "rejected", "deferred"):
         return False
     if not RECURSION_GATE_PATH.exists():
         return False
-    content = RECURSION_GATE_PATH.read_text()
+    content = RECURSION_GATE_PATH.read_text(encoding="utf-8")
     pattern = rf"(### {re.escape(candidate_id)}(?:\s*\([^)]*\))?\s*\n```yaml\n)(status:\s*)pending"
     replacement = rf"\1\2{status}"
     new_content, n = re.subn(pattern, replacement, content, count=1)
@@ -1679,7 +1810,7 @@ def update_candidate_status(
     )
     yaml_blob = block_m.group(1) if block_m else ""
     enrich = _pipeline_event_fields_from_candidate_yaml(yaml_blob)
-    RECURSION_GATE_PATH.write_text(new_content)
+    RECURSION_GATE_PATH.write_text(new_content, encoding="utf-8")
     kwargs: dict[str, object] = {
         "event_schema": 2,
         "conflicts_detected_at_stage": bool(

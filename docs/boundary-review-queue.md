@@ -26,17 +26,23 @@ As the fork grows, the main risk is **right data, wrong surface** (identity vs l
 
 ## Minimal product (phased)
 
-### Phase A (current / shipped incrementally)
+### Phase A — shipped
 
 - **Automatic proposal classification** — `proposal_class` on gate YAML + inferred default from `mind_category`.
 - **Boundary hints** — `recursion_gate_review.parse_review_candidates` attaches **`boundary_review`**: target surface, suggested surface, optional **misfiled?** string, short **why**.
-- **Review panel** — Approval Inbox shows boundary hint; approve / reject / defer unchanged; **reclassify** = edit gate YAML (`proposal_class`) + reload (manual until Phase B).
+- **Review panel** — Gate review app + Approval Inbox show boundary context; approve / reject / defer / minimal reclassify on pending candidates.
 
-### Phase B
+### Phase B1 — shipped (canonical review object)
+
+- **JSON Schemas** — `change-proposal`, `change-decision`, and `change-review-queue` carry target surface, materiality, review type, reclassification hints, and expanded decision enums (`reclassified`, `split`, `deferred`, etc.).
+- **Normalization** — `scripts/gate_review_normalize.py` maps each gate row to a unified review shape for UI and API (`items_normalized` on `/api/candidates`).
+- **Gate-review app** — Pills for proposal class, surface, materiality, review type; `/action` supports **defer** and **reclassify** (maps target surface → allowed `proposal_class`).
+
+### Phase B2 — next
 
 - Structured diff: **old location → proposed location** (when moving between surfaces).
-- **Confidence** score in API.
-- **Reclassify** action writes `proposal_class` (or moves block to a sibling queue section) via authenticated API.
+- **Confidence** score surfaced consistently in API beyond gate YAML.
+- **Full reclassify UX** — richer forms, optional queue export bridge without manual YAML.
 
 ### Phase C
 

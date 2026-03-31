@@ -32,7 +32,13 @@
           "proposalId",
           "status",
           "priority",
-          "summary"
+          "summary",
+          "proposalClass",
+          "targetSurface",
+          "materiality",
+          "reviewType",
+          "riskLevel",
+          "requiresReclassification"
         ],
         "properties": {
           "proposalId": {
@@ -52,15 +58,48 @@
           },
           "priority": {
             "type": "string",
-            "enum": [
-              "low",
-              "medium",
-              "high"
-            ]
+            "enum": ["low", "medium", "high"]
           },
           "summary": {
             "type": "string",
             "minLength": 1
+          },
+          "proposalClass": {
+            "type": "string",
+            "enum": ["identity", "library", "skills", "evidence", "policy", "work_politics"]
+          },
+          "targetSurface": {
+            "type": "string",
+            "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+          },
+          "materiality": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "reviewType": {
+            "type": "string",
+            "enum": ["routine", "extended", "boundary", "policy", "collision"]
+          },
+          "riskLevel": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "requiresReclassification": {
+            "type": "boolean",
+            "default": false
+          },
+          "canonicalPath": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidenceCount": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "confidenceAfter": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
           }
         }
       }

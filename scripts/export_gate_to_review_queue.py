@@ -193,9 +193,14 @@ def main() -> int:
 
     print(f"Wrote {proposal_path.relative_to(REPO_ROOT)}")
     print(f"Updated queue and event log under {review_root.relative_to(REPO_ROOT)}")
+    rel = review_root.relative_to(REPO_ROOT)
     print(
-        "Validate (strict mode requires decisions/diffs; use --allow-empty after export):",
-        f"python3 scripts/validate-change-review.py {review_root.relative_to(REPO_ROOT)} --allow-empty",
+        "Validate (while decisions/ and/or diffs/ are still empty, template-style):",
+        f"python3 scripts/validate-change-review.py {rel} --allow-empty",
+    )
+    print(
+        "When proposals and diffs exist but decisions/ is still empty (pre-companion decision), prefer:",
+        f"python3 scripts/validate-change-review.py {rel} --allow-missing-decisions",
     )
     return 0
 

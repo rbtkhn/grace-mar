@@ -16,7 +16,11 @@
     "proposedStateRef",
     "supportingEvidence",
     "riskLevel",
-    "status"
+    "status",
+    "targetSurface",
+    "materiality",
+    "reviewType",
+    "queueSummary"
   ],
   "properties": {
     "schemaVersion": {
@@ -149,6 +153,42 @@
     },
     "notes": {
       "type": "string"
+    },
+    "targetSurface": {
+      "type": "string",
+      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+    },
+    "suggestedSurface": {
+      "type": "string",
+      "enum": ["self", "self_library", "civ_mem", "skills", "evidence", "work_layer"]
+    },
+    "canonicalPath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "materiality": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"]
+    },
+    "reviewType": {
+      "type": "string",
+      "enum": ["routine", "extended", "boundary", "policy", "collision"]
+    },
+    "boundaryStatus": {
+      "type": "string",
+      "enum": ["clear", "ambiguous", "misfiled_suspected"]
+    },
+    "requiresReclassification": {
+      "type": "boolean",
+      "default": false
+    },
+    "queueSummary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposalClass": {
+      "type": "string",
+      "enum": ["identity", "library", "skills", "evidence", "policy", "work_politics"]
     }
   }
 }

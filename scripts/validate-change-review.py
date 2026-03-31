@@ -5,6 +5,7 @@ Validate Companion-Self change-review artifacts.
 Usage:
   python3 scripts/validate-change-review.py users/demo/review-queue
   python3 scripts/validate-change-review.py users/_template/review-queue --allow-empty
+  python3 scripts/validate-change-review.py users/<id>/review-queue --allow-missing-decisions
 """
 
 from __future__ import annotations
@@ -64,7 +65,11 @@ def collect_json_files(directory: Path) -> List[Path]:
     return sorted([p for p in directory.glob("*.json") if p.is_file()])
 
 
-def validate_queue_structure(review_dir: Path, allow_empty: bool) -> List[str]:
+def validate_queue_structure(
+    review_dir: Path,
+    allow_empty: bool,
+    allow_missing_decisions: bool = False,
+) -> List[str]:
     errors: List[str] = []
 
     required = [
@@ -94,7 +99,7 @@ def validate_queue_structure(review_dir: Path, allow_empty: bool) -> List[str]:
     if not allow_empty:
         if not proposal_files:
             errors.append(f"{review_dir / 'proposals'}: expected at least one proposal JSON file")
-        if not decision_files:
+        if not decision_files and not allow_missing_decisions:
             errors.append(f"{review_dir / 'decisions'}: expected at least one decision JSON file")
         if not diff_files:
             errors.append(f"{review_dir / 'diffs'}: expected at least one diff JSON file")
@@ -213,6 +218,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Validate change-review artifacts.")
     parser.add_argument("review_dir", help="Path to review-queue directory")
     parser.add_argument("--allow-empty", action="store_true", help="Allow empty template scaffold")
+    parser.add_argument(
+        "--allow-missing-decisions",
+        action="store_true",
+        help="Allow no decision files (gate export / pre-review); still require proposals and diffs unless --allow-empty",
+    )
     args = parser.parse_args()
 
     review_dir = (ROOT / args.review_dir).resolve() if not Path(args.review_dir).is_absolute() else Path(args.review_dir)
@@ -220,7 +230,11 @@ def main() -> int:
         print(f"ERROR: review directory does not exist: {review_dir}", file=sys.stderr)
         return 2
 
-    errors = validate_queue_structure(review_dir, allow_empty=args.allow_empty)
+    errors = validate_queue_structure(
+        review_dir,
+        allow_empty=args.allow_empty,
+        allow_missing_decisions=args.allow_missing_decisions,
+    )
 
     if errors:
         print("VALIDATION FAILED")

@@ -27,7 +27,7 @@ To escalate a **single** `recursion-gate.md` candidate into a structured change-
 python3 scripts/export_gate_to_review_queue.py --user <fork_id> --candidate-id CANDIDATE-XXXX
 ```
 
-Then validate with `validate-change-review.py` (often `--allow-empty` until decisions and diffs exist). See [gate-vs-change-review.md](gate-vs-change-review.md).
+Then validate with `validate-change-review.py`: use `--allow-empty` while the tree is still a minimal scaffold (empty proposals/decisions/diffs allowed); use `--allow-missing-decisions` when proposals and diffs exist but `decisions/` is still empty. See [gate-vs-change-review.md](gate-vs-change-review.md).
 
 ---
 
@@ -39,6 +39,7 @@ Use:
 pip install -r scripts/requirements-seed-phase.txt
 python3 scripts/validate-change-review.py users/demo/review-queue
 python3 scripts/validate-change-review.py users/_template/review-queue --allow-empty
+python3 scripts/validate-change-review.py users/<fork_id>/review-queue --allow-missing-decisions
 ```
 
 ### What the validator checks
@@ -62,6 +63,8 @@ The validator checks:
 - proposal files against `schema-registry/change-proposal.v1.json`
 - decision files against `schema-registry/change-decision.v1.json`
 - diff files against `schema-registry/identity-diff.v1.json`
+
+**Queue items** must include `proposalClass`, `targetSurface`, `materiality`, `reviewType`, `riskLevel`, and `requiresReclassification` when present (non-empty queue). **Proposals** must include `targetSurface`, `materiality`, `reviewType`, and `queueSummary` among required fields. Surface tokens use snake_case values such as `self`, `self_library`, `civ_mem`, `work_layer` (see schemas). Mirrors under `docs/schemas/` should match `schema-registry/` after edits.
 
 #### 3. Queue references are coherent
 
@@ -91,6 +94,15 @@ These are allowed for demo or runtime-generated evidence handles.
 The `_template` scaffold is intentionally minimal.
 
 Use `--allow-empty` when validating the template review queue so that empty proposal, decision, and diff directories are treated as valid placeholders.
+
+### Pre-decision bundle (gate export and similar)
+
+Use `--allow-missing-decisions` when:
+
+- `proposals/` and `diffs/` each contain at least one valid JSON file, and
+- `decisions/` is still empty (no companion decision recorded yet).
+
+Strict mode without flags requires at least one file in all three directories. `--allow-missing-decisions` relaxes only the decision count; proposals and diffs are still required (and fully schema-checked). Combine with `--allow-empty` only when you need the template case (all three directories may be empty).
 
 ### Demo mode
 

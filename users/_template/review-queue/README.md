@@ -24,6 +24,14 @@ Do **not** rename these to `queue.json` or `event-log.jsonl` — `scripts/valida
 python3 scripts/validate-change-review.py users/_template/review-queue --allow-empty
 ```
 
+## Pre-decision bundle
+
+When `proposals/` and `diffs/` each have at least one JSON file but `decisions/` is still empty, validate with `--allow-missing-decisions` so strict checks run on artifacts without inventing decision files:
+
+```bash
+python3 scripts/validate-change-review.py users/<fork_id>/review-queue --allow-missing-decisions
+```
+
 ## Live instance
 
 Copy this tree under `users/<fork_id>/review-queue/` when you need change-review parity; keep `userSlug` in the JSON files aligned with `<fork_id>`.
