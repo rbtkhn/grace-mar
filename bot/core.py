@@ -1777,6 +1777,10 @@ def reclassify_gate_candidate(
     parent = find_staged_event_id_for_candidate(PIPELINE_EVENTS_PATH, candidate_id)
     if parent:
         kwargs["parent_event_id"] = parent
+    fork_slug = RECURSION_GATE_PATH.parent.name
+    kwargs["boundary_classification_rel_path"] = (
+        f"users/{fork_slug}/review-queue/boundary-classifications/{candidate_id}.json"
+    )
     emit_pipeline_event("gate_reclassified", candidate_id, **kwargs)
     return True
 

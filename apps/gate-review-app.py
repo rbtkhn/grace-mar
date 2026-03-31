@@ -20,6 +20,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "src"))
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 from flask import Flask, jsonify, request
@@ -81,10 +82,35 @@ def index():
     cards = []
     for r in pending:
         norm = normalize_review_item(r)
+        raw_id = r["id"]
+        cid = html.escape(raw_id)
         dup = r.get("duplicate_hints") or []
         hint = f'<p class="hint">{html.escape(dup[0])}</p>' if dup else ""
-        cid = html.escape(r["id"])
-        raw_id = r["id"]
+        br = r.get("boundary_review") if isinstance(r.get("boundary_review"), dict) else {}
+        br_html = ""
+        if br and (br.get("target_surface") or br.get("suggested_surface")):
+            t0 = html.escape(str(br.get("target_surface") or ""))
+            s0 = html.escape(str(br.get("suggested_surface") or ""))
+            mw0 = (br.get("misfiled_warning") or "").strip()
+            mw_html = f'<p class="boundary-misfiled">{html.escape(mw0)}</p>' if mw0 else ""
+            hrs = br.get("hint_reasons") if isinstance(br.get("hint_reasons"), list) else []
+            hr_line = html.escape("; ".join(str(x) for x in hrs[:6] if str(x).strip()))
+            hr_part = f'<p class="boundary-why"><em>{hr_line}</em></p>' if hr_line else ""
+            cf = html.escape(str(br.get("confidence") or ""))
+            br_html = (
+                f'<div class="boundary-review">'
+                f"<p><strong>Boundary:</strong> {t0} → suggested <strong>{s0}</strong> "
+                f'(confidence: {cf})</p>{mw_html}{hr_part}'
+                f"</div>"
+            )
+        sug_pc = norm.get("suggested_reclassify_proposal_class") or ""
+        sug_btn = ""
+        if sug_pc and sug_pc.strip() != (norm.get("proposal_class") or "").strip():
+            esc_pc = html.escape(sug_pc.strip(), quote=True)
+            sug_btn = (
+                f'<button type="button" class="btn suggested-class" data-id="{cid}" '
+                f'data-new-pc="{esc_pc}">Apply suggested class ({html.escape(sug_pc.strip())})</button>'
+            )
         summary = html.escape(norm["summary"])
         territory = html.escape(r.get("territory", ""))
         risk_tier = html.escape(r.get("risk_tier", ""))
@@ -121,7 +147,8 @@ def index():
             f'<span class="pill pill-meta" title="review_type">{rvt}</span>'
             f'<span class="pill pill-meta {pill_recl}" title="requires_reclassification">reclassify: {recl}</span>'
             f"</div>"
-            f'<p class="summary">{summary}</p>{hint}'
+            f'<p class="summary">{summary}</p>{hint}{br_html}'
+            f'<div class="suggested-class-row">{sug_btn}</div>'
             f'<footer><span class="meta">{channel}</span><span class="meta">{ts}</span></footer>'
             f'<div class="actions">'
             f'<button type="button" class="btn approve" data-id="{cid}" data-quick="{quick}">Approve</button>'
@@ -165,6 +192,11 @@ def index():
     .age {{ margin-left: auto; color: var(--muted); font-size: 0.8rem; }}
     .summary {{ margin: 0; }}
     .hint {{ margin: 0.6rem 0 0; color: var(--muted); font-size: 0.82rem; }}
+    .boundary-review {{ margin: 0.6rem 0 0; padding: 0.5rem 0.65rem; border-radius: 8px; background: rgba(193,127,89,0.12); border: 1px solid rgba(193,127,89,0.35); font-size: 0.82rem; }}
+    .boundary-misfiled {{ margin: 0.35rem 0 0; color: var(--danger); }}
+    .boundary-why {{ margin: 0.35rem 0 0; color: var(--muted); }}
+    .suggested-class-row {{ margin-top: 0.5rem; }}
+    .btn.suggested-class {{ background: rgba(125,192,154,0.15); color: var(--good); font-size: 0.8rem; }}
     .card footer {{ margin-top: 0.75rem; padding-top: 0.65rem; border-top: 1px solid rgba(255,255,255,.06); font-size: 0.75rem; color: var(--muted); }}
     .actions {{ margin-top: 0.75rem; display: flex; gap: 0.5rem; }}
     .btn {{ padding: 0.4rem 0.8rem; border-radius: 8px; border: none; cursor: pointer; font-size: 0.9rem; }}
@@ -231,6 +263,15 @@ def index():
         var surf = card.querySelector('.reclass-surface').value;
         var note = card.querySelector('.reclass-note').value;
         doAction(btn.getAttribute('data-id'), 'reclassify', btn, {{ new_surface: surf, review_note: note }});
+      }};
+    }});
+    document.querySelectorAll('.btn.suggested-class').forEach(function(btn) {{
+      btn.onclick = function() {{
+        var pc = btn.getAttribute('data-new-pc');
+        doAction(btn.getAttribute('data-id'), 'reclassify', btn, {{
+          new_proposal_class: pc,
+          review_note: 'Applied suggested boundary class (gate-review-app)'
+        }});
       }};
     }});
   </script>

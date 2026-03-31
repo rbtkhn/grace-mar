@@ -8,18 +8,29 @@ change review object.
 from __future__ import annotations
 
 import re
+import sys
+from pathlib import Path
 from typing import Any
+
+_GRACE_SRC = Path(__file__).resolve().parents[1] / "src"
+if _GRACE_SRC.is_dir() and str(_GRACE_SRC) not in sys.path:
+    sys.path.insert(0, str(_GRACE_SRC))
+
+from grace_mar.merge.boundary_classifier import (  # noqa: E402
+    review_surface_token_to_classifier_tuple,
+    suggested_reclassify_proposal_class,
+)
 
 
 def _map_boundary_surface_to_token(display: str | None) -> str:
-    """Map boundary_review display labels to schema surface tokens."""
+    """Map boundary_review display labels to schema surface tokens (review UI / queue)."""
     s = (display or "").strip().upper()
     if s in ("WORK-LAYER", "WORK LAYER"):
         return "work_layer"
-    if s == "SELF-LIBRARY":
-        return "self_library"
-    if s == "CIV-MEM":
+    if "CIV-MEM" in s:
         return "civ_mem"
+    if "SELF-LIBRARY" in s:
+        return "self_library"
     if s == "SELF-KNOWLEDGE":
         return "self"
     return "self"
@@ -75,6 +86,15 @@ def normalize_review_item(row: dict[str, Any]) -> dict[str, Any]:
     risk_level = _risk_tier_to_queue_risk(row.get("risk_tier"))
     materiality = _materiality_from_row(row)
     pc = (row.get("proposal_class") or "").strip() or "SELF_KNOWLEDGE_ADD"
+    band = (boundary.get("confidence") or "medium").strip().lower()
+    if band not in ("high", "medium", "low"):
+        band = "medium"
+    band_to_score = {"high": 0.85, "medium": 0.55, "low": 0.25}
+    surf_s, sub_s = review_surface_token_to_classifier_tuple(suggested_surface)
+    sug_pc = suggested_reclassify_proposal_class(surf_s, sub_s, pc)
+    misfiled_warning = (boundary.get("misfiled_warning") or "").strip()
+    hint_reasons = boundary.get("hint_reasons") if isinstance(boundary.get("hint_reasons"), list) else []
+    hint_reasons = [str(x) for x in hint_reasons if str(x).strip()]
     return {
         "candidate_id": row["id"],
         "summary": row.get("summary") or "(no summary)",
@@ -88,6 +108,11 @@ def normalize_review_item(row: dict[str, Any]) -> dict[str, Any]:
         "requires_reclassification": requires_reclassification,
         "canonical_path": (row.get("canonical_path") or "").strip(),
         "confidence_after": row.get("confidence_after"),
+        "boundary_confidence": band,
+        "boundary_confidence_score": band_to_score.get(band, 0.5),
+        "boundary_misfiled_warning": misfiled_warning,
+        "boundary_hint_reasons": hint_reasons,
+        "suggested_reclassify_proposal_class": sug_pc,
         "evidence_count": _evidence_count_from_row(row),
         "ready_for_quick_merge": bool(row.get("ready_for_quick_merge")),
         "territory_label": row.get("territory_label") or "",

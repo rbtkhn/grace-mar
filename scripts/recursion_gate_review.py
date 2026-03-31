@@ -9,7 +9,9 @@ providing derived fields for review surfaces such as dashboards and inboxes.
 from __future__ import annotations
 
 import json
+import logging
 import re
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -357,6 +359,20 @@ def _compute_boundary_review(row: dict) -> dict:
     }
 
 
+def _try_persist_boundary_classification(user_id: str, row: dict) -> None:
+    """Write review-queue/boundary-classifications/<id>.json when grace_mar is importable."""
+    root = Path(__file__).resolve().parents[1]
+    src = root / "src"
+    if src.is_dir() and str(src) not in sys.path:
+        sys.path.insert(0, str(src))
+    try:
+        from grace_mar.merge.boundary_classifier import sync_boundary_classification_artifact
+
+        sync_boundary_classification_artifact(user_id, row, repo_root=root)
+    except Exception as exc:
+        logging.getLogger(__name__).warning("boundary classification persist failed: %s", exc)
+
+
 def _ready_for_quick_merge(candidate: dict) -> bool:
     if candidate.get("status") != "pending":
         return False
@@ -452,6 +468,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
         row["ready_for_quick_merge"] = _ready_for_quick_merge(row) and not row["duplicate_hints"]
         row["risk_tier"] = _risk_tier(row)
         row["boundary_review"] = _compute_boundary_review(row)
+        _try_persist_boundary_classification(user_id, row)
         rows.append(row)
     rows.sort(key=lambda row: row.get("timestamp", ""), reverse=True)
     return rows

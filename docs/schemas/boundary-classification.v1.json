@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/boundary-classification.v1.json",
+  "title": "Companion-Self Boundary Classification v1",
+  "description": "Persisted snapshot of boundary hints for a recursion-gate candidate (classifier + surfaces).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "candidateId",
+    "userSlug",
+    "proposalClassCurrent",
+    "surfaceCurrent",
+    "surfaceSuggested",
+    "boundaryStatus",
+    "misfiled",
+    "why",
+    "confidenceBand",
+    "createdAt",
+    "source"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "candidateId": {
+      "type": "string",
+      "pattern": "^CANDIDATE-\\d+$"
+    },
+    "userSlug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposalClassCurrent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposalClassSuggested": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Default proposal_class for one-click reclassify from suggested surface (ADD/REVISE aligned to current row)."
+    },
+    "surfaceCurrent": {
+      "type": "string",
+      "enum": [
+        "self_knowledge",
+        "self_library",
+        "self_skills",
+        "self_evidence",
+        "work_layer"
+      ]
+    },
+    "surfaceSuggested": {
+      "type": "string",
+      "enum": [
+        "self_knowledge",
+        "self_library",
+        "self_skills",
+        "self_evidence",
+        "work_layer"
+      ]
+    },
+    "subsurfaceSuggested": {
+      "anyOf": [
+        { "type": "string", "const": "civ_mem" },
+        { "type": "null" }
+      ]
+    },
+    "boundaryStatus": {
+      "type": "string",
+      "enum": ["clear", "ambiguous", "misaligned"]
+    },
+    "misfiled": {
+      "type": "boolean"
+    },
+    "why": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "confidenceBand": {
+      "type": "string",
+      "enum": ["high", "medium", "low"]
+    },
+    "confidenceScore": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifactRelPath": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Optional self-reference path relative to review-queue root."
+    }
+  }
+}

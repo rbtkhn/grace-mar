@@ -38,15 +38,21 @@ As the fork grows, the main risk is **right data, wrong surface** (identity vs l
 - **Normalization** — `scripts/gate_review_normalize.py` maps each gate row to a unified review shape for UI and API (`items_normalized` on `/api/candidates`).
 - **Gate-review app** — Pills for proposal class, surface, materiality, review type; `/action` supports **defer** and **reclassify** (maps target surface → allowed `proposal_class`).
 
-### Phase B2 — next
+### Phase B2 — partially shipped
+
+- **Persisted boundary classification** — each pending candidate may have `users/<id>/review-queue/boundary-classifications/CANDIDATE-*.json` (`schema-registry/boundary-classification.v1.json`), refreshed when `parse_review_candidates` runs. Classifier logic lives in `src/grace_mar/merge/boundary_classifier.py`.
+- **API** — `items_normalized` from `/api/candidates` includes `boundary_confidence`, `boundary_confidence_score`, `boundary_misfiled_warning`, `boundary_hint_reasons`, and `suggested_reclassify_proposal_class` (one-click target class).
+- **Gate-review app** — cards show the same boundary hint block as the Approval Inbox (target → suggested, misfiled text, reasons) plus **Apply suggested class** when the suggested `proposal_class` differs from the current row.
+- **Reclassify audit** — `gate_reclassified` pipeline events include `boundary_classification_rel_path` pointing at the on-disk artifact path.
+
+Still **next** (seam with PR2 / later):
 
 - Structured diff: **old location → proposed location** (when moving between surfaces).
-- **Confidence** score surfaced consistently in API beyond gate YAML.
 - **Full reclassify UX** — richer forms, optional queue export bridge without manual YAML.
 
 ### Phase C
 
-- **Audit trail** — append `boundary_review_hint` / `boundary_misfiled_overridden` to `pipeline-events.jsonl` when operator approves despite warning or changes class; use to tune analyst prompt and `validate_identity_library_boundary` rules.
+- **Audit trail (extended)** — optional additional event types (`boundary_review_hint` / `boundary_misfiled_overridden`) or richer payloads on approve-with-warning; today reclassify is covered by `gate_reclassified` + classification file. Use to tune analyst prompt and `validate_identity_library_boundary` rules.
 
 ---
 

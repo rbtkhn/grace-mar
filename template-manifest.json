@@ -146,6 +146,11 @@
       "optional": false
     },
     {
+      "path": "schema-registry/boundary-classification.v1.json",
+      "description": "Persisted boundary hint snapshot per gate candidate (surfaces, suggested proposal_class, confidence).",
+      "optional": false
+    },
+    {
       "path": "users/_template/self.md",
       "description": "SELF schema/structure scaffold for new users only.",
       "optional": false
@@ -554,7 +559,8 @@
       "change_decision": "schema-registry/change-decision.v1.json",
       "identity_diff": "schema-registry/identity-diff.v1.json",
       "change_review_queue": "schema-registry/change-review-queue.v1.json",
-      "change_event_log": "schema-registry/change-event-log.v1.json"
+      "change_event_log": "schema-registry/change-event-log.v1.json",
+      "boundary_classification": "schema-registry/boundary-classification.v1.json"
     },
     "validator": "scripts/validate-change-review.py",
     "diff_generator": "scripts/generate-identity-diff.py"

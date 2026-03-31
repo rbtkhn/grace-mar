@@ -13,6 +13,7 @@
 | `proposals/` | One JSON file per proposal (`change-proposal.v1.json`) |
 | `decisions/` | Decision records (`change-decision.v1.json`) |
 | `diffs/` | Identity diffs (`identity-diff.v1.json`) |
+| `boundary-classifications/` | Optional: persisted boundary hint snapshots per pending candidate (`boundary-classification.v1.json`), created when review parsers run |
 
 Do **not** rename these to `queue.json` or `event-log.jsonl` — `scripts/validate-change-review.py` expects the names above.
 

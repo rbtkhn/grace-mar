@@ -174,6 +174,8 @@ Every materially important governed change can be represented as **one normalize
 
 **RECURSION-GATE** stays the default staging source of truth for candidates. Normalization maps gate rows + boundary hints onto this object without replacing companion sovereignty or the merge script.
 
+**Boundary classification artifacts:** Pending candidates may have a versioned JSON snapshot under `users/<id>/review-queue/boundary-classifications/` (schema `schema-registry/boundary-classification.v1.json`), refreshed when review parsers run. This complements ephemeral `boundary_review` on API rows and supports audit (`gate_reclassified` events reference the relative path).
+
 ### 4.2 Review Checklist (before approving)
 
 - Is it grounded in something the companion actually said or did?

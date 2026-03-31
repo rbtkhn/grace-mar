@@ -69,6 +69,8 @@ def test_misfiled_triggers_boundary_review_type():
             "target_surface": "SELF-KNOWLEDGE",
             "suggested_surface": "SELF-LIBRARY",
             "misfiled_warning": "Target surface is SELF-KNOWLEDGE but content suggests SELF-LIBRARY.",
+            "hint_reasons": ["mentions LIB- entry"],
+            "confidence": "low",
         },
     )
     n = normalize_review_item(row)
@@ -76,6 +78,10 @@ def test_misfiled_triggers_boundary_review_type():
     assert n["review_type"] == "boundary"
     assert n["target_surface"] == "self"
     assert n["suggested_surface"] == "self_library"
+    assert n["boundary_confidence"] == "low"
+    assert n["boundary_confidence_score"] == 0.25
+    assert n["suggested_reclassify_proposal_class"] == "SELF_LIBRARY_ADD"
+    assert any("LIB" in x for x in n["boundary_hint_reasons"])
 
 
 def test_quick_merge_risk_maps_low():
