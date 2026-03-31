@@ -85,7 +85,7 @@ This track is **discretionary** — unlike Track 1 and 2, it is not a recurring 
 
 ## Reconciliation code audit (upstream and downstream)
 
-Any **template + boundary audit** (including [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) hey **A**) should end with an explicit **reconciliation code** subsection — not only doc drift. **Reconciliation code** means scripts, validators, CI recipes, manifest/index tooling, or hooks that **compare, merge, validate, or sync** template ↔ instance.
+Any **template + boundary audit** (including [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) coffee **A**; legacy hey **A** still works) should end with an explicit **reconciliation code** subsection — not only doc drift. **Reconciliation code** means scripts, validators, CI recipes, manifest/index tooling, or hooks that **compare, merge, validate, or sync** template ↔ instance.
 
 | Direction | Question | Be specific |
 |-----------|----------|-------------|

@@ -1,8 +1,8 @@
 # Git branch hygiene (operator)
 
-**Purpose:** A **small, repeatable** check so you do not lose track of branches or confuse **“merge into main”** with **Record gate merge**. This doc supports the [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) **branch snapshot** (work-start and closeout **hey** Step 1) and **hey menu B** (repository hygiene — full pass when chosen).
+**Purpose:** A **small, repeatable** check so you do not lose track of branches or confuse **“merge into main”** with **Record gate merge**. This doc supports the [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) **branch snapshot** (work-start and closeout **coffee** Step 1; legacy **hey** still works) and **coffee menu B** (repository hygiene — full pass when chosen).
 
-**Not the same as hey menu A.** **A** = template + boundary audit (grace-mar vs companion-self, fork isolation, reconciliation code). **Branch hygiene** = **local git** pointers (`main` vs feature branches) — different job.
+**Not the same as coffee menu A.** **A** = template + boundary audit (grace-mar vs companion-self, fork isolation, reconciliation code). **Branch hygiene** = **local git** pointers (`main` vs feature branches) — different job.
 
 ---
 
@@ -38,10 +38,10 @@ If you are unsure, the **prescription** is: **one sentence** — “No action,�
 
 ---
 
-## Fit in hey (work-start and closeout)
+## Fit in coffee (work-start and closeout)
 
-- **Work-start hey:** After warmup scripts (and lighter cadence when applicable), agent runs the snapshot and gives **one short paragraph** unless only `main` exists and clean.
-- **Closeout hey:** Same snapshot after `operator_handoff_check.py` when useful; pairs with **menu D** or **B** if you want to **execute** deletes/merges that session.
+- **Work-start coffee:** After warmup scripts (and lighter cadence when applicable), agent runs the snapshot and gives **one short paragraph** unless only `main` exists and clean.
+- **Closeout coffee:** Same snapshot after `operator_handoff_check.py` when useful; pairs with **menu D** or **B** if you want to **execute** deletes/merges that session.
 
 **Guardrail:** Snapshot is **read-only** in Step 1. Actually **merging or deleting** branches is **ship** work — do it when you choose **D** or leave the session and run git yourself.
 
