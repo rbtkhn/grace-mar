@@ -1,366 +1,366 @@
 {
   "manifest_version": 1,
   "pipeline_version": "1.0.0",
-  "last_run_utc": "2026-03-24T17:28:30Z",
+  "last_run_utc": "2026-03-31T14:40:56Z",
   "videos": {
     "HIoYQBbBllk": {
       "content_hash": "9b0c7e55b6d96a9492415fbe5876f3083c0a759c64c01d30cfe7269f0e60a591",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:51:24Z",
+      "last_updated_utc": "2026-03-31T14:39:35Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:51:24Z"
     },
     "_Io7-_RS8uE": {
       "content_hash": "a4e02a29bf4604511b331c74bbbefb312a550bbc07ee491624bb849f84a0daf5",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:51:35Z",
+      "last_updated_utc": "2026-03-31T14:39:33Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:51:35Z"
     },
     "abs6z7VPEMc": {
       "content_hash": "8259fd1d4c91be1e45e8a34da5e54de9b662fae18c147bd4302e325a1073abb5",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:51:40Z",
+      "last_updated_utc": "2026-03-31T14:39:32Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:51:40Z"
     },
     "1dwvgtc7XzY": {
       "content_hash": "1606dfb1c62af6c69797a22e12d6849357079c83ed2611d8efc1b172f0690aec",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:51:45Z",
+      "last_updated_utc": "2026-03-31T14:39:30Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:51:45Z"
     },
     "7k5XoLzwmls": {
       "content_hash": "dfd3034a9c0d0e4e7f6cc2abc790a2911c324456df1e7f51945d6a14ef6dc270",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:51:50Z",
+      "last_updated_utc": "2026-03-31T14:39:28Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:51:50Z"
     },
     "tYMNsa83NHY": {
       "content_hash": "1b6d791892e747e91e5e2b4a6e85fe4ca2a2f3d3a14cd8925eb4c594a8a575fb",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:51:55Z",
+      "last_updated_utc": "2026-03-31T14:39:27Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:51:55Z"
     },
     "2OdO8LoKuo8": {
       "content_hash": "6a5d529b901a70983adc80c27f5c73f34fae5824e2f414c471f213732824850c",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:52:00Z",
+      "last_updated_utc": "2026-03-31T14:39:25Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:52:00Z"
     },
     "A2LMJerHcKM": {
       "content_hash": "280b1c4f37a3a892479438b0ee30a9b1e43de43f83a19b14180dcd685e3cc074",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:55:59Z",
+      "last_updated_utc": "2026-03-31T14:39:23Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:55:59Z"
     },
     "mPQzAPnjYkM": {
       "content_hash": "9d1e0b50d9b450492fd5dbb6f79c22c8120381a1d560bfbb47902d8031ad8715",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:56:32Z",
+      "last_updated_utc": "2026-03-31T14:39:21Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:56:32Z"
     },
     "3751ZjwmrBw": {
       "content_hash": "b13f411d94c2fa89fef92f6d24209b0483de856aaf83ba7a0b2122f6b491f67b",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-23T23:57:07Z",
+      "last_updated_utc": "2026-03-31T14:39:20Z",
       "last_successful_fetch_at_utc": "2026-03-23T23:57:07Z"
     },
     "v6CDqJnrvLk": {
       "content_hash": "34a54db353d60cae2db1ae6f6432f4d7b4ba8ee74881b3b575819fde5cba0554",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:14:23Z",
+      "last_updated_utc": "2026-03-31T14:39:18Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:14:23Z"
     },
     "TcxlOiJz8V0": {
       "content_hash": "dc6761236c16481a241924ed06ca31b67f33253e5ad4a7d073d5e43d5679c27d",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:14:48Z",
+      "last_updated_utc": "2026-03-31T14:39:16Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:14:48Z"
     },
     "CjtUnKcU1IA": {
       "content_hash": "4305445baedd04581539f0012d20c0ba470545339ad585aa4ba1dc298271c9ef",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:15:27Z",
+      "last_updated_utc": "2026-03-31T14:39:14Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:15:27Z"
     },
     "-DnfGcvZrfA": {
       "content_hash": "42b39ed22685c66f6bf25d851b7c0134384afb7a3fde095a7d5184289258f8a9",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:16:13Z",
+      "last_updated_utc": "2026-03-31T14:39:13Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:16:13Z"
     },
     "DiRJyy-8V54": {
       "content_hash": "b1b9e7aa1677ab0f61c93b37f3a9115e1f244ec6352a59f83ffb30c12232b61a",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:17:01Z",
+      "last_updated_utc": "2026-03-31T14:39:11Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:17:01Z"
     },
     "5HwZx5kQm9o": {
       "content_hash": "5644796f22ab5faaa7d1447c1547b028332ef6de593af6d8403a411b7f0d6884",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:18:23Z",
+      "last_updated_utc": "2026-03-31T14:39:10Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:18:23Z"
     },
     "ef-Ch2LGDDI": {
       "content_hash": "bedb2718600d103ec84beb0171c5bf4a266a0315c672955798c926f302ed56de",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:19:40Z",
+      "last_updated_utc": "2026-03-31T14:39:08Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:19:40Z"
     },
     "enEET_0j_Y8": {
       "content_hash": "d632258c6c18b8d830a2206879c0a66e911dc5ec6fb564334fd38ea69cdeaba4",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:21:53Z",
+      "last_updated_utc": "2026-03-31T14:39:06Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:21:53Z"
     },
     "JZ8P-FZHWnQ": {
       "content_hash": "33c6f0766d8021eaaf0eb50be572670233bb8e871a50ff4a5826ea8a9bdf041a",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:23:33Z",
+      "last_updated_utc": "2026-03-31T14:39:04Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:23:33Z"
     },
     "laGSxfvlOfk": {
       "content_hash": "197218fc997e67fabef30537d2c0929896ccca5586451c52f28fa2bf3fb9a0f9",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T00:24:01Z",
+      "last_updated_utc": "2026-03-31T14:39:02Z",
       "last_successful_fetch_at_utc": "2026-03-24T00:24:01Z"
     },
     "xEEpOxqdU5E": {
       "content_hash": "a4746128a3fa1e2989479acf29c61208878dbe4511b91f7f98ffef9873030b74",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:33:51Z",
+      "last_updated_utc": "2026-03-31T14:40:49Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:33:51Z"
     },
     "lkKrZq4YdqY": {
       "content_hash": "c48c83a96bcad4a29c71c3c5262866bc161dbc80f3af85155d040886c2e69669",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:33:54Z",
+      "last_updated_utc": "2026-03-31T14:40:47Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:33:54Z"
     },
     "_blj8zKdKgA": {
       "content_hash": "6207d73763d970a9403a8b4e225d4f97583dd4dd337a822036e4ea3a386bc4e1",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:33:57Z",
+      "last_updated_utc": "2026-03-31T14:40:45Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:33:57Z"
     },
     "LctUcVqhhns": {
       "content_hash": "e2a585dd06144b6e28d746e6450b01913a939ba1aad4e67b86cfd8bb123e44bc",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:01Z",
+      "last_updated_utc": "2026-03-31T14:40:43Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:01Z"
     },
     "exRK-85630k": {
       "content_hash": "93f9c7f1aa4586fd5f7663f8d42331986ac34fedf45ba9b4c885741ab5969853",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:04Z",
+      "last_updated_utc": "2026-03-31T14:40:41Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:04Z"
     },
     "JieFC4Yww4o": {
       "content_hash": "b06fb51e4b290078512bb93ea617c51dc4de0f986519ff941b7edc5fc8d7487f",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:07Z",
+      "last_updated_utc": "2026-03-31T14:40:40Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:07Z"
     },
     "LsRGvKxfLts": {
       "content_hash": "d8cfd3575c54d091cdf51713917114784d0ed287fae277636da9c5caa95bf339",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:10Z",
+      "last_updated_utc": "2026-03-31T14:40:38Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:10Z"
     },
     "7y_hbz6loEo": {
       "content_hash": "cbc31cc396b0b44c19ebe692e88cb00d1ce34147176ee79a56208176eae7aeb1",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:12Z",
+      "last_updated_utc": "2026-03-31T14:40:36Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:12Z"
     },
     "AEPSUC-UQ5k": {
       "content_hash": "ab0246d72f8d179e0d4b04ba3ee270f06c6c3f9ac4e86f2f676f64e5afbefa3f",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:15Z",
+      "last_updated_utc": "2026-03-31T14:40:34Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:15Z"
     },
     "B_al2wgk49Y": {
       "content_hash": "243a3db87a0b1dc806d28a1aa227696ab5281b1f227be1df902e97d88d32054a",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:19Z",
+      "last_updated_utc": "2026-03-31T14:40:32Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:19Z"
     },
     "Go1bMQKnJBQ": {
       "content_hash": "2dee3db6314187137b909e8aaf49e170e18d0f2ea2341c88a0a6b4d248a98494",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:22Z",
+      "last_updated_utc": "2026-03-31T14:40:31Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:22Z"
     },
     "s_k6esWheqA": {
       "content_hash": "3a6fe4dcb513e251d28fa0335f4687a6481e46e890efe25ddee7f21f96050e16",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:25Z",
+      "last_updated_utc": "2026-03-31T14:40:29Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:25Z"
     },
     "8XdL-7tAqnU": {
       "content_hash": "1844185c533296a46c0f701ac8c2d6ea543a342c4172a96f6e44d027a1056445",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:28Z",
+      "last_updated_utc": "2026-03-31T14:38:20Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:28Z"
     },
     "N4cs-8mrP_s": {
       "content_hash": "e2ddf61862bd4df582064104c3e066620a01fd7faa4eb98728fd10487c1a5d8d",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:31Z",
+      "last_updated_utc": "2026-03-31T14:38:19Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:31Z"
     },
     "bc9adtiIN_k": {
       "content_hash": "7bf633cbf60eda01a5ba3aa509fa53c5ad94931b47bad7f86dab8c97be14bc33",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:34Z",
+      "last_updated_utc": "2026-03-31T14:38:17Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:34Z"
     },
     "Kw-TiN6dEcM": {
       "content_hash": "ddf6a0ae2ff79f8d79c21446787f7ee3e9859a0ca2a5d2faeb7d1789b708673c",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:37Z",
+      "last_updated_utc": "2026-03-31T14:38:15Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:37Z"
     },
     "5I2VPYPJJ68": {
       "content_hash": "2d6209e692b7b22004423fcac0142b5d4d73f04c1d96b00a8013bc1f37876d3d",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:40Z",
+      "last_updated_utc": "2026-03-31T14:38:13Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:40Z"
     },
     "ZgvAHZqaawA": {
       "content_hash": "0025c660df1a2e989653aa93a8d889525e644747d8e97cc2c9449b3adaef4736",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:43Z",
+      "last_updated_utc": "2026-03-31T14:38:11Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:43Z"
     },
     "YQ-xg1nIbMs": {
       "content_hash": "abfb73e4ab261ba0a7f943caec6d937c7ed9b380488a86383790e2c32e9346e6",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:46Z",
+      "last_updated_utc": "2026-03-31T14:38:09Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:46Z"
     },
     "E83dpuyvpiM": {
       "content_hash": "b31cb0ccd29218616e5f6858ca3a7f8215b96b460f68056195605d489d1a05d1",
       "source_tier": "tier1_api",
       "quality": 0.95,
-      "status": "ok",
+      "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:34:50Z",
+      "last_updated_utc": "2026-03-31T14:38:08Z",
       "last_successful_fetch_at_utc": "2026-03-24T16:34:50Z"
     },
     "m24LnQ-Ksjk": {
@@ -369,7 +369,7 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:59:13Z"
+      "last_updated_utc": "2026-03-31T14:38:52Z"
     },
     "cylkQPsfFRY": {
       "content_hash": "6bd404b1764a693dd795aba8bbbed98d590afcdc2ff0ee648e9a3e0567c8f7eb",
@@ -377,7 +377,7 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:59:19Z"
+      "last_updated_utc": "2026-03-31T14:38:42Z"
     },
     "tquo1UsC5Nw": {
       "content_hash": "bed90d941a40ac25fae06c2e1120c1014d840f8bf139388289055a941b0271cf",
@@ -385,7 +385,7 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:59:25Z"
+      "last_updated_utc": "2026-03-31T14:38:41Z"
     },
     "QtqfIjK1GAc": {
       "content_hash": "22f8258d4d7a06b3f64e64e43eafe4a14c164f117190863d91c2817d6f79cea4",
@@ -393,7 +393,7 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:59:32Z"
+      "last_updated_utc": "2026-03-31T14:38:39Z"
     },
     "_gH4PvIni5E": {
       "content_hash": "3275aa31024672da5164a6d12a709f29b49d475059b91c3553031ff498622fa9",
@@ -401,7 +401,7 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T16:59:38Z"
+      "last_updated_utc": "2026-03-31T14:38:37Z"
     },
     "ZPrecJHUOUs": {
       "content_hash": "e4652fe03b919ce8db66054893516558be5d84aac74c16c61cf6a30564a1a493",
@@ -409,7 +409,7 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T17:22:27Z"
+      "last_updated_utc": "2026-03-31T14:37:14Z"
     },
     "WFWizN3QoPg": {
       "content_hash": "56c09a6db88d065a189e93fb61fa0c20f4db2ff17724c2a9fc1827962237876d",
@@ -417,119 +417,760 @@
       "quality": 0.5,
       "status": "skipped_existing",
       "error": null,
-      "last_updated_utc": "2026-03-24T17:22:39Z"
+      "last_updated_utc": "2026-03-31T14:37:13Z"
     },
     "lt8XLz78ZvY": {
-      "content_hash": null,
+      "content_hash": "a98ea853127a03a3b24a39ade11cb5680d7bf83bbab20e2646c9c477ff8577fd",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:26:28Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:59Z"
     },
     "K-_l9jBGo74": {
-      "content_hash": null,
+      "content_hash": "2db1e7af8e1da5b0c2070e50b18c9396ef983e82dfaed7026a69c8cfd0b73d9a",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:26:37Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:57Z"
     },
     "0g3yo1DjiLM": {
-      "content_hash": null,
+      "content_hash": "e745f3c7d2a8b0153b3de50247c2c75060bd93ad35a9fd93f9bdc434327fa44e",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:26:47Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:56Z"
     },
     "BtlWoqWLm9Q": {
-      "content_hash": null,
+      "content_hash": "50011b8981448f916fbf1cc3b11a18399ad64d061e80be6a1d16cdc954e849b2",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:26:56Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:54Z"
     },
     "EgGfQdv_rPc": {
-      "content_hash": null,
+      "content_hash": "2fb1f2e1d3816c688aeb46e6aa8de4a19de6bb14fddba7ee44a415cc31809125",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:27:05Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:52Z"
     },
     "6PdfD44DkqA": {
-      "content_hash": null,
+      "content_hash": "259b3021a9806f16405ddbd0448fa921a90353b6858136297c490dcb742b72f3",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:27:14Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:51Z"
     },
     "JU_8fJjtGxA": {
-      "content_hash": null,
+      "content_hash": "6a62f30abf91ed3db255cc370c14d977e5a2752365e329866cb7c4b7bc05e91c",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:27:23Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:49Z"
     },
     "hk_yhi3-prw": {
-      "content_hash": null,
+      "content_hash": "2dbf2ea1f08ce398a9ea5f5d588b1f067e9547a629a06e783b97fa62a20d878c",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:27:35Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:47Z"
     },
     "9MURGjjG4aA": {
-      "content_hash": null,
+      "content_hash": "38de056f6ca165bb24142825bccc8656b9cc3a6a984019aaf1fbb3627c92e05c",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:27:44Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:46Z"
     },
     "ihh1fdW4-cA": {
-      "content_hash": null,
+      "content_hash": "fea34dae98e97d62f6a721b4bafb34ddb2d2eb40cd7e0570633217c4741210f3",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:27:53Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:43Z"
     },
     "LvHsg5qtDs8": {
-      "content_hash": null,
+      "content_hash": "ae5de92462837032247d48bef9ebf0d5b4781d1f16caa00a5434dbee350fedf6",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:28:03Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:42Z"
     },
     "VtnRA-GNKM8": {
-      "content_hash": null,
+      "content_hash": "61f58b19b16f68f4b6bc998caf360560b30772e41986d9a67f17ecb1f30fdc97",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:28:12Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:40Z"
     },
     "FJF8oD_5c_w": {
-      "content_hash": null,
+      "content_hash": "630d8313db086baf68e32d6791e666447c134c5b867ff669bff458cc34fe4c56",
       "source_tier": "tier1_api",
-      "quality": 0.0,
-      "status": "error",
-      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:28:21Z"
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:38Z"
     },
     "JpTI2gFYWrU": {
+      "content_hash": "60ebba688ae7ddc2794c66c57ed2a6ab3103e4623ff23cef3eb5df4f188370a4",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:37Z"
+    },
+    "VbowBTJWKBo": {
+      "content_hash": "1014a08251e099c38c30d30ddf9007284c4f1d51c26891e1446b0a9ac138fb57",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:09Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:09Z"
+    },
+    "mk4vcHtawSo": {
+      "content_hash": "6047d91f4e895a54d2d6e3b2dea9036e1eb004502b569fa5ea7405e2103bcf2d",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:12Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:12Z"
+    },
+    "0aASxQrJYuo": {
+      "content_hash": "f3fbd7c44b36bb02ee5c1aae0e591a764cae742e26955e217474a67a3a4856d7",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:15Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:15Z"
+    },
+    "YXTRlvFIRt8": {
+      "content_hash": "df0610946d5ef354ca0804405eefe6fe7cb8dcdc02366b6f73c4a49c8256f9a6",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:18Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:18Z"
+    },
+    "zAer-Mqe7tQ": {
+      "content_hash": "1aea6e4f4fc7f338ef8e91322f3341ace044a1890612730cf63b20901a001025",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:21Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:21Z"
+    },
+    "nOQqGy4boBY": {
+      "content_hash": "4bc903aa8806891e75c10272ad57307881a0c3538f1af1920bc6c53238ad3373",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:22Z"
+    },
+    "EBWTRvjZ1dw": {
+      "content_hash": "e530114fdfea75860898c417e911623854b463105a0d607c7ac13711bdef192d",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:24Z"
+    },
+    "aQSDSqdlFxk": {
+      "content_hash": "92f312dcc54d189822761b43eb995749162e69f3a69d213ec3f38134dd977162",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:27Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:27Z"
+    },
+    "spg58Glfz68": {
+      "content_hash": "35f714138ffc3b7354a41a4783387bfb21681e4ec2c06c76a4ec3cc7788cef7d",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:30Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:30Z"
+    },
+    "aS-NfPSPMu8": {
+      "content_hash": "50440c34d6b296d2bac0c956c7fb8d0fa28da60b45e7d82a13658ff84b675c16",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:32Z"
+    },
+    "fz-Dan7NRss": {
+      "content_hash": "191eb7c64bc1386a089f3152eee87905b7d1ba5fa6498956255c995155f85e4f",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:35Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:35Z"
+    },
+    "t5oisJiorsU": {
+      "content_hash": "6162e826c45c47ae9f2e313f773ef3801cd11e8d6aeec887e5e4fd4cde4af00a",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:38Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:38Z"
+    },
+    "gXlcR7uHHdA": {
+      "content_hash": "e74590ca439b47af9090695102b426535468cf1d59f7ada5803c7e6a3a0d4b92",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:40Z"
+    },
+    "jIS2eB-rGv0": {
+      "content_hash": "fff999a15516e4872f0a364662d77268754a957546a00c83c1fa1e805c896018",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:43Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:43Z"
+    },
+    "axqDLhWs93Q": {
+      "content_hash": "f26592732f3659fe2c56ff73a0bfd6eeae18d8b9e8b360d22bc2c64b62db4640",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:45Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:45Z"
+    },
+    "dkzr5A8IlLA": {
+      "content_hash": "8f94f2f3777c2c95f1b91d982b580aae15393c2975fe59898bb56aa425bafb19",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:47Z"
+    },
+    "ijnkCt1QK6k": {
+      "content_hash": "9c15eb95d3c060841c5806e9bca74490ddebdaa22d5bca569b49366b67d561e7",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:50Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:50Z"
+    },
+    "CbamEcNuDXo": {
+      "content_hash": "f2d2db8becff0293bd17421eac3776582cee90f333ee5710385f4e6e618eafae",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:53Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:53Z"
+    },
+    "XRP407WsA0w": {
+      "content_hash": "24174d771f6e22e9c58f2bd60a594247d562829d12d0739a7a9e0f5ddf934c69",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:55Z"
+    },
+    "ybufqRY77PQ": {
+      "content_hash": "73ddb588fb06c71af97443cd9a3fb933208592283a204efe253626fcaedecabd",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:36:57Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:36:57Z"
+    },
+    "35HRPLVyF0g": {
+      "content_hash": "9c736925f0e7ab1f573c2dc59fbba147212dcd80ede5a94aea71a8feeaa93229",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:00Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:37:00Z"
+    },
+    "Ft2CuowGuYc": {
+      "content_hash": "a612023e9a53e83c866cf940c76f4a350a861337c150d3a3c0c0cbdd80c0d170",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:02Z"
+    },
+    "MX93U4KzA28": {
+      "content_hash": "50725b8fe5d8226fce497fa5095d962600a90dfdc1d4bc3c71169f6c426b3072",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:04Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:37:04Z"
+    },
+    "kS-muAuq62E": {
+      "content_hash": "a7e5f9832b4e2f01d341f0d695eb95810bcf9dac681b539899b7b649df0fcedd",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:07Z",
+      "last_successful_fetch_at_utc": "2026-03-31T14:37:07Z"
+    },
+    "TsD-8FGA84A": {
+      "content_hash": "d6d6c115d9e75133bf6daa22c694f6a53b0092c6a0259835c0be65c9f7670b36",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:09Z"
+    },
+    "hE4l9WyLF3U": {
+      "content_hash": "36a9200f53e3863f5867526e936f091cab7932f6de948c58cc6caf021ac97a91",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:11Z"
+    },
+    "kULUM_eB8KI": {
+      "content_hash": "5bfa02cd42631ccc20d77c4b42895f0d027304d23defa6190c23c9cbf0b01dd1",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:16Z"
+    },
+    "B5FtHagng8c": {
+      "content_hash": "3a753d397b8ffda288adb148a6d3db52d6f9e0f9297b7fccd2615a20613405d0",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:18Z"
+    },
+    "TEdVhyE8pO0": {
+      "content_hash": "9f13836fee454f8b6b740317a69355c2b1d318f8a271f17aa0f96371c413a3dd",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:19Z"
+    },
+    "6XGAc_OqCbU": {
+      "content_hash": "a28e5a0b8476e2a3a7124e608033c3836a855daf2e32912d7e75d7a1487507a3",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:21Z"
+    },
+    "pp0E1gb80WQ": {
+      "content_hash": "07883a8618e1c58a6bf8f15119c1f1e268e2349e7ca557acbefd19190841d31b",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:23Z"
+    },
+    "Y-gXVzwbFMU": {
+      "content_hash": "3dd22c06d1740ac1832da83e9681cbd2ca84c4b86e7947a4b7714efcaeb34191",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:25Z"
+    },
+    "z0AwFin83lo": {
+      "content_hash": "59e376f0840c3c6bfcd7599149dcb34c57203179b2461805e0ccfeed08b315e6",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:27Z"
+    },
+    "3t0MeVBD24I": {
+      "content_hash": "f7d100599bad55c01bbc3c18d660623e697fc44d49206051cf98f4a85809c239",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:29Z"
+    },
+    "dELEdxh0ceg": {
+      "content_hash": "6e126e9b1c34dc096e767bf8197f4d52db93876d86f592306afda385258717a5",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:30Z"
+    },
+    "PlMNq44tBG0": {
+      "content_hash": "3fb3e9d340246a520c3ceeebfaa6f5fc04f5d2b6458b9ea668490932d2045341",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:32Z"
+    },
+    "4ehovUNrSrw": {
+      "content_hash": "580231362c7849e3286a1a1d32735da4c60178b9d053ac819404e670f45c7b52",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:34Z"
+    },
+    "rkt0HQOogHE": {
+      "content_hash": "787442c0420d36c883c7cf34577e8a83d3b48a61d29bf8d11358f1c414a0e541",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:37:35Z"
+    },
+    "ajFXykT9Joo": {
       "content_hash": null,
       "source_tier": "tier1_api",
       "quality": 0.0,
       "status": "error",
       "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-      "last_updated_utc": "2026-03-24T17:28:30Z"
+      "last_updated_utc": "2026-03-31T14:38:06Z"
+    },
+    "voQEteh6Hko": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-31T14:38:28Z"
+    },
+    "GDqkhdWW5CA": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-31T14:38:35Z"
+    },
+    "ra2v9HkaHz8": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-31T14:38:50Z"
+    },
+    "_3c3FjS57x4": {
+      "content_hash": "edbcc0f104e7f0b47b212a9acd9a0184f660eee23c162184e9e976ed45c8f815",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:38:54Z"
+    },
+    "o2Nq--qU9Kc": {
+      "content_hash": "0bde378810c8819373d150327f60f3930ca2d47cde437083c534c78d575595ad",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:38:55Z"
+    },
+    "0rALqcPWuH0": {
+      "content_hash": "a145aea808a550e743d5bfca7cec0a2f03fdcab9fe757c3fcd4c90c57113b7e1",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:38:57Z"
+    },
+    "ea20aMYfT5I": {
+      "content_hash": "651baa656774706974a8de103152ff557f0f6d61a80d07f5cc759c4e06d3be2c",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:38:59Z"
+    },
+    "Qms7trnKwqQ": {
+      "content_hash": "2a39264f6765c57b6de9daf12dff2d27e59aade7c2bfae2ead508f1bd10eb9c4",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:01Z"
+    },
+    "asbKjezwIJM": {
+      "content_hash": "53485890c4a14ce5205c52afb06f94db4d117932f1bcf2972bdef03545a9ed35",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:37Z"
+    },
+    "GfqJi0qevok": {
+      "content_hash": "112b9fd1b4bd6d1176be01c355fa9e1df916d8242580ee4cb643afe9dcf1984e",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:39Z"
+    },
+    "C9rzPGJ0wm4": {
+      "content_hash": "40fbf4f6228bd68237f0a7e314aa1af2f7e8c3b1a35a7fddbcf0a322a83f5898",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:40Z"
+    },
+    "GdbZBVUIVDE": {
+      "content_hash": "eae571064d7a064cad20b3d8522100e8c41eee864f79643787ba0ca408a5c168",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:42Z"
+    },
+    "za30rbC3tTg": {
+      "content_hash": "34a6e1e0c401302ec7eb341c3f4392590ba2030002c92577f768895348888a83",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:44Z"
+    },
+    "kuMhSFXnr5I": {
+      "content_hash": "e96f2241dcdd8ca0647f839e311f7b64d81785ce07d6de74bfb44902153b5225",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:46Z"
+    },
+    "_bXHBT5NTfc": {
+      "content_hash": "19c367be0eac0802aae962c4548c58e66ee6a96f65227816486721a3acf4b3ab",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:47Z"
+    },
+    "HvVTNTPzq7E": {
+      "content_hash": "6f5b59c42d79d1232fb51dfcd9dbd2d578a55158be9b6a462b1563efad8a7666",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:49Z"
+    },
+    "GhLd_h1QsL4": {
+      "content_hash": "67936b71a67e3cf87446b3d49949f387da4949359cc49c5d3d3f727eded80a60",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:51Z"
+    },
+    "RkpGrRUgjnk": {
+      "content_hash": "58f5a47b2a2959726baa4764b349ba6ff4fbd9872ce20fbad9702837a0c7f172",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:53Z"
+    },
+    "cvI8rukoda8": {
+      "content_hash": "4cfa62008508ea4d3e30248b3ba35fc3020ecfa47be88551ab1568701c51138a",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:54Z"
+    },
+    "e92jyBMmAyM": {
+      "content_hash": "212f112aec53ea6ccef50154be4bd2b12bf51c257c7dcbabfc753c6490963008",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:56Z"
+    },
+    "KSSSCznYrGo": {
+      "content_hash": "c85787f36ee66ad9d968e81fb449a3d7bd2f6965692384f68611c33f1a8ca618",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:58Z"
+    },
+    "myTurqU7NxU": {
+      "content_hash": "852c5048ea9026cf400e370daa9e2bffd00ae39da4fdff265737dbb9dd34f1e8",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:39:59Z"
+    },
+    "Dc54IquR7ik": {
+      "content_hash": "6911cb24299d59d7ae8ec030ed1573cf57fa5dd1dfb429c78e856b392b1e9f37",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:01Z"
+    },
+    "F8qQgsEFGgc": {
+      "content_hash": "89fb3db5b297dbf80dbea3ea9deda5e1541cb476ee33e8f93037eb68636a9c4f",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:03Z"
+    },
+    "TdcE7XGDayo": {
+      "content_hash": "b27c8ca27e06701ac81b0a9319462ae26dfd9fb73170bc9c0786a7f592fd507a",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:05Z"
+    },
+    "WoTOxE4DTFA": {
+      "content_hash": "46d2d18923ee4435e16e78296a15353ba2a27b4fe7c67d563c5e8e96e53a4349",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:06Z"
+    },
+    "iTuRB48Of9Y": {
+      "content_hash": "d6a47f5e2ca151ad5d14a581bcd99bf67b7c1e8ce0f362e63273ef4638ef19af",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:08Z"
+    },
+    "l6AroD58jkE": {
+      "content_hash": "3cbdccf0b5472d135f5d6ea65e7913e38ffdb8919ddc359459d2e25db37014a5",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:10Z"
+    },
+    "LWlTtdNww_k": {
+      "content_hash": "6d8ade0cf1d7a44c074f81c4ea78c1cd02c81f238f86f96d93023629bff1be1d",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:11Z"
+    },
+    "96hzWlozdHw": {
+      "content_hash": "4b673d85db9adf6208ba55322966e2e16d18df6a9f2843f863583ec218f9ae87",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:13Z"
+    },
+    "NpNCQ_gNqdE": {
+      "content_hash": "84980cef0adba739fdaaa3525b2812344af9fa28f701b74c7e17998e65b28818",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:15Z"
+    },
+    "677rmlRgvLQ": {
+      "content_hash": "4b7c18878d48ffda5ad672c90118af8b381b0679ca2414f4920796a10adc9d15",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:17Z"
+    },
+    "QwfB-vXXKWU": {
+      "content_hash": "4de0b62dcb21ff2d4e1493dbf4c4c40a389869193cd2cfa536d7c2baeb223aad",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:18Z"
+    },
+    "J4HTFJWl5D8": {
+      "content_hash": "e7666c4808b11708d4fda202eadbf201f3f8938bbc3b6d426a19f72a05eb8ccd",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:20Z"
+    },
+    "RaT_ZUDjHrM": {
+      "content_hash": "64204e3770df8b6792734be432f9a20484ee1bb5b3513c13fbb2cf82350489e0",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:22Z"
+    },
+    "VanPH0GFTsA": {
+      "content_hash": "f744d46b98f79665271488d3b8479e5fb33e0189fb8732ebcfb3f53d4b20d782",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:24Z"
+    },
+    "x1E5rRmCiT4": {
+      "content_hash": "10d760feb8d64f8d1b801840fee6efd7e8c790ea701a7a9cb10c51142f163351",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:26Z"
+    },
+    "Jjqf9T59uY0": {
+      "content_hash": "b5facd8899272bf38f018f1a107091e4cd52e8b5de260ffdad2036d16ed2a294",
+      "source_tier": "tier1_api",
+      "quality": 0.5,
+      "status": "skipped_existing",
+      "error": null,
+      "last_updated_utc": "2026-03-31T14:40:27Z"
+    },
+    "Gp9Hv1PXx0o": {
+      "content_hash": null,
+      "source_tier": "tier1_api",
+      "quality": 0.0,
+      "status": "error",
+      "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "last_updated_utc": "2026-03-31T14:40:56Z"
     }
   }
 }
