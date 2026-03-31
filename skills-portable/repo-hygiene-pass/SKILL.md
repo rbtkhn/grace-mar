@@ -3,7 +3,7 @@ name: repo-hygiene-pass
 preferred_activation: hygiene pass
 description: "Run a commit-grouping hygiene pass: split changes by intent, stage one bucket at a time, and keep scratch noise out of production commits."
 portable: true
-version: 0.1.0
+version: 0.2.0
 tags:
   - operator
   - work-dev
@@ -44,6 +44,28 @@ Use this skill when the working tree has mixed changes and you want clean, inten
 6. End with clean check:
    - `git status --short`
    - confirm remaining files are intentional.
+
+## Push-prep add-on (optional)
+
+Use when commit grouping is done and you are deciding whether to publish:
+
+1. Confirm branch state:
+   - `git status -sb`
+   - `git log --oneline origin/<branch>..HEAD`
+2. Validate that each unpushed commit is purpose-coherent.
+3. If worktree is clean and commit stack is intentional, push once:
+   - `git push origin <branch>`
+4. After push, confirm divergence is cleared:
+   - `git status -sb`
+
+## Rollback-safety add-on (non-destructive)
+
+Use when a grouped commit needs correction without history rewrite:
+
+1. Prefer additive fix commits over destructive undo.
+2. For partial corrections, stage explicit paths and commit a focused follow-up.
+3. For full content reversal on shared branches, use `git revert <commit>` (avoid reset/force flows unless explicitly requested).
+4. Re-run hygiene preflight to ensure no accidental carryover remains.
 
 ## Guardrails
 
