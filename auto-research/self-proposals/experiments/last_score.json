@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-03-31T17:04:18.552824+00:00",
+  "user_id": "grace-mar",
+  "proposal": {
+    "hypothesis": "Adding a grounded, self-facing candidate with explicit source exchange and prompt alignment will increase proposal quality without touching the live Record.",
+    "expected_delta": 0.05,
+    "grounding_mode": "scaffold",
+    "proposal_type": "recursion_gate_candidate",
+    "target_surface": "self",
+    "candidate_bundle": {
+      "title": "Auto-research draft \u2014 grounded self proposal",
+      "summary": "Draft a reviewable SELF-facing candidate with explicit grounding and prompt alignment.",
+      "source": "operator \u2014 auto-research/self-proposals",
+      "source_exchange": {
+        "operator": "Synthetic operator note for scaffold validation only. Replace with real grounded source text before promotion."
+      },
+      "mind_category": "knowledge",
+      "signal_type": "auto_research_proposal",
+      "priority_score": 3,
+      "profile_target": "IX-A. KNOWLEDGE",
+      "suggested_entry": "A grounded candidate should carry explicit source exchange, a concise summary, and a reviewable suggested entry.",
+      "prompt_section": "YOUR KNOWLEDGE",
+      "prompt_addition": "You only learn new things when they are grounded, reviewed, and merged through the gate.",
+      "new_vs_record": "Scaffold-only synthetic draft for validating the proposal lane. Not intended for live promotion as-is.",
+      "suggested_followup": "Replace the synthetic source with a real grounded exchange before promoting to the gate."
+    },
+    "evaluation_notes": "This seed proposal exists to validate parser, sandbox, scoring, and archive flow."
+  },
+  "validation_errors": [],
+  "grounding_errors": [],
+  "sandbox": {
+    "sandbox_root": "/Users/robertkuhne/Documents/grace-mar/auto-research/self-proposals/experiments/.sandboxes/auto-research-self-9a0dw48h",
+    "sandbox_users_dir": "/Users/robertkuhne/Documents/grace-mar/auto-research/self-proposals/experiments/.sandboxes/auto-research-self-9a0dw48h/users",
+    "sandbox_user_dir": "/Users/robertkuhne/Documents/grace-mar/auto-research/self-proposals/experiments/.sandboxes/auto-research-self-9a0dw48h/users/grace-mar",
+    "candidate_id": "CANDIDATE-0098",
+    "candidate_block": "### CANDIDATE-0098 (Auto-research draft \u2014 grounded self proposal)\n\n```yaml\nstatus: pending\ntimestamp: 2026-03-31 17:04:19\nchannel_key: operator:auto-research:self-proposals\nproposal_class: SIMULATION_RESULT\nsource: operator \u2014 auto-research/self-proposals\nnew_vs_record: \"Scaffold-only synthetic draft for validating the proposal lane. Not intended for live promotion as-is.\"\nsource_exchange:\n  operator: |\n    Synthetic operator note for scaffold validation only. Replace with real grounded source text before promotion.\nmind_category: knowledge\nsignal_type: auto_research_proposal\npriority_score: 3\nsummary: \"Draft a reviewable SELF-facing candidate with explicit grounding and prompt alignment.\"\nprofile_target: IX-A. KNOWLEDGE\nsuggested_entry: \"A grounded candidate should carry explicit source exchange, a concise summary, and a reviewable suggested entry.\"\nprompt_section: YOUR KNOWLEDGE\nprompt_addition: \"You only learn new things when they are grounded, reviewed, and merged through the gate.\"\nsuggested_followup: \"Replace the synthetic source with a real grounded exchange before promoting to the gate.\"\nauto_research:\n  lane: \"self-proposals\"\n  hypothesis: \"Adding a grounded, self-facing candidate with explicit source exchange and prompt alignment will increase proposal quality without touching the live Record.\"\n  expected_delta: 0.05\n  grounding_mode: \"scaffold\"\n```\n",
+    "diff_preview": "--- before/recursion-gate.md\n+++ after/recursion-gate.md\n@@ -48,6 +48,33 @@\n summary: Casa Bonita history \u2014 user rejected.\n ```\n \n+### CANDIDATE-0098 (Auto-research draft \u2014 grounded self proposal)\n+\n+```yaml\n+status: pending\n+timestamp: 2026-03-31 17:04:19\n+channel_key: operator:auto-research:self-proposals\n+proposal_class: SIMULATION_RESULT\n+source: operator \u2014 auto-research/self-proposals\n+new_vs_record: \"Scaffold-only synthetic draft for validating the proposal lane. Not intended for live promotion as-is.\"\n+source_exchange:\n+  operator: |\n+    Synthetic operator note for scaffold validation only. Replace with real grounded source text before promotion.\n+mind_category: knowledge\n+signal_type: auto_research_proposal\n+priority_score: 3\n+summary: \"Draft a reviewable SELF-facing candidate with explicit grounding and prompt alignment.\"\n+profile_target: IX-A. KNOWLEDGE\n+suggested_entry: \"A grounded candidate should carry explicit source exchange, a concise summary, and a reviewable suggested entry.\"\n+prompt_section: YOUR KNOWLEDGE\n+prompt_addition: \"You only learn new things when they are grounded, reviewed, and merged through the gate.\"\n+suggested_followup: \"Replace the synthetic source with a real grounded exchange before promoting to the gate.\"\n+auto_research:\n+  lane: \"self-proposals\"\n+  hypothesis: \"Adding a grounded, self-facing candidate with explicit source exchange and prompt alignment will increase proposal quality without touching the live Record.\"\n+  expected_delta: 0.05\n+  grounding_mode: \"scaffold\"\n+```\n ## Processed\n \n ### CANDIDATE-0097 (Survey \u2014 regulation, attention, fairness, aspiration)"
+  },
+  "integrity_result": {
+    "ok": true,
+    "errors": [],
+    "identity_library_boundary": {
+      "ix_a_violations": [],
+      "self_library_missing_warnings": [],
+      "surface_layout_warnings": [],
+      "ix_a_ok": true,
+      "self_library_files_ok": true,
+      "fork_lifecycle": {
+        "phase": {
+          "grace-mar": "interact"
+        },
+        "drift_score": {
+          "grace-mar": 0.0025
+        },
+        "errors": [],
+        "warnings": []
+      }
+    },
+    "surface_layout_warnings": [],
+    "fork_lifecycle": {
+      "phase": {
+        "grace-mar": "interact"
+      },
+      "drift_score": {
+        "grace-mar": 0.0025
+      },
+      "errors": [],
+      "warnings": []
+    },
+    "_returncode": 0,
+    "_stdout": "{\"ok\": true, \"errors\": [], \"identity_library_boundary\": {\"ix_a_violations\": [], \"self_library_missing_warnings\": [], \"surface_layout_warnings\": [], \"ix_a_ok\": true, \"self_library_files_ok\": true, \"fork_lifecycle\": {\"phase\": {\"grace-mar\": \"interact\"}, \"drift_score\": {\"grace-mar\": 0.0025}, \"errors\": [], \"warnings\": []}}, \"surface_layout_warnings\": [], \"fork_lifecycle\": {\"phase\": {\"grace-mar\": \"interact\"}, \"drift_score\": {\"grace-mar\": 0.0025}, \"errors\": [], \"warnings\": []}}",
+    "_stderr": ""
+  },
+  "metrics_result": {
+    "pipeline_health": {
+      "stale_candidates": 0,
+      "pending_count": 93,
+      "approval_rate": 0.7934782608695652,
+      "rejection_rate": 0.20652173913043478,
+      "applied_total": 45,
+      "rejected_total": 4,
+      "last_applied_ts": "2026-03-28T17:03:50.983164",
+      "days_since_last_activity": 2.708729743842593
+    },
+    "record_completeness": {
+      "ix_a": 43,
+      "ix_b": 19,
+      "ix_c": 10,
+      "total_ix": 72
+    },
+    "intent_drift": {
+      "window_days": 30,
+      "total_conflicts": 0,
+      "conflicts_by_source": {},
+      "conflicts_by_rule": {},
+      "rejection_categories": {
+        "other": 4
+      }
+    },
+    "_returncode": 0,
+    "_stdout": "{\n  \"pipeline_health\": {\n    \"stale_candidates\": 0,\n    \"pending_count\": 93,\n    \"approval_rate\": 0.7934782608695652,\n    \"rejection_rate\": 0.20652173913043478,\n    \"applied_total\": 45,\n    \"rejected_total\": 4,\n    \"last_applied_ts\": \"2026-03-28T17:03:50.983164\",\n    \"days_since_last_activity\": 2.708729743842593\n  },\n  \"record_completeness\": {\n    \"ix_a\": 43,\n    \"ix_b\": 19,\n    \"ix_c\": 10,\n    \"total_ix\": 72\n  },\n  \"intent_drift\": {\n    \"window_days\": 30,\n    \"total_conflicts\": 0,\n    \"conflicts_by_source\": {},\n    \"conflicts_by_rule\": {},\n    \"rejection_categories\": {\n      \"other\": 4\n    }\n  }\n}",
+    "_stderr": ""
+  },
+  "governance_result": {
+    "ok": true,
+    "returncode": 0,
+    "stdout": "Governance check: OK",
+    "stderr": ""
+  },
+  "score_bundle": {
+    "ok": true,
+    "scalar": 0.7012,
+    "comparison": {
+      "baseline_scalar": null,
+      "delta_from_baseline": null
+    },
+    "hard_gates": {
+      "integrity_ok": true,
+      "governance_ok": true
+    },
+    "components": {
+      "proposal_quality": 0.6829,
+      "metrics_health": 0.7489,
+      "proposal_quality_detail": {
+        "quality": 0.6829,
+        "completeness": 1.0,
+        "groundedness": 1.0,
+        "reviewability": 0.9,
+        "prompt_alignment": 1.0,
+        "source_overlap": 0.1212,
+        "novel_term_ratio": 0.8788,
+        "drift_penalty": 0.8424,
+        "alignment_score": 0.0
+      }
+    },
+    "optional_metrics": {
+      "uniqueness": {},
+      "growth_density": {}
+    }
+  }
+}
