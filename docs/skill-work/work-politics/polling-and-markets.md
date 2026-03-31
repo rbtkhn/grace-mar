@@ -25,7 +25,7 @@ Run this block **only** when:
 - The operator explicitly requested KY-4 / Polymarket / polls in the **same** message as coffee, **or**
 - They asked ad hoc for a markets/polls refresh outside coffee.
 
-**Do not** run as part of coffee **Step 1** (token discipline — [operator-cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md) defers internet intel until **E / work-politics** or explicit request).
+**Do not** run as part of coffee **Step 1** (token discipline — [coffee skill](../../../.cursor/skills/coffee/SKILL.md) defers internet intel until **E / work-politics** or explicit request).
 
 After `operator_daily_warmup.py` / `harness_warmup.py` when helpful for context, but **fetch/search steps** belong in the **E / work-politics** turn (or explicit request), not the first paste.
 

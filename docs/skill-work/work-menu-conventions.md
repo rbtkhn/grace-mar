@@ -91,9 +91,9 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 
 ## See also
 
-- **Fixed session menu (coffee — work-start and closeout; legacy hey still works):** not the 3–5 WORK pattern — use **operator-cadence** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). In work-start flow, concrete work-lane picks can exit the coffee hub back to normal workflow per the skill. Roles: [.cursor/skills/operator-cadence/SKILL.md](../../../.cursor/skills/operator-cadence/SKILL.md).
+- **Fixed session menu (coffee — work-start and closeout; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). In work-start flow, concrete work-lane picks can exit the coffee hub back to normal workflow per the skill. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
-- [Operator cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md)
+- [Coffee skill](../../../.cursor/skills/coffee/SKILL.md)
 - [Work territory history logs](work-modules-history-principle.md) (`docs/skill-work/work-*/*-history.md`)
 - [Bootstrap — coffee](../../../bootstrap/grace-mar-bootstrap.md)
 - [Date and time formats](../date-time-conventions.md)

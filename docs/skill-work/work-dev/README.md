@@ -40,7 +40,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 | **[economic-benchmarks.md](economic-benchmarks.md)** | Benchmarks for cost, value flow, and gate health — priority five and full set. |
 | **[quality-gates-narrative.md](quality-gates-narrative.md)** | Evals as **product**: “green = within boundary” map (harness, integrity, continuity CI, gate health) + partner one-liner; future dashboard concept. |
 | **[session-continuity-contract.md](session-continuity-contract.md)** | Continuity as **explicit contract**: which files, which scripts, what CI proves — **not** “the agent remembers.” |
-| **[git-branch-hygiene.md](git-branch-hygiene.md)** | **Local git** branch snapshot: merge vs delete vs no action; wired into [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) Step 1 — **not** the same as menu **A** (template/boundary). |
+| **[git-branch-hygiene.md](git-branch-hygiene.md)** | **Local git** branch snapshot: merge vs delete vs no action; wired into [coffee](../../../.cursor/skills/coffee/SKILL.md) Step 1 — **not** the same as menu **A** (template/boundary). |
 | **[google-workspace-cli-operator.md](google-workspace-cli-operator.md)** | Optional **Google Workspace CLI** for operator continuity (Sheets/Drive); not Record; local secrets; attach `gws-cli-recipes` rule when using `gws`. |
 | **[operator-heartbeat-external-model-prompt.md](operator-heartbeat-external-model-prompt.md)** | Portable **non-repo** operator prompt (accurate gate/staging vs merge); use when no `AGENTS.md` / harness. |
 | **[cursor-vscode-grace-mar-tasks.json](cursor-vscode-grace-mar-tasks.json)** | Snippet to merge into local `.vscode/tasks.json` — re-entry stack + `--receipt` tasks. |

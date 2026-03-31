@@ -2,7 +2,7 @@
 
 **Purpose:** Standing **operator WORK** slice for the daily brief: **Vladimir Putin’s public statements and visible activity** in a **rolling 48-hour** window (not Record truth, not Voice knowledge).
 
-**When:** When the operator chooses **coffee menu C** (Daily brief) in the [operator-cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md) (legacy **hey** still works): run the **web scan**, then write the **compact block** (bullets + URLs) into **§1d** (`## 1d. Putin — last 48 hours`) **in the daily brief file** after `generate_work_politics_daily_brief.py` (or when refreshing an existing today’s file). Step 1 **coffee** does **not** run this scan — it is part of **C** only.
+**When:** When the operator chooses **coffee menu C** (Daily brief) in the [coffee skill](../../../.cursor/skills/coffee/SKILL.md) (legacy **hey** still works): run the **web scan**, then write the **compact block** (bullets + URLs) into **§1d** (`## 1d. Putin — last 48 hours`) **in the daily brief file** after `generate_work_politics_daily_brief.py` (or when refreshing an existing today’s file). Step 1 **coffee** does **not** run this scan — it is part of **C** only.
 
 ---
 

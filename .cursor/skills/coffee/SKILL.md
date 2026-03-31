@@ -1,12 +1,12 @@
 ---
-name: operator-cadence
+name: coffee
 preferred_activation: coffee
 description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee (modifiers: coffee light, minimal, survey; legacy hey still works). Work-start coffee: Step 1 = operator_daily_warmup + harness + branch snapshot. Closeout coffee (signing off in same message): Step 1 = operator_handoff_check + summary + branch snapshot. Read-only planning; Step 2 = fixed A–H menu. Concrete work-lane picks exit to normal workflow by default. G = work-jiang/PH; H = skills/meta."
 ---
 
-# Operator cadence
+# Coffee
 
-**Preferred activation (operator):** say **`coffee`**. Legacy **`hey`** still works as a compatibility alias, but **`coffee`** is the canonical trigger now. **Work-start** vs **closeout** is **intent in the same message** (e.g. reorientation vs signing off), not a second trigger phrase — one skill, two Step 1 shapes.
+**Preferred activation (operator):** say **`coffee`**. Legacy **`hey`** still works as a compatibility alias, but **`coffee`** is the canonical trigger now. **Work-start** vs **closeout** is **intent in the same message** (e.g. reorientation vs signing off), not a second trigger phrase, one skill and two Step 1 shapes.
 
 Use this skill when the operator wants a **paced** work block: repo-grounded snapshot, fixed **A–H** menu, and weekday-aware **cadence** (tempo), not ad-hoc drift.
 
@@ -34,7 +34,7 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 - Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
 - **Internet intel** (Polymarket, polls, Massie X) is **never** Step 1 — same as full coffee; choose **E → work-politics** when you want it (or ask explicitly). **Light** keeps **branch snapshot** compact (one line unless multiple branches).
 - **Daily brief:** **do not** generate in Step 1 — one-line pointer to **menu C** and path pattern `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (e.g. `daily-brief-2026-03-29.md`).
-- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–H** (do not omit **F**). On later turns, **A, B, C, D, or H** re-offers the full menu unless the operator says otherwise; **E** (with a concrete sub-lane) and **G** exit to normal workflow by default after the reply. **Track B:** **compact** repository hygiene (branch + `git status` + one prescribed action or “clean”) — not a full sweep unless the operator asks.
+- Deliver a **compact brief** from script outputs + thread context; then **full Step 2 A–H** (do not omit **F**). On later turns, **A, B, C, D, or H** re-offer the full menu unless the operator says otherwise; **E** (with a concrete sub-lane) and **G** exit to normal workflow by default after the reply. **Track B:** **compact** repository hygiene (branch + `git status` + one prescribed action or “clean”) — not a full sweep unless the operator asks.
 
 **`coffee minimal`** (or clear equivalent; legacy **`hey minimal`** still works):
 
@@ -288,6 +288,7 @@ Return a short operator brief with:
 ## Related files
 
 - `docs/operator-skills.md`
+- `docs/skill-work/work-coffee/README.md`
 - `docs/skill-work/work-politics/polling-and-markets.md` (KY-4 polling + Polymarket — run on **menu E → work-politics** or explicit request, not Step 1)
 - `docs/skill-work/work-politics/workspace.md`
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` (high-stakes work-politics messaging discipline; weekly brief §8)

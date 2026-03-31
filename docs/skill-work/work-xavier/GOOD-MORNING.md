@@ -10,7 +10,7 @@
 
 ## Daily rhythm (shape)
 
-Mirror grace-mar **operator-cadence** cadence in *shape* — edit for Xavier’s lanes (companion-self build + EA/SMM client work when applicable):
+Mirror grace-mar **coffee** cadence in *shape* — edit for Xavier’s lanes (companion-self build + EA/SMM client work when applicable):
 
 1. Optional: `python3 scripts/operator_daily_warmup.py -u xavier` (if bundled in template).
 2. `python3 scripts/harness_warmup.py -u xavier` — gate / session tail snapshot.

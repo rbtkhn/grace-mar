@@ -1,6 +1,6 @@
 # Git branch hygiene (operator)
 
-**Purpose:** A **small, repeatable** check so you do not lose track of branches or confuse **“merge into main”** with **Record gate merge**. This doc supports the [operator-cadence](../../../.cursor/skills/operator-cadence/SKILL.md) **branch snapshot** (work-start and closeout **coffee** Step 1; legacy **hey** still works) and **coffee menu B** (repository hygiene — full pass when chosen).
+**Purpose:** A **small, repeatable** check so you do not lose track of branches or confuse **“merge into main”** with **Record gate merge**. This doc supports the [coffee](../../../.cursor/skills/coffee/SKILL.md) **branch snapshot** (work-start and closeout **coffee** Step 1; legacy **hey** still works) and **coffee menu B** (repository hygiene — full pass when chosen).
 
 **Not the same as coffee menu A.** **A** = template + boundary audit (grace-mar vs companion-self, fork isolation, reconciliation code). **Branch hygiene** = **local git** pointers (`main` vs feature branches) — different job.
 

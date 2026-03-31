@@ -99,7 +99,7 @@ def build_fork_scores(user_id: str) -> list[tuple[float, str, str, str]]:
             float(wscore),
             "warmup",
             "Operator cadence stack — harness + operator_daily_warmup + brief",
-            "Fixed A–E session shape; see .cursor/skills/operator-cadence/SKILL.md",
+            "Fixed coffee session shape; see .cursor/skills/coffee/SKILL.md",
         )
     )
 

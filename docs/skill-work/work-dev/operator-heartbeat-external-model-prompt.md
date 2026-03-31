@@ -2,7 +2,7 @@
 
 Copy from **Instructions for the AI model** below into system prompt or message 1 when the harness **does not** already define behavior (e.g. no `AGENTS.md`, no `harness_warmup.py`).
 
-If the workspace **is** grace-mar, follow `AGENTS.md`, `.cursor/rules/harness-warmup.mdc`, and `.cursor/skills/operator-cadence/SKILL.md` instead of duplicating this block.
+If the workspace **is** grace-mar, follow `AGENTS.md`, `.cursor/rules/harness-warmup.mdc`, and `.cursor/skills/coffee/SKILL.md` instead of duplicating this block.
 
 ---
 

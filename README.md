@@ -391,7 +391,7 @@ python3 scripts/seed-phase-wizard.py -u grace-mar
 python3 scripts/good-morning-brief.py -u grace-mar
 ```
 
-See [docs/seed-phase-wizard.md](docs/seed-phase-wizard.md). Full stack: [.cursor/skills/operator-cadence/SKILL.md](.cursor/skills/operator-cadence/SKILL.md) and `python3 scripts/harness_warmup.py -u grace-mar`.
+See [docs/seed-phase-wizard.md](docs/seed-phase-wizard.md). Full stack: [.cursor/skills/coffee/SKILL.md](.cursor/skills/coffee/SKILL.md) and `python3 scripts/harness_warmup.py -u grace-mar`.
 
 **CMC (Civilization Memory) integration** — when lookup gets a LIBRARY miss, the bot queries [civilization_memory](https://github.com/rbtkhn/civilization_memory) for historical/civilizational questions. Routing: only questions matching CMC scope (Rome, China, ancient civilizations, history, etc.) hit CMC; others skip to full LLM. See [docs/cmc-routing.md](docs/cmc-routing.md). Setup:
 

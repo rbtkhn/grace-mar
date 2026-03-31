@@ -82,7 +82,7 @@ If the instance directory is incomplete, validators are **skipped** with a messa
 
 For RECURSION-GATE state, session tail, and work-politics pulse, use the **operator cadence** skill and harness:
 
-- [`.cursor/skills/operator-cadence/SKILL.md`](../.cursor/skills/operator-cadence/SKILL.md)
+- [`.cursor/skills/coffee/SKILL.md`](../.cursor/skills/coffee/SKILL.md)
 - `python3 scripts/harness_warmup.py -u <id> [--compact]`
 
 The operator cadence flow can offer to run `harness_warmup` after the intention prompt.

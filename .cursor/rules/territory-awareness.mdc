@@ -22,6 +22,7 @@ When working in `docs/skill-work/`, treat each subdirectory as a **territory** â
 
 | Territory | Path | Key context |
 |-----------|------|-------------|
+| work-coffee | `docs/skill-work/work-coffee/` | README, work-coffee-history, `.cursor/skills/coffee/SKILL.md` |
 | work-politics | `docs/skill-work/work-politics/` | README, principal-profile, revenue-log, seed-allocation-plan, opposition-brief, sentient-framing |
 | work-health-fitness | `docs/skill-work/work-health-fitness/` | README, roadmap |
 | work-human-teacher | `docs/skill-work/work-human-teacher/` | README, roadmap |

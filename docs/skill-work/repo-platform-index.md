@@ -22,4 +22,4 @@ flowchart LR
   Upstream --> TemplateRepo
 ```
 
-**Audits that touch both tooling and docs:** use [operator-cadence](../../.cursor/skills/operator-cadence/SKILL.md) coffee **A** (legacy hey **A** still works) and the **reconciliation code** checklist in [work-companion-self/README.md — Reconciliation code audit](work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream).
+**Audits that touch both tooling and docs:** use [coffee](../../.cursor/skills/coffee/SKILL.md) **A** (legacy hey **A** still works) and the **reconciliation code** checklist in [work-companion-self/README.md — Reconciliation code audit](work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream).
