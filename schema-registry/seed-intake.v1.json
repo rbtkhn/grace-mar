@@ -37,6 +37,58 @@
       "description": "Optional: which start-here Choose your path (A–F) the reader selected before seed formation; navigation metadata only, not Record truth.",
       "enum": ["A", "B", "C", "D", "E", "F"]
     },
+    "cadence_preference": {
+      "type": "object",
+      "description": "Optional operator UX metadata for the cadence ritual. Default trigger stays 'coffee'; renaming is offered later after successful use, not forced during first intake.",
+      "additionalProperties": false,
+      "required": [
+        "default_trigger_word",
+        "active_trigger_word",
+        "word_source",
+        "personalization_timing",
+        "rename_offer"
+      ],
+      "properties": {
+        "default_trigger_word": { "type": "string", "minLength": 1 },
+        "active_trigger_word": { "type": "string", "minLength": 1 },
+        "word_source": {
+          "type": "string",
+          "enum": ["default", "user_custom"]
+        },
+        "personalization_timing": {
+          "type": "string",
+          "enum": ["post_adoption_optional"]
+        },
+        "rename_offer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "offer_after_successful_uses",
+            "offer_after_distinct_days",
+            "minimum_successful_followthrough_uses",
+            "snooze_days"
+          ],
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": [
+                "not_yet_eligible",
+                "eligible_to_offer",
+                "offered",
+                "accepted_keep_default",
+                "accepted_custom",
+                "declined_not_now"
+              ]
+            },
+            "offer_after_successful_uses": { "type": "integer", "minimum": 1 },
+            "offer_after_distinct_days": { "type": "integer", "minimum": 1 },
+            "minimum_successful_followthrough_uses": { "type": "integer", "minimum": 1 },
+            "snooze_days": { "type": "integer", "minimum": 1 }
+          }
+        }
+      }
+    },
     "completion": {
       "type": "object",
       "additionalProperties": false,

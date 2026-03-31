@@ -41,6 +41,8 @@ python3 scripts/validate-seed-phase.py users/_template/seed-phase --allow-placeh
 4. `seed-phase-manifest.json` lists artifact keys matching the standard set (including `work_business_seed`, `work_dev_seed` → matching `.json` filenames).
 5. `seed_dossier.md` exists (non-empty).
 
+Optional fields such as **`seed_intake.json.cadence_preference`** still validate strictly when present; omitting them is allowed.
+
 ---
 
 ## Regenerate dossier (demo)

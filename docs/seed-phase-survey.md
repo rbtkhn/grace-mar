@@ -27,6 +27,38 @@ Use this table after you pick **A–F** on [start-here — Choose your path](sta
 
 **Optional artifact field:** When you create or update **`seed_intake.json`**, you may set **`start_here_pick`** to **`A`**–**`F`** to record which path was chosen (reproducibility for operators and tooling). It is **not** companion identity data—omit the key if unknown.
 
+### Optional cadence ritual metadata
+
+If the instance uses a cadence ritual for re-entry or orientation, you may also record optional **`cadence_preference`** metadata in **`seed_intake.json`**.
+
+- Default trigger word: **`coffee`**
+- Recommended timing: **do not** ask the new user to rename it during first-contact intake
+- Better rule: offer renaming **later**, after the ritual has proven useful across several successful uses
+- This is **operator UX metadata**, not Record truth
+
+Recommended default policy block:
+
+```json
+"cadence_preference": {
+  "default_trigger_word": "coffee",
+  "active_trigger_word": "coffee",
+  "word_source": "default",
+  "personalization_timing": "post_adoption_optional",
+  "rename_offer": {
+    "status": "not_yet_eligible",
+    "offer_after_successful_uses": 3,
+    "offer_after_distinct_days": 2,
+    "minimum_successful_followthrough_uses": 2,
+    "snooze_days": 14
+  }
+}
+```
+
+Suggested user-facing copy when the instance becomes eligible later:
+
+- `You've used 'coffee' a few times now. Want to keep it, or switch to a cadence word that fits you better?`
+- Choices: **Keep coffee** / **Choose a new word** / **Not now**
+
 ---
 
 ## work-dev seed survey

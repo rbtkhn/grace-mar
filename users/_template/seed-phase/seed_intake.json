@@ -9,6 +9,19 @@
     "safety_notes": []
   },
   "education_focus": [],
+  "cadence_preference": {
+    "default_trigger_word": "coffee",
+    "active_trigger_word": "coffee",
+    "word_source": "default",
+    "personalization_timing": "post_adoption_optional",
+    "rename_offer": {
+      "status": "not_yet_eligible",
+      "offer_after_successful_uses": 3,
+      "offer_after_distinct_days": 2,
+      "minimum_successful_followthrough_uses": 2,
+      "snooze_days": 14
+    }
+  },
   "completion": {
     "coverage_score": 0.0,
     "contradictions": []

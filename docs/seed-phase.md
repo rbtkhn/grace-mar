@@ -15,6 +15,7 @@
 - **Sovereignty** — The human (and guardian when applicable) explicitly shapes identity, curiosity, pedagogy, expression, and memory rules before automation scales.
 - **Evidence-before-merge** — Formation outputs are **separate** from the gated Record merge path; activation is a deliberate handoff.
 - **Measurability** — Stages, schemas, and validation make progress visible and CI-checkable.
+- **Default-first ritual design** — UX rituals can start with a sane shared default (for example cadence word **`coffee`**) and defer personalization until the user has enough lived experience to choose well.
 
 ---
 
@@ -98,6 +99,17 @@ The two systems should remain separate.
 
 Why this matters: the repo already treats seed phase as a defined artifact pipeline before activation, so this addition cleanly answers what happens after that baseline exists.
 
+## Post-adoption preference metadata
+
+`seed_intake.json` may include optional **`cadence_preference`** metadata for the operator-facing cadence ritual.
+
+- The default trigger word is **`coffee`**.
+- Renaming is **not** meant to be forced during first-contact intake.
+- Recommended policy: offer renaming only **after adoption** (for example, after several successful `coffee` uses across multiple days).
+- This block is **operator UX metadata**, not Record truth and not identity evidence.
+
+If omitted, instances should still assume the default trigger word is **`coffee`**.
+
 ---
 
 ## Relationship to template vs instance
@@ -119,7 +131,7 @@ Why this matters: the repo already treats seed phase as a defined artifact pipel
 | Confidence | [seed-phase-confidence-model.md](seed-phase-confidence-model.md) |
 | Artifacts | [seed-phase-artifacts.md](seed-phase-artifacts.md) |
 | Survey prompts | [seed-phase-survey.md](seed-phase-survey.md) |
-| Optional intake metadata | `seed_intake.json` **`start_here_pick`** (`A`–`F`) — [start-here Choose your path](start-here.md#choose-your-path); navigation only |
+| Optional intake metadata | `seed_intake.json` **`start_here_pick`** (`A`–`F`) and optional **`cadence_preference`** (default `coffee`, rename later); operator metadata only |
 | Validation | [seed-phase-validation.md](seed-phase-validation.md) |
 | Schemas | `schema-registry/seed-*.v1.json` |
 | Validator | `scripts/validate-seed-phase.py` |

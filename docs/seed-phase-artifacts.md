@@ -24,7 +24,7 @@ Two reference trees in this repo:
 | File | Stage(s) | Role |
 |------|----------|------|
 | `seed-phase-manifest.json` | All | Index: versions, status, artifact paths, optional changelog. |
-| `seed_intake.json` | 0 | Intake, constraints, education focus, completion metrics. Optional **`start_here_pick`** (`A`–`F`): which [start-here Choose your path](start-here.md#choose-your-path) was used before formation (navigation metadata; validated by `seed-intake.v1.json`). |
+| `seed_intake.json` | 0 | Intake, constraints, education focus, completion metrics. Optional **`start_here_pick`** (`A`–`F`): which [start-here Choose your path](start-here.md#choose-your-path) was used before formation (navigation metadata; validated by `seed-intake.v1.json`). Optional **`cadence_preference`**: operator UX metadata for cadence ritual defaults (default `coffee`, rename later). |
 | `seed_identity.json` | 1 | Identity scaffold + confidence. |
 | `seed_curiosity.json` | 2 | Curiosity scaffold + confidence. |
 | `seed_pedagogy.json` | 3 | Pedagogy scaffold + confidence. |

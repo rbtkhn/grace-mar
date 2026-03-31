@@ -322,7 +322,7 @@
     },
     {
       "path": "users/_template/seed-phase/seed_intake.json",
-      "description": "Seed intake placeholder.",
+      "description": "Seed intake placeholder, including optional navigation metadata (`start_here_pick`) and deferred cadence ritual defaults (`cadence_preference`).",
       "optional": false
     },
     {

@@ -6,6 +6,14 @@
 
 Manifest status: **ready**. Readiness decision: **pass** (score 0.88).
 
+## Cadence Ritual
+
+Default **coffee**; active **coffee**; source **default**.
+
+Personalization timing **post_adoption_optional**; rename offer status **not_yet_eligible**.
+
+Offer threshold: 3 successful uses; 2 distinct days; 2 successful follow-through uses.
+
 ## Stage Progress
 
 - **intake**: complete
