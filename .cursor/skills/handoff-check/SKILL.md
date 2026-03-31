@@ -1,7 +1,7 @@
 ---
 name: handoff-check
 preferred_activation: handoff check
-description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **closeout hey** (same trigger **hey**, signing-off intent), this script is **operator-cadence Step 1**; **Step 2** is the fixed **A–H** menu — **A–D** match work-start **hey** (**D** = RECURSION-GATE); **E** = system pick; **G** = Jiang/PH; **H** = skills pipeline; **F** = end closeout. See operator-cadence § *Hey — closeout*, § *Shared A–C*, § *Shared D*, § *Shared G-H*. Also use when resuming work or checking safe-to-ignore before commit/push.
+description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictive History night closeout, commits, worktree noise, re-entry prompt — read-only. On **closeout coffee** (same trigger **coffee**, signing-off intent; legacy **hey** still works), this script is **operator-cadence Step 1**; **Step 2** is the fixed **A–H** menu — **A–D** match work-start **coffee** (**D** = RECURSION-GATE); **E** = system pick; **G** = Jiang/PH; **H** = skills pipeline; **F** = end closeout. See operator-cadence § *Coffee — closeout*, § *Shared A–C*, § *Shared D*, § *Shared G-H*. Also use when resuming work or checking safe-to-ignore before commit/push.
 ---
 
 # Handoff Check
@@ -10,9 +10,9 @@ description: Run operator_handoff_check.py for RECURSION-GATE pending, Predictiv
 
 Use this skill when the operator wants to pause or resume work without losing the active thread.
 
-**Preset — closeout:** When the operator says **`hey`** with **closeout intent** (session end, signing off), the agent runs **closeout Step 1** (this command + summary) then **closeout Step 2** (A–H menu) — **A–D** match work-start **hey**; see [operator-cadence/SKILL.md](../operator-cadence/SKILL.md) § *Shared A–C*, § *Shared D*, § *Shared G-H*, § **Hey — closeout**, and § **Hey — closeout — multiple choice**. On follow-up turns, **A,B,C,D,E,G, or H** runs the track then **re-offers the full A–H menu** until **F** ends the closeout pass.
+**Preset — closeout:** When the operator says **`coffee`** with **closeout intent** (session end, signing off; legacy **`hey`** still works), the agent runs **closeout Step 1** (this command + summary) then **closeout Step 2** (A–H menu) — **A–D** match work-start **coffee**; see [operator-cadence/SKILL.md](../operator-cadence/SKILL.md) § *Shared A–C*, § *Shared D*, § *Shared G-H*, § **Coffee — closeout**, and § **Coffee — closeout — multiple choice**. On follow-up turns, **A,B,C,D,E,G, or H** runs the track then **re-offers the full A–H menu** until **F** ends the closeout pass.
 
-**Work-start hey (related):** After **A,B,C,D,E,G, or H**, **re-offer the full A–H menu** each turn until **F** — same loop shape as closeout (work-start **D** = RECURSION-GATE; closeout **E** = system pick); see [operator-cadence/SKILL.md](../operator-cadence/SKILL.md) § *Hey — multiple choice (A–H required)*.
+**Work-start coffee (related):** After **A,B,C,D, or H**, **re-offer the full A–H menu** by default until **F**. Concrete work-lane picks under **E** or **G** exit to normal workflow unless the operator says **`stay in coffee`** — same closeout distinction remains (work-start **D** = RECURSION-GATE; closeout **E** = system pick); see [operator-cadence/SKILL.md](../operator-cadence/SKILL.md) § *Coffee — multiple choice (A–H required)*.
 
 ## Default command
 

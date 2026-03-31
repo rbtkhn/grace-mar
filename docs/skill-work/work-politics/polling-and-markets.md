@@ -1,6 +1,6 @@
 # Polling and prediction markets — KY-4 (operator)
 
-**Purpose:** Standard **hey** intel for the Massie shadow / work-politics lane: **horserace polling** (when it exists) and **prediction-market prices** (Polymarket). This is **operator WORK product**, not Record truth and not Voice knowledge.
+**Purpose:** Standard **coffee** intel for the Massie shadow / work-politics lane: **horserace polling** (when it exists) and **prediction-market prices** (Polymarket). Legacy **hey** still works as the trigger alias. This is **operator WORK product**, not Record truth and not Voice knowledge.
 
 **Last checked:** 2026-03-29
 
@@ -21,11 +21,11 @@
 
 Run this block **only** when:
 
-- The operator chose **hey menu E → work-politics** (intel path — not survey-only), **or**
-- The operator explicitly requested KY-4 / Polymarket / polls in the **same** message as hey, **or**
-- They asked ad hoc for a markets/polls refresh outside hey.
+- The operator chose **coffee menu E → work-politics** (intel path — not survey-only; legacy **hey** still works), **or**
+- The operator explicitly requested KY-4 / Polymarket / polls in the **same** message as coffee, **or**
+- They asked ad hoc for a markets/polls refresh outside coffee.
 
-**Do not** run as part of hey **Step 1** (token discipline — [operator-cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md) defers internet intel until **E / work-politics** or explicit request).
+**Do not** run as part of coffee **Step 1** (token discipline — [operator-cadence skill](../../../.cursor/skills/operator-cadence/SKILL.md) defers internet intel until **E / work-politics** or explicit request).
 
 After `operator_daily_warmup.py` / `harness_warmup.py` when helpful for context, but **fetch/search steps** belong in the **E / work-politics** turn (or explicit request), not the first paste.
 
