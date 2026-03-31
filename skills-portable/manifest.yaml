@@ -14,3 +14,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: work-jiang-ingest-fallback
+    source: work-jiang-ingest-fallback/SKILL.md
+    appendix: .cursor/skills/work-jiang-ingest-fallback/CURSOR_APPENDIX.md
+    target: .cursor/skills/work-jiang-ingest-fallback/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates

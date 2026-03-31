@@ -20,3 +20,4 @@
 | Date | Working name | Trigger | Pointer |
 |------|--------------|---------|---------|
 | 2026-03-29 | portable-skills-sync | *(promoted)* — use skill **`portable-skills-sync`** (`.cursor/skills/portable-skills-sync/SKILL.md`); same trigger | `skills-portable/portable-skills-sync/SKILL.md` + manifest |
+| 2026-03-31 | work-jiang-ingest-fallback | *(promoted)* — use skill **`work-jiang-ingest-fallback`** (`.cursor/skills/work-jiang-ingest-fallback/SKILL.md`); same trigger | `skills-portable/work-jiang-ingest-fallback/SKILL.md` + manifest |

@@ -16,7 +16,6 @@ Sources missing or needing analysis, ordered by priority.
 | geo-10 | geo-strategy | Geo-Strategy #10: Putin's Strategic Imag… | complete | missing | missing | ch10 | 170 | blocks next chapter in queue; mapped to ch10; geo-series |
 | geo-11 | geo-strategy | Geo-Strategy #11: The Second American Ci… | complete | missing | missing | ch11 | 170 | blocks next chapter in queue; mapped to ch11; geo-series |
 | geo-12 | geo-strategy | Geo-Strategy #12 (END): Psychohistory (T… | complete | missing | missing | ch12 | 170 | blocks next chapter in queue; mapped to ch12; geo-series |
-| geo-13 | geo-strategy | Geo-Strategy #13: US-Iran War Incoming | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-14 | geo-strategy | Geo-Strategy #14: WWIII Begins, Let's Ga… | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-15 | geo-strategy | Geo-Strategy #15: The Messianic Calling | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-16 | geo-strategy | Geo-Strategy #16: Newton's Divine Plan | missing | missing | missing | — | 30 | geo-series; analysis missing |
@@ -24,6 +23,7 @@ Sources missing or needing analysis, ordered by priority.
 | geo-18 | geo-strategy | Geo-Strategy #18: Is Putin the Ubermensc… | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-19 | geo-strategy | Geo-Strategy #19: When Eschatologies Con… | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-20 | geo-strategy | Geo-Strategy #20: Why the West is Doomed | missing | missing | missing | — | 30 | geo-series; analysis missing |
+| geo-13 | geo-strategy | Geo-Strategy #13: US-Iran War Incoming | complete | missing | missing | — | 20 | geo-series |
 | civ-01 | civilization | Civilization #1: Explaining Humanity's T… | missing | missing | missing | — | 10 | analysis missing |
 | civ-02 | civilization | Civilization #2: Religion and the Dawn o… | missing | missing | missing | — | 10 | analysis missing |
 | civ-03 | civilization | Civilization #3: The Religious Imaginati… | missing | missing | missing | — | 10 | analysis missing |
@@ -111,6 +111,42 @@ Sources missing or needing analysis, ordered by priority.
 | sh-26 | secret-history | Secret History #26: Faith of Evil | missing | missing | missing | — | 10 | analysis missing |
 | sh-27 | secret-history | Secret History #27: Empire of Evil | missing | missing | missing | — | 10 | analysis missing |
 | sh-28 | secret-history | Secret History #28: Pax Judaica | missing | missing | missing | — | 10 | analysis missing |
+| gt-01 | game-theory | Game Theory #1: The Dating Game | missing | missing | missing | — | 10 | analysis missing |
+| gt-02 | game-theory | Game Theory #2: Why Schools Suck | missing | missing | missing | — | 10 | analysis missing |
+| gt-03 | game-theory | Game Theory #3: Rich Dad, Poor Dad | missing | missing | missing | — | 10 | analysis missing |
+| gt-04 | game-theory | Game Theory #4: The Immigration Trap | missing | missing | missing | — | 10 | analysis missing |
+| gt-05 | game-theory | Game Theory #5: The World Game | missing | missing | missing | — | 10 | analysis missing |
+| gt-06 | game-theory | Game Theory #6: The World's Bank | missing | missing | missing | — | 10 | analysis missing |
+| gt-07 | game-theory | Game Theory #7: America's Game | missing | missing | missing | — | 10 | analysis missing |
+| gt-08 | game-theory | Game Theory #8: Communist Specter | missing | missing | missing | — | 10 | analysis missing |
+| gt-09 | game-theory | Game Theory #9: The US-Iran War | missing | missing | missing | — | 10 | analysis missing |
+| gt-10 | game-theory | Game Theory #10: The Law of Asymmetry | missing | missing | missing | — | 10 | analysis missing |
+| gt-11 | game-theory | Game Theory #11: The Law of Escalation | missing | missing | missing | — | 10 | analysis missing |
+| gt-12 | game-theory | Game Theory #12: The Law of Eschatologic… | missing | missing | missing | — | 10 | analysis missing |
+| gt-13 | game-theory | Game Theory #13: Epstein's World | missing | missing | missing | — | 10 | analysis missing |
+| gt-14 | game-theory | Game Theory #14: The Law of Proximity | missing | missing | missing | — | 10 | analysis missing |
+| gt-15 | game-theory | Game Theory #15: The Return of History | missing | missing | missing | — | 10 | analysis missing |
+| gt-17 | game-theory | Game Theory #17: The Great Reset | missing | missing | missing | — | 10 | analysis missing |
 | civ-20 | civilization | Civilization #20: The Proto-Buddhists of… | complete | missing | missing | — | 0 | — |
+| gt-16 | game-theory | Game Theory #16: Pax Judaica Rising | complete | missing | missing | — | 0 | — |
+| gb-01 | great-books | Great Books #1: Secrets of the Universe | complete | missing | missing | — | 0 | — |
+| gb-02 | great-books | Great Books #2: Homer and the Invention … | complete | missing | missing | — | 0 | — |
+| gb-03 | great-books | Great Books #3: Poets and Prophets | complete | missing | missing | — | 0 | — |
+| gb-04 | great-books | Great Books #4: The Conscious Universe | complete | missing | missing | — | 0 | — |
+| gb-05 | great-books | Great Books #5: The Odyssey | complete | missing | missing | — | 0 | — |
+| gb-06 | great-books | Great Books #6: The Intimacy of Love | complete | missing | missing | — | 0 | — |
+| gb-07 | great-books | Great Books #7: The Anti-Homer | complete | missing | missing | — | 0 | — |
+| gb-08 | great-books | Great Books #8: The Poetry of Empire | complete | missing | missing | — | 0 | — |
+| vi-01 | interviews | Interviews #1: Cyrus Janssen — The World… | complete | missing | missing | — | 0 | — |
+| vi-02 | interviews | Interviews #2: Glenn Diesen — The West's… | complete | missing | missing | — | 0 | — |
+| vi-03 | interviews | Interviews #3: Glenn Diesen — Prediction… | complete | missing | missing | — | 0 | — |
+| vi-04 | interviews | Interviews #4: Danny Haiphong — Predicti… | complete | missing | missing | — | 0 | — |
+| vi-05 | interviews | Interviews #5: Dimitri Lascaris — Trump’… | complete | missing | missing | — | 0 | — |
+| vi-06 | interviews | Interviews #6: Glenn Diesen — Great Powe… | complete | missing | missing | — | 0 | — |
+| vi-07 | interviews | Interviews #7: Breaking Points (Krystal … | complete | missing | missing | — | 0 | — |
+| vi-08 | interviews | Interviews #8: Nima (Dialogue Works) — T… | complete | missing | missing | — | 0 | — |
+| vi-09 | interviews | Interviews #9: SNEAKO — The End of the W… | complete | missing | missing | — | 0 | — |
+| vi-10 | interviews | Interviews #10: Endgame — Our True Wealt… | complete | missing | missing | — | 0 | — |
+| vi-11 | interviews | Interviews #11: Tucker Carlson — Iran Wa… | complete | missing | missing | — | 0 | — |
 
 *Generated by `scripts/work_jiang/render_analysis_backlog.py` — run after registry/source updates.*

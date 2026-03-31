@@ -1862,6 +1862,20 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: not_started
+- source_id: gt-17
+  video_id: VbowBTJWKBo
+  title: 'Game Theory #17: The Great Reset'
+  canonical_url: https://www.youtube.com/watch?v=VbowBTJWKBo
+  lecture_path: lectures/game-theory-17-the-great-reset.md
+  analysis_path: null
+  series: game-theory
+  episode: 17
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: missing
+    chapter_mapping: not_started
 - source_id: gb-01
   video_id: TsD-8FGA84A
   title: 'Great Books #1: Secrets of the Universe'
