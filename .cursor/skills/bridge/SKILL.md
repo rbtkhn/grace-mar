@@ -14,9 +14,16 @@ Its purpose is **high-fidelity context transfer** across the session boundary wh
 
 ## When to use
 
-- When you're about to close this Cursor session and will open a fresh one later
-- When context has accumulated over multiple days and you want to crystallize it
-- When the session is getting long and you want a clean restart with carried context
+| Scenario | Path | Why |
+|----------|------|-----|
+| **End of day + closing session** | `dream` then `bridge` | Dream settles continuity; bridge seals repos and generates the transfer prompt |
+| **End of day, keeping session** | `dream` alone | Maintenance pass; same Cursor thread continues tomorrow |
+| **Mid-day, closing session** | `bridge` alone | Seal repos, carry context forward; no maintenance needed |
+| **Quick check before stepping away** | `coffee closeout` | Lightweight status; no commit/push, no transfer prompt |
+
+**Default:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
+
+**Bridge vs coffee closeout:** Coffee closeout is lightweight — quick status, no git operations. Bridge is structural — seals the session with commits and produces the carry-forward block. Bridge is the default for any session close.
 
 This is event-driven: the operator says `bridge` when they're ready. There is no scheduled cadence.
 

@@ -75,6 +75,68 @@ operator_end_of_day.py      night-side bundle
 
 ---
 
+## Write authority map
+
+Which on-disk surfaces each ritual reads, writes, and whether companion approval is required.
+
+| Ritual | Reads | Writes | Gate required? |
+|--------|-------|--------|---------------|
+| **coffee** | self-memory, recursion-gate, last-dream.json, git status, territories | nothing (read-only planning) | No |
+| **dream** | self-memory, SELF, EVIDENCE, recursion-gate | self-memory, last-dream.json, contradiction digest, cadence events, pipeline events | No (Maintenance mode) |
+| **bridge** | self-memory, recursion-gate, last-dream.json, territories, git status/log | git commits, cadence events | No (operational) |
+| **gate merge** | recursion-gate candidates, SELF, EVIDENCE, prompt | SELF, EVIDENCE, prompt, session-log, recursion-gate, pipeline events, PRP | **Yes — companion approval required** |
+
+**Key boundary:** coffee and bridge never write to identity surfaces. Dream writes to ephemeral/operational surfaces only (self-memory, handoff artifacts). Only the gated merge path — triggered by companion approval, executed by `process_approved_candidates.py` — touches the Record.
+
+---
+
+## End-of-session decision tree
+
+When the operator signals they're done (end of day, closing the session, stepping away), use this tree:
+
+| Scenario | Recommended path | What it does |
+|----------|-----------------|--------------|
+| **Ending the day AND closing this Cursor session** | `dream` then `bridge` | Dream settles continuity; bridge seals both repos and generates the transfer prompt |
+| **Ending the day, keeping the session** | `dream` alone | Dream runs maintenance; session continues tomorrow with the same thread |
+| **Mid-day, closing this Cursor session** | `bridge` alone | Seals repos and generates transfer prompt; no maintenance pass needed |
+| **Quick status check before stepping away** | `coffee closeout` | Lightweight handoff summary; no commit/push, no maintenance |
+
+**Default for 80% of cases:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
+
+**Coffee closeout vs bridge:** Coffee closeout is the lightweight option — quick gate/worktree status, no commits, no push, no transfer prompt. Bridge is the structural option — seals the session with commits and produces the carry-forward block. They do not overlap; bridge replaced coffee closeout as the session-end default.
+
+---
+
+## Cadence troubleshooting
+
+When a cadence run produces unexpected output, check these in order:
+
+### Coffee output looks wrong
+
+1. **Dream handoff missing?** Check `users/grace-mar/last-dream.json` — if the file is absent or stale (timestamp older than last night), dream didn't run or didn't complete. Run `dream` manually.
+2. **Gate data stale?** The warmup reads `recursion-gate.md` directly. If gate counts look wrong, check the file itself — not the warmup output.
+3. **Wrong mode?** `operator_coffee.py` defaults to `work-start`. If you got a minimal harness when you expected a full brief, check which mode was passed. Run with `--mode work-start` explicitly.
+4. **Script failed silently?** Check the exit code. `operator_coffee.py` chains sub-scripts and stops on first failure. If the harness ran but the warmup didn't, the warmup script errored.
+
+### Dream output looks wrong
+
+1. **Integrity or governance failed?** Check the dream summary output for `integrity ok: False` or `governance ok: False`. In strict mode, dream halts on failure — self-memory won't be updated, no handoff written.
+2. **Self-memory not updated?** Dream only writes self-memory when `apply=True` (not `--dry-run`) and maintenance is not halted. Check the `self_memory_changed` field in `last-dream.json`.
+3. **Cadence event not logged?** The event is gated on `apply=True and not halted`. Dry-run dreams and halted strict dreams produce no cadence line — by design.
+
+### Bridge output looks wrong
+
+1. **Commit failed?** Bridge commits are done by the agent, not a script. If a commit failed, the agent should have reported it. Check `git status -sb` in both repos.
+2. **Push rejected?** Usually means remote has new commits. The agent should pull-rebase and retry. If it didn't, run `git pull --rebase && git push` manually.
+3. **Transfer prompt thin?** Bridge synthesizes from on-disk state. If territories have no recent history or the gate is empty, those sections will be sparse — that's correct, not broken.
+
+### General
+
+- **Which cadence events actually ran?** Check `docs/skill-work/work-cadence/work-cadence-events.md` — one line per run with timestamp, kind, mode, and outcome.
+- **Agent reading stale skill file?** Long Cursor sessions can cache file contents. If the agent's behavior doesn't match the current SKILL.md, ask it to re-read the file.
+
+---
+
 ## Adjacent surfaces
 
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — coffee trigger

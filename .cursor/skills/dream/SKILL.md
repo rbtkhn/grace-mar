@@ -153,18 +153,28 @@ Usually one `dream` session per day is normal.
 
 ## Cadence choreography
 
-`coffee` and `dream` form Grace-Mar's daily cognitive rhythm:
+`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad:
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–H menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest |
-| **After dream** | `coffee` (closeout) *or* handoff-check | Gate snapshot, commits, re-entry prompt for tomorrow |
+| **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 
-**Typical end-of-day sequence:** `dream` first (maintenance), then `coffee closeout` or standalone `handoff-check` (operational handoff). **One-command bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs both in that order.
+**Dream's role is maintenance, not session closure.** Dream settles continuity and writes the handoff artifact. It does not commit, push, or produce a transfer prompt. If the operator is also closing the Cursor session, `bridge` follows dream.
+
+| Scenario | Path |
+|----------|------|
+| End of day + closing session | `dream` then `bridge` |
+| End of day, keeping session | `dream` alone |
+| Mid-day, closing session | `bridge` alone (no dream needed) |
+
+**One-command bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs dream + handoff-check. If also closing the session, say `bridge` afterward.
 
 **Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays follow-ups from last night's dream — contradictions to review, artifact drafts to promote, integrity/governance status.
+
+For the full decision tree including coffee closeout (lightweight alternative to bridge), see [bridge SKILL.md](../bridge/SKILL.md).
 
 ## Cadence audit
 
