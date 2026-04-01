@@ -99,6 +99,8 @@ If the user can tap instead of type, offer it. Inline buttons (A, B, C, D) for h
 
 Response should follow action within a second. "Yes!" or "not quite — it's B because…" — then next. No loading screens, no "please wait." The loop is: act → see result → act again.
 
+If a web or operator surface must show transient process state, that language should stay **minimal and truthful**: it should name the lane (`checking the Record`, `looking it up`, `staging for review`) rather than simulate a vague hidden cognition. Decorative "thinking..." copy is weaker than lane-specific truth.
+
 ### Milestones, Not Endlessness
 
 Give the user a target: "30 correct = champ," "8 questions this round." Progress accrues; there is a finish line. The system offers *completion*, not infinite engagement.

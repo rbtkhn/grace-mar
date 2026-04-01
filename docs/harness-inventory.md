@@ -28,6 +28,21 @@ Grace-Mar now names four portable harness lanes:
 
 This naming matters for portability: a runtime can carry `runtime` and `audit` lanes with it, but only the `record` lane defines identity.
 
+### Status microcopy and harness lanes
+
+Status/process language should follow the same lane distinctions rather than hiding them behind generic "thinking" copy.
+
+| UI/process lane | Best matching harness lane | What the wording should imply |
+|------|------|------|
+| **Record check / grounded answer** | `record` | Read-only use of documented truth; not a merge or new memory |
+| **Lookup / outside search** | `runtime` or external retrieval path | Temporary retrieval; not Record truth by itself |
+| **Gate / review / approval** | `record` + `audit` | Explicit staged vs approved vs applied state |
+| **Work drafting / synthesis** | adjacent WORK execution | Instrumental output; not canonical identity truth |
+| **Warmup / maintenance / closeout** | `runtime` + `audit` | Continuity or validation help; not identity rewrite |
+| **Policy / constraints check** | `policy` | Constitutional or intent boundary, not personality |
+
+The practical rule is simple: status language should make lane and authority visible. `Checking the Record`, `Looking it up`, `Staging for review`, and `Checking integrity` are stronger than one undifferentiated `Thinking...`.
+
 ---
 
 ## Pending candidates dashboard (human door)

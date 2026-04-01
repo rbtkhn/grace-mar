@@ -6,6 +6,7 @@
   <meta name="theme-color" content="#5a7d6c">
   <title>Grace-Mar — Family</title>
   <link rel="manifest" href="/manifest-family.json">
+  <script src="/status-microcopy.js"></script>
   <style>
     :root {
       --bg: #1c221e;
@@ -308,7 +309,9 @@
       x = document.createElement('div');
       x.id = id;
       x.className = 'typing';
-      x.textContent = 'Grace-Mar is thinking…';
+      x.textContent = document.getElementById('grounded').checked
+        ? GraceMarStatusMicrocopy.phrase('grounded_record', 'waiting', 'Checking the Record...')
+        : GraceMarStatusMicrocopy.phrase('chat', 'waiting', 'Getting ready to answer...');
       chatEl.appendChild(x);
       chatEl.scrollTop = chatEl.scrollHeight;
     } else if (!on && x) x.remove();
@@ -336,7 +339,7 @@
       })
       .catch(function(e) {
         setTyping(false);
-        document.getElementById('chatErr').textContent = e.message || 'Could not send.';
+        document.getElementById('chatErr').textContent = e.message || GraceMarStatusMicrocopy.phrase('grounded_record', 'error', 'Could not send.');
         document.getElementById('chatErr').hidden = false;
       })
       .finally(function() { send.disabled = false; });
@@ -355,9 +358,13 @@
     var text = (document.getElementById('logText').value || '').trim();
     var err = document.getElementById('logErr');
     var ok = document.getElementById('logMsg');
+    var btn = document.getElementById('logSend');
     err.hidden = true;
     ok.hidden = true;
     if (!text) { err.textContent = 'Write something first.'; err.hidden = false; return; }
+    ok.textContent = GraceMarStatusMicrocopy.phrase('gate_review', 'staging', 'Staging for review...');
+    ok.hidden = false;
+    btn.disabled = true;
     fetch('/api/family/activity', { method: 'POST', headers: familyHeaders(), body: JSON.stringify({ text: text }) })
       .then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error || 'Failed'); return j; }); })
       .then(function(d) {
@@ -368,15 +375,20 @@
         document.getElementById('logText').value = '';
         refreshBadges();
       })
-      .catch(function(e) { err.textContent = e.message || 'Could not send.'; err.hidden = false; });
+      .catch(function(e) { ok.hidden = true; err.textContent = e.message || GraceMarStatusMicrocopy.phrase('gate_review', 'error', 'Could not send.'); err.hidden = false; })
+      .finally(function() { btn.disabled = false; });
   };
 
   /* Review unlock */
   document.getElementById('unlockReview').onclick = function() {
     var s = (document.getElementById('opSecret').value || '').trim();
     var err = document.getElementById('unlockErr');
+    var btn = document.getElementById('unlockReview');
     err.hidden = true;
     if (!s) { err.textContent = 'Enter the secret.'; err.hidden = false; return; }
+    btn.disabled = true;
+    err.textContent = GraceMarStatusMicrocopy.phrase('maintenance', 'unlocking', 'Checking operator access...');
+    err.hidden = false;
     fetch('/operator/gate-candidates?status=pending', { headers: { 'Authorization': 'Bearer ' + s } })
       .then(function(r) {
         if (r.status === 401 || r.status === 403) throw new Error('Wrong secret.');
@@ -389,7 +401,8 @@
         loadGate();
         loadApprovedLine();
       })
-      .catch(function(e) { err.textContent = e.message || 'Unlock failed.'; err.hidden = false; });
+      .catch(function(e) { err.textContent = e.message || 'Unlock failed.'; err.hidden = false; })
+      .finally(function() { btn.disabled = false; });
   };
   if (sessionStorage.getItem(STORAGE_OP)) {
     document.getElementById('reviewLocked').classList.add('hidden');
@@ -404,12 +417,14 @@
 
   function loadGate() {
     if (!sessionStorage.getItem(STORAGE_OP)) return;
+    var wrap = document.getElementById('gateCards');
+    var empty = document.getElementById('gateEmpty');
+    wrap.innerHTML = '<div class="sub">' + esc(GraceMarStatusMicrocopy.phrase('gate_review', 'reviewing', 'Reviewing pending changes...')) + '</div>';
+    empty.classList.add('hidden');
     fetch('/operator/gate-candidates?status=pending', { headers: opHeaders() })
       .then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error); return j; }); })
       .then(function(d) {
         var items = d.items || [];
-        var wrap = document.getElementById('gateCards');
-        var empty = document.getElementById('gateEmpty');
         wrap.innerHTML = '';
         if (!items.length) { empty.classList.remove('hidden'); return; }
         empty.classList.add('hidden');
@@ -434,7 +449,7 @@
               body: JSON.stringify({ action: action })
             }).then(function(r) { return r.json().then(function(j) { if (!r.ok) throw new Error(j.error); return j; }); })
               .then(function() { loadGate(); refreshBadges(); loadApprovedLine(); })
-              .catch(function(e) { alert(e.message); });
+              .catch(function(e) { alert(e.message || GraceMarStatusMicrocopy.phrase('gate_review', 'error', 'That review action did not work.')); });
           };
         });
       })
@@ -452,7 +467,9 @@
       .then(function(r) { return r.json(); })
       .then(function(d) {
         var n = (d.items || []).length;
-        el.textContent = n ? (n + ' approved — use merge buttons above to write the Record.') : 'No approved items waiting merge.';
+        el.textContent = n
+          ? (n + ' ' + GraceMarStatusMicrocopy.phrase('gate_review', 'approvedLine', 'approved — use merge buttons above to write the Record.'))
+          : GraceMarStatusMicrocopy.phrase('gate_review', 'emptyApprovedLine', 'No approved items waiting merge.');
       })
       .catch(function() { el.textContent = ''; });
   }
@@ -460,6 +477,7 @@
   function doMerge(territory) {
     var label = territory === 'companion' ? 'companion' : territory === 'wap' ? 'work-politics' : 'all';
     if (!confirm('Merge all APPROVED for "' + label + '" into the Record?')) return;
+    document.getElementById('mergeMsg').textContent = GraceMarStatusMicrocopy.phrase('gate_review', 'applying', 'Applying approved changes...');
     fetch('/operator/gate-candidates/merge-approved', {
       method: 'POST',
       headers: Object.assign({ 'Content-Type': 'application/json' }, opHeaders()),
@@ -471,7 +489,7 @@
         refreshBadges();
         loadApprovedLine();
       })
-      .catch(function(e) { alert(e.message || e); });
+      .catch(function(e) { alert(e.message || e || GraceMarStatusMicrocopy.phrase('gate_review', 'error', 'That review action did not work.')); });
   }
   document.getElementById('mergeCompanion').onclick = function() { doMerge('companion'); };
   document.getElementById('mergeAll').onclick = function() { doMerge('all'); };

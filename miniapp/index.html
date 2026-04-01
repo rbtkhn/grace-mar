@@ -7,6 +7,7 @@
   <link rel="manifest" href="manifest.json">
   <title>Ask Grace-Mar</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="status-microcopy.js"></script>
   <style>
     :root { --bg: #1a1917; --surface: #252422; --text: #e8e6e3; --muted: #9c9a96; --accent: #88b4d4; --success: #6bcf7f; }
     * { box-sizing: border-box; }
@@ -87,7 +88,10 @@
           t = document.createElement('div');
           t.className = 'typing';
           t.id = 'typing';
-          t.textContent = 'Grace-Mar is thinking...';
+          var grounded = document.getElementById('grounded').checked;
+          t.textContent = grounded
+            ? GraceMarStatusMicrocopy.phrase('grounded_record', 'waiting', 'Checking the Record...')
+            : GraceMarStatusMicrocopy.phrase('chat', 'waiting', 'Getting ready to answer...');
           chat.appendChild(t);
           chat.scrollTop = chat.scrollHeight;
         } else if (!on && t) t.remove();
@@ -129,7 +133,7 @@
           addMsg('gm', data.response || '');
         }).catch(function(err) {
           setTyping(false);
-          setError(err.message || 'Could not reach Grace-Mar. Try again.');
+          setError(err.message || GraceMarStatusMicrocopy.phrase('grounded_record', 'error', 'Could not reach Grace-Mar. Try again.'));
         }).finally(function() {
           send.disabled = false;
         });
