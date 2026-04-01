@@ -1,18 +1,54 @@
 ---
 name: coffee
 preferred_activation: coffee
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee (modifiers: coffee light, minimal, survey; legacy hey still works). Work-start coffee: Step 1 = operator_daily_warmup + harness + branch snapshot. Closeout coffee (signing off in same message): Step 1 = operator_handoff_check + summary + branch snapshot. Read-only planning; Step 2 = fixed A–H menu. Concrete work-lane picks exit to normal workflow by default. G = work-jiang/PH; H = skills/meta."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Work-start coffee runs the read-only grounding stack, then the fixed A-H menu. Concrete work-lane picks exit to normal workflow by default."
 ---
 
 # Coffee
 
 **Preferred activation (operator):** say **`coffee`**. Legacy **`hey`** still works as a compatibility alias, but **`coffee`** is the canonical trigger now. **Work-start** vs **closeout** is **intent in the same message** (e.g. reorientation vs signing off), not a second trigger phrase, one skill and two Step 1 shapes.
 
-Use this skill when the operator wants a **paced** work block: repo-grounded snapshot, fixed **A–H** menu, and weekday-aware **cadence** (tempo), not ad-hoc drift.
+`coffee` is not a startup ceremony. `coffee` is a **repeatable sip of coherence**.
+
+Its purpose is to help the operator become more awake to the actual situation, more coherent about priorities, and more directed about the next move. A coffee session does not need to complete the day’s thinking. It only needs to improve orientation enough that action becomes easier.
+
+Multiple `coffee` sessions per day are normal. That is not redundancy; it is the point. Each `coffee` is another sip.
+
+## Design intent
+
+`coffee` should feel like re-entry, framing, and renewed agency. It should not feel like opening a large procedure or inheriting a pile of obligations. Because `coffee` is a sip, it should be cheap to invoke, fast to metabolize, selective rather than exhaustive, and safe to repeat many times in one day.
+
+## Success condition
+
+A `coffee` succeeds if, after using it, the operator feels:
+
+**“I know what matters now, and I can move.”**
+
+It does not need to resolve every open loop. It needs to reduce ambiguity and restore useful direction.
 
 ### Session trail (optional — **`coffee`** is the trigger)
 
 Sessions begin when the operator says **`coffee`** (optional modifiers: **`coffee light`**, **`coffee minimal`**, **`coffee survey`**). Legacy **`hey`**, **`hey light`**, **`hey minimal`**, and **`hey survey`** still invoke the same skill. To keep a trail: use **`users/<id>/session-transcript.md`** (raw continuity; **`log_operator_choice.py`** for **`[WORK-choice]`** menu picks) and/or append dated bullets to the relevant **`docs/skill-work/work-*/*-history.md`** files per [work-modules-history-principle.md](../../../docs/skill-work/work-modules-history-principle.md). **Not** the gated Record; **not** [`self-memory`](../../../users/grace-mar/self-memory.md). See [work-menu-conventions.md](../../../docs/skill-work/work-menu-conventions.md).
+
+## Guardrails
+
+- Do not turn `coffee` into a heavy maintenance ritual by default.
+- Do not overload each run with every possible obligation or stale thread.
+- Prefer a small number of salient next paths over exhaustive review.
+- Keep the operator in the position of renewed agency, not procedural burden.
+- `coffee` is for orientation; heavier consolidation belongs to `dream`.
+
+## Relation to dream
+
+`coffee` and `dream` serve different biological-cognitive functions.
+
+- **`coffee`** = repeated framing dose
+- **`dream`** = end-of-day consolidation pass
+
+`coffee` may happen many times per day.  
+`dream` normally happens once, near the end of the day.
+
+`coffee` should sharpen the operator’s orientation. `dream` should settle and integrate what the day produced.
 
 ## Cadence by weekday
 
@@ -60,11 +96,11 @@ When the operator begins with **`coffee`** (or clearly the same intent; legacy *
 
 ### Multiple coffees per day (reorientation)
 
-The operator may say **`coffee`** **more than once per calendar day** whenever they need **reorientation** toward the most productive tasks — not only at literal day start. **Each** new **coffee** runs **Step 1** again (at the cadence or explicit phrase for that message) and starts a **new** A–H cycle. **F** closes only the **current** coffee session in this thread; it does **not** imply a one-per-day limit.
+The operator may say **`coffee`** **more than once per calendar day** whenever they need **reorientation** toward the most productive tasks — not only at literal day start. This is normal. `coffee` is designed as a repeatable framing dose, not a once-per-day startup ritual. **Each** new **coffee** runs **Step 1** again (at the cadence or explicit phrase for that message) and starts a **new** A–H cycle. **F** closes only the **current** coffee session in this thread; it does **not** imply a one-per-day limit.
 
 **Habit (optional):** For a **second or later** pass the same day, **`coffee light`** / **minimal** shortens scripts and branch snapshot. Plain **`coffee`** again still **does not** auto-run internet intel in Step 1 — for refreshed markets / Massie X they choose **E → work-politics** (or ask explicitly in the message).
 
-If **`coffee`** (or legacy **`hey`**) arrives **before** the prior coffee session reached **F**, treat it as a **reorientation restart:** run Step 1 again, then offer a fresh A–H menu (use thread context to label **E** sub-lanes).
+If **`coffee`** (or legacy **`hey`**) arrives **before** the prior coffee session reached **F**, treat it as a **reorientation restart:** run Step 1 again, then offer a fresh A–H menu (use thread context to label **E** sub-lanes). Its success condition is not exhaustive coverage; its success condition is improved orientation.
 
 ### Step 1 — Automated actions (run first; paste outputs)
 
