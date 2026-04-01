@@ -29,3 +29,7 @@
 ### 2026-04-01 (BrewMind PH market research)
 
 - Added [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md): desk research on AI-related content and narratives on the Philippine internet (policy, BPO, social, courses); positioning gaps for BrewMind. Linked from [brewmind-business-plan.md](brewmind-business-plan.md); indexed in [INDEX.md](INDEX.md).
+
+### 2026-04-01 (BrewMind PH onboarding bundle)
+
+- Added [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md): **bundle hub** for Philippines onboarding — reading order, phase checklists, map of all BrewMind WORK docs; linked from [README.md](README.md), [brewmind-business-plan.md](brewmind-business-plan.md), [INDEX.md](INDEX.md).

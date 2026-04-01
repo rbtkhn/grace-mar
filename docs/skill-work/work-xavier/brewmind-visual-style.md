@@ -72,6 +72,7 @@
 
 ## 8. Cross-links
 
+- [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) — Philippines onboarding bundle hub  
 - [brewmind-business-plan.md](brewmind-business-plan.md) — GTM and partner program context  
 - [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md) — Field collateral (pamphlet + verbal script)
 

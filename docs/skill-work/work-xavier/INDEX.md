@@ -38,6 +38,7 @@
 | [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md) | Week 2 budget + KPI envelope (points at Week 2 content plan) |
 | [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md) | Week 2 tracking sheet |
 | [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Operator rubric to evaluate Xavier vs the content plans |
+| [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) | **Start here — BrewMind PH bundle:** hub, reading order, phase checklists, links to all BrewMind WORK docs |
 | [brewmind-business-plan.md](brewmind-business-plan.md) | BrewMind WORK draft: Cebu pilot, partner-network-first, ~$10k seed (see public [site](https://xavier-x01.github.io/brew_mind/)) |
 | [brewmind-visual-style.md](brewmind-visual-style.md) | BrewMind visual style — colors, type, UI patterns, print notes (align with site hero) |
 | [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md) | PH internet AI narrative: policy, BPO, social, courses; gaps vs BrewMind |

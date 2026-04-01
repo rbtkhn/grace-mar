@@ -3,7 +3,7 @@
 > **Purpose:** Desk research snapshot for **positioning BrewMind** (café × micro-learning, Cebu pilot, partner network). **Not** exhaustive; refresh periodically. **WORK** artifact — [work-xavier](README.md), not Record.  
 > **As of:** 2026-04-01 (sources publicly available at time of capture).
 
-**Pair with:** [brewmind-business-plan.md](brewmind-business-plan.md) · [brewmind-visual-style.md](brewmind-visual-style.md)
+**Pair with:** [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (bundle hub) · [brewmind-business-plan.md](brewmind-business-plan.md) · [brewmind-visual-style.md](brewmind-visual-style.md)
 
 ---
 
