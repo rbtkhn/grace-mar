@@ -97,7 +97,26 @@ Illustrative allocation; adjust after quotes.
 | B2B deck + first workshop materials | 300–600 | Reuse AI Learning Plan modules |
 | **Operating reserve** | 2,000–3,000 | Runway and surprises |
 
-**Contrast — owned shop path (reference only):** Same seed is **tight** for lease deposit + build + espresso stack; if revisiting, prefer **brew-first** fit-out, **short hours**, or **pop-up** before long lease. Detailed capex breakdown lives in prior chat draft; update with actual rent quotes.
+### Same ~$10k — owned micro-café (capex path, reference)
+
+Illustrative only; **rent and equipment dominate** before proof of demand.
+
+| Bucket | USD (approx.) | Notes |
+|--------|----------------|--------|
+| Rent + deposit (2–3 months) | 2,500–4,000 | Highly sensitive to site; can consume most of seed |
+| Build-out / permits / basics | 1,500–2,500 | Paint, lights, counter — not brand marketing |
+| Equipment | 2,000–3,000 | Espresso stack vs brew-first changes total |
+| Initial inventory (1–2 months) | 500–800 | Beans, milk, cups, pastries |
+| Tablets + POS + Wi‑Fi | 400–700 | Overlaps with network plan digitally |
+| Legal / accounting / misc | 500–1,000 | |
+| **Operating reserve** | 1,000–2,000 | Payroll float, utilities |
+
+If revisiting owned shop: prefer **brew-first** fit-out, **short hours** at launch, or **pop-up** before a long lease. Replace ranges with **actual Cebu quotes**.
+
+### How the spend differs (one view)
+
+- **Owned shop:** Dollars buy the **right to operate one node** — lease, equipment, inventory. Wrong rent choice ties up most of $10k before the first validated cohort.
+- **Network plan:** Dollars buy **reusable IP, physical brand surfaces (cups/QR), variable incentive float, BD, and legal** — many partner attempts and **attribution data** instead of one fixed site. **Flagship** real estate can wait for revenue or round 2.
 
 ---
 
@@ -131,3 +150,4 @@ Not “own Cebu AI.” **Proof:** attributed engagement, **paid conversion**, pa
 | Date | Note |
 |------|------|
 | 2026-04-01 | Initial save: network-first plan + $10k seed + owned-shop alternative summary; links to public site and work-xavier index. |
+| 2026-04-01 | Added §9 spend comparison: network vs owned café (~$10k buckets). |

@@ -13,3 +13,7 @@
 ### 2026-04-01
 
 - Added [brewmind-business-plan.md](brewmind-business-plan.md): BrewMind business plan (Cebu City pilot, partner café network first, ~USD 10k seed framing; owned-shop path summarized as alternative). Indexed in [INDEX.md](INDEX.md).
+
+### 2026-04-01 (later)
+
+- Updated [brewmind-business-plan.md](brewmind-business-plan.md): §9 tables comparing ~$10k allocation (network vs owned micro-café) and short “how spend differs” note.
