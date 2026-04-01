@@ -6,7 +6,8 @@ Reports: (a) what template has that instance lacks (pull needed); (b) what insta
 Does NOT overwrite anything. Per MERGING-FROM-COMPANION-SELF §4.
 
 Uses grace-mar MERGING-FROM-COMPANION-SELF paths by default. Use --use-manifest to load
-paths from companion-self template-manifest.json (companion-self canonical paths).
+exact paths from companion-self template-manifest.json. Add --include-skill-work when you
+explicitly want the broader docs/skill-work recursive audit.
 
 Usage:
     python scripts/template_diff.py
@@ -14,6 +15,7 @@ Usage:
     GRACE_MAR_COMPANION_SELF=/path/to/repo python scripts/template_diff.py
     python scripts/template_diff.py --instance /path/to/grace-mar --brief
     python scripts/template_diff.py --use-manifest -o audit-report.md
+    python scripts/template_diff.py --use-manifest --include-skill-work -o audit-report.md
 """
 
 import argparse
@@ -104,6 +106,7 @@ def run_diff(
     companion_self_root: Path,
     instance_root: Path,
     use_manifest: bool = False,
+    include_skill_work: bool = False,
     brief: bool = False,
 ) -> dict[str, list[str]]:
     """Compare template paths. Returns {same, differ, only_template, only_instance} -> list of paths."""
@@ -127,15 +130,15 @@ def run_diff(
         status = _compare_file(t, i)
         result[status].append(rel)
 
-    # docs/skill-work/ recursively
-    t_skill = set(str(p) for p in _skill_work_files(companion_self_root))
-    i_skill = set(str(p) for p in _skill_work_files(instance_root))
-    all_skill = t_skill | i_skill
-    for rel in sorted(all_skill):
-        t = companion_self_root / rel
-        i = instance_root / rel
-        status = _compare_file(t, i)
-        result[status].append(rel)
+    if include_skill_work:
+        t_skill = set(str(p) for p in _skill_work_files(companion_self_root))
+        i_skill = set(str(p) for p in _skill_work_files(instance_root))
+        all_skill = t_skill | i_skill
+        for rel in sorted(all_skill):
+            t = companion_self_root / rel
+            i = instance_root / rel
+            status = _compare_file(t, i)
+            result[status].append(rel)
 
     for key in result:
         result[key] = sorted(set(result[key]))
@@ -160,7 +163,12 @@ def main() -> None:
     parser.add_argument("--instance", "-i", type=Path, default=REPO_ROOT, help="Path to grace-mar (instance) repo")
     parser.add_argument("--clone", action="store_true", default=True, help="Clone companion-self if missing (default: True)")
     parser.add_argument("--no-clone", action="store_false", dest="clone", help="Do not clone; fail if companion-self missing")
-    parser.add_argument("--use-manifest", "-m", action="store_true", help="Use companion-self template-manifest.json paths")
+    parser.add_argument("--use-manifest", "-m", action="store_true", help="Use exact companion-self template-manifest.json paths")
+    parser.add_argument(
+        "--include-skill-work",
+        action="store_true",
+        help="Additionally compare docs/skill-work/ recursively in both repos",
+    )
     parser.add_argument("--brief", "-b", action="store_true", help="Brief output (counts only)")
     parser.add_argument("--output", "-o", type=Path, help="Write report to file")
     args = parser.parse_args()
@@ -172,7 +180,13 @@ def main() -> None:
         print("Error: companion-self not found at", cs_root, file=sys.stderr)
         sys.exit(1)
 
-    result = run_diff(cs_root, args.instance, use_manifest=args.use_manifest, brief=args.brief)
+    result = run_diff(
+        cs_root,
+        args.instance,
+        use_manifest=args.use_manifest,
+        include_skill_work=args.include_skill_work,
+        brief=args.brief,
+    )
 
     out_lines: list[str] = []
 
@@ -194,7 +208,10 @@ def main() -> None:
     emit()
     emit("Companion-self: " + str(cs_root))
     emit("Instance (grace-mar): " + str(args.instance))
-    emit("Paths: " + ("companion-self template-manifest.json" if args.use_manifest else "grace-mar MERGING-FROM-COMPANION-SELF"))
+    path_scope = "companion-self template-manifest.json" if args.use_manifest else "grace-mar MERGING-FROM-COMPANION-SELF"
+    if args.include_skill_work:
+        path_scope += " + docs/skill-work recursive"
+    emit("Paths: " + path_scope)
     emit()
 
     if result["only_template"]:

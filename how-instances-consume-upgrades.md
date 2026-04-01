@@ -8,6 +8,26 @@ When companion-self (this repo) is updated, an instance (e.g. [Grace-Mar](https:
 
 ---
 
+## Sync architecture (template view)
+
+Instances should read template sync through four layers:
+
+| Layer | Owned by | Purpose |
+|------|----------|---------|
+| **Doctrine** | Template upgrade docs + instance merge docs | What may sync, what must never sync, and how to merge safely |
+| **Contract** | Instance-side machine file (for example `instance-contract.json`) | Which template version / commit the instance is trying to match |
+| **Applied provenance** | Instance-side machine file (for example `template-source.json`) | Which template commit the instance actually merged most recently |
+| **Audit** | Diff scripts, audit reports, sync logs | What currently differs and what merge slice should happen next |
+
+The important distinction is simple:
+
+- the **contract** says what the instance is **targeting**
+- the **applied provenance** says what the instance has **actually merged**
+
+They may differ temporarily during staged catch-up work. Do not force them into one field.
+
+---
+
 ## Safe to Sync from Template
 
 - **Concept docs** — e.g. concept.md, generalized framework
@@ -31,10 +51,13 @@ The instance **compares** template docs and templates with its own, **merges** c
 ## Process (Recommended)
 
 1. Pull or merge from companion-self (e.g. `git pull origin main` from template remote, or copy specific files).
-2. Compare template paths with instance paths (docs, `users/_template/` vs instance’s template or schema docs).
-3. Merge changes into the instance’s docs and template files by hand (or with a small sync script that only touches allowed paths).
-4. Run instance validation (e.g. governance check, validate-integrity).
-5. Do **not** copy template `users/_template/` *over* an existing `users/<id>/` Record — use it only when creating a **new** user directory.
+2. Confirm the instance’s **target contract** (for example its `instance-contract.json`) before comparing files.
+3. Compare template paths with instance paths (docs, `users/_template/` vs instance’s template or schema docs).
+4. Merge changes into the instance’s docs and template files by hand (or with a small sync script that only touches allowed paths).
+5. Update the instance’s **applied provenance** record (for example `template-source.json`) with the actual commit, version, and merged paths.
+6. Run instance validation (e.g. governance check, validate-integrity).
+7. Run the instance’s sync-contract check (for example `python scripts/validate_template_sync_contract.py`) so target contract, applied provenance, and local manifest mirror stay structurally aligned.
+8. Do **not** copy template `users/_template/` *over* an existing `users/<id>/` Record — use it only when creating a **new** user directory.
 
 ---
 
@@ -43,6 +66,8 @@ The instance **compares** template docs and templates with its own, **merges** c
 When an instance (e.g. Grace-Mar) merges upgrades from companion-self, it should compare and merge **only** these paths. **When companion-self adds or renames files, this list and the template manifest are updated.** Instance merge docs (e.g. grace-mar's `docs/MERGING-FROM-COMPANION-SELF.md`) should align with this list.
 
 **Machine-readable:** The same list is in **`template-manifest.json`** at repo root (paths, descriptions, optional flag, `canonicalAsOf` date). Scripts and CI can diff instance files against it; keep the manifest and this table in sync.
+
+**Instance-side copy rule:** If an instance keeps a local copy of `template-manifest.json`, treat that copy as a **cached audit mirror**, not as a new independent source of truth. The canonical manifest remains the one in companion-self at the commit the instance claims to target or has applied.
 
 | Path | Description |
 |------|-------------|
@@ -98,15 +123,29 @@ A small sync script could list these paths and diff/merge them into the instance
 
 **Template integrity:** Run **`node scripts/validate-template.js`** from the repo root to ensure every path in `template-manifest.json` exists and that no forbidden files (e.g. `.DS_Store`) are tracked. CI runs this on push; instances can run it after pulling to confirm manifest and filesystem match.
 
-**Instance side:** When you merge from companion-self, **record in your repo** the template commit (or tag) and date. For example, in `docs/MERGING-FROM-COMPANION-SELF.md` or a small file such as `template-source.json`:
+**Instance side:** Keep two separate machine concepts:
+
+- **target contract** — what template version / commit the instance is aiming to align to
+- **applied provenance** — what template commit actually landed in the instance most recently
+
+When you merge from companion-self, **record in your repo** the template commit (or tag) and date in an applied provenance file such as `template-source.json`:
 
 - `companionSelfCommit`: the full git commit hash (or tag) you merged from
 - `templateVersion`: from template’s `template-version.json` (e.g. 0.2.0)
-- `mergedAt`: date (ISO) or commit hash in the instance repo
+- `syncedAt`: date (ISO) when that merge landed in the instance
 
 An example schema lives in **`docs/template-source.example.json`**; copy to your instance (e.g. repo root or `docs/template-source.json`) and update it after each merge. That gives a verifiable audit trail: "this instance merged from companion-self at this point."
 
-**How to audit:** (1) From companion-self: open `template-manifest.json` at the commit the instance claims it merged. (2) From the instance: read its recorded commit and merged-at. (3) Optionally: instance CI or a script can diff its copy of the canonical paths against the manifest (e.g. fetch manifest from companion-self at the recorded commit, compare paths and optionally checksums). No automated link is required; both sides are independently auditable and can be compared by hand or script.
+If the instance also keeps a target contract file (for example `instance-contract.json`), that file should hold the **intended** upstream version / commit separately rather than being overwritten by every small applied slice.
+
+**How to audit:** (1) From companion-self: open `template-manifest.json` at the commit the instance claims it merged. (2) From the instance: read its recorded commit and `syncedAt`. (3) Optionally: instance CI or a script can diff its copy of the canonical paths against the manifest (e.g. fetch manifest from companion-self at the recorded commit, compare paths and optionally checksums). No automated link is required; both sides are independently auditable and can be compared by hand or script.
+
+**Recommended instance check:** After sync, run a small validator that checks:
+
+- target contract file exists and names the intended version / commit
+- applied provenance file exists and points back to the same target contract
+- local cached manifest mirror matches the target template version
+- target vs applied drift is reported as a warning unless the operator explicitly wants strict convergence
 
 ---
 

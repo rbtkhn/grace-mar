@@ -39,6 +39,28 @@ def _repo_commit(repo_path: Path) -> str:
     return result.stdout.strip() if result.returncode == 0 else ""
 
 
+def _template_source_base() -> dict:
+    return {
+        "schemaVersion": "1.1.0",
+        "recordType": "templateAppliedProvenance",
+        "companionSelfCommit": "",
+        "templateVersion": "",
+        "syncedAt": "",
+        "syncedBy": "",
+        "syncedPaths": [],
+        "templateUpstream": {
+            "repo": "https://github.com/rbtkhn/companion-self",
+            "ref": "main",
+        },
+        "notes": (
+            "Top-level fields describe the last applied template merge. "
+            "Narrow auxiliary refreshes should append to auxiliarySyncEvents "
+            "rather than replacing this baseline."
+        ),
+        "auxiliarySyncEvents": [],
+    }
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Upgrade grace-mar sync-pack from companion-self.")
     ap.add_argument(
@@ -77,20 +99,23 @@ def main() -> int:
     template_version = _read_json(template_root / "template-version.json").get("templateVersion", "")
     commit_hash = _repo_commit(template_root)
     source_payload = {
+        "kind": "sync_pack_upgrade",
         "companionSelfCommit": commit_hash,
         "templateVersion": template_version,
         "syncedAt": datetime.now(timezone.utc).isoformat(),
         "syncedBy": "scripts/upgrade-from-template.py",
         "syncedPaths": [f"docs/skill-work/self-work/sync-pack/{name}" for name in changed],
-        "templateUpstream": {
-            "repo": "https://github.com/rbtkhn/companion-self",
-            "ref": "main",
-        },
     }
-    if not args.dry_run:
-        (grace_root / "template-source.json").write_text(
-            json.dumps(source_payload, indent=2) + "\n", encoding="utf-8"
-        )
+    if not args.dry_run and changed:
+        template_source_path = grace_root / "template-source.json"
+        existing = _read_json(template_source_path)
+        merged = _template_source_base()
+        merged.update(existing)
+        merged.setdefault("templateUpstream", {"repo": "https://github.com/rbtkhn/companion-self", "ref": "main"})
+        merged.setdefault("auxiliarySyncEvents", [])
+        merged["auxiliarySyncEvents"] = list(merged.get("auxiliarySyncEvents") or [])
+        merged["auxiliarySyncEvents"].append(source_payload)
+        template_source_path.write_text(json.dumps(merged, indent=2) + "\n", encoding="utf-8")
 
     mode = "DRY-RUN" if args.dry_run else "APPLIED"
     print(f"{mode}: {len(changed)} sync-pack file(s) changed.")

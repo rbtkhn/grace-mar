@@ -1,4 +1,6 @@
 {
+  "schemaVersion": "1.1.0",
+  "recordType": "templateAppliedProvenance",
   "companionSelfCommit": "a08650a98c30277aa219c3bfc3ef02d78504a2c4",
   "templateVersion": "0.4.0",
   "syncedAt": "2026-03-28T00:00:00Z",
@@ -29,5 +31,12 @@
   "templateUpstream": {
     "repo": "https://github.com/rbtkhn/companion-self",
     "ref": "main"
-  }
+  },
+  "targetReference": {
+    "instanceContract": "instance-contract.json",
+    "templateVersionTarget": "0.4.0",
+    "templateCommitTarget": "a08650a98c30277aa219c3bfc3ef02d78504a2c4"
+  },
+  "notes": "Top-level fields describe the last applied template merge. Narrow auxiliary refreshes should append to auxiliarySyncEvents rather than replacing this baseline.",
+  "auxiliarySyncEvents": []
 }

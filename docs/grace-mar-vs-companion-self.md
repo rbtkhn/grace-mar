@@ -31,6 +31,8 @@ Side-by-side comparison of the two repositories that form the companion-self vis
 - **grace-mar** = first **downstream instance** created from (or aligned with) that template.
 - Shared protocol, UI patterns, library, and upgrade mechanics are developed in companion-self; instances like grace-mar **consume** those improvements without overwriting their Record or history. See [how-instances-consume-upgrades](https://github.com/rbtkhn/companion-self/blob/main/how-instances-consume-upgrades.md) (in companion-self) and [MERGING-FROM-COMPANION-SELF](merging-from-companion-self.md) (in grace-mar).
 
+**App/UI sync rule:** companion-self docs/spec surfaces are the default upstream sync vehicle. Template app code (`companion-self/app/`) is an **optional implementation parity surface**, not a default file-for-file target for grace-mar’s `miniapp/` or profile stack.
+
 **Boundary (forking / separation):**
 
 > Companion-self is the engine and empty hull; an instance repo is the voyage log and cargo — and the hull must never be shipped with someone else's cargo.

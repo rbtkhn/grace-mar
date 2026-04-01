@@ -43,7 +43,7 @@ python3 scripts/upgrade-from-template.py --dry-run
 python3 scripts/upgrade-from-template.py
 ```
 
-That refreshes sync-pack files from the pinned template tree and updates `template-source.json` when the script is present. If your instance has no such script, merge manually per [how-instances-consume-upgrades.md](../../../../how-instances-consume-upgrades.md).
+That refreshes sync-pack files from the pinned template tree and, when present, appends a **narrow auxiliary sync event** to `template-source.json`. It should **not** replace the top-level applied template baseline, which belongs to the last full template merge. If your instance has no such script, merge manually per [how-instances-consume-upgrades.md](../../../../how-instances-consume-upgrades.md).
 
 ---
 

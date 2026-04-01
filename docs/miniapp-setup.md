@@ -49,6 +49,26 @@ OPENAI_API_KEY=sk-... python apps/miniapp_server.py
 
 Open http://localhost:5000 for the Q&A Mini App. For the **family hub**, set `FAMILY_APP_TOKEN` in `.env`, restart, then open http://localhost:5000/app and paste the token (or use `/app?t=<token>` once).
 
+### Local dev boundary: running with companion-self
+
+It is normal to run the Grace-Mar Mini App and the companion-self demo at the same time:
+
+- **Grace-Mar Mini App / family hub**: `http://localhost:5000`
+- **companion-self demo app**: `http://localhost:3000`
+
+These are **different browser origins** because the port differs. In practice:
+
+- `localStorage`, `sessionStorage`, service workers, and IndexedDB stay **separate** between `3000` and `5000`
+- page-relative requests such as `/api/ask` or `/api/activity` go to the **same origin as the page you opened**
+- a token saved by the Grace-Mar family hub on `5000` does **not** appear in the companion-self demo on `3000`
+- running both at once does **not** by itself explain app-specific 404s or API errors; those are usually route/runtime bugs inside one server
+
+Practical rule: treat them as two local islands that happen to share the same machine. If you want one frontend to call the other server intentionally, use an absolute URL and handle CORS on purpose.
+
+**Cookie caveat:** cookies are less cleanly separated because they are host-based rather than port-based. Current local-dev auth in these surfaces mostly uses browser storage and explicit headers/tokens, so cross-port confusion should be low unless you add cookie-based auth later.
+
+**Sync policy note:** this local-dev split is also the architecture split. Grace-Mar’s `miniapp/` and family/operator surfaces are instance deployment code, not a default file-for-file mirror of `companion-self/app/`. Template app code is an optional parity surface; docs/specs remain the normal upstream sync vehicle unless you intentionally choose implementation parity.
+
 For Telegram testing, expose with ngrok:
 
 ```bash

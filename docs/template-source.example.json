@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "recordType": "templateAppliedProvenance",
+  "companionSelfCommit": "0123456789abcdef0123456789abcdef01234567",
+  "templateVersion": "0.4.0",
+  "syncedAt": "2026-03-28T00:00:00Z",
+  "syncedBy": "manual-merge-slice",
+  "syncedPaths": [
+    "template-manifest.json",
+    "how-instances-consume-upgrades.md",
+    "docs/change-review.md"
+  ],
+  "templateUpstream": {
+    "repo": "https://github.com/rbtkhn/companion-self",
+    "ref": "main"
+  },
+  "targetReference": {
+    "instanceContract": "instance-contract.json",
+    "templateVersionTarget": "0.4.0",
+    "templateCommitTarget": "0123456789abcdef0123456789abcdef01234567"
+  },
+  "notes": "Top-level fields describe the last applied template merge. Narrow auxiliary refreshes should append to auxiliarySyncEvents rather than replacing this baseline.",
+  "auxiliarySyncEvents": [
+    {
+      "kind": "sync_pack_upgrade",
+      "syncedAt": "2026-03-29T09:30:00Z",
+      "syncedBy": "scripts/upgrade-from-template.py",
+      "companionSelfCommit": "fedcba9876543210fedcba9876543210fedcba98",
+      "templateVersion": "0.4.0",
+      "syncedPaths": [
+        "docs/skill-work/self-work/sync-pack/README.md"
+      ]
+    }
+  ]
+}

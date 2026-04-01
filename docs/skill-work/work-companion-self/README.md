@@ -31,8 +31,8 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 | **This README** | Objective, purpose, and principles. |
 | **[roadmap.md](roadmap.md)** | Phased roadmap: read/audit → suggest → stage PRs → (future) autonomous within bounds. |
 | **[audit-report.md](audit-report.md)** | Latest template diff (grace-mar paths). Run: `python scripts/template_diff.py -o docs/skill-work/work-companion-self/audit-report.md` (default template path: `./companion-self`; see [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md) §0) |
-| **[audit-report-manifest.md](audit-report-manifest.md)** | Latest template diff (companion-self manifest paths). Run: `python scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` |
-| **[TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md)** | Pinned companion-self commit for governance merges (`288b438` baseline). |
+| **[audit-report-manifest.md](audit-report-manifest.md)** | Latest template diff (companion-self manifest paths). Run: `python scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md` (add `--include-skill-work` only for the broader WORK-tree audit). |
+| **[TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md)** | Historical governance baseline, useful as context but no longer the primary machine pin once `instance-contract.json` / `template-source.json` are current. |
 | **[COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md)** | SELF-LIBRARY template alignment notes (merged upstream). |
 | **[CURSOR-PERSONAS-RULES-SKILLS.md](CURSOR-PERSONAS-RULES-SKILLS.md)** | Product spec: **template contributor** vs **new instance owner** — which `.cursor` rules and skills to add in companion-self (phase 1 vs 2). |
 | **§ [Three-track alignment](#three-track-alignment-operator-policy)** | Operator policy: governance/protocol diffs, manifest rhythm, optional DESIGN upstream. |
@@ -69,8 +69,11 @@ Grace-mar and companion-self are **not** chasing full file parity. Use these thr
 1. Pull or pin companion-self `main` (or your target tag); note `HEAD` / `template-version.json`.
 2. Refresh the audit artifact:
    `python3 scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md`
+   Add `--include-skill-work` only when you intentionally want the larger WORK-tree comparison.
 3. Reconcile **only** slices that matter for **protocol, schemas, validators, or operator-facing contract** — per [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md) §2a (small merges, hand merge, log §3).
 4. Do not treat a long **“instance additions”** list as debt; instance-only `docs/skill-work/**` is expected.
+
+**Pin rule:** treat `instance-contract.json` as the **target** contract and `template-source.json` as the **applied** provenance record. Audit work should report both when they differ instead of assuming one file can do both jobs.
 
 ### Track 3 — DESIGN.md and `validate-design-md.py` (optional upstream)
 

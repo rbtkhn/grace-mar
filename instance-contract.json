@@ -1,10 +1,24 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "instanceId": "grace-mar",
   "templateRepo": "https://github.com/rbtkhn/companion-self",
   "templateVersionTarget": "0.4.0",
+  "templateCommitTarget": "a08650a98c30277aa219c3bfc3ef02d78504a2c4",
   "seedPhaseProtocol": "v2",
   "notes": "Live instance contract; see docs/template-sync-status.md for drift and audits.",
+  "syncArchitecture": {
+    "doctrinePaths": [
+      "docs/merging-from-companion-self.md",
+      "how-instances-consume-upgrades.md",
+      "docs/template-sync-status.md"
+    ],
+    "appliedProvenancePath": "template-source.json",
+    "auditPaths": [
+      "docs/skill-work/work-companion-self/audit-report-manifest.md",
+      "docs/skill-work/work-companion-self/audit-report.md"
+    ],
+    "defaultDiffCommand": "python3 scripts/template_diff.py --use-manifest -o docs/skill-work/work-companion-self/audit-report-manifest.md"
+  },
   "docs": {
     "identityForkProtocol": "docs/identity-fork-protocol.md",
     "mergingFromTemplate": "docs/merging-from-companion-self.md",

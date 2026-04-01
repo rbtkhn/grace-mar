@@ -43,6 +43,9 @@ jobs:
       - name: Validate integrity
         run: python scripts/validate-integrity.py --user grace-mar --require-proposal-class
 
+      - name: Validate template sync contract
+        run: python scripts/validate_template_sync_contract.py
+
       - name: Fork lifecycle unit tests
         run: pytest tests/test_fork_lifecycle.py -v --tb=short
 

@@ -21,3 +21,5 @@ jobs:
         run: python scripts/governance_checker.py
       - name: Integrity check
         run: python scripts/validate-integrity.py --json
+      - name: Template sync contract check
+        run: python scripts/validate_template_sync_contract.py --json

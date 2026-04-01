@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schemaVersion": 1,
-  "description": "Canonical list of template paths instances may sync. Single source of truth for audit; update when adding or renaming paths.",
-  "canonicalAsOf": "2026-03-26",
-  "templateVersion": "0.3.4",
+  "description": "Cached audit mirror of companion-self's canonical template-manifest. Use for local diffing and operator visibility inside grace-mar; the canonical source remains the upstream manifest at the commit recorded in template-source.json / targeted by instance-contract.json.",
+  "canonicalAsOf": "2026-03-28",
+  "templateVersion": "0.4.0",
   "paths": [
     {
       "path": "docs/concept.md",
