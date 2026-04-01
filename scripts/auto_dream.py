@@ -24,6 +24,7 @@ for path in (REPO_ROOT / "scripts",):
 
 from contradiction_digest import default_digest_path, generate_contradiction_digest, write_artifact_drafts
 from emit_pipeline_event import append_pipeline_event
+from log_cadence_event import append_cadence_event
 from repo_io import resolve_self_memory_path
 
 LAST_DREAM_FILENAME = "last-dream.json"
@@ -380,6 +381,25 @@ def run_auto_dream(
             summary, users_dir=users_dir, user_id=user_id
         )
         summary["handoff_path"] = str(handoff_path)
+
+        digest = summary.get("contradiction_digest") or {}
+        counts = digest.get("relation_counts") or {}
+        try:
+            append_cadence_event(
+                "dream",
+                user_id,
+                ok=summary.get("ok", False),
+                mode="strict" if strict_mode else "default",
+                kv={
+                    "integrity": "pass" if integrity_ok else "fail",
+                    "governance": "pass" if governance_ok else "fail",
+                    "mem_changed": str(memory_result.changed).lower(),
+                    "reviewable": str(digest.get("reviewable_count", 0)),
+                    "contradictions": str(counts.get("contradiction", 0)),
+                },
+            )
+        except Exception:
+            pass
 
     return summary
 

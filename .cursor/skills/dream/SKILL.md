@@ -165,3 +165,15 @@ Usually one `dream` session per day is normal.
 **Typical end-of-day sequence:** `dream` first (maintenance), then `coffee closeout` or standalone `handoff-check` (operational handoff). **One-command bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs both in that order.
 
 **Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays follow-ups from last night's dream — contradictions to review, artifact drafts to promote, integrity/governance status.
+
+## Cadence audit
+
+Each successful dream run appends one line to `docs/skill-work/work-cadence/work-cadence-events.md` via `scripts/log_cadence_event.py`. This is automatic — no operator action required.
+
+## Related files
+
+- `docs/skill-work/work-dream/README.md` — territory doctrine and boundaries
+- `docs/skill-work/work-dream/work-dream-history.md` — design history (architecture changes, not per-run telemetry)
+- `docs/skill-work/work-cadence/work-cadence-events.md` — per-run cadence telemetry
+- `.cursor/skills/coffee/SKILL.md` — morning-side counterpart
+- `.cursor/skills/bridge/SKILL.md` — session-scale handoff

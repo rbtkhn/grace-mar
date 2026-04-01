@@ -32,6 +32,9 @@ import sys
 from pathlib import Path
 
 _REPO = Path(__file__).resolve().parent.parent
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
 MODES = ("work-start", "light", "minimal", "closeout", "reentry")
 
 
@@ -121,6 +124,12 @@ def main() -> int:
     if args.mode != "closeout":
         print(f"\n{'=' * 60}\n$ git branch snapshot\n{'=' * 60}\n", flush=True)
         print(_branch_snapshot())
+
+    try:
+        from log_cadence_event import append_cadence_event
+        append_cadence_event("coffee", user, ok=True, mode=args.mode)
+    except Exception:
+        pass
 
     return 0
 

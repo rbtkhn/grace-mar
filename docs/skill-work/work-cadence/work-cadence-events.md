@@ -1,0 +1,13 @@
+# Cadence events
+
+> Append-only audit of **coffee**, **dream**, and **bridge** runs.
+> **Not** Record truth. **Not** self-memory. **Not** a replacement for
+`last-dream.json` or `session-transcript.md`.
+>
+> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value ...`
+>
+> See [work-cadence README](README.md) and
+[work-modules-history-principle](../work-modules-history-principle.md).
+
+_(Append below this line.)_
+- **2026-04-01 18:26 UTC** — coffee (grace-mar) ok=true mode=work-start gate_pending=0

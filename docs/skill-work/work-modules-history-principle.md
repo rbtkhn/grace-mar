@@ -31,6 +31,9 @@
 | work-xavier | [work-xavier/work-xavier-history.md](work-xavier/work-xavier-history.md) |
 | work-civ-mem | [work-civ-mem/work-civ-mem-history.md](work-civ-mem/work-civ-mem-history.md) |
 | work-alpha-school | [work-alpha-school/work-alpha-school-history.md](work-alpha-school/work-alpha-school-history.md) |
+| work-cadence | [work-cadence/work-cadence-events.md](work-cadence/work-cadence-events.md) *(per-run telemetry, not design history)* |
+
+**Cadence run telemetry:** Per-run audit of `coffee`, `dream`, and `bridge` invocations lives in [work-cadence/work-cadence-events.md](work-cadence/work-cadence-events.md), appended by `scripts/log_cadence_event.py`. This is distinct from per-ritual *design* history (`work-coffee-history.md`, `work-dream-history.md`) which tracks architecture changes, not every run. Cadence events are not Record truth, not self-memory, and not a replacement for `session-transcript.md`.
 
 **Legacy / merged territories** (no dedicated history file; use **work-dev** or parent): `work-build-ai` → work-dev; `work-grace-gems` → work-business/grace-gems (log in **work-business-history** or gem-specific notes).
 

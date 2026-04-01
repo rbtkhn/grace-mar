@@ -85,6 +85,16 @@ If push fails (e.g. remote has new commits), pull-rebase first, then push. If th
 
 **After push, run `git status -sb` in both repos to confirm clean state.**
 
+### Cadence audit
+
+After confirming clean state, log the bridge event:
+
+```bash
+python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok --kv refs=<grace-mar-SHA>,<companion-self-SHA>
+```
+
+Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just pushed (from `git rev-parse --short HEAD` in each repo). If only one repo had changes, include only that SHA.
+
 ---
 
 ## Step 3 — Generate the transfer prompt

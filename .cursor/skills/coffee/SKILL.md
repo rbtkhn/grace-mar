@@ -113,11 +113,16 @@ After **any letter except F**, re-offer the full A–H menu. **F** formally clos
 
 Sessions begin when the operator says **`coffee`** (optional modifiers). To keep a trail: use **`users/<id>/session-transcript.md`** and/or append dated bullets to **`docs/skill-work/work-*/*-history.md`**. **Not** the gated Record; **not** `self-memory`. See [work-menu-conventions.md](../../../docs/skill-work/work-menu-conventions.md).
 
+## Cadence audit
+
+Each successful coffee run appends one line to `docs/skill-work/work-cadence/work-cadence-events.md` via `scripts/log_cadence_event.py`. This is automatic — no operator action required.
+
 ## Related files
 
 - `docs/skill-work/work-coffee/README.md` — territory rationale and boundaries
 - `docs/skill-work/work-coffee/menu-reference.md` — full A–H definitions, cadence, survey track
 - `docs/skill-work/work-coffee/work-coffee-history.md` — lane breadcrumbs
+- `docs/skill-work/work-cadence/work-cadence-events.md` — per-run cadence telemetry
 - `.cursor/skills/dream/SKILL.md` — night-side counterpart
 - `docs/skill-work/work-politics/polling-and-markets.md` — KY-4 polling (menu E → work-politics)
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` — messaging discipline
