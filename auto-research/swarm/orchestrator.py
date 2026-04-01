@@ -15,8 +15,9 @@ AUTO_RESEARCH_DIR = SWARM_DIR.parent
 REPO_ROOT = AUTO_RESEARCH_DIR.parent
 SHARED_DIR = AUTO_RESEARCH_DIR / "_shared"
 SCRIPTS_DIR = REPO_ROOT / "scripts"
+SWARM_PACKAGE_DIR = SWARM_DIR
 
-for path in (SHARED_DIR, SCRIPTS_DIR):
+for path in (SHARED_DIR, SCRIPTS_DIR, SWARM_PACKAGE_DIR):
     path_str = str(path)
     if path_str not in sys.path:
         sys.path.insert(0, path_str)
@@ -24,6 +25,8 @@ for path in (SHARED_DIR, SCRIPTS_DIR):
 from artifact_promotion import promote_artifact_to_gate
 from auto_dream import format_auto_dream_summary as _format_auto_dream_summary
 from auto_dream import run_auto_dream as _run_auto_dream_job
+from debate.review import format_debate_summary as _format_debate_summary
+from debate.review import run_debate_review as _run_debate_review
 
 STATE_PATH = SWARM_DIR / "swarm-state.json"
 DEFAULT_USER = "grace-mar"
@@ -239,6 +242,20 @@ def format_auto_dream_status(summary: dict[str, Any]) -> str:
     return _format_auto_dream_summary(summary)
 
 
+def run_debate_review(
+    artifact_reference: str,
+    *,
+    user_id: str = DEFAULT_USER,
+    write: bool = True,
+) -> dict[str, Any]:
+    artifact = resolve_artifact_reference(artifact_reference)
+    return _run_debate_review(Path(artifact["artifact_path"]), user_id=user_id, write=write, repo_root=REPO_ROOT)
+
+
+def format_debate_status(review: dict[str, Any]) -> str:
+    return _format_debate_summary(review)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Swarm read model and promotion helpers")
     parser.add_argument("--user", "-u", default=DEFAULT_USER, help="User id (default: grace-mar)")
@@ -248,6 +265,9 @@ def main() -> int:
     sub.add_parser("last", help="Show the latest accepted artifact visible to the swarm bridge")
     dream = sub.add_parser("dream", help="Run bounded autoDream maintenance and print a summary")
     dream.add_argument("--dry-run", action="store_true", help="Inspect maintenance output without writing files")
+    debate = sub.add_parser("debate", help="Run advisory debate review over an accepted artifact")
+    debate.add_argument("artifact", nargs="?", default="latest", help="Artifact path, filename, or 'latest'")
+    debate.add_argument("--json", action="store_true", help="Emit debate review as JSON")
 
     promote = sub.add_parser("promote", help="Promote an accepted artifact through the shared gate helper")
     promote.add_argument("artifact", help="Artifact path, filename, or 'latest'")
@@ -264,6 +284,13 @@ def main() -> int:
             return 0
         if args.command == "dream":
             print(format_auto_dream_status(run_auto_dream(user_id=args.user, dry_run=args.dry_run)))
+            return 0
+        if args.command == "debate":
+            review = run_debate_review(args.artifact, user_id=args.user, write=True)
+            if args.json:
+                print(json.dumps(review, indent=2))
+            else:
+                print(format_debate_status(review))
             return 0
         if args.command == "promote":
             result = promote_swarm_artifact(

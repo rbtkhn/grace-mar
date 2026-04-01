@@ -39,6 +39,18 @@ Show the latest swarm-visible artifact:
 python3 auto-research/swarm/orchestrator.py last
 ```
 
+Run an advisory debate review for the latest swarm-visible artifact:
+
+```bash
+python3 auto-research/swarm/orchestrator.py debate latest
+```
+
+Print the full derived debate artifact:
+
+```bash
+python3 auto-research/swarm/orchestrator.py debate latest --json
+```
+
 Promote an artifact with operator review note:
 
 ```bash
@@ -50,3 +62,6 @@ python3 auto-research/swarm/orchestrator.py promote latest --review-note "Operat
 This slice intentionally excludes daemon lifecycle management. No `start` or
 `stop` command is provided here or in Telegram. Background supervision belongs
 outside the bot process.
+
+It also keeps debate advisory only. Debate may write derived review artifacts,
+but it may not stage candidates or bypass the shared promotion helper.
