@@ -17,6 +17,7 @@ Checks:
   9. recursion-gate proposal_class value valid when present
   10. Optional --strict-self-library: fail if self-library.md missing
   11. Library Domain Registry (docs/self-library-domains.json) — required fields and routable domain ids
+  12. Identity vs capability boundary — obvious SELF/Voice vs WRITE cross-bleed
 
 Human output prints an **Identity / library boundary** section first; JSON includes **identity_library_boundary**.
 
@@ -79,6 +80,21 @@ LIFECYCLE_CLASSES = frozenset(
         "boundary_reclassification",
         "snapshot_only",
     }
+)
+
+SELF_CAPABILITY_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    ("self capability self-description", re.compile(r"\bi am (?:a |an )?(?:good|strong|bad|weak) writer\b", re.IGNORECASE)),
+    ("self capability self-description", re.compile(r"\bi(?:'m| am) good at writing\b", re.IGNORECASE)),
+    ("self capability rubric language", re.compile(r"\bmy writing level\b", re.IGNORECASE)),
+    ("self capability rubric language", re.compile(r"\bskill level\b", re.IGNORECASE)),
+)
+
+WRITE_IDENTITY_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    ("write identity self-concept", re.compile(r"\bthe best thing about being me\b", re.IGNORECASE)),
+    ("write identity self-concept", re.compile(r"\bfeel most like myself\b", re.IGNORECASE)),
+    ("write personality schema", re.compile(r"^\s*self_concept:\s*", re.IGNORECASE)),
+    ("write personality schema", re.compile(r"^\s*trait:\s*", re.IGNORECASE)),
+    ("write personality prose", re.compile(r"\bpersonality\b", re.IGNORECASE)),
 )
 
 
@@ -365,6 +381,8 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
         source_paths = [
             user_dir / "self.md",
             skills_path,
+            user_dir / "skill-think.md",
+            user_dir / "skill-write.md",
             user_dir / "self-archive.md",
             user_dir / "self-library.md",
             user_dir / "intent.md",
@@ -429,6 +447,34 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
                 degraded = bundle.get("degraded_mode")
                 if not isinstance(degraded, dict) or "enabled" not in degraded:
                     errors.append(f"{bundle_path.relative_to(REPO_ROOT)} missing degraded_mode contract")
+    return errors
+
+
+def _pattern_hits(path: Path, text: str, patterns: tuple[tuple[str, re.Pattern[str]], ...]) -> list[str]:
+    hits: list[str] = []
+    if not text:
+        return hits
+    try:
+        display_path = str(path.relative_to(REPO_ROOT))
+    except ValueError:
+        display_path = str(path)
+    for line_no, line in enumerate(text.splitlines(), start=1):
+        snippet = line.strip()
+        if not snippet:
+            continue
+        for label, pattern in patterns:
+            if pattern.search(line):
+                hits.append(f"{display_path}:{line_no} {label}: {snippet[:140]}")
+    return hits
+
+
+def validate_identity_capability_boundary(user_dirs: list[Path]) -> list[str]:
+    errors: list[str] = []
+    for user_dir in user_dirs:
+        self_path = user_dir / "self.md"
+        skill_write_path = user_dir / "skill-write.md"
+        errors.extend(_pattern_hits(self_path, _safe_read(self_path), SELF_CAPABILITY_PATTERNS))
+        errors.extend(_pattern_hits(skill_write_path, _safe_read(skill_write_path), WRITE_IDENTITY_PATTERNS))
     return errors
 
 
@@ -523,9 +569,11 @@ def run_validation(
         return [msg], {
             "ix_a_violations": [],
             "self_library_missing_warnings": [],
+            "identity_capability_violations": [],
             "surface_layout_warnings": [],
             "ix_a_ok": True,
             "self_library_files_ok": True,
+            "identity_capability_ok": True,
         }
 
     all_errors: list[str] = []
@@ -560,6 +608,8 @@ def run_validation(
     all_errors.extend(validate_self_sections(user_dirs))
     all_errors.extend(validate_skills_sections(user_dirs))
     all_errors.extend(validate_derived_exports(user_dirs))
+    identity_capability = validate_identity_capability_boundary(user_dirs)
+    all_errors.extend(identity_capability)
 
     lc_errors, lc_warnings, lc_info = validate_fork_lifecycle(user_dirs, strict=strict_lifecycle)
     all_errors.extend(lc_errors)
@@ -573,9 +623,11 @@ def run_validation(
     boundary_report = {
         "ix_a_violations": ix_boundary,
         "self_library_missing_warnings": library_warnings,
+        "identity_capability_violations": identity_capability,
         "surface_layout_warnings": surface_layout_warnings,
         "ix_a_ok": len(ix_boundary) == 0,
         "self_library_files_ok": len(library_warnings) == 0,
+        "identity_capability_ok": len(identity_capability) == 0,
         "fork_lifecycle": lifecycle_report,
     }
     return all_errors, boundary_report
@@ -652,6 +704,13 @@ def main() -> int:
                 print(f"  {tag}: {w}")
         for w in boundary.get("surface_layout_warnings") or []:
             print(f"  WARN (surface layout): {w}")
+        print()
+        print("=== Identity / capability boundary (SELF/Voice vs WRITE) ===")
+        if boundary.get("identity_capability_ok"):
+            print("  SELF / Voice vs WRITE: OK (no obvious capability self-description or personality bleed).")
+        else:
+            for v in boundary.get("identity_capability_violations") or []:
+                print(f"  FAIL: {v}")
         print()
         if ok:
             print("Integrity check passed (all checks).")

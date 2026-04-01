@@ -72,6 +72,8 @@ The **Voice** is the emulation layer that speaks when queried. Its output is a *
 
 - **Skill-write is the primary shaper of the linguistic layer.** The system prompt embeds WRITE-derived content: Lexile ceiling, “how you talk” rules, and literal writing samples that define voice. So the Telegram bot and WeChat bot outputs are **a function of skill-write** (and SELF, MEMORY, retrieval). WRITE does not *equal* the Voice; the Voice is a function of the whole Record, with WRITE supplying the style and level.
 
+**Identity vs capability qualification:** `SELF` remains authoritative for **identity-facing truth** (personality, values, expressive feel, how Grace-Mar comes across). `SKILLS`, especially WRITE, remains authoritative for **capability-facing truth** (what she can reliably produce, at what level, under what constraints). So the linguistic layer may be primarily shaped by `skill-write` without turning WRITE into the owner of identity.
+
 ### 4.2 Written / HTML profile
 
 Any **written or HTML profile** that displays the companion’s identity (interests, style, writing samples, capability summary) is also a **function of the Record**. The *written presentation* (language level, tone, excerpts) is **a function of skill-write**, because WRITE provides the linguistic style and the artifacts (journal, samples) that are shown. So:
@@ -88,6 +90,12 @@ Any **written or HTML profile** that displays the companion’s identity (intere
 | HTML / written profile | Record | f(skill-write) |
 
 Skill-think adds **content and scope** (what the companion has taken in and can discuss inside the Record); approved evidence from work territories can add adjacent context. **Skill-write drives voice and written presentation** across bots and profile.
+
+When the same pattern appears in both surfaces, read it by job:
+
+- `SELF` owns the pattern as **identity / expressive style**
+- `SKILLS.WRITE` owns the pattern as **demonstrated production capability**
+- `EVIDENCE` anchors the artifact or event that justified both readings
 
 ---
 
@@ -131,6 +139,28 @@ Input (conversation, artifact, "we did X")
 - **IX-A does not bound the work layer in the same way.** Work territories may use broader model capability, tools, APIs, and external systems to help plan or execute tasks.
 - **The gate still applies.** Work outputs do not become Record truth unless they are written down, staged as needed, and approved into SELF / EVIDENCE / prompt.
 - The **WORK execution layer** implements the work layer day to day (runbooks, mirrors, sync). Optional **pattern** sync stays in **operator / tooling space** until it would change **protocol, merged Record truth, or Voice** — then it must go through the same gate (or explicit companion policy), not silent file copy.
+
+## 5b. Reference assist in WORK territories
+
+`SELF-LIBRARY` (including `CIV-MEM`) may assist **WORK** execution as a governed reference layer. This is a **lookup / grounding** function for work outputs, not a transfer of ownership into `SKILLS` or `SELF`.
+
+- **Who uses it:** The **work layer** and **WORK execution layer** may call CMC or other SELF-LIBRARY routing while planning, drafting, or synthesizing work artifacts.
+- **What it is for:** Better factual grounding, stronger analogies, richer synthesis, and clearer provenance in instrumental outputs.
+- **What it is not:** It does not make `WRITE` the owner of reference access, and it does not turn a library lookup into Record truth by itself.
+
+When work outputs involve `WRITE`, read the roles separately:
+
+- `SELF` still owns identity and Voice-facing expressive style
+- `SKILLS.WRITE` still owns demonstrated writing capability and current ceiling
+- `SELF-LIBRARY` / `CIV-MEM` supplies governed reference material
+- `EVIDENCE` anchors any approved artifact or activity that should persist
+
+Operational constraints:
+
+- Reference access is **lookup-only** unless a separate gated merge writes something into the Record.
+- Work use of `SELF-LIBRARY` does **not** automatically create `READ-*` evidence.
+- Any durable `SKILLS`, `SELF`, or `EVIDENCE` update remains a separate pipeline decision under the same gate.
+- Citations and provenance rules should be enforced by the relevant work harness or export path, not assumed to already exist everywhere in the Record pipeline.
 
 ---
 

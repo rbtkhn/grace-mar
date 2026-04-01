@@ -5,7 +5,7 @@ Version: 0.1 (Initial)
 Created: February 2026
 Status: EMPTY
 
-**Divided into three skill modules:**
+**Two Record-bound skill modules:**
 
 | Module | File | Scope |
 |--------|------|-------|
@@ -13,6 +13,8 @@ Status: EMPTY
 | **skill-write** | [skill-write.md](skill-write.md) | Production (text, journal, stories) |
 
 **WORK** (separate from SKILLS): [work-alpha-school.md](work-alpha-school.md) — school context; [work-jiang.md](work-jiang.md) — Jiang project.
+
+**Reference assist note:** WORK territories may use `SELF-LIBRARY` / `CIV-MEM` for governed lookup and grounding, but that remains WORK-layer execution help, not a capability claim by itself. Any durable SKILLS update still requires evidence and the usual gated process. See [docs/skills-modularity.md](../../docs/skills-modularity.md).
 
 ---
 

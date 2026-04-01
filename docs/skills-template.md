@@ -173,6 +173,15 @@ So **one input** (e.g. art, music, journal, conversation, work artifact) can upd
 
 **Personality boundary:** SKILLS may reveal tone, affect, follow-through, collaboration posture, or aesthetic tendency, but those are not canonical personality truth until they are staged and approved into IX-C.
 
+**Identity vs capability rule:** If a claim answers **who the companion is / how they come across**, it belongs to SELF. If it answers **what the companion can reliably do / how well / with what support**, it belongs to SKILLS. The same artifact may justify both paths, but the two surfaces should not pretend to be doing the same job.
+
+**Linguistic overlap rule:** A recurring language habit may appear in both places when:
+
+- SELF records it as expressive style or Voice-facing feel
+- WRITE records it as demonstrated production behavior or current writing range
+
+When in doubt, let EVIDENCE anchor the artifact, SELF own identity, and WRITE own capability.
+
 ---
 
 ## IV. SKILLS PHASE MODEL

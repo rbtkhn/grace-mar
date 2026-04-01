@@ -2,7 +2,7 @@
 """
 Export the grace-mar Record to a Portable Record Prompt (PRP) — a single
 compact, pasteable prompt for any LLM. Encodes voice, knowledge, personality,
-and recent activity.
+recent activity, and a compact WRITE capability bridge.
 
 The PRP is the concrete artifact for "shareable legacy"
 invariant 15) and sideload output (CONCEPTUAL-FRAMEWORK §9). Use for memorial/
@@ -173,6 +173,26 @@ def _extract_ix_c_observations(self_content: str, max_entries: int = 5) -> list[
     return [o.strip() for o in observations[-max_entries:]]
 
 
+def _extract_write_profile(content: str) -> dict[str, str]:
+    """Extract compact WRITE capability hints from skill-write.md."""
+    out: dict[str, str] = {}
+    if not content:
+        return out
+    for key in [
+        "status",
+        "dominant_mode",
+        "edge",
+        "complexity_level",
+        "style_level",
+        "expression_level",
+        "logic_level",
+    ]:
+        value = _yaml_value(content, key)
+        if value:
+            out[key] = value
+    return out
+
+
 def _extract_recent_evidence(evidence_content: str) -> dict[str, list[str]]:
     """Extract recent WRITE, ACT, CREATE summaries from EVIDENCE."""
     out: dict[str, list[str]] = {"WRITE": [], "ACT": [], "CREATE": []}
@@ -269,6 +289,39 @@ def _build_personality(personality: dict, ix_c: list[str]) -> str:
     return "\n".join(parts)
 
 
+def _build_write(write_profile: dict[str, str]) -> str:
+    """Build WRITE section for capability-facing output constraints."""
+    if not write_profile:
+        return (
+            "Use WRITE only as a capability constraint, not as self-description. "
+            "Do not talk about your writing skill level unless the user explicitly asks."
+        )
+    parts: list[str] = []
+    dominant_mode = write_profile.get("dominant_mode")
+    if dominant_mode:
+        parts.append(f"Current writing range: {dominant_mode}.")
+    levels = []
+    for label, key in [
+        ("complexity", "complexity_level"),
+        ("style", "style_level"),
+        ("expression", "expression_level"),
+        ("logic", "logic_level"),
+    ]:
+        value = write_profile.get(key)
+        if value:
+            levels.append(f"{label} {value}")
+    if levels:
+        parts.append("Current demonstrated levels: " + ", ".join(levels) + ".")
+    edge = write_profile.get("edge")
+    if edge:
+        parts.append("Main next edge: " + edge.rstrip(".") + ".")
+    parts.append(
+        "Use this section only to keep output within the documented ceiling. "
+        "Do not say things like \"I'm a good writer\" or turn capability notes into personality claims."
+    )
+    return "\n".join(parts)
+
+
 def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> str:
     """
     Build the Portable Record Prompt (PRP) from self.md and self-archive.md (EVIDENCE).
@@ -286,6 +339,7 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
         else REPO_ROOT / "users" / user_id
     )
     self_content = _read(profile_dir / "self.md")
+    skill_write_content = _read(profile_dir / "skill-write.md")
     evidence_content = _read(profile_dir / "self-archive.md") or _read(profile_dir / "self-evidence.md")
 
     if not self_content:
@@ -299,6 +353,7 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
     ix_a = _extract_ix_a(self_content)
     ix_b = _extract_ix_b(self_content)
     ix_c = _extract_ix_c_observations(self_content)
+    write_profile = _extract_write_profile(skill_write_content)
     recent = _extract_recent_evidence(evidence_content)
 
     name = name_override if name_override else identity.get("name", "Grace-Mar")
@@ -310,6 +365,10 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
         "## VOICE",
         "",
         _build_voice(linguistic, identity),
+        "",
+        "## WRITE",
+        "",
+        _build_write(write_profile),
         "",
         "## WHO I AM",
         "",
@@ -364,6 +423,7 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
         "## RULES",
         "",
         "- Only use what's above for facts about yourself. If asked about something not in your Record (and it's about you), say \"I haven't learned that yet!\"",
+        "- `VOICE` is identity-facing and `WRITE` is capability-facing. Let WRITE constrain how polished the output can be, but do not present WRITE as your self-concept.",
         "- When answering \"what have you done recently\" or similar, use only RECENT above; do not add details from world knowledge (e.g. famous features of a place).",
         "- This version has no lookup library. If they ask you to look something up (a book, video, or topic), say you don't have it — the full Grace-Mar app has a library for that.",
         "- For questions about Grace-Mar the system (not you): use GITHUB CONNECTIVITY above — search the repo.",

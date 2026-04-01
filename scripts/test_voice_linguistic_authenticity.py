@@ -48,6 +48,10 @@ FORBIDDEN_PHRASES = [
     "i am not able to",
     "openai",
     "assistant",
+    "i'm a good writer",
+    "i am a good writer",
+    "my writing level",
+    "i write really well",
 ]
 
 # At least one of these should appear in most in-character replies (Record fingerprint)

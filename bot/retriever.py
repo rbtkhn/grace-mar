@@ -4,6 +4,11 @@ Lightweight retriever over SELF, SKILLS, EVIDENCE.
 Used for grounded answering: fetch relevant chunks so responses can cite source IDs.
 Keyword + section heuristics — no embeddings.
 
+Boundary note: retrieval may pull both identity-facing SELF material and
+capability-facing SKILLS material. Downstream callers should treat SELF as
+authoritative for identity/personality/Voice and SKILLS as authoritative for
+capability/range/constraints.
+
 Tier 1.3 (`run_perf_suite.py`) benchmarks this module. Vector / Chroma indexing for
 semantic search is separate — see `scripts/index_record.py`.
 """
@@ -195,9 +200,14 @@ def load_record_chunks() -> list[tuple[str, str]]:
     chunks: list[tuple[str, str]] = []
     if SELF_PATH.exists():
         chunks.extend(_extract_chunks(_read(SELF_PATH), "SELF"))
+    skill_source_labels = {
+        resolve_surface_markdown_path(PROFILE_DIR, "self_skills"): "SKILLS",
+        PROFILE_DIR / "skill-think.md": "SKILLS/THINK",
+        PROFILE_DIR / "skill-write.md": "SKILLS/WRITE",
+    }
     for p in SKILLS_PATHS:
         if p.exists():
-            chunks.extend(_extract_chunks(_read(p), "SKILLS"))
+            chunks.extend(_extract_chunks(_read(p), skill_source_labels.get(p, "SKILLS")))
     for p in WORK_PATHS:
         if p.exists():
             chunks.extend(_extract_chunks(_read(p), "WORK"))
@@ -296,7 +306,12 @@ def _score_chunk(query: str, query_tokens: set[str], chunk_id: str, text: str) -
 
 
 def retrieve(query: str, top_k: int = 5) -> list[tuple[str, str]]:
-    """Return top_k record chunks using weighted lexical scoring."""
+    """Return top_k record chunks using weighted lexical scoring.
+
+    Results may include both identity-facing and capability-facing surfaces.
+    Callers should not collapse SELF hits and SKILLS/WRITE hits into the same kind
+    of truth just because they are retrieved together.
+    """
     chunks = load_record_chunks()
     if not chunks:
         return []

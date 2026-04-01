@@ -10,6 +10,10 @@ file suitable for OpenClaw's identity layer. Use this so the agent knows
 who it serves — identity, preferences, interests, values, personality,
 and post-seed growth (IX-A, IX-B, IX-C).
 
+This export is intentionally identity-facing. Capability truth belongs to
+SKILLS / WRITE and should be exported separately rather than folded into
+USER.md as if it were personality.
+
 Usage:
     python scripts/export_user_identity.py --user grace-mar
     python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md
@@ -60,6 +64,7 @@ def export_user_identity(user_id: str = "grace-mar") -> str:
         "# USER — Grace-Mar Record Export",
         "",
         "> Identity source for OpenClaw. Exported from grace-mar Record (self.md).",
+        "> Capability surfaces (THINK / WRITE) are intentionally omitted here; keep identity and capability separate.",
         "> Update by re-running: `python scripts/export_user_identity.py -u grace-mar -o users/grace-mar/openclaw-user.md`",
         "",
         "---",

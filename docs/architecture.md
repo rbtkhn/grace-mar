@@ -195,6 +195,19 @@ Work is now a separate layer rather than a self-skill module. It lives in:
 
 Work territories may use broader LLM capability, external tools, APIs, and planning loops than the Record allows. They can produce artifacts, plans, and candidate proposals. But they do not write Record truth directly, and they remain gated whenever they would update SELF, EVIDENCE, or prompt.
 
+### Reference assist from SELF-LIBRARY / CIV-MEM
+
+WORK territories are also the primary place where `SELF-LIBRARY` and `CIV-MEM` should be used as **governed reference assist**. In practice, the work harness may route queries through CMC or other library lookup paths to improve grounding, synthesis, and provenance for instrumental outputs.
+
+This boundary matters:
+
+- the **work layer** is the caller,
+- `SELF-LIBRARY` / `CIV-MEM` is the reference source,
+- `WRITE` remains the capability constraint for how polished and complex the output can be,
+- `SELF` remains authoritative for identity, personality, and Voice-facing style.
+
+Reference use in WORK does not by itself create Record truth, does not automatically become `READ-*` evidence, and does not introduce new gate schema. If a resulting artifact should update `SKILLS`, `SELF`, or `EVIDENCE`, that remains a separate gated pipeline step.
+
 ### Semi-Independent Executor Policy
 
 THINK and WRITE may run as semi-independent executors with differentiated behavior, but they remain non-sovereign and share one gate. Work territories may also have their own execution loops, but those loops are adjacent to the Record rather than part of the self-skill set.

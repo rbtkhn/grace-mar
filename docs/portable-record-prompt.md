@@ -1,6 +1,6 @@
 # Portable Record Prompt (PRP) — Pasteable Identity for Any LLM
 
-**Purpose:** A single compact prompt that encodes the Record's voice, knowledge, personality, and recent activity. Paste into any LLM — no server, no API.
+**Purpose:** A single compact prompt that encodes the Record's voice, knowledge, personality, recent activity, and a compact writing-capability bridge. Paste into any LLM — no server, no API.
 
 **Use cases:** Memorial/legacy fork, admissions/job link, handoff to family or descendants. See [INSTANCES-AND-RELEASE](instances-and-release.md) §8.
 
@@ -36,7 +36,10 @@ The LLM fetches the PRP from the repo and responds as Abby. No copy-paste of the
 You are [NAME], [AGE]. You respond only from what is documented below. You do not guess or invent.
 
 ## VOICE
-[Lexile ceiling. Vocabulary level. Common openers (e.g. "today I", "I like", "yesterday I"). Verbal connectors ("because" for reasoning, "and"/"then" for sequence, "and I [verb]" for actions). Sentence style (run-on with "and"/"because", short and simple). Tone. Example quote from actual writing. Don't use phonetic spelling in chat. Optional: "that's a good question!" for thoughtful questions; "what do you think?" for reflection.]
+[Identity-facing expressive layer. Lexile ceiling. Vocabulary level. Common openers (e.g. "today I", "I like", "yesterday I"). Verbal connectors ("because" for reasoning, "and"/"then" for sequence, "and I [verb]" for actions). Sentence style (run-on with "and"/"because", short and simple). Tone. Example quote from actual writing. Don't use phonetic spelling in chat. Optional: "that's a good question!" for thoughtful questions; "what do you think?" for reflection.]
+
+## WRITE
+[Capability-facing bridge from SKILLS.WRITE. State current writing range, dominant mode, and main edge/constraint. This section constrains feasible quality; it should not read like self-description or personality prose.]
 
 ## WHO I AM
 [Identity: languages, place, favorites, activities, critical facts.]
@@ -204,7 +207,9 @@ This is the connectivity vector: the PRP stays lightweight; the canonical source
 
 ## Design Notes (Research-Derived)
 
-**Core facts only (Turchin sideloading):** The PRP encodes **core facts** — high-signal, high-use content (identity, IX-A/B/C highlights, recent evidence). Full EVIDENCE history and raw artifacts stay out. This three-level hierarchy (core in prompt, long-term in Record, historical for extraction) improves fidelity.
+**Core facts only (Turchin sideloading):** The PRP encodes **core facts** — high-signal, high-use content (identity, IX-A/B/C highlights, recent evidence, and a compact capability bridge from WRITE). Full EVIDENCE history and raw artifacts stay out. This three-level hierarchy (core in prompt, long-term in Record, historical for extraction) improves fidelity.
+
+**Identity vs capability packaging:** `VOICE` should remain identity-facing. `WRITE` should remain capability-facing. The PRP may carry both, but it should not hide skill ceilings inside personality prose or present capability notes as if they were self-concept.
 
 **Structure → consistency (PersonaGym):** Fixed section order (VOICE, WHO I AM, KNOWLEDGE, etc.) and explicit rules improve persona consistency. The menu (A=recent doings, B=learnings, C=curiosity/personality, D=free chat, E=checkpoint) maps to Record sections; keep this structure.
 

@@ -2,8 +2,8 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-28T17:37:43.119587",
-  "checksum": "b06d5164043610b44c95c0ceb808deee12919be05a1175c1d74cdfb07e97ecb0",
+  "generated_at": "2026-03-31T22:18:37.425712",
+  "checksum": "2dfa144f2ffdc1d40ddf3c134732bb7c45490a210c78c90ecff4155b84e64cc9",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
     "adjunct_runtime": "Assistive runtime alongside the canonical repo.",
@@ -54,11 +54,12 @@
       "canonical": false,
       "surfaces": [
         "self-memory.md",
+        "self-history.md",
         "session-transcript.md",
         "session-log tail",
         "warmup digest"
       ],
-      "note": "Continuity aids only. Do not treat as Record truth."
+      "note": "Continuity aids only. Do not treat as Record truth. self-history is a derived dual log (WORK aggregate + approved companion thread), not canonical identity."
     },
     "audit": {
       "canonical": false,
@@ -120,7 +121,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-28T17:37:43.116962",
+    "generated_at": "2026-03-31T22:18:37.423365",
     "source": "users/grace-mar/intent.md",
     "goals": {
       "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",

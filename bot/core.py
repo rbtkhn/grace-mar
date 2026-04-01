@@ -10,6 +10,8 @@ Design principle: The integration moment is where meaning enters. The user
 gates; the system stages. AI extends humanity; it does not replace it.
 The Record is the boundary where interior states are written and read.
 Merge, not replace: the user's documented self extends; the Voice speaks it.
+Runtime boundary: SELF is authoritative for identity and expressive Voice;
+SKILLS is authoritative for capability and output ceilings.
 """
 
 import base64
@@ -2062,6 +2064,7 @@ GROUNDED_PROMPT_APPENDIX = """
 ## GROUNDED MODE
 Answer ONLY from the relevant record excerpts below. If the excerpts do not contain enough information to answer, say "I don't know that yet!" and do NOT guess.
 When you use information from the record, cite the source ID at the end of the relevant sentence, e.g. [LEARN-0001] or [WRITE-0003]. At least one citation or explicit abstention is required.
+If excerpts include both SELF and SKILLS/WRITE material, treat them differently: SELF owns identity, personality, and Voice-facing style; SKILLS/WRITE owns demonstrated writing capability, range, and constraints. Do not turn capability notes into self-description.
 """
 
 
@@ -2070,7 +2073,12 @@ def run_grounded_response(
     channel_key: str = "miniapp",
     history: list[dict] | None = None,
 ) -> str:
-    """Response with retrieval: cite source IDs or abstain. Used by Mini App grounded mode."""
+    """Response with retrieval: cite source IDs or abstain.
+
+    Used by Mini App grounded mode. Retrieval may surface both SELF and
+    SKILLS/WRITE excerpts; identity should stay SELF-owned even when WRITE
+    constrains the answer.
+    """
     if not _check_rate_limit(channel_key, "main", tokens=1):
         return "i'm a little tired right now. can we talk more in a bit?"
     chunks = _retrieve(question, top_k=5)

@@ -27,12 +27,27 @@ def _minimal_profile(tmp_path: Path) -> Path:
     for n in (
         "self-skills.md",
         "skill-think.md",
-        "skill-write.md",
         "work-alpha-school.md",
         "work-jiang.md",
         "self-archive.md",
     ):
         (prof / n).write_text("", encoding="utf-8")
+    (prof / "skill-write.md").write_text(
+        """
+## WRITE Container
+
+- id: WRITE-0001
+status: ACTIVE
+dominant_mode: "Personal narrative"
+complexity_level: 2
+style_level: 2
+expression_level: 2
+logic_level: 2
+edge: "Longer stories"
+""".strip()
+        + "\n",
+        encoding="utf-8",
+    )
     return prof
 
 
@@ -48,6 +63,19 @@ def test_grace_mar_profile_dir_retrieve(tmp_path, monkeypatch):
     assert retriever.PROFILE_DIR.resolve() == prof.resolve()
     out = retriever.retrieve("cats fuzzy", top_k=2)
     assert out and "LEARN-0001" in out[0][0]
+
+
+def test_retriever_labels_skill_write_chunks(tmp_path, monkeypatch):
+    prof = _minimal_profile(tmp_path)
+    monkeypatch.setenv("GRACE_MAR_PROFILE_DIR", str(prof))
+    monkeypatch.setenv("GRACE_MAR_USER_ID", "grace-mar")
+    monkeypatch.setenv("GRACE_MAR_RETRIEVER_CACHE", "0")
+
+    import bot.retriever as retriever
+
+    importlib.reload(retriever)
+    chunks = retriever.load_record_chunks()
+    assert any("SKILLS/WRITE" in text for _, text in chunks)
 
 
 @patch("openai.OpenAI")
@@ -89,3 +117,5 @@ def test_export_prp_respects_profile_dir(tmp_path, monkeypatch):
 
     text = export_prp(user_id="grace-mar")
     assert "cats" in text.lower() or "fuzzy" in text.lower()
+    assert "## WRITE" in text
+    assert "Current writing range" in text

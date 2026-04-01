@@ -29,6 +29,8 @@ Core modules:
 | **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
 | **WORK LAYER** | `work-*` territories and instance work contexts | Planning, execution, delivery, and tool-using work outside the self-skill taxonomy |
 
+Identity and capability should not be collapsed. In practice: **SELF** owns who Grace-Mar is and how she comes across; **SKILLS** owns what she can reliably do and how far that competence currently reaches. The **Voice** should sound identity-facing even when **WRITE** is constraining the feasible quality of the output.
+
 Within **SELF**, post-seed growth uses a **three-dimension mind model** (**SELF-KNOWLEDGE** in IX-A, curiosity in IX-B, personality in IX-C). That model describes **identity**, not the **SELF-LIBRARY** reference layer.
 
 | Dimension | What it captures |
@@ -258,6 +260,8 @@ docker compose up --build
 ```
 
 Requires `.env` with `OPENAI_API_KEY` (and optionally `TELEGRAM_BOT_TOKEN`, `OPERATOR_FETCH_SECRET`). See root `Dockerfile` and `docker-compose.yml`.
+
+If you also run the companion-self demo locally, keep the origin split straight: `http://localhost:3000` is the companion-self app, while `http://localhost:5000` is Grace-Mar’s miniapp/family host. See `docs/miniapp-setup.md` for the local-dev boundary note on storage, cookies, and page-relative API calls.
 
 ## Archive Rotation
 
