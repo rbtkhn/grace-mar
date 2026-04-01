@@ -2,7 +2,7 @@
 
 > **Purpose:** **Face-to-face** visits: Xavier carries a **printed pamphlet** and asks **exactly these five questions** out loud. **Relationship and trust first** — light signal, not a formal survey.  
 > **Territory:** [work-xavier](README.md) — WORK artifact.  
-> **Pair with:** [brewmind-business-plan.md](brewmind-business-plan.md).
+> **Pair with:** [brewmind-business-plan.md](brewmind-business-plan.md) · [brewmind-visual-style.md](brewmind-visual-style.md) (pamphlet / print).
 
 ---
 

@@ -21,3 +21,7 @@
 ### 2026-04-01 (partner survey)
 
 - Added [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md): restaurant/café field script — **five verbal questions** + printed pamphlet, relationship-first (business companion + BrewMind network). Indexed in [INDEX.md](INDEX.md).
+
+### 2026-04-01 (BrewMind visual style)
+
+- Added [brewmind-visual-style.md](brewmind-visual-style.md): graphic design reference (forest green + gold, serif/sans, glass card, CTAs, print/pamphlet notes). Linked from [brewmind-business-plan.md](brewmind-business-plan.md); indexed in [INDEX.md](INDEX.md).

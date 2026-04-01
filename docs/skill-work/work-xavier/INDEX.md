@@ -39,6 +39,7 @@
 | [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md) | Week 2 tracking sheet |
 | [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md) | Operator rubric to evaluate Xavier vs the content plans |
 | [brewmind-business-plan.md](brewmind-business-plan.md) | BrewMind WORK draft: Cebu pilot, partner-network-first, ~$10k seed (see public [site](https://xavier-x01.github.io/brew_mind/)) |
+| [brewmind-visual-style.md](brewmind-visual-style.md) | BrewMind visual style — colors, type, UI patterns, print notes (align with site hero) |
 | [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md) | F&B field: **5 verbal questions** + pamphlet; relationship-first (companion + BrewMind) |
 | **Her instance (external repo)** | Seed survey, `users/xavier/`, gate — **not** paths inside grace-mar; create from [companion-self](https://github.com/rbtkhn/companion-self) |
 | **Business intake** [../work-business/xavier/README.md](../work-business/xavier/README.md) | WORK-only starter pack in grace-mar |

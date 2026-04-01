@@ -2,7 +2,7 @@
 
 > **Territory:** [work-xavier](README.md) — operator/advisor artifact in grace-mar. **Not** Xavier’s Record; not legal or tax advice. Replace estimates with local quotes before commitments.
 
-**Related surfaces:** Public landing [BrewMind Café (GitHub Pages)](https://xavier-x01.github.io/brew_mind/) · AI Learning Plan (operator `.docx`, B2B / institutional tiers) · [work-business/xavier](../work-business/xavier/README.md) for future source index / objectives files.
+**Related surfaces:** Public landing [BrewMind Café (GitHub Pages)](https://xavier-x01.github.io/brew_mind/) · [brewmind-visual-style.md](brewmind-visual-style.md) (design consistency) · AI Learning Plan (operator `.docx`, B2B / institutional tiers) · [work-business/xavier](../work-business/xavier/README.md) for future source index / objectives files.
 
 ---
 
