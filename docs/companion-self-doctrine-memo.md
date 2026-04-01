@@ -133,6 +133,21 @@ Grace-Mar is the first instance: a live private tool, a proving ground, and a wo
 
 Companion Self is the upstream template and product frame: the reusable architecture that can be instantiated for other companions.
 
+### Instance first, template as a gift
+
+The **priority** is the live instance: Grace-Mar exists **first** to meet **real companion and operator needs**—a durable spine for one developing self—not as a marketing shell for the template.
+
+**Companion Self** (`companion-self`), as a reusable repository and framing, is **generous sharing**: the architecture is offered **without cost** so others can fork, inspect, and run their own governed instance. The template is not secondary in value; it is **downstream in motivation**—it is what becomes worth giving away **after** the instance proves what had to exist anyway.
+
+### Success, private and public
+
+**Success** can be **both** of these at once, and they do not compete:
+
+- **Private depth** — the Record and workflows actually carry load for the companion and household; the gate and Voice earn daily trust.
+- **Public legibility** — the pattern is **observed** in the world: adoption, imitation, or cultural default around companion-owned identity and human merge authority.
+
+Neither kind requires the other, but both are compatible. **Wild success** may show up in culture as well as at home. That is **not** the same as designing for attention metrics or replication count; the north-star objectives in [long-term-objective.md](long-term-objective.md) (education access, sovereignty, knowledge boundary) remain the permanent rules.
+
 The intended workflow is:
 
 1. develop and prove structural ideas in Grace-Mar

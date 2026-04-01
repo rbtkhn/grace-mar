@@ -57,6 +57,8 @@ Assistants, scripts, and operators who edit the repo are **tooling around** this
 - **Operator** — The person (or people) who run technical workflow: Cursor, scripts, staging candidates, repository hygiene. The companion and the operator **can be the same person** or **different people** in a given setup.
 - **Grace-Mar** — The **name of this system and instance** (this product/repo pattern), not a substitute for the companion.
 
+**Instance vs template:** This repository is the **Grace-Mar** instance—built for **real use first**. The **companion-self** name names the **reusable template** shared freely so others can run their own fork. Success can be **deep private use** and **publicly visible adoption**; neither replaces the other. Full framing: [companion-self-doctrine-memo.md](companion-self-doctrine-memo.md) (section *Grace-Mar and the template*).
+
 ---
 
 ## Why changes wait for approval
