@@ -69,6 +69,21 @@ def score_metrics_health(metrics_json: dict[str, Any]) -> float:
     return max(0.0, min(score, 1.0))
 
 
+def score_maintenance_readiness(contradiction_digest: dict[str, Any]) -> float:
+    reviewable = contradiction_digest.get("reviewable_count")
+    relation_counts = contradiction_digest.get("relation_counts") or {}
+    if not isinstance(reviewable, int):
+        return 1.0
+    contradictions = int(relation_counts.get("contradiction") or 0)
+    duplicates = int(relation_counts.get("duplicate") or 0)
+    refinements = int(relation_counts.get("refinement") or 0)
+    penalty = (0.30 * contradictions) + (0.15 * duplicates) + (0.08 * refinements)
+    if reviewable <= 0:
+        return 1.0
+    scaled = penalty / max(float(reviewable), 3.0)
+    return max(0.0, min(1.0 - scaled, 1.0))
+
+
 def score_source_proposal_alignment(candidate: dict[str, Any]) -> dict[str, float]:
     source_text = " ".join(str(value) for value in (candidate.get("source_exchange") or {}).values())
     proposal_text = " ".join(
@@ -182,16 +197,19 @@ def build_score_bundle(
     governance_ok: bool,
     metrics_json: dict[str, Any],
     proposal_quality: dict[str, float],
+    contradiction_digest: dict[str, Any] | None = None,
     uniqueness: dict[str, float] | None = None,
     growth_density: dict[str, float] | None = None,
     baseline_scalar: float | None = None,
 ) -> dict[str, Any]:
     integrity_ok = bool(integrity_json.get("ok"))
     metrics_health = score_metrics_health(metrics_json)
+    maintenance_readiness = score_maintenance_readiness(contradiction_digest or {})
 
     component_values: dict[str, tuple[float, float]] = {
-        "proposal_quality": (proposal_quality["quality"], 0.65),
-        "metrics_health": (metrics_health, 0.25),
+        "proposal_quality": (proposal_quality["quality"], 0.60),
+        "metrics_health": (metrics_health, 0.20),
+        "maintenance_readiness": (maintenance_readiness, 0.10),
     }
     if uniqueness and "composite_uniqueness" in uniqueness:
         component_values["uniqueness_proxy"] = (
@@ -226,9 +244,11 @@ def build_score_bundle(
         "components": {
             "proposal_quality": round(proposal_quality["quality"], 4),
             "metrics_health": round(metrics_health, 4),
+            "maintenance_readiness": round(maintenance_readiness, 4),
             "proposal_quality_detail": proposal_quality,
         },
         "optional_metrics": {
+            "contradiction_digest": contradiction_digest or {},
             "uniqueness": uniqueness or {},
             "growth_density": growth_density or {},
         },

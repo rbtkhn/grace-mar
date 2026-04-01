@@ -15,10 +15,14 @@ from typing import Any
 
 SELF_PROPOSALS_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SELF_PROPOSALS_DIR.parents[1]
+SCRIPTS_DIR = REPO_ROOT / "scripts"
 
-if str(SELF_PROPOSALS_DIR) not in sys.path:
-    sys.path.insert(0, str(SELF_PROPOSALS_DIR))
+for path in (SELF_PROPOSALS_DIR, SCRIPTS_DIR):
+    path_str = str(path)
+    if path_str not in sys.path:
+        sys.path.insert(0, path_str)
 
+from contradiction_digest import generate_contradiction_digest
 from proposal_io import load_train_payload, validate_grounding, validate_payload
 from sandbox_merge import materialize_sandbox
 from score_adapter import (
@@ -207,6 +211,11 @@ def run_prepare(
             ],
             REPO_ROOT,
         )
+        contradiction_digest = generate_contradiction_digest(
+            user_id=user_id,
+            users_dir=sandbox_root / "users",
+            write_path=None,
+        )
 
         uniqueness, growth_density = _maybe_run_optional_measures(user_id, allow_live_benchmarks)
         from score_adapter import score_proposal_quality
@@ -217,6 +226,7 @@ def run_prepare(
             governance_ok=(governance_code == 0),
             metrics_json=metrics_json,
             proposal_quality=proposal_quality,
+            contradiction_digest=contradiction_digest,
             uniqueness=uniqueness,
             growth_density=growth_density,
             baseline_scalar=baseline_scalar,
@@ -227,6 +237,7 @@ def run_prepare(
                 "sandbox": sandbox,
                 "integrity_result": integrity_json,
                 "metrics_result": metrics_json,
+                "contradiction_digest": contradiction_digest,
                 "governance_result": {
                     "ok": governance_code == 0,
                     "returncode": governance_code,

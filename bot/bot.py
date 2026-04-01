@@ -96,6 +96,19 @@ OPERATOR_STALE_DAYS = int(os.getenv("GRACE_MAR_OPERATOR_STALE_DAYS", "7"))
 OPERATOR_CONSOLE_URL = (os.getenv("GRACE_MAR_OPERATOR_CONSOLE_URL") or "").strip().rstrip("/")
 
 
+def _load_swarm_orchestrator():
+    path = Path(__file__).resolve().parent.parent / "auto-research" / "swarm" / "orchestrator.py"
+    spec = importlib.util.spec_from_file_location("grace_mar_swarm_orchestrator", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"unable to load swarm orchestrator from {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+SWARM_ORCHESTRATOR = _load_swarm_orchestrator()
+
+
 def _operator_merge_hint() -> str:
     """Short hint for merging approved candidates (browser or CLI)."""
     if OPERATOR_CONSOLE_URL:
@@ -793,6 +806,80 @@ async def status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     await update.message.reply_text(f"Operator status:\n{_format_health_summary(summary)}")
 
 
+async def swarm_status_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only swarm read-model summary."""
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    try:
+        state = await _run_blocking(SWARM_ORCHESTRATOR.read_swarm_state, user_id=USER_ID, refresh=True)
+        await update.message.reply_text(SWARM_ORCHESTRATOR.format_swarm_status(state))
+    except Exception:
+        logger.exception("Swarm status command failed")
+        await update.message.reply_text("couldn't read swarm status right now")
+
+
+async def swarm_last_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only summary of the latest swarm-visible artifact."""
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    try:
+        artifact = await _run_blocking(SWARM_ORCHESTRATOR.get_latest_artifact)
+        await update.message.reply_text(SWARM_ORCHESTRATOR.format_last_artifact(artifact))
+    except Exception:
+        logger.exception("Swarm last command failed")
+        await update.message.reply_text("couldn't read the latest swarm artifact right now")
+
+
+async def swarm_promote_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only explicit promotion from accepted artifact to recursion-gate."""
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    args = context.args or []
+    if len(args) < 2:
+        await update.message.reply_text(
+            "Usage: /swarm_promote <artifact|latest> <review note>\n"
+            "Example: /swarm_promote latest Operator reviewed grounding and wants gate visibility."
+        )
+        return
+    artifact_ref = args[0]
+    review_note = " ".join(args[1:]).strip()
+    if not review_note:
+        await update.message.reply_text("review note is required.")
+        return
+    try:
+        result = await _run_blocking(
+            SWARM_ORCHESTRATOR.promote_swarm_artifact,
+            artifact_ref,
+            review_note=review_note,
+            user_id=USER_ID,
+        )
+        await update.message.reply_text(
+            f"✅ {result['candidate_id']} staged from {result['artifact_relpath']}.\n"
+            "Review it with /review."
+        )
+    except ValueError as exc:
+        await update.message.reply_text(str(exc))
+    except Exception:
+        logger.exception("Swarm promote command failed")
+        await update.message.reply_text("couldn't promote that swarm artifact right now")
+
+
+async def swarm_dream_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Operator-only bounded autoDream maintenance pass."""
+    if OPERATOR_CHAT_ID and not _is_operator_chat(update):
+        await update.message.reply_text("this command is operator-only.")
+        return
+    try:
+        summary = await _run_blocking(SWARM_ORCHESTRATOR.run_auto_dream, user_id=USER_ID)
+        await update.message.reply_text(SWARM_ORCHESTRATOR.format_auto_dream_status(summary))
+    except Exception:
+        logger.exception("Swarm dream command failed")
+        await update.message.reply_text("couldn't run autoDream right now")
+
+
 async def intent_audit_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Operator-only summary of intent conflicts and drift signals."""
     if OPERATOR_CHAT_ID and not _is_operator_chat(update):
@@ -1261,6 +1348,10 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("prp", prp))
     app.add_handler(CommandHandler("profile", profile_cmd))
     app.add_handler(CommandHandler("status", status_command))
+    app.add_handler(CommandHandler("swarm_status", swarm_status_command))
+    app.add_handler(CommandHandler("swarm_last", swarm_last_command))
+    app.add_handler(CommandHandler("swarm_promote", swarm_promote_command))
+    app.add_handler(CommandHandler("swarm_dream", swarm_dream_command))
     app.add_handler(CommandHandler("intent_audit", intent_audit_command))
     app.add_handler(CommandHandler("intent_review", intent_review_command))
     app.add_handler(CommandHandler("intent_debate", intent_debate_command))
