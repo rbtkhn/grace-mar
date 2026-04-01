@@ -20,4 +20,4 @@
 
 ### 2026-04-01 (partner survey)
 
-- Added [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md): restaurant/café interest survey (companion-self–style business assistant + BrewMind network pilot). Indexed in [INDEX.md](INDEX.md).
+- Added [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md): restaurant/café field script — **five verbal questions** + printed pamphlet, relationship-first (business companion + BrewMind network). Indexed in [INDEX.md](INDEX.md).
