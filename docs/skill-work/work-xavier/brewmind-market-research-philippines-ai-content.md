@@ -72,8 +72,23 @@
 
 ---
 
+## 8. Operator supplement — work-dev sources (repo)
+
+Philippine internet **AI depth** (builder strategy, weekly news, frontier curation) is **sparse** relative to English-language global feeds. For **lesson ideas**, **workshop tone**, and **trust vocabulary**, use the operator’s **work-dev authorized sources** — maintained in-repo, not scraped from PH social alone.
+
+| Resource | Role |
+|----------|------|
+| [work-dev-sources.md](../work-dev/work-dev-sources.md) | **Canonical channel list** (YouTube + Substack); add rows as the operator tracks new feeds |
+| [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) § *Operator depth — work-dev sources* | **BrewMind bundle copy** — same sources with suggested use per channel + Nate digest link |
+| [external-signals.md](../work-dev/external-signals.md) | **Theme map** — enterprise AI, agents, economics, silent-failure → BrewMind ethics / human-in-the-loop positioning |
+
+**Guardrail:** Translate and simplify for local audiences; do not treat podcast or Substack as **regulatory fact**.
+
+---
+
 ## Revision log
 
 | Date | Note |
 |------|------|
 | 2026-04-01 | Initial bundle from desk research + cited public sources. |
+| 2026-04-01 | §8: work-dev sources as operator supplement when PH web is thin; pointer to onboarding bundle §. |

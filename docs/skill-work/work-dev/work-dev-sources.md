@@ -19,3 +19,5 @@ Add rows above or below as you like.
 Outputs `CHANNEL-VIDEO-INDEX.md` and `index.json`. Use `--enrich-metadata` so dates are filled (flat listing alone often omits them).
 
 **Parallel (work-politics):** [../work-politics/work-politics-sources.md](../work-politics/work-politics-sources.md)
+
+**BrewMind (Philippines pilot):** These feeds are also bundled for **micro-lesson / curriculum depth** in [../work-xavier/brewmind-philippines-onboarding-guide.md](../work-xavier/brewmind-philippines-onboarding-guide.md) § *Operator depth — work-dev sources* — PH-facing AI content online is thin; **canonical list stays this file**.

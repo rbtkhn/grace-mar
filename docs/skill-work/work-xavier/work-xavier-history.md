@@ -33,3 +33,7 @@
 ### 2026-04-01 (BrewMind PH onboarding bundle)
 
 - Added [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md): **bundle hub** for Philippines onboarding — reading order, phase checklists, map of all BrewMind WORK docs; linked from [README.md](README.md), [brewmind-business-plan.md](brewmind-business-plan.md), [INDEX.md](INDEX.md).
+
+### 2026-04-01 (BrewMind bundle + work-dev sources)
+
+- [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md): embedded **work-dev** authorized sources (Nate B Jones, Diamandis, Innermost Loop) + [external-signals.md](../work-dev/external-signals.md) + youtube-indexes / external-tech-scan pointers; Phase 3 lesson-hook checklist. [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md): new §8 supplement. [work-dev-sources.md](../work-dev/work-dev-sources.md): backlink to BrewMind bundle (canonical list unchanged).
