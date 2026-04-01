@@ -17,3 +17,7 @@
 ### 2026-04-01 (later)
 
 - Updated [brewmind-business-plan.md](brewmind-business-plan.md): §9 tables comparing ~$10k allocation (network vs owned micro-café) and short “how spend differs” note.
+
+### 2026-04-01 (partner survey)
+
+- Added [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md): restaurant/café interest survey (companion-self–style business assistant + BrewMind network pilot). Indexed in [INDEX.md](INDEX.md).
