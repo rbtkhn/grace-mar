@@ -51,6 +51,12 @@ Run the bounded maintenance pass:
 python3 auto-research/swarm/orchestrator.py dream
 ```
 
+For the stricter maintenance variant:
+
+```bash
+python3 auto-research/swarm/orchestrator.py dream --strict
+```
+
 Equivalent direct script:
 
 ```bash
@@ -65,6 +71,8 @@ The ritual should:
 4. refresh the derived contradiction digest
 5. prepare governed artifact drafts if needed
 6. emit one maintenance summary/event
+
+`dream --strict` is the same ritual in a sharper maintenance posture: stricter integrity parity, stricter contradiction classification, clearer failure states, and fail-fast closeout when checks do not pass. It does not change companion-facing tone, canonical memory surfaces, or merge authority.
 
 This is a maintenance pass, not a merge pass.
 
@@ -112,6 +120,7 @@ Tonight’s pass surfaced one contradiction worth governed review tomorrow; noth
 ## Guardrails
 
 - Do not create a new canonical memory surface.
+- Do not treat strict mode as a global prompt override.
 - Do not bypass `recursion-gate.md`.
 - Do not directly rewrite `self.md` or `self-archive.md`.
 - Do not let `dream` become an autonomous merge agent.

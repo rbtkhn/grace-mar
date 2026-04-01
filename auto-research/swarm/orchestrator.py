@@ -229,12 +229,14 @@ def run_auto_dream(
     *,
     user_id: str = DEFAULT_USER,
     dry_run: bool = False,
+    strict_mode: bool = False,
 ) -> dict[str, Any]:
     return _run_auto_dream_job(
         user_id=user_id,
         apply=not dry_run,
         emit_event=not dry_run,
         write_artifacts=not dry_run,
+        strict_mode=strict_mode,
     )
 
 
@@ -265,6 +267,7 @@ def main() -> int:
     sub.add_parser("last", help="Show the latest accepted artifact visible to the swarm bridge")
     dream = sub.add_parser("dream", help="Run bounded autoDream maintenance and print a summary")
     dream.add_argument("--dry-run", action="store_true", help="Inspect maintenance output without writing files")
+    dream.add_argument("--strict", action="store_true", help="Use strict maintenance semantics")
     debate = sub.add_parser("debate", help="Run advisory debate review over an accepted artifact")
     debate.add_argument("artifact", nargs="?", default="latest", help="Artifact path, filename, or 'latest'")
     debate.add_argument("--json", action="store_true", help="Emit debate review as JSON")
@@ -283,7 +286,7 @@ def main() -> int:
             print(format_last_artifact(get_latest_artifact()))
             return 0
         if args.command == "dream":
-            print(format_auto_dream_status(run_auto_dream(user_id=args.user, dry_run=args.dry_run)))
+            print(format_auto_dream_status(run_auto_dream(user_id=args.user, dry_run=args.dry_run, strict_mode=args.strict)))
             return 0
         if args.command == "debate":
             review = run_debate_review(args.artifact, user_id=args.user, write=True)

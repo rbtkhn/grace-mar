@@ -69,7 +69,7 @@ def score_metrics_health(metrics_json: dict[str, Any]) -> float:
     return max(0.0, min(score, 1.0))
 
 
-def score_maintenance_readiness(contradiction_digest: dict[str, Any]) -> float:
+def score_maintenance_readiness(contradiction_digest: dict[str, Any], *, strict_mode: bool = False) -> float:
     reviewable = contradiction_digest.get("reviewable_count")
     relation_counts = contradiction_digest.get("relation_counts") or {}
     if not isinstance(reviewable, int):
@@ -77,7 +77,10 @@ def score_maintenance_readiness(contradiction_digest: dict[str, Any]) -> float:
     contradictions = int(relation_counts.get("contradiction") or 0)
     duplicates = int(relation_counts.get("duplicate") or 0)
     refinements = int(relation_counts.get("refinement") or 0)
-    penalty = (0.30 * contradictions) + (0.15 * duplicates) + (0.08 * refinements)
+    if strict_mode:
+        penalty = (0.45 * contradictions) + (0.22 * duplicates) + (0.12 * refinements)
+    else:
+        penalty = (0.30 * contradictions) + (0.15 * duplicates) + (0.08 * refinements)
     if reviewable <= 0:
         return 1.0
     scaled = penalty / max(float(reviewable), 3.0)
@@ -201,10 +204,12 @@ def build_score_bundle(
     uniqueness: dict[str, float] | None = None,
     growth_density: dict[str, float] | None = None,
     baseline_scalar: float | None = None,
+    strict_maintenance: bool = False,
 ) -> dict[str, Any]:
     integrity_ok = bool(integrity_json.get("ok"))
     metrics_health = score_metrics_health(metrics_json)
-    maintenance_readiness = score_maintenance_readiness(contradiction_digest or {})
+    maintenance_readiness = score_maintenance_readiness(contradiction_digest or {}, strict_mode=strict_maintenance)
+    maintenance_gate_ok = (not strict_maintenance) or maintenance_readiness >= 0.75
 
     component_values: dict[str, tuple[float, float]] = {
         "proposal_quality": (proposal_quality["quality"], 0.60),
@@ -223,7 +228,7 @@ def build_score_bundle(
             growth_score = min(max((float(evidence_pct) / 100.0) * 0.7 + float(diversity) * 0.3, 0.0), 1.0)
             component_values["growth_density_proxy"] = (growth_score, 0.05)
 
-    if not integrity_ok or not governance_ok:
+    if not integrity_ok or not governance_ok or not maintenance_gate_ok:
         scalar = 0.0
     else:
         weight_total = sum(weight for _, weight in component_values.values())
@@ -231,7 +236,7 @@ def build_score_bundle(
 
     delta = None if baseline_scalar is None else round(scalar - baseline_scalar, 4)
     return {
-        "ok": integrity_ok and governance_ok,
+        "ok": integrity_ok and governance_ok and maintenance_gate_ok,
         "scalar": round(float(scalar), 4),
         "comparison": {
             "baseline_scalar": baseline_scalar,
@@ -240,11 +245,13 @@ def build_score_bundle(
         "hard_gates": {
             "integrity_ok": integrity_ok,
             "governance_ok": governance_ok,
+            "maintenance_ready": maintenance_gate_ok,
         },
         "components": {
             "proposal_quality": round(proposal_quality["quality"], 4),
             "metrics_health": round(metrics_health, 4),
             "maintenance_readiness": round(maintenance_readiness, 4),
+            "strict_maintenance": strict_maintenance,
             "proposal_quality_detail": proposal_quality,
         },
         "optional_metrics": {

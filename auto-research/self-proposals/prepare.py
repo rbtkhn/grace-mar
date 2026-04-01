@@ -148,6 +148,7 @@ def run_prepare(
     baseline_path: Path | None = None,
     allow_live_benchmarks: bool = False,
     strict_grounding: bool = True,
+    strict_maintenance: bool = False,
 ) -> dict[str, Any]:
     generated_at = datetime.now(timezone.utc).isoformat()
     proposal = load_train_payload(TRAIN_PATH)
@@ -215,6 +216,7 @@ def run_prepare(
             user_id=user_id,
             users_dir=sandbox_root / "users",
             write_path=None,
+            strict_mode=strict_maintenance,
         )
 
         uniqueness, growth_density = _maybe_run_optional_measures(user_id, allow_live_benchmarks)
@@ -230,6 +232,7 @@ def run_prepare(
             uniqueness=uniqueness,
             growth_density=growth_density,
             baseline_scalar=baseline_scalar,
+            strict_maintenance=strict_maintenance,
         )
 
         result.update(
@@ -278,6 +281,11 @@ def main() -> int:
         help="Disable strict grounding so scaffold examples can still be scored locally",
     )
     parser.add_argument(
+        "--strict-maintenance",
+        action="store_true",
+        help="Use stricter deterministic contradiction signals in sandbox scoring",
+    )
+    parser.add_argument(
         "--write-baseline",
         type=Path,
         default=None,
@@ -291,6 +299,7 @@ def main() -> int:
         baseline_path=args.baseline,
         allow_live_benchmarks=args.allow_live_benchmarks,
         strict_grounding=(args.strict_grounding and not args.allow_scaffold_grounding),
+        strict_maintenance=args.strict_maintenance,
     )
     LAST_SCORE_PATH.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     candidate_block = result.get("sandbox", {}).get("candidate_block")

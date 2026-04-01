@@ -262,7 +262,12 @@ def _overlap_summary(row: dict[str, Any], self_text: str) -> dict[str, Any]:
     }
 
 
-def _classify_relation(row: dict[str, Any], self_text: str) -> tuple[str, list[str], list[str], list[dict[str, Any]], dict[str, Any]]:
+def _classify_relation(
+    row: dict[str, Any],
+    self_text: str,
+    *,
+    strict_mode: bool = False,
+) -> tuple[str, list[str], list[str], list[dict[str, Any]], dict[str, Any]]:
     duplicate_hints = _duplicate_hints(row, self_text)
     personality_conflicts = _personality_conflicts(row, self_text)
     overlap = _overlap_summary(row, self_text)
@@ -280,7 +285,15 @@ def _classify_relation(row: dict[str, Any], self_text: str) -> tuple[str, list[s
             reasons.append(f"{conflict['existing_hint']} vs {conflict['new_hint']}")
         return "contradiction", reasons[:4], duplicate_hints, personality_conflicts, overlap
 
-    if overlap["count"] >= 3 and overlap["ratio"] >= 0.3:
+    overlap_count = overlap["count"]
+    overlap_ratio = overlap["ratio"]
+    if strict_mode and overlap_count >= 4 and overlap_ratio >= 0.35:
+        reasons.append("strict mode escalated dense overlap to contradiction-level review")
+        if overlap["keywords"]:
+            reasons.append("shared keywords: " + ", ".join(overlap["keywords"][:5]))
+        return "contradiction", reasons[:4], duplicate_hints, personality_conflicts, overlap
+
+    if overlap_count >= 3 and overlap_ratio >= (0.2 if strict_mode else 0.3):
         reasons.append("candidate text overlaps existing Record language without direct duplication")
         if overlap["keywords"]:
             reasons.append("shared keywords: " + ", ".join(overlap["keywords"][:5]))
@@ -298,6 +311,7 @@ def generate_contradiction_digest(
     user_id: str = DEFAULT_USER,
     users_dir: Path = DEFAULT_USERS_DIR,
     write_path: Path | None = None,
+    strict_mode: bool = False,
 ) -> dict[str, Any]:
     rows, self_text = _parse_candidate_rows(users_dir, user_id)
     entries: list[dict[str, Any]] = []
@@ -308,7 +322,11 @@ def generate_contradiction_digest(
         "reinforcement": 0,
     }
     for row in rows:
-        relation_type, reasons, duplicate_hints, personality_conflicts, overlap = _classify_relation(row, self_text)
+        relation_type, reasons, duplicate_hints, personality_conflicts, overlap = _classify_relation(
+            row,
+            self_text,
+            strict_mode=strict_mode,
+        )
         relation_counts[relation_type] += 1
         entry = {
             "candidate_id": row["candidate_id"],
@@ -343,6 +361,7 @@ def generate_contradiction_digest(
     digest = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "user_id": user_id,
+        "strict_mode": strict_mode,
         "pending_candidate_count": len(rows),
         "reviewable_count": sum(1 for entry in entries if entry["relationship_type"] != "reinforcement"),
         "relation_counts": relation_counts,

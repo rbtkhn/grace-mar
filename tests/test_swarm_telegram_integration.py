@@ -159,19 +159,20 @@ def test_swarm_orchestrator_runs_auto_dream(monkeypatch):
     orchestrator = _load("swarm_orchestrator_dream_test", SWARM / "orchestrator.py")
     calls: list[dict] = []
 
-    def _fake_run_auto_dream_job(*, user_id: str, apply: bool, emit_event: bool, write_artifacts: bool):
+    def _fake_run_auto_dream_job(*, user_id: str, apply: bool, emit_event: bool, write_artifacts: bool, strict_mode: bool):
         calls.append(
             {
                 "user_id": user_id,
                 "apply": apply,
                 "emit_event": emit_event,
                 "write_artifacts": write_artifacts,
+                "strict_mode": strict_mode,
             }
         )
         return {"user_id": user_id, "self_memory": {"changed": False}, "contradiction_digest": {"reviewable_count": 0, "relation_counts": {}}}
 
     monkeypatch.setattr(orchestrator, "_run_auto_dream_job", _fake_run_auto_dream_job)
-    summary = orchestrator.run_auto_dream(user_id="demo", dry_run=True)
+    summary = orchestrator.run_auto_dream(user_id="demo", dry_run=True, strict_mode=True)
 
     assert summary["user_id"] == "demo"
     assert calls == [
@@ -180,6 +181,7 @@ def test_swarm_orchestrator_runs_auto_dream(monkeypatch):
             "apply": False,
             "emit_event": False,
             "write_artifacts": False,
+            "strict_mode": True,
         }
     ]
 

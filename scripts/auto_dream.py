@@ -226,6 +226,10 @@ def maintain_self_memory(
     )
 
 
+def _persist_memory_result(result: MemoryMaintenanceResult) -> None:
+    result.path.write_text(result.after, encoding="utf-8")
+
+
 def run_auto_dream(
     *,
     user_id: str = DEFAULT_USER,
@@ -233,45 +237,72 @@ def run_auto_dream(
     apply: bool = True,
     emit_event: bool = True,
     write_artifacts: bool = True,
+    strict_mode: bool = False,
 ) -> dict[str, Any]:
-    memory_result = maintain_self_memory(user_id=user_id, users_dir=users_dir, apply=apply)
-    integrity_json = _run_json_command(
-        [
-            sys.executable,
-            str(REPO_ROOT / "scripts" / "validate-integrity.py"),
-            "--users-dir",
-            str(users_dir),
-            "--user",
-            user_id,
-            "--json",
-        ],
-        REPO_ROOT,
-    )
+    memory_result = maintain_self_memory(user_id=user_id, users_dir=users_dir, apply=False)
+    integrity_command = [
+        sys.executable,
+        str(REPO_ROOT / "scripts" / "validate-integrity.py"),
+        "--users-dir",
+        str(users_dir),
+        "--user",
+        user_id,
+        "--json",
+    ]
+    if strict_mode:
+        integrity_command.append("--require-proposal-class")
+    integrity_json = _run_json_command(integrity_command, REPO_ROOT)
     governance_code, governance_stdout, governance_stderr = _run_text_command(
         [sys.executable, str(REPO_ROOT / "scripts" / "governance_checker.py")],
         REPO_ROOT,
     )
+    integrity_ok = bool(integrity_json.get("ok"))
+    governance_ok = governance_code == 0
+    halted = strict_mode and (not integrity_ok or not governance_ok)
 
-    digest_path = default_digest_path(users_dir=users_dir, user_id=user_id) if apply else None
-    digest = generate_contradiction_digest(user_id=user_id, users_dir=users_dir, write_path=digest_path)
+    digest_path = default_digest_path(users_dir=users_dir, user_id=user_id) if apply and not halted else None
     artifact_drafts: list[dict[str, Any]] = []
-    if write_artifacts and apply:
-        artifact_drafts = write_artifact_drafts(digest)
+    if halted:
+        digest = {
+            "generated_at": None,
+            "user_id": user_id,
+            "strict_mode": True,
+            "skipped": True,
+            "skip_reason": "strict maintenance halted after integrity/governance failure",
+            "pending_candidate_count": None,
+            "reviewable_count": 0,
+            "relation_counts": {},
+            "entries": [],
+        }
+    else:
+        digest = generate_contradiction_digest(
+            user_id=user_id,
+            users_dir=users_dir,
+            write_path=digest_path,
+            strict_mode=strict_mode,
+        )
+        if apply and memory_result.changed:
+            _persist_memory_result(memory_result)
+        if write_artifacts and apply:
+            artifact_drafts = write_artifact_drafts(digest)
 
     summary: dict[str, Any] = {
-        "ok": bool(integrity_json.get("ok")) and governance_code == 0,
+        "ok": integrity_ok and governance_ok and not halted,
         "user_id": user_id,
+        "strict_mode": strict_mode,
+        "halted": halted,
         "self_memory": {
             "path": str(memory_result.path),
             "created": memory_result.created,
-            "changed": memory_result.changed,
+            "changed": memory_result.changed and not halted,
+            "would_change": memory_result.changed,
             "added_sections": memory_result.added_sections,
             "deduped_lines": memory_result.deduped_lines,
             "blank_lines_collapsed": memory_result.blank_lines_collapsed,
         },
         "integrity": integrity_json,
         "governance": {
-            "ok": governance_code == 0,
+            "ok": governance_ok,
             "returncode": governance_code,
             "stdout": governance_stdout,
             "stderr": governance_stderr,
@@ -280,7 +311,7 @@ def run_auto_dream(
         "artifact_drafts": artifact_drafts,
     }
 
-    if emit_event and apply:
+    if emit_event and apply and not halted:
         reviewable = digest.get("reviewable_count", 0)
         contradictions = digest.get("relation_counts", {}).get("contradiction", 0)
         draft_count = sum(1 for row in artifact_drafts if row.get("promotable"))
@@ -290,6 +321,7 @@ def run_auto_dream(
             None,
             merge={
                 "action": "auto_dream",
+                "strict_mode": str(strict_mode).lower(),
                 "self_memory_changed": str(memory_result.changed).lower(),
                 "reviewable_candidates": str(reviewable),
                 "contradictions": str(contradictions),
@@ -304,6 +336,28 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
     memory = summary.get("self_memory") or {}
     digest = summary.get("contradiction_digest") or {}
     counts = digest.get("relation_counts") or {}
+    if summary.get("strict_mode"):
+        lines = [
+            "strict autoDream" if summary.get("ok") else "strict autoDream FAILED",
+            f"user: {summary.get('user_id', DEFAULT_USER)}",
+            f"self-memory changed: {memory.get('changed', False)}",
+            f"integrity ok: {bool((summary.get('integrity') or {}).get('ok'))}",
+            f"governance ok: {bool((summary.get('governance') or {}).get('ok'))}",
+        ]
+        if digest.get("skipped"):
+            lines.append(f"digest: skipped ({digest.get('skip_reason')})")
+        else:
+            lines.append(
+                "digest: "
+                f"reviewable={digest.get('reviewable_count', 0)} "
+                f"contradiction={counts.get('contradiction', 0)} "
+                f"duplicate={counts.get('duplicate', 0)} "
+                f"refinement={counts.get('refinement', 0)}"
+            )
+            promotable = sum(1 for row in summary.get("artifact_drafts") or [] if row.get("promotable"))
+            lines.append(f"artifact drafts: {promotable}")
+        return "\n".join(lines)
+
     lines = [
         "autoDream status",
         f"user: {summary.get('user_id', DEFAULT_USER)}",
@@ -336,6 +390,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Do not write self-memory, derived digest, or events")
     parser.add_argument("--no-event", action="store_true", help="Skip pipeline-events emission")
     parser.add_argument("--no-artifacts", action="store_true", help="Skip contradiction artifact draft writes")
+    parser.add_argument("--strict", action="store_true", help="Use strict maintenance semantics and fail fast on checks")
     args = parser.parse_args()
 
     summary = run_auto_dream(
@@ -344,6 +399,7 @@ def main() -> int:
         apply=not args.dry_run,
         emit_event=not args.no_event and not args.dry_run,
         write_artifacts=not args.no_artifacts and not args.dry_run,
+        strict_mode=args.strict,
     )
     if args.json:
         print(json.dumps(summary, indent=2))
