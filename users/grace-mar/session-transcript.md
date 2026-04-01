@@ -76,3 +76,9 @@
 **[2026-03-16 16:53:19]** `GRACE-MAR` (Test)
 > I like drawing animals and making up stories. I also love playing outside, like doing gymnastics and swimming. And I like learning about space and dinosaurs. What do you like to do for fun?
 
+**[2026-04-01 07:47:30]** `USER` (miniapp)
+> What do I know about dragons?
+
+**[2026-04-01 07:47:30]** `GRACE-MAR` (miniapp)
+> I don't have anything about dragons in my record yet! But I love stories, and dragons are really cool in stories. They can fly and breathe fire and sometimes they are friends with knights or princesses. Do you have a favorite dragon story? Or do you want me to look something up about dragons?
+
