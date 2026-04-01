@@ -143,6 +143,7 @@ When a cadence run produces unexpected output, check these in order:
 1. **Commit failed?** Bridge commits are done by the agent, not a script. If a commit failed, the agent should have reported it. Check `git status -sb` in both repos.
 2. **Push rejected?** Usually means remote has new commits. The agent should pull-rebase and retry. If it didn't, run `git pull --rebase && git push` manually.
 3. **Transfer prompt thin?** Bridge synthesizes from on-disk state. If territories have no recent history or the gate is empty, those sections will be sparse — that's correct, not broken.
+4. **Coffee didn’t run after paste?** The transfer block must end with a lone line `coffee` (no code fence). If that line was dropped when copying, append `coffee` or re-copy from the bridge output; see `.cursor/skills/bridge/SKILL.md` Step 3.
 
 ### General
 

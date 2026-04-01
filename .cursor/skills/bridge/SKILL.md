@@ -108,6 +108,8 @@ Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just 
 
 Now that both repos are sealed and pushed, synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`.
 
+**Coffee tail (required):** The copyable transfer prompt must end with a **final line that is exactly `coffee`** (lowercase, alone on its line, not inside a code fence). That way the operator’s **first message** in the new session is both the bridge packet **and** the `coffee` skill trigger — work-start Step 1 runs immediately on top of this context. Do not tell the operator to send a second message just for `coffee`.
+
 ```markdown
 # Session Bridge — [YYYY-MM-DD]
 
@@ -143,8 +145,9 @@ Synthesize from arc + gate + territories — what could go wrong or slip if unat
 [Last 5-10 commits from git log, verbatim — includes the bridge commits]
 
 ## Instructions for next session
-Paste this entire block as the first message in a fresh Cursor session,
-then say `coffee` to reorient.
+**Operator:** Send everything from `# Session Bridge` through the line below as the **only** first message in a new Cursor session (one paste). **Assistant:** Context is above; run work-start **coffee** Step 1 now (see `.cursor/skills/coffee/SKILL.md`). The next line is the skill trigger.
+
+coffee
 ```
 
 Output the entire block so the operator can copy it.
@@ -175,7 +178,7 @@ Bridge is complete. Both repos are pushed, the transfer prompt is generated. The
 
 **Typical close sequence:** `dream` first (if end of day), then `bridge` (seals and generates the handoff). Or just `bridge` alone if mid-day and you simply want a fresh thread.
 
-**Next session:** Paste the bridge prompt, then say `coffee` to run the grounding stack on top of the carried context.
+**Next session:** Paste the bridge prompt as the first message; it **ends with `coffee`** so one paste runs the grounding stack on top of the carried context.
 
 ## Related files
 
