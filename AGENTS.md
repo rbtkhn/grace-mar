@@ -170,6 +170,7 @@ What "good" looks like for Grace-Mar:
 | **Counterfactual Pack** | Harness probes pass | `python scripts/run_counterfactual_harness.py` — run before prompt changes |
 | **self-voice** (linguistic authenticity) | In-character, Lexile-friendly, fingerprint markers | `python scripts/test_voice_linguistic_authenticity.py` — no AI disclosure, simple vocab, readability ≤6 |
 | **Voice benchmark suite** | Voice stability and boundary compliance across model/prompt updates | `python scripts/run_voice_benchmark.py` — tone, age realism, abstention, bilingual, recall fidelity, overreach; use `-o results.json` for CI/trending |
+| **Continuity fidelity** | Bridge round-trip >= 80% | `python scripts/test_bridge_continuity.py` or `pytest tests/test_bridge_continuity.py` — no LLM needed; run before bridge format changes |
 | **Performance suite** | Local micro-benchmarks + optional I/O/LLM/HTTP tiers | `python scripts/run_perf_local.py` or `pytest tests/test_perf_local.py` (tier 1 in CI); full: `python scripts/run_perf_suite.py --tier 1 2 3`; see [perf-budgets.md](docs/perf-budgets.md) |
 
 ---

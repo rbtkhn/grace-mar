@@ -48,7 +48,7 @@ If timings improve on your **reference machine** (document class, CPU, disk), yo
 
 | Tier | Scope | API key | Typical CI |
 |------|--------|---------|------------|
-| 1 | Local micro (gate parse, prompt, retriever, rate limit) | No | Yes |
+| 1 | Local micro (gate parse, prompt, retriever, rate limit, bridge continuity) | No | Yes |
 | 2 | Profile gen, exports, integrity scripts | No | Optional (timeout) |
 | 3 | LLM: chat, grounded, analyst | Yes | No (unless `PERF_LLM`) |
 | 4 | HTTP miniapp / operator | Running server | No |
