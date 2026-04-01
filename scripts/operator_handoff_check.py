@@ -41,6 +41,7 @@ except ImportError:
 RUNTIME_NOISE_MARKERS = (
     "users/grace-mar/pipeline-events.jsonl",
     "users/grace-mar/harness-events.jsonl",
+    "users/grace-mar/last-dream.json",
     "runtime-bundle/runtime/",
     "runtime-bundle/audit/",
 )

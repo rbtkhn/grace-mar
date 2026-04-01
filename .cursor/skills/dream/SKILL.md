@@ -32,7 +32,7 @@ Typical use:
 - near the end of the day
 - after the last substantial work block
 - before sleep or final sign-off
-- before handing the system forward to tomorrow’s `coffee`
+- before handing the system forward to tomorrow's `coffee`
 
 Extra runs are allowed when needed, especially for:
 - dry-run inspection
@@ -48,19 +48,25 @@ But the default pattern is:
 Run the bounded maintenance pass:
 
 ```bash
-python3 auto-research/swarm/orchestrator.py dream
+python3 scripts/auto_dream.py
 ```
 
 For the stricter maintenance variant:
 
 ```bash
-python3 auto-research/swarm/orchestrator.py dream --strict
+python3 scripts/auto_dream.py --strict
 ```
 
-Equivalent direct script:
+Alternative via swarm bridge (same underlying logic):
 
 ```bash
-python3 scripts/auto_dream.py
+python3 auto-research/swarm/orchestrator.py dream
+```
+
+**End-of-day bundle (optional):** To run dream + handoff-check in one pass (night-side equivalent of `operator_reentry_stack.py`):
+
+```bash
+python3 scripts/operator_end_of_day.py -u grace-mar
 ```
 
 The ritual should:
@@ -75,6 +81,8 @@ The ritual should:
 `dream --strict` is the same ritual in a sharper maintenance posture: stricter integrity parity, stricter contradiction classification, clearer failure states, and fail-fast closeout when checks do not pass. It does not change companion-facing tone, canonical memory surfaces, or merge authority.
 
 This is a maintenance pass, not a merge pass.
+
+**Morning handoff:** When `apply=True` (the default), dream writes `users/grace-mar/last-dream.json` — a compact summary that tomorrow's `coffee` Step 1 (`operator_daily_warmup.py`) automatically picks up and displays as **"Last dream (night handoff)"**. This closes the choreography gap: coffee knows what dream found without the operator carrying it across threads.
 
 ## What to return
 
@@ -100,7 +108,7 @@ If nothing important changed, say so plainly. A quiet run is success.
 - contradiction digest: reviewable 0, contradiction 0
 - artifact drafts: none
 
-Tonight’s pass cleaned continuity and left no governed follow-up items.
+Tonight's pass cleaned continuity and left no governed follow-up items.
 ```
 
 Or, when something needs attention:
@@ -114,7 +122,7 @@ Or, when something needs attention:
 - contradiction digest: reviewable 2, contradiction 1
 - artifact drafts: 1 prepared
 
-Tonight’s pass surfaced one contradiction worth governed review tomorrow; nothing was merged automatically.
+Tonight's pass surfaced one contradiction worth governed review tomorrow; nothing was merged automatically.
 ```
 
 ## Guardrails
@@ -134,21 +142,26 @@ Tonight’s pass surfaced one contradiction worth governed review tomorrow; noth
 - **`coffee`** = repeated framing dose
 - **`dream`** = end-of-day consolidation pass
 
-`coffee` restores orientation, clarity, and agency.  
-`dream` settles continuity, checks integrity, and prepares tomorrow’s state.
+`coffee` restores orientation, clarity, and agency.
+`dream` settles continuity, checks integrity, and prepares tomorrow's state.
 
-Multiple `coffee` sessions per day are normal.  
+Multiple `coffee` sessions per day are normal.
 Usually one `dream` session per day is normal.
 
-`coffee` should feel like a sip.  
+`coffee` should feel like a sip.
 `dream` should feel like sleep.
 
-## Canonical pairing
+## Cadence choreography
 
-`coffee` and `dream` form Grace-Mar’s daily cognitive rhythm.
+`coffee` and `dream` form Grace-Mar's daily cognitive rhythm:
 
-`coffee` is a repeatable sip of coherence. It is a lightweight reorientation ritual that can happen many times per day whenever orientation needs to be restored. Its success condition is improved orientation, not exhaustive completion.
+| Time | Ritual | What it does |
+|------|--------|-------------|
+| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–H menu |
+| **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
+| **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest |
+| **After dream** | `coffee` (closeout) *or* handoff-check | Gate snapshot, commits, re-entry prompt for tomorrow |
 
-`dream` is the end-of-day consolidation pass. It is a bounded maintenance ritual that usually happens once, settling continuity, checking integrity, refreshing contradiction visibility, and preparing governed follow-up without bypassing governance.
+**Typical end-of-day sequence:** `dream` first (maintenance), then `coffee closeout` or standalone `handoff-check` (operational handoff). **One-command bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs both in that order.
 
-Together, `coffee` handles re-entry and `dream` handles closeout.
+**Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays follow-ups from last night's dream — contradictions to review, artifact drafts to promote, integrity/governance status.

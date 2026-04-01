@@ -26,6 +26,8 @@ from contradiction_digest import default_digest_path, generate_contradiction_dig
 from emit_pipeline_event import append_pipeline_event
 from repo_io import resolve_self_memory_path
 
+LAST_DREAM_FILENAME = "last-dream.json"
+
 _SKELETON = """# MEMORY - Self-memory (short / medium / long)
 
 > Not part of the Record. SELF is authoritative. "Ephemeral" = non-gated and rotatable, not "only short-term." See docs/memory-template.md v2.0 (three horizons).
@@ -230,6 +232,49 @@ def _persist_memory_result(result: MemoryMaintenanceResult) -> None:
     result.path.write_text(result.after, encoding="utf-8")
 
 
+def _write_last_dream_handoff(
+    summary: dict[str, Any],
+    *,
+    users_dir: Path = DEFAULT_USERS_DIR,
+    user_id: str = DEFAULT_USER,
+) -> Path:
+    """Write a compact JSON handoff so tomorrow's coffee Step 1 can pick up
+    what dream found overnight."""
+    from datetime import datetime, timezone
+
+    memory = summary.get("self_memory") or {}
+    digest = summary.get("contradiction_digest") or {}
+    counts = digest.get("relation_counts") or {}
+    artifact_drafts = summary.get("artifact_drafts") or []
+    promotable = sum(1 for row in artifact_drafts if row.get("promotable"))
+
+    followups: list[str] = []
+    if counts.get("contradiction", 0) > 0:
+        followups.append(f"{counts['contradiction']} contradiction(s) in digest — review recommended")
+    if digest.get("reviewable_count", 0) > 0:
+        followups.append(f"{digest['reviewable_count']} reviewable item(s) in digest")
+    if promotable > 0:
+        followups.append(f"{promotable} promotable artifact draft(s) prepared")
+
+    handoff: dict[str, Any] = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "user_id": user_id,
+        "strict_mode": summary.get("strict_mode", False),
+        "ok": summary.get("ok", False),
+        "integrity_ok": bool((summary.get("integrity") or {}).get("ok")),
+        "governance_ok": bool((summary.get("governance") or {}).get("ok")),
+        "self_memory_changed": memory.get("changed", False),
+        "reviewable_count": digest.get("reviewable_count", 0),
+        "contradiction_count": counts.get("contradiction", 0),
+        "artifact_draft_count": len(artifact_drafts),
+        "promotable_draft_count": promotable,
+        "followups": followups,
+    }
+    path = users_dir / user_id / LAST_DREAM_FILENAME
+    path.write_text(json.dumps(handoff, indent=2) + "\n", encoding="utf-8")
+    return path
+
+
 def run_auto_dream(
     *,
     user_id: str = DEFAULT_USER,
@@ -329,6 +374,13 @@ def run_auto_dream(
             },
         )
         summary["event"] = event
+
+    if apply and not halted:
+        handoff_path = _write_last_dream_handoff(
+            summary, users_dir=users_dir, user_id=user_id
+        )
+        summary["handoff_path"] = str(handoff_path)
+
     return summary
 
 

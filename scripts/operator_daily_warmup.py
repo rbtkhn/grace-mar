@@ -38,6 +38,49 @@ try:
 except ImportError:
     build_morning_pulse_lines = None  # type: ignore[misc, assignment]
 
+LAST_DREAM_FILENAME = "last-dream.json"
+
+
+def _read_last_dream(user_dir: Path) -> dict | None:
+    path = user_dir / LAST_DREAM_FILENAME
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return None
+
+
+def _format_last_dream_block(dream: dict) -> list[str]:
+    """Build a short markdown block summarizing last night's dream handoff."""
+    lines = [
+        "## Last dream (night handoff)",
+        "",
+    ]
+    generated = dream.get("generated_at", "unknown")
+    ok = dream.get("ok", False)
+    status = "pass" if ok else "**issues detected**"
+    lines.append(f"- Ran: {generated}")
+    lines.append(f"- Status: {status}")
+    lines.append(f"- Integrity: {'pass' if dream.get('integrity_ok') else 'FAIL'}")
+    lines.append(f"- Governance: {'pass' if dream.get('governance_ok') else 'FAIL'}")
+    lines.append(f"- Self-memory changed: {dream.get('self_memory_changed', False)}")
+    rc = dream.get("reviewable_count", 0)
+    cc = dream.get("contradiction_count", 0)
+    lines.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+    dc = dream.get("artifact_draft_count", 0)
+    pc = dream.get("promotable_draft_count", 0)
+    if dc:
+        lines.append(f"- Artifact drafts: {pc}/{dc} promotable")
+    followups = dream.get("followups") or []
+    if followups:
+        lines.append("")
+        lines.append("**Follow-up from dream:**")
+        for item in followups:
+            lines.append(f"- {item}")
+    lines.append("")
+    return lines
+
 
 def _git_status_lines() -> list[str]:
     proc = subprocess.run(
@@ -168,6 +211,11 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
         dirty_files=dirty_files,
     ):
         lines.append(f"- {item}")
+
+    last_dream = _read_last_dream(user_dir)
+    if last_dream:
+        lines.append("")
+        lines.extend(_format_last_dream_block(last_dream))
 
     lines.append("")
     if build_morning_pulse_lines is not None:

@@ -19,17 +19,17 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 2. **Include the command output** in your reply (paste verbatim or as a fenced markdown block) so the thread carries the same snapshot.
 
-**Optional one-line snapshot (not a second mandatory ritual):** When the operator wants a single grounded line (e.g. “receipt” / “heartbeat line”), run `python3 scripts/harness_warmup.py -u grace-mar --receipt` (combine with `--territory` as needed). **Do not** require this as the first line of every reply — that duplicates **coffee** (`coffee` skill **A–H**; optional under menu **H**; legacy **hey** still works) and conflicts with harness skip cases and PLAN-default in operator-style.
+**Optional one-line snapshot (not a second mandatory ritual):** When the operator wants a single grounded line (e.g. "receipt" / "heartbeat line"), run `python3 scripts/harness_warmup.py -u grace-mar --receipt` (combine with `--territory` as needed). **Do not** require this as the first line of every reply — that duplicates **coffee** and conflicts with harness skip cases and PLAN-default in operator-style.
 
 **One-command re-entry paste:** `python3 scripts/operator_reentry_stack.py -u grace-mar` runs handoff check, then `operator_daily_warmup` (`coffee` Step 1), then harness (add `--compact` for a shorter harness tail). Output overlaps by design; use for cold threads, not minimal noise.
 
-**Full `coffee` stack:** When the operator says **`coffee`** (including **multiple times per day** for reorientation — see `.cursor/skills/coffee/SKILL.md` § *Multiple coffees per day*; legacy **`hey`** still works), run that skill’s steps. **Step 1** = read-only scripts + branch snapshot + defer lines — **no** Polymarket / web poll / Massie X internet pass until **menu E → work-politics** (or explicit same-message request). **KY-4 + Polymarket + polls** follow `docs/skill-work/work-politics/polling-and-markets.md` **only** on that path (or **C** for §1d Putin web when daily brief runs). Then **Step 2**: fixed **A–H** (list **A,B,C,D,E,G,H,F**) — **A** template + boundary audit (combined when chosen), **B** repository hygiene, **C** **Daily brief** — generator + §1d Putin **only when C is chosen**, **D** **RECURSION-GATE** (gate-review-pass; **no merge** without companion approval), **E** **work-dev *or* work-strategy *or* work-politics** — **E / work-politics** runs the intel stack when not survey-only and then exits to normal workflow by default; **G** work-jiang / Predictive History and then exits to normal workflow by default; **H** skills / meta pipeline (candidates, extract-skill, portable sync; optional receipt line); **F** end coffee session. **`coffee survey`** → **E** defaults to **Companion survey** (see `.cursor/skills/coffee/SKILL.md`) without forced Polymarket/Massie unless asked. After **A,B,C,D, or H**, **re-offer the full A–H menu** by default; **E** and **G** do not automatically re-offer unless the operator says **`stay in coffee`**. See `.cursor/skills/coffee/SKILL.md` § *Coffee — multiple choice (A–H required)*.
+**`coffee` (work-start or closeout):** Follow `.cursor/skills/coffee/SKILL.md` — single source of truth for triggers, Step 1 scripts, Step 2 A–H menu, cadence modifiers (`light`, `minimal`, `survey`), closeout flow, and re-offer rules. Legacy **`hey`** still works.
 
-**Coffee — closeout intent (session end):** When the operator says **`coffee`** and means **signing off / closeout** (same skill, not a second trigger; legacy **`hey`** still works), follow `.cursor/skills/coffee/SKILL.md` § **Coffee — closeout** — **Step 1:** **`python3 scripts/operator_handoff_check.py -u grace-mar`** + summary paragraph; **Step 2:** fixed **A–H** menu (order **A,B,C,D,E,G,H,F**) — **A–D** match work-start **coffee** (template + boundary, repository hygiene, Daily brief, **RECURSION-GATE**); **E** = **system pick** (integrity, survey, commit grouping, etc. — prefer **G** for Jiang/PH deep-dive, **H** for skills pipeline); **G** / **H** same roles as work-start **coffee**; **F** = formally end closeout. After **A,B,C,D,E,G, or H**, **re-offer the full A–H menu** each turn until **F**. Do **not** substitute the full work-start **coffee** stack unless they ask for it.
+**`dream` (end-of-day maintenance):** Follow `.cursor/skills/dream/SKILL.md` — bounded maintenance pass (memory normalization, integrity, governance, contradiction digest). Usually once per day near end of day. **End-of-day bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs dream + handoff-check in one pass.
 
 ## When you may skip
 
-- Operator says they’re only editing unrelated code/docs with no gate/evidence context.
+- Operator says they're only editing unrelated code/docs with no gate/evidence context.
 - Warmup was already pasted in this thread.
 - Trivial one-line fix with no Record/pipeline involvement.
 
@@ -41,5 +41,5 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 ## Do not
 
-- Merge or stage from warmup output — it’s read-only context.
+- Merge or stage from warmup output — it's read-only context.
 - Treat warmup text as Record truth; canonical files remain `users/grace-mar/*.md`.

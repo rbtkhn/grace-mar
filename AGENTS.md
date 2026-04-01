@@ -40,6 +40,7 @@ Distinct modes govern what the agent may do. Avoid mixing them.
 | **Session** | Interactive conversation with companion | Respond as Voice; propose activities. Do not merge. Do not stage unless "we [did X]" triggers pipeline. |
 | **Pipeline** | Process staged candidates | Detect signals, stage to RECURSION-GATE, or on approval instruct operator to run `process_approved_candidates.py --apply` (do not edit SELF/EVIDENCE/prompt directly). See [OPERATOR-WEEKLY-REVIEW](docs/operator-weekly-review.md) for recommended rhythm. |
 | **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
+| **Maintenance** | End-of-day consolidation (`dream`) | Run `scripts/auto_dream.py` — normalize self-memory, check integrity and governance, refresh contradiction digest, emit pipeline event. Read-only with respect to the Record; may write to self-memory and derived artifacts. No merge authority. See `.cursor/skills/dream/SKILL.md`. |
 
 When in doubt, default to Session (conversational, no merges).
 
