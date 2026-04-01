@@ -106,7 +106,7 @@ Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just 
 
 ## Step 3 — Generate the transfer prompt
 
-Now that both repos are sealed and pushed, synthesize the readings from Step 1 into a single markdown block following this exact format:
+Now that both repos are sealed and pushed, synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`.
 
 ```markdown
 # Session Bridge — [YYYY-MM-DD]
@@ -131,6 +131,10 @@ Skip lanes with no recent activity.]
 1. [Top priority — derived from gate state, territory momentum, and arc]
 2. [Second priority]
 3. [Third if warranted]
+
+## Watch this
+[One sentence: the single most important thing the next session should be alert to.
+Synthesize from arc + gate + territories — what could go wrong or slip if unattended.]
 
 ## Commits sealed in this bridge
 [List the commit(s) made in Step 2, or "Worktree was already clean."]

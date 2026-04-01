@@ -30,6 +30,20 @@
 
 ---
 
+## Why three rituals
+
+Work fails on three clocks:
+
+**The framing clock (hours).** During the day, orientation degrades under context load. Not lack of information — degraded framing. `coffee` restores it. Many sips per day.
+
+**The residue clock (day).** By evening, unresolved threads, integrity drift, and unprocessed signals accumulate. `dream` settles them without dramatic mutation.
+
+**The context clock (session).** At session boundaries, agent memory goes to zero. Everything not on disk is lost. `bridge` seals the session and produces a transfer prompt so the next thread starts oriented instead of blank.
+
+Each clock needs its own ritual because the failure modes are different. Reorientation is not consolidation. Consolidation is not transfer. Merging them into one ritual would either make it too heavy for frequent use or too shallow for end-of-day closure.
+
+---
+
 ## Contents
 
 | File | Purpose |
