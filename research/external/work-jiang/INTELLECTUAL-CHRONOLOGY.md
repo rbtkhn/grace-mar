@@ -43,3 +43,17 @@ Hand-curated periods over the Geo-Strategy lecture arc. Sources `geo-01` … `ge
   - Strong prediction rhetoric vs calibrated uncertainty.
 - **Chapter hooks:** `ch02`, `ch03`
 - **Notes:** Closing arc foregrounds imagination, polarization, and long-range prediction.
+
+## `p-geo-resume-extension` — Secret History extension and comparative continuation
+
+- **Sources:** `geo-13`, `geo-14`, `geo-15`, `geo-16`, `geo-17`, `geo-18`, `geo-19`, `geo-20`
+- **Dominant concepts:** `empire-order`, `strategic-imagination`, `civ-formation`
+- **Dominant claims:** `clm-0009`, `clm-0018`, `clm-0020`
+- **Shifts:**
+  - Extends from geopolitics toward longer historical and civilizational scaffolding.
+- **Continuities:**
+  - Narrative formation and strategic framing remain central across the added sources.
+- **Tensions:**
+  - High abstraction and broad synthesis can outrun source-specific evidence density.
+- **Chapter hooks:** `ch03`
+- **Notes:** Bridge period to keep chronology coverage complete as new geo sources are ingested.

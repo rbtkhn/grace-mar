@@ -32,4 +32,29 @@ thesis_claim_links:
   - clm-0021
   - clm-0022
   - clm-0030
+  t04:
+  - clm-0031
+  - clm-0032
+  - clm-0033
+  - clm-0034
+  t05:
+  - clm-0035
+  - clm-0036
+  - clm-0037
+  - clm-0038
+  t06:
+  - clm-0039
+  - clm-0040
+  - clm-0041
+  - clm-0042
+  t07:
+  - clm-0043
+  - clm-0044
+  - clm-0045
+  - clm-0046
+  t08:
+  - clm-0047
+  - clm-0048
+  - clm-0049
+  - clm-0050
 weak_support: []

@@ -10,6 +10,7 @@
 - **Game Theory series lectures (curated files):** 17
 - **Great Books series lectures (curated files):** 8
 - **Interviews series lectures (curated files):** 11
+- **Substack essays (curated files under substack/essays):** 31
 - **Analysis memos:** 68
 - **Missing analysis:** 107 (geo-14, geo-15, geo-16, geo-17, geo-18, geo-19, geo-20, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-21, civ-22, civ-23, civ-24, civ-25, civ-26, civ-27, civ-28, civ-29, civ-30, civ-31, civ-32, civ-33, civ-34, civ-35, civ-36, civ-37, civ-38, civ-39, civ-40, civ-41, civ-42, civ-43, civ-44, civ-45, civ-46, civ-47, civ-48, civ-49, civ-50, civ-51, civ-52, civ-53, civ-54, civ-55, civ-56, civ-57, civ-58, civ-59, civ-60, sh-02, sh-03, sh-04, sh-05, sh-06, sh-07, sh-08, sh-09, sh-10, sh-11, sh-12, sh-13, sh-14, sh-15, sh-16, sh-17, sh-18, sh-19, sh-20, sh-21, sh-22, sh-23, sh-24, sh-25, sh-26, sh-27, sh-28, gt-02, gt-03, gt-04, gt-05, gt-06, gt-07, gt-08, gt-09, gt-10, gt-11, gt-12, gt-13, gt-14, gt-15, gt-17)
 
@@ -46,6 +47,11 @@
 
 - **Chapters defined:** 11
 - **Evidence packs present:** 11 / 11 chapters
+
+### Volume VII (Essays) — `volume_7_essays`
+
+- **Chapters defined:** 31
+- **Evidence packs present:** 31 / 31 chapters
 
 ## Registries
 

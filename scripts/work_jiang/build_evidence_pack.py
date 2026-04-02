@@ -54,6 +54,10 @@ def excerpt_quote(lecture_path: Path, max_len: int = 400) -> str:
     if not lecture_path.exists():
         return "(lecture file not found)"
     text = lecture_path.read_text(encoding="utf-8", errors="replace")
+    if text.startswith("---"):
+        end = text.find("\n---\n", 3)
+        if end != -1:
+            text = text[end + 5 :].lstrip()
     m = re.search(r"## At a glance\s*\n\n(.+?)(?=\n## |\Z)", text, re.DOTALL)
     chunk = m.group(1).strip() if m else text[:max_len]
     chunk = re.sub(r"\s+", " ", chunk)[:max_len]
@@ -175,6 +179,15 @@ def build_pack(chapter_id: str) -> str:
         spill = (
             "- Appendix / website: divergence notes and Part II method per "
             "book/VOLUME-VI-INTERVIEWS.md (Volume I prediction boxes not assumed)."
+        )
+    elif chapter_id.startswith("es-ch"):
+        open_q = [
+            "Which dated news claims need explicit timestamps and independent corroboration in book copy?",
+            "Where does polemic compression omit named counter-arguments or mainstream lines worth a counter-reading?",
+        ]
+        spill = (
+            "- Appendix / website: divergence notes and Part II method per "
+            "book/VOLUME-VII-ESSAYS.md (Volume I prediction boxes not assumed)."
         )
     else:
         open_q = [

@@ -34,6 +34,13 @@ def _count_interviews_lectures() -> int:
     return len(list((WORK_DIR / "lectures").glob("interviews-*.md")))
 
 
+def _count_substack_essays() -> int:
+    d = WORK_DIR / "substack" / "essays"
+    if not d.is_dir():
+        return 0
+    return sum(1 for p in d.glob("*.md") if p.name != "README.md")
+
+
 def load_yaml(path: Path) -> dict:
     if not path.exists():
         return {}
@@ -75,6 +82,7 @@ def main() -> int:
     gt_lecture_count = _count_game_theory_lectures()
     gb_lecture_count = _count_great_books_lectures()
     vi_lecture_count = _count_interviews_lectures()
+    essay_count = _count_substack_essays()
     analysis_count = len(list((WORK_DIR / "analysis").glob("*.md")))
     # exclude .gitkeep if counted as file - glob *.md only real files
     missing_analysis = [s["source_id"] for s in sources if s["status"]["analysis"] != "complete"]
@@ -121,6 +129,8 @@ def main() -> int:
     expected_vol5 = {c.get("id") for c in vol5_chapters if c.get("id")}
     vol6_chapters = chapters_for_volume_block(arch, "volume_6_interviews")
     expected_vol6 = {c.get("id") for c in vol6_chapters if c.get("id")}
+    vol7_chapters = chapters_for_volume_block(arch, "volume_7_essays")
+    expected_vol7 = {c.get("id") for c in vol7_chapters if c.get("id")}
     pack_files: list[Path] = []
     if pack_dir.exists():
         pack_files = (
@@ -130,6 +140,7 @@ def main() -> int:
             + list(pack_dir.glob("gt-ch*.md"))
             + list(pack_dir.glob("gb-ch*.md"))
             + list(pack_dir.glob("vi-ch*.md"))
+            + list(pack_dir.glob("es-ch*.md"))
         )
     pack_ids = {p.stem for p in pack_files}
 
@@ -146,6 +157,7 @@ def main() -> int:
         f"- **Game Theory series lectures (curated files):** {gt_lecture_count}",
         f"- **Great Books series lectures (curated files):** {gb_lecture_count}",
         f"- **Interviews series lectures (curated files):** {vi_lecture_count}",
+        f"- **Substack essays (curated files under substack/essays):** {essay_count}",
         f"- **Analysis memos:** {analysis_count}",
         f"- **Missing analysis:** {len(missing_analysis)} ({', '.join(missing_analysis) if missing_analysis else 'none'})",
         "",
@@ -197,6 +209,14 @@ def main() -> int:
             "",
             f"- **Chapters defined:** {len(expected_vol6)}",
             f"- **Evidence packs present:** {len(pack_ids & expected_vol6)} / {len(expected_vol6)} chapters",
+            "",
+        ]
+    if expected_vol7:
+        lines += [
+            "### Volume VII (Essays) — `volume_7_essays`",
+            "",
+            f"- **Chapters defined:** {len(expected_vol7)}",
+            f"- **Evidence packs present:** {len(pack_ids & expected_vol7)} / {len(expected_vol7)} chapters",
             "",
         ]
     lines += [

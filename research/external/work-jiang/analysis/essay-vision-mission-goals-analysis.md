@@ -7,11 +7,12 @@ canonical_url: https://predictivehistory.substack.com/p/vision-mission-goals
 publication_date: "2025-08-06"
 series: substack
 video_id: ""
-source_id: null
-chapter_candidates: []
+source_id: es-01
+chapter_candidates:
+  - es-ch01
 appendix_candidates: []
 themes: []
-status: not_started
+status: in_progress
 quality_level: draft
 memo_format_version: 1
 ---

@@ -15,6 +15,7 @@ OUT_VOL3 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-III.md"
 OUT_VOL4 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-IV.md"
 OUT_VOL5 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-V.md"
 OUT_VOL6 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-VI.md"
+OUT_VOL7 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-VII.md"
 
 
 def load(path: Path) -> dict:
@@ -146,6 +147,23 @@ def main() -> int:
         lines6.append("")
         OUT_VOL6.write_text("\n".join(lines6), encoding="utf-8")
         print(f"Wrote {OUT_VOL6}")
+
+    vol7 = arch.get("volume_7_essays") or {}
+    ch7 = (vol7.get("book") or {}).get("chapters") or []
+    if ch7:
+        lines7 = _render_queue_lines(
+            "CHAPTER QUEUE — Volume VII (Essays)",
+            "Nested `volume_7_essays.book.chapters` — see "
+            "`docs/skill-work/work-jiang/volume-vii-book-track-conventions.md`.",
+            ch7,
+        )
+        lines7.append(
+            "*Generated from `metadata/book-architecture.yaml` (`volume_7_essays`) — "
+            "same command as Volume I queue.*"
+        )
+        lines7.append("")
+        OUT_VOL7.write_text("\n".join(lines7), encoding="utf-8")
+        print(f"Wrote {OUT_VOL7}")
     return 0
 
 

@@ -27,6 +27,8 @@ def _evidence_pack_volume_branch(chapter_id: str) -> str:
         return "gb"
     if chapter_id.startswith("vi-ch"):
         return "vi"
+    if chapter_id.startswith("es-ch"):
+        return "es"
     return "geo"
 
 
@@ -84,7 +86,7 @@ def main() -> int:
             errors.append(f"Claim {cid} marked supported but analysis_id empty while source has analysis")
 
     arch = load_yaml(WORK_DIR / "metadata" / "book-architecture.yaml")
-    # Evidence-pack checks: Volume I + nested II–VI (not Volume VII stub until promoted).
+    # Evidence-pack checks: Volume I + nested II–VII.
     chapters = (
         top_level_chapters(arch)
         + chapters_for_volume_block(arch, "volume_2_civilization")
@@ -92,6 +94,7 @@ def main() -> int:
         + chapters_for_volume_block(arch, "volume_4_game_theory")
         + chapters_for_volume_block(arch, "volume_5_great_books")
         + chapters_for_volume_block(arch, "volume_6_interviews")
+        + chapters_for_volume_block(arch, "volume_7_essays")
     )
     for ch in chapters:
         cid = ch.get("id")
@@ -140,6 +143,12 @@ def main() -> int:
                     errors.append(f"Evidence pack {cid} references unknown source {m}")
             if text and len(re.findall(r"`vi-\d\d`", text)) < 1:
                 errors.append(f"Evidence pack {cid} lists no vi source ids (expected at least one)")
+        elif branch == "es":
+            for m in re.findall(r"`(es-\d\d)`", text):
+                if m not in src_by:
+                    errors.append(f"Evidence pack {cid} references unknown source {m}")
+            if text and len(re.findall(r"`es-\d\d`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no es source ids (expected at least one)")
         else:
             for m in re.findall(r"`(geo-\d\d)`", text):
                 if m not in src_by:

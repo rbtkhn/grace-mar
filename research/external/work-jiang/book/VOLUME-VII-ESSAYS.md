@@ -6,7 +6,7 @@
 
 **Corpus:** `research/external/work-jiang/substack/essays/<slug>.md` — filename = Substack post slug (`/p/<slug>`). Each file has YAML front matter (`source_kind: substack_essay`, `publication_date`, `canonical_url`, …). See [substack/essays/README.md](../substack/essays/README.md).
 
-**Registry:** **Not** wired into `metadata/sources.yaml` by default (unlike `vi-*` / `gt-*`). Volume VII is tracked by **on-disk essays + crosswalk** [substack/README.md](../substack/README.md). Add `sources.yaml` rows later if you want prediction-registry or chapter-map parity with lectures.
+**Registry (book-track):** `es-01` … `es-NN` in [`metadata/sources.yaml`](../metadata/sources.yaml) — publication order (front matter `publication_date`, tie-break slug), emitted by `scripts/work_jiang/build_source_registry.py` from `substack/essays/*.md` plus `analysis/essay-<slug>-analysis.md`. Chapters `es-chNN` live in [`metadata/book-architecture.yaml`](../metadata/book-architecture.yaml) (`volume_7_essays`); [`metadata/source-map.yaml`](../metadata/source-map.yaml) maps `es-chNN` → `[es-NN]`. Conventions: [volume-vii-book-track-conventions.md](../../../docs/skill-work/work-jiang/volume-vii-book-track-conventions.md). Crosswalk remains [substack/README.md](../substack/README.md).
 
 **Analysis memos:** `research/external/work-jiang/analysis/essay-<slug>-analysis.md` — same memo sections as lecture analyses (`thesis`, `claims`, lattice, cross-refs). `normalize_analysis_frontmatter.py` does **not** auto-fill these (no YouTube id in filename).
 

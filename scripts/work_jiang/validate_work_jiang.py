@@ -252,6 +252,27 @@ def check_rendered_status_drift(architecture: dict, errors: list[str]) -> None:
             errors,
         )
 
+    vol7 = architecture.get("volume_7_essays") or {}
+    ch7 = (vol7.get("book") or {}).get("chapters") or []
+    if ch7:
+        expected_v7 = {c["id"]: c.get("status", "") for c in ch7}
+        _scan_rendered_status_drift(
+            WORK_DIR / "CHAPTER-QUEUE-VOLUME-VII.md",
+            "CHAPTER-QUEUE-VOLUME-VII.md",
+            re.compile(r"^## (es-ch\d+)"),
+            expected_v7,
+            status_line,
+            errors,
+        )
+        _scan_rendered_status_drift(
+            WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-VII.md",
+            "BOOK-ARCHITECTURE-VOLUME-VII.md",
+            re.compile(r"^### (es-ch\d+)"),
+            expected_v7,
+            status_line,
+            errors,
+        )
+
 
 def check_membrane(errors: list[str]) -> None:
     """Scan work_jiang scripts for forbidden Record path writes."""
@@ -386,6 +407,12 @@ def main() -> int:
                 errors.append(
                     f"{s['source_id']}: filename episode {m.group(1)} != episode {ep}"
                 )
+        elif series == "essays":
+            # Curated Substack essays under substack/essays/<slug>.md; episode is publication order, not filename.
+            if not str(lp).startswith("substack/essays/") or not name.endswith(".md"):
+                errors.append(
+                    f"{s['source_id']}: essays lecture_path must be substack/essays/<slug>.md, got {lp!r}"
+                )
     dup_lp = [p for p in set(lecture_paths_seen) if lecture_paths_seen.count(p) > 1]
     for p in sorted(dup_lp):
         errors.append(f"Duplicate lecture_path in sources: {p}")
@@ -403,6 +430,17 @@ def main() -> int:
             if rel not in registered_lectures:
                 errors.append(
                     f"Lecture on disk not listed in metadata/sources.yaml: {rel} ({label})"
+                )
+
+    essays_dir = WORK_DIR / "substack" / "essays"
+    if essays_dir.is_dir():
+        for path in sorted(essays_dir.glob("*.md")):
+            if path.name == "README.md":
+                continue
+            rel = path.relative_to(WORK_DIR).as_posix()
+            if rel not in registered_lectures:
+                errors.append(
+                    f"Essay on disk not listed in metadata/sources.yaml: {rel} (substack/essays)"
                 )
 
     for ch, data in chapter_map.items():

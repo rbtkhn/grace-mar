@@ -19,73 +19,128 @@ generated_from:
 - lectures/geo-strategy-18-is-putin-the-ubermensch.md
 - lectures/geo-strategy-19-when-eschatologies-converge.md
 - lectures/geo-strategy-20-why-the-west-is-doomed.md
+- analysis/0aASxQrJYuo-game-theory-16-analysis.md
+- analysis/0rIgZD-tk3s-interviews-08-analysis.md
+- analysis/2K2nQsTTjQE-interviews-11-analysis.md
+- analysis/4Ql24Z8SIeE-interviews-07-analysis.md
 - analysis/7y_hbz6loEo-geo-strategy-08-analysis.md
+- analysis/80jUKe0blAQ-interviews-06-analysis.md
+- analysis/8XdL-7tAqnU-geo-strategy-13-analysis.md
 - analysis/AEPSUC-UQ5k-geo-strategy-09-analysis.md
 - analysis/B_al2wgk49Y-geo-strategy-10-analysis.md
+- analysis/EBWTRvjZ1dw-great-books-07-analysis.md
+- analysis/Ft2CuowGuYc-great-books-02-analysis.md
+- analysis/GSSIm9xNRAE-interviews-02-analysis.md
 - analysis/Go1bMQKnJBQ-geo-strategy-11-analysis.md
+- analysis/H5lCJ0D4DpY-interviews-04-analysis.md
 - analysis/JieFC4Yww4o-geo-strategy-06-analysis.md
+- analysis/Jjqf9T59uY0-civilization-01-analysis.md
 - analysis/LctUcVqhhns-geo-strategy-04-analysis.md
 - analysis/LsRGvKxfLts-geo-strategy-07-analysis.md
+- analysis/ORyCS0r2Tpg-interviews-03-analysis.md
+- analysis/TsD-8FGA84A-great-books-01-analysis.md
+- analysis/XRP407WsA0w-great-books-03-analysis.md
+- analysis/XRk5VSEzJ4Y-interviews-01-analysis.md
+- analysis/YXTRlvFIRt8-great-books-08-analysis.md
 - analysis/_blj8zKdKgA-geo-strategy-03-analysis.md
+- analysis/aS-NfPSPMu8-great-books-06-analysis.md
 - analysis/cvI8rukoda8-civilization-20-analysis.md
+- analysis/dkzr5A8IlLA-great-books-04-analysis.md
+- analysis/essay-blowback-venezuela-analysis.md
+- analysis/essay-carneys-speech-and-trumps-letter-analysis.md
+- analysis/essay-continuity-of-government-is-a-joke-analysis.md
+- analysis/essay-countdown-to-iran-analysis.md
+- analysis/essay-i-have-questions-about-tyler-robinson-analysis.md
+- analysis/essay-iran-greenland-and-canada-analysis.md
+- analysis/essay-minnesota-burning-analysis.md
+- analysis/essay-predictive-history-reading-list-analysis.md
+- analysis/essay-secret-history-10-the-great-revealing-analysis.md
+- analysis/essay-secret-history-7-the-voyage-home-analysis.md
+- analysis/essay-secret-history-8-the-rise-of-the-american-kakistocracy-analysis.md
+- analysis/essay-the-acceleration-analysis.md
+- analysis/essay-the-empire-goes-to-war-analysis.md
+- analysis/essay-the-limits-of-pax-judaica-analysis.md
+- analysis/essay-the-secret-history-of-the-world-1-analysis.md
+- analysis/essay-the-secret-history-of-the-world-2-analysis.md
+- analysis/essay-the-secret-history-of-the-world-3-analysis.md
+- analysis/essay-the-secret-history-of-the-world-4-analysis.md
+- analysis/essay-the-secret-history-of-the-world-5-analysis.md
+- analysis/essay-the-secret-history-of-the-world-6-analysis.md
+- analysis/essay-the-third-coming-analysis.md
+- analysis/essay-the-us-iran-end-game-analysis.md
+- analysis/essay-tipping-point-usa-analysis.md
+- analysis/essay-twilight-of-the-liberal-elite-analysis.md
+- analysis/essay-vietnam-redux-analysis.md
+- analysis/essay-vision-mission-goals-analysis.md
+- analysis/essay-war-machine-usa-analysis.md
+- analysis/essay-welcome-to-the-rupture-analysis.md
+- analysis/essay-what-can-be-done-analysis.md
+- analysis/essay-why-i-refuse-to-get-rich-analysis.md
+- analysis/essay-world-war-iii-begins-analysis.md
 - analysis/exRK-85630k-geo-strategy-05-analysis.md
+- analysis/gXlcR7uHHdA-great-books-05-analysis.md
+- analysis/hE4l9WyLF3U-game-theory-01-analysis.md
 - analysis/lkKrZq4YdqY-geo-strategy-02-analysis.md
+- analysis/lt8XLz78ZvY-secret-history-01-analysis.md
+- analysis/o1DElACHNRo-interviews-09-analysis.md
+- analysis/rsi7cDRUrmE-interviews-10-analysis.md
 - analysis/s_k6esWheqA-geo-strategy-12-psychohistory-analysis.md
+- analysis/uHIdRgFypNo-interviews-05-analysis.md
 - analysis/xEEpOxqdU5E-geo-strategy-01-analysis.md
 concepts:
 - concept_id: civ-formation
-  total_mentions_estimated: 32
+  total_mentions_estimated: 38
   by_phrase:
     civilizational formation: 0
-    formation: 32
+    formation: 38
     civilization formation: 0
 - concept_id: strategic-imagination
-  total_mentions_estimated: 14
+  total_mentions_estimated: 18
   by_phrase:
-    strategic imagination: 7
+    strategic imagination: 9
     great-power imagination: 0
 - concept_id: asymmetrical-warfare
-  total_mentions_estimated: 19
+  total_mentions_estimated: 20
   by_phrase:
     asymmetrical warfare: 10
     asymmetric warfare: 0
-    asymmetry: 9
+    asymmetry: 10
 - concept_id: christian-zionism
   total_mentions_estimated: 139
   by_phrase:
     Christian Zionism: 53
     dispensational: 33
 - concept_id: empire-order
-  total_mentions_estimated: 375
+  total_mentions_estimated: 437
   by_phrase:
-    empire: 340
-    imperial: 25
+    empire: 397
+    imperial: 30
     Pax Americana: 8
     empire defense: 2
 - concept_id: financialization-empire
-  total_mentions_estimated: 23
+  total_mentions_estimated: 29
   by_phrase:
-    financialization: 11
+    financialization: 14
     dollar system: 1
 - concept_id: saudi-iran-axis
-  total_mentions_estimated: 181
+  total_mentions_estimated: 192
   by_phrase:
     Saudi Arabia vs Iran: 0
-    Saudi: 165
-    Gulf: 12
+    Saudi: 174
+    Gulf: 14
     axis of resistance: 4
 - concept_id: electoral-coalition
-  total_mentions_estimated: 46
+  total_mentions_estimated: 55
   by_phrase:
     electoral coalition: 0
     Trump coalition: 0
     VP pick: 0
-    Haley: 46
+    Haley: 55
 - concept_id: empire-hubris
-  total_mentions_estimated: 65
+  total_mentions_estimated: 69
   by_phrase:
     imperial hubris: 6
-    hubris: 47
+    hubris: 51
     shock and awe: 6
     Millennium Challenge: 6
 - concept_id: iran-strategy-matrix
@@ -101,120 +156,126 @@ concepts:
     True Promise: 9
     April 2024 strikes: 0
 - concept_id: raisi-scenario
-  total_mentions_estimated: 45
+  total_mentions_estimated: 50
   by_phrase:
     Raisi helicopter incident: 0
-    Raisi: 18
-    IRGC: 26
+    Raisi: 21
+    IRGC: 28
     helicopter crash: 1
 - concept_id: iran-trap
-  total_mentions_estimated: 11
+  total_mentions_estimated: 16
   by_phrase:
-    Iran trap: 3
+    Iran trap: 4
     invasion scenario: 0
-    regime change: 8
+    regime change: 12
 - concept_id: putinism-soul
-  total_mentions_estimated: 282
+  total_mentions_estimated: 286
   by_phrase:
     Putinism and the soul of Russia: 0
-    Putin: 258
+    Putin: 262
     consumerism: 21
     soul of Russia: 3
 - concept_id: stalin-game-theory
-  total_mentions_estimated: 113
+  total_mentions_estimated: 126
   by_phrase:
     Stalin and game theory: 0
-    game theory: 52
+    game theory: 65
     Stalin: 61
     strategic patience: 0
 - concept_id: second-civil-war
-  total_mentions_estimated: 73
+  total_mentions_estimated: 81
   by_phrase:
-    Second American Civil War: 6
-    civil war: 59
+    Second American Civil War: 8
+    civil war: 62
     domestic conflict: 0
-    polarization: 8
+    polarization: 11
 - concept_id: psychohistory-metaphor
-  total_mentions_estimated: 28
+  total_mentions_estimated: 40
   by_phrase:
-    psychohistory: 14
-    Psychohistory: 14
+    psychohistory: 20
+    Psychohistory: 20
     supervised learning: 0
     forecasting AI: 0
 - concept_id: education-narrative
-  total_mentions_estimated: 52
+  total_mentions_estimated: 72
   by_phrase:
     education and narrative: 0
-    education: 6
+    education: 13
     narrative formation: 0
-    school: 46
+    school: 59
 - concept_id: religious-legitimacy
-  total_mentions_estimated: 13
+  total_mentions_estimated: 14
   by_phrase:
     religious legitimacy: 0
-    theology: 5
+    theology: 6
     sacred: 5
     dispensational premillennialism: 3
 - concept_id: middle-east-alliance
-  total_mentions_estimated: 165
+  total_mentions_estimated: 171
   by_phrase:
     Middle East alliances: 0
     Israel Lobby: 21
-    allies: 18
+    allies: 24
     Saudi Arabia: 126
 untracked_high_frequency_tokens:
 - token: okay
   count: 2878
 - token: right
-  count: 734
+  count: 737
 - token: it's
   count: 566
+- token: people
+  count: 517
 - token: that's
   count: 517
-- token: people
-  count: 516
+- token: world
+  count: 413
 - token: does
   count: 406
-- token: world
-  count: 393
+- token: substack
+  count: 376
 - token: want
   count: 352
 - token: first
-  count: 322
+  count: 326
+- token: analysis
+  count: 297
 - token: really
   count: 286
 - token: sense
-  count: 283
+  count: 284
 - token: going
-  count: 279
+  count: 280
 - token: united
   count: 267
+- token: china
+  count: 264
 - token: states
-  count: 259
+  count: 263
 - token: know
-  count: 240
+  count: 241
 - token: there's
   count: 236
+- token: military
+  count: 230
 - token: thing
   count: 222
 - token: don't
   count: 220
-- token: military
-  count: 216
-- token: china
-  count: 216
+- token: three
+  count: 218
 - token: they're
   count: 214
 - token: against
-  count: 210
+  count: 213
 - token: think
-  count: 209
-- token: three
-  count: 208
+  count: 210
 - token: understand
   count: 196
 - token: time
-  count: 184
+  count: 195
+- token: lectures
+  count: 178
 - token: much
   count: 169
 - token: you're
@@ -222,24 +283,18 @@ untracked_high_frequency_tokens:
 - token: question
   count: 166
 - token: problem
+  count: 163
+- token: ukraine
+  count: 163
+- token: canonical
   count: 162
+- token: essays
+  count: 161
+- token: next
+  count: 160
+- token: essay
+  count: 157
 - token: guys
   count: 156
-- token: what's
-  count: 154
 - token: believe
-  count: 153
-- token: actually
-  count: 153
-- token: idea
-  count: 151
-- token: let's
-  count: 149
-- token: reason
-  count: 147
-- token: he's
-  count: 145
-- token: ukraine
-  count: 144
-- token: money
-  count: 140
+  count: 154
