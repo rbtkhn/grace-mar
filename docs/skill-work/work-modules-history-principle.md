@@ -1,6 +1,6 @@
 # Work modules — territory history logs
 
-**Design principle:** Each **work** territory (`work-*`) may carry a single **append-only operator log** — significant sessions, ingest milestones, ship notes, and pointers to commits or artifacts **scoped to that lane**.
+**Design principle:** Each **work** territory (`work-*`) may carry a single **append-only operator log** — significant sessions, ingest milestones, ship notes, and pointers to commits or artifacts **scoped to that lane**. **New lane scaffold:** [work-template.md](work-template.md).
 
 | Convention | Meaning |
 |------------|---------|
