@@ -1,7 +1,7 @@
 # Predictive History — Volume III: Secret History
 
-**Corpus:** TBD (to be mapped in `metadata/sources.yaml`)  
-**Status:** title registered; scope definition pending.
+**Corpus:** **Secret History** lectures `sh-01`–`sh-28` in [`metadata/sources.yaml`](../metadata/sources.yaml) (`series: secret-history`, `lectures/secret-history-*.md`).  
+**Status:** **book spine wired** — nested block **`volume_3_secret_history`** (`sh-ch01`–`sh-ch28`), `source-map.yaml`, evidence packs, validators; pilot **`sh-01`** / **`sh-ch01`** on argument layer. Part II method still **TBD**. See [`AUDIT-VOLUME-III-SYSTEMATIC.md`](../AUDIT-VOLUME-III-SYSTEMATIC.md), [`volume-iii-book-track-conventions.md`](../../docs/skill-work/work-jiang/volume-iii-book-track-conventions.md).
 
 ## Volume intent
 
