@@ -1,0 +1,45 @@
+# Analyst corpus — INDEX
+
+**Rules:** One row per **transcript file** (or per **logical episode** if you split files). **transcript_path** is **repo-root-relative**. Empty cells use `—`.
+
+**Column definitions**
+
+| Column | Required | Meaning |
+|--------|----------|---------|
+| `analyst_slug` | yes | Stable id: `theodore-postol`, `robert-pape`, … |
+| `display_name` | yes | Human label for sorting and prose. |
+| `transcript_path` | yes | Path to the markdown (usually under `research/external/work-strategy/transcripts/`). |
+| `episode_title` | yes | Short title; can match the `#` heading in the file. |
+| `source_url` | no | Watch or listen URL when known. |
+| `published` | no | Air / publish date (**ISO `YYYY-MM-DD`** if possible). |
+| `ingested` | yes | Date the file landed in-repo (**ISO**). |
+| `topics` | no | Semicolon-separated tags: `iran; nuclear; bmd; ukraine`. |
+| `digest_one_line` | no | Single-line thesis for search skimming. |
+| `verify_focus` | no | What to check before ship-facing copy (comma-separated hints). |
+| `notes_path` | no | Optional `analysts/<slug>/…` or `docs/skill-work/...` stub. |
+
+---
+
+## Active rows (newest first)
+
+| analyst_slug | display_name | transcript_path | episode_title | source_url | published | ingested | topics | digest_one_line | verify_focus | notes_path |
+|--------------|--------------|-----------------|---------------|------------|-----------|----------|--------|-----------------|--------------|------------|
+| mercouris | Alexander Mercouris | research/external/work-strategy/transcripts/mercouris-2026-03-30-israel-iran-china-g7-ukraine.md | Israel AD / China / G7 / Ukraine monologue | — | 2026-03-30 | 2026-03-30 | iran; israel; ad; ukraine; china; oil | Haaretz-sourced leak-through narrative; Hormuz/Brent stress; GT editorial frame | battle claims; intercept rates; Kuwait strike reports | — |
+| larry-johnson | Larry Johnson | research/external/work-strategy/transcripts/larry-johnson-2026-03-30-full-escalation-yemen-hezbollah.md | Yemen / Hezbollah / escalation (digest) | — | 2026-03-30 | 2026-03-30 | yemen; hezbollah; escalation | (see file Perceiver) | primary sources for ops claims | — |
+| parsi-davis | Parsi & Davis | research/external/work-strategy/transcripts/no-threat-can-force-iran-surrender-parsi-davis.md | No threat can force Iran to surrender | — | — | — | iran; diplomacy | (see file) | — | — |
+
+---
+
+## Template row (copy below the header row)
+
+```markdown
+| postol | Theodore Postol | research/external/work-strategy/transcripts/YYYY-MM-DD-iran-nuclear-deterrent-diesen.md | Iran nuclear deterrent (Diesen) | https://… | YYYY-MM-DD | YYYY-MM-DD | iran; nuclear; latency; israel | HEU breakout + mass-fire scenario; deterrence to Israeli first use | IAEA kg; cascade count; scenario vs doctrine | research/external/work-strategy/analysts/theodore-postol/RECURRING-MOVES.md |
+```
+
+*(Remove the code fence when pasting into the table; keep pipe alignment roughly tidy.)*
+
+---
+
+## Optional: machine-readable export
+
+If you later want scripts to consume this index, add a sibling **`index.tsv`** with the same columns (tab-separated, header row). Do not delete this markdown INDEX; treat TSV as derived if you automate.

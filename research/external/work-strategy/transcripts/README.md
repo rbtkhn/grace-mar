@@ -47,5 +47,6 @@ Same guardrails as below: research upstream, not Record; verify numbers before s
 
 ## See also
 
+- [Analyst corpus INDEX](../analyst-corpus/INDEX.md) — register each transcript row + optional per-analyst notes under `analyst-corpus/analysts/<slug>/`.
 - [common-inputs.md](../../../../docs/skill-work/work-strategy/common-inputs.md) — shared inputs with work-politics.
 - [work-strategy README](../../../../docs/skill-work/work-strategy/README.md) — territory index.
