@@ -61,6 +61,7 @@ _Use as a quick self-audit before filing the pass._
 Drop **redacted** **or** **public-safe** **finished** **passes** **in** [notes/exemplars/](notes/exemplars/) **—** **when** **2–3** **exist,** **a** **`strategy-rome`** **skill** **can** **point** **here** **for** **shape** **matching.**
 
 - **2026-04-01** — Cross-read (Vatican primary + US media monologue): [2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md](notes/exemplars/2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md).
+- **2026-04-01** — Wire-first (Vatican News + Reuters → vatican.va Angelus): [2026-04-01-rome-pass-exemplar-wire-first-iran-peace-march-2026.md](notes/exemplars/2026-04-01-rome-pass-exemplar-wire-first-iran-peace-march-2026.md).
 
 ---
 
@@ -68,3 +69,4 @@ Drop **redacted** **or** **public-safe** **finished** **passes** **in** [notes/e
 
 - **2026-04-03** — Skeleton created (pre-skill readiness per operator **A**).
 - **2026-04-01** — First **exemplar** linked (Tucker Carlson `GyYy-QmxttU` cross-read + Leo XIV Palm Sunday homily).
+- **2026-04-01** — Second **exemplar** — wire-first **Iran** / **Middle East** peace cluster (Mar **2026**).
