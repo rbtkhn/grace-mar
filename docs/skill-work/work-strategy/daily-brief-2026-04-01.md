@@ -55,12 +55,12 @@ _Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md
 
 ## 1d. Putin — last 48 hours
 
-_Window ~2026-03-30 to 2026-04-01 UTC (coffee menu **C** pass). Bullets + URLs — operator WORK, not Record._
+_Window ~2026-03-30 to 2026-04-02 UTC. Menu **C** refresh: added official English wire on Ukraine/ceasefire framing below._ Operator WORK, not Record._
 
 - **2026-04-01 — Talks with Armenian PM Pashinyan (Moscow).** Kremlin-scheduled meeting on strategic partnership, Eurasian integration, South Caucasus / economic and transport-logistics ties; extended to working breakfast. Wire: [TASS — Putin to hold talks with Armenian PM in Moscow on April 1](http://en.tass.ru/politics/2109563).
 - **2026-04-01 — Address to International Transport and Logistics Forum (video message).** Official English page summarizes themes: global logistics under geopolitical stress, **Iran / energy markets / Strait of Hormuz**, Russia’s role in “new architecture” of trade, **digital tech and AI** in transport, biennial forum cadence. Primary: [Kremlin — Address to forum participants](http://en.kremlin.ru/events/president/news/79449).
 - **2026-03-31 — Phone call with Egypt’s President El-Sisi.** Reporting: Middle East de-escalation, Ukraine, bilateral projects (incl. nuclear); not a substitute for Kremlin readout if you need exact quotes. [Ahram Online — El-Sisi tells Putin Russia can help end war…](https://english.ahram.org.eg/NewsContent/1/1234/564996/Egypt/Foreign-Affairs/ElSisi-tells-Putin-Russia-can-help-end-war-in-call.aspx).
-- **2026-03-31 — Kremlin line on Zelenskyy “Easter” ceasefire framing.** Spokesperson (Peskov) briefing covered in Western outlets as **cool / skeptical** response; verify phrasing before posting. Example: [The Moscow Times — Kremlin rebuffs Zelensky’s Easter ceasefire proposal](https://www.themoscowtimes.com/2026/03/31/kremlin-rebuffs-zelenskys-easter-ceasefire-proposal-a92387).
+- **2026-03-31 — Peskov / Ukraine (briefing).** Kremlin stresses **lasting peace** over a short truce; says Kyiv’s ceasefire framing lacked a clearly formulated initiative (official English wire). [TASS — Russia needs lasting peace in Ukraine instead of ceasefire](https://en.tass.ru/politics/2109539). Western summary of the “Easter” angle: [The Moscow Times — Kremlin rebuffs Zelensky’s Easter ceasefire proposal](https://www.themoscowtimes.com/2026/03/31/kremlin-rebuffs-zelenskys-easter-ceasefire-proposal-a92387).
 
 ## 2. Headlines (ingested RSS)
 
