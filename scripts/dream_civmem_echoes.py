@@ -20,6 +20,10 @@ CIVMEM_DISCLAIMER = (
     "not current truth, not Voice knowledge, not part of the Record."
 )
 
+ANALOGY_CANDIDATE_LABEL = (
+    "Analogy candidate only — not evidence, not recommendation, not Record."
+)
+
 
 def excerpt_self_memory_short_term(memory_text: str, *, max_chars: int = 400) -> str:
     """First ~max_chars from Short-term section, or head of file."""
@@ -65,11 +69,14 @@ def compute_civmem_echoes(
     *,
     digest: dict[str, Any],
     self_memory_text: str,
-    limit: int = 3,
+    limit: int = 1,
+    min_overlap: int = 4,
+    query_limit: int = 24,
     snippet_max: int = 200,
 ) -> tuple[list[dict[str, Any]], bool]:
     """
     Return (echoes, index_missing). echoes empty if index missing or query empty.
+    Default cap is one echo; overlap must be >= min_overlap (integer token count).
     """
     from build_civmem_inrepo_index import query_inrepo_civmem
 
@@ -83,7 +90,7 @@ def compute_civmem_echoes(
     if not q.strip():
         return [], False
 
-    raw = query_inrepo_civmem(q, limit=limit)
+    raw = query_inrepo_civmem(q, limit=query_limit)
     echoes: list[dict[str, Any]] = []
     for row in raw:
         path = str(row.get("path", "") or "")
@@ -92,12 +99,17 @@ def compute_civmem_echoes(
         except ValueError:
             rel = path
         overlap = int(row.get("overlap", 0) or 0)
+        if overlap < min_overlap:
+            continue
         snip = str(row.get("snippet", "") or "")[:snippet_max]
         echoes.append(
             {
                 "path": rel,
                 "overlap": overlap,
                 "snippet_preview": snip,
+                "analogy_label": ANALOGY_CANDIDATE_LABEL,
             }
         )
+        if len(echoes) >= limit:
+            break
     return echoes, False

@@ -25,9 +25,11 @@ for path in (REPO_ROOT / "scripts",):
 from contradiction_digest import default_digest_path, generate_contradiction_digest, write_artifact_drafts
 from dream_civmem_echoes import CIVMEM_DISCLAIMER, compute_civmem_echoes
 from dream_coffee_rollup import rollup_coffee_24h
-from dream_execution_paths import build_execution_paths
+from dream_execution_paths import build_execution_paths, format_tomorrow_inherits_line
+from fork_config import load_fork_config
 from emit_pipeline_event import append_pipeline_event
 from log_cadence_event import append_cadence_event
+from harness_warmup import _pending_candidates
 from repo_io import resolve_self_memory_path
 
 LAST_DREAM_FILENAME = "last-dream.json"
@@ -285,6 +287,10 @@ def _write_last_dream_handoff(
     if summary.get("execution_paths") is not None:
         handoff["execution_paths"] = summary["execution_paths"]
         handoff["suggested_execution_path_index"] = summary.get("suggested_execution_path_index", 0)
+        if summary.get("execution_path_suggestion_reason"):
+            handoff["execution_path_suggestion_reason"] = summary["execution_path_suggestion_reason"]
+        if summary.get("tomorrow_inherits"):
+            handoff["tomorrow_inherits"] = summary["tomorrow_inherits"]
     if summary.get("civmem_echoes") is not None:
         handoff["civmem_echoes"] = summary["civmem_echoes"]
     if summary.get("civmem_disclaimer"):
@@ -402,7 +408,14 @@ def run_auto_dream(
         coffee_rollup = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
         dc = summary.get("contradiction_digest") or {}
         rel_counts = dc.get("relation_counts") or {}
-        paths, sugg_idx = build_execution_paths(
+        gate_path = users_dir / user_id / "recursion-gate.md"
+        gate_text = gate_path.read_text(encoding="utf-8") if gate_path.is_file() else ""
+        gate_pending_count = len(_pending_candidates(gate_text, "all"))
+        fork_cfg = load_fork_config()
+        raw_max = fork_cfg.get("max_pending_candidates")
+        max_pending = int(raw_max) if raw_max is not None else None
+
+        paths, sugg_idx, sugg_reason = build_execution_paths(
             user_id=user_id,
             now_utc=now_utc,
             integrity_ok=integrity_ok,
@@ -410,14 +423,19 @@ def run_auto_dream(
             reviewable_count=int(dc.get("reviewable_count") or 0),
             contradiction_count=int(rel_counts.get("contradiction") or 0),
             coffee_count_24h=int(coffee_rollup.get("count") or 0),
+            gate_pending_count=gate_pending_count,
+            max_pending_candidates=max_pending,
         )
         civ_echoes, civ_index_missing = compute_civmem_echoes(
             digest=dc,
             self_memory_text=memory_result.before,
         )
+        tomorrow_line = format_tomorrow_inherits_line(paths, sugg_idx, sugg_reason)
         summary["coffee_rollup_24h"] = coffee_rollup
         summary["execution_paths"] = paths
         summary["suggested_execution_path_index"] = sugg_idx
+        summary["execution_path_suggestion_reason"] = sugg_reason
+        summary["tomorrow_inherits"] = tomorrow_line
         summary["civmem_echoes"] = civ_echoes
         summary["civmem_disclaimer"] = CIVMEM_DISCLAIMER
         summary["civmem_index_missing"] = civ_index_missing

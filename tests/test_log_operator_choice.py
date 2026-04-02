@@ -39,3 +39,12 @@ def test_append_second_choice_preserves_first(tmp_path):
     loc.append_work_choice(user_dir, context="WORK", picked="B", tags="", note="")
     text = (user_dir / "session-transcript.md").read_text(encoding="utf-8")
     assert text.count("### [WORK-choice]") == 2
+
+
+def test_append_coffee_context(tmp_path):
+    user_dir = tmp_path / "users" / "u3"
+    user_dir.mkdir(parents=True)
+    loc.append_work_choice(user_dir, context="COFFEE", picked="E", tags="steward=gate", note="")
+    text = (user_dir / "session-transcript.md").read_text(encoding="utf-8")
+    assert "context: COFFEE" in text
+    assert "picked: E" in text

@@ -42,6 +42,6 @@ def test_build_operator_daily_warmup_includes_depth_and_polling_reminder(
 
     assert "## Pipeline velocity (operator depth)" in warmup
     assert "tier L1 active" in warmup
-    assert "## Good morning — KY-4 polling + prediction markets" in warmup
+    assert "## Coffee — KY-4 polling + prediction markets" in warmup
     assert "Polymarket" in warmup
     assert "polling-and-markets.md" in warmup

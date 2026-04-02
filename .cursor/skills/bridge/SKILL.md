@@ -35,7 +35,7 @@ When the operator says `bridge`, read the following files (do not ask — just r
 
 1. **`users/grace-mar/self-memory.md`** — long-horizon pointers, open loops, calibrations
 2. **`users/grace-mar/recursion-gate.md`** — pending candidates (ids, summaries, status)
-3. **`users/grace-mar/last-dream.json`** — last dream summary (integrity, governance, contradictions, followups)
+3. **`users/grace-mar/last-dream.json`** — last dream summary (integrity, governance, digest counts, `tomorrow_inherits`, optional rollup / paths / civ-mem — hints only, not policy)
 4. **`docs/skill-work/work-coffee/work-coffee-history.md`** — recent coffee lane activity
 5. **`docs/skill-work/work-dream/work-dream-history.md`** — recent dream lane activity
 6. **`docs/skill-work/work-politics/work-politics-history.md`** — if exists, recent politics activity
@@ -118,8 +118,9 @@ Now that both repos are sealed and pushed, synthesize the readings from Step 1 i
 This is narrative, not a list. Write it from what you observed in the readings.]
 
 ## Carry-forward from last dream
-[Condensed from last-dream.json: integrity/governance status, contradiction count,
-followup items. If no dream ran or file is missing, say so.]
+[Condensed from last-dream.json: integrity/governance status, contradiction / reviewable counts,
+`tomorrow_inherits` (if present), optional note on coffee rollup / menu picks. If strict dream halted
+without rewriting the file, say the handoff may be stale. If no file, say so.]
 
 ## RECURSION-GATE snapshot
 [Pending count. Top 1-3 candidate ids with one-line summaries from the gate file.

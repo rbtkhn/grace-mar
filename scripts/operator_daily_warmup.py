@@ -34,6 +34,11 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
 try:
+    from dream_execution_paths import format_tomorrow_inherits_line
+except ImportError:
+    from scripts.dream_execution_paths import format_tomorrow_inherits_line
+
+try:
     from work_jiang.warmup_jiang_pulse import build_morning_pulse_lines
 except ImportError:
     build_morning_pulse_lines = None  # type: ignore[misc, assignment]
@@ -51,22 +56,65 @@ def _read_last_dream(user_dir: Path) -> dict | None:
         return None
 
 
-def _format_last_dream_block(dream: dict) -> list[str]:
-    """Build a short markdown block summarizing last night's dream handoff."""
+def _format_last_dream_block(dream: dict, *, verbose_dream: bool = False) -> list[str]:
+    """Summarize last night's dream handoff. Default is collapsed (~3 lines + header)."""
     lines = [
         "## Last dream (night handoff)",
         "",
     ]
-    generated = dream.get("generated_at", "unknown")
     ok = dream.get("ok", False)
     status = "pass" if ok else "**issues detected**"
-    lines.append(f"- Ran: {generated}")
-    lines.append(f"- Status: {status}")
-    lines.append(f"- Integrity: {'pass' if dream.get('integrity_ok') else 'FAIL'}")
-    lines.append(f"- Governance: {'pass' if dream.get('governance_ok') else 'FAIL'}")
-    lines.append(f"- Self-memory changed: {dream.get('self_memory_changed', False)}")
+    integ = "pass" if dream.get("integrity_ok") else "FAIL"
+    gov = "pass" if dream.get("governance_ok") else "FAIL"
     rc = dream.get("reviewable_count", 0)
     cc = dream.get("contradiction_count", 0)
+    tomorrow = str(dream.get("tomorrow_inherits") or "").strip()
+
+    if not verbose_dream:
+        lines.append(
+            f"- Status: {status}; integrity: {integ}; governance: {gov}"
+        )
+        lines.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+        if tomorrow:
+            lines.append(f"- {tomorrow}")
+        else:
+            paths = dream.get("execution_paths") or []
+            idx = int(dream.get("suggested_execution_path_index") or 0)
+            reason = str(dream.get("execution_path_suggestion_reason") or "calendar_mod3")
+            if (
+                isinstance(paths, list)
+                and paths
+                and all(isinstance(x, dict) for x in paths)
+            ):
+                lines.append(format_tomorrow_inherits_line(paths, idx, reason))
+            else:
+                lines.append(
+                    "- Tomorrow inherits: see `last-dream.json` or run warmup with `--verbose-dream`."
+                )
+        echoes = dream.get("civmem_echoes") or []
+        civ_missing = dream.get("civmem_index_missing")
+        if civ_missing:
+            lines.append(
+                "- Civ-mem: index missing (optional build) — no analogy echoes; not Record."
+            )
+        elif isinstance(echoes, list) and echoes:
+            lines.append(
+                f"- Civ-mem: {len(echoes)} analogy candidate(s) above overlap threshold — "
+                "not evidence or Record; use `--verbose-dream` for path/snippet."
+            )
+        else:
+            lines.append(
+                "- Civ-mem: no echoes above overlap threshold — not Record."
+            )
+        lines.append("")
+        return lines
+
+    generated = dream.get("generated_at", "unknown")
+    lines.append(f"- Ran: {generated}")
+    lines.append(f"- Status: {status}")
+    lines.append(f"- Integrity: {integ}")
+    lines.append(f"- Governance: {gov}")
+    lines.append(f"- Self-memory changed: {dream.get('self_memory_changed', False)}")
     lines.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
     dc = dream.get("artifact_draft_count", 0)
     pc = dream.get("promotable_draft_count", 0)
@@ -77,20 +125,26 @@ def _format_last_dream_block(dream: dict) -> list[str]:
     if isinstance(cr, dict):
         cnt = int(cr.get("count") or 0)
         modes = cr.get("by_mode") or {}
+        by_picked = cr.get("by_picked") or {}
         mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
+        picked_s = ""
+        if by_picked:
+            picked_s = "; menu picks: " + ", ".join(
+                f"{k}={v}" for k, v in sorted(by_picked.items())
+            )
         first = cr.get("first_ts") or "—"
         last = cr.get("last_ts") or "—"
         note = cr.get("note")
         extra = f" ({note})" if note else ""
         lines.append(
-            f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}; first={first} last={last}{extra}"
+            f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}{picked_s}; first={first} last={last}{extra}"
         )
 
     paths = dream.get("execution_paths")
     idx = int(dream.get("suggested_execution_path_index") or 0)
     if isinstance(paths, list) and paths:
         lines.append("")
-        lines.append("**Execution paths (suggested index uses tomorrow's calendar day):**")
+        lines.append("**Execution paths (suggested uses integrity / gate backlog / calendar):**")
         for i, p in enumerate(paths):
             if not isinstance(p, dict):
                 continue
@@ -101,6 +155,9 @@ def _format_last_dream_block(dream: dict) -> list[str]:
                 lines.append(f"- **{i + 1}.** {title}{mark}: `{fm}`")
             else:
                 lines.append(f"- **{i + 1}.** {title}{mark}")
+    if tomorrow:
+        lines.append("")
+        lines.append(f"- **Tomorrow inherits:** {tomorrow}")
 
     echoes = dream.get("civmem_echoes") or []
     disc = str(dream.get("civmem_disclaimer") or "").strip()
@@ -112,7 +169,9 @@ def _format_last_dream_block(dream: dict) -> list[str]:
                 continue
             ov = e.get("overlap", "")
             pth = e.get("path", "")
-            lines.append(f"  - overlap={ov} `{pth}`")
+            lbl = str(e.get("analogy_label") or "").strip()
+            lbl_s = f" — {lbl}" if lbl else ""
+            lines.append(f"  - overlap={ov} `{pth}`{lbl_s}")
 
     followups = dream.get("followups") or []
     if followups:
@@ -202,7 +261,7 @@ def _priority_list(
     return deduped[:3]
 
 
-def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
+def build_operator_daily_warmup(user_id: str = "grace-mar", *, verbose_dream: bool = False) -> str:
     user_dir = USERS_DIR / user_id
     recursion_gate = _read(user_dir / "recursion-gate.md")
     evidence = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
@@ -257,7 +316,7 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
     last_dream = _read_last_dream(user_dir)
     if last_dream:
         lines.append("")
-        lines.extend(_format_last_dream_block(last_dream))
+        lines.extend(_format_last_dream_block(last_dream, verbose_dream=verbose_dream))
 
     lines.append("")
     if build_morning_pulse_lines is not None:
@@ -335,8 +394,13 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Generate a daily operator warmup for Grace-Mar.")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
+    parser.add_argument(
+        "--verbose-dream",
+        action="store_true",
+        help="Expand last-dream handoff (paths, civ-mem detail, followups). Default is collapsed.",
+    )
     args = parser.parse_args()
-    print(build_operator_daily_warmup(user_id=args.user))
+    print(build_operator_daily_warmup(user_id=args.user, verbose_dream=args.verbose_dream))
     return 0
 
 

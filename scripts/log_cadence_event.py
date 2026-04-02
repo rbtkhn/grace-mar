@@ -10,6 +10,8 @@ Usage:
       --kv integrity=pass governance=pass mem_changed=true
   python3 scripts/log_cadence_event.py --kind coffee -u grace-mar --ok --mode work-start \
       --kv gate_pending=0
+  python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok \
+      --kv picked=E steward=gate
   python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok \
       --kv refs=aacec9e,4eaf1f4
 """
@@ -25,12 +27,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work-cadence-events.md"
 ANCHOR = "_(Append below this line.)_"
-KINDS = ("coffee", "dream", "bridge")
+KINDS = ("coffee", "dream", "bridge", "coffee_pick")
 
 HEADER = (
     "# Cadence events\n"
     "\n"
-    "> Append-only audit of **coffee**, **dream**, and **bridge** runs.\n"
+    "> Append-only audit of **coffee**, **coffee_pick**, **dream**, and **bridge** runs.\n"
     "> **Not** Record truth. **Not** self-memory. **Not** a replacement for "
     "`last-dream.json` or `session-transcript.md`.\n"
     ">\n"

@@ -22,6 +22,7 @@ Usage
     python3 scripts/operator_coffee.py -u grace-mar --mode light
     python3 scripts/operator_coffee.py -u grace-mar --mode closeout
     python3 scripts/operator_coffee.py -u grace-mar --mode reentry --compact
+    python3 scripts/operator_coffee.py -u grace-mar --verbose-dream   # full last-dream block in daily warmup
 """
 
 from __future__ import annotations
@@ -92,6 +93,11 @@ def main() -> int:
         action="store_true",
         help="In minimal mode, also run operator_daily_warmup",
     )
+    p.add_argument(
+        "--verbose-dream",
+        action="store_true",
+        help="Pass --verbose-dream to operator_daily_warmup.py (full last-dream block)",
+    )
     args = p.parse_args()
     user = args.user
     py = sys.executable
@@ -103,6 +109,8 @@ def main() -> int:
         print(f"Gate cleanup: moved {len(swept)} rejected candidate(s) to Processed: {', '.join(swept)}")
 
     warmup = [py, "scripts/operator_daily_warmup.py", "-u", user]
+    if args.verbose_dream:
+        warmup.append("--verbose-dream")
     harness = [py, "scripts/harness_warmup.py", "-u", user]
     harness_compact = [py, "scripts/harness_warmup.py", "-u", user, "--compact"]
     handoff = [py, "scripts/operator_handoff_check.py", "-u", user]

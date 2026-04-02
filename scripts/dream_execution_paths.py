@@ -16,18 +16,34 @@ def build_execution_paths(
     reviewable_count: int = 0,
     contradiction_count: int = 0,
     coffee_count_24h: int = 0,
-) -> tuple[list[dict[str, Any]], int]:
+    gate_pending_count: int = 0,
+    max_pending_candidates: int | None = None,
+) -> tuple[list[dict[str, Any]], int, str]:
     """
-    Return (paths, suggested_index) where suggested_index is 0..2 for tomorrow (calendar).
-    Paths are stable order: today_field, build, steward.
+    Return (paths, suggested_index, suggestion_reason).
+
+    suggested_index is 0..2. Paths are stable order: today_field, build, steward.
+
+    Suggestion rule (deterministic): if integrity or governance failed this run,
+    suggest Steward (2). Else if gate pending exceeds max_pending_candidates (when
+    configured), suggest Steward (2). Else use calendar mod-3 on tomorrow's yearday.
+    suggestion_reason is one of: integrity_or_governance_fail, gate_backlog, calendar_mod3.
     """
     if now_utc is None:
         now_utc = datetime.now(timezone.utc)
     if now_utc.tzinfo is None:
         now_utc = now_utc.replace(tzinfo=timezone.utc)
 
-    tomorrow = (now_utc.date() + timedelta(days=1))
+    tomorrow = now_utc.date() + timedelta(days=1)
     suggested_index = (tomorrow.timetuple().tm_yday - 1) % 3
+    suggestion_reason = "calendar_mod3"
+
+    if not integrity_ok or not governance_ok:
+        suggested_index = 2
+        suggestion_reason = "integrity_or_governance_fail"
+    elif max_pending_candidates is not None and gate_pending_count > int(max_pending_candidates):
+        suggested_index = 2
+        suggestion_reason = "gate_backlog"
 
     signals_field: list[str] = []
     if coffee_count_24h >= 5:
@@ -84,4 +100,28 @@ def build_execution_paths(
         },
     ]
 
-    return paths, suggested_index
+    return paths, suggested_index, suggestion_reason
+
+
+def format_tomorrow_inherits_line(
+    paths: list[dict[str, Any]],
+    suggested_index: int,
+    suggestion_reason: str,
+) -> str:
+    """Single-line handoff for morning warmup (collapsed dream block)."""
+    idx = max(0, min(suggested_index, len(paths) - 1)) if paths else 0
+    p = paths[idx] if paths else {}
+    title = str(p.get("title") or p.get("id") or "execution path")
+    if suggestion_reason == "integrity_or_governance_fail":
+        return (
+            f"Tomorrow inherits (hint): **{title}** — integrity or governance did not fully pass this dream; "
+            "not policy or Record."
+        )
+    if suggestion_reason == "gate_backlog":
+        return (
+            f"Tomorrow inherits (hint): **{title}** — gate backlog over `max_pending_candidates`; "
+            "not policy or Record."
+        )
+    return (
+        f"Tomorrow inherits (hint): **{title}** — calendar rotation; not policy or Record."
+    )

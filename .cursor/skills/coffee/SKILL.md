@@ -69,7 +69,7 @@ If the operator **explicitly** wants **both** full warmup **and** signing-off in
 
 Add `--compact` for shorter harness output. Individual scripts (`operator_daily_warmup.py`, `harness_warmup.py`, `operator_handoff_check.py`, `operator_reentry_stack.py`) are still available.
 
-**Dream handoff:** If `dream` ran overnight, the daily warmup automatically includes a **"Last dream (night handoff)"** block from `users/grace-mar/last-dream.json`.
+**Dream handoff:** If `dream` ran overnight, the daily warmup automatically includes a **"Last dream (night handoff)"** block from `users/grace-mar/last-dream.json`. **Default:** that block is **collapsed** (status, digest counts, tomorrow hint, one civ-mem line). For the full paths / snippets / followups list, run `python3 scripts/operator_daily_warmup.py -u grace-mar --verbose-dream`, or `operator_coffee.py` / `operator_reentry_stack.py` with **`--verbose-dream`**. When pasting warmup for the operator, prefer **collapsed** unless they ask for detail.
 
 **Step 1 deliverables (work-start):** Warmup brief (priorities, gate, work-politics, integrity), branch snapshot, daily brief + intel defer line (path pattern + **menu A — Today** when ready), optional PH/Jiang line. **No** Polymarket / poll / Massie blocks in Step 1 unless the operator explicitly asked in the same message.
 
@@ -85,13 +85,15 @@ The operator may say **`coffee`** **more than once per calendar day** for reorie
 
 Immediately **after** Step 1 content, output the fixed **coffee** menu: **five** lettered options **A through E** (present **A, B, C, D, E**). **There is no separate “close” letter** — the operator exits the hub by continuing in normal workflow, saying **no menu**, or starting the next task.
 
+**Micro-hints (one line under the A–E list):** `Micro-hints: B+skills/meta | E=gate/template/boundary`
+
 **Quick reference (modes):**
 
 - **A. Today** — Daily brief (generator + §1d Putin only when chosen) + work-politics intel (KY-4 Polymarket, polls, Massie X per cadence), brief registry / campaign / queue — **one** next step. **Companion survey** defaults here when the operator opened with **`coffee survey`**.
 - **B. Build** — **work-dev** + **repository hygiene**: `docs/skill-work/work-dev/`, [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md), [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), branch snapshot, `git status`, exports/integrity pointers — **one** prescribed next action. **Skills / meta pipeline** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync): say **`skills`** or **`meta`** in the same turn as **B**, or ask for skills depth after **Build** — not a sixth menu letter.
 - **C. Compass** — **work-strategy** + **work-strategy-rome** (ROME-PASS, manifest, exemplars, notes) — **one** develop step. Vatican / Holy See / ROME-PASS work lives **here**, not under **Today** alone.
 - **D. Book** — **work-jiang / Predictive History** — **one** next step.
-- **E. Steward** — **RECURSION-GATE** + **template / boundary audit** (companion-self parity, fork isolation, optional `validate-integrity.py`). **First line of the reply:** state whether this turn is **gate**, **template/boundary**, or **both** if the operator asked. **Signing-off Step 1:** if the operator picks **E** **without** naming a steward sub-track → **system pick** (one clear recommendation among gate, parity, exports, survey pointer, Rome carryover, etc.). When the turn includes **template/boundary / companion-self parity**, end with the **Reconciliation code** block per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
+- **E. Steward** — **RECURSION-GATE** + **template / boundary audit** (companion-self parity, fork isolation, optional `validate-integrity.py`). **Mandatory single-track default:** if the operator says **E** only (no sub-track), run **exactly one** track this turn: **gate** when there is at least one pending gate candidate; otherwise **template/boundary**. **`both`** (gate and template/boundary in one turn) is allowed **only** when the operator explicitly asks for both. **First line of the reply:** name the track you are executing (**gate** or **template/boundary**). When the turn includes **template/boundary / companion-self parity**, end with the **Reconciliation code** block per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
 
 **Re-offer rules:** After **A, B, or E**, re-offer the full **A–E** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**.
 
@@ -106,6 +108,10 @@ Sessions begin when the operator says **`coffee`** (optional modifiers). To keep
 ## Cadence audit
 
 Each successful coffee run appends one line to `docs/skill-work/work-cadence/work-cadence-events.md` via `scripts/log_cadence_event.py`. This is automatic — no operator action required.
+
+**After the operator states their menu letter** (and steward track if **E**), the assistant may append a **`coffee_pick`** cadence line (same file) for rollup:  
+`python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=E steward=gate`  
+(`steward=` only when `picked=E`; values: `gate`, `template`, or `both`.) Optional: `scripts/log_operator_choice.py --context COFFEE --picked E` for `session-transcript.md`.
 
 ## Related files
 

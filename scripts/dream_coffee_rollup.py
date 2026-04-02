@@ -18,6 +18,10 @@ DEFAULT_EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work
 _COFFEE_LINE = re.compile(
     r"^- \*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC\*\* — coffee \(([^)]+)\)\s*(.*)$"
 )
+# - **2026-04-02 20:46 UTC** — coffee_pick (grace-mar) picked=E steward=gate
+_COFFEE_PICK_LINE = re.compile(
+    r"^- \*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC\*\* — coffee_pick \(([^)]+)\)\s*(.*)$"
+)
 
 
 def _parse_trailing_kv(rest: str) -> tuple[bool | None, str | None, dict[str, str]]:
@@ -41,6 +45,41 @@ def _parse_trailing_kv(rest: str) -> tuple[bool | None, str | None, dict[str, st
 def _parse_ts(date_part: str, time_part: str) -> datetime:
     dt = datetime.strptime(f"{date_part} {time_part}", "%Y-%m-%d %H:%M").replace(tzinfo=timezone.utc)
     return dt
+
+
+def parse_coffee_pick_cadence_lines(
+    markdown: str,
+    *,
+    user_id: str,
+    window_start: datetime,
+    window_end: datetime,
+    max_events: int = 40,
+) -> list[dict[str, Any]]:
+    """Return coffee_pick events for user_id with ts in [window_start, window_end], oldest first."""
+    out: list[dict[str, Any]] = []
+    for line in markdown.splitlines():
+        m = _COFFEE_PICK_LINE.match(line.strip())
+        if not m:
+            continue
+        uid = m.group(3).strip()
+        if uid != user_id:
+            continue
+        ts = _parse_ts(m.group(1), m.group(2))
+        if ts < window_start or ts > window_end:
+            continue
+        _ok, _mode, kv = _parse_trailing_kv(m.group(4).strip())
+        picked = (kv.get("picked") or "").strip().upper()[:1]
+        steward = (kv.get("steward") or "").strip().lower() or None
+        if picked not in {"A", "B", "C", "D", "E"}:
+            continue
+        row: dict[str, Any] = {"ts_iso": ts.isoformat(), "picked": picked}
+        if steward in {"gate", "template", "both"}:
+            row["steward"] = steward
+        out.append(row)
+    out.sort(key=lambda r: r["ts_iso"])
+    if len(out) > max_events:
+        out = out[-max_events:]
+    return out
 
 
 def parse_coffee_cadence_lines(
@@ -105,6 +144,8 @@ def rollup_coffee_24h(
             "span_hours": None,
             "by_mode": {},
             "runs": [],
+            "picks": [],
+            "by_picked": {},
             "note": "no cadence file",
         }
 
@@ -116,11 +157,22 @@ def rollup_coffee_24h(
         window_end=window_end,
         max_runs=max_runs,
     )
+    picks = parse_coffee_pick_cadence_lines(
+        text,
+        user_id=user_id,
+        window_start=window_start,
+        window_end=window_end,
+    )
 
     by_mode: dict[str, int] = {}
     for r in runs:
         m = r["mode"]
         by_mode[m] = by_mode.get(m, 0) + 1
+
+    by_picked: dict[str, int] = {}
+    for r in picks:
+        letter = r["picked"]
+        by_picked[letter] = by_picked.get(letter, 0) + 1
 
     first_ts = runs[0]["ts_iso"] if runs else None
     last_ts = runs[-1]["ts_iso"] if runs else None
@@ -140,4 +192,6 @@ def rollup_coffee_24h(
         "span_hours": span_hours,
         "by_mode": by_mode,
         "runs": runs,
+        "picks": picks,
+        "by_picked": by_picked,
     }

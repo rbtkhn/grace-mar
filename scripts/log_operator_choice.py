@@ -8,6 +8,7 @@ Operator-invoked only — no automatic logging from Voice/analyst.
 Usage:
   python3 scripts/log_operator_choice.py -u grace-mar --context WORK --picked A --tags "~15m,gate"
   python3 scripts/log_operator_choice.py -u grace-mar --context GOOD_MORNING --picked "2" --note "deep work"
+  python3 scripts/log_operator_choice.py -u grace-mar --context COFFEE --picked E --tags "steward=gate"
 """
 
 from __future__ import annotations
@@ -75,7 +76,7 @@ def main() -> int:
     ap.add_argument(
         "--context",
         required=True,
-        choices=("WORK", "DAILY", "GOOD_MORNING"),
+        choices=("WORK", "DAILY", "GOOD_MORNING", "COFFEE"),
         help="Menu family",
     )
     ap.add_argument("--picked", required=True, help="Label (e.g. A) or short text")

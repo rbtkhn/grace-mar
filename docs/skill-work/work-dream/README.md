@@ -86,15 +86,21 @@ auto_dream.py
 | `artifact_draft_count` | int | Artifact drafts generated |
 | `promotable_draft_count` | int | Drafts ready for promotion |
 | `followups` | string[] | Human-readable follow-up items for morning |
-| `coffee_rollup_24h` | object | Rolling 24h summary of `coffee` lines from [`work-cadence-events.md`](../work-cadence/work-cadence-events.md) (`count`, `by_mode`, `first_ts`, `last_ts`, `runs`, …) |
+| `coffee_rollup_24h` | object | Rolling 24h summary of `coffee` lines from [`work-cadence-events.md`](../work-cadence/work-cadence-events.md) (`count`, `by_mode`, `by_picked`, `picks`, `first_ts`, `last_ts`, `runs`, …) |
 | `execution_paths` | object[] | Three deterministic morning paths (`today_field`, `build`, `steward`) with `first_move`, `stop_rule`, `signals_used` |
-| `suggested_execution_path_index` | int | 0–2; highlights one path for **tomorrow’s** calendar day: `(tomorrow_tm_yday - 1) % 3` |
-| `civmem_echoes` | object[] | Token-overlap hits from in-repo [`docs/civilization-memory/`](../../civilization-memory/README.md) (empty if index missing) |
+| `suggested_execution_path_index` | int | 0–2; **Steward (2)** if integrity or governance failed this run, else **Steward** if gate pending > `max_pending_candidates` in `config/fork-config.json`, else **calendar** `(tomorrow_tm_yday - 1) % 3` |
+| `execution_path_suggestion_reason` | string | `integrity_or_governance_fail` \| `gate_backlog` \| `calendar_mod3` |
+| `tomorrow_inherits` | string | One-line operational hint for morning (not policy or Record) |
+| `civmem_echoes` | object[] | Default **one** token-overlap hit above threshold from in-repo [`docs/civilization-memory/`](../../civilization-memory/README.md); each echo includes `analogy_label` (empty if index missing or no qualifying hit) |
 | `civmem_disclaimer` | string | States analogical / non-Record scope |
+
+**Doctrine:** Dream suggestions (paths, civ-mem, rollup) are **operational hints only** — not truth, not priority, not a substitute for gate review, integrity, companion approval, or operator judgment. Cadence artifacts are not a shadow Record.
 
 Clients should **ignore unknown keys** on future dream versions.
 
-Coffee Step 1 (`operator_daily_warmup.py`) reads this file and renders a **"Last dream (night handoff)"** block. The file is classified as runtime noise in `operator_handoff_check.py` — it does not need to be committed.
+Coffee Step 1 (`operator_daily_warmup.py`) reads this file and renders a **collapsed** **"Last dream (night handoff)"** block by default (`--verbose-dream` for full detail). The file is classified as runtime noise in `operator_handoff_check.py` — it does not need to be committed.
+
+**Strict halt:** When `auto_dream.py --strict` stops early on integrity/governance failure, a new `last-dream.json` may not be written; morning pickup can reflect an older handoff until the next successful run.
 
 ---
 

@@ -7,6 +7,7 @@ Handoff and operator_daily_warmup overlap somewhat (gate counts, dirty paths); t
 Usage:
     python3 scripts/operator_reentry_stack.py -u grace-mar
     python3 scripts/operator_reentry_stack.py -u grace-mar --compact   # short harness block only
+    python3 scripts/operator_reentry_stack.py -u grace-mar --verbose-dream   # expand last-dream in daily warmup
 """
 
 from __future__ import annotations
@@ -33,13 +34,24 @@ def main() -> int:
         action="store_true",
         help="Pass --compact to harness_warmup.py only",
     )
+    p.add_argument(
+        "--verbose-dream",
+        action="store_true",
+        help="Pass --verbose-dream to operator_daily_warmup.py (full last-dream block)",
+    )
     args = p.parse_args()
     user = args.user
     py = sys.executable
 
     steps: list[list[str]] = [
         [py, "scripts/operator_handoff_check.py", "-u", user],
-        [py, "scripts/operator_daily_warmup.py", "-u", user],
+        [
+            py,
+            "scripts/operator_daily_warmup.py",
+            "-u",
+            user,
+            *([] if not args.verbose_dream else ["--verbose-dream"]),
+        ],
     ]
     hw = [py, "scripts/harness_warmup.py", "-u", user]
     if args.compact:

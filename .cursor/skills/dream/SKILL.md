@@ -93,7 +93,7 @@ Return a short night-close brief with:
 - governance: pass/fail
 - contradiction digest: counts
 - artifact drafts: none / count
-- **When present in `last-dream.json`:** coffee **24h rollup** (how many `coffee` cadence lines in the window; mode mix), **three execution paths** (which index is suggested for tomorrow’s calendar day), **civ-mem echoes** (token overlap from in-repo `docs/civilization-memory/` — analogical only; cite the disclaimer)
+- **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
 - one sentence on what tomorrow inherits from this run
 
 If nothing important changed, say so plainly. A quiet run is success.
@@ -125,6 +125,14 @@ Or, when something needs attention:
 
 Tonight's pass surfaced one contradiction worth governed review tomorrow; nothing was merged automatically.
 ```
+
+## Governance doctrine (soft boundary)
+
+**Suggestions** emitted by dream (execution path index, `tomorrow_inherits`, civ-mem echoes, coffee rollup) are **operational hints only**. They do **not** establish truth, priority, or policy, and must **never** substitute for gate review, integrity status, companion approval, or operator judgment. Cadence and handoff files are **not** a shadow Record.
+
+## Strict halt and `last-dream.json`
+
+When **`auto_dream.py --strict`** halts because integrity or governance failed, a **new** `last-dream.json` is **not** written (the previous file, if any, is left unchanged). Morning pickup may show an **older** handoff until the next successful dream. Rotation overrides, civ-mem echoes, and rollup fields apply to **successful** writes only.
 
 ## Guardrails
 
@@ -173,7 +181,7 @@ Usually one `dream` session per day is normal.
 
 **One-command bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs dream + handoff-check. If also closing the session, say `bridge` afterward.
 
-**Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays follow-ups from last night's dream — contradictions to review, artifact drafts to promote, integrity/governance status.
+**Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays a **collapsed** “Last dream” block by default; use **`--verbose-dream`** for full paths, civ-mem snippets, and followups.
 
 For the full decision tree including signing-off **`coffee`** (lightweight alternative to bridge), see [bridge SKILL.md](../bridge/SKILL.md).
 
