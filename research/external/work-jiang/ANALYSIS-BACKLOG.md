@@ -121,6 +121,7 @@ Sources missing or needing analysis, ordered by priority.
 | sh-01 | secret-history | Secret History #1: How Power Works (4K R… | complete | missing | missing | sh-ch01 | 50 | mapped to sh-ch01 |
 | gt-01 | game-theory | Game Theory #1: The Dating Game | complete | missing | missing | gt-ch01 | 50 | mapped to gt-ch01 |
 | gt-16 | game-theory | Game Theory #16: Pax Judaica Rising | complete | missing | missing | gt-ch16 | 50 | mapped to gt-ch16 |
+| gt-18 | game-theory | Game Theory #18: Trump World Order | complete | missing | missing | gt-ch18 | 50 | mapped to gt-ch18; outline pending |
 | gb-01 | great-books | Great Books #1: Secrets of the Universe | complete | missing | missing | gb-ch01 | 50 | mapped to gb-ch01 |
 | gb-02 | great-books | Great Books #2: Homer and the Invention … | complete | missing | missing | gb-ch02 | 50 | mapped to gb-ch02 |
 | gb-03 | great-books | Great Books #3: Poets and Prophets | complete | missing | missing | gb-ch03 | 50 | mapped to gb-ch03 |

@@ -2357,7 +2357,7 @@ volume_4_game_theory:
     instruction: End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md — divergence IDs from divergences.jsonl where linked; not chapter_end_predictions (Volume I only) unless Part II policy adopts prediction adjudication.
   part_2:
     title: Part II — method TBD (Game Theory)
-    after_chapter: gt-ch17
+    after_chapter: gt-ch18
     description: Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-first default for Part I boxes).
   book:
     chapters:
@@ -2733,6 +2733,28 @@ volume_4_game_theory:
       outline_path: chapters-volume-iv/gt-ch17/outline.md
       draft_path: chapters-volume-iv/gt-ch17/draft.md
       analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: gt-ch18
+      title: 'Game Theory #18: Trump World Order'
+      purpose: Book chapter for Game Theory lecture 18 — Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume IV default).
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - gt-18
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Draft chapter outline in chapters-volume-iv/gt-ch18/outline.md
+      outline_path: chapters-volume-iv/gt-ch18/outline.md
+      draft_path: chapters-volume-iv/gt-ch18/draft.md
+      analysis_ready: true
       quotes_ready: false
       requires_prediction_review: false
 

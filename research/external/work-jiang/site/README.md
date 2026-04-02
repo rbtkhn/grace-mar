@@ -7,6 +7,7 @@
 | File | Role |
 |------|------|
 | `index.html` | Single-page site: hero, attribution strip, audience paths, volume grid, book pointers |
+| `volume-01.html` | Volume I (Geo-Strategy) reading path: all **20** chapters in order with curated lecture + YouTube links (zero-padded names sort through two-digit volume counts) |
 | `assets/styles.css` | Typography and layout (serif + sans; light/dark via `prefers-color-scheme`) |
 
 ## View locally

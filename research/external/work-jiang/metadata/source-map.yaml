@@ -241,6 +241,8 @@ chapter_map:
     source_ids: [gt-16]
   gt-ch17:
     source_ids: [gt-17]
+  gt-ch18:
+    source_ids: [gt-18]
   gb-ch01:
     source_ids: [gb-01]
   gb-ch02:

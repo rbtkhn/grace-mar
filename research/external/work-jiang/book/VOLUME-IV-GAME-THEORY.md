@@ -1,17 +1,17 @@
 # Predictive History — Volume IV: Game Theory
 
-**Corpus:** `series: game-theory` in `metadata/sources.yaml`; `source_id` `gt-01` … `gt-16`; curated files `lectures/game-theory-NN-*.md` (wired in `build_source_registry.py`, `validate_work_jiang.py`, ASR normalizer).  
-**Status:** Part I **sources** are complete for the public **Game Theory #1–#16** run (`@PredictiveHistory`; latest ingest includes **#16**). Transcripts ingested and `validate_work_jiang.py` clean. **Book** Part I (draft chapters), per-lecture **analysis** files, **chapter mapping**, and **Part II** evaluation mode remain open.
+**Corpus:** `series: game-theory` in `metadata/sources.yaml`; `source_id` `gt-01` … `gt-18`; curated files `lectures/game-theory-NN-*.md` (wired in `build_source_registry.py`, `validate_work_jiang.py`, ASR normalizer).  
+**Status:** Part I **sources** are complete for the public **Game Theory #1–#18** run (`@PredictiveHistory`; latest ingest includes **#18**). Transcripts ingested and `validate_work_jiang.py` clean. **Book** Part I (draft chapters), per-lecture **analysis** files, **chapter mapping**, and **Part II** evaluation mode remain open.
 
 ## Corpus snapshot (registry)
 
 | Range | `source_id` | Lecture path pattern |
 |-------|-------------|----------------------|
-| Game Theory #1–#16 | `gt-01` … `gt-16` | `lectures/game-theory-NN-*.md` |
+| Game Theory #1–#18 | `gt-01` … `gt-18` | `lectures/game-theory-NN-*.md` |
 
 Each row: `transcript: complete`, `curated_lecture: complete`, `analysis_path: null`, `chapter_mapping: not_started` until the book lane catches up.
 
-**Book stub (machine-readable):** `metadata/book-architecture.yaml` → key `volume_4_game_theory` (15 chapter placeholders `gt-ch01`–`gt-ch15` → `gt-01`–`gt-15`; extend when promoting #16+ into book chapters). Top-level `project` / `book` in that file remain Volume I (Geo-Strategy) for existing renderers until the stub is promoted.
+**Book stub (machine-readable):** `metadata/book-architecture.yaml` → key `volume_4_game_theory` (Part I chapters `gt-ch01`–`gt-ch18` mapped to `gt-01`–`gt-18`). Top-level `project` / `book` in that file remain Volume I (Geo-Strategy) for existing renderers where noted.
 
 ## Volume intent
 
@@ -28,7 +28,7 @@ Volume IV extends the Predictive History multivolume architecture with the worki
    - a distinct method with criteria.
 5. Add chapter box template reference (prediction, divergence, or new box type).
 
-*When new Game Theory uploads ship beyond **#16**, add `gt-17` … in `sources.yaml`, ingest per [WORKFLOW-transcripts.md](../WORKFLOW-transcripts.md), and refresh [CHANNEL-VIDEO-INDEX.md](../../youtube-channels/predictive-history/CHANNEL-VIDEO-INDEX.md).*
+*When new Game Theory uploads ship beyond the current run, add `gt-NN` in `sources.yaml`, ingest per [WORKFLOW-transcripts.md](../WORKFLOW-transcripts.md), and refresh [CHANNEL-VIDEO-INDEX.md](../../youtube-channels/predictive-history/CHANNEL-VIDEO-INDEX.md).*
 
 ## Relation to other volumes
 

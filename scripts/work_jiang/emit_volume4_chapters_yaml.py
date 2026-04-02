@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Emit full `volume_4_game_theory` YAML block from gt-* rows in sources.yaml.
 
-Kind: exposition 1–7, analysis 8–17; priority medium for all chapters until quote/counter-reading wiring (comparative validator).
+Kind: exposition 1–7, analysis 8+; priority medium for all chapters until quote/counter-reading wiring (comparative validator).
 
 Usage:
   python3 scripts/work_jiang/emit_volume4_chapters_yaml.py > /tmp/v4.yaml
@@ -21,9 +21,9 @@ WORK = ROOT / "research" / "external" / "work-jiang"
 # Episodes 1–7 exposition; 8+ analysis. Priority: all analysis = medium until
 # chapter-quote-links + counter-reading-links cover the chapter (validate_comparative_layer).
 _KIND_EP: dict[int, str] = {i: "exposition" for i in range(1, 8)}
-_KIND_EP.update({i: "analysis" for i in range(8, 18)})
+_KIND_EP.update({i: "analysis" for i in range(8, 100)})
 
-_PRIORITY_EP: dict[int, str] = {i: "medium" for i in range(1, 18)}
+_PRIORITY_EP: dict[int, str] = {i: "medium" for i in range(1, 100)}
 
 
 def main() -> int:
