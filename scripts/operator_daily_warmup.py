@@ -27,6 +27,11 @@ except ImportError:
     from scripts.operator_depth_hint import velocity_oneliner
     from scripts.work_politics_ops import get_work_politics_snapshot
 
+try:
+    from context_budget import get_bool, get_int, load_context_budget
+except ImportError:
+    from scripts.context_budget import get_bool, get_int, load_context_budget
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 USERS_DIR = REPO_ROOT / "users"
 _SCRIPTS = REPO_ROOT / "scripts"
@@ -46,6 +51,20 @@ except ImportError:
 LAST_DREAM_FILENAME = "last-dream.json"
 
 
+def _compress_lines(lines: list[str], *, max_lines: int) -> list[str]:
+    """Truncate body lines; max_lines <= 0 means no compression."""
+    if max_lines <= 0 or len(lines) <= max_lines:
+        return list(lines)
+    kept = lines[: max_lines - 1]
+    overflow = len(lines) - (max_lines - 1)
+    kept.append(f"(+{overflow} more line(s) omitted)")
+    return kept
+
+
+def _coffee_context_budget() -> dict:
+    return load_context_budget("coffee")
+
+
 def _read_last_dream(user_dir: Path) -> dict | None:
     path = user_dir / LAST_DREAM_FILENAME
     if not path.exists():
@@ -56,8 +75,15 @@ def _read_last_dream(user_dir: Path) -> dict | None:
         return None
 
 
-def _format_last_dream_block(dream: dict, *, verbose_dream: bool = False) -> list[str]:
+def _format_last_dream_block(
+    dream: dict,
+    *,
+    verbose_dream: bool = False,
+    show_civ_mem: bool | None = None,
+    show_rollup: bool | None = None,
+) -> list[str]:
     """Summarize last night's dream handoff. Default is collapsed (~3 lines + header)."""
+    coffee_budget = _coffee_context_budget()
     lines = [
         "## Last dream (night handoff)",
         "",
@@ -70,13 +96,27 @@ def _format_last_dream_block(dream: dict, *, verbose_dream: bool = False) -> lis
     cc = dream.get("contradiction_count", 0)
     tomorrow = str(dream.get("tomorrow_inherits") or "").strip()
 
+    max_body = get_int(coffee_budget, "max_last_dream_lines", 12)
+    if show_civ_mem is None:
+        show_civ_mem = get_bool(coffee_budget, "show_civ_mem_by_default", False)
+    if show_rollup is None:
+        show_rollup = get_bool(coffee_budget, "show_rollup_by_default", False)
+
     if not verbose_dream:
-        lines.append(
+        body: list[str] = []
+        body.append(
             f"- Status: {status}; integrity: {integ}; governance: {gov}"
         )
-        lines.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+        body.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+        if show_rollup:
+            cr = dream.get("coffee_rollup_24h")
+            if isinstance(cr, dict):
+                cnt = int(cr.get("count") or 0)
+                modes = cr.get("by_mode") or {}
+                mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
+                body.append(f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}")
         if tomorrow:
-            lines.append(f"- {tomorrow}")
+            body.append(f"- {tomorrow}")
         else:
             paths = dream.get("execution_paths") or []
             idx = int(dream.get("suggested_execution_path_index") or 0)
@@ -86,26 +126,33 @@ def _format_last_dream_block(dream: dict, *, verbose_dream: bool = False) -> lis
                 and paths
                 and all(isinstance(x, dict) for x in paths)
             ):
-                lines.append(format_tomorrow_inherits_line(paths, idx, reason))
+                body.append(format_tomorrow_inherits_line(paths, idx, reason))
             else:
-                lines.append(
+                body.append(
                     "- Tomorrow inherits: see `last-dream.json` or run warmup with `--verbose-dream`."
                 )
-        echoes = dream.get("civmem_echoes") or []
-        civ_missing = dream.get("civmem_index_missing")
-        if civ_missing:
-            lines.append(
-                "- Civ-mem: index missing (optional build) — no analogy echoes; not Record."
-            )
-        elif isinstance(echoes, list) and echoes:
-            lines.append(
-                f"- Civ-mem: {len(echoes)} analogy candidate(s) above overlap threshold — "
-                "not evidence or Record; use `--verbose-dream` for path/snippet."
-            )
-        else:
-            lines.append(
-                "- Civ-mem: no echoes above overlap threshold — not Record."
-            )
+        if show_civ_mem:
+            suppressed = str(dream.get("civmem_suppressed_reason") or "").strip()
+            if suppressed:
+                body.append(f"- Civ-mem: suppressed ({suppressed}) — not Record.")
+            else:
+                echoes = dream.get("civmem_echoes") or []
+                civ_missing = dream.get("civmem_index_missing")
+                if civ_missing:
+                    body.append(
+                        "- Civ-mem: index missing (optional build) — no analogy echoes; not Record."
+                    )
+                elif isinstance(echoes, list) and echoes:
+                    body.append(
+                        f"- Civ-mem: {len(echoes)} analogy candidate(s) above overlap threshold — "
+                        "not evidence or Record; use `--verbose-dream` for path/snippet."
+                    )
+                else:
+                    body.append(
+                        "- Civ-mem: no echoes above overlap threshold — not Record."
+                    )
+        body = _compress_lines(body, max_lines=max_body)
+        lines.extend(body)
         lines.append("")
         return lines
 
@@ -261,7 +308,13 @@ def _priority_list(
     return deduped[:3]
 
 
-def build_operator_daily_warmup(user_id: str = "grace-mar", *, verbose_dream: bool = False) -> str:
+def build_operator_daily_warmup(
+    user_id: str = "grace-mar",
+    *,
+    verbose_dream: bool = False,
+    show_civ_mem: bool | None = None,
+    show_rollup: bool | None = None,
+) -> str:
     user_dir = USERS_DIR / user_id
     recursion_gate = _read(user_dir / "recursion-gate.md")
     evidence = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
@@ -273,7 +326,9 @@ def build_operator_daily_warmup(user_id: str = "grace-mar", *, verbose_dream: bo
     fork_cfg = load_fork_config()
     max_pending = fork_cfg.get("max_pending_candidates")
     last_activity = _last_activity_oneliner(evidence) or "_none parsed_"
-    session_tail = _session_lines_tail(session, 3)
+    coffee_budget = _coffee_context_budget()
+    tail_n = get_int(coffee_budget, "max_session_tail_lines", 3)
+    session_tail = _session_lines_tail(session, tail_n)
     politics_snapshot = get_work_politics_snapshot(user_id)
     integrity_errors = _integrity_errors(user_id)
     dirty_files = _git_status_lines()
@@ -314,9 +369,16 @@ def build_operator_daily_warmup(user_id: str = "grace-mar", *, verbose_dream: bo
         lines.append(f"- {item}")
 
     last_dream = _read_last_dream(user_dir)
-    if last_dream:
+    if last_dream and get_bool(_coffee_context_budget(), "allow_last_dream", True):
         lines.append("")
-        lines.extend(_format_last_dream_block(last_dream, verbose_dream=verbose_dream))
+        lines.extend(
+            _format_last_dream_block(
+                last_dream,
+                verbose_dream=verbose_dream,
+                show_civ_mem=show_civ_mem,
+                show_rollup=show_rollup,
+            )
+        )
 
     lines.append("")
     if build_morning_pulse_lines is not None:
@@ -399,8 +461,25 @@ def main() -> int:
         action="store_true",
         help="Expand last-dream handoff (paths, civ-mem detail, followups). Default is collapsed.",
     )
+    parser.add_argument(
+        "--show-civ-mem",
+        action="store_true",
+        help="Show civ-mem summary line in collapsed Last dream (overrides coffee.json default).",
+    )
+    parser.add_argument(
+        "--show-rollup",
+        action="store_true",
+        help="Show coffee 24h rollup line in collapsed Last dream (overrides coffee.json default).",
+    )
     args = parser.parse_args()
-    print(build_operator_daily_warmup(user_id=args.user, verbose_dream=args.verbose_dream))
+    print(
+        build_operator_daily_warmup(
+            user_id=args.user,
+            verbose_dream=args.verbose_dream,
+            show_civ_mem=True if args.show_civ_mem else None,
+            show_rollup=True if args.show_rollup else None,
+        )
+    )
     return 0
 
 

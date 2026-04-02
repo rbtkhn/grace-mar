@@ -39,6 +39,16 @@ def main() -> int:
         action="store_true",
         help="Pass --verbose-dream to operator_daily_warmup.py (full last-dream block)",
     )
+    p.add_argument(
+        "--show-civ-mem",
+        action="store_true",
+        help="Pass --show-civ-mem to operator_daily_warmup.py",
+    )
+    p.add_argument(
+        "--show-rollup",
+        action="store_true",
+        help="Pass --show-rollup to operator_daily_warmup.py",
+    )
     args = p.parse_args()
     user = args.user
     py = sys.executable
@@ -51,6 +61,8 @@ def main() -> int:
             "-u",
             user,
             *([] if not args.verbose_dream else ["--verbose-dream"]),
+            *([] if not args.show_civ_mem else ["--show-civ-mem"]),
+            *([] if not args.show_rollup else ["--show-rollup"]),
         ],
     ]
     hw = [py, "scripts/harness_warmup.py", "-u", user]

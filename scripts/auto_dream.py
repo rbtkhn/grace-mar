@@ -238,6 +238,84 @@ def _persist_memory_result(result: MemoryMaintenanceResult) -> None:
     result.path.write_text(result.after, encoding="utf-8")
 
 
+def _load_dream_budget_dict() -> dict[str, Any]:
+    try:
+        from context_budget import load_context_budget
+    except ImportError:
+        from scripts.context_budget import load_context_budget  # type: ignore
+
+    return load_context_budget("dream")
+
+
+def _apply_coffee_rollup_budget(
+    coffee_rollup: dict[str, Any],
+    dream_budget: dict[str, Any],
+) -> dict[str, Any]:
+    try:
+        from context_budget import get_bool
+    except ImportError:
+        from scripts.context_budget import get_bool  # type: ignore
+
+    if get_bool(dream_budget, "allow_rollup", True):
+        return coffee_rollup
+    return {
+        "window_start_utc": coffee_rollup.get("window_start_utc"),
+        "window_end_utc": coffee_rollup.get("window_end_utc"),
+        "window_hours": coffee_rollup.get("window_hours", 24.0),
+        "count": 0,
+        "first_ts": None,
+        "last_ts": None,
+        "span_hours": None,
+        "by_mode": {},
+        "runs": [],
+        "picks": [],
+        "by_picked": {},
+        "note": "rollup_disabled_by_budget",
+    }
+
+
+def _apply_civmem_budget(
+    *,
+    digest: dict[str, Any],
+    self_memory_text: str,
+    integrity_ok: bool,
+    governance_ok: bool,
+    dream_budget: dict[str, Any],
+) -> tuple[list[dict[str, Any]], bool, str | None]:
+    try:
+        from context_budget import get_bool, get_int
+    except ImportError:
+        from scripts.context_budget import get_bool, get_int  # type: ignore
+
+    if not get_bool(dream_budget, "allow_civ_mem_echo", True):
+        return [], False, "disabled_by_budget"
+
+    sup_int = get_bool(dream_budget, "suppress_analogy_when_integrity_fails", True)
+    sup_gov = get_bool(dream_budget, "suppress_analogy_when_governance_alert", True)
+    if sup_int and not integrity_ok:
+        return [], False, "suppressed_integrity_fail"
+    if sup_gov and not governance_ok:
+        return [], False, "suppressed_governance_alert"
+
+    max_echoes = get_int(dream_budget, "max_civ_mem_echoes", 1)
+    min_overlap = get_int(dream_budget, "min_civ_mem_overlap", 4)
+    query_limit = get_int(dream_budget, "civmem_query_limit", 24)
+    require_spec = get_bool(dream_budget, "require_specific_civ_mem_token", False)
+
+    civ_echoes, civ_index_missing = compute_civmem_echoes(
+        digest=digest,
+        self_memory_text=self_memory_text,
+        limit=max_echoes,
+        min_overlap=min_overlap,
+        query_limit=query_limit,
+        require_specificity=require_spec,
+        dream_budget=dream_budget,
+    )
+    max_echoes = max(0, max_echoes)
+    civ_echoes = civ_echoes[:max_echoes]
+    return civ_echoes, civ_index_missing, None
+
+
 def _write_last_dream_handoff(
     summary: dict[str, Any],
     *,
@@ -295,6 +373,10 @@ def _write_last_dream_handoff(
         handoff["civmem_echoes"] = summary["civmem_echoes"]
     if summary.get("civmem_disclaimer"):
         handoff["civmem_disclaimer"] = summary["civmem_disclaimer"]
+    if "civmem_index_missing" in summary:
+        handoff["civmem_index_missing"] = bool(summary["civmem_index_missing"])
+    if summary.get("civmem_suppressed_reason"):
+        handoff["civmem_suppressed_reason"] = summary["civmem_suppressed_reason"]
 
     path = users_dir / user_id / LAST_DREAM_FILENAME
     path.write_text(json.dumps(handoff, indent=2) + "\n", encoding="utf-8")
@@ -405,7 +487,9 @@ def run_auto_dream(
         from datetime import datetime, timezone
 
         now_utc = datetime.now(timezone.utc)
+        dream_budget = _load_dream_budget_dict()
         coffee_rollup = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
+        coffee_rollup = _apply_coffee_rollup_budget(coffee_rollup, dream_budget)
         dc = summary.get("contradiction_digest") or {}
         rel_counts = dc.get("relation_counts") or {}
         gate_path = users_dir / user_id / "recursion-gate.md"
@@ -426,9 +510,12 @@ def run_auto_dream(
             gate_pending_count=gate_pending_count,
             max_pending_candidates=max_pending,
         )
-        civ_echoes, civ_index_missing = compute_civmem_echoes(
+        civ_echoes, civ_index_missing, civ_suppressed = _apply_civmem_budget(
             digest=dc,
             self_memory_text=memory_result.before,
+            integrity_ok=integrity_ok,
+            governance_ok=governance_ok,
+            dream_budget=dream_budget,
         )
         tomorrow_line = format_tomorrow_inherits_line(paths, sugg_idx, sugg_reason)
         summary["coffee_rollup_24h"] = coffee_rollup
@@ -439,6 +526,10 @@ def run_auto_dream(
         summary["civmem_echoes"] = civ_echoes
         summary["civmem_disclaimer"] = CIVMEM_DISCLAIMER
         summary["civmem_index_missing"] = civ_index_missing
+        if civ_suppressed:
+            summary["civmem_suppressed_reason"] = civ_suppressed
+        else:
+            summary.pop("civmem_suppressed_reason", None)
 
         handoff_path = _write_last_dream_handoff(
             summary, users_dir=users_dir, user_id=user_id
@@ -459,6 +550,8 @@ def run_auto_dream(
                     "mem_changed": str(memory_result.changed).lower(),
                     "reviewable": str(digest.get("reviewable_count", 0)),
                     "contradictions": str(counts.get("contradiction", 0)),
+                    "civmem_echo_count": str(len(civ_echoes)),
+                    "civmem_suppressed": str(bool(civ_suppressed)).lower(),
                 },
             )
         except Exception:

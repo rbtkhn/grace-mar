@@ -13,6 +13,7 @@
 | **Cadence architecture** | Defines the shape of operator rhythm: coffee (orientation, repeated), dream (consolidation, once per day), bridge (session-scale carry-forward). |
 | **Night-to-morning handoff** | Documents the `last-dream.json` data contract that bridges dream output to coffee Step 1. |
 | **Cadence event audit** | Append-only telemetry of each run via `work-cadence-events.md` and `scripts/log_cadence_event.py`. |
+| **Context paste budgets** | Optional JSON caps for dream write-path and coffee display (`config/context_budgets/`); `scripts/audit_context_tax.py` approximates ritual paste size. |
 | **Boundary surface** | Explains what belongs in operational/ephemeral surfaces versus what must escalate to the gate. |
 
 ---

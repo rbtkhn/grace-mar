@@ -60,8 +60,11 @@ auto_dream.py
   ├─ governance_checker.py         governance scan
   ├─ contradiction_digest.py       derived contradiction digest
   │    └─ write_artifact_drafts()  optional artifact drafts
+  ├─ config/context_budgets/dream.json   write-path caps (via context_budget.py)
   ├─ emit_pipeline_event.py        maintenance event
   └─ _write_last_dream_handoff()   writes last-dream.json
+operator_daily_warmup.py           reads coffee.json for collapsed Last dream display
+audit_context_tax.py               approximate ritual paste line/char counts
 ```
 
 **Bundle:** `operator_end_of_day.py` runs `auto_dream.py` then `operator_handoff_check.py` — night-side counterpart to `operator_reentry_stack.py`.
@@ -91,14 +94,20 @@ auto_dream.py
 | `suggested_execution_path_index` | int | 0–2; **Steward (2)** if integrity or governance failed this run, else **Steward** if gate pending > `max_pending_candidates` in `config/fork-config.json`, else **calendar** `(tomorrow_tm_yday - 1) % 3` |
 | `execution_path_suggestion_reason` | string | `integrity_or_governance_fail` \| `gate_backlog` \| `calendar_mod3` |
 | `tomorrow_inherits` | string | One-line operational hint for morning (not policy or Record) |
-| `civmem_echoes` | object[] | Default **one** token-overlap hit above threshold from in-repo [`docs/civilization-memory/`](../../civilization-memory/README.md); each echo includes `analogy_label` (empty if index missing or no qualifying hit) |
+| `civmem_echoes` | object[] | Token-overlap hits from in-repo [`docs/civilization-memory/`](../../civilization-memory/README.md) (count capped by `config/context_budgets/dream.json`); each echo includes `analogy_label`, optional `specificity_pass`, `score` |
 | `civmem_disclaimer` | string | States analogical / non-Record scope |
+| `civmem_index_missing` | boolean | True when the in-repo civ-mem index file is absent |
+| `civmem_suppressed_reason` | string | Present when echoes were cleared by budget or checks (e.g. `disabled_by_budget`, `suppressed_integrity_fail`, `suppressed_governance_alert`) |
+
+**Civ-mem query source:** Echoes are computed from the **pre-persist** self-memory snapshot used in the same `auto_dream` run (`memory_result.before`), which can differ from on-disk `self-memory.md` after normalization writes in that run.
+
+**Context budgets:** Write-path caps and suppress rules live in [`config/context_budgets/dream.json`](../../../config/context_budgets/dream.json); display defaults for the collapsed Last dream block live in [`config/context_budgets/coffee.json`](../../../config/context_budgets/coffee.json). See [`config/context_budgets/README.md`](../../../config/context_budgets/README.md).
 
 **Doctrine:** Dream suggestions (paths, civ-mem, rollup) are **operational hints only** — not truth, not priority, not a substitute for gate review, integrity, companion approval, or operator judgment. Cadence artifacts are not a shadow Record.
 
 Clients should **ignore unknown keys** on future dream versions.
 
-Coffee Step 1 (`operator_daily_warmup.py`) reads this file and renders a **collapsed** **"Last dream (night handoff)"** block by default (`--verbose-dream` for full detail). The file is classified as runtime noise in `operator_handoff_check.py` — it does not need to be committed.
+Coffee Step 1 (`operator_daily_warmup.py`) reads this file and renders a **collapsed** **"Last dream (night handoff)"** block by default (`--verbose-dream` for full detail; `--show-civ-mem` / `--show-rollup` opt into extra collapsed lines; defaults from `coffee.json`). The file is classified as runtime noise in `operator_handoff_check.py` — it does not need to be committed.
 
 **Strict halt:** When `auto_dream.py --strict` stops early on integrity/governance failure, a new `last-dream.json` may not be written; morning pickup can reflect an older handoff until the next successful run.
 

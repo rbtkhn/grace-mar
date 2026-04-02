@@ -56,3 +56,24 @@ def test_format_last_dream_verbose_includes_rollup_keys() -> None:
 def test_build_operator_daily_warmup_accepts_verbose_dream_kwarg() -> None:
     out = odu.build_operator_daily_warmup("grace-mar", verbose_dream=False)
     assert "Daily operator warmup" in out
+
+def test_collapsed_omits_civ_mem_by_default() -> None:
+    d = _minimal_dream()
+    lines = odu._format_last_dream_block(d, verbose_dream=False)
+    text = "\n".join(lines)
+    assert "Civ-mem" not in text
+
+
+def test_collapsed_show_civ_mem_opt_in() -> None:
+    d = _minimal_dream()
+    lines = odu._format_last_dream_block(d, verbose_dream=False, show_civ_mem=True)
+    text = "\n".join(lines)
+    assert "Civ-mem" in text
+
+
+def test_compress_lines_truncates() -> None:
+    long_body = [f"- line {i}" for i in range(10)]
+    out = odu._compress_lines(long_body, max_lines=4)
+    assert len(out) == 4
+    assert "(+7 more" in out[-1]
+

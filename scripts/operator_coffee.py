@@ -98,6 +98,16 @@ def main() -> int:
         action="store_true",
         help="Pass --verbose-dream to operator_daily_warmup.py (full last-dream block)",
     )
+    p.add_argument(
+        "--show-civ-mem",
+        action="store_true",
+        help="Pass --show-civ-mem to operator_daily_warmup.py (collapsed civ-mem line)",
+    )
+    p.add_argument(
+        "--show-rollup",
+        action="store_true",
+        help="Pass --show-rollup to operator_daily_warmup.py (collapsed coffee rollup line)",
+    )
     args = p.parse_args()
     user = args.user
     py = sys.executable
@@ -111,6 +121,10 @@ def main() -> int:
     warmup = [py, "scripts/operator_daily_warmup.py", "-u", user]
     if args.verbose_dream:
         warmup.append("--verbose-dream")
+    if args.show_civ_mem:
+        warmup.append("--show-civ-mem")
+    if args.show_rollup:
+        warmup.append("--show-rollup")
     harness = [py, "scripts/harness_warmup.py", "-u", user]
     harness_compact = [py, "scripts/harness_warmup.py", "-u", user, "--compact"]
     handoff = [py, "scripts/operator_handoff_check.py", "-u", user]

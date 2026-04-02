@@ -1,0 +1,10 @@
+{
+  "allow_civ_mem_echo": true,
+  "max_civ_mem_echoes": 1,
+  "min_civ_mem_overlap": 4,
+  "civmem_query_limit": 24,
+  "require_specific_civ_mem_token": false,
+  "allow_rollup": true,
+  "suppress_analogy_when_integrity_fails": true,
+  "suppress_analogy_when_governance_alert": true
+}
