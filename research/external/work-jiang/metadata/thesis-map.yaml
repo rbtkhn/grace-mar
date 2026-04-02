@@ -62,3 +62,13 @@ thesis:
       support_sources: []
       support_analysis: []
       vulnerabilities: []
+    - id: t05
+      claim: "Secret History extends formation into power and epistemology: who narrates the past, how money and institutions train imagination, and what counts as liberation."
+      linked_claim_ids:
+        - clm-0035
+        - clm-0036
+        - clm-0037
+        - clm-0038
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []

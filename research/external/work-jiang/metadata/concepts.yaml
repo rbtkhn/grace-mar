@@ -8,9 +8,9 @@ concepts:
     tensions: ["State-led vs bottom-up formation"]
     related_concepts: ["strategic-imagination", "education-narrative"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-09, civ-01]
-    analysis_ids: [geo-03, geo-09, civ-01]
-    chapter_ids: [ch02, civ-ch01]
+    source_ids: [geo-03, geo-09, civ-01, sh-01]
+    analysis_ids: [geo-03, geo-09, civ-01, sh-01]
+    chapter_ids: [ch02, civ-ch01, sh-ch01]
     status: draft
 
   - concept_id: strategic-imagination
@@ -73,9 +73,9 @@ concepts:
     tensions: ["Prosperity vs hollowed middle"]
     related_concepts: ["empire-order"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03]
-    analysis_ids: [geo-03]
-    chapter_ids: [ch02]
+    source_ids: [geo-03, sh-01]
+    analysis_ids: [geo-03, sh-01]
+    chapter_ids: [ch02, sh-ch01]
     status: draft
 
   - concept_id: saudi-iran-axis
@@ -229,9 +229,9 @@ concepts:
     tensions: ["Liberation vs discipline"]
     related_concepts: ["civ-formation"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-12, civ-01]
-    analysis_ids: [geo-03, geo-12, civ-01]
-    chapter_ids: [ch01, ch02, civ-ch01]
+    source_ids: [geo-03, geo-12, civ-01, sh-01]
+    analysis_ids: [geo-03, geo-12, civ-01, sh-01]
+    chapter_ids: [ch01, ch02, civ-ch01, sh-ch01]
     status: draft
 
   - concept_id: religious-legitimacy

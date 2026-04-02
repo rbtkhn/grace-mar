@@ -879,3 +879,31 @@ divergence_links:
   source_id: civ-01
   chapter_ids:
   - civ-ch01
+- divergence_id: div-SH01-001
+  video_id: lt8XLz78ZvY
+  lecture_ref: lectures/secret-history-01-how-power-works.md
+  topic_tags:
+  - historiography
+  - curriculum
+  - power
+  - epistemology
+  jiang_claim: The lecture frames the history taught in school and commonly believed
+    as largely false—implanted in citizens' minds by powerful actors—so that discovering
+    'secret history' is a liberation move.
+  mainstream_anchor: History education and historiography discuss nationalism, archives,
+    curriculum politics, and contested narratives without reducing standard history
+    to uniform falsity or a single implantation mechanism; claims vary strongly by
+    jurisdiction and period.
+  mainstream_summary: Treat as rhetorical thesis for class; book copy should separate
+    pedagogical provocation from accredited historical method and cite curriculum
+    studies where used.
+  divergence_type: interpretive
+  strength: moderate
+  evidence_notes: Pair with named work on public history and textbook politics if
+    retained beyond lecture voice.
+  sources_mainstream: []
+  sources_jiang:
+  - https://www.youtube.com/watch?v=lt8XLz78ZvY
+  source_id: sh-01
+  chapter_ids:
+  - sh-ch01

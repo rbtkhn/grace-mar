@@ -1207,15 +1207,15 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=lt8XLz78ZvY
   publication_date: 2025-08-22
   lecture_path: lectures/secret-history-01-how-power-works.md
-  analysis_path: null
+  analysis_path: analysis/lt8XLz78ZvY-secret-history-01-analysis.md
   series: secret-history
   episode: 1
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
-    chapter_mapping: not_started
+    analysis: complete
+    chapter_mapping: complete
 - source_id: sh-02
   video_id: K-_l9jBGo74
   title: 'Secret History #2: How Societies Collapse'
