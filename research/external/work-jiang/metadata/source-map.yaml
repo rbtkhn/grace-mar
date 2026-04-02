@@ -240,6 +240,44 @@ chapter_map:
     source_ids: [gt-16]
   gt-ch17:
     source_ids: [gt-17]
+  gb-ch01:
+    source_ids: [gb-01]
+  gb-ch02:
+    source_ids: [gb-02]
+  gb-ch03:
+    source_ids: [gb-03]
+  gb-ch04:
+    source_ids: [gb-04]
+  gb-ch05:
+    source_ids: [gb-05]
+  gb-ch06:
+    source_ids: [gb-06]
+  gb-ch07:
+    source_ids: [gb-07]
+  gb-ch08:
+    source_ids: [gb-08]
+  vi-ch01:
+    source_ids: [vi-01]
+  vi-ch02:
+    source_ids: [vi-02]
+  vi-ch03:
+    source_ids: [vi-03]
+  vi-ch04:
+    source_ids: [vi-04]
+  vi-ch05:
+    source_ids: [vi-05]
+  vi-ch06:
+    source_ids: [vi-06]
+  vi-ch07:
+    source_ids: [vi-07]
+  vi-ch08:
+    source_ids: [vi-08]
+  vi-ch09:
+    source_ids: [vi-09]
+  vi-ch10:
+    source_ids: [vi-10]
+  vi-ch11:
+    source_ids: [vi-11]
 
 appendix_map:
   predictions:

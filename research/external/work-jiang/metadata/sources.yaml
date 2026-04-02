@@ -1890,7 +1890,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-02
   video_id: Ft2CuowGuYc
   title: 'Great Books #2: Homer and the Invention of the Human'
@@ -1905,7 +1905,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-03
   video_id: XRP407WsA0w
   title: 'Great Books #3: Poets and Prophets'
@@ -1920,7 +1920,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-04
   video_id: dkzr5A8IlLA
   title: 'Great Books #4: The Conscious Universe'
@@ -1935,7 +1935,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-05
   video_id: gXlcR7uHHdA
   title: 'Great Books #5: The Odyssey'
@@ -1950,7 +1950,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-06
   video_id: aS-NfPSPMu8
   title: 'Great Books #6: The Intimacy of Love'
@@ -1965,7 +1965,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-07
   video_id: EBWTRvjZ1dw
   title: 'Great Books #7: The Anti-Homer'
@@ -1980,7 +1980,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: gb-08
   video_id: YXTRlvFIRt8
   title: 'Great Books #8: The Poetry of Empire'
@@ -1995,7 +1995,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-01
   video_id: XRk5VSEzJ4Y
   title: 'Interviews #1: Cyrus Janssen — The World Is About to Change'
@@ -2010,7 +2010,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-02
   video_id: GSSIm9xNRAE
   title: 'Interviews #2: Glenn Diesen — The West''s Civilizational Collapse'
@@ -2025,7 +2025,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-03
   video_id: ORyCS0r2Tpg
   title: 'Interviews #3: Glenn Diesen — Predictions for 2026 (Empire, Rivalry & Collapse)'
@@ -2040,7 +2040,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-04
   video_id: H5lCJ0D4DpY
   title: 'Interviews #4: Danny Haiphong — Predictions for 2026: Trump, Iran & Empire
@@ -2056,7 +2056,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-05
   video_id: uHIdRgFypNo
   title: 'Interviews #5: Dimitri Lascaris — Trump’s War on Iran, Davos, Canada–China'
@@ -2071,7 +2071,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-06
   video_id: 80jUKe0blAQ
   title: 'Interviews #6: Glenn Diesen — Great Power Wars Over a New World Order'
@@ -2086,7 +2086,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-07
   video_id: 4Ql24Z8SIeE
   title: 'Interviews #7: Breaking Points (Krystal & Saagar) — US WILL LOSE Iran War'
@@ -2101,7 +2101,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-08
   video_id: 0rIgZD-tk3s
   title: 'Interviews #8: Nima (Dialogue Works) — The Iran War: The Watershed Moment
@@ -2117,7 +2117,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-09
   video_id: o1DElACHNRo
   title: 'Interviews #9: SNEAKO — The End of the World'
@@ -2132,7 +2132,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-10
   video_id: rsi7cDRUrmE
   title: 'Interviews #10: Endgame — Our True Wealth Is Our Consciousness'
@@ -2147,7 +2147,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: vi-11
   video_id: 2K2nQsTTjQE
   title: 'Interviews #11: Tucker Carlson — Iran War, Energy, and Global Order'
@@ -2162,4 +2162,4 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
