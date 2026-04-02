@@ -29,7 +29,7 @@ _Operator WORK product. Complete synthesis below; cite sources before any public
 
 _From `docs/skill-work/work-strategy/daily-brief-focus.md` § Active focus._
 
-- **Civilizational / geopolitics operator ledger:** [STRATEGY.md](STRATEGY.md) — long-horizon CORE + heuristics + work-strategy execution memory (§IV, `WORK-STRATEGY-MEM–` entries) (WORK-only; gate only when promoting to Record or milestones).
+- **Civilizational / geopolitics operator ledger:** [STRATEGY.md](STRATEGY.md) — long-horizon CORE + heuristics + §IV operator strategy log (WORK-only; gate only when promoting to Record or milestones).
 - Campaign/companion positioning: portable Record, human-only merge, Voice boundary.
 - OpenClaw ↔ repo handback and export provenance (see [work-dev workspace](../work-dev/workspace.md)).
 - AI-in-schools and identity-substrate narrative vs Alpha-style bundles (see [work-alpha-school](../work-alpha-school/README.md), [work-dev offers](../work-dev/offers.md)).

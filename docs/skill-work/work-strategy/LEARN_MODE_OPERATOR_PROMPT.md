@@ -38,7 +38,7 @@ You have access to:
 - Load the three minds (via **minds/** stubs → CIV–MIND templates as needed) and apply Tri-Frame Synthesis where appropriate.
 - Extract new heuristics using the exact format: `Model → Last applied (date + context) → Effectiveness note + explicit limitations + contradiction flags`.
 - Preserve all contradictions. Flag limitations clearly.
-- Stage **`CANDIDATE-XXXX`** when promotion to Record/Voice or an explicit strategy milestone applies; routine SCHOLAR / work-strategy execution memory (STRATEGY §IV) updates follow git/PR per STRATEGY §VI.
+- Stage **`CANDIDATE-XXXX`** when promotion to Record/Voice or an explicit strategy milestone applies; routine SCHOLAR / STRATEGY §IV log updates follow git/PR per STRATEGY §VI.
 
 **Additional constraints**
 

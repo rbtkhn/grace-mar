@@ -119,24 +119,23 @@
 - **Deprecated / Archived Models** (with reason and date)  
   _(Leave empty until needed — add entries here only when explicitly deprecating a model.)_
 
-## IV. Work-strategy execution memory (WORK-local)
+## IV. Operator strategy log (WORK-local)
 
-*(Atomic entries. **Prefix `WORK-STRATEGY-MEM–` = work-strategy execution log in this repo only** — not [CMC MEM shards](../../../research/repos/civilization_memory/) (`MEM–ROME–*`, etc.). All changes additive. **Do not** use the legacy abbreviation “WS–MEM” in new prose or IDs.)*
+*(Additive notes: dated headings or bullets **in this file**. **Not** [CMC memory shards](../../../research/repos/civilization_memory/) (`MEM–ROME–*`, etc.) — those live in the civilization_memory corpus with their own naming. **No** separate “mem” ID scheme here: use readable dates + topic, optional short slug if you need a handle. All changes additive.)*
 
-### Recent analysis memory objects
+### Shape (example — delete when first real entry lands)
 
-- **`WORK-STRATEGY-MEM–[TOPIC]–[SHORT-ID]–[YYYYMMDD]`**  
-  Topic: _e.g. Great power dynamics / historical analogy_  
-  Trigger / context: _TBD_  
-  Analytical moves / options considered: _TBD_  
-  Chosen path or conclusion: _TBD_  
-  Outcome / observed pattern: _TBD_  
-  Evidence links: pointers to `users/grace-mar/self-memory.md` / `session-transcript.md`, [civilization_memory](../../../research/repos/civilization_memory/) paths, `recursion-gate.md` **CANDIDATE-XXXX** when relevant  
-  Impact on CORE / capabilities: _TBD_  
-  Contradictions noted: _preserve explicitly_  
-  Lesson extracted → links to §III
+```markdown
+### YYYY-MM-DD — Short topic label
+- **Context:** …
+- **Moves considered:** …
+- **Read / conclusion:** …
+- **Links:** session-transcript, gate **CANDIDATE-XXXX**, civ-mem paths as needed
+- **Tensions:** preserve contradictions explicitly
+- **Lesson → §III:** …
+```
 
-*(Append new work-strategy execution memory entries below. Do not rewrite past entries except dated annotations.)*
+*(Append below. Do not rewrite past entries except dated annotations.)*
 
 ## V. Capabilities index
 
@@ -146,7 +145,7 @@
 
 ## VI. RECURSION-GATE interface
 
-**Routine edits** to this file (operator additions, pointers, work-strategy execution memory entries) follow normal **git / PR** workflow under **lane/work-strategy** — no gate row required.
+**Routine edits** to this file (operator additions, pointers, §IV log entries) follow normal **git / PR** workflow under **lane/work-strategy** — no gate row required.
 
 **Use RECURSION-GATE** when:
 
@@ -171,12 +170,12 @@
 ## Governance notes
 
 - **Additive-only** body text; preserve contradictions in interpretation.  
-- **No deletion** of historical work-strategy execution memory or SCHOLAR-style entries — only new dated additions or explicit deprecation in §III.  
+- **No deletion** of historical §IV log or SCHOLAR-style entries — only new dated additions or explicit deprecation in §III.  
 - **Git** is the audit trail for this WORK surface.
 
 ## Usage modes
 
-- **Morning brief:** Pull §I + recent §IV (work-strategy execution memory) for geopolitical context alongside [daily brief](README.md#daily-brief).  
+- **Morning brief:** Pull §I + recent §IV (operator strategy log) for geopolitical context alongside [daily brief](README.md#daily-brief).  
 - **WORK menu generation:** Forks grounded in this doc + civ-mem reference; see [work-menu-conventions.md](../work-menu-conventions.md).  
-- **Learn mode:** Follow [LEARN_MODE_RULES.md](LEARN_MODE_RULES.md) (Tri-Frame, extraction format); then append lessons/heuristics to §III SCHOLAR and §IV (work-strategy execution memory) as appropriate.  
+- **Learn mode:** Follow [LEARN_MODE_RULES.md](LEARN_MODE_RULES.md) (Tri-Frame, extraction format); then append lessons/heuristics to §III SCHOLAR and §IV (operator strategy log) as appropriate.  
 - **Strategy review:** Periodic operator session; gate only when promoting to Record or logging milestones.

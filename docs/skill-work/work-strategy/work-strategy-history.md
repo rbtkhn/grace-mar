@@ -30,4 +30,4 @@ _(Append below this line.)_
 
 ## 2026-04-04
 
-- **Naming:** Lane operator log stays **[work-strategy-history.md](work-strategy-history.md)** (full words, no abbreviation). **STRATEGY.md** §IV renamed from **WS–MEM** to **work-strategy execution memory**; new entry prefix **`WORK-STRATEGY-MEM–`** (replaces `WS–MEM–`). Cross-refs updated in README, daily briefs, learn-mode docs, Postol skill, external transcripts README.
+- **Naming:** Lane operator log stays **[work-strategy-history.md](work-strategy-history.md)** (full words, no abbreviation). **STRATEGY.md** §IV: dropped **WS–MEM** and any **MEM-style ID prefix**; §IV is now **operator strategy log** only — additive dated notes in `STRATEGY.md`, **not** a parallel mem namespace (CMC `MEM–*` stays in civilization_memory). Cross-refs updated across README, daily briefs, learn-mode, Postol skill, transcripts README.
