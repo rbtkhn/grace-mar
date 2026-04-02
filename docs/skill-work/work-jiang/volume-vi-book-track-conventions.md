@@ -7,11 +7,11 @@ Operator WORK — Predictive History. Canonical prose spec: [`research/external/
 | Item | Convention |
 |------|------------|
 | YAML block key | `volume_6_interviews` under [`metadata/book-architecture.yaml`](../../../research/external/work-jiang/metadata/book-architecture.yaml) |
-| Chapter IDs | `vi-ch01` … `vi-ch11` — one chapter per `vi-NN` source row (two-digit episode; order follows registry) |
+| Chapter IDs | `vi-ch01` … `vi-ch12` — one chapter per `vi-NN` source row (two-digit episode; order follows registry) |
 | `source_ids` | Exactly `[vi-NN]` matching [`metadata/sources.yaml`](../../../research/external/work-jiang/metadata/sources.yaml) |
 | Evidence packs | `evidence-packs/vi-chNN.md` |
 | Outline / draft paths | `chapters-volume-vi/vi-chNN/outline.md` and `draft.md` |
-| Part II anchor | `part_2.after_chapter` — last Part I interview chapter in this queue (e.g. `vi-ch11`) |
+| Part II anchor | `part_2.after_chapter` — last Part I interview chapter in this queue (e.g. `vi-ch12`) |
 
 **Kind / priority (emitter default):** exposition **1–4**, analysis **5–11**; all chapters **`medium`** until quote/counter-reading wiring satisfies `validate_comparative_layer`.
 

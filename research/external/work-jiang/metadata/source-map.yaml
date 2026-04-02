@@ -1,6 +1,7 @@
 # Map book chapters (and appendix buckets) to source_id values from sources.yaml.
 # Volume 1: one chapter per Geo-Strategy lecture (ch01 = #1 … ch12 = #12).
 # Volume 2: civ-chNN → civ-NN (see docs/skill-work/work-jiang/volume-ii-book-track-conventions.md).
+# Volume VII: es-chNN → es-NN (see docs/skill-work/work-jiang/volume-vii-book-track-conventions.md).
 # Run: python scripts/work_jiang/build_source_registry.py
 
 chapter_map:
@@ -278,6 +279,70 @@ chapter_map:
     source_ids: [vi-10]
   vi-ch11:
     source_ids: [vi-11]
+  vi-ch12:
+    source_ids: [vi-12]
+  es-ch01:
+    source_ids: [es-01]
+  es-ch02:
+    source_ids: [es-02]
+  es-ch03:
+    source_ids: [es-03]
+  es-ch04:
+    source_ids: [es-04]
+  es-ch05:
+    source_ids: [es-05]
+  es-ch06:
+    source_ids: [es-06]
+  es-ch07:
+    source_ids: [es-07]
+  es-ch08:
+    source_ids: [es-08]
+  es-ch09:
+    source_ids: [es-09]
+  es-ch10:
+    source_ids: [es-10]
+  es-ch11:
+    source_ids: [es-11]
+  es-ch12:
+    source_ids: [es-12]
+  es-ch13:
+    source_ids: [es-13]
+  es-ch14:
+    source_ids: [es-14]
+  es-ch15:
+    source_ids: [es-15]
+  es-ch16:
+    source_ids: [es-16]
+  es-ch17:
+    source_ids: [es-17]
+  es-ch18:
+    source_ids: [es-18]
+  es-ch19:
+    source_ids: [es-19]
+  es-ch20:
+    source_ids: [es-20]
+  es-ch21:
+    source_ids: [es-21]
+  es-ch22:
+    source_ids: [es-22]
+  es-ch23:
+    source_ids: [es-23]
+  es-ch24:
+    source_ids: [es-24]
+  es-ch25:
+    source_ids: [es-25]
+  es-ch26:
+    source_ids: [es-26]
+  es-ch27:
+    source_ids: [es-27]
+  es-ch28:
+    source_ids: [es-28]
+  es-ch29:
+    source_ids: [es-29]
+  es-ch30:
+    source_ids: [es-30]
+  es-ch31:
+    source_ids: [es-31]
 
 appendix_map:
   predictions:

@@ -20,9 +20,9 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / "research" / "external" / "work-jiang"
 
 _KIND_EP: dict[int, str] = {i: "exposition" for i in range(1, 5)}
-_KIND_EP.update({i: "analysis" for i in range(5, 12)})
+_KIND_EP.update({i: "analysis" for i in range(5, 100)})
 
-_PRIORITY_EP: dict[int, str] = {i: "medium" for i in range(1, 12)}
+_PRIORITY_EP: dict[int, str] = {i: "medium" for i in range(1, 100)}
 
 
 def main() -> int:
@@ -69,7 +69,7 @@ def main() -> int:
             }
         )
 
-    last_cid = chapters[-1]["id"] if chapters else "vi-ch11"
+    last_cid = chapters[-1]["id"] if chapters else "vi-ch01"
 
     block = {
         "volume_6_interviews": {

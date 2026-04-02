@@ -9,6 +9,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 LECTURES = WORK_DIR / "lectures"
+ESSAYS_DIR = WORK_DIR / "substack" / "essays"
 ANALYSIS = WORK_DIR / "analysis"
 OUT = WORK_DIR / "metadata" / "sources.yaml"
 SOURCE_MAP = WORK_DIR / "metadata" / "source-map.yaml"
@@ -37,6 +38,19 @@ def title_from_lecture(path: Path) -> str:
         if line.startswith("# "):
             return line[2:].strip()
     return path.stem
+
+
+def essay_frontmatter(path: Path) -> dict:
+    text = path.read_text(encoding="utf-8", errors="replace")
+    if not text.startswith("---"):
+        return {}
+    end = text.find("\n---\n", 3)
+    if end == -1:
+        return {}
+    try:
+        return yaml.safe_load(text[3:end]) or {}
+    except yaml.YAMLError:
+        return {}
 
 
 def analysis_for_video(analysis_by_vid: dict[str, Path], video_id: str | None) -> Path | None:
@@ -333,12 +347,70 @@ def main() -> int:
         sources.append(
             {
                 "source_id": source_id,
-                "video_id": vid,
+                "video_id": vid or "",
                 "title": title_from_lecture(lecture),
                 "canonical_url": f"https://www.youtube.com/watch?v={vid}" if vid else "",
                 "lecture_path": str(lecture.relative_to(WORK_DIR)),
                 "analysis_path": analysis_path,
                 "series": "interviews",
+                "episode": ep,
+                "themes": [],
+                "status": {
+                    "transcript": "complete" if vid else "pending",
+                    "curated_lecture": "complete" if vid else "stub",
+                    "analysis": analysis_status,
+                    "chapter_mapping": "missing",
+                },
+            }
+        )
+
+    essay_analysis_by_slug: dict[str, Path] = {}
+    for p in ANALYSIS.glob("essay-*-analysis.md"):
+        if p.name == ".gitkeep":
+            continue
+        stem = p.stem
+        if not stem.startswith("essay-") or not stem.endswith("-analysis"):
+            continue
+        slug = stem[len("essay-") : -len("-analysis")]
+        essay_analysis_by_slug[slug] = p
+
+    essay_rows: list[dict] = []
+    if ESSAYS_DIR.is_dir():
+        for essay_path in ESSAYS_DIR.glob("*.md"):
+            if essay_path.name == "README.md":
+                continue
+            fm = essay_frontmatter(essay_path)
+            slug = str(fm.get("substack_slug") or essay_path.stem).strip()
+            title = str(fm.get("title") or essay_path.stem).strip()
+            canonical_url = str(fm.get("canonical_url") or "").strip()
+            publication_date = fm.get("publication_date")
+            essay_rows.append(
+                {
+                    "path": essay_path,
+                    "slug": slug,
+                    "title": title,
+                    "canonical_url": canonical_url,
+                    "publication_date": publication_date,
+                }
+            )
+    essay_rows.sort(key=lambda r: (str(r.get("publication_date") or ""), r["slug"]))
+    for ep, row in enumerate(essay_rows, start=1):
+        source_id = f"es-{ep:02d}"
+        slug = row["slug"]
+        apath = essay_analysis_by_slug.get(slug)
+        analysis_status = "complete" if apath else "missing"
+        analysis_path = str(apath.relative_to(WORK_DIR)) if apath else None
+        lecture_path = str(row["path"].relative_to(WORK_DIR))
+        sources.append(
+            {
+                "source_id": source_id,
+                "video_id": "",
+                "title": row["title"],
+                "canonical_url": row["canonical_url"],
+                "publication_date": row.get("publication_date"),
+                "lecture_path": lecture_path,
+                "analysis_path": analysis_path,
+                "series": "essays",
                 "episode": ep,
                 "themes": [],
                 "status": {
@@ -360,6 +432,8 @@ def main() -> int:
         if s["source_id"].startswith("gb-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
         if s["source_id"].startswith("vi-"):
+            s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
+        if s["source_id"].startswith("es-"):
             s["status"]["chapter_mapping"] = "complete" if s["source_id"] in mapped_ids else "not_started"
 
     merge_preserved_fields_from_previous_yaml(sources, OUT)
