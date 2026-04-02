@@ -28,4 +28,8 @@ Jiang’s philosophy is best understood as a civilizational theory of formation,
 
 - **Linked claims:** `clm-0035`, `clm-0036`, `clm-0037`, `clm-0038`
 
+### t06 — Game Theory makes strategic structure explicit: players, rules, and incentives as the readable skeleton beneath formation, status, and civilizational-scale outcomes.
+
+- **Linked claims:** `clm-0039`, `clm-0040`, `clm-0041`, `clm-0042`
+
 *Generated from `metadata/thesis-map.yaml` — run `python scripts/work_jiang/render_thesis_map.py` after edits.*

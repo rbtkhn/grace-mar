@@ -1,29 +1,29 @@
 # Claims overview
 
-**Total claims:** 38
+**Total claims:** 42
 
 ## By claim_type
 
-- **descriptive:** 14
+- **descriptive:** 15
+- **predictive:** 7
 - **causal:** 6
-- **predictive:** 6
-- **normative:** 4
+- **normative:** 5
 - **historical:** 3
-- **interpretive:** 2
+- **interpretive:** 3
 - **theological:** 2
 - **anthropological:** 1
 
 ## By status
 
-- **captured:** 26
-- **pending_resolution:** 6
+- **captured:** 29
+- **pending_resolution:** 7
 - **supported:** 5
 - **contested:** 1
 
 ## Predictive vs non-predictive
 
-- **Predictive:** 6
-- **Non-predictive:** 32
+- **Predictive:** 7
+- **Non-predictive:** 35
 
 ## Gaps
 

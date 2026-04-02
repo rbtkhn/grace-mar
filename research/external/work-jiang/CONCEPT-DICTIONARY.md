@@ -11,9 +11,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - State-led vs bottom-up formation
 - **Related concepts:** strategic-imagination, education-narrative
 - **First seen (source):** `geo-03`
-- **Sources:** `geo-03`, `geo-09`, `civ-01`, `sh-01`
-- **Analysis (source ids):** `geo-03`, `geo-09`, `civ-01`, `sh-01`
-- **Chapter candidates:** `ch02`, `civ-ch01`, `sh-ch01`
+- **Sources:** `geo-03`, `geo-09`, `civ-01`, `sh-01`, `gt-01`
+- **Analysis (source ids):** `geo-03`, `geo-09`, `civ-01`, `sh-01`, `gt-01`
+- **Chapter candidates:** `ch02`, `civ-ch01`, `sh-ch01`, `gt-ch01`
 - **Status:** draft
 
 ## strategic-imagination
@@ -25,9 +25,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Rational actor vs mythic framing
 - **Related concepts:** empire-order, psychohistory-metaphor
 - **First seen (source):** `geo-10`
-- **Sources:** `geo-10`, `geo-11`
-- **Analysis (source ids):** `geo-10`, `geo-11`
-- **Chapter candidates:** `ch03`
+- **Sources:** `geo-10`, `geo-11`, `gt-01`
+- **Analysis (source ids):** `geo-10`, `geo-11`, `gt-01`
+- **Chapter candidates:** `ch03`, `gt-ch01`
 - **Status:** draft
 
 ## asymmetrical-warfare
@@ -204,9 +204,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Historical analogy vs formal game theory
 - **Related concepts:** strategic-imagination
 - **First seen (source):** `geo-10`
-- **Sources:** `geo-10`
-- **Analysis (source ids):** `geo-10`
-- **Chapter candidates:** `ch03`
+- **Sources:** `geo-10`, `gt-01`
+- **Analysis (source ids):** `geo-10`, `gt-01`
+- **Chapter candidates:** `ch03`, `gt-ch01`
 - **Status:** draft
 
 ## second-civil-war
