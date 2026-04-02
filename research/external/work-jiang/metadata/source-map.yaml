@@ -149,6 +149,63 @@ chapter_map:
   civ-ch60:
     source_ids: [civ-60]
 
+  sh-ch01:
+    source_ids: [sh-01]
+  sh-ch02:
+    source_ids: [sh-02]
+  sh-ch03:
+    source_ids: [sh-03]
+  sh-ch04:
+    source_ids: [sh-04]
+  sh-ch05:
+    source_ids: [sh-05]
+  sh-ch06:
+    source_ids: [sh-06]
+  sh-ch07:
+    source_ids: [sh-07]
+  sh-ch08:
+    source_ids: [sh-08]
+  sh-ch09:
+    source_ids: [sh-09]
+  sh-ch10:
+    source_ids: [sh-10]
+  sh-ch11:
+    source_ids: [sh-11]
+  sh-ch12:
+    source_ids: [sh-12]
+  sh-ch13:
+    source_ids: [sh-13]
+  sh-ch14:
+    source_ids: [sh-14]
+  sh-ch15:
+    source_ids: [sh-15]
+  sh-ch16:
+    source_ids: [sh-16]
+  sh-ch17:
+    source_ids: [sh-17]
+  sh-ch18:
+    source_ids: [sh-18]
+  sh-ch19:
+    source_ids: [sh-19]
+  sh-ch20:
+    source_ids: [sh-20]
+  sh-ch21:
+    source_ids: [sh-21]
+  sh-ch22:
+    source_ids: [sh-22]
+  sh-ch23:
+    source_ids: [sh-23]
+  sh-ch24:
+    source_ids: [sh-24]
+  sh-ch25:
+    source_ids: [sh-25]
+  sh-ch26:
+    source_ids: [sh-26]
+  sh-ch27:
+    source_ids: [sh-27]
+  sh-ch28:
+    source_ids: [sh-28]
+
 appendix_map:
   predictions:
     source_ids: [geo-01, geo-05, geo-07, geo-08, geo-11, geo-12]

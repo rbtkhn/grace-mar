@@ -2,7 +2,8 @@
 # Multivolume umbrella: Predictive History — one volume per lecture series.
 # Top-level project + book: Volume I (Geo-Strategy) — SSOT for render_book_architecture.py,
 # validate_work_jiang drift checks, CHAPTER-QUEUE, etc.
-# volume_4_game_theory: Volume IV stub (Game Theory #1–#15) — not read by those scripts until promoted.
+# Nested: volume_2_civilization (civ-chNN), volume_3_secret_history (sh-chNN), volume_4_game_theory (stub), volume_7_essays (stub).
+# volume_4_game_theory: Volume IV stub (Game Theory #1–#15) — not fully promoted until Part II method is set.
 # Render: python scripts/work_jiang/render_book_architecture.py
 
 project:
@@ -1678,6 +1679,652 @@ volume_2_civilization:
       next_action: Complete analysis memo for civ-60; then draft chapter outline
       outline_path: chapters-volume-ii/civ-ch60/outline.md
       draft_path: chapters-volume-ii/civ-ch60/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+
+# --- Volume III (Secret History) — nested book-track; see docs/skill-work/work-jiang/volume-iii-book-track-conventions.md ---
+
+volume_3_secret_history:
+  project:
+    id: work-jiang-volume-3
+    series_title: Predictive History
+    volume:
+      number: 3
+      lecture_series: Secret History
+    title: 'Predictive History, Volume 3: Secret History'
+    thesis_one_sentence: TBD — set when Volume III Part I book thesis is drafted (lecture-faithful arc; see book/VOLUME-III-SECRET-HISTORY.md).
+    promise_paragraph: Part I follows Jiang's Secret History lectures in classroom order, transcript-backed (`lectures/secret-history-*.md`, registry `sh-*` in `metadata/sources.yaml`). Each Part I chapter ends with a Divergence box (mirrors Volume II; not a Geo-style prediction scorecard). Part II method remains operator-chosen — see book/VOLUME-III-SECRET-HISTORY.md.
+    audience:
+      primary: serious general readers interested in history, philosophy, power, and narrative
+      secondary:
+      - readers following the Secret History classroom series on @PredictiveHistory
+    channel_context:
+      platform: YouTube
+      handle: '@PredictiveHistory'
+      status: book_track_wired
+  chapter_end_divergence:
+    registry_path: divergence-tracking/registry/divergences.jsonl
+    instruction: End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md — divergence IDs from divergences.jsonl where linked; not chapter_end_predictions (Volume I only).
+  part_2:
+    title: Part II — method TBD (Secret History)
+    after_chapter: sh-ch28
+    description: Operator locks evaluation mode in book/VOLUME-III-SECRET-HISTORY.md (divergence-first default for Part I boxes; Part II may add adjudication or hybrid).
+  book:
+    chapters:
+    - id: sh-ch01
+      title: 'Secret History #1: How Power Works (4K Re-Upload with Audio Fixed)'
+      purpose: Book chapter for Secret History lecture 1 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-01
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-01; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch01/outline.md
+      draft_path: chapters-volume-iii/sh-ch01/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch02
+      title: 'Secret History #2: How Societies Collapse'
+      purpose: Book chapter for Secret History lecture 2 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-02
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-02; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch02/outline.md
+      draft_path: chapters-volume-iii/sh-ch02/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch03
+      title: 'Secret History #3: Death by Gerontocracy'
+      purpose: Book chapter for Secret History lecture 3 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-03
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-03; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch03/outline.md
+      draft_path: chapters-volume-iii/sh-ch03/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch04
+      title: 'Secret History #4: How Evil Triumphs'
+      purpose: Book chapter for Secret History lecture 4 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-04
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-04; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch04/outline.md
+      draft_path: chapters-volume-iii/sh-ch04/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch05
+      title: 'Secret History #5: The Birth of Evil'
+      purpose: Book chapter for Secret History lecture 5 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-05
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-05; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch05/outline.md
+      draft_path: chapters-volume-iii/sh-ch05/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch06
+      title: 'Secret History #6: The Psychology of Evil (Graphic and Disturbing, Viewer Discretion Advised)'
+      purpose: Book chapter for Secret History lecture 6 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-06
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-06; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch06/outline.md
+      draft_path: chapters-volume-iii/sh-ch06/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch07
+      title: 'Secret History #7: Death by Meritocracy'
+      purpose: Book chapter for Secret History lecture 7 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-07
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-07; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch07/outline.md
+      draft_path: chapters-volume-iii/sh-ch07/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch08
+      title: 'Secret History #8: Death by Bureaucracy'
+      purpose: Book chapter for Secret History lecture 8 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-08
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-08; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch08/outline.md
+      draft_path: chapters-volume-iii/sh-ch08/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch09
+      title: 'Secret History #9: The Theory of Everything'
+      purpose: Book chapter for Secret History lecture 9 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-09
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-09; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch09/outline.md
+      draft_path: chapters-volume-iii/sh-ch09/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch10
+      title: 'Secret History #10: The Conspiracy of Evil'
+      purpose: Book chapter for Secret History lecture 10 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-10
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-10; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch10/outline.md
+      draft_path: chapters-volume-iii/sh-ch10/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch11
+      title: 'Secret History #11: Dawn of the Human Imagination'
+      purpose: Book chapter for Secret History lecture 11 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-11
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-11; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch11/outline.md
+      draft_path: chapters-volume-iii/sh-ch11/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch12
+      title: 'Secret History #12: Heaven on Earth'
+      purpose: Book chapter for Secret History lecture 12 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-12
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-12; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch12/outline.md
+      draft_path: chapters-volume-iii/sh-ch12/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch13
+      title: 'Secret History #13: Mandate of Heaven'
+      purpose: Book chapter for Secret History lecture 13 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-13
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-13; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch13/outline.md
+      draft_path: chapters-volume-iii/sh-ch13/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch14
+      title: 'Secret History #14: Legacy of the Steppes'
+      purpose: Book chapter for Secret History lecture 14 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-14
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-14; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch14/outline.md
+      draft_path: chapters-volume-iii/sh-ch14/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch15
+      title: 'Secret History #15: Capital and the Bronze Age Collapse'
+      purpose: Book chapter for Secret History lecture 15 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-15
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-15; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch15/outline.md
+      draft_path: chapters-volume-iii/sh-ch15/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch16
+      title: 'Secret History #16: The Big Bang of Greek Civilization'
+      purpose: Book chapter for Secret History lecture 16 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-16
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-16; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch16/outline.md
+      draft_path: chapters-volume-iii/sh-ch16/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch17
+      title: 'Secret History #17: Literary Genesis'
+      purpose: Book chapter for Secret History lecture 17 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-17
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-17; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch17/outline.md
+      draft_path: chapters-volume-iii/sh-ch17/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch18
+      title: 'Secret History #18: Thus Spoke Zarathustra'
+      purpose: Book chapter for Secret History lecture 18 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-18
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-18; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch18/outline.md
+      draft_path: chapters-volume-iii/sh-ch18/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch19
+      title: 'Secret History #19: Dawn of the Jews'
+      purpose: Book chapter for Secret History lecture 19 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-19
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-19; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch19/outline.md
+      draft_path: chapters-volume-iii/sh-ch19/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch20
+      title: 'Secret History #20: The Hellenistic World'
+      purpose: Book chapter for Secret History lecture 20 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-20
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-20; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch20/outline.md
+      draft_path: chapters-volume-iii/sh-ch20/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch21
+      title: 'Secret History #21: Roman Anti-Civilization'
+      purpose: Book chapter for Secret History lecture 21 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-21
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-21; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch21/outline.md
+      draft_path: chapters-volume-iii/sh-ch21/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch22
+      title: 'Secret History #22: The Divine Spark of Jesus'
+      purpose: Book chapter for Secret History lecture 22 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-22
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-22; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch22/outline.md
+      draft_path: chapters-volume-iii/sh-ch22/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch23
+      title: 'Secret History #23: The Organization of Evil'
+      purpose: Book chapter for Secret History lecture 23 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-23
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-23; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch23/outline.md
+      draft_path: chapters-volume-iii/sh-ch23/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch24
+      title: 'Secret History #24: Empire of Church'
+      purpose: Book chapter for Secret History lecture 24 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-24
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-24; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch24/outline.md
+      draft_path: chapters-volume-iii/sh-ch24/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch25
+      title: 'Secret History #25: Capital of Evil'
+      purpose: Book chapter for Secret History lecture 25 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-25
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-25; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch25/outline.md
+      draft_path: chapters-volume-iii/sh-ch25/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch26
+      title: 'Secret History #26: Faith of Evil'
+      purpose: Book chapter for Secret History lecture 26 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-26
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-26; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch26/outline.md
+      draft_path: chapters-volume-iii/sh-ch26/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch27
+      title: 'Secret History #27: Empire of Evil'
+      purpose: Book chapter for Secret History lecture 27 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-27
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-27; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch27/outline.md
+      draft_path: chapters-volume-iii/sh-ch27/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: sh-ch28
+      title: 'Secret History #28: Pax Judaica'
+      purpose: Book chapter for Secret History lecture 28 — Volume III Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume III policy).
+      kind: exposition
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - sh-28
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for sh-28; then draft chapter outline
+      outline_path: chapters-volume-iii/sh-ch28/outline.md
+      draft_path: chapters-volume-iii/sh-ch28/draft.md
       analysis_ready: false
       quotes_ready: false
       requires_prediction_review: false
