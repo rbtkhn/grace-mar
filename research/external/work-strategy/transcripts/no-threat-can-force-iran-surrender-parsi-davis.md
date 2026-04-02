@@ -18,7 +18,7 @@ The segment examines U.S.–Iran hostilities from the **Iranian regime’s likel
 
 ---
 
-## Strategy hooks (for lenses / WS–MEM)
+## Strategy hooks (for lenses / STRATEGY §IV)
 
 | Thread | One line |
 |--------|----------|

@@ -22,7 +22,7 @@ Postol uses **NATO exercise Able Archer (1983)** as a **staged escalation narrat
 
 ---
 
-## Strategy hooks (for lenses / WS–MEM)
+## Strategy hooks (for lenses / STRATEGY §IV)
 
 | Thread | One line |
 |--------|----------|

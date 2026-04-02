@@ -56,7 +56,7 @@ description: >-
 
 1. **Header:** Source, **watch URL** (placeholder if unknown), **air date** (best effort), **ingested** (today ISO), scope line + **ASR** note (Postol / BeiDou).
 2. **Perceiver** — neutral summary **≤200 words** (same standard as [transcripts README](../../../research/external/work-strategy/transcripts/README.md)).
-3. **Strategy hooks** — markdown table for **lenses / WS–MEM / triangulation**.
+3. **Strategy hooks** — markdown table for **lenses / STRATEGY §IV (work-strategy execution memory) / triangulation**.
 4. **Full transcript** — operator paste, light cleanup only.
 5. **Append** [INDEX.md](../../../research/external/work-strategy/analyst-corpus/INDEX.md) row (`theodore-postol`, **digest_one_line**, **verify_focus**).
 6. **`git commit`** transcript + INDEX (and checklist/stub if touched in the same ingest), **unless** operator opted out — see [Commit policy](../../../research/external/work-strategy/transcripts/README.md#commit-policy-ingest--git).

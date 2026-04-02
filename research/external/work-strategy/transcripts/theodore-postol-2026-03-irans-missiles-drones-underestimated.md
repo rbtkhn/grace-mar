@@ -20,7 +20,7 @@ Postol argues **U.S. and Israel** made a **strategic blunder**: the war **tilts 
 
 ---
 
-## Strategy hooks (for lenses / WS–MEM)
+## Strategy hooks (for lenses / STRATEGY §IV)
 
 | Thread | One line |
 |--------|----------|

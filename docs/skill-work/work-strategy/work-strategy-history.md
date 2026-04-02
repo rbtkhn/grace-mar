@@ -27,3 +27,7 @@ _(Append below this line.)_
 - **work-strategy-rome:** [ROME-PASS.md](work-strategy-rome/ROME-PASS.md) pre-skill skeleton + [notes/exemplars/](work-strategy-rome/notes/exemplars/) · [daily-brief-focus.md](daily-brief-focus.md) Rome / Vatican bullet.
 - **work-strategy-rome:** [ROME-PASS](work-strategy-rome/ROME-PASS.md#exemplars) exemplars — cross-read (Tucker × Palm Sunday); wire-first **Iran** / **ME**; administrative **Substitute** **Rudelli** **nomina** ([admin exemplar](work-strategy-rome/notes/exemplars/2026-04-01-rome-pass-exemplar-administrative-rudelli-substitute-2026-03-30.md)).
 - **Curated Tucker Carlson book (transcript spine):** [tucker-carlson/README.md](../../../research/external/youtube-channels/tucker-carlson/README.md) + [CURATED-INDEX.md](../../../research/external/youtube-channels/tucker-carlson/CURATED-INDEX.md); processed bodies under [work-strategy/transcripts/](../../../research/external/work-strategy/transcripts/) — [transcripts README](../../../research/external/work-strategy/transcripts/README.md).
+
+## 2026-04-04
+
+- **Naming:** Lane operator log stays **[work-strategy-history.md](work-strategy-history.md)** (full words, no abbreviation). **STRATEGY.md** §IV renamed from **WS–MEM** to **work-strategy execution memory**; new entry prefix **`WORK-STRATEGY-MEM–`** (replaces `WS–MEM–`). Cross-refs updated in README, daily briefs, learn-mode docs, Postol skill, external transcripts README.

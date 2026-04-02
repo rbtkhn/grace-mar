@@ -18,7 +18,7 @@ Mercouris (2026-03-30) centers **Military Watch**’s summary of **Haaretz** tha
 
 ---
 
-## Strategy hooks (for lenses / WS–MEM)
+## Strategy hooks (for lenses / STRATEGY §IV)
 
 | Thread | One line |
 |--------|----------|

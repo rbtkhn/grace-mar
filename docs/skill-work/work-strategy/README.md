@@ -20,7 +20,7 @@
 | **[daily-brief-jiang-layer.md](daily-brief-jiang-layer.md)** | **Slow layer** pointers (work-jiang) embedded in the daily brief as **§1c** — compressions, sweep snippets, lecture tracks; not breaking news. |
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → Triangulation → Synthesis (WORK only). |
-| **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / SCHOLAR-style heuristics / **WS–MEM** execution log for history & geopolitics; not CMC, not Record. |
+| **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / SCHOLAR-style heuristics / **work-strategy execution memory** (§IV, prefix `WORK-STRATEGY-MEM–`) for history & geopolitics; not CMC, not Record. |
 | **[LEARN_MODE_RULES.md](LEARN_MODE_RULES.md)** | LEARN MODE adapter: Tri-Frame protocol, extraction format, governance aligned with STRATEGY §VI. |
 | **[LEARN_MODE_OPERATOR_PROMPT.md](LEARN_MODE_OPERATOR_PROMPT.md)** | Copy-paste operator / Composer prompt for work-strategy sessions and LEARN MODE. |
 | **[minds/](minds/README.md)** | Tri-Frame entry stubs (Mercouris, Mearsheimer, Barnes) → `CIV–MIND–*.md` in civilization_memory. |

@@ -25,7 +25,7 @@ These three minds form the **Tri-Frame Synthesis** and must be applied unless a 
 
 2. **Context loading**  
    - Load current **STRATEGY** ledger: [`STRATEGY.md`](STRATEGY.md) (§I CORE + relevant lane-specific core + recent §III SCHOLAR).  
-   - Load relevant **`WS–MEM–`** entries (§IV — work-strategy execution log **in this repo only**; not CMC `MEM–*` shards under `research/repos/civilization_memory/`).  
+   - Load relevant **`WORK-STRATEGY-MEM–`** entries ([STRATEGY.md](STRATEGY.md) §IV — work-strategy execution memory **in this repo only**; not CMC `MEM–*` shards under `research/repos/civilization_memory/`).  
    - Load the three canonical minds via [`minds/`](minds/) (follow links to `CIV–MIND–*.md` as needed).
 
 3. **Analysis sequence** (mandatory)  
@@ -41,13 +41,13 @@ These three minds form the **Tri-Frame Synthesis** and must be applied unless a 
    - Convert insights into **heuristics / mental models** using this exact format:  
      `Model → Last applied (date + context) → Effectiveness note + explicit limitations + contradiction flags`  
    - Create or update **Extracted Lessons** and **Cross-Domain Patterns** under §III SCHOLAR.  
-   - When a **binding procedural constraint** emerges, add or extend a **`WS–MEM–…`** entry (§IV). (No separate RLL file in this repo unless the operator adds one.)
+   - When a **binding procedural constraint** emerges, add or extend a **`WORK-STRATEGY-MEM–…`** entry (§IV). (No separate RLL file in this repo unless the operator adds one.)
 
 5. **Governance constraints**  
    - All outputs are **additive-only**.  
    - Contradictions between minds or with documented evidence **must be preserved and flagged** (preserve CMC provenance when citing external MEM shards).  
    - No epistemic authority: record the derivation, never declare final truth.  
-   - **RECURSION-GATE:** Stage **`CANDIDATE-XXXX`** when promoting content into **Record / Voice** or when the operator treats a change as an **explicit strategy milestone** (see [`STRATEGY.md`](STRATEGY.md) §VI). **Routine** SCHOLAR / WS–MEM updates follow normal **git / PR** workflow under **lane/work-strategy** without a gate row.
+   - **RECURSION-GATE:** Stage **`CANDIDATE-XXXX`** when promoting content into **Record / Voice** or when the operator treats a change as an **explicit strategy milestone** (see [`STRATEGY.md`](STRATEGY.md) §VI). **Routine** SCHOLAR / work-strategy execution memory (§IV) updates follow normal **git / PR** workflow under **lane/work-strategy** without a gate row.
 
 6. **Output requirements**  
    - Clearly label which mind/frame dominates each insight.  
