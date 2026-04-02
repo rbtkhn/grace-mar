@@ -72,3 +72,13 @@ thesis:
       support_sources: []
       support_analysis: []
       vulnerabilities: []
+    - id: t06
+      claim: "Game Theory makes strategic structure explicit: players, rules, and incentives as the readable skeleton beneath formation, status, and civilizational-scale outcomes."
+      linked_claim_ids:
+        - clm-0039
+        - clm-0040
+        - clm-0041
+        - clm-0042
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []

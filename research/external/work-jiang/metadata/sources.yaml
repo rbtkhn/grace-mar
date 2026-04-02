@@ -1628,15 +1628,15 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=hE4l9WyLF3U
   publication_date: 2026-01-06
   lecture_path: lectures/game-theory-01-the-dating-game.md
-  analysis_path: null
+  analysis_path: analysis/hE4l9WyLF3U-game-theory-01-analysis.md
   series: game-theory
   episode: 1
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
-    chapter_mapping: not_started
+    analysis: complete
+    chapter_mapping: complete
 - source_id: gt-02
   video_id: kS-muAuq62E
   title: 'Game Theory #2: Why Schools Suck'

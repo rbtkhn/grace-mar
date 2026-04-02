@@ -8,9 +8,9 @@ concepts:
     tensions: ["State-led vs bottom-up formation"]
     related_concepts: ["strategic-imagination", "education-narrative"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-09, civ-01, sh-01]
-    analysis_ids: [geo-03, geo-09, civ-01, sh-01]
-    chapter_ids: [ch02, civ-ch01, sh-ch01]
+    source_ids: [geo-03, geo-09, civ-01, sh-01, gt-01]
+    analysis_ids: [geo-03, geo-09, civ-01, sh-01, gt-01]
+    chapter_ids: [ch02, civ-ch01, sh-ch01, gt-ch01]
     status: draft
 
   - concept_id: strategic-imagination
@@ -21,9 +21,9 @@ concepts:
     tensions: ["Rational actor vs mythic framing"]
     related_concepts: ["empire-order", "psychohistory-metaphor"]
     first_seen_source_id: geo-10
-    source_ids: [geo-10, geo-11]
-    analysis_ids: [geo-10, geo-11]
-    chapter_ids: [ch03]
+    source_ids: [geo-10, geo-11, gt-01]
+    analysis_ids: [geo-10, geo-11, gt-01]
+    chapter_ids: [ch03, gt-ch01]
     status: draft
 
   - concept_id: asymmetrical-warfare
@@ -190,9 +190,9 @@ concepts:
     tensions: ["Historical analogy vs formal game theory"]
     related_concepts: ["strategic-imagination"]
     first_seen_source_id: geo-10
-    source_ids: [geo-10]
-    analysis_ids: [geo-10]
-    chapter_ids: [ch03]
+    source_ids: [geo-10, gt-01]
+    analysis_ids: [geo-10, gt-01]
+    chapter_ids: [ch03, gt-ch01]
     status: draft
 
   - concept_id: second-civil-war
