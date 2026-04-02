@@ -6,6 +6,13 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 
 ---
 
+## 2026-04-02 — 24h coffee rollup, execution paths, civ-mem echoes in `last-dream.json`
+
+- [`scripts/dream_coffee_rollup.py`](../../scripts/dream_coffee_rollup.py) parses [`work-cadence-events.md`](../work-cadence/work-cadence-events.md) for `coffee` lines in a rolling UTC 24h window.
+- [`scripts/dream_execution_paths.py`](../../scripts/dream_execution_paths.py) emits three deterministic paths (`today_field`, `build`, `steward`) and `suggested_execution_path_index` from **tomorrow’s** calendar day `(tm_yday - 1) % 3`.
+- [`scripts/dream_civmem_echoes.py`](../../scripts/dream_civmem_echoes.py) runs **query-only** `query_inrepo_civmem` over a bounded string from contradiction digest entries (else short-term `self-memory` excerpt). No auto index build; missing index → `followups` line.
+- [`scripts/auto_dream.py`](../../scripts/auto_dream.py) merges these into handoff; [`scripts/operator_daily_warmup.py`](../../scripts/operator_daily_warmup.py) prints them under **Last dream (night handoff)**.
+
 ## 2026-04-01 — dream architecture refresh
 
 - Promoted `scripts/auto_dream.py` as the primary entrypoint (was `auto-research/swarm/orchestrator.py dream`).

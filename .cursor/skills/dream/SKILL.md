@@ -93,6 +93,7 @@ Return a short night-close brief with:
 - governance: pass/fail
 - contradiction digest: counts
 - artifact drafts: none / count
+- **When present in `last-dream.json`:** coffee **24h rollup** (how many `coffee` cadence lines in the window; mode mix), **three execution paths** (which index is suggested for tomorrow’s calendar day), **civ-mem echoes** (token overlap from in-repo `docs/civilization-memory/` — analogical only; cite the disclaimer)
 - one sentence on what tomorrow inherits from this run
 
 If nothing important changed, say so plainly. A quiet run is success.

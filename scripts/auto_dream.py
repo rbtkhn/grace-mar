@@ -23,6 +23,9 @@ for path in (REPO_ROOT / "scripts",):
         sys.path.insert(0, path_str)
 
 from contradiction_digest import default_digest_path, generate_contradiction_digest, write_artifact_drafts
+from dream_civmem_echoes import CIVMEM_DISCLAIMER, compute_civmem_echoes
+from dream_coffee_rollup import rollup_coffee_24h
+from dream_execution_paths import build_execution_paths
 from emit_pipeline_event import append_pipeline_event
 from log_cadence_event import append_cadence_event
 from repo_io import resolve_self_memory_path
@@ -257,6 +260,11 @@ def _write_last_dream_handoff(
     if promotable > 0:
         followups.append(f"{promotable} promotable artifact draft(s) prepared")
 
+    if summary.get("civmem_index_missing"):
+        followups.append(
+            "In-repo civ-mem index missing — optional: python3 scripts/build_civmem_inrepo_index.py build"
+        )
+
     handoff: dict[str, Any] = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "user_id": user_id,
@@ -271,6 +279,17 @@ def _write_last_dream_handoff(
         "promotable_draft_count": promotable,
         "followups": followups,
     }
+    cr = summary.get("coffee_rollup_24h")
+    if cr is not None:
+        handoff["coffee_rollup_24h"] = cr
+    if summary.get("execution_paths") is not None:
+        handoff["execution_paths"] = summary["execution_paths"]
+        handoff["suggested_execution_path_index"] = summary.get("suggested_execution_path_index", 0)
+    if summary.get("civmem_echoes") is not None:
+        handoff["civmem_echoes"] = summary["civmem_echoes"]
+    if summary.get("civmem_disclaimer"):
+        handoff["civmem_disclaimer"] = summary["civmem_disclaimer"]
+
     path = users_dir / user_id / LAST_DREAM_FILENAME
     path.write_text(json.dumps(handoff, indent=2) + "\n", encoding="utf-8")
     return path
@@ -377,6 +396,32 @@ def run_auto_dream(
         summary["event"] = event
 
     if apply and not halted:
+        from datetime import datetime, timezone
+
+        now_utc = datetime.now(timezone.utc)
+        coffee_rollup = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
+        dc = summary.get("contradiction_digest") or {}
+        rel_counts = dc.get("relation_counts") or {}
+        paths, sugg_idx = build_execution_paths(
+            user_id=user_id,
+            now_utc=now_utc,
+            integrity_ok=integrity_ok,
+            governance_ok=governance_ok,
+            reviewable_count=int(dc.get("reviewable_count") or 0),
+            contradiction_count=int(rel_counts.get("contradiction") or 0),
+            coffee_count_24h=int(coffee_rollup.get("count") or 0),
+        )
+        civ_echoes, civ_index_missing = compute_civmem_echoes(
+            digest=dc,
+            self_memory_text=memory_result.before,
+        )
+        summary["coffee_rollup_24h"] = coffee_rollup
+        summary["execution_paths"] = paths
+        summary["suggested_execution_path_index"] = sugg_idx
+        summary["civmem_echoes"] = civ_echoes
+        summary["civmem_disclaimer"] = CIVMEM_DISCLAIMER
+        summary["civmem_index_missing"] = civ_index_missing
+
         handoff_path = _write_last_dream_handoff(
             summary, users_dir=users_dir, user_id=user_id
         )
@@ -428,6 +473,11 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
             )
             promotable = sum(1 for row in summary.get("artifact_drafts") or [] if row.get("promotable"))
             lines.append(f"artifact drafts: {promotable}")
+        cr = summary.get("coffee_rollup_24h") or {}
+        if cr.get("count", 0) > 0:
+            lines.append(
+                f"coffee rollup 24h: count={cr.get('count')} modes={cr.get('by_mode')}"
+            )
         return "\n".join(lines)
 
     lines = [
@@ -451,6 +501,11 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
     promotable = sum(1 for row in artifact_drafts if row.get("promotable"))
     if artifact_drafts:
         lines.append(f"artifact drafts: {promotable}/{len(artifact_drafts)} promotable")
+    cr = summary.get("coffee_rollup_24h") or {}
+    if cr.get("count", 0) > 0:
+        lines.append(
+            f"coffee rollup 24h: count={cr.get('count')} modes={cr.get('by_mode')}"
+        )
     return "\n".join(lines)
 
 

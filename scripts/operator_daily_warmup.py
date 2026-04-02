@@ -72,6 +72,48 @@ def _format_last_dream_block(dream: dict) -> list[str]:
     pc = dream.get("promotable_draft_count", 0)
     if dc:
         lines.append(f"- Artifact drafts: {pc}/{dc} promotable")
+
+    cr = dream.get("coffee_rollup_24h")
+    if isinstance(cr, dict):
+        cnt = int(cr.get("count") or 0)
+        modes = cr.get("by_mode") or {}
+        mode_s = ", ".join(f"{k}={v}" for k, v in sorted(modes.items())) if modes else "—"
+        first = cr.get("first_ts") or "—"
+        last = cr.get("last_ts") or "—"
+        note = cr.get("note")
+        extra = f" ({note})" if note else ""
+        lines.append(
+            f"- Coffee (24h rollup): {cnt} run(s); modes: {mode_s}; first={first} last={last}{extra}"
+        )
+
+    paths = dream.get("execution_paths")
+    idx = int(dream.get("suggested_execution_path_index") or 0)
+    if isinstance(paths, list) and paths:
+        lines.append("")
+        lines.append("**Execution paths (suggested index uses tomorrow's calendar day):**")
+        for i, p in enumerate(paths):
+            if not isinstance(p, dict):
+                continue
+            mark = " — **suggested tomorrow**" if i == idx else ""
+            title = p.get("title") or p.get("id") or "path"
+            fm = str(p.get("first_move") or "").strip()
+            if fm:
+                lines.append(f"- **{i + 1}.** {title}{mark}: `{fm}`")
+            else:
+                lines.append(f"- **{i + 1}.** {title}{mark}")
+
+    echoes = dream.get("civmem_echoes") or []
+    disc = str(dream.get("civmem_disclaimer") or "").strip()
+    if isinstance(echoes, list) and echoes:
+        lines.append("")
+        lines.append(f"**Civ-mem echoes:** {disc}")
+        for e in echoes[:5]:
+            if not isinstance(e, dict):
+                continue
+            ov = e.get("overlap", "")
+            pth = e.get("path", "")
+            lines.append(f"  - overlap={ov} `{pth}`")
+
     followups = dream.get("followups") or []
     if followups:
         lines.append("")

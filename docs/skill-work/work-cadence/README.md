@@ -77,7 +77,7 @@ operator_coffee.py          consolidated morning runner (modes: work-start, ligh
   └─ operator_handoff_check.py   (closeout mode only)
 
 operator_end_of_day.py      night-side bundle
-  ├─ auto_dream.py               memory normalization, integrity, governance, contradiction, last-dream.json
+  ├─ auto_dream.py               memory normalization, integrity, governance, contradiction, last-dream.json (+ 24h coffee rollup, execution paths, optional civ-mem echoes)
   └─ operator_handoff_check.py   gate, commits, worktree, re-entry prompt
 ```
 
