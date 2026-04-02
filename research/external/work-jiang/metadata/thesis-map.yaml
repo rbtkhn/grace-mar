@@ -82,3 +82,23 @@ thesis:
       support_sources: []
       support_analysis: []
       vulnerabilities: []
+    - id: t07
+      claim: "Great Books ties canon reading to a formation arc: consciousness, love, imagination, and liberation rhetoric as the readable spine of Volume V before and alongside single-text close reads."
+      linked_claim_ids:
+        - clm-0043
+        - clm-0044
+        - clm-0045
+        - clm-0046
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []
+    - id: t08
+      claim: "Interviews extend Predictive History into long-form dialogue: the same forecasting and formation grammar, mediated by hosts and episodic Q&A, with explicit care for attribution and date-stamped claims."
+      linked_claim_ids:
+        - clm-0047
+        - clm-0048
+        - clm-0049
+        - clm-0050
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []

@@ -934,3 +934,60 @@ divergence_links:
   source_id: gt-01
   chapter_ids:
   - gt-ch01
+- divergence_id: div-GB01-001
+  video_id: TsD-8FGA84A
+  lecture_ref: lectures/great-books-01-secrets-of-the-universe.md
+  topic_tags:
+  - curriculum
+  - science_education
+  - consciousness
+  - materialism
+  - pedagogy
+  jiang_claim: The lecture frames standard schooling as teaching a materialist evolutionary
+    story that is a 'great lie' or 'deception' and that blocks questions of consciousness
+    and the meaning of being human.
+  mainstream_anchor: Science education teaches evidence-based models (including evolution)
+    with bounded claims; philosophy of mind and metaphysics are typically not settled
+    in biology class; curricula vary by jurisdiction and often distinguish scientific
+    method from personal belief.
+  mainstream_summary: Treat as rhetorical opening for a humanities course; book copy
+    should not equate classroom science with intentional deception without named curriculum
+    sources and nuance.
+  divergence_type: pedagogical_compression
+  strength: strong
+  evidence_notes: Sensitive for minors and policy readers — pair with philosophy-of-science
+    primers if retained beyond lecture voice.
+  sources_mainstream: []
+  sources_jiang:
+  - https://www.youtube.com/watch?v=TsD-8FGA84A
+  source_id: gb-01
+  chapter_ids:
+  - gb-ch01
+- divergence_id: div-VI01-001
+  video_id: XRk5VSEzJ4Y
+  lecture_ref: lectures/interviews-01-cyrus-janssen-world-is-about-to-change.md
+  topic_tags:
+  - climate
+  - geophysics
+  - speculation
+  - dialogue
+  jiang_claim: The closing segment treats ice-age cycles, magnetic pole shift, and
+    related geophysical themes as long-run civilizational risks in conversational
+    register.
+  mainstream_anchor: Climate change science centers greenhouse-gas forcing and observed
+    warming; magnetic pole wander is documented but distinct from classroom 'ice age'
+    rhetoric; catastrophic framing without citations diverges from IPCC-style risk
+    communication.
+  mainstream_summary: Archive as host-interview speculation; book layer should label
+    tier, date the dialogue, and cite geophysics and climate primers if retained beyond
+    interview voice.
+  divergence_type: pedagogical_compression
+  strength: moderate
+  evidence_notes: Pair magnetic field secular variation and paleoclimate literatures
+    if the thread is promoted to print.
+  sources_mainstream: []
+  sources_jiang:
+  - https://www.youtube.com/watch?v=XRk5VSEzJ4Y
+  source_id: vi-01
+  chapter_ids:
+  - vi-ch01

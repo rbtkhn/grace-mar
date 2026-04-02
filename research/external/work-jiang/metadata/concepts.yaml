@@ -8,9 +8,9 @@ concepts:
     tensions: ["State-led vs bottom-up formation"]
     related_concepts: ["strategic-imagination", "education-narrative"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-09, civ-01, sh-01, gt-01]
-    analysis_ids: [geo-03, geo-09, civ-01, sh-01, gt-01]
-    chapter_ids: [ch02, civ-ch01, sh-ch01, gt-ch01]
+    source_ids: [geo-03, geo-09, civ-01, sh-01, gt-01, gb-01]
+    analysis_ids: [geo-03, geo-09, civ-01, sh-01, gt-01, gb-01]
+    chapter_ids: [ch02, civ-ch01, sh-ch01, gt-ch01, gb-ch01]
     status: draft
 
   - concept_id: strategic-imagination
@@ -21,9 +21,9 @@ concepts:
     tensions: ["Rational actor vs mythic framing"]
     related_concepts: ["empire-order", "psychohistory-metaphor"]
     first_seen_source_id: geo-10
-    source_ids: [geo-10, geo-11, gt-01]
-    analysis_ids: [geo-10, geo-11, gt-01]
-    chapter_ids: [ch03, gt-ch01]
+    source_ids: [geo-10, geo-11, gt-01, vi-01]
+    analysis_ids: [geo-10, geo-11, gt-01, vi-01]
+    chapter_ids: [ch03, gt-ch01, vi-ch01]
     status: draft
 
   - concept_id: asymmetrical-warfare
@@ -60,9 +60,9 @@ concepts:
     tensions: ["Liberal rhetoric vs coercion"]
     related_concepts: ["financialization-empire", "asymmetrical-warfare"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-06]
-    analysis_ids: [geo-03, geo-06]
-    chapter_ids: [ch02, ch03]
+    source_ids: [geo-03, geo-06, vi-01]
+    analysis_ids: [geo-03, geo-06, vi-01]
+    chapter_ids: [ch02, ch03, vi-ch01]
     status: draft
 
   - concept_id: financialization-empire
@@ -229,9 +229,9 @@ concepts:
     tensions: ["Liberation vs discipline"]
     related_concepts: ["civ-formation"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-12, civ-01, sh-01]
-    analysis_ids: [geo-03, geo-12, civ-01, sh-01]
-    chapter_ids: [ch01, ch02, civ-ch01, sh-ch01]
+    source_ids: [geo-03, geo-12, civ-01, sh-01, gb-01]
+    analysis_ids: [geo-03, geo-12, civ-01, sh-01, gb-01]
+    chapter_ids: [ch01, ch02, civ-ch01, sh-ch01, gb-ch01]
     status: draft
 
   - concept_id: religious-legitimacy

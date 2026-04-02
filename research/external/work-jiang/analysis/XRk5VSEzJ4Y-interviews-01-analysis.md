@@ -5,7 +5,8 @@ source_id: vi-01
 canonical_url: https://www.youtube.com/watch?v=XRk5VSEzJ4Y
 series: interviews
 episode: 1
-chapter_candidates: []
+chapter_candidates:
+  - vi-ch01
 appendix_candidates: []
 themes: []
 status: complete
