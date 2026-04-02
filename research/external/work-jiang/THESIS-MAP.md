@@ -32,4 +32,12 @@ Jiang’s philosophy is best understood as a civilizational theory of formation,
 
 - **Linked claims:** `clm-0039`, `clm-0040`, `clm-0041`, `clm-0042`
 
+### t07 — Great Books ties canon reading to a formation arc: consciousness, love, imagination, and liberation rhetoric as the readable spine of Volume V before and alongside single-text close reads.
+
+- **Linked claims:** `clm-0043`, `clm-0044`, `clm-0045`, `clm-0046`
+
+### t08 — Interviews extend Predictive History into long-form dialogue: the same forecasting and formation grammar, mediated by hosts and episodic Q&A, with explicit care for attribution and date-stamped claims.
+
+- **Linked claims:** `clm-0047`, `clm-0048`, `clm-0049`, `clm-0050`
+
 *Generated from `metadata/thesis-map.yaml` — run `python scripts/work_jiang/render_thesis_map.py` after edits.*

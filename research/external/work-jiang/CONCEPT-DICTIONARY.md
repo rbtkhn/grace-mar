@@ -11,9 +11,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - State-led vs bottom-up formation
 - **Related concepts:** strategic-imagination, education-narrative
 - **First seen (source):** `geo-03`
-- **Sources:** `geo-03`, `geo-09`, `civ-01`, `sh-01`, `gt-01`
-- **Analysis (source ids):** `geo-03`, `geo-09`, `civ-01`, `sh-01`, `gt-01`
-- **Chapter candidates:** `ch02`, `civ-ch01`, `sh-ch01`, `gt-ch01`
+- **Sources:** `geo-03`, `geo-09`, `civ-01`, `sh-01`, `gt-01`, `gb-01`
+- **Analysis (source ids):** `geo-03`, `geo-09`, `civ-01`, `sh-01`, `gt-01`, `gb-01`
+- **Chapter candidates:** `ch02`, `civ-ch01`, `sh-ch01`, `gt-ch01`, `gb-ch01`
 - **Status:** draft
 
 ## strategic-imagination
@@ -25,9 +25,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Rational actor vs mythic framing
 - **Related concepts:** empire-order, psychohistory-metaphor
 - **First seen (source):** `geo-10`
-- **Sources:** `geo-10`, `geo-11`, `gt-01`
-- **Analysis (source ids):** `geo-10`, `geo-11`, `gt-01`
-- **Chapter candidates:** `ch03`, `gt-ch01`
+- **Sources:** `geo-10`, `geo-11`, `gt-01`, `vi-01`
+- **Analysis (source ids):** `geo-10`, `geo-11`, `gt-01`, `vi-01`
+- **Chapter candidates:** `ch03`, `gt-ch01`, `vi-ch01`
 - **Status:** draft
 
 ## asymmetrical-warfare
@@ -67,9 +67,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Liberal rhetoric vs coercion
 - **Related concepts:** financialization-empire, asymmetrical-warfare
 - **First seen (source):** `geo-03`
-- **Sources:** `geo-03`, `geo-06`
-- **Analysis (source ids):** `geo-03`, `geo-06`
-- **Chapter candidates:** `ch02`, `ch03`
+- **Sources:** `geo-03`, `geo-06`, `vi-01`
+- **Analysis (source ids):** `geo-03`, `geo-06`, `vi-01`
+- **Chapter candidates:** `ch02`, `ch03`, `vi-ch01`
 - **Status:** draft
 
 ## financialization-empire
@@ -246,9 +246,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Liberation vs discipline
 - **Related concepts:** civ-formation
 - **First seen (source):** `geo-03`
-- **Sources:** `geo-03`, `geo-12`, `civ-01`, `sh-01`
-- **Analysis (source ids):** `geo-03`, `geo-12`, `civ-01`, `sh-01`
-- **Chapter candidates:** `ch01`, `ch02`, `civ-ch01`, `sh-ch01`
+- **Sources:** `geo-03`, `geo-12`, `civ-01`, `sh-01`, `gb-01`
+- **Analysis (source ids):** `geo-03`, `geo-12`, `civ-01`, `sh-01`, `gb-01`
+- **Chapter candidates:** `ch01`, `ch02`, `civ-ch01`, `sh-ch01`, `gb-ch01`
 - **Status:** draft
 
 ## religious-legitimacy
