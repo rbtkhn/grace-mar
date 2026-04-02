@@ -29,7 +29,7 @@ Full spec: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
 - **Roles:** You are an **operator-facing assistant** in this repo. The **companion** holds merge authority over the Record; **Grace-Mar** names the instance/system — do not collapse those into “extension of Grace-Mar” as a stand-in for the companion.
 - **RECURSION-GATE:** **Staging** candidates in `users/[id]/recursion-gate.md` is normal pipeline/operator work. **Merging** into `self.md`, `self-archive.md`, and `bot/prompt.py` is **only** via `scripts/process_approved_candidates.py` (or the receipt flow in AGENTS.md) after companion approval — no ad-hoc profile merges.
 - **MEMORY** (`self-memory.md`) is **not** the Record; see AGENTS.md for hierarchy vs SELF.
-- **Session menus:** When `.cursor/skills/coffee/SKILL.md` applies (**coffee** — work-start or signing-off Step 1; same **A–H**; legacy **hey** still works), use its fixed **A–H** menu (present **A,B,C,D,E,G,H,F** — **F** ends hub). Concrete work-lane picks under **E** (named sub-lane) or **G** can exit the coffee hub per the skill; **E** alone after signing-off → system pick. Otherwise WORK lanes use **3–5** options and operator-style menus. Say **no menu** / **no options** to opt out.
+- **Session menus:** When `.cursor/skills/coffee/SKILL.md` applies (**coffee** — work-start or signing-off Step 1; same **A–I**; legacy **hey** still works), use its fixed menu (present **A,B,C,D,E,G,H,I,F** — **F** ends hub; **I** = work-strategy-rome). Concrete work-lane picks under **E** (named sub-lane), **G**, or **I** can exit the coffee hub per the skill; **E** alone after signing-off → system pick. Otherwise WORK lanes use **3–5** options and operator-style menus. Say **no menu** / **no options** to opt out.
 
 Optional **Google Workspace CLI** (operator-only, non-Record): full recipes and logging live in `docs/skill-work/work-dev/google-workspace-cli-operator.md`. Attach `.cursor/rules/gws-cli-recipes.mdc` in Cursor when using `gws`.
 
@@ -79,7 +79,7 @@ When the operator is clearly working in any **WORK** lane — **work-strategy**,
 **Conventions (detail):** [docs/skill-work/work-menu-conventions.md](../../docs/skill-work/work-menu-conventions.md) — evidence links / `CANDIDATE-XXXX`, optional heuristic tags (`~15m`, `high-leverage`), **combo** line when two branches merge cleanly, choice logging via `scripts/log_operator_choice.py` (session-transcript, not MEMORY).
 
 - **Follow the pick:** If they answer with a letter (or **A+C**), next turn executes that branch and **re-offers** a fresh menu at the end unless they say **no menu** / **no options**.
-- **Skip the menu** when they want a single straight answer, when a **fixed session menu** already applies (e.g. `coffee` **A–H**), or when they explicitly opt out.
+- **Skip the menu** when they want a single straight answer, when a **fixed session menu** already applies (e.g. `coffee` **A–I**), or when they explicitly opt out.
 
 Full lane prefixes: [docs/operator-agent-lanes.md](../../docs/operator-agent-lanes.md).
 
@@ -92,7 +92,7 @@ Full lane prefixes: [docs/operator-agent-lanes.md](../../docs/operator-agent-lan
 **When to offer (one line, not a second menu):** After this turn **completed** a substantive **EXECUTE**, **EXECUTE_LOCAL**, or **DOCSYNC** request (agent **committed**; **push** too if the lane required it), and the work was **more than a trivial one-file typo fix**, offer **one** optional closing line unless:
 
 - the operator said **no menu** / **no options**, or
-- a **fixed session menu** already applies (**coffee** **A–H**; legacy **hey**), or
+- a **fixed session menu** already applies (**coffee** **A–I**; legacy **hey**), or
 - the turn was **PLAN**-only or **read-only**.
 
 **Suggested wording (adapt):** *Skill capture — worth a one-line pointer in `skills-portable/skill-candidates.md` or a draft under `skills-portable/_drafts/`? Say yes, not now, or ignore.*

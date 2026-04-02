@@ -23,7 +23,7 @@ At the **start of a new chat** when work touches **instance state** (pipeline, R
 
 **One-command re-entry paste:** `python3 scripts/operator_reentry_stack.py -u grace-mar` runs handoff check, then `operator_daily_warmup` (`coffee` Step 1), then harness (add `--compact` for a shorter harness tail). Output overlaps by design; use for cold threads, not minimal noise.
 
-**`coffee`:** Follow `.cursor/skills/coffee/SKILL.md` — single source of truth for triggers, Step 1 scripts (work-start vs signing-off weight), Step 2 A–H menu, cadence modifiers (`light`, `minimal`, `survey`), and re-offer rules. Legacy **`hey`** still works.
+**`coffee`:** Follow `.cursor/skills/coffee/SKILL.md` — single source of truth for triggers, Step 1 scripts (work-start vs signing-off weight), Step 2 **A–I** menu (**I** = work-strategy-rome), cadence modifiers (`light`, `minimal`, `survey`), and re-offer rules. Legacy **`hey`** still works.
 
 **`dream` (end-of-day maintenance):** Follow `.cursor/skills/dream/SKILL.md` — bounded maintenance pass (memory normalization, integrity, governance, contradiction digest). Usually once per day near end of day. **End-of-day bundle:** `python3 scripts/operator_end_of_day.py -u grace-mar` runs dream + handoff-check in one pass.
 

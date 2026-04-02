@@ -91,7 +91,7 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 
 ## See also
 
-- **Fixed session menu (`coffee` — same A–H for work-start and signing-off; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). Concrete work-lane picks under **E** (named sub-lane) or **G** can exit the coffee hub per the skill. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+- **Fixed session menu (`coffee` — same A–I for work-start and signing-off; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed menu, listed **A, B, C, D, E, G, H, I, F** (**F** closes; **I** = work-strategy-rome). Concrete work-lane picks under **E** (named sub-lane), **G**, or **I** can exit the coffee hub per the skill. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
 - [Coffee skill](../../../.cursor/skills/coffee/SKILL.md)
 - [Work territory history logs](work-modules-history-principle.md) (`docs/skill-work/work-*/*-history.md`)

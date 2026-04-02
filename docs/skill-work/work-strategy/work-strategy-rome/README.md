@@ -36,6 +36,7 @@
 
 ## Integration
 
+- **Operator cadence:** Every **`coffee`** session offers **menu I** — dedicated to this folder (ROME-PASS, notes, exemplars). See [.cursor/skills/coffee/SKILL.md](../../../../.cursor/skills/coffee/SKILL.md) and [work-coffee menu-reference](../../work-coffee/menu-reference.md#ah-table).
 - Parent lane: [work-strategy README](../README.md), [STRATEGY.md](../STRATEGY.md), [current-events-analysis.md](../current-events-analysis.md).
 - Triangulation / lenses: [work-politics analytical lenses](../../work-politics/analytical-lenses/manifest.md) when copy touches electoral or US-partisan surfaces.
 - Daily horizon: [daily-brief-focus.md](../daily-brief-focus.md) — add a bullet when Rome is a standing watch item.
