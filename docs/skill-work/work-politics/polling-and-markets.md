@@ -21,11 +21,11 @@
 
 Run this block **only** when:
 
-- The operator chose **coffee menu E → work-politics** (intel path — not survey-only; legacy **hey** still works), **or**
+- The operator chose **coffee menu A — Today** (intel path — not survey-only; legacy **hey** still works), **or**
 - The operator explicitly requested KY-4 / Polymarket / polls in the **same** message as coffee, **or**
 - They asked ad hoc for a markets/polls refresh outside coffee.
 
-**Do not** run as part of coffee **Step 1** (token discipline — [coffee skill](../../../.cursor/skills/coffee/SKILL.md) defers internet intel until **E / work-politics** or explicit request).
+**Do not** run as part of coffee **Step 1** (token discipline — [coffee skill](../../../.cursor/skills/coffee/SKILL.md) defers internet intel until **A — Today** or explicit request).
 
 After `operator_daily_warmup.py` / `harness_warmup.py` when helpful for context, but **fetch/search steps** belong in the **E / work-politics** turn (or explicit request), not the first paste.
 

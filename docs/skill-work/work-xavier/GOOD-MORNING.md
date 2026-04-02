@@ -1,6 +1,6 @@
 # COFFEE (daily rhythm) — Xavier instance (`fork_id`: xavier, **her repo**)
 
-*Filename `GOOD-MORNING.md` is legacy; grace-mar operator activation is **coffee** (work-start vs **signing-off** intent — same **A–I** menu; **I** = work-strategy-rome), with legacy **hey** still accepted — mirror the current vocabulary in chat.*
+*Filename `GOOD-MORNING.md` is legacy; grace-mar operator activation is **coffee** (work-start vs **signing-off** intent — same **A–E** menu; **C — Compass** includes work-strategy-rome), with legacy **hey** still accepted — mirror the current vocabulary in chat.*
 
 **Where Record paths live:** [INSTANCE-PATHS.md](INSTANCE-PATHS.md). Run harness / integrity / gate steps **in Xavier’s `companion-xavier` repository**, not in grace-mar.
 

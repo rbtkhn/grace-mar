@@ -279,7 +279,7 @@ def build_operator_daily_warmup(user_id: str = "grace-mar") -> str:
             "",
             "## Coffee — KY-4 polling + prediction markets (lazy)",
             "",
-            "- With **coffee** (legacy `hey`): **Polymarket** + independent poll **web search** + Massie X run **only** after **menu E → work-politics** (or explicit same-message request), per `docs/skill-work/work-politics/polling-and-markets.md` — **not** in Step 1. This script does not fetch markets; follow the skill after this command.",
+            "- With **coffee** (legacy `hey`): **Polymarket** + independent poll **web search** + Massie X run **only** after **menu A — Today** (or explicit same-message request), per `docs/skill-work/work-politics/polling-and-markets.md` — **not** in Step 1. This script does not fetch markets; follow the skill after this command.",
             "",
             "## Guardrail",
             "",

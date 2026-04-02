@@ -5,7 +5,7 @@
 **URL (when deployed):** `https://<miniapp-host>/pol` (legacy **`/wap`** still works)  
 **Auth:** `POL_DASHBOARD_TOKEN` (or legacy `WAP_DASHBOARD_TOKEN`) — send as `X-Pol-Token` / `X-Wap-Token` or `Authorization: Bearer <token>`, or bookmark `https://<host>/pol?t=<token>`.
 
-**Daily rhythm cards:** The dashboard includes a static **A–I** reference strip (**coffee** — work-start and signing-off (same menu); legacy **hey** still works; order **A,B,C,D,E,G,H,I,F** — **F** closes; **I** = work-strategy-rome) plus links to [work-menu-conventions.md](skill-work/work-menu-conventions.md), [coffee SKILL](../.cursor/skills/coffee/SKILL.md), and [suggest_morning_forks.py](../scripts/suggest_morning_forks.py). No server logic — glanceable only.
+**Daily rhythm cards:** The dashboard includes a static **A–E** reference strip (**coffee** — work-start and signing-off (same menu); legacy **hey** still works; five modes; **no** close letter; **C — Compass** includes work-strategy-rome) plus links to [work-menu-conventions.md](skill-work/work-menu-conventions.md), [coffee SKILL](../.cursor/skills/coffee/SKILL.md), and [suggest_morning_forks.py](../scripts/suggest_morning_forks.py). No server logic — glanceable only.
 
 ---
 

@@ -20,11 +20,18 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
   - durable governed behavior crosses through `RECURSION-GATE`
   - cross-surface governance changes may need change review first
 
+## 2026-04-02 — coffee Step 2 → **A–E** five modes (**Build** = work-dev + hygiene; no **F**)
+
+- Replaced the **A–I + F** hub with **five** lettered options: **A Today**, **B Build**, **C Compass**, **D Book**, **E Steward** (see [menu-reference.md](menu-reference.md), [coffee SKILL.md](../../../.cursor/skills/coffee/SKILL.md)).
+- **Today** merges daily brief + §1d Putin + KY-4 intel (formerly **C** + **E → work-politics**). **Build** merges work-dev + repository hygiene (formerly **B** + **E → work-dev**). **Compass** merges work-strategy + **work-strategy-rome** (formerly **E → strategy** + **I**). **Book** = Jiang / PH (formerly **G**). **Steward** merges gate + template/boundary (formerly **D** + **A**).
+- **No close letter:** exit the hub by normal workflow or **no menu**. **Skills / meta:** say **skills** / **meta** with **B** or after **Build**, not a sixth menu slot.
+- Cross-refs updated: operator-style, handoff-check, dream/bridge/cadence tables, polling-and-markets, pol-dashboard, operator-skills, bootstrap, etc.
+
 ## 2026-04-02 — closeout merged into unified `coffee` (no separate closeout menu)
 
 - Removed the **Coffee — closeout** branch as a separate skill section and the **closeout-only** row for **E**.
-- **Signing-off** intent still uses `operator_coffee.py --mode closeout` or `operator_handoff_check.py` for **Step 1**; **Step 2** matches work-start (now **A–I** after letter **I** was added — see next entry).
-- Former closeout **E** (**system pick**) is now **E** with **no** work-dev/strategy/politics sub-lane after signing-off Step 1.
+- **Signing-off** intent still uses `operator_coffee.py --mode closeout` or `operator_handoff_check.py` for **Step 1**; **Step 2** matched work-start (**A–I** until the same-calendar-day **A–E** redesign — see newer 2026-04-02 entry above).
+- Former closeout **system pick** was **old menu E** with **no** work sub-lane after signing-off Step 1 (**A–E** redesign: **E — Steward** without gate/template split → system pick).
 - Docs and cross-refs updated: `menu-reference.md`, `operator-skills.md`, `handoff-check`, `bridge`, `harness-warmup.mdc`, `operator-style.mdc`, cadence README, etc.
 
 ## 2026-04-01 — letter **I** = work-strategy-rome (always on the coffee menu)
@@ -32,6 +39,7 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 - Added **I** to the fixed **`coffee`** Step 2 menu so **work-strategy-rome** always has a dedicated pivot (ROME-PASS, manifest, exemplars, notes).
 - Presentation order: **A, B, C, D, E, G, H, I, F** (**F** closes). **I** exits to normal workflow after the turn like **E** (sub-lane) and **G**, unless **`stay in coffee`**.
 - **E → work-strategy** (non-Rome) no longer implied Vatican/Rome work; Rome is **menu I** only.
+- **Superseded 2026-04-02:** five-mode menu; Rome lives under **C — Compass** (no dedicated **I** letter).
 
 ## 2026-03-31 — auto-research and swarm context sharpened the cadence boundary
 
