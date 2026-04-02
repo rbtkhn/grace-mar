@@ -58,6 +58,7 @@ Append short dated lines here or in [work-strategy-history.md](../work-strategy-
 
 - **2026-04-01** — Project shell created (`README.md`, `manifest.md`).
 - **2026-04-01** — CIV-MEM thin wire documented (README **Integration** + [manifest.md](manifest.md) **CIV-MEM**).
+- **2026-04-01** — **ROME-PASS exemplar:** Leo XIV Palm Sunday homily ([vatican.va](https://www.vatican.va/content/leo-xiv/en/homilies/2026/documents/20260329-palme.html)) cross-read with Tucker Carlson ingest `GyYy-QmxttU` — [notes/exemplars/2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md](notes/exemplars/2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md).
 - **2026-04-02** — **North star** paragraph added (reinvention / mutation; legitimacy without empire; WORK boundaries).
 - **2026-04-03** — **Thesis stub:** papacy-centered modern Rome, mind/soul vs administrative layers, Leo talent-stack hypothesis, narrow US-myth window — [notes/2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md).
 - **2026-04-03** — **[ROME-PASS.md](ROME-PASS.md)** skeleton + [notes/exemplars/](notes/exemplars/); [daily-brief-focus.md](../daily-brief-focus.md) Rome bullet (pre-skill readiness).

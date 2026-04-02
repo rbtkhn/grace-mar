@@ -60,8 +60,11 @@ _Use as a quick self-audit before filing the pass._
 
 Drop **redacted** **or** **public-safe** **finished** **passes** **in** [notes/exemplars/](notes/exemplars/) **—** **when** **2–3** **exist,** **a** **`strategy-rome`** **skill** **can** **point** **here** **for** **shape** **matching.**
 
+- **2026-04-01** — Cross-read (Vatican primary + US media monologue): [2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md](notes/exemplars/2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md).
+
 ---
 
 ## Revision log
 
 - **2026-04-03** — Skeleton created (pre-skill readiness per operator **A**).
+- **2026-04-01** — First **exemplar** linked (Tucker Carlson `GyYy-QmxttU` cross-read + Leo XIV Palm Sunday homily).
