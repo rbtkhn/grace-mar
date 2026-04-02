@@ -80,7 +80,7 @@ book:
       sprint: "2026-W13"
       blocking:
         - "Close analysis gap for geo-01"
-      next_action: "Draft chapter outline"
+      next_action: "Draft ch01 prose from outline (hook + spine §1–6)"
       outline_path: "chapters/ch01/outline.md"
       draft_path: "chapters/ch01/draft.md"
       analysis_ready: false

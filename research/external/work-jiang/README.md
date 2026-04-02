@@ -8,6 +8,7 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 
 | Kind | Path |
 |------|------|
+| **Reader site (static)** | [site/](site/) — Jiang-first gateway for students / YouTube / Substack; [site/README.md](site/README.md) (serve from `work-jiang/` parent) |
 | **Authorized sources list (operator)** | [work-jiang-sources.md](../../../docs/skill-work/work-jiang/work-jiang-sources.md) — YouTube / X / Substack surfaces for the lane; [work-modules principle](../../../docs/skill-work/work-modules-sources-principle.md) |
 | **Volume VII crosswalk + essays** | [substack/README.md](substack/README.md) — map newsletter posts to `lectures/`; full text [substack/essays/](substack/essays/) ([VOLUME-VII-ESSAYS.md](book/VOLUME-VII-ESSAYS.md)) |
 | Operator compressions (handoff packs) | [compressions/](compressions/) — `python3 scripts/jiang-compress.py`; [COMPRESSION-ENGINE.md](../../../docs/skill-work/work-jiang/COMPRESSION-ENGINE.md); Bloom / 2σ lens on gates + compression: [bloom-mastery-adaptation.md](../../../docs/bloom-mastery-adaptation.md) |
