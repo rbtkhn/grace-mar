@@ -1,5 +1,6 @@
 # Map book chapters (and appendix buckets) to source_id values from sources.yaml.
 # Volume 1: one chapter per Geo-Strategy lecture (ch01 = #1 … ch12 = #12).
+# Volume 2: civ-chNN → civ-NN (see docs/skill-work/work-jiang/volume-ii-book-track-conventions.md).
 # Run: python scripts/work_jiang/build_source_registry.py
 
 chapter_map:
@@ -27,6 +28,126 @@ chapter_map:
     source_ids: [geo-11]
   ch12:
     source_ids: [geo-12]
+  civ-ch01:
+    source_ids: [civ-01]
+  civ-ch02:
+    source_ids: [civ-02]
+  civ-ch03:
+    source_ids: [civ-03]
+  civ-ch04:
+    source_ids: [civ-04]
+  civ-ch05:
+    source_ids: [civ-05]
+  civ-ch06:
+    source_ids: [civ-06]
+  civ-ch07:
+    source_ids: [civ-07]
+  civ-ch08:
+    source_ids: [civ-08]
+  civ-ch09:
+    source_ids: [civ-09]
+  civ-ch10:
+    source_ids: [civ-10]
+  civ-ch11:
+    source_ids: [civ-11]
+  civ-ch12:
+    source_ids: [civ-12]
+  civ-ch13:
+    source_ids: [civ-13]
+  civ-ch14:
+    source_ids: [civ-14]
+  civ-ch15:
+    source_ids: [civ-15]
+  civ-ch16:
+    source_ids: [civ-16]
+  civ-ch17:
+    source_ids: [civ-17]
+  civ-ch18:
+    source_ids: [civ-18]
+  civ-ch19:
+    source_ids: [civ-19]
+  civ-ch20:
+    source_ids: [civ-20]
+  civ-ch21:
+    source_ids: [civ-21]
+  civ-ch22:
+    source_ids: [civ-22]
+  civ-ch23:
+    source_ids: [civ-23]
+  civ-ch24:
+    source_ids: [civ-24]
+  civ-ch25:
+    source_ids: [civ-25]
+  civ-ch26:
+    source_ids: [civ-26]
+  civ-ch27:
+    source_ids: [civ-27]
+  civ-ch28:
+    source_ids: [civ-28]
+  civ-ch29:
+    source_ids: [civ-29]
+  civ-ch30:
+    source_ids: [civ-30]
+  civ-ch31:
+    source_ids: [civ-31]
+  civ-ch32:
+    source_ids: [civ-32]
+  civ-ch33:
+    source_ids: [civ-33]
+  civ-ch34:
+    source_ids: [civ-34]
+  civ-ch35:
+    source_ids: [civ-35]
+  civ-ch36:
+    source_ids: [civ-36]
+  civ-ch37:
+    source_ids: [civ-37]
+  civ-ch38:
+    source_ids: [civ-38]
+  civ-ch39:
+    source_ids: [civ-39]
+  civ-ch40:
+    source_ids: [civ-40]
+  civ-ch41:
+    source_ids: [civ-41]
+  civ-ch42:
+    source_ids: [civ-42]
+  civ-ch43:
+    source_ids: [civ-43]
+  civ-ch44:
+    source_ids: [civ-44]
+  civ-ch45:
+    source_ids: [civ-45]
+  civ-ch46:
+    source_ids: [civ-46]
+  civ-ch47:
+    source_ids: [civ-47]
+  civ-ch48:
+    source_ids: [civ-48]
+  civ-ch49:
+    source_ids: [civ-49]
+  civ-ch50:
+    source_ids: [civ-50]
+  civ-ch51:
+    source_ids: [civ-51]
+  civ-ch52:
+    source_ids: [civ-52]
+  civ-ch53:
+    source_ids: [civ-53]
+  civ-ch54:
+    source_ids: [civ-54]
+  civ-ch55:
+    source_ids: [civ-55]
+  civ-ch56:
+    source_ids: [civ-56]
+  civ-ch57:
+    source_ids: [civ-57]
+  civ-ch58:
+    source_ids: [civ-58]
+  civ-ch59:
+    source_ids: [civ-59]
+  civ-ch60:
+    source_ids: [civ-60]
 
 appendix_map:
   predictions:

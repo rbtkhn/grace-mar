@@ -12,6 +12,13 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 PACK_DIR = WORK_DIR / "evidence-packs"
 
+import sys
+
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import chapter_by_id  # noqa: E402
+
 
 def load_yaml(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
@@ -61,8 +68,7 @@ def build_pack(chapter_id: str) -> str:
     pred_yl = load_yaml(WORK_DIR / "metadata" / "prediction-links.yaml")
     div_yl = load_yaml(WORK_DIR / "metadata" / "divergence-links.yaml")
 
-    by_id = {c["id"]: c for c in (arch.get("book") or {}).get("chapters") or []}
-    ch_meta = by_id.get(chapter_id)
+    ch_meta = chapter_by_id(arch, chapter_id)
     if not ch_meta:
         raise SystemExit(f"Unknown chapter_id: {chapter_id}")
 
@@ -71,6 +77,8 @@ def build_pack(chapter_id: str) -> str:
 
     cmap = (smap.get("chapter_map") or {}).get(chapter_id) or {}
     source_ids = list(cmap.get("source_ids") or [])
+    if not source_ids:
+        source_ids = list(ch_meta.get("source_ids") or [])
 
     src_by = {s["source_id"]: s for s in sources_list}
     blockers: list[str] = []
@@ -123,12 +131,21 @@ def build_pack(chapter_id: str) -> str:
         if chapter_id in (d.get("chapter_ids") or []) or (d.get("source_id") in source_ids)
     )
 
-    open_q = [
-        "Does Jiang treat religion instrumentally or ontologically in these sources?",
-        "Which competing IR or theological framework deserves the strongest counter-reading?",
-    ]
-
-    spill = "- Appendix / website: prediction scorecard rows; divergence notes where claims are contested."
+    if chapter_id.startswith("civ-ch"):
+        open_q = [
+            "Which mainstream historiographic line best counters the lecture's central move?",
+            "Where does lecture compression overstate consensus or omit named rivals?",
+        ]
+        spill = (
+            "- Appendix / website: divergence notes and Part II historiography "
+            "(Volume II — not a prediction scorecard)."
+        )
+    else:
+        open_q = [
+            "Does Jiang treat religion instrumentally or ontologically in these sources?",
+            "Which competing IR or theological framework deserves the strongest counter-reading?",
+        ]
+        spill = "- Appendix / website: prediction scorecard rows; divergence notes where claims are contested."
 
     lines = [
         f"# Evidence pack — {chapter_id}",

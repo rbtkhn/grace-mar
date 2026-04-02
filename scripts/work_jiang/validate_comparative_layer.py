@@ -9,6 +9,15 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import (
+    all_chapter_ids,
+    all_chapters_flat,
+    chapters_for_volume_block,
+    top_level_chapters,
+)  # noqa: E402
 
 
 def load_yaml(path: Path) -> dict:
@@ -30,8 +39,9 @@ def load_claim_ids() -> set[str]:
 
 
 def high_priority_analysis_chapters(arch: dict) -> list[str]:
+    """Volume I + Volume II only — exclude Volume IV/VII YAML stubs."""
     out = []
-    for ch in (arch.get("book") or {}).get("chapters") or []:
+    for ch in top_level_chapters(arch) + chapters_for_volume_block(arch, "volume_2_civilization"):
         if ch.get("kind") == "analysis" and ch.get("priority") == "high":
             cid = ch.get("id")
             if cid:
@@ -43,7 +53,7 @@ def main() -> int:
     errors: list[str] = []
 
     arch = load_yaml(WORK_DIR / "metadata" / "book-architecture.yaml")
-    chapter_ids = {c.get("id") for c in (arch.get("book") or {}).get("chapters") or [] if c.get("id")}
+    chapter_ids = all_chapter_ids(arch)
     hp = high_priority_analysis_chapters(arch)
 
     concepts = load_yaml(WORK_DIR / "metadata" / "concepts.yaml")

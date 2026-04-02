@@ -10,6 +10,10 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import chapters_for_volume_block, top_level_chapters  # noqa: E402
 
 
 def load_yaml(path: Path) -> dict:
@@ -66,25 +70,44 @@ def main() -> int:
             errors.append(f"Claim {cid} marked supported but analysis_id empty while source has analysis")
 
     arch = load_yaml(WORK_DIR / "metadata" / "book-architecture.yaml")
-    chapters = (arch.get("book") or {}).get("chapters") or []
+    # Evidence-pack checks: Volume I + Volume II only (not Volume IV/VII YAML stubs).
+    chapters = top_level_chapters(arch) + chapters_for_volume_block(arch, "volume_2_civilization")
     for ch in chapters:
         cid = ch.get("id")
         if not cid:
             continue
         pack = WORK_DIR / "evidence-packs" / f"{cid}.md"
+        status = (ch.get("status") or "").strip()
+        # Volume II Civilization: outline_pending packs are scaffold-only (no claims yet).
+        if cid.startswith("civ-ch") and status == "outline_pending":
+            if not pack.exists():
+                errors.append(f"Missing evidence pack for {cid}: {pack.relative_to(WORK_DIR)}")
+            continue
+
         if not pack.exists():
             errors.append(f"Missing evidence pack for {cid}: {pack.relative_to(WORK_DIR)}")
         text = pack.read_text(encoding="utf-8") if pack.exists() else ""
-        for m in re.findall(r"`(geo-\d\d)`", text):
-            if m not in src_by:
-                errors.append(f"Evidence pack {cid} references unknown source {m}")
+        if cid.startswith("civ-ch"):
+            for m in re.findall(r"`(civ-\d\d)`", text):
+                if m not in src_by:
+                    errors.append(f"Evidence pack {cid} references unknown source {m}")
+            if text and len(re.findall(r"`civ-\d\d`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no civ source ids (expected at least one)")
+        else:
+            for m in re.findall(r"`(geo-\d\d)`", text):
+                if m not in src_by:
+                    errors.append(f"Evidence pack {cid} references unknown source {m}")
+            if text and len(re.findall(r"`geo-\d\d`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no source ids (expected at least one)")
         for m in re.findall(r"`(clm-\d+)`", text):
             if m not in claim_by_id:
                 errors.append(f"Evidence pack {cid} references unknown claim {m}")
-        if text:
-            if len(re.findall(r"`geo-\d\d`", text)) < 1:
-                errors.append(f"Evidence pack {cid} lists no source ids (expected at least one)")
-            if len(re.findall(r"`clm-\d+`", text)) < 1:
+        claims_deferred = "none with chapter_candidates" in text
+        if text and not cid.startswith("civ-ch"):
+            if not claims_deferred and len(re.findall(r"`clm-\d+`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no claim ids (expected at least one)")
+        if text and cid.startswith("civ-ch") and status != "outline_pending":
+            if not claims_deferred and len(re.findall(r"`clm-\d+`", text)) < 1:
                 errors.append(f"Evidence pack {cid} lists no claim ids (expected at least one)")
 
     claim_chapter_gaps = [r for r in claim_rows if not r.get("chapter_candidates")]

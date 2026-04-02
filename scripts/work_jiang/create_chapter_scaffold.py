@@ -17,6 +17,10 @@ import yaml
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 CHAPTERS_DIR = WORK_DIR / "chapters"
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import chapter_by_id  # noqa: E402
 ANALYSIS_DIR = WORK_DIR / "analysis"
 TEMPLATE_PATH = Path(__file__).parent / "templates" / "CHAPTER-SCAFFOLD-DUAL-LENS.md"
 CLAIMS_PATH = WORK_DIR / "claims" / "registry" / "claims.jsonl"
@@ -140,8 +144,7 @@ def main() -> int:
     sources = load(WORK_DIR / "metadata" / "sources.yaml").get("sources", [])
     quote_links = load(WORK_DIR / "metadata" / "chapter-quote-links.yaml").get("chapter_quote_links") or {}
 
-    by_id = {c["id"]: c for c in (arch.get("book") or {}).get("chapters") or []}
-    ch = by_id.get(cid)
+    ch = chapter_by_id(arch, cid)
     if not ch:
         print(f"ERROR: Unknown chapter_id: {cid}", file=sys.stderr)
         return 1
@@ -170,7 +173,11 @@ def main() -> int:
         quote_placeholders.append(f"- … and {len(quote_ids) - 5} more (see chapter-quote-links)")
     quote_block = "\n".join(quote_placeholders) if quote_placeholders else "- [Q1]\n- [Q2]\n- [Q3]"
 
-    out_dir = CHAPTERS_DIR / cid
+    outline_path = ch.get("outline_path")
+    if outline_path and str(outline_path).startswith("chapters-volume-ii/"):
+        out_dir = (WORK_DIR / outline_path).parent
+    else:
+        out_dir = CHAPTERS_DIR / cid
     out_dir.mkdir(parents=True, exist_ok=True)
 
     outline_path = out_dir / "outline.md"

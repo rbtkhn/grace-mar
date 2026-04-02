@@ -9,6 +9,10 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import all_chapter_ids, all_chapters_flat, top_level_chapters  # noqa: E402
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 LECTURES = WORK_DIR / "lectures"
 ANALYSIS = WORK_DIR / "analysis"
@@ -91,35 +95,78 @@ def assert_safe_output_path(path: Path) -> None:
             raise ValueError(f"Unsafe export target for work-jiang lane: {p}")
 
 
-def check_rendered_status_drift(architecture: dict, errors: list[str]) -> None:
-    """Verify CHAPTER-QUEUE.md and BOOK-ARCHITECTURE.md status match book-architecture.yaml."""
-    expected = {
-        c["id"]: c.get("status", "")
-        for c in (architecture.get("book") or {}).get("chapters") or []
-    }
-    for path_name, header_pat, status_prefix in [
-        ("CHAPTER-QUEUE.md", re.compile(r"^## (ch\d+)"), "- **Status:**"),
-        ("BOOK-ARCHITECTURE.md", re.compile(r"^### (ch\d+)"), "- **Status:**"),
-    ]:
-        path = WORK_DIR / path_name
-        if not path.exists():
+def _scan_rendered_status_drift(
+    path: Path,
+    path_name: str,
+    header_pat: re.Pattern[str],
+    expected: dict[str, str],
+    status_prefix: str,
+    errors: list[str],
+) -> None:
+    if not path.exists():
+        return
+    lines = path.read_text(encoding="utf-8").splitlines()
+    current_cid: str | None = None
+    for line in lines:
+        m = header_pat.match(line)
+        if m:
+            current_cid = m.group(1)
             continue
-        lines = path.read_text(encoding="utf-8").splitlines()
-        current_cid = None
-        for line in lines:
-            m = header_pat.match(line)
-            if m:
-                current_cid = m.group(1)
-                continue
-            if current_cid and status_prefix in line:
-                val = line.split("**Status:**", 1)[-1].strip()
-                exp = expected.get(current_cid)
-                if exp is not None and val != exp:
-                    errors.append(
-                        f"{path_name} status for {current_cid} is {val!r}, "
-                        f"book-architecture.yaml has {exp!r} — re-run renderers"
-                    )
-                current_cid = None
+        if current_cid and status_prefix in line:
+            val = line.split("**Status:**", 1)[-1].strip()
+            exp = expected.get(current_cid)
+            if exp is not None and val != exp:
+                errors.append(
+                    f"{path_name} status for {current_cid} is {val!r}, "
+                    f"book-architecture.yaml has {exp!r} — re-run renderers"
+                )
+            current_cid = None
+
+
+def check_rendered_status_drift(architecture: dict, errors: list[str]) -> None:
+    """Verify rendered queue/architecture markdown status matches book-architecture.yaml."""
+    expected_v1 = {
+        c["id"]: c.get("status", "")
+        for c in top_level_chapters(architecture)
+    }
+    status_line = "- **Status:**"
+    _scan_rendered_status_drift(
+        WORK_DIR / "CHAPTER-QUEUE.md",
+        "CHAPTER-QUEUE.md",
+        re.compile(r"^## (ch\d+)"),
+        expected_v1,
+        status_line,
+        errors,
+    )
+    _scan_rendered_status_drift(
+        WORK_DIR / "BOOK-ARCHITECTURE.md",
+        "BOOK-ARCHITECTURE.md",
+        re.compile(r"^### (ch\d+)"),
+        expected_v1,
+        status_line,
+        errors,
+    )
+
+    vol2 = architecture.get("volume_2_civilization") or {}
+    ch2 = (vol2.get("book") or {}).get("chapters") or []
+    if ch2:
+        expected_v2 = {c["id"]: c.get("status", "") for c in ch2}
+        _scan_rendered_status_drift(
+            WORK_DIR / "CHAPTER-QUEUE-VOLUME-II.md",
+            "CHAPTER-QUEUE-VOLUME-II.md",
+            re.compile(r"^## (civ-ch\d+)"),
+            expected_v2,
+            status_line,
+            errors,
+        )
+        _scan_rendered_status_drift(
+            WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-II.md",
+            "BOOK-ARCHITECTURE-VOLUME-II.md",
+            re.compile(r"^### (civ-ch\d+)"),
+            expected_v2,
+            status_line,
+            errors,
+        )
 
 
 def check_membrane(errors: list[str]) -> None:
@@ -170,7 +217,7 @@ def main() -> int:
     if not arch_path.exists():
         errors.append("Missing metadata/book-architecture.yaml")
     architecture = load(arch_path) if arch_path.exists() else {}
-    chapter_ids = {c["id"] for c in (architecture.get("book") or {}).get("chapters") or []}
+    chapter_ids = all_chapter_ids(architecture)
 
     if not (architecture.get("project") or {}).get("thesis_one_sentence"):
         errors.append("Missing project.thesis_one_sentence")
@@ -297,7 +344,7 @@ def main() -> int:
     qdoc = load(QUOTES) if QUOTES.exists() else {}
     quotes = qdoc.get("quotes") or []
     src_by = {s["source_id"]: s for s in sources}
-    chapters = (architecture.get("book") or {}).get("chapters") or []
+    chapters = all_chapters_flat(architecture)
     for item in chapters:
         cid = item.get("id", "")
         status = (item.get("status") or "").strip()

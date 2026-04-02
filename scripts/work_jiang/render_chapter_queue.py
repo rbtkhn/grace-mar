@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 ARCH_PATH = WORK_DIR / "metadata" / "book-architecture.yaml"
 OUT = WORK_DIR / "CHAPTER-QUEUE.md"
+OUT_VOL2 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-II.md"
 
 
 def load(path: Path) -> dict:
@@ -17,20 +18,13 @@ def load(path: Path) -> dict:
         return yaml.safe_load(f) or {}
 
 
-def main() -> int:
-    arch = load(ARCH_PATH)
-    chapters = (arch.get("book") or {}).get("chapters") or []
-    lines = [
-        "# CHAPTER QUEUE",
-        "",
-        "Production order and blockers for the Jiang book/site lane.",
-        "",
-    ]
+def _render_queue_lines(title: str, blurb: str, chapters: list) -> list[str]:
+    lines = [f"# {title}", "", blurb, ""]
     for ch in chapters:
         cid = ch.get("id", "")
-        title = ch.get("title", cid)
+        title_ch = ch.get("title", cid)
         lines += [
-            f"## {cid} — {title}",
+            f"## {cid} — {title_ch}",
             "",
             f"- **Status:** {ch.get('status', '')}",
             f"- **Owner:** {ch.get('owner', '')}",
@@ -45,6 +39,17 @@ def main() -> int:
             lines.append("")
         lines.append(f"**Next action:** {ch.get('next_action', '')}")
         lines.append("")
+    return lines
+
+
+def main() -> int:
+    arch = load(ARCH_PATH)
+    chapters = (arch.get("book") or {}).get("chapters") or []
+    lines = _render_queue_lines(
+        "CHAPTER QUEUE",
+        "Production order and blockers for the Jiang book/site lane (Volume I — Geo-Strategy, top-level `book`).",
+        chapters,
+    )
     lines.append(
         "*Generated from `metadata/book-architecture.yaml` — run "
         "`python scripts/work_jiang/render_chapter_queue.py` after edits.*"
@@ -52,6 +57,23 @@ def main() -> int:
     lines.append("")
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print(f"Wrote {OUT}")
+
+    vol2 = arch.get("volume_2_civilization") or {}
+    ch2 = (vol2.get("book") or {}).get("chapters") or []
+    if ch2:
+        lines2 = _render_queue_lines(
+            "CHAPTER QUEUE — Volume II (Civilization)",
+            "Nested `volume_2_civilization.book.chapters` — see "
+            "`docs/skill-work/work-jiang/volume-ii-book-track-conventions.md`.",
+            ch2,
+        )
+        lines2.append(
+            "*Generated from `metadata/book-architecture.yaml` (`volume_2_civilization`) — "
+            "same command as Volume I queue.*"
+        )
+        lines2.append("")
+        OUT_VOL2.write_text("\n".join(lines2), encoding="utf-8")
+        print(f"Wrote {OUT_VOL2}")
     return 0
 
 

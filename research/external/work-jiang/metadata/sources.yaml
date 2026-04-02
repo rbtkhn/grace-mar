@@ -305,15 +305,15 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=Jjqf9T59uY0
   publication_date: 2024-08-29
   lecture_path: lectures/civilization-01-explaining-humanitys-transition-to-agriculture.md
-  analysis_path: null
+  analysis_path: analysis/Jjqf9T59uY0-civilization-01-analysis.md
   series: civilization
   episode: 1
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
-    chapter_mapping: not_started
+    analysis: complete
+    chapter_mapping: complete
 - source_id: civ-02
   video_id: x1E5rRmCiT4
   title: 'Civilization #2: Religion and the Dawn of Society'
@@ -328,7 +328,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-03
   video_id: VanPH0GFTsA
   title: 'Civilization #3: The Religious Imagination'
@@ -343,7 +343,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-04
   video_id: RaT_ZUDjHrM
   title: 'Civilization #4: The Paradise Lost of Marija Gimbutas'
@@ -358,7 +358,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-05
   video_id: J4HTFJWl5D8
   title: 'Civilization #5: The Yamnaya Conquest of Europe'
@@ -373,7 +373,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-06
   video_id: QwfB-vXXKWU
   title: 'Civilization #6: Elite Overproduction and the Bronze Age Collapse'
@@ -388,7 +388,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-07
   video_id: 677rmlRgvLQ
   title: 'Civilization #7: Homer''s Iliad and the Birth of Greek Civilization'
@@ -403,7 +403,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-08
   video_id: NpNCQ_gNqdE
   title: 'Civilization #8: Rat Utopia and the Peloponnesian War'
@@ -418,7 +418,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-09
   video_id: 96hzWlozdHw
   title: 'Civilization #9: Aeschylus, Sophocles, and Euripides as Prophets of Democracy'
@@ -433,7 +433,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-10
   video_id: LWlTtdNww_k
   title: 'Civilization #10: The Trial of Socrates and Plato''s Allegory of the Cave'
@@ -448,7 +448,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-11
   video_id: l6AroD58jkE
   title: 'Civilization #11: The Greatness of Philip II of Macedon'
@@ -463,7 +463,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-12
   video_id: iTuRB48Of9Y
   title: 'Civilization #12: The Tyranny of Alexander the Great'
@@ -478,7 +478,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-13
   video_id: WoTOxE4DTFA
   title: 'Civilization #13: Aristotle and the Greek Legacy'
@@ -493,7 +493,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-14
   video_id: TdcE7XGDayo
   title: 'Civilization #14: Hannibal Barca, Lucius Brutus, and the Triumph of Rome'
@@ -508,7 +508,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-15
   video_id: F8qQgsEFGgc
   title: 'Civilization #15: The Myth-Making Genius of Julius Caesar'
@@ -523,7 +523,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-16
   video_id: Dc54IquR7ik
   title: 'Civilization #16: Julius Caesar''s Will and Octavian''s Birth of Empire'
@@ -538,7 +538,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-17
   video_id: myTurqU7NxU
   title: 'Civilization #17: Homer, Virgil, and the War for the Soul of Rome'
@@ -553,7 +553,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-18
   video_id: KSSSCznYrGo
   title: 'Civilization #18: The Great Pyramid as Ancient Egypt''s Manhattan Project'
@@ -568,7 +568,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-19
   video_id: e92jyBMmAyM
   title: 'Civilization #19: Gilgamesh and Mesopotamia''s Quest for Immortality'
@@ -583,7 +583,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-20
   video_id: cvI8rukoda8
   title: 'Civilization #20: The Proto-Buddhists of the Indus Valley (Harappan) Civilization'
@@ -598,7 +598,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-21
   video_id: RkpGrRUgjnk
   title: 'Civilization #21: The Apology of King David of Israel'
@@ -613,7 +613,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-22
   video_id: GhLd_h1QsL4
   title: 'Civilization #22: The Literary Genesis of the Yahwist'
@@ -628,7 +628,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-23
   video_id: HvVTNTPzq7E
   title: 'Civilization #23: Cyrus the Great as Messiah'
@@ -643,7 +643,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-24
   video_id: _bXHBT5NTfc
   title: 'Civilization #24: Resurrecting the Gnostic Jesus'
@@ -658,7 +658,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-25
   video_id: kuMhSFXnr5I
   title: 'Civilization #25: Paul of Tarsus, Messiah of Rome'
@@ -673,7 +673,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-26
   video_id: za30rbC3tTg
   title: 'Civilization #26: Constantine''s Monotheistic Revolution'
@@ -688,7 +688,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-27
   video_id: GdbZBVUIVDE
   title: 'Civilization #27: Augustine''s Empire of God'
@@ -703,7 +703,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-28
   video_id: C9rzPGJ0wm4
   title: 'Civilization #28: Muhammad''s Revolution of God'
@@ -718,7 +718,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-29
   video_id: GfqJi0qevok
   title: 'Civilization #29: Dante''s Divine Comedy and the Liberation of the Human
@@ -734,7 +734,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-30
   video_id: asbKjezwIJM
   title: 'Civilization #30: Dante as the Second Coming of Homer'
@@ -749,7 +749,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-31
   video_id: HIoYQBbBllk
   title: 'Civilization #31: The Oceanic Currents of History'
@@ -764,7 +764,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-32
   video_id: _Io7-_RS8uE
   title: 'Civilization #32: Rome''s Rise, Fall, and Legacy'
@@ -779,7 +779,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-33
   video_id: abs6z7VPEMc
   title: 'Civilization #33: The Rise and Fall of the Byzantine Empire'
@@ -794,7 +794,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-34
   video_id: 1dwvgtc7XzY
   title: 'Civilization #34: The Useful Fiction of the Holy Roman Empire'
@@ -809,7 +809,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-35
   video_id: 7k5XoLzwmls
   title: 'Civilization #35: The Viking Legacy'
@@ -824,7 +824,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-36
   video_id: tYMNsa83NHY
   title: 'Civilization #36: Memory of the Norse'
@@ -839,7 +839,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-37
   video_id: 2OdO8LoKuo8
   title: 'Civilization #37: The Golden Age of Islam'
@@ -854,7 +854,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-38
   video_id: A2LMJerHcKM
   title: 'Civilization #38: Twilight of the Middle Kingdom'
@@ -869,7 +869,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-39
   video_id: mPQzAPnjYkM
   title: 'Civilization #39: Genghis Khan, World Shatterer'
@@ -884,7 +884,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-40
   video_id: 3751ZjwmrBw
   title: 'Civilization #40: Church and Empire'
@@ -899,7 +899,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-41
   video_id: v6CDqJnrvLk
   title: 'Civilization #41: Dante''s Quiet Revolution'
@@ -914,7 +914,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-42
   video_id: TcxlOiJz8V0
   title: 'Civilization #42: The Protestant Reformation and the Birth of Capitalism'
@@ -929,7 +929,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-43
   video_id: CjtUnKcU1IA
   title: 'Civilization #43: The Structure of Scientific Revolutions'
@@ -944,7 +944,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-44
   video_id: -DnfGcvZrfA
   title: 'Civilization #44: The Spanish Conquest of the New World'
@@ -959,7 +959,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-45
   video_id: DiRJyy-8V54
   title: 'Civilization #45: The Gunpowder Revolution'
@@ -974,7 +974,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-46
   video_id: 5HwZx5kQm9o
   title: 'Civilization #46: The Revolution of Reason'
@@ -989,7 +989,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-47
   video_id: ef-Ch2LGDDI
   title: 'Civilization #47: The Passion of Robespierre'
@@ -1004,7 +1004,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-48
   video_id: enEET_0j_Y8
   title: 'Civilization #48: Napoleon''s Empire of Myth'
@@ -1019,7 +1019,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-49
   video_id: JZ8P-FZHWnQ
   title: 'Civilization #49: The Dutch Golden Age and the Rise of the Middle Class'
@@ -1034,7 +1034,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-50
   video_id: laGSxfvlOfk
   title: 'Civilization #50: Rule, Britannia!'
@@ -1049,7 +1049,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-51
   video_id: Qms7trnKwqQ
   title: 'Civilization #51: Shakespeare''s Language of Empire'
@@ -1064,7 +1064,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-52
   video_id: ea20aMYfT5I
   title: 'Civilization #52: Empire of Democracy'
@@ -1079,7 +1079,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-53
   video_id: 0rALqcPWuH0
   title: 'Civilization #53: Dostoevsky and the Soul of Russia'
@@ -1094,7 +1094,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-54
   video_id: o2Nq--qU9Kc
   title: 'Civilization #54: The German Will to Power'
@@ -1109,7 +1109,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-55
   video_id: _3c3FjS57x4
   title: 'Civilization #55: Kant, Hegel, and the Theory of Everything'
@@ -1124,7 +1124,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-56
   video_id: m24LnQ-Ksjk
   title: 'Civilization #56: What Marx Got Wrong'
@@ -1139,7 +1139,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-57
   video_id: cylkQPsfFRY
   title: 'Civilization #57: How Modernism Ruined Everything (Re-upload AUDIO FIXED
@@ -1155,7 +1155,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-58
   video_id: tquo1UsC5Nw
   title: 'Civilization #58: Birth of the Nation-State'
@@ -1170,7 +1170,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-59
   video_id: QtqfIjK1GAc
   title: 'Civilization #59: The Man of Steel'
@@ -1185,7 +1185,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: civ-60
   video_id: _gH4PvIni5E
   title: 'Civilization #60: The Decline and Fall of the American Empire'
@@ -1200,7 +1200,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: not_started
+    chapter_mapping: complete
 - source_id: sh-01
   video_id: lt8XLz78ZvY
   title: 'Secret History #1: How Power Works (4K Re-Upload with Audio Fixed)'

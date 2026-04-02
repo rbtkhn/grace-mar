@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 META = WORK_DIR / "metadata" / "book-architecture.yaml"
 OUT = WORK_DIR / "BOOK-ARCHITECTURE.md"
+OUT_VOL2 = WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-II.md"
 
 
 def load_yaml(path: Path) -> dict:
@@ -146,6 +147,111 @@ def render(data: dict) -> str:
     return "\n".join(lines)
 
 
+def render_volume_ii(data: dict) -> str | None:
+    """Render BOOK-ARCHITECTURE-VOLUME-II.md from `volume_2_civilization`."""
+    vol = data.get("volume_2_civilization") or {}
+    chapters = (vol.get("book") or {}).get("chapters") or []
+    if not chapters:
+        return None
+    project = vol.get("project") or {}
+    series_title = project.get("series_title")
+    volume = project.get("volume") or {}
+    lines = [
+        "# BOOK ARCHITECTURE — Volume II (Civilization)",
+        "",
+        f"**Project:** {project.get('title', '')}",
+    ]
+    if series_title and isinstance(volume, dict) and volume.get("lecture_series"):
+        vol_n = volume.get("number")
+        ls = volume.get("lecture_series")
+        vol_line = f"**Volume {vol_n}:** {ls}" if vol_n is not None else f"**Volume:** {ls}"
+        lines += [
+            "",
+            "## Series and volume",
+            "",
+            f"**Series:** {series_title} — nested block `volume_2_civilization` in `book-architecture.yaml`.",
+            "",
+            f"{vol_line} (this volume’s lecture corpus).",
+        ]
+    lines += [
+        "",
+        "## Thesis",
+        "",
+        str(project.get("thesis_one_sentence") or "").strip(),
+        "",
+        "## Book promise",
+        "",
+        str(project.get("promise_paragraph") or "").strip(),
+        "",
+        "## Audience",
+        "",
+        f"- **Primary:** {project.get('audience', {}).get('primary', '')}",
+    ]
+    sec = project.get("audience", {}).get("secondary") or []
+    for s in sec:
+        lines.append(f"- **Secondary:** {s}")
+    ced = vol.get("chapter_end_divergence") or {}
+    if ced:
+        lines += [
+            "",
+            "## End-of-chapter divergence (Part I)",
+            "",
+            f"- **Registry:** `{ced.get('registry_path', '')}`",
+            "",
+            str(ced.get("instruction") or "").strip(),
+            "",
+        ]
+    part2 = vol.get("part_2") or {}
+    if part2:
+        after = part2.get("after_chapter") or "civ-ch60"
+        lines += [
+            "",
+            "## Part II (after Part I)",
+            "",
+            f"### {part2.get('title', 'Part II')}",
+            "",
+            f"**Begins after:** `{after}`",
+            "",
+            str(part2.get("description") or "").strip(),
+            "",
+        ]
+    lines += ["", "## Chapters (Part I)", ""]
+    for ch in chapters:
+        pred_ids = ch.get("prediction_ids") or []
+        pred_line = ""
+        if pred_ids:
+            pred_line = f"- **Prediction IDs:** `{', '.join(pred_ids)}`"
+        lines += [
+            f"### {ch['id']} — {ch['title']}",
+            "",
+            f"- **Purpose:** {ch['purpose']}",
+            f"- **Kind:** {ch['kind']}",
+            f"- **Priority:** {ch['priority']}",
+            f"- **Target words:** {ch.get('target_words', '')}",
+            f"- **Status:** {ch.get('status', '')}",
+            f"- **Owner:** {ch.get('owner', '')}",
+            f"- **Sprint:** {ch.get('sprint', '')}",
+        ]
+        blocking = ch.get("blocking") or []
+        if blocking:
+            lines.append(f"- **Blocking:** {', '.join(blocking)}")
+        outline_path = ch.get("outline_path")
+        draft_path = ch.get("draft_path")
+        if outline_path:
+            lines.append(f"- **Outline:** `{outline_path}`")
+        if draft_path:
+            lines.append(f"- **Draft:** `{draft_path}`")
+        if pred_line:
+            lines.append(pred_line)
+        lines.append("")
+    lines.append(
+        "*Generated from `metadata/book-architecture.yaml` (`volume_2_civilization`) — "
+        "`python scripts/work_jiang/render_book_architecture.py`.*"
+    )
+    lines.append("")
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -164,6 +270,10 @@ def main() -> int:
         return 1
     OUT.write_text(render(data), encoding="utf-8")
     print(f"Wrote {OUT}")
+    vol2_md = render_volume_ii(data)
+    if vol2_md:
+        OUT_VOL2.write_text(vol2_md, encoding="utf-8")
+        print(f"Wrote {OUT_VOL2}")
     if args.json_summary:
         summary = {
             "project_id": (data.get("project") or {}).get("id"),

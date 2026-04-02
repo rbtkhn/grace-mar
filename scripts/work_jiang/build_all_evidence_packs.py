@@ -7,13 +7,21 @@ from pathlib import Path
 
 import yaml
 
+import sys
+
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
+
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import chapters_for_volume_block, top_level_chapters  # noqa: E402
 
 
 def main() -> int:
     arch = yaml.safe_load((WORK_DIR / "metadata" / "book-architecture.yaml").read_text(encoding="utf-8"))
-    chapters = (arch.get("book") or {}).get("chapters") or []
+    # Volume I (top-level book) + Volume II Civilization only — not nested Volume IV/VII stubs.
+    chapters = top_level_chapters(arch) + chapters_for_volume_block(arch, "volume_2_civilization")
     script = ROOT / "scripts" / "work_jiang" / "build_evidence_pack.py"
     for ch in chapters:
         cid = ch.get("id")

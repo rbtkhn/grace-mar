@@ -6,9 +6,16 @@ from pathlib import Path
 
 import yaml
 
+import sys
+
 ROOT = Path(__file__).resolve().parents[2]
 WORK_DIR = ROOT / "research" / "external" / "work-jiang"
 OUT = WORK_DIR / "STATUS.md"
+
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
+from arch_chapters import chapters_for_volume_block  # noqa: E402
 
 
 def load_yaml(path: Path) -> dict:
@@ -84,13 +91,12 @@ def main() -> int:
 
     pack_dir = WORK_DIR / "evidence-packs"
     expected_ch = {c.get("id") for c in arch_ch if c.get("id")}
-    pack_files = list(pack_dir.glob("ch*.md")) if pack_dir.exists() else []
-    pack_ids = set()
-    for p in pack_files:
-        # ch01.md -> ch01
-        stem = p.stem
-        if stem.startswith("ch"):
-            pack_ids.add(stem)
+    vol2_chapters = chapters_for_volume_block(arch, "volume_2_civilization")
+    expected_vol2 = {c.get("id") for c in vol2_chapters if c.get("id")}
+    pack_files: list[Path] = []
+    if pack_dir.exists():
+        pack_files = list(pack_dir.glob("ch*.md")) + list(pack_dir.glob("civ-ch*.md"))
+    pack_ids = {p.stem for p in pack_files}
 
     lines = [
         "# work-jiang — status",
@@ -113,6 +119,16 @@ def main() -> int:
         f"- **Chapters with blockers listed:** {len(blocked)}",
         f"- **Evidence packs present:** {len(pack_ids & expected_ch)} / {len(expected_ch)} chapters",
         "",
+    ]
+    if expected_vol2:
+        lines += [
+            "### Volume II (Civilization) — `volume_2_civilization`",
+            "",
+            f"- **Chapters defined:** {len(expected_vol2)}",
+            f"- **Evidence packs present:** {len(pack_ids & expected_vol2)} / {len(expected_vol2)} chapters",
+            "",
+        ]
+    lines += [
         "## Registries",
         "",
         f"- **Predictions (raw jsonl):** {len(preds_raw)}",
