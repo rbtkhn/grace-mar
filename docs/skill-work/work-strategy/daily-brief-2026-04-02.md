@@ -1,7 +1,7 @@
 # Daily brief — work-politics & work-strategy
 
 **Date:** 2026-04-02  
-**Assembled:** 2026-04-02 12:42 UTC  
+**Assembled:** 2026-04-02 15:52 UTC  
 **Recency window (RSS):** last **36h** (undated items may appear)  
 **Config:** `docs/skill-work/work-strategy/daily-brief-config.json`
 
@@ -55,14 +55,12 @@ _Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md
 
 ## 1d. Putin — last 48 hours
 
-_Rolling window ~**2026-03-31 12:42** → **2026-04-02 12:42 UTC** (brief assembly time). **Bullets + URLs** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md). RIA = Russian state wire._
+_Scan ~**2026-04-02** (coffee menu **C**). Rolling window **~48h** through **2026-04-02** UTC. Bullets + URLs — operator WORK, not Record. Same-day Kremlin feed: [president / news](http://en.kremlin.ru/events/president)._
 
-- **[2026-04-01 — RIA Novosti]** Putin said **parliamentary parties help bring people “proven in battle”** into positions of power and state structures (party–personnel framing). https://ria.ru/20260401/putin-2084650883.html
-- **[2026-04-01 — RIA Novosti]** Putin **said he hopes the energy situation will straighten out** (*nadeyetsya, chto situatsiya … vypravitsya* — wire paraphrase/quote per article). https://ria.ru/20260401/putin-2084331184.html
-- **[Secondary — verify vs Kremlin transcript]** *The Moscow Times* (Russian edition, **2026-04-01**), citing **unnamed sources / Bloomberg-style Kremlin reporting**, claimed **orders to prepare a new Ukraine offensive** and a **multi-year war horizon** if talks fail — **not** matched here to a published Kremlin **transcript**; use for narrative risk only until primary text exists. https://ru.themoscowtimes.com/2026/04/01/putin-sobralsya-prodolzhat-voinu-esche-dva-goda-i-poruchil-gotovit-novoe-nastuplenie-v-ukraine-a191424
-- **Primary bookmark (same window):** Kremlin president events / transcripts — http://kremlin.ru/events/president
-
-_Spokesman-only Ukraine lines (e.g. Peskov on ceasefire proposals) are out of scope for this § unless tied to a joint appearance; see wires if needed._
+- **2026-04-01 — Address (video message) to International Transport and Logistics Forum.** Official English page: logistics under geopolitical stress; **Iran**, **energy markets**, **Strait of Hormuz**; Russia’s role in trade “architecture”; **digital tech and AI** in transport; forum on a **biennial** cadence. Primary: [Kremlin EN — Address to forum participants](http://en.kremlin.ru/events/president/news/79449).
+- **2026-04-01 — Talks with Armenian PM Pashinyan (Moscow).** Kremlin-scheduled meeting (strategic partnership, Eurasian integration, South Caucasus; extended to working breakfast). Wire example: [TASS — Putin to hold talks with Armenian PM in Moscow on April 1](http://en.tass.ru/politics/2109563).
+- **2026-04-01 — Meeting with members of the Central Election Commission.** Late evening session in Moscow on **State Duma election** preparation (official page). [Kremlin EN — Meeting with CEC](http://en.kremlin.ru/events/president/news/79455).
+- **2026-03-31 — Phone call with Egypt’s President El-Sisi.** Reporting on regional de-escalation, Ukraine, bilateral projects (incl. nuclear); not a substitute for Kremlin readout for exact quotes. [Ahram Online — El-Sisi tells Putin Russia can help end war…](https://english.ahram.org.eg/NewsContent/1/1234/564996/Egypt/Foreign-Affairs/ElSisi-tells-Putin-Russia-can-help-end-war-in-call.aspx).
 
 ## 2. Headlines (ingested RSS)
 
@@ -74,46 +72,46 @@ _Same-story clusters use anchor overlap on titles (proper nouns / crisis terms);
 
 #### Same-story (multilingual)
 
-**iran · israel · krieg · netanyahu · trump** — _16 sources_
-
-- **[W:7 S:0 G:0]** [Donald Trump: Der US-Präsident beschleunigt den Niedergang Amerikas durch den Iran-Krieg](https://www.spiegel.de/ausland/donald-trump-der-us-praesident-beschleunigt-den-niedergang-amerikas-durch-den-iran-krieg-a-15261d31-1da0-48a5-b867-cc807f3e4a12#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-02 14:26 UTC_
-- **Also** — [Trump’s push to end Iran war bucks Israel’s desire for regime change](https://thehill.com/policy/international/5812018-trump-netanyahu-iran-priorities/) — _The Hill — politics_ · _W:4 S:0 G:0_ · _2026-04-02 10:00 UTC_
-- **Also** — [Iran responds to Trump address with missile attacks on Israel, Gulf states](https://thehill.com/policy/international/5812466-iran-trump-address-response-israel-gulf-state-strikes/) — _The Hill — politics_ · _W:3 S:0 G:1_ · _2026-04-02 12:22 UTC_
-- **Also** — [Trump’s half-baked attacks against Iran won’t work](https://thehill.com/opinion/white-house/5811772-trump-iran-strategy-failures/) — _The Hill — politics_ · _W:3 S:0 G:0_ · _2026-04-02 12:30 UTC_
-- **Also** — [Trump leaves key questions unanswered as he seeks to calm nerves over Iran war](https://www.bbc.com/news/articles/cnv81ven263o?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _W:3 S:0 G:0_ · _2026-04-02 03:22 UTC_
-
 **guerra · trump** — _2 sources_
 
 - **[W:5 S:0 G:0]** [Trump deja preguntas cruciales sin respuesta al intentar calmar los nervios en EE.UU. y el resto del mundo por la guerra con Irán](https://www.bbc.com/mundo/articles/cre1n7x78pro?at_medium=RSS&at_campaign=rss) — _BBC Mundo — español (Américas / global)_ · _es_ · _2026-04-02 10:05 UTC_
 - **Also** — [Trump dice que los objetivos de la guerra con Irán están "cerca de completarse" en un mensaje a la nación](https://www.bbc.com/mundo/articles/c8x7g028ww5o?at_medium=RSS&at_campaign=rss) — _BBC Mundo — español (Américas / global)_ · _es_ · _W:5 S:0 G:0_ · _2026-04-02 02:46 UTC_
 
-**إيران · ترامب · حرب** — _2 sources_
+**iran · trump** — _11 sources_
 
-- **[W:3 S:0 G:0]** [خطاب ترامب بشأن استمرار الحرب على إيران يعيد الأسواق المالية إلى دائرة القلق](https://www.france24.com/ar/%D9%81%D9%8A%D8%AF%D9%8A%D9%88/20260402-%D8%AE%D8%B7%D8%A7%D8%A8-%D8%AA%D8%B1%D8%A7%D9%85%D8%A8-%D8%A8%D8%B4%D8%A3%D9%86-%D8%A7%D8%B3%D8%AA%D9%85%D8%B1%D8%A7%D8%B1-%D8%A7%D9%84%D8%AD%D8%B1%D8%A8-%D8%B9%D9%84%D9%89-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86-%D9%8A%D8%B9%D9%8A%D8%AF-%D8%A7%D9%84%D8%A3%D8%B3%D9%88%D8%A7%D9%82-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%8A%D8%A9-%D8%A5%D9%84%D9%89-%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D8%A7%D9%84%D9%82%D9%84%D9%82) — _France 24 — العربية (MENA)_ · _ar_ · _2026-04-02 11:13 UTC_
-- **Also** — [ما الردود الإيرانية على خطاب ترامب؟](https://www.france24.com/ar/%D9%81%D9%8A%D8%AF%D9%8A%D9%88/20260402-%D9%85%D8%A7-%D8%A7%D9%84%D8%B1%D8%AF%D9%88%D8%AF-%D8%A7%D9%84%D8%A5%D9%8A%D8%B1%D8%A7%D9%86%D9%8A%D8%A9-%D8%B9%D9%84%D9%89-%D8%AE%D8%B7%D8%A7%D8%A8-%D8%AA%D8%B1%D8%A7%D9%85%D8%A8) — _France 24 — العربية (MENA)_ · _ar_ · _W:2 S:0 G:0_ · _2026-04-02 10:07 UTC_
+- **[W:3 S:0 G:0]** ['Be serious... don't speak every day': Macron criticises Trump approach to Iran war](https://www.bbc.com/news/articles/cevk0e4ykwko?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-02 13:41 UTC_
+- **Also** — [GOP moves to end DHS shutdown: Join the discussion](https://thehill.com/video-clips/5812754-the-hill-editors-gop-dhs-shutdown-iran-conflict-trump/) — _The Hill — politics_ · _W:2 S:0 G:0_ · _2026-04-02 15:00 UTC_
+- **Also** — [Live updates: Trump touts ‘unified’ GOP on DHS funding; previews weeks of hard strikes on Iran](https://thehill.com/homenews/administration/5811509-live-updates-trump-iran-ballroom/) — _The Hill — politics_ · _W:2 S:0 G:0_ · _2026-04-02 14:56 UTC_
+- **Also** — [Graham: Trump ‘willing to do a deal’ that would ‘allow’ Iran ‘exist under certain conditions’](https://thehill.com/policy/defense/5812727-graham-trump-iran-war-speech/) — _The Hill — politics_ · _W:2 S:0 G:0_ · _2026-04-02 14:36 UTC_
+- **Also** — [Trump makes case for Iran war. And, SCOTUS leans toward upholding birthright citizenship](https://www.npr.org/2026/04/02/g-s1-116162/up-first-newsletter-iran-war-trump-birthright-citizenship-va-program) — _NPR — national news_ · _W:2 S:0 G:0_ · _2026-04-02 07:31 UTC_
+
+**sanctions · trump · venezuela** — _3 sources_
+
+- **[W:2 S:0 G:1]** [Trump administration lifts sanctions on acting Venezuela president](https://thehill.com/policy/international/5812863-rodriguez-sanctions-trump-venezuela/) — _The Hill — politics_ · _2026-04-02 15:23 UTC_
+- **Also** — [US lifts sanctions on Venezuelan interim leader Delcy Rodríguez](https://www.bbc.com/news/articles/cje4l9de0d1o?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _W:2 S:0 G:1_ · _2026-04-02 11:55 UTC_
+- **Also** — [U.S. lifts sanctions on Venezuela's acting President Delcy Rodríguez](https://www.npr.org/2026/04/02/g-s1-116142/u-s-lift-sanctions-venezuela-president-delcy-rodriguez) — _NPR — national news_ · _W:1 S:0 G:1_ · _2026-04-02 02:44 UTC_
 
 #### Other headlines
 
-- **[W:8 S:0 G:1]** [EN DIRECT, guerre en Ukraine : Emmanuel Macron accuse Donald Trump de vider l’OTAN de sa substance en créant « le doute sur son engagement »](https://www.lemonde.fr/international/live/2026/04/02/en-direct-guerre-en-ukraine-un-gazoduc-russe-pris-pour-cible-par-des-drones-ukrainiens-affirme-gazprom_6675208_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-02 11:41 UTC_
-- **[W:4 S:0 G:0]** [Barr leads wide-open Kentucky GOP Senate primary: Survey](https://thehill.com/homenews/campaign/5811888-andy-barr-kentucky-senate-race-poll/) — _The Hill — politics_ · _2026-04-02 10:00 UTC_
-- **[W:3 S:0 G:0]** [Guerre au Moyen-Orient : les profits exceptionnels des tradeurs de TotalEnergies](https://www.lemonde.fr/economie/article/2026/04/02/guerre-au-moyen-orient-les-profits-exceptionnels-des-tradeurs-de-totalenergies_6676110_3234.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-02 12:00 UTC_
+- **[W:4 S:0 G:0]** [Donald Trump se moque du couple Macron lors d’un déjeuner privé, le président français dénonce des « propos ni élégants, ni à la hauteur »](https://www.lemonde.fr/international/article/2026/04/02/donald-trump-se-moque-du-couple-macron-lors-d-un-dejeuner-prive-le-president-francais-denonce-des-propos-ni-elegants-ni-a-la-hauteur_6676093_3211.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-02 14:56 UTC_
+- **[W:3 S:0 G:0]** [ترامب يتوعد بإعادة إيران إلى "العصر الحجري" وطهران تتعهد بإذلالهم](https://www.france24.com/ar/%D9%81%D9%8A%D8%AF%D9%8A%D9%88/20260402-%D8%AA%D8%B1%D8%A7%D9%85%D8%A8-%D9%8A%D8%AA%D9%88%D8%B9%D8%AF-%D8%A8%D8%A5%D8%B9%D8%A7%D8%AF%D8%A9-%D8%A5%D9%8A%D8%B1%D8%A7%D9%86-%D8%A5%D9%84%D9%89-%D8%A7%D9%84%D8%B9%D8%B5%D8%B1-%D8%A7%D9%84%D8%AD%D8%AC%D8%B1%D9%8A-%D9%88%D8%B7%D9%87%D8%B1%D8%A7%D9%86-%D8%AA%D8%AA%D8%B9%D9%87%D8%AF-%D8%A8%D8%A5%D8%B0%D9%84%D8%A7%D9%84%D9%87%D9%85) — _France 24 — العربية (MENA)_ · _ar_ · _2026-04-02 15:35 UTC_
+- **[W:3 S:0 G:0]** [Sydney Gruters, RNC chair’s wife, launches Florida House bid](https://thehill.com/homenews/5812771-sydney-gruters-congress-campaign/) — _The Hill — politics_ · _2026-04-02 15:14 UTC_
 - **[W:3 S:0 G:0]** [EE.UU. levanta las sanciones contra la presidenta interina de Venezuela, Delcy Rodríguez](https://www.bbc.com/mundo/articles/c36r5l25429o?at_medium=RSS&at_campaign=rss) — _BBC Mundo — español (Américas / global)_ · _es_ · _2026-04-01 21:52 UTC_
+- **[W:2 S:1 G:0]** [Colorado court throws out election denier Tina Peters' 9-year sentence for tampering with election equipment](https://www.nbcnews.com/politics/politics-news/colorado-court-throws-election-denier-tina-peters-sentence-trump-rcna266421) — _NBC News — politics_ · _2026-04-02 15:45 UTC_
+- **[W:2 S:0 G:1]** [Thune: Republicans to keep GOP-only bill to fund border security ‘as narrow as possible’](https://thehill.com/homenews/senate/5812737-thune-republicans-border-security-bill/) — _The Hill — politics_ · _2026-04-02 14:24 UTC_
+- **[W:2 S:0 G:1]** [Jeffries: Americans would ‘furiously react’ to cutting health care to pay for Iran war](https://thehill.com/homenews/house/5812730-pentagon-budget-health-care-opposition/) — _The Hill — politics_ · _2026-04-02 14:19 UTC_
 - **[W:1 S:2 G:0]** [Supreme Court Casts Doubt on Trump Birthright Citizenship Order](https://www.today.com/video/justices-appear-doubtful-of-trump-s-birthright-citizenship-order-260574789928) — _NBC News — politics_ · _2026-04-02 12:25 UTC_
-- **[W:1 S:2 G:0]** [Inside the Supreme Court as Trump faced the justices he's criticized](https://www.nbcnews.com/politics/supreme-court/supreme-court-trump-faced-justices-criticized-rcna266067) — _NBC News — politics_ · _2026-04-01 20:52 UTC_
-- **[W:1 S:1 G:1]** [Strikes on Iranian universities raise war crime questions, fears of retaliation](https://thehill.com/homenews/education/5811380-iran-war-university-strikes-war-crimes/) — _The Hill — politics_ · _2026-04-02 10:00 UTC_
-- **[W:2 S:0 G:0]** [Europe is in Trump’s crosshairs](https://thehill.com/opinion/national-security/5811347-europe-is-in-trumps-crosshairs/) — _The Hill — politics_ · _2026-04-02 11:00 UTC_
-- **[W:2 S:0 G:0]** [Trump ramps up war on mail-in voting ahead of midterms](https://thehill.com/homenews/campaign/5811266-trump-mail-in-voting-midterms/) — _The Hill — politics_ · _2026-04-02 10:00 UTC_
-- **[W:2 S:0 G:0]** [Trump’s surgeon general nominee caught in GOP crossfire over MAHA](https://thehill.com/policy/healthcare/5811902-trump-surgeon-general-nominee-stuck-senate/) — _The Hill — politics_ · _2026-04-02 10:00 UTC_
-- **[W:2 S:0 G:0]** [Trump goes on a revenge tour in Indiana after failed redistricting vote](https://www.nbcnews.com/politics/2026-election/trump-goes-revenge-tour-indiana-failed-redistricting-vote-rcna265994) — _NBC News — politics_ · _2026-04-02 09:00 UTC_
+- **[W:2 S:0 G:0]** [Zelensky sounds warning on Russian intelligence sharing with Iran](https://thehill.com/policy/defense/5812832-zelensky-warns-us-iran-war/) — _The Hill — politics_ · _2026-04-02 15:20 UTC_
+- **[W:2 S:0 G:0]** [Ungarn vor der Wahl: OSZE weist Kritik an umstrittener Ungarn-Mission zurück](https://www.spiegel.de/politik/deutschland/ungarn-vor-der-wahl-osze-weist-kritik-an-umstrittener-ungarn-mission-zurueck-a-e33c85c0-4da9-4684-925c-a5ac198abe71#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-02 17:19 UTC_
 
 ## 2a. Geopolitical & military (G-ranked)
 
 _**G** = matches on `geo_military_keyword_phrases` (+ optional locale lists in config). Supports triangulation and war-powers messaging — **verify** claims against primary sources._
 
-- **[W:8 S:0 G:1]** [EN DIRECT, guerre en Ukraine : Emmanuel Macron accuse Donald Trump de vider l’OTAN de sa substance en créant « le doute sur son engagement »](https://www.lemonde.fr/international/live/2026/04/02/en-direct-guerre-en-ukraine-un-gazoduc-russe-pris-pour-cible-par-des-drones-ukrainiens-affirme-gazprom_6675208_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-02 11:41 UTC_
-- **[W:3 S:0 G:1]** [Iran responds to Trump address with missile attacks on Israel, Gulf states](https://thehill.com/policy/international/5812466-iran-trump-address-response-israel-gulf-state-strikes/) — _The Hill — politics_ · _2026-04-02 12:22 UTC_
-- **[W:1 S:1 G:1]** [Strikes on Iranian universities raise war crime questions, fears of retaliation](https://thehill.com/homenews/education/5811380-iran-war-university-strikes-war-crimes/) — _The Hill — politics_ · _2026-04-02 10:00 UTC_
-- **[W:1 S:0 G:1]** [Donalds dominates Florida GOP gubernatorial race: Poll](https://thehill.com/homenews/5811842-donalds-jolly-hypothetical-matchup/) — _The Hill — politics_ · _2026-04-02 10:00 UTC_
+- **[W:2 S:0 G:1]** [Trump administration lifts sanctions on acting Venezuela president](https://thehill.com/policy/international/5812863-rodriguez-sanctions-trump-venezuela/) — _The Hill — politics_ · _2026-04-02 15:23 UTC_
+- **[W:2 S:0 G:1]** [Thune: Republicans to keep GOP-only bill to fund border security ‘as narrow as possible’](https://thehill.com/homenews/senate/5812737-thune-republicans-border-security-bill/) — _The Hill — politics_ · _2026-04-02 14:24 UTC_
+- **[W:2 S:0 G:1]** [Jeffries: Americans would ‘furiously react’ to cutting health care to pay for Iran war](https://thehill.com/homenews/house/5812730-pentagon-budget-health-care-opposition/) — _The Hill — politics_ · _2026-04-02 14:19 UTC_
+- **[W:2 S:0 G:1]** [US lifts sanctions on Venezuelan interim leader Delcy Rodríguez](https://www.bbc.com/news/articles/cje4l9de0d1o?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-02 11:55 UTC_
 - **[W:1 S:0 G:1]** [U.S. lifts sanctions on Venezuela's acting President Delcy Rodríguez](https://www.npr.org/2026/04/02/g-s1-116142/u-s-lift-sanctions-venezuela-president-delcy-rodriguez) — _NPR — national news_ · _2026-04-02 02:44 UTC_
 - **[W:0 S:0 G:1]** [Defense Business Brief: The Navy’s MUSV pivot; NGA taps Vantor for $2.3M spy satellite contract; and a bit more](https://www.defenseone.com/business/2026/04/defense-business-brief-navys-musv-pivot-nga-taps-vantor-23m-spy-satellite-contract-and-bit-more/412546/) — _Defense One — All_ · _2026-04-01 12:00 UTC_
 
@@ -123,23 +121,23 @@ _Token overlap against `docs/civilization-memory/` (build: `python3 scripts/buil
 
 - **{CMC: `minds/CIV–MIND–MEARSHEIMER.md`}** (overlap 2) — _CIV–MIND–MEARSHEIMER — v3.4 Civilizational Memory Codex · Advisory Mind John J. Mearsheimer Cognitive–Linguistic Signature Layer Simplified Polyphony Architecture Status: ACTIVE · CANONICAL · LOCKED Class: MIND (ADVIS..._
 - **{CMC: `minds/CIV–MIND–MERCOURIS.md`}** (overlap 2) — _CIV–MIND–MERCOURIS — v3.4 Civilizational Memory Codex · Primary Mind Alexander Mercouris Cognitive–Linguistic Signature Layer Simplified Polyphony Architecture · Proportional Blend Law Status: ACTIVE · CANONICAL · LOC..._
-- **{CMC: `notes/civ-mem-state-vs-scholar.md`}** (overlap 1) — _**Purpose:** Clarify the distinction between **STATE** and **SCHOLAR** in the civilization_memory (CMC) model. These are internal operating modes of the *upstream* CMC system (e.g. `research/repos/civilization_memory`..._
-- **{CMC: `essays/WRITING-THE-BOOK-AND-DEATH.md`}** (overlap 2) — _### On the Most Interesting Activity and Why We Need Not Fear the End --- This essay states a single thesis: **the most interesting activity in the human experience is writing a book** — and that therefore we need not..._
+- **{CMC: `essays/UNIVERSAL-LOVE-AND-MASTERY.md`}** (overlap 1) — _### Only Through Universal Love Can We Master the Universe --- This essay states a single thesis and draws out its consequences. The thesis is: **only through universal love can we master the universe.** It is a theol..._
+- **{CMC: `essays/WRITING-THE-BOOK-AND-DEATH.md`}** (overlap 1) — _### On the Most Interesting Activity and Why We Need Not Fear the End --- This essay states a single thesis: **the most interesting activity in the human experience is writing a book** — and that therefore we need not..._
 
 ## 3. Lead themes (auto-stub — replace after reading)
 
 ### Work-politics / campaign angle
-- EN DIRECT, guerre en Ukraine : Emmanuel Macron accuse Donald Trump de vider l’OTAN de sa substance en créant « le doute sur son engagement »
-- Donald Trump: Der US-Präsident beschleunigt den Niedergang Amerikas durch den Iran-Krieg
 - Trump deja preguntas cruciales sin respuesta al intentar calmar los nervios en EE.UU. y el resto del mundo por la guerra con Irán
+- Donald Trump se moque du couple Macron lors d’un déjeuner privé, le président français dénonce des « propos ni élégants, ni à la hauteur »
+- 'Be serious... don't speak every day': Macron criticises Trump approach to Iran war
 
 **Replace:** 2–3 sentences for principal, district, opposition narrative.
 
 ### Work-strategy angle (product / governance / tech)
 
 - Supreme Court Casts Doubt on Trump Birthright Citizenship Order
-- Inside the Supreme Court as Trump faced the justices he's criticized
-- Lemonade by AMD: a fast and open source local LLM server using GPU and NPU
+- Inside Scoop newsletter: Inside the Supreme Court arguments
+- Supreme Court questions curtailing of birthright citizenship
 
 **Replace:** 2–3 sentences for Record/Voice positioning, OpenClaw, schools, or policy hooks.
 
