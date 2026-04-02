@@ -11,4 +11,8 @@
 
 ## Log
 
+### 2026-04-01
+
+- **JIANG–VOICE (v0.1):** Teaching emulation contract for Predictive History — `research/external/work-jiang/docs/templates/JIANG–VOICE.md`, bridge `jiang-voice.md`, Cursor rule `.cursor/rules/jiang-voice.mdc`. Human-curated; transcript audits to expand § IV markers.
+
 _(Append below this line.)_
