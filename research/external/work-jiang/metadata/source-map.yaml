@@ -206,6 +206,41 @@ chapter_map:
   sh-ch28:
     source_ids: [sh-28]
 
+  gt-ch01:
+    source_ids: [gt-01]
+  gt-ch02:
+    source_ids: [gt-02]
+  gt-ch03:
+    source_ids: [gt-03]
+  gt-ch04:
+    source_ids: [gt-04]
+  gt-ch05:
+    source_ids: [gt-05]
+  gt-ch06:
+    source_ids: [gt-06]
+  gt-ch07:
+    source_ids: [gt-07]
+  gt-ch08:
+    source_ids: [gt-08]
+  gt-ch09:
+    source_ids: [gt-09]
+  gt-ch10:
+    source_ids: [gt-10]
+  gt-ch11:
+    source_ids: [gt-11]
+  gt-ch12:
+    source_ids: [gt-12]
+  gt-ch13:
+    source_ids: [gt-13]
+  gt-ch14:
+    source_ids: [gt-14]
+  gt-ch15:
+    source_ids: [gt-15]
+  gt-ch16:
+    source_ids: [gt-16]
+  gt-ch17:
+    source_ids: [gt-17]
+
 appendix_map:
   predictions:
     source_ids: [geo-01, geo-05, geo-07, geo-08, geo-11, geo-12]
