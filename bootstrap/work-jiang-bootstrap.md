@@ -30,6 +30,7 @@ Pure edits under `research/external/work-jiang/` and `scripts/work_jiang/` alone
 | 2 | [.cursor/skills/work-jiang-feature-checklist/SKILL.md](../.cursor/skills/work-jiang-feature-checklist/SKILL.md) | Verify block, phased commits, guardrails |
 | 3 | [users/grace-mar/work-jiang.md](../users/grace-mar/work-jiang.md) | Operator purpose; WORK container; links into research tree |
 | 4 | [AGENTS.md](../AGENTS.md) | If merging Record: sovereign merge, no direct SELF/EVIDENCE without approval + script |
+| 5 | [docs/skill-work/work-jiang/volume-ii-book-track-conventions.md](../docs/skill-work/work-jiang/volume-ii-book-track-conventions.md) | When editing **Volume II** (`civ-chNN`, `BOOK-ARCHITECTURE-VOLUME-II.md`, `CHAPTER-QUEUE-VOLUME-II.md`) |
 
 Skim as needed: `.github/workflows/work-jiang.yml` (generator order), `research/external/work-jiang/WORKFLOW-transcripts.md` (intake).
 
@@ -37,7 +38,7 @@ Skim as needed: `.github/workflows/work-jiang.yml` (generator order), `research/
 
 ## Scope reminder
 
-- **Lane:** **Geo-Strategy** — `lectures/geo-strategy-*.md` (#1–#12); **Civilization** — `lectures/civilization-*.md` + `civ-*` in `metadata/sources.yaml` when the task is that series. Default book tranche is Volume 1 (Geo-Strategy) unless the task says otherwise.
+- **Lane:** **Geo-Strategy** — `lectures/geo-strategy-*.md` (Volume I `ch01` …); **Civilization** — `lectures/civilization-*.md` + `civ-*` + Volume II book-track (`civ-ch01` … in `metadata/book-architecture.yaml` under `volume_2_civilization`). Default book tranche is Volume I unless the task says otherwise.
 - **work-jiang is operator research** until content is merged through the gated pipeline into the Record; do not treat corpus as Voice knowledge.
 
 ---
