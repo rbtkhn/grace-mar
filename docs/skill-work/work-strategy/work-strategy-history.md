@@ -16,3 +16,7 @@ _(Append below this line.)_
 
 - Added **work-strategy-rome** project: [work-strategy-rome/README.md](work-strategy-rome/README.md), [work-strategy-rome/manifest.md](work-strategy-rome/manifest.md); indexed from territory [README.md](README.md).
 - **work-strategy-rome:** thin **CIV-MEM** wire (slow-layer index + [civ-mem-draft-protocol](../work-politics/civ-mem-draft-protocol.md); no duplicate corpus) — [work-strategy-rome/README.md](work-strategy-rome/README.md), [work-strategy-rome/manifest.md](work-strategy-rome/manifest.md).
+
+## 2026-04-02
+
+- **work-strategy-rome:** [North star](work-strategy-rome/README.md#north-star-operator) — reinvention as mutation; legitimacy without empire; WORK-only scope and humility line.

@@ -8,6 +8,12 @@
 
 ---
 
+## North star (operator)
+
+**Rome reinvents for the modern world through mutation, not restoration:** help the Latin–juridical–ecclesial complex show **legitimacy and order that people can consent to**—courts, treaties, standards, ritual, and moral speech—**without pretending to replace hard empire** (bases, sanctions, commodity chokepoints) or to merge fragments into one throne. This project tracks signals and builds **WORK-only** analysis, drafts, and civ-mem-grounded precedent so reinvention stays **evidence-linked**, **gate-safe**, and **auditable**—influence where language and strategy touch Rome’s global voice; humility where only Romans can reform Rome.
+
+---
+
 ## Purpose
 
 1. Track **institutional** signals (Vatican press, papal audiences, `@Pontifex` / official social, nunciatures) that **intersect** with work-strategy themes: multipolar order, war-and-peace framing, legitimacy of Western leadership, EU–US–LatAm **divergence**.
@@ -50,3 +56,4 @@ Append short dated lines here or in [work-strategy-history.md](../work-strategy-
 
 - **2026-04-01** — Project shell created (`README.md`, `manifest.md`).
 - **2026-04-01** — CIV-MEM thin wire documented (README **Integration** + [manifest.md](manifest.md) **CIV-MEM**).
+- **2026-04-02** — **North star** paragraph added (reinvention / mutation; legitimacy without empire; WORK boundaries).
