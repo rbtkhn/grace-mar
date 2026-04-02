@@ -24,4 +24,8 @@ Jiang’s philosophy is best understood as a civilizational theory of formation,
 
 - **Linked claims:** `clm-0031`, `clm-0032`, `clm-0033`, `clm-0034`
 
+### t05 — Secret History extends formation into power and epistemology: who narrates the past, how money and institutions train imagination, and what counts as liberation.
+
+- **Linked claims:** `clm-0035`, `clm-0036`, `clm-0037`, `clm-0038`
+
 *Generated from `metadata/thesis-map.yaml` — run `python scripts/work_jiang/render_thesis_map.py` after edits.*
