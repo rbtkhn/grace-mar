@@ -140,7 +140,7 @@ Sources missing or needing analysis, ordered by priority.
 | vi-09 | interviews | Interviews #9: SNEAKO — The End of the W… | complete | missing | missing | vi-ch09 | 50 | mapped to vi-ch09 |
 | vi-10 | interviews | Interviews #10: Endgame — Our True Wealt… | complete | missing | missing | vi-ch10 | 50 | mapped to vi-ch10 |
 | vi-11 | interviews | Interviews #11: Tucker Carlson — Iran Wa… | complete | missing | missing | vi-ch11 | 50 | mapped to vi-ch11 |
-| vi-12 | interviews | Interviews #12: Jay Shapiro — Truth, Myt… | missing | missing | missing | vi-ch12 | 50 | ingest prep; transcript pending; memo stub |
+| vi-12 | interviews | Interviews #12: Jay Shapiro — Truth, Myt… | missing | missing | missing | vi-ch12 | 50 | transcript merged; memo stub; verify speaker labels |
 | es-01 | essays | Vision, Mission, Goals | complete | missing | missing | es-ch01 | 50 | mapped to es-ch01 |
 | es-02 | essays | "Continuity of Government" is a Joke. He… | complete | missing | missing | es-ch02 | 50 | mapped to es-ch02 |
 | es-03 | essays | The Third Coming | complete | missing | missing | es-ch03 | 50 | mapped to es-ch03 |

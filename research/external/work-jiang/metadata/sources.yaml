@@ -2175,8 +2175,8 @@ sources:
   episode: 12
   themes: []
   status:
-    transcript: pending
-    curated_lecture: stub
+    transcript: complete
+    curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
 - source_id: es-01

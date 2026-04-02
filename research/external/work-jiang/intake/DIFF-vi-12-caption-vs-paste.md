@@ -32,4 +32,4 @@ Verbatim markdown (local, usually gitignored):
 
 → `verbatim-transcripts/interviews-12-j-shapiro-truth-myth-personal-path.md`
 
-Use that for **editorial** diff against `lectures/…/## Full transcript` once you merge speaker labels.
+Use that for **editorial** diff against `lectures/interviews-12-j-shapiro-truth-myth-personal-path.md` `## Full transcript` (merged via `emit_interview_dialogue_from_verbatim.py`) when tuning speaker tags or line breaks.

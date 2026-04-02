@@ -22,7 +22,7 @@
 ## Ingest checklist (aligned with `WORKFLOW-transcripts.md`)
 
 1. ~~Confirm **`video_id`** and **upload date**~~ — done: `oErKnj_uyPA`, `2026-04-01` (see lecture header + `sources.yaml`).
-2. **Captions pulled:** bucket `research/external/youtube-channels/vi-12-j-shapiro/` (see README + `intake/urls-vi-12-j-shapiro.txt`). Verbatim sync: `sync_verbatim_transcripts.py --transcript-root …/vi-12-j-shapiro`. Diff recipe: [intake/DIFF-vi-12-caption-vs-paste.md](DIFF-vi-12-caption-vs-paste.md). Then paste **cleaned** speaker-labeled dialogue into `## Full transcript` in the lecture file.
+2. **Captions pulled:** bucket `research/external/youtube-channels/vi-12-j-shapiro/`. Verbatim → heuristic speaker-labeled `## Full transcript` via `scripts/work_jiang/emit_interview_dialogue_from_verbatim.py` (verify labels vs audio). Diff recipe: [intake/DIFF-vi-12-caption-vs-paste.md](DIFF-vi-12-caption-vs-paste.md).
 3. Run `python3 scripts/work_jiang/build_source_registry.py` (refreshes `vi-12` row).
 4. When memo is substantive, run `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` on the analysis file (after front matter exists).
 5. ~~Rename analysis memo~~ — done: `analysis/oErKnj_uyPA-interviews-12-analysis.md`.
