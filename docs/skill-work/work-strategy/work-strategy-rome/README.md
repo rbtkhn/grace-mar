@@ -1,0 +1,52 @@
+# work-strategy-rome
+
+**WORK-strategy project** — Vatican / Holy See **soft power**, papal **moral-diplomatic** voice, and **European–Global South–US** alignment fractures as **strategy inputs** (not theology, not Record).
+
+**Status:** Active shell. Operator-owned backlog and ingests live here.
+
+**Not:** Companion Record merge material unless staged via RECURSION-GATE with explicit approval. **Not** religious advice or catechesis.
+
+---
+
+## Purpose
+
+1. Track **institutional** signals (Vatican press, papal audiences, `@Pontifex` / official social, nunciatures) that **intersect** with work-strategy themes: multipolar order, war-and-peace framing, legitimacy of Western leadership, EU–US–LatAm **divergence**.
+2. Hold **hypotheses and triangulation stubs** (e.g. papal rhetoric vs state policy moves) with **dated** notes and **primary links** where possible.
+3. Feed optional lines into **daily brief** focus or **current-events** passes when the operator flags Rome-relevant spikes.
+
+---
+
+## Artifacts
+
+| File | Role |
+|------|------|
+| [manifest.md](manifest.md) | Scope, triggers, integration points, boundaries. |
+| `notes/` | _(Optional)_ dated operator scratch — create when first note lands. |
+| `ingest/` | _(Optional)_ pointers to external captures — prefer [research/external/work-strategy/transcripts/README.md](../../../../research/external/work-strategy/transcripts/README.md) for long-form text. |
+
+---
+
+## Integration
+
+- Parent lane: [work-strategy README](../README.md), [STRATEGY.md](../STRATEGY.md), [current-events-analysis.md](../current-events-analysis.md).
+- Triangulation / lenses: [work-politics analytical lenses](../../work-politics/analytical-lenses/manifest.md) when copy touches electoral or US-partisan surfaces.
+- Daily horizon: [daily-brief-focus.md](../daily-brief-focus.md) — add a bullet when Rome is a standing watch item.
+
+### CIV-MEM (slow layer, thin wire)
+
+Use **civilizational-memory** reference when Rome work needs **historical / structural** depth (concordats, church–state architecture, Cold War Holy See diplomacy, comparative religious–political legitimacy). **Not** a substitute for **dated** Vatican or wire sources on current events — same rule as [daily-brief-template.md](../daily-brief-template.md) / brief § footers.
+
+| Step | Pointer |
+|------|---------|
+| Index | `python3 scripts/build_civmem_inrepo_index.py build` — token overlap against [docs/civilization-memory/](../../../civilization-memory/README.md). |
+| Stewardship | [work-civ-mem README](../../work-civ-mem/README.md) — do **not** fork a parallel Rome-only corpus here. |
+| Public / campaign copy | [civ-mem-draft-protocol.md](../../work-politics/civ-mem-draft-protocol.md) — human approval gates. |
+
+---
+
+## Log
+
+Append short dated lines here or in [work-strategy-history.md](../work-strategy-history.md) when the project changes shape (new ingest policy, template, or automation).
+
+- **2026-04-01** — Project shell created (`README.md`, `manifest.md`).
+- **2026-04-01** — CIV-MEM thin wire documented (README **Integration** + [manifest.md](manifest.md) **CIV-MEM**).
