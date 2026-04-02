@@ -113,11 +113,11 @@ When the operator signals they're done (end of day, closing the session, steppin
 | **Ending the day AND closing this Cursor session** | `dream` then `bridge` | Dream settles continuity; bridge seals both repos and generates the transfer prompt |
 | **Ending the day, keeping the session** | `dream` alone | Dream runs maintenance; session continues tomorrow with the same thread |
 | **Mid-day, closing this Cursor session** | `bridge` alone | Seals repos and generates transfer prompt; no maintenance pass needed |
-| **Quick status check before stepping away** | `coffee closeout` | Lightweight handoff summary; no commit/push, no maintenance |
+| **Quick status check before stepping away** | **`coffee`** + signing-off intent (`operator_coffee.py --mode closeout` / handoff Step 1) | Lightweight handoff summary; no commit/push, no maintenance; **same** **A–H** menu as work-start |
 
 **Default for 80% of cases:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
 
-**Coffee closeout vs bridge:** Coffee closeout is the lightweight option — quick gate/worktree status, no commits, no push, no transfer prompt. Bridge is the structural option — seals the session with commits and produces the carry-forward block. They do not overlap; bridge replaced coffee closeout as the session-end default.
+**Signing-off `coffee` vs bridge:** Signing-off **`coffee`** is the lightweight option — quick gate/worktree status, no commits, no push, no transfer prompt. Bridge is the structural option — seals the session with commits and produces the carry-forward block. They do not overlap; bridge remains the session-end default when you need git seal + transfer prompt.
 
 ---
 

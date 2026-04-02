@@ -174,7 +174,7 @@ Usually one `dream` session per day is normal.
 
 **Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays follow-ups from last night's dream — contradictions to review, artifact drafts to promote, integrity/governance status.
 
-For the full decision tree including coffee closeout (lightweight alternative to bridge), see [bridge SKILL.md](../bridge/SKILL.md).
+For the full decision tree including signing-off **`coffee`** (lightweight alternative to bridge), see [bridge SKILL.md](../bridge/SKILL.md).
 
 ## Cadence audit
 

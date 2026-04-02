@@ -64,7 +64,7 @@ python3 scripts/log_operator_choice.py -u grace-mar --context WORK --picked A --
 
 Appends `### [WORK-choice]` blocks to **`users/<id>/session-transcript.md`** (operator continuity, not gated Record).
 
-**`coffee` session trail:** Sessions started with **`coffee`** (work-start vs closeout; optional light, minimal, survey; legacy **`hey`** still works) can leave traces in **`users/<id>/session-transcript.md`** (raw lines and **`[WORK-choice]`** via `log_operator_choice.py`) and/or dated bullets under **`docs/skill-work/work-*/*-history.md`** (per-lane milestones — [work-modules-history-principle.md](work-modules-history-principle.md)). Distinct from **`self-memory.md`** (companion continuity). See [canonical paths](../canonical-paths.md).
+**`coffee` session trail:** Sessions started with **`coffee`** (work-start vs signing-off Step 1; optional light, minimal, survey; legacy **`hey`** still works) can leave traces in **`users/<id>/session-transcript.md`** (raw lines and **`[WORK-choice]`** via `log_operator_choice.py`) and/or dated bullets under **`docs/skill-work/work-*/*-history.md`** (per-lane milestones — [work-modules-history-principle.md](work-modules-history-principle.md)). Distinct from **`self-memory.md`** (companion continuity). See [canonical paths](../canonical-paths.md).
 
 **Aggregate after ~30 days:**
 
@@ -91,7 +91,7 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 
 ## See also
 
-- **Fixed session menu (coffee — work-start and closeout; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). In work-start flow, concrete work-lane picks can exit the coffee hub back to normal workflow per the skill. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+- **Fixed session menu (`coffee` — same A–H for work-start and signing-off; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed **A–H**, listed **A, B, C, D, E, G, H, F** (**F** closes). Concrete work-lane picks under **E** (named sub-lane) or **G** can exit the coffee hub per the skill. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
 - [Coffee skill](../../../.cursor/skills/coffee/SKILL.md)
 - [Work territory history logs](work-modules-history-principle.md) (`docs/skill-work/work-*/*-history.md`)

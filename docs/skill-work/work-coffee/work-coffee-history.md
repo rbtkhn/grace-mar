@@ -20,6 +20,13 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
   - durable governed behavior crosses through `RECURSION-GATE`
   - cross-surface governance changes may need change review first
 
+## 2026-04-02 — closeout merged into unified `coffee` (no separate closeout menu)
+
+- Removed the **Coffee — closeout** branch as a separate skill section and the **closeout-only** **A–H** row for **E**.
+- **Signing-off** intent still uses `operator_coffee.py --mode closeout` or `operator_handoff_check.py` for **Step 1**; **Step 2** is the **same** **A–H** as work-start.
+- Former closeout **E** (**system pick**) is now **E** with **no** work-dev/strategy/politics sub-lane after signing-off Step 1.
+- Docs and cross-refs updated: `menu-reference.md`, `operator-skills.md`, `handoff-check`, `bridge`, `harness-warmup.mdc`, `operator-style.mdc`, cadence README, etc.
+
 ## 2026-03-31 — auto-research and swarm context sharpened the cadence boundary
 
 - Auto-research scaffold work clarified the repo-wide rule that proposal artifacts and orchestration surfaces can evolve without bypassing the gate.

@@ -13,7 +13,7 @@ Modes
   work-start  Full work-start coffee: daily warmup + harness warmup + branch snapshot
   light       Lighter pass: daily warmup + compact harness + one-line branch
   minimal     Minimal pass: compact harness only (no daily warmup unless --include-warmup)
-  closeout    Night closeout: handoff check (gate, PH closeout, commits, worktree)
+  closeout    Signing-off Step 1: handoff check (gate, PH closeout, commits, worktree) — same coffee A–H menu after; not a separate ritual
   reentry     Cold-thread stack: handoff + daily warmup + harness (same as operator_reentry_stack)
 
 Usage

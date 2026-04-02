@@ -1,6 +1,6 @@
 # Coffee — menu and protocol reference
 
-Detailed A–H definitions, shared sections, closeout menu, cadence tables, explicit phrase modifiers, and companion survey track. The executable trigger contract lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md); this file holds the full protocol specification.
+Detailed A–H definitions, **signing-off** (merged closeout) add-ons, cadence tables, explicit phrase modifiers, and companion survey track. The executable trigger contract lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md); this file holds the full protocol specification.
 
 ---
 
@@ -56,10 +56,10 @@ The **first** coffee reply ends **Step 2** with **exactly eight options — A th
 | **B** | **Repository hygiene** | **Local repo health** when chosen (not menu **A** — A is template / companion-self / fork reconciliation). **Builds on** Step 1 branch snapshot: full pass per [git-branch-hygiene.md](../work-dev/git-branch-hygiene.md) (merge vs delete vs update from `main`); **`git status -sb`** and **uncommitted grouping** (real work vs runtime junk — align with [handoff-check](../../../.cursor/skills/handoff-check/SKILL.md)); optional **`git worktree list`** if multi-tree; **commit / push** plan (read-only unless operator ships); optional **`python3 scripts/refresh_derived_exports.py -u grace-mar`** + **`validate-integrity.py --user grace-mar`** if manifests / PRP / handoff suggest staleness (report only unless they ask to fix). Deliver: **short ordered checklist** + **one** prescribed next action (or "clean / no action"). **Pending RECURSION-GATE candidates** are **not** repository hygiene — use **menu D**. |
 | **C** | **Daily brief** | **Only when chosen** — Step 1 **never** runs the generator. **(1) Generate** (when today's `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` is missing, or the operator asks for refresh): `python3 scripts/generate_work_politics_daily_brief.py -u grace-mar -o docs/skill-work/work-strategy/daily-brief-$(date +%Y-%m-%d).md`. **Monday / full** cadence → run generator on **C**; **Tue–Fri** → generate if missing, else summarize from disk unless refresh requested. **(2) Putin — last 48 hours:** per [daily-brief-putin-watch.md](../work-strategy/daily-brief-putin-watch.md) — web scan; **update §1d** (`## 1d. Putin — last 48 hours`) **in the daily brief file** (edit markdown after generation). **(3) Deliver** path + **short summary** + **one** concrete next action suggested by the brief. **Ship:** committing the brief is operator lane. |
 | **D** | **RECURSION-GATE** | **`users/grace-mar/recursion-gate.md`** — the **gated pipeline** queue for the Record. Follow [gate-review-pass](../../../.cursor/skills/gate-review-pass/SKILL.md): pending vs processed, **top 1–3** items to review first, duplicate/stale hints, escalation signals; optional `python3 scripts/operator_gate_review_pass.py -u grace-mar`. **Read-only** — **no merge** into SELF/EVIDENCE/prompt without companion approval; on approve, operator runs `process_approved_candidates.py`. **Not** menu **B** (git/export hygiene) or **E** (work-territory recommendations). |
-| **E** | **Work-dev *or* work-strategy *or* work-politics** | Pick **exactly one** sub-lane (state it in the first line; if the operator names one, follow that). **After the reply, exit to normal workflow by default**; do **not** re-offer the A–H menu unless the operator says **`stay in coffee`**. **(1) Work-dev** — `docs/skill-work/work-dev/`: read [work-dev-sources.md](../work-dev/work-dev-sources.md); **real-time** spot-check of listed sources **only when this sub-lane is chosen**; deliver **delta** + **one** concrete next step. **(2) Work-strategy** — `docs/skill-work/work-strategy/`: daily-brief pointers, Putin watch, calendar; **one** next step. **(3) Work-politics** — run **KY-4 Polymarket + poll search + Massie X** per [polling-and-markets.md](../work-politics/polling-and-markets.md) and `.cursor/skills/politics-massie/SKILL.md` (weight per cadence). Then: brief registry, campaign, queue — **one** next step. **[Companion survey](#companion-survey-track)** defaults under **E** when the operator opened with **coffee survey**. **Not** duplicating **A** / **B** / **C** / **D**; Jiang = **G**; skills = **H**. |
+| **E** | **Work-dev *or* work-strategy *or* work-politics** — **or system pick** | **Normal:** Pick **exactly one** sub-lane (state it in the first line; if the operator names one, follow that). **After the reply, exit to normal workflow by default**; do **not** re-offer the A–H menu unless the operator says **`stay in coffee`**. **(1) Work-dev** — `docs/skill-work/work-dev/`: read [work-dev-sources.md](../work-dev/work-dev-sources.md); **real-time** spot-check of listed sources **only when this sub-lane is chosen**; deliver **delta** + **one** concrete next step. **(2) Work-strategy** — `docs/skill-work/work-strategy/`: daily-brief pointers, Putin watch, calendar; **one** next step. **(3) Work-politics** — run **KY-4 Polymarket + poll search + Massie X** per [polling-and-markets.md](../work-politics/polling-and-markets.md) and `.cursor/skills/politics-massie/SKILL.md` (weight per cadence). Then: brief registry, campaign, queue — **one** next step. **[Companion survey](#companion-survey-track)** defaults under **E** when the operator opened with **coffee survey**. **Signing-off Step 1** (handoff-weighted): if the operator picks **E** **without** naming work-dev / work-strategy / work-politics, deliver **one** **system pick** — quick boundary/integrity glance, commit–push grouping, derived-export refresh pointer, weekly-brief carryover, `@usa_first_ky` queue, or companion survey pointer — **one** clear recommendation; read-only unless they ask to implement. **Not** duplicating **A** / **B** / **C** / **D**; Jiang = **G**; skills = **H**. |
 | **G** | **work-jiang / Predictive History** | Ground in Step 1 PH momentum block. [`users/grace-mar/work-jiang.md`](../../../users/grace-mar/work-jiang.md); [`warmup-sparks.yaml`](../../../research/external/work-jiang/metadata/warmup-sparks.yaml); optional `warmup_jiang_pulse.py`. **One** next step. **Exits to normal workflow** unless **`stay in coffee`**. **Not** a substitute for **E** work-politics intel. |
 | **H** | **Skills / meta pipeline** | [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), discovery ladder, [extract-skill-from-session](../../../.cursor/skills/extract-skill-from-session/SKILL.md), [portable-skills-sync](../../../.cursor/skills/portable-skills-sync/SKILL.md). Optional receipt line. **Not** Record merge. |
-| **F** | **End coffee → normal workflow** | **Formally closes** the coffee session. Transition to normal chat/work until the next **coffee**. Does **not** by itself imply closeout handoff. |
+| **F** | **End coffee → normal workflow** | **Formally closes** the coffee session without choosing **A–H** work. Transition to normal chat/work until the next **coffee**. Does **not** replace **signing-off Step 1** (handoff) when the operator already ran **`coffee`** with signing-off intent — **F** is only “exit the hub.” |
 
 **When A is chosen**, the reply must end with a **Reconciliation code** block:
 
@@ -71,38 +71,28 @@ The **first** coffee reply ends **Step 2** with **exactly eight options — A th
 
 ---
 
-## Shared sections (work-start and closeout)
+<a id="signing-off-intent"></a>
 
-### Shared A–C
+## Signing-off intent (closeout merged — no separate menu)
 
-**Work-start** and **closeout** use the **same** meanings for **A**, **B**, and **C**. When the operator chooses **A**, **B**, or **C** during a **closeout** pass, execute the same track as the matching row in the A–H table above.
+**Trigger:** Operator says **`coffee`** (or **`hey`**) with **signing-off** intent — end of session, wrapping the day, stepping away.
 
-- **B during closeout:** Use **handoff** output and closeout Step 1 **branch snapshot** (do not re-run work-start Step 1).
-- **C during closeout:** Still **only** runs `generate_work_politics_daily_brief.py` + §1d when **C** is chosen.
+**Step 1:** Handoff-weighted — `python3 scripts/operator_coffee.py -u <id> --mode closeout` or `operator_handoff_check.py` (see [coffee SKILL.md](../../../.cursor/skills/coffee/SKILL.md)). Same paste + short paragraph as before.
 
-### Shared D
+**Step 2:** The **same** **A–H** menu as work-start (**order A, B, C, D, E, G, H, F**). There is **no** separate closeout menu and **no** closeout-only letter.
 
-**Work-start** and **closeout** use the **same** meaning for **D** — **RECURSION-GATE**. Deepen from handoff **`## RECURSION-GATE (pending)`** when helpful.
+**Per-letter add-ons when Step 1 was signing-off** (optional emphasis — do not duplicate the whole handoff block):
 
-### Shared G–H
-
-**Work-start** and **closeout** use the **same** meanings for **G** and **H**.
-
-- **G during closeout:** Ground in handoff **`## Predictive History — night closeout`**.
-- **H during closeout:** Same as work-start **H**; skill discovery backlog is **not** Record.
-
----
-
-## Closeout menu (A–H)
-
-Every **closeout** reply ends **Step 2** with **exactly eight options — A through H**, presented **A, B, C, D, E, G, H, F**. Wording may vary; **roles must not**.
-
-**A–D, G, H** match work-start (see shared sections above). Only **E** and **F** differ:
-
-| Letter | Role | What it means when chosen |
-|--------|------|---------------------------|
-| **E** | **System pick** | **Closeout extras** — **not** duplicating **A–D**, **G**, or **H**. Quick boundary/integrity, work-strategy/politics next step, companion survey, commit/push grouping, derived-export refresh, weekly-brief carryover, `@usa_first_ky` queue. One clear recommendation. Read-only unless operator asks to implement. |
-| **F** | **End closeout** | **Formally closes** the closeout pass. Does **not** run work-start Step 1; next **coffee** uses operator intent again. |
+| Letter | Signing-off add-on |
+|--------|---------------------|
+| **A** | Same template/boundary track; one line on **gated** Record boundary if helpful. |
+| **B** | Prefer **handoff** **Derived / export churn** and **git status** from Step 1; [handoff-check SKILL.md](../../../.cursor/skills/handoff-check/SKILL.md). |
+| **C** | Brief generator + §1d **only** if **C** chosen; optional pointer to **next** brief day. |
+| **D** | Deepen from handoff **`## RECURSION-GATE (pending)`** when present. |
+| **E** | If **no** sub-lane named → **system pick** (see **E** row in table above). If sub-lane named → normal **E** track. |
+| **G** | Ground in handoff **`## Predictive History — night closeout`** when present. |
+| **H** | Same as work-start; optional “next session” skills backlog line. |
+| **F** | Exit hub only. |
 
 ---
 
@@ -110,7 +100,7 @@ Every **closeout** reply ends **Step 2** with **exactly eight options — A thro
 
 ## Companion survey track
 
-**When:** Operator chose **coffee E** with **work-politics** sub-lane and the pick is survey — or they began with **coffee survey** and then chose **E** (default survey under **E** / work-politics). **During closeout:** survey still available under **E** (system pick), not under **A–D**.
+**When:** Operator chose **coffee E** with **work-politics** sub-lane and the pick is survey — or they began with **coffee survey** and then chose **E** (default survey under **E** / work-politics). **Signing-off intent + E** without a sub-lane → **system pick** may include survey as the one recommendation.
 
 **Goal:** Refresh **self-curiosity (IX-B)** and **self-personality (IX-C)** on a **cadence** (typical: **monthly micro** 3–5 questions, or **quarterly** longer refinement), without bypassing the gated pipeline.
 

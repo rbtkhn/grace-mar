@@ -19,11 +19,11 @@ Its purpose is **high-fidelity context transfer** across the session boundary wh
 | **End of day + closing session** | `dream` then `bridge` | Dream settles continuity; bridge seals repos and generates the transfer prompt |
 | **End of day, keeping session** | `dream` alone | Maintenance pass; same Cursor thread continues tomorrow |
 | **Mid-day, closing session** | `bridge` alone | Seal repos, carry context forward; no maintenance needed |
-| **Quick check before stepping away** | `coffee closeout` | Lightweight status; no commit/push, no transfer prompt |
+| **Quick check before stepping away** | **`coffee`** + signing-off intent (`--mode closeout` / handoff Step 1) | Lightweight status; no commit/push, no transfer prompt; same **A–H** menu as work-start |
 
 **Default:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
 
-**Bridge vs coffee closeout:** Coffee closeout is lightweight — quick status, no git operations. Bridge is structural — seals the session with commits and produces the carry-forward block. Bridge is the default for any session close.
+**Bridge vs signing-off `coffee`:** Signing-off **`coffee`** is lightweight — handoff-weighted Step 1, no required git operations from the ritual. Bridge is structural — seals the session with commits and produces the carry-forward block. Bridge is the default for any session close.
 
 This is event-driven: the operator says `bridge` when they're ready. There is no scheduled cadence.
 
