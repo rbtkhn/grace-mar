@@ -9,9 +9,9 @@
 | **Title (platform)** | Professor Jiang on His Painful Personal Path \| Truth and Myth \| A Search for Reality \| Internet Fame |
 | **Host** | Jay Shapiro (intro references “Lummi Podcast” / long-form monologue + dialogue) |
 | **Guest** | Jiang Xueqin (“Professor Xiang” online) |
-| **`video_id` (11 chars)** | *TBD — paste from URL* |
-| **Upload date (YYYY-MM-DD)** | *TBD — sets registry `publication_date` and Volume VI ordering* |
-| **Canonical URL** | `https://www.youtube.com/watch?v=` + `video_id` |
+| **`video_id` (11 chars)** | `oErKnj_uyPA` |
+| **Upload date (YYYY-MM-DD)** | `2026-04-01` (yt-dlp `upload_date` 20260401) |
+| **Canonical URL** | [https://www.youtube.com/watch?v=oErKnj_uyPA](https://www.youtube.com/watch?v=oErKnj_uyPA) |
 
 ## Content / governance notes (for curation)
 
@@ -21,11 +21,11 @@
 
 ## Ingest checklist (aligned with `WORKFLOW-transcripts.md`)
 
-1. Confirm **`video_id`** and **upload date**; add to `lectures/interviews-12-j-shapiro-truth-myth-personal-path.md` using the line shape used in other interviews (contains `watch?v=` + 11-char id once only).
+1. ~~Confirm **`video_id`** and **upload date**~~ — done: `oErKnj_uyPA`, `2026-04-01` (see lecture header + `sources.yaml`).
 2. Optional: pull captions into `research/external/youtube-channels/` tree per channel README; or paste **cleaned** dialogue into `## Full transcript` in the lecture file.
 3. Run `python3 scripts/work_jiang/build_source_registry.py` (refreshes `vi-12` row).
 4. When memo is substantive, run `python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write` on the analysis file (after front matter exists).
-5. Rename analysis memo to **`{video_id}-interviews-12-analysis.md`** if you want video-id-first naming like `vi-01`–`vi-11`; update registry by re-running `build_source_registry.py`.
+5. ~~Rename analysis memo~~ — done: `analysis/oErKnj_uyPA-interviews-12-analysis.md`.
 6. `python3 scripts/work_jiang/validate_work_jiang.py` (and evidence-pack / render scripts if you extend packs to `vi-ch12`).
 
 ## Topic spine (for “At a glance” / analysis — not a transcript)

@@ -2164,12 +2164,13 @@ sources:
     analysis: complete
     chapter_mapping: complete
 - source_id: vi-12
-  video_id: ''
+  video_id: oErKnj_uyPA
   title: 'Interviews #12: Jay Shapiro — Painful Personal Path, Truth and Myth, Internet
     Fame'
-  canonical_url: ''
+  canonical_url: https://www.youtube.com/watch?v=oErKnj_uyPA
+  publication_date: '2026-04-01'
   lecture_path: lectures/interviews-12-j-shapiro-truth-myth-personal-path.md
-  analysis_path: analysis/interviews-12-analysis.md
+  analysis_path: analysis/oErKnj_uyPA-interviews-12-analysis.md
   series: interviews
   episode: 12
   themes: []

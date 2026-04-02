@@ -32,6 +32,17 @@ def extract_video_id_from_lecture(path: Path) -> str | None:
     return m.group(1) if m else None
 
 
+def interviews_transcript_still_placeholder(path: Path) -> bool:
+    """True when ## Full transcript is still an operator pending block (not merged dialogue)."""
+    text = path.read_text(encoding="utf-8", errors="replace")
+    mark = "## Full transcript"
+    i = text.find(mark)
+    if i == -1:
+        return False
+    tail = text[i : i + 1500]
+    return "_Pending merge" in tail or "Pending merge —" in tail
+
+
 def title_from_lecture(path: Path) -> str:
     for line in path.read_text(encoding="utf-8", errors="replace").splitlines():
         line = line.strip()
@@ -344,6 +355,7 @@ def main() -> int:
         vid = extract_video_id_from_lecture(lecture)
         matched, analysis_status = analysis_for_source(vid, source_id)
         analysis_path = str(matched.relative_to(WORK_DIR)) if matched else None
+        tx_pending = (not vid) or interviews_transcript_still_placeholder(lecture)
         sources.append(
             {
                 "source_id": source_id,
@@ -356,8 +368,8 @@ def main() -> int:
                 "episode": ep,
                 "themes": [],
                 "status": {
-                    "transcript": "complete" if vid else "pending",
-                    "curated_lecture": "complete" if vid else "stub",
+                    "transcript": "pending" if tx_pending else "complete",
+                    "curated_lecture": "stub" if tx_pending else "complete",
                     "analysis": analysis_status,
                     "chapter_mapping": "missing",
                 },

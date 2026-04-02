@@ -12,7 +12,7 @@ Book chapter for Interviews episode 12 — Volume VI Part I; divergence end-box 
 
 ## Core analysis
 
-- `vi-12` → [interviews-12-analysis.md](analysis/interviews-12-analysis.md)
+- `vi-12` → [oErKnj_uyPA-interviews-12-analysis.md](analysis/oErKnj_uyPA-interviews-12-analysis.md)
 
 ## Key concepts
 

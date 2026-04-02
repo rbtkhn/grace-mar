@@ -3,11 +3,11 @@
 **Speaker:** Jiang Xueqin (guest); Jay Shapiro (host)  
 **Audience:** Long-form YouTube interview (intro cites “Lummi Podcast” framing)  
 **Series:** Predictive History · Volume VI — Interviews **#12**  
-**Date (YouTube upload):** TBD — set when `video_id` is confirmed  
+**Date (YouTube upload):** 2026-04-01  
 **Title (YouTube):** Professor Jiang on His Painful Personal Path | Truth and Myth | A Search for Reality | Internet Fame  
 **Topic:** Biography, prediction epistemology, eschatology / secret-society frames, Holocaust historiography and mythology, Judaism and Kabbalah (host and guest), truth-seeking vs. consequentialism, internet notoriety.
 
-**Source (canonical recording):** Pending — operator adds `https://www.youtube.com/watch?v=` plus the **11-character** `video_id` on one line in this file when confirmed (registry scraper matches that pattern).
+**Source (canonical recording):** [YouTube](https://www.youtube.com/watch?v=oErKnj_uyPA) (`oErKnj_uyPA`).
 
 **Transcript:** Operator session **2026-04-02** (full ASR paste); see [intake/PREP-interviews-12-j-shapiro-truth-and-myth.md](../intake/PREP-interviews-12-j-shapiro-truth-and-myth.md) for checklist and governance notes.
 
