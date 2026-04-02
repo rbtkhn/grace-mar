@@ -24,3 +24,4 @@ _(Append below this line.)_
 ## 2026-04-03
 
 - **work-strategy-rome:** [notes/2026-04-03-modern-rome-papacy-thesis-stub.md](work-strategy-rome/notes/2026-04-03-modern-rome-papacy-thesis-stub.md) — papacy as core of modern Rome (IT/ES/FR/BR/MX axis), mind–soul vs administrative Vatican, Leo talent-stack **hypothesis**, narrow opportunity when US civic myth frays; falsifiers.
+- **work-strategy-rome:** [ROME-PASS.md](work-strategy-rome/ROME-PASS.md) pre-skill skeleton + [notes/exemplars/](work-strategy-rome/notes/exemplars/) · [daily-brief-focus.md](daily-brief-focus.md) Rome / Vatican bullet.

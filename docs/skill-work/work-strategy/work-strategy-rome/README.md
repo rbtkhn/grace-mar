@@ -27,7 +27,9 @@
 | File | Role |
 |------|------|
 | [manifest.md](manifest.md) | Scope, triggers, integration points, boundaries. |
+| [ROME-PASS.md](ROME-PASS.md) | Repeatable pre-skill pass: triggers, source order, boundaries, output shape, micro-checklist. |
 | [notes/](notes/) | Dated stubs — e.g. [2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md). |
+| [notes/exemplars/](notes/exemplars/) | Finished pass examples (shape reference for future `strategy-rome` skill). |
 | `ingest/` | _(Optional)_ pointers to external captures — prefer [research/external/work-strategy/transcripts/README.md](../../../../research/external/work-strategy/transcripts/README.md) for long-form text. |
 
 ---
@@ -58,3 +60,4 @@ Append short dated lines here or in [work-strategy-history.md](../work-strategy-
 - **2026-04-01** — CIV-MEM thin wire documented (README **Integration** + [manifest.md](manifest.md) **CIV-MEM**).
 - **2026-04-02** — **North star** paragraph added (reinvention / mutation; legitimacy without empire; WORK boundaries).
 - **2026-04-03** — **Thesis stub:** papacy-centered modern Rome, mind/soul vs administrative layers, Leo talent-stack hypothesis, narrow US-myth window — [notes/2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md).
+- **2026-04-03** — **[ROME-PASS.md](ROME-PASS.md)** skeleton + [notes/exemplars/](notes/exemplars/); [daily-brief-focus.md](../daily-brief-focus.md) Rome bullet (pre-skill readiness).
