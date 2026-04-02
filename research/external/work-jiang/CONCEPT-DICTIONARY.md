@@ -11,9 +11,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - State-led vs bottom-up formation
 - **Related concepts:** strategic-imagination, education-narrative
 - **First seen (source):** `geo-03`
-- **Sources:** `geo-03`, `geo-09`
-- **Analysis (source ids):** `geo-03`, `geo-09`
-- **Chapter candidates:** `ch02`
+- **Sources:** `geo-03`, `geo-09`, `civ-01`
+- **Analysis (source ids):** `geo-03`, `geo-09`, `civ-01`
+- **Chapter candidates:** `ch02`, `civ-ch01`
 - **Status:** draft
 
 ## strategic-imagination
@@ -246,9 +246,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Liberation vs discipline
 - **Related concepts:** civ-formation
 - **First seen (source):** `geo-03`
-- **Sources:** `geo-03`, `geo-12`
-- **Analysis (source ids):** `geo-03`, `geo-12`
-- **Chapter candidates:** `ch01`, `ch02`
+- **Sources:** `geo-03`, `geo-12`, `civ-01`
+- **Analysis (source ids):** `geo-03`, `geo-12`, `civ-01`
+- **Chapter candidates:** `ch01`, `ch02`, `civ-ch01`
 - **Status:** draft
 
 ## religious-legitimacy
@@ -260,9 +260,9 @@ Recurring Jiang / Geo-Strategy vocabulary for the book-site lane. Machine source
   - Universal ethics vs particular mission
 - **Related concepts:** christian-zionism, empire-order
 - **First seen (source):** `geo-02`
-- **Sources:** `geo-02`, `geo-06`
-- **Analysis (source ids):** `geo-02`, `geo-06`
-- **Chapter candidates:** `ch03`
+- **Sources:** `geo-02`, `geo-06`, `civ-01`
+- **Analysis (source ids):** `geo-02`, `geo-06`, `civ-01`
+- **Chapter candidates:** `ch03`, `civ-ch01`
 - **Status:** draft
 
 ## middle-east-alliance

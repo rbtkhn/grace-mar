@@ -18,6 +18,11 @@
 - **Chapters with blockers listed:** 1
 - **Evidence packs present:** 12 / 12 chapters
 
+### Volume II (Civilization) — `volume_2_civilization`
+
+- **Chapters defined:** 60
+- **Evidence packs present:** 60 / 60 chapters
+
 ## Registries
 
 - **Predictions (raw jsonl):** 37

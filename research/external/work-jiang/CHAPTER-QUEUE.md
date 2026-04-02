@@ -1,6 +1,6 @@
 # CHAPTER QUEUE
 
-Production order and blockers for the Jiang book/site lane.
+Production order and blockers for the Jiang book/site lane (Volume I — Geo-Strategy, top-level `book`).
 
 ## ch01 — Geo-Strategy #1: Iran’s Strategy Matrix
 
