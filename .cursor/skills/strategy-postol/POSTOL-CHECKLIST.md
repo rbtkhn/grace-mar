@@ -40,6 +40,9 @@ Use when stress-testing **missiles, missile defense, drones, nuclear latency**, 
 ## Nuclear (when adjacent)
 
 - [ ] **Material + latency** vs **deployed arsenal** — do not collapse **breakout** claims into **deterrent** without **delivery + command** discussion (see separate Postol nuclear transcripts in corpus).
+- [ ] **Exercise vs history** — **Able Archer**–style timelines: separate **declassified / primary** game materials from **speaker’s pedagogical reconstruction** (yields, **day N** maps, city lists).
+- [ ] **Fallout vs Chernobyl** — multiples (**×1000**, **×20**, etc.) are **sensitive to time-after-burst and isotope mix**; verify against **effects** literature before repeating as plain fact.
+- [ ] **Theater missiles in Europe** — **“must be nuclear”** is an **argument**; check **announced** warhead policy, **platform**, and **open** NATO/host statements — not diagrams alone.
 
 ## Scenario vs forecast
 
