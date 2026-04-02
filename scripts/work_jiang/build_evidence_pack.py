@@ -140,6 +140,15 @@ def build_pack(chapter_id: str) -> str:
             "- Appendix / website: divergence notes and Part II historiography "
             "(Volume II — not a prediction scorecard)."
         )
+    elif chapter_id.startswith("sh-ch"):
+        open_q = [
+            "Which named scholarly or primary-source line best tests the lecture's power / narrative claims?",
+            "Where does pedagogical compression risk epistemic overreach (e.g. Kant gloss, finance, history)?",
+        ]
+        spill = (
+            "- Appendix / website: divergence notes and Part II method per "
+            "book/VOLUME-III-SECRET-HISTORY.md (not a Geo-style prediction scorecard by default)."
+        )
     else:
         open_q = [
             "Does Jiang treat religion instrumentally or ontologically in these sources?",

@@ -21,7 +21,11 @@ from arch_chapters import chapters_for_volume_block, top_level_chapters  # noqa:
 def main() -> int:
     arch = yaml.safe_load((WORK_DIR / "metadata" / "book-architecture.yaml").read_text(encoding="utf-8"))
     # Volume I (top-level book) + Volume II Civilization only — not nested Volume IV/VII stubs.
-    chapters = top_level_chapters(arch) + chapters_for_volume_block(arch, "volume_2_civilization")
+    chapters = (
+        top_level_chapters(arch)
+        + chapters_for_volume_block(arch, "volume_2_civilization")
+        + chapters_for_volume_block(arch, "volume_3_secret_history")
+    )
     script = ROOT / "scripts" / "work_jiang" / "build_evidence_pack.py"
     for ch in chapters:
         cid = ch.get("id")

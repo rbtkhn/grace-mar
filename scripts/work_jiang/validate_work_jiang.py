@@ -168,6 +168,27 @@ def check_rendered_status_drift(architecture: dict, errors: list[str]) -> None:
             errors,
         )
 
+    vol3 = architecture.get("volume_3_secret_history") or {}
+    ch3 = (vol3.get("book") or {}).get("chapters") or []
+    if ch3:
+        expected_v3 = {c["id"]: c.get("status", "") for c in ch3}
+        _scan_rendered_status_drift(
+            WORK_DIR / "CHAPTER-QUEUE-VOLUME-III.md",
+            "CHAPTER-QUEUE-VOLUME-III.md",
+            re.compile(r"^## (sh-ch\d+)"),
+            expected_v3,
+            status_line,
+            errors,
+        )
+        _scan_rendered_status_drift(
+            WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-III.md",
+            "BOOK-ARCHITECTURE-VOLUME-III.md",
+            re.compile(r"^### (sh-ch\d+)"),
+            expected_v3,
+            status_line,
+            errors,
+        )
+
 
 def check_membrane(errors: list[str]) -> None:
     """Scan work_jiang scripts for forbidden Record path writes."""

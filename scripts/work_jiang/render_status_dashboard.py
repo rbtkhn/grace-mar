@@ -18,6 +18,10 @@ if str(_SCRIPTS) not in sys.path:
 from arch_chapters import chapters_for_volume_block  # noqa: E402
 
 
+def _count_secret_history_lectures() -> int:
+    return len(list((WORK_DIR / "lectures").glob("secret-history-*.md")))
+
+
 def load_yaml(path: Path) -> dict:
     if not path.exists():
         return {}
@@ -55,6 +59,7 @@ def main() -> int:
 
     lecture_count = count_geo_lectures()
     civ_lecture_count = count_civilization_lectures()
+    sh_lecture_count = _count_secret_history_lectures()
     analysis_count = len(list((WORK_DIR / "analysis").glob("*.md")))
     # exclude .gitkeep if counted as file - glob *.md only real files
     missing_analysis = [s["source_id"] for s in sources if s["status"]["analysis"] != "complete"]
@@ -93,9 +98,15 @@ def main() -> int:
     expected_ch = {c.get("id") for c in arch_ch if c.get("id")}
     vol2_chapters = chapters_for_volume_block(arch, "volume_2_civilization")
     expected_vol2 = {c.get("id") for c in vol2_chapters if c.get("id")}
+    vol3_chapters = chapters_for_volume_block(arch, "volume_3_secret_history")
+    expected_vol3 = {c.get("id") for c in vol3_chapters if c.get("id")}
     pack_files: list[Path] = []
     if pack_dir.exists():
-        pack_files = list(pack_dir.glob("ch*.md")) + list(pack_dir.glob("civ-ch*.md"))
+        pack_files = (
+            list(pack_dir.glob("ch*.md"))
+            + list(pack_dir.glob("civ-ch*.md"))
+            + list(pack_dir.glob("sh-ch*.md"))
+        )
     pack_ids = {p.stem for p in pack_files}
 
     lines = [
@@ -107,6 +118,7 @@ def main() -> int:
         "",
         f"- **Geo-Strategy lectures:** {lecture_count}",
         f"- **Civilization series lectures (curated files):** {civ_lecture_count}",
+        f"- **Secret History series lectures (curated files):** {sh_lecture_count}",
         f"- **Analysis memos:** {analysis_count}",
         f"- **Missing analysis:** {len(missing_analysis)} ({', '.join(missing_analysis) if missing_analysis else 'none'})",
         "",
@@ -126,6 +138,14 @@ def main() -> int:
             "",
             f"- **Chapters defined:** {len(expected_vol2)}",
             f"- **Evidence packs present:** {len(pack_ids & expected_vol2)} / {len(expected_vol2)} chapters",
+            "",
+        ]
+    if expected_vol3:
+        lines += [
+            "### Volume III (Secret History) — `volume_3_secret_history`",
+            "",
+            f"- **Chapters defined:** {len(expected_vol3)}",
+            f"- **Evidence packs present:** {len(pack_ids & expected_vol3)} / {len(expected_vol3)} chapters",
             "",
         ]
     lines += [

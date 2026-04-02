@@ -6,6 +6,7 @@ from typing import Any
 # Nested book queues in metadata/book-architecture.yaml (not top-level `book`).
 VOLUME_BLOCK_KEYS = (
     "volume_2_civilization",
+    "volume_3_secret_history",
     "volume_4_game_theory",
     "volume_7_essays",
 )

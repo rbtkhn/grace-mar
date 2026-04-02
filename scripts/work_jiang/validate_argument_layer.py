@@ -16,6 +16,14 @@ if str(_SCRIPTS) not in sys.path:
 from arch_chapters import chapters_for_volume_block, top_level_chapters  # noqa: E402
 
 
+def _evidence_pack_volume_branch(chapter_id: str) -> str:
+    if chapter_id.startswith("civ-ch"):
+        return "civ"
+    if chapter_id.startswith("sh-ch"):
+        return "sh"
+    return "geo"
+
+
 def load_yaml(path: Path) -> dict:
     with path.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
@@ -70,16 +78,22 @@ def main() -> int:
             errors.append(f"Claim {cid} marked supported but analysis_id empty while source has analysis")
 
     arch = load_yaml(WORK_DIR / "metadata" / "book-architecture.yaml")
-    # Evidence-pack checks: Volume I + Volume II only (not Volume IV/VII YAML stubs).
-    chapters = top_level_chapters(arch) + chapters_for_volume_block(arch, "volume_2_civilization")
+    # Evidence-pack checks: Volume I + II + III (not Volume IV/VII YAML stubs).
+    chapters = (
+        top_level_chapters(arch)
+        + chapters_for_volume_block(arch, "volume_2_civilization")
+        + chapters_for_volume_block(arch, "volume_3_secret_history")
+    )
     for ch in chapters:
         cid = ch.get("id")
         if not cid:
             continue
         pack = WORK_DIR / "evidence-packs" / f"{cid}.md"
         status = (ch.get("status") or "").strip()
-        # Volume II Civilization: outline_pending packs are scaffold-only (no claims yet).
-        if cid.startswith("civ-ch") and status == "outline_pending":
+        branch = _evidence_pack_volume_branch(cid)
+        nested = branch in ("civ", "sh")
+        # Nested volumes: outline_pending packs are scaffold-only (no claims yet).
+        if nested and status == "outline_pending":
             if not pack.exists():
                 errors.append(f"Missing evidence pack for {cid}: {pack.relative_to(WORK_DIR)}")
             continue
@@ -87,12 +101,18 @@ def main() -> int:
         if not pack.exists():
             errors.append(f"Missing evidence pack for {cid}: {pack.relative_to(WORK_DIR)}")
         text = pack.read_text(encoding="utf-8") if pack.exists() else ""
-        if cid.startswith("civ-ch"):
+        if branch == "civ":
             for m in re.findall(r"`(civ-\d\d)`", text):
                 if m not in src_by:
                     errors.append(f"Evidence pack {cid} references unknown source {m}")
             if text and len(re.findall(r"`civ-\d\d`", text)) < 1:
                 errors.append(f"Evidence pack {cid} lists no civ source ids (expected at least one)")
+        elif branch == "sh":
+            for m in re.findall(r"`(sh-\d\d)`", text):
+                if m not in src_by:
+                    errors.append(f"Evidence pack {cid} references unknown source {m}")
+            if text and len(re.findall(r"`sh-\d\d`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no sh source ids (expected at least one)")
         else:
             for m in re.findall(r"`(geo-\d\d)`", text):
                 if m not in src_by:
@@ -103,10 +123,10 @@ def main() -> int:
             if m not in claim_by_id:
                 errors.append(f"Evidence pack {cid} references unknown claim {m}")
         claims_deferred = "none with chapter_candidates" in text
-        if text and not cid.startswith("civ-ch"):
+        if text and not nested:
             if not claims_deferred and len(re.findall(r"`clm-\d+`", text)) < 1:
                 errors.append(f"Evidence pack {cid} lists no claim ids (expected at least one)")
-        if text and cid.startswith("civ-ch") and status != "outline_pending":
+        if text and nested and status != "outline_pending":
             if not claims_deferred and len(re.findall(r"`clm-\d+`", text)) < 1:
                 errors.append(f"Evidence pack {cid} lists no claim ids (expected at least one)")
 
