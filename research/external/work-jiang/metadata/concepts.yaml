@@ -8,9 +8,9 @@ concepts:
     tensions: ["State-led vs bottom-up formation"]
     related_concepts: ["strategic-imagination", "education-narrative"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-09]
-    analysis_ids: [geo-03, geo-09]
-    chapter_ids: [ch02]
+    source_ids: [geo-03, geo-09, civ-01]
+    analysis_ids: [geo-03, geo-09, civ-01]
+    chapter_ids: [ch02, civ-ch01]
     status: draft
 
   - concept_id: strategic-imagination
@@ -229,9 +229,9 @@ concepts:
     tensions: ["Liberation vs discipline"]
     related_concepts: ["civ-formation"]
     first_seen_source_id: geo-03
-    source_ids: [geo-03, geo-12]
-    analysis_ids: [geo-03, geo-12]
-    chapter_ids: [ch01, ch02]
+    source_ids: [geo-03, geo-12, civ-01]
+    analysis_ids: [geo-03, geo-12, civ-01]
+    chapter_ids: [ch01, ch02, civ-ch01]
     status: draft
 
   - concept_id: religious-legitimacy
@@ -242,9 +242,9 @@ concepts:
     tensions: ["Universal ethics vs particular mission"]
     related_concepts: ["christian-zionism", "empire-order"]
     first_seen_source_id: geo-02
-    source_ids: [geo-02, geo-06]
-    analysis_ids: [geo-02, geo-06]
-    chapter_ids: [ch03]
+    source_ids: [geo-02, geo-06, civ-01]
+    analysis_ids: [geo-02, geo-06, civ-01]
+    chapter_ids: [ch03, civ-ch01]
     status: draft
 
   - concept_id: middle-east-alliance

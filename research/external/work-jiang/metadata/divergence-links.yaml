@@ -852,3 +852,30 @@ divergence_links:
   - https://www.youtube.com/watch?v=s_k6esWheqA
   source_id: geo-12
   chapter_ids: *id011
+- divergence_id: div-CIV01-001
+  video_id: Jjqf9T59uY0
+  lecture_ref: lectures/civilization-01-explaining-humanitys-transition-to-agriculture.md
+  topic_tags:
+  - neolithic
+  - agriculture
+  - progress_narrative
+  jiang_claim: The lecture treats the standard classroom story—farming as an obvious
+    improvement that straightforwardly yields surplus, cities, literacy, and modernity—as
+    poorly supported by accumulating evidence.
+  mainstream_anchor: Archaeology and synthesis (regional Neolithic studies, health
+    and workload evidence) complicate a simple progressivist arc, but many scholars
+    still trace major scalar change through sedentism, domestication, and food production
+    without dismissing material and demographic shifts.
+  mainstream_summary: Divergence is weighting and rhetorical sharpness; book layer
+    should name regional variation and peer-reviewed nuance alongside the lecture's
+    corrective.
+  divergence_type: interpretive
+  strength: moderate
+  evidence_notes: Pair with surveys of Neolithic health indicators and sedentism-first
+    sites if retained in print.
+  sources_mainstream: []
+  sources_jiang:
+  - https://www.youtube.com/watch?v=Jjqf9T59uY0
+  source_id: civ-01
+  chapter_ids:
+  - civ-ch01

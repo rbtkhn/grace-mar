@@ -52,3 +52,13 @@ thesis:
       support_analysis: []
       vulnerabilities:
         - "Needs explicit scorecard support"
+    - id: t04
+      claim: "Deep prehistory extends the formation thesis: sedentism, ritual, and narrative precede and shape the institutional bundle later called civilization."
+      linked_claim_ids:
+        - clm-0031
+        - clm-0032
+        - clm-0033
+        - clm-0034
+      support_sources: []
+      support_analysis: []
+      vulnerabilities: []
