@@ -26,6 +26,14 @@ def _count_game_theory_lectures() -> int:
     return len(list((WORK_DIR / "lectures").glob("game-theory-*.md")))
 
 
+def _count_great_books_lectures() -> int:
+    return len(list((WORK_DIR / "lectures").glob("great-books-*.md")))
+
+
+def _count_interviews_lectures() -> int:
+    return len(list((WORK_DIR / "lectures").glob("interviews-*.md")))
+
+
 def load_yaml(path: Path) -> dict:
     if not path.exists():
         return {}
@@ -65,6 +73,8 @@ def main() -> int:
     civ_lecture_count = count_civilization_lectures()
     sh_lecture_count = _count_secret_history_lectures()
     gt_lecture_count = _count_game_theory_lectures()
+    gb_lecture_count = _count_great_books_lectures()
+    vi_lecture_count = _count_interviews_lectures()
     analysis_count = len(list((WORK_DIR / "analysis").glob("*.md")))
     # exclude .gitkeep if counted as file - glob *.md only real files
     missing_analysis = [s["source_id"] for s in sources if s["status"]["analysis"] != "complete"]
@@ -107,6 +117,10 @@ def main() -> int:
     expected_vol3 = {c.get("id") for c in vol3_chapters if c.get("id")}
     vol4_chapters = chapters_for_volume_block(arch, "volume_4_game_theory")
     expected_vol4 = {c.get("id") for c in vol4_chapters if c.get("id")}
+    vol5_chapters = chapters_for_volume_block(arch, "volume_5_great_books")
+    expected_vol5 = {c.get("id") for c in vol5_chapters if c.get("id")}
+    vol6_chapters = chapters_for_volume_block(arch, "volume_6_interviews")
+    expected_vol6 = {c.get("id") for c in vol6_chapters if c.get("id")}
     pack_files: list[Path] = []
     if pack_dir.exists():
         pack_files = (
@@ -114,6 +128,8 @@ def main() -> int:
             + list(pack_dir.glob("civ-ch*.md"))
             + list(pack_dir.glob("sh-ch*.md"))
             + list(pack_dir.glob("gt-ch*.md"))
+            + list(pack_dir.glob("gb-ch*.md"))
+            + list(pack_dir.glob("vi-ch*.md"))
         )
     pack_ids = {p.stem for p in pack_files}
 
@@ -128,6 +144,8 @@ def main() -> int:
         f"- **Civilization series lectures (curated files):** {civ_lecture_count}",
         f"- **Secret History series lectures (curated files):** {sh_lecture_count}",
         f"- **Game Theory series lectures (curated files):** {gt_lecture_count}",
+        f"- **Great Books series lectures (curated files):** {gb_lecture_count}",
+        f"- **Interviews series lectures (curated files):** {vi_lecture_count}",
         f"- **Analysis memos:** {analysis_count}",
         f"- **Missing analysis:** {len(missing_analysis)} ({', '.join(missing_analysis) if missing_analysis else 'none'})",
         "",
@@ -163,6 +181,22 @@ def main() -> int:
             "",
             f"- **Chapters defined:** {len(expected_vol4)}",
             f"- **Evidence packs present:** {len(pack_ids & expected_vol4)} / {len(expected_vol4)} chapters",
+            "",
+        ]
+    if expected_vol5:
+        lines += [
+            "### Volume V (Great Books) — `volume_5_great_books`",
+            "",
+            f"- **Chapters defined:** {len(expected_vol5)}",
+            f"- **Evidence packs present:** {len(pack_ids & expected_vol5)} / {len(expected_vol5)} chapters",
+            "",
+        ]
+    if expected_vol6:
+        lines += [
+            "### Volume VI (Interviews) — `volume_6_interviews`",
+            "",
+            f"- **Chapters defined:** {len(expected_vol6)}",
+            f"- **Evidence packs present:** {len(pack_ids & expected_vol6)} / {len(expected_vol6)} chapters",
             "",
         ]
     lines += [

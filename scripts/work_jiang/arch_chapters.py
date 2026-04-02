@@ -8,6 +8,8 @@ VOLUME_BLOCK_KEYS = (
     "volume_2_civilization",
     "volume_3_secret_history",
     "volume_4_game_theory",
+    "volume_5_great_books",
+    "volume_6_interviews",
     "volume_7_essays",
 )
 

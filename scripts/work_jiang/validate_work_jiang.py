@@ -210,6 +210,48 @@ def check_rendered_status_drift(architecture: dict, errors: list[str]) -> None:
             errors,
         )
 
+    vol5 = architecture.get("volume_5_great_books") or {}
+    ch5 = (vol5.get("book") or {}).get("chapters") or []
+    if ch5:
+        expected_v5 = {c["id"]: c.get("status", "") for c in ch5}
+        _scan_rendered_status_drift(
+            WORK_DIR / "CHAPTER-QUEUE-VOLUME-V.md",
+            "CHAPTER-QUEUE-VOLUME-V.md",
+            re.compile(r"^## (gb-ch\d+)"),
+            expected_v5,
+            status_line,
+            errors,
+        )
+        _scan_rendered_status_drift(
+            WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-V.md",
+            "BOOK-ARCHITECTURE-VOLUME-V.md",
+            re.compile(r"^### (gb-ch\d+)"),
+            expected_v5,
+            status_line,
+            errors,
+        )
+
+    vol6 = architecture.get("volume_6_interviews") or {}
+    ch6 = (vol6.get("book") or {}).get("chapters") or []
+    if ch6:
+        expected_v6 = {c["id"]: c.get("status", "") for c in ch6}
+        _scan_rendered_status_drift(
+            WORK_DIR / "CHAPTER-QUEUE-VOLUME-VI.md",
+            "CHAPTER-QUEUE-VOLUME-VI.md",
+            re.compile(r"^## (vi-ch\d+)"),
+            expected_v6,
+            status_line,
+            errors,
+        )
+        _scan_rendered_status_drift(
+            WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-VI.md",
+            "BOOK-ARCHITECTURE-VOLUME-VI.md",
+            re.compile(r"^### (vi-ch\d+)"),
+            expected_v6,
+            status_line,
+            errors,
+        )
+
 
 def check_membrane(errors: list[str]) -> None:
     """Scan work_jiang scripts for forbidden Record path writes."""

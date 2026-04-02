@@ -13,6 +13,8 @@ OUT = WORK_DIR / "CHAPTER-QUEUE.md"
 OUT_VOL2 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-II.md"
 OUT_VOL3 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-III.md"
 OUT_VOL4 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-IV.md"
+OUT_VOL5 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-V.md"
+OUT_VOL6 = WORK_DIR / "CHAPTER-QUEUE-VOLUME-VI.md"
 
 
 def load(path: Path) -> dict:
@@ -110,6 +112,40 @@ def main() -> int:
         lines4.append("")
         OUT_VOL4.write_text("\n".join(lines4), encoding="utf-8")
         print(f"Wrote {OUT_VOL4}")
+
+    vol5 = arch.get("volume_5_great_books") or {}
+    ch5 = (vol5.get("book") or {}).get("chapters") or []
+    if ch5:
+        lines5 = _render_queue_lines(
+            "CHAPTER QUEUE — Volume V (Great Books)",
+            "Nested `volume_5_great_books.book.chapters` — see "
+            "`docs/skill-work/work-jiang/volume-v-book-track-conventions.md`.",
+            ch5,
+        )
+        lines5.append(
+            "*Generated from `metadata/book-architecture.yaml` (`volume_5_great_books`) — "
+            "same command as Volume I queue.*"
+        )
+        lines5.append("")
+        OUT_VOL5.write_text("\n".join(lines5), encoding="utf-8")
+        print(f"Wrote {OUT_VOL5}")
+
+    vol6 = arch.get("volume_6_interviews") or {}
+    ch6 = (vol6.get("book") or {}).get("chapters") or []
+    if ch6:
+        lines6 = _render_queue_lines(
+            "CHAPTER QUEUE — Volume VI (Interviews)",
+            "Nested `volume_6_interviews.book.chapters` — see "
+            "`docs/skill-work/work-jiang/volume-vi-book-track-conventions.md`.",
+            ch6,
+        )
+        lines6.append(
+            "*Generated from `metadata/book-architecture.yaml` (`volume_6_interviews`) — "
+            "same command as Volume I queue.*"
+        )
+        lines6.append("")
+        OUT_VOL6.write_text("\n".join(lines6), encoding="utf-8")
+        print(f"Wrote {OUT_VOL6}")
     return 0
 
 

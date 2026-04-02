@@ -15,6 +15,8 @@ OUT = WORK_DIR / "BOOK-ARCHITECTURE.md"
 OUT_VOL2 = WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-II.md"
 OUT_VOL3 = WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-III.md"
 OUT_VOL4 = WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-IV.md"
+OUT_VOL5 = WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-V.md"
+OUT_VOL6 = WORK_DIR / "BOOK-ARCHITECTURE-VOLUME-VI.md"
 
 
 def load_yaml(path: Path) -> dict:
@@ -464,6 +466,216 @@ def render_volume_iv(data: dict) -> str | None:
     return "\n".join(lines)
 
 
+def render_volume_v(data: dict) -> str | None:
+    """Render BOOK-ARCHITECTURE-VOLUME-V.md from `volume_5_great_books`."""
+    vol = data.get("volume_5_great_books") or {}
+    chapters = (vol.get("book") or {}).get("chapters") or []
+    if not chapters:
+        return None
+    project = vol.get("project") or {}
+    series_title = project.get("series_title")
+    volume = project.get("volume") or {}
+    lines = [
+        "# BOOK ARCHITECTURE — Volume V (Great Books)",
+        "",
+        f"**Project:** {project.get('title', '')}",
+    ]
+    if series_title and isinstance(volume, dict) and volume.get("lecture_series"):
+        vol_n = volume.get("number")
+        ls = volume.get("lecture_series")
+        vol_line = f"**Volume {vol_n}:** {ls}" if vol_n is not None else f"**Volume:** {ls}"
+        lines += [
+            "",
+            "## Series and volume",
+            "",
+            f"**Series:** {series_title} — nested block `volume_5_great_books` in `book-architecture.yaml`.",
+            "",
+            f"{vol_line} (this volume’s lecture corpus).",
+        ]
+    lines += [
+        "",
+        "## Thesis",
+        "",
+        str(project.get("thesis_one_sentence") or "").strip(),
+        "",
+        "## Book promise",
+        "",
+        str(project.get("promise_paragraph") or "").strip(),
+        "",
+        "## Audience",
+        "",
+        f"- **Primary:** {project.get('audience', {}).get('primary', '')}",
+    ]
+    sec = project.get("audience", {}).get("secondary") or []
+    for s in sec:
+        lines.append(f"- **Secondary:** {s}")
+    ced = vol.get("chapter_end_divergence") or {}
+    if ced:
+        lines += [
+            "",
+            "## End-of-chapter divergence (Part I)",
+            "",
+            f"- **Registry:** `{ced.get('registry_path', '')}`",
+            "",
+            str(ced.get("instruction") or "").strip(),
+            "",
+        ]
+    part2 = vol.get("part_2") or {}
+    if part2:
+        after = part2.get("after_chapter") or "gb-ch08"
+        lines += [
+            "",
+            "## Part II (after Part I)",
+            "",
+            f"### {part2.get('title', 'Part II')}",
+            "",
+            f"**Begins after:** `{after}`",
+            "",
+            str(part2.get("description") or "").strip(),
+            "",
+        ]
+    lines += ["", "## Chapters (Part I)", ""]
+    for ch in chapters:
+        pred_ids = ch.get("prediction_ids") or []
+        pred_line = ""
+        if pred_ids:
+            pred_line = f"- **Prediction IDs:** `{', '.join(pred_ids)}`"
+        lines += [
+            f"### {ch['id']} — {ch['title']}",
+            "",
+            f"- **Purpose:** {ch['purpose']}",
+            f"- **Kind:** {ch['kind']}",
+            f"- **Priority:** {ch['priority']}",
+            f"- **Target words:** {ch.get('target_words', '')}",
+            f"- **Status:** {ch.get('status', '')}",
+            f"- **Owner:** {ch.get('owner', '')}",
+            f"- **Sprint:** {ch.get('sprint', '')}",
+        ]
+        blocking = ch.get("blocking") or []
+        if blocking:
+            lines.append(f"- **Blocking:** {', '.join(blocking)}")
+        outline_path = ch.get("outline_path")
+        draft_path = ch.get("draft_path")
+        if outline_path:
+            lines.append(f"- **Outline:** `{outline_path}`")
+        if draft_path:
+            lines.append(f"- **Draft:** `{draft_path}`")
+        if pred_line:
+            lines.append(pred_line)
+        lines.append("")
+    lines.append(
+        "*Generated from `metadata/book-architecture.yaml` (`volume_5_great_books`) — "
+        "`python scripts/work_jiang/render_book_architecture.py`.*"
+    )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def render_volume_vi(data: dict) -> str | None:
+    """Render BOOK-ARCHITECTURE-VOLUME-VI.md from `volume_6_interviews`."""
+    vol = data.get("volume_6_interviews") or {}
+    chapters = (vol.get("book") or {}).get("chapters") or []
+    if not chapters:
+        return None
+    project = vol.get("project") or {}
+    series_title = project.get("series_title")
+    volume = project.get("volume") or {}
+    lines = [
+        "# BOOK ARCHITECTURE — Volume VI (Interviews)",
+        "",
+        f"**Project:** {project.get('title', '')}",
+    ]
+    if series_title and isinstance(volume, dict) and volume.get("lecture_series"):
+        vol_n = volume.get("number")
+        ls = volume.get("lecture_series")
+        vol_line = f"**Volume {vol_n}:** {ls}" if vol_n is not None else f"**Volume:** {ls}"
+        lines += [
+            "",
+            "## Series and volume",
+            "",
+            f"**Series:** {series_title} — nested block `volume_6_interviews` in `book-architecture.yaml`.",
+            "",
+            f"{vol_line} (this volume’s interview corpus).",
+        ]
+    lines += [
+        "",
+        "## Thesis",
+        "",
+        str(project.get("thesis_one_sentence") or "").strip(),
+        "",
+        "## Book promise",
+        "",
+        str(project.get("promise_paragraph") or "").strip(),
+        "",
+        "## Audience",
+        "",
+        f"- **Primary:** {project.get('audience', {}).get('primary', '')}",
+    ]
+    sec = project.get("audience", {}).get("secondary") or []
+    for s in sec:
+        lines.append(f"- **Secondary:** {s}")
+    ced = vol.get("chapter_end_divergence") or {}
+    if ced:
+        lines += [
+            "",
+            "## End-of-chapter divergence (Part I)",
+            "",
+            f"- **Registry:** `{ced.get('registry_path', '')}`",
+            "",
+            str(ced.get("instruction") or "").strip(),
+            "",
+        ]
+    part2 = vol.get("part_2") or {}
+    if part2:
+        after = part2.get("after_chapter") or "vi-ch11"
+        lines += [
+            "",
+            "## Part II (after Part I)",
+            "",
+            f"### {part2.get('title', 'Part II')}",
+            "",
+            f"**Begins after:** `{after}`",
+            "",
+            str(part2.get("description") or "").strip(),
+            "",
+        ]
+    lines += ["", "## Chapters (Part I)", ""]
+    for ch in chapters:
+        pred_ids = ch.get("prediction_ids") or []
+        pred_line = ""
+        if pred_ids:
+            pred_line = f"- **Prediction IDs:** `{', '.join(pred_ids)}`"
+        lines += [
+            f"### {ch['id']} — {ch['title']}",
+            "",
+            f"- **Purpose:** {ch['purpose']}",
+            f"- **Kind:** {ch['kind']}",
+            f"- **Priority:** {ch['priority']}",
+            f"- **Target words:** {ch.get('target_words', '')}",
+            f"- **Status:** {ch.get('status', '')}",
+            f"- **Owner:** {ch.get('owner', '')}",
+            f"- **Sprint:** {ch.get('sprint', '')}",
+        ]
+        blocking = ch.get("blocking") or []
+        if blocking:
+            lines.append(f"- **Blocking:** {', '.join(blocking)}")
+        outline_path = ch.get("outline_path")
+        draft_path = ch.get("draft_path")
+        if outline_path:
+            lines.append(f"- **Outline:** `{outline_path}`")
+        if draft_path:
+            lines.append(f"- **Draft:** `{draft_path}`")
+        if pred_line:
+            lines.append(pred_line)
+        lines.append("")
+    lines.append(
+        "*Generated from `metadata/book-architecture.yaml` (`volume_6_interviews`) — "
+        "`python scripts/work_jiang/render_book_architecture.py`.*"
+    )
+    lines.append("")
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
@@ -494,6 +706,14 @@ def main() -> int:
     if vol4_md:
         OUT_VOL4.write_text(vol4_md, encoding="utf-8")
         print(f"Wrote {OUT_VOL4}")
+    vol5_md = render_volume_v(data)
+    if vol5_md:
+        OUT_VOL5.write_text(vol5_md, encoding="utf-8")
+        print(f"Wrote {OUT_VOL5}")
+    vol6_md = render_volume_vi(data)
+    if vol6_md:
+        OUT_VOL6.write_text(vol6_md, encoding="utf-8")
+        print(f"Wrote {OUT_VOL6}")
     if args.json_summary:
         summary = {
             "project_id": (data.get("project") or {}).get("id"),

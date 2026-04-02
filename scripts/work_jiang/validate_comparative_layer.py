@@ -39,13 +39,15 @@ def load_claim_ids() -> set[str]:
 
 
 def high_priority_analysis_chapters(arch: dict) -> list[str]:
-    """Volume I + II + III — exclude Volume IV/VII YAML stubs."""
+    """Volume I + nested II–VI — exclude Volume VII stub until chapters are promoted."""
     out = []
     for ch in (
         top_level_chapters(arch)
         + chapters_for_volume_block(arch, "volume_2_civilization")
         + chapters_for_volume_block(arch, "volume_3_secret_history")
         + chapters_for_volume_block(arch, "volume_4_game_theory")
+        + chapters_for_volume_block(arch, "volume_5_great_books")
+        + chapters_for_volume_block(arch, "volume_6_interviews")
     ):
         if ch.get("kind") == "analysis" and ch.get("priority") == "high":
             cid = ch.get("id")

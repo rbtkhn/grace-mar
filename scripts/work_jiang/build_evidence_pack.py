@@ -158,6 +158,24 @@ def build_pack(chapter_id: str) -> str:
             "- Appendix / website: divergence notes and Part II method per "
             "book/VOLUME-IV-GAME-THEORY.md (Volume I prediction boxes not assumed)."
         )
+    elif chapter_id.startswith("gb-ch"):
+        open_q = [
+            "Where do consciousness / metaphysics claims need separation from accredited neuroscience, philosophy of mind, or curriculum standards?",
+            "Which religious or esoteric framings require content notes or named scholarly counter-lines in book copy?",
+        ]
+        spill = (
+            "- Appendix / website: divergence notes and Part II method per "
+            "book/VOLUME-V-GREAT-BOOKS.md (Volume I prediction boxes not assumed)."
+        )
+    elif chapter_id.startswith("vi-ch"):
+        open_q = [
+            "Which forecast or attribution lines need dated context and named mainstream or primary-source checks?",
+            "How should host framing vs guest claims be separated in book copy (dialogue fidelity vs adjudication)?",
+        ]
+        spill = (
+            "- Appendix / website: divergence notes and Part II method per "
+            "book/VOLUME-VI-INTERVIEWS.md (Volume I prediction boxes not assumed)."
+        )
     else:
         open_q = [
             "Does Jiang treat religion instrumentally or ontologically in these sources?",

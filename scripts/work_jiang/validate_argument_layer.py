@@ -23,6 +23,10 @@ def _evidence_pack_volume_branch(chapter_id: str) -> str:
         return "sh"
     if chapter_id.startswith("gt-ch"):
         return "gt"
+    if chapter_id.startswith("gb-ch"):
+        return "gb"
+    if chapter_id.startswith("vi-ch"):
+        return "vi"
     return "geo"
 
 
@@ -80,12 +84,14 @@ def main() -> int:
             errors.append(f"Claim {cid} marked supported but analysis_id empty while source has analysis")
 
     arch = load_yaml(WORK_DIR / "metadata" / "book-architecture.yaml")
-    # Evidence-pack checks: Volume I + II + III (not Volume IV/VII YAML stubs).
+    # Evidence-pack checks: Volume I + nested II–VI (not Volume VII stub until promoted).
     chapters = (
         top_level_chapters(arch)
         + chapters_for_volume_block(arch, "volume_2_civilization")
         + chapters_for_volume_block(arch, "volume_3_secret_history")
         + chapters_for_volume_block(arch, "volume_4_game_theory")
+        + chapters_for_volume_block(arch, "volume_5_great_books")
+        + chapters_for_volume_block(arch, "volume_6_interviews")
     )
     for ch in chapters:
         cid = ch.get("id")
@@ -94,7 +100,7 @@ def main() -> int:
         pack = WORK_DIR / "evidence-packs" / f"{cid}.md"
         status = (ch.get("status") or "").strip()
         branch = _evidence_pack_volume_branch(cid)
-        nested = branch in ("civ", "sh", "gt")
+        nested = branch in ("civ", "sh", "gt", "gb", "vi")
         # Nested volumes: outline_pending packs are scaffold-only (no claims yet).
         if nested and status == "outline_pending":
             if not pack.exists():
@@ -122,6 +128,18 @@ def main() -> int:
                     errors.append(f"Evidence pack {cid} references unknown source {m}")
             if text and len(re.findall(r"`gt-\d\d`", text)) < 1:
                 errors.append(f"Evidence pack {cid} lists no gt source ids (expected at least one)")
+        elif branch == "gb":
+            for m in re.findall(r"`(gb-\d\d)`", text):
+                if m not in src_by:
+                    errors.append(f"Evidence pack {cid} references unknown source {m}")
+            if text and len(re.findall(r"`gb-\d\d`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no gb source ids (expected at least one)")
+        elif branch == "vi":
+            for m in re.findall(r"`(vi-\d\d)`", text):
+                if m not in src_by:
+                    errors.append(f"Evidence pack {cid} references unknown source {m}")
+            if text and len(re.findall(r"`vi-\d\d`", text)) < 1:
+                errors.append(f"Evidence pack {cid} lists no vi source ids (expected at least one)")
         else:
             for m in re.findall(r"`(geo-\d\d)`", text):
                 if m not in src_by:
