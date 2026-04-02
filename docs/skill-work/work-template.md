@@ -101,3 +101,5 @@ _Not:_ Record truth; not Voice knowledge; not a substitute for `users/<id>/self.
 ---
 
 **Last updated:** 2026-04-04
+
+**Upstream mirror:** A template-adapted copy (paths tuned for the public repo) lives in [companion-self `docs/skill-work/work-template.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-template.md) with [work-modules-history-principle.md](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-modules-history-principle.md) and [work-modules-sources-principle.md](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-modules-sources-principle.md). Refresh via `template_diff.py` / merge slices when intentionally aligning.
