@@ -25,6 +25,7 @@ def main() -> int:
         top_level_chapters(arch)
         + chapters_for_volume_block(arch, "volume_2_civilization")
         + chapters_for_volume_block(arch, "volume_3_secret_history")
+        + chapters_for_volume_block(arch, "volume_4_game_theory")
     )
     script = ROOT / "scripts" / "work_jiang" / "build_evidence_pack.py"
     for ch in chapters:

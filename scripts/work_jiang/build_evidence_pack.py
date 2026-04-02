@@ -149,6 +149,15 @@ def build_pack(chapter_id: str) -> str:
             "- Appendix / website: divergence notes and Part II method per "
             "book/VOLUME-III-SECRET-HISTORY.md (not a Geo-style prediction scorecard by default)."
         )
+    elif chapter_id.startswith("gt-ch"):
+        open_q = [
+            "Where does informal 'game' talk need separation from formal game theory or named social science?",
+            "Which lecture generalizations (biology, race, geopolitics) require counter-readings or citations?",
+        ]
+        spill = (
+            "- Appendix / website: divergence notes and Part II method per "
+            "book/VOLUME-IV-GAME-THEORY.md (Volume I prediction boxes not assumed)."
+        )
     else:
         open_q = [
             "Does Jiang treat religion instrumentally or ontologically in these sources?",

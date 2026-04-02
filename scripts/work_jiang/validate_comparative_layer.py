@@ -45,6 +45,7 @@ def high_priority_analysis_chapters(arch: dict) -> list[str]:
         top_level_chapters(arch)
         + chapters_for_volume_block(arch, "volume_2_civilization")
         + chapters_for_volume_block(arch, "volume_3_secret_history")
+        + chapters_for_volume_block(arch, "volume_4_game_theory")
     ):
         if ch.get("kind") == "analysis" and ch.get("priority") == "high":
             cid = ch.get("id")

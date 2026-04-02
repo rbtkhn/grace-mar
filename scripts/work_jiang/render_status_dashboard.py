@@ -22,6 +22,10 @@ def _count_secret_history_lectures() -> int:
     return len(list((WORK_DIR / "lectures").glob("secret-history-*.md")))
 
 
+def _count_game_theory_lectures() -> int:
+    return len(list((WORK_DIR / "lectures").glob("game-theory-*.md")))
+
+
 def load_yaml(path: Path) -> dict:
     if not path.exists():
         return {}
@@ -60,6 +64,7 @@ def main() -> int:
     lecture_count = count_geo_lectures()
     civ_lecture_count = count_civilization_lectures()
     sh_lecture_count = _count_secret_history_lectures()
+    gt_lecture_count = _count_game_theory_lectures()
     analysis_count = len(list((WORK_DIR / "analysis").glob("*.md")))
     # exclude .gitkeep if counted as file - glob *.md only real files
     missing_analysis = [s["source_id"] for s in sources if s["status"]["analysis"] != "complete"]
@@ -100,12 +105,15 @@ def main() -> int:
     expected_vol2 = {c.get("id") for c in vol2_chapters if c.get("id")}
     vol3_chapters = chapters_for_volume_block(arch, "volume_3_secret_history")
     expected_vol3 = {c.get("id") for c in vol3_chapters if c.get("id")}
+    vol4_chapters = chapters_for_volume_block(arch, "volume_4_game_theory")
+    expected_vol4 = {c.get("id") for c in vol4_chapters if c.get("id")}
     pack_files: list[Path] = []
     if pack_dir.exists():
         pack_files = (
             list(pack_dir.glob("ch*.md"))
             + list(pack_dir.glob("civ-ch*.md"))
             + list(pack_dir.glob("sh-ch*.md"))
+            + list(pack_dir.glob("gt-ch*.md"))
         )
     pack_ids = {p.stem for p in pack_files}
 
@@ -119,6 +127,7 @@ def main() -> int:
         f"- **Geo-Strategy lectures:** {lecture_count}",
         f"- **Civilization series lectures (curated files):** {civ_lecture_count}",
         f"- **Secret History series lectures (curated files):** {sh_lecture_count}",
+        f"- **Game Theory series lectures (curated files):** {gt_lecture_count}",
         f"- **Analysis memos:** {analysis_count}",
         f"- **Missing analysis:** {len(missing_analysis)} ({', '.join(missing_analysis) if missing_analysis else 'none'})",
         "",
@@ -146,6 +155,14 @@ def main() -> int:
             "",
             f"- **Chapters defined:** {len(expected_vol3)}",
             f"- **Evidence packs present:** {len(pack_ids & expected_vol3)} / {len(expected_vol3)} chapters",
+            "",
+        ]
+    if expected_vol4:
+        lines += [
+            "### Volume IV (Game Theory) — `volume_4_game_theory`",
+            "",
+            f"- **Chapters defined:** {len(expected_vol4)}",
+            f"- **Evidence packs present:** {len(pack_ids & expected_vol4)} / {len(expected_vol4)} chapters",
             "",
         ]
     lines += [
