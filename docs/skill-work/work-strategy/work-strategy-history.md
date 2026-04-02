@@ -20,3 +20,7 @@ _(Append below this line.)_
 ## 2026-04-02
 
 - **work-strategy-rome:** [North star](work-strategy-rome/README.md#north-star-operator) — reinvention as mutation; legitimacy without empire; WORK-only scope and humility line.
+
+## 2026-04-03
+
+- **work-strategy-rome:** [notes/2026-04-03-modern-rome-papacy-thesis-stub.md](work-strategy-rome/notes/2026-04-03-modern-rome-papacy-thesis-stub.md) — papacy as core of modern Rome (IT/ES/FR/BR/MX axis), mind–soul vs administrative Vatican, Leo talent-stack **hypothesis**, narrow opportunity when US civic myth frays; falsifiers.
