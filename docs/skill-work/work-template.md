@@ -4,6 +4,8 @@
 
 **Not:** A replacement for [companion-self](https://github.com/rbtkhn/companion-self) `users/_template/` (that scaffolds **instances**, not skill-work lanes). **Not** Record truth.
 
+**Full WORK architecture (tiers, ledger, daily surface, emerging patterns, multi-frame review):** [work-template/README.md](work-template/README.md) — pattern library for lanes that want more than this minimum checklist.
+
 ---
 
 ## Before you create files
@@ -32,6 +34,7 @@
 | A | `LANE-CI.md` | PRs use GitHub label **`lane/work-<id>`**; mirror [work-strategy/LANE-CI.md](work-strategy/LANE-CI.md). |
 | B | `work-<id>-sources.md` | External channels / feeds / accounts that orient the lane — [work-modules-sources-principle.md](work-modules-sources-principle.md). |
 | C | Cross-links in README | Point to adjacent territories (e.g. work-dev, work-politics, work-strategy) and any scripts under `scripts/`. |
+| D | Tier 1+ artifacts (optional) | Copy or adapt from [work-template/](work-template/) — e.g. `WORK-LEDGER.md`, semantic `daily-brief-template.md`, [BOUNDARY.md](work-template/BOUNDARY.md) excerpt. |
 
 ---
 
@@ -86,6 +89,7 @@ _Not:_ Record truth; not Voice knowledge; not a substitute for `users/<id>/self.
 
 ## Related
 
+- [work-template/README.md](../work-template/README.md) — full pattern library (tiers, ledger, mapping)
 - [work-template.md](../work-template.md) (this checklist)
 - [work-modules-history-principle.md](../work-modules-history-principle.md)
 - [work-menu-conventions.md](../work-menu-conventions.md)

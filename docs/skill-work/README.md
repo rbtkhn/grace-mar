@@ -35,6 +35,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 ## Cross-references
 
 - **New WORK territory checklist:** [work-template.md](work-template.md) — scaffold `work-<id>/` (README, history, optional LANE-CI, sources).
+- **WORK territory architecture (pattern library):** [work-template/README.md](work-template/README.md) — reusable ledger, daily surface, emerging patterns, multi-frame review (tiers 1–3); MV onboarding remains [work-template.md](work-template.md).
 - **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md) (`*-sources.md` per `work-*` territory).
 - **Work modules — territory history logs:** [work-modules-history-principle.md](work-modules-history-principle.md) (`*-history.md` per `work-*` territory; append-only operator notes per lane).
 - [Concept](../concept.md), [Architecture](../architecture.md).

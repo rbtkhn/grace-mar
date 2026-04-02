@@ -1005,6 +1005,10 @@ def build_daily_brief(
             "",
             "_Filled at **good morning** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md): web scan (Kremlin schedule/transcripts, Reuters, BBC, TASS/RIA as needed), **48h** rolling window, **bullets + URLs**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._",
             "",
+            "## 1e. Weak signal worth watching",
+            "",
+            "_Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak-signals.md](weak-signals.md). One compact weak signal when a credible candidate exists (low/medium confidence only). If nothing clears the bar, use: **No credible weak signal exceeded the threshold today.** When a historical parallel is in play, summarize a short analogy audit ([analogy-audit-template.md](analogy-audit-template.md)) here._",
+            "",
             "## 2. Headlines (ingested RSS)",
             "",
         ]

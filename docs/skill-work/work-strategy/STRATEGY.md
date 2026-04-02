@@ -62,6 +62,24 @@
 - Active capabilities: _TBD_  
 - Known blind spots: _TBD_
 
+## II-A. ACTIVE WATCHES
+
+*(Additive-only. Short-form strategic watch entries for weak signals that persist across multiple briefs or materially affect operator focus. Never delete; deprecate or retire with a dated reason.)*
+
+**Entry format**
+
+- **Watch:** short name
+- **First noticed:** YYYY-MM-DD
+- **Current status:** watch / escalating / retired / promoted
+- **Latest evidence:** short note with pointer to dated brief or gate candidate
+- **Analogy note:** what historical comparison helps, if any
+- **Primary implication:** why the lane should care
+- **Contradiction / caution note:** what may invalidate the watch
+
+**Seed entries**
+
+- *(Leave empty until first surviving watch is promoted from a daily brief.)*
+
 ## III. SCHOLAR – Strategic Learning Ledger
 
 (Extracts procedural wisdom and civilizational lessons. All entries additive-only.)
@@ -119,6 +137,24 @@
 - **Deprecated / Archived Models** (with reason and date)  
   _(Leave empty until needed — add entries here only when explicitly deprecating a model.)_
 
+## III-A. ANALOGY WATCHLIST
+
+*(Additive-only. Recurrent analogies used by this lane. This is not a doctrine registry. Its purpose is to preserve how analogies were used, where they helped, and where they misled.)*
+
+**Entry format**
+
+- **Analogy:** short label
+- **Last applied:** YYYY-MM-DD + context
+- **What it explains well:** short note
+- **Where it misleads:** short note
+- **Usefulness:** low / medium / high
+- **Risk of overextension:** low / medium / high
+- **Usage mode:** illustrative / framing only / core model
+
+**Seed entries**
+
+- *(Leave empty until analogies begin to recur across multiple analyses.)*
+
 ## IV. Operator strategy log (WORK-local)
 
 *(Additive notes: dated headings or bullets **in this file**. **Not** [CMC memory shards](../../../research/repos/civilization_memory/) (`MEM–ROME–*`, etc.) — those live in the civilization_memory corpus with their own naming. **No** separate “mem” ID scheme here: use readable dates + topic, optional short slug if you need a handle. All changes additive.)*
@@ -163,7 +199,7 @@
 - **CMC stewardship:** [work-civ-mem README](../work-civ-mem/README.md)  
 - **External corpus:** [civilization_memory repo](../../../research/repos/civilization_memory/) (read-only reference unless contributing upstream)  
 - **WORK menus:** [work-menu-conventions.md](../work-menu-conventions.md)  
-- **Daily horizon:** [daily-brief-focus.md](daily-brief-focus.md), [synthesis-engine.md](synthesis-engine.md), [current-events-analysis.md](current-events-analysis.md)
+- **Daily horizon:** [daily-brief-focus.md](daily-brief-focus.md), [weak-signals.md](weak-signals.md), [synthesis-engine.md](synthesis-engine.md), [current-events-analysis.md](current-events-analysis.md)
 
 ---
 
