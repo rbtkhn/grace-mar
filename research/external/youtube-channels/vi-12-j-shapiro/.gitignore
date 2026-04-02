@@ -1,0 +1,2 @@
+# Raw caption pulls — large; keep index.json / manifest in git if desired
+transcripts/*.txt

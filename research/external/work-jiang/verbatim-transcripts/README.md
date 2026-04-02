@@ -1,6 +1,6 @@
 # Verbatim transcripts (lightly cleaned)
 
-One markdown file per curated lecture in [`../lectures/`](../lectures/), **same basename**, built from **raw YouTube caption** files under [`../../youtube-channels/predictive-history/transcripts/`](../../youtube-channels/predictive-history/transcripts/README.md).
+One markdown file per curated lecture in [`../lectures/`](../lectures/), **same basename**, built from **raw YouTube caption** files. Default raw root: [`../../youtube-channels/predictive-history/transcripts/`](../../youtube-channels/predictive-history/transcripts/README.md). For **off-channel** videos (e.g. Volume VI interviews not on @PredictiveHistory), pass `--transcript-root` to `sync_verbatim_transcripts.py` (see [`../../youtube-channels/vi-12-j-shapiro/README.md`](../../youtube-channels/vi-12-j-shapiro/README.md)).
 
 **Purpose:** Diff this layer against curated lectures and against `## Full transcript` when checking ASR. See [`../ASR-VERIFICATION-RUBRIC.md`](../ASR-VERIFICATION-RUBRIC.md) and [`../WORKFLOW-transcripts.md`](../WORKFLOW-transcripts.md).
 

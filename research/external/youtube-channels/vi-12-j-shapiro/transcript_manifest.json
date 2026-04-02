@@ -1,0 +1,16 @@
+{
+  "manifest_version": 1,
+  "pipeline_version": "1.0.0",
+  "last_run_utc": "2026-04-02T04:42:33Z",
+  "videos": {
+    "oErKnj_uyPA": {
+      "content_hash": "4c5cbb8438b9b17f71225c8d96d0251a95fedfde97bd188b9634563a334b3d94",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-04-02T04:42:33Z",
+      "last_successful_fetch_at_utc": "2026-04-02T04:42:33Z"
+    }
+  }
+}

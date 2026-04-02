@@ -18,6 +18,7 @@
 ### 2026-04-02
 
 - **Interviews #12 YouTube wired:** `oErKnj_uyPA`, `publication_date` 2026-04-01 (yt-dlp); analysis memo `oErKnj_uyPA-interviews-12-analysis.md`; registry transcript stays **pending** until `## Full transcript` placeholder is replaced (`build_source_registry.py` heuristic).
+- **Interviews #12 captions:** Fetched tier-1 en (`quality` ~0.95) into `youtube-channels/vi-12-j-shapiro/`; `sync_verbatim_transcripts.py` with `--transcript-root` → `verbatim-transcripts/interviews-12-*.md`; diff-howto `intake/DIFF-vi-12-caption-vs-paste.md`.
 - **Volume VI Interviews #12 ingest prep:** Jay Shapiro long-form interview (truth / myth / biography / eschatology thread). Scaffold: `lectures/interviews-12-j-shapiro-truth-myth-personal-path.md`, `analysis/oErKnj_uyPA-interviews-12-analysis.md`, `intake/PREP-interviews-12-j-shapiro-truth-and-myth.md`; registry `vi-12`, `vi-ch12` in `book-architecture.yaml` + `source-map.yaml`. `build_source_registry.py`: interviews without `video_id` get `transcript: pending`, `curated_lecture: stub`; placeholder `## Full transcript` keeps pending/stub even after URL wired. `emit_volume6_chapters_yaml.py`: episode kind/priority maps extended past 11.
 
 _(Append below this line.)_
