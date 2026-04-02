@@ -27,12 +27,23 @@ python3 scripts/operator_gate_review_pass.py -u grace-mar --territory work-polit
 
 ## What to return
 
-Keep the output recommendation-oriented:
+For each candidate, show **only the review-essential fields**:
+
+- **id** and one-line **summary**
+- **source_exchange** or **source** (grounding evidence)
+- **suggested_entry** (what would be merged)
+- **age** (days since timestamp — flag if >14 days)
+- **risk_tier** from the review script (quick_merge_eligible / review_batch / manual_escalate)
+- **duplicate_hints** if any
+
+Do **not** show pipeline plumbing by default: `channel_key`, `signal_type`, `priority_score`, `profile_target`, `prompt_section`, `prompt_addition`, `mind_category`. These are available in the file if the operator asks.
+
+Then give a recommendation per candidate:
 
 - approve now
 - investigate duplicates
-- manual escalation
-- stale candidates
+- manual escalation (explain why)
+- stale — review or reject
 - defer or batch review
 
 ## Guardrails
@@ -40,6 +51,7 @@ Keep the output recommendation-oriented:
 - This workflow does not approve, reject, or merge anything by itself.
 - Keep companion and work-politics items distinct when that affects review.
 - Treat duplicate hints as prompts to verify, not proof that a candidate should be rejected.
+- Rejected candidates are auto-swept to Processed on the next `coffee` run — no manual cleanup needed.
 
 ## Related files
 

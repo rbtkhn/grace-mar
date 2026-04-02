@@ -96,6 +96,12 @@ def main() -> int:
     user = args.user
     py = sys.executable
 
+    from gate_block_parser import sweep_rejected_to_processed
+    gate_path = _REPO / "users" / user / "recursion-gate.md"
+    swept = sweep_rejected_to_processed(gate_path)
+    if swept:
+        print(f"Gate cleanup: moved {len(swept)} rejected candidate(s) to Processed: {', '.join(swept)}")
+
     warmup = [py, "scripts/operator_daily_warmup.py", "-u", user]
     harness = [py, "scripts/harness_warmup.py", "-u", user]
     harness_compact = [py, "scripts/harness_warmup.py", "-u", user, "--compact"]

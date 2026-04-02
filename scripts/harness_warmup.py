@@ -115,6 +115,37 @@ def _pending_candidates(pr_content: str, territory: str = "all") -> list[tuple[s
     return [(r["id"], (r["summary"] or "(no summary)")[:120]) for r in rows]
 
 
+STALE_THRESHOLD_DAYS = 14
+
+
+def _stale_candidates(pr_content: str) -> list[tuple[str, int]]:
+    """Return [(CANDIDATE-id, age_days), ...] for pending candidates older than STALE_THRESHOLD_DAYS."""
+    stale: list[tuple[str, int]] = []
+    try:
+        from gate_block_parser import pending_candidates_region, iter_candidate_yaml_blocks
+    except ImportError:
+        return []
+    region = pending_candidates_region(pr_content)
+    for cid, _title, yaml_body in iter_candidate_yaml_blocks(region):
+        if not re.search(r"^status:\s*pending\s*$", yaml_body, re.MULTILINE):
+            continue
+        ts_match = re.search(r"^timestamp:\s*(\S+)", yaml_body, re.MULTILINE)
+        if not ts_match:
+            continue
+        raw_ts = ts_match.group(1).strip()
+        try:
+            if len(raw_ts) == 10:
+                dt = datetime.strptime(raw_ts, "%Y-%m-%d")
+            else:
+                dt = datetime.fromisoformat(raw_ts.replace("Z", "+00:00").replace("+00:00", ""))
+            age = (datetime.now() - dt).days
+            if age >= STALE_THRESHOLD_DAYS:
+                stale.append((cid, age))
+        except (ValueError, TypeError):
+            continue
+    return stale
+
+
 def _last_merge_receipt_line(user_dir: Path) -> str:
     """Last JSON line from merge-receipts.jsonl, one-line summary for fresh-judge."""
     p = user_dir / "merge-receipts.jsonl"
@@ -234,6 +265,8 @@ def main() -> int:
             "---\n\n"
         )
 
+    stale = _stale_candidates(pr)
+
     if args.compact:
         bits = []
         if args.fresh_judge:
@@ -246,6 +279,8 @@ def main() -> int:
         )
         if pending_list:
             bits.append("IDs: " + ", ".join(p[0] for p in pending_list[:5]) + ("…" if len(pending_list) > 5 else "") + ".")
+        if stale:
+            bits.append("STALE: " + ", ".join(f"{cid} ({age}d)" for cid, age in stale) + ".")
         if last_act:
             bits.append(f"Last EVIDENCE: {last_act}.")
         if tail:
@@ -274,6 +309,11 @@ def main() -> int:
             lines.append(f"  - **{cid}** — {summ}")
         if len(pending_list) > 8:
             lines.append(f"  - … and {len(pending_list) - 8} more (open `users/{args.user}/recursion-gate.md`)")
+    if stale:
+        lines.append("")
+        lines.append(f"- **STALE candidates (>{STALE_THRESHOLD_DAYS} days):**")
+        for cid, age in stale:
+            lines.append(f"  - **{cid}** — {age} days old (review or reject)")
     lines.extend(
         [
             "",

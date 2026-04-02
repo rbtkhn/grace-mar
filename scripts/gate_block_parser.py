@@ -87,6 +87,41 @@ def mean_pending_provenance_from_path(gate_path: Path) -> float | None:
     return mean_pending_provenance_score(gate_path.read_text(encoding="utf-8"))
 
 
+def sweep_rejected_to_processed(gate_path: Path) -> list[str]:
+    """Move rejected candidates from the active section to Processed. Returns ids moved."""
+    if not gate_path.is_file():
+        return []
+    content = gate_path.read_text(encoding="utf-8")
+    active, _processed = split_gate_sections(content)
+    moved: list[str] = []
+    for m in CANDIDATE_BLOCK_RE.finditer(active):
+        cid = m.group(1)
+        yaml_body = m.group(3)
+        if re.search(r"^status:\s*rejected\s*$", yaml_body, re.MULTILINE):
+            moved.append(cid)
+    if not moved:
+        return []
+    for cid in moved:
+        block_re = re.compile(
+            rf"^### {re.escape(cid)}(?:\s*\([^)]*\))?\s*\n```yaml\n.*?```\n?",
+            re.MULTILINE | re.DOTALL,
+        )
+        match = block_re.search(content)
+        if not match:
+            continue
+        block_text = match.group(0)
+        content = content.replace(block_text, "", 1)
+        marker = re.search(r"^## Processed\s*$", content, re.MULTILINE)
+        if marker:
+            insert_at = marker.end()
+            content = content[:insert_at] + "\n\n" + block_text + content[insert_at:]
+        else:
+            content = content.rstrip() + "\n\n## Processed\n\n" + block_text
+    content = re.sub(r"\n{3,}", "\n\n", content)
+    gate_path.write_text(content, encoding="utf-8")
+    return moved
+
+
 __all__ = [
     "CANDIDATE_BLOCK_RE",
     "iter_candidate_yaml_blocks",
@@ -95,5 +130,6 @@ __all__ = [
     "mean_pending_provenance_score",
     "pending_candidates_region",
     "split_gate_sections",
+    "sweep_rejected_to_processed",
     "yaml_blob_provenance_fraction",
 ]
