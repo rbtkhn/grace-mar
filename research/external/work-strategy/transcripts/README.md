@@ -15,9 +15,23 @@ The operator may **upload one or more transcripts per day** for **work-strategy*
 | **File** | New `*.md` in this folder — kebab-case slug from title (optional date prefix `YYYY-MM-DD-` if you want sort-by-day). |
 | **Header** | Source, URL (or “pin when known”), **ingested** date, participants. |
 | **Body** | Short **Perceiver** neutral summary (≤200 words) + optional **strategy hooks** table + **full transcript** with light ASR cleanup. |
-| **Git** | Commit when the digest should live in-repo (operator may say **EXECUTE** / **DOCSYNC** for push). |
+| **Git** | Follow **[Commit policy (ingest → git)](#commit-policy-ingest--git)** below. |
 
 Same guardrails as below: research upstream, not Record; verify numbers before ship-facing copy.
+
+---
+
+## Commit policy (ingest → git)
+
+**Goal:** One predictable rule so **ingest** and **EXECUTE_LOCAL** are not confused.
+
+| Action | Default |
+|--------|---------|
+| **Write** transcript `*.md` + **append** [analyst-corpus INDEX](../analyst-corpus/INDEX.md) when applicable | When the operator (or **`strategy postol` / `postol ingest`**) clearly wants a **durable** ingest — same turn as the file bodies. |
+| **`git commit` (local)** | **Do it in the same turn** when the ingest is complete (new/updated transcript + INDEX row), so the repo matches chat. **Unless** the operator says **draft only**, **no commit**, **PLAN** (no file permission), or **stash** / **don’t commit** — then leave **uncommitted** working tree. |
+| **`git push` (remote)** | **Not** implied by ingest. Only when the operator says **EXECUTE** (with push), **DOCSYNC** (with push), or **git push** / **push to origin**. |
+
+**Bundling:** Checklist or stub edits done **as part of the same ingest** may sit in the **same commit** as the transcript; unrelated lane work should stay **out** of that commit (see [repo-hygiene-pass](../../../../.cursor/skills/repo-hygiene-pass/SKILL.md)).
 
 ---
 

@@ -23,6 +23,7 @@
 1. Add or update **`../transcripts/<file>.md`** using the header + Perceiver + hooks pattern in [transcripts README](../transcripts/README.md).
 2. Append a row to **[INDEX.md](INDEX.md)** in the **Active table** (newest ingest at the **top** of the table body unless you prefer chronological bottom — stay consistent).
 3. If the analyst accrues **repeated rhetorical moves** or **verify checklists**, add **`analysts/<slug>/RECURRING-MOVES.md`** and link it from the **notes_path** column (create the file in the same PR/commit when useful).
+4. **Git** — after transcript + INDEX are correct, follow **[Commit policy (ingest → git)](../transcripts/README.md#commit-policy-ingest--git)** in the transcripts README (**local commit** by default on ingest; **push** only when asked).
 
 ---
 
