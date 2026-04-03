@@ -17,6 +17,7 @@
 ### 2026-04-03
 
 - Added [xavier-work-profile.md](xavier-work-profile.md): operator **employee work profile + skills portfolio** (skills matrix, learning-in-flight log for Claude Code / Gemini, boundary vs SMM rubric + her Record). Linked from [README.md](README.md), [INDEX.md](INDEX.md), [WORK-LEDGER.md](WORK-LEDGER.md).
+- Added [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md): B2B **verify-before-outreach** pipeline table + **Appendix A** raw Claude export (BPO / tech / schools / hubs — unverified). Wired [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (bundle map, Phase 4), [brewmind-business-plan.md](brewmind-business-plan.md) related surfaces, [INDEX.md](INDEX.md).
 
 ### 2026-04-01
 

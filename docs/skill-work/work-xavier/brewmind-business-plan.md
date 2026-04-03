@@ -2,7 +2,7 @@
 
 > **Territory:** [work-xavier](README.md) — operator/advisor artifact in grace-mar. **Not** Xavier’s Record; not legal or tax advice. Replace estimates with local quotes before commitments.
 
-**Related surfaces:** [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (**bundle hub / onboarding**) · Public landing [BrewMind Café (GitHub Pages)](https://xavier-x01.github.io/brew_mind/) · [brewmind-visual-style.md](brewmind-visual-style.md) (design consistency) · [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md) (PH AI content landscape) · AI Learning Plan (operator `.docx`, B2B / institutional tiers) · [work-business/xavier](../work-business/xavier/README.md) for future source index / objectives files.
+**Related surfaces:** [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (**bundle hub / onboarding**) · Public landing [BrewMind Café (GitHub Pages)](https://xavier-x01.github.io/brew_mind/) · [brewmind-visual-style.md](brewmind-visual-style.md) (design consistency) · [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md) (PH AI content landscape) · [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md) (B2B pipeline worksheet; verify contacts) · AI Learning Plan (operator `.docx`, B2B / institutional tiers) · [work-business/xavier](../work-business/xavier/README.md) for future source index / objectives files.
 
 ---
 

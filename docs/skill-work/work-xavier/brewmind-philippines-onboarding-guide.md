@@ -36,6 +36,7 @@
 | [brewmind-business-plan.md](brewmind-business-plan.md) | GTM: **partner venues first**, ~USD 10k seed framing, milestones, economics options |
 | [brewmind-visual-style.md](brewmind-visual-style.md) | **Design** — forest green + gold, type, glass card, print notes |
 | [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md) | **Field** — five questions + pamphlet handoff (**relationship > data**) |
+| [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md) | **B2B pipeline** — verify-before-outreach worksheet + raw Claude research appendix (unverified) |
 | [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md) | **Narrative** — DepEd/BPO/policy, social risk, course barbell; **supplement:** work-dev sources when PH web is thin |
 | [work-dev-sources.md](../work-dev/work-dev-sources.md) | **Canonical list** — channels / Substack the operator tracks (copied into this bundle § below for convenience) |
 | [external-signals.md](../work-dev/external-signals.md) | **Themes** — how long-form AI discourse maps to integration / trust / offers vocabulary (optional curriculum tone) |
@@ -91,6 +92,7 @@
 ### Phase 4 — Optional expansion
 
 - [ ] **B2B** half-days (AI Learning Plan) once field proves interest.
+- [ ] Track and **verify** B2B targets in [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md) (do not rely on Appendix A without confirmation).
 - [ ] **Companion-self** upsell for Elite/partners — only with clear **portability** and **human gate** story (see business plan “optional moat”).
 
 ---
@@ -118,3 +120,4 @@
 |------|------|
 | 2026-04-01 | Initial bundle hub: reading order, phase checklists, map of all BrewMind WORK docs. |
 | 2026-04-01 | Added **work-dev sources** + [external-signals.md](../work-dev/external-signals.md) to bundle (PH AI web thin); bundle map + Phase 3 hook. |
+| 2026-04-03 | Added [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md) to bundle map; Phase 4 checklist line for verified B2B pipeline. |

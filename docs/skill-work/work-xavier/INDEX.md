@@ -47,5 +47,6 @@
 | [brewmind-visual-style.md](brewmind-visual-style.md) | BrewMind visual style — colors, type, UI patterns, print notes (align with site hero) |
 | [brewmind-market-research-philippines-ai-content.md](brewmind-market-research-philippines-ai-content.md) | PH internet AI narrative: policy, BPO, social, courses; gaps vs BrewMind |
 | [brewmind-partner-survey-restaurants.md](brewmind-partner-survey-restaurants.md) | F&B field: **5 verbal questions** + pamphlet; relationship-first (companion + BrewMind) |
+| [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md) | B2B prospect worksheet (verified pipeline table + unverified Claude appendix) |
 | **Her instance (external repo)** | Seed survey, `users/xavier/`, gate — **not** paths inside grace-mar; create from [companion-self](https://github.com/rbtkhn/companion-self) |
 | **Business intake** [../work-business/xavier/README.md](../work-business/xavier/README.md) | WORK-only starter pack in grace-mar |
