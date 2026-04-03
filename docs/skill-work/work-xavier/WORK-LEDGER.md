@@ -16,7 +16,7 @@
 
 - **Lane name:** work-xavier  
 - **Purpose:** Coordinate operator/advisor work with Xavier (SMM, BrewMind, mirrors, runbooks) in grace-mar — without hosting her cognitive fork.  
-- **Primary operator use-case:** Daily sync, mirror alignment, content plans vs capability rubric, template drift awareness.  
+- **Primary operator use-case:** Daily sync, mirror alignment, employee work profile / skills portfolio, content plans vs capability rubric, template drift awareness.  
 - **Boundary summary:** See [README.md](README.md) governance block and [LANES.md](LANES.md).  
 - **Promotion gate (her Record):** Her `recursion-gate.md` + `process_approved_candidates.py` **in her repository**. **Grace-Mar** gate only if a change is explicitly for grace-mar identity/Voice.
 
@@ -33,11 +33,13 @@
 
 ### Current focus
 
-- See [SYNC-DAILY.md](SYNC-DAILY.md) and [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md).
+- See [SYNC-DAILY.md](SYNC-DAILY.md) and [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md).  
+- Employee profile / skills portfolio: [xavier-work-profile.md](xavier-work-profile.md) (update on hiring milestones, scope changes, or tooling upskill).
 
 ### Active priorities / capabilities / constraints
 
 - Content plans and KPI logs: [INDEX.md](INDEX.md) (BrewMind + week plans).  
+- Work profile / portfolio: [xavier-work-profile.md](xavier-work-profile.md).  
 - Capability evaluation: [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md).  
 - Mirrors: [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md).
 

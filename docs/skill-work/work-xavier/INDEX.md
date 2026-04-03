@@ -3,6 +3,7 @@
 | Doc | Role |
 |-----|------|
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
+| [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
 | [work-xavier-sources.md](work-xavier-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |
 | [LANE-CI.md](LANE-CI.md) | PR label `lane/work-xavier`, cross-lane + gate notes |
 | [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |

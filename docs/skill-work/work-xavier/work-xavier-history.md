@@ -14,6 +14,10 @@
 
 - **work-template audit implementation:** Added [work-xavier-sources.md](work-xavier-sources.md), [LANE-CI.md](LANE-CI.md), [WORK-LEDGER.md](WORK-LEDGER.md) (slim ledger + three seed watches: mirror staleness, template drift, rubric vs plans). Extended [work-template/MAPPING.md](../work-template/MAPPING.md) with *work-xavier (advisor module)* table. **Coffee-first vocabulary:** [SYNC-DAILY.md](SYNC-DAILY.md), mirror [SYNC-CONTRACT.md](work-dev-mirror/SYNC-CONTRACT.md) / [SYNC-CONTRACT.md](work-politics-mirror/SYNC-CONTRACT.md), [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md), [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) §3a (legacy `hey` noted where relevant). Wired [README.md](README.md), [INDEX.md](INDEX.md), script pointers.
 
+### 2026-04-03
+
+- Added [xavier-work-profile.md](xavier-work-profile.md): operator **employee work profile + skills portfolio** (skills matrix, learning-in-flight log for Claude Code / Gemini, boundary vs SMM rubric + her Record). Linked from [README.md](README.md), [INDEX.md](INDEX.md), [WORK-LEDGER.md](WORK-LEDGER.md).
+
 ### 2026-04-01
 
 - Added [brewmind-business-plan.md](brewmind-business-plan.md): BrewMind business plan (Cebu City pilot, partner café network first, ~USD 10k seed framing; owned-shop path summarized as alternative). Indexed in [INDEX.md](INDEX.md).
