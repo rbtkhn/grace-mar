@@ -51,6 +51,7 @@ Short-form log for active upskill; fold into the matrix when a capability stabil
 ## 4. Evidence and cross-links
 
 - **Execution evidence:** [content-plan-week2-2026-03-31.md](content-plan-week2-2026-03-31.md), [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md), [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md).  
+- **Operator progress / tooling evidence:** [xavier-progress-log.md](xavier-progress-log.md), [work-xavier-history.md](work-xavier-history.md), [evidence/](evidence/).  
 - **SMM fit (not full resume):** [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md).  
 - **Business context:** [../work-business/xavier/README.md](../work-business/xavier/README.md).  
 - **Navigation:** [INDEX.md](INDEX.md).

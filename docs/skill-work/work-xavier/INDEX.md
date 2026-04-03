@@ -4,6 +4,8 @@
 |-----|------|
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
+| [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-xavier-history.md](work-xavier-history.md)) |
+| [evidence/](evidence/) | Screenshots and exports for progress analysis (not partner-facing) |
 | [work-xavier-sources.md](work-xavier-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |
 | [LANE-CI.md](LANE-CI.md) | PR label `lane/work-xavier`, cross-lane + gate notes |
 | [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |

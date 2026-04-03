@@ -12,6 +12,8 @@
 
 **Daily sync surface (advisor view):** [SYNC-DAILY.md](SYNC-DAILY.md). **Mirrors:** [work-dev-mirror/README.md](work-dev-mirror/README.md), [work-politics-mirror/README.md](work-politics-mirror/README.md).
 
+**Operator observations (progress / evidence):** [xavier-progress-log.md](xavier-progress-log.md) — qualitative notes, hypotheses, coaching hooks; artifacts in [evidence/](evidence/). **Milestones + dated pointers:** [work-xavier-history.md](work-xavier-history.md).
+
 **BrewMind (Philippines pilot):** [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) — bundle hub for strategy, brand, field script, and PH market notes ([INDEX.md](INDEX.md) lists all BrewMind WORK files).
 
 **Portability:** Patterns in this module are intended to be **mirrored or adapted** for other companion-self operator/agent workspaces; the instance Record stays in each companion’s repo.

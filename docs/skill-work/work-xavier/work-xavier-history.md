@@ -7,6 +7,7 @@
 ## How to append
 
 - **`## YYYY-MM-DD`**; content plans, mirror updates, portable pattern changes.
+- **Evidence / progress (operator):** Screenshots and **behavior / coaching** notes — [evidence/](evidence/) + [xavier-progress-log.md](xavier-progress-log.md); add a **short pointer bullet** here on the same date when new artifacts land (keeps milestones and evidence discoverable together).
 
 ## Log
 
@@ -18,6 +19,7 @@
 
 - Added [xavier-work-profile.md](xavier-work-profile.md): operator **employee work profile + skills portfolio** (skills matrix, learning-in-flight log for Claude Code / Gemini, boundary vs SMM rubric + her Record). Linked from [README.md](README.md), [INDEX.md](INDEX.md), [WORK-LEDGER.md](WORK-LEDGER.md).
 - Added [brewmind-b2b-prospects.md](brewmind-b2b-prospects.md): B2B **verify-before-outreach** pipeline table + **Appendix A** raw Claude export (BPO / tech / schools / hubs — unverified). Wired [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md) (bundle map, Phase 4), [brewmind-business-plan.md](brewmind-business-plan.md) related surfaces, [INDEX.md](INDEX.md).
+- **Operator observations / evidence:** Added [xavier-progress-log.md](xavier-progress-log.md) (evidence index, burst notes, hypotheses, coaching slot; Claude thread title appendix) and [evidence/claude-mobile-chats-2026-04-03.png](evidence/claude-mobile-chats-2026-04-03.png) + [evidence/README.md](evidence/README.md). Extended **How to append** for evidence pointers. Linked [README.md](README.md), [INDEX.md](INDEX.md); cross-link from [xavier-work-profile.md](xavier-work-profile.md) §4.
 
 ### 2026-04-01
 
