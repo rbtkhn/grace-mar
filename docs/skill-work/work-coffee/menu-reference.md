@@ -6,6 +6,12 @@ Detailed **A–E** (five mode) definitions, **signing-off** (merged closeout) ad
 
 ---
 
+## Context paste budgets (operator)
+
+**Not** Record truth. JSON under [`config/context_budgets/`](../../../config/context_budgets/) caps ritual paste size: **`coffee.json`** drives collapsed **Last dream** line count, optional civ-mem / coffee-rollup lines, and session-tail depth in **`scripts/operator_daily_warmup.py`**; **`dream.json`** drives **`scripts/auto_dream.py`** civ-mem echo limits, rollup allow, and integrity/governance suppress rules before **`last-dream.json`** is written. Defaults keep the collapsed Last dream block thin; opt in with **`--show-civ-mem`** / **`--show-rollup`** on `operator_daily_warmup.py`, or forward the same flags from **`operator_coffee.py`** / **`operator_reentry_stack.py`**. Approximate footprint: **`python3 scripts/audit_context_tax.py -u grace-mar`**. See [`config/context_budgets/README.md`](../../../config/context_budgets/README.md) and [`docs/skill-work/work-dream/README.md`](../work-dream/README.md) (handoff fields).
+
+---
+
 ## Cadence by weekday
 
 Default rhythm (operator can override any day):
