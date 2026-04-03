@@ -1,14 +1,121 @@
 {
-  "generated_at": "2026-04-02T05:03:14.213694+00:00",
+  "generated_at": "2026-04-03T04:09:23.197492+00:00",
   "user_id": "grace-mar",
   "strict_mode": false,
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": false,
+  "self_memory_changed": true,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
-  "followups": []
+  "followups": [],
+  "coffee_rollup_24h": {
+    "window_start_utc": "2026-04-02T04:09:23.176937+00:00",
+    "window_end_utc": "2026-04-03T04:09:23.176937+00:00",
+    "window_hours": 24.0,
+    "count": 10,
+    "first_ts": "2026-04-02T04:24:00+00:00",
+    "last_ts": "2026-04-02T20:46:00+00:00",
+    "span_hours": 16.37,
+    "by_mode": {
+      "work-start": 10
+    },
+    "runs": [
+      {
+        "ts_iso": "2026-04-02T04:24:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T12:41:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T15:51:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T18:00:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T18:28:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T18:44:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T19:36:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T19:58:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T20:27:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      },
+      {
+        "ts_iso": "2026-04-02T20:46:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {}
+      }
+    ],
+    "picks": [],
+    "by_picked": {}
+  },
+  "execution_paths": [
+    {
+      "id": "today_field",
+      "title": "Today / field (brief + work-politics lane)",
+      "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu A \u2014 Today",
+      "stop_rule": "One slice: brief path opened or KY-4 intel pass started \u2014 enough for first block.",
+      "signals_used": [
+        "reentry_heavy"
+      ]
+    },
+    {
+      "id": "build",
+      "title": "Build / integrate (repo + work-dev)",
+      "first_move": "python3 scripts/validate-integrity.py --user grace-mar --json",
+      "stop_rule": "Integrity passes; then optional: python3 scripts/refresh_derived_exports.py -u grace-mar",
+      "signals_used": []
+    },
+    {
+      "id": "steward",
+      "title": "Steward / membrane (gate + template parity)",
+      "first_move": "Read users/grace-mar/recursion-gate.md; optional: python3 scripts/operator_gate_review_pass.py -u grace-mar",
+      "stop_rule": "Top 1\u20133 candidates reviewed or explicitly deferred.",
+      "signals_used": []
+    }
+  ],
+  "suggested_execution_path_index": 0,
+  "execution_path_suggestion_reason": "calendar_mod3",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Today / field (brief + work-politics lane)** \u2014 calendar rotation; not policy or Record.",
+  "civmem_echoes": [],
+  "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
+  "civmem_index_missing": false
 }
