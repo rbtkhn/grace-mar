@@ -1,24 +1,26 @@
 {
-  "generated_at": "2026-03-27T16:15:40Z",
+  "generated_at": "2026-04-03T17:06:02Z",
   "integration_status_counts": {
     "implemented": 11,
     "partial": 2,
     "documented_only": 1
   },
   "pipeline_event_counts": {
-    "staged": 14,
-    "applied": 35,
-    "intent_constitutional_critique": 14,
+    "staged": 22,
+    "applied": 43,
+    "intent_constitutional_critique": 20,
     "approved": 2,
     "dyad:checkpoint_request": 2,
-    "validation_failed": 7,
+    "validation_failed": 8,
     "openclaw_export": 1,
-    "rejected": 2
+    "rejected": 4,
+    "maintenance": 4,
+    "dyad:grounded_query": 1
   },
   "provenance_completeness_score": 1.0,
   "provenance_from_gate": false,
   "lane_violation_count": 0,
-  "continuity_block_count": 1,
+  "continuity_block_count": 10,
   "gap_ids_open": [],
   "notes": [
     "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
