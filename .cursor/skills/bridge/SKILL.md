@@ -1,14 +1,14 @@
 ---
 name: bridge
 preferred_activation: bridge
-description: "Session-scale handoff ritual. Primary trigger: bridge. Commits and pushes both repos, then synthesizes current state into a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
+description: "Session-scale handoff ritual. Primary trigger: bridge. Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
 ---
 
 # Bridge
 
 **Preferred activation:** say **`bridge`**. Also responds to **`session handoff`**, **`close session`**, or **`transfer`**.
 
-`bridge` is the session-scale handoff. It seals the current session — committing and pushing all work — then synthesizes the state into a single structured markdown block that the operator pastes into the next fresh Cursor session as the opening message.
+`bridge` is the session-scale handoff. It **assesses** whether **grace-mar** and **companion-self** (and optionally other repos) need commit/push, **recommends** actions, **asks** when ambiguous, then seals what the operator agrees to and synthesizes state into a single structured markdown block for the next fresh Cursor session.
 
 Its purpose is **high-fidelity context transfer** across the session boundary where agent memory goes to zero. A good bridge means the next session starts with full orientation instead of spending turns reconstructing what happened.
 
@@ -21,9 +21,9 @@ Its purpose is **high-fidelity context transfer** across the session boundary wh
 | **Mid-day, closing session** | `bridge` alone | Seal repos, carry context forward; no maintenance needed |
 | **Quick check before stepping away** | **`coffee`** + signing-off intent (`--mode closeout` / handoff Step 1) | Lightweight status; no commit/push, no transfer prompt; same **A–E** menu as work-start |
 
-**Default:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
+**Default:** If in doubt, `bridge`. It surfaces push/sync recommendations, then commits and pushes per scope, and produces a transfer prompt. If it's also end of day, run `dream` first.
 
-**Bridge vs signing-off `coffee`:** Signing-off **`coffee`** is lightweight — handoff-weighted Step 1, no required git operations from the ritual. Bridge is structural — seals the session with commits and produces the carry-forward block. Bridge is the default for any session close.
+**Bridge vs signing-off `coffee`:** Signing-off **`coffee`** is lightweight — handoff-weighted Step 1, no required git operations from the ritual. Bridge is structural — assesses repos, seals agreed scope, and produces the carry-forward block. Bridge is the default for any session close.
 
 This is event-driven: the operator says `bridge` when they're ready. There is no scheduled cadence.
 
@@ -48,9 +48,40 @@ Also run:
 
 ---
 
-## Step 2 — Commit and push both repositories
+## Step 2 — Push/sync assessment (required before git writes)
 
-Seal the session by committing and pushing. Use a **two-bucket** approach per repo:
+When the operator says **`bridge`**, do **not** assume both repositories need the same treatment. After Step 1 reads, for **each** of the default pair:
+
+- **grace-mar** (this workspace)
+- **companion-self** (sibling clone or `GRACE_MAR_COMPANION_SELF` / `./companion-self` per repo layout)
+
+gather:
+
+- `git status -sb` (dirty? branch?)
+- whether **`origin`** is configured and whether **`HEAD` is ahead of `@{u}`** (unpushed commits) — e.g. `git rev-list --left-right --count @{u}...HEAD` when upstream exists
+
+Then output a short **Push/sync recommendation** block:
+
+| Repo | Dirty? | Unpushed commits? | Recommendation |
+|------|--------|-------------------|----------------|
+| grace-mar | … | … | push after seal / already clean — nothing to push / pull first |
+| companion-self | … | … | same |
+
+**Default recommendation:** Seal **grace-mar** if dirty or ahead; touch **companion-self** only if it is dirty or ahead, or if the session clearly edited it (otherwise recommend *skip* with reason — e.g. clean and untouched).
+
+**Ask the operator** when:
+
+- Only one repo needs action but the ritual might expect both (confirm *grace-mar only* or *both*).
+- A **third** repo may matter for handoff (e.g. **companion-xavier**, other worktrees) — one line: *“This session may also need push/sync for &lt;repo&gt; — include?”*
+- Either repo is **behind** origin, has **conflicts**, or **no upstream** — stop and ask how to proceed.
+
+**Operator override:** If the same message says **`bridge grace-mar only`** (or equivalent), limit commit/push to grace-mar and still state companion-self status in the recommendation block.
+
+---
+
+## Step 3 — Commit and push (per recommendation)
+
+Seal the session by committing and pushing **according to Step 2**. Use a **two-bucket** approach per repo that Step 2 said to touch:
 
 ### Bucket 1: Runtime residue (auto-commit, no confirmation needed)
 
@@ -81,32 +112,33 @@ Commit message: a real summary of the work, not a generic label.
 
 ### Push
 
-After both buckets are committed (or if the worktree was already clean), push both repos:
+After buckets are committed for each repo in scope (or if that worktree was already clean and only `git push` is needed), **`git push` only the repos Step 2 included** — for example:
 
 ```bash
 cd /path/to/grace-mar && git push
+# Only if Step 2 recommended companion-self:
 cd /path/to/companion-self && git push
 ```
 
 If push fails (e.g. remote has new commits), pull-rebase first, then push. If there are conflicts, stop and report — do not force-push.
 
-**After push, run `git status -sb` in both repos to confirm clean state.**
+**After push, run `git status -sb` in each repo that was pushed to confirm clean state.**
 
 ### Cadence audit
 
-After confirming clean state, log the bridge event:
+After confirming clean state (for repos that were part of this bridge), log the bridge event:
 
 ```bash
 python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok --kv refs=<grace-mar-SHA>,<companion-self-SHA>
 ```
 
-Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just pushed (from `git rev-parse --short HEAD` in each repo). If only one repo had changes, include only that SHA.
+Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just pushed (from `git rev-parse --short HEAD` in each repo). If only one repo was in scope, include only that SHA (and note which repos were skipped).
 
 ---
 
-## Step 3 — Generate the transfer prompt
+## Step 4 — Generate the transfer prompt
 
-Now that both repos are sealed and pushed, synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`.
+Now that the recommended repos are sealed and pushed (or explicitly skipped with operator consent), synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`.
 
 **Coffee tail (required):** The copyable transfer prompt must end with a **final line that is exactly `coffee`** (lowercase, alone on its line, not inside a code fence). That way the operator’s **first message** in the new session is both the bridge packet **and** the `coffee` skill trigger — work-start Step 1 runs immediately on top of this context. Do not tell the operator to send a second message just for `coffee`.
 
@@ -140,7 +172,7 @@ Skip lanes with no recent activity.]
 Synthesize from arc + gate + territories — what could go wrong or slip if unattended.]
 
 ## Commits sealed in this bridge
-[List the commit(s) made in Step 2, or "Worktree was already clean."]
+[List the commit(s) made in Step 3 per repo, which repos were pushed, or "Worktree was already clean" / "Skipped per operator".]
 
 ## Recent commits
 [Last 5-10 commits from git log, verbatim — includes the bridge commits]
@@ -155,9 +187,9 @@ Output the entire block so the operator can copy it.
 
 ---
 
-## Step 4 — Done
+## Step 5 — Done
 
-Bridge is complete. Both repos are pushed, the transfer prompt is generated. The operator copies the prompt and closes the session.
+Bridge is complete. Pushed repos match Step 2 recommendation (or operator override); the transfer prompt is generated. The operator copies the prompt and closes the session.
 
 ## Guardrails
 
@@ -167,6 +199,7 @@ Bridge is complete. Both repos are pushed, the transfer prompt is generated. The
 - **Signal over volume.** The transfer prompt should be concise. Aim for one screen of text, not a wall. Omit sections that have nothing to report.
 - **Narrative arc matters.** The "Arc" section is the most valuable part — it's the thing no script can produce. Synthesize, don't just list.
 - **Stop on conflict.** If push fails after pull-rebase due to conflicts, stop and report. Do not force-push or resolve conflicts silently.
+- **Push/sync clarity.** Always give the Step 2 recommendation (and ask when ambiguous) before writing commits; do not treat “both repos” as mandatory if companion-self is clean and untouched unless the operator confirms.
 - **Ephemeral output.** The transfer prompt exists only in the chat. It persists only if the operator chooses to save it.
 
 ## Relation to coffee and dream
