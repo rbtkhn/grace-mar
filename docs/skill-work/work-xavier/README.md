@@ -16,6 +16,10 @@
 
 **Portability:** Patterns in this module are intended to be **mirrored or adapted** for other companion-self operator/agent workspaces; the instance Record stays in each companion’s repo.
 
+**Template alignment:** [work-xavier-sources.md](work-xavier-sources.md) (feeds / pointers), [LANE-CI.md](LANE-CI.md) (PR labels), [WORK-LEDGER.md](WORK-LEDGER.md) (watches + compounding). Concept map: [work-template/MAPPING.md](../work-template/MAPPING.md) (section *work-xavier (advisor module)*).
+
+**Scripts (repo):** [scripts/build_xavier_handbook_bundle.py](../../../scripts/build_xavier_handbook_bundle.py) — assemble `smm-xavier-handbook-bundle.md` for print/PDF inputs. [scripts/generate_smm_xavier_pdf.sh](../../../scripts/generate_smm_xavier_pdf.sh) — regenerate print HTML + PDF via headless Chrome (run on a normal macOS host if CI/sandbox blocks).
+
 ### Record, Voice, and WORK execution (this folder)
 
 - **Record** — Lived identity under `users/<id>/` in **her** instance repo; durable truth enters only through **her** recursion-gate and merge script.

@@ -3,6 +3,9 @@
 | Doc | Role |
 |-----|------|
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
+| [work-xavier-sources.md](work-xavier-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |
+| [LANE-CI.md](LANE-CI.md) | PR label `lane/work-xavier`, cross-lane + gate notes |
+| [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |
 | [INSTANCE-PATHS.md](INSTANCE-PATHS.md) | Where her `users/xavier/` and seed survey live (**not** in grace-mar) |
 | [SEED-MANIFEST.md](SEED-MANIFEST.md) | What ships where (grace-mar mirror vs her `companion-xavier` repo) |
 | [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) | Pre-merge / handoff checks (no grace-mar Record in her tree) |

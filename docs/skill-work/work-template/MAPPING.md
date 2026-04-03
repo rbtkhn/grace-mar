@@ -29,6 +29,25 @@
 
 ---
 
+## work-xavier (advisor module)
+
+Grace-mar **operator/advisor** lane for Xavier (mirrors, BrewMind, runbooks). Not her Record repo; see [work-xavier/README.md](../work-xavier/README.md).
+
+| Template concept | work-xavier path |
+|------------------|------------------|
+| **README / lane hub** | [work-xavier/README.md](../work-xavier/README.md), [INDEX.md](../work-xavier/INDEX.md) |
+| **WORK-LEDGER** | [WORK-LEDGER.md](../work-xavier/WORK-LEDGER.md) + distributed mirror logs: [work-dev-mirror/SYNC-LOG.md](../work-xavier/work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](../work-xavier/work-politics-mirror/SYNC-LOG.md) |
+| **Daily horizon / brief** | [SYNC-DAILY.md](../work-xavier/SYNC-DAILY.md), [DAILY-OPS-CARD.md](../work-xavier/DAILY-OPS-CARD.md) |
+| **Lane focus** | Content plans, KPI logs, [xavier-smm-capability-rubric.md](../work-xavier/xavier-smm-capability-rubric.md); BrewMind hub [brewmind-philippines-onboarding-guide.md](../work-xavier/brewmind-philippines-onboarding-guide.md) |
+| **Emerging patterns** | Week plans + rubric vs execution; informal until promoted in WORK-LEDGER II-A |
+| **Framing audit** | Not a dedicated file yet; use strategy/politics parent lanes when drafting campaign-adjacent copy |
+| **Multi-frame review** | Partial — [LANES.md](../work-xavier/LANES.md) + consumption of work-strategy / work-politics mirrors; no single `frames.md` |
+| **Background context** | PH market + operator depth: [work-xavier-sources.md](../work-xavier/work-xavier-sources.md), [work-dev/work-dev-sources.md](../work-dev/work-dev-sources.md) |
+| **History log** | [work-xavier-history.md](../work-xavier/work-xavier-history.md) |
+| **Gate / CI** | [LANE-CI.md](../work-xavier/LANE-CI.md); label `lane/work-xavier` in [.github/pull_request_template.md](../../../.github/pull_request_template.md) |
+
+---
+
 ## Generic daily brief ↔ work-strategy § numbers
 
 The generic [daily-brief-template.md](daily-brief-template.md) uses **semantic headings only** (no `1b` / `1d`). **work-strategy** combined brief uses **fixed numbers** for operator habits (e.g. coffee **C**, Putin watch):

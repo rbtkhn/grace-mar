@@ -57,9 +57,9 @@
 
 ---
 
-## 3a) Daily bridge from hey to objectives
+## 3a) Daily bridge from coffee to objectives
 
-Each daily `hey` should include one suggested `work-xavier` development path:
+Each **`coffee`** session should include one suggested `work-xavier` development path (legacy **`hey`** still accepted):
 - map it to exactly one LO (`LO-01`..`LO-06`)
 - map it to exactly one business-skill outcome
 - define 1-2 same-day observable completion checks

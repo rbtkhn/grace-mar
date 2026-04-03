@@ -1,6 +1,6 @@
 # Daily Ops Card (xavier)
 
-Use this as the final required output of `hey`.
+Use this as the final required output of **`coffee`** (legacy **`hey`** still accepted).
 
 Keep it short, concrete, and runnable.
 

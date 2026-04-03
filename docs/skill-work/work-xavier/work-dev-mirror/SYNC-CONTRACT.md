@@ -16,7 +16,7 @@ Never auto-apply changes to Record files.
 
 ## Daily good-morning sync check
 
-Every `hey`, run a `work-dev` relevance scan and produce one of:
+Each **`coffee`** session, run a `work-dev` relevance scan and produce one of: (Legacy **`hey`** still accepted.)
 
 1. **No relevant updates**
 2. **Relevant updates found** with recommended files to sync

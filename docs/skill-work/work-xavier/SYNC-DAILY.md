@@ -2,7 +2,7 @@
 
 **Purpose:** Single daily sync control surface for Xavier.
 
-Use this file during `hey` to aggregate `work-dev` and `work-politics` sync status in one place.
+Use this file during **`coffee`** (work-start or signing-off) to aggregate `work-dev` and `work-politics` sync status in one place. Legacy **`hey`** still works as an alias for the same ritual.
 
 ---
 
