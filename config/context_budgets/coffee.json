@@ -1,7 +1,7 @@
 {
-  "max_last_dream_lines": 12,
+  "max_last_dream_lines": 8,
   "show_civ_mem_by_default": false,
   "show_rollup_by_default": false,
-  "max_session_tail_lines": 3,
+  "max_session_tail_lines": 2,
   "allow_last_dream": true
 }
