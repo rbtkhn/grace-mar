@@ -11,7 +11,7 @@ This page does **one** thing: help you **create** that project and **open it** o
 
 ## Before you start (Robert checks)
 
-- The **companion-self** repository must be set as a **Template repository** on GitHub (**Settings**), so the green **Use this template** button appears. If you do not see it, ask Robert.
+- The **companion-self** repository must be set as a **Template repository** on GitHub (**Settings** → enable **Template repository**), so the green **Use this template** button appears. Official steps: [Creating a template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) (GitHub Docs). If Xavier does not see **Use this template**, Robert should confirm that setting first.
 - Agree a **project name** (example: `companion-xavier`) and whether it should be **Private** or **Public**.
 
 ---
@@ -68,3 +68,4 @@ When this folder is open in Claude Code, **stop for day one** unless Robert asks
 | Date | Note |
 |------|------|
 | 2026-04-04 | Initial two-step sheet: GitHub template + clone + open in Claude Code; Seed Phase deferred. |
+| 2026-04-04 | Linked GitHub Docs: [Creating a template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) for operator preflight. |

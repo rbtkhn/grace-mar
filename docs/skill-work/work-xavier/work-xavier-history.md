@@ -15,6 +15,7 @@
 ### 2026-04-04
 
 - Added [xavier-instance-two-step.md](xavier-instance-two-step.md): Xavier **day-one** onboarding — **Use this template** + clone + open folder in Claude Code; Seed Phase / Session 0 explicitly **later**; preflight + leakage pointer. Linked [README.md](README.md), [INDEX.md](INDEX.md). [first-good-morning-runbook.md](first-good-morning-runbook.md): pointer if repo not created yet.
+- [xavier-instance-two-step.md](xavier-instance-two-step.md): operator preflight links [GitHub Docs — Creating a template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository).
 - **work-template audit implementation:** Added [work-xavier-sources.md](work-xavier-sources.md), [LANE-CI.md](LANE-CI.md), [WORK-LEDGER.md](WORK-LEDGER.md) (slim ledger + three seed watches: mirror staleness, template drift, rubric vs plans). Extended [work-template/MAPPING.md](../work-template/MAPPING.md) with *work-xavier (advisor module)* table. **Coffee-first vocabulary:** [SYNC-DAILY.md](SYNC-DAILY.md), mirror [SYNC-CONTRACT.md](work-dev-mirror/SYNC-CONTRACT.md) / [SYNC-CONTRACT.md](work-politics-mirror/SYNC-CONTRACT.md), [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md), [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) §3a (legacy `hey` noted where relevant). Wired [README.md](README.md), [INDEX.md](INDEX.md), script pointers.
 
 ### 2026-04-03
