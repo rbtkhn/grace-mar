@@ -23,6 +23,8 @@ Do not:
 
 ## 2) Operator script (read/send to Xavier)
 
+If she has **not** created her GitHub project yet, send [xavier-instance-two-step.md](xavier-instance-two-step.md) first; **Good Morning** (this runbook) is for **after** that project folder exists on her machine and she can open it in Cursor or Claude Code.
+
 Hey, Xavier.
 
 Today is your first load in `companion-xavier`.  

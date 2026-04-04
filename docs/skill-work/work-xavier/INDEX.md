@@ -10,6 +10,7 @@
 | [LANE-CI.md](LANE-CI.md) | PR label `lane/work-xavier`, cross-lane + gate notes |
 | [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |
 | [INSTANCE-PATHS.md](INSTANCE-PATHS.md) | Where her `users/xavier/` and seed survey live (**not** in grace-mar) |
+| [xavier-instance-two-step.md](xavier-instance-two-step.md) | **Day one only:** create instance from template + clone + open in Claude Code (Seed Phase later) |
 | [SEED-MANIFEST.md](SEED-MANIFEST.md) | What ships where (grace-mar mirror vs her `companion-xavier` repo) |
 | [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) | Pre-merge / handoff checks (no grace-mar Record in her tree) |
 | [ALIGNMENT.md](ALIGNMENT.md) | Template · grace-mar · Xavier’s instance (external) |
