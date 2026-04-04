@@ -19,6 +19,7 @@
 |------|--------|
 | Operator map | [workspace.md](../skill-work/work-politics/workspace.md) |
 | Brief sources | [brief-source-registry.md](../skill-work/work-politics/brief-source-registry.md) |
+| TCN narrative book (Iran / war / media) | [tucker-carlson-book/README.md](../../research/external/youtube-channels/tucker-carlson-book/README.md) · [work-politics-sources § TCN](../skill-work/work-politics/work-politics-sources.md) |
 | Calendar / phase | [calendar-2026.md](../skill-work/work-politics/calendar-2026.md) |
 | Full README | [README.md](../skill-work/work-politics/README.md) |
 

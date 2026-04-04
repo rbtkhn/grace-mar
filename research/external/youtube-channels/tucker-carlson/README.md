@@ -2,6 +2,8 @@
 
 **Purpose:** **Highly curated** index of Tucker Carlson monologues / episodes that feed **work-strategy** and **work-politics** analysis. **Not** a comprehensive channel mirror (contrast [predictive-history](../predictive-history/README.md)).
 
+**Assembled volume:** Committed snapshot copies of selected transcripts live in **[tucker-carlson-book](../tucker-carlson-book/README.md)** (table of contents: [INDEX.md](../tucker-carlson-book/INDEX.md)).
+
 **Not** companion Record or Voice knowledge until anything is merged through **RECURSION-GATE** per [AGENTS.md](../../../../AGENTS.md).
 
 ---
@@ -35,5 +37,6 @@ Optional bulk caption pull for **one** video: reuse `scripts/fetch_youtube_chann
 
 ## See also
 
+- [tucker-carlson-book/](../tucker-carlson-book/) — **operator book** (curated transcripts next to predictive-history).
 - [work-strategy/transcripts/](../../work-strategy/transcripts/) — canonical **processed** transcript location.
 - [analyst-corpus INDEX](../../work-strategy/analyst-corpus/INDEX.md) — optional registry row if Carlson is tracked as an analyst source.

@@ -48,5 +48,6 @@ Keep the response focused on:
 - `docs/skill-work/work-politics/workspace.md`
 - `docs/skill-work/work-politics/weekly-brief-template.md`
 - `docs/skill-work/work-politics/brief-source-registry.md`
+- `docs/skill-work/work-politics/work-politics-sources.md` (§ Tucker Carlson Network → `research/external/youtube-channels/tucker-carlson-book/`)
 - `docs/skill-work/work-politics/content-queue.md`
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md`

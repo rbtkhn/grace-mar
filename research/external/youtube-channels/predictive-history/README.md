@@ -2,6 +2,23 @@
 
 **Purpose:** Operator research corpus (YouTube captions). **Not** part of the companion Record; do not merge into SELF or treat as Voice knowledge.
 
+---
+
+## Work-strategy wiring
+
+**Predictive History** is the **default bulk transcript spine** for **[work-strategy](../../../../docs/skill-work/work-strategy/README.md)** — long-horizon lectures, game-theory arcs, and civilization framing that feed **Perceiver**, **LEARN MODE**, and **current-events** synthesis. **Curated, operator-clean lecture bodies** live under [work-jiang/lectures/](../../work-jiang/lectures/) (see [work-jiang README](../../work-jiang/README.md)); **raw caption pulls** from this folder diff against those before quotations ship.
+
+| Doc / path | Role |
+|------------|------|
+| [common-inputs.md](../../../../docs/skill-work/work-strategy/common-inputs.md) | **§ Predictive History** — how PH reaches work-strategy vs work-politics |
+| [work-strategy/transcripts/README.md](../../work-strategy/transcripts/README.md) | Downstream digests and “copy here or point to PH” ingest rule |
+| [current-events-analysis.md](../../../../docs/skill-work/work-strategy/current-events-analysis.md) | Perceiver → hooks → synthesis; PH `.txt` is valid step-1 input |
+| [LEARN_MODE_RULES.md](../../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md) | Extraction format when learning from PH-scale transcripts |
+| [daily-brief-jiang-layer.md](../../../../docs/skill-work/work-strategy/daily-brief-jiang-layer.md) | **§1c** slow layer; PH lectures are the usual **work-jiang** book spine |
+| [work-jiang-sources.md](../../../../docs/skill-work/work-jiang/work-jiang-sources.md) | Canonical channel URL + index/transcript CLI notes |
+
+---
+
 ## Pipeline layout
 
 | Layer | Role |
@@ -109,6 +126,11 @@ python3 scripts/fetch_youtube_channel_transcripts.py \
 ## Daily / cron refresh
 
 Use the same CLI; optional `--since-last-run` is not implemented — use manifest `last_run_utc` in `transcript_manifest.json` manually or re-run `--index-only` to detect new IDs, then fetch.
+
+## See also
+
+- **[work-strategy](../../../../docs/skill-work/work-strategy/README.md)** — territory README; **Predictive History** is indexed as **work-strategy–first** in [common-inputs.md § PH](../../../../docs/skill-work/work-strategy/common-inputs.md).
+- **[tucker-carlson-book](../tucker-carlson-book/README.md)** — curated Tucker Carlson Network transcript volume (operator book; sibling under `youtube-channels/`).
 
 ## Git
 

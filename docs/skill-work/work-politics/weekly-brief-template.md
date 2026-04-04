@@ -91,6 +91,8 @@ Run **after** §0–§6 drafts exist or in parallel on the same **neutral fact s
 
 **Governance:** Lenses are **WORK only**; see [analytical-lenses/manifest.md](analytical-lenses/manifest.md) (logging, no `self-evidence` trace dumps, human sign-off for ship).
 
+**Optional — base / media narrative (Iran, war-powers-heavy weeks):** Curated Tucker Carlson Network transcripts — [tucker-carlson-book](../../../research/external/youtube-channels/tucker-carlson-book/README.md) — for **long-form framing** only; guardrails in [work-politics-sources.md](work-politics-sources.md) § Tucker Carlson Network.
+
 ---
 
 ### 8. High-stakes guardrail stress-test (when risk is elevated)

@@ -8,6 +8,7 @@
 
 - Extract: who / what / when / where / why / how + primary sources.
 - Output: Neutral fact summary (≤200 words).
+- **Long-form ingest:** Transcripts from **[Predictive History](../../../research/external/youtube-channels/predictive-history/README.md)** (bulk `.txt`) or digests under [work-strategy/transcripts/](../../../research/external/work-strategy/transcripts/README.md) are valid inputs — still produce **neutral** summary, not lecturer rhetoric as fact. See [common-inputs.md § PH](common-inputs.md).
 
 ### 1.5 Energy-Chokepoint Hook (mandatory for any energy-related event)
 

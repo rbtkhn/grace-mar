@@ -6,12 +6,31 @@ YouTube channels, podcasts, newsletters, and **web** surfaces (e.g. prediction m
 
 **Territory boundary:** Keep this list separate from [work-dev sources](../work-dev/work-dev-sources.md) unless the same feed genuinely serves both lanes (then you may duplicate the row with **lane-specific notes**).
 
+---
+
+## Tucker Carlson Network (TCN) — **work-politics–first** transcript book
+
+**Primary operator path:** committed volume **[tucker-carlson-book](../../../research/external/youtube-channels/tucker-carlson-book/README.md)** ([INDEX](../../../research/external/youtube-channels/tucker-carlson-book/INDEX.md)). Curated channel spine + per-video notes: **[tucker-carlson/CURATED-INDEX.md](../../../research/external/youtube-channels/tucker-carlson/CURATED-INDEX.md)**.
+
+| Use in work-politics | Point to |
+|----------------------|----------|
+| **Iran / Hormuz / war powers** narrative environment (base + media) | Book **§ GyYy-QmxttU** monologue digest; **§ 2K2nQsTTjQE** Jiang interview (also [work-jiang Interviews #11](../../../research/external/work-jiang/lectures/interviews-11-tucker-carlson-iran-war-and-global-order.md)) |
+| **Theological / cultural** split re war & public religion (ROME-PASS cross-read) | [ROME-PASS Tucker exemplar](../work-strategy/work-strategy-rome/notes/exemplars/2026-04-01-rome-pass-exemplar-tucker-carlson-gyYy-QmxttU.md) + book monologue file |
+| Long-form **opinion** framing (not wire verification) | Any book `transcripts/*.md` — **triangulate** with [analytical-lenses/manifest.md](analytical-lenses/manifest.md) before client-facing or posted copy |
+
+**Guardrails:** TCN is **narrative and analysis**, not a primary for votes, filings, or battlefield facts. **Verify** claims that ship in briefs or X against **cited** news or official sources. Same rule as [work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md): ingest for **framing**, not silent fact.
+
+**work-strategy overlap:** Canonical monologue digests may also live under [work-strategy/transcripts/](../../../research/external/work-strategy/transcripts/README.md); the **book** is the work-politics-friendly **assembled volume** next to [predictive-history](../../../research/external/youtube-channels/predictive-history/README.md).
+
+---
+
 | Source | URL | Notes |
 |--------|-----|-------|
 | Rep. Thomas Massie (official X) | https://x.com/RepThomasMassie | Principal public feed; same lane as [brief-source-registry.md](brief-source-registry.md) @RepThomasMassie row — cite dates on bullets in briefs |
 | America First Kentucky (@usa_first_ky) | https://x.com/usa_first_ky | Unofficial analysis / message-support account (operator lane); not the campaign or office — see [account-x.md](account-x.md) |
 | Polymarket (KY-04) | https://polymarket.com/event/ky-04-republican-primary-winner | Implied odds + **volume**; also [GE party market](https://polymarket.com/event/ky-04-house-election-winner). Protocol: [polling-and-markets.md](polling-and-markets.md) — cite **price row / order book**, not Polymarket’s AI “Market Context” blurb |
 | Robert Barnes (@Barnes_Law) | https://x.com/Barnes_Law | Major political commentator and operative (not only legal); broad campaign and narrative lens — still verify before client-facing or posted use |
+| **Tucker Carlson Network (curated book)** | [tucker-carlson-book/README.md](../../../research/external/youtube-channels/tucker-carlson-book/README.md) | **Long-form TCN transcripts** (Iran, war, media frame); **work-politics–first** spine — see **§ Tucker Carlson Network** above; not a cited brief source by itself |
 
 **Optional additions (add a row when you want them in the authorized list):**
 

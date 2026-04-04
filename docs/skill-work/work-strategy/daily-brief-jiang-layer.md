@@ -4,6 +4,8 @@
 
 **Lane:** [work-jiang](../work-jiang/) under `research/external/work-jiang/`, compressions, lecture extractors, comparative sweeps. **SELF-LIBRARY** may index books (e.g. Predictive History); this file is **operator pointers** only.
 
+**Predictive History (work-strategy spine):** Canonical **YouTube caption pulls** for that channel live under [youtube-channels/predictive-history/](../../../research/external/youtube-channels/predictive-history/README.md). **Curated lecture bodies** that usually populate this slow layer are under [work-jiang/lectures/](../../../research/external/work-jiang/lectures/). Wired explicitly for work-strategy in [common-inputs.md § PH](common-inputs.md).
+
 ---
 
 ## Active work-jiang hooks

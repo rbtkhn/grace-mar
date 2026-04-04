@@ -6,6 +6,14 @@
 
 ---
 
+## Predictive History (work-strategy default channel)
+
+**[predictive-history/README.md](../../youtube-channels/predictive-history/README.md)** is the **primary** repo path for **syncing** the Predictive History YouTube channel into `transcripts/*.txt` + `index.json`. That tree is **work-strategy–first**; see [common-inputs.md § PH](../../../../docs/skill-work/work-strategy/common-inputs.md).
+
+**Flow:** Pull captions with the PH README CLI → diff / verify against [work-jiang/lectures/](../../../work-jiang/lectures/) curated `.md` when quoting → optional **digest** `.md` **here** for one-off Perceiver runs or analyst registry rows.
+
+---
+
 ## Daily operator cadence
 
 The operator may **upload one or more transcripts per day** for **work-strategy** topics of interest (paste in chat: **episode title**, optional **watch URL**, **body text**). Ingest pattern:

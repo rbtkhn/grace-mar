@@ -2,6 +2,8 @@
 
 Research package: statements, verbatim quotes, Twelve-Day War position, public opinion, executive summary (audience versions), and foreign-policy mission statement draft. Companion-led; cite sources. Stage any new claims for Record via RECURSION-GATE.
 
+**Narrative environment (operator, not cited truth):** Long-form **Tucker Carlson Network** transcripts on Iran / Hormuz / war framing live in **[tucker-carlson-book](../../../research/external/youtube-channels/tucker-carlson-book/README.md)** — see [work-politics-sources.md](work-politics-sources.md) § Tucker Carlson Network. Triangulate before any client-facing reuse.
+
 ---
 
 ## 1. Recent statements (Iran war)

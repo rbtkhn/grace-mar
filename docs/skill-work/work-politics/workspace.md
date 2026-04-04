@@ -23,6 +23,7 @@ Use this file when you want one place to understand:
 | **Territory blockers** | Stale docs, placeholder-heavy research surfaces, missing work-politics gate rhythm | Derived from `calendar-2026.md`, `opposition-brief.md`, `principal-profile.md`, `revenue-log.md`, `brief-source-registry.md`, `content-queue.md`, `users/grace-mar/recursion-gate.md` |
 | **Pending work-politics gate items** | Work-politics-only `RECURSION-GATE` review | `users/grace-mar/recursion-gate.md` via territory filter |
 | **Brief readiness** | What sources feed the weekly brief and what still needs checking | `brief-source-registry.md` |
+| **Long-form narrative (TCN)** | Tucker Carlson Network **curated transcripts** for **war-powers / Iran / GOP–media** framing (not wire truth) | [work-politics-sources.md](work-politics-sources.md) § Tucker Carlson Network · [tucker-carlson-book/README.md](../../../research/external/youtube-channels/tucker-carlson-book/README.md) |
 | **Content queue** | X / content workflow state for `@usa_first_ky` | `content-queue.md` |
 | **Revenue / offer state** | Revenue totals, BTC/SMM commitments, active commercial surfaces | `revenue-log.md`, `fiverr-microtask-100.md`, `account-x.md` |
 | **Outreach learning** | Offer framing, proof, target segments, funnel, and objections | `outreach-workspace.md`, `offers.md`, `proof-ledger.md`, `target-registry.md`, `outreach-funnel.md`, `objection-log.md` |
@@ -39,7 +40,7 @@ Use this file when you want one place to understand:
 | `compliance-checklist.md` | Pre-engagement gates (FEC, state, FARA, intl) |
 | `clients/` | Per-client index; [clients/massie-ky4.md](clients/massie-ky4.md) = primary client |
 | `brief-source-registry.md` | Structured intake and freshness tracker for weekly brief inputs |
-| `work-politics-sources.md` | Operator list of channels / podcasts for work-politics framing (not cited brief sources by default) |
+| `work-politics-sources.md` | Operator list of channels / podcasts for work-politics framing (not cited brief sources by default); **§ Tucker Carlson Network** = primary hook to **[tucker-carlson-book](../../../research/external/youtube-channels/tucker-carlson-book/README.md)** |
 | `content-queue.md` | Structured X/content operations queue |
 | `weekly-brief-template.md` | Output shape for the campaign brief |
 | `civ-mem-draft-protocol.md` | Civ-mem → speech/policy; human-always-approves gates |

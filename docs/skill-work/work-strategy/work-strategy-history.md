@@ -12,6 +12,10 @@
 
 _(Append below this line.)_
 
+## 2026-04-05
+
+- **Predictive History → work-strategy:** Explicit wiring — [common-inputs.md](common-inputs.md) § **Predictive History**; [README.md](README.md) transcript row; [work-strategy/transcripts/README.md](../../../research/external/work-strategy/transcripts/README.md) PH subsection; [predictive-history/README.md](../../../research/external/youtube-channels/predictive-history/README.md) **Work-strategy wiring** table; [current-events-analysis.md](current-events-analysis.md) Perceiver bullet; [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) spine note.
+
 ## 2026-04-01
 
 - Added **work-strategy-rome** project: [work-strategy-rome/README.md](work-strategy-rome/README.md), [work-strategy-rome/manifest.md](work-strategy-rome/manifest.md); indexed from territory [README.md](README.md).
