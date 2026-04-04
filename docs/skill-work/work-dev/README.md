@@ -37,6 +37,8 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 |------------|---------|
 | **This README** | Objective, scope, and principles for work-dev (includes former work-build-ai). |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
+| **[persistence-and-memory-surfaces.md](persistence-and-memory-surfaces.md)** | What persists where (gate, MEMORY, vendor agents, exports) vs outcome-agent dimensions; assumption-labeled efficiency note. |
+| **[delegation-spec-external-agents.md](delegation-spec-external-agents.md)** | External outcome agents: dimension map, 7-section delegation outline, copy-paste evaluation prompt (operator WORK). |
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: current state, blockers, next actions, and file map. |
 | **[WORK-LEDGER.md](WORK-LEDGER.md)** | Optional **judgment / compounding** index (watches, heuristics, framing list) — pointers into workspace + integration docs; scaffold from [work-template/WORK-LEDGER.md](../work-template/WORK-LEDGER.md). |
 | **[INTEGRATION-PROGRAM.md](INTEGRATION-PROGRAM.md)** | **One-loop spec:** read order → export → stage-only → merge; script index; companion gate invariant. |
@@ -61,6 +63,7 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 | **[work-dev-history.md](work-dev-history.md)** | Append-only **operator log** for this lane (ingests, integration milestones); not Record — see [work-modules-history-principle.md](../work-modules-history-principle.md). |
 | **[creative-pipeline.md](creative-pipeline.md)** | Governed UI / motion / 3D workflow: creative brief, `users/grace-mar/DESIGN.md`, `scripts/validate-design-md.py`, artifacts under `users/grace-mar/artifacts/creative/`. |
 | **[work-modules-sources-principle.md](../work-modules-sources-principle.md)** | Cross-territory convention: each `work-*` module has a `*-sources.md` list. |
+| **[agent-memory-pgvector-spec.md](agent-memory-pgvector-spec.md)** | **Persistent agent memory (Postgres 16+ / pgvector):** flaw-fix DDL + RLS + revisions + hybrid (RRF) + reflection governance + dual-repo scope; SQL in [sql/agent_memory_v1_initial.sql](sql/agent_memory_v1_initial.sql). WORK only — not Record. |
 | **[agentic-environment-principles.md](agentic-environment-principles.md)** | **Environment-first:** policy + continuity + gate + observability before prompt; canonical Record files before clever retrieval; **§5** local-private stacks (**a** residency/roles, **b** bounded execution, **c** pipeline vs agent memory). |
 | **[agent-surface-template.yaml](agent-surface-template.yaml)** | **Agent surface axes** (runtime / orchestration / interface) + Grace-Mar trust fields; optional **`agent_species`** (`coding_harness`, `dark_factory`, `auto_research`, `workflow_orchestration`). CLI: `python scripts/work_dev/agent_surface_checklist.py`; `--validate` checks structure and species when set. |
 | **[research-moonshots-237.md](research-moonshots-237.md)** | Research notes from Moonshots #237 (Alex Finn) — identity, memory, security, hierarchy, actionable takeaways. |

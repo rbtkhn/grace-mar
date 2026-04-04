@@ -90,6 +90,18 @@ flowchart LR
 
 ---
 
+## Vendor chat memory vs these loops
+
+**Outcome-agent framing:** Tools often sell **persistent memory**, **inspectability**, and **compounding** inside their product. That memory is **Loop 2 at best** (drafts, operator convenience) unless the same facts cross **RECURSION-GATE** and merge into **Loop 1**.
+
+- **Vendor thread “compounding”** is **not** Record compounding. Treat it like a **scratchpad** until staged and companion-approved.
+- **Inspectable surfaces** in-repo beat chat-only: if the only artifact is a polished message, you inherit **black-box risk** for anything that should become SELF or EVIDENCE.
+- **Persistent memory** in a SaaS is **not** the Sovereign Merge Rule. The **test suite** for Record truth remains the companion (and explicit binary checks at the gate).
+
+See [persistence-and-memory-surfaces.md](persistence-and-memory-surfaces.md) and [delegation-spec-external-agents.md](delegation-spec-external-agents.md).
+
+---
+
 ## Related
 
 - [README.md](README.md) — work-dev objective (OpenClaw, gate, exports)

@@ -66,6 +66,8 @@ This mirrors contextual engineering in AI-assisted coding: the model writes only
 
 **Continual learning** is implemented as human-gated writes to SELF and EVIDENCE; the model does not self-edit memory or weights. The only way new knowledge or personality enters the Record is via staging and companion-approved merge.
 
+**Companion review as test suite.** In knowledge work there is no compiler: the human at the gate is the **test suite** for whether a candidate is safe to merge. Implementations benefit from **explicit binary checks** at approve time (scope, contradiction, evidence linkage, correct target surface) — see template guidance in `users/_template/recursion-gate.md` — so approval is **faster and more reliable** than vague “looks good,” without relaxing the Sovereign Merge Rule.
+
 ---
 
 ## 3. Identity Schema
