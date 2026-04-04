@@ -8,7 +8,7 @@
 
 **Never copy** `users/grace-mar/**` into another companion’s instance tree. See [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md).
 
-**Session 0 / seed survey:** Lives **in Xavier’s repository** (paths such as `docs/seed-survey/` or `users/xavier/` per her layout from the template) — not under `docs/skill-work/work-xavier/` here. Operator docs: [GOOD-MORNING.md](GOOD-MORNING.md), [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md). **Day-one instance setup (GitHub + open only):** [xavier-instance-two-step.md](xavier-instance-two-step.md) — send before first Good Morning if she does not have her repo yet.
+**Session 0 / seed survey:** Lives **in Xavier’s repository** (paths such as `docs/seed-survey/` or `users/xavier/` per her layout from the template) — not under `docs/skill-work/work-xavier/` here. Operator docs: [GOOD-MORNING.md](GOOD-MORNING.md), [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md). **Instance checklist (template → clone → Claude Code → Seed Phase):** [xavier-instance-two-step.md](xavier-instance-two-step.md) — send before first Good Morning if she does not have her repo yet; day-one steps are items 1–6.
 
 **Daily sync surface (advisor view):** [SYNC-DAILY.md](SYNC-DAILY.md). **Mirrors:** [work-dev-mirror/README.md](work-dev-mirror/README.md), [work-politics-mirror/README.md](work-politics-mirror/README.md).
 
