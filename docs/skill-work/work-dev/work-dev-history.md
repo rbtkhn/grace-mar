@@ -14,4 +14,5 @@
 
 _(Append below this line.)_
 
+- **2026-04-04** — Agent memory PostgreSQL/pgvector spec and v1 migration: `agent-memory-pgvector-spec.md`, `sql/agent_memory_v1_initial.sql`; README contents row (flaw-fix plan implementation).
 - **2026-03-30** — Added Huang / Lex #494 digest and OpenClaw/Grace-Mar diff: `research/external/work-dev/transcripts/lex-fridman-494-jensen-huang-DIGEST.md`; README index row; commits through `51de012` (operator thread).
