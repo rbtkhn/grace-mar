@@ -24,7 +24,7 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 
 - Replaced the **A–I + F** hub with **five** lettered options: **A Today**, **B Build**, **C Compass**, **D Book**, **E Steward** (see [menu-reference.md](menu-reference.md), [coffee SKILL.md](../../../.cursor/skills/coffee/SKILL.md)).
 - **Today** merges daily brief + §1d Putin + KY-4 intel (formerly **C** + **E → work-politics**). **Build** merges work-dev + repository hygiene (formerly **B** + **E → work-dev**). **Compass** merges work-strategy + **work-strategy-rome** (formerly **E → strategy** + **I**). **Book** = Jiang / PH (formerly **G**). **Steward** merges gate + template/boundary (formerly **D** + **A**).
-- **No close letter:** exit the hub by normal workflow or **no menu**. **Skills / meta:** say **skills** / **meta** with **B** or after **Build**, not a sixth menu slot.
+- **No close letter:** exit the hub by **C** / **D** (normal workflow unless `stay in coffee`), **Later** on the steward fork, or a non-coffee task. **Skills / meta:** say **skills** / **meta** with **B** or after **Build**, not a sixth menu slot.
 - Cross-refs updated: operator-style, handoff-check, dream/bridge/cadence tables, polling-and-markets, pol-dashboard, operator-skills, bootstrap, etc.
 
 ## 2026-04-02 — closeout merged into unified `coffee` (no separate closeout menu)
@@ -33,6 +33,12 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 - **Signing-off** intent still uses `operator_coffee.py --mode closeout` or `operator_handoff_check.py` for **Step 1**; **Step 2** matched work-start (**A–I** until the same-calendar-day **A–E** redesign — see newer 2026-04-02 entry above).
 - Former closeout **system pick** was **old menu E** with **no** work sub-lane after signing-off Step 1 (**A–E** redesign: **E — Steward** without gate/template split → system pick).
 - Docs and cross-refs updated: `menu-reference.md`, `operator-skills.md`, `handoff-check`, `bridge`, `harness-warmup.mdc`, `operator-style.mdc`, cadence README, etc.
+
+## 2026-04-04 — **E** steward fork: **Implement now / Later**; coffee drops **no menu**
+
+- After **E — Steward**, when **actionable** possibilities exist (pending gate candidates or non-trivial reconciliation), the assistant offers **only** **Implement now** vs **Later**; **Later** returns to full **A–E**. No full coffee menu on that turn.
+- When **nothing actionable** surfaced, **E** returns straight to full **A–E** like **A** / **B**.
+- Removed **no menu** as a coffee escape; **no menu** / **no options** remains for **non-coffee** WORK menus only (`operator-style.mdc`, [menu-reference.md](menu-reference.md), [coffee SKILL.md](../../../.cursor/skills/coffee/SKILL.md)).
 
 ## 2026-04-01 — letter **I** = work-strategy-rome (always on the coffee menu)
 

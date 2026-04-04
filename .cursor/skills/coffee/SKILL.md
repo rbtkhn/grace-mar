@@ -1,7 +1,7 @@
 ---
 name: coffee
 preferred_activation: coffee
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exiting the hub needs no letter — any normal turn or no menu ends coffee."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
 ---
 
 # Coffee
@@ -83,9 +83,9 @@ The operator may say **`coffee`** **more than once per calendar day** for reorie
 
 ### Step 2 — Multiple choice (required; always A–E)
 
-Immediately **after** Step 1 content, output the fixed **coffee** menu: **five** lettered options **A through E** (present **A, B, C, D, E**). **There is no separate “close” letter** — the operator exits the hub by continuing in normal workflow, saying **no menu**, or starting the next task.
+Immediately **after** Step 1 content, output the fixed **coffee** menu: **five** lettered options **A through E** (present **A, B, C, D, E**). **There is no separate “close” letter** — exit paths are **C** / **D** (normal workflow unless **`stay in coffee`**), or a **steward fork** (**Later**) that returns to this full menu.
 
-**Micro-hints (one line under the A–E list):** `Micro-hints: B+skills/meta | E=gate/template/boundary`
+**Micro-hints (one line under the A–E list):** `Micro-hints: B+skills/meta | E=gate/template/boundary | after actionable E: Implement now / Later`
 
 **Quick reference (modes):**
 
@@ -93,9 +93,9 @@ Immediately **after** Step 1 content, output the fixed **coffee** menu: **five**
 - **B. Build** — **work-dev** + **repository hygiene**: `docs/skill-work/work-dev/`, [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md), [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), branch snapshot, `git status`, exports/integrity pointers — **one** prescribed next action. **Skills / meta pipeline** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync): say **`skills`** or **`meta`** in the same turn as **B**, or ask for skills depth after **Build** — not a sixth menu letter.
 - **C. Compass** — **work-strategy** + **work-strategy-rome** (ROME-PASS, manifest, exemplars, notes) — **one** develop step. Vatican / Holy See / ROME-PASS work lives **here**, not under **Today** alone.
 - **D. Book** — **work-jiang / Predictive History** — **one** next step.
-- **E. Steward** — **RECURSION-GATE** + **template / boundary audit** (companion-self parity, fork isolation, optional `validate-integrity.py`). **Mandatory single-track default:** if the operator says **E** only (no sub-track), run **exactly one** track this turn: **gate** when there is at least one pending gate candidate; otherwise **template/boundary**. **`both`** (gate and template/boundary in one turn) is allowed **only** when the operator explicitly asks for both. **First line of the reply:** name the track you are executing (**gate** or **template/boundary**). When the turn includes **template/boundary / companion-self parity**, end with the **Reconciliation code** block per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
+- **E. Steward** — **RECURSION-GATE** + **template / boundary audit** (companion-self parity, fork isolation, optional `validate-integrity.py`). **Mandatory single-track default:** if the operator says **E** only (no sub-track), run **exactly one** track this turn: **gate** when there is at least one pending gate candidate; otherwise **template/boundary**. **`both`** (gate and template/boundary in one turn) is allowed **only** when the operator explicitly asks for both. **First line of the reply:** name the track you are executing (**gate** or **template/boundary**). When the turn includes **template/boundary / companion-self parity**, end with the **Reconciliation code** block per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md). **Default = audit only** (read-only) until the operator chooses **Implement now**. **Gate merges** never run from steward alone — companion **approve** + `process_approved_candidates.py` only.
 
-**Re-offer rules:** After **A, B, or E**, re-offer the full **A–E** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**.
+**Re-offer rules:** After **A** or **B**, re-offer the full **A–E** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**. After **E**, see [menu-reference.md § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later): if the steward pass **surfaces actionable possibilities** (defined there), **do not** re-offer the full menu — offer **only** **1. Implement now** and **2. Later** (**Later** → then present full **A–E**). If **nothing actionable** surfaced, re-offer full **A–E** as after **A**/**B**. Synonyms: **`E+ship`** / **`E implement`** / **`EXECUTE`** + slice ≈ **Implement now** when the operator uses them instead of the numbered pick.
 
 For full **A–E** definitions, signing-off add-ons per letter, and the companion survey track: see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
 

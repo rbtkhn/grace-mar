@@ -17,14 +17,16 @@ These lanes govern **tooling and git scope** for the turn, not Abby’s persona 
 
 - Implement the agreed scope; run checks the operator asked for (tests, linters, `validate-template`, etc.).
 - **`git commit`** when there are changes; **`git push`** when the message includes shipping to remote (name the branch or say “push”).
+- **Dual worktree before push:** When pushing, also check **companion-self** if present (see [Git workflow — grace-mar + companion-self](#git-workflow--grace-mar--companion-self)); do not assume only the open workspace changed.
 - **Tags** (e.g. `template-v0.x.x`) only if the operator states them in the message.
-- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **coffee** **A–E** applies (legacy **hey** still works) or the operator said **no menu**.
+- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **coffee** menus apply — full **A–E** or the **steward** **Implement now / Later** fork (legacy **hey** still works) — or when the operator said **no menu** on a **non-coffee** WORK turn.
 
 ### `DOCSYNC`
 
 - **Documentation only:** merge logs, mirrors, README, operator docs, cross-links.
 - Keep the diff narrow to docs (and explicitly named files).
 - **Push** only if the operator says to push in the same message.
+- **Dual worktree before push:** When a **push** is in scope, same **companion-self** status check as **EXECUTE** — [Git workflow — grace-mar + companion-self](#git-workflow--grace-mar--companion-self).
 - Same **optional skill-discovery** close as **EXECUTE** when the doc pass was substantive multi-file or clearly procedural (see **EXECUTE** bullet).
 
 ### `EXECUTE_LOCAL`
@@ -55,6 +57,22 @@ Scope rules for this repo (instance + operator lanes), complementary to [AGENTS.
   - Typical bases: `main` or the branch the operator named.
   - Add a **suggested PR title** and a **short body** (three to five lines: scope, risk, how to verify).
 - **Optional helper:** `python3 scripts/github_compare_url.py` prints the compare URL for the current branch against `main` (see `--help`).
+
+<a id="git-workflow--grace-mar--companion-self"></a>
+
+### Git workflow — grace-mar + companion-self
+
+Many sessions touch **two** git roots: **grace-mar** (this instance repo) and **companion-self** (template upstream clone — default path `./companion-self` under grace-mar or `GRACE_MAR_COMPANION_SELF`). [Bridge](../.cursor/skills/bridge/SKILL.md) is the full dual-repo seal ritual; **lane pushes** should still avoid leaving one repo dirty while the other ships.
+
+When **`EXECUTE`** or **`DOCSYNC`** includes **push** / **ship to remote** (or you later upgrade **`EXECUTE_LOCAL`** to push in-message):
+
+1. Run **`git status -sb`** in the grace-mar workspace (and `git fetch` / ahead-behind vs `@{u}` when a push is planned).
+2. If **companion-self** exists at the conventional path, run **`git status -sb`** there too (and ahead-behind if `origin` is set).
+3. **Surface both** in the reply before pushing: uncommitted files, unpushed commits, or “clean.”
+4. If **either** repo has pending work, **do not** push only the other **silently**. **Commit/push** each repo that is in scope for this message; if the operator scoped **grace-mar only** (or companion-self only), say so and still **report** the sibling’s status in one line so nothing is forgotten.
+5. If scope is **ambiguous** (both dirty but the message did not name both), **ask** once: push both, grace-mar only, or companion-self only.
+
+For **session-close** or heavy handoff, prefer **`bridge`**, which formalizes the same assessment in Step 2–3.
 
 ### Source of “done” (plan vs execution)
 

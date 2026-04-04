@@ -2,7 +2,7 @@
 
 Detailed **A–E** (five mode) definitions, **signing-off** (merged closeout) add-ons, cadence tables, explicit phrase modifiers, and companion survey track. The executable trigger contract lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md); this file holds the full protocol specification.
 
-**Exit:** There is **no** “close hub” letter. The operator leaves coffee by normal chat, **no menu**, or the next task.
+**Exit:** There is **no** “close hub” letter. The operator leaves coffee by **C** / **D** (normal workflow unless **`stay in coffee`**), by **Later** on the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (which returns to the full **A–E** menu), or by starting a non-coffee task. The coffee ritual does **not** use a **no menu** opt-out.
 
 ---
 
@@ -34,14 +34,14 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 - Run **`operator_daily_warmup.py`** and, when instance state matters, **`harness_warmup.py`**.
 - **Internet intel** (Polymarket, polls, Massie X) is **never** Step 1 — same as full coffee; choose **A — Today** when you want it (or ask explicitly). **Light** keeps **branch snapshot** compact (one line unless multiple branches).
 - **Daily brief:** **do not** generate in Step 1 — one-line pointer to **menu A** and path pattern `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (e.g. `daily-brief-2026-03-29.md`).
-- Deliver a **compact brief** from script outputs + thread context; then **full Step 2** menu **A, B, C, D, E**. On later turns, **A, B, or E** re-offer the full menu unless the operator says otherwise; **C** and **D** exit to normal workflow by default after the reply. **Build (B):** **compact** hygiene (branch + `git status` + one prescribed action or "clean") — not a full sweep unless the operator asks.
+- Deliver a **compact brief** from script outputs + thread context; then **full Step 2** menu **A, B, C, D, E**. On later turns, **A** or **B** re-offer the full menu; **E** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later); **C** and **D** exit to normal workflow by default after the reply. **Build (B):** **compact** hygiene (branch + `git status` + one prescribed action or "clean") — not a full sweep unless the operator asks.
 
 **`coffee minimal`** (or clear equivalent; legacy **`hey minimal`** still works):
 
 - Run **`harness_warmup.py`** only when instance state matters; **do not** run `operator_daily_warmup.py` unless the operator asks.
 - Step 1 has **no** Polymarket / Massie X / poll web search unless the operator **explicitly** asks in the same message. **Daily brief** still **only** via **menu A** (never Step 1).
 - Optional **one-line** gate pointer (e.g. pending count from warmup output if already pasted, or "see `users/grace-mar/recursion-gate.md`").
-- Still output **full Step 2** menu **A, B, C, D, E**. On later turns, **A, B, or E** re-offer the full menu unless the operator says otherwise; **C** and **D** exit to normal workflow by default after the reply. **Build (B):** **minimal** hygiene — extend the Step 1 branch line with `git status -sb` + **one** next action (or "clean"); no unrelated sweeps.
+- Still output **full Step 2** menu **A, B, C, D, E**. On later turns, **A** or **B** re-offer the full menu; **E** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later); **C** and **D** exit to normal workflow by default after the reply. **Build (B):** **minimal** hygiene — extend the Step 1 branch line with `git status -sb` + **one** next action (or "clean"); no unrelated sweeps.
 
 **`coffee survey`** (or **`coffee + survey`** / clear equivalent; legacy **`hey survey`** still works):
 
@@ -56,9 +56,9 @@ If the operator says **`coffee`** on a **Sunday** (or legacy **`hey`**), default
 
 ## A–E menu — work-start (full definitions)
 
-The **first** coffee reply ends **Step 2** with **exactly five lettered options — A through E**, presented **A, B, C, D, E**. **Follow-up behavior:** **A, B, and E** re-offer the same full menu by default; **C** and **D** exit to normal workflow by default after the reply. Wording may vary; **roles must not**.
+The **first** coffee reply ends **Step 2** with **exactly five lettered options — A through E**, presented **A, B, C, D, E**. **Follow-up behavior:** **A** and **B** re-offer the full menu by default; **E** uses the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (full menu only after **Later** or when nothing actionable surfaced); **C** and **D** exit to normal workflow by default after the reply. Wording may vary; **roles must not**.
 
-**Micro-hints (one line under the menu):** `Micro-hints: B+skills/meta | E=gate/template/boundary`
+**Micro-hints (one line under the menu):** `Micro-hints: B+skills/meta | E=gate/template/boundary | actionable E → Implement now / Later`
 
 | Letter | Mode | What it means when chosen |
 |--------|------|---------------------------|
@@ -66,7 +66,7 @@ The **first** coffee reply ends **Step 2** with **exactly five lettered options 
 | **B** | **Build** | **work-dev + repository hygiene** when chosen. **(1) Work-dev** — `docs/skill-work/work-dev/`: read [work-dev-sources.md](../work-dev/work-dev-sources.md); **real-time** spot-check of listed sources **only when this sub-lane is in scope**; deliver **delta** + **one** concrete next step. **(2) Hygiene** — builds on Step 1 branch snapshot: [git-branch-hygiene.md](../work-dev/git-branch-hygiene.md) (merge vs delete vs update from `main`); **`git status -sb`** and **uncommitted grouping** (align with [handoff-check](../../../.cursor/skills/handoff-check/SKILL.md)); optional **`git worktree list`**; **commit / push** plan (read-only unless operator ships); optional **`python3 scripts/refresh_derived_exports.py -u grace-mar`** + **`validate-integrity.py --user grace-mar`** if manifests / PRP / handoff suggest staleness (report only unless they ask to fix). **Pending RECURSION-GATE candidates** are **not** Build hygiene — use **E — Steward** (gate). **Skills / meta:** [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), [extract-skill-from-session](../../../.cursor/skills/extract-skill-from-session/SKILL.md), [portable-skills-sync](../../../.cursor/skills/portable-skills-sync/SKILL.md) — invoke when the operator says **skills** / **meta** with **B** or asks for skills after a Build turn. |
 | **C** | **Compass** | **work-strategy** + **work-strategy-rome** — **one** next step. **(1) work-strategy** (non-Rome): `docs/skill-work/work-strategy/` — daily-brief pointers, calendar, STRATEGY, current-events — **one** next step. **(2) work-strategy-rome** — **always in scope here:** [work-strategy-rome/README.md](../work-strategy/work-strategy-rome/README.md), [ROME-PASS.md](../work-strategy/work-strategy-rome/ROME-PASS.md), [manifest.md](../work-strategy/work-strategy-rome/manifest.md), notes / exemplars. ROME-PASS-shaped slice **or** **one** concrete develop action (dated note, exemplar pass, thesis stub, manifest tick). **WORK only** — no SELF/EVIDENCE/prompt merge without gate + companion approval; no unsourced papal claims. **Exits to normal workflow** after the reply unless **`stay in coffee`**. **Not** KY-4 intel stack ( **A** ); **not** Jiang ( **D** ). |
 | **D** | **Book** | **work-jiang / Predictive History.** Ground in Step 1 PH momentum block. [`users/grace-mar/work-jiang.md`](../../../users/grace-mar/work-jiang.md); [`warmup-sparks.yaml`](../../../research/external/work-jiang/metadata/warmup-sparks.yaml); optional `warmup_jiang_pulse.py`. **One** next step. **Exits to normal workflow** unless **`stay in coffee`**. **Not** a substitute for **A** work-politics intel. |
-| **E** | **Steward** | **RECURSION-GATE + template / boundary audit** — **single-track default (mandatory):** if the operator says **E** only, run **exactly one** track: **gate** when there is ≥1 pending candidate in `recursion-gate.md`; otherwise **template/boundary**. **`both`** in one turn only if they explicitly ask. **First line:** name the track (**gate** or **template/boundary**). **(1) Gate** — `users/grace-mar/recursion-gate.md`; [gate-review-pass](../../../.cursor/skills/gate-review-pass/SKILL.md); optional `python3 scripts/operator_gate_review_pass.py -u grace-mar`. **Read-only** — **no merge** without companion approval. **(2) Template / boundary** — **grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`) → [`audit-report.md`](../work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../merging-from-companion-self.md), [work-companion-self/README.md](../work-companion-self/README.md). **Boundary** — [audit-boundary-grace-mar-companion-self.md](../../audit-boundary-grace-mar-companion-self.md), [fork isolation](../../fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../skills-modularity.md). Optional: `python3 scripts/validate-integrity.py --user grace-mar` if drift flagged. **Not** duplicating **A** / **B** / **C** / **D** as primary work. |
+| **E** | **Steward** | **RECURSION-GATE + template / boundary audit** — **single-track default (mandatory):** if the operator says **E** only, run **exactly one** track: **gate** when there is ≥1 pending candidate in `recursion-gate.md`; otherwise **template/boundary**. **`both`** in one turn only if they explicitly ask. **First line:** name the track (**gate** or **template/boundary**). **(1) Gate** — `users/grace-mar/recursion-gate.md`; [gate-review-pass](../../../.cursor/skills/gate-review-pass/SKILL.md); optional `python3 scripts/operator_gate_review_pass.py -u grace-mar`. **Read-only** — **no merge** without companion approval. **(2) Template / boundary** — **grace-mar vs companion-self:** `python scripts/template_diff.py` (see `--help`) → [`audit-report.md`](../work-companion-self/audit-report.md) or `--use-manifest` → [`audit-report-manifest.md`](../work-companion-self/audit-report-manifest.md). Read [audit-grace-mar-vs-companion-self-template.md](../../audit-grace-mar-vs-companion-self-template.md), [MERGING-FROM-COMPANION-SELF.md](../../merging-from-companion-self.md), [work-companion-self/README.md](../work-companion-self/README.md). **Boundary** — [audit-boundary-grace-mar-companion-self.md](../../audit-boundary-grace-mar-companion-self.md), [fork isolation](../../fork-isolation-and-multi-tenant.md); THINK/WRITE vs WORK — [skills-modularity.md](../../skills-modularity.md). Optional: `python3 scripts/validate-integrity.py --user grace-mar` if drift flagged. **Not** duplicating **A** / **B** / **C** / **D** as primary work. **Follow-up:** [Steward fork — Implement now vs Later](#steward-follow-up-fork-implement-now-vs-later). |
 
 **When the Steward turn includes template/boundary / companion-self parity**, the reply must end with a **Reconciliation code** block:
 
@@ -77,6 +77,32 @@ The **first** coffee reply ends **Step 2** with **exactly five lettered options 
 ```
 
 Per [work-companion-self § Reconciliation code audit](../work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream).
+
+<a id="steward-follow-up-fork-implement-now-vs-later"></a>
+
+### Steward follow-up fork — **Implement now** vs **Later**
+
+After **`E — Steward`**, the assistant **does not** always return to the full **A–E** menu.
+
+**Actionable possibilities** (any one is enough for the fork):
+
+- **Gate track:** ≥1 candidate with `status: pending` in `recursion-gate.md` (above `## Processed`).
+- **Template/boundary track:** **Reconciliation code** lists something **beyond** both lines being *none / no slice / docs-only with no adopt path* — e.g. named paths, pull-needed files, `only_template` scripts, merge-slice targets, or explicit adopt/refresh commands.
+
+**If actionable → two options only** (no full coffee menu this turn):
+
+1. **Implement now** — **Template/boundary:** proposal (scope, files, approach) then ship per operator lane (**EXECUTE** / **EXECUTE_LOCAL** / explicit approval). **Gate:** deepen **read-only** review (recommendations, id+summary echo); **never** merge without companion **approve** + `process_approved_candidates.py`. If the operator wants gate **status** edits, they must approve wording; assistant does not merge Record from steward alone.
+2. **Later** — Immediately present the **full A–E** coffee menu again.
+
+**If not actionable** (gate empty for pending; reconciliation truly *none* on both upstream and downstream with no concrete next adopt step) → **skip the fork**; re-offer **full A–E** as after **A** / **B**.
+
+**Why `E` does not silently implement:** Steward stays **orientation** until **Implement now**; scope stays explicit so instance paths and Record boundaries stay safe.
+
+**Non-bypass:** **Implement now** on gate work **does not** replace companion **approve** + merge script. Template **upstream** PRs stay human-gated per [work-companion-self README](../work-companion-self/README.md).
+
+<a id="steward-audit-vs-eship"></a>
+
+**Synonyms:** **`E+ship`**, **`E implement`**, or **`EXECUTE` / `EXECUTE_LOCAL`** + slice — treat as **Implement now** when the operator uses them on the turn after **`E`**.
 
 ---
 
@@ -98,7 +124,7 @@ Per [work-companion-self § Reconciliation code audit](../work-companion-self/RE
 | **B** | Prefer **handoff** **Derived / export churn** and **git status** from Step 1; [handoff-check SKILL.md](../../../.cursor/skills/handoff-check/SKILL.md). |
 | **C** | Optional Rome / strategy carryover line. |
 | **D** | Ground in handoff **`## Predictive History — night closeout`** when present. |
-| **E** | Same **single-track default** as work-start (**gate** if pending candidates, else **template/boundary**); **both** only if explicit. |
+| **E** | Same **single-track default** as work-start (**gate** if pending candidates, else **template/boundary**); **both** only if explicit. Follow-up: [Implement now vs Later](#steward-follow-up-fork-implement-now-vs-later). |
 
 ---
 
