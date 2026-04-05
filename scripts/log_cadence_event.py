@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Append a cadence event (coffee / dream / bridge) to work-cadence-events.md.
+Append a cadence event (coffee / dream / bridge / harvest / coffee_pick) to work-cadence-events.md.
 
 One line per run. Not Record truth; not self-memory; not a replacement for
 last-dream.json or session-transcript.md. See docs/skill-work/work-cadence/.
@@ -14,6 +14,8 @@ Usage:
       --kv picked=E steward=gate
   python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok \
       --kv refs=aacec9e,4eaf1f4
+  python3 scripts/log_cadence_event.py --kind harvest -u grace-mar --ok \
+      --mode default --kv packet=chat
 """
 
 from __future__ import annotations
@@ -27,12 +29,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work-cadence-events.md"
 ANCHOR = "_(Append below this line.)_"
-KINDS = ("coffee", "dream", "bridge", "coffee_pick")
+KINDS = ("coffee", "dream", "bridge", "coffee_pick", "harvest")
 
 HEADER = (
     "# Cadence events\n"
     "\n"
-    "> Append-only audit of **coffee**, **coffee_pick**, **dream**, and **bridge** runs.\n"
+    "> Append-only audit of **coffee**, **coffee_pick**, **dream**, **bridge**, and **harvest** runs.\n"
     "> **Not** Record truth. **Not** self-memory. **Not** a replacement for "
     "`last-dream.json` or `session-transcript.md`.\n"
     ">\n"

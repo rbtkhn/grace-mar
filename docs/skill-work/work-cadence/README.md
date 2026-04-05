@@ -1,6 +1,6 @@
 # work-cadence
 
-**Purpose:** Doctrine, boundaries, and architecture for the daily cadence triad — `coffee` (morning orientation), `dream` (night consolidation), and `bridge` (session-scale handoff). Executable trigger surfaces live in `.cursor/skills/coffee/SKILL.md`, `.cursor/skills/dream/SKILL.md`, and `.cursor/skills/bridge/SKILL.md`.
+**Purpose:** Doctrine, boundaries, and architecture for the daily cadence triad — `coffee` (morning orientation), `dream` (night consolidation), and `bridge` (session-scale handoff) — plus **`harvest`** as a **fourth operator tool on a different axis** (cross-agent extraction; on demand, not a fourth clock). Executable trigger surfaces live in `.cursor/skills/coffee/SKILL.md`, `.cursor/skills/dream/SKILL.md`, `.cursor/skills/bridge/SKILL.md`, and `.cursor/skills/harvest/SKILL.md`.
 
 **Not** Record truth. **Not** a merge path. **Not** identity-relevant unless gated.
 
@@ -10,9 +10,9 @@
 
 | Role | Description |
 |------|-------------|
-| **Cadence architecture** | Defines the shape of operator rhythm: coffee (orientation, repeated), dream (consolidation, once per day), bridge (session-scale carry-forward). |
+| **Cadence architecture** | Defines the shape of operator rhythm: coffee (orientation, repeated), dream (consolidation, once per day), bridge (session-scale carry-forward), harvest (cross-agent packet; midstream import). |
 | **Night-to-morning handoff** | Documents the `last-dream.json` data contract that bridges dream output to coffee Step 1. |
-| **Cadence event audit** | Append-only telemetry of each run via `work-cadence-events.md` and `scripts/log_cadence_event.py`. |
+| **Cadence event audit** | Append-only telemetry of each run via `work-cadence-events.md` and `scripts/log_cadence_event.py` (kinds include optional **`harvest`** for tooling consistency). |
 | **Context paste budgets** | Optional JSON caps for dream write-path and coffee display (`config/context_budgets/`); `scripts/audit_context_tax.py` approximates ritual paste size. |
 | **Boundary surface** | Explains what belongs in operational/ephemeral surfaces versus what must escalate to the gate. |
 
@@ -45,23 +45,37 @@ Each clock needs its own ritual because the failure modes are different. Reorien
 
 ---
 
+## Fourth operator tool: cross-agent extraction (`harvest`)
+
+**Not a fourth clock.** `coffee`, `dream`, and `bridge` answer **when** the operator needs framing, day-close residue, or session-boundary transfer. **`harvest`** answers **how** to ship dense session substance to **another agent or thread that is already running** (parallel review, tooling handoff, second Cursor session without a cold start).
+
+- **Skill:** [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md)
+- **Packet contract:** [harvest-packet-contract.md](harvest-packet-contract.md) (section headings; **no** trailing `coffee` — contrast **bridge**, whose transfer block ends with `coffee` for cold start; bridge packet contract may live upstream in companion-self)
+- **Optional script:** `scripts/session_harvest.py` — checklist + template + optional `--log` → `log_cadence_event.py --kind harvest`
+
+**Template home:** Canonical skill + contract + cadence doc edits land in **companion-self** first; **grace-mar** reconciles via `template_diff.py` / operator **EXECUTE** scope (**grace-mar only** / **template only** / **both**). If you only have this repo checked out, implement here and reconcile the template on the next dual-repo pass.
+
+---
+
 ## Contents
 
 | File | Purpose |
 |------|---------|
 | **This README** | Scope, rhythm, boundaries for work-cadence. |
-| **[work-cadence-events.md](work-cadence-events.md)** | Append-only audit of cadence runs (coffee/dream/bridge). Not Record. |
+| **[harvest-packet-contract.md](harvest-packet-contract.md)** | Session Harvest Packet headings and rules vs bridge. |
+| **[work-cadence-events.md](work-cadence-events.md)** | Append-only audit of cadence runs (coffee/dream/bridge; optional harvest). Not Record. |
 
 ---
 
 ## Cadence event audit
 
-Each coffee, dream, and bridge run appends one line to [work-cadence-events.md](work-cadence-events.md) via `scripts/log_cadence_event.py`. This is operator-facing telemetry — not the Record, not self-memory.
+Each coffee, dream, bridge, and optional **harvest** run appends one line to [work-cadence-events.md](work-cadence-events.md) via `scripts/log_cadence_event.py`. This is operator-facing telemetry — not the Record, not self-memory.
 
 **Emitters:**
 - **dream** — `auto_dream.py` appends after successful completion (gated on `apply=True`)
 - **coffee** — `operator_coffee.py` appends after all steps succeed
 - **bridge** — agent runs `log_cadence_event.py --kind bridge` in Step 2 after push
+- **harvest** — optional; operator or agent runs `session_harvest.py --log` or `log_cadence_event.py --kind harvest` after emitting a packet (lighter than bridge; telemetry consistency only)
 
 **Leaf-only rule:** Orchestrators (`operator_end_of_day.py`, `operator_coffee.py` when it chains) do not emit their own events. Only the leaf ritual logs.
 
@@ -99,6 +113,7 @@ Which on-disk surfaces each ritual reads, writes, and whether companion approval
 | **coffee** | self-memory, recursion-gate, last-dream.json, git status, territories | nothing (read-only planning) | No |
 | **dream** | self-memory, SELF, EVIDENCE, recursion-gate | self-memory, last-dream.json, contradiction digest, cadence events, pipeline events | No (Maintenance mode) |
 | **bridge** | self-memory, recursion-gate, last-dream.json, territories, git status/log | git commits, cadence events | No (operational) |
+| **harvest** | same class as coffee (self-memory, recursion-gate, last-dream.json, territories, git; optional session-transcript) | **default none**; optional operator-requested save under `work-cadence/harvest-packets/` or `last-harvest.md`; optional cadence event line | No |
 | **gate merge** | recursion-gate candidates, SELF, EVIDENCE, prompt | SELF, EVIDENCE, prompt, session-log, recursion-gate, pipeline events, PRP | **Yes — companion approval required** |
 
 **Key boundary:** coffee and bridge never write to identity surfaces. Dream writes to ephemeral/operational surfaces only (self-memory, handoff artifacts). Only the gated merge path — triggered by companion approval, executed by `process_approved_candidates.py` — touches the Record.
@@ -146,6 +161,11 @@ When a cadence run produces unexpected output, check these in order:
 3. **Transfer prompt thin?** Bridge synthesizes from on-disk state. If territories have no recent history or the gate is empty, those sections will be sparse — that's correct, not broken.
 4. **Coffee didn’t run after paste?** The transfer block must end with a lone line `coffee` (no code fence). If that line was dropped when copying, append `coffee` or re-copy from the bridge output; see `.cursor/skills/bridge/SKILL.md` Step 3.
 
+### Harvest packet confusion
+
+1. **Wrong ritual?** If the target session needs a **cold start**, use **`bridge`** (ends with `coffee`). **`harvest`** packets **must not** end with `coffee`; see [harvest-packet-contract.md](harvest-packet-contract.md).
+2. **Thin narrative sections?** The script only prints paths and git; the agent fills outcomes from the **visible thread** (no full Cursor export API). Add a one-line operator steer or read `session-transcript.md` if needed.
+
 ### General
 
 - **Which cadence events actually ran?** Check `docs/skill-work/work-cadence/work-cadence-events.md` — one line per run with timestamp, kind, mode, and outcome.
@@ -158,6 +178,7 @@ When a cadence run produces unexpected output, check these in order:
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — coffee trigger
 - [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — dream trigger
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — bridge trigger
+- [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — harvest trigger
 - [work-coffee/](../work-coffee/) — coffee design history and menu reference
 - [work-dream/](../work-dream/) — dream design history and doctrine
 - [work-modules-history-principle.md](../work-modules-history-principle.md) — cross-territory history convention

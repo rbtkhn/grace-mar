@@ -71,3 +71,16 @@ def test_ok_false_recorded(events_file: Path) -> None:
     )
     text = events_file.read_text(encoding="utf-8")
     assert "ok=false" in text
+
+
+def test_append_harvest_event(events_file: Path) -> None:
+    append_cadence_event(
+        "harvest",
+        "grace-mar",
+        ok=True,
+        mode="default",
+        kv={"packet": "chat"},
+        events_path=events_file,
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert "— harvest (grace-mar) ok=true mode=default packet=chat" in text

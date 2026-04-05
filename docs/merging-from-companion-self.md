@@ -34,6 +34,8 @@ Template → instance sync in grace-mar uses **four layers**, each with a differ
 
 The default clone-on-miss behavior targets **`./companion-self`** instead of `/tmp/companion-self`, so edits and diffs stay inside your tree when you use the workspace file.
 
+**Session harvest (`harvest` skill):** Upstream **companion-self** is the canonical home for `.cursor/skills/harvest/`, `docs/skill-work/work-cadence/harvest-packet-contract.md`, and related **work-cadence** README edits. After landing there, reconcile into grace-mar with `template_diff.py` / operator **EXECUTE** scope — see [work-cadence README](skill-work/work-cadence/README.md) (section *Fourth operator tool: cross-agent extraction*).
+
 ---
 
 ## 1. Sync classes and template surfaces
