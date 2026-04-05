@@ -1,5 +1,7 @@
 # Instance paths (Xavier’s `companion-xavier` repository)
 
+**Her GitHub user (operator-confirmed):** [@Xavier-x01](https://github.com/xavier-x01). Template clone URLs use `https://github.com/<username>/…` — substitute this handle when the **companion-xavier** (or chosen) repo exists on her account.
+
 Runbooks in **work-xavier** often refer to paths such as:
 
 - `docs/seed-survey/seed-survey-initiation.md` (MCQ)

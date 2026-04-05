@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-07
+
+- **xavier-work-profile.md:** Recorded GitHub profile [https://github.com/xavier-x01](https://github.com/xavier-x01) (@Xavier-x01) in **Role snapshot** (operator-confirmed). [INSTANCE-PATHS.md](INSTANCE-PATHS.md) cross-link.
+
 ### 2026-04-06
 
 - **xavier-work-profile.md:** Skills matrix — **Claude Code** stays **learning** (evidence-backed notes: Sonnet 4.6, parallel threads, Firebase/site track); **Gemini** → **supported** for **narrow** slice (BrewMind copy + HTML/CSS FAQ handoff); **learning in flight** table filled; **Last reviewed** 2026-04-06.
