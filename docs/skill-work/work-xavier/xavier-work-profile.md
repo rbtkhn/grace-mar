@@ -17,7 +17,7 @@
 |--------|--------|
 | **Relationship** | Employee / business partner (SMM and related execution; BrewMind and advisor workflows per [README.md](README.md)). |
 | **Primary WORK lane** | `docs/skill-work/work-xavier/` in grace-mar; her instance lives in **`companion-xavier`** (or equivalent), not inside grace-mar `users/`. |
-| **Last reviewed** | 2026-04-03 — operator fill-in on each pass. |
+| **Last reviewed** | 2026-04-06 — matrix calibrated from tooling evidence (Claude UI + BrewMind FAQ ingest); not a formal review. |
 
 ---
 
@@ -27,8 +27,8 @@ Use **level** as a coarse signal: `learning` · `supported` · `independent` · 
 
 | Area | Tool or skill | Level | Notes | Last updated |
 |------|----------------|-------|--------|--------------|
-| AI-assisted coding | **Claude Code** | learning | In progress; track milestones here or in week KPI logs. | 2026-04-03 |
-| AI-assisted coding | **Google Gemini** (product family / workflows in use) | learning | In progress; name concrete surfaces (app, API, CLI) when stable. | 2026-04-03 |
+| AI-assisted coding | **Claude Code** | learning | **Evidence:** multiple concurrent threads, **Sonnet 4.6** ([claude-xavier-ui-ingest-2026-04-05.md](evidence/claude-xavier-ui-ingest-2026-04-05.md)); tracks include **Firebase + GitHub** site work, BrewMind, learning plans, automated content. **Breadth high** — confirm **source-of-truth** per thread with operator ([xavier-progress-log.md](xavier-progress-log.md) §4). Not scored **independent** until shipped verticals exist without hand-holding. | 2026-04-06 |
+| AI-assisted coding | **Google Gemini** (product family / workflows in use) | supported | **Scoped:** BrewMind **marketing/site copy** + **structured HTML/CSS** handoffs (FAQ accordion + theme integration per [brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md)). **Out of scope for this row:** solo git/deploy, backend, full-stack ownership — still **learning** there until evidenced. | 2026-04-06 |
 | Instance + workflow | **Cursor** + companion-self patterns | *(operator)* | See [LEARN-PATH.md](LEARN-PATH.md), [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md). | |
 | SMM execution | Content plans, posting, analytics | *(operator)* | Score against [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md). | |
 | BrewMind / field | Partner outreach, PH pilot context | *(operator)* | [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md). | |
@@ -43,15 +43,15 @@ Short-form log for active upskill; fold into the matrix when a capability stabil
 
 | Topic | Started | Target / done signal | Notes |
 |-------|---------|----------------------|--------|
-| Claude Code | — | — | Operator: add start date and “done enough for…” criteria. |
-| Gemini | — | — | Operator: specify which Gemini workflow; avoid vague “using AI.” |
+| Claude Code | 2026-04-03 (first archived chats) | One **shipped** vertical with traceable outcome (site change merged, or thread closed with artifact linked) | Prioritize **Firebase/site** *or* **BrewMind web** — not both half-done. |
+| Gemini (site copy + HTML) | 2026-04-05 (FAQ ingest) | FAQ + CSS/HTML **pasted** to site repo; **prices/hours** reconciled with [brewmind-business-plan.md](brewmind-business-plan.md) before public | Matrix row **supported** only for this slice. |
 
 ---
 
 ## 4. Evidence and cross-links
 
 - **Execution evidence:** [content-plan-week2-2026-03-31.md](content-plan-week2-2026-03-31.md), [week2-kpi-budget-log-2026-03-31.md](week2-kpi-budget-log-2026-03-31.md), [week2-execution-2026-03-31.md](week2-execution-2026-03-31.md).  
-- **Operator progress / tooling evidence:** [xavier-progress-log.md](xavier-progress-log.md), [work-xavier-history.md](work-xavier-history.md), [evidence/](evidence/).  
+- **Operator progress / tooling evidence:** [xavier-progress-log.md](xavier-progress-log.md), [work-xavier-history.md](work-xavier-history.md), [evidence/](evidence/) — e.g. [claude-xavier-ui-ingest-2026-04-05.md](evidence/claude-xavier-ui-ingest-2026-04-05.md), [brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md).  
 - **SMM fit (not full resume):** [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md).  
 - **Business context:** [../work-business/xavier/README.md](../work-business/xavier/README.md).  
 - **Navigation:** [INDEX.md](INDEX.md).
