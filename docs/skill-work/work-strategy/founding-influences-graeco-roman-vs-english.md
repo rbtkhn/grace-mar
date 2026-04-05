@@ -6,9 +6,24 @@
 
 ---
 
+## Contents (skim)
+
+| Jump | Topic |
+|------|--------|
+| [Abstract](#abstract) | Summary + keywords |
+| [§1–2](#1-introduction) | Introduction, historiography, expectations |
+| [§3](#3-corpus-editions-and-canon-stability) | Editions, thirty-two-unit canon |
+| [§4](#4-methodology) | Rubric (Phase A), lexicons (Phase B) |
+| [§5](#5-findings) | Tables 1–5, pooled interpretation |
+| [§6–8](#6-discussion) | Discussion, limits, conclusion |
+| [References](#references) | Print and digital sources |
+| [Appendix A](#appendix-a-supplementary-index-probe-in-repository) | In-repo CIV-MEM index probe |
+
+---
+
 ## Abstract
 
-Scholarly accounts of the American founding often stress either British imperial–constitutional argument or neo-classical and Montesquieu-inflected “republican” design language. This report does not resolve that debate causally; it **operationalizes** it on a **fixed canon** of thirty-two primary units (imperial crisis through selected *Federalist* and Anti-Federalist essays) using two complementary methods: (1) a **frozen three-lens ordinal rubric** (0–10 classical-republic lean per unit), and (2) **preregistered lexical counts** of classical-republic proxy lemmas versus two distinct English legal proxies (imperial–constitutional/colonial–legal; rights/common-law/adjudication). Aggregate rubric means show a **low classical lean** in the pre-independence band (mean 3.64), a **high classical lean** in the *Federalist* sample (7.19), and an **intermediate** Anti-Federalist band (3.93). Lexical rates align directionally: crisis-era texts exhibit dense imperial–English lemma use; *Publius* exhibits high classical-proxy density and sparse imperial–English lemmas, while still registering substantial **second-list** English (law, constitution, court) density—so headline “GR versus English” contrasts **depend on which English list** is paired with the classical proxy. The report records edition families, limitations (host noise, short excerpts, list sensitivity), and **counter-archive** gaps (Loyalist, Indigenous, enslaved petitioners, etc.). A supplementary in-repository index probe found **no usable overlap** with founding-specific queries without re-indexing.
+Scholarly accounts of the American founding often stress either British imperial–constitutional argument or neo-classical and Montesquieu-inflected “republican” design language. This report does not resolve that debate causally; it **operationalizes** it on a **fixed canon** of thirty-two primary units (imperial crisis through selected *Federalist* and Anti-Federalist essays) using two complementary methods: (1) a **frozen three-lens ordinal rubric** (0–10 classical-republic lean per unit), and (2) **preregistered lexical counts** of classical-republic proxy lemmas versus two distinct English legal proxies (imperial–constitutional/colonial–legal; rights/common-law/adjudication). Aggregate rubric means show a **low classical lean** in the pre-independence band (mean 3.64), a **high classical lean** in the *Federalist* sample (7.19), and an **intermediate** Anti-Federalist band (3.93). Lexical rates align directionally: crisis-era texts exhibit dense imperial–English lemma use; *Publius* exhibits high classical-proxy density and sparse imperial–English lemmas, while still registering substantial **second-list** English (law, constitution, court) density—so headline “GR versus English” contrasts **depend on which English list** is paired with the classical proxy. The report records edition families, limitations (host noise, short excerpts, list sensitivity), and **counter-archive** gaps (Loyalist, Indigenous, enslaved petitioners, etc.). A supplementary in-repository **CIV-MEM–style** index probe found **no usable overlap** with founding-specific queries without re-indexing (Appendix A).
 
 **Keywords:** American founding; civic humanism; Montesquieu; *Federalist*; Anti-Federalist; content analysis; lexicon; digital editions
 
@@ -33,7 +48,7 @@ The analysis is **reproducible** where the pipeline is scripted; the rubric rema
 1. Mass-legible **imperial-crisis** texts skew toward **English-leaning** rubric scores and high **imperial–constitutional/colonial** lemma rates.  
 2. **Constitutional design** discourse—especially the sampled *Federalist* essays—scores **high** on classical-republic lean and on classical-proxy lemmas relative to the first English list.  
 3. **Overlap / fusion** appears as **mid-range** scores on pamphlets and structural texts (Articles, mid-tier convention pieces).  
-4. Lexical **English** measures should **shift** when grievance-adjacent imperial vocabulary is distinguished from **rights/court/constitution** vocabulary.
+4. Lexical **English** measures should **shift** when grievance-adjacent imperial vocabulary is distinguished from **rights/court/constitution** vocabulary (see **§5.3**).
 
 ---
 
@@ -144,7 +159,7 @@ Phase B **complements** Phase A with **token-level** measures. It is **not** arg
 
 | Slice | Mean GR-lean (0–10) | Note |
 |-------|---------------------|------|
-| Rows 1–12 (imperial crisis → independence) | **3.64** | Complement ≈ 6.36 on 0–10 scale as crude “English-lean” proxy |
+| Rows 1–12 (imperial crisis → independence) | **3.64** | Complement **10 − mean** ≈ **6.36** on the 0–10 scale — an informal “English-lean” sketch, not a second coded instrument |
 | Rows 1–18 (through transmittal) | **4.24** | Convention-era texts raise the mean |
 | Rows 19–27 (*Federalist*) | **7.19** | Strong design- and theory-leaning classical idiom |
 | Rows 28–32 (Anti-Federalist) | **3.93** | Closer to English-rights and consolidation anxieties on rubric |
@@ -229,7 +244,7 @@ The **crisis band** is **stable** across English lists on classical **share** (�
 
 ### 6.1 Composite inheritance
 
-Elite revolutionary argument rarely staged a clean **Rome against Westminster**. The materials support a **Whig-republican composite**: imperial–parliamentary and colonial-legal language for **legitimacy within empire** and for **rights claims against metropolitan policy**; classical and especially **Montesquieu-inflected** language for **republican legitimacy** and **institutional design** after the break.
+Elite revolutionary argument rarely staged a clean **Rome against Westminster**. The materials support a **Whig-republican composite**: imperial–parliamentary and colonial–legal language for **legitimacy within empire** and for **rights claims against metropolitan policy**; classical and especially **Montesquieu-inflected** language for **republican legitimacy** and **institutional design** after the break.
 
 ### 6.2 Period and genre variation
 
@@ -282,6 +297,8 @@ Pocock, J.G.A. *The Machiavellian Moment: Florentine Political Thought and the A
 
 Wood, Gordon S. *The Creation of the American Republic, 1776–1787.* Chapel Hill: University of North Carolina Press.
 
+Montesquieu, Charles-Louis de Secondat, baron de. *De l’esprit des lois* (*The Spirit of Laws*), 1748. Cited in this report only as a historiographical anchor for **Montesquieu-inflected** classical-republic vocabulary in the rubric and discussion (§§2, 4.1, 6.1); no edition-critical claim.
+
 *The Founders’ Constitution.* Ed. Philip B. Kurland and Ralph Lerner. Chicago: University of Chicago Press. Online: https://press-pubs.uchicago.edu/founders/.
 
 National Archives. Founders Online. https://founders.archives.gov/.
@@ -317,3 +334,4 @@ Yale Law School. *The Avalon Project: Eighteenth Century Documents.* https://ava
 | Lexical numerics (Tables 3–5) | Aligned with `founding_lexical_compare.py` runs 2026-04-05 / 2026-04-06 |
 | Report structure | Academic reformulation (same substantive content), 2026-04-06 |
 | Location | Moved from `docs/skill-work/work-cadence/` to **`docs/skill-work/work-strategy/`**, 2026-04-06 |
+| Revision | Compass pass: skim **Contents**, expectation 4 → **§5.3**, abstract → Appendix A pointer, complement row gloss, **colonial–legal** dash, **Montesquieu** reference line, 2026-04-04 |

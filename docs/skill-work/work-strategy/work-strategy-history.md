@@ -12,6 +12,10 @@
 
 _(Append below this line.)_
 
+## 2026-04-04
+
+- **Coffee C (Compass) → founding paper revision:** [founding-influences-graeco-roman-vs-english.md](founding-influences-graeco-roman-vs-english.md) — skim **Contents**, cross-refs (expectation 4 → §5.3; abstract → Appendix A), Table 2 complement gloss, **colonial–legal** dash, **Montesquieu** reference line, document history row.
+
 ## 2026-04-05
 
 - **Predictive History → work-strategy:** Explicit wiring — [common-inputs.md](common-inputs.md) § **Predictive History**; [README.md](README.md) transcript row; [work-strategy/transcripts/README.md](../../../research/external/work-strategy/transcripts/README.md) PH subsection; [predictive-history/README.md](../../../research/external/youtube-channels/predictive-history/README.md) **Work-strategy wiring** table; [current-events-analysis.md](current-events-analysis.md) Perceiver bullet; [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) spine note.
