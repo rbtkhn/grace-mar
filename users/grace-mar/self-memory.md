@@ -2,7 +2,7 @@
 
 > Not part of the Record. SELF is authoritative. “Ephemeral” = non-gated and rotatable, not “only short-term.” See docs/memory-template.md v2.0 (three horizons).
 
-Last rotated: 2026-04-02
+Last rotated: 2026-04-05
 
 ## Short-term
 
