@@ -22,6 +22,7 @@
 ### 2026-04-05
 
 - **Evidence ingest — BrewMind FAQ (Gemini):** PDF transcript + mobile screenshot + [evidence/brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md); [xavier-progress-log.md](xavier-progress-log.md) updated (index, burst, coaching, revision).
+- **Evidence ingest — Claude app (Sonnet 4.6):** [evidence/claude-xavier-sidebar-starred-recents-2026-04-05.png](evidence/claude-xavier-sidebar-starred-recents-2026-04-05.png), [evidence/claude-xavier-recents-list-2026-04-05.png](evidence/claude-xavier-recents-list-2026-04-05.png), [evidence/claude-xavier-ui-ingest-2026-04-05.md](evidence/claude-xavier-ui-ingest-2026-04-05.md); progress log updated.
 
 ### 2026-04-04
 
