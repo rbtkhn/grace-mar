@@ -4,17 +4,43 @@
   "user_slug": "demo-seed",
   "status": "ready",
   "stages": [
-    { "id": "intake", "status": "complete", "notes": "Synthetic demo intake" },
-    { "id": "identity", "status": "complete" },
-    { "id": "curiosity", "status": "complete" },
-    { "id": "pedagogy", "status": "complete" },
-    { "id": "expression", "status": "complete" },
-    { "id": "memory_contract", "status": "complete" },
-    { "id": "trials", "status": "complete" },
-    { "id": "readiness", "status": "complete" }
+    {
+      "id": "intake",
+      "status": "complete",
+      "notes": "Synthetic demo intake"
+    },
+    {
+      "id": "identity",
+      "status": "complete"
+    },
+    {
+      "id": "curiosity",
+      "status": "complete"
+    },
+    {
+      "id": "pedagogy",
+      "status": "complete"
+    },
+    {
+      "id": "expression",
+      "status": "complete"
+    },
+    {
+      "id": "memory_contract",
+      "status": "complete"
+    },
+    {
+      "id": "trials",
+      "status": "complete"
+    },
+    {
+      "id": "readiness",
+      "status": "complete"
+    }
   ],
   "artifacts": {
     "seed_intake": "seed_intake.json",
+    "seed_intent": "seed_intent.json",
     "seed_identity": "seed_identity.json",
     "seed_curiosity": "seed_curiosity.json",
     "seed_pedagogy": "seed_pedagogy.json",

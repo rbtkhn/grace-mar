@@ -1,12 +1,12 @@
 # Change Review
 
-**Grace-Mar:** Synced from [companion-self `docs/change-review.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/change-review.md) (same path). Re-merge via [merging-from-companion-self.md](merging-from-companion-self.md).
-
 Companion-Self template · Governed self-revision doctrine (v1 entrypoint)
 
 **Machine validation:** [change-review-validation.md](change-review-validation.md) — schema checks, reference integrity, and Markdown diff generation for `users/<id>/review-queue/`.
 
 **Gate vs change-review:** [gate-vs-change-review.md](gate-vs-change-review.md) — when to use the recursion gate vs the review queue.
+
+**State model:** Change review governs transitions **into** the [Governed State Layer](governed-state-layer.md). Raw [evidence](evidence-layer.md) and [prepared context](prepared-context-layer.md) are inputs to review — not durable governed state by themselves. See [state-model.md](state-model.md).
 
 ---
 

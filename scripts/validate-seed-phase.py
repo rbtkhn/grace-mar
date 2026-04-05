@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "README.md",
     "seed-phase-manifest.json",
     "seed_intake.json",
+    "seed_intent.json",
     "seed_identity.json",
     "seed_curiosity.json",
     "seed_pedagogy.json",
@@ -36,6 +37,7 @@ REQUIRED_FILES = [
 SCHEMA_BY_FILE = {
     "seed-phase-manifest.json": "schema-registry/seed-phase-manifest.v1.json",
     "seed_intake.json": "schema-registry/seed-intake.v1.json",
+    "seed_intent.json": "schema-registry/seed-intent.v1.json",
     "seed_identity.json": "schema-registry/seed-identity.v1.json",
     "seed_curiosity.json": "schema-registry/seed-curiosity.v1.json",
     "seed_pedagogy.json": "schema-registry/seed-pedagogy.v1.json",
@@ -51,6 +53,7 @@ SCHEMA_BY_FILE = {
 # Manifest "artifacts" object uses logical keys -> filename values
 EXPECTED_ARTIFACT_KEYS = {
     "seed_intake",
+    "seed_intent",
     "seed_identity",
     "seed_curiosity",
     "seed_pedagogy",

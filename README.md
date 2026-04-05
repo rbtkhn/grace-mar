@@ -18,6 +18,8 @@ The fork grows only through what the user explicitly provides. An optional emula
 
 **Canonical Record surfaces (first-class):** **SELF** (identity + SELF-KNOWLEDGE) · **SELF-LIBRARY** (reference + CIV-MEM) · **SKILLS** · **EVIDENCE**. Customer-facing display labels map to machine keys in **`scripts/surface_aliases.py`**: **Library** (SELF-LIBRARY / `self_library`), **Skills** (capability index / `self_skills`), **Evidence** (activity log body on `self-archive.md` / `self_evidence`). See [docs/glossary.md](docs/glossary.md).
 
+**Template state model (companion-self):** A three-layer draft for evidence, prepared context, and governed state lives in [docs/state-model.md](docs/state-model.md) and linked layer docs; it complements, and does not replace, the four Record surfaces above.
+
 > **SELF** concerns **identity** and **SELF-KNOWLEDGE** (who she is, what she knows about herself). **SELF-LIBRARY** is the **governed reference layer** attached to the fork (return-to sources, domain shelves). **CIV-MEM** is the **civilizational-memory domain within SELF-LIBRARY** — not part of identity. See [docs/boundary-self-knowledge-self-library.md](docs/boundary-self-knowledge-self-library.md).
 
 Core modules:

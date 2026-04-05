@@ -18,6 +18,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 JSON_FILES = [
     "seed-phase-manifest.json",
     "seed_intake.json",
+    "seed_intent.json",
     "seed_identity.json",
     "seed_curiosity.json",
     "seed_pedagogy.json",
@@ -52,7 +53,6 @@ def main() -> None:
     rd = data["seed_readiness.json"].get("readiness", {})
     cm = data["seed_confidence_map.json"].get("confidence_map", {})
     man = data["seed-phase-manifest.json"]
-    cadence = data["seed_intake.json"].get("cadence_preference", {})
 
     lines = [
         "# Seed Dossier",
@@ -63,35 +63,50 @@ def main() -> None:
         "",
         f"Manifest status: **{man.get('status', '')}**. Readiness decision: **{rd.get('decision', '')}** (score {rd.get('readiness_score', '')}).",
         "",
+        "## Stage Progress",
+        "",
     ]
-    if cadence:
-        rename_offer = cadence.get("rename_offer", {})
-        thresholds = []
-        if rename_offer.get("offer_after_successful_uses") is not None:
-            thresholds.append(f"{rename_offer['offer_after_successful_uses']} successful uses")
-        if rename_offer.get("offer_after_distinct_days") is not None:
-            thresholds.append(f"{rename_offer['offer_after_distinct_days']} distinct days")
-        if rename_offer.get("minimum_successful_followthrough_uses") is not None:
-            thresholds.append(
-                f"{rename_offer['minimum_successful_followthrough_uses']} successful follow-through uses"
-            )
-        lines.extend(
-            [
-                "## Cadence Ritual",
-                "",
-                f"Default **{cadence.get('default_trigger_word', 'coffee')}**; active **{cadence.get('active_trigger_word', 'coffee')}**; "
-                f"source **{cadence.get('word_source', 'default')}**.",
-                "",
-                f"Personalization timing **{cadence.get('personalization_timing', 'post_adoption_optional')}**; "
-                f"rename offer status **{rename_offer.get('status', 'not_yet_eligible')}**.",
-            ]
-        )
-        if thresholds:
-            lines.extend(["", "Offer threshold: " + "; ".join(thresholds) + "."])
-        lines.append("")
-    lines.extend(["## Stage Progress", ""])
     for s in man.get("stages", []):
         lines.append(f"- **{s.get('id')}**: {s.get('status')}")
+    intent = data["seed_intent.json"]
+    lines.extend(
+        [
+            "",
+            "## Seed intent",
+            "",
+            intent.get("companion_purpose", "—"),
+            "",
+            "**Supported:** " + "; ".join(intent.get("supported_workflows") or []) + ".",
+            "",
+            "**Unsupported:** " + "; ".join(intent.get("unsupported_workflows") or []) + ".",
+            "",
+            "**Review-required:** " + "; ".join(intent.get("review_required_zones") or []) + ".",
+            "",
+        ]
+    )
+    intake = data["seed_intake.json"]
+    cop = intake.get("cursor_operator_profile")
+    lines.extend(["", "## Intake — Cursor / operator workspace", ""])
+    if cop:
+        lines.append(
+            f"- **IDE:** {cop.get('ide_primary', '—')} · **Rules preset:** `{cop.get('rules_pack_preset', '—')}`"
+        )
+        hints = cop.get("work_surface_hints") or []
+        lines.append(f"- **WORK hints:** {', '.join(hints) if hints else '—'}")
+        gen = cop.get("generate_cursor_pack_on_activation")
+        if gen is True:
+            gen_s = "yes"
+        elif gen is False:
+            gen_s = "no"
+        else:
+            gen_s = "—"
+        lines.append(f"- **Generate `.cursor/` on activation (intent):** {gen_s}")
+        notes = (cop.get("operator_notes") or "").strip()
+        lines.append(f"- **Operator notes:** {notes or '—'}")
+    else:
+        lines.append(
+            "- *No `cursor_operator_profile` on intake — optional; see docs/cursor-pack-from-seed.md.*"
+        )
     lines.extend(
         [
             "",
@@ -179,11 +194,7 @@ def main() -> None:
 
     out_path = target / "seed_dossier.md"
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    try:
-        shown_path = out_path.relative_to(REPO_ROOT)
-    except ValueError:
-        shown_path = out_path
-    print(f"Wrote {shown_path}")
+    print(f"Wrote {out_path.relative_to(REPO_ROOT)}")
 
 
 if __name__ == "__main__":

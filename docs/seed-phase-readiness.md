@@ -44,6 +44,12 @@ Operators may tighten; loosening below these should be **explicitly documented**
 
 ---
 
+## Intent artifact
+
+Readiness review should confirm the **intent artifact** is present and **sufficiently specific**: `seed_intent.json` validates against its schema, `companion_purpose` is substantive (not generic filler), and supported / unsupported / review-required zones are filled enough to guide post-seed governance. See [seed-phase-intent.md](seed-phase-intent.md).
+
+---
+
 ## Minimum complete stages
 
 For **pass**, all of: intake, identity, curiosity, pedagogy, expression, memory_contract, trials must be **complete**.

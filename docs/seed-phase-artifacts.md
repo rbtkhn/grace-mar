@@ -4,8 +4,6 @@
 
 These files are **pre-activation formation outputs**. They are **not** the live Record (`self.md`, `self-evidence`, IX files). After activation, instance repos use the **gated pipeline** to merge evidence into the Record.
 
-**Orientation:** [start-here.md](start-here.md) — [Choose your path](start-here.md#choose-your-path) (A–F), then [survey calibration](seed-phase-survey.md#calibrate-from-your-start-here-path) when capturing seeds.
-
 ---
 
 ## Canonical layout
@@ -24,7 +22,8 @@ Two reference trees in this repo:
 | File | Stage(s) | Role |
 |------|----------|------|
 | `seed-phase-manifest.json` | All | Index: versions, status, artifact paths, optional changelog. |
-| `seed_intake.json` | 0 | Intake, constraints, education focus, completion metrics. Optional **`start_here_pick`** (`A`–`F`): which [start-here Choose your path](start-here.md#choose-your-path) was used before formation (navigation metadata; validated by `seed-intake.v1.json`). Optional **`cadence_preference`**: operator UX metadata for cadence ritual defaults (default `coffee`, rename later). |
+| `seed_intake.json` | 0 | Intake, constraints, education focus, completion metrics; optional **`cursor_operator_profile`** (IDE + Cursor rules preset intent for the instance — see [cursor-pack-from-seed.md](cursor-pack-from-seed.md)). |
+| `seed_intent.json` | 0 (parallel) | Operating purpose, supported/unsupported workflows, review-required and human-only zones, activation success criteria — see [seed-phase-intent.md](seed-phase-intent.md). |
 | `seed_identity.json` | 1 | Identity scaffold + confidence. |
 | `seed_curiosity.json` | 2 | Curiosity scaffold + confidence. |
 | `seed_pedagogy.json` | 3 | Pedagogy scaffold + confidence. |
@@ -37,7 +36,7 @@ Two reference trees in this repo:
 | `work_business_seed.json` | (parallel) | Business / commercial / venture context seed; governs promotion into `users/<id>/work-business.md`. |
 | `seed_dossier.md` | 7 | Human-readable summary for sign-off. |
 
-**Naming:** JSON files use **snake_case** on disk. JSON Schemas in `schema-registry/` use **kebab-case** with `.v1.json` suffix (e.g. `seed-intake.v1.json` validates `seed_intake.json`; `work-dev-seed.v1.json` validates `work_dev_seed.json`; `work-business-seed.v1.json` validates `work_business_seed.json`).
+**Naming:** JSON files use **snake_case** on disk. JSON Schemas in `schema-registry/` use **kebab-case** with `.v1.json` suffix (e.g. `seed-intake.v1.json` validates `seed_intake.json`; `seed-intent.v1.json` validates `seed_intent.json`; `work-dev-seed.v1.json` validates `work_dev_seed.json`; `work-business-seed.v1.json` validates `work_business_seed.json`).
 
 ---
 
@@ -70,10 +69,10 @@ It begins **blank** in the template and is populated only when seed-survey evide
 **Boundary notes**
 
 - `work-dev.md` is a **user module** under `users/<id>/`.
-- It is **not** the operator-facing `docs/skill-work/work-dev/` territory (integration / OpenClaw / exports).
-- It is **not** `self-skill-work` / `self-skills.md`, which tracks work-related **skill claims** rather than development-context preferences.
+- It is **not** the operator-facing `docs/skill-work/work-dev/` tree (integration, OpenClaw, exports).
+- It is **not** `self-skill-work`, which tracks **skill claims** rather than development-context preferences.
 
-**Schema note:** `work_dev_seed.json` is governed by `additionalProperties: false` in its schema; new keys require a schema version bump, not ad hoc insertion.
+**Schema note:** `work_dev_seed.json` uses `additionalProperties: false`; new keys require a schema version bump.
 
 ---
 

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-intent.v1.json",
+  "title": "seed_intent",
+  "description": "Explicit operating purpose and boundaries for the companion instance at seed phase.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "companion_purpose",
+    "supported_workflows",
+    "unsupported_workflows",
+    "human_only_judgment_zones",
+    "review_required_zones",
+    "activation_success_criteria"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.0\\.0$"
+    },
+    "companion_purpose": {
+      "type": "string",
+      "minLength": 20
+    },
+    "supported_workflows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "unsupported_workflows": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "human_only_judgment_zones": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_required_zones": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authority_notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "activation_success_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    }
+  }
+}

@@ -28,6 +28,8 @@ A possible governed change is detected from one or more sources:
 
 Detection does not change governed state by itself.
 
+**Prepared context:** Review inputs may be produced from [prepared context](prepared-context-layer.md) artifacts (summaries, bundles, structured drafts). Prepared context itself is **not** governed state until a proposal is accepted and merged through this lifecycle or the gate.
+
 ---
 
 ### 2. Propose

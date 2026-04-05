@@ -2,12 +2,42 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schemaVersion": 1,
   "description": "Cached audit mirror of companion-self's canonical template-manifest. Use for local diffing and operator visibility inside grace-mar; the canonical source remains the upstream manifest at the commit recorded in template-source.json / targeted by instance-contract.json.",
-  "canonicalAsOf": "2026-03-28",
+  "canonicalAsOf": "2026-04-05",
   "templateVersion": "0.4.0",
   "paths": [
     {
       "path": "docs/concept.md",
       "description": "Concept: Record, Voice, education structure, knowledge boundary, invariants, long-term objectives.",
+      "optional": false
+    },
+    {
+      "path": "docs/state-model.md",
+      "description": "Three-layer state model (evidence, prepared context, governed).",
+      "optional": false
+    },
+    {
+      "path": "docs/evidence-layer.md",
+      "description": "Evidence layer doctrine.",
+      "optional": false
+    },
+    {
+      "path": "docs/prepared-context-layer.md",
+      "description": "Prepared context layer doctrine.",
+      "optional": false
+    },
+    {
+      "path": "docs/governed-state-layer.md",
+      "description": "Governed state layer doctrine.",
+      "optional": false
+    },
+    {
+      "path": "docs/prepared-context-doctrine.md",
+      "description": "Prepared context principles.",
+      "optional": false
+    },
+    {
+      "path": "docs/evidence-to-context-pipeline.md",
+      "description": "Evidence to context reference pipeline.",
       "optional": false
     },
     {
@@ -22,7 +52,7 @@
     },
     {
       "path": "docs/seed-phase-stages.md",
-      "description": "Canonical seed stages 0–7 (intake through readiness gate).",
+      "description": "Canonical seed stages 0\u20137 (intake through readiness gate).",
       "optional": false
     },
     {
@@ -38,6 +68,11 @@
     {
       "path": "docs/seed-phase-artifacts.md",
       "description": "Seed artifact file set; layout under _template and demo; validation pointers.",
+      "optional": false
+    },
+    {
+      "path": "docs/seed-phase-intent.md",
+      "description": "Seed intent artifact doctrine (seed_intent.json).",
       "optional": false
     },
     {
@@ -301,6 +336,11 @@
       "optional": false
     },
     {
+      "path": "scripts/stage-evidence.py",
+      "description": "Starter: text file to prepared-context JSON stub.",
+      "optional": true
+    },
+    {
       "path": "scripts/requirements-seed-phase.txt",
       "description": "pip deps for seed-phase validation (jsonschema).",
       "optional": true
@@ -323,6 +363,11 @@
     {
       "path": "users/_template/seed-phase/seed_intake.json",
       "description": "Seed intake placeholder, including optional navigation metadata (`start_here_pick`) and deferred cadence ritual defaults (`cadence_preference`).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_intent.json",
+      "description": "Seed intent placeholder (purpose, workflows, review zones).",
       "optional": false
     },
     {
@@ -393,6 +438,11 @@
     {
       "path": "users/demo/seed-phase/seed_intake.json",
       "description": "Demo seed intake.",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_intent.json",
+      "description": "Demo seed intent.",
       "optional": false
     },
     {
@@ -536,6 +586,7 @@
     "schemas": {
       "seed_phase_manifest": "schema-registry/seed-phase-manifest.v1.json",
       "seed_intake": "schema-registry/seed-intake.v1.json",
+      "seed_intent": "schema-registry/seed-intent.v1.json",
       "seed_identity": "schema-registry/seed-identity.v1.json",
       "seed_curiosity": "schema-registry/seed-curiosity.v1.json",
       "seed_pedagogy": "schema-registry/seed-pedagogy.v1.json",

@@ -38,10 +38,8 @@ python3 scripts/validate-seed-phase.py users/_template/seed-phase --allow-placeh
 1. Expected files exist (see script `REQUIRED_FILES`).
 2. Each file parses as JSON (where applicable).
 3. Unless `--allow-placeholders`: each JSON instance validates against its schema in `schema-registry/`.
-4. `seed-phase-manifest.json` lists artifact keys matching the standard set (including `work_business_seed`, `work_dev_seed` → matching `.json` filenames).
+4. `seed-phase-manifest.json` lists artifact keys matching the standard set (including `seed_intent`, `work_business_seed`, `work_dev_seed` → matching `.json` filenames).
 5. `seed_dossier.md` exists (non-empty).
-
-Optional fields such as **`seed_intake.json.cadence_preference`** still validate strictly when present; omitting them is allowed.
 
 ---
 

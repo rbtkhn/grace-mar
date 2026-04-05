@@ -12,25 +12,19 @@ Paths: companion-self template-manifest.json
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/approval-inbox-spec.md
   - docs/change-review-validation.md
-  - docs/change-review.md
   - docs/concept.md
   - docs/contradiction-resolution.md
-  - docs/instance-patterns.md
   - docs/layer-map.json
-  - docs/seed-phase-artifacts.md
   - docs/seed-phase-stages.md
-  - docs/seed-phase-validation.md
-  - docs/seed-phase.md
   - docs/skill-work/README.md
   - docs/skill-work/work-cadence/README.md
   - docs/skill-work/work-cadence/harvest-packet-contract.md
   - docs/skill-work/work-cadence/work-cadence-events.md
-  - scripts/generate-seed-dossier.py
   - scripts/log_cadence_event.py
   - scripts/session_harvest.py
   - users/_template/recursion-gate.md
   - users/_template/review-queue/README.md
-  - users/_template/seed-phase/README.md
+  - users/_template/seed-phase/seed_dossier.md
   - users/_template/seed-phase/seed_intake.json
   - users/_template/self-memory.md
   - users/demo/seed-phase/seed_dossier.md
@@ -45,19 +39,19 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
 ### Same (no action)
   - bridges/bridge-schema.json
   - docs/change-review-lifecycle.md
+  - docs/change-review.md
   - docs/change-types.md
   - docs/contradiction-policy.md
+  - docs/evidence-layer.md
+  - docs/evidence-to-context-pipeline.md
+  - docs/governed-state-layer.md
+  - docs/instance-patterns.md
   - docs/long-term-objective.md
+  - docs/prepared-context-doctrine.md
+  - docs/prepared-context-layer.md
+  - docs/seed-phase-artifacts.md
   - docs/seed-phase-confidence-model.md
-  - docs/seed-phase-readiness.md
-  - docs/self-identity/intent-coherence-checklist.md
-  - docs/self-library-example-corpus-grace-mar-derived.md
-  - docs/skill-work/skill-work-alpha-school/alpha-school-benchmarks.yaml
-  - docs/skill-work/skill-work-alpha-school/alpha-school-reference.md
-  - docs/skill-work/skill-work-alpha-school/insights-alpha-moonshots-233-for-business.md
-  - docs/skill-work/skill-work-human-teacher/README.md
-  - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md
-  - docs/system-tensions-and-mysteries.md
-  ... and 63 more
+  - docs/seed-phase-intent.md
+  ... and 79 more
 
-Summary: same=78 differ=27 expected_drift=1 only_template=2 only_instance=0
+Summary: same=94 differ=21 expected_drift=1 only_template=2 only_instance=0

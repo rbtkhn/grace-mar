@@ -4,17 +4,42 @@
   "user_slug": "TODO",
   "status": "in_progress",
   "stages": [
-    { "id": "intake", "status": "in_progress" },
-    { "id": "identity", "status": "pending" },
-    { "id": "curiosity", "status": "pending" },
-    { "id": "pedagogy", "status": "pending" },
-    { "id": "expression", "status": "pending" },
-    { "id": "memory_contract", "status": "pending" },
-    { "id": "trials", "status": "pending" },
-    { "id": "readiness", "status": "pending" }
+    {
+      "id": "intake",
+      "status": "in_progress"
+    },
+    {
+      "id": "identity",
+      "status": "pending"
+    },
+    {
+      "id": "curiosity",
+      "status": "pending"
+    },
+    {
+      "id": "pedagogy",
+      "status": "pending"
+    },
+    {
+      "id": "expression",
+      "status": "pending"
+    },
+    {
+      "id": "memory_contract",
+      "status": "pending"
+    },
+    {
+      "id": "trials",
+      "status": "pending"
+    },
+    {
+      "id": "readiness",
+      "status": "pending"
+    }
   ],
   "artifacts": {
     "seed_intake": "seed_intake.json",
+    "seed_intent": "seed_intent.json",
     "seed_identity": "seed_identity.json",
     "seed_curiosity": "seed_curiosity.json",
     "seed_pedagogy": "seed_pedagogy.json",
