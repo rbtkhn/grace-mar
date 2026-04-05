@@ -97,3 +97,14 @@ _(Append below this line.)_
 - **2026-04-05 04:48 UTC** — dream (demo) ok=false mode=default integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
 - **2026-04-05 04:48 UTC** — dream (demo) ok=true mode=default integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
 - **2026-04-05 04:48 UTC** — dream (demo) ok=true mode=default integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-05 14:20 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-05 14:20 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-05 14:20 UTC** — dream (demo) ok=false mode=default cursor_model=unknown integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-05 14:20 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
+- **2026-04-05 14:20 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-05 14:21 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
+- **2026-04-05 14:21 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
+- **2026-04-05 14:22 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown picked=A
+- **2026-04-05 15:47 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
+- **2026-04-05 15:47 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
+- **2026-04-05 17:08 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown

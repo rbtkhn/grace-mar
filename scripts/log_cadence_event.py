@@ -16,6 +16,11 @@ Usage:
       --kv refs=aacec9e,4eaf1f4
   python3 scripts/log_cadence_event.py --kind harvest -u grace-mar --ok \
       --mode default --kv packet=chat
+
+**Agent surface (audit parity with bridge/harvest packets):** every line includes
+``cursor_model=…``. Resolution order: ``--cursor-model`` CLI / ``cursor_model=``
+``--kv`` / ``CURSOR_MODEL`` env / ``unknown``. Model names with spaces are
+written with spaces replaced by underscores so the line stays token-safe.
 """
 
 from __future__ import annotations
@@ -38,7 +43,7 @@ HEADER = (
     "> **Not** Record truth. **Not** self-memory. **Not** a replacement for "
     "`last-dream.json` or `session-transcript.md`.\n"
     ">\n"
-    "> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value ...`\n"
+    "> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) ok=… [mode=…] cursor_model=… …`\n"
     ">\n"
     "> See [work-cadence README](README.md) and "
     "[work-modules-history-principle](../work-modules-history-principle.md).\n"
@@ -51,12 +56,37 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
 
+def resolve_cursor_model(
+    explicit: str | None = None,
+    kv: dict[str, str] | None = None,
+) -> str:
+    """Label for the Cursor chat model (bridge **Agent surface** parity).
+
+    Used in cadence lines and ``last-dream.json`` ``agent_surface.cursor_model``.
+    Prefer the model name shown in the Cursor UI; not Record truth.
+    """
+    if explicit is not None and str(explicit).strip():
+        return str(explicit).strip()[:200]
+    if kv:
+        v = kv.get("cursor_model")
+        if v is not None and str(v).strip():
+            return str(v).strip()[:200]
+    env = os.environ.get("CURSOR_MODEL", "").strip()
+    return env[:200] if env else "unknown"
+
+
+def _format_cursor_model_token(cm: str) -> str:
+    """Space-safe for space-delimited key=value cadence lines."""
+    return str(cm).replace("\n", " ").strip().replace(" ", "_")[:200]
+
+
 def append_cadence_event(
     kind: str,
     user_id: str,
     *,
     ok: bool = True,
     mode: str | None = None,
+    cursor_model: str | None = None,
     kv: dict[str, str] | None = None,
     events_path: Path = EVENTS_PATH,
 ) -> Path:
@@ -64,13 +94,24 @@ def append_cadence_event(
     if kind not in KINDS:
         raise ValueError(f"kind must be one of {KINDS}, got {kind!r}")
 
+    base = dict(kv or {})
+    cm = resolve_cursor_model(explicit=cursor_model, kv=base)
+    merged: dict[str, str] = {"cursor_model": cm}
+    for k, v in base.items():
+        if k == "cursor_model":
+            continue
+        merged[k] = v
+
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     parts = [f"- **{ts}** — {kind} ({user_id}) ok={'true' if ok else 'false'}"]
     if mode:
         parts.append(f"mode={mode}")
-    for k, v in (kv or {}).items():
-        safe = str(v).replace("\n", " ")[:200]
-        parts.append(f"{k}={safe}")
+    for k, v in merged.items():
+        if k == "cursor_model":
+            val = _format_cursor_model_token(v)
+        else:
+            val = str(v).replace("\n", " ")[:200]
+        parts.append(f"{k}={val}")
     line = " ".join(parts) + "\n"
 
     events_path.parent.mkdir(parents=True, exist_ok=True)
@@ -90,6 +131,11 @@ def main() -> int:
     ap.add_argument("--ok", action="store_true", default=False, help="Run succeeded")
     ap.add_argument("--no-ok", dest="ok", action="store_false", help="Run failed")
     ap.add_argument("--mode", default=None, help="Run mode (e.g. work-start, strict, default)")
+    ap.add_argument(
+        "--cursor-model",
+        default=None,
+        help="Cursor UI model label (overrides CURSOR_MODEL env and cursor_model= in --kv)",
+    )
     ap.add_argument("--kv", nargs="*", default=[], metavar="KEY=VALUE", help="Extra key=value pairs")
     args = ap.parse_args()
 
@@ -106,6 +152,7 @@ def main() -> int:
         args.user.strip(),
         ok=args.ok,
         mode=args.mode,
+        cursor_model=(args.cursor_model.strip() if args.cursor_model else None),
         kv=kv_dict,
     )
     print(path.relative_to(REPO_ROOT))

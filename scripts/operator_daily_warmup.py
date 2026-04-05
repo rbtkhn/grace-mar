@@ -75,6 +75,18 @@ def _read_last_dream(user_dir: Path) -> dict | None:
         return None
 
 
+def _agent_surface_line_from_dream(dream: dict) -> str | None:
+    """One bullet matching bridge/harvest Agent surface when handoff recorded a model."""
+    surf = dream.get("agent_surface")
+    if not isinstance(surf, dict):
+        return None
+    raw = str(surf.get("cursor_model") or "").strip()
+    if not raw:
+        return None
+    display = raw if len(raw) <= 160 else raw[:159] + "…"
+    return f"- Agent surface: **Cursor model:** {display}"
+
+
 def _format_last_dream_block(
     dream: dict,
     *,
@@ -107,6 +119,9 @@ def _format_last_dream_block(
         body.append(
             f"- Status: {status}; integrity: {integ}; governance: {gov}"
         )
+        as_line = _agent_surface_line_from_dream(dream)
+        if as_line:
+            body.append(as_line)
         body.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
         tar = str(dream.get("topActionReason") or "").strip()
         if tar:
@@ -170,6 +185,9 @@ def _format_last_dream_block(
 
     generated = dream.get("generated_at", "unknown")
     lines.append(f"- Ran: {generated}")
+    as_line = _agent_surface_line_from_dream(dream)
+    if as_line:
+        lines.append(as_line)
     lines.append(f"- Status: {status}")
     lines.append(f"- Integrity: {integ}")
     lines.append(f"- Governance: {gov}")

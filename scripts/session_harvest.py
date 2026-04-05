@@ -101,6 +101,9 @@ _(mode: {mode})_
 
 ## Executive compression
 
+## Agent surface
+- **Cursor model:** (fill from Cursor model picker / chat header)
+
 Paste this into the target agent session as context for analysis; do not treat it as a fresh-session initializer.
 """
     )
@@ -120,6 +123,11 @@ def main() -> int:
         "--log",
         action="store_true",
         help="Append work-cadence-events.md line via log_cadence_event.py --kind harvest",
+    )
+    ap.add_argument(
+        "--cursor-model",
+        default=None,
+        help="With --log: forwarded to log_cadence_event (else CURSOR_MODEL env)",
     )
     args = ap.parse_args()
 
@@ -166,6 +174,8 @@ def main() -> int:
             "--kv",
             "source=session_harvest",
         ]
+        if args.cursor_model and args.cursor_model.strip():
+            cmd.extend(["--cursor-model", args.cursor_model.strip()])
         r = subprocess.run(cmd, cwd=str(REPO_ROOT))
         return r.returncode
 

@@ -23,6 +23,7 @@ Usage
     python3 scripts/operator_coffee.py -u grace-mar --mode closeout
     python3 scripts/operator_coffee.py -u grace-mar --mode reentry --compact
     python3 scripts/operator_coffee.py -u grace-mar --verbose-dream   # full last-dream block in daily warmup
+    CURSOR_MODEL="Sonnet" python3 scripts/operator_coffee.py -u grace-mar   # cadence audit parity (optional)
 """
 
 from __future__ import annotations
@@ -108,6 +109,11 @@ def main() -> int:
         action="store_true",
         help="Pass --show-rollup to operator_daily_warmup.py (collapsed coffee rollup line)",
     )
+    p.add_argument(
+        "--cursor-model",
+        default=None,
+        help="Cursor UI model label for work-cadence-events line (else CURSOR_MODEL env, else unknown)",
+    )
     args = p.parse_args()
     user = args.user
     py = sys.executable
@@ -155,7 +161,13 @@ def main() -> int:
 
     try:
         from log_cadence_event import append_cadence_event
-        append_cadence_event("coffee", user, ok=True, mode=args.mode)
+        append_cadence_event(
+            "coffee",
+            user,
+            ok=True,
+            mode=args.mode,
+            cursor_model=args.cursor_model.strip() if args.cursor_model else None,
+        )
     except Exception:
         pass
 

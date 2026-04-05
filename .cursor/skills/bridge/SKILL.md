@@ -146,7 +146,7 @@ If push fails (e.g. remote has new commits), pull-rebase first, then push. If th
 After confirming clean state (for repos that were part of this bridge), log the bridge event:
 
 ```bash
-python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok --kv refs=<grace-mar-SHA>,<companion-self-SHA>
+python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok --kv refs=<grace-mar-SHA>,<companion-self-SHA> --cursor-model "<same as ## Agent surface>"
 ```
 
 Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just pushed (from `git rev-parse --short HEAD` in each repo). If only one repo was in scope, include only that SHA (and note which repos were skipped).
@@ -165,7 +165,7 @@ This writes `users/grace-mar/daily-handoff/last-bridge-state.json` (gitignored).
 
 ## Step 4 — Generate the transfer prompt
 
-Now that the recommended repos are sealed and pushed (or explicitly skipped with operator consent), synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`.
+Now that the recommended repos are sealed and pushed (or explicitly skipped with operator consent), synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`. Include **`## Agent surface`** with **Cursor model:** copied from the **Cursor UI** (model picker for this composer); in Cursor that label is usually visible — use `unknown` only if it is not.
 
 **Coffee tail (required):** The copyable transfer prompt must end with a **final line that is exactly `coffee`** (lowercase, alone on its line, not inside a code fence). That way the operator’s **first message** in the new session is both the bridge packet **and** the `coffee` skill trigger — work-start Step 1 runs immediately on top of this context. Do not tell the operator to send a second message just for `coffee`.
 
@@ -217,6 +217,9 @@ Skip lanes with no recent activity.]
 
 ## Recent commits
 [Last 5-10 commits from git log, verbatim — includes the bridge commits]
+
+## Agent surface
+- **Cursor model:** [Copy the model name from the Cursor chat UI / model picker for this composer. Use `unknown` only if it is not visible.]
 
 ## Instructions for next session
 **Operator:** Send everything from `# Session Bridge` through the line below as the **only** first message in a new Cursor session (one paste). **Assistant:** Context is above; run work-start **coffee** Step 1 now (see `.cursor/skills/coffee/SKILL.md`). The next line is the skill trigger.

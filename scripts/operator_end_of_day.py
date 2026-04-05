@@ -44,6 +44,11 @@ def main() -> int:
         action="store_true",
         help="Pass --dry-run to auto_dream.py (no writes)",
     )
+    p.add_argument(
+        "--cursor-model",
+        default=None,
+        help="Forwarded to auto_dream.py for agent_surface + cadence line",
+    )
     args = p.parse_args()
     user = args.user
     py = sys.executable
@@ -53,6 +58,8 @@ def main() -> int:
         dream_cmd.append("--strict")
     if args.dry_run:
         dream_cmd.append("--dry-run")
+    if args.cursor_model and args.cursor_model.strip():
+        dream_cmd.extend(["--cursor-model", args.cursor_model.strip()])
 
     steps: list[list[str]] = [
         dream_cmd,

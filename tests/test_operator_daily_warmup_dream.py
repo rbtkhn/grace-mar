@@ -35,6 +35,27 @@ def test_format_last_dream_collapsed_fewer_lines() -> None:
     assert "Contradiction digest" in text
     assert "Tomorrow inherits" in text
     assert "Coffee (24h rollup)" not in text
+    assert "Agent surface" not in text
+
+
+def test_collapsed_includes_agent_surface_when_handoff_has_cursor_model() -> None:
+    d = _minimal_dream()
+    d["agent_surface"] = {"cursor_model": "Test Model X"}
+    lines = odu._format_last_dream_block(d, verbose_dream=False)
+    text = "\n".join(lines)
+    assert "Agent surface" in text
+    assert "Cursor model" in text
+    assert "Test Model X" in text
+
+
+def test_verbose_includes_agent_surface_when_present() -> None:
+    d = _minimal_dream()
+    d["agent_surface"] = {"cursor_model": "VerboseModel"}
+    lines = odu._format_last_dream_block(d, verbose_dream=True)
+    text = "\n".join(lines)
+    assert "Ran:" in text
+    assert "Agent surface" in text
+    assert "VerboseModel" in text
 
 
 def test_format_last_dream_verbose_includes_rollup_keys() -> None:

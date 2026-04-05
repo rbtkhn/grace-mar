@@ -89,7 +89,7 @@ From **this thread** (plus operator steer / optional session-transcript), compre
 
 ## Step 3 — Emit packet
 
-Output **one** markdown block following **[harvest-packet-contract](../../../docs/skill-work/work-cadence/harvest-packet-contract.md)** — section order, **no** trailing **`coffee`**, **required final line** per contract.
+Output **one** markdown block following **[harvest-packet-contract](../../../docs/skill-work/work-cadence/harvest-packet-contract.md)** — section order, **`## Agent surface`** with **Cursor model:** from the Cursor UI (see contract), **no** trailing **`coffee`**, **required final line** last per contract.
 
 ---
 
@@ -103,7 +103,7 @@ Output **one** markdown block following **[harvest-packet-contract](../../../doc
 
 **Recursive tightening:** If the **same friction** shows up **twice** (e.g. missing git-scope warning, wrong `##` headings, weak suggested asks), patch **[harvest-packet-contract](../../../docs/skill-work/work-cadence/harvest-packet-contract.md)** or **this skill** — not the Record. Optional: save an especially good packet under `harvest-packets/` as an informal quality bar.
 
-**Cadence telemetry** (`log_cadence_event.py --kind harvest`) stays **optional**; this loop does not require it.
+**Cadence telemetry** (`log_cadence_event.py --kind harvest` or `session_harvest.py --log`) stays **optional**; this loop does not require it. When logging, pass **`--cursor-model`** (or **`CURSOR_MODEL`**) so the line matches bridge/coffee/dream **Agent surface** audit.
 
 ---
 

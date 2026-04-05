@@ -107,10 +107,10 @@ Sessions begin when the operator says **`coffee`** (optional modifiers). To keep
 
 ## Cadence audit
 
-Each successful coffee run appends one line to `docs/skill-work/work-cadence/work-cadence-events.md` via `scripts/log_cadence_event.py`. This is automatic — no operator action required.
+Each successful coffee run appends one line to `docs/skill-work/work-cadence/work-cadence-events.md` via `scripts/log_cadence_event.py`. This is automatic — no operator action required. The line always includes **`cursor_model=…`** (audit parity with bridge/harvest **Agent surface**): set **`CURSOR_MODEL`** in the environment, or pass **`--cursor-model "…"`** to `operator_coffee.py`, using the model name from the Cursor UI. If unset, **`unknown`**.
 
 **After the operator states their menu letter** (and steward track if **E**), the assistant may append a **`coffee_pick`** cadence line (same file) for rollup:  
-`python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=E steward=gate`  
+`python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=E steward=gate --cursor-model "<from Cursor UI>"`  
 (`steward=` only when `picked=E`; values: `gate`, `template`, or `both`.) Optional: `scripts/log_operator_choice.py --context COFFEE --picked E` for `session-transcript.md`.
 
 ## Related files

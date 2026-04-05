@@ -217,6 +217,9 @@ Synthetic (no commits made). Residue commit: none / Substantive commit: none
 ## Recent commits
 {commit_section}
 
+## Agent surface
+- **Cursor model:** synthetic-harness
+
 ## Instructions for next session
 Paste as first message; assistant runs coffee Step 1. Parallel import: use harvest separately.
 

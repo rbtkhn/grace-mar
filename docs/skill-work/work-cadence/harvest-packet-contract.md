@@ -35,7 +35,8 @@ Use this heading order unless a section is empty (omit empty sections; do not pr
 | `## Recommended next steps` | Numbered 1…n, actionable. |
 | `## Suggested asks for the receiving agent` | Imperatives: Analyze…, Critique…, Compare… |
 | `## Executive compression` | 8–15 dense bullets. |
-| *(final line)* | See **Required closing line** above. |
+| `## Agent surface` | **Always include** (Cursor). One line: **Cursor model:** followed by the **model name shown in the Cursor chat UI** (header / model picker for this composer). Operational provenance only; **not** Record. If the name is genuinely unavailable in context, use `unknown`. |
+| *(final line)* | See **Required closing line** above (must remain the **last** line of the packet). |
 
 ---
 
@@ -65,3 +66,4 @@ No scripts required. After pasting the packet into the target session, note **Lo
 |------|--------|
 | 2026-04-04 | Initial contract (harvest as bridge sibling). |
 | 2026-04-06 | Pointer to doc-only post-paste review loop (skill § After the paste). |
+| 2026-04-07 | **Agent surface** section — Cursor UI model label before required closing line. |

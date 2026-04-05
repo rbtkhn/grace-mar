@@ -28,7 +28,7 @@ from dream_coffee_rollup import rollup_coffee_24h
 from dream_execution_paths import build_execution_paths, format_tomorrow_inherits_line
 from fork_config import load_fork_config
 from emit_pipeline_event import append_pipeline_event
-from log_cadence_event import append_cadence_event
+from log_cadence_event import append_cadence_event, resolve_cursor_model
 from harness_warmup import _pending_candidates
 from repo_io import resolve_self_memory_path
 
@@ -367,6 +367,7 @@ def _write_last_dream_handoff(
     *,
     users_dir: Path = DEFAULT_USERS_DIR,
     user_id: str = DEFAULT_USER,
+    cursor_model: str = "unknown",
 ) -> Path:
     """Write a compact JSON handoff so tomorrow's coffee Step 1 can pick up
     what dream found overnight."""
@@ -394,6 +395,7 @@ def _write_last_dream_handoff(
     handoff: dict[str, Any] = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "user_id": user_id,
+        "agent_surface": {"cursor_model": cursor_model},
         "strict_mode": summary.get("strict_mode", False),
         "ok": summary.get("ok", False),
         "integrity_ok": bool((summary.get("integrity") or {}).get("ok")),
@@ -460,6 +462,7 @@ def run_auto_dream(
     emit_event: bool = True,
     write_artifacts: bool = True,
     strict_mode: bool = False,
+    cursor_model: str | None = None,
 ) -> dict[str, Any]:
     memory_result = maintain_self_memory(user_id=user_id, users_dir=users_dir, apply=False)
     integrity_command = [
@@ -600,10 +603,15 @@ def run_auto_dream(
         else:
             summary.pop("civmem_suppressed_reason", None)
 
+        cm = resolve_cursor_model(explicit=cursor_model)
         handoff_path = _write_last_dream_handoff(
-            summary, users_dir=users_dir, user_id=user_id
+            summary,
+            users_dir=users_dir,
+            user_id=user_id,
+            cursor_model=cm,
         )
         summary["handoff_path"] = str(handoff_path)
+        summary["agent_surface"] = {"cursor_model": cm}
 
         digest = summary.get("contradiction_digest") or {}
         counts = digest.get("relation_counts") or {}
@@ -613,6 +621,7 @@ def run_auto_dream(
                 user_id,
                 ok=summary.get("ok", False),
                 mode="strict" if strict_mode else "default",
+                cursor_model=cm,
                 kv={
                     "integrity": "pass" if integrity_ok else "fail",
                     "governance": "pass" if governance_ok else "fail",
@@ -698,6 +707,11 @@ def main() -> int:
     parser.add_argument("--no-event", action="store_true", help="Skip pipeline-events emission")
     parser.add_argument("--no-artifacts", action="store_true", help="Skip contradiction artifact draft writes")
     parser.add_argument("--strict", action="store_true", help="Use strict maintenance semantics and fail fast on checks")
+    parser.add_argument(
+        "--cursor-model",
+        default=None,
+        help="Cursor UI model label for agent_surface + cadence log (else CURSOR_MODEL env, else unknown)",
+    )
     args = parser.parse_args()
 
     summary = run_auto_dream(
@@ -707,6 +721,7 @@ def main() -> int:
         emit_event=not args.no_event and not args.dry_run,
         write_artifacts=not args.no_artifacts and not args.dry_run,
         strict_mode=args.strict,
+        cursor_model=(args.cursor_model.strip() if args.cursor_model else None),
     )
     if args.json:
         print(json.dumps(summary, indent=2))
