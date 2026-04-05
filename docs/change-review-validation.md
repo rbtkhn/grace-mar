@@ -10,6 +10,8 @@ This document explains how to validate the change-review subsystem artifacts.
 
 **Dependencies:** `validate-change-review.py` uses **`jsonschema`** (same stack as `validate-seed-phase.py`). Install with `pip install -r scripts/requirements-seed-phase.txt` unless your environment already provides `jsonschema`.
 
+**Observability:** After validating a review tree, you can regenerate a demo report with `python3 scripts/build-observability-report.py` (see [observability.md](observability.md)). The report’s **`validationSummary.changeReview`** reflects a real subprocess run of this validator, not a placeholder.
+
 Validation exists to ensure that:
 
 - review artifacts conform to their JSON Schemas

@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.1.0",
   "recordType": "templateAppliedProvenance",
-  "companionSelfCommit": "55fb441f20fe13bec0490b9a753d27e38f8660a5",
+  "companionSelfCommit": "ceb8d5118e9ad45e1527a738a84efd4d5849cae9",
   "templateVersion": "0.4.0",
-  "syncedAt": "2026-04-05T12:00:00Z",
-  "syncedBy": "pr4-6-state-proposals-pipeline-source-of-truth",
+  "syncedAt": "2026-04-05T20:00:00Z",
+  "syncedBy": "pr7-9-observability-authority-legible-receipts",
   "syncedPaths": [
     "schema-registry/",
     "schema-registry/seed-intent.v1.json",
@@ -25,6 +25,17 @@
     "docs/state-proposals.md",
     "docs/source-of-truth.md",
     "docs/conflict-resolution-order.md",
+    "docs/authority-map.md",
+    "docs/observability.md",
+    "docs/legible-surfaces.md",
+    "docs/action-receipts.md",
+    "config/authority-map.json",
+    "schema-registry/authority-map.v1.json",
+    "schema-registry/observability-report.v1.json",
+    "scripts/check-authority.py",
+    "scripts/build-observability-report.py",
+    "users/demo/observability/observability-report.json",
+    "app/observability/.gitkeep",
     "docs/change-types.md",
     "docs/contradiction-policy.md",
     "docs/contradiction-resolution.md",
@@ -70,7 +81,7 @@
   "targetReference": {
     "instanceContract": "instance-contract.json",
     "templateVersionTarget": "0.4.0",
-    "templateCommitTarget": "55fb441f20fe13bec0490b9a753d27e38f8660a5"
+    "templateCommitTarget": "ceb8d5118e9ad45e1527a738a84efd4d5849cae9"
   },
   "notes": "Top-level fields describe the last applied template merge. Narrow auxiliary refreshes should append to auxiliarySyncEvents rather than replacing this baseline.",
   "auxiliarySyncEvents": []

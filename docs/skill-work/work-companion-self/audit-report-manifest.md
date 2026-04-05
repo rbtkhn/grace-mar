@@ -25,6 +25,7 @@ Paths: companion-self template-manifest.json
   - users/_template/seed-phase/seed_dossier.md
   - users/_template/seed-phase/seed_intake.json
   - users/_template/self-memory.md
+  - users/demo/observability/observability-report.json
   - users/demo/seed-phase/seed_dossier.md
   - users/demo/seed-phase/seed_intake.json
   - users/demo/seed-phase/work_dev_seed.json
@@ -35,8 +36,12 @@ Paths: companion-self template-manifest.json
 Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
 
 ### Same (no action)
+  - app/observability/.gitkeep
   - bridges/bridge-schema.json
+  - config/authority-map.json
   - config/source-of-truth.json
+  - docs/action-receipts.md
+  - docs/authority-map.md
   - docs/change-review-lifecycle.md
   - docs/change-review-validation.md
   - docs/change-review.md
@@ -46,10 +51,6 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   - docs/contradiction-resolution.md
   - docs/evidence-layer.md
   - docs/evidence-to-context-pipeline.md
-  - docs/governed-state-layer.md
-  - docs/instance-patterns.md
-  - docs/long-term-objective.md
-  - docs/pipeline/evidence-to-proposal.md
-  ... and 92 more
+  ... and 102 more
 
-Summary: same=107 differ=19 expected_drift=1 only_template=2 only_instance=0
+Summary: same=117 differ=20 expected_drift=1 only_template=2 only_instance=0

@@ -21,6 +21,10 @@ See:
 
 Material **source** conflicts between evidence, prepared context, and governed state should become proposals and review objects, not silent updates to the Record. See [source-of-truth.md](source-of-truth.md) and [conflict-resolution-order.md](conflict-resolution-order.md).
 
+**Observability:** Change review should be observable through proposal counts, change-type and surface summaries, and validation-backed reports ([observability.md](observability.md), `scripts/build-observability-report.py`).
+
+**Authority:** Proposal generation and review routing should be **authority-aware** ([authority-map.md](authority-map.md), `config/authority-map.json`). Proposal generation, review decisions, and accepted merges should be capable of emitting **action receipts** for operator audit ([action-receipts.md](action-receipts.md)); receipts complement, not replace, governed state.
+
 ---
 
 ## Purpose

@@ -3,7 +3,7 @@
   "instanceId": "grace-mar",
   "templateRepo": "https://github.com/rbtkhn/companion-self",
   "templateVersionTarget": "0.4.0",
-  "templateCommitTarget": "55fb441f20fe13bec0490b9a753d27e38f8660a5",
+  "templateCommitTarget": "ceb8d5118e9ad45e1527a738a84efd4d5849cae9",
   "seedPhaseProtocol": "v2",
   "notes": "Live instance contract; see docs/template-sync-status.md for drift and audits.",
   "syncArchitecture": {

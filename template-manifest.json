@@ -66,6 +66,26 @@
       "optional": false
     },
     {
+      "path": "docs/authority-map.md",
+      "description": "Authority classes and surface-key semantics; links to config/authority-map.json.",
+      "optional": false
+    },
+    {
+      "path": "docs/observability.md",
+      "description": "Observability doctrine and contract; links to build-observability-report.py.",
+      "optional": false
+    },
+    {
+      "path": "docs/legible-surfaces.md",
+      "description": "Legibility requirements for meaningful actions; links to receipts and observability.",
+      "optional": false
+    },
+    {
+      "path": "docs/action-receipts.md",
+      "description": "Optional action receipt doctrine; distinct from merge receipts and Record.",
+      "optional": false
+    },
+    {
       "path": "docs/identity-fork-protocol.md",
       "description": "Protocol: Sovereign Merge Rule, schema (SELF, self-skill-*, self-evidence), evidence linking.",
       "optional": false
@@ -218,6 +238,21 @@
     {
       "path": "config/source-of-truth.json",
       "description": "Default layer precedence (governed_state, accepted_change_objects, prepared_context, evidence).",
+      "optional": true
+    },
+    {
+      "path": "config/authority-map.json",
+      "description": "Default authority class per surface key (layers, scopes, cadence packets).",
+      "optional": true
+    },
+    {
+      "path": "schema-registry/authority-map.v1.json",
+      "description": "JSON Schema for config/authority-map.json.",
+      "optional": true
+    },
+    {
+      "path": "schema-registry/observability-report.v1.json",
+      "description": "JSON Schema for users/demo/observability/observability-report.json.",
       "optional": true
     },
     {
@@ -378,6 +413,16 @@
     {
       "path": "scripts/check-source-conflict.py",
       "description": "Compare two layer tokens against config/source-of-truth.json precedence.",
+      "optional": true
+    },
+    {
+      "path": "scripts/check-authority.py",
+      "description": "Look up authority class for a surface key in config/authority-map.json.",
+      "optional": true
+    },
+    {
+      "path": "scripts/build-observability-report.py",
+      "description": "Emit observability-report.json from review-queue proposals + subprocess validators.",
       "optional": true
     },
     {
@@ -624,6 +669,16 @@
       "path": "users/demo/review-queue/derived/pedagogy-draft-v2.json",
       "description": "Demo proposed-state stub referenced by proposal.",
       "optional": false
+    },
+    {
+      "path": "users/demo/observability/observability-report.json",
+      "description": "Demo observability report; regenerate with scripts/build-observability-report.py.",
+      "optional": true
+    },
+    {
+      "path": "app/observability/.gitkeep",
+      "description": "Reserved UI/ops area for future observability consumption (no wiring in v1).",
+      "optional": true
     },
     {
       "path": "bridges/bridge-schema.json",

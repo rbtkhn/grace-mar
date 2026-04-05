@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/observability-report.v1.json",
+  "title": "Observability report v1",
+  "description": "Derived inspection snapshot over review-queue proposals and validator runs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatedAt",
+    "reviewRoot",
+    "proposalCounts",
+    "changeTypeCounts",
+    "targetSurfaceCounts",
+    "scopeCounts",
+    "evidenceTypeCounts",
+    "staleReviewCount",
+    "validationSummary"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "reviewRoot": {
+      "type": "string",
+      "minLength": 1
+    },
+    "proposalCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposed",
+        "underReview",
+        "approved",
+        "deferred",
+        "rejected",
+        "superseded"
+      ],
+      "properties": {
+        "proposed": { "type": "integer", "minimum": 0 },
+        "underReview": { "type": "integer", "minimum": 0 },
+        "approved": { "type": "integer", "minimum": 0 },
+        "deferred": { "type": "integer", "minimum": 0 },
+        "rejected": { "type": "integer", "minimum": 0 },
+        "superseded": { "type": "integer", "minimum": 0 },
+        "unknownStatus": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "changeTypeCounts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "targetSurfaceCounts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "scopeCounts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "evidenceTypeCounts": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "staleReviewCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "validationSummary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["changeReview", "seedPhaseDemo"],
+      "properties": {
+        "changeReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ran", "exitCode", "passed"],
+          "properties": {
+            "ran": { "type": "boolean" },
+            "exitCode": { "type": "integer" },
+            "passed": { "type": "boolean" },
+            "detail": { "type": "string" }
+          }
+        },
+        "seedPhaseDemo": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["ran", "passed"],
+          "properties": {
+            "ran": { "type": "boolean" },
+            "exitCode": { "type": ["integer", "null"] },
+            "passed": { "type": "boolean" },
+            "detail": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

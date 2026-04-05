@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-04-05T19:42:45Z",
+  "reviewRoot": "users/demo/review-queue",
+  "proposalCounts": {
+    "proposed": 1,
+    "underReview": 0,
+    "approved": 0,
+    "deferred": 0,
+    "rejected": 0,
+    "superseded": 0
+  },
+  "changeTypeCounts": {
+    "refinement": 1
+  },
+  "targetSurfaceCounts": {
+    "self": 1
+  },
+  "scopeCounts": {
+    "pedagogy": 1,
+    "expression": 1
+  },
+  "evidenceTypeCounts": {
+    "interaction": 1
+  },
+  "staleReviewCount": 0,
+  "validationSummary": {
+    "changeReview": {
+      "ran": true,
+      "exitCode": 0,
+      "passed": true,
+      "detail": "VALIDATION PASSED: /Users/robertkuhne/Documents/grace-mar/users/demo/review-queue"
+    },
+    "seedPhaseDemo": {
+      "ran": true,
+      "exitCode": 0,
+      "passed": true,
+      "detail": "validate-seed-phase: OK (strict schema validation)"
+    }
+  }
+}

@@ -24,6 +24,8 @@
 4. **Naming:** Prefer **companion self** (concept) vs **companion-self** (template repo name); see [concept](concept.md) for terminology.
 5. **State layers:** The template preserves the distinction between **Evidence**, **Prepared Context**, and **Governed State** ([state-model.md](state-model.md)). Instances may customize staging or evidence tooling but should **not** collapse these layers into one undifferentiated memory surface.
 6. **Truth precedence and review:** Instances may extend source systems and tooling, but should **preserve declared truth precedence** and **review rules** when material conflicts arise ([source-of-truth.md](source-of-truth.md), [conflict-resolution-order.md](conflict-resolution-order.md), [change-review.md](change-review.md)).
+7. **Authority classes:** Instances may add local surface keys or tooling, but should **preserve explicit authority classes** and **not silently widen** automated write or merge authority ([authority-map.md](authority-map.md)).
+8. **Receipts vs Record:** Instances may extend receipt or audit logging, but **must not replace** governed state with receipt objects alone ([action-receipts.md](action-receipts.md)).
 
 ---
 

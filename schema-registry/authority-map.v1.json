@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/authority-map.v1.json",
+  "title": "Authority map v1",
+  "description": "Machine-readable default authority class per named surface key.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "surfaces"],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "surfaces": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "enum": [
+          "read_only",
+          "draftable",
+          "review_required",
+          "human_only",
+          "ephemeral_only"
+        ]
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

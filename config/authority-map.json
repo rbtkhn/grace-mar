@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0.0",
+  "surfaces": {
+    "seed_phase_artifacts": "review_required",
+    "governed_state": "review_required",
+    "identity": "human_only",
+    "curiosity": "review_required",
+    "pedagogy": "review_required",
+    "expression": "review_required",
+    "memory_governance": "human_only",
+    "safety": "human_only",
+    "prepared_context": "draftable",
+    "evidence": "draftable",
+    "bridge_packets": "ephemeral_only",
+    "harvest_packets": "ephemeral_only"
+  },
+  "notes": [
+    "Meaningful durable changes should not bypass review.",
+    "Operational surfaces are not equivalent to governed state.",
+    "Keys mix layers, scopes, and packet classes; see docs/authority-map.md."
+  ]
+}
