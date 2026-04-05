@@ -25,3 +25,4 @@
 | 2026-03-31 | work-jiang-ingest-fallback | *(promoted)* — use skill **`work-jiang-ingest-fallback`** (`.cursor/skills/work-jiang-ingest-fallback/SKILL.md`); same trigger | `skills-portable/work-jiang-ingest-fallback/SKILL.md` + manifest |
 | 2026-03-31 | skill-narrative | *(promoted)* — use skill **`skill-narrative`** (`.cursor/skills/skill-narrative/SKILL.md`); trigger `narrative loop` | `skills-portable/skill-narrative/SKILL.md` + manifest |
 | 2026-03-31 | repo-hygiene-pass | *(promoted)* — use skill **`repo-hygiene-pass`** (`.cursor/skills/repo-hygiene-pass/SKILL.md`); trigger `hygiene pass` | `skills-portable/repo-hygiene-pass/SKILL.md` + manifest |
+| 2026-04-05 | memory-self-audit | `self-memory audit`, `audit MEMORY four dimensions`, `memory-self-audit` — run rubric + table for `users/<id>/self-memory.md` | `docs/memory-self-audit.md` (+ template §VIII); shipped `74ac84f`; full SKILL: `.cursor/skills/extract-skill-from-session/SKILL.md` |
