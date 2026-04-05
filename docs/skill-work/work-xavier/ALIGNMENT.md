@@ -12,3 +12,5 @@
 **Xavier:** Clones / works in **her** repo; seed survey, gate, and exports are **there**.
 
 See also: [audit-structural-alignment-grace-mar-companion-self.md](../../audit-structural-alignment-grace-mar-companion-self.md), [TEMPLATE-BASELINE.md (pointer)](TEMPLATE-BASELINE.md), [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md).
+
+If you use **Open Brain**–style capture + MCP + vector search, read [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) before mapping tooling to the Record.

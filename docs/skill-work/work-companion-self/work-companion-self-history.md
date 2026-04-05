@@ -12,6 +12,11 @@
 
 _(Append below this line.)_
 
+## 2026-04-05
+
+- **Open Brain bridge:** Added [companion-self-for-open-brain-users.md](companion-self-for-open-brain-users.md) (four-column comparison, anti-patterns, mermaid parallel flows, next links). Wired from this README (Purpose callout + Contents row). Optional pointer in [work-xavier/ALIGNMENT.md](../work-xavier/ALIGNMENT.md).
+- **Upstream (item 5) — pushed branch:** `companion-self` branch **`docs/open-brain-bridge`** (commit **`c8adea9`**) adds `docs/companion-self-for-open-brain-users.md` + root **README** callout. Open PR: https://github.com/rbtkhn/companion-self/compare/main...docs/open-brain-bridge — **Status:** pending merge to `main`; append **merge commit SHA** here when merged.
+
 ## 2026-04-04
 
 - Mirrored **work-template.md** + **work-modules-history-principle.md** + **work-modules-sources-principle.md** to **companion-self** `docs/skill-work/` (template-adapted paths); pushed `companion-self` **main**. Grace-mar **work-template.md** footnote links to GitHub canonical copies.

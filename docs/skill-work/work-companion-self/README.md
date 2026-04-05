@@ -22,6 +22,8 @@ Companion-self is both the **concept** (companion's self + self that companions,
 
 The companion remains sovereign. Autonomous management means Grace-Mar operates within bounds the companion approves; merge into companion-self (or any upstream) still requires human gate.
 
+**Open Brain / Nate Jones stack?** If you use **capture + embeddings + semantic search** (MCP, Slack, etc.) and are new to companion-self, read **[companion-self-for-open-brain-users.md](companion-self-for-open-brain-users.md)** first — it maps **retrieval** vs **gated Record** so you do not merge identity by accident.
+
 ---
 
 ## Contents
@@ -35,6 +37,7 @@ The companion remains sovereign. Autonomous management means Grace-Mar operates 
 | **[TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md)** | Historical governance baseline, useful as context but no longer the primary machine pin once `instance-contract.json` / `template-source.json` are current. |
 | **[COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md](COMPANION-SELF-SELF-LIBRARY-ALIGNMENT.md)** | SELF-LIBRARY template alignment notes (merged upstream). |
 | **[CURSOR-PERSONAS-RULES-SKILLS.md](CURSOR-PERSONAS-RULES-SKILLS.md)** | Product spec: **template contributor** vs **new instance owner** — which `.cursor` rules and skills to add in companion-self (phase 1 vs 2). |
+| **[companion-self-for-open-brain-users.md](companion-self-for-open-brain-users.md)** | Bridge for **Open Brain** / capture+MCP+search users: comparison table, anti-patterns, gate vs retrieval. |
 | **§ [Three-track alignment](#three-track-alignment-operator-policy)** | Operator policy: governance/protocol diffs, manifest rhythm, optional DESIGN upstream. |
 
 ---
