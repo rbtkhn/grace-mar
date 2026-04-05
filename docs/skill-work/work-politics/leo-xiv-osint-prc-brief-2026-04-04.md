@@ -98,3 +98,9 @@
 - [x] Brief + 中文 + matrix — this file  
 
 **Follow-up if upgrading to “elite” depth:** ~~Bollettino match for core 2025 China tranche~~ **done (Option A, 2026-04-04)** — add [250611d](https://press.vatican.va/content/salastampa/en/bollettino/pubblico/2025/06/11/250611d.html)-style **Press Office declarations** and **2025-09-12** civil-recognition bulletins for full chain; full Crux interview transcript quote check; harvest @Pontifex corpus into CSV with co-occurrence counts.
+
+---
+
+## Related — historical context (CIV-MEM / Rome lane)
+
+Slow-layer **institutional and analogy** framing (not Vatican primary text): [work-strategy-rome/notes/2026-04-05-leo-xiv-civ-mem-historical-context.md](../work-strategy/work-strategy-rome/notes/2026-04-05-leo-xiv-civ-mem-historical-context.md) — ROME-PASS-shaped note with `{CMC: docs/civilization-memory/...}` scaffold and **index build/query** commands. **Does not** replace Bollettino or vatican.va for facts.

@@ -28,7 +28,7 @@
 |------|------|
 | [manifest.md](manifest.md) | Scope, triggers, integration points, boundaries. |
 | [ROME-PASS.md](ROME-PASS.md) | Repeatable pre-skill pass: triggers, source order, boundaries, output shape, micro-checklist. |
-| [notes/](notes/) | Dated stubs — e.g. [2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md). |
+| [notes/](notes/) | Dated stubs — e.g. [2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md), [2026-04-05-leo-xiv-civ-mem-historical-context.md](notes/2026-04-05-leo-xiv-civ-mem-historical-context.md) (CIV-MEM scaffold × Leo XIV OSINT). |
 | [notes/exemplars/](notes/exemplars/) | Finished pass examples (shape reference for future `strategy-rome` skill). |
 | `ingest/` | _(Optional)_ pointers to external captures — prefer [research/external/work-strategy/transcripts/README.md](../../../../research/external/work-strategy/transcripts/README.md) for long-form text. |
 
@@ -63,3 +63,4 @@ Append short dated lines here or in [work-strategy-history.md](../work-strategy-
 - **2026-04-02** — **North star** paragraph added (reinvention / mutation; legitimacy without empire; WORK boundaries).
 - **2026-04-03** — **Thesis stub:** papacy-centered modern Rome, mind/soul vs administrative layers, Leo talent-stack hypothesis, narrow US-myth window — [notes/2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md).
 - **2026-04-03** — **[ROME-PASS.md](ROME-PASS.md)** skeleton + [notes/exemplars/](notes/exemplars/); [daily-brief-focus.md](../daily-brief-focus.md) Rome bullet (pre-skill readiness).
+- **2026-04-05** — **Leo XIV × PRC OSINT + civ-mem:** [leo-xiv-osint-prc-brief-2026-04-04.md](../../work-politics/leo-xiv-osint-prc-brief-2026-04-04.md) ↔ [notes/2026-04-05-leo-xiv-civ-mem-historical-context.md](notes/2026-04-05-leo-xiv-civ-mem-historical-context.md); ROME-PASS **micro-checklist** recorded on note; [daily-brief-focus.md](../daily-brief-focus.md) refreshed (standing packet pointer).

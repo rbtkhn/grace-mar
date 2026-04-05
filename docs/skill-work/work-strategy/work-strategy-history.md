@@ -15,6 +15,8 @@ _(Append below this line.)_
 ## 2026-04-05
 
 - **Predictive History → work-strategy:** Explicit wiring — [common-inputs.md](common-inputs.md) § **Predictive History**; [README.md](README.md) transcript row; [work-strategy/transcripts/README.md](../../../research/external/work-strategy/transcripts/README.md) PH subsection; [predictive-history/README.md](../../../research/external/youtube-channels/predictive-history/README.md) **Work-strategy wiring** table; [current-events-analysis.md](current-events-analysis.md) Perceiver bullet; [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) spine note.
+- **work-strategy-rome:** [notes/2026-04-05-leo-xiv-civ-mem-historical-context.md](work-strategy-rome/notes/2026-04-05-leo-xiv-civ-mem-historical-context.md) — Leo XIV × in-repo **civ-mem** scaffold (`build_civmem_inrepo_index.py`), `{CMC:}` table, ROME-PASS blocks, link from [leo-xiv-osint-prc-brief-2026-04-04.md](../work-politics/leo-xiv-osint-prc-brief-2026-04-04.md).
+- **ROME-PASS EXECUTE (coffee C):** Micro-checklist closure on civ-mem note; [work-strategy-rome/README.md](work-strategy-rome/README.md) log line; [daily-brief-focus.md](daily-brief-focus.md) **Last refreshed** + standing **Leo XIV** packet pointer.
 
 ## 2026-04-01
 
