@@ -28,6 +28,8 @@ For **instant** fields (pipeline events, session manifests, sidecars), prefer:
 - `YYYY-MM-DDTHH:MM:SSZ` (UTC, `Z` suffix), or
 - `YYYY-MM-DD HH:MM:SS` in prose logs when timezone is stated separately (`UTC`).
 
+**Operator session clock (optional paste):** `python3 scripts/operator_clock.py` prints one current UTC instant on a single line; `--date-only` prints `YYYY-MM-DD` (UTC calendar day). Use when you want one authoritative “now” alongside Cursor **user_info** or external doc dates.
+
 ---
 
 ## Compact forms — ids, stamps, and sharding (not hyphenated day)

@@ -86,6 +86,7 @@ Per [work-menu-conventions.md](../work-menu-conventions.md) and [work-modules-hi
 
 ## Adjacent surfaces
 
+- [operator-session-review-checklist.md](operator-session-review-checklist.md) — session UX / procedure verification (manual + pytest pointers).
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md)
 - [work-menu-conventions.md](../work-menu-conventions.md)
 - [work-dev/git-branch-hygiene.md](../work-dev/git-branch-hygiene.md)

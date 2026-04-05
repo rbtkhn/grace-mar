@@ -4,6 +4,10 @@ Detailed **A–E** (five mode) definitions, **signing-off** (merged closeout) ad
 
 **Exit:** There is **no** “close hub” letter. The operator leaves coffee by **C** / **D** (normal workflow unless **`stay in coffee`**), by **Later** on the [steward follow-up fork](#steward-follow-up-fork-implement-now-vs-later) (which returns to the full **A–E** menu), or by starting a non-coffee task. The coffee ritual does **not** use a **no menu** opt-out.
 
+### Bare **`compass`** vs **`coffee`** then **`C`**
+
+**Full ritual:** Say **`coffee`** (Step 1 scripts + **A–E** menu), then choose **`C`** when you want **both** re-grounding (warmup, gate snapshot, branch line) **and** Compass (work-strategy / ROME-PASS). **Bare `compass`** (or **`C`** without opening **`coffee`**) means **Compass lane only**—agents may deliver work-strategy / **ROME-PASS** content **without** re-running Step 1 unless you ask for **`coffee`** first, **`stay in coffee`**, or a cold-thread stack (**`operator_coffee.py --mode reentry`**).
+
 ---
 
 ## Context paste budgets (operator)
