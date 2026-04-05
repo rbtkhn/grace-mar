@@ -67,4 +67,4 @@ If you are used to “everything searchable is fair game for the model,” **pau
 
 | Date | Note |
 |------|------|
-| 2026-04-05 | Initial bridge: table, anti-patterns, mermaid; grace-mar `work-companion-self`. Upstream: branch `docs/open-brain-bridge` on `rbtkhn/companion-self` (open compare/PR); replace this line with **merge SHA** when `main` absorbs it. |
+| 2026-04-03 | Initial bridge: table, anti-patterns, mermaid; grace-mar `work-companion-self`. Upstream: branch `docs/open-brain-bridge` on `rbtkhn/companion-self` (open compare/PR); replace this line with **merge SHA** when `main` absorbs it. |
