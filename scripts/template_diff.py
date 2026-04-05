@@ -5,6 +5,9 @@ Compare grace-mar with companion-self on template paths. work-companion-self Pha
 Reports: (a) what template has that instance lacks (pull needed); (b) what instance has diverged.
 Does NOT overwrite anything. Per MERGING-FROM-COMPANION-SELF §4.
 
+Paths listed in `docs/skill-work/work-companion-self/expected-template-drift.json` are
+reported under **Expected drift** and omitted from the actionable **differ** bucket.
+
 Uses grace-mar MERGING-FROM-COMPANION-SELF paths by default. Use --use-manifest to load
 exact paths from companion-self template-manifest.json. Add --include-skill-work when you
 explicitly want the broader docs/skill-work recursive audit.
@@ -87,6 +90,31 @@ def _compare_file(template_path: Path, instance_path: Path) -> str:
     t_content = template_path.read_bytes()
     i_content = instance_path.read_bytes()
     return "same" if t_content == i_content else "differ"
+
+
+def _load_expected_drift(instance_root: Path) -> dict[str, str]:
+    """
+    Paths documented as intentionally not byte-identical to the template.
+    Relative paths like docs/identity-fork-protocol.md -> human reason string.
+    """
+    p = instance_root / "docs/skill-work/work-companion-self/expected-template-drift.json"
+    if not p.exists():
+        return {}
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+        raw = data.get("paths") or {}
+        out: dict[str, str] = {}
+        for key, val in raw.items():
+            if not isinstance(key, str):
+                continue
+            if isinstance(val, dict):
+                reason = val.get("reason") or val.get("merging_pointer") or ""
+            else:
+                reason = str(val)
+            out[key] = reason.strip() or "(see expected-template-drift.json)"
+        return out
+    except (json.JSONDecodeError, TypeError):
+        return {}
 
 
 def _load_manifest_paths(companion_self_root: Path) -> list[str]:
@@ -188,6 +216,18 @@ def main() -> None:
         brief=args.brief,
     )
 
+    expected_map = _load_expected_drift(args.instance.resolve())
+    differ_raw = list(result["differ"])
+    expected_paths: list[tuple[str, str]] = []
+    actionable_differ: list[str] = []
+    for rel in differ_raw:
+        if rel in expected_map:
+            expected_paths.append((rel, expected_map[rel]))
+        else:
+            actionable_differ.append(rel)
+    result["differ"] = sorted(actionable_differ)
+    expected_paths.sort(key=lambda x: x[0])
+
     out_lines: list[str] = []
 
     def emit(s: str = "") -> None:
@@ -196,6 +236,7 @@ def main() -> None:
     if args.brief:
         emit("same: " + str(len(result["same"])))
         emit("differ: " + str(len(result["differ"])))
+        emit("expected_drift: " + str(len(expected_paths)))
         emit("only_template (pull needed): " + str(len(result["only_template"])))
         emit("only_instance (instance additions): " + str(len(result["only_instance"])))
         out = "\n".join(out_lines)
@@ -221,9 +262,19 @@ def main() -> None:
         emit()
 
     if result["differ"]:
-        emit("### Differ (both exist, content differs)")
+        emit("### Differ (both exist, content differs — review)")
         for p in result["differ"]:
             emit("  - " + p)
+        emit()
+
+    if expected_paths:
+        emit("### Expected drift (policy-documented; not a parity defect)")
+        for p, reason in expected_paths:
+            emit("  - **" + p + "** — " + reason)
+        emit()
+        emit(
+            "Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`"
+        )
         emit()
 
     if result["only_instance"]:
@@ -240,12 +291,16 @@ def main() -> None:
             emit("  ... and " + str(len(result["same"]) - 15) + " more")
         emit()
 
-    emit("Summary: same=%d differ=%d only_template=%d only_instance=%d" % (
-        len(result["same"]),
-        len(result["differ"]),
-        len(result["only_template"]),
-        len(result["only_instance"]),
-    ))
+    emit(
+        "Summary: same=%d differ=%d expected_drift=%d only_template=%d only_instance=%d"
+        % (
+            len(result["same"]),
+            len(result["differ"]),
+            len(expected_paths),
+            len(result["only_template"]),
+            len(result["only_instance"]),
+        )
+    )
 
     out = "\n".join(out_lines)
     if args.output:

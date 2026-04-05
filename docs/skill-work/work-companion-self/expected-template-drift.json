@@ -1,0 +1,9 @@
+{
+  "doc": "Paths here differ from companion-self by documented policy, not accidental drift. They are listed under 'Expected drift' in template_diff output and omitted from the actionable 'differ' bucket. See docs/merging-from-companion-self.md (IFP short form vs full spec).",
+  "paths": {
+    "docs/identity-fork-protocol.md": {
+      "reason": "Grace-mar holds IFP v1.0 full reference spec; companion-self ships the short form with a link to the full spec. Do not overwrite the instance file with the template short form on bulk sync.",
+      "merging_pointer": "MERGING-FROM-COMPANION-SELF — Identity Fork Protocol (IFP) — short form vs full spec"
+    }
+  }
+}
