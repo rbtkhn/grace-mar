@@ -6,6 +6,6 @@
 
 **Naming:** Prefer `topic-YYYY-MM-DD.png` / `.pdf` so [work-xavier-history.md](../work-xavier-history.md) and the progress log can point without ambiguity. For multi-file drops on one day, add a short sibling **`topic-ingest-YYYY-MM-DD.md`** summary (see [brewmind-faq-ingest-2026-04-05.md](brewmind-faq-ingest-2026-04-05.md)).
 
-**Size:** Prefer reasonable compression for screenshots; split huge PDFs only if git or clone becomes painful. No hard cap — use judgment.
+**Size:** Prefer reasonable compression for screenshots. **Heuristic (not a rule):** a single file **around ~10 MB or larger** is a cue to **compress**, **split**, or switch to **external storage + pointer** in an ingest `.md` — especially if clones or CI feel slow. Smaller files are usually fine in-repo. No hard cap; use judgment.
 
 **Index:** Add a row to **§1 Evidence index** in [xavier-progress-log.md](../xavier-progress-log.md) whenever a new artifact lands; optional milestone line in [work-xavier-history.md](../work-xavier-history.md).
