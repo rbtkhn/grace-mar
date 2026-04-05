@@ -12,6 +12,9 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-05 | [evidence/brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md) | **Ingest summary** — Gemini FAQ for BrewMind site (copy + HTML/CSS accordion); links PDF + mobile PNG. |
+| 2026-04-05 | [evidence/brewmind-faq-gemini-transcript-2026-04-05.pdf](evidence/brewmind-faq-gemini-transcript-2026-04-05.pdf) | Full **5-page** PDF transcript (Google Docs PDF); paste/integration steps for `index.html`. |
+| 2026-04-05 | [evidence/brewmind-faq-gemini-mobile-2026-04-05.png](evidence/brewmind-faq-gemini-mobile-2026-04-05.png) | Mobile screenshot — BrewMind Café FAQ draft, first Q&As. |
 | 2026-04-03 | [evidence/claude-mobile-chats-2026-04-03.png](evidence/claude-mobile-chats-2026-04-03.png) | Claude mobile **Chats** list — concurrent threads (~3–4 days ago) across site, BrewMind, learning plan, Cebu partners, pitch, content. |
 
 ---
@@ -20,6 +23,7 @@
 
 _Freeform. Append dated bullets._
 
+- **2026-04-05** — **BrewMind website FAQ:** Gemini produced **site-ready** FAQ (general, learn-to-earn, tiers, menu) + **HTML/CSS** blocks for `index.html` (accordion, theme variables). Evidence: PDF transcript + mobile screenshot + [brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md). *Next:* paste into site repo; reconcile prices/hours with business plan before publish.
 - **2026-04-03** — Screenshot archived: Claude thread titles suggest **parallel workstreams** (Firebase/GitHub site, AI learning plan, coffee/customer engagement, Cebu business plan/partners, investor pitch, publishing with Claude, automated content). **Starred** thread: “First Business proposal analysis.” *Interpretation TBD — confirm with Xavier which threads are active vs exploratory.*
 
 ---
@@ -35,7 +39,7 @@ _Freeform. Append dated bullets._
 
 ## 4. Next coaching move
 
-- *(operator fills after review)*
+- Confirm **Gemini FAQ** is the live source of truth for web copy vs any parallel Claude thread; one **paste owner** for `index.html`.
 
 ---
 
@@ -63,4 +67,5 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-05 | BrewMind FAQ ingest (Gemini PDF + mobile PNG + summary MD). |
 | 2026-04-03 | Initial log + Claude mobile chats evidence + thread title transcription from screenshot. |

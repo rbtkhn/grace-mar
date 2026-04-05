@@ -16,6 +16,10 @@
 
 - **Open Brain vs gate (EXECUTE):** [xavier-instance-two-step.md](xavier-instance-two-step.md) — tooling box + bridge link; [first-good-morning-runbook.md](first-good-morning-runbook.md) — operator subsection + checklist row **5b**; [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md) — step **2a**; [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) — vector/RAG/MCP bullet; [ALIGNMENT.md](ALIGNMENT.md) — wire list; [INDEX.md](INDEX.md) — bridge row.
 
+### 2026-04-05
+
+- **Evidence ingest — BrewMind FAQ (Gemini):** PDF transcript + mobile screenshot + [evidence/brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md); [xavier-progress-log.md](xavier-progress-log.md) updated (index, burst, coaching, revision).
+
 ### 2026-04-04
 
 - Added [xavier-instance-two-step.md](xavier-instance-two-step.md): Xavier **day-one** onboarding — **Use this template** + clone + open folder in Claude Code; Seed Phase / Session 0 explicitly **later**; preflight + leakage pointer. Linked [README.md](README.md), [INDEX.md](INDEX.md). [first-good-morning-runbook.md](first-good-morning-runbook.md): pointer if repo not created yet.
