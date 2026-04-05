@@ -18,7 +18,7 @@
 
 ### `last-dream.json` (grace-mar) — schema v2 fields
 
-`scripts/auto_dream.py` aligns operational keys with the companion-self **night-handoff** shape where useful: **`handoffSchemaVersion`** (2), **`topActionReason`**, **`quietRun`**, **`residueLedger`** (from digest followups), **`worktreeState`** / **`worktreeAdvice`** (read-only git triage). Not Record truth. Warmup may show top-action reason and worktree lines when present.
+`scripts/auto_dream.py` aligns operational keys with the companion-self **night-handoff** shape where useful: **`handoffSchemaVersion`** (2), **`topActionReason`**, **`quietRun`**, **`residueLedger`** (from digest followups), **`worktreeState`** / **`worktreeAdvice`** (read-only git triage), **`agent_surface.cursor_model`** (same provenance idea as bridge/harvest **Agent surface** — Cursor UI model label; not Record truth). **`operator_daily_warmup.py`** includes an **Agent surface: Cursor model** bullet in the collapsed and verbose **Last dream** block when that field is present (omitted on older handoffs without `agent_surface`). Warmup may show top-action reason and worktree lines when present.
 
 ### `last-bridge-state.json` (grace-mar) — session-to-session delta
 
@@ -72,6 +72,7 @@ Each clock needs its own ritual because the failure modes are different. Reorien
 | **This README** | Scope, rhythm, boundaries for work-cadence. |
 | **[harvest-packet-contract.md](harvest-packet-contract.md)** | Session Harvest Packet headings and rules vs bridge. |
 | **[work-cadence-events.md](work-cadence-events.md)** | Append-only audit of cadence runs (coffee/dream/bridge; optional harvest). Not Record. |
+| **[Founding corpus working paper → work-strategy](../work-strategy/founding-influences-graeco-roman-vs-english.md)** | Classical-republic vs English constitutional idiom (32-unit corpus; rubric + lexical methods). Lives under **work-strategy**; not Record. |
 
 ---
 
@@ -86,6 +87,8 @@ Each coffee, dream, bridge, and optional **harvest** run appends one line to [wo
 - **harvest** — optional; operator or agent runs `session_harvest.py --log` or `log_cadence_event.py --kind harvest` after emitting a packet (lighter than bridge; telemetry consistency only)
 
 **Leaf-only rule:** Orchestrators (`operator_end_of_day.py`, `operator_coffee.py` when it chains) do not emit their own events. Only the leaf ritual logs.
+
+**Agent surface (audit parity):** Every cadence line includes **`cursor_model=…`** (spaces in the UI name become underscores in the log line). Resolution order: `--cursor-model` on the leaf script → `cursor_model=` in `log_cadence_event.py --kv` → **`CURSOR_MODEL`** environment variable → **`unknown`**. Matches bridge/harvest packet **`## Agent surface` / Cursor model** semantics; use the same label in all three places when you care about cross-thread audit.
 
 **Split threshold:** If cadence events exceed ~200 lines/month, consider adding a JSONL sibling and keeping monthly rollup bullets in this markdown file.
 
