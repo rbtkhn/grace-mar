@@ -1,6 +1,5 @@
 {
   "user_slug": "demo-seed",
-  "start_here_pick": "C",
   "age_band": "teen",
   "primary_use_cases": ["homework support", "curiosity questions"],
   "constraints": {
@@ -10,21 +9,15 @@
     "safety_notes": ["Guardian may review session themes."]
   },
   "education_focus": ["reading comprehension", "writing practice"],
-  "cadence_preference": {
-    "default_trigger_word": "coffee",
-    "active_trigger_word": "coffee",
-    "word_source": "default",
-    "personalization_timing": "post_adoption_optional",
-    "rename_offer": {
-      "status": "not_yet_eligible",
-      "offer_after_successful_uses": 3,
-      "offer_after_distinct_days": 2,
-      "minimum_successful_followthrough_uses": 2,
-      "snooze_days": 14
-    }
-  },
   "completion": {
     "coverage_score": 0.92,
     "contradictions": []
+  },
+  "cursor_operator_profile": {
+    "ide_primary": "cursor",
+    "rules_pack_preset": "instance_light",
+    "work_surface_hints": ["work-dev"],
+    "generate_cursor_pack_on_activation": true,
+    "operator_notes": "Gate-first Cursor rules only at launch; expand toward reference instance later."
   }
 }

@@ -1,6 +1,6 @@
 # work-cadence
 
-**Purpose:** Doctrine, boundaries, and architecture for the daily cadence triad — `coffee` (morning orientation), `dream` (night consolidation), and `bridge` (session-scale handoff) — plus **`harvest`** (cross-agent extraction; on demand, not a fourth clock) and **`thanks`** (micro-pause; light bookmark, no dream stack). Executable trigger surfaces live in `.cursor/skills/coffee/SKILL.md`, `.cursor/skills/dream/SKILL.md`, `.cursor/skills/bridge/SKILL.md`, `.cursor/skills/harvest/SKILL.md`, and `.cursor/skills/thanks/SKILL.md`.
+**Purpose:** Template-level doctrine, boundaries, and architecture for the daily cadence triad — `coffee` (orientation), `dream` (consolidation), and `bridge` (session handoff) — plus **`harvest`** as a **fourth operator tool on a different axis** (cross-agent extraction; on demand, not a fourth clock). Executable triggers live in `.cursor/skills/coffee/SKILL.md`, `.cursor/skills/dream/SKILL.md`, `.cursor/skills/bridge/SKILL.md`, and `.cursor/skills/harvest/SKILL.md`.
 
 **Not** Record truth. **Not** a merge path. **Not** identity-relevant unless gated.
 
@@ -10,33 +10,28 @@
 
 | Role | Description |
 |------|-------------|
-| **Cadence architecture** | Defines the shape of operator rhythm: coffee (orientation, repeated), dream (consolidation, once per day), bridge (session-scale carry-forward), harvest (cross-agent packet; midstream import). |
-| **Night-to-morning handoff** | Documents the `last-dream.json` data contract that bridges dream output to coffee Step 1. |
-| **Cadence event audit** | Append-only telemetry of each run via `work-cadence-events.md` and `scripts/log_cadence_event.py` (kinds include **`harvest`** and **`thanks`** for tooling consistency). |
-| **Context paste budgets** | Optional JSON caps for dream write-path and coffee display (`config/context_budgets/`); `scripts/audit_context_tax.py` approximates ritual paste size. |
+| **Cadence architecture** | Defines the shape of daily rhythm: coffee (orientation, repeated), dream (consolidation, once), bridge (session carry-forward), harvest (cross-agent packet; midstream import). |
+| **Night-to-morning handoff** | Documents the `daily-handoff/night-handoff.json` data contract that bridges dream output to coffee Step 1. |
+| **Cadence event audit** | Append-only telemetry via `work-cadence-events.md` and `scripts/log_cadence_event.py` (optional **`harvest`** kind for consistency). |
 | **Boundary surface** | Explains what belongs in operational/ephemeral surfaces versus what must escalate to the gate. |
-
-### `last-dream.json` (grace-mar) — schema v2 fields
-
-`scripts/auto_dream.py` aligns operational keys with the companion-self **night-handoff** shape where useful: **`handoffSchemaVersion`** (2), **`topActionReason`**, **`quietRun`**, **`residueLedger`** (from digest followups), **`worktreeState`** / **`worktreeAdvice`** (read-only git triage), **`agent_surface.cursor_model`** (same provenance idea as bridge/harvest **Agent surface** — Cursor UI model label; not Record truth). **`operator_daily_warmup.py`** includes an **Agent surface: Cursor model** bullet in the collapsed and verbose **Last dream** block when that field is present (omitted on older handoffs without `agent_surface`). Warmup may show top-action reason and worktree lines when present.
-
-### `last-bridge-state.json` (grace-mar) — session-to-session delta
-
-After a successful bridge push, run `python3 scripts/bridge_last_state.py -u grace-mar --write` (operational only; gitignored). The next bridge’s transfer packet can include **Since last bridge** bullets by comparing current Step 1 reads to that file, or by running `python3 scripts/bridge_last_state.py -u grace-mar --print-delta`. Does not replace **harvest** for midstream import; see [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md).
+| **Script topology** | Maps how consolidated runners delegate to underlying brief generators. |
 
 ---
 
 ## Daily rhythm
 
+`coffee`, `dream`, and `bridge` form the cadence triad:
+
 | Time | Ritual | What it does |
 |------|--------|-------------|
-| **Morning** | `coffee` (work-start) | Read dream handoff, warmup brief, harness, branch snapshot, A–E menu |
+| **Morning** | `coffee` (standard) | Read dream handoff, context snapshot, skill focus, session options |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
-| **During day** | `thanks` (micro-pause) | Optional one-line **park** note + cadence log — no integrity/digest (see [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md)) |
-| **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest, handoff JSON |
-| **Session close** | `bridge` | Seal (commit/push), synthesize transfer prompt for next Cursor session |
+| **End of day** | `dream` | Capture signal, set carry-forward, write handoff JSON |
+| **Session close** | `bridge` | Seal (commit/push), synthesize transfer prompt for next session |
 
-**Many coffees, optional many `thanks`, one dream, one bridge.** `coffee` is for repetition. `thanks` is for a **light pause** bookmark only. `dream` is for closure. `bridge` is for carry-forward.
+**Many coffees, one dream, one bridge.** `coffee` is for repetition. `dream` is for closure. `bridge` is for carry-forward.
+
+`coffee` should feel like a sip. `dream` should feel like sleep. `bridge` should feel like sealing an envelope.
 
 ---
 
@@ -59,21 +54,125 @@ Each clock needs its own ritual because the failure modes are different. Reorien
 **Not a fourth clock.** `coffee`, `dream`, and `bridge` answer **when** the operator needs framing, day-close residue, or session-boundary transfer. **`harvest`** answers **how** to ship dense session substance to **another agent or thread that is already running** (parallel review, tooling handoff, second Cursor session without a cold start).
 
 - **Skill:** [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md)
-- **Packet contract:** [harvest-packet-contract.md](harvest-packet-contract.md) (section headings; **no** trailing `coffee` — contrast **bridge**, whose transfer block ends with `coffee` for cold start; bridge packet contract may live upstream in companion-self)
+- **Packet contract:** [harvest-packet-contract.md](harvest-packet-contract.md) (section headings; **no** trailing `coffee` — contrast [bridge-packet-contract.md](bridge-packet-contract.md))
 - **Optional script:** `scripts/session_harvest.py` — checklist + template + optional `--log` → `log_cadence_event.py --kind harvest`
 
-**Template home:** Canonical skill + contract + cadence doc edits land in **companion-self** first; **grace-mar** reconciles via `template_diff.py` / operator **EXECUTE** scope (**grace-mar only** / **template only** / **both**). If you only have this repo checked out, implement here and reconcile the template on the next dual-repo pass.
+**Instances:** Built-from-template repos (e.g. grace-mar) reconcile cadence doc drift via their own upgrade workflow; the template remains the structural home for the skill and contract.
 
 ---
 
-## Contents
+## Script topology
 
-| File | Purpose |
-|------|---------|
-| **This README** | Scope, rhythm, boundaries for work-cadence. |
-| **[harvest-packet-contract.md](harvest-packet-contract.md)** | Session Harvest Packet headings and rules vs bridge. |
-| **[work-cadence-events.md](work-cadence-events.md)** | Append-only audit of cadence runs (coffee/dream/bridge; optional harvest). Not Record. |
-| **[Founding corpus working paper → work-strategy](../work-strategy/founding-influences-graeco-roman-vs-english.md)** | Classical-republic vs English constitutional idiom (32-unit corpus; rubric + lexical methods). Lives under **work-strategy**; not Record. |
+```
+cadence-coffee.py
+  ├─ reads/writes users/<id>/daily-handoff/last-coffee-state.json   (delta since last coffee; operational)
+  ├─ writes users/<id>/daily-handoff/.coffee-run-context.json         (runner → brief; operational; gitignored in instance policy if desired)
+  └─ good-morning-brief.py        context, bridges, session options, handoff pickup, coffeeOrientationHints
+       └─ write_style_bridge.py   optional WRITE synthesis
+
+cadence-dream.py
+  └─ good-night-brief.py          signal capture, handoff write, gate suggestion
+  └─ git status summary           uncommitted-work awareness
+  └─ merge worktree triage        writes worktreeState / worktreeAdvice into night-handoff.json
+
+bridge_last_state.py              (after successful bridge push; agent-run ritual)
+  └─ users/<id>/daily-handoff/last-bridge-state.json   session-to-session delta for bridge packet; operational; gitignored
+```
+
+**Runners** are lightweight dispatch wrappers. **Briefs** hold all the parsing, bridge-building, and output logic. Instances may extend or replace the runners while keeping the briefs stable.
+
+---
+
+## Handoff contract
+
+`dream` (via `good-night-brief.py --write-closeout`) writes `users/<id>/daily-handoff/night-handoff.json`.
+
+`coffee` (via `good-morning-brief.py`) reads that file the next morning.
+
+### night-handoff.json schema
+
+| Field | Type | Purpose |
+|-------|------|---------|
+| `user` | string | Instance user id |
+| `date` | ISO date | When dream ran |
+| `mode` | string | Dream mode |
+| `dayStatus` | string | `finished_well` / `partial` / `blocked` |
+| `oneSignal` | string | Strongest signal from the day |
+| `tomorrowTopAction` | string | Carry-forward action for morning |
+| `stopCondition` | string | What not to overdo tomorrow |
+| `optionalResetCue` | string | What to let go of tonight |
+| `handoffSchemaVersion` | int | **2** = extended handoff (optional on legacy files) |
+| `topActionReason` | string | Why `tomorrowTopAction` was chosen (heuristic; not identity truth) |
+| `tomorrowEnergyFit` | string | `low` / `normal` / `high` — shapes stop-condition copy |
+| `quietRun` | bool | When true, morning coffee may use softer framing |
+| `activeLaneHint` | string | `GATE` / `WORK` / `SEED` / `NONE` — light lane foregrounding |
+| `ignoreTomorrow` | string | Noise to deprioritize (complements stop condition) |
+| `residueLedger` | object | At most one short string per bucket: `must_resume`, `safe_to_drop`, `blocked`, `watch_later` |
+| `worktreeState` | string | `clean` / `light residue` / `risky residue` (from `cadence-dream.py`) |
+| `worktreeAdvice` | string | Read-only triage line (still no commit/push in dream) |
+| `gateSuggestions` | array | Strings or `{item, reason, urgency}` objects — advisory only |
+| `warnings` | string[] | Parse/fallback warnings |
+
+**Morning checkback (optional):** `good-morning-brief.py --write-checkback --checkback-helpful yes|no|partial` writes `morning-checkback-<YYYY-MM-DD>.json` under `daily-handoff/` (operational telemetry; not Record).
+
+**Weekly reflection:** `weekly-reflection.json` in `daily-handoff/` is updated when dream runs in **reflective** mode.
+
+The handoff artifact is an operational file, not identity truth. It should not be committed to the Record or treated as evidence.
+
+---
+
+## Gate threshold
+
+`work-cadence` is **operational by default**.
+
+Keep changes in territory docs when they are about:
+
+- cadence architecture (what each ritual does, in what order)
+- handoff contract shape and fields
+- runner mode definitions and dispatch logic
+- coffee/dream choreography and timing
+
+Stage to the instance's gate (`recursion-gate.md` or `review-queue/`) only when a cadence insight would change governed behavior, such as:
+
+- durable prompt or policy behavior
+- changes to how identity-relevant signals are captured
+- new surfaces that cross into Record territory
+
+This territory never creates a merge path. The instance's gate remains the membrane.
+
+---
+
+## Modes reference
+
+### Coffee modes
+
+| Mode | Brief mode | Sync checks | Branch snapshot | When to use |
+|------|-----------|-------------|-----------------|-------------|
+| `standard` | `standard` | Only if `--check-sync` | Full | Most mornings |
+| `light` | `minimal` | Only if `--check-sync` | Compact (one line) | Quick reorientation |
+| `deep` | `deep` | Yes (automatic) | Full | Start of week, template updates |
+| `closeout` | N/A (delegates to dream) | No | No | End of day (prefer `dream`) |
+
+### Dream modes
+
+| Mode | Duration | When to use |
+|------|----------|-------------|
+| `minimal` | ~1-2 min | Low-energy nights |
+| `standard` | ~2-4 min | Most nights |
+| `reflective` | ~4-6 min | End of sprint/week |
+
+---
+
+## Instance extensions
+
+Instances built from this template may extend cadence with:
+
+- **Custom menu systems** (e.g. grace-mar's A-H multi-choice pattern)
+- **Additional maintenance passes** (e.g. integrity checks, contradiction digest, memory normalization)
+- **Territory-specific tracks** (e.g. work-politics, Predictive History)
+- **Instance-specific runners** (replacing or wrapping the template runners)
+
+These extensions belong in instance-local skills and territories, not in this template. The template provides the structural pattern; instances customize for their needs.
 
 ---
 
@@ -81,38 +180,13 @@ Each clock needs its own ritual because the failure modes are different. Reorien
 
 Each coffee, dream, bridge, and optional **harvest** run appends one line to [work-cadence-events.md](work-cadence-events.md) via `scripts/log_cadence_event.py`. This is operator-facing telemetry — not the Record, not self-memory.
 
-**Emitters:**
-- **dream** — `auto_dream.py` appends after successful completion (gated on `apply=True`)
-- **coffee** — `operator_coffee.py` appends after all steps succeed
-- **bridge** — agent runs `log_cadence_event.py --kind bridge` in Step 2 after push
-- **harvest** — optional; operator or agent runs `session_harvest.py --log` or `log_cadence_event.py --kind harvest` after emitting a packet (lighter than bridge; telemetry consistency only)
+**Emitters (typical):**
+- **coffee** / **dream** / **bridge** — runner or agent logs after successful completion (see instance template)
+- **harvest** — optional; operator or agent runs `session_harvest.py --log` or `log_cadence_event.py --kind harvest` after emitting a packet
 
-**Leaf-only rule:** Orchestrators (`operator_end_of_day.py`, `operator_coffee.py` when it chains) do not emit their own events. Only the leaf ritual logs.
+**Leaf-only rule:** Orchestrator scripts (wrappers that chain multiple steps) do not emit their own events. Only the leaf ritual logs.
 
-**Agent surface (audit parity):** Every cadence line includes **`cursor_model=…`** (spaces in the UI name become underscores in the log line). Resolution order: `--cursor-model` on the leaf script → `cursor_model=` in `log_cadence_event.py --kv` → **`CURSOR_MODEL`** environment variable → **`unknown`**. Matches bridge/harvest packet **`## Agent surface` / Cursor model** semantics; use the same label in all three places when you care about cross-thread audit.
-
-**Split threshold:** If cadence events exceed ~200 lines/month, consider adding a JSONL sibling and keeping monthly rollup bullets in this markdown file.
-
----
-
-## Script topology (grace-mar)
-
-```
-operator_coffee.py          consolidated morning runner (modes: work-start, light, minimal, closeout, reentry)
-  ├─ operator_daily_warmup.py    priorities, gate, territories, integrity, dream handoff pickup
-  ├─ harness_warmup.py           compact state snapshot
-  └─ operator_handoff_check.py   (closeout mode only)
-
-operator_end_of_day.py      night-side bundle
-  ├─ auto_dream.py               memory normalization, integrity, governance, contradiction, last-dream.json (+ 24h coffee rollup, execution paths, optional civ-mem echoes)
-  └─ operator_handoff_check.py   gate, commits, worktree, re-entry prompt
-```
-
----
-
-## Gate threshold
-
-`work-cadence` is **operational by default**. Stage to `recursion-gate.md` only when a cadence insight would change governed behavior (prompt, policy, identity-relevant signals).
+**Split threshold:** If cadence events exceed ~200 lines/month, consider adding a JSONL sibling and keeping monthly rollup bullets in the markdown file.
 
 ---
 
@@ -122,30 +196,26 @@ Which on-disk surfaces each ritual reads, writes, and whether companion approval
 
 | Ritual | Reads | Writes | Gate required? |
 |--------|-------|--------|---------------|
-| **coffee** | self-memory, recursion-gate, last-dream.json, git status, territories | nothing (read-only planning) | No |
-| **dream** | self-memory, SELF, EVIDENCE, recursion-gate | self-memory, last-dream.json, contradiction digest, cadence events, pipeline events | No (Maintenance mode) |
-| **bridge** | self-memory, recursion-gate, last-dream.json, territories, git status/log | git commits, cadence events | No (operational) |
-| **harvest** | same class as coffee (self-memory, recursion-gate, last-dream.json, territories, git; optional session-transcript) | **default none**; optional operator-requested save under `work-cadence/harvest-packets/` or `last-harvest.md`; optional cadence event line | No |
-| **gate merge** | recursion-gate candidates, SELF, EVIDENCE, prompt | SELF, EVIDENCE, prompt, session-log, recursion-gate, pipeline events, PRP | **Yes — companion approval required** |
+| **coffee** | self-memory, gate, dream handoff, git status | nothing (read-only planning) | No |
+| **dream** | self-memory, SELF, EVIDENCE, gate | self-memory, night handoff JSON, cadence events | No (Maintenance mode) |
+| **bridge** | self-memory, gate, dream handoff, territories, git | git commits, cadence events | No (operational) |
+| **harvest** | same class as coffee (self-memory, gate, dream handoff, territories, git; optional session-transcript) | **default none**; optional operator-requested save under `work-cadence/harvest-packets/` or `last-harvest.md`; optional cadence event line | No |
+| **gate merge** | gate candidates, SELF, EVIDENCE, prompt | SELF, EVIDENCE, prompt, session-log, gate, pipeline events | **Yes — companion approval required** |
 
-**Key boundary:** coffee and bridge never write to identity surfaces. Dream writes to ephemeral/operational surfaces only (self-memory, handoff artifacts). Only the gated merge path — triggered by companion approval, executed by `process_approved_candidates.py` — touches the Record.
+**Key boundary:** coffee and bridge never write to identity surfaces. Dream writes to ephemeral/operational surfaces only. Only the gated merge path touches the Record.
 
 ---
 
 ## End-of-session decision tree
 
-When the operator signals they're done (end of day, closing the session, stepping away), use this tree:
+| Scenario | Path | Why |
+|----------|------|-----|
+| **End of day + closing session** | `dream` then `bridge` | Dream settles continuity; bridge seals and generates transfer prompt |
+| **End of day, keeping session** | `dream` alone | Maintenance pass; same thread continues tomorrow |
+| **Mid-day, closing session** | `bridge` alone | Seal repo, carry context forward; no maintenance needed |
+| **Quick check before stepping away** | coffee closeout (instance-defined) | Lightweight status; no commit/push, no transfer prompt |
 
-| Scenario | Recommended path | What it does |
-|----------|-----------------|--------------|
-| **Ending the day AND closing this Cursor session** | `dream` then `bridge` | Dream settles continuity; bridge seals both repos and generates the transfer prompt |
-| **Ending the day, keeping the session** | `dream` alone | Dream runs maintenance; session continues tomorrow with the same thread |
-| **Mid-day, closing this Cursor session** | `bridge` alone | Seals repos and generates transfer prompt; no maintenance pass needed |
-| **Quick status check before stepping away** | **`coffee`** + signing-off intent (`operator_coffee.py --mode closeout` / handoff Step 1) | Lightweight handoff summary; no commit/push, no maintenance; **same** **A–E** menu as work-start |
-
-**Default for 80% of cases:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
-
-**Signing-off `coffee` vs bridge:** Signing-off **`coffee`** is the lightweight option — quick gate/worktree status, no commits, no push, no transfer prompt. Bridge is the structural option — seals the session with commits and produces the carry-forward block. They do not overlap; bridge remains the session-end default when you need git seal + transfer prompt.
+**Default:** If in doubt, `bridge`. It commits, pushes, and produces a transfer prompt. If it's also end of day, run `dream` first.
 
 ---
 
@@ -155,45 +225,51 @@ When a cadence run produces unexpected output, check these in order:
 
 ### Coffee output looks wrong
 
-1. **Dream handoff missing?** Check `users/grace-mar/last-dream.json` — if the file is absent or stale (timestamp older than last night), dream didn't run or didn't complete. Run `dream` manually.
-2. **Gate data stale?** The warmup reads `recursion-gate.md` directly. If gate counts look wrong, check the file itself — not the warmup output.
-3. **Wrong mode?** `operator_coffee.py` defaults to `work-start`. If you got a minimal harness when you expected a full brief, check which mode was passed. Run with `--mode work-start` explicitly.
-4. **Script failed silently?** Check the exit code. `operator_coffee.py` chains sub-scripts and stops on first failure. If the harness ran but the warmup didn't, the warmup script errored.
+1. **Dream handoff missing?** Check the night handoff JSON — if absent or stale, dream didn't run or didn't complete.
+2. **Wrong mode?** Check which mode was passed to the coffee runner. Run with the intended mode explicitly.
+3. **Script failed silently?** Consolidated runners chain sub-scripts and stop on first failure. Check exit codes.
 
 ### Dream output looks wrong
 
-1. **Integrity or governance failed?** Check the dream summary output for `integrity ok: False` or `governance ok: False`. In strict mode, dream halts on failure — self-memory won't be updated, no handoff written.
-2. **Self-memory not updated?** Dream only writes self-memory when `apply=True` (not `--dry-run`) and maintenance is not halted. Check the `self_memory_changed` field in `last-dream.json`.
-3. **Cadence event not logged?** The event is gated on `apply=True and not halted`. Dry-run dreams and halted strict dreams produce no cadence line — by design.
+1. **Integrity or governance failed?** Check the dream summary for failure flags. In strict mode, dream halts — no memory update, no handoff written.
+2. **Handoff not written?** Dream only writes the handoff artifact when `apply=True` and maintenance is not halted.
+3. **Cadence event not logged?** Gated on successful completion. Dry-run and halted dreams produce no cadence line by design.
 
 ### Bridge output looks wrong
 
-1. **Commit failed?** Bridge commits are done by the agent, not a script. If a commit failed, the agent should have reported it. Check `git status -sb` in both repos.
-2. **Push rejected?** Usually means remote has new commits. The agent should pull-rebase and retry. If it didn't, run `git pull --rebase && git push` manually.
-3. **Transfer prompt thin?** Bridge synthesizes from on-disk state. If territories have no recent history or the gate is empty, those sections will be sparse — that's correct, not broken.
-4. **Coffee didn’t run after paste?** The transfer block must end with a lone line `coffee` (no code fence). If that line was dropped when copying, append `coffee` or re-copy from the bridge output; see `.cursor/skills/bridge/SKILL.md` Step 3.
+1. **Commit failed?** Bridge commits are agent-driven. Check `git status -sb` in all relevant repos.
+2. **Push rejected?** Usually means remote has new commits. Pull-rebase and retry.
+3. **Transfer prompt thin?** Bridge synthesizes from on-disk state. Sparse sections mean those surfaces had nothing to report.
+4. **Coffee didn’t run after paste?** The bridge transfer block should end with a lone line `coffee` per [bridge-packet-contract.md](bridge-packet-contract.md). If that line was dropped when copying, append `coffee` or re-copy from the bridge output.
 
 ### Harvest packet confusion
 
 1. **Wrong ritual?** If the target session needs a **cold start**, use **`bridge`** (ends with `coffee`). **`harvest`** packets **must not** end with `coffee`; see [harvest-packet-contract.md](harvest-packet-contract.md).
-2. **Thin narrative sections?** The script only prints paths and git; the agent fills outcomes from the **visible thread** (no full Cursor export API). Add a one-line operator steer or read `session-transcript.md` if needed.
+2. **Thin narrative sections?** The script only prints paths and git; the agent fills outcomes from the **visible thread** (no full Cursor export API). Add a one-line operator steer or read `session-transcript.md` if the instance uses it.
 
 ### General
 
-- **Which cadence events actually ran?** Check `docs/skill-work/work-cadence/work-cadence-events.md` — one line per run with timestamp, kind, mode, and outcome.
-- **Agent reading stale skill file?** Long Cursor sessions can cache file contents. If the agent's behavior doesn't match the current SKILL.md, ask it to re-read the file.
-- **Harness vs coffee skill mismatch?** If `operator_daily_warmup.py` / `harness_warmup.py` output disagrees with `.cursor/skills/coffee/SKILL.md` (menus, steps, flags), treat **the script + skill** as a pair: update the doc that was wrong, or add a cross-link so the next agent does not guess.
+- **Which cadence events actually ran?** Check `work-cadence-events.md` — one line per run.
+- **Agent reading stale skill file?** Long sessions can cache file contents. Ask the agent to re-read.
+- **Runner vs skill mismatch?** If `cadence-coffee.py` / brief output disagrees with `.cursor/skills/coffee/SKILL.md`, update the **spec or skill** so the next run does not guess.
 
 ---
 
 ## Closing the troubleshooting loop (doc-only)
 
-If the **same** numbered fix under **Coffee**, **Dream**, **Bridge**, or **Harvest** applies **twice in a short window**, do not only re-run the ritual — **promote** the lesson:
+If the **same** troubleshooting bullet applies **twice in a short window**, add **one line** to the relevant **SKILL** or **packet contract** and optionally a **pointer** back into the subsection above. Instances that mirror grace-mar may align prose with grace-mar `docs/skill-work/work-cadence/README.md` § *Closing the troubleshooting loop*.
 
-1. Add or sharpen **one line** in the relevant **SKILL.md** or **packet contract** so the failure mode is explicit.
-2. Add a **pointer** here (one bullet under the right subsection above) — e.g. “See bridge SKILL § After the new session opens for lost `coffee` tail.”
+---
 
-No scripts required; this keeps [work-cadence README](README.md) a **living** diagnostic without duplicating full procedures.
+## Continuity and trail
+
+`work-cadence` does **not** replace any existing continuity surface.
+
+- **Spec docs:** `docs/good-morning-brief-spec.md`, `docs/good-night-brief-spec.md`, `docs/good-night-template.md`
+- **Sync pack:** `docs/skill-work/self-work/sync-pack/` (optional territory sync module)
+- **Operational handoff:** `users/<id>/daily-handoff/night-handoff.json`
+- **Ephemeral memory:** `users/<id>/self-memory.md`
+- **Governed changes:** Instance-specific gate (`recursion-gate.md` or `review-queue/`)
 
 ---
 
@@ -203,6 +279,35 @@ No scripts required; this keeps [work-cadence README](README.md) a **living** di
 - [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — dream trigger
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — bridge trigger
 - [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — harvest trigger
-- [work-coffee/](../work-coffee/) — coffee design history and menu reference
-- [work-dream/](../work-dream/) — dream design history and doctrine
-- [work-modules-history-principle.md](../work-modules-history-principle.md) — cross-territory history convention
+- [harvest-packet-contract.md](harvest-packet-contract.md) — Session Harvest Packet contract
+- [work-cadence-events.md](work-cadence-events.md) — per-run cadence telemetry
+- [scripts/log_cadence_event.py](../../../scripts/log_cadence_event.py) — cadence event append helper
+- [scripts/session_harvest.py](../../../scripts/session_harvest.py) — harvest checklist + optional template + `--log`
+- [scripts/cadence-coffee.py](../../../scripts/cadence-coffee.py) — coffee runner
+- [scripts/cadence-dream.py](../../../scripts/cadence-dream.py) — dream runner
+- [scripts/good-morning-brief.py](../../../scripts/good-morning-brief.py) — morning brief generator
+- [scripts/good-night-brief.py](../../../scripts/good-night-brief.py) — night brief generator
+- [docs/good-morning-brief-spec.md](../../good-morning-brief-spec.md) — full morning spec
+- [docs/good-night-brief-spec.md](../../good-night-brief-spec.md) — full night spec
+- [docs/good-night-template.md](../../good-night-template.md) — recommended night sequence
+
+---
+
+## Scope boundaries
+
+In scope:
+
+- daily cadence architecture (coffee/dream/bridge triad + harvest on a separate cross-agent axis)
+- handoff contract design and schema
+- cadence event audit (per-run telemetry)
+- runner mode definitions and dispatch
+- script topology and extension points
+- boundary rules for operational vs gated content
+
+Out of scope:
+
+- instance-specific menu systems (A-H, etc.)
+- instance-specific maintenance passes (integrity, governance, contradiction)
+- Record merges or identity edits without the gate
+- individual work-territory content (politics, dev, business, etc.)
+- sync-pack mechanics (those live in `self-work/sync-pack/`)

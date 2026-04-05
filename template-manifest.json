@@ -97,7 +97,7 @@
     },
     {
       "path": "docs/seed-phase-stages.md",
-      "description": "Canonical seed stages 0\u20137 (intake through readiness gate).",
+      "description": "Canonical seed stages 0–7 (intake through readiness gate).",
       "optional": false
     },
     {
@@ -158,6 +158,41 @@
     {
       "path": "docs/skill-work/skill-work-human-teacher/README.md",
       "description": "Skill-work-human-teacher submodule index.",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/work-cadence/README.md",
+      "description": "Daily cadence architecture: morning orientation + night consolidation + session handoff + harvest (cross-agent extraction axis), handoff contract, runner modes, cadence event audit, extension points.",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/work-cadence/work-cadence-events.md",
+      "description": "Append-only audit of coffee/dream/bridge runs (optional harvest). Per-run telemetry, not Record truth.",
+      "optional": true
+    },
+    {
+      "path": "docs/skill-work/work-cadence/harvest-packet-contract.md",
+      "description": "Session Harvest Packet contract — section headings and rules; midstream import (no coffee tail); sibling to bridge packet.",
+      "optional": true
+    },
+    {
+      "path": "scripts/log_cadence_event.py",
+      "description": "Cadence event append helper — CLI + importable function for logging coffee/dream/bridge/harvest runs to work-cadence-events.md.",
+      "optional": true
+    },
+    {
+      "path": "scripts/session_harvest.py",
+      "description": "Harvest ritual helper — on-disk checklist, optional markdown template, optional cadence log (--kind harvest).",
+      "optional": true
+    },
+    {
+      "path": "scripts/cadence-coffee.py",
+      "description": "Coffee — consolidated morning cadence runner: mode dispatch over good-morning-brief.py with branch snapshot.",
+      "optional": true
+    },
+    {
+      "path": "scripts/cadence-dream.py",
+      "description": "Dream — consolidated night cadence runner: good-night-brief.py with closeout + git summary.",
       "optional": true
     },
     {
@@ -462,7 +497,7 @@
     },
     {
       "path": "users/_template/seed-phase/seed_intake.json",
-      "description": "Seed intake placeholder, including optional navigation metadata (`start_here_pick`) and deferred cadence ritual defaults (`cadence_preference`).",
+      "description": "Seed intake placeholder.",
       "optional": false
     },
     {

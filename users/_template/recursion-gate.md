@@ -12,19 +12,4 @@ Governed by Identity Fork Protocol: agent may stage, may not merge. The gate is 
 
 ---
 
-## Before approve — binary checks (optional)
-
-Use these as a **fast test suite** before saying yes. Skip any row that does not apply to your instance. Adapt wording to your governance (Lexile, boundary rules, etc.).
-
-- **Scope:** Does this candidate stay inside what the companion actually said or approved sources — no scope creep?
-- **Contradiction:** Does anything here **flatly contradict** an existing SELF entry? If both should stand, is **provenance / tension** documented per instance policy?
-- **Evidence:** Is there a plausible `evidence_id`, artifact, or `human_approved` path — not model invention?
-- **Target surface:** Is `profile_target` (IX-A / IX-B / IX-C / EVIDENCE / prompt) correct for this content?
-- **Voice / safety:** If prompt or Voice text changes: would the companion **stand behind** this text as canonical? Any boundary or abstention regression?
-- **Operator echo:** For automated merges: does the operator echo **candidate id + one-line summary** before `--apply`, per instance procedure?
-
-If any **must-pass** check fails, **reject or edit** the candidate; do not merge hoping to fix later.
-
----
-
 *Do not use this file as a live staging area in the template. Copy to `users/<new_id>/recursion-gate.md` in an instance (or keep an equivalent name such as recursion-gate.json for the machine-readable queue).*

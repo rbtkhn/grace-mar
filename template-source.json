@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.1.0",
   "recordType": "templateAppliedProvenance",
-  "companionSelfCommit": "ceb8d5118e9ad45e1527a738a84efd4d5849cae9",
+  "companionSelfCommit": "e783c7a98e38d4a102c459076a54a1ac2ad722de",
   "templateVersion": "0.4.0",
-  "syncedAt": "2026-04-05T20:00:00Z",
-  "syncedBy": "pr7-9-observability-authority-legible-receipts",
+  "syncedAt": "2026-04-05T20:10:00Z",
+  "syncedBy": "template-sync-align-e783c7a-cadence-seed-intake",
   "syncedPaths": [
     "schema-registry/",
     "schema-registry/seed-intent.v1.json",
@@ -72,7 +72,23 @@
     "users/demo/review-queue",
     "evidence/.gitkeep",
     "prepared-context/.gitkeep",
-    "docs/merging-from-companion-self.md"
+    "docs/merging-from-companion-self.md",
+    "docs/CONTRADICTION-ENGINE-SPEC.md",
+    "docs/approval-inbox-spec.md",
+    "docs/concept.md",
+    "docs/seed-phase-stages.md",
+    "docs/skill-work/README.md",
+    "docs/skill-work/work-cadence/README.md",
+    "docs/skill-work/work-cadence/harvest-packet-contract.md",
+    "docs/skill-work/work-cadence/work-cadence-events.md",
+    "schema-registry/seed-intake.v1.json",
+    "scripts/cadence-coffee.py",
+    "scripts/cadence-dream.py",
+    "scripts/log_cadence_event.py",
+    "scripts/session_harvest.py",
+    "schema-registry/boundary-classification.v1.json",
+    "schema-registry/harness-replay-event.v1.json",
+    "schema-registry/answer-provenance.v1.json"
   ],
   "templateUpstream": {
     "repo": "https://github.com/rbtkhn/companion-self",
@@ -81,7 +97,7 @@
   "targetReference": {
     "instanceContract": "instance-contract.json",
     "templateVersionTarget": "0.4.0",
-    "templateCommitTarget": "ceb8d5118e9ad45e1527a738a84efd4d5849cae9"
+    "templateCommitTarget": "e783c7a98e38d4a102c459076a54a1ac2ad722de"
   },
   "notes": "Top-level fields describe the last applied template merge. Narrow auxiliary refreshes should append to auxiliarySyncEvents rather than replacing this baseline.",
   "auxiliarySyncEvents": []

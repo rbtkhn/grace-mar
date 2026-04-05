@@ -6,9 +6,9 @@ Does not author insights — the agent fills narrative from the visible thread.
 See .cursor/skills/harvest/SKILL.md and docs/skill-work/work-cadence/harvest-packet-contract.md.
 
 Usage:
-  python3 scripts/session_harvest.py -u grace-mar
-  python3 scripts/session_harvest.py -u grace-mar --mode strategic --emit-template
-  python3 scripts/session_harvest.py -u grace-mar --log --mode default
+  python3 scripts/session_harvest.py -u demo
+  python3 scripts/session_harvest.py -u demo --mode strategic --emit-template
+  python3 scripts/session_harvest.py -u demo --log --mode default
 """
 
 from __future__ import annotations
@@ -23,6 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 LOG_SCRIPT = REPO_ROOT / "scripts" / "log_cadence_event.py"
 MODES = ("default", "technical", "strategic", "minimal")
 
+# Common instance territory histories (optional; marked missing if absent).
 TERRITORY_HISTORIES = [
     "docs/skill-work/work-coffee/work-coffee-history.md",
     "docs/skill-work/work-dream/work-dream-history.md",
@@ -31,11 +32,14 @@ TERRITORY_HISTORIES = [
 ]
 
 
-def _default_companion_self_root() -> Path:
-    env = os.environ.get("GRACE_MAR_COMPANION_SELF", "").strip()
+def _optional_second_repo() -> Path | None:
+    """If set, show git status for a sibling instance repo (multi-root workflows)."""
+    env = os.environ.get("GRACE_MAR_INSTANCE_ROOT", "").strip()
     if env:
-        return Path(env).expanduser().resolve()
-    return REPO_ROOT / "companion-self"
+        p = Path(env).expanduser().resolve()
+        if p.is_dir() and (p / ".git").exists():
+            return p
+    return None
 
 
 def _run_git(cwd: Path, *args: str) -> str:
@@ -62,8 +66,15 @@ def _checklist(user_id: str) -> list[tuple[str, bool]]:
     uid = user_id.strip()
     rows: list[tuple[str, bool]] = []
     base = REPO_ROOT / "users" / uid
-    for name in ("self-memory.md", "recursion-gate.md", "last-dream.json", "session-transcript.md"):
-        p = base / name
+    for rel in (
+        "self-memory.md",
+        "recursion-gate.md",
+        "recursion-gate.json",
+        "daily-handoff/night-handoff.json",
+        "last-dream.json",
+        "session-transcript.md",
+    ):
+        p = base / rel
         rows.append((str(p.relative_to(REPO_ROOT)), p.is_file()))
     for rel in TERRITORY_HISTORIES:
         p = REPO_ROOT / rel
@@ -111,7 +122,12 @@ Paste this into the target agent session as context for analysis; do not treat i
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("-u", "--user", default=os.getenv("GRACE_MAR_USER_ID", "grace-mar"), help="Instance user id")
+    ap.add_argument(
+        "-u",
+        "--user",
+        default=os.getenv("COMPANION_USER_ID", "demo"),
+        help="Instance user id (default: COMPANION_USER_ID or demo)",
+    )
     ap.add_argument(
         "--mode",
         choices=MODES,
@@ -123,11 +139,6 @@ def main() -> int:
         "--log",
         action="store_true",
         help="Append work-cadence-events.md line via log_cadence_event.py --kind harvest",
-    )
-    ap.add_argument(
-        "--cursor-model",
-        default=None,
-        help="With --log: forwarded to log_cadence_event (else CURSOR_MODEL env)",
     )
     args = ap.parse_args()
 
@@ -141,7 +152,7 @@ def main() -> int:
         mark = "yes" if ok else "missing"
         print(f"- `{rel}` — {mark}")
 
-    print("\n### git (grace-mar)\n")
+    print("\n### git (this repo)\n")
     print("```")
     print(_run_git(REPO_ROOT, "status", "-sb"))
     print("```\n")
@@ -149,16 +160,19 @@ def main() -> int:
     print(_run_git(REPO_ROOT, "log", "--oneline", "-10"))
     print("```")
 
-    cs = _default_companion_self_root()
-    if cs.is_dir() and (cs / ".git").exists():
-        print("\n### git (companion-self)\n")
-        print(f"`{cs}`\n")
+    second = _optional_second_repo()
+    if second is not None:
+        print("\n### git (GRACE_MAR_INSTANCE_ROOT)\n")
+        print(f"`{second}`\n")
         print("```")
-        print(_run_git(cs, "status", "-sb"))
+        print(_run_git(second, "status", "-sb"))
         print("```")
     else:
-        print("\n### companion-self\n")
-        print(f"(not present or not a git repo: `{cs}`)\n")
+        print("\n### Second repo\n")
+        print(
+            "(optional) Set `GRACE_MAR_INSTANCE_ROOT` to an instance git root "
+            "for an extra one-line `git status` in multi-root workflows.\n"
+        )
 
     if args.log:
         cmd = [
@@ -174,8 +188,6 @@ def main() -> int:
             "--kv",
             "source=session_harvest",
         ]
-        if args.cursor_model and args.cursor_model.strip():
-            cmd.extend(["--cursor-model", args.cursor_model.strip()])
         r = subprocess.run(cmd, cwd=str(REPO_ROOT))
         return r.returncode
 

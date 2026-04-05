@@ -30,7 +30,10 @@ This companion is intended to support durable personal reasoning, guided knowled
 
 ## Intake — Cursor / operator workspace
 
-- *No `cursor_operator_profile` on intake — optional; see docs/cursor-pack-from-seed.md.*
+- **IDE:** cursor · **Rules preset:** `instance_light`
+- **WORK hints:** work-dev
+- **Generate `.cursor/` on activation (intent):** yes
+- **Operator notes:** Gate-first Cursor rules only at launch; expand toward reference instance later.
 
 ## Identity Summary
 
@@ -60,7 +63,7 @@ Overall **0.88**.
 
 Status **initialized**; involvement **regular**; evidence_basis **seed_survey**.
 
-Focuses: seed phase alignment; OpenClaw handback
+Focuses: seed artifacts; instance sync
 
 Synthetic demo values for validation and docs.
 

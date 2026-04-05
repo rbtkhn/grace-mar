@@ -2,7 +2,7 @@
 
 **Purpose:** Canonical section headings and rules for the **Session Harvest Packet** produced by the **`harvest`** skill (`.cursor/skills/harvest/SKILL.md`). **Not** a bridge packet; **not** a cold-session initializer.
 
-**vs bridge:** [bridge](../../../.cursor/skills/bridge/SKILL.md) ends with a lone line `coffee` so the **next** session runs work-start coffee on a **fresh** thread. **Harvest must not** end with `coffee`. Harvest is for **midstream import** into an agent session that **already has momentum**.
+**vs bridge:** [Bridge](bridge-packet-contract.md) ends with reorientation (`coffee`) for a **fresh** thread. **Harvest must not** end with `coffee`. Harvest is for **midstream import** into an agent session that **already has momentum**. See also [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md).
 
 ---
 
@@ -35,8 +35,8 @@ Use this heading order unless a section is empty (omit empty sections; do not pr
 | `## Recommended next steps` | Numbered 1…n, actionable. |
 | `## Suggested asks for the receiving agent` | Imperatives: Analyze…, Critique…, Compare… |
 | `## Executive compression` | 8–15 dense bullets. |
-| `## Agent surface` | **Always include** (Cursor). One line: **Cursor model:** followed by the **model name shown in the Cursor chat UI** (header / model picker for this composer). Operational provenance only; **not** Record. If the name is genuinely unavailable in context, use `unknown`. |
-| *(final line)* | See **Required closing line** above (must remain the **last** line of the packet). |
+| `## Agent surface` | **Always include** (Cursor). One line: **Cursor model:** plus the **model name from the Cursor chat UI** (model picker). Not Record. Use `unknown` only if unavailable. |
+| *(final line)* | See **Required closing line** above (must be last). |
 
 ---
 
@@ -44,7 +44,7 @@ Use this heading order unless a section is empty (omit empty sections; do not pr
 
 - A trailing **`coffee`** line (that is **bridge-only**).
 - **`# Session Bridge`** title or bridge-specific sections (Arc, Carry-forward from last dream as the **primary** frame, etc.) unless you are **explicitly** comparing packets in prose.
-- Implication that the packet **replaces** reading `recursion-gate.md` or **authorizes** merges.
+- Implication that the packet **replaces** reading the gate or **authorizes** merges.
 
 ---
 
@@ -56,7 +56,7 @@ Default: packet exists **only in chat**. If the operator asks to save: e.g. `doc
 
 ## Improving harvest over time (operator habit)
 
-No scripts required. After pasting the packet into the target session, note **Load** (transfer worked?), **Accuracy** (`{fact}` / caveats), **Action** (suggested asks useful?). If the same gap appears twice, update [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) or this contract. See skill § *After the paste*.
+No scripts required. After pasting the packet into the target session, note **Load**, **Accuracy**, **Action** (see [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) § *After the paste*). If the same gap appears twice, update the skill or this contract.
 
 ---
 
@@ -64,6 +64,6 @@ No scripts required. After pasting the packet into the target session, note **Lo
 
 | Date | Change |
 |------|--------|
-| 2026-04-04 | Initial contract (harvest as bridge sibling). |
+| 2026-04-05 | Initial contract in template (harvest as bridge sibling). |
 | 2026-04-06 | Pointer to doc-only post-paste review loop (skill § After the paste). |
-| 2026-04-07 | **Agent surface** section — Cursor UI model label before required closing line. |
+| 2026-04-07 | **Agent surface** — Cursor UI model label before required closing line. |

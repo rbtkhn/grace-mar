@@ -135,13 +135,30 @@ Instances should support: (1) **Reversibility** — rollback or undo of Record c
 | **Record** | `users/<id>/self.md`, `self-knowledge.md`, `self-curiosity.md`, `self-personality.md`, `self-skill-think.md`, `self-skill-write.md`, `self-skill-work.md`, self-evidence.md |
 | **Voice** | Bot or other interface (lives in the instance repo; not in this template) |
 | **Staging** | recursion-gate — candidates at the gate, before merge. To process the gate: [Identity Fork Protocol](identity-fork-protocol.md) § Process the gate. |
-| **Continuity (non-Record)** | `self-memory.md` (**self-memory**; legacy `memory.md`): short/medium/long horizons; optional; rotatable; not gated Record (see [memory-template.md](memory-template.md)) |
+| **Ephemeral context** | self-memory.md (optional; not part of the Record) |
 
 This template defines concept, protocol, and seed phase. Bot code and Record data live in instance repos only.
 
 ---
 
-## 9. Recursive self-learning
+## 9. Operating Modes
+
+Instances may implement distinct modes that govern what the agent or system may do in different contexts. The template recognizes these baseline modes:
+
+| Mode | Purpose | Agent behavior |
+|------|---------|----------------|
+| **Session** | Interactive conversation with companion | Respond as Voice; propose activities. Do not merge. Stage only when pipeline signals fire. |
+| **Pipeline** | Process staged candidates | Detect signals, stage to gate, or on approval merge into Record via governed process. |
+| **Query** | Browse or answer questions about the Record | Read-only. Report what is documented. Do not edit. |
+| **Maintenance** | End-of-day consolidation (`dream`) | Run bounded maintenance: normalize ephemeral memory, check integrity, refresh derived artifacts. Read-only with respect to the Record; may write to ephemeral surfaces (self-memory, handoff artifacts). No merge authority. |
+
+When in doubt, default to Session (conversational, no merges). Instances may add modes (e.g. grace-mar adds work-specific operator modes); the four above are the structural baseline.
+
+The **Maintenance** mode formalizes the pattern that nightly `dream` passes (see `docs/skill-work/work-cadence/` and `.cursor/skills/dream/SKILL.md`) are **operational** — they may clean up ephemeral state and surface issues, but they do not cross the gate boundary.
+
+---
+
+## 10. Recursive self-learning
 
 The Record can **improve itself over time**: each pipeline cycle refines the Record, and the updated Record shapes the next cycle (what gets detected, what the Voice says, what activities might be proposed at the edge). For objectives that guide this—inspired by learning science and AI-powered education models—see [RECURSIVE-SELF-LEARNING-OBJECTIVES](recursive-self-learning-objectives.md).
 

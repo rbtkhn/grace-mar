@@ -25,9 +25,9 @@ This document defines the **formation pipeline** before a companion instance is 
 
 | | |
 |--|--|
-| **Purpose** | Establish who the companion is for, operational constraints, and allowed/disallowed domains. |
-| **Required inputs** | Operator or guardian context; age band; primary use cases (may be partial at start). |
-| **Required outputs** | `seed_intake.json` (see artifacts doc). |
+| **Purpose** | Establish who the companion is for, operational constraints, and allowed/disallowed domains — plus **operator workspace** preferences for **Cursor** (same survey: optional `cursor_operator_profile` in `seed_intake.json`). |
+| **Required inputs** | Operator or guardian context; age band; primary use cases (may be partial at start). Optional: primary IDE, desired **rules pack preset** (`template_steward` / `instance_light` / `instance_operator`), WORK territory hints, whether to **generate `.cursor/` on activation** (future script). |
+| **Required outputs** | `seed_intake.json` (see artifacts doc and [cursor-pack-from-seed.md](cursor-pack-from-seed.md)). |
 | **Completion criteria** | Intake JSON validates; `completion.coverage_score` meets threshold in [readiness](seed-phase-readiness.md); no unresolved **blocking** contradictions on safety. |
 | **Blocking conditions** | Missing age band when minor; empty disallowed_domains when high-risk topics declared; contradictory safety notes left unresolved. |
 

@@ -1,23 +1,18 @@
 #!/usr/bin/env python3
 """
-Append a cadence event (coffee / dream / bridge / harvest / coffee_pick / thanks) to work-cadence-events.md.
+Append a cadence event (coffee / dream / bridge / harvest) to work-cadence-events.md.
 
 One line per run. Not Record truth; not self-memory; not a replacement for
-last-dream.json or session-transcript.md. See docs/skill-work/work-cadence/.
+night-handoff.json or session-transcript.md. See docs/skill-work/work-cadence/.
 
 Usage:
-  python3 scripts/log_cadence_event.py --kind dream -u grace-mar --ok --mode default \
-      --kv integrity=pass governance=pass mem_changed=true
-  python3 scripts/log_cadence_event.py --kind coffee -u grace-mar --ok --mode work-start \
-      --kv gate_pending=0
-  python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok \
-      --kv picked=E steward=gate
-  python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok \
-      --kv refs=aacec9e,4eaf1f4
-  python3 scripts/log_cadence_event.py --kind harvest -u grace-mar --ok \
+  python3 scripts/log_cadence_event.py --kind dream -u demo --ok --mode standard \
+      --kv integrity=pass governance=pass
+  python3 scripts/log_cadence_event.py --kind coffee -u demo --ok --mode standard
+  python3 scripts/log_cadence_event.py --kind bridge -u demo --ok \
+      --kv refs=abc1234
+  python3 scripts/log_cadence_event.py --kind harvest -u demo --ok \
       --mode default --kv packet=chat
-  python3 scripts/log_cadence_event.py --kind thanks -u grace-mar --ok \
-      --kv park=Rome-pass-draft
 
 **Agent surface (audit parity with bridge/harvest packets):** every line includes
 ``cursor_model=…``. Resolution order: ``--cursor-model`` CLI / ``cursor_model=``
@@ -36,19 +31,18 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work-cadence-events.md"
 ANCHOR = "_(Append below this line.)_"
-KINDS = ("coffee", "dream", "bridge", "coffee_pick", "harvest", "thanks")
+KINDS = ("coffee", "dream", "bridge", "harvest")
 
 HEADER = (
     "# Cadence events\n"
     "\n"
-    "> Append-only audit of **coffee**, **coffee_pick**, **dream**, **bridge**, **harvest**, and **thanks** runs.\n"
-    "> **Not** Record truth. **Not** self-memory. **Not** a replacement for "
-    "`last-dream.json` or `session-transcript.md`.\n"
+    "> Append-only audit of **coffee**, **dream**, **bridge**, and optional **harvest** runs.\n"
+    "> **Not** Record truth. **Not** self-memory. **Not** a replacement for\n"
+    "> handoff artifacts or `session-transcript.md`.\n"
     ">\n"
     "> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) ok=… [mode=…] cursor_model=… …`\n"
     ">\n"
-    "> See [work-cadence README](README.md) and "
-    "[work-modules-history-principle](../work-modules-history-principle.md).\n"
+    "> See [work-cadence README](README.md).\n"
     "\n"
     f"{ANCHOR}\n"
 )
@@ -62,11 +56,7 @@ def resolve_cursor_model(
     explicit: str | None = None,
     kv: dict[str, str] | None = None,
 ) -> str:
-    """Label for the Cursor chat model (bridge **Agent surface** parity).
-
-    Used in cadence lines and ``last-dream.json`` ``agent_surface.cursor_model``.
-    Prefer the model name shown in the Cursor UI; not Record truth.
-    """
+    """Label for the Cursor chat model (bridge **Agent surface** parity)."""
     if explicit is not None and str(explicit).strip():
         return str(explicit).strip()[:200]
     if kv:
@@ -129,10 +119,10 @@ def append_cadence_event(
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--kind", required=True, choices=KINDS, help="Cadence type")
-    ap.add_argument("-u", "--user", default=os.getenv("GRACE_MAR_USER_ID", "grace-mar"))
+    ap.add_argument("-u", "--user", default=os.getenv("COMPANION_USER_ID", "demo"))
     ap.add_argument("--ok", action="store_true", default=False, help="Run succeeded")
     ap.add_argument("--no-ok", dest="ok", action="store_false", help="Run failed")
-    ap.add_argument("--mode", default=None, help="Run mode (e.g. work-start, strict, default)")
+    ap.add_argument("--mode", default=None, help="Run mode (e.g. standard, strict, default)")
     ap.add_argument(
         "--cursor-model",
         default=None,
