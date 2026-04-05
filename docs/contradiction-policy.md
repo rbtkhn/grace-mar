@@ -27,6 +27,8 @@ Instead:
 4. record a decision
 5. apply the resulting governed state change only after review
 
+Contradiction handling should also reference [source-of-truth.md](source-of-truth.md) (precedence across layers) and [conflict-resolution-order.md](conflict-resolution-order.md) (what to do when sources disagree).
+
 ---
 
 ## Contradiction classes

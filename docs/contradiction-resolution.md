@@ -2,9 +2,9 @@
 
 **Purpose:** Define how instances handle conflicts between new evidence and existing SELF / skill claims. Preserve history instead of overwriting; require explicit human resolution at the gate.
 
-**Status:** Template specification, with **Grace-Mar** advisory conflict detection implemented (`bot/conflict_check.py`, `bot/conflict_rules.yaml`) before RECURSION-GATE append.
+**Status:** Template specification. Instances may implement advisory conflict checks before merge (see [instance-patterns.md](instance-patterns.md) § conflict check).
 
-**See also:** [change-review.md](change-review.md) (governed self-revision doctrine entrypoint), [contradiction-policy.md](contradiction-policy.md), [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md) (governed identity-diff workflow, UI, merge, audit), [contradiction-timeline.md](contradiction-timeline.md), [identity-fork-protocol.md](identity-fork-protocol.md); [companion-self mirror](https://github.com/rbtkhn/companion-self/blob/main/docs/contradiction-resolution.md).
+**See also:** [change-review.md](change-review.md) (governed self-revision doctrine entrypoint), [contradiction-policy.md](contradiction-policy.md) (classification during change review), [source-of-truth.md](source-of-truth.md), [conflict-resolution-order.md](conflict-resolution-order.md), [CONTRADICTION-ENGINE-SPEC.md](CONTRADICTION-ENGINE-SPEC.md) (governed identity-diff workflow, UI, merge, audit), [identity-fork-protocol.md](identity-fork-protocol.md)
 
 ---
 
@@ -21,7 +21,7 @@ When new evidence contradicts an existing claim, do **not** overwrite. Instead:
 
 ## Resolution Record Format
 
-When a conflict is resolved, record (shape may live in self-archive or dimension files per instance):
+When a conflict is resolved, record (shape may live in self-evidence or dimension files per instance):
 
 ```yaml
 superseded_entry:
@@ -45,20 +45,11 @@ superseded_entry:
 
 ---
 
-## Conflict detection (Grace-Mar — implemented)
+## Conflict Detection (instance option)
 
-The pipeline runs `bot/conflict_check.py` before appending to RECURSION-GATE. It:
+Before merge, an instance may run an **advisory** conflict check: compare staged content to existing Record (e.g. IX-A, IX-B, IX-C). Surface for resolution; **do not block staging** unless instance policy explicitly requires it. The companion still decides at the gate.
 
-1. Compares new personality candidates to existing SELF traits (seed + IX-C)
-2. Flags contradictions using `bot/conflict_rules.yaml` (e.g., dependent vs independent)
-3. Appends `conflicts_detected` to the candidate YAML; the operator sees the flag in RECURSION-GATE
-4. Does **not** block staging — surfaces for user resolution (approve / reject / merge)
-
-Rules are editable in `conflict_rules.yaml`. V1 covers personality opposites only; knowledge / curiosity checks can be added later.
-
-On resolution (when the user approves), add `superseded_by` / `superseded_entry` per the format above.
-
-**Other instances:** Before merge, an instance may run an **advisory** conflict check per [instance-patterns.md](https://github.com/rbtkhn/companion-self/blob/main/docs/instance-patterns.md) § conflict check. Surface for resolution; do not block staging unless instance policy requires it.
+Reference implementation: Grace-Mar `bot/conflict_check.py` + `bot/conflict_rules.yaml`.
 
 ---
 
@@ -68,19 +59,4 @@ Resolved claims may gain `valid_from`, `valid_until`, `superseded_by`. Fork stat
 
 ---
 
-## Example (Grace-Mar)
-
-**Before (conflict detected):**
-
-- SELF IX-C: "Fearful of swimming (deep water) — WRITE-0003"
-- New candidate: "Joined swim team — observed at pool"
-
-**After resolution (type: growth):**
-
-- Old entry gets `superseded_by: ACT-0015`, `resolution: growth`
-- New entry: PER-0002 "Overcame swimming fear; joined team — ACT-0015"
-- History preserved: both the fear and the growth are in the record
-
----
-
-*Template doc aligned with companion-self (March 2026); Grace-Mar implementation notes preserved.*
+*Template doc. Last updated: March 2026.*

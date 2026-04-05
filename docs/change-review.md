@@ -10,6 +10,19 @@ Companion-Self template · Governed self-revision doctrine (v1 entrypoint)
 
 ---
 
+## State proposal object
+
+Meaningful post-seed revision should be represented as a **state proposal**: a JSON file that validates as **Change Proposal v1** under `users/<id>/review-queue/proposals/`, not as a vague “memory update” with no durable object.
+
+See:
+
+- [state-proposals.md](state-proposals.md) — definition, field mapping, gate vs queue
+- [schema-registry/change-proposal.v1.json](../schema-registry/change-proposal.v1.json) — machine schema
+
+Material **source** conflicts between evidence, prepared context, and governed state should become proposals and review objects, not silent updates to the Record. See [source-of-truth.md](source-of-truth.md) and [conflict-resolution-order.md](conflict-resolution-order.md).
+
+---
+
 ## Purpose
 
 Change review is the governed pipeline for materially important post-seed changes to a companion instance.

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "precedence": [
+    "governed_state",
+    "accepted_change_objects",
+    "prepared_context",
+    "evidence"
+  ],
+  "notes": [
+    "Prepared context is operationally useful but not durable truth.",
+    "Material disagreement should trigger review rather than silent overwrite."
+  ]
+}

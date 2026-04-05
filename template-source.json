@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.1.0",
   "recordType": "templateAppliedProvenance",
-  "companionSelfCommit": "9ad388dde8c3178aeb3682f598ae5c0cd6115b6f",
+  "companionSelfCommit": "55fb441f20fe13bec0490b9a753d27e38f8660a5",
   "templateVersion": "0.4.0",
-  "syncedAt": "2026-04-05T00:00:00Z",
-  "syncedBy": "template-sync-state-model-seed-intent-prepared-context",
+  "syncedAt": "2026-04-05T12:00:00Z",
+  "syncedBy": "pr4-6-state-proposals-pipeline-source-of-truth",
   "syncedPaths": [
     "schema-registry/",
     "schema-registry/seed-intent.v1.json",
@@ -19,6 +19,21 @@
     "docs/governed-state-layer.md",
     "docs/prepared-context-doctrine.md",
     "docs/evidence-to-context-pipeline.md",
+    "docs/pipeline/evidence-to-proposal.md",
+    "docs/pipeline/proposal-to-review.md",
+    "docs/pipeline/review-to-merge.md",
+    "docs/state-proposals.md",
+    "docs/source-of-truth.md",
+    "docs/conflict-resolution-order.md",
+    "docs/change-types.md",
+    "docs/contradiction-policy.md",
+    "docs/contradiction-resolution.md",
+    "docs/change-review-validation.md",
+    "config/source-of-truth.json",
+    "schema-registry/source-of-truth.v1.json",
+    "scripts/generate-change-proposal.py",
+    "scripts/render-change-proposal-summary.py",
+    "scripts/check-source-conflict.py",
     "docs/seed-phase-intent.md",
     "docs/seed-phase.md",
     "docs/seed-phase-artifacts.md",
@@ -55,7 +70,7 @@
   "targetReference": {
     "instanceContract": "instance-contract.json",
     "templateVersionTarget": "0.4.0",
-    "templateCommitTarget": "9ad388dde8c3178aeb3682f598ae5c0cd6115b6f"
+    "templateCommitTarget": "55fb441f20fe13bec0490b9a753d27e38f8660a5"
   },
   "notes": "Top-level fields describe the last applied template merge. Narrow auxiliary refreshes should append to auxiliarySyncEvents rather than replacing this baseline.",
   "auxiliarySyncEvents": []

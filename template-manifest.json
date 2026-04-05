@@ -41,6 +41,31 @@
       "optional": false
     },
     {
+      "path": "docs/pipeline/evidence-to-proposal.md",
+      "description": "Pipeline stage: evidence to Change Proposal v1 file.",
+      "optional": false
+    },
+    {
+      "path": "docs/pipeline/proposal-to-review.md",
+      "description": "Pipeline stage: proposal JSON into explicit review.",
+      "optional": false
+    },
+    {
+      "path": "docs/pipeline/review-to-merge.md",
+      "description": "Pipeline stage: reviewed proposal to governed merge.",
+      "optional": false
+    },
+    {
+      "path": "docs/source-of-truth.md",
+      "description": "Precedence across evidence, prepared context, governed state, accepted change-review.",
+      "optional": false
+    },
+    {
+      "path": "docs/conflict-resolution-order.md",
+      "description": "Order of operations when sources disagree; no silent winners.",
+      "optional": false
+    },
+    {
       "path": "docs/identity-fork-protocol.md",
       "description": "Protocol: Sovereign Merge Rule, schema (SELF, self-skill-*, self-evidence), evidence linking.",
       "optional": false
@@ -141,6 +166,11 @@
       "optional": false
     },
     {
+      "path": "docs/state-proposals.md",
+      "description": "State proposal doctrine: human term for Change Proposal v1 JSON under review-queue/proposals/.",
+      "optional": false
+    },
+    {
       "path": "docs/contradiction-policy.md",
       "description": "Contradiction classes, resolution semantics, blocking vs non-blocking, policy priority during change review.",
       "optional": false
@@ -179,6 +209,16 @@
       "path": "schema-registry/change-event-log.v1.json",
       "description": "Change-review: audit event log entries.",
       "optional": false
+    },
+    {
+      "path": "schema-registry/source-of-truth.v1.json",
+      "description": "Optional JSON Schema for config/source-of-truth.json precedence map.",
+      "optional": true
+    },
+    {
+      "path": "config/source-of-truth.json",
+      "description": "Default layer precedence (governed_state, accepted_change_objects, prepared_context, evidence).",
+      "optional": true
     },
     {
       "path": "schema-registry/boundary-classification.v1.json",
@@ -324,6 +364,21 @@
       "path": "scripts/validate-change-review.py",
       "description": "Validates users/<id>/review-queue trees against change-review schemas (strict or --allow-empty for template scaffold).",
       "optional": false
+    },
+    {
+      "path": "scripts/generate-change-proposal.py",
+      "description": "Scaffold Change Proposal v1 JSON under review-queue/proposals (placeholder state refs).",
+      "optional": true
+    },
+    {
+      "path": "scripts/render-change-proposal-summary.py",
+      "description": "Human-readable summary of a Change Proposal v1 file (not identity-diff).",
+      "optional": true
+    },
+    {
+      "path": "scripts/check-source-conflict.py",
+      "description": "Compare two layer tokens against config/source-of-truth.json precedence.",
+      "optional": true
     },
     {
       "path": "scripts/generate-identity-diff.py",

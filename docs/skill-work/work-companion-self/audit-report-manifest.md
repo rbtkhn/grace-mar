@@ -11,9 +11,7 @@ Paths: companion-self template-manifest.json
 ### Differ (both exist, content differs — review)
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/approval-inbox-spec.md
-  - docs/change-review-validation.md
   - docs/concept.md
-  - docs/contradiction-resolution.md
   - docs/layer-map.json
   - docs/seed-phase-stages.md
   - docs/skill-work/README.md
@@ -38,20 +36,20 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
 
 ### Same (no action)
   - bridges/bridge-schema.json
+  - config/source-of-truth.json
   - docs/change-review-lifecycle.md
+  - docs/change-review-validation.md
   - docs/change-review.md
   - docs/change-types.md
+  - docs/conflict-resolution-order.md
   - docs/contradiction-policy.md
+  - docs/contradiction-resolution.md
   - docs/evidence-layer.md
   - docs/evidence-to-context-pipeline.md
   - docs/governed-state-layer.md
   - docs/instance-patterns.md
   - docs/long-term-objective.md
-  - docs/prepared-context-doctrine.md
-  - docs/prepared-context-layer.md
-  - docs/seed-phase-artifacts.md
-  - docs/seed-phase-confidence-model.md
-  - docs/seed-phase-intent.md
-  ... and 79 more
+  - docs/pipeline/evidence-to-proposal.md
+  ... and 92 more
 
-Summary: same=94 differ=21 expected_drift=1 only_template=2 only_instance=0
+Summary: same=107 differ=19 expected_drift=1 only_template=2 only_instance=0

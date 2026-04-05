@@ -8,6 +8,8 @@ Companion-Self template — validation rules for contradiction and change-review
 
 This document explains how to validate the change-review subsystem artifacts.
 
+**Dependencies:** `validate-change-review.py` uses **`jsonschema`** (same stack as `validate-seed-phase.py`). Install with `pip install -r scripts/requirements-seed-phase.txt` unless your environment already provides `jsonschema`.
+
 Validation exists to ensure that:
 
 - review artifacts conform to their JSON Schemas
@@ -16,18 +18,6 @@ Validation exists to ensure that:
 - proposals point to real governed-state artifacts where applicable
 - the template scaffold remains structurally correct
 - the demo remains a working example
-
----
-
-## Gate → review-queue bridge (grace-mar)
-
-To escalate a **single** `recursion-gate.md` candidate into a structured change-review **proposal** (without merging the Record):
-
-```bash
-python3 scripts/export_gate_to_review_queue.py --user <fork_id> --candidate-id CANDIDATE-XXXX
-```
-
-Then validate with `validate-change-review.py`: use `--allow-empty` while the tree is still a minimal scaffold (empty proposals/decisions/diffs allowed); use `--allow-missing-decisions` when proposals and diffs exist but `decisions/` is still empty. See [gate-vs-change-review.md](gate-vs-change-review.md).
 
 ---
 
@@ -64,7 +54,7 @@ The validator checks:
 - decision files against `schema-registry/change-decision.v1.json`
 - diff files against `schema-registry/identity-diff.v1.json`
 
-**Queue items** must include `proposalClass`, `targetSurface`, `materiality`, `reviewType`, `riskLevel`, and `requiresReclassification` when present (non-empty queue). **Proposals** must include `targetSurface`, `materiality`, `reviewType`, and `queueSummary` among required fields. Surface tokens use snake_case values such as `self`, `self_library`, `civ_mem`, `work_layer` (see schemas). Mirrors under `docs/schemas/` should match `schema-registry/` after edits.
+**Queue items** must include `proposalClass`, `targetSurface`, `materiality`, `reviewType`, `riskLevel`, and `requiresReclassification` when present (non-empty queue). **Proposals** must include `targetSurface`, `materiality`, `reviewType`, and `queueSummary` among required fields. Surface tokens use snake_case values such as `self`, `self_library`, `civ_mem`, `work_layer` (see schemas).
 
 #### 3. Queue references are coherent
 
@@ -95,14 +85,14 @@ The `_template` scaffold is intentionally minimal.
 
 Use `--allow-empty` when validating the template review queue so that empty proposal, decision, and diff directories are treated as valid placeholders.
 
-### Pre-decision bundle (gate export and similar)
+### Pre-decision bundle
 
 Use `--allow-missing-decisions` when:
 
 - `proposals/` and `diffs/` each contain at least one valid JSON file, and
-- `decisions/` is still empty (no companion decision recorded yet).
+- `decisions/` is still empty (no human decision recorded yet).
 
-Strict mode without flags requires at least one file in all three directories. `--allow-missing-decisions` relaxes only the decision count; proposals and diffs are still required (and fully schema-checked). Combine with `--allow-empty` only when you need the template case (all three directories may be empty).
+Strict mode without flags requires at least one file in all three directories. `--allow-missing-decisions` relaxes only the decision count; proposals and diffs are still required and fully schema-checked. Combine with `--allow-empty` only for the minimal template scaffold case.
 
 ### Demo mode
 

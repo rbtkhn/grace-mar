@@ -12,6 +12,20 @@ The lifecycle should be stable even if specific instances implement different to
 
 ---
 
+## Persistence model (layers → review)
+
+End-to-end ordering for **material** changes (complements the numbered lifecycle below):
+
+1. **Evidence** — raw or staged source material ([Evidence Layer](evidence-layer.md))
+2. **Prepared context** — normalized or structured inputs for reasoning ([Prepared Context Layer](prepared-context-layer.md))
+3. **Proposal artifact** — the first **formal persisted review object** is typically a Change Proposal v1 JSON file in `review-queue/proposals/` (see [state-proposals.md](state-proposals.md))
+4. **Review** — classification, diff, human or policy gate
+5. **Merge or reject** — governed state updates only after an explicit decision; no silent overwrite
+
+Narrative stage docs: [pipeline/evidence-to-proposal.md](pipeline/evidence-to-proposal.md), [pipeline/proposal-to-review.md](pipeline/proposal-to-review.md), [pipeline/review-to-merge.md](pipeline/review-to-merge.md). Reference flow across layers: [evidence-to-context-pipeline.md](evidence-to-context-pipeline.md).
+
+---
+
 ## Lifecycle
 
 ### 1. Detect

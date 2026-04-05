@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/source-of-truth.v1.json",
+  "title": "Source of truth map v1",
+  "description": "Optional machine-readable default precedence across Companion-Self state layers.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "precedence"],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "precedence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "governed_state",
+          "accepted_change_objects",
+          "prepared_context",
+          "evidence"
+        ]
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

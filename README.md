@@ -58,6 +58,8 @@ Two input channels feed the pipeline:
 
 Governed changes are reviewed through a **canonical change-review object** that unifies proposal, queue, and decision state across the gate-review workflow (see `schema-registry/change-*.v1.json`, `docs/identity-fork-protocol.md` §4.1.1, and `apps/gate-review-app.py`).
 
+**Template alignment (companion-self):** A **state proposal** is Change Proposal v1 JSON under `review-queue/proposals/` — [docs/state-proposals.md](docs/state-proposals.md). Reference pipeline: [docs/pipeline/evidence-to-proposal.md](docs/pipeline/evidence-to-proposal.md), [proposal-to-review.md](docs/pipeline/proposal-to-review.md), [review-to-merge.md](docs/pipeline/review-to-merge.md). Layer precedence when sources disagree: [docs/source-of-truth.md](docs/source-of-truth.md), [docs/conflict-resolution-order.md](docs/conflict-resolution-order.md).
+
 ## Status
 
 **Phase:** Active instance (emergent cognition, active pipeline)
