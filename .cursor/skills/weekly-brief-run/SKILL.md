@@ -58,6 +58,12 @@ When the brief touches **war powers**, **congressional ethics / insider-trading*
 
 This is WORK-only documentation; it does not merge into the Record.
 
+---
+
+## After the brief run — doc-only loop
+
+**Optional:** If **readiness** or **stale source** warnings repeat for the **same** path twice, tighten [brief-source-registry.md](../../../docs/skill-work/work-politics/brief-source-registry.md) or this skill with **one** line (owner, refresh rhythm, or override flag). No new scripts.
+
 ## Related files
 
 - `docs/operator-skills.md`

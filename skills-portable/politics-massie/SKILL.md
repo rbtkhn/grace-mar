@@ -122,3 +122,9 @@ For each idea:
 ## When search is thin
 
 Say so plainly. Offer: (1) broaden query, (2) pivot to evergreen wedge from your asymmetry doc with a fresh headline from search, or (3) wait for next news cycle.
+
+---
+
+## After the draft run — doc-only loop
+
+**Optional:** If the same **search** or **doctrine** gap repeats, add **one** line to your **account checklist** (instance path) or to this portable core. Draft output still needs human approval before any post. In grace-mar, the instance appendix lists the canonical checklist path.

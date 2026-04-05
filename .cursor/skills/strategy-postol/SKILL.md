@@ -77,6 +77,12 @@ If topic is **Iran** and **both** **energy / Hormuz / power** and **missiles / B
 
 ---
 
+## After the pass — doc-only loop
+
+**Optional:** If the **same** checklist item or **corpus gap** trips repeatedly on ingest or stress-tests, add **one** row or note to [POSTOL-CHECKLIST.md](POSTOL-CHECKLIST.md) or [analyst-corpus INDEX.md](../../../research/external/work-strategy/analyst-corpus/INDEX.md) — WORK surfaces only.
+
+---
+
 ## Related
 
 - [current-events-analysis.md](../../../docs/skill-work/work-strategy/current-events-analysis.md) — pipeline (Perceiver → chokepoint if energy → lenses).

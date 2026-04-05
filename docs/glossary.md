@@ -33,4 +33,15 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 | **Library Domain Registry** | Canonical index (`docs/self-library-domains.md` + `.json`) of **installed reference domains** (e.g. CIV-MEM, LIB entries): surface, authority, invocation, mutation policy, freshness. Routable domains must be declared here. See [self-library-domains.md](self-library-domains.md). |
 | **self-* (standard labels)** | **self-knowledge**, **self-library**, … — lowercase hyphenated labels for Record components; formal surfaces **SELF-KNOWLEDGE** / **SELF-LIBRARY** when disambiguating. See [id-taxonomy.md — Capitalization and format](id-taxonomy.md#capitalization-and-format). |
 
+## Cadence shortcuts (FAQ)
+
+| Phrase | Role |
+|--------|------|
+| **coffee** | Repeated **orientation** (many per day); read-only planning; ends with **A–E** menu in grace-mar; **not** a session seal. |
+| **dream** | **End-of-day** maintenance (MEMORY, integrity, handoff artifact); **not** merge authority. |
+| **bridge** | **Session close** → commit/push + **transfer packet** for a **fresh** thread; packet ends with lone **`coffee`**. |
+| **harvest** | **Midstream** dense packet for an **already-running** agent; **must not** end with **`coffee`**. See [harvest-packet-contract.md](skill-work/work-cadence/harvest-packet-contract.md). |
+
+**Doc-only loop (habit):** If the same cadence confusion repeats twice, patch the relevant **SKILL** or **work-cadence** doc — not SELF/EVIDENCE. See [work-cadence README](skill-work/work-cadence/README.md) § *Closing the troubleshooting loop*.
+
 For full terminology and invariants, see [conceptual-framework.md](conceptual-framework.md), [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md), and [canonical-paths.md](canonical-paths.md).

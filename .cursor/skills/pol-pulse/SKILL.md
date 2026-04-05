@@ -42,6 +42,12 @@ Keep the response focused on:
 - Do not turn work-politics observations into Record edits without the normal gate flow.
 - If blockers are all doc-freshness issues, say that plainly instead of overstating urgency.
 
+---
+
+## After the pulse — doc-only loop
+
+**Optional:** If the same **stale doc** or **blocker** appears on **consecutive** pulses, add **one** pointer line to [work-politics-sources.md](../../../docs/skill-work/work-politics/work-politics-sources.md) or this skill — or refresh the source registry — so the next pulse does not re-litigate.
+
 ## Related files
 
 - `docs/operator-skills.md`

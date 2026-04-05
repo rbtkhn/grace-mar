@@ -134,6 +134,16 @@ Tonight's pass surfaced one contradiction worth governed review tomorrow; nothin
 
 When **`auto_dream.py --strict`** halts because integrity or governance failed, a **new** `last-dream.json` is **not** written (the previous file, if any, is left unchanged). Morning pickup may show an **older** handoff until the next successful dream. Rotation overrides, civ-mem echoes, and rollup fields apply to **successful** writes only.
 
+---
+
+## Strict halt repeats — doc-only loop
+
+If **strict** dream halts for the **same** integrity or governance **reason** more than once, the fix is usually **operational** (refresh exports, resolve parity, adjust config) — not a gate merge.
+
+**Recursive tightening:** Add **one** bullet to **this skill** (e.g. under *Step 1* or this section) or to `docs/skill-work/work-dream/README.md` describing the recurring cause and the **first** recovery step. Do not use this loop to bypass companion merge authority.
+
+---
+
 ## Guardrails
 
 - Do not create a new canonical memory surface.

@@ -56,6 +56,10 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 
 **Skill discovery:** Pointer backlog [skills-portable/skill-candidates.md](../skills-portable/skill-candidates.md), draft lane `skills-portable/_drafts/`, ladder in [skills-portable/README.md](../skills-portable/README.md). After substantive **EXECUTE** / **DOCSYNC** ships, optional one-line prompt per [.cursor/rules/operator-style.mdc](../.cursor/rules/operator-style.mdc) (Skill discovery). **Skills / meta:** **coffee B — Build** + say **skills** or **meta**; **handoff-check** summary may mention the same.
 
+### Gate review — pattern notes (doc-only)
+
+When **`gate review`** recommendations repeatedly mis-rank or duplicate-hint wrong, capture **one line** here or in [.cursor/skills/gate-review-pass/SKILL.md](../.cursor/skills/gate-review-pass/SKILL.md) § *After a batch review*. No automation — this is institutional memory for the operator and agents.
+
 ---
 
 ## Suggested daily pattern

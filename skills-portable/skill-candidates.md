@@ -4,6 +4,8 @@
 
 **Ladder (see [README](README.md)):** (1) line here → (2) draft under [`_drafts/`](_drafts/) → (3) promote portable core + manifest + `sync_portable_skills.py`.
 
+**Hygiene (doc-only loop):** On a quiet pass (e.g. monthly), **strike or mark** rows with **no draft** after **~90 days** unless you still intend to build them — or move the pointer to `_drafts/`. Promoted rows should read `*(promoted)*` like the examples below.
+
 **How to append:** Add a row under **Log** (newest first or oldest first — pick one habit; default **newest at bottom**).
 
 | Field | What to write |

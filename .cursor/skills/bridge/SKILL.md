@@ -236,6 +236,20 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 
 **Optional receipt:** To keep a durable copy, save the transfer block under `docs/skill-work/work-cadence/bridge-packets/YYYY-MM-DD-session.md` (or another path the operator prefers). Default remains chat-only.
 
+---
+
+## After the new session opens — doc-only loop
+
+**Optional operator habit** (no scripts): once the paste is the **first message** in the fresh thread, note:
+
+1. **Coffee** — Did work-start **coffee** Step 1 run on top of the block (not a generic reply that skipped scripts)?
+2. **Tail** — Is the final line still exactly **`coffee`** alone (not dropped, not inside a fence)?
+3. **Load** — Was the packet ~one screen, or did the receiver choke on length?
+
+**Recursive tightening:** If the **same failure** happens **twice** (e.g. lost `coffee` line, wrong heading levels, missing dual-repo status), patch **this skill** or [companion-self `bridge-packet-contract.md`](companion-self/docs/skill-work/work-cadence/bridge-packet-contract.md). Optional: save a **gold** bridge packet under `bridge-packets/` as a shape reference.
+
+---
+
 ## Guardrails
 
 - **Commits only to the current branch.** Never switch branches, force-push, or commit to a branch the operator didn't intend.
@@ -270,3 +284,9 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 - `users/grace-mar/self-memory.md` — continuity context
 - `users/grace-mar/recursion-gate.md` — gated pipeline queue
 - `users/grace-mar/last-dream.json` — dream handoff artifact
+
+## Revision log
+
+| Date | Change |
+|------|--------|
+| 2026-04-06 | Doc-only cold-thread loop § *After the new session opens*. |

@@ -53,6 +53,16 @@ Then give a recommendation per candidate:
 - Treat duplicate hints as prompts to verify, not proof that a candidate should be rejected.
 - Rejected candidates are auto-swept to Processed on the next `coffee` run — no manual cleanup needed.
 
+---
+
+## After a batch review — doc-only pattern library
+
+**Optional operator habit:** After companion decisions (approve / defer / reject) or after a long idle queue, note whether **duplicate_hints**, **risk_tier**, or **age** guidance was **misleading**.
+
+**Recursive tightening:** If the **same** mispattern appears **twice**, add **one** bullet to **this skill** (under this section) or to [docs/operator-skills.md](../../docs/operator-skills.md) § *Gate review — pattern notes*. Do not change `recursion-gate.md` from this loop alone — that stays companion-governed.
+
+---
+
 ## Related files
 
 - `docs/operator-skills.md`

@@ -140,6 +140,10 @@ Grace-mar remains strongly aligned on the first layer. The second layer is now *
 
 - Seed phase is **defined** in ARCHITECTURE (Fork Lifecycle, Seeding) and **operationalized** in OPERATOR-BRIEF and in grace-mar’s SEED-PHASE-2-SURVEY, SEED-PHASE-3-SURVEY. The template’s seed-phase doc can be derived from these. No gap.
 
+### 7.5 Template promotion — doc-only loop
+
+When grace-mar proves a **repeatable** pattern that belongs upstream, use companion-self `.cursor/skills/promote-from-grace-mar/SKILL.md` (checklist, strip instance data). After a successful promote, add **one line** to [instance-patterns.md](instance-patterns.md) or refresh [MERGING-FROM-COMPANION-SELF.md](merging-from-companion-self.md) / manifest diff notes so the next sync does not rediscover the same delta. This loop does **not** merge into the Record.
+
 ---
 
 ## 8. Summary

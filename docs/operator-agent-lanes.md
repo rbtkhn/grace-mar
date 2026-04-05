@@ -74,6 +74,12 @@ When **`EXECUTE`** or **`DOCSYNC`** includes **push** / **ship to remote** (or y
 
 For **session-close** or heavy handoff, prefer **`bridge`**, which formalizes the same assessment in Step 2–3.
 
+### Anti-pattern: silent single-repo push
+
+If **`EXECUTE`** / **`DOCSYNC`** pushed **one** repo while the **sibling** (e.g. companion-self) was **dirty or ahead**, that is a **scope miss** — not a secret optimization.
+
+**Doc-only loop:** When this happens once, fix git state. When the **same** miss happens **twice**, add **one** caution bullet **here** or in [.cursor/skills/bridge/SKILL.md](../.cursor/skills/bridge/SKILL.md) Step 2 so the next agent surfaces **both** roots before push.
+
 ### Source of “done” (plan vs execution)
 
 Cursor **plan files** may be frozen or read-only by policy; **Cursor todos** are ephemeral. **Canonical shipped work** is **git history** on the intended remote (plus companion-approved gate merges into the Record when applicable). Do not treat the plan markdown as the only ledger for what is finished.

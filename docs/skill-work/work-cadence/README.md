@@ -178,6 +178,18 @@ When a cadence run produces unexpected output, check these in order:
 
 - **Which cadence events actually ran?** Check `docs/skill-work/work-cadence/work-cadence-events.md` — one line per run with timestamp, kind, mode, and outcome.
 - **Agent reading stale skill file?** Long Cursor sessions can cache file contents. If the agent's behavior doesn't match the current SKILL.md, ask it to re-read the file.
+- **Harness vs coffee skill mismatch?** If `operator_daily_warmup.py` / `harness_warmup.py` output disagrees with `.cursor/skills/coffee/SKILL.md` (menus, steps, flags), treat **the script + skill** as a pair: update the doc that was wrong, or add a cross-link so the next agent does not guess.
+
+---
+
+## Closing the troubleshooting loop (doc-only)
+
+If the **same** numbered fix under **Coffee**, **Dream**, **Bridge**, or **Harvest** applies **twice in a short window**, do not only re-run the ritual — **promote** the lesson:
+
+1. Add or sharpen **one line** in the relevant **SKILL.md** or **packet contract** so the failure mode is explicit.
+2. Add a **pointer** here (one bullet under the right subsection above) — e.g. “See bridge SKILL § After the new session opens for lost `coffee` tail.”
+
+No scripts required; this keeps [work-cadence README](README.md) a **living** diagnostic without duplicating full procedures.
 
 ---
 
