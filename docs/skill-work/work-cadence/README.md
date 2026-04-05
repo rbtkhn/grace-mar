@@ -20,6 +20,10 @@
 
 `scripts/auto_dream.py` aligns operational keys with the companion-self **night-handoff** shape where useful: **`handoffSchemaVersion`** (2), **`topActionReason`**, **`quietRun`**, **`residueLedger`** (from digest followups), **`worktreeState`** / **`worktreeAdvice`** (read-only git triage). Not Record truth. Warmup may show top-action reason and worktree lines when present.
 
+### `last-bridge-state.json` (grace-mar) — session-to-session delta
+
+After a successful bridge push, run `python3 scripts/bridge_last_state.py -u grace-mar --write` (operational only; gitignored). The next bridge’s transfer packet can include **Since last bridge** bullets by comparing current Step 1 reads to that file, or by running `python3 scripts/bridge_last_state.py -u grace-mar --print-delta`. Does not replace **harvest** for midstream import; see [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md).
+
 ---
 
 ## Daily rhythm

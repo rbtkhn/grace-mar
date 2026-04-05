@@ -45,6 +45,7 @@ Also run:
 
 8. **`git status -sb`** — uncommitted work (in both grace-mar and companion-self)
 9. **`git log --oneline -10`** — recent commits (what moved)
+10. **`users/grace-mar/daily-handoff/last-bridge-state.json`** (if present) — prior bridge snapshot for **Since last bridge** deltas in Step 4. If missing, the packet says there is no prior delta.
 
 ---
 
@@ -59,6 +60,22 @@ gather:
 
 - `git status -sb` (dirty? branch?)
 - whether **`origin`** is configured and whether **`HEAD` is ahead of `@{u}`** (unpushed commits) — e.g. `git rev-list --left-right --count @{u}...HEAD` when upstream exists
+
+### Worktree risk preflight (read-only; before recommendations)
+
+From the same `git status -sb` and `git diff --stat` output, classify each repo in scope:
+
+| Class | Meaning |
+|-------|---------|
+| **safe** | Clean worktree (no meaningful unstaged/untracked body lines). |
+| **inspect** | Light residue — some changed files; moderate diff. |
+| **conflict-prone** | Unmerged paths, conflict markers, or very large/wide change set. |
+
+Emit one line per repo, e.g. `Worktree risk (grace-mar): inspect — review diff before sealing.`
+
+**Pause and ask** the operator before Step 3 if any in-scope repo is **conflict-prone** — confirm proceed after manual inspect/reconcile, or stop. Bridge still does not resolve conflicts silently.
+
+**Multi-repo map (instance extension):** If the session spans more than the default pair, have the operator list **path + role** in one bullet list (e.g. companion-xavier — pedagogy drafts). No extra automation in the template; status only unless Step 2 includes that repo.
 
 Then output a short **Push/sync recommendation** block:
 
@@ -134,6 +151,16 @@ python3 scripts/log_cadence_event.py --kind bridge -u grace-mar --ok --kv refs=<
 
 Replace `<grace-mar-SHA>` and `<companion-self-SHA>` with the HEAD commits just pushed (from `git rev-parse --short HEAD` in each repo). If only one repo was in scope, include only that SHA (and note which repos were skipped).
 
+### Bridge state snapshot (operational)
+
+After a successful bridge (clean `git status -sb` in every repo that was pushed), update the session-to-session delta file:
+
+```bash
+python3 scripts/bridge_last_state.py -u grace-mar --write
+```
+
+This writes `users/grace-mar/daily-handoff/last-bridge-state.json` (gitignored). For **Since last bridge** bullets in the packet, you may instead run `python3 scripts/bridge_last_state.py -u grace-mar --print-delta` before composing Step 4.
+
 ---
 
 ## Step 4 — Generate the transfer prompt
@@ -163,22 +190,38 @@ If none pending, say "Gate clear."]
 Skip lanes with no recent activity.]
 
 ## Priority lanes for next session
-1. [Top priority — derived from gate state, territory momentum, and arc]
-2. [Second priority]
-3. [Third if warranted]
+1. [Lane or theme — one short reason why this rank]
+2. [Lane or theme — one short reason]
+3. [Third only if warranted — lane or theme — reason]
 
 ## Watch this
-[One sentence: the single most important thing the next session should be alert to.
-Synthesize from arc + gate + territories — what could go wrong or slip if unattended.]
+**Risk kind:** continuity | git | governance | focus | context — [one sentence: the single most important alert; synthesize from arc + gate + territories + worktree risk.]
+
+## Since last bridge
+[Max 3-4 bullets: delta vs `last-bridge-state.json` or output of `bridge_last_state.py --print-delta`. If no prior file, say first bridge / no prior delta.]
+
+## Bridge transfer quality
+- **Confidence:** high | medium | low
+- **Signals:** [2-4 short phrases: e.g. clean push, dream handoff present, gate readable, territories detected]
+- **Gaps:** [one line — what is missing or weak in this packet]
+- **Seal:** [post-push `git status -sb` per repo in scope + `git rev-parse --short HEAD` per repo — note clean / ahead / diverged]
+
+## Next session posture
+**Posture:** reorient | execute | inspect | resolve | write — [three to six words tied to arc + gate + worktree risk]
+
+## Not transferred on purpose
+[Optional; max 2 bullets, or omit section. What the packet deliberately left out — e.g. noisy branches, speculative threads.]
 
 ## Commits sealed in this bridge
-[List the commit(s) made in Step 3 per repo, which repos were pushed, or "Worktree was already clean" / "Skipped per operator".]
+[Per repo: list commit(s) made in Step 3. One composite line: `Residue commit: <msg or none> / Substantive commit: <msg or none>`. Which repos were pushed, or "Worktree was already clean" / "Skipped per operator".]
 
 ## Recent commits
 [Last 5-10 commits from git log, verbatim — includes the bridge commits]
 
 ## Instructions for next session
 **Operator:** Send everything from `# Session Bridge` through the line below as the **only** first message in a new Cursor session (one paste). **Assistant:** Context is above; run work-start **coffee** Step 1 now (see `.cursor/skills/coffee/SKILL.md`). The next line is the skill trigger.
+
+**Parallel import:** If you also need a dense packet for an **already-running** session, run **harvest** separately after this paste — do not append a second packet here (keeps the `coffee` tail unambiguous).
 
 coffee
 ```
@@ -189,7 +232,9 @@ Output the entire block so the operator can copy it.
 
 ## Step 5 — Done
 
-Bridge is complete. Pushed repos match Step 2 recommendation (or operator override); the transfer prompt is generated. The operator copies the prompt and closes the session.
+Bridge is complete. Pushed repos match Step 2 recommendation (or operator override); the transfer prompt is generated; `bridge_last_state.py --write` was run after a successful seal. The operator copies the prompt and closes the session.
+
+**Optional receipt:** To keep a durable copy, save the transfer block under `docs/skill-work/work-cadence/bridge-packets/YYYY-MM-DD-session.md` (or another path the operator prefers). Default remains chat-only.
 
 ## Guardrails
 
@@ -200,7 +245,7 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 - **Narrative arc matters.** The "Arc" section is the most valuable part — it's the thing no script can produce. Synthesize, don't just list.
 - **Stop on conflict.** If push fails after pull-rebase due to conflicts, stop and report. Do not force-push or resolve conflicts silently.
 - **Push/sync clarity.** Always give the Step 2 recommendation (and ask when ambiguous) before writing commits; do not treat “both repos” as mandatory if companion-self is clean and untouched unless the operator confirms.
-- **Ephemeral output.** The transfer prompt exists only in the chat. It persists only if the operator chooses to save it.
+- **Ephemeral output.** The transfer prompt exists only in the chat unless the operator saves it (optional `bridge-packets/` path in Step 5).
 
 ## Relation to coffee and dream
 
@@ -218,7 +263,10 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 
 - `.cursor/skills/coffee/SKILL.md` — morning cadence (run after pasting bridge)
 - `.cursor/skills/dream/SKILL.md` — nightly cadence (run before bridge if end of day)
+- `.cursor/skills/harvest/SKILL.md` — parallel-session import (separate from bridge paste)
 - `.cursor/skills/repo-hygiene-pass/SKILL.md` — deeper commit-grouping when needed
+- `scripts/bridge_last_state.py` — operational `last-bridge-state.json` + `--print-delta`
+- `companion-self/docs/skill-work/work-cadence/bridge-packet-contract.md` — canonical section contract
 - `users/grace-mar/self-memory.md` — continuity context
 - `users/grace-mar/recursion-gate.md` — gated pipeline queue
 - `users/grace-mar/last-dream.json` — dream handoff artifact

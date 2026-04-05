@@ -170,9 +170,12 @@ def generate_synthetic_bridge(snapshot: dict[str, Any]) -> str:
 
     commit_section = "\n".join(f"{c['sha']} {c['message']}" for c in commits) if commits else "No commits."
 
-    priority_section = "1. Continue current work"
+    priority_section = "1. Continue current work — synthetic harness default"
     if territories:
-        priority_section = "\n".join(f"{i+1}. {t}" for i, t in enumerate(territories[:3]))
+        priority_section = "\n".join(
+            f"{i+1}. {t} — recent motion in territory history"
+            for i, t in enumerate(territories[:3])
+        )
     if memory:
         priority_section += f"\n\nMemory pointer: {memory[0]}"
 
@@ -194,17 +197,28 @@ Synthetic bridge for continuity testing. Session state captured from on-disk sur
 {priority_section}
 
 ## Watch this
-Continuity harness test — verify round-trip fidelity.
+**focus** — Continuity harness test — verify round-trip fidelity.
+
+## Since last bridge
+- First bridge state — no prior delta.
+
+## Bridge transfer quality
+- **Confidence:** high
+- **Signals:** synthetic harness; gate readable; commits captured
+- **Gaps:** narrative arc not machine-tested
+- **Seal:** clean (synthetic)
+
+## Next session posture
+**Posture:** reorient — harness validation run
 
 ## Commits sealed in this bridge
-Synthetic (no commits made).
+Synthetic (no commits made). Residue commit: none / Substantive commit: none
 
 ## Recent commits
 {commit_section}
 
 ## Instructions for next session
-Paste this entire block as the first message in a fresh Cursor session,
-then say `coffee` to reorient.
+Paste as first message; assistant runs coffee Step 1. Parallel import: use harvest separately.
 
 coffee
 """
