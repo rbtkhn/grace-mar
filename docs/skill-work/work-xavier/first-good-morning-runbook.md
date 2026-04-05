@@ -48,6 +48,9 @@ Your only goal today is to understand the structure and complete first setup saf
 - No autonomous posting.
 - No hand-merge into `self.md`.
 
+### Tooling — Open Brain / MCP / capture + search (operator)
+If she uses **capture + embeddings + semantic search** or **MCP** alongside this repo: **nothing** may **silently write** identity truth under `users/xavier/` (or `self.md` / EVIDENCE / `bot/prompt.py`) **except** through **recursion-gate** → her approval → `process_approved_candidates.py`. Retrieval rank ≠ merge consent. Full map: [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md).
+
 ---
 
 ## 3) Xavier startup script (what she sees)
@@ -77,6 +80,7 @@ If unclear at any step, pause and ask before posting or merging.
 | 4 | Open `docs/skill-work/work-xavier/SESSION-0-OPERATOR.md` | Xavier + Operator | [ ] |
 | 5 | Complete **her repo** `docs/seed-survey/seed-survey-capture.md` rows (Q1-31) | Xavier | [ ] |
 | 5a | Initialize `docs/skill-work/work-business/xavier/` starter pack from survey + business docs | Xavier + Operator | [ ] |
+| 5b | If **Open Brain–style** tooling (capture / RAG / MCP): confirm no auto-writes into `users/xavier/**` except via **gate** + approval + merge script; skim [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) | Operator | [ ] |
 | 6 | Confirm no hand-edits to `users/xavier/self.md` | Operator | [ ] |
 | 7 | Stage first candidate set in `users/xavier/recursion-gate.md` | Operator | [ ] |
 | 8 | Xavier reviews/approves candidates | Xavier | [ ] |

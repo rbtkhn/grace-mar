@@ -13,6 +13,7 @@
 | [xavier-instance-two-step.md](xavier-instance-two-step.md) | **Instance checklist:** template → clone → Claude Code; then Seed Phase + validation (with operator) |
 | [SEED-MANIFEST.md](SEED-MANIFEST.md) | What ships where (grace-mar mirror vs her `companion-xavier` repo) |
 | [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) | Pre-merge / handoff checks (no grace-mar Record in her tree) |
+| [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) | **Open Brain vs gate:** capture / search / RAG ≠ official Record — use with instance checklist, first Good Morning, Session 0, leakage |
 | [ALIGNMENT.md](ALIGNMENT.md) | Template · grace-mar · Xavier’s instance (external) |
 | [Boundary audit](../../audit-boundary-grace-mar-companion-self.md) | grace-mar · template normative boundaries |
 | [TEMPLATE-BASELINE.md](TEMPLATE-BASELINE.md) | Pointer → [work-companion-self/TEMPLATE-BASELINE.md](../work-companion-self/TEMPLATE-BASELINE.md) |

@@ -13,4 +13,4 @@
 
 See also: [audit-structural-alignment-grace-mar-companion-self.md](../../audit-structural-alignment-grace-mar-companion-self.md), [TEMPLATE-BASELINE.md (pointer)](TEMPLATE-BASELINE.md), [MERGING-FROM-COMPANION-SELF](../../merging-from-companion-self.md).
 
-If you use **Open Brain**–style capture + MCP + vector search, read [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) before mapping tooling to the Record.
+If you use **Open Brain**–style capture + MCP + vector search, read [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) before mapping tooling to the Record. **Wired in work-xavier:** [xavier-instance-two-step.md](xavier-instance-two-step.md) (tooling box), [first-good-morning-runbook.md](first-good-morning-runbook.md) (operator note + checklist **5b**), [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md) (step **2a**), [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md).

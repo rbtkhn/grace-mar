@@ -41,6 +41,12 @@ The [companion-self README](https://github.com/rbtkhn/companion-self) describes 
 
 **After step 6, you may stop for the day** unless Robert asks for a small check.
 
+### Tooling — capture, search, RAG, MCP (Open Brain–style)
+
+**Searchable notes** help the assistant remember the *conversation*; **official self** for the Voice only advances through **`recursion-gate.md`** → companion approval → merge script (in **your** repo). **Do not** treat embedding search, vector databases, or MCP auto-writes as a substitute for the gate. **Do not** bulk-import captures into `self.md` or IX as if searchability meant approval.
+
+Map the layers (Open Brain vs Record vs MEMORY vs WORK): [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md). Three-repo framing: [ALIGNMENT.md](ALIGNMENT.md).
+
 ---
 
 ## Next — fresh instance, Seed Phase, validation (with Robert)
@@ -65,3 +71,4 @@ The [companion-self README](https://github.com/rbtkhn/companion-self) describes 
 | 2026-04-04 | Initial two-step sheet: GitHub template + clone + open in Claude Code; Seed Phase deferred. |
 | 2026-04-04 | Linked GitHub Docs: [Creating a template repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-template-repository) for operator preflight. |
 | 2026-04-04 | Expanded to full **instance checklist** (10 steps): operator preface, important rule, README framing link, day one vs Seed Phase / validation; `companion-xavier` default name. |
+| 2026-04-06 | **Open Brain vs gate:** tooling box after day-one step 6; links to [companion-self-for-open-brain-users.md](../work-companion-self/companion-self-for-open-brain-users.md) and [ALIGNMENT.md](ALIGNMENT.md). |
