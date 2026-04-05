@@ -15,6 +15,7 @@
 ### 2026-04-06
 
 - **Open Brain vs gate (EXECUTE):** [xavier-instance-two-step.md](xavier-instance-two-step.md) — tooling box + bridge link; [first-good-morning-runbook.md](first-good-morning-runbook.md) — operator subsection + checklist row **5b**; [SESSION-0-OPERATOR.md](SESSION-0-OPERATOR.md) — step **2a**; [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) — vector/RAG/MCP bullet; [ALIGNMENT.md](ALIGNMENT.md) — wire list; [INDEX.md](INDEX.md) — bridge row.
+- **Evidence policy (pick A):** [evidence/README.md](evidence/README.md) — binaries stay in-repo; naming + access assumption + soft size + index/history hooks.
 
 ### 2026-04-05
 
