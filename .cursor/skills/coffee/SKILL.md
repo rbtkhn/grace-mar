@@ -120,5 +120,6 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 - `docs/skill-work/work-coffee/work-coffee-history.md` — lane breadcrumbs
 - `docs/skill-work/work-cadence/work-cadence-events.md` — per-run cadence telemetry
 - `.cursor/skills/dream/SKILL.md` — night-side counterpart
+- `.cursor/skills/thanks/SKILL.md` — micro-pause cadence (`thanks`; not a substitute for coffee / dream / bridge)
 - `docs/skill-work/work-politics/polling-and-markets.md` — KY-4 polling (**menu A — Today**)
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` — messaging discipline

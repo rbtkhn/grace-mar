@@ -1,6 +1,6 @@
 # work-cadence
 
-**Purpose:** Doctrine, boundaries, and architecture for the daily cadence triad — `coffee` (morning orientation), `dream` (night consolidation), and `bridge` (session-scale handoff) — plus **`harvest`** as a **fourth operator tool on a different axis** (cross-agent extraction; on demand, not a fourth clock). Executable trigger surfaces live in `.cursor/skills/coffee/SKILL.md`, `.cursor/skills/dream/SKILL.md`, `.cursor/skills/bridge/SKILL.md`, and `.cursor/skills/harvest/SKILL.md`.
+**Purpose:** Doctrine, boundaries, and architecture for the daily cadence triad — `coffee` (morning orientation), `dream` (night consolidation), and `bridge` (session-scale handoff) — plus **`harvest`** (cross-agent extraction; on demand, not a fourth clock) and **`thanks`** (micro-pause; light bookmark, no dream stack). Executable trigger surfaces live in `.cursor/skills/coffee/SKILL.md`, `.cursor/skills/dream/SKILL.md`, `.cursor/skills/bridge/SKILL.md`, `.cursor/skills/harvest/SKILL.md`, and `.cursor/skills/thanks/SKILL.md`.
 
 **Not** Record truth. **Not** a merge path. **Not** identity-relevant unless gated.
 
@@ -12,7 +12,7 @@
 |------|-------------|
 | **Cadence architecture** | Defines the shape of operator rhythm: coffee (orientation, repeated), dream (consolidation, once per day), bridge (session-scale carry-forward), harvest (cross-agent packet; midstream import). |
 | **Night-to-morning handoff** | Documents the `last-dream.json` data contract that bridges dream output to coffee Step 1. |
-| **Cadence event audit** | Append-only telemetry of each run via `work-cadence-events.md` and `scripts/log_cadence_event.py` (kinds include optional **`harvest`** for tooling consistency). |
+| **Cadence event audit** | Append-only telemetry of each run via `work-cadence-events.md` and `scripts/log_cadence_event.py` (kinds include **`harvest`** and **`thanks`** for tooling consistency). |
 | **Context paste budgets** | Optional JSON caps for dream write-path and coffee display (`config/context_budgets/`); `scripts/audit_context_tax.py` approximates ritual paste size. |
 | **Boundary surface** | Explains what belongs in operational/ephemeral surfaces versus what must escalate to the gate. |
 
@@ -32,10 +32,11 @@ After a successful bridge push, run `python3 scripts/bridge_last_state.py -u gra
 |------|--------|-------------|
 | **Morning** | `coffee` (work-start) | Read dream handoff, warmup brief, harness, branch snapshot, A–E menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
+| **During day** | `thanks` (micro-pause) | Optional one-line **park** note + cadence log — no integrity/digest (see [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md)) |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest, handoff JSON |
 | **Session close** | `bridge` | Seal (commit/push), synthesize transfer prompt for next Cursor session |
 
-**Many coffees, one dream, one bridge.** `coffee` is for repetition. `dream` is for closure. `bridge` is for carry-forward.
+**Many coffees, optional many `thanks`, one dream, one bridge.** `coffee` is for repetition. `thanks` is for a **light pause** bookmark only. `dream` is for closure. `bridge` is for carry-forward.
 
 ---
 

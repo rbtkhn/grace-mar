@@ -79,6 +79,20 @@ def test_ok_false_recorded(events_file: Path) -> None:
     assert "ok=false" in text
 
 
+def test_append_thanks_event(events_file: Path) -> None:
+    append_cadence_event(
+        "thanks",
+        "grace-mar",
+        ok=True,
+        kv={"park": "gate-review-later"},
+        events_path=events_file,
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert (
+        "— thanks (grace-mar) ok=true cursor_model=unknown park=gate-review-later" in text
+    )
+
+
 def test_append_harvest_event(events_file: Path) -> None:
     append_cadence_event(
         "harvest",

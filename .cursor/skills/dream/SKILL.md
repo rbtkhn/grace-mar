@@ -172,12 +172,13 @@ Usually one `dream` session per day is normal.
 
 ## Cadence choreography
 
-`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad:
+`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad; **`thanks`** is a **light pause** (telemetry + optional park line only — see [.cursor/skills/thanks/SKILL.md](../thanks/SKILL.md)).
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–E menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
+| **During day** | `thanks` (micro-pause) | Optional park line + one cadence line — no maintenance stack |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 
@@ -205,4 +206,5 @@ Each successful dream run appends one line to `docs/skill-work/work-cadence/work
 - `docs/skill-work/work-dream/work-dream-history.md` — design history (architecture changes, not per-run telemetry)
 - `docs/skill-work/work-cadence/work-cadence-events.md` — per-run cadence telemetry
 - `.cursor/skills/coffee/SKILL.md` — morning-side counterpart
+- `.cursor/skills/thanks/SKILL.md` — micro-pause (not a substitute for dream)
 - `.cursor/skills/bridge/SKILL.md` — session-scale handoff

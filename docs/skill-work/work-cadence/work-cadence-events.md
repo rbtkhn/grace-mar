@@ -1,6 +1,6 @@
 # Cadence events
 
-> Append-only audit of **coffee**, **coffee_pick**, **dream**, **bridge**, and optional **harvest** runs.
+> Append-only audit of **coffee**, **coffee_pick**, **dream**, **bridge**, optional **harvest**, and **thanks** (micro-pause) runs.
 > **Not** Record truth. **Not** self-memory. **Not** a replacement for
 `last-dream.json` or `session-transcript.md`.
 >
@@ -108,3 +108,5 @@ _(Append below this line.)_
 - **2026-04-05 15:47 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
 - **2026-04-05 15:47 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
 - **2026-04-05 17:08 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
+- **2026-04-05 17:22 UTC** — coffee_pick (grace-mar) ok=true cursor_model=unknown picked=C lane=compass
+- **2026-04-05 17:27 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
