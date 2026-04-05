@@ -16,6 +16,10 @@
 | **Context paste budgets** | Optional JSON caps for dream write-path and coffee display (`config/context_budgets/`); `scripts/audit_context_tax.py` approximates ritual paste size. |
 | **Boundary surface** | Explains what belongs in operational/ephemeral surfaces versus what must escalate to the gate. |
 
+### `last-dream.json` (grace-mar) — schema v2 fields
+
+`scripts/auto_dream.py` aligns operational keys with the companion-self **night-handoff** shape where useful: **`handoffSchemaVersion`** (2), **`topActionReason`**, **`quietRun`**, **`residueLedger`** (from digest followups), **`worktreeState`** / **`worktreeAdvice`** (read-only git triage). Not Record truth. Warmup may show top-action reason and worktree lines when present.
+
 ---
 
 ## Daily rhythm

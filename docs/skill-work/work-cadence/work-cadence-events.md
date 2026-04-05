@@ -92,3 +92,8 @@ _(Append below this line.)_
 - **2026-04-05 03:54 UTC** — coffee (grace-mar) ok=true mode=work-start
 - **2026-04-05 04:09 UTC** — coffee_pick (grace-mar) ok=true picked=C
 - **2026-04-05 04:39 UTC** — coffee (grace-mar) ok=true mode=work-start
+- **2026-04-05 04:48 UTC** — dream (demo) ok=true mode=default integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-05 04:48 UTC** — dream (demo) ok=true mode=default integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-05 04:48 UTC** — dream (demo) ok=false mode=default integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-05 04:48 UTC** — dream (demo) ok=true mode=default integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
+- **2026-04-05 04:48 UTC** — dream (demo) ok=true mode=default integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false

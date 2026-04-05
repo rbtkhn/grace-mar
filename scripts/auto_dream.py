@@ -33,6 +33,52 @@ from harness_warmup import _pending_candidates
 from repo_io import resolve_self_memory_path
 
 LAST_DREAM_FILENAME = "last-dream.json"
+HANDOFF_SCHEMA_VERSION = 2
+
+
+def _classify_worktree_grace(status_out: str, diff_out: str) -> tuple[str, str]:
+    """Read-only triage for last-dream.json (no commits). Mirrors companion-self cadence-dream."""
+    combined = f"{status_out}\n{diff_out}".lower()
+    if "unmerged" in combined or "both modified" in combined:
+        return (
+            "risky residue",
+            "Merge or conflict state — inspect before continuing.",
+        )
+    lines = [ln.strip() for ln in status_out.splitlines() if ln.strip()]
+    body = [ln for ln in lines if not ln.startswith("## ")]
+    if not body:
+        return "clean", "leave"
+    diff_len = len(diff_out)
+    if diff_len > 4000 or len(body) > 12:
+        return (
+            "risky residue",
+            "Large or wide diff — inspect before continuing; use bridge when closing session.",
+        )
+    return (
+        "light residue",
+        "leave or commit before sleep; bridge seals when you close the session.",
+    )
+
+
+def _git_worktree_triage_grace() -> tuple[str, str]:
+    try:
+        st = subprocess.run(
+            ["git", "status", "-sb"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        ds = subprocess.run(
+            ["git", "diff", "--stat"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=60,
+        )
+        return _classify_worktree_grace(st.stdout or "", ds.stdout or "")
+    except (OSError, subprocess.TimeoutExpired):
+        return "light residue", "Could not classify worktree; check git status manually."
 
 _SKELETON = """# MEMORY - Self-memory (short / medium / long)
 
@@ -377,6 +423,29 @@ def _write_last_dream_handoff(
         handoff["civmem_index_missing"] = bool(summary["civmem_index_missing"])
     if summary.get("civmem_suppressed_reason"):
         handoff["civmem_suppressed_reason"] = summary["civmem_suppressed_reason"]
+
+    # Schema v2 alignment with companion-self night-handoff (operational; not Record).
+    handoff["handoffSchemaVersion"] = HANDOFF_SCHEMA_VERSION
+    reason = (summary.get("execution_path_suggestion_reason") or "").strip()
+    if not reason and summary.get("tomorrow_inherits"):
+        reason = "Carry-forward from dream execution-path / tomorrow_inherits."
+    handoff["topActionReason"] = reason or (
+        "Dream digest and followups shaped priorities; see followups and integrity flags."
+    )
+    rc = int(handoff.get("reviewable_count", 0) or 0)
+    cc = int(handoff.get("contradiction_count", 0) or 0)
+    handoff["quietRun"] = bool(handoff.get("ok")) and rc == 0 and cc == 0 and len(followups) == 0
+    handoff["residueLedger"] = {
+        "must_resume": (followups[0][:120] if followups else ""),
+        "safe_to_drop": "",
+        "blocked": "",
+        "watch_later": (followups[1][:120] if len(followups) > 1 else ""),
+    }
+    if not handoff["ok"]:
+        handoff["residueLedger"]["blocked"] = "Dream reported not ok — review integrity/governance before new work."
+    wt_state, wt_adv = _git_worktree_triage_grace()
+    handoff["worktreeState"] = wt_state
+    handoff["worktreeAdvice"] = wt_adv
 
     path = users_dir / user_id / LAST_DREAM_FILENAME
     path.write_text(json.dumps(handoff, indent=2) + "\n", encoding="utf-8")

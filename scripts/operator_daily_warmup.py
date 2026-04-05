@@ -108,6 +108,18 @@ def _format_last_dream_block(
             f"- Status: {status}; integrity: {integ}; governance: {gov}"
         )
         body.append(f"- Contradiction digest: reviewable={rc}, contradiction={cc}")
+        tar = str(dream.get("topActionReason") or "").strip()
+        if tar:
+            body.append(
+                f"- Top-action reason: {tar[:200]}{'…' if len(tar) > 200 else ''}"
+            )
+        wt = str(dream.get("worktreeState") or "").strip()
+        if wt:
+            wadv = str(dream.get("worktreeAdvice") or "").strip()
+            body.append(
+                f"- Worktree: {wt}"
+                + (f" — {wadv[:140]}{'…' if len(wadv) > 140 else ''}" if wadv else "")
+            )
         if show_rollup:
             cr = dream.get("coffee_rollup_24h")
             if isinstance(cr, dict):
