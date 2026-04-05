@@ -98,6 +98,8 @@ Inside grace-mar, [`../template-manifest.json`](../template-manifest.json) is a 
 
 Companion-self ships **`docs/identity-fork-protocol.md` as a short-form summary** with a pointer to the reference implementation. Grace-mar holds the **canonical full IFP v1.0** at the same path (`docs/identity-fork-protocol.md`) — much longer, normative for this instance. **Do not overwrite** grace-mar’s file with the template short form during template→instance sync. If the template summary changes, merge **selective** clarifications by hand, or promote an updated full spec to companion-self only as a deliberate release. Upstream link in the template must target `docs/identity-fork-protocol.md` (not a legacy `IDENTITY-FORK-PROTOCOL.md` filename).
 
+**Template diff:** [`skill-work/work-companion-self/expected-template-drift.json`](skill-work/work-companion-self/expected-template-drift.json) lists this path so `scripts/template_diff.py` classifies it as expected drift (not an actionable differ).
+
 ### Status microcopy — docs-first sync
 
 Companion-self’s **`docs/status-microcopy.md`** is the upstream source of truth for lane-aware status/loading/process language. Grace-mar should sync the **doc** and then adapt its wording in local architecture/chat-first/harness docs where triadic cognition, gating, and chat-first constraints require narrower language.
