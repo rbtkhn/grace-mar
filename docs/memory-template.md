@@ -114,3 +114,9 @@ Optional: keep **## Resistance Notes** under **Short-term** or as its own `##` s
 ## VII. LEGACY (v1.0) — single block
 
 If you omit horizon headers, you may keep the older shape (`## Tone`, `## Recent Topics`, `## Calibrations`, `## Resistance Notes`). The loader will pass the filtered file through as before.
+
+---
+
+## VIII. Operator audit (optional)
+
+Multi-dimension review checklist and example run log: [memory-self-audit.md](memory-self-audit.md).
