@@ -101,27 +101,27 @@ Sources missing or needing analysis, ordered by priority.
 | sh-26 | secret-history | Secret History #26: Faith of Evil | missing | missing | missing | sh-ch26 | 60 | mapped to sh-ch26; analysis missing |
 | sh-27 | secret-history | Secret History #27: Empire of Evil | missing | missing | missing | sh-ch27 | 60 | mapped to sh-ch27; analysis missing |
 | sh-28 | secret-history | Secret History #28: Pax Judaica | missing | missing | missing | sh-ch28 | 60 | mapped to sh-ch28; analysis missing |
-| gt-02 | game-theory | Game Theory #2: Why Schools Suck | missing | missing | missing | gt-ch02 | 60 | mapped to gt-ch02; analysis missing |
-| gt-03 | game-theory | Game Theory #3: Rich Dad, Poor Dad | missing | missing | missing | gt-ch03 | 60 | mapped to gt-ch03; analysis missing |
-| gt-04 | game-theory | Game Theory #4: The Immigration Trap | missing | missing | missing | gt-ch04 | 60 | mapped to gt-ch04; analysis missing |
-| gt-05 | game-theory | Game Theory #5: The World Game | missing | missing | missing | gt-ch05 | 60 | mapped to gt-ch05; analysis missing |
-| gt-06 | game-theory | Game Theory #6: The World's Bank | missing | missing | missing | gt-ch06 | 60 | mapped to gt-ch06; analysis missing |
-| gt-07 | game-theory | Game Theory #7: America's Game | missing | missing | missing | gt-ch07 | 60 | mapped to gt-ch07; analysis missing |
-| gt-08 | game-theory | Game Theory #8: Communist Specter | missing | missing | missing | gt-ch08 | 60 | mapped to gt-ch08; analysis missing |
-| gt-09 | game-theory | Game Theory #9: The US-Iran War | missing | missing | missing | gt-ch09 | 60 | mapped to gt-ch09; analysis missing |
-| gt-10 | game-theory | Game Theory #10: The Law of Asymmetry | missing | missing | missing | gt-ch10 | 60 | mapped to gt-ch10; analysis missing |
-| gt-11 | game-theory | Game Theory #11: The Law of Escalation | missing | missing | missing | gt-ch11 | 60 | mapped to gt-ch11; analysis missing |
-| gt-12 | game-theory | Game Theory #12: The Law of Eschatologic… | missing | missing | missing | gt-ch12 | 60 | mapped to gt-ch12; analysis missing |
-| gt-13 | game-theory | Game Theory #13: Epstein's World | missing | missing | missing | gt-ch13 | 60 | mapped to gt-ch13; analysis missing |
-| gt-14 | game-theory | Game Theory #14: The Law of Proximity | missing | missing | missing | gt-ch14 | 60 | mapped to gt-ch14; analysis missing |
-| gt-15 | game-theory | Game Theory #15: The Return of History | missing | missing | missing | gt-ch15 | 60 | mapped to gt-ch15; analysis missing |
-| gt-17 | game-theory | Game Theory #17: The Great Reset | missing | missing | missing | gt-ch17 | 60 | mapped to gt-ch17; analysis missing |
 | civ-01 | civilization | Civilization #1: Explaining Humanity's T… | complete | missing | missing | civ-ch01 | 50 | mapped to civ-ch01 |
 | civ-20 | civilization | Civilization #20: The Proto-Buddhists of… | complete | missing | missing | civ-ch20 | 50 | mapped to civ-ch20 |
 | sh-01 | secret-history | Secret History #1: How Power Works (4K R… | complete | missing | missing | sh-ch01 | 50 | mapped to sh-ch01 |
 | gt-01 | game-theory | Game Theory #1: The Dating Game | complete | missing | missing | gt-ch01 | 50 | mapped to gt-ch01 |
+| gt-02 | game-theory | Game Theory #2: Why Schools Suck | complete | missing | missing | gt-ch02 | 50 | mapped to gt-ch02 |
+| gt-03 | game-theory | Game Theory #3: Rich Dad, Poor Dad | complete | missing | missing | gt-ch03 | 50 | mapped to gt-ch03 |
+| gt-04 | game-theory | Game Theory #4: The Immigration Trap | complete | missing | missing | gt-ch04 | 50 | mapped to gt-ch04 |
+| gt-05 | game-theory | Game Theory #5: The World Game | complete | missing | missing | gt-ch05 | 50 | mapped to gt-ch05 |
+| gt-06 | game-theory | Game Theory #6: The World's Bank | complete | missing | missing | gt-ch06 | 50 | mapped to gt-ch06 |
+| gt-07 | game-theory | Game Theory #7: America's Game | complete | missing | missing | gt-ch07 | 50 | mapped to gt-ch07 |
+| gt-08 | game-theory | Game Theory #8: Communist Specter | complete | missing | missing | gt-ch08 | 50 | mapped to gt-ch08 |
+| gt-09 | game-theory | Game Theory #9: The US-Iran War | complete | missing | missing | gt-ch09 | 50 | mapped to gt-ch09 |
+| gt-10 | game-theory | Game Theory #10: The Law of Asymmetry | complete | missing | missing | gt-ch10 | 50 | mapped to gt-ch10 |
+| gt-11 | game-theory | Game Theory #11: The Law of Escalation | complete | missing | missing | gt-ch11 | 50 | mapped to gt-ch11 |
+| gt-12 | game-theory | Game Theory #12: The Law of Eschatologic… | complete | missing | missing | gt-ch12 | 50 | mapped to gt-ch12 |
+| gt-13 | game-theory | Game Theory #13: Epstein's World | complete | missing | missing | gt-ch13 | 50 | mapped to gt-ch13 |
+| gt-14 | game-theory | Game Theory #14: The Law of Proximity | complete | missing | missing | gt-ch14 | 50 | mapped to gt-ch14 |
+| gt-15 | game-theory | Game Theory #15: The Return of History | complete | missing | missing | gt-ch15 | 50 | mapped to gt-ch15 |
 | gt-16 | game-theory | Game Theory #16: Pax Judaica Rising | complete | missing | missing | gt-ch16 | 50 | mapped to gt-ch16 |
-| gt-18 | game-theory | Game Theory #18: Trump World Order | complete | missing | missing | gt-ch18 | 50 | mapped to gt-ch18; outline pending |
+| gt-17 | game-theory | Game Theory #17: The Great Reset | complete | missing | missing | gt-ch17 | 50 | mapped to gt-ch17 |
+| gt-18 | game-theory | Game Theory #18: Trump World Order | complete | missing | missing | gt-ch18 | 50 | mapped to gt-ch18 |
 | gb-01 | great-books | Great Books #1: Secrets of the Universe | complete | missing | missing | gb-ch01 | 50 | mapped to gb-ch01 |
 | gb-02 | great-books | Great Books #2: Homer and the Invention … | complete | missing | missing | gb-ch02 | 50 | mapped to gb-ch02 |
 | gb-03 | great-books | Great Books #3: Poets and Prophets | complete | missing | missing | gb-ch03 | 50 | mapped to gb-ch03 |
@@ -141,7 +141,7 @@ Sources missing or needing analysis, ordered by priority.
 | vi-09 | interviews | Interviews #9: SNEAKO — The End of the W… | complete | missing | missing | vi-ch09 | 50 | mapped to vi-ch09 |
 | vi-10 | interviews | Interviews #10: Endgame — Our True Wealt… | complete | missing | missing | vi-ch10 | 50 | mapped to vi-ch10 |
 | vi-11 | interviews | Interviews #11: Tucker Carlson — Iran Wa… | complete | missing | missing | vi-ch11 | 50 | mapped to vi-ch11 |
-| vi-12 | interviews | Interviews #12: Jay Shapiro — Truth, Myt… | missing | missing | missing | vi-ch12 | 50 | transcript merged; memo stub; verify speaker labels |
+| vi-12 | interviews | Interviews #12: Jay Shapiro — Painful Pe… | complete | missing | missing | vi-ch12 | 50 | mapped to vi-ch12 |
 | es-01 | essays | Vision, Mission, Goals | complete | missing | missing | es-ch01 | 50 | mapped to es-ch01 |
 | es-02 | essays | "Continuity of Government" is a Joke. He… | complete | missing | missing | es-ch02 | 50 | mapped to es-ch02 |
 | es-03 | essays | The Third Coming | complete | missing | missing | es-ch03 | 50 | mapped to es-ch03 |
@@ -161,18 +161,20 @@ Sources missing or needing analysis, ordered by priority.
 | es-17 | essays | Why I Refuse to Get Rich | complete | missing | missing | es-ch17 | 50 | mapped to es-ch17 |
 | es-18 | essays | Secret History #8: The Rise of the Ameri… | complete | missing | missing | es-ch18 | 50 | mapped to es-ch18 |
 | es-19 | essays | The Limits of Pax Judaica | complete | missing | missing | es-ch19 | 50 | mapped to es-ch19 |
-| es-20 | essays | Secret History #10: The Great Revealing | complete | missing | missing | es-ch20 | 50 | mapped to es-ch20 |
-| es-21 | essays | Blowback Venezuela | complete | missing | missing | es-ch21 | 50 | mapped to es-ch21 |
-| es-22 | essays | Minnesota Burning | complete | missing | missing | es-ch22 | 50 | mapped to es-ch22 |
-| es-23 | essays | Iran, Greenland, and Canada | complete | missing | missing | es-ch23 | 50 | mapped to es-ch23 |
-| es-24 | essays | Carney’s Speech and Trump’s Letter | complete | missing | missing | es-ch24 | 50 | mapped to es-ch24 |
-| es-25 | essays | Twilight of the Liberal Elite | complete | missing | missing | es-ch25 | 50 | mapped to es-ch25 |
-| es-26 | essays | Welcome to the Rupture | complete | missing | missing | es-ch26 | 50 | mapped to es-ch26 |
-| es-27 | essays | Countdown to Iran | complete | missing | missing | es-ch27 | 50 | mapped to es-ch27 |
-| es-28 | essays | World War III Begins | complete | missing | missing | es-ch28 | 50 | mapped to es-ch28 |
-| es-29 | essays | The Acceleration | complete | missing | missing | es-ch29 | 50 | mapped to es-ch29 |
-| es-30 | essays | Vietnam Redux | complete | missing | missing | es-ch30 | 50 | mapped to es-ch30 |
-| es-31 | essays | The US-Iran End Game | complete | missing | missing | es-ch31 | 50 | mapped to es-ch31 |
+| es-20 | essays | Secret History #9: The War of Heaven and… | complete | missing | missing | es-ch20 | 50 | mapped to es-ch20 |
+| es-21 | essays | Secret History #10: The Great Revealing | complete | missing | missing | es-ch21 | 50 | mapped to es-ch21 |
+| es-22 | essays | Blowback Venezuela | complete | missing | missing | es-ch22 | 50 | mapped to es-ch22 |
+| es-23 | essays | Minnesota Burning | complete | missing | missing | es-ch23 | 50 | mapped to es-ch23 |
+| es-24 | essays | Iran, Greenland, and Canada | complete | missing | missing | es-ch24 | 50 | mapped to es-ch24 |
+| es-25 | essays | Carney’s Speech and Trump’s Letter | complete | missing | missing | es-ch25 | 50 | mapped to es-ch25 |
+| es-26 | essays | Twilight of the Liberal Elite | complete | missing | missing | es-ch26 | 50 | mapped to es-ch26 |
+| es-27 | essays | Welcome to the Rupture | complete | missing | missing | es-ch27 | 50 | mapped to es-ch27 |
+| es-28 | essays | Countdown to Iran | complete | missing | missing | es-ch28 | 50 | mapped to es-ch28 |
+| es-29 | essays | World War III Begins | complete | missing | missing | es-ch29 | 50 | mapped to es-ch29 |
+| es-30 | essays | The Acceleration | complete | missing | missing | es-ch30 | 50 | mapped to es-ch30 |
+| es-31 | essays | Vietnam Redux | complete | missing | missing | es-ch31 | 50 | mapped to es-ch31 |
+| es-32 | essays | The US-Iran End Game | complete | missing | missing | es-ch32 | 50 | mapped to es-ch32 |
+| es-33 | essays | World War Trump | complete | missing | missing | es-ch33 | 50 | mapped to es-ch33 |
 | geo-14 | geo-strategy | Geo-Strategy #14: WWIII Begins, Let's Ga… | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-15 | geo-strategy | Geo-Strategy #15: The Messianic Calling | missing | missing | missing | — | 30 | geo-series; analysis missing |
 | geo-16 | geo-strategy | Geo-Strategy #16: Newton's Divine Plan | missing | missing | missing | — | 30 | geo-series; analysis missing |

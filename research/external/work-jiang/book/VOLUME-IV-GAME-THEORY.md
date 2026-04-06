@@ -9,7 +9,7 @@
 |-------|-------------|----------------------|
 | Game Theory #1–#18 | `gt-01` … `gt-18` | `lectures/game-theory-NN-*.md` |
 
-**Per-row status (`metadata/sources.yaml`):** For **`gt-01`–`gt-18`**, `transcript` and `curated_lecture` are **complete**, and **`chapter_mapping: complete`** (wired in **`metadata/source-map.yaml`** as `gt-chNN` → `[gt-NN]`). **Analysis memos** on disk only for **`gt-01`**, **`gt-16`**, and **`gt-18`**; **`gt-02`–`gt-15`** and **`gt-17`** still have **`analysis_path: null`** and **`analysis: missing`** until the book lane adds them.
+**Per-row status (`metadata/sources.yaml`):** For **`gt-01`–`gt-18`**, `transcript` and `curated_lecture` are **complete**, **`chapter_mapping: complete`**, and **`analysis: complete`** with on-disk memos under **`analysis/{video_id}-game-theory-NN-analysis.md`**. **Book** Part I (draft chapters), **comparative layer**, and **Part II** evaluation mode remain open.
 
 **Book stub (machine-readable):** `metadata/book-architecture.yaml` → key `volume_4_game_theory` (Part I chapters `gt-ch01`–`gt-ch18` mapped to `gt-01`–`gt-18`; **`part_2.after_chapter: gt-ch18`**). Top-level `project` / `book` in that file remain Volume I (Geo-Strategy) for existing renderers where noted.
 

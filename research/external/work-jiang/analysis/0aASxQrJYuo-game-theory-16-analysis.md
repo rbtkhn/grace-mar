@@ -5,7 +5,8 @@ source_id: gt-16
 canonical_url: https://www.youtube.com/watch?v=0aASxQrJYuo
 series: game-theory
 episode: 16
-chapter_candidates: []
+chapter_candidates:
+  - gt-ch16
 appendix_candidates: []
 themes: []
 status: complete

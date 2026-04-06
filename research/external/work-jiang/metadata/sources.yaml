@@ -1643,14 +1643,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=kS-muAuq62E
   publication_date: 2026-01-08
   lecture_path: lectures/game-theory-02-why-schools-suck.md
-  analysis_path: null
+  analysis_path: analysis/kS-muAuq62E-game-theory-02-analysis.md
   series: game-theory
   episode: 2
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-03
   video_id: MX93U4KzA28
@@ -1658,14 +1658,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=MX93U4KzA28
   publication_date: 2026-01-13
   lecture_path: lectures/game-theory-03-rich-dad-poor-dad.md
-  analysis_path: null
+  analysis_path: analysis/MX93U4KzA28-game-theory-03-analysis.md
   series: game-theory
   episode: 3
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-04
   video_id: 35HRPLVyF0g
@@ -1673,14 +1673,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=35HRPLVyF0g
   publication_date: 2026-01-15
   lecture_path: lectures/game-theory-04-the-immigration-trap.md
-  analysis_path: null
+  analysis_path: analysis/35HRPLVyF0g-game-theory-04-analysis.md
   series: game-theory
   episode: 4
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-05
   video_id: ybufqRY77PQ
@@ -1688,14 +1688,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=ybufqRY77PQ
   publication_date: 2026-01-20
   lecture_path: lectures/game-theory-05-the-world-game.md
-  analysis_path: null
+  analysis_path: analysis/ybufqRY77PQ-game-theory-05-analysis.md
   series: game-theory
   episode: 5
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-06
   video_id: CbamEcNuDXo
@@ -1703,14 +1703,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=CbamEcNuDXo
   publication_date: 2026-01-22
   lecture_path: lectures/game-theory-06-the-worlds-bank.md
-  analysis_path: null
+  analysis_path: analysis/CbamEcNuDXo-game-theory-06-analysis.md
   series: game-theory
   episode: 6
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-07
   video_id: ijnkCt1QK6k
@@ -1718,14 +1718,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=ijnkCt1QK6k
   publication_date: 2026-01-27
   lecture_path: lectures/game-theory-07-americas-game.md
-  analysis_path: null
+  analysis_path: analysis/ijnkCt1QK6k-game-theory-07-analysis.md
   series: game-theory
   episode: 7
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-08
   video_id: axqDLhWs93Q
@@ -1733,14 +1733,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=axqDLhWs93Q
   publication_date: 2026-01-29
   lecture_path: lectures/game-theory-08-communist-specter.md
-  analysis_path: null
+  analysis_path: analysis/axqDLhWs93Q-game-theory-08-analysis.md
   series: game-theory
   episode: 8
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-09
   video_id: jIS2eB-rGv0
@@ -1748,14 +1748,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=jIS2eB-rGv0
   publication_date: 2026-03-03
   lecture_path: lectures/game-theory-09-the-us-iran-war.md
-  analysis_path: null
+  analysis_path: analysis/jIS2eB-rGv0-game-theory-09-analysis.md
   series: game-theory
   episode: 9
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-10
   video_id: t5oisJiorsU
@@ -1763,14 +1763,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=t5oisJiorsU
   publication_date: 2026-03-05
   lecture_path: lectures/game-theory-10-the-law-of-asymmetry.md
-  analysis_path: null
+  analysis_path: analysis/t5oisJiorsU-game-theory-10-analysis.md
   series: game-theory
   episode: 10
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-11
   video_id: fz-Dan7NRss
@@ -1778,14 +1778,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=fz-Dan7NRss
   publication_date: 2026-03-10
   lecture_path: lectures/game-theory-11-the-law-of-escalation.md
-  analysis_path: null
+  analysis_path: analysis/fz-Dan7NRss-game-theory-11-analysis.md
   series: game-theory
   episode: 11
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-12
   video_id: spg58Glfz68
@@ -1793,14 +1793,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=spg58Glfz68
   publication_date: 2026-03-12
   lecture_path: lectures/game-theory-12-the-law-of-eschatological-convergence.md
-  analysis_path: null
+  analysis_path: analysis/spg58Glfz68-game-theory-12-analysis.md
   series: game-theory
   episode: 12
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-13
   video_id: aQSDSqdlFxk
@@ -1808,14 +1808,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=aQSDSqdlFxk
   publication_date: 2026-03-17
   lecture_path: lectures/game-theory-13-epsteins-world.md
-  analysis_path: null
+  analysis_path: analysis/aQSDSqdlFxk-game-theory-13-analysis.md
   series: game-theory
   episode: 13
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-14
   video_id: nOQqGy4boBY
@@ -1823,14 +1823,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=nOQqGy4boBY
   publication_date: 2026-03-19
   lecture_path: lectures/game-theory-14-the-law-of-proximity.md
-  analysis_path: null
+  analysis_path: analysis/nOQqGy4boBY-game-theory-14-analysis.md
   series: game-theory
   episode: 14
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-15
   video_id: zAer-Mqe7tQ
@@ -1838,14 +1838,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=zAer-Mqe7tQ
   publication_date: 2026-03-24
   lecture_path: lectures/game-theory-15-the-return-of-history.md
-  analysis_path: null
+  analysis_path: analysis/zAer-Mqe7tQ-game-theory-15-analysis.md
   series: game-theory
   episode: 15
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-16
   video_id: 0aASxQrJYuo
@@ -1867,14 +1867,14 @@ sources:
   title: 'Game Theory #17: The Great Reset'
   canonical_url: https://www.youtube.com/watch?v=VbowBTJWKBo
   lecture_path: lectures/game-theory-17-the-great-reset.md
-  analysis_path: null
+  analysis_path: analysis/VbowBTJWKBo-game-theory-17-analysis.md
   series: game-theory
   episode: 17
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: gt-18
   video_id: xrmERlHUqBk
