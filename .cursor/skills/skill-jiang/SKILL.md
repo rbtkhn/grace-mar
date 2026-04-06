@@ -6,7 +6,7 @@ description: >-
   prefix lectures (NN ≤ k), predict episode k+1, then open and score. Volume IV
   default (game-theory-NN). Anti-leak checklist, templates, log path, recursive
   merges into CURSOR_APPENDIX.md. WORK only; not Record.
-version: 0.4.0
+version: 0.4.1
 tags:
   - operator
   - work-jiang
@@ -48,6 +48,21 @@ python3 scripts/work_jiang/forward_chain_blind_bundle.py reveal --episode $((K+1
 **Audit:** `python3 scripts/work_jiang/forward_chain_blind_bundle.py paths --prefix-end K` lists **only** paths **1…K**.
 
 The Volume IV log in `lecture-forward-chain-gt-01-18.md` was a **single-pass retrospective** simulation; **new** calibration runs should use **bundle + reveal** above (or equivalent strict I/O).
+
+---
+
+## Closed loop (skill core — stepwise adjustment)
+
+**Recursive accuracy** means the **predictor changes** round over round, not only that the log has an “Adjustment” field.
+
+Before drafting **round K+1**’s prediction packet, the operator (or agent) **must** ingest:
+
+1. **Prior BLIND log section** for round **K** (or the last completed round): **Scores** + **Adjustment** + **miss_taxonomy**.
+2. Optional **rolling series model** (3–5 bullets) in `scratch/gt-series-model.md` (gitignored), updated **after each resolution** with one line added or revised from the **Adjustment**.
+
+**Then** write hypotheses for **gt-(K+1)** so they **explicitly** reflect what failed or was refined last time (e.g. down-weight a falsified move, add a falsifier suggested by a partial). **Do not** use a fixed template bank for all K unless labeled **smoke / I/O test only** — that does **not** count as calibration.
+
+**Batch helper caveat:** `scripts/work_jiang/run_blind_chain_rounds.py` pre-seeds packets for **engineering** checks of bundle/reveal ordering; it **does not** implement closed-loop learning. For **skill-jiang** as you intend it, run rounds **sequentially** with this section.
 
 ---
 
@@ -142,6 +157,7 @@ After **gt-18** is in the prefix, run **one** prediction packet **before** any n
 
 | Version | Notes |
 |---------|--------|
+| 0.4.1 | Document **closed loop**: each round must use prior **Adjustment** (+ optional rolling model); batch template script = I/O smoke only. |
 | 0.4.0 | Full Volume IV blind chain logged (`lecture-forward-chain-gt-BLIND.md`); appendix v0.4 merge; blind JSONL. |
 | 0.3.0 | Mechanical blind: `forward_chain_blind_bundle.py` (bundle / reveal / paths); retrospective log caveated. |
 | 0.2.0 | Volume IV backtest logged; appendix populated from merges M3–M18. |
