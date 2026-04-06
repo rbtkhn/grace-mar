@@ -48,6 +48,22 @@ Grace-mar **operator/advisor** lane for Xavier (mirrors, BrewMind, runbooks). No
 
 ---
 
+## work-business (operator ventures)
+
+Business planning, accounting, marketing, and market research for **operator-owned ventures** (Grace Gems, future ventures). Instance-specific to grace-mar; nothing syncs to companion-self.
+
+| Template concept | work-business path |
+|------------------|-------------------|
+| **README / lane hub** | [work-business/README.md](../work-business/README.md) |
+| **WORK-LEDGER** | [WORK-LEDGER.md](../work-business/WORK-LEDGER.md) — watches: ledger staleness, tax prep, marketing plan freshness |
+| **Daily horizon / brief** | Not a daily brief lane; summaries via `scripts/business_ledger_summary.py` on demand |
+| **Lane focus** | [accounting/README.md](../work-business/accounting/README.md), [marketing/README.md](../work-business/marketing/README.md), [grace-gems/README.md](../work-business/grace-gems/README.md) |
+| **Emerging patterns** | Market research docs; informal until promoted in WORK-LEDGER II-A |
+| **Background context** | [grace-gems/market-research-and-automation-ideas.md](../work-business/grace-gems/market-research-and-automation-ideas.md), [worldland-decentralized-ai-mainnet-2026-03.md](../work-business/worldland-decentralized-ai-mainnet-2026-03.md) |
+| **History log** | [work-business-history.md](../work-business/work-business-history.md) |
+
+---
+
 ## Generic daily brief ↔ work-strategy § numbers
 
 The generic [daily-brief-template.md](daily-brief-template.md) uses **semantic headings only** (no `1b` / `1d`). **work-strategy** combined brief uses **fixed numbers** for operator habits (e.g. coffee **C**, Putin watch):

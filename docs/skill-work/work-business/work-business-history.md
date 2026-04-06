@@ -10,4 +10,6 @@
 
 ## Log
 
-_(Append below this line.)_
+### 2026-04-06
+
+- **Territory expansion:** work-business expanded from thin research module to full business operations surface. Added accounting infrastructure (JSONL ledger, `emit_business_transaction.py`, `business_ledger_summary.py`, `business-transaction.v1.json` schema, chart of accounts, accounting README). Added marketing surface (`marketing/README.md`, `grace-gems/marketing-plan.md`). Added `WORK-LEDGER.md` with three seed watches (ledger staleness, tax prep, marketing freshness). Updated README with expanded scope. Added to `work-template/MAPPING.md` and `self-work.md`. Instance-specific: nothing syncs to companion-self.
