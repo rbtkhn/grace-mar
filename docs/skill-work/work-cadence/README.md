@@ -81,7 +81,7 @@ Skills may ask the agent to **read** `work-cadence-events.md` **before** running
 | **dream** | **8** | Day-close — wider window to see coffee/bridge/thanks/dream mix before consolidation |
 | **harvest** | **none** | The **Harvest Packet** is already dense context for a midstream receiver; a cadence tail would duplicate rhythm info without adding load-bearing substance. Optional **`harvest`** cadence **telemetry** (`--log`) does not require synthesis in the reply |
 
-Synthesis should be **plain prose**: a human-readable sense of **rhythm and mood** from the last *n* events — **not** a leading line of UTC timestamps or `key=value` telemetry (those stay in the log and in Step 1 script output). Compressed technical detail is optional **below** the prose if the operator asks. If the log is empty or short, skills specify fallbacks.
+Synthesis should be **plain prose** with **specific anchors** from the log (which rituals, commit refs on bridge, coffee modes, thanks park lines, dream outcomes)—**not** generic process commentary that could apply without reading the file. Still **avoid** opening with a wall of UTC stamps or raw `key=value`; weave facts into sentences. Technical detail also lives in Step 1 script output. If the log is empty or short, skills specify fallbacks.
 
 ### Choreography vs governance
 

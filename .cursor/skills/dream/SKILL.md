@@ -49,7 +49,7 @@ But the default pattern is:
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
 2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Cadence tail (last 8):** _(no prior events)_.
-3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences) that captures the **day’s cadence rhythm** in human language: coffee / thanks / bridge / dream mix, sense of closure or residue. **Do not** open with UTC stamps or `key=value` telemetry; that detail belongs in script output below. Optional human anchors (“after the bridge,” “a run of light thanks beats”) are fine.
+3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences) in human language, **grounded in the eight lines**: which rituals appeared, what **differed** between them (e.g. bridge **refs**, coffee modes, thanks **park** lines, prior dream ok/fail). **Do not** open with a wall of UTC stamps or raw `key=value`; weave the **specific** tokens into sentences (commit shas, park text, integrity/governance outcome). **Avoid** generic closure talk with no tie to those events. Script output below still carries the full machine snapshot.
 4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before `self-memory` / integrity lines.
 
 If the file is missing or empty below the anchor, note that under **Cadence tail (last 8)** and continue.
