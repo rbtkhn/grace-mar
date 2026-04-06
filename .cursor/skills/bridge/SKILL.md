@@ -1,7 +1,7 @@
 ---
 name: bridge
 preferred_activation: bridge
-description: "Session-scale handoff ritual. Primary trigger: bridge. Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
+description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four cadence lines from work-cadence-events.md. Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
 ---
 
 # Bridge
@@ -26,6 +26,19 @@ Its purpose is **high-fidelity context transfer** across the session boundary wh
 **Bridge vs signing-off `coffee`:** Signing-off **`coffee`** is lightweight — handoff-weighted Step 1, no required git operations from the ritual. Bridge is structural — assesses repos, seals agreed scope, and produces the carry-forward block. Bridge is the default for any session close.
 
 This is event-driven: the operator says `bridge` when they're ready. There is no scheduled cadence.
+
+---
+
+## Step 0 — Cadence tail (before Step 1 and before bridge log)
+
+**Read first** — a successful bridge appends a **`bridge`** line **after** push (see **Cadence audit** under Step 3). Read the log **before** that happens so this session’s bridge is not included in the tail.
+
+1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
+2. Take the **last 4** such lines already in the file. If fewer than four exist, use what exists; if none, **Cadence tail (last 4):** _(no prior events)_.
+3. **Synthesize** the same way as **coffee** Step 0 (2–4 short sentences or compact bullets; kinds, times, high-signal `key=value`; no raw line dumps).
+4. Place **Cadence tail (last 4):** at the **top** of the **first** bridge reply (before push/sync assessment and before Step 1 file reads are summarized). Same **4** as **coffee** so seal → **`coffee`** tail on the transfer packet stays rhythm-symmetric.
+
+If the file is missing or empty below the anchor, note that and continue.
 
 ---
 
@@ -278,6 +291,7 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 
 ## Related files
 
+- `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (tail depths including bridge ×4, harvest ×0)
 - `.cursor/skills/coffee/SKILL.md` — morning cadence (run after pasting bridge)
 - `.cursor/skills/dream/SKILL.md` — nightly cadence (run before bridge if end of day)
 - `.cursor/skills/harvest/SKILL.md` — parallel-session import (separate from bridge paste)

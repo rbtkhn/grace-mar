@@ -1,7 +1,7 @@
 ---
 name: dream
 preferred_activation: dream
-description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Usually one dream session per day."
+description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Before auto_dream.py runs, synthesize the previous eight cadence lines from work-cadence-events.md into the night-close reply. Usually one dream session per day."
 ---
 
 # Dream
@@ -42,6 +42,17 @@ Extra runs are allowed when needed, especially for:
 But the default pattern is:
 - many `coffee` sessions are normal
 - one `dream` session is normal
+
+## Step 0 — Cadence tail (before Step 1 scripts)
+
+**Read first** — `auto_dream.py` (and `operator_end_of_day.py`) append a new **`dream`** line when the pass completes successfully, so the log must be read **before** those commands if the tail is to exclude this run.
+
+1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
+2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Cadence tail (last 8):** _(no prior events)_.
+3. **Synthesize** into a **compact block** (short paragraph and/or up to **8** one-line bullets): each event’s **kind**, **time** if it helps orientation, and **high-signal** `key=value` tokens. Do **not** paste raw log lines in full unless they are already very short.
+4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before `self-memory` / integrity lines.
+
+If the file is missing or empty below the anchor, note that under **Cadence tail (last 8)** and continue.
 
 ## Step 1 — Automated actions
 
@@ -88,6 +99,7 @@ This is a maintenance pass, not a merge pass.
 
 Return a short night-close brief with:
 
+- **Cadence tail (last 8):** (synthesis from Step 0 — always first)
 - `self-memory` changed: yes/no
 - integrity: pass/fail
 - governance: pass/fail
@@ -103,6 +115,7 @@ If nothing important changed, say so plainly. A quiet run is success.
 ```md
 ## Dream
 
+- Cadence tail (last 8): (compressed rhythm: e.g. two coffees work-start, one thanks park=…, bridge refs=…, …)
 - self-memory changed: yes
 - integrity: pass
 - governance: pass
@@ -117,6 +130,7 @@ Or, when something needs attention:
 ```md
 ## Dream
 
+- Cadence tail (last 8): (compressed rhythm from Step 0)
 - self-memory changed: yes
 - integrity: pass
 - governance: pass
@@ -172,13 +186,13 @@ Usually one `dream` session per day is normal.
 
 ## Cadence choreography
 
-`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad; **`thanks`** is a **light pause** (telemetry + optional park line only — see [.cursor/skills/thanks/SKILL.md](../thanks/SKILL.md)).
+`coffee`, `dream`, and `bridge` form Grace-Mar's cadence triad; **`thanks`** is a **light pause** (telemetry + optional park line + synthesis of prior two events — see [.cursor/skills/thanks/SKILL.md](../thanks/SKILL.md)).
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–E menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
-| **During day** | `thanks` (micro-pause) | Optional park line + one cadence line — no maintenance stack |
+| **During day** | `thanks` (micro-pause) | Synthesis of prior two cadence lines + optional park + one telemetry line — no maintenance stack |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 
@@ -195,6 +209,8 @@ Usually one `dream` session per day is normal.
 **Morning pickup:** `operator_daily_warmup.py` reads `last-dream.json` and displays a **collapsed** “Last dream” block by default; use **`--verbose-dream`** for full paths, civ-mem snippets, and followups.
 
 For the full decision tree including signing-off **`coffee`** (lightweight alternative to bridge), see [bridge SKILL.md](../bridge/SKILL.md).
+
+**Deeper choreography** (ordering, data flow, synthesis depths, harvest vs clocks): [work-cadence README — Cadence choreography](../../../docs/skill-work/work-cadence/README.md#cadence-choreography).
 
 ## Cadence audit
 

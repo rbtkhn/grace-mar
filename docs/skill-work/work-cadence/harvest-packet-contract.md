@@ -18,13 +18,14 @@ Paste this into the target agent session as context for analysis; do not treat i
 
 ## Section contract
 
-Use this heading order unless a section is empty (omit empty sections; do not print “N/A” walls).
+Use this heading order unless a section is empty (omit empty sections; do not print “N/A” walls). **`## Thread coverage`** sits **after** **`## Current session purpose`** when present.
 
 | Section | Content |
 |---------|--------|
 | `# Session Harvest Packet — [YYYY-MM-DD]` | Date = packet generation day (UTC or local; state which). |
 | `## Use this packet for` | One sentence: what the **receiving** agent should do (analyze, critique, extend, plan). |
-| `## Current session purpose` | 1–3 sentences. |
+| `## Current session purpose` | 1–3 sentences. May include **one** trailing caveat sentence when thread context is truncated (or leave caveat to **Thread coverage**). |
+| `## Thread coverage` | **Optional.** Include when early chat is missing from context, when only a **transcript tail** was read, or when **deep** harvest used a capped read. **Max 2 short bullets** — e.g. basis (visible thread / transcript tail 200 / full transcript), truncation note. Omit when the default visible arc is clearly sufficient. |
 | `## Main outcomes` | Bullets; tag fragile lines `{fact}` / `{proposal}` / `{uncertain}` where useful. |
 | `## Strongest insights` | Bullets; compress. |
 | `## Decisions / directions chosen` | What was **chosen** vs merely discussed. |
@@ -66,4 +67,4 @@ No scripts required. After pasting the packet into the target session, note **Lo
 |------|--------|
 | 2026-04-05 | Initial contract in template (harvest as bridge sibling). |
 | 2026-04-06 | Pointer to doc-only post-paste review loop (skill § After the paste). |
-| 2026-04-07 | **Agent surface** — Cursor UI model label before required closing line. |
+| 2026-04-07 | **Agent surface** (Cursor UI model). Optional **`## Thread coverage`** — truncation / transcript-basis honesty; **Current session purpose** may carry one caveat line. |

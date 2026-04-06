@@ -1,7 +1,7 @@
 ---
 name: coffee
 preferred_activation: coffee
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four cadence lines from work-cadence-events.md into the reply. Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
 ---
 
 # Coffee
@@ -40,6 +40,17 @@ Multiple `coffee` sessions per day are normal. That is not redundancy; it is the
 ## "Coffee" = start here (two steps)
 
 When the operator begins with **`coffee`** (or clearly the same intent; legacy **`hey`** still counts), treat it as opening a **coffee session**.
+
+### Step 0 — Cadence tail (before Step 1 scripts)
+
+**Read first** — `operator_coffee.py` appends a new **`coffee`** line at the **end** of a successful run, so the log must be read **before** those commands if the tail is to exclude this session.
+
+1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
+2. Take the **last 4** such lines already in the file. If there are fewer than four, use what exists; if none, **Cadence tail (last 4):** _(no prior events)_.
+3. **Synthesize** into **2–4 short sentences** or a **compact bullet list**: each event’s **kind** (coffee / dream / bridge / harvest / thanks / coffee_pick), **time** if useful, and **high-signal** `key=value` tokens (`mode=`, `park=`, `refs=`, `picked=`, `ok=`). Do **not** paste raw log lines in full unless they are already very short.
+4. In the reply, place **Cadence tail (last 4):** at the **top** of Step 1 content (immediately before script output / warmup paste). Same rule for **signing-off** Step 1 (before `operator_coffee.py --mode closeout` or handoff-only flow).
+
+If the file is missing or empty below the anchor, state that under **Cadence tail (last 4)** and continue Step 1.
 
 ### Step 1 — Automated actions (one flow, two weights)
 
@@ -115,6 +126,7 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 
 ## Related files
 
+- `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (ordering, handoffs, cadence-tail synthesis depths, harvest vs triad)
 - `docs/skill-work/work-coffee/README.md` — territory rationale and boundaries
 - `docs/skill-work/work-coffee/menu-reference.md` — full A–E definitions, cadence, survey track, signing-off add-ons
 - `docs/skill-work/work-coffee/work-coffee-history.md` — lane breadcrumbs
