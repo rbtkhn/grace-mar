@@ -36,6 +36,19 @@ python3 scripts/business_ledger_summary.py --by tax_category --json
 python3 scripts/business_ledger_summary.py --by tax_category --since 2026-01-01 --until 2026-12-31
 ```
 
+4. **Bank CSV import** — US Bank checking export → `business-ledger.jsonl`:
+
+```bash
+python3 scripts/import_bank_csv.py --csv "/path/to/export.csv" --venture grace-gems
+python3 scripts/import_bank_csv.py --csv "/path/to/export.csv" --venture grace-gems --dry-run
+```
+
+**Etsy matching:** The importer classifies Etsy payouts and Etsy card charges using both the **Name** and **Memo** columns (`is_etsy_bank_descriptor` in `scripts/import_bank_csv.py`) — e.g. `ETSY INC`, `ETSY.COM*`, `ETSY PAYMENTS` / `PAYOUT` / `DEPOSIT` in memo, and compact `ETSYINC`. Reconcile the ledger against Etsy’s seller annual summary (net sales minus fees, marketing, and shipping ≈ deposits, modulo timing).
+
+```bash
+python3 scripts/import_bank_csv.py -u grace-mar --audit-etsy --venture grace-gems --year 2025
+```
+
 ---
 
 ## Files
@@ -44,6 +57,7 @@ python3 scripts/business_ledger_summary.py --by tax_category --since 2026-01-01 
 |------|---------|
 | `schema-registry/business-transaction.v1.json` | Transaction schema (instance-specific) |
 | `scripts/emit_business_transaction.py` | Append one transaction row |
+| `scripts/import_bank_csv.py` | Import bank CSV; Etsy descriptor rules; `--audit-etsy` |
 | `scripts/business_ledger_summary.py` | P&L, grouping, tax summaries |
 | `users/grace-mar/business-ledger.jsonl` | Append-only transaction log |
 | **This README** | How to use the accounting surface |
