@@ -19,6 +19,7 @@
 - Full edge for THINK, MATH, WORK (concise)
 - IX-A/IX-B in **summary form** (e.g. 20–40 knowledge areas, 5–15 curiosity items as bullets), not the full Record
 - 2-hour ceiling and “3–5 lessons in this thread”; end each activity with a one-line summary for logging
+- Optional **Pomodoro-style** pacing (focus interval + breaks inside the 2-hour block): [pomodoro-and-timeboxing](work-dev/pomodoro-and-timeboxing.md)
 
 The generator is **day-scoped**: run once per day, produce one prompt. The human pastes once and runs the whole day’s lessons in one chat.
 

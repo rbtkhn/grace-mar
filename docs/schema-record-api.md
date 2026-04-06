@@ -157,6 +157,8 @@ What to teach or do next — THINK: [edge.THINK], WRITE: [edge.WRITE], WORK: [ed
 Deliver one short, focused lesson (or activity) suited to their level and interests. Do not add facts about them to your reply; the learner will capture what was done via their own system.
 ```
 
+**Optional — explicit timebox:** Operators may append **one sentence** about pacing (e.g. a single 25-minute focus block, or staying within the 2-hour ceiling across several activities) without adding new factual claims about the learner. See [skill-work/work-dev/pomodoro-and-timeboxing.md](skill-work/work-dev/pomodoro-and-timeboxing.md).
+
 Instances may extend the template (e.g. add skills, evidence count, or screen_time_target_minutes). The prompt must draw only from Record/export content (knowledge boundary); no LLM inference is written back into the Record until the companion approves via the gate.
 
 ---

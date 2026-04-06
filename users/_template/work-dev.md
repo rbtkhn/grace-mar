@@ -5,6 +5,8 @@ Status: uninitialized
 Purpose:
 Development and technical-research work territory for this companion.
 
+Optional pacing (WORK doctrine, not Record): for Pomodoro-style focus intervals inside the ~2-hour design ceiling, see [pomodoro-and-timeboxing.md](../../docs/skill-work/work-dev/pomodoro-and-timeboxing.md).
+
 Initialization rule:
 This module begins blank and is populated only from:
 

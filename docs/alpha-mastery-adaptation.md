@@ -28,7 +28,7 @@ This aligns with classic **mastery learning** research (e.g. Bloom on mastery pl
 | **Continuous adaptive assessment** | Ongoing diagnosis of what is known vs not; targeted lessons, repetition, **spaced retrieval**. |
 | **Grade-level mastery tests** | Broad checkpoints before full grade advancement. |
 | **Spaced repetition** | Retention over time. |
-| **Pomodoro-style blocks** | Focus segments inside the **2-hour** academic window. |
+| **Pomodoro-style blocks** | Focus segments inside the **2-hour** academic window. Operational detail: [pomodoro-and-timeboxing.md](skill-work/work-dev/pomodoro-and-timeboxing.md). |
 | **“Time Back”** | Efficiency in service of **freed time** for deep projects, entrepreneurship, coding, speaking, etc. Motivation and **visible progress** are treated as central. |
 
 External reporting sometimes cites strong **standardized growth** (e.g. NWEA MAP) vs national averages despite less seat time; treat such claims as **external** until you have your own evidence in the Record.

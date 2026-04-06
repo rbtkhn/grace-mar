@@ -39,6 +39,7 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[persistence-and-memory-surfaces.md](persistence-and-memory-surfaces.md)** | What persists where (gate, MEMORY, vendor agents, exports) vs outcome-agent dimensions; assumption-labeled efficiency note. |
 | **[delegation-spec-external-agents.md](delegation-spec-external-agents.md)** | External outcome agents: dimension map, 7-section delegation outline, copy-paste evaluation prompt (operator WORK). |
+| **[pomodoro-and-timeboxing.md](pomodoro-and-timeboxing.md)** | Optional Pomodoro-style focus intervals inside the ~2-hour design ceiling; Record-derived lesson timebox line; WORK only. |
 | **[workspace.md](workspace.md)** | Canonical operator entrypoint: current state, blockers, next actions, and file map. |
 | **[WORK-LEDGER.md](WORK-LEDGER.md)** | Optional **judgment / compounding** index (watches, heuristics, framing list) — pointers into workspace + integration docs; scaffold from [work-template/WORK-LEDGER.md](../work-template/WORK-LEDGER.md). |
 | **[INTEGRATION-PROGRAM.md](INTEGRATION-PROGRAM.md)** | **One-loop spec:** read order → export → stage-only → merge; script index; companion gate invariant. |
@@ -127,6 +128,7 @@ Use this order when actively working on the territory:
 8. For **session continuity as explicit steps** (files / scripts / CI vs implicit memory), read [session-continuity-contract.md](session-continuity-contract.md).
 9. For **audit continuity as the safety story** (visible pipeline state vs “trust the chat”), read [safety-story-ux.md](safety-story-ux.md).
 10. For **long-form tech media** (podcasts, keynotes) translated into integration + offers vocabulary — not as specs — read [external-signals.md](external-signals.md) and the shared table in [../work-strategy/external-tech-scan.md](../work-strategy/external-tech-scan.md). Example ingest: [research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md) (No Priors / Karpathy — agents, claws, auto-research).
+11. For **focus intervals** inside the 2-hour design constraint (Pomodoro-style timeboxing, optional lesson prompt line), see [pomodoro-and-timeboxing.md](pomodoro-and-timeboxing.md).
 
 ---
 
