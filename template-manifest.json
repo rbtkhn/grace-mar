@@ -516,6 +516,11 @@
       "optional": true
     },
     {
+      "path": "bot/avatar_controller.py",
+      "description": "Optional avatar command mapping for Live2D/VRM renderers (disabled unless voice_avatar in runtime_config).",
+      "optional": true
+    },
+    {
       "path": "scripts/generate-confidence-report.py",
       "description": "Plotly radar HTML from seed_confidence_map.json; optional plotly/kaleido.",
       "optional": true

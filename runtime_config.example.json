@@ -15,5 +15,11 @@
   "monitoring": {
     "log_critique_decisions": true,
     "metrics_filename": "constitutional_metrics.jsonl"
+  },
+  "voice_avatar": {
+    "enabled": false,
+    "avatar_type": "none",
+    "avatar_model_path": null,
+    "renderer_url": null
   }
 }
