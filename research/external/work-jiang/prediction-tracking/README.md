@@ -8,6 +8,18 @@
 
 ---
 
+## Structural next-lecture chain (orthogonal)
+
+**Purpose:** Blind **forward** exercise — predict lecture **k+1** from curated markdown for episodes **1…k** only, then score. Trains **skill-jiang** (Cursor) and produces **mergeable** heuristics; **not** the same as claim adjudication in `registry/predictions.jsonl`.
+
+| Artifact | Path |
+|----------|------|
+| Human log + rubric | [lecture-forward-chain-gt-01-18.md](lecture-forward-chain-gt-01-18.md) |
+| Optional JSONL tail | [registry/lecture-forward-chain.jsonl](registry/lecture-forward-chain.jsonl) |
+| Cursor skill | [`.cursor/skills/skill-jiang/SKILL.md`](../../../../.cursor/skills/skill-jiang/SKILL.md) |
+
+---
+
 ## Claim types
 
 | Type | Example | Accuracy expectation |

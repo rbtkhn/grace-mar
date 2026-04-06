@@ -12,6 +12,8 @@ Operator project — **Jiang** (separate from SKILLS). See [skill-think](skill-t
 
 **Authorized sources (operator list):** [work-jiang-sources.md](../../docs/skill-work/work-jiang/work-jiang-sources.md) — convention: [work-modules-sources-principle.md](../../docs/skill-work/work-modules-sources-principle.md).
 
+**Cursor skill — forward lecture chain:** [skill-jiang.md](../../docs/skill-work/work-jiang/skill-jiang.md) (predict next episode from prefix only; Volume IV bake-off log under `prediction-tracking/`).
+
 **Publishing (serial releases, one repo):** [PUBLISHING.md](../../research/external/work-jiang/book/PUBLISHING.md) — ship **one volume at a time**; assume readers **may have prior volumes**; **cross-volume references** allowed; **all corpora** stay in `research/external/work-jiang/`.
 
 **Method (operator work, not Voice knowledge until merged through the gate):**
