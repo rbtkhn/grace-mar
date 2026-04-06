@@ -79,6 +79,19 @@
         "type": "string",
         "minLength": 1
       }
+    },
+    "recommendedAction": {
+      "type": "string",
+      "enum": [
+        "accept",
+        "reject",
+        "defer",
+        "merge_partially"
+      ]
+    },
+    "whyItMatters": {
+      "type": "string",
+      "minLength": 1
     }
   }
 }

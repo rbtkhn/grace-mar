@@ -17,5 +17,7 @@
   },
   "evidenceRefs": [
     "session-demo-activation-01"
-  ]
+  ],
+  "recommendedAction": "accept",
+  "whyItMatters": "Shorter initial examples reduce cognitive load and let the learner reach practice faster, which the evidence shows improves retention."
 }

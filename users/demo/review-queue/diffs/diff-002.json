@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "1.0.0",
+  "diffId": "diff-002",
+  "userSlug": "demo",
+  "category": "curiosity",
+  "before": {
+    "topic": "volcanoes",
+    "depth": "surface-level interest mentioned once"
+  },
+  "after": {
+    "topic": "volcanoes",
+    "depth": "active curiosity — asked three follow-up questions across two sessions"
+  },
+  "changeSummary": "Upgrade volcano interest from surface mention to active curiosity based on repeated engagement.",
+  "conflictNote": "Previous session noted short attention span on science topics; this contradicts that pattern and may indicate genuine sustained interest.",
+  "confidenceDelta": {
+    "before": 0.4,
+    "after": 0.75
+  },
+  "evidenceRefs": [
+    "session-demo-science-03",
+    "session-demo-science-05"
+  ],
+  "recommendedAction": "defer",
+  "whyItMatters": "If sustained, this would be the first science curiosity to reach active status — worth one more session before promoting to IX-B."
+}

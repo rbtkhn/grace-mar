@@ -15,6 +15,7 @@ Deploy alongside apps/miniapp_server.py on Render; protect with OPERATOR_SECRET 
 
 import html
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -390,6 +391,120 @@ def action():
             "message": "Run process_approved_candidates.py --apply to merge.",
         }
     )
+
+
+@app.route("/diff-queue")
+def diff_queue():
+    """Render the Record Diff Queue as HTML — unified diff-card view of pending gate candidates."""
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    import sys as _sys
+    _sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    from gate_to_diff_adapter import convert_gate
+    from render_record_diff_queue import render_queue
+
+    diffs = convert_gate(USER_ID)
+    if not diffs:
+        md = "# Record Diff Queue\n\n0 pending change(s)\n"
+    else:
+        md = render_queue(diffs)
+
+    md_html = _md_to_html(md)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Diff Queue — {html.escape(USER_ID)}</title>
+  <style>
+    :root {{ --bg: #0f1419; --card: #1a2332; --text: #e8ecf1; --muted: #8b9cb3; --accent: #c17f59; --good: #7dc09a; --danger: #dd8e91; }}
+    * {{ box-sizing: border-box; }}
+    body {{ margin: 0; min-height: 100vh; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; padding: 1.25rem; max-width: 52rem; margin: 0 auto; }}
+    h1 {{ font-size: 1.35rem; }}
+    h3 {{ color: var(--accent); border-bottom: 1px solid rgba(255,255,255,.08); padding-bottom: 0.35rem; margin-top: 1.5rem; }}
+    h4 {{ font-size: 0.95rem; color: var(--muted); margin: 0.75rem 0 0.25rem; }}
+    hr {{ border: none; border-top: 1px solid rgba(255,255,255,.08); margin: 1.5rem 0; }}
+    code {{ background: rgba(255,255,255,.08); padding: 0.15em 0.35em; border-radius: 4px; font-size: 0.9em; }}
+    ul {{ padding-left: 1.25rem; }}
+    p, li {{ line-height: 1.55; }}
+    a {{ color: var(--accent); }}
+    .nav {{ margin-bottom: 1rem; font-size: 0.9rem; }}
+    .nav a {{ margin-right: 1rem; }}
+  </style>
+</head>
+<body>
+  <div class="nav"><a href="/">← Gate review</a></div>
+  {md_html}
+</body>
+</html>"""
+
+
+@app.route("/api/diff-queue")
+def api_diff_queue():
+    """JSON list of pending candidates as identity-diff v1 objects."""
+    if not _auth():
+        return jsonify({"error": "Unauthorized"}), 401
+
+    import sys as _sys
+    _sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    from gate_to_diff_adapter import convert_gate
+
+    diffs = convert_gate(USER_ID)
+    return jsonify({"user_id": USER_ID, "count": len(diffs), "diffs": diffs})
+
+
+def _md_to_html(md_text: str) -> str:
+    """Minimal Markdown-to-HTML for diff queue rendering (no external deps)."""
+    lines = md_text.split("\n")
+    out: list[str] = []
+    in_list = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("### "):
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h3>{html.escape(stripped[4:])}</h3>")
+        elif stripped.startswith("#### "):
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h4>{html.escape(stripped[5:])}</h4>")
+        elif stripped.startswith("# "):
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append(f"<h1>{html.escape(stripped[2:])}</h1>")
+        elif stripped.startswith("---"):
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            out.append("<hr/>")
+        elif stripped.startswith("- "):
+            if not in_list:
+                out.append("<ul>")
+                in_list = True
+            content = stripped[2:]
+            content = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", content)
+            content = re.sub(r"`([^`]+)`", r"<code>\1</code>", content)
+            out.append(f"<li>{content}</li>")
+        elif stripped.startswith("**") and stripped.endswith("**"):
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            inner = stripped[2:-2]
+            out.append(f"<p><strong>{html.escape(inner)}</strong></p>")
+        elif stripped:
+            if in_list:
+                out.append("</ul>")
+                in_list = False
+            content = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", html.escape(stripped))
+            content = re.sub(r"`([^`]+)`", r"<code>\1</code>", content)
+            out.append(f"<p>{content}</p>")
+    if in_list:
+        out.append("</ul>")
+    return "\n".join(out)
 
 
 @app.route("/api/candidates")
