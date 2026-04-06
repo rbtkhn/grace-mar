@@ -159,6 +159,7 @@ def _append_openclaw_export_ledger(
             wall_ms=wall_ms,
             bytes_processed=total_bytes,
             source_artifact_count=len(files),
+            task_type="export",
             repo_root=REPO_ROOT,
         )
     except Exception:

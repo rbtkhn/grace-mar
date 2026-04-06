@@ -52,6 +52,9 @@ def append_integration_ledger(
     wall_ms: int | None = None,
     bytes_processed: int = 0,
     source_artifact_count: int = 0,
+    task_id: str = "",
+    task_type: str = "",
+    outcome_confidence: float | None = None,
     repo_root: Path | None = None,
     extra: dict[str, Any] | None = None,
 ) -> None:
@@ -73,6 +76,12 @@ def append_integration_ledger(
         "bytes_processed": bytes_processed,
         "source_artifact_count": source_artifact_count,
     }
+    if task_id:
+        rec["task_id"] = task_id
+    if task_type:
+        rec["task_type"] = task_type
+    if outcome_confidence is not None:
+        rec["outcome_confidence"] = round(max(0.0, min(1.0, outcome_confidence)), 3)
     rec.update(_integration_token_fields_from_env())
     if extra:
         rec.update(extra)

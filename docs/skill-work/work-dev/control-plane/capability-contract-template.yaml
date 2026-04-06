@@ -1,0 +1,65 @@
+# Capability contract — template
+#
+# Standardized shape for any tool, integration, or external agent surface
+# that the companion system interacts with. Purpose: make each integration's
+# promises explicit so they can be validated, compared, and delegated safely.
+#
+# See: positioning-governed-state-os.md (GAP-008), known-gaps.md (BUILD-AI-GAP-008).
+# Validate: python scripts/work_dev/agent_surface_checklist.py --validate-contracts
+
+version: 1
+contract_id: ""            # e.g. "openclaw-export-v1"
+integration_name: ""       # human-readable name
+evaluated_at: ""           # ISO-8601 date of last review
+source_of_truth: []        # repo paths to implementation files
+
+# --- What it does ---
+schema:
+  description: ""          # one paragraph: what this tool/integration does
+  inputs: []               # list of { name, type, required, description }
+  outputs: []              # list of { name, type, description }
+  idempotent: false        # safe to retry without side effects?
+
+# --- How it authenticates ---
+auth:
+  mode: ""                 # none | api_key | oauth | signed_role | companion_gate
+  key_source: ""           # env var name, secret store path, or "none"
+  delegation_scope: ""     # what the auth token permits (human-readable)
+  notes: ""
+
+# --- What happens on failure ---
+failure_policy:
+  retry: false             # does the system retry automatically?
+  max_retries: 0
+  backoff: ""              # none | linear | exponential
+  escalation: ""           # abort | log_and_continue | alert_operator | queue_for_review
+  timeout_ms: 0            # per-invocation timeout; 0 = use system default
+  known_failure_modes: []  # list of { mode, description, mitigation }
+
+# --- Cost expectations ---
+cost:
+  hint: ""                 # free | negligible | per_call | metered | unknown
+  typical_tokens: 0        # estimated LLM tokens per invocation (0 if no LLM)
+  typical_wall_ms: 0       # estimated wall-clock time
+  ledger_bucket: ""        # compute-ledger.jsonl bucket name (e.g. "integration")
+  notes: ""
+
+# --- Rate limits ---
+rate_limits:
+  requests_per_minute: 0   # 0 = unlimited or unknown
+  requests_per_day: 0
+  notes: ""
+
+# --- Governance ---
+governance:
+  review_requirement: ""   # none | post_hoc | pre_approval | companion_gate
+  receipt_shape: ""        # what trace/receipt it emits (e.g. "pipeline_event + harness_event + compute_ledger")
+  record_authority: ""     # companion | operator | not_applicable
+  merge_allowed: false     # can this tool merge into Record? (should almost always be false)
+  constitution_check: false # does this tool run INTENT advisory before acting?
+  observability: ""        # what logs/events are emitted and where
+
+# --- Operator notes ---
+decision:
+  fit_summary: ""          # how this integration fits the companion system
+  status: ""               # active | planned | deprecated | experimental

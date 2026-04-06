@@ -1,0 +1,77 @@
+# Capability contract — OpenClaw export (identity + runtime bundle)
+#
+# Retrofitted from integrations/openclaw_hook.py.
+
+version: 1
+contract_id: "openclaw-export-v1"
+integration_name: "OpenClaw identity export"
+evaluated_at: "2026-04-06"
+source_of_truth:
+  - integrations/openclaw_hook.py
+  - scripts/export_runtime_bundle.py
+  - docs/openclaw-integration.md
+
+schema:
+  description: >
+    Exports the companion Record (SELF, EVIDENCE, session context) into
+    formats consumable by OpenClaw or other agent runtimes. Produces USER.md,
+    manifest.json, PRP, INTENT snapshot, and optional runtime bundle. The
+    export is read-only with respect to the Record — it does not modify any
+    canonical files.
+  inputs:
+    - { name: user_id, type: string, required: true, description: "Fork identifier (e.g. grace-mar)" }
+    - { name: output_dir, type: path, required: false, description: "Destination directory; defaults to users/[id]/" }
+    - { name: format, type: enum, required: false, description: "md | md+manifest | json+md | full-prp | fork-json" }
+    - { name: destination, type: enum, required: false, description: "local | post" }
+    - { name: post_url, type: url, required: false, description: "POST endpoint when destination=post" }
+    - { name: api_key, type: string, required: false, description: "X-Api-Key header for POST" }
+    - { name: emit_event, type: boolean, required: false, description: "Emit runtime_compat_export pipeline event" }
+  outputs:
+    - { name: USER.md, type: file, description: "Exported identity in markdown" }
+    - { name: manifest.json, type: file, description: "Structured export manifest" }
+    - { name: runtime-bundle/bundle.json, type: file, description: "Runtime bundle with bundle_id" }
+    - { name: intent_snapshot.json, type: file, description: "INTENT constitution snapshot" }
+  idempotent: true
+
+auth:
+  mode: api_key
+  key_source: "--api-key CLI arg or none"
+  delegation_scope: "Read-only export of Record; no write access"
+  notes: "API key is optional; only used for POST destination"
+
+failure_policy:
+  retry: false
+  max_retries: 0
+  backoff: none
+  escalation: log_and_continue
+  timeout_ms: 30000
+  known_failure_modes:
+    - { mode: export_exit_nonzero, description: "Underlying export script fails", mitigation: "Check export script logs; verify user directory exists" }
+    - { mode: post_network_error, description: "HTTP POST to destination fails", mitigation: "Retry manually; check URL and network" }
+    - { mode: missing_user_dir, description: "users/[id]/ does not exist", mitigation: "Verify user_id; run seed if new instance" }
+
+cost:
+  hint: negligible
+  typical_tokens: 0
+  typical_wall_ms: 500
+  ledger_bucket: integration
+  notes: "No LLM calls. Cost is disk I/O and optional network POST."
+
+rate_limits:
+  requests_per_minute: 0
+  requests_per_day: 0
+  notes: "No external rate limits; operator-invoked"
+
+governance:
+  review_requirement: none
+  receipt_shape: "pipeline_event (runtime_compat_export) + harness_event (openclaw_hook) + compute_ledger row (task_type=export)"
+  record_authority: companion
+  merge_allowed: false
+  constitution_check: true
+  observability: "pipeline-events.jsonl, harness-events.jsonl, compute-ledger.jsonl; intent_snapshot.json SHA in event"
+
+decision:
+  fit_summary: >
+    Core export path. Read-only, receipt-emitting, constitution-aware.
+    Strongest integration in the current surface.
+  status: active

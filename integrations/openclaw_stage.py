@@ -185,6 +185,7 @@ def stage_openclaw(
             wall_ms=wall_ms,
             bytes_processed=sz + len(content.encode("utf-8")),
             source_artifact_count=1 if artifact else 0,
+            task_type="stage",
             repo_root=REPO_ROOT,
         )
     except Exception:

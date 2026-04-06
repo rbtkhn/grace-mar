@@ -396,6 +396,7 @@ def export_runtime_bundle(
             wall_ms=wall_ms,
             bytes_processed=total_b,
             source_artifact_count=sum(1 for _ in out_dir.rglob("*") if _.is_file()),
+            task_type="export",
             repo_root=REPO_ROOT,
         )
     except Exception:

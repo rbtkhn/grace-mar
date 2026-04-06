@@ -1,0 +1,81 @@
+# Capability contract — OpenClaw stage-only handback
+#
+# Retrofitted from integrations/openclaw_stage.py.
+
+version: 1
+contract_id: "openclaw-stage-v1"
+integration_name: "OpenClaw stage-only handback"
+evaluated_at: "2026-04-06"
+source_of_truth:
+  - integrations/openclaw_stage.py
+  - scripts/handback_server.py
+  - docs/openclaw-integration.md
+
+schema:
+  description: >
+    Stages OpenClaw session output (text summary and/or artifact file) into
+    Grace-Mar's gated pipeline via HTTP POST to the handback server /stage
+    endpoint. Stage-only: it never merges into the Record. Runs INTENT
+    constitution advisory before staging and flags conflicts.
+  inputs:
+    - { name: user_id, type: string, required: true, description: "Fork identifier (e.g. grace-mar)" }
+    - { name: text, type: string, required: false, description: "Natural language summary of what was done" }
+    - { name: artifact, type: path, required: false, description: "Optional artifact file to include (SHA256 tracked)" }
+    - { name: stage_url, type: url, required: false, description: "Handback server endpoint; default http://127.0.0.1:5050/stage" }
+    - { name: api_key, type: string, required: false, description: "X-Api-Key for handback server auth" }
+  outputs:
+    - { name: staged_candidate, type: json, description: "Server response with candidate ID and status" }
+    - { name: constitution_event, type: pipeline_event, description: "intent_constitutional_critique event" }
+    - { name: harness_event, type: harness_event, description: "runtime_handback_stage event" }
+    - { name: compute_ledger_row, type: ledger_row, description: "Cost/timing row in compute-ledger.jsonl" }
+  idempotent: false
+
+auth:
+  mode: api_key
+  key_source: "HANDBACK_API_KEY env var or --api-key CLI arg"
+  delegation_scope: "Stage candidates into RECURSION-GATE only; no merge authority"
+  notes: "Handback server may require valid continuity receipt (428 without one)"
+
+failure_policy:
+  retry: false
+  max_retries: 0
+  backoff: none
+  escalation: alert_operator
+  timeout_ms: 30000
+  known_failure_modes:
+    - { mode: no_content, description: "Neither --text nor --artifact provided", mitigation: "Provide at least one" }
+    - { mode: http_428, description: "Continuity receipt missing or expired (TTL 12h)", mitigation: "Run continuity_preflight.py first" }
+    - { mode: network_error, description: "Handback server unreachable", mitigation: "Verify server is running on stage_url" }
+    - { mode: constitution_flagged, description: "INTENT advisory detected conflict with tradeoff rules", mitigation: "Review flagged rule_ids; content is still staged with advisory annotation" }
+
+cost:
+  hint: negligible
+  typical_tokens: 0
+  typical_wall_ms: 200
+  ledger_bucket: integration
+  notes: "No LLM calls. Cost is HTTP POST + artifact read. Constitution check is keyword-based, not LLM."
+
+rate_limits:
+  requests_per_minute: 0
+  requests_per_day: 0
+  notes: "No external rate limits; operator- or agent-invoked"
+
+governance:
+  review_requirement: companion_gate
+  receipt_shape: "pipeline_event (intent_constitutional_critique) + harness_event (runtime_handback_stage) + compute_ledger row (task_type=stage; handback_server uses task_type=handback)"
+  record_authority: companion
+  merge_allowed: false
+  constitution_check: true
+  observability: >
+    pipeline-events.jsonl (constitution critique + staged event),
+    harness-events.jsonl (handback stage),
+    compute-ledger.jsonl (timing + bytes),
+    recursion-gate.md (candidate block with candidate_source, artifact_path, artifact_sha256, constitution_check_status, constitution_rule_ids)
+
+decision:
+  fit_summary: >
+    Core handback path. Stage-only by design — companion approval required
+    before any merge. Constitution advisory runs pre-stage. Receipt trail
+    spans four artifacts (pipeline, harness, ledger, gate). Continuity
+    receipt required by handback server (428 enforcement).
+  status: active

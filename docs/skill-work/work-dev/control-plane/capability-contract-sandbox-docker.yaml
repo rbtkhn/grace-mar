@@ -1,0 +1,83 @@
+# Capability contract — Sandbox LocalDockerBackend
+#
+# Governance-wrapped local Docker execution. Stub backend — not yet implemented.
+# See: sandbox-adapter-spec.md, scripts/work_dev/sandbox_adapter.py
+
+version: 1
+contract_id: "sandbox-docker-v1"
+integration_name: "Sandbox adapter — LocalDockerBackend"
+evaluated_at: "2026-04-06"
+source_of_truth:
+  - scripts/work_dev/sandbox_adapter.py
+  - docs/skill-work/work-dev/sandbox-adapter-spec.md
+
+schema:
+  description: >
+    Local Docker sandbox backend. Wraps `docker run` with volume mounts
+    for files_in/out, applies the adapter's governance layer (authority
+    check, receipts, ledger), and returns structured results. Currently
+    a stub — execute() raises NotImplementedError. Health check pings
+    the Docker daemon.
+  inputs:
+    - { name: command, type: string, required: true, description: "Shell command to execute inside container" }
+    - { name: files_in, type: list, required: false, description: "Files to mount into container (path + sha256)" }
+    - { name: timeout_ms, type: integer, required: false, description: "Max execution time; maps to docker --timeout" }
+    - { name: caller, type: string, required: false, description: "Who is invoking" }
+    - { name: authority_class, type: enum, required: false, description: "operator | agent_supervised | agent_autonomous" }
+    - { name: task_id, type: string, required: false, description: "Links to compute-ledger task_id" }
+    - { name: task_type, type: string, required: false, description: "e.g. code_execution, test_run, build" }
+    - { name: record_access, type: enum, required: false, description: "none | read_only | read_write" }
+    - { name: backend_config.image, type: string, required: false, description: "Docker image to use (default TBD)" }
+    - { name: backend_config.resources, type: object, required: false, description: "CPU/memory limits (docker --cpus, --memory)" }
+  outputs:
+    - { name: result, type: SandboxResult, description: "Container exit code, stdout, stderr, files_out with sha256" }
+    - { name: pipeline_receipt_pre, type: pipeline_event, description: "sandbox_execution_pre event" }
+    - { name: pipeline_receipt_post, type: pipeline_event, description: "sandbox_execution_post event" }
+    - { name: compute_ledger_row, type: ledger_row, description: "Row with actual wall_ms and bytes_processed" }
+  idempotent: false
+
+auth:
+  mode: none
+  key_source: none
+  delegation_scope: "Local Docker daemon; no external auth required"
+  notes: "Adapter checks authority_class before reaching the backend. Docker daemon must be running locally."
+
+failure_policy:
+  retry: false
+  max_retries: 0
+  backoff: none
+  escalation: alert_operator
+  timeout_ms: 60000
+  known_failure_modes:
+    - { mode: authority_denied, description: "Caller's authority_class does not permit the requested record_access", mitigation: "Reduce record_access or elevate authority" }
+    - { mode: docker_not_available, description: "Docker daemon not running or not installed", mitigation: "Start Docker; verify with `docker info`" }
+    - { mode: image_pull_failure, description: "Configured image not available locally or in registry", mitigation: "Pull image manually; check network" }
+    - { mode: timeout_exceeded, description: "Container execution exceeded timeout_ms", mitigation: "Increase timeout or simplify command" }
+    - { mode: not_implemented, description: "Backend execute() not yet implemented (current state)", mitigation: "Use dry_run backend; implement when needed" }
+
+cost:
+  hint: per_call
+  typical_tokens: 0
+  typical_wall_ms: 5000
+  ledger_bucket: integration
+  notes: "No LLM calls. Cost is Docker compute time + disk I/O. Actual cost depends on command and image."
+
+rate_limits:
+  requests_per_minute: 0
+  requests_per_day: 0
+  notes: "No external rate limits; limited by local Docker resources"
+
+governance:
+  review_requirement: post_hoc
+  receipt_shape: "pipeline_event (sandbox_execution_pre + sandbox_execution_post) + compute_ledger row"
+  record_authority: companion
+  merge_allowed: false
+  constitution_check: false
+  observability: "pipeline-events.jsonl (pre + post receipts), compute-ledger.jsonl (sandbox row with actual timing)"
+
+decision:
+  fit_summary: >
+    Local compute backend for operator use. Governance layer (authority,
+    receipts, ledger) is active; Docker execution is not yet implemented.
+    When implemented, provides real sandboxed execution with full audit trail.
+  status: planned
