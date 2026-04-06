@@ -1,0 +1,2 @@
+# Optional: Ed25519 birth certificate signing (generate-birth-certificate.py)
+cryptography>=42.0.0

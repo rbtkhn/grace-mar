@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "taxonomy": {
+    "episodic": true,
+    "semantic": true,
+    "procedural": false,
+    "relational": true
+  },
+  "retention_policies": {
+    "default_ttl_days": 730,
+    "auto_forget_rules": [
+      "low-confidence",
+      "user-flagged"
+    ],
+    "user_override_allowed": true
+  },
+  "rights": {
+    "right_to_be_forgotten": true,
+    "export_format": "both",
+    "ownership": "user"
+  },
+  "drift_protection": {
+    "max_confidence_drop": 0.15,
+    "requires_change_review": true
+  },
+  "notes": ""
+}

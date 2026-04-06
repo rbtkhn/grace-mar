@@ -1852,6 +1852,38 @@ def _normalize_channel_key(channel_key: str) -> str:
     return k
 
 
+def _constitutional_pass(
+    channel_key: str,
+    user_message: str,
+    text: str | None,
+    *,
+    confidence: float = 1.0,
+    trigger_flags: frozenset[str] | None = None,
+) -> str:
+    """Optional post-pass from seed-phase constitution + repo-root runtime_config.json."""
+    base = text if text is not None else ""
+    if not base.strip():
+        return base
+    try:
+        try:
+            from .constitutional_layer import maybe_apply_constitutional_critique
+        except ImportError:
+            from constitutional_layer import maybe_apply_constitutional_critique
+    except ImportError:
+        return base
+    return maybe_apply_constitutional_critique(
+        repo_root=PROFILE_DIR.parent.parent,
+        profile_dir=PROFILE_DIR,
+        user_message=user_message,
+        assistant_text=base,
+        channel_key=channel_key,
+        client=_get_client(),
+        confidence=confidence,
+        trigger_flags=trigger_flags,
+        main_model=OPENAI_MODEL,
+    )
+
+
 def get_response(channel_key: str, user_message: str) -> str:
     """Get Grace-Mar's response for a given message. Channel-key scopes conversation."""
     # Session (State) never writes to SELF/EVIDENCE; staging is the only path. Merge only via process_approved_candidates after companion approval.
@@ -1952,6 +1984,7 @@ def get_response(channel_key: str, user_message: str) -> str:
         # Agentic: propose adding to record so companion can say yes
         proposal = " want me to add this to your record so we remember it? say yes!"
         full_message = assistant_message.rstrip() + proposal
+        full_message = _constitutional_pass(channel_key, user_message, full_message)
 
         history.append({"role": "user", "content": user_message})
         history.append({"role": "assistant", "content": full_message})
@@ -1987,7 +2020,8 @@ def get_response(channel_key: str, user_message: str) -> str:
     if u := getattr(response, "usage", None):
         _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
 
-    assistant_message = response.choices[0].message.content
+    assistant_message = response.choices[0].message.content or ""
+    assistant_message = _constitutional_pass(channel_key, user_message, assistant_message)
     history.append({"role": "assistant", "content": assistant_message})
 
     if LOOKUP_TRIGGER in assistant_message.lower():
@@ -2107,7 +2141,8 @@ def run_grounded_response(
         )
         if u := getattr(response, "usage", None):
             _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
-        reply = response.choices[0].message.content.strip()
+        reply = (response.choices[0].message.content or "").strip()
+        reply = _constitutional_pass(channel_key, question, reply)
         emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp", replay_mode="dyad")
         return reply
     except Exception:

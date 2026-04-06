@@ -486,13 +486,63 @@
       "optional": false
     },
     {
+      "path": "scripts/seed_phase_artifacts.py",
+      "description": "Single source of truth for seed JSON artifact filenames and schema paths (validator + genesis hash).",
+      "optional": false
+    },
+    {
+      "path": "scripts/generate-constitution.py",
+      "description": "Deterministic seed_constitution.json from seed-phase JSON scaffolds (run after validate-seed-phase).",
+      "optional": true
+    },
+    {
+      "path": "scripts/validate-constitution.py",
+      "description": "Validates seed_constitution.json against schema + policy checks (memory_contract in hierarchy).",
+      "optional": true
+    },
+    {
+      "path": "scripts/generate-birth-certificate.py",
+      "description": "Signed seed birth certificate (genesis hash + optional Ed25519); see requirements-seed-phase-signing.txt.",
+      "optional": true
+    },
+    {
+      "path": "runtime_config.example.json",
+      "description": "Example runtime config (constitutional critique off by default); copy to runtime_config.json locally.",
+      "optional": true
+    },
+    {
+      "path": "bot/constitutional_layer.py",
+      "description": "Optional gated constitutional critique hook for Voice (disabled unless runtime_config enables).",
+      "optional": true
+    },
+    {
+      "path": "scripts/generate-confidence-report.py",
+      "description": "Plotly radar HTML from seed_confidence_map.json; optional plotly/kaleido.",
+      "optional": true
+    },
+    {
+      "path": "scripts/companion_factory.py",
+      "description": "Copy template root to a new instance directory and seed users/<id>/seed-phase from _template.",
+      "optional": true
+    },
+    {
+      "path": "scripts/requirements-seed-phase-signing.txt",
+      "description": "Optional pip deps for birth certificate signing (cryptography).",
+      "optional": true
+    },
+    {
+      "path": "scripts/requirements-seed-phase-dashboard.txt",
+      "description": "Optional pip deps for confidence radar (plotly, kaleido).",
+      "optional": true
+    },
+    {
       "path": "scripts/stage-evidence.py",
       "description": "Starter: text file to prepared-context JSON stub.",
       "optional": true
     },
     {
       "path": "scripts/requirements-seed-phase.txt",
-      "description": "pip deps for seed-phase validation (jsonschema).",
+      "description": "pip deps for seed-phase validation (jsonschema, pytest, cryptography for birth-cert tests).",
       "optional": true
     },
     {
@@ -546,6 +596,11 @@
       "optional": false
     },
     {
+      "path": "users/_template/seed-phase/memory_ops_contract.json",
+      "description": "MemoryOps contract placeholder (taxonomy, retention, rights, drift).",
+      "optional": false
+    },
+    {
       "path": "users/_template/seed-phase/seed_trial_report.json",
       "description": "Seed trial report placeholder.",
       "optional": false
@@ -568,6 +623,11 @@
     {
       "path": "users/_template/seed-phase/work_dev_seed.json",
       "description": "Work-dev seed placeholder (promotes to work-dev.md on activation).",
+      "optional": false
+    },
+    {
+      "path": "users/_template/seed-phase/seed_constitution.json",
+      "description": "Seed constitution (governance hierarchy + optional self-critique protocol).",
       "optional": false
     },
     {
@@ -621,6 +681,11 @@
       "optional": false
     },
     {
+      "path": "users/demo/seed-phase/memory_ops_contract.json",
+      "description": "Demo MemoryOps contract.",
+      "optional": false
+    },
+    {
       "path": "users/demo/seed-phase/seed_trial_report.json",
       "description": "Demo seed trial report.",
       "optional": false
@@ -643,6 +708,11 @@
     {
       "path": "users/demo/seed-phase/work_dev_seed.json",
       "description": "Demo work-dev seed (synthetic).",
+      "optional": false
+    },
+    {
+      "path": "users/demo/seed-phase/seed_constitution.json",
+      "description": "Demo seed constitution (synthetic).",
       "optional": false
     },
     {
@@ -752,14 +822,21 @@
       "seed_pedagogy": "schema-registry/seed-pedagogy.v1.json",
       "seed_expression": "schema-registry/seed-expression.v1.json",
       "seed_memory_contract": "schema-registry/seed-memory-contract.v1.json",
+      "memory_ops_contract": "schema-registry/seed-memory-ops-contract.v1.json",
       "seed_trial_report": "schema-registry/seed-trial-report.v1.json",
       "seed_readiness": "schema-registry/seed-readiness.v1.json",
       "seed_confidence_map": "schema-registry/seed-confidence-map.v1.json",
       "work_business_seed": "schema-registry/work-business-seed.v1.json",
-      "work_dev_seed": "schema-registry/work-dev-seed.v1.json"
+      "work_dev_seed": "schema-registry/work-dev-seed.v1.json",
+      "seed_constitution": "schema-registry/seed-constitution.v1.json"
     },
     "validator": "scripts/validate-seed-phase.py",
-    "dossier_generator": "scripts/generate-seed-dossier.py"
+    "dossier_generator": "scripts/generate-seed-dossier.py",
+    "birth_certificate_generator": "scripts/generate-birth-certificate.py",
+    "constitution_generator": "scripts/generate-constitution.py",
+    "constitution_validator": "scripts/validate-constitution.py",
+    "confidence_report_generator": "scripts/generate-confidence-report.py",
+    "instance_factory_cli": "scripts/companion_factory.py"
   },
   "change_review": {
     "version": "1.0.0",

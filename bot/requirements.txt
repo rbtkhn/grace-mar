@@ -4,5 +4,7 @@ cryptography>=41.0
 flask>=3.0
 openai>=1.0
 python-dotenv>=1.0
+pydantic>=2.6.0
+cachetools>=5.3.0
 textstat>=0.7  # optional: for measure_uniqueness readability
 chromadb>=0.4.0  # optional: for semantic search (scripts/index_record.py)

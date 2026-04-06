@@ -50,7 +50,9 @@
     "seed_readiness": "seed_readiness.json",
     "seed_confidence_map": "seed_confidence_map.json",
     "work_business_seed": "work_business_seed.json",
-    "work_dev_seed": "work_dev_seed.json"
+    "work_dev_seed": "work_dev_seed.json",
+    "memory_ops_contract": "memory_ops_contract.json",
+    "seed_constitution": "seed_constitution.json"
   },
   "confidence_summary": {
     "overall": 0.88

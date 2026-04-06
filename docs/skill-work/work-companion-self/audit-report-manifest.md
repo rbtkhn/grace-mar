@@ -34,3 +34,7 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   ... and 122 more
 
 Summary: same=137 differ=3 expected_drift=2 only_template=0 only_instance=0
+
+### Constitutional AI / seed constitution (2026-04-05 reconciliation)
+
+Portable slice applied to **companion-self** (schemas, `scripts/seed_phase_artifacts.py`, `validate-seed-phase.py`, `generate-constitution.py`, `validate-constitution.py`, demo + `_template` seed files, `runtime_config.example.json`, `requirements-constitutional-ai.txt`). **Instance-only:** `bot/constitutional_layer.py` and `bot/core.py` wiring live in **grace-mar** only; template has no `bot/` tree.

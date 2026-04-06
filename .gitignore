@@ -20,6 +20,9 @@ Pods/
 .env.local
 .env.*.local
 
+# Operator-local Voice runtime (optional constitutional critique); copy from runtime_config.example.json
+/runtime_config.json
+
 # Local companion-self checkout for multi-root workspace (grace-mar.code-workspace).
 # Remove this line if you use `git submodule add … companion-self` and want it tracked.
 /companion-self/

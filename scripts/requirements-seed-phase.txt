@@ -1,3 +1,5 @@
 # Optional: seed-phase validation + pytest suite (CI installs via pip)
 jsonschema>=4.22.0
 pytest>=7.0.0
+# Birth certificate signing (generate-birth-certificate.py); also in requirements-seed-phase-signing.txt
+cryptography>=42.0.0

@@ -46,11 +46,13 @@
     "seed_pedagogy": "seed_pedagogy.json",
     "seed_expression": "seed_expression.json",
     "seed_memory_contract": "seed_memory_contract.json",
+    "memory_ops_contract": "memory_ops_contract.json",
     "seed_trial_report": "seed_trial_report.json",
     "seed_readiness": "seed_readiness.json",
     "seed_confidence_map": "seed_confidence_map.json",
     "work_business_seed": "work_business_seed.json",
-    "work_dev_seed": "work_dev_seed.json"
+    "work_dev_seed": "work_dev_seed.json",
+    "seed_constitution": "seed_constitution.json"
   },
   "confidence_summary": {
     "overall": 0.88

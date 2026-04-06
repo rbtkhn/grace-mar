@@ -28,12 +28,14 @@ Two reference trees in this repo:
 | `seed_curiosity.json` | 2 | Curiosity scaffold + confidence. |
 | `seed_pedagogy.json` | 3 | Pedagogy scaffold + confidence. |
 | `seed_expression.json` | 4 | Expression scaffold + confidence. |
-| `seed_memory_contract.json` | 5 | Memory governance contract + confidence. |
+| `seed_memory_contract.json` | 5 | Memory governance contract + confidence (classes, regions, provenance). |
+| `memory_ops_contract.json` | 5 | **MemoryOps** layer: taxonomy (episodic/semantic/…), retention policies, export/RTBF rights, drift protection — complements `seed_memory_contract.json`; validated by `seed-memory-ops-contract.v1.json`. |
 | `seed_trial_report.json` | 6 | Trial results, stability and safety scores. |
 | `seed_readiness.json` | 7 | Gate decision, stage_completion, blocking/non-blocking issues. |
 | `seed_confidence_map.json` | 7 | Aggregated confidence_map + band constants. |
 | `work_dev_seed.json` | (parallel) | Development / technical-systems context seed; governs promotion into `users/<id>/work-dev.md`. |
 | `work_business_seed.json` | (parallel) | Business / commercial / venture context seed; governs promotion into `users/<id>/work-business.md`. |
+| `seed_constitution.json` | (derived) | Offline-synthesized constitution from other seed JSON (`scripts/generate-constitution.py`); optional input to Voice self-critique via `runtime_config.json` — not merged into SELF without the gated pipeline. |
 | `seed_dossier.md` | 7 | Human-readable summary for sign-off. |
 
 **Naming:** JSON files use **snake_case** on disk. JSON Schemas in `schema-registry/` use **kebab-case** with `.v1.json` suffix (e.g. `seed-intake.v1.json` validates `seed_intake.json`; `seed-intent.v1.json` validates `seed_intent.json`; `work-dev-seed.v1.json` validates `work_dev_seed.json`; `work-business-seed.v1.json` validates `work_business_seed.json`).

@@ -87,9 +87,11 @@ This document defines the **formation pipeline** before a companion instance is 
 |--|--|
 | **Purpose** | Govern what may be remembered, edited, deleted, and provenance expectations **before** instance EVIDENCE exists. |
 | **Required inputs** | Intake sensitive categories; identity boundaries. |
-| **Required outputs** | `seed_memory_contract.json`. |
-| **Completion criteria** | `memory_classes`, `retention_rules`, `protected_regions`, `provenance_rules` populated. |
+| **Required outputs** | `seed_memory_contract.json` and **`memory_ops_contract.json`** (MemoryOps: taxonomy, TTL/auto-forget policy, export format, drift thresholds). |
+| **Completion criteria** | `memory_classes`, `retention_rules`, `protected_regions`, `provenance_rules` populated; MemoryOps validates and aligns with deletion/export intent. |
 | **Blocking conditions** | No deletion rules when sensitive_categories non-empty; editable_regions includes protected_regions without explicit exception. |
+
+**MemoryOps note:** `seed_memory_contract.json` states *what* is governed (regions, classes, provenance). `memory_ops_contract.json` states *how memory is operated* (which taxonomies apply, retention automation, user rights, confidence-drift gates). Both are required at readiness once this template version is in use.
 
 ---
 

@@ -177,13 +177,17 @@ JSON Schemas (Draft 2020-12) in `schema-registry/`:
 | `seed-pedagogy.v1.json` | `seed_pedagogy.json` |
 | `seed-expression.v1.json` | `seed_expression.json` |
 | `seed-memory-contract.v1.json` | `seed_memory_contract.json` |
+| `seed-memory-ops-contract.v1.json` | `memory_ops_contract.json` |
 | `seed-trial-report.v1.json` | `seed_trial_report.json` |
 | `seed-readiness.v1.json` | `seed_readiness.json` |
 | `seed-confidence-map.v1.json` | `seed_confidence_map.json` |
 | `work-business-seed.v1.json` | `work_business_seed.json` |
 | `work-dev-seed.v1.json` | `work_dev_seed.json` |
+| `seed-constitution.v1.json` | `seed_constitution.json` |
 
 Protocol and validation: [seed-phase.md](seed-phase.md), [seed-phase-validation.md](seed-phase-validation.md). `template-manifest.json` exposes paths under `seed_phase.schemas`.
+
+**Constitution (optional Voice self-critique):** `seed_constitution.json` is generated offline (`scripts/generate-constitution.py`) after strict seed validation. It does not add SELF facts; enabling critique in production uses repo-root **`runtime_config.json`** (see `runtime_config.example.json`). Material changes to critique policy belong in **change review** or operator governance, not silent edits to `bot/prompt.py` — see [change-review.md](change-review.md) and [gate-vs-change-review.md](gate-vs-change-review.md).
 
 ---
 

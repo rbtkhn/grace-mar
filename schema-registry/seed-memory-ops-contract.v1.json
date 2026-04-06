@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rbtkhn/companion-self/schema-registry/seed-memory-ops-contract.v1.json",
+  "title": "memory_ops_contract",
+  "description": "MemoryOps policy layer (taxonomy, retention, rights, drift) alongside seed_memory_contract governance.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "taxonomy", "retention_policies", "rights", "drift_protection"],
+  "properties": {
+    "version": { "type": "string", "const": "1.0" },
+    "taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "episodic": { "type": "boolean" },
+        "semantic": { "type": "boolean" },
+        "procedural": { "type": "boolean" },
+        "relational": { "type": "boolean" }
+      },
+      "required": ["episodic", "semantic"]
+    },
+    "retention_policies": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["default_ttl_days", "auto_forget_rules", "user_override_allowed"],
+      "properties": {
+        "default_ttl_days": { "type": "integer", "minimum": 0 },
+        "auto_forget_rules": { "type": "array", "items": { "type": "string" } },
+        "user_override_allowed": { "type": "boolean" }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "right_to_be_forgotten": { "type": "boolean" },
+        "export_format": { "type": "string", "enum": ["json", "markdown", "both"] },
+        "ownership": { "type": "string", "const": "user" }
+      },
+      "required": ["right_to_be_forgotten", "export_format", "ownership"]
+    },
+    "drift_protection": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "max_confidence_drop": { "type": "number", "minimum": 0, "maximum": 1 },
+        "requires_change_review": { "type": "boolean" }
+      },
+      "required": ["max_confidence_drop", "requires_change_review"]
+    },
+    "notes": { "type": "string" }
+  }
+}

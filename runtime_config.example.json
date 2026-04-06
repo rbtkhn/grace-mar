@@ -1,0 +1,19 @@
+{
+  "constitutional_critique": {
+    "enabled": false,
+    "intensity": "low",
+    "trigger_threshold": 0.78,
+    "scope_flags": ["memory_write", "low_confidence", "high_stakes", "long_response"],
+    "max_revision_steps": 1,
+    "cache_ttl_seconds": 3600,
+    "max_added_tokens": 550,
+    "use_cheaper_model": true,
+    "long_response_chars": 800,
+    "semantic_cache_enabled": false,
+    "semantic_similarity_threshold": 0.92
+  },
+  "monitoring": {
+    "log_critique_decisions": true,
+    "metrics_filename": "constitutional_metrics.jsonl"
+  }
+}

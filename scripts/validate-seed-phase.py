@@ -16,55 +16,13 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+from seed_phase_artifacts import EXPECTED_ARTIFACT_KEYS, SCHEMA_BY_FILE
+
 REQUIRED_FILES = [
     "README.md",
-    "seed-phase-manifest.json",
-    "seed_intake.json",
-    "seed_intent.json",
-    "seed_identity.json",
-    "seed_curiosity.json",
-    "seed_pedagogy.json",
-    "seed_expression.json",
-    "seed_memory_contract.json",
-    "seed_trial_report.json",
-    "seed_readiness.json",
-    "seed_confidence_map.json",
-    "work_business_seed.json",
-    "work_dev_seed.json",
+    *list(SCHEMA_BY_FILE.keys()),
     "seed_dossier.md",
 ]
-
-SCHEMA_BY_FILE = {
-    "seed-phase-manifest.json": "schema-registry/seed-phase-manifest.v1.json",
-    "seed_intake.json": "schema-registry/seed-intake.v1.json",
-    "seed_intent.json": "schema-registry/seed-intent.v1.json",
-    "seed_identity.json": "schema-registry/seed-identity.v1.json",
-    "seed_curiosity.json": "schema-registry/seed-curiosity.v1.json",
-    "seed_pedagogy.json": "schema-registry/seed-pedagogy.v1.json",
-    "seed_expression.json": "schema-registry/seed-expression.v1.json",
-    "seed_memory_contract.json": "schema-registry/seed-memory-contract.v1.json",
-    "seed_trial_report.json": "schema-registry/seed-trial-report.v1.json",
-    "seed_readiness.json": "schema-registry/seed-readiness.v1.json",
-    "seed_confidence_map.json": "schema-registry/seed-confidence-map.v1.json",
-    "work_business_seed.json": "schema-registry/work-business-seed.v1.json",
-    "work_dev_seed.json": "schema-registry/work-dev-seed.v1.json",
-}
-
-# Manifest "artifacts" object uses logical keys -> filename values
-EXPECTED_ARTIFACT_KEYS = {
-    "seed_intake",
-    "seed_intent",
-    "seed_identity",
-    "seed_curiosity",
-    "seed_pedagogy",
-    "seed_expression",
-    "seed_memory_contract",
-    "seed_trial_report",
-    "seed_readiness",
-    "seed_confidence_map",
-    "work_business_seed",
-    "work_dev_seed",
-}
 
 
 def main() -> None:
