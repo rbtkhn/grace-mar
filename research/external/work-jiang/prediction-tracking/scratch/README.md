@@ -1,6 +1,6 @@
 # scratch (gitignored)
 
-Local-only **blind bundle** and **prediction** drafts for **skill-jiang** (`.cursor/skills/skill-jiang/SKILL.md`). Other files in this directory are gitignored.
+Local-only **blind bundle**, **prediction** drafts, and optional **`gt-series-model.md`** (rolling 3–5 bullets after each adjustment) for **skill-jiang** (`.cursor/skills/skill-jiang/SKILL.md`). Other files in this directory are gitignored.
 
 ```bash
 python3 scripts/work_jiang/forward_chain_blind_bundle.py bundle --prefix-end K \
