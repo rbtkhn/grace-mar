@@ -511,6 +511,21 @@
       "optional": true
     },
     {
+      "path": "scripts/voice_runtime_config.py",
+      "description": "Portable parse helpers for voice_avatar + merge_critique_for_latency_mode; keep identical in companion-self and grace-mar.",
+      "optional": true
+    },
+    {
+      "path": "docs/voice-runtime-config.md",
+      "description": "Voice/avatar runtime_config contract, emotion precedence, latency_mode vs constitutional_critique.",
+      "optional": true
+    },
+    {
+      "path": "tests/test_voice_runtime_config.py",
+      "description": "Unit tests for voice_runtime_config parser and latency merge; keep identical in companion-self and grace-mar.",
+      "optional": true
+    },
+    {
       "path": "bot/constitutional_layer.py",
       "description": "Optional gated constitutional critique hook for Voice (disabled unless runtime_config enables).",
       "optional": true

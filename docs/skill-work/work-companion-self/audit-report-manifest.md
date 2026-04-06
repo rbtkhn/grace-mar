@@ -1,13 +1,22 @@
 ## work-companion-self — Template Diff Report
 
-Companion-self: /Users/robertkuhne/Documents/grace-mar/companion-self
+Companion-self: companion-self
 Instance (grace-mar): /Users/robertkuhne/Documents/grace-mar
 Paths: companion-self template-manifest.json
 
 ### Differ (both exist, content differs — review)
   - docs/concept.md
   - docs/layer-map.json
+  - docs/seed-phase-artifacts.md
+  - docs/seed-phase-readiness.md
+  - docs/seed-phase-stages.md
+  - docs/seed-phase-validation.md
   - docs/skill-work/work-cadence/work-cadence-events.md
+  - scripts/generate-seed-dossier.py
+  - scripts/requirements-seed-phase.txt
+  - scripts/validate-seed-phase.py
+  - users/_template/seed-phase/seed-phase-manifest.json
+  - users/demo/seed-phase/seed-phase-manifest.json
 
 ### Expected drift (policy-documented; not a parity defect)
   - **docs/identity-fork-protocol.md** — Grace-mar holds IFP v1.0 full reference spec; companion-self ships the short form with a link to the full spec. Do not overwrite the instance file with the template short form on bulk sync.
@@ -31,10 +40,16 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   - docs/conflict-resolution-order.md
   - docs/contradiction-policy.md
   - docs/contradiction-resolution.md
-  ... and 122 more
+  ... and 117 more
 
-Summary: same=137 differ=3 expected_drift=2 only_template=0 only_instance=0
+Summary: same=132 differ=12 expected_drift=2 only_template=0 only_instance=0
+
+**Compare root:** `companion-self/` is a **local gitignored checkout** (see `.gitignore`); run `template_diff.py` with `-c` pointed at your template tree. The actionable **differ** list above is mostly template age drift (seed-phase stack, docs) until the checkout is refreshed from upstream; **voice-runtime portable paths** (`runtime_config.example.json`, `scripts/voice_runtime_config.py`, `docs/voice-runtime-config.md`, `tests/test_voice_runtime_config.py`) are aligned between this checkout and grace-mar.
 
 ### Constitutional AI / seed constitution (2026-04-05 reconciliation)
 
 Portable slice applied to **companion-self** (schemas, `scripts/seed_phase_artifacts.py`, `validate-seed-phase.py`, `generate-constitution.py`, `validate-constitution.py`, demo + `_template` seed files, `runtime_config.example.json`, `requirements-constitutional-ai.txt`). **Instance-only:** `bot/constitutional_layer.py` and `bot/core.py` wiring live in **grace-mar** only; template has no `bot/` tree.
+
+### Voice runtime config v2 (2026-04-05 reconciliation)
+
+Portable paths: `scripts/voice_runtime_config.py`, `tests/test_voice_runtime_config.py`, `docs/voice-runtime-config.md`, expanded `runtime_config.example.json`; `template-manifest.json` lists those paths. **Instance-only:** `bot/avatar_controller.py` imports the script module and applies nested `voice_avatar.avatar` + `emotion_mapping`. Push the portable commit from the **companion-self** repo (`github.com/rbtkhn/companion-self`); the gitignored `companion-self/` folder under grace-mar holds the same commit for local diffing.

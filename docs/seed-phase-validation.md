@@ -44,7 +44,7 @@ python3 scripts/validate-seed-phase.py users/_template/seed-phase --allow-placeh
 1. Expected files exist (see script `REQUIRED_FILES`).
 2. Each file parses as JSON (where applicable).
 3. Unless `--allow-placeholders`: each JSON instance validates against its schema in `schema-registry/`.
-4. `seed-phase-manifest.json` lists artifact keys matching the standard set (including `seed_intent`, `memory_ops_contract`, `work_business_seed`, `work_dev_seed` → matching `.json` filenames).
+4. `seed-phase-manifest.json` lists artifact keys matching the standard set (including `seed_intent`, `memory_ops_contract`, `seed_constitution`, `work_business_seed`, `work_dev_seed` → matching `.json` filenames).
 5. `seed_dossier.md` exists (non-empty).
 
 ---
@@ -109,7 +109,7 @@ python3 scripts/validate-constitution.py users/demo/seed-phase
 
 `validate-seed-phase.py` does **not** run the generator (avoid subprocess coupling in CI). Treat **generate → validate constitution** as a separate operator step when refreshing the artifact.
 
-**Voice runtime (grace-mar / instances with `bot/`):** Optional self-critique reads `users/<id>/seed-phase/seed_constitution.json` and repo-root `runtime_config.json` (`constitutional_critique.enabled`, default false). Metrics append to `users/<id>/<metrics_filename>` when logging is on (JSONL; may be ingested alongside other observability pipelines).
+**Voice runtime:** Optional self-critique reads `users/<id>/seed-phase/seed_constitution.json` and repo-root `runtime_config.json` (`constitutional_critique.enabled`, default false). Nested **`voice_avatar`** (STT/TTS placeholders, avatar, `latency_mode`) is documented in [voice-runtime-config.md](voice-runtime-config.md). Metrics append to `users/<id>/<metrics_filename>` when logging is on (JSONL; may be ingested alongside other observability pipelines).
 
 ---
 

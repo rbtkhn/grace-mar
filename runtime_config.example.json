@@ -18,6 +18,43 @@
   },
   "voice_avatar": {
     "enabled": false,
+    "latency_mode": "balanced",
+    "stt": {
+      "provider": "deepgram",
+      "model": "nova-2",
+      "language": "en",
+      "streaming": true
+    },
+    "tts": {
+      "provider": "cartesia",
+      "voice_id": "",
+      "model": "sonic-3",
+      "streaming": true,
+      "speed": 1.0,
+      "stability": 0.85
+    },
+    "avatar": {
+      "enabled": false,
+      "type": "none",
+      "model_path": null,
+      "renderer_url": null,
+      "emotion_mapping": {
+        "low_max_score": 0.75,
+        "high_min_score": 0.9,
+        "low_emotion": "thoughtful",
+        "medium_emotion": "neutral",
+        "high_emotion": "happy"
+      }
+    },
+    "barge_in": {
+      "enabled": false,
+      "vad_sensitivity": "medium"
+    },
+    "cache": {
+      "enabled": false,
+      "ttl_minutes": 45,
+      "size": 600
+    },
     "avatar_type": "none",
     "avatar_model_path": null,
     "renderer_url": null

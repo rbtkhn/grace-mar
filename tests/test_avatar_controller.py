@@ -15,6 +15,68 @@ def test_load_disabled_when_voice_avatar_off() -> None:
     assert not ctrl2.enabled
 
 
+def test_load_legacy_flat_when_voice_on() -> None:
+    ctrl = load_avatar_controller(
+        {
+            "voice_avatar": {
+                "enabled": True,
+                "avatar_type": "live2d",
+                "avatar_model_path": "m",
+            }
+        }
+    )
+    assert ctrl.enabled
+    assert ctrl.avatar_type == "live2d"
+
+
+def test_load_nested_avatar_off_disables_despite_type() -> None:
+    ctrl = load_avatar_controller(
+        {
+            "voice_avatar": {
+                "enabled": True,
+                "avatar": {"enabled": False, "type": "live2d"},
+            }
+        }
+    )
+    assert not ctrl.enabled
+
+
+def test_load_nested_avatar_on() -> None:
+    ctrl = load_avatar_controller(
+        {
+            "voice_avatar": {
+                "enabled": True,
+                "avatar": {"enabled": True, "type": "vrm"},
+            }
+        }
+    )
+    assert ctrl.enabled
+    assert ctrl.avatar_type == "vrm"
+
+
+def test_generate_commands_uses_runtime_emotion_mapping() -> None:
+    ctrl = load_avatar_controller(
+        {
+            "voice_avatar": {
+                "enabled": True,
+                "avatar": {
+                    "enabled": True,
+                    "type": "live2d",
+                    "emotion_mapping": {
+                        "low_max_score": 0.5,
+                        "high_min_score": 0.95,
+                        "low_emotion": "calm",
+                        "medium_emotion": "alert",
+                        "high_emotion": "joy",
+                    },
+                },
+            }
+        }
+    )
+    cmd = ctrl.generate_commands("hi", 0.6, None)
+    assert cmd.emotion == "alert"
+
+
 def test_generate_commands_respects_scaffold_map() -> None:
     ctrl = AvatarController(avatar_type="live2d", model_path="x")
     cmd = ctrl.generate_commands(
