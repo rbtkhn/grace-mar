@@ -141,10 +141,12 @@ def _log_tokens(
     prompt_tokens: int,
     completion_tokens: int,
     model: str,
+    *,
+    task_type: str | None = None,
 ) -> None:
     """Append token usage to compute ledger (energy ledger)."""
     try:
-        usage = {
+        usage: dict[str, object] = {
             "ts": datetime.now().isoformat(),
             "channel_key": channel_key,
             "bucket": bucket,
@@ -153,6 +155,8 @@ def _log_tokens(
             "total_tokens": prompt_tokens + completion_tokens,
             "model": model,
         }
+        if task_type:
+            usage["task_type"] = task_type
         with _ledger_lock:
             with open(COMPUTE_LEDGER_PATH, "a") as f:
                 f.write(json.dumps(usage) + "\n")
@@ -673,7 +677,7 @@ def start_homework_session(channel_key: str) -> tuple[str | None, str | None]:
             temperature=0.7,
         )
         if u := getattr(result, "usage", None):
-            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="homework")
         raw = (result.choices[0].message.content or "").strip()
         questions = _parse_homework_json(raw)
         if not questions:
@@ -825,7 +829,7 @@ def _library_lookup(question: str, channel_key: str = "unknown") -> str | None:
         temperature=0.2,
     )
     if u := getattr(result, "usage", None):
-        _log_tokens(channel_key, "library_lookup", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL)
+        _log_tokens(channel_key, "library_lookup", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL, task_type="lookup")
     reply = result.choices[0].message.content.strip()
     if LIBRARY_MISS in reply:
         return None
@@ -853,7 +857,7 @@ def _rephrase_lookup(question: str, facts: str, channel_key: str = "unknown") ->
         temperature=0.9,
     )
     if u := getattr(result, "usage", None):
-        _log_tokens(channel_key, "lookup_rephrase", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+        _log_tokens(channel_key, "lookup_rephrase", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="lookup")
     return result.choices[0].message.content
 
 
@@ -869,7 +873,7 @@ def _lookup(question: str, channel_key: str = "unknown") -> str:
         temperature=0.3,
     )
     if u := getattr(factual, "usage", None):
-        _log_tokens(channel_key, "lookup_factual", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+        _log_tokens(channel_key, "lookup_factual", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="lookup")
     facts = factual.choices[0].message.content
     return _rephrase_lookup(question, facts, channel_key)
 
@@ -977,7 +981,7 @@ def analyze_exchange(user_message: str, assistant_message: str, channel_key: str
             temperature=0.2,
         )
         if u := getattr(result, "usage", None):
-            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL)
+            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL, task_type="analyst")
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return False
@@ -1156,7 +1160,7 @@ def analyze_activity_report(
             temperature=0.2,
         )
         if u := getattr(result, "usage", None):
-            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL)
+            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL, task_type="analyst")
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return False
@@ -2018,7 +2022,7 @@ def get_response(channel_key: str, user_message: str) -> str:
         temperature=0.9,
     )
     if u := getattr(response, "usage", None):
-        _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+        _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="voice")
 
     assistant_message = response.choices[0].message.content or ""
     assistant_message = _constitutional_pass(channel_key, user_message, assistant_message)
@@ -2140,7 +2144,7 @@ def run_grounded_response(
             temperature=0.7,
         )
         if u := getattr(response, "usage", None):
-            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL)
+            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="voice")
         reply = (response.choices[0].message.content or "").strip()
         reply = _constitutional_pass(channel_key, question, reply)
         emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp", replay_mode="dyad")
