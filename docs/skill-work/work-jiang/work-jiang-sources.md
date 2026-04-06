@@ -6,6 +6,8 @@
 
 **Principle:** [Work modules — authorized sources lists](../work-modules-sources-principle.md).
 
+**Operator tooling — next-lecture forward chain:** [skill-jiang.md](skill-jiang.md) (Cursor skill + mechanical blind bundle script for Volume IV and other series).
+
 | Source | URL | Notes |
 |--------|-----|-------|
 | Predictive History (YouTube) | https://www.youtube.com/@PredictiveHistory/videos | Canonical lecture channel; transcript pulls under [youtube-channels/predictive-history](../../../research/external/youtube-channels/predictive-history/README.md); **work-strategy–first** ingest — [common-inputs § PH](../work-strategy/common-inputs.md) |
