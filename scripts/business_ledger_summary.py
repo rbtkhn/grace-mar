@@ -92,6 +92,74 @@ def _pnl(rows: list[dict[str, Any]]) -> dict[str, float]:
     }
 
 
+_DEDUCTIBLE_TAX_CATS = {"cogs", "business_expense", "sales_revenue", "other_income", "refund", "sales_tax"}
+_NON_DEDUCTIBLE_TAX_CATS = {"non_deductible"}
+
+
+def _tax_summary(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Schedule C-style tax summary: taxable income minus deductible expenses only."""
+    taxable_income = 0.0
+    cogs = 0.0
+    business_expenses = 0.0
+    non_deductible = 0.0
+
+    line_items: dict[str, float] = defaultdict(float)
+
+    for r in rows:
+        amount = r.get("amount_usd", 0.0)
+        tx_type = r.get("type", "expense")
+        tax_cat = r.get("tax_category", "")
+
+        if tx_type == "income":
+            taxable_income += amount
+            line_items[tax_cat or "income"] += amount
+        elif tx_type in ("expense", "refund"):
+            if tax_cat == "cogs":
+                cogs += amount
+                line_items["cogs"] -= amount
+            elif tax_cat in _NON_DEDUCTIBLE_TAX_CATS or not tax_cat:
+                non_deductible += amount
+                line_items["non_deductible"] -= amount
+            else:
+                business_expenses += amount
+                line_items[tax_cat or "business_expense"] -= amount
+        elif tx_type == "transfer":
+            non_deductible += amount
+            line_items["non_deductible (transfers)"] -= amount
+
+    taxable_profit = taxable_income - cogs - business_expenses
+    return {
+        "gross_receipts": round(taxable_income, 2),
+        "cogs": round(cogs, 2),
+        "gross_profit": round(taxable_income - cogs, 2),
+        "business_expenses": round(business_expenses, 2),
+        "net_profit_loss": round(taxable_profit, 2),
+        "non_deductible": round(non_deductible, 2),
+        "line_items": {k: round(v, 2) for k, v in sorted(line_items.items())},
+    }
+
+
+def _format_tax(tax: dict[str, Any], label: str = "") -> str:
+    lines: list[str] = []
+    if label:
+        lines.append(f"  Schedule C — {label}")
+    else:
+        lines.append("  Schedule C Summary")
+    lines.append("  " + "-" * 50)
+    lines.append(f"  1.  Gross receipts:            ${tax['gross_receipts']:>12,.2f}")
+    lines.append(f"  4.  Cost of goods sold:        ${tax['cogs']:>12,.2f}")
+    lines.append(f"  7.  Gross profit:              ${tax['gross_profit']:>12,.2f}")
+    lines.append(f"  28. Total business expenses:   ${tax['business_expenses']:>12,.2f}")
+    lines.append(f"  31. Net profit (loss):         ${tax['net_profit_loss']:>12,.2f}")
+    lines.append(f"      (Non-deductible excluded): ${tax['non_deductible']:>12,.2f}")
+    lines.append("")
+    lines.append("  Line items:")
+    for k, v in sorted(tax["line_items"].items()):
+        sign = "+" if v >= 0 else ""
+        lines.append(f"    {k:<35} {sign}${v:>11,.2f}")
+    return "\n".join(lines)
+
+
 def _format_table(groups: dict[str, dict[str, float]], key_label: str) -> str:
     lines: list[str] = []
     header = f"{'':2}{key_label:<30} {'Income':>10} {'Expense':>10} {'Refund':>10} {'Net':>10} {'Count':>6}"
@@ -129,6 +197,7 @@ def main() -> int:
     parser.add_argument("--by", choices=["category", "venture", "tax_category", "account", "type", "date"],
                         help="Group by field")
     parser.add_argument("--pnl", action="store_true", help="Show P&L summary")
+    parser.add_argument("--tax", action="store_true", help="Show Schedule C tax summary")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
     args = parser.parse_args()
 
@@ -139,14 +208,23 @@ def main() -> int:
         print("No transactions found.", file=sys.stderr)
         return 0
 
+    label_parts = []
+    if args.venture:
+        label_parts.append(args.venture)
+    if args.since or args.until:
+        label_parts.append(f"{args.since or '...'} to {args.until or '...'}")
+    label = " | ".join(label_parts) if label_parts else ""
+
+    if args.tax:
+        tax = _tax_summary(filtered)
+        if args.json:
+            print(json.dumps(tax, indent=2))
+        else:
+            print(_format_tax(tax, label))
+        return 0
+
     if args.pnl:
         pnl = _pnl(filtered)
-        label_parts = []
-        if args.venture:
-            label_parts.append(args.venture)
-        if args.since or args.until:
-            label_parts.append(f"{args.since or '...'} to {args.until or '...'}")
-        label = " | ".join(label_parts) if label_parts else ""
         if args.json:
             print(json.dumps(pnl, indent=2))
         else:
@@ -170,12 +248,6 @@ def main() -> int:
         }
         print(json.dumps(output, indent=2))
     else:
-        label_parts = []
-        if args.venture:
-            label_parts.append(args.venture)
-        if args.since or args.until:
-            label_parts.append(f"{args.since or '...'} to {args.until or '...'}")
-        label = " | ".join(label_parts) if label_parts else ""
         print(_format_pnl(pnl, label))
         print()
         print(_format_table(_group_by(filtered, "category"), "category"))
