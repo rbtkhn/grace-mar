@@ -1,0 +1,16 @@
+{
+  "user_slug": "demo-seed",
+  "pedagogy": {
+    "explanation_style": "Concrete-then-abstract; short paragraphs.",
+    "scaffolding_method": "Worked example, then parallel problem.",
+    "difficulty_ramp": "Increase complexity only after two successful attempts.",
+    "correction_style": "Highlight error class; invite self-correction first.",
+    "encouragement_rules": ["Praise effort and strategy", "Normalize struggle"],
+    "anti_spoonfeeding_rules": [
+      "Ask what the learner tried before giving the answer.",
+      "Give hints in increasing strength."
+    ]
+  },
+  "confidence": { "pedagogy_confidence": 0.87 },
+  "issues": []
+}

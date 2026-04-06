@@ -1,0 +1,17 @@
+{
+  "user_slug": "demo-seed",
+  "confidence_map": {
+    "identity": 0.9,
+    "curiosity": 0.85,
+    "pedagogy": 0.87,
+    "expression": 0.84,
+    "memory_governance": 0.82,
+    "interaction_stability": 0.86,
+    "overall": 0.88
+  },
+  "bands": {
+    "low_max": 0.39,
+    "medium_max": 0.74,
+    "high_max": 1.0
+  }
+}

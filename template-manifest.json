@@ -431,6 +431,16 @@
       "optional": false
     },
     {
+      "path": "scripts/check-seed-consistency.py",
+      "description": "Semantic checks for seed_intent vs seed_readiness (beyond JSON Schema); exit 1 when pass contradicts intent quality.",
+      "optional": true
+    },
+    {
+      "path": "pytest.ini",
+      "description": "Pytest discovery for seed-phase regression tests (alongside pyproject.toml on instances).",
+      "optional": true
+    },
+    {
       "path": "scripts/validate-change-review.py",
       "description": "Validates users/<id>/review-queue trees against change-review schemas (strict or --allow-empty for template scaffold).",
       "optional": false

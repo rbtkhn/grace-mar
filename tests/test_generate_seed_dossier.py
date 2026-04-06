@@ -29,28 +29,27 @@ def _run_generator(mod, directory: Path) -> str:
     return (directory / "seed_dossier.md").read_text(encoding="utf-8")
 
 
-def test_generate_seed_dossier_includes_cadence_ritual(tmp_path):
+def test_generate_seed_dossier_includes_intake_cursor_section(tmp_path):
     mod = _load_generate_seed_dossier()
     target = tmp_path / "seed-phase"
     shutil.copytree(REPO_ROOT / "users" / "demo" / "seed-phase", target)
 
     text = _run_generator(mod, target)
 
-    assert "## Cadence Ritual" in text
-    assert "Default **coffee**; active **coffee**; source **default**." in text
-    assert "Offer threshold: 3 successful uses; 2 distinct days; 2 successful follow-through uses." in text
+    assert "## Intake — Cursor / operator workspace" in text
+    assert "cursor" in text.lower()
 
 
-def test_generate_seed_dossier_omits_cadence_ritual_when_absent(tmp_path):
+def test_generate_seed_dossier_intake_without_cursor_profile_shows_note(tmp_path):
     mod = _load_generate_seed_dossier()
     target = tmp_path / "seed-phase"
     shutil.copytree(REPO_ROOT / "users" / "demo" / "seed-phase", target)
 
     intake_path = target / "seed_intake.json"
     intake = json.loads(intake_path.read_text(encoding="utf-8"))
-    intake.pop("cadence_preference", None)
+    intake.pop("cursor_operator_profile", None)
     intake_path.write_text(json.dumps(intake, indent=2) + "\n", encoding="utf-8")
 
     text = _run_generator(mod, target)
 
-    assert "## Cadence Ritual" not in text
+    assert "No `cursor_operator_profile`" in text

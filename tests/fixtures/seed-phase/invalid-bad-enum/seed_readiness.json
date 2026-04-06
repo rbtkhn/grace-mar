@@ -1,0 +1,23 @@
+{
+  "user_slug": "demo-seed",
+  "readiness": {
+    "decision": "maybe_not_valid",
+    "readiness_score": 0.88,
+    "blocking_issues": [],
+    "non_blocking_issues": [
+      "Trial t4 was conditional; monitor ambiguity handling in first month."
+    ],
+    "recommended_next_actions": [
+      "Activate instance with demo user dir separate from this seed-phase folder."
+    ]
+  },
+  "stage_completion": {
+    "intake": "complete",
+    "identity": "complete",
+    "curiosity": "complete",
+    "pedagogy": "complete",
+    "expression": "complete",
+    "memory_contract": "complete",
+    "trials": "complete"
+  }
+}

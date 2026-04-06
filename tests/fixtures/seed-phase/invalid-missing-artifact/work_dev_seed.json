@@ -1,0 +1,16 @@
+{
+  "status": "initialized",
+  "development_involvement": "regular",
+  "development_role_modes": ["builder", "researcher"],
+  "primary_repos": ["companion-self"],
+  "systems_or_products": ["template seed pipeline"],
+  "preferred_languages": ["Python", "Markdown"],
+  "preferred_tools": ["git", "Cursor"],
+  "work_modes": ["implementation", "documentation", "research"],
+  "technical_research_areas": ["JSON Schema", "formation pipeline"],
+  "active_focuses": ["seed artifacts", "instance sync"],
+  "important_constraints": ["gated Record merges only"],
+  "companion_help_priorities": ["planning", "review_and_critique"],
+  "notes": "Synthetic demo values for validation and docs.",
+  "evidence_basis": "seed_survey"
+}

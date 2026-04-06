@@ -1,0 +1,14 @@
+{
+  "user_slug": "demo-seed",
+  "memory_contract": {
+    "memory_classes": ["identity", "preferences", "learning_progress", "projects", "constraints"],
+    "retention_rules": ["Keep learning_progress summaries for 90 days unless deleted."],
+    "deletion_rules": ["Guardian may request purge of session-derived notes."],
+    "sensitive_categories": ["health", "family conflict"],
+    "editable_regions": ["preferences", "projects"],
+    "protected_regions": ["constraints.disallowed_domains"],
+    "provenance_rules": ["Label tutor suggestions vs learner-stated facts."]
+  },
+  "confidence": { "memory_confidence": 0.82 },
+  "issues": []
+}

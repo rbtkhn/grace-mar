@@ -194,7 +194,11 @@ def main() -> None:
 
     out_path = target / "seed_dossier.md"
     out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"Wrote {out_path.relative_to(REPO_ROOT)}")
+    try:
+        display = out_path.relative_to(REPO_ROOT)
+    except ValueError:
+        display = out_path
+    print(f"Wrote {display}")
 
 
 if __name__ == "__main__":

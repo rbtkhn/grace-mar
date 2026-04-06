@@ -1,10 +1,10 @@
 {
   "schemaVersion": "1.1.0",
   "recordType": "templateAppliedProvenance",
-  "companionSelfCommit": "e783c7a98e38d4a102c459076a54a1ac2ad722de",
+  "companionSelfCommit": "f16104bf92f002b988fe401502b37d141ad5bdc6",
   "templateVersion": "0.4.0",
-  "syncedAt": "2026-04-05T20:10:00Z",
-  "syncedBy": "template-sync-align-e783c7a-cadence-seed-intake",
+  "syncedAt": "2026-04-06T00:05:00Z",
+  "syncedBy": "seed-phase-pytest-scaffold-dual-repo",
   "syncedPaths": [
     "schema-registry/",
     "schema-registry/seed-intent.v1.json",
@@ -88,7 +88,18 @@
     "scripts/session_harvest.py",
     "schema-registry/boundary-classification.v1.json",
     "schema-registry/harness-replay-event.v1.json",
-    "schema-registry/answer-provenance.v1.json"
+    "schema-registry/answer-provenance.v1.json",
+    "scripts/check-seed-consistency.py",
+    "pytest.ini",
+    "tests/__init__.py",
+    "tests/conftest.py",
+    "tests/test_validate_seed_phase.py",
+    "tests/test_generate_seed_dossier.py",
+    "tests/test_generate_seed_dossier_subprocess.py",
+    "tests/test_seed_phase_readiness.py",
+    "tests/test_seed_phase_e2e.py",
+    "tests/test_check_seed_consistency.py",
+    "tests/fixtures/seed-phase/"
   ],
   "templateUpstream": {
     "repo": "https://github.com/rbtkhn/companion-self",
@@ -97,7 +108,7 @@
   "targetReference": {
     "instanceContract": "instance-contract.json",
     "templateVersionTarget": "0.4.0",
-    "templateCommitTarget": "e783c7a98e38d4a102c459076a54a1ac2ad722de"
+    "templateCommitTarget": "f16104bf92f002b988fe401502b37d141ad5bdc6"
   },
   "notes": "Top-level fields describe the last applied template merge. Narrow auxiliary refreshes should append to auxiliarySyncEvents rather than replacing this baseline.",
   "auxiliarySyncEvents": []

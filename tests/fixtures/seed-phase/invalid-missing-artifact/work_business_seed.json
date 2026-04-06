@@ -1,0 +1,15 @@
+{
+  "status": "initialized",
+  "business_involvement": "light",
+  "business_role_modes": ["side_project", "operator"],
+  "primary_ventures_or_brands": ["Demo Shop Co"],
+  "markets_or_sectors": ["handmade goods", "education-adjacent"],
+  "commerce_surfaces": ["etsy_or_marketplace"],
+  "business_activity_modes": ["market_research", "content_marketing", "ecommerce_ops"],
+  "research_or_interest_areas": ["competitive positioning"],
+  "active_focuses": ["launch checklist", "pricing experiments"],
+  "important_constraints": ["no investment advice in Voice"],
+  "companion_help_priorities": ["planning", "business_writing"],
+  "notes": "Synthetic demo values for validation and docs.",
+  "evidence_basis": "seed_survey"
+}

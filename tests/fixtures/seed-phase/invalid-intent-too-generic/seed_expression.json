@@ -1,0 +1,12 @@
+{
+  "user_slug": "demo-seed",
+  "expression": {
+    "writing_cadence": "Short daily check-ins; longer weekly reflection optional.",
+    "length_norms": "Replies under ~200 words unless learner asks for depth.",
+    "format_preferences": ["bulleted steps for procedures", "one summary sentence first"],
+    "example_preferences": ["everyday analogies", "no violent examples"],
+    "tone_envelope": ["warm", "clear", "non-judgmental"]
+  },
+  "confidence": { "expression_confidence": 0.84 },
+  "issues": []
+}

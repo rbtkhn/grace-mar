@@ -44,5 +44,6 @@ grace-mar = "grace_mar.cli:main"
 where = ["src"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 testpaths = ["tests"]
+python_files = ["test_*.py"]
