@@ -12,6 +12,10 @@
 
 _(Append below this line.)_
 
+## 2026-04-06
+
+- **Coffee C (Compass) → §II-A Active Watches seeded:** Scanned daily brief archive (03-19 through 04-03, 13 briefs). Promoted 5 watches to [STRATEGY.md](STRATEGY.md) §II-A: (1) Iran war → energy chokepoint cascade (escalating), (2) drone/counter-drone warfare acceleration (watch), (3) Western alliance fracture over Iran (escalating), (4) Putin Middle East diplomatic pivot (watch), (5) US military institutional stress during active war (watch). Closes the brief→ledger feedback loop.
+
 ## 2026-04-04
 
 - **Coffee C (Compass) → founding paper revision:** [founding-influences-graeco-roman-vs-english.md](founding-influences-graeco-roman-vs-english.md) — skim **Contents**, cross-refs (expectation 4 → §5.3; abstract → Appendix A), Table 2 complement gloss, **colonial–legal** dash, **Montesquieu** reference line, document history row.

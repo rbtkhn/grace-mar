@@ -76,9 +76,55 @@
 - **Primary implication:** why the lane should care
 - **Contradiction / caution note:** what may invalidate the watch
 
-**Seed entries**
+**Entries**
 
-- *(Leave empty until first surviving watch is promoted from a daily brief.)*
+- **Watch:** Iran war → energy chokepoint cascade
+- **First noticed:** 2026-03-19
+- **Current status:** escalating
+- **Latest evidence:** 04-03 brief: gas prices at $4 (Hill), NPR "tough week" framing; Le Monde (04-01) plastic/chemistry inflation; BBC Mundo (04-01) Hormuz toll / maritime regime shift; BBC (03-27) African countries rationing power; Spiegel (03-26) El-Erian "inflation genie out of the bottle"
+- **Analogy note:** Closest to 1973 oil embargo (energy weaponization reshaping alliance solidarity) rather than SCHOLAR "Economic Primacy Drives Decoupling" (which is technology-competition driven). Module: `modules/energy-chokepoint/`.
+- **Primary implication:** Oil/gas cascade is the mechanism through which the Iran war hits domestic politics (KY-4 messaging surface), alliance behavior (Europe airspace denials), and Global South alignment. Load-bearing variable for whether the war stays "over there" or becomes a kitchen-table issue.
+- **Contradiction / caution note:** War may end faster than the economic cascade; if Hormuz reopens or oil prices drop, urgency fades. Africa/Global South dimension is underweighted in US-centric feeds — the brief may undercount severity.
+
+---
+
+- **Watch:** Drone / counter-drone warfare acceleration
+- **First noticed:** 2026-03-26
+- **Current status:** watch
+- **Latest evidence:** 04-03 brief: "It's drones fighting drones" (Defense One); 03-28: "Iran adopting Russian drone tactics" (Defense One G:2); 03-26: "Army wants bullets, mortars, artillery to take out small drones" (Defense One G:3); 03-31: "War boosts counter-drone sales, joint ventures"; 04-01: Ukrainian drone holds position 6 weeks + former Trump advisor joins Ukraine drone tech company.
+- **Analogy note:** No clean historical analogy. Nearest structural comparison: interwar torpedo-bomber / carrier aviation adoption cycle (1920s–30s) — cheap offensive platforms outran expensive defensive systems and reshuffled who could project force. See Postol skill scope.
+- **Primary implication:** Reshapes cost calculus of force projection. If drone-vs-drone becomes the default engagement layer, expensive legacy platforms lose relative value faster than budgets can adjust. Iran is the live demonstration; Ukraine was the prototype. Feeds into §1d Putin watch (Russia supplying tactics) and work-strategy-rome (Vatican peace framing assumes state-on-state war; drone proliferation may be a category they haven't addressed).
+- **Contradiction / caution note:** Defense One is overrepresented in G-ranked items — may amplify this signal. The "drone revolution" narrative has been declared prematurely before (2010s counterterrorism). Watch for whether tactical evidence scales to theater-level significance.
+
+---
+
+- **Watch:** Western alliance fracture over Iran
+- **First noticed:** 2026-03-31
+- **Current status:** escalating
+- **Latest evidence:** 04-03: "As Trump rails against NATO, secretary general heads to Washington" (NBC G:1); 04-02: Macron "be serious" criticism (BBC/BBC Mundo); 04-01: three NATO stories (Trump comments, ambassador "reevaluating," Rubio tweet); 03-31: Spain closes airspace to US planes; Trump slams France for not allowing overflight.
+- **Analogy note:** SCHOLAR "Alliance Rigidity as Escalation Engine" — inverted here: alliance *fragility*, not rigidity. The Iran war tests whether the transatlantic structure survives a US war European publics oppose. Distant analogy: Suez 1956 (alliance partner acts unilaterally, others break ranks; reputational cascade follows).
+- **Primary implication:** NATO solidarity fracture downstream hits Ukraine support, European defense spending commitments, and the legitimacy frame work-strategy-rome tracks (papal moral-diplomatic voice gains relative weight when "rules-based order" voice weakens). Work-politics: principal who voted against war-powers resolution can run on "responsible alliance management" if the fracture deepens.
+- **Contradiction / caution note:** Alliance friction may be performative (Macron posturing for domestic audience) rather than structural. If the war winds down quickly, the fracture may not persist.
+
+---
+
+- **Watch:** Putin Middle East diplomatic pivot
+- **First noticed:** 2026-03-28
+- **Current status:** watch
+- **Latest evidence:** 04-03 §1d: Peskov "Putin continues to work on Middle East situation"; 04-02 §1d: phone call with Saudi MBS (energy + ME), meeting with Egyptian FM, logistics forum on Hormuz/AI/transport; 04-01 §1d: talks with Armenian PM, El-Sisi call; 03-28 §1d: temporary international administration proposal for Ukraine at Arctic Forum + immediate UN rejection.
+- **Analogy note:** Direct SCHOLAR match: "Spoiler States Exploit Multipolarity" — Russia as ME interlocutor (Saudi–Egypt–Iran corridor) while Ukraine talks "paused." Also: "Narrative Control as Force Multiplier" — Putin reframes Russia as peacemaker/logistics architect while under sanctions.
+- **Primary implication:** Russia building a parallel diplomatic lane while the US is operationally consumed by the war. If this lane produces even a partial ceasefire framework, Russia gains narrative leverage on Ukraine terms. SCHOLAR predicted this: spoiler leverage is highest when great powers are distracted.
+- **Contradiction / caution note:** Putin proposals (temporary UN administration for Ukraine) were immediately rejected. Diplomatic activity may be theater for domestic/BRICS audiences rather than real mediation. Russia–Iran relations are themselves under strain (support vs energy-competitor interest).
+
+---
+
+- **Watch:** US military institutional stress during active war
+- **First noticed:** 2026-03-26
+- **Current status:** watch
+- **Latest evidence:** 04-03: Hegseth forces out Army chief of staff + 2 generals (5+ stories: NBC, BBC, Hill, Defense One); 03-26: "Tensions flare during Iran briefing on Capitol Hill over lack of clarity on Trump's strategy" (NBC G:1); 03-23: March 5 House war-powers vote 212–219 failure; 03-27: Gaetz opposing ground invasion.
+- **Analogy note:** SCHOLAR cross-domain pattern: "Internal Decay Precedes External Vulnerability" — institutional friction (civilian political reshuffling of military leadership during active combat) correlating with reduced operational coherence. Closest modern: Truman–MacArthur 1951 (civilian authority removing wartime commanders for political reasons, lasting doctrine effects).
+- **Primary implication:** Wartime president replacing Army chief signals either political discipline or institutional destabilization — read depends on what follows. Work-politics: principal on the war-powers side can frame as "the system straining." Work-strategy: institutional trust erosion affects alliance credibility (Watch 3) and defense-tech recruitable talent.
+- **Contradiction / caution note:** Military leadership changes happen. Hegseth firings may be normal reshuffling dressed up as crisis by opposition media. Whether "institutional stress" or "consolidation of command" depends on operational outcomes in the next 2–4 weeks.
 
 ## III. SCHOLAR – Strategic Learning Ledger
 
