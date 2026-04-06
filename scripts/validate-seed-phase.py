@@ -46,7 +46,11 @@ def main() -> None:
     for name in REQUIRED_FILES:
         p = target / name
         if not p.is_file():
-            print(f"Missing: {p.relative_to(REPO_ROOT)}", file=sys.stderr)
+            try:
+                display = p.relative_to(REPO_ROOT)
+            except ValueError:
+                display = p
+            print(f"Missing: {display}", file=sys.stderr)
             failed = True
 
     if failed:
