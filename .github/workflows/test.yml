@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install -r requirements-dev.txt
-          pip install -r bot/requirements.txt 2>/dev/null || true
+          pip install -r bot/requirements.txt
           pip install -e .
           pip install -e ".[reflect]"
 
