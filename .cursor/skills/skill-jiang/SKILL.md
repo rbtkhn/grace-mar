@@ -6,7 +6,7 @@ description: >-
   prefix lectures (NN ≤ k), predict episode k+1, then open and score. Volume IV
   default (game-theory-NN). Anti-leak checklist, templates, log path, recursive
   merges into CURSOR_APPENDIX.md. WORK only; not Record.
-version: 0.3.0
+version: 0.4.0
 tags:
   - operator
   - work-jiang
@@ -134,12 +134,15 @@ After **gt-18** is in the prefix, run **one** prediction packet **before** any n
 - Transcript workflow: `research/external/work-jiang/WORKFLOW-transcripts.md`
 - Forward-chain log: `research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md`
 - Machine tail: `research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain.jsonl`
+- **Blind** machine tail: `research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain-blind.jsonl`
 - Blind bundle script: `scripts/work_jiang/forward_chain_blind_bundle.py`
+- Blind batch helper (optional): `scripts/work_jiang/run_blind_chain_rounds.py`
 
 ## Changelog (skill)
 
 | Version | Notes |
 |---------|--------|
+| 0.4.0 | Full Volume IV blind chain logged (`lecture-forward-chain-gt-BLIND.md`); appendix v0.4 merge; blind JSONL. |
 | 0.3.0 | Mechanical blind: `forward_chain_blind_bundle.py` (bundle / reveal / paths); retrospective log caveated. |
 | 0.2.0 | Volume IV backtest logged; appendix populated from merges M3–M18. |
 | 0.1.0 | Initial scaffold + templates. |
