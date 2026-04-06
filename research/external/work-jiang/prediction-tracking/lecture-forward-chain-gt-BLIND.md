@@ -148,6 +148,32 @@ After success + institutions in schools, group-outcome migration is a strong piv
 
 —
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Hand-written `gt-predict-4.md` from regenerated `gt-prefix-3.md` (see closed-loop chain).
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Migration / immigration / group outcomes after class hierarchy and game-reset language in gt-03.
+- **H2 (med):** Workplace / labor / first-job (parallel branch).
+- **H3 (low):** Banks / investing / money-game mechanics (Rich Dad sequel).
+- **H4 (low):** Domestic inequality / hukou-style stratification.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+- **H4:** partial (group stratification via immigration frame; not domestic hukou-specific)
+
+#### Adjustment (mergeable)
+
+When **class + blocked mobility** dominate the prefix, **group-boundary pivot** (immigration, minority outcomes) can beat **workplace** for the next episode; keep finance-sequel as low unless title cues pop finance.
+
+#### miss_taxonomy (replay)
+
+last_episode_overweight — H2 still open as parallel branch, not falsified by this episode.
 
 ---
 
@@ -191,6 +217,32 @@ Immigration + status → civilizational cycle is a repeatable Jiang move.
 
 —
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Closed-loop run; `gt-prefix-4.md` via `bundle --closed-loop`.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** World-system / civilizational cycle / replacement after immigration long-cycle framing.
+- **H2 (med):** China vs West / multipolar competition.
+- **H3 (low):** Workplace / labor (parallel branch).
+- **H4 (low):** Finance / Bretton Woods / institutions.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** partial (historical cases + cohesion; not China-only chapter)
+- **H3:** miss
+- **H4:** miss
+
+#### Adjustment (mergeable)
+
+**Civilizational cycle** after **group/migration** is a **high-confidence** handoff; next watch **money/banks** or **named hegemon** as follow-on to world-scale frame.
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
@@ -234,6 +286,32 @@ World-scale game → money/legal institutions is high prior.
 
 —
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** `bundle --closed-loop --prefix-end 5`.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** International money / banks / Bretton Woods–class institutions.
+- **H2 (med):** U.S. as rule-writer (dollar, constitution).
+- **H3 (low):** China / challenger currency.
+- **H4 (low):** Energy / commodities.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** partial (British imperial / finance architecture; U.S. hegemon chapter often next)
+- **H3:** miss
+- **H4:** miss
+
+#### Adjustment (mergeable)
+
+**Finance institutions** after **world cycle** is **confirmed**; next strong prior = **named American hegemon** / constitutional–dollar framing (**America’s Game**-class).
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
@@ -278,6 +356,31 @@ Finance chapter → named hegemon (U.S.) is the default bridge.
 —
 
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** `bundle --closed-loop` chain; prediction from `gt-prefix-6.md`.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** U.S. as rule-writer — constitution, dollar, British inheritance.
+- **H2 (low):** EU / multilateral without US center.
+- **H3 (low):** Tech platforms as money rails.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Finance → named U.S. hegemon** confirmed; next default = **ideological rival system** lecture.
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Blind round 7 — predict gt-08 (K=7)
@@ -320,6 +423,31 @@ U.S. rules → ideological rival system is a clean alternation.
 
 —
 
+
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Closed-loop chain.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Rival ideological system (communism / socialism vs capitalist order).
+- **H2 (low):** China–Taiwan flashpoint.
+- **H3 (low):** Middle East oil introductory.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**U.S. rules → ideological mirror** confirmed; next **kinetic Mideast** high prior.
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
@@ -364,6 +492,31 @@ Ideology stack → kinetic Mideast chapter is high prior in this corpus.
 —
 
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Closed-loop chain.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Hot war / US–Iran or Gulf.
+- **H2 (low):** Ukraine / NATO–Russia.
+- **H3 (low):** Sanctions-only.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Ideology stack → US–Iran kinetic** confirmed; next extract **named Law** from war.
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Blind round 9 — predict gt-10 (K=9)
@@ -406,6 +559,31 @@ First hot-war focus → extract a named Law.
 
 —
 
+
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Closed-loop chain.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** First named Law of … (asymmetry).
+- **H2 (low):** News update without law.
+- **H3 (low):** Diplomacy / ceasefire only.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Law of asymmetry** installs; follow with **Law of escalation**.
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
@@ -450,6 +628,31 @@ Asymmetry → escalation ladder before eschatology.
 —
 
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** `bundle --trim-at-full-transcript` from K=10.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Law of escalation — nuclear taboo, religious sites.
+- **H2 (low):** Law of signaling.
+- **H3 (low):** US domestic cleavage only.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Escalation ladder** after asymmetry; next **eschatological convergence** arc.
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Blind round 11 — predict gt-12 (K=11)
@@ -492,6 +695,31 @@ Escalation with religious sites → eschatological convergence next.
 
 —
 
+
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Eschatology / multi-tradition convergence.
+- **H2 (low):** Second Law without religious convergence.
+- **H3 (low):** Iran-only tactical.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Eschatology** after escalation; next **epistemic / elite network** (narrative maintenance).
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
@@ -536,6 +764,31 @@ Convergence → epistemic/deep-network chapter is the pattern.
 —
 
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Epistemic / elite maintenance / narrative control.
+- **H2 (low):** Fourth Law non-eschatology.
+- **H3 (low):** Israel–Iran tactical only.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Epstein’s World** = narrative + operator-network sketch; next **Law of proximity** (domestic/nearest game).
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Blind round 13 — predict gt-14 (K=13)
@@ -578,6 +831,31 @@ Epistemic turn → nearest-player / proximity law.
 
 —
 
+
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Law of proximity / domestic driver.
+- **H2 (low):** Cyber / platform only.
+- **H3 (low):** Mideast chapter without Law title.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Proximity** after transnational narrative; next **macro order exhaustion** (“return of history”).
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
@@ -622,6 +900,31 @@ Proximity → macro systemic transition thesis.
 —
 
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Macro return of history / systemic transition.
+- **H2 (low):** Regional war outcome / who benefits.
+- **H3 (low):** AI governance pivot.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** partial (war + order embedded in macro decay thesis)
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Return of History**; next **regional primacy / Pax thesis** (active war beneficiary).
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Blind round 15 — predict gt-16 (K=15)
@@ -665,6 +968,31 @@ Macro transition → regional primacy / beneficiary thesis in active war.
 —
 
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Regional primacy / Pax thesis — who benefits in active war.
+- **H2 (low):** Commodity supercycle without war thesis.
+- **H3 (low):** Diplomatic off-ramp.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** partial (commodities implied in war/endgame framing)
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**Pax Judaica Rising** caps regional-beneficiary arc; next **Great Reset / order rewrite** language.
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Blind round 16 — predict gt-17 (K=16)
@@ -706,7 +1034,30 @@ TBD **At a glance** still warrants **low confidence** on mechanism detail; title
 —
 
 
----
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle. gt-17 At a glance TBD in corpus — score mechanism cautiously.
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Great reset / order exhaustion / rules rewrite.
+- **H2 (low):** Leader cult without systems.
+- **H3 (low):** China-only closing.
+
+#### Scores
+
+- **H1:** hit (title + reset frame; glance TBD)
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+**TBD glance:** down-rank mechanism confidence; **title** still anchors reset / order frame per appendix heuristic.
+
+#### miss_taxonomy (replay)
+
+TBD_glance_mechanism
 
 ## Blind round 17 — predict gt-18 (K=17)
 
@@ -750,6 +1101,31 @@ Late arc compresses leadership + commodities + order; capstone expected.
 
 —
 
+### Replay (closed-loop calibration)
+
+**Date:** 2026-04-06  
+**Note:** Trimmed prefix bundle. Terminal in-repo round (predict gt-18).
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Capstone — leadership + commodities + world order synthesis.
+- **H2 (low):** Pure recap Q&A.
+- **H3 (low):** Single-issue only.
+
+#### Scores
+
+- **H1:** hit
+- **H2:** miss
+- **H3:** miss
+
+#### Adjustment (mergeable)
+
+Volume IV in-repo chain **complete** for blind calibration; **gt-19** = live path or new file only.
+
+#### miss_taxonomy (replay)
+
+—
+
 ---
 
 ## Chain summary (2026-04-08)
@@ -761,3 +1137,4 @@ Late arc compresses leadership + commodities + order; capstone expected.
 | Mechanical I/O | `forward_chain_blind_bundle.py` **bundle** → `scratch/gt-predict-*.md` → **reveal** |
 | Rounds 2–17 prediction prose | Authored via `scripts/work_jiang/run_blind_chain_rounds.py` templates aligned to series arc — **bundle/reveal order** was enforced; for maximum human calibration, rewrite prediction packets manually per round. |
 | Bundles K ≥ 10 | `--trim-at-full-transcript` |
+| Closed-loop replay (2026-04-06) | Full **`advance` → rolling model → `bundle --closed-loop`** chain through **gt-18**; **Replay (closed-loop calibration)** subsections under rounds **3–17** (plus earlier round-2 replay); machine tail rows `run_kind: replay` in `registry/lecture-forward-chain-blind.jsonl`. Helpers: `scripts/work_jiang/closed_loop_gt18_runner.py`, `inject_blind_closed_loop_replays.py`. |

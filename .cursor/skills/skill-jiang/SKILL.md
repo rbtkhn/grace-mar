@@ -6,7 +6,7 @@ description: >-
   prefix lectures (NN ≤ k), predict episode k+1, then open and score. Volume IV
   default (game-theory-NN). Anti-leak checklist, templates, log path, recursive
   merges into CURSOR_APPENDIX.md. WORK only; not Record.
-version: 0.4.2
+version: 0.4.3
 tags:
   - operator
   - work-jiang
@@ -171,11 +171,14 @@ After **gt-18** is in the prefix, run **one** prediction packet **before** any n
 - **Blind** machine tail: `research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain-blind.jsonl`
 - Blind bundle script: `scripts/work_jiang/forward_chain_blind_bundle.py`
 - Blind batch helper (optional): `scripts/work_jiang/run_blind_chain_rounds.py`
+- Closed-loop bulk resume (reveal→advance→bundle): `scripts/work_jiang/closed_loop_gt18_runner.py`
+- BLIND replay injection (maintenance): `scripts/work_jiang/inject_blind_closed_loop_replays.py`
 
 ## Changelog (skill)
 
 | Version | Notes |
 |---------|--------|
+| 0.4.3 | **Closed-loop replay through gt-18:** full `advance` + rolling model + `bundle --closed-loop` run; BLIND **Replay** subsections (3–17) + JSONL `run_kind: replay`; `closed_loop_gt18_runner.py` + `inject_blind_closed_loop_replays.py`. |
 | 0.4.2 | **Mechanical closed-loop gate:** `bundle --closed-loop` + `advance --completed-round N`; `gt-closed-loop-state.yaml` + non-empty `gt-series-model.md`; `--force` escape. |
 | 0.4.1 | Document **closed loop**: each round must use prior **Adjustment** (+ optional rolling model); batch template script = I/O smoke only. |
 | 0.4.0 | Full Volume IV blind chain logged (`lecture-forward-chain-gt-BLIND.md`); appendix v0.4 merge; blind JSONL. |
