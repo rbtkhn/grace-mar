@@ -6,7 +6,7 @@ Cursor skill for **blind forward prediction** on Predictive History lecture seri
 
 - **Skill entrypoint:** [`.cursor/skills/skill-jiang/SKILL.md`](../../../.cursor/skills/skill-jiang/SKILL.md)
 - **Learned heuristics (recursive layer):** [`.cursor/skills/skill-jiang/CURSOR_APPENDIX.md`](../../../.cursor/skills/skill-jiang/CURSOR_APPENDIX.md)
-- **Volume IV chain log:** [`research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md)
+- **Volume IV chain log:** [`lecture-forward-chain-gt-01-18.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md) (retrospective); **blind runs:** [`lecture-forward-chain-gt-BLIND.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND.md)
 
 **Triggers (examples):** `skill-jiang`, `jiang next lecture`, `gt forward chain`.
 

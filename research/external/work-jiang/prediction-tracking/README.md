@@ -14,7 +14,8 @@
 
 | Artifact | Path |
 |----------|------|
-| Human log + rubric | [lecture-forward-chain-gt-01-18.md](lecture-forward-chain-gt-01-18.md) |
+| Human log + rubric | [lecture-forward-chain-gt-01-18.md](lecture-forward-chain-gt-01-18.md) (retrospective bake-off narrative) |
+| **Blind** log (mechanical bundle + reveal) | [lecture-forward-chain-gt-BLIND.md](lecture-forward-chain-gt-BLIND.md) |
 | Optional JSONL tail | [registry/lecture-forward-chain.jsonl](registry/lecture-forward-chain.jsonl) |
 | Cursor skill | [`.cursor/skills/skill-jiang/SKILL.md`](../../../../.cursor/skills/skill-jiang/SKILL.md) |
 | Blind bundle (prefix only / reveal k+1) | Run from repo root: `python3 scripts/work_jiang/forward_chain_blind_bundle.py` (`bundle`, `reveal`, `paths`) |
