@@ -1,8 +1,8 @@
-# ROME pass — Easter 2026 cluster (Iran-war context): Urbi et Orbi + Herzog call + wires
+# ROME pass — Easter 2026 cluster (Iran-war context): Urbi et Orbi + paired Good Friday bilaterals + wires
 
-**WORK only** — not Record. Filed **2026-04-06**. Contrast pass: **wire-salient** diplomacy and conflict rhetoric vs. formation-only [2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md](2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md).
+**WORK only** — not Record. Filed **2026-04-06**; **Zelenskyy** bilateral row added same session. Contrast pass: **wire-salient** diplomacy and conflict rhetoric vs. formation-only [2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md](2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md).
 
-## Primary — Holy See (1)
+## Primary — Holy See
 
 ### A. Urbi et Orbi (Easter 2026)
 
@@ -16,6 +16,12 @@
 - **Dated:** **03.04.2026** (page header).  
 - **English summary (official):** Pope Leo XIV spoke by phone with **Isaac Herzog**, President of the State of Israel, **on the occasion of the Easter holidays**. **Need to reopen all possible channels of diplomatic dialogue** to end the **serious ongoing conflict**, toward **just and lasting peace throughout the Middle East**; importance of **protecting civilians** and **international and humanitarian law**.
 
+### C. Bilateral — telephone with President of Ukraine (same morning, Good Friday)
+
+- **Holy See Press Office communiqué (IT/EN on same page):** https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2026/04/03/0259/00555.html  
+- **Dated:** **03.04.2026** (page header; Italian lead: **“Nella mattinata di oggi”**).  
+- **English summary (official):** Pope Leo XIV spoke **this morning** by telephone with **Volodymyr Zelensky**, President of **Ukraine**. **Easter** best wishes; **closeness to the Ukrainian people**. **Humanitarian situation** — urgency of **aid** to people **suffering from the conflict**; **humanitarian initiatives**, **especially** **release of prisoners**. **Hope** that, with **international community** **commitment and cooperation**, **hostilities may cease** **as soon as possible** and **just and lasting peace** be achieved.
+
 ## Wire cross-check (2) — attribution explicit
 
 - **Reuters — Palm Sunday homily (29 Mar 2026):** https://www.reuters.com/world/pope-leo-says-god-rejects-prayers-leaders-who-wage-wars-2026-03-29/ — frames unusually forceful **anti-war** homily in context of **Iran war**; **Isaiah** “hands full of blood” citation; notes **U.S. officials’** use of Christian language around strikes; **does not replace** `vatican.va` homily text for direct quotes (Reuters paraphrase + scene-set).
@@ -28,8 +34,8 @@
 
 | Block | Content |
 |-------|---------|
-| **Neutral (2–4 lines)** | **3 Apr:** Vatican documents a **phone call** between Leo XIV and **Israel’s President Herzog**: **reopen diplomatic channels**, end **ongoing conflict**, **civilian protection**, **IHL**. **5 Apr:** **Urbi et Orbi** names **weapons**, **wars**, **dialogue vs force**, cites **Francis** on thirst for killing; announces **11 Apr** **peace vigil** in St Peter’s. Wires (Reuters) place the same fortnight in an **Iran-war** frame and report **sharper** public engagement with **Trump** / U.S. policy than Leo’s first months. |
-| **Strategy hook (hypothesis)** | Holy See is running **two tracks in parallel**: (1) **standard bilateral readout** (Herzog) compatible with **small-state mediation** and **IHL** vocabulary; (2) **maximum megaphone** (Urbi et Orbi + Holy Week homiletics) to **mobilize global Catholic publics** and **name indifference**—useful for **EU / LatAm / UN** audiences where **legitimacy** competes with **great-power kinetic** narrative. **Hypothesis:** Leo XIV’s **American idiom** (“off-ramp”) plus **unmistakable peace vocabulary** is **positioning the papacy** as a **non-state counter-narrator** in a **US-elections-adjacent** war—high **symbolic leverage**, **limited** **coercive** leverage. |
+| **Neutral (2–4 lines)** | **3 Apr (paired bilaterals):** Vatican documents **two** **morning** calls — **Herzog** (**Middle East**: **reopen diplomacy**, **IHL**, **civilians**) and **Zelenskyy** (**Ukraine**: **humanitarian aid**, **prisoners**, **ceasefire** / **just peace** via **international community**). Same **Easter** framing and **non-kinetic** vocabulary; **deliberate symmetry** for wire narrative (“calls with Ukraine, Israel leaders”). **5 Apr:** **Urbi et Orbi** — **weapons**, **wars**, **dialogue vs force**, **Francis** quote on indifference; **11 Apr** **peace vigil**. Wires still **Iran-war** / **Trump** frame for **homiletics** and **Reuters** analysis. |
+| **Strategy hook (hypothesis)** | Holy See is running **two tracks in parallel**: (1) **standard bilateral readouts** (**paired** **3 Apr** calls) — **IHL / aid / diplomacy** language **without** naming third-party capitals in the **communiqués**; (2) **maximum megaphone** (Urbi et Orbi + Holy Week homiletics) for **global** **Catholic** **publics**. **Hypothesis:** **Same-day** **Kyiv + Jerusalem** readouts **signal even-handed moral presence** while **Urbi** carries the **universal** **anti-war** lift—useful where **legitimacy** competes with **great-power kinetic** narrative; **Reuters** layer supplies **U.S. election–adjacent** **interpretation** (“Trump critic”) **not** spelled out in **press office** **English**. |
 | **Falsifier / counter-read** | **Counter-read:** communiqués and Urbi are **expected Easter peace boilerplate**; wires **overfit** to Trump because **news demand**. **Falsifier:** if **no follow-through** (no sustained **Curia** diplomacy, **ceasefire** facts on the ground, or **repeat** bilateral readouts), the **“counterweight”** framing in English wires **overstates** durable **policy shift**. **Separate check:** do not treat Reuters **expert gloss** or **Hegseth** linkage as **Vatican attribution** without **primary** papal text **naming** targets. |
 
 ## Layers (ROME-PASS boundary)
