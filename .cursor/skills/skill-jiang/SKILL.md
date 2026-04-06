@@ -2,11 +2,10 @@
 name: skill-jiang
 preferred_activation: skill-jiang
 description: >-
-  Blind forward prediction on Jiang Predictive History lecture series: read only
-  prefix lectures (NN ≤ k), predict episode k+1, then open and score. Volume IV
-  default (game-theory-NN). Anti-leak checklist, templates, log path, recursive
-  merges into CURSOR_APPENDIX.md. WORK only; not Record.
-version: 0.4.4
+  Blind forward prediction on Jiang Predictive History: prefix-only lectures (NN ≤ k),
+  predict k+1, reveal, score. Canonical audit: lecture-forward-chain-gt-BLIND-prefix-only.md.
+  Volume IV game-theory-NN. WORK only; not Record.
+version: 0.5.1
 tags:
   - operator
   - work-jiang
@@ -17,163 +16,166 @@ tags:
 
 **Preferred activation:** **`skill-jiang`**, **`jiang next lecture`**, **`gt forward chain`**.
 
-**Purpose:** Develop **calibrated priors** for the **next** lecture in a series using **only** material already in-repo for episodes **≤ k**, then **score** against the actual **k+1** and **merge** lessons into [CURSOR_APPENDIX.md](CURSOR_APPENDIX.md).
+**Purpose:** Build **calibrated priors** for the **next** lecture using **only** in-repo material for episodes **≤ k**, then **score** against **k+1** and merge durable rules into [CURSOR_APPENDIX.md](CURSOR_APPENDIX.md).
 
 **Companion skills:** [work-jiang-feature-checklist](../work-jiang-feature-checklist/SKILL.md), [work-jiang-ingest-fallback](../work-jiang-ingest-fallback/SKILL.md).
 
 ---
 
-## Mechanical blind runs (original intent)
+## Canonical workflow (prefix-only calibration)
 
-**Problem:** Ad-hoc `read_file` / `glob` easily leaks **k+1** (filenames, full lecture list, YAML, index).
+Use this loop for **honest** recursive calibration. Committed audit: **[`lecture-forward-chain-gt-BLIND-prefix-only.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND-prefix-only.md)** (`run_mode: prefix_only`). Machine tail: **[`registry/lecture-forward-chain-blind-prefix-only.jsonl`](../../../research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain-blind-prefix-only.jsonl)**.
 
-**Fix:** Use the repo script so **only** episodes **1…K** are read for prediction; open **K+1** only after the prediction artifact exists.
+For blind round **R** (prefix **1…R**, predict episode **R+1**):
+
+1. **Ingest** — **Prior round** in the **prefix-only** BLIND only: **Scores**, **Adjustment**, **miss_taxonomy**. Plus **`scratch/gt-series-model.md`**. Do **not** use [`lecture-forward-chain-gt-BLIND.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND.md) (historical batch / oracle replay) as a hypothesis source.
+2. **Bundle** — Emit `scratch/gt-prefix-R.md`:
+   - **R = 1:** `bundle --prefix-end 1` (optional `--closed-loop` is a no-op for gate).
+   - **R ≥ 2:** `bundle --closed-loop --prefix-end R …` after prior **`advance`** and non-empty series model.
+   - **R ≥ 10:** add `--trim-at-full-transcript`; log `read_depth: summary` in the round section.
+3. **Predict** — Write **`scratch/gt-predict-(R+1).md`** from **only** `gt-prefix-R.md` (+ step 1). See **Agent invariants** below.
+4. **Reveal** — `reveal --episode $((R+1)) --require-prediction-path …/gt-predict-$(($R+1)).md`
+5. **Log** — Append round section to **prefix-only** BLIND + one JSON line to **`lecture-forward-chain-blind-prefix-only.jsonl`** (`run_kind: prefix_only`).
+6. **Advance** — `advance --completed-round R` → `scratch/gt-closed-loop-state.yaml`.
+7. **Model** — Update **`gt-series-model.md`** (non-empty; encode mergeable **Adjustment**).
+
+**Fresh calibration start:** `python3 scripts/work_jiang/forward_chain_blind_bundle.py advance --reset` (clears closed-loop state). Then seed **`gt-series-model.md`**, run **R = 1** without needing prior advance.
+
+**Anti-leak (why bundle):** Ad-hoc `read_file` / `glob` leaks **k+1** (filenames, full lecture list, YAML). The script reads **only** episodes **1…R** for the bundle. Audit: `paths --prefix-end R` lists those paths only.
 
 ```bash
-# 1) Emit prefix only (write path = audit trail)
 python3 scripts/work_jiang/forward_chain_blind_bundle.py bundle \
-  --prefix-end K -o prediction-tracking/scratch/gt-prefix-K.md
+  --prefix-end R -o research/external/work-jiang/prediction-tracking/scratch/gt-prefix-R.md
+# R ≥ 10: add --trim-at-full-transcript
+# R ≥ 2: add --closed-loop after prior advance + model
 
-# Optional: omit ## Full transcript and below (smaller bundle, still blind)
-python3 scripts/work_jiang/forward_chain_blind_bundle.py bundle \
-  --prefix-end K --trim-at-full-transcript -o prediction-tracking/scratch/gt-prefix-K.md
-
-# 2) Draft prediction packet from that bundle only (no other lecture paths).
-
-# 3) Reveal episode K+1 for scoring (after prediction file saved)
-python3 scripts/work_jiang/forward_chain_blind_bundle.py reveal --episode $((K+1)) \
-  --require-prediction-path prediction-tracking/scratch/gt-predict-$(($K+1)).md
+python3 scripts/work_jiang/forward_chain_blind_bundle.py reveal --episode $((R+1)) \
+  --require-prediction-path research/external/work-jiang/prediction-tracking/scratch/gt-predict-$(($R+1)).md
 ```
 
-**Audit:** `python3 scripts/work_jiang/forward_chain_blind_bundle.py paths --prefix-end K` lists **only** paths **1…K**.
-
-The Volume IV log in `lecture-forward-chain-gt-01-18.md` was a **single-pass retrospective** simulation; **new** calibration runs should use **bundle + reveal** above (or equivalent strict I/O).
+Retrospective narrative (not a substitute for blind evidence): [`lecture-forward-chain-gt-01-18.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md).
 
 ---
 
-## Closed loop (skill core — stepwise adjustment)
+## Recursive accuracy (closed loop)
 
-**Recursive accuracy** means the **predictor changes** round over round, not only that the log has an “Adjustment” field.
+**Recursive accuracy** means the **predictor changes** round over round—not only that the log has an “Adjustment” field. Each **Adjustment** should **constrain** the next packet (down-weight falsified moves, add falsifiers from partials).
 
-Before drafting **round K+1**’s prediction packet, the operator (or agent) **must** ingest:
+**Smoke / I/O only:** [`run_blind_chain_rounds.py`](../../../scripts/work_jiang/run_blind_chain_rounds.py) pre-seeds packets for **bundle/reveal ordering** checks—not calibration.
 
-1. **Prior BLIND log section** for round **K** (or the last completed round): **Scores** + **Adjustment** + **miss_taxonomy**.
-2. Optional **rolling series model** (3–5 bullets) in `scratch/gt-series-model.md` (gitignored), updated **after each resolution** with one line added or revised from the **Adjustment**.
+**Maintenance (not calibration):** [`closed_loop_gt18_runner.py`](../../../scripts/work_jiang/closed_loop_gt18_runner.py) (reveal→advance→bundle) and [`inject_blind_closed_loop_replays.py`](../../../scripts/work_jiang/inject_blind_closed_loop_replays.py) (BLIND markdown injection) do **not** make predictions honest.
 
-**Then** write hypotheses for **gt-(K+1)** so they **explicitly** reflect what failed or was refined last time (e.g. down-weight a falsified move, add a falsifier suggested by a partial). **Do not** use a fixed template bank for all K unless labeled **smoke / I/O test only** — that does **not** count as calibration.
-
-**Batch helper caveat:** `scripts/work_jiang/run_blind_chain_rounds.py` pre-seeds packets for **engineering** checks of bundle/reveal ordering; it **does not** implement closed-loop learning. For **skill-jiang** as you intend it, run rounds **sequentially** with this section.
+---
 
 ### Agent invariants (non-negotiable)
 
 When the operator invokes **skill-jiang**, **closed-loop**, **blind forward chain**, or edits **prediction-tracking** blind artifacts, the assistant **must**:
 
-1. **Prefix-only predictions:** Draft **`gt-predict-(k+1).md` only from** the current **`gt-prefix-k.md`** bundle (plus **prior round** scores/adjustment in BLIND and **`gt-series-model.md`**). **Do not** use: memory of Volume IV order, **H1 text from future rounds** in `lecture-forward-chain-gt-BLIND.md`, **glob/list** of `lectures/game-theory-*.md` for unopened episodes, **YouTube/metadata** for the next title, or **“what usually comes next”** from training data.
+1. **Prefix-only predictions:** Draft **`gt-predict-(k+1).md` only from** the current **`gt-prefix-k.md`** bundle (plus **prior round** in **prefix-only** BLIND and **`gt-series-model.md`**). **Do not** use: memory of Volume IV order, **any** prediction/resolution text from [`lecture-forward-chain-gt-BLIND.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND.md), **glob/list** of `lectures/game-theory-*.md` for unopened episodes, **YouTube/metadata** for the next title, or training priors about “what usually comes next.”
 
-2. **No arc-oracle closure:** Finishing **N rounds** or running **bulk scripts** is **not** permission to **shape hypotheses to match known lecture titles**. If the operator wants **I/O smoke** or **oracle replay** (arc-shaped packets for audit only), they must **say so in prose**; the assistant labels the BLIND subsection **`run_mode: oracle_replay`** (or equivalent explicit tag) and does **not** claim **prefix-only calibration**.
+2. **No arc-oracle closure:** Finishing **N rounds** or running **bulk scripts** is **not** permission to **shape hypotheses to match known lecture titles**. **Oracle / smoke** runs must be **explicit** and labeled **`run_mode: oracle_replay`** in BLIND; do **not** claim **prefix-only calibration**.
 
-3. **Stop vs cheat:** If token pressure makes full-prefix read hard, **narrow read_depth** (H1 + metadata + At a glance + tags per episode) and **say so in the packet** — do **not** substitute **known outcomes** to save tokens.
+3. **Stop vs cheat:** If token pressure is high, **narrow read_depth** (H1 + metadata + At a glance + tags per episode) and **say so in the packet**—do **not** substitute **known outcomes**.
 
-4. **Runner honesty:** `closed_loop_gt18_runner.py` is **mechanical glue** (reveal → advance → bundle). It does **not** write predictions and **does not** make a run honest; **honesty is entirely** in how **`gt-predict-*.md`** was authored.
+4. **Default on conflict:** If **“complete the chain fast”** conflicts with **closed-loop learning**, **default to prefix-only** and **ask** unless the operator explicitly chooses **smoke / oracle**.
 
-5. **Default on conflict:** If instructions conflict (**“complete the chain fast”** vs **closed-loop learning**), **default to prefix-only** and **ask one clarifying question** unless the operator explicitly chooses **smoke / oracle**.
+See [`.cursor/rules/skill-jiang-closed-loop.mdc`](../../.cursor/rules/skill-jiang-closed-loop.mdc).
 
-See also: [`.cursor/rules/skill-jiang-closed-loop.mdc`](../../.cursor/rules/skill-jiang-closed-loop.mdc).
+---
 
 ### Mechanical gate (script-enforced)
 
-For **K ≥ 2**, use **`bundle --closed-loop`** so the tool **refuses** the next prefix until:
+For **K ≥ 2**, **`bundle --closed-loop`** requires:
 
-1. **`advance --completed-round (K−1)`** has been run after you finished scoring the prior round (writes `scratch/gt-closed-loop-state.yaml`).
-2. **`scratch/gt-series-model.md`** exists and is **non-empty** (rolling bullets from the last **Adjustment**).
+1. **`advance --completed-round (K−1)`** after the prior round was scored.
+2. **Non-empty** `scratch/gt-series-model.md`.
 
-**K = 1** is exempt (no prior round). **`--force`** bypasses checks (stderr warning) for maintenance only.
+**`--force`** bypasses checks (stderr warning)—maintenance only.
 
 ```bash
-# After scoring the round that used --prefix-end 1 (predict gt-02, reveal, log):
 python3 scripts/work_jiang/forward_chain_blind_bundle.py advance --completed-round 1
-# Edit scratch/gt-series-model.md (non-empty), then:
 python3 scripts/work_jiang/forward_chain_blind_bundle.py bundle --closed-loop \
   --prefix-end 2 -o research/external/work-jiang/prediction-tracking/scratch/gt-prefix-2.md
 ```
 
-Optional: `--closed-loop-state PATH` and `--series-model PATH` override defaults (same flags on `advance` for state path).
+Optional: `--closed-loop-state PATH`, `--series-model PATH` (also on `advance`).
 
 ---
 
 ## Anti-leak checklist (before predicting episode k+1)
 
-- [ ] Open **only** curated lectures: `research/external/work-jiang/lectures/<series>-NN-*.md` for **NN ≤ k** (Volume IV: `game-theory-01` … `game-theory-0k` with zero padding).
+- [ ] Open **only** `research/external/work-jiang/lectures/<series>-NN-*.md` for **NN ≤ k**.
 - [ ] Do **not** open lecture **NN > k**; do **not** read `analysis/*` for episode **> k**.
-- [ ] Do **not** use `metadata/sources.yaml` rows (or `CHANNEL-VIDEO-INDEX.md`) for titles of **unreleased** or **not-yet-opened** episodes—YAML/index can **spoil** titles. Prefer **H1 + At a glance** from **opened** lecture files only.
+- [ ] Do **not** use `metadata/sources.yaml` or `CHANNEL-VIDEO-INDEX.md` to learn **unopened** titles.
 - [ ] Do **not** use Web / YouTube for **next title** during **backtest** chain.
-- [ ] **Default corpus:** **lectures only** (strict calibration). Optional **sensitivity run:** allow `analysis/*` for **NN ≤ k** only; label the log entry `mode: lectures+analysis_prefix`.
+- [ ] **Default corpus:** lectures only. Optional **sensitivity:** `analysis/*` for **NN ≤ k** only—label `mode: lectures+analysis_prefix`.
 
-**Full-prefix rule (grace-mar operator choice):** Before each prediction, re-consult **all** of episode **01 … k** (entire markdown files when token budget allows; if constrained, minimum per episode: **H1, metadata block, At a glance, Concepts tags**—note `read_depth: summary` in the log).
+**Full-prefix rule:** Re-consult **all** of **01…k** in the bundle (full file when possible; minimum **H1, metadata, At a glance, Concepts tags**—note `read_depth` in log).
 
 ---
 
-## Prediction packet template (output before opening k+1)
+## Prediction packet template
 
 ```markdown
 ### Round k → predict gt-(k+1)
 - **Prefix:** gt-01 … gt-k | **read_depth:** full | summary
+- **run_mode:** prefix_only
 - **H1 (ranked hypotheses)** — 2–4 bullets: topic + *why prefix supports it*
-- **Falsifiers** — per hypothesis: what title/opening would kill it
+- **Falsifiers** — per hypothesis
 - **Confidence:** low / med per hypothesis
-- **skill_merge_id:** (optional) if promoting a candidate heuristic this round
+- **skill_merge_id:** (optional)
 ```
 
 ---
 
-## Resolution template (after opening lecture k+1)
+## Resolution template
 
 ```markdown
 ### Resolution (gt-(k+1) opened)
 - **Actual (one line):** title + thesis from At a glance / opening
-- **Scores:** H1a: hit|partial|miss; H1b: …
-- **miss_taxonomy:** (optional) e.g. last_episode_overweight | new_case_study | title_literal_surprise | arc_correct_case_wrong
-- **Adjustment:** one short paragraph — *mergeable* rule for next round
-- **Heuristic candidates:** bullets only if rule survived ≥2 rounds or operator approves merge
+- **Scores:** hit | partial | miss per hypothesis
+- **miss_taxonomy:** (optional)
+- **Adjustment:** one short mergeable paragraph for next round
 ```
 
 ---
 
-## Scoring rubric (default)
+## Scoring rubric
 
 | Label | Meaning |
 |-------|---------|
-| **hit** | Top hypothesis matches **dominant** topic + mechanism (not just a shared keyword). |
-| **partial** | Right **arc** (e.g. “another law-of-* installment”) but wrong **case** or emphasis; or #2 hypothesis was closer. |
-| **miss** | Wrong frame; next episode was a **pivot** not suggested by falsifiers, or misread prefix. |
+| **hit** | Top hypothesis matches **dominant** topic + mechanism. |
+| **partial** | Right arc, wrong emphasis; or #2 was closer. |
+| **miss** | Wrong frame or unpredicted pivot. |
 
 ---
 
-## Log path
+## Logs (operator lane, not Record)
 
-Append-only chain log (operator lane, not Record):
+| Artifact | Role |
+|----------|------|
+| **`lecture-forward-chain-gt-BLIND-prefix-only.md`** | **Canonical** prefix-only calibration (append each round). |
+| **`registry/lecture-forward-chain-blind-prefix-only.jsonl`** | Machine tail; `run_kind: prefix_only`. |
+| **`lecture-forward-chain-gt-BLIND.md`** | **Historical** — templated batch + prior oracle replay; **not** for next-round hypotheses. |
+| **`registry/lecture-forward-chain-blind.jsonl`** | Historical blind tail (includes batch + replay rows). |
 
-`research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md`
-
-Optional machine lines: `research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain.jsonl` (one JSON object per round).
-
-Do **not** conflate with claim adjudication: `prediction-tracking/registry/predictions.jsonl` is **orthogonal** unless operator unifies later.
+Narrative / retrospective: `lecture-forward-chain-gt-01-18.md`. Do **not** conflate with `prediction-tracking/registry/predictions.jsonl` unless operator unifies.
 
 ---
 
-## Skill merge cadence (recursive accuracy)
+## Skill merge cadence
 
-After chain rounds **3, 6, 9, 12, 15**, and **after gt-18** (optional patch after **live gt-19**):
+After prefix-only rounds **3, 6, 9, 12, 15**, and **after gt-18** (optional: live **gt-19**):
 
-1. Read accumulated **adjustments** + **miss_taxonomy** tags in the chain log.
-2. **Distill** into [CURSOR_APPENDIX.md](CURSOR_APPENDIX.md): rubric tweaks, checklist bullets, heuristics (max ~15 active), deprecated lines.
-3. Bump **version** in this file frontmatter (`version:`) and add a row to appendix **Changelog**.
+1. Read **adjustments** + **miss_taxonomy** in **`lecture-forward-chain-gt-BLIND-prefix-only.md`** only.
+2. Distill into [CURSOR_APPENDIX.md](CURSOR_APPENDIX.md) (cap ~15 active heuristics).
+3. Bump **version** here + appendix **Changelog**.
 
 ---
 
 ## Live next episode (e.g. gt-19)
 
-After **gt-18** is in the prefix, run **one** prediction packet **before** any new ingest. Resolve when YouTube ships; append **live_gt_19** section to the chain log; if live breaks a heuristic, add **live vs backtest** caveat to appendix.
+With **gt-18** in prefix: one prediction **before** new ingest; resolve when shipped; append **live_gt_19** to the **prefix-only** log; caveat appendix if heuristics break.
 
 ---
 
@@ -182,23 +184,24 @@ After **gt-18** is in the prefix, run **one** prediction packet **before** any n
 - Lectures: `research/external/work-jiang/lectures/game-theory-NN-*.md`
 - Volume spec: `research/external/work-jiang/book/VOLUME-IV-GAME-THEORY.md`
 - Transcript workflow: `research/external/work-jiang/WORKFLOW-transcripts.md`
-- Forward-chain log: `research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-01-18.md`
-- Machine tail: `research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain.jsonl`
-- **Blind** machine tail: `research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain-blind.jsonl`
-- Blind bundle script: `scripts/work_jiang/forward_chain_blind_bundle.py`
-- Blind batch helper (optional): `scripts/work_jiang/run_blind_chain_rounds.py`
-- Closed-loop bulk resume (reveal→advance→bundle): `scripts/work_jiang/closed_loop_gt18_runner.py`
-- BLIND replay injection (maintenance): `scripts/work_jiang/inject_blind_closed_loop_replays.py`
+- **Canonical blind log:** `prediction-tracking/lecture-forward-chain-gt-BLIND-prefix-only.md`
+- **Canonical blind JSONL:** `prediction-tracking/registry/lecture-forward-chain-blind-prefix-only.jsonl`
+- Historical blind log: `prediction-tracking/lecture-forward-chain-gt-BLIND.md`
+- Bundle / reveal / paths / **advance** / **advance --reset:** `scripts/work_jiang/forward_chain_blind_bundle.py`
+- Batch smoke helper: `scripts/work_jiang/run_blind_chain_rounds.py`
+- Maintenance only: `scripts/work_jiang/closed_loop_gt18_runner.py`, `inject_blind_closed_loop_replays.py`
 
 ## Changelog (skill)
 
 | Version | Notes |
 |---------|--------|
-| 0.4.4 | **Agent tighten:** non-negotiable **prefix-only** prediction invariants; **oracle / smoke** must be explicit + labeled; Cursor rule `skill-jiang-closed-loop.mdc`. |
-| 0.4.3 | **Closed-loop replay through gt-18:** full `advance` + rolling model + `bundle --closed-loop` run; BLIND **Replay** subsections (3–17) + JSONL `run_kind: replay`; `closed_loop_gt18_runner.py` + `inject_blind_closed_loop_replays.py`. |
-| 0.4.2 | **Mechanical closed-loop gate:** `bundle --closed-loop` + `advance --completed-round N`; `gt-closed-loop-state.yaml` + non-empty `gt-series-model.md`; `--force` escape. |
-| 0.4.1 | Document **closed loop**: each round must use prior **Adjustment** (+ optional rolling model); batch template script = I/O smoke only. |
-| 0.4.0 | Full Volume IV blind chain logged (`lecture-forward-chain-gt-BLIND.md`); appendix v0.4 merge; blind JSONL. |
-| 0.3.0 | Mechanical blind: `forward_chain_blind_bundle.py` (bundle / reveal / paths); retrospective log caveated. |
-| 0.2.0 | Volume IV backtest logged; appendix populated from merges M3–M18. |
-| 0.1.0 | Initial scaffold + templates. |
+| 0.5.1 | **Prefix-only loop complete:** rounds **1–17** through **gt-18** logged in canonical BLIND + JSONL; **`CURSOR_APPENDIX.md` v0.5.1** post–gt-18 distill (cadence merges folded). |
+| 0.5.0 | **Reset contract:** canonical **prefix-only** BLIND + JSONL; **SKILL** rebuilt around one workflow; **historical** `lecture-forward-chain-gt-BLIND.md` quarantined for hypotheses; **`advance --reset`**; bulk runners = maintenance only. |
+| 0.4.4 | Agent invariants + `skill-jiang-closed-loop.mdc`. |
+| 0.4.3 | Closed-loop replay through gt-18 (mixed honesty); runner/inject scripts. |
+| 0.4.2 | `bundle --closed-loop` + `advance`. |
+| 0.4.1 | Closed loop documented; batch = smoke. |
+| 0.4.0 | BLIND.md + blind JSONL (batch). |
+| 0.3.0 | `forward_chain_blind_bundle.py`. |
+| 0.2.0 | Volume IV backtest; appendix M3–M18. |
+| 0.1.0 | Scaffold. |

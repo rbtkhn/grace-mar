@@ -70,8 +70,11 @@ def read_closed_loop_state(path: Path) -> int | None:
 
 
 def write_closed_loop_state(path: Path, completed_round: int) -> None:
-    if completed_round < 0:
-        sys.exit("error: --completed-round must be >= 0")
+    if completed_round < 1:
+        sys.exit(
+            "error: --completed-round must be >= 1 (prefix-end of the round you "
+            "finished). For a fresh calibration start, use: advance --reset"
+        )
     path.parent.mkdir(parents=True, exist_ok=True)
     body = f"{_STATE_HEADER}{_STATE_KEY}: {completed_round}\n"
     path.write_text(body, encoding="utf-8")
@@ -120,7 +123,15 @@ def enforce_closed_loop_bundle(
 
 
 def cmd_advance(args: argparse.Namespace) -> None:
-    write_closed_loop_state(args.closed_loop_state, args.completed_round)
+    path = args.closed_loop_state
+    if getattr(args, "reset", False):
+        if path.is_file():
+            path.unlink()
+            print(f"removed {path}", file=sys.stderr)
+        else:
+            print(f"no state file at {path}", file=sys.stderr)
+        return
+    write_closed_loop_state(path, args.completed_round)
 
 
 def resolve_lecture(lectures_dir: Path, series: str, episode: int) -> Path:
@@ -286,12 +297,17 @@ def main() -> None:
         "advance",
         help="record completed blind round (prefix-end N) for closed-loop bundle",
     )
-    p_adv.add_argument(
+    g = p_adv.add_mutually_exclusive_group(required=True)
+    g.add_argument(
         "--completed-round",
         type=int,
-        required=True,
         metavar="N",
         help="prefix-end K of the round you just finished scoring",
+    )
+    g.add_argument(
+        "--reset",
+        action="store_true",
+        help="remove closed-loop state file (fresh prefix-only calibration start)",
     )
     p_adv.add_argument(
         "--closed-loop-state",

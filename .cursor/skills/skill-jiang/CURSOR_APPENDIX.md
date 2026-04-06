@@ -4,6 +4,8 @@ Append-only **promoted** rules from forward-chain runs. **Cap:** ~15 bullets; me
 
 **Promotion bar:** A heuristic appears here only after it **survived** at least **two** scoring rounds without contradiction, or after operator merge at cadence (rounds 3, 6, 9, 12, 15, post–gt-18).
 
+**Primary calibration source (v0.5.1):** [`lecture-forward-chain-gt-BLIND-prefix-only.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND-prefix-only.md) (`run_mode: prefix_only`, 17 rounds, 2026-04-06). Cadence merges (3 / 6 / 9 / 12 / 15) are folded into the **post–gt-18** pass below; do **not** use historical [`lecture-forward-chain-gt-BLIND.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND.md) for new hypothesis text.
+
 ---
 
 ## Learned heuristics
@@ -21,13 +23,14 @@ Append-only **promoted** rules from forward-chain runs. **Cap:** ~15 bullets; me
 11. **Regional primacy thesis after macro reset:** **Who benefits** in the active war (e.g. Pax thesis) follows **order exhaustion** lecture. *Merge M15.*
 12. **Capstone bundles leader + commodities + order:** Late series may **compress** Trump/leadership, **reset** language, and **resource realignment** in one closing arc. *Merge M18.*
 13. **TBD “At a glance”:** When curated lecture summary is **TBD**, down-rank **mechanism** confidence; **title** may still anchor macro frame (e.g. reset / order). *Round 16.*
-14. **Volume IV blind audit + closed-loop replay:** **gt-02 … gt-18** logged in [`lecture-forward-chain-gt-BLIND.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND.md) + [`lecture-forward-chain-blind.jsonl`](../../../research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain-blind.jsonl). **2026-04-06** full **`advance` + rolling model + `bundle --closed-loop`** run through **gt-18** with **Replay (closed-loop calibration)** subsections (rounds 3–17) and JSONL rows `run_kind: replay`. Earlier batch rounds 2–17 remain **templated I/O** baseline (`run_blind_chain_rounds.py`). Helpers: `closed_loop_gt18_runner.py`, `inject_blind_closed_loop_replays.py`.
-15. **Large-K bundles:** For **K ≥ ~10**, use `bundle --trim-at-full-transcript` to save tokens without breaking the blind boundary; log `read_depth: summary`.
+14. **Historical Volume IV BLIND (archive only):** [`lecture-forward-chain-gt-BLIND.md`](../../../research/external/work-jiang/prediction-tracking/lecture-forward-chain-gt-BLIND.md) + [`lecture-forward-chain-blind.jsonl`](../../../research/external/work-jiang/prediction-tracking/registry/lecture-forward-chain-blind.jsonl) — batch baseline + `run_kind: replay` closed-loop replay. **Not** a hypothesis source for new blind work. Maintenance / smoke: `closed_loop_gt18_runner.py`, `inject_blind_closed_loop_replays.py`, `run_blind_chain_rounds.py`.
+15. **Large-K bundles:** For **K ≥ ~10**, use `bundle --trim-at-full-transcript` to save tokens without breaking the blind boundary; log `read_depth: summary` (see prefix-only rounds 10–17 in the canonical log).
 
 ## Known failure modes
 
 - **last_episode_overweight:** Guessing **workplace** immediately after school/success when the series jumps to **migration** instead (round 3–4 transition).
 - **TBD_glance_mechanism:** Title encodes arc but **At a glance** empty → risk of **overclaiming** lecture mechanism (mitigate: score **hit** only when title + stated prior align).
+- **US-centrism after macro cycle:** After **world game**, the next **finance** tile may be **British/imperial** institutional design—not **US-only**—before **America’s Game** lands (prefix round 5: **H2 partial**).
 
 ## Changelog (appendix)
 
@@ -41,3 +44,5 @@ Append-only **promoted** rules from forward-chain runs. **Cap:** ~15 bullets; me
 | 2026-04-08 | **v0.4.2:** `forward_chain_blind_bundle.py` **advance** + **`bundle --closed-loop`** gate (state file + non-empty series model); **`--force`** bypass. |
 | 2026-04-06 | **v0.4.3 merge:** Closed-loop replay **gt-04 … gt-18** executed + BLIND **Replay** subsections + JSONL `replay` tail; runner/inject scripts under `scripts/work_jiang/`. |
 | 2026-04-06 | **v0.4.4 (skill):** Agent invariants — prefix-only predictions; explicit **oracle/smoke** labeling; rule `skill-jiang-closed-loop.mdc`. |
+| 2026-04-06 | **v0.5.0 (skill):** Canonical calibration = **`lecture-forward-chain-gt-BLIND-prefix-only.md`** + **`lecture-forward-chain-blind-prefix-only.jsonl`**; historical BLIND quarantined; **`advance --reset`**. Appendix heuristics refreshed from **prefix-only** log at cadence. |
+| 2026-04-06 | **v0.5.1 merge:** Post–gt-18 distillation from **prefix-only** BLIND (rounds 1–17 complete); primary-source banner + historical bullet 14 rewrite; failure mode **US-centrism after macro cycle**; heuristics 1–12 treated as **re-validated** against prefix-only scores (cadence 3/6/9/12/15 folded into this pass). |
