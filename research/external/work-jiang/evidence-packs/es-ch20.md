@@ -1,6 +1,6 @@
 # Evidence pack — es-ch20
 
-**Chapter title:** Secret History #10: The Great Revealing
+**Chapter title:** Secret History #9: The War of Heaven and Hell
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 20 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-20` → [secret-history-10-the-great-revealing.md](substack/essays/secret-history-10-the-great-revealing.md)
+- `es-20` → [secret-history-10-the-war-of-heaven.md](substack/essays/secret-history-10-the-war-of-heaven.md)
 
 ## Core analysis
 
-- `es-20` → [essay-secret-history-10-the-great-revealing-analysis.md](analysis/essay-secret-history-10-the-great-revealing-analysis.md)
+- `es-20` → [essay-secret-history-10-the-war-of-heaven-analysis.md](analysis/essay-secret-history-10-the-war-of-heaven-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 20 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-20 (excerpt):** # Secret History #10: The Great Revealing ## Essay body On October 13th, Trump spoke at Knesset, shortly after Israel and Hamas agreed to a cease-fire to end the two-year war. It was his victory lap for securing peace in the Middle East for the first time in three thousand years. His speech left many dumb-founded and flabbergasted. Trump called out Miriam Adelson, a dual Israeli-American citize
+**es-20 (excerpt):** # Secret History #9: The War of Heaven and Hell ## Essay body In his Divine Comedy, Dante ascends to the Heavens to meet God, and to do what God cannot do. He must imagine the Truth, and tell the world this Truth. He would spend twenty years wrestling with the blinding illumination that is God, and from this struggle he would imagine the nature of God and the universe, and our place and role in 
 
 ## Open questions
 

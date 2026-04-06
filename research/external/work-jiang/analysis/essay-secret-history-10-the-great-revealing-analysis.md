@@ -51,9 +51,10 @@ memo_format_version: 1
 
 ## Cross-refs
 
-- [essay-the-limits-of-pax-judaica-analysis.md](essay-the-limits-of-pax-judaica-analysis.md) — prior ingested essay in chronological chain (Oct 12, 2025)
+- [essay-secret-history-10-the-war-of-heaven-analysis.md](essay-secret-history-10-the-war-of-heaven-analysis.md) — immediate prior in publication order (Oct 15, 2025; Substack slug contains `10-the-war-of-heaven`)
+- [essay-the-limits-of-pax-judaica-analysis.md](essay-the-limits-of-pax-judaica-analysis.md) — same-week cluster (Oct 12, 2025)
 - [essay-blowback-venezuela-analysis.md](essay-blowback-venezuela-analysis.md) — next ingested essay (Jan 2026)
-- [essay-secret-history-8-the-rise-of-the-american-kakistocracy-analysis.md](essay-secret-history-8-the-rise-of-the-american-kakistocracy-analysis.md) — prior **Secret History** Substack installment (#8); *#9 not mirrored in-repo*
+- [essay-secret-history-8-the-rise-of-the-american-kakistocracy-analysis.md](essay-secret-history-8-the-rise-of-the-american-kakistocracy-analysis.md) — prior **Secret History** Substack installment (#8)
 - [secret-history-10-the-conspiracy-of-evil.md](../lectures/secret-history-10-the-conspiracy-of-evil.md) — in-repo **Secret History #10** lecture spine (title may differ from Substack **Great Revealing**)
 - [game-theory-13-epsteins-world.md](../lectures/game-theory-13-epsteins-world.md); Substack **Twilight of the Liberal Elite** — **Epstein**-files / disclosure neighbors
 - [geo-strategy-11-the-second-american-civil-war.md](../lectures/geo-strategy-11-the-second-american-civil-war.md) — **ICE**/**draft**/**Insurrection Act** collage neighbors

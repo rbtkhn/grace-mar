@@ -3278,7 +3278,7 @@ volume_7_essays:
     instruction: End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md — divergence IDs from divergences.jsonl where linked; not chapter_end_predictions (Volume I only) unless Part II policy adopts prediction adjudication.
   part_2:
     title: Part II — method TBD (Essays)
-    after_chapter: es-ch31
+    after_chapter: es-ch33
     description: Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first default for Part I boxes).
   book:
     chapters:
@@ -3701,7 +3701,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch20
-      title: 'Secret History #10: The Great Revealing'
+      title: 'Secret History #9: The War of Heaven and Hell'
       purpose: Book chapter for essay 20 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3723,7 +3723,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch21
-      title: Blowback Venezuela
+      title: 'Secret History #10: The Great Revealing'
       purpose: Book chapter for essay 21 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3745,7 +3745,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch22
-      title: Minnesota Burning
+      title: Blowback Venezuela
       purpose: Book chapter for essay 22 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3767,7 +3767,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch23
-      title: Iran, Greenland, and Canada
+      title: Minnesota Burning
       purpose: Book chapter for essay 23 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3789,7 +3789,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch24
-      title: Carney’s Speech and Trump’s Letter
+      title: Iran, Greenland, and Canada
       purpose: Book chapter for essay 24 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3811,7 +3811,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch25
-      title: Twilight of the Liberal Elite
+      title: Carney’s Speech and Trump’s Letter
       purpose: Book chapter for essay 25 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3833,7 +3833,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch26
-      title: Welcome to the Rupture
+      title: Twilight of the Liberal Elite
       purpose: Book chapter for essay 26 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3855,7 +3855,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch27
-      title: Countdown to Iran
+      title: Welcome to the Rupture
       purpose: Book chapter for essay 27 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3877,7 +3877,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch28
-      title: World War III Begins
+      title: Countdown to Iran
       purpose: Book chapter for essay 28 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3899,7 +3899,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch29
-      title: The Acceleration
+      title: World War III Begins
       purpose: Book chapter for essay 29 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3921,7 +3921,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch30
-      title: Vietnam Redux
+      title: The Acceleration
       purpose: Book chapter for essay 30 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3943,7 +3943,7 @@ volume_7_essays:
       quotes_ready: false
       requires_prediction_review: false
     - id: es-ch31
-      title: The US-Iran End Game
+      title: Vietnam Redux
       purpose: Book chapter for essay 31 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
       kind: analysis
       priority: medium
@@ -3964,4 +3964,51 @@ volume_7_essays:
       analysis_ready: false
       quotes_ready: false
       requires_prediction_review: false
+    - id: es-ch32
+      title: The US-Iran End Game
+      purpose: Book chapter for essay 32 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - es-32
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for es-32; then draft chapter outline
+      outline_path: chapters-volume-vii/es-ch32/outline.md
+      draft_path: chapters-volume-vii/es-ch32/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: es-ch33
+      title: World War Trump
+      purpose: Book chapter for essay 33 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - es-33
+      analysis_ids: []
+      prediction_ids:
+      - jiang-ES33-001
+      - jiang-ES33-002
+      - jiang-ES33-003
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Draft chapter outline; wire quotes + comparative layer; adjudicate jiang-ES33-* per rubric
+      outline_path: chapters-volume-vii/es-ch33/outline.md
+      draft_path: chapters-volume-vii/es-ch33/draft.md
+      analysis_ready: true
+      quotes_ready: false
+      requires_prediction_review: true
 

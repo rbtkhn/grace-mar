@@ -52,6 +52,7 @@ memo_format_version: 1
 ## Cross-refs
 
 - [essay-vietnam-redux-analysis.md](essay-vietnam-redux-analysis.md) — prior week (“Kharg Island…” callback)
+- [essay-world-war-trump-analysis.md](essay-world-war-trump-analysis.md) — next essay in chronological chain (Apr 4)
 - [0aASxQrJYuo-game-theory-16-analysis.md](0aASxQrJYuo-game-theory-16-analysis.md) — Pax Judaica lecture overlap
 
 ## Follow-ups

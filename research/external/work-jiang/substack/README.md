@@ -6,7 +6,38 @@ This folder holds **operator-maintained notes** that map **individual posts** to
 
 **Convention:** One section per post slug (`/p/<slug>`). Add new sections as needed.
 
-**Volume VII — Essays arc (chronological, oldest → newest):** **Vision, Mission, Goals** (Aug 6, 2025) → **Continuity of Government** essay (Aug 8, 2025) → **The Third Coming** (Aug 13, 2025) → **Secret History of the World #1** (Aug 20, 2025) → **Secret History of the World #2** (Aug 22, 2025) → **Secret History of the World #3** (Aug 26, 2025) → **Secret History of the World #4** (Aug 29, 2025) → **Secret History of the World #5** (Sep 5, 2025) → **Secret History of the World #6** (Sep 9, 2025) → **Secret History #7: The Voyage Home** (Sep 12, 2025) → **Tipping Point USA** (Sep 13, 2025) → **I Have Questions about Tyler Robinson** (Sep 17, 2025) → **“Predictive History” Reading List** (Sep 20, 2025) → **What Can Be Done?** (Sep 22, 2025) → **The Empire Goes to War** (Sep 27, 2025) → **War Machine USA** (Oct 1, 2025) → **Why I Refuse to Get Rich** (Oct 3, 2025) → **Secret History #8: The Rise of the American Kakistocracy** (Oct 10, 2025) → **The Limits of Pax Judaica** (Oct 12, 2025) → **Secret History #10: The Great Revealing** (Oct 17, 2025) → **Blowback Venezuela** (Jan 3, 2026) → **Minnesota Burning** (Jan 10) → **Iran, Greenland, and Canada** (Jan 17) → **Carney’s Speech and Trump’s Letter** (Jan 24) → **Twilight of the Liberal Elite** (Feb 7) → **Welcome to the Rupture** (Feb 14) → **Countdown to Iran** (Feb 21) → **World War III Begins** (Feb 28) → **The Acceleration** (Mar 7) → **Vietnam Redux** (Mar 14) → **The US-Iran End Game** (Mar 21). Sections below are ordered **newest first**; **Vision, Mission, Goals** is the **last** section; **Continuity of Government is a Joke** is **second-to-last**; **The Third Coming** is **third-to-last**; **Secret History #1** is **fourth-to-last**; **Secret History #2** is **fifth-to-last**; **Secret History #3** is **sixth-to-last**; **Secret History #4** is **seventh-to-last**; **Secret History #5** is **eighth-to-last**; **Secret History #6** is **ninth-to-last**; **Secret History #7** (**The Voyage Home**) is **tenth-to-last**; **Tipping Point USA** is **eleventh-to-last**; **I Have Questions about Tyler Robinson** is **twelfth-to-last**; **“Predictive History” Reading List** is **thirteenth-to-last**; **What Can Be Done?** is **fourteenth-to-last**; **The Empire Goes to War** is **fifteenth-to-last**; **War Machine USA** is **sixteenth-to-last**; **Why I Refuse to Get Rich** is **seventeenth-to-last**; **Secret History #8** (**The Rise of the American Kakistocracy**) is **eighteenth-to-last**; **The Limits of Pax Judaica** is **nineteenth-to-last**; **Secret History #10** (**The Great Revealing**) is **twentieth-to-last**. *(Ingested mirror is not necessarily complete for Aug 2025–Dec 2025.)*
+**Volume VII — Essays arc (chronological, oldest → newest):** **Vision, Mission, Goals** (Aug 6, 2025) → **Continuity of Government** essay (Aug 8, 2025) → **The Third Coming** (Aug 13, 2025) → **Secret History of the World #1** (Aug 20, 2025) → **Secret History of the World #2** (Aug 22, 2025) → **Secret History of the World #3** (Aug 26, 2025) → **Secret History of the World #4** (Aug 29, 2025) → **Secret History of the World #5** (Sep 5, 2025) → **Secret History of the World #6** (Sep 9, 2025) → **Secret History #7: The Voyage Home** (Sep 12, 2025) → **Tipping Point USA** (Sep 13, 2025) → **I Have Questions about Tyler Robinson** (Sep 17, 2025) → **“Predictive History” Reading List** (Sep 20, 2025) → **What Can Be Done?** (Sep 22, 2025) → **The Empire Goes to War** (Sep 27, 2025) → **War Machine USA** (Oct 1, 2025) → **Why I Refuse to Get Rich** (Oct 3, 2025) → **Secret History #8: The Rise of the American Kakistocracy** (Oct 10, 2025) → **The Limits of Pax Judaica** (Oct 12, 2025) → **Secret History #9: The War of Heaven and Hell** (Oct 15, 2025) → **Secret History #10: The Great Revealing** (Oct 17, 2025) → **Blowback Venezuela** (Jan 3, 2026) → **Minnesota Burning** (Jan 10) → **Iran, Greenland, and Canada** (Jan 17) → **Carney’s Speech and Trump’s Letter** (Jan 24) → **Twilight of the Liberal Elite** (Feb 7) → **Welcome to the Rupture** (Feb 14) → **Countdown to Iran** (Feb 21) → **World War III Begins** (Feb 28) → **The Acceleration** (Mar 7) → **Vietnam Redux** (Mar 14) → **The US-Iran End Game** (Mar 21) → **World War Trump** (Apr 4). Sections below are ordered **newest first**; **Vision, Mission, Goals** is the **last** section; **Continuity of Government is a Joke** is **second-to-last**; **The Third Coming** is **third-to-last**; **Secret History #1** is **fourth-to-last**; **Secret History #2** is **fifth-to-last**; **Secret History #3** is **sixth-to-last**; **Secret History #4** is **seventh-to-last**; **Secret History #5** is **eighth-to-last**; **Secret History #6** is **ninth-to-last**; **Secret History #7** (**The Voyage Home**) is **tenth-to-last**; **Tipping Point USA** is **eleventh-to-last**; **I Have Questions about Tyler Robinson** is **twelfth-to-last**; **“Predictive History” Reading List** is **thirteenth-to-last**; **What Can Be Done?** is **fourteenth-to-last**; **The Empire Goes to War** is **fifteenth-to-last**; **War Machine USA** is **sixteenth-to-last**; **Why I Refuse to Get Rich** is **seventeenth-to-last**; **Secret History #8** (**The Rise of the American Kakistocracy**) is **eighteenth-to-last**; **The Limits of Pax Judaica** is **nineteenth-to-last**; **Secret History #10** (**The Great Revealing**) is **twentieth-to-last**. *(Ingested mirror is not necessarily complete for Aug 2025–Dec 2025.)*
+
+---
+
+## World War Trump (`world-war-trump`)
+
+- **URL:** https://predictivehistory.substack.com/p/world-war-trump  
+- **Date (published):** 2026-04-04  
+- **Deck:** The war to break the world, and make Trump.  
+- **Curated essay:** [essays/world-war-trump.md](essays/world-war-trump.md)  
+- **Analysis memo:** [../analysis/essay-world-war-trump-analysis.md](../analysis/essay-world-war-trump-analysis.md)
+
+**Serial note:** Follows **The US-Iran End Game** (2026-03-21). Extends the Iran-war / Hormuz / GCC / aerial-supremacy arc; adds “Greater North America,” Hegseth purge, Bondi, three explicit predictions, Hersh ground-invasion read, and stupidity-as-strategy frame.
+
+### Overlap with in-repo corpus (same thesis threads)
+
+| Substack theme | In-repo touchpoints |
+|----------------|---------------------|
+| **Iran** war, **Hormuz**, **GCC**, energy shock | Prior Substack chain **World War III Begins** → **The US-Iran End Game**; [Game Theory #9–#16](../lectures/); [Geo-Strategy #8 — Iran Trap](../lectures/geo-strategy-08-the-iran-trap.md) |
+| **Aerial** supremacy vs **attrition**, **ground** invasion | **Geo #8**; **GT #9** / **GT #11**; Substack **The Acceleration**, **Vietnam Redux** |
+| **Hegseth**, **purge**, **military** re-structure | [Interviews #7 — Breaking Points](../lectures/interviews-07-breaking-points-krystal-saagar-us-will-lose-iran-war.md); essay cites Quantico speech (verify date against corpus) |
+| **Greater North America** / resource **fortress** | **Geo** / **GT** empire themes; [Geo-Strategy #6 — Imperial Hubris](../lectures/geo-strategy-06-americas-imperial-hubris.md) |
+| **Deep state** / **MIC** / **Wall Street** breakup | **GT #16**; Interviews **Lascaris**, **Diesen** rows in prior crosswalks |
+
+### Mostly Substack- or week-specific (weak / no same-detail match in lectures)
+
+| Item | Note |
+|------|------|
+| **F-15** shootdown, **S&R** helo damage | News-layer; cross-check transcripts ingested after essay date. |
+| **JP Morgan** “no Middle East energy by end of month” | Cited stat line — essay-specific unless wired to a memo. |
+| **Hersh** ground-invasion read of **national address** | Essay argument; verify against speech text outside repo. |
+| **Three named predictions** (GCC infrastructure, **Gabbard**/**Vance**, **Greater North America** annexations) | Candidate for `predictions` registry if book-track adopts. |
 
 ---
 
@@ -403,6 +434,35 @@ This folder holds **operator-maintained notes** that map **individual posts** to
 
 ---
 
+## Secret History #9: The War of Heaven and Hell (`secret-history-10-the-war-of-heaven`)
+
+- **URL:** https://predictivehistory.substack.com/p/secret-history-10-the-war-of-heaven  
+- **Date (published):** 2025-10-15  
+- **Deck:** As this world comes to an end, we must learn to embrace the Divine in us.  
+- **Curated essay:** [essays/secret-history-10-the-war-of-heaven.md](essays/secret-history-10-the-war-of-heaven.md)  
+- **Analysis memo:** [../analysis/essay-secret-history-10-the-war-of-heaven-analysis.md](../analysis/essay-secret-history-10-the-war-of-heaven-analysis.md)
+
+**Slug note:** Substack uses `/p/secret-history-10-the-war-of-heaven` while the post title is **Secret History #9** (Oct 15). The Oct 17 essay uses a separate slug, `secret-history-10-the-great-revealing`.
+
+**Serial note:** Follows **The Limits of Pax Judaica** (2025-10-12). **Dante** / **Divine Comedy** / **Beatrice**; divine spark, **love** vs **despise**; **Lucifer** as machine; modern **Hell from Heaven** (money, **consumerism**, **Internet**, **neoliberalism**); **Dugin** / **Eastern Orthodox** “Western civilization as Anti-Christ”; **hope** in hopeless times; **Arendt** (*The Human Condition*) **promises** and **forgiveness**; **Iliad** **Priam**–**Achilles**; **Steiner** **Christ Consciousness** / **Messianic Age**; **Vedic** monk / reincarnation; interior **war of heaven and hell**. Next **ingested**: **Secret History #10: The Great Revealing** (Oct 17, 2025).
+
+### Overlap with in-repo corpus (same thesis threads)
+
+| Substack theme | In-repo touchpoints |
+|----------------|---------------------|
+| **Eschatology** / **convergence** | [Geo-Strategy #19 — When Eschatologies Converge](../lectures/geo-strategy-19-when-eschatologies-converge.md); [Game Theory #12 — Eschatological Convergence](../lectures/game-theory-12-the-law-of-eschatological-convergence.md) |
+| **Secret History** video line | [secret-history-09-the-theory-of-everything.md](../lectures/secret-history-09-the-theory-of-everything.md) — lecture title may differ from Substack **#9** essay title |
+| **Consumerism** / **meaning** / empire | **Geo #6**; Substack **Why I Refuse to Get Rich** (Oct 3) |
+
+### Mostly essay-specific
+
+| Item | Note |
+|------|------|
+| **June** “suddenly famous” | Author autobiographical anchor; not lecture-gated. |
+| **Homer** / **Arendt** / **Steiner** readings | Book-facing cites should trace to editions if quoted in chapter. |
+
+---
+
 ## Secret History #10: The Great Revealing (`secret-history-10-the-great-revealing`)
 
 - **URL:** https://predictivehistory.substack.com/p/secret-history-10-the-great-revealing  
@@ -411,7 +471,7 @@ This folder holds **operator-maintained notes** that map **individual posts** to
 - **Curated essay:** [essays/secret-history-10-the-great-revealing.md](essays/secret-history-10-the-great-revealing.md)
 - **Analysis memo:** [../analysis/essay-secret-history-10-the-great-revealing-analysis.md](../analysis/essay-secret-history-10-the-great-revealing-analysis.md)
 
-**Serial note:** Follows **The Limits of Pax Judaica** (2025-10-12). **Knesset** speech (**Oct 13**); **Miriam Adelson** loyalty question / **Greenwald** “anti-Semitism” frame; **Netanyahu** pardon bit / **Isaac Herzog** as “Israeli President” in author usage; humiliation → **Gaza**/**Iran** retaliation thesis; **Trump** as disciplined operator vs persona; **first term** vs **second** (**Lear**/**Jan 6**); **Vance**/**Hegseth**/**Noem**/**Bondi**; **Epstein**/**JFK**/**9/11** withheld files; **Great Revealing** scenario (**moon landing** etc. as essay hypotheticals); **Tucker**/**Jones**/**Owens** coda. Next **ingested**: **Blowback Venezuela** (Jan 2026). *(Substack **Secret History #9** not mirrored in-repo.)*
+**Serial note:** Follows **Secret History #9: The War of Heaven and Hell** (2025-10-15). **Knesset** speech (**Oct 13**); **Miriam Adelson** loyalty question / **Greenwald** “anti-Semitism” frame; **Netanyahu** pardon bit / **Isaac Herzog** as “Israeli President” in author usage; humiliation → **Gaza**/**Iran** retaliation thesis; **Trump** as disciplined operator vs persona; **first term** vs **second** (**Lear**/**Jan 6**); **Vance**/**Hegseth**/**Noem**/**Bondi**; **Epstein**/**JFK**/**9/11** withheld files; **Great Revealing** scenario (**moon landing** etc. as essay hypotheticals); **Tucker**/**Jones**/**Owens** coda. Next **ingested**: **Blowback Venezuela** (Jan 2026).
 
 ### Overlap with in-repo corpus (same thesis threads)
 
@@ -439,7 +499,7 @@ This folder holds **operator-maintained notes** that map **individual posts** to
 - **Curated essay:** [essays/the-limits-of-pax-judaica.md](essays/the-limits-of-pax-judaica.md)
 - **Analysis memo:** [../analysis/essay-the-limits-of-pax-judaica-analysis.md](../analysis/essay-the-limits-of-pax-judaica-analysis.md)
 
-**Serial note:** Follows **Secret History #8: The Rise of the American Kakistocracy** (2025-10-10). **UN**/**White House**/**Qatar** tankers / **12-Day War** echo; **Egypt** ceasefire; **hostage**/**aid** terms; **Nobel**/**Blair**/**Kushner**/**Gaza** “**Riviera**” / **Ben-Gurion Canal** / offshore **gas** thesis; **gilded cage** rebuild; **Hamas**/**Clausewitz** will-to-fight vs **IDF** morale / **PTSD**; **2012** **Technion** visit / **Yad Vashem**; *Waltz with Bashir* / **Sabra and Shatila**; **Ben Gvir**/**Smotrich** vs **ceasefire**; closing **Pax Judaica** vs **soul** cost. Next **ingested**: **Secret History #10: The Great Revealing** (Oct 17, 2025).
+**Serial note:** Follows **Secret History #8: The Rise of the American Kakistocracy** (2025-10-10). **UN**/**White House**/**Qatar** tankers / **12-Day War** echo; **Egypt** ceasefire; **hostage**/**aid** terms; **Nobel**/**Blair**/**Kushner**/**Gaza** “**Riviera**” / **Ben-Gurion Canal** / offshore **gas** thesis; **gilded cage** rebuild; **Hamas**/**Clausewitz** will-to-fight vs **IDF** morale / **PTSD**; **2012** **Technion** visit / **Yad Vashem**; *Waltz with Bashir* / **Sabra and Shatila**; **Ben Gvir**/**Smotrich** vs **ceasefire**; closing **Pax Judaica** vs **soul** cost. Next **ingested**: **Secret History #9: The War of Heaven and Hell** (Oct 15, 2025), then **Secret History #10: The Great Revealing** (Oct 17, 2025).
 
 ### Overlap with in-repo corpus (same thesis threads)
 

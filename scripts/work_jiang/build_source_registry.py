@@ -102,17 +102,28 @@ def merge_preserved_fields_from_previous_yaml(sources: list[dict], previous_path
         prev_doc = yaml.safe_load(previous_path.read_text(encoding="utf-8")) or {}
     except yaml.YAMLError:
         return
-    by_id = {
-        s["source_id"]: s
-        for s in (prev_doc.get("sources") or [])
-        if isinstance(s, dict) and s.get("source_id")
-    }
+    # Key by lecture_path (stable across essay renumbering). source_id alone breaks when
+    # a new Substack essay inserts mid-queue and shifts es-NN ids.
+    by_lecture_path: dict[str, dict] = {}
+    for ps in prev_doc.get("sources") or []:
+        if not isinstance(ps, dict):
+            continue
+        lp = ps.get("lecture_path")
+        if lp:
+            by_lecture_path[str(lp).replace("\\", "/")] = ps
     for s in sources:
-        p = by_id.get(s["source_id"])
+        lp = s.get("lecture_path")
+        if not lp:
+            continue
+        p = by_lecture_path.get(str(lp).replace("\\", "/"))
         if not p:
             continue
+        lp_norm = str(lp).replace("\\", "/")
         pd = p.get("publication_date")
-        if pd is not None:
+        # Substack dates are canonical in each essay's YAML front matter; do not let a
+        # stale or corrupted sources.yaml overwrite them (essay renumbering used to make
+        # this worse when merge keyed only on source_id).
+        if pd is not None and not lp_norm.startswith("substack/essays/"):
             s["publication_date"] = pd
         th = p.get("themes")
         if th:
