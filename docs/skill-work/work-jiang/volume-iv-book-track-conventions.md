@@ -7,11 +7,11 @@ Operator WORK — Predictive History. Canonical prose spec: [`research/external/
 | Item | Convention |
 |------|------------|
 | YAML block key | `volume_4_game_theory` under [`metadata/book-architecture.yaml`](../../../research/external/work-jiang/metadata/book-architecture.yaml) |
-| Chapter IDs | `gt-ch01` … `gt-ch17` — one chapter per `gt-NN` source row (two-digit episode) |
+| Chapter IDs | `gt-ch01` … `gt-ch18` — one chapter per `gt-NN` source row (two-digit episode) |
 | `source_ids` | Exactly `[gt-NN]` matching [`metadata/sources.yaml`](../../../research/external/work-jiang/metadata/sources.yaml) |
 | Evidence packs | `evidence-packs/gt-chNN.md` |
 | Outline / draft paths | `chapters-volume-iv/gt-chNN/outline.md` and `draft.md` |
-| Part II anchor | `part_2.after_chapter` — last Part I Game Theory chapter in this queue (e.g. `gt-ch17`) |
+| Part II anchor | `part_2.after_chapter` — last Part I Game Theory chapter in this queue (`gt-ch18` for the Spring 2026 run) |
 
 **Analysis priority:** Volume IV analysis chapters default to **`medium`** in `book-architecture.yaml` until [`chapter-quote-links.yaml`](../../../research/external/work-jiang/metadata/chapter-quote-links.yaml) and [`counter-reading-links.yaml`](../../../research/external/work-jiang/metadata/counter-reading-links.yaml) satisfy `validate_comparative_layer` for that chapter; then promote to **`high`** if desired (same pattern as other volumes).
 

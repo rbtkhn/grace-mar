@@ -9,9 +9,9 @@
 |-------|-------------|----------------------|
 | Game Theory #1–#18 | `gt-01` … `gt-18` | `lectures/game-theory-NN-*.md` |
 
-Each row: `transcript: complete`, `curated_lecture: complete`, `analysis_path: null`, `chapter_mapping: not_started` until the book lane catches up.
+**Per-row status (`metadata/sources.yaml`):** For **`gt-01`–`gt-18`**, `transcript` and `curated_lecture` are **complete**, and **`chapter_mapping: complete`** (wired in **`metadata/source-map.yaml`** as `gt-chNN` → `[gt-NN]`). **Analysis memos** on disk only for **`gt-01`**, **`gt-16`**, and **`gt-18`**; **`gt-02`–`gt-15`** and **`gt-17`** still have **`analysis_path: null`** and **`analysis: missing`** until the book lane adds them.
 
-**Book stub (machine-readable):** `metadata/book-architecture.yaml` → key `volume_4_game_theory` (Part I chapters `gt-ch01`–`gt-ch18` mapped to `gt-01`–`gt-18`). Top-level `project` / `book` in that file remain Volume I (Geo-Strategy) for existing renderers where noted.
+**Book stub (machine-readable):** `metadata/book-architecture.yaml` → key `volume_4_game_theory` (Part I chapters `gt-ch01`–`gt-ch18` mapped to `gt-01`–`gt-18`; **`part_2.after_chapter: gt-ch18`**). Top-level `project` / `book` in that file remain Volume I (Geo-Strategy) for existing renderers where noted.
 
 ## Volume intent
 
@@ -21,7 +21,7 @@ Volume IV extends the Predictive History multivolume architecture with the worki
 
 1. ~~Define series key and corpus boundary in `metadata/sources.yaml`.~~ **Done:** `series: game-theory`, `source_id` `gt-NN`, filenames `lectures/game-theory-NN-*.md`.
 2. ~~Establish lecture filename pattern under `lectures/`.~~ **Done:** `game-theory-NN-<slug>.md` with `NN` zero-padded to two digits, matching `episode` in YAML.
-3. Declare Part I chapter mapping policy (one chapter per lecture unless exceptions are documented).
+3. ~~Declare Part I chapter mapping policy (one chapter per lecture unless exceptions are documented).~~ **Done (default):** one Part I chapter per lecture; `gt-ch01`–`gt-ch18` ↔ `gt-01`–`gt-18` in `source-map.yaml` and `book-architecture.yaml`.
 4. Choose Part II evaluation mode:
    - prediction adjudication, or
    - divergence analysis, or
@@ -37,7 +37,7 @@ Volume IV extends the Predictive History multivolume architecture with the worki
 | I | Geo-Strategy | Predictions |
 | II | Civilization | Divergence |
 | III | Secret History | TBD |
-| IV | Game Theory | TBD (Part II method; sources #1–#16 ingested) |
+| IV | Game Theory | TBD (Part II method; sources **#1–#18** ingested) |
 | V | Great Books | TBD |
 
 ---
