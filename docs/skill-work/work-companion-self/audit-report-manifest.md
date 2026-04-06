@@ -1,6 +1,6 @@
 ## work-companion-self — Template Diff Report
 
-Companion-self: companion-self
+Companion-self: /Users/robertkuhne/Documents/grace-mar/companion-self
 Instance (grace-mar): /Users/robertkuhne/Documents/grace-mar
 Paths: companion-self template-manifest.json
 
@@ -11,11 +11,17 @@ Paths: companion-self template-manifest.json
   - docs/seed-phase-readiness.md
   - docs/seed-phase-stages.md
   - docs/seed-phase-validation.md
+  - docs/skill-work/work-cadence/README.md
+  - docs/skill-work/work-cadence/harvest-packet-contract.md
   - docs/skill-work/work-cadence/work-cadence-events.md
+  - scripts/check-seed-consistency.py
   - scripts/generate-seed-dossier.py
+  - scripts/log_cadence_event.py
   - scripts/requirements-seed-phase.txt
+  - scripts/validate-change-review.py
   - scripts/validate-seed-phase.py
   - users/_template/seed-phase/seed-phase-manifest.json
+  - users/_template/work-dev.md
   - users/demo/seed-phase/seed-phase-manifest.json
 
 ### Expected drift (policy-documented; not a parity defect)
@@ -40,16 +46,6 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   - docs/conflict-resolution-order.md
   - docs/contradiction-policy.md
   - docs/contradiction-resolution.md
-  ... and 117 more
+  ... and 111 more
 
-Summary: same=132 differ=12 expected_drift=2 only_template=0 only_instance=0
-
-**Compare root:** `companion-self/` is a **local gitignored checkout** (see `.gitignore`); run `template_diff.py` with `-c` pointed at your template tree. The actionable **differ** list above is mostly template age drift (seed-phase stack, docs) until the checkout is refreshed from upstream; **voice-runtime portable paths** (`runtime_config.example.json`, `scripts/voice_runtime_config.py`, `docs/voice-runtime-config.md`, `tests/test_voice_runtime_config.py`) are aligned between this checkout and grace-mar.
-
-### Constitutional AI / seed constitution (2026-04-05 reconciliation)
-
-Portable slice applied to **companion-self** (schemas, `scripts/seed_phase_artifacts.py`, `validate-seed-phase.py`, `generate-constitution.py`, `validate-constitution.py`, demo + `_template` seed files, `runtime_config.example.json`, `requirements-constitutional-ai.txt`). **Instance-only:** `bot/constitutional_layer.py` and `bot/core.py` wiring live in **grace-mar** only; template has no `bot/` tree.
-
-### Voice runtime config v2 (2026-04-05 reconciliation)
-
-Portable paths: `scripts/voice_runtime_config.py`, `tests/test_voice_runtime_config.py`, `docs/voice-runtime-config.md`, expanded `runtime_config.example.json`; `template-manifest.json` lists those paths. **Instance-only:** `bot/avatar_controller.py` imports the script module and applies nested `voice_avatar.avatar` + `emotion_mapping`. Push the portable commit from the **companion-self** repo (`github.com/rbtkhn/companion-self`); the gitignored `companion-self/` folder under grace-mar holds the same commit for local diffing.
+Summary: same=126 differ=18 expected_drift=2 only_template=0 only_instance=0

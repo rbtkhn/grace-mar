@@ -87,6 +87,7 @@ This classification is the default answer when a diff appears: first decide the 
 
 ## Last audit date
 
+- **2026-04-06** — Steward template/boundary pass: integrity PASS; §3 sync log updated to match `template-source.json` applied commit `f16104b` (seed-phase pytest scaffold); companion-self HEAD ahead of pinned commit. No new downstream merges this pass.
 - **2026-03-27** — Doctrine sync: change-review cluster, validation, contradiction-resolution merge, layer-map, skill-work README pointers, TEMPLATE-BASELINE pin, audit report regeneration.
 - **Reference audit:** [audit-grace-mar-vs-companion-self-template.md](audit-grace-mar-vs-companion-self-template.md).
 
