@@ -43,6 +43,7 @@ Grace Gems (GraceGemsUS) sells customized fine jewelry with natural, untreated g
 | **[jewelry-industry-research-pre1970.md](jewelry-industry-research-pre1970.md)** | History and science of gems, jewelry crafting, mining, selling — **sources from 1969 or earlier only**. |
 | **[agent-encoding.md](agent-encoding.md)** | Phase 1 agent reference: provenance–stone table, terminology glossary, meta-rules, handback semantics, tone guidelines, example drafts (message assist, listing validation). |
 | **[message-assist-calibration.md](message-assist-calibration.md)** | Calibration loop: operator feedback when drafts miss the mark; message-assist loads it if present. |
+| **[../accounting/1099k-2025-grace-gems-etsy.md](../accounting/1099k-2025-grace-gems-etsy.md)** | 2025 Form 1099-K totals and monthly Box 5 (no TINs) — reconcile to Etsy + bank ledger. |
 | *scripts/grace_gems_message_assist.py* | Message assist — draft-only reply for Etsy customer messages. `python3 scripts/grace_gems_message_assist.py -m "message"` |
 
 ---

@@ -62,6 +62,7 @@ python3 scripts/import_bank_csv.py -u grace-mar --audit-etsy --venture grace-gem
 | `users/grace-mar/business-ledger.jsonl` | Append-only transaction log |
 | **This README** | How to use the accounting surface |
 | [chart-of-accounts.md](chart-of-accounts.md) | Account categories with tax mapping |
+| [1099k-2025-grace-gems-etsy.md](1099k-2025-grace-gems-etsy.md) | 2025 1099-K figures (no PII) for Etsy reconciliation |
 
 ---
 
