@@ -19,7 +19,7 @@
 | Gated approved activity (voice + non-voice) | **`self-archive.md` § `## VIII. GATED APPROVED LOG (SELF-ARCHIVE)`** — appended only by `process_approved_candidates.py` |
 | Pipeline staging (candidates above `## Processed`) | `users/[id]/recursion-gate.md` |
 | Session / interaction history | `users/[id]/session-log.md` |
-| Capability index (THINK, WRITE, etc.) | **`users/[id]/self-skills.md`** — legacy `skills.md` is still read if present (see `scripts/repo_io.py` `resolve_surface_markdown_path`) |
+| Capability index (THINK, WRITE, etc.) | **`users/[id]/self-skills.md`** — legacy `skills.md` is still read if present (see `scripts/repo_io.py` `resolve_surface_markdown_path`). Split-template scaffolds (e.g. `self-skill-think.md`, `self-skill-write.md`, `self-skill-work.md`, `self-skill-steward.md`) may also exist per instance layout; see [id-taxonomy.md](id-taxonomy.md). |
 | Curated references, canon | `users/[id]/self-library.md` |
 | Self-memory (continuity — short/medium/long; not Record) | **`users/[id]/self-memory.md`** — standard label **self-memory**. Legacy instances may still have **`memory.md`**; readers resolve **self-memory first**, then **memory.md**, via `scripts/repo_io.py` `resolve_self_memory_path`. |
 | Self-history (derived dual log — not Record) | **`users/[id]/self-history.md`** — optional **systematic** timeline: **WORK** aggregate from **`docs/skill-work/work-*/*-history.md`** plus **gate-approved** **COMPANION** thread (pointers/summaries from merged **SELF/EVIDENCE** only). **Derived gazette**; not a merge bypass. See file header fence. |

@@ -235,6 +235,7 @@ def export_runtime_bundle(
         "self_skills": skills_resolved,
         "skill_think": profile_dir / "skill-think.md",
         "skill_write": profile_dir / "skill-write.md",
+        "skill_steward": profile_dir / "skill-steward.md",
         "evidence": evidence_resolved,
         "self_evidence": evidence_resolved,
         "library": profile_dir / "self-library.md",

@@ -20,6 +20,8 @@ The Record (and the companion self) is composed of the following modules. Togeth
 | **self-library** | users/[id]/self-library.md | Curated return-to store of references, canon works, and influential media; reference lane is query-first for answers |
 | **self-skill-think** | self-skills.md THINK container | Intake, learning, comprehension (multimodal) |
 | **self-skill-write** | self-skills.md WRITE container | Production (text, journal, stories); linguistic style source |
+| **self-skill-work** | self-skill-work.md (split template) or embedded | Making and doing — objectives and project capability ([concept.md](concept.md) §4) |
+| **self-skill-steward** | self-skill-steward.md (split template) or e.g. skill-steward.md | Governance literacy — gate vocabulary, chat vs Record, consent-aware review; **not** unsupervised merge authority |
 
 Additional Record components (self-archive, self-memory, evidence logs) are defined in [ID-TAXONOMY](id-taxonomy.md#companion-self-contains). The Voice renders the full Record when it speaks; it draws on all of the above as appropriate.
 
@@ -33,10 +35,12 @@ Additional Record components (self-archive, self-memory, evidence logs) are defi
 |--------|----------------|---------------------|--------|
 | **THINK** | self-skill-think | THINK container, READ-nnn | Intake, learning, comprehension (multimodal) |
 | **WRITE** | self-skill-write | WRITE container, WRITE-nnn | Production (text, journal, stories, explanations) |
+| **WORK** | self-skill-work | WORK container, CREATE-/ACT- as appropriate | Making and doing; project objectives and tasks |
+| **STEWARD** | self-skill-steward | STEWARD section / file | Governance literacy — participation at the gate; evidenced, tier-sensitive |
 
-The Record skill module set is limited to THINK and WRITE.
+The **formal minimal pair** for Voice linguistics and core capability indexing remains **THINK** and **WRITE**. **WORK** and **STEWARD** are **additional Record-bound capability surfaces** on the companion-self **split template** (and may appear as sections or sibling files under `users/[id]/` per instance layout). All follow the same boundary: capability and evidence in SKILLS; IX-A/B/C only via analyst/operator staging → gate → approval.
 
-**Current shape guidance:** WRITE currently works best as a single pure capability container. THINK may include clearly labeled contextual domain overlays and goal-interpretation overlays when they help adjacent work contexts read the skill state, but those overlays do not create new self-skills.
+**Current shape guidance:** WRITE currently works best as a single pure capability container. THINK may include clearly labeled contextual domain overlays and goal-interpretation overlays when they help adjacent work contexts read the skill state, but those overlays do not create new self-skills. STEWARD should stay **coaching-oriented** — not a compliance scorecard.
 
 ### 2a. Work / execution layer
 
@@ -57,6 +61,8 @@ Each Record skill module updates **only** its capability container in SKILLS. Mo
 |--------|------------------|----------------------|
 | **THINK** | Content consumed, modality, comprehension, inference, vocabulary, interests (intake); learning from doing | Does not stage IX-A / IX-B / IX-C candidates |
 | **WRITE** | Vocabulary, complexity, style, expression, logic, growth (production) | Does not stage IX-A / IX-B / IX-C candidates |
+| **WORK** | Project goals, tasks, execution habits, shipping evidence | Does not bypass gate for identity truth |
+| **STEWARD** | Demonstrated gate vocabulary, review practice, boundary understanding | Does not confer merge authority or replace Mind |
 
 **Work boundary:** Work territories may plan, execute, and use tools outside the Record skill boundary. They may use open-world model capability. But work surfaces do not write Record truth directly; any identity, knowledge, curiosity, personality, or evidence change still goes through RECURSION-GATE and companion approval.
 

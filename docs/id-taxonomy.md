@@ -31,8 +31,10 @@ Canonical labels for the Record-bound SKILLS modules when referring to the compa
 |----------------|--------|----------|-------------|
 | **self-skill-write** | WRITE | self-skills.md § WRITE Container | Production — journal, stories, explanations; primary data source for SELF linguistic style |
 | **self-skill-think** | THINK | self-skills.md § THINK Container | Intake, learning, comprehension (multimodal); feeds SELF interests and preferences |
+| **self-skill-work** | WORK | self-skill-work.md or self-skills.md § WORK (if present) | Making and doing — objectives, tasks, project capability; evidence-linked |
+| **self-skill-steward** | STEWARD | self-skill-steward.md or self-skills.md § STEWARD (e.g. skill-steward.md) | Governance literacy — gate vocabulary, chat vs Record, consent-aware review; **not** merge authority |
 
-Use these labels in prose, tooling, and external references where a single token is needed. The Record-bound skill modules are **THINK** (intake, learning, comprehension) and **WRITE** (production, expression). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged; READ-nnn feeds the THINK container (Reading List).
+Use these labels in prose, tooling, and external references where a single token is needed. The **core** Record-bound skill pair for formal modularity is **THINK** and **WRITE**; **template split layouts** also ship **self-skill-work** (WORK) and **self-skill-steward** (STEWARD). Evidence prefixes (WRITE-, READ-, CREATE-, ACT-) are unchanged; READ-nnn feeds the THINK container (Reading List).
 
 ### Work layer labels
 
@@ -57,7 +59,7 @@ Canonical labels for key self-scoped files (APIs, docs, cross-references):
 | **self-archive** | On-disk **`self-archive.md`** | **Canonical EVIDENCE file:** full activity log + **`self-archive.md` § VIII** (gated approved). **Chronological** across entries; **expansive, multicategory, multimodal** (typed sections, ids, media, artifacts). Optional `self-evidence.md` = compatibility pointer only. |
 | **self-memory** | users/[id]/self-memory.md (legacy: `memory.md`) | **Short / medium / long** horizons for continuity (see [memory-template.md](memory-template.md)); **governance-ephemeral** = outside gated Record, rotatable — **not** “short-term only”; **chronological** prose; **narrower** than self-archive (no multicategory evidence spine); optional; Voice loads short→long with caps |
 
-Use these with **self-skill-write** and **self-skill-think** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
+Use these with **self-skill-write**, **self-skill-think**, and (when present) **self-skill-work** / **self-skill-steward** for a consistent self-scoped vocabulary. Use **work-territory** / **work-context** when referring to the separate execution layer.
 
 ### Capitalization and format
 
@@ -65,7 +67,7 @@ Use these rules everywhere docs list companion-self components (the `self-*` sta
 
 | Kind | Rule | Examples |
 |------|------|----------|
-| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
+| **Standard labels** | Lowercase, hyphenated, **bold** when listing components | **self-knowledge**, **self-identity**, **self-curiosity**, **self-personality**, **self-skill-think**, **self-skill-write**, **self-skill-work**, **self-skill-steward**, **self-archive**, **self-library**, **self-memory**, **self-voice** |
 | **Formal Record surfaces** (disambiguation) | ALL CAPS with hyphen | **SELF-KNOWLEDGE** (identity-facing IX-A), **SELF-LIBRARY** (reference-facing `self-library.md`), **SELF** (identity + IX in `self.md`), **SELF-ARCHIVE** (gated approved log — `self-archive.md` § VIII; full EVIDENCE on disk) |
 | **On-disk paths** | Monospace, always lowercase filenames | `self.md`, `self-identity.md` (optional split surface), `self-library.md`, `self-evidence.md`, `self-archive.md` |
 | **Planned WORK coordination** | Not part of companion self; same label shape as other `self-*` files | **`self-work`** → `users/[id]/self-work.md` (operator coordination; **not** SELF-KNOWLEDGE) |
@@ -86,10 +88,12 @@ The **companion self** (the documented self + the self that companions) is compo
 | **self-personality** | self.md IX-C | Observed, evidence-linked personality entries (post-seed personality); contradiction-preserving rather than trait-test style |
 | **self-skill-write** | self-skills.md § WRITE Container | Production capability |
 | **self-skill-think** | self-skills.md § THINK Container | Intake, learning, comprehension capability |
+| **self-skill-work** | self-skill-work.md (split) or embedded in self-skills | Making and doing — project capability and objectives |
+| **self-skill-steward** | self-skill-steward.md (split) or skill-steward.md | Governance literacy — gate participation evidenced; not operator merge authority |
 | **self-archive** | `self-archive.md` (full file) | **EVIDENCE** — chronological, **multicategory** activity spine + § VIII gated approved (voice + non-voice) |
 | **self-library** | self-library.md | Curated return-to store of references, canon works, and influential media |
 | **self-memory** | self-memory.md | Short/medium/long continuity; **non-Record** and prunable (not “only session-length”); **chronological** prose; narrower than EVIDENCE / self-archive |
-| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self |
+| **self-voice** | Voice / bot (e.g. bot/bot.py) | Queryable interface that speaks the Record when queried; renders self-skill-think, self-skill-write, and the rest of the companion self (including WORK/STEWARD split files when present) |
 
 **Adjacent but separate:** work territories and instance work contexts may use full LLM/tool capability and may produce artifacts or staged candidates, but they are not part of the self-skill taxonomy and do not automatically enter the Record.
 

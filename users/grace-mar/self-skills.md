@@ -5,12 +5,13 @@ Version: 0.1 (Initial)
 Created: February 2026
 Status: EMPTY
 
-**Two Record-bound skill modules:**
+**Record-bound skill modules:**
 
 | Module | File | Scope |
 |--------|------|-------|
 | **skill-think** | [skill-think.md](skill-think.md) | Intake, learning, comprehension (THINK, MATH, CHINESE) |
 | **skill-write** | [skill-write.md](skill-write.md) | Production (text, journal, stories) |
+| **skill-steward** | [skill-steward.md](skill-steward.md) | Governance literacy — gate vocabulary, chat vs Record, consent-aware review (STEWARD) |
 
 **WORK** (separate from SKILLS): [work-alpha-school.md](work-alpha-school.md) — school context; [work-jiang.md](work-jiang.md) — Jiang project.
 

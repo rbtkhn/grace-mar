@@ -33,7 +33,7 @@ They may differ temporarily during staged catch-up work. Do not force them into 
 - **Concept docs** — e.g. concept.md, generalized framework
 - **Protocol docs** — e.g. identity-fork-protocol (short form or full spec if maintained here)
 - **Seed-phase definition** — what seed is, what it produces, that it is the only creation path
-- **SELF / self-knowledge, self-identity, self-curiosity, self-personality / self-skill-think / self-skill-write / self-skill-work / self-evidence / recursion-gate / self-memory templates** — schema and structure only; instance keeps its own copies and updates them to match the template when upgrading
+- **SELF / self-knowledge, self-identity, self-curiosity, self-personality / self-skill-think / self-skill-write / self-skill-work / self-skill-steward / self-evidence / recursion-gate / self-memory templates** — schema and structure only; instance keeps its own copies and updates them to match the template when upgrading
 - **Template-level governance** — pipeline rule, knowledge boundary, operating modes (e.g. in AGENTS.md or equivalent in the instance, derived from template guidance)
 
 The instance **compares** template docs and templates with its own, **merges** changes into its files, and runs any validation (e.g. governance checker, validate-integrity). There is **no** automated overwrite of `users/<id>/`.
@@ -42,7 +42,7 @@ The instance **compares** template docs and templates with its own, **merges** c
 
 ## Never Overwrite with Template
 
-- **`users/<id>/`** — The Record (SELF, self-skill-think, self-skill-write, self-skill-work, self-evidence, etc.) for a real companion. Template has no Record; instance must never replace it with template content.
+- **`users/<id>/`** — The Record (SELF, self-skill-think, self-skill-write, self-skill-work, self-skill-steward, self-evidence, etc.) for a real companion. Template has no Record; instance must never replace it with template content.
 - **Instance-specific config** — Bot tokens, instance domains, PRP output paths, etc.
 - **Instance-only code** — Bot, pipeline scripts, instance tooling.
 
@@ -103,6 +103,7 @@ When an instance (e.g. Grace-Mar) merges upgrades from companion-self, it should
 | `users/_template/self-skill-think.md` | THINK (self-skill-think) scaffold. |
 | `users/_template/self-skill-write.md` | WRITE (self-skill-write) scaffold. |
 | `users/_template/self-skill-work.md` | WORK (self-skill-work) scaffold. |
+| `users/_template/self-skill-steward.md` | STEWARD (self-skill-steward) scaffold — governance literacy. |
 | `users/_template/self-evidence.md` | Evidence schema/structure scaffold. |
 | `users/_template/recursion-gate.md` | Recursive-gate staging scaffold (candidates at the gate). |
 | `users/_template/self-memory.md` | Self-memory scaffold (short/medium/long; non-Record; optional). |

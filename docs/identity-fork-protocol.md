@@ -104,10 +104,9 @@ No claim may exist without traceability to an artifact or approved source.
 
 For `IX-C`, implementations may enrich entries with optional metadata such as `facet`, `evidence_strength`, `stability`, `valence`, `tension_with`, `scope`, and `constraint`. These fields refine interpretation, but the core contract remains unchanged: personality is stored as observed, evidence-linked, human-approved entries rather than as a personality-test summary.
 
-### 3.4 Skill Executor Model (THINK/WRITE + separate work layer)
+### 3.4 Skill Executor Model (THINK/WRITE + extended split modules + separate work layer)
 
-The SKILLS module may be operationalized as two semi-independent executors:
-`THINK` and `WRITE`. **Standard labels:** **self-skill-think** and **self-skill-write** (see [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-)).
+The SKILLS module may be operationalized as semi-independent executors. The **core pair** is `THINK` and `WRITE`. **Standard labels:** **self-skill-think** and **self-skill-write** (see [ID-TAXONOMY](id-taxonomy.md#standard-capability-labels-self-skill-)). **Template split layouts** may add **self-skill-work** (`WORK`) and **self-skill-steward** (`STEWARD` — governance literacy at the gate; not merge authority).
 
 The work / execution layer is separate. It may have its own territory-specific executors, but those are not self-skill modules.
 

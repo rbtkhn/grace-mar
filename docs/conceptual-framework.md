@@ -56,7 +56,7 @@ Operational path: **THINK -> Record -> WRITE-through-Voice**.
 - **self-knowledge** (self.md IX-A) — **SELF-KNOWLEDGE**: identity-facing facts about the companion, not civilization-scale reference corpora
 - **self-curiosity** (self.md IX-B)
 - **self-personality** (self.md IX-C)
-- **self-skill-think**, **self-skill-write** (`self-skills.md` capability index; subfiles `skill-think.md` / `skill-write.md`)
+- **self-skill-think**, **self-skill-write** (`self-skills.md` capability index; subfiles `skill-think.md` / `skill-write.md`); optional **self-skill-work**, **self-skill-steward** (split template or `skill-steward.md`)
 - **self-archive** (`self-archive.md`) — canonical **EVIDENCE**: full activity spine (READ / WRITE / CREATE / ACT / media) **plus** § VIII gated approved log; **chronological within and across entries**, and **expansive, multicategory, multimodal** (typed sections, ids, artifacts, merges through the gate)
 - **self-library** (self-library.md) — **SELF-LIBRARY**: reference-facing governed domains; **CIV-MEM** is a sub-library here, not identity
 - **self-memory** (`self-memory.md`; legacy `memory.md`) — **short / medium / long** horizons for continuity and meta pointers; **governance-ephemeral** (outside gate, prunable) **≠** “short-term only”; **mostly chronological** (time-ordered thread within horizons); **narrower and primarily textual** than self-archive; not Record (see [memory-template.md](memory-template.md))
@@ -70,7 +70,7 @@ The Voice renders the full Record when it speaks: it can draw on self-knowledge,
 
 **WORK execution (skill-work and territories).** In discussions of **skill-work** and **WORK territories** (e.g. `docs/skill-work/`, operator runbooks, advisor **mirrors**, template diffs), **WORK execution** names the **operator + scripts + AI assistant** that drafts, syncs, and maintains those surfaces. It is **not** a fourth chamber beside Mind / Record / Voice: **Mind** stays sovereign; **Record** and **Voice** remain the companion-facing canon. Work in this layer crosses into the Record **only** through the gate (staged candidates → companion approval → merge). **Optional** alignment of **pattern** or **advisor** docs with a source tree (mirror / track / merge on a rhythm) is operator–tooling hygiene **until** a change would alter protocol, merged Record truth, or Voice obligations — then it is **gate-relevant** (stage or explicit companion policy), not silent background sync.
 
-The structure is intentionally layered: three-dimension mind (knowledge, curiosity, personality), two Record-bound skill modules (think, write), supporting stores (**self-archive** as **chronological, expansive, multicategory, multimodal** EVIDENCE; **self-library**; **self-memory** as **chronological** but **slim** prose across **short/medium/long** horizons — non-Record continuity), and the Voice that speaks the Record.
+The structure is intentionally layered: three-dimension mind (knowledge, curiosity, personality), core Record-bound skill modules (**think**, **write**) plus optional split surfaces (**work**, **steward**), supporting stores (**self-archive** as **chronological, expansive, multicategory, multimodal** EVIDENCE; **self-library**; **self-memory** as **chronological** but **slim** prose across **short/medium/long** horizons — non-Record continuity), and the Voice that speaks the Record.
 
 See [ID-TAXONOMY](id-taxonomy.md) for standard labels and locations.
 

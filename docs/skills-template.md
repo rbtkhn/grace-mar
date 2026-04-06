@@ -41,9 +41,11 @@ Grace-Mar observes, records, and infers capability from accumulated evidence.
 
 SKILLS now organizes under **two Record-bound modules: THINK and WRITE**. These are the capability containers that describe what the companion can do **inside the Record**. They are evidence-linked, gated, and constrained by the Record's knowledge boundary.
 
+**Split-template extensions:** The companion-self **`users/_template/`** scaffold may also ship **self-skill-work.md** (making/doing — not the same as operator **`docs/skill-work/`** territories) and **self-skill-steward.md** (**STEWARD** — governance literacy at the gate; not merge authority). See [skills-modularity.md](skills-modularity.md) §1–2 and [concept.md](concept.md) §4.
+
 ### II-A. Separate work / execution layer
 
-**WORK is no longer a self-skill module.** Work now lives in a separate execution layer:
+**Operator work territories are not self-skill modules.** Execution and runbooks live in a separate layer (below). That is distinct from the optional **self-skill-work.md** *file* on the companion-self split template, which holds **Record-bound** project/making **capability** evidence — see [skills-modularity.md](skills-modularity.md). Work now lives in this execution layer:
 
 - `docs/skill-work/work-*/` = reusable **work territories**
 - `users/[id]/work-*.md` = instance **work contexts**

@@ -27,6 +27,7 @@ def _minimal_profile(tmp_path: Path) -> Path:
     for n in (
         "self-skills.md",
         "skill-think.md",
+        "skill-steward.md",
         "work-alpha-school.md",
         "work-jiang.md",
         "self-archive.md",

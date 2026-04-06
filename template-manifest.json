@@ -346,6 +346,11 @@
       "optional": false
     },
     {
+      "path": "users/_template/self-skill-steward.md",
+      "description": "STEWARD (self-skill-steward) scaffold — governance literacy and gate participation.",
+      "optional": false
+    },
+    {
       "path": "users/_template/self-work.md",
       "description": "Cross-lane self-work control-plane scaffold.",
       "optional": false

@@ -80,6 +80,7 @@ def _materialize_git_ref(*, repo_root: Path, git_ref: str, user_id: str, dest: P
         "self.md",
         "skill-think.md",
         "skill-write.md",
+        "skill-steward.md",
         "work-alpha-school.md",
         "work-jiang.md",
     ]

@@ -2,7 +2,7 @@
   "version": "1.2",
   "grace_mar": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-03-31T22:18:37.425712",
+  "generated_at": "2026-04-05T17:52:55.730423",
   "checksum": "2dfa144f2ffdc1d40ddf3c134732bb7c45490a210c78c90ecff4155b84e64cc9",
   "runtime_mode": "adjunct_runtime",
   "runtime_modes": {
@@ -27,6 +27,7 @@
     "SELF/IX-C",
     "SKILLS/THINK",
     "SKILLS/WRITE",
+    "SKILLS/STEWARD",
     "WORK/context",
     "EVIDENCE/activity_log",
     "EVIDENCE/writing_log",
@@ -89,7 +90,7 @@
     },
     "SKILLS": {
       "type": "object",
-      "description": "Record-bound capability containers (THINK, WRITE)"
+      "description": "Record-bound capability containers (THINK, WRITE; optional STEWARD governance literacy)"
     },
     "WORK": {
       "type": "object",
@@ -121,7 +122,7 @@
   "intent_snapshot": {
     "ok": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-03-31T22:18:37.423365",
+    "generated_at": "2026-04-05T17:52:55.724666",
     "source": "users/grace-mar/intent.md",
     "goals": {
       "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",

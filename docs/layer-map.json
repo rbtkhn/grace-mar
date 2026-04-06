@@ -2,7 +2,7 @@
   "version": "1.0",
   "layers": {
     "self": ["self-personality", "self-curiosity", "self-memory", "self-identity", "self-knowledge"],
-    "skill": ["self-skill-think", "self-skill-write", "self-skill-work"],
+    "skill": ["self-skill-think", "self-skill-write", "self-skill-work", "self-skill-steward"],
     "work_coordination": ["self-work"],
     "record_concept": ["core-truth", "operational", "evidence", "transient"],
     "docs": ["long-term-objective.md", "system-tensions-and-mysteries.md", "layer-map.json"]

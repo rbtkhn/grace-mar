@@ -355,7 +355,7 @@ def validate_self_sections(user_dirs: list[Path]) -> list[str]:
 def validate_skills_sections(user_dirs: list[Path]) -> list[str]:
     errors: list[str] = []
     skills_markers = ["## II. CAPABILITY CLAIMS", "## III. CAPABILITY GAPS"]
-    skill_files = ["skill-think.md", "skill-write.md"]
+    skill_files = ["skill-think.md", "skill-write.md", "skill-steward.md"]
     for user_dir in user_dirs:
         try:
             skills_path = resolve_surface_markdown_path(user_dir, "self_skills")
@@ -383,6 +383,7 @@ def validate_derived_exports(user_dirs: list[Path]) -> list[str]:
             skills_path,
             user_dir / "skill-think.md",
             user_dir / "skill-write.md",
+            user_dir / "skill-steward.md",
             user_dir / "self-archive.md",
             user_dir / "self-library.md",
             user_dir / "intent.md",

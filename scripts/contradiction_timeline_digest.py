@@ -31,6 +31,7 @@ RECORD_FILES = (
     "skills.md",  # legacy capability index
     "skill-think.md",
     "skill-write.md",
+    "skill-steward.md",
 )
 
 

@@ -154,7 +154,12 @@ def export_curriculum(
     skills_primary = resolve_surface_markdown_path(profile_dir, "self_skills")
     skills_content = "\n".join(
         _read(p)
-        for p in [skills_primary, profile_dir / "skill-think.md", profile_dir / "skill-write.md"]
+        for p in [
+            skills_primary,
+            profile_dir / "skill-think.md",
+            profile_dir / "skill-write.md",
+            profile_dir / "skill-steward.md",
+        ]
     )
     work_content = _read(profile_dir / "work-alpha-school.md")
     evidence_content = _read(profile_dir / "self-archive.md")

@@ -105,6 +105,7 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
             "SELF/IX-C",
             "SKILLS/THINK",
             "SKILLS/WRITE",
+            "SKILLS/STEWARD",
             "WORK/context",
             "EVIDENCE/activity_log",
             "EVIDENCE/writing_log",
@@ -162,7 +163,10 @@ def generate_manifest(user_id: str = "grace-mar", runtime_mode: str = "adjunct_r
         },
         "schema_hints": {
             "SELF": {"type": "object", "description": "Identity, personality, post-seed growth (IX-A, IX-B, IX-C)"},
-            "SKILLS": {"type": "object", "description": "Record-bound capability containers (THINK, WRITE)"},
+            "SKILLS": {
+                "type": "object",
+                "description": "Record-bound capability containers (THINK, WRITE; optional STEWARD governance literacy)",
+            },
             "WORK": {"type": "object", "description": "Separate work / execution context (territories, plans, delivery state)"},
             "EVIDENCE": {"type": "object", "description": "Activity log, writing, creation; immutable once captured"},
             "RECURSION-GATE": {"type": "object", "description": "Staging area; format documented in AGENTS.md"},

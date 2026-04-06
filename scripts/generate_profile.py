@@ -299,6 +299,7 @@ def collect_data() -> ProfileData:
         resolve_surface_markdown_path(PROFILE_DIR, "self_skills"),
         PROFILE_DIR / "skill-think.md",
         PROFILE_DIR / "skill-write.md",
+        PROFILE_DIR / "skill-steward.md",
     ]
     session_transcript_path = PROFILE_DIR / "session-transcript.md"
     library_path = PROFILE_DIR / "self-library.md"

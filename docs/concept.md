@@ -36,7 +36,7 @@ We use **cognitive fork** only. The fork and the real person grow independently;
 
 ## 3. Record vs. Voice
 
-- **Record** — The documented self (e.g. self.md, self-knowledge.md, self-identity.md, self-curiosity.md, self-personality.md, self-skill-think.md, self-skill-write.md, self-skill-work.md, self-evidence.md). It is its own entity: it started from a snapshot but has its own trajectory. It does not "mimic" or "replicate" the person.
+- **Record** — The documented self (e.g. self.md, self-knowledge.md, self-identity.md, self-curiosity.md, self-personality.md, self-skill-think.md, self-skill-write.md, self-skill-work.md, self-skill-steward.md, self-evidence.md). It is its own entity: it started from a snapshot but has its own trajectory. It does not "mimic" or "replicate" the person.
 - **Voice** — Renders the Record in conversation. When the companion queries, the system generates responses constrained by the Record. That rendering is the Voice.
 
 The Record records; the Voice speaks the Record. The Record does not command; the Voice does not speak unbidden. The Voice's **linguistic style and level** are primarily shaped by self-skill-write (WRITE): vocabulary, tone, and expression in the Record drive how the Voice sounds when queried.
@@ -45,17 +45,18 @@ The Record records; the Voice speaks the Record. The Record does not command; th
 
 ## 4. Education structure
 
-**Identity and instrument.** The Record (including self-knowledge, self-identity, self-curiosity, self-personality, and evidence) is the **identity** — the unique personal representation of the companion-self; the knowledge boundary protects it. The three skill containers (THINK, WRITE, WORK) are **instruments** — modules the companion-self uses to learn, express, and do, in order to satisfy the user's and companion's needs and intentions. Instruments can use any tools (including heavy AI); only human-gated results from their use update the identity.
+**Identity and instrument.** The Record (including self-knowledge, self-identity, self-curiosity, self-personality, and evidence) is the **identity** — the unique personal representation of the companion-self; the knowledge boundary protects it. The skill containers **THINK**, **WRITE**, and **WORK** are **instruments** for learning, expressing, and making; **self-skill-steward (STEWARD)** tracks **governance literacy** — how the companion participates in the gate and boundary vocabulary — also evidence-linked and human-gated, without replacing **Mind** as merge authority. Instruments can use any tools (including heavy AI); only human-gated results from their use update the identity.
 
-Companion-Self education is **structured** around three skill containers:
+Companion-Self education is **structured** around **THINK**, **WRITE**, and **WORK**; **STEWARD** is an additional **split-template** capability surface for membrane participation:
 
 | Structure | Schema tag | Meaning |
 |-----------|------------|---------|
 | **self-skill-think** | THINK | Intake and comprehension: what the companion has consumed and understood (reading, media, lessons). Evidence and edge drive what to read/watch next. *(THINK in Grace-Mar is equivalent: intake and comprehension.)* |
 | **self-skill-write** | WRITE | Expression and voice: what the companion produces (journal, stories, explanations). Evidence of WRITE is evidence of understanding and voice. |
 | **self-skill-work** | WORK | Making and doing: what the companion plans, builds, and ships (projects, creations). **Objectives and intentions** for the user/companion are encoded here; evidence links to self-skill-work and life skills. |
+| **self-skill-steward** | STEWARD | Governance literacy: gate vocabulary, chat vs Record, consent-aware review with a trusted adult; **not** autonomous merge. |
 
-In schema, APIs, and export we use the tags **THINK**, **WRITE**, **WORK**; the canonical names for the **education structure** are **self-skill-think**, **self-skill-write**, **self-skill-work**. All screen-based learning and evidence capture are organized under these three.
+In schema, APIs, and export we use the tags **THINK**, **WRITE**, **WORK**, and **STEWARD** where applicable; the canonical names are **self-skill-think**, **self-skill-write**, **self-skill-work**, **self-skill-steward**. Screen-based learning and evidence capture are organized under THINK/WRITE/WORK; STEWARD is optional and tier-sensitive.
 
 **self-skill-think → self-knowledge, self-identity, self-curiosity, self-personality.** Activity in **self-skill-think** (THINK) is **filtered and distilled** into split growth files of the Record (SELF):
 
@@ -132,7 +133,7 @@ Instances should support: (1) **Reversibility** — rollback or undo of Record c
 
 | Component | In an instance |
 |-----------|----------------|
-| **Record** | `users/<id>/self.md`, `self-knowledge.md`, `self-curiosity.md`, `self-personality.md`, `self-skill-think.md`, `self-skill-write.md`, `self-skill-work.md`, self-evidence.md |
+| **Record** | `users/<id>/self.md`, `self-knowledge.md`, `self-curiosity.md`, `self-personality.md`, `self-skill-think.md`, `self-skill-write.md`, `self-skill-work.md`, `self-skill-steward.md` (optional split), self-evidence.md |
 | **Voice** | Bot or other interface (lives in the instance repo; not in this template) |
 | **Staging** | recursion-gate — candidates at the gate, before merge. To process the gate: [Identity Fork Protocol](identity-fork-protocol.md) § Process the gate. |
 | **Ephemeral context** | self-memory.md (optional; not part of the Record) |

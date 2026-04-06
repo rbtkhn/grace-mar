@@ -47,6 +47,7 @@ SKILLS_PATHS = [
     resolve_surface_markdown_path(PROFILE_DIR, "self_skills"),
     PROFILE_DIR / "skill-think.md",
     PROFILE_DIR / "skill-write.md",
+    PROFILE_DIR / "skill-steward.md",
 ]
 WORK_PATHS = [
     PROFILE_DIR / "work-alpha-school.md",
@@ -55,8 +56,8 @@ WORK_PATHS = [
 EVIDENCE_PATH = PROFILE_DIR / CANONICAL_EVIDENCE_BASENAME
 
 DISK_CACHE_PATH = PROFILE_DIR / ".cache" / "retriever_chunks.pkl"
-# Bump when chunk text shape changes (e.g. EVIDENCE section tags).
-_RETRIEVER_DISK_CACHE_VERSION = 2
+# Bump when chunk text shape changes (e.g. EVIDENCE section tags) or SKILLS_PATHS changes.
+_RETRIEVER_DISK_CACHE_VERSION = 3
 
 # In-process cache for load_record_chunks (invalidated when any source file mtime changes)
 _chunks_cache: list[tuple[str, str]] | None = None
@@ -204,6 +205,7 @@ def load_record_chunks() -> list[tuple[str, str]]:
         resolve_surface_markdown_path(PROFILE_DIR, "self_skills"): "SKILLS",
         PROFILE_DIR / "skill-think.md": "SKILLS/THINK",
         PROFILE_DIR / "skill-write.md": "SKILLS/WRITE",
+        PROFILE_DIR / "skill-steward.md": "SKILLS/STEWARD",
     }
     for p in SKILLS_PATHS:
         if p.exists():

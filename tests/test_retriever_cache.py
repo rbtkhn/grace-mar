@@ -15,7 +15,15 @@ def minimal_user_dir(tmp_path, monkeypatch):
         'her_understanding: "red planet"\n',
         encoding="utf-8",
     )
-    for name in ("self-skills.md", "skill-think.md", "skill-write.md", "work-alpha-school.md", "work-jiang.md", "self-archive.md"):
+    for name in (
+        "self-skills.md",
+        "skill-think.md",
+        "skill-write.md",
+        "skill-steward.md",
+        "work-alpha-school.md",
+        "work-jiang.md",
+        "self-archive.md",
+    ):
         (ud / name).write_text("", encoding="utf-8")
 
     monkeypatch.setenv("GRACE_MAR_USER_ID", uid)
@@ -30,7 +38,12 @@ def minimal_user_dir(tmp_path, monkeypatch):
     monkeypatch.setattr(
         retriever,
         "SKILLS_PATHS",
-        [ud / "self-skills.md", ud / "skill-think.md", ud / "skill-write.md"],
+        [
+            ud / "self-skills.md",
+            ud / "skill-think.md",
+            ud / "skill-write.md",
+            ud / "skill-steward.md",
+        ],
     )
     monkeypatch.setattr(retriever, "WORK_PATHS", [ud / "work-alpha-school.md", ud / "work-jiang.md"])
     monkeypatch.setattr(retriever, "EVIDENCE_PATH", ud / "self-archive.md")
