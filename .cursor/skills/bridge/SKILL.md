@@ -1,7 +1,7 @@
 ---
 name: bridge
 preferred_activation: bridge
-description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four cadence lines from work-cadence-events.md. Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
+description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four events from work-cadence-events.md into **Recent rhythm** prose (no cadence-tail jargon or timestamps in chat). Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
 ---
 
 # Bridge
@@ -29,14 +29,14 @@ This is event-driven: the operator says `bridge` when they're ready. There is no
 
 ---
 
-## Step 0 — Cadence tail (before Step 1 and before bridge log)
+## Step 0 — Recent rhythm (before Step 1 and before bridge log)
 
-**Read first** — a successful bridge appends a **`bridge`** line **after** push (see **Cadence audit** under Step 3). Read the log **before** that happens so this session’s bridge is not included in the tail.
+**Read first** — a successful bridge appends a **`bridge`** line **after** push (see **Cadence audit** under Step 3). Read the log **before** that happens so this session’s bridge is not included in the rhythm window.
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
-2. Take the **last 4** such lines already in the file. If fewer than four exist, use what exists; if none, **Cadence tail (last 4):** _(no prior events)_.
-3. **Synthesize** the same way as **coffee** Step 0: **plain prose** with **concrete anchors** from the four lines (see coffee Step 0 — specifics required, no generic process-only filler).
-4. Place **Cadence tail (last 4):** at the **top** of the **first** bridge reply (before push/sync assessment and before Step 1 file reads are summarized). Same **4** as **coffee** so seal → **`coffee`** tail on the transfer packet stays rhythm-symmetric.
+2. Take the **last 4** such lines already in the file. If fewer than four exist, use what exists; if none, **Recent rhythm:** _(no prior events)_.
+3. **Synthesize** the same way as **coffee** Step 0: **plain prose** with **concrete anchors** from the four lines (see coffee Step 0 — specifics required, no generic process-only filler; **no cadence tail** label, **no timestamps** in chat prose).
+4. Place **Recent rhythm:** at the **top** of the **first** bridge reply (before push/sync assessment and before Step 1 file reads are summarized). Same **4** as **coffee** so seal → **`coffee`** on the transfer packet stays rhythm-symmetric.
 
 If the file is missing or empty below the anchor, note that and continue.
 

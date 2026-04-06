@@ -1,7 +1,7 @@
 ---
 name: dream
 preferred_activation: dream
-description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Before auto_dream.py runs, synthesize the previous eight cadence lines from work-cadence-events.md into the night-close reply. Usually one dream session per day."
+description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Before auto_dream.py runs, synthesize the previous eight events from work-cadence-events.md into **Recent rhythm** prose (no cadence-tail jargon or timestamps in chat). Usually one dream session per day."
 ---
 
 # Dream
@@ -43,16 +43,16 @@ But the default pattern is:
 - many `coffee` sessions are normal
 - one `dream` session is normal
 
-## Step 0 — Cadence tail (before Step 1 scripts)
+## Step 0 — Recent rhythm (before Step 1 scripts)
 
-**Read first** — `auto_dream.py` (and `operator_end_of_day.py`) append a new **`dream`** line when the pass completes successfully, so the log must be read **before** those commands if the tail is to exclude this run.
+**Read first** — `auto_dream.py` (and `operator_end_of_day.py`) append a new **`dream`** line when the pass completes successfully, so the log must be read **before** those commands if the rhythm read is to exclude this run.
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
-2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Cadence tail (last 8):** _(no prior events)_.
-3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences) in human language, **grounded in the eight lines**: which rituals appeared, what **differed** between them (e.g. bridge **refs**, coffee modes, thanks **park** lines, prior dream ok/fail). **Do not** open with a wall of UTC stamps or raw `key=value`; weave the **specific** tokens into sentences (commit shas, park text, integrity/governance outcome). **Avoid** generic closure talk with no tie to those events. Script output below still carries the full machine snapshot.
+2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Recent rhythm:** _(no prior events)_ in the reply.
+3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences), **grounded in the eight lines**: which rituals appeared, what **differed** (bridge commit refs, coffee modes, thanks **park** lines, prior dream ok/fail). **Companion-facing UX:** **do not** use the phrase **cadence tail** in chat; **do not** put **dates, UTC, or clock times** in this prose. **Do not** open with a wall of raw `key=value`; weave **specifics** into sentences (short shas, park text, integrity/governance in ordinary words). **Avoid** generic closure talk with no tie to those events. Script output below still carries the full machine snapshot.
 4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before `self-memory` / integrity lines.
 
-If the file is missing or empty below the anchor, note that under **Cadence tail (last 8)** and continue.
+If the file is missing or empty below the anchor, note that under **Recent rhythm** and continue.
 
 ## Step 1 — Automated actions
 
@@ -99,7 +99,7 @@ This is a maintenance pass, not a merge pass.
 
 Return a short night-close brief with:
 
-- **Cadence tail (last 8):** (synthesis from Step 0 — always first)
+- **Recent rhythm:** (synthesis from Step 0 — always first; never label this **cadence tail**)
 - `self-memory` changed: yes/no
 - integrity: pass/fail
 - governance: pass/fail
@@ -115,7 +115,7 @@ If nothing important changed, say so plainly. A quiet run is success.
 ```md
 ## Dream
 
-- Cadence tail (last 8): (compressed rhythm: e.g. two coffees work-start, one thanks park=…, bridge refs=…, …)
+- Recent rhythm: (e.g. two work-start coffees, a thanks pause with a short park line, then bridge with two short commit refs)
 - self-memory changed: yes
 - integrity: pass
 - governance: pass
@@ -130,7 +130,7 @@ Or, when something needs attention:
 ```md
 ## Dream
 
-- Cadence tail (last 8): (compressed rhythm from Step 0)
+- Recent rhythm: (compressed rhythm from Step 0, no timestamps in chat)
 - self-memory changed: yes
 - integrity: pass
 - governance: pass
@@ -192,7 +192,7 @@ Usually one `dream` session per day is normal.
 |------|--------|-------------|
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–E menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
-| **During day** | `thanks` (micro-pause) | Synthesis of prior two cadence lines + optional park + one telemetry line — no maintenance stack |
+| **During day** | `thanks` (micro-pause) | Synthesis of prior two log events (recent rhythm) + optional park + one telemetry line — no maintenance stack |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 

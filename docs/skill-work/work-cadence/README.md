@@ -69,19 +69,21 @@ Signing-off **`coffee`** (closeout mode) is a **lighter** alternative to `bridge
 2. **Bridge → next thread:** Transfer prompt (packet contract) — ends with a lone **`coffee`** line for cold start when that contract applies.
 3. **All beats → audit trail:** [work-cadence-events.md](work-cadence-events.md) — one append-only line per successful leaf run (`scripts/log_cadence_event.py`). This file is **operator ephemera**: rhythm telemetry, not Record.
 
-### Cadence tail synthesis (agent-facing)
+### Step 0 recent rhythm (companion-facing)
 
-Skills may ask the agent to **read** `work-cadence-events.md` **before** running scripts that **append** a new line at the end of the run, then **synthesize** recent events into the reply so the operator sees **recent rhythm** without opening the log.
+Skills may ask the agent to **read** `work-cadence-events.md` **before** running scripts that **append** a new line at the end of the run, then **synthesize** recent events into the reply so the companion sees **recent rhythm** without opening the log.
+
+**Companion-facing UX (new users):** In chat, label this block **Recent rhythm** (or lead with prose only). **Do not** use internal jargon **cadence tail** in replies. **Do not** put **dates, UTC, or clock times** in the synthesized prose—use sequence and plain language (“after bridge,” “then a thanks pause”). The log file still stores machine-readable timestamps; the synthesis is for humans.
 
 | Ritual | Prior events synthesized | Rationale |
 |--------|----------------------------|-----------|
 | **thanks** | **2** | Minimal pause — just enough “what just happened” to anchor the bookmark |
 | **coffee** | **4** | Reorientation — roughly half a day of mixed beats at typical spacing |
-| **bridge** | **4** | Same depth as **coffee** — the next session almost always opens with **`coffee`** on the packet tail; matching tail length keeps seal → sip symmetric |
+| **bridge** | **4** | Same depth as **coffee** — the next session almost always opens with **`coffee`** on the packet tail; matching window length keeps seal → sip symmetric |
 | **dream** | **8** | Day-close — wider window to see coffee/bridge/thanks/dream mix before consolidation |
-| **harvest** | **none** | The **Harvest Packet** is already dense context for a midstream receiver; a cadence tail would duplicate rhythm info without adding load-bearing substance. Optional **`harvest`** cadence **telemetry** (`--log`) does not require synthesis in the reply |
+| **harvest** | **none** | The **Harvest Packet** is already dense context for a midstream receiver; prepending the same rhythm strip would duplicate info without clear load-bearing value. Optional **`harvest`** cadence **telemetry** (`--log`) does not require synthesis in the reply |
 
-Synthesis should be **plain prose** with **specific anchors** from the log (which rituals, commit refs on bridge, coffee modes, thanks park lines, dream outcomes)—**not** generic process commentary that could apply without reading the file. Still **avoid** opening with a wall of UTC stamps or raw `key=value`; weave facts into sentences. Technical detail also lives in Step 1 script output. If the log is empty or short, skills specify fallbacks.
+Synthesis should be **plain prose** with **specific anchors** from the log (which rituals, commit refs on bridge, coffee modes, thanks park lines, dream outcomes)—**not** generic process commentary that could apply without reading the file. Still **avoid** opening with a wall of raw `key=value`; weave facts into sentences. Technical detail also lives in Step 1 script output. If the log is empty or short, skills specify fallbacks.
 
 ### Choreography vs governance
 
@@ -89,11 +91,11 @@ Choreography operates in **Maintenance / operational** territory. It does **not*
 
 ### Where to read the executable spec
 
-- [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — Step 0 cadence tail, Step 1 scripts, A–E menu
-- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — pause beat + cadence tail (2)
-- [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — Step 0 cadence tail (8), `auto_dream.py`, handoff
-- [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — Step 0 cadence tail (4), seal + transfer prompt
-- [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — packet contract (no trailing `coffee`; no cadence tail synthesis)
+- [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — Step 0 recent rhythm, Step 1 scripts, A–E menu
+- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — pause beat + recent rhythm (2 lines)
+- [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — Step 0 recent rhythm (8), `auto_dream.py`, handoff
+- [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — Step 0 recent rhythm (4), seal + transfer prompt
+- [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — packet contract (no trailing `coffee`; no Step 0 rhythm synthesis in reply)
 
 ---
 
@@ -338,7 +340,7 @@ If the **same** troubleshooting bullet applies **twice in a short window**, add 
 ## Adjacent surfaces
 
 - [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md) — coffee trigger
-- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — thanks micro-pause (cadence tail ×2)
+- [.cursor/skills/thanks/SKILL.md](../../../.cursor/skills/thanks/SKILL.md) — thanks micro-pause (recent rhythm ×2)
 - [.cursor/skills/dream/SKILL.md](../../../.cursor/skills/dream/SKILL.md) — dream trigger
 - [.cursor/skills/bridge/SKILL.md](../../../.cursor/skills/bridge/SKILL.md) — bridge trigger
 - [.cursor/skills/harvest/SKILL.md](../../../.cursor/skills/harvest/SKILL.md) — harvest trigger

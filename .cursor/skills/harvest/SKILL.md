@@ -131,7 +131,7 @@ Output **one** markdown block following **[harvest-packet-contract](../../../doc
 
 **Cadence telemetry** (`log_cadence_event.py --kind harvest` or `session_harvest.py --log`) stays **optional**; this loop does not require it. When logging, pass **`--cursor-model`** (or **`CURSOR_MODEL`**) so the line matches bridge/coffee/dream **Agent surface** audit.
 
-**Cadence tail synthesis:** **None.** Unlike **thanks** / **coffee** / **dream** / **bridge**, **harvest** does **not** prepend a read of `work-cadence-events.md`. The **Session Harvest Packet** is already the compressed handoff; adding a cadence rhythm strip would overlap the packet’s arc without clear load-bearing value. See [work-cadence README — Cadence tail synthesis](../../../docs/skill-work/work-cadence/README.md#cadence-tail-synthesis-agent-facing).
+**Step 0 recent rhythm in reply:** **None.** Unlike **thanks** / **coffee** / **dream** / **bridge**, **harvest** does **not** prepend a read of `work-cadence-events.md`. The **Session Harvest Packet** is already the compressed handoff; adding the same rhythm strip would overlap the packet’s arc without clear load-bearing value. See [work-cadence README — Step 0 recent rhythm](../../../docs/skill-work/work-cadence/README.md#step-0-recent-rhythm-companion-facing).
 
 ---
 
