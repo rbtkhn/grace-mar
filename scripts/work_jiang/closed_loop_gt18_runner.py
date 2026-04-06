@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
-"""One-shot: complete closed-loop rounds 6–17 (predict → reveal → advance → bundle).
+"""Mechanical glue: reveal → advance → bundle for a fixed round range.
 
-BLIND.md replay blocks are injected separately (see inject script). This only handles
-scratch artifacts + subprocess calls. Operator lane; not CI."""
+Does **not** author honest blind predictions. If `gt-predict-*.md` was written with
+**arc/oracle** knowledge, this script only proves **I/O order** — not calibration.
+
+BLIND replay prose is injected separately (`inject_blind_closed_loop_replays.py`).
+Operator lane; not CI."""
 
 from __future__ import annotations
 

@@ -40,3 +40,4 @@ Append-only **promoted** rules from forward-chain runs. **Cap:** ~15 bullets; me
 | 2026-04-08 | **v0.4.1 (skill note):** Closed loop = prior **Adjustment** feeds next round; batch `run_blind_chain_rounds.py` not calibration. |
 | 2026-04-08 | **v0.4.2:** `forward_chain_blind_bundle.py` **advance** + **`bundle --closed-loop`** gate (state file + non-empty series model); **`--force`** bypass. |
 | 2026-04-06 | **v0.4.3 merge:** Closed-loop replay **gt-04 … gt-18** executed + BLIND **Replay** subsections + JSONL `replay` tail; runner/inject scripts under `scripts/work_jiang/`. |
+| 2026-04-06 | **v0.4.4 (skill):** Agent invariants — prefix-only predictions; explicit **oracle/smoke** labeling; rule `skill-jiang-closed-loop.mdc`. |

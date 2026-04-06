@@ -6,7 +6,7 @@ description: >-
   prefix lectures (NN ≤ k), predict episode k+1, then open and score. Volume IV
   default (game-theory-NN). Anti-leak checklist, templates, log path, recursive
   merges into CURSOR_APPENDIX.md. WORK only; not Record.
-version: 0.4.3
+version: 0.4.4
 tags:
   - operator
   - work-jiang
@@ -63,6 +63,22 @@ Before drafting **round K+1**’s prediction packet, the operator (or agent) **m
 **Then** write hypotheses for **gt-(K+1)** so they **explicitly** reflect what failed or was refined last time (e.g. down-weight a falsified move, add a falsifier suggested by a partial). **Do not** use a fixed template bank for all K unless labeled **smoke / I/O test only** — that does **not** count as calibration.
 
 **Batch helper caveat:** `scripts/work_jiang/run_blind_chain_rounds.py` pre-seeds packets for **engineering** checks of bundle/reveal ordering; it **does not** implement closed-loop learning. For **skill-jiang** as you intend it, run rounds **sequentially** with this section.
+
+### Agent invariants (non-negotiable)
+
+When the operator invokes **skill-jiang**, **closed-loop**, **blind forward chain**, or edits **prediction-tracking** blind artifacts, the assistant **must**:
+
+1. **Prefix-only predictions:** Draft **`gt-predict-(k+1).md` only from** the current **`gt-prefix-k.md`** bundle (plus **prior round** scores/adjustment in BLIND and **`gt-series-model.md`**). **Do not** use: memory of Volume IV order, **H1 text from future rounds** in `lecture-forward-chain-gt-BLIND.md`, **glob/list** of `lectures/game-theory-*.md` for unopened episodes, **YouTube/metadata** for the next title, or **“what usually comes next”** from training data.
+
+2. **No arc-oracle closure:** Finishing **N rounds** or running **bulk scripts** is **not** permission to **shape hypotheses to match known lecture titles**. If the operator wants **I/O smoke** or **oracle replay** (arc-shaped packets for audit only), they must **say so in prose**; the assistant labels the BLIND subsection **`run_mode: oracle_replay`** (or equivalent explicit tag) and does **not** claim **prefix-only calibration**.
+
+3. **Stop vs cheat:** If token pressure makes full-prefix read hard, **narrow read_depth** (H1 + metadata + At a glance + tags per episode) and **say so in the packet** — do **not** substitute **known outcomes** to save tokens.
+
+4. **Runner honesty:** `closed_loop_gt18_runner.py` is **mechanical glue** (reveal → advance → bundle). It does **not** write predictions and **does not** make a run honest; **honesty is entirely** in how **`gt-predict-*.md`** was authored.
+
+5. **Default on conflict:** If instructions conflict (**“complete the chain fast”** vs **closed-loop learning**), **default to prefix-only** and **ask one clarifying question** unless the operator explicitly chooses **smoke / oracle**.
+
+See also: [`.cursor/rules/skill-jiang-closed-loop.mdc`](../../.cursor/rules/skill-jiang-closed-loop.mdc).
 
 ### Mechanical gate (script-enforced)
 
@@ -178,6 +194,7 @@ After **gt-18** is in the prefix, run **one** prediction packet **before** any n
 
 | Version | Notes |
 |---------|--------|
+| 0.4.4 | **Agent tighten:** non-negotiable **prefix-only** prediction invariants; **oracle / smoke** must be explicit + labeled; Cursor rule `skill-jiang-closed-loop.mdc`. |
 | 0.4.3 | **Closed-loop replay through gt-18:** full `advance` + rolling model + `bundle --closed-loop` run; BLIND **Replay** subsections (3–17) + JSONL `run_kind: replay`; `closed_loop_gt18_runner.py` + `inject_blind_closed_loop_replays.py`. |
 | 0.4.2 | **Mechanical closed-loop gate:** `bundle --closed-loop` + `advance --completed-round N`; `gt-closed-loop-state.yaml` + non-empty `gt-series-model.md`; `--force` escape. |
 | 0.4.1 | Document **closed loop**: each round must use prior **Adjustment** (+ optional rolling model); batch template script = I/O smoke only. |

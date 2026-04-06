@@ -1,0 +1,33 @@
+---
+description: skill-jiang blind forward chain — prefix-only predictions, no arc-oracle (WORK)
+globs:
+  - research/external/work-jiang/prediction-tracking/**
+  - scripts/work_jiang/forward_chain_blind_bundle.py
+  - scripts/work_jiang/closed_loop_gt18_runner.py
+  - scripts/work_jiang/inject_blind_closed_loop_replays.py
+  - scripts/work_jiang/run_blind_chain_rounds.py
+  - .cursor/skills/skill-jiang/**
+alwaysApply: false
+---
+
+# skill-jiang — closed-loop agent discipline
+
+Applies when work touches **blind forward prediction** on Jiang Predictive History (Volume IV `game-theory-*`), **scratch** prediction files, **BLIND** log, or the **bundle / advance / reveal** scripts.
+
+## Hard rules
+
+1. **Single source for hypotheses:** Before `reveal`, the only lecture content for predicting episode **k+1** is **`gt-prefix-k.md`** (the bundle output). **Never** open `game-theory-(k+1)-*.md` or use filenames / index / YAML to learn the next title during calibration.
+
+2. **BLIND is not a cheat sheet:** Do not copy **Resolution** or **Prediction packet** text from **later** rounds in `lecture-forward-chain-gt-BLIND.md` when drafting the current round. Prior **Adjustment** + **scores** for the **immediately completed** round only.
+
+3. **Oracle runs are opt-in:** If the operator asks to **replay quickly**, **fill the chain**, or **match the known arc**, treat it as **`run_mode: oracle_replay`** (or they must say **smoke / I/O only**). **Do not** present oracle-shaped packets as **prefix-only calibration**.
+
+4. **Scripts:** `run_blind_chain_rounds.py` = **template smoke**. `closed_loop_gt18_runner.py` = **mechanical** reveal/advance/bundle only — **zero** epistemic guarantee on predictions.
+
+5. **Conflict default:** If speed vs honesty conflicts → **honesty** (prefix-only or stated summary read_depth); **ask** if unclear.
+
+## Self-check before saving `gt-predict-*.md`
+
+- [ ] Could I write this without knowing the next lecture’s title?
+- [ ] Did I avoid globbing `lectures/` for episodes **> k**?
+- [ ] Is this round labeled **oracle_replay** if I used outside knowledge?

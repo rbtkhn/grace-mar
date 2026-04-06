@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Inject ### Replay (closed-loop calibration) blocks after rounds 6–17 in BLIND.md."""
+"""Inject ### Replay blocks into BLIND.md (documentation maintenance).
+
+Does **not** validate prediction honesty. If replays describe **prefix-only** runs,
+that must match how `gt-predict-*.md` was actually authored — this script does not check."""
 
 from __future__ import annotations
 
