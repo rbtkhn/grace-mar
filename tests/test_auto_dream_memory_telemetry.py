@@ -7,8 +7,11 @@ Dream / self-memory normalization telemetry (docs/memory-self-audit.md § Teleme
 
 from __future__ import annotations
 
+import re
 import sys
+from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 
 import pytest
 
@@ -22,10 +25,21 @@ import auto_dream  # noqa: E402
 FIXTURE = ROOT / "tests/fixtures/self_memory_normalize_telemetry_note.md"
 
 
+def _fixture_date() -> date:
+    """Extract the date from the fixture's 'Last rotated:' line."""
+    text = FIXTURE.read_text(encoding="utf-8")
+    m = re.search(r"^Last rotated:\s*(\d{4}-\d{2}-\d{2})", text, re.MULTILINE)
+    assert m, "fixture must contain a 'Last rotated: YYYY-MM-DD' line"
+    return date.fromisoformat(m.group(1))
+
+
 def test_normalize_fixture_round_trip_collapsed_count_telemetry_note():
     """Fixed fixture reproduces Telemetry note pairing (see memory-self-audit.md)."""
     before = FIXTURE.read_text(encoding="utf-8")
-    after, added, deduped, collapsed = auto_dream.normalize_self_memory_content(before)
+    with patch("auto_dream.date") as mock_date:
+        mock_date.today.return_value = _fixture_date()
+        mock_date.side_effect = lambda *a, **kw: date(*a, **kw)
+        after, added, deduped, collapsed = auto_dream.normalize_self_memory_content(before)
     assert after == before, "round-trip must be byte-identical for this fixture"
     assert collapsed == 3
     assert deduped == 0
@@ -39,7 +53,10 @@ def test_maintain_self_memory_exposes_telemetry_fields(tmp_path):
         FIXTURE.read_text(encoding="utf-8"),
         encoding="utf-8",
     )
-    r = auto_dream.maintain_self_memory(user_id="demo", users_dir=tmp_path / "users", apply=False)
+    with patch("auto_dream.date") as mock_date:
+        mock_date.today.return_value = _fixture_date()
+        mock_date.side_effect = lambda *a, **kw: date(*a, **kw)
+        r = auto_dream.maintain_self_memory(user_id="demo", users_dir=tmp_path / "users", apply=False)
     assert r.blank_lines_collapsed == 3
     assert r.changed is False
     assert r.deduped_lines == 0
@@ -57,14 +74,17 @@ def test_run_auto_dream_summary_self_memory_json_keys(tmp_path):
         "# Gate\n\n## Candidates\n\n## Processed\n",
         encoding="utf-8",
     )
-    summary = auto_dream.run_auto_dream(
-        user_id="demo",
-        users_dir=tmp_path / "users",
-        apply=False,
-        emit_event=False,
-        write_artifacts=False,
-        strict_mode=False,
-    )
+    with patch("auto_dream.date") as mock_date:
+        mock_date.today.return_value = _fixture_date()
+        mock_date.side_effect = lambda *a, **kw: date(*a, **kw)
+        summary = auto_dream.run_auto_dream(
+            user_id="demo",
+            users_dir=tmp_path / "users",
+            apply=False,
+            emit_event=False,
+            write_artifacts=False,
+            strict_mode=False,
+        )
     mem = summary.get("self_memory") or {}
     assert "changed" in mem
     assert "blank_lines_collapsed" in mem
