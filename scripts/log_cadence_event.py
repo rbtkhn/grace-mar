@@ -4,6 +4,8 @@ Append a cadence event (coffee / dream / bridge / harvest / thanks) to work-cade
 
 One line per run. Not Record truth; not self-memory; not a replacement for
 night-handoff.json or session-transcript.md. See docs/skill-work/work-cadence/.
+Skills summarize recent lines for the companion as **Recent rhythm** in plain language (no
+clock times in that prose); the lines below remain machine-audit format.
 
 Usage:
   python3 scripts/log_cadence_event.py --kind dream -u demo --ok --mode standard \
@@ -36,13 +38,13 @@ KINDS = ("coffee", "dream", "bridge", "harvest", "thanks")
 HEADER = (
     "# Cadence events\n"
     "\n"
-    "> Append-only audit of **coffee**, **dream**, **bridge**, and optional **harvest** runs.\n"
+    "> Append-only audit of **coffee**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.\n"
     "> **Not** Record truth. **Not** self-memory. **Not** a replacement for\n"
     "> handoff artifacts or `session-transcript.md`.\n"
     ">\n"
-    "> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) ok=… [mode=…] cursor_model=… …`\n"
-    ">\n"
-    "> See [work-cadence README](README.md).\n"
+    "> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value …` (machine-audit line).\n"
+    "> **Companion-facing:** Skills read this file and speak **Recent rhythm** in chat — plain\n"
+    "> language, concrete specifics, no clock times in that prose. See [work-cadence README](README.md).\n"
     "\n"
     f"{ANCHOR}\n"
 )

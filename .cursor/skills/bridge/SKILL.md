@@ -1,7 +1,7 @@
 ---
 name: bridge
 preferred_activation: bridge
-description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four events from work-cadence-events.md into **Recent rhythm** prose (no cadence-tail jargon or timestamps in chat). Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
+description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
 ---
 
 # Bridge
@@ -35,7 +35,7 @@ This is event-driven: the operator says `bridge` when they're ready. There is no
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
 2. Take the **last 4** such lines already in the file. If fewer than four exist, use what exists; if none, **Recent rhythm:** _(no prior events)_.
-3. **Synthesize** the same way as **coffee** Step 0: **plain prose** with **concrete anchors** from the four lines (see coffee Step 0 — specifics required, no generic process-only filler; **no cadence tail** label, **no timestamps** in chat prose).
+3. **Synthesize** the same way as **coffee** Step 0: **plain prose** with **concrete anchors** from the four lines (see coffee Step 0 — specifics required, no generic process-only filler; **no timestamps** in chat prose).
 4. Place **Recent rhythm:** at the **top** of the **first** bridge reply (before push/sync assessment and before Step 1 file reads are summarized). Same **4** as **coffee** so seal → **`coffee`** on the transfer packet stays rhythm-symmetric.
 
 If the file is missing or empty below the anchor, note that and continue.
@@ -180,7 +180,7 @@ This writes `users/grace-mar/daily-handoff/last-bridge-state.json` (gitignored).
 
 Now that the recommended repos are sealed and pushed (or explicitly skipped with operator consent), synthesize the readings from Step 1 into a single markdown block following this exact format. The canonical section contract lives in companion-self at `docs/skill-work/work-cadence/bridge-packet-contract.md`. Include **`## Agent surface`** with **Cursor model:** copied from the **Cursor UI** (model picker for this composer); in Cursor that label is usually visible — use `unknown` only if it is not.
 
-**Coffee tail (required):** The copyable transfer prompt must end with a **final line that is exactly `coffee`** (lowercase, alone on its line, not inside a code fence). That way the operator’s **first message** in the new session is both the bridge packet **and** the `coffee` skill trigger — work-start Step 1 runs immediately on top of this context. Do not tell the operator to send a second message just for `coffee`.
+**Closing `coffee` line (required):** The copyable transfer prompt must end with a **final line that is exactly `coffee`** (lowercase, alone on its line, not inside a code fence). That way the operator’s **first message** in the new session is both the bridge packet **and** the `coffee` skill trigger — work-start Step 1 runs immediately on top of this context. Do not tell the operator to send a second message just for `coffee`. (This is **not** the same as Step 0 **Recent rhythm** — it is the packet’s required last line.)
 
 ```markdown
 # Session Bridge — [YYYY-MM-DD]
@@ -237,7 +237,7 @@ Skip lanes with no recent activity.]
 ## Instructions for next session
 **Operator:** Send everything from `# Session Bridge` through the line below as the **only** first message in a new Cursor session (one paste). **Assistant:** Context is above; run work-start **coffee** Step 1 now (see `.cursor/skills/coffee/SKILL.md`). The next line is the skill trigger.
 
-**Parallel import:** If you also need a dense packet for an **already-running** session, run **harvest** separately after this paste — do not append a second packet here (keeps the `coffee` tail unambiguous).
+**Parallel import:** If you also need a dense packet for an **already-running** session, run **harvest** separately after this paste — do not append a second packet here (keeps the closing **`coffee`** line unambiguous).
 
 coffee
 ```
@@ -291,7 +291,7 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 
 ## Related files
 
-- `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (tail depths including bridge ×4, harvest ×0)
+- `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (recent rhythm window depths: bridge ×4, harvest ×0)
 - `.cursor/skills/coffee/SKILL.md` — morning cadence (run after pasting bridge)
 - `.cursor/skills/dream/SKILL.md` — nightly cadence (run before bridge if end of day)
 - `.cursor/skills/harvest/SKILL.md` — parallel-session import (separate from bridge paste)

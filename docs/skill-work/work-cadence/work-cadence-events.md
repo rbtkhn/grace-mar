@@ -1,12 +1,12 @@
 # Cadence events
 
-> Append-only audit of **coffee**, **dream**, **bridge**, and optional **harvest** runs.
+> Append-only audit of **coffee**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.
 > **Not** Record truth. **Not** self-memory. **Not** a replacement for
 > handoff artifacts or `session-transcript.md`.
 >
-> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value ...`
->
-> See [work-cadence README](README.md).
+> **Format:** `- **YYYY-MM-DD HH:MM UTC** — kind (user) key=value …` (machine-audit line).
+> **Companion-facing:** Skills read this file and speak **Recent rhythm** in chat — plain
+> language, concrete specifics, no clock times in that prose. See [work-cadence README](README.md).
 
 _(Append below this line.)_
 - **2026-04-05 21:07 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=false reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
@@ -39,3 +39,4 @@ _(Append below this line.)_
 - **2026-04-06 05:36 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=false reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
 - **2026-04-06 12:10 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
 - **2026-04-06 14:52 UTC** — thanks (grace-mar) ok=true cursor_model=unknown park=none
+- **2026-04-06 15:44 UTC** — thanks (grace-mar) ok=true cursor_model=unknown park=none

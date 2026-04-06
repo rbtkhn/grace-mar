@@ -172,7 +172,7 @@
     },
     {
       "path": "docs/skill-work/work-cadence/harvest-packet-contract.md",
-      "description": "Session Harvest Packet contract — section headings and rules; midstream import (no coffee tail); sibling to bridge packet.",
+      "description": "Session Harvest Packet contract — section headings and rules; midstream import (no trailing coffee line); sibling to bridge packet.",
       "optional": true
     },
     {

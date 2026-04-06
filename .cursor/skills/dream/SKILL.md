@@ -1,7 +1,7 @@
 ---
 name: dream
 preferred_activation: dream
-description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Before auto_dream.py runs, synthesize the previous eight events from work-cadence-events.md into **Recent rhythm** prose (no cadence-tail jargon or timestamps in chat). Usually one dream session per day."
+description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Before auto_dream.py runs, synthesize the previous eight events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
 ---
 
 # Dream
@@ -49,7 +49,7 @@ But the default pattern is:
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
 2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Recent rhythm:** _(no prior events)_ in the reply.
-3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences), **grounded in the eight lines**: which rituals appeared, what **differed** (bridge commit refs, coffee modes, thanks **park** lines, prior dream ok/fail). **Companion-facing UX:** **do not** use the phrase **cadence tail** in chat; **do not** put **dates, UTC, or clock times** in this prose. **Do not** open with a wall of raw `key=value`; weave **specifics** into sentences (short shas, park text, integrity/governance in ordinary words). **Avoid** generic closure talk with no tie to those events. Script output below still carries the full machine snapshot.
+3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences), **grounded in the eight lines**: which rituals appeared, what **differed** (bridge commit refs, coffee modes, thanks **park** lines, prior dream ok/fail). **Companion-facing UX:** label **Recent rhythm** (or prose only); **do not** put **dates, UTC, or clock times** in this prose. **Do not** open with a wall of raw `key=value`; weave **specifics** into sentences (short shas, park text, integrity/governance in ordinary words). **Avoid** generic closure talk with no tie to those events. Script output below still carries the full machine snapshot.
 4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before `self-memory` / integrity lines.
 
 If the file is missing or empty below the anchor, note that under **Recent rhythm** and continue.
@@ -99,7 +99,7 @@ This is a maintenance pass, not a merge pass.
 
 Return a short night-close brief with:
 
-- **Recent rhythm:** (synthesis from Step 0 — always first; never label this **cadence tail**)
+- **Recent rhythm:** (synthesis from Step 0 — always first)
 - `self-memory` changed: yes/no
 - integrity: pass/fail
 - governance: pass/fail

@@ -1,7 +1,7 @@
 ---
 name: coffee
 preferred_activation: coffee
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no cadence-tail jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
 ---
 
 # Coffee
@@ -46,8 +46,8 @@ When the operator begins with **`coffee`** (or clearly the same intent; legacy *
 **Read first** — `operator_coffee.py` appends a new **`coffee`** line at the **end** of a successful run, so the log must be read **before** those commands if the rhythm read is to exclude this session.
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
-2. Take the **last 4** such lines already in the file. If there are fewer than four, use what exists; if none, **Recent rhythm:** _(no prior events)_ in the reply (companion-facing label — not “cadence tail”).
-3. **Synthesize in plain prose** — **2–4 short sentences** for a human, **not** a telemetry dump: **do not** lead with a wall of `key=value` pairs. **Companion-facing UX:** **do not** use the phrase **cadence tail** in chat; **do not** put **dates, UTC, or clock times** in this prose (use order and light anchors like “after dream,” “then bridge,” “earlier today” without timestamps). **Must anchor in specifics** from those four lines — name what actually happened (e.g. **bridge** with **commit refs** if present, **coffee** **work-start** vs **standard**, **thanks** **park** text when non-empty, **dream** pass/fail or integrity/governance in ordinary words, **harvest** packet vs not). **Avoid** generic process filler that could apply without reading the file. Do **not** paste raw log lines unless they are already very short.
+2. Take the **last 4** such lines already in the file. If there are fewer than four, use what exists; if none, **Recent rhythm:** _(no prior events)_ in the reply.
+3. **Synthesize in plain prose** — **2–4 short sentences** for a human, **not** a telemetry dump: **do not** lead with a wall of `key=value` pairs. **Companion-facing UX:** label this block **Recent rhythm** (or prose only); **do not** put **dates, UTC, or clock times** in this prose (use order and light anchors like “after dream,” “then bridge,” “earlier today” without timestamps). **Must anchor in specifics** from those four lines — name what actually happened (e.g. **bridge** with **commit refs** if present, **coffee** **work-start** vs **standard**, **thanks** **park** text when non-empty, **dream** pass/fail or integrity/governance in ordinary words, **harvest** packet vs not). **Avoid** generic process filler that could apply without reading the file. Do **not** paste raw log lines unless they are already very short.
 4. In the reply, place **Recent rhythm:** at the **top** of Step 1 content (immediately before script output / warmup paste). Same rule for **signing-off** Step 1 (before `operator_coffee.py --mode closeout` or handoff-only flow).
 
 If the file is missing or empty below the anchor, state that under **Recent rhythm** and continue Step 1.
@@ -126,7 +126,7 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 
 ## Related files
 
-- `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (ordering, handoffs, cadence-tail synthesis depths, harvest vs triad)
+- `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (ordering, handoffs, Step 0 recent rhythm window depths, harvest vs triad)
 - `docs/skill-work/work-coffee/README.md` — territory rationale and boundaries
 - `docs/skill-work/work-coffee/menu-reference.md` — full A–E definitions, cadence, survey track, signing-off add-ons
 - `docs/skill-work/work-coffee/work-coffee-history.md` — lane breadcrumbs

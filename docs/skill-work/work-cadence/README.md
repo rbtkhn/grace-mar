@@ -79,7 +79,7 @@ Skills may ask the agent to **read** `work-cadence-events.md` **before** running
 |--------|----------------------------|-----------|
 | **thanks** | **2** | Minimal pause — just enough “what just happened” to anchor the bookmark |
 | **coffee** | **4** | Reorientation — roughly half a day of mixed beats at typical spacing |
-| **bridge** | **4** | Same depth as **coffee** — the next session almost always opens with **`coffee`** on the packet tail; matching window length keeps seal → sip symmetric |
+| **bridge** | **4** | Same depth as **coffee** — the next session almost always pastes the bridge packet and ends with **`coffee`** on its own line; matching window length keeps seal → sip symmetric |
 | **dream** | **8** | Day-close — wider window to see coffee/bridge/thanks/dream mix before consolidation |
 | **harvest** | **none** | The **Harvest Packet** is already dense context for a midstream receiver; prepending the same rhythm strip would duplicate info without clear load-bearing value. Optional **`harvest`** cadence **telemetry** (`--log`) does not require synthesis in the reply |
 
