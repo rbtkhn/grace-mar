@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T17:12:26Z",
+  "generated_at": "2026-04-06T18:34:34Z",
   "integration_status_counts": {
     "implemented": 11,
     "partial": 2,
@@ -22,7 +22,7 @@
   "provenance_completeness_score": 1.0,
   "provenance_from_gate": false,
   "lane_violation_count": 0,
-  "continuity_block_count": 14,
+  "continuity_block_count": 15,
   "gap_ids_open": [],
   "notes": [
     "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
