@@ -33,3 +33,4 @@ Append-only **promoted** rules from forward-chain runs. **Cap:** ~15 bullets; me
 |------|--------|
 | 2026-04-07 | Scaffold: empty appendix; chain not started. |
 | 2026-04-07 | **v0.2 merge:** Populated heuristics M3–M18 from Volume IV backtest log `lecture-forward-chain-gt-01-18.md`. |
+| 2026-04-07 | **v0.3:** Mechanical blind enforced via `scripts/work_jiang/forward_chain_blind_bundle.py`; retrospective chain remains priors only until re-run blind. |

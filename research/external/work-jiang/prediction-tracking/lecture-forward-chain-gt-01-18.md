@@ -6,6 +6,8 @@
 **Mode:** `lectures-only`  
 **Read depth note:** Rounds use full curated lecture files per [skill-jiang](../../../../.cursor/skills/skill-jiang/SKILL.md) (four levels up to repo root); this log was authored in one implementation pass with strict per-round prefix simulation.
 
+**Blind re-runs:** For **true** blind simulation matching original intent, use `python3 scripts/work_jiang/forward_chain_blind_bundle.py bundle --prefix-end K …` then predict from that bundle only, then `reveal --episode K+1` after the prediction file is saved (see skill-jiang **Mechanical blind runs**). This file is **not** a substitute for that audit trail.
+
 ## Scoring rubric (inline)
 
 | Label | Meaning |

@@ -111,6 +111,10 @@ users/grace-mar/artifacts/civ-mem-encyclopedia/lib-stubs.content.yaml
 # Exploration: deliberation drafts (non-canonical; local only)
 research/exploration/autogen-deliberation/output/*.md
 
+# work-jiang — blind forward-chain scratch (bundle + prediction drafts; see forward_chain_blind_bundle.py)
+research/external/work-jiang/prediction-tracking/scratch/*
+!research/external/work-jiang/prediction-tracking/scratch/README.md
+
 # Misc
 *.pem
 .vercel
