@@ -38,3 +38,4 @@ Append-only **promoted** rules from forward-chain runs. **Cap:** ~15 bullets; me
 | 2026-04-07 | **v0.3:** Mechanical blind enforced via `scripts/work_jiang/forward_chain_blind_bundle.py`; retrospective chain remains priors only until re-run blind. |
 | 2026-04-08 | **v0.4 merge:** Heuristics 13–15 + failure-mode tweak; full blind chain logged (see BLIND.md). |
 | 2026-04-08 | **v0.4.1 (skill note):** Closed loop = prior **Adjustment** feeds next round; batch `run_blind_chain_rounds.py` not calibration. |
+| 2026-04-08 | **v0.4.2:** `forward_chain_blind_bundle.py` **advance** + **`bundle --closed-loop`** gate (state file + non-empty series model); **`--force`** bypass. |

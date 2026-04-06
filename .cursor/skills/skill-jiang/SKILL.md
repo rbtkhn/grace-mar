@@ -6,7 +6,7 @@ description: >-
   prefix lectures (NN ≤ k), predict episode k+1, then open and score. Volume IV
   default (game-theory-NN). Anti-leak checklist, templates, log path, recursive
   merges into CURSOR_APPENDIX.md. WORK only; not Record.
-version: 0.4.1
+version: 0.4.2
 tags:
   - operator
   - work-jiang
@@ -63,6 +63,25 @@ Before drafting **round K+1**’s prediction packet, the operator (or agent) **m
 **Then** write hypotheses for **gt-(K+1)** so they **explicitly** reflect what failed or was refined last time (e.g. down-weight a falsified move, add a falsifier suggested by a partial). **Do not** use a fixed template bank for all K unless labeled **smoke / I/O test only** — that does **not** count as calibration.
 
 **Batch helper caveat:** `scripts/work_jiang/run_blind_chain_rounds.py` pre-seeds packets for **engineering** checks of bundle/reveal ordering; it **does not** implement closed-loop learning. For **skill-jiang** as you intend it, run rounds **sequentially** with this section.
+
+### Mechanical gate (script-enforced)
+
+For **K ≥ 2**, use **`bundle --closed-loop`** so the tool **refuses** the next prefix until:
+
+1. **`advance --completed-round (K−1)`** has been run after you finished scoring the prior round (writes `scratch/gt-closed-loop-state.yaml`).
+2. **`scratch/gt-series-model.md`** exists and is **non-empty** (rolling bullets from the last **Adjustment**).
+
+**K = 1** is exempt (no prior round). **`--force`** bypasses checks (stderr warning) for maintenance only.
+
+```bash
+# After scoring the round that used --prefix-end 1 (predict gt-02, reveal, log):
+python3 scripts/work_jiang/forward_chain_blind_bundle.py advance --completed-round 1
+# Edit scratch/gt-series-model.md (non-empty), then:
+python3 scripts/work_jiang/forward_chain_blind_bundle.py bundle --closed-loop \
+  --prefix-end 2 -o research/external/work-jiang/prediction-tracking/scratch/gt-prefix-2.md
+```
+
+Optional: `--closed-loop-state PATH` and `--series-model PATH` override defaults (same flags on `advance` for state path).
 
 ---
 
@@ -157,6 +176,7 @@ After **gt-18** is in the prefix, run **one** prediction packet **before** any n
 
 | Version | Notes |
 |---------|--------|
+| 0.4.2 | **Mechanical closed-loop gate:** `bundle --closed-loop` + `advance --completed-round N`; `gt-closed-loop-state.yaml` + non-empty `gt-series-model.md`; `--force` escape. |
 | 0.4.1 | Document **closed loop**: each round must use prior **Adjustment** (+ optional rolling model); batch template script = I/O smoke only. |
 | 0.4.0 | Full Volume IV blind chain logged (`lecture-forward-chain-gt-BLIND.md`); appendix v0.4 merge; blind JSONL. |
 | 0.3.0 | Mechanical blind: `forward_chain_blind_bundle.py` (bundle / reveal / paths); retrospective log caveated. |
