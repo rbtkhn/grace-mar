@@ -10,12 +10,14 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
 
+import orjson
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
+from cache import load_json_file, load_schema
 from seed_phase_artifacts import EXPECTED_ARTIFACT_KEYS, SCHEMA_BY_FILE
 
 REQUIRED_FILES = [
@@ -59,10 +61,14 @@ def main() -> None:
     for jname in SCHEMA_BY_FILE:
         path = target / jname
         try:
-            instances[jname] = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as e:
+            raw = load_json_file(path)
+        except orjson.JSONDecodeError as e:
             print(f"Invalid JSON {path}: {e}", file=sys.stderr)
             sys.exit(1)
+        if not isinstance(raw, dict):
+            print(f"Expected JSON object in {path}, got {type(raw).__name__}", file=sys.stderr)
+            sys.exit(1)
+        instances[jname] = raw
 
     manifest = instances["seed-phase-manifest.json"]
     arts = manifest.get("artifacts") or {}
@@ -95,8 +101,10 @@ def main() -> None:
         sys.exit(1)
 
     for jname, schema_rel in SCHEMA_BY_FILE.items():
-        schema_path = REPO_ROOT / schema_rel
-        schema = json.loads(schema_path.read_text(encoding="utf-8"))
+        schema = load_schema(schema_rel)
+        if not isinstance(schema, dict):
+            print(f"Expected JSON object schema at {schema_rel}, got {type(schema).__name__}", file=sys.stderr)
+            sys.exit(1)
         validator = Draft202012Validator(schema)
         errs = sorted(validator.iter_errors(instances[jname]), key=lambda e: e.path)
         if errs:

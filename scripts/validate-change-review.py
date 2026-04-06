@@ -11,7 +11,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
@@ -22,6 +21,7 @@ except ImportError:
     print("ERROR: jsonschema is required. Install with: pip install jsonschema", file=sys.stderr)
     sys.exit(2)
 
+from cache import load_json_file
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_DIR = ROOT / "schema-registry"
@@ -34,8 +34,10 @@ DIFF_SCHEMA = SCHEMA_DIR / "identity-diff.v1.json"
 
 
 def load_json(path: Path) -> Dict[str, Any]:
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    data = load_json_file(path)
+    if not isinstance(data, dict):
+        raise TypeError(f"expected JSON object at {path}, got {type(data).__name__}")
+    return data
 
 
 def load_schema(path: Path) -> Dict[str, Any]:

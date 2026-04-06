@@ -9,9 +9,10 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
+
+from cache import load_json_file
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -40,7 +41,10 @@ def load_dir(d: Path) -> dict[str, dict]:
         p = d / name
         if not p.is_file():
             raise FileNotFoundError(p)
-        out[name] = json.loads(p.read_text(encoding="utf-8"))
+        raw = load_json_file(p)
+        if not isinstance(raw, dict):
+            raise TypeError(f"expected JSON object in {p}, got {type(raw).__name__}")
+        out[name] = raw
     return out
 
 

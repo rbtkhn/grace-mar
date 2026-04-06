@@ -9,16 +9,20 @@ contradict, or readiness_score is below a typical activation band.
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
+
+from cache import load_json_file
 
 MIN_PURPOSE_LEN = 40
 PASS_MIN_READINESS_SCORE = 0.75
 
 
 def load_json(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
+    data = load_json_file(path)
+    if not isinstance(data, dict):
+        raise TypeError(f"expected JSON object at {path}, got {type(data).__name__}")
+    return data
 
 
 def main() -> int:

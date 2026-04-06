@@ -9,9 +9,12 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import json
 import sys
 from pathlib import Path
+
+import orjson
+
+from cache import load_json_file, load_schema
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -26,10 +29,14 @@ def main() -> int:
         print(f"Missing {path}", file=sys.stderr)
         return 1
     try:
-        inst = json.loads(path.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as e:
+        raw = load_json_file(path)
+    except orjson.JSONDecodeError as e:
         print(e, file=sys.stderr)
         return 1
+    if not isinstance(raw, dict):
+        print(f"Expected JSON object in {path}, got {type(raw).__name__}", file=sys.stderr)
+        return 1
+    inst = raw
 
     try:
         import jsonschema
@@ -38,8 +45,10 @@ def main() -> int:
         print("jsonschema required: pip install jsonschema", file=sys.stderr)
         return 1
 
-    schema_path = REPO_ROOT / "schema-registry" / "seed-constitution.v1.json"
-    schema = json.loads(schema_path.read_text(encoding="utf-8"))
+    schema = load_schema("schema-registry/seed-constitution.v1.json")
+    if not isinstance(schema, dict):
+        print(f"Expected JSON object schema, got {type(schema).__name__}", file=sys.stderr)
+        return 1
     validator = Draft202012Validator(schema)
     errs = sorted(validator.iter_errors(inst), key=lambda e: e.path)
     if errs:

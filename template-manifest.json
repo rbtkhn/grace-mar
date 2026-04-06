@@ -491,6 +491,11 @@
       "optional": false
     },
     {
+      "path": "scripts/cache.py",
+      "description": "Cached orjson loads for seed-phase and change-review validators (path-keyed LRU; clear_cache for tests).",
+      "optional": false
+    },
+    {
       "path": "scripts/generate-constitution.py",
       "description": "Deterministic seed_constitution.json from seed-phase JSON scaffolds (run after validate-seed-phase).",
       "optional": true
