@@ -47,7 +47,7 @@ When the operator begins with **`coffee`** (or clearly the same intent; legacy *
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
 2. Take the **last 4** such lines already in the file. If there are fewer than four, use what exists; if none, **Cadence tail (last 4):** _(no prior events)_.
-3. **Synthesize** into **2–4 short sentences** or a **compact bullet list**: each event’s **kind** (coffee / dream / bridge / harvest / thanks / coffee_pick), **time** if useful, and **high-signal** `key=value` tokens (`mode=`, `park=`, `refs=`, `picked=`, `ok=`). Do **not** paste raw log lines in full unless they are already very short.
+3. **Synthesize in plain prose** — **2–4 short sentences** that capture **rhythm and human sense** (what kind of stretch this was: pauses, re-entry, night-close, bridge, thanks streaks). Write as if briefing a colleague, **not** as a telemetry line: **do not** lead with UTC timestamps, `key=value` pairs, or internal field names. Use human time only when it helps (“after you ran dream,” “earlier today”) — optional. You may still *read* kinds and tokens from the lines to infer mood; **keep that machinery off the page**. Do **not** paste raw log lines unless they are already very short.
 4. In the reply, place **Cadence tail (last 4):** at the **top** of Step 1 content (immediately before script output / warmup paste). Same rule for **signing-off** Step 1 (before `operator_coffee.py --mode closeout` or handoff-only flow).
 
 If the file is missing or empty below the anchor, state that under **Cadence tail (last 4)** and continue Step 1.

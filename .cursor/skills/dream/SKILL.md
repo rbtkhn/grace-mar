@@ -49,7 +49,7 @@ But the default pattern is:
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
 2. Take the **last 8** such lines already in the file. If there are fewer than eight, use what exists; if none, **Cadence tail (last 8):** _(no prior events)_.
-3. **Synthesize** into a **compact block** (short paragraph and/or up to **8** one-line bullets): each event’s **kind**, **time** if it helps orientation, and **high-signal** `key=value` tokens. Do **not** paste raw log lines in full unless they are already very short.
+3. **Synthesize in plain prose** — a **short paragraph** (or a few tight sentences) that captures the **day’s cadence rhythm** in human language: coffee / thanks / bridge / dream mix, sense of closure or residue. **Do not** open with UTC stamps or `key=value` telemetry; that detail belongs in script output below. Optional human anchors (“after the bridge,” “a run of light thanks beats”) are fine.
 4. Hold this synthesis for **What to return** — it belongs **at the top** of the night-close brief, before `self-memory` / integrity lines.
 
 If the file is missing or empty below the anchor, note that under **Cadence tail (last 8)** and continue.

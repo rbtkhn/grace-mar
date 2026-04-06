@@ -33,7 +33,7 @@ description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optio
 ## Steps (agent)
 
 1. **Read cadence tail** (before logging this thanks): open **`docs/skill-work/work-cadence/work-cadence-events.md`** at repo root. Below the line `_(Append below this line.)_`, collect lines that match the audit format: `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`. Take the **last two** such lines **already in the file** (the two most recent events **before** this beat). If there is only one line, synthesize that one; if none, say **Cadence tail:** _(no prior events)_.
-2. **Synthesize** those lines into **one or two short sentences** (or a pair of tight sub-bullets). Include **kind** (coffee / dream / bridge / harvest / thanks), **date or time** if it helps orientation, and **high-signal** `key=value` tokens (e.g. `park=`, `mode=`, `refs=`, `ok=`). **Do not** paste the raw log lines in full unless they are already very short.
+2. **Synthesize** those lines into **one or two short sentences** in **plain prose** — enough for the operator to feel **what just happened** before this pause (mood, rhythm). **Do not** lead with UTC timestamps or `key=value` telemetry; keep the voice human. **Do not** paste the raw log lines in full unless they are already very short.
 3. **Parse** optional **park** text: trim the leading **`thanks`** / **`thank you`** (case-insensitive) and punctuation; remainder = **park** (collapse internal newlines to spaces; empty is OK).
 4. **Reply** with a tiny **Pause beat** block:
    - **Cadence tail:** the synthesis from step 2.
