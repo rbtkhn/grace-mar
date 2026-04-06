@@ -79,6 +79,32 @@ Mobility lecture sets up class/success frame; watch for cross-border next.
 
 —
 
+### Replay (hand-written packet — closed-loop validation)
+
+**Date:** 2026-04-06  
+**Note:** `gt-prefix-2.md` regenerated after `advance --completed-round 1` + `bundle --closed-loop`; `gt-predict-3.md` replaced with hypotheses from the **prefix bundle only** (not the batch template).
+
+#### Prediction packet (as filed, replay)
+
+- **H1 (med):** Work / internship / first-job game after school ranking and stakeholder critique.
+- **H2 (med):** Parenting + class / intergenerational strategy (bridges mating investment and institutional shaping of kids).
+- **H3 (low):** University / admissions / credential tournament.
+- **H4 (low):** Money, consumption, or rich vs poor life scripts — economics as student-relatable frame before hard macro.
+
+#### Scores
+
+- **H1:** miss
+- **H2:** hit
+- **H3:** miss
+- **H4:** hit
+
+#### Adjustment (mergeable)
+
+After **schools + stakeholders**, **parenting × class × success myths** is as plausible a third lecture as **workplace**; keep **both branches** in the fan until one path double-falsifies. When the corpus allows **pop success / finance memes** in the title, **explicit money + class** hypotheses (here **H4**) are load-bearing, not only “macro IR next.”
+
+#### miss_taxonomy (replay)
+
+—
 
 ---
 
