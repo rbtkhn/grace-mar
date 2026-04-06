@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T17:27:52.070109+00:00",
+  "generated_at": "2026-04-05T21:07:47.912141+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -8,107 +8,24 @@
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": true,
+  "self_memory_changed": false,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
   "followups": [],
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-04T17:27:52.043416+00:00",
-    "window_end_utc": "2026-04-05T17:27:52.043416+00:00",
+    "window_start_utc": "2026-04-04T21:07:47.896145+00:00",
+    "window_end_utc": "2026-04-05T21:07:47.896145+00:00",
     "window_hours": 24.0,
-    "count": 9,
-    "first_ts": "2026-04-04T22:37:00+00:00",
-    "last_ts": "2026-04-05T17:08:00+00:00",
-    "span_hours": 18.52,
-    "by_mode": {
-      "work-start": 9
-    },
-    "runs": [
-      {
-        "ts_iso": "2026-04-04T22:37:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {}
-      },
-      {
-        "ts_iso": "2026-04-05T03:54:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {}
-      },
-      {
-        "ts_iso": "2026-04-05T03:54:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {}
-      },
-      {
-        "ts_iso": "2026-04-05T04:39:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {}
-      },
-      {
-        "ts_iso": "2026-04-05T14:21:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-05T14:21:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-05T15:47:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-05T15:47:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-05T17:08:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      }
-    ],
-    "picks": [
-      {
-        "ts_iso": "2026-04-05T04:09:00+00:00",
-        "picked": "C"
-      },
-      {
-        "ts_iso": "2026-04-05T14:22:00+00:00",
-        "picked": "A"
-      },
-      {
-        "ts_iso": "2026-04-05T17:22:00+00:00",
-        "picked": "C"
-      }
-    ],
-    "by_picked": {
-      "C": 2,
-      "A": 1
-    }
+    "count": 0,
+    "first_ts": null,
+    "last_ts": null,
+    "span_hours": null,
+    "by_mode": {},
+    "runs": [],
+    "picks": [],
+    "by_picked": {}
   },
   "execution_paths": [
     {
@@ -116,9 +33,7 @@
       "title": "Today / field (brief + work-politics lane)",
       "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu A \u2014 Today",
       "stop_rule": "One slice: brief path opened or KY-4 intel pass started \u2014 enough for first block.",
-      "signals_used": [
-        "reentry_heavy"
-      ]
+      "signals_used": []
     },
     {
       "id": "build",
