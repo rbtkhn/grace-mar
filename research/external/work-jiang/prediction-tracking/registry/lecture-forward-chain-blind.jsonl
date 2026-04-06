@@ -15,3 +15,4 @@
 {"blind_round": 15, "prefix_end": 15, "predicted_episode": 16, "top_score": "hit", "prediction_path": "research/external/work-jiang/prediction-tracking/scratch/gt-predict-16.md"}
 {"blind_round": 16, "prefix_end": 16, "predicted_episode": 17, "top_score": "hit", "prediction_path": "research/external/work-jiang/prediction-tracking/scratch/gt-predict-17.md"}
 {"blind_round": 17, "prefix_end": 17, "predicted_episode": 18, "top_score": "hit", "prediction_path": "research/external/work-jiang/prediction-tracking/scratch/gt-predict-18.md"}
+{"blind_round": 2, "prefix_end": 2, "predicted_episode": 3, "top_score": "partial", "prediction_path": "research/external/work-jiang/prediction-tracking/scratch/gt-predict-3.md", "run_kind": "replay", "note": "hand-written replay 2026-04-06; H2+H4 hit H1+H3 miss; BLIND.md Replay (closed-loop validation)"}
