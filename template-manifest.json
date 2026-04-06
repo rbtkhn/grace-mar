@@ -461,6 +461,16 @@
       "optional": true
     },
     {
+      "path": "scripts/record_slice_loader.py",
+      "description": "Read-only Record excerpts (self, skill-think, self-skills) with provenance for lesson/delegation prompts.",
+      "optional": true
+    },
+    {
+      "path": "scripts/delegate-with-advisor.py",
+      "description": "Dry-run delegator: prints Record slices + optional delegationSpec; no external runner wired.",
+      "optional": true
+    },
+    {
       "path": "scripts/check-source-conflict.py",
       "description": "Compare two layer tokens against config/source-of-truth.json precedence.",
       "optional": true
