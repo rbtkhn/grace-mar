@@ -7,6 +7,13 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: jurisdiction-campaign-history
+    source: jurisdiction-campaign-history/SKILL.md
+    appendix: .cursor/skills/jurisdiction-campaign-history/CURSOR_APPENDIX.md
+    target: .cursor/skills/jurisdiction-campaign-history/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates
   - name: portable-skills-sync
     source: portable-skills-sync/SKILL.md
     appendix: .cursor/skills/portable-skills-sync/CURSOR_APPENDIX.md
