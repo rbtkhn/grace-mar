@@ -185,3 +185,5 @@ bot/
 ## Instance: grace-mar
 
 Fork name: Grace-Mar. Phase: emergent cognition, active pipeline. Load from `users/grace-mar/`.
+
+**Instance doctrine:** `users/grace-mar/instance-doctrine.md` (Layer 2 — operating modes, file update protocol, success metrics, repo structure, prompt architecture). See [layer-architecture.md](docs/layer-architecture.md) for the four-layer instruction model.

@@ -952,5 +952,17 @@
       "docs/seed-phase-doctrine.md"
     ],
     "demo_data": "users/demo/seed-registry.jsonl"
+  },
+  "layer_architecture": {
+    "version": "1.0.0",
+    "entrypoint": "docs/layer-architecture.md",
+    "docs": [
+      "docs/layer-architecture.md"
+    ],
+    "instance_doctrine": {
+      "template": "users/_template/instance-doctrine.md",
+      "demo": "users/demo/instance-doctrine.md",
+      "grace_mar": "users/grace-mar/instance-doctrine.md"
+    }
   }
 }

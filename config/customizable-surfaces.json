@@ -1,0 +1,43 @@
+{
+  "$comment": "Declares which settings are user-adjustable, operator-only, or immutable. Instance values for grace-mar.",
+  "schemaVersion": "1.0.0",
+  "user_adjustable": [
+    {
+      "path": "config/seed-promotion-rules.json",
+      "description": "Promotion thresholds for seed claims"
+    },
+    {
+      "path": "config/context_budgets/",
+      "description": "Token budget allocations for prepared context"
+    }
+  ],
+  "operator_only": [
+    {
+      "path": "config/authority-map.json",
+      "description": "Surface authority classes (human_only, review_required, draftable, ephemeral_only)"
+    },
+    {
+      "path": "config/source-of-truth.json",
+      "description": "Canonical location for each concept"
+    },
+    {
+      "path": "users/grace-mar/instance-doctrine.md",
+      "description": "Instance-specific operating rules (Layer 2)"
+    }
+  ],
+  "immutable": [
+    {
+      "path": "schema-registry/*.json",
+      "description": "JSON schemas — versioned, never silently modified"
+    },
+    {
+      "path": "AGENTS.md",
+      "scope": "core doctrine sections",
+      "description": "Core doctrine (Layer 1) — knowledge boundary, gated pipeline, authority classes"
+    },
+    {
+      "path": "docs/seed-phase-doctrine.md",
+      "description": "Constitutional principles for identity formation"
+    }
+  ]
+}
