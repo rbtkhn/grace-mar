@@ -40,6 +40,17 @@ def build_gate_review_pass(user_id: str = "grace-mar", territory: str = "all") -
     companion_count = sum(1 for row in pending if row.get("territory_label") == "Companion")
     politics_count = sum(1 for row in pending if row.get("territory_label") == TERRITORY_LABEL_WORK_POLITICS)
 
+    best_move = ""
+    try:
+        from suggest_best_move import suggest_best_move as _sbm
+        best_move = _sbm(user_id).get("move", "")
+    except Exception:
+        try:
+            from scripts.suggest_best_move import suggest_best_move as _sbm
+            best_move = _sbm(user_id).get("move", "")
+        except Exception:
+            pass
+
     lines = [
         "# Gate review pass",
         "",
@@ -47,9 +58,13 @@ def build_gate_review_pass(user_id: str = "grace-mar", territory: str = "all") -
         f"- Territory filter: `{territory}`",
         f"- Pending candidates: {len(pending)} ({companion_count} companion, {politics_count} work-politics)",
         "",
+    ]
+    if best_move:
+        lines.extend([f"## Best move", "", f"{best_move}", ""])
+    lines.extend([
         "## Approve now",
         "",
-    ]
+    ])
 
     if quick_merge:
         for row in quick_merge[:8]:

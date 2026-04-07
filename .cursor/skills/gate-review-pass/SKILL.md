@@ -55,6 +55,21 @@ Then give a recommendation per candidate:
 
 ---
 
+## Alternative lens: Disruption-to-Value
+
+When the operator says **"radar lens"** or **"DTV"**, reframe each candidate using builder vocabulary:
+
+| Radar verdict | Gate equivalent | When to use |
+|---------------|----------------|-------------|
+| Keep building | defer | Real signal, but switching cost exceeds value now |
+| Integrate when convenient | approve (batch) | Low friction, fold in at next review pass |
+| Pause and adopt | approve now | Materially changes the profile — worth stopping for |
+| Foundational shift | approve with escalation | Rewrites a section of SELF — check contradictions first |
+
+This is a relabeling, not new logic. Use whichever vocabulary fits the operator's current thinking mode.
+
+---
+
 ## After a batch review — doc-only pattern library
 
 **Optional operator habit:** After companion decisions (approve / defer / reject) or after a long idle queue, note whether **duplicate_hints**, **risk_tier**, or **age** guidance was **misleading**.

@@ -241,14 +241,26 @@ def main() -> int:
     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
     receipt_one = _last_merge_receipt_line(user_dir)
 
+    best_move_line = ""
+    try:
+        from suggest_best_move import suggest_best_move
+        best_move_line = suggest_best_move(args.user).get("move", "")
+    except Exception:
+        try:
+            from scripts.suggest_best_move import suggest_best_move
+            best_move_line = suggest_best_move(args.user).get("move", "")
+        except Exception:
+            pass
+
     if args.receipt:
         gith = _git_head_short()
         gate_label = "clean" if pending_n == 0 else f"{pending_n} pending"
         act_bit = last_act or "none"
+        bm_bit = f" | best_move: {best_move_line}" if best_move_line else ""
         print(
             f"**Reentry** — recursion-gate: {gate_label} "
             f"(view={territory}; work-politics={politics_n}; companion={comp_n}) "
-            f"| last_ACTIVITY: {act_bit} | commit: {gith} | user: {args.user}"
+            f"| last_ACTIVITY: {act_bit} | commit: {gith} | user: {args.user}{bm_bit}"
         )
         return 0
 
@@ -283,6 +295,8 @@ def main() -> int:
             bits.append("STALE: " + ", ".join(f"{cid} ({age}d)" for cid, age in stale) + ".")
         if last_act:
             bits.append(f"Last EVIDENCE: {last_act}.")
+        if best_move_line:
+            bits.append(f"Best move: {best_move_line}.")
         if tail:
             bits.append("Session tail: " + " / ".join(tail[-2:]))
         print(" ".join(bits))
@@ -303,6 +317,8 @@ def main() -> int:
             f"- **RECURSION-GATE — pending ({territory}):** {pending_n} _(work-politics {politics_n} · Companion {comp_n} — use `--territory work-politics` or `companion`)_",
         ]
     )
+    if best_move_line:
+        lines.append(f"- **Best move:** {best_move_line}")
     if pending_list:
         lines.append("")
         for cid, summ in pending_list[:8]:

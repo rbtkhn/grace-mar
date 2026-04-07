@@ -93,6 +93,8 @@ The ritual should:
 
 This is a maintenance pass, not a merge pass.
 
+**Done when:** `auto_dream.py` exits successfully (or `--strict` halts with a clear reason), and script output is captured for the return brief.
+
 **Morning handoff:** When `apply=True` (the default), dream writes `users/grace-mar/last-dream.json` — a compact summary that tomorrow's `coffee` Step 1 (`operator_daily_warmup.py`) automatically picks up and displays as **"Last dream (night handoff)"**. This closes the choreography gap: coffee knows what dream found without the operator carrying it across threads. The JSON includes **`agent_surface.cursor_model`** (same meaning as bridge/harvest **Agent surface** / cadence **`cursor_model=`**): pass **`--cursor-model`** to `auto_dream.py` or set **`CURSOR_MODEL`** in the environment when running from a context that knows the Cursor UI label; otherwise **`unknown`**.
 
 ## What to return
@@ -109,6 +111,8 @@ Return a short night-close brief with:
 - one sentence on what tomorrow inherits from this run
 
 If nothing important changed, say so plainly. A quiet run is success.
+
+**Done when:** The night-close brief is returned with all fields populated (or explicitly noted as unchanged), and the operator knows what tomorrow inherits.
 
 ## Example return shape
 

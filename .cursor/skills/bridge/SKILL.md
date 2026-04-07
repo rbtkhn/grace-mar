@@ -1,6 +1,7 @@
 ---
 name: bridge
 preferred_activation: bridge
+requires: [handoff-check]
 description: "Session-scale handoff ritual. Primary trigger: bridge. Before Step 1, synthesizes the previous four events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Assesses grace-mar + companion-self (and asks about other repos if relevant), recommends whether each needs commit/push, then seals and generates a structured transfer prompt for pasting into a fresh Cursor session. Run once when closing a session and carrying context forward."
 ---
 
@@ -107,6 +108,8 @@ Then output a short **Push/sync recommendation** block:
 
 **Operator override:** If the same message says **`bridge grace-mar only`** (or equivalent), limit commit/push to grace-mar and still state companion-self status in the recommendation block.
 
+**Done when:** Recommendation table is shown and the operator has confirmed scope (or no ambiguity exists).
+
 ---
 
 ## Step 3 — Commit and push (per recommendation)
@@ -173,6 +176,8 @@ python3 scripts/bridge_last_state.py -u grace-mar --write
 ```
 
 This writes `users/grace-mar/daily-handoff/last-bridge-state.json` (gitignored). For **Since last bridge** bullets in the packet, you may instead run `python3 scripts/bridge_last_state.py -u grace-mar --print-delta` before composing Step 4.
+
+**Done when:** All in-scope repos show clean `git status -sb` after push, cadence line is logged, and bridge state snapshot is written.
 
 ---
 

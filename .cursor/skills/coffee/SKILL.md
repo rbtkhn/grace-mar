@@ -1,6 +1,7 @@
 ---
 name: coffee
 preferred_activation: coffee
+requires: [handoff-check]
 description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
 ---
 
@@ -86,6 +87,8 @@ Add `--compact` for shorter harness output. Individual scripts (`operator_daily_
 
 **Step 1 guardrail:** Stay read-only — no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
+**Done when:** Script output is pasted in the reply, Recent rhythm is at the top, and the A-E menu follows immediately.
+
 For cadence tables and explicit phrase definitions (`coffee light`, `coffee minimal`, `coffee survey`): see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
 
 ### Multiple coffees per day
@@ -109,6 +112,8 @@ Immediately **after** Step 1 content, output the fixed **coffee** menu: **five**
 **Re-offer rules:** After **A** or **B**, re-offer the full **A–E** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**. After **E**, see [menu-reference.md § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later): if the steward pass **surfaces actionable possibilities** (defined there), **do not** re-offer the full menu — offer **only** **1. Implement now** and **2. Later** (**Later** → then present full **A–E**). If **nothing actionable** surfaced, re-offer full **A–E** as after **A**/**B**. Synonyms: **`E+ship`** / **`E implement`** / **`EXECUTE`** + slice ≈ **Implement now** when the operator uses them instead of the numbered pick.
 
 For full **A–E** definitions, signing-off add-ons per letter, and the companion survey track: see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
+
+**Done when:** The operator has picked a letter (or combo), the selected branch has been executed, and the re-offer or exit rule has been applied.
 
 ---
 

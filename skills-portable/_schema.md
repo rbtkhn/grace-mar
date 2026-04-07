@@ -18,6 +18,7 @@ skills-portable/<skill-name>/
 | `portable` | yes | `true` — marks inclusion in sync manifest. |
 | `version` | yes | Semver string for export/changelog. |
 | `tags` | no | e.g. `[operator, work-politics]` for mirrors. |
+| `requires` | no | Skill dependencies, e.g. `[handoff-check]`. Validator checks that listed skills exist under `.cursor/skills/`. |
 
 ## Body rules (portable core)
 

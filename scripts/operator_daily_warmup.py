@@ -293,6 +293,21 @@ def _integrity_errors(user_id: str) -> list[str]:
     return [str(item) for item in errors]
 
 
+def _top_priorities_header(user_id: str = "grace-mar") -> str:
+    try:
+        from suggest_best_move import suggest_best_move
+        move = suggest_best_move(user_id).get("move", "")
+    except Exception:
+        try:
+            from scripts.suggest_best_move import suggest_best_move
+            move = suggest_best_move(user_id).get("move", "")
+        except Exception:
+            move = ""
+    if move:
+        return f"## Top priorities (best move: {move})"
+    return "## Top priorities"
+
+
 def _priority_list(
     *,
     pending_all: list[tuple[str, str]],
@@ -385,7 +400,7 @@ def build_operator_daily_warmup(
             f"- Integrity: {'PASS' if not integrity_errors else f'FAIL ({len(integrity_errors)} issue(s))'}",
             f"- Worktree: {'clean' if not dirty_files else f'{len(dirty_files)} changed file(s)'}",
             "",
-            "## Top priorities",
+            _top_priorities_header(user_id),
             "",
         ]
     )
