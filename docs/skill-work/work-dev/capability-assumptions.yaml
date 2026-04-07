@@ -1,0 +1,187 @@
+# Capability assumptions — rolling disruption sensor
+#
+# Structured list of assumptions the system currently depends on.
+# detect_capability_shift.py fetches public changelogs and diffs
+# against these entries to flag when a model release may have
+# compressed a gap the system was built on.
+#
+# Two source categories:
+#   model     — LLM provider changelogs (capability shifts in the models themselves)
+#   ecosystem — frameworks, platforms, and adjacent systems (capability shifts in tooling)
+#
+# Usage:
+#   python scripts/detect_capability_shift.py                    # all sources
+#   python scripts/detect_capability_shift.py --category model   # model providers only
+#   python scripts/detect_capability_shift.py --category ecosystem  # frameworks only
+#
+# Read-only audit artifact — not Record truth.
+
+sources:
+  # --- Model providers ---
+  - name: Anthropic
+    category: model
+    url: "https://docs.anthropic.com/en/docs/about-claude/models"
+    parser: html
+    enabled: true
+  - name: OpenAI
+    category: model
+    url: "https://platform.openai.com/docs/changelog"
+    parser: html
+    enabled: true
+  - name: xAI
+    category: model
+    url: "https://docs.x.ai/docs/models"
+    parser: html
+    enabled: true
+  - name: Google
+    category: model
+    url: "https://ai.google.dev/gemini-api/docs/changelog"
+    parser: html
+    enabled: true
+  - name: DeepSeek
+    category: model
+    url: "https://api-docs.deepseek.com/news/news1120"
+    parser: html
+    enabled: true
+  - name: Qwen
+    category: model
+    url: "https://github.com/QwenLM/Qwen3.5"
+    parser: html
+    enabled: true
+
+  # --- Ecosystem / frameworks / adjacent systems ---
+  - name: Open Brain
+    category: ecosystem
+    url: "https://github.com/NateBJones-Projects/OB1"
+    parser: html
+    enabled: true
+  - name: AutoGen
+    category: ecosystem
+    url: "https://github.com/microsoft/autogen/releases"
+    parser: html
+    enabled: true
+  - name: CrewAI
+    category: ecosystem
+    url: "https://github.com/crewAIInc/crewAI/releases"
+    parser: html
+    enabled: true
+  - name: LangChain
+    category: ecosystem
+    url: "https://github.com/langchain-ai/langchain/releases"
+    parser: html
+    enabled: true
+
+assumptions:
+  - id: ASSUME-001
+    assumption: "LLM context windows cap at ~200k tokens for production use"
+    keywords: ["context window", "context length", "token limit", "long context", "million token"]
+    affects: ["bot/prompt.py", "docs/architecture.md"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "Prompt summarization tiers exist because of this constraint. If production windows reach 1M+ reliably, the tier system may be unnecessary overhead."
+
+  - id: ASSUME-002
+    assumption: "Models lack persistent cross-session memory"
+    keywords: ["memory", "persistent memory", "session state", "conversation history", "long-term memory", "recall"]
+    affects: ["scripts/harness_warmup.py", "docs/architecture.md", "self-memory.md"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "The entire bridge/warmup/self-memory stack exists because agents are disposable and memory goes to zero each session."
+
+  - id: ASSUME-003
+    assumption: "Models cannot reliably maintain a consistent persona across sessions without explicit prompting"
+    keywords: ["persona", "character", "consistent personality", "identity", "voice", "role-play"]
+    affects: ["bot/prompt.py", "bot/core.py"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "SYSTEM_PROMPT inlines identity, knowledge, and personality every call. If models gain durable persona slots, the prompt architecture could simplify."
+
+  - id: ASSUME-004
+    assumption: "Models hallucinate frequently enough that a human gate is required for Record integrity"
+    keywords: ["hallucination", "factual accuracy", "grounding", "faithful", "reliability", "truthful"]
+    affects: ["users/grace-mar/recursion-gate.md", "docs/identity-fork-protocol.md"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "The gated pipeline (stage → approve → merge) exists partly because models invent facts. If hallucination rates drop to near-zero with citations, the gate UX could loosen (but companion sovereignty remains)."
+
+  - id: ASSUME-005
+    assumption: "No model offers built-in structured knowledge management with version control"
+    keywords: ["knowledge base", "structured memory", "version control", "knowledge graph", "document store"]
+    affects: ["docs/architecture.md"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "Git-as-Record is the design choice because no vendor provides governed, versioned, exportable knowledge. If a provider ships this natively, evaluate whether it replaces or complements git."
+
+  - id: ASSUME-006
+    assumption: "Lexile-level output control requires explicit prompting; models default to adult register"
+    keywords: ["reading level", "vocabulary control", "simplify", "age-appropriate", "grade level", "lexile"]
+    affects: ["bot/prompt.py"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "REPHRASE_PROMPT enforces Lexile ceiling. If models add native reading-level sliders, the rephrase step could be simplified."
+
+  - id: ASSUME-007
+    assumption: "Tool use and function calling are bounded to single-session orchestration"
+    # Narrow phrases: generic "agent"/"agentic"/"orchestration" match every changelog (false positives).
+    # Flag only copy that suggests persistent or cross-session agent state (what would stress bridge/handoff).
+    keywords:
+      - "cross-session"
+      - "multi-session"
+      - "persistent agent"
+      - "stateful agent"
+      - "long-running agent"
+      - "session persistence"
+      - "memory across sessions"
+      - "remember across conversations"
+    affects: ["docs/architecture.md", "integrations/"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "Current architecture treats agents as disposable single-session executors. If models gain persistent multi-session agentic capability with memory, the handoff/bridge model may need rethinking. Keywords deliberately omit generic agent/tool terms; use ASSUME-002 for vendor 'memory' product copy."
+
+  - id: ASSUME-008
+    assumption: "Bilingual (English/Mandarin) output requires explicit prompt handling per language"
+    keywords: ["multilingual", "bilingual", "chinese", "mandarin", "translation", "language switch"]
+    affects: ["bot/prompt.py", "bot/core.py"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "Prompt includes language detection and response-language matching. If models improve native code-switching, some prompt scaffolding may be removable."
+
+  - id: ASSUME-009
+    assumption: "Signal detection (analyst) requires a separate LLM call with a dedicated prompt"
+    keywords: ["signal detection", "analysis", "structured output", "extraction", "classification"]
+    affects: ["bot/prompt.py", "bot/core.py"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "ANALYST_PROMPT runs as a separate call after conversation. If models support inline structured extraction (conversation + analysis in one pass), the two-call pattern could merge."
+
+  - id: ASSUME-010
+    assumption: "Models cannot directly read or write local git repositories"
+    keywords: ["git", "repository", "file system", "local access", "code execution", "sandbox"]
+    affects: ["docs/architecture.md", "scripts/"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "All Record mutation goes through scripts that the operator runs. If models gain native sandboxed git access, the script-mediated pipeline could be streamlined (but human approval must remain)."
+
+  - id: ASSUME-011
+    assumption: "Cadence discipline (dream/bridge/coffee) adds value because agents cannot self-audit continuity"
+    keywords: ["self-audit", "continuity", "self-monitoring", "introspection", "meta-cognition"]
+    affects: ["scripts/audit_cadence_rhythm.py", ".cursor/skills/coffee/SKILL.md"]
+    gap_ids: ["BUILD-AI-GAP-013"]
+    last_validated: 2026-04-07
+    notes: "Rituals compensate for agent amnesia. If agents gain cross-session self-audit, some ritual overhead may be reducible (discipline still matters, but the mechanism could change)."
+
+  - id: ASSUME-012
+    assumption: "Warrant-bearing knowledge entries age silently; no model tracks temporal validity of its own claims"
+    keywords: ["temporal", "expiration", "validity", "stale", "outdated", "freshness", "time-sensitive"]
+    affects: ["scripts/scan_warrant_expiration.py"]
+    gap_ids: ["BUILD-AI-GAP-014"]
+    last_validated: 2026-04-07
+    notes: "Warrant scanner exists because models treat all stored facts as equally current. If models gain built-in temporal confidence decay, the scanner's role shrinks."
+
+  - id: ASSUME-013
+    assumption: "Multi-agent orchestration requires heavyweight framework dependencies incompatible with stdlib-only codebases"
+    keywords: ["multi-agent", "lightweight", "zero-dependency", "orchestration", "groupchat", "crew", "autogen", "agent framework", "single-file", "agent team", "agent collaboration"]
+    affects: ["docs/architecture.md", "bridges/"]
+    gap_ids: []
+    last_validated: 2026-04-07
+    notes: "GroupChat-as-auditable-tool is deferred because AutoGen/CrewAI pull heavy transitive dependencies. If a framework ships stdlib-only multi-agent, or a model provider builds agent teams into the API itself, revisit the deferral."
