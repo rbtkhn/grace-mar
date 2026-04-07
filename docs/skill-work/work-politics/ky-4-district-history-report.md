@@ -8,7 +8,7 @@
 
 Kentucky's 4th has been represented in Congress since **1803**—over 220 years. The seat has sent one **Vice President** (Richard Mentor Johnson), four **Governors** (Joseph Desha, Thomas Metcalfe, Robert P. Letcher, J. Proctor Knott), one **U.S. Senator** (Jim Bunning), and one **Hall of Fame pitcher** (Bunning again) to higher office or immortality. It has also seen **infamy**: Governor Desha's son Isaac—convicted of murder, pardoned by his father, then murdered again in Texas—became one of Kentucky's darkest political scandals.
 
-We've researched every holder of the seat, ranked them by ideological similarity to Thomas Massie (libertarian Republican, constitutional restraint, limited government), and catalogued who rose, who fell, and who left a mark. The full report is **~15,000 words** with sources, vote analyses, and narrative.
+We've researched every holder of the seat (35 House stints in KY-4 for 34 individuals—J. Proctor Knott served two separated terms), ranked them by ideological similarity to Thomas Massie (libertarian Republican, constitutional restraint, limited government), and catalogued who rose, who fell, and who left a mark. The full report is **~15,000 words** with sources, vote analyses, and narrative.
 
 ---
 
@@ -32,26 +32,33 @@ We've researched every holder of the seat, ranked them by ideological similarity
 | 14 | Albert G. Talbott | Democratic | 1855–1859 | |
 | 15 | William C. Anderson | Opposition | 1859–1861 | |
 | 16 | Aaron Harding | Union Democratic / Democratic | 1861–1867 | |
-| 17 | **J. Proctor Knott** | Democratic | 1867–1871, 1875–1883 | **→ Governor (1883–1887)**; famous "Duluth" speech 1871 |
+| 17 | **J. Proctor Knott** | Democratic | 1867–1871 | **→ Governor (1883–1887)**; "Duluth" speech (1871) in this term |
 | 18 | William B. Read | Democratic | 1871–1875 | |
-| 19 | Thomas A. Robertson | Democratic | 1883–1887 | |
-| 20 | Alexander B. Montgomery | Democratic | 1887–1895 | |
-| 21 | John W. Lewis | Republican | 1895–1897 | |
-| 22 | David H. Smith | Democratic | 1897–1907 | |
-| 23 | Ben Johnson | Democratic | 1907–1927 | 20 years |
-| 24 | Henry D. Moorman | Democratic | 1927–1929 | |
-| 25 | John D. Craddock | Republican | 1929–1931 | |
-| 26 | Cap R. Carden | Democratic | 1931–1935 | Died in office |
-| 27 | Edward W. Creal | Democratic | 1935–1943 | Died in office |
-| 28 | Chester O. Carrier | Republican | 1943–1945 | |
-| 29 | Frank Chelf | Democratic | 1945–1967 | 22 years; civil rights mixed |
-| 30 | Gene Snyder | Republican | 1967–1987 | 20 years; Goldwater conservative |
-| 31 | **Jim Bunning** | Republican | 1987–1999 | **→ U.S. Senator (1999–2011)**; **Baseball Hall of Fame** |
-| 32 | Ken Lucas | Democratic | 1999–2005 | Blue Dog; 3-term pledge |
-| 33 | Geoff Davis | Republican | 2005–2012 | West Point, Army; resigned |
-| 34 | **Thomas Massie** | Republican | 2012–present | Current; libertarian; Lewis County |
+| 19 | **J. Proctor Knott** | Democratic | 1875–1883 | Second stint in KY-4; retired before governorship |
+| 20 | Thomas A. Robertson | Democratic | 1883–1887 | |
+| 21 | Alexander B. Montgomery | Democratic | 1887–1895 | |
+| 22 | John W. Lewis | Republican | 1895–1897 | |
+| 23 | David H. Smith | Democratic | 1897–1907 | |
+| 24 | Ben Johnson | Democratic | 1907–1927 | 20 years |
+| 25 | Henry D. Moorman | Democratic | 1927–1929 | |
+| 26 | John D. Craddock | Republican | 1929–1931 | |
+| 27 | Cap R. Carden | Democratic | 1931–1935 | KY-4 (1931–33); at-large (1933–35); KY-4 again from Jan. 3, 1935; died June 13, 1935 |
+| 28 | Edward W. Creal | Democratic | 1935–1943 | Died in office |
+| 29 | Chester O. Carrier | Republican | 1943–1945 | |
+| 30 | Frank Chelf | Democratic | 1945–1967 | 22 years; civil rights mixed |
+| 31 | Gene Snyder | Republican | 1967–1987 | 20 years; Goldwater conservative |
+| 32 | **Jim Bunning** | Republican | 1987–1999 | **→ U.S. Senator (1999–2011)**; **Baseball Hall of Fame** |
+| 33 | Ken Lucas | Democratic | 1999–2005 | Blue Dog; 3-term pledge |
+| 34 | Geoff Davis | Republican | 2005–2012 | West Point, Army; resigned |
+| 35 | **Thomas Massie** | Republican | 2012–present | Special election Nov. 6, 2012; sworn Nov. 13, 2012; incumbent; Lewis County |
 
-*District inactive 1933–1935 (at-large). Boundary shifts over time; modern KY-4 (Cincinnati suburbs + northeastern Louisville + eastern counties) dates to post-1960s.*
+*District lines moved many times; same district number is not the same geography across decades. Kentucky elected U.S. representatives at-large in 1932–1934; Cap R. Carden was re-elected statewide then returned to a numbered 4th. Modern KY-4 (Cincinnati suburbs, northeastern Louisville, eastern counties) reflects post-1960s maps.*
+
+### Sources and methodology
+
+- **Member sequence and dates:** Cross-checked against Wikipedia’s sortable table at [List of United States representatives from Kentucky](https://en.wikipedia.org/wiki/List_of_United_States_representatives_from_Kentucky) (rows where the district column is the 4th district), which matches the district article’s member list when it is present. Retrieved April 2026.
+- **District context:** [Kentucky’s 4th congressional district](https://en.wikipedia.org/wiki/Kentucky%27s_4th_congressional_district) (boundaries, current representative).
+- **Authoritative biographical dates:** [Biographical Directory of the United States Congress](https://bioguide.congress.gov/) (use when reconciling edge cases or Wikipedia table quirks).
 
 ---
 
@@ -109,7 +116,7 @@ The 4th District has a lineage few seats can match: a Vice President (Richard Me
 We've built a **full history report** for Kentucky's 4th Congressional District: every person who ever held the seat since 1803, ranked by ideological similarity to Thomas Massie, with who rose to higher office, who committed great deeds, and who left infamy in their wake.
 
 **What's inside:**
-- Complete roster of 34+ holders with party, years, and source citations
+- Complete roster of 34 representatives (35 KY-4 stints) with party, years, and source citations
 - Ideological ranking: who in the seat's history is closest to Massie's libertarian, constitutional, limited-government stance (Bunning and Gene Snyder score high; the Whigs Metcalfe and Letcher have overlap; the Democrats mostly don't)
 - Catalog of ascents: VP, four governors, one senator, one Hall of Famer
 - Catalog of scandal: the Desha-Isaac story in full
