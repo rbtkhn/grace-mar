@@ -1,0 +1,7243 @@
+{
+  "node_count": 186,
+  "edge_count": 621,
+  "explicit_edges": 30,
+  "implicit_edges": 591,
+  "nodes": [
+    {
+      "id": "WRITE-0001",
+      "type": "WRITE",
+      "title": "Madeline retelling \u2014 from memory",
+      "date": "2026-02-15",
+      "section": "WRITING LOG"
+    },
+    {
+      "id": "WRITE-0002",
+      "type": "WRITE",
+      "title": "Earth's layers \u2014 what I learned at school",
+      "date": "2026-02-19",
+      "section": "WRITING LOG"
+    },
+    {
+      "id": "WRITE-0003",
+      "type": "WRITE",
+      "title": "Swimming, food, movie \u2014 personal facts",
+      "date": "2026-02-19",
+      "section": "WRITING LOG"
+    },
+    {
+      "id": "WRITE-0004",
+      "type": "WRITE",
+      "title": "Sleepover, movies \u2014 yesterday's activities",
+      "date": "2026-02-21",
+      "section": "WRITING LOG"
+    },
+    {
+      "id": "WRITE-0005",
+      "type": "WRITE",
+      "title": "Casa Bonita \u2014 today's visit",
+      "date": "2026-02-23",
+      "section": "WRITING LOG"
+    },
+    {
+      "id": "WRITE-0006",
+      "type": "WRITE",
+      "title": "Dinosaurs not extinct \u2014 sentence and picture",
+      "date": "2026-02-24",
+      "section": "WRITING LOG"
+    },
+    {
+      "id": "CREATE-0001",
+      "type": "CREATE",
+      "title": "Nine-Colored Deer (\u4e5d\u8272\u9e7f)",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0002",
+      "type": "CREATE",
+      "title": "Stitch at Lilo's House",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0003",
+      "type": "CREATE",
+      "title": "Nu-Nu in the Mountains",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0004",
+      "type": "CREATE",
+      "title": "Abby's Ocean",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0005",
+      "type": "CREATE",
+      "title": "Tomb of Pakal",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0006",
+      "type": "CREATE",
+      "title": "Abby on the Moon",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0007",
+      "type": "CREATE",
+      "title": "Egyptian Pharaohs",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0008",
+      "type": "CREATE",
+      "title": "Snowman",
+      "date": "2026-02-15",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0009",
+      "type": "CREATE",
+      "title": "Earth \u2014 Americas View",
+      "date": "2026-02-26",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "CREATE-0010",
+      "type": "CREATE",
+      "title": "Desert Scene",
+      "date": "2026-02-26",
+      "section": "CREATION LOG"
+    },
+    {
+      "id": "MEDIA-0001",
+      "type": "MEDIA",
+      "title": "Frozen",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0002",
+      "type": "MEDIA",
+      "title": "Thomas the Train",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0003",
+      "type": "MEDIA",
+      "title": "Land Before Time",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0004",
+      "type": "MEDIA",
+      "title": "E.T.",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0005",
+      "type": "MEDIA",
+      "title": "Moana",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0006",
+      "type": "MEDIA",
+      "title": "Mickey Mouse",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0007",
+      "type": "MEDIA",
+      "title": "Paw Patrol",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "MEDIA-0008",
+      "type": "MEDIA",
+      "title": "Mulan",
+      "date": "true",
+      "section": "MEDIA LOG"
+    },
+    {
+      "id": "ACT-0001",
+      "type": "ACT",
+      "title": "ACT-0001",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0002",
+      "type": "ACT",
+      "title": "ACT-0002",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0003",
+      "type": "ACT",
+      "title": "ACT-0003",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0004",
+      "type": "ACT",
+      "title": "ACT-0004",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0005",
+      "type": "ACT",
+      "title": "ACT-0005",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0006",
+      "type": "ACT",
+      "title": "ACT-0006",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0007",
+      "type": "ACT",
+      "title": "ACT-0007",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0008",
+      "type": "ACT",
+      "title": "ACT-0008",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0009",
+      "type": "ACT",
+      "title": "ACT-0009",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0010",
+      "type": "ACT",
+      "title": "ACT-0010",
+      "date": "2026-02-19",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0011",
+      "type": "ACT",
+      "title": "ACT-0011",
+      "date": "2026-02-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0012",
+      "type": "ACT",
+      "title": "ACT-0012",
+      "date": "2026-02-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0013",
+      "type": "ACT",
+      "title": "ACT-0013",
+      "date": "2026-02-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0014",
+      "type": "ACT",
+      "title": "ACT-0014",
+      "date": "2026-02-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0015",
+      "type": "ACT",
+      "title": "ACT-0015",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0016",
+      "type": "ACT",
+      "title": "ACT-0016",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0017",
+      "type": "ACT",
+      "title": "ACT-0017",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0018",
+      "type": "ACT",
+      "title": "ACT-0018",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0019",
+      "type": "ACT",
+      "title": "ACT-0019",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0020",
+      "type": "ACT",
+      "title": "ACT-0020",
+      "date": "2026-02-22",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0021",
+      "type": "ACT",
+      "title": "ACT-0021",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0022",
+      "type": "ACT",
+      "title": "ACT-0022",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0023",
+      "type": "ACT",
+      "title": "ACT-0023",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0024",
+      "type": "ACT",
+      "title": "ACT-0024",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0025",
+      "type": "ACT",
+      "title": "ACT-0025",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0026",
+      "type": "ACT",
+      "title": "ACT-0026",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0028",
+      "type": "ACT",
+      "title": "The Best of Debussy / Classical Piano Music",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0027",
+      "type": "ACT",
+      "title": "Copp\u00e9lia. HD. Bolshoi Ballet. Natalia Osipova. Finale",
+      "date": "2026-02-23",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0029",
+      "type": "ACT",
+      "title": "ACT-0029",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0030",
+      "type": "ACT",
+      "title": "ACT-0030",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0031",
+      "type": "ACT",
+      "title": "ACT-0031",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0032",
+      "type": "ACT",
+      "title": "ACT-0032",
+      "date": "2026-02-21",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0033",
+      "type": "ACT",
+      "title": "ACT-0033",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0034",
+      "type": "ACT",
+      "title": "ACT-0034",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0035",
+      "type": "ACT",
+      "title": "ACT-0035",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0036",
+      "type": "ACT",
+      "title": "ACT-0036",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0037",
+      "type": "ACT",
+      "title": "ACT-0037",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0038",
+      "type": "ACT",
+      "title": "ACT-0038",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0039",
+      "type": "ACT",
+      "title": "ACT-0039",
+      "date": "2026-02-24",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0040",
+      "type": "ACT",
+      "title": "ACT-0040",
+      "date": "2026-02-25",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0041",
+      "type": "ACT",
+      "title": "ACT-0041",
+      "date": "2026-02-25",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0042",
+      "type": "ACT",
+      "title": "ACT-0042",
+      "date": "2026-02-26",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0043",
+      "type": "ACT",
+      "title": "ACT-0043",
+      "date": "2026-02-26",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0044",
+      "type": "ACT",
+      "title": "ACT-0044",
+      "date": "2026-02-27",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0045",
+      "type": "ACT",
+      "title": "ACT-0045",
+      "date": "2026-03-14",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0046",
+      "type": "ACT",
+      "title": "ACT-0046",
+      "date": "2026-03-16",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0047",
+      "type": "ACT",
+      "title": "ACT-0047",
+      "date": "2026-03-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0048",
+      "type": "ACT",
+      "title": "ACT-0048",
+      "date": "2026-03-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0049",
+      "type": "ACT",
+      "title": "ACT-0049",
+      "date": "2026-03-20",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0050",
+      "type": "ACT",
+      "title": "ACT-0050",
+      "date": "2026-03-28",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0051",
+      "type": "ACT",
+      "title": "ACT-0051",
+      "date": "2026-03-28",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0052",
+      "type": "ACT",
+      "title": "ACT-0052",
+      "date": "2026-03-28",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0053",
+      "type": "ACT",
+      "title": "ACT-0053",
+      "date": "2026-03-28",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0054",
+      "type": "ACT",
+      "title": "ACT-0054",
+      "date": "2026-03-28",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "ACT-0055",
+      "type": "ACT",
+      "title": "ACT-0055",
+      "date": "2026-03-28",
+      "section": "ACTIVITY LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 16:51:43",
+      "type": "GATE",
+      "title": "Seed phase and cognitive fork complete! Does that mean anything to you?",
+      "date": "2026-02-19 16:51:43",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 16:52:02",
+      "type": "GATE",
+      "title": "Look in the repository",
+      "date": "2026-02-19 16:52:02",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 16:52:45",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 16:52:45",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:04:30",
+      "type": "GATE",
+      "title": "What do you think of kant",
+      "date": "2026-02-19 17:04:30",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:04:45",
+      "type": "GATE",
+      "title": "Look it up",
+      "date": "2026-02-19 17:04:45",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:07:20",
+      "type": "GATE",
+      "title": "What do you think about kant",
+      "date": "2026-02-19 17:07:20",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:07:32",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:07:32",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:07:57",
+      "type": "GATE",
+      "title": "What was the biggest dinosaur",
+      "date": "2026-02-19 17:07:57",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:08:09",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:08:09",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:10:36",
+      "type": "GATE",
+      "title": "What was the smallest dinosaur",
+      "date": "2026-02-19 17:10:36",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:10:48",
+      "type": "GATE",
+      "title": "How do you know that",
+      "date": "2026-02-19 17:10:48",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:13:54",
+      "type": "GATE",
+      "title": "What's the fattest dinosaur",
+      "date": "2026-02-19 17:13:54",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:14:21",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:14:21",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:15:06",
+      "type": "GATE",
+      "title": "What's your favorite dinosaur movie",
+      "date": "2026-02-19 17:15:06",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:16:18",
+      "type": "GATE",
+      "title": "How old are you",
+      "date": "2026-02-19 17:16:18",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:17:49",
+      "type": "GATE",
+      "title": "40",
+      "date": "2026-02-19 17:17:49",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:18:04",
+      "type": "GATE",
+      "title": "gymanstics",
+      "date": "2026-02-19 17:18:04",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:18:36",
+      "type": "GATE",
+      "title": "what language do you speak",
+      "date": "2026-02-19 17:18:36",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:18:51",
+      "type": "GATE",
+      "title": "tell me something nice in chinese",
+      "date": "2026-02-19 17:18:51",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:19:48",
+      "type": "GATE",
+      "title": "yes i know chinese",
+      "date": "2026-02-19 17:19:48",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:21:06",
+      "type": "GATE",
+      "title": "who was the first president",
+      "date": "2026-02-19 17:21:06",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:21:20",
+      "type": "GATE",
+      "title": "yes please",
+      "date": "2026-02-19 17:21:20",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:23:25",
+      "type": "GATE",
+      "title": "Do you know five times five",
+      "date": "2026-02-19 17:23:25",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:24:02",
+      "type": "GATE",
+      "title": "What's the square root of 36",
+      "date": "2026-02-19 17:24:02",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:24:18",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:24:18",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:27:47",
+      "type": "GATE",
+      "title": "Who was the fattest president",
+      "date": "2026-02-19 17:27:47",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:28:05",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:28:05",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:47:32",
+      "type": "GATE",
+      "title": "How big is the red spot on Jupiter",
+      "date": "2026-02-19 17:47:32",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:47:59",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:47:59",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:48:38",
+      "type": "GATE",
+      "title": "If you go into Jupiter what will happen",
+      "date": "2026-02-19 17:48:38",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:48:57",
+      "type": "GATE",
+      "title": "It sounds like you did already know",
+      "date": "2026-02-19 17:48:57",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:49:07",
+      "type": "GATE",
+      "title": "Of course",
+      "date": "2026-02-19 17:49:07",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:49:26",
+      "type": "GATE",
+      "title": "Other than Earth Mars",
+      "date": "2026-02-19 17:49:26",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:52:16",
+      "type": "GATE",
+      "title": "I learned a little about geology and types of rocks at school today",
+      "date": "2026-02-19 17:52:16",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:53:32",
+      "type": "GATE",
+      "title": "My favorite rock is Ruby is Ruby a rock",
+      "date": "2026-02-19 17:53:32",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:54:05",
+      "type": "GATE",
+      "title": "What makes gemstones different than normal rocks",
+      "date": "2026-02-19 17:54:05",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:54:40",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:54:40",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:54:58",
+      "type": "GATE",
+      "title": "What makes them different in a science aspect",
+      "date": "2026-02-19 17:54:58",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:55:06",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 17:55:06",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 17:55:25",
+      "type": "GATE",
+      "title": "I wanted to know how gemstones are different than normal stones",
+      "date": "2026-02-19 17:55:25",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:04:38",
+      "type": "GATE",
+      "title": "Did Abraham Lincoln wear a black hat and put a note in his hat everyday",
+      "date": "2026-02-19 18:04:38",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:04:58",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 18:04:58",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:05:33",
+      "type": "GATE",
+      "title": "Why was Lincoln a really important guy",
+      "date": "2026-02-19 18:05:33",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:05:42",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 18:05:42",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:06:30",
+      "type": "GATE",
+      "title": "Do you know about the nutcracker ballet I really love that",
+      "date": "2026-02-19 18:06:30",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:06:41",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 18:06:41",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:17:05",
+      "type": "GATE",
+      "title": "Right now we're listening to Schubert piano sonata d845",
+      "date": "2026-02-19 18:17:05",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:17:17",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 18:17:17",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:18:07",
+      "type": "GATE",
+      "title": "I like dancing to it",
+      "date": "2026-02-19 18:18:07",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:21:31",
+      "type": "GATE",
+      "title": "Let's watch the wild robot together",
+      "date": "2026-02-19 18:21:31",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-19 18:21:47",
+      "type": "GATE",
+      "title": "Yes",
+      "date": "2026-02-19 18:21:47",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-20 08:01:11",
+      "type": "GATE",
+      "title": "I am curious about reptiles",
+      "date": "2026-02-20 08:01:11",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-20 08:03:01",
+      "type": "GATE",
+      "title": "yes",
+      "date": "2026-02-20 08:03:01",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-20 08:03:46",
+      "type": "GATE",
+      "title": "are there reptiles on jupiter",
+      "date": "2026-02-20 08:03:46",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-20 08:05:11",
+      "type": "GATE",
+      "title": "yes",
+      "date": "2026-02-20 08:05:11",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-20 13:21:25",
+      "type": "GATE",
+      "title": "hi!",
+      "date": "2026-02-20 13:21:25",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:34:11",
+      "type": "GATE",
+      "title": "good morning",
+      "date": "2026-02-21 06:34:11",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:34:27",
+      "type": "GATE",
+      "title": "what kind of animal do you want to draw today",
+      "date": "2026-02-21 06:34:27",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:34:38",
+      "type": "GATE",
+      "title": "yes",
+      "date": "2026-02-21 06:34:38",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:35:24",
+      "type": "GATE",
+      "title": "i want to draw a moose, but i don't know the size of moose horns",
+      "date": "2026-02-21 06:35:24",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:44:49",
+      "type": "GATE",
+      "title": "how are you",
+      "date": "2026-02-21 06:44:49",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:45:01",
+      "type": "GATE",
+      "title": "drinking coffee",
+      "date": "2026-02-21 06:45:01",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:45:22",
+      "type": "GATE",
+      "title": "coffee ; i didn't know you like apple choice",
+      "date": "2026-02-21 06:45:22",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 06:45:29",
+      "type": "GATE",
+      "title": "yes we do",
+      "date": "2026-02-21 06:45:29",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:28:11",
+      "type": "GATE",
+      "title": "what's your favorite movie",
+      "date": "2026-02-21 07:28:11",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:28:32",
+      "type": "GATE",
+      "title": "what is a black hole",
+      "date": "2026-02-21 07:28:32",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:28:43",
+      "type": "GATE",
+      "title": "how did you know that",
+      "date": "2026-02-21 07:28:43",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:29:00",
+      "type": "GATE",
+      "title": "actually we never learned about black holes yet",
+      "date": "2026-02-21 07:29:00",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:29:22",
+      "type": "GATE",
+      "title": "we would like to learn about black holes ; please look it up",
+      "date": "2026-02-21 07:29:22",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:29:35",
+      "type": "GATE",
+      "title": "why can't you look it up",
+      "date": "2026-02-21 07:29:35",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:47:29",
+      "type": "GATE",
+      "title": "when is your human birth date",
+      "date": "2026-02-21 07:47:29",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:47:40",
+      "type": "GATE",
+      "title": "that doesn't make sense",
+      "date": "2026-02-21 07:47:40",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:47:53",
+      "type": "GATE",
+      "title": "that's not what year it is",
+      "date": "2026-02-21 07:47:53",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:48:09",
+      "type": "GATE",
+      "title": "why do you like soccer",
+      "date": "2026-02-21 07:48:09",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:58:26",
+      "type": "GATE",
+      "title": "what's your favorite planet",
+      "date": "2026-02-21 07:58:26",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:58:43",
+      "type": "GATE",
+      "title": "what is a black hole",
+      "date": "2026-02-21 07:58:43",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 07:58:55",
+      "type": "GATE",
+      "title": "yes",
+      "date": "2026-02-21 07:58:55",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 16:17:49",
+      "type": "GATE",
+      "title": "tell me a story",
+      "date": "2026-02-21 16:17:49",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 16:18:15",
+      "type": "GATE",
+      "title": "what is your favorite planet",
+      "date": "2026-02-21 16:18:15",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 17:48:18",
+      "type": "GATE",
+      "title": "What's your favorite",
+      "date": "2026-02-21 17:48:18",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 17:49:18",
+      "type": "GATE",
+      "title": "I like dogs but I don't have one because I am allergic",
+      "date": "2026-02-21 17:49:18",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 17:50:12",
+      "type": "GATE",
+      "title": "Fox and the hound",
+      "date": "2026-02-21 17:50:12",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 17:58:28",
+      "type": "GATE",
+      "title": "Ask a specific question about space that is just beyond the boundary of your kno",
+      "date": "2026-02-21 17:58:28",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 21:18:08",
+      "type": "GATE",
+      "title": "My mom gave me Vietnamese food because she really likes it",
+      "date": "2026-02-21 21:18:08",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 21:30:11",
+      "type": "GATE",
+      "title": "Yes we saw the dragon dances and really loud fireworks they were hurting my ear ",
+      "date": "2026-02-21 21:30:11",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 21:33:46",
+      "type": "GATE",
+      "title": "I got them all right. But I can think of multiple answers for the reptile fish q",
+      "date": "2026-02-21 21:33:46",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-21 21:35:54",
+      "type": "GATE",
+      "title": "This is fun give me five more questions",
+      "date": "2026-02-21 21:35:54",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-22 15:24:28",
+      "type": "GATE",
+      "title": "Chat with me",
+      "date": "2026-02-22 15:24:28",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-22 15:24:34",
+      "type": "GATE",
+      "title": "Ask me what I'm thinking",
+      "date": "2026-02-22 15:24:34",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-22 15:24:40",
+      "type": "GATE",
+      "title": "Chat with me",
+      "date": "2026-02-22 15:24:40",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "GATE-2026-02-24 03:34:29",
+      "type": "GATE",
+      "title": "Oh yay! You said \"Activate\"!!    That means we're doing checkpoint/save time rig",
+      "date": "2026-02-24 03:34:29",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0040",
+      "type": "ACT",
+      "title": "CANDIDATE-0078 \u2192 ACT-0040 Companion chose \"learn from past mistakes\" as why hist",
+      "date": "2026-02-25 11:44:18",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0041",
+      "type": "ACT",
+      "title": "CANDIDATE-0079 \u2192 ACT-0041 Companion engaged with why history matters; chose \"lea",
+      "date": "2026-02-25 11:44:18",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0042",
+      "type": "ACT",
+      "title": "CANDIDATE-0081 \u2192 ACT-0042 Two homework artifacts demonstrating geography/earth s",
+      "date": "2026-02-26 13:11:26",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0043",
+      "type": "ACT",
+      "title": "CANDIDATE-0080 \u2192 ACT-0043 Companion chose and affirmed one reason we learn histo",
+      "date": "2026-02-26 13:11:26",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0044",
+      "type": "ACT",
+      "title": "CANDIDATE-0082 \u2192 ACT-0044 Phase 7 pre\u2013cognitive replication survey (6 questions)",
+      "date": "2026-02-27 10:43:11",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0045",
+      "type": "ACT",
+      "title": "CANDIDATE-0085 \u2192 ACT-0045 WPC \u2014 weekly brief scaffold + 7\u201330d recency pass opera",
+      "date": "2026-03-14 13:29:21",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0046",
+      "type": "ACT",
+      "title": "CANDIDATE-0086 \u2192 ACT-0046 Voice authenticity test \u2014 Earth as favorite planet; ap",
+      "date": "2026-03-16",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0047",
+      "type": "ACT",
+      "title": "CANDIDATE-0089 \u2192 ACT-0047 work-politics \u2014 america-first-ky factorial guardrail s",
+      "date": "2026-03-20 07:58:51",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0048",
+      "type": "ACT",
+      "title": "CANDIDATE-0087 \u2192 ACT-0048 work-politics \u2014 triangulated analytical lenses (struct",
+      "date": "2026-03-20 08:07:12",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0049",
+      "type": "ACT",
+      "title": "CANDIDATE-0088 \u2192 ACT-0049 WORK-strategy \u2014 energy-chokepoint monitoring, mind-syn",
+      "date": "2026-03-20 08:07:12",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0050",
+      "type": "ACT",
+      "title": "CANDIDATE-0092 \u2192 ACT-0050 IX-B \u2014 learning modality signal; pairs with school/par",
+      "date": "2026-03-28 16:53:50",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0051",
+      "type": "ACT",
+      "title": "CANDIDATE-0093 \u2192 ACT-0051 IX-B \u2014 epistemic taste; \u201chow we know\u201d / discovery stor",
+      "date": "2026-03-28 16:55:08",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0052",
+      "type": "ACT",
+      "title": "CANDIDATE-0094 \u2192 ACT-0052 IX-B \u2014 (1) forced ranking: creative/performance beats ",
+      "date": "2026-03-28 16:59:54",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0053",
+      "type": "ACT",
+      "title": "CANDIDATE-0095 \u2192 ACT-0053 IX-B \u2014 content-shape for history: dramatic political-m",
+      "date": "2026-03-28 17:01:51",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0054",
+      "type": "ACT",
+      "title": "CANDIDATE-0096 \u2192 ACT-0054 IX-C \u2014 high-leverage tension to track: outward pride/r",
+      "date": "2026-03-28 17:02:50",
+      "section": "GATED APPROVED LOG"
+    },
+    {
+      "id": "ACT-0055",
+      "type": "ACT",
+      "title": "CANDIDATE-0097 \u2192 ACT-0055 IX-C \u2014 co-regulation menu (solo + connection); classro",
+      "date": "2026-03-28 17:03:51",
+      "section": "GATED APPROVED LOG"
+    }
+  ],
+  "edges": [
+    {
+      "source": "WRITE-0003",
+      "target": "WRITE-0001",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "WRITE-0005",
+      "target": "WRITE-0004",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "WRITE-0005",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "WRITE-0001",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "WRITE-0003",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "WRITE-0002",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "WRITE-0004",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "cross-reference"
+    },
+    {
+      "source": "ACT-0015",
+      "target": "WRITE-0004",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "contributes_to"
+    },
+    {
+      "source": "ACT-0021",
+      "target": "WRITE-0005",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "contributes_to"
+    },
+    {
+      "source": "ACT-0037",
+      "target": "WRITE-0006",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "contributes_to"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "CREATE-0009",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0053",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0054",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0049",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0052",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0048",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "CREATE-0010",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0051",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0044",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0045",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0047",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0039",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0041",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0050",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0042",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0040",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0046",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "ACT-0043",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0042",
+      "target": "CREATE-0009",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "ACT-0042",
+      "target": "CREATE-0010",
+      "type": "explicit",
+      "score": 1.0,
+      "detail": "pipeline"
+    },
+    {
+      "source": "GATE-2026-02-22 15:24:28",
+      "target": "GATE-2026-02-22 15:24:40",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "chat, me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:07:32",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:08:09",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:14:21",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:24:18",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:28:05",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:47:59",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:54:40",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:55:06",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 18:04:58",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 18:05:42",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 18:06:41",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 18:17:17",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 18:21:47",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-20 08:03:01",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-20 08:05:11",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 06:34:38",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 06:45:29",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 07:58:55",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:08:09",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:14:21",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:24:18",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:28:05",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:47:59",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:54:40",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:55:06",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 18:04:58",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 18:05:42",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 18:06:41",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 18:17:17",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 18:21:47",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-20 08:03:01",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-20 08:05:11",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 06:34:38",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 06:45:29",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 07:58:55",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:14:21",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:24:18",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:28:05",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:47:59",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:54:40",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:55:06",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 18:04:58",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 18:05:42",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 18:06:41",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 18:17:17",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 18:21:47",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-20 08:03:01",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-20 08:05:11",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 06:34:38",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 06:45:29",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 07:58:55",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:24:18",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:28:05",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:47:59",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:54:40",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:55:06",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 18:04:58",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 18:05:42",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 18:06:41",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 18:17:17",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 18:21:47",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-20 08:03:01",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-20 08:05:11",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-21 06:34:38",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-21 06:45:29",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-21 07:58:55",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 17:28:05",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 17:47:59",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 17:54:40",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 17:55:06",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 18:04:58",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 18:05:42",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 18:06:41",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 18:17:17",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-19 18:21:47",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-20 08:03:01",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-20 08:05:11",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-21 06:34:38",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-21 06:45:29",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:18",
+      "target": "GATE-2026-02-21 07:58:55",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:32",
+      "target": "GATE-2026-02-21 07:58:43",
+      "type": "thematic",
+      "score": 1.0,
+      "detail": "black, hole, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:30",
+      "target": "GATE-2026-02-19 17:07:20",
+      "type": "thematic",
+      "score": 0.9176,
+      "detail": "kant, telegram, think, user, you"
+    },
+    {
+      "source": "ACT-0040",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.9068,
+      "detail": "about, act, affirmed, ago, answer, appreciate, approved, better"
+    },
+    {
+      "source": "ACT-0040",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.8795,
+      "detail": "about, act, ago, answer, appreciate, approved, better, candidate"
+    },
+    {
+      "source": "ACT-0041",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.8659,
+      "detail": "about, act, ago, answer, appreciate, approved, better, candidate"
+    },
+    {
+      "source": "ACT-0045",
+      "target": "ACT-0045",
+      "type": "thematic",
+      "score": 0.8502,
+      "detail": "0045, 03, 09, 14, 2026, 30d, act, artifacts"
+    },
+    {
+      "source": "GATE-2026-02-19 17:15:06",
+      "target": "GATE-2026-02-21 07:28:11",
+      "type": "thematic",
+      "score": 0.8451,
+      "detail": "favorite, movie, telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:11",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.8295,
+      "detail": "favorite, telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-21 07:58:26",
+      "target": "GATE-2026-02-21 16:18:15",
+      "type": "thematic",
+      "score": 0.819,
+      "detail": "favorite, planet, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 07:58:26",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.7952,
+      "detail": "favorite, telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:45",
+      "target": "GATE-2026-02-21 07:29:35",
+      "type": "thematic",
+      "score": 0.73,
+      "detail": "look, telegram, up, user"
+    },
+    {
+      "source": "ACT-0017",
+      "target": "ACT-0018",
+      "type": "thematic",
+      "score": 0.7214,
+      "detail": "02, 2026, 21, act, activity, administered, archive, category"
+    },
+    {
+      "source": "ACT-0040",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.7011,
+      "detail": "02, 2026, act, activity, affirmed, better, category, choices"
+    },
+    {
+      "source": "GATE-2026-02-19 17:15:06",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.701,
+      "detail": "favorite, telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.7003,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.7003,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:11",
+      "target": "GATE-2026-02-21 07:58:26",
+      "type": "thematic",
+      "score": 0.6596,
+      "detail": "favorite, telegram, user, what's"
+    },
+    {
+      "source": "ACT-0048",
+      "target": "ACT-0048",
+      "type": "thematic",
+      "score": 0.6579,
+      "detail": "0048, act, analytical, diplomatic, documented, domestic, institutional, ix"
+    },
+    {
+      "source": "ACT-0040",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.6485,
+      "detail": "02, 2026, 25, act, activity, category, chose, companion"
+    },
+    {
+      "source": "ACT-0044",
+      "target": "ACT-0044",
+      "type": "thematic",
+      "score": 0.6466,
+      "detail": "0044, act, animals, aspects, ballet, cognitive, crust, curiosity"
+    },
+    {
+      "source": "ACT-0049",
+      "target": "ACT-0049",
+      "type": "thematic",
+      "score": 0.6414,
+      "detail": "0049, act, approval, blowback, capability, chokepoint, docs, economic"
+    },
+    {
+      "source": "ACT-0042",
+      "target": "ACT-0042",
+      "type": "thematic",
+      "score": 0.6217,
+      "detail": "0042, act, artifacts, content, continents, demonstrating, desert, earth"
+    },
+    {
+      "source": "GATE-2026-02-19 17:13:54",
+      "target": "GATE-2026-02-19 17:15:06",
+      "type": "thematic",
+      "score": 0.6059,
+      "detail": "dinosaur, telegram, user, what's"
+    },
+    {
+      "source": "ACT-0053",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.5924,
+      "detail": "0053, act, content, dramatic, history, invention, ix, military"
+    },
+    {
+      "source": "ACT-0041",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.5908,
+      "detail": "02, 2026, act, activity, category, chose, companion, curated"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:21:20",
+      "type": "thematic",
+      "score": 0.5873,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:21:20",
+      "type": "thematic",
+      "score": 0.5873,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:21:20",
+      "type": "thematic",
+      "score": 0.5873,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:21:20",
+      "type": "thematic",
+      "score": 0.5873,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:21:20",
+      "target": "GATE-2026-02-19 17:24:18",
+      "type": "thematic",
+      "score": 0.5873,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:16:18",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.5808,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "MEDIA-0003",
+      "target": "MEDIA-0004",
+      "type": "thematic",
+      "score": 0.5772,
+      "detail": "added, candidate, evidence, favorites, friendship, id, interests, media"
+    },
+    {
+      "source": "ACT-0054",
+      "target": "ACT-0054",
+      "type": "thematic",
+      "score": 0.57,
+      "detail": "0054, act, acts, bold, bravery, coaching, good, high"
+    },
+    {
+      "source": "ACT-0022",
+      "target": "ACT-0023",
+      "type": "thematic",
+      "score": 0.569,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "MEDIA-0003",
+      "target": "MEDIA-0005",
+      "type": "thematic",
+      "score": 0.5671,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "GATE-2026-02-21 16:18:15",
+      "target": "ACT-0046",
+      "type": "thematic",
+      "score": 0.5647,
+      "detail": "favorite, planet, user"
+    },
+    {
+      "source": "MEDIA-0001",
+      "target": "MEDIA-0005",
+      "type": "thematic",
+      "score": 0.5647,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "GATE-2026-02-19 17:21:06",
+      "target": "GATE-2026-02-19 17:27:47",
+      "type": "thematic",
+      "score": 0.5645,
+      "detail": "president, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:48:57",
+      "type": "thematic",
+      "score": 0.5587,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:57",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.5587,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "ACT-0040",
+      "target": "ACT-0040",
+      "type": "thematic",
+      "score": 0.558,
+      "detail": "0040, act, affirmed, better, choices, chose, companion, grace"
+    },
+    {
+      "source": "GATE-2026-02-19 17:15:06",
+      "target": "GATE-2026-02-21 07:58:26",
+      "type": "thematic",
+      "score": 0.5575,
+      "detail": "favorite, telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-19 17:54:05",
+      "target": "GATE-2026-02-19 17:55:25",
+      "type": "thematic",
+      "score": 0.5527,
+      "detail": "different, gemstones, normal, telegram, user"
+    },
+    {
+      "source": "MEDIA-0001",
+      "target": "MEDIA-0003",
+      "type": "thematic",
+      "score": 0.5514,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "ACT-0032",
+      "target": "GATE-2026-02-21 21:33:46",
+      "type": "thematic",
+      "score": 0.5427,
+      "detail": "answers, fish, multiple, question, reptile, right, telegram, think"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:45",
+      "target": "GATE-2026-02-21 07:29:22",
+      "type": "thematic",
+      "score": 0.5376,
+      "detail": "look, telegram, up, user"
+    },
+    {
+      "source": "ACT-0047",
+      "target": "ACT-0047",
+      "type": "thematic",
+      "score": 0.5345,
+      "detail": "0047, 2026, act, america, chatgpt, enforced, evaluation, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:51",
+      "target": "GATE-2026-02-21 16:17:49",
+      "type": "thematic",
+      "score": 0.5325,
+      "detail": "me, telegram, tell, user"
+    },
+    {
+      "source": "ACT-0023",
+      "target": "ACT-0026",
+      "type": "thematic",
+      "score": 0.5292,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "ACT-0006",
+      "target": "GATE-2026-02-19 18:04:38",
+      "type": "thematic",
+      "score": 0.529,
+      "detail": "abraham, black, hat, lincoln, put, telegram, user, wear"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:02",
+      "target": "GATE-2026-02-19 17:04:45",
+      "type": "thematic",
+      "score": 0.5283,
+      "detail": "look, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.5272,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.5272,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.5272,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.5272,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:19:48",
+      "target": "GATE-2026-02-19 17:24:18",
+      "type": "thematic",
+      "score": 0.5272,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "ACT-0052",
+      "target": "ACT-0052",
+      "type": "thematic",
+      "score": 0.5255,
+      "detail": "0052, act, auditory, bearing, beats, block, creative, forced"
+    },
+    {
+      "source": "ACT-0046",
+      "target": "ACT-0046",
+      "type": "thematic",
+      "score": 0.5246,
+      "detail": "0046, act, appreciation, authenticity, earth, favorite, home, life"
+    },
+    {
+      "source": "ACT-0050",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.5225,
+      "detail": "03, 2026, 28, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "ACT-0017",
+      "target": "ACT-0019",
+      "type": "thematic",
+      "score": 0.5222,
+      "detail": "02, 2026, 21, act, activity, administered, archive, category"
+    },
+    {
+      "source": "ACT-0022",
+      "target": "ACT-0026",
+      "type": "thematic",
+      "score": 0.5222,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "ACT-0050",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.5218,
+      "detail": "0050, act, art, duplicate, etc, ix, learning, lists"
+    },
+    {
+      "source": "ACT-0018",
+      "target": "ACT-0019",
+      "type": "thematic",
+      "score": 0.521,
+      "detail": "02, 2026, 21, act, activity, administered, archive, category"
+    },
+    {
+      "source": "GATE-2026-02-19 17:13:54",
+      "target": "GATE-2026-02-19 17:27:47",
+      "type": "thematic",
+      "score": 0.5209,
+      "detail": "fattest, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 07:58:26",
+      "target": "ACT-0046",
+      "type": "thematic",
+      "score": 0.5176,
+      "detail": "favorite, planet, user, what's"
+    },
+    {
+      "source": "ACT-0023",
+      "target": "ACT-0025",
+      "type": "thematic",
+      "score": 0.5162,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "ACT-0043",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.5123,
+      "detail": "0043, act, affirmed, awareness, better, choices, chose, companion"
+    },
+    {
+      "source": "CREATE-0009",
+      "target": "ACT-0042",
+      "type": "thematic",
+      "score": 0.5101,
+      "detail": "0009, americas, artifacts, blue, colored, continents, crayon, create"
+    },
+    {
+      "source": "ACT-0022",
+      "target": "ACT-0025",
+      "type": "thematic",
+      "score": 0.5094,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "MEDIA-0004",
+      "target": "MEDIA-0006",
+      "type": "thematic",
+      "score": 0.5067,
+      "detail": "added, candidate, classic, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "MEDIA-0005",
+      "target": "MEDIA-0008",
+      "type": "thematic",
+      "score": 0.5066,
+      "detail": "added, adventure, bravery, candidate, evidence, favorites, id, interests"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:57",
+      "target": "GATE-2026-02-19 17:10:36",
+      "type": "thematic",
+      "score": 0.5055,
+      "detail": "dinosaur, telegram, user"
+    },
+    {
+      "source": "MEDIA-0004",
+      "target": "MEDIA-0005",
+      "type": "thematic",
+      "score": 0.5037,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, movie"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.5035,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0023",
+      "target": "ACT-0024",
+      "type": "thematic",
+      "score": 0.5022,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "ACT-0051",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.5008,
+      "detail": "0051, act, bullet, discovery, domains, epistemic, facts, ix"
+    },
+    {
+      "source": "ACT-0025",
+      "target": "ACT-0026",
+      "type": "thematic",
+      "score": 0.4979,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:30",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.4972,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0022",
+      "target": "ACT-0024",
+      "type": "thematic",
+      "score": 0.4956,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "ACT-0041",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.4947,
+      "detail": "0041, about, act, chose, companion, curiosity, engaged, facts"
+    },
+    {
+      "source": "ACT-0031",
+      "target": "GATE-2026-02-21 17:50:12",
+      "type": "thematic",
+      "score": 0.4919,
+      "detail": "fox, hound, telegram, user"
+    },
+    {
+      "source": "ACT-0030",
+      "target": "GATE-2026-02-21 21:18:08",
+      "type": "thematic",
+      "score": 0.4911,
+      "detail": "because, food, gave, likes, mom, telegram, user, vietnamese"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.4909,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:19:48",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.4909,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "MEDIA-0001",
+      "target": "MEDIA-0004",
+      "type": "thematic",
+      "score": 0.4898,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, movie"
+    },
+    {
+      "source": "ACT-0051",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.4879,
+      "detail": "03, 2026, 28, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "MEDIA-0005",
+      "target": "MEDIA-0006",
+      "type": "thematic",
+      "score": 0.486,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "ACT-0024",
+      "target": "ACT-0026",
+      "type": "thematic",
+      "score": 0.4844,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 18:06:30",
+      "type": "thematic",
+      "score": 0.4839,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 18:06:30",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.4839,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "GATE-2026-02-19 17:47:32",
+      "type": "thematic",
+      "score": 0.4828,
+      "detail": "big, jupiter, red, spot, telegram, user"
+    },
+    {
+      "source": "MEDIA-0002",
+      "target": "MEDIA-0003",
+      "type": "thematic",
+      "score": 0.4826,
+      "detail": "added, candidate, evidence, favorites, friendship, id, interests, media"
+    },
+    {
+      "source": "WRITE-0005",
+      "target": "ACT-0021",
+      "type": "thematic",
+      "score": 0.4814,
+      "detail": "0005, 02, 2026, 23, actual, artifact, bonita, casa"
+    },
+    {
+      "source": "MEDIA-0002",
+      "target": "MEDIA-0004",
+      "type": "thematic",
+      "score": 0.4803,
+      "detail": "added, candidate, evidence, favorites, friendship, id, interests, media"
+    },
+    {
+      "source": "ACT-0050",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.4799,
+      "detail": "03, 2026, 28, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "MEDIA-0003",
+      "target": "MEDIA-0006",
+      "type": "thematic",
+      "score": 0.4746,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "MEDIA-0001",
+      "target": "MEDIA-0006",
+      "type": "thematic",
+      "score": 0.4726,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "ACT-0024",
+      "target": "ACT-0025",
+      "type": "thematic",
+      "score": 0.4725,
+      "detail": "02, 2026, 23, act, activity, answer, answered, approval"
+    },
+    {
+      "source": "WRITE-0003",
+      "target": "WRITE-0006",
+      "type": "thematic",
+      "score": 0.4712,
+      "detail": "0001, 0002, 0003, 02, 19, 2026, about, afraid"
+    },
+    {
+      "source": "ACT-0050",
+      "target": "ACT-0052",
+      "type": "thematic",
+      "score": 0.4706,
+      "detail": "03, 2026, 28, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "ACT-0041",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.4687,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:36",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.4655,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 16:18:15",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.4655,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "ACT-0048",
+      "target": "ACT-0049",
+      "type": "thematic",
+      "score": 0.4643,
+      "detail": "03, 20, 2026, act, activity, category, curated, date"
+    },
+    {
+      "source": "ACT-0012",
+      "target": "GATE-2026-02-20 08:03:46",
+      "type": "thematic",
+      "score": 0.4642,
+      "detail": "jupiter, reptiles, telegram, user"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0005",
+      "type": "thematic",
+      "score": 0.4618,
+      "detail": "02, 19, 2026, act, activity, bot, colorful, curated"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.4562,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:13:54",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.4552,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "ACT-0029",
+      "target": "ACT-0030",
+      "type": "thematic",
+      "score": 0.4509,
+      "detail": "02, 2026, 21, act, activity, bot, category, child's"
+    },
+    {
+      "source": "MEDIA-0003",
+      "target": "MEDIA-0008",
+      "type": "thematic",
+      "score": 0.449,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "MEDIA-0001",
+      "target": "MEDIA-0008",
+      "type": "thematic",
+      "score": 0.4471,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "ACT-0041",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.4466,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "ACT-0029",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.4463,
+      "detail": "dances, dragon, fireworks, good, loud, luck, paper, saw"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 06:45:22",
+      "type": "thematic",
+      "score": 0.4443,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 06:45:22",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.4443,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "MEDIA-0006",
+      "target": "MEDIA-0007",
+      "type": "thematic",
+      "score": 0.4388,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "ACT-0051",
+      "target": "ACT-0052",
+      "type": "thematic",
+      "score": 0.4376,
+      "detail": "03, 2026, 28, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "WRITE-0004",
+      "target": "ACT-0015",
+      "type": "thematic",
+      "score": 0.435,
+      "detail": "0004, 02, 2026, 21, artifact, bus, content, evidence"
+    },
+    {
+      "source": "MEDIA-0002",
+      "target": "MEDIA-0006",
+      "type": "thematic",
+      "score": 0.4314,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "GATE-2026-02-19 17:23:25",
+      "target": "GATE-2026-02-21 21:35:54",
+      "type": "thematic",
+      "score": 0.4264,
+      "detail": "five, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:36",
+      "target": "GATE-2026-02-19 17:13:54",
+      "type": "thematic",
+      "score": 0.425,
+      "detail": "dinosaur, telegram, user"
+    },
+    {
+      "source": "ACT-0052",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.4243,
+      "detail": "03, 2026, 28, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "MEDIA-0002",
+      "target": "MEDIA-0007",
+      "type": "thematic",
+      "score": 0.4241,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:36",
+      "target": "GATE-2026-02-19 17:15:06",
+      "type": "thematic",
+      "score": 0.4235,
+      "detail": "dinosaur, telegram, user"
+    },
+    {
+      "source": "MEDIA-0005",
+      "target": "MEDIA-0007",
+      "type": "thematic",
+      "score": 0.4215,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 07:29:35",
+      "type": "thematic",
+      "score": 0.4197,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:57",
+      "target": "GATE-2026-02-19 17:13:54",
+      "type": "thematic",
+      "score": 0.4167,
+      "detail": "dinosaur, telegram, user"
+    },
+    {
+      "source": "ACT-0033",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.4162,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:57",
+      "target": "GATE-2026-02-19 17:15:06",
+      "type": "thematic",
+      "score": 0.4152,
+      "detail": "dinosaur, telegram, user"
+    },
+    {
+      "source": "ACT-0033",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.4151,
+      "detail": "02, 2026, act, activity, category, curated, curiosity, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:23:25",
+      "type": "thematic",
+      "score": 0.4146,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:23:25",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.4146,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "MEDIA-0002",
+      "target": "MEDIA-0005",
+      "type": "thematic",
+      "score": 0.4144,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "MEDIA-0003",
+      "target": "MEDIA-0007",
+      "type": "thematic",
+      "score": 0.4116,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "GATE-2026-02-19 17:54:05",
+      "target": "GATE-2026-02-19 17:54:58",
+      "type": "thematic",
+      "score": 0.4109,
+      "detail": "different, makes, telegram, user"
+    },
+    {
+      "source": "ACT-0033",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.4106,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "MEDIA-0001",
+      "target": "MEDIA-0007",
+      "type": "thematic",
+      "score": 0.4099,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, self"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "GATE-2026-02-21 07:28:32",
+      "type": "thematic",
+      "score": 0.409,
+      "detail": "black, hole, telegram, user"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "GATE-2026-02-21 07:58:43",
+      "type": "thematic",
+      "score": 0.409,
+      "detail": "black, hole, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:16:18",
+      "type": "thematic",
+      "score": 0.4067,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:16:18",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.4067,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:21:20",
+      "target": "GATE-2026-02-21 07:29:22",
+      "type": "thematic",
+      "score": 0.4066,
+      "detail": "please, telegram, user"
+    },
+    {
+      "source": "ACT-0047",
+      "target": "ACT-0049",
+      "type": "thematic",
+      "score": 0.4024,
+      "detail": "03, 20, 2026, act, activity, category, curated, date"
+    },
+    {
+      "source": "ACT-0049",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.4008,
+      "detail": "03, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "MEDIA-0004",
+      "target": "MEDIA-0008",
+      "type": "thematic",
+      "score": 0.3988,
+      "detail": "added, candidate, evidence, favorites, id, interests, media, movie"
+    },
+    {
+      "source": "ACT-0047",
+      "target": "ACT-0048",
+      "type": "thematic",
+      "score": 0.3961,
+      "detail": "act, added, approved, approves, brief, candidate, companion, desired"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:38",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.3942,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 07:29:22",
+      "target": "GATE-2026-02-21 07:29:35",
+      "type": "thematic",
+      "score": 0.3925,
+      "detail": "look, telegram, up, user"
+    },
+    {
+      "source": "ACT-0051",
+      "target": "ACT-0054",
+      "type": "thematic",
+      "score": 0.392,
+      "detail": "03, 2026, 28, act, activity, category, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-20 08:01:11",
+      "target": "GATE-2026-02-20 08:03:46",
+      "type": "thematic",
+      "score": 0.3916,
+      "detail": "reptiles, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:57",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.3913,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0033",
+      "target": "ACT-0044",
+      "type": "thematic",
+      "score": 0.3897,
+      "detail": "02, 2026, act, activity, category, curated, curiosity, date"
+    },
+    {
+      "source": "CREATE-0008",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.3888,
+      "detail": "02, 2026, aesthetic, analysis, artifacts, background, bands, black"
+    },
+    {
+      "source": "ACT-0033",
+      "target": "ACT-0034",
+      "type": "thematic",
+      "score": 0.3881,
+      "detail": "02, 2026, 24, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:11",
+      "target": "GATE-2026-02-21 16:18:15",
+      "type": "thematic",
+      "score": 0.3861,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "ACT-0050",
+      "target": "ACT-0054",
+      "type": "thematic",
+      "score": 0.386,
+      "detail": "03, 2026, 28, act, activity, category, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:02",
+      "target": "GATE-2026-02-21 07:29:35",
+      "type": "thematic",
+      "score": 0.3857,
+      "detail": "look, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:47:32",
+      "target": "GATE-2026-02-20 08:03:46",
+      "type": "thematic",
+      "score": 0.3852,
+      "detail": "jupiter, telegram, user"
+    },
+    {
+      "source": "MEDIA-0006",
+      "target": "MEDIA-0008",
+      "type": "thematic",
+      "score": 0.3848,
+      "detail": "added, adventure, candidate, evidence, favorites, id, interests, media"
+    },
+    {
+      "source": "ACT-0047",
+      "target": "ACT-0048",
+      "type": "thematic",
+      "score": 0.3848,
+      "detail": "03, 20, 2026, act, activity, category, curated, date"
+    },
+    {
+      "source": "ACT-0042",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.3831,
+      "detail": "02, 2026, 26, act, activity, category, curated, date"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0004",
+      "type": "thematic",
+      "score": 0.382,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:38",
+      "target": "GATE-2026-02-20 08:03:46",
+      "type": "thematic",
+      "score": 0.3815,
+      "detail": "jupiter, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:13:54",
+      "target": "GATE-2026-02-21 07:28:11",
+      "type": "thematic",
+      "score": 0.3776,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-21 07:29:00",
+      "target": "GATE-2026-02-21 07:29:22",
+      "type": "thematic",
+      "score": 0.3763,
+      "detail": "about, black, holes, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 16:17:49",
+      "target": "GATE-2026-02-22 15:24:28",
+      "type": "thematic",
+      "score": 0.3758,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 16:17:49",
+      "target": "GATE-2026-02-22 15:24:40",
+      "type": "thematic",
+      "score": 0.3758,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "ACT-0044",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.3747,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "CREATE-0010",
+      "target": "ACT-0042",
+      "type": "thematic",
+      "score": 0.3707,
+      "detail": "0010, artifacts, black, cacti, camels, create, desert, earth"
+    },
+    {
+      "source": "ACT-0044",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.3699,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "ACT-0011",
+      "target": "ACT-0012",
+      "type": "thematic",
+      "score": 0.3676,
+      "detail": "02, 20, 2026, act, activity, answer, because, bot"
+    },
+    {
+      "source": "CREATE-0009",
+      "target": "ACT-0042",
+      "type": "thematic",
+      "score": 0.3638,
+      "detail": "02, 2026, 26, artifacts, continents, earth, evidence, geography"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "WRITE-0006",
+      "type": "thematic",
+      "score": 0.3632,
+      "detail": "0001, 0002, 02, 19, 2026, 48, about, academic"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "GATE-2026-02-19 17:54:05",
+      "type": "thematic",
+      "score": 0.3612,
+      "detail": "gemstones, makes, normal, rocks, telegram, user"
+    },
+    {
+      "source": "ACT-0053",
+      "target": "ACT-0054",
+      "type": "thematic",
+      "score": 0.3601,
+      "detail": "03, 2026, 28, act, activity, category, curated, date"
+    },
+    {
+      "source": "ACT-0034",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.3582,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "ACT-0034",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.3572,
+      "detail": "02, 2026, act, activity, category, curated, curiosity, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:02",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.3554,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "ACT-0034",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.3534,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.3526,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:43",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.3526,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:51",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.3485,
+      "detail": "chinese, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:30",
+      "target": "GATE-2026-02-19 17:10:48",
+      "type": "thematic",
+      "score": 0.3482,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:30",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.3482,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "GATE-2026-02-19 17:54:05",
+      "type": "thematic",
+      "score": 0.3438,
+      "detail": "gemstones, rocks, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:57",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.3428,
+      "detail": "like, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 18:06:30",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.3389,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0010",
+      "target": "GATE-2026-02-19 18:21:31",
+      "type": "thematic",
+      "score": 0.3386,
+      "detail": "robot, telegram, user, wild"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:57",
+      "target": "GATE-2026-02-21 06:45:22",
+      "type": "thematic",
+      "score": 0.3383,
+      "detail": "know, like, telegram, user, you"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0009",
+      "type": "thematic",
+      "score": 0.3376,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "GATE-2026-02-21 06:45:01",
+      "target": "GATE-2026-02-21 06:45:22",
+      "type": "thematic",
+      "score": 0.3348,
+      "detail": "coffee, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 06:34:27",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.3321,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "ACT-0007",
+      "type": "thematic",
+      "score": 0.3316,
+      "detail": "02, 19, 2026, acquisition, act, activity, america, answer"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0009",
+      "type": "thematic",
+      "score": 0.3293,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "ACT-0034",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.3289,
+      "detail": "2026, act, activity, category, curated, curiosity, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:15:06",
+      "target": "GATE-2026-02-21 16:18:15",
+      "type": "thematic",
+      "score": 0.3263,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:18:36",
+      "type": "thematic",
+      "score": 0.326,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:36",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.326,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0015",
+      "target": "ACT-0021",
+      "type": "thematic",
+      "score": 0.323,
+      "detail": "02, 2026, act, activity, artifact, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0003",
+      "target": "ACT-0046",
+      "type": "thematic",
+      "score": 0.3203,
+      "detail": "about, act, bot, cool, favorite, grace, it's, mar"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-19 17:10:48",
+      "type": "thematic",
+      "score": 0.3195,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.3195,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 18:18:07",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.3146,
+      "detail": "like, telegram, user"
+    },
+    {
+      "source": "CREATE-0005",
+      "target": "ACT-0025",
+      "type": "thematic",
+      "score": 0.3138,
+      "detail": "02, 2026, evidence, id, mayan, mexico, pakal, palenque"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "ACT-0016",
+      "type": "thematic",
+      "score": 0.3115,
+      "detail": "02, 2026, act, activity, bot, conversation, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 06:45:22",
+      "type": "thematic",
+      "score": 0.3112,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "CREATE-0007",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.3095,
+      "detail": "02, 2026, analysis, ancient, artifacts, bands, civilizations, color"
+    },
+    {
+      "source": "ACT-0003",
+      "target": "ACT-0016",
+      "type": "thematic",
+      "score": 0.3068,
+      "detail": "02, 2026, act, activity, bot, conversation, curated, date"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0012",
+      "type": "thematic",
+      "score": 0.3066,
+      "detail": "02, 2026, act, activity, answer, bot, curated, date"
+    },
+    {
+      "source": "ACT-0003",
+      "target": "ACT-0005",
+      "type": "thematic",
+      "score": 0.305,
+      "detail": "02, 19, 2026, act, activity, bot, conversation, curated"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:55:25",
+      "type": "thematic",
+      "score": 0.3043,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:55:25",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.3043,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "ACT-0028",
+      "target": "ACT-0038",
+      "type": "thematic",
+      "score": 0.3037,
+      "detail": "02, 2026, act, activity, bedtime, classical, curated, date"
+    },
+    {
+      "source": "ACT-0003",
+      "target": "GATE-2026-02-21 16:18:15",
+      "type": "thematic",
+      "score": 0.3022,
+      "detail": "favorite, planet, telegram, user"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0006",
+      "type": "thematic",
+      "score": 0.2995,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "CREATE-0003",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.2991,
+      "detail": "02, 2026, analysis, animals, artifacts, caregiving, characters, clothing"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "GATE-2026-02-19 17:21:06",
+      "type": "thematic",
+      "score": 0.2967,
+      "detail": "first, president, telegram, user"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0007",
+      "type": "thematic",
+      "score": 0.2956,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, big"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:02",
+      "target": "GATE-2026-02-21 07:28:11",
+      "type": "thematic",
+      "score": 0.2948,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.294,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 07:29:35",
+      "type": "thematic",
+      "score": 0.2939,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:16:18",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.2924,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "ACT-0002",
+      "type": "thematic",
+      "score": 0.2907,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, big"
+    },
+    {
+      "source": "GATE-2026-02-19 17:23:25",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.2903,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0030",
+      "target": "ACT-0031",
+      "type": "thematic",
+      "score": 0.2897,
+      "detail": "02, 2026, 21, act, activity, because, bot, category"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:30",
+      "target": "GATE-2026-02-19 17:16:18",
+      "type": "thematic",
+      "score": 0.2888,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0016",
+      "type": "thematic",
+      "score": 0.2866,
+      "detail": "02, 2026, act, activity, big, bot, curated, date"
+    },
+    {
+      "source": "ACT-0045",
+      "target": "ACT-0051",
+      "type": "thematic",
+      "score": 0.2849,
+      "detail": "03, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "GATE-2026-02-19 17:55:25",
+      "type": "thematic",
+      "score": 0.2848,
+      "detail": "gemstones, normal, stones, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:02",
+      "target": "GATE-2026-02-21 07:29:22",
+      "type": "thematic",
+      "score": 0.284,
+      "detail": "look, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-22 15:24:28",
+      "target": "GATE-2026-02-22 15:24:34",
+      "type": "thematic",
+      "score": 0.2834,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-22 15:24:34",
+      "target": "GATE-2026-02-22 15:24:40",
+      "type": "thematic",
+      "score": 0.2834,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:24:02",
+      "target": "GATE-2026-02-21 07:58:26",
+      "type": "thematic",
+      "score": 0.2826,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "CREATE-0010",
+      "target": "ACT-0042",
+      "type": "thematic",
+      "score": 0.2804,
+      "detail": "02, 2026, 26, activity, artifacts, desert, earth, ecosystem"
+    },
+    {
+      "source": "ACT-0045",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.2801,
+      "detail": "03, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-24 03:34:29",
+      "type": "thematic",
+      "score": 0.2797,
+      "detail": "1968, 1974, 2023, 2026, 23, 40, abby, about"
+    },
+    {
+      "source": "CREATE-0009",
+      "target": "GATE-2026-02-19 17:49:26",
+      "type": "thematic",
+      "score": 0.2784,
+      "detail": "earth"
+    },
+    {
+      "source": "ACT-0019",
+      "target": "ACT-0026",
+      "type": "thematic",
+      "score": 0.2763,
+      "detail": "02, 2026, act, activity, category, curated, date, diamond"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-19 17:48:38",
+      "type": "thematic",
+      "score": 0.2761,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:38",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.2761,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 17:47:32",
+      "target": "GATE-2026-02-19 17:48:38",
+      "type": "thematic",
+      "score": 0.2755,
+      "detail": "jupiter, telegram, user"
+    },
+    {
+      "source": "ACT-0008",
+      "target": "GATE-2026-02-19 18:06:30",
+      "type": "thematic",
+      "score": 0.2754,
+      "detail": "about, ballet, know, nutcracker, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 16:51:43",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.2751,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0038",
+      "target": "ACT-0039",
+      "type": "thematic",
+      "score": 0.2746,
+      "detail": "02, 2026, 24, act, activity, companion, contributes, cur"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0018",
+      "type": "thematic",
+      "score": 0.2743,
+      "detail": "02, 2026, act, activity, curated, date, evidence, gemstones"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "ACT-0037",
+      "type": "thematic",
+      "score": 0.2723,
+      "detail": "0006, 02, 2026, 24, analysis, core, crust, date"
+    },
+    {
+      "source": "ACT-0029",
+      "target": "ACT-0031",
+      "type": "thematic",
+      "score": 0.272,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-19 18:06:30",
+      "type": "thematic",
+      "score": 0.272,
+      "detail": "about, telegram, user, you"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "ACT-0031",
+      "type": "thematic",
+      "score": 0.2715,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "GATE-2026-02-19 17:16:18",
+      "target": "GATE-2026-02-19 17:18:36",
+      "type": "thematic",
+      "score": 0.2704,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 21:35:54",
+      "target": "GATE-2026-02-22 15:24:28",
+      "type": "thematic",
+      "score": 0.2699,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 21:35:54",
+      "target": "GATE-2026-02-22 15:24:40",
+      "type": "thematic",
+      "score": 0.2699,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.2696,
+      "detail": "like, soccer, telegram, user, you"
+    },
+    {
+      "source": "ACT-0045",
+      "target": "ACT-0049",
+      "type": "thematic",
+      "score": 0.2695,
+      "detail": "03, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-21 06:34:27",
+      "target": "GATE-2026-02-21 06:35:24",
+      "type": "thematic",
+      "score": 0.2693,
+      "detail": "draw, telegram, user, want"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0007",
+      "type": "thematic",
+      "score": 0.2689,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-24 03:34:29",
+      "type": "thematic",
+      "score": 0.2681,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0009",
+      "target": "GATE-2026-02-19 18:17:05",
+      "type": "thematic",
+      "score": 0.2681,
+      "detail": "d845, piano, schubert, sonata, telegram, user"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "ACT-0030",
+      "type": "thematic",
+      "score": 0.2676,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:51",
+      "target": "GATE-2026-02-22 15:24:28",
+      "type": "thematic",
+      "score": 0.2671,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:51",
+      "target": "GATE-2026-02-22 15:24:40",
+      "type": "thematic",
+      "score": 0.2671,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "ACT-0029",
+      "type": "thematic",
+      "score": 0.2669,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-19 17:10:48",
+      "type": "thematic",
+      "score": 0.2664,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.2664,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "WRITE-0001",
+      "target": "WRITE-0006",
+      "type": "thematic",
+      "score": 0.2663,
+      "detail": "0001, 02, 15, 2026, 40, about, afraid, age"
+    },
+    {
+      "source": "WRITE-0005",
+      "target": "GATE-2026-02-24 03:34:29",
+      "type": "thematic",
+      "score": 0.2651,
+      "detail": "2026, 23, bonita, casa, food, got, place, time"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0010",
+      "type": "thematic",
+      "score": 0.2634,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "GATE-2026-02-20 08:01:11",
+      "target": "GATE-2026-02-21 17:49:18",
+      "type": "thematic",
+      "score": 0.2622,
+      "detail": "am, telegram, user"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0006",
+      "type": "thematic",
+      "score": 0.2618,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "ACT-0004",
+      "type": "thematic",
+      "score": 0.2615,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "ACT-0006",
+      "target": "ACT-0016",
+      "type": "thematic",
+      "score": 0.2602,
+      "detail": "02, 2026, act, activity, black, bot, curated, date"
+    },
+    {
+      "source": "ACT-0007",
+      "target": "GATE-2026-02-19 18:05:33",
+      "type": "thematic",
+      "score": 0.2575,
+      "detail": "guy, important, lincoln, really, telegram, user"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0003",
+      "type": "thematic",
+      "score": 0.2555,
+      "detail": "02, 19, 2026, act, activity, bot, curated, date"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0010",
+      "type": "thematic",
+      "score": 0.2545,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "ACT-0029",
+      "target": "GATE-2026-02-21 07:47:53",
+      "type": "thematic",
+      "score": 0.2534,
+      "detail": "telegram, that's, user, year"
+    },
+    {
+      "source": "ACT-0020",
+      "target": "ACT-0044",
+      "type": "thematic",
+      "score": 0.2522,
+      "detail": "act, animals, curiosity, knowledge, laugh, make, operator, personality"
+    },
+    {
+      "source": "GATE-2026-02-21 16:17:49",
+      "target": "GATE-2026-02-22 15:24:34",
+      "type": "thematic",
+      "score": 0.2519,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:13:54",
+      "target": "GATE-2026-02-19 17:24:02",
+      "type": "thematic",
+      "score": 0.2501,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "GATE-2026-02-19 17:15:06",
+      "target": "GATE-2026-02-19 17:24:02",
+      "type": "thematic",
+      "score": 0.2492,
+      "detail": "telegram, user, what's"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "ACT-0055",
+      "type": "thematic",
+      "score": 0.2482,
+      "detail": "0001, 02, 19, 2026, act, activity, added, ago"
+    },
+    {
+      "source": "ACT-0011",
+      "target": "ACT-0017",
+      "type": "thematic",
+      "score": 0.2463,
+      "detail": "02, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0011",
+      "type": "thematic",
+      "score": 0.2462,
+      "detail": "02, 2026, act, activity, answer, bot, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:48:57",
+      "target": "GATE-2026-02-19 18:18:07",
+      "type": "thematic",
+      "score": 0.2445,
+      "detail": "like, telegram, user"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0012",
+      "type": "thematic",
+      "score": 0.2426,
+      "detail": "02, 2026, act, activity, answer, bot, curated, date"
+    },
+    {
+      "source": "ACT-0012",
+      "target": "ACT-0017",
+      "type": "thematic",
+      "score": 0.2426,
+      "detail": "02, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:32",
+      "target": "GATE-2026-02-21 07:29:22",
+      "type": "thematic",
+      "score": 0.2415,
+      "detail": "black, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 07:29:22",
+      "target": "GATE-2026-02-21 07:58:43",
+      "type": "thematic",
+      "score": 0.2415,
+      "detail": "black, telegram, user"
+    },
+    {
+      "source": "CREATE-0001",
+      "target": "CREATE-0003",
+      "type": "thematic",
+      "score": 0.2414,
+      "detail": "02, 15, 2026, analysis, animals, artifacts, behind, centered"
+    },
+    {
+      "source": "ACT-0028",
+      "target": "ACT-0027",
+      "type": "thematic",
+      "score": 0.2399,
+      "detail": "02, 2026, 23, act, activity, aligns, category, com"
+    },
+    {
+      "source": "GATE-2026-02-21 16:17:49",
+      "target": "GATE-2026-02-21 21:35:54",
+      "type": "thematic",
+      "score": 0.2399,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "CREATE-0005",
+      "target": "CREATE-0008",
+      "type": "thematic",
+      "score": 0.239,
+      "detail": "02, 15, 2026, analysis, artifacts, background, black, child"
+    },
+    {
+      "source": "ACT-0022",
+      "target": "ACT-0039",
+      "type": "thematic",
+      "score": 0.2368,
+      "detail": "02, 2026, act, activity, composer, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0009",
+      "target": "ACT-0055",
+      "type": "thematic",
+      "score": 0.2362,
+      "detail": "0009, 02, 19, 2026, act, activity, adventure, answer"
+    },
+    {
+      "source": "GATE-2026-02-21 17:58:28",
+      "target": "GATE-2026-02-22 15:24:34",
+      "type": "thematic",
+      "score": 0.2361,
+      "detail": "ask, telegram, user"
+    },
+    {
+      "source": "ACT-0014",
+      "target": "ACT-0015",
+      "type": "thematic",
+      "score": 0.2352,
+      "detail": "0003, 02, 2026, act, activity, artifact, category, cur"
+    },
+    {
+      "source": "ACT-0006",
+      "target": "ACT-0007",
+      "type": "thematic",
+      "score": 0.2351,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "ACT-0003",
+      "target": "GATE-2026-02-19 17:49:26",
+      "type": "thematic",
+      "score": 0.2351,
+      "detail": "mars, telegram, user"
+    },
+    {
+      "source": "ACT-0011",
+      "target": "GATE-2026-02-20 08:03:46",
+      "type": "thematic",
+      "score": 0.2346,
+      "detail": "reptiles, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:36",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.2344,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0009",
+      "target": "ACT-0010",
+      "type": "thematic",
+      "score": 0.2333,
+      "detail": "02, 19, 2026, acquisition, act, activity, answer, bot"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 06:34:27",
+      "type": "thematic",
+      "score": 0.2326,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 06:34:27",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.2326,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "CREATE-0009",
+      "type": "thematic",
+      "score": 0.2322,
+      "detail": "02, 2026, analysis, artifacts, context, created, earth, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:23:25",
+      "target": "GATE-2026-02-19 17:48:57",
+      "type": "thematic",
+      "score": 0.2316,
+      "detail": "know, telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:32",
+      "target": "GATE-2026-02-21 07:29:00",
+      "type": "thematic",
+      "score": 0.231,
+      "detail": "black, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 07:29:00",
+      "target": "GATE-2026-02-21 07:58:43",
+      "type": "thematic",
+      "score": 0.231,
+      "detail": "black, telegram, user"
+    },
+    {
+      "source": "CREATE-0001",
+      "target": "GATE-2026-02-19 17:19:48",
+      "type": "thematic",
+      "score": 0.2306,
+      "detail": "chinese"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0011",
+      "type": "thematic",
+      "score": 0.2303,
+      "detail": "02, 2026, act, activity, answer, bot, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:49:26",
+      "target": "ACT-0046",
+      "type": "thematic",
+      "score": 0.2287,
+      "detail": "earth, mars, user"
+    },
+    {
+      "source": "CREATE-0003",
+      "target": "CREATE-0008",
+      "type": "thematic",
+      "score": 0.228,
+      "detail": "02, 15, 2026, 3rd, analysis, artifacts, care, child"
+    },
+    {
+      "source": "CREATE-0002",
+      "target": "CREATE-0003",
+      "type": "thematic",
+      "score": 0.2277,
+      "detail": "02, 15, 2026, 2nd, analysis, animal, artifacts, bowl"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "ACT-0023",
+      "type": "thematic",
+      "score": 0.2271,
+      "detail": "02, 2026, act, activity, answer, curated, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:19:48",
+      "target": "GATE-2026-02-19 17:55:25",
+      "type": "thematic",
+      "score": 0.2252,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:17:49",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.2238,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:05:33",
+      "target": "GATE-2026-02-19 18:06:30",
+      "type": "thematic",
+      "score": 0.2202,
+      "detail": "really, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:17:49",
+      "type": "thematic",
+      "score": 0.22,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:17:49",
+      "type": "thematic",
+      "score": 0.22,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:17:49",
+      "type": "thematic",
+      "score": 0.22,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:17:49",
+      "type": "thematic",
+      "score": 0.22,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0017",
+      "target": "GATE-2026-02-20 08:03:46",
+      "type": "thematic",
+      "score": 0.2191,
+      "detail": "reptiles, user"
+    },
+    {
+      "source": "GATE-2026-02-21 21:18:08",
+      "target": "GATE-2026-02-22 15:24:28",
+      "type": "thematic",
+      "score": 0.219,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 21:18:08",
+      "target": "GATE-2026-02-22 15:24:40",
+      "type": "thematic",
+      "score": 0.219,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "CREATE-0006",
+      "target": "CREATE-0008",
+      "type": "thematic",
+      "score": 0.2181,
+      "detail": "02, 15, 2026, analysis, artifacts, background, black, blue"
+    },
+    {
+      "source": "ACT-0046",
+      "target": "GATE-2026-02-20 13:21:25",
+      "type": "thematic",
+      "score": 0.2174,
+      "detail": "test, user"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "ACT-0021",
+      "type": "thematic",
+      "score": 0.2165,
+      "detail": "0005, 02, 2026, bonita, casa, date, evidence, face"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "ACT-0031",
+      "type": "thematic",
+      "score": 0.2157,
+      "detail": "02, 2026, act, activity, bot, conversation, curated, date"
+    },
+    {
+      "source": "ACT-0020",
+      "target": "ACT-0044",
+      "type": "thematic",
+      "score": 0.2145,
+      "detail": "02, 2026, act, activity, animals, category, curated, curiosity"
+    },
+    {
+      "source": "CREATE-0005",
+      "target": "CREATE-0007",
+      "type": "thematic",
+      "score": 0.2139,
+      "detail": "02, 15, 2026, analysis, ancient, artifacts, carefully, child"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-21 06:35:24",
+      "type": "thematic",
+      "score": 0.2126,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 06:35:24",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.2126,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-19 18:18:07",
+      "type": "thematic",
+      "score": 0.2111,
+      "detail": "dancing, like, telegram, user"
+    },
+    {
+      "source": "ACT-0044",
+      "target": "GATE-2026-02-19 17:49:26",
+      "type": "thematic",
+      "score": 0.2111,
+      "detail": "earth, mars, user"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "ACT-0010",
+      "type": "thematic",
+      "score": 0.2088,
+      "detail": "02, 19, 2026, act, activity, bot, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:49:26",
+      "target": "ACT-0044",
+      "type": "thematic",
+      "score": 0.2084,
+      "detail": "earth, mars, user"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "ACT-0030",
+      "type": "thematic",
+      "score": 0.2082,
+      "detail": "02, 2026, act, activity, bot, conversation, curated, date"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "WRITE-0003",
+      "type": "thematic",
+      "score": 0.2067,
+      "detail": "0001, 0002, 02, 19, 2026, about, actual, advancement"
+    },
+    {
+      "source": "WRITE-0005",
+      "target": "WRITE-0006",
+      "type": "thematic",
+      "score": 0.2053,
+      "detail": "0004, 0005, 02, 2026, age, analysis, artifacts, bonita"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.2043,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.2043,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.2043,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.2043,
+      "detail": "telegram, user, yes"
+    },
+    {
+      "source": "ACT-0013",
+      "target": "GATE-2026-02-19 17:49:26",
+      "type": "thematic",
+      "score": 0.2008,
+      "detail": "earth, mars, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:30",
+      "target": "GATE-2026-02-21 21:33:46",
+      "type": "thematic",
+      "score": 0.1992,
+      "detail": "telegram, think, user"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "ACT-0018",
+      "type": "thematic",
+      "score": 0.1988,
+      "detail": "02, 2026, act, activity, curated, date, evidence, gemstones"
+    },
+    {
+      "source": "ACT-0018",
+      "target": "GATE-2026-02-19 17:54:05",
+      "type": "thematic",
+      "score": 0.1984,
+      "detail": "gemstones, rocks, user"
+    },
+    {
+      "source": "WRITE-0006",
+      "target": "ACT-0015",
+      "type": "thematic",
+      "score": 0.1977,
+      "detail": "0002, 0003, 0004, 02, 2026, date, evidence, id"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:04",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1975,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:49:07",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1975,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0015",
+      "target": "ACT-0017",
+      "type": "thematic",
+      "score": 0.1968,
+      "detail": "02, 2026, 21, act, activity, category, cur, curated"
+    },
+    {
+      "source": "GATE-2026-02-21 16:17:49",
+      "target": "GATE-2026-02-21 21:18:08",
+      "type": "thematic",
+      "score": 0.1947,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "CREATE-0005",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.1945,
+      "detail": "02, 2026, analysis, ancient, artifacts, background, black, civilizations"
+    },
+    {
+      "source": "GATE-2026-02-19 18:18:07",
+      "target": "GATE-2026-02-21 06:45:22",
+      "type": "thematic",
+      "score": 0.1944,
+      "detail": "like, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:18:04",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:49:07",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:18:04",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:49:07",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:18:04",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-19 17:49:07",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:18:04",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-19 17:49:07",
+      "type": "thematic",
+      "score": 0.1942,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:18:07",
+      "target": "GATE-2026-02-21 07:29:22",
+      "type": "thematic",
+      "score": 0.1931,
+      "detail": "like, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:16:18",
+      "target": "GATE-2026-02-21 06:34:27",
+      "type": "thematic",
+      "score": 0.1929,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "CREATE-0006",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.1929,
+      "detail": "02, 2026, abby, analysis, art, artifacts, astronomy, background"
+    },
+    {
+      "source": "GATE-2026-02-19 16:51:43",
+      "target": "GATE-2026-02-19 17:10:48",
+      "type": "thematic",
+      "score": 0.1927,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-19 16:51:43",
+      "target": "GATE-2026-02-21 07:28:43",
+      "type": "thematic",
+      "score": 0.1927,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "WRITE-0001",
+      "target": "WRITE-0003",
+      "type": "thematic",
+      "score": 0.1918,
+      "detail": "0001, 02, 2026, about, actual, afraid, age, analysis"
+    },
+    {
+      "source": "ACT-0008",
+      "target": "ACT-0055",
+      "type": "thematic",
+      "score": 0.1902,
+      "detail": "0008, 02, 19, 2026, about, act, activity, adventure"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "ACT-0055",
+      "type": "thematic",
+      "score": 0.1882,
+      "detail": "0001, 02, 19, 2026, 35, 48, about, analysis"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-20 08:01:11",
+      "type": "thematic",
+      "score": 0.188,
+      "detail": "about, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:48",
+      "target": "GATE-2026-02-24 03:34:29",
+      "type": "thematic",
+      "score": 0.1878,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 07:28:43",
+      "target": "GATE-2026-02-24 03:34:29",
+      "type": "thematic",
+      "score": 0.1878,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "ACT-0002",
+      "target": "ACT-0008",
+      "type": "thematic",
+      "score": 0.1875,
+      "detail": "02, 19, 2026, act, activity, answer, bot, curated"
+    },
+    {
+      "source": "GATE-2026-02-19 18:18:07",
+      "target": "GATE-2026-02-21 17:49:18",
+      "type": "thematic",
+      "score": 0.1873,
+      "detail": "like, telegram, user"
+    },
+    {
+      "source": "ACT-0030",
+      "target": "ACT-0032",
+      "type": "thematic",
+      "score": 0.1872,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "GATE-2026-02-19 17:21:06",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1868,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:52:16",
+      "target": "GATE-2026-02-21 07:29:00",
+      "type": "thematic",
+      "score": 0.1868,
+      "detail": "about, learned, telegram, user"
+    },
+    {
+      "source": "ACT-0029",
+      "target": "ACT-0032",
+      "type": "thematic",
+      "score": 0.1867,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "ACT-0003",
+      "target": "ACT-0013",
+      "type": "thematic",
+      "score": 0.1865,
+      "detail": "02, 2026, act, activity, biggest, curated, date, evidence"
+    },
+    {
+      "source": "CREATE-0007",
+      "target": "ACT-0014",
+      "type": "thematic",
+      "score": 0.1862,
+      "detail": "02, 2026, blue, description, egyptian, evidence, first, headdress"
+    },
+    {
+      "source": "GATE-2026-02-19 17:53:32",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.1853,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:21:06",
+      "type": "thematic",
+      "score": 0.1836,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-19 17:21:06",
+      "type": "thematic",
+      "score": 0.1836,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-19 17:04:45",
+      "type": "thematic",
+      "score": 0.1832,
+      "detail": "look, telegram, up, user"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "ACT-0032",
+      "type": "thematic",
+      "score": 0.1831,
+      "detail": "02, 2026, 21, act, activity, bot, category, conversation"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-21 21:33:46",
+      "type": "thematic",
+      "score": 0.1828,
+      "detail": "telegram, think, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:05:33",
+      "target": "GATE-2026-02-21 21:18:08",
+      "type": "thematic",
+      "score": 0.1825,
+      "detail": "really, telegram, user"
+    },
+    {
+      "source": "ACT-0004",
+      "target": "ACT-0008",
+      "type": "thematic",
+      "score": 0.1812,
+      "detail": "02, 19, 2026, act, activity, answer, bot, curated"
+    },
+    {
+      "source": "ACT-0008",
+      "target": "ACT-0009",
+      "type": "thematic",
+      "score": 0.181,
+      "detail": "02, 19, 2026, act, activity, adventure, answer, bot"
+    },
+    {
+      "source": "GATE-2026-02-21 21:35:54",
+      "target": "GATE-2026-02-22 15:24:34",
+      "type": "thematic",
+      "score": 0.1809,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:04:38",
+      "target": "GATE-2026-02-21 07:28:32",
+      "type": "thematic",
+      "score": 0.1807,
+      "detail": "black, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:04:38",
+      "target": "GATE-2026-02-21 07:58:43",
+      "type": "thematic",
+      "score": 0.1807,
+      "detail": "black, telegram, user"
+    },
+    {
+      "source": "WRITE-0004",
+      "target": "WRITE-0005",
+      "type": "thematic",
+      "score": 0.1803,
+      "detail": "0004, 02, 2026, activities, actual, advancement, adverbial, alignment"
+    },
+    {
+      "source": "GATE-2026-02-19 17:04:45",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1802,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:53:32",
+      "target": "GATE-2026-02-21 16:18:15",
+      "type": "thematic",
+      "score": 0.1799,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "ACT-0005",
+      "target": "ACT-0032",
+      "type": "thematic",
+      "score": 0.1795,
+      "detail": "02, 2026, act, activity, bot, conversation, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:18:51",
+      "target": "GATE-2026-02-22 15:24:34",
+      "type": "thematic",
+      "score": 0.1791,
+      "detail": "me, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:54:58",
+      "target": "GATE-2026-02-19 17:55:25",
+      "type": "thematic",
+      "score": 0.1779,
+      "detail": "different, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 07:47:53",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.1764,
+      "detail": "telegram, that's, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:04:38",
+      "target": "GATE-2026-02-19 18:05:33",
+      "type": "thematic",
+      "score": 0.1761,
+      "detail": "lincoln, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:52:16",
+      "target": "GATE-2026-02-19 17:54:05",
+      "type": "thematic",
+      "score": 0.1756,
+      "detail": "rocks, telegram, user"
+    },
+    {
+      "source": "ACT-0039",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.1755,
+      "detail": "02, 2026, act, activity, companion, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0037",
+      "target": "ACT-0039",
+      "type": "thematic",
+      "score": 0.1732,
+      "detail": "02, 2026, 24, act, activity, companion, contributes, curated"
+    },
+    {
+      "source": "ACT-0012",
+      "target": "GATE-2026-02-20 08:01:11",
+      "type": "thematic",
+      "score": 0.1722,
+      "detail": "reptiles, telegram, user"
+    },
+    {
+      "source": "ACT-0039",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.1703,
+      "detail": "02, 2026, act, activity, companion, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0021",
+      "target": "ACT-0037",
+      "type": "thematic",
+      "score": 0.17,
+      "detail": "02, 2026, act, activity, artifact, curated, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 17:10:36",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1699,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0027",
+      "target": "GATE-2026-02-19 18:06:30",
+      "type": "thematic",
+      "score": 0.169,
+      "detail": "ballet, nutcracker, user"
+    },
+    {
+      "source": "ACT-0001",
+      "target": "GATE-2026-02-19 17:27:47",
+      "type": "thematic",
+      "score": 0.1683,
+      "detail": "president, telegram, user"
+    },
+    {
+      "source": "ACT-0012",
+      "target": "GATE-2026-02-19 17:47:32",
+      "type": "thematic",
+      "score": 0.1682,
+      "detail": "jupiter, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 06:34:11",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1679,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:52:16",
+      "target": "GATE-2026-02-21 06:34:27",
+      "type": "thematic",
+      "score": 0.1676,
+      "detail": "telegram, today, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:10:36",
+      "type": "thematic",
+      "score": 0.167,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:57",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1665,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "CREATE-0001",
+      "target": "GATE-2026-02-19 17:18:51",
+      "type": "thematic",
+      "score": 0.1657,
+      "detail": "chinese, something"
+    },
+    {
+      "source": "GATE-2026-02-20 13:21:25",
+      "target": "ACT-0047",
+      "type": "thematic",
+      "score": 0.1655,
+      "detail": "test"
+    },
+    {
+      "source": "ACT-0020",
+      "target": "GATE-2026-02-21 21:35:54",
+      "type": "thematic",
+      "score": 0.1654,
+      "detail": "fun, me, questions, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 06:34:11",
+      "type": "thematic",
+      "score": 0.1651,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 06:34:11",
+      "type": "thematic",
+      "score": 0.1651,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 06:34:11",
+      "type": "thematic",
+      "score": 0.1651,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-21 06:34:11",
+      "type": "thematic",
+      "score": 0.1651,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-21 17:49:18",
+      "type": "thematic",
+      "score": 0.1649,
+      "detail": "allergic, am, because, dogs, don't, like, one, telegram"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 07:47:53",
+      "type": "thematic",
+      "score": 0.1643,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "WRITE-0004",
+      "target": "WRITE-0006",
+      "type": "thematic",
+      "score": 0.1643,
+      "detail": "0004, 02, 2026, analysis, artifacts, chronological, connector, connectors"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:07:57",
+      "type": "thematic",
+      "score": 0.1637,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0011",
+      "target": "GATE-2026-02-20 08:01:11",
+      "type": "thematic",
+      "score": 0.1635,
+      "detail": "reptiles, telegram, user"
+    },
+    {
+      "source": "ACT-0020",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.1616,
+      "detail": "act, art, hard, ix, learn, modality, operator, q2"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 07:47:53",
+      "type": "thematic",
+      "score": 0.1615,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 07:47:53",
+      "type": "thematic",
+      "score": 0.1615,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0014",
+      "target": "ACT-0050",
+      "type": "thematic",
+      "score": 0.1607,
+      "detail": "2026, act, activity, art, category, curated, curiosity, date"
+    },
+    {
+      "source": "GATE-2026-02-19 17:27:47",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1605,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "GATE-2026-02-19 17:49:26",
+      "type": "thematic",
+      "score": 0.1599,
+      "detail": "earth"
+    },
+    {
+      "source": "GATE-2026-02-19 16:51:43",
+      "target": "GATE-2026-02-19 17:16:18",
+      "type": "thematic",
+      "score": 0.1598,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "GATE-2026-02-21 07:48:09",
+      "target": "GATE-2026-02-21 17:49:18",
+      "type": "thematic",
+      "score": 0.1589,
+      "detail": "like, telegram, user"
+    },
+    {
+      "source": "ACT-0033",
+      "target": "GATE-2026-02-21 07:47:29",
+      "type": "thematic",
+      "score": 0.1587,
+      "detail": "date, human, user"
+    },
+    {
+      "source": "CREATE-0007",
+      "target": "CREATE-0008",
+      "type": "thematic",
+      "score": 0.1581,
+      "detail": "02, 15, 2026, analysis, artifacts, bands, blue, child"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:27:47",
+      "type": "thematic",
+      "score": 0.1578,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0019",
+      "target": "GATE-2026-02-19 17:53:32",
+      "type": "thematic",
+      "score": 0.1576,
+      "detail": "favorite, rock, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:19:48",
+      "target": "GATE-2026-02-21 06:35:24",
+      "type": "thematic",
+      "score": 0.1573,
+      "detail": "know, telegram, user"
+    },
+    {
+      "source": "CREATE-0001",
+      "target": "CREATE-0002",
+      "type": "thematic",
+      "score": 0.1564,
+      "detail": "02, 15, 2026, analysis, art, artifacts, centered, child"
+    },
+    {
+      "source": "CREATE-0009",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.1563,
+      "detail": "02, 2026, 26, analysis, artifacts, context, create, created"
+    },
+    {
+      "source": "ACT-0018",
+      "target": "GATE-2026-02-19 17:52:16",
+      "type": "thematic",
+      "score": 0.1557,
+      "detail": "about, rocks, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:02",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1557,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "CREATE-0005",
+      "target": "CREATE-0006",
+      "type": "thematic",
+      "score": 0.1556,
+      "detail": "02, 15, 2026, analysis, artifacts, background, black, child"
+    },
+    {
+      "source": "GATE-2026-02-19 17:53:32",
+      "target": "GATE-2026-02-21 07:28:11",
+      "type": "thematic",
+      "score": 0.1537,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "ACT-0020",
+      "target": "ACT-0036",
+      "type": "thematic",
+      "score": 0.1536,
+      "detail": "02, 2026, act, activity, art, creating, curated, date"
+    },
+    {
+      "source": "GATE-2026-02-21 06:35:24",
+      "target": "GATE-2026-02-21 17:49:18",
+      "type": "thematic",
+      "score": 0.1532,
+      "detail": "don't, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:02",
+      "target": "GATE-2026-02-19 16:52:45",
+      "type": "thematic",
+      "score": 0.153,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 17:50:12",
+      "type": "thematic",
+      "score": 0.1522,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0015",
+      "target": "ACT-0037",
+      "type": "thematic",
+      "score": 0.1521,
+      "detail": "02, 2026, act, activity, artifact, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0027",
+      "target": "ACT-0052",
+      "type": "thematic",
+      "score": 0.1514,
+      "detail": "act, ballet, performance, story"
+    },
+    {
+      "source": "ACT-0018",
+      "target": "ACT-0036",
+      "type": "thematic",
+      "score": 0.1503,
+      "detail": "02, 2026, act, activity, curated, date, evidence, id"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 17:50:12",
+      "type": "thematic",
+      "score": 0.1496,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 17:50:12",
+      "type": "thematic",
+      "score": 0.1496,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 17:50:12",
+      "type": "thematic",
+      "score": 0.1496,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "CREATE-0001",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.1494,
+      "detail": "02, 2026, analysis, animals, art, artifacts, bands, chinese"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 06:45:01",
+      "type": "thematic",
+      "score": 0.1481,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0037",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.1479,
+      "detail": "02, 2026, act, activity, companion, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0019",
+      "target": "GATE-2026-02-21 17:48:18",
+      "type": "thematic",
+      "score": 0.1478,
+      "detail": "favorite, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:53:32",
+      "target": "GATE-2026-02-21 07:58:26",
+      "type": "thematic",
+      "score": 0.1474,
+      "detail": "favorite, telegram, user"
+    },
+    {
+      "source": "ACT-0024",
+      "target": "ACT-0031",
+      "type": "thematic",
+      "score": 0.147,
+      "detail": "02, 2026, act, activity, category, curated, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 06:45:01",
+      "type": "thematic",
+      "score": 0.1456,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 06:45:01",
+      "type": "thematic",
+      "score": 0.1456,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 06:45:01",
+      "type": "thematic",
+      "score": 0.1456,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 18:17:05",
+      "target": "GATE-2026-02-21 21:33:46",
+      "type": "thematic",
+      "score": 0.1455,
+      "detail": "right, telegram, user"
+    },
+    {
+      "source": "ACT-0017",
+      "target": "ACT-0036",
+      "type": "thematic",
+      "score": 0.1453,
+      "detail": "02, 2026, act, activity, curated, date, evidence, id"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-21 07:29:00",
+      "type": "thematic",
+      "score": 0.1447,
+      "detail": "about, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 07:47:29",
+      "type": "thematic",
+      "score": 0.1446,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 07:47:29",
+      "type": "thematic",
+      "score": 0.1422,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 07:47:29",
+      "type": "thematic",
+      "score": 0.1422,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 07:47:29",
+      "type": "thematic",
+      "score": 0.1422,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0013",
+      "target": "ACT-0044",
+      "type": "thematic",
+      "score": 0.1413,
+      "detail": "02, 2026, 27, act, activity, category, curated, curiosity"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-19 17:52:16",
+      "type": "thematic",
+      "score": 0.1407,
+      "detail": "about, telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:20",
+      "target": "GATE-2026-02-21 17:58:28",
+      "type": "thematic",
+      "score": 0.1396,
+      "detail": "about, telegram, user"
+    },
+    {
+      "source": "ACT-0022",
+      "target": "ACT-0027",
+      "type": "thematic",
+      "score": 0.1392,
+      "detail": "02, 2026, 23, act, activity, ballet, category, curated"
+    },
+    {
+      "source": "GATE-2026-02-19 16:51:43",
+      "target": "GATE-2026-02-21 07:48:09",
+      "type": "thematic",
+      "score": 0.1385,
+      "detail": "telegram, user, you"
+    },
+    {
+      "source": "CREATE-0006",
+      "target": "CREATE-0009",
+      "type": "thematic",
+      "score": 0.1384,
+      "detail": "02, 2026, analysis, artifacts, blue, context, crayon, create"
+    },
+    {
+      "source": "CREATE-0004",
+      "target": "MEDIA-0005",
+      "type": "thematic",
+      "score": 0.1371,
+      "detail": "evidence, id, identity, interests, ocean, self, signals, tier"
+    },
+    {
+      "source": "ACT-0034",
+      "target": "ACT-0035",
+      "type": "thematic",
+      "score": 0.1345,
+      "detail": "02, 2026, 24, act, activity, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0012",
+      "target": "ACT-0013",
+      "type": "thematic",
+      "score": 0.1342,
+      "detail": "02, 20, 2026, act, activity, category, curated, date"
+    },
+    {
+      "source": "ACT-0021",
+      "target": "ACT-0053",
+      "type": "thematic",
+      "score": 0.1341,
+      "detail": "2026, act, activity, curated, date, evidence, id, modality"
+    },
+    {
+      "source": "CREATE-0004",
+      "target": "CREATE-0006",
+      "type": "thematic",
+      "score": 0.1339,
+      "detail": "02, 15, 2026, abby, analysis, art, artifacts, blue"
+    },
+    {
+      "source": "CREATE-0008",
+      "target": "GATE-2026-02-19 18:04:38",
+      "type": "thematic",
+      "score": 0.1336,
+      "detail": "black, hat, wear"
+    },
+    {
+      "source": "WRITE-0004",
+      "target": "MEDIA-0001",
+      "type": "thematic",
+      "score": 0.133,
+      "detail": "evidence, favorites, id, interests, magic, movie, self, signals"
+    },
+    {
+      "source": "ACT-0013",
+      "target": "ACT-0014",
+      "type": "thematic",
+      "score": 0.1329,
+      "detail": "02, 20, 2026, act, activity, artifact, blue, category"
+    },
+    {
+      "source": "GATE-2026-02-21 06:44:49",
+      "target": "GATE-2026-02-21 07:47:40",
+      "type": "thematic",
+      "score": 0.1324,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0014",
+      "target": "ACT-0041",
+      "type": "thematic",
+      "score": 0.1318,
+      "detail": "02, 2026, act, activity, category, curated, curiosity, date"
+    },
+    {
+      "source": "GATE-2026-02-19 18:05:33",
+      "target": "GATE-2026-02-21 21:30:11",
+      "type": "thematic",
+      "score": 0.1305,
+      "detail": "really, telegram, user"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "GATE-2026-02-19 17:54:58",
+      "type": "thematic",
+      "score": 0.1302,
+      "detail": "science"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-21 07:47:40",
+      "type": "thematic",
+      "score": 0.1301,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:07:32",
+      "target": "GATE-2026-02-21 07:47:40",
+      "type": "thematic",
+      "score": 0.1301,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:08:09",
+      "target": "GATE-2026-02-21 07:47:40",
+      "type": "thematic",
+      "score": 0.1301,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "GATE-2026-02-19 17:14:21",
+      "target": "GATE-2026-02-21 07:47:40",
+      "type": "thematic",
+      "score": 0.1301,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "WRITE-0002",
+      "target": "WRITE-0004",
+      "type": "thematic",
+      "score": 0.1297,
+      "detail": "02, 2026, actual, advancement, analysis, artifact, artifacts, complexity"
+    },
+    {
+      "source": "CREATE-0004",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.1284,
+      "detail": "02, 2026, abby, analysis, animals, art, artifacts, characters"
+    },
+    {
+      "source": "ACT-0008",
+      "target": "ACT-0028",
+      "type": "thematic",
+      "score": 0.1283,
+      "detail": "02, 2026, act, activity, classical, curated, date, evidence"
+    },
+    {
+      "source": "WRITE-0003",
+      "target": "ACT-0015",
+      "type": "thematic",
+      "score": 0.1274,
+      "detail": "0002, 0003, 02, 2026, artifact, content, evidence, handwritten"
+    },
+    {
+      "source": "ACT-0008",
+      "target": "ACT-0027",
+      "type": "thematic",
+      "score": 0.1264,
+      "detail": "02, 2026, act, activity, ballet, curated, date, evidence"
+    },
+    {
+      "source": "ACT-0055",
+      "target": "GATE-2026-02-19 17:47:32",
+      "type": "thematic",
+      "score": 0.126,
+      "detail": "big, jupiter, red, spot, telegram, user"
+    },
+    {
+      "source": "ACT-0016",
+      "target": "GATE-2026-02-21 17:58:28",
+      "type": "thematic",
+      "score": 0.1257,
+      "detail": "knowledge, question, space, telegram, user"
+    },
+    {
+      "source": "ACT-0034",
+      "target": "ACT-0036",
+      "type": "thematic",
+      "score": 0.1256,
+      "detail": "02, 2026, 24, act, activity, curated, date, evidence"
+    },
+    {
+      "source": "CREATE-0002",
+      "target": "CREATE-0010",
+      "type": "thematic",
+      "score": 0.1253,
+      "detail": "02, 2026, analysis, art, artifacts, color, colors, comfort"
+    },
+    {
+      "source": "WRITE-0001",
+      "target": "WRITE-0002",
+      "type": "thematic",
+      "score": 0.1248,
+      "detail": "0001, 02, 2026, about, actual, analysis, artifact, artifacts"
+    },
+    {
+      "source": "GATE-2026-02-19 17:54:58",
+      "target": "GATE-2026-02-21 06:44:49",
+      "type": "thematic",
+      "score": 0.1246,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "CREATE-0001",
+      "target": "ACT-0035",
+      "type": "thematic",
+      "score": 0.1229,
+      "detail": "02, 2026, book, deer, drawing, elaboration, evidence, eyelashes"
+    },
+    {
+      "source": "ACT-0038",
+      "target": "ACT-0043",
+      "type": "thematic",
+      "score": 0.1229,
+      "detail": "02, 2026, act, activity, companion, curated, date, evidence"
+    },
+    {
+      "source": "GATE-2026-02-19 16:52:45",
+      "target": "GATE-2026-02-19 17:54:58",
+      "type": "thematic",
+      "score": 0.1225,
+      "detail": "telegram, user"
+    },
+    {
+      "source": "ACT-0036",
+      "target": "ACT-0047",
+      "type": "thematic",
+      "score": 0.1223,
+      "detail": "2026, act, companion, docs, evidence, line, md, operator"
+    },
+    {
+      "source": "WRITE-0003",
+      "target": "WRITE-0004",
+      "type": "thematic",
+      "score": 0.1215,
+      "detail": "02, 2026, actual, advancement, analysis, artifact, artifacts, complexity"
+    },
+    {
+      "source": "ACT-0037",
+      "target": "ACT-0038",
+      "type": "thematic",
+      "score": 0.1213,
+      "detail": "02, 2026, 24, act, activity, companion, contributes, curated"
+    }
+  ],
+  "adjacency": {
+    "WRITE-0003": [
+      "WRITE-0001",
+      "WRITE-0006",
+      "WRITE-0006",
+      "WRITE-0002",
+      "WRITE-0001",
+      "ACT-0015",
+      "WRITE-0004"
+    ],
+    "WRITE-0001": [
+      "WRITE-0003",
+      "WRITE-0006",
+      "WRITE-0006",
+      "WRITE-0003",
+      "WRITE-0002"
+    ],
+    "WRITE-0005": [
+      "WRITE-0004",
+      "WRITE-0006",
+      "ACT-0021",
+      "ACT-0021",
+      "GATE-2026-02-24 03:34:29",
+      "WRITE-0006",
+      "WRITE-0004"
+    ],
+    "WRITE-0004": [
+      "WRITE-0005",
+      "WRITE-0006",
+      "ACT-0015",
+      "ACT-0015",
+      "WRITE-0005",
+      "WRITE-0006",
+      "MEDIA-0001",
+      "WRITE-0002",
+      "WRITE-0003"
+    ],
+    "WRITE-0006": [
+      "WRITE-0005",
+      "WRITE-0001",
+      "WRITE-0003",
+      "WRITE-0002",
+      "WRITE-0004",
+      "ACT-0037",
+      "WRITE-0003",
+      "WRITE-0002",
+      "ACT-0037",
+      "WRITE-0001",
+      "ACT-0021",
+      "WRITE-0005",
+      "ACT-0015",
+      "WRITE-0004"
+    ],
+    "WRITE-0002": [
+      "WRITE-0006",
+      "WRITE-0006",
+      "CREATE-0009",
+      "WRITE-0003",
+      "ACT-0055",
+      "GATE-2026-02-19 17:49:26",
+      "GATE-2026-02-19 17:54:58",
+      "WRITE-0004",
+      "WRITE-0001"
+    ],
+    "ACT-0015": [
+      "WRITE-0004",
+      "WRITE-0004",
+      "ACT-0021",
+      "ACT-0014",
+      "WRITE-0006",
+      "ACT-0017",
+      "ACT-0037",
+      "WRITE-0003"
+    ],
+    "ACT-0021": [
+      "WRITE-0005",
+      "WRITE-0005",
+      "ACT-0015",
+      "WRITE-0006",
+      "ACT-0037",
+      "ACT-0053"
+    ],
+    "ACT-0037": [
+      "WRITE-0006",
+      "WRITE-0006",
+      "ACT-0039",
+      "ACT-0021",
+      "ACT-0015",
+      "ACT-0041",
+      "ACT-0038"
+    ],
+    "ACT-0055": [
+      "CREATE-0009",
+      "ACT-0053",
+      "ACT-0054",
+      "ACT-0049",
+      "ACT-0052",
+      "ACT-0048",
+      "CREATE-0010",
+      "ACT-0051",
+      "ACT-0044",
+      "ACT-0045",
+      "ACT-0047",
+      "ACT-0039",
+      "ACT-0041",
+      "ACT-0050",
+      "ACT-0042",
+      "ACT-0040",
+      "ACT-0046",
+      "ACT-0043",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-24 03:34:29",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "ACT-0001",
+      "ACT-0009",
+      "GATE-2026-02-19 18:18:07",
+      "ACT-0008",
+      "WRITE-0002",
+      "GATE-2026-02-19 17:04:45",
+      "GATE-2026-02-21 17:49:18",
+      "GATE-2026-02-19 17:47:32"
+    ],
+    "CREATE-0009": [
+      "ACT-0055",
+      "ACT-0042",
+      "ACT-0042",
+      "ACT-0042",
+      "GATE-2026-02-19 17:49:26",
+      "WRITE-0002",
+      "CREATE-0010",
+      "CREATE-0006"
+    ],
+    "ACT-0053": [
+      "ACT-0055",
+      "ACT-0053",
+      "ACT-0053",
+      "ACT-0051",
+      "ACT-0050",
+      "ACT-0041",
+      "ACT-0052",
+      "ACT-0054",
+      "ACT-0034",
+      "ACT-0021"
+    ],
+    "ACT-0054": [
+      "ACT-0055",
+      "ACT-0054",
+      "ACT-0054",
+      "ACT-0051",
+      "ACT-0050",
+      "ACT-0053"
+    ],
+    "ACT-0049": [
+      "ACT-0055",
+      "ACT-0049",
+      "ACT-0049",
+      "ACT-0048",
+      "ACT-0047",
+      "ACT-0051",
+      "ACT-0045"
+    ],
+    "ACT-0052": [
+      "ACT-0055",
+      "ACT-0052",
+      "ACT-0052",
+      "ACT-0050",
+      "ACT-0051",
+      "ACT-0053",
+      "ACT-0027"
+    ],
+    "ACT-0048": [
+      "ACT-0055",
+      "ACT-0048",
+      "ACT-0048",
+      "ACT-0049",
+      "ACT-0047",
+      "ACT-0047"
+    ],
+    "CREATE-0010": [
+      "ACT-0055",
+      "ACT-0042",
+      "CREATE-0008",
+      "ACT-0042",
+      "CREATE-0007",
+      "CREATE-0003",
+      "ACT-0042",
+      "CREATE-0005",
+      "CREATE-0006",
+      "CREATE-0009",
+      "CREATE-0001",
+      "CREATE-0004",
+      "CREATE-0002"
+    ],
+    "ACT-0051": [
+      "ACT-0055",
+      "ACT-0050",
+      "ACT-0051",
+      "ACT-0051",
+      "ACT-0053",
+      "ACT-0041",
+      "ACT-0052",
+      "ACT-0033",
+      "ACT-0049",
+      "ACT-0054",
+      "ACT-0044",
+      "ACT-0034",
+      "ACT-0045"
+    ],
+    "ACT-0044": [
+      "ACT-0055",
+      "ACT-0044",
+      "ACT-0044",
+      "ACT-0033",
+      "ACT-0051",
+      "ACT-0050",
+      "ACT-0020",
+      "ACT-0020",
+      "GATE-2026-02-19 17:49:26",
+      "GATE-2026-02-19 17:49:26",
+      "ACT-0013"
+    ],
+    "ACT-0045": [
+      "ACT-0055",
+      "ACT-0045",
+      "ACT-0045",
+      "ACT-0051",
+      "ACT-0050",
+      "ACT-0049"
+    ],
+    "ACT-0047": [
+      "ACT-0055",
+      "ACT-0047",
+      "ACT-0047",
+      "ACT-0049",
+      "ACT-0048",
+      "ACT-0048",
+      "GATE-2026-02-20 13:21:25",
+      "ACT-0036"
+    ],
+    "ACT-0039": [
+      "ACT-0055",
+      "ACT-0038",
+      "ACT-0022",
+      "ACT-0043",
+      "ACT-0037",
+      "ACT-0041"
+    ],
+    "ACT-0041": [
+      "ACT-0055",
+      "ACT-0040",
+      "ACT-0043",
+      "ACT-0040",
+      "ACT-0043",
+      "ACT-0041",
+      "ACT-0041",
+      "ACT-0053",
+      "ACT-0051",
+      "ACT-0033",
+      "ACT-0034",
+      "ACT-0039",
+      "ACT-0037",
+      "ACT-0014"
+    ],
+    "ACT-0050": [
+      "ACT-0055",
+      "ACT-0051",
+      "ACT-0050",
+      "ACT-0050",
+      "ACT-0053",
+      "ACT-0052",
+      "ACT-0033",
+      "ACT-0054",
+      "ACT-0044",
+      "ACT-0034",
+      "ACT-0045",
+      "ACT-0020",
+      "ACT-0014"
+    ],
+    "ACT-0042": [
+      "ACT-0055",
+      "CREATE-0009",
+      "CREATE-0010",
+      "ACT-0042",
+      "ACT-0042",
+      "CREATE-0009",
+      "ACT-0043",
+      "CREATE-0010",
+      "CREATE-0009",
+      "CREATE-0010"
+    ],
+    "ACT-0040": [
+      "ACT-0055",
+      "ACT-0043",
+      "ACT-0041",
+      "ACT-0043",
+      "ACT-0041",
+      "ACT-0040",
+      "ACT-0040"
+    ],
+    "ACT-0046": [
+      "ACT-0055",
+      "GATE-2026-02-21 16:18:15",
+      "ACT-0046",
+      "ACT-0046",
+      "GATE-2026-02-21 07:58:26",
+      "ACT-0003",
+      "GATE-2026-02-19 17:49:26",
+      "GATE-2026-02-20 13:21:25"
+    ],
+    "ACT-0043": [
+      "ACT-0055",
+      "ACT-0040",
+      "ACT-0041",
+      "ACT-0040",
+      "ACT-0041",
+      "ACT-0043",
+      "ACT-0043",
+      "ACT-0042",
+      "ACT-0039",
+      "ACT-0038"
+    ],
+    "GATE-2026-02-22 15:24:28": [
+      "GATE-2026-02-22 15:24:40",
+      "GATE-2026-02-21 16:17:49",
+      "GATE-2026-02-22 15:24:34",
+      "GATE-2026-02-21 21:35:54",
+      "GATE-2026-02-19 17:18:51",
+      "GATE-2026-02-21 21:18:08"
+    ],
+    "GATE-2026-02-22 15:24:40": [
+      "GATE-2026-02-22 15:24:28",
+      "GATE-2026-02-21 16:17:49",
+      "GATE-2026-02-22 15:24:34",
+      "GATE-2026-02-21 21:35:54",
+      "GATE-2026-02-19 17:18:51",
+      "GATE-2026-02-21 21:18:08"
+    ],
+    "GATE-2026-02-19 16:52:45": [
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18",
+      "GATE-2026-02-19 17:28:05",
+      "GATE-2026-02-19 17:47:59",
+      "GATE-2026-02-19 17:54:40",
+      "GATE-2026-02-19 17:55:06",
+      "GATE-2026-02-19 18:04:58",
+      "GATE-2026-02-19 18:05:42",
+      "GATE-2026-02-19 18:06:41",
+      "GATE-2026-02-19 18:17:17",
+      "GATE-2026-02-19 18:21:47",
+      "GATE-2026-02-20 08:03:01",
+      "GATE-2026-02-20 08:05:11",
+      "GATE-2026-02-21 06:34:38",
+      "GATE-2026-02-21 06:45:29",
+      "GATE-2026-02-21 07:58:55",
+      "GATE-2026-02-19 17:21:20",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 17:17:49",
+      "GATE-2026-02-21 21:30:11",
+      "GATE-2026-02-19 17:18:04",
+      "GATE-2026-02-19 17:49:07",
+      "GATE-2026-02-19 17:21:06",
+      "GATE-2026-02-19 17:10:36",
+      "GATE-2026-02-21 06:34:11",
+      "GATE-2026-02-19 17:07:57",
+      "GATE-2026-02-21 07:47:53",
+      "GATE-2026-02-19 17:27:47",
+      "GATE-2026-02-19 16:52:02",
+      "GATE-2026-02-21 17:50:12",
+      "GATE-2026-02-21 06:45:01",
+      "GATE-2026-02-21 07:47:29",
+      "GATE-2026-02-21 07:47:40",
+      "GATE-2026-02-19 17:54:58"
+    ],
+    "GATE-2026-02-19 17:07:32": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18",
+      "GATE-2026-02-19 17:28:05",
+      "GATE-2026-02-19 17:47:59",
+      "GATE-2026-02-19 17:54:40",
+      "GATE-2026-02-19 17:55:06",
+      "GATE-2026-02-19 18:04:58",
+      "GATE-2026-02-19 18:05:42",
+      "GATE-2026-02-19 18:06:41",
+      "GATE-2026-02-19 18:17:17",
+      "GATE-2026-02-19 18:21:47",
+      "GATE-2026-02-20 08:03:01",
+      "GATE-2026-02-20 08:05:11",
+      "GATE-2026-02-21 06:34:38",
+      "GATE-2026-02-21 06:45:29",
+      "GATE-2026-02-21 07:58:55",
+      "GATE-2026-02-19 17:21:20",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 17:17:49",
+      "GATE-2026-02-21 21:30:11",
+      "GATE-2026-02-19 17:18:04",
+      "GATE-2026-02-19 17:49:07",
+      "GATE-2026-02-19 17:21:06",
+      "GATE-2026-02-21 06:34:11",
+      "GATE-2026-02-21 07:47:53",
+      "GATE-2026-02-21 17:50:12",
+      "GATE-2026-02-21 06:45:01",
+      "GATE-2026-02-21 07:47:29",
+      "GATE-2026-02-21 07:47:40"
+    ],
+    "GATE-2026-02-19 17:08:09": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18",
+      "GATE-2026-02-19 17:28:05",
+      "GATE-2026-02-19 17:47:59",
+      "GATE-2026-02-19 17:54:40",
+      "GATE-2026-02-19 17:55:06",
+      "GATE-2026-02-19 18:04:58",
+      "GATE-2026-02-19 18:05:42",
+      "GATE-2026-02-19 18:06:41",
+      "GATE-2026-02-19 18:17:17",
+      "GATE-2026-02-19 18:21:47",
+      "GATE-2026-02-20 08:03:01",
+      "GATE-2026-02-20 08:05:11",
+      "GATE-2026-02-21 06:34:38",
+      "GATE-2026-02-21 06:45:29",
+      "GATE-2026-02-21 07:58:55",
+      "GATE-2026-02-19 17:21:20",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 17:17:49",
+      "GATE-2026-02-21 21:30:11",
+      "GATE-2026-02-19 17:18:04",
+      "GATE-2026-02-19 17:49:07",
+      "GATE-2026-02-21 06:34:11",
+      "GATE-2026-02-21 17:50:12",
+      "GATE-2026-02-21 06:45:01",
+      "GATE-2026-02-21 07:47:29",
+      "GATE-2026-02-21 07:47:40"
+    ],
+    "GATE-2026-02-19 17:14:21": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:24:18",
+      "GATE-2026-02-19 17:28:05",
+      "GATE-2026-02-19 17:47:59",
+      "GATE-2026-02-19 17:54:40",
+      "GATE-2026-02-19 17:55:06",
+      "GATE-2026-02-19 18:04:58",
+      "GATE-2026-02-19 18:05:42",
+      "GATE-2026-02-19 18:06:41",
+      "GATE-2026-02-19 18:17:17",
+      "GATE-2026-02-19 18:21:47",
+      "GATE-2026-02-20 08:03:01",
+      "GATE-2026-02-20 08:05:11",
+      "GATE-2026-02-21 06:34:38",
+      "GATE-2026-02-21 06:45:29",
+      "GATE-2026-02-21 07:58:55",
+      "GATE-2026-02-19 17:21:20",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 17:17:49",
+      "GATE-2026-02-21 21:30:11",
+      "GATE-2026-02-19 17:18:04",
+      "GATE-2026-02-19 17:49:07",
+      "GATE-2026-02-21 06:34:11",
+      "GATE-2026-02-21 07:47:40"
+    ],
+    "GATE-2026-02-19 17:24:18": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:28:05",
+      "GATE-2026-02-19 17:47:59",
+      "GATE-2026-02-19 17:54:40",
+      "GATE-2026-02-19 17:55:06",
+      "GATE-2026-02-19 18:04:58",
+      "GATE-2026-02-19 18:05:42",
+      "GATE-2026-02-19 18:06:41",
+      "GATE-2026-02-19 18:17:17",
+      "GATE-2026-02-19 18:21:47",
+      "GATE-2026-02-20 08:03:01",
+      "GATE-2026-02-20 08:05:11",
+      "GATE-2026-02-21 06:34:38",
+      "GATE-2026-02-21 06:45:29",
+      "GATE-2026-02-21 07:58:55",
+      "GATE-2026-02-19 17:21:20",
+      "GATE-2026-02-19 17:19:48"
+    ],
+    "GATE-2026-02-19 17:28:05": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 17:47:59": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 17:54:40": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 17:55:06": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 18:04:58": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 18:05:42": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 18:06:41": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 18:17:17": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 18:21:47": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-20 08:03:01": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-20 08:05:11": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-21 06:34:38": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-21 06:45:29": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-21 07:58:55": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18"
+    ],
+    "GATE-2026-02-19 17:10:48": [
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:48:57",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 18:06:30",
+      "GATE-2026-02-21 06:45:22",
+      "GATE-2026-02-19 17:23:25",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-19 17:04:30",
+      "GATE-2026-02-19 17:18:36",
+      "GATE-2026-02-19 17:07:20",
+      "GATE-2026-02-19 17:55:25",
+      "GATE-2026-02-21 07:29:35",
+      "GATE-2026-02-19 17:48:38",
+      "ACT-0055",
+      "GATE-2026-02-21 06:34:27",
+      "GATE-2026-02-21 06:35:24",
+      "GATE-2026-02-19 16:51:43",
+      "GATE-2026-02-24 03:34:29"
+    ],
+    "GATE-2026-02-21 07:28:43": [
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:48:57",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 18:06:30",
+      "GATE-2026-02-21 06:45:22",
+      "GATE-2026-02-19 17:23:25",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-19 17:04:30",
+      "GATE-2026-02-19 17:18:36",
+      "GATE-2026-02-19 17:07:20",
+      "GATE-2026-02-19 17:55:25",
+      "GATE-2026-02-19 17:48:38",
+      "ACT-0055",
+      "GATE-2026-02-21 06:34:27",
+      "GATE-2026-02-21 06:35:24",
+      "GATE-2026-02-19 16:51:43",
+      "GATE-2026-02-24 03:34:29"
+    ],
+    "GATE-2026-02-21 07:28:32": [
+      "GATE-2026-02-21 07:58:43",
+      "ACT-0016",
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-21 07:29:00",
+      "GATE-2026-02-19 18:04:38"
+    ],
+    "GATE-2026-02-21 07:58:43": [
+      "GATE-2026-02-21 07:28:32",
+      "ACT-0016",
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-21 07:29:00",
+      "GATE-2026-02-19 18:04:38"
+    ],
+    "GATE-2026-02-19 17:04:30": [
+      "GATE-2026-02-19 17:07:20",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-21 21:33:46"
+    ],
+    "GATE-2026-02-19 17:07:20": [
+      "GATE-2026-02-19 17:04:30",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 18:06:30",
+      "GATE-2026-02-20 08:01:11",
+      "GATE-2026-02-21 21:33:46",
+      "GATE-2026-02-21 07:29:00",
+      "GATE-2026-02-19 17:52:16",
+      "GATE-2026-02-21 17:58:28"
+    ],
+    "GATE-2026-02-19 17:15:06": [
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-19 17:13:54",
+      "GATE-2026-02-21 07:58:26",
+      "GATE-2026-02-19 17:10:36",
+      "GATE-2026-02-19 17:07:57",
+      "GATE-2026-02-21 16:18:15",
+      "GATE-2026-02-19 17:24:02"
+    ],
+    "GATE-2026-02-21 07:28:11": [
+      "GATE-2026-02-19 17:15:06",
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-21 07:58:26",
+      "GATE-2026-02-21 16:18:15",
+      "GATE-2026-02-19 17:13:54",
+      "GATE-2026-02-19 17:24:02",
+      "GATE-2026-02-19 17:53:32"
+    ],
+    "GATE-2026-02-21 17:48:18": [
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-21 07:58:26",
+      "GATE-2026-02-19 17:15:06",
+      "GATE-2026-02-21 16:18:15",
+      "GATE-2026-02-19 17:13:54",
+      "GATE-2026-02-19 17:24:02",
+      "GATE-2026-02-19 17:53:32",
+      "ACT-0019"
+    ],
+    "GATE-2026-02-21 07:58:26": [
+      "GATE-2026-02-21 16:18:15",
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-19 17:15:06",
+      "ACT-0046",
+      "GATE-2026-02-19 17:24:02",
+      "GATE-2026-02-19 17:53:32"
+    ],
+    "GATE-2026-02-21 16:18:15": [
+      "GATE-2026-02-21 07:58:26",
+      "ACT-0046",
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-19 17:15:06",
+      "ACT-0003",
+      "GATE-2026-02-19 17:53:32"
+    ],
+    "GATE-2026-02-19 17:04:45": [
+      "GATE-2026-02-21 07:29:35",
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-19 16:52:02",
+      "ACT-0055",
+      "GATE-2026-02-21 06:44:49"
+    ],
+    "GATE-2026-02-21 07:29:35": [
+      "GATE-2026-02-19 17:04:45",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-19 16:52:02",
+      "GATE-2026-02-19 17:10:48"
+    ],
+    "ACT-0017": [
+      "ACT-0018",
+      "ACT-0019",
+      "ACT-0011",
+      "ACT-0012",
+      "GATE-2026-02-20 08:03:46",
+      "ACT-0015",
+      "ACT-0036"
+    ],
+    "ACT-0018": [
+      "ACT-0017",
+      "ACT-0019",
+      "ACT-0004",
+      "ACT-0005",
+      "GATE-2026-02-19 17:54:05",
+      "GATE-2026-02-19 17:52:16",
+      "ACT-0036"
+    ],
+    "GATE-2026-02-21 06:44:49": [
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-19 17:04:30",
+      "GATE-2026-02-19 17:18:36",
+      "GATE-2026-02-19 17:07:20",
+      "GATE-2026-02-21 07:29:35",
+      "GATE-2026-02-19 17:48:38",
+      "GATE-2026-02-19 17:48:57",
+      "GATE-2026-02-19 18:06:30",
+      "GATE-2026-02-21 06:34:27",
+      "GATE-2026-02-21 06:45:22",
+      "ACT-0055",
+      "GATE-2026-02-19 17:23:25",
+      "GATE-2026-02-19 16:51:43",
+      "GATE-2026-02-24 03:34:29",
+      "GATE-2026-02-19 17:17:49",
+      "GATE-2026-02-19 17:18:04",
+      "GATE-2026-02-19 17:49:07",
+      "GATE-2026-02-19 17:21:06",
+      "GATE-2026-02-19 17:04:45",
+      "GATE-2026-02-19 17:10:36",
+      "GATE-2026-02-21 06:34:11",
+      "GATE-2026-02-19 17:07:57",
+      "GATE-2026-02-21 07:47:53",
+      "GATE-2026-02-19 17:27:47",
+      "GATE-2026-02-19 16:52:02",
+      "GATE-2026-02-21 17:50:12",
+      "GATE-2026-02-21 06:45:01",
+      "GATE-2026-02-21 07:47:29",
+      "GATE-2026-02-21 07:47:40",
+      "GATE-2026-02-19 17:54:58"
+    ],
+    "GATE-2026-02-19 17:13:54": [
+      "GATE-2026-02-19 17:15:06",
+      "GATE-2026-02-19 17:27:47",
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-19 17:10:36",
+      "GATE-2026-02-19 17:07:57",
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-19 17:24:02"
+    ],
+    "GATE-2026-02-19 17:21:20": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18",
+      "GATE-2026-02-21 07:29:22"
+    ],
+    "GATE-2026-02-19 17:16:18": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-19 17:04:30",
+      "GATE-2026-02-19 17:18:36",
+      "GATE-2026-02-21 06:34:27",
+      "GATE-2026-02-19 16:51:43"
+    ],
+    "MEDIA-0003": [
+      "MEDIA-0004",
+      "MEDIA-0005",
+      "MEDIA-0001",
+      "MEDIA-0002",
+      "MEDIA-0006",
+      "MEDIA-0008",
+      "MEDIA-0007"
+    ],
+    "MEDIA-0004": [
+      "MEDIA-0003",
+      "MEDIA-0006",
+      "MEDIA-0005",
+      "MEDIA-0001",
+      "MEDIA-0002",
+      "MEDIA-0008"
+    ],
+    "ACT-0022": [
+      "ACT-0023",
+      "ACT-0026",
+      "ACT-0025",
+      "ACT-0024",
+      "ACT-0039",
+      "ACT-0027"
+    ],
+    "ACT-0023": [
+      "ACT-0022",
+      "ACT-0026",
+      "ACT-0025",
+      "ACT-0024",
+      "ACT-0001"
+    ],
+    "MEDIA-0005": [
+      "MEDIA-0003",
+      "MEDIA-0001",
+      "MEDIA-0008",
+      "MEDIA-0004",
+      "MEDIA-0006",
+      "MEDIA-0007",
+      "MEDIA-0002",
+      "CREATE-0004"
+    ],
+    "MEDIA-0001": [
+      "MEDIA-0005",
+      "MEDIA-0003",
+      "MEDIA-0004",
+      "MEDIA-0006",
+      "MEDIA-0008",
+      "MEDIA-0007",
+      "WRITE-0004"
+    ],
+    "GATE-2026-02-19 17:21:06": [
+      "GATE-2026-02-19 17:27:47",
+      "ACT-0001",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32"
+    ],
+    "GATE-2026-02-19 17:27:47": [
+      "GATE-2026-02-19 17:21:06",
+      "GATE-2026-02-19 17:13:54",
+      "ACT-0001",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45"
+    ],
+    "GATE-2026-02-19 17:48:57": [
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-21 06:45:22",
+      "GATE-2026-02-19 18:18:07",
+      "GATE-2026-02-19 17:23:25"
+    ],
+    "GATE-2026-02-19 17:54:05": [
+      "GATE-2026-02-19 17:55:25",
+      "GATE-2026-02-19 17:54:58",
+      "ACT-0005",
+      "ACT-0004",
+      "ACT-0018",
+      "GATE-2026-02-19 17:52:16"
+    ],
+    "GATE-2026-02-19 17:55:25": [
+      "GATE-2026-02-19 17:54:05",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "ACT-0005",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 17:54:58"
+    ],
+    "ACT-0032": [
+      "GATE-2026-02-21 21:33:46",
+      "ACT-0030",
+      "ACT-0029",
+      "ACT-0016",
+      "ACT-0005"
+    ],
+    "GATE-2026-02-21 21:33:46": [
+      "ACT-0032",
+      "GATE-2026-02-19 17:04:30",
+      "GATE-2026-02-19 17:07:20",
+      "GATE-2026-02-19 18:17:05"
+    ],
+    "GATE-2026-02-21 07:29:22": [
+      "GATE-2026-02-19 17:04:45",
+      "GATE-2026-02-19 17:21:20",
+      "GATE-2026-02-21 07:29:35",
+      "GATE-2026-02-21 07:29:00",
+      "GATE-2026-02-19 16:52:02",
+      "GATE-2026-02-21 07:28:32",
+      "GATE-2026-02-21 07:58:43",
+      "GATE-2026-02-19 18:18:07"
+    ],
+    "GATE-2026-02-19 17:18:51": [
+      "GATE-2026-02-21 16:17:49",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-22 15:24:28",
+      "GATE-2026-02-22 15:24:40",
+      "GATE-2026-02-22 15:24:34",
+      "CREATE-0001"
+    ],
+    "GATE-2026-02-21 16:17:49": [
+      "GATE-2026-02-19 17:18:51",
+      "GATE-2026-02-22 15:24:28",
+      "GATE-2026-02-22 15:24:40",
+      "GATE-2026-02-22 15:24:34",
+      "GATE-2026-02-21 21:35:54",
+      "GATE-2026-02-21 21:18:08"
+    ],
+    "ACT-0026": [
+      "ACT-0023",
+      "ACT-0022",
+      "ACT-0025",
+      "ACT-0024",
+      "ACT-0019"
+    ],
+    "ACT-0006": [
+      "GATE-2026-02-19 18:04:38",
+      "ACT-0002",
+      "ACT-0004",
+      "ACT-0016",
+      "ACT-0007"
+    ],
+    "GATE-2026-02-19 18:04:38": [
+      "ACT-0006",
+      "GATE-2026-02-21 07:28:32",
+      "GATE-2026-02-21 07:58:43",
+      "GATE-2026-02-19 18:05:33",
+      "CREATE-0008"
+    ],
+    "GATE-2026-02-19 16:52:02": [
+      "GATE-2026-02-19 17:04:45",
+      "GATE-2026-02-21 07:29:35",
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45"
+    ],
+    "GATE-2026-02-19 17:19:48": [
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-19 17:24:18",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:18:51",
+      "CREATE-0001",
+      "GATE-2026-02-19 17:55:25",
+      "GATE-2026-02-21 06:35:24"
+    ],
+    "ACT-0019": [
+      "ACT-0017",
+      "ACT-0018",
+      "ACT-0026",
+      "GATE-2026-02-19 17:53:32",
+      "GATE-2026-02-21 17:48:18"
+    ],
+    "ACT-0025": [
+      "ACT-0023",
+      "ACT-0022",
+      "ACT-0026",
+      "ACT-0024",
+      "CREATE-0005"
+    ],
+    "MEDIA-0006": [
+      "MEDIA-0004",
+      "MEDIA-0005",
+      "MEDIA-0003",
+      "MEDIA-0001",
+      "MEDIA-0007",
+      "MEDIA-0002",
+      "MEDIA-0008"
+    ],
+    "MEDIA-0008": [
+      "MEDIA-0005",
+      "MEDIA-0003",
+      "MEDIA-0001",
+      "MEDIA-0004",
+      "MEDIA-0006"
+    ],
+    "GATE-2026-02-19 17:07:57": [
+      "GATE-2026-02-19 17:10:36",
+      "GATE-2026-02-19 17:13:54",
+      "GATE-2026-02-19 17:15:06",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45"
+    ],
+    "GATE-2026-02-19 17:10:36": [
+      "GATE-2026-02-19 17:07:57",
+      "GATE-2026-02-19 17:13:54",
+      "GATE-2026-02-19 17:15:06",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45"
+    ],
+    "GATE-2026-02-21 07:48:09": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:48:57",
+      "GATE-2026-02-19 18:18:07",
+      "GATE-2026-02-19 17:16:18",
+      "ACT-0055",
+      "GATE-2026-02-19 17:18:36",
+      "GATE-2026-02-21 17:49:18",
+      "GATE-2026-02-19 16:51:43"
+    ],
+    "ACT-0024": [
+      "ACT-0023",
+      "ACT-0022",
+      "ACT-0026",
+      "ACT-0025",
+      "ACT-0031"
+    ],
+    "ACT-0031": [
+      "GATE-2026-02-21 17:50:12",
+      "ACT-0030",
+      "ACT-0029",
+      "ACT-0016",
+      "ACT-0005",
+      "ACT-0024"
+    ],
+    "GATE-2026-02-21 17:50:12": [
+      "ACT-0031",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09"
+    ],
+    "ACT-0030": [
+      "GATE-2026-02-21 21:18:08",
+      "ACT-0029",
+      "ACT-0031",
+      "ACT-0016",
+      "ACT-0005",
+      "ACT-0032"
+    ],
+    "GATE-2026-02-21 21:18:08": [
+      "ACT-0030",
+      "GATE-2026-02-22 15:24:28",
+      "GATE-2026-02-22 15:24:40",
+      "GATE-2026-02-21 16:17:49",
+      "GATE-2026-02-19 18:05:33"
+    ],
+    "GATE-2026-02-19 18:06:30": [
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-21 06:44:49",
+      "ACT-0008",
+      "GATE-2026-02-19 17:07:20",
+      "GATE-2026-02-19 18:05:33",
+      "ACT-0027"
+    ],
+    "ACT-0002": [
+      "GATE-2026-02-19 17:47:32",
+      "ACT-0004",
+      "ACT-0009",
+      "ACT-0012",
+      "ACT-0006",
+      "ACT-0007",
+      "ACT-0001",
+      "ACT-0016",
+      "ACT-0010",
+      "ACT-0003",
+      "ACT-0011",
+      "ACT-0008"
+    ],
+    "GATE-2026-02-19 17:47:32": [
+      "ACT-0002",
+      "GATE-2026-02-20 08:03:46",
+      "GATE-2026-02-19 17:48:38",
+      "ACT-0012",
+      "ACT-0055"
+    ],
+    "MEDIA-0002": [
+      "MEDIA-0003",
+      "MEDIA-0004",
+      "MEDIA-0006",
+      "MEDIA-0007",
+      "MEDIA-0005"
+    ],
+    "GATE-2026-02-19 17:18:36": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-21 07:48:09"
+    ],
+    "ACT-0012": [
+      "GATE-2026-02-20 08:03:46",
+      "ACT-0011",
+      "ACT-0002",
+      "ACT-0004",
+      "ACT-0017",
+      "GATE-2026-02-20 08:01:11",
+      "GATE-2026-02-19 17:47:32",
+      "ACT-0013"
+    ],
+    "GATE-2026-02-20 08:03:46": [
+      "ACT-0012",
+      "GATE-2026-02-20 08:01:11",
+      "GATE-2026-02-19 17:47:32",
+      "GATE-2026-02-19 17:48:38",
+      "ACT-0011",
+      "ACT-0017"
+    ],
+    "ACT-0004": [
+      "ACT-0005",
+      "ACT-0002",
+      "GATE-2026-02-19 17:54:05",
+      "ACT-0009",
+      "ACT-0018",
+      "ACT-0007",
+      "ACT-0006",
+      "ACT-0001",
+      "ACT-0010",
+      "ACT-0011",
+      "ACT-0012",
+      "ACT-0008"
+    ],
+    "ACT-0005": [
+      "ACT-0004",
+      "GATE-2026-02-19 17:54:05",
+      "ACT-0016",
+      "ACT-0003",
+      "GATE-2026-02-19 17:55:25",
+      "ACT-0031",
+      "ACT-0010",
+      "ACT-0030",
+      "ACT-0018",
+      "ACT-0032"
+    ],
+    "ACT-0029": [
+      "ACT-0030",
+      "GATE-2026-02-21 21:30:11",
+      "ACT-0031",
+      "ACT-0016",
+      "GATE-2026-02-21 07:47:53",
+      "ACT-0032"
+    ],
+    "GATE-2026-02-21 21:30:11": [
+      "ACT-0029",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21",
+      "GATE-2026-02-21 07:47:53",
+      "GATE-2026-02-19 18:05:33"
+    ],
+    "GATE-2026-02-21 06:45:22": [
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:48:57",
+      "GATE-2026-02-21 06:45:01",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 18:18:07"
+    ],
+    "MEDIA-0007": [
+      "MEDIA-0006",
+      "MEDIA-0002",
+      "MEDIA-0005",
+      "MEDIA-0003",
+      "MEDIA-0001"
+    ],
+    "GATE-2026-02-19 17:23:25": [
+      "GATE-2026-02-21 21:35:54",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:48:57"
+    ],
+    "GATE-2026-02-21 21:35:54": [
+      "GATE-2026-02-19 17:23:25",
+      "GATE-2026-02-22 15:24:28",
+      "GATE-2026-02-22 15:24:40",
+      "GATE-2026-02-21 16:17:49",
+      "GATE-2026-02-22 15:24:34",
+      "ACT-0020"
+    ],
+    "ACT-0033": [
+      "ACT-0051",
+      "ACT-0041",
+      "ACT-0050",
+      "ACT-0044",
+      "ACT-0034",
+      "GATE-2026-02-21 07:47:29"
+    ],
+    "GATE-2026-02-19 17:54:58": [
+      "GATE-2026-02-19 17:54:05",
+      "GATE-2026-02-19 17:55:25",
+      "WRITE-0002",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45"
+    ],
+    "ACT-0016": [
+      "GATE-2026-02-21 07:28:32",
+      "GATE-2026-02-21 07:58:43",
+      "ACT-0005",
+      "ACT-0003",
+      "ACT-0002",
+      "ACT-0031",
+      "ACT-0030",
+      "ACT-0029",
+      "ACT-0006",
+      "ACT-0032",
+      "GATE-2026-02-21 17:58:28"
+    ],
+    "GATE-2026-02-19 17:48:38": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-20 08:03:46",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:47:32"
+    ],
+    "GATE-2026-02-20 08:01:11": [
+      "GATE-2026-02-20 08:03:46",
+      "GATE-2026-02-21 17:49:18",
+      "GATE-2026-02-19 17:07:20",
+      "ACT-0012",
+      "ACT-0011"
+    ],
+    "CREATE-0008": [
+      "CREATE-0010",
+      "CREATE-0005",
+      "CREATE-0003",
+      "CREATE-0006",
+      "CREATE-0007",
+      "GATE-2026-02-19 18:04:38"
+    ],
+    "ACT-0034": [
+      "ACT-0033",
+      "ACT-0051",
+      "ACT-0041",
+      "ACT-0050",
+      "ACT-0053",
+      "ACT-0035",
+      "ACT-0036"
+    ],
+    "GATE-2026-02-21 07:29:00": [
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-21 07:28:32",
+      "GATE-2026-02-21 07:58:43",
+      "GATE-2026-02-19 17:52:16",
+      "GATE-2026-02-19 17:07:20"
+    ],
+    "ACT-0011": [
+      "ACT-0012",
+      "ACT-0017",
+      "ACT-0004",
+      "GATE-2026-02-20 08:03:46",
+      "ACT-0002",
+      "GATE-2026-02-20 08:01:11"
+    ],
+    "GATE-2026-02-19 17:24:02": [
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-21 07:58:26",
+      "GATE-2026-02-19 17:13:54",
+      "GATE-2026-02-19 17:15:06"
+    ],
+    "ACT-0010": [
+      "GATE-2026-02-19 18:21:31",
+      "ACT-0002",
+      "ACT-0004",
+      "ACT-0009",
+      "ACT-0005"
+    ],
+    "GATE-2026-02-19 18:21:31": [
+      "ACT-0010"
+    ],
+    "ACT-0009": [
+      "ACT-0004",
+      "ACT-0002",
+      "GATE-2026-02-19 18:17:05",
+      "ACT-0055",
+      "ACT-0010",
+      "ACT-0008"
+    ],
+    "GATE-2026-02-21 06:45:01": [
+      "GATE-2026-02-21 06:45:22",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09"
+    ],
+    "GATE-2026-02-21 06:34:27": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-21 06:35:24",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-19 17:52:16"
+    ],
+    "ACT-0001": [
+      "ACT-0007",
+      "GATE-2026-02-19 17:21:06",
+      "ACT-0002",
+      "ACT-0004",
+      "ACT-0055",
+      "ACT-0023",
+      "GATE-2026-02-19 17:27:47"
+    ],
+    "ACT-0007": [
+      "ACT-0001",
+      "ACT-0002",
+      "ACT-0004",
+      "GATE-2026-02-19 18:05:33",
+      "ACT-0006"
+    ],
+    "ACT-0003": [
+      "ACT-0046",
+      "ACT-0016",
+      "ACT-0005",
+      "GATE-2026-02-21 16:18:15",
+      "ACT-0002",
+      "GATE-2026-02-19 17:49:26",
+      "ACT-0013"
+    ],
+    "GATE-2026-02-19 18:18:07": [
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-19 17:48:57",
+      "ACT-0055",
+      "GATE-2026-02-21 06:45:22",
+      "GATE-2026-02-21 07:29:22",
+      "GATE-2026-02-21 17:49:18"
+    ],
+    "CREATE-0005": [
+      "ACT-0025",
+      "CREATE-0008",
+      "CREATE-0007",
+      "CREATE-0010",
+      "CREATE-0006"
+    ],
+    "CREATE-0007": [
+      "CREATE-0010",
+      "CREATE-0005",
+      "ACT-0014",
+      "CREATE-0008"
+    ],
+    "ACT-0028": [
+      "ACT-0038",
+      "ACT-0027",
+      "ACT-0008"
+    ],
+    "ACT-0038": [
+      "ACT-0028",
+      "ACT-0039",
+      "ACT-0043",
+      "ACT-0037"
+    ],
+    "CREATE-0003": [
+      "CREATE-0010",
+      "CREATE-0001",
+      "CREATE-0008",
+      "CREATE-0002"
+    ],
+    "GATE-2026-02-22 15:24:34": [
+      "GATE-2026-02-22 15:24:28",
+      "GATE-2026-02-22 15:24:40",
+      "GATE-2026-02-21 16:17:49",
+      "GATE-2026-02-21 17:58:28",
+      "GATE-2026-02-21 21:35:54",
+      "GATE-2026-02-19 17:18:51"
+    ],
+    "GATE-2026-02-24 03:34:29": [
+      "ACT-0055",
+      "GATE-2026-02-21 06:44:49",
+      "WRITE-0005",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43"
+    ],
+    "GATE-2026-02-19 17:49:26": [
+      "CREATE-0009",
+      "ACT-0003",
+      "ACT-0046",
+      "ACT-0044",
+      "ACT-0044",
+      "ACT-0013",
+      "WRITE-0002"
+    ],
+    "ACT-0008": [
+      "GATE-2026-02-19 18:06:30",
+      "ACT-0055",
+      "ACT-0002",
+      "ACT-0004",
+      "ACT-0009",
+      "ACT-0028",
+      "ACT-0027"
+    ],
+    "GATE-2026-02-19 16:51:43": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:16:18",
+      "GATE-2026-02-21 07:48:09"
+    ],
+    "GATE-2026-02-21 06:35:24": [
+      "GATE-2026-02-21 06:34:27",
+      "GATE-2026-02-19 17:10:48",
+      "GATE-2026-02-21 07:28:43",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-21 17:49:18"
+    ],
+    "GATE-2026-02-19 18:17:05": [
+      "ACT-0009",
+      "GATE-2026-02-21 21:33:46"
+    ],
+    "GATE-2026-02-21 17:49:18": [
+      "GATE-2026-02-20 08:01:11",
+      "GATE-2026-02-19 18:18:07",
+      "ACT-0055",
+      "GATE-2026-02-21 07:48:09",
+      "GATE-2026-02-21 06:35:24"
+    ],
+    "GATE-2026-02-19 18:05:33": [
+      "ACT-0007",
+      "GATE-2026-02-19 18:06:30",
+      "GATE-2026-02-21 21:18:08",
+      "GATE-2026-02-19 18:04:38",
+      "GATE-2026-02-21 21:30:11"
+    ],
+    "GATE-2026-02-21 07:47:53": [
+      "ACT-0029",
+      "GATE-2026-02-21 21:30:11",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32"
+    ],
+    "ACT-0020": [
+      "ACT-0044",
+      "ACT-0044",
+      "GATE-2026-02-21 21:35:54",
+      "ACT-0050",
+      "ACT-0036"
+    ],
+    "CREATE-0001": [
+      "CREATE-0003",
+      "GATE-2026-02-19 17:19:48",
+      "GATE-2026-02-19 17:18:51",
+      "CREATE-0002",
+      "CREATE-0010",
+      "ACT-0035"
+    ],
+    "ACT-0027": [
+      "ACT-0028",
+      "GATE-2026-02-19 18:06:30",
+      "ACT-0052",
+      "ACT-0022",
+      "ACT-0008"
+    ],
+    "GATE-2026-02-21 17:58:28": [
+      "GATE-2026-02-22 15:24:34",
+      "GATE-2026-02-19 17:07:20",
+      "ACT-0016"
+    ],
+    "ACT-0014": [
+      "ACT-0015",
+      "CREATE-0007",
+      "ACT-0050",
+      "ACT-0013",
+      "ACT-0041"
+    ],
+    "CREATE-0002": [
+      "CREATE-0003",
+      "CREATE-0001",
+      "CREATE-0010"
+    ],
+    "GATE-2026-02-19 17:17:49": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21"
+    ],
+    "CREATE-0006": [
+      "CREATE-0008",
+      "CREATE-0010",
+      "CREATE-0005",
+      "CREATE-0009",
+      "CREATE-0004"
+    ],
+    "GATE-2026-02-20 13:21:25": [
+      "ACT-0046",
+      "ACT-0047"
+    ],
+    "ACT-0013": [
+      "GATE-2026-02-19 17:49:26",
+      "ACT-0003",
+      "ACT-0044",
+      "ACT-0012",
+      "ACT-0014"
+    ],
+    "GATE-2026-02-19 17:18:04": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21"
+    ],
+    "GATE-2026-02-19 17:49:07": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21"
+    ],
+    "GATE-2026-02-19 17:52:16": [
+      "GATE-2026-02-21 07:29:00",
+      "GATE-2026-02-19 17:54:05",
+      "GATE-2026-02-21 06:34:27",
+      "ACT-0018",
+      "GATE-2026-02-19 17:07:20"
+    ],
+    "GATE-2026-02-19 17:53:32": [
+      "GATE-2026-02-21 17:48:18",
+      "GATE-2026-02-21 16:18:15",
+      "ACT-0019",
+      "GATE-2026-02-21 07:28:11",
+      "GATE-2026-02-21 07:58:26"
+    ],
+    "GATE-2026-02-21 06:34:11": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21"
+    ],
+    "GATE-2026-02-21 07:47:29": [
+      "ACT-0033",
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09"
+    ],
+    "ACT-0036": [
+      "ACT-0020",
+      "ACT-0018",
+      "ACT-0017",
+      "ACT-0034",
+      "ACT-0047"
+    ],
+    "CREATE-0004": [
+      "MEDIA-0005",
+      "CREATE-0006",
+      "CREATE-0010"
+    ],
+    "ACT-0035": [
+      "ACT-0034",
+      "CREATE-0001"
+    ],
+    "GATE-2026-02-21 07:47:40": [
+      "GATE-2026-02-21 06:44:49",
+      "GATE-2026-02-19 16:52:45",
+      "GATE-2026-02-19 17:07:32",
+      "GATE-2026-02-19 17:08:09",
+      "GATE-2026-02-19 17:14:21"
+    ]
+  }
+}
