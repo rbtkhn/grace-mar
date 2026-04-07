@@ -12,6 +12,9 @@ Uses grace-mar MERGING-FROM-COMPANION-SELF paths by default. Use --use-manifest 
 exact paths from companion-self template-manifest.json. Add --include-skill-work when you
 explicitly want the broader docs/skill-work recursive audit.
 
+Lockfile: --lock writes a SHA-pinned lockfile after upstream copies. --status uses it to
+detect direction (upstream-moved / instance-moved / both-moved) on differ files.
+
 Usage:
     python scripts/template_diff.py
     python scripts/template_diff.py --companion-self /path/to/companion-self
@@ -19,13 +22,16 @@ Usage:
     python scripts/template_diff.py --instance /path/to/grace-mar --brief
     python scripts/template_diff.py --use-manifest -o audit-report.md
     python scripts/template_diff.py --use-manifest --include-skill-work -o audit-report.md
+    python scripts/template_diff.py --use-manifest --lock  # pin current state after sync
 """
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
 import sys
+from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -130,6 +136,81 @@ def _load_manifest_paths(companion_self_root: Path) -> list[str]:
         return []
 
 
+LOCKFILE_NAME = "template-sync.lock.json"
+
+
+def _git_blob_sha(file_path: Path) -> str | None:
+    """Compute the git blob SHA-1 for a file (same hash git would assign)."""
+    if not file_path.exists():
+        return None
+    content = file_path.read_bytes()
+    header = f"blob {len(content)}\0".encode()
+    return hashlib.sha1(header + content).hexdigest()
+
+
+def _lockfile_path(instance_root: Path) -> Path:
+    return instance_root / "docs" / "skill-work" / "work-companion-self" / LOCKFILE_NAME
+
+
+def _load_lockfile(instance_root: Path) -> dict:
+    lf = _lockfile_path(instance_root)
+    if not lf.exists():
+        return {}
+    try:
+        return json.loads(lf.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, TypeError):
+        return {}
+
+
+def _write_lockfile(
+    instance_root: Path,
+    companion_self_root: Path,
+    paths: list[str],
+) -> Path:
+    """Pin current SHA state for all given paths. Returns lockfile path."""
+    lock = _load_lockfile(instance_root)
+    now = datetime.now().isoformat(timespec="seconds")
+    for rel in paths:
+        t_sha = _git_blob_sha(companion_self_root / rel)
+        i_sha = _git_blob_sha(instance_root / rel)
+        lock[rel] = {
+            "template_sha": t_sha,
+            "instance_sha": i_sha,
+            "synced_at": now,
+        }
+    lf = _lockfile_path(instance_root)
+    lf.parent.mkdir(parents=True, exist_ok=True)
+    lf.write_text(json.dumps(lock, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return lf
+
+
+def _diff_direction(
+    rel: str,
+    template_path: Path,
+    instance_path: Path,
+    lock_entry: dict | None,
+) -> str:
+    """Determine direction of drift for a differing file.
+
+    Returns: upstream_moved | instance_moved | both_moved | unknown
+    """
+    if not lock_entry:
+        return "unknown"
+    locked_t = lock_entry.get("template_sha")
+    locked_i = lock_entry.get("instance_sha")
+    current_t = _git_blob_sha(template_path)
+    current_i = _git_blob_sha(instance_path)
+    t_changed = current_t != locked_t
+    i_changed = current_i != locked_i
+    if t_changed and not i_changed:
+        return "upstream_moved"
+    if i_changed and not t_changed:
+        return "instance_moved"
+    if t_changed and i_changed:
+        return "both_moved"
+    return "unknown"
+
+
 def run_diff(
     companion_self_root: Path,
     instance_root: Path,
@@ -199,6 +280,11 @@ def main() -> None:
     )
     parser.add_argument("--brief", "-b", action="store_true", help="Brief output (counts only)")
     parser.add_argument("--output", "-o", type=Path, help="Write report to file")
+    parser.add_argument(
+        "--lock",
+        action="store_true",
+        help="Write lockfile pinning current SHA state for all compared paths (run after upstream sync)",
+    )
     args = parser.parse_args()
 
     cs_root = args.companion_self if args.companion_self is not None else _default_companion_self_root()
@@ -216,6 +302,14 @@ def main() -> None:
         brief=args.brief,
     )
 
+    all_paths = sorted(set(
+        result["same"] + result["differ"] + result["only_template"] + result["only_instance"]
+    ))
+
+    if args.lock:
+        lf = _write_lockfile(args.instance.resolve(), cs_root, all_paths)
+        print(f"Lockfile written: {lf} ({len(all_paths)} paths pinned)", file=sys.stderr)
+
     expected_map = _load_expected_drift(args.instance.resolve())
     differ_raw = list(result["differ"])
     expected_paths: list[tuple[str, str]] = []
@@ -227,6 +321,14 @@ def main() -> None:
             actionable_differ.append(rel)
     result["differ"] = sorted(actionable_differ)
     expected_paths.sort(key=lambda x: x[0])
+
+    lock_data = _load_lockfile(args.instance.resolve())
+    differ_directions: dict[str, str] = {}
+    for rel in result["differ"]:
+        direction = _diff_direction(
+            rel, cs_root / rel, args.instance / rel, lock_data.get(rel),
+        )
+        differ_directions[rel] = direction
 
     out_lines: list[str] = []
 
@@ -253,6 +355,10 @@ def main() -> None:
     if args.include_skill_work:
         path_scope += " + docs/skill-work recursive"
     emit("Paths: " + path_scope)
+    if lock_data:
+        sample = next(iter(lock_data.values()), {})
+        synced_at = sample.get("synced_at", "?")
+        emit(f"Lockfile: {len(lock_data)} paths pinned (last sync: {synced_at})")
     emit()
 
     if result["only_template"]:
@@ -262,9 +368,17 @@ def main() -> None:
         emit()
 
     if result["differ"]:
+        _DIR_LABELS = {
+            "upstream_moved": "⬇ upstream moved",
+            "instance_moved": "⬆ instance moved",
+            "both_moved": "⬆⬇ both moved",
+            "unknown": "? no lock baseline",
+        }
         emit("### Differ (both exist, content differs — review)")
         for p in result["differ"]:
-            emit("  - " + p)
+            direction = differ_directions.get(p, "unknown")
+            label = _DIR_LABELS.get(direction, direction)
+            emit(f"  - {p} — {label}")
         emit()
 
     if expected_paths:
