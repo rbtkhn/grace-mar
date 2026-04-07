@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — US–Iran war, game-theory lenses)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Real-time war analysis:** Weakens when facts on the ground (ceasefire, passage, leadership change, alliance shifts) contradict predictions without the lecture updating its game structure.
+- **Chokepoint / asymmetry closure:** Weakens if Hormuz or force balances move outside the posited payoff story (e.g. unexpected de-escalation or new technology that flips asymmetry).
+- **Systemic risk:** Weakens if global markets or alliances absorb shocks better than the vulnerability map assumes, or if different channels (finance vs energy) dominate empirically.
+
+---
+
 ## Full transcript
 
 I hope everyone had a nice break and welcome back to the end of the world. So, as you know, World War III has started. United States and Israel have start to attack Iran and we are now in the fourth day of this war. And we can expect this war to last for many weeks, possibly also for many years.

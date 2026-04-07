@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — end of history, Pax Americana, resilience)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Unipolar exhaustion:** Weakens under renewed liberal institutional stability or US-led order repair without the stress vectors the lecture foregrounds.
+- **Resilience-first forecast:** Weakens if efficiency and open trade regimes rebound as dominant strategies among major powers.
+- **Mercantilism / deglobalization:** Weakens when integration metrics improve or plateau in ways that contradict a forced deglobalization arc.
+
+---
+
 ## Full transcript
 
 When the Berlin wall fell, there was an American State Department official named Francis Fukayama and he wrote a very influential essay called the end of history. And for decades, capitalism was in a struggle with communism. And in his essay, Fukuyama argued that with the triumph of capitalism, we've come to the end of history.

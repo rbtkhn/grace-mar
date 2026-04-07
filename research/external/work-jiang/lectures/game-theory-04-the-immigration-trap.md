@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — immigration, group strategy, status)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Group-average narratives:** Weakens when **within-group variance** or **selection** (who migrates, when, under what law) explains outcomes **better** than **coarse ethnic** buckets.
+- **Status vs human-capital:** Weakens if **skills / institutions / geography** predict trajectories **after** accounting for **status** mechanisms the lecture stresses—or if **counterexamples** cluster in **specific** policy regimes.
+- **Long-cycle demographic game:** Weakens if **short-run** policy or **economic** shocks dominate **long-cycle** predictions **empirically**.
+
+---
+
 ## Full transcript
 
 Today we will look at immigration. Who wins the game of immigration and who loses? Why do they win? Why do they lose? Okay, so let's look at the United States, which is where most immigrants go. And as you can see from this chart, there are certain ethnic groups that do better than other ethnic groups.

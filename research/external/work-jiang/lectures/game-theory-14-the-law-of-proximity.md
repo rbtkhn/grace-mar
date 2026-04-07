@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — law of proximity, domestic vs geopolitical games)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Nearest-game dominance:** Weakens when remote alliances, supply chains, or public opinion far from the border drive decisions more than domestic proximate games in key cases.
+- **Decapitation / HUMINT–SIGINT:** Weakens if outcomes trace to economics, law, or mass mobilization rather than elite removal or intel contests as predicted.
+- **US–Iran frame:** Weakens when other theaters or issues subsume attention without going through proximity logic.
+
+---
+
 ## Full transcript
 
 Last night there was a major escalation in this war. So the Israelis have bombed the Iranian uh oil fields and in response the Iranians now are attacking the um energy infrastructure of the GCC. Okay. So let's have a look at what this attack looks like. >> Hello you guys. >> This is Qatar. Oh my god. Oh >> Okay, so Qatar provides 20% of the world's LNG.

@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — mating markets, superstructure, demographics)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Game-theory dating:** Weakens if **stable matching** or **institutional** explanations predict outcomes **better** than **status / Nash** stories alone; or if **cross-cultural** mating data **contradicts** the posited incentive structure.
+- **Superstructure bridge:** Weakens if **material** or **policy** shocks move behavior **without** the **superstructure** variables the lecture emphasizes.
+- **Fertility / civilizational arc:** Weakens under sustained demographic rebound or divergent regional patterns that don’t fit a single superstructure narrative.
+
+---
+
 ## Full transcript
 
 This semester we are going to analyze a question together which is how do societies behave? Why do we do what we do? What motivates us? What drives us? And there have been different theories as to what drives human behavior. Okay. So let's go over some theories. The first theory comes to us from um religion. And the idea is that we are all driven in a war between good and evil.

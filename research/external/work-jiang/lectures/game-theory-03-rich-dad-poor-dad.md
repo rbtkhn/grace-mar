@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — success theories, class, mobility)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Structural vs individual:** Weakens if **individual** or **random** factors explain **mobility** outcomes **better** than **class / parenting game** framing for a **broad** sample.
+- **Success-theory debunk:** Weakens if **grit / mindset / practice** interventions show **robust** effects **after** proper controls—or if the lecture’s **straw** versions don’t match **current** research definitions.
+- **Elite overproduction → instability:** Weakens under **long** windows of **high education expansion** **without** the posited **political** or **revolutionary** correlates (context-dependent).
+
+---
+
 ## Full transcript
 
 Today we look at the question of success. Okay, the question is who succeeds and why? Okay, so we we've done a lot of research and we've discovered that people who who succeed um succeed for certain reasons. So there is a Colombia psychologist named Walter Mitchell and he devised a very famous experiment called the marshmallow test.

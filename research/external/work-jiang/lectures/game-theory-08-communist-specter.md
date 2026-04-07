@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — capitalism, socialism, communism as games)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Three-ideology map:** Weakens when **mixed economies**, **non-Western** models, or **post-Cold War** coalitions **don’t** fit **clean** capitalism / socialism / communism **roles** the lecture assigns.
+- **Elite-conflict closure:** Weakens if **material** or **demographic** drivers explain **regime** or **policy** shifts **without** the posited **elite** game.
+- **State-as-player:** Weakens when **international institutions**, **firms**, or **networks** drive outcomes **more** than **state** formations named in-lecture.
+
+---
+
 ## Full transcript
 
 Today we discuss communism, Marxism. We will discuss uh what it is, where did it come from and why did it succeed. Now the 20th century um had the cold war and so that was an ideological struggle between capitalism and communism. And for the longest time we believe that capitalism and communism were polar opposites, a dialectic, okay, a black and white.

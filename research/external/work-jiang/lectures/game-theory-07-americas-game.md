@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — U.S. constitutional and dollar game)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Single “American game” design:** Weakens if **factional** or **regional** U.S. politics explain **policy** swings **better** than a **coherent** constitutional–dollar **architecture** story.
+- **Dollar / Bretton framing:** Weakens under sustained de-dollarization or reserve shifts that don’t trace to the incentive map the lecture draws, or if financial dominance persists without the posited domestic game structure.
+- **Export of incentives:** Weakens when recipients adapt or reject U.S.-style rules in ways that break the diffusion model.
+
+---
+
 ## Full transcript
 
 Okay. So, um let us review last class. So, last class we discussed the British Empire and how it ultimately triumphed over its main rivals who were the French, the Spanish and the Dutch because of three major uh powers. Okay. The first is the Bank of England. What made the Bank of England so important is that it could absorb foreign capital, okay, from all around the world.

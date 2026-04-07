@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — stakeholder schooling game)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Stakeholder / incentive trap:** Weakens if **reform** or **outlier systems** produce **large, durable** learning gains **without** the posited **power map** changing (or with a **different** power map than the lecture assumes).
+- **Uniform “schools suck” closure:** Weakens when **heterogeneity** dominates—many schools **deviate** from the central case on **literacy**, **critical thinking**, or **equity** metrics the lecture cares about.
+- **Superstructure link:** Weakens if **local** or **technical** interventions explain variance **better** than **macro superstructure** drivers alone.
+
+---
+
 ## Full transcript
 
 Okay, so welcome back to game theory and um as I discussed last class, our goal is able to is to use game theory to analyze global events to understand why they're happening as well as make certain predictions about how they should develop. But to do that, I first need to train your mind and how to and how to see the world using game theory.

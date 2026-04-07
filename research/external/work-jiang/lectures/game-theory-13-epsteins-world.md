@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — Plato’s cave, elite networks, Epstein narrative)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Cave / constructed reality:** Weakens if independent verification channels converge on facts that contradict the posited operator model without ad hoc patches.
+- **Network sketch vs legal fact:** Weakens when courts, investigations, or primary documents fail to support specific ties asserted as structural.
+- **War linkage:** Weakens if US–Iran dynamics evolve without the financial–network mechanism the lecture implies.
+
+---
+
 ## Full transcript
 
 Today I want to look at three questions. Why did this war between the United States and Iran start? How will this war end? And what will happen after this war ends? And to answer these three questions, we need we need to discuss the nature and structure of our reality. And the first thing you need to understand which is very hard is that our world is a hallucination.

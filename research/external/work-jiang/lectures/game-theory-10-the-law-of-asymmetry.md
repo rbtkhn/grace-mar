@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — law of asymmetry, empire vs underdog)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Fixed asymmetry:** Weakens when underdog advantages fade (reconnaissance, air dominance, logistics) or empire cost tolerance rises beyond the lecture’s assumptions.
+- **Hubris / elite overproduction:** Weakens if empire wins quickly without internal elite fracture, or if defeat traces to non-elite mechanisms.
+- **Energy / openness / cohesion feedback:** Weakens when outcomes decouple from the three-variable loop the lecture posits.
+
+---
+
 ## Full transcript
 
 we continue our discussion of the US Iran war that is happening right now. So um as you know I made the prediction that the United States will lose this war and last class we did an overview of the military and strategic position and today we're going to provide some theoretical framework for how to understand how this war will progress and why ultimately I believe the United States will lose this war.

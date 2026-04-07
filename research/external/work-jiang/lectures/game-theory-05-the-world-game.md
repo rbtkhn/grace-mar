@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — civilizational cycles, cohesion, energy)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Cycle model:** Weakens if historical cases used as illustrations fail out-of-sample tests, or if alternative models (institutions, contingency, technology shocks) retrodict better.
+- **Cohesion / core–periphery:** Weakens when **econometric** or **case** evidence shows **openness** and **elite integration** predict **rise** more reliably than the lecture’s **closure** story—or when **marginal groups** don’t **displace** cores as predicted.
+- **Energy / geography:** Weakens if **non-energy** shocks (finance, ideology, alliances) **dominate** episodes the lecture treats as **energy-cohesion** driven.
+
+---
+
 ## Full transcript
 
 Today we examine the question why is it that states, countries, nations, they rise and they fall. Okay, so let's start off with an example that you know pretty well. So this is the waring states period and at this point in history there are many powerful states. Okay. So for example the true, the jao, the way.

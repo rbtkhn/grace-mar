@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — Pax Judaica transition, endgame layers)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Regional primacy thesis:** Weakens if war ends with a different power distribution or narrative center than the lecture’s Pax framing predicts.
+- **Multi-layer game (narrative / political / economic / military):** Weakens when one layer alone explains outcomes and the others stay decoupled empirically.
+- **Military-industrial constraints:** Weakens if capacity or political economy shifts invalidate the posited US constraint story.
+
+---
+
 ## Full transcript
 
 Today we will talk about how this war will end. It is impossible to predict exactly when the war will end, but I would like to make a few predictions about how it will end.

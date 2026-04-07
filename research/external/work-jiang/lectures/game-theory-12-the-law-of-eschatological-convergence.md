@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — eschatological convergence, narrative coordination)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Cross-tradition convergence:** Weakens if traditions diverge in timing, actors, or end-state more than the lecture’s mapping allows, or if secular material drivers explain coalitions without eschatological alignment.
+- **Narrative-as-coordination:** Weakens when behavior tracks bargaining or interest alone without shared myth structure.
+- **Third-prediction / temple framing:** Weakens on failed deadlines, aborted projects, or a stable status quo that persists despite prophetic pressure.
+
+---
+
 ## Full transcript
 
 As I mentioned last class, there are three major questions that will determine how this war is fought, what they what this war uh will end up looking like, and how the world will change. And um as I discussed last class, I'm making three predictions about this war. The first is United States will use ground troops.

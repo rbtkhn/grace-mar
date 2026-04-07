@@ -27,6 +27,19 @@
 
 ---
 
+## Falsifiers (operator supplement — contrarian “genius / engineered collapse” hypothesis)
+
+Stress-tests for the lecture’s **deliberate-collapse / resource-realignment** read—not verdicts on real-world policy. Use with students as **what would weaken this story over time**.
+
+- **Inverse-signal framing (confident rhetoric ⇒ war stalling):** Weakens if **outcomes** match **optimistic** US messaging for a **sustained** window (e.g. **durable** Hormuz commercial flow, war termination on stated terms) **without** the **escalation** posited in-lecture; or if **allied and US** narratives **converge** and track reality.
+- **Ground invasion / long-war baseline:** Weakens with **months** of **no** large-scale ground commitment and a **settlement** that **does not** require **occupation**-scale logic; or **stable** passage and **de-escalation** that contradict a **long attrition** core case.
+- **Resource + Treasury triangle:** Weakens if major importers **diversify** supply and **Treasury** dynamics **decouple** from the posited **commodity lock-in** (e.g. **material** reserve shifts **without** the lecture’s compensating **dependence** story); or if **North America** suffers **disproportionate** harm while **rivals** gain **relative** advantage.
+- **Greater North America / NWO inversion:** Weakens if policy **reverts** to **finance- and alliance-centric** defaults with **little** durable shift to **hemispheric consolidation** or **manufacturing/resource** statecraft beyond **rhetoric**.
+- **Putin–Dugin parallel:** Weakens if the US **does not** exhibit a **sustained** **mobilization / reindustrialization** shape comparable to the narrative and the **post-shock** order looks **conventionally** interdependent, not **Fortress**-tilted.
+- **Q&A structural “inevitable collapse”:** Separate from Trump; weakens under a **long** window of **stable** macro and political **equilibrium** that contradicts the **Ponzi / oligarchy** closure story—or a **credible** alternative stabilization path that **holds**.
+
+---
+
 ## Full transcript
 
 About an hour ago, Donald Trump addressed the American people. This followed addresses by Prime Minister Albanese of Australia and Prime Minister Starmer of the United Kingdom. In both speeches, Albanese and Starmer told their citizens that fuel and gas prices would rise and more pain should be expected, but their governments would do everything possible to protect household budgets.

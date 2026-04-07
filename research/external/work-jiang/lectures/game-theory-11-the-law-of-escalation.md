@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — escalation ladders, calibration)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **Automatic escalation:** Weakens under sustained stable brinkmanship without ladder climbing, or rapid de-escalation without domestic audience costs the lecture posits.
+- **Calibration vs dominance:** Weakens if dominant powers consistently calibrate successfully (or weak powers fail to impose costs) against the predicted pattern.
+- **Nuclear / religious sites / red lines:** Weakens when taboos or institutions hold more firmly than incentive stories predict.
+
+---
+
 ## Full transcript
 
 We continue our analysis of the US Iran war. And in this war, there are three major questions that will determine the outcome of this war as well as the world afterwards. Okay. And these three questions are number one, will the US launch a ground invasion? So right now the United States and Israel are primarily focused on a air war striking um Iran from a distance.

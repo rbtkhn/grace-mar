@@ -23,6 +23,16 @@
 
 ---
 
+## Falsifiers (operator supplement — engineered financial collapse / Great Reset frame)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**. (Header **Topic** / **At a glance** still **TBD**—refine these bullets after listen.)
+
+- **“Engineered not accidental” collapse:** Weakens if major crises trace to well-attested endogenous cycles, policy errors, or exogenous shocks without a coherent designer chain of evidence.
+- **Boom–bust as purely natural (straw):** Weakens if mainstream macro already incorporates institutions, credit, and politics beyond a naive natural-cycle story.
+- **War-as-catalyst closure:** Weakens when financial outcomes decouple from the posited war mechanism or timing sequence.
+
+---
+
 ## Full transcript
 
 Today I want to look at how the global economy will collapse specifically how the US economy will collapse because of this war. Now the argument I want to make to you today is that financial collapse do not happen accidentally or naturally. It has to be engineered. And this is a very hard concept for us to understand. Okay.

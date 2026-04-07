@@ -25,6 +25,16 @@
 
 ---
 
+## Falsifiers (operator supplement — imperial finance, schooling, elite incentives)
+
+Stress-tests for this episode’s main claims—not verdicts on truth. Use with students as **what would weaken this lens over time**.
+
+- **UK / post-imperial finance arc:** Weakens if **other** imperial or **non-imperial** paths produce **similar** offshore / legal **patterns** without the posited **British** mechanism chain.
+- **Schooling–elite behavior link:** Weakens when **elite mobility** or **corruption** metrics **decouple** from the **schooling / language** story across **comparators**.
+- **Single-thread global order:** Weakens if **multipolar** legal and **financial** centers show **persistent** autonomy **not** explained by **post-imperial** British carryover alone.
+
+---
+
 ## Full transcript
 
 Today I want to examine why you Chinese students behave the way you do. Okay. So believe it or not, but the way that you behave, the game that you are playing, it's strange. It's weird. So I'll point out three things that you do that don't really make any sense. The first thing that you do is you spend a lot of your time learning English.
