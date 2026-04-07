@@ -73,3 +73,17 @@ _(Append below this line.)_
 - **2026-04-07 01:29 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
 - **2026-04-07 01:29 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
 - **2026-04-07 01:46 UTC** — thanks (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking park=none
+- **2026-04-07 02:11 UTC** — thanks (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking park=parked-15pt-proposal-remaining-gaps
+- **2026-04-07 03:16 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-07 03:16 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-07 03:16 UTC** — dream (demo) ok=false mode=default cursor_model=unknown integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-07 03:16 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
+- **2026-04-07 03:16 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-07 04:23 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-07 04:23 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-07 04:23 UTC** — dream (demo) ok=false mode=default cursor_model=unknown integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-07 04:23 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
+- **2026-04-07 04:23 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-07 04:26 UTC** — thanks (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking park=none
+- **2026-04-07 04:45 UTC** — thanks (grace-mar) ok=true cursor_model=unknown park=mediamap curated into three lane sources files
+- **2026-04-07 05:12 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown
