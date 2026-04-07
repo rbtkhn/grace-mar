@@ -26,6 +26,8 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -69,6 +71,29 @@ def resolve_cursor_model(
     return env[:200] if env else "unknown"
 
 
+_EMPTY_PARK = frozenset({"", "none", "—", "-"})
+
+
+def _auto_park(repo: Path | None = None) -> str:
+    """Fallback park text from the last git commit subject when the caller omits it.
+
+    Returns ``auto:<slug>`` or ``auto:no-recent-commit`` on failure.
+    """
+    cwd = str(repo) if repo else str(REPO_ROOT)
+    try:
+        result = subprocess.run(
+            ["git", "log", "--oneline", "-1", "--format=%s"],
+            capture_output=True, text=True, timeout=5, cwd=cwd,
+        )
+        subject = (result.stdout or "").strip()[:60]
+    except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+        subject = ""
+    if not subject:
+        return "auto:no-recent-commit"
+    slug = re.sub(r"[^a-zA-Z0-9]+", "-", subject).strip("-").lower()
+    return f"auto:{slug}" if slug else "auto:no-recent-commit"
+
+
 def _format_cursor_model_token(cm: str) -> str:
     """Space-safe for space-delimited key=value cadence lines."""
     return str(cm).replace("\n", " ").strip().replace(" ", "_")[:200]
@@ -83,12 +108,18 @@ def append_cadence_event(
     cursor_model: str | None = None,
     kv: dict[str, str] | None = None,
     events_path: Path = EVENTS_PATH,
+    no_auto_park: bool = False,
 ) -> Path:
     """Append one cadence event line. Returns the path written to."""
     if kind not in KINDS:
         raise ValueError(f"kind must be one of {KINDS}, got {kind!r}")
 
     base = dict(kv or {})
+
+    if kind == "thanks" and not no_auto_park:
+        park_val = base.get("park", "").strip()
+        if park_val.lower() in _EMPTY_PARK:
+            base["park"] = _auto_park(events_path.parent)
     cm = resolve_cursor_model(explicit=cursor_model, kv=base)
     merged: dict[str, str] = {"cursor_model": cm}
     for k, v in base.items():
@@ -131,6 +162,12 @@ def main() -> int:
         help="Cursor UI model label (overrides CURSOR_MODEL env and cursor_model= in --kv)",
     )
     ap.add_argument("--kv", nargs="*", default=[], metavar="KEY=VALUE", help="Extra key=value pairs")
+    ap.add_argument(
+        "--no-auto-park",
+        action="store_true",
+        default=False,
+        help="Suppress auto-park fallback for thanks events (keep park=none as-is)",
+    )
     args = ap.parse_args()
 
     kv_dict: dict[str, str] = {}
@@ -148,6 +185,7 @@ def main() -> int:
         mode=args.mode,
         cursor_model=(args.cursor_model.strip() if args.cursor_model else None),
         kv=kv_dict,
+        no_auto_park=args.no_auto_park,
     )
     print(path.relative_to(REPO_ROOT))
     return 0

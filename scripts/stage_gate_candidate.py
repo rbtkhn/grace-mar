@@ -33,6 +33,7 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
 from repo_io import profile_dir, read_path
+from gate_block_parser import iter_candidate_yaml_blocks
 
 try:
     from recursion_gate_territory import TERRITORY_WORK_POLITICS
@@ -40,6 +41,58 @@ except ImportError:
     from scripts.recursion_gate_territory import TERRITORY_WORK_POLITICS
 
 DEFAULT_USER = "grace-mar"
+
+_STOPWORDS = frozenset({
+    "a", "an", "and", "are", "as", "be", "because", "for", "from", "has",
+    "have", "how", "in", "is", "it", "its", "not", "of", "on", "or",
+    "that", "the", "their", "this", "to", "was", "with", "you", "your",
+})
+
+
+def _tokenize(text: str) -> set[str]:
+    return {t for t in re.findall(r"[a-z0-9]+", (text or "").lower())
+            if len(t) >= 4 and t not in _STOPWORDS}
+
+
+def _extract_yaml_scalar(yaml_body: str, key: str) -> str:
+    m = re.search(rf"^{re.escape(key)}:\s*(.+)$", yaml_body, re.MULTILINE)
+    return (m.group(1).strip().strip('"').strip("'") if m else "")
+
+
+def convergence_check(
+    gate_content: str,
+    new_summary: str,
+    new_body: str,
+    *,
+    min_overlap: int = 3,
+) -> dict[str, object]:
+    """Check whether the new candidate's content overlaps with existing candidates.
+
+    Returns a dict with:
+      sighting: "first" | "recurring"
+      prior_count: number of overlapping prior candidates
+      prior_ids: list of candidate IDs with significant overlap
+    """
+    new_tokens = _tokenize(f"{new_summary} {new_body}")
+    if not new_tokens:
+        return {"sighting": "first", "prior_count": 0, "prior_ids": []}
+
+    prior_ids: list[str] = []
+    for cid, _title, yaml_body in iter_candidate_yaml_blocks(gate_content):
+        existing_text = " ".join(
+            _extract_yaml_scalar(yaml_body, k)
+            for k in ("summary", "suggested_entry", "prompt_addition")
+        )
+        existing_tokens = _tokenize(existing_text)
+        shared = new_tokens & existing_tokens
+        if len(shared) >= min_overlap:
+            prior_ids.append(cid)
+
+    return {
+        "sighting": "recurring" if prior_ids else "first",
+        "prior_count": len(prior_ids),
+        "prior_ids": prior_ids,
+    }
 
 
 def _candidate_ids(content: str) -> list[int]:
@@ -88,6 +141,8 @@ def build_block(
     territory: str | None,
     timestamp: str,
     proposal_class: str | None = None,
+    convergence: dict[str, object] | None = None,
+    warrant: str | None = None,
 ) -> str:
     summary_one = summary.strip().replace("\n", " ")[:500]
     if len(summary_one) > 200:
@@ -115,12 +170,27 @@ def build_block(
         ]
     )
     lines.append(op_literal.rstrip("\n"))
+    convergence_lines: list[str] = []
+    if convergence:
+        sighting = convergence.get("sighting", "first")
+        prior_ids = convergence.get("prior_ids", [])
+        convergence_lines.append(f"convergence: {sighting}")
+        if prior_ids:
+            convergence_lines.append(f"convergence_prior: {', '.join(str(p) for p in prior_ids)}")
+
     lines.extend(
         [
             f"mind_category: {mind_category}",
             "signal_type: operator_paste",
             "priority_score: 3",
             f"summary: {_yaml_double_quoted(summary_one)}",
+        ]
+    )
+    lines.extend(convergence_lines)
+    if warrant:
+        lines.append(f"warrant: {_yaml_double_quoted(warrant.strip()[:300])}")
+    lines.extend(
+        [
             "profile_target: IX-A. KNOWLEDGE",
             "suggested_entry: \"See source_exchange.operator (staged paste).\"",
             "prompt_section: YOUR KNOWLEDGE",
@@ -169,6 +239,11 @@ def main() -> int:
         help="Optional YAML proposal_class (e.g. SIMULATION_RESULT for fork simulations)",
     )
     ap.add_argument(
+        "--warrant",
+        default=None,
+        help="Optional invalidation condition (LoreSpec-inspired): the assumption that, if changed, means this entry should be revisited",
+    )
+    ap.add_argument(
         "--auto-score",
         action="store_true",
         help="After writing, run score_gate_candidates.py for this user (heuristic hints)",
@@ -211,6 +286,7 @@ def main() -> int:
         return 1
 
     cid = next_candidate_id(full)
+    conv = convergence_check(full, summary, body)
     block = build_block(
         candidate_id=cid,
         title=title,
@@ -221,6 +297,8 @@ def main() -> int:
         territory=territory,
         timestamp=ts,
         proposal_class=args.proposal_class,
+        warrant=args.warrant,
+        convergence=conv,
     )
 
     if args.dry_run:

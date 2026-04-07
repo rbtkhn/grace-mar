@@ -135,6 +135,8 @@ Input (conversation, artifact, "we did X")
 - **Work layer** = designated integration point for external APIs, agent loops, planning systems, delivery tooling, and **`docs/skill-work/**` territories**. It is adjacent to the Record, not a self-skill.
 - **WORK execution layer** = operator + tooling + AI assistant that **executes** work-layer and skill-work tasks (draft, mirror, template diff). Same **stage-only** rule for Record: no direct merge into SELF / EVIDENCE / prompt without companion approval.
 
+**Discipline as a capability surface.** The companion's value in WORK execution includes superhuman consistency — maintaining runbooks, mirrors, and protocol adherence without fatigue or emotional drift. The transcript evidence: bots on Polymarket won not with better strategies but with flawless execution (no fatigue at 3 a.m., no oversized positions on confident bets, no missed trades during lunch). When auditing skill-work patterns, track not just what the system can do but how reliably it does it. Execution discipline gaps are a primary leverage point.
+
 ---
 
 ## 5a. Identity vs instrument: Record skills and work

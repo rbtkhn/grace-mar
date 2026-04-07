@@ -190,9 +190,20 @@ Now that the recommended repos are sealed and pushed (or explicitly skipped with
 ```markdown
 # Session Bridge — [YYYY-MM-DD]
 
-## Arc
-[2-4 sentences: what the session accomplished, what shifted, current posture.
-This is narrative, not a list. Write it from what you observed in the readings.]
+## Session Arc
+[Episodic — what happened, in what order:
+- Started: initial intent or task
+- Pivots: where direction changed and why
+- Ended: current state, what's unfinished
+2-4 sentences. This is narrative, not a list. Write from what you observed.]
+
+## Session Output
+[Semantic — what was figured out or produced:
+- Decisions made (with warrant if available — the assumption that would invalidate them)
+- Patterns identified
+- Artifacts created or modified
+- Open questions surfaced
+Bullet list, 2-5 items. Facts and deliverables, not narrative.]
 
 ## Carry-forward from last dream
 [Condensed from last-dream.json: integrity/governance status, contradiction / reviewable counts,
@@ -277,7 +288,7 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 - **No gate action.** Report gate state; do not process, approve, or defer candidates.
 - **No merges into Record.** Committing files to git is not the same as merging into SELF/EVIDENCE. The gated pipeline is untouched.
 - **Signal over volume.** The transfer prompt should be concise. Aim for one screen of text, not a wall. Omit sections that have nothing to report.
-- **Narrative arc matters.** The "Arc" section is the most valuable part — it's the thing no script can produce. Synthesize, don't just list.
+- **Narrative arc matters.** The "Session Arc" section is the most valuable part — it's the thing no script can produce. Synthesize, don't just list. "Session Output" is the semantic complement — facts and deliverables.
 - **Stop on conflict.** If push fails after pull-rebase due to conflicts, stop and report. Do not force-push or resolve conflicts silently.
 - **Push/sync clarity.** Always give the Step 2 recommendation (and ask when ambiguous) before writing commits; do not treat “both repos” as mandatory if companion-self is clean and untouched unless the operator confirms.
 - **Ephemeral output.** The transfer prompt exists only in the chat unless the operator saves it (optional `bridge-packets/` path in Step 5).
@@ -312,3 +323,4 @@ Bridge is complete. Pushed repos match Step 2 recommendation (or operator overri
 | Date | Change |
 |------|--------|
 | 2026-04-06 | Doc-only cold-thread loop § *After the new session opens*. |
+| 2026-04-06 | Split Arc into Session Arc (episodic) + Session Output (semantic) — LoreSpec-derived. |

@@ -85,6 +85,28 @@ Skills may ask the agent to **read** `work-cadence-events.md` **before** running
 
 Synthesis should be **plain prose** with **specific anchors** from the log (which rituals, commit refs on bridge, coffee modes, thanks park lines, dream outcomes)—**not** generic process commentary that could apply without reading the file. Still **avoid** opening with a wall of raw `key=value`; weave facts into sentences. Technical detail also lives in Step 1 script output. If the log is empty or short, skills specify fallbacks.
 
+### Two-phase substrate separation (dream)
+
+Dream's maintenance pass separates its work into two phases, inspired by sleep neuroscience — specifically Kjaerby et al. (Nature 2024), which showed non-REM sleep alternates between substates that replay *recent* vs. *older* memories in distinct temporal windows to prevent catastrophic forgetting (new signals overwriting consolidated patterns).
+
+| Phase | Focus | What runs | Cadence tag |
+|-------|-------|-----------|-------------|
+| **Recent** (Phase A) | Today's signals | Memory normalization, fresh contradiction entries | `phase=recent` |
+| **Structural** (Phase B) | Long-horizon health | Integrity checks, governance checks, older contradiction entries | `phase=structural` |
+
+The default mode (`--phase both`) runs both phases sequentially and tags the output so downstream consumers (night-close brief, `last-dream.json`, morning coffee) can see what came from each. The `last-dream.json` handoff includes a `phases` object with separate recent and structural results.
+
+Running a single phase (`--phase recent` or `--phase structural`) is useful for targeted checks or time-constrained runs. Phase A alone skips sub-process calls and completes faster.
+
+**Scientific rationale:** Biological sleep uses substrate separation to prevent interference between consolidating new information and maintaining existing patterns. The two-phase dream applies the same principle: normalize today's signals *before* checking long-horizon structural health, and tag the output so the operator can see which findings are fresh vs. systemic.
+
+### Episodic / semantic layer distinction (bridge and harvest)
+
+Bridge and harvest packets separate their payload into two layers that mirror Tulving's (1972) episodic–semantic memory distinction — and LoreSpec's session-level extraction architecture (Session Arc = episodic, Knowledge Objects = semantic). **Episodic** sections capture *what happened* in temporal order (session purpose, developments, pivots). **Semantic** sections capture *what was figured out* — decisions, patterns, artifacts, and (optionally) the **warrant** that would invalidate them. The separation helps receiving agents (or the next session's cold-start reader) distinguish context they need for orientation from knowledge they can act on directly.
+
+- **Bridge:** `## Session Arc` (episodic) + `## Session Output` (semantic). See [bridge-packet-contract.md](bridge-packet-contract.md).
+- **Harvest:** Episodic cluster (Current session purpose, Thread coverage, Important developments) + Semantic cluster (Main outcomes, Strongest insights, Decisions/directions, Artifacts). See [harvest-packet-contract.md](harvest-packet-contract.md).
+
 ### Choreography vs governance
 
 Choreography operates in **Maintenance / operational** territory. It does **not** approve gate candidates or merge the Record. The **integration moment** for identity remains the instance gate. Cadence can **surface** gate pressure (e.g. steward tracks in coffee); it does not **substitute** for companion approval.
@@ -247,6 +269,8 @@ Each coffee, dream, bridge, and optional **harvest** run appends one line to [wo
 **Emitters (typical):**
 - **coffee** / **dream** / **bridge** — runner or agent logs after successful completion (see instance template)
 - **harvest** — optional; operator or agent runs `session_harvest.py --log` or `log_cadence_event.py --kind harvest` after emitting a packet
+
+**Auto-park (thanks only):** When a `thanks` event has no operator-provided park text, two layers fill the gap. **(1) Agent-level (primary):** the `thanks` skill instructs the agent to infer a 3–8 word dash-joined slug from thread context (e.g. `park=cadence-auto-park-design`). **(2) Script-level (fallback):** `log_cadence_event.py` detects empty/none/dash park values and runs `git log --oneline -1` to generate a slug prefixed with `auto:` (e.g. `park=auto:persistent-chat-store-and-commands`). The `auto:` prefix distinguishes script-generated text from human or agent input. Suppress the script fallback with `--no-auto-park`.
 
 **Leaf-only rule:** Orchestrator scripts (wrappers that chain multiple steps) do not emit their own events. Only the leaf ritual logs.
 

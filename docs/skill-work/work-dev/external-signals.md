@@ -38,6 +38,20 @@
 
 ---
 
+## What work-dev should take away (rolling disruption / arbitrage scan)
+
+*Source class: Polymarket bot transcript (2025-2026) — AI capability gaps as market structure, not anomaly.*
+
+| Discourse theme (rough) | work-dev use |
+|---------------------------|--------------|
+| **Rolling disruption** (no post-AI steady state) | Validates **change-review trigger**: existing integration assumptions may silently expire on model-release timescale. See [change-review.md](../../change-review.md). |
+| **Upstream value migration** (judgment, taste, integration) | Reinforces **companion sovereignty** positioning: commodity execution is replaceable; **what** to execute (Record, identity, gated curation) is where value compounds. |
+| **Discipline as edge** (bots win on consistency, not strategy) | Maps to **cadence rhythm auditor** (`audit_cadence_rhythm.py`) and discipline-as-capability note in [skills-modularity.md](../../skills-modularity.md): flawless execution of known protocols > novel strategies poorly maintained. |
+| **Speed arbitrage compression** (gaps close faster each cycle) | Maps to **gate staleness scorer** (`score_gate_staleness.py`): candidates that sit unprocessed lose value as context shifts. |
+| **Rotation, not equilibrium** (closed gaps reopen elsewhere) | Maps to **warrant expiration scanner** (`scan_warrant_expiration.py`): time-sensitive knowledge needs periodic revalidation. |
+
+---
+
 ## Where this shows up in repo artifacts
 
 - **Partner / investor conversations:** [offers.md](offers.md), [proof-ledger.md](proof-ledger.md), [partner-channel.md](partner-channel.md).
@@ -46,6 +60,8 @@
 - **Karpathy / No Priors (agents, claws, auto-research):** [research-no-priors-karpathy-end-of-coding.md](research-no-priors-karpathy-end-of-coding.md) — work-dev alignment table; full ASR transcript under [work-dev transcripts](../../../research/external/work-dev/transcripts/karpathy-end-of-coding-no-priors-agents-transcript.txt).
 - **McKinsey / agent commerce (agent readable & writable):** [research-agent-readable-writable-commerce.md](research-agent-readable-writable-commerce.md) — structural precondition, MCP vs deep stack, platform risk; ASR under [work-dev transcripts](../../../research/external/work-dev/transcripts/mckinsey-trillion-agent-sales-agent-readable-asr.txt).
 - **Nate B. Jones — AI labor market (K-shape) and seven production skills (2026):** [digest](../../../research/external/work-dev/transcripts/nate-b-jones-ai-job-market-seven-skills-2026.md) — specification precision, eval discipline, failure taxonomy (including silent failure), trust/guardrails, context architecture, token economics; operator templates [templates/specification-precision.md](templates/specification-precision.md), [failure checklist](../../../users/grace-mar/recursion-gate-staging/failure-pattern-checklist.md), planning CLI [token_economics.py](../../../scripts/token_economics.py). **Career lane (manual job log, no scrape):** [work-career README](../work-career/README.md), scripts `scripts/work_career/`.
+- **Arbitrage rotation framework:** [self-library.md](../../../users/grace-mar/self-library.md) (LIB-0150), diagnostic scripts (`score_gate_staleness.py`, `audit_cadence_rhythm.py`, `scan_warrant_expiration.py`), [change-review.md](../../change-review.md) (rolling disruption trigger).
+- **Automated capability shift detection:** `detect_capability_shift.py` fetches changelogs from 6 providers (Anthropic, OpenAI, xAI, Google, DeepSeek, Qwen) and diffs against [capability-assumptions.yaml](capability-assumptions.yaml) — the rolling-disruption sensor. Wired into warmup and gate-review-pass.
 
 ---
 

@@ -68,6 +68,14 @@ For the stricter maintenance variant:
 python3 scripts/auto_dream.py --strict
 ```
 
+For a specific phase only (see *Two-phase substrate separation* below):
+
+```bash
+python3 scripts/auto_dream.py --phase recent       # memory + fresh digest only
+python3 scripts/auto_dream.py --phase structural    # integrity + governance only
+python3 scripts/auto_dream.py --phase both          # default: full pass
+```
+
 Alternative via swarm bridge (same underlying logic):
 
 ```bash
@@ -102,12 +110,14 @@ This is a maintenance pass, not a merge pass.
 Return a short night-close brief with:
 
 - **Recent rhythm:** (synthesis from Step 0 — always first)
-- `self-memory` changed: yes/no
-- integrity: pass/fail
-- governance: pass/fail
-- contradiction digest: counts
+- **Phase:** which phase ran (`both`, `recent`, or `structural`)
+- `self-memory` changed: yes/no *(recent phase)*
+- integrity: pass/fail *(structural phase)*
+- governance: pass/fail *(structural phase)*
+- contradiction digest: total counts, plus **recent entries** (today's candidates) vs **structural entries** (older candidates) when phase=both
 - artifact drafts: none / count
 - **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
+- **capability shift** (model category): sources checked / total, REVIEW alerts, monitor alerts — or "no alerts" if quiet
 - one sentence on what tomorrow inherits from this run
 
 If nothing important changed, say so plainly. A quiet run is success.
@@ -126,6 +136,8 @@ If nothing important changed, say so plainly. A quiet run is success.
 - contradiction digest: reviewable 0, contradiction 0
 - artifact drafts: none
 
+- capability shift [model]: 6/6 sources — no alerts
+
 Tonight's pass cleaned continuity and left no governed follow-up items.
 ```
 
@@ -141,8 +153,22 @@ Or, when something needs attention:
 - contradiction digest: reviewable 2, contradiction 1
 - artifact drafts: 1 prepared
 
+- capability shift [model]: 5/6 sources — 1 REVIEW (ASSUME-007), 2 monitor
+
 Tonight's pass surfaced one contradiction worth governed review tomorrow; nothing was merged automatically.
 ```
+
+## Two-phase substrate separation
+
+Dream's maintenance pass separates work into two phases, inspired by Kjaerby et al. (Nature 2024) showing that non-REM sleep alternates between substates that replay recent vs. older memories in distinct temporal windows to prevent catastrophic forgetting.
+
+**Phase A — Recent:** Memory normalization + contradiction digest entries from today. Focuses on what this session or day introduced — fresh signals, new candidates, recent changes to `self-memory.md`. This phase runs quickly (no subprocess calls to integrity or governance checkers).
+
+**Phase B — Structural:** Integrity checks + governance checks + contradiction digest entries from before today. Focuses on long-horizon health — file parity, export freshness, template drift, rule compliance. This phase runs the full validation sub-processes.
+
+The default (`--phase both`) runs both phases sequentially and tags the output so the night-close brief and tomorrow's coffee can see what came from each. Using `--phase recent` or `--phase structural` runs only that phase, which is useful for targeted checks or when time is short.
+
+The `last-dream.json` handoff includes a `phases` object that separates results by source, so morning coffee can display recent signals and structural health independently.
 
 ## Governance doctrine (soft boundary)
 
@@ -228,3 +254,4 @@ Each successful dream run appends one line to `docs/skill-work/work-cadence/work
 - `.cursor/skills/coffee/SKILL.md` — morning-side counterpart
 - `.cursor/skills/thanks/SKILL.md` — micro-pause (not a substitute for dream)
 - `.cursor/skills/bridge/SKILL.md` — session-scale handoff
+- `scripts/detect_capability_shift.py` — capability shift detector (live fetch during dream; cached in warmup)

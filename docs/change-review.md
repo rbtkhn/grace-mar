@@ -107,6 +107,7 @@ Change review should be triggered for materially important changes, including:
 - safety or boundary changes
 - durable preference changes
 - template-upgrade collisions that affect governed state
+- **rolling disruption events** — when a major model release compresses previously stable inefficiencies in the instance's work territories, workflows, or skill surfaces. There is no post-AI steady state; each capability jump opens new gaps while closing old ones. Review whether assumptions baked into governed state, prompt architecture, or execution patterns still hold. Also review whether the system is doing something expensively that a new model commoditizes (the gap the system was built on may have closed). Applies only when the operator identifies a concrete capability change affecting current surfaces.
 
 Small ephemeral updates or ordinary session memory do not require change review unless instance policy says otherwise.
 

@@ -34,6 +34,7 @@ from repo_io import resolve_self_memory_path
 
 LAST_DREAM_FILENAME = "last-dream.json"
 HANDOFF_SCHEMA_VERSION = 2
+VALID_PHASES = ("both", "recent", "structural")
 
 
 def _classify_worktree_grace(status_out: str, diff_out: str) -> tuple[str, str]:
@@ -362,6 +363,47 @@ def _apply_civmem_budget(
     return civ_echoes, civ_index_missing, None
 
 
+def _split_digest_by_recency(
+    digest: dict[str, Any],
+    today_iso: str,
+) -> dict[str, Any]:
+    """Separate contradiction digest entries into recent (today) and structural (older).
+
+    Inspired by Kjaerby et al. (Nature 2024): non-REM sleep alternates between
+    substates that replay recent vs. older memories in distinct temporal windows,
+    preventing catastrophic forgetting through substrate separation.
+    """
+    entries = digest.get("entries") or []
+    recent: list[dict[str, Any]] = []
+    structural: list[dict[str, Any]] = []
+    for entry in entries:
+        ts = (entry.get("timestamp") or "").strip()
+        if ts.startswith(today_iso):
+            recent.append(entry)
+        else:
+            structural.append(entry)
+
+    def _count_relations(elist: list[dict[str, Any]]) -> dict[str, int]:
+        counts: dict[str, int] = {}
+        for e in elist:
+            rt = e.get("relationship_type", "unknown")
+            counts[rt] = counts.get(rt, 0) + 1
+        return counts
+
+    return {
+        "recent": {
+            "entry_count": len(recent),
+            "relation_counts": _count_relations(recent),
+            "entries": recent,
+        },
+        "structural": {
+            "entry_count": len(structural),
+            "relation_counts": _count_relations(structural),
+            "entries": structural,
+        },
+    }
+
+
 def _write_last_dream_handoff(
     summary: dict[str, Any],
     *,
@@ -397,6 +439,7 @@ def _write_last_dream_handoff(
         "user_id": user_id,
         "agent_surface": {"cursor_model": cursor_model},
         "strict_mode": summary.get("strict_mode", False),
+        "phase": summary.get("phase", "both"),
         "ok": summary.get("ok", False),
         "integrity_ok": bool((summary.get("integrity") or {}).get("ok")),
         "governance_ok": bool((summary.get("governance") or {}).get("ok")),
@@ -407,6 +450,21 @@ def _write_last_dream_handoff(
         "promotable_draft_count": promotable,
         "followups": followups,
     }
+    dp = summary.get("digest_phases")
+    if dp is not None:
+        handoff["phases"] = {
+            "recent": {
+                "self_memory_changed": memory.get("changed", False),
+                "entry_count": dp["recent"]["entry_count"],
+                "relation_counts": dp["recent"]["relation_counts"],
+            },
+            "structural": {
+                "integrity": "pass" if handoff["integrity_ok"] else "fail",
+                "governance": "pass" if handoff["governance_ok"] else "fail",
+                "entry_count": dp["structural"]["entry_count"],
+                "relation_counts": dp["structural"]["relation_counts"],
+            },
+        }
     cr = summary.get("coffee_rollup_24h")
     if cr is not None:
         handoff["coffee_rollup_24h"] = cr
@@ -425,6 +483,10 @@ def _write_last_dream_handoff(
         handoff["civmem_index_missing"] = bool(summary["civmem_index_missing"])
     if summary.get("civmem_suppressed_reason"):
         handoff["civmem_suppressed_reason"] = summary["civmem_suppressed_reason"]
+    if summary.get("capture_gap"):
+        handoff["capture_gap"] = summary["capture_gap"]
+    if summary.get("capability_shift"):
+        handoff["capability_shift"] = summary["capability_shift"]
 
     # Schema v2 alignment with companion-self night-handoff (operational; not Record).
     handoff["handoffSchemaVersion"] = HANDOFF_SCHEMA_VERSION
@@ -463,26 +525,42 @@ def run_auto_dream(
     write_artifacts: bool = True,
     strict_mode: bool = False,
     cursor_model: str | None = None,
+    phase: str = "both",
 ) -> dict[str, Any]:
-    memory_result = maintain_self_memory(user_id=user_id, users_dir=users_dir, apply=False)
-    integrity_command = [
-        sys.executable,
-        str(REPO_ROOT / "scripts" / "validate-integrity.py"),
-        "--users-dir",
-        str(users_dir),
-        "--user",
-        user_id,
-        "--json",
-    ]
-    if strict_mode:
-        integrity_command.append("--require-proposal-class")
-    integrity_json = _run_json_command(integrity_command, REPO_ROOT)
-    governance_code, governance_stdout, governance_stderr = _run_text_command(
-        [sys.executable, str(REPO_ROOT / "scripts" / "governance_checker.py")],
-        REPO_ROOT,
-    )
-    integrity_ok = bool(integrity_json.get("ok"))
-    governance_ok = governance_code == 0
+    if phase not in VALID_PHASES:
+        raise ValueError(f"phase must be one of {VALID_PHASES}, got {phase!r}")
+
+    run_recent = phase in ("both", "recent")
+    run_structural = phase in ("both", "structural")
+
+    memory_result = maintain_self_memory(user_id=user_id, users_dir=users_dir, apply=False) if run_recent else None
+
+    # Phase B: structural checks (integrity + governance)
+    if run_structural:
+        integrity_command = [
+            sys.executable,
+            str(REPO_ROOT / "scripts" / "validate-integrity.py"),
+            "--users-dir",
+            str(users_dir),
+            "--user",
+            user_id,
+            "--json",
+        ]
+        if strict_mode:
+            integrity_command.append("--require-proposal-class")
+        integrity_json = _run_json_command(integrity_command, REPO_ROOT)
+        governance_code, governance_stdout, governance_stderr = _run_text_command(
+            [sys.executable, str(REPO_ROOT / "scripts" / "governance_checker.py")],
+            REPO_ROOT,
+        )
+        integrity_ok = bool(integrity_json.get("ok"))
+        governance_ok = governance_code == 0
+    else:
+        integrity_json = {"ok": True, "skipped": True, "reason": "phase=recent"}
+        governance_code, governance_stdout, governance_stderr = 0, "", ""
+        integrity_ok = True
+        governance_ok = True
+
     halted = strict_mode and (not integrity_ok or not governance_ok)
 
     digest_path = default_digest_path(users_dir=users_dir, user_id=user_id) if apply and not halted else None
@@ -506,17 +584,18 @@ def run_auto_dream(
             write_path=digest_path,
             strict_mode=strict_mode,
         )
-        if apply and memory_result.changed:
+        if apply and memory_result is not None and memory_result.changed:
             _persist_memory_result(memory_result)
         if write_artifacts and apply:
             artifact_drafts = write_artifact_drafts(digest)
 
-    summary: dict[str, Any] = {
-        "ok": integrity_ok and governance_ok and not halted,
-        "user_id": user_id,
-        "strict_mode": strict_mode,
-        "halted": halted,
-        "self_memory": {
+    # Phase-split digest entries by recency (Kjaerby substrate separation)
+    today_iso = date.today().isoformat()
+    digest_phases = _split_digest_by_recency(digest, today_iso) if not halted else None
+
+    mem_dict: dict[str, Any]
+    if memory_result is not None:
+        mem_dict = {
             "path": str(memory_result.path),
             "created": memory_result.created,
             "changed": memory_result.changed and not halted,
@@ -524,7 +603,17 @@ def run_auto_dream(
             "added_sections": memory_result.added_sections,
             "deduped_lines": memory_result.deduped_lines,
             "blank_lines_collapsed": memory_result.blank_lines_collapsed,
-        },
+        }
+    else:
+        mem_dict = {"skipped": True, "reason": "phase=structural"}
+
+    summary: dict[str, Any] = {
+        "ok": integrity_ok and governance_ok and not halted,
+        "user_id": user_id,
+        "strict_mode": strict_mode,
+        "halted": halted,
+        "phase": phase,
+        "self_memory": mem_dict,
         "integrity": integrity_json,
         "governance": {
             "ok": governance_ok,
@@ -535,6 +624,8 @@ def run_auto_dream(
         "contradiction_digest": digest,
         "artifact_drafts": artifact_drafts,
     }
+    if digest_phases is not None:
+        summary["digest_phases"] = digest_phases
 
     if emit_event and apply and not halted:
         reviewable = digest.get("reviewable_count", 0)
@@ -547,7 +638,7 @@ def run_auto_dream(
             merge={
                 "action": "auto_dream",
                 "strict_mode": str(strict_mode).lower(),
-                "self_memory_changed": str(memory_result.changed).lower(),
+                "self_memory_changed": str(memory_result.changed if memory_result else False).lower(),
                 "reviewable_candidates": str(reviewable),
                 "contradictions": str(contradictions),
                 "artifact_drafts": str(draft_count),
@@ -584,7 +675,7 @@ def run_auto_dream(
         )
         civ_echoes, civ_index_missing, civ_suppressed = _apply_civmem_budget(
             digest=dc,
-            self_memory_text=memory_result.before,
+            self_memory_text=memory_result.before if memory_result else "",
             integrity_ok=integrity_ok,
             governance_ok=governance_ok,
             dream_budget=dream_budget,
@@ -602,6 +693,50 @@ def run_auto_dream(
             summary["civmem_suppressed_reason"] = civ_suppressed
         else:
             summary.pop("civmem_suppressed_reason", None)
+
+        capture_gap_result: dict[str, Any] | None = None
+        try:
+            from detect_capture_gap import detect_gap, format_gap_one_liner
+            capture_gap_result = detect_gap(user_id)
+        except Exception:
+            try:
+                from scripts.detect_capture_gap import detect_gap, format_gap_one_liner
+                capture_gap_result = detect_gap(user_id)
+            except Exception:
+                pass
+        if capture_gap_result is not None:
+            summary["capture_gap"] = capture_gap_result
+            gap_level = capture_gap_result.get("level", "ok")
+            if gap_level in ("warning", "alert"):
+                followups.append(
+                    f"Capture gap: {capture_gap_result.get('message', 'check Evidence')} — "
+                    f"run batch_ingest_observations.py or stage new Evidence"
+                )
+
+        shift_summary: dict[str, Any] | None = None
+        try:
+            from detect_capability_shift import detect_shifts, format_alert_one_liner
+            shift_summary = detect_shifts(user_id, offline=False, category="model")
+        except Exception:
+            try:
+                from scripts.detect_capability_shift import detect_shifts, format_alert_one_liner
+                shift_summary = detect_shifts(user_id, offline=False, category="model")
+            except Exception:
+                pass
+        if shift_summary is not None:
+            summary["capability_shift"] = {
+                "category": shift_summary.get("category", "model"),
+                "sources_checked": shift_summary.get("sources_checked", 0),
+                "sources_total": shift_summary.get("sources_total", 0),
+                "alert_count": shift_summary.get("alert_count", 0),
+                "review_count": sum(1 for a in shift_summary.get("alerts", []) if a.get("action") == "review"),
+                "monitor_count": sum(1 for a in shift_summary.get("alerts", []) if a.get("action") == "monitor"),
+                "fetch_errors": shift_summary.get("fetch_errors", []),
+            }
+            if shift_summary.get("alert_count", 0) > 0:
+                review_ids = [a["assumption_id"] for a in shift_summary.get("alerts", []) if a.get("action") == "review"]
+                if review_ids:
+                    followups.append(f"Capability shift: {len(review_ids)} REVIEW alert(s) ({', '.join(review_ids[:3])}) — run detect_capability_shift.py")
 
         cm = resolve_cursor_model(explicit=cursor_model)
         handoff_path = _write_last_dream_handoff(
@@ -623,9 +758,10 @@ def run_auto_dream(
                 mode="strict" if strict_mode else "default",
                 cursor_model=cm,
                 kv={
+                    "phase": phase,
                     "integrity": "pass" if integrity_ok else "fail",
                     "governance": "pass" if governance_ok else "fail",
-                    "mem_changed": str(memory_result.changed).lower(),
+                    "mem_changed": str(memory_result.changed if memory_result else False).lower(),
                     "reviewable": str(digest.get("reviewable_count", 0)),
                     "contradictions": str(counts.get("contradiction", 0)),
                     "civmem_echo_count": str(len(civ_echoes)),
@@ -642,10 +778,12 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
     memory = summary.get("self_memory") or {}
     digest = summary.get("contradiction_digest") or {}
     counts = digest.get("relation_counts") or {}
+    phase_label = summary.get("phase", "both")
     if summary.get("strict_mode"):
         lines = [
             "strict autoDream" if summary.get("ok") else "strict autoDream FAILED",
             f"user: {summary.get('user_id', DEFAULT_USER)}",
+            f"phase: {phase_label}",
             f"self-memory changed: {memory.get('changed', False)}",
             f"integrity ok: {bool((summary.get('integrity') or {}).get('ok'))}",
             f"governance ok: {bool((summary.get('governance') or {}).get('ok'))}",
@@ -672,6 +810,7 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
     lines = [
         "autoDream status",
         f"user: {summary.get('user_id', DEFAULT_USER)}",
+        f"phase: {phase_label}",
         f"self-memory changed: {memory.get('changed', False)}",
         f"sections added: {', '.join(memory.get('added_sections') or []) or 'none'}",
         f"deduped lines: {memory.get('deduped_lines', 0)}",
@@ -686,6 +825,12 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
             f"contradiction={counts.get('contradiction', 0)}"
         ),
     ]
+    dp = summary.get("digest_phases")
+    if dp:
+        r = dp["recent"]
+        s = dp["structural"]
+        lines.append(f"  recent entries: {r['entry_count']} {r['relation_counts']}")
+        lines.append(f"  structural entries: {s['entry_count']} {s['relation_counts']}")
     artifact_drafts = summary.get("artifact_drafts") or []
     promotable = sum(1 for row in artifact_drafts if row.get("promotable"))
     if artifact_drafts:
@@ -694,6 +839,29 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
     if cr.get("count", 0) > 0:
         lines.append(
             f"coffee rollup 24h: count={cr.get('count')} modes={cr.get('by_mode')}"
+        )
+    cg = summary.get("capture_gap") or {}
+    if cg:
+        cg_level = cg.get("level", "ok")
+        cg_days = cg.get("days_since_evidence")
+        cg_id = cg.get("last_evidence_id", "?")
+        if cg_level != "ok" and cg_days is not None:
+            lines.append(f"capture gap: {cg_level.upper()} — {cg_days}d since {cg_id}")
+        elif cg_days is not None:
+            lines.append(f"capture gap: OK ({cg_days}d since {cg_id})")
+    cs = summary.get("capability_shift") or {}
+    if cs:
+        review_n = cs.get("review_count", 0)
+        monitor_n = cs.get("monitor_count", 0)
+        parts = []
+        if review_n:
+            parts.append(f"{review_n} REVIEW")
+        if monitor_n:
+            parts.append(f"{monitor_n} monitor")
+        status = ", ".join(parts) if parts else "no alerts"
+        lines.append(
+            f"capability shift [{cs.get('category', 'model')}]: "
+            f"{cs.get('sources_checked', 0)}/{cs.get('sources_total', 0)} sources — {status}"
         )
     return "\n".join(lines)
 
@@ -712,6 +880,12 @@ def main() -> int:
         default=None,
         help="Cursor UI model label for agent_surface + cadence log (else CURSOR_MODEL env, else unknown)",
     )
+    parser.add_argument(
+        "--phase",
+        choices=VALID_PHASES,
+        default="both",
+        help="Run a specific phase: recent (memory+digest), structural (integrity+governance), or both (default)",
+    )
     args = parser.parse_args()
 
     summary = run_auto_dream(
@@ -722,6 +896,7 @@ def main() -> int:
         write_artifacts=not args.no_artifacts and not args.dry_run,
         strict_mode=args.strict,
         cursor_model=(args.cursor_model.strip() if args.cursor_model else None),
+        phase=args.phase,
     )
     if args.json:
         print(json.dumps(summary, indent=2))

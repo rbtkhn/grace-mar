@@ -34,18 +34,18 @@ description: "Grace-Mar micro-pause cadence beat. Primary trigger: thanks (optio
 
 1. **Read recent rhythm** (before logging this thanks): open **`docs/skill-work/work-cadence/work-cadence-events.md`** at repo root. Below the line `_(Append below this line.)_`, collect lines that match the audit format: `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`. Take the **last two** such lines **already in the file** (the two most recent events **before** this beat). If there is only one line, synthesize that one; if none, the companion-facing line is **Recent rhythm:** _(nothing logged yet)_ (agent-internal: empty log).
 2. **Synthesize** those lines into **one or two short sentences** in **plain prose** — **name concrete specifics** from the log (e.g. prior **coffee** mode, **bridge** commit refs, **dream** outcome in ordinary words, **thanks** **park** text if any). **Companion-facing UX:** use the **Recent rhythm** label (or prose only); **do not** include **dates, UTC, or clock times** in this prose (use sequence and plain language: “after bridge,” “then a thanks pause,” “earlier today”). **Do not** lead with a bare telemetry strip; **do not** use generic filler that ignores what those two lines actually say. **Do not** paste the raw log lines in full unless they are already very short.
-3. **Parse** optional **park** text: trim the leading **`thanks`** / **`thank you`** (case-insensitive) and punctuation; remainder = **park** (collapse internal newlines to spaces; empty is OK).
+3. **Parse** optional **park** text: trim the leading **`thanks`** / **`thank you`** (case-insensitive) and punctuation; remainder = **park** (collapse internal newlines to spaces; empty is OK). **Auto-park:** if the operator did not provide park text, the agent **must** infer a short 3–8 word dash-joined slug from the most recent substantive topic in this thread (e.g. `cadence-auto-park-design`, `template-sync-lockfile-impl`). Pass the inferred slug as `park=<slug>` — do **not** default to `park=none`. The script also has a git-based fallback (`auto:` prefix) but the agent should provide richer context when possible.
 4. **Reply** with a tiny **Pause beat** block (friendly to a **new companion-self user** — no internal ops jargon in labels):
    - **Recent rhythm:** the synthesis from step 2.
-   - **Leaving on the desk:** the park text, or **_(none)_** if empty.
+   - **Leaving on the desk:** the park text, or the agent-inferred slug.
    - **Next:** one line — e.g. “Pick up from the park line or run **`coffee`**.”
 5. **Log** (operator repo, default user **`grace-mar`** unless context names another id):
 
 ```bash
-python3 scripts/log_cadence_event.py --kind thanks -u grace-mar --ok --kv park=<one-line-or-placeholder>
+python3 scripts/log_cadence_event.py --kind thanks -u grace-mar --ok --kv park=<park-slug>
 ```
 
-Use **`park=—`** or **`park=none`** when there is no park text (some shells dislike empty values; use a visible placeholder).
+The `<park-slug>` is either the operator's park text or the agent-inferred slug from step 3. If neither the agent nor the operator provides park text, the script's auto-park fallback will generate a git-based slug with an `auto:` prefix. Use **`--no-auto-park`** to suppress the script fallback and keep `park=none` as-is.
 
 Pass **`--cursor-model "…"`** when the Cursor UI model name is known (parity with other cadence lines); else rely on **`CURSOR_MODEL`** env or **`unknown`**.
 

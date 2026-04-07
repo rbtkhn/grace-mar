@@ -279,6 +279,47 @@ def main() -> int:
 
     stale = _stale_candidates(pr)
 
+    cadence_line = ""
+    try:
+        from audit_cadence_rhythm import compute_rhythm_summary, format_discipline_one_liner
+        cadence_line = format_discipline_one_liner(compute_rhythm_summary(args.user, 14))
+    except Exception:
+        try:
+            from scripts.audit_cadence_rhythm import compute_rhythm_summary, format_discipline_one_liner
+            cadence_line = format_discipline_one_liner(compute_rhythm_summary(args.user, 14))
+        except Exception:
+            pass
+
+    gap_line = ""
+    try:
+        from detect_capture_gap import detect_gap, format_gap_one_liner
+        gap_result = detect_gap(args.user)
+        if gap_result.get("level", "ok") != "ok":
+            gap_line = format_gap_one_liner(gap_result)
+    except Exception:
+        try:
+            from scripts.detect_capture_gap import detect_gap, format_gap_one_liner
+            gap_result = detect_gap(args.user)
+            if gap_result.get("level", "ok") != "ok":
+                gap_line = format_gap_one_liner(gap_result)
+        except Exception:
+            pass
+
+    shift_line = ""
+    try:
+        from detect_capability_shift import detect_shifts, format_alert_one_liner
+        shift_result = detect_shifts(args.user, offline=True, category="model")
+        if shift_result.get("alert_count", 0) > 0:
+            shift_line = format_alert_one_liner(shift_result)
+    except Exception:
+        try:
+            from scripts.detect_capability_shift import detect_shifts, format_alert_one_liner
+            shift_result = detect_shifts(args.user, offline=True, category="model")
+            if shift_result.get("alert_count", 0) > 0:
+                shift_line = format_alert_one_liner(shift_result)
+        except Exception:
+            pass
+
     if args.compact:
         bits = []
         if args.fresh_judge:
@@ -297,6 +338,12 @@ def main() -> int:
             bits.append(f"Last EVIDENCE: {last_act}.")
         if best_move_line:
             bits.append(f"Best move: {best_move_line}.")
+        if cadence_line:
+            bits.append(cadence_line + ".")
+        if gap_line:
+            bits.append(gap_line + ".")
+        if shift_line:
+            bits.append(shift_line + ".")
         if tail:
             bits.append("Session tail: " + " / ".join(tail[-2:]))
         print(" ".join(bits))
@@ -330,6 +377,12 @@ def main() -> int:
         lines.append(f"- **STALE candidates (>{STALE_THRESHOLD_DAYS} days):**")
         for cid, age in stale:
             lines.append(f"  - **{cid}** — {age} days old (review or reject)")
+    if cadence_line:
+        lines.append(f"- **{cadence_line}**")
+    if gap_line:
+        lines.append(f"- **{gap_line}**")
+    if shift_line:
+        lines.append(f"- **{shift_line}**")
     lines.extend(
         [
             "",

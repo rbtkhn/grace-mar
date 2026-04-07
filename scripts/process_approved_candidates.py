@@ -562,6 +562,7 @@ def get_approved_in_candidates() -> list[dict]:
             "lineage_class": (_yaml_get(block, "lineage_class") or "").strip(),
             "session_id": (_yaml_get(block, "session_id") or "").strip(),
             "operator_source": (_yaml_get(block, "operator_source") or "").strip(),
+            "warrant": (_yaml_get(block, "warrant") or "").strip(),
         })
     return approved
 
@@ -643,11 +644,14 @@ def _append_gated_evidence_log_entry(
     channel_key: str,
     summary: str,
     source_snippet: str,
+    warrant: str = "",
 ) -> None:
     """Append one APPROVED entry to self-archive.md § VIII (gated merge path only)."""
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     label = _channel_label(channel_key)
     lines = [f"**[{ts}]** `APPROVED` ({label})\n", f"> {candidate_id} → {act_id}\n", f"> {summary[:300]}\n"]
+    if warrant:
+        lines.append(f"> warrant: {warrant[:200]}\n")
     if source_snippet:
         for line in source_snippet.splitlines():
             lines.append(f"> {line[:400]}\n")
@@ -738,6 +742,10 @@ def merge_candidate_in_memory(
     iid = (c.get("intake_evidence_id") or "").strip()
     if iid and re.match(r"^READ-[\w-]+$", iid, re.I):
         intake_line = f"    intake_evidence_id: {iid}\n"
+    warrant_line = ""
+    w = (c.get("warrant") or "").strip()
+    if w:
+        warrant_line = f"    warrant: \"{w[:200].replace(chr(34), chr(39))}\"\n"
     entry_id: str
     if "knowledge" in cat or "IX-A" in c["profile_target"]:
         entry_id = _next_id(self_content, "LEARN")
@@ -746,7 +754,7 @@ def merge_candidate_in_memory(
     topic: "{safe_entry}"
     source: pipeline merge
     evidence_id: {act_id}
-{intake_line}    provenance: human_approved
+{intake_line}{warrant_line}    provenance: human_approved
 
 '''
         self_content = insert_ix_a_entry(self_content, new_entry)
@@ -759,7 +767,7 @@ def merge_candidate_in_memory(
     response_signal: approved
     intensity: 3
     evidence_id: {act_id}
-{intake_line}    provenance: human_approved
+{intake_line}{warrant_line}    provenance: human_approved
 
 '''
         self_content = insert_ix_b_entry(self_content, new_entry)
@@ -770,7 +778,7 @@ def merge_candidate_in_memory(
     type: observed
     observation: "{safe_entry}"
     evidence_id: {act_id}
-{intake_line}    provenance: human_approved
+{intake_line}{warrant_line}    provenance: human_approved
 
 '''
         self_content = insert_ix_c_entry(self_content, new_entry)
@@ -1285,6 +1293,7 @@ def main() -> None:
                 c.get("channel_key") or "telegram",
                 c["summary"],
                 _extract_source_exchange_snippet(c["block"]),
+                warrant=c.get("warrant", ""),
             )
         print("self-archive.md § VIII (gated approved log) updated.")
         try:

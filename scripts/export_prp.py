@@ -322,13 +322,43 @@ def _build_write(write_profile: dict[str, str]) -> str:
     return "\n".join(parts)
 
 
-def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> str:
+def _query_aware_recent(evidence_path: Path, query: str) -> dict[str, list[str]]:
+    """Build RECENT section using query-aware retrieval instead of recency."""
+    try:
+        import sys as _sys
+        _scripts = str(Path(__file__).resolve().parent)
+        if _scripts not in _sys.path:
+            _sys.path.insert(0, _scripts)
+        from search_evidence import parse_evidence, search
+    except ImportError:
+        return {"WRITE": [], "ACT": [], "CREATE": []}
+
+    if not evidence_path.exists():
+        return {"WRITE": [], "ACT": [], "CREATE": []}
+
+    entries = parse_evidence(evidence_path)
+    results = search(query, entries, top=8)
+
+    out: dict[str, list[str]] = {"WRITE": [], "ACT": [], "CREATE": []}
+    for r in results:
+        etype = r.entry.entry_type
+        if etype not in out:
+            continue
+        if len(out[etype]) >= 5:
+            continue
+        title = r.entry.title[:80]
+        out[etype].append(title)
+    return out
+
+
+def export_prp(user_id: str = "grace-mar", name_override: str | None = None, query: str | None = None) -> str:
     """
     Build the Portable Record Prompt (PRP) from self.md and self-archive.md (EVIDENCE).
 
     Args:
         user_id: User profile id (e.g. grace-mar).
         name_override: If set, use this name instead of the Record's name (e.g. "Abby" for prototype).
+        query: If set, RECENT section uses query-aware retrieval instead of recency.
 
     Returns a single string suitable for pasting into any LLM.
     """
@@ -354,7 +384,13 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None) -> 
     ix_b = _extract_ix_b(self_content)
     ix_c = _extract_ix_c_observations(self_content)
     write_profile = _extract_write_profile(skill_write_content)
-    recent = _extract_recent_evidence(evidence_content)
+    if query:
+        evidence_path = profile_dir / "self-archive.md"
+        if not evidence_path.exists():
+            evidence_path = profile_dir / "self-evidence.md"
+        recent = _query_aware_recent(evidence_path, query)
+    else:
+        recent = _extract_recent_evidence(evidence_content)
 
     name = name_override if name_override else identity.get("name", "Grace-Mar")
     age = identity.get("age", "6")
@@ -442,8 +478,10 @@ def main() -> None:
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default=None, help="Output file (default: stdout)")
     parser.add_argument("--name", "-n", default=None, help="Override display name (e.g. Abby for prototype)")
+    parser.add_argument("--query", "-q", default=None,
+                        help="Query-aware RECENT: retrieve entries relevant to this query instead of most recent")
     args = parser.parse_args()
-    content = export_prp(user_id=args.user, name_override=args.name)
+    content = export_prp(user_id=args.user, name_override=args.name, query=args.query)
     if args.output:
         out_path = Path(args.output)
         out_path.write_text(content, encoding="utf-8")

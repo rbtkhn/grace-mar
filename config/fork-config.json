@@ -3,5 +3,8 @@
   "archive_max_entries": 2500,
   "archive_max_bytes": 1000000,
   "archive_keep_recent": 2000,
-  "archive_rotation_trigger_entries": 2200
+  "archive_rotation_trigger_entries": 2200,
+  "evidence_retrieval_enabled": true,
+  "evidence_retrieval_top_k": 3,
+  "evidence_retrieval_max_chars": 1500
 }

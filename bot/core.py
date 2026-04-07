@@ -100,6 +100,11 @@ except ImportError:
     from scripts.gate_staging_sidecar import write_gate_staging_sidecar
 
 try:
+    from stage_gate_candidate import convergence_check
+except ImportError:
+    from scripts.stage_gate_candidate import convergence_check
+
+try:
     from . import chat_store
 except ImportError:
     import chat_store  # type: ignore[no-redef]
@@ -196,6 +201,35 @@ WE_DID_PATTERN = re.compile(
     r"^we\s+(drew|wrote|made|learned|read|painted|built|created|did|watched|played)\b",
     re.IGNORECASE,
 )
+
+_SIGNAL_WORDS_RE = re.compile(
+    r"\b(we|my|favorite|love|hate|think|feel|believe|remember|learned)\b",
+    re.IGNORECASE,
+)
+
+
+def _should_run_analyst(user_message: str, channel_key: str) -> tuple[bool, str]:
+    """Lightweight pre-filter: decide whether the analyst is worth running.
+
+    Returns (should_run, skip_reason).  skip_reason is empty when should_run is True.
+    Inspired by LoreSpec session classification (OPERATIONAL = skip extraction).
+    """
+    text = user_message.strip()
+
+    if text.startswith("/"):
+        return False, "command"
+
+    if channel_key in homework_sessions:
+        return False, "homework"
+
+    if len(text) < 15 and not _SIGNAL_WORDS_RE.search(text):
+        return False, "short"
+
+    if _SIGNAL_WORDS_RE.search(text):
+        return True, ""
+
+    return True, ""
+
 
 # Bare "checkpoint" in conversation — companion requests checkpoint save; stage to pipeline and archive.
 CHECKPOINT_REQUEST_PATTERN = re.compile(r"^checkpoint\s*[!?.,]*$", re.IGNORECASE)
@@ -391,6 +425,12 @@ _MEMORY_MAX_LINES = {"short": 45, "medium": 28, "long": 18}
 # Invalidated when self-memory path mtime/size changes (see scripts/record_index.py).
 _MEMORY_INDEX_CACHE: tuple[float, int, MemoryHorizonIndex] | None = None
 
+# Evidence retrieval cache — invalidated when self-archive.md mtime/size changes.
+_EVIDENCE_ENTRIES_CACHE: tuple[float, int, list] | None = None
+EVIDENCE_RETRIEVAL_ENABLED = os.getenv("EVIDENCE_RETRIEVAL_ENABLED", "1").strip() == "1"
+EVIDENCE_RETRIEVAL_TOP_K = 3
+EVIDENCE_RETRIEVAL_MAX_CHARS = 1500
+
 
 def _filter_memory_line(line: str) -> bool:
     s = line.strip()
@@ -494,6 +534,69 @@ def _load_chat_summary(channel_key: str) -> str:
         "Use for continuity only. Not Record truth. "
         "If it conflicts with SELF, follow SELF.\n\n"
     ) + summary
+
+
+def _retrieve_evidence(user_message: str) -> str:
+    """Query-aware Evidence retrieval for the Voice path. Returns a compact
+    block of relevant Evidence entries to inject into the system prompt,
+    or empty string if disabled / no hits."""
+    if not EVIDENCE_RETRIEVAL_ENABLED:
+        return ""
+    global _EVIDENCE_ENTRIES_CACHE
+    try:
+        from search_evidence import parse_evidence, search, EvidenceEntry
+    except ImportError:
+        try:
+            from scripts.search_evidence import parse_evidence, search, EvidenceEntry
+        except ImportError:
+            return ""
+
+    if not EVIDENCE_PATH.exists():
+        _EVIDENCE_ENTRIES_CACHE = None
+        return ""
+    st = EVIDENCE_PATH.stat()
+    if (
+        _EVIDENCE_ENTRIES_CACHE is not None
+        and _EVIDENCE_ENTRIES_CACHE[0] == st.st_mtime
+        and _EVIDENCE_ENTRIES_CACHE[1] == st.st_size
+    ):
+        entries = _EVIDENCE_ENTRIES_CACHE[2]
+    else:
+        try:
+            entries = parse_evidence(EVIDENCE_PATH)
+            _EVIDENCE_ENTRIES_CACHE = (st.st_mtime, st.st_size, entries)
+        except Exception:
+            _EVIDENCE_ENTRIES_CACHE = None
+            return ""
+
+    try:
+        results = search(user_message, entries, top=EVIDENCE_RETRIEVAL_TOP_K)
+    except Exception:
+        return ""
+    if not results or results[0].score < 0.05:
+        return ""
+
+    lines: list[str] = []
+    total_chars = 0
+    for r in results:
+        if r.score < 0.05:
+            break
+        snippet = r.entry.text[:400].replace("\n", " ").strip()
+        if len(r.entry.text) > 400:
+            snippet += "…"
+        line = f"- **{r.entry.entry_id}** ({r.entry.date}): {snippet}"
+        if total_chars + len(line) > EVIDENCE_RETRIEVAL_MAX_CHARS:
+            break
+        lines.append(line)
+        total_chars += len(line)
+
+    if not lines:
+        return ""
+    return (
+        "\n\n## RELEVANT EVIDENCE (retrieved — not exhaustive)\n\n"
+        "Evidence entries from the Record that may be relevant to this message. "
+        "Use only as supporting context. SELF remains authoritative.\n\n"
+    ) + "\n".join(lines)
 
 
 def _load_recency_context() -> str:
@@ -1094,6 +1197,24 @@ def _stage_candidate(
     if conflicts:
         logger.info("CONFLICT: %d contradiction(s) flagged for %s", len(conflicts), candidate_id)
     provenance_yaml = _format_staging_meta_yaml(staging_meta)
+
+    content = (
+        RECURSION_GATE_PATH.read_text(encoding="utf-8")
+        if RECURSION_GATE_PATH.exists()
+        else "## Candidates\n\n## Processed\n\n"
+    )
+    parsed = _parse_top_level_yaml(analysis_yaml)
+    conv = convergence_check(
+        content,
+        parsed.get("summary", ""),
+        parsed.get("suggested_entry", ""),
+    )
+    conv_yaml = ""
+    if conv.get("sighting"):
+        conv_yaml += f"convergence: {conv['sighting']}\n"
+    if conv.get("prior_ids"):
+        conv_yaml += f"convergence_prior: {', '.join(conv['prior_ids'])}\n"
+
     block = f"""### {candidate_id}
 
 ```yaml
@@ -1103,17 +1224,10 @@ channel_key: {channel_key}
 {provenance_yaml}source_exchange:
   user: "{user_message}"
   grace_mar: "{assistant_message}"
-{analysis_yaml}{conflicts_block}
+{analysis_yaml}{conv_yaml}{conflicts_block}
 ```
 
 """
-    # Insert before ## Processed so merge (process_approved_candidates) and /merge see this block.
-    # Appending to EOF placed candidates after Processed — they never merged.
-    content = (
-        RECURSION_GATE_PATH.read_text(encoding="utf-8")
-        if RECURSION_GATE_PATH.exists()
-        else "## Candidates\n\n## Processed\n\n"
-    )
     marker = "## Processed"
     if marker in content:
         content = content.replace(marker, block + marker, 1)
@@ -2031,7 +2145,11 @@ def get_response(channel_key: str, user_message: str) -> str:
         except Exception as e:
             logger.debug("chat_store write (lookup): %s", e)
 
-        _run_analyst_background(user_message, full_message, channel_key)
+        run, skip = _should_run_analyst(user_message, channel_key)
+        if run:
+            _run_analyst_background(user_message, full_message, channel_key)
+        else:
+            logger.debug("Analyst pre-filter: skipped (%s)", skip)
         return full_message
 
     pending_lookups.pop(channel_key, None)
@@ -2044,7 +2162,8 @@ def get_response(channel_key: str, user_message: str) -> str:
         logger.warning("Rate limit exceeded (main, %s)", channel_key)
         return "i'm a little tired right now. can we talk more in a bit?"
 
-    system_content = SYSTEM_PROMPT + _load_memory_appendix() + _load_chat_summary(channel_key)
+    evidence_block = _retrieve_evidence(user_message)
+    system_content = SYSTEM_PROMPT + evidence_block + _load_memory_appendix() + _load_chat_summary(channel_key)
     messages = [{"role": "system", "content": system_content}] + history
 
     response = _get_client().chat.completions.create(
@@ -2067,7 +2186,11 @@ def get_response(channel_key: str, user_message: str) -> str:
     logger.info("GRACE-MAR: %s", assistant_message)
     archive("USER", channel_key, user_message)
     archive("GRACE-MAR", channel_key, assistant_message)
-    _run_analyst_background(user_message, assistant_message, channel_key)
+    run, skip = _should_run_analyst(user_message, channel_key)
+    if run:
+        _run_analyst_background(user_message, assistant_message, channel_key)
+    else:
+        logger.debug("Analyst pre-filter: skipped (%s)", skip)
 
     try:
         chat_store.store_message(channel_key, "user", user_message)

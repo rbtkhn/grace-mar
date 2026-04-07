@@ -33,6 +33,7 @@ For each candidate, show **only the review-essential fields**:
 - **source_exchange** or **source** (grounding evidence)
 - **suggested_entry** (what would be merged)
 - **age** (days since timestamp — flag if >14 days)
+- **staleness** (wall-clock + active-day age, superseded hints, warrant drift — run `score_gate_staleness.py` first for enriched data)
 - **risk_tier** from the review script (quick_merge_eligible / review_batch / manual_escalate)
 - **duplicate_hints** if any
 
@@ -78,8 +79,22 @@ This is a relabeling, not new logic. Use whichever vocabulary fits the operator'
 
 ---
 
+## Pre-review: capability shift check
+
+Before a gate pass, optionally run the capability shift detector to check whether pending candidates reference assumptions that a recent model release may have compressed:
+
+```bash
+python3 scripts/detect_capability_shift.py -u grace-mar --offline
+```
+
+If any alert shows `REVIEW`, cross-reference the affected files against pending candidates — a candidate that bakes in an assumption a new model has obsoleted may need rewording or deferral.
+
+---
+
 ## Related files
 
 - `docs/operator-skills.md`
 - `users/grace-mar/recursion-gate.md`
 - `scripts/recursion_gate_review.py`
+- `scripts/score_gate_staleness.py`
+- `scripts/detect_capability_shift.py`

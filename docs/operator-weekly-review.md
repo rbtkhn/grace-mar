@@ -10,6 +10,8 @@
 
 Block time weekly — e.g. Sunday evening or Monday morning. All steps optional but recommended.
 
+**Automated first step:** Run `python scripts/weekly_record_digest.py -u [id]` (or `--days 14` for a wider window) for a machine-generated growth summary before starting the manual checklist. Add `--json` for structured output. The digest covers pipeline activity, Evidence growth, IX counts, PRP freshness, and capture health.
+
 | Step | Action | Time |
 |------|--------|------|
 | 1 | **Experience check** — *Did the Voice feel like the companion's Record when it knew, and clearly offer help when it didn't? Did abstention/lookup feel like honesty and support, not failure or deflection?* Note any drift; adjust prompt or add probes if the experience felt wrong. See [KNOWLEDGE-BOUNDARY-FRAMEWORK](knowledge-boundary-framework.md) §1. | ~2 min |

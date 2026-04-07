@@ -95,9 +95,21 @@ For cadence tables and explicit phrase definitions (`coffee light`, `coffee mini
 
 The operator may say **`coffee`** **more than once per calendar day** for reorientation. This is normal. Each new `coffee` runs Step 1 again and starts a new **A–E** cycle. If **`coffee`** arrives mid-hub, treat it as a **reorientation restart**: run Step 1 again, then offer a fresh **A–E** menu.
 
-### Step 2 — Multiple choice (required; always A–E)
+### Step 2 — Multiple choice (required; always A–E, load-annotated)
 
 Immediately **after** Step 1 content, output the fixed **coffee** menu: **five** lettered options **A through E** (present **A, B, C, D, E**). **There is no separate “close” letter** — exit paths are **C** / **D** (normal workflow unless **`stay in coffee`**), or a **steward fork** (**Later**) that returns to this full menu.
+
+**Load annotation:** `operator_coffee.py` prints a session load one-liner at the end of Step 1 (e.g. `Session load: MODERATE — 3 coffees today, 5 pending candidates`). Use `scripts/assess_session_load.py` output (or the one-liner already printed) to **annotate each A–E option** with its cost tag — `(light)`, `(moderate)`, or `(heavy)` — and mark the recommended option. The letters stay fixed; the tags are advisory. Example:
+
+```
+A. Today — (light) recommended: quick reorientation matches current pace
+B. Build — (moderate) dev + hygiene; 2 non-main branches
+C. Compass — (heavy) sustained strategy; consider after break
+D. Book — (moderate) Jiang/PH; 1 pending step
+E. Steward — (light) 3 pending candidates; bounded gate pass
+```
+
+If the session load script is unavailable or errored, present the menu without annotations (unchanged behavior).
 
 **Micro-hints (one line under the A–E list):** `Micro-hints: B+skills/meta | E=gate/template/boundary | after actionable E: Implement now / Later`
 

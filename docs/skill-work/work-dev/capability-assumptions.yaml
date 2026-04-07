@@ -70,6 +70,11 @@ sources:
     url: "https://github.com/langchain-ai/langchain/releases"
     parser: html
     enabled: true
+  - name: Scion
+    category: ecosystem
+    url: "https://github.com/GoogleCloudPlatform/scion/releases"
+    parser: html
+    enabled: true
 
 assumptions:
   - id: ASSUME-001
@@ -184,4 +189,4 @@ assumptions:
     affects: ["docs/architecture.md", "bridges/"]
     gap_ids: []
     last_validated: 2026-04-07
-    notes: "GroupChat-as-auditable-tool is deferred because AutoGen/CrewAI pull heavy transitive dependencies. If a framework ships stdlib-only multi-agent, or a model provider builds agent teams into the API itself, revisit the deferral."
+    notes: "GroupChat-as-auditable-tool is deferred because AutoGen/CrewAI pull heavy transitive dependencies. If a framework ships stdlib-only multi-agent, or a model provider builds agent teams into the API itself, revisit the deferral. Scion (GoogleCloudPlatform/scion) takes a container-isolation approach (Go binary, git worktrees, no Python deps) — different axis than framework deps but relevant if container-based agent isolation becomes standard."
