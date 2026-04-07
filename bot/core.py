@@ -99,6 +99,11 @@ try:
 except ImportError:
     from scripts.gate_staging_sidecar import write_gate_staging_sidecar
 
+try:
+    from . import chat_store
+except ImportError:
+    import chat_store  # type: ignore[no-redef]
+
 logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -473,6 +478,22 @@ The following is ephemeral session context in time horizons (short → long). Lo
 """ + resistance_hint + """
 
 """ + block
+
+
+def _load_chat_summary(channel_key: str) -> str:
+    """Load auto-generated conversation summary from chat store, if any."""
+    try:
+        summary = chat_store.get_summary(channel_key)
+    except Exception:
+        return ""
+    if not summary:
+        return ""
+    return (
+        "\n\n## CONVERSATION SUMMARY (auto-generated)\n\n"
+        "Compressed summary of earlier conversation turns. "
+        "Use for continuity only. Not Record truth. "
+        "If it conflicts with SELF, follow SELF.\n\n"
+    ) + summary
 
 
 def _load_recency_context() -> str:
@@ -1894,6 +1915,11 @@ def get_response(channel_key: str, user_message: str) -> str:
     channel_key = _normalize_channel_key(channel_key)
     history = conversations[channel_key]
 
+    try:
+        chat_store.maybe_compact(channel_key)
+    except Exception as e:
+        logger.debug("chat_store compact check: %s", e)
+
     # "We did X" — activity report from operator; run pipeline, skip chat.
     if WE_DID_PATTERN.search(user_message.strip()):
         archive("ACTIVITY REPORT", channel_key, user_message)
@@ -1999,6 +2025,12 @@ def get_response(channel_key: str, user_message: str) -> str:
         archive("USER", channel_key, user_message)
         archive("GRACE-MAR (lookup)", channel_key, full_message)
 
+        try:
+            chat_store.store_message(channel_key, "user", user_message)
+            chat_store.store_message(channel_key, "assistant", full_message)
+        except Exception as e:
+            logger.debug("chat_store write (lookup): %s", e)
+
         _run_analyst_background(user_message, full_message, channel_key)
         return full_message
 
@@ -2012,7 +2044,7 @@ def get_response(channel_key: str, user_message: str) -> str:
         logger.warning("Rate limit exceeded (main, %s)", channel_key)
         return "i'm a little tired right now. can we talk more in a bit?"
 
-    system_content = SYSTEM_PROMPT + _load_memory_appendix()
+    system_content = SYSTEM_PROMPT + _load_memory_appendix() + _load_chat_summary(channel_key)
     messages = [{"role": "system", "content": system_content}] + history
 
     response = _get_client().chat.completions.create(
@@ -2036,6 +2068,12 @@ def get_response(channel_key: str, user_message: str) -> str:
     archive("USER", channel_key, user_message)
     archive("GRACE-MAR", channel_key, assistant_message)
     _run_analyst_background(user_message, assistant_message, channel_key)
+
+    try:
+        chat_store.store_message(channel_key, "user", user_message)
+        chat_store.store_message(channel_key, "assistant", assistant_message)
+    except Exception as e:
+        logger.debug("chat_store write: %s", e)
 
     return assistant_message
 
@@ -2160,6 +2198,10 @@ def reset_conversation(channel_key: str) -> None:
     pending_lookups.pop(channel_key, None)
     pending_lookup_save.pop(channel_key, None)
     end_homework_session(channel_key)
+    try:
+        chat_store.clear_channel(channel_key)
+    except Exception as e:
+        logger.debug("chat_store clear: %s", e)
 
 
 def get_greeting() -> str:

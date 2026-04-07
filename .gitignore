@@ -48,6 +48,11 @@ users/*/work-politics/*.db
 data/wap_jobs.json
 data/wap_jobs.json.tmp
 
+# Chat store (bot conversation persistence — local, do not commit)
+data/chat_store.db
+data/chat_store.db-journal
+data/chat_store.db-wal
+
 # Python
 __pycache__/
 *.pyc

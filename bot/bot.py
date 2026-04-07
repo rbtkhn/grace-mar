@@ -1308,6 +1308,140 @@ async def handle_voice(
         await update.message.reply_text("um... i got confused. can you say that again?")
 
 
+# ---------------------------------------------------------------------------
+# Deterministic commands: /recent, /search, /recall
+# ---------------------------------------------------------------------------
+
+def _search_record(query: str) -> list[dict]:
+    """Search self.md (IX-A/B/C) and self-archive.md for a query string. Returns structured matches."""
+    results: list[dict] = []
+    query_lower = query.lower()
+
+    self_path = _profile_path("self.md")
+    if self_path.exists():
+        text = self_path.read_text(encoding="utf-8")
+        current_section = ""
+        for line in text.splitlines():
+            stripped = line.strip()
+            if stripped.startswith("## IX-A"):
+                current_section = "IX-A Knowledge"
+            elif stripped.startswith("## IX-B"):
+                current_section = "IX-B Curiosity"
+            elif stripped.startswith("## IX-C"):
+                current_section = "IX-C Personality"
+            elif stripped.startswith("## ") and current_section:
+                current_section = ""
+            if current_section and query_lower in line.lower():
+                results.append({"section": current_section, "line": line.strip(), "source": "self.md"})
+
+    archive_path = _profile_path("self-archive.md")
+    if archive_path.exists():
+        text = archive_path.read_text(encoding="utf-8")
+        current_id = ""
+        for line in text.splitlines():
+            stripped = line.strip()
+            id_match = re.match(r"^###?\s*((?:ACT|READ|WRITE|CREATE|LEARN|OBSERVE)-\d+)", stripped)
+            if id_match:
+                current_id = id_match.group(1)
+            if query_lower in line.lower():
+                results.append({"section": current_id or "evidence", "line": line.strip(), "source": "self-archive.md"})
+
+    return results[:20]
+
+
+async def recent_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Show recent conversation turns from persistent store."""
+    try:
+        from . import chat_store
+    except ImportError:
+        import chat_store  # type: ignore[no-redef]
+
+    chat_id = update.effective_chat.id if update.effective_chat else 0
+    channel_key = _channel_key(chat_id)
+
+    limit = 10
+    if context.args:
+        try:
+            limit = min(int(context.args[0]), 50)
+        except (ValueError, IndexError):
+            pass
+
+    messages = chat_store.load_recent(channel_key, limit)
+    if not messages:
+        await update.message.reply_text("no conversation history yet!")
+        return
+
+    lines = []
+    for msg in messages:
+        role_label = "you" if msg["role"] == "user" else "grace-mar"
+        ts = msg.get("created_at", "")[:16].replace("T", " ")
+        content_preview = msg["content"][:120]
+        if len(msg["content"]) > 120:
+            content_preview += "..."
+        lines.append(f"[{ts}] {role_label}: {content_preview}")
+
+    header = f"last {len(messages)} message{'s' if len(messages) != 1 else ''}:\n\n"
+    await update.message.reply_text(header + "\n".join(lines))
+
+
+async def search_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Full-text search of conversation history."""
+    try:
+        from . import chat_store
+    except ImportError:
+        import chat_store  # type: ignore[no-redef]
+
+    if not context.args:
+        await update.message.reply_text("usage: /search <query>")
+        return
+
+    query = " ".join(context.args)
+    chat_id = update.effective_chat.id if update.effective_chat else 0
+    channel_key = _channel_key(chat_id)
+    results = chat_store.search_messages(channel_key, query, limit=10)
+
+    if not results:
+        await update.message.reply_text(f"no matches for \"{query}\" in conversation history.")
+        return
+
+    lines = []
+    for r in results:
+        if r["source"] == "summary":
+            lines.append(f"[summary] ...{r['content'][:150]}...")
+        else:
+            role_label = "you" if r["role"] == "user" else "grace-mar"
+            ts = r.get("created_at", "")[:16].replace("T", " ")
+            content_preview = r["content"][:120]
+            if len(r["content"]) > 120:
+                content_preview += "..."
+            lines.append(f"[{ts}] {role_label}: {content_preview}")
+
+    header = f"{len(results)} match{'es' if len(results) != 1 else ''} for \"{query}\":\n\n"
+    await update.message.reply_text(header + "\n".join(lines))
+
+
+async def recall_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Search the governed Record (self.md IX-A/B/C + self-archive.md) without LLM."""
+    if not context.args:
+        await update.message.reply_text("usage: /recall <query>")
+        return
+
+    query = " ".join(context.args)
+    results = _search_record(query)
+
+    if not results:
+        await update.message.reply_text(f"nothing in the record matches \"{query}\".")
+        return
+
+    lines = []
+    for r in results:
+        source_tag = r["section"] or r["source"]
+        lines.append(f"[{source_tag}] {r['line'][:150]}")
+
+    header = f"{len(results)} record match{'es' if len(results) != 1 else ''} for \"{query}\":\n\n"
+    await update.message.reply_text(header + "\n".join(lines))
+
+
 def create_application(webhook_mode: bool = False) -> Application:
     """Build and return the configured Telegram Application.
     When webhook_mode=True, uses updater=None for custom webhook (caller injects updates)."""
@@ -1369,6 +1503,9 @@ def create_application(webhook_mode: bool = False) -> Application:
     app.add_handler(CommandHandler("merge", merge_command))
     app.add_handler(CommandHandler("reject", reject_with_reason))
     app.add_handler(CommandHandler("rotate", rotate_context_command))
+    app.add_handler(CommandHandler("recent", recent_command))
+    app.add_handler(CommandHandler("search", search_command))
+    app.add_handler(CommandHandler("recall", recall_command))
     app.add_handler(CallbackQueryHandler(callback_homework_answer, pattern=r"^hw:[ABCD]$"))
     app.add_handler(CallbackQueryHandler(callback_approve_reject))  # Legacy: old review messages with buttons
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
