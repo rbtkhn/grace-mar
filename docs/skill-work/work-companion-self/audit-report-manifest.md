@@ -7,22 +7,11 @@ Paths: companion-self template-manifest.json
 ### Differ (both exist, content differs — review)
   - docs/concept.md
   - docs/layer-map.json
-  - docs/seed-phase-artifacts.md
-  - docs/seed-phase-readiness.md
-  - docs/seed-phase-stages.md
-  - docs/seed-phase-validation.md
   - docs/skill-work/work-cadence/README.md
   - docs/skill-work/work-cadence/harvest-packet-contract.md
   - docs/skill-work/work-cadence/work-cadence-events.md
-  - scripts/check-seed-consistency.py
-  - scripts/generate-seed-dossier.py
   - scripts/log_cadence_event.py
-  - scripts/requirements-seed-phase.txt
-  - scripts/validate-change-review.py
-  - scripts/validate-seed-phase.py
-  - users/_template/seed-phase/seed-phase-manifest.json
   - users/_template/work-dev.md
-  - users/demo/seed-phase/seed-phase-manifest.json
 
 ### Expected drift (policy-documented; not a parity defect)
   - **docs/identity-fork-protocol.md** — Grace-mar holds IFP v1.0 full reference spec; companion-self ships the short form with a link to the full spec. Do not overwrite the instance file with the template short form on bulk sync.
@@ -34,6 +23,7 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   - app/observability/.gitkeep
   - bridges/bridge-schema.json
   - config/authority-map.json
+  - config/seed-promotion-rules.json
   - config/source-of-truth.json
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/action-receipts.md
@@ -45,7 +35,6 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   - docs/change-types.md
   - docs/conflict-resolution-order.md
   - docs/contradiction-policy.md
-  - docs/contradiction-resolution.md
-  ... and 111 more
+  ... and 156 more
 
-Summary: same=126 differ=18 expected_drift=2 only_template=0 only_instance=0
+Summary: same=171 differ=7 expected_drift=2 only_template=0 only_instance=0

@@ -65,3 +65,5 @@ _(Append below this line.)_
 - **2026-04-07 00:15 UTC** — dream (demo) ok=false mode=default cursor_model=unknown integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
 - **2026-04-07 00:15 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=2 civmem_suppressed=false
 - **2026-04-07 00:15 UTC** — dream (demo) ok=true mode=default cursor_model=unknown integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-07 00:44 UTC** — bridge (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking refs=43b7605,0b11573
+- **2026-04-07 00:45 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=claude-4.6-opus-high-thinking
