@@ -18,6 +18,7 @@
 | work-dev | [work-dev/work-dev-sources.md](work-dev/work-dev-sources.md) |
 | work-jiang | [work-jiang/work-jiang-sources.md](work-jiang/work-jiang-sources.md) |
 | work-politics | [work-politics/work-politics-sources.md](work-politics/work-politics-sources.md) |
+| work-strategy | [work-strategy/work-strategy-sources.md](work-strategy/work-strategy-sources.md) |
 
 Other `work-*` territories should add a `*-sources.md` when the operator wants explicit provenance for external discourse.
 

@@ -91,3 +91,99 @@ python3 scripts/fetch_youtube_channel_transcripts.py \
 ```
 
 Outputs `CHANNEL-VIDEO-INDEX.md` and `index.json`. Use `--enrich-metadata` so publication dates are filled. Prefer a dedicated output directory per channel; raw `transcripts/*.txt` are often gitignored (see [youtube-channels README](../../../research/external/youtube-channels/predictive-history/README.md) pattern).
+
+---
+
+## Election Analytics and Polling
+
+Race ratings, election models, polling aggregation. Curated from [01-mediamap](https://github.com/ekristof/01-mediamap).
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| Cook Political Report | https://cookpolitical.com/ | Race ratings and election analysis; industry standard for competitive-seat tracking |
+| BallotPedia | https://ballotpedia.org/Main_Page | Encyclopedia of elections and elected officials; candidate bios and ballot measures |
+| Sabato's Crystal Ball | http://centerforpolitics.org/crystalball/ | Election forecasting (UVA Center for Politics) |
+| Inside Elections | https://www.insideelections.com/ | Race ratings and campaign analysis |
+| RealClearPolitics — Polls | https://www.realclearpolitics.com/epolls/latest_polls/ | Polling aggregator; quick overview of current survey landscape |
+| FiveThirtyEight | https://projects.fivethirtyeight.com/polls/ | Election models and polling analysis |
+| Split Ticket | https://split-ticket.org/ | Down-ballot race analysis and redistricting |
+| G. Elliott Morris *(Substack)* | https://gelliottmorris.substack.com/ | Election forecasting and polling methodology |
+| Gallup | https://news.gallup.com/home.aspx | National opinion polling; approval ratings and issue tracking |
+| Morning Consult | https://morningconsult.com/news/ | High-frequency polling and political intelligence |
+
+## Congressional and Government Tracking
+
+Legislative tracking, campaign finance, federal spending, accountability.
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| GovTrack.us | https://www.govtrack.us/ | Bill tracking, legislator scorecards, vote records |
+| Congress.gov | https://www.congress.gov/ | Official legislative text, committee reports, congressional record |
+| OpenSecrets | https://www.opensecrets.org/ | Campaign finance, lobbying data, PAC spending; essential for opposition research |
+| USAspending.gov | https://www.usaspending.gov/ | Federal spending data by agency, contract, and recipient |
+| Federal Register | https://www.federalregister.gov/ | Executive orders, proposed rules, and federal rulemaking |
+| GAO | https://www.gao.gov/ | Government Accountability Office; audit reports and oversight |
+| Government Executive | https://www.govexec.com/ | Federal workforce, policy, and government management |
+
+## Legal and Courts
+
+Supreme Court, national security law, federal/state court filings.
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| SCOTUSblog | https://www.scotusblog.com/ | Supreme Court case tracking and analysis |
+| Lawfare | https://www.lawfareblog.com/ | National security law and policy; legal analysis of executive actions |
+| Courthouse News Service | https://www.courthousenews.com/ | Federal and state court filing coverage |
+| Court Listener | https://www.courtlistener.com/ | Free legal opinion database; searchable court records |
+
+## Wire and Capitol Analysis
+
+Congressional insider coverage, news platforms with sourcing transparency.
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| Punchbowl News | https://punchbowl.news/ | Congressional insider coverage; paywalled; daily AM briefing |
+| Semafor | https://www.semafor.com/ | News platform with explicit sourcing and counterpoint structure |
+| NOTUS | https://www.notus.org/ | Nonprofit Capitol Hill journalism; paywalled |
+| Roll Call | https://www.rollcall.com/ | Congressional news and procedure; also in [daily-brief RSS](../../work-strategy/daily-brief-config.json) |
+
+## State and Local
+
+State legislature tracking, local news, election integrity.
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| NCSL | https://www.ncsl.org/ | National Conference of State Legislatures; state-level policy tracking |
+| Open States | https://openstates.org/ | State-level legislative data; bill tracking across all 50 states |
+| Patch | https://patch.com/ | Hyperlocal news; KY and national community-level coverage |
+| States United Democracy Center | https://statesuniteddemocracy.org/ | State election integrity and rule-of-law research |
+
+## Civic and Depolarization
+
+Cross-partisan research, polarization data, independent voter context.
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| Braver Angels | https://braverangels.org/ | Cross-partisan dialogue and depolarization programs |
+| More in Common | https://www.moreincommon.com/ | Polarization research and the "exhausted majority" framing |
+| Hidden Tribes of America | https://hiddentribes.us/ | Political tribes study; segmentation beyond left-right |
+| Independent Voter News | https://ivn.us/ | Centrist and independent voter coverage |
+
+## Fact-Checking (politics-specific)
+
+Claim verification before ship. See also [fact-check skill](../../../.cursor/skills/fact-check/SKILL.md).
+
+| Source | URL | Notes |
+|--------|-----|-------|
+| PolitiFact | https://www.politifact.com/ | Political claim ratings; Truth-O-Meter verdicts |
+| FactCheck.org | https://www.factcheck.org/ | Annenberg Public Policy Center; legislative and campaign claim checks |
+| AP Fact Check | https://apnews.com/ap-fact-check | Wire-service fact-checking; high credibility baseline |
+| Snopes | https://www.snopes.com/ | Viral claim verification; urban legends and political rumors |
+
+---
+
+**Mediamap total added: 39 sources.** Curated from [ekristof/01-mediamap](https://github.com/ekristof/01-mediamap).
+
+**What was excluded:** AI/tech/cyber outlets (→ [work-dev](../work-dev/work-dev-sources.md)), defense/military/intelligence/geopolitics (→ [work-strategy](../work-strategy/work-strategy-sources.md)), colleges, book lists, civics education, media literacy. Sources already in [daily-brief RSS](../../work-strategy/daily-brief-config.json) (Reuters, BBC, NPR, NBC, The Hill, etc.) are not duplicated here except Roll Call (noted).
+
+**Parallel:** [work-dev-sources.md](../work-dev/work-dev-sources.md) | [work-strategy-sources.md](../work-strategy/work-strategy-sources.md)
