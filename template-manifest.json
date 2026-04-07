@@ -924,5 +924,33 @@
       "users/demo/review-queue/diffs/diff-001.json",
       "users/demo/review-queue/diffs/diff-002.json"
     ]
+  },
+  "seed_registry": {
+    "version": "1.0.0",
+    "entrypoint": "docs/seed-registry.md",
+    "doctrine": "docs/seed-phase-doctrine.md",
+    "schemas": {
+      "seed_claim": "schema-registry/seed-claim.v1.json"
+    },
+    "scripts": {
+      "emit": "scripts/emit_seed_claim.py",
+      "summary": "scripts/seed_registry_summary.py",
+      "evaluate_promotion": "scripts/evaluate_seed_promotion.py",
+      "nursery_report": "scripts/seed_nursery_report.py",
+      "emit_diff": "scripts/emit_seed_diff.py",
+      "timeline": "scripts/seed_timeline.py",
+      "seed_to_gate": "scripts/seed_to_gate.py"
+    },
+    "config": {
+      "promotion_rules": "config/seed-promotion-rules.json"
+    },
+    "docs": [
+      "docs/seed-registry.md",
+      "docs/seed-promotion-thresholds.md",
+      "docs/seed-nursery.md",
+      "docs/seed-timeline.md",
+      "docs/seed-phase-doctrine.md"
+    ],
+    "demo_data": "users/demo/seed-registry.jsonl"
   }
 }

@@ -71,6 +71,25 @@ Only **then** may `users/<birth-name>/` be created or promoted with the live pip
 
 ---
 
+## Seed Phase Doctrine
+
+Seed phase is a **constitutional regime**, not just an implementation detail. The seven principles of formation governance are codified in **[seed-phase-doctrine.md](seed-phase-doctrine.md)**: provisional by default, recurrence over vividness, contradiction preservation, earned promotion, operator authority, no silent definition.
+
+The `seed-phase-manifest.v1.json` schema includes an optional `doctrine_version` field so each fork declares which doctrine it was formed under.
+
+---
+
+## Seed Registry and per-claim lifecycle
+
+Individual observations are tracked through the **[Seed Registry](seed-registry.md)**: per-claim lifecycle from first observation through recurrence, evidence clustering, and governed promotion. The registry sits between seed-phase artifact validation and post-activation RECURSION-GATE.
+
+Supporting surfaces:
+- **[Promotion thresholds](seed-promotion-thresholds.md)** -- pluggable rules for when claims can advance
+- **[Weak Signal Nursery](seed-nursery.md)** -- "why is this still a seed?" explanations
+- **[Seed Timeline](seed-timeline.md)** -- formation chronology for individual claims
+
+---
+
 ## Post-seed governed revision
 
 Seed Phase establishes the initial baseline for a new companion instance before activation.

@@ -36,8 +36,14 @@
         "expression",
         "memory_governance",
         "safety",
-        "preference"
+        "preference",
+        "seed_transition"
       ]
+    },
+    "sourceType": {
+      "type": "string",
+      "enum": ["post_activation", "seed"],
+      "description": "Whether this diff originates from seed-phase formation or post-activation change review"
     },
     "before": {
       "type": "object"

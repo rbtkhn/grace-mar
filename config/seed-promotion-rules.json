@@ -1,0 +1,38 @@
+{
+  "$comment": "Pluggable promotion rules for seed claims. Template-portable defaults.",
+  "defaults": {
+    "min_observations": 2,
+    "min_sessions": 2,
+    "min_time_span_days": 7,
+    "recurrence_score_threshold": 0.6,
+    "contradiction_policy": "block_until_resolved"
+  },
+  "sensitivity_overrides": {
+    "standard": {},
+    "elevated": {
+      "min_observations": 3,
+      "min_sessions": 3,
+      "min_time_span_days": 14,
+      "requires_operator_flag": true
+    },
+    "high": {
+      "min_observations": 5,
+      "min_sessions": 4,
+      "min_time_span_days": 21,
+      "requires_operator_approval": true,
+      "contradiction_policy": "block_until_resolved"
+    }
+  },
+  "category_overrides": {
+    "identity": {
+      "min_observations": 3,
+      "min_time_span_days": 14,
+      "sensitivity_floor": "elevated"
+    },
+    "safety": {
+      "min_observations": 4,
+      "min_time_span_days": 21,
+      "sensitivity_floor": "high"
+    }
+  }
+}

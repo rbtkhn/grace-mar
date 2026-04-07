@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/seed-claim.v1.json",
+  "title": "Seed Claim v1",
+  "description": "Per-claim lifecycle tracking during companion formation. Each observation earns its way into durable identity through recurrence, evidence, and governed promotion.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "seed_id",
+    "user_slug",
+    "claim_text",
+    "category",
+    "source_events",
+    "first_seen",
+    "last_seen",
+    "observation_count",
+    "recurrence_score",
+    "contradiction_count",
+    "confidence",
+    "status",
+    "promotion_readiness",
+    "sensitivity"
+  ],
+  "properties": {
+    "seed_id": {
+      "type": "string",
+      "pattern": "^seed-[a-zA-Z0-9._-]+$",
+      "description": "Unique identifier for this seed claim"
+    },
+    "user_slug": {
+      "type": "string",
+      "minLength": 1
+    },
+    "claim_text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The observation itself, in natural language"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "identity",
+        "curiosity",
+        "pedagogy",
+        "expression",
+        "memory_governance",
+        "safety",
+        "preference"
+      ]
+    },
+    "source_events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "description": "Evidence refs: session IDs, transcript lines, artifact IDs"
+    },
+    "first_seen": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observation_count": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "recurrence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Computed from observation_count, time span, and context diversity"
+    },
+    "contradiction_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "contradiction_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "default": [],
+      "description": "seed_ids or evidence refs that conflict with this claim"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "observed",
+        "weak_signal",
+        "recurring",
+        "candidate",
+        "cross_evidenced",
+        "stable",
+        "promoted",
+        "rejected",
+        "expired"
+      ]
+    },
+    "promotion_readiness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "expiry_review_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When this claim should be reviewed if still immature"
+    },
+    "sensitivity": {
+      "type": "string",
+      "enum": ["standard", "elevated", "high"],
+      "description": "Determines which promotion threshold tier applies"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
