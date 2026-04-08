@@ -5,7 +5,7 @@
 
 **Scope (read first):** This file is **WORK-only** operator documentation under [work-strategy](README.md). It is **not** the companion **Record**, **not** Voice knowledge, and **not** a deployment of [civilization_memory](../../../research/repos/civilization_memory/) STATE/SCHOLAR/MEM machinery. Section names **borrow** that vocabulary for **local ledger shape** only. [work-civ-mem](../work-civ-mem/README.md) remains the stewardship surface for the external CMC repo; this surface is for **operator judgment** on history, geopolitics, and grand-strategy framing. Nothing here enters SELF or EVIDENCE except via **RECURSION-GATE** and companion approval.
 
-**Version:** 2026-03-29 (STRATEGY.md filename; SCHOLAR + LEARN MODE cross-links)  
+**Version:** 2026-04-08 (§IV Islamabad Framework log entry + §VII cross-link)  
 **Last gated update:** _TBD_ (use when a milestone was merged through the gate into Record or logged as approved operator strategy artifact)  
 **Status:** Active
 
@@ -205,19 +205,16 @@
 
 *(Additive notes: dated headings or bullets **in this file**. **Not** [CMC memory shards](../../../research/repos/civilization_memory/) (`MEM–ROME–*`, etc.) — those live in the civilization_memory corpus with their own naming. **No** separate “mem” ID scheme here: use readable dates + topic, optional short slug if you need a handle. All changes additive.)*
 
-### Shape (example — delete when first real entry lands)
+### 2026-04-08 — Islamabad Framework (five-point roadmap)
 
-```markdown
-### YYYY-MM-DD — Short topic label
-- **Context:** …
-- **Moves considered:** …
-- **Read / conclusion:** …
-- **Links:** session-transcript, gate **CANDIDATE-XXXX**, civ-mem paths as needed
-- **Tensions:** preserve contradictions explicitly
-- **Lesson → §III:** …
-```
+- **Context:** US–Iran–Israel Gulf crisis; Islamabad mediation window; operator merged revised 10/15-point narratives into a single **roadmap** (not treaty) for negotiation and public propagation.
+- **Moves considered:** Split drafts (intake Jiang commentary, U.S.-framed annex, synthesized `islamabad-framework.md`) vs one canonical export; Phase A thin tranche vs Phase B guarantor / hybrid-war annexes; Leo XIV rhetoric as messaging spill only.
+- **Read / conclusion:** **[islamabad-framework.md](islamabad-framework.md)** is the **canonical public-propagation** file; WORK-only; no implied state or Holy See endorsement; rubric scores are structured operator judgment, not forecasts.
+- **Links:** [islamabad-framework.md](islamabad-framework.md), [us-framed-five-point-gulf-peace-framework-2026-04-08.md](us-framed-five-point-gulf-peace-framework-2026-04-08.md), [Islamabad intake + Jiang commentary](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md), [work-strategy README](README.md#contents)
+- **Tensions:** Near-term **negotiability** vs **stability** (annex B load); **capture gap** on companion Record activity is orthogonal to this artifact.
+- **Lesson → §III:** _TBD_ (promote only if a recurring heuristic emerges across briefs.)
 
-*(Append below. Do not rewrite past entries except dated annotations.)*
+*(Append further dated entries below. Do not rewrite past entries except dated annotations.)*
 
 ## V. Capabilities index
 
@@ -245,7 +242,8 @@
 - **CMC stewardship:** [work-civ-mem README](../work-civ-mem/README.md)  
 - **External corpus:** [civilization_memory repo](../../../research/repos/civilization_memory/) (read-only reference unless contributing upstream)  
 - **WORK menus:** [work-menu-conventions.md](../work-menu-conventions.md)  
-- **Daily horizon:** [daily-brief-focus.md](daily-brief-focus.md), [weak-signals.md](weak-signals.md), [synthesis-engine.md](synthesis-engine.md), [current-events-analysis.md](current-events-analysis.md)
+- **Daily horizon:** [daily-brief-focus.md](daily-brief-focus.md), [weak-signals.md](weak-signals.md), [synthesis-engine.md](synthesis-engine.md), [current-events-analysis.md](current-events-analysis.md)  
+- **Islamabad Framework (Gulf roadmap):** [islamabad-framework.md](islamabad-framework.md) — §IV log 2026-04-08
 
 ---
 
