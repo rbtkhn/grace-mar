@@ -90,4 +90,20 @@ Nested `volume_6_interviews.book.chapters` — see `docs/skill-work/work-jiang/v
 
 **Next action:** Complete analysis memo for vi-11; then draft chapter outline
 
+## vi-ch12 — Interviews #12: Jay Shapiro — Painful Personal Path, Truth and Myth, Internet Fame
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for vi-12; then draft chapter outline
+
+## vi-ch13 — Interviews #13: Patrick Bet-David — Jiang Xueqin Finally Breaks His Silence (PBD Podcast #772)
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for vi-13; then draft chapter outline
+
 *Generated from `metadata/book-architecture.yaml` (`volume_6_interviews`) — same command as Volume I queue.*

@@ -1891,6 +1891,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: gt-19
+  video_id: 0HYET47Cc-E
+  title: 'Game Theory #19: The Hollywood-Pentagon Complex'
+  canonical_url: https://www.youtube.com/watch?v=0HYET47Cc-E
+  publication_date: 2026-04-07
+  lecture_path: lectures/game-theory-19-the-hollywood-pentagon-complex.md
+  analysis_path: analysis/0HYET47Cc-E-game-theory-19-analysis.md
+  series: game-theory
+  episode: 19
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
 - source_id: gb-01
   video_id: TsD-8FGA84A
   title: 'Great Books #1: Secrets of the Universe'
@@ -2188,6 +2203,22 @@ sources:
   analysis_path: analysis/oErKnj_uyPA-interviews-12-analysis.md
   series: interviews
   episode: 12
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
+- source_id: vi-13
+  video_id: Wio--7_GIOs
+  title: 'Interviews #13: Patrick Bet-David — Jiang Xueqin Finally Breaks His Silence
+    (PBD Podcast #772)'
+  canonical_url: https://www.youtube.com/watch?v=Wio--7_GIOs
+  publication_date: '2026-04-07'
+  lecture_path: lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md
+  analysis_path: analysis/Wio--7_GIOs-interviews-13-analysis.md
+  series: interviews
+  episode: 13
   themes: []
   status:
     transcript: complete

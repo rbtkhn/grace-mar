@@ -2357,7 +2357,7 @@ volume_4_game_theory:
     instruction: End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md — divergence IDs from divergences.jsonl where linked; not chapter_end_predictions (Volume I only) unless Part II policy adopts prediction adjudication.
   part_2:
     title: Part II — method TBD (Game Theory)
-    after_chapter: gt-ch18
+    after_chapter: gt-ch19
     description: Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-first default for Part I boxes).
   book:
     chapters:
@@ -2757,6 +2757,28 @@ volume_4_game_theory:
       analysis_ready: true
       quotes_ready: false
       requires_prediction_review: false
+    - id: gt-ch19
+      title: 'Game Theory #19: The Hollywood-Pentagon Complex'
+      purpose: Book chapter for Game Theory lecture 19 — Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume IV default).
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - gt-19
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Draft chapter outline in chapters-volume-iv/gt-ch19/outline.md
+      outline_path: chapters-volume-iv/gt-ch19/outline.md
+      draft_path: chapters-volume-iv/gt-ch19/draft.md
+      analysis_ready: true
+      quotes_ready: false
+      requires_prediction_review: false
 
 volume_5_great_books:
   project:
@@ -2985,7 +3007,7 @@ volume_6_interviews:
     instruction: End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md — divergence IDs from divergences.jsonl where linked; not chapter_end_predictions (Volume I only) unless Part II policy adopts prediction adjudication.
   part_2:
     title: Part II — method TBD (Interviews)
-    after_chapter: vi-ch12
+    after_chapter: vi-ch13
     description: Operator locks evaluation mode in book/VOLUME-VI-INTERVIEWS.md (divergence-first default for Part I boxes).
   book:
     chapters:
@@ -3250,6 +3272,28 @@ volume_6_interviews:
       next_action: Complete analysis memo for vi-12; wire video_id and transcript; then draft chapter outline
       outline_path: chapters-volume-vi/vi-ch12/outline.md
       draft_path: chapters-volume-vi/vi-ch12/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: vi-ch13
+      title: 'Interviews #13: Patrick Bet-David — Jiang Xueqin Finally Breaks His Silence (PBD Podcast #772)'
+      purpose: Book chapter for Interviews episode 13 — Volume VI Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VI default).
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - vi-13
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for vi-13; then draft chapter outline
+      outline_path: chapters-volume-vi/vi-ch13/outline.md
+      draft_path: chapters-volume-vi/vi-ch13/draft.md
       analysis_ready: false
       quotes_ready: false
       requires_prediction_review: false

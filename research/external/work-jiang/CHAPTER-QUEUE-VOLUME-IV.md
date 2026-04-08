@@ -146,4 +146,12 @@ Nested `volume_4_game_theory.book.chapters` — see `docs/skill-work/work-jiang/
 
 **Next action:** Draft chapter outline in `chapters-volume-iv/gt-ch18/outline.md` (analysis memo complete)
 
+## gt-ch19 — Game Theory #19: The Hollywood-Pentagon Complex
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Draft chapter outline in `chapters-volume-iv/gt-ch19/outline.md` (analysis memo draft on disk; deepen claims/registry when scheduled)
+
 *Generated from `metadata/book-architecture.yaml` (`volume_4_game_theory`) — same command as Volume I queue.*
