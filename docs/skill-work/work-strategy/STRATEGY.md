@@ -209,8 +209,8 @@
 
 - **Context:** US–Iran–Israel Gulf crisis; Islamabad mediation window; operator merged revised 10/15-point narratives into a single **roadmap** (not treaty) for negotiation and public propagation.
 - **Moves considered:** Split drafts (intake Jiang commentary, U.S.-framed annex, synthesized `islamabad-framework.md`) vs one canonical export; Phase A thin tranche vs Phase B guarantor / hybrid-war annexes; Leo XIV rhetoric as messaging spill only.
-- **Read / conclusion:** **[islamabad-framework.md](islamabad-framework.md)** is the **canonical public-propagation** file; WORK-only; no implied state or Holy See endorsement; rubric scores are structured operator judgment, not forecasts.
-- **Links:** [islamabad-framework.md](islamabad-framework.md), [us-framed-five-point-gulf-peace-framework-2026-04-08.md](us-framed-five-point-gulf-peace-framework-2026-04-08.md), [Islamabad intake + Jiang commentary](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md), [work-strategy README](README.md#contents)
+- **Read / conclusion:** **[islamabad-framework.md](islamabad-framework.md)** is the **canonical public-propagation** file (preamble + five paragraphs; no annex/rubric/backend jargon). **[islamabad-framework-operator-edition.md](islamabad-framework-operator-edition.md)** holds full synthesis, tables, and commentary; WORK-only; no implied state or Holy See endorsement; rubric scores there are structured operator judgment, not forecasts.
+- **Links:** [islamabad-framework.md](islamabad-framework.md), [islamabad-framework-operator-edition.md](islamabad-framework-operator-edition.md), [us-framed-five-point-gulf-peace-framework-2026-04-08.md](us-framed-five-point-gulf-peace-framework-2026-04-08.md), [Islamabad intake + Jiang commentary](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md), [work-strategy README](README.md#contents)
 - **Tensions:** Near-term **negotiability** vs **stability** (annex B load); **capture gap** on companion Record activity is orthogonal to this artifact.
 - **Lesson → §III:** _TBD_ (promote only if a recurring heuristic emerges across briefs.)
 
@@ -243,7 +243,7 @@
 - **External corpus:** [civilization_memory repo](../../../research/repos/civilization_memory/) (read-only reference unless contributing upstream)  
 - **WORK menus:** [work-menu-conventions.md](../work-menu-conventions.md)  
 - **Daily horizon:** [daily-brief-focus.md](daily-brief-focus.md), [weak-signals.md](weak-signals.md), [synthesis-engine.md](synthesis-engine.md), [current-events-analysis.md](current-events-analysis.md)  
-- **Islamabad Framework (Gulf roadmap):** [islamabad-framework.md](islamabad-framework.md) — §IV log 2026-04-08
+- **Islamabad Framework (Gulf roadmap):** [islamabad-framework.md](islamabad-framework.md) (public) · [islamabad-framework-operator-edition.md](islamabad-framework-operator-edition.md) (operator) — §IV log 2026-04-08
 
 ---
 
