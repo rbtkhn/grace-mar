@@ -5,7 +5,7 @@
 
 **Scope (read first):** This file is **WORK-only** operator documentation under [work-strategy](README.md). It is **not** the companion **Record**, **not** Voice knowledge, and **not** a deployment of [civilization_memory](../../../research/repos/civilization_memory/) STATE/SCHOLAR/MEM machinery. Section names **borrow** that vocabulary for **local ledger shape** only. [work-civ-mem](../work-civ-mem/README.md) remains the stewardship surface for the external CMC repo; this surface is for **operator judgment** on history, geopolitics, and grand-strategy framing. Nothing here enters SELF or EVIDENCE except via **RECURSION-GATE** and companion approval.
 
-**Version:** 2026-04-08 (§IV Islamabad Framework log entry + §VII cross-link)  
+**Version:** 2026-04-08 (§IV Islamabad Framework v0.7 log + ceasefire coincidence note)  
 **Last gated update:** _TBD_ (use when a milestone was merged through the gate into Record or logged as approved operator strategy artifact)  
 **Status:** Active
 
@@ -221,6 +221,14 @@
 - **File architecture change:** `islamabad-framework.md` upgraded from short propagation text to diplomatic working document. Operator edition (`islamabad-framework-operator-edition.md`) retains annexes, Jiang commentary, rubric, and Leo XIV rhetoric blend. Short-form propagation text (cover note / executive summary) to be created separately.
 - **Leo XIV reference:** Named papal reference moved from public file to operator edition only. Public file uses generic moral-appeal disclaimer to reduce institutional-endorsement risk.
 - **Version:** operator-edition bumped to v0.6.
+
+### 2026-04-08 — Islamabad Framework v0.7 (civ-mem grounding)
+
+- **Context:** Operator directed a deep dive into MEM-PERSIA and MEM-AMERICA corpus files, then a surgical rewrite of `islamabad-framework.md` to replace generic phrases with historically grounded language — same structure, same length, higher density.
+- **Method:** Nine corpus-anchored insertions: Cyrus/Philadelphia civilizational framing (preamble), Rome–Persia parity-war doctrine (§1), Hormuz littoral geography via Strabo + Achaemenid trade corridor (§2), Iran–Iraq War eight-year stalemate as ceasefire precedent (§1), NPT bargain articulation + SALT-through-INF arms-control record (§3), 1953-to-JCPOA durability argument (§4), hybrid-war awareness in hostilities definition (§1), non-interference grounded in covert regime-change and proxy-warfare history (§5), closing maxim on reciprocity precedent (§6).
+- **Strategic rationale:** Corpus-grounded diplomatic language is a durability technique — readers with civilizational memory (Iranian, European, multilateral) recognize the references as substantive, not decorative. Dual-audience architecture preserved: domestic-politics pressure points unchanged.
+- **Coincidence noted:** Same day, two-week US–Iran ceasefire announced; Leo XIV escalated language to "unjust war" and "unacceptable" (April 7–8). Framework §6 steps 1–3 now map to live events. Propagation window open.
+- **Links:** [islamabad-framework.md](islamabad-framework.md), [islamabad-framework-operator-edition.md](islamabad-framework-operator-edition.md) (bumped to v0.7)
 
 *(Append further dated entries below. Do not rewrite past entries except dated annotations.)*
 

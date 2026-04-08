@@ -7,7 +7,7 @@
 **Related:**
 
 - [U.S.-framed five-point Gulf peace framework (2026-04-08)](../../../../docs/skill-work/work-strategy/us-framed-five-point-gulf-peace-framework-2026-04-08.md) — operator synthesis with legal anchors, transparency to Congress, and historical precedent columns (differs on withdrawal geometry, Hormuz fees, HEU disposition, sanctions sequencing).
-- [The Islamabad Framework (public, 2026-04-08)](../../../../docs/skill-work/work-strategy/islamabad-framework.md) — short roadmap for circulation.
+- [The Islamabad Framework (v0.7, 2026-04-08)](../../../../docs/skill-work/work-strategy/islamabad-framework.md) — diplomatic working document (six sections, civ-mem grounded, dual-audience architecture).
 - [The Islamabad Framework — operator edition (2026-04-08)](../../../../docs/skill-work/work-strategy/islamabad-framework-operator-edition.md) — merged spine + U.S. operational annex + Jiang optimization annex + quantitative rubric.
 
 ---
