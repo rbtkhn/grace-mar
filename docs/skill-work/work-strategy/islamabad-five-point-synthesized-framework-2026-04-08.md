@@ -1,9 +1,9 @@
-# Islamabad five-point framework — synthesized (operator)
+# The Islamabad Framework — five-point synthesis (operator)
 
-**Version:** v0.1 (2026-04-08)  
-**Status:** WORK only — single negotiator-facing merge of the Islamabad plan (spine), U.S.-framed operational add-ons, session **optimized** enhancements (Jiang-inspired), and corpus-conditioned commentary. Not Predictive History lecture text, not Record, not Voice knowledge. **Do not publish** externally until factual claims are backed by dated primary sources.
+**Version:** v0.2 (2026-04-08)  
+**Status:** WORK only — single negotiator-facing merge of the Islamabad plan (spine), U.S.-framed operational add-ons, session **optimized** enhancements (Jiang-inspired), corpus-conditioned commentary, and **optional public rhetoric** for momentum (not Holy See endorsement of this text). Not Predictive History lecture text, not Record, not Voice knowledge. **Do not publish** externally until factual claims are backed by dated primary sources.
 
-**Purpose:** One file carries **(1)** the Islamabad **plan commitment** + **legal reconciliation** as canonical spine, **(2)** Washington-shaped **operational specifics** as optional annex bullets, **(3)** **implementation-heavy / phase-B** enhancements from the optimized synthesis thread, and **(4)** **verbatim** Jiang commentary from the intake original. The optimized table is **not** a fourth canonical text — it informs the enhancement annex only.
+**Purpose:** One file carries **(1)** the Islamabad **plan commitment** + **legal reconciliation** as canonical spine, **(2)** Washington-shaped **operational specifics** as optional annex bullets, **(3)** **implementation-heavy / phase-B** enhancements from the optimized synthesis thread, **(4)** **verbatim** Jiang commentary from the intake original, and **(5)** a **roadmap** posture: the **Islamabad Framework** is not a treaty but a path toward one. The optimized table is **not** a fourth canonical text — it informs the enhancement annex only.
 
 **Related / lineage:**
 
@@ -13,7 +13,17 @@
 
 ---
 
-## Preamble (plan text — from Islamabad intake)
+## Preamble — Islamabad Framework (roadmap + rhetoric)
+
+**Roadmap, not treaty.** The **Islamabad Framework** names this artifact: a **roadmap** toward a future binding settlement, not a treaty in force. It is meant to **keep momentum** after a truce, **surface pitfalls** early (hybrid pressure, sequencing traps, legitimacy and forum gaps), and channel energy into **negotiable, verifiable** steps rather than maximalist collapse.
+
+**Public rhetoric blend (Pope Leo XIV — secondary sources, papal X accounts mirror these themes):** Reporting in early April 2026 quoted Leo XIV welcoming a Middle East truce as a **“sign of living hope”** after **“great tension,”** and insisting that **“only through a return to negotiation can the war come to an end”** ([EWTN News, 2026-04-08](https://www.ewtnnews.com/vatican/pope-leo-xiv-welcomes-ceasefire-in-iran-as-sign-of-living-hope)). Vatican News summarized his appeal that **stability and peace are not achieved through mutual threats or the use of weapons**, which **sow destruction, suffering, and death**, **but only through reasonable, sincere, and responsible dialogue**; he also called to **pray for peace, work for peace**, seek **solutions without weapons**, and resist rising **hatred** ([Vatican News, 2026-03-01](https://www.vaticannews.va/en/pope/news/2026-03/pope-leo-xiv-work-for-peace-and-seek-solutions-without-weapons.html)). The same news cycle relayed his judgment that **attacks on civilian infrastructure** are **contrary to international law** and manifest **hatred, division, and destruction**, with an invitation to citizens—including contact with **Congress** and other authorities—to urge leaders to **work for peace** ([EWTN News, 2026-04-08](https://www.ewtnnews.com/vatican/pope-leo-xiv-welcomes-ceasefire-in-iran-as-sign-of-living-hope)). *These quotations are **messaging spill** for operator drafting; they are **not** a claim that the Holy See has reviewed or endorsed this document. Cite Vatican primary text (audiences, bulletins) before any public ship.*
+
+**Operator weave:** **Living hope** after a pause maps to **Phase A** thin tranches and visible wins; **only negotiation ends the war** maps to sustained **Islamabad-track** dialogue and UNSC-facing closure; **reasonable, sincere, responsible dialogue** maps to transparency, annexed metrics, and non-humiliating sequencing; **without weapons** pairs with **cessation** and with **parallel** easing of pressure channels where the annexes say so; **civilian infrastructure / international law** reinforces **Charter** and **humanitarian** guardrails in Point 1; **Congress / authorities** aligns with **Annex A** reporting and domestic accountability. Use this weave in speeches and cover letters, not as substitute for treaty precision.
+
+---
+
+## Preamble — plan text (from Islamabad intake)
 
 This 5-point plan merges the core elements of Iran’s revised 10-point plan and the U.S. revised 15-point plan into a single, streamlined framework. It eliminates duplication, resolves the main tensions (e.g., immediate vs. phased measures, rights vs. verification), and frames every commitment strictly as mutual guarantees of compliance with existing international law and treaties — primarily the UN Charter, NPT, UNSC Resolution 2231 (2015) endorsing the JCPOA, and customary rules on straits. No new obligations or concessions are invented; the focus is on verifiable implementation of what the law already requires.
 
