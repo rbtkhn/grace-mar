@@ -1,4 +1,4 @@
-# The Islamabad Framework
+# Islamabad Framework
 
 *April 2026 · Discussion Draft*
 
