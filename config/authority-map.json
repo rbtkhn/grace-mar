@@ -12,7 +12,9 @@
     "prepared_context": "draftable",
     "evidence": "draftable",
     "bridge_packets": "ephemeral_only",
-    "harvest_packets": "ephemeral_only"
+    "harvest_packets": "ephemeral_only",
+    "offline_tools": "draftable",
+    "cloud_escalation": "review_required"
   },
   "notes": [
     "Meaningful durable changes should not bypass review.",

@@ -113,8 +113,10 @@ logger = logging.getLogger(__name__)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
-# Future: LLM_PROVIDER (openai | anthropic | ollama) to route chat to different backends; PRP export is already provider-agnostic.
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "openai").strip().lower()
+OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "")
+EDGE_MODEL = os.getenv("EDGE_MODEL", "gemini-nano-4b")
 MAX_HISTORY = 20
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
@@ -164,6 +166,7 @@ def _log_tokens(
             "completion_tokens": completion_tokens,
             "total_tokens": prompt_tokens + completion_tokens,
             "model": model,
+            "inference_provider": LLM_PROVIDER,
         }
         if task_type:
             usage["task_type"] = task_type
@@ -961,10 +964,36 @@ def _library_lookup(question: str, channel_key: str = "unknown") -> str | None:
 
 
 def _get_client() -> OpenAI:
+    """Return an OpenAI-compatible client routed by LLM_PROVIDER.
+
+    - openai: standard OpenAI API (default)
+    - ollama: local Ollama server (OpenAI-compatible endpoint)
+    - edge: reserved for Google AI Edge / Gemini Nano (Phase 2)
+    """
     global _client
-    if _client is None:
+    if _client is not None:
+        return _client
+    if LLM_PROVIDER == "ollama":
+        _client = OpenAI(base_url=OLLAMA_BASE_URL, api_key="ollama")
+    elif LLM_PROVIDER == "edge":
+        raise NotImplementedError(
+            "LLM_PROVIDER=edge requires the Google AI Edge SDK provider "
+            "(scripts/inference_providers/edge_provider.py). Not yet wired."
+        )
+    else:
         _client = OpenAI(api_key=OPENAI_API_KEY)
     return _client
+
+
+def _resolve_model(requested_model: str) -> str:
+    """Map a requested model name to the active provider's model.
+
+    When LLM_PROVIDER is ollama, OLLAMA_MODEL overrides the default
+    OpenAI model names so callers don't need provider-specific logic.
+    """
+    if LLM_PROVIDER == "ollama" and OLLAMA_MODEL:
+        return OLLAMA_MODEL
+    return requested_model
 
 
 def _rephrase_lookup(question: str, facts: str, channel_key: str = "unknown") -> str:

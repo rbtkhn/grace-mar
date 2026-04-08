@@ -237,12 +237,17 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        raise SystemExit("OPENAI_API_KEY not set")
-
-    model = os.getenv("OPENAI_MODEL", "gpt-4o")
-    client = OpenAI(api_key=api_key)
+    provider = os.getenv("LLM_PROVIDER", "openai").strip().lower()
+    if provider == "ollama":
+        base_url = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
+        model = os.getenv("OLLAMA_MODEL", "gemma3:4b")
+        client = OpenAI(base_url=base_url, api_key="ollama")
+    else:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise SystemExit("OPENAI_API_KEY not set")
+        model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        client = OpenAI(api_key=api_key)
 
     probes = load_probes(probe_id=args.probe, category=args.category)
     results: list[dict] = []

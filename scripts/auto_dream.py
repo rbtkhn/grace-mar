@@ -738,6 +738,33 @@ def run_auto_dream(
                 if review_ids:
                     followups.append(f"Capability shift: {len(review_ids)} REVIEW alert(s) ({', '.join(review_ids[:3])}) — run detect_capability_shift.py")
 
+        try:
+            ledger_path = users_dir / user_id / "compute-ledger.jsonl"
+            if ledger_path.exists():
+                import json as _json
+                from datetime import datetime as _dt, timezone as _tz
+                today_str = _dt.now(_tz.utc).strftime("%Y-%m-%d")
+                provider_counts: dict[str, int] = {}
+                for line in ledger_path.read_text().splitlines():
+                    if not line.strip():
+                        continue
+                    try:
+                        entry = _json.loads(line)
+                    except _json.JSONDecodeError:
+                        continue
+                    ts = entry.get("ts", "")
+                    if ts.startswith(today_str):
+                        prov = entry.get("inference_provider", "openai")
+                        provider_counts[prov] = provider_counts.get(prov, 0) + 1
+                if provider_counts:
+                    total = sum(provider_counts.values())
+                    summary["inference_provider_ratio"] = {
+                        "counts": provider_counts,
+                        "total_calls": total,
+                    }
+        except Exception:
+            pass
+
         cm = resolve_cursor_model(explicit=cursor_model)
         handoff_path = _write_last_dream_handoff(
             summary,
