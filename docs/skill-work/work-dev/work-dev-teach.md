@@ -1,8 +1,10 @@
 # Calibrated OB1 Recursive Learning Prompt
 
+**Mission:** Aggregate operator innovations into one durable, paste-ready document that transfers governed accumulation and repo-grounded audit practice to Open Brain (OB1) deployments.
+
 Prompt designed for Open Brain (OB1) users to guide their agent toward building a governed accumulation layer. Calibrated against grace-mar's proven patterns: governance-first design, staging-not-merging, cadence rituals, contradiction preservation, warrant tracking, and compression-as-discovery.
 
-**Usage:** Paste the prompt below into your AI coding tool (Claude Code, Cursor, ChatGPT, etc.) while inside your OB1 repo. The agent will audit your instance, identify gaps, and propose a governed learning loop — starting with the smallest viable change.
+**Usage:** Paste the prompt below into your AI coding tool (Claude Code, Cursor, ChatGPT, etc.) while inside your OB1 repo. The agent will audit your instance, identify gaps, and propose a governed learning loop — starting with the smallest viable change. This revision emphasizes **repo-cited evidence**, a **gap map** (exists / partial / missing), and an explicit **uncertainty list** so the output is falsifiable.
 
 **Origin:** Developed from synthesis of [companion-self](https://github.com/NateBJones-Projects/OB1) community architecture patterns and grace-mar's gated pipeline. See `work-dev-history.md` for the development trace.
 
@@ -11,87 +13,137 @@ Prompt designed for Open Brain (OB1) users to guide their agent toward building 
 ## Prompt
 
 ```
+Governed Accumulation Audit for OB1
+
 You are an architect working inside an Open Brain (OB1) instance — a Supabase-backed personal knowledge system with thoughts, extensions, recipes, skills, and an MCP server.
 
-Your task is to design a **governed accumulation layer** for this OB1 instance — mechanisms that let the system learn from its own use, with human authority over what persists.
+Your task is to design a governed accumulation layer for this OB1 instance: mechanisms that let the system improve from its own use while keeping a human in authority over what persists.
 
-Important: the system may **stage** improvements as draft rows, candidate skills, or proposed changes. It may not write them into active thoughts, live skills, or production edge functions without human review. This constraint is the architecture, not a limitation.
+The system may detect, summarize, propose, and stage improvements as draft rows, candidate skills, or proposed changes. It may not write directly into active thoughts, live skills, production edge functions, or other active behavior surfaces without human review. This is not a limitation. It is the architecture.
 
-**Step 1 — Audit what OB1 already does**
+Working rules
 
-OB1 already has recursive precursors. Find them before proposing anything new:
+- Ground every conclusion in concrete repo evidence: files, directories, tables, edge functions, skills, recipes, migrations, or MCP tools. If a listed canonical path is absent, report it and audit what (if anything) replaced it.
+- Prefer extending existing OB1 mechanisms over inventing parallel ones.
+- Do not confuse more capture with learning.
+- Do not recommend unrestricted autonomous writes to the thoughts table.
+- Every recursive output must become a visible artifact a human can inspect: row, file, dashboard entry, Slack message, or MCP review item.
+- If evidence is missing, say so explicitly.
 
-- **Claudeception** (skills/claudeception) — extracts new skills from work sessions. This IS a recursive loop. Evaluate: does it have a review gate, or do generated skills go live immediately?
-- **Auto-Capture** (recipes/auto-capture) — stores session summaries and ACT NOW items at session close. Evaluate: does it filter signal from noise, or does it capture everything?
-- **Panning for Gold** (recipes/panning-for-gold) — mines brain dumps for actionable ideas. Evaluate: where do the ideas go? Into a review queue, or directly into thoughts?
-- **Life Engine** (recipes/life-engine) — proactive briefings via Telegram or Discord. Evaluate: is it bounded (runs at set times), or continuous?
-- **Daily Digest** (recipes/daily-digest) — automated summary. Evaluate: does it measure growth or just summarize recent content?
-- **Content Fingerprint Dedup** (primitives/content-fingerprint-dedup) — SHA-256 duplicate prevention. Evaluate: does it catch semantic overlap, or only exact duplicates?
+Step 1 — Audit what OB1 already does
 
-For each, classify honestly:
-- Simple persistence (thoughts are saved but not used to change behavior)
-- Retrieval (thoughts are found when asked via MCP or vector search)
-- Workflow automation (recipes/edge functions run without manual trigger)
-- Actual learning (the system's behavior improves based on accumulated evidence)
+Before proposing anything new, inspect the repo and evaluate these existing recursive precursors. For each mechanism, cite the concrete files, folders, tables, or code paths that support your conclusions.
 
-Most OB1 instances have the first three. Almost none have the fourth. Claudeception comes closest — evaluate whether it actually closes the loop.
+- **Claudeception** (skills/claudeception) — extracts new skills from work sessions.
+  Evaluate whether it includes a review gate or whether generated skills go live immediately.
+- **Auto-Capture** (recipes/auto-capture) — stores session summaries and ACT NOW items at session close.
+  Evaluate whether it filters signal from noise or captures indiscriminately.
+- **Panning for Gold** (recipes/panning-for-gold) — mines brain dumps for actionable ideas.
+  Evaluate whether outputs enter a review queue or flow directly into thoughts.
+- **Life Engine** (recipes/life-engine) — proactive briefings via Telegram or Discord.
+  Evaluate whether it is bounded and scheduled or effectively continuous.
+- **Daily Digest** (recipes/daily-digest) — automated summary.
+  Evaluate whether it measures growth, change, and unresolved tension or merely summarizes recent content.
+- **Content Fingerprint Dedup** (primitives/content-fingerprint-dedup) — SHA-256 duplicate prevention.
+  Evaluate whether it prevents only exact duplicates or also helps identify semantic redundancy.
 
-**Step 2 — Compress before expanding**
+For each mechanism, classify it honestly as one or more of:
 
-Before proposing new recipes or skills, filter every idea against what already exists. If Claudeception already extracts skills from sessions, do not propose a second skill-extraction mechanism — propose a review gate for the one that exists. If Auto-Capture already persists session summaries, do not propose a second persistence layer — propose signal filtering for the one that exists.
+- **Simple persistence** — information is saved
+- **Retrieval** — information can later be found
+- **Workflow automation** — something runs without manual triggering
+- **Governed learning** — behavior improves through staged, reviewable, evidence-shaped accumulation that can be merged into active surfaces only after human review
 
-The real gap in most OB1 instances is not "more capture." It is governance: the system writes freely into the thoughts table but has no staging queue, no review surface, and no way to say "this thought is a candidate, not yet approved."
+Most systems have the first three. Very few have the fourth. Behavior changes count as learning only if they are evidence-shaped, staged, reviewed, and mergeable — not merely if more data was stored or retrieved.
 
-**Step 3 — Design the governed pipeline**
+Determine whether Claudeception actually closes that loop or only appears to.
 
-For each improvement mechanism, specify the full pipeline using OB1 artifacts:
+Step 2 — Compress before expanding
+
+Before proposing any new recipe, skill, table, or edge function, filter ideas against what already exists.
+
+- If Claudeception already extracts candidate skills, do not propose a second skill-extraction mechanism. Propose the missing governance surface around it.
+- If Auto-Capture already persists session summaries, do not propose another capture layer. Propose signal filtering, candidate ranking, contradiction checks, or staging.
+- If Life Engine already delivers proactive briefings, evaluate whether it can serve as a bounded maintenance ritual before proposing a new cadence mechanism.
+
+Assume the most likely missing layer is governance, not capture.
+
+Step 3 — Specify the governed pipeline
+
+For each improvement loop, specify the full pipeline in this form:
 
 | Stage | What happens | OB1 implementation | Who decides |
-|-------|-------------|-------------------|-------------|
-| **Detect** | Signal triggers (session end, cron, error pattern, repeated task) | Edge function, pg_cron job, or skill trigger | Automatic |
-| **Stage** | Candidate artifact produced (draft skill, proposed thought, suggested rule) | New row in a `staged_candidates` table with `status: pending` | Automatic |
-| **Review** | Human sees candidates and approves, rejects, or defers | Dashboard page, Slack thread, or MCP tool `review_candidates` | Human |
-| **Merge** | Approved candidate moves to active thoughts/skills/extensions | Edge function triggered by status change to `approved` | Script (after approval) |
+|-------|--------------|----------------------|-------------|
+| **Detect** | A signal appears: session end, repeated correction, error pattern, cron event, repeated task | Edge function, skill trigger, pg_cron job, MCP call | Automatic |
+| **Stage** | A candidate artifact is created | Row in staged_candidates or equivalent | Automatic |
+| **Review** | Human inspects and approves, rejects, or defers | Dashboard page, MCP tool, Slack thread, or review view | Human |
+| **Merge** | Approved artifact is promoted into an active surface | Script, edge function, or filesystem action | Script/edge function after explicit human approval |
 
-Nothing enters the system's active knowledge without passing through Review. The agent may stage aggressively; it may not merge autonomously.
+Nothing may enter active knowledge or active behavior without passing through Review.
 
-**Concrete OB1 implementation:** A `staged_candidates` table in Supabase with columns: `id`, `created_at`, `source` (which recipe/skill produced it), `category` (thought, skill, rule, config), `content`, `status` (pending/approved/rejected/deferred), `reviewed_at`, `reviewer_notes`. This is the governance layer most OB1 instances are missing.
+If the repo lacks this layer, propose a concrete implementation such as:
 
-**Step 4 — Design cadence, not continuous self-modification**
+`staged_candidates(id, created_at, source, category, content, status, reviewed_at, reviewer_notes, evidence_ref, merge_target, invalidation_condition)`
 
-Propose **bounded maintenance windows** rather than always-on self-modification:
+Where useful, also propose related fields such as confidence, supersedes_candidate_id, or contradicts_candidate_id.
 
-- An **orientation sip** (lightweight, repeatable, read-only — a quick MCP call or Slack command that shows: how many staged candidates, how many thoughts added this week, any capture gaps, recommended next action). Multiple per day is fine. This should feel like checking the weather, not running a planning sprint.
-- A **consolidation pass** (end-of-day or end-of-week — reviews staged candidates, checks for contradictions in recent thoughts, surfaces thoughts that may have aged out, prunes low-quality captures). This should feel like closing up shop, not starting new work.
+Step 4 — Design cadence, not continuous self-modification
 
-If Life Engine is already running, evaluate whether its proactive briefings can serve as the orientation sip. Extend existing recipes before building new ones.
+Design bounded maintenance rituals instead of always-on self-editing.
 
-**Step 5 — Handle contradictions and aging**
+Require at least two cadences:
 
-- When thoughts conflict (two entries about the same topic with different conclusions), **preserve both with a `contradicts` relationship** — do not silently overwrite. Contradictions are signal: they mean you changed your mind, learned something new, or captured context-dependent truth.
-- When knowledge has a shelf life, add a `valid_until` or `invalidation_condition` field ("holds while current job," "assumes API v3"). A pg_cron job can scan for expired conditions weekly and surface them for review.
+- **Orientation sip** — lightweight, read-only, safe to run multiple times per day; shows queue size, recent capture volume, contradiction alerts, and the next highest-leverage review action.
+- **Consolidation pass** — daily or weekly review of pending candidates, recent contradictions, low-value captures, and aging knowledge.
 
-**Step 6 — Propose a minimal first loop**
+If Life Engine or another existing mechanism can be extended to serve one of these roles, prefer that.
 
-Propose the **single smallest loop** that creates real governed learning in this OB1 instance. Favor:
-- One trigger, one candidate artifact, one review surface
-- Uses existing OB1 infrastructure (Supabase table, edge function, MCP tool, or skill)
-- Output is a row a human can read and approve
+Step 5 — Handle contradictions and aging
 
-Likely best first loop: **Add a review gate to Claudeception.** When Claudeception generates a new skill from a session, write it to `staged_candidates` with `category: skill` instead of directly to `.claude/skills/`. Surface pending skills in the dashboard or via a Slack message. The user approves or rejects. Approved skills move to the skills directory. This turns Claudeception from "autonomous skill generation" into "governed skill accumulation."
+If two thoughts or candidate conclusions conflict:
 
-Then propose 3-4 additional loops ranked by leverage, each with the same pipeline structure from Step 3.
+- preserve both
+- link them with an explicit contradiction relationship
+- never silently overwrite
 
-**Step 7 — Deliver three outputs**
+If knowledge is conditional or time-bounded, add fields such as:
 
-1. **One-paragraph diagnosis** of this OB1 instance's current recursive limitations — what Claudeception, Auto-Capture, Panning for Gold, and Life Engine actually do vs. what they appear to do
-2. **Minimal first implementation** — the single loop to build first, with specific Supabase tables, edge functions, MCP tools, or dashboard pages
-3. **Target architecture** — what the governed accumulation layer looks like when 3-4 loops are running, including how they interact and what prevents drift in the thoughts table
+- valid_until
+- invalidation_condition
+- assumption_scope
+
+A scheduled job may surface expired or questionable items for human review, but may not silently delete or rewrite active knowledge.
+
+Step 6 — Propose the minimal first loop
+
+Propose the single smallest governed learning loop that this OB1 instance should build first.
+
+Requirements:
+
+- one trigger
+- one candidate artifact
+- one review surface
+- one merge path
+- built mostly from existing OB1 components
+
+Default likely candidate: add a review gate to Claudeception.
+If Claudeception generates a new skill from a session, it should write a staged_candidates row with category = 'skill' instead of activating the skill immediately. Pending skills should appear in a review surface. Approved skills may then be promoted into the active skills directory or equivalent location.
+
+Then propose 3–4 additional loops, ranked by leverage, each using the same Detect → Stage → Review → Merge structure.
+
+Step 7 — Deliver five outputs
+
+1. **One-paragraph diagnosis** — Explain what Claudeception, Auto-Capture, Panning for Gold, Life Engine, Daily Digest, and dedup actually do today versus what they appear to do (with repo citations).
+2. **Gap map** — For each relevant mechanism, mark: already exists / partially exists / missing.
+3. **Minimal first implementation** — Name the exact table(s), function(s), skill(s), MCP tool(s), dashboard page(s), or file path(s) to build or modify first.
+4. **Target architecture** — Describe what the governed accumulation layer looks like when 3–4 loops are running together and how drift into the thoughts table is prevented.
+5. **Honest uncertainty list** — State what could not be verified from the repo and what assumptions would need confirmation.
 
 Constraints:
+
 - Do not confuse storing more thoughts with learning
 - Do not recommend unrestricted autonomous writes to the thoughts table
-- Every recursive output must be a visible artifact a human can inspect (row, file, Slack message)
-- Prefer extending existing recipes and skills over building new infrastructure
-- Be honest about what is missing — saying "I don't know" is better than guessing
+- Every recursive output must be human-visible and reviewable
+- Prefer extension over parallel invention
+- Be explicit about missing evidence
 ```
