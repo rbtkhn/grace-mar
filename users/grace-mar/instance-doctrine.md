@@ -41,6 +41,8 @@ What "good" looks like for Grace-Mar:
 | **Voice benchmark suite** | Voice stability and boundary compliance across model/prompt updates | `python scripts/run_voice_benchmark.py` — tone, age realism, abstention, bilingual, recall fidelity, overreach; use `-o results.json` for CI/trending |
 | **Continuity fidelity** | Bridge round-trip >= 80% | `python scripts/test_bridge_continuity.py` or `pytest tests/test_bridge_continuity.py` — no LLM needed; run before bridge format changes |
 | **Performance suite** | Local micro-benchmarks + optional I/O/LLM/HTTP tiers | `python scripts/run_perf_local.py` or `pytest tests/test_perf_local.py` (tier 1 in CI); full: `python scripts/run_perf_suite.py --tier 1 2 3`; see [perf-budgets.md](../../docs/perf-budgets.md) |
+| **Judgment probes** | Voice makes value-aligned choices under ambiguity, reflects IX-C tensions | `python scripts/run_judgment_probes.py` — 8 probes targeting documented personality tensions; committed/trait_aligned/tension_preserved/age_appropriate scoring; use `-o results.json` for trending |
+| **Identity delta** | Profile changes do not degrade Voice quality | `python scripts/eval_identity_delta.py -u grace-mar` — runs judgment + voice benchmarks, computes deltas against saved baseline; run after gate merges |
 
 ---
 
