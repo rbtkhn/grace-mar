@@ -1,6 +1,6 @@
 # The Islamabad Framework — five-point synthesis (operator)
 
-**Version:** v0.2 (2026-04-08)  
+**Version:** v0.3 (2026-04-08) — file renamed to `islamabad-framework.md`.  
 **Status:** WORK only — single negotiator-facing merge of the Islamabad plan (spine), U.S.-framed operational add-ons, session **optimized** enhancements (Jiang-inspired), corpus-conditioned commentary, and **optional public rhetoric** for momentum (not Holy See endorsement of this text). Not Predictive History lecture text, not Record, not Voice knowledge. **Do not publish** externally until factual claims are backed by dated primary sources.
 
 **Purpose:** One file carries **(1)** the Islamabad **plan commitment** + **legal reconciliation** as canonical spine, **(2)** Washington-shaped **operational specifics** as optional annex bullets, **(3)** **implementation-heavy / phase-B** enhancements from the optimized synthesis thread, **(4)** **verbatim** Jiang commentary from the intake original, and **(5)** a **roadmap** posture: the **Islamabad Framework** is not a treaty but a path toward one. The optimized table is **not** a fourth canonical text — it informs the enhancement annex only.

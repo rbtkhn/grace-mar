@@ -1,13 +1,13 @@
 # Consolidated 5-Point Reconciliation Plan — with annotated Jiang commentary
 
-**Working title:** **Islamabad Framework** — five-point roadmap toward a binding settlement (Islamabad talks, April 2026). Full **roadmap + public rhetoric preamble** lives in the [synthesized work-strategy doc](../../../../docs/skill-work/work-strategy/islamabad-five-point-synthesized-framework-2026-04-08.md).  
+**Working title:** **Islamabad Framework** — five-point roadmap toward a binding settlement (Islamabad talks, April 2026). Full **roadmap + public rhetoric preamble** lives in the [synthesized work-strategy doc](../../../../docs/skill-work/work-strategy/islamabad-framework.md).  
 **Document type:** Operator draft + **analytical overlay** — not Predictive History lecture text, not Record, not Voice knowledge.  
 **Commentary basis:** Jiang Xueqin’s **on-record** themes across **Geo-Strategy**, **Game Theory**, and **Interviews** corpus under `research/external/work-jiang/lectures/` (headers, at-a-glance, and recurring war-spine arguments). Commentary is **synthetic** (what he *would likely stress*), not attributed quotations unless you add timestamps later.
 
 **Related:**
 
 - [U.S.-framed five-point Gulf peace framework (2026-04-08)](../../../../docs/skill-work/work-strategy/us-framed-five-point-gulf-peace-framework-2026-04-08.md) — operator synthesis with legal anchors, transparency to Congress, and historical precedent columns (differs on withdrawal geometry, Hormuz fees, HEU disposition, sanctions sequencing).
-- [The Islamabad Framework — five-point synthesis (2026-04-08)](../../../../docs/skill-work/work-strategy/islamabad-five-point-synthesized-framework-2026-04-08.md) — roadmap preamble + rhetoric blend + merged spine + U.S. operational annex + Jiang optimization annex + quantitative rubric.
+- [The Islamabad Framework — five-point synthesis (2026-04-08)](../../../../docs/skill-work/work-strategy/islamabad-framework.md) — roadmap preamble + rhetoric blend + merged spine + U.S. operational annex + Jiang optimization annex + quantitative rubric.
 
 ---
 
