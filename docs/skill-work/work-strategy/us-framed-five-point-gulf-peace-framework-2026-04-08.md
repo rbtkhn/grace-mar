@@ -4,7 +4,10 @@
 
 **Purpose:** A single U.S.-framed package pairing **consolidated commitments**, **legal anchors and transparency mechanisms**, and **illustrative historical precedents** (modern/pre-1900 and ancient/medieval). Precedents are **analogies for framing**, not legal authority, until you attach citations and an analogy audit.
 
-**Related:** [Triangulation stub — Iran war (Pape × Postol)](triangulation-iran-war-pape-postol-stub.md) (technical and energy–nuclear threads).
+**Related:**
+
+- [Triangulation stub — Iran war (Pape × Postol)](triangulation-iran-war-pape-postol-stub.md) (technical and energy–nuclear threads).
+- [Consolidated 5-point reconciliation plan — Islamabad + Jiang commentary](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) (merged 10/15 framing, legal reconciliation, corpus-conditioned overlay).
 
 ---
 
