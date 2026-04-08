@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Great Books)
 
-**Begins after:** `gb-ch08`
+**Begins after:** `gb-ch09`
 
 Operator locks evaluation mode in book/VOLUME-V-GREAT-BOOKS.md (divergence-first default for Part I boxes).
 
@@ -134,5 +134,17 @@ Operator locks evaluation mode in book/VOLUME-V-GREAT-BOOKS.md (divergence-first
 - **Sprint:** TBD
 - **Outline:** `chapters-volume-v/gb-ch08/outline.md`
 - **Draft:** `chapters-volume-v/gb-ch08/draft.md`
+
+### gb-ch09 — Great Books #9: Dante (Re-Upload with Audio Fixed)
+
+- **Purpose:** Book chapter for Great Books lecture 9 — Volume V Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume V default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-v/gb-ch09/outline.md`
+- **Draft:** `chapters-volume-v/gb-ch09/draft.md`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_5_great_books`) — `python scripts/work_jiang/render_book_architecture.py`.*

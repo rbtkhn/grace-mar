@@ -261,6 +261,8 @@ chapter_map:
     source_ids: [gb-07]
   gb-ch08:
     source_ids: [gb-08]
+  gb-ch09:
+    source_ids: [gb-09]
   vi-ch01:
     source_ids: [vi-01]
   vi-ch02:

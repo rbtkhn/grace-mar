@@ -11,7 +11,7 @@ Production order and blockers for the Jiang book/site lane (Volume I — Geo-Str
 **Blocking:**
 - Close analysis gap for geo-01
 
-**Next action:** Draft chapter outline
+**Next action:** Draft ch01 prose from outline (hook + spine §1–6)
 
 ## ch02 — Geo-Strategy #2: Christian Zionism and the Middle East Conflict
 

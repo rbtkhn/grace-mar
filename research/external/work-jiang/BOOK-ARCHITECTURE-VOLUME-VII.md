@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Essays)
 
-**Begins after:** `es-ch31`
+**Begins after:** `es-ch33`
 
 Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first default for Part I boxes).
 
@@ -267,7 +267,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch19/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch19/draft.md`
 
-### es-ch20 — Secret History #10: The Great Revealing
+### es-ch20 — Secret History #9: The War of Heaven and Hell
 
 - **Purpose:** Book chapter for essay 20 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -279,7 +279,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch20/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch20/draft.md`
 
-### es-ch21 — Blowback Venezuela
+### es-ch21 — Secret History #10: The Great Revealing
 
 - **Purpose:** Book chapter for essay 21 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -291,7 +291,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch21/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch21/draft.md`
 
-### es-ch22 — Minnesota Burning
+### es-ch22 — Blowback Venezuela
 
 - **Purpose:** Book chapter for essay 22 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -303,7 +303,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch22/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch22/draft.md`
 
-### es-ch23 — Iran, Greenland, and Canada
+### es-ch23 — Minnesota Burning
 
 - **Purpose:** Book chapter for essay 23 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -315,7 +315,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch23/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch23/draft.md`
 
-### es-ch24 — Carney’s Speech and Trump’s Letter
+### es-ch24 — Iran, Greenland, and Canada
 
 - **Purpose:** Book chapter for essay 24 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -327,7 +327,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch24/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch24/draft.md`
 
-### es-ch25 — Twilight of the Liberal Elite
+### es-ch25 — Carney’s Speech and Trump’s Letter
 
 - **Purpose:** Book chapter for essay 25 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -339,7 +339,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch25/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch25/draft.md`
 
-### es-ch26 — Welcome to the Rupture
+### es-ch26 — Twilight of the Liberal Elite
 
 - **Purpose:** Book chapter for essay 26 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -351,7 +351,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch26/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch26/draft.md`
 
-### es-ch27 — Countdown to Iran
+### es-ch27 — Welcome to the Rupture
 
 - **Purpose:** Book chapter for essay 27 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -363,7 +363,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch27/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch27/draft.md`
 
-### es-ch28 — World War III Begins
+### es-ch28 — Countdown to Iran
 
 - **Purpose:** Book chapter for essay 28 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -375,7 +375,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch28/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch28/draft.md`
 
-### es-ch29 — The Acceleration
+### es-ch29 — World War III Begins
 
 - **Purpose:** Book chapter for essay 29 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -387,7 +387,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch29/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch29/draft.md`
 
-### es-ch30 — Vietnam Redux
+### es-ch30 — The Acceleration
 
 - **Purpose:** Book chapter for essay 30 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -399,7 +399,7 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Outline:** `chapters-volume-vii/es-ch30/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch30/draft.md`
 
-### es-ch31 — The US-Iran End Game
+### es-ch31 — Vietnam Redux
 
 - **Purpose:** Book chapter for essay 31 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
 - **Kind:** analysis
@@ -410,5 +410,30 @@ Operator locks evaluation mode in book/VOLUME-VII-ESSAYS.md (divergence-first de
 - **Sprint:** TBD
 - **Outline:** `chapters-volume-vii/es-ch31/outline.md`
 - **Draft:** `chapters-volume-vii/es-ch31/draft.md`
+
+### es-ch32 — The US-Iran End Game
+
+- **Purpose:** Book chapter for essay 32 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-vii/es-ch32/outline.md`
+- **Draft:** `chapters-volume-vii/es-ch32/draft.md`
+
+### es-ch33 — World War Trump
+
+- **Purpose:** Book chapter for essay 33 — Volume VII Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VII default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-vii/es-ch33/outline.md`
+- **Draft:** `chapters-volume-vii/es-ch33/draft.md`
+- **Prediction IDs:** `jiang-ES33-001, jiang-ES33-002, jiang-ES33-003`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_7_essays`) — `python scripts/work_jiang/render_book_architecture.py`.*

@@ -154,7 +154,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-19; then draft chapter outline
 
-## es-ch20 — Secret History #10: The Great Revealing
+## es-ch20 — Secret History #9: The War of Heaven and Hell
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -162,7 +162,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-20; then draft chapter outline
 
-## es-ch21 — Blowback Venezuela
+## es-ch21 — Secret History #10: The Great Revealing
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -170,7 +170,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-21; then draft chapter outline
 
-## es-ch22 — Minnesota Burning
+## es-ch22 — Blowback Venezuela
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -178,7 +178,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-22; then draft chapter outline
 
-## es-ch23 — Iran, Greenland, and Canada
+## es-ch23 — Minnesota Burning
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -186,7 +186,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-23; then draft chapter outline
 
-## es-ch24 — Carney’s Speech and Trump’s Letter
+## es-ch24 — Iran, Greenland, and Canada
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -194,7 +194,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-24; then draft chapter outline
 
-## es-ch25 — Twilight of the Liberal Elite
+## es-ch25 — Carney’s Speech and Trump’s Letter
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -202,7 +202,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-25; then draft chapter outline
 
-## es-ch26 — Welcome to the Rupture
+## es-ch26 — Twilight of the Liberal Elite
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -210,7 +210,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-26; then draft chapter outline
 
-## es-ch27 — Countdown to Iran
+## es-ch27 — Welcome to the Rupture
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -218,7 +218,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-27; then draft chapter outline
 
-## es-ch28 — World War III Begins
+## es-ch28 — Countdown to Iran
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -226,7 +226,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-28; then draft chapter outline
 
-## es-ch29 — The Acceleration
+## es-ch29 — World War III Begins
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -234,7 +234,7 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-29; then draft chapter outline
 
-## es-ch30 — Vietnam Redux
+## es-ch30 — The Acceleration
 
 - **Status:** outline_pending
 - **Owner:** operator
@@ -242,12 +242,28 @@ Nested `volume_7_essays.book.chapters` — see `docs/skill-work/work-jiang/volum
 
 **Next action:** Complete analysis memo for es-30; then draft chapter outline
 
-## es-ch31 — The US-Iran End Game
+## es-ch31 — Vietnam Redux
 
 - **Status:** outline_pending
 - **Owner:** operator
 - **Sprint:** TBD
 
 **Next action:** Complete analysis memo for es-31; then draft chapter outline
+
+## es-ch32 — The US-Iran End Game
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for es-32; then draft chapter outline
+
+## es-ch33 — World War Trump
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Draft chapter outline; wire quotes + comparative layer; adjudicate jiang-ES33-* per rubric
 
 *Generated from `metadata/book-architecture.yaml` (`volume_7_essays`) — same command as Volume I queue.*

@@ -47,5 +47,5 @@ Added [book/BOOK-QUALITY-DOCTRINE.md](book/BOOK-QUALITY-DOCTRINE.md) as a contin
 
 ## Volume V (Great Books) — next ingest
 
-Handoff for wiring `great-books` / `gb-*` / `lectures/great-books-NN-*.md` and ingesting channel **Great Books** (historical doc through **#7**; corpus now **#1–#8**): [HANDOFF-volume-v-great-books-ingest.md](HANDOFF-volume-v-great-books-ingest.md).
+Handoff for wiring `great-books` / `gb-*` / `lectures/great-books-NN-*.md` and ingesting channel **Great Books** (corpus **#1–#9**; **gb-09** Dante re-upload `4EZUrGPgAos` ingested 2026-04-08): [HANDOFF-volume-v-great-books-ingest.md](HANDOFF-volume-v-great-books-ingest.md).
 3. Decide chapter-end box type per volume (prediction, divergence, or a dedicated box template).

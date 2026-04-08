@@ -2026,6 +2026,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: gb-09
+  video_id: 4EZUrGPgAos
+  title: 'Great Books #9: Dante (Re-Upload with Audio Fixed)'
+  canonical_url: https://www.youtube.com/watch?v=4EZUrGPgAos
+  publication_date: 2026-04-08
+  lecture_path: lectures/great-books-09-dante-divine-comedy-intro.md
+  analysis_path: analysis/4EZUrGPgAos-great-books-09-analysis.md
+  series: great-books
+  episode: 9
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: not_started
+    chapter_mapping: pending
 - source_id: vi-01
   video_id: XRk5VSEzJ4Y
   title: 'Interviews #1: Cyrus Janssen — The World Is About to Change'

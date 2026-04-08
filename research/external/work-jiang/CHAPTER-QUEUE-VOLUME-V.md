@@ -66,4 +66,12 @@ Nested `volume_5_great_books.book.chapters` — see `docs/skill-work/work-jiang/
 
 **Next action:** Complete analysis memo for gb-08; then draft chapter outline
 
+## gb-ch09 — Great Books #9: Dante (Re-Upload with Audio Fixed)
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for gb-09; then draft chapter outline
+
 *Generated from `metadata/book-architecture.yaml` (`volume_5_great_books`) — same command as Volume I queue.*

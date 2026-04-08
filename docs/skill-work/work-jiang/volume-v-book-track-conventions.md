@@ -7,7 +7,7 @@ Operator WORK — Predictive History. Canonical prose spec: [`research/external/
 | Item | Convention |
 |------|------------|
 | YAML block key | `volume_5_great_books` under [`metadata/book-architecture.yaml`](../../../research/external/work-jiang/metadata/book-architecture.yaml) |
-| Chapter IDs | `gb-ch01` … `gb-ch08` — one chapter per `gb-NN` source row (two-digit episode) |
+| Chapter IDs | `gb-ch01` … `gb-ch09` (extensible) — one chapter per `gb-NN` source row (two-digit episode) |
 | `source_ids` | Exactly `[gb-NN]` matching [`metadata/sources.yaml`](../../../research/external/work-jiang/metadata/sources.yaml) |
 | Evidence packs | `evidence-packs/gb-chNN.md` |
 | Outline / draft paths | `chapters-volume-v/gb-chNN/outline.md` and `draft.md` |

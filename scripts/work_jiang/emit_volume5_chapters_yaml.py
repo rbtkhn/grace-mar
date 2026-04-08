@@ -20,9 +20,10 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / "research" / "external" / "work-jiang"
 
 _KIND_EP: dict[int, str] = {i: "exposition" for i in range(1, 5)}
-_KIND_EP.update({i: "analysis" for i in range(5, 9)})
+# Episodes 5+ are lecture-analysis blocks (Great Books classroom depth).
+_KIND_EP.update({i: "analysis" for i in range(5, 100)})
 
-_PRIORITY_EP: dict[int, str] = {i: "medium" for i in range(1, 9)}
+_PRIORITY_EP: dict[int, str] = {i: "medium" for i in range(1, 100)}
 
 
 def main() -> int:

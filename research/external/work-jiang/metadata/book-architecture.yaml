@@ -2803,7 +2803,7 @@ volume_5_great_books:
     instruction: End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md — divergence IDs from divergences.jsonl where linked; not chapter_end_predictions (Volume I only) unless Part II policy adopts prediction adjudication.
   part_2:
     title: Part II — method TBD (Great Books)
-    after_chapter: gb-ch08
+    after_chapter: gb-ch09
     description: Operator locks evaluation mode in book/VOLUME-V-GREAT-BOOKS.md (divergence-first default for Part I boxes).
   book:
     chapters:
@@ -2980,6 +2980,28 @@ volume_5_great_books:
       next_action: Complete analysis memo for gb-08; then draft chapter outline
       outline_path: chapters-volume-v/gb-ch08/outline.md
       draft_path: chapters-volume-v/gb-ch08/draft.md
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: gb-ch09
+      title: 'Great Books #9: Dante (Re-Upload with Audio Fixed)'
+      purpose: Book chapter for Great Books lecture 9 — Volume V Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume V default).
+      kind: analysis
+      priority: medium
+      target_words: 2800
+      source_ids:
+      - gb-09
+      analysis_ids: []
+      prediction_ids: []
+      divergence_ids: []
+      applications: []
+      status: outline_pending
+      owner: operator
+      sprint: TBD
+      blocking: []
+      next_action: Complete analysis memo for gb-09; then draft chapter outline
+      outline_path: chapters-volume-v/gb-ch09/outline.md
+      draft_path: chapters-volume-v/gb-ch09/draft.md
       analysis_ready: false
       quotes_ready: false
       requires_prediction_review: false

@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Game Theory)
 
-**Begins after:** `gt-ch17`
+**Begins after:** `gt-ch19`
 
 Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-first default for Part I boxes).
 
@@ -242,5 +242,29 @@ Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-firs
 - **Sprint:** TBD
 - **Outline:** `chapters-volume-iv/gt-ch17/outline.md`
 - **Draft:** `chapters-volume-iv/gt-ch17/draft.md`
+
+### gt-ch18 — Game Theory #18: Trump World Order
+
+- **Purpose:** Book chapter for Game Theory lecture 18 — Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume IV default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-iv/gt-ch18/outline.md`
+- **Draft:** `chapters-volume-iv/gt-ch18/draft.md`
+
+### gt-ch19 — Game Theory #19: The Hollywood-Pentagon Complex
+
+- **Purpose:** Book chapter for Game Theory lecture 19 — Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume IV default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-iv/gt-ch19/outline.md`
+- **Draft:** `chapters-volume-iv/gt-ch19/draft.md`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_4_game_theory`) — `python scripts/work_jiang/render_book_architecture.py`.*
