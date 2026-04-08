@@ -24,8 +24,17 @@
 
 _(Append below this line.)_
 
+### 2026-04-07
+
+- **Interviews #13 ingested (PBD Podcast #772):** `vi-13` / `vi-ch13` — `lectures/interviews-13-pbd-podcast-772-jiang-xueqin.md` (operator transcript from grace-mar ingest; one speaker label fix); YouTube `Wio--7_GIOs`, upload date 20260407; VTT `youtube-channels/valuetainment-network/transcripts/Wio--7_GIOs.en.vtt`; draft analysis `analysis/Wio--7_GIOs-interviews-13-analysis.md`; evidence pack `evidence-packs/vi-ch13.md`; `book-architecture.yaml` (`part_2.after_chapter: vi-ch13`), `source-map.yaml`, `CHAPTER-QUEUE-VOLUME-VI.md` (vi-ch12 + vi-ch13 sections), `ANALYSIS-BACKLOG.md` row.
+- **`normalize_analysis_frontmatter.py`:** Skips `essay-*-analysis.md`, `interviews-NN-analysis.md` (no leading video id), `*-civmem-analysis.md`, `*-psy-hist-analysis.md`, and Substack front matter (`source_kind` / `series: substack`); adds `--only-glob` (fnmatch on basename) so `--write` no longer clobbers Volume VII essay YAML.
+
 ### 2026-04-06
 
 - **Volume VII Substack — World War Trump (initial ingest, numbering superseded):** First landed as `es-32` / `es-ch32`; after **SH #9** insert see bullets below (`es-33` / `es-ch33`, `jiang-ES33-*`). Canonical: [World War Trump](https://predictivehistory.substack.com/p/world-war-trump).
 - **World War Trump — analysis + predictions:** Filled `essay-world-war-trump-analysis.md` (thesis, terms, 13 claims, tensions, CIV-MEM stub). Registry predictions renamed to `jiang-ES33-001`–`003` after **Secret History #9** essay insert renumbered Volume VII (`es-33` / `es-ch33` for World War Trump). `book-architecture.yaml` `es-ch33` lists those `prediction_ids`.
 - **Volume VII — Secret History #9 (Substack) ingested:** `substack/essays/secret-history-10-the-war-of-heaven.md` (canonical URL `/p/secret-history-10-the-war-of-heaven`; post title **#9**), `analysis/essay-secret-history-10-the-war-of-heaven-analysis.md`, crosswalk + arc in `substack/README.md`; `es-20` / `es-ch20`. **`build_source_registry.py`:** merge preserved fields by **`lecture_path`** (not `source_id`); **skip `publication_date` merge** for `substack/essays/*`. Registry + `emit_volume7` + `source-map` `es-ch33`; evidence packs `es-ch20`, `es-ch32`, `es-ch33`.
+
+### 2026-04-08
+
+- **Game Theory #19 ingested:** `gt-19` / `gt-ch19` — `lectures/game-theory-19-the-hollywood-pentagon-complex.md` (YouTube auto-captions → plain text; VTT `youtube-channels/predictive-history/transcripts/0HYET47Cc-E.en.auto.vtt`); `sources.yaml`, `source-map.yaml`, `book-architecture.yaml` (`part_2.after_chapter: gt-ch19`); stub analysis `analysis/0HYET47Cc-E-game-theory-19-analysis.md` (`status: missing`); evidence pack `evidence-packs/gt-ch19.md`; `ANALYSIS-BACKLOG.md` row; `CHANNEL-VIDEO-INDEX.md` +1 row; `VOLUME-IV-GAME-THEORY.md` corpus note. `validate_work_jiang.py` PASS; `render_status_dashboard.py` refreshed `STATUS.md`.

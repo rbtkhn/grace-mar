@@ -1,7 +1,23 @@
-"""Ensure YAML front matter on analysis memos; optional --write."""
+"""Ensure YAML front matter on analysis memos; optional --write.
+
+Skips (never overwrites):
+  - ``essay-*-analysis.md`` (Volume VII Substack schema: ``source_kind``, ``es-NN``, etc.)
+  - ``interviews-NN-analysis.md`` when the filename has no leading YouTube id (registry uses
+    ``{video_id}-interviews-NN-analysis.md`` for wired interviews)
+  - ``*-civmem-analysis.md``, ``*-psy-hist-analysis.md`` (lane-specific front matter)
+  - Existing front matter with ``source_kind: substack`` or ``series: substack``
+
+Use ``--only-glob '*.md'`` to limit which files are considered (fnmatch on basename).
+
+Examples::
+
+  python3 scripts/work_jiang/normalize_analysis_frontmatter.py
+  python3 scripts/work_jiang/normalize_analysis_frontmatter.py --write --only-glob '*-game-theory-*-analysis.md'
+"""
 from __future__ import annotations
 
 import argparse
+import fnmatch
 import re
 from pathlib import Path
 
@@ -14,6 +30,10 @@ SOURCES_PATH = WORK_DIR / "metadata" / "sources.yaml"
 
 VIDEO_PREFIX = re.compile(r"^([A-Za-z0-9_-]{11})-")
 CANONICAL_RE = re.compile(r"\*\*canonical_url:\*\*\s*<?(https?://[^\s>]+)>?", re.I)
+ESSAY_ANALYSIS = re.compile(r"^essay-.+-analysis\.md$", re.I)
+INTERVIEWS_NO_VIDEO_PREFIX = re.compile(r"^interviews-\d+-analysis\.md$", re.I)
+CIVMEM_ANALYSIS = re.compile(r".+-civmem-analysis\.md$", re.I)
+PSYHIST_ANALYSIS = re.compile(r".+-psy-hist-analysis\.md$", re.I)
 
 
 def load_sources() -> dict[str, dict]:
@@ -40,6 +60,29 @@ def extract_canonical_url(body: str) -> str:
 
 def has_frontmatter(text: str) -> bool:
     return text.startswith("---\n") or text.startswith("---\r\n")
+
+
+def memo_kind_skip_filename(name: str) -> bool:
+    """True when this basename uses a non-video analysis schema we must not clobber."""
+    if ESSAY_ANALYSIS.match(name):
+        return True
+    if INTERVIEWS_NO_VIDEO_PREFIX.match(name):
+        return True
+    if CIVMEM_ANALYSIS.match(name):
+        return True
+    if PSYHIST_ANALYSIS.match(name):
+        return True
+    return False
+
+
+def is_substack_front_matter(fm: dict | None) -> bool:
+    if not fm or not isinstance(fm, dict):
+        return False
+    if str(fm.get("source_kind") or "").strip().lower() == "substack":
+        return True
+    if str(fm.get("series") or "").strip().lower() == "substack":
+        return True
+    return False
 
 
 def parse_frontmatter(text: str) -> tuple[dict | None, str]:
@@ -88,8 +131,17 @@ def build_frontmatter(path: Path, by_vid: dict[str, dict], body: str) -> dict:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
     parser.add_argument("--write", action="store_true", help="Write patched files.")
+    parser.add_argument(
+        "--only-glob",
+        default="*.md",
+        metavar="PATTERN",
+        help="fnmatch pattern against analysis basename (default: *.md)",
+    )
     args = parser.parse_args()
 
     by_vid = load_sources()
@@ -97,8 +149,14 @@ def main() -> int:
     for path in sorted(ANALYSIS.glob("*.md")):
         if path.name == ".gitkeep":
             continue
+        if not fnmatch.fnmatch(path.name, args.only_glob):
+            continue
+        if memo_kind_skip_filename(path.name):
+            continue
         text = path.read_text(encoding="utf-8")
         fm, body = parse_frontmatter(text)
+        if is_substack_front_matter(fm):
+            continue
         if fm is not None and isinstance(fm, dict) and fm.get("video_id"):
             continue
         if fm is None and has_frontmatter(text):
