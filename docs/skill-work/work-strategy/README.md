@@ -37,6 +37,7 @@
 | **[modules/verifiable-personal-ai/](modules/verifiable-personal-ai/manifest.md)** | Operator deliberation receipts — auditable pipeline trace (WORK only; not crypto proof). |
 | **[work-strategy-rome/](work-strategy-rome/README.md)** | WORK project: Vatican / papal soft power and moral-diplomatic signals vs multipolar and Western-legitimacy themes ([manifest](work-strategy-rome/manifest.md), pre-skill [ROME-PASS](work-strategy-rome/ROME-PASS.md)). |
 | **[founding-influences-graeco-roman-vs-english.md](founding-influences-graeco-roman-vs-english.md)** | Working paper: classical-republic vs English constitutional idiom on a 32-unit founding corpus (rubric + lexical methods; `scripts/founding_lexical_compare.py`). Not Record. |
+| **[islamabad-framework.md](islamabad-framework.md)** | **Islamabad Framework** — operator roadmap (not treaty): five-point synthesis for public propagation, U.S./Jiang annexes, rhetoric preface; see also [us-framed-five-point-gulf-peace-framework-2026-04-08.md](us-framed-five-point-gulf-peace-framework-2026-04-08.md) and [work-jiang intake](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md). WORK only. |
 
 ---
 
