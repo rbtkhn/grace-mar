@@ -2,8 +2,18 @@
 
 *April 2026*
 
-The Islamabad Framework is a roadmap toward a negotiated settlement of the Gulf crisis — not a treaty, but a practical path the parties can walk together. It weaves Iranian, American, regional, and international peace proposals into six steps: end the fighting, keep the Strait of Hormuz open, verify that Iran's nuclear program stays peaceful, lift sanctions as compliance is confirmed, renounce interference and settle disputes by law, and sequence it all so that no side gives without receiving.
+The Islamabad Framework is a roadmap toward a negotiated settlement of the conflict between the United States and Iran — not a treaty, but a sequenced path converting mutual demands into reciprocal commitments grounded in the UN Charter, the Non-Proliferation Treaty, and the law of the sea.
 
-The framework is grounded in the United Nations Charter, the Non-Proliferation Treaty, and the law of the sea. It asks that each step be transparent enough for citizens and their elected representatives to judge whether governments are keeping their word. It is offered in the spirit of dialogue for peace that Pope Leo XIV has urged for the region; the Holy See has not reviewed this text.
+**Ceasefire and de-escalation.** All parties cease hostilities across Iran, Lebanon, and related theaters, retaining only the right of genuine self-defense. Attacks on civilians stop immediately. De-escalation measures — force repositioning, suspension of kinetic, economic, and covert provocations — are monitored and reported to legislative bodies.
+
+**Strait of Hormuz.** The waterway remains open to shipping and overflight without discrimination. Iran and Oman share guardianship. No transit fees during an initial stabilization period; a neutral mechanism confirms compliance.
+
+**Nuclear verification.** Iran's program stays exclusively peaceful. Verification proceeds reciprocally and in parallel with broader de-escalation — phased, mutual confidence-building rather than one-sided concessions.
+
+**Sanctions relief.** Nuclear-related sanctions ease in defined phases as compliance is verified. An implementation schedule distinguishes executive, legislative, and UN actions so that citizens and representatives can hold governments accountable. Reimposition provisions are narrow and evidence-based.
+
+**Non-interference and international support.** The parties renounce unlawful interference — including covert regime change and proxy warfare — and commit to resolving disputes through diplomacy. The final package seeks UN Security Council endorsement; regional consultations support but do not delay the core settlement.
+
+**Sequencing.** Seven steps move from immediate ceasefire through sanctions relief to normalization, governed by one principle: reciprocity — no party delivers while the other merely promises.
 
 The full document is available at [islamabad-framework.md](islamabad-framework.md).
