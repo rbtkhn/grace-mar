@@ -36,7 +36,7 @@ The parties reaffirm sovereign equality, non-intervention, and peaceful dispute 
 
 The parties should seek UN Security Council endorsement for the final package and keep legislative bodies informed of monitoring outcomes. Parallel consultations with regional states should support, not delay, the central objectives.
 
-## 6 — Implementation Sequence
+## Implementation Sequence
 
 1. Immediate cessation of hostilities and attacks on civilians.
 2. Reciprocal, monitored de-escalation measures.
