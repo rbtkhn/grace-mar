@@ -214,6 +214,14 @@
 - **Tensions:** Near-term **negotiability** vs **stability** (annex B load); **capture gap** on companion Record activity is orthogonal to this artifact.
 - **Lesson → §III:** _TBD_ (promote only if a recurring heuristic emerges across briefs.)
 
+### 2026-04-08 — Islamabad Framework v0.6 (diplomatic working document + dual-audience)
+
+- **Context:** Operator decided `islamabad-framework.md` should serve as the official diplomatic working document, not a short public summary. Alternative draft (formal register, six sections with §6 implementation sequence, ~1,200 words) adopted as base.
+- **Dual-audience architecture:** Three pressure points (legislative oversight, public transparency, democratic accountability) plus one light touch (genuine self-defense echo) integrated into standard diplomatic language. A diplomat reads process design; a US domestic audience reads validation of war-powers / congressional-oversight positions. Fiscal / consumer language and civilian-protection economic riders explicitly skipped (failed diplomatic-invisibility filter).
+- **File architecture change:** `islamabad-framework.md` upgraded from short propagation text to diplomatic working document. Operator edition (`islamabad-framework-operator-edition.md`) retains annexes, Jiang commentary, rubric, and Leo XIV rhetoric blend. Short-form propagation text (cover note / executive summary) to be created separately.
+- **Leo XIV reference:** Named papal reference moved from public file to operator edition only. Public file uses generic moral-appeal disclaimer to reduce institutional-endorsement risk.
+- **Version:** operator-edition bumped to v0.6.
+
 *(Append further dated entries below. Do not rewrite past entries except dated annotations.)*
 
 ## V. Capabilities index

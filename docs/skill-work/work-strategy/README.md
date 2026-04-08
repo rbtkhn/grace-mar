@@ -37,8 +37,9 @@
 | **[modules/verifiable-personal-ai/](modules/verifiable-personal-ai/manifest.md)** | Operator deliberation receipts — auditable pipeline trace (WORK only; not crypto proof). |
 | **[work-strategy-rome/](work-strategy-rome/README.md)** | WORK project: Vatican / papal soft power and moral-diplomatic signals vs multipolar and Western-legitimacy themes ([manifest](work-strategy-rome/manifest.md), pre-skill [ROME-PASS](work-strategy-rome/ROME-PASS.md)). |
 | **[founding-influences-graeco-roman-vs-english.md](founding-influences-graeco-roman-vs-english.md)** | Working paper: classical-republic vs English constitutional idiom on a 32-unit founding corpus (rubric + lexical methods; `scripts/founding_lexical_compare.py`). Not Record. |
-| **[islamabad-framework.md](islamabad-framework.md)** | **Islamabad Framework** — public-facing roadmap (not treaty): preamble + five plain paragraphs for circulation. WORK only. |
-| **[islamabad-framework-operator-edition.md](islamabad-framework-operator-edition.md)** | Same framework — **operator edition**: annexes, Jiang commentary block, rubric / phase notes, distribution checklist. See [us-framed-five-point-gulf-peace-framework-2026-04-08.md](us-framed-five-point-gulf-peace-framework-2026-04-08.md) and [work-jiang intake](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md). WORK only. |
+| **[islamabad-framework.md](islamabad-framework.md)** | **Islamabad Framework** — diplomatic working document (not treaty): six sections, formal register, §6 implementation sequence, dual-audience architecture. WORK only. |
+| **[islamabad-framework-summary.md](islamabad-framework-summary.md)** | **Islamabad Framework — summary**: short cover note (~150 words) for social media, email, and channel propagation. Preserves the Leo XIV named reference. WORK only. |
+| **[islamabad-framework-operator-edition.md](islamabad-framework-operator-edition.md)** | Same framework — **operator edition**: annexes, Jiang commentary block, Leo XIV rhetoric blend, rubric / phase notes, distribution checklist. See [us-framed-five-point-gulf-peace-framework-2026-04-08.md](us-framed-five-point-gulf-peace-framework-2026-04-08.md) and [work-jiang intake](../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md). WORK only. |
 
 ---
 
