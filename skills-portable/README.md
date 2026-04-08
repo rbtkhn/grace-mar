@@ -26,7 +26,7 @@ python3 scripts/sync_portable_skills.py --verify
 2. Add your own appendix: paths to *your* policy docs, account rules, and compliance notes.
 3. Keep `description` as **one line** (many hosts break multi-line YAML).
 
-**Spec:** [_schema.md](_schema.md) · **Manifest:** [manifest.yaml](manifest.yaml)
+**Spec:** [_schema.md](_schema.md) · **Manifest:** [manifest.yaml](manifest.yaml) · **Validate:** `python3 scripts/validate_skills.py` (default check after skill edits).
 
 ---
 

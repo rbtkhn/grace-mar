@@ -34,3 +34,14 @@ skills-portable/<skill-name>/
 ## Versioning
 
 Bump `version` in portable `SKILL.md` when methodology meaningfully changes; re-run sync before commit.
+
+## Portable core vs host glue (habit)
+
+When adding or extending skills, label the layer explicitly:
+
+| Layer | What it is | Examples |
+|-------|------------|----------|
+| **Portable core** | Reusable methodology; works across hosts after sync | `skills-portable/<name>/SKILL.md` body, placeholders, `manifest.yaml` entries |
+| **Host glue** | Editor- or instance-specific wiring | `.cursor/skills/.../CURSOR_APPENDIX.md`, Cursor-only paths, merge scripts named in appendix only |
+
+This mirrors the open-connector vs proprietary-surface pattern: keep **protocol** (portable + validator) in the portable tree; keep **single-host UX** in generated host files. Default path for checks: `python3 scripts/validate_skills.py`; portable listing stays aligned with [README.md](README.md) discovery ladder.

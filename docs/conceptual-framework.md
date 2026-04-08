@@ -190,6 +190,8 @@ Mind holds the reins; the Record reflects; the Voice renders. The Record does no
 
 **Cognitive flow:** Mind → thinks, speaks, creates → **WORK execution** captures, drafts, stages → Mind approves → Record updates → Voice (when queried) renders Record in conversation → Mind receives, reflects.
 
+**Contrast — vendor “persistent agent” layers vs this design:** Commercial stacks may optimize for stickiness of an *opaque behavioral model* (what the agent inferred from watching you work). This instance optimizes for something different: **reviewable identity artifacts** (gated merges into SELF and EVIDENCE), **companion merge authority**, and continuity surfaces (e.g. MEMORY) that are explicitly **non-authoritative** versus the Record. Portability here means **legibility and consent** in versioned text, not export of an embedding-only profile.
+
 **Design implications:**
 - **Mind sovereignty** — The Record must never command. It records and reflects. Mind gates and disposes.
 - **WORK execution below merge** — The WORK execution layer proposes and stages; it does not merge identity. Keeps execution power from reading as a fourth part of the triad.
