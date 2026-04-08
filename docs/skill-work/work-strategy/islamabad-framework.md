@@ -4,60 +4,46 @@
 
 ## Preamble
 
-This document is a roadmap toward a negotiated settlement, not a treaty text. It addresses a conflict between states whose civilizational memories run deep — Iran's sovereignty on the plateau since Cyrus, American constitutional order since Philadelphia — and which, like earlier parity contests between comparable powers, will yield to diplomacy or to mutual exhaustion, not to decisive force. It reconciles the principal proposals advanced by the parties — including Iran's revised plan and the United States' revised plan — into a single framework, setting out a practical path to end hostilities, preserve freedom of navigation through the Strait of Hormuz, keep Iran's nuclear program exclusively peaceful under effective verification, lift nuclear-related sanctions in phases as compliance is confirmed, and anchor the package in the Charter of the United Nations, the Treaty on the Non-Proliferation of Nuclear Weapons, and the applicable law of the sea. The framework is sequential and reciprocal: its steps should proceed in parallel where feasible and in agreed sequence where necessary, with sufficient transparency at each stage for the peoples of the affected states to assess whether their governments are meeting the commitments made on their behalf. References to religious or moral appeals for peace do not imply institutional endorsement by any outside authority.
+This is a roadmap toward a negotiated settlement, not a treaty text. It addresses a conflict between states whose civilizational memories run deep — Iran's sovereignty since Cyrus, American constitutional order since Philadelphia — and which, like earlier parity contests, will yield to diplomacy or to mutual exhaustion, not to decisive force. It reconciles the principal proposals advanced by the parties into a single framework: end hostilities, preserve navigation through the Strait of Hormuz, keep Iran's nuclear program exclusively peaceful under verification, lift sanctions as compliance is confirmed, and anchor the package in the UN Charter, the Non-Proliferation Treaty, and the law of the sea. The steps are sequential and reciprocal, with transparency sufficient for citizens to assess whether their governments are meeting commitments. References to moral appeals for peace do not imply endorsement by any outside authority.
 
 ## 1 — Cessation of Hostilities and Immediate De-Escalation
 
-All parties shall cease hostilities and threats of force, except as permitted under international law in the exercise of genuine self-defense. This cessation shall apply across Iran, Lebanon, and related theaters directly connected to the conflict.
+All parties shall cease hostilities and threats of force, except in the exercise of genuine self-defense under international law, across Iran, Lebanon, and related theaters. Attacks on civilians and civilian infrastructure shall cease immediately. The parties shall refrain from actions — kinetic, economic, or covert — whose purpose is to provoke renewed escalation.
 
-All attacks on civilians, civilian infrastructure, and protected objects shall cease immediately. The parties shall further refrain from actions — whether kinetic, economic, or covert — whose evident purpose is to provoke renewed escalation during the implementation period.
+The parties shall negotiate reciprocal, monitored de-escalation measures, which may include force repositioning, stand-off distances, and suspension of specified strike activities. Terms should be communicated to the relevant legislative bodies and published to the extent consistent with operational security. The objective is durable cessation, not a pause permitting rearmament: the Iran–Iraq precedent — eight years of attrition ending in stalemate — shows that truces without institutional anchoring do not hold.
 
-To reduce the practical risk of renewed attack, the parties shall negotiate reciprocal and monitored de-escalation measures, which may include phased force repositioning, agreed operational stand-off distances, suspension of specified strike activities, and other military confidence-building arrangements. The terms of such arrangements should be communicated to the relevant legislative bodies of the parties and published to the extent consistent with operational security, so that democratic oversight accompanies operational implementation. The objective is a durable cessation of war risk, not a temporary pause that permits rearmament under cover of diplomacy: the Iran–Iraq precedent — eight years of attrition ending in stalemate without a formal peace — demonstrates that truces without institutional anchoring do not hold.
+## 2 — Security of Navigation in the Strait of Hormuz
 
-## 2 — Security of Navigation and Overflight in the Strait of Hormuz
+The Strait of Hormuz — where Iran holds the northern littoral and Oman's Musandam peninsula the southern shore, a chokepoint so narrow ancient geographers recorded one could see across it — shall remain open to shipping and overflight without discrimination, consistent with the UN Charter and the law of the sea. The Gulf has been a trade corridor since the Achaemenid period; this provision safeguards an interest older than oil.
 
-The Strait of Hormuz — where Iran holds the entire northern littoral and Oman's Musandam peninsula forms the southern shore, a chokepoint so narrow that ancient geographers recorded one could see across it — shall remain open to shipping and overflight without discrimination among lawful users, consistent with the Charter of the United Nations and the applicable law of the sea. The Gulf has been a trade corridor since the Achaemenid period; this provision safeguards an interest older than oil.
-
-Iran may continue to apply ordinary, non-discriminatory safety, customs, environmental, and traffic-management rules within its lawful jurisdiction, provided that such measures are not used to obstruct lawful passage. Oman's established role as co-guardian of the Strait and its adjacent approaches shall be respected, and Iran and Oman may develop joint technical arrangements to support navigational safety, incident prevention, and crisis communication.
-
-For an initial stabilization period, the parties may agree that no transit fees shall be imposed in connection with passage, in order to reassure markets and reduce the economic incentive for disruption. Should the parties so agree, a neutral monitoring mechanism may provide confidence that the Strait remains open and that no party may unilaterally reintroduce closure or coercive interference.
+Iran may apply non-discriminatory safety and traffic-management rules within its jurisdiction; Oman's role as co-guardian shall be respected. For an initial stabilization period, no transit fees shall be imposed, and a neutral monitoring mechanism may confirm the Strait remains open.
 
 ## 3 — Exclusively Peaceful Nuclear Program and Verification
 
-Iran's nuclear program shall remain exclusively peaceful. The Non-Proliferation Treaty embodies a durable bargain — states forgo weapons in exchange for the right to peaceful nuclear energy and the commitment of nuclear-armed states to disarm — and this framework rests squarely on that bargain. Verification arrangements shall be sufficient to provide credible international assurance that nuclear materials, facilities, and activities are not diverted to military purposes.
+Iran's nuclear program shall remain exclusively peaceful. The Non-Proliferation Treaty embodies a durable bargain — states forgo weapons in exchange for peaceful nuclear energy and the commitment of nuclear-armed states to disarm — and this framework rests on that bargain. Verification shall provide credible assurance that materials and facilities are not diverted to military purposes.
 
-To that end, the parties may agree to a combination of monitoring, inspection, material accounting, technical limitation, conversion, export, supervised storage, or other lawful and negotiated measures designed to close any pathway to weaponization while preserving the principle of peaceful nuclear activity under the Treaty.
+Verification should proceed reciprocally, in a security environment consistent with its success — the arms-control record from SALT through INF confirms that phased, mutual verification sustains confidence where unilateral demands destroy it. Reports should be publicly available in summary form.
 
-Implementation of these measures should proceed on a reciprocal basis and in a security environment consistent with their success. Nuclear transparency should not be treated as a one-sided opening concession detached from the wider de-escalation process — the arms-control record from SALT through INF confirms that phased, mutual verification sustains confidence where unilateral demands destroy it. Verification reports should be made available to the public in summary form sufficient to sustain confidence in the process.
+## 4 — Phased Sanctions Relief and Compliance Review
 
-## 4 — Phased Sanctions Relief, Frozen Assets, and Compliance Review
+Nuclear-related sanctions shall be eased in defined phases as compliance is verified. The memory of reversed agreements runs deep — from 1953 to the JCPOA withdrawal — and relief must outlast any single administration's calendar.
 
-Nuclear-related sanctions shall be lifted, waived, suspended, or otherwise eased in clearly defined phases as compliance is verified through agreed mechanisms. The memory of externally reversed agreements runs deep in this region — from 1953 to the unilateral withdrawal from the JCPOA — and sanctions relief must therefore be durable enough to outlast any single administration's political calendar. The sequence should be specific enough to provide credible incentives for performance, while preserving the ability of each party to verify implementation at each stage.
+The parties should publish an implementation schedule identifying which measures require executive action, legislative approval, or UN action, so that citizens and representatives can hold governments accountable. Any reimposition provision should be narrow, evidence-based, and subject to review, so that the threat of reimposition does not itself become coercion.
 
-Frozen or restricted assets may be released in phases under applicable domestic and international law, with transparent public reporting sufficient to maintain confidence in the legality and integrity of the process.
+## 5 — Non-Interference, Peaceful Settlement, and International Support
 
-Where domestic legislatures, executive procedures, or United Nations bodies have a formal role, those processes shall be respected. The parties should publish an implementation schedule identifying which measures can be taken by executive action, which require legislative approval, and which may require action through the United Nations system, so that citizens and their elected representatives can hold governments accountable for performance and compliance.
+The parties reaffirm sovereign equality, non-intervention, and peaceful dispute settlement — principles whose violation, through covert regime change or proxy warfare, has generated cycles of resentment diplomacy is still unwinding. They shall renounce unlawful interference and resolve disputes through diplomacy and international law, including the principle that force may be used only in genuine self-defense under the UN Charter.
 
-Any provision for the reimposition of sanctions in response to material breach should be narrow, evidence-based, and subject to defined review procedures, so that the threat of reimposition does not itself become a tool of coercion.
-
-## 5 — Non-Interference, Peaceful Settlement of Disputes, and International Support
-
-The parties reaffirm the principles of sovereign equality, non-intervention, and the peaceful settlement of disputes — principles whose violation in the past, whether through covert regime change or proxy warfare, has generated cycles of resentment that diplomacy is still unwinding. They shall renounce unlawful interference in one another's internal affairs and commit to addressing disputes through diplomacy, agreed monitoring mechanisms, and recourse to international law, including the principle that force may be used only in genuine self-defense as recognized by the Charter of the United Nations.
-
-The parties should seek endorsement or support from the United Nations Security Council for the final package or its principal implementation arrangements, in order to strengthen legitimacy, monitoring, and continuity. The legislative bodies of the parties should be kept informed of monitoring outcomes and of any material changes in implementation status.
-
-Because a durable settlement will require the alignment of broader regional realities with the terms of the core agreement, parallel consultations may be undertaken with relevant regional states and other directly concerned powers. Such consultations should support, and not delay or dilute, the central objectives of ceasefire, navigational security, peaceful nuclear assurance, and reciprocal sanctions relief.
+The parties should seek UN Security Council endorsement for the final package and keep legislative bodies informed of monitoring outcomes. Parallel consultations with regional states should support, not delay, the central objectives.
 
 ## 6 — Implementation Sequence
 
-The parties should, insofar as practicable, implement this framework according to the following sequence:
-
 1. Immediate cessation of hostilities and attacks on civilians.
-2. Reciprocal and monitored de-escalation measures.
-3. Initial navigation-security and incident-prevention arrangements in and around the Strait of Hormuz.
-4. Commencement of agreed nuclear verification and transparency measures.
-5. First-phase sanctions relief and initial release of designated frozen assets.
-6. United Nations-supported monitoring and, where agreed, broader regional follow-on consultations.
-7. Subsequent phases of nuclear assurance, sanctions relief, and normalization measures as compliance is sustained.
+2. Reciprocal, monitored de-escalation measures.
+3. Navigation-security arrangements in and around the Strait of Hormuz.
+4. Commencement of nuclear verification and transparency measures.
+5. First-phase sanctions relief and release of designated frozen assets.
+6. UN-supported monitoring and broader regional consultations.
+7. Subsequent phases of nuclear assurance, sanctions relief, and normalization as compliance is sustained.
 
-This sequence may be adjusted by agreement, but its guiding principle shall remain reciprocity: no party should be required to complete the core of its obligations in the absence of corresponding and verifiable performance by the others. History offers no successful precedent for frameworks in which one side gives while the other merely promises.
+The guiding principle is reciprocity: no party should complete its obligations absent corresponding performance by the others. History offers no precedent for frameworks in which one side gives while the other merely promises.
