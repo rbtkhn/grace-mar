@@ -1,9 +1,11 @@
 # The Islamabad Framework — five-point synthesis (operator)
 
-**Version:** v0.4 (2026-04-08) — designated **public propagation** copy (`islamabad-framework.md`).  
+**Version:** v0.5 (2026-04-08) — designated **public propagation** copy (`islamabad-framework.md`); **Positioning** aligned with intake for **Islamabad Framework** branding.  
 **Status:** WORK / operator diplomacy draft — **not** companion Record, **not** Voice knowledge, **not** Predictive History lecture text. This file is the **canonical single document** intended for **public sharing** to propagate the roadmap (site, PDF, email, social excerpts). It does **not** imply endorsement by the Holy See, any government, or Jiang Xueqin. Legal and factual claims in your channels remain **your** responsibility.
 
 **Purpose:** One file carries **(1)** the Islamabad **plan commitment** + **legal reconciliation** as canonical spine, **(2)** Washington-shaped **operational specifics** as optional annex bullets, **(3)** **implementation-heavy / phase-B** enhancements from the optimized synthesis thread, **(4)** **verbatim** Jiang commentary from the intake original, and **(5)** a **roadmap** posture: the **Islamabad Framework** is not a treaty but a path toward one. The optimized table is **not** a fourth canonical text — it informs the enhancement annex only.
+
+**Positioning (roadmap, not treaty):** The **Islamabad Framework** is **not a treaty** and **not** agreed text among states. It is a **roadmap** toward **treaty-grade** commitments: a legible legal spine plus annexes negotiators can adopt incrementally. It **surfaces and avoids pitfalls**—**hybrid** pressure after a kinetic pause, **sequencing** traps, and **forum / legitimacy** gaps when no single body guarantees compliance. It **keeps momentum** through **phased milestones** (**Phase A** thin tranches vs **Phase B** heavier institutions) so the table is not forced to swallow the maximal package on day one.
 
 **Related / lineage:**
 
