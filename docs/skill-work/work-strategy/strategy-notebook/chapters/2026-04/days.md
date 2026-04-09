@@ -4,6 +4,42 @@ Append-only. Newest dated block at the **bottom**.
 
 ---
 
+## 2026-04-08
+
+### Signal
+
+- Closed a **work-strategy thread** by drafting a **Session Harvest Packet** (UTC-dated) for downstream agents: **Civilization Memory** Rome shards (`MEM–ROME–WAR–CANNAE`, Teutoburg, Rhine braid), **mainstream vs diplomatic** paragraph variants, **Mercouris** IV.E (*Faction Persistence* — `CIV–MIND–MERCOURIS.md`), and explicit **harvest** closure (**no** gate merge, **no** `coffee` tail).
+- **Before → after:** scattered civ-mem / Islamabad–Jiang notes → coherent **Rome helix** (military defeat → stronger *position* only with a named **ledger**): Cannae = staying in the game and changing terms; Teutoburg–Rhine = limits, settlement, **hard boundary** logic.
+- **Chosen copy rules:** topic sentence = **military defeat** (not “lost the war”); **name battles** for mainstream; stress **diplomatic recovery** (alliance cohesion, refusing coerced peace, lengthening the contest) over tactical minutiae; Mercouris as **optional** bridge — policy factions / reversals, not battlefield proof.
+- **Artifacts in play:** `islamabad-framework*.md`, Jiang Islamabad intake, `islamabad-operator-index` (later committed), STRATEGY §IV Islamabad logs (v0.6 / v0.7 / five-point). Cadence: **thanks** park lines on **Islamabad v06** (dual-audience) and **v08** (trimmed ~800w, ceasefire-window alignment).
+- **Explicitly not done that day:** paste final Rome paragraph into a canonical on-disk doc (disk framework files still without the full braid in-thread).
+
+### Judgment
+
+- **Dual register** is the spine: Cannae and Teutoburg–Rhine sit in the same “inverse Pyrrhic” family but **different mechanisms** — keep both when tightening outreach copy.
+- **Warrant:** “Stronger” only tracks if the reader sees **which ledger** (survival, frontier, bargaining) and **time horizon** — otherwise it reads as moral triumph.
+
+### Analogy / tension
+
+- **Overclaim** if “stronger” implies permanent ascendancy; **compression** if the diplomatic graf flattens Second Punic or Rhine policy without a specialist footnote. **Mercouris:** guard against **modern “factions”** read back into Rome without a framing sentence.
+
+### Links
+
+- [STRATEGY.md](../../../STRATEGY.md) §IV — 2026-04-08 Islamabad entries · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [CIV–MIND–MERCOURIS](../../../../../civilization-memory/minds/CIV–MIND–MERCOURIS.md) (IV.E)
+
+### Jiang resonance (optional)
+
+- Intake **Islamabad 5-point + commentary** is the aligned slow layer for reconciliation language; Geo-Strategy lectures remain the separate **book** spine when expanding beyond the framework doc.
+
+### Open
+
+- **Canonical home** for the final three-sentence / diplomatic block: summary only, framework only, or both — decided next working session (see 2026-04-09 entry).
+- **Public caveat:** one line on Cannae **as battle** vs **war** outcome — yes if the graf ships to a general audience.
+
+### Bets / watches (optional)
+
+- **Watch:** Rome helix copy that ships **names battles** and **recovery mechanisms** before any Mercouris pull-quote in mainstream Islamabad text.
+
 ## 2026-04-09
 
 ### Signal
@@ -32,7 +68,7 @@ Append-only. Newest dated block at the **bottom**.
 
 ### Open
 
-- If the **final diplomatic three-sentence Rome block** is not yet in repo, **paste or merge** into summary (and optionally one graf + link in framework preamble).
+- Execute on **2026-04-08** open items: **paste or merge** the diplomatic Rome block (summary vs framework — see prior day) and add the **Cannae battle vs war** caveat if shipping public copy.
 
 ### Bets / watches (optional)
 
