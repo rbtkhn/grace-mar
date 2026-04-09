@@ -73,3 +73,36 @@ Append-only. Newest dated block at the **bottom**.
 ### Bets / watches (optional)
 
 - **Watch:** Public Islamabad + Rome copy stays **ledger-explicit** and **battle-named** without Mercouris in the first screen unless footnoted.
+
+## 2026-04-10
+
+_(Prepared in advance — replace placeholders after the day.)_
+
+### Signal
+
+- _(Briefs, sessions, commits, gate — what moved.)_
+- _(Islamabad / Rome / notebook carryover: e.g. did the diplomatic Rome block land in `islamabad-framework-summary.md` or the framework preamble?)_
+
+### Judgment
+
+- _(What you think it implies for strategy — one or two bullets.)_
+
+### Analogy / tension
+
+- _(Optional. Flag if a parallel needs [analogy-audit](../../../analogy-audit-template.md) before reuse.)_
+
+### Links
+
+- _(Paths you touched — brief filename, STRATEGY §…, framework docs.)_
+
+### Jiang resonance (optional)
+
+- _(Lecture id or “none.”)_
+
+### Open
+
+- _(Carry to 2026-04-11 — e.g. voter-registration deadline **Apr 20** is in warmup; any lane blockers.)_
+
+### Bets / watches (optional)
+
+- _(Optional testable line tied to STRATEGY §II-A or public copy discipline.)_
