@@ -19,7 +19,7 @@ These lanes govern **tooling and git scope** for the turn, not Abby’s persona 
 - **`git commit`** when there are changes; **`git push`** when the message includes shipping to remote (name the branch or say “push”).
 - **Dual worktree before push:** When pushing, also check **companion-self** if present (see [Git workflow — grace-mar + companion-self](#git-workflow--grace-mar--companion-self)); do not assume only the open workspace changed.
 - **Tags** (e.g. `template-v0.x.x`) only if the operator states them in the message.
-- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **coffee** menus apply — full **A–E** or the **steward** **Implement now / Later** fork (legacy **hey** still works) — or when the operator said **no menu** on a **non-coffee** WORK turn.
+- **Skill discovery (optional):** After a **substantive** completed ship (not trivial one-line fixes), the agent may add **one** optional closing line inviting a pointer in [`skills-portable/skill-candidates.md`](../skills-portable/skill-candidates.md) or a draft under `skills-portable/_drafts/` — see [operator-style — Skill discovery](../.cursor/rules/operator-style.mdc). Skip when **coffee** menus apply — full **A–G** or the **steward** **Implement now / Later** fork (legacy **hey** still works) — or when the operator said **no menu** on a **non-coffee** WORK turn.
 
 ### `DOCSYNC`
 

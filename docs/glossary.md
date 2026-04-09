@@ -37,7 +37,7 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 
 | Phrase | Role |
 |--------|------|
-| **coffee** | Repeated **orientation** (many per day); read-only planning; ends with **A–E** menu in grace-mar; **not** a session seal. |
+| **coffee** | Repeated **orientation** (many per day); read-only planning; ends with **A–G** menu in grace-mar; **not** a session seal. |
 | **dream** | **End-of-day** maintenance (MEMORY, integrity, handoff artifact); **not** merge authority. |
 | **bridge** | **Session close** → commit/push + **transfer packet** for a **fresh** thread; packet ends with lone **`coffee`**. |
 | **harvest** | **Midstream** dense packet for an **already-running** agent; **must not** end with **`coffee`**. See [harvest-packet-contract.md](skill-work/work-cadence/harvest-packet-contract.md). |
