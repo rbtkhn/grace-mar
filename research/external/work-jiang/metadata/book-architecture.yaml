@@ -18,11 +18,12 @@ project:
   title: "Predictive History, Volume 1: Geo-Strategy"
   thesis_one_sentence: "Jiang offers a civilizational philosophy that links culture, power, education, and historical agency into one system."
   promise_paragraph: >
-    Part I follows Jiang’s Geo-Strategy lectures in order: one chapter per class session,
-    transcript-backed, with the same cumulative arc as the original teaching.
+    Part I follows Jiang’s Geo-Strategy lectures in order: one chapter per class session
+    (twenty lectures in the extended classroom arc), transcript-backed, with the same cumulative
+    arc as the original teaching.
     Each Part I chapter ends with at least three clearly stated predictions drawn from the
     registry (prediction_id + short claim) for that lecture.
-    Part II, after Chapter 12, uses a deep web and news search against the prediction registry
+    Part II, after Chapter 20, uses a deep web and news search against the prediction registry
     to adjudicate each claim where evidence allows: triangulation across independent sources,
     time-stamped reporting, and explicit handling of claim types (event vs conditional vs trend
     vs interpretive). It closes with an overall evaluation of how the lecture series’s
@@ -52,7 +53,7 @@ chapter_end_predictions:
 
 part_2:
   title: "Part II — Analyzing Jiang's predictions"
-  after_chapter: ch12
+  after_chapter: ch20
   description: >
     Deep web and news search against the Part I prediction registry: for each claim, gather
     time-stamped, citable reporting and triangulate across independent lines of evidence where
@@ -297,8 +298,8 @@ book:
       quotes_ready: true
       requires_prediction_review: false
     - id: ch12
-      title: "Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)"
-      purpose: "Book chapter for lecture 12 — finale: psychohistory metaphor, AI, hope, method."
+      title: "Geo-Strategy #12: Psychohistory (The Science of Imagining the Future)"
+      purpose: "Book chapter for lecture 12 — psychohistory metaphor, AI, hope, method (mid-series pivot before extended arc)."
       kind: analysis
       priority: high
       target_words: 2800
@@ -316,6 +317,181 @@ book:
       draft_path: "chapters/ch12/draft.md"
       analysis_ready: true
       quotes_ready: true
+      requires_prediction_review: false
+    - id: ch13
+      title: "Geo-Strategy #13: US-Iran War Incoming"
+      purpose: "Book chapter for lecture 13 — regime-change template, Iran asymmetry, game-theory pivot in public method."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-13]
+      analysis_ids: []
+      prediction_ids: [jiang-GS13-001, jiang-GS13-002, jiang-GS13-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_complete
+      owner: operator
+      sprint: "2026-W14"
+      blocking: []
+      next_action: "Assemble excerpts and argument spine"
+      outline_path: "chapters/ch13/outline.md"
+      draft_path: "chapters/ch13/draft.md"
+      analysis_ready: true
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch14
+      title: "Geo-Strategy #14: WWIII Begins, Let's Game Theory"
+      purpose: "Book chapter for lecture 14 — escalation ladder, ground-troop trap, game-theoretic player map after strikes."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-14]
+      analysis_ids: []
+      prediction_ids: [jiang-GS14-001, jiang-GS14-002, jiang-GS14-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-14"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch14/outline.md"
+      draft_path: "chapters/ch14/draft.md"
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch15
+      title: "Geo-Strategy #15: The Messianic Calling"
+      purpose: "Book chapter for lecture 15 — Trump, Khamenei, Netanyahu as messianic actors; ceasefire as narrative war."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-15]
+      analysis_ids: []
+      prediction_ids: [jiang-GS15-001, jiang-GS15-002, jiang-GS15-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-15"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch15/outline.md"
+      draft_path: "chapters/ch15/draft.md"
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch16
+      title: "Geo-Strategy #16: Newton's Divine Plan"
+      purpose: "Book chapter for lecture 16 — Christian Zionism intellectual line; Iranian restraint as escalation strategy; temple/eschatology frame."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-16]
+      analysis_ids: []
+      prediction_ids: [jiang-GS16-001, jiang-GS16-002, jiang-GS16-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-16"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch16/outline.md"
+      draft_path: "chapters/ch16/draft.md"
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch17
+      title: "Geo-Strategy #17: The Universal Law of Game Theory"
+      purpose: "Book chapter for lecture 17 — game theory as civilizational force; Christian Zionism power after Newton frame."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-17]
+      analysis_ids: []
+      prediction_ids: [jiang-GS17-001, jiang-GS17-002, jiang-GS17-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-17"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch17/outline.md"
+      draft_path: "chapters/ch17/draft.md"
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch18
+      title: "Geo-Strategy #18: Is Putin the Ubermensch?"
+      purpose: "Book chapter for lecture 18 — Israel–Iran strike chatter, Ukraine ultimatum, NATO resupply; Putin as world-historical figure."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-18]
+      analysis_ids: []
+      prediction_ids: [jiang-GS18-001, jiang-GS18-002, jiang-GS18-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-18"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch18/outline.md"
+      draft_path: "chapters/ch18/draft.md"
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch19
+      title: "Geo-Strategy #19: When Eschatologies Converge"
+      purpose: "Book chapter for lecture 19 — hybrid warfare (mostly unseen); regime-change commitment; eschatological stacks."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-19]
+      analysis_ids: []
+      prediction_ids: [jiang-GS19-001, jiang-GS19-002, jiang-GS19-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-19"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch19/outline.md"
+      draft_path: "chapters/ch19/draft.md"
+      analysis_ready: false
+      quotes_ready: false
+      requires_prediction_review: false
+    - id: ch20
+      title: "Geo-Strategy #20 (END): Why the West Is Doomed"
+      purpose: "Book chapter for lecture 20 — Volume I extended finale: Western collapse thesis, demographic/immigration stress, elite dynamics."
+      kind: analysis
+      priority: high
+      target_words: 2800
+      source_ids: [geo-20]
+      analysis_ids: []
+      prediction_ids: [jiang-GS20-001, jiang-GS20-002, jiang-GS20-003]
+      divergence_ids: []
+      applications: []
+      status: analysis_missing
+      owner: operator
+      sprint: TBD
+      blocking:
+        - "Complete analysis memo for geo-20"
+      next_action: "CIV-MEM / PSY-HIST analysis pass; then outline"
+      outline_path: "chapters/ch20/outline.md"
+      draft_path: "chapters/ch20/draft.md"
+      analysis_ready: false
+      quotes_ready: false
       requires_prediction_review: false
 
 appendix:

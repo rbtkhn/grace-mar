@@ -193,7 +193,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: complete
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-14
   video_id: N4cs-8mrP_s
   title: 'Geo-Strategy #14: WWIII Begins, Let''s Game Theory'
@@ -208,7 +208,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-15
   video_id: bc9adtiIN_k
   title: 'Geo-Strategy #15: The Messianic Calling'
@@ -223,7 +223,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-16
   video_id: Kw-TiN6dEcM
   title: 'Geo-Strategy #16: Newton''s Divine Plan'
@@ -238,7 +238,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-17
   video_id: 5I2VPYPJJ68
   title: 'Geo-Strategy #17: The Universal Law of Game Theory'
@@ -253,7 +253,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-18
   video_id: ZgvAHZqaawA
   title: 'Geo-Strategy #18: Is Putin the Ubermensch?'
@@ -268,7 +268,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-19
   video_id: YQ-xg1nIbMs
   title: 'Geo-Strategy #19: When Eschatologies Converge'
@@ -298,7 +298,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: civ-01
   video_id: Jjqf9T59uY0
   title: 'Civilization #1: Explaining Humanity''s Transition to Agriculture'

@@ -14,7 +14,7 @@ Jiang offers a civilizational philosophy that links culture, power, education, a
 
 ## Book promise
 
-Part I follows Jiang’s Geo-Strategy lectures in order: one chapter per class session, transcript-backed, with the same cumulative arc as the original teaching. Each Part I chapter ends with at least three clearly stated predictions drawn from the registry (prediction_id + short claim) for that lecture. Part II, after Chapter 12, uses a deep web and news search against the prediction registry to adjudicate each claim where evidence allows: triangulation across independent sources, time-stamped reporting, and explicit handling of claim types (event vs conditional vs trend vs interpretive). It closes with an overall evaluation of how the lecture series’s forecasts held up—without pretending philosophy reduces to a ledger.
+Part I follows Jiang’s Geo-Strategy lectures in order: one chapter per class session (twenty lectures in the extended classroom arc), transcript-backed, with the same cumulative arc as the original teaching. Each Part I chapter ends with at least three clearly stated predictions drawn from the registry (prediction_id + short claim) for that lecture. Part II, after Chapter 20, uses a deep web and news search against the prediction registry to adjudicate each claim where evidence allows: triangulation across independent sources, time-stamped reporting, and explicit handling of claim types (event vs conditional vs trend vs interpretive). It closes with an overall evaluation of how the lecture series’s forecasts held up—without pretending philosophy reduces to a ledger.
 
 ## Audience
 
@@ -34,7 +34,7 @@ End each Part I chapter with a boxed subsection "Predictions (this lecture)" lis
 
 ### Part II — Analyzing Jiang's predictions
 
-**Begins after:** `ch12`
+**Begins after:** `ch20`
 
 Deep web and news search against the Part I prediction registry: for each claim, gather time-stamped, citable reporting and triangulate across independent lines of evidence where stakes warrant. Score resolved vs pending vs not evaluable; separate antecedent and consequent for conditional claims; weight trend and interpretive claims by explicit metrics or label them honestly. Record internal tensions between chapters. Finish with an overall evaluation—coverage, hit rate where adjudicable, and what would update confidence in the framework as a whole.
 
@@ -185,9 +185,9 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Draft:** `chapters/ch11/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS11-001, jiang-GS11-002, jiang-GS11-003`
 
-### ch12 — Geo-Strategy #12 (END): Psychohistory (The Science of Imagining the Future)
+### ch12 — Geo-Strategy #12: Psychohistory (The Science of Imagining the Future)
 
-- **Purpose:** Book chapter for lecture 12 — finale: psychohistory metaphor, AI, hope, method.
+- **Purpose:** Book chapter for lecture 12 — psychohistory metaphor, AI, hope, method (mid-series pivot before extended arc).
 - **Kind:** analysis
 - **Priority:** high
 - **Target words:** 2800
@@ -197,6 +197,117 @@ Deep web and news search against the Part I prediction registry: for each claim,
 - **Outline:** `chapters/ch12/outline.md`
 - **Draft:** `chapters/ch12/draft.md`
 - **Prediction IDs (chapter-end box):** `jiang-GS12-001, jiang-GS12-002, jiang-GS12-003`
+
+### ch13 — Geo-Strategy #13: US-Iran War Incoming
+
+- **Purpose:** Book chapter for lecture 13 — regime-change template, Iran asymmetry, game-theory pivot in public method.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_complete
+- **Owner:** operator
+- **Sprint:** 2026-W14
+- **Outline:** `chapters/ch13/outline.md`
+- **Draft:** `chapters/ch13/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS13-001, jiang-GS13-002, jiang-GS13-003`
+
+### ch14 — Geo-Strategy #14: WWIII Begins, Let's Game Theory
+
+- **Purpose:** Book chapter for lecture 14 — escalation ladder, ground-troop trap, game-theoretic player map after strikes.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-14
+- **Outline:** `chapters/ch14/outline.md`
+- **Draft:** `chapters/ch14/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS14-001, jiang-GS14-002, jiang-GS14-003`
+
+### ch15 — Geo-Strategy #15: The Messianic Calling
+
+- **Purpose:** Book chapter for lecture 15 — Trump, Khamenei, Netanyahu as messianic actors; ceasefire as narrative war.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-15
+- **Outline:** `chapters/ch15/outline.md`
+- **Draft:** `chapters/ch15/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS15-001, jiang-GS15-002, jiang-GS15-003`
+
+### ch16 — Geo-Strategy #16: Newton's Divine Plan
+
+- **Purpose:** Book chapter for lecture 16 — Christian Zionism intellectual line; Iranian restraint as escalation strategy; temple/eschatology frame.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-16
+- **Outline:** `chapters/ch16/outline.md`
+- **Draft:** `chapters/ch16/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS16-001, jiang-GS16-002, jiang-GS16-003`
+
+### ch17 — Geo-Strategy #17: The Universal Law of Game Theory
+
+- **Purpose:** Book chapter for lecture 17 — game theory as civilizational force; Christian Zionism power after Newton frame.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-17
+- **Outline:** `chapters/ch17/outline.md`
+- **Draft:** `chapters/ch17/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS17-001, jiang-GS17-002, jiang-GS17-003`
+
+### ch18 — Geo-Strategy #18: Is Putin the Ubermensch?
+
+- **Purpose:** Book chapter for lecture 18 — Israel–Iran strike chatter, Ukraine ultimatum, NATO resupply; Putin as world-historical figure.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-18
+- **Outline:** `chapters/ch18/outline.md`
+- **Draft:** `chapters/ch18/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS18-001, jiang-GS18-002, jiang-GS18-003`
+
+### ch19 — Geo-Strategy #19: When Eschatologies Converge
+
+- **Purpose:** Book chapter for lecture 19 — hybrid warfare (mostly unseen); regime-change commitment; eschatological stacks.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-19
+- **Outline:** `chapters/ch19/outline.md`
+- **Draft:** `chapters/ch19/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS19-001, jiang-GS19-002, jiang-GS19-003`
+
+### ch20 — Geo-Strategy #20 (END): Why the West Is Doomed
+
+- **Purpose:** Book chapter for lecture 20 — Volume I extended finale: Western collapse thesis, demographic/immigration stress, elite dynamics.
+- **Kind:** analysis
+- **Priority:** high
+- **Target words:** 2800
+- **Status:** analysis_missing
+- **Owner:** operator
+- **Sprint:** TBD
+- **Blocking:** Complete analysis memo for geo-20
+- **Outline:** `chapters/ch20/outline.md`
+- **Draft:** `chapters/ch20/draft.md`
+- **Prediction IDs (chapter-end box):** `jiang-GS20-001, jiang-GS20-002, jiang-GS20-003`
 
 ## Appendix
 

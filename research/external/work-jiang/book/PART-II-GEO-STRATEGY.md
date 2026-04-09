@@ -4,7 +4,7 @@
 **As of:** 2026-03-23 (UTC)  
 **Source registry:** [`prediction-tracking/registry/predictions.jsonl`](../prediction-tracking/registry/predictions.jsonl)
 
-This Part II consolidates **every prediction row** registered for the twelve Geo-Strategy lectures. It uses **open-web reporting** (news wires, specialist trackers, reference articles) to triangulate **dated** and **conditional** claims; **trend** and **interpretive** claims are scored only where metrics exist, otherwise marked **not evaluable** or **pending**.
+This Part II consolidates **prediction rows** registered for the Geo-Strategy lecture series (**Volume I Part I is twenty chapters / lectures** in `metadata/book-architecture.yaml`). The **narrative sections and table below** were drafted for the **original twelve-lecture** spine; **jiang-GS13-001 … jiang-GS20-003** now live in the same registry and should be folded into the next full news pass. It uses **open-web reporting** (news wires, specialist trackers, reference articles) to triangulate **dated** and **conditional** claims; **trend** and **interpretive** claims are scored only where metrics exist, otherwise marked **not evaluable** or **pending**.
 
 ---
 

@@ -29,6 +29,22 @@ chapter_map:
     source_ids: [geo-11]
   ch12:
     source_ids: [geo-12]
+  ch13:
+    source_ids: [geo-13]
+  ch14:
+    source_ids: [geo-14]
+  ch15:
+    source_ids: [geo-15]
+  ch16:
+    source_ids: [geo-16]
+  ch17:
+    source_ids: [geo-17]
+  ch18:
+    source_ids: [geo-18]
+  ch19:
+    source_ids: [geo-19]
+  ch20:
+    source_ids: [geo-20]
   civ-ch01:
     source_ids: [civ-01]
   civ-ch02:

@@ -22,9 +22,9 @@ If Jiang is even partially right — that we are inside a civilizational transit
 
 ## III. The test
 
-This volume uses **one chapter for each Geo-Strategy lecture** — twelve chapters for twelve class sessions — so the book preserves the **arc of the teaching**, not the shape of a generic textbook. Exposition and analysis interleave as they did in the room. Each Part I chapter ends with **at least three predictions**, clearly stated and keyed to the project's prediction registry, so the book's forward-looking claims are visible before any scoring.
+This volume uses **one chapter for each Geo-Strategy lecture** — twenty chapters for twenty class sessions in the extended arc — so the book preserves the **arc of the teaching**, not the shape of a generic textbook. Exposition and analysis interleave as they did in the room. Each Part I chapter ends with **at least three predictions**, clearly stated and keyed to the project's prediction registry, so the book's forward-looking claims are visible before any scoring.
 
-**Part II** (after Chapter 12) uses deep web and news research to test those predictions against the record — triangulating sources where it matters — and ends with an overall evaluation of the series's forecasts, without pretending philosophy collapses into a spreadsheet. Throughout, the argument stays tied to **transcript-backed material** from the curated lecture corpus, not to secondhand summaries.
+**Part II** (after Chapter 20) uses deep web and news research to test those predictions against the record — triangulating sources where it matters — and ends with an overall evaluation of the series's forecasts, without pretending philosophy collapses into a spreadsheet. Throughout, the argument stays tied to **transcript-backed material** from the curated lecture corpus, not to secondhand summaries.
 
 This is not an official statement on anyone's behalf. It is not a substitute for listening to the lectures themselves if you want the voice, timing, and rhetorical context in full. And it is not a promise that philosophy can be settled like an accounting ledger: the appendices on predictions and divergence are tools for clarity, not trophies.
 
