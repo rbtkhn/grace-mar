@@ -1,6 +1,6 @@
 # work-strategy
 
-**Purpose:** Cross-territory **operator strategy** — how political consulting ([work-politics](../work-politics/README.md)), integration / portability ([work-dev](../work-dev/README.md)), and other WORK lanes share a single **daily horizon** without mixing into SELF or Voice.
+**Purpose:** Cross-territory **operator strategy** — how political consulting ([work-politics](../work-politics/README.md)), integration / portability ([work-dev](../work-dev/README.md)), and other WORK lanes share a single **daily horizon** without mixing into SELF or Voice. The **[strategy-notebook](strategy-notebook/README.md)** is the **primary** artifact where daily cross-territory judgment is captured; other files here support ingest, frameworks, or optional stitch to [STRATEGY.md](STRATEGY.md).
 
 **Not** a replacement for territory READMEs. **Not** Record truth. Companion gate and knowledge boundary rules still apply.
 
@@ -12,7 +12,7 @@
 |--------------|-----------------|--------------|-----------------------------|
 | **Work-politics territory pulse** | _(no skill — run script)_ | Stale docs, brief blockers, gate rhythm, content queue, campaign-facing next actions. | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy: `operator_wap_pulse.py`) |
 | **Weekly brief workflow** | `weekly brief` | **Weekly** brief **readiness**, blockers, optional scaffold generation (not the daily generator). | [weekly-brief-run SKILL](../../.cursor/skills/weekly-brief-run/SKILL.md); `operator_weekly_brief_run.py` |
-| **Strategy pass** (proposed **`skill-strategy`**) | `strategy`, `strategy pass` | Cross-territory **judgment** slice: [STRATEGY.md](STRATEGY.md) (watches, analogy list, operator log), [strategy-notebook/](strategy-notebook/README.md) tail, Islamabad / Rome threads, weak-signal and [analogy-audit](analogy-audit-template.md) flags — **not** a replacement for the pulse script or the weekly brief runner. | Prose-first reads; optional future pulse script |
+| **Strategy pass** (`skill-strategy`) | **`strategy`**, **`strategy pass`**, **`work-strategy`** | Cross-territory **judgment** slice: **[strategy-notebook/](strategy-notebook/README.md)** first (daily/monthly blocks), then [STRATEGY.md](STRATEGY.md) when promoting watches/log; Islamabad / Rome threads, weak-signal and [analogy-audit](analogy-audit-template.md) flags — **not** the pulse script or weekly brief runner. | [strategy-notebook/](strategy-notebook/README.md), [STRATEGY.md](STRATEGY.md); [skill-strategy SKILL](../../.cursor/skills/skill-strategy/SKILL.md) |
 
 **Coffee** [Compass](../../.cursor/skills/coffee/SKILL.md) (**C**) can include **work-strategy-rome** (ROME-PASS) but is a **session hub**, not a full strategy pass.
 

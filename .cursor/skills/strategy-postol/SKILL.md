@@ -9,7 +9,7 @@ description: >-
 
 # Strategy — Postol pass
 
-**Preferred activation (operator):** **`strategy postol`** (aliases: **`postol pass`**, **`postol ingest`** when filing a new clip).
+**Preferred activation (operator):** **`strategy postol`** (aliases: **`postol pass`**, **`postol ingest`** when filing a new clip). Bare **`strategy`** alone activates **`skill-strategy`** (work-strategy notebook pass), not this skill.
 
 **Purpose:** Use **Theodore Postol’s recurring technical lenses** (and the same stress tests on **non-Postol** text that makes similar claims) in a **bounded, citable** way. The skill does **not** “channel” Postol without **file + date** evidence in [analyst-corpus](../../../research/external/work-strategy/analyst-corpus/INDEX.md) or a **pasted** primary.
 

@@ -1,8 +1,8 @@
 # Strategy notebook
 
-Operator **daily journal** for work-strategy judgment — parallel in spirit to [Predictive History book architecture](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), lighter tooling.
+**Primary work output** of [work-strategy](../README.md): a **daily journal** for cross-territory judgment (`chapters/YYYY-MM/days.md` + `meta.md`) — parallel in spirit to [Predictive History book architecture](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), lighter tooling.
 
-- **Spec:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md)
+- **Spec:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — includes **Primary output**, **Daily synthesis**, and **Accumulation and evolution**
 - **Dashboard:** [STATUS.md](STATUS.md)
 - **Chapters:** `chapters/YYYY-MM/` — `meta.md` (month) + `days.md` (append-only dailies)
 

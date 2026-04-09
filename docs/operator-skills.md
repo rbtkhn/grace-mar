@@ -23,6 +23,7 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `handoff-check` | **handoff check** | |
 | `gate-review-pass` | **gate review** | |
 | `weekly-brief-run` | **weekly brief** | |
+| `skill-strategy` | **strategy** | Alt: **strategy pass**, **work-strategy**. Notebook-primary work-strategy pass. See `.cursor/skills/skill-strategy/SKILL.md`. |
 | `politics-massie` | **massie x** | Portable core: `skills-portable/politics-massie/` → run `sync_portable_skills.py` after edits. |
 | `work-jiang-feature-checklist` | **jiang check** | |
 | `portable-skills-sync` | **sync skills** | Portable core: `skills-portable/portable-skills-sync/`. |
@@ -45,6 +46,7 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `handoff-check` | Stop/resume summary with **RECURSION-GATE pending detail**, **Predictive History night closeout** (work-jiang), recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar`; cold paste stack: `python3 scripts/operator_reentry_stack.py -u grace-mar` (`--compact` optional); one-liner: `python3 scripts/harness_warmup.py -u grace-mar --receipt` |
 | `pros-and-cons` | When a proposal is **unclear** or the operator wants **pros/cons / unpack / tradeoffs**: plain-language **restate**, then **pros**, **cons**, **disproportion**, **recommendation** (Think lane; no ship unless asked) | Agent: follow `.cursor/skills/pros-and-cons/SKILL.md` |
 | `fact-check` | **Triage-first** check on pasted/named claims: **lean** verdict table, **one cite** per claim when enough, **high abstention** + **Escalate** when stakes need deeper audit; **not** Record merge unless gated pipeline | Agent: follow `.cursor/skills/fact-check/SKILL.md` |
+| `skill-strategy` | **Strategy pass** — [strategy-notebook](skill-work/work-strategy/strategy-notebook/README.md) first, [STRATEGY.md](skill-work/work-strategy/STRATEGY.md) when promoting; Islamabad/Rome, weak-signal, analogy-audit; **not** pulse, not Postol | Agent: `.cursor/skills/skill-strategy/SKILL.md` |
 | `strategy-postol` | **Postol-style technical pass** on missiles, BMD, drones, tunnels, nuclear latency: **corpus** via `research/external/work-strategy/analyst-corpus/` + `transcripts/theodore-postol-*.md`; checklist in skill folder; **WORK only** | Agent: follow `.cursor/skills/strategy-postol/SKILL.md` and `POSTOL-CHECKLIST.md` |
 | `work-jiang-feature-checklist` | Branch hygiene, scope, canonical verify block, and commit granularity for `research/external/work-jiang` + `scripts/work_jiang/` | Agent: follow `.cursor/skills/work-jiang-feature-checklist/SKILL.md` |
 | `politics-massie` | Real-time news search + suggested @usa_first_ky X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/politics-massie/SKILL.md` |
