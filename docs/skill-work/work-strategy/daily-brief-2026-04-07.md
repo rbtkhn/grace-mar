@@ -68,6 +68,8 @@ _Rolling ~48h window ending brief assembly (2026-04-07 20:57 UTC). Sources: Krem
 
 _Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak-signals.md](weak-signals.md). One compact weak signal when a credible candidate exists (low/medium confidence only). If nothing clears the bar, use: **No credible weak signal exceeded the threshold today.** When a historical parallel is in play, summarize a short analogy audit ([analogy-audit-template.md](analogy-audit-template.md)) here._
 
+**No credible weak signal exceeded the threshold today.** Iran ultimatum / MAGA fracture / military tracking in §2 were dominant and already fully surfaced; no extra thin tail logged.
+
 ## 2. Headlines (ingested RSS)
 
 _Fetch failed for: Reuters — World._

@@ -70,6 +70,8 @@ _Automated fetch of Kremlin “by date” English listings failed (timeout); add
 
 _Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak-signals.md](weak-signals.md). One compact weak signal when a credible candidate exists (low/medium confidence only). If nothing clears the bar, use: **No credible weak signal exceeded the threshold today.** When a historical parallel is in play, summarize a short analogy audit ([analogy-audit-template.md](analogy-audit-template.md)) here._
 
+**No credible weak signal exceeded the threshold today.** Salient lines were already high-confidence crisis coverage in §2 (Iran/U.S./Israel, NATO); no separate low-probability tail worth isolating here without a dedicated analogy audit.
+
 ## 2. Headlines (ingested RSS)
 
 _Fetch failed for: Reuters — World._
