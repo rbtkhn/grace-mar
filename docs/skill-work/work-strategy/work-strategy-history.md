@@ -12,6 +12,10 @@
 
 _(Append below this line.)_
 
+## 2026-04-09
+
+- **Strategy notebook:** Bootstrapped [strategy-notebook/](strategy-notebook/README.md) — month chapters (`chapters/YYYY-MM/`), [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS.md](strategy-notebook/STATUS.md); active month `2026-04`. Distinct from [STRATEGY.md](STRATEGY.md) milestone log and this lane history file.
+
 ## 2026-04-06
 
 - **Coffee C (Compass) → §II-A Active Watches seeded:** Scanned daily brief archive (03-19 through 04-03, 13 briefs). Promoted 5 watches to [STRATEGY.md](STRATEGY.md) §II-A: (1) Iran war → energy chokepoint cascade (escalating), (2) drone/counter-drone warfare acceleration (watch), (3) Western alliance fracture over Iran (escalating), (4) Putin Middle East diplomatic pivot (watch), (5) US military institutional stress during active war (watch). Closes the brief→ledger feedback loop.
