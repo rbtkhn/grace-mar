@@ -72,6 +72,12 @@ Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom).
 - 1–3 bullets testable against STRATEGY §II-A or future review.
 ```
 
+## Daily length and prose (operator target)
+
+- **Target ceiling:** **~2000 words** per dated block in `days.md` (all sections of that day combined: Signal through Bets). Use this as the working **maximum** for routine practice.
+- **If draft analysis exceeds ~2000 words:** **Compress** before committing — collapse duplicate points, move long quotation or raw detail to a linked brief/transcript/memo, keep the notebook entry to **synthesis, warrants, and links**.
+- **Register:** **Academic prose** — explicit theses, defined terms where needed, qualified claims when evidence is partial; avoid filler and conversational throat-clearing unless you are deliberately archiving tone in a linked artifact.
+
 ## Daily synthesis (briefs, transcripts, other work-strategy)
 
 Synthesis **compresses and routes** sources into the notebook; it does **not** duplicate the full daily brief or full transcript.

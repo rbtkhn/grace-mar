@@ -21,7 +21,7 @@ description: >-
 ## Default moves (agent)
 
 1. Read [strategy-notebook/STATUS.md](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) and the tail of the active month `chapters/YYYY-MM/days.md` (and `meta.md` if the month’s theme or open questions matter).
-2. Follow [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) for **Daily synthesis** and **Accumulation and evolution** (Signal / Judgment / Links / Open / Bets).
+2. Follow [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) for **Daily synthesis**, **Daily length and prose** (~**2000 words** per day ceiling — compress if over), and **Accumulation and evolution** (Signal / Judgment / Links / Open / Bets). Prefer **academic prose** in the notebook block.
 3. **Append or extend** today’s block in `days.md` when the operator is logging judgment; link input paths (brief file, transcript digest, framework doc) in **Links**.
 4. **STRATEGY.md:** suggest or apply updates only when the operator asks to **promote** — not every notebook entry.
 
