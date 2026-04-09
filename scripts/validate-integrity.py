@@ -18,6 +18,7 @@ Checks:
   10. Optional --strict-self-library: fail if self-library.md missing
   11. Library Domain Registry (docs/self-library-domains.json) — required fields and routable domain ids
   12. Identity vs capability boundary — obvious SELF/Voice vs WRITE cross-bleed
+  13. Convenience-path audit — pending candidates missing source traceability (forced-absorption defense)
 
 Human output prints an **Identity / library boundary** section first; JSON includes **identity_library_boundary**.
 
@@ -306,6 +307,43 @@ def validate_gate_proposal_class(
 
 def validate_cross_ref(evidence_ids: set[str], act_ids: set[str]) -> list[str]:
     return [f"Orphan evidence_id reference: {eid}" for eid in sorted(evidence_ids) if eid not in act_ids]
+
+
+def validate_convenience_path_audit(user_dirs: list[Path]) -> list[str]:
+    """Forced-absorption defense: flag gate candidates missing source traceability.
+
+    A candidate without channel_key or any source identifier (session_id,
+    operator_source) is untraceable — it could have arrived through a
+    convenience path rather than the governed pipeline.
+    """
+    errors: list[str] = []
+    for user_dir in user_dirs:
+        pr_path = user_dir / "recursion-gate.md"
+        content = _safe_read(pr_path)
+        if "## Candidates" not in content:
+            continue
+        candidates_section, _ = split_gate_sections(content)
+        for m in re.finditer(
+            r"### (CANDIDATE-\d+)\s*\n```yaml\s*\n(.*?)```", candidates_section, re.DOTALL
+        ):
+            cid, yaml_block = m.groups()
+            if "status: pending" not in yaml_block:
+                continue
+            has_channel = bool(re.search(r"^channel_key:\s*\S", yaml_block, re.MULTILINE))
+            has_session = bool(re.search(r"^session_id:\s*\S", yaml_block, re.MULTILINE))
+            has_operator = bool(re.search(r"^operator_source:\s*\S", yaml_block, re.MULTILINE))
+            has_origin = bool(re.search(r"^origin:\s*\S", yaml_block, re.MULTILINE))
+            if not has_channel and not has_operator:
+                errors.append(
+                    f"{pr_path.relative_to(REPO_ROOT)} {cid} missing channel_key and "
+                    f"operator_source — untraceable source (convenience-path risk)"
+                )
+            if not has_channel and not has_session and not has_origin:
+                errors.append(
+                    f"{pr_path.relative_to(REPO_ROOT)} {cid} missing all source identifiers "
+                    f"(channel_key, session_id, origin) — no provenance chain"
+                )
+    return errors
 
 
 ID_PATTERNS = {
@@ -611,6 +649,8 @@ def run_validation(
     all_errors.extend(validate_derived_exports(user_dirs))
     identity_capability = validate_identity_capability_boundary(user_dirs)
     all_errors.extend(identity_capability)
+    convenience_path = validate_convenience_path_audit(user_dirs)
+    all_errors.extend(convenience_path)
 
     lc_errors, lc_warnings, lc_info = validate_fork_lifecycle(user_dirs, strict=strict_lifecycle)
     all_errors.extend(lc_errors)
@@ -626,9 +666,11 @@ def run_validation(
         "self_library_missing_warnings": library_warnings,
         "identity_capability_violations": identity_capability,
         "surface_layout_warnings": surface_layout_warnings,
+        "convenience_path_violations": convenience_path,
         "ix_a_ok": len(ix_boundary) == 0,
         "self_library_files_ok": len(library_warnings) == 0,
         "identity_capability_ok": len(identity_capability) == 0,
+        "convenience_path_ok": len(convenience_path) == 0,
         "fork_lifecycle": lifecycle_report,
     }
     return all_errors, boundary_report
@@ -687,6 +729,10 @@ def main() -> int:
             "errors": errors,
             "identity_library_boundary": boundary,
             "surface_layout_warnings": boundary.get("surface_layout_warnings") or [],
+            "convenience_path_audit": {
+                "ok": boundary.get("convenience_path_ok", True),
+                "violations": boundary.get("convenience_path_violations") or [],
+            },
             "fork_lifecycle": boundary.get("fork_lifecycle") or {},
         }
         print(json.dumps(payload, ensure_ascii=True))
@@ -711,6 +757,13 @@ def main() -> int:
             print("  SELF / Voice vs WRITE: OK (no obvious capability self-description or personality bleed).")
         else:
             for v in boundary.get("identity_capability_violations") or []:
+                print(f"  FAIL: {v}")
+        print()
+        print("=== Convenience-path audit (forced-absorption defense) ===")
+        if boundary.get("convenience_path_ok"):
+            print("  Convenience-path audit: OK (all pending candidates have source traceability).")
+        else:
+            for v in boundary.get("convenience_path_violations") or []:
                 print(f"  FAIL: {v}")
         print()
         if ok:

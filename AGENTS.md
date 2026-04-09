@@ -4,7 +4,7 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **For conceptual clarity:** Read `docs/conceptual-framework.md` — Record vs. fork, Voice vs. bot, fork vs. twin, terminology. **Prime directive:** The Record belongs to the companion (GRACE-MAR-CORE §I).
 
-**For system design:** Read `docs/architecture.md`. For the formal skill modularity model (THINK/WRITE boundaries, separate work/execution layer, Voice and profile as functions of skill-write, invariants), see `docs/skills-modularity.md`.
+**For system design:** Read `docs/architecture.md` (includes forced-absorption risk pattern and convenience-path defenses). For the formal skill modularity model (THINK/WRITE boundaries, separate work/execution layer, Voice and profile as functions of skill-write, invariants), see `docs/skills-modularity.md`.
 
 **For chat/UI design:** Read `docs/chat-first-design.md` — principles for delivering the full experience within Telegram/chat (bounded sessions, one-tap, Record felt not seen).
 

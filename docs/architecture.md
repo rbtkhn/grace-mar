@@ -25,6 +25,35 @@ The cognitive fork records **identity** (**SELF** + **SELF-KNOWLEDGE**), **refer
 
 ---
 
+## State governance: proposed, interface, and canonical
+
+Companion-self–style instances are **state-governance architectures** for identity-bearing systems: they preserve a clear distinction between **draft or proposed material**, **interface-visible behavior**, and **canonical durable state**. The decisive act is not storage, retrieval, or synthesis alone—it is **legitimate incorporation** into the Record.
+
+**Three layers**
+
+| Layer | Role | Examples |
+|-------|------|----------|
+| **Proposed** | Drafts, harvested outputs, staged candidates—not yet canonical | `recursion-gate.md` pending blocks, operator drafts, imports staged for review |
+| **Interface-visible** | How the companion experiences the system—constrained by prompt, policy, and harness | Voice (Telegram), PRP / runtime surfaces, query-time rendering |
+| **Canonical durable** | Approved, auditable self and evidence | `self.md`, `self-skills.md`, `self-archive.md` (EVIDENCE), merged `bot/prompt.py` obligations |
+
+**Merge contract.** Only the **companion** (or the governed pipeline acting on explicit companion approval) may satisfy the contract that moves content from proposed into canonical state. See [AGENTS.md](../AGENTS.md) § Gated Pipeline — agents **stage**; they do not **merge** into SELF, EVIDENCE, or prompt without approval.
+
+**Voice as interface.** The Voice is **not** identical with selfhood: it is an **interface** over governed state plus permitted runtime reasoning. Inside the documented boundary it should be fast and useful; outside it should abstain rather than invent authority—see [knowledge-boundary-framework.md](knowledge-boundary-framework.md).
+
+**Anti-patterns** (how forks lose auditability when it matters most):
+
+- Convenience merges or hidden writes into canonical surfaces
+- Prompt-level patches masquerading as durable state
+- One-off exceptions that bypass review
+- Treating runtime shortcuts or session fluency as equivalent to governed change
+
+**Method — add one boundary at a time:** (1) staging boundaries so drafts do not pretend to be canonical; (2) approval boundaries so incorporation requires an explicit contract; (3) integrity boundaries (exports, provenance, drift checks); (4) interface boundaries so the Voice stays scoped. Deeper identity-oriented capabilities belong **after** these layers exist.
+
+> Draft is not state; retrieval is not authorization; synthesis is not incorporation; fluency is not grounding; convenience is not governance.
+
+---
+
 ## System boundaries and harness
 
 **Voice = model + harness.** What the companion experiences as the Voice is the underlying model plus prompt, pipeline, tools, and approval gate. Improvements to prompt, pipeline, or tooling are first-class; the model is one component. When debugging behavior, consider: model limit, prompt gap, pipeline miss, or tool/context issue. See [IMPLEMENTABLE-INSIGHTS](implementable-insights.md).
@@ -935,5 +964,37 @@ This mirrors how real cognition works — a single experience produces knowledge
 
 ---
 
-*Document version: 3.0*
-*Last updated: February 2026*
+---
+
+## Forced Absorption Risk
+
+**Forced absorption** is the risk that unreviewed content enters canonical state through convenience paths — passive indexing, retrieval-as-authorization, synthesis-as-incorporation, or infrastructure defaults that widen write surfaces without explicit review. The term is borrowed from financial regulation: a rule change that silently forces downstream holders to absorb risk they never agreed to. In grace-mar, the downstream holder is the Record.
+
+**Standing line:** Identity never enters canonical state through convenience paths. Only governed review and authorized merge may change the Record.
+
+### How grace-mar defends against it
+
+| Defense | Implementation | What it prevents |
+|---------|---------------|------------------|
+| Sovereign Merge Rule | `process_approved_candidates.py` is the only merge path; AGENTS.md §2 | Direct writes to self.md, self-archive.md, bot/prompt.py |
+| Gated pipeline | `recursion-gate.md` staging → companion approval → merge script | State changes that bypass human review |
+| Integrity validator | `scripts/validate-integrity.py` — 12 check families including convenience-path audit | Untraceable candidates, orphan references, stale exports |
+| Governance checker | `scripts/governance_checker.py` — regex scan for unauthorized merge patterns | Scripts or agents that attempt direct Record writes |
+| Gate review app | `apps/gate-review-app.py` — Flask UI for inspecting pending candidates | Invisible or unreviewed queue state |
+| Derived export freshness | `validate-integrity.py` → `validate_derived_exports` | Stale runtime bundles, PRP, or manifests diverging from Record |
+
+### Convenience paths to watch for
+
+1. **Retrieval treated as authorization.** An agent retrieves content from EVIDENCE or prepared context and presents it as Record truth. Retrieval is a read operation, not a governance decision.
+2. **Synthesis treated as incorporation.** An agent synthesizes across evidence and the synthesis enters governed state without a gate candidate. Synthesis is analytical work, not a merge.
+3. **Prepared context promoted without review.** A runtime bundle, PRP, or prepared-context object is treated as canonical because it looks clean. Prepared context is input to review, not output of review.
+4. **Infrastructure defaults that widen write surfaces.** A new script or integration writes to a governed surface without checking the authority model. New tooling must route through the existing pipeline.
+
+### Doctrine reference
+
+This section operationalizes the **forced-absorption** risk pattern defined in the companion-self template ([docs/forced-absorption.md](https://github.com/rbtkhn/companion-self/blob/main/docs/forced-absorption.md)). The template names the risk; this instance implements the defenses.
+
+---
+
+*Document version: 3.1*
+*Last updated: April 2026*
