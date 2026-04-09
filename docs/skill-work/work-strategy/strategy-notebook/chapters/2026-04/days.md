@@ -81,33 +81,40 @@ Append-only. Newest dated block at the **bottom**.
 
 ## 2026-04-10
 
-_(Prepared in advance — replace placeholders after the day.)_
-
 ### Signal
 
-- _(Briefs, sessions, commits, gate — what moved.)_
-- _(Islamabad / Rome / notebook carryover: e.g. did the diplomatic Rome block land in `islamabad-framework-summary.md` or the framework preamble?)_
+- **Strategy pass (proposed `skill-strategy`):** Ingested **Lt Col Daniel Davis** commentary (operator paste — *This Ceasefire Won’t Lead to Peace*): ceasefire as **extension game** — Iran may be counting on **time** so that falling oil, rising equities, and reduced political pressure on the White House make **restarting the war** less attractive even if diplomacy fails.
+- **Keane → Trump channel:** Sky News hit emphasizing **do not trust Iran** / **military hammer**; Davis stresses Trump **takes his calls** — institutional **counter-current** to the pause early in the window.
+- **Spoiler frame:** U.S. inner circle + **Israel** described as **sabotaging** the pause; Iran portrayed as **staying on stated terms** so far while opponents “don’t want it.” Admin **piecemeal** messaging read as **pre-failure** setup; optional read of Trump lines as **reload** before harder force.
+- **Lebanon fork (high salience):** **Shehbaz Sharif** post (~Apr 7, ~7:50p) — ceasefire “everywhere, including Lebanon”; Trump announcement **without** “Lebanon”; **Netanyahu** rejection + continued strikes; **NYT** vs **JD Vance** on whether Lebanon was in scope — **Pakistan authenticity** vs **U.S. walk-back** tension. Iranian leadership (**Ghalibaf**, FM) — **resistance axis / Lebanon** inseparable from ceasefire; **U.S. must choose** ceasefire vs war **via Israel**.
+- **Islamabad roster:** **Vance, Kushner, Witkoff** — Davis notes **same principals** as **collapsed February** talks.
+- **Terms collision:** Trump **no enrichment / remove buried material** vs Iran **10-point** enrichment rights; **Graham** “surrender” terms; Trump **Truth Social** — forces stay loaded, “next conquest” tone; **both sides regroup** — U.S. munitions strain (JASSM, Tomahawk, interceptors) vs Iran and **Hormuz**.
+- **Internal contradiction (Davis):** **Admiral Cooper** “generational military defeat” vs **why negotiate** — same tension as **strength-of-position** vs **need-for-pause** already in notebook/J&P spine.
 
 ### Judgment
 
-- _(What you think it implies for strategy — one or two bullets.)_
+- **Converges** with Johnson/Pape **meta** tail: pause ≠ settlement; **scope disputes** (Lebanon) can break the **story** of a single coherent deal before kinetic headlines return.
+- **Extension + markets** is a **distinct mechanism** — keep labeled **analyst thesis** until wires confirm timing and **causal** claims.
+- **Surrender vs negotiate** sharpens Islamabad **reconciliation** language against **non-negotiable dismantling** frames — useful for **dual-audience** drafting, not as asserted fact without sources.
 
 ### Analogy / tension
 
-- _(Optional. Flag if a parallel needs [analogy-audit](../../../analogy-audit-template.md) before reuse.)_
+- **Gaza “50% control”** as **limits of compellence** — scale mismatch vs Iran; if this parallel ships **load-bearing**, run [analogy-audit](../../../analogy-audit-template.md).
 
 ### Links
 
-- _(Paths you touched — brief filename, STRATEGY §…, framework docs.)_
+- Notebook: [meta.md](meta.md) (Johnson/Pape + **Davis** theme tails) · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV
+- Source: operator-pasted Davis commentary (no URL in thread — add canonical link if archived).
 
 ### Jiang resonance (optional)
 
-- _(Lecture id or “none.”)_
+- Optional chord: **Geo-Strategy** energy / Hormuz / negotiation layers when **Part II** pass ingests **GS13–GS20**; no new lecture id tied to this ingest.
 
 ### Open
 
-- _(Carry to 2026-04-11 — e.g. voter-registration deadline **Apr 20** is in warmup; any lane blockers.)_
+- **Tier-1 / primary** pass before any outreach cite: **Sharif** post time, **Vance** Lebanon line, **Cooper** quote, **“largest bombardment of Lebanon in history”**, munitions counts, **Iran population** figure — Davis is **analyst synthesis**, not a wire.
+- **Lebanon** line for **Islamabad vNext** copy: if U.S. messaging stays ambiguous, decide **one honest sentence** for general readers vs specialist footnote.
 
 ### Bets / watches (optional)
 
-- _(Optional testable line tied to STRATEGY §II-A or public copy discipline.)_
+- **Watch:** **Lebanon in / out of scope** becomes the default **early stress test** for “ceasefire holds” narratives across US, Israel, Iran, Pakistan channels.
