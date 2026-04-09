@@ -14,6 +14,7 @@
 
 ### 2026-04-08
 
+- **xavier-journal:** Added [xavier-journal/README.md](xavier-journal/README.md) (OB1 learning log — WORK) and [xavier-journal/2026-04-06-day-01.md](xavier-journal/2026-04-06-day-01.md) (Day 1 seed entry, anchor 2026-04-06). [INDEX.md](INDEX.md) row.
 - **Evidence — GitHub profile:** [evidence/github-profile-xavier-x01-2026-04-08.png](evidence/github-profile-xavier-x01-2026-04-08.png) + [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) — public [@Xavier-x01](https://github.com/xavier-x01), repo list + disambiguation vs grace-mar `work-xavier/` advisor folder. [xavier-progress-log.md](xavier-progress-log.md) index + burst updated.
 
 ### 2026-04-07
