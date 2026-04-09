@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Game Theory)
 
-**Begins after:** `gt-ch19`
+**Begins after:** `gt-ch20`
 
 Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-first default for Part I boxes).
 
@@ -266,5 +266,17 @@ Operator locks evaluation mode in book/VOLUME-IV-GAME-THEORY.md (divergence-firs
 - **Sprint:** TBD
 - **Outline:** `chapters-volume-iv/gt-ch19/outline.md`
 - **Draft:** `chapters-volume-iv/gt-ch19/draft.md`
+
+### gt-ch20 — Game Theory #20: Mid-Term Examination
+
+- **Purpose:** Book chapter for Game Theory lecture 20 — midterm Q&A on US–Iran ceasefire framing, Mosaic defense, eschatology/agents, China thesis, and audience economics questions; Volume IV Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md.
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-iv/gt-ch20/outline.md`
+- **Draft:** `chapters-volume-iv/gt-ch20/draft.md`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_4_game_theory`) — `python scripts/work_jiang/render_book_architecture.py`.*

@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
   "pipeline_version": "1.0.0",
-  "last_run_utc": "2026-03-31T14:40:56Z",
+  "last_run_utc": "2026-04-09T12:31:45Z",
   "videos": {
     "HIoYQBbBllk": {
       "content_hash": "9b0c7e55b6d96a9492415fbe5876f3083c0a759c64c01d30cfe7269f0e60a591",
@@ -1171,6 +1171,15 @@
       "status": "error",
       "error": "ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
       "last_updated_utc": "2026-03-31T14:40:56Z"
+    },
+    "ue8y5e3HnHE": {
+      "content_hash": "d1b716701c9cf4c9bf4cff0f42de4bb082abfc4d6669a993005f0ed6644784f2",
+      "source_tier": "tier1_api",
+      "quality": 0.95,
+      "status": "ok",
+      "error": null,
+      "last_updated_utc": "2026-04-09T12:31:45Z",
+      "last_successful_fetch_at_utc": "2026-04-09T12:31:45Z"
     }
   }
 }

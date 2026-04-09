@@ -1,7 +1,7 @@
 # Predictive History (@PredictiveHistory) — full video index
 
 - **channel:** https://www.youtube.com/@PredictiveHistory/videos
-- **video_count:** 137
+- **video_count:** 138
 - **generated_at_utc:** 2026-04-08T12:00:00Z
 - **method:** index-only (no transcripts downloaded)
 
@@ -144,3 +144,4 @@
 | 135 | `lkKrZq4YdqY` | Geo-Strategy#2:  Christian Zionism and the Middle East Conflict | 2694.0 | https://www.youtube.com/watch?v=lkKrZq4YdqY |
 | 136 | `xEEpOxqdU5E` | Geo-Strategy #1:  Iran's Strategy Matrix | 2690.0 | https://www.youtube.com/watch?v=xEEpOxqdU5E |
 | 137 | `Gp9Hv1PXx0o` | Jiang Xueqin Teaching Gay Talese Research Method (Introduction) | 300.0 | https://www.youtube.com/watch?v=Gp9Hv1PXx0o |
+| 138 | `ue8y5e3HnHE` | Game Theory #20:  Mid-Term Examination | 0.0 | https://www.youtube.com/watch?v=ue8y5e3HnHE |

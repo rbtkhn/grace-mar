@@ -1906,6 +1906,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: gt-20
+  video_id: ue8y5e3HnHE
+  title: 'Game Theory #20: Mid-Term Examination'
+  canonical_url: https://www.youtube.com/watch?v=ue8y5e3HnHE
+  publication_date: 2026-04-08
+  lecture_path: lectures/game-theory-20-mid-term-examination.md
+  analysis_path: analysis/ue8y5e3HnHE-game-theory-20-analysis.md
+  series: game-theory
+  episode: 20
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
 - source_id: gb-01
   video_id: TsD-8FGA84A
   title: 'Great Books #1: Secrets of the Universe'
@@ -2039,8 +2054,8 @@ sources:
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: not_started
-    chapter_mapping: pending
+    analysis: complete
+    chapter_mapping: complete
 - source_id: vi-01
   video_id: XRk5VSEzJ4Y
   title: 'Interviews #1: Cyrus Janssen — The World Is About to Change'
