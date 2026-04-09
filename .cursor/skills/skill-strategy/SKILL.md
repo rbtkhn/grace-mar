@@ -13,6 +13,8 @@ description: >-
 
 **Purpose:** Run a **bounded strategy pass** over work-strategy: produce or extend the **strategy-notebook** first; touch [STRATEGY.md](../../../docs/skill-work/work-strategy/STRATEGY.md) only when promoting watches, analogy lines, or operator log entries that have **stabilized**.
 
+**Persistent frontier:** The repo holds the **running edge** (latest `days.md` block, **`### Open`**, **`### Links`**, **`meta.md`** when relevant). Each **`strategy`** invocation **updates** that checkpoint from the **last committed** block—tomorrow’s pass **reads disk**, not thread recall. Informal gloss: **memoized** strategy state (see [Accumulation and evolution](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#accumulation-and-evolution) in the architecture doc).
+
 ## When to use
 
 - The operator wants **cross-territory** synthesis (briefs, transcripts, frameworks, Rome/Islamabad threads) captured as **dated judgment**.
