@@ -9,7 +9,7 @@
 ## Skills (politics-aligned)
 
 - [.cursor/skills/weekly-brief-run/SKILL.md](../../../.cursor/skills/weekly-brief-run/SKILL.md) — work-politics weekly brief workflow.  
-- [.cursor/skills/pol-pulse/SKILL.md](../../../.cursor/skills/pol-pulse/SKILL.md) — campaign / blocker pulse.  
+- `python3 scripts/operator_work_politics_pulse.py -u grace-mar` — work-politics territory pulse (script only; no Cursor skill).  
 
 ## Strategy-aligned
 

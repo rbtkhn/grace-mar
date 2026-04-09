@@ -22,7 +22,6 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `thanks` | **thanks** | Micro-pause: optional **park** line + `log_cadence_event.py --kind thanks`. Not **`dream`** / **`bridge`**. See `.cursor/skills/thanks/SKILL.md`. |
 | `handoff-check` | **handoff check** | |
 | `gate-review-pass` | **gate review** | |
-| `pol-pulse` | **pol pulse** | |
 | `weekly-brief-run` | **weekly brief** | |
 | `politics-massie` | **massie x** | Portable core: `skills-portable/politics-massie/` → run `sync_portable_skills.py` after edits. |
 | `work-jiang-feature-checklist` | **jiang check** | |
@@ -41,7 +40,6 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 |------|---------|-----------------|
 | `coffee` | **Step 1** (work-start: warmup + harness + branch snapshot + **lane next hints** for **F**/**G** — **no** internet intel; **no** daily brief generator; **signing-off:** `operator_coffee.py --mode closeout` or `operator_handoff_check.py` + summary) + **Step 2** **same** menu always (order **A,B,C,D,E,F,G** — seven modes; **no** close letter). **A — Today:** brief + §1d Putin + KY-4 intel (survey defaults here with **`coffee survey`**). **B — Build:** work-dev + repo hygiene; say **skills** / **meta** with **B** for portable-skills backlog. **C — Compass:** work-strategy + work-strategy-rome. **D — Book:** Jiang / PH. **E — Steward:** gate + template/boundary (reconciliation code when parity is in scope). **F — Xavier next:** one work-xavier step from hints + SYNC-DAILY / WORK-LEDGER / INDEX. **G — Dev next:** first open item in `workspace.md` § Next actions (narrower than **B**). **C** and **D** → exit to normal workflow unless **`stay in coffee`**; **A**, **B**, **F**, **G** re-offer full menu by default; **E** uses steward fork when actionable. **Signing-off:** **E** without steward sub-track → **system pick**. See [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md), `.cursor/skills/coffee/SKILL.md`, [menu-reference — signing-off](skill-work/work-coffee/menu-reference.md#signing-off-intent). | **`operator_coffee.py`** (modes) + agent steps |
 | `thanks` | **Micro-pause** cadence beat: optional one-line **park** text + append **`thanks`** line to [work-cadence-events.md](skill-work/work-cadence/work-cadence-events.md) — no dream, no handoff script, no coffee menu | `python3 scripts/log_cadence_event.py --kind thanks -u grace-mar --ok --kv park=…` (agent: `.cursor/skills/thanks/SKILL.md`) |
-| `pol-pulse` | Territory-only status sweep for `work-politics` | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy script name: `operator_wap_pulse.py`) |
 | `weekly-brief-run` | Weekly brief readiness pass plus scaffold generation for `work-politics` | `python3 scripts/operator_weekly_brief_run.py -u grace-mar` |
 | `gate-review-pass` | Recommendation-oriented review pass over pending `RECURSION-GATE` candidates | `python3 scripts/operator_gate_review_pass.py -u grace-mar` |
 | `handoff-check` | Stop/resume summary with **RECURSION-GATE pending detail**, **Predictive History night closeout** (work-jiang), recent commits, local work, runtime noise, and a re-entry prompt | `python3 scripts/operator_handoff_check.py -u grace-mar`; cold paste stack: `python3 scripts/operator_reentry_stack.py -u grace-mar` (`--compact` optional); one-liner: `python3 scripts/harness_warmup.py -u grace-mar --receipt` |
@@ -67,7 +65,7 @@ When **`gate review`** recommendations repeatedly mis-rank or duplicate-hint wro
 ## Suggested daily pattern
 
 1. Start with `coffee` when opening a new work block or a new agent thread. **Mid-day pause** (stepping away without day-close or session seal): optional **`thanks`** + park line per `.cursor/skills/thanks/SKILL.md`. The operator may say **`coffee` more than once per day** for reorientation; each invocation runs **Step 1** again (see `.cursor/skills/coffee/SKILL.md` § *Multiple coffees per day*). Legacy **`hey`** still works. Use **coffee light** / **minimal** for lighter repeat passes. On **work-start `coffee`**, the agent runs **Step 1** (scripts + branch snapshot + **lane next hints** — **no** Polymarket / poll web / Massie X in Step 1), then **Step 2**: fixed **A–G** — **A — Today** runs brief + §1d + KY-4 intel per [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md) when not survey-only; **B — Build** = work-dev + hygiene (+ **skills** / **meta** when asked); **C — Compass** = strategy + Rome; **D — Book** = Jiang / PH; **E — Steward** = gate + template/boundary; **F — Xavier next**; **G — Dev next** (`workspace.md`). **C** and **D** exit to normal workflow unless **`stay in coffee`**; **A**, **B**, **F**, **G** re-offer the full menu by default; **E** uses the steward fork (**Implement now** / **Later**) when actionable, else full menu — see [menu-reference.md](skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later). **No close letter** — exit per [menu-reference — Exit](skill-work/work-coffee/menu-reference.md) (no **no menu** in coffee). **Cadence:** Monday = full routine; Tue–Fri = lighter; Sunday ≈ 10 min week-ahead (FEC, registration, brief registry); Friday adds a two-line post-mortem — see [menu-reference.md](skill-work/work-coffee/menu-reference.md) § Cadence by weekday. **Signing-off `coffee`** (session end / wrapping — **same** trigger): **Step 1** = `operator_handoff_check.py` (or `operator_coffee.py --mode closeout`) + summary, then the **same** menu as work-start; **E — Steward** without gate/template split → **system pick** — see [menu-reference — signing-off intent](skill-work/work-coffee/menu-reference.md#signing-off-intent).
-2. Run `pol-pulse` when the day includes campaign work, brief prep, or X/content operations.
+2. When the day includes campaign work, brief prep, or X/content operations, run `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (territory pulse — no dedicated skill).
 3. Use `politics-massie` when you want breaking-news hooks and draft tweets for the Massie shadow X account.
 4. Use `weekly-brief-run` for the actual work-politics brief cycle after checking source freshness. If the cycle covers **high-stakes** topics (war powers, ethics/insider, cartel-economy legal claims, border + civil liberties), complete **weekly brief §8** / `docs/skill-work/work-politics/america-first-ky/` stress-test before treating drafts as final.
 5. Use `gate-review-pass` when you want a queue review recommendation without taking action yet.
@@ -91,16 +89,6 @@ Must answer:
 - **Coffee:** **Polymarket** + **volume** + **independent** horserace poll (or none) — **only** after **menu A — Today** (intel path) or explicit same-message request; same caveats and procedure as [polling-and-markets.md](skill-work/work-politics/polling-and-markets.md). Step 1 does **not** include this block.
 - **Coffee:** After **Step 1**, fixed **A–G** menu (present **A,B,C,D,E,F,G**) — **A — Today** (brief + §1d + KY-4 intel; survey defaults here with **`coffee survey`**), **B — Build** (work-dev + repo hygiene; **skills** / **meta** when asked), **C — Compass** (work-strategy + work-strategy-rome), **D — Book** (Jiang / PH), **E — Steward** (gate + template/boundary; **reconciliation code** block when companion-self parity is in scope per [work-companion-self/README — Reconciliation code audit](skill-work/work-companion-self/README.md#reconciliation-code-audit-upstream-and-downstream)), **F — Xavier next**, **G — Dev next**. **Signing-off:** **E** without steward sub-track → **system pick**. **C** and **D** exit to normal workflow unless **`stay in coffee`**; **A**, **B**, **F**, **G** re-offer the menu by default; **E** per steward fork. **No close letter.** See `.cursor/skills/coffee/SKILL.md` and [menu-reference.md](skill-work/work-coffee/menu-reference.md).
 - **Signing-off `coffee`:** After **Step 1** (`operator_handoff_check.py` + paragraph), **same** fixed menu as work-start; **E — Steward** without gate/template split → **system pick**. See [menu-reference — signing-off intent](skill-work/work-coffee/menu-reference.md#signing-off-intent).
-
-### `pol-pulse`
-
-Must answer:
-
-- What is the current campaign timeline?
-- What is stale or blocking?
-- Is the weekly brief ready to generate?
-- What content is moving?
-- Are there live work-politics gate items?
 
 ### `weekly-brief-run`
 
@@ -160,7 +148,7 @@ python3 scripts/operator_daily_warmup.py -u grace-mar
 python3 scripts/operator_work_politics_pulse.py -u grace-mar
 ```
 
-Use the first output to choose the work block. Use the second to choose the work-politics action inside that block.
+Use the first output to choose the work block. Use the second to choose the work-politics action inside that block. There is **no** Cursor skill for the pulse script — invoke the script directly (or ask the agent to run it).
 
 For a fuller operator pass:
 

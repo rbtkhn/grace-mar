@@ -10,9 +10,9 @@
 
 | Intended use | Typical trigger | What it does | Primary artifacts / scripts |
 |--------------|-----------------|--------------|-----------------------------|
-| **Campaign / work-politics pulse** | `pol pulse` | Territory **readiness**: stale docs, brief blockers, gate rhythm, content queue, campaign-facing next actions. | [pol-pulse SKILL](../../.cursor/skills/pol-pulse/SKILL.md); `operator_work_politics_pulse.py` |
+| **Work-politics territory pulse** | _(no skill — run script)_ | Stale docs, brief blockers, gate rhythm, content queue, campaign-facing next actions. | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (legacy: `operator_wap_pulse.py`) |
 | **Weekly brief workflow** | `weekly brief` | **Weekly** brief **readiness**, blockers, optional scaffold generation (not the daily generator). | [weekly-brief-run SKILL](../../.cursor/skills/weekly-brief-run/SKILL.md); `operator_weekly_brief_run.py` |
-| **Strategy pass** (proposed **`skill-strategy`**) | `strategy`, `strategy pass` | Cross-territory **judgment** slice: [STRATEGY.md](STRATEGY.md) (watches, analogy list, operator log), [strategy-notebook/](strategy-notebook/README.md) tail, Islamabad / Rome threads, weak-signal and [analogy-audit](analogy-audit-template.md) flags — **not** a replacement for pol-pulse or the weekly brief runner. | Prose-first reads; optional future pulse script |
+| **Strategy pass** (proposed **`skill-strategy`**) | `strategy`, `strategy pass` | Cross-territory **judgment** slice: [STRATEGY.md](STRATEGY.md) (watches, analogy list, operator log), [strategy-notebook/](strategy-notebook/README.md) tail, Islamabad / Rome threads, weak-signal and [analogy-audit](analogy-audit-template.md) flags — **not** a replacement for the pulse script or the weekly brief runner. | Prose-first reads; optional future pulse script |
 
 **Coffee** [Compass](../../.cursor/skills/coffee/SKILL.md) (**C**) can include **work-strategy-rome** (ROME-PASS) but is a **session hub**, not a full strategy pass.
 

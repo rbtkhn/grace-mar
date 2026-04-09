@@ -49,7 +49,7 @@ A terminal one-liner has been shared that:
 
 **Status (2026-03-20):** Items 1–5 implemented — weekly brief §8 + account-x wiring, `scripts/scaffold_stress_test_brief.py`, pipeline-event notes in [README.md](README.md), advisor one-pager [guardrail-stress-test-advisor-one-pager.md](../../../externals/massie/guardrail-stress-test-advisor-one-pager.md), governance + canonical-path checks passed.
 
-**Follow-up:** Operator skills + `docs/operator-skills.md` now surface §8 / `america-first-ky` for `weekly-brief-run`, `wap-pulse`, and `coffee` related-file discovery.
+**Follow-up:** Operator skills + `docs/operator-skills.md` now surface §8 / `america-first-ky` for `weekly-brief-run`, `operator_work_politics_pulse.py`, and `coffee` related-file discovery.
 
 1. **Wire templates into operator habit**  
    - Add a short § to [weekly-brief-template.md](../weekly-brief-template.md) or [account-x.md](../account-x.md): “High-stakes briefs → complete `america-first-ky/stress-test-brief-template.md`.”  

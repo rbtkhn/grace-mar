@@ -26,7 +26,7 @@ Use this skill when the operator has just completed (or is in the middle of) a t
 
 2. **Name the skill**
    - Lowercase, hyphens only; max 64 chars.
-   - Example: `extract-skill-from-session`, `gate-review-pass`, `pol-pulse`.
+   - Example: `extract-skill-from-session`, `gate-review-pass`, `weekly-brief-run`.
 
 3. **Write the description (frontmatter)**
    - Third person.
@@ -55,7 +55,7 @@ Use this skill when the operator has just completed (or is in the middle of) a t
 
 - Do not overwrite an existing skill without explicit confirmation.
 - If the session context is thin, ask the operator to briefly describe the workflow or paste the relevant part of the conversation before generating the skill.
-- Follow the project's existing skill style (see e.g. `gate-review-pass`, `pol-pulse`) for tone and length.
+- Follow the project's existing skill style (see e.g. `gate-review-pass`, `weekly-brief-run`) for tone and length.
 
 ## Reference
 
