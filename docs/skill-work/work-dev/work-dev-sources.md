@@ -6,6 +6,8 @@ YouTube channels, podcasts, newsletters, and **web reference outlets** the opera
 
 **Principle:** [Work modules — authorized sources lists](../work-modules-sources-principle.md).
 
+**Companion-self ↔ Open Brain (OB1) bridge (planning):** [ob1-companion-self-bridge-consolidated.md](ob1-companion-self-bridge-consolidated.md) — single reference for bidirectional integration, governance, feasibility study scope, and document bundle (WORK lane; authoritative bundle may later live in companion-self).
+
 ---
 
 ## Channels and newsletters
