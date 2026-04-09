@@ -4,7 +4,7 @@ preferred_activation: strategy
 description: >-
   Primary trigger: strategy. Work-strategy pass — cross-territory judgment with strategy-notebook as the primary write surface;
   STRATEGY.md for watches and operator log when promoting stable arcs; Islamabad / Rome frameworks, weak-signal and analogy-audit
-  discipline per work-strategy README. Not work-politics pulse; not Postol technical pass (use strategy postol).
+  discipline per work-strategy README. Not work-politics pulse.
 ---
 
 # Strategy pass (`skill-strategy`)
@@ -32,7 +32,6 @@ description: >-
 | Say this | Skill / tool |
 |----------|----------------|
 | **`strategy`**, **`strategy pass`**, **`work-strategy`** (this pass) | **`skill-strategy`** — notebook-primary |
-| **`strategy postol`**, **`postol pass`**, **`postol ingest`** | [strategy-postol](../strategy-postol/SKILL.md) — missiles/BMD/drones/tunnels/nuclear latency checklist |
 | Work-politics **stale docs / queue / campaign next actions** | `python3 scripts/operator_work_politics_pulse.py -u grace-mar` (no `strategy`-only skill) |
 | **`weekly brief`** | [weekly-brief-run](../weekly-brief-run/SKILL.md) |
 

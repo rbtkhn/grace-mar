@@ -6,7 +6,7 @@
 
 **Air date (approx.):** **2025-03** (aligns with public listing for the above id; **verify**).
 
-**Ingested:** 2026-04-02 (operator **`strategy postol` ingest**).
+**Ingested:** 2026-04-02 (operator durable transcript ingest).
 
 **Scope:** [work-strategy](../../../../docs/skill-work/work-strategy/README.md) upstream — historical exercise reconstruction + contemporary policy (Germany **2026** missiles, **INF**, **ABM**, **Poseidon**, civil effects pedagogy). **Not** companion Record.
 

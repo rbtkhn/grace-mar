@@ -35,7 +35,7 @@ Same guardrails as below: research upstream, not Record; verify numbers before s
 
 | Action | Default |
 |--------|---------|
-| **Write** transcript `*.md` + **append** [analyst-corpus INDEX](../analyst-corpus/INDEX.md) when applicable | When the operator (or **`strategy postol` / `postol ingest`**) clearly wants a **durable** ingest — same turn as the file bodies. |
+| **Write** transcript `*.md` + **append** [analyst-corpus INDEX](../analyst-corpus/INDEX.md) when applicable | When the operator clearly wants a **durable** ingest — same turn as the file bodies. |
 | **`git commit` (local)** | **Do it in the same turn** when the ingest is complete (new/updated transcript + INDEX row), so the repo matches chat. **Unless** the operator says **draft only**, **no commit**, **PLAN** (no file permission), or **stash** / **don’t commit** — then leave **uncommitted** working tree. |
 | **`git push` (remote)** | **Not** implied by ingest. Only when the operator says **EXECUTE** (with push), **DOCSYNC** (with push), or **git push** / **push to origin**. |
 
