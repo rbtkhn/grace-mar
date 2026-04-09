@@ -47,5 +47,5 @@ If the companion wants a **capability note** linking to this methodology, add it
 
 ## See also
 
-- [template-three-lenses.md](template-three-lenses.md) — paste block for briefs and threads
+- [template-three-lenses.md](template-three-lenses.md) — paste block for briefs and threads (**Verify tier**, **plane tags** / A·B·C crosswalk, optional **dual-register** and **(W)/(A)/(R)** legend)
 - [work-politics README](../README.md) — territory and gate sync

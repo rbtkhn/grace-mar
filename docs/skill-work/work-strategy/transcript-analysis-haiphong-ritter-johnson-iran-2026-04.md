@@ -124,6 +124,20 @@ flowchart LR
 
 ---
 
+## Compressed analogy strip (optional pattern for future transcript digests)
+
+When the source uses **several** historical or pop-culture analogies, add a short table (do not replace full [analogy-audit-template.md](analogy-audit-template.md) for campaign copy — this is a **digest compression**):
+
+| Analogy | Fit (one line) | Mismatch / falsifier | Use: illustrative / framing only / defer |
+|---------|------------------|----------------------|----------------------------------------|
+| … | … | … | … |
+
+**Trigger:** roughly **≥4** distinct analogy hooks in one segment. Keeps **C-plane** rhetoric from posing as **B-plane** evidence.
+
+**Cross-links:** [template-three-lenses](../work-politics/analytical-lenses/template-three-lenses.md) (verify tier, plane tags, **(W)/(A)/(R)**); [triangulation stub](triangulation-iran-war-pape-postol-stub.md).
+
+---
+
 ## Suggested follow-ups (WORK)
 
 1. **Verify tier:** NBC Trump–Netanyahu; single-vessel / 24h Hormuz reporting; casualty bands for Lebanon (compare to prior [web verification](strategy-notebook/chapters/2026-04/days.md) block).

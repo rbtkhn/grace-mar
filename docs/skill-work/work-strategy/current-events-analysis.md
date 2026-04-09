@@ -52,6 +52,7 @@ If the analogy is weak, misleading, or merely decorative, say so explicitly.
 - Run the three analytical lenses ([work-politics/analytical-lenses](../work-politics/analytical-lenses/manifest.md)) on the same neutral fact summary.
 - Structural / operational / institutional views; surface tensions.
 - Where relevant, carry forward the analogy-audit judgment so the three minds respond to the same clarified framing rather than an unexamined historical comparison.
+- **Align with work-strategy conventions:** optional **Verify tier** (claim → dated URL) and **plane tags** (structural vs operational vs institutional — crosswalk to transcript **A/B/C** in [template-three-lenses](../work-politics/analytical-lenses/template-three-lenses.md)) so synthesis does not **bleed** shipping counts into victory narratives without a seam.
 
 ### 5.5 Synthesis (after three minds)
 

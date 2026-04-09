@@ -19,6 +19,14 @@
 > - [ ] **Israeli / Iranian declaratory lines** on escalation (open sources only).
 > - [ ] **Gulf Arab hedging** (Iraq, Qatar, Oman, UAE, Saudi, Bahrain) — *one line each, sourced*.
 
+### Verify tier (fill before public use)
+
+Same pattern as [template-three-lenses](../work-politics/analytical-lenses/template-three-lenses.md) **Verify tier**: **claim → dated URL → stale risk** for Hormuz throughput, HEU estimates, NATO cohesion claims, and any casualty or ship-count line.
+
+| Claim | Source / date | Stale risk |
+|-------|----------------|------------|
+| … | … | … |
+
 ---
 
 ## Three lenses
@@ -55,6 +63,10 @@ U.S. **public tolerance** for entanglement and **aid** to allies; Israeli **dome
 
 ## Operator synthesis (pre–public approval)
 
+**Dual-register (when Lebanon / ceasefire scope is live):** add **one sentence** that can honestly track both **mediator/regional** language (“restraint where parties treat fronts as linked”) and **U.S.–Israel** explicit carve-outs — without collapsing them; see [template-three-lenses](../work-politics/analytical-lenses/template-three-lenses.md) and [days.md flashpoint copy](strategy-notebook/chapters/2026-04/days.md).
+
+**Plane tags / bleed check:** before finalizing, label takeaway sentences as **structural (S)**, **operational/diplomatic (O)**, or **institutional (I)** — same crosswalk as [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) **A/B/C** (scope / material / narrative). Split sentences that mix **verified throughput** with **“who won”** unless the seam is explicit.
+
 **Integrated takeaway (draft — edit after facts filled):**  
 The Iran war’s **strategic risk** sits at the intersection of **energy chokepoint coercion** (Pape) and **nuclear threshold latency** (Postol). Messaging that **only** addresses one — either **“markets normalize”** or **“the nuclear program was set back”** — may **understate coupling**: **economic shock** and **proliferation pressure** can **reinforce** each other. Any public line should **separate** (a) **verified conditions** from (b) **expert scenario** from (c) **normative position**, and should **triangulate** with [analytical-lenses](../work-politics/analytical-lenses/manifest.md) on a **single** neutral fact summary.
 
@@ -73,5 +85,6 @@ The Iran war’s **strategic risk** sits at the intersection of **energy chokepo
 
 ## Related
 
+- [template-three-lenses](../work-politics/analytical-lenses/template-three-lenses.md) — **Verify tier**, **plane tags**, **dual-register** line.
 - [current-events-analysis.md](current-events-analysis.md) — pipeline (Perceiver → chokepoint → lenses → synthesis).
 - [daily-brief-template.md](daily-brief-template.md) — §4 triangulation slot in daily briefs.
