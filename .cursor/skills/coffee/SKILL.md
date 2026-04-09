@@ -107,27 +107,27 @@ Immediately **after** Step 1 content, output the fixed **coffee** menu: **seven*
 
 ```
 A. Today — (light) recommended: quick reorientation matches current pace
-B. Build — (moderate) dev + hygiene; 2 non-main branches
+B. Build — (moderate) work-dev + skills; one implementation step
 C. Compass — (heavy) sustained strategy; consider after break
 D. Book — (moderate) Jiang/PH; 1 pending step
-E. Steward — (light) 3 pending candidates; bounded gate pass
+E. Steward — (light) gate/template/integrity/git sub-tracks; default gate else template
 F. Xavier next — (moderate) work-xavier; one next task from SYNC-DAILY / WORK-LEDGER / INDEX
 G. Dev next — (moderate) work-dev; first open line in workspace.md § Next actions
 ```
 
 If the session load script is unavailable or errored, present the menu without annotations (unchanged behavior).
 
-**Micro-hints (one line under the A–G list):** `Micro-hints: B+skills/meta | F=xavier next | G=dev next (workspace) | E=gate | template | integrity | E both | after actionable E: Implement now / Later`
+**Micro-hints (one line under the A–G list):** `Micro-hints: B+skills/meta | F=xavier next | G=dev next (workspace) | E=gate | template | integrity | git/ship | E both | after actionable E: Implement now / Later`
 
 **Quick reference (modes):**
 
 - **A. Today** — Daily brief (generator + §1d Putin only when chosen) + work-politics intel (KY-4 Polymarket, polls, Massie X per cadence), brief registry / campaign / queue — **one** next step. **Companion survey** defaults here when the operator opened with **`coffee survey`**.
-- **B. Build** — **Ship-lane mechanics + work-dev execution** ( **not** integrity/template audits — those are **E** ): [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), `git status`, commit/push plan; `docs/skill-work/work-dev/` + [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md); **skills / meta** pipeline ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync) when **`skills`** / **`meta`** with **B**. **One** prescribed next action. Detail: [menu-reference § Build (B) — detailed scope](../../../docs/skill-work/work-coffee/menu-reference.md#build-b--detailed-scope).
+- **B. Build** — **work-dev + skills/meta** ( **not** git/ship or membrane audits — those are **E** ): `docs/skill-work/work-dev/` + [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md); **skills / meta** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync) when **`skills`** / **`meta`** with **B**. **One** prescribed next action. Detail: [menu-reference § Build (B) — detailed scope](../../../docs/skill-work/work-coffee/menu-reference.md#build-b--detailed-scope).
 - **C. Compass** — **work-strategy** + **work-strategy-rome** (ROME-PASS, manifest, exemplars, notes) — **one** develop step. Vatican / Holy See / ROME-PASS work lives **here**, not under **Today** alone.
 - **D. Book** — **work-jiang / Predictive History** — **one** next step.
-- **E. Steward** — **Governance membrane:** **gate** \| **template/boundary** \| **integrity/exports**. **Default if the operator says `E` only:** **gate** when there is at least one pending gate candidate; otherwise **template/boundary** — **integrity/exports is not** in the default rotation. **`E integrity`** / **`E exports`** → integrity/exports only; **`E both`** → gate + template/boundary; **`E all`** → all three (explicit only). **First line:** name the track(s). **Integrity/exports:** `validate-integrity.py` (report); `refresh_derived_exports.py` **writes** — ship via **Implement now**, never silent. Template/boundary: **Reconciliation code** per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md). **Gate merges** never run from steward alone — companion **approve** + `process_approved_candidates.py` only.
+- **E. Steward** — **Governance membrane:** **gate** \| **template/boundary** \| **integrity/exports** \| **git/ship**. **Default if the operator says `E` only:** **gate** if pending candidates; else **template/boundary** — **integrity** and **git/ship** not in default rotation. **`E integrity`** / **`E git`** / **`E ship`** → that track only; **`E both`** → gate + template; **`E all`** → all four (explicit only). **Git/ship:** [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), `git status`, commit/push plan (read-only until ship). **Integrity/exports:** `validate-integrity.py`; `refresh_derived_exports.py` **writes** — **Implement now**. Template/boundary: **Reconciliation code** per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md). **Gate merges** never run from steward alone — companion **approve** + `process_approved_candidates.py` only.
 - **F. Xavier next** — **work-xavier** — **one** next task: use Step 1 **lane next hints** line + [INDEX.md](../../../docs/skill-work/work-xavier/INDEX.md), [SYNC-DAILY.md](../../../docs/skill-work/work-xavier/SYNC-DAILY.md), [WORK-LEDGER.md](../../../docs/skill-work/work-xavier/WORK-LEDGER.md), [DAILY-OPS-CARD.md](../../../docs/skill-work/work-xavier/DAILY-OPS-CARD.md); mirrors / BrewMind / runbooks only as needed for that single step — **not** a full territory sweep unless the operator asks.
-- **G. Dev next** — **work-dev next task only** — **one** concrete step from the first **open** numbered item in [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions** (operator-maintained). **Narrower than B:** no default full hygiene/skills pass unless the operator folds it in.
+- **G. Dev next** — **work-dev next task only** — **one** concrete step from the first **open** numbered item in [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions** (operator-maintained). **Narrower than B:** no default full work-dev+skills or **E git/ship** pass unless folded in.
 
 **Re-offer rules:** After **A**, **B**, **F**, or **G**, re-offer the full **A–G** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**. After **E**, see [menu-reference.md § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later): if the steward pass **surfaces actionable possibilities** (defined there), **do not** re-offer the full menu — offer **only** **1. Implement now** and **2. Later** (**Later** → then present full **A–G**). If **nothing actionable** surfaced, re-offer full **A–G** as after **A**/**B**/**F**/**G**. Synonyms: **`E+ship`** / **`E implement`** / **`EXECUTE`** + slice ≈ **Implement now** when the operator uses them instead of the numbered pick.
 
@@ -147,7 +147,7 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 
 **After the operator states their menu letter** (and steward track if **E**), the assistant may append a **`coffee_pick`** cadence line (same file) for rollup:  
 `python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=E steward=gate --cursor-model "<from Cursor UI>"`  
-(`steward=` only when `picked=E`; values: `gate`, `template`, `integrity`, `both`, or `all`.) Optional: `scripts/log_operator_choice.py --context COFFEE --picked E` for `session-transcript.md`.
+(`steward=` only when `picked=E`; values: `gate`, `template`, `integrity`, `git`, `both`, or `all`.) Optional: `scripts/log_operator_choice.py --context COFFEE --picked E` for `session-transcript.md`.
 
 ## Related files
 
