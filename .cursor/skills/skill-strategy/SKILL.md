@@ -4,7 +4,7 @@ preferred_activation: strategy
 description: >-
   Primary trigger: strategy. Work-strategy pass — cross-territory judgment with strategy-notebook as the primary write surface;
   STRATEGY.md for watches and operator log when promoting stable arcs; Islamabad / Rome frameworks, weak-signal and analogy-audit
-  discipline per work-strategy README. Not work-politics pulse.
+  discipline per work-strategy README. Wires to Predictive History (work-jiang) via notebook Jiang resonance + linked lectures/analysis — not work-politics pulse.
 ---
 
 # Strategy pass (`skill-strategy`)
@@ -26,6 +26,33 @@ description: >-
 4. **STRATEGY.md:** suggest or apply updates only when the operator asks to **promote** — not every notebook entry.
 
 **Lane index:** [work-strategy README](../../../docs/skill-work/work-strategy/README.md).
+
+## Predictive History (`work-jiang`) — how it wires in
+
+**Roles:** **Predictive History** is the **slow corpus** (lectures, book spine, registries). **`skill-strategy`** is **fast judgment** in the strategy-notebook. PH **feeds** strategy; it is **not** merged into SELF or Voice without the gate.
+
+**When to pull PH in during a strategy pass**
+
+- The operator’s question overlaps a **named crisis, region, or thesis** also treated in an ingested **lecture** or **analysis memo**.
+- You are tightening **Islamabad / Gulf / Iran** outreach copy and need the **Jiang** line next to **analyst** or **Rome** lines already in the notebook.
+- **`meta.md`** or **`Open`** points at **Part II Geo**, **Game Theory**, or another **volume** thread.
+
+**Where to look (read-only unless the operator asks for corpus edits)**
+
+| Need | Path |
+|------|------|
+| Book / volume map | [research/external/work-jiang/BOOK-ARCHITECTURE.md](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md) and volume-specific `book/VOLUME-*.md` |
+| Queue / status | [research/external/work-jiang/STATUS.md](../../../research/external/work-jiang/STATUS.md) |
+| Lecture + digest | [research/external/work-jiang/lectures/](../../../research/external/work-jiang/lectures/) |
+| Episode analysis stubs | [research/external/work-jiang/analysis/](../../../research/external/work-jiang/analysis/) |
+| Channel pulls / ingest wiring | [research/external/youtube-channels/predictive-history/README.md](../../../research/external/youtube-channels/predictive-history/README.md); [common-inputs § PH](../../../docs/skill-work/work-strategy/common-inputs.md) |
+| Islamabad × Jiang | [research/external/work-jiang/intake/](../../../research/external/work-jiang/intake/) (e.g. five-point + commentary) |
+
+**Write surface — `### Jiang resonance (optional)`** in the day’s `days.md` block: one tight line with **series + episode** (e.g. Game Theory #20, `ue8y5e3HnHE`) or **lecture filename stem**, plus **Links** to the curated lecture and any **analysis** file. That is the **explicit wire** from PH into the notebook (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § Parallel to Predictive History).
+
+**Disambiguation:** **Book Volume I chapter `ch20`** (Geo-Strategy in the registry) is **not** the same label as **Game Theory #20** or another series’ “20.” State **volume + series + `video_id`** when both could confuse.
+
+**Out of scope for `skill-strategy`:** full **transcript ingest**, registry JSONL edits, or **skill-jiang** blind forward-chain — use [work-jiang-feature-checklist](../work-jiang-feature-checklist/SKILL.md) / `scripts/work_jiang/` when the operator is doing **corpus** work, not a notebook pass.
 
 ## Disambiguation
 
