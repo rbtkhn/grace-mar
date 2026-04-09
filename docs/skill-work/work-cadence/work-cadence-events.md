@@ -122,3 +122,6 @@ _(Append below this line.)_
 - **2026-04-09 14:48 UTC** — thanks (grace-mar) ok=true cursor_model=unknown park=coffee-A-G-xavier-dev-next-shipped
 - **2026-04-09 15:02 UTC** — bridge (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking refs=af6eaca
 - **2026-04-09 15:10 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=claude-4.6-opus-high-thinking
+- **2026-04-09 15:32 UTC** — thanks (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking park=ob1-bridge-doctrine-locked-90d-eval
+- **2026-04-09 15:41 UTC** — thanks (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking park=cadence-voice-principle-shipped-and-demonstrated
+- **2026-04-09 16:02 UTC** — thanks (grace-mar) ok=true cursor_model=claude-4.6-opus-high-thinking park=risk-mitigation-4-patterns-5-territories-template-locked
