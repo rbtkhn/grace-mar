@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-08T05:21:04.413540+00:00",
+  "generated_at": "2026-04-09T06:17:43.253721+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
-    "cursor_model": "claude-4.6-opus-high-thinking"
+    "cursor_model": "unknown"
   },
   "strict_mode": false,
   "phase": "both",
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": true,
+  "self_memory_changed": false,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
@@ -17,7 +17,7 @@
   "followups": [],
   "phases": {
     "recent": {
-      "self_memory_changed": true,
+      "self_memory_changed": false,
       "entry_count": 0,
       "relation_counts": {}
     },
@@ -29,56 +29,95 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-07T05:20:58.087199+00:00",
-    "window_end_utc": "2026-04-08T05:20:58.087199+00:00",
+    "window_start_utc": "2026-04-08T06:17:37.585608+00:00",
+    "window_end_utc": "2026-04-09T06:17:37.585608+00:00",
     "window_hours": 24.0,
-    "count": 5,
-    "first_ts": "2026-04-07T12:05:00+00:00",
-    "last_ts": "2026-04-07T20:56:00+00:00",
-    "span_hours": 8.85,
+    "count": 10,
+    "first_ts": "2026-04-08T17:17:00+00:00",
+    "last_ts": "2026-04-09T05:56:00+00:00",
+    "span_hours": 12.65,
     "by_mode": {
-      "work-start": 3,
-      "minimal": 2
+      "work-start": 10
     },
     "runs": [
       {
-        "ts_iso": "2026-04-07T12:05:00+00:00",
+        "ts_iso": "2026-04-08T17:17:00+00:00",
         "ok": true,
         "mode": "work-start",
-        "kv": {
-          "cursor_model": "claude-4.6-opus-high-thinking"
-        }
-      },
-      {
-        "ts_iso": "2026-04-07T17:44:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "claude-4.6-opus-high-thinking"
-        }
-      },
-      {
-        "ts_iso": "2026-04-07T20:02:00+00:00",
-        "ok": true,
-        "mode": "minimal",
         "kv": {
           "cursor_model": "unknown"
         }
       },
       {
-        "ts_iso": "2026-04-07T20:08:00+00:00",
+        "ts_iso": "2026-04-08T18:05:00+00:00",
         "ok": true,
-        "mode": "minimal",
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "claude-4.6-opus-high-thinking"
+        }
+      },
+      {
+        "ts_iso": "2026-04-08T20:33:00+00:00",
+        "ok": true,
+        "mode": "work-start",
         "kv": {
           "cursor_model": "unknown"
         }
       },
       {
-        "ts_iso": "2026-04-07T20:56:00+00:00",
+        "ts_iso": "2026-04-08T22:29:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
           "cursor_model": "claude-4.6-opus-high-thinking"
+        }
+      },
+      {
+        "ts_iso": "2026-04-08T22:35:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-08T22:35:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-09T04:03:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-09T04:54:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-09T04:56:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-09T05:56:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown"
         }
       }
     ],
@@ -110,21 +149,21 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 2,
+  "suggested_execution_path_index": 0,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 calendar rotation; not policy or Record.",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Today / field (brief + work-politics lane)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
   "civmem_index_missing": false,
   "capture_gap": {
     "last_evidence_date": "2026-03-28",
     "last_evidence_id": "ACT-0050",
-    "days_since_evidence": 10,
+    "days_since_evidence": 11,
     "last_merge_date": "2026-03-28",
-    "days_since_merge": 10,
+    "days_since_merge": 11,
     "pending_count": 1,
     "level": "notice",
-    "message": "Record hasn't grown in 10 days (last: ACT-0050, 2026-03-28)"
+    "message": "Record hasn't grown in 11 days (last: ACT-0050, 2026-03-28)"
   },
   "capability_shift": {
     "category": "model",
@@ -144,6 +183,6 @@
     "blocked": "",
     "watch_later": ""
   },
-  "worktreeState": "light residue",
-  "worktreeAdvice": "leave or commit before sleep; bridge seals when you close the session."
+  "worktreeState": "risky residue",
+  "worktreeAdvice": "Large or wide diff \u2014 inspect before continuing; use bridge when closing session."
 }
