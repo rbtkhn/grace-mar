@@ -197,6 +197,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 - Do not let `dream` become an autonomous merge agent.
 - Prefer bounded maintenance over speculative semantic intervention.
 - A quiet run is normal; do not manufacture significance.
+- If **integrity** fails with **stale derived export** (not contradictions), refresh exports: `bash scripts/regen_grace_mar_derived.sh` from repo root, then `python3 scripts/validate-integrity.py --user grace-mar --json` — see [`docs/skill-work/work-cadence/README.md`](../../../docs/skill-work/work-cadence/README.md) § *When integrity reports stale derived exports*.
 
 ## Relation to coffee
 

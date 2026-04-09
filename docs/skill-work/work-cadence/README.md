@@ -18,6 +18,31 @@
 
 ---
 
+## When integrity reports stale derived exports
+
+Commits that change profile surfaces, `bot/prompt.py`, or related inputs can leave **derived** files older than sources: `users/grace-mar/manifest.json`, `llms.txt`, `intent_snapshot.json`, `fork-manifest.json`, repo-root `grace-mar-llm.txt`, and `users/grace-mar/runtime-bundle/bundle.json`. `validate-integrity.py` and `auto_dream.py` then report **integrity** failure until exports are refreshed.
+
+**Recovery (grace-mar),** from repo root:
+
+```bash
+bash scripts/regen_grace_mar_derived.sh
+python3 scripts/validate-integrity.py --user grace-mar --json
+```
+
+The script runs, in order: `export_manifest.py`, `fork_checksum.py --manifest`, `export_prp.py` (writes `grace-mar-llm.txt`), `export_runtime_bundle.py`. See [`scripts/regen_grace_mar_derived.sh`](../../../scripts/regen_grace_mar_derived.sh).
+
+---
+
+## Reading the audit file (demo vs grace-mar)
+
+[`work-cadence-events.md`](work-cadence-events.md) is **append-all**: lines may include **`(demo)`** (fixtures, harness, or CLI defaults) alongside **`(grace-mar)`** operator cadence.
+
+- **Scripts** that compute session load, rhythm, or coffee rollup **filter by user id** — see [`scripts/audit_cadence_rhythm.py`](../../../scripts/audit_cadence_rhythm.py) `parse_events`. Lines with **`dream (demo)`** do **not** affect grace-mar metrics.
+- **Manual review** of the raw file: restrict to **`grace-mar`** lines (e.g. search for `(grace-mar)`) so harness noise is not mistaken for companion dream failures.
+- **`demo`** rows are not the companion’s cadence.
+
+---
+
 ## Daily rhythm
 
 `coffee`, `dream`, and `bridge` form the cadence triad:

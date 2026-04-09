@@ -99,6 +99,33 @@ def _format_cursor_model_token(cm: str) -> str:
     return str(cm).replace("\n", " ").strip().replace(" ", "_")[:200]
 
 
+# Match first segment of a cadence line (aligned with audit_cadence_rhythm.parse_events).
+_LAST_EVENT_LINE_RE = re.compile(
+    r"^- \*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC\*\* — (\w+) \(([^)]+)\)"
+)
+
+
+def _last_event_ts_kind_user(events_path: Path) -> tuple[datetime, str, str] | None:
+    """Parse the most recent cadence event line from the file, if any."""
+    if not events_path.is_file():
+        return None
+    for line in reversed(events_path.read_text(encoding="utf-8").splitlines()):
+        line = line.strip()
+        m = _LAST_EVENT_LINE_RE.match(line)
+        if not m:
+            continue
+        date_str, time_str = m.group(1), m.group(2)
+        kind, user = m.group(3), m.group(4).strip()
+        try:
+            dt = datetime.strptime(f"{date_str} {time_str}", "%Y-%m-%d %H:%M").replace(
+                tzinfo=timezone.utc
+            )
+        except ValueError:
+            return None
+        return dt, kind, user
+    return None
+
+
 def append_cadence_event(
     kind: str,
     user_id: str,
@@ -109,10 +136,21 @@ def append_cadence_event(
     kv: dict[str, str] | None = None,
     events_path: Path = EVENTS_PATH,
     no_auto_park: bool = False,
+    dedupe_seconds: int | None = 60,
+    now: datetime | None = None,
 ) -> Path:
-    """Append one cadence event line. Returns the path written to."""
+    """Append one cadence event line. Returns the path written to.
+
+    If dedupe_seconds is a positive int and the last line in the file is the same
+    kind and user within that many seconds of ``now``, the append is skipped (no
+    write). Pass dedupe_seconds=None or 0 to disable. ``now`` is for tests; default
+    is current UTC time.
+    """
     if kind not in KINDS:
         raise ValueError(f"kind must be one of {KINDS}, got {kind!r}")
+
+    uid = user_id.strip()
+    now_dt = now if now is not None else datetime.now(timezone.utc)
 
     base = dict(kv or {})
 
@@ -127,8 +165,21 @@ def append_cadence_event(
             continue
         merged[k] = v
 
-    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    parts = [f"- **{ts}** — {kind} ({user_id}) ok={'true' if ok else 'false'}"]
+    if dedupe_seconds is not None and dedupe_seconds > 0:
+        prev = _last_event_ts_kind_user(events_path)
+        if prev is not None:
+            last_dt, last_kind, last_user = prev
+            if last_kind == kind and last_user == uid:
+                delta = (now_dt - last_dt).total_seconds()
+                if 0 <= delta < dedupe_seconds:
+                    print(
+                        f"cadence dedupe: skipped duplicate {kind} ({uid}) within {dedupe_seconds}s",
+                        file=sys.stderr,
+                    )
+                    return events_path
+
+    ts = now_dt.strftime("%Y-%m-%d %H:%M UTC")
+    parts = [f"- **{ts}** — {kind} ({uid}) ok={'true' if ok else 'false'}"]
     if mode:
         parts.append(f"mode={mode}")
     for k, v in merged.items():

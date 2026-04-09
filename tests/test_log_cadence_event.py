@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pytest
@@ -128,3 +129,67 @@ def test_append_cursor_model_spaces_become_underscores(events_file: Path) -> Non
     )
     text = events_file.read_text(encoding="utf-8")
     assert "cursor_model=A_B_Model" in text
+
+
+def test_dedupe_skips_second_same_kind_user_within_window(
+    events_file: Path, capsys: pytest.CaptureFixture[str],
+) -> None:
+    events_file.write_text(
+        HEADER
+        + "- **2026-01-15 12:00 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown\n",
+        encoding="utf-8",
+    )
+    append_cadence_event(
+        "coffee",
+        "grace-mar",
+        ok=True,
+        mode="work-start",
+        events_path=events_file,
+        dedupe_seconds=60,
+        now=datetime(2026, 1, 15, 12, 0, 30, tzinfo=timezone.utc),
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert text.count("— coffee") == 1
+    err = capsys.readouterr().err
+    assert "cadence dedupe: skipped duplicate coffee (grace-mar)" in err
+
+
+def test_dedupe_allows_after_window(events_file: Path) -> None:
+    events_file.write_text(
+        HEADER
+        + "- **2026-01-15 12:00 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown\n",
+        encoding="utf-8",
+    )
+    append_cadence_event(
+        "coffee",
+        "grace-mar",
+        ok=True,
+        mode="work-start",
+        events_path=events_file,
+        dedupe_seconds=60,
+        now=datetime(2026, 1, 15, 12, 2, 0, tzinfo=timezone.utc),
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert text.count("— coffee") == 2
+
+
+def test_dedupe_disabled_allows_back_to_back(events_file: Path) -> None:
+    t = datetime(2026, 1, 15, 12, 0, 0, tzinfo=timezone.utc)
+    append_cadence_event(
+        "coffee", "grace-mar", ok=True, mode="work-start",
+        events_path=events_file, dedupe_seconds=None, now=t,
+    )
+    append_cadence_event(
+        "coffee", "grace-mar", ok=True, mode="work-start",
+        events_path=events_file, dedupe_seconds=None, now=t,
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert text.count("— coffee") == 2
+
+
+def test_dedupe_different_kind_not_skipped(events_file: Path) -> None:
+    t = datetime(2026, 1, 15, 12, 0, 0, tzinfo=timezone.utc)
+    append_cadence_event("coffee", "grace-mar", ok=True, mode="work-start", events_path=events_file, now=t)
+    append_cadence_event("dream", "grace-mar", ok=True, mode="default", events_path=events_file, now=t)
+    text = events_file.read_text(encoding="utf-8")
+    assert "— coffee" in text and "— dream" in text
