@@ -19,3 +19,5 @@
 | [workspace.md](../workspace.md) | **Current** blockers and next actions. |
 
 **Contrast:** [xavier-journal](../../work-xavier/xavier-journal/README.md) tracks **Xavier’s** OB1 / instance / BrewMind learning path in grace-mar coaching context. **Dev journal** tracks the **operator’s** work-dev integration and tooling path for **this** repo.
+
+**vs [work-dev-history.md](../work-dev-history.md):** History = **milestones** (SHA, artifact, gap closed). Journal = **narrative** when useful — avoid copying every history bullet; link the date or commit and add friction / “what clicked” only the history line cannot carry.

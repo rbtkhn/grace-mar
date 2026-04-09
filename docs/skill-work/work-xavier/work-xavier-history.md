@@ -2,7 +2,7 @@
 
 > **Append-only** log for the **work-xavier** territory (advisor module, mirrors, runbooks — **not** Xavier’s Record). **Rotatable.**
 
-**Operator rhythm:** [coffee](../../../.cursor/skills/coffee/SKILL.md) (**`coffee`**; legacy **`hey`** still works). **Per-lane milestones:** this file — see [work-modules-history-principle.md](../work-modules-history-principle.md).
+**Distinct from:** [xavier-journal/README.md](xavier-journal/README.md) (optional **daily reflection** on OB1 / instance learning — narrative; milestones and artifact pointers still land **here** first). **Operator rhythm:** [coffee](../../../.cursor/skills/coffee/SKILL.md) (**`coffee`**; legacy **`hey`** still works). **Per-lane milestones:** this file — see [work-modules-history-principle.md](../work-modules-history-principle.md).
 
 ## How to append
 

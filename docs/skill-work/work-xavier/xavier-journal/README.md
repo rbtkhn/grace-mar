@@ -11,3 +11,5 @@
 - **No secrets** (API keys, Supabase URLs with keys, MCP keys). Point to env vars and dashboards in prose only.
 
 **Upstream:** Open Brain docs and recipes live in the OB1 ecosystem; this journal is **her** trajectory in grace-mar, not a fork of upstream text.
+
+**vs [work-xavier-history.md](../work-xavier-history.md):** History = **append-only milestones** (what shipped, paths, same-day `###` blocks). Journal = **optional** day file when reflection helps — do **not** duplicate full milestone lists in the journal; one line “see history 2026-04-08” is enough.
