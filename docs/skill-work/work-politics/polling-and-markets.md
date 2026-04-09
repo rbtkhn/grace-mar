@@ -2,7 +2,7 @@
 
 **Purpose:** Standard **coffee** intel for the Massie shadow / work-politics lane: **horserace polling** (when it exists) and **prediction-market prices** (Polymarket). Legacy **hey** still works as the trigger alias. This is **operator WORK product**, not Record truth and not Voice knowledge.
 
-**Last checked:** 2026-04-07
+**Last checked:** 2026-04-09
 
 ---
 
