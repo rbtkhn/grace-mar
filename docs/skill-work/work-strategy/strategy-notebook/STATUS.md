@@ -6,7 +6,7 @@
 |-------|--------|
 | **Project status** | `active` |
 | **Active chapter** | `2026-04` |
-| **Last daily entry** | `2026-04-09` |
+| **Last daily entry** | `2026-04-09` (same-day tail: PH Vol. I ch20 + `STUDENT-EXPORT` / `PUBLISHING` link) |
 | **Prepared stub** | `2026-04-10` — unfilled scaffold at bottom of [`chapters/2026-04/days.md`](chapters/2026-04/days.md) |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 

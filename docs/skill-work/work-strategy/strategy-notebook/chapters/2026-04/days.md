@@ -48,11 +48,14 @@ Append-only. Newest dated block at the **bottom**.
 - Grounded **downstream critique**: name the **ledger** whenever copy says “stronger”; keep **battle vs war** honest (Cannae catastrophic, Second Punic War continued); diplomatic register favors **recovery mechanisms** over tactical detail; **overclaim** risk if “stronger” reads as moral ascendancy.
 - **Canonical placement:** Rome ladder fits **`islamabad-framework-summary.md`** first; full **`islamabad-framework.md`** only if the preamble truly needs the braid (else cross-link).
 - Shipped **strategy-notebook** skeleton (PH-style **month = chapter**, `days.md` + `meta.md`), README row, history log — pushed to `main`.
+- **Predictive History (work-jiang):** extended **Volume I** book spine to **`ch20`** (Geo-Strategy **#13–#20** wired: `book-architecture`, `source-map`, `predictions.jsonl`, evidence packs, INTRO/PREFACE/PART-II framing note). **Export discipline:** added [`STUDENT-EXPORT.md`](../../../../../../research/external/work-jiang/STUDENT-EXPORT.md) checklist, README pointer, and [`book/PUBLISHING.md`](../../../../../../research/external/work-jiang/book/PUBLISHING.md) “run before release” line — pushed (`45830ec`, `032d8dd` on top of `3c64d46`).
+- **Strategy thread (Think):** student/RAG bundle stays **derived after** main spine is stable; hybrid chunking vs whole-chapter framed for **ch08**-style lectures; skill-capture line deferred.
 
 ### Judgment
 
 - The **dual register** (Cannae = stay in the game / change terms; Teutoburg–Rhine = accept limits, institutionalize border) is the load-bearing insight for US–Iran **outreach** copy; Mercouris is **adhesive** for coalition politics, not for historical closure.
 - **Notebook** gives a daily voice layer without diluting **STRATEGY.md** §IV or **work-strategy-history** — right separation of concerns.
+- **PH wiring + export checklist** keep one canonical corpus while making **student mirrors** a deliberate snapshot (not a fork); **analysis memos** on geo-14–20 remain the honest bottleneck before “curated export” claims.
 
 ### Analogy / tension
 
@@ -60,15 +63,17 @@ Append-only. Newest dated block at the **bottom**.
 
 ### Links
 
-- [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Islamabad Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV (2026-04-08 Islamabad logs) · [strategy-notebook README](../../README.md)
+- [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Islamabad Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV (2026-04-08 Islamabad logs) · [strategy-notebook README](../../README.md) · [STUDENT-EXPORT.md](../../../../../../research/external/work-jiang/STUDENT-EXPORT.md) · [PUBLISHING.md](../../../../../../research/external/work-jiang/book/PUBLISHING.md) · [BOOK-ARCHITECTURE.md](../../../../../../research/external/work-jiang/BOOK-ARCHITECTURE.md) (Vol. I now 20 chapters)
 
 ### Jiang resonance (optional)
 
-- Intake commentary aligns with **five-point / Gulf** framing; Geo-Strategy corpus remains the slow layer for **energy / empire** chords when drafting expands.
+- Intake commentary aligns with **five-point / Gulf** framing; Geo-Strategy corpus remains the slow layer for **energy / empire** chords when drafting expands. **Book spine** now includes **Geo #13–#20** as `ch13`–`ch20` for registry/scorecard continuity.
 
 ### Open
 
 - Execute on **2026-04-08** open items: **paste or merge** the diplomatic Rome block (summary vs framework — see prior day) and add the **Cannae battle vs war** caveat if shipping public copy.
+- **Part II (Geo):** fold **GS13–GS20** into the next full news pass on [`PART-II-GEO-STRATEGY.md`](../../../../../../research/external/work-jiang/book/PART-II-GEO-STRATEGY.md) when ready; **geo-14–20** analysis memos still missing.
+- **Student bundle:** run [`STUDENT-EXPORT.md`](../../../../../../research/external/work-jiang/STUDENT-EXPORT.md) checklist before any downstream export; no separate student repo opened yet.
 
 ### Bets / watches (optional)
 
