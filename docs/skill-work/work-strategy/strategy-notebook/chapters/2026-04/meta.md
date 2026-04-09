@@ -2,7 +2,7 @@
 
 **Kind:** month (first strategy-notebook chapter)  
 **Status:** `open`  
-**Theme:** _(optional: e.g. Islamabad framework iteration, Gulf crisis reads, Rome helix drafting)_
+**Theme:** Islamabad framework + Rome helix (Cannae / Teutoburg / Rhine); strategy-notebook bootstrapped; Mercouris as optional bridge only.
 
 ## Open questions
 
