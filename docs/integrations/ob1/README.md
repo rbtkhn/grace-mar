@@ -49,6 +49,25 @@ Code implementation (PRs 3-12 from the evaluation) is deferred until **at least 
 
 **Evaluation:** See the quantitative plan evaluation that produced this scope decision. Architecture and mapping are locked now; code waits for demand.
 
+**Blocking prerequisite for PR 4 (exporter):** Run a **chunking spike** before shipping — see [architecture.md](architecture.md) § Known technical risks and [mapping.md](mapping.md) § Chunking guidance.
+
+---
+
+## Pilot success criteria (quantitative)
+
+When the bridge reaches PR 12 (pilot), measure these before declaring success:
+
+| Metric | Target | How to measure |
+|--------|--------|----------------|
+| **Export determinism** | 100% — identical output on repeated runs | Run export twice, diff manifests and fingerprints |
+| **Retrieval precision (Phase 1)** | > 70% on 10 standard test queries | Manual evaluation: does OB1 return the right chunk for each query? |
+| **Proposal false-positive rate (Phase 2)** | < 30% of staged proposals rejected | Track accept/reject ratio over first 50 proposals |
+| **Duplicate proposal rate** | 0% after dedup | Re-run import on same OB1 export; no new proposals should appear |
+| **Provenance completeness** | 100% of merged proposals traceable to OB1 thought ID | Audit `channel_key: operator:ob1-import` entries in gate |
+| **Operator review time** | < 5 minutes per 10 proposals | Time the review session |
+| **Review quality** | No rubber-stamping signal (> 15 sec per proposal average) | Log review duration per proposal |
+| **Governance breach** | 0 — no direct writes to SELF/EVIDENCE/prompt from bridge scripts | Verify via git blame on governed files |
+
 ---
 
 ## Scope boundary

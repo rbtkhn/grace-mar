@@ -114,3 +114,30 @@ At each step: `source_path`, `git_commit`, `fingerprint_sha256`, `exported_at`.
 OB1 thought → `import_ob1_to_proposals.py` → proposal object (JSON) → operator review → RECURSION-GATE candidate → `process_approved_candidates.py` → `self.md`
 
 At each step: `ob1_thought_id`, `captured_at`, `imported_at`, `trust_tier`, `grounding_score`, `review_status`.
+
+---
+
+## Chunking guidance (Phase 1 export)
+
+The `chunk_strategy` field determines how source files are split for OB1 ingest. Choosing wrong causes poor retrieval quality — the single most common failure point in personal RAG systems.
+
+| Strategy | When to use | Risk |
+|----------|-------------|------|
+| `full_file` | Short files (< 2,000 tokens): `self-skills.md`, individual artifacts | Safe default; fails on long files (embedding dilution) |
+| `per_section` | Structured files with clear headings: `self.md` (§I through §IX), `self-archive.md` (per category) | Good balance; requires reliable heading detection |
+| `per_entry` | Log-shaped files with dated entries: `self-archive.md` EVIDENCE entries (ACT-*, READ-*, etc.) | Highest granularity; best for retrieval precision; may lose cross-entry context |
+
+**Blocking prerequisite (PR 4):** Before shipping the exporter, run a **chunking spike** — export one real `self.md` under each strategy, ingest into OB1, run 10 retrieval test queries, and measure precision. Do not ship without this data. See [architecture.md](architecture.md) § Known technical risks.
+
+**Near-miss deduplication:** When content is reformatted or lightly edited between exports, `fingerprint_sha256` changes even though the semantic content is the same. The `stable_id` (derived from `source_path` + `surface_class`) handles update-in-place for the same source. For content that moved between files, dedup relies on the OB1-side recipe to detect near-duplicates by embedding similarity — this is outside the bridge's scope but should be noted in the operator runbook.
+
+---
+
+## Idempotency contract
+
+Repeated export runs with the same source content must produce identical output:
+- Same `stable_id` values
+- Same `fingerprint_sha256` values
+- Same manifest content (modulo `exported_at` timestamp)
+
+The `exported_at` field is metadata, not content — it should not affect fingerprints. If determinism breaks, the likely cause is non-deterministic file walking order or timestamp leakage into content fields. The export test suite (PR 5) must include a "run twice, diff output" test.

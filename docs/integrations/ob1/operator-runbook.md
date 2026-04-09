@@ -106,5 +106,46 @@ Override with `--include <surface>` if specific surfaces are needed for a use ca
 
 - **Always dry-run first.** Both export and import scripts support `--dry-run`.
 - **Never bypass the gate.** OB1 content enters through RECURSION-GATE like everything else.
-- **No secrets in the repo.** Supabase credentials, API keys, and connection strings stay in the operator's local environment, never committed.
-- **No unattended execution.** Do not cron, schedule, or automate these scripts.
+- **No secrets in the repo.** Supabase credentials, API keys, and connection strings stay in the operator's local environment, never committed. Do not store credentials on shared machines or pass them through CI pipelines. Rotate credentials if the operator's machine is compromised.
+- **No unattended execution.** Do not cron, schedule, or automate these scripts. Do not wrap them in CI workflows, GitHub Actions, or any scheduled runner. Every invocation is a conscious operator decision.
+- **No bulk-approve.** The import script does not offer `--approve-all`. Each proposal is reviewed and approved individually through the existing RECURSION-GATE pipeline.
+- **Export excludes are safety defaults.** If you override with `--include`, you are explicitly expanding the data boundary. Review the full export with `--dry-run` after any `--include` override. Embedding inversion attacks can theoretically reconstruct private content from vector representations — treat any OB1 cloud deployment as a data exposure surface.
+
+---
+
+## Import volume controls
+
+| Control | Default | Purpose |
+|---------|---------|---------|
+| `--max-proposals N` | 20 | Caps proposals staged per import run; excess deferred by grounding score |
+| Backlog warning | 30 pending | Import script warns if OB1-sourced pending proposals exceed threshold |
+| Review time target | < 5 min / 10 proposals | Pilot success criteria; sustained overrun means filters are too permissive |
+
+If the queue grows faster than review clears it, reduce import frequency — do not increase batch size.
+
+---
+
+## Sustainment (long-term maintenance)
+
+The bridge degrades silently without ongoing investment. These are not one-time tasks.
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| **Re-embedding consistency** | After any embedding model change in OB1 | Re-export and re-ingest the full bundle; old embeddings and new embeddings in the same index produce inconsistent retrieval |
+| **OB1 version check** | Before upgrading OB1 Supabase instance | Run export + import test suite against the new version; check for schema field renames or removals |
+| **Retrieval quality spot-check** | Quarterly or after Record doubles in size | Run 10 standard test queries against OB1; compare precision to the chunking spike baseline. If precision drops > 20%, re-evaluate chunk strategy |
+| **Provenance audit** | After 50 OB1-sourced merges or quarterly | What fraction of recent Record additions came through the bridge? If > 30%, review quality bar |
+| **Filter calibration** | After 20 rejected proposals with logged reasons | Are rejections catching real issues or rejecting good content? Adjust grounding thresholds |
+
+---
+
+## Deprecation and retirement
+
+If OB1 evolves unfavorably (breaking schema changes, project abandonment, trust model mismatch), the bridge can be retired without Record impact:
+
+1. **Stop importing.** No new proposals from OB1. Pending OB1-sourced proposals in the gate can be reviewed and cleared normally.
+2. **Stop exporting.** The Record continues in companion-self unaffected. OB1 retains its last export but receives no updates.
+3. **Archive the bridge docs.** Move `docs/integrations/ob1/` to `docs/integrations/ob1-archived/` with a README note explaining when and why.
+4. **Remove scripts.** Delete export/import scripts from companion-self. No Record data is lost — the bridge only read from and staged to the existing pipeline.
+
+The Record's integrity is never dependent on OB1. Retirement is a cleanup task, not a migration.

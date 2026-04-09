@@ -80,3 +80,11 @@ Re-evaluate this ADR if:
 - OB1 ships a governed/auditable thought layer that changes the trust model
 - A second companion-self instance needs to share Record state (different problem)
 - The companion requests autonomous import (would require a new ADR for bounded autonomy)
+- Retrieval quality degrades below the chunking spike baseline after Record growth
+- OB1 upstream project is abandoned or forks incompatibly
+
+---
+
+## Deprecation path
+
+This ADR does not commit the system to permanent OB1 integration. If the bridge no longer delivers value or OB1 evolves unfavorably, retire per [operator-runbook.md](operator-runbook.md) § Deprecation and retirement. The Record's integrity is never dependent on OB1; retirement is cleanup, not migration.
