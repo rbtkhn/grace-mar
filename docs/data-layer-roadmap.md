@@ -57,3 +57,46 @@ Do not introduce a structured store yet. Instead:
 ## Decision
 
 Implementation of Phase A, B, C or of the minimal option is left to a later decision. This roadmap documents the current state, the invariants, and the options so that when we revisit, we can choose consistently.
+
+---
+
+## Success criteria (per phase gate)
+
+Do not advance to the next phase without meeting the prior phase's criteria. If Phase A fails its criteria, reconsider whether the migration is worth pursuing at all.
+
+| Phase | Metric | Target | How to measure |
+|-------|--------|--------|----------------|
+| **A** | Parser consolidation | 1 canonical parser per surface (gate, self, evidence) | Grep for regex/YAML extraction calls; count distinct parsers |
+| **A** | Read-path correctness | 100% — store output matches markdown parse output for all existing files | Diff test: parse markdown → write to store → read from store → compare |
+| **A** | Zero regressions | All existing consumers (`bot/core.py`, `process_approved_candidates.py`, `validate-integrity.py`) pass their test suites | Run existing tests against read-through layer |
+| **B** | Write-path idempotency | Regenerated `recursion-gate.md` is byte-identical on repeated runs with no intervening changes | Run regeneration twice, diff output |
+| **B** | Operator-invisible | Operator workflow unchanged — no new commands, no manual migration steps | Operator confirms during pilot |
+| **C** | Full-surface parity | SELF and EVIDENCE regenerated markdown passes `validate-integrity.py` | Automated test |
+
+### Sustainment
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| Parser drift audit | After any new script that reads gate/self/evidence | Is the new script using the canonical parser or adding ad-hoc regex? |
+| Schema version check | After any structural change to self.md or self-archive.md | Does the store schema still match the markdown structure? |
+| Regeneration fidelity | After any merge via `process_approved_candidates.py` | Does regenerated markdown match what the merge script produced? |
+
+### Deprecation path
+
+This roadmap may be abandoned if the minimal option (centralized parsing, no store) proves sufficient. In that case:
+
+1. Delete any prototype store files (JSON/SQLite) if created during Phase A exploration.
+2. Archive this roadmap to `docs/archived/data-layer-roadmap.md` with a note explaining why the migration was not pursued.
+3. Ensure the minimal option's centralized parser is documented and all scripts use it.
+4. No data is lost — markdown remains the source of truth throughout.
+
+### Scope creep guardrail
+
+This roadmap authorizes **schema definition and read/write path consolidation**. It does not authorize:
+
+- **New data surfaces** (e.g. adding analytics tables, search indexes, or caches beyond the three core surfaces: gate, self, evidence)
+- **External database dependencies** (e.g. Postgres, cloud-hosted stores) — the store is local-only (JSON or SQLite)
+- **API layers** (e.g. REST/GraphQL endpoints for external consumers) — exports are handled by existing export scripts, not by a live API
+- **Multi-user architecture** — this roadmap is for a single companion instance; multi-user is a different problem
+
+Any of these requires a separate plan. Do not add them as "Phase D" to this roadmap.

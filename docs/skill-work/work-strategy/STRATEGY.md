@@ -269,6 +269,47 @@
 - **No deletion** of historical §IV log or SCHOLAR-style entries — only new dated additions or explicit deprecation in §III.  
 - **Git** is the audit trail for this WORK surface.
 
+---
+
+## VIII. RISK MITIGATION
+
+### Success criteria (Islamabad Framework propagation)
+
+| Metric | Target | How to measure |
+|--------|--------|----------------|
+| Propagation reach | Framework shared with ≥ 3 distinct channels (academic, diplomatic, media) | Track distribution events in §IV |
+| Ceasefire window utilization | At least one distribution action while the two-week ceasefire holds | Date of first distribution vs. ceasefire end date |
+| External engagement | ≥ 1 substantive response (not just acknowledgment) from a recipient | Log in §IV with source |
+| Watch accuracy | ≥ 50% of escalating watches produce a follow-on event within 30 days | Review II-A entries monthly |
+| Framing survival | Core analogies in §III-A pass a framing audit when challenged | Run framing-audit-template against each analogy annually |
+
+### Sustainment
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| Watch triage | Weekly (during daily brief cycle) | Are watches still live? Retire stale ones. Escalate confirmed ones. |
+| §III SCHOLAR hygiene | Monthly | Are heuristics still useful? Any deprecated models not yet marked? |
+| Islamabad Framework relevance | On any ceasefire expiry, new conflict phase, or 90 days (whichever first) | Does the framework still map to the live diplomatic landscape? If not, archive or revise. |
+| Corpus anchor check | Quarterly | Do the 9 civ-mem anchors in the framework still point to valid corpus files? |
+| §IV log density | Monthly | Is the operator logging decisions, or has the log gone silent? Silent log = unmonitored lane. |
+
+### Deprecation path
+
+The Islamabad Framework is a live artifact tied to a specific geopolitical window. It can be retired without affecting the lane:
+
+1. **If the ceasefire collapses or the conflict fundamentally changes:** Add a dated §IV entry explaining why the framework no longer applies. Move `islamabad-framework.md` and `islamabad-framework-operator-edition.md` to an `archived/` subfolder. Update README cross-links.
+2. **If propagation produces no engagement after 90 days:** Same archival step. The analytical work (corpus anchors, dual-audience architecture) remains in §IV as a lesson; the public artifact is shelved.
+3. **STRATEGY.md itself** is a durable lane surface — it does not deprecate. Individual artifacts, watches, and heuristics within it deprecate per §III and II-A lifecycle rules.
+
+### Scope creep guardrail
+
+This lane is **analytical and advisory**. It does not:
+- Draft binding agreements or treaties (the Islamabad Framework is a propagation document, not a negotiating mandate)
+- Commit the operator to diplomatic positions (WORK-only; see §VI)
+- Replace or overwrite civ-mem corpus files (read-only reference; contributions go upstream)
+
+Any feature that would make this lane **operational** (auto-distribute the framework, auto-stage watches as gate candidates, generate policy commitments) requires a separate plan with operator approval. Analytical → operational is a category change, not an incremental extension.
+
 ## Usage modes
 
 - **Morning brief:** Pull §I + recent §IV (operator strategy log) for geopolitical context alongside [daily brief](README.md#daily-brief).  

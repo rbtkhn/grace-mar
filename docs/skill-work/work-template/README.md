@@ -138,4 +138,49 @@ Observe early → frame carefully → compare honestly → synthesize slowly →
 
 ---
 
+## Risk-mitigation checklist (Tier 1+)
+
+Any WORK territory that creates **ongoing obligations** (active artifacts, external dependencies, recurring operator tasks) should address these four patterns. Copy the relevant sections into the lane's README or WORK-LEDGER and fill in. Thin lanes with no ongoing obligations may skip.
+
+### 1. Quantitative success criteria
+
+Define how you know the lane or artifact is working. At least 2–3 measurable targets before shipping. Examples: retrieval precision, review time budget, propagation reach, signal-to-noise ratio. Without numbers, "success" is unfalsifiable.
+
+**Template:**
+
+| Metric | Target | How to measure |
+|--------|--------|----------------|
+| _metric_ | _threshold_ | _method_ |
+
+### 2. Sustainment table
+
+List recurring maintenance tasks that prevent silent degradation. Each task needs a cadence and a check. If the lane has no maintenance tasks, it probably has no ongoing obligations and doesn't need this section.
+
+**Template:**
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| _task_ | _weekly / monthly / quarterly / on-event_ | _what to verify_ |
+
+### 3. Deprecation / retirement path
+
+Document what happens when the lane, artifact, or dependency is abandoned. The answer should be "cleanup, not migration" — if retiring a lane requires a complex data migration, the architecture has a coupling problem.
+
+**Template:**
+
+1. Stop [active process].
+2. Clear pending items normally.
+3. Archive docs to `[lane]-archived/` with a README note.
+4. Remove scripts / automation. No data is lost.
+
+### 4. Scope creep guardrail
+
+Name the boundary that prevents incremental expansion beyond the lane's original purpose. If a proposed feature crosses this boundary, it requires a new plan or ADR, not an incremental PR.
+
+**Template:**
+
+> Any feature that introduces [specific expansion pattern] requires a [new plan / ADR / operator decision]. This lane's charter does not authorize [specific out-of-scope pattern].
+
+---
+
 **Reference implementation:** [work-strategy/](../work-strategy/README.md).

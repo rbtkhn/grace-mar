@@ -170,3 +170,30 @@
 ### Retirement conditions
 
 - _TBD_
+
+---
+
+## VII. RISK MITIGATION (copy from [work-template README](README.md#risk-mitigation-checklist-tier-1))
+
+### Success criteria
+
+| Metric | Target | How to measure |
+|--------|--------|----------------|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### Sustainment
+
+| Task | Cadence | What to check |
+|------|---------|---------------|
+| _TBD_ | _TBD_ | _TBD_ |
+
+### Deprecation path
+
+1. _TBD_ — what to stop
+2. _TBD_ — how to clear pending work
+3. _TBD_ — where to archive
+4. _TBD_ — what to remove
+
+### Scope creep guardrail
+
+> _TBD_ — name the boundary and what requires a new plan or ADR to cross.
