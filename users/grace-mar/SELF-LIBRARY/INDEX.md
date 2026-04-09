@@ -5,7 +5,7 @@
 | Surface | Path | Role |
 |---------|------|------|
 | **Canonical entries** | [`../self-library.md`](../self-library.md) | LIB-* rows, scopes, lookup routing — single runtime source |
-| **Predictive History (work-jiang)** | [LIB-0149](../self-library.md) · [`research/external/work-jiang/`](../../research/external/work-jiang/) | In-progress multivolume book (reference index); operator research corpus until gated merges |
+| **Predictive History (work-jiang)** | [LIB-0149](../self-library.md) · [predictive-history/](predictive-history/) → [`research/external/work-jiang/`](../../../research/external/work-jiang/) | In-progress multivolume book (reference index); **symlink** under `SELF-LIBRARY/` so agents that scope on `users/grace-mar/` see the same tree as the canonical path |
 | **Predictive History (YouTube book)** | [LIB-0151](../self-library.md) · [`youtube-channels/predictive-history/`](../../research/external/youtube-channels/predictive-history/README.md) | Bundled transcript library (manifest, index, captions); WORK-only until gated |
 | **Tucker Carlson Network (curated book)** | [LIB-0152](../self-library.md) · [`youtube-channels/tucker-carlson-book/`](../../research/external/youtube-channels/tucker-carlson-book/README.md) | One-volume processed transcript book; channel spine [`tucker-carlson/`](../../research/external/youtube-channels/tucker-carlson/README.md); WORK-only until gated |
 | **CIV-MEM domain** | [CIV-MEM.md](CIV-MEM.md) | Civilizational-memory sub-library |
