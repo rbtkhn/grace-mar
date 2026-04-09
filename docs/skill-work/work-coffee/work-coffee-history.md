@@ -58,3 +58,10 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 - Auto-research scaffold work clarified the repo-wide rule that proposal artifacts and orchestration surfaces can evolve without bypassing the gate.
 - Swarm integration reinforced the same pattern for operator-only workflow controls: operational state belongs in WORK and orchestration, not in the child Voice prompt.
 - This made `work-coffee` a better fit than keeping cadence doctrine buried inside the skill file alone.
+
+## 2026-04-08 — Steward **integrity/exports**; Build scope table
+
+- **E — Steward** now has three sub-tracks: **gate** \| **template/boundary** \| **integrity/exports**. Default **`E` only** remains **gate** if pending, else **template/boundary** — **integrity** is explicit (`E integrity`, `E exports`, or `E all`).
+- Moved **`validate-integrity.py`** and **`refresh_derived_exports.py`** (audit / ship) from **B — Build** into Steward; Build = **ship-lane git + work-dev execution** + skills/meta tooling.
+- **Steward fork:** template actionable excludes **policy-only expected drift** with no adopt step; integrity failures / clear remediation trigger fork. **menu-reference** adds [Build (B) — detailed scope](menu-reference.md#build-b--detailed-scope); **git-branch-hygiene** fixes cross-ref (template/boundary is **E**, not **A**).
+- Cross-refs: `coffee/SKILL.md`, `operator-style.mdc`, `operator-skills.md`.
