@@ -122,6 +122,12 @@ For **comparison**, the seven **English-language “new elite”** accounts (Oct
 
 ---
 
+## Related
+
+- **Non-X research playbook** (layers, tools, blank metric shell): [x-pro-israel-advocates-non-x-methods-2026-04.md](x-pro-israel-advocates-non-x-methods-2026-04.md)
+
+---
+
 ## Primary sources (URLs)
 
 - Favikon (2026): https://www.favikon.com/blog/top-x-twitter-influencers-israel  
