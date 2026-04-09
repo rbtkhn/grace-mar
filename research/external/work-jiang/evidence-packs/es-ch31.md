@@ -1,6 +1,6 @@
 # Evidence pack — es-ch31
 
-**Chapter title:** The US-Iran End Game
+**Chapter title:** Vietnam Redux
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 31 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-31` → [the-us-iran-end-game.md](substack/essays/the-us-iran-end-game.md)
+- `es-31` → [vietnam-redux.md](substack/essays/vietnam-redux.md)
 
 ## Core analysis
 
-- `es-31` → [essay-the-us-iran-end-game-analysis.md](analysis/essay-the-us-iran-end-game-analysis.md)
+- `es-31` → [essay-vietnam-redux-analysis.md](analysis/essay-vietnam-redux-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 31 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-31 (excerpt):** # The US-Iran End Game ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
+**es-31 (excerpt):** # Vietnam Redux ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
 
 ## Open questions
 

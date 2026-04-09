@@ -1,6 +1,6 @@
 # Evidence pack — es-ch25
 
-**Chapter title:** Twilight of the Liberal Elite
+**Chapter title:** Carney’s Speech and Trump’s Letter
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 25 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-25` → [twilight-of-the-liberal-elite.md](substack/essays/twilight-of-the-liberal-elite.md)
+- `es-25` → [carneys-speech-and-trumps-letter.md](substack/essays/carneys-speech-and-trumps-letter.md)
 
 ## Core analysis
 
-- `es-25` → [essay-twilight-of-the-liberal-elite-analysis.md](analysis/essay-twilight-of-the-liberal-elite-analysis.md)
+- `es-25` → [essay-carneys-speech-and-trumps-letter-analysis.md](analysis/essay-carneys-speech-and-trumps-letter-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 25 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-25 (excerpt):** # Twilight of the Liberal Elite ## Essay body With this recent release of three million documents, Trump’s Department of Justice claims that over half have been released, and that there will be no indictments and no further release – which has convinced many that as damning as the released redacted documents are, the remaining ones may topple the edifice of power in America. There’s already fall
+**es-25 (excerpt):** # Carney’s Speech and Trump’s Letter ## Essay body In this year’s meeting of the global elite in Davos, Switzerland, the Canadian Prime Minister Mark Carney received a standing ovation. He is only the third man to have received such a distinction from such a somber audience (the other two were Nelson Mandela and Volodymyr Zelenskyy). His speech would have won a freshman composition award at Harv
 
 ## Open questions
 

@@ -1,6 +1,6 @@
 # Evidence pack — es-ch22
 
-**Chapter title:** Minnesota Burning
+**Chapter title:** Blowback Venezuela
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 22 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-22` → [minnesota-burning.md](substack/essays/minnesota-burning.md)
+- `es-22` → [blowback-venezuela.md](substack/essays/blowback-venezuela.md)
 
 ## Core analysis
 
-- `es-22` → [essay-minnesota-burning-analysis.md](analysis/essay-minnesota-burning-analysis.md)
+- `es-22` → [essay-blowback-venezuela-analysis.md](analysis/essay-blowback-venezuela-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 22 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-22 (excerpt):** # Minnesota Burning ## Essay body On January 6th, a 37-year old mother of three was shot to death by an ICE agent on a Minneapolis street one mile away from where George Floyd was choked to death. Renee Nicole Good had dropped her six-year old son at school when she and her wife heard that ICE agents were roaming about. They rushed to the scene, perhaps confident that their skin color and gender
+**es-22 (excerpt):** # Blowback Venezuela ## Essay body In the early morning of January 3rd, America’s elite Delta Force roused Nicolas Maduro and his wife from their sleep, the climax of a daring raid in which low-flying Chinook helicopters ran past fast-asleep anti-aircraft batteries in Caracas. Secretary of State and National Security Advisor Marco Rubio tells us that Maduro and his wife will be indicted in the 
 
 ## Open questions
 

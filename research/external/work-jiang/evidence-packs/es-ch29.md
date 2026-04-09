@@ -1,6 +1,6 @@
 # Evidence pack — es-ch29
 
-**Chapter title:** The Acceleration
+**Chapter title:** World War III Begins
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 29 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-29` → [the-acceleration.md](substack/essays/the-acceleration.md)
+- `es-29` → [world-war-iii-begins.md](substack/essays/world-war-iii-begins.md)
 
 ## Core analysis
 
-- `es-29` → [essay-the-acceleration-analysis.md](analysis/essay-the-acceleration-analysis.md)
+- `es-29` → [essay-world-war-iii-begins-analysis.md](analysis/essay-world-war-iii-begins-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 29 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-29 (excerpt):** # The Acceleration ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
+**es-29 (excerpt):** # World War III Begins ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
 
 ## Open questions
 

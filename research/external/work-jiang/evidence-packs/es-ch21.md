@@ -1,6 +1,6 @@
 # Evidence pack — es-ch21
 
-**Chapter title:** Blowback Venezuela
+**Chapter title:** Secret History #10: The Great Revealing
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 21 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-21` → [blowback-venezuela.md](substack/essays/blowback-venezuela.md)
+- `es-21` → [secret-history-10-the-great-revealing.md](substack/essays/secret-history-10-the-great-revealing.md)
 
 ## Core analysis
 
-- `es-21` → [essay-blowback-venezuela-analysis.md](analysis/essay-blowback-venezuela-analysis.md)
+- `es-21` → [essay-secret-history-10-the-great-revealing-analysis.md](analysis/essay-secret-history-10-the-great-revealing-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 21 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-21 (excerpt):** # Blowback Venezuela ## Essay body In the early morning of January 3rd, America’s elite Delta Force roused Nicolas Maduro and his wife from their sleep, the climax of a daring raid in which low-flying Chinook helicopters ran past fast-asleep anti-aircraft batteries in Caracas. Secretary of State and National Security Advisor Marco Rubio tells us that Maduro and his wife will be indicted in the 
+**es-21 (excerpt):** # Secret History #10: The Great Revealing ## Essay body On October 13th, Trump spoke at Knesset, shortly after Israel and Hamas agreed to a cease-fire to end the two-year war. It was his victory lap for securing peace in the Middle East for the first time in three thousand years. His speech left many dumb-founded and flabbergasted. Trump called out Miriam Adelson, a dual Israeli-American citize
 
 ## Open questions
 

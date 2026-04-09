@@ -1,6 +1,6 @@
 # Evidence pack — es-ch24
 
-**Chapter title:** Carney’s Speech and Trump’s Letter
+**Chapter title:** Iran, Greenland, and Canada
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 24 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-24` → [carneys-speech-and-trumps-letter.md](substack/essays/carneys-speech-and-trumps-letter.md)
+- `es-24` → [iran-greenland-and-canada.md](substack/essays/iran-greenland-and-canada.md)
 
 ## Core analysis
 
-- `es-24` → [essay-carneys-speech-and-trumps-letter-analysis.md](analysis/essay-carneys-speech-and-trumps-letter-analysis.md)
+- `es-24` → [essay-iran-greenland-and-canada-analysis.md](analysis/essay-iran-greenland-and-canada-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 24 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-24 (excerpt):** # Carney’s Speech and Trump’s Letter ## Essay body In this year’s meeting of the global elite in Davos, Switzerland, the Canadian Prime Minister Mark Carney received a standing ovation. He is only the third man to have received such a distinction from such a somber audience (the other two were Nelson Mandela and Volodymyr Zelenskyy). His speech would have won a freshman composition award at Harv
+**es-24 (excerpt):** # Iran, Greenland, and Canada ## Essay body I am experimenting with a new format this week. I will examine three major geo-political events of the past week, and provide analysis and context. Let’s start with Iran. Many expected America to strike Iran, but Trump canceled airstrikes. There’s reporting that Qatar, Turkey, and Saudi Arabia talked Trump out of bombing Iran because they were afraid 
 
 ## Open questions
 

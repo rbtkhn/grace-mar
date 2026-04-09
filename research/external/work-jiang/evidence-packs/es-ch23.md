@@ -1,6 +1,6 @@
 # Evidence pack — es-ch23
 
-**Chapter title:** Iran, Greenland, and Canada
+**Chapter title:** Minnesota Burning
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 23 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-23` → [iran-greenland-and-canada.md](substack/essays/iran-greenland-and-canada.md)
+- `es-23` → [minnesota-burning.md](substack/essays/minnesota-burning.md)
 
 ## Core analysis
 
-- `es-23` → [essay-iran-greenland-and-canada-analysis.md](analysis/essay-iran-greenland-and-canada-analysis.md)
+- `es-23` → [essay-minnesota-burning-analysis.md](analysis/essay-minnesota-burning-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 23 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-23 (excerpt):** # Iran, Greenland, and Canada ## Essay body I am experimenting with a new format this week. I will examine three major geo-political events of the past week, and provide analysis and context. Let’s start with Iran. Many expected America to strike Iran, but Trump canceled airstrikes. There’s reporting that Qatar, Turkey, and Saudi Arabia talked Trump out of bombing Iran because they were afraid 
+**es-23 (excerpt):** # Minnesota Burning ## Essay body On January 6th, a 37-year old mother of three was shot to death by an ICE agent on a Minneapolis street one mile away from where George Floyd was choked to death. Renee Nicole Good had dropped her six-year old son at school when she and her wife heard that ICE agents were roaming about. They rushed to the scene, perhaps confident that their skin color and gender
 
 ## Open questions
 

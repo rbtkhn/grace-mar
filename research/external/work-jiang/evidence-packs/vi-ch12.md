@@ -35,9 +35,6 @@ Book chapter for Interviews episode 12 — Volume VI Part I; divergence end-box 
 
 - Which forecast or attribution lines need dated context and named mainstream or primary-source checks?
 - How should host framing vs guest claims be separated in book copy (dialogue fidelity vs adjudication)?
-- Where do **Holocaust historiography** exchanges require explicit divergence labeling (speaker phrasing vs consensus historiography, documentary vs mythic packaging) without collapsing host pushback and guest caveats?
-- Which **archaeological / national-myth** claims (e.g. Masada, Dead Sea Scrolls discovery narrative) need named scholarly lines and dates before book copy treats them as settled?
-- Which **speaker labels** in the merged transcript are wrong (caption `>>` splits + heuristic keywords) and need correction against audio before quotation?
 
 ## Appendix / site spillover
 

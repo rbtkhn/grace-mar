@@ -1,6 +1,6 @@
 # Evidence pack — es-ch27
 
-**Chapter title:** Countdown to Iran
+**Chapter title:** Welcome to the Rupture
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 27 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-27` → [countdown-to-iran.md](substack/essays/countdown-to-iran.md)
+- `es-27` → [welcome-to-the-rupture.md](substack/essays/welcome-to-the-rupture.md)
 
 ## Core analysis
 
-- `es-27` → [essay-countdown-to-iran-analysis.md](analysis/essay-countdown-to-iran-analysis.md)
+- `es-27` → [essay-welcome-to-the-rupture-analysis.md](analysis/essay-welcome-to-the-rupture-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 27 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-27 (excerpt):** # Countdown to Iran ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
+**es-27 (excerpt):** # Welcome to the Rupture ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
 
 ## Open questions
 

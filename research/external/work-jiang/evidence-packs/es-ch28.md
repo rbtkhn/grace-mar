@@ -1,6 +1,6 @@
 # Evidence pack — es-ch28
 
-**Chapter title:** World War III Begins
+**Chapter title:** Countdown to Iran
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 28 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-28` → [world-war-iii-begins.md](substack/essays/world-war-iii-begins.md)
+- `es-28` → [countdown-to-iran.md](substack/essays/countdown-to-iran.md)
 
 ## Core analysis
 
-- `es-28` → [essay-world-war-iii-begins-analysis.md](analysis/essay-world-war-iii-begins-analysis.md)
+- `es-28` → [essay-countdown-to-iran-analysis.md](analysis/essay-countdown-to-iran-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 28 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-28 (excerpt):** # World War III Begins ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
+**es-28 (excerpt):** # Countdown to Iran ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
 
 ## Open questions
 

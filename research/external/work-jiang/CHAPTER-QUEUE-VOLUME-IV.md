@@ -154,4 +154,12 @@ Nested `volume_4_game_theory.book.chapters` — see `docs/skill-work/work-jiang/
 
 **Next action:** Draft chapter outline in chapters-volume-iv/gt-ch19/outline.md
 
+## gt-ch20 — Game Theory #20: Mid-Term Examination
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for gt-20; then draft chapter outline in chapters-volume-iv/gt-ch20/outline.md
+
 *Generated from `metadata/book-architecture.yaml` (`volume_4_game_theory`) — same command as Volume I queue.*

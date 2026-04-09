@@ -1,6 +1,6 @@
 # Evidence pack — es-ch26
 
-**Chapter title:** Welcome to the Rupture
+**Chapter title:** Twilight of the Liberal Elite
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 26 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-26` → [welcome-to-the-rupture.md](substack/essays/welcome-to-the-rupture.md)
+- `es-26` → [twilight-of-the-liberal-elite.md](substack/essays/twilight-of-the-liberal-elite.md)
 
 ## Core analysis
 
-- `es-26` → [essay-welcome-to-the-rupture-analysis.md](analysis/essay-welcome-to-the-rupture-analysis.md)
+- `es-26` → [essay-twilight-of-the-liberal-elite-analysis.md](analysis/essay-twilight-of-the-liberal-elite-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 26 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-26 (excerpt):** # Welcome to the Rupture ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
+**es-26 (excerpt):** # Twilight of the Liberal Elite ## Essay body With this recent release of three million documents, Trump’s Department of Justice claims that over half have been released, and that there will be no indictments and no further release – which has convinced many that as damning as the released redacted documents are, the remaining ones may topple the edifice of power in America. There’s already fall
 
 ## Open questions
 

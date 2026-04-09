@@ -1,6 +1,6 @@
 # Evidence pack — es-ch30
 
-**Chapter title:** Vietnam Redux
+**Chapter title:** The Acceleration
 
 ## Chapter purpose
 
@@ -8,11 +8,11 @@ Book chapter for essay 30 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Core sources
 
-- `es-30` → [vietnam-redux.md](substack/essays/vietnam-redux.md)
+- `es-30` → [the-acceleration.md](substack/essays/the-acceleration.md)
 
 ## Core analysis
 
-- `es-30` → [essay-vietnam-redux-analysis.md](analysis/essay-vietnam-redux-analysis.md)
+- `es-30` → [essay-the-acceleration-analysis.md](analysis/essay-the-acceleration-analysis.md)
 
 ## Key concepts
 
@@ -29,7 +29,7 @@ Book chapter for essay 30 — Volume VII Part I; divergence end-box per CHAPTER-
 
 ## Quotation candidates (auto excerpt)
 
-**es-30 (excerpt):** # Vietnam Redux ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
+**es-30 (excerpt):** # The Acceleration ## Essay body *(Paste Substack export or subscriber copy here. This stub ships without body text.)* 
 
 ## Open questions
 
