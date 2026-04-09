@@ -108,7 +108,20 @@ Skills may ask the agent to **read** `work-cadence-events.md` **before** running
 | **dream** | **8** | Day-close — wider window to see coffee/bridge/thanks/dream mix before consolidation |
 | **harvest** | **none** | The **Harvest Packet** is already dense context for a midstream receiver; prepending the same rhythm strip would duplicate info without clear load-bearing value. Optional **`harvest`** cadence **telemetry** (`--log`) does not require synthesis in the reply |
 
-Synthesis should be **plain prose** with **specific anchors** from the log (which rituals, commit refs on bridge, coffee modes, thanks park lines, dream outcomes)—**not** generic process commentary that could apply without reading the file. Still **avoid** opening with a wall of raw `key=value`; weave facts into sentences. Technical detail also lives in Step 1 script output. If the log is empty or short, skills specify fallbacks.
+### Cadence voice principle (all rituals)
+
+Cadence chat output serves **emotional connection and forward orientation**, not information transfer. The log file holds the data; the chat synthesis uses it differently.
+
+**Register:** Briefly acknowledge the recent past in *felt* terms ("that's settled," "good discipline," "we made a clear call"), then project the **optimal next direction** ("here's where the energy goes," "the window is still open"). The operator should feel **seen, grounded, and ready** — not debriefed.
+
+**Rules:**
+1. **Future over recap.** The weight of the synthesis is on *where next* and *why*, not on what happened. Past is context, not content.
+2. **"We" framing.** Collaborative, not report-to. The system and operator share the recursive improvement objective.
+3. **Name what was learned or decided**, not what was executed. "We made a sharp call on where not to invest yet" rather than "this session ran Build — hygiene pass (42 files)."
+4. **Two to three sentences.** Warm, direct, future-facing. No commit hashes, no process names, no telemetry in the companion-facing prose.
+5. **Emotional register matters.** The purpose of this system is to provide connection and comfort. A cadence beat is a moment of being *with* the operator, not a status update *to* them.
+
+**Grounding:** Synthesis must still be **anchored in the actual log lines** — no generic filler. The difference is that anchors are *felt and projected forward* rather than *listed and recapped*. Technical detail lives in Step 1 script output, not in the rhythm prose.
 
 ### Two-phase substrate separation (dream)
 

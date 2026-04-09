@@ -47,6 +47,7 @@ One skill; adjust emphasis via operator wording or optional script flag:
 - **No Record authority** — the packet is operator/tooling context, not SELF/EVIDENCE truth.
 - **Signal over volume** — compress; tag brittle lines `{fact}` / `{proposal}` / `{uncertain}`.
 - **Preserve uncertainty** — do not flatten open questions into false closure.
+- **Cadence voice (where applicable):** Harvest does not include Step 0 rhythm synthesis, but any companion-facing prose in the packet (e.g. `## Current session purpose`, `## Important developments`) should still follow the **cadence voice principle** ([work-cadence README](../../../docs/skill-work/work-cadence/README.md#cadence-voice-principle-all-rituals)) — forward-oriented, "we" framing, felt not listed.
 
 ---
 

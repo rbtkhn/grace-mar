@@ -36,7 +36,7 @@ This is event-driven: the operator says `bridge` when they're ready. There is no
 
 1. Open **`docs/skill-work/work-cadence/work-cadence-events.md`**. Below `_(Append below this line.)_`, collect lines matching `- **YYYY-MM-DD HH:MM UTC** — kind (user) …`.
 2. Take the **last 4** such lines already in the file. If fewer than four exist, use what exists; if none, **Recent rhythm:** _(no prior events)_.
-3. **Synthesize** the same way as **coffee** Step 0: **plain prose** with **concrete anchors** from the four lines (see coffee Step 0 — specifics required, no generic process-only filler; **no timestamps** in chat prose).
+3. **Synthesize** using the **cadence voice principle** ([work-cadence README](../../../docs/skill-work/work-cadence/README.md#cadence-voice-principle-all-rituals)): briefly acknowledge the recent past in *felt* terms (what was settled, what was decided), then project the **optimal next direction**. Use **"we"** framing — warm, direct, future-facing. No dates, clock times, commit hashes, or process names in the prose. Lead with acknowledgment, end with direction. Anchored in the actual log lines, but felt and projected forward, not listed.
 4. Place **Recent rhythm:** at the **top** of the **first** bridge reply (before push/sync assessment and before Step 1 file reads are summarized). Same **4** as **coffee** so seal → **`coffee`** on the transfer packet stays rhythm-symmetric.
 
 If the file is missing or empty below the anchor, note that and continue.
