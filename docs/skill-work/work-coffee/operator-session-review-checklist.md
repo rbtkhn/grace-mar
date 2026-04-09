@@ -31,5 +31,5 @@
 
 ## Related
 
-- [menu-reference.md](menu-reference.md) — full **A–E** protocol.
+- [menu-reference.md](menu-reference.md) — full **A–G** protocol.
 - [work-coffee-history.md](work-coffee-history.md) — lane breadcrumbs.

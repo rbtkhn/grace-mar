@@ -2,14 +2,14 @@
 name: coffee
 preferred_activation: coffee
 requires: [handoff-check]
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed A–E menu (five modes). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed A–G menu (seven modes: A–E core + **F** work-xavier next + **G** work-dev next). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
 ---
 
 # Coffee
 
 **Preferred activation (operator):** say **`coffee`**. Legacy **`hey`** still works as a compatibility alias, but **`coffee`** is the canonical trigger now.
 
-**Signing-off intent** (end of session, wrapping the day, stepping away) uses the **same** **`coffee`** trigger and the **same** **A–E** menu. There is **no** separate closeout branch or closeout-only menu item. **Step 1** switches to handoff-weighted output when intent is signing off; **Step 2** is unchanged.
+**Signing-off intent** (end of session, wrapping the day, stepping away) uses the **same** **`coffee`** trigger and the **same** **A–G** menu. There is **no** separate closeout branch or closeout-only menu item. **Step 1** switches to handoff-weighted output when intent is signing off; **Step 2** is unchanged.
 
 `coffee` is not a startup ceremony. `coffee` is a **repeatable sip of coherence**.
 
@@ -87,19 +87,21 @@ Add `--compact` for shorter harness output. Individual scripts (`operator_daily_
 
 **Step 1 guardrail:** Stay read-only — no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
-**Done when:** Script output is pasted in the reply, Recent rhythm is at the top, and the A-E menu follows immediately.
+**Done when:** Script output is pasted in the reply, Recent rhythm is at the top, and the A–G menu follows immediately.
 
 For cadence tables and explicit phrase definitions (`coffee light`, `coffee minimal`, `coffee survey`): see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
 
 ### Multiple coffees per day
 
-The operator may say **`coffee`** **more than once per calendar day** for reorientation. This is normal. Each new `coffee` runs Step 1 again and starts a new **A–E** cycle. If **`coffee`** arrives mid-hub, treat it as a **reorientation restart**: run Step 1 again, then offer a fresh **A–E** menu.
+The operator may say **`coffee`** **more than once per calendar day** for reorientation. This is normal. Each new `coffee` runs Step 1 again and starts a new **A–G** cycle. If **`coffee`** arrives mid-hub, treat it as a **reorientation restart**: run Step 1 again, then offer a fresh **A–G** menu.
 
-### Step 2 — Multiple choice (required; always A–E, load-annotated)
+### Step 2 — Multiple choice (required; always A–G, load-annotated)
 
-Immediately **after** Step 1 content, output the fixed **coffee** menu: **five** lettered options **A through E** (present **A, B, C, D, E**). **There is no separate “close” letter** — exit paths are **C** / **D** (normal workflow unless **`stay in coffee`**), or a **steward fork** (**Later**) that returns to this full menu.
+Immediately **after** Step 1 content, output the fixed **coffee** menu: **seven** lettered options **A through G** (present **A, B, C, D, E, F, G**). **There is no separate “close” letter** — exit paths are **C** / **D** (normal workflow unless **`stay in coffee`**), or a **steward fork** (**Later**) that returns to this full menu.
 
-**Load annotation:** `operator_coffee.py` prints a session load one-liner at the end of Step 1 (e.g. `Session load: MODERATE — 3 coffees today, 5 pending candidates`). Use `scripts/assess_session_load.py` output (or the one-liner already printed) to **annotate each A–E option** with its cost tag — `(light)`, `(moderate)`, or `(heavy)` — and mark the recommended option. The letters stay fixed; the tags are advisory. Example:
+**Step 1 lane hints:** After session load, `operator_coffee.py` prints **`lane next hints (F / G)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-xavier + work-dev). Ground **F** and **G** in those lines plus the linked docs below; refresh hints on the next `coffee` if stale.
+
+**Load annotation:** `operator_coffee.py` prints a session load one-liner at the end of Step 1 (e.g. `Session load: MODERATE — 3 coffees today, 5 pending candidates`). Use `scripts/assess_session_load.py` output (or the one-liner already printed) to **annotate each A–G option** with its cost tag — `(light)`, `(moderate)`, or `(heavy)` — and mark the recommended option (**A–E** only for “recommended”; **F**/**G** are always available but not auto-recommended). The letters stay fixed; the tags are advisory. Example:
 
 ```
 A. Today — (light) recommended: quick reorientation matches current pace
@@ -107,23 +109,27 @@ B. Build — (moderate) dev + hygiene; 2 non-main branches
 C. Compass — (heavy) sustained strategy; consider after break
 D. Book — (moderate) Jiang/PH; 1 pending step
 E. Steward — (light) 3 pending candidates; bounded gate pass
+F. Xavier next — (moderate) work-xavier; one next task from SYNC-DAILY / WORK-LEDGER / INDEX
+G. Dev next — (moderate) work-dev; first open line in workspace.md § Next actions
 ```
 
 If the session load script is unavailable or errored, present the menu without annotations (unchanged behavior).
 
-**Micro-hints (one line under the A–E list):** `Micro-hints: B+skills/meta | E=gate/template/boundary | after actionable E: Implement now / Later`
+**Micro-hints (one line under the A–G list):** `Micro-hints: B+skills/meta | F=xavier next | G=dev next (workspace) | E=gate/template/boundary | after actionable E: Implement now / Later`
 
 **Quick reference (modes):**
 
 - **A. Today** — Daily brief (generator + §1d Putin only when chosen) + work-politics intel (KY-4 Polymarket, polls, Massie X per cadence), brief registry / campaign / queue — **one** next step. **Companion survey** defaults here when the operator opened with **`coffee survey`**.
-- **B. Build** — **work-dev** + **repository hygiene**: `docs/skill-work/work-dev/`, [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md), [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), branch snapshot, `git status`, exports/integrity pointers — **one** prescribed next action. **Skills / meta pipeline** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync): say **`skills`** or **`meta`** in the same turn as **B**, or ask for skills depth after **Build** — not a sixth menu letter.
+- **B. Build** — **work-dev** + **repository hygiene**: `docs/skill-work/work-dev/`, [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md), [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), branch snapshot, `git status`, exports/integrity pointers — **one** prescribed next action. **Skills / meta pipeline** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync): say **`skills`** or **`meta`** in the same turn as **B**, or ask for skills depth after **Build** — not an extra menu letter beyond **A–G**.
 - **C. Compass** — **work-strategy** + **work-strategy-rome** (ROME-PASS, manifest, exemplars, notes) — **one** develop step. Vatican / Holy See / ROME-PASS work lives **here**, not under **Today** alone.
 - **D. Book** — **work-jiang / Predictive History** — **one** next step.
 - **E. Steward** — **RECURSION-GATE** + **template / boundary audit** (companion-self parity, fork isolation, optional `validate-integrity.py`). **Mandatory single-track default:** if the operator says **E** only (no sub-track), run **exactly one** track this turn: **gate** when there is at least one pending gate candidate; otherwise **template/boundary**. **`both`** (gate and template/boundary in one turn) is allowed **only** when the operator explicitly asks for both. **First line of the reply:** name the track you are executing (**gate** or **template/boundary**). When the turn includes **template/boundary / companion-self parity**, end with the **Reconciliation code** block per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md). **Default = audit only** (read-only) until the operator chooses **Implement now**. **Gate merges** never run from steward alone — companion **approve** + `process_approved_candidates.py` only.
+- **F. Xavier next** — **work-xavier** — **one** next task: use Step 1 **lane next hints** line + [INDEX.md](../../../docs/skill-work/work-xavier/INDEX.md), [SYNC-DAILY.md](../../../docs/skill-work/work-xavier/SYNC-DAILY.md), [WORK-LEDGER.md](../../../docs/skill-work/work-xavier/WORK-LEDGER.md), [DAILY-OPS-CARD.md](../../../docs/skill-work/work-xavier/DAILY-OPS-CARD.md); mirrors / BrewMind / runbooks only as needed for that single step — **not** a full territory sweep unless the operator asks.
+- **G. Dev next** — **work-dev next task only** — **one** concrete step from the first **open** numbered item in [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions** (operator-maintained). **Narrower than B:** no default full hygiene/skills pass unless the operator folds it in.
 
-**Re-offer rules:** After **A** or **B**, re-offer the full **A–E** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**. After **E**, see [menu-reference.md § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later): if the steward pass **surfaces actionable possibilities** (defined there), **do not** re-offer the full menu — offer **only** **1. Implement now** and **2. Later** (**Later** → then present full **A–E**). If **nothing actionable** surfaced, re-offer full **A–E** as after **A**/**B**. Synonyms: **`E+ship`** / **`E implement`** / **`EXECUTE`** + slice ≈ **Implement now** when the operator uses them instead of the numbered pick.
+**Re-offer rules:** After **A**, **B**, **F**, or **G**, re-offer the full **A–G** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**. After **E**, see [menu-reference.md § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later): if the steward pass **surfaces actionable possibilities** (defined there), **do not** re-offer the full menu — offer **only** **1. Implement now** and **2. Later** (**Later** → then present full **A–G**). If **nothing actionable** surfaced, re-offer full **A–G** as after **A**/**B**/**F**/**G**. Synonyms: **`E+ship`** / **`E implement`** / **`EXECUTE`** + slice ≈ **Implement now** when the operator uses them instead of the numbered pick.
 
-For full **A–E** definitions, signing-off add-ons per letter, and the companion survey track: see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
+For full **A–G** definitions, signing-off add-ons per letter, and the companion survey track: see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
 
 **Done when:** The operator has picked a letter (or combo), the selected branch has been executed, and the re-offer or exit rule has been applied.
 
@@ -145,7 +151,7 @@ Each successful coffee run appends one line to `docs/skill-work/work-cadence/wor
 
 - `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (ordering, handoffs, Step 0 recent rhythm window depths, harvest vs triad)
 - `docs/skill-work/work-coffee/README.md` — territory rationale and boundaries
-- `docs/skill-work/work-coffee/menu-reference.md` — full A–E definitions, cadence, survey track, signing-off add-ons
+- `docs/skill-work/work-coffee/menu-reference.md` — full A–G definitions, cadence, survey track, signing-off add-ons
 - `docs/skill-work/work-coffee/work-coffee-history.md` — lane breadcrumbs
 - `docs/skill-work/work-cadence/work-cadence-events.md` — per-run cadence telemetry
 - `.cursor/skills/dream/SKILL.md` — night-side counterpart
