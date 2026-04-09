@@ -2,6 +2,8 @@
 
 **Book:** Daily notes on **learning and building** Xavier’s **Open Brain** stack ([NateBJones-Projects/OB1](https://github.com/NateBJones-Projects/OB1)), her **instance docs** ([`xavier_self`](https://github.com/Xavier-x01/xavier_self)), and how that ties to **BrewMind** work.
 
+**Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/xavier-journal`** (repo-relative symlink) for agents and tools that prioritize the companion tree.
+
 **Territory:** `docs/skill-work/work-xavier/xavier-journal/` in grace-mar — **WORK / operator coaching**, not Xavier’s **Record**, not companion Voice knowledge.
 
 **How to use**
