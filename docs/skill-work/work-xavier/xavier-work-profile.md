@@ -18,7 +18,7 @@
 | **Relationship** | Employee / business partner (SMM and related execution; BrewMind and advisor workflows per [README.md](README.md)). |
 | **GitHub (operator-confirmed)** | [@Xavier-x01](https://github.com/xavier-x01) — public profile; **companion-xavier** (template instance) may or may not exist yet under this account (see also public repos on profile, e.g. site work). |
 | **Primary WORK lane** | `docs/skill-work/work-xavier/` in grace-mar; her **cognitive-fork** instance is intended under **her** GitHub (often repo name **`companion-xavier`**) — not inside grace-mar `users/`. |
-| **Last reviewed** | 2026-04-07 — GitHub handle recorded; prior 2026-04-06 matrix calibration unchanged. |
+| **Last reviewed** | 2026-04-08 — Public repos snapshot + evidence: [github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) (`xavier_self`, `brew_mind`, `OB1`). |
 
 ---
 

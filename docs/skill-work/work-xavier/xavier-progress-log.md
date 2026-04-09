@@ -12,6 +12,8 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-08 | [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) | **Ingest summary** — public GitHub [@Xavier-x01](https://github.com/xavier-x01): 3 repos (`xavier_self`, `brew_mind`, `OB1` fork), join date; disambiguation vs grace-mar `work-xavier/` lane. |
+| 2026-04-08 | [evidence/github-profile-xavier-x01-2026-04-08.png](evidence/github-profile-xavier-x01-2026-04-08.png) | Screenshot — profile page viewport at capture. |
 | 2026-04-05 | [evidence/brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md) | **Ingest summary** — Gemini FAQ for BrewMind site (copy + HTML/CSS accordion); links PDF + mobile PNG. |
 | 2026-04-05 | [evidence/brewmind-faq-gemini-transcript-2026-04-05.pdf](evidence/brewmind-faq-gemini-transcript-2026-04-05.pdf) | Full **5-page** PDF transcript (Google Docs PDF); paste/integration steps for `index.html`. |
 | 2026-04-05 | [evidence/brewmind-faq-gemini-mobile-2026-04-05.png](evidence/brewmind-faq-gemini-mobile-2026-04-05.png) | Mobile screenshot — BrewMind Café FAQ draft, first Q&As. |
@@ -26,6 +28,7 @@
 
 _Freeform. Append dated bullets._
 
+- **2026-04-08** — **GitHub profile snapshot:** Public [github.com/xavier-x01](https://github.com/xavier-x01) — **3** repos on Overview (**xavier_self**, **brew_mind**, **OB1** fork). Ingest: [github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) + PNG. *Coaching:* clarify which repo is BrewMind site **source of truth** vs instance/experiment.
 - **2026-04-05** — **BrewMind website FAQ:** Gemini produced **site-ready** FAQ (general, learn-to-earn, tiers, menu) + **HTML/CSS** blocks for `index.html` (accordion, theme variables). Evidence: PDF transcript + mobile screenshot + [brewmind-faq-ingest-2026-04-05.md](evidence/brewmind-faq-ingest-2026-04-05.md). *Next:* paste into site repo; reconcile prices/hours with business plan before publish.
 - **2026-04-05** — **Claude (Sonnet 4.6):** Two screenshots of **sidebar / Recents** — same **starred** thread as 2026-04-03 capture (“First Business proposal analysis”); **Firebase + GitHub** site integration thread still visible; **Automated content creation system** appears in recents. Ingest: [claude-xavier-ui-ingest-2026-04-05.md](evidence/claude-xavier-ui-ingest-2026-04-05.md).
 - **2026-04-03** — Screenshot archived: Claude thread titles suggest **parallel workstreams** (Firebase/GitHub site, AI learning plan, coffee/customer engagement, Cebu business plan/partners, investor pitch, publishing with Claude, automated content). **Starred** thread: “First Business proposal analysis.” *Interpretation TBD — confirm with Xavier which threads are active vs exploratory.*
@@ -72,6 +75,7 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-08 | GitHub profile ingest (PNG + [github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md)); progress log index + burst. |
 | 2026-04-05 | BrewMind FAQ ingest (Gemini PDF + mobile PNG + summary MD). |
 | 2026-04-05 | Claude app UI ingest (two PNGs + [claude-xavier-ui-ingest-2026-04-05.md](evidence/claude-xavier-ui-ingest-2026-04-05.md)); progress log index + burst + coaching. |
 | 2026-04-03 | Initial log + Claude mobile chats evidence + thread title transcription from screenshot. |

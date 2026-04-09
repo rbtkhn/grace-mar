@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-08
+
+- **Evidence — GitHub profile:** [evidence/github-profile-xavier-x01-2026-04-08.png](evidence/github-profile-xavier-x01-2026-04-08.png) + [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) — public [@Xavier-x01](https://github.com/xavier-x01), repo list + disambiguation vs grace-mar `work-xavier/` advisor folder. [xavier-progress-log.md](xavier-progress-log.md) index + burst updated.
+
 ### 2026-04-07
 
 - **xavier-work-profile.md:** Recorded GitHub profile [https://github.com/xavier-x01](https://github.com/xavier-x01) (@Xavier-x01) in **Role snapshot** (operator-confirmed). [INSTANCE-PATHS.md](INSTANCE-PATHS.md) cross-link.
