@@ -105,6 +105,7 @@ Append-only. Newest dated block at the **bottom**.
 
 - Notebook: [meta.md](meta.md) (Johnson/Pape + **Davis** theme tails) · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV
 - Transcript digest (Haiphong / Ritter / Johnson): [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — three-dimension skill-strategy + quant tags.
+- Transcript digest (Diesen × Mearsheimer, 2026-04-10): [2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md](../../../../../../research/external/work-strategy/transcripts/2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md) · [YouTube](https://www.youtube.com/watch?v=H2K3qDshr70)
 - Source: operator-pasted Davis commentary (no URL in thread — add canonical link if archived).
 
 ### Jiang resonance (optional)
@@ -119,6 +120,73 @@ Append-only. Newest dated block at the **bottom**.
 ### Bets / watches (optional)
 
 - **Watch:** **Lebanon in / out of scope** becomes the default **early stress test** for “ceasefire holds” narratives across US, Israel, Iran, Pakistan channels.
+
+### Barnes lens — material sustainability of the pause (single-lens pass)
+
+_Recipe A ([MINDS-SKILL-STRATEGY-PATTERNS](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) §Recipe A): Barnes only; verify oil and shipping._
+
+**Material question:** Can either side **sustain** the current posture — ceasefire diplomacy on one hand, kinetic readiness on the other — long enough for extension-game logic to bite?
+
+**U.S. liabilities**
+
+- **Munitions drawdown:** JASSM and Tomahawk stocks are finite and slow to replace; interceptor burn-rate during active Iranian volleys was high. A resumed campaign within weeks faces **inventory constraints** unless emergency production or allied stocks (UK, France, Gulf) are pre-committed. Davis flags this obliquely; no public inventory audit available — treat as **verify-before-ledger**.
+- **Oil-price whiplash:** Brent dropped below $100 on ceasefire headlines (Apr 8). If talks collapse and Hormuz narrows again, the swing back could be sharper than the initial spike — U.S. consumer and election exposure rises with each week the domestic narrative brands the pause as "working."
+- **Fiscal tail:** Extended carrier-group and bomber deployments in-theater carry running costs that compete with domestic budget fights. Each week of "loaded but not firing" adds cost without resolution.
+
+**Iranian liabilities**
+
+- **Hormuz as diminishing asset:** Current IRGC-coordinated passage (~2 ships/day vs 400+ tanker backlog per 19FortyFive Apr 8) gives leverage **now**, but the longer the squeeze, the more Gulf states and shipping insurers route around Hormuz or pressure Tehran bilaterally. The asset **depreciates** if the pause extends without a settlement that legitimizes some passage regime.
+- **Sanctions endurance:** Iran's stated "lift all sanctions immediately" is the highest-cost ask for the U.S. domestically. Under a pause, partial/informal relief (waivers, non-enforcement) may trickle without formal concession — undermining Iran's negotiating leverage on the headline demand while easing enough pain to reduce urgency.
+- **Reconstruction / ally support:** Hezbollah losses in Lebanon, infrastructure damage across the resistance axis — the longer the pause, the more reconstruction costs mount without a formal deal that unlocks aid channels. Time is **not** cost-free for Iran's network.
+
+**Barnes verdict (single-lens):** Both sides face **material clocks**, but **different ones**. The U.S. clock is **munitions + oil volatility + deployment cost**; Iran's is **Hormuz depreciation + sanctions erosion + network reconstruction**. Extension-game logic (Davis thesis) assumes time favors Iran, but **only if** Hormuz leverage holds and sanctions pressure does not quietly dissipate through informal channels. If either condition fails, the extension bet becomes a **liability trap** — Iran waits, but the leverage it waited to deploy has weakened.
+
+**Implication for copy:** Any outreach paragraph asserting one side has a **material** advantage in waiting should name **which clock** and **what evidence** (throughput data, oil price band, inventory estimate) supports the claim. Unsourced "time is on X's side" is exactly the kind of sentence Barnes would flag.
+
+### Links (Barnes pass)
+
+- [mind-barnes.md](../../minds/mind-barnes.md) · [us-iran-bargaining-gaps-matrix.md](../../../us-iran-bargaining-gaps-matrix.md) (gap 3 Hormuz, gap 4 sanctions) · [19FortyFive — Hormuz Apr 8](https://www.19fortyfive.com/2026/04/2-ships-through-426-tankers-waiting-the-strait-of-hormuz-ceasefire-isnt-working/) · [Economic Times — oil Apr 8](https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-april-8-crude-oil-price-crashes-15-as-trump-agrees-2-week-ceasefire-with-iran-what-are-experts-saying/articleshow/130100328.cms) · [MINDS-SKILL-STRATEGY-PATTERNS — Recipe A](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
+
+### Open (Barnes pass)
+
+- **Verify:** U.S. munitions inventory claims are analyst synthesis, not sourced to a public audit — flag before any outreach paragraph asserts "running low."
+- **Hormuz weekly throughput:** need **two independent** maritime sources before treating leverage direction as settled for the next notebook block.
+
+### Mearsheimer lens — power distribution and the structure of the pause (two-lens pass)
+
+_Recipe B ([MINDS-SKILL-STRATEGY-PATTERNS](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) §Recipe B): Mearsheimer added to existing Barnes block; tension between material and structural readings is the product._
+
+**Structural question:** Who gains **relative power** during the pause — and does the structure of the situation make settlement possible, or does it compel continued competition?
+
+**Power distribution during the pause**
+
+The fact is that this ceasefire does not freeze the balance of power. It shifts it. The question you have to ask yourself is: what happens to the relative position of each side while diplomacy runs?
+
+- **Iran's nuclear trajectory:** The pause does not halt enrichment. Iran's stated position — enrichment as sovereign right — is structurally rational: a nuclear-capable Iran changes the balance of power in the region permanently. Every week the pause holds without a verification regime in place, Iran's breakout timeline shortens. The U.S. demand for zero enrichment is structurally equivalent to demanding Iran accept permanent strategic inferiority. No state in that position agrees to that. Period. End of story.
+- **Israel as structural variable, not policy choice:** Israel's continued strikes on Lebanon during the pause are not simply "spoiling." From a structural standpoint, Israel is a regional power that cannot accept an Iranian nuclear capability and cannot accept a reconstituted Hezbollah. Israeli kinetic action during the pause is structurally compelled — it is not a personality-driven deviation from U.S. preferences. The U.S. cannot credibly restrain Israel without threatening the alliance itself, and the structure of domestic U.S. politics makes that threat non-credible. This is not about Netanyahu. Any Israeli leader would behave the same way.
+- **Great-power geometry:** Russia and China are structural beneficiaries of the pause. Russia benefits from sustained U.S. attention and resource commitment to the Gulf at the expense of European theater focus. China benefits from Hormuz instability that elevates its overland energy diversification (pipelines, Central Asia) relative to seaborne competitors. Neither has an incentive to help the U.S. reach a settlement that restores American regional primacy. The structural picture is: the two great powers that might pressure Iran have incentives pointing the opposite direction.
+
+**Security dilemma at the core**
+
+The $64,000 question is whether this is a negotiable dispute or a security dilemma. I think — and I underline the word "think" — this is a security dilemma. Iran cannot feel secure without a nuclear capability or its functional equivalent. Israel and the U.S. cannot feel secure with one. The picture we have in our head of how Iran is thinking — that they are pursuing enrichment as a bargaining chip to trade for sanctions relief — is simply wrong if the structural logic is right. They are pursuing it because the balance of power compels them to, and no amount of diplomatic creativity changes the structural incentive.
+
+The Lebanon dispute makes this worse. When the U.S. says Lebanon is not part of the ceasefire and Iran says the resistance axis is inseparable, they are not having a misunderstanding. They are describing two incompatible security architectures. In one, Israel operates freely against Hezbollah while the U.S. negotiates with Iran as a separate track. In the other, the entire axis — Iran, Hezbollah, Syria — is a single deterrence structure that cannot be unbundled. There's just no overlap. They are polar opposites.
+
+**Mearsheimer verdict (single-lens):** The pause favors Iran structurally, not because Iran is stronger (it is not), but because time without a verification regime lets the nuclear program advance, and the great-power geometry offers Iran tacit cover. The U.S. faces a classic offensive-realist bind: the longer it waits, the worse the relative position becomes, but the costs of resuming — munitions (Barnes), oil (Barnes), alliance strain, great-power backlash — are also rising. The structure of the situation compels competition, not settlement. A durable deal would require one side to accept a permanent shift in relative power, and the structure of anarchy tells us that doesn't happen voluntarily.
+
+**Barnes × Mearsheimer tension (the two-lens product)**
+
+Barnes says both sides face material clocks and the question is which clock runs out first. Mearsheimer says the clocks are not the point — the structure of the competition makes settlement non-credible regardless of material sustainability. The tension is productive: **Barnes** shows that the pause is materially costly for both sides (neither can sustain this posture indefinitely); **Mearsheimer** shows that the structural incentives prevent either side from accepting the terms that would end it. Together they describe a situation where **the pause is unsustainable but the alternative is structurally compelled to recur**. That is the analytical bind — and any copy that implies a path to stable settlement without naming what structural concession makes it possible is, to use the Mearsheimer test, not providing a plausible story.
+
+### Links (Mearsheimer pass)
+
+- [mind-mearsheimer.md](../../minds/mind-mearsheimer.md) · [us-iran-bargaining-gaps-matrix.md](../../../us-iran-bargaining-gaps-matrix.md) (gap 1 Lebanon, gap 2 enrichment — structural, not just material) · [MINDS-SKILL-STRATEGY-PATTERNS — Recipe B](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
+
+### Open (Mearsheimer pass)
+
+- **Great-power incentives:** Claim that Russia and China are structural beneficiaries needs sourcing — verify whether either has taken concrete diplomatic steps to support or undermine the pause (wires, UN statements, bilateral signals).
+- **Nuclear timeline:** "Breakout timeline shortens during the pause" is structurally sound but needs an IAEA or equivalent estimate before any copy asserts a specific window.
+- **Security dilemma vs bargaining range:** The Mearsheimer verdict is pessimistic (no settlement zone). If the pause produces verifiable intermediate steps (partial freeze, limited inspection), that would **complicate** the structural diagnosis. Watch for evidence that the dilemma has a bargaining-range edge case.
 
 ### Top-three flashpoints — web check + skill-strategy pass (2026-04-09/10)
 
