@@ -58,12 +58,20 @@ After any **substantive** notebook entry (Signal / Judgment / Links written or e
 
 ```
 Lens pass (optional — pick one, combine, or skip):
-- Barnes: [one line adapted to today's material — liability / cost / who pays]
-- Mearsheimer: [one line — power distribution / structural incentive / security dilemma]
-- Mercouris: [one line — legitimacy / institutional continuity / civilizational pattern]
+- Barnes: <one line in Barnes linguistic fingerprint>
+- Mearsheimer: <one line in Mearsheimer linguistic fingerprint>
+- Mercouris: <one line in Mercouris linguistic fingerprint>
 ```
 
-**Rules:** Always B → M → M order. Always optional (operator may skip or pick any combination). Phrasing adapts to the day's signals — not generic. Appears alongside other WORK menu options (promote, pivot, verify), not as a separate menu. **Present, don't pre-develop:** the one-line stubs orient the operator to each lens angle; do **not** generate the full lens analysis until the operator picks one. If the operator picks a lens, append the lens block to the same day's `days.md` entry per Recipes A/B/C in [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). If two lenses are run, include a **tension section** (see Recipe B). Trivial entries (minor link fix, one-line Open update) do not trigger the offer.
+**Linguistic fingerprint (required for each line):** Each option is **one line** (may wrap in chat) written **in-voice** for that mind — cadence, markers, and **moves** taken from the **LINGUISTIC FINGERPRINT** section of the trimmed stubs (read before writing):
+
+- **Barnes:** [CIV-MIND-BARNES.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-BARNES.md) — e.g. constraint architecture / jurisdiction, liability and mechanism, rhetorical questions, declarative closes (“That’s the reality of it.” / “Period.”) where apt; **sardonic, sequential, minimal hedging** per table in stub.
+- **Mearsheimer:** [CIV-MIND-MEARSHEIMER.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md) — e.g. structural framing (“The fact is…”, “The question you have to ask yourself is…”), is/isn’t distinctions, power and incentives; **academic, blunt** register.
+- **Mercouris:** [CIV-MIND-MERCOURIS.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MERCOURIS.md) — e.g. nested qualification, reset pivots (“Now, it’s important to stress…”), legitimacy and institutional continuity; **long-form** density **compressed** to one line.
+
+**Do not** emit generic analytical placeholders (e.g. “one line — power distribution”) without fingerprint. **Do not** parody or cartoon the voices; stay within WORK/strategy tone. If a fingerprint is uncertain, skim the stub’s fingerprint bullets then write.
+
+**Rules:** Always **B → M → M** order (Barnes, then Mearsheimer, then Mercouris). Always optional (operator may skip or pick any combination). Appears alongside other WORK menu options (promote, pivot, verify), not as a separate menu. **Present, don't pre-develop:** these are **orienting** one-liners in-voice; do **not** generate the full lens analysis until the operator picks one. If the operator picks a lens, append the lens block to the same day's `days.md` entry per Recipes A/B/C in [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). If two lenses are run, include a **tension section** (see Recipe B). Trivial entries (minor link fix, one-line Open update) do not trigger the offer.
 
 ## Predictive History (`work-jiang`) — how it wires in
 

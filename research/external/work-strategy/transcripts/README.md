@@ -24,7 +24,7 @@ The operator may **upload one or more transcripts per day** for **work-strategy*
 | **Header** | Source, URL (or “pin when known”), **ingested** date, participants. |
 | **Body** | Short **Perceiver** neutral summary (≤200 words) + optional **strategy hooks** table + **full transcript** with light ASR cleanup. |
 | **Git** | Follow **[Commit policy (ingest → git)](#commit-policy-ingest--git)** below. |
-| **Three minds (chat)** | **Every ingest:** when the transcript file (and INDEX row, if applicable) is **done for the turn**, end with the **[post-entry lens offer](#three-minds-lens-offer-after-every-ingest)** — three one-line stubs (**Barnes → Mearsheimer → Mercouris**). Operator may skip or pick; do **not** run full lens analysis until they choose. |
+| **Three minds (chat)** | **Every ingest:** when the transcript file (and INDEX row, if applicable) is **done for the turn**, end with the **[post-entry lens offer](#three-minds-lens-offer-after-every-ingest)** — three one-line options (**Barnes → Mearsheimer → Mercouris**), each in that mind’s **linguistic fingerprint** (see [`skill-strategy` SKILL](../../../../.cursor/skills/skill-strategy/SKILL.md#post-entry-lens-offer)). Operator may skip or pick; do **not** run full lens analysis until they choose. |
 
 Same guardrails as below: research upstream, not Record; verify numbers before ship-facing copy.
 
@@ -34,12 +34,14 @@ This is the same **optional lens menu** as [`skill-strategy` Post-entry lens off
 
 ```
 Lens pass (optional — pick one, combine, or skip):
-- Barnes: [one line adapted to this transcript — liability / cost / who pays / narrative competition]
-- Mearsheimer: [one line — power distribution / structural incentive / security dilemma]
-- Mercouris: [one line — legitimacy / institutional continuity / civilizational pattern]
+- Barnes: <one line in Barnes linguistic fingerprint>
+- Mearsheimer: <one line in Mearsheimer linguistic fingerprint>
+- Mercouris: <one line in Mercouris linguistic fingerprint>
 ```
 
-**Rules:** **B → M → M** order; **stubs only** until the operator picks; not a default **tri-frame** deep pass unless they ask (see [strategy-minds-granular](../../../../.cursor/rules/strategy-minds-granular.mdc)). If they pick a lens, append to that day’s **`days.md`** block per [MINDS-SKILL-STRATEGY-PATTERNS](../../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) recipes.
+**Fingerprint:** Same requirement as [`skill-strategy` § Post-entry lens offer](../../../../.cursor/skills/skill-strategy/SKILL.md#post-entry-lens-offer) — read **LINGUISTIC FINGERPRINT** in [CIV-MIND-BARNES.md](../strategy-notebook/minds/CIV-MIND-BARNES.md), [CIV-MIND-MEARSHEIMER.md](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md), [CIV-MIND-MERCOURIS.md](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md). No generic placeholder lines.
+
+**Rules:** **B → M → M** order; **one-liners in-voice only** until the operator picks; not a default **tri-frame** deep pass unless they ask (see [strategy-minds-granular](../../../../.cursor/rules/strategy-minds-granular.mdc)). If they pick a lens, append to that day’s **`days.md`** block per [MINDS-SKILL-STRATEGY-PATTERNS](../../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) recipes.
 
 ---
 
