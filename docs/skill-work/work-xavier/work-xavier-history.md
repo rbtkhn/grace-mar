@@ -14,6 +14,7 @@
 
 ### 2026-04-11
 
+- **Cici Phase 1 verified:** [Xavier-x01/Cici](https://github.com/Xavier-x01/Cici) `main` at [`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661) (`feat(phase-1): establish Git-first governed-state foundation`) — shallow clone + `scripts/validate-governed-state.py` passes; three-layer scaffold (`evidence/`, `prepared-context/`, `users/cici/governed-state/`), proposals + schema, `config/authority-map.json`, doctrine + CI. README [Governed State Model](https://github.com/Xavier-x01/Cici#governed-state-model-phase-1); [docs/governed-state-doctrine.md](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md). Grace-mar [OB1 integration](../../../docs/integrations/ob1/README.md) updated with parallel pointer.
 - **Medium-term roadmap:** [WORK-LEDGER.md](WORK-LEDGER.md) § **II-B** — *Cici in grace-mar workspace* (local clone / multi-root / optional rule or skill); complements GitHub digest.
 
 ### 2026-04-10

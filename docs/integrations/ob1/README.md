@@ -9,6 +9,14 @@ This directory defines the **asymmetric bridge** between a companion-self instan
 
 ---
 
+## Related: Cici instance (external)
+
+Xavier’s OB1 **instance** repo **[Xavier-x01/Cici](https://github.com/Xavier-x01/Cici)** (config and docs; not grace-mar) implements **Phase 1 Git-first governed state**: a three-layer scaffold (**evidence** → **prepared context** → **governed state** under `users/<instance>/`), **proposal artifacts** and a lightweight review queue, **`config/authority-map.json`**, and CI validation. Its doctrine matches the pattern at a high level: **Git-managed governed state is canonical**; **Supabase** remains a supported **operational bridge** (vector search, MCP, dashboards)—**not** the sole durable source of truth if it diverges from governed files. See Cici [Governed State Model (Phase 1)](https://github.com/Xavier-x01/Cici#governed-state-model-phase-1) and [`docs/governed-state-doctrine.md`](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md).
+
+**Scope:** That wording describes **Cici’s** repo. **This** integration still treats **companion-self** as the authority for the **Record** in grace-mar; the bridge ADR and [architecture.md](architecture.md) are unchanged. The pointer is for **alignment** (inspectable, review-gated durable state vs mixed-trust runtime DB)—not a merge of Cici’s files into grace-mar.
+
+---
+
 ## Core invariant
 
 > OB1 may contribute candidate material; companion-self alone governs durable identity.

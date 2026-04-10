@@ -19,6 +19,14 @@
 
 ---
 
+## Parallel pattern: Cici instance (external)
+
+The **[Cici](https://github.com/Xavier-x01/Cici)** repository (Xavier’s OB1 **instance** documentation repo, Phase 1 on `main`, commit [`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661)) encodes a **related** governance shape: **three layers** (raw evidence → prepared context → **governed state**), **proposals** for material durable changes, and an **authority map** separating canonical owner writes, proposal-only agent writes, operational DB writes, and ephemeral state. Its doctrine states that **Git-managed governed state is canonical** and that **operational databases are derivative**—Supabase stays a supported **bridge** for search, MCP, and runtime, but **if Supabase and governed files diverge, governed state wins**.
+
+That **rhymes** with companion-self’s [state governance](../../architecture.md#state-governance-proposed-interface-and-canonical) (proposed vs canonical, human gate) and with this bridge’s asymmetry (Record authority vs OB1 runtime). It does **not** change grace-mar’s rule: **companion-self alone** governs this instance’s **Record**; Cici is not a second canonical fork inside grace-mar. Cross-read: [Cici — Governed State Model](https://github.com/Xavier-x01/Cici#governed-state-model-phase-1), [`docs/governed-state-doctrine.md` on Cici](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md), [OB1 README — Related: Cici](README.md#related-cici-instance-external).
+
+---
+
 ## Phase 1: companion-self → OB1
 
 ```
