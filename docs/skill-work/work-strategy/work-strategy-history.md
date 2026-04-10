@@ -15,6 +15,7 @@ _(Append below this line.)_
 ## 2026-04-10
 
 - **Daily brief:** Standing **§1e** — [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) (J.D. Vance, 48h operator fill on coffee **A — Today**). Generator emits `## 1e. JD Vance — last 48 hours`; weak-signal block renumbered to **§1f**. [daily-brief-config.json](daily-brief-config.json) adds JD Vance tokens to **pol_keyword_phrases** for **W** scoring (no bare `vance` substring — avoids “advance” false positives).
+- **PH ↔ §1c:** [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) **Active work-jiang hooks** now anchor **LIB-0149** (link to `self-library.md#operator-analytical-books`) plus [BOOK-ARCHITECTURE.md](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), [STATUS.md](../../../research/external/work-jiang/STATUS.md), [CHAPTER-QUEUE.md](../../../research/external/work-jiang/CHAPTER-QUEUE.md), [lectures/](../../../research/external/work-jiang/lectures/), [COMPRESSION-ENGINE.md](../work-jiang/COMPRESSION-ENGINE.md). Regenerated `daily-brief-2026-04-10.md` (offline). Removed `---` inside Active capture so the generator does not emit a spurious `- ---` bullet.
 
 ## 2026-04-09
 

@@ -10,13 +10,13 @@
 
 ## Active work-jiang hooks
 
-_Edit this section between brief runs. List repo-relative paths or one-line labels._
+_Edit between brief runs. **SELF-LIBRARY (Predictive History):** [LIB-0149](../../../users/grace-mar/self-library.md#operator-analytical-books) — `lookup_priority: preferred`; canonical URL in YAML → [BOOK-ARCHITECTURE.md](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md)._
 
-- _Example:_ `research/external/work-jiang/compressions/<slug>-YYYYMMDD.json`
-- _Example:_ `research/external/work-jiang/**/*.paste-snippet.md` (paste the exact path you used)
-- _Example:_ [COMPRESSION-ENGINE.md](../work-jiang/COMPRESSION-ENGINE.md) — last run: _date_
-
----
+- [BOOK-ARCHITECTURE.md](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md) — multivolume spine; Volume I Geo-Strategy (Part I ch01–ch20, Part II prediction adjudication).
+- [STATUS.md](../../../research/external/work-jiang/STATUS.md) — corpus counts, **missing analysis** backlog, `outline_in_progress`, production nudges.
+- [CHAPTER-QUEUE.md](../../../research/external/work-jiang/CHAPTER-QUEUE.md) — next chapter front (queue vs blockers).
+- [lectures/](../../../research/external/work-jiang/lectures/) — curated lecture bodies for slow-layer pull quotes / compressions.
+- [COMPRESSION-ENGINE.md](../work-jiang/COMPRESSION-ENGINE.md) — lane doc when running `jiang-compress` / JSON outputs (`research/external/work-jiang/compressions/<slug>-YYYYMMDD.json`).
 
 ## How this shows up
 
