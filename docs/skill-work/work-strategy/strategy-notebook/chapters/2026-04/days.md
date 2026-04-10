@@ -106,6 +106,7 @@ Append-only. Newest dated block at the **bottom**.
 - Notebook: [meta.md](meta.md) (Johnson/Pape + **Davis** theme tails) · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [STRATEGY.md](../../../STRATEGY.md) §IV
 - Transcript digest (Haiphong / Ritter / Johnson): [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../../../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — three-dimension skill-strategy + quant tags.
 - Transcript digest (Diesen × Mearsheimer, 2026-04-10): [2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md](../../../../../../research/external/work-strategy/transcripts/2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md) · [YouTube](https://www.youtube.com/watch?v=H2K3qDshr70)
+- Transcript digest (Mercouris monologue, 2026-04-10 — Good Friday): [mercouris-2026-04-10-good-friday-hormuz-lebanon-islamabad.md](../../../../../../research/external/work-strategy/transcripts/mercouris-2026-04-10-good-friday-hormuz-lebanon-islamabad.md) · *pin watch URL when known*
 - Source: operator-pasted Davis commentary (no URL in thread — add canonical link if archived).
 
 ### Jiang resonance (optional)
