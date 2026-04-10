@@ -9,6 +9,6 @@
 - **Dashboard:** [STATUS.md](STATUS.md)
 - **Chapters:** `chapters/YYYY-MM/` — `meta.md` (month) + `days.md` (append-only dailies)
 - **Minds:** [`minds/`](minds/) — trimmed CIV-MIND files (Barnes, Mearsheimer, Mercouris) for analytical lens work; see [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) for recipes
-- **Demo / calibration:** [DEMO-SKILL-STRATEGY-TRANSCRIPTS.md](DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — step-by-step `skill-strategy` exercise using three ingested transcripts + explicit tri-frame; run `bash scripts/demo_skill_strategy_transcripts_check.sh` from repo root first
+- **Demo / calibration:** [DEMO-SKILL-STRATEGY-TRANSCRIPTS.md](DEMO-SKILL-STRATEGY-TRANSCRIPTS.md) — step-by-step `skill-strategy` exercise using three ingested transcripts + explicit tri-frame; run `bash scripts/demo_skill_strategy_transcripts_check.sh` from repo root first · [Executive report (implementation & readiness)](DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md)
 
 WORK only; not Record unless promoted through RECURSION-GATE.
