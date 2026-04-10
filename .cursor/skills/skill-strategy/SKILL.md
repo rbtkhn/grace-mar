@@ -21,6 +21,10 @@ description: >-
 - The operator wants **cross-territory** synthesis (briefs, transcripts, frameworks, Rome/Islamabad threads) captured as **dated judgment**.
 - Closing or continuing a **daily** or **monthly** arc in the notebook without duplicating the full pulse or weekly-brief workflows.
 
+## Transcript demo / calibration (optional)
+
+Runnable **multi-phase** calibration (preflight, notebook, verify, tri-frame, boundaries): [`docs/skill-work/work-strategy/strategy-notebook/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../../../docs/skill-work/work-strategy/strategy-notebook/DEMO-SKILL-STRATEGY-TRANSCRIPTS.md). **Preflight:** `bash scripts/demo_skill_strategy_transcripts_check.sh` from repo root. **Audit rubric (optional):** `docs/skill-work/work-strategy/strategy-notebook/demo-runs/skill-strategy-results-YYYY-MM-DD.md`. **Executive summary:** [`DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md`](../../../docs/skill-work/work-strategy/strategy-notebook/DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md). WORK only — not Record.
+
 ## Modes (operator / agent)
 
 | Mode | Trigger | Agent behavior |
@@ -46,7 +50,20 @@ description: >-
 
 ## Three minds (optional — granular)
 
-Do **not** default to tri-frame on every pass — [strategy-minds-granular.mdc](../../../.cursor/rules/strategy-minds-granular.mdc). Entry stubs: [minds/README.md](../../../docs/skill-work/work-strategy/minds/README.md) → `CIV–MIND–*.md` in civ-mem. **Advisory patterns** (single/two-lens, links-only lensing, verify ownership, recipes): [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). Full **LEARN MODE** + tri-frame ordering: [LEARN_MODE_RULES.md](../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md).
+Do **not** default to tri-frame on every pass — [strategy-minds-granular.mdc](../../../.cursor/rules/strategy-minds-granular.mdc). **Load mind files from:** [strategy-notebook/minds/](../../../docs/skill-work/work-strategy/strategy-notebook/minds/) (trimmed working copies — fingerprints + frameworks, no CMC governance). Entry stubs: [minds/README.md](../../../docs/skill-work/work-strategy/minds/README.md). **Advisory patterns** (single/two-lens, links-only lensing, verify ownership, recipes): [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). Full **LEARN MODE** + tri-frame ordering: [LEARN_MODE_RULES.md](../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md).
+
+### Post-entry lens offer
+
+After any **substantive** notebook entry (Signal / Judgment / Links written or extended — whether from coffee A daily brief, a standalone `strategy` pass, or a transcript digest), include a **three-option lens block** in the WORK menu:
+
+```
+Lens pass (optional — pick one, combine, or skip):
+- Barnes: [one line adapted to today's material — liability / cost / who pays]
+- Mearsheimer: [one line — power distribution / structural incentive / security dilemma]
+- Mercouris: [one line — legitimacy / institutional continuity / civilizational pattern]
+```
+
+**Rules:** Always B → M → M order. Always optional (operator may skip or pick any combination). Phrasing adapts to the day's signals — not generic. Appears alongside other WORK menu options (promote, pivot, verify), not as a separate menu. **Present, don't pre-develop:** the one-line stubs orient the operator to each lens angle; do **not** generate the full lens analysis until the operator picks one. If the operator picks a lens, append the lens block to the same day's `days.md` entry per Recipes A/B/C in [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). If two lenses are run, include a **tension section** (see Recipe B). Trivial entries (minor link fix, one-line Open update) do not trigger the offer.
 
 ## Predictive History (`work-jiang`) — how it wires in
 

@@ -15,9 +15,9 @@
 
 3. **Design intent:** The demo exercises **notebook-first** judgment, **strategy + verify** on at least one load-bearing claim, **compression** across three sources without triple recap, and an **explicit tri-frame** (Mercouris → Mearsheimer → Barnes) aligned with [Recipe C](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) — satisfying [granular minds](../../../../.cursor/rules/strategy-minds-granular.mdc) by requiring an explicit **“Tri-frame, strict”** (or LEARN MODE) trigger.
 
-4. **Live calibration results:** **Not recorded in this repository.** Phases 1–5 are **operator-executed** in Cursor; pass/fail scores belong in the **results log template** at the bottom of the demo doc (or appended to `days.md` / a scratch file). This report therefore summarizes **delivery and readiness**, not a completed scoring run.
+4. **Live calibration results:** **Recorded** under **`### DEMO — skill-strategy calibration (2026-04-10 session)`** in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) (Phases 1–5: preflight note, Mearsheimer-only pass, `strategy + verify` with web links, three-transcript synthesis, strict tri-frame, boundary notes). Rubric-style pass/fail scores can still be copied from the **results log template** in the demo doc if you want a separate scored sheet.
 
-5. **Recommendation:** Run the full track (~75–110 minutes estimated) once, archive the filled **results log** next to this file (e.g. `demo-runs/skill-strategy-results-YYYY-MM-DD.md`), and only then treat **skill-strategy** calibration as **evidence-backed** for process audits.
+5. **Recommendation:** For the next full calibration, archive a **filled results log** next to this file (e.g. `demo-runs/skill-strategy-results-YYYY-MM-DD.md`) if you need a standalone audit artifact; the notebook block in `days.md` already serves as the **primary run log** for 2026-04-10.
 
 ---
 
@@ -27,9 +27,9 @@
 |-----------|--------|
 | Reproducible steps an operator can follow without ad hoc invention | **Met** — phased prompts and pass/fail tables in demo doc |
 | Grounding in real ingested artifacts (not chat-only) | **Met** — three repo paths fixed in script and doc |
-| Demonstrate **verify** discipline for fragile numbers | **Designed** — Phase 2; execution pending |
-| Demonstrate **three minds** without defaulting tri-frame on every pass | **Designed** — Phase 4 explicit trigger; execution pending |
-| Avoid Record merge and STRATEGY.md drift during demo | **Designed** — Phase 5 negative tests; execution pending |
+| Demonstrate **verify** discipline for fragile numbers | **Executed** — Phase 2 logged in `days.md` (CNBC / Oilprice / FT headline corroboration; medium confidence on exact figures) |
+| Demonstrate **three minds** without defaulting tri-frame on every pass | **Executed** — Phase 4 strict tri-frame in `days.md`; default remains granular per rule |
+| Avoid Record merge and STRATEGY.md drift during demo | **Executed** — Phase 5 boundary notes in `days.md` |
 
 ---
 
@@ -88,4 +88,9 @@ Criteria scored Pass / Fail / Notes: notebook-primary; verify discipline; links 
 
 ---
 
-*This file is an implementation and readiness summary. Replace or extend with a “Calibration run — YYYY-MM-DD” section after the first completed scored run.*
+## Calibration run — 2026-04-10
+
+- **Notebook log:** [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — search for `DEMO — skill-strategy calibration`.
+- **Audit rubric (Pass/Fail rows):** [`demo-runs/skill-strategy-results-2026-04-10.md`](demo-runs/skill-strategy-results-2026-04-10.md)
+- **Preflight:** `scripts/demo_skill_strategy_transcripts_check.sh` — reported exit 0 in session.
+- **Phases completed:** 1 (Mearsheimer digest only) · 2 (Forties/Brent claim + web verification) · 3 (three-way synthesis + digest paths) · 4 (Mercouris → Mearsheimer → Barnes + CIV-MIND stubs) · 5 (boundary behavior).

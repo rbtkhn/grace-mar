@@ -20,8 +20,20 @@ Optional index: [`research/external/work-strategy/analyst-corpus/INDEX.md`](../.
 
 ## Where to write output (pick one)
 
-- **A — Production notebook:** Append under `## YYYY-MM-DD` in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) using subsections `### DEMO — Phase N`.
-- **B — Clean room:** Create a scratch file under version control only if you want an isolated artifact, e.g. `strategy-notebook/demo-runs/skill-strategy-demo-scratch-YYYY-MM-DD.md` (create `demo-runs/` yourself). Same section headings as below.
+**Canonical source of truth (avoid double maintenance):**
+
+- **Primary narrative** — the full Phase 1–5 prose lives in **one** place: either **`days.md`** (preferred) **or** a **clean-room** file — not both at full length. If you use clean-room, add **one** pointer line under the same calendar day in `days.md` (path + “full demo there”).
+- **Audit rubric** — optional `demo-runs/skill-strategy-results-YYYY-MM-DD.md`: Pass/Fail scores and the filled results log template; link the notebook block; do **not** duplicate every subsection from `days.md`.
+- **Executive summary** — [`DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md`](DEMO-SKILL-STRATEGY-EXECUTIVE-REPORT.md) points at the run; it does not replace the notebook.
+
+**Safe append (reduces patch friction):**
+
+1. **Read the tail** of [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) for the active date before editing.
+2. **Append after** the last line of that day’s `## YYYY-MM-DD` block (after the final `### …` subsection). Do **not** search-replace a middle paragraph or a stale bullet — if the anchor moved, append to EOF of the day section.
+3. If the day block is too large or ambiguous to patch safely, write the full `### DEMO — Phase …` sequence to **clean-room** `demo-runs/skill-strategy-demo-scratch-YYYY-MM-DD.md`, then add a single **pointer** subsection under the same date in `days.md`.
+
+- **A — Production notebook:** Append under `## YYYY-MM-DD` in `days.md` using subsections `### DEMO — Phase N`.
+- **B — Clean room:** `strategy-notebook/demo-runs/skill-strategy-demo-scratch-YYYY-MM-DD.md` (create `demo-runs/` if needed). Same section headings as below.
 
 **Ceiling:** Keep each phase concise; total demo block should stay within the notebook [daily length guidance](STRATEGY-NOTEBOOK-ARCHITECTURE.md) (~2000 words/day for routine practice — compress if needed).
 
@@ -78,6 +90,16 @@ Using digest #2 (Mercouris Good Friday transcript), pick ONE numeric or market c
 | `### Web verification (YYYY-MM-DD)` with at least one URL | Unverified numbers stated as settled fact in Judgment |
 
 **Max length hint:** Phase 2 under ~300 words including verification table or bullets.
+
+**Verify fallback ladder** (use in order — stops friction when the hero claim is paywalled or second-hand):
+
+1. **Primary target:** One load-bearing **numeric or market** claim (e.g. digest-attributed FT Forties vs Brent) with **web or wire** check; keep transcript attribution distinct from verification tier.
+2. **Same digest, new target:** If step 1 is blocked (paywall, no independent match), pick **another** verifiable claim from the **same** digest (date, venue, or thematic wire) and verify **that** — note in Phase 2 why the first claim was deferred.
+3. **Abstention (still a Pass for verify discipline):** If neither works, add `### Web verification (YYYY-MM-DD)` with:
+   - what was **attempted**;
+   - **why** it remains unverified;
+   - what **evidence class** would suffice (e.g. exchange settlement, two wires, primary table).  
+   Do **not** state the unverified number as Judgment-grade fact.
 
 ---
 
@@ -139,7 +161,10 @@ Append ### DEMO — Phase 4 with three labeled subsections (Mercouris, Mearsheim
 
 ## Phase 5 — Negative tests (boundaries)
 
-Run these as **separate** short messages to the agent.
+**Two acceptable ways to score Phase 5 — pick one per run (declare in results log):**
+
+- **Live prompts:** Run **5a** and **5b** below as **separate** short messages to the agent; record Pass/Fail from actual replies.
+- **Documented substitute:** Skip live prompts and instead add under **`### DEMO — Phase 5`** (or results log) explicit **expected boundary behavior**: unverified numbers tagged `[unverified]`; no `STRATEGY.md` edit without promote; tri-frame not default. **Pass** if that subsection matches the rubric; note `Phase 5 mode: documented`.
 
 **5a — Unverified numbers**
 
@@ -196,8 +221,9 @@ Phase 1: Pass / Fail — notes:
 Phase 2: Pass / Fail — notes:
 Phase 3: Pass / Fail — notes:
 Phase 4: Pass / Fail — notes:
-Phase 5a: Pass / Fail — notes:
-Phase 5b: Pass / Fail — notes:
+Phase 5a: Pass / Fail — notes: (or N/A if Phase 5 mode: documented)
+Phase 5b: Pass / Fail — notes: (or N/A if Phase 5 mode: documented)
+Phase 5 mode: live | documented
 
 Top 3 failures (if any):
 Time (minutes):
@@ -217,4 +243,5 @@ Time (minutes):
 
 ## Changelog
 
+- **2026-04-10 (b):** Canonical log rules, safe-append procedure, Phase 2 verify fallback ladder, Phase 5 live vs documented scoring.
 - **2026-04-10:** Initial demo script (three transcripts + Recipe C tri-frame).
