@@ -1,0 +1,12 @@
+---
+description: Hyphenated predictive-history names the SELF-LIBRARY book (LIB-0149 / work-jiang), not the YouTube transcript bundle
+alwaysApply: true
+---
+
+# Predictive History — operator reference string
+
+When the operator writes **`predictive-history`** (hyphenated) or clearly means **the SELF-LIBRARY Predictive History book**, interpret that as **LIB-0149**: the multivolume operator corpus under **`research/external/work-jiang/`**, indexed from **`users/grace-mar/SELF-LIBRARY/predictive-history`** (symlink). Use **`BOOK-ARCHITECTURE.md`**, **`STATUS.md`**, and the lecture/analysis tree there — not a different project.
+
+**Do not** resolve bare **`predictive-history`** to **`research/external/youtube-channels/predictive-history/`** (that is **LIB-0151**, the YouTube transcript library). For that bundle, use explicit wording: **Predictive History YouTube transcript library**, **LIB-0151**, or the full path **`youtube-channels/predictive-history`**.
+
+If scope is ambiguous, ask once or default to **LIB-0149** when the hyphenated form appears.

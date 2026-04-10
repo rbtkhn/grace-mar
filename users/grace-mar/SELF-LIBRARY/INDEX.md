@@ -2,6 +2,8 @@
 
 **SELF-LIBRARY** is the **reference-facing** governed library attached to this fork. It is **not** SELF-KNOWLEDGE (identity).
 
+**String convention:** In operator chat, **`predictive-history`** (hyphenated) means **LIB-0149** — the book corpus via [`predictive-history/`](predictive-history/) → `work-jiang/`. For the **YouTube caption bundle** only, say **LIB-0151** or **`youtube-channels/predictive-history`** (see table below).
+
 **Operator analytical books** (grace-mar–authored corpora for synthesis) are grouped in [`self-library.md`](../self-library.md) under **Operator analytical books**: [LIB-0149](../self-library.md#operator-analytical-books) Predictive History, [LIB-0153](../self-library.md#operator-analytical-books) strategy notebook, [LIB-0154](../self-library.md#operator-analytical-books) Xavier journal, [LIB-0155](../self-library.md#operator-analytical-books) dev journal. Channel transcript books ([LIB-0151](../self-library.md), [LIB-0152](../self-library.md)) stay under the main **Entries** list.
 
 | Surface | Path | Role |
