@@ -24,8 +24,22 @@ The operator may **upload one or more transcripts per day** for **work-strategy*
 | **Header** | Source, URL (or “pin when known”), **ingested** date, participants. |
 | **Body** | Short **Perceiver** neutral summary (≤200 words) + optional **strategy hooks** table + **full transcript** with light ASR cleanup. |
 | **Git** | Follow **[Commit policy (ingest → git)](#commit-policy-ingest--git)** below. |
+| **Three minds (chat)** | **Every ingest:** when the transcript file (and INDEX row, if applicable) is **done for the turn**, end with the **[post-entry lens offer](#three-minds-lens-offer-after-every-ingest)** — three one-line stubs (**Barnes → Mearsheimer → Mercouris**). Operator may skip or pick; do **not** run full lens analysis until they choose. |
 
 Same guardrails as below: research upstream, not Record; verify numbers before ship-facing copy.
+
+### Three minds lens offer (after every ingest)
+
+This is the same **optional lens menu** as [`skill-strategy` Post-entry lens offer](../../../../.cursor/skills/skill-strategy/SKILL.md#post-entry-lens-offer), but **ingest is always a substantive artifact** — so the assistant **always** presents it once the digest exists (committed or not).
+
+```
+Lens pass (optional — pick one, combine, or skip):
+- Barnes: [one line adapted to this transcript — liability / cost / who pays / narrative competition]
+- Mearsheimer: [one line — power distribution / structural incentive / security dilemma]
+- Mercouris: [one line — legitimacy / institutional continuity / civilizational pattern]
+```
+
+**Rules:** **B → M → M** order; **stubs only** until the operator picks; not a default **tri-frame** deep pass unless they ask (see [strategy-minds-granular](../../../../.cursor/rules/strategy-minds-granular.mdc)). If they pick a lens, append to that day’s **`days.md`** block per [MINDS-SKILL-STRATEGY-PATTERNS](../../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) recipes.
 
 ---
 
@@ -57,6 +71,7 @@ Same guardrails as below: research upstream, not Record; verify numbers before s
 1. **Manual paste** — Drop text into a new `.md` or `.txt`; add source line at top.
 2. **YouTube (same tooling as other lanes)** — For **Predictive History** channel videos, use [youtube-channels/predictive-history/README.md](../../youtube-channels/predictive-history/README.md) and `scripts/fetch_youtube_channel_transcripts.py` (raw usually under `youtube-channels/predictive-history/transcripts/`, often gitignored). For **work-strategy-only** sources (e.g. GTC panels, strategy podcasts), either copy the fetched `.txt` here with a note **or** add a channel folder under `research/external/youtube-channels/` following that README’s pattern.
 3. **Downstream** — Run **Perceiver** (neutral fact summary ≤200 words) from the file; then [current-events-analysis.md](../../../../docs/skill-work/work-strategy/current-events-analysis.md) (energy hook if relevant → lenses → synthesis). Log outcomes in **STRATEGY.md** §III / §IV (operator strategy log) when useful.
+4. **Same turn — lens menu** — Present **[Three minds lens offer](#three-minds-lens-offer-after-every-ingest)** in chat (see table row above). **Skip** only if the operator said **no menu** / **no options** for that turn.
 
 ---
 
