@@ -36,6 +36,9 @@ def test_build_daily_brief_no_fetch_smoke():
     assert "## 1. Work-politics snapshot" in text
     assert "## 1b. Work-strategy focus" in text
     assert "## 1c. Two horizons — fast vs slow" in text
+    assert "## 1d. Putin — last 48 hours" in text
+    assert "## 1e. JD Vance — last 48 hours" in text
+    assert "## 1f. Weak signal worth watching" in text
     assert "## 2. Headlines (ingested RSS)" in text
     assert "RSS skipped" in text
     assert "## 3. Lead themes" in text

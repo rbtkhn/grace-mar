@@ -12,6 +12,10 @@
 
 _(Append below this line.)_
 
+## 2026-04-10
+
+- **Daily brief:** Standing **§1e** — [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) (J.D. Vance, 48h operator fill on coffee **A — Today**). Generator emits `## 1e. JD Vance — last 48 hours`; weak-signal block renumbered to **§1f**. [daily-brief-config.json](daily-brief-config.json) adds JD Vance tokens to **pol_keyword_phrases** for **W** scoring (no bare `vance` substring — avoids “advance” false positives).
+
 ## 2026-04-09
 
 - **Strategy notebook:** Bootstrapped [strategy-notebook/](strategy-notebook/README.md) — month chapters (`chapters/YYYY-MM/`), [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS.md](strategy-notebook/STATUS.md); active month `2026-04`. Distinct from [STRATEGY.md](STRATEGY.md) milestone log and this lane history file.

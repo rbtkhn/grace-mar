@@ -1,4 +1,4 @@
-## 1e. Weak signal worth watching
+## 1f. Weak signal worth watching
 
 - **Signal:** 
 - **Domain:** geopolitics / alliance / legitimacy / energy / product / governance / narrative / other

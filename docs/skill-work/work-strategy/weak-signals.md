@@ -70,7 +70,7 @@ A weak signal should be retired when:
 
 Each daily brief should include **one weak signal worth watching** when a credible candidate exists.
 
-In generated briefs this appears as **§1e** (after **§1d** Putin — last 48 hours). Use a compact operator block, not a separate detached memo.
+In generated briefs this appears as **§1f** (after **§1d** Putin — last 48 hours and **§1e** JD Vance — last 48 hours). Use a compact operator block, not a separate detached memo.
 
 If no credible weak signal exists that day, the section may explicitly say:
 
@@ -155,7 +155,7 @@ When retiring:
 
 This discipline extends the current lane shape:
 
-- Daily brief: adds one compact weak-signal block (**§1e**)
+- Daily brief: adds one compact weak-signal block (**§1f**)
 - Current-events analysis: inserts a mandatory analogy audit before triangulation when a historical parallel is proposed
 - STRATEGY ledger: receives promoted watches, recurring analogies, and operator strategy log entries (**§IV**)
 

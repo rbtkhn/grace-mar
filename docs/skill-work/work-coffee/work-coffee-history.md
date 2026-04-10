@@ -23,7 +23,7 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 ## 2026-04-02 — coffee Step 2 → **A–E** five modes (**Build** = work-dev + hygiene; no **F**)
 
 - Replaced the **A–I + F** hub with **five** lettered options: **A Today**, **B Build**, **C Compass**, **D Book**, **E Steward** (see [menu-reference.md](menu-reference.md), [coffee SKILL.md](../../../.cursor/skills/coffee/SKILL.md)).
-- **Today** merges daily brief + §1d Putin + KY-4 intel (formerly **C** + **E → work-politics**). **Build** merges work-dev + repository hygiene (formerly **B** + **E → work-dev**). **Compass** merges work-strategy + **work-strategy-rome** (formerly **E → strategy** + **I**). **Book** = Jiang / PH (formerly **G**). **Steward** merges gate + template/boundary (formerly **D** + **A**).
+- **Today** merges daily brief + §1d Putin + §1e JD Vance + KY-4 intel (formerly **C** + **E → work-politics**). **Build** merges work-dev + repository hygiene (formerly **B** + **E → work-dev**). **Compass** merges work-strategy + **work-strategy-rome** (formerly **E → strategy** + **I**). **Book** = Jiang / PH (formerly **G**). **Steward** merges gate + template/boundary (formerly **D** + **A**).
 - **No close letter:** exit the hub by **C** / **D** (normal workflow unless `stay in coffee`), **Later** on the steward fork, or a non-coffee task. **Skills / meta:** say **skills** / **meta** with **B** or after **Build**, not a sixth menu slot.
 - Cross-refs updated: operator-style, handoff-check, dream/bridge/cadence tables, polling-and-markets, pol-dashboard, operator-skills, bootstrap, etc.
 

@@ -121,7 +121,7 @@ If the session load script is unavailable or errored, present the menu without a
 
 **Quick reference (modes):**
 
-- **A. Today** — Daily brief (generator + §1d Putin only when chosen) + work-politics intel (KY-4 Polymarket, polls, Massie X per cadence), brief registry / campaign / queue — **one** next step. **Companion survey** defaults here when the operator opened with **`coffee survey`**.
+- **A. Today** — Daily brief (generator + §1d Putin + §1e JD Vance only when chosen) + work-politics intel (KY-4 Polymarket, polls, Massie X per cadence), brief registry / campaign / queue — **one** next step. **Companion survey** defaults here when the operator opened with **`coffee survey`**.
 - **B. Build** — **work-dev + skills/meta** ( **not** git/ship or membrane audits — those are **E** ): `docs/skill-work/work-dev/` + [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md); **skills / meta** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync) when **`skills`** / **`meta`** with **B**. **One** prescribed next action. Detail: [menu-reference § Build (B) — detailed scope](../../../docs/skill-work/work-coffee/menu-reference.md#build-b--detailed-scope).
 - **C. Compass** — **work-strategy** + **work-strategy-rome** (ROME-PASS, manifest, exemplars, notes) — **one** develop step. Vatican / Holy See / ROME-PASS work lives **here**, not under **Today** alone.
 - **D. Book** — **work-jiang / Predictive History** — **one** next step.

@@ -34,7 +34,8 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 | **1b. Work-strategy** | [daily-brief-focus.md](daily-brief-focus.md) + pointers to work-dev |
 | **1c. Two horizons (fast vs slow)** | Operator prose in generator + [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) § **Active work-jiang hooks** — **slow** structural pointers (work-jiang); **fast** = §2 RSS + §1 (scored **W / S / G** in generator) |
 | **1d. Putin — last 48 hours** | Operator fill per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) |
-| **1e. Weak signal worth watching** | Operator block using [weak-signal-template.md](weak-signal-template.md); optional “none today” if threshold not met |
+| **1e. JD Vance — last 48 hours** | Operator fill per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) |
+| **1f. Weak signal worth watching** | Operator block using [weak-signal-template.md](weak-signal-template.md); optional “none today” if threshold not met |
 | **2. Headlines** | RSS; each line `[W:x S:y]` ranked by **W+S** then recency |
 | **3. Lead themes** | **W** campaign angle, **S** strategy angle, **slow** work-jiang stub (tie §1c to today’s headlines) |
 | **4. Triangulation** | [work-politics analytical lenses](../work-politics/analytical-lenses/manifest.md) when the lead is political |
@@ -44,7 +45,7 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 
 ## Weak signal rule
 
-Each brief should include one compact weak-signal block (**§1e**) when a credible candidate exists.
+Each brief should include one compact weak-signal block (**§1f**) when a credible candidate exists.
 
 A weak signal should:
 
@@ -57,7 +58,7 @@ Do not force an entry on low-information days. Use this line instead:
 
 > No credible weak signal exceeded the threshold today.
 
-When a weak signal includes a historical parallel, complete a short analogy audit using [analogy-audit-template.md](analogy-audit-template.md) and summarize the result inside **§1e**.
+When a weak signal includes a historical parallel, complete a short analogy audit using [analogy-audit-template.md](analogy-audit-template.md) and summarize the result inside **§1f**.
 
 ---
 
