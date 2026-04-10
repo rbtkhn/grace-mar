@@ -44,6 +44,10 @@ description: >-
 
 **Lane index:** [work-strategy README](../../../docs/skill-work/work-strategy/README.md).
 
+## Three minds (optional — granular)
+
+Do **not** default to tri-frame on every pass — [strategy-minds-granular.mdc](../../../.cursor/rules/strategy-minds-granular.mdc). Entry stubs: [minds/README.md](../../../docs/skill-work/work-strategy/minds/README.md) → `CIV–MIND–*.md` in civ-mem. **Advisory patterns** (single/two-lens, links-only lensing, verify ownership, recipes): [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). Full **LEARN MODE** + tri-frame ordering: [LEARN_MODE_RULES.md](../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md).
+
 ## Predictive History (`work-jiang`) — how it wires in
 
 **Roles:** **Predictive History** is the **slow corpus** (lectures, book spine, registries). **`skill-strategy`** is **fast judgment** in the strategy-notebook. PH **feeds** strategy; it is **not** merged into SELF or Voice without the gate.

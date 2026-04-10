@@ -11,3 +11,5 @@ Short **grace-mar stubs** for LEARN MODE. Canonical cognitive templates live in 
 Protocol: [LEARN_MODE_RULES.md](../LEARN_MODE_RULES.md).
 
 **External reviewers:** Brainstorm brief (minds × `skill-strategy`, granular by default) — [REVIEWERS-PROMPT-minds-and-skill-strategy.md](REVIEWERS-PROMPT-minds-and-skill-strategy.md).
+
+**Pattern library (advisory, consolidated):** [MINDS-SKILL-STRATEGY-PATTERNS.md](MINDS-SKILL-STRATEGY-PATTERNS.md) — tactics, recipes A/B/C, stretch ideas, non-goals.
