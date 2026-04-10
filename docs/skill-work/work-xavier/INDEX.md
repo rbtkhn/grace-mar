@@ -10,7 +10,7 @@
 | [evidence/](evidence/) | Screenshots and exports for progress analysis (not partner-facing) — **policy & naming:** [evidence/README.md](evidence/README.md) |
 | [work-xavier-sources.md](work-xavier-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |
 | [LANE-CI.md](LANE-CI.md) | PR label `lane/work-xavier`, cross-lane + gate notes |
-| [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |
+| [WORK-LEDGER.md](WORK-LEDGER.md) | Compounding watches + [**medium-term roadmap** (§ II-B)](WORK-LEDGER.md#ii-b-medium-term-roadmap) + pointers ([work-template](../work-template/WORK-LEDGER.md) scaffold) |
 | [INSTANCE-PATHS.md](INSTANCE-PATHS.md) | Where her `users/xavier/` and seed survey live (**not** in grace-mar) |
 | [xavier-instance-two-step.md](xavier-instance-two-step.md) | **Instance checklist:** template → clone → Claude Code; then Seed Phase + validation (with operator) |
 | [SEED-MANIFEST.md](SEED-MANIFEST.md) | What ships where (grace-mar mirror vs her `companion-xavier` repo) |

@@ -81,6 +81,16 @@
 
 ---
 
+## II-B. MEDIUM-TERM ROADMAP
+
+Horizon: **not** next week — revisit when bandwidth allows; does not block daily [xavier-journal](xavier-journal/README.md) or [xavier_journal_ob1_digest.py](../../scripts/xavier_journal_ob1_digest.py) (GitHub API, no local clone required).
+
+| Item | Intent | Notes |
+|------|--------|--------|
+| **Cici in grace-mar workspace** | Edit or cross-search **[Cici](https://github.com/Xavier-x01/Cici)** (Xavier’s OB1 **instance** repo) from the same Cursor workspace as grace-mar — e.g. sibling clone, `research/external/cici/` checkout, multi-root workspace, or symlink — plus optional **Cursor rule** (`globs` on that path) and/or **skill** for “Cici session” ritual (pull, branch, doc checklist). | Decide **submodule vs sibling clone** (avoid silent `git status` noise unless policy is clear). **Leakage / secrets** rules unchanged ([LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md)). Complements API digest; does not replace it. |
+
+---
+
 ## III. LEARNING LEDGER
 
 Stable heuristics and extended sections live in [README.md](README.md), [ALIGNMENT.md](ALIGNMENT.md), and [INDEX.md](INDEX.md). Append here only for short operator shorthand that does not fit those files.

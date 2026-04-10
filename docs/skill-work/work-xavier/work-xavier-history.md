@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-11
+
+- **Medium-term roadmap:** [WORK-LEDGER.md](WORK-LEDGER.md) § **II-B** — *Cici in grace-mar workspace* (local clone / multi-root / optional rule or skill); complements GitHub digest.
+
 ### 2026-04-10
 
 - **Canonical OB1 instance repo:** Grace-mar points at **[Xavier-x01/Cici](https://github.com/Xavier-x01/Cici)** (replaces **`open-brain-xavier`** for journal digest + [xavier-journal README](xavier-journal/README.md)). Default `--repo` in [scripts/xavier_journal_ob1_digest.py](../../../scripts/xavier_journal_ob1_digest.py).
