@@ -1,6 +1,6 @@
 # Strategy notebook
 
-**Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree.
+**Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0153](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
 
 **Primary work output** of [work-strategy](../README.md): a **daily journal** for cross-territory judgment (`chapters/YYYY-MM/days.md` + `meta.md`) — parallel in spirit to [Predictive History book architecture](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), lighter tooling.
 

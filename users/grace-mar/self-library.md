@@ -6,9 +6,26 @@ A curated return-to store of references, canon works, and influential media. It 
 
 **Schema:** [docs/library-schema.md](../../docs/library-schema.md)
 
-**Contents:** [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
+**Contents:** [Operator analytical books](#operator-analytical-books) · [Entries](#entries) · [Theology](#theology) · [Physics, chemistry & biology](#physics-chemistry--biology) · [History](#history) · [Computer Science](#computer-science) · [Metadata](#metadata)
 
-**Library-first preference:** [LIB-0149 — Predictive History](#entries) uses `lookup_priority: preferred` so it sorts **above** `high` in the analyst library summary (see [library-schema.md](../../docs/library-schema.md) · `lookup_priority`).
+**Library-first preference:** [LIB-0149 — Predictive History](#operator-analytical-books) uses `lookup_priority: preferred` so it sorts **above** `high` in the analyst library summary (see [library-schema.md](../../docs/library-schema.md) · `lookup_priority`).
+
+---
+
+## Operator analytical books
+
+**Purpose:** A named shelf for **operator-authored “books”** in grace-mar — structured corpora built for **analysis, judgment, and synthesis** (not third-party canon). Each has a canonical README under `docs/skill-work/` or `research/external/work-jiang/`; **`users/grace-mar/SELF-LIBRARY/`** may symlink the same tree for discoverability.
+
+**How it works:** Entries use normal **lanes** and **`type: book`** ([library-schema.md](../../docs/library-schema.md)). Tag **`scope`** with **`operator_analytical`** plus territory tags (`work_jiang`, `work_strategy`, `work_xavier`, `work_dev`, …). Nothing here bypasses the **gated pipeline** for companion-facing Record claims.
+
+| ID | Title | Canonical README |
+|----|--------|-------------------|
+| **LIB-0149** | Predictive History (work-jiang multivolume spine) | [`research/external/work-jiang/BOOK-ARCHITECTURE.md`](../../research/external/work-jiang/BOOK-ARCHITECTURE.md) |
+| **LIB-0153** | Strategy notebook | [`docs/skill-work/work-strategy/strategy-notebook/README.md`](../../docs/skill-work/work-strategy/strategy-notebook/README.md) |
+| **LIB-0154** | Xavier journal | [`docs/skill-work/work-xavier/xavier-journal/README.md`](../../docs/skill-work/work-xavier/xavier-journal/README.md) |
+| **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-journal/README.md`](../../docs/skill-work/work-dev/dev-journal/README.md) |
+
+**Related (not on this shelf):** [LIB-0151](#entries) (YouTube transcript library) and [LIB-0152](#entries) (TCN curated transcript book) are **bundled channel books** — operator analytical, but listed under the YouTube subsection in **Entries**.
 
 ---
 
@@ -16,6 +33,66 @@ A curated return-to store of references, canon works, and influential media. It 
 
 ```yaml
 entries:
+  # --- Operator analytical books (grace-mar; operator-authored corpora for synthesis) ---
+
+  - id: LIB-0149
+    title: "Predictive History"
+    author: "Jiang"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    engagement_status: "in_progress"
+    lookup_priority: "preferred"
+    scope: ["predictive_history", "work_jiang", "geo_strategy", "philosophy", "civilization_memory", "IR", "operator_analytical"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/work-jiang/BOOK-ARCHITECTURE.md"
+    added_at: 2026-03-23
+    notes: "Preferred SELF-LIBRARY source for library-first lookup (operator book lane). Multivolume Predictive History (one volume per lecture series); Volume I Geo-Strategy in progress. Working corpus: research/external/work-jiang/. Shelf: Operator analytical books. Voice uses only gated-merge material; CIV-MEM is analytic lattice, not identity."
+
+  - id: LIB-0153
+    title: "Strategy notebook"
+    author: "grace-mar"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["work_strategy", "strategy_notebook", "operator_analytical", "journal"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/strategy-notebook/README.md"
+    added_at: 2026-04-09
+    notes: "Operator analytical book: daily strategy journal (chapters/YYYY-MM/days.md + meta.md). WORK; discoverability symlink users/grace-mar/SELF-LIBRARY/strategy-notebook. See STRATEGY-NOTEBOOK-ARCHITECTURE.md. Not companion Record or Voice knowledge until gated."
+
+  - id: LIB-0154
+    title: "Xavier journal"
+    author: "grace-mar"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["work_xavier", "xavier_journal", "open_brain", "operator_analytical", "journal"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-xavier/xavier-journal/README.md"
+    added_at: 2026-04-09
+    notes: "Operator analytical book: Open Brain / work-xavier learning day log in grace-mar. WORK coaching; symlink users/grace-mar/SELF-LIBRARY/xavier-journal. Not Xavier Record or Voice knowledge until gated."
+
+  - id: LIB-0155
+    title: "Dev journal"
+    author: "grace-mar"
+    lane: "reference"
+    type: "book"
+    status: "active"
+    engagement_status: "in_progress"
+    lookup_priority: "high"
+    scope: ["work_dev", "dev_journal", "operator_analytical", "journal"]
+    source: "url"
+    url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-dev/dev-journal/README.md"
+    added_at: 2026-04-09
+    notes: "Operator analytical book: work-dev integration and tooling learning log. WORK; not Record or Voice knowledge until gated. Contrast work-dev-history.md (milestones) vs narrative journal."
+
+  # --- Civilization-memory / theology (grace-mar) ---
+
   - id: LIB-0140
     title: "Exercise: See the Face (school children)"
     author: "grace-mar"
@@ -133,19 +210,6 @@ entries:
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/essays/WRITING-THE-BOOK-AND-DEATH.md"
     added_at: 2026-03-15
     notes: "Essay: the most interesting activity is writing the book; we need not fear death or seek eternal life; the good is in the doing. Making-with, LLM-using; purpose = memory; put down the blade so more of that activity can happen."
-  - id: LIB-0149
-    title: "Predictive History"
-    author: "Jiang"
-    lane: "reference"
-    type: "book"
-    status: "active"
-    engagement_status: "in_progress"
-    lookup_priority: "preferred"
-    scope: ["predictive_history", "work_jiang", "geo_strategy", "philosophy", "civilization_memory", "IR"]
-    source: "url"
-    url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/work-jiang/BOOK-ARCHITECTURE.md"
-    added_at: 2026-03-23
-    notes: "Preferred SELF-LIBRARY source for library-first lookup (operator book lane). Multivolume Predictive History (one volume per lecture series); Volume I Geo-Strategy in progress. Working corpus: research/external/work-jiang/. Voice uses only gated-merge material; CIV-MEM is analytic lattice, not identity."
 
   # --- Computer Science / AI / Strategy ---
 
@@ -2071,12 +2135,12 @@ entries:
 ## Metadata
 
 ```yaml
-total_entries: 147
+total_entries: 150
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
-grace_mar_additions: "… LIB-0135..0148 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition, Universal Love and Mastery, Writing the Book and Death); LIB-0136 (essays index)"
+grace_mar_additions: "… LIB-0135..0148 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition, Universal Love and Mastery, Writing the Book and Death); LIB-0136 (essays index); Operator analytical books shelf: LIB-0149 (scope operator_analytical), LIB-0153 strategy-notebook, LIB-0154 xavier-journal, LIB-0155 dev-journal"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
-last_updated: 2026-03-15
+last_updated: 2026-04-09
 library_lanes: "reference, canon, influence"
 taxonomy_note: "engagement_status replaces read_status; lookup_priority marks runtime lookup preference"
-sections: "Entries · Theology · Physics/chemistry/biology · History · Computer Science (thematic shelves; tag scope) · Metadata"
+sections: "Operator analytical books · Entries · Theology · Physics/chemistry/biology · History · Computer Science (thematic shelves; tag scope) · Metadata"
 ```

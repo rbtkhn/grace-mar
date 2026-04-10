@@ -35,6 +35,10 @@
 
 **Bottom line:** **Populate OB1 from companion-self** = export + OB1 recipes (safest). **Populate companion-self from OB1** = **stage to gate** (or MEMORY/work), then **existing pipeline** — the only approach consistent with companion sovereignty and the gated Record.
 
+### Governing doctrine for OB1 evolution
+
+Evolving an OB1 deployment toward companion-self–grade governance is **incremental**: add **staging** first so drafts and retrieved content do not masquerade as canonical; then **approval** so incorporation requires the merge contract; then **integrity** checks (exports, provenance, drift); then **interface** discipline so the Voice answers inside scope and abstains outside it. Deeper identity capabilities belong after those membranes exist—otherwise convenience habits harden and later safeguards feel like friction. This subsection is **operator/template doctrine** for planning (including named instances such as companion-xavier), not companion Record truth. Normative reference: [Architecture — State governance](../../architecture.md#state-governance-proposed-interface-and-canonical); bridge decision record: [ADR: Asymmetric bridge](../../integrations/ob1/adr-asymmetric-bridge.md) § Doctrine alignment.
+
 ---
 
 ## 2. System context

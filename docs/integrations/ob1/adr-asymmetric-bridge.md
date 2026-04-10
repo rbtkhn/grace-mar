@@ -25,6 +25,17 @@ Build an **asymmetric bridge**, not a bidirectional sync.
 
 ---
 
+## Doctrine alignment
+
+This ADR **instantiates** the three-layer state model in [Architecture — State governance](../../architecture.md#state-governance-proposed-interface-and-canonical):
+
+- **Export (companion-self → OB1)** is a **read-only projection** of canonical and policy-adjacent sources. It does not alter canonical Record state.
+- **Import (OB1 → companion-self)** moves mixed-trust runtime content only into **proposed** state (staging to `recursion-gate.md` or equivalent). It does not write `self.md`, `self-archive.md`, or `bot/prompt.py` until the companion satisfies the **merge contract** via the governed pipeline.
+
+OB1 remains a **mixed-trust runtime**; companion-self remains the **authority** for canonical durable state. Normative framing for boundaries, Voice, and anti-patterns: [Architecture — State governance](../../architecture.md#state-governance-proposed-interface-and-canonical).
+
+---
+
 ## Alternatives considered
 
 ### 1. Bidirectional sync (rejected)

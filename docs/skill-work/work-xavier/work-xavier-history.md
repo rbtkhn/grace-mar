@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-10
+
+- **Canonical OB1 instance repo:** Grace-mar points at **[Xavier-x01/Cici](https://github.com/Xavier-x01/Cici)** (replaces **`open-brain-xavier`** for journal digest + [xavier-journal README](xavier-journal/README.md)). Default `--repo` in [scripts/xavier_journal_ob1_digest.py](../../../scripts/xavier_journal_ob1_digest.py).
+
 ### 2026-04-08
 
 - **xavier-journal:** Added [xavier-journal/README.md](xavier-journal/README.md) (OB1 learning log — WORK) and [xavier-journal/2026-04-06-day-01.md](xavier-journal/2026-04-06-day-01.md) (Day 1 seed entry, anchor 2026-04-06). [INDEX.md](INDEX.md) row.

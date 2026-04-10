@@ -1,5 +1,7 @@
 # Dev journal — work-dev learning log
 
+**Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/dev-journal`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0155](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
+
 **Book:** Short daily notes on **learning and building** the **work-dev** lane in grace-mar: OpenClaw / export–stage–merge discipline, harness and cadence wiring, integration scripts, capability contracts, portable skills, OB1 ↔ companion-self bridge thinking, and adjacent operator infrastructure — **without** treating WORK drafts as Record truth.
 
 **Territory:** `docs/skill-work/work-dev/dev-journal/` in grace-mar — **WORK / operator trajectory**, not the companion **Record**, not Voice knowledge, not a substitute for [work-dev-history.md](../work-dev-history.md) (append-only milestone log) or [workspace.md](../workspace.md) (canonical entrypoint).
