@@ -1,0 +1,14 @@
+---
+description: Strategy passes — no automatic tri-frame; Mercouris/Mearsheimer/Barnes only when invoked
+alwaysApply: true
+---
+
+# work-strategy minds — granular use (no default tri-frame)
+
+Do **not** assume **tri-frame** (Mercouris + Mearsheimer + Barnes together) on every **`strategy`**, **`strategy pass`**, **`work-strategy`**, or generic **skill-strategy** / strategy-notebook pass.
+
+**Default:** Use **zero, one, two, or three** lenses as the operator indicates — or **none** (plain Signal / Judgment / Links without M/M/B labeling). Single-lens and two-lens passes are normal.
+
+**Apply tri-frame or strict LEARN MODE** only when the operator explicitly asks (e.g. **tri-frame**, **LEARN MODE**, **all three minds**, or equivalent). Full **LEARN MODE** protocol (ordering, extraction, SCHOLAR hooks) remains in [`docs/skill-work/work-strategy/LEARN_MODE_RULES.md`](../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md) for those sessions.
+
+**Entry points:** [`docs/skill-work/work-strategy/minds/README.md`](../../docs/skill-work/work-strategy/minds/README.md) → stubs linking to [`docs/civilization-memory/minds/`](../../docs/civilization-memory/minds/) `CIV–MIND–*.md`.
