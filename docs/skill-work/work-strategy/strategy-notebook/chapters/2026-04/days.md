@@ -209,6 +209,73 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - [PBS — Beirut strikes / truce scope](https://www.pbs.org/newshour/world/israeli-strikes-kill-more-than-180-in-central-beirut-saying-iran-truce-doesnt-apply) · [The Hill — Vance misunderstanding](https://thehill.com/homenews/administration/5822826-vance-ceasefire-misunderstanding-iran/) · [19FortyFive — Hormuz backlog Apr 8](https://www.19fortyfive.com/2026/04/2-ships-through-426-tankers-waiting-the-strait-of-hormuz-ceasefire-isnt-working/) · [Economic Times — oil Apr 8](https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-april-8-crude-oil-price-crashes-15-as-trump-agrees-2-week-ceasefire-with-iran-what-are-experts-saying/articleshow/130100328.cms) · [Gap matrix](../../../us-iran-bargaining-gaps-matrix.md) · **Formal flashpoint summary (9 Apr):** [us-iran-top-three-flashpoints-formal.md](../../../us-iran-top-three-flashpoints-formal.md) · **Divergence + proposed compromises:** [us-iran-divergence-and-proposed-compromises.md](../../../us-iran-divergence-and-proposed-compromises.md)
 
+### Session continuation — Islamabad Iranian delegation (Parsi + operator table — 2026-04-10)
+
+**Signal**
+
+- **Parsi (X / @tparsi):** Frames the Iranian side as fielding a **large, senior** delegation — **not** typical of his **JCPOA** observation window — and floats that **Ghalibaf** (Parliament Speaker, head of delegation) may meet **Vance** directly; claims Iran **previously refused** such senior bilateral formats and **accepts now** because Tehran reads itself in a **stronger bargaining position**.
+- **Roster (operator-provided table — spellings cross-check against MFA / IRNA / wire):** **Ghalibaf** (head); **Araghchi** (Foreign Minister); **Reza Amiri Moghadam** (Ambassador to Pakistan); **Ali Akbar Ahmadian** & **Ali Bagheri Kani** (Supreme National Security Council — SNSC); **Mohammad Jafari** (assistant to SNSC secretary); **Naser Hemati** (Central Bank governor); deputy foreign ministers **Kazem Gharibabadi**, **Majid Takht-e Ravanchi**, **Valiollah Nouri**, **Esmail Baghaei** (also MFA spokesperson per table); **Esmael Ahmadi Moghadam** (National Defense University); parliamentarians **Abolfazl Amouei**, **Mohammad Nabavian**. **Composition read:** monetary (**CBI**), **SNSC** cluster, **deep MFA bench** (multiple deputies), **legislative** weight — signals **whole-of-government** presence, not a narrow technical team.
+- **Epistemic:** Original graphic shows **typographic errors** (“Parliamant,” “Supreaqm,” etc.); **do not** propagate those spellings in formal copy — use standard English exonyms + verify titles on an official Iranian or host readout.
+
+**Judgment**
+
+- **Convergence:** Parsi’s “stronger position” line **rhymes** with the notebook’s **terms collision** + **Islamabad roster** thread (same principals, higher political ceiling on the Iranian side than a FM-only track). It **does not** verify battlefield or economic facts by itself — it is **interpretation**.
+- **Ghalibaf–Vance channel:** Treat as **hypothesis** until **schedule readouts** confirm bilateral or pull-aside format; if confirmed, it matters for **audience management** (who is allowed to be seen talking to whom) more than for treaty text.
+- **Gap touchpoint:** Delegation depth supports **dual-audience** analysis already in **flashpoint pass** — **Lebanon / assets** preconditions vs. U.S. carve-outs — without resolving which track is authoritative.
+
+**Links**
+
+- Parsi post: operator screenshot — pin canonical **`x.com/tparsi/...`** status URL when available (search **@tparsi** + “delegation” / Islamabad timing).
+- Context cluster (delegation arrival / Islamabad frame, Apr 2026): [Indian Express — Iran speaker, Lebanon, U.S. talks, Pakistan](https://indianexpress.com/article/world/iran-speaker-terms-ceasefire-lebanon-us-talks-pakistan-10630195/) · [TheJournal.ie — delegation lands, Lebanon condition](https://www.thejournal.ie/iran-us-talks-pakistan-7009439-Apr2026/)
+
+**Open**
+
+- Replace screenshot-derived **names/titles** with **one** wire or MFA list when publishing anything outside the notebook.
+
+### Session continuation — Vatican / @Pontifex (Pope Leo XIV — 2026-04-10)
+
+**Signal**
+
+- **Official X (@Pontifex), ~6:05 AM Apr 10, 2026 (operator screenshot):** Short social précis — **“Absurd and inhuman violence”** / **Christian East** / **blasphemy of war** + **brutality of business** / **collateral damage of self-interest**; closing lines on **children**, **families**, **innocent blood**. **Do not** treat screenshot text as **verified verbatim** of the full allocution without cross-check (see **Web verification** below).
+- **Read for strategy:** Pairs **moral–humanitarian** register with the notebook’s **Lebanon / Beirut** kinetic line and with **market–commodity** framing elsewhere (**oil**, **Hormuz**, **“business”** as system logic) — distinct **language game** from Islamabad **terms**, but relevant to **dual-audience** and **ROME** copy discipline.
+
+**Judgment**
+
+- **Not a battlefield wire:** Treat as **Holy See / pastoral megaphone** + **global Catholic audience** — informs **legitimacy contests** and **coalition rhetoric**, not order-of-battle facts.
+- **Convergence (analytic):** The **“brutality of business” / collateral** clause **rhymes** with **Barnes**-style **who pays / who is expendable** without requiring agreement on ecclesial politics; keep **ROME-PASS** language **bounded** (see [ROME-PASS.md](../../../work-strategy-rome/ROME-PASS.md)) when any outreach **quotes** or **paraphrases** papal lines.
+- **Tension:** **Realist** tracks (Mearsheimer / gaps) do not **need** theological closure; the notebook holds **both** — moral salience vs. structural bind — without **collapsing** them.
+
+### Web verification (2026-04-10) — Chaldean Synod greeting (same morning)
+
+**Primary English (Vatican News — meeting report, Chaldean Church / Synod / Patriarch election context):** [Pope to Chaldean Church: Never be on side of those who wield weapons](https://www.vaticannews.va/en/pope/news/2026-04/pope-chaldean-church-baghdad-nothing-justifies-shedding-innocent.html) (published **10 April 2026**).
+
+**Verified strings (copy-paste safe for quote-grade English from that article body):**
+
+- **Violence frame:** “signs of hope in a world marked by **absurd and inhumane violence**, which in these times, **driven by greed and hatred**, spreads ferociously **in the very lands that saw the rise of salvation**.”
+- **Innocent blood:** “nothing is more important than the lives of the weakest, children, and families—**‘no cause can justify the shedding of innocent blood.’**”
+- **Weapons / bombs:** “**never** on the side of those who **yesterday wielded the sword** and **today launch bombs**.”
+
+**Variance vs @Pontifex screenshot (operator paste):**
+
+| Element | Screenshot / X précis | Vatican News (verified block) |
+|--------|------------------------|---------------------------------|
+| Adjective | “inhuman” | “**inhumane**” |
+| Geography / metaphor | “sacred places of the **Christian East**” | “lands that saw the **rise of salvation**” (no “Christian East” in this graf) |
+| War / business | “blasphemy of war … **brutality of business** … **collateral damage of self-interest**” | **Not present** in the quoted Vatican News paragraphs above — may be **another graf**, **social edit**, or **wire synthesis**; secondary summaries (e.g. [AP](https://apnews.com/article/vatican-pope-leo-chaldean-trump-mideast-iran-720eea814712d1d859875f39661d599f)) echo **business / sacred** language — use **AP** or **full Holy See text** if that sentence must be **exact** in outreach. |
+| Weakest lives | “no **gain** can be worth…” | “**nothing** is more important…” / “**no cause** can justify…” (exact clause on **innocent blood** matches intent; wording differs from some social lines). |
+
+**Verdict:** **High confidence** for the **three block quotes** above as **English editorial reporting** of the Apr 10 greeting. **Medium confidence** tying every phrase in the **@Pontifex** image to the **same** Vatican News URL — **pin** official **`x.com/Pontifex/status/…`** and prefer **Vatican.va Bulletin** or **full manuscript** if Latin/Italian **verbatim** is required.
+
+**Links**
+
+- **Primary:** [Vatican News — Chaldean Church greeting (EN)](https://www.vaticannews.va/en/pope/news/2026-04/pope-chaldean-church-baghdad-nothing-justifies-shedding-innocent.html)
+- **Secondary / context:** [AP News — Pope Leo XIV, Mideast, peace (Apr 2026)](https://apnews.com/article/vatican-pope-leo-chaldean-trump-mideast-iran-720eea814712d1d859875f39661d599f) · [ANSA English](https://www.ansa.it/english/news/vatican/2026/04/10/pope-says-those-who-launch-bombs-are-not-christians_56ab4bec-b22b-4121-b046-3218ea1fe0f6.html) · [Agenzia Fides — Eastern Christians](https://www.fides.org/en/news/76513-VATICAN_Pope_Leo_embraces_Eastern_Christians_struck_by_violence_with_a_diabolical_intensity_previously_unknown)
+- @Pontifex: pin canonical **`x.com/Pontifex/...`** status URL when curating (operator image = receipt).
+
+**Open**
+
+- If **ROME-PASS** or companion-facing copy **echoes** this thread, prefer **Vatican News block quotes** above for English **quote**; label **paraphrase** if using **Christian East / business / collateral** lines until matched to a **single** official paragraph.
+
 ### DEMO — skill-strategy calibration (2026-04-10 session)
 
 **Preflight:** `bash scripts/demo_skill_strategy_transcripts_check.sh` — exit 0; all three digest files present under `research/external/work-strategy/transcripts/`.
