@@ -56,6 +56,18 @@ Durable state that affects future companion behavior and commitments **after** v
 
 ---
 
+## Repo layout (grace-mar)
+
+The **three layers** above are **conceptual** and bind governance (what may become Record, how drafts move). They are **not** fully mirrored as a working tree at the **repository root**.
+
+- **[`evidence/`](../evidence/)** and **[`prepared-context/`](../prepared-context/)** at the top level of this repo exist as **minimal placeholders** (so the directories stay tracked). They are **not** the primary dump for operator uploads or MCP capture in grace-mar.
+- **WORK and advisor evidence** usually lives under **territory paths** — for example [`docs/skill-work/work-xavier/evidence/`](skill-work/work-xavier/evidence/) — with policy on each territory’s [`evidence/README.md`](skill-work/work-xavier/evidence/README.md).
+- **Governed Record state** lives under **`users/<id>/`** (e.g. `users/grace-mar/`) per instance doctrine, not under generic root folders.
+
+This layout avoids confusing this instance with a **small OB1 instance repo** (e.g. [Cici](https://github.com/Xavier-x01/Cici)) that intentionally adds a **Phase 1** tree (`evidence/`, `proposals/`, `users/<instance>/`) in one place. For a side-by-side conceptual map of OB1 vs Cici vs grace-mar, see [OB1 bridge mapping — Conceptual map](integrations/ob1/mapping.md#conceptual-map-ob1-cici-grace-mar).
+
+---
+
 ## Relationship to Record and Voice (instance vocabulary)
 
 This template also uses **Record** and **Voice** in [concept.md](concept.md):

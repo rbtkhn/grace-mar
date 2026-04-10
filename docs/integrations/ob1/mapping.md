@@ -6,6 +6,30 @@ Defines the object schemas for both bridge directions. Every field has a definit
 
 ---
 
+## Conceptual map (OB1, Cici, grace-mar)
+
+This section is **not** part of the bridge object schemas. It orients operators and advisors so **upstream OB1**, **Xavier’s instance repo (Cici)**, and **grace-mar** are not conflated.
+
+**Role in the stack**
+
+| Repo | Primary role |
+|------|----------------|
+| **[OB1](https://github.com/NateBJones-Projects/OB1)** (upstream) | Public **memory substrate** — Supabase + pgvector + MCP, extensions/recipes/skills/dashboards as a **contribution ecosystem**. Not a cognitive-fork Record system. |
+| **[Cici](https://github.com/Xavier-x01/Cici)** (external instance) | **Personal OB1 instance layer** — config/docs in git; durable captured memory in private Supabase. Phase 1 adds **git-first governed state** (evidence / prepared context / `users/<instance>/governed-state`, proposals). |
+| **grace-mar** (this repo) | **Governed cognitive-architecture instance** — four Record surfaces (SELF, SELF-LIBRARY, SKILLS, EVIDENCE), RECURSION-GATE, Voice, work territories; [state model](../../state-model.md) three layers **in doctrine**, not necessarily the same paths as Cici. |
+
+**Where “governed truth” is supposed to live**
+
+| Repo | Canonical durable truth | Operational / derivative |
+|------|-------------------------|---------------------------|
+| **OB1** (platform) | User’s **thoughts** in **their** Postgres (typical deployment); repo holds **contributions**, not personal memory. | Edge functions, dashboards, recipes — deployment-specific. |
+| **Cici** | **Git-managed governed state** per [Cici doctrine](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md) (if git and Supabase diverge, **governed files win**). | Supabase as **operational bridge** (search, MCP, etc.). |
+| **grace-mar** | **Record** under `users/grace-mar/` (and gated merge path) — **companion-self** authority model. | MEMORY, WORK drafts, exports; OB1 downstream of export is **not** canonical for identity. |
+
+**Structural caution:** Cici’s Phase 1 **folder names** resemble grace-mar’s **state-model vocabulary** (evidence, prepared context, governed state). In grace-mar, **root** [`evidence/`](../../../evidence/) and [`prepared-context/`](../../../prepared-context/) are **reserved placeholders** only — see [state model § Repo layout](../../state-model.md#repo-layout-grace-mar). Territory-scoped evidence (e.g. work-xavier) lives under `docs/skill-work/.../evidence/`. **Do not** assume Cici-style routing exists at the repo root without reading those docs.
+
+---
+
 ## Direction A: companion-self → OB1 (export object)
 
 Each exported chunk produces one **export object** — a content file plus a metadata sidecar. The manifest lists all objects in the bundle.

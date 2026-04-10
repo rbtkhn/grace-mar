@@ -32,8 +32,16 @@ This constraint is non-negotiable. Every document, script, and test in this inte
 | [architecture.md](architecture.md) | Two-phase asymmetric bridge architecture, data flow, and safety model |
 | [adr-asymmetric-bridge.md](adr-asymmetric-bridge.md) | Architecture Decision Record: why asymmetric, why stage-only return |
 | [operator-runbook.md](operator-runbook.md) | Manual operator workflows for export and import-staging |
-| [mapping.md](mapping.md) | Canonical object schemas for export bundles and import proposals |
+| [mapping.md](mapping.md) | Canonical object schemas for export bundles and import proposals; **conceptual map** [OB1, Cici, grace-mar](mapping.md#conceptual-map-ob1-cici-grace-mar) |
 | [trust-tiers.md](trust-tiers.md) | Trust classification system with handling rules per tier |
+
+### Upstream OB1 (reference spot-check)
+
+Read-only summary from **[NateBJones-Projects/OB1](https://github.com/NateBJones-Projects/OB1)** public docs (as of repository `main`, captured for grace-mar orientation — re-verify before citing externally):
+
+- **Positioning:** README describes Open Brain as persistent memory infrastructure (Supabase + vector + MCP): “One database, one AI gateway, one chat channel,” with a **curated extension learning path**, **community contributions** (recipes, skills, dashboards, integrations), Discord and Substack.
+- **Contributing:** [CONTRIBUTING.md](https://github.com/NateBJones-Projects/OB1/blob/main/CONTRIBUTING.md) — **extensions** and **primitives** are **curated** (maintainer discussion / multi-extension justification); **recipes, schemas, dashboards, integrations, skills** are **open** for community PRs; **automated PR review** (structure, secrets, SQL safety, metadata) plus **human admin** review; **core `thoughts` / core MCP** changes are out of scope for contributors.
+- **Implication for grace-mar:** OB1 is a strong **public platform and contribution hub** for the memory substrate; it is **not** a substitute for this repo’s Record governance. Use [mapping.md § Conceptual map](mapping.md#conceptual-map-ob1-cici-grace-mar) when comparing to Cici or grace-mar.
 
 ---
 
