@@ -132,7 +132,18 @@ Synthesis **compresses and routes** sources into the notebook; it does **not** d
 
 **Month-level state**
 
-- **`meta.md`** holds slow-moving logic: **Theme**, **Open questions** spanning weeks, **Bets / watches** for month-end review. Touch `meta.md` when the **month’s story** shifts, not necessarily every day.
+- **`meta.md`** holds slow-moving logic: **Theme**, **Open questions** spanning weeks, **Bets / watches** for month-end review, optional **Polyphony / lens tension** (see below). Touch `meta.md` when the **month’s story** shifts, not necessarily every day.
+
+**Polyphony / lens tension (optional `meta.md` section)**
+
+Wire **cognitive polyphony** at month scale without flattening voices:
+
+- **`## Polyphony / lens tension (month)`** — three short sublines (or bullets), each in the **spirit** of that mind’s fingerprint (see `strategy-notebook/minds/CIV-MIND-*.md`), not generic labels:
+  - **Mercouris:** legitimacy, institutional continuity, narrative/diplomatic frame — *what structure makes this event intelligible?*
+  - **Mearsheimer:** power distribution, incentives, security competition — *what structural forces make outcomes likely?*
+  - **Barnes (optional):** liability, mechanism, who pays / who’s exposed — *what’s binding in budgets, law, and domestic price?*
+- **Tension line (one sentence):** Where the Mercouris and Mearsheimer readings **disagree by design** this month — leave unresolved unless a `strategy` pass **promotes** a settled watch to STRATEGY.md.
+- **Update cadence:** When the month’s arc shifts (ceasefire scope, Hormuz metrics, Islamabad round) or after a **tri-frame** / heavy lens week — not necessarily every day.
 - **[STATUS.md](STATUS.md):** operator-maintained pointer to the **last daily entry** for quick re-entry.
 
 **Month boundaries**
