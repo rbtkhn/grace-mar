@@ -10,6 +10,8 @@ Defines the object schemas for both bridge directions. Every field has a definit
 
 This section is **not** part of the bridge object schemas. It orients operators and advisors so **upstream OB1**, **Xavier’s instance repo (Cici)**, and **grace-mar** are not conflated.
 
+**One-line stack:** OB1 is the **shared memory substrate**; Cici is a **personal governed instance** on top of that substrate; grace-mar is the most ambitious attempt in this family to turn that general area into a **full cognitive-governance architecture** (Record theory, gate, four surfaces, not just memory tooling).
+
 **Role in the stack**
 
 | Repo | Primary role |
