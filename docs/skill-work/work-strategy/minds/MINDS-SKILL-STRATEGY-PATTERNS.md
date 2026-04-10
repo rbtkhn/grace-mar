@@ -23,13 +23,20 @@
 
 ## Grounding paths
 
-### Canonical full mind templates
+### Mind files (load these — trimmed for strategy-notebook)
 
-- `docs/civilization-memory/minds/CIV–MIND–MERCOURIS.md`
-- `docs/civilization-memory/minds/CIV–MIND–MEARSHEIMER.md`
-- `docs/civilization-memory/minds/CIV–MIND–BARNES.md`
+- [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md)
+- [`strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md)
+- [`strategy-notebook/minds/CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md)
+- [`strategy-notebook/minds/README.md`](../strategy-notebook/minds/README.md)
 
-### Work-strategy mind stubs
+### Canonical full mind templates (CMC governance — use when full governance is needed)
+
+- `research/repos/civilization_memory/docs/templates/CIV–MIND–MERCOURIS.md`
+- `research/repos/civilization_memory/docs/templates/CIV–MIND–MEARSHEIMER.md`
+- `research/repos/civilization_memory/docs/templates/CIV–MIND–BARNES.md`
+
+### Work-strategy mind stubs (entry points)
 
 - `docs/skill-work/work-strategy/minds/mind-mercouris.md`
 - `docs/skill-work/work-strategy/minds/mind-mearsheimer.md`
@@ -274,7 +281,7 @@ Promote only when one of these is true:
 **Agent moves**
 
 1. Declare mode exactly as required by `LEARN_MODE_RULES.md`.
-2. Load [`STRATEGY.md`](../STRATEGY.md): **§I CORE**, relevant **lane-specific core** (§II), **§III SCHOLAR** as needed, and relevant **§IV** (operator strategy log in this file only — not CMC `MEM–*` shards under `research/repos/civilization_memory/`). Load the three mind stubs under `minds/` (follow links to `CIV–MIND–*.md` as needed).
+2. Load [`STRATEGY.md`](../STRATEGY.md): **§I CORE**, relevant **lane-specific core** (§II), **§III SCHOLAR** as needed, and relevant **§IV** (operator strategy log in this file only — not CMC `MEM–*` shards under `research/repos/civilization_memory/`). Load the three mind files from [`strategy-notebook/minds/`](../strategy-notebook/minds/) (trimmed working copies).
 3. Run failure-first scan.
 4. Apply in the mandated order:
    - Mercouris
@@ -365,8 +372,20 @@ Create a one-page advisory note under `docs/skill-work/work-strategy/minds/`:
 - Do **not** merge negotiation, material, and narrative planes into a single sentence without seams.
 - Do **not** imply Predictive History alignment from headlines alone.
 - Do **not** promote notebook content into Record or Voice through work-strategy alone.
-- Do **not** let short mind stubs drift into duplicated long-form copies of the canonical mind templates.
+- Do **not** let the trimmed notebook copies drift from canonical mind templates — update both when a new version ships.
 - Do **not** build a heavy schema before proving that light tagging is insufficient.
+
+---
+
+## Post-entry lens offer (standard menu behavior)
+
+After any **substantive** notebook entry — daily brief ingest, standalone strategy pass, transcript digest — the agent includes a three-option lens block in the WORK menu:
+
+- **Barnes:** one line adapted to the day's material (liability, cost, who pays)
+- **Mearsheimer:** one line (power distribution, structural incentive, security dilemma)
+- **Mercouris:** one line (legitimacy, institutional continuity, civilizational pattern)
+
+Always **B → M → M** order. Always optional. Phrasing adapts to the day's signals. The operator picks one, combines two, or skips. If a lens is picked, the agent appends the lens block to the same day's entry per Recipe A (single) or Recipe B (two-lens with tension section). Trivial entries do not trigger the offer. See [skill-strategy SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) § Post-entry lens offer.
 
 ---
 
@@ -374,7 +393,7 @@ Create a one-page advisory note under `docs/skill-work/work-strategy/minds/`:
 
 ### Default
 
-Plain notebook synthesis.
+Plain notebook synthesis + **post-entry lens offer** (three options in WORK menu; operator picks or skips).
 
 ### Escalate to one lens when
 

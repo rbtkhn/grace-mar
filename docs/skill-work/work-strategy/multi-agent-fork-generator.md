@@ -2,7 +2,7 @@
 
 **Status:** Design note — optional pattern for richer **WORK** menus without bypassing human judgment or **RECURSION-GATE**.
 
-**Problem:** One assistant turn can prefetch several branches; some operators want **more creative** fork diversity while staying **rule-compliant**.
+**Problem:** One assistant turn can enumerate several branches (labels + one-line stubs); some operators want **more creative** fork diversity while staying **rule-compliant**. Enumeration is not execution — substantive work runs only after the human picks.
 
 **Pattern (two-pass or subagent):**
 

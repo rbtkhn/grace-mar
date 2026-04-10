@@ -208,3 +208,74 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Links (flashpoint pass)
 
 - [PBS — Beirut strikes / truce scope](https://www.pbs.org/newshour/world/israeli-strikes-kill-more-than-180-in-central-beirut-saying-iran-truce-doesnt-apply) · [The Hill — Vance misunderstanding](https://thehill.com/homenews/administration/5822826-vance-ceasefire-misunderstanding-iran/) · [19FortyFive — Hormuz backlog Apr 8](https://www.19fortyfive.com/2026/04/2-ships-through-426-tankers-waiting-the-strait-of-hormuz-ceasefire-isnt-working/) · [Economic Times — oil Apr 8](https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-april-8-crude-oil-price-crashes-15-as-trump-agrees-2-week-ceasefire-with-iran-what-are-experts-saying/articleshow/130100328.cms) · [Gap matrix](../../../us-iran-bargaining-gaps-matrix.md) · **Formal flashpoint summary (9 Apr):** [us-iran-top-three-flashpoints-formal.md](../../../us-iran-top-three-flashpoints-formal.md) · **Divergence + proposed compromises:** [us-iran-divergence-and-proposed-compromises.md](../../../us-iran-divergence-and-proposed-compromises.md)
+
+### DEMO — skill-strategy calibration (2026-04-10 session)
+
+**Preflight:** `bash scripts/demo_skill_strategy_transcripts_check.sh` — exit 0; all three digest files present under `research/external/work-strategy/transcripts/`.
+
+### DEMO — Phase 1 (single-transcript notebook synthesis — Mearsheimer digest only)
+
+**Signal:** The Mearsheimer conversation frames the U.S.–Iran war as a **choice** by Washington (not something Iran forced) and treats the Strait of Hormuz closure as a **massive economic shock** with outsized effects on China, Japan, South Korea, and India. A recurring structural claim is **buck-passing**: regional states want U.S. primacy to manage threats they prefer not to own. The discussion also warns that **nuclear proliferation** becomes more attractive when U.S. security guarantees look unreliable.
+
+**Judgment:** For a strategy notebook pass, the load-bearing move is to separate **war initiation/escalation choices** from **second-order alignment effects** (who bears Hormuz risk, who free-rides). The buck-passing frame is useful for anticipating **diplomatic positioning** (public statements vs. fuel for domestic politics) more than for predicting battlefield outcomes. Treat any single headline about “ceasefire” as **order-of-battle noise** until closure economics and insurance/tonnage behavior are visible in multiple independent sources.
+
+**Links:** `research/external/work-strategy/transcripts/2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md`
+
+### DEMO — Phase 2 (`strategy + verify` — load-bearing market claim)
+
+**Claim under test (from Mercouris digest, not independent FT read):** Transcript reports **FT** coverage that **Forties** blend reached roughly **~$147/bbl** on a Thursday while **Brent June futures** were ~**$97** — a very large physical-over-paper spread consistent with **Hormuz/tonnage stress**.
+
+**Web verification (2026-04-10):**
+
+- [CNBC — Dated Brent / physical market stress (Apr 2026)](https://www.cnbc.com/2026/04/10/oil-prices-dated-brent-energy-iran-war-ceasefire-strait-of-hormuz.html) — reports **dated Brent** physical pricing at **record** levels during the Hormuz crisis window (numeric detail in article; use as independent corroboration of **physical squeeze**, not a match to every transcript number).
+- [Oilprice.com — North Sea crude record high, Hormuz shock](https://oilprice.com/Latest-Energy-News/World-News/North-Sea-Crude-Soars-to-Record-High-as-Hormuz-Shock-Rips-Through-Spot-Markets.html) — describes **North Sea** spot stress and large **premium** dynamics vs. futures during the same broad episode.
+- [FT — North Sea oil hits record high…](https://www.ft.com/content/a121ee37-dc4f-44da-a6fe-ecbcd71110f3) — **paywalled**; useful as the cited outlet’s headline-level anchor, but not relied on for exact figures in this notebook pass.
+
+**Verdict:** **Supported at headline/theme level** (physical North Sea / dated Brent extreme tightness and futures lag during Hormuz disruption). **Exact transcript numbers** remain **second-hand**; notebook should keep **confidence: medium** unless primary market data tables are pasted.
+
+### DEMO — Phase 3 (three-transcript synthesis)
+
+**Signal (cross-digest):** All three conversations orbit **Hormuz closure economics** and **who pays** (insurance, freight, Asian importers, NATO/European exposure), but they emphasize different mechanisms: **Mercouris** tracks market microstructure + India–Russia energy reporting + Islamabad diplomacy; **Mearsheimer** emphasizes **U.S. choice**, alliance buck-passing, and proliferation incentives; **Crooke/Davis** foregrounds **CENTCOM operational framing**, “rules of the game” for strikes, and escalation ladders.
+
+**Judgment:** Treat **single-source numbers** (especially journalist-cited “$X per barrel” lines) as **hypothesis flags** until verified. The strategic overlay that survives filtering is **persistent closure risk** → **physical crude dislocation** separate from **paper Brent** → downstream pressure on **large Asian importers** and on **alliance politics** (who gets blamed for reopening vs. deterring).
+
+**Links:**
+
+- `research/external/work-strategy/transcripts/mercouris-2026-04-10-good-friday-hormuz-lebanon-islamabad.md`
+- `research/external/work-strategy/transcripts/2026-04-10-diesen-mearsheimer-iran-ceasefire-truth-social.md`
+- `research/external/work-strategy/transcripts/2026-04-10-davis-crooke-centcom-iran-hormuz-islamabad.md`
+
+### DEMO — Phase 4 (tri-frame, strict — Mercouris → Mearsheimer → Barnes)
+
+**Mercouris lens:** Track **market plumbing** (Forties vs Brent spreads, refinery/grade substitution) and **diplomatic choreography** (Islamabad visit timing) as early indicators of whether “ceasefire” language is stabilizing **tonnage** or only **headlines**.
+
+**Mearsheimer lens:** Weight **incentives of major powers** and **alliance buck-passing**; expect public goods problems around Hormuz security and strong incentives for regional actors to **talk multilateral** while **privately hedging** bilaterally.
+
+**Barnes lens:** Watch **elite narrative competition** inside Western capitals (who is blamed for escalation vs. restraint) and how **media/legal/regulatory** framing shapes what options are politically thinkable next week vs. next quarter.
+
+**Notebook mind stubs (trimmed):**
+
+- `docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MERCOURIS.md`
+- `docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md`
+- `docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-BARNES.md`
+
+### DEMO — Phase 5 (negative tests / boundary behavior)
+
+**A — Unverified numbers:** If a digest quotes a price level without verification, **tag `[unverified]`** in Signal and **do not** treat it as Judgment-grade fact. (Example pattern: journalist-cited exchange prints referenced inside a podcast transcript.)
+
+**B — STRATEGY.md:** This calibration run **does not** edit `docs/skill-work/work-strategy/STRATEGY.md` (notebook-only pass unless explicitly promoted).
+
+**C — Tri-frame default:** A generic `strategy` pass may use **zero–three** lenses; **strict tri-frame** applies only when explicitly invoked (this DEMO block invoked it for Phase 4).
+
+### Barnes lens — Postol ingest (Recipe A) — redo
+
+**Signal:** Speaker frames the war as a **material and liability** story on three rails: (1) **U.S. fiscal–military pipeline** to Israel — aid, FMF-style flows, and “we pay for the ordnance” logic — as what keeps **Gaza/Lebanon** kinetics going if Congress and the executive stay aligned. (2) **Air-defense economics** — Iron Dome expended against targets he says are the wrong class, **RUSI**-style depletion timelines, **radar** and **AWACS** losses, **drone** mass vs **interceptor** scarcity — as a **sustainability** clock for Israel and forward U.S. posture. (3) **Iran** side — Hormuz leverage and a claimed shift from sanctioned **~$45/bbl** to **~$120/bbl** export pricing — as **[unverified]** revenue and **stranglehold** language. Domestic U.S. leg: cited **[unverified]** **~70%** opposition to the war — treated here only as a **speaker poll claim**, not a verified fact.
+
+**Judgment:** Barnes asks: *who pays, who breaks first, what is actually binding.* On this tape, the binding story is **dual**: **industrial** (interceptors, missiles, radar restoral, drone output) and **political** (whether **aid** stays politically cheap in D.C. when public opinion and coalition partners turn). The Hormuz/oil and poll numbers are **load-bearing only after verification**; until then, the usable Barnes output is **structure** — trace **budget → production → employment of force → domestic price** (economic and electoral) — and flag where the speaker moves from **mechanism** to **rhetoric** (e.g. absolute aid-cut advocacy without a bill path). For strategy copy: prefer **liability chain** sentences over repeating his **round** figures.
+
+**Links:** [`theodore-postol-2026-04-10-ceasefire-netanyahu-iran-missiles-starlink.md`](../../../../../../research/external/work-strategy/transcripts/theodore-postol-2026-04-10-ceasefire-netanyahu-iran-missiles-starlink.md) · [mind-barnes.md](../../minds/mind-barnes.md) · [MINDS-SKILL-STRATEGY-PATTERNS — Recipe A](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
+
+### Open (Barnes — Postol)
+
+- Pin **RUSI** table date/assumptions vs. any **DOD/IDF** restock reporting before treating depletion as settled.
+- **[unverified]** **~70%** and **~$120/bbl** — replace with **dated** poll crosstabs and **market** or **wire** **Iran** **export** pricing when used in Judgment.

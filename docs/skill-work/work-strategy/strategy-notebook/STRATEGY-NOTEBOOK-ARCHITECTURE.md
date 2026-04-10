@@ -8,7 +8,7 @@ A **cumulative, dated record** of how the operator reads signals, weighs analogi
 
 ### Primary output (work-strategy)
 
-The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **primary work output** of the work-strategy lane: dated judgment, synthesis, and links. **Inputs** that feed it — daily briefs, transcript digests, sessions, weak-signal notes, framework drafts — are **not** substitutes for the notebook; they inform the daily block.
+The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **primary work output** of the work-strategy lane: **one dated page per calendar day** (one `## YYYY-MM-DD` block) consolidating that day’s best analysis, plus links. **Inputs** that feed it — daily briefs, transcript digests, sessions, weak-signal notes, framework drafts — are **not** substitutes for the notebook; they inform the daily page.
 
 [STRATEGY.md](../STRATEGY.md) is a **durable ledger** (watches, analogy list, operator log). **Promotion** into STRATEGY when an arc stabilizes is optional; it does **not** replace writing the notebook block.
 
@@ -23,7 +23,7 @@ flowchart LR
 
 ## Book promise
 
-- **Daily:** Append one block under the active month in `chapters/YYYY-MM/days.md` using the template below (or add `YYYY-MM-DD.md` per day if you prefer one file per day).
+- **Daily page:** Add **exactly one** top-level dated entry per calendar day — a **page** = one `## YYYY-MM-DD` section in `chapters/YYYY-MM/days.md` (newest at bottom), **or** optionally one file `chapters/YYYY-MM/pages/YYYY-MM-DD.md` if you split dailies into a `pages/` folder. Do **not** stack multiple dates in one day’s “page”; merge or choose the stronger analysis.
 - **Monthly:** Maintain `chapters/YYYY-MM/meta.md` — theme, open questions, optional **bets/watches** lines that may link to STRATEGY §II-A.
 - **Optional later:** A small claims list or JSONL if you want machine query; start in markdown only.
 
@@ -37,15 +37,18 @@ flowchart LR
 | PH | This notebook |
 |----|----------------|
 | `BOOK-ARCHITECTURE.md` | This file |
+| `operator-polyphony.md` | `chapters/YYYY-MM/meta.md` § **Polyphony / lens tension** — same markdown contract (scope label + Mercouris / Mearsheimer / Barnes + tension); **WORK-only**; update **both** when the month’s arc or PH book focus shifts (same session). |
 | `STATUS.md` | [STATUS.md](STATUS.md) |
 | Chapter = lecture unit | **Chapter = calendar month** (`chapters/YYYY-MM/`) |
-| `outline.md` / `draft.md` | `meta.md` (month) + `days.md` (daily append) |
+| `outline.md` / `draft.md` | `meta.md` (month) + **daily pages** (`days.md` sections or `pages/YYYY-MM-DD.md`) |
 | Prediction registry | Optional **Bets / watches** in `meta.md` or month-end box in `days.md` |
 | Corpus + adjudication | Links to briefs, `STRATEGY.md`, Islamabad paths — **WORK only** |
 
+**Maintenance:** When you move the active month in this notebook or change Predictive History queue / volume emphasis, update **`chapters/YYYY-MM/meta.md` § Polyphony** and **`research/external/work-jiang/operator-polyphony.md`** in the **same session** so LIB-0153 and LIB-0149 stay parallel. Do **not** put the polyphony overlay only in `work-jiang/STATUS.md` — that file is **generated** by `scripts/work_jiang/render_status_dashboard.py`.
+
 ## Daily entry template
 
-Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom).
+Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom), **or** create `chapters/YYYY-MM/pages/YYYY-MM-DD.md` with the same headings if using one file per day. One date = one page.
 
 ```markdown
 ## YYYY-MM-DD
@@ -74,9 +77,91 @@ Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom).
 
 ## Daily length and prose (operator target)
 
-- **Target ceiling:** **~2000 words** per dated block in `days.md` (all sections of that day combined: Signal through Bets). Use this as the working **maximum** for routine practice.
-- **If draft analysis exceeds ~2000 words:** **Compress** before committing — collapse duplicate points, move long quotation or raw detail to a linked brief/transcript/memo, keep the notebook entry to **synthesis, warrants, and links**.
+- **Daily page target:** **~1000 words** per dated page (all sections of that day combined: Signal through Bets) — **consolidated best analysis**, not a full dump of every source. Prefer judgment, warrants, and what changed; park raw quotes and long extracts in linked briefs or digests.
+- **Compress if over ~1200 words** before committing; **hard ceiling ~1500 words** for routine practice (if you hit it, you are still carrying too much raw material in-page).
 - **Register:** **Academic prose** — explicit theses, defined terms where needed, qualified claims when evidence is partial; avoid filler and conversational throat-clearing unless you are deliberately archiving tone in a linked artifact.
+
+## Condense-to-target mechanism (fit ~1000 words)
+
+**Goal:** A daily page of **~1000 words** (band **~900–1100**) that keeps **strategic** content and drops **bulk** — by **routing** long work elsewhere, then **tiers A–D** on what stays.
+
+**Two paths (pick one per session):**
+
+| Path | When to use | What you run |
+|------|-------------|----------------|
+| **Fast** | Draft is already a single spine (Signal → Judgment → Links); no DEMO blocks, no full lens essays in-page. | **Tiers A → D** only — table below. |
+| **Full** | Draft mixes **core day** with **DEMO phases**, **Recipe A/B lens walls**, **web snapshot tables**, or **multiple competing theses**. | **Summarize-and-condense** (steps 1–7) **first**, then **tiers A → D** on the skeleton. |
+
+**Failure modes:** **Full** on a clean draft wastes time; **Fast** on a bloated draft leaves **ARTIFACT** bulk in the page.
+
+---
+
+### Tiers A → D (mechanical pass; always in this order)
+
+**Do not** reorder: **A**/**B** are cheap; **D** rewrites Judgment and should run on lean text.
+
+| Tier | Move | What to do | Typical savings |
+|------|------|------------|-----------------|
+| **A — Outboard** | Verbatim bulk | Remove **block quotes**, long excerpts, pasted transcript lines; replace with **one** **Links** line (`…/digest-…md`, § anchor if useful). | High |
+| **A — Outboard** | Duplicate narrative | If **Signal** repeats **Judgment**, **cut overlap from Signal** (keep the sharper formulation — usually Judgment). | Medium |
+| **A — Outboard** | In-page lens / DEMO | Long Recipe-style blocks (Barnes/Mearsheimer essays), **DEMO Phase 1–5** bodies → `demo-runs/…`, digest, or formal doc; daily page = **Links** only. | High |
+| **B — Merge** | Same point twice | Collapse bullets/paragraphs that answer the **same** question; **one** clearest line. | Medium |
+| **B — Merge** | Multi-source agreement | Three wires, one fact → **one** warrant + **Links**. | Medium |
+| **C — Cut** | Throat-clearing | Drop “It’s worth noting…”, “To be clear…” unless they add a **new** qualification. | Low–medium |
+| **C — Cut** | Hedging stacks | One honest uncertainty line + optional **Links** to verify — not four hedges. | Low |
+| **D — Tighten in place** | Judgment bloat | Rewrite as **claim → because → so what**; drop examples that only repeat the claim. | Variable |
+
+**If you must cut past tier D:** Protect **Judgment** and **Open** first; shrink **Signal** to the minimum that **forces** Judgment; keep **Links** paths complete. Trim **Analogy / tension** and **Bets** before deleting core Judgment.
+
+**Word count:** Run `wc -w` on **today’s block only** (copy the `## YYYY-MM-DD` section to a scratch buffer), not on the whole month `days.md`.
+
+**One-sentence check:** After condensing, the day’s **operative thesis** fits **one sentence** (strategic read, not headline noise). If not, compress **Signal**, not Judgment’s core claim.
+
+**Agent (`strategy` pass):** Over **~1200 words**, run **A → D** — or **Full** algorithm if DEMO/lens bulk is present. **No new analysis** while condensing — only move, merge, cut, tighten.
+
+---
+
+### Summarize-and-condense algorithm (coherent daily page)
+
+**After** exploratory drafting or when the day **merges** notebook + lens + DEMO + web. **Output:** one `## YYYY-MM-DD` section, [daily template](#daily-entry-template) headings, long work **linked**.
+
+```mermaid
+flowchart TD
+  T[1 Tag chunks] --> R[2 Route ARTIFACT out]
+  R --> K[3 State K one sentence]
+  K --> S[4 Build skeleton]
+  S --> D5[5 Drop DUPLICATE]
+  D5 --> Tiers[6 Tiers A to D]
+  Tiers --> Stop{7 Words ok?}
+  Stop -->|over 1200| R2[More outboard or narrower SUPPORT]
+  R2 --> S
+  Stop -->|900 to 1100| Done[Commit]
+```
+
+| Step | Name | Action |
+|------|------|--------|
+| **1** | **Tag** | Per paragraph/bullet: **THESIS**, **SUPPORT** (wire fact or minimum analyst claim the day needs), **ARTIFACT** (DEMO, full Recipe lens blocks, quote walls, flashpoint **tables** longer than ~10 lines), **DUPLICATE**, **SCAFFOLD**. **ORPHAN** (interesting but serves no thesis yet) → **Open** or outboard. |
+| **2** | **Route ARTIFACT** | Persist bodies under stable paths (`demo-runs/`, digests, `us-iran-*-formal.md`). Daily page: **Links** lines only — **no** second full summary of the same artifact in-page. |
+| **3** | **State K** | **K** = one sentence. **K tests:** (a) Not headline-only — includes **so what** for strategy or copy. (b) Two claims conflict → **one K**; other → **Open** / **Analogy / tension**. (c) **No threshold today** is valid — **K** says so plainly. |
+| **4** | **Skeleton** | **Signal:** SUPPORT bullets that **force K** only. **Judgment:** **K** + shortest **because** + **so what** (framework / outreach / risk). **Links:** union + outboard. **Open / Bets:** live threads only. |
+| **5** | **Drop DUPLICATE** | Merge DUPLICATE (often Signal re-stating Judgment). |
+| **6** | **Tiers A → D** | Run the **Tiers A → D** table on the skeleton. |
+| **7** | **Stop rule** | Target **~1000**; if **> ~1200**, loop to **2** or **4** — **not** new research. If **< ~700** on a heavy day, check you did not outboard **K** itself. |
+
+**Bind test:** For each **Signal** bullet and **Judgment** sentence, ask: *How does this support or qualify **K**?* If it cannot, **Links** or **Open**.
+
+**Invariants:** **Verify** → **Open** (`verify: …`). Incompatible claims → **Analogy / tension**, not merge. **Tri-frame one-liners** in chat stay optional; **in-page lens essays** are **ARTIFACT** unless **K** explicitly states that the day’s deliverable *is* the lens pass.
+
+---
+
+### Condense checklist (operator / agent)
+
+- [ ] **Fast** vs **Full** chosen correctly?
+- [ ] **ARTIFACT** routed; daily page has **Links**, not duplicate bodies?
+- [ ] **K** passes (a)(b)(c)?
+- [ ] **Tiers A → D** in order?
+- [ ] Words in **900–1100** (or **Open** explains a heavy verify day)?
+- [ ] **Open** holds verifies; nothing load-bearing deleted to save words?
 
 ## Daily synthesis (briefs, transcripts, other work-strategy)
 
@@ -130,6 +215,8 @@ Synthesis **compresses and routes** sources into the notebook; it does **not** d
 - **`### Open`** is the explicit wire to the **next** day: unresolved questions, deferred analogy audits, “check wire on X.” The next day’s **`### Signal`** should **pick up** at least one Open line while it is still live, or **close** it (“Open from YYYY-MM-DD: resolved because …”).
 - **`### Links`** is the **back-pointer**: briefs, transcripts, frameworks, and optional anchors to earlier `days.md` blocks (“continues 2026-04-08 Judgment”) so threads stay traceable without rewriting history.
 
+**Dream (`dream`) — end-of-day production closeout:** The night-close ritual **initiates** accountable **production closeout** for that calendar day’s page (ensure `## YYYY-MM-DD` exists, condense or defer per [Condense-to-target](#condense-to-target-mechanism-fit-1000-words), align [STATUS.md](STATUS.md)). Daytime **`strategy`** still supplies judgment; **`dream`** closes the loop — see [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md) § *Strategy notebook*.
+
 **Month-level state**
 
 - **`meta.md`** holds slow-moving logic: **Theme**, **Open questions** spanning weeks, **Bets / watches** for month-end review, optional **Polyphony / lens tension** (see below). Touch `meta.md` when the **month’s story** shifts, not necessarily every day.
@@ -144,6 +231,7 @@ Wire **cognitive polyphony** at month scale without flattening voices:
   - **Barnes (optional):** liability, mechanism, who pays / who’s exposed — *what’s binding in budgets, law, and domestic price?*
 - **Tension line (one sentence):** Where the Mercouris and Mearsheimer readings **disagree by design** this month — leave unresolved unless a `strategy` pass **promotes** a settled watch to STRATEGY.md.
 - **Update cadence:** When the month’s arc shifts (ceasefire scope, Hormuz metrics, Islamabad round) or after a **tri-frame** / heavy lens week — not necessarily every day.
+- **Parallel PH overlay:** Keep in sync with [`research/external/work-jiang/operator-polyphony.md`](../../../../research/external/work-jiang/operator-polyphony.md) (same section structure); see **Parallel to Predictive History** table above.
 - **[STATUS.md](STATUS.md):** operator-maintained pointer to the **last daily entry** for quick re-entry.
 
 **Month boundaries**
