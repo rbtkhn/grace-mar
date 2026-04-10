@@ -35,6 +35,8 @@ Optional: set **`GITHUB_TOKEN`** (or `GH_TOKEN`) for higher API rate limits; pub
 
 Optional automation: same command on a **cron** or end-of-day **operator** ritual—there is no server-side hook from GitHub into grace-mar by default.
 
+**`dream` ritual:** End-of-day **`dream`** is the canonical time to **generate today’s** journal file if missing — run `xavier_journal_ob1_digest.py --write` with your chosen `TZ` (see [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md) § *Xavier journal*). This does not run inside `auto_dream.py`; the agent performs it when executing the full dream skill. If the day file already exists, the script refuses overwrite unless `--force`.
+
 **Upstream:** Open Brain docs and recipes live in the OB1 ecosystem; this journal is **her** trajectory in grace-mar, not a fork of upstream text.
 
 **vs [work-xavier-history.md](../work-xavier-history.md):** History = **append-only milestones** (what shipped, paths, same-day `###` blocks). Journal = **optional** day file when reflection helps — do **not** duplicate full milestone lists in the journal; one line “see history 2026-04-08” is enough.

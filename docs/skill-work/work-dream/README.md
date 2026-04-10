@@ -12,6 +12,8 @@
 |------|-------------|
 | **Consolidation architecture** | Defines the shape of end-of-day maintenance: memory normalization, integrity, governance, contradiction digest, artifact drafts. |
 | **Night-to-morning handoff** | Documents the `last-dream.json` data contract that bridges dream output to coffee Step 1. |
+| **Strategy notebook (LIB-0153)** | Dream **initiates end-of-day production closeout** for the calendar day’s [`strategy-notebook`](../work-strategy/strategy-notebook/) page — accountable check that `days.md` has today’s block, condense/defer per architecture, `STATUS.md` aligned. Daytime **`strategy`** still supplies judgment; dream closes the loop. See [.cursor/skills/dream/SKILL.md](../../.cursor/skills/dream/SKILL.md) § *Strategy notebook*. |
+| **Xavier journal (LIB-0154)** | Dream **initiates generation** of the calendar day’s [`xavier-journal`](../work-xavier/xavier-journal/) file via [`xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) `--write` (GitHub network; optional token). Not her Record; WORK lane. See dream SKILL § *Xavier journal*. |
 | **Boundary surface** | Explains what belongs in WORK-only docs/history versus what must escalate to `RECURSION-GATE`. |
 | **Choreography with coffee** | Holds the rationale for the dream→coffee pairing: sequence, timing, data flow. |
 
@@ -65,6 +67,12 @@ auto_dream.py
   └─ _write_last_dream_handoff()   writes last-dream.json
 operator_daily_warmup.py           reads coffee.json for collapsed Last dream display
 audit_context_tax.py               approximate ritual paste line/char counts
+
+Strategy notebook (work-strategy) — not a subprocess inside auto_dream.py; agent steps
+from dream SKILL § Strategy notebook (read days.md / STATUS, stub or condense note).
+
+Xavier journal (work-xavier) — not a subprocess inside auto_dream.py; agent runs
+`xavier_journal_ob1_digest.py --write` per dream SKILL § Xavier journal (network).
 ```
 
 **Bundle:** `operator_end_of_day.py` runs `auto_dream.py` then `operator_handoff_check.py` — night-side counterpart to `operator_reentry_stack.py`.

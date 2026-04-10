@@ -1,7 +1,7 @@
 ---
 name: dream
 preferred_activation: dream
-description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Before auto_dream.py runs, synthesize the previous eight events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
+description: "Grace-Mar night-close maintenance ritual. Primary trigger: dream. Dream is the end-of-day consolidation pass: a bounded maintenance ritual that settles continuity, checks integrity and governance, refreshes contradiction visibility, and prepares governed follow-up without merge authority. Agent steps also cover strategy-notebook closeout and Xavier journal day-file generation (see skill body). Before auto_dream.py runs, synthesize the previous eight events from work-cadence-events.md into **Recent rhythm** prose (no internal ops jargon or timestamps in chat). Usually one dream session per day."
 ---
 
 # Dream
@@ -119,6 +119,7 @@ Return a short night-close brief with:
 - **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
 - **capability shift** (model category): sources checked / total, REVIEW alerts, monitor alerts — or "no alerts" if quiet
 - one sentence on what tomorrow inherits from this run
+- **Strategy notebook** / **Xavier journal:** one line each when those steps ran (see §§ above)
 
 If nothing important changed, say so plainly. A quiet run is success.
 
@@ -199,6 +200,49 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 - A quiet run is normal; do not manufacture significance.
 - If **integrity** fails with **stale derived export** (not contradictions), refresh exports: `bash scripts/regen_grace_mar_derived.sh` from repo root, then `python3 scripts/validate-integrity.py --user grace-mar --json` — see [`docs/skill-work/work-cadence/README.md`](../../../docs/skill-work/work-cadence/README.md) § *When integrity reports stale derived exports*.
 
+## Strategy notebook (LIB-0153) — daily page production
+
+**Yes, it makes sense** if **dream** is the **end-of-day accountability point** that **initiates production closeout** for the **calendar day’s** strategy-notebook page — not a second full `strategy` analysis pass, and not a substitute for daytime judgment.
+
+**What “initiates production” means here**
+
+- **During the day:** `coffee` / **`strategy`** (and linked briefs) **fill** [`chapters/YYYY-MM/days.md`](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/YYYY-MM/days.md) with Signal / Judgment / Links (see [`.cursor/skills/skill-strategy/SKILL.md`](../skill-strategy/SKILL.md)).
+- **At `dream`:** The ritual **initiates the end-of-day production step** for that same calendar date: ensure **one** `## YYYY-MM-DD` page exists for **today**, meets [length / condense](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) targets or carries an explicit **defer** (e.g. **Open** line: “condense + outboard DEMO next session”), and align [`strategy-notebook/STATUS.md`](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) **Last daily entry** when the page state changes.
+
+**Agent behavior when `dream` is invoked**
+
+1. After **Step 0** (Recent rhythm), **before or after** Step 1 (`auto_dream.py`), read the active month `days.md` and **STATUS.md**.
+2. If **today’s** dated block is **missing** — add a **minimal** stub from the architecture [daily template](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#daily-entry-template) (Signal + Judgment one line each + Links) *or* report a **notebook gap** in the night-close brief for the operator to fill tomorrow morning (operator preference).
+3. If the block is **over** the word budget — note **condense required** in the night-close brief; run [condense-to-target / Full path](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#condense-to-target-mechanism-fit-1000-words) **only** if the operator asks in the same `dream` message to **ship** the edit (otherwise defer).
+4. **Do not** add long lens/DEMO bodies during dream by default; **outboard** heavy material per architecture.
+
+**Boundaries:** **WORK only** — not Record, not `self.md` / EVIDENCE / gate merge. **No** autonomous promotion to [`STRATEGY.md`](../../../docs/skill-work/work-strategy/STRATEGY.md) unless the operator explicitly asks (same rule as `skill-strategy`).
+
+**Return brief:** Add one line under the maintenance summary, e.g. **Strategy notebook:** `ok` / `stub added` / `condense deferred` / `gap noted` — date `YYYY-MM-DD`.
+
+## Xavier journal (LIB-0154) — daily page generation
+
+**Purpose:** At **`dream`**, **generate** (or confirm) the **calendar day’s** Xavier journal file under [`docs/skill-work/work-xavier/xavier-journal/`](../../../docs/skill-work/work-xavier/xavier-journal/) — same end-of-day **production** instinct as the strategy-notebook closeout, different artifact.
+
+**Mechanism:** [`scripts/xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) builds `YYYY-MM-DD-day-NN.md` from **Cici** (OB1) GitHub commits for the local calendar day, plus narrative stubs (**Focus**, **What I did today**, …). See [xavier-journal README](../../../docs/skill-work/work-xavier/xavier-journal/README.md).
+
+**Agent behavior when `dream` is invoked**
+
+1. After **Step 0**, **before or after** Step 1 (`auto_dream.py`), run a **network** step (operator machine or agent with `full_network`):
+   - Prefer the operator’s **local day** boundary, e.g. `TZ=America/New_York` (or their `TZ`) — match [README](../../../docs/skill-work/work-xavier/xavier-journal/README.md) examples.
+   - **Write** today’s file if missing:
+     ```bash
+     TZ=America/New_York python3 scripts/xavier_journal_ob1_digest.py --write
+     ```
+     (Use `UTC` if that is the agreed journal day boundary.)
+   - Optional: `GITHUB_TOKEN` / `GH_TOKEN` for API rate limits — public repo works for light use.
+2. If the script **refuses to overwrite** (file already exists), treat as **ok — page already present**; do not `--force` unless the operator explicitly asks in the same message.
+3. If **GitHub API** or **network** fails, record **Xavier journal:** `skipped (API/network)` in the night-close brief — do **not** fail the whole `dream` maintenance story on this alone.
+
+**Boundaries:** **WORK / operator coaching** — not Xavier’s **Record** in her repo, not grace-mar **SELF** / gate merge. **No secrets** in prose (script skeleton is safe; operator fills narrative).
+
+**Return brief:** Add **Xavier journal:** `written <path>` / `already present` / `skipped (API/network)` — date `YYYY-MM-DD`.
+
 ## Relation to coffee
 
 `coffee` and `dream` form a biological-cognitive pair.
@@ -224,7 +268,7 @@ Usually one `dream` session per day is normal.
 | **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–G menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
 | **During day** | `thanks` (micro-pause) | Synthesis of prior two log events (recent rhythm) + optional park + one telemetry line — no maintenance stack |
-| **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest |
+| **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; **strategy-notebook** closeout + **Xavier journal** day file generation (see §§ Strategy notebook, Xavier journal) |
 | **Session close** | `bridge` | Seal repos (commit/push), synthesize transfer prompt for next session |
 
 **Dream's role is maintenance, not session closure.** Dream settles continuity and writes the handoff artifact. It does not commit, push, or produce a transfer prompt. If the operator is also closing the Cursor session, `bridge` follows dream.
