@@ -115,6 +115,7 @@ Use only:
 
 - **watch**
 - **escalating**
+- **decision-point** — structured options open; use [decision-point-template.md](decision-point-template.md)
 - **retired**
 - **promoted**
 
@@ -128,6 +129,8 @@ Promote into `STRATEGY.md` when one or more of the following are true:
 - it survives multiple analogy audits without collapsing
 - it changes strategic focus, framing, or operator priority
 - it creates a new recurring lens, caution, or watch item for the lane
+
+**When to open a decision point instead of promoting directly:** If the watch is escalating and there are multiple plausible responses with real tradeoffs, open a decision point (`decision-point` status) using [decision-point-template.md](decision-point-template.md) before committing to a recommendation. If the watch has a clear outcome and no branching options, promote directly.
 
 Promotion targets:
 

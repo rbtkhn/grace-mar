@@ -32,6 +32,7 @@
 | **[weak-signals.md](weak-signals.md)** | Weak-signal discipline: **§1f** block, promotion to STRATEGY **§II-A / §III-A / §IV**, analogy audit before overclaiming (WORK only). |
 | **[weak-signal-template.md](weak-signal-template.md)** | Markdown stub for **§1f** in the daily brief. |
 | **[analogy-audit-template.md](analogy-audit-template.md)** | Short form when a historical parallel is proposed (current-events + brief). |
+| **[decision-point-template.md](decision-point-template.md)** | Structured options when an escalating watch needs a recommendation before promotion. Three-minds perspectives default. |
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → **2.5 analogy audit** (when parallel proposed) → Council → Draft → Triangulation → Synthesis (WORK only). |
 | **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / **§II-A active watches** / SCHOLAR / **§III-A analogy watchlist** / **§IV operator strategy log** (additive notes in-file; not CMC `MEM–*` shards); not Record. |
 | **[strategy-notebook/](strategy-notebook/README.md)** | **Daily operator journal** for strategy judgment — PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md). Not [work-strategy-history](work-strategy-history.md). WORK only. |

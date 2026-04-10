@@ -76,6 +76,8 @@
 - **Primary implication:** why the lane should care
 - **Contradiction / caution note:** what may invalidate the watch
 
+**Decision points:** When a watch reaches `escalating` and requires structured options before a durable recommendation, set its status to `decision-point` and open a decision point using [decision-point-template.md](decision-point-template.md). The decision point produces a recommendation; the watch then moves to `promoted` or `retired` based on the outcome.
+
 **Entries**
 
 - **Watch:** Iran war → energy chokepoint cascade
