@@ -8,28 +8,30 @@ Use this file during **`coffee`** (work-start or signing-off) to aggregate `work
 
 ## Daily sync snapshot
 
-Date: `YYYY-MM-DD`
+Date: **2026-04-10**
+
+- **stale sync state:** `no` — both mirrors have a dated row in `SYNC-LOG.md` for this date (see [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md)).
 
 ### 1) work-dev mirror
-- status: `no relevant updates` / `relevant updates found` / `blocked - needs operator review`
-- score (impact + urgency + xavier-readiness): `_/9`
+- status: `no relevant updates`
+- score (impact + urgency + xavier-readiness): `2/9`
 - proposed updates (max 5):
-  - 
+  - _(none this scan)_
 - action today:
-  - 
+  - Append sync-log row; optional deeper diff deferred until next relevant grace-mar work-dev change.
 
 ### 2) work-politics mirror
-- status: `no relevant updates` / `relevant updates found` / `blocked - needs operator review`
-- score (impact + urgency + xavier-readiness): `_/9`
+- status: `no relevant updates`
+- score (impact + urgency + xavier-readiness): `2/9`
 - proposed updates (max 5):
-  - 
+  - _(none this scan)_
 - action today:
-  - 
+  - Append sync-log row; optional deeper diff deferred until next relevant grace-mar work-politics change.
 
 ### 3) Combined next action
-- top sync task:
-- owner:
-- done by:
+- top sync task: Keep **≤3-day** rhythm on both `SYNC-LOG.md` files; re-run relevance scan if either log goes stale.
+- owner: operator
+- done by: next **`coffee`** or end-of-day touch
 
 ---
 
@@ -58,9 +60,9 @@ and run a forced relevance scan before any other optimization tasks.
 
 ## Daily Ops handoff
 
-- ops-card status: `not started` / `drafted` / `finalized`
-- selected top sync action:
-- selected top execution action:
-- selected top gate action:
+- ops-card status: `drafted`
+- selected top sync action: Mirror logs + snapshot updated (2026-04-10).
+- selected top execution action: _(see card)_
+- selected top gate action: _(none — grace-mar gate unchanged this pass)_
 - card path: [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md)
 

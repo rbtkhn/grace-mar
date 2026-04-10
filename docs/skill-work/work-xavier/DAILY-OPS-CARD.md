@@ -6,12 +6,12 @@ Keep it short, concrete, and runnable.
 
 ---
 
-Date: `YYYY-MM-DD`
+Date: **2026-04-10**
 
 ## 1) Top sync action
-- territory:
-- action:
-- done when:
+- territory: work-xavier — work-dev + work-politics **mirrors**
+- action: Dated **SYNC-LOG** rows + **SYNC-DAILY** snapshot; staleness guardrail **clear** for this date.
+- done when: Both logs show 2026-04-10 and SYNC-DAILY `stale sync state: no` (met).
 
 ## 2) Top execution action
 - lane:
