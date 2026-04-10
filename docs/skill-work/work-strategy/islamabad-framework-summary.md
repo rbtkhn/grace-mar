@@ -2,7 +2,7 @@
 
 *April 2026*
 
-The Islamabad Framework is a roadmap toward a negotiated settlement of the conflict between the United States and Iran — not a treaty, but a sequenced path converting mutual demands into reciprocal commitments grounded in the United Nations Charter, the Treaty on the Non-Proliferation of Nuclear Weapons, the United Nations Convention on the Law of the Sea, and the Geneva Conventions.
+The Islamabad Framework is a roadmap toward a negotiated settlement of the conflict between the United States and Iran — not a treaty, but a sequenced path converting mutual demands into reciprocal commitments grounded in the United Nations Charter, the Treaty on the Non-Proliferation of Nuclear Weapons, the United Nations Convention on the Law of the Sea, and the Geneva Conventions. **Third audiences:** pastoral and Holy See appeals may shape legitimacy contests abroad; they do not replace the framework’s terms or make the Vatican a party (see full document preamble).
 
 **Ceasefire and de-escalation.** All parties cease hostilities across Iran, Lebanon, and directly connected theaters, retaining only the right of genuine self-defense. Attacks on civilians and civilian infrastructure cease immediately, consistent with the Geneva Conventions. De-escalation measures — force repositioning, suspension of kinetic, economic, and covert provocations — are monitored and reported to legislative bodies through agreed mechanisms.
 
