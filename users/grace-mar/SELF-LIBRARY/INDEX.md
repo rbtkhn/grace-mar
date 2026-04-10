@@ -4,6 +4,8 @@
 
 **String convention:** In operator chat, **`predictive-history`** (hyphenated) → **LIB-0149** — [`predictive-history/`](predictive-history/) → `work-jiang/`. For the **YouTube caption bundle** only, say **LIB-0151** or **`youtube-channels/predictive-history`**. **`strategy-notebook`** (hyphenated) → **LIB-0153** — [`strategy-notebook/`](strategy-notebook/) → `docs/skill-work/work-strategy/strategy-notebook/` (not **`STRATEGY.md`**). See table below.
 
+**Tricameral overlay (parallel, WORK):** [LIB-0149](predictive-history/) [`operator-polyphony.md`](../../../research/external/work-jiang/operator-polyphony.md) ↔ [LIB-0153](strategy-notebook/) [`chapters/YYYY-MM/meta.md`](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/meta.md) § Polyphony — keep both in sync when the month or PH arc moves ([`STRATEGY-NOTEBOOK-ARCHITECTURE.md`](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) · Parallel to Predictive History).
+
 **Operator analytical books** (grace-mar–authored corpora for synthesis) are grouped in [`self-library.md`](../self-library.md) under **Operator analytical books**: [LIB-0149](../self-library.md#operator-analytical-books) Predictive History, [LIB-0153](../self-library.md#operator-analytical-books) strategy notebook, [LIB-0154](../self-library.md#operator-analytical-books) Xavier journal, [LIB-0155](../self-library.md#operator-analytical-books) dev journal. Channel transcript books ([LIB-0151](../self-library.md), [LIB-0152](../self-library.md)) stay under the main **Entries** list.
 
 | Surface | Path | Role |

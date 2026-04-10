@@ -10,6 +10,7 @@ Operator-curated **source texts** for the Jiang book/site project (not Voice kno
 
 | Kind | Path |
 |------|------|
+| **Operator polyphony overlay (tricameral — manual)** | [operator-polyphony.md](operator-polyphony.md) — parallel to [strategy-notebook `chapters/YYYY-MM/meta.md` § Polyphony](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/meta.md) (same contract: Mercouris / Mearsheimer / Barnes + tension; **WORK-only**). **[STATUS.md](STATUS.md) is generated** (`render_status_dashboard.py`) — do **not** place this overlay only there. |
 | **Reader site (static)** | [site/](site/) — Jiang-first gateway for students / YouTube / Substack; [site/README.md](site/README.md) (serve from `work-jiang/` parent) |
 | **Student / RAG export (snapshot gate)** | [STUDENT-EXPORT.md](STUDENT-EXPORT.md) — checklist before deriving a separate student bundle from this corpus |
 | **Authorized sources list (operator)** | [work-jiang-sources.md](../../../docs/skill-work/work-jiang/work-jiang-sources.md) — YouTube / X / Substack surfaces for the lane; [work-modules principle](../../../docs/skill-work/work-modules-sources-principle.md) |
