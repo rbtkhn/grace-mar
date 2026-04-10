@@ -9,3 +9,5 @@ Short **grace-mar stubs** for LEARN MODE. Canonical cognitive templates live in 
 | [mind-barnes.md](mind-barnes.md) | Material bases, liabilities, fiscal/resource constraints | `CIV–MIND–BARNES` |
 
 Protocol: [LEARN_MODE_RULES.md](../LEARN_MODE_RULES.md).
+
+**External reviewers:** Brainstorm brief (minds × `skill-strategy`, granular by default) — [REVIEWERS-PROMPT-minds-and-skill-strategy.md](REVIEWERS-PROMPT-minds-and-skill-strategy.md).
