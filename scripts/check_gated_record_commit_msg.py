@@ -21,43 +21,11 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+_SCRIPTS = Path(__file__).resolve().parent
+if str(_SCRIPTS) not in sys.path:
+    sys.path.insert(0, str(_SCRIPTS))
 
-
-def _is_gated(rel: str) -> bool:
-    rel = rel.replace("\\", "/").strip()
-    if not rel:
-        return False
-    if rel == "bot/prompt.py" or rel == "grace-mar-llm.txt":
-        return True
-    parts = rel.split("/")
-    if len(parts) < 3 or parts[0] != "users":
-        return False
-    name = parts[-1]
-    if name in (
-        "self.md",
-        "self-evidence.md",
-        "self-archive.md",
-        "self-skills.md",
-        "skills.md",
-        "self-library.md",
-        "merge-receipts.jsonl",
-    ):
-        return True
-    if name.endswith("-llm.txt"):
-        return True
-    return False
-
-
-def _allowed_message(msg: str) -> bool:
-    if "[gated-merge]" in msg:
-        return True
-    if "process_approved_candidates" in msg:
-        return True
-    if "MERGE-RECEIPT:" in msg:
-        return True
-    if "SNAPSHOT:" in msg:
-        return True
-    return False
+from gated_record_rules import allowed_gated_commit_message, is_gated_record_path
 
 
 def main() -> int:
@@ -69,7 +37,7 @@ def main() -> int:
     if not msg_path.is_file():
         return 0
     msg = msg_path.read_text(encoding="utf-8", errors="replace")
-    if _allowed_message(msg):
+    if allowed_gated_commit_message(msg):
         return 0
 
     r = subprocess.run(
@@ -80,7 +48,7 @@ def main() -> int:
     )
     if r.returncode != 0:
         return 0
-    gated = [f for f in r.stdout.splitlines() if _is_gated(f)]
+    gated = [f for f in r.stdout.splitlines() if is_gated_record_path(f)]
     if not gated:
         return 0
 

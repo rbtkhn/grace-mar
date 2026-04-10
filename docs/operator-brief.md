@@ -135,7 +135,7 @@ SELF-ARCHIVE is **not** written in real time. It is updated **only when you merg
    ```
 4. After the merge, **SELF-ARCHIVE** is appended with the approved exchange(s); SELF, EVIDENCE, and the bot prompt are updated too.
 
-**Gated commits (optional hardening):** If you use pre-commit with `pre-commit install --hook-type commit-msg`, any commit that stages SELF, EVIDENCE, prompt, PRP, or SELF-ARCHIVE must include **`[gated-merge]`** in the message (the merge script’s `--push` does this). Manual emergency edits: `ALLOW_GATED_RECORD_EDIT=1`. See AGENTS.md File Update Protocol.
+**Gated commits (optional hardening):** If you use pre-commit with `pre-commit install --hook-type commit-msg`, any commit that stages SELF, EVIDENCE, prompt, PRP, or SELF-ARCHIVE must include **`[gated-merge]`** in the message (the merge script’s `--push` does this). **GitHub Actions** runs the same rule on pull requests (`governance.yml` job `gated-record-pr`). Manual emergency edits: `ALLOW_GATED_RECORD_EDIT=1` locally; optional repo secret of the same name bypasses the CI check. See AGENTS.md File Update Protocol.
 
 Recommended rhythm: do this at least weekly (e.g. [OPERATOR-WEEKLY-REVIEW](operator-weekly-review.md) step 2) so the Record and SELF-ARCHIVE stay in sync with conversations.
 

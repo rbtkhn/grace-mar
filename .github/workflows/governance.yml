@@ -23,3 +23,23 @@ jobs:
         run: python scripts/validate-integrity.py --json
       - name: Template sync contract check
         run: python scripts/validate_template_sync_contract.py --json
+
+  # PR-only: each commit touching gated Record paths must carry [gated-merge] / pipeline
+  # tokens (mirrors scripts/check_gated_record_commit_msg.py). Requires full history.
+  gated-record-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Gated Record commit messages (PR range)
+        env:
+          ALLOW_GATED_RECORD_EDIT: ${{ secrets.ALLOW_GATED_RECORD_EDIT }}
+        run: |
+          python scripts/check_gated_record_pr.py \
+            --base "${{ github.event.pull_request.base.sha }}" \
+            --head "${{ github.event.pull_request.head.sha }}"

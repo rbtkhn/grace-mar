@@ -200,6 +200,11 @@ Last updated: 2026-03-28
 - **`.pre-commit-config.yaml`** — `pre-commit install --hook-type commit-msg`
 - **`process_approved_candidates --push`** — commit message includes `[gated-merge]`.
 
+### Gated Record PR check (CI)
+- **`scripts/gated_record_rules.py`** — shared gated path list + allowed message tokens (used by commit-msg hook and PR checker).
+- **`scripts/check_gated_record_pr.py`** — on **pull requests**, every commit in `base..head` that touches gated paths must include an allowed token in **that commit’s** message (same tokens as the hook). Catches GitHub-only edits that skip local pre-commit.
+- **`.github/workflows/governance.yml`** — job **`gated-record-pr`** (checkout `fetch-depth: 0`). Optional repository secret **`ALLOW_GATED_RECORD_EDIT`** set to `1` bypasses the job (emergency only; prefer fixing commit messages).
+
 ### Harness convergence / §11.11 (2026-03-12)
 - **design-notes §11.11** — Decompose / parallelize / verify / iterate; Grace-Mar = gate + pipeline.
 - **implementable-insights §14** — Summary table + actions.
