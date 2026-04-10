@@ -1,0 +1,36 @@
+---
+description: WORK-xavier — coaching lane, OB1/Cici, leakage boundaries
+globs: docs/skill-work/work-xavier/**
+alwaysApply: false
+---
+
+# work-xavier lane
+
+Applies when editing or drafting under `docs/skill-work/work-xavier/`.
+
+---
+
+## What this lane is
+
+- **WORK / operator coaching** for Xavier’s external work (OB1, BrewMind, instance repos) — **not** her **Record**, not companion **Voice** knowledge unless gated elsewhere.
+- **Grace-mar** hosts **advisor artifacts** (runbooks, journal book, progress log, evidence). Her **canonical instance** docs on GitHub live in **[Cici](https://github.com/Xavier-x01/Cici)** (OB1 instance repo); upstream OB1 is a separate concept.
+
+---
+
+## Boundaries
+
+- **Retrieval ≠ merge:** Open Brain–style **capture, embeddings, RAG, MCP** do **not** authorize writing **identity truth** into `users/xavier/` or grace-mar **SELF / EVIDENCE / `bot/prompt.py`** without **RECURSION-GATE → companion approval →** `process_approved_candidates.py`. See [LEAKAGE-CHECKLIST.md](../../docs/skill-work/work-xavier/LEAKAGE-CHECKLIST.md) and [companion-self-for-open-brain-users.md](../../docs/skill-work/work-companion-self/companion-self-for-open-brain-users.md).
+- **Coaching vs surveillance:** [xavier-progress-log.md](../../docs/skill-work/work-xavier/xavier-progress-log.md) and [evidence/](../../docs/skill-work/work-xavier/evidence/) are for **actionable, respectful** operator notes — not performance theater.
+
+---
+
+## Artifacts
+
+- **xavier-journal:** Short daily reflection; optional Git commit spine via `scripts/xavier_journal_ob1_digest.py` (see [xavier-journal/README.md](../../docs/skill-work/work-xavier/xavier-journal/README.md)). **No secrets** in journal text (API keys, credentials in URLs).
+- **Orientation:** [INDEX.md](../../docs/skill-work/work-xavier/INDEX.md), [ALIGNMENT.md](../../docs/skill-work/work-xavier/ALIGNMENT.md).
+
+---
+
+## Lanes
+
+- Default to **Think** for pure coaching discussion; **EXECUTE** / **PLAN** / **DOCSYNC** per [operator-agent-lanes.md](../../docs/operator-agent-lanes.md) when editing intent is ambiguous.

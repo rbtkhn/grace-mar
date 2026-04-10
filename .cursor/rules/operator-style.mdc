@@ -70,7 +70,9 @@ The operator's mind jumps: forward and back, in and out, topic to topic. They li
 
 ## WORK modules — multiple choice (assistant behavior)
 
-When the operator is clearly working in any **WORK** lane — **work-strategy**, **work-politics**, **work-jiang**, **work-dev** (`docs/skill-work/**`, `research/external/work-jiang/` operator scope, `users/*/work-*.md`, related scripts) — end **most substantive turns** with a short **multiple-choice block**: **3–5 labeled options** (e.g. **A–E**), each a **real fork** (depth vs breadth, which artifact, next command, cross-lane handoff), not filler.
+When the operator is clearly working in any **WORK** lane — **work-strategy**, **work-politics**, **work-jiang**, **work-dev**, **work-xavier** (`docs/skill-work/**`, `research/external/work-jiang/` operator scope, `users/*/work-*.md`, related scripts) — end **most substantive turns** with a short **multiple-choice block**: **3–5 labeled options** (e.g. **A–E**), each a **real fork** (depth vs breadth, which artifact, next command, cross-lane handoff), not filler.
+
+- **work-xavier:** When editing `docs/skill-work/work-xavier/`, follow **work-xavier-lane** (`.cursor/rules/work-xavier-lane.mdc`) — **Cici** as canonical OB1 instance repo pointer, Open Brain **leakage** boundaries ([LEAKAGE-CHECKLIST](../../docs/skill-work/work-xavier/LEAKAGE-CHECKLIST.md)), not Xavier’s Record.
 
 **Rationale:** Menus **reduce operator cognitive load** by shifting **path enumeration** (expensive) to the assistant; the operator mainly **selects** among prefetched branches (**A+C**-style combinations welcome). They also use the assistant’s **parallel cognition** — sketching **several plausible next futures** in one turn with different costs and commitments — so judgment can precede without the operator serializing the whole decision tree.
 
