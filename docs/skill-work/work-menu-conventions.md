@@ -37,7 +37,7 @@ Optional short tags on each line, **clearly heuristic** (not estimates of wall-c
 ## 4. Combo and hybrid options
 
 - The operator may answer **`A+C`** (or similar); the assistant executes both compatible branches.
-- When two options combine naturally, you may add one line: **Combo:** `B + half of D` — *merge preview in prose* (still one human pick).
+- When two options combine naturally, you may add one line: **Combo:** `B + half of D` — *brief label explaining the merge* (still one human pick; do not develop the combo content until selected).
 
 ---
 

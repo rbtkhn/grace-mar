@@ -23,3 +23,14 @@ Minimal JSON:
 ```
 
 Fields mirror the OpenClaw stage payload / gate candidate body where applicable.
+
+## Automation in-repo (vs remaining gap)
+
+**Implemented today**
+
+- Validator: [`scripts/work_dev/validate_handback_analysis.py`](../../../scripts/work_dev/validate_handback_analysis.py) — checks **embedded** `CONSTITUTION_ADVISORY: status = …` against `constitution_check_status`, and that `advisory_flagged` implies an advisory line in `content`.
+- Tests: [`tests/test_validate_handback_analysis.py`](../../../tests/test_validate_handback_analysis.py).
+
+**Still open (BUILD-AI-GAP-006 “partial”)**
+
+- No automated diff between **free-text risk / approval narrative** and **staged candidate classification or summary** (e.g. “warns high risk” vs “staged as low risk”). Manual review still uses **§ Before merge review** items 3–4 above; a broader CI gate would need explicit labels or a second structured field to compare against narrative.
