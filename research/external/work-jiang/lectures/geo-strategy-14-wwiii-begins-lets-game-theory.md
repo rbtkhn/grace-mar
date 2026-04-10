@@ -13,7 +13,7 @@
 
 ## At a glance
 
-- TBD after full analysis (CIV-MEM / PSY-HIST pass).
+- **Analysis memo:** [N4cs-8mrP_s-geo-strategy-14-analysis.md](../analysis/N4cs-8mrP_s-geo-strategy-14-analysis.md) — game-theoretic three-player case (Iran / Israel / Trump–US), escalation-dominance critique, eschatology handoff to #15.
 
 ---
 

@@ -11,17 +11,17 @@
 - **Great Books series lectures (curated files):** 9
 - **Interviews series lectures (curated files):** 13
 - **Substack essays (curated files under substack/essays):** 33
-- **Analysis memos:** 91
-- **Missing analysis:** 92 (geo-14, geo-15, geo-16, geo-17, geo-18, geo-19, geo-20, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-21, civ-22, civ-23, civ-24, civ-25, civ-26, civ-27, civ-28, civ-29, civ-30, civ-31, civ-32, civ-33, civ-34, civ-35, civ-36, civ-37, civ-38, civ-39, civ-40, civ-41, civ-42, civ-43, civ-44, civ-45, civ-46, civ-47, civ-48, civ-49, civ-50, civ-51, civ-52, civ-53, civ-54, civ-55, civ-56, civ-57, civ-58, civ-59, civ-60, sh-02, sh-03, sh-04, sh-05, sh-06, sh-07, sh-08, sh-09, sh-10, sh-11, sh-12, sh-13, sh-14, sh-15, sh-16, sh-17, sh-18, sh-19, sh-20, sh-21, sh-22, sh-23, sh-24, sh-25, sh-26, sh-27, sh-28)
+- **Analysis memos:** 92
+- **Missing analysis:** 91 (geo-15, geo-16, geo-17, geo-18, geo-19, geo-20, civ-02, civ-03, civ-04, civ-05, civ-06, civ-07, civ-08, civ-09, civ-10, civ-11, civ-12, civ-13, civ-14, civ-15, civ-16, civ-17, civ-18, civ-19, civ-21, civ-22, civ-23, civ-24, civ-25, civ-26, civ-27, civ-28, civ-29, civ-30, civ-31, civ-32, civ-33, civ-34, civ-35, civ-36, civ-37, civ-38, civ-39, civ-40, civ-41, civ-42, civ-43, civ-44, civ-45, civ-46, civ-47, civ-48, civ-49, civ-50, civ-51, civ-52, civ-53, civ-54, civ-55, civ-56, civ-57, civ-58, civ-59, civ-60, sh-02, sh-03, sh-04, sh-05, sh-06, sh-07, sh-08, sh-09, sh-10, sh-11, sh-12, sh-13, sh-14, sh-15, sh-16, sh-17, sh-18, sh-19, sh-20, sh-21, sh-22, sh-23, sh-24, sh-25, sh-26, sh-27, sh-28)
 
 ## Book architecture
 
 - **Project status:** outline_in_progress
-- **Chapters defined:** 12
-- **Chapters in queue:** 12 (from book-architecture.yaml)
-- **Chapters research-ready or ready for outline:** 12
-- **Chapters with blockers listed:** 1
-- **Evidence packs present:** 12 / 12 chapters
+- **Chapters defined:** 20
+- **Chapters in queue:** 20 (from book-architecture.yaml)
+- **Chapters research-ready or ready for outline:** 13
+- **Chapters with blockers listed:** 8
+- **Evidence packs present:** 20 / 20 chapters
 
 ### Volume II (Civilization) — `volume_2_civilization`
 
@@ -55,9 +55,9 @@
 
 ## Registries
 
-- **Predictions (raw jsonl):** 40
-- **Predictions linked (metadata):** 40
-- **Unresolved / pending predictions (heuristic):** 36
+- **Predictions (raw jsonl):** 64
+- **Predictions linked (metadata):** 64
+- **Unresolved / pending predictions (heuristic):** 60
 - **Divergences (raw jsonl):** 43
 - **Divergences linked (metadata):** 43
 - **Influence snapshots:** 12

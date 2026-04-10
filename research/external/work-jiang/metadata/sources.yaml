@@ -200,14 +200,14 @@ sources:
   canonical_url: https://www.youtube.com/watch?v=N4cs-8mrP_s
   publication_date: 2025-06-22
   lecture_path: lectures/geo-strategy-14-wwiii-begins-lets-game-theory.md
-  analysis_path: null
+  analysis_path: analysis/N4cs-8mrP_s-geo-strategy-14-analysis.md
   series: geo-strategy
   episode: 14
   themes: []
   status:
     transcript: complete
     curated_lecture: complete
-    analysis: missing
+    analysis: complete
     chapter_mapping: complete
 - source_id: geo-15
   video_id: bc9adtiIN_k
@@ -283,7 +283,7 @@ sources:
     transcript: complete
     curated_lecture: complete
     analysis: missing
-    chapter_mapping: missing
+    chapter_mapping: complete
 - source_id: geo-20
   video_id: E83dpuyvpiM
   title: 'Geo-Strategy #20: Why the West is Doomed'
