@@ -67,3 +67,7 @@ Optional automation: same command on a **cron** or end-of-day **operator** ritua
 **Upstream:** Open Brain docs and recipes live in the OB1 ecosystem; this journal is **her** trajectory in grace-mar, not a fork of upstream text.
 
 **vs [work-xavier-history.md](../work-xavier-history.md):** History = **append-only milestones** (what shipped, paths, same-day `###` blocks). Journal = **optional** day file when reflection helps — do **not** duplicate full milestone lists in the journal; one line “see history 2026-04-08” is enough.
+
+### Optional habit telemetry
+
+Same **light follow-through** discipline as dev-journal (tomorrow line, blocker carryover, coaching vs raw digest): [journal-metrics-habit.md](../../journal-metrics-habit.md). **Phase 0** = weekly check; **Phase 1** = optional YAML. Snapshot: `python3 scripts/journal_habit_snapshot.py`.

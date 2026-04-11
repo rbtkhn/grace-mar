@@ -38,3 +38,7 @@
 **Contrast:** [xavier-journal](../../work-xavier/xavier-journal/README.md) vs this journal — full routing rules under [Routing](#routing-dev-journal-vs-xavier-journal) above.
 
 **vs [work-dev-history.md](../work-dev-history.md):** History = **milestones** (SHA, artifact, gap closed). Journal = **narrative** when useful — avoid copying every history bullet; link the date or commit and add friction / “what clicked” only the history line cannot carry.
+
+### Optional habit telemetry
+
+Light **follow-through** discipline (tomorrow line, blocker carryover, friction resolution) without turning this into a dashboard: [journal-metrics-habit.md](../../journal-metrics-habit.md). **Phase 0** = weekly 5‑minute check; **Phase 1** = optional YAML frontmatter. Rhythm snapshot (filename dates): `python3 scripts/journal_habit_snapshot.py`.
