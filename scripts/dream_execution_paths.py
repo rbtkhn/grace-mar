@@ -6,6 +6,49 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
+# Stable order from build_execution_paths — maps to coffee A–G menu (see coffee SKILL).
+_COFFEE_LETTER_AND_LABEL: dict[str, tuple[str, str]] = {
+    "today_field": ("A", "Today"),
+    "build": ("B", "Build"),
+    "steward": ("E", "Steward"),
+}
+
+
+def coffee_menu_hint_from_dream(dream: dict[str, Any]) -> str | None:
+    """
+    One-line hint for the next coffee Step 2 menu from last-dream.json.
+
+    Maps execution_paths[suggested_execution_path_index] to **A / B / E** only
+    (today_field, build, steward). Operational hint — not policy or Record.
+    """
+    paths = dream.get("execution_paths")
+    if not isinstance(paths, list) or not paths:
+        return None
+    idx = int(dream.get("suggested_execution_path_index") or 0)
+    idx = max(0, min(idx, len(paths) - 1))
+    raw = paths[idx]
+    if not isinstance(raw, dict):
+        return None
+    pid = str(raw.get("id") or "").strip()
+    letter, label = _COFFEE_LETTER_AND_LABEL.get(pid, ("?", "?"))
+    if letter == "?":
+        # Fallback: positional 0/1/2 matches build_execution_paths order.
+        fallbacks = (("A", "Today"), ("B", "Build"), ("E", "Steward"))
+        letter, label = fallbacks[idx] if idx < len(fallbacks) else ("E", "Steward")
+
+    reason = str(dream.get("execution_path_suggestion_reason") or "").strip()
+    if reason == "integrity_or_governance_fail":
+        why = "integrity/governance did not fully pass this dream"
+    elif reason == "gate_backlog":
+        why = "gate backlog over `max_pending_candidates`"
+    else:
+        why = "calendar rotation"
+
+    return (
+        f"- **Dream → coffee menu:** lean **{letter} — {label}** — {why}; "
+        "operational hint only (not policy or Record)."
+    )
+
 
 def build_execution_paths(
     *,

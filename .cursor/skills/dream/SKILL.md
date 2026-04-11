@@ -43,6 +43,15 @@ But the default pattern is:
 - many `coffee` sessions are normal
 - one `dream` session is normal
 
+## Five-second closeout (operator)
+
+Optional but high-leverage before leaving the dream thread after a **successful** `auto_dream.py` (writes `last-dream.json`):
+
+1. **One sentence** — what tomorrow should pick up (mirror `tomorrow_inherits` in the JSON or say it in plain language).
+2. **One letter** — the coffee menu lean from the handoff: **A** = Today / field (`today_field`), **B** = Build / integrate (`build`), **E** = Steward / gate (`steward`) — from `execution_paths[suggested_execution_path_index]`. The next **`coffee`** Step 1 (`operator_daily_warmup.py`) prints a single line **`Dream → coffee menu:`** with the same mapping.
+
+If **`auto_dream.py --strict`** halted, **`last-dream.json` was not updated** — yesterday’s file may still be on disk; do not treat the handoff as fresh until the next successful dream; fix integrity/governance first.
+
 ## Step 0 — Recent rhythm (before Step 1 scripts)
 
 **Read first** — `auto_dream.py` (and `operator_end_of_day.py`) append a new **`dream`** line when the pass completes successfully, so the log must be read **before** those commands if the rhythm read is to exclude this run.
@@ -116,6 +125,7 @@ Return a short night-close brief with:
 - governance: pass/fail *(structural phase)*
 - contradiction digest: total counts, plus **recent entries** (today's candidates) vs **structural entries** (older candidates) when phase=both
 - artifact drafts: none / count
+- **`dream_catchup` (since previous dream):** `local_calendar_dates`, `strategy_notebook_missing_day_headers`, `timezone`, `previous_dream_generated_at` — from `auto_dream.py` / `last-dream.json`; drives strategy-notebook stubs and Xavier `--catch-up-from-last-dream` (operational; not Record).
 - **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
 - **capability shift** (model category): sources checked / total, REVIEW alerts, monitor alerts — or "no alerts" if quiet
 - one sentence on what tomorrow inherits from this run
@@ -200,48 +210,58 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 - A quiet run is normal; do not manufacture significance.
 - If **integrity** fails with **stale derived export** (not contradictions), refresh exports: `bash scripts/regen_grace_mar_derived.sh` from repo root, then `python3 scripts/validate-integrity.py --user grace-mar --json` — see [`docs/skill-work/work-cadence/README.md`](../../../docs/skill-work/work-cadence/README.md) § *When integrity reports stale derived exports*.
 
-## Strategy notebook (LIB-0153) — daily page production
+## Strategy notebook (LIB-0153) — production closeout (**since previous dream**)
 
-**Yes, it makes sense** if **dream** is the **end-of-day accountability point** that **initiates production closeout** for the **calendar day’s** strategy-notebook page — not a second full `strategy` analysis pass, and not a substitute for daytime judgment.
+**Formal window (spec):** Production means ensuring a `## YYYY-MM-DD` daily block exists for **each local calendar date** in the **since-previous-dream** range — not only “today.” The range is computed **before** this run overwrites `last-dream.json`:
+
+- Read `users/<id>/last-dream.json` **`generated_at`** (previous successful handoff). If **missing** (first dream ever): the window is **today only** in the catch-up timezone.
+- Otherwise: all local dates **strictly after** the local calendar date of `generated_at`, **through today** (inclusive), in timezone **`DREAM_CATCHUP_TZ`** or **`TZ`** or **`UTC`**.
+
+**Machine source of truth:** `python3 scripts/auto_dream.py --json` (or successful run’s written `last-dream.json`) includes **`dream_catchup`**: `local_calendar_dates`, `previous_dream_generated_at`, `timezone`, and **`strategy_notebook_missing_day_headers`** (dates in the window whose `## YYYY-MM-DD` heading is absent in the relevant `chapters/YYYY-MM/days.md` files). Use that object so agent and operator agree on **which days** need stubs or condense notes.
+
+**Yes, it makes sense** if **dream** is the **end-of-day accountability point** that **initiates production closeout** for that window — not a second full `strategy` analysis pass, and not a substitute for daytime judgment.
 
 **What “initiates production” means here**
 
-- **During the day:** `coffee` / **`strategy`** (and linked briefs) **fill** [`chapters/YYYY-MM/days.md`](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/YYYY-MM/days.md) with Signal / Judgment / Links (see [`.cursor/skills/skill-strategy/SKILL.md`](../skill-strategy/SKILL.md)).
-- **At `dream`:** The ritual **initiates the end-of-day production step** for that same calendar date: ensure **one** `## YYYY-MM-DD` page exists for **today**, meets [length / condense](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) targets or carries an explicit **defer** (e.g. **Open** line: “condense + outboard DEMO next session”), and align [`strategy-notebook/STATUS.md`](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) **Last daily entry** when the page state changes.
+- **During the day:** `coffee` / **`strategy`** (and linked briefs) **fill** [`chapters/YYYY-MM/days.md`](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/YYYY-MM/days.md) with Signal / Judgment / Links and optional Jiang / **History resonance** (see [`.cursor/skills/skill-strategy/SKILL.md`](../skill-strategy/SKILL.md)).
+- **At `dream`:** For **each** date in `dream_catchup.local_calendar_dates` (or at minimum each date in `strategy_notebook_missing_day_headers`), ensure a **minimal** stub or filled block per [daily template](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#daily-entry-template) where missing (headings through **Open**; optional **Jiang** / **History resonance** as `none` or **deferred** when not used); align [`strategy-notebook/STATUS.md`](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) **Last daily entry** when page state changes.
 
 **Agent behavior when `dream` is invoked**
 
-1. After **Step 0** (Recent rhythm), **before or after** Step 1 (`auto_dream.py`), read the active month `days.md` and **STATUS.md**.
-2. If **today’s** dated block is **missing** — add a **minimal** stub from the architecture [daily template](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#daily-entry-template) (Signal + Judgment one line each + Links) *or* report a **notebook gap** in the night-close brief for the operator to fill tomorrow morning (operator preference).
-3. If the block is **over** the word budget — note **condense required** in the night-close brief; run [condense-to-target / Full path](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#condense-to-target-mechanism-fit-1000-words) **only** if the operator asks in the same `dream` message to **ship** the edit (otherwise defer).
-4. **Do not** add long lens/DEMO bodies during dream by default; **outboard** heavy material per architecture.
+1. After **Step 0** (Recent rhythm), run Step 1 (`auto_dream.py`) **or** read `--json` output / `last-dream.json` for **`dream_catchup`**.
+2. Open active (and span) month **`days.md`** files as needed for the date range; cross-check **`strategy_notebook_missing_day_headers`**.
+3. For **each missing** `## YYYY-MM-DD` — add a **minimal** stub (Signal + Judgment one line each + Links) *or* report a **notebook gap** in the night-close brief (operator preference).
+4. If any block is **over** the word budget — note **condense required**; run [condense-to-target](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#condense-to-target-mechanism-fit-1000-words) **only** if the operator asks in the same `dream` message to **ship** the edit (otherwise defer).
+5. **Do not** add long lens/DEMO bodies during dream by default; **outboard** heavy material per architecture.
 
 **Boundaries:** **WORK only** — not Record, not `self.md` / EVIDENCE / gate merge. **No** autonomous promotion to [`STRATEGY.md`](../../../docs/skill-work/work-strategy/STRATEGY.md) unless the operator explicitly asks (same rule as `skill-strategy`).
 
-**Return brief:** Add one line under the maintenance summary, e.g. **Strategy notebook:** `ok` / `stub added` / `condense deferred` / `gap noted` — date `YYYY-MM-DD`.
+**Return brief:** **Strategy notebook:** `ok` / `stubs for [dates]` / `condense deferred` / `gap noted` — cite **`dream_catchup`** dates when useful.
 
-## Xavier journal (LIB-0154) — daily page generation
+## Xavier journal (LIB-0154) — page generation (**since previous dream**)
 
-**Purpose:** At **`dream`**, **generate** (or confirm) the **calendar day’s** Xavier journal file under [`docs/skill-work/work-xavier/xavier-journal/`](../../../docs/skill-work/work-xavier/xavier-journal/) — same end-of-day **production** instinct as the strategy-notebook closeout, different artifact.
+**Purpose:** At **`dream`**, **generate** (or confirm) **one journal file per local day** in the **same since-previous-dream window** as strategy-notebook (see above). Different artifact; same temporal contract.
 
-**Mechanism:** [`scripts/xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) builds `YYYY-MM-DD-day-NN.md` from **Cici** (OB1) GitHub commits for the local calendar day, plus narrative stubs (**Focus**, **What I did today**, …). See [xavier-journal README](../../../docs/skill-work/work-xavier/xavier-journal/README.md).
+**Mechanism:** [`scripts/xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) builds **`YYYY-MM-DD.md`** from **Cici** (OB1) GitHub commits per calendar day (journal ordinal **Day N** inside the file), optional **`inbox/`** markdown, optional **`--full-day-synthesis`** (strategy-notebook same-day block + session-transcript), per-flag includes, and optional **artifact** paths — see [xavier-journal README](../../../docs/skill-work/work-xavier/xavier-journal/README.md) and [SYNTHESIS-SOURCES.md](../../../docs/skill-work/work-xavier/xavier-journal/SYNTHESIS-SOURCES.md).
+
+**Catch-up (formal):** From repo root, with operator `TZ` aligned to **`dream_catchup.timezone`** when possible:
+
+```bash
+TZ=America/New_York python3 scripts/xavier_journal_ob1_digest.py --catch-up-from-last-dream --full-day-synthesis --write
+```
+
+This reads **`users/<id>/last-dream.json` before overwrite**, computes the same local dates as `dream_catchup`, and writes **one file per day** (skips existing files unless **`--force`**). **`--full-day-synthesis`** embeds **strategy-notebook** + **session-transcript** for each date (omit it for git+inbox only). Dry-run: omit `--write` to print the date list only. Each day picks up matching **`inbox/YYYY-MM-DD.md`** (and folder / artifacts) if present.
 
 **Agent behavior when `dream` is invoked**
 
-1. After **Step 0**, **before or after** Step 1 (`auto_dream.py`), run a **network** step (operator machine or agent with `full_network`):
-   - Prefer the operator’s **local day** boundary, e.g. `TZ=America/New_York` (or their `TZ`) — match [README](../../../docs/skill-work/work-xavier/xavier-journal/README.md) examples.
-   - **Write** today’s file if missing:
-     ```bash
-     TZ=America/New_York python3 scripts/xavier_journal_ob1_digest.py --write
-     ```
-     (Use `UTC` if that is the agreed journal day boundary.)
-   - Optional: `GITHUB_TOKEN` / `GH_TOKEN` for API rate limits — public repo works for light use.
-2. If the script **refuses to overwrite** (file already exists), treat as **ok — page already present**; do not `--force` unless the operator explicitly asks in the same message.
-3. If **GitHub API** or **network** fails, record **Xavier journal:** `skipped (API/network)` in the night-close brief — do **not** fail the whole `dream` maintenance story on this alone.
+1. After **Step 0**, run Step 1 (`auto_dream.py`) so **`dream_catchup`** is fresh in JSON / handoff; then run the **catch-up** command above on a **network**-capable path (operator machine or agent with `full_network`).
+2. Optional: `GITHUB_TOKEN` / `GH_TOKEN` for API rate limits — public repo works for light use.
+3. Optional: operator drops Cursor exports or notes into **`docs/skill-work/work-xavier/xavier-journal/inbox/`** before catch-up (same-day file names). For **transcript + geopolitical synthesis** on the journal page, prefer **`--full-day-synthesis`** (or `XAVIER_JOURNAL_FULL_DAY_SYNTHESIS=1`) so **strategy-notebook** and **session-transcript** merge in; use inbox for spillover.
+4. If **GitHub API** or **network** fails, record **Xavier journal:** `skipped (API/network)` — do **not** fail the whole `dream` maintenance story on this alone.
 
-**Boundaries:** **WORK / operator coaching** — not Xavier’s **Record** in her repo, not grace-mar **SELF** / gate merge. **No secrets** in prose (script skeleton is safe; operator fills narrative).
+**Boundaries:** **WORK / operator coaching** — not Xavier’s **Record** in her repo, not grace-mar **SELF** / gate merge. **No secrets** in prose (generated overview + commit links are safe; inbox/session content is operator-vetted).
 
-**Return brief:** Add **Xavier journal:** `written <path>` / `already present` / `skipped (API/network)` — date `YYYY-MM-DD`.
+**Return brief:** **Xavier journal:** `catch-up written N file(s)` / `skipped (exists|network)` — list paths or dates.
 
 ## Relation to coffee
 

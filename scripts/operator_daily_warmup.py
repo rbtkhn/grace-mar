@@ -39,9 +39,9 @@ if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
 
 try:
-    from dream_execution_paths import format_tomorrow_inherits_line
+    from dream_execution_paths import coffee_menu_hint_from_dream, format_tomorrow_inherits_line
 except ImportError:
-    from scripts.dream_execution_paths import format_tomorrow_inherits_line
+    from scripts.dream_execution_paths import coffee_menu_hint_from_dream, format_tomorrow_inherits_line
 
 try:
     from work_jiang.warmup_jiang_pulse import build_morning_pulse_lines
@@ -414,7 +414,8 @@ def build_operator_daily_warmup(
         lines.append(f"- {item}")
 
     last_dream = _read_last_dream(user_dir)
-    if last_dream and get_bool(_coffee_context_budget(), "allow_last_dream", True):
+    allow_last_dream_block = get_bool(_coffee_context_budget(), "allow_last_dream", True)
+    if last_dream and allow_last_dream_block:
         lines.append("")
         lines.extend(
             _format_last_dream_block(
@@ -424,6 +425,11 @@ def build_operator_daily_warmup(
                 show_rollup=show_rollup,
             )
         )
+    if last_dream:
+        menu_hint = coffee_menu_hint_from_dream(last_dream)
+        if menu_hint:
+            lines.append("")
+            lines.append(menu_hint)
 
     lines.append("")
     if build_morning_pulse_lines is not None:

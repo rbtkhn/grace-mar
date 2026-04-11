@@ -11,6 +11,7 @@ if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
 
 import operator_daily_warmup as odu  # noqa: E402
+from dream_execution_paths import coffee_menu_hint_from_dream  # noqa: E402
 
 
 def _minimal_dream() -> dict:
@@ -97,4 +98,38 @@ def test_compress_lines_truncates() -> None:
     out = odu._compress_lines(long_body, max_lines=4)
     assert len(out) == 4
     assert "(+7 more" in out[-1]
+
+
+def test_coffee_menu_hint_maps_paths() -> None:
+    d = {
+        "execution_paths": [
+            {"id": "today_field", "title": "Today / field"},
+            {"id": "build", "title": "Build"},
+            {"id": "steward", "title": "Steward"},
+        ],
+        "suggested_execution_path_index": 2,
+        "execution_path_suggestion_reason": "gate_backlog",
+    }
+    hint = coffee_menu_hint_from_dream(d)
+    assert hint is not None
+    assert "**E — Steward**" in hint
+    assert "gate backlog" in hint
+
+
+def test_coffee_menu_hint_unknown_id_falls_back_to_index() -> None:
+    d = {
+        "execution_paths": [
+            {"id": "today_field", "title": "T"},
+            {"id": "build", "title": "B"},
+        ],
+        "suggested_execution_path_index": 1,
+        "execution_path_suggestion_reason": "calendar_mod3",
+    }
+    hint = coffee_menu_hint_from_dream(d)
+    assert hint is not None
+    assert "**B — Build**" in hint
+
+
+def test_coffee_menu_hint_returns_none_without_paths() -> None:
+    assert coffee_menu_hint_from_dream({}) is None
 
