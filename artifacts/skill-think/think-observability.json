@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0-skill-think",
+  "generatedAt": "2026-04-11T04:38:07.340180+00:00",
+  "metrics": {
+    "claim_count": 1,
+    "claims_by_capability_type": {
+      "comparison": 1
+    },
+    "claims_by_level": {
+      "emerging": 1
+    },
+    "claims_updated_last_30d": 1,
+    "claims_with_multiple_evidence_refs": 0,
+    "open_promotion_candidates": 0,
+    "top_topics": [
+      "Example topic"
+    ]
+  },
+  "notes": [
+    "Transfer-growth metrics are phase-2 (need longitudinal scoring).",
+    "Sibling to work-strategy observability \u2014 not merged into observability-report.v1."
+  ]
+}

@@ -9,7 +9,7 @@ Status: EMPTY
 
 | Module | File | Scope |
 |--------|------|-------|
-| **skill-think** | [skill-think.md](skill-think.md) | Intake, learning, comprehension (THINK, MATH, CHINESE) |
+| **skill-think** | [skill-think.md](skill-think.md) | Intake, learning, comprehension (THINK, MATH, CHINESE) — doctrine: [docs/skill-think/README.md](../../docs/skill-think/README.md); template may use `self-skill-think.md` filename ([canonical-paths](../../docs/canonical-paths.md)) |
 | **skill-write** | [skill-write.md](skill-write.md) | Production (text, journal, stories) |
 | **skill-steward** | [skill-steward.md](skill-steward.md) | Governance literacy — gate vocabulary, chat vs Record, consent-aware review (STEWARD) |
 

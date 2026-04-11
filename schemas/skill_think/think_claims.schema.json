@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/skill_think/think_claims.schema.json",
+  "title": "skill_think_claims",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "claims"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "ssot_note": {
+      "type": "string",
+      "description": "Phase A: JSON is an index alongside prose skill-think.md; avoid drift via ritual + validator."
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "topic",
+          "capability_type",
+          "level",
+          "evidence_refs",
+          "first_observed",
+          "last_updated",
+          "confidence",
+          "promotion_candidate"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^THINK-[0-9]{3,}$"
+          },
+          "topic": { "type": "string", "minLength": 1 },
+          "capability_type": {
+            "type": "string",
+            "enum": [
+              "comprehension",
+              "recall",
+              "comparison",
+              "abstraction",
+              "analogy",
+              "question_generation",
+              "causal_reasoning",
+              "uncertainty_handling",
+              "topic_familiarity",
+              "vocabulary_acquisition",
+              "transfer_across_domains"
+            ]
+          },
+          "level": {
+            "type": "string",
+            "enum": ["exposed", "emerging", "consistent", "transferable", "independent"]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "pattern": "^(READ|ACT)-[0-9]{4}$"
+            }
+          },
+          "first_observed": { "type": "string", "format": "date" },
+          "last_updated": { "type": "string", "format": "date" },
+          "confidence": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "promotion_candidate": { "type": "boolean" },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

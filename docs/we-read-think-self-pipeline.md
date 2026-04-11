@@ -13,6 +13,8 @@
 
 Stable facts she should *know* in-character → **IX-A** (after gate). Fleeting chat about a book → often **IX-B** or nothing. **Do not** duplicate every THINK bullet as IX-A.
 
+**Doctrine hub:** [docs/skill-think/README.md](skill-think/README.md) — THINK vs SELF vs WORK, evidence-backed claims, and **THINK→IX** rules: [think-to-ix-promotion-rules.md](skill-think/think-to-ix-promotion-rules.md), [ix-promotion-examples.md](skill-think/ix-promotion-examples.md).
+
 ---
 
 ## Checklist (after "we finished [title]" or heavy study)

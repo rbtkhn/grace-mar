@@ -7,7 +7,7 @@ This folder documents **required filenames** for a Grace-Mar instance. It is **n
 | File | Role |
 |------|------|
 | `self.md` | SELF — identity + IX-A/B/C |
-| `self-skills.md` | SKILLS — capability index (legacy `skills.md` still resolved until migrated) |
+| `self-skills.md` | SKILLS — capability index (legacy `skills.md` still resolved until migrated). **Template stub:** [self-skills.md](self-skills.md). **THINK** on-disk name may be `skill-think.md` or `self-skill-think.md` — see [docs/skill-think/think-purpose-and-boundary.md](../../docs/skill-think/think-purpose-and-boundary.md). |
 | `self-archive.md` | EVIDENCE — activity log + § VIII gated approved |
 | `self-evidence.md` | optional compatibility pointer to `self-archive.md` |
 | `recursion-gate.md` | Pipeline staging |
@@ -21,3 +21,5 @@ This folder documents **required filenames** for a Grace-Mar instance. It is **n
 A future subdirectory layout is discussed in [docs/adr/0001-users-directory-layout-future.md](../../docs/adr/0001-users-directory-layout-future.md); until then, keep the flat layout.
 
 **Large binaries:** prefer [Git LFS](https://git-lfs.com/) for committed media under `users/<id>/artifacts/`; see `.gitignore` notes for local-only patterns.
+
+**THINK machine artifacts (optional):** Repo-level pattern lives under `artifacts/skill-think/` in grace-mar; new instances can start empty and populate [think-claims.json](../../artifacts/skill-think/think-claims.json) after evidence exists — see [docs/skill-think/think-evidence-standard.md](../../docs/skill-think/think-evidence-standard.md).

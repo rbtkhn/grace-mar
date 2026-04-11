@@ -1,6 +1,6 @@
 # self-skill-think (Template)
 
-**Template only. No real data.** Copy to `users/<new_id>/self-skill-think.md` in an instance. Schema tag: **THINK**. Intake and comprehension; populated from activity.
+**Template only. No real data.** Copy to `users/<new_id>/self-skill-think.md` in an instance — **or** use `skill-think.md` if your instance follows that on-disk name; keep **`self-skills.md`** index pointing to the file you choose ([canonical-paths](../../docs/canonical-paths.md)). **Doctrine:** [docs/skill-think/README.md](../../docs/skill-think/README.md). Schema tag: **THINK**. Intake and comprehension; populated from activity.
 
 Evidence-linked; edge (what to read/watch next) derived from this file + self-evidence.
 

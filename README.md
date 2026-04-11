@@ -28,7 +28,7 @@ Core modules:
 |--------|----------|---------|
 | **SELF** | Personality, linguistic style, life narrative, preferences, values, IX-A/B/C (SELF-KNOWLEDGE + curiosity + personality) | Who they ARE |
 | **SELF-LIBRARY** | `self-library.md` — LIB entries, scopes; CIV-MEM as subdomain | Governed **reference** (not identity) |
-| **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO |
+| **SKILLS** | THINK and WRITE capability containers | What the Record can evidence about what they CAN DO — **THINK** operator doctrine: [docs/skill-think/README.md](docs/skill-think/README.md) |
 | **WORK LAYER** | `work-*` territories and instance work contexts | Planning, execution, delivery, and tool-using work outside the self-skill taxonomy |
 
 Identity and capability should not be collapsed. In practice: **SELF** owns who Grace-Mar is and how she comes across; **SKILLS** owns what she can reliably do and how far that competence currently reaches. The **Voice** should sound identity-facing even when **WRITE** is constraining the feasible quality of the output.

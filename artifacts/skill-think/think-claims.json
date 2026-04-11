@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "ssot_note": "Phase A: companion index to prose in users/grace-mar/skill-think.md — update both when adding claims.",
+  "claims": [
+    {
+      "id": "THINK-001",
+      "topic": "Example topic",
+      "capability_type": "comparison",
+      "level": "emerging",
+      "evidence_refs": ["READ-0001"],
+      "first_observed": "2026-04-10",
+      "last_updated": "2026-04-10",
+      "confidence": "medium",
+      "promotion_candidate": false,
+      "notes": "Replace with real claims or delete this row when populating."
+    }
+  ]
+}

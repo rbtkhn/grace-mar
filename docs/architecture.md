@@ -212,6 +212,8 @@ Contains what the companion CAN DO — capabilities that grow through authentic 
 
 Skills organize under **two Record-bound cognitive modules: THINK and WRITE**. For a formal specification of module boundaries, output functions (Voice and profile as functions of skill-write), and invariants, see [SKILLS-MODULARITY](skills-modularity.md). **Standard labels** (for APIs, docs, cross-references): **self-skill-write** and **self-skill-think**. See [ID-TAXONOMY § Standard capability labels](id-taxonomy.md#standard-capability-labels-self-skill-). These modules are objective-topic-specialized components (teacher/tutor, evaluator, record keeper) for what the Record can evidence directly.
 
+**THINK doctrine (intake, evidence, promotion to IX):** [skill-think README](skill-think/README.md) — complements this section without replacing SKILLS-MODULARITY.
+
 | Module | Function | Activities |
 |--------|----------|------------|
 | **WRITE** | Production, expression | Journal, stories, explanations, messages |
