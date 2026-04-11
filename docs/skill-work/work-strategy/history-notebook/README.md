@@ -16,7 +16,7 @@
 
 | Volume | Era | Chapters |
 |--------|-----|----------|
-| **I — Ancient** (to 476 CE) | Founding patterns: sovereignty, parity, imperial unification | persia, rome, china, india |
+| **I — Ancient Empires** (to 476 CE) | Founding patterns: sovereignty, parity, imperial unification | persia, rome, china, india |
 | **II — Medieval** (476–1453) | Post-Roman reconfigurations: Islam, Byzantium, Mongol disruption | islam, rome-byzantine, persia-islamic, mongol, china-medieval |
 | **III — Early Modern** (1453–1789) | Ottoman peak, maritime expansion, continental consolidation | ottoman, anglia, france, russia |
 | **IV — Industrial & Imperial** (1789–1945) | Revolution, total war, imperial collapse | america, germany, russia-imperial, anglia-imperial |
