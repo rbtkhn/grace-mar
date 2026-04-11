@@ -353,4 +353,17 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ### Signal
 
-- _Stub — day header for dream catch-up closeout (`strategy_notebook_missing_day_headers: 2026-04-11`). Replace with Signal / Judgment / Links on the next strategy-notebook pass._
+- **Daily brief (2026-04-11):** Generated and hand-filled `daily-brief-2026-04-11.md` (RSS §2, §1d Putin / §1e JD Vance scans, §1f weak signal, §3–§5 synthesis) — [daily-brief-2026-04-11.md](../../../daily-brief-2026-04-11.md).
+- **Tri-Frame mind overlays (second stage):** `generate_wap_daily_brief.py --mind-all` wrote **three** first-option scaffolds (Barnes **A**, Mearsheimer **A**, Mercouris **A**). **Completed Analysis sections** on three further passes: **Barnes** `hidden_liabilities`, **Mearsheimer** `alliance_dynamics`, **Mercouris** `legitimacy_doctrine`. The three `--mind-all` shells (`material_constraints`, `balance_of_power`, `governing_narrative`) remain **open scaffolds** until a later pass. Sidecars: [minds/outputs/](../../../minds/outputs/) (`2026-04-11-*.md`); §7 of the daily brief indexes paths.
+
+### Judgment
+
+- **Notebook vs. brief body:** Analytical prose lives in **minds/outputs** sidecars; the daily brief file stays the **substrate + index** — right split for re-use and git diffs.
+- **Honest completion state:** Six dated sidecar files exist; **three** carry finished Analysis blocks; **three** are still prompt shells — fine for incremental Tri-Frame work.
+
+### Links
+
+- [daily-brief-2026-04-11.md](../../../daily-brief-2026-04-11.md) · [daily-brief-minds-menu.md](../../../daily-brief-minds-menu.md) · [DAILY-BRIEF-MINDS-WORKFLOW.md](../../../minds/DAILY-BRIEF-MINDS-WORKFLOW.md)
+- Barnes: [2026-04-11-barnes-material-constraints.md](../../../minds/outputs/2026-04-11-barnes-material-constraints.md) · [2026-04-11-barnes-hidden-liabilities.md](../../../minds/outputs/2026-04-11-barnes-hidden-liabilities.md)
+- Mearsheimer: [2026-04-11-mearsheimer-balance-of-power.md](../../../minds/outputs/2026-04-11-mearsheimer-balance-of-power.md) · [2026-04-11-mearsheimer-alliance-dynamics.md](../../../minds/outputs/2026-04-11-mearsheimer-alliance-dynamics.md)
+- Mercouris: [2026-04-11-mercouris-governing-narrative.md](../../../minds/outputs/2026-04-11-mercouris-governing-narrative.md) · [2026-04-11-mercouris-legitimacy-doctrine.md](../../../minds/outputs/2026-04-11-mercouris-legitimacy-doctrine.md)
