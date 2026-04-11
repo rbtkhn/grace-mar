@@ -348,3 +348,9 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - Pin **RUSI** table date/assumptions vs. any **DOD/IDF** restock reporting before treating depletion as settled.
 - **[unverified]** **~70%** and **~$120/bbl** — replace with **dated** poll crosstabs and **market** or **wire** **Iran** **export** pricing when used in Judgment.
+
+## 2026-04-11
+
+### Signal
+
+- _Stub — day header for dream catch-up closeout (`strategy_notebook_missing_day_headers: 2026-04-11`). Replace with Signal / Judgment / Links on the next strategy-notebook pass._
