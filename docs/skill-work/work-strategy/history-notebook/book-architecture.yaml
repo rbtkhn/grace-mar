@@ -1,0 +1,342 @@
+# History Notebook — Book Architecture (SSOT)
+# All chapters, sub-groupings, arcs, and operator metadata.
+# Public-facing chapter prose never references this file's internal IDs (CIV-MEM, skills, etc.).
+# Chapter ID convention: hn-{volume}-{slug}
+
+project:
+  id: history-notebook
+  title: "History Notebook"
+  purpose: "Compressed civilizational chapters distilling patterns into strategy-ready reference"
+  volumes: 5
+  chapter_format: "See STYLE-GUIDE.md"
+
+volumes:
+  - id: vol-i
+    title: "Ancient (to 476 CE — Fall of Rome)"
+    thesis: "The founding patterns. Sovereignty, parity, imperial unification, and the first regime-switching logic."
+    sub_groups:
+      - label: "Parity Dyad"
+        thesis: "Two empires that could not destroy each other; the pattern that defined the ancient world's strategic ceiling."
+        chapters: [hn-i-persia, hn-i-rome]
+      - label: "Independent Formation"
+        thesis: "Civilizations that formed without the Persia-Rome gravitational field; different answers to the same formation problem."
+        chapters: [hn-i-china, hn-i-india]
+
+  - id: vol-ii
+    title: "Medieval (476–1453 — Fall of Constantinople)"
+    thesis: "The post-Roman reconfigurations. Islam arrives; Byzantium survives; the Mongol disruption resets Eurasia; China peaks and fragments."
+    sub_groups:
+      - label: "Successor Civilizations"
+        thesis: "What fills the vacuum when Rome falls and Persia is conquered. New formations built on old substrates."
+        chapters: [hn-ii-islam, hn-ii-rome-byzantine, hn-ii-persia-islamic]
+      - label: "Disruption and Reconstitution"
+        thesis: "External shock as formation catalyst. The Mongol rupture resets Eurasia; China absorbs and rebuilds."
+        chapters: [hn-ii-mongol, hn-ii-china-medieval]
+
+  - id: vol-iii
+    title: "Early Modern (1453–1789 — French Revolution)"
+    thesis: "Post-Constantinople. Ottoman peak, European maritime expansion, Safavid revival, Muscovy emerges, colonial order begins."
+    sub_groups:
+      - label: "Expanding Orders"
+        thesis: "Mature civilizations projecting power outward: one inherits Rome's claim, the other invents maritime empire."
+        chapters: [hn-iii-ottoman, hn-iii-anglia]
+      - label: "Continental Consolidators"
+        thesis: "Formation through centralization and westward orientation. Both define themselves against the maritime model."
+        chapters: [hn-iii-france, hn-iii-russia]
+
+  - id: vol-iv
+    title: "Industrial & Imperial (1789–1945)"
+    thesis: "Revolution, industrial war, imperial collapse, world wars. The patterns that produced the current order."
+    sub_groups:
+      - label: "New Contenders"
+        thesis: "Powers that industrialize into dominance. One succeeds through geography and institutions; the other destroys itself through speed without restraint."
+        chapters: [hn-iv-america, hn-iv-germany]
+      - label: "Old Empires Under Stress"
+        thesis: "Established orders that the industrial era breaks and remakes. Decline as formation: what happens to the substrate when the superstructure fails."
+        chapters: [hn-iv-russia-imperial, hn-iv-anglia-imperial]
+
+  - id: vol-v
+    title: "Contemporary (1945–present)"
+    thesis: "The world the operator analyzes every day. Cold War, decolonization, unipolarity, and the current crisis landscape."
+    sub_groups:
+      - label: "Architects"
+        thesis: "Powers that build or inherit the post-1945 order. One holds it; the other quietly displaces it."
+        chapters: [hn-v-america-hegemonic, hn-v-china-modern]
+      - label: "Endurance Powers"
+        thesis: "Civilizations that survive the architects' order rather than running it. Formation under siege — persistence as the primary strategic output."
+        chapters: [hn-v-russia-modern, hn-v-persia-modern]
+
+arcs:
+  - arc_id: persia
+    title: "The Persian Arc"
+    chapters: [hn-i-persia, hn-ii-persia-islamic, hn-v-persia-modern]
+    thread: "Tolerance → compression → siege governance. Each rupture densifies doctrine."
+  - arc_id: rome
+    title: "The Roman Arc"
+    chapters: [hn-i-rome, hn-ii-rome-byzantine]
+    thread: "Institutional continuity → persistence after territorial loss."
+  - arc_id: russia
+    title: "The Russian Arc"
+    chapters: [hn-iii-russia, hn-iv-russia-imperial, hn-v-russia-modern]
+    thread: "Marginal resilience → rupture-regeneration → temporal compression."
+  - arc_id: america
+    title: "The American Arc"
+    chapters: [hn-iv-america, hn-v-america-hegemonic]
+    thread: "Constitutional republic → industrial hegemon → overextension."
+  - arc_id: anglia
+    title: "The English Arc"
+    chapters: [hn-iii-anglia, hn-iv-anglia-imperial]
+    thread: "Maritime hegemony → managed decline."
+  - arc_id: china
+    title: "The Chinese Arc"
+    chapters: [hn-i-china, hn-ii-china-medieval, hn-v-china-modern]
+    thread: "Cyclical reunification → bureaucratic maturity → patience as strategy."
+
+chapters:
+  # --- Vol I: Ancient ---
+  - id: hn-i-persia
+    volume: i
+    title: "Persia — Achaemenid to Sassanid"
+    file: chapters/vol-i/persia.md
+    status: drafted
+    word_target: 800
+    source_refs: [CIV-CORE-PERSIA, CIV-AXIOM-PERSIA, CIV-DOCTRINE-PERSIA]
+    pattern_tags: [regime-switch, compression, parity, tolerance, siege-literacy, memory-as-software, endurance]
+    linked_skills: [persian-regime-adaptive-strategy]
+    cross_refs: [hn-i-rome, hn-ii-persia-islamic, hn-v-persia-modern]
+
+  - id: hn-i-rome
+    volume: i
+    title: "Rome — Republic to Fall (476)"
+    file: chapters/vol-i/rome.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-DOCTRINE-ROME]
+    pattern_tags: [institutional-continuity, parity, legalism, imperial-overextension]
+    linked_skills: []
+    cross_refs: [hn-i-persia, hn-ii-rome-byzantine]
+
+  - id: hn-i-china
+    volume: i
+    title: "China — Zhou to Han Unification"
+    file: chapters/vol-i/china.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-CHINA, CIV-DOCTRINE-CHINA]
+    pattern_tags: [mandate-of-heaven, cyclical-reunification, legalism]
+    linked_skills: []
+    cross_refs: [hn-ii-china-medieval, hn-v-china-modern]
+
+  - id: hn-i-india
+    volume: i
+    title: "India — Maurya, Ashoka, Gupta"
+    file: chapters/vol-i/india.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-INDIA, CIV-AXIOM-INDIA, CIV-DOCTRINE-INDIA]
+    pattern_tags: [pluralism, non-coercive-integration, dharma-governance]
+    linked_skills: []
+    cross_refs: []
+
+  # --- Vol II: Medieval ---
+  - id: hn-ii-islam
+    volume: ii
+    title: "Islam — Rashidun to Abbasid Caliphate"
+    file: chapters/vol-ii/islam.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ISLAM]
+    pattern_tags: [ummah, juridical-pluralism, expansion-absorption, caliphal-legitimacy]
+    linked_skills: []
+    cross_refs: [hn-ii-persia-islamic, hn-iii-ottoman]
+
+  - id: hn-ii-rome-byzantine
+    volume: ii
+    title: "Byzantium — Eastern Roman Survival"
+    file: chapters/vol-ii/rome-byzantine.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME]
+    pattern_tags: [institutional-persistence, orthodoxy-as-architecture]
+    linked_skills: []
+    cross_refs: [hn-i-rome, hn-ii-islam]
+
+  - id: hn-ii-persia-islamic
+    volume: ii
+    title: "Persia — Post-Conquest to Timurid"
+    file: chapters/vol-ii/persia-islamic.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-PERSIA, CIV-DOCTRINE-PERSIA]
+    pattern_tags: [compression, cultural-absorption, doctrinal-densification]
+    linked_skills: []
+    cross_refs: [hn-i-persia, hn-v-persia-modern]
+
+  - id: hn-ii-mongol
+    volume: ii
+    title: "Mongol — Steppe Cycle and Disruption"
+    file: chapters/vol-ii/mongol.md
+    status: planned
+    word_target: 800
+    source_refs: []
+    pattern_tags: [disruption-propagation, integration-through-destruction, rupture-catalyst]
+    linked_skills: []
+    cross_refs: [hn-ii-persia-islamic, hn-ii-china-medieval, hn-iii-russia]
+
+  - id: hn-ii-china-medieval
+    volume: ii
+    title: "China — Tang to Ming"
+    file: chapters/vol-ii/china-medieval.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-CHINA]
+    pattern_tags: [technological-peak, bureaucratic-maturity, mongol-interlude]
+    linked_skills: []
+    cross_refs: [hn-i-china, hn-v-china-modern]
+
+  # --- Vol III: Early Modern ---
+  - id: hn-iii-ottoman
+    volume: iii
+    title: "Ottoman — Rise to Stagnation"
+    file: chapters/vol-iii/ottoman.md
+    status: planned
+    word_target: 800
+    source_refs: []
+    pattern_tags: [millet-system, frontier-state, overextension]
+    linked_skills: []
+    cross_refs: [hn-ii-islam, hn-ii-rome-byzantine]
+
+  - id: hn-iii-anglia
+    volume: iii
+    title: "England — Tudor to Colonial Order"
+    file: chapters/vol-iii/anglia.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ANGLIA, CIV-DOCTRINE-ANGLIA]
+    pattern_tags: [naval-hegemony, balance-of-power, mercantile-extraction]
+    linked_skills: []
+    cross_refs: [hn-iv-anglia-imperial]
+
+  - id: hn-iii-france
+    volume: iii
+    title: "France — Bourbon to Revolution"
+    file: chapters/vol-iii/france.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-FRANCE, CIV-DOCTRINE-FRANCE]
+    pattern_tags: [state-centralization, cultural-universalism, continental-tension]
+    linked_skills: []
+    cross_refs: [hn-iv-germany]
+
+  - id: hn-iii-russia
+    volume: iii
+    title: "Russia — Muscovy to Catherine"
+    file: chapters/vol-iii/russia.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-RUSSIA, CIV-DOCTRINE-RUSSIA]
+    pattern_tags: [marginal-resilience, westernization-as-compression, expanding-fortress]
+    linked_skills: []
+    cross_refs: [hn-iv-russia-imperial, hn-v-russia-modern]
+
+  # --- Vol IV: Industrial & Imperial ---
+  - id: hn-iv-america
+    volume: iv
+    title: "America — Republic to Global Hegemony"
+    file: chapters/vol-iv/america.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-AMERICA, CIV-DOCTRINE-AMERICA]
+    pattern_tags: [constitutional-architecture, manifest-destiny, wilsonian-universalism]
+    linked_skills: []
+    cross_refs: [hn-v-america-hegemonic]
+
+  - id: hn-iv-germany
+    volume: iv
+    title: "Germany — Unification to Catastrophe"
+    file: chapters/vol-iv/germany.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-GERMANY, CIV-DOCTRINE-GERMANY]
+    pattern_tags: [industrial-power, bismarckian-restraint, total-war]
+    linked_skills: []
+    cross_refs: [hn-iii-france, hn-iv-russia-imperial]
+
+  - id: hn-iv-russia-imperial
+    volume: iv
+    title: "Russia — Napoleonic Wars to Soviet"
+    file: chapters/vol-iv/russia-imperial.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-RUSSIA]
+    pattern_tags: [temporal-compression, rupture-regeneration, industrial-siege]
+    linked_skills: []
+    cross_refs: [hn-iii-russia, hn-v-russia-modern]
+
+  - id: hn-iv-anglia-imperial
+    volume: iv
+    title: "England — Pax Britannica to World Wars"
+    file: chapters/vol-iv/anglia-imperial.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ANGLIA]
+    pattern_tags: [managed-decline, imperial-overextension, residual-architecture]
+    linked_skills: []
+    cross_refs: [hn-iii-anglia, hn-iv-america]
+
+  # --- Vol V: Contemporary ---
+  - id: hn-v-america-hegemonic
+    volume: v
+    title: "America — Cold War to Overreach"
+    file: chapters/vol-v/america-hegemonic.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-AMERICA]
+    pattern_tags: [alliance-architecture, imperial-overextension, institutional-stress]
+    linked_skills: []
+    cross_refs: [hn-iv-america, hn-v-china-modern]
+
+  - id: hn-v-russia-modern
+    volume: v
+    title: "Russia — Soviet Collapse to Putin"
+    file: chapters/vol-v/russia-modern.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-RUSSIA]
+    pattern_tags: [rupture-regeneration, temporal-compression, marginal-power, siege-governance]
+    linked_skills: [russian-endurance-compression-strategy]
+    cross_refs: [hn-iv-russia-imperial, hn-v-persia-modern]
+
+  - id: hn-v-persia-modern
+    volume: v
+    title: "Persia — Islamic Republic to War Phase"
+    file: chapters/vol-v/persia-modern.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-PERSIA]
+    pattern_tags: [siege-governance, compression-saturation, memory-as-software]
+    linked_skills: [persian-regime-adaptive-strategy]
+    cross_refs: [hn-i-persia, hn-ii-persia-islamic, hn-v-russia-modern]
+
+  - id: hn-v-china-modern
+    volume: v
+    title: "China — PRC to Belt and Road"
+    file: chapters/vol-v/china-modern.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-CHINA]
+    pattern_tags: [patience-as-strategy, tributary, compute-sovereignty, structural-beneficiary]
+    linked_skills: []
+    cross_refs: [hn-i-china, hn-ii-china-medieval, hn-v-america-hegemonic]
+
+  # --- Appendix ---
+  - id: hn-app-method
+    volume: appendix
+    title: "How Jiang Thinks — Methodology"
+    file: chapters/appendix/method.md
+    status: planned
+    word_target: 600
+    source_refs: []
+    pattern_tags: [psychohistory, testable-predictions, canon-as-formation]
+    linked_skills: []
+    cross_refs: []

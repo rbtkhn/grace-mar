@@ -1,0 +1,161 @@
+# Cross-book map: Predictive History <-> History Notebook
+# SSOT for the inter-book relationship. This is the ONLY file that stores
+# which PH theses/concepts are addressed by which HN chapters.
+#
+# Validates against:
+#   - PH thesis-map.yaml (8 theses: t01–t08)
+#   - PH concepts.yaml (20 concepts)
+#   - HN book-architecture.yaml (22 chapters)
+#
+# Coverage values: stub (no chapters mapped), partial, full
+# Run: python3 scripts/validate_cross_book.py
+
+theses:
+  - thesis_id: t01
+    claim: "Education and narrative formation are constitutive, not secondary."
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-china, hn-i-india]
+    coverage: partial
+    notes: "All four Vol I chapters demonstrate formation through education/narrative (Shahnameh, Roman virtus, Confucian rites, Vedic tradition). Full coverage requires later volumes."
+
+  - thesis_id: t02
+    claim: "Religious imagination and empire remain structurally linked in modern power."
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-india]
+    coverage: partial
+    notes: "Zoroastrian asha (Persia), religio Romana + Christianity (Rome), Ashoka's dharma (India). China deferred — mandate of heaven is political cosmology more than religious imagination per se."
+
+  - thesis_id: t03
+    claim: "Jiang's framework generates testable historical and predictive claims."
+    hn_chapters: [hn-app-method]
+    coverage: stub
+    notes: "Methodology thesis — handled in appendix, not civilizational chapters."
+
+  - thesis_id: t04
+    claim: "Deep prehistory extends the formation thesis: sedentism, ritual, and narrative precede and shape the institutional bundle later called civilization."
+    hn_chapters: [hn-i-china, hn-i-india]
+    coverage: partial
+    notes: "China (Neolithic → Shang → Zhou arc) and India (Indus → Vedic transition) touch pre-civilizational substrates. Brief notes in Persia/Rome possible but not primary."
+
+  - thesis_id: t05
+    claim: "Secret History extends formation into power and epistemology: who narrates the past, how money and institutions train imagination, and what counts as liberation."
+    hn_chapters: [hn-i-rome]
+    coverage: partial
+    notes: "Rome's self-narration (Livy, Polybius, Virgil) is the clearest ancient case of 'who narrates the past.' Persia too (Cylinder vs Greek sources). Full treatment requires later volumes."
+
+  - thesis_id: t06
+    claim: "Game Theory makes strategic structure explicit: players, rules, and incentives as the readable skeleton beneath formation, status, and civilizational-scale outcomes."
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-china]
+    coverage: partial
+    notes: "Parity logic at Carrhae (Persia-Rome), Warring States as game-theoretic laboratory (China), Roman alliance systems. India less game-theoretic in Vol I scope."
+
+  - thesis_id: t07
+    claim: "Great Books ties canon reading to a formation arc: consciousness, love, imagination, and liberation rhetoric as the readable spine."
+    hn_chapters: [hn-app-method]
+    coverage: stub
+    notes: "Methodology thesis — handled in appendix. Vol I chapters reference canonical texts (Shahnameh, Analects) as formation evidence, but the Great Books thesis per se is methodological."
+
+  - thesis_id: t08
+    claim: "Interviews extend Predictive History into long-form dialogue: the same forecasting and formation grammar, mediated by hosts and episodic Q&A."
+    hn_chapters: [hn-app-method]
+    coverage: stub
+    notes: "Pure methodology — appendix only."
+
+concepts:
+  - concept_id: civ-formation
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-china, hn-i-india]
+    coverage: partial
+    notes: "Core concept — every Vol I chapter demonstrates formation. Full coverage across all 5 volumes."
+
+  - concept_id: strategic-imagination
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-china]
+    coverage: partial
+    notes: "How leaders picture futures: Cyrus's integration vision, Roman republican virtus, Zhou mandate cosmology."
+
+  - concept_id: asymmetrical-warfare
+    hn_chapters: [hn-i-persia]
+    coverage: partial
+    notes: "Parthian horse archers vs Roman heavy infantry at Carrhae. Full treatment in Vol V (modern Iran)."
+
+  - concept_id: christian-zionism
+    hn_chapters: []
+    coverage: stub
+    notes: "Modern concept — Vol IV/V (America chapters)."
+
+  - concept_id: empire-order
+    hn_chapters: [hn-i-rome, hn-i-persia]
+    coverage: partial
+    notes: "Achaemenid and Roman imperial models as ancient archetypes. US-led order in Vol IV/V."
+
+  - concept_id: financialization-empire
+    hn_chapters: [hn-i-rome]
+    coverage: partial
+    notes: "Roman taxation, currency debasement, tributary extraction. Modern financialization in Vol IV/V."
+
+  - concept_id: saudi-iran-axis
+    hn_chapters: []
+    coverage: stub
+    notes: "Modern geopolitics — Vol V."
+
+  - concept_id: electoral-coalition
+    hn_chapters: []
+    coverage: stub
+    notes: "US-specific — Vol IV/V (America chapters) or appendix."
+
+  - concept_id: empire-hubris
+    hn_chapters: [hn-i-rome, hn-i-persia]
+    coverage: partial
+    notes: "Crassus at Carrhae (Rome's hubris), Darius III's failure to adapt (Persian hubris). Fuller treatment in later volumes."
+
+  - concept_id: iran-strategy-matrix
+    hn_chapters: [hn-i-persia]
+    coverage: partial
+    notes: "Ancient roots of the four-goal checklist visible in Achaemenid/Parthian strategic logic. Full treatment in Vol V."
+
+  - concept_id: operation-true-promise
+    hn_chapters: []
+    coverage: stub
+    notes: "2024 event — Vol V (persia-modern) only."
+
+  - concept_id: raisi-scenario
+    hn_chapters: []
+    coverage: stub
+    notes: "Contemporary event — Vol V or appendix."
+
+  - concept_id: iran-trap
+    hn_chapters: []
+    coverage: stub
+    notes: "Modern escalation dynamics — Vol V."
+
+  - concept_id: putinism-soul
+    hn_chapters: []
+    coverage: stub
+    notes: "Modern Russia — Vol V (russia-modern)."
+
+  - concept_id: stalin-game-theory
+    hn_chapters: [hn-i-china]
+    coverage: partial
+    notes: "Warring States patience and information asymmetry as ancient parallel. Stalin himself in Vol IV."
+
+  - concept_id: second-civil-war
+    hn_chapters: []
+    coverage: stub
+    notes: "US-specific — Vol V (america-hegemonic)."
+
+  - concept_id: psychohistory-metaphor
+    hn_chapters: [hn-app-method]
+    coverage: stub
+    notes: "Methodology — appendix only."
+
+  - concept_id: education-narrative
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-china, hn-i-india]
+    coverage: partial
+    notes: "Formation dimensions section in every Vol I chapter covers education/narrative. Full coverage across all volumes."
+
+  - concept_id: religious-legitimacy
+    hn_chapters: [hn-i-persia, hn-i-rome, hn-i-india]
+    coverage: partial
+    notes: "Zoroastrian asha, Roman religio, Ashokan dharma. China's mandate of heaven is borderline — more political cosmology than religious legitimacy."
+
+  - concept_id: middle-east-alliance
+    hn_chapters: []
+    coverage: stub
+    notes: "Modern geopolitics — Vol V."
