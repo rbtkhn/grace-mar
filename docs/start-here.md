@@ -8,6 +8,14 @@ Plain-language entry point. Precise terms and invariants live in [glossary.md](g
 
 Grace-Mar is a **structured, versioned record of one person’s developing self**—with an optional chat interface that **speaks from that record when asked**, and a rule that **meaningful updates wait for the companion’s approval** before they become permanent.
 
+### Coming from OB1-style systems?
+
+If you already use **Open Brain / OB1**-flavored tooling (one dashboard, recipes, imports, pending approvals), use **[Coming from OB1? Start here](start-here-ob1-users.md)** for a translation table (Library, Skills, Evidence, Approval Inbox) and the same governance story in familiar words.
+
+### See it as a dashboard
+
+Grace-Mar is inspectable without trusting chat alone: **[observability.md](observability.md)** (reports and scripts), **`runtime/observability/`** JSONL feeds when present, and optional **web / family hub** surfaces ([simple-user-interface.md](simple-user-interface.md)). For a link-only map of workflows, see **[workflow-catalog.md](workflow-catalog.md)**.
+
 ---
 
 ## Choose your path

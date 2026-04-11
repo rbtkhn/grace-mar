@@ -21,6 +21,8 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 | **companion-self** | **Always hyphenated.** Names the **template** repository and **intelligence-system** product surface (fork blueprint, upgrades, `users/_template/`). Use this spelling for the **system / entity**, never `companion self` or `companionself`. |
 | **companion-xavier** | **Always hyphenated.** May name **a** sovereign instance (fork) as a **system entity** when the companion uses that deployment name (typically **not** inside the grace-mar repo). Same rule: hyphenated marks a **named** cognitive-fork deployment, not the two-word **companion self** concept. |
 | **recursion-gate** (gate) | The staging surface and concept: candidates sit above `## Processed` in `users/[id]/recursion-gate.md` until the companion approves; on approval they are merged and moved below Processed. |
+| **Approval Inbox** (user-facing) | Plain-language name for **pending candidates** in the gate file before merge — same as **recursion-gate** queue; not a separate system. |
+| **OB1** (informal) | Shorthand for **Open Brain**–style personal knowledge / gateway mental models; not a Grace-Mar product name. |
 | **SELF** | Identity surface: `self.md` — narrative, preferences, values, and post-seed **SELF-KNOWLEDGE** (IX-A), curiosity (IX-B), personality (IX-C). Not domain corpora. |
 | **Personality** | Identity-facing observed traits and expressive patterns in `self.md` IX-C — behavior, values, speech traits, art style, and the way Grace-Mar tends to come across. Personality is not a skill level. |
 | **SELF / SKILLS / EVIDENCE** (modules) | Shorthand; full Record adds **SELF-LIBRARY**. On disk: `self.md`, `self-library.md`, `self-skills.md` (EVIDENCE body: `self-archive.md`). |

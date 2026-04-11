@@ -30,6 +30,10 @@
 | **Cross-instance boundary** | [cross-instance-boundary.md](cross-instance-boundary.md) | Two-repo contract; optional `check_forbidden_path_strings.py` for **peer** repos only. |
 | **Feedback loops** | [feedback-loops](feedback-loops.md) | Proposal brief, calibrate-on-miss, low-friction approval, closed-loop verification, oversight cadence. |
 | **Gate traffic (tiers)** | [RECURSION-GATE-THREE-TIER](recursion-gate-three-tier.md) | Tier 1–3 lanes, Bronze vs future Silver/Gold, `ready_for_quick_merge`, escalation CLI, metrics. |
+| **OB1 / Open Brain bridge** | [START-HERE-OB1-USERS](start-here-ob1-users.md) | Translation table, Approval Inbox alias, imports — familiar entry without changing ontology. |
+| **Workflow catalog** | [WORKFLOW-CATALOG](workflow-catalog.md) | Link index for daily brief, journal, bridge, Xavier, work-dev, gate, observability. |
+| **Imports and capture** | [IMPORTS-AND-CAPTURE](imports-and-capture.md) | Safety boundary: evidence/prepared context vs gated Record. |
+| **Skills (two layers)** | [SKILLS-EXPLAINED](skills-explained.md) | Portable skills vs SKILLS Record surface. |
 
 **Hierarchy:** The protocol (IDENTITY-FORK-PROTOCOL) is the thing to implement. CORE is governance. CONCEPTUAL-FRAMEWORK and DESIGN-NOTES interpret and explain intent. WHITE-PAPER and prospectus are narrative and business.
 

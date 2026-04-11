@@ -4,6 +4,8 @@
 
 **New here?** Plain-language orientation and audience paths: [docs/start-here.md](docs/start-here.md) — quick pick [Choose your path](docs/start-here.md#choose-your-path) (A–F).
 
+If you come from **OB1-style** memory systems (dashboard, recipes, imports, review queue), the quickest mental model is: Grace-Mar has a **Library**, **Skills**, **Evidence** log, **workflow** lanes, and an **Approval Inbox** (`recursion-gate.md`). Durable Record changes are **gated**, not auto-merged. **[Coming from OB1? Start here →](docs/start-here-ob1-users.md)**
+
 ## Concept
 
 The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. The **Record** is not a single blob: it has **four first-class surfaces** — **SELF** (identity, including **SELF-KNOWLEDGE** and optional **self-identity** split commitments), **SELF-LIBRARY** (governed **reference** domains, including **CIV-MEM**), **SKILLS** (capability), and **EVIDENCE** (activity and artifacts). Identity and library are **separate**: civilization-scale reference lives in SELF-LIBRARY, not in SELF-KNOWLEDGE. The fork also tracks what the companion can do (skills) and what happened (evidence). Work territories handle planning and execution without redefining the Record. Queryable, evidence-grounded, gated.
