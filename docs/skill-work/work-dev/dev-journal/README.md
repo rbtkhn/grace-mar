@@ -6,6 +6,21 @@
 
 **Territory:** `docs/skill-work/work-dev/dev-journal/` in grace-mar — **WORK / operator trajectory**, not the companion **Record**, not Voice knowledge, not a substitute for [work-dev-history.md](../work-dev-history.md) (append-only milestone log) or [workspace.md](../workspace.md) (canonical entrypoint).
 
+### Routing: dev-journal vs xavier-journal
+
+**One line:** **dev-journal** = **inward-facing** — Grace-Mar’s own work-dev lane (tooling, integration, scripts in *this* repo). **xavier-journal** = **outward-facing** — Xavier’s OB1 / Cici stack and your coaching or tracking of it from inside grace-mar. See [xavier-journal README](../../work-xavier/xavier-journal/README.md#routing-dev-journal-vs-xavier-journal).
+
+**Center of gravity belongs here** when you are building or reflecting on grace-mar **internal** work-dev: OpenClaw, export–stage–merge discipline, harness/cadence wiring, integration scripts, capability contracts, portable skills, bridge thinking between OB1 and companion-self, and adjacent operator infrastructure.
+
+**Write in [xavier-journal](../../work-xavier/xavier-journal/README.md)** when the center of gravity is **Xavier’s** instance (Cici), upstream OB1, BrewMind tie-ins, same-day commits from Xavier’s repo, or what Xavier’s OB1 trajectory means operationally — including digest-driven day files from `scripts/xavier_journal_ob1_digest.py`.
+
+**Quick test**
+
+- “In **Grace-Mar**, I changed / learned / wired …” → **dev-journal** (this folder).
+- “In **Xavier’s** OB1/Cici world, I observed / coached / compared …” → **xavier-journal**.
+
+**When a day touches both:** split — grace-mar implementation and tooling reflection **here**; Xavier/OB1 observation or coaching **there**.
+
 **How to use**
 
 - One file per **calendar day you choose to capture**: `YYYY-MM-DD-day-NN.md` (**NN** = journal day number from your chosen **anchor** — e.g. first entry = Day 1; skip days you do not journal).
@@ -20,6 +35,6 @@
 | [work-dev-history.md](../work-dev-history.md) | **Milestone / artifact** log (commits, scripts shipped, gaps closed). |
 | [workspace.md](../workspace.md) | **Current** blockers and next actions. |
 
-**Contrast:** [xavier-journal](../../work-xavier/xavier-journal/README.md) tracks **Xavier’s** OB1 / instance / BrewMind learning path in grace-mar coaching context. **Dev journal** tracks the **operator’s** work-dev integration and tooling path for **this** repo.
+**Contrast:** [xavier-journal](../../work-xavier/xavier-journal/README.md) vs this journal — full routing rules under [Routing](#routing-dev-journal-vs-xavier-journal) above.
 
 **vs [work-dev-history.md](../work-dev-history.md):** History = **milestones** (SHA, artifact, gap closed). Journal = **narrative** when useful — avoid copying every history bullet; link the date or commit and add friction / “what clicked” only the history line cannot carry.
