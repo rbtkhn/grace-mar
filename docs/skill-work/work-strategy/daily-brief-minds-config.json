@@ -1,0 +1,93 @@
+{
+  "version": "1.0",
+  "write_mode": "scaffold",
+  "write_mode_note": "Script writes title, paths, and copy-paste prompt bundle only. Operator or Cursor agent fills the body (no LLM inside the generator).",
+  "source_brief_glob": "docs/skill-work/work-strategy/daily-brief-*.md",
+  "trimmed_mind_files": {
+    "barnes": "strategy-notebook/minds/CIV-MIND-BARNES.md",
+    "mearsheimer": "strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md",
+    "mercouris": "strategy-notebook/minds/CIV-MIND-MERCOURIS.md"
+  },
+  "output_dir": "minds/outputs",
+  "menu_order": ["barnes", "mearsheimer", "mercouris"],
+  "minds": {
+    "mercouris": {
+      "display_name": "Mercouris",
+      "role": "legitimacy, narrative, doctrine, symbolic continuity",
+      "options": [
+        {
+          "id": "governing_narrative",
+          "label": "What is the governing narrative here?",
+          "output_suffix": "mercouris-governing-narrative"
+        },
+        {
+          "id": "legitimacy_doctrine",
+          "label": "What does this reveal about legitimacy and doctrine?",
+          "output_suffix": "mercouris-legitimacy-doctrine"
+        },
+        {
+          "id": "institutional_weight",
+          "label": "Which institutions or symbols carry hidden weight here?",
+          "output_suffix": "mercouris-institutional-weight"
+        },
+        {
+          "id": "continuity_break",
+          "label": "What quiet continuity or break matters most?",
+          "output_suffix": "mercouris-continuity-break"
+        }
+      ]
+    },
+    "mearsheimer": {
+      "display_name": "Mearsheimer",
+      "role": "power, alliances, security dilemmas, great-power geometry",
+      "options": [
+        {
+          "id": "balance_of_power",
+          "label": "What is the real balance-of-power move here?",
+          "output_suffix": "mearsheimer-balance-of-power"
+        },
+        {
+          "id": "alliance_dynamics",
+          "label": "What alliance or security-dilemma dynamic is emerging?",
+          "output_suffix": "mearsheimer-alliance-dynamics"
+        },
+        {
+          "id": "geopolitical_constraints",
+          "label": "What constraints does great-power geometry impose?",
+          "output_suffix": "mearsheimer-geopolitical-constraints"
+        },
+        {
+          "id": "likely_next",
+          "label": "What is likely next if the actors behave rationally?",
+          "output_suffix": "mearsheimer-likely-next"
+        }
+      ]
+    },
+    "barnes": {
+      "display_name": "Barnes",
+      "role": "material bases, liabilities, fiscal/resource constraints",
+      "options": [
+        {
+          "id": "material_constraints",
+          "label": "What are the real material constraints here?",
+          "output_suffix": "barnes-material-constraints"
+        },
+        {
+          "id": "hidden_liabilities",
+          "label": "Where are the hidden liabilities?",
+          "output_suffix": "barnes-hidden-liabilities"
+        },
+        {
+          "id": "fiscal_resource_pressures",
+          "label": "What fiscal or resource pressures matter most?",
+          "output_suffix": "barnes-fiscal-resource-pressures"
+        },
+        {
+          "id": "weakest_material_story",
+          "label": "Which story sounds strongest rhetorically but weakest materially?",
+          "output_suffix": "barnes-weakest-material-story"
+        }
+      ]
+    }
+  }
+}

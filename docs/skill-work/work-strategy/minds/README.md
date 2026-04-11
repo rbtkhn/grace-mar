@@ -14,4 +14,6 @@ Protocol: [LEARN_MODE_RULES.md](../LEARN_MODE_RULES.md).
 
 **Pattern library (advisory, consolidated):** [MINDS-SKILL-STRATEGY-PATTERNS.md](MINDS-SKILL-STRATEGY-PATTERNS.md) — tactics, recipes A/B/C, stretch ideas, non-goals.
 
+**Daily brief overlays:** Optional **scaffold** sidecars after `daily-brief-YYYY-MM-DD.md` — [DAILY-BRIEF-MINDS-WORKFLOW.md](DAILY-BRIEF-MINDS-WORKFLOW.md), [daily-brief-minds-menu.md](../daily-brief-minds-menu.md), `generate_wap_daily_brief.py` flags.
+
 **Post-entry lens menu (`strategy` / ingest):** The three one-line options (**Barnes → Mearsheimer → Mercouris**) must each be written in that mind’s **linguistic fingerprint** (see **LINGUISTIC FINGERPRINT** in each `CIV-MIND-*.md` above). Spec: [`skill-strategy` SKILL](../../../../.cursor/skills/skill-strategy/SKILL.md) § Post-entry lens offer.

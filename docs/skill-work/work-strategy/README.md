@@ -29,6 +29,8 @@
 | **[daily-brief-focus.md](daily-brief-focus.md)** | Operator-maintained bullets: what the strategy lane is watching (product, partners, policy). |
 | **[daily-brief-jiang-layer.md](daily-brief-jiang-layer.md)** | **Slow layer** pointers (work-jiang) embedded in the daily brief as **§1c** — compressions, sweep snippets, lecture tracks; not breaking news. |
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
+| **[daily-brief-minds-config.json](daily-brief-minds-config.json)** | Optional Tri-Frame **scaffold** overlays after the daily brief (Barnes / Mearsheimer / Mercouris); trimmed `CIV-MIND-*.md` paths; outputs under [minds/outputs](minds/outputs). See [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md). |
+| **[daily-brief-minds-menu.md](daily-brief-minds-menu.md)** | Human-readable A–D menus per mind (program order B → M → M). |
 | **[brief-source-registry.md](brief-source-registry.md)** | Pointer only — canonical [weekly-brief source registry](../work-politics/brief-source-registry.md) lives under work-politics. |
 | **[weak-signals.md](weak-signals.md)** | Weak-signal discipline: **§1f** block, promotion to STRATEGY **§II-A / §III-A / §IV**, analogy audit before overclaiming (WORK only). |
 | **[weak-signal-template.md](weak-signal-template.md)** | Markdown stub for **§1f** in the daily brief. |
@@ -92,6 +94,15 @@ Default config path: `docs/skill-work/work-strategy/daily-brief-config.json`.
 **Same-story grouping:** After ranking, items can be clustered by anchor overlap on `title + link` (default anchor list in the script; optional `story_anchor_phrases` in JSON extends it). This is **not** semantic dedupe—raise `jaccard_min` / `min_shared_anchors` if clusters feel loose; disable via config `story_dedupe.enabled: false` or CLI `--no-story-dedupe`.
 
 **Operator habit:** Starting Cursor with **`coffee`** runs warmup in [.cursor/skills/coffee/SKILL.md](../../.cursor/skills/coffee/SKILL.md) (see bootstrap); legacy **`hey`** still works. **Generating** today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` is **coffee menu A — Today** — Step 1 does **not** run the generator.
+
+### Daily brief mind overlays
+
+After `daily-brief-YYYY-MM-DD.md` exists, the operator may run optional **Tri-Frame mind scaffolds** (same generator; **scaffold-only** — no LLM inside the script):
+
+- **Config:** [daily-brief-minds-config.json](daily-brief-minds-config.json)
+- **Trimmed minds:** load `CIV-MIND-BARNES.md`, `CIV-MIND-MEARSHEIMER.md`, `CIV-MIND-MERCOURIS.md` from [`strategy-notebook/minds/`](strategy-notebook/minds/) (see [minds/README.md](minds/README.md))
+- **Outputs:** `docs/skill-work/work-strategy/minds/outputs/` — dated sidecar files; complete analysis in Cursor or a **`strategy`** pass
+- **CLI:** `scripts/generate_wap_daily_brief.py` — `--offer-minds`, `--mind`, `--mind-option`, `--mind-all`, `--brief-path`, `--skip-brief` (see [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md))
 
 ---
 

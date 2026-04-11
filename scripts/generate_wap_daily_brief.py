@@ -21,6 +21,9 @@ Legacy fallback:
   docs/skill-work/work-politics/daily-brief-feeds.json (feeds only; built-in keyword lists)
 
 Does not call paid news APIs. Output is operator WORK product — not Voice, not SELF.
+
+Optional **Tri-Frame mind overlays** (after the brief): see `docs/skill-work/work-strategy/daily-brief-minds-config.json`
+and `docs/skill-work/work-strategy/minds/DAILY-BRIEF-MINDS-WORKFLOW.md`. Scaffold-only — no LLM inside this script.
 """
 
 from __future__ import annotations
@@ -30,6 +33,7 @@ import html
 import importlib.util
 import json
 import re
+import sys
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -41,6 +45,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 WAP_DIR = REPO_ROOT / "docs" / "skill-work" / "work-politics"
 STRATEGY_DIR = REPO_ROOT / "docs" / "skill-work" / "work-strategy"
 DEFAULT_CONFIG = STRATEGY_DIR / "daily-brief-config.json"
+DEFAULT_MINDS_CONFIG = STRATEGY_DIR / "daily-brief-minds-config.json"
 LEGACY_FEEDS_JSON = WAP_DIR / "daily-brief-feeds.json"
 STRATEGY_FOCUS_MD = STRATEGY_DIR / "daily-brief-focus.md"
 JIANG_LAYER_MD = STRATEGY_DIR / "daily-brief-jiang-layer.md"
@@ -1275,6 +1280,139 @@ def build_daily_brief(
     return "\n".join(lines)
 
 
+def _load_minds_config(path: Path) -> dict:
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _brief_date_from_filename(brief_path: Path) -> str | None:
+    m = re.search(r"daily-brief-(\d{4}-\d{2}-\d{2})\.md$", brief_path.name)
+    return m.group(1) if m else None
+
+
+def _format_mind_menus(cfg: dict) -> str:
+    lines = [
+        "Daily Brief — Tri-Frame mind overlays (program order: Barnes → Mearsheimer → Mercouris)",
+        "",
+    ]
+    for key in cfg.get("menu_order", []):
+        mind = cfg["minds"][key]
+        lines.append(f"## {mind['display_name']} ({key}) — {mind['role']}")
+        for i, opt in enumerate(mind["options"], start=1):
+            letter = chr(ord("A") + i - 1)
+            lines.append(f"  {letter}. {opt['label']}  (`--mind {key} --mind-option {opt['id']}`)")
+        lines.append("")
+    lines.append("Human-readable: docs/skill-work/work-strategy/daily-brief-minds-menu.md")
+    return "\n".join(lines)
+
+
+def _build_mind_scaffold_markdown(
+    *,
+    date_slug: str,
+    display_name: str,
+    role: str,
+    option_label: str,
+    brief_rel: str,
+    trim_rel: str,
+) -> str:
+    return (
+        f"# {date_slug} — {display_name} — {option_label}\n\n"
+        "**Write mode:** scaffold (`daily-brief-minds-config.json`) — complete the **Analysis** section "
+        "below in Cursor or a `strategy` pass. This script does not call an LLM.\n\n"
+        f"**Daily brief (substrate):** `{brief_rel}`  \n"
+        f"**Trimmed mind (read for fingerprint):** `{trim_rel}`  \n"
+        f"**Mind role:** {role}\n\n"
+        "## Prompt bundle\n\n"
+        f"You are applying the **{display_name}** lens to Grace-Mar's daily brief.\n\n"
+        f"Load the trimmed working copy from `{trim_rel}` — use that mind's **linguistic fingerprint** "
+        "and analytical priorities faithfully.\n\n"
+        "**Input:**\n"
+        f"- The full daily brief at `{brief_rel}`\n"
+        f"- The selected option: **{option_label}**\n\n"
+        "**Task:**\n"
+        "1. Read the daily brief as the common substrate.\n"
+        f"2. Answer only through the **{display_name}** frame.\n"
+        f"3. Prioritize the mind's native concerns ({role}).\n"
+        "4. Keep the answer anchored to the brief rather than wandering beyond it.\n"
+        "5. End with:\n"
+        "   - Key implication\n"
+        "   - What to watch next\n"
+        "   - What the operator may be underestimating\n\n"
+        "## Analysis\n\n"
+        "_(Complete below. Remove this placeholder line when done.)_\n\n"
+    )
+
+
+def _write_mind_scaffold(
+    cfg: dict,
+    brief_path: Path,
+    strategy_dir: Path,
+    mind_key: str,
+    option_id: str | None,
+) -> Path:
+    mind_cfg = cfg["minds"][mind_key]
+    opts = mind_cfg["options"]
+    if option_id:
+        opt = next((o for o in opts if o["id"] == option_id), None)
+        if opt is None:
+            valid = ", ".join(o["id"] for o in opts)
+            print(
+                f"error: unknown --mind-option for {mind_key}; use one of: {valid}",
+                file=sys.stderr,
+            )
+            raise SystemExit(2)
+    else:
+        opt = opts[0]
+    date_slug = _brief_date_from_filename(brief_path)
+    if not date_slug:
+        print(
+            "error: brief filename must match daily-brief-YYYY-MM-DD.md",
+            file=sys.stderr,
+        )
+        raise SystemExit(2)
+    brief_rel = brief_path.resolve().relative_to(REPO_ROOT).as_posix()
+    trim_abs = (strategy_dir / cfg["trimmed_mind_files"][mind_key]).resolve()
+    if not trim_abs.is_file():
+        print(f"error: trimmed mind file not found: {trim_abs}", file=sys.stderr)
+        raise SystemExit(2)
+    trim_rel = trim_abs.relative_to(REPO_ROOT).as_posix()
+    out_dir = strategy_dir / cfg["output_dir"]
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{date_slug}-{opt['output_suffix']}.md"
+    body = _build_mind_scaffold_markdown(
+        date_slug=date_slug,
+        display_name=mind_cfg["display_name"],
+        role=mind_cfg["role"],
+        option_label=opt["label"],
+        brief_rel=brief_rel,
+        trim_rel=trim_rel,
+    )
+    out_path.write_text(body, encoding="utf-8")
+    print(out_path)
+    return out_path
+
+
+def _run_minds_phase(
+    cfg: dict,
+    brief_path: Path,
+    strategy_dir: Path,
+    *,
+    offer_minds: bool,
+    mind: str,
+    mind_option: str,
+    mind_all: bool,
+) -> None:
+    if offer_minds:
+        print(_format_mind_menus(cfg), file=sys.stderr)
+    if mind_all:
+        for mk in cfg.get("menu_order", []):
+            _write_mind_scaffold(cfg, brief_path, strategy_dir, mk, None)
+        return
+    if mind:
+        oid = mind_option or None
+        _write_mind_scaffold(cfg, brief_path, strategy_dir, mind, oid)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Daily brief: work-politics + work-strategy (RSS optional)"
@@ -1318,31 +1456,132 @@ def main() -> int:
         metavar="N",
         help="Max lines in §2a geopolitical & military block (default 14)",
     )
-    args = parser.parse_args()
-    if args.feeds and not args.config:
-        config_path = Path(args.feeds)
-    elif args.config:
-        config_path = Path(args.config)
-    else:
-        config_path = _default_config_path()
-    text = build_daily_brief(
-        args.user,
-        fetch_feeds=not args.no_fetch,
-        config_path=config_path,
-        max_age_hours=args.max_age_hours,
-        max_items_display=args.max_items,
-        story_dedupe_enabled=not args.no_story_dedupe,
-        max_per_feed_override=(args.max_per_feed if args.max_per_feed > 0 else None),
-        civmem_hooks=not args.no_civmem,
-        max_geo_headlines=max(1, args.max_geo_lines),
+    parser.add_argument(
+        "--skip-brief",
+        action="store_true",
+        help="Skip RSS/brief generation; use with --brief-path for mind-only overlay steps",
     )
-    if args.output:
-        out = Path(args.output)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(text, encoding="utf-8")
-        print(out)
+    parser.add_argument(
+        "--brief-path",
+        default="",
+        help="Path to daily-brief-YYYY-MM-DD.md (overrides -o for mind flags; required with --skip-brief)",
+    )
+    parser.add_argument(
+        "--offer-minds",
+        action="store_true",
+        help="Print Tri-Frame mind menus (stderr) after resolving the brief path",
+    )
+    parser.add_argument(
+        "--mind",
+        choices=["barnes", "mearsheimer", "mercouris"],
+        default="",
+        help="Write one scaffold under minds/outputs/ for this mind",
+    )
+    parser.add_argument(
+        "--mind-option",
+        default="",
+        metavar="ID",
+        help="Option id from daily-brief-minds-config.json (default: first option for that mind)",
+    )
+    parser.add_argument(
+        "--mind-all",
+        action="store_true",
+        help="Write scaffolds for the first menu option (A) of each mind in menu_order",
+    )
+    parser.add_argument(
+        "--minds-config",
+        default="",
+        help=f"Mind overlay JSON (default: {DEFAULT_MINDS_CONFIG.relative_to(REPO_ROOT)})",
+    )
+    args = parser.parse_args()
+
+    minds_config_path = Path(args.minds_config) if args.minds_config else DEFAULT_MINDS_CONFIG
+    mind_flags = bool(args.offer_minds or args.mind or args.mind_all)
+    brief_path: Path | None = None
+
+    if args.mind_option and not args.mind and not args.mind_all:
+        print(
+            "error: --mind-option requires --mind (or use --mind-all without --mind-option)",
+            file=sys.stderr,
+        )
+        return 2
+    if args.mind_all and args.mind:
+        print("error: do not combine --mind-all with --mind", file=sys.stderr)
+        return 2
+
+    if args.skip_brief:
+        if not mind_flags:
+            print(
+                "error: --skip-brief requires --offer-minds, --mind, and/or --mind-all",
+                file=sys.stderr,
+            )
+            return 2
+        if not args.brief_path:
+            print("error: --skip-brief requires --brief-path", file=sys.stderr)
+            return 2
+        brief_path = Path(args.brief_path).resolve()
+        if not brief_path.is_file():
+            print(f"error: brief not found: {brief_path}", file=sys.stderr)
+            return 2
     else:
-        print(text)
+        if args.feeds and not args.config:
+            config_path = Path(args.feeds)
+        elif args.config:
+            config_path = Path(args.config)
+        else:
+            config_path = _default_config_path()
+        text = build_daily_brief(
+            args.user,
+            fetch_feeds=not args.no_fetch,
+            config_path=config_path,
+            max_age_hours=args.max_age_hours,
+            max_items_display=args.max_items,
+            story_dedupe_enabled=not args.no_story_dedupe,
+            max_per_feed_override=(args.max_per_feed if args.max_per_feed > 0 else None),
+            civmem_hooks=not args.no_civmem,
+            max_geo_headlines=max(1, args.max_geo_lines),
+        )
+        if args.output:
+            out = Path(args.output).resolve()
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(text, encoding="utf-8")
+            print(out)
+        else:
+            print(text)
+
+        if mind_flags and not args.output:
+            print(
+                "error: mind flags require -o/--output (writes the brief) or "
+                "--skip-brief --brief-path PATH",
+                file=sys.stderr,
+            )
+            return 2
+        if args.brief_path:
+            brief_path = Path(args.brief_path).resolve()
+        elif args.output:
+            brief_path = Path(args.output).resolve()
+
+    if mind_flags:
+        assert brief_path is not None
+        if not brief_path.is_file():
+            print(
+                "error: mind flags need a daily brief file (-o or --brief-path)",
+                file=sys.stderr,
+            )
+            return 2
+        if not minds_config_path.is_file():
+            print(f"error: minds config not found: {minds_config_path}", file=sys.stderr)
+            return 2
+        cfg = _load_minds_config(minds_config_path)
+        _run_minds_phase(
+            cfg,
+            brief_path,
+            STRATEGY_DIR,
+            offer_minds=args.offer_minds,
+            mind=args.mind,
+            mind_option=args.mind_option,
+            mind_all=args.mind_all,
+        )
     return 0
 
 
