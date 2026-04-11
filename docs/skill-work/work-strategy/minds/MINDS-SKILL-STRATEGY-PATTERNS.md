@@ -226,6 +226,8 @@ Promote only when one of these is true:
 
 ### Recipe A — Single-lens day
 
+**Ensemble gloss:** **Solo** — one part carries the day’s line; other parts **tacet** or implicit via plain Judgment.
+
 **Operator phrase:**  
 `Strategy. Barnes only. Verify oil and shipping if used.`
 
@@ -251,6 +253,8 @@ Promote only when one of these is true:
 
 ### Recipe B — Two-lens day
 
+**Ensemble gloss:** **Duet** — two parts in counterpoint; the synthesis sentence names **converge** or **tension** (unresolved dissonance is valid).
+
 **Operator phrase:**  
 `Strategy pass. Mercouris then Mearsheimer. Keep it notebook-only, no promotion.`
 
@@ -274,6 +278,8 @@ Promote only when one of these is true:
 ---
 
 ### Recipe C — Explicit tri-frame / LEARN day
+
+**Ensemble gloss:** **Tutti** — full score: all three parts explicit in one pass; preserve contradictions between frames (sectional balance in rehearsal, not a single blended voice).
 
 **Operator phrase:**  
 `LEARN MODE — TRI-FRAME — Hormuz coercion and bargaining.`

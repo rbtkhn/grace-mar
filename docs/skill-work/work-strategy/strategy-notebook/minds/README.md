@@ -10,6 +10,8 @@ Cognitive-linguistic signature files for the three analytical minds, trimmed for
 
 **Recipes and post-entry lens offer:** [MINDS-SKILL-STRATEGY-PATTERNS.md](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
 
+**Ensemble metaphor** (score / parts / conductor / dissonance; ties month **Polyphony** to daily practice): [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Ensemble metaphor](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#ensemble-metaphor-chamber-group-gloss)
+
 **Cursor skill:** [skill-strategy SKILL.md](../../../../../.cursor/skills/skill-strategy/SKILL.md) — loads mind files from this directory.
 
 **Granular control:** [strategy-minds-granular.mdc](../../../../../.cursor/rules/strategy-minds-granular.mdc) — no automatic tri-frame; 0–3 lenses as operator indicates.

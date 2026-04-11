@@ -40,7 +40,7 @@ Runnable **multi-phase** calibration (preflight, notebook, verify, tri-frame, bo
 ## Default moves (agent)
 
 1. Read [strategy-notebook/STATUS.md](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) and the tail of the active month `chapters/YYYY-MM/days.md` (and `meta.md` if the month’s theme or open questions matter).
-2. Follow [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) for **Daily synthesis**, **Daily length and prose** (**~1000 words** per **daily page** target — consolidated best analysis; compress if over ~1200), **Condense-to-target**: **Fast** path = tiers **A → D** only; **Full** path = **Summarize-and-condense** (tag → route ARTIFACT → **K** + K-tests → skeleton → DUPLICATE → tiers → stop rule) when the draft mixes notebook + lens/DEMO/web bulk; use the **Condense checklist** there, and **Accumulation and evolution** (Signal / Judgment / Links / Open / Bets). Prefer **academic prose** in the notebook block.
+2. Pick **session type** (A–D) and use the **section router** in [SYNTHESIS-OPERATING-MODEL.md](../../../docs/skill-work/work-strategy/strategy-notebook/SYNTHESIS-OPERATING-MODEL.md) when the operator wants a systematic synthesis path; then follow [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) for **Daily synthesis**, **Daily length and prose** (**~1000 words** per **daily page** target — consolidated best analysis; compress if over ~1200), **Condense-to-target**: **Fast** path = tiers **A → D** only; **Full** path = **Summarize-and-condense** (tag → route ARTIFACT → **K** + K-tests → skeleton → DUPLICATE → tiers → stop rule) when the draft mixes notebook + lens/DEMO/web bulk; use the **Condense checklist** there, and **Accumulation and evolution** (Signal / Judgment / Links / Open / Bets; optional **Jiang** / **History resonance**). Prefer **academic prose** in the notebook block.
 3. **Append or extend** today’s **daily page** (one `## YYYY-MM-DD` per calendar day) in `days.md` when the operator is logging judgment; link input paths (brief file, transcript digest, framework doc) in **Links**.
 4. **STRATEGY.md:** suggest or apply updates only when the operator asks to **promote** — not every notebook entry.
 
@@ -54,9 +54,11 @@ Runnable **multi-phase** calibration (preflight, notebook, verify, tri-frame, bo
 
 Do **not** default to tri-frame on every pass — [strategy-minds-granular.mdc](../../../.cursor/rules/strategy-minds-granular.mdc). **Load mind files from:** [strategy-notebook/minds/](../../../docs/skill-work/work-strategy/strategy-notebook/minds/) (trimmed working copies — fingerprints + frameworks, no CMC governance). Entry stubs: [minds/README.md](../../../docs/skill-work/work-strategy/minds/README.md). **Advisory patterns** (single/two-lens, links-only lensing, verify ownership, recipes): [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md). Full **LEARN MODE** + tri-frame ordering: [LEARN_MODE_RULES.md](../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md).
 
+**Ensemble shorthand (solo / duet / tutti):** **Tacet** = no lens (plain Judgment). **Solo** = one mind. **Duet** = two-part tension pass. **Tutti** = explicit tri-frame / LEARN day. Gloss (score, parts, conductor, dissonance): [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Ensemble metaphor](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#ensemble-metaphor-chamber-group-gloss). **Post-entry menu** order **B → M → M** is **program order** for the optional three one-liners in chat — **not** the same ordering as **LEARN MODE** tri-frame (follow `LEARN_MODE_RULES.md` when that mode applies).
+
 ### Post-entry lens offer
 
-After any **substantive** notebook entry (Signal / Judgment / Links written or extended — whether from coffee A daily brief, a standalone `strategy` pass, or a transcript digest), include a **three-option lens block** in the WORK menu:
+After any **substantive** notebook entry (Signal / Judgment / Links written or extended — whether from coffee A daily brief, a standalone `strategy` pass, or a transcript digest; **History resonance** optional when mechanism ids apply), include a **three-option lens block** in the WORK menu:
 
 ```
 Lens pass (optional — pick one, combine, or skip):
@@ -101,6 +103,27 @@ Lens pass (optional — pick one, combine, or skip):
 If the pass is **Islamabad / Gulf / Iran** but **no** lecture applies, use **one line**: e.g. `Jiang resonance: deferred — no new lecture id this pass` — avoid empty boilerplate. **Web-verified** headlines are **not** a substitute for an **ingested** thesis; do not imply PH alignment without a lecture or analysis link.
 
 **Disambiguation:** **Book Volume I chapter `ch20`** (Geo-Strategy in the registry) is **not** the same label as **Game Theory #20** or another series’ “20.” State **volume + series + `video_id`** when both could confuse.
+
+## History notebook (LIB-0156) — how it wires in
+
+**Roles:** [History notebook](../../../docs/skill-work/work-strategy/history-notebook/README.md) is the operator’s **slow mechanism library** (compressed chapters, arcs, PH cross-map). **`skill-strategy`** remains **fast judgment** in the strategy-notebook. HN **informs** warrants and analogies; it is **not** merged into SELF or Voice without the gate.
+
+**When to pull HN in during a strategy pass**
+
+- Judgment uses **civilizational pattern language** (frontier, legitimacy, siege, naval hinge, tolerance → compression, …) that already has a **chapter id** or **arc** in [`book-architecture.yaml`](../../../docs/skill-work/work-strategy/history-notebook/book-architecture.yaml).
+- You are stress-testing an **analogy** for Islamabad / outreach / Rome copy — cite the **HN chapter** + [analogy-audit](../../../docs/skill-work/work-strategy/analogy-audit-template.md) when the parallel ships publicly.
+- **`meta.md`** or **`Open`** points at a **civilization arc** spanning volumes.
+
+**Where to look (read-only unless the operator asks for HN edits)**
+
+| Need | Path |
+|------|------|
+| Book / chapter SSOT | [`book-architecture.yaml`](../../../docs/skill-work/work-strategy/history-notebook/book-architecture.yaml) |
+| PH ↔ HN coverage | [`cross-book-map.yaml`](../../../docs/skill-work/work-strategy/history-notebook/cross-book-map.yaml) · `python3 scripts/validate_cross_book.py` |
+| Chapter prose + STYLE-GUIDE | [`history-notebook/`](../../../docs/skill-work/work-strategy/history-notebook/) |
+| Polyphonic drafting | [`POLYPHONY-WORKFLOW.md`](../../../docs/skill-work/work-strategy/history-notebook/POLYPHONY-WORKFLOW.md) |
+
+**Write surface — `### History resonance (optional)`** in the day’s `days.md` block: **chapter id(s)** (e.g. `hn-i-v1-04`) + **one mechanism line** + **Links** to the chapter file or anchor. Do **not** paste full HN chapters into the daily page. If no chapter applies: **none** or **deferred** — same honesty standard as **`### Jiang resonance`**.
 
 **Out of scope for `skill-strategy`:** full **transcript ingest**, registry JSONL edits, or **skill-jiang** blind forward-chain — use [work-jiang-feature-checklist](../work-jiang-feature-checklist/SKILL.md) / `scripts/work_jiang/` when the operator is doing **corpus** work, not a notebook pass.
 
