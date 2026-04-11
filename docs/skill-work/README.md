@@ -21,6 +21,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 
 ## Cross-references
 
+- **Work-layer hardening roadmap:** [WORK-LAYER-HARDENING-ROADMAP.md](WORK-LAYER-HARDENING-ROADMAP.md) — promotion ladder, sources YAML, observability, work-dev ledger, cadence pressure, lane contracts, dashboard.
 - **New WORK territory checklist:** [work-template.md](work-template.md) — scaffold `work-<id>/` (README, history, optional LANE-CI, sources).
 - **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md).
 - **Work modules — territory history logs:** [work-modules-history-principle.md](work-modules-history-principle.md).

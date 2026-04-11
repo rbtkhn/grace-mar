@@ -4,6 +4,8 @@
 
 **Not** Record truth. **Not** a merge path. **Not** identity-relevant unless gated.
 
+**Cadence ↔ governance:** [cadence-governance-bridge.md](cadence-governance-bridge.md), [cadence-pressure-signals.md](cadence-pressure-signals.md) — pressure JSON via `scripts/audit_cadence_rhythm.py --pressure-report`.
+
 ---
 
 ## Role

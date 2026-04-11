@@ -25,6 +25,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work-cadence-events.md"
+DEFAULT_GATE_PATH = REPO_ROOT / "users" / "grace-mar" / "recursion-gate.md"
 
 import re
 
@@ -249,6 +250,48 @@ def format_discipline_one_liner(s: dict) -> str:
     return f"Cadence discipline ({s['days']}d): {issues_str} — DRIFT"
 
 
+def count_gate_pending_substrings(gate_path: Path) -> int:
+    """Count `status: pending` occurrences in gate file (companion queue signal)."""
+    if not gate_path.is_file():
+        return 0
+    text = gate_path.read_text(encoding="utf-8", errors="replace")
+    return text.count("status: pending")
+
+
+def compute_cadence_pressure_report(
+    user_id: str,
+    days: int = 14,
+    *,
+    events_path: Path = EVENTS_PATH,
+    gate_path: Path | None = None,
+    now: datetime | None = None,
+) -> dict:
+    """Combine rhythm summary with lightweight governance pressure signals."""
+    now = now or datetime.now(timezone.utc)
+    rhythm = compute_rhythm_summary(user_id, days, events_path=events_path, now=now)
+    pending = count_gate_pending_substrings(gate_path) if gate_path else 0
+    signals: list[str] = []
+    if rhythm.get("discipline") == "DRIFT":
+        signals.append("cadence_drift")
+    if pending > 5:
+        signals.append("high_gate_pending")
+    ce = rhythm.get("coffee", {}).get("count", 0)
+    if isinstance(ce, int) and ce > 25:
+        signals.append("high_coffee_volume")
+    return {
+        "schemaVersion": "1.0.0-cadence-pressure",
+        "generatedAt": now.isoformat(),
+        "user_id": user_id,
+        "days": days,
+        "rhythm_summary": rhythm,
+        "governance": {
+            "recursion_gate_pending_status_count": pending,
+            "gate_path": str(gate_path) if gate_path else None,
+        },
+        "pressure_signals": signals,
+    }
+
+
 def format_tier_report(s: dict) -> str:
     """Standalone model-tier distribution report."""
     mt = s.get("model_tier", {})
@@ -271,7 +314,32 @@ def main() -> int:
     ap.add_argument("--days", type=int, default=14, help="Look-back window in days (default 14)")
     ap.add_argument("--json", action="store_true", help="Output JSON instead of text")
     ap.add_argument("--tier-report", action="store_true", help="Standalone model-tier distribution")
+    ap.add_argument(
+        "--pressure-report",
+        type=Path,
+        nargs="?",
+        const=REPO_ROOT / "artifacts/work-cadence/cadence-pressure-report.json",
+        metavar="OUT",
+        help="Write cadence pressure JSON (default: artifacts/work-cadence/cadence-pressure-report.json)",
+    )
+    ap.add_argument(
+        "--gate-path",
+        type=Path,
+        default=DEFAULT_GATE_PATH,
+        help="recursion-gate.md path for pending count (default: users/grace-mar/recursion-gate.md)",
+    )
     args = ap.parse_args()
+
+    if args.pressure_report is not None:
+        rep = compute_cadence_pressure_report(
+            args.user, args.days, gate_path=args.gate_path
+        )
+        args.pressure_report.parent.mkdir(parents=True, exist_ok=True)
+        args.pressure_report.write_text(
+            json.dumps(rep, indent=2, default=str) + "\n", encoding="utf-8"
+        )
+        print(f"wrote {args.pressure_report}")
+        return 0
 
     summary = compute_rhythm_summary(args.user, args.days)
 

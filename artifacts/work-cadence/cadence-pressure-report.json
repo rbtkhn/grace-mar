@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0-cadence-pressure",
+  "generatedAt": "2026-04-11T04:25:43.178083+00:00",
+  "user_id": "grace-mar",
+  "days": 14,
+  "rhythm_summary": {
+    "user_id": "grace-mar",
+    "days": 14,
+    "event_count": 91,
+    "active_day_count": 7,
+    "discipline": "HEALTHY",
+    "issues": [],
+    "dream": {
+      "count": 6,
+      "last": "2026-04-09T06:17:00+00:00",
+      "days_ago": 1,
+      "ok": true
+    },
+    "bridge": {
+      "count": 10,
+      "last": "2026-04-11T02:39:00+00:00",
+      "days_ago": 0,
+      "sessions_without": 35
+    },
+    "coffee": {
+      "count": 46,
+      "per_active_day": 6.6,
+      "ok": true
+    },
+    "longest_gap": {
+      "hours": 15.1,
+      "start": "2026-04-09T23:23:00+00:00",
+      "end": "2026-04-10T14:28:00+00:00",
+      "ok": true
+    },
+    "model_tier": {
+      "counts": {
+        "unknown": 91
+      },
+      "pcts": {
+        "unknown": 100.0
+      },
+      "total": 91
+    }
+  },
+  "governance": {
+    "recursion_gate_pending_status_count": 1,
+    "gate_path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/recursion-gate.md"
+  },
+  "pressure_signals": [
+    "high_coffee_volume"
+  ]
+}

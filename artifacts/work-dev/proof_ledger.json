@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "proof-continuity-001",
+      "context": "continuity_read",
+      "external_use_status": "internal",
+      "summary": "continuity_read_log.py writes JSONL receipts per openclaw-integration.md"
+    }
+  ]
+}

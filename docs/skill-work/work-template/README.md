@@ -22,6 +22,10 @@ It is **not** a truth surface by itself. It is a governed workspace for analysis
 
 ---
 
+## Lane contract templates (hardening)
+
+Copy-paste stubs for new `work-*` lanes: [lane-contract.template.md](lane-contract.template.md), [authorized-sources.template.yaml](authorized-sources.template.yaml), [lane-observability.template.json](lane-observability.template.json), [decision-ladder.template.md](decision-ladder.template.md). Roadmap: [WORK-LAYER-HARDENING-ROADMAP.md](../WORK-LAYER-HARDENING-ROADMAP.md).
+
 ## Glossary (lifecycle)
 
 - **Promoted-to-ledger:** A pattern, heuristic, or watch is recorded in the lane’s **WORK-LEDGER** (or lane-specific equivalent such as [STRATEGY.md](../work-strategy/STRATEGY.md)). Still WORK-only.  

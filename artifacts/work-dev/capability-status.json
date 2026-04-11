@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "continuity_read",
+      "title": "Continuity read logging",
+      "surface": "scripts/continuity_read_log.py + continuity-log.jsonl",
+      "status": "implemented",
+      "source_of_truth": [
+        "docs/skill-work/work-dev/openclaw-integration.md"
+      ],
+      "notes": [
+        "See BUILD-AI-GAP-003 closed in known-gaps.md"
+      ]
+    },
+    {
+      "id": "openclaw_stage",
+      "title": "OpenClaw staging to recursion-gate",
+      "surface": "bot + staging pipeline",
+      "status": "partial",
+      "source_of_truth": [
+        "docs/skill-work/work-dev/openclaw-integration.md"
+      ],
+      "notes": [
+        "Narrative vs classification gap BUILD-AI-GAP-006"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+# Copy one block per source into authorized-sources.yaml (or extend via sync script).
+# IDs: WS-SRC-NNNN (four digits, operator-assigned).
+
+id: WS-SRC-0000
+name: ""
+url: https://
+type: outlet
+lane_relevance:
+  - work-strategy
+trust_tier: 2
+update_cadence: weekly
+last_reviewed: "YYYY-MM-DD"
+promotion_eligible: true
+notes: ""
+bias_scope: ""

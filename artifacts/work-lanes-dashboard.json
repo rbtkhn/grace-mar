@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "1.0.0-work-lanes-dashboard",
+  "generatedAt": "2026-04-11T04:27:21.131765+00:00",
+  "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
+  "lanes": {
+    "work_strategy": {
+      "schemaVersion": "1.0.0-work-strategy",
+      "generatedAt": "2026-04-11T04:23:35.084601+00:00",
+      "lane": "work-strategy",
+      "metrics": {
+        "decision_point_files": 1,
+        "decision_points_open": 0,
+        "authorized_sources_yaml_entries": 5,
+        "promotion_policy_present": true
+      },
+      "notes": [
+        "Recommendation acceptance/rejection rates are phase-2 (need operator workflow).",
+        "Cross-lane references: manual until automated extract."
+      ]
+    },
+    "work_dev": {
+      "schemaVersion": "1.0.0-work-dev",
+      "generatedAt": "2026-04-11T04:25:09.269012+00:00",
+      "artifacts": {
+        "known-gaps.json": {
+          "version": 1,
+          "items": [
+            {
+              "id": "BUILD-AI-GAP-005",
+              "area": "Factorial scenario library",
+              "problem": "No full client-facing library beyond repo baselines",
+              "status": "partial",
+              "related_integration_ids": [],
+              "notes": [
+                "See known-gaps.md for suggested fix and consequence."
+              ]
+            },
+            {
+              "id": "BUILD-AI-GAP-007",
+              "area": "Progressive autonomy metrics",
+              "problem": "No instrumented shadow-mode or tier promotion",
+              "status": "planned",
+              "related_integration_ids": [],
+              "notes": [
+                "Dashboard or JSONL suggested in human table."
+              ]
+            }
+          ]
+        },
+        "capability-status.json": {
+          "version": 1,
+          "items": [
+            {
+              "id": "continuity_read",
+              "title": "Continuity read logging",
+              "surface": "scripts/continuity_read_log.py + continuity-log.jsonl",
+              "status": "implemented",
+              "source_of_truth": [
+                "docs/skill-work/work-dev/openclaw-integration.md"
+              ],
+              "notes": [
+                "See BUILD-AI-GAP-003 closed in known-gaps.md"
+              ]
+            },
+            {
+              "id": "openclaw_stage",
+              "title": "OpenClaw staging to recursion-gate",
+              "surface": "bot + staging pipeline",
+              "status": "partial",
+              "source_of_truth": [
+                "docs/skill-work/work-dev/openclaw-integration.md"
+              ],
+              "notes": [
+                "Narrative vs classification gap BUILD-AI-GAP-006"
+              ]
+            }
+          ]
+        },
+        "proof_ledger.json": {
+          "version": 1,
+          "entries": [
+            {
+              "id": "proof-continuity-001",
+              "context": "continuity_read",
+              "external_use_status": "internal",
+              "summary": "continuity_read_log.py writes JSONL receipts per openclaw-integration.md"
+            }
+          ]
+        }
+      }
+    },
+    "cadence": {
+      "schemaVersion": "1.0.0-cadence-pressure",
+      "generatedAt": "2026-04-11T04:25:43.178083+00:00",
+      "user_id": "grace-mar",
+      "days": 14,
+      "rhythm_summary": {
+        "user_id": "grace-mar",
+        "days": 14,
+        "event_count": 91,
+        "active_day_count": 7,
+        "discipline": "HEALTHY",
+        "issues": [],
+        "dream": {
+          "count": 6,
+          "last": "2026-04-09T06:17:00+00:00",
+          "days_ago": 1,
+          "ok": true
+        },
+        "bridge": {
+          "count": 10,
+          "last": "2026-04-11T02:39:00+00:00",
+          "days_ago": 0,
+          "sessions_without": 35
+        },
+        "coffee": {
+          "count": 46,
+          "per_active_day": 6.6,
+          "ok": true
+        },
+        "longest_gap": {
+          "hours": 15.1,
+          "start": "2026-04-09T23:23:00+00:00",
+          "end": "2026-04-10T14:28:00+00:00",
+          "ok": true
+        },
+        "model_tier": {
+          "counts": {
+            "unknown": 91
+          },
+          "pcts": {
+            "unknown": 100.0
+          },
+          "total": 91
+        }
+      },
+      "governance": {
+        "recursion_gate_pending_status_count": 1,
+        "gate_path": "/Users/robertkuhne/Documents/grace-mar/users/grace-mar/recursion-gate.md"
+      },
+      "pressure_signals": [
+        "high_coffee_volume"
+      ]
+    },
+    "work_dev_dashboard_legacy": {
+      "generated_at": "2026-04-07T04:23:44Z",
+      "integration_status_counts": {
+        "implemented": 11,
+        "partial": 2,
+        "documented_only": 1
+      },
+      "pipeline_event_counts": {
+        "staged": 22,
+        "applied": 43,
+        "intent_constitutional_critique": 20,
+        "approved": 2,
+        "dyad:checkpoint_request": 2,
+        "validation_failed": 8,
+        "openclaw_export": 1,
+        "rejected": 4,
+        "maintenance": 7,
+        "dyad:grounded_query": 1,
+        "sandbox_execution_pre": 1,
+        "sandbox_execution_post": 1
+      },
+      "provenance_completeness_score": 1.0,
+      "provenance_from_gate": false,
+      "lane_violation_count": 0,
+      "continuity_block_count": 19,
+      "gap_ids_open": [],
+      "notes": [
+        "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
+        "Regenerate after editing control-plane YAML."
+      ]
+    }
+  }
+}

@@ -1,0 +1,60 @@
+# Machine-readable authorized sources for work-strategy (incremental SSOT).
+# Human-readable table: work-strategy-sources.md — keep in sync via scripts/sync_strategy_sources.py --check
+version: 1
+ssot_note: "Seed subset; expand IDs to cover all rows in work-strategy-sources.md over time."
+sources:
+  - id: WS-SRC-0001
+    name: War on the Rocks
+    url: https://warontherocks.com/
+    type: outlet
+    lane_relevance: [work-strategy]
+    trust_tier: 2
+    update_cadence: daily
+    last_reviewed: "2026-04-10"
+    promotion_eligible: true
+    notes: "National security commentary; practitioners and academics."
+    bias_scope: "US national-security frame; editorial selection."
+  - id: WS-SRC-0002
+    name: Defense News
+    url: https://www.defensenews.com/
+    type: outlet
+    lane_relevance: [work-strategy]
+    trust_tier: 2
+    update_cadence: daily
+    last_reviewed: "2026-04-10"
+    promotion_eligible: true
+    notes: "Defense industry and military policy."
+    bias_scope: "Industry and US/allied policy tilt."
+  - id: WS-SRC-0003
+    name: The Cipher Brief
+    url: https://www.thecipherbrief.com/
+    type: outlet
+    lane_relevance: [work-strategy]
+    trust_tier: 2
+    update_cadence: daily
+    last_reviewed: "2026-04-10"
+    promotion_eligible: true
+    notes: "Former IC professionals; often paywalled."
+    bias_scope: "Western IC-adjacent framing."
+  - id: WS-SRC-0004
+    name: Foreign Policy
+    url: https://foreignpolicy.com/
+    type: outlet
+    lane_relevance: [work-strategy]
+    trust_tier: 2
+    update_cadence: daily
+    last_reviewed: "2026-04-10"
+    promotion_eligible: true
+    notes: "Global affairs; paywalled longform."
+    bias_scope: "Editorial line varies by author."
+  - id: WS-SRC-0005
+    name: ACLED Data
+    url: https://acleddata.com/
+    type: data
+    lane_relevance: [work-strategy]
+    trust_tier: 1
+    update_cadence: weekly
+    last_reviewed: "2026-04-10"
+    promotion_eligible: true
+    notes: "Event data; methodology documented."
+    bias_scope: "Coverage gaps in low-reporting regions."

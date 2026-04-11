@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "work_strategy_promotion_policy",
+  "version": 1,
+  "description": "WORK-only. Stages and allowed transitions for strategy promotion ladder. Not Record merge authority.",
+  "stages": [
+    { "id": "notebook_note", "label": "Notebook note" },
+    { "id": "active_watch", "label": "Active watch" },
+    { "id": "decision_point", "label": "Decision point" },
+    { "id": "recommendation", "label": "Recommendation" },
+    { "id": "promoted_watch", "label": "Promoted watch / cross-lane commitment" },
+    { "id": "archived", "label": "Archived / resolved" }
+  ],
+  "allowed_transitions": [
+    ["notebook_note", "active_watch"],
+    ["active_watch", "decision_point"],
+    ["decision_point", "recommendation"],
+    ["recommendation", "promoted_watch"],
+    ["promoted_watch", "archived"],
+    ["active_watch", "archived"],
+    ["decision_point", "archived"],
+    ["recommendation", "archived"]
+  ],
+  "record_boundary": "RECURSION_GATE_ONLY"
+}

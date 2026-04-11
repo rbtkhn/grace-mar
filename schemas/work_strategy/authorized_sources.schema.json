@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "work_strategy_authorized_sources",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "sources"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "ssot_note": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "url",
+          "type",
+          "lane_relevance",
+          "trust_tier",
+          "update_cadence",
+          "last_reviewed",
+          "promotion_eligible"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^WS-SRC-[0-9]{4}$"
+          },
+          "name": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "type": {
+            "type": "string",
+            "enum": ["outlet", "newsletter", "data", "newsletter_substack", "academic", "government", "other"]
+          },
+          "lane_relevance": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["work-strategy", "work-politics", "work-dev", "work-jiang"] },
+            "minItems": 1
+          },
+          "trust_tier": { "type": "integer", "minimum": 1, "maximum": 3 },
+          "update_cadence": { "type": "string" },
+          "last_reviewed": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "promotion_eligible": { "type": "boolean" },
+          "notes": { "type": "string" },
+          "bias_scope": { "type": "string" }
+        }
+      }
+    }
+  }
+}

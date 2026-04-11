@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0-work-strategy",
+  "generatedAt": "2026-04-11T04:23:35.084601+00:00",
+  "lane": "work-strategy",
+  "metrics": {
+    "decision_point_files": 1,
+    "decision_points_open": 0,
+    "authorized_sources_yaml_entries": 5,
+    "promotion_policy_present": true
+  },
+  "notes": [
+    "Recommendation acceptance/rejection rates are phase-2 (need operator workflow).",
+    "Cross-lane references: manual until automated extract."
+  ]
+}

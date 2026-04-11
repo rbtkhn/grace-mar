@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "id": "BUILD-AI-GAP-005",
+      "area": "Factorial scenario library",
+      "problem": "No full client-facing library beyond repo baselines",
+      "status": "partial",
+      "related_integration_ids": [],
+      "notes": [
+        "See known-gaps.md for suggested fix and consequence."
+      ]
+    },
+    {
+      "id": "BUILD-AI-GAP-007",
+      "area": "Progressive autonomy metrics",
+      "problem": "No instrumented shadow-mode or tier promotion",
+      "status": "planned",
+      "related_integration_ids": [],
+      "notes": [
+        "Dashboard or JSONL suggested in human table."
+      ]
+    }
+  ]
+}

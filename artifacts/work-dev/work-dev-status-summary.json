@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0-work-dev",
+  "generatedAt": "2026-04-11T04:25:09.269012+00:00",
+  "artifacts": {
+    "known-gaps.json": {
+      "version": 1,
+      "items": [
+        {
+          "id": "BUILD-AI-GAP-005",
+          "area": "Factorial scenario library",
+          "problem": "No full client-facing library beyond repo baselines",
+          "status": "partial",
+          "related_integration_ids": [],
+          "notes": [
+            "See known-gaps.md for suggested fix and consequence."
+          ]
+        },
+        {
+          "id": "BUILD-AI-GAP-007",
+          "area": "Progressive autonomy metrics",
+          "problem": "No instrumented shadow-mode or tier promotion",
+          "status": "planned",
+          "related_integration_ids": [],
+          "notes": [
+            "Dashboard or JSONL suggested in human table."
+          ]
+        }
+      ]
+    },
+    "capability-status.json": {
+      "version": 1,
+      "items": [
+        {
+          "id": "continuity_read",
+          "title": "Continuity read logging",
+          "surface": "scripts/continuity_read_log.py + continuity-log.jsonl",
+          "status": "implemented",
+          "source_of_truth": [
+            "docs/skill-work/work-dev/openclaw-integration.md"
+          ],
+          "notes": [
+            "See BUILD-AI-GAP-003 closed in known-gaps.md"
+          ]
+        },
+        {
+          "id": "openclaw_stage",
+          "title": "OpenClaw staging to recursion-gate",
+          "surface": "bot + staging pipeline",
+          "status": "partial",
+          "source_of_truth": [
+            "docs/skill-work/work-dev/openclaw-integration.md"
+          ],
+          "notes": [
+            "Narrative vs classification gap BUILD-AI-GAP-006"
+          ]
+        }
+      ]
+    },
+    "proof_ledger.json": {
+      "version": 1,
+      "entries": [
+        {
+          "id": "proof-continuity-001",
+          "context": "continuity_read",
+          "external_use_status": "internal",
+          "summary": "continuity_read_log.py writes JSONL receipts per openclaw-integration.md"
+        }
+      ]
+    }
+  }
+}

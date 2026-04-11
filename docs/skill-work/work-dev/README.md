@@ -36,6 +36,11 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 | Doc / file | Purpose |
 |------------|---------|
 | **This README** | Objective, scope, and principles for work-dev (includes former work-build-ai). |
+| **[implementation-ledger.md](implementation-ledger.md)** | Narrative spine for capability/gap machine artifacts (`artifacts/work-dev/*.json`). |
+| **[capability-registry.md](capability-registry.md)** | Integration ids ↔ surfaces (aligns with gap `related_integration_ids`). |
+| **[gap-classification.md](gap-classification.md)** | Severity / status vocabulary for [known-gaps.md](known-gaps.md). |
+| **[claim-proof-standard.md](claim-proof-standard.md)** | Implemented capabilities must cite tests, scripts, receipts, or demos. |
+| **[verification-runs/](verification-runs/README.md)** | Manual/script verification receipts. |
 | **[three-compounding-loops.md](three-compounding-loops.md)** | Record vs WORK vs CI — how compounding works in each loop and how they must interact (gate, no draft-as-truth). |
 | **[persistence-and-memory-surfaces.md](persistence-and-memory-surfaces.md)** | What persists where (gate, MEMORY, vendor agents, exports) vs outcome-agent dimensions; assumption-labeled efficiency note. |
 | **[delegation-spec-external-agents.md](delegation-spec-external-agents.md)** | External outcome agents: dimension map, 7-section delegation outline, copy-paste evaluation prompt (operator WORK). |

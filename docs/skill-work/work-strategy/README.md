@@ -33,9 +33,18 @@
 | **[weak-signal-template.md](weak-signal-template.md)** | Markdown stub for **§1f** in the daily brief. |
 | **[analogy-audit-template.md](analogy-audit-template.md)** | Short form when a historical parallel is proposed (current-events + brief). |
 | **[decision-point-template.md](decision-point-template.md)** | Structured options when an escalating watch needs a recommendation before promotion. Three-minds perspectives default. |
+| **[promotion-ladder.md](promotion-ladder.md)** | Stages from notebook note → promoted watch; **WORK-only** (see authority boundary vs Record). |
+| **[watch-promotion-rules.md](watch-promotion-rules.md)** | When to promote watches and open decision points. |
+| **[decision-points/](decision-points/README.md)** | Instance files (`YYYY-MM-DD-slug.md`). |
+| **[promotion-policy.json](promotion-policy.json)** | Machine-readable stage ids (v0). |
+| **[authorized-sources.yaml](authorized-sources.yaml)** | Structured sources; pairs with [work-strategy-sources.md](work-strategy-sources.md). |
+| **[source-tiers.md](source-tiers.md)** | Trust tier meanings + phased enforcement. |
+| **[observability.md](observability.md)** | Lane metrics artifact (`artifacts/work-strategy/strategy-observability.json`). |
+| **[strategy-health.md](strategy-health.md)** | How to read observability numbers. |
+| **[../WORK-LAYER-HARDENING-ROADMAP.md](../WORK-LAYER-HARDENING-ROADMAP.md)** | Full work-layer sequencing (strategy → dev → cadence → dashboard). |
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → **2.5 analogy audit** (when parallel proposed) → Council → Draft → Triangulation → Synthesis (WORK only). |
 | **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / **§II-A active watches** / SCHOLAR / **§III-A analogy watchlist** / **§IV operator strategy log** (additive notes in-file; not CMC `MEM–*` shards); not Record. |
-| **[strategy-notebook/](strategy-notebook/README.md)** | **Daily operator journal** for strategy judgment — PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md). Not [work-strategy-history](work-strategy-history.md). WORK only. |
+| **[strategy-notebook/](strategy-notebook/README.md)** | **Daily operator journal** for strategy judgment — PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md); optional **`### History resonance`** wires [history-notebook](history-notebook/README.md) chapter ids into each day. Not [work-strategy-history](work-strategy-history.md). WORK only. |
 | **[LEARN_MODE_RULES.md](LEARN_MODE_RULES.md)** | LEARN MODE adapter: Tri-Frame protocol, extraction format, governance aligned with STRATEGY §VI. |
 | **[LEARN_MODE_OPERATOR_PROMPT.md](LEARN_MODE_OPERATOR_PROMPT.md)** | Copy-paste operator / Composer prompt for work-strategy sessions and LEARN MODE. |
 | **[minds/](minds/README.md)** | Tri-Frame entry stubs (Mercouris, Mearsheimer, Barnes) → `CIV–MIND–*.md` in civilization_memory. Advisory patterns: [minds/MINDS-SKILL-STRATEGY-PATTERNS.md](minds/MINDS-SKILL-STRATEGY-PATTERNS.md). |

@@ -80,3 +80,5 @@ Independent analysis with intelligence or geopolitical focus. Curated from [01-m
 **What was excluded:** Political/campaign outlets (→ [work-politics](../work-politics/work-politics-sources.md)), AI/tech/cyber (→ [work-dev](../work-dev/work-dev-sources.md)), polling, aggregators, colleges, book lists, civics education. Sources already in [daily-brief RSS](daily-brief-config.json) (Reuters, BBC, Defense One, NPR, The Hill, Roll Call, etc.) are not duplicated here.
 
 **Parallel:** [work-dev-sources.md](../work-dev/work-dev-sources.md) | [work-politics-sources.md](../work-politics/work-politics-sources.md)
+
+**Structured mirror (incremental):** [authorized-sources.yaml](authorized-sources.yaml) + [source-tiers.md](source-tiers.md) — validate with `python3 scripts/validate_work_strategy_sources.py`; compare coverage with `python3 scripts/sync_strategy_sources.py`.
