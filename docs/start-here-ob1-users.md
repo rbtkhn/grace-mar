@@ -24,7 +24,7 @@ Plain-language bridge for people who know **Open Brain (OB1)**-style systems: on
 
 - **Observable state** — pipeline, observability feeds, session tooling ([observability.md](observability.md), [session-observability.md](session-observability.md)).
 - **Skills culture** — Cursor **skills**, portable operator assets, plus **SKILLS** as Record capability ([skills-explained.md](skills-explained.md)).
-- **Integrations and bridges** — OpenClaw, exports, prepared context ([openclaw-integration.md](openclaw-integration.md), [prepared-context-layer](prepared-context-layer.md) in state model docs).
+- **Integrations and bridges** — OpenClaw, exports, prepared context ([openclaw-integration.md](openclaw-integration.md), [prepared-context-layer.md](prepared-context-layer.md) in [state-model.md](state-model.md)).
 - **A queue before durable memory** — candidates land in the **Approval Inbox** (`recursion-gate.md`); nothing becomes lasting Record truth without companion approval ([AGENTS.md](../AGENTS.md) § Gated Pipeline).
 
 ---
