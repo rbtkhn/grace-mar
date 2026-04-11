@@ -4,6 +4,8 @@
 
 **Parallel notebook:** [chapters/2026-04/meta.md](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/meta.md) § Polyphony — **update both files in the same session** when the month’s arc or this book’s active queue focus shifts.
 
+**History Notebook (chapter drafting):** [POLYPHONY-WORKFLOW.md](../../../docs/skill-work/work-strategy/history-notebook/POLYPHONY-WORKFLOW.md) — same M→Me→B + tension shape, applied to neutral spine → public STYLE-GUIDE chapters (operator-only voice pass; no mind names in published prose).
+
 **Book scope label (this file):** Volume I Geo-Strategy — twenty-chapter arc + April 2026 strategy alignment (Islamabad / Hormuz / pause). Revise the line when the operator’s PH reading head or volume emphasis moves.
 
 ## Polyphony / lens tension (Volume I Geo-Strategy — aligned with month 2026-04)

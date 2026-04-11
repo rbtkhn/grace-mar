@@ -5,6 +5,7 @@
 **Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
 
 - **Chapter format:** See [STYLE-GUIDE.md](STYLE-GUIDE.md)
+- **Polyphonic drafting (operator):** [POLYPHONY-WORKFLOW.md](POLYPHONY-WORKFLOW.md) — CIV-MIND passes on a neutral spine, then public translation (no mind names in chapter prose)
 - **Architecture SSOT:** [book-architecture.yaml](book-architecture.yaml) — all chapters, volumes, sub-groups, arcs
 - **PH wiring SSOT:** [cross-book-map.yaml](cross-book-map.yaml) — sole source of truth for Predictive History ↔ History Notebook links
 - **Growth model:** One volume at a time — design → write → validate

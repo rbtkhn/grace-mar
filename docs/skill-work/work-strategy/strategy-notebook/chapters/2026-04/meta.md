@@ -18,6 +18,7 @@
 
 ## Polyphony / lens tension (month)
 
+- **History Notebook (parallel):** Operator workflow for chapter drafting — spine → M→Me→B → tension → STYLE-GUIDE translation; see [POLYPHONY-WORKFLOW.md](../../../history-notebook/POLYPHONY-WORKFLOW.md).
 - **Mercouris:** Good day — the picture this month is **hard to say exactly**: ceasefire talk sits inside **competing legitimacies** (who gets to define “pause,” **Lebanon** in or out, **Hormuz** as toll vs open passage). Now, it’s important to stress: **Islamabad** and **GCC** choreography matter as much as White House tweets; **institutional** **continuity** (who still has a seat at the table after the shooting stops) is the thread I’d keep returning to.
 - **Mearsheimer:** When you talk about this pause, it’s important to understand that it **does not freeze** the **balance of power** — the fact is **Hormuz** and **Lebanon** are **scope** fights, not side issues; the question you have to ask yourself is who gains **relative power** while diplomacy runs. This is not about personalities alone; it’s about **incentives** and **buck-passing** among allies.
 - **Barnes:** Real simple — **who pays** and **what’s enforceable**: **aid** lines, **interceptor** and **radar** **attrition**, **oil** and **poll** numbers as **speaker claims** until verified; the short answer is trace **budget → ordnance → bodies** and **voter** **backlash**, not who won the argument on cable.
