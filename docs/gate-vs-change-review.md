@@ -56,6 +56,16 @@ Keep routine IX-A/B/C lines and evidence-linked updates **on the gate** unless o
 
 ---
 
+## Gate-only escalation vs change-review
+
+Some candidates get **`manual_escalate`** in [scripts/recursion_gate_review.py](../scripts/recursion_gate_review.py) (conflicts, advisory flags, duplicate hints). Those items are **still in `recursion-gate.md`** until approved, edited, or rejected — escalation **adds attention**, not necessarily a different queue.
+
+**Change-review** is for material edits that need proposals, diffs, and decision records. Use the CLI below; do **not** assume a `/escalate` bot command exists in the reference implementation.
+
+**Decision table** (summary): [recursion-gate-three-tier.md](recursion-gate-three-tier.md) § Decision table.
+
+---
+
 ## Bridge tooling (grace-mar reference implementation)
 
 In **grace-mar**, operators may run:
@@ -76,6 +86,7 @@ Use `--allow-empty` while **decisions/** and/or **diffs/** are still empty. When
 
 ## See also
 
+- [recursion-gate-three-tier.md](recursion-gate-three-tier.md) — Tier 1–3 traffic pattern, Bronze vs future Silver/Gold, metrics
 - [template-instance-contract.md](https://github.com/rbtkhn/companion-self/blob/main/docs/template-instance-contract.md) (companion-self) — compatibility roles
 - [identity-fork-protocol.md](identity-fork-protocol.md) — IFP §4.1 workflow and §4.3 material escalation
 - [boundary-review-queue.md](boundary-review-queue.md) — boundary classification vs gate

@@ -4,6 +4,8 @@
 
 Governed by Identity Fork Protocol: agent may stage, may not merge. The gate is where the **recursive** loop turns—proposed changes wait here until the companion approves; then they enter the Record and the system improves. Hence *recursion-gate*.
 
+**Operator routing:** [docs/recursion-gate-three-tier.md](../../docs/recursion-gate-three-tier.md) — fast vs normal vs escalated review, change-review export, work-politics batch scope vs tier depth.
+
 ---
 
 ## Candidates

@@ -55,7 +55,7 @@ python scripts/emit_pipeline_event.py merge_feedback CANDIDATE-0040 helpful=true
 python scripts/emit_pipeline_event.py merge_feedback CANDIDATE-0041 helpful=false note="Voice still didn't use it"
 ```
 
-Manual; supports tuning and benchmark (merge quality).
+**Manual only** — not emitted automatically at merge time; supports tuning and benchmark (merge quality). Do not treat it as a substitute for **instrumented** metrics (e.g. median review time by tier), which would require separate pipeline logging. See [recursion-gate-three-tier.md](recursion-gate-three-tier.md) § Metrics.
 
 ---
 
@@ -73,7 +73,11 @@ See [openclaw-integration.md](openclaw-integration.md) § Oversight cadence.
 
 ## Low-friction approval
 
-For low-risk candidates (single IX target, no conflicts, no advisory flags), operators can one-tap approve:
+**Bronze reference mode:** Every merge still goes through companion approval; this path is **low-friction UX** inside [identity-fork-protocol.md](identity-fork-protocol.md) §9.3 **Bronze** (manual each change). Future **Silver/Gold** batch modes are separate and not the same as “fast lane.”
+
+**Machine eligibility** matches `ready_for_quick_merge` in [scripts/recursion_gate_review.py](../scripts/recursion_gate_review.py): among other checks, **`profile_target` must match IX-A/B/C** (`^IX-[ABC]\.`), with no multi-target, conflict markers, advisory flags, or duplicate hints. See [recursion-gate-three-tier.md](recursion-gate-three-tier.md) § Tier 1.
+
+For eligible candidates, operators can one-tap approve:
 
 - **In /review:** Click ✅ Approve — if low-risk, merges immediately (no receipt step).
 - **Command:** `/approve CANDIDATE-0040` — same behavior for operator chats.
@@ -87,3 +91,4 @@ Set `GRACE_MAR_OPERATOR_NAME` for merge audit. Higher-risk candidates use the no
 - [rejection-feedback.md](rejection-feedback.md) — rejection reasons
 - [openclaw-integration.md](openclaw-integration.md) — session continuity, heartbeat
 - [work-build-ai/economic-benchmarks.md](skill-work/work-build-ai/economic-benchmarks.md) — metrics sources
+- [recursion-gate-three-tier.md](recursion-gate-three-tier.md) — tier lanes, metrics (instrumented vs manual)
