@@ -22,13 +22,15 @@
 
 **Invariant:** The companion (operator) is the decision-maker. The agent drafts, researches, and tracks; it does not make campaign strategy, endorse, or merge political claims into the Record without staging and companion approval.
 
+**work-dev cross-link:** Harness replay demos, video takeaway notes (OpenClaw, Perplexity, DeepSeek, solo-founder), competitor scans, capability one-pager, and actionable feature backlogs for the assistant-brain / integration line live under **[work-dev](../work-dev/README.md)**. This folder keeps campaign doctrine, polyphonic **protocol** specs, and KY/Massie surfaces; [workspace.md](workspace.md) lists both with paths.
+
 ---
 
 ## Sync with RECURSION-GATE
 
 Work-politics work lives in **two places**: this folder (**docs**, working truth) and **`users/grace-mar/recursion-gate.md`** (gated merges into SELF / EVIDENCE / prompt). Optimal sync = **know which lane** and **touch the gate on a rhythm**.
 
-**Audit replay (example):** [harness-replay-work-politics-demo.md](harness-replay-work-politics-demo.md) — run `replay_harness_event.py` on a work-politics `CANDIDATE-*` and read pipeline / harness / receipts alongside gate YAML.
+**Audit replay (example):** [harness-replay-work-politics-demo.md](../work-dev/harness-replay-work-politics-demo.md) — run `replay_harness_event.py` on a work-politics `CANDIDATE-*` and read pipeline / harness / receipts alongside gate YAML.
 
 ### Doc-only (no candidate)
 

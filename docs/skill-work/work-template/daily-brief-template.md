@@ -6,6 +6,8 @@
 
 **Important:** This file uses **semantic section titles only** — no fixed `1b` / `1d` numbering. Each lane assigns numbers (or dates) locally. **work-strategy** uses a numbered combined brief; see mapping below.
 
+**SSOT:** The authoritative numbered spec for the shared work-politics + work-strategy daily brief is [work-strategy/daily-brief-template.md](../work-strategy/daily-brief-template.md). This generic scaffold is for cross-lane pattern reuse only.
+
 ---
 
 ## Lane snapshot

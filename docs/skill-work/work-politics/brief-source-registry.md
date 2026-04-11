@@ -1,5 +1,7 @@
 # Brief source registry — work-politics
 
+**Discovery (strategy lane):** [../work-strategy/brief-source-registry.md](../work-strategy/brief-source-registry.md) is a pointer stub only—**edit this file**, not the stub.
+
 Structured intake surface for the weekly brief.
 
 Update `Last checked` when you review a source. `Status` is for operator workflow, not Record truth.

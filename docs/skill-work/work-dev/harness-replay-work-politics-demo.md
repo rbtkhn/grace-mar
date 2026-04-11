@@ -1,5 +1,7 @@
 # Harness Event Replay — work-politics demonstration
 
+**Lane:** Document lives under **work-dev** (audit / harness tooling); subject matter is a **work-politics** gate merge. Territory scope: [work-politics README](../work-politics/README.md).
+
 This walks through **Harness Event Replay** on a **real work-politics candidate** already in `users/grace-mar/`. It shows how **audit lane** (`pipeline-events.jsonl`, `harness-events.jsonl`, `merge-receipts.jsonl`) lines up with **gate YAML** (`territory: work-politics`, `channel_key: operator:wap:*`) and **EVIDENCE** (`ACT-*`).
 
 Full spec: [harness-replay-spec.md](../../harness-replay-spec.md) · CLI: [harness-replay.md](../../harness-replay.md).
@@ -76,6 +78,6 @@ Merges **after** the pipeline envelope work add per-line metadata. When present 
 
 ## Related
 
-- [README.md](README.md) — work-politics scope and gate rhythm
+- [work-politics/README.md](../work-politics/README.md) — work-politics scope and gate rhythm
 - [boundary-review-queue.md](../../boundary-review-queue.md) — where things should go vs replay (why they went there)
 - `scripts/replay_harness_event.py` — implementation

@@ -2,7 +2,7 @@
 
 **Purpose:** Evidence of past performance for the assistant brain product and Polyphonic cognition protocol. Used to populate the capability statement (§ Past performance / proof), proposals, and federal past-performance sections. Only actual, verifiable outcomes; no classified or sensitive claims; anonymize as needed.
 
-**Related:** [capability-statement-assistant-brain.md](capability-statement-assistant-brain.md), [proof-ledger.md](proof-ledger.md), [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md).
+**Related:** [capability-statement-assistant-brain.md](../work-dev/capability-statement-assistant-brain.md), [proof-ledger.md](proof-ledger.md), [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md).
 
 ---
 
@@ -31,7 +31,7 @@
 
 ## How to use this file
 
-1. **Capability statement:** Pull 1–3 reusable lines from the table (PP-001 and any filled PP-002/003/004) into [capability-statement-assistant-brain.md](capability-statement-assistant-brain.md) § Past performance / proof. Keep anonymized for federal.
+1. **Capability statement:** Pull 1–3 reusable lines from the table (PP-001 and any filled PP-002/003/004) into [capability-statement-assistant-brain.md](../work-dev/capability-statement-assistant-brain.md) § Past performance / proof. Keep anonymized for federal.
 2. **Proposals:** Use the same lines in past-performance sections of proposals; expand "What was delivered" and "Outcome" into short narrative if required.
 3. **Add entries:** When you have a real, verifiable outcome (campaign, advisory, pilot, or before/after artifact), add a row. Use next PP-ID; set "Use in federal?" only when safe and anonymized.
 4. **Guardrail:** Do not invent clients, dollar amounts, or outcomes. Do not include classified or sensitive claims. For federal, anonymize (e.g. "Federal primary campaign," "Executive-branch-adjacent office").

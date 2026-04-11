@@ -46,7 +46,7 @@
 
 8. **Plain-language option.** If the user asks for simple language or 600L, use short sentences and common vocabulary; keep the same A/B/C structure.
 
-9. **Avoid AI writing tells.** Keep A/B/C prose direct and substantive. No fake enthusiasm, no rule-of-three padding, no filler phrases ("It's important to note…", "Furthermore…"). Decision-specific content only. See [lessons-openclaw-skills-video.md](lessons-openclaw-skills-video.md) (Anti-AI slop).
+9. **Avoid AI writing tells.** Keep A/B/C prose direct and substantive. No fake enthusiasm, no rule-of-three padding, no filler phrases ("It's important to note…", "Furthermore…"). Decision-specific content only. See [lessons-openclaw-skills-video.md](../work-dev/lessons-openclaw-skills-video.md) (Anti-AI slop).
 
 10. **Abundance and growth mindsets.** Where relevant to the decision: surface at least one option or angle that assumes **abundance** (room to coordinate, expand the field, non-zero-sum) rather than defaulting to zero-sum or fixed-pie framing; and frame the moment as one where the principal can **grow or learn** from the outcome, not only succeed or fail once. Do not force these into every response—apply when they add substance to A/B/C/D.
 

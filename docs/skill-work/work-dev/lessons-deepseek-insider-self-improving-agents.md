@@ -2,7 +2,7 @@
 
 **Source:** YouTube — David Andre podcast with John Wang (AI researcher, DeepSeek V2 author, R1 training methods, 300+ citations). Topics: self-improving agents, memory as bottleneck, learning from failure, reasoning collapse, benchmarks, China vs US, what makes a true agent. **Use:** Positioning and product design for the assistant brain in a world racing toward self-improving agents.
 
-**Related:** [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md), [lessons-perplexity-computer-video.md](lessons-perplexity-computer-video.md).
+**Related:** [state-evolved-assistant-brain-heads-of-state.md](../work-politics/state-evolved-assistant-brain-heads-of-state.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md), [lessons-perplexity-computer-video.md](lessons-perplexity-computer-video.md).
 
 ---
 

@@ -50,15 +50,15 @@ Use this file when you want one place to understand:
 | `scenario-polyphonic-cognition-skill.md` | Illustrated scenario: prep before a call, instinct-as-input, A/B/C + tension + reversibility, "we did X" |
 | `cheat-sheet-polyphonic-cognition-protocol.md` | One-page staff training: when to query, read A/B/C, relay only if "record," "we did X" after |
 | `one-pager-assistant-brain-cognitive-polyphony.md` | Reusable one-pager: assistant brain + polyphonic cognition; federal and "what is this system" |
-| `capability-statement-assistant-brain.md` | Reusable capability statement (what we provide, why unique, who for, past performance); federal and general |
+| [capability-statement-assistant-brain.md](../work-dev/capability-statement-assistant-brain.md) | Reusable capability statement (what we provide, why unique, who for, past performance); federal and general (**work-dev**) |
 | `past-performance-assistant-brain.md` | Past performance evidence for assistant brain / polyphonic cognition; feeds capability statement and proposals; PP-001 (campaign) + placeholders for A/B/C prep, before/after, training |
-| `competitor-research-assistant-brain-judgment-testing.md` | Competitor scan: multi-perspective / options / debate tools, government/civic, research; positioning vs us |
+| [competitor-research-assistant-brain-judgment-testing.md](../work-dev/competitor-research-assistant-brain-judgment-testing.md) | Competitor scan: multi-perspective / options / debate tools, government/civic, research; positioning vs us (**work-dev**) |
 | `uare-ai-competitive-notes.md` | Uare.ai (Eternos): blog excerpts, LoCascio/Mayfield/Boldstart quotes; pitch comparison and differentiation |
-| `lessons-solo-founder-ai-video.md` | Lessons from solo-founder/AI-talent video: taste vs conviction, speed of control, coordination proxy, blocked by overhead; mapped to assistant brain |
-| `lessons-perplexity-computer-video.md` | Lessons from Perplexity Computer video: skills, sub-agents, Model Council vs us, memory, integrations, visual output; actionable takeaways |
-| `lessons-deepseek-insider-self-improving-AGENTS.md` | Lessons from DeepSeek Insider (John Wang): sovereign layer vs self-improving agents, memory/bounded session, input-grounded A/B/C, human learning; positioning |
-| `lessons-openclaw-skills-video.md` | Lessons from OpenClaw skills video: Larry (constraints from failure), review vs mad dog, Anti-AI slop, Mission Control complementary, security; protocol output quality |
-| `actionable-features-and-insights.md` | Actionable features (instinct-as-input, reversibility, contradiction badge, post-decision), copy snippets, process items; priority order |
+| [lessons-solo-founder-ai-video.md](../work-dev/lessons-solo-founder-ai-video.md) | Lessons from solo-founder/AI-talent video: taste vs conviction, speed of control, coordination proxy, blocked by overhead; mapped to assistant brain (**work-dev**) |
+| [lessons-perplexity-computer-video.md](../work-dev/lessons-perplexity-computer-video.md) | Lessons from Perplexity Computer video: skills, sub-agents, Model Council vs us, memory, integrations, visual output; actionable takeaways (**work-dev**) |
+| [lessons-deepseek-insider-self-improving-agents.md](../work-dev/lessons-deepseek-insider-self-improving-agents.md) | Lessons from DeepSeek Insider (John Wang): sovereign layer vs self-improving agents, memory/bounded session, input-grounded A/B/C, human learning; positioning (**work-dev**) |
+| [lessons-openclaw-skills-video.md](../work-dev/lessons-openclaw-skills-video.md) | Lessons from OpenClaw skills video: Larry (constraints from failure), review vs mad dog, Anti-AI slop, Mission Control complementary, security; protocol output quality (**work-dev**) |
+| [actionable-features-and-insights.md](../work-dev/actionable-features-and-insights.md) | Actionable features (instinct-as-input, reversibility, contradiction badge, post-decision), copy snippets, process items; priority order (**work-dev**) |
 | `civ-mem-test-run-*.md` | Dated test runs (DRAFT until signed) |
 | `principal-profile.md` | Principal baseline |
 | `principal-portrait-literary-sketch.md` | Optional long-form literary portrait (WORK); tone / narrative reference — not factual baseline |

@@ -2,13 +2,13 @@
 
 **Use:** Federal (GSA, BPA, sole-source, subcontract), "what we do," capability one-pager. No classified or sensitive claims.
 
-**Related:** [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md), [one-pager-assistant-brain-cognitive-polyphony.md](one-pager-assistant-brain-cognitive-polyphony.md).
+**Related:** [state-evolved-assistant-brain-heads-of-state.md](../work-politics/state-evolved-assistant-brain-heads-of-state.md), [one-pager-assistant-brain-cognitive-polyphony.md](../work-politics/one-pager-assistant-brain-cognitive-polyphony.md).
 
 ---
 
 ## What we provide
 
-- **Method:** **Polyphonic cognition protocol** — structured training and cheat sheet for when to query, how to read A/B/C and tensions, relay-only rule. See [cheat-sheet-polyphonic-cognition-protocol.md](cheat-sheet-polyphonic-cognition-protocol.md).
+- **Method:** **Polyphonic cognition protocol** — structured training and cheat sheet for when to query, how to read A/B/C and tensions, relay-only rule. See [cheat-sheet-polyphonic-cognition-protocol.md](../work-politics/cheat-sheet-polyphonic-cognition-protocol.md).
 - **Assistant brain (STATE-evolved):** A persistent decision-orientation layer that surfaces **options** through **multiple fixed perspectives** (e.g. legitimacy/orientation, structure/constraints, liability/mechanism), preserves tensions between perspectives, and **never writes to the principal's or institution's record** unless the user explicitly invokes relay ("save," "record," "add to log").
 - **Polyphonic cognition:** The product embodies **polyphonic cognition** — multiple perspectives held at once, no single resolution. Fixed slots (A/B/C, optionally D) ensure the same angles are always available; duty of competence ensures the option set includes the full range, including accommodation/reversal options.
 - **Optional civ-mem lens:** When the institution has ingested the relevant corpus, one perspective can be the "civ-mem lens" (condition, seam, one subject many tongues, purpose of history) — as one angle among others, not the only one.
@@ -39,7 +39,7 @@
 ## Past performance / proof (fill as applicable)
 
 - **Structured briefing and decision-support:** Delivered structured briefs, research, and decision-support workflow for a federal primary campaign; principal and staff used pre-decision orientation and weekly brief process through the cycle.
-- **Before/after artifact (when available):** One anonymized example: principal's instinct was X; field showed A/B/C; principal chose Y; (if possible) liability view changed their read. Add when you have a safe example. See [past-performance-assistant-brain.md](past-performance-assistant-brain.md).
+- **Before/after artifact (when available):** One anonymized example: principal's instinct was X; field showed A/B/C; principal chose Y; (if possible) liability view changed their read. Add when you have a safe example. See [past-performance-assistant-brain.md](../work-politics/past-performance-assistant-brain.md).
 - *No classified or sensitive claims.*
 
 ---

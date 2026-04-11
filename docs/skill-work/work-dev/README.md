@@ -99,6 +99,14 @@ Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/RE
 | **[partner-channel.md](partner-channel.md)** | Borrowed-authority / partner path for growth. |
 | **[objection-log.md](objection-log.md)** | Market-learning and positioning feedback loop. |
 | **[crypto-roadmap.md](../../crypto-roadmap.md)** | Cross-cutting roadmap for using cryptocurrency as an authority, settlement, and access layer. |
+| **[harness-replay-work-politics-demo.md](harness-replay-work-politics-demo.md)** | Harness replay walkthrough for a **work-politics** gate merge (audit tooling; territory doc links to [work-politics](../work-politics/README.md)). |
+| **[actionable-features-and-insights.md](actionable-features-and-insights.md)** | Product/UX feature backlog and copy snippets (polyphonic cognition, OpenClaw-adjacent); links to work-politics protocol docs. |
+| **[capability-statement-assistant-brain.md](capability-statement-assistant-brain.md)** | Federal-style capability one-pager for assistant-brain / polyphonic cognition offer. |
+| **[competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md)** | Competitor scan: multi-perspective / judgment-testing products vs assistant brain. |
+| **[lessons-openclaw-skills-video.md](lessons-openclaw-skills-video.md)** | Notes from OpenClaw skills / output-quality video. |
+| **[lessons-perplexity-computer-video.md](lessons-perplexity-computer-video.md)** | Notes from Perplexity Comet/agent-skills video. |
+| **[lessons-deepseek-insider-self-improving-agents.md](lessons-deepseek-insider-self-improving-agents.md)** | Notes from DeepSeek Insider (self-improving agents, bounded session). |
+| **[lessons-solo-founder-ai-video.md](lessons-solo-founder-ai-video.md)** | Notes from solo-founder / AI talent video. |
 
 ---
 

@@ -4,7 +4,7 @@
 
 **Use:** Positioning, differentiation, and outreach. Keep updated as new competitors or papers appear.
 
-**Related:** [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md), [one-pager-assistant-brain-cognitive-polyphony.md](one-pager-assistant-brain-cognitive-polyphony.md), [outreach-draft-post-vivabarneslaw.md](outreach-draft-post-vivabarneslaw.md).
+**Related:** [state-evolved-assistant-brain-heads-of-state.md](../work-politics/state-evolved-assistant-brain-heads-of-state.md), [one-pager-assistant-brain-cognitive-polyphony.md](../work-politics/one-pager-assistant-brain-cognitive-polyphony.md), [outreach-draft-post-vivabarneslaw.md](../work-politics/outreach-draft-post-vivabarneslaw.md).
 
 ---
 

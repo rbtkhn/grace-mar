@@ -2,9 +2,9 @@
 
 **Purpose:** Concrete features, copy, and process items to implement or adopt. Prioritized by impact vs effort. **Use:** Pick items to ship, add to one-pager/capability statement, or adopt in workflow.
 
-**Implemented (as of last pass):** Method name "Polyphonic cognition protocol" in one-pager and capability statement. Cheat sheet ([cheat-sheet-polyphonic-cognition-protocol.md](cheat-sheet-polyphonic-cognition-protocol.md)) and loadable protocol skill ([polyphonic-cognition-protocol-skill.md](polyphonic-cognition-protocol-skill.md)) created. Spec updated: reversibility row, post-decision capture, 600L tier, visual export, integrations, parallel agents note, no model branding. Before/after artifact placeholder in capability statement. Copy snippets (full field, checkpoint, one principal) in one-pager. "We did X" already in prep-before-call.
+**Implemented (as of last pass):** Method name "Polyphonic cognition protocol" in one-pager and capability statement. Cheat sheet ([cheat-sheet-polyphonic-cognition-protocol.md](../work-politics/cheat-sheet-polyphonic-cognition-protocol.md)) and loadable protocol skill ([polyphonic-cognition-protocol-skill.md](../work-politics/polyphonic-cognition-protocol-skill.md)) created. Spec updated: reversibility row, post-decision capture, 600L tier, visual export, integrations, parallel agents note, no model branding. Before/after artifact placeholder in capability statement. Copy snippets (full field, checkpoint, one principal) in one-pager. "We did X" already in prep-before-call.
 
-**Related:** [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md), [lessons-solo-founder-ai-video.md](lessons-solo-founder-ai-video.md), [lessons-perplexity-computer-video.md](lessons-perplexity-computer-video.md).
+**Related:** [state-evolved-assistant-brain-heads-of-state.md](../work-politics/state-evolved-assistant-brain-heads-of-state.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md), [lessons-solo-founder-ai-video.md](lessons-solo-founder-ai-video.md), [lessons-perplexity-computer-video.md](lessons-perplexity-computer-video.md).
 
 ---
 

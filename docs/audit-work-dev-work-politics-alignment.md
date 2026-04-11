@@ -63,7 +63,7 @@
 | From → To | work-dev → work-politics | work-politics → work-dev |
 |-----------|----------------|----------------|
 | **README** | No reference to work-politics. | No reference to work-dev. Sentient-framing and simple-in-long-term list “build-ai” (legacy name) among territories (politics, gems, health, build-ai). |
-| **Shared docs** | AGENTS.md, Architecture, openclaw-integration, crypto-roadmap, INTENT. | AGENTS.md, Architecture. OpenClaw appears in workspace (lessons-openclaw-skills-video), civ-mem, competitor notes. |
+| **Shared docs** | AGENTS.md, Architecture, openclaw-integration, crypto-roadmap, INTENT. | AGENTS.md, Architecture. OpenClaw appears in workspace ([lessons-openclaw-skills-video.md](skill-work/work-dev/lessons-openclaw-skills-video.md)), civ-mem, competitor notes. |
 | **Gate / pipeline** | openclaw-integration, pipeline-events, RECURSION-GATE (implicit). | RECURSION-GATE, territory, wap-candidate-template, process_approved_candidates. |
 
 **Gaps:**

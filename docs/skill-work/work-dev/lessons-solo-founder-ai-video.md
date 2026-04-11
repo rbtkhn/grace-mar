@@ -2,7 +2,7 @@
 
 **Source:** YouTube transcript — solo founders, AI as force multiplier, taste vs conviction, speed of control, talent blocked by overhead. **Use:** Inform product positioning, messaging, and differentiation for the assistant brain.
 
-**Related:** [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md), [one-pager-assistant-brain-cognitive-polyphony.md](one-pager-assistant-brain-cognitive-polyphony.md).
+**Related:** [state-evolved-assistant-brain-heads-of-state.md](../work-politics/state-evolved-assistant-brain-heads-of-state.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md), [one-pager-assistant-brain-cognitive-polyphony.md](../work-politics/one-pager-assistant-brain-cognitive-polyphony.md).
 
 ---
 

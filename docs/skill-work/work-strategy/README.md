@@ -29,6 +29,7 @@
 | **[daily-brief-focus.md](daily-brief-focus.md)** | Operator-maintained bullets: what the strategy lane is watching (product, partners, policy). |
 | **[daily-brief-jiang-layer.md](daily-brief-jiang-layer.md)** | **Slow layer** pointers (work-jiang) embedded in the daily brief as **§1c** — compressions, sweep snippets, lecture tracks; not breaking news. |
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
+| **[brief-source-registry.md](brief-source-registry.md)** | Pointer only — canonical [weekly-brief source registry](../work-politics/brief-source-registry.md) lives under work-politics. |
 | **[weak-signals.md](weak-signals.md)** | Weak-signal discipline: **§1f** block, promotion to STRATEGY **§II-A / §III-A / §IV**, analogy audit before overclaiming (WORK only). |
 | **[weak-signal-template.md](weak-signal-template.md)** | Markdown stub for **§1f** in the daily brief. |
 | **[analogy-audit-template.md](analogy-audit-template.md)** | Short form when a historical parallel is proposed (current-events + brief). |
@@ -68,6 +69,10 @@
 ## Daily brief
 
 **Output name:** `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` (example: `daily-brief-2026-03-29.md`). See [daily-brief-template.md](daily-brief-template.md).
+
+**Template SSOT (single source of truth):** [daily-brief-template.md](daily-brief-template.md) is the **authoritative** spec for the combined generator output. [work-politics/daily-brief-template.md](../work-politics/daily-brief-template.md) is a **compatibility pointer** (same content as a stub—do not duplicate the full spec there). [work-template/daily-brief-template.md](../work-template/daily-brief-template.md) is the **cross-lane semantic** scaffold; its numbered mapping points back here.
+
+**Brief source registry:** Weekly-brief source readiness is tracked in [work-politics/brief-source-registry.md](../work-politics/brief-source-registry.md) (operator WPC rhythm). A [pointer stub](brief-source-registry.md) exists in this folder for strategy-lane discovery only.
 
 One script covers **work-politics + work-strategy**:
 

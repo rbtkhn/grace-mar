@@ -2,7 +2,7 @@
 
 **Source:** YouTube — "Learn 80% of Perplexity Computer in 34 Minutes." Hosted AI agent: orchestrator, 19 models, skills, sub-agents, VM/proxy architecture, connectors, scheduling. **Use:** Architecture, UX, and positioning lessons for the assistant brain.
 
-**Related:** [state-evolved-assistant-brain-heads-of-state.md](state-evolved-assistant-brain-heads-of-state.md), [actionable-features-and-insights.md](actionable-features-and-insights.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md).
+**Related:** [state-evolved-assistant-brain-heads-of-state.md](../work-politics/state-evolved-assistant-brain-heads-of-state.md), [actionable-features-and-insights.md](actionable-features-and-insights.md), [competitor-research-assistant-brain-judgment-testing.md](competitor-research-assistant-brain-judgment-testing.md).
 
 ---
 
