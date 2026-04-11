@@ -310,6 +310,8 @@ Each coffee, dream, bridge, and optional **harvest** run appends one line to [wo
 
 **Auto-park (thanks only):** When a `thanks` event has no operator-provided park text, two layers fill the gap. **(1) Agent-level (primary):** the `thanks` skill instructs the agent to infer a 3–8 word dash-joined slug from thread context (e.g. `park=cadence-auto-park-design`). **(2) Script-level (fallback):** `log_cadence_event.py` detects empty/none/dash park values and runs `git log --oneline -1` to generate a slug prefixed with `auto:` (e.g. `park=auto:persistent-chat-store-and-commands`). The `auto:` prefix distinguishes script-generated text from human or agent input. Suppress the script fallback with `--no-auto-park`.
 
+**Model tier (all events):** Every cadence line includes `model_tier=…` (frontier / fast / unknown), auto-inferred from the `cursor_model` string. Override with `--model-tier` CLI or `model_tier=` in `--kv`. Enables aggregate telemetry: "what fraction of technical work used frontier models?"
+
 **Leaf-only rule:** Orchestrator scripts (wrappers that chain multiple steps) do not emit their own events. Only the leaf ritual logs.
 
 **Split threshold:** If cadence events exceed ~200 lines/month, consider adding a JSONL sibling and keeping monthly rollup bullets in the markdown file.

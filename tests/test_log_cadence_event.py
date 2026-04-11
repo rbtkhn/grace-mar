@@ -11,7 +11,7 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from log_cadence_event import ANCHOR, HEADER, KINDS, append_cadence_event, resolve_cursor_model
+from log_cadence_event import ANCHOR, HEADER, KINDS, append_cadence_event, infer_model_tier, resolve_cursor_model, resolve_model_tier
 
 
 @pytest.fixture(autouse=True)
@@ -33,7 +33,7 @@ def test_append_one_event(events_file: Path) -> None:
         kv={"integrity": "pass"}, events_path=events_file,
     )
     text = events_file.read_text(encoding="utf-8")
-    assert "— dream (grace-mar) ok=true mode=default cursor_model=unknown integrity=pass" in text
+    assert "— dream (grace-mar) ok=true mode=default cursor_model=unknown model_tier=unknown integrity=pass" in text
     assert text.count("— dream") == 1
 
 
@@ -63,7 +63,7 @@ def test_missing_file_creates_with_header(tmp_path: Path) -> None:
     assert p.exists()
     text = p.read_text(encoding="utf-8")
     assert ANCHOR in text
-    assert "— bridge (grace-mar) ok=true cursor_model=unknown refs=abc1234" in text
+    assert "— bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown refs=abc1234" in text
 
 
 def test_invalid_kind_raises() -> None:
@@ -90,7 +90,7 @@ def test_append_thanks_event(events_file: Path) -> None:
     )
     text = events_file.read_text(encoding="utf-8")
     assert (
-        "— thanks (grace-mar) ok=true cursor_model=unknown park=gate-review-later" in text
+        "— thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=gate-review-later" in text
     )
 
 
@@ -104,7 +104,7 @@ def test_append_harvest_event(events_file: Path) -> None:
         events_path=events_file,
     )
     text = events_file.read_text(encoding="utf-8")
-    assert "— harvest (grace-mar) ok=true mode=default cursor_model=unknown packet=chat" in text
+    assert "— harvest (grace-mar) ok=true mode=default cursor_model=unknown model_tier=unknown packet=chat" in text
 
 
 def test_resolve_cursor_model_env(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -185,6 +185,53 @@ def test_dedupe_disabled_allows_back_to_back(events_file: Path) -> None:
     )
     text = events_file.read_text(encoding="utf-8")
     assert text.count("— coffee") == 2
+
+
+def test_infer_model_tier_frontier() -> None:
+    assert infer_model_tier("claude-4.6-opus-high-thinking") == "frontier"
+    assert infer_model_tier("claude-sonnet-4") == "frontier"
+    assert infer_model_tier("o4-preview") == "frontier"
+
+
+def test_infer_model_tier_fast() -> None:
+    assert infer_model_tier("claude-3.5-haiku") == "fast"
+    assert infer_model_tier("gpt-4o-mini") == "fast"
+    assert infer_model_tier("gemini-2.0-flash") == "fast"
+
+
+def test_infer_model_tier_unknown() -> None:
+    assert infer_model_tier("unknown") == "unknown"
+    assert infer_model_tier("") == "unknown"
+    assert infer_model_tier("some-new-model") == "unknown"
+
+
+def test_resolve_model_tier_explicit_overrides_inference() -> None:
+    assert resolve_model_tier(explicit="frontier", cursor_model="haiku") == "frontier"
+    assert resolve_model_tier(explicit="fast", cursor_model="opus") == "fast"
+
+
+def test_resolve_model_tier_kv_overrides_inference() -> None:
+    assert resolve_model_tier(kv={"model_tier": "fast"}, cursor_model="opus") == "fast"
+
+
+def test_model_tier_appears_in_cadence_line(events_file: Path) -> None:
+    append_cadence_event(
+        "coffee", "grace-mar", ok=True, mode="work-start",
+        cursor_model="claude-4.6-opus-high-thinking",
+        events_path=events_file,
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert "model_tier=frontier" in text
+
+
+def test_model_tier_explicit_overrides_in_cadence_line(events_file: Path) -> None:
+    append_cadence_event(
+        "coffee", "grace-mar", ok=True, mode="work-start",
+        cursor_model="claude-3.5-haiku", model_tier="frontier",
+        events_path=events_file,
+    )
+    text = events_file.read_text(encoding="utf-8")
+    assert "model_tier=frontier" in text
 
 
 def test_dedupe_different_kind_not_skipped(events_file: Path) -> None:

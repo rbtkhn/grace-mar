@@ -33,12 +33,15 @@ _EVENT_LINE_RE = re.compile(
 )
 
 
+_KV_RE = re.compile(r"(\w+)=(\S+)")
+
+
 def parse_events(
     user_id: str,
     *,
     events_path: Path = EVENTS_PATH,
 ) -> list[dict]:
-    """Parse cadence events for a user. Returns list of {dt, kind, user, line}."""
+    """Parse cadence events for a user. Returns list of {dt, kind, user, line, kv}."""
     if not events_path.is_file():
         return []
     events: list[dict] = []
@@ -55,7 +58,8 @@ def parse_events(
             )
         except ValueError:
             continue
-        events.append({"dt": dt, "kind": kind, "user": user, "line": line.strip()})
+        kv = dict(_KV_RE.findall(line.strip()))
+        events.append({"dt": dt, "kind": kind, "user": user, "line": line.strip(), "kv": kv})
     return events
 
 
@@ -141,6 +145,13 @@ def compute_rhythm_summary(
     if coffee_per_active_day < 1.0 and active_day_count > 1:
         issues.append(f"coffee avg {coffee_per_active_day:.1f}/active-day")
 
+    tier_counts: dict[str, int] = defaultdict(int)
+    for e in events:
+        tier = e["kv"].get("model_tier", "unknown")
+        tier_counts[tier] += 1
+    tier_total = sum(tier_counts.values())
+    tier_pcts = {k: round(100 * v / max(1, tier_total), 1) for k, v in sorted(tier_counts.items())}
+
     discipline = "DRIFT" if issues else "HEALTHY"
 
     return {
@@ -172,6 +183,11 @@ def compute_rhythm_summary(
             "start": gap_start.isoformat() if gap_start else None,
             "end": gap_end.isoformat() if gap_end else None,
             "ok": longest_gap_hours <= 48,
+        },
+        "model_tier": {
+            "counts": dict(tier_counts),
+            "pcts": tier_pcts,
+            "total": tier_total,
         },
     }
 
@@ -210,6 +226,11 @@ def format_summary(s: dict) -> str:
     gap_line += " — " + ("OK" if g["ok"] else "LONG")
     lines.append(gap_line)
 
+    mt = s.get("model_tier", {})
+    if mt.get("total", 0) > 0:
+        tier_parts = [f"{k}: {mt['counts'][k]} ({mt['pcts'][k]}%)" for k in sorted(mt["pcts"])]
+        lines.append(f"  model tier: {', '.join(tier_parts)}")
+
     lines.append(f"  discipline: {s['discipline']}")
     if s["issues"]:
         for issue in s["issues"]:
@@ -228,16 +249,35 @@ def format_discipline_one_liner(s: dict) -> str:
     return f"Cadence discipline ({s['days']}d): {issues_str} — DRIFT"
 
 
+def format_tier_report(s: dict) -> str:
+    """Standalone model-tier distribution report."""
+    mt = s.get("model_tier", {})
+    lines = [f"Model tier distribution ({s['user_id']}) — last {s['days']} days"]
+    if mt.get("total", 0) == 0:
+        lines.append("  (no events in window)")
+        return "\n".join(lines)
+    lines.append(f"  total events: {mt['total']}")
+    for tier in ("frontier", "fast", "unknown"):
+        count = mt["counts"].get(tier, 0)
+        pct = mt["pcts"].get(tier, 0.0)
+        bar = "#" * int(pct / 2)
+        lines.append(f"  {tier:10s}  {count:4d}  ({pct:5.1f}%)  {bar}")
+    return "\n".join(lines)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Cadence rhythm auditor — discipline summary.")
     ap.add_argument("-u", "--user", default=os.getenv("GRACE_MAR_USER_ID", "grace-mar"))
     ap.add_argument("--days", type=int, default=14, help="Look-back window in days (default 14)")
     ap.add_argument("--json", action="store_true", help="Output JSON instead of text")
+    ap.add_argument("--tier-report", action="store_true", help="Standalone model-tier distribution")
     args = ap.parse_args()
 
     summary = compute_rhythm_summary(args.user, args.days)
 
-    if args.json:
+    if args.tier_report:
+        print(format_tier_report(summary))
+    elif args.json:
         print(json.dumps(summary, indent=2, default=str))
     else:
         print(format_summary(summary))

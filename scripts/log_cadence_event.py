@@ -17,9 +17,12 @@ Usage:
       --mode default --kv packet=chat
 
 **Agent surface (audit parity with bridge/harvest packets):** every line includes
-``cursor_model=…``. Resolution order: ``--cursor-model`` CLI / ``cursor_model=``
+``cursor_model=…`` and ``model_tier=…`` (frontier / fast / unknown).
+Resolution for cursor_model: ``--cursor-model`` CLI / ``cursor_model=``
 ``--kv`` / ``CURSOR_MODEL`` env / ``unknown``. Model names with spaces are
 written with spaces replaced by underscores so the line stays token-safe.
+Resolution for model_tier: ``--model-tier`` CLI / ``model_tier=`` ``--kv`` /
+auto-inferred from cursor_model string / ``unknown``.
 """
 
 from __future__ import annotations
@@ -99,6 +102,43 @@ def _format_cursor_model_token(cm: str) -> str:
     return str(cm).replace("\n", " ").strip().replace(" ", "_")[:200]
 
 
+_FRONTIER_PATTERNS = ("opus", "sonnet-4", "o3", "o4", "pro", "deep-research")
+_FAST_PATTERNS = ("haiku", "flash", "mini", "fast", "gpt-4o-mini", "lite")
+
+
+def infer_model_tier(cursor_model: str) -> str:
+    """Derive a capability tier from the cursor_model string.
+
+    Returns 'frontier', 'fast', or 'unknown'. The operator can override
+    via --model-tier or model_tier= in --kv.
+    """
+    cm = cursor_model.lower().replace("_", "-")
+    if cm in ("", "unknown"):
+        return "unknown"
+    for pat in _FAST_PATTERNS:
+        if pat in cm:
+            return "fast"
+    for pat in _FRONTIER_PATTERNS:
+        if pat in cm:
+            return "frontier"
+    return "unknown"
+
+
+def resolve_model_tier(
+    explicit: str | None = None,
+    kv: dict[str, str] | None = None,
+    cursor_model: str = "unknown",
+) -> str:
+    """Model tier resolution: explicit > kv > inferred from cursor_model."""
+    if explicit is not None and str(explicit).strip():
+        return str(explicit).strip()
+    if kv:
+        v = kv.get("model_tier")
+        if v is not None and str(v).strip():
+            return str(v).strip()
+    return infer_model_tier(cursor_model)
+
+
 # Match first segment of a cadence line (aligned with audit_cadence_rhythm.parse_events).
 _LAST_EVENT_LINE_RE = re.compile(
     r"^- \*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}) UTC\*\* — (\w+) \(([^)]+)\)"
@@ -133,6 +173,7 @@ def append_cadence_event(
     ok: bool = True,
     mode: str | None = None,
     cursor_model: str | None = None,
+    model_tier: str | None = None,
     kv: dict[str, str] | None = None,
     events_path: Path = EVENTS_PATH,
     no_auto_park: bool = False,
@@ -159,9 +200,10 @@ def append_cadence_event(
         if park_val.lower() in _EMPTY_PARK:
             base["park"] = _auto_park(events_path.parent)
     cm = resolve_cursor_model(explicit=cursor_model, kv=base)
-    merged: dict[str, str] = {"cursor_model": cm}
+    mt = resolve_model_tier(explicit=model_tier, kv=base, cursor_model=cm)
+    merged: dict[str, str] = {"cursor_model": cm, "model_tier": mt}
     for k, v in base.items():
-        if k == "cursor_model":
+        if k in ("cursor_model", "model_tier"):
             continue
         merged[k] = v
 
@@ -212,6 +254,12 @@ def main() -> int:
         default=None,
         help="Cursor UI model label (overrides CURSOR_MODEL env and cursor_model= in --kv)",
     )
+    ap.add_argument(
+        "--model-tier",
+        default=None,
+        choices=["frontier", "fast", "unknown"],
+        help="Capability tier (overrides auto-inference from cursor_model; default: inferred)",
+    )
     ap.add_argument("--kv", nargs="*", default=[], metavar="KEY=VALUE", help="Extra key=value pairs")
     ap.add_argument(
         "--no-auto-park",
@@ -235,6 +283,7 @@ def main() -> int:
         ok=args.ok,
         mode=args.mode,
         cursor_model=(args.cursor_model.strip() if args.cursor_model else None),
+        model_tier=args.model_tier,
         kv=kv_dict,
         no_auto_park=args.no_auto_park,
     )
