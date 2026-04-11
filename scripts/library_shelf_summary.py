@@ -26,6 +26,7 @@ def load_entries(path: Path) -> list[dict]:
         status_m = re.search(r"status:\s*(\w+)", block)
         priority_m = re.search(r"lookup_priority:\s*[\"']?(\w+)", block)
         lane_m = re.search(r"lane:\s*[\"']?(\w+)", block)
+        shelf_m = re.search(r"shelf_intent:\s*[\"']?(\w+)", block)
         if status_m and status_m.group(1) != "active":
             continue
         if not title_m:
@@ -39,6 +40,7 @@ def load_entries(path: Path) -> list[dict]:
                 "scope": scopes,
                 "lookup_priority": priority_m.group(1) if priority_m else "low",
                 "lane": lane_m.group(1) if lane_m else "canon",
+                "shelf_intent": shelf_m.group(1) if shelf_m else "",
             }
         )
     return entries
@@ -70,6 +72,9 @@ def main() -> int:
     print("lookup_priority:", dict(pri.most_common()))
     lane = Counter(e["lane"] for e in entries)
     print("lane:", dict(lane.most_common()))
+    shelf = Counter(e["shelf_intent"] for e in entries if e["shelf_intent"])
+    if shelf:
+        print("shelf_intent:", dict(shelf.most_common()))
     print()
     print("Shelf keyword → entries (id + title):")
     for kw in SHELF_KEYWORDS:

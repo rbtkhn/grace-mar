@@ -41,6 +41,7 @@ entries:
     lane: "reference"
     type: "book"
     status: "active"
+    shelf_intent: "operator_book"
     engagement_status: "in_progress"
     lookup_priority: "preferred"
     scope: ["predictive_history", "work_jiang", "geo_strategy", "philosophy", "civilization_memory", "IR", "operator_analytical"]
@@ -55,6 +56,7 @@ entries:
     lane: "reference"
     type: "book"
     status: "active"
+    shelf_intent: "operator_book"
     engagement_status: "in_progress"
     lookup_priority: "high"
     scope: ["work_strategy", "strategy_notebook", "operator_analytical", "journal"]
@@ -69,6 +71,7 @@ entries:
     lane: "reference"
     type: "book"
     status: "active"
+    shelf_intent: "operator_book"
     engagement_status: "in_progress"
     lookup_priority: "high"
     scope: ["work_xavier", "xavier_journal", "open_brain", "operator_analytical", "journal"]
@@ -83,6 +86,7 @@ entries:
     lane: "reference"
     type: "book"
     status: "active"
+    shelf_intent: "operator_book"
     engagement_status: "in_progress"
     lookup_priority: "high"
     scope: ["work_dev", "dev_journal", "operator_analytical", "journal"]
@@ -99,6 +103,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "notes", "education", "see_the_face"]
@@ -112,6 +117,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["essays", "theology", "ethics", "AI", "coordination", "civilization_memory"]
@@ -125,6 +131,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "notes", "seam", "one_subject_many_tongues", "see_the_face"]
@@ -138,6 +145,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["essays", "theology", "coordination", "civilization_memory", "recognition", "seam", "condition"]
@@ -151,6 +159,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "notes", "condition", "coordination", "seam", "recognition", "non_zero_sum"]
@@ -164,6 +173,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "notes", "condition", "light_of_consciousness", "prime_directive", "recognition"]
@@ -177,6 +187,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "notes", "STATE", "one_subject_many_tongues", "seam", "polyphonic_cognition"]
@@ -190,6 +201,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "essays", "recognition", "mastery", "attention", "memory", "monad", "condition", "one_subject_many_tongues"]
@@ -203,6 +215,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["theology", "civilization_memory", "essays", "purpose", "memory", "death", "writing", "condition"]
@@ -218,6 +231,7 @@ entries:
     lane: "reference"
     type: "framework"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "integrated"
     lookup_priority: "medium"
     scope: ["economics", "strategy", "AI", "work_operator", "computer_science"]
@@ -232,6 +246,7 @@ entries:
     lane: "reference"
     type: "book"
     status: "active"
+    shelf_intent: "operator_book"
     engagement_status: "recurring"
     lookup_priority: "high"
     scope: ["predictive_history", "youtube_channels", "work_strategy", "work_jiang", "transcripts"]
@@ -246,6 +261,7 @@ entries:
     lane: "reference"
     type: "book"
     status: "active"
+    shelf_intent: "operator_book"
     engagement_status: "recurring"
     lookup_priority: "high"
     scope: ["tucker_carlson", "youtube_channels", "work_politics", "transcripts", "IR", "media"]
@@ -263,6 +279,7 @@ entries:
     lane: "reference"
     type: "reference"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "available"
     lookup_priority: "medium"
     scope: ["science", "physics", "chemistry", "biology", "gravity", "flight", "genes", "DNA"]
@@ -279,6 +296,7 @@ entries:
     lane: "reference"
     type: "reference"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "available"
     lookup_priority: "medium"
     scope: ["history", "world history", "maps", "time charts"]
@@ -290,6 +308,7 @@ entries:
     lane: "reference"
     type: "reference"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "primary"
     lookup_priority: "high"
     scope: ["civilizations", "history", "Rome", "China", "ancient", "emperors", "pharaohs"]
@@ -307,6 +326,7 @@ entries:
     lane: "reference"
     type: "reference"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "available"
     lookup_priority: "medium"
     scope: ["geography", "world atlas", "maps"]
@@ -319,6 +339,7 @@ entries:
     lane: "reference"
     type: "article"
     status: "active"
+    shelf_intent: "working_reference"
     engagement_status: "trusted"
     lookup_priority: "medium"
     scope: ["essays", "civilization_memory", "taxonomy", "grace_mar_owned"]
@@ -351,6 +372,7 @@ entries:
     lane: "canon"
     type: "book"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek", "Odyssey", "Homer"]
@@ -635,6 +657,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -648,6 +671,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -661,6 +685,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -674,6 +699,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -687,6 +713,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -700,6 +727,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -713,6 +741,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -726,6 +755,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -739,6 +769,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -752,6 +783,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -765,6 +797,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -778,6 +811,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -791,6 +825,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -804,6 +839,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -817,6 +853,7 @@ entries:
     type: "story"
     volume: "Grimm's Fairy Tales (PG 2591)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Grimm", "stories"]
@@ -830,6 +867,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -843,6 +881,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -856,6 +895,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -869,6 +909,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -882,6 +923,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -895,6 +937,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -908,6 +951,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -921,6 +965,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -934,6 +979,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -947,6 +993,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -960,6 +1007,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -973,6 +1021,7 @@ entries:
     type: "story"
     volume: "Andersen's Fairy Tales (PG 27200)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fairy tales", "Hans Christian Andersen", "stories"]
@@ -986,6 +1035,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -999,6 +1049,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1012,6 +1063,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1025,6 +1077,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1038,6 +1091,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1051,6 +1105,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1064,6 +1119,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1077,6 +1133,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1090,6 +1147,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1103,6 +1161,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1116,6 +1175,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1129,6 +1189,7 @@ entries:
     type: "story"
     volume: "Ballet stories (PG 38733)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["ballet", "dance", "stories"]
@@ -1142,6 +1203,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1155,6 +1217,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1168,6 +1231,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1181,6 +1245,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1194,6 +1259,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1207,6 +1273,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1220,6 +1287,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1233,6 +1301,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1246,6 +1315,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1259,6 +1329,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1272,6 +1343,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1285,6 +1357,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1298,6 +1371,7 @@ entries:
     type: "story"
     volume: "Greek myths (Bulfinch, PG 3327)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek myths"]
@@ -1311,6 +1385,7 @@ entries:
     type: "story"
     volume: "Homer, Odyssey (PG 1727)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Greek", "Homer"]
@@ -1324,6 +1399,7 @@ entries:
     type: "story"
     volume: "Stories from India (PG 2388)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["India", "stories", "folktales"]
@@ -1337,6 +1413,7 @@ entries:
     type: "story"
     volume: "Adventure classics (PG 521, 120, 829)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["adventure", "stories"]
@@ -1350,6 +1427,7 @@ entries:
     type: "story"
     volume: "Adventure classics (PG 521, 120, 829)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["adventure", "stories"]
@@ -1363,6 +1441,7 @@ entries:
     type: "story"
     volume: "Adventure classics (PG 521, 120, 829)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["adventure", "stories"]
@@ -1376,6 +1455,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1389,6 +1469,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1402,6 +1483,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1415,6 +1497,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1428,6 +1511,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1441,6 +1525,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1454,6 +1539,7 @@ entries:
     type: "story"
     volume: "Bible, KJV (PG 10)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Bible", "stories", "religion"]
@@ -1467,6 +1553,7 @@ entries:
     type: "story"
     volume: "Stories from China (PG 25240)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["China", "stories", "folktales"]
@@ -1480,6 +1567,7 @@ entries:
     type: "story"
     volume: "The Secret Garden (PG 17396)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["classics", "Secret Garden"]
@@ -1493,6 +1581,7 @@ entries:
     type: "story"
     volume: "Aesop's Fables (PG 21)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fables", "Aesop"]
@@ -1506,6 +1595,7 @@ entries:
     type: "story"
     volume: "Aesop's Fables (PG 21)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fables", "Aesop"]
@@ -1519,6 +1609,7 @@ entries:
     type: "story"
     volume: "Aesop's Fables (PG 21)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fables", "Aesop"]
@@ -1532,6 +1623,7 @@ entries:
     type: "story"
     volume: "Aesop's Fables (PG 21)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fables", "Aesop"]
@@ -1545,6 +1637,7 @@ entries:
     type: "story"
     volume: "Aesop's Fables (PG 21)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["fables", "Aesop"]
@@ -1558,6 +1651,7 @@ entries:
     type: "story"
     volume: "Norse myths (Guerber, PG 28497)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Norse", "Vikings"]
@@ -1571,6 +1665,7 @@ entries:
     type: "story"
     volume: "Norse myths (Guerber, PG 28497)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Norse", "Vikings"]
@@ -1584,6 +1679,7 @@ entries:
     type: "story"
     volume: "Norse myths (Guerber, PG 28497)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Norse", "Vikings"]
@@ -1597,6 +1693,7 @@ entries:
     type: "story"
     volume: "Norse myths (Guerber, PG 28497)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Norse", "Vikings"]
@@ -1610,6 +1707,7 @@ entries:
     type: "story"
     volume: "Norse myths (Guerber, PG 28497)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["mythology", "Norse", "Vikings"]
@@ -1623,6 +1721,7 @@ entries:
     type: "story"
     volume: "Usborne Illustrated Tales of King Arthur"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["King Arthur", "legends", "mythology"]
@@ -1635,6 +1734,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1648,6 +1748,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1661,6 +1762,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1674,6 +1776,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1687,6 +1790,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1700,6 +1804,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1713,6 +1818,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1726,6 +1832,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1739,6 +1846,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1752,6 +1860,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1765,6 +1874,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1778,6 +1888,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1791,6 +1902,7 @@ entries:
     type: "story"
     volume: "Shakespeare, Complete Works (PG 100)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Shakespeare", "plays"]
@@ -1804,6 +1916,7 @@ entries:
     type: "story"
     volume: "Dickens (PG author 37)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Dickens", "classics"]
@@ -1817,6 +1930,7 @@ entries:
     type: "story"
     volume: "Dickens (PG author 37)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Dickens", "classics"]
@@ -1830,6 +1944,7 @@ entries:
     type: "story"
     volume: "Dickens (PG author 37)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Dickens", "classics"]
@@ -1843,6 +1958,7 @@ entries:
     type: "story"
     volume: "Dickens (PG author 37)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Dickens", "classics"]
@@ -1856,6 +1972,7 @@ entries:
     type: "story"
     volume: "Dickens (PG author 37)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Dickens", "classics"]
@@ -1869,6 +1986,7 @@ entries:
     type: "story"
     volume: "Dickens (PG author 37)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Dickens", "classics"]
@@ -1882,6 +2000,7 @@ entries:
     type: "story"
     volume: "Arabian Nights (Lang, PG 128)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Arabian Nights", "tales"]
@@ -1895,6 +2014,7 @@ entries:
     type: "story"
     volume: "Arabian Nights (Lang, PG 128)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Arabian Nights", "tales"]
@@ -1908,6 +2028,7 @@ entries:
     type: "story"
     volume: "Arabian Nights (Lang, PG 128)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Arabian Nights", "tales"]
@@ -1921,6 +2042,7 @@ entries:
     type: "story"
     volume: "Arabian Nights (Lang, PG 128)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Arabian Nights", "tales"]
@@ -1934,6 +2056,7 @@ entries:
     type: "story"
     volume: "Arabian Nights (Lang, PG 128)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Arabian Nights", "tales"]
@@ -1947,6 +2070,7 @@ entries:
     type: "story"
     volume: "Jane Austen (PG author 68)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Jane Austen", "novels", "classics"]
@@ -1960,6 +2084,7 @@ entries:
     type: "story"
     volume: "Jane Austen (PG author 68)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Jane Austen", "novels", "classics"]
@@ -1973,6 +2098,7 @@ entries:
     type: "story"
     volume: "Jane Austen (PG author 68)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Jane Austen", "novels", "classics"]
@@ -1986,6 +2112,7 @@ entries:
     type: "story"
     volume: "Jane Austen (PG author 68)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Jane Austen", "novels", "classics"]
@@ -1999,6 +2126,7 @@ entries:
     type: "story"
     volume: "Jane Austen (PG author 68)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Jane Austen", "novels", "classics"]
@@ -2012,6 +2140,7 @@ entries:
     type: "story"
     volume: "Jane Austen (PG author 68)"
     status: "active"
+    shelf_intent: "canon"
     engagement_status: "planned"
     lookup_priority: "low"
     scope: ["Jane Austen", "novels", "classics"]
@@ -2139,7 +2268,7 @@ total_entries: 150
 clone_source: "companion-self users/_template/self-library.md (2026-02-26)"
 grace_mar_additions: "… LIB-0135..0148 (Theology shelf: Simple Condition, Coordination Hypothesis, One Subject Many Tongues, face-category blade, See the Face exercise, AI Ethics, lens God's Debris, The Delusion of Separation, God is non-zero sum, Expand the light of consciousness, Polyphonic cognition, Universal Love and Mastery, Writing the Book and Death); LIB-0136 (essays index); Operator analytical books shelf: LIB-0149 (scope operator_analytical), LIB-0153 strategy-notebook, LIB-0154 xavier-journal, LIB-0155 dev-journal"
 maturity_levels: "1=young/all ages, 2=middle grade, 3=older/teen+"
-last_updated: 2026-04-09
+last_updated: 2026-04-10
 library_lanes: "reference, canon, influence"
 taxonomy_note: "engagement_status replaces read_status; lookup_priority marks runtime lookup preference"
 sections: "Operator analytical books · Entries · Theology · Physics/chemistry/biology · History · Computer Science (thematic shelves; tag scope) · Metadata"

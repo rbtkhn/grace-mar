@@ -43,6 +43,7 @@ entries:
     source: manual                # manual | path | url (for future RAG/indexing)
     url: ""                       # optional: canonical website, repository, or source page
     pd_url: ""                    # optional: Project Gutenberg, Wikisource, etc.
+    shelf_intent: ""              # optional: canon | working_reference | operator_book | active_study | temporary_aid
     added_at: 2026-02-XX
     notes: ""                     # optional
 ```
@@ -68,6 +69,7 @@ entries:
 | **source** | Yes | `manual` (no indexed content yet), `path`, or `url` for future RAG |
 | **url** | No | Canonical website, repository, or source page for the entry |
 | **pd_url** | No | URL to complete public domain text (Project Gutenberg, Wikisource) — for retrieval and RAG |
+| **shelf_intent** | No | What role the entry plays: `canon`, `working_reference`, `operator_book`, `active_study`, or `temporary_aid`. See [Shelf Intent](#shelf-intent) below. |
 | **added_at** | Yes | ISO date when added |
 | **notes** | No | Free-form notes |
 | **maturity** | No | 1–3 scale for content difficulty; see [Maturity](#maturity) below. Mirrors lesson difficulty. |
@@ -132,6 +134,22 @@ Optional routing signal for runtime lookup.
 
 ---
 
+## Shelf Intent
+
+Optional field describing the entry's operational role in the library.
+
+| Value | Meaning |
+|-------|---------|
+| **canon** | Durable cultural or intellectual fixture; long-term retention; rarely reviewed for freshness. |
+| **working_reference** | Actively consulted for lookup; reviewed when scope or accuracy changes. |
+| **operator_book** | Operator-authored analytical corpus (e.g. Predictive History, strategy notebook, journals). Reference-facing; does not bypass gate for identity claims. |
+| **active_study** | Currently being read, studied, or ingested; temporary elevated priority; review when engagement ends. |
+| **temporary_aid** | Short-lived utility (e.g. a one-off reference for a specific task); archive candidate after use. |
+
+When omitted, the entry's role is inferred from `lane` and `scope`. The field is most useful for operator books and entries with non-obvious retention expectations.
+
+---
+
 ## pd_url Notes
 
 - For books based on public domain works: add URL to Project Gutenberg or Wikisource.
@@ -174,4 +192,4 @@ LIB-* IDs are allocated sequentially. Next ID = max(LIB-*) + 1.
 
 ---
 
-*Last updated: February 2026*
+*Last updated: April 2026*
