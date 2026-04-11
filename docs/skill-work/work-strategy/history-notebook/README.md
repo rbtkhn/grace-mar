@@ -2,7 +2,7 @@
 
 **Discoverability:** Linked from **`users/grace-mar/SELF-LIBRARY/history-notebook`** (repo-relative symlink when created). **LIB:** [LIB-0156](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
 
-**Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
+**Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; **target 20 chapters per volume (100 main-era chapters)**; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
 
 - **Chapter format:** See [STYLE-GUIDE.md](STYLE-GUIDE.md)
 - **Polyphonic drafting (operator):** [POLYPHONY-WORKFLOW.md](POLYPHONY-WORKFLOW.md) — CIV-MIND passes on a neutral spine, then public translation (no mind names in chapter prose)
@@ -16,7 +16,7 @@
 
 | Volume | Era | Chapters |
 |--------|-----|----------|
-| **I — Ancient Empires** (to 476 CE) | Founding patterns: sovereignty, parity, imperial unification | persia, rome, china, india |
+| **I — Ancient Empires** (to 476 CE) | Twenty **problem-led** chapters (comparative ancient evidence); see [research/VOL-I-PROBLEM-CHAPTERS.md](research/VOL-I-PROBLEM-CHAPTERS.md) | `hn-i-v1-01` … `hn-i-v1-20` (legacy civ draft: [chapters/vol-i/persia.md](chapters/vol-i/persia.md)) |
 | **II — Medieval** (476–1453) | Post-Roman reconfigurations: Islam, Byzantium, Mongol disruption | islam, rome-byzantine, persia-islamic, mongol, china-medieval |
 | **III — Early Modern** (1453–1789) | Ottoman peak, maritime expansion, continental consolidation | ottoman, anglia, france, russia |
 | **IV — Industrial & Imperial** (1789–1945) | Revolution, total war, imperial collapse | america, germany, russia-imperial, anglia-imperial |
@@ -31,12 +31,12 @@ Civilizations that span multiple volumes. The arc registry lives in `book-archit
 
 | Arc | Chapters | Thread |
 |-----|----------|--------|
-| **Persian** | I → II → V | Tolerance → compression → siege governance. Each rupture densifies doctrine. |
-| **Roman** | I → II | Institutional continuity → persistence after territorial loss. |
+| **Persian** | Vol I (`hn-i-v1-19`) → II → V | Tolerance → compression → siege governance. Vol I entry is the parity-buffer problem chapter. |
+| **Roman** | Vol I (`hn-i-v1-04`, `hn-i-v1-05`) → II | Administration and expansion → persistence after territorial loss. |
 | **Russian** | III → IV → V | Marginal resilience → rupture-regeneration → temporal compression. |
 | **American** | IV → V | Constitutional republic → industrial hegemon → overextension. |
 | **English** | III → IV | Maritime hegemony → managed decline. |
-| **Chinese** | I → II → V | Cyclical reunification → bureaucratic maturity → patience as strategy. |
+| **Chinese** | Vol I (`hn-i-v1-16` … `hn-i-v1-18`) → II → V | Cyclical reunification → bureaucratic maturity → patience as strategy. |
 
 ---
 
@@ -65,10 +65,26 @@ One file to edit for wiring: `cross-book-map.yaml`. No changes to PH metadata; n
 
 | ID | Volume | Title | Status |
 |----|--------|-------|--------|
-| `hn-i-persia` | I | Persia — Achaemenid to Sassanid | drafted |
-| `hn-i-rome` | I | Rome — Republic to Fall (476) | planned |
-| `hn-i-china` | I | China — Zhou to Han Unification | planned |
-| `hn-i-india` | I | India — Maurya, Ashoka, Gupta | planned |
+| `hn-i-v1-01` | I | Legitimacy After Conquest | planned |
+| `hn-i-v1-02` | I | Civilizational Endurance Under Defeat | planned |
+| `hn-i-v1-03` | I | When Power Changes Shape | planned |
+| `hn-i-v1-04` | I | Administration, Law, and the Long Run | planned |
+| `hn-i-v1-05` | I | Expansion Ceilings, Glory, and Consolidation | planned |
+| `hn-i-v1-06` | I | Sea Roads and Circulation Empires | planned |
+| `hn-i-v1-07` | I | Inclusion, Occupation, Annihilation | planned |
+| `hn-i-v1-08` | I | Institutions Against Genius | planned |
+| `hn-i-v1-09` | I | Copying, Standardization, Selective Absorption | planned |
+| `hn-i-v1-10` | I | From Subjects to Stakeholders | planned |
+| `hn-i-v1-11` | I | Territorial Maximum, Strategic Maximum, Overreach | planned |
+| `hn-i-v1-12` | I | Geography of Origin and Permanence | planned |
+| `hn-i-v1-13` | I | Mechanism Failure at the Frontier | planned |
+| `hn-i-v1-14` | I | Elite Defection and the Shape of Defeat | planned |
+| `hn-i-v1-15` | I | Deflection and Ambivalence Toward Outside Orders | planned |
+| `hn-i-v1-16` | I | Non-Native Rule, Hybridity, Peak, Exhaustion | planned |
+| `hn-i-v1-17` | I | Fragmentation and Monopoly of Authority | planned |
+| `hn-i-v1-18` | I | Corridors, Exchange, Legibility, Aftermath of Conquest | planned |
+| `hn-i-v1-19` | I | Parity, Buffers, Exhaustion, Third Shock | planned |
+| `hn-i-v1-20` | I | Collapse, Vacancy, Succession | planned |
 | `hn-ii-islam` | II | Islam — Rashidun to Abbasid Caliphate | planned |
 | `hn-ii-rome-byzantine` | II | Byzantium — Eastern Roman Survival | planned |
 | `hn-ii-persia-islamic` | II | Persia — Post-Conquest to Timurid | planned |

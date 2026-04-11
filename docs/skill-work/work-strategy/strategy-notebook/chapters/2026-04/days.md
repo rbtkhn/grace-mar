@@ -81,6 +81,8 @@ Append-only. Newest dated block at the **bottom**.
 
 ## 2026-04-10
 
+> **Length / condense:** This daily section is **~4500w** (over the ~1000w notebook target). **Full** condense path (**outboard DEMO + lens walls + trim duplicate warrants**) is outlined in [demo-runs/condense-outline-2026-04-10.md](../demo-runs/condense-outline-2026-04-10.md) — execute on a later `strategy` pass (no rewrite applied in the outline-only step).
+
 ### Signal
 
 - **Strategy pass (proposed `skill-strategy`):** Ingested **Lt Col Daniel Davis** commentary (operator paste — *This Ceasefire Won’t Lead to Peace*): ceasefire as **extension game** — Iran may be counting on **time** so that falling oil, rising equities, and reduced political pressure on the White House make **restarting the war** less attractive even if diplomacy fails.

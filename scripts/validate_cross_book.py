@@ -5,7 +5,7 @@ Reads:
   - HN cross-book-map.yaml   (sole SSOT for PH <-> HN links)
   - PH thesis-map.yaml       (8 theses — validates thesis_id refs)
   - PH concepts.yaml         (20 concepts — validates concept_id refs)
-  - HN book-architecture.yaml (22 chapters — validates hn_chapter refs)
+  - HN book-architecture.yaml (all chapter ids — validates hn_chapter refs)
 
 Reports:
   - Thesis coverage: X/8 with at least one HN chapter

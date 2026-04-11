@@ -90,4 +90,4 @@ When History Notebook arc emphasis or Predictive History queue shifts in a serio
 
 ## Pilot example
 
-See [operator-drafts/hn-i-persia-polyphony-pilot.md](operator-drafts/hn-i-persia-polyphony-pilot.md) (operator-only; illustrates steps 2–4 against scoped refs for `hn-i-persia`).
+See [operator-drafts/hn-i-persia-polyphony-pilot.md](operator-drafts/hn-i-persia-polyphony-pilot.md) (operator-only; legacy civ-centric pilot — Vol I chapter IDs are now `hn-i-v1-*`; mine into problem chapters as needed).

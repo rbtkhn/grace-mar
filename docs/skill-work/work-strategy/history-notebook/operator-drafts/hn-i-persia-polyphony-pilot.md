@@ -1,6 +1,6 @@
-# Polyphony pilot — hn-i-persia (operator draft)
+# Polyphony pilot — legacy Persia civ draft (operator)
 
-**Purpose:** Demonstrate steps 2–4 of [POLYPHONY-WORKFLOW.md](../POLYPHONY-WORKFLOW.md) for chapter `hn-i-persia`. Not public chapter text. **Public** chapter: [chapters/vol-i/persia.md](../chapters/vol-i/persia.md) (STYLE-GUIDE compliant).
+**Purpose:** Demonstrate steps 2–4 of [POLYPHONY-WORKFLOW.md](../POLYPHONY-WORKFLOW.md) against the old **civ-centric** scope. Vol I is now **problem-led** (`hn-i-v1-01` … `hn-i-v1-20` in [book-architecture.yaml](../book-architecture.yaml)); mine this pilot and [chapters/vol-i/persia.md](../chapters/vol-i/persia.md) into the relevant problem chapters (especially `hn-i-v1-19` and legitimacy chapters). Not public chapter text.
 
 **Scoped refs (from book-architecture.yaml):** `CIV-CORE-PERSIA`, `CIV-AXIOM-PERSIA`, `CIV-DOCTRINE-PERSIA`. **Pattern tags:** regime-switch, compression, parity, tolerance, siege-literacy, memory-as-software, endurance.
 

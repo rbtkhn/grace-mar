@@ -24,6 +24,7 @@ A curated return-to store of references, canon works, and influential media. It 
 | **LIB-0153** | Strategy notebook | [`docs/skill-work/work-strategy/strategy-notebook/README.md`](../../docs/skill-work/work-strategy/strategy-notebook/README.md) |
 | **LIB-0154** | Xavier journal | [`docs/skill-work/work-xavier/xavier-journal/README.md`](../../docs/skill-work/work-xavier/xavier-journal/README.md) |
 | **LIB-0155** | Dev journal | [`docs/skill-work/work-dev/dev-journal/README.md`](../../docs/skill-work/work-dev/dev-journal/README.md) |
+| **LIB-0156** | History notebook | [`docs/skill-work/work-strategy/history-notebook/README.md`](../../docs/skill-work/work-strategy/history-notebook/README.md) |
 
 **Related (not on this shelf):** [LIB-0151](#entries) (YouTube transcript library) and [LIB-0152](#entries) (TCN curated transcript book) are **bundled channel books** — operator analytical, but listed under the YouTube subsection in **Entries**.
 

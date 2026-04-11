@@ -101,7 +101,7 @@ First chapters of an arc don't need backward references; last chapters don't nee
 - **YAML-first:** `book-architecture.yaml` is the SSOT. Update it when adding or completing a chapter
 - **Stable IDs:** Every chapter has an `hn-{vol}-{slug}` ID used in YAML, cross-references, and prose citations
 - Pattern tags (`[pattern:X]`) appear inline in chapters **and** in `book-architecture.yaml` `pattern_tags`
-- Cross-references between volumes use chapter IDs (`hn-i-rome`) not file paths
+- Cross-references between volumes use chapter IDs (e.g. `hn-i-v1-04`, `hn-ii-rome-byzantine`) not file paths
 - **PH wiring:** When writing a new chapter, update `cross-book-map.yaml` (sole SSOT for PH ↔ HN links)
 
 ---

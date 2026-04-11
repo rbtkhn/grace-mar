@@ -8,19 +8,27 @@ project:
   title: "History Notebook"
   purpose: "Compressed civilizational chapters distilling patterns into strategy-ready reference"
   volumes: 5
+  target_chapters: 100
+  chapters_per_volume: 20
   chapter_format: "See STYLE-GUIDE.md"
 
 volumes:
   - id: vol-i
     title: "Ancient Empires (to 476 CE — Fall of Rome in the West)"
-    thesis: "The founding patterns. Sovereignty, parity, imperial unification, and the first regime-switching logic."
+    thesis: "Twenty strategic problems; comparative ancient evidence (Persia, Rome, China, India and adjacent cases). Not civ-by-civ Parts."
     sub_groups:
-      - label: "Parity Dyad"
-        thesis: "Two empires that could not destroy each other; the pattern that defined the ancient world's strategic ceiling."
-        chapters: [hn-i-persia, hn-i-rome]
-      - label: "Independent Formation"
-        thesis: "Civilizations that formed without the Persia-Rome gravitational field; different answers to the same formation problem."
-        chapters: [hn-i-china, hn-i-india]
+      - label: "Part 1 — State formation and imperial shape"
+        thesis: "Legitimacy, endurance, how power changes shape, administration, expansion ceilings."
+        chapters: [hn-i-v1-01, hn-i-v1-02, hn-i-v1-03, hn-i-v1-04, hn-i-v1-05]
+      - label: "Part 2 — Reach, inclusion, institutions"
+        thesis: "Sea roads, inclusion and occupation, institutions vs genius, absorption, stakeholders."
+        chapters: [hn-i-v1-06, hn-i-v1-07, hn-i-v1-08, hn-i-v1-09, hn-i-v1-10]
+      - label: "Part 3 — Frontiers, geography, elites"
+        thesis: "Overreach, geography of origin, frontier mechanism failure, elite defection, ambivalence to outside orders."
+        chapters: [hn-i-v1-11, hn-i-v1-12, hn-i-v1-13, hn-i-v1-14, hn-i-v1-15]
+      - label: "Part 4 — Eastern synthesis, parity, collapse"
+        thesis: "Non-native rule and hybridity, fragmentation, corridors and exchange, parity and buffers, collapse and succession."
+        chapters: [hn-i-v1-16, hn-i-v1-17, hn-i-v1-18, hn-i-v1-19, hn-i-v1-20]
 
   - id: vol-ii
     title: "Medieval (476–1453 — Fall of Constantinople)"
@@ -67,14 +75,38 @@ volumes:
         chapters: [hn-v-russia-modern, hn-v-persia-modern]
 
 arcs:
+  - arc_id: vol-i-problem-spine
+    title: "Volume I — Problem spine (reading order)"
+    chapters:
+      - hn-i-v1-01
+      - hn-i-v1-02
+      - hn-i-v1-03
+      - hn-i-v1-04
+      - hn-i-v1-05
+      - hn-i-v1-06
+      - hn-i-v1-07
+      - hn-i-v1-08
+      - hn-i-v1-09
+      - hn-i-v1-10
+      - hn-i-v1-11
+      - hn-i-v1-12
+      - hn-i-v1-13
+      - hn-i-v1-14
+      - hn-i-v1-15
+      - hn-i-v1-16
+      - hn-i-v1-17
+      - hn-i-v1-18
+      - hn-i-v1-19
+      - hn-i-v1-20
+    thread: "Twenty problem-led chapters; ancient material distributed across the spine (see per-civilization arcs for emphasis)."
   - arc_id: persia
     title: "The Persian Arc"
-    chapters: [hn-i-persia, hn-ii-persia-islamic, hn-v-persia-modern]
-    thread: "Tolerance → compression → siege governance. Each rupture densifies doctrine."
+    chapters: [hn-i-v1-19, hn-ii-persia-islamic, hn-v-persia-modern]
+    thread: "Tolerance → compression → siege governance. Vol I entry via parity-buffer problem chapter; each rupture densifies doctrine."
   - arc_id: rome
     title: "The Roman Arc"
-    chapters: [hn-i-rome, hn-ii-rome-byzantine]
-    thread: "Institutional continuity → persistence after territorial loss."
+    chapters: [hn-i-v1-04, hn-i-v1-05, hn-ii-rome-byzantine]
+    thread: "Institutional and legal long run → expansion → persistence after territorial loss."
   - arc_id: russia
     title: "The Russian Arc"
     chapters: [hn-iii-russia, hn-iv-russia-imperial, hn-v-russia-modern]
@@ -89,54 +121,230 @@ arcs:
     thread: "Maritime hegemony → managed decline."
   - arc_id: china
     title: "The Chinese Arc"
-    chapters: [hn-i-china, hn-ii-china-medieval, hn-v-china-modern]
-    thread: "Cyclical reunification → bureaucratic maturity → patience as strategy."
+    chapters: [hn-i-v1-16, hn-i-v1-17, hn-i-v1-18, hn-ii-china-medieval, hn-v-china-modern]
+    thread: "Cyclical reunification → bureaucratic maturity → patience as strategy. Vol I entry via synthesis and corridor problem chapters."
 
 chapters:
-  # --- Vol I: Ancient ---
-  - id: hn-i-persia
+  # --- Vol I: Ancient (problem spine; legacy civ draft: chapters/vol-i/persia.md) ---
+  - id: hn-i-v1-01
     volume: i
-    title: "Persia — Achaemenid to Sassanid"
-    file: chapters/vol-i/persia.md
-    status: drafted
-    word_target: 800
-    source_refs: [CIV-CORE-PERSIA, CIV-AXIOM-PERSIA, CIV-DOCTRINE-PERSIA]
-    pattern_tags: [regime-switch, compression, parity, tolerance, siege-literacy, memory-as-software, endurance]
-    linked_skills: [persian-regime-adaptive-strategy]
-    cross_refs: [hn-i-rome, hn-ii-persia-islamic, hn-v-persia-modern]
-
-  - id: hn-i-rome
-    volume: i
-    title: "Rome — Republic to Fall (476)"
-    file: chapters/vol-i/rome.md
+    title: "Legitimacy After Conquest"
+    file: chapters/vol-i/v1-01.md
     status: planned
     word_target: 800
-    source_refs: [CIV-CORE-ROME, CIV-DOCTRINE-ROME]
-    pattern_tags: [institutional-continuity, parity, legalism, imperial-overextension]
+    source_refs: [CIV-CORE-ROME, CIV-CORE-CHINA, CIV-CORE-PERSIA]
+    pattern_tags: [legitimacy, comparative, conquest-integration]
     linked_skills: []
-    cross_refs: [hn-i-persia, hn-ii-rome-byzantine]
+    cross_refs: [hn-i-v1-02, hn-i-v1-19, hn-ii-persia-islamic]
 
-  - id: hn-i-china
+  - id: hn-i-v1-02
     volume: i
-    title: "China — Zhou to Han Unification"
-    file: chapters/vol-i/china.md
+    title: "Civilizational Endurance Under Defeat"
+    file: chapters/vol-i/v1-02.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-PERSIA]
+    pattern_tags: [endurance, defeat, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-01, hn-i-v1-20]
+
+  - id: hn-i-v1-03
+    volume: i
+    title: "When Power Changes Shape"
+    file: chapters/vol-i/v1-03.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-INDIA, CIV-CORE-CHINA]
+    pattern_tags: [regime-switch, formation, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-04, hn-i-v1-16]
+
+  - id: hn-i-v1-04
+    volume: i
+    title: "Administration, Law, and the Long Run"
+    file: chapters/vol-i/v1-04.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-CHINA, CIV-DOCTRINE-ROME]
+    pattern_tags: [legalism, institutions, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-05, hn-ii-rome-byzantine]
+
+  - id: hn-i-v1-05
+    volume: i
+    title: "Expansion Ceilings, Glory, and Consolidation"
+    file: chapters/vol-i/v1-05.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-PERSIA]
+    pattern_tags: [imperial-overextension, consolidation, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-11, hn-ii-rome-byzantine]
+
+  - id: hn-i-v1-06
+    volume: i
+    title: "Sea Roads and Circulation Empires"
+    file: chapters/vol-i/v1-06.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME]
+    pattern_tags: [maritime, circulation, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-07, hn-iii-anglia]
+
+  - id: hn-i-v1-07
+    volume: i
+    title: "Inclusion, Occupation, Annihilation"
+    file: chapters/vol-i/v1-07.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-PERSIA]
+    pattern_tags: [integration, occupation, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-08, hn-i-v1-19]
+
+  - id: hn-i-v1-08
+    volume: i
+    title: "Institutions Against Genius"
+    file: chapters/vol-i/v1-08.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME]
+    pattern_tags: [institutions, narrative, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-09, hn-i-v1-05]
+
+  - id: hn-i-v1-09
+    volume: i
+    title: "Copying, Standardization, Selective Absorption"
+    file: chapters/vol-i/v1-09.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-CHINA]
+    pattern_tags: [absorption, standardization, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-10, hn-i-v1-16]
+
+  - id: hn-i-v1-10
+    volume: i
+    title: "From Subjects to Stakeholders"
+    file: chapters/vol-i/v1-10.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-INDIA]
+    pattern_tags: [stakeholders, pluralism, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-11, hn-i-v1-14]
+
+  - id: hn-i-v1-11
+    volume: i
+    title: "Territorial Maximum, Strategic Maximum, Overreach"
+    file: chapters/vol-i/v1-11.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-ROME, CIV-CORE-PERSIA]
+    pattern_tags: [overreach, parity, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-05, hn-i-v1-19]
+
+  - id: hn-i-v1-12
+    volume: i
+    title: "Geography of Origin and Permanence"
+    file: chapters/vol-i/v1-12.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-INDIA]
+    pattern_tags: [geography, permanence, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-13, hn-i-v1-15]
+
+  - id: hn-i-v1-13
+    volume: i
+    title: "Mechanism Failure at the Frontier"
+    file: chapters/vol-i/v1-13.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-INDIA, CIV-CORE-PERSIA]
+    pattern_tags: [frontier, mechanism-failure, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-14, hn-ii-mongol]
+
+  - id: hn-i-v1-14
+    volume: i
+    title: "Elite Defection and the Shape of Defeat"
+    file: chapters/vol-i/v1-14.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-INDIA, CIV-CORE-ROME]
+    pattern_tags: [elite-defection, defeat, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-20, hn-i-v1-02]
+
+  - id: hn-i-v1-15
+    volume: i
+    title: "Deflection and Ambivalence Toward Outside Orders"
+    file: chapters/vol-i/v1-15.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-INDIA]
+    pattern_tags: [ambivalence, world-system, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-16, hn-i-v1-12]
+
+  - id: hn-i-v1-16
+    volume: i
+    title: "Non-Native Rule, Hybridity, Peak, Exhaustion"
+    file: chapters/vol-i/v1-16.md
     status: planned
     word_target: 800
     source_refs: [CIV-CORE-CHINA, CIV-DOCTRINE-CHINA]
-    pattern_tags: [mandate-of-heaven, cyclical-reunification, legalism]
+    pattern_tags: [hybridity, dynastic-cycle, comparative]
     linked_skills: []
-    cross_refs: [hn-ii-china-medieval, hn-v-china-modern]
+    cross_refs: [hn-i-v1-17, hn-ii-china-medieval]
 
-  - id: hn-i-india
+  - id: hn-i-v1-17
     volume: i
-    title: "India — Maurya, Ashoka, Gupta"
-    file: chapters/vol-i/india.md
+    title: "Fragmentation and Monopoly of Authority"
+    file: chapters/vol-i/v1-17.md
     status: planned
     word_target: 800
-    source_refs: [CIV-CORE-INDIA, CIV-AXIOM-INDIA, CIV-DOCTRINE-INDIA]
-    pattern_tags: [pluralism, non-coercive-integration, dharma-governance]
+    source_refs: [CIV-CORE-CHINA]
+    pattern_tags: [fragmentation, authority, comparative]
     linked_skills: []
-    cross_refs: []
+    cross_refs: [hn-i-v1-18, hn-v-china-modern]
+
+  - id: hn-i-v1-18
+    volume: i
+    title: "Corridors, Exchange, Legibility, Aftermath of Conquest"
+    file: chapters/vol-i/v1-18.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-CHINA]
+    pattern_tags: [exchange, corridors, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-19, hn-ii-china-medieval]
+
+  - id: hn-i-v1-19
+    volume: i
+    title: "Parity, Buffers, Exhaustion, Third Shock"
+    file: chapters/vol-i/v1-19.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-PERSIA, CIV-CORE-ROME, CIV-DOCTRINE-PERSIA]
+    pattern_tags: [parity, buffers, comparative]
+    linked_skills: [persian-regime-adaptive-strategy]
+    cross_refs: [hn-i-v1-11, hn-ii-persia-islamic, hn-v-persia-modern]
+
+  - id: hn-i-v1-20
+    volume: i
+    title: "Collapse, Vacancy, Succession"
+    file: chapters/vol-i/v1-20.md
+    status: planned
+    word_target: 800
+    source_refs: [CIV-CORE-PERSIA, CIV-CORE-ROME]
+    pattern_tags: [collapse, succession, comparative]
+    linked_skills: []
+    cross_refs: [hn-i-v1-02, hn-i-v1-01]
 
   # --- Vol II: Medieval ---
   - id: hn-ii-islam
@@ -159,7 +367,7 @@ chapters:
     source_refs: [CIV-CORE-ROME]
     pattern_tags: [institutional-persistence, orthodoxy-as-architecture]
     linked_skills: []
-    cross_refs: [hn-i-rome, hn-ii-islam]
+    cross_refs: [hn-i-v1-04, hn-ii-islam]
 
   - id: hn-ii-persia-islamic
     volume: ii
@@ -170,7 +378,7 @@ chapters:
     source_refs: [CIV-CORE-PERSIA, CIV-DOCTRINE-PERSIA]
     pattern_tags: [compression, cultural-absorption, doctrinal-densification]
     linked_skills: []
-    cross_refs: [hn-i-persia, hn-v-persia-modern]
+    cross_refs: [hn-i-v1-19, hn-v-persia-modern]
 
   - id: hn-ii-mongol
     volume: ii
@@ -192,7 +400,7 @@ chapters:
     source_refs: [CIV-CORE-CHINA]
     pattern_tags: [technological-peak, bureaucratic-maturity, mongol-interlude]
     linked_skills: []
-    cross_refs: [hn-i-china, hn-v-china-modern]
+    cross_refs: [hn-i-v1-17, hn-v-china-modern]
 
   # --- Vol III: Early Modern ---
   - id: hn-iii-ottoman
@@ -316,7 +524,7 @@ chapters:
     source_refs: [CIV-CORE-PERSIA]
     pattern_tags: [siege-governance, compression-saturation, memory-as-software]
     linked_skills: [persian-regime-adaptive-strategy]
-    cross_refs: [hn-i-persia, hn-ii-persia-islamic, hn-v-russia-modern]
+    cross_refs: [hn-i-v1-19, hn-ii-persia-islamic, hn-v-russia-modern]
 
   - id: hn-v-china-modern
     volume: v
@@ -327,7 +535,7 @@ chapters:
     source_refs: [CIV-CORE-CHINA]
     pattern_tags: [patience-as-strategy, tributary, compute-sovereignty, structural-beneficiary]
     linked_skills: []
-    cross_refs: [hn-i-china, hn-ii-china-medieval, hn-v-america-hegemonic]
+    cross_refs: [hn-i-v1-17, hn-ii-china-medieval, hn-v-america-hegemonic]
 
   # --- Appendix ---
   - id: hn-app-method

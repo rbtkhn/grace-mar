@@ -6,7 +6,7 @@
 |-------|--------|
 | **Project status** | `active` |
 | **Active chapter** | `2026-04` |
-| **Last daily entry** | `2026-04-10` (Davis ingest; flashpoints; DEMO calibration; **Parsi / delegation**; **Pontifex** + **Vatican News web verify** — Islamabad + Rome) |
+| **Last daily entry** | `2026-04-10` (same as prior + **condense outline** — ~4500w → target ~1k; see `demo-runs/condense-outline-2026-04-10.md`) |
 | **Prepared stub** | _(none — add next day’s block at bottom of `days.md` when needed)_ |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 
