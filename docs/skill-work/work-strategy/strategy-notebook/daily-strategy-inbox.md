@@ -10,9 +10,30 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
+### Multi-item ingest (optional common analysis)
+
+When the operator captures **two or more** excerpts in one pass, **items stay separate** — still **one canonical line per excerpt** (separate grep targets; separate Links when the inbox folds into `days.md`).
+
+**Optional:** add **one** short **common analysis** immediately **after** those lines (not a third ingest). Use it to name **convergence, tension, or comparison** across the batch so **`dream`** can fold one **Judgment** that references both lines without duplicating long synthesis.
+
+**Lightweight forms** (pick one):
+
+- **Single metadata line:**  
+  `batch-analysis | YYYY-MM-DD | <short theme> | <1–2 clauses on how items relate> | paired-with: <brief pointer to the ingest lines above>`
+
+- **Mini-block** (slightly more room, still bounded):
+
+```text
+--- batch-analysis | YYYY-MM-DD | <short label> ---
+<2–5 sentences: relationship between items; divergence worth tracking; optional “test next”>
+--- end batch-analysis ---
+```
+
+**Guardrails:** Keep batch analysis **about one screen max**; skip it when items are unrelated or when a single line per item is enough.
+
 **Default assistant behavior:** When the operator asks for **strategy ingest** in Cursor, the assistant’s **default on-disk target** for those lines is **below the append line in this file** — not `session-transcript.md` unless the operator asks for a **session audit trail** (see [work-menu-conventions — Auditing picks](../work-menu-conventions.md#6-auditing-picks-choice-journal)).
 
-**Fold at `dream`:** Synthesize into one **`## YYYY-MM-DD`** block in `chapters/YYYY-MM/days.md` (Signal / Judgment / Links / Open). Full rules (prune, stale-day handling, rolling file not auto-cleared): [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*; agent steps: [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md).
+**Fold at `dream` (or operator manual direction):** Inbox scratch folds into the strategy-notebook only then — synthesize into one **`## YYYY-MM-DD`** block in `chapters/YYYY-MM/days.md` (Signal / Judgment / Links / Open). **Assistants:** do **not** append or merge into `days.md` (or `pages/`) on strategy-ingest alone; keep captures **here** until **`dream`** or the operator **explicitly** says to fold. Full rules: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*; agent steps: [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md).
 
 **Length (scratch section only — below the append line):** When the scratch body exceeds **~8000 characters**, **prune from the top** (oldest lines first) until roughly **≤ ~5000 characters** remain. Re-count after large pastes. Optional: full clear to the template below anytime.
 
@@ -20,6 +41,59 @@
 
 ---
 
-**Accumulator for (local date):** _YYYY-MM-DD_
+**Accumulator for (local date):** 2026-04-11
 
 _(Append below this line during the day.)_
+
+---
+
+### Tri-mind overlap scan (72h A/B/C) — operator recon
+
+**As-of:** 2026-04-12 04:08 UTC (2026-04-11 22:08 MDT) · **Window:** prior 72h · **Frame:** published material vs tri-mind (A process/staging, B power/credibility, C witnesses/terms/text)
+
+**Paste-ready one-liner:** `recon | Tri-mind 72h scan: A strongest (face-to-face, marathon, breaks, Pak mediation, Axios "multiple formats"); B explicit (Vance lead, ultimatums, "final/best," "bad news for Iran"); C mostly implicit — little on exact witness config / Vance-only sidebars; PID readouts + red-line rhetoric closest to procedural facts | verify:operator-compiled`
+
+**Synthesis (from recon):** In-window, **A** is most visible (headline process markers). **B** is explicit and strong (channel coherence, outside options, audience framing). **C** appears weakly — delegation heads, formal Sharif meetings, red lines, proposals, “basis of negotiations” uncertainty; **gap:** few mainstream pieces on **exact room/witness configuration** or authenticating **oral** understandings across **multiple formats**. Strongest **C-adjacent** hints: Axios “multiple formats,” Guardian/AP on breaks/technical tracks, Pakistani **official readouts** (selected formal meetings only). X largely excluded (preview/timestamp limits).
+
+**Credibility note:** Weighted Reuters, AP, WaPo, Bloomberg, Dawn, official PK readouts; Axios as sourced detail not documentary proof; Carnegie = framing not room-reporting.
+
+**Inventory**
+
+| Date/time (UTC) | Source | Type | URL | Map | Why |
+|-----------------|--------|------|-----|-----|-----|
+| 2026-04-11 | Reuters — US leaves Iran peace talks without a deal | wire | https://www.reuters.com/world/asia-pacific/us-iran-talks-pause-now-disagreements-remain-2026-04-11/ | mixed | Meeting dynamics, bargaining, diverging oral understandings |
+| 2026-04-11 | Reuters — Pakistani five-star hotel… | wire | https://www.reuters.com/world/asia-pacific/pakistani-five-star-hotel-becomes-unlikely-site-us-iran-talks-2026-04-11/ | A | Venue, access, session geometry |
+| 2026-04-11 | AP — US and Iran end direct negotiations… | wire | https://apnews.com/article/iran-us-israel-trump-lebanon-april-11-2026-2be904aee3f804892336730279e054b9 | mixed | Delegation heads, breaks, red lines, structure |
+| 2026-04-12 | Axios — U.S.-Iran talks end with no deal | digital | https://www.axios.com/2026/04/12/iran-talks-pakistan-vance-no-deal | A/B | “Multiple formats” (sidebar geometry) |
+| 2026-04-12 | Guardian liveblog | live | https://www.theguardian.com/world/live/2026/apr/11/middle-east-crisis-live-iranian-officials-arrive-in-islamabad-for-conditional-peace-talks-with-us | A | Face-to-face, pauses, technical talks, beats |
+| 2026-04-11 07:26 | WaPo — pre-talk framing | newspaper | https://www.washingtonpost.com/national-security/2026/04/10/us-iran-peace-talks-ceasefire-pakistan/ | B | Distrust, environment before session |
+| 2026-04-11 09:00 | WaPo — Vance… tasked with trying to end it | newspaper | https://www.washingtonpost.com/politics/2026/04/11/vance-war-skeptic-peace-talks/ | B | Vance lead role → how Tehran reads channel |
+| 2026-04-10 22:01 | AP via WaPo — Vance warns Iran not to “play” US | wire | https://www.washingtonpost.com/politics/2026/04/10/iran-us-negotiations-vance-trump/1ac304d2-3492-11f1-b85b-2cd751275c1d_story.html | B | Pre-talk ultimatum / credibility framing |
+| 2026-04-10 | Al Jazeera — pre-talk | intl | https://www.aljazeera.com/news/2026/4/10/jd-vance-expects-positive-us-iran-war-talks-as-he-departs-for-pakistan | B | Vance role, Iranian interlocutor preferences |
+| 2026-04-12 | Al Jazeera live/video | live | https://www.aljazeera.com/news/liveblog/2026/4/12/iran-war-live-historic-face-to-face-talks-with-us-continue-in-islamabad | A/B | “Final offer” rhetoric, breakdown framing |
+| 2026-04-12 03:08 | Bloomberg — US, Iran fail to reach peace agreement | wire | https://www.bloomberg.com/news/articles/2026-04-12/us-hasn-t-reached-agreement-with-iran-vance-says | B | Market/strategic framing, Iranian press signaling |
+| 2026-04-11 | Dawn — Vance departs Islamabad… | regional | https://www.dawn.com/news/1990743 | mixed | Proposals, rights language, procedural readout |
+| 2026-04-11 | Pakistan PID / PMO press note | official | https://pid.gov.pk/site/press_detail/32377 | C | Formal who-met-whom (witness chain) |
+| 2026-04-09 | Carnegie — Proliferation News 4/9/26 | think tank | https://carnegieendowment.org/programs/nuclear-policy/proliferation-news/proliferation-news-4926 | A/C | Unresolved issues, negotiating basis uncertainty |
+| 2026-04-09 | Carnegie Emissary — Iran ceasefire problems | analysis | https://carnegieendowment.org/emissary/2026/04/iran-ceasefire-problems-reactions-lebanon-hormuz | B | Hormuz / leverage (pre-talk, not room-reporting) |
+
+**Excerpts (high-signal, condensed)**
+
+- **Reuters (main):** Iran-linked: “excessive” U.S. demands blocked deal (B/C — terms narrative vs text). Pakistani source: “mood swings,” temperature “up and down” (A — unstable session dynamics).
+- **Reuters (venue):** Serena as “unlikely venue”; “unprecedented security” (A — access, observation, shuttling).
+- **AP:** Vance: U.S. needs “affirmative commitment” on nuclear weapons (B/C). Iran: its “red lines” (C — rhetoric without shared text risk).
+- **Axios:** “Bad news for Iran”; delegations met in **“multiple formats”** (A/B — strongest public hint re room/sidebar geometry).
+- **Guardian live:** WH: talks “face to face” (A); disagreement over Hormuz; marathon duration beats (A/B).
+- **WaPo pre-talk:** “Gulf separating the two sides”; “bad faith” frame (B).
+- **WaPo Vance piece:** Vance as “foremost war skeptic”; Islamabad “highest-profile assignment” (B — presence as signal).
+- **AP/WaPo departure:** don’t “play” the U.S.; “open hand” if good faith (B).
+- **Al Jazeera:** Trump “clear guidelines” (unified channel — B); “final and best offer”; Iranian side “ball in America’s court” (A/B narrative divergence).
+- **Bloomberg:** “Major setback”; Iranian media: no plans for new round (B — outside options).
+- **Dawn:** “Substantive discussions”; Iran ties progress to U.S. “good faith” (B/C).
+- **PID/PMO:** Sharif meeting with Iranian delegation; identifies Iranian leadership (C — formal witness chain partial).
+- **Carnegie PN:** “Many issues unresolved”; “basis of negotiations” (C-adjacent).
+- **Carnegie Emissary:** Trump/strait control vs Iran retention (B leverage frame).
+
+X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown
+
+X | Daniel Davis (@DanielLDavis1): Rebuts “last, best chance” as diplomacy — cites Vietnam/Korea timelines; if offer is final it is ultimatum/surrender not negotiation; Iran unlikely to accept → resumption clock; first-six-weeks military constraints unchanged; Hormuz, oil, Gulf fertilizer dearth → macro pressure on U.S. (“not a good day for America”) | https://x.com/DanielLDavis1 | verify:screenshot-ingest-status-id-unknown
