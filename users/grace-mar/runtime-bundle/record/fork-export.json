@@ -1,7 +1,7 @@
 {
   "version": "1.2",
   "format": "grace-mar-fork-export",
-  "generated_at": "2026-04-11T08:35:23.031458",
+  "generated_at": "2026-04-11T17:08:06.974736",
   "user_id": "grace-mar",
   "ontology": {
     "self": "full identity markdown (`self.md`)",
@@ -96,13 +96,13 @@
     "pipeline_applied": 45,
     "pipeline_rejected": 4,
     "last_applied_ts": "2026-03-28T17:03:50.983164",
-    "generated_at": "2026-04-11T08:35:22.669142"
+    "generated_at": "2026-04-11T17:08:06.706368"
   },
   "agent_manifest": {
     "version": "1.2",
     "grace_mar": true,
     "user_id": "grace-mar",
-    "generated_at": "2026-04-11T08:35:22.479327",
+    "generated_at": "2026-04-11T17:08:06.588944",
     "checksum": "2dfa144f2ffdc1d40ddf3c134732bb7c45490a210c78c90ecff4155b84e64cc9",
     "runtime_mode": "adjunct_runtime",
     "runtime_modes": {
@@ -222,7 +222,7 @@
     "intent_snapshot": {
       "ok": true,
       "user_id": "grace-mar",
-      "generated_at": "2026-04-11T08:35:22.475180",
+      "generated_at": "2026-04-11T17:08:06.586476",
       "source": "users/grace-mar/intent.md",
       "goals": {
         "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",
