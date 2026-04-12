@@ -35,7 +35,7 @@ _From `docs/skill-work/work-strategy/daily-brief-focus.md` § Active focus._
 - AI-in-schools and identity-substrate narrative vs Alpha-style bundles (see [work-alpha-school](../work-alpha-school/README.md), [work-dev offers](../work-dev/offers.md)).
 - Optional: federal / state AI governance headlines when relevant to offers or civ-mem work.
 - Long-form tech discourse (GTC-class, Moonshots-class): themes distilled in [external-tech-scan.md](external-tech-scan.md) — use for **strategy vocabulary** and **keyword-season** tuning in [daily-brief-config.json](daily-brief-config.json); **not** unsourced brief facts.
-- **Putin — last 48h:** **Coffee menu A — Today** fills **§1d** in the daily brief per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) (web scan + citations); Step 1 does not run this pass.
+- **Putin — last 48h:** **Coffee menu C — Strategy (daily brief)** fills **§1d** in the daily brief per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) (web scan + citations); Step 1 does not run this pass.
 
 ## 1c. Two horizons — fast vs slow
 

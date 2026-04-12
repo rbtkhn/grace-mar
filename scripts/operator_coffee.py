@@ -13,7 +13,7 @@ Modes
   work-start  Full work-start coffee: daily warmup + harness warmup + branch snapshot
   light       Lighter pass: daily warmup + compact harness + one-line branch
   minimal     Minimal pass: compact harness only (no daily warmup unless --include-warmup)
-  closeout    Signing-off Step 1: handoff check (gate, PH closeout, commits, worktree) — same coffee A–G menu after; not a separate ritual
+  closeout    Signing-off Step 1: handoff check (gate, PH closeout, commits, worktree) — same coffee A–E menu after; not a separate ritual
   reentry     Cold-thread stack: handoff + daily warmup + harness (same as operator_reentry_stack)
 
 Usage
@@ -175,12 +175,12 @@ def main() -> int:
 
     try:
         from coffee_lane_next_hints import format_lane_next_hints
-        print(f"\n{'=' * 60}\n$ lane next hints (F / G)\n{'=' * 60}\n", flush=True)
+        print(f"\n{'=' * 60}\n$ Lane context (for menu E — system choice)\n{'=' * 60}\n", flush=True)
         print(format_lane_next_hints(_REPO))
     except Exception:
         try:
             from scripts.coffee_lane_next_hints import format_lane_next_hints
-            print(f"\n{'=' * 60}\n$ lane next hints (F / G)\n{'=' * 60}\n", flush=True)
+            print(f"\n{'=' * 60}\n$ Lane context (for menu E — system choice)\n{'=' * 60}\n", flush=True)
             print(format_lane_next_hints(_REPO))
         except Exception:
             pass

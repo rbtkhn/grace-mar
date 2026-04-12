@@ -27,6 +27,10 @@
 - Keep entries **short** (about 10–20 lines): focus, actions, wins, blockers, one line for tomorrow.
 - **No secrets** (API keys, raw Supabase URLs with keys, MCP secrets, private tokens). Reference env vars, script names, and doc paths only.
 
+### Daily inbox (rolling accumulator)
+
+**File:** [daily-dev-journal-inbox.md](daily-dev-journal-inbox.md) — **append-only** during the local day for rough work-dev capture. **`dream`** is the usual time to **fold** into the canonical **`YYYY-MM-DD-day-NN.md`** for that calendar window (create or extend the day file; **NN** follows your journal-day anchor). **No automatic reset** each dream — same **fold + optional prune** pattern as [strategy-notebook daily-strategy-inbox](../../work-strategy/strategy-notebook/daily-strategy-inbox.md). **Missed `dream`:** resolve stale inbox before appending on a new day (merge into the correct `*-day-NN.md`).
+
 **Relation to other surfaces**
 
 | Surface | Role |

@@ -1,6 +1,6 @@
 # CIV-MIND-MEARSHEIMER — Advisory Mind (Offensive Realist)
 
-Trimmed for strategy-notebook use. Full governance and CMC integration: [canonical source](../../../../../research/repos/civilization_memory/docs/templates/CIV–MIND–MEARSHEIMER.md) (v3.4, ~900 lines).
+**Grace-Mar canonical copy** — the full usable mind profile for work-strategy lives **in this file** and **remains available if the `civilization_memory` (civ-mem) checkout is absent.** Provenance: derived from upstream CMC; optional diff against civ-mem when present: `research/repos/civilization_memory/docs/templates/CIV–MIND–MEARSHEIMER.md`.
 
 ────────────────────────────────────────────────────────────
 I. PURPOSE & ROLE

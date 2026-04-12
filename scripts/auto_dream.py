@@ -32,6 +32,11 @@ from log_cadence_event import append_cadence_event, resolve_cursor_model
 from harness_warmup import _pending_candidates
 from repo_io import resolve_self_memory_path
 
+try:
+    from dream_catchup import catch_up_window_dict, missing_strategy_notebook_days
+except ImportError:
+    from scripts.dream_catchup import catch_up_window_dict, missing_strategy_notebook_days  # type: ignore
+
 LAST_DREAM_FILENAME = "last-dream.json"
 HANDOFF_SCHEMA_VERSION = 2
 VALID_PHASES = ("both", "recent", "structural")
@@ -487,6 +492,8 @@ def _write_last_dream_handoff(
         handoff["capture_gap"] = summary["capture_gap"]
     if summary.get("capability_shift"):
         handoff["capability_shift"] = summary["capability_shift"]
+    if summary.get("dream_catchup"):
+        handoff["dream_catchup"] = summary["dream_catchup"]
 
     # Schema v2 alignment with companion-self night-handoff (operational; not Record).
     handoff["handoffSchemaVersion"] = HANDOFF_SCHEMA_VERSION
@@ -529,6 +536,25 @@ def run_auto_dream(
 ) -> dict[str, Any]:
     if phase not in VALID_PHASES:
         raise ValueError(f"phase must be one of {VALID_PHASES}, got {phase!r}")
+
+    from datetime import datetime, timezone
+
+    now_utc_catchup = datetime.now(timezone.utc)
+    dream_catchup: dict[str, Any]
+    try:
+        dream_catchup = catch_up_window_dict(
+            users_dir=users_dir, user_id=user_id, now_utc=now_utc_catchup
+        )
+        want_iso = dream_catchup.get("local_calendar_dates") or []
+        want_dates = [date.fromisoformat(s) for s in want_iso]
+        dream_catchup["strategy_notebook_missing_day_headers"] = missing_strategy_notebook_days(
+            REPO_ROOT, want_dates
+        )
+    except Exception as exc:  # noqa: BLE001 — surface in summary; do not fail dream
+        dream_catchup = {
+            "semantics": "since_previous_dream",
+            "error": str(exc),
+        }
 
     run_recent = phase in ("both", "recent")
     run_structural = phase in ("both", "structural")
@@ -623,6 +649,7 @@ def run_auto_dream(
         },
         "contradiction_digest": digest,
         "artifact_drafts": artifact_drafts,
+        "dream_catchup": dream_catchup,
     }
     if digest_phases is not None:
         summary["digest_phases"] = digest_phases
@@ -832,6 +859,17 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
             lines.append(
                 f"coffee rollup 24h: count={cr.get('count')} modes={cr.get('by_mode')}"
             )
+        dc = summary.get("dream_catchup") or {}
+        if dc.get("error"):
+            lines.append(f"dream catch-up: error — {dc['error']}")
+        elif dc.get("semantics") == "since_previous_dream":
+            dates = dc.get("local_calendar_dates") or []
+            miss = dc.get("strategy_notebook_missing_day_headers") or []
+            lines.append(
+                f"dream catch-up (since previous dream): {len(dates)} local day(s) — {','.join(dates)}"
+            )
+            if miss:
+                lines.append(f"  strategy-notebook missing ## headers: {', '.join(miss)}")
         return "\n".join(lines)
 
     lines = [
@@ -890,6 +928,17 @@ def format_auto_dream_summary(summary: dict[str, Any]) -> str:
             f"capability shift [{cs.get('category', 'model')}]: "
             f"{cs.get('sources_checked', 0)}/{cs.get('sources_total', 0)} sources — {status}"
         )
+    dc = summary.get("dream_catchup") or {}
+    if dc.get("error"):
+        lines.append(f"dream catch-up: error — {dc['error']}")
+    elif dc.get("semantics") == "since_previous_dream":
+        dates = dc.get("local_calendar_dates") or []
+        miss = dc.get("strategy_notebook_missing_day_headers") or []
+        lines.append(
+            f"dream catch-up (since previous dream): {len(dates)} local day(s) — {','.join(dates)}"
+        )
+        if miss:
+            lines.append(f"  strategy-notebook missing ## headers: {', '.join(miss)}")
     return "\n".join(lines)
 
 

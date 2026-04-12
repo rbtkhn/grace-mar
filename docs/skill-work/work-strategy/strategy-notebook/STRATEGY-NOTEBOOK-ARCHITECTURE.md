@@ -12,6 +12,14 @@ The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **prim
 
 **Shared date key (work-xavier):** The [Xavier journal](../../../work-xavier/xavier-journal/README.md) uses the same **`YYYY-MM-DD`** identifier for daily files (`YYYY-MM-DD.md`). Strategy pages stay in month `days.md` (or `pages/YYYY-MM-DD.md`); Xavier stays in `xavier-journal/` — same calendar key, different folder and purpose.
 
+### Daily strategy inbox (accumulator)
+
+**File:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) — **append-only** during the local day for rough captures (bullets, links, paste). **`strategy`** sessions **add** here first if you want separation between scratch and finished page; you may still draft directly in `days.md` when you prefer.
+
+**At `dream`:** Fold inbox content into the official **`## YYYY-MM-DD`** block in `chapters/YYYY-MM/days.md` (synthesize, don’t duplicate raw paste). The rolling inbox is **not** automatically cleared each dream — keep scratch across nights if useful, **clear** manually when you want a clean buffer, and **prune** when the scratch section (below the append line) exceeds **~8000 characters** by dropping **oldest** lines first until roughly **≤ ~5000 characters** remain. If **`dream`** was skipped and a new day begins, **fold or archive** the stale inbox before appending (merge into the correct dated page, or move stale lines under a one-line “backlog” note you resolve the same session).
+
+**Contrast:** `days.md` is the **durable dated journal**; the inbox is a **volatile buffer** — like a lab notebook’s tear-off sheet compiled into the bound volume at night.
+
 [STRATEGY.md](../STRATEGY.md) is a **durable ledger** (watches, analogy list, operator log). **Promotion** into STRATEGY when an arc stabilizes is optional; it does **not** replace writing the notebook block.
 
 ```mermaid

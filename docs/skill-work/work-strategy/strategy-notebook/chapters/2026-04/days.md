@@ -25,7 +25,7 @@ Append-only. Newest dated block at the **bottom**.
 
 ### Links
 
-- [STRATEGY.md](../../../STRATEGY.md) §IV — 2026-04-08 Islamabad entries · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [CIV–MIND–MERCOURIS](../../../../../civilization-memory/minds/CIV–MIND–MERCOURIS.md) (IV.E)
+- [STRATEGY.md](../../../STRATEGY.md) §IV — 2026-04-08 Islamabad entries · [islamabad-framework.md](../../../islamabad-framework.md) · [islamabad-framework-summary.md](../../../islamabad-framework-summary.md) · [Jiang intake](../../../../../../research/external/work-jiang/intake/Islamabad-5-point-reconciliation-plan-with-jiang-commentary.md) · [CIV-MIND–MERCOURIS](../../../minds/CIV-MIND-MERCOURIS.md) (IV.E — trimmed; canonical in `research/repos/civilization_memory`)
 
 ### Jiang resonance (optional)
 
@@ -44,7 +44,7 @@ Append-only. Newest dated block at the **bottom**.
 
 ### Signal
 
-- Compressed a **work-strategy arc** into a **Session Harvest Packet** (Islamabad framework + **Rome “helix”**: Cannae → endurance / terms of contest; Teutoburg → veto on annexation; Rhine → stabilized boundary) with **CMC** pointers (`MEM–ROME–WAR–CANNAE`, Teutoburg, Rhine) and **Mercouris** IV.E (*Faction Persistence*) from `docs/civilization-memory/minds/CIV–MIND–MERCOURIS.md` — framed as **optional policy bridge**, not proof of Roman history.
+- Compressed a **work-strategy arc** into a **Session Harvest Packet** (Islamabad framework + **Rome “helix”**: Cannae → endurance / terms of contest; Teutoburg → veto on annexation; Rhine → stabilized boundary) with **CMC** pointers (`MEM–ROME–WAR–CANNAE`, Teutoburg, Rhine) and **Mercouris** IV.E (*Faction Persistence*) from [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../../../minds/CIV-MIND-MERCOURIS.md) — framed as **optional policy bridge**, not proof of Roman history.
 - Grounded **downstream critique**: name the **ledger** whenever copy says “stronger”; keep **battle vs war** honest (Cannae catastrophic, Second Punic War continued); diplomatic register favors **recovery mechanisms** over tactical detail; **overclaim** risk if “stronger” reads as moral ascendancy.
 - **Canonical placement:** Rome ladder fits **`islamabad-framework-summary.md`** first; full **`islamabad-framework.md`** only if the preamble truly needs the braid (else cross-link).
 - Shipped **strategy-notebook** skeleton (PH-style **month = chapter**, `days.md` + `meta.md`), README row, history log — pushed to `main`.

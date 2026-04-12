@@ -1,12 +1,14 @@
-# Strategy-notebook minds (trimmed for notebook use)
+# Strategy-notebook minds (Grace-Mar canonical)
 
-Cognitive-linguistic signature files for the three analytical minds, trimmed for strategy-notebook readers. Voice fingerprints and analytical frameworks are complete; CMC-internal governance (OGE menus, blend law, auto-revert, mode contracts) is omitted.
+**Canonical location for the three CIV–MIND profiles in this repo:** [`CIV-MIND-MERCOURIS.md`](CIV-MIND-MERCOURIS.md), [`CIV-MIND-MEARSHEIMER.md`](CIV-MIND-MEARSHEIMER.md), [`CIV-MIND-BARNES.md`](CIV-MIND-BARNES.md). These files are **self-contained** for work-strategy: **full access does not depend on** `research/repos/civilization_memory` (civ-mem).
 
-| File | Role | Canonical source (full governance) |
-|------|------|------------------------------------|
-| [CIV-MIND-BARNES.md](CIV-MIND-BARNES.md) | Liability, mechanism, constraint hierarchy | [civ-mem template](../../../../../research/repos/civilization_memory/docs/templates/CIV–MIND–BARNES.md) |
-| [CIV-MIND-MEARSHEIMER.md](CIV-MIND-MEARSHEIMER.md) | Power distribution, structural realism, security dilemma | [civ-mem template](../../../../../research/repos/civilization_memory/docs/templates/CIV–MIND–MEARSHEIMER.md) |
-| [CIV-MIND-MERCOURIS.md](CIV-MIND-MERCOURIS.md) | Legitimacy, institutional continuity, civilizational grammar | [civ-mem template](../../../../../research/repos/civilization_memory/docs/templates/CIV–MIND–MERCOURIS.md) |
+| File | Role | Optional upstream (diff / governance-only; if civ-mem present) |
+|------|------|----------------------------------------------------------------|
+| [CIV-MIND-BARNES.md](CIV-MIND-BARNES.md) | Liability, mechanism, constraint hierarchy | `civ-mem` … `docs/templates/CIV–MIND–BARNES.md` |
+| [CIV-MIND-MEARSHEIMER.md](CIV-MIND-MEARSHEIMER.md) | Power distribution, structural realism, security dilemma | `civ-mem` … `docs/templates/CIV–MIND–MEARSHEIMER.md` |
+| [CIV-MIND-MERCOURIS.md](CIV-MIND-MERCOURIS.md) | Legitimacy, institutional continuity, civilizational grammar | `civ-mem` … `docs/templates/CIV–MIND–MERCOURIS.md` |
+
+**CIV-MEM (upstream repo) × tri-frame:** which MEM / STATE / SCHOLAR slices to open first — [CIV-MEM-TRI-FRAME-ROUTING.md](../../minds/CIV-MEM-TRI-FRAME-ROUTING.md). **Depth:** shared spine from `MEM–RELEVANCE–X`, then up to **1–2 MEM reads per mind** (Barnes / Mearsheimer / Mercouris) aligned to each mind’s column — not a single pair of MEMs for the whole triad unless that is all the index offers. **Search / index** over the checkout: [CIV-MEM-UPSTREAM-SEARCH.md](../../minds/CIV-MEM-UPSTREAM-SEARCH.md). **Daily brief overlays:** [DAILY-BRIEF-MINDS-WORKFLOW.md](../../minds/DAILY-BRIEF-MINDS-WORKFLOW.md) (same tri-frame order; civ-mem optional grounding).
 
 **Recipes and post-entry lens offer:** [MINDS-SKILL-STRATEGY-PATTERNS.md](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
 

@@ -29,6 +29,10 @@
 - **L3 — Artifacts:** Optional repo-relative paths via inbox frontmatter or `inbox/YYYY-MM-DD-artifacts.txt` — see [SYNTHESIS-SOURCES.md](SYNTHESIS-SOURCES.md).
 - You may edit generated files afterward. **No secrets** (API keys, Supabase URLs with keys, MCP keys). Point to env vars and dashboards in prose only.
 
+### Daily inbox (rolling accumulator)
+
+**File:** [daily-xavier-journal-inbox.md](daily-xavier-journal-inbox.md) — **append-only** during the local day for rough OB1/Cici/coaching capture. **`dream`** is the usual time to **fold** that material into **`inbox/YYYY-MM-DD.md`** for the matching date (synthesize; merge with existing inbox body), then run [`xavier_journal_ob1_digest.py`](../../../../scripts/xavier_journal_ob1_digest.py) so L2 merges as today. **No automatic reset** each dream — same **fold + optional prune** pattern as [strategy-notebook daily-strategy-inbox](../../work-strategy/strategy-notebook/daily-strategy-inbox.md). Per-day [`inbox/`](inbox/README.md) files remain the digest’s input; the rolling file is **not** read by the script — only by the fold step.
+
 **Daily synthesis**
 
 Canonical OB1 instance repo: **[github.com/Xavier-x01/Cici](https://github.com/Xavier-x01/Cici)** (`main`).

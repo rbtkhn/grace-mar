@@ -1,5 +1,7 @@
 # Concept: Polyphonic cognition
 
+**Terminology (Grace-Mar workspace):** **civ-mem** means the complete [`civilization_memory`](../../../research/repos/civilization_memory) repository. This note lives under `docs/civilization-memory/` (satellite prose); upstream implementation details reference that repo.
+
 **Purpose:** Define **polyphonic cognition** in the civ-mem frame and link it to STATE, one subject many tongues, and the seam. (Also referred to as cognitive polyphony in some prior docs.) The term is not standard in the literature; the ideas are. This note anchors the concept for library and lookup.
 
 **Related:** [civ-mem-state-vs-scholar.md](civ-mem-state-vs-scholar.md), [ONE-SUBJECT-MANY-TONGUES](../essays/ONE-SUBJECT-MANY-TONGUES.md), [THE-SIMPLE-CONDITION](../essays/THE-SIMPLE-CONDITION.md), [argument-purpose-of-history-unifies.md](argument-purpose-of-history-unifies.md).
@@ -42,7 +44,7 @@ So **polyphonic cognition** in civ-mem can be read as a **fusion** of Bakhtin’
 
 ## Implementation: upstream (three minds)
 
-In **upstream CMC** (`research/repos/civilization_memory`), polyphonic cognition is implemented as **three named minds**. The full mind profiles are ported to Grace-Mar at [../minds/](../minds/) (CIV–MIND–MERCOURIS, CIV–MIND–MEARSHEIMER, CIV–MIND–BARNES); see [../minds/README.md](../minds/README.md). They have fixed roles and fixed option slots:
+In **upstream CMC** (`research/repos/civilization_memory`), polyphonic cognition is implemented as **three named minds** (`docs/templates/CIV–MIND–*.md`). **Grace-Mar canonical copies** (full bodies in this repo, **no civ-mem required**): [`docs/skill-work/work-strategy/strategy-notebook/minds/`](../../skill-work/work-strategy/strategy-notebook/minds/) — see [strategy-notebook/minds/README.md](../../skill-work/work-strategy/strategy-notebook/minds/README.md). [`docs/civilization-memory/minds/`](../minds/) only **redirects** here. Fixed roles and option slots:
 
 | Mind | Role | Focus | Why it works |
 |------|------|--------|----------------|
@@ -76,4 +78,4 @@ Grace-Mar doesn't run the CMC console or MEMs. It can still **adapt** the three-
 
 ## Summary
 
-**Polyphonic cognition** (civ-mem) = multiple perspectives or voices held at once, tensions preserved, no single resolution. It names the STATE posture and the one-subject-many-tongues structure. **Upstream implementation:** three minds (Mercouris primary, Mearsheimer advisory, Barnes catalyst), fixed A/B/C slots, mandatory Barnes dimension, post-Barnes reframe. **For Grace-Mar:** assistant brain uses fixed perspectives (A = legitimacy, B = structure, C = liability, D = civ-mem lens optional); same pattern, adapted. Academically it sits at the intersection of Bakhtin’s polyphony (many voices) and Moscovici’s cognitive polyphasia (many knowledge systems coexisting); the phrase itself is not canonical but the ideas are.
+**Polyphonic cognition** (civ-mem) = multiple perspectives or voices held at once, tensions preserved, no single resolution. It names the STATE posture and the one-subject-many-tongues structure. **Upstream implementation:** three minds (Mercouris primary, Mearsheimer advisory, Barnes catalyst), fixed A/B/C slots, mandatory Barnes dimension, post-Barnes reframe. **Grace-Mar:** same three profiles as **canonical `CIV-MIND-*.md` files** under `docs/skill-work/work-strategy/strategy-notebook/minds/`. **For Grace-Mar:** assistant brain uses fixed perspectives (A = legitimacy, B = structure, C = liability, D = civ-mem lens optional); same pattern, adapted. Academically it sits at the intersection of Bakhtin’s polyphony (many voices) and Moscovici’s cognitive polyphasia (many knowledge systems coexisting); the phrase itself is not canonical but the ideas are.

@@ -1,6 +1,6 @@
 # work-coffee
 
-**Purpose:** Operator cadence, activation, re-entry, signing-off (merged into **`coffee`** Step 1 + same **A–G** menu), and workflow-state design for Grace-Mar's `coffee` ritual. This territory is where the system explains and evolves the ritual architecture. The executable trigger surface lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
+**Purpose:** Operator cadence, activation, re-entry, signing-off (merged into **`coffee`** Step 1 + same **A–E** menu), and workflow-state design for Grace-Mar's `coffee` ritual. This territory is where the system explains and evolves the ritual architecture. The executable trigger surface lives in [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 
 **Not** Record truth. **Not** MEMORY. **Not** a second merge path. **Not** generic repo hygiene, and **not** a broad health/caffeine territory. `work-coffee` is a WORK lane for ritual architecture and operator ergonomics.
 
@@ -10,7 +10,7 @@
 
 | Role | Description |
 |------|-------------|
-| **Cadence architecture** | Defines work-start vs signing-off **Step 1** weight, **one** **A–G** menu (seven modes: **A–E** core + **F** xavier next + **G** dev next; **Compass** includes work-strategy-rome), re-entry behavior, and cadence modifiers. |
+| **Cadence architecture** | Defines work-start vs signing-off **Step 1** weight, **one** **A–E** menu (Build, Steward, Strategy/daily brief, Write, system choice), re-entry behavior, and cadence modifiers. |
 | **Operator activation** | Holds the rationale for why the `coffee` ritual exists: activation, rhythm, state shift, and workflow dopamine replacement. |
 | **Boundary surface** | Explains what belongs in WORK-only docs/history versus what must escalate to `RECURSION-GATE` or change review. |
 | **Session trail guidance** | Clarifies how `session-transcript`, `work-*-history.md`, and `self-memory` relate without collapsing into one another. |
@@ -19,13 +19,15 @@
 
 ## Relationship to `coffee`
 
-- **`coffee` skill** = executable ritual contract, trigger behavior, and exact **A–G** menu semantics.
+- **`coffee` skill** = executable ritual contract, trigger behavior, and exact **A–E** menu semantics.
 - **`work-coffee` territory** = prose home for rationale, boundaries, history, and evolution of the ritual.
 
 This split is intentional:
 
 - the skill should stay optimized for invocation and agent behavior
 - the territory should hold the longer-form doctrine and lane-specific history
+
+**`coffee` C — Strategy (daily brief) (operator default for field intel):** Stage 1 = today’s brief file + Putin/Vance watches + optional KY-4 intel. Stage 2 = offer **three Tri-Frame mind lenses** (Barnes → Mearsheimer → Mercouris), then the operator **chooses which mind** and **A–D** prompts per [daily-brief-minds-menu.md](../work-strategy/daily-brief-minds-menu.md). Agents should **not** stop after markets/polls unless the operator opts out — see [menu-reference.md](menu-reference.md#tri-frame-daily-brief).
 
 ---
 
@@ -102,7 +104,7 @@ In scope:
 
 - operator cadence design
 - activation rituals
-- work-start / signing-off (merged into one **A–G** flow; Rome under **C — Compass**)
+- work-start / signing-off (merged into one **A–E** flow; Rome / Jiang / Xavier / Dev often land in **E** or fold into **C**/**D** per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md))
 - reorientation and multi-`coffee` behavior
 - survey/cadence workflow design
 - relationship between hub flow and territory execution

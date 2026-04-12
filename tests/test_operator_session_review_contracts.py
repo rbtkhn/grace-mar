@@ -22,7 +22,7 @@ def test_coffee_skill_step1_and_compass_and_exit_rule():
     md = _read(".cursor/skills/coffee/SKILL.md")
     assert "Step 1" in md
     assert "operator_coffee.py" in md
-    assert "C. Compass" in md or "**C. Compass**" in md
+    assert "C. Strategy (daily brief)" in md or "**C. Strategy (daily brief)**" in md
     assert "stay in coffee" in md.lower()
     assert "exit to normal workflow" in md.lower()
 

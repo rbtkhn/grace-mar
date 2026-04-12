@@ -13,6 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Clone civilization_memory (pinned SHA)
+        run: bash scripts/ci/clone_civilization_memory.sh
+
+      - name: Tri-frame civ-mem routing smoke test
+        run: python3 scripts/test_civmem_tri_frame_routing.py
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

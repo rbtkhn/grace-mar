@@ -23,7 +23,7 @@ def _minimal_dream() -> dict:
         "self_memory_changed": False,
         "reviewable_count": 1,
         "contradiction_count": 0,
-        "tomorrow_inherits": "Tomorrow inherits (hint): **Today / field** — calendar rotation; not policy or Record.",
+        "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** — calendar rotation; not policy or Record.",
         "civmem_echoes": [],
         "civmem_index_missing": False,
     }
@@ -103,7 +103,7 @@ def test_compress_lines_truncates() -> None:
 def test_coffee_menu_hint_maps_paths() -> None:
     d = {
         "execution_paths": [
-            {"id": "today_field", "title": "Today / field"},
+            {"id": "today_field", "title": "Daily Brief / field"},
             {"id": "build", "title": "Build"},
             {"id": "steward", "title": "Steward"},
         ],
@@ -112,7 +112,7 @@ def test_coffee_menu_hint_maps_paths() -> None:
     }
     hint = coffee_menu_hint_from_dream(d)
     assert hint is not None
-    assert "**E — Steward**" in hint
+    assert "**B — Steward**" in hint
     assert "gate backlog" in hint
 
 
@@ -127,7 +127,7 @@ def test_coffee_menu_hint_unknown_id_falls_back_to_index() -> None:
     }
     hint = coffee_menu_hint_from_dream(d)
     assert hint is not None
-    assert "**B — Build**" in hint
+    assert "**A — Build**" in hint
 
 
 def test_coffee_menu_hint_returns_none_without_paths() -> None:

@@ -30,11 +30,15 @@
 - [`strategy-notebook/minds/CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md)
 - [`strategy-notebook/minds/README.md`](../strategy-notebook/minds/README.md)
 
-### Canonical full mind templates (CMC governance — use when full governance is needed)
+### Optional upstream templates (civ-mem — diff / governance-only; not required for Grace-Mar)
 
-- `research/repos/civilization_memory/docs/templates/CIV–MIND–MERCOURIS.md`
-- `research/repos/civilization_memory/docs/templates/CIV–MIND–MEARSHEIMER.md`
-- `research/repos/civilization_memory/docs/templates/CIV–MIND–BARNES.md`
+If `research/repos/civilization_memory` is present:
+
+- `docs/templates/CIV–MIND–MERCOURIS.md`
+- `docs/templates/CIV–MIND–MEARSHEIMER.md`
+- `docs/templates/CIV–MIND–BARNES.md`
+
+**Grace-Mar canonical** mind bodies: [`strategy-notebook/minds/`](../strategy-notebook/minds/) (always).
 
 ### Work-strategy mind stubs (entry points)
 

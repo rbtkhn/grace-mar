@@ -13,6 +13,7 @@ Generate a standard **daily brief** for work-politics + work-strategy.
     in config — extra phrase lists for scoring **only** (no translation API; zero-API mode).
   - Optional **`ingest_caps`**: per-feed `max_items` and/or `tier` (1–3) with `default_max_items_per_feed` + `max_items_by_tier`
     so high-volume feeds do not dominate before W+S ranking.
+  - Optional **`civ_mem_entity_hint`** in config (or CLI `--civ-mem-entity-hint`): inserts §**1b-civ** with upstream MEM–RELEVANCE paths.
 
 Config (default):
   docs/skill-work/work-strategy/daily-brief-config.json
@@ -506,6 +507,54 @@ def _extract_jiang_layer() -> str:
     return "\n".join(out)
 
 
+_ENTITY_HINT_RE = re.compile(r"^[A-Z0-9][A-Z0-9_\-]*$")
+
+
+def _normalize_civ_mem_entity_hint(raw: str | None) -> str:
+    """Uppercase entity id for upstream civ-mem paths (letters, digits, underscore, hyphen)."""
+    if raw is None:
+        return ""
+    s = str(raw).strip().upper()
+    if not s or not _ENTITY_HINT_RE.match(s):
+        return ""
+    return s
+
+
+def _read_civ_mem_entity_hint_from_config(config_path: Path) -> str:
+    if not config_path.exists():
+        return ""
+    try:
+        data = json.loads(config_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return ""
+    if not isinstance(data, dict):
+        return ""
+    return _normalize_civ_mem_entity_hint(data.get("civ_mem_entity_hint"))
+
+
+def _civ_mem_entity_stub_lines(entity: str) -> list[str]:
+    """Optional §1b-civ block when civ_mem_entity_hint is set."""
+    if not entity:
+        return []
+    rel_mem = (
+        f"research/repos/civilization_memory/content/civilizations/{entity}/"
+        f"MEM–RELEVANCE–{entity}.md"
+    )
+    return [
+        "",
+        "## 1b-civ. Upstream civ-mem (entity hint)",
+        "",
+        f"_Entity (`civ_mem_entity_hint` or `--civ-mem-entity-hint`): **{entity}**_",
+        "",
+        f"- **Spine (read first):** `{rel_mem}` — then [tri-frame routing](minds/CIV-MEM-TRI-FRAME-ROUTING.md).",
+        "- **Search / checkout:** [CIV-MEM-UPSTREAM-SEARCH.md](minds/CIV-MEM-UPSTREAM-SEARCH.md).",
+        "",
+        "_Tooling: `python3 scripts/suggest_civ_mem_from_relevance.py "
+        f"{entity}` · pin check: `bash scripts/check_civ_mem_upstream_pin.sh`._",
+        "",
+    ]
+
+
 def _local_tag(tag: str) -> str:
     if "}" in tag:
         return tag.split("}", 1)[1]
@@ -927,6 +976,7 @@ def build_daily_brief(
     max_per_feed_override: int | None = None,
     civmem_hooks: bool = True,
     max_geo_headlines: int = 14,
+    civ_mem_entity_hint_override: str | None = None,
 ) -> str:
     assembled = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
     day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -942,6 +992,10 @@ def build_daily_brief(
         geo_phrases,
         geo_by_locale,
     ) = _load_full_config(config_path)
+    if civ_mem_entity_hint_override is not None:
+        civ_entity = _normalize_civ_mem_entity_hint(civ_mem_entity_hint_override)
+    else:
+        civ_entity = _read_civ_mem_entity_hint_from_config(config_path)
     snapshot = get_wap_snapshot(user_id)
     primary = snapshot["campaign_status"]
     gate = snapshot["gate"]
@@ -985,6 +1039,7 @@ def build_daily_brief(
     )
     for line in _extract_strategy_focus().splitlines():
         lines.append(line)
+    lines.extend(_civ_mem_entity_stub_lines(civ_entity))
     lines.extend(
         [
             "",
@@ -1457,6 +1512,13 @@ def main() -> int:
         help="Max lines in §2a geopolitical & military block (default 14)",
     )
     parser.add_argument(
+        "--civ-mem-entity-hint",
+        default=None,
+        metavar="ENTITY",
+        help="Override civ_mem_entity_hint from JSON for this run (e.g. RUSSIA). "
+        "Pass empty string to suppress §1b-civ even if config sets a hint.",
+    )
+    parser.add_argument(
         "--skip-brief",
         action="store_true",
         help="Skip RSS/brief generation; use with --brief-path for mind-only overlay steps",
@@ -1540,6 +1602,7 @@ def main() -> int:
             max_per_feed_override=(args.max_per_feed if args.max_per_feed > 0 else None),
             civmem_hooks=not args.no_civmem,
             max_geo_headlines=max(1, args.max_geo_lines),
+            civ_mem_entity_hint_override=args.civ_mem_entity_hint,
         )
         if args.output:
             out = Path(args.output).resolve()

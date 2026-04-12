@@ -102,7 +102,7 @@ Lanes may stop at any tier. Do not copy nine files into a thin lane “because t
 - **Gate / Record:** [AGENTS.md](../../AGENTS.md) — merge only via script after companion approval.  
 - **Operator menus:** [work-menu-conventions.md](../work-menu-conventions.md).  
 - **Lane prefixes:** [operator-agent-lanes.md](../../operator-agent-lanes.md).  
-- **Coffee / daily brief habit:** [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md), [work-coffee/README.md](../work-coffee/README.md) — e.g. work-strategy combined brief is **coffee menu A — Today** (generator does not run in coffee Step 1).  
+- **Coffee / daily brief habit:** [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md), [work-coffee/README.md](../work-coffee/README.md) — e.g. work-strategy combined brief is **coffee menu C — Strategy (daily brief)** (generator does not run in coffee Step 1).  
 - **PR labels:** Many lanes use [LANE-CI.md](../work-strategy/LANE-CI.md)-style labeling; mirror per lane.  
 
 ---

@@ -2,14 +2,14 @@
 name: coffee
 preferred_activation: coffee
 requires: [handoff-check]
-description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed A–G menu (seven modes: A–E core + **F** work-xavier next + **G** work-dev next). Compass (C) includes work-strategy-rome (ROME-PASS). Signing-off intent uses the same menu; closeout is merged into Step 1. Exit the hub by picking **Later** after a steward fork, choosing **C** or **D** (exit to normal workflow unless stay in coffee), or starting a non-coffee task without expecting the ritual menu."
+description: "Grace-Mar operator cadence and tempo. Primary trigger: coffee. Coffee is a repeatable sip of coherence: a lightweight reorientation ritual that restores clarity, framing, and agency. Multiple coffee sessions per day are normal. Before Step 1 scripts run, synthesize the previous four events from work-cadence-events.md into plain-language **Recent rhythm** (no internal ops jargon or timestamps in chat). Work-start coffee runs the read-only grounding stack, then the fixed **five-option** menu **A–E** (Build, Steward, Strategy/daily brief, Write, system choice). No micro-hints line under the menu. Signing-off intent uses the same menu; closeout is merged into Step 1."
 ---
 
 # Coffee
 
 **Preferred activation (operator):** say **`coffee`**. Legacy **`hey`** still works as a compatibility alias, but **`coffee`** is the canonical trigger now.
 
-**Signing-off intent** (end of session, wrapping the day, stepping away) uses the **same** **`coffee`** trigger and the **same** **A–G** menu. There is **no** separate closeout branch or closeout-only menu item. **Step 1** switches to handoff-weighted output when intent is signing off; **Step 2** is unchanged.
+**Signing-off intent** (end of session, wrapping the day, stepping away) uses the **same** **`coffee`** trigger and the **same** **A–E** menu. There is **no** separate closeout branch or closeout-only menu item. **Step 1** switches to handoff-weighted output when intent is signing off; **Step 2** is unchanged.
 
 `coffee` is not a startup ceremony. `coffee` is a **repeatable sip of coherence**.
 
@@ -83,55 +83,53 @@ If the operator **explicitly** wants **both** full warmup **and** signing-off in
 
 Add `--compact` for shorter harness output. Individual scripts (`operator_daily_warmup.py`, `harness_warmup.py`, `operator_handoff_check.py`, `operator_reentry_stack.py`) are still available.
 
-**Dream handoff:** If `dream` ran overnight, the daily warmup automatically includes a **"Last dream (night handoff)"** block from `users/grace-mar/last-dream.json`. **Default:** that block is **collapsed** (status, digest counts, tomorrow hint). After that block (or alone if the Last dream section is turned off), warmup prints one line **`Dream → coffee menu:`** mapping dream’s suggested execution path to **A / B / E** (Today / Build / Steward) — operational hint only; see [dream/SKILL.md](../dream/SKILL.md) § *Five-second closeout*. Extra lines (civ-mem summary, coffee 24h rollup) are **off** by default; tune `config/context_budgets/coffee.json` or pass `--show-civ-mem` / `--show-rollup` on `operator_daily_warmup.py`, `operator_coffee.py`, or `operator_reentry_stack.py`. Approximate paste footprint: `python3 scripts/audit_context_tax.py -u grace-mar`. These files are operator scaffolding, not Record. For full paths / snippets / followups, use **`--verbose-dream`**. When pasting warmup for the operator, prefer **collapsed** unless they ask for detail.
+**Dream handoff:** If `dream` ran overnight, the daily warmup automatically includes a **"Last dream (night handoff)"** block from `users/grace-mar/last-dream.json`. **Default:** that block is **collapsed** (status, digest counts, tomorrow hint). After that block (or alone if the Last dream section is turned off), warmup prints one line **`Dream → coffee menu:`** mapping dream’s suggested execution path to **A / B / C** (Build / Steward / Strategy · daily brief) — operational hint only; see [dream/SKILL.md](../dream/SKILL.md) § *Five-second closeout*. Extra lines (civ-mem summary, coffee 24h rollup) are **off** by default; tune `config/context_budgets/coffee.json` or pass `--show-civ-mem` / `--show-rollup` on `operator_daily_warmup.py`, `operator_coffee.py`, or `operator_reentry_stack.py`. Approximate paste footprint: `python3 scripts/audit_context_tax.py -u grace-mar`. These files are operator scaffolding, not Record. For full paths / snippets / followups, use **`--verbose-dream`**. When pasting warmup for the operator, prefer **collapsed** unless they ask for detail.
 
-**Step 1 deliverables (work-start):** Warmup brief (priorities, gate, work-politics, integrity), branch snapshot, daily brief + intel defer line (path pattern + **menu A — Today** when ready), optional PH/Jiang line. **No** Polymarket / poll / Massie blocks in Step 1 unless the operator explicitly asked in the same message.
+**Step 1 deliverables (work-start):** Warmup brief (priorities, gate, work-politics snapshot where relevant, integrity), branch snapshot, daily brief + intel defer line (path pattern + **menu C — Strategy (daily brief)** when ready), optional PH/Jiang line. **No** Polymarket / poll / Massie blocks in Step 1 unless the operator explicitly asked in the same message.
 
 **Step 1 guardrail:** Stay read-only — no merge/stage unless they switch lanes or use a pipeline phrase ("we …").
 
-**Done when:** Script output is pasted in the reply, Recent rhythm is at the top, and the A–G menu follows immediately.
+**Done when:** Script output is pasted in the reply, Recent rhythm is at the top, and the **A–E** menu follows immediately.
 
 For cadence tables and explicit phrase definitions (`coffee light`, `coffee minimal`, `coffee survey`): see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
 
 ### Multiple coffees per day
 
-The operator may say **`coffee`** **more than once per calendar day** for reorientation. This is normal. Each new `coffee` runs Step 1 again and starts a new **A–G** cycle. If **`coffee`** arrives mid-hub, treat it as a **reorientation restart**: run Step 1 again, then offer a fresh **A–G** menu.
+The operator may say **`coffee`** **more than once per calendar day** for reorientation. This is normal. Each new `coffee` runs Step 1 again and starts a new **A–E** cycle. If **`coffee`** arrives mid-hub, treat it as a **reorientation restart**: run Step 1 again, then offer a fresh **A–E** menu.
 
-### Step 2 — Multiple choice (required; always A–G, load-annotated)
+### Step 2 — Multiple choice (required; exactly **five** options **A–E**)
 
-Immediately **after** Step 1 content, output the fixed **coffee** menu: **seven** lettered options **A through G** (present **A, B, C, D, E, F, G**). **There is no separate “close” letter** — exit paths are **C** / **D** (normal workflow unless **`stay in coffee`**), or a **steward fork** (**Later**) that returns to this full menu.
-
-**Step 1 lane hints:** After session load, `operator_coffee.py` prints **`lane next hints (F / G)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-xavier + work-dev). Ground **F** and **G** in those lines plus the linked docs below; refresh hints on the next `coffee` if stale.
-
-**Load annotation:** `operator_coffee.py` prints a session load one-liner at the end of Step 1 (e.g. `Session load: MODERATE — 3 coffees today, 5 pending candidates`). Use `scripts/assess_session_load.py` output (or the one-liner already printed) to **annotate each A–G option** with its cost tag — `(light)`, `(moderate)`, or `(heavy)` — and mark the recommended option (**A–E** only for “recommended”; **F**/**G** are always available but not auto-recommended). The letters stay fixed; the tags are advisory. Example:
+Immediately **after** Step 1 content, output **only** this fixed menu — **five lines**, lettered **A** through **E**. **Do not** add a second line of micro-hints, fork shorthand, or F/G/Xavier/Dev tags under the list.
 
 ```
-A. Today — (light) recommended: quick reorientation matches current pace
-B. Build — (moderate) work-dev + skills; one implementation step
-C. Compass — (heavy) sustained strategy; consider after break
-D. Book — (moderate) Jiang/PH; 1 pending step
-E. Steward — (light) gate/template/integrity/git sub-tracks; default gate else template
-F. Xavier next — (moderate) work-xavier; one next task from SYNC-DAILY / WORK-LEDGER / INDEX
-G. Dev next — (moderate) work-dev; first open line in workspace.md § Next actions
+A. Build
+B. Steward
+C. Strategy (daily brief)
+D. Write
+E. (system choice) — <one short line: the single best alternate lane this session>
 ```
 
-If the session load script is unavailable or errored, present the menu without annotations (unchanged behavior).
+**Filling E — (system choice):** Pick **one** concrete slice for this turn, using Step 1 context — e.g. **work-xavier** next (ground in `coffee_lane_next_hints` / SYNC-DAILY / INDEX), **work-dev** next from [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions**, **work-strategy-rome** / ROME-PASS (Compass-style), **work-jiang / PH** (Book-style), or match **`Dream → coffee menu`** when it points at a path not already covered by **A–D**. State it plainly in the angle-bracket line; **do not** add a separate “micro-hints” row.
 
-**Micro-hints (one line under the A–G list):** `Micro-hints: B+skills/meta | F=xavier next | G=dev next (workspace) | E=gate | template | integrity | git/ship | E both | after actionable E: Implement now / Later`
+**Step 1 context for E:** `operator_coffee.py` prints **`Lane context (for menu E)`** — two lines from `scripts/coffee_lane_next_hints.py` (work-xavier + work-dev). Use when choosing **E** or when wording the **E** line.
+
+**Optional load note:** Step 1 may print `Session load: … (recommended: X)`. You may mention that **one** recommended letter in prose before or after the five lines — **not** as a second labeled menu block and **not** as micro-hints under the list.
 
 **Quick reference (modes):**
 
-- **A. Today** — Daily brief (generator + §1d Putin + §1e JD Vance only when chosen) + work-politics intel (KY-4 Polymarket, polls, Massie X per cadence), brief registry / campaign / queue — **one** next step. **Companion survey** defaults here when the operator opened with **`coffee survey`**.
-- **B. Build** — **work-dev + skills/meta** ( **not** git/ship or membrane audits — those are **E** ): `docs/skill-work/work-dev/` + [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md); **skills / meta** ([skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md), extract-skill, portable-skills-sync) when **`skills`** / **`meta`** with **B**. **One** prescribed next action. Detail: [menu-reference § Build (B) — detailed scope](../../../docs/skill-work/work-coffee/menu-reference.md#build-b--detailed-scope).
-- **C. Compass** — **work-strategy** + **work-strategy-rome** (ROME-PASS, manifest, exemplars, notes) — **one** develop step. Vatican / Holy See / ROME-PASS work lives **here**, not under **Today** alone.
-- **D. Book** — **work-jiang / Predictive History** — **one** next step.
-- **E. Steward** — **Governance membrane:** **gate** \| **template/boundary** \| **integrity/exports** \| **git/ship**. **Default if the operator says `E` only:** **gate** if pending candidates; else **template/boundary** — **integrity** and **git/ship** not in default rotation. **`E integrity`** / **`E git`** / **`E ship`** → that track only; **`E both`** → gate + template; **`E all`** → all four (explicit only). **Git/ship:** [git-branch-hygiene.md](../../../docs/skill-work/work-dev/git-branch-hygiene.md), `git status`, commit/push plan (read-only until ship). **Integrity/exports:** `validate-integrity.py`; `refresh_derived_exports.py` **writes** — **Implement now**. Template/boundary: **Reconciliation code** per [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md). **Gate merges** never run from steward alone — companion **approve** + `process_approved_candidates.py` only.
-- **F. Xavier next** — **work-xavier** — **one** next task: use Step 1 **lane next hints** line + [INDEX.md](../../../docs/skill-work/work-xavier/INDEX.md), [SYNC-DAILY.md](../../../docs/skill-work/work-xavier/SYNC-DAILY.md), [WORK-LEDGER.md](../../../docs/skill-work/work-xavier/WORK-LEDGER.md), [DAILY-OPS-CARD.md](../../../docs/skill-work/work-xavier/DAILY-OPS-CARD.md); mirrors / BrewMind / runbooks only as needed for that single step — **not** a full territory sweep unless the operator asks.
-- **G. Dev next** — **work-dev next task only** — **one** concrete step from the first **open** numbered item in [workspace.md](../../../docs/skill-work/work-dev/workspace.md) § **Next actions** (operator-maintained). **Narrower than B:** no default full work-dev+skills or **E git/ship** pass unless folded in.
+- **A. Build** — **work-dev + skills/meta** (not git/ship or full membrane audits — those are **B**): `docs/skill-work/work-dev/` + [work-dev-sources.md](../../../docs/skill-work/work-dev/work-dev-sources.md); **skills / meta** when **`skills`** / **`meta`** with **A**. **One** prescribed next action. Detail: [menu-reference § Build — detailed scope](../../../docs/skill-work/work-coffee/menu-reference.md#build-b--detailed-scope) (legacy letter **B** in that doc = current **A**).
 
-**Re-offer rules:** After **A**, **B**, **F**, or **G**, re-offer the full **A–G** menu by default. After **C** or **D**, **exit to normal workflow** unless the operator says **`stay in coffee`**. After **E**, see [menu-reference.md § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later): if the steward pass **surfaces actionable possibilities** (defined there), **do not** re-offer the full menu — offer **only** **1. Implement now** and **2. Later** (**Later** → then present full **A–G**). If **nothing actionable** surfaced, re-offer full **A–G** as after **A**/**B**/**F**/**G**. Synonyms: **`E+ship`** / **`E implement`** / **`EXECUTE`** + slice ≈ **Implement now** when the operator uses them instead of the numbered pick.
+- **B. Steward** — **Governance membrane:** **gate** \| **template/boundary** \| **integrity/exports** \| **git/ship**. **Default if the operator says `B` only:** **gate** if pending candidates; else **template/boundary**. **`B integrity`** / **`B git`** / **`B ship`** → that track; **`B both`** / **`B all`** as in [menu-reference — Steward](../../../docs/skill-work/work-coffee/menu-reference.md#ah-table). Gate merges never without companion **approve** + `process_approved_candidates.py`.
 
-For full **A–G** definitions, signing-off add-ons per letter, and the companion survey track: see [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md).
+- **C. Strategy (daily brief)** — **Two-stage flow (default; do not collapse to intel-only):** **(1)** Daily brief path — generator and/or `daily-brief-YYYY-MM-DD.md`, **§1d** / **§1e**, optional **KY-4** (Polymarket, polls, Massie X per cadence). **(2)** In the **same turn**, offer **Tri-Frame** minds **Barnes → Mearsheimer → Mercouris**, wait for **which mind**, then [daily-brief-minds-menu.md](../../../docs/skill-work/work-strategy/daily-brief-minds-menu.md). **Do not** end **C** on polls alone unless **`intel only`** / **`no tri-frame`** / survey-only. **Companion survey** when **`coffee survey`**. See [menu-reference — Tri-Frame](../../../docs/skill-work/work-coffee/menu-reference.md#tri-frame-daily-brief).
+
+- **D. Write** — **self-skill-write**-shaped work: companion-facing prose discipline, prompts, PRP, Lexile ceiling, bot/prompt **proposals** (not merge) — [skills-modularity.md](../../../docs/skills-modularity.md). **Not** work-dev implementation (**A**) and not strategy field brief (**C**).
+
+- **E. (system choice)** — As filled on the menu line; typically one of: Xavier next, Dev next (workspace), Compass/Rome, Jiang/PH — **one** step.
+
+**Exit / re-offer:** After **A**, **B**, or **E**, re-offer the full **A–E** menu by default. After **C** or **D**, **exit to normal workflow** unless **`stay in coffee`**. After **B** (Steward), see [menu-reference § Steward follow-up fork](../../../docs/skill-work/work-coffee/menu-reference.md#steward-follow-up-fork-implement-now-vs-later) (replace legacy **E** with **B** when reading that section). Synonyms **`B+ship`** / **`EXECUTE`** ≈ **Implement now** on steward track.
+
+Legacy **A–G** detail tables in [menu-reference.md](../../../docs/skill-work/work-coffee/menu-reference.md) still describe **workloads**; map letters: old **Daily Brief → C**, **Build → A**, **Steward → B**, **Compass/Book/F/G** → usually **E** (system choice) unless you fold Rome/Jiang into **C**/**D** as appropriate.
 
 **Done when:** The operator has picked a letter (or combo), the selected branch has been executed, and the re-offer or exit rule has been applied.
 
@@ -145,18 +143,19 @@ Sessions begin when the operator says **`coffee`** (optional modifiers). To keep
 
 Each successful coffee run appends one line to `docs/skill-work/work-cadence/work-cadence-events.md` via `scripts/log_cadence_event.py`. This is automatic — no operator action required. The line always includes **`cursor_model=…`** (audit parity with bridge/harvest **Agent surface**): set **`CURSOR_MODEL`** in the environment, or pass **`--cursor-model "…"`** to `operator_coffee.py`, using the model name from the Cursor UI. If unset, **`unknown`**.
 
-**After the operator states their menu letter** (and steward track if **E**), the assistant may append a **`coffee_pick`** cadence line (same file) for rollup:  
-`python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=E steward=gate --cursor-model "<from Cursor UI>"`  
-(`steward=` only when `picked=E`; values: `gate`, `template`, `integrity`, `git`, `both`, or `all`.) Optional: `scripts/log_operator_choice.py --context COFFEE --picked E` for `session-transcript.md`.
+**After the operator states their menu letter** (and steward track if **B**), the assistant may append a **`coffee_pick`** cadence line (same file) for rollup:  
+`python3 scripts/log_cadence_event.py --kind coffee_pick -u grace-mar --ok --kv picked=B steward=gate --cursor-model "<from Cursor UI>"`  
+(`steward=` only when `picked=B`; values: `gate`, `template`, `integrity`, `git`, `both`, or `all`.) Optional: `scripts/log_operator_choice.py --context COFFEE --picked B` for `session-transcript.md`.
 
 ## Related files
 
 - `docs/skill-work/work-cadence/README.md` — **Cadence choreography** (ordering, handoffs, Step 0 recent rhythm window depths, harvest vs triad)
 - `docs/skill-work/work-coffee/README.md` — territory rationale and boundaries
-- `docs/skill-work/work-coffee/menu-reference.md` — full A–G definitions, cadence, survey track, signing-off add-ons
+- `docs/skill-work/work-coffee/menu-reference.md` — cadence, survey track, signing-off add-ons; legacy **A–G** workload tables (map to **A–E** per Step 2 above)
 - `docs/skill-work/work-coffee/work-coffee-history.md` — lane breadcrumbs
 - `docs/skill-work/work-cadence/work-cadence-events.md` — per-run cadence telemetry
 - `.cursor/skills/dream/SKILL.md` — night-side counterpart
 - `.cursor/skills/thanks/SKILL.md` — micro-pause cadence (`thanks`; not a substitute for coffee / dream / bridge)
-- `docs/skill-work/work-politics/polling-and-markets.md` — KY-4 polling (**menu A — Today**)
+- `docs/skill-work/work-politics/polling-and-markets.md` — KY-4 polling (**menu C — Strategy (daily brief)**)
+- `docs/skill-work/work-strategy/daily-brief-minds-menu.md` — Tri-Frame **three minds** (Barnes / Mearsheimer / Mercouris) for **C — Strategy (daily brief)** second stage
 - `docs/skill-work/work-politics/america-first-ky/guardrail-stress-test.md` — messaging discipline

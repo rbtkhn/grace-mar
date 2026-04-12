@@ -31,5 +31,5 @@
 
 ## Related
 
-- [menu-reference.md](menu-reference.md) — full **A–G** protocol.
+- [menu-reference.md](menu-reference.md) — full **A–E** protocol (legacy tables may still label old letters — map per [coffee SKILL](../../../.cursor/skills/coffee/SKILL.md) Step 2).
 - [work-coffee-history.md](work-coffee-history.md) — lane breadcrumbs.

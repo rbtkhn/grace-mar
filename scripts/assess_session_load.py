@@ -3,7 +3,7 @@
 Session load assessment — aggregate cadence, gate, capture gap, and dream
 quality signals into a cognitive load level for the operator.
 
-Designed to annotate the coffee A–G menu with per-option cost hints and a
+Designed to annotate the coffee **A–E** menu with per-option cost hints and a
 recommended pick.
 
 Exposes assess_load() for import by operator_coffee.py.
@@ -214,30 +214,28 @@ def _compute_option_weights(
     gate: dict | None,
     branch_count: int,
 ) -> dict[str, dict[str, str]]:
-    """Assign cost and note to each A–G option."""
+    """Assign cost and note to each A–E option (coffee five-option menu)."""
     pending = gate.get("pending", 0) if gate else 0
 
     weights: dict[str, dict[str, str]] = {
-        "A": {"cost": "light", "note": "quick orientation"},
-        "B": {"cost": "moderate", "note": "dev + hygiene"},
-        "C": {"cost": "heavy", "note": "sustained strategy"},
-        "D": {"cost": "moderate", "note": "Jiang/PH structured reading"},
-        "E": {"cost": "light", "note": "bounded gate pass"},
-        "F": {"cost": "moderate", "note": "work-xavier next task"},
-        "G": {"cost": "moderate", "note": "work-dev next task (workspace)"},
+        "A": {"cost": "moderate", "note": "Build — work-dev + skills"},
+        "B": {"cost": "light", "note": "Steward — gate / template / integrity / git"},
+        "C": {"cost": "light", "note": "Strategy — daily brief + tri-frame"},
+        "D": {"cost": "moderate", "note": "Write — skill-write / prompts / prose"},
+        "E": {"cost": "moderate", "note": "System choice — xavier / dev / jiang / rome slice"},
     }
 
     if branch_count >= 3:
-        weights["B"]["cost"] = "heavy"
-        weights["B"]["note"] = f"dev + hygiene; {branch_count} branches to review"
+        weights["A"]["cost"] = "heavy"
+        weights["A"]["note"] = f"Build; {branch_count} branches to review"
     elif branch_count >= 1:
-        weights["B"]["note"] = f"dev + hygiene; {branch_count} non-main branch(es)"
+        weights["A"]["note"] = f"Build; {branch_count} non-main branch(es)"
 
     if pending >= 5:
-        weights["E"]["note"] = f"{pending} pending candidates; moderate gate pass"
-        weights["E"]["cost"] = "moderate"
+        weights["B"]["note"] = f"Steward; {pending} pending — heavier gate pass"
+        weights["B"]["cost"] = "moderate"
     elif pending >= 1:
-        weights["E"]["note"] = f"{pending} pending candidate(s); bounded gate pass"
+        weights["B"]["note"] = f"Steward; {pending} pending candidate(s)"
 
     return weights
 
@@ -247,19 +245,19 @@ def _pick_recommendation(
     weights: dict[str, dict[str, str]],
     signals: list[str],
 ) -> tuple[str, str]:
-    """Select the recommended option and reason (A–E only; F/G are opt-in lanes)."""
+    """Select the recommended option and reason (A–E five-option menu)."""
     w = {k: weights[k] for k in "ABCDE" if k in weights}
     if load_level == "heavy":
-        return "A", "heavy load — quick reorientation is highest leverage"
+        return "C", "heavy load — strategy / daily brief pass is highest leverage"
     if load_level == "moderate":
         light_options = [k for k, v in w.items() if v["cost"] == "light"]
-        if "E" in light_options:
-            return "E", "moderate load — bounded steward pass clears cognitive debt"
-        return "A", "moderate load — quick reorientation matches current pace"
+        if "B" in light_options:
+            return "B", "moderate load — bounded steward pass clears cognitive debt"
+        return "C", "moderate load — strategy pass matches current pace"
     moderate_options = [k for k, v in w.items() if v["cost"] in ("light", "moderate")]
     if "C" in moderate_options:
-        return "C", "light load — good conditions for sustained strategy"
-    return "B", "light load — good conditions for deeper work"
+        return "C", "light load — good conditions for strategy / daily brief"
+    return "A", "light load — good conditions for build work"
 
 
 # ---------------------------------------------------------------------------
@@ -303,22 +301,20 @@ def format_load_one_liner(result: dict) -> str:
 
 
 def format_annotated_menu(result: dict) -> str:
-    """Format the A–G menu with load annotations."""
+    """Format the A–E coffee menu with load annotations (optional; not printed by default)."""
     weights = result.get("option_weights", {})
     rec = result.get("recommended", "")
 
     labels = {
-        "A": "Today",
-        "B": "Build",
-        "C": "Compass",
-        "D": "Book",
-        "E": "Steward",
-        "F": "Xavier next",
-        "G": "Dev next",
+        "A": "Build",
+        "B": "Steward",
+        "C": "Strategy (daily brief)",
+        "D": "Write",
+        "E": "System choice",
     }
 
     lines = []
-    for letter in "ABCDEFG":
+    for letter in "ABCDE":
         w = weights.get(letter, {"cost": "?", "note": ""})
         label = labels[letter]
         tag = f"({w['cost']})"

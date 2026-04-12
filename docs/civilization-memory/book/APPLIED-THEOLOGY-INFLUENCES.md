@@ -72,11 +72,9 @@ Civ-mem minds (negotiation format, meeting vs. negotiation, competing legitimacy
 
 ---
 
-## 5. Civ-mem minds
+## 5. Three minds (polyphonic profiles)
 
-In `docs/civilization-memory/minds/`:
-
-- **CIV–MIND–MERCOURIS.md**, **CIV–MIND–MEARSHEIMER.md**, **CIV–MIND–BARNES.md**: Polyphonic cognition profiles; “STATE” reference (structural/anarchy explanation of conflict). Not included as book text. **Influence:** The book states that the civ-mem corpus (including minds) has been checked for anything that contradicts the peace thesis; the only tension is the **advisory realist voice** in the minds (“logic of anarchy overrode the logic of restraint”), which is preserved as polyphonic tension, not removed. So minds influence the book indirectly: they are part of the corpus that was analysed and that the book’s “peace thesis” claim is measured against; negotiation format and competing legitimacy grammars are attributed to “civ-mem minds” in the *Source* line.
+**Grace-Mar canonical copies** of the three CIV–MIND profiles live under `docs/skill-work/work-strategy/strategy-notebook/minds/` (`CIV-MIND-*.md`) — **full content in this repo**, independent of **civ-mem** (`research/repos/civilization_memory`). **Polyphonic cognition profiles**; “STATE” reference (structural/anarchy explanation of conflict). Not included as book text. **Influence:** The book states that the civ-mem corpus (including upstream mind templates when present) has been checked for anything that contradicts the peace thesis; the only tension is the **advisory realist voice** in the minds (“logic of anarchy overrode the logic of restraint”), which is preserved as polyphonic tension, not removed. So minds influence the book indirectly: they are part of the corpus that was analysed and that the book’s “peace thesis” claim is measured against; negotiation format and competing legitimacy grammars are attributed to “civ-mem minds” in the *Source* line.
 
 ---
 

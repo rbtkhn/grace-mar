@@ -53,6 +53,14 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 - Added `scripts/coffee_lane_next_hints.py`; `operator_coffee.py` prints **`lane next hints (F / G)`** after session load. `assess_session_load.py` annotates **F** and **G**; load **recommendation** stays **A–E** only.
 - Cross-refs: `menu-reference.md`, `operator-skills.md`, `operator-style.mdc`, harness-warmup, dream/bridge/harvest/thanks, handoff-check, cadence README, glossary, skills-portable README.
 
+## 2026-04-11 — coffee **A–E** (five options); no micro-hints line
+
+- **Canonical menu:** **A** Build, **B** Steward, **C** Strategy (daily brief), **D** Write, **E** (system choice — one assistant-filled line per session). **Removed** the separate **micro-hints** row under the menu; **removed** dedicated **F/G** letters (Xavier / Dev next fold into **E** or Step 1 lane context).
+- **Dream → coffee** mapping: `today_field` → **C**, `build` → **A**, `steward` → **B** (`dream_execution_paths.py`).
+- **`assess_session_load.py`:** recommendation and `format_annotated_menu` use **A–E** labels only.
+- **`operator_coffee.py`:** lane hints block renamed **Lane context (for menu E — system choice)**.
+- Cross-refs: coffee SKILL, operator-style, harness-warmup, handoff-check, menu-reference (legacy A–G tables retained for workload detail), dream SKILL cadence table.
+
 ## 2026-03-31 — auto-research and swarm context sharpened the cadence boundary
 
 - Auto-research scaffold work clarified the repo-wide rule that proposal artifacts and orchestration surfaces can evolve without bypassing the gate.
@@ -71,3 +79,8 @@ This log is WORK-only. It is not the Record, not MEMORY, and not a substitute fo
 - **Local git** (branches, `git status`, worktrees, commit/push plan) moved from **B — Build** to **E — Steward** as sub-track **git/ship** (`E git`, `E ship`, included in `E all`).
 - **B — Build** is now **work-dev execution + skills/meta** only. **Signing-off** add-on: **B** = work-dev/skills carryover; **E** prefers **`E git`** when handoff shows dirty tree / branch noise.
 - **Fork actionable** includes git/ship when the tree prescribes commit/push work. `git-branch-hygiene.md` cross-ref: coffee **E — git/ship** (not menu B).
+
+## 2026-04-10 — **A** labeled **Daily Brief** (not “work-politics-first”)
+
+- Renamed coffee Step 2 **A** from **Today** to **Daily Brief** in [menu-reference.md](menu-reference.md), [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md), `assess_session_load.py` (annotated menu label), `dream_execution_paths.py` (handoff titles + `first_move` text), operator docs, and daily-brief watch footers.
+- **Framing:** the **daily brief** path (generator, §1d/§1e watch slices, registry) is the primary meaning of **A**; KY-4 / Polymarket / Massie intel remains **deferred from Step 1** and runs as an **optional slice** when the operator chooses **A** (or asks explicitly), not as the fixed identity of the letter.

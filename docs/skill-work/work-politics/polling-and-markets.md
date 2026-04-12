@@ -2,7 +2,7 @@
 
 **Purpose:** Standard **coffee** intel for the Massie shadow / work-politics lane: **horserace polling** (when it exists) and **prediction-market prices** (Polymarket). Legacy **hey** still works as the trigger alias. This is **operator WORK product**, not Record truth and not Voice knowledge.
 
-**Last checked:** 2026-04-10
+**Last checked:** 2026-04-11
 
 ---
 
@@ -21,13 +21,13 @@
 
 Run this block **only** when:
 
-- The operator chose **coffee menu A — Today** (intel path — not survey-only; legacy **hey** still works), **or**
+- The operator chose **coffee menu C — Strategy (daily brief)** (intel path — not survey-only; legacy **hey** still works), **or**
 - The operator explicitly requested KY-4 / Polymarket / polls in the **same** message as coffee, **or**
 - They asked ad hoc for a markets/polls refresh outside coffee.
 
-**Do not** run as part of coffee **Step 1** (token discipline — [coffee skill](../../../.cursor/skills/coffee/SKILL.md) defers internet intel until **A — Today** or explicit request).
+**Do not** run as part of coffee **Step 1** (token discipline — [coffee skill](../../../.cursor/skills/coffee/SKILL.md) defers internet intel until **A — Daily Brief** or explicit request).
 
-After `operator_daily_warmup.py` / `harness_warmup.py` when helpful for context, but **fetch/search steps** belong in the **E / work-politics** turn (or explicit request), not the first paste.
+After `operator_daily_warmup.py` / `harness_warmup.py` when helpful for context, but **fetch/search steps** belong in the **A — Daily Brief** turn (or explicit request), not the first paste.
 
 1. **Fetch** the two Polymarket URLs above (or equivalent fetch). Report **implied %** and **volume** from the **price row / order book**, not from Polymarket’s **AI “Market Context”** blurb (blurbs can be wrong on names, dates, and poll citations).
 2. **Search** the public web for **independent** KY-4 primary polling: e.g. named pollsters, university polls, or major outlets reporting **toplines + methodology**. If none in the last ~30 days, say so plainly.

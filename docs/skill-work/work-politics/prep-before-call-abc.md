@@ -2,7 +2,7 @@
 
 **Purpose:** Before a high-stakes call or decision, run a quick pass through three perspectives. No single recommendation; tensions preserved. Use this as the default habit so the three slots (legitimacy, structure, liability) are always in view.
 
-**Source:** [Polyphonic cognition](../../civilization-memory/notes/concept-cognitive-polyphony.md), [three minds](../../civilization-memory/minds/README.md). A = Mercouris-like, B = Mearsheimer-like, C = Barnes-like.
+**Source:** [Polyphonic cognition](../../civilization-memory/notes/concept-cognitive-polyphony.md), [three minds (canonical files)](../../skill-work/work-strategy/strategy-notebook/minds/README.md). A = Mercouris-like, B = Mearsheimer-like, C = Barnes-like.
 
 ---
 

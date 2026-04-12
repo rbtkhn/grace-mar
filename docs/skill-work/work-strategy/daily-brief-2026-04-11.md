@@ -1,7 +1,7 @@
 # Daily brief — work-politics & work-strategy
 
 **Date:** 2026-04-11  
-**Assembled:** 2026-04-11 12:36 UTC  
+**Assembled:** 2026-04-11 12:36 UTC · **§1d–§1e intel refresh (coffee A):** 2026-04-11 ~14:10 UTC  
 **Recency window (RSS):** last **36h** (undated items may appear)  
 **Config:** `docs/skill-work/work-strategy/daily-brief-config.json`
 
@@ -37,8 +37,8 @@ _From `docs/skill-work/work-strategy/daily-brief-focus.md` § Active focus._
 - AI-in-schools and identity-substrate narrative vs Alpha-style bundles (see [work-alpha-school](../work-alpha-school/README.md), [work-dev offers](../work-dev/offers.md)).
 - Optional: federal / state AI governance headlines when relevant to offers or civ-mem work.
 - Long-form tech discourse (GTC-class, Moonshots-class): themes distilled in [external-tech-scan.md](external-tech-scan.md) — use for **strategy vocabulary** and **keyword-season** tuning in [daily-brief-config.json](daily-brief-config.json); **not** unsourced brief facts.
-- **Putin — last 48h:** **Coffee menu A — Daily Brief** fills **§1d** in the daily brief per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) (web scan + citations); Step 1 does not run this pass.
-- **JD Vance — last 48h:** **Coffee menu A — Daily Brief** fills **§1e** per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) (web scan + citations); Step 1 does not run this pass.
+- **Putin — last 48h:** **Coffee menu C — Strategy (daily brief)** fills **§1d** in the daily brief per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) (web scan + citations); Step 1 does not run this pass.
+- **JD Vance — last 48h:** **Coffee menu C — Strategy (daily brief)** fills **§1e** per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) (web scan + citations); Step 1 does not run this pass.
 - **Weak signal — §1f:** Include one weak signal worth watching when a credible candidate exceeds threshold; test any historical parallel with a compact analogy audit before carrying it into synthesis ([weak-signals.md](weak-signals.md), [weak-signal-template.md](weak-signal-template.md), [analogy-audit-template.md](analogy-audit-template.md)).
 - **Rome / Vatican (work-strategy-rome):** When Holy See or papal lines intersect multipolar or legitimacy stories, run the [ROME-PASS](work-strategy-rome/ROME-PASS.md) skeleton (vatican.va + wire + optional civ-mem); file notes or exemplars under [work-strategy-rome/notes/](work-strategy-rome/notes/). **Standing packet (Apr 2026):** [Leo XIV OSINT brief](../work-politics/leo-xiv-osint-prc-brief-2026-04-04.md) (Bollettino-backed China tranche) + [civ-mem context](work-strategy-rome/notes/2026-04-05-leo-xiv-civ-mem-historical-context.md) — analytic exercise; facts still tier **A** from primary URLs in the brief.
 
@@ -71,6 +71,8 @@ _Web scan (48h through 2026-04-11 ~12:30 UTC). Bullets + URLs — verify before 
 
 - **Sovereign AI / Kremlin meeting (Apr 11 press):** Russian outlets reported a Kremlin meeting on moving toward **domestic “sovereign AI”** stacks for defense and economy (coordination commission, Cabinet planning horizon to 2030). Treat details as **secondhand** until a Kremlin.ru event page or full transcript is archived.
 
+- **Menu A refresh — truce clock:** Outlets continue to describe the Orthodox Easter pause as **starting 16:00 Moscow Apr 11** through end **Apr 12** (aligned with TASS/Kremlin lines above). Example secondary summary: [RT — truce enters force](https://www.rt.com/russia/638065-truce-russia-ukraine-easter/) — use Kremlin/TASS first for ship.
+
 ## 1e. JD Vance — last 48 hours
 
 _Web scan (48h). Bullets + URLs._
@@ -80,6 +82,8 @@ _Web scan (48h). Bullets + URLs._
 - **Islamabad (Apr 11):** Wires reported Vance arriving to lead the U.S. delegation for **high-stakes U.S.–Iran ceasefire-related talks** (e.g. [WTOP](https://wtop.com/world/2026/04/us-vice-president-jd-vance-arrives-in-islamabad-for-high-stakes-ceasefire-talks-with-iran/), [India Today](https://www.indiatoday.in/world/story/us-iran-ceasefire-talks-islamabad-jd-vance-in-pakistan-middle-east-war-2894684-2026-04-11)). **Verify** names, timing, and Pakistani/Iranian readouts before reuse.
 
 - **Analysis (RSS §2 — not official):** [BBC — Trump has handed JD Vance his most difficult mission yet](https://www.bbc.com/news/articles/c1d9z1q2997o) — narrative pressure piece, not a government statement.
+
+- **Menu A refresh — Islamabad session:** Regional coverage continues to frame **U.S.–Iran** engagement the same day under tight security (e.g. [Dawn — Vance arrives for talks](https://www.dawn.com/news/1990743/us-vice-president-jd-vance-arrives-in-islamabad-for-make-or-break-talks-with-iran)); treat as **press atmosphere**, not verified U.S. delegation quotes — pull White House / State readouts for anything client-facing.
 
 ## 1f. Weak signal worth watching
 

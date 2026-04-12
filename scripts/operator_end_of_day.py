@@ -8,11 +8,12 @@ check captures gate state, commits, worktree noise, and the re-entry prompt
 for tomorrow's coffee.
 
 Strategy notebook (LIB-0153): this script does not edit chapters/YYYY-MM/days.md.
+  Since-previous-dream dates + missing headers: see `auto_dream.py` JSON `dream_catchup` or run dream SKILL agent steps.
 When an agent runs the full `dream` ritual, follow `.cursor/skills/dream/SKILL.md`
 § Strategy notebook — end-of-day production closeout for that calendar day's page
 (read STATUS + days.md, stub / condense note / gap).
 
-Xavier journal (LIB-0154): this script does not run `xavier_journal_ob1_digest.py`.
+Xavier journal (LIB-0154): this script does not run `xavier_journal_ob1_digest.py` (use `--catch-up-from-last-dream --write` per dream SKILL).
 Full `dream` includes § Xavier journal — generate the day file with `--write` (network).
 
 Usage:

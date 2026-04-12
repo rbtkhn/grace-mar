@@ -1,34 +1,53 @@
-# Civilization memory — grace-mar–owned copy
+# Civilization memory — Grace-Mar satellite (`docs/civilization-memory/`)
 
-**Canonical for this repo:** Essay and long-form **content you edit here** lives under **`docs/civilization-memory/`** (versioned with grace-mar).
+## Terminology (binding in this workspace)
 
-**Purpose:** Civilization memory has **no monetary purpose**. Its purpose is **pure understanding of history** — the patterns, causes, and lessons of civilizations, institutions, and human coordination over time. That understanding can **help leaders’ wisdom**: it is a resource for reflection, analogy, and judgment, not for revenue or product. The essays and notes here exist to deepen how we see the past so that those who lead, teach, or advise can see the present more clearly.
+**When you say “civ-mem” while working in Grace-Mar, that means the complete [`civilization_memory`](../../research/repos/civilization_memory) repository** — MEM files, CIV–CORE, CIV–STATE, CIV–SCHOLAR, ARC, templates, governance, tools: the **full** upstream corpus at `research/repos/civilization_memory/`.
+
+**This folder** (`docs/civilization-memory/`) is **not** a second copy of that repo. It holds **Grace-Mar–owned** material versioned with this instance:
+
+- **Essays and long-form** you edit here (theses, book drafts, panels).
+- **Notes** (concepts, polyphony, face/category/blade, research briefs).
+- **`minds/`** — **No mind files here.** Canonical **CIV-MIND** profiles for Grace-Mar live only under [`docs/skill-work/work-strategy/strategy-notebook/minds/`](../skill-work/work-strategy/strategy-notebook/minds/) (self-contained; **do not require** civ-mem). See [minds/README.md](minds/README.md).
+
+Do not treat `docs/civilization-memory/` as the civ-mem corpus itself; treat it as **satellite prose** (essays, book, notes). **civ-mem** = full `research/repos/civilization_memory` when present; **minds** do not depend on it.
+
+---
+
+## Purpose
+
+Civilization memory has **no monetary purpose**. Its purpose is **pure understanding of history** — patterns, causes, and lessons of civilizations, institutions, and coordination over time — as a resource for reflection and judgment, not for revenue. Content here deepens how we read the past so present decisions can be wiser.
 
 ---
 
 | Path | Role |
 |------|------|
 | **`essays/`** | Operator essays (Simple Condition, Coordination Hypothesis, index). Edit in place. |
-| **`notes/`** | Short conceptual notes: face/category/blade; exercise for school children (see the face); lens: *God's Debris* (Scott Adams) applied to the Condition; scripture as test (win by not acting out the script; literature search). |
-| **`minds/`** | Three mind profiles ported from upstream (Mercouris, Mearsheimer, Barnes): polyphonic cognition implementation; reference for STATE-evolved assistant brain. See [minds/README.md](minds/README.md). |
-| **`content/`** | Optional — add chunked or expanded material later (gitignored large regen can mirror here if you want). |
+| **`notes/`** | Short conceptual notes (face/category/blade, polyphony, scripture-as-test, etc.). |
+| **`minds/`** | **Redirect only** — canonical minds are under **work-strategy → strategy-notebook → minds**. See [minds/README.md](minds/README.md). |
+| **`book/`** | Manuscript and applied-theology harvest artifacts tied to the book project. |
+| **`content/`** | Optional — chunked or expanded material later (large regen may mirror here). |
 
-**Upstream:** `research/repos/civilization_memory/` may remain a **sibling project** or submodule for tools, apps, and history. **LIBRARY + encyclopedia regen default to this folder**, not the submodule.
+---
 
-**Regen fat file (essays):**
+## Tooling (this tree only)
+
+**Encyclopedia regen (essays):**
 
 ```bash
 python3 scripts/generate_civmem_encyclopedia.py -u grace-mar --essays-only
 ```
 
-**In-repo CMC lookup (bot):** When the external civilization_memory repo is not present, the bot can still answer civ-mem–scoped questions using this folder. Build the search index once:
+**In-repo search index** (when full civ-mem checkout is unavailable; indexes **this** folder):
 
 ```bash
 python3 scripts/build_civmem_inrepo_index.py build
 ```
 
-Index is written to `docs/civilization-memory/.cache/inrepo_index.json`. The bot uses it automatically when external CMC is unavailable.
+Index: `docs/civilization-memory/.cache/inrepo_index.json`. Default `--cmc` is `docs/civilization-memory/`; override only if you fork layout.
 
-Default `--cmc` is `docs/civilization-memory/`. Override with `--cmc /other/path` only if you fork layout.
+---
 
-**Provenance:** Initial `essays/*.md` copied from civilization_memory (2026-03); future edits are grace-mar commits unless you sync back upstream manually.
+## Provenance
+
+Initial `essays/*.md` copied from civilization_memory (2026-03); subsequent edits are Grace-Mar commits unless synced upstream manually.

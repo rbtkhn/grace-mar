@@ -9,6 +9,7 @@
 - **Architecture SSOT:** [book-architecture.yaml](book-architecture.yaml) — all chapters, volumes, sub-groups, arcs
 - **PH wiring SSOT:** [cross-book-map.yaml](cross-book-map.yaml) — sole source of truth for Predictive History ↔ History Notebook links
 - **Growth model:** One volume at a time — design → write → validate
+- **Strategy notebook (fast judgment):** [../strategy-notebook/README.md](../strategy-notebook/README.md) — daily **`### History resonance`** cites HN **chapter ids** and mechanism lines; see [STRATEGY-NOTEBOOK-ARCHITECTURE § Parallel to History notebook](../strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#parallel-to-history-notebook-lib-0156). Do not duplicate full chapters in `days.md`.
 
 ---
 

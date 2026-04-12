@@ -20,7 +20,7 @@ description: "Cross-agent extraction ritual. Primary trigger: harvest. Reads the
 |----------|------|-----|
 | **Parallel or downstream agent needs dense context** | `harvest` | Single paste: outcomes, insights, files, risks, asks — **no** `coffee` tail |
 | **Closing Cursor for a fresh thread** | **`bridge`** | Seal repos + **Session Bridge** packet ending with lone `coffee` |
-| **Work-start / signing-off hub** | **`coffee`** | Fixed **A–G** menu; not an export packet |
+| **Work-start / signing-off hub** | **`coffee`** | Fixed **A–E** menu; not an export packet |
 | **End-of-day maintenance** | **`dream`** | MEMORY / integrity / digest; not a handoff packet |
 
 **Harvest vs bridge (one line):** Bridge packet **must** end with standalone **`coffee`** for cold start. Harvest packet **must not** end with **`coffee`**; it ends with the contract closing line so pastes are never confused.

@@ -57,6 +57,7 @@ This territory never creates a second merge path. `RECURSION-GATE` remains the m
 
 ```
 auto_dream.py
+  ├─ dream_catchup.py              since-previous-dream window + strategy-notebook gap list
   ├─ maintain_self_memory()        normalize self-memory.md
   ├─ validate-integrity.py         integrity checks (--json)
   ├─ governance_checker.py         governance scan
@@ -64,15 +65,14 @@ auto_dream.py
   │    └─ write_artifact_drafts()  optional artifact drafts
   ├─ config/context_budgets/dream.json   write-path caps (via context_budget.py)
   ├─ emit_pipeline_event.py        maintenance event
-  └─ _write_last_dream_handoff()   writes last-dream.json
+  └─ _write_last_dream_handoff()   writes last-dream.json (includes dream_catchup when ok)
 operator_daily_warmup.py           reads coffee.json for collapsed Last dream display
 audit_context_tax.py               approximate ritual paste line/char counts
 
-Strategy notebook (work-strategy) — not a subprocess inside auto_dream.py; agent steps
-from dream SKILL § Strategy notebook (read days.md / STATUS, stub or condense note).
+Strategy notebook (work-strategy) — not a subprocess inside auto_dream.py; use
+`dream_catchup` from `--json` / `last-dream.json` for local dates + missing `##` headers; agent stubs per dream SKILL.
 
-Xavier journal (work-xavier) — not a subprocess inside auto_dream.py; agent runs
-`xavier_journal_ob1_digest.py --write` per dream SKILL § Xavier journal (network).
+Xavier journal (work-xavier) — `xavier_journal_ob1_digest.py --catch-up-from-last-dream --write` (network); same date window as `dream_catchup`.
 ```
 
 **Bundle:** `operator_end_of_day.py` runs `auto_dream.py` then `operator_handoff_check.py` — night-side counterpart to `operator_reentry_stack.py`.

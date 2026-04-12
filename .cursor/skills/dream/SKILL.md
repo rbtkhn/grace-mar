@@ -48,7 +48,7 @@ But the default pattern is:
 Optional but high-leverage before leaving the dream thread after a **successful** `auto_dream.py` (writes `last-dream.json`):
 
 1. **One sentence** — what tomorrow should pick up (mirror `tomorrow_inherits` in the JSON or say it in plain language).
-2. **One letter** — the coffee menu lean from the handoff: **A** = Today / field (`today_field`), **B** = Build / integrate (`build`), **E** = Steward / gate (`steward`) — from `execution_paths[suggested_execution_path_index]`. The next **`coffee`** Step 1 (`operator_daily_warmup.py`) prints a single line **`Dream → coffee menu:`** with the same mapping.
+2. **One letter** — the coffee menu lean from the handoff: **C** = Strategy / daily brief (`today_field`), **A** = Build (`build`), **B** = Steward / gate (`steward`) — from `execution_paths[suggested_execution_path_index]`. The next **`coffee`** Step 1 (`operator_daily_warmup.py`) prints a single line **`Dream → coffee menu:`** with the same mapping.
 
 If **`auto_dream.py --strict`** halted, **`last-dream.json` was not updated** — yesterday’s file may still be on disk; do not treat the handoff as fresh until the next successful dream; fix integrity/governance first.
 
@@ -96,6 +96,8 @@ python3 auto-research/swarm/orchestrator.py dream
 ```bash
 python3 scripts/operator_end_of_day.py -u grace-mar
 ```
+
+**civ-mem checkout vs CI pin (optional):** When the day’s work leaned on tri-frame civ-mem routing, `bash scripts/check_civ_mem_upstream_pin.sh` checks that `research/repos/civilization_memory` `HEAD` matches the SHA in `docs/ci/civilization_memory_upstream.env`. No local checkout prints a skip line and exits successfully; a mismatch exits non-zero so you can re-clone or checkout the pinned commit before the next strategy pass.
 
 The ritual should:
 
@@ -226,10 +228,21 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 - **During the day:** `coffee` / **`strategy`** (and linked briefs) **fill** [`chapters/YYYY-MM/days.md`](../../../docs/skill-work/work-strategy/strategy-notebook/chapters/YYYY-MM/days.md) with Signal / Judgment / Links and optional Jiang / **History resonance** (see [`.cursor/skills/skill-strategy/SKILL.md`](../skill-strategy/SKILL.md)).
 - **At `dream`:** For **each** date in `dream_catchup.local_calendar_dates` (or at minimum each date in `strategy_notebook_missing_day_headers`), ensure a **minimal** stub or filled block per [daily template](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#daily-entry-template) where missing (headings through **Open**; optional **Jiang** / **History resonance** as `none` or **deferred** when not used); align [`strategy-notebook/STATUS.md`](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) **Last daily entry** when page state changes.
 
+**Strategy + WRITE on the page:** Sealing that day’s `## YYYY-MM-DD` block is where **`strategy`** judgment (architecture, links, optional lenses) and **`self-skill-write`** discipline (compression, voice, word budget — see [skills-modularity](../../../docs/skills-modularity.md)) **meet**: analysis and prose qualify each other. The notebook is **WORK** (not gate merge), but the integration is the same. Most drafting may happen in daytime **`strategy`**; **`dream`** is still the **scheduled accountability** where missing pieces, STATUS, and optional condense **ship** before sleep — or where a heavier strategy+write pass runs if that is when you work.
+
+**Daily inbox → page (no mandatory reset):** If the operator uses [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md) as an append-only buffer, **`dream`** is when you **fold** into `chapters/YYYY-MM/days.md` for the matching date (synthesize into Signal / Judgment / Links / Open — not a raw dump). **Do not** automatically zero the rolling file each dream unless the operator asks; **prune** when the scratch section exceeds **~8000 characters** (drop oldest lines first to **~5000**). See [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*.
+
+**Same pattern — Xavier journal:** [daily-xavier-journal-inbox.md](../../../docs/skill-work/work-xavier/xavier-journal/daily-xavier-journal-inbox.md) folds into **`inbox/YYYY-MM-DD.md`**; optional manual clear; same length prune; then run digest as in § *Xavier journal* below.
+
+**Same pattern — dev journal:** [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-journal/daily-dev-journal-inbox.md) folds into **`YYYY-MM-DD-day-NN.md`** in [dev-journal](../../../docs/skill-work/work-dev/dev-journal/README.md); optional clear; same length prune.
+
 **Agent behavior when `dream` is invoked**
 
 1. After **Step 0** (Recent rhythm), run Step 1 (`auto_dream.py`) **or** read `--json` output / `last-dream.json` for **`dream_catchup`**.
 2. Open active (and span) month **`days.md`** files as needed for the date range; cross-check **`strategy_notebook_missing_day_headers`**.
+2b. If [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md) has content for today’s date, **fold** it into the matching **`## YYYY-MM-DD`** block (synthesize; do not paste raw inbox wholesale). **Do not** auto-clear the inbox unless the operator asks; if scratch length exceeds **~8000 characters**, **prune** oldest lines to **~5000**.
+2c. If [daily-xavier-journal-inbox.md](../../../docs/skill-work/work-xavier/xavier-journal/daily-xavier-journal-inbox.md) has content, **fold** into **`inbox/YYYY-MM-DD.md`** for that date; same prune rule; then proceed with Xavier digest / catch-up as below.
+2d. If [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-journal/daily-dev-journal-inbox.md) has content, **fold** into the correct **`YYYY-MM-DD-day-NN.md`** under dev-journal; same prune rule.
 3. For **each missing** `## YYYY-MM-DD` — add a **minimal** stub (Signal + Judgment one line each + Links) *or* report a **notebook gap** in the night-close brief (operator preference).
 4. If any block is **over** the word budget — note **condense required**; run [condense-to-target](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#condense-to-target-mechanism-fit-1000-words) **only** if the operator asks in the same `dream` message to **ship** the edit (otherwise defer).
 5. **Do not** add long lens/DEMO bodies during dream by default; **outboard** heavy material per architecture.
@@ -242,7 +255,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 **Purpose:** At **`dream`**, **generate** (or confirm) **one journal file per local day** in the **same since-previous-dream window** as strategy-notebook (see above). Different artifact; same temporal contract.
 
-**Mechanism:** [`scripts/xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) builds **`YYYY-MM-DD.md`** from **Cici** (OB1) GitHub commits per calendar day (journal ordinal **Day N** inside the file), optional **`inbox/`** markdown, optional **`--full-day-synthesis`** (strategy-notebook same-day block + session-transcript), per-flag includes, and optional **artifact** paths — see [xavier-journal README](../../../docs/skill-work/work-xavier/xavier-journal/README.md) and [SYNTHESIS-SOURCES.md](../../../docs/skill-work/work-xavier/xavier-journal/SYNTHESIS-SOURCES.md).
+**Mechanism:** [`scripts/xavier_journal_ob1_digest.py`](../../../scripts/xavier_journal_ob1_digest.py) builds **`YYYY-MM-DD.md`** from **Cici** (OB1) GitHub commits per calendar day (journal ordinal **Day N** inside the file), optional **`inbox/`** markdown (after any fold from [daily-xavier-journal-inbox.md](../../../docs/skill-work/work-xavier/xavier-journal/daily-xavier-journal-inbox.md)), optional **`--full-day-synthesis`** (strategy-notebook same-day block + session-transcript), per-flag includes, and optional **artifact** paths — see [xavier-journal README](../../../docs/skill-work/work-xavier/xavier-journal/README.md) and [SYNTHESIS-SOURCES.md](../../../docs/skill-work/work-xavier/xavier-journal/SYNTHESIS-SOURCES.md).
 
 **Catch-up (formal):** From repo root, with operator `TZ` aligned to **`dream_catchup.timezone`** when possible:
 
@@ -262,6 +275,12 @@ This reads **`users/<id>/last-dream.json` before overwrite**, computes the same 
 **Boundaries:** **WORK / operator coaching** — not Xavier’s **Record** in her repo, not grace-mar **SELF** / gate merge. **No secrets** in prose (generated overview + commit links are safe; inbox/session content is operator-vetted).
 
 **Return brief:** **Xavier journal:** `catch-up written N file(s)` / `skipped (exists|network)` — list paths or dates.
+
+## Dev journal (LIB-0155) — optional fold
+
+**Purpose:** Same **rolling inbox → fold** contract as strategy-notebook and Xavier (no mandatory nightly reset; length-based prune) — see [daily-dev-journal-inbox.md](../../../docs/skill-work/work-dev/dev-journal/daily-dev-journal-inbox.md) and [dev-journal README](../../../docs/skill-work/work-dev/dev-journal/README.md). No digest script; the agent **synthesizes** into **`docs/skill-work/work-dev/dev-journal/YYYY-MM-DD-day-NN.md`** when the operator uses the buffer.
+
+**Return brief:** **Dev journal:** `inbox folded` / `empty` / `deferred` — cite path if written.
 
 ## Relation to coffee
 
@@ -285,7 +304,7 @@ Usually one `dream` session per day is normal.
 
 | Time | Ritual | What it does |
 |------|--------|-------------|
-| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, A–G menu |
+| **Morning** | `coffee` (work-start) | Read dream handoff, grounding scripts, **A–E** menu |
 | **During day** | `coffee` (reorientation) | Re-sip as needed — many per day is normal |
 | **During day** | `thanks` (micro-pause) | Synthesis of prior two log events (recent rhythm) + optional park + one telemetry line — no maintenance stack |
 | **End of day** | `dream` | Memory normalization, integrity, governance, contradiction digest; **strategy-notebook** closeout + **Xavier journal** day file generation (see §§ Strategy notebook, Xavier journal) |

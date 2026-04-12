@@ -57,17 +57,19 @@ def _body_snippet(text: str, max_chars: int = 500) -> str:
     return body[:max_chars] if body else ""
 
 
-def build_index() -> dict:
-    """Scan docs/civilization-memory for .md files; return index dict."""
-    entries = []
-    for path in sorted(CIVMEM_DIR.rglob("*.md")):
+def build_markdown_index(base_dir: Path) -> dict:
+    """Scan base_dir recursively for .md files; return index dict."""
+    entries: list[dict] = []
+    if not base_dir.is_dir():
+        return {"version": 1, "entries": entries}
+    for path in sorted(base_dir.rglob("*.md")):
         if any(part in SKIP_DIRS for part in path.parts):
             continue
         try:
             content = path.read_text(encoding="utf-8", errors="replace")
         except Exception:
             continue
-        rel = path.relative_to(CIVMEM_DIR)
+        rel = path.relative_to(base_dir)
         title = _first_heading(content)
         snippet = _body_snippet(content)
         if not snippet and not title:
@@ -78,6 +80,11 @@ def build_index() -> dict:
             "snippet": snippet,
         })
     return {"version": 1, "entries": entries}
+
+
+def build_index() -> dict:
+    """Scan docs/civilization-memory for .md files; return index dict."""
+    return build_markdown_index(CIVMEM_DIR)
 
 
 def query_index(index: dict, question: str, limit: int = 5) -> list[str]:

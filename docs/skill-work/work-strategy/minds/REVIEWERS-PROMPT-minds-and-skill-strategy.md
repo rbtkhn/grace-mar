@@ -10,13 +10,15 @@
 
 ### 1.1 The three “minds” (cognitive lenses)
 
-Canonical **full templates** (polyphonic cognition, long-form):
+**Canonical mind files (Grace-Mar — full content in repo, no civ-mem required):**
 
-- `docs/civilization-memory/minds/CIV–MIND–MERCOURIS.md` — legitimacy, narrative, doctrine, symbolic continuity (often **primary** in upstream CMC).
-- `docs/civilization-memory/minds/CIV–MIND–MEARSHEIMER.md` — power, alliances, security dilemmas, great-power geometry (**advisory / sharpening** in upstream design).
-- `docs/civilization-memory/minds/CIV–MIND–BARNES.md` — material bases, liabilities, fiscal/resource constraints, “who defects first” (**catalyst / third voice** in upstream design).
+- [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md) — legitimacy, narrative, doctrine, symbolic continuity (often **primary** in upstream CMC).
+- [`strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md) — power, alliances, security dilemmas, great-power geometry (**advisory / sharpening** in upstream design).
+- [`strategy-notebook/minds/CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md) — material bases, liabilities, fiscal/resource constraints, “who defects first” (**catalyst / third voice** in upstream design).
 
-Short **entry-point stubs** (do not duplicate long bodies — avoid drift):
+**Optional:** If `civilization_memory` (civ-mem) is present, upstream `docs/templates/CIV–MIND–*.md` for governance-only diff — not required for work-strategy.
+
+Short **entry-point stubs** (link to canonical files above — avoid drift):
 
 - `docs/skill-work/work-strategy/minds/mind-mercouris.md`
 - `docs/skill-work/work-strategy/minds/mind-mearsheimer.md`
@@ -78,7 +80,7 @@ Produce a **structured artifact** (markdown is fine) with:
 
 ## 4. Reviewer checklist (before you finish)
 
-- [ ] Cited at least one path under `docs/civilization-memory/minds/` and one under `docs/skill-work/work-strategy/minds/`.
+- [ ] Cited at least one path under `docs/skill-work/work-strategy/strategy-notebook/minds/` and one under `docs/skill-work/work-strategy/minds/`.
 - [ ] Addressed **granular** use (not only tri-frame).
 - [ ] Addressed **strategy-notebook** as primary surface vs **STRATEGY.md** promotion.
 - [ ] Named **verification** where numbers or public ship are in scope.

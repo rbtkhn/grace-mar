@@ -6,11 +6,11 @@ from __future__ import annotations
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-# Stable order from build_execution_paths — maps to coffee A–G menu (see coffee SKILL).
+# Stable order from build_execution_paths — maps to coffee A–E menu (see coffee SKILL).
 _COFFEE_LETTER_AND_LABEL: dict[str, tuple[str, str]] = {
-    "today_field": ("A", "Today"),
-    "build": ("B", "Build"),
-    "steward": ("E", "Steward"),
+    "today_field": ("C", "Strategy (daily brief)"),
+    "build": ("A", "Build"),
+    "steward": ("B", "Steward"),
 }
 
 
@@ -18,8 +18,8 @@ def coffee_menu_hint_from_dream(dream: dict[str, Any]) -> str | None:
     """
     One-line hint for the next coffee Step 2 menu from last-dream.json.
 
-    Maps execution_paths[suggested_execution_path_index] to **A / B / E** only
-    (today_field, build, steward). Operational hint — not policy or Record.
+    Maps execution_paths[suggested_execution_path_index] to **A / B / C** only
+    (build, steward, today_field). Operational hint — not policy or Record.
     """
     paths = dream.get("execution_paths")
     if not isinstance(paths, list) or not paths:
@@ -33,8 +33,8 @@ def coffee_menu_hint_from_dream(dream: dict[str, Any]) -> str | None:
     letter, label = _COFFEE_LETTER_AND_LABEL.get(pid, ("?", "?"))
     if letter == "?":
         # Fallback: positional 0/1/2 matches build_execution_paths order.
-        fallbacks = (("A", "Today"), ("B", "Build"), ("E", "Steward"))
-        letter, label = fallbacks[idx] if idx < len(fallbacks) else ("E", "Steward")
+        fallbacks = (("C", "Strategy (daily brief)"), ("A", "Build"), ("B", "Steward"))
+        letter, label = fallbacks[idx] if idx < len(fallbacks) else ("B", "Steward")
 
     reason = str(dream.get("execution_path_suggestion_reason") or "").strip()
     if reason == "integrity_or_governance_fail":
@@ -122,9 +122,9 @@ def build_execution_paths(
     paths: list[dict[str, Any]] = [
         {
             "id": "today_field",
-            "title": "Today / field (brief + work-politics lane)",
-            "first_move": f"python3 scripts/operator_coffee.py -u {user_id} — then coffee menu A — Today",
-            "stop_rule": "One slice: brief path opened or KY-4 intel pass started — enough for first block.",
+            "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
+            "first_move": f"python3 scripts/operator_coffee.py -u {user_id} — then coffee menu C — Strategy (daily brief)",
+            "stop_rule": "One slice: daily brief path opened or optional intel pass started — enough for first block.",
             "signals_used": signals_field,
         },
         {
