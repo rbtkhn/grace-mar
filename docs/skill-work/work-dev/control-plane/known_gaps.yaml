@@ -27,8 +27,8 @@ items:
 
   - id: BUILD-AI-GAP-007
     area: Progressive autonomy metrics
-    problem: No shadow-mode instrumentation for tier promotion
-    status: planned
+    problem: Shadow log + tier script exist; dashboard or CI hook not wired
+    status: partial
     related_integration_ids: []
     notes:
-      - scripts/work_dev/log_shadow_decision.py, evaluate_autonomy_tiers.py; docs/skill-work/work-dev/autonomy/.
+      - log_shadow_decision.py appends JSONL; evaluate_autonomy_tiers.py loads tier_thresholds.yaml per --profile; pytest tests/test_autonomy_tiers.py.
