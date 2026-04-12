@@ -47,6 +47,8 @@ _(Append below this line during the day.)_
 
 `X | Parsi (@tparsi): CNN—Lebanon as real sticking point; Iran tests whether U.S. can rein in Israel on bombardment; suggests Vance “nuclear deadlock” public frame may overlay Lebanon wedge; nested Mohamad Hasan Sweidan (AR, quoted via Parsi)—U.S. pitched phased Lebanon ceasefire (Beirut/suburbs first) vs full stop | https://x.com/tparsi | verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary`
 
+`X | Solomon (@jsolomonReports) / Just The News—headline: naval blockade as Trump “card” if Iran won’t bend (carrier photo, Apr 12); Martenson (@chrismartenson) quote-tweet: satirical spiral—“blockade to block the blockade… Strait… war of choice,” “Strategery” — **domestic U.S.** split on Hormuz lever (decisive leverage vs circular escalation) | https://x.com/jsolomonReports · https://x.com/chrismartenson | verify:pin-exact-status-URLs+JTN-article`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
