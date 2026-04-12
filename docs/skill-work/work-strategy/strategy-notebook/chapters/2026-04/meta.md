@@ -51,6 +51,23 @@
 
 **Links into notebook practice:** Inbox **`JDVance` / `VANCE`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **White House** or **wire** URLs cited in **§1e** when the brief was run.
 
+## Vladimir Putin / Kremlin thread (month)
+
+**Primary thread (strategy-notebook + skill-strategy):** **Vladimir Putin** — **Kremlin**-documented **appearances**, **calls**, and **quoted** lines that move **negotiation**, **security**, or **coalition** framing. **Not** a substitute for **Ukrainian**, **Iranian**, or **NATO** primary sources on the same story; **triangulate** per [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) (Russian-language or Kremlin-primary line when Russia is load-bearing). **Hub:** [daily-brief-putin-watch.md](../../../daily-brief-putin-watch.md) (coffee **C** → daily brief **§1d**, rolling **48h** + URL guardrails).
+
+**Hypotheses (rolling — verify against Kremlin + wires):**
+
+- **Schedule vs narrative:** **Kremlin.ru** **timestamps** and **full transcripts** can **lag** or **diverge** from **Western** “Putin says” **chyrons** — **Judgment** should prefer **dated** **Kremlin** URL when claiming **exact** wording.
+- **Diplomatic channel:** When **Putin** lines surface in the same week as **Islamabad**, **Iran**, or **Ukraine** **ceasefire** talk, tag whether the **signal** is **audience** (**domestic**, **Global South**, **partner capitals**) vs **operational** **offer** — stack with **Islamabad** index / gap matrix without **collapsing** **Russia** into **Iran** **or** **U.S.** **channel** **facts** without evidence.
+- **STRATEGY.md cross-read:** Long-horizon **Putin** / **drone** / **NATO** **watches** in [STRATEGY.md](../../../STRATEGY.md) are **ledger** lines — notebook **Judgment** cites them as **pointers**, not as **automatic** updates to **today’s** **facts**.
+
+**Falsifiers / counter-reads:**
+
+- **English-only digest:** Relying on **aggregated** **English** **headlines** without **Kremlin** or **Russian wire** **check** when the day’s thesis turns on **exact** **Russian** **terms** — treat as **framing** risk ([daily-brief-putin-watch.md](../../../daily-brief-putin-watch.md) § **Native-language triangulation**).
+- **RSS / §2 substitution:** [daily-brief-putin-watch.md](../../../daily-brief-putin-watch.md) § **Guardrails** — RSS §2 **does not** replace **§1d** for **timing** and **full quotes**.
+
+**Links into notebook practice:** Inbox **`PUTIN` / `KREMLIN`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **Kremlin** or **wire** URLs cited in **§1d** when the brief was run.
+
 ## Polyphony / lens tension (month)
 
 - **History Notebook (parallel):** Operator workflow for chapter drafting — spine → M→Me→B → tension → STYLE-GUIDE translation; see [POLYPHONY-WORKFLOW.md](../../../history-notebook/POLYPHONY-WORKFLOW.md).
