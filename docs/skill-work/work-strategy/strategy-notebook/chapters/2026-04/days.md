@@ -400,3 +400,10 @@ Barnes says both sides face material clocks and the question is which clock runs
 - Pin **canonical X URL** for **Parsi** (Lebanon / nuclear-framing thread) if **Judgment** overlay is cited outside the notebook.
 - Pin **Solomon / Martenson** status URLs + **JTN** article URL if **domestic Hormuz** Judgment is cited outside the notebook.
 - Pin **canonical X URL** for **Barnes** (**@barnes_law**) Hormuz / Truth Social QT if **domestic Hormuz** Judgment is cited outside the notebook.
+- **External strategic brief (session ingest):** **Steal** — signal vs noise, weak-signal watchlist, tight exec lead *after* §1 + Links; **block** — unsourced quant in Judgment, one smooth cross-domain arc without seams / Thesis splits, tri-frame as a single magazine paragraph instead of minds workflow.
+
+### EXERCISE — baseline + headline-collapse pointer (2026-04-12)
+
+- **Exercise series:** [`demo-runs/skill-strategy-exercise-log.md`](../../demo-runs/skill-strategy-exercise-log.md) (first row: Ex **0+1** validation). **Prompts:** [`demo-runs/EXERCISE-PROMPTS.md`](../../demo-runs/EXERCISE-PROMPTS.md).
+- **Exercise 0:** DEMO Phases 1–5 — [`DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md); scored audit [`demo-runs/skill-strategy-results-2026-04-10.md`](../../demo-runs/skill-strategy-results-2026-04-10.md) + supplemental **FT/HS** note.
+- **Exercise 1** (clean-room example): [`demo-runs/skill-strategy-exercise-headline-collapse-2026-04-12.md`](../../demo-runs/skill-strategy-exercise-headline-collapse-2026-04-12.md).
