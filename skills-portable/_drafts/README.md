@@ -17,4 +17,4 @@
 | `persian-regime-adaptive-strategy/` | Active draft | Triggers: `regime strategy`, `persian strategy`, `regime switch` — CIV-MEM Persian regime modes (tolerance / parity / compression). |
 | `russian-endurance-compression-strategy/` | Active draft | Triggers: `endurance strategy`, `russian strategy`, `compression strategy` — endurance + rupture-regeneration lens; pairs with Persian draft. |
 | `skill-narrative/` | **Likely duplicate** | Canonical portable core lives under [`../skill-narrative/`](../skill-narrative/); remove this copy after diff if redundant. |
-| `repo-feedback-prompt/` | Active draft | Triggers: `repo feedback prompt`, `OSS feedback prompt`, `constructive GitHub prompt` — verify upstream docs, drop redundant gaps, one-screen maintainer message. |
+| `repo-feedback-prompt/` | **Ready to promote** (≥2 reuses logged in SKILL § Promotion) | Triggers: `repo feedback prompt`, `OSS feedback prompt`, `constructive GitHub prompt` — verify upstream docs, drop redundant gaps, one-screen maintainer message. |
