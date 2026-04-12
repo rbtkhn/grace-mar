@@ -45,7 +45,8 @@ See [context-compaction-protocol.md](context-compaction-protocol.md) for concret
 
 - **[`config/context_budgets/`](../../config/context_budgets/)** — JSON caps on ritual paste size (`coffee.json`, `dream.json`, **`session_brief.json`**). Operator scaffolding only; not Record truth. See [README](../../config/context_budgets/README.md).
 - **[`scripts/context_budget.py`](../../scripts/context_budget.py)** — `load_context_budget`, `get_int`, `get_bool`.
-- **[`scripts/session_brief.py`](../../scripts/session_brief.py)** — `--minimal`, `--compact` (recovery-first); tunable via `session_brief.json`.
+- **[`scripts/compress_active_lane.py`](../../scripts/compress_active_lane.py)** — one-lane **semantic** squeeze to `artifacts/context/` (not a budget cap). See [active-lane-compression.md](active-lane-compression.md).
+- **[`scripts/session_brief.py`](../../scripts/session_brief.py)** — `--minimal`, `--compact` (recovery-first); optional **`--active-lane`**; tunable via `session_brief.json`.
 - **[`scripts/generate_wap_daily_brief.py`](../../scripts/generate_wap_daily_brief.py)** (via `generate_work_politics_daily_brief.py`) — optional **§7** CEL footer on dated daily briefs; toggle via [`daily_brief.json`](../../config/context_budgets/daily_brief.json).
 - **[`scripts/operator_daily_warmup.py`](../../scripts/operator_daily_warmup.py)** — uses `coffee` budget.
 

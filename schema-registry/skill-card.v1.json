@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/skill-card.v1.json",
+  "title": "Skill card v1",
+  "description": "Derived compact summary of a portable Cursor skill for operator context (not canonical skill content).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "skill_id",
+    "title",
+    "purpose",
+    "runtime_snippet",
+    "operator_view",
+    "source_path",
+    "last_updated"
+  ],
+  "properties": {
+    "skill_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_snippet": {
+      "type": "string"
+    },
+    "operator_view": {
+      "type": "string"
+    },
+    "source_path": {
+      "type": "string",
+      "pattern": "^skills-portable/[^\\s]+/SKILL\\.md$"
+    },
+    "last_updated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T"
+    }
+  }
+}

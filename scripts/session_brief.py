@@ -335,6 +335,7 @@ def _recovery_link_lines(user_name: str, *, compact: bool) -> list[str]:
         f"- `{base}/self-archive.md`",
         "- `docs/skill-work/work-dev/workspace.md`",
         "- `docs/skill-work/context-efficiency-layer.md`",
+        "- `docs/skill-work/active-lane-compression.md`",
         "- `docs/skill-work/reality-sprint-block.md`",
     ]
     return lines
@@ -368,6 +369,7 @@ def _build_minimal_brief_lines(
     *,
     compact: bool,
     repo_root: Path,
+    active_lane: str | None = None,
 ) -> list[str]:
     """Shared minimal body for --minimal and --compact (context budget + CEL recovery)."""
     pr_content = _read(user_dir / "recursion-gate.md")
@@ -410,6 +412,14 @@ def _build_minimal_brief_lines(
         ]
     )
     lines.extend(_recovery_link_lines(user_name, compact=compact))
+    if active_lane:
+        try:
+            from compress_active_lane import build_active_lane_markdown, build_active_lane_payload
+
+            payload = build_active_lane_payload(active_lane, user_name, repo_root)
+            lines.extend(["", "### Active lane (compressed)", "", *build_active_lane_markdown(payload).splitlines()])
+        except FileNotFoundError as exc:
+            lines.extend(["", "### Active lane (compressed)", "", f"_(Lane not found: {exc})_", ""])
     if compact:
         lines.extend(_cel_tier_hint_lines(repo_root))
     lines.append("")
@@ -466,6 +476,12 @@ def main() -> int:
         default="all",
         help="Pending lens: work-politics (or pol/wp; legacy wap) | companion | all (default). Same as operator_blocker_report.",
     )
+    parser.add_argument(
+        "--active-lane",
+        default=None,
+        metavar="LANE",
+        help="With --minimal or --compact: append one WORK lane compression (docs/skill-work/work-*). See docs/skill-work/active-lane-compression.md.",
+    )
     args = parser.parse_args()
     territory = normalize_territory_cli(args.territory)
 
@@ -505,6 +521,7 @@ def main() -> int:
             user_dir.name,
             compact=bool(args.compact),
             repo_root=REPO_ROOT,
+            active_lane=args.active_lane,
         )
         print("\n".join(lines))
         return 0

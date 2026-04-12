@@ -8,6 +8,12 @@ Requires OPENAI_API_KEY and chromadb. Index is stored under users/<id>/.chroma (
 This is **not** the Tier 1.3 keyword retriever used in chat grounding — that is
 ``bot.retriever.load_record_chunks`` / ``retrieve`` (lexical scoring, optional
 ``.cache/retriever_chunks.pkl``). Vector index and keyword index are independent.
+
+Operator context (optional): before a long indexing or review session, you may run
+``python scripts/compress_active_lane.py --lane work-<id>`` to emit a small
+``artifacts/context/active-lane-*.md`` summary with recovery paths — that file is
+not indexed as Record; it is a Context Efficiency Layer aid (see
+``docs/skill-work/active-lane-compression.md``).
 """
 
 import os

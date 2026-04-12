@@ -136,6 +136,10 @@ See `docs/memory-template.md`.
 
 **`self-history`** (`users/[id]/self-history.md`, optional) is a **derived** timeline: **(1)** dense consolidation of **`docs/skill-work/work-*/*-history.md`** (**WORK** stream) and **(2)** **gate-approved** companion-relevant lines (**COMPANION** stream — from merged **SELF/EVIDENCE** only, not pending candidates). It is **not** authoritative identity truth; **SELF** and merged **EVIDENCE** remain canonical. **Nothing** becomes Record fact **only** because it appears here — pipeline and companion approval rules are unchanged. See [canonical-paths.md](docs/canonical-paths.md) and the file’s header fence.
 
+### 11b. Derived operator artifacts (not Record)
+
+**Skill cards** (`scripts/build_skill_cards.py` → `artifacts/skill-cards/`) and **active lane compression** (`scripts/compress_active_lane.py` → `artifacts/context/`) are **rebuildable WORK-layer** summaries. They point back to portable skills and `docs/skill-work/work-*` sources; they do **not** replace canonical skill files or Record surfaces. Policy: [docs/runtime-vs-record.md](docs/runtime-vs-record.md), [artifacts/README.md](artifacts/README.md).
+
 ---
 
 ## Permission Boundaries

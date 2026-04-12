@@ -45,6 +45,8 @@ Within **SELF**, post-seed growth uses a **three-dimension mind model** (**SELF-
 
 See [Architecture](docs/architecture.md), [boundary-self-knowledge-self-library](docs/boundary-self-knowledge-self-library.md), and [Boundary Review Queue](docs/boundary-review-queue.md) (classification hints in the Approval Inbox).
 
+**Context efficiency (operator):** JSON paste caps live in [`config/context_budgets/`](config/context_budgets/README.md). **Semantic** helpers — [skill cards](docs/skills/skill-card-spec.md) (`scripts/build_skill_cards.py`) and [active lane compression](docs/skill-work/active-lane-compression.md) (`scripts/compress_active_lane.py`) — emit derived artifacts under [`artifacts/`](artifacts/README.md); see [runtime vs Record](docs/runtime-vs-record.md).
+
 ## Gated Pipeline
 
 All profile changes pass through a user-controlled gate:

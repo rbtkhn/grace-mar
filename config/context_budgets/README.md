@@ -2,6 +2,8 @@
 
 JSON files here cap **operator ritual paste size** and dream **write-path** payloads. Operator scaffolding only; not Record truth.
 
+**Distinct from lane compression:** semantic one-lane summaries live in [`docs/skill-work/active-lane-compression.md`](../../docs/skill-work/active-lane-compression.md) (`compress_active_lane.py`), not in this directory.
+
 | File | Consumers |
 |------|-----------|
 | `coffee.json` | `operator_daily_warmup.py` — collapsed Last dream lines, optional civ-mem/rollup lines, session tail depth |

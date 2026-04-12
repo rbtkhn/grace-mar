@@ -28,6 +28,8 @@ python3 scripts/sync_portable_skills.py --verify
 
 **Spec:** [_schema.md](_schema.md) · **Manifest:** [manifest.yaml](manifest.yaml) · **Validate:** `python3 scripts/validate_skills.py` (default check after skill edits).
 
+**Skill cards (derived):** Compact JSON/Markdown for faster session context — [docs/skills/skill-card-spec.md](../docs/skills/skill-card-spec.md). Build: `python3 scripts/build_skill_cards.py --markdown`.
+
 ---
 
 ## Discovery ladder (capture → ship)

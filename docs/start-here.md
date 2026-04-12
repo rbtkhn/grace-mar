@@ -2,6 +2,8 @@
 
 Plain-language entry point. Precise terms and invariants live in [glossary.md](glossary.md), [conceptual-framework.md](conceptual-framework.md), and [architecture.md](architecture.md).
 
+**Runtime vs durable Record** (what is canonical vs operator scratch): [runtime-vs-record.md](runtime-vs-record.md) · operator map: [operator-mental-model.md](operator-mental-model.md).
+
 ---
 
 ## In one sentence

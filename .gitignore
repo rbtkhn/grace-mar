@@ -72,6 +72,12 @@ tools/
 # Derived engine artifacts (rebuildable; not canonical)
 users/*/derived/
 
+# Repo-root operator artifacts (rebuildable; see artifacts/README.md)
+artifacts/skill-cards/*
+!artifacts/skill-cards/.gitkeep
+artifacts/context/*
+!artifacts/context/.gitkeep
+
 # Large companion artifacts (optional local-only; use Git LFS if committed)
 # users/*/artifacts/**/*.png
 # users/*/artifacts/**/*.mp4

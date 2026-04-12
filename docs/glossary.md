@@ -34,6 +34,9 @@ Short definitions for contributors and tooling. **Governed by:** [GRACE-MAR-CORE
 | **CIV-MEM** | Civilizational-memory **sub-library** inside SELF-LIBRARY (LIB scopes + hybrid corpus). Never treated as SELF-KNOWLEDGE. |
 | **Library Domain Registry** | Canonical index (`docs/self-library-domains.md` + `.json`) of **installed reference domains** (e.g. CIV-MEM, LIB entries): surface, authority, invocation, mutation policy, freshness. Routable domains must be declared here. See [self-library-domains.md](self-library-domains.md). |
 | **self-* (standard labels)** | **self-knowledge**, **self-library**, … — lowercase hyphenated labels for Record components; formal surfaces **SELF-KNOWLEDGE** / **SELF-LIBRARY** when disambiguating. See [id-taxonomy.md — Capitalization and format](id-taxonomy.md#capitalization-and-format). |
+| **Skill card** | Small **derived** JSON/Markdown summary of a portable skill for operator context — produced by `scripts/build_skill_cards.py`, validated by `schema-registry/skill-card.v1.json`. Does **not** replace `skills-portable/` or generated `.cursor/skills/` bodies. See [skill-card-spec.md](skills/skill-card-spec.md). |
+| **Active lane compression** | One **WORK** lane (`docs/skill-work/work-*`) squeezed into a short memo with recovery paths — `scripts/compress_active_lane.py`. **Not** the JSON paste caps in `config/context_budgets/`. See [active-lane-compression.md](skill-work/active-lane-compression.md). |
+| **Runtime vs Record** | **Runtime** = session paste, harness output, derived artifacts, MEMORY — not canonical truth. **Record** = SELF, SELF-LIBRARY, SKILLS, EVIDENCE after gate. See [runtime-vs-record.md](runtime-vs-record.md). |
 
 ## Cadence shortcuts (FAQ)
 
