@@ -50,9 +50,15 @@ _(Append below this line during the day.)_
 ### Prep — 2026-04-12 strategy-notebook (scratch)
 
 - **Brief:** [daily-brief-2026-04-12.md](../daily-brief-2026-04-12.md) — fill §1d / §1e / §1f as needed; **JD Vance** lane ties to Islamabad / no-deal frame.
-- **Notebook page:** `## 2026-04-12` not in `days.md` yet — today’s **Signal / Judgment / Links / Open** can draft from: tri-mind recon (inbox below), **Game Theory #11 vs “final offer”** (session thread), meta § **Hormuz / Lebanon / pause≠settlement**.
+- **Notebook page:** `## 2026-04-12` is in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — tri-mind recon (inbox below) and **Locals paste** (next subsection) align with **Signal / Judgment** there; meta § **Hormuz / Lebanon / pause≠settlement**.
 - **PH hook:** `research/external/work-jiang/lectures/game-theory-11-the-law-of-escalation.md` · `game-theory-20-mid-term-examination.md` (paths only; cite at a glance in Judgment).
 - **Fold:** Inbox → `days.md` at **`dream`** or when you **explicitly** direct (not on ingest alone).
+
+### Locals — merged tri-mind paste (~150w, 2026-04-12)
+
+**Ship check:** [write-shipping-checklist.md](../../../skill-write/write-shipping-checklist.md) step 4 (*Closer*) before paste.
+
+Islamabad **direct talks** led by **JD Vance** ended **without agreement** in the same window as **Hormuz** escalation and **U.S. naval** framing, so the public read is **no nuclear deal** plus **maritime pressure**. **Tasnim (`fa`)** and Western wires disagree on **what failed first**—**technical** momentum versus **trust**—so **triangulate** instead of picking a single headline. Treat **operational** **Hormuz** claims as **verify-first** against **Navy** or **White House** readouts. **Barnes** puts **liability** first: who is on the hook if **blockade** talk meets **war-powers** friction, and whether **Fox** and the **Graham** wing—not generic “hawks”—will treat any terms as **signable** at home. **Mearsheimer** reads **Hormuz** as **coercive bargaining** after a failed round: **allies** and **markets** absorb shock while Washington tests leverage. **Mercouris** tracks whether diplomacy moves **tonnage** or only **screens**, and where **“final offer”** rhetoric **decoheres** across outlets. **That domestic sell-job is the hard part:** no package holds until **Washington’s coalition** will defend it on camera.
 
 ---
 
