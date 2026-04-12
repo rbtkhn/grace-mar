@@ -80,6 +80,8 @@ _(Append below this line during the day.)_
 
 `X | cold: @DougAMacgregor (post ~Apr 10) — longform: Asia “rejecting” Israeli–American Iran war framing; Japanese tankers toward Hormuz mouth during U.S.–Iran ceasefire window; ROK sends envoy to Iran (FM Cho Hyun; Hormuz navigation); Spain reopening embassy Tehran; warns resuming offensive risks world-economy shock, cites Iran “Istanbul moment” sabotage frame // hook: third-party / importer + European diplomatic defection lane; **Thesis B** (mediation, buck-passing, side payments) vs kinetic path; stack §1e–§1f + Hormuz weak-signal | https://x.com/DougAMacgregor | verify:pin-exact-status-URL+tanker-ROK-Spain-wires`
 
+`batch-analysis | 2026-04-12 | Parsi + Macgregor (Lebanon / Hormuz cluster) | **Same week, two “who still believes Washington?” meters—not the same geography.** Parsi: **Middle East analyst** overlay—Lebanon as credibility test for U.S. control of Israel vs nuclear headline; Islamabad thread. Macgregor: **Asian importer + European diplomatic** lane—tankers/envoys/embassy moves as **third-party** distance from the Israeli–American kinetic frame; explicit **Hormuz** + **Thesis B** (mediation pressure vs restart). **Convergence:** both stress **alliance credibility** and **side payments** (Lebanon discipline vs Hormuz tonnage / embassy optics); **tension:** Parsi is **signability-in-the-room** analysis; Macgregor is **macro defection / post-American** narrative—verify each chain before folding one Judgment. | paired-with: Parsi ingest line + Macgregor ingest line`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
