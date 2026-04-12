@@ -4,7 +4,7 @@ preferred_activation: strategy
 description: >-
   Primary trigger: strategy. Work-strategy pass — cross-territory judgment with strategy-notebook as the primary write surface;
   STRATEGY.md only when promoting stable arcs. Modes: default notebook pass; strategy + verify (web or fact-check tier, dated citations in Links);
-  optional promote to STRATEGY.md. Islamabad / Rome frameworks, gap matrices, weak-signal and analogy-audit discipline. PH (work-jiang) via Jiang resonance —
+  optional promote to STRATEGY.md. Islamabad / Rome frameworks, JD Vance VP channel (brief §1e), gap matrices, weak-signal and analogy-audit discipline. PH (work-jiang) via Jiang resonance —
   not work-politics pulse or weekly brief generator.
 ---
 
