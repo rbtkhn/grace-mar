@@ -45,6 +45,8 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 _(Append below this line during the day.)_
 
+`X | Parsi (@tparsi): CNN—Lebanon as real sticking point; Iran tests whether U.S. can rein in Israel on bombardment; suggests Vance “nuclear deadlock” public frame may overlay Lebanon wedge; nested Mohamad Hasan Sweidan (AR, quoted via Parsi)—U.S. pitched phased Lebanon ceasefire (Beirut/suburbs first) vs full stop | https://x.com/tparsi | verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
