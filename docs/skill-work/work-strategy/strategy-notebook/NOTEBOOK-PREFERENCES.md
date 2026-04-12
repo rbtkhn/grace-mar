@@ -16,6 +16,7 @@
 | **Judgment priority** | **Structural first** — power, incentives, constraints; narrative second. |
 | **Islamabad / US–Iran / pause** | When the day touches this thread, **always capture scope fights**: what is in/out of the **pause**, **Lebanon**, **Hormuz** definition. |
 | **Leo XIV / Holy See / Rome (primary thread)** | **Voice** = papal / Holy See moral–diplomatic lines (**Leo XIV**, `@Pontifex`, audiences). **Hub** = [work-strategy-rome](../work-strategy-rome/README.md) + [ROME-PASS](../work-strategy-rome/ROME-PASS.md). When the day touches this thread, **keep planes separate** from Beltway mechanics: **IHL / legitimacy vocabulary** is not a forecast of **kinetic** facts; fold **Judgment** with **dated** vatican.va or press-office URLs when claiming official text (see ROME-PASS source order). If **Lebanon** (or other crises) appears in **both** analyst and papal lines, prefer **two bullets** or **Thesis A / B** — do not merge registers without verify. |
+| **JD Vance / VP channel (primary thread)** | **Voice** = **Vice President** public lines, travel, and **White House** readouts (not Senate archive unless window-relevant). **Hub** = [daily-brief-jd-vance-watch.md](../daily-brief-jd-vance-watch.md) (**§1e** in daily briefs — coffee **C** pass). When the day touches **U.S.–Iran**, **Islamabad**, **war powers**, or **coalition** framing, **tag whether Vance is acting as channel** (delegation lead, “final offer” voice, restraint narrative) vs **atmospheric** quote — separate **official** URL from **cable analysis**. If **Vance** and **Pentagon / State** lines **diverge** on scope (**Lebanon**, **Hormuz**, pause), **two bullets** or **Thesis A / B**; do not collapse into one “White House says.” |
 | **Predictive History (work-jiang)** | **Episodic** — cite when you **actually** engaged lecture/corpus that day; no standing PH obligation in the notebook. |
 | **Lenses (B / M / Merc)** | After **substantive** notebook-relevant work, assistant **offers three one-liners** — operator **picks or skips** (see [strategy-minds-granular.mdc](../../../../.cursor/rules/strategy-minds-granular.mdc)). |
 | **Where lens depth lives** | **Daily brief mind shells** and **`minds/outputs/`** as needed; **strategy-notebook day block stays thin**. |
@@ -29,7 +30,7 @@
 
 ## Short paste block (meta / handoff)
 
-Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links. Inbox = raw; notebook = synthesis + key links. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Fold inbox at dream unless directed. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence. Split disagreements as Thesis A / Thesis B.
+Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links. Inbox = raw; notebook = synthesis + key links. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Fold inbox at dream unless directed. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence. Split disagreements as Thesis A / Thesis B.
 
 ---
 
@@ -37,6 +38,7 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 
 - **Default on-disk capture** for strategy ingests remains **[daily-strategy-inbox.md](daily-strategy-inbox.md)** per [skill-strategy SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md).
 - **Rome / Leo XIV:** When the month’s **`meta.md`** includes **Leo XIV / Rome helix** or ingests touch the Holy See, follow [ROME-PASS](../work-strategy-rome/ROME-PASS.md) source order for **Judgment** claims; optional **`ROME` / `LeoXIV`** tags in inbox cold lines per [daily-strategy-inbox.md](daily-strategy-inbox.md).
+- **JD Vance:** When **`meta.md`** includes **JD Vance thread** or the day covers **Islamabad / VP travel / war powers**, align notebook **Links** with [daily-brief-jd-vance-watch.md](../daily-brief-jd-vance-watch.md) guardrails (URLs, 48h window); optional **`JDVance` / `VANCE`** tags in inbox cold lines.
 - **Do not** extend `chapters/YYYY-MM/days.md` unless **`dream`** fold or **explicit** operator instruction — unchanged.
 
 ---
@@ -47,3 +49,4 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 |------|--------|
 | 2026-04-12 | Initial preferences from operator questionnaire (1D, 2A, 3A, 4A, 5A, 6D, 7C, 8C, 9A, 10B, 11A, 12C, 13C). |
 | 2026-04-12 | **Leo XIV / Rome primary thread:** naming — **Leo XIV / Holy See** = voice; **ROME-PASS** / **work-strategy-rome** = hub. Implementation: architecture paragraph + `meta.md` helix + inbox grep tags + `skill-strategy` + [daily-brief-focus.md](../daily-brief-focus.md). |
+| 2026-04-12 | **JD Vance primary thread:** **VP channel** = voice; [daily-brief-jd-vance-watch.md](../daily-brief-jd-vance-watch.md) = hub — mirrored in architecture, `meta.md`, inbox tags, `skill-strategy`, [daily-brief-focus.md](../daily-brief-focus.md). |

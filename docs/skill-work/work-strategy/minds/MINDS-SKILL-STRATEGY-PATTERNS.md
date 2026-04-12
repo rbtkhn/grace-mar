@@ -201,6 +201,7 @@ Promote only when one of these is true:
 - **Material plane:** what can actually be sustained
 - **Narrative plane:** what legitimacy story is being projected
 - **Vatican / Holy See plane (when Rome is in play):** papal or curial speech as **IHL / moral–legal vocabulary** and **legitimacy** — **not** a substitute for **kinetic** or **Beltway** facts; label explicitly when **Leo XIV** lines sit in the same day as **Islamabad** or **Lebanon mechanics** ingests ([NOTEBOOK-PREFERENCES.md](../strategy-notebook/NOTEBOOK-PREFERENCES.md), [ROME-PASS.md](../work-strategy-rome/ROME-PASS.md)).
+- **VP / U.S. executive channel (when JD Vance is in play):** **White House** / **wire** **attributed** lines on **role** (delegation lead, coalition framing) — **not** a substitute for **Tehran** or **field** facts; label explicitly when **§1e** / **Vance** copy sits the same day as **Pentagon**, **State**, or **allied** readouts that **diverge** on **scope** ([daily-brief-jd-vance-watch.md](../daily-brief-jd-vance-watch.md), [NOTEBOOK-PREFERENCES.md](../strategy-notebook/NOTEBOOK-PREFERENCES.md)).
 
 ---
 

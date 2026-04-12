@@ -34,6 +34,23 @@
 
 **Links into notebook practice:** Inbox captures with optional **`ROME` / `LeoXIV`** grep tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch Leo lines should include **ROME-PASS-shaped** URLs per source order.
 
+## JD Vance thread (month)
+
+**Primary thread (strategy-notebook + skill-strategy):** **J.D. Vance** as **Vice President** — public **voice**, **travel**, and **White House** readouts that intersect **Islamabad**, **ceasefire / pause** scope, **war powers**, and **MAGA / coalition** dynamics. **Not** a substitute for **Iranian** or **GCC** primary sources on the same day; **triangulate** per [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) when negotiations are load-bearing. **Hub:** [daily-brief-jd-vance-watch.md](../../../daily-brief-jd-vance-watch.md) (coffee **C** → daily brief **§1e**, rolling **48h** window + URL guardrails).
+
+**Hypotheses (rolling — verify against official text + wires):**
+
+- **Delegation lead:** When Vance is **named** as leading or co-leading **U.S.–Iran** (or regional) **direct** talks, **Judgment** should tag **channel coherence** (who else is in room / witness chain) vs **headline** “Vance alone” stories — stack with **Islamabad** operator index and gap matrix rows.
+- **Restraint vs hammer:** Prior **war-skeptic** / **institutional** framing (see WaPo-class profiles in wire cycles) may **diverge** from **“final offer”** or **ultimatum** copy in the same week — preserve **two readings** in **Thesis A / B** until **primary** quotes settle scope.
+- **KY-4 / Massie adjacency:** When Vance lines intersect **KY-4**, **war powers**, or **spending**, one **Links** bullet can point to [work-politics](../../../work-politics/README.md) **without** collapsing **campaign** lane into **strategy** Judgment unless the operator folds them that day.
+
+**Falsifiers / counter-reads:**
+
+- **Cable personality:** Analysis that **overfits** VP **tone** to **policy** **outcome** without **State / DOD / WH** **readout** alignment — treat as **narrative** risk, not as **operational** **fact**.
+- **RSS / §2 substitution:** [daily-brief-jd-vance-watch.md](../../../daily-brief-jd-vance-watch.md) § **Guardrails** — RSS §2 **does not** replace the **§1e** pass for **timing** and **full quotes**.
+
+**Links into notebook practice:** Inbox **`JDVance` / `VANCE`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **White House** or **wire** URLs cited in **§1e** when the brief was run.
+
 ## Polyphony / lens tension (month)
 
 - **History Notebook (parallel):** Operator workflow for chapter drafting — spine → M→Me→B → tension → STYLE-GUIDE translation; see [POLYPHONY-WORKFLOW.md](../../../history-notebook/POLYPHONY-WORKFLOW.md).

@@ -10,7 +10,7 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
-**Optional grep tags (Holy See / Leo XIV thread):** When an ingest is part of the **Rome** primary thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`** (e.g. `cold: ROME | @Pontifex — …`) so `rg 'ROME \\|'` or `LeoXIV` pulls Vatican-adjacent lines without a separate index.
+**Optional grep tags (primary threads):** When an ingest is part of the **Rome** thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`** (e.g. `cold: ROME | @Pontifex — …`). When it is part of the **JD Vance / VP** thread, use **`JDVance`** or **`VANCE`** (e.g. `cold: JDVance | WH readout — …`) so `rg 'JDVance|VANCE|ROME|LeoXIV'` pulls thread-adjacent lines without a separate index.
 
 #### Optional two-tier gist (cold claim // operator hook)
 
