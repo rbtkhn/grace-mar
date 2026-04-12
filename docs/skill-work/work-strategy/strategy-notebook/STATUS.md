@@ -8,6 +8,7 @@
 | **Active chapter** | `2026-04` |
 | **Last daily entry** | `2026-04-10` (same as prior + **condense outline** — ~4500w → target ~1k; see `demo-runs/condense-outline-2026-04-10.md`) |
 | **Prepared stub** | _(none — add next day’s block at bottom of `days.md` when needed)_ |
+| **Daily inbox** | [daily-strategy-inbox.md](daily-strategy-inbox.md) — scratch accumulates; **≥5 X ingests/day target** (extras normal); fold at **`dream`**; prune when length exceeds ~8k chars (no auto-reset each dream) |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 
 ## Next actions

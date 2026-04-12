@@ -48,6 +48,7 @@
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → **2.5 analogy audit** (when parallel proposed) → Council → Draft → Triangulation → Synthesis (WORK only). |
 | **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / **§II-A active watches** / SCHOLAR / **§III-A analogy watchlist** / **§IV operator strategy log** (additive notes in-file; not CMC `MEM–*` shards); not Record. |
 | **[strategy-notebook/](strategy-notebook/README.md)** | **Daily operator journal** for strategy judgment — PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md); optional **`### History resonance`** wires [history-notebook](history-notebook/README.md) chapter ids into each day. Not [work-strategy-history](work-strategy-history.md). WORK only. |
+| **[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)** | Rolling **scratch** for links and **X ingests** — **≥5 posts/day target**, **no ceiling** (extra ingests are normal). Fold at **dream** into `days.md`. |
 | **[LEARN_MODE_RULES.md](LEARN_MODE_RULES.md)** | LEARN MODE adapter: Tri-Frame protocol, extraction format, governance aligned with STRATEGY §VI. |
 | **[LEARN_MODE_OPERATOR_PROMPT.md](LEARN_MODE_OPERATOR_PROMPT.md)** | Copy-paste operator / Composer prompt for work-strategy sessions and LEARN MODE. |
 | **[minds/](minds/README.md)** | Tri-Frame entry stubs (Mercouris, Mearsheimer, Barnes) → `CIV–MIND–*.md` in civilization_memory. Advisory patterns: [minds/MINDS-SKILL-STRATEGY-PATTERNS.md](minds/MINDS-SKILL-STRATEGY-PATTERNS.md). |
@@ -93,7 +94,7 @@ Default config path: `docs/skill-work/work-strategy/daily-brief-config.json`.
 
 **Same-story grouping:** After ranking, items can be clustered by anchor overlap on `title + link` (default anchor list in the script; optional `story_anchor_phrases` in JSON extends it). This is **not** semantic dedupe—raise `jaccard_min` / `min_shared_anchors` if clusters feel loose; disable via config `story_dedupe.enabled: false` or CLI `--no-story-dedupe`.
 
-**Operator habit:** Starting Cursor with **`coffee`** runs warmup in [.cursor/skills/coffee/SKILL.md](../../.cursor/skills/coffee/SKILL.md) (see bootstrap); legacy **`hey`** still works. **Generating** today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` is **coffee menu A — Today** — Step 1 does **not** run the generator.
+**Operator habit:** Starting Cursor with **`coffee`** runs warmup in [.cursor/skills/coffee/SKILL.md](../../.cursor/skills/coffee/SKILL.md) (see bootstrap); legacy **`hey`** still works. **Generating** today's daily brief to `docs/skill-work/work-strategy/daily-brief-YYYY-MM-DD.md` is **coffee menu C — Strategy (daily brief)** — Step 1 does **not** run the generator.
 
 ### Daily brief mind overlays
 
@@ -103,6 +104,10 @@ After `daily-brief-YYYY-MM-DD.md` exists, the operator may run optional **Tri-Fr
 - **Trimmed minds:** load `CIV-MIND-BARNES.md`, `CIV-MIND-MEARSHEIMER.md`, `CIV-MIND-MERCOURIS.md` from [`strategy-notebook/minds/`](strategy-notebook/minds/) (see [minds/README.md](minds/README.md))
 - **Outputs:** `docs/skill-work/work-strategy/minds/outputs/` — dated sidecar files; complete analysis in Cursor or a **`strategy`** pass
 - **CLI:** `scripts/generate_wap_daily_brief.py` — `--offer-minds`, `--mind`, `--mind-option`, `--mind-all`, `--brief-path`, `--skip-brief` (see [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md))
+
+### X post strategy ingest
+
+Operator habit: **at least five** X posts per local day ingested into work-strategy (one line each: claim → why it matters → link; verify when needed). **Five is a minimum target, not a maximum** — additional posts are routine. Primary buffer: [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (fold at **dream** per inbox header).
 
 ---
 
