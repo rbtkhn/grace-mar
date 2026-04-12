@@ -2,6 +2,7 @@
 
 **Kind:** month (first strategy-notebook chapter)  
 **Status:** `open`  
+**Operator preferences (notebook):** [NOTEBOOK-PREFERENCES.md](../../NOTEBOOK-PREFERENCES.md) — structure, fold rhythm, promotion, Judgment rules (set 2026-04-12).  
 **Theme:** Islamabad framework + Rome helix (Cannae / Teutoburg / Rhine); strategy-notebook bootstrapped; Mercouris as optional bridge only; Predictive History **Volume I** extended to twenty chapters + **student-export** checklist wired in `work-jiang`.
 
 **Theme tail (external analysts — Johnson / Pape):**
@@ -15,6 +16,23 @@
 - **Extension / markets thesis:** Iran may be betting that **time** plus easing oil, equities, and political heat on the White House reduces the odds of renewed war if talks fail — spoiler coalitions gain runway if the pause stretches without closure.
 - **Institutional + ally pressure:** Keane-to-Trump channel (“I called the president”) pushing **distrust → hammer**; Israel and parts of the U.S. inner circle framed as **undermining** the pause; **Lebanon scope** (Sharif post vs Netanyahu vs Vance) as an early **fault line**, not a secondary detail.
 - **Terms vs surrender:** “No enrichment / dig up material” + reload rhetoric vs Iran’s **enrichment-rights** frame; treat quoted figures (munitions, Gaza control %, “generational defeat”) as **verify-before-ledger** for Islamabad or public copy.
+
+## Leo XIV / Rome helix (month)
+
+**Primary thread (strategy-notebook + skill-strategy):** **Leo XIV** / **Holy See** moral–diplomatic voice as a **parallel** plane to Islamabad mechanics—not a substitute for wires on **pause / Hormuz / Lebanon** scope. **Hub:** [work-strategy-rome/README.md](../../../work-strategy-rome/README.md) · [ROME-PASS.md](../../../work-strategy-rome/ROME-PASS.md) · thesis stub [notes/2026-04-03-modern-rome-papacy-thesis-stub.md](../../../work-strategy-rome/notes/2026-04-03-modern-rome-papacy-thesis-stub.md).
+
+**Hypotheses (rolling — sourced from ROME-PASS notes, not chat):**
+
+- **Easter / spring 2026 cluster:** Documented bilateral calls and communiqués (e.g. regional leaders + **IHL / civilians / dialogue** vocabulary) can track **symmetry** in Vatican messaging when wires bundle “Ukraine + Israel + Middle East” in one news frame — see dated note [2026-04-06-rome-pass-easter-2026-war-diplomacy-wire-cluster.md](../../../work-strategy-rome/notes/2026-04-06-rome-pass-easter-2026-war-diplomacy-wire-cluster.md).
+- **Legitimacy counterweight:** English-language analysis may **overfit** papal peace language to **U.S. executive** headlines; the strategy hook is whether **Holy See** text **moves** **mediation facts** or mainly **audience** **legitimacy** — falsify with missing **Curia** follow-through or **ceasefire** ground truth.
+- **Mind–soul vs administrative:** [ROME-PASS](../../../work-strategy-rome/ROME-PASS.md) separates **conciliar / audience catechesis** from **press-office** machinery; both are real — monthly Judgment should **name the layer** when both appear the same week (exemplar: [2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md](../../../work-strategy-rome/notes/2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md)).
+
+**Falsifiers / counter-reads:**
+
+- **Boilerplate:** Urbi et Orbi / holiday appeals read as **expected** liturgical peace language; wires may **overstate** “counterweight” **policy** **shift** without **sustained** bilateral or **UN** **follow-up** (see falsifier block in Easter wire-cluster note).
+- **Social-only:** `@Pontifex` **without** vatican.va or Bollettino alignment is **signal** for inbox, not sufficient for “the Holy See officially said X” in **Judgment** without primary URL.
+
+**Links into notebook practice:** Inbox captures with optional **`ROME` / `LeoXIV`** grep tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch Leo lines should include **ROME-PASS-shaped** URLs per source order.
 
 ## Polyphony / lens tension (month)
 

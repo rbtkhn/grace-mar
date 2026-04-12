@@ -10,6 +10,8 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
+**Optional grep tags (Holy See / Leo XIV thread):** When an ingest is part of the **Rome** primary thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`** (e.g. `cold: ROME | @Pontifex — …`) so `rg 'ROME \\|'` or `LeoXIV` pulls Vatican-adjacent lines without a separate index.
+
 #### Optional two-tier gist (cold claim // operator hook)
 
 **Problem:** A single **gist** that mixes **what the source did** with **why it matters for this notebook day** can smuggle **Judgment** into the inbox and blur the boundary with `days.md`.
