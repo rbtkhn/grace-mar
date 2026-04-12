@@ -42,3 +42,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: repo-feedback-prompt
+    source: repo-feedback-prompt/SKILL.md
+    appendix: .cursor/skills/repo-feedback-prompt/CURSOR_APPENDIX.md
+    target: .cursor/skills/repo-feedback-prompt/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates

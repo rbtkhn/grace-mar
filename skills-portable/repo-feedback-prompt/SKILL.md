@@ -3,7 +3,7 @@ name: repo-feedback-prompt
 preferred_activation: repo feedback prompt
 description: "Compose short, constructive prompts (issues/DMs) for maintainers of external GitHub repos after verifying upstream docs—non-redundant, high-leverage asks, respectful tone, optional PR offer."
 portable: true
-version: 0.1.1
+version: 1.0.0
 tags:
   - operator
   - work-dev
@@ -19,7 +19,7 @@ Use this skill when you have **reviewed someone else’s public repo** and want 
 ## When to run
 
 - You read README, API/skill doc, or core source and formed an opinion.
-- You want **one screen** of feedback an busy maintainer might actually adopt.
+- You want **one screen** of feedback a busy maintainer might actually adopt.
 - You care that suggestions are **not already solved** by their documentation.
 
 ## Workflow (verify, then prompt)
@@ -74,16 +74,3 @@ Subject: <repo or feature> — <one-line theme: doc suggestion / security framin
 |---------|------|
 | **Maintainer DM** | 3–5 sentences; single highest-leverage gap only. |
 | **Verification appendix** | For your own notes: files read, URLs — **omit** from the outbound message unless the maintainer likes receipts. |
-
-## Promotion
-
-**Criterion:** Promote after **at least two** distinct **public GitHub repos** where you ran the full workflow (read upstream docs → gap table → leverage filter → outbound prompt) and the result was **usable** (issue/DM ready), not only exploratory skims.
-
-**Grace-mar reuses logged for promotion readiness:**
-
-| Repo | Theme of feedback (example) |
-|------|-----------------------------|
-| `chrisvoncsefalvay/missouri` | Adversarial trust: `__moDispatch` / untrusted pages — doc gap vs reliability-only narrative |
-| `l0r3zz/agent-matrix` | Tone + README polish: comparative framing vs attribute-based positioning; typo nits |
-
-**Steps:** Move portable core to `skills-portable/repo-feedback-prompt/SKILL.md`, add `manifest.yaml` entry, optional `CURSOR_APPENDIX.md` if grace-mar-only paths are needed, run `python3 scripts/sync_portable_skills.py --verify`, update this row in `skills-portable/skill-candidates.md` to `*(promoted)*`.

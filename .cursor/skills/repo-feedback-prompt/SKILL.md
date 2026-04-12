@@ -1,0 +1,93 @@
+---
+name: repo-feedback-prompt
+preferred_activation: repo feedback prompt
+description: Compose short, constructive prompts (issues/DMs) for maintainers of external GitHub repos after verifying upstream docs—non-redundant, high-leverage asks, respectful tone, optional PR offer.
+portable: true
+version: 1.0.0
+tags:
+- operator
+- work-dev
+- communication
+portable_source: skills-portable/repo-feedback-prompt/SKILL.md
+synced_by: sync_portable_skills.py
+---
+# Repo Feedback Prompt
+
+**Preferred activation (operator):** say **`repo feedback prompt`**, **`OSS feedback prompt`**, or **`constructive GitHub prompt`**.
+
+Use this skill when you have **reviewed someone else’s public repo** and want a **maintainer-ready message** that suggests improvements **without** generic praise, **false gaps**, or scope creep.
+
+## When to run
+
+- You read README, API/skill doc, or core source and formed an opinion.
+- You want **one screen** of feedback a busy maintainer might actually adopt.
+- You care that suggestions are **not already solved** by their documentation.
+
+## Workflow (verify, then prompt)
+
+1. **Ground in evidence** — Read at least **README**, the main integration surface (e.g. `SKILL.md`, API doc, or `CONTRIBUTING.md`), and only dip into code if the ask is technical. **Do not** claim the project “misses” something their docs already state.
+
+2. **Gap table (scratch)** — For each instinct you might suggest:
+
+   | Your instinct | What upstream already says | Still a gap? |
+   |---------------|----------------------------|--------------|
+   | (bullet)      | (quote or section)         | yes / no     |
+
+   **Drop** rows where the gap is **no** or only **weakly** incremental.
+
+3. **Leverage filter** — Keep at most **one or two themes**. Prefer:
+
+   - **Documentation** that changes default behavior for **all** users or agent harnesses (security model, trust assumptions, norms).
+   - **Small API or UX** hooks only when docs alone cannot fix the confusion.
+
+   **Deprioritize** restating their README, naming your private stack, or bundling unrelated nice-to-haves.
+
+4. **Tone guardrails** — Use **suggestion** language (“might strengthen,” “optional subsection”). Credit **what already works** in one or two sentences. End with **offer to PR** or **propose wording** when you can.
+
+5. **Length** — Default: **one short issue or email**. Deeper audits are a **separate** request, not this skill.
+
+## Output template (copy-paste)
+
+Use this shape unless the operator asks otherwise.
+
+```text
+Subject: <repo or feature> — <one-line theme: doc suggestion / security framing / …>
+
+<context: 1–2 sentences on what the project already does well, from their docs>
+
+<suggestion: 1–2 paragraphs OR 3 tight bullets — each tied to a real gap>
+
+<scope: e.g. “Even a short README subsection would help; API changes optional.”>
+
+<closing: offer to open a PR with proposed text if they want>
+```
+
+## Anti-patterns
+
+- **Praise-only or generic advice** with no tied gap.
+- **Kitchen-sink** feedback (many frameworks, many asks).
+- **False redundancy** — suggesting “document X” when X is already explicit.
+- **Leakage** — tying their project to **your** internal system names or private workflows unless the operator explicitly wants that bridge.
+
+## Optional variants
+
+| Variant | When |
+|---------|------|
+| **Maintainer DM** | 3–5 sentences; single highest-leverage gap only. |
+| **Verification appendix** | For your own notes: files read, URLs — **omit** from the outbound message unless the maintainer likes receipts. |
+
+
+## Cursor / grace-mar instance
+
+Grace-mar paths and discovery ladder (from `.cursor/skills/repo-feedback-prompt/`).
+
+| Topic | Path |
+|--------|------|
+| Portable core | [skills-portable/repo-feedback-prompt/SKILL.md](../../../skills-portable/repo-feedback-prompt/SKILL.md) |
+| Manifest | [skills-portable/manifest.yaml](../../../skills-portable/manifest.yaml) |
+| Sync | [scripts/sync_portable_skills.py](../../../scripts/sync_portable_skills.py) |
+| Skill candidates / backlog | [skills-portable/skill-candidates.md](../../../skills-portable/skill-candidates.md) |
+| Portable skills README (ladder) | [skills-portable/README.md](../../../skills-portable/README.md) |
+| Extract session → skill | [.cursor/skills/extract-skill-from-session/SKILL.md](../extract-skill-from-session/SKILL.md) |
+
+**Example operator reuses** (verify → gap table → outbound prompt): Missouri (`chrisvoncsefalvay/missouri`) — adversarial trust / `__moDispatch` on untrusted pages; Agent-Matrix (`l0r3zz/agent-matrix`) — comparative tone vs attribute-based positioning; README typo nits.
