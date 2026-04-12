@@ -6,6 +6,8 @@
 
 **Territory:** `docs/skill-work/work-xavier/xavier-journal/` in grace-mar — **WORK / operator coaching**, not Xavier’s **Record**, not companion Voice knowledge.
 
+**Cursor skill:** [`.cursor/skills/skill-xavier/SKILL.md`](../../../../.cursor/skills/skill-xavier/SKILL.md) — distilled journal rhythm (grace-mar **Mode A** vs Cici **Mode B**); hand off the skill folder to [Cici](https://github.com/Xavier-x01/Cici) for Xavier-only use.
+
 ### Routing: dev-journal vs xavier-journal
 
 **One line:** **xavier-journal** = **outward-facing** — understanding, coaching, or tracking **Xavier’s** OB1 / Cici path from inside grace-mar (instance, upstream, BrewMind, GitHub digest). **dev-journal** = **inward-facing** — building grace-mar’s **own** work-dev lane. See [dev-journal README](../../work-dev/dev-journal/README.md#routing-dev-journal-vs-xavier-journal).

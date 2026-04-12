@@ -1,6 +1,8 @@
 ---
 description: WORK-xavier — coaching lane, OB1/Cici, leakage boundaries
-globs: docs/skill-work/work-xavier/**
+globs:
+  - docs/skill-work/work-xavier/**
+  - .cursor/skills/skill-xavier/**
 alwaysApply: false
 ---
 
@@ -26,7 +28,7 @@ Applies when editing or drafting under `docs/skill-work/work-xavier/`.
 
 ## Artifacts
 
-- **xavier-journal:** Short daily reflection; optional Git commit spine via `scripts/xavier_journal_ob1_digest.py` (see [xavier-journal/README.md](../../docs/skill-work/work-xavier/xavier-journal/README.md)). **No secrets** in journal text (API keys, credentials in URLs).
+- **xavier-journal:** Short daily reflection; optional Git commit spine via `scripts/xavier_journal_ob1_digest.py` (see [xavier-journal/README.md](../../docs/skill-work/work-xavier/xavier-journal/README.md)). **Cursor skill:** [`.cursor/skills/skill-xavier/SKILL.md`](../../.cursor/skills/skill-xavier/SKILL.md) (baselines journal rhythm; Mode B portable to [Cici](https://github.com/Xavier-x01/Cici)). **No secrets** in journal text (API keys, credentials in URLs).
 - **Orientation:** [INDEX.md](../../docs/skill-work/work-xavier/INDEX.md), [ALIGNMENT.md](../../docs/skill-work/work-xavier/ALIGNMENT.md).
 
 ---

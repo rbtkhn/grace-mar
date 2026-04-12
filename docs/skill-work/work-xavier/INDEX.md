@@ -5,6 +5,7 @@
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
 | [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-xavier-history.md](work-xavier-history.md)) |
+| [`.cursor/skills/skill-xavier/SKILL.md`](../../../.cursor/skills/skill-xavier/SKILL.md) | **skill-xavier** — Cursor ritual for journal rhythm (grace-mar vs Cici **Mode B**); baseline from xavier-journal |
 | [xavier-journal/README.md](xavier-journal/README.md) | **Xavier journal** — daily OB1 / Open Brain learning log ([2026-04-06](xavier-journal/2026-04-06.md)); WORK, not her Record |
 | [xavier-journal/SYNTHESIS-SOURCES.md](xavier-journal/SYNTHESIS-SOURCES.md) | **Synthesis sources** — L1/L2/L3, CLI flags, recursive learning, Phase E backlog |
 | **[Cici](https://github.com/Xavier-x01/Cici)** (external) | Xavier’s **OB1 instance** repo on GitHub (config/docs; **commit spine** for [xavier_journal_ob1_digest.py](../../../scripts/xavier_journal_ob1_digest.py)). Canonical pointer replaces `open-brain-xavier` — see [work-xavier-history.md](work-xavier-history.md) `### 2026-04-10`. |
