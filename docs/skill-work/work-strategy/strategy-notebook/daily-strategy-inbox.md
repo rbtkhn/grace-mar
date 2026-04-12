@@ -49,6 +49,8 @@ _(Append below this line during the day.)_
 
 `X | Solomon (@jsolomonReports) / Just The News—headline: naval blockade as Trump “card” if Iran won’t bend (carrier photo, Apr 12); Martenson (@chrismartenson) quote-tweet: satirical spiral—“blockade to block the blockade… Strait… war of choice,” “Strategery” — **domestic U.S.** split on Hormuz lever (decisive leverage vs circular escalation) | https://x.com/jsolomonReports · https://x.com/chrismartenson | verify:pin-exact-status-URLs+JTN-article`
 
+`batch-analysis | 2026-04-12 | Parsi + Solomon/Martenson | Parsi cluster: Tehran’s test of U.S. control of Israel (Lebanon) vs nuclear headline; JTN/Martenson: **domestic** split on Hormuz blockade (decisive “Trump card” vs satirical escalation spiral)—same week, three audiences (Iranian signability, coalition sell, U.S. commentariat) | paired-with: two X ingest lines above`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
