@@ -72,6 +72,8 @@ Islamabad **direct talks** led by **JD Vance** ended **without agreement** in th
 
 Islamabad and **Hormuz** coverage this week is carrying **three** **audience** stories at once—not three secret wars, but three **different** **failure** scripts. **Tehran-facing** lines (Iranian state-adjacent copy plus **Parsi**-class analysis already in the notebook) stress **credibility**: whether **Washington** can **rein in Israel** on **Lebanon**, not only whether nuclear text closes. **Coalition-facing** Washington copy still pushes **nonproliferation** and **leverage** after **no deal**; the **Fox / Graham**-style jury still decides **signability** for any package at home. **U.S. domestic** feeds **split** again—**Just The News** / **Solomon**-style framing sells a **naval blockade** as a **Trump card**; **Martenson**-style threads mock **circular escalation** before **Navy** facts are pinned. Those spellings are **not** neutral translations of one another; **triangulate** before you treat **one** headline stack as the whole truth.
 
+**X trim (~240 chars, paste-ready):** `Islamabad/Hormuz: 3 audience meters—Tehran tests US credibility (Lebanon/re-in vs nuclear text); DC sells coalition signability (Fox/Graham); US feeds split (JTN blockade leverage vs Martenson spiral). Triangulate—one stack ≠ the story.` _(236 characters; swap `≠` for `!=` if a client mangles Unicode.)_
+
 ---
 
 ### Tri-mind overlap scan (72h A/B/C) — operator recon
