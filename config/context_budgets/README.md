@@ -7,6 +7,7 @@ JSON files here cap **operator ritual paste size** and dream **write-path** payl
 | `coffee.json` | `operator_daily_warmup.py` — collapsed Last dream lines, optional civ-mem/rollup lines, session tail depth |
 | `dream.json` | `auto_dream.py`, `dream_civmem_echoes.py` — civ-mem echo limits, specificity gate, rollup allow, suppress analogies when checks fail |
 | `session_brief.json` | `session_brief.py` — pending ID list limits, recovery link toggles for `--minimal` / `--compact` |
+| `daily_brief.json` | `generate_wap_daily_brief.py` — optional **§7 Context efficiency (CEL)** footer on generated daily briefs |
 
 **Reserved (not enforced in v1):** `default_visible_budget_lines`, `default_visible_budget_chars` — for future whole-warmup caps or audit targets.
 

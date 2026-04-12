@@ -40,6 +40,7 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 | **3. Lead themes** | **W** campaign angle, **S** strategy angle, **slow** work-jiang stub (tie §1c to today’s headlines) |
 | **4. Triangulation** | [work-politics analytical lenses](../work-politics/analytical-lenses/manifest.md) when the lead is political |
 | **5–6** | Operator synthesis + work-politics next actions |
+| **7** | **Context efficiency (CEL)** — optional footer when `config/context_budgets/daily_brief.json` has `append_cel_footer: true`; links to [context-efficiency-layer.md](../context-efficiency-layer.md), [context-compaction-protocol.md](../context-compaction-protocol.md), `session_brief --compact` |
 
 ---
 

@@ -1,0 +1,4 @@
+{
+  "append_cel_footer": true,
+  "notes": "When true, generate_work_politics_daily_brief.py appends §7 Context efficiency (CEL) to the markdown output."
+}

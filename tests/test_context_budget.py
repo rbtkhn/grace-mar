@@ -26,6 +26,14 @@ def test_load_context_budget_bad_json_returns_empty(tmp_path: Path, monkeypatch:
     assert cb.load_context_budget("x") == {}
 
 
+def test_load_daily_brief_budget_from_repo() -> None:
+    path = REPO / "config" / "context_budgets" / "daily_brief.json"
+    assert path.is_file()
+    raw = cb.load_context_budget("daily_brief")
+    assert isinstance(raw, dict)
+    assert cb.get_bool(raw, "append_cel_footer", False) is True
+
+
 def test_load_session_brief_budget_from_repo() -> None:
     """session_brief.json exists and loads (CEL budgets)."""
     path = REPO / "config" / "context_budgets" / "session_brief.json"

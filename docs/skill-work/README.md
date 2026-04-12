@@ -22,7 +22,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 ## Cross-references
 
 - **Reality Sprint Block:** [reality-sprint-block.md](reality-sprint-block.md), [reality-sprint-template.md](reality-sprint-template.md) — optional execution wedge after substantive plans (operator / WORK; not gate, not Record merge).
-- **Context Efficiency Layer:** [context-efficiency-layer.md](context-efficiency-layer.md), [context-compaction-protocol.md](context-compaction-protocol.md) — hot/warm/cold operator context, compaction shapes, `session_brief` budgets ([`config/context_budgets/session_brief.json`](../config/context_budgets/session_brief.json)), optional [`config/context_surfaces.json`](../config/context_surfaces.json).
+- **Context Efficiency Layer:** [context-efficiency-layer.md](context-efficiency-layer.md), [context-compaction-protocol.md](context-compaction-protocol.md) — hot/warm/cold operator context, compaction shapes, `session_brief` budgets ([`config/context_budgets/session_brief.json`](../config/context_budgets/session_brief.json)), optional [`config/context_surfaces.json`](../config/context_surfaces.json); daily brief generator reads [`config/context_budgets/daily_brief.json`](../config/context_budgets/daily_brief.json) for optional **§7** footer.
 - **Work-layer hardening roadmap:** [WORK-LAYER-HARDENING-ROADMAP.md](WORK-LAYER-HARDENING-ROADMAP.md) — promotion ladder, sources YAML, observability, work-dev ledger, cadence pressure, lane contracts, dashboard.
 - **New WORK territory checklist:** [work-template.md](work-template.md) — scaffold `work-<id>/` (README, history, optional LANE-CI, sources).
 - **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md).

@@ -25,6 +25,9 @@ Does not call paid news APIs. Output is operator WORK product — not Voice, not
 
 Optional **Tri-Frame mind overlays** (after the brief): see `docs/skill-work/work-strategy/daily-brief-minds-config.json`
 and `docs/skill-work/work-strategy/minds/DAILY-BRIEF-MINDS-WORKFLOW.md`. Scaffold-only — no LLM inside this script.
+
+Optional **§7 Context efficiency (CEL)** footer: `config/context_budgets/daily_brief.json` (`append_cel_footer`) — threads
+`docs/skill-work/context-efficiency-layer.md` into generated briefs; operator WORK only.
 """
 
 from __future__ import annotations
@@ -1322,6 +1325,27 @@ def build_daily_brief(
         lines.append(f"- {a}")
     if not (snapshot.get("next_actions") or []):
         lines.append("- _TBD_")
+
+    _scripts_dir = REPO_ROOT / "scripts"
+    if str(_scripts_dir) not in sys.path:
+        sys.path.insert(0, str(_scripts_dir))
+    from context_budget import get_bool, load_context_budget
+
+    if get_bool(load_context_budget("daily_brief"), "append_cel_footer", True):
+        lines.extend(
+            [
+                "",
+                "## 7. Context efficiency (operator)",
+                "",
+                "Thread **Context Efficiency Layer** when assembling follow-up context: prefer hot paths, recovery links, and budgets over pasting full files.",
+                "",
+                f"- **Doctrine:** [context-efficiency-layer.md](../context-efficiency-layer.md)",
+                "- **Compaction shapes:** [context-compaction-protocol.md](../context-compaction-protocol.md)",
+                f"- **Session brief (hot):** `python3 scripts/session_brief.py -u {user_id} --compact`",
+                "- **Budgets:** `config/context_budgets/session_brief.json`, `config/context_surfaces.json`",
+                "",
+            ]
+        )
 
     lines.extend(
         [
