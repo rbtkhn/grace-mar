@@ -159,6 +159,7 @@ grace-mar/
 ├── scripts/
 │   ├── generate_profile.py        # Profile page generator
 │   ├── fork_checksum.py             # Fork state checksum (--manifest writes fork-manifest.json)
+│   ├── export.py                    # Unified export CLI (dispatches to export_fork, export_prp, …)
 │   ├── export_fork.py               # Export fork to portable JSON
 │   ├── export_user_identity.py      # Record (SELF) → openclaw-user.md / OpenClaw user.md for identity
 │   ├── export_prp.py                # Record → Portable Record Prompt (pasteable into any LLM)
@@ -301,6 +302,17 @@ python scripts/fork_checksum.py -u grace-mar --manifest
 
 Export the fork to JSON with the same ontology as [architecture.md](docs/architecture.md): top-level **`self`** (full identity markdown), **`self_knowledge`** (IX-A slice = SELF-KNOWLEDGE), **`self_library`** (with nested **`civ_mem`** = CIV-MEM subdomain of SELF-LIBRARY), **`skills`**, **`evidence`**, plus **`library.raw`** when using full export. See `scripts/export_fork.py` (`version` 1.1+).
 
+**Unified CLI (preferred):** [`scripts/export.py`](scripts/export.py) dispatches to the legacy scripts without changing behavior — see [docs/EXPORT-CLI.md](docs/EXPORT-CLI.md).
+
+```bash
+python scripts/export.py fork --                       # Print JSON to stdout (default user: grace-mar)
+python scripts/export.py fork -- -o fork-export.json
+python scripts/export.py fork -- --no-raw -o summary.json
+python scripts/export.py fork -- --format coach-handoff -o coach-handoff.json
+```
+
+Legacy entrypoints (may emit a deprecation warning when run as the main script):
+
 ```bash
 python scripts/export_fork.py                      # Print JSON to stdout
 python scripts/export_fork.py -o fork-export.json  # Write to file
@@ -311,6 +323,8 @@ python scripts/export_fork.py --format coach-handoff -o coach-handoff.json  # JS
 Export a runtime-neutral bundle with explicit `record`, `runtime`, `audit`, and `policy` lanes:
 
 ```bash
+python scripts/export.py bundle -- -u grace-mar
+python scripts/export.py bundle -- -u grace-mar --mode primary_runtime -o /tmp/runtime-bundle
 python scripts/export_runtime_bundle.py -u grace-mar
 python scripts/export_runtime_bundle.py -u grace-mar --mode primary_runtime -o /tmp/runtime-bundle
 ```

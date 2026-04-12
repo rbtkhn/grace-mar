@@ -472,6 +472,13 @@ def export_prp(user_id: str = "grace-mar", name_override: str | None = None, que
 
 
 def main() -> None:
+    import warnings
+
+    warnings.warn(
+        "export_prp.py is deprecated; use: python scripts/export.py prp -- [<args>]",
+        DeprecationWarning,
+        stacklevel=1,
+    )
     parser = argparse.ArgumentParser(
         description="Export Record to Portable Record Prompt (pasteable into any LLM)"
     )

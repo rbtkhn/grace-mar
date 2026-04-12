@@ -352,6 +352,13 @@ def export_jsonld(data: dict) -> dict:
 
 
 def main() -> None:
+    import warnings
+
+    warnings.warn(
+        "export_fork.py is deprecated; use: python scripts/export.py fork -- [<args>]",
+        DeprecationWarning,
+        stacklevel=1,
+    )
     parser = argparse.ArgumentParser(description="Export fork to portable JSON")
     parser.add_argument("--user", "-u", default=DEFAULT_USER_ID, help="User id (e.g. grace-mar)")
     parser.add_argument("--output", "-o", default=None, help="Output file or directory (default: stdout for default format)")

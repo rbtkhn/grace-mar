@@ -249,6 +249,13 @@ def generate_llms_txt(manifest: dict, user_id: str) -> str:
 
 
 def main() -> None:
+    import warnings
+
+    warnings.warn(
+        "export_manifest.py is deprecated; use: python scripts/export.py manifest -- [<args>]",
+        DeprecationWarning,
+        stacklevel=1,
+    )
     parser = argparse.ArgumentParser(
         description="Generate agent-consumable manifest for Grace-Mar Record"
     )

@@ -406,6 +406,13 @@ def export_runtime_bundle(
 
 
 def main() -> None:
+    import warnings
+
+    warnings.warn(
+        "export_runtime_bundle.py is deprecated; use: python scripts/export.py bundle -- [<args>] (or subcommand all)",
+        DeprecationWarning,
+        stacklevel=1,
+    )
     parser = argparse.ArgumentParser(description="Export a runtime-neutral Grace-Mar bundle")
     parser.add_argument("--user", "-u", default="grace-mar", help="User id")
     parser.add_argument("--output", "-o", default="", help="Output directory (default: users/[id]/runtime-bundle)")

@@ -133,6 +133,13 @@ def export_user_identity_json(user_id: str = "grace-mar") -> dict:
 
 
 def main() -> None:
+    import warnings
+
+    warnings.warn(
+        "export_user_identity.py is deprecated; use: python scripts/export.py identity -- [<args>]",
+        DeprecationWarning,
+        stacklevel=1,
+    )
     parser = argparse.ArgumentParser(
         description="Export grace-mar Record (SELF) to OpenClaw identity markdown (e.g. USER.md / SOUL.md)"
     )

@@ -1,0 +1,8 @@
+{
+  "strip_top_level_keys": [
+    "generated_at",
+    "exported_at",
+    "timestamp"
+  ],
+  "strip_suffixes": ["_at"]
+}
