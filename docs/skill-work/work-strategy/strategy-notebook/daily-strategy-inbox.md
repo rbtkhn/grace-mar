@@ -29,6 +29,8 @@
 - `X | cold: @barnes_law quote-tweet Disclose.tv summarizing executive TS post on Hormuz blockade + toll interdiction // hook: third domestic pole vs op-ed “card” vs spiral satire; pin status URL | https://x.com/barnes_law | verify:…`
 - `wire | cold: Reuters Islamabad talks pause, disagreements remain // hook: aligns §1e window; stack with Tasnim fa | https://… | verify:…`
 
+**Live demo (scratch):** Under the append line for **2026-04-12**, the **Barnes** ingest is refactored to **cold // hook** as the in-repo pattern example.
+
 **Assistant default:** Offer **cold // hook** when the operator’s capture is **Judgment-sensitive** or **multi-chain**; otherwise **single gist** is fine.
 
 ### Multi-item ingest (optional common analysis)
@@ -72,7 +74,7 @@ _(Append below this line during the day.)_
 
 `batch-analysis | 2026-04-12 | Parsi + Solomon/Martenson | Parsi cluster: Tehran’s test of U.S. control of Israel (Lebanon) vs nuclear headline; JTN/Martenson: **domestic** split on Hormuz blockade (decisive “Trump card” vs satirical escalation spiral)—same week, three audiences (Iranian signability, coalition sell, U.S. commentariat) | paired-with: two X ingest lines above`
 
-`X | Barnes (@barnes_law): “Trump doubles down on dumb” — quote-tweet Disclose.tv packaging Truth Social: **blockade** Hormuz to all ships in/out; **interdict** international-waters vessels that paid **toll** to Iran; destroy **mines**; escalation rhetoric (“locked and loaded”) — **Barnes primary** on same Hormuz thread as §1e / domestic feed | https://x.com/barnes_law | verify:pin-exact-status-URL+archive-Truth-Social-primary`
+`X | cold: @barnes_law — “Trump doubles down on dumb”; QT Disclose.tv summarizing executive TS post (Hormuz blockade in/out, toll interdiction in international waters, mine clearing, escalation rhetoric) // hook: third **domestic** pole on Hormuz lever vs Solomon “card” / Martenson spiral; aligns §1e + notebook domestic-fork Judgment | https://x.com/barnes_law | verify:pin-exact-status-URL+archive-Truth-Social-primary`
 
 `batch-analysis | 2026-04-12 | Barnes + Solomon/Martenson | **Three U.S. domestic reads** on the same Hormuz lever: Solomon/JTN—**strategic asset** (“Trump card”); Martenson—**spiral / strategery** satire; Barnes—**two-word verdict** (“dumb”) on the executive order chain (Disclose.tv → Truth Social packaging). **Tension:** leverage heroics vs circular-escalation mock vs outright dismissal—not one domestic **sell** story; coalition validators see different **movies**. | paired-with: Solomon/Martenson ingest line + Barnes ingest line`
 
