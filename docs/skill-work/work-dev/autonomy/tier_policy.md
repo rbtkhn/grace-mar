@@ -21,3 +21,8 @@ python3 scripts/work_dev/evaluate_autonomy_tiers.py --profile medium_risk_operat
 ```
 
 Stdout is one of: `stay_shadow`, `limited_expand`, `insufficient_data`.
+
+## Dashboard + warmup
+
+- **work-dev dashboard** ([`scripts/work_dev/build_dashboard.py`](../../../../scripts/work_dev/build_dashboard.py)) includes an **Autonomy (GAP-007)** section: shadow JSONL line count and tier evaluation for the default profile.
+- **`scripts/harness_warmup.py`** appends a one-line autonomy summary when `runtime/autonomy/shadow_decisions.jsonl` exists and is non-empty (same evaluation as the dashboard).

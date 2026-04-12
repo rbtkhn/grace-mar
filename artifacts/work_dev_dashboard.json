@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-12T00:50:19Z",
+  "generated_at": "2026-04-12T21:32:41Z",
   "integration_status_counts": {
     "implemented": 11,
     "partial": 2,
@@ -14,7 +14,7 @@
     "validation_failed": 8,
     "openclaw_export": 1,
     "rejected": 4,
-    "maintenance": 12,
+    "maintenance": 14,
     "dyad:grounded_query": 1,
     "sandbox_execution_pre": 1,
     "sandbox_execution_post": 1
@@ -22,10 +22,14 @@
   "provenance_completeness_score": 1.0,
   "provenance_from_gate": false,
   "lane_violation_count": 0,
-  "continuity_block_count": 21,
+  "continuity_block_count": 22,
   "gap_ids_open": [],
   "notes": [
     "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
-    "Regenerate after editing control-plane YAML."
-  ]
+    "Regenerate after editing control-plane YAML.",
+    "Autonomy: `runtime/autonomy/shadow_decisions.jsonl` (gitignored) + `evaluate_autonomy_tiers` vs `autonomy/tier_thresholds.yaml`; `no_log` when file missing or empty."
+  ],
+  "autonomy_shadow_line_count": 0,
+  "autonomy_tier_status": "no_log",
+  "autonomy_tier_profile": "low_risk_staging_suggestions"
 }

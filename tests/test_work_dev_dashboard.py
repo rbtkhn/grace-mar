@@ -39,6 +39,8 @@ def test_build_dashboard_empty_pipeline(tmp_path: Path) -> None:
     assert d.provenance_from_gate is False
     assert d.lane_violation_count == 0
     assert d.continuity_block_count == 0
+    assert d.autonomy_shadow_line_count == 0
+    assert d.autonomy_tier_status == "no_log"
 
 
 def test_build_dashboard_counts_lane_violations(tmp_path: Path) -> None:
@@ -106,6 +108,35 @@ def test_build_dashboard_provenance_from_recursion_gate(tmp_path: Path) -> None:
     assert abs(d.provenance_completeness_score - 0.6) < 1e-6
 
 
+def test_build_dashboard_autonomy_with_shadow_log(tmp_path: Path) -> None:
+    sys.path.insert(0, str(REPO_ROOT / "scripts"))
+    from work_dev.build_dashboard import build_dashboard
+
+    root = tmp_path / "r"
+    _copy_control_plane(root)
+    (root / "users" / "u1").mkdir(parents=True)
+    aut = root / "docs" / "skill-work" / "work-dev" / "autonomy"
+    aut.mkdir(parents=True)
+    (aut / "tier_thresholds.yaml").write_text(
+        (REPO_ROOT / "docs/skill-work/work-dev/autonomy/tier_thresholds.yaml").read_text(
+            encoding="utf-8"
+        ),
+        encoding="utf-8",
+    )
+    slog = root / "runtime" / "autonomy"
+    slog.mkdir(parents=True)
+    import json
+
+    lines = [
+        json.dumps({"agent_action": "x", "human_action": "x", "risk_level": "low"})
+        for _ in range(10)
+    ]
+    (slog / "shadow_decisions.jsonl").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    d = build_dashboard(user_id="u1", repo_root=root)
+    assert d.autonomy_shadow_line_count == 10
+    assert d.autonomy_tier_status == "limited_expand"
+
+
 def test_build_dashboard_markdown_reflects_feed_counts(tmp_path: Path) -> None:
     sys.path.insert(0, str(REPO_ROOT / "scripts"))
     from work_dev.build_dashboard import build_dashboard, render_markdown
@@ -137,3 +168,4 @@ def test_build_dashboard_cli_writes_artifacts() -> None:
     assert "integration_status_counts" in data
     assert "provenance_from_gate" in data
     assert "lane_violation_count" in data
+    assert "autonomy_tier_status" in data

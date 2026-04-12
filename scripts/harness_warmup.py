@@ -17,6 +17,7 @@ What it pulls
 | recursion-gate.md   | Count of **pending** candidates + IDs + one-line summaries |
 | self-archive.md     | **Last ACT-*** activity (date + summary/topic)            |
 | session-log.md      | **Tail** of non-noise lines (recent operator/session notes)|
+| `runtime/autonomy/shadow_decisions.jsonl` | Optional **GAP-007** autonomy tier line when the log is non-empty |
 
 When to run
 -----------
@@ -320,6 +321,23 @@ def main() -> int:
         except Exception:
             pass
 
+    autonomy_line = ""
+    try:
+        from work_dev.evaluate_autonomy_tiers import format_autonomy_warmup_line
+
+        al = format_autonomy_warmup_line(_REPO_ROOT)
+        if al:
+            autonomy_line = al
+    except Exception:
+        try:
+            from scripts.work_dev.evaluate_autonomy_tiers import format_autonomy_warmup_line
+
+            al = format_autonomy_warmup_line(_REPO_ROOT)
+            if al:
+                autonomy_line = al
+        except Exception:
+            pass
+
     if args.compact:
         bits = []
         if args.fresh_judge:
@@ -344,6 +362,8 @@ def main() -> int:
             bits.append(gap_line + ".")
         if shift_line:
             bits.append(shift_line + ".")
+        if autonomy_line:
+            bits.append(autonomy_line + ".")
         if tail:
             bits.append("Session tail: " + " / ".join(tail[-2:]))
         print(" ".join(bits))
@@ -383,6 +403,8 @@ def main() -> int:
         lines.append(f"- **{gap_line}**")
     if shift_line:
         lines.append(f"- **{shift_line}**")
+    if autonomy_line:
+        lines.append(f"- **{autonomy_line}**")
     lines.extend(
         [
             "",

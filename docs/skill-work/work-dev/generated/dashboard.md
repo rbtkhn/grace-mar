@@ -2,17 +2,22 @@
 
 # work-dev dashboard
 
-- **Generated:** `2026-04-12T00:50:19Z`
+- **Generated:** `2026-04-12T21:32:41Z`
 
 ## Reliability
 
 - Provenance completeness (pipeline-events proxy): **1.00**
 
+## Autonomy (GAP-007)
+
+- Shadow JSONL lines: **0** (`runtime/autonomy/shadow_decisions.jsonl`, gitignored)
+- Tier evaluation (`low_risk_staging_suggestions`): **`no_log`**
+
 ## Boundary health
 
 - Open gap IDs: _(none)_
 - Lane violation count (observability feed): 0
-- Continuity block count (observability feed): 21
+- Continuity block count (observability feed): 22
 
 ## Gate throughput (pipeline events)
 
@@ -21,7 +26,7 @@
 - `dyad:checkpoint_request`: 2
 - `dyad:grounded_query`: 1
 - `intent_constitutional_critique`: 20
-- `maintenance`: 12
+- `maintenance`: 14
 - `openclaw_export`: 1
 - `rejected`: 4
 - `sandbox_execution_post`: 1
@@ -39,3 +44,4 @@
 
 - Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.
 - Regenerate after editing control-plane YAML.
+- Autonomy: `runtime/autonomy/shadow_decisions.jsonl` (gitignored) + `evaluate_autonomy_tiers` vs `autonomy/tier_thresholds.yaml`; `no_log` when file missing or empty.

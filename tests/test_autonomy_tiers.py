@@ -11,7 +11,12 @@ import pytest
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from work_dev.evaluate_autonomy_tiers import evaluate, load_tier_config  # noqa: E402
+from work_dev.evaluate_autonomy_tiers import (  # noqa: E402
+    evaluate,
+    format_autonomy_warmup_line,
+    load_tier_config,
+    shadow_autonomy_snapshot,
+)
 
 TIER_YAML = REPO_ROOT / "docs/skill-work/work-dev/autonomy/tier_thresholds.yaml"
 
@@ -112,6 +117,32 @@ def test_medium_profile_allows_one_high_risk_violation(tmp_path: Path) -> None:
         )
         == "limited_expand"
     )
+
+
+def test_format_autonomy_warmup_line_none_without_log(tmp_path: Path) -> None:
+    assert format_autonomy_warmup_line(tmp_path) is None
+
+
+def test_format_autonomy_warmup_line_with_shadow(tmp_path: Path) -> None:
+    yml = tmp_path / "docs/skill-work/work-dev/autonomy/tier_thresholds.yaml"
+    yml.parent.mkdir(parents=True)
+    yml.write_text(TIER_YAML.read_text(encoding="utf-8"), encoding="utf-8")
+    log = tmp_path / "runtime/autonomy/shadow_decisions.jsonl"
+    log.parent.mkdir(parents=True)
+    lines = [json.dumps({"agent_action": "a", "human_action": "a", "risk_level": "low"}) for _ in range(10)]
+    log.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    s = format_autonomy_warmup_line(tmp_path)
+    assert s is not None
+    assert "limited_expand" in s
+    assert "10 shadow lines" in s
+
+
+def test_shadow_autonomy_snapshot_policy_missing(tmp_path: Path) -> None:
+    log = tmp_path / "runtime/autonomy/shadow_decisions.jsonl"
+    log.parent.mkdir(parents=True)
+    log.write_text(json.dumps({"a": 1}) + "\n", encoding="utf-8")
+    snap = shadow_autonomy_snapshot(tmp_path)
+    assert snap["tier_status"] == "policy_yaml_missing"
 
 
 def test_custom_thresholds_file(tmp_path: Path) -> None:

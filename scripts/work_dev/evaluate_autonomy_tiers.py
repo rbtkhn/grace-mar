@@ -18,6 +18,47 @@ DEFAULT_LOG = REPO_ROOT / "runtime" / "autonomy" / "shadow_decisions.jsonl"
 DEFAULT_THRESHOLDS = REPO_ROOT / "docs" / "skill-work" / "work-dev" / "autonomy" / "tier_thresholds.yaml"
 
 
+def shadow_autonomy_snapshot(
+    repo_root: Path,
+    *,
+    profile: str = "low_risk_staging_suggestions",
+) -> dict[str, Any]:
+    """
+    Line count + tier label for dashboard / warmup. ``tier_status`` is ``no_log`` when the
+    shadow file is missing or empty; ``policy_yaml_missing`` when tier_thresholds.yaml is absent.
+    """
+    log = repo_root / "runtime" / "autonomy" / "shadow_decisions.jsonl"
+    yml = repo_root / "docs" / "skill-work" / "work-dev" / "autonomy" / "tier_thresholds.yaml"
+    out: dict[str, Any] = {"line_count": 0, "tier_status": "no_log", "profile": profile}
+    if not log.is_file():
+        return out
+    raw = log.read_text(encoding="utf-8")
+    lines = [ln for ln in raw.splitlines() if ln.strip()]
+    out["line_count"] = len(lines)
+    if not lines:
+        return out
+    if not yml.is_file():
+        out["tier_status"] = "policy_yaml_missing"
+        return out
+    try:
+        out["tier_status"] = evaluate(log, profile=profile, thresholds_path=yml)
+    except Exception:
+        out["tier_status"] = "error"
+    return out
+
+
+def format_autonomy_warmup_line(repo_root: Path | None = None) -> str | None:
+    """One line for harness warmup when a non-empty shadow log exists; else None."""
+    root = repo_root or REPO_ROOT
+    snap = shadow_autonomy_snapshot(root)
+    if snap["tier_status"] == "no_log":
+        return None
+    n = snap["line_count"]
+    t = snap["tier_status"]
+    prof = snap["profile"]
+    return f"Autonomy (GAP-007): {t} · {n} shadow lines · profile {prof}"
+
+
 def load_tier_config(thresholds_path: Path, profile: str) -> dict[str, Any]:
     raw = yaml.safe_load(thresholds_path.read_text(encoding="utf-8")) or {}
     tiers = raw.get("tiers") or {}

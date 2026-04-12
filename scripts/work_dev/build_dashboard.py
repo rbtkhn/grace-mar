@@ -24,6 +24,7 @@ if str(_SCRIPTS) not in sys.path:
 from gate_block_parser import mean_pending_provenance_from_path  # noqa: E402
 
 from work_dev.dashboard_models import DashboardSummary  # noqa: E402
+from work_dev.evaluate_autonomy_tiers import shadow_autonomy_snapshot  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
@@ -159,9 +160,11 @@ def build_dashboard(*, user_id: str, repo_root: Path) -> DashboardSummary:
         from_gate = False
 
     ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    snap = shadow_autonomy_snapshot(repo_root)
     notes = [
         "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",
         "Regenerate after editing control-plane YAML.",
+        "Autonomy: `runtime/autonomy/shadow_decisions.jsonl` (gitignored) + `evaluate_autonomy_tiers` vs `autonomy/tier_thresholds.yaml`; `no_log` when file missing or empty.",
     ]
     return DashboardSummary(
         generated_at=ts,
@@ -173,6 +176,9 @@ def build_dashboard(*, user_id: str, repo_root: Path) -> DashboardSummary:
         continuity_block_count=cont_n,
         gap_ids_open=_open_gap_ids(cp),
         notes=notes,
+        autonomy_shadow_line_count=int(snap["line_count"]),
+        autonomy_tier_status=str(snap["tier_status"]),
+        autonomy_tier_profile=str(snap["profile"]),
     )
 
 
@@ -186,6 +192,9 @@ def render_markdown(d: DashboardSummary) -> str:
         f"- **Generated:** `{d.generated_at}`\n\n",
         "## Reliability\n\n",
         f"- Provenance completeness ({prov_label}): **{d.provenance_completeness_score:.2f}**\n\n",
+        "## Autonomy (GAP-007)\n\n",
+        f"- Shadow JSONL lines: **{d.autonomy_shadow_line_count}** (`runtime/autonomy/shadow_decisions.jsonl`, gitignored)\n",
+        f"- Tier evaluation (`{d.autonomy_tier_profile}`): **`{d.autonomy_tier_status}`**\n\n",
         "## Boundary health\n\n",
         f"- Open gap IDs: {', '.join(d.gap_ids_open) or '_(none)_'}\n",
         f"- Lane violation count (observability feed): {d.lane_violation_count}\n",
