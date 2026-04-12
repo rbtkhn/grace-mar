@@ -35,15 +35,24 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 **Fold at `dream` (or operator manual direction):** Inbox scratch folds into the strategy-notebook only then — synthesize into one **`## YYYY-MM-DD`** block in `chapters/YYYY-MM/days.md` (Signal / Judgment / Links / Open). **Assistants:** do **not** append or merge into `days.md` (or `pages/`) on strategy-ingest alone; keep captures **here** until **`dream`** or the operator **explicitly** says to fold. Full rules: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*; agent steps: [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md).
 
-**Length (scratch section only — below the append line):** When the scratch body exceeds **~8000 characters**, **prune from the top** (oldest lines first) until roughly **≤ ~5000 characters** remain. Re-count after large pastes. Optional: full clear to the template below anytime.
+**Length (scratch section only — below the append line):** When the scratch body exceeds **~20000 characters**, **prune from the top** (oldest lines first) in **~5000-character blocks** until **≤ ~20000 characters** remain (repeat if a single paste still leaves you above the limit). Re-count after large pastes. Optional: full clear to the template below anytime.
 
 **Git:** Prior versions remain in history when you commit.
 
 ---
 
-**Accumulator for (local date):** 2026-04-11
+**Accumulator for (local date):** 2026-04-12
 
 _(Append below this line during the day.)_
+
+---
+
+### Prep — 2026-04-12 strategy-notebook (scratch)
+
+- **Brief:** [daily-brief-2026-04-12.md](../daily-brief-2026-04-12.md) — fill §1d / §1e / §1f as needed; **JD Vance** lane ties to Islamabad / no-deal frame.
+- **Notebook page:** `## 2026-04-12` not in `days.md` yet — today’s **Signal / Judgment / Links / Open** can draft from: tri-mind recon (inbox below), **Game Theory #11 vs “final offer”** (session thread), meta § **Hormuz / Lebanon / pause≠settlement**.
+- **PH hook:** `research/external/work-jiang/lectures/game-theory-11-the-law-of-escalation.md` · `game-theory-20-mid-term-examination.md` (paths only; cite at a glance in Judgment).
+- **Fold:** Inbox → `days.md` at **`dream`** or when you **explicitly** direct (not on ingest alone).
 
 ---
 

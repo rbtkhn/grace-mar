@@ -367,3 +367,29 @@ Barnes says both sides face material clocks and the question is which clock runs
 - Barnes: [2026-04-11-barnes-material-constraints.md](../../../minds/outputs/2026-04-11-barnes-material-constraints.md) · [2026-04-11-barnes-hidden-liabilities.md](../../../minds/outputs/2026-04-11-barnes-hidden-liabilities.md)
 - Mearsheimer: [2026-04-11-mearsheimer-balance-of-power.md](../../../minds/outputs/2026-04-11-mearsheimer-balance-of-power.md) · [2026-04-11-mearsheimer-alliance-dynamics.md](../../../minds/outputs/2026-04-11-mearsheimer-alliance-dynamics.md)
 - Mercouris: [2026-04-11-mercouris-governing-narrative.md](../../../minds/outputs/2026-04-11-mercouris-governing-narrative.md) · [2026-04-11-mercouris-legitimacy-doctrine.md](../../../minds/outputs/2026-04-11-mercouris-legitimacy-doctrine.md)
+
+## 2026-04-12
+
+### Signal
+
+- **Islamabad → Hormuz:** Wires same day as **failed / inconclusive** direct talks; **Trump Truth Social** (surfaced via **Daniel Davis** repost) — **most points** said agreed, **nuclear** commitment not, **U.S. Navy** ordered to **blockade** traffic **in/out** of **Strait of Hormuz**; **verify** operational claims with **DoD/Navy / WH** primaries before any public or campaign ship.
+- **Brief + rule:** Refreshed [daily-brief-2026-04-12.md](../../../daily-brief-2026-04-12.md); standing **[native-language triangulation](../../../daily-brief-native-international-pass.md)** (e.g. **Tasnim `fa`**, **TASS**) filled in §1d/§1e; **Reuters World** RSS **fetch failed** in run (flagged in brief §2).
+
+### Judgment
+
+- **Framing fork:** Washington emphasizes **nuclear nonproliferation** as the breaker; Iranian state-adjacent copy emphasizes **sovereignty / “excessive” demands** — triangulate, don’t collapse. **Barnes-relevant:** “blockade” wording + **coalition / war-powers** exposure if posture holds.
+
+### Analogy / tension
+
+- **Robert Pape (X + graphic):** Positions **collapsed U.S.–Iran talks** and a **Hormuz naval blockade** (“little oil passing”) as sliding toward **“Stage 3”** of an **escalation trap** — **no stable shipping mechanism**, **escalation as default**, **open-ended** kinetic weeks — with an **Escalation Trap** Substack line as the packaged read.
+- **Forecast branch (hypothesis, not verified):** Obvious **next U.S. move** in his thread — **ground ops to seize enriched uranium**, **~10k troops** on the ground **for weeks** minimum — treat as **scenario** until **order-of-battle / official** sources confirm; do not merge into Judgment as fact.
+- **Tension:** **Trap / “no off-ramp”** narrative competes with **material** questions (what is actually interdicted, under what legal authority, what allies price in) — if the **uranium-seizure** parallel becomes load-bearing in copy, run [analogy-audit](../../../analogy-audit-template.md).
+
+### Links
+
+- [daily-brief-2026-04-12.md](../../../daily-brief-2026-04-12.md) · [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) · [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) (§ 11 — tri-mind deliverables / coherence)
+
+### Open
+
+- Pin **canonical URL** for Trump Truth Social primary if archiving; add **IRNA `fa`** Islamabad/Hormuz line when stable (IRNA EN often redirects).
+- Pin **canonical X URL** for **Pape** post if this block ships beyond the notebook; optional link to **escalationtrap.substack.com** analysis only as **attributed secondary**, not tier-A fact.
