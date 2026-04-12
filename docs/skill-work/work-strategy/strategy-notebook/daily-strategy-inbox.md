@@ -53,6 +53,8 @@ _(Append below this line during the day.)_
 
 `X | Barnes (@barnes_law): “Trump doubles down on dumb” — quote-tweet Disclose.tv packaging Truth Social: **blockade** Hormuz to all ships in/out; **interdict** international-waters vessels that paid **toll** to Iran; destroy **mines**; escalation rhetoric (“locked and loaded”) — **Barnes primary** on same Hormuz thread as §1e / domestic feed | https://x.com/barnes_law | verify:pin-exact-status-URL+archive-Truth-Social-primary`
 
+`batch-analysis | 2026-04-12 | Barnes + Solomon/Martenson | **Three U.S. domestic reads** on the same Hormuz lever: Solomon/JTN—**strategic asset** (“Trump card”); Martenson—**spiral / strategery** satire; Barnes—**two-word verdict** (“dumb”) on the executive order chain (Disclose.tv → Truth Social packaging). **Tension:** leverage heroics vs circular-escalation mock vs outright dismissal—not one domestic **sell** story; coalition validators see different **movies**. | paired-with: Solomon/Martenson ingest line + Barnes ingest line`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
