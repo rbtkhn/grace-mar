@@ -25,7 +25,7 @@ This territory **merges** the former **work-build-ai** (same scope, same invaria
 
 Cross-territory WORK architecture (tiers, optional scaffolds): [work-template/README.md](../work-template/README.md). Adopt incrementally per that README.
 
-**Canonical daily / operator surface** for this lane remains **[workspace.md](workspace.md)** — current state, blockers, and next actions live there first.
+**Canonical daily / operator surface** for this lane remains **[workspace.md](workspace.md)** — current state, blockers, and next actions live there first. For substantive **technical proposals**, consider appending a **Reality Sprint Block** ([reality-sprint-block.md](../reality-sprint-block.md)) so the smallest testable path stays visible.
 
 **Optional judgment layer:** **[WORK-LEDGER.md](WORK-LEDGER.md)** — compounding index for watches and heuristics with **links** into integration docs; not a replacement entrypoint, not Record truth, instantiated from [work-template/WORK-LEDGER.md](../work-template/WORK-LEDGER.md).
 

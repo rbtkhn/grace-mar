@@ -65,3 +65,9 @@
 - **work-dev:** (none | integration / tooling touchpoint)
 - **work-jiang / PH:** (none | lecture / registry pointer)
 - **Record / RECURSION-GATE:** (none | “stage candidate id TBD” — actual staging is a separate operator action with companion approval)
+
+---
+
+## Optional — Reality Sprint Block
+
+When the memo is **substantive** (multiple options, real commitment, or a week-scale execution path), append a **Reality Sprint Block** after the recommendation: one primary lane, one fallback, one first contact with reality, three yes/no failure checks, a cut-in-half step list, and a minimum evidence target. Paste from [reality-sprint-template.md](../reality-sprint-template.md); doctrine and boundaries: [reality-sprint-block.md](../reality-sprint-block.md).

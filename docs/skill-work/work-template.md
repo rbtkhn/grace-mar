@@ -36,6 +36,7 @@
 | B | `work-<id>-sources.md` | External channels / feeds / accounts that orient the lane — [work-modules-sources-principle.md](work-modules-sources-principle.md). |
 | C | Cross-links in README | Point to adjacent territories (e.g. work-dev, work-politics, work-strategy) and any scripts under `scripts/`. |
 | D | Tier 1+ artifacts (optional) | Copy or adapt from [work-template/](work-template/) — e.g. `WORK-LEDGER.md`, semantic `daily-brief-template.md`, [BOUNDARY.md](work-template/BOUNDARY.md) excerpt. |
+| E | Reality Sprint doctrine (optional) | If the lane produces **plans or roadmaps**, link [reality-sprint-block.md](reality-sprint-block.md) from the territory README so operators can append a fixed execution wedge (primary/fallback lane, first contact with reality, failure checks, cut-in-half steps). |
 
 ---
 

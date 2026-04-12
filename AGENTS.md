@@ -50,6 +50,8 @@ This system uses a **four-layer instruction architecture**. Later layers may nar
 | **3. Lane Overlays** | `docs/skill-work/work-*/` | work-dev, work-politics, work-business, work-jiang, seed-phase |
 | **4. Mode Overlays** | `.cursor/skills/*/SKILL.md` | coffee, dream, bridge, harvest, thanks, gate-review |
 
+**Substantive WORK plans (optional discipline):** For large plans in work-strategy, work-dev, or brief contexts, assistants may end with a **Reality Sprint Block** per [`docs/skill-work/reality-sprint-block.md`](docs/skill-work/reality-sprint-block.md) — a compact execution wedge (primary path, first contact with reality, failure checks, pruned steps). It is **not** a gate substitute, not a merge, and not required on every reply.
+
 ---
 
 ## Critical Rules
