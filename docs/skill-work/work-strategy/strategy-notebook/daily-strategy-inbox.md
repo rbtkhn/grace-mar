@@ -78,6 +78,8 @@ _(Append below this line during the day.)_
 
 `batch-analysis | 2026-04-12 | Barnes + Solomon/Martenson | **Three U.S. domestic reads** on the same Hormuz lever: Solomon/JTN—**strategic asset** (“Trump card”); Martenson—**spiral / strategery** satire; Barnes—**two-word verdict** (“dumb”) on the executive order chain (Disclose.tv → Truth Social packaging). **Tension:** leverage heroics vs circular-escalation mock vs outright dismissal—not one domestic **sell** story; coalition validators see different **movies**. | paired-with: Solomon/Martenson ingest line + Barnes ingest line`
 
+`X | cold: @DougAMacgregor (post ~Apr 10) — longform: Asia “rejecting” Israeli–American Iran war framing; Japanese tankers toward Hormuz mouth during U.S.–Iran ceasefire window; ROK sends envoy to Iran (FM Cho Hyun; Hormuz navigation); Spain reopening embassy Tehran; warns resuming offensive risks world-economy shock, cites Iran “Istanbul moment” sabotage frame // hook: third-party / importer + European diplomatic defection lane; **Thesis B** (mediation, buck-passing, side payments) vs kinetic path; stack §1e–§1f + Hormuz weak-signal | https://x.com/DougAMacgregor | verify:pin-exact-status-URL+tanker-ROK-Spain-wires`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
