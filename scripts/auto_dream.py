@@ -434,6 +434,9 @@ def _write_last_dream_handoff(
     if promotable > 0:
         followups.append(f"{promotable} promotable artifact draft(s) prepared")
 
+    for line in summary.get("extra_followups") or []:
+        followups.append(line)
+
     if summary.get("civmem_index_missing"):
         followups.append(
             "In-repo civ-mem index missing — optional: python3 scripts/build_civmem_inrepo_index.py build"
@@ -677,6 +680,7 @@ def run_auto_dream(
         from datetime import datetime, timezone
 
         now_utc = datetime.now(timezone.utc)
+        extra_followups: list[str] = []
         dream_budget = _load_dream_budget_dict()
         coffee_rollup = rollup_coffee_24h(user_id=user_id, now_utc=now_utc)
         coffee_rollup = _apply_coffee_rollup_budget(coffee_rollup, dream_budget)
@@ -735,7 +739,7 @@ def run_auto_dream(
             summary["capture_gap"] = capture_gap_result
             gap_level = capture_gap_result.get("level", "ok")
             if gap_level in ("warning", "alert"):
-                followups.append(
+                extra_followups.append(
                     f"Capture gap: {capture_gap_result.get('message', 'check Evidence')} — "
                     f"run batch_ingest_observations.py or stage new Evidence"
                 )
@@ -763,7 +767,11 @@ def run_auto_dream(
             if shift_summary.get("alert_count", 0) > 0:
                 review_ids = [a["assumption_id"] for a in shift_summary.get("alerts", []) if a.get("action") == "review"]
                 if review_ids:
-                    followups.append(f"Capability shift: {len(review_ids)} REVIEW alert(s) ({', '.join(review_ids[:3])}) — run detect_capability_shift.py")
+                    extra_followups.append(
+                        f"Capability shift: {len(review_ids)} REVIEW alert(s) ({', '.join(review_ids[:3])}) — run detect_capability_shift.py"
+                    )
+
+        summary["extra_followups"] = extra_followups
 
         try:
             ledger_path = users_dir / user_id / "compute-ledger.jsonl"

@@ -1076,6 +1076,10 @@ def build_daily_brief(
             "",
             "_Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak-signals.md](weak-signals.md). One compact weak signal when a credible candidate exists (low/medium confidence only). If nothing clears the bar, use: **No credible weak signal exceeded the threshold today.** When a historical parallel is in play, summarize a short analogy audit ([analogy-audit-template.md](analogy-audit-template.md)) here._",
             "",
+            "## 1g. PRC — last 48 hours (People’s Republic of China)",
+            "",
+            "_Filled per [daily-brief-prc-watch.md](daily-brief-prc-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): web scan (MFA, major state wires, cross-check Reuters), **48h** rolling window, **bullets + URLs**; add **Mandarin-primary** line when PRC is load-bearing. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._",
+            "",
             "## 2. Headlines (ingested RSS)",
             "",
         ]
