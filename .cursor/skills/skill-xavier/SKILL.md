@@ -103,6 +103,32 @@ If **L1 (commits)** and **L2 (notes)** disagree, do not force resolution: add a 
 
 ---
 
+## Relation to strategy, skill-write, and THINK
+
+Borrowings are **light** — xavier-journal stays **WORK coaching**, not strategy geopolitics, not operator public copy, not Record THINK.
+
+### skill-strategy (best alignment)
+
+- **Frontier on disk:** Treat the latest written **`YYYY-MM-DD.md`** (and **Journal day** line) as the checkpoint — read files; do not rely on chat memory alone.
+- **Capture → fold → digest:** Same rhythm as strategy’s inbox → dream: [daily-xavier-journal-inbox](../../../docs/skill-work/work-xavier/xavier-journal/daily-xavier-journal-inbox.md) → `inbox/YYYY-MM-DD.md` → [xavier_journal_ob1_digest.py](../../../scripts/xavier_journal_ob1_digest.py).
+- **Same calendar day, mixed work:** When the day mixes OB1 trajectory and strategy judgment, **`--full-day-synthesis`** is the integration hook (strategy-notebook + session-transcript per [SYNTHESIS-SOURCES](../../../docs/skill-work/work-xavier/xavier-journal/SYNTHESIS-SOURCES.md)). Git-only days can omit it.
+
+### skill-write (edge cases only)
+
+- **Private journal** does not need Locals/X craft. When **One line for my advisor** (or an excerpt) becomes **public** BrewMind or social copy, apply [topic-first ledes](../../rules/drafting-topic-lede.mdc) and [operator writing preferences](../../../docs/skill-write/write-operator-preferences.md) for that surfaced line — not for full private sections.
+
+### THINK (boundary, not merge)
+
+| Surface | Role |
+|--------|------|
+| **xavier journal** | WORK learning log; not gate input unless explicitly staged elsewhere. |
+| **THINK** (`skill-think.md` / index) | Record capability intake; promotion to SELF via gate when identity-facing. |
+| **SELF / EVIDENCE** | Canonical fork truth and dated spine — journal text does **not** substitute. |
+
+See [think-purpose-and-boundary.md](../../../docs/skill-think/think-purpose-and-boundary.md).
+
+---
+
 ## Porting this skill to Cici
 
 1. Copy **`.cursor/skills/skill-xavier/`** into the Cici repo under **`.cursor/skills/skill-xavier/`**.
@@ -119,3 +145,6 @@ If **L1 (commits)** and **L2 (notes)** disagree, do not force resolution: add a 
 | Synthesis flags | [SYNTHESIS-SOURCES.md](../../../docs/skill-work/work-xavier/xavier-journal/SYNTHESIS-SOURCES.md) |
 | Digest script | [scripts/xavier_journal_ob1_digest.py](../../../scripts/xavier_journal_ob1_digest.py) |
 | Work-xavier index | [INDEX.md](../../../docs/skill-work/work-xavier/INDEX.md) |
+| skill-strategy (parallel rhythm) | [skill-strategy/SKILL.md](../skill-strategy/SKILL.md) |
+| THINK boundary | [think-purpose-and-boundary.md](../../../docs/skill-think/think-purpose-and-boundary.md) |
+| Operator writing (public excerpts only) | [write-operator-preferences.md](../../../docs/skill-write/write-operator-preferences.md) |
