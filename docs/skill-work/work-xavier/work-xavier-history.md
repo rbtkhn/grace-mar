@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-12
+
+- **work-dev mirror:** Added [work-dev-mirror/workspace.md](work-dev-mirror/workspace.md) — concrete sync cut from canonical [work-dev/workspace.md](work-dev/workspace.md) (coffee **E**); [work-dev-mirror/README.md](work-dev-mirror/README.md) **Start here** renumbered.
+
 ### 2026-04-11
 
 - **Cici Phase 1 verified:** [Xavier-x01/Cici](https://github.com/Xavier-x01/Cici) `main` at [`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661) (`feat(phase-1): establish Git-first governed-state foundation`) — shallow clone + `scripts/validate-governed-state.py` passes; three-layer scaffold (`evidence/`, `prepared-context/`, `users/cici/governed-state/`), proposals + schema, `config/authority-map.json`, doctrine + CI. README [Governed State Model](https://github.com/Xavier-x01/Cici#governed-state-model-phase-1); [docs/governed-state-doctrine.md](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md). Grace-mar [OB1 integration](../../../docs/integrations/ob1/README.md) updated with parallel pointer.
