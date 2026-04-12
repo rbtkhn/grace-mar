@@ -40,6 +40,7 @@ WP = WorkPoliticsEngine(USER_ID, REPO_ROOT)
 WP.init_db()
 
 from gate_review_normalize import normalize_review_item  # noqa: E402
+from grace_mar.merge.impact_preview import preview_candidate_impact  # noqa: E402
 
 _RECLASSIFY_SURFACE_OPTIONS = (
     ("self", "self (IX / identity-facing)"),
@@ -135,6 +136,27 @@ def index():
             f"{html.escape(lbl)}</option>"
             for v, lbl in _RECLASSIFY_SURFACE_OPTIONS
         )
+        impact = preview_candidate_impact(r, user_id=USER_ID)
+        impact_files = ", ".join(
+            f'<code>{html.escape(f.split("/")[-1])}</code>'
+            for f in impact["files_touched"]
+        )
+        impact_flags_html = "".join(
+            f'<span class="pill pill-warn" title="boundary flag">{html.escape(f)}</span>'
+            for f in impact["boundary_flags"]
+        )
+        impact_prompt = ""
+        if impact["prompt_effect"] != "none":
+            impact_prompt = (
+                f'<span class="pill pill-warn" title="prompt effect">'
+                f'prompt: {html.escape(impact["prompt_effect"])}</span>'
+            )
+        impact_html = (
+            f'<div class="impact-row">'
+            f'<span class="impact-label">Impact:</span> {impact_files}'
+            f" {impact_flags_html}{impact_prompt}"
+            f"</div>"
+        )
         cards.append(
             f'<article class="card" data-territory="{territory}" data-risk="{risk_tier}" data-signal="{sig}" data-candidate-id="{html.escape(raw_id)}">'
             f'<header><span class="id">{cid}</span>'
@@ -148,6 +170,7 @@ def index():
             f'<span class="pill pill-meta" title="review_type">{rvt}</span>'
             f'<span class="pill pill-meta {pill_recl}" title="requires_reclassification">reclassify: {recl}</span>'
             f"</div>"
+            f"{impact_html}"
             f'<p class="summary">{summary}</p>{hint}{br_html}'
             f'<div class="suggested-class-row">{sug_btn}</div>'
             f'<footer><span class="meta">{channel}</span><span class="meta">{ts}</span></footer>'
@@ -187,6 +210,8 @@ def index():
     .id {{ font-weight: 600; font-family: monospace; font-size: 0.9rem; color: var(--accent); }}
     .pill {{ font-size: 0.7rem; text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 4px; }}
     .pill-row {{ display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.5rem; }}
+    .impact-row {{ font-size: 0.75rem; color: var(--muted); margin-bottom: 0.5rem; padding: 0.3rem 0.5rem; background: rgba(255,255,255,.04); border-radius: 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; }}
+    .impact-label {{ font-weight: 600; color: var(--text); }}
     .pill-meta {{ background: rgba(255,255,255,.08); color: var(--muted); text-transform: none; font-size: 0.65rem; }}
     .pill-warn {{ background: rgba(221,142,145,0.25); color: var(--danger); }}
     .pill-ok {{ background: rgba(125,192,154,0.15); color: var(--good); }}
