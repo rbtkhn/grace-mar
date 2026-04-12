@@ -1,7 +1,7 @@
 # Daily brief — work-politics & work-strategy
 
 **Date:** 2026-04-12  
-**Assembled:** 2026-04-12 00:13 UTC  
+**Assembled:** 2026-04-12 14:10 UTC  
 **Recency window (RSS):** last **36h** (undated items may appear)  
 **Config:** `docs/skill-work/work-strategy/daily-brief-config.json`
 
@@ -39,6 +39,7 @@ _From `docs/skill-work/work-strategy/daily-brief-focus.md` § Active focus._
 - Long-form tech discourse (GTC-class, Moonshots-class): themes distilled in [external-tech-scan.md](external-tech-scan.md) — use for **strategy vocabulary** and **keyword-season** tuning in [daily-brief-config.json](daily-brief-config.json); **not** unsourced brief facts.
 - **Putin — last 48h:** **Coffee menu C — Strategy (daily brief)** fills **§1d** in the daily brief per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) (web scan + citations); Step 1 does not run this pass.
 - **JD Vance — last 48h:** **Coffee menu C — Strategy (daily brief)** fills **§1e** per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) (web scan + citations); Step 1 does not run this pass.
+- **Native-language triangulation (international):** For load-bearing international threads (negotiations, cross-border crisis, §1d/§1e class stories), **always** add at least **one native-language source per jurisdiction** alongside Western wires — procedure: [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md).
 - **Weak signal — §1f:** Include one weak signal worth watching when a credible candidate exceeds threshold; test any historical parallel with a compact analogy audit before carrying it into synthesis ([weak-signals.md](weak-signals.md), [weak-signal-template.md](weak-signal-template.md), [analogy-audit-template.md](analogy-audit-template.md)).
 - **Rome / Vatican (work-strategy-rome):** When Holy See or papal lines intersect multipolar or legitimacy stories, run the [ROME-PASS](work-strategy-rome/ROME-PASS.md) skeleton (vatican.va + wire + optional civ-mem); file notes or exemplars under [work-strategy-rome/notes/](work-strategy-rome/notes/). **Standing packet (Apr 2026):** [Leo XIV OSINT brief](../work-politics/leo-xiv-osint-prc-brief-2026-04-04.md) (Bollettino-backed China tranche) + [civ-mem context](work-strategy-rome/notes/2026-04-05-leo-xiv-civ-mem-historical-context.md) — analytic exercise; facts still tier **A** from primary URLs in the brief.
 
@@ -61,27 +62,30 @@ _Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md
 
 ## 1d. Putin — last 48 hours
 
-_Filled at **good morning** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md): web scan (Kremlin schedule/transcripts, Reuters, BBC, TASS/RIA as needed), **48h** rolling window, **bullets + URLs**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._
+_Filled at **good morning** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): web scan (Kremlin schedule/transcripts, Reuters, BBC, TASS/RIA as needed), **48h** rolling window, **bullets + URLs**. RSS §2 does not replace this pass._
 
-- **Easter ceasefire window (announced ~Apr 9–10):** Russian reporting described a unilateral **Orthodox Easter** ceasefire order (e.g. TASS: [Putin declares Easter ceasefire](http://en.tass.ru/politics/2114659)); Western wires framed it as following weeks of Ukrainian calls for an Easter truce (e.g. [Euronews](https://www.euronews.com/2026/04/10/putin-announces-easter-ceasefire-proposed-by-kyiv-for-weeks)). **Verify** dates/timing against primary Kremlin copy.
-- **Kremlin — media Q&A (primary):** [Answers to media questions](http://en.kremlin.ru/events/president/news/copy/76736) (en.kremlin.ru — use as primary when citing Russia’s line).
-- **Ukraine line (RSS-aligned):** Le Monde live noted Zelensky asking Russia to **extend** the truce after Orthodox Easter ([Le Monde EN DIRECT Ukraine](https://www.lemonde.fr/international/live/2026-04-12/en-direct-guerre-en-ukraine-volodymyr-zelensky-affirme-avoir-demande-a-la-russie-de-poursuivre-la-treve-apres-la-paques-orthodoxe_6676836_3210.html)) — triangulate with Ukrainian official channels before campaign use.
+- **Easter ceasefire (announced ~Apr 9–11):** TASS (state wire, `ru`/`en` desk): [Putin declares Easter ceasefire](http://en.tass.ru/politics/2114659); companion explainer [reaction to Easter ceasefire initiative](http://www.tass.com/politics/2114935). **Triangulate** timing/duration with Kremlin primary text if citing for campaign-adjacent work.
+- **Negotiation framing (Russia):** TASS: [Talks on Ukraine to resume once all three parties show readiness — Russian MFA](https://tass.com/politics/2114867) — **state wire**; label as Russian government line, not independent verification.
+- **Western cross-check:** Le Monde live (Apr 12): [Kremlin refuses to extend Easter truce until Kyiv accepts Russian conditions](https://www.lemonde.fr/international/live/2026-04-12/en-direct-guerre-en-ukraine-le-kremlin-refuse-de-prolonger-la-treve-pascale-tant-que-kiev-n-acceptera-pas-les-conditions-russes_6679492_3210.html); BBC: [Ukraine and Russia accuse each other of hundreds of ceasefire violations](https://www.bbc.com/news/articles/cz78y73v830o?at_medium=RSS&at_campaign=rss).
 
 ## 1e. JD Vance — last 48 hours
 
-_Filled at **good morning** per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md): web scan (VP office / White House readouts, Congress if relevant, major wires), **48h** rolling window, **bullets + URLs**. RSS §2 may surface Vance-adjacent headlines; it does not replace this pass. If blank, paste after generate or re-run morning assembly._
+_Filled per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): **48h** window, **bullets + URLs** (Western + at least one **Persian** native outlet for Iran load-bearing threads)._
 
-- **Iran diplomacy / Islamabad:** Wires report the White House positioned **Vance** to lead U.S. engagement alongside envoys (e.g. [Reuters — Iran wanted to negotiate with Vance](https://www.reuters.com/world/asia-pacific/iran-wanted-negotiate-with-vance-they-got-their-wish-2026-04-10/)); regional pickup of **Islamabad** timing: e.g. [SignalSCV — Vance to lead talks Saturday](https://signalscv.com/2026/04/white-house-vance-to-lead-us-talks-with-iran-in-islamabad-on-saturday/). **Live thread** example: [USA Today live updates](https://www.usatoday.com/story/news/world/2026/04/11/trump-vance-iran-war-pakistan-peace-talks--live/89561515007/).
-- **Congress / commentary:** Iran war powers and envoy roles remain contested in reporting (e.g. [The Hill — Kelly on Witkoff/Kushner](https://thehill.com/homenews/senate/5827235-kelly-criticizes-witkoff-kushner-iran-diplomacy/)) — useful for **institutional** angle, not a substitute for VP office primary text.
+- **Islamabad direct talks (Apr 11–12):** U.S. delegation led by **Vance**; wires report extended session then **no final agreement** (e.g. [WBUR — delegations leave Pakistan after talks end without agreement](https://www.wbur.org/news/2026/04/12/us-and-iranian-delegations-leave-pakistan-after-talks-end-without-agreement)); The Hill on **trust** / Iranian parliament speaker line: [US ‘failed to gain the trust’…](https://thehill.com/policy/international/5827682-iran-us-negotiations-failed-trust/).
+- **Same window — Hormuz / escalation (verify against primaries):** Le Monde live: [Trump orders US Navy blockade posture in Strait of Hormuz after negotiation failure](https://www.lemonde.fr/international/live/2026-04-12/en-direct-guerre-au-moyen-orient-la-marine-americaine-entame-le-blocus-de-tous-les-navires-tentant-d-entrer-ou-de-sortir-du-detroit-d-ormuz-annonce-donald-trump_6676633_3210.html); The Hill: [Trump announces Navy blockade… after Iran talks fizzle](https://thehill.com/policy/defense/5827724-trump-iran-strait-hormuz-blockade/).
+- **Native — Iran (`fa`, state-adjacent):** Tasnim **Persian** root (same story as English desk): [مذاکره ایران و آمریکا در اسلام‌آباد…](https://www.tasnimnews.ir/fa/news/1404/01/22/3563277/) — **Tasnim** is revolutionary-guard–adjacent agency; framing Apr 11: talks entered **technical** details, possible extension; **stack** against later “no deal” headlines from wires. English mirror: [Tasnim EN — technical details / extension possible](https://www.tasnimnews.ir/en/news/2026/04/11/3563277/iran-us-talks-in-islamabad-shift-to-technical-details-in-certain-fields-extension-possible).
+- **Congress / institutional (US):** Kelly / envoys angle remains in feed: [The Hill — Kelly on Witkoff/Kushner](https://thehill.com/homenews/senate/5827235-kelly-criticizes-witkoff-kushner-iran-diplomacy/) — **not** a substitute for White House readouts.
 
 ### KY-4 intel (optional — menu C)
 
-- **Polling (recent):** Public reporting on a **Quantus Insights** poll (field ~Apr 6–7) summarized **Massie ~47% / Gallrein ~37%**, large undecided — e.g. [Kentucky.com — First KY-04 poll](https://www.kentucky.com/news/politics-government/article315347405.html); similar writeup [North Jersey](https://www.northjersey.com/story/news/politics/2026/04/09/thomas-massie-poll-ed-gallrein-congressional-race-trump-endorsement/89539097007/). **Treat as third-party summaries** until raw tables are in hand.
-- **Polymarket (nomination odds):** [KY-04 Republican primary — Polymarket](https://polymarket.com/event/ky-04-republican-primary-winner) — prediction market, not a poll; use as **sentiment / liquidity** signal only.
+- **Polling (recent):** Public reporting on a **Quantus Insights** poll (field ~Apr 6–7) summarized **Massie ~47% / Gallrein ~37%**, large undecided — e.g. [Kentucky.com — First KY-04 poll](https://www.kentucky.com/news/politics-government/article315347405.html). **Treat as third-party summaries** until raw tables are in hand.
+- **Polymarket (nomination odds):** [KY-04 Republican primary — Polymarket](https://polymarket.com/event/ky-04-republican-primary-winner) — prediction market, not a poll; **sentiment / liquidity** only.
 
 ## 1f. Weak signal worth watching
 
-_Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak-signals.md](weak-signals.md). One compact weak signal when a credible candidate exists (low/medium confidence only). If nothing clears the bar, use: **No credible weak signal exceeded the threshold today.** When a historical parallel is in play, summarize a short analogy audit ([analogy-audit-template.md](analogy-audit-template.md)) here._
+- **Signal (medium confidence):** **Negotiation outcome and Hormuz escalation narrated same news cycle** — Islamabad round reported **without agreement** while **Strait of Hormuz** military-economic stakes dominate §2a. If sustained, watch whether **coalition validators** (Congress, Defense reporting) treat Hormuz moves as **contingent** on diplomacy or as **decoupled** escalation — affects Barnes-style “signability” analysis.
+- **Analogy audit (compact):** Past Gulf shipping crises show repeated pattern: **public blockade / interdiction talk** tracks **bargaining phase** as well as material risk — **do not** treat analogy as prediction; use only to flag **dual-audience** (Tehran markets vs DC validators) sensitivity.
 
 ## 2. Headlines (ingested RSS)
 
@@ -93,43 +97,53 @@ _Same-story clusters use anchor overlap on titles (proper nouns / crisis terms);
 
 #### Same-story (multilingual)
 
-**krieg · ukraine** — _2 sources_
+**congress · guerre · iran · krieg · moyen-orient** — _7 sources_
 
-- **[W:5 S:0 G:0]** [Ukraine-Krieg: Wut auf baltische Staaten – Schafft sich Russland hier ein Einfallstor im Osten der EU?](https://www.spiegel.de/ausland/ukraine-krieg-wut-auf-baltische-staaten-schafft-sich-russland-hier-ein-einfallstor-im-osten-der-eu-a-231eef7b-1f0d-40f2-9bea-14a510478b27#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-11 21:13 UTC_
-- **Also** — [Ukraine-Krieg: Kyjiw meldet zahlreiche Verstöße gegen Oster-Feuerpause](https://www.spiegel.de/ausland/ukraine-krieg-kyjiw-meldet-zahlreiche-verstoesse-gegen-oster-feuerpause-a-088bb57d-efcd-4773-815c-c77d110f1598#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _W:4 S:0 G:0_ · _2026-04-11 23:04 UTC_
-
-**china · congress · iran · trump** — _4 sources_
-
-- **[W:3 S:0 G:0]** [Former general urges Trump to call Xi over Iran, Strait of Hormuz](https://thehill.com/policy/international/5827300-keane-trump-iran-strait-china/) — _The Hill — politics_ · _2026-04-11 19:50 UTC_
+- **[W:7 S:0 G:2]** [EN DIRECT, guerre au Moyen-Orient : Donald Trump ordonne un blocus naval du détroit d’Ormuz par la marine américaine, en réaction à l’échec des négociations avec l’Iran](https://www.lemonde.fr/international/live/2026/04/12/en-direct-guerre-au-moyen-orient-la-marine-americaine-entame-le-blocus-de-tous-les-navires-tentant-d-entrer-ou-de-sortir-du-detroit-d-ormuz-annonce-donald-trump_6676633_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-12 15:13 UTC_
+- **Also** — [Irankrieg: Donald Trump kündigt Blockade der Straße von Hormus an](https://www.spiegel.de/ausland/irankrieg-donald-trump-kuendigt-blockade-der-strasse-von-hormus-an-a-92151254-d2f8-44e7-951a-f7f93fba4e72#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _W:5 S:0 G:1_ · _2026-04-12 15:12 UTC_
+- **Also** — [Trump announces Navy blockade in Strait of Hormuz after Iran talks fizzle](https://thehill.com/policy/defense/5827724-trump-iran-strait-hormuz-blockade/) — _The Hill — politics_ · _W:2 S:0 G:2_ · _2026-04-12 13:18 UTC_
 - **Also** — [Democrats kick off response to Trump’s annihilation threats](https://rollcall.com/2026/04/09/congress-iran-war-annihilation-spats/) — _Roll Call — Congress_ · _W:3 S:0 G:0_
 - **Also** — [Trump's Iran threats renew debate over war crimes, illegal orders](https://www.defenseone.com/policy/2026/04/trump-iran-threats-crimes-military/412759/) — _Defense One — All_ · _W:2 S:0 G:1_ · _2026-04-11 08:00 UTC_
-- **Also** — [Trump’s Iran threats resonate even after ceasefire announcement](https://rollcall.com/2026/04/08/trumps-iran-threats-resonate-even-after-ceasefire-announcement/) — _Roll Call — Congress_ · _W:2 S:0 G:1_
+
+**iran · israel** — _2 sources_
+
+- **[W:5 S:0 G:0]** [Gescheiterte Friedensgespräche mit Iran: Israel versetzt Armee in Gefechtsbereitschaft](https://www.spiegel.de/ausland/gescheiterte-friedensgespraeche-mit-iran-israel-versetzt-armee-in-gefechtsbereitschaft-a-62de36c7-2bb5-46d2-8c03-bcf9e22639c1#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-12 15:53 UTC_
+- **Also** — [Pope Leo says 'delusion of omnipotence' is fueling U.S.-Israeli war in Iran](https://www.npr.org/2026/04/11/g-s1-117150/pope-leo-us-iran-war-israel-denounce) — _NPR — national news_ · _W:2 S:0 G:0_ · _2026-04-11 14:16 UTC_
 
 #### Other headlines
 
-- **[W:6 S:0 G:0]** [EN DIRECT, guerre en Iran : les négociations entre Téhéran et Washington se poursuivront dimanche ; « toute tentative de navires militaires de franchir le détroit d’Ormuz fera l’objet d’une réaction sévère », menacent les gardiens de la révolution](https://www.lemonde.fr/international/live/2026/04/12/en-direct-guerre-en-iran-les-negociations-entre-teheran-et-washington-se-poursuivent-toute-tentative-de-navires-militaires-de-franchir-le-detroit-d-ormuz-fera-l-objet-d-une-reaction-severe-menacent-les-gardiens-de-la-revolution_6676633_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-12 00:26 UTC_
-- **[W:5 S:0 G:0]** [EN DIRECT, guerre en Ukraine : Volodymyr Zelensky affirme avoir demandé à la Russie de poursuivre la trêve après la Pâque orthodoxe](https://www.lemonde.fr/international/live/2026/04/12/en-direct-guerre-en-ukraine-volodymyr-zelensky-affirme-avoir-demande-a-la-russie-de-poursuivre-la-treve-apres-la-paques-orthodoxe_6676836_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-12 01:56 UTC_
-- **[W:3 S:0 G:0]** [المفاوضات بين واشنطن وطهران متواصلة وترامب يؤكد بدء "تطهير" مضيق هرمز](https://www.france24.com/ar/%D8%A7%D9%84%D8%B4%D8%B1%D9%82-%D8%A7%D9%84%D8%A3%D9%88%D8%B3%D8%B7/20260411-%D8%A7%D9%84%D9%85%D9%81%D8%A7%D9%88%D8%B6%D8%A7%D8%AA-%D8%A8%D9%8A%D9%86-%D9%88%D8%A7%D8%B4%D9%86%D8%B7%D9%86-%D9%88%D8%B7%D9%87%D8%B1%D8%A7%D9%86-%D9%85%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%A9-%D9%88%D8%AA%D8%B1%D8%A7%D9%85%D8%A8-%D9%8A%D8%A4%D9%83%D8%AF-%D8%A8%D8%AF%D8%A1-%D8%AA%D8%B7%D9%87%D9%8A%D8%B1-%D9%85%D8%B6%D9%8A%D9%82-%D9%87%D8%B1%D9%85%D8%B2) — _France 24 — العربية (MENA)_ · _ar_ · _2026-04-11 20:50 UTC_
+- **[W:5 S:0 G:0]** [EN DIRECT, guerre en Ukraine : le Kremlin refuse de prolonger la trêve pascale tant que Kiev n’acceptera pas les conditions russes](https://www.lemonde.fr/international/live/2026/04/12/en-direct-guerre-en-ukraine-le-kremlin-refuse-de-prolonger-la-treve-pascale-tant-que-kiev-n-acceptera-pas-les-conditions-russes_6679492_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-12 12:49 UTC_
+- **[W:3 S:0 G:1]** [Ukraine and Russia accuse each other of hundreds of ceasefire violations](https://www.bbc.com/news/articles/cz78y73v830o?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-12 11:53 UTC_
+- **[W:2 S:2 G:0]** [Trump’s ballroom saga invokes national security threats](https://thehill.com/regulation/court-battles/5826276-trump-white-house-ballroom-security/) — _The Hill — politics_ · _2026-04-12 10:00 UTC_
+- **[W:1 S:2 G:1]** [Tell HN: OpenAI silently removed Study Mode from ChatGPT](https://news.ycombinator.com/item?id=47739305) — _Hacker News — front page_ · _2026-04-12 13:20 UTC_
+- **[W:3 S:0 G:0]** [Jean-Noël Barrot exhume un vieil argument défendant la supériorité morale d’Israël](https://www.lemonde.fr/international/article/2026/04/12/jean-noel-barrot-exhume-un-vieil-argument-defendant-la-superiorite-morale-d-israel_6679579_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-12 14:30 UTC_
+- **[W:3 S:0 G:0]** [Krieg in der Ukraine: Wolodymyr Selenskyj würdigt die Standhaftigkeit der Ukrainer am orthodoxen Ostern](https://www.spiegel.de/ausland/krieg-in-der-ukraine-wolodymyr-selenskyj-wuerdigt-die-standhaftigkeit-der-ukrainer-am-orthodoxen-ostern-a-63822402-bdfe-4809-a267-3d468812cdb7#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-12 14:21 UTC_
+- **[W:3 S:0 G:0]** [¿China o EE.UU.? Quién está ganando la carrera por dominar la tecnología de la IA](https://www.bbc.com/mundo/articles/cn9q737xpeyo?at_medium=RSS&at_campaign=rss) — _BBC Mundo — español (Américas / global)_ · _es_ · _2026-04-12 10:05 UTC_
+- **[W:3 S:0 G:0]** [How Hungary's knife-edge election could impact the US and Russia](https://www.bbc.com/news/videos/cpqxy0d1g2yo?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-12 02:52 UTC_
+- **[W:2 S:1 G:0]** [White House ballroom construction can continue for now, appeals court says](https://www.npr.org/2026/04/11/nx-s1-5782084/dc-appeals-court-trump-ballroom-bunker) — _NPR — national news_ · _2026-04-11 22:56 UTC_
 - **[W:2 S:1 G:0]** [Appeals court rules Trump's White House ballroom construction can temporarily move forward](https://www.nbcnews.com/politics/donald-trump/federal-appeals-court-allows-construction-white-house-ballroom-rcna266914) — _NBC News — politics_ · _2026-04-11 20:54 UTC_
-- **[W:2 S:1 G:0]** [Trump unveils giant gold-accented victory arch design for US capital](https://www.bbc.com/news/articles/cwywre1e3kvo?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-11 15:38 UTC_
 - **[W:2 S:0 G:1]** [Sen. Tim Sheehy makes emergency landing in Montana field after engine failure](https://www.nbcnews.com/politics/congress/senator-tim-sheehy-emergency-landing-montana-field-engine-failure-rcna278756) — _NBC News — politics_ · _2026-04-11 03:13 UTC_
 - **[W:1 S:2 G:0]** [White House ballroom construction can continue, federal appeals court says](https://thehill.com/regulation/court-battles/5827374-appeals-court-white-house-ballroom/) — _The Hill — politics_ · _2026-04-11 22:24 UTC_
-- **[W:2 S:0 G:0]** [We spoke to the man making viral Lego-style AI videos for Iran. Experts say it's powerful propaganda](https://www.bbc.com/news/articles/cjd8jrd1vnyo?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-11 23:13 UTC_
-- **[W:2 S:0 G:0]** [Iran war lands 'triple blow' to flood-ravaged Sri Lankans](https://www.bbc.com/news/articles/c4gvkpj0024o?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-11 23:06 UTC_
-- **[W:2 S:0 G:0]** [Ungarn: Viktor Orbán warnt vor Krieg – Péter Magyar verspricht Neuanfang](https://www.spiegel.de/ausland/ungarn-orban-warnt-vor-krieg-magyar-verspricht-neuanfang-a-ef10ac59-a90c-4f56-9ddd-2d71b4ce8bae#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-11 22:51 UTC_
-- **[W:2 S:0 G:0]** [Palestine Action : près de 200 manifestants soutenant le groupe Palestine Action, interdit par le gouvernement britannique, arrêtés à Londres](https://www.lemonde.fr/international/article/2026/04/11/palestine-action-pres-de-200-manifestants-soutenant-le-groupe-palestine-action-interdit-par-le-gouvernement-britannique-arretes-a-londres_6679389_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-11 22:02 UTC_
-- **[W:2 S:0 G:0]** [Boualem Sansal résolu à attaquer en justice le président algérien Abdelmadjid Tebboune](https://www.lemonde.fr/international/article/2026/04/11/boualem-sansal-resolu-a-attaquer-en-justice-le-president-algerien-abdelmadjid-tebboune_6679387_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-11 20:47 UTC_
-- **[W:2 S:0 G:0]** [Pope Leo says 'delusion of omnipotence' is fueling U.S.-Israeli war in Iran](https://www.npr.org/2026/04/11/g-s1-117150/pope-leo-us-iran-war-israel-denounce) — _NPR — national news_ · _2026-04-11 14:16 UTC_
-- **[W:2 S:0 G:0]** [Kelly rips Witkoff, Kushner role in Iran talks: Can’t send ‘two real estate developers’ to negotiate peace](https://thehill.com/homenews/senate/5827235-kelly-criticizes-witkoff-kushner-iran-diplomacy/) — _The Hill — politics_ · _2026-04-11 18:14 UTC_
+- **[W:2 S:0 G:0]** [Zum 80. Geburtstag: Trump kündigt »historisches« Kampfsport-Event vor dem Weißen Haus an](https://www.spiegel.de/panorama/zum-80-geburtstag-trump-kuendigt-historisches-kampfsport-event-vor-dem-weissen-haus-an-a-a8fdc654-d488-4124-91a6-e77d388efcf9#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-12 15:35 UTC_
 
 ## 2a. Geopolitical & military (G-ranked)
 
 _**G** = matches on `geo_military_keyword_phrases` (+ optional locale lists in config). Supports triangulation and war-powers messaging — **verify** claims against primary sources._
 
+- **[W:7 S:0 G:2]** [EN DIRECT, guerre au Moyen-Orient : Donald Trump ordonne un blocus naval du détroit d’Ormuz par la marine américaine, en réaction à l’échec des négociations avec l’Iran](https://www.lemonde.fr/international/live/2026/04/12/en-direct-guerre-au-moyen-orient-la-marine-americaine-entame-le-blocus-de-tous-les-navires-tentant-d-entrer-ou-de-sortir-du-detroit-d-ormuz-annonce-donald-trump_6676633_3210.html) — _Le Monde — français (France / monde)_ · _fr_ · _2026-04-12 15:13 UTC_
+- **[W:2 S:0 G:2]** [Trump announces Navy blockade in Strait of Hormuz after Iran talks fizzle](https://thehill.com/policy/defense/5827724-trump-iran-strait-hormuz-blockade/) — _The Hill — politics_ · _2026-04-12 13:18 UTC_
+- **[W:5 S:0 G:1]** [Irankrieg: Donald Trump kündigt Blockade der Straße von Hormus an](https://www.spiegel.de/ausland/irankrieg-donald-trump-kuendigt-blockade-der-strasse-von-hormus-an-a-92151254-d2f8-44e7-951a-f7f93fba4e72#ref=rss) — _Der Spiegel — Deutsch (Schlagzeilen)_ · _de_ · _2026-04-12 15:12 UTC_
+- **[W:3 S:0 G:1]** [Ukraine and Russia accuse each other of hundreds of ceasefire violations](https://www.bbc.com/news/articles/cz78y73v830o?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-12 11:53 UTC_
 - **[W:2 S:0 G:1]** [Trump's Iran threats renew debate over war crimes, illegal orders](https://www.defenseone.com/policy/2026/04/trump-iran-threats-crimes-military/412759/) — _Defense One — All_ · _2026-04-11 08:00 UTC_
 - **[W:2 S:0 G:1]** [Sen. Tim Sheehy makes emergency landing in Montana field after engine failure](https://www.nbcnews.com/politics/congress/senator-tim-sheehy-emergency-landing-montana-field-engine-failure-rcna278756) — _NBC News — politics_ · _2026-04-11 03:13 UTC_
 - **[W:2 S:0 G:1]** [Trump’s Iran threats resonate even after ceasefire announcement](https://rollcall.com/2026/04/08/trumps-iran-threats-resonate-even-after-ceasefire-announcement/) — _Roll Call — Congress_
-- **[W:1 S:0 G:1]** [Sunday shows preview: Ceasefire on shaky ground as US, Iran hold direct talks in Pakistan](https://thehill.com/homenews/sunday-talk-shows/5827398-sunday-shows-preview-ceasefire-on-shaky-ground-as-us-iran-hold-direct-talks-in-pakistan/) — _The Hill — politics_ · _2026-04-11 21:50 UTC_
+- **[W:1 S:2 G:1]** [Tell HN: OpenAI silently removed Study Mode from ChatGPT](https://news.ycombinator.com/item?id=47739305) — _Hacker News — front page_ · _2026-04-12 13:20 UTC_
+- **[W:1 S:0 G:1]** [Cuba's president says 'we would die' to defend against U.S. invasion](https://www.nbcnews.com/world/cuba/diaz-canel-invasion-trump-nbc-news-interview-rcna273638) — _NBC News — politics_ · _2026-04-12 13:00 UTC_
+- **[W:1 S:0 G:1]** [From pressing the Russian regime to undermining it](https://thehill.com/opinion/international/5826408-russia-sanctions-strategy-failure/) — _The Hill — politics_ · _2026-04-12 13:00 UTC_
+- **[W:1 S:0 G:1]** [Tell HN: docker pull fails in spain due to football cloudflare block](https://news.ycombinator.com/item?id=47738883) — _Hacker News — front page_ · _2026-04-12 12:28 UTC_
+- **[W:1 S:0 G:1]** [US ‘failed to gain the trust’ of Iranian officials in ceasefire talks: Parliament leader](https://thehill.com/policy/international/5827682-iran-us-negotiations-failed-trust/) — _The Hill — politics_ · _2026-04-12 12:00 UTC_
+- **[W:1 S:0 G:1]** [A Hezbollah commander describes battling Israel in Lebanon](https://www.npr.org/2026/04/12/g-s1-117045/hezbollah-commander-lebanon-israel) — _NPR — national news_ · _2026-04-12 06:02 UTC_
+- **[W:1 S:0 G:1]** ['We need real peace': Ukrainians have little faith in Easter truce](https://www.bbc.com/news/articles/cj0vn30574no?at_medium=RSS&at_campaign=rss) — _BBC News — World_ · _2026-04-12 09:38 UTC_
 
 ## 2b. Civ-mem depth hooks (in-repo essays — not breaking news)
 
@@ -137,23 +151,22 @@ _Token overlap against `docs/civilization-memory/` (build: `python3 scripts/buil
 
 - **{CMC: `minds/CIV–MIND–MEARSHEIMER.md`}** (overlap 2) — _CIV–MIND–MEARSHEIMER — v3.4 Civilizational Memory Codex · Advisory Mind John J. Mearsheimer Cognitive–Linguistic Signature Layer Simplified Polyphony Architecture Status: ACTIVE · CANONICAL · LOCKED Class: MIND (ADVIS..._
 - **{CMC: `minds/CIV–MIND–MERCOURIS.md`}** (overlap 2) — _CIV–MIND–MERCOURIS — v3.4 Civilizational Memory Codex · Primary Mind Alexander Mercouris Cognitive–Linguistic Signature Layer Simplified Polyphony Architecture · Proportional Blend Law Status: ACTIVE · CANONICAL · LOC..._
-- **{CMC: `essays/THE-DELUSION-OF-SEPARATION.md`}** (overlap 1) — _### Recognition Theory, the Seam, and the Frequencies We Tune To --- This essay names and summarises a theory that appears across the Condition, the seam, one subject many tongues, and the work of reversing the delusi..._
 - **{CMC: `notes/research-brief-condition-in-the-traditions.md`}** (overlap 1) — _**Purpose:** Map where Christianity, Islam, Judaism, Hinduism, and Buddhism **explicitly or implicitly** say that something must hold **before** the awaited future (return, restoration, judgment, moksha, nirvana, etc...._
 
 ## 3. Lead themes (auto-stub — replace after reading)
 
 ### Work-politics / campaign angle
-- EN DIRECT, guerre en Iran : les négociations entre Téhéran et Washington se poursuivront dimanche ; « toute tentative de navires militaires de franchir le détroit d’Ormuz fera l’objet d’une réaction sévère », menacent les gardiens de la révolution
-- Ukraine-Krieg: Wut auf baltische Staaten – Schafft sich Russland hier ein Einfallstor im Osten der EU?
-- EN DIRECT, guerre en Ukraine : Volodymyr Zelensky affirme avoir demandé à la Russie de poursuivre la trêve après la Pâque orthodoxe
+- EN DIRECT, guerre au Moyen-Orient : Donald Trump ordonne un blocus naval du détroit d’Ormuz par la marine américaine, en réaction à l’échec des négociations avec l’Iran
+- Gescheiterte Friedensgespräche mit Iran: Israel versetzt Armee in Gefechtsbereitschaft
+- EN DIRECT, guerre en Ukraine : le Kremlin refuse de prolonger la trêve pascale tant que Kiev n’acceptera pas les conditions russes
 
 **Replace:** 2–3 sentences for principal, district, opposition narrative.
 
 ### Work-strategy angle (product / governance / tech)
 
+- Trump’s ballroom saga invokes national security threats
+- Tell HN: OpenAI silently removed Study Mode from ChatGPT
 - White House ballroom construction can continue, federal appeals court says
-- Appeals court rules Trump's White House ballroom construction can temporarily move forward
-- Trump unveils giant gold-accented victory arch design for US capital
 
 **Replace:** 2–3 sentences for Record/Voice positioning, OpenClaw, schools, or policy hooks.
 
@@ -175,9 +188,9 @@ For **campaign-facing** copy, use [work-politics analytical-lenses](../work-poli
 
 ## 5. Operator synthesis
 
-**Work-politics:** _paragraph_
+**Work-politics:** The RSS window is dominated by **US–Iran** (Islamabad round, Hormuz escalation narrative, Israel readiness reporting) and **Ukraine Easter truce** friction — not KY-4 local unless you explicitly bridge **war powers / spending** lines to Massie messaging. **Principal-profile** and **weekly brief** freshness flags in §1 still apply before heavy campaign use.
 
-**Work-strategy:** _paragraph_
+**Work-strategy:** Triangulate **Western wires + native Tasnim (`fa`)** for Iran framing; **TASS/Kremlin + Western** for Russia truce lines. Same-day **Hormuz blockade** reporting sits in **§2a** — treat **operational claims** as **verify-first** for any public copy. **Native-language rule** is now explicit in [daily-brief-focus.md](daily-brief-focus.md) and [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md).
 
 ## 6. Next actions (work-politics snapshot)
 
@@ -185,6 +198,16 @@ For **campaign-facing** copy, use [work-politics analytical-lenses](../work-poli
 - Review `docs/skill-work/work-politics/principal-profile.md` and confirm it still matches the live campaign context.
 - Refresh Gallrein, Trump/MAGA, and spending lines before relying on the brief heavily.
 - Review `docs/skill-work/work-politics/revenue-log.md` and confirm it still matches the live campaign context.
+
+## 7. Context efficiency (operator)
+
+Thread **Context Efficiency Layer** when assembling follow-up context: prefer hot paths, recovery links, and budgets over pasting full files.
+
+- **Doctrine:** [context-efficiency-layer.md](../context-efficiency-layer.md)
+- **Compaction shapes:** [context-compaction-protocol.md](../context-compaction-protocol.md)
+- **Session brief (hot):** `python3 scripts/session_brief.py -u grace-mar --compact`
+- **Budgets:** `config/context_budgets/session_brief.json`, `config/context_surfaces.json`
+
 
 ---
 

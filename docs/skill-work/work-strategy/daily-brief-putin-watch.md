@@ -23,6 +23,8 @@
 | TASS (English) | [tass.com](https://tass.com/) | State wire; label as such |
 | RIA Novosti | [ria.ru](https://ria.ru/) | Russian-language; use with attribution |
 
+**Native-language triangulation:** When Russia is load-bearing for the day, add **at least one Russian-language or Kremlin-primary line** (see [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md)) — not optional for full §1d passes on active Kremlin / Ukraine threads.
+
 ## Guardrails
 
 - **Cite URLs** for each bullet used in client-facing or posted material.
@@ -31,4 +33,4 @@
 
 ---
 
-**Last procedure refresh:** 2026-03-28
+**Last procedure refresh:** 2026-04-12

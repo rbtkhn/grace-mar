@@ -22,6 +22,8 @@
 | Reuters — U.S. politics | [reuters.com/world/us](https://www.reuters.com/world/us/) | Cross-check time and phrasing |
 | Roll Call / The Hill | feeds in [daily-brief-config.json](daily-brief-config.json) | Congressional + VP-adjacent |
 
+**Native-language triangulation:** When Iran (or other foreign capitals) is load-bearing for U.S.–Iran or VP travel threads, add **at least one Persian-language outlet bullet** (IRNA / Tasnim / Fars, etc.) with URL and **state vs independent** note — see [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md).
+
 ## Guardrails
 
 - **Cite URLs** for each bullet used in client-facing or posted material.
@@ -30,4 +32,4 @@
 
 ---
 
-**Last procedure refresh:** 2026-04-10
+**Last procedure refresh:** 2026-04-12

@@ -9,7 +9,8 @@ Repository-wide date rules: [date-time-conventions.md](../../date-time-conventio
 **Canonical config:** [daily-brief-config.json](daily-brief-config.json)  
 **Strategy focus bullets:** [daily-brief-focus.md](daily-brief-focus.md)  
 **Weak-signal discipline:** [weak-signals.md](weak-signals.md)  
-**Weak-signal block template:** [weak-signal-template.md](weak-signal-template.md)
+**Weak-signal block template:** [weak-signal-template.md](weak-signal-template.md)  
+**Native-language triangulation (international stories):** [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md)
 
 ---
 
@@ -33,8 +34,8 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 | **1. work-politics snapshot** | `get_wap_snapshot()` |
 | **1b. Work-strategy** | [daily-brief-focus.md](daily-brief-focus.md) + pointers to work-dev |
 | **1c. Two horizons (fast vs slow)** | Operator prose in generator + [daily-brief-jiang-layer.md](daily-brief-jiang-layer.md) § **Active work-jiang hooks** — **slow** structural pointers (work-jiang); **fast** = §2 RSS + §1 (scored **W / S / G** in generator) |
-| **1d. Putin — last 48 hours** | Operator fill per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) |
-| **1e. JD Vance — last 48 hours** | Operator fill per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) |
+| **1d. Putin — last 48 hours** | Operator fill per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when Russia is a load-bearing thread |
+| **1e. JD Vance — last 48 hours** | Operator fill per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when Iran / third-country talks are load-bearing |
 | **1f. Weak signal worth watching** | Operator block using [weak-signal-template.md](weak-signal-template.md); optional “none today” if threshold not met |
 | **2. Headlines** | RSS; each line `[W:x S:y]` ranked by **W+S** then recency |
 | **3. Lead themes** | **W** campaign angle, **S** strategy angle, **slow** work-jiang stub (tie §1c to today’s headlines) |
