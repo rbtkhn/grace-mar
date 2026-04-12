@@ -66,6 +66,12 @@ _(Append below this line during the day.)_
 
 Islamabad **direct talks** led by **JD Vance** ended **without agreement** in the same window as **Hormuz** escalation and **U.S. naval** framing, so the public read is **no nuclear deal** plus **maritime pressure**. **Tasnim (`fa`)** and Western wires disagree on **what failed first**—**technical** momentum versus **trust**—so **triangulate** instead of picking a single headline. Treat **operational** **Hormuz** claims as **verify-first** against **Navy** or **White House** readouts. **Barnes** puts **liability** first: who is on the hook if **blockade** talk meets **war-powers** friction, and whether **Fox** and the **Graham** wing—not generic “hawks”—will treat any terms as **signable** at home. **Mearsheimer** reads **Hormuz** as **coercive bargaining** after a failed round: **allies** and **markets** absorb shock while Washington tests leverage. **Mercouris** tracks whether diplomacy moves **tonnage** or only **screens**, and where **“final offer”** rhetoric **decoheres** across outlets. **That domestic sell-job is the hard part:** no package holds until **Washington’s coalition** will defend it on camera.
 
+### Locals — three-audience bridge (short, 2026-04-12)
+
+**Ship check:** [write-shipping-checklist.md](../../../skill-write/write-shipping-checklist.md) step 4 (*Closer*) before paste. **Scope:** synthesizes **inbox + `days.md` 2026-04-12** Judgment only—**no** new battlefield or operational claims.
+
+Islamabad and **Hormuz** coverage this week is carrying **three** **audience** stories at once—not three secret wars, but three **different** **failure** scripts. **Tehran-facing** lines (Iranian state-adjacent copy plus **Parsi**-class analysis already in the notebook) stress **credibility**: whether **Washington** can **rein in Israel** on **Lebanon**, not only whether nuclear text closes. **Coalition-facing** Washington copy still pushes **nonproliferation** and **leverage** after **no deal**; the **Fox / Graham**-style jury still decides **signability** for any package at home. **U.S. domestic** feeds **split** again—**Just The News** / **Solomon**-style framing sells a **naval blockade** as a **Trump card**; **Martenson**-style threads mock **circular escalation** before **Navy** facts are pinned. Those spellings are **not** neutral translations of one another; **triangulate** before you treat **one** headline stack as the whole truth.
+
 ---
 
 ### Tri-mind overlap scan (72h A/B/C) — operator recon
