@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T05:43:34.582308+00:00",
+  "generated_at": "2026-04-12T06:35:03.356181+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -9,15 +9,17 @@
   "ok": true,
   "integrity_ok": true,
   "governance_ok": true,
-  "self_memory_changed": true,
+  "self_memory_changed": false,
   "reviewable_count": 0,
   "contradiction_count": 0,
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
-  "followups": [],
+  "followups": [
+    "Capture gap: Record hasn't grown in 14 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new Evidence"
+  ],
   "phases": {
     "recent": {
-      "self_memory_changed": true,
+      "self_memory_changed": false,
       "entry_count": 0,
       "relation_counts": {}
     },
@@ -29,91 +31,19 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-10T05:43:29.986290+00:00",
-    "window_end_utc": "2026-04-11T05:43:29.986290+00:00",
+    "window_start_utc": "2026-04-11T06:34:57.947675+00:00",
+    "window_end_utc": "2026-04-12T06:34:57.947675+00:00",
     "window_hours": 24.0,
-    "count": 11,
-    "first_ts": "2026-04-10T14:28:00+00:00",
-    "last_ts": "2026-04-11T04:45:00+00:00",
-    "span_hours": 14.28,
+    "count": 6,
+    "first_ts": "2026-04-11T12:25:00+00:00",
+    "last_ts": "2026-04-12T02:40:00+00:00",
+    "span_hours": 14.25,
     "by_mode": {
-      "work-start": 11
+      "work-start": 6
     },
     "runs": [
       {
-        "ts_iso": "2026-04-10T14:28:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T14:31:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T15:29:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T16:25:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "claude-4.6-opus-high-thinking"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T19:11:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T19:58:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T22:07:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T23:28:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-10T23:54:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-11T02:41:00+00:00",
+        "ts_iso": "2026-04-11T12:25:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -122,7 +52,43 @@
         }
       },
       {
-        "ts_iso": "2026-04-11T04:45:00+00:00",
+        "ts_iso": "2026-04-11T13:57:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-11T15:06:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-12T00:06:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-12T00:48:00+00:00",
+        "ok": true,
+        "mode": "work-start",
+        "kv": {
+          "cursor_model": "unknown",
+          "model_tier": "unknown"
+        }
+      },
+      {
+        "ts_iso": "2026-04-12T02:40:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -138,7 +104,7 @@
     {
       "id": "today_field",
       "title": "Daily Brief (generator + watch slices; optional KY-4 intel when chosen)",
-      "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu A \u2014 Daily Brief",
+      "first_move": "python3 scripts/operator_coffee.py -u grace-mar \u2014 then coffee menu C \u2014 Strategy (daily brief)",
       "stop_rule": "One slice: daily brief path opened or optional intel pass started \u2014 enough for first block.",
       "signals_used": [
         "reentry_heavy"
@@ -159,21 +125,21 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 2,
+  "suggested_execution_path_index": 0,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 calendar rotation; not policy or Record.",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
   "civmem_index_missing": false,
   "capture_gap": {
     "last_evidence_date": "2026-03-28",
     "last_evidence_id": "ACT-0050",
-    "days_since_evidence": 13,
+    "days_since_evidence": 14,
     "last_merge_date": "2026-03-28",
-    "days_since_merge": 13,
+    "days_since_merge": 14,
     "pending_count": 1,
-    "level": "notice",
-    "message": "Record hasn't grown in 13 days (last: ACT-0050, 2026-03-28)"
+    "level": "warning",
+    "message": "Record hasn't grown in 14 days (last: ACT-0050, 2026-03-28)"
   },
   "capability_shift": {
     "category": "model",
@@ -187,20 +153,19 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-09T06:17:43.253721+00:00",
+    "previous_dream_generated_at": "2026-04-11T05:43:34.582308+00:00",
     "local_calendar_dates": [
-      "2026-04-10",
-      "2026-04-11"
+      "2026-04-12"
     ],
     "strategy_notebook_missing_day_headers": [
-      "2026-04-11"
+      "2026-04-12"
     ]
   },
   "handoffSchemaVersion": 2,
   "topActionReason": "calendar_mod3",
-  "quietRun": true,
+  "quietRun": false,
   "residueLedger": {
-    "must_resume": "",
+    "must_resume": "Capture gap: Record hasn't grown in 14 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new",
     "safe_to_drop": "",
     "blocked": "",
     "watch_later": ""

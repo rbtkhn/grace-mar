@@ -8,30 +8,37 @@ Use this file during **`coffee`** (work-start or signing-off) to aggregate `work
 
 ## Daily sync snapshot
 
-Date: **2026-04-10**
+Date: **2026-04-12**
 
-- **stale sync state:** `no` — both mirrors have a dated row in `SYNC-LOG.md` for this date (see [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md)).
+- **stale sync state:** `no` — both mirrors have a fresh row in `SYNC-LOG.md` for this date (see [work-dev-mirror/SYNC-LOG.md](work-dev-mirror/SYNC-LOG.md), [work-politics-mirror/SYNC-LOG.md](work-politics-mirror/SYNC-LOG.md)).
 
 ### 1) work-dev mirror
-- status: `no relevant updates`
-- score (impact + urgency + xavier-readiness): `2/9`
+- status: `relevant updates found`
+- score (impact + urgency + xavier-readiness): `5/9`
 - proposed updates (max 5):
-  - _(none this scan)_
+  - `docs/skill-work/work-dev/workspace.md`
+  - `docs/skill-work/work-dev/implementation-ledger.md`
+  - `docs/skill-work/work-dev/handback-analysis-checklist.md`
+  - `docs/skill-work/work-dev/dev-journal/README.md`, `daily-dev-journal-inbox.md`
+  - _(optional)_ `known-gaps.md` / `work-dev-history.md` if tracking GAP-005/006 alignment
 - action today:
-  - Append sync-log row; optional deeper diff deferred until next relevant grace-mar work-dev change.
+  - Logged 2026-04-12 row; pick a minimal copy set into [work-dev-mirror](work-dev-mirror/) on next advisor pass—skip deep CI/scenario-only churn unless needed.
 
 ### 2) work-politics mirror
-- status: `no relevant updates`
-- score (impact + urgency + xavier-readiness): `2/9`
+- status: `relevant updates found`
+- score (impact + urgency + xavier-readiness): `4/9`
 - proposed updates (max 5):
-  - _(none this scan)_
+  - `docs/skill-work/work-politics/workspace.md`
+  - `docs/skill-work/work-politics/polling-and-markets.md`
+  - `docs/skill-work/work-politics/brief-source-registry.md`
+  - _(defer)_ campaign-only deltas unless Xavier is on KY-4 brief cadence this week
 - action today:
-  - Append sync-log row; optional deeper diff deferred until next relevant grace-mar work-politics change.
+  - Logged 2026-04-12 row; refresh mirror copies when she is actively on Massie/brief workflow.
 
 ### 3) Combined next action
-- top sync task: Keep **≤3-day** rhythm on both `SYNC-LOG.md` files; re-run relevance scan if either log goes stale.
+- top sync task: After grace-mar **04-11** batch, prioritize **work-dev** `workspace.md` + handback checklist if her stack touches agent handback; otherwise next **`coffee`** touch.
 - owner: operator
-- done by: next **`coffee`** or end-of-day touch
+- done by: next **`coffee`** or explicit mirror edit session
 
 ---
 
@@ -61,7 +68,7 @@ and run a forced relevance scan before any other optimization tasks.
 ## Daily Ops handoff
 
 - ops-card status: `drafted`
-- selected top sync action: Mirror logs + snapshot updated (2026-04-10).
+- selected top sync action: Both `SYNC-LOG.md` rows + snapshot updated (2026-04-12); relevance = **found** on both lanes—copy set TBD on next mirror pass.
 - selected top execution action: _(see card)_
 - selected top gate action: _(none — grace-mar gate unchanged this pass)_
 - card path: [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md)
