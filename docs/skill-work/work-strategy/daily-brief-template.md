@@ -42,6 +42,8 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 | **5–6** | Operator synthesis + work-politics next actions |
 | **7** | **Context efficiency (CEL)** — optional footer when `config/context_budgets/daily_brief.json` has `append_cel_footer: true`; links to [context-efficiency-layer.md](../context-efficiency-layer.md), [context-compaction-protocol.md](../context-compaction-protocol.md), `session_brief --compact` |
 
+**Raw X / transcript strategy ingests:** Do **not** duplicate a full ingest list in this file — scratch lives in [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (paste-ready one-liner SSOT); fold into `days.md` per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*.
+
 ---
 
 ## Weak signal rule

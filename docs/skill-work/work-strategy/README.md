@@ -49,7 +49,7 @@
 | **[current-events-analysis.md](current-events-analysis.md)** | Pipeline: Perceiver → energy-chokepoint hook → Analyst → **2.5 analogy audit** (when parallel proposed) → Council → Draft → Triangulation → Synthesis (WORK only). |
 | **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / **§II-A active watches** / SCHOLAR / **§III-A analogy watchlist** / **§IV operator strategy log** (additive notes in-file; not CMC `MEM–*` shards); not Record. |
 | **[strategy-notebook/](strategy-notebook/README.md)** | **Daily operator journal** for strategy judgment — PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md); optional **`### History resonance`** wires [history-notebook](history-notebook/README.md) chapter ids into each day. Not [work-strategy-history](work-strategy-history.md). WORK only. |
-| **[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)** | Rolling **scratch** for links and **X ingests** — **≥5 posts/day target**, **no ceiling** (extra ingests are normal). Fold at **dream** into `days.md`. |
+| **[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)** | **SSOT** for **X / strategy ingest** scratch: cadence, **paste-ready one-liner** shape, default assistant target. Fold at **dream** → `days.md` ([architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*). |
 | **[LEARN_MODE_RULES.md](LEARN_MODE_RULES.md)** | LEARN MODE adapter: Tri-Frame protocol, extraction format, governance aligned with STRATEGY §VI. |
 | **[LEARN_MODE_OPERATOR_PROMPT.md](LEARN_MODE_OPERATOR_PROMPT.md)** | Copy-paste operator / Composer prompt for work-strategy sessions and LEARN MODE. |
 | **[minds/](minds/README.md)** | Tri-Frame entry stubs (Mercouris, Mearsheimer, Barnes) → `CIV–MIND–*.md` in civilization_memory. Advisory patterns: [minds/MINDS-SKILL-STRATEGY-PATTERNS.md](minds/MINDS-SKILL-STRATEGY-PATTERNS.md). |
@@ -108,7 +108,7 @@ After `daily-brief-YYYY-MM-DD.md` exists, the operator may run optional **Tri-Fr
 
 ### X post strategy ingest
 
-Operator habit: **at least five** X posts per local day ingested into work-strategy (one line each: claim → why it matters → link; verify when needed). **Five is a minimum target, not a maximum** — additional posts are routine. Primary buffer: [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (fold at **dream** per inbox header).
+Cadence, **paste-ready** micro-format, and default on-disk target for chat ingests: **[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)** (SSOT). Optional session receipt: [work-menu-conventions § Auditing picks](../work-menu-conventions.md#6-auditing-picks-choice-journal).
 
 ---
 

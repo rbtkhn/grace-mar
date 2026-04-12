@@ -75,6 +75,15 @@ python3 scripts/menu_choice_evolution.py -u grace-mar --days 30 --print-gate-stu
 
 The gate stub is **stdout only** — paste and edit **`CANDIDATE-XXXX`** before any merge.
 
+**Strategy ingest session receipt (optional):** End-of-session tally for **X / transcript ingests** without duplicating full lines in `session-transcript.md` — the **SSOT** for paste-ready lines stays [strategy-notebook/daily-strategy-inbox.md](work-strategy/strategy-notebook/daily-strategy-inbox.md). Example:
+
+```bash
+python3 scripts/log_operator_choice.py -u grace-mar --context WORK --picked strategy-ingest \
+  --tags "count=7" --note "see daily-strategy-inbox 2026-04-12"
+```
+
+`--note` is truncated at **500 characters** by the script — use a **pointer** (date / file), not a full paste dump. First-class `--context INGEST` is **not** required; `WORK` + `picked` + tags is enough for aggregation.
+
 ---
 
 ## 7. Multi-agent fork generation (experimental)
