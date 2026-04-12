@@ -24,6 +24,7 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `gate-review-pass` | **gate review** | |
 | `weekly-brief-run` | **weekly brief** | |
 | `skill-strategy` | **strategy** | Alt: **strategy pass**, **work-strategy**. Notebook-primary work-strategy pass. See `.cursor/skills/skill-strategy/SKILL.md`. |
+| `tri-mind` | **tri-mind** | Alt: **tri-frame**, **tutti**. Menu **A** Mercouris / **B** Mearsheimer / **C** Barnes — one letter = solo, two = duet, **abc** = roundtable. Not default on every **strategy** pass. See `.cursor/skills/tri-mind/SKILL.md`. |
 | `politics-massie` | **massie x** | Portable core: `skills-portable/politics-massie/` → run `sync_portable_skills.py` after edits. |
 | `work-jiang-feature-checklist` | **jiang check** | |
 | `portable-skills-sync` | **sync skills** | Portable core: `skills-portable/portable-skills-sync/`. |
@@ -46,6 +47,7 @@ Each `.cursor/skills/*/SKILL.md` declares YAML **`preferred_activation`** (one o
 | `pros-and-cons` | When a proposal is **unclear** or the operator wants **pros/cons / unpack / tradeoffs**: plain-language **restate**, then **pros**, **cons**, **disproportion**, **recommendation** (Think lane; no ship unless asked) | Agent: follow `.cursor/skills/pros-and-cons/SKILL.md` |
 | `fact-check` | **Triage-first** check on pasted/named claims: **lean** verdict table, **one cite** per claim when enough, **high abstention** + **Escalate** when stakes need deeper audit; **not** Record merge unless gated pipeline | Agent: follow `.cursor/skills/fact-check/SKILL.md` |
 | `skill-strategy` | **Strategy pass** — [strategy-notebook](skill-work/work-strategy/strategy-notebook/README.md) first, [STRATEGY.md](skill-work/work-strategy/STRATEGY.md) when promoting; Islamabad/Rome, weak-signal, analogy-audit; **not** work-politics pulse | Agent: `.cursor/skills/skill-strategy/SKILL.md` |
+| `tri-mind` | **Tri-lens pass** — A/B/C menu (Mercouris / Mearsheimer / Barnes): solo, two-letter duet, or **abc** roundtable (varied opening order — topic-led or `abc order …`); optional civ-mem; [strategy-minds-granular](../.cursor/rules/strategy-minds-granular.mdc) | Agent: `.cursor/skills/tri-mind/SKILL.md` |
 | `work-jiang-feature-checklist` | Branch hygiene, scope, canonical verify block, and commit granularity for `research/external/work-jiang` + `scripts/work_jiang/` | Agent: follow `.cursor/skills/work-jiang-feature-checklist/SKILL.md` |
 | `politics-massie` | Real-time news search + suggested @usa_first_ky X drafts (human approves; no auto-post) | Agent: follow `.cursor/skills/politics-massie/SKILL.md` |
 | `portable-skills-sync` | Regenerate Cursor `SKILL.md` from `skills-portable/` + `manifest.yaml` + `CURSOR_APPENDIX.md`; run `--verify` before commit | `python3 scripts/sync_portable_skills.py --verify` then sync; agent: `.cursor/skills/portable-skills-sync/SKILL.md` |

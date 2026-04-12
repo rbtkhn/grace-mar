@@ -78,6 +78,8 @@ The **Voice** is the emulation layer that speaks when queried. Its output is a *
 
 - **Skill-write is the primary shaper of the linguistic layer.** The system prompt embeds WRITE-derived content: Lexile ceiling, “how you talk” rules, and literal writing samples that define voice. So the Telegram bot and WeChat bot outputs are **a function of skill-write** (and SELF, MEMORY, retrieval). WRITE does not *equal* the Voice; the Voice is a function of the whole Record, with WRITE supplying the style and level.
 
+**Operator-facing WRITE doctrine** (calibrating **system outputs** to **Locals / X / YouTube comments** — preferences, craft rules — separate from instance `skill-write.md` evidence): [skill-write/README.md](skill-write/README.md) → [write-operator-preferences.md](skill-write/write-operator-preferences.md).
+
 **Identity vs capability qualification:** `SELF` remains authoritative for **identity-facing truth** (personality, values, expressive feel, how Grace-Mar comes across). `SKILLS`, especially WRITE, remains authoritative for **capability-facing truth** (what she can reliably produce, at what level, under what constraints). So the linguistic layer may be primarily shaped by `skill-write` without turning WRITE into the owner of identity.
 
 ### 4.2 Written / HTML profile

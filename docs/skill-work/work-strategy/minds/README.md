@@ -23,3 +23,5 @@ Protocol: [LEARN_MODE_RULES.md](../LEARN_MODE_RULES.md).
 **Daily brief overlays:** [DAILY-BRIEF-MINDS-WORKFLOW.md](DAILY-BRIEF-MINDS-WORKFLOW.md), [daily-brief-minds-menu.md](../daily-brief-minds-menu.md).
 
 **Post-entry lens menu (`strategy` / ingest):** [skill-strategy SKILL.md](../../../.cursor/skills/skill-strategy/SKILL.md) § Post-entry lens offer — fingerprints in each **CIV-MIND-*.md** above.
+
+**Tri-mind skill (explicit invoke):** [tri-mind SKILL.md](../../../.cursor/skills/tri-mind/SKILL.md) — fixed menu **A** Mercouris / **B** Mearsheimer / **C** Barnes; one letter = solo, two = duet, **abc** = roundtable; **not** the default on every generic **`strategy`** pass ([strategy-minds-granular.mdc](../../../.cursor/rules/strategy-minds-granular.mdc)).

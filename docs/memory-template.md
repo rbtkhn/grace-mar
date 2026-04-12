@@ -69,6 +69,12 @@ MEMORY must NOT contain (any horizon):
 
 Document policy in the file header / **Long-term** block. Optional: `expires: YYYY-MM-DD` on bullets (operator honor system).
 
+**Automated length prune (optional, operator-run):** When `self-memory.md` grows past a **higher** character budget than the strategy / Xavier inbox scratch pads (defaults: prune if **> 16000** chars, target **~12000** after), run:
+
+`python3 scripts/prune_self_memory.py -u <id> --dry-run` then `--apply`
+
+Removed text is written to **`users/<id>/artifacts/memory-prune/`**. With **`--archive`**, the same excerpt is also appended under **`self-archive.md` § IX** (continuity housekeeping — not a substitute for gated merges). This does **not** bypass RECURSION-GATE for identity or knowledge claims; it preserves **continuity buffer** text that would otherwise be discarded.
+
 The Voice loads horizons in order (**short → medium → long**) with **per-section line caps** in code to limit prompt size.
 
 ---

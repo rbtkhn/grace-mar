@@ -4,6 +4,7 @@
 
 **Primary work output** of [work-strategy](../README.md): a **daily journal** for cross-territory judgment (`chapters/YYYY-MM/days.md` + `meta.md`) — parallel in spirit to [Predictive History book architecture](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), lighter tooling.
 
+- **Operator preferences:** [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) — daily structure, inbox vs page, fold rhythm, lens offers, promotion — **narrows** practice vs architecture defaults
 - **Daily inbox (accumulator):** [daily-strategy-inbox.md](daily-strategy-inbox.md) — **SSOT** for ingest cadence + **paste-ready one-liner** format; fold/prune details → [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*
 - **Spec:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — includes **Primary output**, **one daily page** per calendar day (**~1000 words** consolidated analysis; compress if over ~1200), **Condense-to-target** (**Fast** = tiers A→D; **Full** = summarize-and-condense + tiers), **condense checklist**, **Daily synthesis**, and **Accumulation and evolution** (persistent frontier / checkpointed loop)
 - **Synthesis (systematic entry):** [SYNTHESIS-OPERATING-MODEL.md](SYNTHESIS-OPERATING-MODEL.md) — five-level stack (L0–L4), session types A–D, section router, minds defaults (tacet / solo / duet / tutti), pre/post checklists; points to architecture for mechanics

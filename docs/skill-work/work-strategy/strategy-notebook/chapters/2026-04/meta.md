@@ -68,6 +68,23 @@
 
 **Links into notebook practice:** Inbox **`PUTIN` / `KREMLIN`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **Kremlin** or **wire** URLs cited in **§1d** when the brief was run.
 
+## PRC / Beijing thread (month)
+
+**Primary thread (strategy-notebook + skill-strategy):** **People’s Republic of China** — **MFA** and **party–state** readouts (**summits**, **ministry** briefings, major **official** English pages) that move **U.S.–China**, **cross-strait**, **Indo-Pacific**, **trade / sanctions**, or **coalition** framing. **Not** a substitute for **U.S.**, **Taiwan**, or **partner** primary sources on the same story; **triangulate** per [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) (**Mandarin-primary** line when the PRC thread is load-bearing). **Hub:** [daily-brief-prc-watch.md](../../../daily-brief-prc-watch.md) (coffee **C** → daily brief **§1g**, rolling **48h** + URL guardrails — in generated briefs **§1g** follows **§1f** weak signal).
+
+**Hypotheses (rolling — verify against MFA + wires):**
+
+- **English vs Chinese release:** **fmprc.gov.cn** / **Xinhua** **English** lines can **lag** or **soften** **Mandarin** **headline** terms — **Judgment** should prefer **dated** **MFA** URL when claiming **exact** **PRC** **wording** on load-bearing claims.
+- **Signaling stack:** When **Beijing** lines surface beside **Islamabad**, **Putin**, **Iran**, or **U.S.** **executive** copy the same week, tag whether the **signal** is **audience** (**Global South**, **domestic**, **partner capitals**) vs **operational** **offer** — stack with **Islamabad** index / gap matrix without **collapsing** **PRC** **channel** **facts** into **Russia** or **U.S.** **readouts** without evidence.
+- **STRATEGY.md cross-read:** Long-horizon **China** / **Taiwan** / **tech** **watches** in [STRATEGY.md](../../../STRATEGY.md) are **ledger** lines — notebook **Judgment** cites them as **pointers**, not as **automatic** updates to **today’s** **facts**.
+
+**Falsifiers / counter-reads:**
+
+- **Western “China” analysis-only:** Relying on **aggregated** **English** **opinion** without **MFA** or **Mandarin** **check** when the day’s thesis turns on **exact** **PRC** **terms** — treat as **framing** risk ([daily-brief-prc-watch.md](../../../daily-brief-prc-watch.md) § **Native-language triangulation**).
+- **RSS / §2 substitution:** [daily-brief-prc-watch.md](../../../daily-brief-prc-watch.md) § **Guardrails** — RSS §2 **does not** replace **§1g** for **timing** and **full quotes**.
+
+**Links into notebook practice:** Inbox **`PRC` / `CN` / `CHINA`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **MFA** or **wire** URLs cited in **§1g** when the brief was run.
+
 ## Polyphony / lens tension (month)
 
 - **History Notebook (parallel):** Operator workflow for chapter drafting — spine → M→Me→B → tension → STYLE-GUIDE translation; see [POLYPHONY-WORKFLOW.md](../../../history-notebook/POLYPHONY-WORKFLOW.md).

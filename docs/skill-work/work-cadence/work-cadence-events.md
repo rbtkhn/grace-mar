@@ -152,3 +152,13 @@ _(Append below this line.)_
 - **2026-04-11 14:05 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=coffee-a-tri-frame-doc-default
 - **2026-04-11 15:06 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-12 00:06 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-12 00:47 UTC** — bridge (grace-mar) ok=true cursor_model=unknown model_tier=unknown
+- **2026-04-12 00:48 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-12 00:49 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-12 01:23 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=context-efficiency-layer-landed
+- **2026-04-12 02:40 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-12 06:35 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=false reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-12 12:40 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-12 13:59 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-12 14:28 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=civ-mem-MEM-handles-clarified
+- **2026-04-12 15:26 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown

@@ -16,9 +16,10 @@ That register reads like **cable / newsletter compression**, not **declarative**
 
 ## Prefer instead
 
+- **One memorable declarative sentence** that **encapsulates the core argument** — the default positive target; see [write-memorable-closer.md](write-memorable-closer.md).
 - **Declarative** tension: name the **fork** in plain prose (*Two pressures ran in parallel…*).
 - **Qualified uncertainty** without a question: *It was not yet clear whether…* / *The open issue was…*
-- **Cut** the closer if the prior sentence already lands.
+- **Cut** the closer only if the prior sentence already **fully** lands the thesis.
 
 ---
 

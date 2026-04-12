@@ -10,7 +10,7 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
-**Optional grep tags (primary threads):** When an ingest is part of the **Rome** thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`** (e.g. `cold: ROME | @Pontifex — …`). When it is part of the **JD Vance / VP** thread, use **`JDVance`** or **`VANCE`**. When it is part of the **Putin / Kremlin** thread, use **`PUTIN`** or **`KREMLIN`** (e.g. `cold: PUTIN | Kremlin transcript — …`). Example: `rg 'PUTIN|KREMLIN|JDVance|VANCE|ROME|LeoXIV'`.
+**Optional grep tags (primary threads):** When an ingest is part of the **Rome** thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`**. When it is part of the **JD Vance / VP** thread, use **`JDVance`** or **`VANCE`**. When it is part of the **Putin / Kremlin** thread, use **`PUTIN`** or **`KREMLIN`**. When it is part of the **PRC / Beijing** thread, use **`PRC`**, **`CN`**, or **`CHINA`** (e.g. `cold: PRC | MFA briefing — …`). Example: `rg 'PRC|CN|CHINA|PUTIN|KREMLIN|JDVance|VANCE|ROME|LeoXIV'`.
 
 #### Optional two-tier gist (cold claim // operator hook)
 
@@ -104,7 +104,7 @@ _(Append below this line during the day.)_
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
 
-- **Brief:** [daily-brief-2026-04-12.md](../daily-brief-2026-04-12.md) — fill §1d / §1e / §1f as needed; **JD Vance** lane ties to Islamabad / no-deal frame.
+- **Brief:** [daily-brief-2026-04-12.md](../daily-brief-2026-04-12.md) — fill §1d / §1e / §1f / §1g as needed; **JD Vance** lane ties to Islamabad / no-deal frame.
 - **Notebook page:** `## 2026-04-12` is in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — **Accumulator** (above this Prep block) holds paste ingests; **tri-mind overlap scan** (below) and **Locals** (next subsections) align with **Signal / Judgment** there; meta § **Hormuz / Lebanon / pause≠settlement**.
 - **PH hook:** `research/external/work-jiang/lectures/game-theory-11-the-law-of-escalation.md` · `game-theory-20-mid-term-examination.md` (paths only; cite at a glance in Judgment).
 - **Fold:** Inbox → `days.md` at **`dream`** or when you **explicitly** direct (not on ingest alone).
