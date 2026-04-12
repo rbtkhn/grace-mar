@@ -378,6 +378,8 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Judgment
 
 - **Framing fork:** Washington emphasizes **nuclear nonproliferation** as the breaker; Iranian state-adjacent copy emphasizes **sovereignty / “excessive” demands** — triangulate, don’t collapse. **Barnes-relevant:** “blockade” wording + **coalition / war-powers** exposure if posture holds.
+- **Thesis A — Pape / “escalation trap”:** After **no deal** on the **nuclear** line, **Hormuz** pressure and the **ground-stockpile** branch read as **sequential tightening** — each move raises the cost of backing down, so **escalation becomes the default path** and **settlement** looks farther unless something **breaks the commitment ratchet** (energy shock, alliance break, or domestic constraint). **Ground / 10k** remains **scenario-grade** until sourced.
+- **Thesis B — Bargaining / third-party / structural off-ramps:** The same headlines can still describe **coercive bargaining** under **failed talks** — **Hormuz** as **leverage** to reset terms, **shipping / Gulf / Asian importer** pressure as incentive for **mediation or side payments**, and **allied** or **market** choke points as reasons **not** to assume a single ladder to **territorial seizure**. **Neither thesis** should collapse the other without dated evidence.
 
 ### Analogy / tension
 
