@@ -18,6 +18,7 @@
 - **Plane-safe dual register:** when multiple lenses appear, force seams between negotiation, material, and narrative planes.
 - **Jiang as separate cross-check:** use `### Jiang resonance` to test slow-corpus fit, not to crowd the daily judgment.
 - **Machine-light tagging:** use minimal tags such as `[legit]`, `[power]`, `[liability]`, `[verify]`, not a heavy schema.
+- **Tri-mind deliverables + coherence:** tri-frame can ship as lens-by-lens analysis, merged synthesis, prediction/debate divergence, or a short paste-under disagreement block; public appendices must not introduce new explanatory machinery the body did not earn.
 
 ---
 
@@ -223,6 +224,22 @@ Promote only when one of these is true:
 **Risk:** Tag sprawl.
 
 **Rule of thumb:** human-readable first, machine-friendly second.
+
+---
+
+### 11) Tri-mind deliverables, coherence, and falsifiers
+
+**What:** Treat tri-frame as **multiple export shapes**, not a single “three parallel summaries” template. Common shapes: **lens-by-lens** (Barnes → Mearsheimer → Mercouris), **one merged synthesis paragraph**, **prediction divergence / debate** (where lenses disagree and what would falsify each), and a **short paste-under disagreement block** for public copy.  
+**When:** The operator asks for tri-mind, tri-frame, or an explicit multi-lens stress test; or when exporting strategy analysis to **Locals / X** as an appendix.  
+**Where in repo:** `days.md` under `### Judgment` / `### Analogy / tension`, or a companion note linked from `### Links`; public copy stays outside the notebook if it is not Record-bound.  
+**Cost:** Medium if you run all shapes; light if you pick one shape deliberately.  
+**Risk:** Meta-framing (“this stacks three readings”) can read weaker than **findings-first** prose on short-form platforms.
+
+**Coherence rule (public copy):** Do not append analytical scaffolding in a conclusion that **introduces new mechanism lists** the body did not establish. Prefer a **hinge sentence** that restates the real bottleneck in plain language.
+
+**Falsifier habit:** Close debate-style passes with **what evidence would move you toward Barnes vs Mearsheimer vs Mercouris** (validator breaks / exposure vs material shifts vs narrative decoherence).
+
+**US settlement / coalition shortcut (Barnes-heavy):** When the thread is “sell the deal at home,” map **Fox / hawkish validators** as a **coalition jury** and “radioactive formulations” as **ownership and exposure**, not as optional moral garnish.
 
 ---
 
