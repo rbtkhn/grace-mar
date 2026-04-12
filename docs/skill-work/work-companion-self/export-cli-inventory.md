@@ -21,8 +21,10 @@ If `./companion-self/` is a **gitignored** local clone (see repo `.gitignore`), 
 
 ## After parallel land (checklist)
 
-- [ ] `python scripts/export.py --help` works in **both** repos (grace-mar: full dispatch; companion-self: help even if targets missing).
-- [ ] Run `python scripts/template_diff.py` from grace-mar; if `scripts/export.py` is new vs upstream, record in **expected drift** or confirm intentional match.
-- [ ] Update `template-source.json` / instance contract when companion-self commit is pinned (grace-mar).
+- [x] `python scripts/export.py --help` works in **both** repos (grace-mar: full dispatch; companion-self: help; template clone has only `export.py` until modules are promoted).
+- [x] Run `python scripts/template_diff.py` from grace-mar (2026-04-11: no `scripts/export.py` delta in manifest lock vs pinned paths; dispatcher not yet on `origin/main` — see below).
+- [ ] Update `template-source.json` / `instance-contract.json` **`templateCommitTarget`** when companion-self **`main`** includes the unified export PR (pin the merge commit; then re-run `template_diff.py`).
+
+**Upstream note:** `https://github.com/rbtkhn/companion-self` **`main`** did not yet contain `scripts/export.py` at last check; open work lives on branch **`feature/unified-export-cli`**. After that lands on **`main`**, complete the remaining checkbox and refresh audit outputs if the manifest gains `scripts/export.py` / `docs/EXPORT-CLI.md`.
 
 See [EXPORT-CLI.md](../../EXPORT-CLI.md).
