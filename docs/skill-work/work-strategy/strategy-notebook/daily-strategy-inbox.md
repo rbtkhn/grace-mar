@@ -90,6 +90,14 @@ _(Append below this line during the day.)_
 
 `batch-analysis | 2026-04-12 | Macgregor + Pape + Davis | **Tension-first:** **Pape** + **Davis** = **U.S. offer structure** (commitment ratchet / “Escalation Trap”; final-offer-as-ultimatum, resumption clock, Hormuz/oil/fertilizer → U.S.-side macro pain). **Macgregor** = **system + third-party** (importer/diplomatic distance; world-economy risk if restart spoils “Istanbul moment”). **Do not fuse** those levels in one causal paragraph. *Optional weak bridge:* all three treat headline “bargain” as **asymmetric coercion**—still verify each ingest. Fold one Judgment only after status URLs on all chains. *(Membership: Macgregor line earlier in accumulator; Pape + Davis immediately above this batch line.)*`
 
+`X | cold: @Pontifex — thread opener (~2026-04-12): Julian-calendar **Easter** wishes (Eastern Churches); **#PrayTogether**; urges world not to lose focus on **Ukraine** war suffering // hook: Rome **humanitarian** signal stack same calendar day as notebook **Lebanon** / Islamabad noise; optional **ROME-PASS** / `work-strategy-rome` cite when folding Vatican lines | https://x.com/Pontifex | verify:pin-exact-status-URL-main-post+screenshot-ingest`
+
+`X | cold: @Pontifex — threaded reply: solidarity with **Lebanon**; **principle of humanity**; moral obligation to protect **civilians** under international law (UI may truncate) // hook: **Lebanon** layer **same 24h** as Parsi CNN ingest—compare **clerical IHL/civilian** frame vs analyst **ceasefire-phase** mechanics; do not merge without verify | https://x.com/Pontifex | verify:pin-exact-status-URL-Lebanon-reply+full-text`
+
+`X | cold: @Pontifex — threaded reply: **Sudan** conflict ~**third anniversary**; innocent victims / inhuman tragedy; appeal to parties to silence weapons // hook: weak-signal **Africa** anchor in same Pontifex stack; optional **Links** if `days.md` tracks anniversaries | https://x.com/Pontifex | verify:pin-exact-status-URL-Sudan-reply`
+
+`batch-analysis | 2026-04-12 | Pontifex thread (Ukraine / Lebanon / Sudan) | **Tension-first:** one **Vatican** account sequences **three** distinct crises (Julian Easter→**Ukraine** attention; **Lebanon** IHL/civilian solidarity; **Sudan** anniversary appeal)—**not** one war story. *Weak bridge:* shared **moral–legal** register (humanity, civilian protection); **do not** equate papal **Lebanon** solidarity line with **operational** Beltway/Parsi ceasefire mechanics without dated URLs. Fold under **ROME-PASS** only with pinned posts.`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
