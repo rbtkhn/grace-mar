@@ -10,7 +10,7 @@
 
 ---
 
-Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, triadic cognition, tricameral mind, recursion-gate).
+Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, triadic cognition, tricameral mind, recursion-gate). **Governance unbundling** (routing vs sensemaking vs accountability): [governance-unbundling.md](governance-unbundling.md).
 
 ## 1. Cognitive Fork vs. Cognitive Twin
 

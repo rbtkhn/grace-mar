@@ -16,6 +16,15 @@ This file defines rules for any AI coding assistant working on this repository.
 
 **Agent vocabulary (onboarding):** Many new AI users already use **agent** for “a tool-using runner.” **Work agent** and **skill-work agent** are **onboarding-friendly** names for that pattern on **WORK** surfaces: they **utilize** the Record (read; propose via the gate only) and may support the Voice (e.g. harnesses, PRP, prompt work) under **operator** control — they are **not** Mind, **not** the companion-facing Voice in chat, and **not** a fourth triad seat. **Skill-work agent** stresses the same idea scoped to **`docs/skill-work/`** and **WORK territories**, including **replicated / parallel** lanes. Precision term for the stack: **WORK execution layer**; beginner gloss: `docs/skill-work/work-xavier/GLOSSARY-FOR-BEGINNERS.md`.
 
+## Agent role boundaries — unbundled management functions
+
+Assistants and automation in this repo are limited to the **routing** layer unless a human explicitly runs a merge:
+
+- **Allowed (routing):** Detect signals; structure IX-A / IX-B / IX-C candidates; stage proposals in `users/[id]/recursion-gate.md` with evidence; cluster or dedupe suggestions in operator tooling.
+- **Prohibited without human gate (sensemaking and accountability):** Auto-approve, auto-merge, or silently resolve conflicting candidates; substitute deep personal or ethical judgment for companion review; overwrite user intent.
+
+When uncertain, stage with an explicit note that **human sensemaking** may be required—never merge without companion approval. Full framing: [`docs/governance-unbundling.md`](docs/governance-unbundling.md).
+
 ---
 
 ## What This System Is

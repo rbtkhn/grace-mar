@@ -10,6 +10,8 @@ description: "Read-only RECURSION-GATE review pass: ordered recommendations, dup
 
 Use this skill when the operator wants a structured review pass over pending candidates without taking action yet.
 
+**Sensemaking layer:** approving or rejecting here is **human judgment** (Approval Inbox); agents only **stage**. Routing vs sensemaking vs accountability: [`docs/governance-unbundling.md`](../../docs/governance-unbundling.md).
+
 ## Default command
 
 ```bash

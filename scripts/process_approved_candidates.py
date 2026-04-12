@@ -32,6 +32,15 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = Path(__file__).resolve().parent
+
+
+def _emit_governance_unbundling_banner() -> None:
+    """Reminder: merge path is accountability; routing already occurred at staging (stderr)."""
+    print(
+        "Governance unbundling: routing=staging/analyst; sensemaking=Approval Inbox; "
+        "accountability=this merge via companion approval only — see docs/governance-unbundling.md",
+        file=sys.stderr,
+    )
 _SRC = REPO_ROOT / "src"
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
@@ -1025,6 +1034,11 @@ def main() -> None:
         action="store_true",
         help="Require origin, lineage_class, and session_id|operator_source on each merged candidate (fork history)",
     )
+    ap.add_argument(
+        "--verbose-governance",
+        action="store_true",
+        help="Print governance unbundling reminder to stderr when applying merges",
+    )
     args = ap.parse_args()
     territory = normalize_territory_cli(args.territory)
     _set_user(args.user)
@@ -1098,6 +1112,9 @@ def main() -> None:
     if not ok:
         raise SystemExit(f"invalid receipt: {reason}")
     min_tier = max(int(receipt.get("min_evidence_tier", args.min_evidence_tier)), MIN_EVIDENCE_TIER)
+
+    if args.verbose_governance:
+        _emit_governance_unbundling_banner()
 
     print("Preflight: refreshing derived exports (PRP, manifest, fork-manifest, runtime bundle)...")
     _refresh_derived_exports_preflight()

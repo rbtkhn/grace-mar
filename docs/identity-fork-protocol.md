@@ -7,7 +7,7 @@
 
 ---
 
-Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, gate/recursion-gate).
+Terminology primer: see [glossary.md](glossary.md) for canonical definitions (Record, Voice, companion, gate/recursion-gate). **Routing vs sensemaking vs accountability:** [governance-unbundling.md](governance-unbundling.md).
 
 ## Abstract
 

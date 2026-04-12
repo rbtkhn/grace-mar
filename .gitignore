@@ -77,6 +77,8 @@ artifacts/skill-cards/*
 !artifacts/skill-cards/.gitkeep
 artifacts/context/*
 !artifacts/context/.gitkeep
+# Rejection routing feedback (rebuildable; scripts/analyze_rejection_feedback.py)
+artifacts/rejection_analysis.json
 
 # Large companion artifacts (optional local-only; use Git LFS if committed)
 # users/*/artifacts/**/*.png
