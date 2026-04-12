@@ -51,6 +51,8 @@ _(Append below this line during the day.)_
 
 `batch-analysis | 2026-04-12 | Parsi + Solomon/Martenson | Parsi cluster: Tehran’s test of U.S. control of Israel (Lebanon) vs nuclear headline; JTN/Martenson: **domestic** split on Hormuz blockade (decisive “Trump card” vs satirical escalation spiral)—same week, three audiences (Iranian signability, coalition sell, U.S. commentariat) | paired-with: two X ingest lines above`
 
+`X | Barnes (@barnes_law): “Trump doubles down on dumb” — quote-tweet Disclose.tv packaging Truth Social: **blockade** Hormuz to all ships in/out; **interdict** international-waters vessels that paid **toll** to Iran; destroy **mines**; escalation rhetoric (“locked and loaded”) — **Barnes primary** on same Hormuz thread as §1e / domestic feed | https://x.com/barnes_law | verify:pin-exact-status-URL+archive-Truth-Social-primary`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
