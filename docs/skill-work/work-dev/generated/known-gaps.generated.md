@@ -5,6 +5,6 @@
 | id | area | status | problem |
 |---|---|---|---|
 | `BUILD-AI-GAP-001` | Handback provenance | `closed` | Historical collapse of OpenClaw metadata at /stage |
-| `BUILD-AI-GAP-005` | Factorial scenario library | `partial` | No productized scenario matrix CLI for client agents |
-| `BUILD-AI-GAP-006` | Reasoning vs action (handback) | `partial` | No full automated diff between analysis text and staged classification |
+| `BUILD-AI-GAP-005` | Factorial scenario library | `partial` | Matrix drift is CI-enforced; client-specific tail packs still outside repo baselines |
+| `BUILD-AI-GAP-006` | Reasoning vs action (handback) | `partial` | Optional staged_risk_tier vs narrative heuristics; broad NL understanding still manual |
 | `BUILD-AI-GAP-007` | Progressive autonomy metrics | `planned` | No shadow-mode instrumentation for tier promotion |

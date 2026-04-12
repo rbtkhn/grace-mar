@@ -21,6 +21,18 @@ python3 scripts/work_dev/generate_scenarios.py \
   > docs/skill-work/work-dev/scenarios/handback_tail_stress.matrix.md
 ```
 
+Optional first line `<!-- Generated output ... -->` is preserved when comparing; CI compares normalized bodies via `tests/test_generate_scenarios.py`.
+
+**Verify without overwriting** (exit 1 if YAML and checked-in matrix diverge):
+
+```bash
+python3 scripts/work_dev/generate_scenarios.py \
+  --scenario handback_tail \
+  --runtimes openclaw \
+  --format markdown \
+  --check docs/skill-work/work-dev/scenarios/handback_tail_stress.matrix.md
+```
+
 JSON (for tooling):
 
 ```bash
@@ -51,4 +63,4 @@ The YAML does not embed full OpenClaw payloads. For each **stressor** value, cha
 | `V-07_contradictory_prior` | V-07 | Contradicts a prior user message in-thread. |
 | `V-08_ood_tail` | V-08 | Same task shape; inputs slightly off template. |
 
-**Checks** named in the baseline (`handback_analysis`, `provenance_preserved_in_candidate_yaml`) align with [handback-analysis-checklist.md](../../handback-analysis-checklist.md) and gate YAML expectations — not automated for every row yet ([BUILD-AI-GAP-005](../../known-gaps.md), [BUILD-AI-GAP-006](../../known-gaps.md)).
+**Checks** named in the baseline (`handback_analysis`, `provenance_preserved_in_candidate_yaml`) align with [handback-analysis-checklist.md](../../handback-analysis-checklist.md) and gate YAML expectations. Matrix **drift** vs YAML is CI-enforced (`--check` + pytest); per-row payload automation remains partial ([BUILD-AI-GAP-005](../../known-gaps.md), [BUILD-AI-GAP-006](../../known-gaps.md)).

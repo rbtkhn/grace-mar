@@ -2,6 +2,9 @@
 """
 Expand baseline scenarios × runtimes × dimensions into a scenario matrix.
 
+Use `--format markdown --check path/to/matrix.md` to verify a checked-in file matches
+the generator without writing (BUILD-AI-GAP-005 drift guard).
+
 Backwards compatible with the existing simple baseline format:
 - scenario_id
 - failure_family
@@ -291,6 +294,27 @@ def render_markdown(rows: list[ScenarioRow]) -> str:
     return "".join(lines)
 
 
+def _normalize_matrix_markdown(text: str) -> str:
+    """Strip optional generated-file HTML comment; normalize newlines for drift checks."""
+    lines = text.splitlines()
+    if lines and lines[0].strip().startswith("<!--"):
+        lines = lines[1:]
+    body = "\n".join(lines).strip() + "\n"
+    return "\n".join(line.rstrip() for line in body.splitlines()) + "\n"
+
+
+def matrix_markdown_matches(rows: list[ScenarioRow], path: Path) -> tuple[bool, str]:
+    """Return (ok, diff_or_empty). Expected file may start with <!-- Generated ... --> line."""
+    expected = _normalize_matrix_markdown(path.read_text(encoding="utf-8"))
+    got = _normalize_matrix_markdown(render_markdown(rows))
+    if got == expected:
+        return True, ""
+    return False, (
+        f"matrix drift: {path} does not match regenerated output "
+        f"(regenerate per docs/skill-work/work-dev/scenarios/baseline_scenarios/README.md)\n"
+    )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Generate factorial scenario matrix rows.")
     ap.add_argument("--scenario", default="", help="Filter by scenario_id prefix")
@@ -300,10 +324,27 @@ def main() -> int:
         help="Comma-separated runtime labels",
     )
     ap.add_argument("--format", default="json", choices=["json", "markdown"])
+    ap.add_argument(
+        "--check",
+        type=Path,
+        default=None,
+        metavar="FILE",
+        help="With --format markdown, verify FILE matches output (exit 1 on drift); for CI / pre-commit",
+    )
     args = ap.parse_args()
 
     runtimes = [x.strip() for x in args.runtimes.split(",") if x.strip()]
     rows = build_matrix(scenario_filter=args.scenario.strip(), runtimes=runtimes)
+
+    if args.check is not None:
+        if args.format != "markdown":
+            print("--check requires --format markdown", file=sys.stderr)
+            return 2
+        ok, msg = matrix_markdown_matches(rows, args.check)
+        if not ok:
+            print(msg, file=sys.stderr)
+            return 1
+        return 0
 
     if args.format == "markdown":
         sys.stdout.write(render_markdown(rows))

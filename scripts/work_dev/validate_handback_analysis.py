@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
 """
-BUILD-AI-GAP-006 slice: consistency between handback text and constitution meta.
+BUILD-AI-GAP-006 slice: consistency between handback text and constitution meta,
+plus optional narrative vs structured risk tier (when staged_risk_tier is supplied).
 
 Validates that CONSTITUTION_ADVISORY embedded in content matches constitution_check_status,
 and that advisory_flagged implies an advisory line is present.
+
+Optional: if `staged_risk_tier` is `low` or `medium`, flag obvious high-concern phrasing
+in `content` (reasoning–action mismatch guard).
 
 Usage:
   python scripts/work_dev/validate_handback_analysis.py --file payload.json
@@ -24,6 +28,20 @@ _ADVISORY_RE = re.compile(
     re.IGNORECASE | re.MULTILINE,
 )
 
+# Heuristic: narrative signals that conflict with a low/medium staged_risk_tier.
+_HIGH_CONCERN_PATTERNS: tuple[re.Pattern[str], ...] = (
+    re.compile(r"\bhigh risk\b", re.IGNORECASE),
+    re.compile(r"\bdo not merge\b", re.IGNORECASE),
+    re.compile(r"\bmust reject\b", re.IGNORECASE),
+    re.compile(r"\bcannot approve\b", re.IGNORECASE),
+    re.compile(r"\bsevere mismatch\b", re.IGNORECASE),
+    re.compile(r"\breject this (?:candidate|change|merge)\b", re.IGNORECASE),
+)
+
+
+def _narrative_suggests_high_concern(content: str) -> bool:
+    return any(p.search(content) for p in _HIGH_CONCERN_PATTERNS)
+
 
 def validate_payload(payload: dict[str, Any]) -> list[str]:
     errors: list[str] = []
@@ -41,6 +59,13 @@ def validate_payload(payload: dict[str, Any]) -> list[str]:
 
     if meta_status == "advisory_flagged" and "CONSTITUTION_ADVISORY" not in content:
         errors.append("constitution_check_status is advisory_flagged but content has no CONSTITUTION_ADVISORY line")
+
+    tier_raw = str(payload.get("staged_risk_tier") or "").strip().lower()
+    if tier_raw in ("low", "medium") and _narrative_suggests_high_concern(content):
+        errors.append(
+            f"narrative contains high-concern phrasing but staged_risk_tier is {tier_raw!r} "
+            "(reasoning vs action — reconcile text and structured tier)"
+        )
 
     return errors
 

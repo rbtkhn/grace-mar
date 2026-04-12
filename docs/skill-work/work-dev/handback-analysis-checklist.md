@@ -2,7 +2,7 @@
 
 Use before approving OpenClaw-sourced candidates or when debugging a bad stage.
 
-**Automated slice:** `python scripts/work_dev/validate_handback_analysis.py --file payload.json` (or stdin JSON with `content` and optional `constitution_check_status`).
+**Automated slice:** `python scripts/work_dev/validate_handback_analysis.py --file payload.json` (or stdin JSON with `content`, optional `constitution_check_status`, optional `staged_risk_tier` — `low` or `medium` triggers a narrative high-concern phrase check).
 
 ## Before merge review
 
@@ -18,9 +18,12 @@ Minimal JSON:
 ```json
 {
   "content": "... full staged text including CONSTITUTION_ADVISORY if any ...",
-  "constitution_check_status": "advisory_clear"
+  "constitution_check_status": "advisory_clear",
+  "staged_risk_tier": "low"
 }
 ```
+
+Omit `staged_risk_tier` if the pipeline does not yet classify risk; when set to `low` or `medium`, obvious high-concern wording in `content` fails validation.
 
 Fields mirror the OpenClaw stage payload / gate candidate body where applicable.
 
@@ -28,10 +31,10 @@ Fields mirror the OpenClaw stage payload / gate candidate body where applicable.
 
 **Implemented today**
 
-- Validator: [`scripts/work_dev/validate_handback_analysis.py`](../../../scripts/work_dev/validate_handback_analysis.py) — checks **embedded** `CONSTITUTION_ADVISORY: status = …` against `constitution_check_status`, and that `advisory_flagged` implies an advisory line in `content`.
+- Validator: [`scripts/work_dev/validate_handback_analysis.py`](../../../scripts/work_dev/validate_handback_analysis.py) — checks **embedded** `CONSTITUTION_ADVISORY: status = …` against `constitution_check_status`, and that `advisory_flagged` implies an advisory line in `content`. Optional **`staged_risk_tier`** (`low` \| `medium`): if set, rejects when `content` matches high-concern phrase heuristics (reasoning–action guard; not full NLP).
 - Tests: [`tests/test_validate_handback_analysis.py`](../../../tests/test_validate_handback_analysis.py).
 - **CI:** Those tests run on every push and pull request to `main` as part of `pytest tests/` in [`.github/workflows/test.yml`](../../../.github/workflows/test.yml) (job `Tests` → step “Run pytest”).
 
 **Still open (BUILD-AI-GAP-006 “partial”)**
 
-- No automated diff between **free-text risk / approval narrative** and **staged candidate classification or summary** (e.g. “warns high risk” vs “staged as low risk”). Manual review still uses **§ Before merge review** items 3–4 above; a broader CI gate would need explicit labels or a second structured field to compare against narrative.
+- Full semantic alignment between narrative and classification (beyond phrase heuristics and optional `staged_risk_tier`). Manual review still uses **§ Before merge review** items 3–4 for edge cases and when `staged_risk_tier` is omitted.

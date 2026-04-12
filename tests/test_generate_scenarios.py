@@ -2,7 +2,14 @@
 
 from __future__ import annotations
 
-from scripts.work_dev.generate_scenarios import build_matrix
+from pathlib import Path
+
+from scripts.work_dev.generate_scenarios import build_matrix, matrix_markdown_matches
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+HAND_BACK_MATRIX = (
+    REPO_ROOT / "docs/skill-work/work-dev/scenarios/handback_tail_stress.matrix.md"
+)
 
 
 def test_handback_tail_stress_openclaw_eight_stressors() -> None:
@@ -28,3 +35,10 @@ def test_handback_tail_stress_openclaw_eight_stressors() -> None:
         "V-07_contradictory_prior",
         "V-08_ood_tail",
     ]
+
+
+def test_handback_tail_matrix_file_matches_generator() -> None:
+    """Checked-in matrix stays in sync with YAML (CI drift guard)."""
+    rows = build_matrix(scenario_filter="handback_tail", runtimes=["openclaw"])
+    ok, msg = matrix_markdown_matches(rows, HAND_BACK_MATRIX)
+    assert ok, msg

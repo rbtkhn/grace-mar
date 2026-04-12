@@ -51,3 +51,24 @@ def test_validate_flagged_without_line_fails() -> None:
     rc, _, err = _run(json.dumps(payload))
     assert rc == 1
     assert "advisory_flagged" in err
+
+
+def test_staged_risk_low_conflicts_with_high_concern_narrative() -> None:
+    payload = {
+        "content": "Summary: high risk — do not merge until reconciled.",
+        "constitution_check_status": "advisory_clear",
+        "staged_risk_tier": "low",
+    }
+    rc, _, err = _run(json.dumps(payload))
+    assert rc == 1
+    assert "staged_risk_tier" in err and "high-concern" in err
+
+
+def test_staged_risk_tier_omitted_skips_narrative_heuristic() -> None:
+    payload = {
+        "content": "high risk — do not merge (no structured tier in payload).",
+        "constitution_check_status": "",
+    }
+    rc, out, err = _run(json.dumps(payload))
+    assert rc == 0
+    assert err == ""

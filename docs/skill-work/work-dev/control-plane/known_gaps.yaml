@@ -11,19 +11,19 @@ items:
 
   - id: BUILD-AI-GAP-005
     area: Factorial scenario library
-    problem: No productized scenario matrix CLI for client agents
+    problem: Matrix drift is CI-enforced; client-specific tail packs still outside repo baselines
     status: partial
     related_integration_ids: []
     notes:
-      - See variation-types.md; scripts/work_dev/generate_scenarios.py (factorial matrix, JSON v2), run_scenario_matrix.py (pytest hints); minimal pack handback_tail_stress.yaml (V-01..V-08 dimension).
+      - variation-types.md; generate_scenarios.py factorial matrix (JSON v2 + markdown + --check FILE); handback_tail_stress.yaml V-01..V-08; pytest drift test on handback_tail_stress.matrix.md.
 
   - id: BUILD-AI-GAP-006
     area: Reasoning vs action (handback)
-    problem: No full automated diff between analysis text and staged classification
+    problem: Optional staged_risk_tier vs narrative heuristics; broad NL understanding still manual
     status: partial
     related_integration_ids: []
     notes:
-      - handback-analysis-checklist.md + scripts/work_dev/validate_handback_analysis.py (constitution line vs meta); full reasoning-vs-action CI pending.
+      - validate_handback_analysis.py constitution line vs meta; when staged_risk_tier is low/medium, high-concern phrases in content fail validation; full semantic audit still out of scope.
 
   - id: BUILD-AI-GAP-007
     area: Progressive autonomy metrics
