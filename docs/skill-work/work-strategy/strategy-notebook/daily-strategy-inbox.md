@@ -93,7 +93,7 @@ _(Append below this line during the day.)_
 ### Prep — 2026-04-12 strategy-notebook (scratch)
 
 - **Brief:** [daily-brief-2026-04-12.md](../daily-brief-2026-04-12.md) — fill §1d / §1e / §1f as needed; **JD Vance** lane ties to Islamabad / no-deal frame.
-- **Notebook page:** `## 2026-04-12` is in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — tri-mind recon (inbox below) and **Locals paste** (next subsection) align with **Signal / Judgment** there; meta § **Hormuz / Lebanon / pause≠settlement**.
+- **Notebook page:** `## 2026-04-12` is in [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — **Accumulator** (above this Prep block) holds paste ingests; **tri-mind overlap scan** (below) and **Locals** (next subsections) align with **Signal / Judgment** there; meta § **Hormuz / Lebanon / pause≠settlement**.
 - **PH hook:** `research/external/work-jiang/lectures/game-theory-11-the-law-of-escalation.md` · `game-theory-20-mid-term-examination.md` (paths only; cite at a glance in Judgment).
 - **Fold:** Inbox → `days.md` at **`dream`** or when you **explicitly** direct (not on ingest alone).
 
