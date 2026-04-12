@@ -19,8 +19,9 @@
 
 | Doc | Role |
 |-----|------|
-| [write-operator-preferences.md](write-operator-preferences.md) | **SSOT for operator writing preferences** — living list; start here (includes **tri-mind → public copy** handoff) |
+| [write-operator-preferences.md](write-operator-preferences.md) | **SSOT for operator writing preferences** — living list; start here (includes **tri-mind → public copy** handoff and **Chat delivery** — full echo in Cursor thread) |
 | [write-no-abstract-stacked-closers.md](write-no-abstract-stacked-closers.md) | Craft: avoid bloaty abstract stacked closers in short public copy |
+| [write-memorable-closer.md](write-memorable-closer.md) | Craft: end on one strong sentence that encapsulates the core argument |
 | [write-no-rhetorical-question-closer.md](write-no-rhetorical-question-closer.md) | Craft: do not end on a rhetorical question (prefer declarative closer) |
 | *(sections in [write-operator-preferences.md](write-operator-preferences.md))* | Exposition vs. instructions; dispreferred pundit phrases (e.g. “has any bite,” “when the stakes spike”) |
 | [write-shipping-checklist.md](write-shipping-checklist.md) | **Global** pre-flight checklist for all public operator surfaces |

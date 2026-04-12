@@ -239,7 +239,9 @@ Promote only when one of these is true:
 
 **Falsifier habit:** Close debate-style passes with **what evidence would move you toward Barnes vs Mearsheimer vs Mercouris** (validator breaks / exposure vs material shifts vs narrative decoherence).
 
-**US settlement / coalition shortcut (Barnes-heavy):** When the thread is “sell the deal at home,” map **Fox / hawkish validators** as a **coalition jury** and “radioactive formulations” as **ownership and exposure**, not as optional moral garnish.
+**US settlement / coalition shortcut (Barnes-heavy):** When the thread is “sell the deal at home,” map **Fox / Graham wing** (and adjacent coalition validators) as a **coalition jury** and “radioactive formulations” as **ownership and exposure**, not as optional moral garnish.
+
+**Domestic U.S. interpretation split (third axis):** When the same **lever** (e.g. **Hormuz** / **blockade**) appears in **bilateral** U.S.–Iran reporting **and** in **U.S. domestic** commentary, hold **three** story types in view—not two: **Tehran-facing** (signability / credibility), **coalition-facing** (D.C. sell / war-powers), and **domestic-feed** splits (e.g. **decisive leverage** op-ed vs **satirical escalation-spiral** thread). Those are **not** neutral translations of one another. Label **analyst** vs **wire** vs **primary**; **operational** claims remain **verify-first** (DoD / WH / Navy readouts).
 
 ---
 

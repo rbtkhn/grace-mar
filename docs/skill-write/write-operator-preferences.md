@@ -42,12 +42,21 @@ Snapshot from operator Q&A; revise this table if decisions change.
 | 8 | **B** — PH comments: **top-level**; **short paragraph** OK. |
 | 9 | **B** — On rule changes: update **`docs/skill-write/`** and **`.cursor/rules/`** in **lockstep**. |
 | 10 | **A** — **No** companion-facing SELF-LIBRARY pointer (unless you add later). |
+| 11 | **A** — **Chat delivery:** Paste-ready operator copy is echoed **in the Cursor thread** (full text); on-disk writes are **audit trail**, not a substitute for clipboard. |
 
 ---
 
 ## Shipping
 
 - **Global checklist (recorded):** [write-shipping-checklist.md](write-shipping-checklist.md) — one list for every surface unless you add an exception below.
+
+### Chat delivery (operator clipboard)
+
+When the agent drafts **paste-ready** operator public copy (**Locals**, **X**, **Predictive History comments**) in a **Cursor** session:
+
+- Echo the **full final text** in the **assistant reply**—the same wording you would paste. Files on disk (e.g. [daily-strategy-inbox.md](../skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md)) are the **audit trail**; **chat is the operator clipboard**.
+- **Derivation ladder (default):** If producing multiple shapes from one spine (e.g. **Locals** paragraph → plain-text strip → **X** trim), echo **each** in the reply. Do not leave a length variant **file-only** unless the operator asks for on-disk only.
+- Optional **one-line scope fence** on meta syntheses when mixing analyst overlays with verify-first lanes (e.g. *synthesizes inbox + notebook only—no new operational claims*).
 
 ### Changing rules (recorded)
 
@@ -71,8 +80,9 @@ Edit and extend this section as your taste evolves.
 
 ### Closers and density
 
+- **Memorable declarative closer** — End on **one strong sentence** that **encapsulates the core argument** (what the reader should carry away). Declarative and concrete where possible — not a mushy fade-out or a recap paragraph unless the surface demands it. See [write-memorable-closer.md](write-memorable-closer.md).
 - **No abstract stacked closers** — Avoid bill + pay + trust + “everyone / all sides” piles in one closing line. See [write-no-abstract-stacked-closers.md](write-no-abstract-stacked-closers.md).
-- **No rhetorical question closer** — Do not end operator public copy on a **rhetorical question**; prefer **declarative** tension or **qualified uncertainty** in prose. See [write-no-rhetorical-question-closer.md](write-no-rhetorical-question-closer.md).
+- **No rhetorical question closer** — Do not end operator public copy on a **rhetorical question**; the default replacement is a **memorable thesis line**, not a question. See [write-no-rhetorical-question-closer.md](write-no-rhetorical-question-closer.md).
 
 ### Exposition vs. instructions (skill-write)
 
