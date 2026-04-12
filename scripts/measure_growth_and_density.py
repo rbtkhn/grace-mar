@@ -26,7 +26,17 @@ from datetime import datetime
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROFILE_DIR = REPO_ROOT / "users" / "grace-mar"
+
+
+def _default_user_id() -> str:
+    import os
+
+    env = os.environ.get("GRACE_MAR_USER_ID", "").strip()
+    if env:
+        return env
+    if (REPO_ROOT / "users" / "grace-mar").is_dir():
+        return "grace-mar"
+    return "_template"
 
 
 def _read(path: Path) -> str:
@@ -137,6 +147,12 @@ def growth_from_git(self_path: Path) -> list[tuple[str, int, int, int]]:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Measure cognitive growth and density (IX entries).")
     parser.add_argument(
+        "--user",
+        "-u",
+        default="",
+        help="User id under users/ (default: GRACE_MAR_USER_ID or grace-mar if present, else _template).",
+    )
+    parser.add_argument(
         "--min-avg-words",
         type=float,
         default=None,
@@ -145,9 +161,11 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    self_path = PROFILE_DIR / "self.md"
-    evidence_path = PROFILE_DIR / "self-archive.md"
-    events_path = PROFILE_DIR / "pipeline-events.jsonl"
+    uid = (args.user or "").strip() or _default_user_id()
+    profile_dir = REPO_ROOT / "users" / uid
+    self_path = profile_dir / "self.md"
+    evidence_path = profile_dir / "self-archive.md"
+    events_path = profile_dir / "pipeline-events.jsonl"
 
     content = _read(self_path)
     entries = parse_ix_entries(content)

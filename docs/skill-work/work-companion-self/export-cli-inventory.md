@@ -28,3 +28,5 @@ If `./companion-self/` is a **gitignored** local clone (see repo `.gitignore`), 
 **Upstream note:** `https://github.com/rbtkhn/companion-self` **`main`** did not yet contain `scripts/export.py` at last check; open work lives on branch **`feature/unified-export-cli`**. After that lands on **`main`**, complete the remaining checkbox and refresh audit outputs if the manifest gains `scripts/export.py` / `docs/EXPORT-CLI.md`.
 
 See [EXPORT-CLI.md](../../EXPORT-CLI.md).
+
+**See also:** [validate-cli-inventory.md](validate-cli-inventory.md) — unified `scripts/validate.py` dual-repo tracking.

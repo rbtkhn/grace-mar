@@ -1,0 +1,33 @@
+# CI validation manifest (spike) — mirrors scripts/ci_validation_inventory.py
+# Evaluate wiring GitHub Actions + validate.py from this file in a follow-up (see CI_VALIDATION_MANIFEST_SPIKE.md).
+schema_version: "0.1"
+description: "Grace-Mar validation checks — keep in sync with ci_validation_inventory.py"
+groups:
+  ci:
+    order:
+      - assert_canonical_paths
+      - validate_integrity
+      - validate_template_sync_contract
+      - governance_checker
+      - validate_control_plane
+checks:
+  assert_canonical_paths:
+    script: scripts/assert_canonical_paths.py
+    user_scope: required
+    argv_suffix: ["--user", "{user}"]
+  validate_integrity:
+    script: scripts/validate-integrity.py
+    user_scope: required
+    argv_suffix: ["--user", "{user}", "--require-proposal-class"]
+  validate_template_sync_contract:
+    script: scripts/validate_template_sync_contract.py
+    user_scope: ignored
+    argv_suffix: []
+  governance_checker:
+    script: scripts/governance_checker.py
+    user_scope: ignored
+    argv_suffix: []
+  validate_control_plane:
+    script: scripts/work_dev/validate_control_plane.py
+    user_scope: ignored
+    argv_suffix: []
