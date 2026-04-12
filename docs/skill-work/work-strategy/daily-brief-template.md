@@ -37,6 +37,7 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 | **1d. Putin — last 48 hours** | Operator fill per [daily-brief-putin-watch.md](daily-brief-putin-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when Russia is a load-bearing thread |
 | **1e. JD Vance — last 48 hours** | Operator fill per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when Iran / third-country talks are load-bearing |
 | **1f. Weak signal worth watching** | Operator block using [weak-signal-template.md](weak-signal-template.md); optional “none today” if threshold not met |
+| **1g. PRC — last 48 hours** | Operator fill per [daily-brief-prc-watch.md](daily-brief-prc-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when the PRC / Beijing thread is load-bearing |
 | **2. Headlines** | RSS; each line `[W:x S:y]` ranked by **W+S** then recency |
 | **3. Lead themes** | **W** campaign angle, **S** strategy angle, **slow** work-jiang stub (tie §1c to today’s headlines) |
 | **4. Triangulation** | [work-politics analytical lenses](../work-politics/analytical-lenses/manifest.md) when the lead is political |

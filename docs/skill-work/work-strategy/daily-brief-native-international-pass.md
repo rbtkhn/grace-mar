@@ -1,6 +1,6 @@
 # Daily brief — native-language triangulation (international stories)
 
-**Purpose:** Standing **operator WORK** rule: for **international** stories the brief treats as load-bearing (same-story clusters in §2, §**1d** / §**1e** watches, or explicit operator flags), **always add at least one relevant native-language source** alongside English / Western wires — so framing and domestic audience emphasis are visible, not only wire compression.
+**Purpose:** Standing **operator WORK** rule: for **international** stories the brief treats as load-bearing (same-story clusters in §2, §**1d** / §**1e** / §**1g** watches, or explicit operator flags), **always add at least one relevant native-language source** alongside English / Western wires — so framing and domestic audience emphasis are visible, not only wire compression.
 
 **Not** Record truth. **Not** Voice knowledge. **Human sign-off** before public ship.
 
@@ -9,7 +9,7 @@
 ## When it applies
 
 - **Threshold:** Use this pass when the dated brief carries a **foreign-government**, **bilateral negotiation**, or **cross-border military / sanctions** thread where **local press** is part of the story (how the deal is sold at home, threat posture, legitimacy).
-- **Scope control:** One **primary** native slot per **jurisdiction** per day unless the operator expands scope (e.g. Iran + Russia + EU same day — still cap at **one bullet per jurisdiction** in §1d/§1e unless marked **deep pass**).
+- **Scope control:** One **primary** native slot per **jurisdiction** per day unless the operator expands scope (e.g. Iran + Russia + EU same day — still cap at **one bullet per jurisdiction** in §1d / §1e / §1g unless marked **deep pass**).
 
 ---
 
@@ -30,6 +30,7 @@ For each covered jurisdiction:
 | Iran | Persian (`fa`) | [IRNA](https://www.irna.ir/), [Fars News EN](https://en.irna.ir/) / Persian root, [Tasnim](https://www.tasnimnews.com/en) |
 | Russia | Russian (`ru`) | [Kremlin EN](http://en.kremlin.ru/), [TASS](https://tass.com/) |
 | Ukraine | Ukrainian / Russian | Official channels + major regional wires per day (operator choice) |
+| PRC | Mandarin (`zh`) | [MFA PRC EN](https://www.fmprc.gov.cn/eng/), [Xinhua EN](https://english.news.cn/home.htm) + Chinese root as needed |
 
 Add rows as your briefs regularly cover other regions.
 
@@ -38,8 +39,8 @@ Add rows as your briefs regularly cover other regions.
 ## Relation to other brief machinery
 
 - **RSS §2** in [daily-brief-config.json](daily-brief-config.json) does **not** replace this pass — many native outlets are not in the feed list.
-- **Coffee menu C — Strategy (daily brief)** ([coffee SKILL](../../../.cursor/skills/coffee/SKILL.md)): when filling §**1d** (Putin) and §**1e** (Vance), run the **native triangulation** for **Russia** and **Iran** (and any other **§2**-prominent international lead that day) in the same session as the 48h web scan.
-- **§1d / §1e** procedures: [daily-brief-putin-watch.md](daily-brief-putin-watch.md), [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) — each includes a pointer to this file.
+- **Coffee menu C — Strategy (daily brief)** ([coffee SKILL](../../../.cursor/skills/coffee/SKILL.md)): when filling §**1d** (Putin), §**1e** (Vance), and §**1g** (PRC when load-bearing), run the **native triangulation** for **Russia**, **Iran**, **Mandarin-primary PRC** (and any other **§2**-prominent international lead that day) in the same session as the 48h web scan.
+- **§1d / §1e / §1g** procedures: [daily-brief-putin-watch.md](daily-brief-putin-watch.md), [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md), [daily-brief-prc-watch.md](daily-brief-prc-watch.md) — each includes a pointer to this file.
 
 ---
 
