@@ -12,6 +12,7 @@ Run before a tutoring session or via cron. Output to stdout.
 Usage:
     python scripts/session_brief.py -u grace-mar
     python scripts/session_brief.py -u grace-mar --minimal
+    python scripts/session_brief.py -u grace-mar --compact
 """
 
 import re
@@ -28,6 +29,8 @@ if str(_SCRIPTS) not in sys.path:
 if str(REPO_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(REPO_ROOT / "src"))
 from recursion_gate_territory import normalize_territory_cli, pending_by_territory
+
+from context_budget import get_bool, get_int, load_context_budget
 STALE_PENDING_DAYS = 3
 DEFAULT_USERS_DIR = REPO_ROOT / "users"
 WISDOM_PATH = REPO_ROOT / "docs" / "WISDOM-QUESTIONS.md"
@@ -291,6 +294,63 @@ def _replay_brief_lines(user_dir: Path, repo_root: Path) -> list[str]:
         return ["## Replay & provenance (audit synthesis)", "", f"_(unavailable: {exc})_", ""]
 
 
+def _session_brief_budget() -> dict:
+    return load_context_budget("session_brief")
+
+
+def _load_context_surfaces(repo_root: Path) -> dict[str, str]:
+    """CEL tier hints from config/context_surfaces.json (operator-runtime only)."""
+    path = repo_root / "config" / "context_surfaces.json"
+    if not path.is_file():
+        return {}
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError):
+        return {}
+    if not isinstance(raw, dict):
+        return {}
+    tiers = raw.get("operator_runtime_tiers")
+    if not isinstance(tiers, dict):
+        return {}
+    out: dict[str, str] = {}
+    for k, v in tiers.items():
+        if isinstance(k, str) and isinstance(v, str):
+            out[k] = v
+    return out
+
+
+def _recovery_link_lines(user_name: str, *, compact: bool) -> list[str]:
+    """Provenance-first paths for operator recovery (CEL)."""
+    budget = _session_brief_budget()
+    key = "show_recovery_links_compact" if compact else "show_recovery_links_minimal"
+    if not get_bool(budget, key, True):
+        return []
+    base = f"users/{user_name}"
+    lines: list[str] = [
+        "",
+        "## Recovery links (source paths)",
+        "",
+        f"- `{base}/recursion-gate.md`",
+        f"- `{base}/self.md`",
+        f"- `{base}/self-archive.md`",
+        "- `docs/skill-work/work-dev/workspace.md`",
+        "- `docs/skill-work/context-efficiency-layer.md`",
+        "- `docs/skill-work/reality-sprint-block.md`",
+    ]
+    return lines
+
+
+def _cel_tier_hint_lines(repo_root: Path) -> list[str]:
+    """Optional one-line tier table from context_surfaces.json."""
+    tiers = _load_context_surfaces(repo_root)
+    if not tiers:
+        return []
+    lines = ["", "_Operator-runtime tiers (CEL; not MEMORY sections):_", ""]
+    for k, v in sorted(tiers.items()):
+        lines.append(f"- `{k}` → **{v}**")
+    return lines
+
+
 def _intent_primary_goal(user_dir: Path) -> str | None:
     """Load primary goal from intent.md if present."""
     path = user_dir / "intent.md"
@@ -299,6 +359,61 @@ def _intent_primary_goal(user_dir: Path) -> str | None:
     raw = path.read_text(encoding="utf-8")
     m = re.search(r"primary:\s*[\"']([^\"']+)[\"']", raw)
     return m.group(1).strip() if m else None
+
+
+def _build_minimal_brief_lines(
+    user_dir: Path,
+    territory: str,
+    user_name: str,
+    *,
+    compact: bool,
+    repo_root: Path,
+) -> list[str]:
+    """Shared minimal body for --minimal and --compact (context budget + CEL recovery)."""
+    pr_content = _read(user_dir / "recursion-gate.md")
+    evidence_content = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
+    politics_rows, comp_rows = pending_by_territory(pr_content)
+    n = _pending_count_full(pr_content, territory)
+    ids = _pending_candidate_ids(pr_content, territory)
+    budget = _session_brief_budget()
+    max_ids = get_int(budget, "max_pending_ids_listed", 30)
+    if max_ids < 1:
+        max_ids = 30
+    ids_trunc = ids[:max_ids]
+    omitted = len(ids) - len(ids_trunc)
+    ids_str = ", ".join(ids_trunc) if ids_trunc else "none"
+    if omitted > 0:
+        ids_str += f" _(+{omitted} more)_"
+    last_act = _last_act_oneliner(evidence_content)
+    title = "# Session brief (compact)" if compact else "# Session brief (minimal)"
+    lines = [
+        title,
+        "",
+        f"**Territory lens:** {territory}",
+        f"**Pending (this lens):** {n} — {ids_str}",
+    ]
+    if territory == "all":
+        lines.append(
+            f"**Split:** work-politics {len(politics_rows)} · Companion {len(comp_rows)} — use `--territory work-politics` or `companion`"
+        )
+    lines.extend(
+        [
+            "",
+            f"**Last activity:** {last_act}",
+            "",
+            "**Next action:** "
+            + (
+                "/review in Telegram → approve or reject each pending."
+                if n
+                else "Nothing in gate (this lens) — send \"we did X\" when something worth recording happens."
+            ),
+        ]
+    )
+    lines.extend(_recovery_link_lines(user_name, compact=compact))
+    if compact:
+        lines.extend(_cel_tier_hint_lines(repo_root))
+    lines.append("")
+    return lines
 
 
 def _wisdom_questions(wisdom_content: str, ix_b_topics: list[str], n: int) -> list[str]:
@@ -332,7 +447,18 @@ def main() -> int:
     parser.add_argument(
         "--minimal",
         action="store_true",
-        help="One screen: pending count + IDs + last ACT + next action",
+        help="One screen: pending count + IDs + last ACT + next action (see config/context_budgets/session_brief.json)",
+    )
+    parser.add_argument(
+        "--compact",
+        action="store_true",
+        help="Like --minimal plus recovery links; also prints CEL tier hints from config/context_surfaces.json",
+    )
+    parser.add_argument(
+        "--write-replay-artifacts",
+        action="store_true",
+        dest="write_replay_artifacts",
+        help="Write replay synthesis artifacts to disk and exit",
     )
     parser.add_argument(
         "--territory",
@@ -372,36 +498,13 @@ def main() -> int:
             print(text)
         return 0
 
-    if args.minimal:
-        pr_content = _read(user_dir / "recursion-gate.md")
-        evidence_content = _read(user_dir / "self-archive.md") or _read(user_dir / "self-evidence.md")
-        politics_rows, comp_rows = pending_by_territory(pr_content)
-        n = _pending_count_full(pr_content, territory)
-        ids = _pending_candidate_ids(pr_content, territory)
-        last_act = _last_act_oneliner(evidence_content)
-        lines = [
-            "# Session brief (minimal)",
-            "",
-            f"**Territory lens:** {territory}",
-            f"**Pending (this lens):** {n} — {', '.join(ids) if ids else 'none'}",
-        ]
-        if territory == "all":
-            lines.append(
-                f"**Split:** work-politics {len(politics_rows)} · Companion {len(comp_rows)} — use `--territory work-politics` or `companion`"
-            )
-        lines.extend(
-            [
-                "",
-                f"**Last activity:** {last_act}",
-                "",
-                "**Next action:** "
-                + (
-                    "/review in Telegram → approve or reject each pending."
-                    if n
-                    else "Nothing in gate (this lens) — send \"we did X\" when something worth recording happens."
-                ),
-                "",
-            ]
+    if args.compact or args.minimal:
+        lines = _build_minimal_brief_lines(
+            user_dir,
+            territory,
+            user_dir.name,
+            compact=bool(args.compact),
+            repo_root=REPO_ROOT,
         )
         print("\n".join(lines))
         return 0

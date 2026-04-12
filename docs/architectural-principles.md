@@ -50,6 +50,7 @@ Lane overlays, mode overlays, configuration files, and presentation surfaces can
 - `.cursor/skills/` — each skill is a reloadable mode overlay (coffee, dream, bridge, harvest, gate-review)
 - `config/*.json` — adjustable without core changes (seed-promotion-rules, authority-map, context-budgets, source-of-truth)
 - `docs/skill-work/work-*/` — lane overlays load when the lane is active
+- **Context Efficiency Layer** — [docs/skill-work/context-efficiency-layer.md](skill-work/context-efficiency-layer.md): operator-runtime tiers, compaction protocol, and `session_brief` / context budgets; does not change Record authority
 
 **Constraint:** Core doctrine and constitutional rules (`AGENTS.md`, authority classes, gated pipeline law) are never silently reloaded. Changes to governed state surfaces require explicit human review.
 

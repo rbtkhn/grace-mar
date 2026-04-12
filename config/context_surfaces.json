@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.0.0",
+  "notes": "Operator-runtime tier hints for Context Efficiency Layer. Not MEMORY file sections; not Record truth.",
+  "operator_runtime_tiers": {
+    "recursion_gate": "hot",
+    "evidence_activity_tail": "hot",
+    "self_md_ix": "warm",
+    "work_dev_workspace": "warm",
+    "strategy_notebook": "warm",
+    "self_library": "cold",
+    "evidence_archive_deep": "cold"
+  }
+}

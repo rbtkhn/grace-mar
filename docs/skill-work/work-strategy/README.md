@@ -36,6 +36,7 @@
 | **[weak-signal-template.md](weak-signal-template.md)** | Markdown stub for **§1f** in the daily brief. |
 | **[analogy-audit-template.md](analogy-audit-template.md)** | Short form when a historical parallel is proposed (current-events + brief). |
 | **[decision-point-template.md](decision-point-template.md)** | Structured options when an escalating watch needs a recommendation before promotion. Three-minds perspectives default. |
+| **[context-efficiency-layer.md](../context-efficiency-layer.md)** | Cross-lane: hot/warm/cold operator context, recovery links, budgets — pairs with [context-compaction-protocol.md](../context-compaction-protocol.md). |
 | **[promotion-ladder.md](promotion-ladder.md)** | Stages from notebook note → promoted watch; **WORK-only** (see authority boundary vs Record). |
 | **[watch-promotion-rules.md](watch-promotion-rules.md)** | When to promote watches and open decision points. |
 | **[decision-points/](decision-points/README.md)** | Instance files (`YYYY-MM-DD-slug.md`). |

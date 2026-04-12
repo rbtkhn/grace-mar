@@ -1,0 +1,6 @@
+{
+  "max_pending_ids_listed": 30,
+  "max_pending_id_line_chars": 200,
+  "show_recovery_links_compact": true,
+  "show_recovery_links_minimal": true
+}

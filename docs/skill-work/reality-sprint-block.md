@@ -109,6 +109,8 @@ In those cases, skip the block or keep a **single** “first contact” line.
 
 This file lives at **`docs/skill-work/`** root as **cross-cutting doctrine** (not a new `work-*` territory). Territories link in via READMEs and templates (e.g. [work-template.md](work-template.md), [work-dev/README.md](work-dev/README.md), [decision-point-template.md](work-strategy/decision-point-template.md)).
 
+**Related:** [context-efficiency-layer.md](context-efficiency-layer.md) — **what to load** at what fidelity (hot/warm/cold, budgets, recovery links). Reality Sprint compresses **one plan** into one action path; CEL assembles **session** context efficiently.
+
 ---
 
 ## Deferred (post-v1)

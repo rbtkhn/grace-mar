@@ -26,6 +26,15 @@ def test_load_context_budget_bad_json_returns_empty(tmp_path: Path, monkeypatch:
     assert cb.load_context_budget("x") == {}
 
 
+def test_load_session_brief_budget_from_repo() -> None:
+    """session_brief.json exists and loads (CEL budgets)."""
+    path = REPO / "config" / "context_budgets" / "session_brief.json"
+    assert path.is_file()
+    raw = cb.load_context_budget("session_brief")
+    assert isinstance(raw, dict)
+    assert cb.get_int(raw, "max_pending_ids_listed", 99) >= 1
+
+
 def test_get_int_and_get_bool() -> None:
     d = {"a": 3, "b": "7", "c": True, "d": "yes", "e": "off"}
     assert cb.get_int(d, "a", 0) == 3
