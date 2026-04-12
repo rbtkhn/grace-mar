@@ -30,6 +30,8 @@ Paste both outputs (or the full non-compact block). **Canonical state is on disk
 
 Skim as needed: `docs/conceptual-framework.md` (triadic cognition, companion), `docs/chat-first-design.md` (chat is product; operator dashboards optional). **After shared reading:** [we-read-think-self-pipeline.md](docs/we-read-think-self-pipeline.md) (READ/THINK vs RECURSION-GATE → IX).
 
+**Procedure vs doctrine (two spines):** [start-here.md § Procedure vs doctrine](../docs/start-here.md#procedure-vs-doctrine-two-spines) — **bootstrap and warmup** are session procedure and **weather**; **AGENTS**, **architecture**, and **instance doctrine** are durable policy. Stack them; do not substitute one for the other.
+
 **Operator structure:** `docs/lanes/README.md` (north star per lane) + `docs/lanes/WEEKLY-RHYTHM.md` (weekly checklist). **Library wiring:** `docs/library-integration.md` · `python3 scripts/library_shelf_summary.py -u grace-mar`
 
 ### Non-negotiables for “optimization”

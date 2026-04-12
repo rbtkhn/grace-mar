@@ -3,7 +3,7 @@ name: repo-feedback-prompt
 preferred_activation: repo feedback prompt
 description: Compose short, constructive prompts (issues/DMs) for maintainers of external GitHub repos after verifying upstream docs—non-redundant, high-leverage asks, respectful tone, optional PR offer.
 portable: true
-version: 1.0.0
+version: 1.1.0
 tags:
 - operator
 - work-dev
@@ -68,6 +68,14 @@ Subject: <repo or feature> — <one-line theme: doc suggestion / security framin
 - **Kitchen-sink** feedback (many frameworks, many asks).
 - **False redundancy** — suggesting “document X” when X is already explicit.
 - **Leakage** — tying their project to **your** internal system names or private workflows unless the operator explicitly wants that bridge.
+
+## Agent behavior norms
+
+- **Respect upstream** — Credit what already works; suggestions are **additive**, not a rewrite of their README.
+- **Non-redundant** — If their docs already state a point, **drop** it from the outbound prompt; do not perform false gaps.
+- **Brevity** — One screen for the maintainer; **DM variant** is a few sentences, one theme.
+- **No pejorative framing** — Prefer **attribute-based** comparison when contrasting projects; see [contributing-public-copy.md](../../docs/contributing-public-copy.md) for tone.
+- **Trust layers** — When suggesting security wording, distinguish **reliability** (flaky tool) from **adversarial** (untrusted page); see [trust-layers.md](../../docs/trust-layers.md).
 
 ## Optional variants
 

@@ -3,7 +3,7 @@ name: portable-skills-sync
 preferred_activation: sync skills
 description: "Sync portable skill cores into generated host Cursor SKILL.md files: manifest-driven assembly, optional host appendix, verify step before write. Triggers: skills-portable edit, manifest.yaml, CURSOR_APPENDIX, portable pipeline, run sync, verify portable skills."
 portable: true
-version: 1.0.0
+version: 1.0.1
 tags:
   - operator
   - work-dev
@@ -51,6 +51,7 @@ python3 scripts/sync_portable_skills.py --skill <skill-name>
 ## Guardrails
 
 - **Never** edit the generated `.cursor/skills/<skill>/SKILL.md` by hand — the next sync will overwrite it.
+- **Drift tax:** The **canonical** file for each listed skill is **`skills-portable/<skill>/SKILL.md`** (plus `CURSOR_APPENDIX.md`). Hand-fixing only the generated host `SKILL.md` **without** editing the portable core produces **silent divergence** until the next sync — treat that as a process bug, not a shortcut.
 - Keep **policy and Record merge** details out of the portable core; they belong in host docs or the appendix.
 - If `--verify` fails on **description**, ensure the YAML `description` value is a **single line** (no literal newline inside the string).
 

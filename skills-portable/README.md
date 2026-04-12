@@ -10,6 +10,8 @@
 | `.cursor/skills/<skill-name>/CURSOR_APPENDIX.md` | **grace-mar only:** repo paths, script commands, internal doc links |
 | `.cursor/skills/<skill-name>/SKILL.md` | **Generated** — do not hand-edit; run sync (see below) |
 
+**Canonical source:** For every manifest-listed skill, **`skills-portable/<skill-name>/SKILL.md`** is the **only** hand-edited methodology body. Edits under `.cursor/skills/*/SKILL.md` **without** syncing are **drift** — the next `sync_portable_skills.py` overwrites them. After changing a portable core or appendix, always run **`python3 scripts/sync_portable_skills.py`** (and `--verify` before commit when unsure).
+
 **In-repo examples:** `politics-massie` (content skill) · `jurisdiction-campaign-history` (work-politics framing) · `portable-skills-sync` (pipeline skill — use when changing this layout).
 
 **Regenerate Cursor skill files**

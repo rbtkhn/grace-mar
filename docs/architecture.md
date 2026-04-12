@@ -6,6 +6,18 @@ Terminology primer: see [glossary.md](glossary.md) for canonical definitions of 
 
 ---
 
+## Guarantees at a glance
+
+Skimmable summary. **Authoritative rules:** [AGENTS.md](../AGENTS.md), [instance doctrine](../users/grace-mar/instance-doctrine.md). **Tooling nuance (reliable vs adversarial):** [trust-layers.md](trust-layers.md).
+
+| By design we aim for… | We do **not** claim… |
+|------------------------|----------------------|
+| **Gated Record** — stage → companion approval → merge script; **git** as audit trail. | That **operator tools** (browser automation, MCP, pasted URLs) **cryptographically prove** what ran on an untrusted host. |
+| **Voice** speaks from documented Record; abstention or lookup outside boundary ([knowledge-boundary-framework.md](knowledge-boundary-framework.md)). | That **session-only** or vendor harness context equals **canonical SELF** without the pipeline. |
+| **No** sneaking undocumentable LLM facts into the profile ([AGENTS.md](../AGENTS.md)). | **Flawless** uptime of every integration — **reliability** failures are not the same as **security** guarantees. |
+
+---
+
 ## Core Principle
 
 The cognitive fork records **identity** (**SELF** + **SELF-KNOWLEDGE**), **reference** (**SELF-LIBRARY**, including **CIV-MEM**), **capability** (**SKILLS**), and **evidence** — as structured, evidence-grounded data. Identity and library are **different surfaces**: domain corpora belong in SELF-LIBRARY, not in IX-A. See [boundary-self-knowledge-self-library.md](boundary-self-knowledge-self-library.md).

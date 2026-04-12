@@ -9,6 +9,7 @@ This repository is primarily a **live cognitive-fork instance** (grace-mar) with
 1. Read [AGENTS.md](AGENTS.md) — knowledge boundary, sovereign merge rule, file-update protocol, and what assistants may not do.
 2. For system design: [docs/architecture.md](docs/architecture.md), [docs/identity-fork-protocol.md](docs/identity-fork-protocol.md).
 3. Canonical on-disk paths: [docs/canonical-paths.md](docs/canonical-paths.md) (lowercase `users/<id>/self.md`, etc.).
+4. **Public-facing tone** (README, outbound copy, example tokens): [docs/contributing-public-copy.md](docs/contributing-public-copy.md).
 
 ## Record and pipeline (critical)
 

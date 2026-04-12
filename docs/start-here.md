@@ -4,6 +4,19 @@ Plain-language entry point. Precise terms and invariants live in [glossary.md](g
 
 **Runtime vs durable Record** (what is canonical vs operator scratch): [runtime-vs-record.md](runtime-vs-record.md) · operator map: [operator-mental-model.md](operator-mental-model.md).
 
+**Guarantees snapshot** (what the system aims to promise vs not): [architecture.md — Guarantees at a glance](architecture.md#guarantees-at-a-glance) · tooling nuance: [trust-layers.md](trust-layers.md).
+
+---
+
+## Procedure vs doctrine (two spines)
+
+| Spine | Role | Where to start |
+|-------|------|----------------|
+| **Procedure / current state** | What to run **this session**; orientation and weather — **not** a substitute for policy. | [bootstrap/grace-mar-bootstrap.md](../bootstrap/grace-mar-bootstrap.md), `harness_warmup`, `.cursor/skills/` |
+| **Doctrine / architecture** | Rules, guarantees, Record governance. | [AGENTS.md](../AGENTS.md), [architecture.md](architecture.md), [instance doctrine](../users/grace-mar/instance-doctrine.md) |
+
+Bootstrap + warmup **stack** with doctrine; they do not replace it.
+
 ---
 
 ## In one sentence
@@ -83,9 +96,12 @@ Think of an **inbox of proposed updates**: conversations and tooling can suggest
 |------|------------|
 | Full project picture, status, setup pointers | [README.md](../README.md) |
 | Structure and modules | [architecture.md](architecture.md) |
+| Guarantees vs non-guarantees (skimmable) | [architecture.md — Guarantees at a glance](architecture.md#guarantees-at-a-glance) |
+| Tool reliability vs adversarial surfaces | [trust-layers.md](trust-layers.md) |
 | Exact definitions of terms | [glossary.md](glossary.md) |
 | Rules for AI assistants working in the repo | [AGENTS.md](../AGENTS.md) |
 | Governance and ethics framing | [grace-mar-core.md](grace-mar-core.md) |
+| Public copy / example tokens (contributors) | [contributing-public-copy.md](contributing-public-copy.md) |
 
 ---
 

@@ -26,6 +26,24 @@ skills-portable/<skill-name>/
 - Put **grace-mar paths** only in `.cursor/skills/.../CURSOR_APPENDIX.md`, not in the portable core.
 - **Forbidden substrings** in core (enforced by `sync_portable_skills.py --verify` when configured): instance user dirs, merge scripts — keep those in the appendix.
 
+## Optional: Agent behavior norms (social contract)
+
+Agent-facing skills may include a short subsection:
+
+**`## Agent behavior norms`** (or `## Collaboration norms`)
+
+Suggested bullets (adapt per skill):
+
+- **Human authority** — Assist; do not treat automation as overriding user or companion intent on gated surfaces.
+- **Brevity** — Default to concise outputs unless the operator asks for depth.
+- **No silent overwrite** — Do not replace user- or companion-owned text without explicit consent.
+- **Abstention** — When evidence is missing or upstream docs already state a fact, say so; avoid false gaps.
+- **Leakage** — Do not inject private instance or Record details into outbound copy unless requested.
+
+Norms belong in the **portable core** when they are **host-agnostic**. Instance merge policy and paths stay in **`CURSOR_APPENDIX.md`**.
+
+Authoring guide: [docs/skills/skill-authoring-norms.md](../docs/skills/skill-authoring-norms.md).
+
 ## Generated `.cursor/skills/.../SKILL.md`
 
 - Appends appendix under heading `## Cursor / grace-mar instance`.

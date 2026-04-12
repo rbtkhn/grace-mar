@@ -35,6 +35,8 @@ The **knowledge boundary** is the limit of what the Voice may treat as known whe
 
 The boundary is **constitutional**: it preserves the fork as the companion’s documented self, not a generic oracle. "Voice as mirror, not oracle" (CONCEPTUAL-FRAMEWORK) depends on it.
 
+**Tools and external pages (orthogonal layer):** The boundary above is about **Record knowledge**. When operators or harnesses use **browsers, MCP, or other external surfaces**, also distinguish **reliability** (did the call succeed?) from **adversarial or untrusted input** (could the surface lie or spoof?). That split is **operational nuance**, not a replacement for this framework — see [trust-layers.md](trust-layers.md).
+
 ---
 
 ## 3. Where the Boundary Lives (Sources)
