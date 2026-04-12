@@ -82,6 +82,12 @@ _(Append below this line during the day.)_
 
 `batch-analysis | 2026-04-12 | Parsi + Macgregor (Lebanon / Hormuz cluster) | **Same week, two “who still believes Washington?” meters—not the same geography.** Parsi: **Middle East analyst** overlay—**room-level** credibility test (rein in Israel on Lebanon) vs nuclear headline / Islamabad thread. Macgregor: **extra-room** lane—importer + European diplomatic + Hormuz-adjacent **tonnage** as **third-party** distance from Israeli–American kinetic framing; **Thesis B** (mediation vs restart). **Shared theme only:** non-U.S. audiences pricing **coherence of alliance behavior**—**not** one mechanism (**Lebanon discipline** ≠ **importer/embassy repositioning**). **Tension:** signability-in-the-room analysis vs macro defection narrative—verify each chain before folding one Judgment. | paired-with: Parsi ingest line + Macgregor ingest line`
 
+`X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown`
+
+`X | Daniel Davis (@DanielLDavis1): Rebuts “last, best chance” as diplomacy — cites Vietnam/Korea timelines; if offer is final it is ultimatum/surrender not negotiation; Iran unlikely to accept → resumption clock; first-six-weeks military constraints unchanged; Hormuz, oil, Gulf fertilizer dearth → macro pressure on U.S. (“not a good day for America”) | https://x.com/DanielLDavis1 | verify:screenshot-ingest-status-id-unknown`
+
+`batch-analysis | 2026-04-12 | Macgregor + Pape + Davis | **Tension-first:** **Pape** + **Davis** = **U.S. offer structure** (commitment ratchet / “Escalation Trap”; final-offer-as-ultimatum, resumption clock, Hormuz/oil/fertilizer → U.S.-side macro pain). **Macgregor** = **system + third-party** (importer/diplomatic distance; world-economy risk if restart spoils “Istanbul moment”). **Do not fuse** those levels in one causal paragraph. *Optional weak bridge:* all three treat headline “bargain” as **asymmetric coercion**—still verify each ingest. Fold one Judgment only after status URLs on all chains. | paired-with: Macgregor ingest line (earlier in accumulator) + Pape ingest line + Davis ingest line (two lines above)`
+
 ---
 
 ### Prep — 2026-04-12 strategy-notebook (scratch)
@@ -153,9 +159,3 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 - **PID/PMO:** Sharif meeting with Iranian delegation; identifies Iranian leadership (C — formal witness chain partial).
 - **Carnegie PN:** “Many issues unresolved”; “basis of negotiations” (C-adjacent).
 - **Carnegie Emissary:** Trump/strait control vs Iran retention (B leverage frame).
-
-X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown
-
-X | Daniel Davis (@DanielLDavis1): Rebuts “last, best chance” as diplomacy — cites Vietnam/Korea timelines; if offer is final it is ultimatum/surrender not negotiation; Iran unlikely to accept → resumption clock; first-six-weeks military constraints unchanged; Hormuz, oil, Gulf fertilizer dearth → macro pressure on U.S. (“not a good day for America”) | https://x.com/DanielLDavis1 | verify:screenshot-ingest-status-id-unknown
-
-`batch-analysis | 2026-04-12 | Macgregor + Pape + Davis | **Tension-first:** **Pape** + **Davis** = **U.S. offer structure** (commitment ratchet / “Escalation Trap”; final-offer-as-ultimatum, resumption clock, Hormuz/oil/fertilizer → U.S.-side macro pain). **Macgregor** = **system + third-party** (importer/diplomatic distance; world-economy risk if restart spoils “Istanbul moment”). **Do not fuse** those levels in one causal paragraph. *Optional weak bridge:* all three treat headline “bargain” as **asymmetric coercion**—still verify each ingest. Fold one Judgment only after status URLs on all chains. | paired-with: Macgregor ingest line (accumulator above) + Pape line + Davis line`
