@@ -10,6 +10,27 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
+#### Optional two-tier gist (cold claim // operator hook)
+
+**Problem:** A single **gist** that mixes **what the source did** with **why it matters for this notebook day** can smuggle **Judgment** into the inbox and blur the boundary with `days.md`.
+
+**Convention (optional, still one line):** Split the middle field with **` // `** (space-double-slash-space):
+
+1. **Cold** — minimal, attribution-safe paraphrase: who said what, what artifact (post, wire, video), **without** folding in notebook-specific framing.
+2. **Hook** — one short clause: **why this line exists today** (tie to brief §, Judgment fork, batch-analysis theme, or “filing for verify”).
+
+**Pattern:**  
+`source-token | cold: <clause> // hook: <clause> | URL | verify:…`
+
+**When to use:** Busy news days, nested QTs, or any ingest where you want **grep** to separate **source fact** from **operator placement**. When the ingest is trivial or cold/hook would duplicate each other, keep a **single** gist (original shape).
+
+**Examples (illustrative):**
+
+- `X | cold: @barnes_law quote-tweet Disclose.tv summarizing executive TS post on Hormuz blockade + toll interdiction // hook: third domestic pole vs op-ed “card” vs spiral satire; pin status URL | https://x.com/barnes_law | verify:…`
+- `wire | cold: Reuters Islamabad talks pause, disagreements remain // hook: aligns §1e window; stack with Tasnim fa | https://… | verify:…`
+
+**Assistant default:** Offer **cold // hook** when the operator’s capture is **Judgment-sensitive** or **multi-chain**; otherwise **single gist** is fine.
+
 ### Multi-item ingest (optional common analysis)
 
 When the operator captures **two or more** excerpts in one pass, **items stay separate** — still **one canonical line per excerpt** (separate grep targets; separate Links when the inbox folds into `days.md`).
