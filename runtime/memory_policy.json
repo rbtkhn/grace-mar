@@ -1,7 +1,7 @@
 {
   "version": 1,
   "default_retrieval_scope": "lane",
-  "description": "Runtime memory retrieval defaults to the active work lane unless the operator widens scope (e.g. memory-brief --all-lanes).",
+  "description": "Runtime memory retrieval defaults to the active work lane unless the operator widens scope (e.g. memory-brief --cross-lane).",
   "rules": [
     "Runtime observations are not Record truth.",
     "Cross-lane retrieval must be explicit in orchestration tools.",

@@ -1,5 +1,7 @@
 # Runtime memory retrieval
 
+**Normative spec (SSOT)** for the runtime-memory workflow: progressive disclosure order, governance rules, default lane scope ([`runtime/memory_policy.json`](../../runtime/memory_policy.json)), and command surface. Other files under `docs/runtime/` and [`runtime/observations/README.md`](../../runtime/observations/README.md) **supplement** this document (boundaries, safety, or command-specific detail)—avoid restating full doctrine there; link here instead.
+
 Grace-Mar runtime observations support a **progressive disclosure** workflow over `runtime/observations/index.jsonl`:
 
 1. **`lane-search`** — compact index only (IDs, timestamps, lane, `source_kind`, title, one-line summary; optional score in JSON).
@@ -23,6 +25,18 @@ Grace-Mar runtime observations support a **progressive disclosure** workflow ove
 - Compact retrieval comes before full-detail expansion.
 
 This is **operator / WORK scaffolding**, not Record truth. See [runtime/observations/README.md](../../runtime/observations/README.md) and [runtime-vs-record.md](../runtime-vs-record.md).
+
+## Gate candidate and schema identifiers
+
+Staged runtime proposals use **`gate_candidate_id`** values matching `^CANDIDATE-[0-9]{4}$` and YAML **`status: pending`**, per [`schema-registry/recursion-gate-candidate.schema.json`](../../schema-registry/recursion-gate-candidate.schema.json). Sequential four-digit IDs align with the existing gate merge pipeline and human scanning of `recursion-gate.md`.
+
+**Alternatives considered:** Timestamp- or ULID-based IDs sort naturally in raw logs but require coordinated updates to the schema, staging emitters, and merge tooling. Adopt them only through an explicit change to the schema and related scripts—not by mixing formats in one gate file.
+
+**Display vs payload:** Older prose may say “PENDING-REVIEW”; the structured payload uses `status: pending`. Treat the YAML in the gate block as authoritative for automation.
+
+## Code layout and packaging
+
+Runtime retrieval and staging logic live as **importable modules** next to CLIs under [`scripts/runtime/`](../../scripts/runtime/) (for example `observation_store.py`, `ledger_paths.py`). A dedicated installable package (for example `src/grace_mar/runtime/`) is **deferred** until import churn, duplicated test harnesses, or install boundaries justify the migration; until then, `scripts/runtime/` is the subsystem boundary.
 
 ## Commands
 
@@ -70,8 +84,9 @@ python3 scripts/runtime/memory_brief.py --lane work-strategy --query "iran negot
 
 Details: [read-hints.md](read-hints.md).
 
-## See also
+## See also (supplements)
 
-- [lane-boundaries.md](lane-boundaries.md) — default lane scope for higher-level tools.
-- [storage-boundaries.md](storage-boundaries.md) — no ambient instruction files.
+- [lane-boundaries.md](lane-boundaries.md) — lane default for higher-level tools (points here for full rules).
+- [storage-boundaries.md](storage-boundaries.md) — ledger root and ambient-write safety.
 - [observation-expansion.md](observation-expansion.md) — `expand_observations` + `build_context_from_observations`.
+- [provenance-staging.md](provenance-staging.md) — `stage_candidate_from_observations.py` and gate blocks.

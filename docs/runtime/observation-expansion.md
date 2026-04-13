@@ -1,5 +1,7 @@
 # Runtime observation expansion and prepared context
 
+**Supplements** [memory-retrieval.md](memory-retrieval.md) (normative stack and rules). This file covers **expansion and prepared-context commands** only.
+
 Grace-Mar follows a **progressive disclosure** workflow aligned with compact index → timeline → **full expansion** → optional **prepared-context bundle**:
 
 1. `lane_search` / `lane_timeline` — filter before heavy reads ([memory-retrieval.md](memory-retrieval.md)).

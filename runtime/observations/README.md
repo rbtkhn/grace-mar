@@ -2,6 +2,8 @@
 
 This directory stores **non-canonical** runtime observations for Grace-Mar work lanes.
 
+**Normative workflow and rules:** [docs/runtime/memory-retrieval.md](../../docs/runtime/memory-retrieval.md) (progressive disclosure, governance, commands). This README is a **quick orientation** for the ledger directory only.
+
 ## Purpose
 
 - Capture compact, auditable notes from active work (manual, notebook, compression, evidence pointers, etc.).
@@ -25,12 +27,8 @@ This directory stores **non-canonical** runtime observations for Grace-Mar work 
 - Log entries with: `python scripts/runtime/log_observation.py --help`
 - Tests may set **`GRACE_MAR_RUNTIME_LEDGER_ROOT`** so the ledger path is isolated; schema still loads from the repo.
 
-## Design rules
+## Design rules (summary)
 
-1. **Runtime only** — Draft memory for operators and agents, not governed truth.
-2. **No automatic promotion** — Nothing here merges into the Record without the normal gate pipeline.
-3. **Lane-scoped by default** — Each observation has one `lane` string; cross-lane use is explicit in higher-level tools.
-4. **No ambient writes** — The logger appends **only** to `runtime/observations/index.jsonl` under the repo.
-5. **Compact, not exhaustive** — Deliberate notes, not “capture everything the model does.”
+- **Non-canonical** — Not SELF, SELF-LIBRARY, SKILLS, or EVIDENCE; no auto-staging into `recursion-gate.md`; lane-scoped by default; logger writes only to this ledger (no ambient instruction files). **Compact, not exhaustive.**
 
-See [docs/runtime-vs-record.md](../../docs/runtime-vs-record.md) for the full runtime vs. Record map.
+Full doctrine, cross-lane flags, and commands: [docs/runtime/memory-retrieval.md](../../docs/runtime/memory-retrieval.md). Runtime vs Record map: [docs/runtime-vs-record.md](../../docs/runtime-vs-record.md).

@@ -2,13 +2,12 @@
 
 Grace-Mar’s analogue to “file-read decision” tools elsewhere: **surface relevant runtime observations** before you re-open a large file or notebook. This is a **hinting layer**, not a block — the operator or companion always chooses whether to read again.
 
-See [memory-retrieval.md](memory-retrieval.md) for the full retrieval stack.
+**Normative workflow, rules, and policy:** [memory-retrieval.md](memory-retrieval.md). This page covers **`read_hint.py`** and **`memory_brief.py`** only.
 
 ## Principles
 
 - **Suggest, do not deny** — Never block `read()`; print recommendations only.
-- **Compact first** — List observation IDs and titles; no full `notes` dumps in the default path.
-- **No mutation** — Does not write `recursion-gate.md`, SELF, SKILLS, or other Record surfaces.
+- **No Record mutation** — These tools do not write `recursion-gate.md`, SELF, SKILLS, or other Record surfaces (see normative doc for the full boundary).
 
 ## `read_hint.py`
 

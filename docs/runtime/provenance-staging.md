@@ -41,6 +41,8 @@ The script validates a structured payload against [`schema-registry/recursion-ga
 
 Staging inserts a standard gate block: **`### CANDIDATE-NNNN`** with fenced **`yaml`**, `status: pending`, and **`proposal_class: RUNTIME_OBSERVATION_PROPOSAL`**. This matches the merge pipeline’s parser; it is **not** a separate `cand_*` prose format.
 
+**Why `CANDIDATE-NNNN` (not timestamped IDs in the schema):** rationale and alternatives are documented in [memory-retrieval.md](memory-retrieval.md) (gate candidate and schema identifiers).
+
 ## Merge behavior
 
 Candidates with **`proposal_class: RUNTIME_OBSERVATION_PROPOSAL`** are **not** auto-merged into SELF, EVIDENCE, or `bot/prompt.py`. When approved, `process_approved_candidates.py` moves the block to **Processed** and prints a reminder to **apply the change manually** to the intended surface (SKILLS, SELF-LIBRARY, etc.). See [`process_approved_candidates.py`](../../scripts/process_approved_candidates.py) (same pattern as `META_INFRA` for non-Record infra proposals).
