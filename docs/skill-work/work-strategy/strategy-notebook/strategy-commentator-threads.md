@@ -20,16 +20,16 @@
 | `extension-game` | Daniel Davis (Lt Col; `@DanielLDavis1`) | Ceasefire as **extension game**; ultimatum vs negotiation; macro pain to U.S. | `IRAN`, `JDVance`, or Davis in cold | × `structural-pause` (Mearsheimer), × `game-theory-escalation`, × `islamabad-process` |
 | `structural-pause` | John Mearsheimer; Glenn Diesen (session pair) | **Offensive realism**: security dilemma, Israel structural, great-power geometry | `MEARSHEIMER` or session cite in cold | × `extension-game` (Davis material vs structure), × `diplomatic-institutional` (Mercouris), × `glenn-diesen` (solo Diesen ingests) |
 | `diplomatic-institutional` | Alexander Mercouris | **Institutional / narrative** diplomatic read (Hormuz, Lebanon, Islamabad) | `Mercouris` or mind cite in cold | × `structural-pause`, × `islamabad-process`, × Tri-Frame [minds/](../minds/README.md) |
-| `larry-johnson` | Larry Johnson | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) | `Johnson` or `LarryJohnson` in cold | × `danny-haiphong`, × `washington-channel` (Ritter), × `extension-game` (Davis); see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
+| `larry-johnson` | Larry Johnson | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) | `Johnson` or `LarryJohnson` in cold | × `washington-channel` (Ritter), × `extension-game` (Davis); see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
 | `charles-freeman` | Charles (“Chas”) Freeman | Retired **career diplomat**: **inconclusive** talks, **alliance** and **material** framing (Islamabad as diplomacy-while-war); **separate plane** from papal **moral** register | `Freeman` or `ChasFreeman` in cold | × `lebanon-scope` (Parsi), × `diplomatic-institutional` (Mercouris), × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge) |
-| `danny-haiphong` | Danny Haiphong | **Host**: long-form **left** Iran / Hormuz **roundtable** lane (pairs Johnson / Ritter in-repo digests) | `Haiphong` in cold | × `larry-johnson`, × `washington-channel`, × `third-party-system` |
 | `alastair-crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `extension-game`, × `islamabad-process`, × `lebanon-scope` |
 | `glenn-diesen` | Glenn Diesen | **Eurasia / multipolar** discourse as **standalone** ingest (when not folded only into `structural-pause` session label) | `Diesen` in cold | × `structural-pause`, × `third-party-system`, × `game-theory-escalation` |
-| `intervention-media-hawk` | e.g. Jack Keane–class hits | **Pro-intervention** TV lane (**hammer / don’t trust** pause) — Sky/Fox-class **packages** | `Keane` or `hawk-media` in cold | × `extension-game`, × `washington-channel`, × `structural-pause` |
-| `skyvirginson-lay-catholic` | @SkyVirginSon (RosarySon) | **Lay Catholic** **theological–political** counter-narrative on **Trump–Leo**; pew **CST** lineage | `SkyVirginSon`, `ROME` in cold | × `kelly-senate-catholic`, × `trump-religion-papacy-arc.md` |
-| `kelly-senate-catholic` | **Kelly** / Senate–Catholic screenshot blocks | **Elected** official **casualties + Church authority** frame (distinct from lay RosarySon lane) | `Kelly` + Catholic context | × `skyvirginson-lay-catholic`, × `ROME` |
-| `narrative-faith-meme` | e.g. @Milad33B | **Viral** faith-meme **escalation** (oath / Bible / **Satan** register) — **audience** meter; not Hormuz **Links** tier | `narrative-escalation`, `Milad` in cold | × `trump-religion-papacy-arc.md`; × Ritter **blasphemy** invective (**different** genre) |
-| `delegation-babysitter` | Steve **Witkoff**; Jared **Kushner** (as *narrated* by analysts) | **Process** story: minders / **same principals** as prior collapsed talks — **verify** vs **official** roster | `Witkoff`, `Kushner` in cold | × `islamabad-process`, × `washington-channel`, × `JD Vance` readouts |
+
+---
+
+## Deprecated thread ids (operator removal)
+
+Removed from the table **2026-04-13** — **git history** still has prior rows; do **not** reuse these ids for new anchors without clearing the deprecation note: `danny-haiphong`, `intervention-media-hawk`, `skyvirginson-lay-catholic`, `kelly-senate-catholic`, `narrative-faith-meme`, `delegation-babysitter`. **Coverage:** **Haiphong**-hosted digests stay linked from **`larry-johnson`** / digest file; **Keane**-class TV, **Kushner**/**Witkoff** narrators, **SkyVirginSon** / **Kelly** / **Milad** lanes → pair under existing rows (**`extension-game`**, **`washington-channel`**, **`islamabad-process`**, **`ROME`** / [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md), **`narrative-escalation`** grep) instead of dedicated ids.
 
 ---
 
@@ -37,7 +37,7 @@
 
 - **`@Pontifex` / Holy See** — Institutional **Rome** line: use **`ROME`**, [ROME-PASS.md](../work-strategy-rome/ROME-PASS.md), [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md); not a freelance **analyst** row.
 - **Joe Kent** — Resignation-letter **war rationale**; pair with **`extension-game`** / **`washington-channel`** when citing, not a duplicate of IAEA/DNI.
-- **Milad33B** — Also tag **`narrative-faith-meme`** when the ingest is the **meme** lane; policy threads stay separate.
+- **Milad33B** — **Meme** / **faith-escalation** lane: use **`narrative-escalation`** + `Milad` in cold and [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md); policy Hormuz threads stay separate.
 
 ---
 
