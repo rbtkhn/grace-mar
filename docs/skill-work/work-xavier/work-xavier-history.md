@@ -16,6 +16,7 @@
 
 - **Upload prep:** Added [UPLOAD-PREP.md](UPLOAD-PREP.md) — scope table (minimal skill folder vs full advisor tree), leakage pre-flight, `skill-xavier` manifest, optional mirror note; [INDEX.md](INDEX.md) row.
 - **Cici GitHub ingest:** [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) + PNGs — public README (OB1 + governed state), repo root listing, `CLAUDE.md` persona capture; [Cici](https://github.com/Xavier-x01/Cici).
+- **xavier-journal:** Scaffolded **Day 3–5** on-disk — [2026-04-11.md](xavier-journal/2026-04-11.md), [2026-04-12.md](xavier-journal/2026-04-12.md), [2026-04-13.md](xavier-journal/2026-04-13.md) (`xavier_journal_ob1_digest.py` L1 + narrative stub sections for fill).
 
 ### 2026-04-12
 
