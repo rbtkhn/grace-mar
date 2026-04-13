@@ -2,6 +2,13 @@
 
 **Purpose:** Stable **thread ids** for recurring **analyst / commentator** ingests so `batch-analysis` lines can name **divergence and correlation** without re-deriving the roster each session. **WORK only** — not Record.
 
+**Topic threads vs analyst threads (mental model):** It helps to separate two layers — they are not mutually exclusive.
+
+- **Topic threads** — *what* the ingest is about: recurring **substantive** lanes (e.g. **Islamabad** negotiation arc, **Hormuz** / blockade / sea control, **Lebanon vs nuclear** scope, **U.S. domestic** liability on executive war policy, **escalation / game-theory** commitment, **third-country** / importer distance from the kinetic frame, **Rome** / legitimacy when the Holy See or faith-politics is the axis). These often show up as **grep tags** (`IRAN`, `JDVance`, `ROME`, `narrative-escalation`, …) or as **Related voices** / linked docs ([rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md), [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md)).
+- **Analyst threads** — *who* is speaking: a stable **voice** or **show** anchor (the **Anchor** column below). The table is **analyst-first** so pairings stay grep-friendly.
+
+Many **`thread_id`** rows are **hybrid**: the id is tied to a **named analyst** but the **Role** line is really a **topic signature** (e.g. `islamabad-process`, `lebanon-scope`, `hormuz-domestic`). **`batch-analysis`** is where **topic** tension (same crisis, different mechanisms) meets **analyst** tension (same week, different predictions or moral registers).
+
 **How to use:** When appending a paste-ready line in [daily-strategy-inbox.md](daily-strategy-inbox.md), add **`thread:<id>`** to the **`verify:`** tail or prefix the cold clause with the **grep tag** below. Pair ingests in **`batch-analysis | YYYY-MM-DD | …`** using **Typical pairings**.
 
 **Maintenance:** Add rows when a new anchor appears **repeatedly** in `days.md` or inbox; **deprecate** with a line in **Notes** — do not delete history without operator say-so.
