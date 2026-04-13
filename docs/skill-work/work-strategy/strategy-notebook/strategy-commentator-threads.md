@@ -34,6 +34,24 @@ Many **`thread_id`** rows are **hybrid**: the id is tied to a **named analyst** 
 
 ---
 
+## Analyst threads and predictive accuracy
+
+**Intent:** **Analyst** `thread_id`s are the right **bucket** for tracking **who said what** against **what actually happened** — same voice, recurring crisis, multiple dates. **Topic** threads stay separate: they organize *substance*; **accuracy** tracking needs a **named** lane so you do not mix voices when scoring.
+
+**What to log (minimum viable):** Only claims that are **checkable** against **primaries or wires** (not vibes). For each candidate “prediction” or conditional forecast:
+
+1. **Quote or tight paraphrase** + **source URL** (transcript timestamp, post, article).
+2. **Date** the analyst said it (ingest date or stated event horizon).
+3. **`thread:<id>`** matching the **Anchor** row (or closest hybrid row).
+4. **Falsify** — one sentence on what would make the call **wrong** (or what outcome resolves a conditional).
+5. Later: **`resolved:`** + cite (wire / official readout) or **`deferred:`** + reason (still ambiguous, horizon not reached).
+
+**Where to put it:** Same session as the ingest — optional **`batch-analysis`** line comparing two analysts’ **testable** forks; or a bullet under **`### Open`** on the dated block in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace month); or a running list in a scratch doc the operator names (no default new file). **Optional resolution pass:** [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md) for tiered verdicts when wires exist.
+
+**Guardrails:** **WORK only** — not Record, not **Voice** truth. Do **not** turn into **accuracy theater**: unfalsifiable rhetoric (“they are serious”) is **not** a prediction; **base rate** and **topic difficulty** matter; **conditional** forecasts (“if X then Y”) need **both** legs scored. Prefer **sparse** high-quality rows over scorecards full of mush.
+
+---
+
 ## Deprecated thread ids (operator removal)
 
 Removed from the table **2026-04-13** — **git history** still has prior rows; do **not** reuse these ids for new anchors without clearing the deprecation note: `danny-haiphong`, `intervention-media-hawk`, `skyvirginson-lay-catholic`, `kelly-senate-catholic`, `narrative-faith-meme`, `delegation-babysitter`. **Coverage:** **Haiphong**-hosted digests stay linked from **`larry-johnson`** / digest file; **Keane**-class TV, **Kushner**/**Witkoff** narrators, **SkyVirginSon** / **Kelly** / **Milad** lanes → pair under existing rows (**`extension-game`**, **`washington-channel`**, **`islamabad-process`**, **`ROME`** / [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md), **`narrative-escalation`** grep) instead of dedicated ids.
@@ -53,4 +71,5 @@ Removed from the table **2026-04-13** — **git history** still has prior rows; 
 - Inbox format: [daily-strategy-inbox.md](daily-strategy-inbox.md)  
 - Rome–Persia legitimacy: [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md)  
 - Tri-Frame minds: [minds/README.md](../minds/README.md)  
-- Haiphong / Ritter / Johnson digest: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)
+- Haiphong / Ritter / Johnson digest: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)  
+- Fact-check skill (resolution / tiered verdicts): [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md)
