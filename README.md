@@ -34,6 +34,7 @@ Start here:
 - **Runtime vs Record** → [docs/runtime-vs-record.md](docs/runtime-vs-record.md)
 - **Start-here guide** → [docs/start-here.md](docs/start-here.md)
 - **OB1-style translation** → [docs/start-here-ob1-users.md](docs/start-here-ob1-users.md)
+- Want to see the system in motion? Read [docs/orchestration/memory-brief-to-gate-demo.md](docs/orchestration/memory-brief-to-gate-demo.md).
 
 ## Concept
 

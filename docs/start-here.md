@@ -29,7 +29,7 @@ If you already use **Open Brain / OB1**-flavored tooling (one dashboard, recipes
 
 ### Coming from Claude Code?
 
-Start with the README section **Claude Code surfaces in Grace-Mar**, then read [runtime-vs-record.md](runtime-vs-record.md).
+Start with the README section **Claude Code surfaces in Grace-Mar**, then read [runtime-vs-record.md](runtime-vs-record.md). For one end-to-end chain (runtime retrieval → prepared context → optional gate staging), see **[Memory Brief → Gate Candidate Demo](orchestration/memory-brief-to-gate-demo.md)**.
 
 ### See it as a dashboard
 
