@@ -1,11 +1,11 @@
 # Strategy commentator threads (index)
 
-**Purpose:** Stable **thread ids** for recurring **analyst / commentator** ingests so `batch-analysis` lines can name **divergence and correlation** without re-deriving the roster each session. **WORK only** — not Record.
+**Purpose:** Stable **thread ids** for recurring **analyst / commentator** ingests so `batch-analysis` lines can name **divergence and correlation** without re-deriving the roster each session. The same **`thread:<id>`** on **different dates** is the **join key** for **accuracy** checks and **opinion drift** (see **Analyst threads: predictive accuracy and opinion drift**). **WORK only** — not Record.
 
 **Topic threads vs analyst threads (mental model):** It helps to separate two layers — they are not mutually exclusive.
 
 - **Topic threads** — *what* the ingest is about: recurring **substantive** lanes (e.g. **Islamabad** negotiation arc, **Hormuz** / blockade / sea control, **Lebanon vs nuclear** scope, **U.S. domestic** liability on executive war policy, **escalation / game-theory** commitment, **third-country** / importer distance from the kinetic frame, **Rome** / legitimacy when the Holy See or faith-politics is the axis). These often show up as **grep tags** (`IRAN`, `JDVance`, `ROME`, `narrative-escalation`, …) or as **Related voices** / linked docs ([rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md), [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md)).
-- **Analyst threads** — *who* is speaking: a stable **voice** or **show** anchor (the **Anchor** column below). The table is **analyst-first** so pairings stay grep-friendly.
+- **Analyst threads** — *who* is speaking: a stable **voice** or **show** anchor (the **Anchor** column below). The table is **analyst-first** so pairings stay grep-friendly. Reusing **`thread:<id>`** across weeks lets you **diff** the same voice over time (drift / pivot), not only compare analysts in one session.
 
 Many **`thread_id`** rows are **hybrid**: the id is tied to a **named analyst** but the **Role** line is really a **topic signature** (e.g. `islamabad-process`, `lebanon-scope`, `hormuz-domestic`). **`batch-analysis`** is where **topic** tension (same crisis, different mechanisms) meets **analyst** tension (same week, different predictions or moral registers).
 
@@ -34,9 +34,9 @@ Many **`thread_id`** rows are **hybrid**: the id is tied to a **named analyst** 
 
 ---
 
-## Analyst threads and predictive accuracy
+## Analyst threads: predictive accuracy and opinion drift
 
-**Intent:** **Analyst** `thread_id`s are the right **bucket** for tracking **who said what** against **what actually happened** — same voice, recurring crisis, multiple dates. **Topic** threads stay separate: they organize *substance*; **accuracy** tracking needs a **named** lane so you do not mix voices when scoring.
+**Intent:** **Analyst** `thread_id`s are the right **bucket** for (1) **checkable** calls vs outcomes and (2) **same voice, different week** — how emphasis, mechanism, or verdict **moves** as facts and audiences shift. **Topic** threads organize *substance*; **analyst** threads keep **who** stable so you can grep **time series** without mixing voices.
 
 **What to log (minimum viable):** Only claims that are **checkable** against **primaries or wires** (not vibes). For each candidate “prediction” or conditional forecast:
 
@@ -49,6 +49,21 @@ Many **`thread_id`** rows are **hybrid**: the id is tied to a **named analyst** 
 **Where to put it:** Same session as the ingest — optional **`batch-analysis`** line comparing two analysts’ **testable** forks; or a bullet under **`### Open`** on the dated block in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace month); or a running list in a scratch doc the operator names (no default new file). **Optional resolution pass:** [.cursor/skills/fact-check/SKILL.md](../../../../.cursor/skills/fact-check/SKILL.md) for tiered verdicts when wires exist.
 
 **Guardrails:** **WORK only** — not Record, not **Voice** truth. Do **not** turn into **accuracy theater**: unfalsifiable rhetoric (“they are serious”) is **not** a prediction; **base rate** and **topic difficulty** matter; **conditional** forecasts (“if X then Y”) need **both** legs scored. Prefer **sparse** high-quality rows over scorecards full of mush.
+
+### Changing opinions over time (drift / pivot detection)
+
+**Why:** The same **`thread:<id>`** on ingests **weeks apart** is the **join key** for “has this analyst’s **story** changed?” — not only whether a single forecast hit.
+
+**Minimum contrast (when you notice a shift):**
+
+1. **Earlier** — date + source + one-line **thesis** (quote or tight paraphrase).
+2. **Later** — date + source + one-line **thesis**.
+3. **`thread:<id>`** (same anchor).
+4. **Delta** — label the move: **update** (new information integrated), **scope shift** (topic or audience changed), **emphasis** (same mechanism, different stress), **tension** (two claims need reconciliation — do not assume **contradiction** until you have both texts).
+
+**Where to log:** A single **`batch-analysis | YYYY-MM-DD | …`** line can carry **A vs B** for the same voice; or **`### Open`** on the **later** date (“follow-up: compare to 2026-04-01 ingest”); **git log** / **grep** on `thread:<id>` across [`daily-strategy-inbox.md`](daily-strategy-inbox.md) and [`days.md`](chapters/2026-04/days.md) history is the cheap detector.
+
+**Guardrails:** **New facts** often justify revised judgment — distinguish **flip** from **Bayesian update**. Do **not** use drift tracking as **gotcha** copy unless the operator wants outreach; default is **notebook calibration**, not dunking.
 
 ---
 
