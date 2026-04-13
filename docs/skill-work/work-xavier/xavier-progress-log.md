@@ -12,6 +12,7 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-13 | [evidence/cici-personalization-pdf-ingest-2026-04-13.md](evidence/cici-personalization-pdf-ingest-2026-04-13.md) | **Cici Claude Code session (PDF)** — personalization prompt run; answers on intentions / pushback / git-fork learning; stated artifact `docs/personal/intentions-and-preferences.md` + branch name (verify remote). PDF: [cici-claude-personalization-session-2026-04-13.pdf](evidence/cici-claude-personalization-session-2026-04-13.pdf). |
 | 2026-04-13 | [xavier-journal/2026-04-11.md](xavier-journal/2026-04-11.md), [2026-04-12.md](xavier-journal/2026-04-12.md), [2026-04-13.md](xavier-journal/2026-04-13.md) | **Journal Days 3–5** scaffold — GitHub L1 via `xavier_journal_ob1_digest.py` (04-11 has Phase 2 governed-formation commits; 04-12–13 no commits in window) + Focus…Advisor fill sections. |
 | 2026-04-13 | [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) | **Cici repo ingest** — public README (OB1 instance, governed state, layout), repo root screenshot, **`CLAUDE.md` persona** rules; PNGs: [cici-github-readme-2026-04-13.png](evidence/cici-github-readme-2026-04-13.png), [cici-github-repo-files-2026-04-13.png](evidence/cici-github-repo-files-2026-04-13.png), [cici-claude-md-persona-2026-04-13.png](evidence/cici-claude-md-persona-2026-04-13.png). |
 | 2026-04-11 | [work-xavier-history.md](work-xavier-history.md) § `### 2026-04-11` | **Cici Phase 1** on `main` — commit [`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661); governed-state scaffold + validation script green; [doctrine](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md) + [OB1 README pointer](../../../docs/integrations/ob1/README.md#related-cici-instance-external). |
@@ -32,6 +33,7 @@
 
 _Freeform. Append dated bullets._
 
+- **2026-04-13** — **Cici Claude Code session (PDF):** [cici-personalization-pdf-ingest-2026-04-13.md](evidence/cici-personalization-pdf-ingest-2026-04-13.md) — personalization prompt run; **Q1** bootstrap + daily capture; **Q2** flag disagreement briefly then follow lead; **Q3** protect **git fork** learning. *Verify on Cici remote:* `docs/personal/intentions-and-preferences.md`, branch `claude/personalize-cici-instance-YT0ER`, merge + `voice/` proposal + `CLAUDE.md` lines as stated in export.
 - **2026-04-13** — **Cici public GitHub ingest:** Screenshots + [cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) anchor README/governed-state framing and **CLAUDE.md** session style (audit → plan → repo changes → handoff; concise output). *Coaching:* grace-mar **operator-style** / **coffee** vs Cici **CLAUDE** persona — different menus, same leakage discipline ([LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md)).
 - **2026-04-11** — **Cici Phase 1:** Git-first governed-state foundation landed on `main` ([`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661)); local validation matches repo CI. *Coaching:* three-layer model (evidence → prepared context → governed state) + proposals — durable git truth, Supabase as operational bridge per [Cici doctrine](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md); parallel framing in [OB1 integration README](../../../docs/integrations/ob1/README.md#related-cici-instance-external).
 - **2026-04-10** — **Canonical OB1 repo:** Grace-mar tooling/docs use **[Cici](https://github.com/Xavier-x01/Cici)** (see [work-xavier-history.md](work-xavier-history.md)). *Coaching:* when discussing “her OB1 GitHub home,” say **Cici**; digest script tracks commits there.
@@ -82,6 +84,7 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-13 | Cici **Claude Code personalization PDF** ([cici-personalization-pdf-ingest-2026-04-13.md](evidence/cici-personalization-pdf-ingest-2026-04-13.md) + `.pdf`); progress log index + [work-xavier-history.md](work-xavier-history.md). |
 | 2026-04-13 | [Cici](https://github.com/Xavier-x01/Cici) repo ingest (README + root + CLAUDE persona PNGs + [cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md). |
 | 2026-04-13 | xavier-journal **Day 3–5** files ([2026-04-11.md](xavier-journal/2026-04-11.md) … [2026-04-13.md](xavier-journal/2026-04-13.md)); progress log index row. |
 | 2026-04-11 | Cici Phase 1 verified ([`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661)); progress log index + burst; [OB1 README](../../../docs/integrations/ob1/README.md#related-cici-instance-external) Cici subsection. |
