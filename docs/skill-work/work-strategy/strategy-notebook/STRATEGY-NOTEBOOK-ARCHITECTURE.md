@@ -6,6 +6,10 @@
 
 A **cumulative, dated record** of how the operator reads signals, weighs analogies, and steers frameworks (Islamabad, Rome, briefs, STRATEGY) — distinct from [work-strategy-history.md](../work-strategy-history.md) (lane events) and from [STRATEGY.md](../STRATEGY.md) (milestone ledger).
 
+### Symphony of Civilization (operator gloss)
+
+**Symphony of Civilization** is the notebook’s **polyphonic** image: **multiple civilizational and analyst registers** (voice planes in briefs, indexed commentators in [strategy-commentator-threads.md](strategy-commentator-threads.md)) sound **together** without **collapsing** into one melody. A daily **`## YYYY-MM-DD`** page is a **movement** on the **score**; **`batch-analysis`** names **convergence vs tension** between **parts**. **Analysts** supply **instrument lines**; the **operator** sets **balance and tempo** (fold, Thesis A/B, **`verify:`** discipline)—not the analysts.
+
 ### Primary output (work-strategy)
 
 The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **primary work output** of the work-strategy lane: **one dated page per calendar day** (one `## YYYY-MM-DD` block) consolidating that day’s best analysis, plus links. **Inputs** that feed it — daily briefs, transcript digests, sessions, weak-signal notes, framework drafts — are **not** substitutes for the notebook; they inform the daily page.

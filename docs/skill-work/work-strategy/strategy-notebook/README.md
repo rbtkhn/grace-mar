@@ -2,7 +2,7 @@
 
 **Discoverability:** The same tree is linked from **`users/grace-mar/SELF-LIBRARY/strategy-notebook`** (repo-relative symlink) for agents and tools that prioritize the companion tree. **LIB:** [LIB-0153](../../../../users/grace-mar/self-library.md#operator-analytical-books) in [`self-library.md`](../../../../users/grace-mar/self-library.md) (Operator analytical books).
 
-**Primary work output** of [work-strategy](../README.md): a **daily journal** for cross-territory judgment (`chapters/YYYY-MM/days.md` + `meta.md`) — parallel in spirit to [Predictive History book architecture](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), lighter tooling.
+**Primary work output** of [work-strategy](../README.md): a **daily journal** for cross-territory judgment (`chapters/YYYY-MM/days.md` + `meta.md`) — parallel in spirit to [Predictive History book architecture](../../../research/external/work-jiang/BOOK-ARCHITECTURE.md), lighter tooling. **Operator gloss:** **Symphony of Civilization** — [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Symphony of Civilization (operator gloss)*.
 
 - **Operator preferences:** [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) — daily structure, inbox vs page, fold rhythm, lens offers, promotion — **narrows** practice vs architecture defaults
 - **Daily inbox (accumulator):** [daily-strategy-inbox.md](daily-strategy-inbox.md) — **SSOT** for ingest cadence + **paste-ready one-liner** format; fold/prune details → [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*

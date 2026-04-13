@@ -4,6 +4,8 @@
 
 **Terminology — `analyst_id`:** The **first column** in the table below (e.g. `islamabad-process`, `washington-channel`). **Inbox `verify:`** tails use **`thread:<analyst_id>`** — the token after **`thread:`** is the **`analyst_id`**. **Legacy synonym:** **`thread_id`** (same column / value).
 
+**Metaphor — Symphony of Civilization:** Indexed commentators are **parts** in a **polyphonic** score; each daily **`## YYYY-MM-DD`** block in the active month’s `chapters/YYYY-MM/days.md` is a **movement**; **`batch-analysis`** states **harmony vs tension** between parts. Full gloss: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § **Symphony of Civilization**.
+
 **Topic threads vs analyst threads (mental model):** It helps to separate two layers — they are not mutually exclusive.
 
 - **Topic threads** — *what* the ingest is about: recurring **substantive** lanes (e.g. **Islamabad** negotiation arc, **Hormuz** / blockade / sea control, **Lebanon vs nuclear** scope, **U.S. domestic** liability on executive war policy, **escalation / game-theory** commitment, **third-country** / importer distance from the kinetic frame, **Rome** / legitimacy when the Holy See or faith-politics is the axis). These often show up as **grep tags** (`IRAN`, `JDVance`, `ROME`, `narrative-escalation`, …) or as **Related voices** / linked docs ([rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md), [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md)).
