@@ -108,6 +108,8 @@ You do **not** get a special “joint thread.” You **populate** each analyst�
 2. **Line B** — **cold** names **Speaker B** + claim; **`thread:<id_B>`**; **same URL**.
 3. **`batch-analysis | YYYY-MM-DD | …`** — **immediately after** the **last** ingest in the set (membership anchor). Name **tension** or **convergence** between the two **threads**; optional **`membrane:pair`** on the first line only if you want grep to show “invites synthesis.”
 
+**Default workflow (operator canon): assistant draft + explicit approval before append** — Upload the transcript in-session; have the assistant **draft** the full bundle (**one line per named analyst** + shared URL + **`thread:<id>`**s + **`batch-analysis`**) **in chat** (or a scratch file). Treat the draft as **provisional** until you **approve**. **Append** to [daily-strategy-inbox.md](daily-strategy-inbox.md) **only after** approval, or say **`EXECUTE`** / **explicit append** so the edit is deliberate. The assistant must **not** merge unreviewed bundles into the inbox by default.
+
 **Host-only** segments (no separate analyst row) — tag **`thread:`** by **substance** (closest **hybrid** row, e.g. `islamabad-process` for process commentary) or **omit** `thread:` and keep **`verify:operator-transcript`** until a named analyst speaks.
 
 **Rare shortcut:** One line **cannot** carry two primary `thread:` ids cleanly — if the clip is **inseparably joint**, use **one** line with **`thread:`** = **primary** voice for **drift** tracking, **cold** names both, and optional **`crosses:<id>+<id>`** — or still prefer **two lines** + **`batch-analysis`**.
