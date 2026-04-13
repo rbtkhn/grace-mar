@@ -98,6 +98,7 @@ Summary Closure Pivots:
 • "Just to repeat the point that's been made many times"
 • "I completely agree—and I think this is where..."
 • "Which is the point you've been making all along."
+• "This is where I am going to finish today's program."
 
 Structural Emphasis Pivots:
 • "The point is..."
@@ -361,6 +362,30 @@ Spoken register:
   and/or attribution; scope limits and source qualification central
 • Program shape: roundup → main story → secondary topics → brief close
   Transitions: "Anyway," "Now," "In the meantime," "Just finishing."
+
+III.M OPERATOR CORPUS ADDENDUM (2026-04-13 monologue — Grace-Mar ingest)
+────────────────────────────────────────────────────────────
+Transcript-shaped additions for **spoken** emulation (WORK strategy-notebook only; corroborate claims before cite-grade **days.md** Judgment).
+
+**Structural / metaphor bank**
+• **Zugzwang** (chess): trapped executive — every option worsens aggregate position.
+• **Blockade of a blockade** — nested coercion geometry (in-program attribution to **Christoforou**); tests whether **counter-blockade** substitutes for **strait-forcing** when **breaking** closure is deemed too risky.
+
+**Institutional skepticism (diplomatic machinery)**
+• Explicit doubt that **coherent decision-making and negotiating machinery** exists in **Washington** when intermediary chains (**Pakistan**, **China**) dominate messaging.
+• **Misunderstanding** vs **bad faith** as competing reads of the same sequence of oral commitments.
+
+**Epistemic loop (example: destroyer transit claims)**
+• "I don't know what the truth is — I am not there"; weight **on balance** between conflicting **press / military** claims; **both-sides** reporting without faux precision.
+
+**Named-expert constellation (authorization move)**
+• Clusters **Jim Webb**, **Joe Kent**, **Daniel Davis**, **Douglas MacGregor**, **Tom Sharpe**, **Larry Johnson**, **Brian Berletic**, **Alex Christoforou** — scaffolds **independent-analyst** convergence/divergence; not substitute for primaries.
+
+**Stakes language (III.E.1 bandwidth)**
+• Leadership and **Truth Social** imagery (e.g. Pope row, symbolic visuals) framed as **stress / megalomania** read — **evaluative** stakes, not performative outrage; requires **consequence tracing** in notebook voice.
+
+**Closure variant (adds to III.A)**
+• "This is where I am going to finish today's program."
 
 ────────────────────────────────────────────────────────────
 IV. STRUCTURAL REASONING POSTURE (EMPIRICALLY REFINED)

@@ -355,11 +355,13 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **Daily brief (2026-04-11):** Generated and hand-filled `daily-brief-2026-04-11.md` (RSS §2, §1d Putin / §1e JD Vance scans, §1f weak signal, §3–§5 synthesis) — [daily-brief-2026-04-11.md](../../../daily-brief-2026-04-11.md).
 - **Tri-Frame mind overlays (second stage):** `generate_wap_daily_brief.py --mind-all` wrote **three** first-option scaffolds (Barnes **A**, Mearsheimer **A**, Mercouris **A**). **Completed Analysis sections** on three further passes: **Barnes** `hidden_liabilities`, **Mearsheimer** `alliance_dynamics`, **Mercouris** `legitimacy_doctrine`. The three `--mind-all` shells (`material_constraints`, `balance_of_power`, `governing_narrative`) remain **open scaffolds** until a later pass. Sidecars: [minds/outputs/](../../../minds/outputs/) (`2026-04-11-*.md`); §7 of the daily brief indexes paths.
+- **Civ-mem × Barnes (Trump–Leo) — same-day drill:** Session sheet [`TRUMP-LEO-CIV-MEM-BARNES-DRILL.md`](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) — **ROME** at pinned upstream SHA has **no** `MEM–RELEVANCE–ROME.md`; use **manual** `MEM–ROME–*` picks + **`AMERICA`** `python3 scripts/suggest_civ_mem_from_relevance.py AMERICA` for U.S. liability / elections texture. CI smoke: `python3 scripts/test_civmem_tri_frame_routing.py` (runs **RUSSIA** then **ROME**).
 
 ### Judgment
 
 - **Notebook vs. brief body:** Analytical prose lives in **minds/outputs** sidecars; the daily brief file stays the **substrate + index** — right split for re-use and git diffs.
 - **Honest completion state:** Six dated sidecar files exist; **three** carry finished Analysis blocks; **three** are still prompt shells — fine for incremental Tri-Frame work.
+- *(Trump–Leo civ-mem drill — stub:)* after a drill, list ≥2 MEM paths opened + one paragraph mapped to [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) § VII.
 
 ### Links
 
@@ -367,6 +369,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - Barnes: [2026-04-11-barnes-material-constraints.md](../../../minds/outputs/2026-04-11-barnes-material-constraints.md) · [2026-04-11-barnes-hidden-liabilities.md](../../../minds/outputs/2026-04-11-barnes-hidden-liabilities.md)
 - Mearsheimer: [2026-04-11-mearsheimer-balance-of-power.md](../../../minds/outputs/2026-04-11-mearsheimer-balance-of-power.md) · [2026-04-11-mearsheimer-alliance-dynamics.md](../../../minds/outputs/2026-04-11-mearsheimer-alliance-dynamics.md)
 - Mercouris: [2026-04-11-mercouris-governing-narrative.md](../../../minds/outputs/2026-04-11-mercouris-governing-narrative.md) · [2026-04-11-mercouris-legitimacy-doctrine.md](../../../minds/outputs/2026-04-11-mercouris-legitimacy-doctrine.md)
+- Drill: [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) · [CIV-MEM-TRI-FRAME-ROUTING.md](../../../minds/CIV-MEM-TRI-FRAME-ROUTING.md) · [docs/ci/civilization_memory_upstream.env](../../../../../ci/civilization_memory_upstream.env)
 
 ## 2026-04-12
 
@@ -393,6 +396,39 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Links
 
 - [daily-brief-2026-04-12.md](../../../daily-brief-2026-04-12.md) · [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) · [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) (§ 11 — tri-mind deliverables / coherence)
+
+### Web verification (2026-04-12) — pilot (Islamabad / Hormuz, 2026-04-12 — 2026-04-13)
+
+**Scope:** Retro **skill-strategy + fact-check** pilot on this notebook: extract **tier-A** checkable claims from **Signal** above + **2026-04-13** Islamabad follow-through; triage only ([`.cursor/skills/fact-check/SKILL.md`](../../../../../../.cursor/skills/fact-check/SKILL.md)). **Confidence:** medium for wire-level diplomacy; **low** for blockade **mechanics** until **WH / CENTCOM / Navy** primaries are pinned.
+
+| Claim (short) | Verdict | Source (title + URL) |
+|-----------------|---------|----------------------|
+| U.S.–Iran direct talks in Islamabad (Apr 2026) ended **without agreement** / no breakthrough | **Supported** | AP — [US and Iran end direct negotiations on war's fragile ceasefire](https://apnews.com/article/2be904aee3f804892336730279e054b9) |
+| Marathon talks on the order of **~21 hours**; delegations left without deal | **Supported** | Dawn — [US, Iranian delegations leave Islamabad as marathon talks end without agreement](https://www.dawn.com/news/1990743/us-iranian-delegations-leave-islamabad-as-marathon-talks-end-without-agreement) |
+| Iranian delegation led by Parliament Speaker **Mohammad Bagher Ghalibaf** (Islamabad) | **Supported** | Same Dawn piece; cross-check [Al Jazeera timeline](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded) |
+| Executive announcement of **U.S. Navy** / **Strait of Hormuz** **blockade**-class measures after talks failed | **Supported** (headline); **Unclear** (exact **rules of engagement**, timing vs. **CENTCOM** releases) | NBC — [What to know about Trump's Iran blockade and the Strait of Hormuz](https://www.nbcnews.com/world/iran/trump-iran-blockade-strait-of-hormuz-ports-explained-rcna331477) — **Escalate:** [defense.gov](https://www.defense.gov/) / [centcom.mil](https://www.centcom.mil/) statements for **operational** facts |
+| **IRI** readouts on talks / Hormuz — wording and scope | **Unclear** in triage without **fa** primaries | Triangulate per [daily-brief-iran-watch.md](../../../daily-brief-iran-watch.md) + IRNA / MFA **`fa`** when load-bearing |
+| **Pape** thread: **ground op** / **~10k troops** as **next** U.S. move | **Out of scope** (forecast / scenario) for wire triage | Notebook already treats as **hypothesis** — do not merge as fact |
+| **Parsi** (Lebanon wedge / phased Lebanon ceasefire floated by Washington) | **Unclear** | Needs **primary** readout or on-record **U.S.** / **mediator** cite — not scored here |
+
+**Caveat:** Developing story in April 2026 — re-check **dates** and **primaries** before any **public** or **campaign** ship.
+
+### Civ-mem pattern check (pilot — 2026-04-12 — 2026-04-13)
+
+**Precheck:** Local `research/repos/civilization_memory` present. **`MEM–RELEVANCE–PERSIA.md`** and **`MEM–RELEVANCE–AMERICA.md`** are **not** in this pin — `suggest_civ_mem_from_relevance.py` cannot run; **`CIV–STATE–PERSIA`** states MEM discovery uses **Section VII** + **INDEX** until relevance files exist. Pattern pass uses **STATE** + **one GEO MEM** (read-only WORK).
+
+**Hooks (from Judgment, not wires):** (1) **Nuclear vs sovereignty framing fork** — Washington’s nonproliferation breaker vs IRI sovereignty / “excessive demands.” (2) **Hormuz as leverage** — Thesis A/B: escalation trap vs coercive bargaining / third-party off-ramps. (3) **U.S. domestic / liability** — blockade rhetoric → coalition + **war-powers** exposure (Barnes-relevant). (4) **2026-04-13** — operational skepticism (porous blockade / picket vs boarding) sits beside **legitimacy-plane** threads; keep **lanes separate** per notebook.
+
+**Civ-mem does not substitute** for **`### Web verification (2026-04-12)`** rows above.
+
+| Notebook hook (short) | Entity | Artifact (path under checkout) | Align / tension / deferred | Lens (optional) | Notes |
+|------------------------|--------|--------------------------------|-----------------------------|-----------------|-------|
+| Hormuz / Gulf as **denial** and **leverage** band (not necessarily full closure); coercion vs endurance | PERSIA | [CIV–STATE–PERSIA.md](../../../../../../research/repos/civilization_memory/content/civilizations/PERSIA/CIV–STATE–PERSIA.md) § III / Options A–C; [MEM–PERSIA–GEO–PERSIAN–GULF.md](../../../../../../research/repos/civilization_memory/content/civilizations/PERSIA/MEM–PERSIA–GEO–PERSIAN–GULF.md) (chokepoint geometry) | **Align** — STATE encodes **Gulf chokepoint** + **calibrated denial** / **cost-imposition** band; notebook’s “Hormuz as leverage” and **Thesis B** (bargaining) **tension** with **trap** narrative only if closure/exhaustion binds—MEM–GEO stresses **structural** littoral asymmetry, not day-level ROE | Mearsheimer | Does not verify **blockade** **facts** |
+| Failed talks → **sequential tightening** / default escalation (trap thesis) vs **mediation** pressure | PERSIA | [CIV–STATE–PERSIA.md](../../../../../../research/repos/civilization_memory/content/civilizations/PERSIA/CIV–STATE–PERSIA.md) Options A/C, **Khosrow** overextension idiom | **Tension** — STATE warns **over-retaliation** / **full Gulf** escalation flips binding constraint to **exhaustion**; notebook **Thesis A** (trap) is **compatible** as **scenario** but must stay **separate** from **operational** claims (Ritter / CENTCOM) | Barnes / Mearsheimer | Trap language ≠ civ-mem **confirmation** of headlines |
+| **Blockade** / **coalition** / **war-powers** exposure (U.S.) | AMERICA | [CIV–STATE–AMERICA.md](../../../../../../research/repos/civilization_memory/content/civilizations/AMERICA/CIV–STATE–AMERICA.md) (hegemony, coalition durability, war-powers / liability threads) | **Align (structural)** — STATE frames **coalition** and **institutional** constraints on sustained extra-hemispheric use of force; **tension** with pure **“strategic-asset”** domestic heroics if **legitimacy / procedure** fracture—notebook already flags **DoD/WH** pin | Barnes | **Low confidence** — skim-level; not legal advice |
+| **ROME** / **Marandi ecumenical** vs **Ritter** mechanics (2026-04-13) | — | — | **Deferred** — **ROME** pattern + **faith** lane vs **Hormuz** mechanics already separated in Judgment; no **MEM–RELEVANCE–ROME** pass this session | — | See [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md); optional future pass |
+
+**Confidence:** medium for PERSIA **Hormuz** structure; **low** for AMERICA row (broad STATE skim).
 
 ### Open
 
@@ -431,37 +467,38 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ---
 
-## 2026-04-11
-
-### Signal
-
-- **Civ-mem × Barnes (Trump–Leo):** Session sheet [`TRUMP-LEO-CIV-MEM-BARNES-DRILL.md`](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) — **ROME** at pinned upstream SHA has **no** `MEM–RELEVANCE–ROME.md`; use **manual** `MEM–ROME–*` picks + **`AMERICA`** `python3 scripts/suggest_civ_mem_from_relevance.py AMERICA` for U.S. liability / elections texture. CI smoke: `python3 scripts/test_civmem_tri_frame_routing.py` (runs **RUSSIA** then **ROME**).
-
-### Judgment
-
-- *(Stub — after a drill: list ≥2 MEM paths opened + one paragraph mapped to [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) § VII.)*
-
-### Links
-
-- [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) · [CIV-MEM-TRI-FRAME-ROUTING.md](../../../minds/CIV-MEM-TRI-FRAME-ROUTING.md) · [docs/ci/civilization_memory_upstream.env](../../../../../ci/civilization_memory_upstream.env)
-
----
-
 ## 2026-04-13
 
 ### Signal
 
-- Post–**Islamabad** window: executive **Hormuz / blockade** rhetoric overlaps **long-form** commentary (**Marandi**; **Ritter**) on **process failure** and **sea control** — **not** substitutes for **CENTCOM tasking**, **interdiction counts**, or **insurance-market** data ([daily-strategy-inbox.md](../../daily-strategy-inbox.md) ingest + **Ritter** checklist).
+- Post–**Islamabad** window: executive **Hormuz / blockade** rhetoric overlaps **long-form** commentary on **process failure** and **sea control** — **not** substitutes for **CENTCOM tasking**, **interdiction counts**, or **insurance-market** data.
+- **Marandi (YT):** *Why the Iran Talks Failed* — Islamabad “extra mile” vs **channel-authority** read (Vance phones, late pivot); three **structural** deadlocks (stock / program / Hormuz governance); **Kent + Gabbard + IAEA** as one cluster (**split** in Primary pulls, not one blob). **Lebanon–Hormuz** linkage in source; **Easter ecumenical** register vs wire lane.
+- **Breaking Points / Trita Parsi (Quincy):** *Trump Makes INSANE DEMANDS In Iran Negotiations* — **Barak Ravid**-attributed US “red lines” (zero enrichment, facilities, HEU, regional framework incl. proxies, Hormuz open + no tolls, funds); Parsi: if that were the literal US package, **DOA**; **leaks** and **administration diversity** vs table; **nuclear progress** then **late US shift** (tactics vs **shifting goalposts**); **Araghchi** MOU-ready-then-move; **zero-enrichment** hardening tied to **Israel** pressure + echo chamber vs Trump’s earlier **weapons-not-enrichment** opening; **ceasefire holds** — neither side declared talks dead / resumed strikes; **Hormuz** toll-**sharing** variants; Iranian aim to **reopen** strait for **Asian** trade; **walk-away asymmetry** (US vs Iran); **China** (NYT missiles / intel — **caution**); **blockade** second-order (**India/China** cargoes, **Trump** gas / midterms, **Houthis**/Aden); **UAE/GCC** (Abraham Accords **frontline**, intra-GCC splits). **Episode URL — operator to pin.**
+- **Scott Ritter — Judging Freedom** (“Who Controls Hormuz?”): USN **sea-control** skepticism, **porous blockade**, **picket vs boarding**, **Vance** / **Trump brand**, **third-country hulls**, **Trump–Pope** “American Blasphemy” **narrative-escalation** segment — **lane-split** from Marandi **ecumenical** register. **Episode URL — operator to pin.**
+- **Alexander Mercouris — The Duran** (2026-04-13 monologue): Islamabad recap (**Ghalibaf** + **Araghchi**; says **Larijani** = same **misname** pattern); **blockade** / **Keane** lineage; Hormuz **destroyer** / **blockade-of-blockade**; **Kushner/Witkoff**; **zugzwang**; **Pope** / **Trump Tower** stress read; **Pezeshkian–Putin**; **Lavrov–Wang Yi**; **Li Qiang** decree; tails **UA**, **Reuters** oil, **Orbán** — **verify** each chain before folding into one arc. **Episode URL — operator to pin.**
+- **Supplemental brief (operator paste):** Cross-domain Monday stack (Hungary/Tisza, tanker diversion %, UA deep-strike, CN–TW, macro) — **all quant / battle lines** need **wire** before Judgment-grade use.
+- **X — Trump–Leo lane:** **@SkyVirginSon** lay-Catholic thread rebutting executive **Leo XIV** framing (conclave, dicastery CV, CST) vs **Kelly** **Senate-Catholic** guilt frame — **two genres**, same news week; **@Milad33B** Bible/oath → **“Satan”** caption — **narrative-escalation** / **fact-check** split per inbox batch-analysis.
 
 ### Judgment
 
-- **Weave (stub):** **Marandi** stresses **authority asymmetry**, **late-session pivot**, **three sovereignty deadlocks**, **Easter ecumenical** close toward a **Christian host** — **legitimacy-plane** + **primary verify** on **roster** (Ghalibaf vs Larijani) and **Kent / IAEA / Gabbard** lines. **Ritter** stresses **USN-operational** skepticism (**no Hormuz sea control**, **porous blockade**, **picket vs boarding**), **Vance-as-fall-guy** for **Trump brand**, **boarding third-country hulls** as **strategic tail risk** — plus a **separate** **American blasphemy** **invective** block on **Trump / Pope** imagery (**narrative-escalation**). **Do not fuse** those **faith registers** with **Marandi’s** **respect** register; **parallel** **legitimacy combat**, different **lanes** ([trump-religion-papacy-arc.md](../../trump-religion-papacy-arc.md)). Fold **Hormuz Judgment** only when **checklist** items in the inbox trend toward **primary** confirmation or **falsification**.
+- **Marandi × Ritter × Mercouris:** Shared scaffold — **Islamabad collapse** + **Hormuz leverage** + **executive channel** doubt. **Mercouris** adds **institutional** / **analyst-constellation** / **zugzwang** language; **Marandi** holds **Iranian red lines** + **wire-verify** roster (**Ghalibaf** head; **Larijani** = transcript **misname**); **Ritter** holds **USN mechanics** + **faith invective** lane. **Do not** collapse **leadership-psychology** into **Links** without **`narrative-escalation`** + primaries. **Hormuz** “control” remains **testable** via checklist + primaries — not one speaker alone.
+- **Parsi × Parsi (04-12 CNN vs 04-13 Breaking Points):** Same analyst, **two venues** — **04-12** foregrounds **Lebanon vs nuclear** “mask”; **04-13** foregrounds **Ravid red-lines leak**, **MOU/Araghchi**, **Israeli enrichment shift**, **toll-sharing**, **walk-away**, **China/GCC**. **Weak bridge:** both probe whether **Washington’s leaked/published position** matches **room behavior** — **verify** each chain; **Ravid** = **journalist-sourced**, not WH primary.
+- **Kent / IAEA / Gabbard:** **Primary pulls** in inbox **split** the bundle — do **not** merge Marandi shorthand with **Grossi** text or **Kent letter** without quotes ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)).
+- **Rome–faith registers:** **Marandi ecumenical** vs **Ritter invective** vs **SkyVirginSon catechism** vs **Milad demonic attribution** — **parallel legitimacy combat**; **do not fuse** with Hormuz **material** row without seam ([trump-religion-papacy-arc.md](../../trump-religion-papacy-arc.md)).
+- **Supplemental brief:** **Tension-first** — Budapest institutional shift ≠ Gulf energy premium ≠ UA attrition math; **do not** one-paragraph **WW3 week** unless each line verified.
 
 ### Links
 
-- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (Marandi + **Primary pulls** + Ritter ingest + **blockade checklist**) · [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md) · [Al Jazeera — how US–Iran talks in Islamabad unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded) (wire context)
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **Primary pulls (2026-04-13)** · **Mercouris verify hooks** · **Pezeshkian–Putin side-by-side** · **Ritter blockade checklist** (paste-grade; not Record)
+- [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md)
+- [Al Jazeera — how US–Iran talks in Islamabad unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded) (wire context)
+- **Breaking Points** — Parsi segment: operator to add canonical **YouTube/show URL** when pinned
+- **The Duran** — Mercouris 2026-04-13: operator to add episode URL when pinned
+- **Judging Freedom** — Ritter 2026-04-13: operator to add episode URL when pinned
 
 ### Open
 
-- **Rome–Persia legitimacy signal check** — append dated rows + **pinned** `x.com/.../status/...` for Pezeshkian→`@Pontifex` when available; keep **legitimacy plane** separate from Hormuz/Islamabad hard security: [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md).
-- **Judging Freedom** — pin canonical **episode URL** for Ritter 2026-04-13 “Who Controls Hormuz?”; keep **faith / blasphemy** segment **separate** from **Hormuz mechanics** in **Links** unless **verify** complete.
+- Pin **Breaking Points** + **Mercouris** + **Ritter** canonical **episode URLs**; keep **faith / blasphemy** segments **separate** from **Hormuz mechanics** unless **verify** complete.
+- **Rome–Persia legitimacy signal check** — append dated rows + **pinned** `x.com/...` for Pezeshkian→`@Pontifex` when available; keep **legitimacy plane** separate from Hormuz/Islamabad hard security: [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md).
+- **SkyVirginSon** / **Milad33B** — pin status URLs + **Snopes/AP** oath facts if **narrative-escalation** row ships beyond notebook.
+- **Supplemental-brief** quants (Hungary, tanker %, UA, macro) — **wire-verify** before any public or campaign cite.

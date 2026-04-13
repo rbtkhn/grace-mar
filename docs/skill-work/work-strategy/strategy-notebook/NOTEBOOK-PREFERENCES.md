@@ -13,6 +13,7 @@
 | **Daily length** | **Variable by day** — no fixed default word budget. |
 | **Minimum `days.md` sections** | **`### Signal` · `### Judgment` · `### Links`** only. |
 | **Inbox vs notebook** | **Raw paste and URL dumps** → [daily-strategy-inbox.md](daily-strategy-inbox.md). **Notebook** = **synthesis + key links**, not mirrors of the inbox. |
+| **Fold → page structure** | **Promotion choice** — what lands under **Signal** vs **Judgment** vs **Links** vs **Open** follows **what you choose to fold** and at **which** fold, not inbox length or equal padding per section. Intra-day folds **iterate one** `## YYYY-MM-DD` block (merge, don’t duplicate). See [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Fold choice and section weighting*. |
 | **Judgment priority** | **Structural first** — power, incentives, constraints; narrative second. |
 | **Islamabad / US–Iran / pause** | When the day touches this thread, **always capture scope fights**: what is in/out of the **pause**, **Lebanon**, **Hormuz** definition. |
 | **Leo XIV / Holy See / Rome (primary thread)** | **Voice** = papal / Holy See moral–diplomatic lines (**Leo XIV**, `@Pontifex`, audiences). **Hub** = [work-strategy-rome](../work-strategy-rome/README.md) + [ROME-PASS](../work-strategy-rome/ROME-PASS.md). When the day touches this thread, **keep planes separate** from Beltway mechanics: **IHL / legitimacy vocabulary** is not a forecast of **kinetic** facts; fold **Judgment** with **dated** vatican.va or press-office URLs when claiming official text (see ROME-PASS source order). If **Lebanon** (or other crises) appears in **both** analyst and papal lines, prefer **two bullets** or **Thesis A / B** — do not merge registers without verify. |
@@ -23,7 +24,7 @@
 | **Predictive History (work-jiang)** | **Episodic** — cite when you **actually** engaged lecture/corpus that day; no standing PH obligation in the notebook. |
 | **Lenses (B / M / Merc)** | After **substantive** notebook-relevant work, assistant **offers three one-liners** — operator **picks or skips** (see [strategy-minds-granular.mdc](../../../../.cursor/rules/strategy-minds-granular.mdc)). |
 | **Where lens depth lives** | **Daily brief mind shells** and **`minds/outputs/`** as needed; **strategy-notebook day block stays thin**. |
-| **Inbox → `days.md`** | **Fold at `dream`** or **explicit operator direction** — assistants do **not** append `days.md` on ingest alone (see [daily-strategy-inbox.md](daily-strategy-inbox.md)). |
+| **Inbox → `days.md`** | **Fold** at **`dream`** (day-end), on **`fold`** / **explicit** operator direction (intra-day), or equivalent — assistants do **not** append `days.md` on ingest alone (see [daily-strategy-inbox.md](daily-strategy-inbox.md)). |
 | **Promotion to `STRATEGY.md`** | **Weekly** when the **week** had a **clear thesis** (not only rare milestones). |
 | **STATUS.md** | **Minimal** — last entry / pointer; no rich dashboard unless asked. |
 | **Uncertainty** | Emphasize **narrative and framing risk** over formal numeric confidence tags. |
@@ -33,7 +34,7 @@
 
 ## Short paste block (meta / handoff)
 
-Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links. Inbox = raw; notebook = synthesis + key links. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. Putin / Kremlin: §1d watch; Kremlin vs wire. PRC / Beijing: §1g watch; MFA vs Western analysis. IRI / Tehran: §1h watch; MFA/IRNA vs Western digest (framework = Islamabad index). PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Fold inbox at dream unless directed. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence. Split disagreements as Thesis A / Thesis B.
+Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links. Inbox = raw; notebook = synthesis + key links. Fold choice weights sections (Signal/Judgment/Links/Open), not inbox order. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. Putin / Kremlin: §1d watch; Kremlin vs wire. PRC / Beijing: §1g watch; MFA vs Western analysis. IRI / Tehran: §1h watch; MFA/IRNA vs Western digest (framework = Islamabad index). PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Fold inbox at dream or explicit fold; not on ingest alone. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence. Split disagreements as Thesis A / Thesis B.
 
 ---
 
@@ -45,7 +46,7 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 - **Putin / Kremlin:** When **`meta.md`** includes **Putin thread** or the day covers **Ukraine**, **Russia** as negotiation actor, or **NATO**–Russia framing, align **Links** with [daily-brief-putin-watch.md](../daily-brief-putin-watch.md) (Kremlin + wire + native triangulation); optional **`PUTIN` / `KREMLIN`** tags in inbox cold lines.
 - **PRC / Beijing:** When **`meta.md`** includes **PRC thread** or the day covers **U.S.–China**, **cross-strait**, **Indo-Pacific**, or **PRC**–adjacent **trade** / **sanctions**, align **Links** with [daily-brief-prc-watch.md](../daily-brief-prc-watch.md) (MFA + wire + Mandarin triangulation); optional **`PRC` / `CN` / `CHINA`** tags in inbox cold lines.
 - **IRI / Tehran:** When **`meta.md`** includes **IRI thread** or the day covers **Islamabad**, **pause / Hormuz / Lebanon**, **nuclear** talks, or **Iranian** **state** messaging, align **Links** with [daily-brief-iran-watch.md](../daily-brief-iran-watch.md) (MFA + IRNA + Persian triangulation) alongside **Islamabad** framework artifacts when relevant; optional **`IRAN` / `IRI` / `TEHRAN`** tags in inbox cold lines.
-- **Do not** extend `chapters/YYYY-MM/days.md` unless **`dream`** fold or **explicit** operator instruction — unchanged.
+- **Do not** extend `chapters/YYYY-MM/days.md` unless **`dream`** fold, **`fold`** / **explicit** operator instruction, or equivalent — unchanged. Section weighting per fold: architecture § *Fold choice and section weighting*.
 
 ---
 
@@ -59,3 +60,4 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 | 2026-04-12 | **Vladimir Putin / Kremlin primary thread:** [daily-brief-putin-watch.md](../daily-brief-putin-watch.md) = hub — same mirror pattern as JD Vance / Rome. |
 | 2026-04-12 | **PRC / Beijing primary thread:** [daily-brief-prc-watch.md](../daily-brief-prc-watch.md) = hub (**§1g**); generator + `meta` + prefs + `skill-strategy`. |
 | 2026-04-12 | **Islamic Republic of Iran primary thread:** [daily-brief-iran-watch.md](../daily-brief-iran-watch.md) = hub (**§1h**); complements Islamabad index; generator + `meta` + prefs + `skill-strategy`. |
+| 2026-04-11 | **Fold → page structure:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Fold choice and section weighting*; inbox fold rhythm cross-link; prefs table + Relation to assistants + short paste block (explicit intra-day **fold**). |

@@ -38,6 +38,8 @@ Optional short tags on each line, **clearly heuristic** (not estimates of wall-c
 
 - The operator may answer **`A+C`** (or similar); the assistant executes both compatible branches.
 - When two options combine naturally, you may add one line: **Combo:** `B + half of D` — *brief label explaining the merge* (still one human pick; do not develop the combo content until selected).
+- **`F` — All (strategy-notebook hygiene bundle):** In one pass — (1) **verify hooks** / Primary-pull targets in `daily-strategy-inbox.md`, (2) **MINDS** cross-pointer to dated mind-file addenda (e.g. `CIV-MIND-MERCOURIS.md` **III.M**), (3) **Carry** lines that tie inbox ↔ mind. **Exclude** folding scratch into `chapters/YYYY-MM/days.md` unless **`dream`** or **explicit operator direction** — early fold risks duplicate **Judgment** before **Links** verify.
+- **`strategy + verify`** — **Work-strategy** fork: same intent as **`strategy`** / **`strategy ingest`**, plus a **triage fact-check** ([`.cursor/skills/fact-check/SKILL.md`](../../.cursor/skills/fact-check/SKILL.md)) and/or **web pass** on **load-bearing** claims — especially **rosters**, **dates**, and **stats** from **transcripts**. Land outcomes in **`daily-strategy-inbox.md`** (**`verify:`**, **Primary pulls**) and, when folding, **`### Web verification`** / **`### Links`** in `days.md` — not **`### Judgment`** without sources. Spec: [`.cursor/skills/skill-strategy/SKILL.md`](../../.cursor/skills/skill-strategy/SKILL.md) (**Modes** → **+ verify**, **Transcript / analyst capture**); architecture: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *skill-strategy modes and verification passes*.
 
 ---
 
@@ -84,6 +86,16 @@ python3 scripts/log_operator_choice.py -u grace-mar --context WORK --picked stra
 
 `--note` is truncated at **500 characters** by the script — use a **pointer** (date / file), not a full paste dump. First-class `--context INGEST` is **not** required; `WORK` + `picked` + tags is enough for aggregation.
 
+**Strategy fold ledger (optional):** After folding [strategy-notebook/daily-strategy-inbox.md](work-strategy/strategy-notebook/daily-strategy-inbox.md) into `chapters/YYYY-MM/days.md`, append one JSONL event (compression proxies, optional ratings) — not session-transcript, not MEMORY:
+
+```bash
+python3 scripts/log_strategy_fold.py -u grace-mar --notebook-date 2026-04-13 --fold-kind manual \
+  --inbox-chars 12000 --days-delta-chars 4000 --note "tight merge; verify pins next"
+python3 scripts/report_strategy_fold_learning.py -u grace-mar --days 30
+```
+
+Spec: [FOLD-LEARNING.md](work-strategy/strategy-notebook/FOLD-LEARNING.md).
+
 ---
 
 ## 7. Multi-agent fork generation (experimental)
@@ -100,6 +112,7 @@ Dated WORK outputs (daily brief, weekly scaffold, newsletter digest, optional `m
 
 ## See also
 
+- **`strategy + verify`** (named fork) — §4 **Combo and hybrid options** above; full spec under **work-strategy** in [skill-strategy SKILL](../../.cursor/skills/skill-strategy/SKILL.md).
 - **Fixed session menu (`coffee` — same A–G for work-start and signing-off; legacy hey still works):** not the 3–5 WORK pattern — use the canonical **`coffee`** fixed menu, listed **A, B, C, D, E, F, G** (seven modes; **no** close letter). **A — Daily Brief**, **B — Build**, **C — Compass** (includes work-strategy-rome), **D — Book**, **E — Steward**, **F — Xavier next**, **G — Dev next** (`workspace.md` § Next actions). **C** and **D** exit the coffee hub by default unless **`stay in coffee`**; **skills** / **meta:** say with **B**. Roles: [.cursor/skills/coffee/SKILL.md](../../../.cursor/skills/coffee/SKILL.md).
 - [Operator–agent lanes](../../operator-agent-lanes.md)
 - [Coffee skill](../../../.cursor/skills/coffee/SKILL.md)

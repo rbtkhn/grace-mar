@@ -3,7 +3,7 @@ name: fact-check
 preferred_activation: fact check
 description: >-
   Triage-first fact check: fast web pass on operator-pasted claims with lean verdicts (supported / contradicted / unclear / out of scope),
-  one solid cite per claim when possible, high abstention. Escalation flags when deeper audit is needed. Not Record merge unless gated.
+  one solid cite per claim when possible, high abstention; include native/foreign-language official sources (e.g. Persian, Chinese, Russian) when claims are regime- or institution-attributed. Escalation flags when deeper audit is needed. Not Record merge unless gated.
 ---
 
 # Fact check (operator)
@@ -29,6 +29,8 @@ Use when the operator wants a **quick external sanity check** on something **the
    - **Interpretive** — label **interpretation**; do not score as Supported/Contradicted without marking it as inference.
    - **Out of scope** — prediction, pure opinion, privileged access — **Out of scope**; no fake certainty.
 3. **Search and cite (light)** — One **credible** source per factual claim is enough for **triage** (reputable outlet, official page, or primary doc if it surfaces quickly). Add a **second** source **only** if the claim is **obviously contested**, **high-stakes** (election / legal / medical / financial / attribution of a quote), or the first source is weak/unclear.
+
+**Native / foreign-language primaries (strategy-adjacent — when claims are about non-U.S. governments or multilateral institutions):** Do **not** rely on **English-only** syndication if the verdict turns on **what Tehran, Beijing, Moscow, or the Holy See actually said**. Prefer, when discoverable in triage time: **official MFA / presidency / IRNA-class** pages in **Persian (fa)** for Iran; **MFA / state** readouts in **Chinese (zh)** for PRC; **Kremlin** / key ministries in **Russian (ru)** for Russia; **Vatican** / **Holy See** primaries per [ROME-PASS.md](../../../docs/skill-work/work-strategy/work-strategy-rome/ROME-PASS.md) for Rome-dependent claims. Use **reputable wire English summaries** as **supporting** evidence, not automatic substitutes for the native line when the dispute is **wording** or **scope**. If you cannot read the language, say so — **machine translation + official URL** is still better than guessing; flag **Unclear** and **Escalate** when only partisan secondary sources appear. Repo guardrails: [daily-brief-iran-watch.md](../../../docs/skill-work/work-strategy/daily-brief-iran-watch.md) (Persian triangulation), [daily-brief-prc-watch.md](../../../docs/skill-work/work-strategy/daily-brief-prc-watch.md), [daily-brief-putin-watch.md](../../../docs/skill-work/work-strategy/daily-brief-putin-watch.md).
 4. **Verdict table (lean)** — For each **factual** claim:
 
    | Claim (short) | Verdict | Source (title + URL) |

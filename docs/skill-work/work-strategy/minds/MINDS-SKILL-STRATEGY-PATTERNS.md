@@ -26,7 +26,7 @@
 
 ### Mind files (load these — trimmed for strategy-notebook)
 
-- [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md)
+- [`strategy-notebook/minds/CIV-MIND-MERCOURIS.md`](../strategy-notebook/minds/CIV-MIND-MERCOURIS.md) — dated **operator corpus addenda** (e.g. **III.M** spoken-register scaffolds) live **in-file**; WORK emulation only — not substitute for tier-A verify on current facts.
 - [`strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md`](../strategy-notebook/minds/CIV-MIND-MEARSHEIMER.md)
 - [`strategy-notebook/minds/CIV-MIND-BARNES.md`](../strategy-notebook/minds/CIV-MIND-BARNES.md)
 - [`strategy-notebook/minds/README.md`](../strategy-notebook/minds/README.md)
