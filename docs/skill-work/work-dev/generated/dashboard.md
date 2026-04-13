@@ -2,7 +2,7 @@
 
 # work-dev dashboard
 
-- **Generated:** `2026-04-12T21:32:41Z`
+- **Generated:** `2026-04-13T05:22:38Z`
 
 ## Reliability
 
@@ -17,7 +17,7 @@
 
 - Open gap IDs: _(none)_
 - Lane violation count (observability feed): 0
-- Continuity block count (observability feed): 22
+- Continuity block count (observability feed): 23
 
 ## Gate throughput (pipeline events)
 
