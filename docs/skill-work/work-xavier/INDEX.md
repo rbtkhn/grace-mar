@@ -11,6 +11,7 @@
 | **[Cici](https://github.com/Xavier-x01/Cici)** (external) | Xavier’s **OB1 instance** repo on GitHub (config/docs; **commit spine** for [xavier_journal_ob1_digest.py](../../../scripts/xavier_journal_ob1_digest.py)). Canonical pointer replaces `open-brain-xavier` — see [work-xavier-history.md](work-xavier-history.md) `### 2026-04-10`. |
 | [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) | **Cici GitHub ingest** (2026-04-13) — public README, repo root, **`CLAUDE.md` persona** screenshots + summary |
 | [evidence/cici-personalization-pdf-ingest-2026-04-13.md](evidence/cici-personalization-pdf-ingest-2026-04-13.md) | **Cici Claude Code session (PDF)** — personalization prompt export, Q&A, follow-up steps (verify on GitHub) |
+| [evidence/cici-implement-pdf-ingest-2026-04-13.md](evidence/cici-implement-pdf-ingest-2026-04-13.md) | **“Implement” PDF** — advice items → `main` `5337b1c`; repo check vs transcript; progress + frontier |
 | [OB1 bridge mapping — Conceptual map](../../integrations/ob1/mapping.md#conceptual-map-ob1-cici-grace-mar) | **OB1 vs Cici vs grace-mar** — stack roles and where governed truth lives (avoids conflating instance repo with upstream platform or Record). |
 | [evidence/](evidence/) | Screenshots and exports for progress analysis (not partner-facing) — **policy & naming:** [evidence/README.md](evidence/README.md) |
 | [work-xavier-sources.md](work-xavier-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |

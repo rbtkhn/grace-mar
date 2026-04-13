@@ -18,6 +18,7 @@
 - **Cici GitHub ingest:** [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) + PNGs — public README (OB1 + governed state), repo root listing, `CLAUDE.md` persona capture; [Cici](https://github.com/Xavier-x01/Cici).
 - **xavier-journal:** Scaffolded **Day 3–5** on-disk — [2026-04-11.md](xavier-journal/2026-04-11.md), [2026-04-12.md](xavier-journal/2026-04-12.md), [2026-04-13.md](xavier-journal/2026-04-13.md) (`xavier_journal_ob1_digest.py` L1 + narrative stub sections for fill).
 - **Cici PDF ingest:** [evidence/cici-personalization-pdf-ingest-2026-04-13.md](evidence/cici-personalization-pdf-ingest-2026-04-13.md) + [cici-claude-personalization-session-2026-04-13.pdf](evidence/cici-claude-personalization-session-2026-04-13.pdf) — Claude Code personalization session export (Q&A, branch `claude/personalize-cici-instance-YT0ER` — verify on GitHub).
+- **Cici “Implement” PDF ingest:** [evidence/cici-implement-pdf-ingest-2026-04-13.md](evidence/cici-implement-pdf-ingest-2026-04-13.md) + [cici-implement-session-2026-04-13.pdf](evidence/cici-implement-session-2026-04-13.pdf) — Claude Code session implementing session-behavior + voice proposal on **`main`** [`5337b1c`](https://github.com/Xavier-x01/Cici/commit/5337b1ce2c58edd9fb02d6feb0b6461e1c1fb711); API cross-check vs transcript (personalize branch still on GitHub).
 
 ### 2026-04-12
 
