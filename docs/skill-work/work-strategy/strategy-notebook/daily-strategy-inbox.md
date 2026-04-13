@@ -43,7 +43,7 @@
 
 ### Multi-item ingest (optional common analysis)
 
-When the operator captures **two or more** excerpts in one pass, **items stay separate** — still **one canonical line per excerpt** (separate grep targets; separate Links when the inbox folds into `days.md`).
+When the operator captures **two or more** excerpts in one pass, **items stay separate** — still **one canonical line per excerpt** (separate grep targets; separate Links when the inbox folds into `days.md`). **Same interview URL for two analysts:** repeat the URL on **two lines**, each with its own **`thread:<id>`**; see **Same transcript, show, or panel** in [strategy-commentator-threads.md](strategy-commentator-threads.md).
 
 **Optional:** add **one** short **common analysis** immediately **after** the ingests it covers (not a third ingest). **Placement:** the `batch-analysis` line **immediately follows** the **last** ingest in the set — order is the membership anchor (no separate `paired-with` field; the line must **stand alone** when read in isolation). Use it to name **tension**, **comparison**, or **optional weak convergence** across the batch so **`dream`** can fold one **Judgment** without duplicating long synthesis.
 

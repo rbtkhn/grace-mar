@@ -100,6 +100,18 @@ Threads are **semi-permeable** by design; “optimization” here means **explic
 
 **Future automation (optional):** a small **validator script** could flag “`batch-analysis` mentions thread B but no ingest on this day has `thread:B`” — not required for the filter to work; **pairing discipline** + **git grep** already implement most of the membrane.
 
+### Same transcript, show, or panel (multiple analysts, one URL)
+
+You do **not** get a special “joint thread.” You **populate** each analyst’s lane with **separate paste-ready lines** — [daily-strategy-inbox.md](daily-strategy-inbox.md) **Multi-item ingest** rule: **one canonical line per excerpt / per voice**, **same episode URL repeated** on each line is normal.
+
+1. **Line A** — **cold** names **Speaker A** + claim; **`thread:<id_A>`** (their row in the table); **`verify:`** includes the shared URL (and timestamp/chapter if it helps grep).
+2. **Line B** — **cold** names **Speaker B** + claim; **`thread:<id_B>`**; **same URL**.
+3. **`batch-analysis | YYYY-MM-DD | …`** — **immediately after** the **last** ingest in the set (membership anchor). Name **tension** or **convergence** between the two **threads**; optional **`membrane:pair`** on the first line only if you want grep to show “invites synthesis.”
+
+**Host-only** segments (no separate analyst row) — tag **`thread:`** by **substance** (closest **hybrid** row, e.g. `islamabad-process` for process commentary) or **omit** `thread:` and keep **`verify:operator-transcript`** until a named analyst speaks.
+
+**Rare shortcut:** One line **cannot** carry two primary `thread:` ids cleanly — if the clip is **inseparably joint**, use **one** line with **`thread:`** = **primary** voice for **drift** tracking, **cold** names both, and optional **`crosses:<id>+<id>`** — or still prefer **two lines** + **`batch-analysis`**.
+
 ---
 
 ## Deprecated thread ids (operator removal)
