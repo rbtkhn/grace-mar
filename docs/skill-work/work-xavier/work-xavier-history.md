@@ -15,6 +15,7 @@
 ### 2026-04-13
 
 - **Upload prep:** Added [UPLOAD-PREP.md](UPLOAD-PREP.md) — scope table (minimal skill folder vs full advisor tree), leakage pre-flight, `skill-xavier` manifest, optional mirror note; [INDEX.md](INDEX.md) row.
+- **Cici GitHub ingest:** [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) + PNGs — public README (OB1 + governed state), repo root listing, `CLAUDE.md` persona capture; [Cici](https://github.com/Xavier-x01/Cici).
 
 ### 2026-04-12
 

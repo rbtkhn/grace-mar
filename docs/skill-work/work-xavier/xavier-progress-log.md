@@ -12,6 +12,7 @@
 
 | Date (captured) | Artifact | What it shows |
 |-----------------|----------|----------------|
+| 2026-04-13 | [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) | **Cici repo ingest** — public README (OB1 instance, governed state, layout), repo root screenshot, **`CLAUDE.md` persona** rules; PNGs: [cici-github-readme-2026-04-13.png](evidence/cici-github-readme-2026-04-13.png), [cici-github-repo-files-2026-04-13.png](evidence/cici-github-repo-files-2026-04-13.png), [cici-claude-md-persona-2026-04-13.png](evidence/cici-claude-md-persona-2026-04-13.png). |
 | 2026-04-11 | [work-xavier-history.md](work-xavier-history.md) § `### 2026-04-11` | **Cici Phase 1** on `main` — commit [`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661); governed-state scaffold + validation script green; [doctrine](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md) + [OB1 README pointer](../../../docs/integrations/ob1/README.md#related-cici-instance-external). |
 | 2026-04-10 | [work-xavier-history.md](work-xavier-history.md) § `### 2026-04-10` | **Canonical OB1 instance repo** for grace-mar: **[Xavier-x01/Cici](https://github.com/Xavier-x01/Cici)** — journal README + digest default `--repo`; replaces `open-brain-xavier`. |
 | 2026-04-08 | [evidence/github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) | **Ingest summary** — public GitHub [@Xavier-x01](https://github.com/xavier-x01): 3 repos (`xavier_self`, `brew_mind`, `OB1` fork), join date; disambiguation vs grace-mar `work-xavier/` lane. *Note:* snapshot predates **Cici** as named instance repo; from 2026-04-10 use **[Cici](https://github.com/Xavier-x01/Cici)** as canonical OB1 pointer. |
@@ -30,6 +31,7 @@
 
 _Freeform. Append dated bullets._
 
+- **2026-04-13** — **Cici public GitHub ingest:** Screenshots + [cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) anchor README/governed-state framing and **CLAUDE.md** session style (audit → plan → repo changes → handoff; concise output). *Coaching:* grace-mar **operator-style** / **coffee** vs Cici **CLAUDE** persona — different menus, same leakage discipline ([LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md)).
 - **2026-04-11** — **Cici Phase 1:** Git-first governed-state foundation landed on `main` ([`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661)); local validation matches repo CI. *Coaching:* three-layer model (evidence → prepared context → governed state) + proposals — durable git truth, Supabase as operational bridge per [Cici doctrine](https://github.com/Xavier-x01/Cici/blob/main/docs/governed-state-doctrine.md); parallel framing in [OB1 integration README](../../../docs/integrations/ob1/README.md#related-cici-instance-external).
 - **2026-04-10** — **Canonical OB1 repo:** Grace-mar tooling/docs use **[Cici](https://github.com/Xavier-x01/Cici)** (see [work-xavier-history.md](work-xavier-history.md)). *Coaching:* when discussing “her OB1 GitHub home,” say **Cici**; digest script tracks commits there.
 - **2026-04-08** — **GitHub profile snapshot:** Public [github.com/xavier-x01](https://github.com/xavier-x01) — **3** repos on Overview (**xavier_self**, **brew_mind**, **OB1** fork). Ingest: [github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md) + PNG. *Coaching:* clarify which repo is BrewMind site **source of truth** vs instance/experiment.
@@ -79,6 +81,7 @@ Transcribed for search/analysis; **verify** against her app if titles change.
 
 | Date | Note |
 |------|------|
+| 2026-04-13 | [Cici](https://github.com/Xavier-x01/Cici) repo ingest (README + root + CLAUDE persona PNGs + [cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md)); progress log index + burst; [work-xavier-history.md](work-xavier-history.md). |
 | 2026-04-11 | Cici Phase 1 verified ([`6379661`](https://github.com/Xavier-x01/Cici/commit/6379661)); progress log index + burst; [OB1 README](../../../docs/integrations/ob1/README.md#related-cici-instance-external) Cici subsection. |
 | 2026-04-10 | Canonical OB1 repo **[Cici](https://github.com/Xavier-x01/Cici)** recorded in index + burst; [INDEX.md](INDEX.md) row; [xavier-journal/README.md](xavier-journal/README.md). |
 | 2026-04-08 | GitHub profile ingest (PNG + [github-profile-ingest-2026-04-08.md](evidence/github-profile-ingest-2026-04-08.md)); progress log index + burst. |
