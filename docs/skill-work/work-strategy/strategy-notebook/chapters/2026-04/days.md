@@ -444,3 +444,24 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Links
 
 - [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) · [CIV-MEM-TRI-FRAME-ROUTING.md](../../../minds/CIV-MEM-TRI-FRAME-ROUTING.md) · [docs/ci/civilization_memory_upstream.env](../../../../../ci/civilization_memory_upstream.env)
+
+---
+
+## 2026-04-13
+
+### Signal
+
+- Post–**Islamabad** window: executive **Hormuz / blockade** rhetoric overlaps **long-form** commentary (**Marandi**; **Ritter**) on **process failure** and **sea control** — **not** substitutes for **CENTCOM tasking**, **interdiction counts**, or **insurance-market** data ([daily-strategy-inbox.md](../../daily-strategy-inbox.md) ingest + **Ritter** checklist).
+
+### Judgment
+
+- **Weave (stub):** **Marandi** stresses **authority asymmetry**, **late-session pivot**, **three sovereignty deadlocks**, **Easter ecumenical** close toward a **Christian host** — **legitimacy-plane** + **primary verify** on **roster** (Ghalibaf vs Larijani) and **Kent / IAEA / Gabbard** lines. **Ritter** stresses **USN-operational** skepticism (**no Hormuz sea control**, **porous blockade**, **picket vs boarding**), **Vance-as-fall-guy** for **Trump brand**, **boarding third-country hulls** as **strategic tail risk** — plus a **separate** **American blasphemy** **invective** block on **Trump / Pope** imagery (**narrative-escalation**). **Do not fuse** those **faith registers** with **Marandi’s** **respect** register; **parallel** **legitimacy combat**, different **lanes** ([trump-religion-papacy-arc.md](../../trump-religion-papacy-arc.md)). Fold **Hormuz Judgment** only when **checklist** items in the inbox trend toward **primary** confirmation or **falsification**.
+
+### Links
+
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (Marandi + **Primary pulls** + Ritter ingest + **blockade checklist**) · [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md) · [Al Jazeera — how US–Iran talks in Islamabad unfolded](https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded) (wire context)
+
+### Open
+
+- **Rome–Persia legitimacy signal check** — append dated rows + **pinned** `x.com/.../status/...` for Pezeshkian→`@Pontifex` when available; keep **legitimacy plane** separate from Hormuz/Islamabad hard security: [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md).
+- **Judging Freedom** — pin canonical **episode URL** for Ritter 2026-04-13 “Who Controls Hormuz?”; keep **faith / blasphemy** segment **separate** from **Hormuz mechanics** in **Links** unless **verify** complete.

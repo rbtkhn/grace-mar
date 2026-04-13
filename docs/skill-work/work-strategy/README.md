@@ -42,12 +42,25 @@ Recommended flow:
 
 **Coffee** [Compass](../../.cursor/skills/coffee/SKILL.md) (**C**) can include **work-strategy-rome** (ROME-PASS) but is a **session hub**, not a full strategy pass.
 
+### Strategy session helpers (`skill-strategy`)
+
+Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-style prose**, **long-arc placement**, and **standing hypothesis logs** — WORK only; fold to `days.md` per [STRATEGY-NOTEBOOK-ARCHITECTURE](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md).
+
+| File | Role |
+|------|------|
+| [grok-daily-brief.md](grok-daily-brief.md) | Headings-only **magazine layer** on top of generated `daily-brief-YYYY-MM-DD.md`. |
+| [strategy-notebook/trump-religion-papacy-arc.md](strategy-notebook/trump-religion-papacy-arc.md) | **Trump ↔ Christianity / papacy / religion** arc (anchor 2016→); placement for **Trump–Leo** / **`narrative-escalation`** ingests. |
+| [strategy-notebook/rome-persia-legitimacy-signal-check.md](strategy-notebook/rome-persia-legitimacy-signal-check.md) | Append-only **legitimacy-plane** falsifiers (Rome–Tehran wedge); orthogonal to Hormuz/Islamabad **hard security**. |
+| [strategy-notebook/narrative-escalation-trump-timeline.md](strategy-notebook/narrative-escalation-trump-timeline.md) | **Stub** — canonical content moved to [trump-religion-papacy-arc.md](strategy-notebook/trump-religion-papacy-arc.md). |
+| [skill-strategy / SKILL](../../../.cursor/skills/skill-strategy/SKILL.md) | § **Narrative escalation**, optional **retroactive spine**, **Modes** (Capture / Fold / Promote). |
+
 ---
 
 ## Contents
 
 | Artifact | Role |
 |----------|------|
+| **[Strategy session helpers (`skill-strategy`)](#strategy-session-helpers-skill-strategy)** | Compact index subsection **above** (Grok layer, Trump arc, Rome–Persia signal check, narrative stub, skill-strategy SKILL). |
 | **[common-inputs.md](common-inputs.md)** | Shared inputs into work-politics and work-strategy (event ingest, RSS, neutral fact summary, three lenses, gate, operator). |
 | **Transcript ingest** | [research/external/work-strategy/transcripts/README.md](../../../research/external/work-strategy/transcripts/README.md) — raw or digest `.md`/`.txt` for Perceiver / current-events / LEARN MODE. **Bulk PH pulls:** [predictive-history/README.md](../../../research/external/youtube-channels/predictive-history/README.md) (work-strategy–first — [common-inputs § PH](common-inputs.md)). |
 | **[external-tech-scan.md](external-tech-scan.md)** | Curated **themes** from long-form tech/business discourse (e.g. GTC, podcasts) — strategy vs work-politics angles; **work-dev integration lens:** [../work-dev/external-signals.md](../work-dev/external-signals.md). **Not** canonical news. |

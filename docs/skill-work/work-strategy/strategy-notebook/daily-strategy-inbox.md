@@ -10,7 +10,9 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
-**Optional grep tags (primary threads):** When an ingest is part of the **Rome** thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`**. When it is part of the **JD Vance / VP** thread, use **`JDVance`** or **`VANCE`**. When it is part of the **Putin / Kremlin** thread, use **`PUTIN`** or **`KREMLIN`**. When it is part of the **PRC / Beijing** thread, use **`PRC`**, **`CN`**, or **`CHINA`**. When it is part of the **IRI / Tehran** thread, use **`IRAN`**, **`IRI`**, or **`TEHRAN`** (e.g. `cold: IRI | MFA statement — …`). Example: `rg 'IRAN|IRI|TEHRAN|PRC|CN|CHINA|PUTIN|KREMLIN|JDVance|VANCE|ROME|LeoXIV'`.
+**Commentator threads (stable ids):** For recurring analysts and **`batch-analysis`** pairings, see [strategy-commentator-threads.md](strategy-commentator-threads.md) — optional **`thread:<id>`** in the **`verify:`** tail (e.g. `verify:… | thread:extension-game`).
+
+**Optional grep tags (primary threads):** When an ingest is part of the **Rome** thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`**. When it is part of the **JD Vance / VP** thread, use **`JDVance`** or **`VANCE`**. When it is part of the **Putin / Kremlin** thread, use **`PUTIN`** or **`KREMLIN`**. When it is part of the **PRC / Beijing** thread, use **`PRC`**, **`CN`**, or **`CHINA`**. When it is part of the **IRI / Tehran** thread, use **`IRAN`**, **`IRI`**, or **`TEHRAN`** (e.g. `cold: IRI | MFA statement — …`). When an ingest flags **narrative escalation** (register shift from empirical / wire-tractable claims toward moralized or metaphysical frames—e.g. spiritual-warfare language on a political still—see [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) § *Narrative escalation*), prefix the **cold** clause with **`narrative-escalation`**. **Retroactive spine (Trump ↔ Christianity / papacy / religion, 2016→):** [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md). Example: `rg 'IRAN|IRI|TEHRAN|PRC|CN|CHINA|PUTIN|KREMLIN|JDVance|VANCE|ROME|LeoXIV|narrative-escalation'`.
 
 #### Optional two-tier gist (cold claim // operator hook)
 
@@ -68,9 +70,64 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 ---
 
-**Accumulator for (local date):** 2026-04-12
+**Accumulator for (local date):** 2026-04-13
 
 _(Append below this line during the day.)_
+
+`YT | IRAN | cold: Prof. **Seyed Mohammad Marandi** — *Why the Iran Talks Failed* (long-form interview; operator transcript in session): Islamabad = low optimism but “extra mile”; U.S. read as **without full channel authority** (Vance phones, late-day pivot, sudden exit); three **structural** deadlocks (enriched stock / program scope / Hormuz governance); **Kent + Gabbard + IAEA** invoked as one rhetorical cluster — **requires line-by-line primary split** (see Primary pulls below); blockade → **GCC + global economy** vs Iran **land/Caspian / floating storage** thesis; **Lebanon–Hormuz** linkage claim // hook: Tri-frame + web fact-check in thread; stack Islamabad rows + `rome-persia` **legitimacy** seam; Easter close = **English-facing ecumenical** register | https://www.aljazeera.com/news/2026/4/13/how-the-us-iran-talks-in-islamabad-unfolded — **wire context** (not Marandi primary); **canonical Marandi episode URL — operator to pin** | verify: operator-transcript; **verify: delegation head = Mohammad Bagher Ghalibaf (wires) — Marandi names Ali Larijani as speaker/head (likely slip or informal role; do not cite roster from Marandi alone)**; **verify: Kent / Gabbard / IAEA** — use Primary pulls block, not Marandi shorthand`
+
+`batch-analysis | 2026-04-13 | Marandi interview + web verify | **Tension-first:** Iranian **process / ultimatum** narrative **partially** matches open-source reporting; **proper nouns** (**Larijani** vs **Ghalibaf**) and **Kent / Gabbard / IAEA** bundle **break** under naive cite — **Judgment** only with primaries. **Easter** close lands on **legitimacy-plane** (ROME–Persia seam), not Hormuz accounting. **Netanyahu–Vance** call story = **attributed diplomacy**, not a document you can authenticate here.`
+
+**Primary pulls (fact-check, 2026-04-13)** — paste-grade; not Record.
+
+- **Joe Kent — resignation (reported letter, March 17 2026):** NPR: Kent said he “cannot in good conscience” support the war; that Iran “**posed no imminent threat to our nation**”; and that Israel pushed the U.S. into conflict with a campaign to “**deceive**” President Trump. Letter also posted on X (`joekent16jan19` status `2033897242986209689`). **Note:** this is **imminent threat / war rationale**, not a clean IAEA-style “Iran is not pursuing a nuclear weapon” finding — do not merge with Marandi’s paraphrase without quoting the letter.
+- **IAEA Director General Rafael Grossi — Introductory Statement to the Board of Governors, 2 March 2026 (Vienna, *as prepared*):** “We must return to diplomacy and negotiations. It is the only way to achieve the long-term assurance that **Iran will not acquire nuclear weapons**.” On safeguards after strikes: Iran did not provide required access to affected facilities; “**the Agency cannot provide assurances** in relation to the **non-diversion** of declared nuclear material from peaceful activities at affected facilities.” Full text: `https://www.iaea.org/newscenter/statements/iaea-director-generals-introductory-statement-to-the-board-of-governors-2-6-march-2026`
+- **Tulsi Gabbard (DNI) — do not collapse with Kent:** Public record includes **evolving** congressional testimony on Iran nuclear timing and **non-straightforward** answers on “imminent threat” (e.g. press summaries of March 2026 hearings). **Treat as separate** from Kent letter; Marandi’s “Tulsi also said…” needs **named quote + date** before cite-grade use.
+
+`YT | JDVance | IRAN | narrative-escalation | cold: **Scott Ritter** — *Judging Freedom* 2026-04-13 “Who Controls Hormuz?” (Napolitano; operator transcript): U.S. **does not** control Hormuz; **blockade** = act of war + **operationally porous** (ISR/shadow-fleet cueing burden; **picket** ships vs **boarding** mission tension); **Vance** set up to fail so **Trump** can “ride in”; **boarding** third-country tankers → **strategic tail risk**; long segment **Trump / Pope / Christianity** (“American Blasphemy”) — **Satan / psychopath** register // hook: weave with Marandi **same window**; **split** Ritter **faith invective** (U.S. civil-religion frame) vs Marandi **Easter ecumenical** (G6); Hormuz **mechanics** → checklist below | URL TBD — **operator to pin Judging Freedom episode** | verify: operator-transcript; **Pope** block = **narrative-escalation** — do not merge with wire **Links** without lane tag`
+
+`batch-analysis | 2026-04-13 | Marandi × Ritter | **Tension-first:** both **name** Islamabad **process failure** and **external phone** politics; **Marandi** grounds **Iranian red lines** + **wire-verify** roster/IAEA; **Ritter** adds **USN ops skepticism** + **brand / fall-guy** motive — **converge** on **ultimatum structure**, **diverge** on **register** (Marandi **legitimacy ecumenism** vs Ritter **American blasphemy invective**). *Weak bridge:* **Hormuz “control”** is **testable** via **interdiction counts / insurance / tasking** — neither speaker is sufficient alone.`
+
+### Ritter blockade mechanics — verify checklist (2026-04-13)
+
+**Purpose:** Falsify or support Ritter’s **naval** claims using **primaries** as they appear — no second web pass required here; tick items when sources land.
+
+1. **Order of battle vs mission:** Are **interdiction** assets **tasked** for **visit / board / search / seizure** — or are **surface combatants** mostly **carrier escort / A2AD screen**? A **dedicated** MIO/USCG/SAG **separate** from **picket** duty **weakens** the “pickets can’t leave station” shorthand.
+2. **ISR cueing:** Is there **persistent** wide-area **tracking** of **tanker** traffic — or documented **gaps** where **shadow-fleet** / **flag ambiguity** dominates? Supports Ritter’s **intelligence burden** if gaps are **officially** acknowledged.
+3. **Interdiction throughput:** **Counts** of **stops**, **diversions**, **releases** vs **rhetoric** — **sustained** high throughput **falsifies** “purely political / porous” if **at scale** over **weeks**.
+4. **Littoral traffic pattern:** **AIS**-visible **coastal hugging** vs **blue-water** routes; any **hot pursuit** or **boarding** **inside** **12 nm** claims — **legal / escalation** falsifiers.
+5. **Third-party hulls:** **Chinese / Russian** (and **major** **P&I**) **flags** — any **boarding**; **flag-state** or **MFAs** démarches — **direct** test of **spiral** scenario.
+6. **Insurance / market:** **JWC** listed areas, **war risk** premia, **P&I** circulars — **dislocation** vs **stable** Gulf routing — **economic** cross-check on “Lloyd’s blind” thesis.
+
+### Supplemental strategic brief ingest — 2026-04-13 (Monday) — operator paste
+
+`supplemental-brief | cold: Executive arc — post–Islamabad-collapse window: Hungary election (Tisza ~48.7% / ~92 seats, Orbán loses supermajority, concession + “foreign interference” legal challenge signal); Iran ceasefire day-1 quiet but ~31% tanker diversion, Brent +4.2%, USN mine-countermeasures rehearsal with UK/AU; UA deep-strike package (187 fiber-optic + 41 sea drones) Crimea/Black Sea nodes, RU AD ~214 sorties/12h; markets risk-off + energy passthrough; CN–TW expanded trade credits + PLA transit; CA/NY AG pushback on US AI framework // hook: cross-domain “diffusion vs legacy institution” spine for 04-13 Judgment; **all quant + battle claims need wire/primary verify** before `days.md` | verify:operator-ingest-not-independently-confirmed`
+
+`supplemental-brief | IRAN | cold: Ceasefire holds 24h without major kinetic; Lloyd’s-style tanker diversion ~31%; Iranian refinery “restart” vs satellite flaring mismatch (regime narrative vs physical) // hook: §1h + Hormuz weak-signal; stack Islamabad collapse + strait premium | verify:sat-flaring+Kharg-loadings-not-attached`
+
+`supplemental-brief | KREMLIN | cold: UA claims 187 FPV + 41 naval drones vs Sevastopol/Feodosia/Kerch-adjacent; RU MoD “73% intercept” vs OSINT ~41% success narrative; AD sorties ~214 in 12h // hook: attrition-math Judgment; no territorial gain paired with sortie spike = stress signal per ingest | verify:telemetry+MoD-primary`
+
+`supplemental-brief | cold: Hungary — Tisza cabinet formation ~10d watch; EU sanctions/Ukraine facility leverage; “Telegram/TikTok” pro-Fidesz amplification collapse narrative // hook: EU veto geometry change vs Moscow energy hybrid response | verify:Budapest-official-readouts`
+
+`supplemental-brief | PRC | cold: Beijing expanded cross-strait trade/tourism incentives to KMT/TPP lawmakers; PLAN “routine” east-coast transit // hook: US split-focus window; §1g tie if load-bearing | verify:MFA+Taipei-reaction`
+
+`supplemental-brief | cold: Global macro — IMF growth downgrade preview; DAX/CAC moves; UST +7bp; gold +; TTF gas +6% narrative // hook: fiscal headroom vs defense multiplier; retail sales / Fed speaker watch 04-14 | verify:IMF-primary+market-ticks`
+
+`batch-analysis | 2026-04-13 | Supplemental brief (Hungary + Gulf + UA + macro) | **Tension-first:** **Budapest** = institutional veto shift (EU sanctions path) vs **Gulf** = energy premium locking inflation expectations; **UA** deep-strike = tactical diffusion (cheap precision vs RU depth) — **do not** fuse into one “WW3 week” paragraph. **IRI ceasefire** claims vs **tanker/refinery** physicals stay **split** until wires/satellites. *Optional weak bridge:* all rows = **material constraint** eating **doctrine lag**—still **verify each chain** before one folded Judgment.`
+
+`X | ROME | LeoXIV | cold: @SkyVirginSon (RosarySon) — numbered lay-Catholic rebuttal (thread ~13h) to executive framing of **Leo XIV**: (1) conclave May 8 2025 / 133 cardinals / 4th ballot — Holy Spirit vs “if I wasn’t in the White House Leo wouldn’t be in the Vatican”; (2) Leo as **outsider** false — Prefect Dicastery for Bishops under Francis; (3) Augustinian Peru / service vs politics; (4) name → Leo XIII / Catholic social teaching; (5) prophetic vs partisan; Peter / More / JPII vs power; Acts 5:29; prays for Trump, **Habemus Papam** / answers to God alone // hook: **Trump–Leo–Vance** weave — **pew-level** Catholic counter-public (theological-offense register); **not** same lane as Senate Catholic guilt frame (**Kelly** screenshot tri-mind block, `days.md` 2026-04-10); measures **devout X** reaction for ROME-PASS / Barnes liability split | https://x.com/SkyVirginSon | verify:pin-exact-status-URL+pair-to-Truth-Social-primary-if-debating-claims`
+
+`batch-analysis | 2026-04-13 | SkyVirginSon (lay Catholic) vs Kelly (Senate Catholic) — Trump–Leo stack | **Tension-first:** two **public** Catholic **genres** on same executive-vs-Rome story — **Kelly** = elected official, casualties + Church authority as shield; **RosarySon** = anonymous lay **catechism-class** refutation (conclave mechanics, dicastery CV, CST lineage). **Do not** merge into one “Catholics turn on Trump” Judgment — different **audiences** and **risk** profiles. *Weak bridge:* both resist **White House causation** narrative on the papacy; verify **primary text** on Trump TS before outreach.`
+
+`recon | rome-persia-signal | standing **legitimacy-plane** tracker (IR head ↔ Holy See rhetorical alignment vs hard security); green/red falsifiers + append-only event log — [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) | verify:append-row-on-US↔Vatican-flare-or-IR-messaging-shift`
+
+`X | narrative-escalation | cold: @Milad33B — oath still (Capitol, Melania with two Bibles, Trump raised right hand); caption escalates to **“controlled by Satan”** for not putting hand on Bible // hook: **narrative escalation** — **empirical** oath/Bible story (Snopes/AP **2025** ceremony; **2017** ≠ same facts) vs **spiritual-warfare** register; **audience signal** for in-group condemnation, not tier-A fact; separate plane from **Rome/Leo** row and **Pezeshkian→Pontifex** wedge | https://x.com/Milad33B | verify:pin-status-URL+date-still+Snopes-2025-oath`
+
+`batch-analysis | 2026-04-13 | Bible-oath meme + Milad (narrative escalation) | **Tension-first:** **Wire/fact-check layer** (hand on Bible **convention**, **2025** footage, legal non-requirement) **≠** **demonic attribution** layer — **escalation** moves **register** from **disputable observable** → **metaphysical blame** for **polarized** shares. **Do not** merge into one **Judgment** with **Kelly/RosarySon/Pezeshkian** threads — same **visual pool**, **different epistemic genres**. Fold **`hook: narrative escalation`** under **audience / rhetoric**, not **Links** as primary unless operator **+ verify**.`
+
+---
+
+**Prior scratch — 2026-04-12** _(kept for fold reference; superseded by accumulator date above for “today” pointer)_
 
 `X | cold: @tparsi — CNN segment: Lebanon as sticking point (U.S. must rein in Israel); floats nuclear deadlock as possible mask; nested quote chain includes AR-sourced claim of phased Lebanon ceasefire (Beirut/suburbs first) vs full stop // hook: analyst overlay for notebook Lebanon fork; pairs §1e Islamabad thread + native triangulation | https://x.com/tparsi | verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary`
 
@@ -175,3 +232,7 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 ### Carry — mirrors `days.md` Open (2026-04-12)
 
 - **External strategic brief (session ingest):** **Steal** — signal vs noise, weak-signal watchlist, tight exec lead *after* §1 + Links; **block** — unsourced quant in Judgment, one smooth cross-domain arc without seams / Thesis splits, tri-frame as a single magazine paragraph instead of minds workflow.
+
+### Carry — supplemental ingest (2026-04-13)
+
+- **Supplemental daily brief** (top of scratch, `supplemental-brief | …` rows + `batch-analysis | 2026-04-13 | …`): treat seat counts, sorties, market ticks, and OSINT ratios as **verify-first** in Judgment until wires or primaries land in Links. Fold into `## 2026-04-13` in `days.md` at **`dream`** or explicit operator direction — not from ingest alone.
