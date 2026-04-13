@@ -67,6 +67,41 @@ Many **`thread_id`** rows are **hybrid**: the id is tied to a **named analyst** 
 
 ---
 
+## Crossing filters (what may cross the membrane)
+
+Threads are **semi-permeable** by design; “optimization” here means **explicit rules** for what may **mix** so traceability stays high. This is **WORK** hygiene — not the **RECURSION-GATE** / Record membrane.
+
+**Default allow (fast lane — crossing is permitted):**
+
+1. **`batch-analysis | …`** lines that **name** the relationship (convergence / divergence / weak bridge) and implicitly or explicitly reference **which** `thread_id`s are in play — ideally aligned with the **Typical pairings** column.
+2. **Two (or more) separate** paste-ready ingests, **each** with its own **`thread:<id>`**, followed by **one** `batch-analysis` — membership is unambiguous.
+3. **`days.md` `### Judgment`** bullets that **label** both lanes when comparing (e.g. **Marandi × Ritter**) — prose bridge, not a merged ingest.
+4. **Hybrid** table rows and **Related voices** — **documented** pores (you already know the seam).
+
+**Slow lane or block (do not merge without a seam):**
+
+- **One** ingest line that **smuggles** two named analysts’ claims **without** two cold attributions.
+- **Cross-thread synthesis** promoted to **strong** public copy when **`verify:`** is still **OSINT / analyst-only** — raise tier or narrow the claim.
+- **Legitimacy plane** vs **hard security** plane — keep the **seam** from [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md); do not “solve” in one breath without naming both registers.
+
+**Filter knobs (operator-tunable, no code required):**
+
+| Knob | Effect |
+|------|--------|
+| **Index pairings** | Pre-approved **analyst × analyst** crosses for `batch-analysis` — start here before inventing new pairings. |
+| **`verify:` tier** | **`tier-A`** / **`operator-transcript`** / etc. — controls how far a cross-thread line may travel outside the notebook. |
+| **One primary `thread:` per ingest** | Keeps **drift** and **accuracy** joins clean; secondary voice = **second line** or **batch-analysis**. |
+
+**Optional `verify:` tail tokens** (all **optional** — use when you want grep + intent explicit):
+
+- **`membrane:single`** — this line is **not** inviting pairing; `batch-analysis` should **not** fold it into a multi-thread claim without operator intent.
+- **`membrane:pair`** — **invites** a following `batch-analysis` (same day) that names partners (e.g. after two ingests are captured).
+- **`crosses:<id>+<id>`** — rare; **explicit** authorization when one line **synthesizes** two threads (prefer two ingests + `batch-analysis` instead).
+
+**Future automation (optional):** a small **validator script** could flag “`batch-analysis` mentions thread B but no ingest on this day has `thread:B`” — not required for the filter to work; **pairing discipline** + **git grep** already implement most of the membrane.
+
+---
+
 ## Deprecated thread ids (operator removal)
 
 Removed from the table **2026-04-13** — **git history** still has prior rows; do **not** reuse these ids for new anchors without clearing the deprecation note: `danny-haiphong`, `intervention-media-hawk`, `skyvirginson-lay-catholic`, `kelly-senate-catholic`, `narrative-faith-meme`, `delegation-babysitter`. **Coverage:** **Haiphong**-hosted digests stay linked from **`larry-johnson`** / digest file; **Keane**-class TV, **Kushner**/**Witkoff** narrators, **SkyVirginSon** / **Kelly** / **Milad** lanes → pair under existing rows (**`extension-game`**, **`washington-channel`**, **`islamabad-process`**, **`ROME`** / [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md), **`narrative-escalation`** grep) instead of dedicated ids.
