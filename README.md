@@ -6,6 +6,35 @@
 
 If you come from **OB1-style** memory systems (dashboard, recipes, imports, review queue), the quickest mental model is: Grace-Mar has a **Library**, **Skills**, **Evidence** log, **workflow** lanes, and an **Approval Inbox** (`recursion-gate.md`). Durable Record changes are **gated**, not auto-merged. **[Coming from OB1? Start here →](docs/start-here-ob1-users.md)**
 
+## Claude Code surfaces in Grace-Mar
+
+If you come from **Claude Code** workflows, the fastest mental model is:
+
+- **Skills** → Grace-Mar has portable skills plus skill-adjacent runtime helpers and operator doctrine.
+- **Commands / workflows** → Grace-Mar has explicit operator flows for retrieval, compression, prepared context, review, and export.
+- **Memory** → Grace-Mar separates **runtime memory** from the **canonical Record**; runtime recall can assist, but durable truth stays gated.
+- **Rules / boundaries** → Grace-Mar uses explicit boundary docs, source-of-truth order, authority mapping, and no-merge-without-approval constraints.
+- **Review queue** → durable changes flow through the **Approval Inbox** (`recursion-gate.md`) and related review artifacts, not silent mutation.
+- **Reference state** → the fork’s canonical surfaces are **SELF**, **SELF-LIBRARY**, **SKILLS**, and **EVIDENCE**.
+
+A simple Claude Code-style translation is:
+
+| Claude Code mental model | Grace-Mar equivalent |
+|---|---|
+| Skills | `docs/skills/`, skill-card artifacts, capability doctrine |
+| Commands / orchestrations | retrieval, compression, export, and review scripts under `scripts/` |
+| Memory | `runtime/`, `prepared-context/`, and runtime observation flows |
+| Rules / instructions | boundary docs, authority map, source-of-truth order, runtime-vs-Record rules |
+| Review / approval | `recursion-gate.md`, review queue artifacts, gate-review workflow |
+| Durable state | **SELF**, **SELF-LIBRARY**, **SKILLS**, **EVIDENCE** |
+
+Start here:
+
+- **Architecture overview** → [docs/architecture.md](docs/architecture.md)
+- **Runtime vs Record** → [docs/runtime-vs-record.md](docs/runtime-vs-record.md)
+- **Start-here guide** → [docs/start-here.md](docs/start-here.md)
+- **OB1-style translation** → [docs/start-here-ob1-users.md](docs/start-here-ob1-users.md)
+
 ## Concept
 
 The cognitive fork exists inside the user's mind — their mental model of an individual, made explicit and structured. The **Record** is not a single blob: it has **four first-class surfaces** — **SELF** (identity, including **SELF-KNOWLEDGE** and optional **self-identity** split commitments), **SELF-LIBRARY** (governed **reference** domains, including **CIV-MEM**), **SKILLS** (capability), and **EVIDENCE** (activity and artifacts). Identity and library are **separate**: civilization-scale reference lives in SELF-LIBRARY, not in SELF-KNOWLEDGE. The fork also tracks what the companion can do (skills) and what happened (evidence). Work territories handle planning and execution without redefining the Record. Queryable, evidence-grounded, gated.
