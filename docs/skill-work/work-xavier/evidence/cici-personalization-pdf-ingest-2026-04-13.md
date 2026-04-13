@@ -20,6 +20,18 @@ PDF export of a **Claude Code** session on **[Cici](https://github.com/Xavier-x0
 4. **Stated outcome in transcript:** Agent reports **`docs/personal/intentions-and-preferences.md`** written, **committed and pushed** on branch named **`claude/personalize-cici-instance-YT0ER`** (verify on remote).
 5. **Suggested next steps (in PDF):** Owner merge/review branch → **main**; draft **one proposal** for **`voice/`** surface; add **two lines** to **`CLAUDE.md`** (git-fork context; flag-once-then-follow).
 
+## GitHub verification (checked)
+
+**When:** 2026-04-13 (API: `api.github.com/repos/Xavier-x01/Cici/…`). **Ingest originally did not** call GitHub; this section records a **later** match check.
+
+| Claim (transcript) | Remote state |
+|--------------------|--------------|
+| Branch `claude/personalize-cici-instance-YT0ER` exists | **Yes** — branch present; tip `da49cf1`. |
+| `docs/personal/intentions-and-preferences.md` on that branch | **Yes** — [file on branch](https://github.com/Xavier-x01/Cici/blob/claude/personalize-cici-instance-YT0ER/docs/personal/intentions-and-preferences.md). |
+| Same file on **`main`** | **No** — `docs/personal/` on `main` lists only [`README.md`](https://github.com/Xavier-x01/Cici/tree/main/docs/personal) at this check. |
+
+**Conclusion:** The session outcome **matches** the repo **on the named feature branch** (file pushed there). The PDF’s **owner next step** (“merge into `main`”) is **not** done yet — `main` tip remains the Phase 2 merge (`e16a531`, 2026-04-11) without `intentions-and-preferences.md`. Other transcript items (**`voice/`** proposal, **`CLAUDE.md`** two-line tweak) need spot-check on `main` / branch if still pending.
+
 ## Operator notes
 
 - **Ground truth** for whether files landed = **Cici repo `main` / branch** on GitHub, not this PDF alone.
