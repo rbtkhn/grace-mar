@@ -1,5 +1,17 @@
 # Runtime memory retrieval
 
+## Invocation contract
+
+**Surface type:** workflow  
+**Primary purpose:** retrieve runtime observations progressively before full-detail expansion  
+**When to use:** when you need to recover recent work memory without dumping raw history  
+**Inputs:** lane, query, observation ids, optional timeline window  
+**Outputs:** compact hits, timeline context, expanded observations, prepared context  
+**Mutation scope:** runtime-only  
+**Canonical Record access:** none directly; review handoff only through separate gate staging flow  
+**Typical next step:** `build_context_from_observations.py` or `stage_candidate_from_observations.py`  
+**Do not use for:** treating runtime observations as approved Record truth  
+
 **Normative spec (SSOT)** for the runtime-memory workflow: progressive disclosure order, governance rules, default lane scope ([`runtime/memory_policy.json`](../../runtime/memory_policy.json)), and command surface. Other files under `docs/runtime/` and [`runtime/observations/README.md`](../../runtime/observations/README.md) **supplement** this document (boundaries, safety, or command-specific detail)—avoid restating full doctrine there; link here instead.
 
 Grace-Mar runtime observations support a **progressive disclosure** workflow over `runtime/observations/index.jsonl`:

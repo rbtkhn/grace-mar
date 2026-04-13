@@ -1,5 +1,17 @@
 # Start here (Grace-Mar)
 
+## Invocation contract
+
+**Surface type:** helper  
+**Primary purpose:** plain-language onboarding, audience routing, and links into doctrine vs procedure  
+**When to use:** first open of the repo or when choosing a companion / operator / visitor path  
+**Inputs:** reader role and intent (you pick a path); no CLI arguments  
+**Outputs:** navigation and pointers only — not executable artifacts  
+**Mutation scope:** none (documentation only; does not edit repo files)  
+**Canonical Record access:** read-only pointers to canonical docs; does not read or write SELF, SKILLS, or EVIDENCE bodies  
+**Typical next step:** chosen door section below, [bootstrap/grace-mar-bootstrap.md](../bootstrap/grace-mar-bootstrap.md), or [architecture.md](architecture.md)  
+**Do not use for:** substituting [AGENTS.md](../AGENTS.md), companion approval at the gate, or Record merges  
+
 Plain-language entry point. Precise terms and invariants live in [glossary.md](glossary.md), [conceptual-framework.md](conceptual-framework.md), and [architecture.md](architecture.md).
 
 **Runtime vs durable Record** (what is canonical vs operator scratch): [runtime-vs-record.md](runtime-vs-record.md) · operator map: [operator-mental-model.md](operator-mental-model.md).

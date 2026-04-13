@@ -1,5 +1,17 @@
 # Provenance-backed gate staging
 
+## Invocation contract
+
+**Surface type:** review surface  
+**Primary purpose:** convert selected runtime observations into a provenance-backed gate candidate  
+**When to use:** when multiple runtime observations converge on a durable proposed change  
+**Inputs:** lane, target surface, proposal summary, proposed change, source observation ids  
+**Outputs:** candidate block for `recursion-gate.md` or equivalent review artifact  
+**Mutation scope:** may stage review artifact  
+**Canonical Record access:** indirect only through later approval and merge  
+**Typical next step:** gate review and user decision  
+**Do not use for:** auto-promoting runtime memory into canonical Record  
+
 Runtime observations in `runtime/observations/index.jsonl` are **work memory**, not Record truth. When a companion or operator wants to propose a durable change, they can **stage** a reviewable candidate in `users/<id>/recursion-gate.md` with explicit lineage from selected observations.
 
 This closes the loop: **search → timeline → expansion → staging → Approval Inbox → (optional) merge**.

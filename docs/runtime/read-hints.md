@@ -1,5 +1,17 @@
 # Read hints (soft)
 
+## Invocation contract
+
+**Surface type:** helper  
+**Primary purpose:** suggest when existing runtime observations may make a fresh file read unnecessary  
+**When to use:** before reopening a notebook, file, or familiar topic  
+**Inputs:** lane plus path or query  
+**Outputs:** compact hint list and suggested next retrieval step  
+**Mutation scope:** runtime-only  
+**Canonical Record access:** none  
+**Typical next step:** `lane_timeline.py` or `memory_brief.py`  
+**Do not use for:** blocking operator judgment or replacing a deliberate fresh read  
+
 Grace-Mar’s analogue to “file-read decision” tools elsewhere: **surface relevant runtime observations** before you re-open a large file or notebook. This is a **hinting layer**, not a block — the operator or companion always chooses whether to read again.
 
 **Normative workflow, rules, and policy:** [memory-retrieval.md](memory-retrieval.md). This page covers **`read_hint.py`** and **`memory_brief.py`** only.

@@ -1,5 +1,17 @@
 # Runtime observation expansion and prepared context
 
+## Invocation contract
+
+**Surface type:** workflow  
+**Primary purpose:** expand explicit observation IDs to bounded payloads and optionally assemble a lane-scoped prepared-context Markdown file  
+**When to use:** after search/timeline have narrowed a small set of observations worth full detail or a shareable bundle  
+**Inputs:** repeated `--id` (observation ids), optional `--markdown` / `--json`; for prepared context: `--lane`, `--id`, `--output` path  
+**Outputs:** JSON or Markdown expansion (stdout or file); optional prepared-context artifact under `prepared-context/` (or path you choose)  
+**Mutation scope:** runtime-only  
+**Canonical Record access:** none  
+**Typical next step:** optional `stage_candidate_from_observations.py` if proposing a durable change; otherwise re-open normative retrieval flow  
+**Do not use for:** implicit search across the ledger (use `lane_search` first) or treating prepared context as approved Record truth  
+
 **Supplements** [memory-retrieval.md](memory-retrieval.md) (normative stack and rules). This file covers **expansion and prepared-context commands** only.
 
 Grace-Mar follows a **progressive disclosure** workflow aligned with compact index → timeline → **full expansion** → optional **prepared-context bundle**:

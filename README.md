@@ -35,6 +35,7 @@ Start here:
 - **Start-here guide** → [docs/start-here.md](docs/start-here.md)
 - **OB1-style translation** → [docs/start-here-ob1-users.md](docs/start-here-ob1-users.md)
 - Want to see the system in motion? Read [docs/orchestration/memory-brief-to-gate-demo.md](docs/orchestration/memory-brief-to-gate-demo.md).
+- Want the operator-facing interface map? See [docs/claude-surface-contract.md](docs/claude-surface-contract.md).
 
 ## Concept
 
