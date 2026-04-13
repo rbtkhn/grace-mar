@@ -57,6 +57,7 @@ from recursion_gate_review import split_gate_sections
 from recursion_gate_territory import TERRITORY_WORK_POLITICS, normalize_territory_cli, territory_from_yaml_block
 from identity_library_boundary_rules import collect_ix_a_violations_from_self_md
 from repo_io import CANONICAL_EVIDENCE_BASENAME
+from stage_gate_candidate import PROPOSAL_CLASS_RUNTIME_OBSERVATION
 
 USER_ID = os.getenv("GRACE_MAR_USER_ID", "grace-mar").strip() or "grace-mar"
 PROFILE_DIR = REPO_ROOT / "users" / USER_ID
@@ -518,6 +519,18 @@ def _is_meta_infra_candidate(candidate: dict) -> bool:
     return (_yaml_get(candidate.get("block", ""), "proposal_class") or "").strip().upper() == "META_INFRA"
 
 
+def _is_runtime_observation_proposal(candidate: dict) -> bool:
+    """Runtime observation staging — no automatic Record merge; apply target_surface manually."""
+    return (
+        (_yaml_get(candidate.get("block", ""), "proposal_class") or "").strip().upper()
+        == PROPOSAL_CLASS_RUNTIME_OBSERVATION.upper()
+    )
+
+
+def _skips_record_merge(candidate: dict) -> bool:
+    return _is_meta_infra_candidate(candidate) or _is_runtime_observation_proposal(candidate)
+
+
 def _validate_candidate_before_merge(candidate: dict, min_evidence_tier: int) -> tuple[bool, str]:
     block = candidate.get("block", "")
     summary = (candidate.get("summary") or "").strip()
@@ -584,6 +597,8 @@ def _validate_lifecycle_for_merge(approved: list[dict]) -> tuple[bool, str]:
         sid = (c.get("session_id") or "").strip()
         ops = (c.get("operator_source") or "").strip()
         if _is_meta_infra_candidate(c):
+            continue
+        if _is_runtime_observation_proposal(c):
             continue
         if oid not in ALLOWED_ORIGIN:
             return False, f"{c['id']}: origin must be one of {sorted(ALLOWED_ORIGIN)}"
@@ -1153,6 +1168,14 @@ def main() -> None:
                 "apply infra patch manually (see docs/meta-class-proposals.md)."
             )
             continue
+        if _is_runtime_observation_proposal(c):
+            blocks_to_move.append(c["full_match"])
+            applied_candidates.append((c, "RUNTIME-OBSERVATION", "RUNTIME-OBSERVATION"))
+            print(
+                f"[RUNTIME_OBSERVATION_PROPOSAL] {c['id']}: moving to Processed without SELF/EVIDENCE/prompt merge — "
+                "apply target_surface change manually from YAML (see docs/runtime/provenance-staging.md)."
+            )
+            continue
         candidate_ok, candidate_reason = _validate_candidate_before_merge(c, min_tier)
         if not candidate_ok:
             _emit_validation_failure(c["id"], candidate_reason, args.approved_by.strip())
@@ -1297,10 +1320,10 @@ def main() -> None:
         after_ok, after_checksum = _compute_fork_checksum()
         if not after_ok:
             raise RuntimeError(f"checksum post-merge failed: {after_checksum}")
-        all_meta = applied_candidates and all(
-            _is_meta_infra_candidate(c) for c, _act, _ix in applied_candidates
+        all_skip_merge = applied_candidates and all(
+            _skips_record_merge(c) for c, _act, _ix in applied_candidates
         )
-        if pre_checksum == after_checksum and not all_meta:
+        if pre_checksum == after_checksum and not all_skip_merge:
             raise RuntimeError("checksum unchanged after merge; expected state change")
 
         for c, act_id, _ix in applied_candidates:

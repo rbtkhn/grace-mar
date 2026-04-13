@@ -18,7 +18,7 @@ Grace-Mar deliberately decomposes these functions at the individual level to pre
 
 ## Routing
 
-Handled primarily by observation agents (Telegram/WeChat bots) and the LLM analyst. Raw signals are detected, structured into the three-dimension mind model (IX-A Knowledge, IX-B Curiosity, IX-C Personality), and staged as candidate proposals in `recursion-gate.md`. This layer is highly automatable.
+Handled primarily by observation agents (Telegram/WeChat bots) and the LLM analyst. Raw signals are detected, structured into the three-dimension mind model (IX-A Knowledge, IX-B Curiosity, IX-C Personality), and staged as candidate proposals in `recursion-gate.md`. This layer is highly automatable. Operator-side runtime observations can also be staged with explicit lineage via `scripts/runtime/stage_candidate_from_observations.py` (see [docs/runtime/provenance-staging.md](runtime/provenance-staging.md)).
 
 ## Sensemaking
 

@@ -107,6 +107,9 @@ runtime/autonomy/shadow_decisions.jsonl
 # Operator/runtime observability feeds (lane scope, continuity blocks)
 runtime/observability/*.jsonl
 
+# Runtime observation ledger (append-only; operator-local — see runtime/observations/README.md)
+runtime/observations/index.jsonl
+
 # Local runtime/export noise
 users/*/user.md
 users/*/harness-events.jsonl
@@ -130,6 +133,9 @@ research/exploration/autogen-deliberation/output/*.md
 # work-jiang — blind forward-chain scratch (bundle + prediction drafts; see forward_chain_blind_bundle.py)
 research/external/work-jiang/prediction-tracking/scratch/*
 !research/external/work-jiang/prediction-tracking/scratch/README.md
+
+# Prepared context — operator-generated memory brief (optional; scripts/runtime/memory_brief.py --output)
+prepared-context/memory-brief.md
 
 # Misc
 *.pem

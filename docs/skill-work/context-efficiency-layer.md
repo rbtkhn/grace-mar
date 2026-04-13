@@ -49,6 +49,7 @@ See [context-compaction-protocol.md](context-compaction-protocol.md) for concret
 - **[`scripts/session_brief.py`](../../scripts/session_brief.py)** — `--minimal`, `--compact` (recovery-first); optional **`--active-lane`**; tunable via `session_brief.json`.
 - **[`scripts/generate_wap_daily_brief.py`](../../scripts/generate_wap_daily_brief.py)** (via `generate_work_politics_daily_brief.py`) — optional **§7** CEL footer on dated daily briefs; toggle via [`daily_brief.json`](../../config/context_budgets/daily_brief.json).
 - **[`scripts/operator_daily_warmup.py`](../../scripts/operator_daily_warmup.py)** — uses `coffee` budget.
+- **Runtime observation ledger** — index → timeline → expand over `runtime/observations/index.jsonl`; see [memory-retrieval.md](../../docs/runtime/memory-retrieval.md) and `scripts/runtime/lane_search.py`.
 
 ---
 

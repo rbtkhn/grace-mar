@@ -36,6 +36,7 @@ These change only through the **gated pipeline** and companion-approved merge ([
 | **Skill cards** | `artifacts/skill-cards/*.json` from [`build_skill_cards.py`](../scripts/build_skill_cards.py) | Derived from portable skills; [spec](skills/skill-card-spec.md) |
 | **Active lane compression** | `artifacts/context/active-lane-*.md` from [`compress_active_lane.py`](../scripts/compress_active_lane.py) | Points back to lane README and `self-work.md`; [doc](skill-work/active-lane-compression.md) |
 | **Vector index** | `users/<id>/.chroma` | Retrieval aid; rebuild from Record |
+| **Runtime observations ledger** | `runtime/observations/index.jsonl` | Append-only work-lane notes; [README](../runtime/observations/README.md); not Record |
 
 ---
 

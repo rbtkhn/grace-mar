@@ -14,7 +14,9 @@
 
 **Suggested shape** (example, not a strict schema): optional source token (`X`, `YT`, etc.) **|** short **gist** (claim + why it matters) **|** URL, with an optional `verify:` tail for epistemic flags (e.g. `verify:OSINT-unverified`).
 
-**Commentator threads (stable ids):** For recurring analysts and **`batch-analysis`** pairings, see [strategy-commentator-threads.md](strategy-commentator-threads.md) — optional **`thread:<id>`** in the **`verify:`** tail (e.g. `verify:… | thread:extension-game`). **Crossing rules** (what may mix across threads): **Crossing filters** section in that file; optional tails **`membrane:single`**, **`membrane:pair`**, **`crosses:<id>+<id>`**.
+**Commentator threads (stable ids):** For recurring analysts and **`batch-analysis`** pairings, see [strategy-commentator-threads.md](strategy-commentator-threads.md) — optional **`thread:<id>`** in the **`verify:`** tail (e.g. `verify:… | thread:extension-game`). **Crossing rules** (what may mix across threads): **Crossing filters** section in that file; optional tails **`membrane:single`**, **`membrane:pair`**, **`crosses:<id>+<id>`**. **Recommended one-liners** (e.g. **Pape** vs **Barnes** domestic plane): **Distinctive lane shorthands** in that same file.
+
+**No persistent thread (normal):** If the ingest is for **that session’s** analysis only — not a voice you plan to **track** week-to-week — **leave off** **`thread:`**. Keep **cold**, **hook**, **URL**, **`verify:`**, and **topic** tags (`IRAN`, `ROME`, …). Add **`membrane:single`** when you want grep to show **“don’t fold this into multi-thread batch claims by default.”** Full wording: **Ephemeral / one-shot ingests** in [strategy-commentator-threads.md](strategy-commentator-threads.md).
 
 **Optional grep tags (primary threads):** When an ingest is part of the **Rome** thread, you may prefix the **cold** clause with **`ROME`** or **`LeoXIV`**. When it is part of the **JD Vance / VP** thread, use **`JDVance`** or **`VANCE`**. When it is part of the **Putin / Kremlin** thread, use **`PUTIN`** or **`KREMLIN`**. When it is part of the **PRC / Beijing** thread, use **`PRC`**, **`CN`**, or **`CHINA`**. When it is part of the **IRI / Tehran** thread, use **`IRAN`**, **`IRI`**, or **`TEHRAN`** (e.g. `cold: IRI | MFA statement — …`). When an ingest flags **narrative escalation** (register shift from empirical / wire-tractable claims toward moralized or metaphysical frames—e.g. spiritual-warfare language on a political still—see [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) § *Narrative escalation*), prefix the **cold** clause with **`narrative-escalation`**. **Retroactive spine (Trump ↔ Christianity / papacy / religion, 2016→):** [trump-religion-papacy-arc.md](trump-religion-papacy-arc.md). Example: `rg 'IRAN|IRI|TEHRAN|PRC|CN|CHINA|PUTIN|KREMLIN|JDVance|VANCE|ROME|LeoXIV|narrative-escalation'`.
 
@@ -37,7 +39,7 @@
 - `X | cold: @barnes_law quote-tweet Disclose.tv summarizing executive TS post on Hormuz blockade + toll interdiction // hook: third domestic pole vs op-ed “card” vs spiral satire; pin status URL | https://x.com/barnes_law | verify:…`
 - `wire | cold: Reuters Islamabad talks pause, disagreements remain // hook: aligns §1e window; stack with Tasnim fa | https://… | verify:…`
 
-**Live demo (scratch):** Under the append line for **2026-04-12**, the **Parsi**, **Solomon/Martenson**, and **Barnes** ingests are refactored to **cold // hook** as in-repo pattern examples.
+**Live demo (scratch):** Under the append line for **2026-04-12**, the **Parsi**, **JTN/commentariat domestic fork** (historical X lines, not indexed as `hormuz-story-fork` after **2026-04-14**), and **Barnes** ingests are refactored to **cold // hook** as in-repo pattern examples.
 
 **Assistant default:** Offer **cold // hook** when the operator’s capture is **Judgment-sensitive** or **multi-chain**; otherwise **single gist** is fine.
 
@@ -78,7 +80,7 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 _(Append below this line during the day.)_
 
-**Folded (2026-04-13)** → [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **`## 2026-04-13`**. **Davis × Freeman** + **Davis × Mearsheimer** one-liners / `batch-analysis` merged into **Signal** / **Judgment** / **Links** / **Open**; **git history** keeps paste-grade lines.
+**Folded (2026-04-13)** — Scratch lines (**Judging Freedom** × **Larry Johnson**; **Davis Deep Dive** × **Ritter**; **`batch-analysis`** tri-mind) merged into [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **`## 2026-04-13`** (**Signal** / **Judgment** § **Mercouris × Johnson**, § **Ritter ego reduction vs structural fold**). Verbatim paste-grade backticks live in **git history** for this file.
 
 ### Retained reference (2026-04-13 fold) — paste-grade; not Record
 
@@ -122,7 +124,7 @@ _(Append below this line during the day.)_
 
 ---
 
-**Prior scratch — 2026-04-12** _(kept for fold reference; superseded by accumulator date above for “today” pointer)_
+**Prior scratch — 2026-04-12** _(kept for fold reference; superseded by accumulator date above for “today” pointer)_ — **Index:** **`hormuz-story-fork`** (Solomon / Martenson) **deprecated** **2026-04-14**; lines below are **archive** — use **`hormuz-domestic`** + **`batch-analysis`** for new domestic Hormuz forks.
 
 `X | cold: @tparsi — CNN segment: Lebanon as sticking point (U.S. must rein in Israel); floats nuclear deadlock as possible mask; nested quote chain includes AR-sourced claim of phased Lebanon ceasefire (Beirut/suburbs first) vs full stop // hook: analyst overlay for notebook Lebanon fork; pairs §1e Islamabad thread + native triangulation | https://x.com/tparsi | verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary`
 

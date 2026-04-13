@@ -126,6 +126,12 @@ flowchart LR
 
 ---
 
+## Optional runtime provenance (YAML extension)
+
+Candidates may include optional keys linking **runtime observations** (e.g. `source_observation_ids`, `timeline_anchor`, `lane_origin`) when staged via `scripts/runtime/stage_candidate_from_observations.py`. These keys **do not** change merge authority; they document lineage for review. Schema sketch: `schema-registry/recursion-gate-provenance.v1.json`.
+
+---
+
 ## See also
 
 - [gate-vs-change-review.md](gate-vs-change-review.md) — default gate vs material escalation

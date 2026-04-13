@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/recursion-gate-candidate.schema.json",
+  "title": "Grace-Mar runtime observation gate staging payload",
+  "description": "Validates the structured payload before emitting YAML into recursion-gate.md. On-disk gate id remains CANDIDATE-NNNN with status: pending.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "gate_candidate_id",
+    "created_at",
+    "candidate_type",
+    "target_surface",
+    "proposal_summary",
+    "proposed_change",
+    "source_observation_ids",
+    "lane_origin",
+    "status"
+  ],
+  "properties": {
+    "gate_candidate_id": {
+      "type": "string",
+      "pattern": "^CANDIDATE-[0-9]{4}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "candidate_type": {
+      "type": "string",
+      "enum": [
+        "identity_update",
+        "library_update",
+        "skill_update",
+        "evidence_link",
+        "boundary_rule",
+        "notebook_promotion",
+        "correction",
+        "other"
+      ]
+    },
+    "target_surface": {
+      "type": "string",
+      "enum": ["SELF", "SELF-LIBRARY", "SKILLS", "EVIDENCE", "OTHER"]
+    },
+    "target_path": {
+      "type": ["string", "null"]
+    },
+    "proposal_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 600
+    },
+    "proposed_change": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "source_observation_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "timeline_anchor": {
+      "type": ["string", "null"]
+    },
+    "lane_origin": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supporting_evidence_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "contradiction_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "why_now": {
+      "type": ["string", "null"],
+      "maxLength": 1200
+    },
+    "review_notes": {
+      "type": ["string", "null"],
+      "maxLength": 2000
+    },
+    "status": {
+      "type": "string",
+      "const": "pending"
+    }
+  }
+}

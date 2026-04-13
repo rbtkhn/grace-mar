@@ -25,6 +25,7 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
+from typing import Any
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCORE_SCRIPT = REPO_ROOT / "scripts" / "score_gate_candidates.py"
@@ -41,6 +42,9 @@ except ImportError:
     from scripts.recursion_gate_territory import TERRITORY_WORK_POLITICS
 
 DEFAULT_USER = "grace-mar"
+
+# Merge via process_approved_candidates.py moves block to Processed without SELF/EVIDENCE/prompt merge.
+PROPOSAL_CLASS_RUNTIME_OBSERVATION = "RUNTIME_OBSERVATION_PROPOSAL"
 
 _STOPWORDS = frozenset({
     "a", "an", "and", "are", "as", "be", "because", "for", "from", "has",
@@ -122,6 +126,69 @@ def _literal_block(s: str, base_indent: str = "    ") -> str:
     return "\n".join(lines) + "\n"
 
 
+def _yaml_scalar_or_literal(key: str, value: str | None, *, max_inline: int = 240) -> list[str]:
+    """Emit `key: value` as quoted scalar or block literal."""
+    if value is None or not str(value).strip():
+        return [f"{key}: null"]
+    s = str(value).strip()
+    if "\n" in s or len(s) > max_inline:
+        lines = [f"{key}: |"]
+        lines.append(_literal_block(s, "  ").rstrip("\n"))
+        return lines
+    return [f"{key}: {_yaml_double_quoted(s)}"]
+
+
+def _runtime_work_yaml_lines(props: dict[str, Any]) -> list[str]:
+    """YAML for PR4 work proposal (candidate_type, target_surface, proposed_change, …)."""
+    lines: list[str] = []
+    lines.append(f"candidate_type: {props['candidate_type']}")
+    lines.append(f"target_surface: {props['target_surface']}")
+    tp = props.get("target_path")
+    if tp is None or (isinstance(tp, str) and not tp.strip()):
+        lines.append("target_path: null")
+    else:
+        lines.append(f"target_path: {_yaml_double_quoted(str(tp).strip())}")
+    lines.extend(_yaml_scalar_or_literal("proposed_change", props.get("proposed_change"), max_inline=4000))
+    conf = props.get("confidence")
+    if conf is None:
+        lines.append("confidence: null")
+    else:
+        lines.append(f"confidence: {float(conf)}")
+    lines.extend(_yaml_scalar_or_literal("why_now", props.get("why_now")))
+    lines.extend(_yaml_scalar_or_literal("review_notes", props.get("review_notes")))
+    return lines
+
+
+def _provenance_yaml_lines(provenance: dict[str, Any]) -> list[str]:
+    """Optional RECURSION-GATE YAML extension for runtime observation lineage (non-breaking)."""
+    out: list[str] = []
+    oids = provenance.get("source_observation_ids") or []
+    if oids:
+        out.append("source_observation_ids:")
+        for oid in oids:
+            out.append(f"  - {_yaml_double_quoted(str(oid))}")
+    if provenance.get("timeline_anchor"):
+        out.append(f"timeline_anchor: {_yaml_double_quoted(str(provenance['timeline_anchor']))}")
+    if provenance.get("compression_artifact_id"):
+        out.append(
+            "compression_artifact_id: "
+            + _yaml_double_quoted(str(provenance["compression_artifact_id"]))
+        )
+    if provenance.get("lane_origin"):
+        out.append(f"lane_origin: {_yaml_double_quoted(str(provenance['lane_origin']))}")
+    srefs = provenance.get("supporting_evidence_refs") or []
+    if srefs:
+        out.append("supporting_evidence_refs:")
+        for r in srefs:
+            out.append(f"  - {_yaml_double_quoted(str(r))}")
+    crefs = provenance.get("contradiction_refs") or []
+    if crefs:
+        out.append("contradiction_refs:")
+        for r in crefs:
+            out.append(f"  - {_yaml_double_quoted(str(r))}")
+    return out
+
+
 def _slug_title(text: str, max_len: int = 56) -> str:
     one = " ".join(text.splitlines()[:1]).strip() or "staged paste"
     one = re.sub(r"\s+", " ", one)
@@ -143,12 +210,24 @@ def build_block(
     proposal_class: str | None = None,
     convergence: dict[str, object] | None = None,
     warrant: str | None = None,
+    provenance: dict[str, Any] | None = None,
+    runtime_work_proposal: dict[str, Any] | None = None,
 ) -> str:
     summary_one = summary.strip().replace("\n", " ")[:500]
     if len(summary_one) > 200:
         summary_one = summary_one[:197] + "..."
 
     op_literal = _literal_block(body.rstrip("\n"))
+
+    effective_proposal_class = (
+        PROPOSAL_CLASS_RUNTIME_OBSERVATION if runtime_work_proposal is not None else proposal_class
+    )
+    signal_type = "operator_runtime_observation_stage" if runtime_work_proposal is not None else "operator_paste"
+    source_line = (
+        "source: operator — scripts/stage_candidate_from_observations.py"
+        if runtime_work_proposal is not None
+        else "source: operator — scripts/stage_gate_candidate.py"
+    )
 
     lines = [
         f"### {candidate_id} ({title})",
@@ -160,11 +239,11 @@ def build_block(
     ]
     if territory:
         lines.append(f"territory: {territory}")
-    if proposal_class:
-        lines.append(f"proposal_class: {proposal_class}")
+    if effective_proposal_class:
+        lines.append(f"proposal_class: {effective_proposal_class}")
     lines.extend(
         [
-            "source: operator — scripts/stage_gate_candidate.py",
+            source_line,
             "source_exchange:",
             "  operator: |",
         ]
@@ -181,7 +260,7 @@ def build_block(
     lines.extend(
         [
             f"mind_category: {mind_category}",
-            "signal_type: operator_paste",
+            f"signal_type: {signal_type}",
             "priority_score: 3",
             f"summary: {_yaml_double_quoted(summary_one)}",
         ]
@@ -189,16 +268,31 @@ def build_block(
     lines.extend(convergence_lines)
     if warrant:
         lines.append(f"warrant: {_yaml_double_quoted(warrant.strip()[:300])}")
-    lines.extend(
-        [
-            "profile_target: IX-A. KNOWLEDGE",
-            "suggested_entry: \"See source_exchange.operator (staged paste).\"",
-            "prompt_section: YOUR KNOWLEDGE",
-            "prompt_addition: none",
-            "```",
-            "",
-        ]
-    )
+    if provenance:
+        lines.extend(_provenance_yaml_lines(provenance))
+    if runtime_work_proposal:
+        lines.extend(_runtime_work_yaml_lines(runtime_work_proposal))
+        se = (runtime_work_proposal.get("proposal_summary") or summary_one).strip()
+        if len(se) > 500:
+            se = se[:497] + "..."
+        lines.extend(
+            [
+                "profile_target: WORK — manual apply (see proposed_change and target_surface).",
+                f"suggested_entry: {_yaml_double_quoted(se)}",
+                "prompt_section: OPERATOR_WORK",
+                "prompt_addition: none",
+            ]
+        )
+    else:
+        lines.extend(
+            [
+                "profile_target: IX-A. KNOWLEDGE",
+                "suggested_entry: \"See source_exchange.operator (staged paste).\"",
+                "prompt_section: YOUR KNOWLEDGE",
+                "prompt_addition: none",
+            ]
+        )
+    lines.extend(["```", ""])
     return "\n".join(lines)
 
 

@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/runtime-observation.v1.json",
+  "title": "Grace-Mar Runtime Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "obs_id",
+    "timestamp",
+    "lane",
+    "source_kind",
+    "title",
+    "summary",
+    "record_mutation_candidate"
+  ],
+  "properties": {
+    "obs_id": {
+      "type": "string",
+      "pattern": "^obs_[0-9]{8}T[0-9]{6}Z_[a-z0-9]{8}$"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lane": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_kind": {
+      "type": "string",
+      "enum": [
+        "manual_note",
+        "notebook_entry",
+        "compression",
+        "evidence_ref",
+        "agent_output",
+        "research_note",
+        "candidate_derivation"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 180
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200
+    },
+    "source_path": {
+      "type": ["string", "null"]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "confidence": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "record_mutation_candidate": {
+      "type": "boolean"
+    },
+    "contradiction_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "maxLength": 2000
+    }
+  }
+}
