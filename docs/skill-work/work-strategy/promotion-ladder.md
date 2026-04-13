@@ -24,3 +24,19 @@
 | **6. Archived / resolved** | Watch closed; decision marked resolved; optional pointer in Open. | STRATEGY.md, decision file `Status` |
 
 Promotion **up** the ladder is intentional and logged; demotion or retirement follows [weak-signals.md](weak-signals.md) and [watch-promotion-rules.md](watch-promotion-rules.md). Moving from **0 → 1** is the normal **inbox fold** (not a separate “promotion” ceremony unless you treat it that way in session notes).
+
+## Forecast-informed promotion
+
+A forecast artifact may contribute to promotion inside work-strategy, but it may not promote itself.
+
+Good pattern:
+
+- notebook note
+- forecast reference
+- watch entry
+- decision point if needed
+- downstream proposal only if separately stated and reviewed
+
+Rule: A forecast is an input to judgment, not a substitute for judgment.
+
+See [work-forecast strategy integration](../work-forecast/strategy-integration.md).

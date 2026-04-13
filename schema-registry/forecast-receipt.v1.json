@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "schema-registry/forecast-receipt.v1.json",
+  "title": "Forecast Receipt v1",
+  "type": "object",
+  "required": [
+    "receipt_type",
+    "version",
+    "timestamp",
+    "lane",
+    "series_name",
+    "artifact_path",
+    "status"
+  ],
+  "properties": {
+    "receipt_type": {
+      "type": "string",
+      "const": "forecast_run"
+    },
+    "version": {
+      "type": "string",
+      "const": "v1"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "lane": {
+      "type": "string",
+      "const": "work-forecast"
+    },
+    "series_name": {
+      "type": "string"
+    },
+    "artifact_path": {
+      "type": "string"
+    },
+    "summary_path": {
+      "type": "string"
+    },
+    "source_path": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string"
+    },
+    "horizon": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["completed", "failed"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

@@ -79,6 +79,8 @@ artifacts/context/*
 !artifacts/context/.gitkeep
 # Rejection routing feedback (rebuildable; scripts/analyze_rejection_feedback.py)
 artifacts/rejection_analysis.json
+# Forecast observability report (rebuildable; scripts/build_forecast_observability_report.py)
+artifacts/forecast/observability-report.md
 
 # Large companion artifacts (optional local-only; use Git LFS if committed)
 # users/*/artifacts/**/*.png

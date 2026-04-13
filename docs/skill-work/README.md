@@ -16,6 +16,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 | **[work-dev](work-dev/)** | Empty template module for operations/reliability surfaces; populated from seed survey + early onboarding signals and used in daily good morning. |
 | **[self-work/sync-pack](self-work/sync-pack/README.md)** | Optional template utility: manual, review-first territory sync module (contract + log + optional daily surface). |
 | **[work-cadence](work-cadence/README.md)** | Daily cadence architecture: `coffee` (morning orientation) + `dream` (night consolidation), handoff contract, runner modes, extension points for instance-specific rituals. |
+| **[work-forecast](work-forecast/README.md)** | Governed numeric / cadence forecasting — WORK artifacts, baselines, receipts; not Record truth. |
 
 ---
 

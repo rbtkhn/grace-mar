@@ -24,3 +24,17 @@ See [weak-signals.md](weak-signals.md) for weak-signal promotion and retirement.
 ## Machine-readable policy
 
 See [promotion-policy.json](promotion-policy.json) for stage ids and allowed transitions (v0).
+
+## Forecast-based watch opening
+
+A forecast artifact may justify opening or strengthening a watch when:
+
+- the horizon is relevant to current planning
+- assumptions are explicit
+- invalidators are explicit
+- at least one benchmark or baseline comparison exists, or the absence of benchmarking is stated clearly
+
+A forecast artifact alone does not justify a Record claim.
+It justifies attention, monitoring, and possibly a decision point.
+
+See [work-forecast](../work-forecast/README.md) and [forecast-watch-log](strategy-notebook/forecast-watch-log.md).

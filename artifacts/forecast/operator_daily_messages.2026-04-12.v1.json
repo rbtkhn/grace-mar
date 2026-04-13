@@ -1,0 +1,147 @@
+{
+  "artifact_type": "forecast_artifact",
+  "version": "v1",
+  "series_name": "operator_daily_messages",
+  "series_description": "Count of operator messages per day.",
+  "time_unit": "day",
+  "history_window": {
+    "start": "2026-03-01",
+    "end": "2026-04-11",
+    "n_observations": 42
+  },
+  "forecast_horizon": 7,
+  "method": {
+    "name": "seasonal_naive",
+    "version": "v1",
+    "config": {
+      "available_methods": [
+        "last_value",
+        "moving_average",
+        "linear_trend",
+        "seasonal_naive"
+      ]
+    }
+  },
+  "point_forecast": [
+    16.0,
+    19.0,
+    18.0,
+    20.0,
+    17.0,
+    15.0,
+    14.0
+  ],
+  "quantile_forecast": {
+    "0.1": [
+      13.9384,
+      16.9384,
+      15.9384,
+      17.9384,
+      14.9384,
+      12.9384,
+      11.9384
+    ],
+    "0.5": [
+      16.0,
+      19.0,
+      18.0,
+      20.0,
+      17.0,
+      15.0,
+      14.0
+    ],
+    "0.9": [
+      18.0616,
+      21.0616,
+      20.0616,
+      22.0616,
+      19.0616,
+      17.0616,
+      16.0616
+    ]
+  },
+  "covariates": [],
+  "benchmark_results": [
+    {
+      "baseline_name": "last_value",
+      "mae": 4.0,
+      "rmse": 4.4721,
+      "mape": 21.2407,
+      "notes": "Baseline backtest on holdout window."
+    },
+    {
+      "baseline_name": "moving_average",
+      "mae": 1.8571,
+      "rmse": 2.2361,
+      "mape": 9.959,
+      "notes": "Baseline backtest on holdout window."
+    },
+    {
+      "baseline_name": "linear_trend",
+      "mae": 1.8605,
+      "rmse": 2.2056,
+      "mape": 10.2546,
+      "notes": "Baseline backtest on holdout window."
+    },
+    {
+      "baseline_name": "seasonal_naive",
+      "mae": 1.0,
+      "rmse": 1.0,
+      "mape": 5.6257,
+      "notes": "Baseline backtest on holdout window."
+    }
+  ],
+  "assumptions": [
+    "Recent pattern remains informative over the forecast horizon.",
+    "No major regime change is expected during the forecast horizon."
+  ],
+  "invalidators": [
+    "Major schedule or workflow shift",
+    "Data collection breakage or missing observations",
+    "External shock that changes the recent pattern"
+  ],
+  "operator_note": "Baseline forecast artifact for WORK-layer planning use only. Not a Record fact.",
+  "receipt_id": "forecast_run.operator_daily_messages.2026-04-13T02-33-52Z",
+  "source_artifacts": [
+    "examples/diagnostics/sample-forecast-series.csv"
+  ],
+  "candidate_methods": {
+    "last_value": [
+      14.0,
+      14.0,
+      14.0,
+      14.0,
+      14.0,
+      14.0,
+      14.0
+    ],
+    "moving_average": [
+      17.0,
+      17.0,
+      17.0,
+      17.0,
+      17.0,
+      17.0,
+      17.0
+    ],
+    "linear_trend": [
+      17.0924,
+      17.2087,
+      17.3249,
+      17.4412,
+      17.5574,
+      17.6737,
+      17.7899
+    ],
+    "seasonal_naive": [
+      16.0,
+      19.0,
+      18.0,
+      20.0,
+      17.0,
+      15.0,
+      14.0
+    ]
+  },
+  "forecast_generated_at": "2026-04-13T02:33:52+00:00"
+}

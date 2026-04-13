@@ -1,0 +1,14 @@
+{
+  "receipt_type": "forecast_run",
+  "version": "v1",
+  "timestamp": "2026-04-13T02:33:52+00:00",
+  "lane": "work-forecast",
+  "series_name": "operator_daily_messages",
+  "artifact_path": "artifacts/forecast/operator_daily_messages.2026-04-12.v1.json",
+  "summary_path": "artifacts/forecast/operator_daily_messages.2026-04-12.v1.summary.md",
+  "source_path": "examples/diagnostics/sample-forecast-series.csv",
+  "method": "seasonal_naive",
+  "horizon": 7,
+  "status": "completed",
+  "notes": "Baseline forecast run completed successfully."
+}

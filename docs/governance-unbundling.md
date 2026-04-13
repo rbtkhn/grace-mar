@@ -2,7 +2,7 @@
 
 **Purpose:** Name how **routing**, **sensemaking**, and **accountability** split in companion-self style systems so agents and contributors know what may be automated versus what stays human-gated.
 
-**Related:** [conceptual-framework.md](conceptual-framework.md), [identity-fork-protocol.md](identity-fork-protocol.md) (Sovereign Merge Rule), [glossary.md](glossary.md) (Approval Inbox).
+**Related:** [conceptual-framework.md](conceptual-framework.md), [identity-fork-protocol.md](identity-fork-protocol.md) (Sovereign Merge Rule), [glossary.md](glossary.md) (Approval Inbox). Numeric series forecasting (WORK lane): [docs/skill-work/work-forecast/README.md](skill-work/work-forecast/README.md).
 
 ---
 

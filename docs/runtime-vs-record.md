@@ -46,6 +46,31 @@ These change only through the **gated pipeline** and companion-approved merge ([
 
 ---
 
+## Forecasting boundary
+
+Forecast outputs belong to WORK unless and until a human separately stages a downstream conclusion for review.
+A forecast artifact is not a Record fact.
+It is a provisional planning object with explicit assumptions, invalidators, and uncertainty.
+See [docs/skill-work/work-forecast/forecast-protocol.md](skill-work/work-forecast/forecast-protocol.md).
+
+## Forecast receipts and observability
+
+Forecast artifacts, forecast receipts, and forecast observability reports belong to WORK.
+They are rebuildable legibility surfaces, not Record truth.
+
+A forecast may inform planning.
+A forecast may not directly redefine identity, memory, or canonical claims.
+
+## Forecast references inside work-strategy
+
+Forecast artifacts may be cited inside watches, notebooks, and decision points in WORK.
+That citation does not make the forecast a Record fact.
+
+Forecasting belongs to planning and judgment support.
+Record changes still require separate staging and approval.
+
+---
+
 ## Where to read next
 
 - [conceptual-framework.md](conceptual-framework.md) — triad and knowledge boundary  
