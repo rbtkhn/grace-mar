@@ -34,7 +34,7 @@ Output path: `research/repos/civilization_memory/.cache/upstream_index.json` (gi
 
 **GitHub Actions:** CI clones upstream at a **pinned SHA** (`docs/ci/civilization_memory_upstream.env`) before `scripts/test_civmem_tri_frame_routing.py` — see `scripts/ci/clone_civilization_memory.sh` and [`docs/ci/README.md`](../../../ci/README.md).
 
-**Phase-4 helpers:** `python3 scripts/suggest_civ_mem_from_relevance.py [ENTITY]` — buckets **Primary MEMs** from `MEM–RELEVANCE–ENTITY` by tri-frame heuristic; `bash scripts/check_civ_mem_upstream_pin.sh` — local `HEAD` vs CI pin. Daily brief §**1b-civ** (when `civ_mem_entity_hint` is set) links these.
+**Phase-4 helpers:** `python3 scripts/suggest_civ_mem_from_relevance.py [ENTITY]` — buckets **Primary MEMs** from `MEM–RELEVANCE–ENTITY` by tri-frame heuristic (fails if that file is missing — e.g. **ROME** at some pins; use [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md)); `bash scripts/check_civ_mem_upstream_pin.sh` — local `HEAD` vs CI pin. Daily brief §**1b-civ** (when `civ_mem_entity_hint` is set) links these.
 
 ---
 

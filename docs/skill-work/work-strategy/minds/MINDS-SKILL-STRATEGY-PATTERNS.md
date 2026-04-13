@@ -41,6 +41,8 @@ If `research/repos/civilization_memory` is present:
 
 **Grace-Mar canonical** mind bodies: [`strategy-notebook/minds/`](../strategy-notebook/minds/) (always).
 
+**Strategy pass × civ-mem:** After frontier read (and tier-A verify for disputed current facts), `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` when `MEM–RELEVANCE–<ENTITY>.md` exists; cite MEM paths in **`### Links`**. Tri-frame bridge: [CIV-MEM-TRI-FRAME-ROUTING.md](CIV-MEM-TRI-FRAME-ROUTING.md). Trump–Leo Barnes training sheet: [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md).
+
 ### Work-strategy mind stubs (entry points)
 
 - `docs/skill-work/work-strategy/minds/mind-mercouris.md`
@@ -204,6 +206,7 @@ Promote only when one of these is true:
 - **VP / U.S. executive channel (when JD Vance is in play):** **White House** / **wire** **attributed** lines on **role** (delegation lead, coalition framing) — **not** a substitute for **Tehran** or **field** facts; label explicitly when **§1e** / **Vance** copy sits the same day as **Pentagon**, **State**, or **allied** readouts that **diverge** on **scope** ([daily-brief-jd-vance-watch.md](../daily-brief-jd-vance-watch.md), [NOTEBOOK-PREFERENCES.md](../strategy-notebook/NOTEBOOK-PREFERENCES.md)).
 - **Kremlin / Russia executive channel (when Putin is in play):** **Kremlin.ru** / **wire** **attributed** **quotes** and **signaling** — **not** a substitute for **Ukrainian**, **Iranian**, or **battlefield** **facts**; label explicitly when **§1d** / **Putin** copy sits the same day as **NATO**, **White House**, or **Tehran** lines that **diverge** on **terms** or **scope** ([daily-brief-putin-watch.md](../daily-brief-putin-watch.md), [NOTEBOOK-PREFERENCES.md](../strategy-notebook/NOTEBOOK-PREFERENCES.md)).
 - **PRC / MFA channel (when Beijing is in play):** **MFA** / **state** **English** pages and **attributed** **lines** — **not** a substitute for **U.S.**, **Taiwan**, or **partner** **facts** on the same story; label explicitly when **§1g** / **PRC** copy sits the same day as **White House**, **allied**, or **Western** “China” **analysis** that **diverge** on **terms** or **scope** ([daily-brief-prc-watch.md](../daily-brief-prc-watch.md), [NOTEBOOK-PREFERENCES.md](../strategy-notebook/NOTEBOOK-PREFERENCES.md)).
+- **IRI / Tehran state channel (when Iran is in play):** **MFA** / **IRNA** / **presidency** **attributed** **lines** — **not** a substitute for **Islamabad** **gap-matrix** **structure** alone; label explicitly when **§1h** / **IRI** copy sits the same day as **U.S.** **executive**, **allied**, or **Western** “Iran” **digest** that **diverge** on **pause**, **Hormuz**, or **nuclear** **scope** ([daily-brief-iran-watch.md](../daily-brief-iran-watch.md), [islamabad-operator-index.md](../islamabad-operator-index.md), [NOTEBOOK-PREFERENCES.md](../strategy-notebook/NOTEBOOK-PREFERENCES.md)).
 
 ---
 
@@ -265,7 +268,7 @@ Promote only when one of these is true:
 3. In `### Signal`, summarize only what crossed the strategy threshold.
 4. In `### Judgment`, write one Barnes-shaped paragraph: material constraint, liabilities, who can sustain what.
 5. If numbers are load-bearing, add `### Web verification (YYYY-MM-DD)`.
-6. In `### Links`, include the relevant brief/transcript plus `minds/mind-barnes.md`.
+6. In `### Links`, include the relevant brief/transcript plus `minds/mind-barnes.md`. **Optional civ-mem:** If `research/repos/civilization_memory` is checked out and structural precedent helps, add **1–2** upstream `MEM–…` file receipts (see [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) for Trump–Leo / Rome + U.S. pairing); never substitute MEM for tier-A wires on breaking claims.
 7. In `### Open`, carry one falsifiable follow-up.
 
 **Use when**

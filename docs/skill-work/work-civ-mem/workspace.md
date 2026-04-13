@@ -13,6 +13,17 @@
 
 ---
 
+## Consumer contract (Grace-Mar / external tools)
+
+Downstream automation (e.g. `scripts/suggest_civ_mem_from_relevance.py`, CI smoke tests) assumes:
+
+- **`content/civilizations/<ENTITY>/MEM–RELEVANCE–<ENTITY>.md`** when present — primary index for tri-frame suggestions; **stability** of that path matters for pinned-SHA CI.
+- Some entities (e.g. **ROME** at certain pins) may ship **CIV–STATE / SCHOLAR / CORE** without a **MEM–RELEVANCE** file — operators use **manual** MEM picks (see [`strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md`](../work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md)) until upstream adds the spine.
+
+Optional upstream PR: a short note in `civilization_memory` **README** or **docs/guides/** that external consumers depend on these paths helps prevent accidental renames.
+
+---
+
 ## Core repo surfaces
 
 | Surface | Why it matters |

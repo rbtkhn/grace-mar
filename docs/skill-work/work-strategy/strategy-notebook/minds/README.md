@@ -12,6 +12,8 @@
 
 **Recipes and post-entry lens offer:** [MINDS-SKILL-STRATEGY-PATTERNS.md](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md)
 
+**Trump–Leo × civ-mem Barnes drill (session sheet):** [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) — MEM table, § VII mapping, before/after without civ-mem; **ROME** manual picks + **AMERICA** `MEM–RELEVANCE` when upstream lacks `MEM–RELEVANCE–ROME.md`.
+
 **Ensemble metaphor** (score / parts / conductor / dissonance; ties month **Polyphony** to daily practice): [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Ensemble metaphor](../STRATEGY-NOTEBOOK-ARCHITECTURE.md#ensemble-metaphor-chamber-group-gloss)
 
 **Cursor skill:** [skill-strategy SKILL.md](../../../../../.cursor/skills/skill-strategy/SKILL.md) — loads mind files from this directory.

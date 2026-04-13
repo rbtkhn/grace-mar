@@ -9,7 +9,9 @@ Does not modify the Record. Requires a local civilization_memory checkout:
 Usage:
   python3 scripts/suggest_civ_mem_from_relevance.py
   python3 scripts/suggest_civ_mem_from_relevance.py RUSSIA
-  python3 scripts/suggest_civ_mem_from_relevance.py PERSIA --max-per-section 3
+  python3 scripts/suggest_civ_mem_from_relevance.py AMERICA --max-per-section 3
+
+Requires `MEM–RELEVANCE–<ENTITY>.md` in the civilization folder (e.g. **ROME** may lack it at a given pin — use manual MEM picks; see TRUMP-LEO-CIV-MEM-BARNES-DRILL.md).
 """
 
 from __future__ import annotations
@@ -50,6 +52,13 @@ BARNES_KEYS = (
     "emancipation",
     "sanction",
     "collapse",
+    # Trump–Leo / jurisdiction / U.S. institutional texture (short list; avoid false positives)
+    "papal",
+    "canon",
+    "church",
+    "jurisdiction",
+    "senate",
+    "confirmation",
 )
 MERCOURIS_KEYS = (
     "narrative",

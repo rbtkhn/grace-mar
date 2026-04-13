@@ -408,3 +408,39 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Exercise series:** [`demo-runs/skill-strategy-exercise-log.md`](../../demo-runs/skill-strategy-exercise-log.md) (first row: Ex **0+1** validation). **Prompts:** [`demo-runs/EXERCISE-PROMPTS.md`](../../demo-runs/EXERCISE-PROMPTS.md).
 - **Exercise 0:** DEMO Phases 1–5 — [`DEMO-SKILL-STRATEGY-TRANSCRIPTS.md`](../../DEMO-SKILL-STRATEGY-TRANSCRIPTS.md); scored audit [`demo-runs/skill-strategy-results-2026-04-10.md`](../../demo-runs/skill-strategy-results-2026-04-10.md) + supplemental **FT/HS** note.
 - **Exercise 1** (clean-room example): [`demo-runs/skill-strategy-exercise-headline-collapse-2026-04-12.md`](../../demo-runs/skill-strategy-exercise-headline-collapse-2026-04-12.md).
+
+### Tri-mind ingest — Kelly (AZ) vs Trump on Leo / Iran (operator screenshot)
+
+**Signal**
+
+- **X (operator screenshot):** **Sen. Mark Kelly** (`@SenMarkKelly`) quote-posts **Donald Trump** — **as a Catholic**, calls it **abhorrent** to **attack the Successor of St. Peter**; ties **Trump’s** **Iran** **war** to **U.S.** **servicemember** **casualties** and **Iranian** **children** **killed**; frames Trump as **flailing** and **attacking anyone** **(including the Church)** **to** **protect** **himself**. **Quoted** **Trump** **Truth** **Social** **thread** **attacks** **“** **Pope** **Leo** **”** **(weak** **on** **crime,** **foreign** **policy,** **COVID-era** **priests,** **Iran** **nukes,** **Venezuela,** **“** **Louis** **”** **vs** **Leo,** **landslide** **claims,** **Axelrod** **meeting,** **“** **if** **I** **wasn’t** **in** **the** **White** **House** **Leo** **wouldn’t** **be** **in** **the** **Vatican** **”)** **—** **pin** **canonical** **`x.com/...`** **URLs** **for** **both** **posts** **before** **outreach** **or** **campaign** **cite**; **screenshot** **=** **receipt** **only**.
+
+**Judgment**
+
+- **Mercouris:** **Petrine** **office** **vs** **electoral-mandate** **bravado** **—** **two** **legitimacy** **grammars** **in** **collision**; **Kelly** **signals** **Catholic** **moral** **language** **to** **a** **different** **pew** **than** **Vatican** **wire** **alone** **reaches**.
+- **Mearsheimer:** **Swing-state** **Senator** **bundles** **faith** **norms** **with** **war** **costs** **—** **coalition** **move** **(predictability,** **accountability)** **not** **a** **Holy** **See** **policy** **brief**; **Trump** **counter-frames** **the** **Pope** **as** **partisan** **to** **hold** **base** **siege** **narrative**.
+- **Barnes:** **Kelly** **=** **witness** **for** **suburban** **/** **Catholic** **jury** **pools** **—** **“** **Successor** **of** **Peter** **”** **+** **casualty** **lines** **=** **closing** **argument** **exhibits**; **Court** **Catholics** **don’t** **vote** **on** **this** **fight**, **but** **ads** **still** **inherit** **the** **headline** **(see** **[CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md)** **§** **VII).** **Electoral** **liability** **≠** **Hague** **docket**.
+
+**Links**
+
+- [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) § VII (Trump–Leo × Iran stack + Catholic Court bullet) · [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (optional paste-ready ingest line in thread) · pin **`x.com/SenMarkKelly/...`** **+** **`x.com/realDonaldTrump/...`** **when** **stable**.
+
+**Open**
+
+- Replace **screenshot** **receipt** **with** **two** **canonical** **status** **URLs** **+** **date** **for** **quote-grade** **use** **outside** **the** **notebook**.
+
+---
+
+## 2026-04-11
+
+### Signal
+
+- **Civ-mem × Barnes (Trump–Leo):** Session sheet [`TRUMP-LEO-CIV-MEM-BARNES-DRILL.md`](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) — **ROME** at pinned upstream SHA has **no** `MEM–RELEVANCE–ROME.md`; use **manual** `MEM–ROME–*` picks + **`AMERICA`** `python3 scripts/suggest_civ_mem_from_relevance.py AMERICA` for U.S. liability / elections texture. CI smoke: `python3 scripts/test_civmem_tri_frame_routing.py` (runs **RUSSIA** then **ROME**).
+
+### Judgment
+
+- *(Stub — after a drill: list ≥2 MEM paths opened + one paragraph mapped to [CIV-MIND-BARNES.md](../../../minds/CIV-MIND-BARNES.md) § VII.)*
+
+### Links
+
+- [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) · [CIV-MEM-TRI-FRAME-ROUTING.md](../../../minds/CIV-MEM-TRI-FRAME-ROUTING.md) · [docs/ci/civilization_memory_upstream.env](../../../../../ci/civilization_memory_upstream.env)
