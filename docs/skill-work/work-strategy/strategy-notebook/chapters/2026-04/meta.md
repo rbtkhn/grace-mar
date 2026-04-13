@@ -27,6 +27,8 @@
 - **Legitimacy counterweight:** English-language analysis may **overfit** papal peace language to **U.S. executive** headlines; the strategy hook is whether **Holy See** text **moves** **mediation facts** or mainly **audience** **legitimacy** — falsify with missing **Curia** follow-through or **ceasefire** ground truth.
 - **Mind–soul vs administrative:** [ROME-PASS](../../../work-strategy-rome/ROME-PASS.md) separates **conciliar / audience catechesis** from **press-office** machinery; both are real — monthly Judgment should **name the layer** when both appear the same week (exemplar: [2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md](../../../work-strategy-rome/notes/2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md)).
 
+**Perpetual signal check (Rome–Iran legitimacy plane):** [rome-persia-legitimacy-signal-check.md](../../rome-persia-legitimacy-signal-check.md) — append-only event log + green/red falsifiers for the **narrow** “legitimacy alignment” thesis (not hard security).
+
 **Falsifiers / counter-reads:**
 
 - **Boilerplate:** Urbi et Orbi / holiday appeals read as **expected** liturgical peace language; wires may **overstate** “counterweight” **policy** **shift** without **sustained** bilateral or **UN** **follow-up** (see falsifier block in Easter wire-cluster note).
@@ -85,6 +87,23 @@
 
 **Links into notebook practice:** Inbox **`PRC` / `CN` / `CHINA`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **MFA** or **wire** URLs cited in **§1g** when the brief was run.
 
+## Islamic Republic of Iran thread (month)
+
+**Primary thread (strategy-notebook + skill-strategy):** **Islamic Republic of Iran** — **MFA**, **presidency**, and **IRNA** / **state-adjacent** lines that move **pause**, **Hormuz**, **Lebanon**, **nuclear**, or **regional** framing. **Complements** [islamabad-operator-index.md](../../../islamabad-operator-index.md) and gap matrices (**bargaining structure**); this subsection is **Tehran’s voice**, not a duplicate of the framework preamble. **Triangulate** per [daily-brief-native-international-pass.md](../../../daily-brief-native-international-pass.md) (**Persian-primary** when load-bearing). **Hub:** [daily-brief-iran-watch.md](../../../daily-brief-iran-watch.md) (coffee **C** → daily brief **§1h**, rolling **48h** + URL guardrails).
+
+**Hypotheses (rolling — verify against MFA + IRNA + wires):**
+
+- **English vs Persian emphasis:** **en.mfa.ir** / **IRNA EN** can **soften** or **delay** **domestic** **headline** **stress** — **Judgment** should prefer **dated** **MFA** or **Persian** URL when claiming **exact** **Iranian** **terms** on load-bearing claims.
+- **Scope fights:** When **Lebanon**, **Hormuz**, or **enrichment** **rights** surface in the same week as **U.S.** **executive** copy, tag **Tehran** **audience** (**domestic**, **Axis of Resistance** **signaling**) vs **table** **offer** — stack with **Islamabad** index / gap matrix **without** **merging** **IRI** **lines** into **Vance** or **White House** **scope** **facts** without evidence.
+- **STRATEGY.md cross-read:** Long-horizon **Iran** / **Gulf** **watches** in [STRATEGY.md](../../../STRATEGY.md) are **ledger** lines — notebook **Judgment** cites them as **pointers**, not as **automatic** updates to **today’s** **facts**.
+
+**Falsifiers / counter-reads:**
+
+- **Western-only Iran digest:** Relying on **cable** or **exile** **narrative** without **IRNA** / **Tasnim** / **MFA** **check** when the day’s thesis turns on **what Iran said** — treat as **framing** risk ([daily-brief-iran-watch.md](../../../daily-brief-iran-watch.md) § **Native-language triangulation**).
+- **RSS / §2 substitution:** [daily-brief-iran-watch.md](../../../daily-brief-iran-watch.md) § **Guardrails** — RSS §2 **does not** replace **§1h** for **timing** and **full quotes**.
+
+**Links into notebook practice:** Inbox **`IRAN` / `IRI` / `TEHRAN`** tags ([daily-strategy-inbox.md](../../daily-strategy-inbox.md)); **`### Links`** on days that touch this thread should include **MFA** / **IRNA** URLs cited in **§1h** when the brief was run, plus **Islamabad** framework links when the day ranks **bargaining** **gaps**.
+
 ## Polyphony / lens tension (month)
 
 - **History Notebook (parallel):** Operator workflow for chapter drafting — spine → M→Me→B → tension → STYLE-GUIDE translation; see [POLYPHONY-WORKFLOW.md](../../../history-notebook/POLYPHONY-WORKFLOW.md).
@@ -92,6 +111,10 @@
 - **Mearsheimer:** When you talk about this pause, it’s important to understand that it **does not freeze** the **balance of power** — the fact is **Hormuz** and **Lebanon** are **scope** fights, not side issues; the question you have to ask yourself is who gains **relative power** while diplomacy runs. This is not about personalities alone; it’s about **incentives** and **buck-passing** among allies.
 - **Barnes:** Real simple — **who pays** and **what’s enforceable**: **aid** lines, **interceptor** and **radar** **attrition**, **oil** and **poll** numbers as **speaker claims** until verified; the short answer is trace **budget → ordnance → bodies** and **voter** **backlash**, not who won the argument on cable.
 - **Tension (unresolved):** **Legitimacy-of-mediation** and **narrative-of-restraint** (Mercouris) vs **structural pessimism** about a **bargaining range** for settlement (Mearsheimer) — Barnes says **material** **clocks** and **liability** may **force** politics before the civilizational story resolves; **do not merge** in one sentence without tagging the register.
+
+## Skill-strategy exercise rollup (Exercise 7)
+
+When the running log [`demo-runs/skill-strategy-exercise-log.md`](../../demo-runs/skill-strategy-exercise-log.md) has **three or more** dated rows, add a short **rollup** subsection here (or under **Open**) using the template in that file: repeated failure modes, criteria that never failed, one **SKILL.md** edit proposal for the next month, optional STRATEGY promotion (operator choice). Until then, rollup is **deferred**.
 
 ## Open questions
 

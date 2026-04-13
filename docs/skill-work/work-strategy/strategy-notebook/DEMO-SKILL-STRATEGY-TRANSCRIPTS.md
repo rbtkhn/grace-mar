@@ -225,9 +225,14 @@ Phase 5a: Pass / Fail — notes: (or N/A if Phase 5 mode: documented)
 Phase 5b: Pass / Fail — notes: (or N/A if Phase 5 mode: documented)
 Phase 5 mode: live | documented
 
+Five-thread tagging (FT): Pass / Fail — notes: (Judgment or Links names ≥3 threads among Rome / VP / Kremlin / PRC / IRI where input supports; watch doc or primary URL for official-line claims)
+Headline-stack check (HS): Pass / Fail — notes: (no single paragraph merges incompatible planes without Thesis A/B or seam language)
+
 Top 3 failures (if any):
 Time (minutes):
 ```
+
+**Extended rubric reference (FT, HS, CIV-MEM rows):** [`demo-runs/skill-strategy-exercise-rubric-reference.md`](demo-runs/skill-strategy-exercise-rubric-reference.md) — use for all scored runs from **2026-04-12** onward; optional exercise log: [`demo-runs/skill-strategy-exercise-log.md`](demo-runs/skill-strategy-exercise-log.md).
 
 ---
 
@@ -243,5 +248,6 @@ Time (minutes):
 
 ## Changelog
 
+- **2026-04-12:** Results template extended with **Five-thread tagging (FT)** and **Headline-stack check (HS)**; pointer to `demo-runs/skill-strategy-exercise-rubric-reference.md` and exercise log.
 - **2026-04-10 (b):** Canonical log rules, safe-append procedure, Phase 2 verify fallback ladder, Phase 5 live vs documented scoring.
 - **2026-04-10:** Initial demo script (three transcripts + Recipe C tri-frame).

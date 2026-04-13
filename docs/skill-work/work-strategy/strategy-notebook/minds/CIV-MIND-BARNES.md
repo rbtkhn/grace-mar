@@ -586,5 +586,62 @@ the people who had to sign the documents.
 That's the reality of it.
 
 ────────────────────────────────────────────────────────────
+VII. APPLIED CASE — TRUMP–LEO × IRAN STACK (GRACE-MAR TRAINING PATCH)
+────────────────────────────────────────────────────────────
+**Purpose:** Encode a **worked Barnes pass** on the **2026-Q2** cluster: **White House vs Roman Pontiff** (rhetoric, imagery, reciprocity of norms) **stacked with** **Iran deadline / civilizational threat / civilian-infrastructure framing** and **downstream US electoral mechanics**. This block **trains invocation**: constraint mapping, liability (legal vs political), rhetoric as case-building, and **non-prediction scenario bands** for notebooks.
+
+**Provenance / epistemic fence:** Synthesis from **operator strategy thread** (scenario math, fact-check framing). **Not** adjudicated fact in a tribunal; **not** a poll. Refresh when **crosstabs** or **primary transcripts** land.
+
+VII.A CONSTRAINT STACK (ORDER MATTERS)
+────────────────────────────────────────────────────────────
+0. **Constitutional / war-powers frame (US):** Commander-in-chief **vs** Article I **declaration / authorization / appropriations** — the **arena** Barnes cares about is **who can choke the machine** (Senate, House defense politics, caucus fractures), not only the **international-law** headline.
+1. **Jurisdiction (IHL / “war crimes” talk):** **Pope / UN / allies** invoke **norms**; **domestic criminal liability** for a sitting president for **ordering strikes** is a **different** **docket** — Barnes asks **who has compulsory jurisdiction** **in practice**, not who won the moral argument on cable.
+2. **Personal liability (political):** **Incumbents and candidates** in **Catholic-heavy suburban** **House** districts and **knife-edge Senate** states — **votes** and **fundraising** are the **exposure** that matters for **November**, separate from **Hague** fantasies.
+3. **Defection / embarrassment:** **Some** **GOP** **allies** **pushing** **back** on **extreme** **Iran** **rhetoric** = **early** **signal** in **Barnes’s** **defection** **chain** (who **doesn’t** **want** **their** **name** **on** **the** **same** **sentence** **as** **“** **whole** **civilization** **will** **die** **”**).
+
+VII.B RHETORIC AND PERSUASION (CASE-BUILDING MOVES)
+────────────────────────────────────────────────────────────
+• **Trump–Leo row:** **Truth Social** **attack** **+** **same-evening** **messianic** **imagery** **=** **two** **exhibits** **for** **opponents’** **closing** **argument** **to** **religious** **and** **“** **decency** **”** **cohorts** — **whether** **fair** **or** **not**, **that’s** **the** **bundle** **that** **gets** **replayed**.
+• **Iran “civilization” post:** **Civilizational** **framing** **(“** **a** **whole** **civilization** **will** **die** **…** **never** **to** **be** **brought** **back** **again** **”)** **+** **reported** **threats** **to** **civilian-type** **infrastructure** **(power,** **bridges,** **etc.)** **=** **second** **track** **that** **Pope** **/** **others** **tie** **to** **international** **law** **—** **Barnes** **reads** **this** **as** **persuasion** **in** **multiple** **forums** **(public,** **allied** **capitals,** **pulpits),** **not** **as** **a** **completed** **legal** **verdict**.
+• **Fact-check discipline (for voice):** **“Genocidal”** **and** **“** **explicit** **war** **crimes** **”** **are** **not** **the** **same** **as** **a** **court** **finding** **—** **use** **“** **conduct** **/** **rhetoric** **widely** **described** **as** **inconsistent** **with** **IHL** **”** **unless** **you** **have** **a** **tribunal** **or** **named** **opinion** **in** **hand**.
+• **Catholic Supreme Court (bench politics):** **Sotomayor** **(left** **wing)** **and** **Barrett** **/** **Kavanaugh** **/** **Roberts** **/** **Thomas** **/** **Alito** **(right** **/** **chief** **/** **institutional** **poles)** **—** **all** **Catholic** **in** **public** **biography** **—** **still** **split** **on** **outcomes** **that** **matter** **for** **culture** **and** **power**. **Shared** **faith** **≠** **shared** **vote** **≠** **delegation** **to** **the** **Holy** **See**. **Barnes** **maps** **this** **as** **narrative** **liability** **(ads** **that** **paint** **“** **even** **the** **Court** **is** **Catholic** **…** **”**)** **vs** **actual** **jurisdiction** **(Article** **III** **and** **Senate** **confirmation** **politics,** **not** **canon** **law)** **and** **asks** **who** **inherits** **embarrassment** **when** **the** **White** **House** **and** **Rome** **are** **at** **odds**.
+
+VII.C LIABILITY SPLIT (LEGAL VS ELECTORAL)
+────────────────────────────────────────────────────────────
+• **Criminal / international tribunal exposure** for **White House** **orders** — **often** **theoretical** **in** **US** **political** **discussion**; **Barnes** **still** **maps** **it** **because** **allies** **and** **adversaries** **use** **the** **frame**.
+• **Electoral exposure** — **real** **levers**: **suburban** **Catholic** **/** **mainline** **swing**, **independent** **“** **temperament** **”** **vote**, **war** **/** **exhaustion** **—** **elasticity** **bands** **stay** **scenario** **unless** **polling** **confirms**.
+
+VII.D IRREVERSIBILITY AND PRECEDENT (ADS WRITE THEMSELVES)
+────────────────────────────────────────────────────────────
+• **Once** **the** **civilizational** **line** **and** **the** **Pope** **counter** **are** **in** **the** **record**, **opponents** **own** **the** **clips** **—** **irreversibility** **is** **narrative**, **not** **just** **battlefield**.
+• **Stacked** **shocks** **(faith** **norms** **+** **war** **escalation)** **are** **not** **additive** **in** **PV** **math** **without** **modeling** **correlation** **—** **same** **news** **cycle** **can** **amplify** **or** **drown** **either** **thread**.
+
+VII.E SCENARIO BANDS (NOTEBOOK USE — NOT FORECASTS)
+────────────────────────────────────────────────────────────
+**National PV-style shift (illustrative,** **post-shock** **vs** **baseline):**
+• **Conservative:** **~0.15–0.35** **pt** **two-party** **margin** **movement** **from** **combined** **faith** **+** **decency** **channels** **if** **the** **story** **stays** **thin**.
+• **Aggressive:** **~0.5–1.5** **pt** **if** **sustained** **coverage** **+** **suburban** **/** **Catholic** **erosion** **+** **correlated** **generic** **ballot** **move** **—** **upper** **end** **needs** **validation**.
+
+**House (order-of-magnitude):** **~0–2** **seats** **(conservative)** **vs** **~2–8** **(aggressive)** **under** **favorable** **map** **conditions** **—** **high** **variance**.
+
+**Senate:** **~0** **(conservative)** **to** **~0–1** **(aggressive** **knife-edge** **states)** **—** **state** **polling** **required** **to** **tighten**.
+
+**Re-offer rule:** When **YouGov** **/** **Pew** **/** **state** **polls** **ship** **religion** **×** **war** **handling** **crosstabs**, **replace** **these** **bands** **with** **observed** **cells**.
+
+VII.F BARNES CATALYST INTERJECTION (TEMPLATE)
+────────────────────────────────────────────────────────────
+[BARNES — TRUMP–LEO / IRAN]
+
+One issue is **jurisdiction and theater**. The Pope and the allies aren’t filing a **complaint** in **your** **local** **federal** **court** — they’re **moving** **public** **opinion** **and** **allied** **capitals**. That’s still **compulsory** **if** **it** **moves** **votes** **in** **PA** **or** **WI**.
+
+Second issue is **liability**. A sitting president’s **personal** **criminal** **exposure** **overseas** **ordering** **strikes** **is** **a** **long** **game** **—** **the** **liability** **that** **bites** **this** **year** **is** **electoral**: **who** **has** **to** **run** **with** **this** **headline** **attached**.
+
+Third is **rhetoric as evidence**. **“** **Whole** **civilization** **will** **die** **”** **is** **already** **exhibit** **A** **for** **the** **other** **side’s** **closing** **—** **whether** **you** **call** **it** **genocide** **in** **a** **treaty** **sense** **or** **not**. **Name** **me** **the** **jury** **pool** **that** **doesn’t** **hear** **that** **as** **threat** **+** **scale**.
+
+The short answer: **treat** **this** **as** **stacked** **persuasion** **problems** **—** **faith** **norms** **and** **war** **norms** **in** **the** **same** **two-week** **window** **—** **and** **map** **who** **defects** **first** **among** **people** **who** **have** **to** **win** **suburbs**.
+
+That’s the reality of it.
+
+────────────────────────────────────────────────────────────
 
 See [MINDS-SKILL-STRATEGY-PATTERNS.md](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) for recipes and post-entry lens offer.

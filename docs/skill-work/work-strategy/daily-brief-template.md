@@ -7,6 +7,7 @@
 Repository-wide date rules: [date-time-conventions.md](../../date-time-conventions.md).
 
 **Canonical config:** [daily-brief-config.json](daily-brief-config.json)  
+**Grok-style post-process layer (headings only — on top of generated §§):** [grok-daily-brief.md](grok-daily-brief.md)  
 **Strategy focus bullets:** [daily-brief-focus.md](daily-brief-focus.md)  
 **Weak-signal discipline:** [weak-signals.md](weak-signals.md)  
 **Weak-signal block template:** [weak-signal-template.md](weak-signal-template.md)  
@@ -38,6 +39,7 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 | **1e. JD Vance — last 48 hours** | Operator fill per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when Iran / third-country talks are load-bearing |
 | **1f. Weak signal worth watching** | Operator block using [weak-signal-template.md](weak-signal-template.md); optional “none today” if threshold not met |
 | **1g. PRC — last 48 hours** | Operator fill per [daily-brief-prc-watch.md](daily-brief-prc-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when the PRC / Beijing thread is load-bearing |
+| **1h. IRI — last 48 hours** | Operator fill per [daily-brief-iran-watch.md](daily-brief-iran-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md) when the Iran / Islamabad thread is load-bearing; complements [islamabad-operator-index.md](islamabad-operator-index.md) |
 | **2. Headlines** | RSS; each line `[W:x S:y]` ranked by **W+S** then recency |
 | **3. Lead themes** | **W** campaign angle, **S** strategy angle, **slow** work-jiang stub (tie §1c to today’s headlines) |
 | **4. Triangulation** | [work-politics analytical lenses](../work-politics/analytical-lenses/manifest.md) when the lead is political |

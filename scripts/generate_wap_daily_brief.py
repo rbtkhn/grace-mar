@@ -1080,6 +1080,10 @@ def build_daily_brief(
             "",
             "_Filled per [daily-brief-prc-watch.md](daily-brief-prc-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): web scan (MFA, major state wires, cross-check Reuters), **48h** rolling window, **bullets + URLs**; add **Mandarin-primary** line when PRC is load-bearing. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._",
             "",
+            "## 1h. IRI — last 48 hours (Islamic Republic of Iran)",
+            "",
+            "_Filled per [daily-brief-iran-watch.md](daily-brief-iran-watch.md) + [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md): web scan (MFA, IRNA/Tasnim as needed, cross-check Reuters), **48h** rolling window, **bullets + URLs**; add **Persian-primary** line when Iran / Islamabad is load-bearing. Complements [islamabad-operator-index.md](islamabad-operator-index.md) (bargaining framework)—this block is **Tehran state voice**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._",
+            "",
             "## 2. Headlines (ingested RSS)",
             "",
         ]

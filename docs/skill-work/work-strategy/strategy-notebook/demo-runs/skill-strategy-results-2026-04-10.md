@@ -55,3 +55,16 @@ Time (minutes): (not measured — fill if needed for process audit)
 ## Track
 
 **Full demo (Phases 0–5)** — not partial.
+
+---
+
+## Supplemental criteria (scored on reruns from 2026-04-12)
+
+The **2026-04-10** session above predates the exercise-series extended rubric. When **re-scoring** this demo or running new sessions, also apply:
+
+| Criterion | Score | Notes |
+|-----------|-------|-------|
+| **Five-thread tagging (FT)** | — | Judgment or Links names ≥3 distinct threads (Rome / VP / Kremlin / PRC / IRI) where the input supports them; watch doc or primary URL when claiming official lines. |
+| **Headline-stack check (HS)** | — | No single paragraph merges incompatible planes without Thesis A/B or seam language. |
+
+Full reference: [`skill-strategy-exercise-rubric-reference.md`](skill-strategy-exercise-rubric-reference.md). Exercise log: [`skill-strategy-exercise-log.md`](skill-strategy-exercise-log.md).
