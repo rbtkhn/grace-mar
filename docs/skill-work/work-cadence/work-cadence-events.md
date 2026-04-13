@@ -162,3 +162,13 @@ _(Append below this line.)_
 - **2026-04-12 13:59 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
 - **2026-04-12 14:28 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=civ-mem-MEM-handles-clarified
 - **2026-04-12 15:26 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-12 16:54 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-12 21:17 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-13 01:32 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-13 04:00 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-13 05:21 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-13 05:22 UTC** — dream (demo) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=fail mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true
+- **2026-04-13 05:53 UTC** — dream (grace-mar) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false
+- **2026-04-13 12:11 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-13 15:58 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=strategy-helpers-index-architecture-related
+- **2026-04-13 16:43 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
