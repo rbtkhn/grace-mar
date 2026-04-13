@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-13
+
+- **Upload prep:** Added [UPLOAD-PREP.md](UPLOAD-PREP.md) — scope table (minimal skill folder vs full advisor tree), leakage pre-flight, `skill-xavier` manifest, optional mirror note; [INDEX.md](INDEX.md) row.
+
 ### 2026-04-12
 
 - **work-dev mirror:** Added [work-dev-mirror/workspace.md](work-dev-mirror/workspace.md) — concrete sync cut from canonical [work-dev/workspace.md](work-dev/workspace.md) (coffee **E**); [work-dev-mirror/README.md](work-dev-mirror/README.md) **Start here** renumbered.

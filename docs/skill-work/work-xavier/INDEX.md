@@ -34,6 +34,7 @@
 | [LEARN-PATH.md](LEARN-PATH.md) | Progressive learning path |
 | [LEARNING-OBJECTIVES-CONTROL-PLANE.md](LEARNING-OBJECTIVES-CONTROL-PLANE.md) | Beginner-safe control plane |
 | [SYNC-DAILY.md](SYNC-DAILY.md) | Advisor / Xavier daily sync snapshot (work-dev + work-politics) |
+| [UPLOAD-PREP.md](UPLOAD-PREP.md) | **Pre-upload checklist** — skill-xavier → Cici (or share); leakage + manifest |
 | [DAILY-OPS-CARD.md](DAILY-OPS-CARD.md) | Final daily execution card |
 | [../self-work/sync-pack/README.md](../self-work/sync-pack/README.md) | Template sync-pack reference |
 | [work-dev-mirror/README.md](work-dev-mirror/README.md) | Mirror of `work-dev` practices (beginner-safe) |
