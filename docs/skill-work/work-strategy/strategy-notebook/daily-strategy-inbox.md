@@ -78,7 +78,7 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 _(Append below this line during the day.)_
 
-**Folded (2026-04-13)** → [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **`## 2026-04-13`**. One-liner ingests / batch-analysis for that day removed here; **git history** keeps the full scratch.
+**Folded (2026-04-13)** → [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **`## 2026-04-13`**. **Davis × Freeman** + **Davis × Mearsheimer** one-liners / `batch-analysis` merged into **Signal** / **Judgment** / **Links** / **Open**; **git history** keeps paste-grade lines.
 
 ### Retained reference (2026-04-13 fold) — paste-grade; not Record
 
