@@ -80,6 +80,23 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 _(Append below this line during the day.)_
 
+<!-- brief-handoff-bundle: 2026-04-13 — from daily-brief-2026-04-13.md §2c -->
+
+- Le Monde live | Hormuz + China/Turkey reaction line // third-party pushback vs U.S. coercion frame | https://www.lemonde.fr/international/live/2026-04-13/en-direct-guerre-au-moyen-orient-les-etats-unis-veulent-bloquer-les-ports-d-iran-des-lundi-la-chine-et-la-turquie-reclament-la-reouverture-du-detroit-d-ormuz_6676633_3210.html | verify:wire-RSS | thread:third-party-system
+- BBC Mundo | Hungary opposition win headline // EU veto politics hinge | https://www.bbc.com/mundo/articles/cly7xjewqjgo?at_medium=RSS&at_campaign=rss | verify:wire-RSS | membrane:pair
+- Le Monde live | Magyar post-election governance pledge line // coalition bargaining window | https://www.lemonde.fr/international/live/2026-04-13/en-direct-elections-en-hongrie-peter-magyar-apres-sa-victoire-electorale-face-a-viktor-orban-promet-de-gouverner-pour-tous-les-hongrois_6679608_3210.html | verify:wire-RSS
+- Roll Call | Iran war powers + expulsion talk track // domestic procedural pressure | https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/ | verify:wire-RSS | thread:hormuz-domestic
+- Le Monde live | Ukraine drones resume after Easter pause // parallel escalation channel | https://www.lemonde.fr/international/live/2026-04-13/en-direct-guerre-en-ukraine-moscou-et-kiev-reprennent-leurs-attaques-de-drones-apres-un-court-cessez-le-feu-pour-la-paque-orthodoxe_6679492_3210.html | verify:wire-RSS
+
+<!-- brief-handoff-bundle: 2026-04-14 — from daily-brief-2026-04-14.md §2c -->
+
+- Le Monde live | Iran-linked ships + Hormuz blockade frame + Lebanon/Israel talks in Washington // sea-lane + diplomacy stack | https://www.lemonde.fr/international/live/2026-04-14/en-direct-guerre-au-moyen-orient-washington-s-apprete-a-accueillir-les-pourparlers-de-paix-entre-le-liban-et-israel_6679867_3210.html | verify:wire-RSS | membrane:pair
+- BBC Mundo | Hormuz blockade explainer + China role line // third-party positioning | https://www.bbc.com/mundo/articles/cz90qzpjxwxo?at_medium=RSS&at_campaign=rss | verify:wire-RSS | thread:third-party-system
+- BBC News | MFA-class attribution line “China says” on Iran ports blockade // PRC reaction lane | https://www.bbc.com/news/articles/c78lleelxj4o?at_medium=RSS&at_campaign=rss | verify:wire-RSS | thread:diplomatic-institutional
+- Spiegel | IMF lowers global growth expectations (Iran war context) // macro constraint hint | https://www.spiegel.de/wirtschaft/iran-krieg-iwf-internationaler-waehrungsfonds-senkt-weltweite-wachstumserwartung-a-92c69b54-f568-41e6-8455-5359506f7504#ref=rss | verify:wire-RSS | membrane:single
+- Roll Call | Iran war powers + expulsion talk // Congressional procedure pressure | https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/ | verify:wire-RSS | thread:hormuz-domestic
+- Le Monde live | Druzhba repair promise affecting Hungary oil supply // energy-route seam | https://www.lemonde.fr/international/live/2026-04-14/en-direct-guerre-en-ukraine-volodymyr-zelensky-promet-une-reparation-d-ici-a-la-fin-d-avril-de-l-oleoduc-droujba-qui-fournit-en-petrole-russe-la-hongrie_6679492_3210.html | verify:wire-RSS
+
 **Folded (2026-04-13)** — **@MarioNawfal × Grand Mosque** (Trump–Leo vs **Grand Mosque of Algiers**, tier-A **Vatican News**) → **`## 2026-04-13`** **Signal** / **Judgment** / **Links** / **Open**. **Also folded:** scratch lines (**Judging Freedom** × **Larry Johnson**; **Davis Deep Dive** × **Ritter**; **`batch-analysis`** tri-mind) → same **`## 2026-04-13`** (**Judgment** § **Mercouris × Johnson**, § **Ritter ego reduction vs structural fold**). Verbatim paste-grade lines / backticks in **git history** for this file.
 
 ### Retained reference (2026-04-13 fold) — paste-grade; not Record

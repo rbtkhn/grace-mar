@@ -25,6 +25,17 @@ python scripts/generate_work_politics_daily_brief.py -u grace-mar \
 - Default `--config` resolves to this folder’s `daily-brief-config.json`.
 - Legacy: `docs/skill-work/work-politics/daily-brief-feeds.json` if strategy config is missing.
 - `--no-fetch` — offline; work-politics + strategy sections still populate from docs/gate.
+- `--brief-date YYYY-MM-DD` — override the brief’s **`Date:`** line when regenerating a
+  historical filename; **`Assembled:`** still reflects the generator run time.
+
+**Merge helper (regen + keep `§2c` tail):**
+
+```bash
+python3 scripts/merge_daily_brief_postprocess.py -u grace-mar --date 2026-04-14 --no-fetch
+```
+
+- Refuses to duplicate `§2c` unless you pass `--force` (strips any `§2c` block from
+  the fresh generator output before splice).
 
 ---
 
@@ -88,7 +99,7 @@ on top of generated sections, not a replacement for source sections.
 
 For each development block, include:
 
-- `Evidence status: Verified | Single-source | Unverified`
+- `Evidence status: Primary-backed | Multi-source (wire-grade) | Single-source | Unverified`
 - `Primary links:` 1-3 links from in-brief sources
 - `Seam / tension:` required when channels disagree
 
@@ -122,6 +133,38 @@ A retrofit pass is complete when:
 - Every development has evidence status and primary links
 - At least one seam/tension is named when claims conflict
 - Watchlist has testable checks for the next cycle
+
+### Optional quality footer (0–2 scoring)
+
+After the narrative layer (or at the end of the dated brief), you may append a
+compact self-score table for drift tracking. Example criteria (0 missing, 1
+partial, 2 strong):
+
+- Epistemic discipline (URL + UNVERIFIED for hard claims)
+- Plane separation (explicit seams)
+- Handoff readiness (inbox + verify queue + conflict check)
+- Primary-channel depth (`§1d–§1h` filled)
+- Narrative closure (executive spine + bottom line)
+- Noise control (signal vs noise)
+- Tri-mind hygiene (no blended lens claims unless invoked)
+
+### Inbox paste target (canonical)
+
+When emitting **Handoff to Grace-Mar** inbox lines, follow the paste-ready unit
+rules in
+[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)
+— optional **`cold: … // hook: …`** split, **`verify:`** tails, optional
+**`thread:<analyst_id>`**, and optional **`membrane:*`** tokens.
+
+**`verify:` token vocabulary (recommended defaults):**
+
+- `verify:wire-RSS` — RSS-ingested wire / live-desk article (still not a state
+  primary)
+- `verify:OSINT-unverified` — OSINT / social / analyst chain without stable
+  primary capture
+- `verify:tier-A` — operator-attested high-trust capture (per notebook tables)
+- `verify:operator-transcript` — transcript / long paste pending quote-grade
+  extraction
 
 ---
 

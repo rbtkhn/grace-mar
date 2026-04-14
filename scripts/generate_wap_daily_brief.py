@@ -980,9 +980,10 @@ def build_daily_brief(
     civmem_hooks: bool = True,
     max_geo_headlines: int = 14,
     civ_mem_entity_hint_override: str | None = None,
+    brief_date: str | None = None,
 ) -> str:
     assembled = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
-    day = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    day = brief_date or datetime.now(timezone.utc).strftime("%Y-%m-%d")
     (
         feeds,
         wap_phrases,
@@ -1556,6 +1557,12 @@ def main() -> int:
         help="Skip RSS/brief generation; use with --brief-path for mind-only overlay steps",
     )
     parser.add_argument(
+        "--brief-date",
+        default="",
+        metavar="YYYY-MM-DD",
+        help="Override the **Date:** line (UTC calendar day) — assembled timestamp still reflects run time",
+    )
+    parser.add_argument(
         "--brief-path",
         default="",
         help="Path to daily-brief-YYYY-MM-DD.md (overrides -o for mind flags; required with --skip-brief)",
@@ -1592,6 +1599,16 @@ def main() -> int:
     minds_config_path = Path(args.minds_config) if args.minds_config else DEFAULT_MINDS_CONFIG
     mind_flags = bool(args.offer_minds or args.mind or args.mind_all)
     brief_path: Path | None = None
+
+    brief_date: str | None = None
+    if args.brief_date:
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", args.brief_date):
+            print(
+                "error: --brief-date must be an ISO calendar day YYYY-MM-DD",
+                file=sys.stderr,
+            )
+            return 2
+        brief_date = args.brief_date
 
     if args.mind_option and not args.mind and not args.mind_all:
         print(
@@ -1635,6 +1652,7 @@ def main() -> int:
             civmem_hooks=not args.no_civmem,
             max_geo_headlines=max(1, args.max_geo_lines),
             civ_mem_entity_hint_override=args.civ_mem_entity_hint,
+            brief_date=brief_date,
         )
         if args.output:
             out = Path(args.output).resolve()
