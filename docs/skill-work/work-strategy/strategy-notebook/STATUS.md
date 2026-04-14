@@ -6,13 +6,13 @@
 |-------|--------|
 | **Project status** | `active` |
 | **Active chapter** | `2026-04` |
-| **Last daily entry** | `2026-04-11` (Tri-Frame mind passes + daily brief substrate; see `chapters/2026-04/days.md`) |
-| **Prepared stub** | **`2026-04-12`** — today’s page not yet in `days.md`; capture in [daily-strategy-inbox.md](daily-strategy-inbox.md), fold at `dream` or direct draft per operator |
+| **Last substantive entry** | `2026-04-11` (Tri-Frame mind passes + daily brief substrate; see `chapters/2026-04/days.md`) — update when you close a real dated or episodic fold |
+| **Prepared stub** | _Optional_ — only if you use calendar stubs; otherwise capture in [daily-strategy-inbox.md](daily-strategy-inbox.md) and fold when you run **`strategy`** / explicit **fold** |
 | **Daily inbox** | [daily-strategy-inbox.md](daily-strategy-inbox.md) — **SSOT** (cadence + paste-ready lines); fold/prune → [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox* |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 | **Operator prefs** | [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) |
 
 ## Next actions
 
-1. When adding **2026-04-12+**, append **one new daily page** (`## YYYY-MM-DD`) at the bottom of [`chapters/2026-04/days.md`](chapters/2026-04/days.md) — **one page per calendar day**, target **~1000 words** of consolidated analysis (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md)); bump **Last daily entry** here.
+1. When adding new work, append a **`## YYYY-MM-DD`** block (or an episodic `##` section) at the bottom of [`chapters/2026-04/days.md`](chapters/2026-04/days.md) when ready — target **~1000 words** of consolidated analysis per fold where applicable (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model*); bump **Last substantive entry** here.
 2. Refresh this file when the active month changes or after notable closes.
