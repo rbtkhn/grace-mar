@@ -4,7 +4,7 @@
 
 **Derived operator artifact.** Work territories do not redefine the Record; this file only surfaces runtime + WORK telemetry for navigation.
 
-- **Generated:** 2026-04-14T15:36:47Z
+- **Generated:** 2026-04-14T15:45:32Z
 - **Ledger:** `/Users/robertkuhne/Documents/grace-mar/runtime/observations/index.jsonl` (missing — no runtime observations yet)
 
 ## work-lanes-dashboard.json snapshot

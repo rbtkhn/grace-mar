@@ -12,4 +12,4 @@ For **index-first** prepared context (runtime observation summaries before full 
 
 **Operator-generated brief:** `python3 scripts/runtime/memory_brief.py ... --output prepared-context/memory-brief.md` may write a **runtime-only** Markdown brief here (not Record truth). The repo root `.gitignore` ignores `prepared-context/memory-brief.md` by default.
 
-**Budgeted context:** `python3 scripts/prepared_context/build_budgeted_context.py` writes bounded Markdown with an explicit budget report; optional `--budgeted-follow-on` on `memory_brief.py` chains into it. Receipt for lane dashboards: `prepared-context/last-budget-builds.json`. See [context-budgeting.md](../docs/runtime/context-budgeting.md).
+**Budgeted context:** `python3 scripts/prepared_context/build_budgeted_context.py` writes bounded Markdown with an explicit budget report; optional `--budgeted-follow-on` on `memory_brief.py` chains into it. Receipt for lane dashboards: `prepared-context/last-budget-builds.json`. See [context-budgeting.md](../docs/runtime/context-budgeting.md). **Policy modes** (`--policy-mode` / `GRACE_MAR_POLICY_MODE`): [policy-modes.md](../docs/policy-modes.md).
