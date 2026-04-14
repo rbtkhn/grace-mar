@@ -2270,6 +2270,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: vi-15
+  video_id: n44OF1Y7zgo
+  title: 'Interviews #15: Sneako — Jiang Xueqin & Aleksandr Dugin (Eschatology & Geopolitics)'
+  canonical_url: https://www.youtube.com/watch?v=n44OF1Y7zgo
+  publication_date: '2026-04-14'
+  lecture_path: lectures/interviews-15-sneako-jiang-xueqin-dugin-eschatology.md
+  analysis_path: analysis/n44OF1Y7zgo-interviews-15-analysis.md
+  series: interviews
+  episode: 15
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
 - source_id: es-01
   video_id: ''
   title: Vision, Mission, Goals

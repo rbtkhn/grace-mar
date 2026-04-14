@@ -309,6 +309,8 @@ chapter_map:
     source_ids: [vi-13]
   vi-ch14:
     source_ids: [vi-14]
+  vi-ch15:
+    source_ids: [vi-15]
   es-ch01:
     source_ids: [es-01]
   es-ch02:
