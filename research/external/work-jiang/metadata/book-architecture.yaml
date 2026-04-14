@@ -3489,7 +3489,7 @@ volume_6_interviews:
       owner: operator
       sprint: TBD
       blocking: []
-      next_action: Complete analysis memo for vi-12; wire video_id and transcript; then draft chapter outline
+      next_action: Complete analysis memo for vi-12; then draft chapter outline
       outline_path: chapters-volume-vi/vi-ch12/outline.md
       draft_path: chapters-volume-vi/vi-ch12/draft.md
       analysis_ready: false
