@@ -80,7 +80,7 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 _(Append below this line during the day.)_
 
-**Folded (2026-04-13)** — Scratch lines (**Judging Freedom** × **Larry Johnson**; **Davis Deep Dive** × **Ritter**; **`batch-analysis`** tri-mind) merged into [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **`## 2026-04-13`** (**Signal** / **Judgment** § **Mercouris × Johnson**, § **Ritter ego reduction vs structural fold**). Verbatim paste-grade backticks live in **git history** for this file.
+**Folded (2026-04-13)** — **@MarioNawfal × Grand Mosque** (Trump–Leo vs **Grand Mosque of Algiers**, tier-A **Vatican News**) → **`## 2026-04-13`** **Signal** / **Judgment** / **Links** / **Open**. **Also folded:** scratch lines (**Judging Freedom** × **Larry Johnson**; **Davis Deep Dive** × **Ritter**; **`batch-analysis`** tri-mind) → same **`## 2026-04-13`** (**Judgment** § **Mercouris × Johnson**, § **Ritter ego reduction vs structural fold**). Verbatim paste-grade lines / backticks in **git history** for this file.
 
 ### Retained reference (2026-04-13 fold) — paste-grade; not Record
 
