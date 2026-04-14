@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0-policy-modes",
+  "operator_only": {
+    "retrieval_scope": "lane_default",
+    "candidate_staging": "allowed",
+    "self_promotion_threshold": "standard",
+    "abstention_level": "standard",
+    "show_receipts": true
+  },
+  "identity_bound": {
+    "retrieval_scope": "lane_default",
+    "candidate_staging": "allowed_with_strict_self_guard",
+    "self_promotion_threshold": "high",
+    "abstention_level": "strict",
+    "show_receipts": true
+  },
+  "reference_only": {
+    "retrieval_scope": "library_and_evidence",
+    "candidate_staging": "blocked",
+    "self_promotion_threshold": "block",
+    "abstention_level": "standard",
+    "show_receipts": true
+  },
+  "youth_facing": {
+    "retrieval_scope": "restricted",
+    "candidate_staging": "blocked",
+    "self_promotion_threshold": "block",
+    "abstention_level": "strict",
+    "show_receipts": true
+  },
+  "high_risk_abstention": {
+    "retrieval_scope": "lane_default",
+    "candidate_staging": "hold_by_default",
+    "self_promotion_threshold": "very_high",
+    "abstention_level": "very_strict",
+    "show_receipts": true
+  }
+}

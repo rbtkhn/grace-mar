@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/uncertainty-envelope.v1.json",
+  "title": "Grace-Mar uncertainty envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_state",
+    "fabricated_history_risk",
+    "reasons"
+  ],
+  "properties": {
+    "evidence_state": {
+      "type": "string",
+      "enum": ["sufficient", "partial", "insufficient", "conflicted"]
+    },
+    "fabricated_history_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "reasons": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "missing_evidence_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "conflicting_refs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "promotion_recommendation": {
+      "type": "string",
+      "enum": ["allow", "allow_with_review", "hold", "block"]
+    }
+  }
+}

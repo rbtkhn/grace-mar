@@ -65,6 +65,7 @@ def test_build_budgeted_context_subprocess(tmp_path: Path) -> None:
     assert r.returncode == 0, r.stderr + r.stdout
     text = out.read_text(encoding="utf-8")
     assert "# Budgeted Context" in text
+    assert "Policy mode: operator_only" in text
     assert "## Included" in text
     assert "## Excluded" in text
     assert "## Context Block" in text
@@ -73,4 +74,5 @@ def test_build_budgeted_context_subprocess(tmp_path: Path) -> None:
     assert receipt.is_file()
     data = json.loads(receipt.read_text(encoding="utf-8"))
     assert data["lanes"]["lane-x"]["mode"] == "compact"
+    assert data["lanes"]["lane-x"].get("policy_mode") == "operator_only"
     assert "exclusions" in data["lanes"]["lane-x"]

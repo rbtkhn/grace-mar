@@ -23,12 +23,21 @@ from urllib.request import Request, urlopen
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 _SCRIPTS = REPO_ROOT / "scripts"
+_RUNTIME = REPO_ROOT / "scripts" / "runtime"
 if str(_SCRIPTS) not in sys.path:
     sys.path.insert(0, str(_SCRIPTS))
+if str(_RUNTIME) not in sys.path:
+    sys.path.insert(0, str(_RUNTIME))
 try:
     from harness_events import append_harness_event
 except ImportError:
     append_harness_event = None  # type: ignore
+
+try:
+    from uncertainty_envelope import compute_envelope, synthetic_observation_from_text
+except ImportError:
+    compute_envelope = None  # type: ignore
+    synthetic_observation_from_text = None  # type: ignore
 
 
 def _sha256(path: Path) -> str:
@@ -141,10 +150,24 @@ def stage_openclaw(
     text: str,
     artifact: Path | None,
     api_key: str,
+    *,
+    precheck: bool = False,
 ) -> dict:
     content, meta = _build_content(text, artifact)
     if not content:
         raise ValueError("Provide --text and/or --artifact")
+    if precheck and compute_envelope and synthetic_observation_from_text:
+        env = compute_envelope([synthetic_observation_from_text(content)])
+        promo = env.get("promotion_recommendation", "")
+        meta["abstention_precheck"] = env
+        line = (
+            f"\n\nABSTENTION_PRECHECK: evidence_state={env.get('evidence_state')} "
+            f"fabricated_history_risk={env.get('fabricated_history_risk')} "
+            f"promotion_recommendation={promo} (advisory — see docs/abstention-policy.md)"
+        )
+        if promo == "block":
+            line += "\nReview before relying on this handback for gate staging."
+        content = content + line
     intent_profile = _load_intent_profile(user_id)
     conflicts = _detect_constitution_conflicts(content, intent_profile)
     status = "advisory_flagged" if conflicts else "advisory_clear"
@@ -211,6 +234,11 @@ def main() -> int:
     parser.add_argument("--text", default="", help='Natural language summary (e.g. "we did X in OpenClaw")')
     parser.add_argument("--artifact", default="", help="Optional artifact file path")
     parser.add_argument("--api-key", default=os.getenv("HANDBACK_API_KEY", "").strip(), help="Optional X-Api-Key")
+    parser.add_argument(
+        "--precheck",
+        action="store_true",
+        help="Append advisory abstention/uncertainty line from runtime heuristics (does not block staging)",
+    )
     args = parser.parse_args()
 
     artifact = Path(args.artifact) if args.artifact else None
@@ -221,6 +249,7 @@ def main() -> int:
             text=args.text,
             artifact=artifact,
             api_key=args.api_key,
+            precheck=bool(getattr(args, "precheck", False)),
         )
         if not result.get("ok"):
             print(f"Stage failed: {result}", flush=True)
