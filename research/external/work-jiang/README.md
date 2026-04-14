@@ -62,6 +62,10 @@ Normative rules for this tree — **canonical here**; do not restate long policy
 
 **Repo-wide context:** How grace-mar relates to the template (not Jiang-specific) lives in [docs/audit-boundary-grace-mar-companion-self.md](../../../docs/audit-boundary-grace-mar-companion-self.md).
 
+## Lectures and essays — equal PH primary artifacts
+
+**Predictive History** treats **video lecture transcripts** under `lectures/` and **written Substack essays** under `substack/essays/` as the **same kind of primary artifact** once they are registered in `metadata/sources.yaml` and brought to the same **status** bar (ingested text + curated body; `lecture_path` points at the file regardless of directory). Volume numbering differs (e.g. Vol. VII for essays), but **downstream skill-strategy surfaces** (expert thread stubs, rolling corpus, batch-analysis joins on Jiang’s voice) should **not** privilege YouTube paths over essay paths or require duplicate manual steps for essays. Strategy-notebook pointer: [expert-ingest-corpus README](../../../docs/skill-work/work-strategy/strategy-notebook/expert-ingest-corpus/README.md).
+
 **Session:** If a thread edits `users/grace-mar/` (SELF, gate, pipeline) or merges narrative into companion-facing Record files, run `python3 scripts/harness_warmup.py -u grace-mar` once and paste the output in that thread.
 
 **New agent thread:** [bootstrap/work-jiang-bootstrap.md](../../bootstrap/work-jiang-bootstrap.md) — paste-in checklist, read order, verify block reference.
