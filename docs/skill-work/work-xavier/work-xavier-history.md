@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-14
+
+- **Cici RTF ingests:** [evidence/cici-rtf-sessions-ingest-2026-04-14.md](evidence/cici-rtf-sessions-ingest-2026-04-14.md) + RTFs — (A) BrewMind companion contract merge [`fcfe437`](https://github.com/Xavier-x01/Cici/commit/fcfe4375599c7835b645c2977afc3df0d96b1214); (B) `.claude/` best-practices layer [`901012d`](https://github.com/Xavier-x01/Cici/commit/901012d0da2be14b5b42acab1ce981ec30fe9a07) (parent `fcfe437`). GitHub chain verified.
+
 ### 2026-04-13
 
 - **Upload prep:** Added [UPLOAD-PREP.md](UPLOAD-PREP.md) — scope table (minimal skill folder vs full advisor tree), leakage pre-flight, `skill-xavier` manifest, optional mirror note; [INDEX.md](INDEX.md) row.

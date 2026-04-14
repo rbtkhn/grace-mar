@@ -12,6 +12,7 @@
 | [evidence/cici-repo-ingest-2026-04-13.md](evidence/cici-repo-ingest-2026-04-13.md) | **Cici GitHub ingest** (2026-04-13) — public README, repo root, **`CLAUDE.md` persona** screenshots + summary |
 | [evidence/cici-personalization-pdf-ingest-2026-04-13.md](evidence/cici-personalization-pdf-ingest-2026-04-13.md) | **Cici Claude Code session (PDF)** — personalization prompt export, Q&A, follow-up steps (verify on GitHub) |
 | [evidence/cici-implement-pdf-ingest-2026-04-13.md](evidence/cici-implement-pdf-ingest-2026-04-13.md) | **“Implement” PDF** — advice items → `main` `5337b1c`; repo check vs transcript; progress + frontier |
+| [evidence/cici-rtf-sessions-ingest-2026-04-14.md](evidence/cici-rtf-sessions-ingest-2026-04-14.md) | **RTF sessions (2026-04-14)** — companion contract `fcfe437` + `.claude/` layer `901012d`; GitHub chain verified |
 | [OB1 bridge mapping — Conceptual map](../../integrations/ob1/mapping.md#conceptual-map-ob1-cici-grace-mar) | **OB1 vs Cici vs grace-mar** — stack roles and where governed truth lives (avoids conflating instance repo with upstream platform or Record). |
 | [evidence/](evidence/) | Screenshots and exports for progress analysis (not partner-facing) — **policy & naming:** [evidence/README.md](evidence/README.md) |
 | [work-xavier-sources.md](work-xavier-sources.md) | Authorized sources index (feeds, URLs, pointers — [principle](../work-modules-sources-principle.md)) |
