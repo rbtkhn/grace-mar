@@ -58,6 +58,13 @@ _read = read_path
 _profile_dir = profile_dir
 DEFAULT_USER = DEFAULT_USER_ID
 
+
+def _fork_dir(user_id: str, repo_root: Path | None) -> Path:
+    """Users/<user_id> under repo (defaults to ``_profile_dir`` / REPO_ROOT)."""
+    if repo_root is None:
+        return _profile_dir(user_id)
+    return repo_root.resolve() / "users" / user_id
+
 _STOPWORDS = {
     "a",
     "an",
@@ -216,12 +223,12 @@ def _age_days(raw_ts: str) -> int | None:
     return max(0, (datetime.now(timezone.utc) - dt).days)
 
 
-def _pipeline_events_index(user_id: str) -> dict[str, list[dict]]:
+def _pipeline_events_index(user_id: str, *, repo_root: Path | None = None) -> dict[str, list[dict]]:
     """
     Single read of pipeline-events.jsonl: map candidate_id -> last 8 events (chronological order).
     Used by parse_review_candidates once per call instead of O(candidates × file_size).
     """
-    events_path = _profile_dir(user_id) / "pipeline-events.jsonl"
+    events_path = _fork_dir(user_id, repo_root) / "pipeline-events.jsonl"
     if not events_path.exists():
         return {}
     by_cid: dict[str, list[dict]] = {}
@@ -384,12 +391,12 @@ def _ready_for_quick_merge(candidate: dict) -> bool:
     return True
 
 
-def parse_review_candidates(user_id: str = DEFAULT_USER) -> list[dict]:
-    gate_path = _profile_dir(user_id) / "recursion-gate.md"
-    self_path = _profile_dir(user_id) / "self.md"
+def parse_review_candidates(user_id: str = DEFAULT_USER, *, repo_root: Path | None = None) -> list[dict]:
+    gate_path = _fork_dir(user_id, repo_root) / "recursion-gate.md"
+    self_path = _fork_dir(user_id, repo_root) / "self.md"
     content = _read(gate_path)
     self_text = _read(self_path)
-    pipeline_by_candidate = _pipeline_events_index(user_id)
+    pipeline_by_candidate = _pipeline_events_index(user_id, repo_root=repo_root)
     active, _ = split_gate_sections(content)
     rows: list[dict] = []
     for candidate_id, title, yaml_body in iter_candidate_yaml_blocks(active):

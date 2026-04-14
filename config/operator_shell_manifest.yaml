@@ -1,0 +1,69 @@
+# Operator shell manifest (Phase A contract)
+# Validate: python3 scripts/validate_operator_shell_manifest.py
+# Read-only UI should ONLY load paths listed under `entries[].path` (repo-relative).
+# Do not point this at SELF, EVIDENCE, or recursion-gate.md for unsandboxed public serving.
+# Regenerate commands are documentation / subprocess hooks — the shell itself stays read-only.
+schema_version: "1.0.0"
+description: >
+  Allowlisted derived artifacts and doc entry points for a future read-only operator shell
+  (Markdown render + nav + search). Titles and paths are the stable contract; optional
+  fields are hints for UI grouping and automation.
+
+defaults:
+  # Substitute in regenerate.shell when present: {repo_root}, {user}
+  user: grace-mar
+
+entries:
+  - id: gate-board
+    title: Gate Board
+    group: gate
+    path: artifacts/gate-board.md
+    doc: docs/gate-board.md
+    kind: markdown
+    regenerate:
+      shell: "python3 scripts/build_gate_board.py"
+      cwd_repo_root: true
+
+  - id: review-dashboard
+    title: Review dashboard (Approval Inbox)
+    group: gate
+    path: artifacts/review-dashboard.md
+    kind: markdown
+    regenerate:
+      shell: "python3 scripts/build_review_dashboard.py -u {user}"
+      cwd_repo_root: true
+
+  - id: library-index
+    title: Library index
+    group: library
+    path: artifacts/library-index.md
+    kind: markdown
+    regenerate:
+      shell: "python3 scripts/build_library_index.py -u {user}"
+      cwd_repo_root: true
+
+  - id: lane-dashboards-readme
+    title: Lane dashboards
+    group: lanes
+    path: artifacts/lane-dashboards/README.md
+    kind: markdown
+    notes: "Optional JSON input: artifacts/work-lanes-dashboard.json via build_work_lanes_dashboard.py"
+    regenerate:
+      shell: "python3 scripts/build_lane_dashboards.py"
+      cwd_repo_root: true
+
+  - id: operator-dashboards-doc
+    title: Operator dashboards (how to regenerate)
+    group: meta
+    path: docs/operator-dashboards.md
+    kind: markdown
+    regenerate: null
+
+# Schema notes (for implementers):
+# - id: stable slug; use in URLs and search index keys.
+# - path: single repo-relative POSIX path; must stay under artifacts/ or docs/ for v1.
+# - group: nav section (gate | library | lanes | meta | forecast | other).
+# - kind: markdown | json (json viewers are optional in Phase A v0).
+# - regenerate.shell: operator copy-paste command; {user} from defaults.user;
+#   {repo_root} if a future tool needs an absolute path.
+# - regenerate.cwd_repo_root: if true, run from repository root.

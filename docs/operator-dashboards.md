@@ -8,6 +8,7 @@ Grace-Mar can emit **compact, regeneratable Markdown “dashboards”** for oper
   - `python3 scripts/build_library_index.py` → [`artifacts/library-index.md`](../artifacts/library-index.md)
   - `python3 scripts/build_lane_dashboards.py` → [`artifacts/lane-dashboards/README.md`](../artifacts/lane-dashboards/README.md) (optionally after `python3 scripts/build_work_lanes_dashboard.py` for JSON inputs)
   - `python3 scripts/build_review_dashboard.py` → [`artifacts/review-dashboard.md`](../artifacts/review-dashboard.md)
+  - `python3 scripts/build_gate_board.py` → [`artifacts/gate-board.md`](../artifacts/gate-board.md) (Kanban-style; see [gate-board.md](gate-board.md))
 
 ## What they are not
 
@@ -24,6 +25,7 @@ python3 scripts/build_work_lanes_dashboard.py   # optional JSON feed for lane da
 python3 scripts/build_library_index.py
 python3 scripts/build_lane_dashboards.py
 python3 scripts/build_review_dashboard.py
+python3 scripts/build_gate_board.py
 ```
 
 Use `-u grace-mar` where scripts support it (default user is usually `grace-mar`).
