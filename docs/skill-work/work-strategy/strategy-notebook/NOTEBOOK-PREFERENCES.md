@@ -12,6 +12,7 @@
 |------|------------|
 | **Daily length** | **Variable by day** — no fixed default word budget. |
 | **Minimum `days.md` sections** | **`### Signal` · `### Judgment` · `### Links`** only. |
+| **Fold prose register** | **Popular-academic** by default — reader-facing **Signal / Judgment** in folded `days.md`; avoid **internal repo nicknames**, **operator-only path tokens**, and **backend shorthand** in the **notebook spine** (spell out ideas or use public equivalents). Operator docs and inbox may keep technical labels. Aligns with [skill-strategy Session hygiene](../../../../.cursor/skills/skill-strategy/SKILL.md) § *Session hygiene*. |
 | **Inbox vs notebook** | **Raw paste and URL dumps** → [daily-strategy-inbox.md](daily-strategy-inbox.md). **Notebook** = **synthesis + key links**, not mirrors of the inbox. |
 | **Fold → page structure** | **Promotion choice** — what lands under **Signal** vs **Judgment** vs **Links** vs **Open** follows **what you choose to fold** and at **which** fold, not inbox length or equal padding per section. Intra-day folds **iterate one** `## YYYY-MM-DD` block (merge, don’t duplicate). See [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Fold choice and section weighting*. |
 | **Judgment priority** | **Structural first** — power, incentives, constraints; narrative second. |
@@ -34,7 +35,7 @@
 
 ## Short paste block (meta / handoff)
 
-Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links. Inbox = raw; notebook = synthesis + key links. Fold choice weights sections (Signal/Judgment/Links/Open), not inbox order. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. Putin / Kremlin: §1d watch; Kremlin vs wire. PRC / Beijing: §1g watch; MFA vs Western analysis. IRI / Tehran: §1h watch; MFA/IRNA vs Western digest (framework = Islamabad index). PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Fold inbox at dream or explicit fold; not on ingest alone. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence. Split disagreements as Thesis A / Thesis B.
+Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links; fold prose popular-academic (no internal nicknames in spine). Inbox = raw; notebook = synthesis + key links. Fold choice weights sections (Signal/Judgment/Links/Open), not inbox order. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. Putin / Kremlin: §1d watch; Kremlin vs wire. PRC / Beijing: §1g watch; MFA vs Western analysis. IRI / Tehran: §1h watch; MFA/IRNA vs Western digest (framework = Islamabad index). PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Fold inbox at dream or explicit fold; not on ingest alone. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence. Split disagreements as Thesis A / Thesis B.
 
 ---
 

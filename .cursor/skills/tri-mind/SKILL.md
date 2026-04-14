@@ -56,6 +56,8 @@ If the operator **already** included the code with the thesis (e.g. “tri-mind 
 
 ## Grounding (read before writing)
 
+**Cursor rule (voice fidelity):** [`.cursor/rules/minds-authentic-voice.mdc`](../../rules/minds-authentic-voice.mdc) — tri-mind and any **`CIV-MIND-*`**-grounded output must use each mind’s **authentic register** (read fingerprints below), not neutral meta-summary.
+
 | Letter | Mind | Canonical stub | Fingerprint (short) |
 |--------|------|----------------|---------------------|
 | **A** | Mercouris | [CIV-MIND-MERCOURIS.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-MERCOURIS.md) | Legitimacy, continuity, diplomatic narrative, staging |

@@ -1,0 +1,22 @@
+---
+description: MEM-grounded strategy passes — run suggest script or documented fallback; paste output; Links receipts
+alwaysApply: false
+---
+
+# Strategy notebook — upstream MEM grounding (execution)
+
+Use when the operator asks for **civilization MEM** depth, **MEM-grounded** synthesis, or **Fold** prose that **paraphrases** bodies from `research/repos/civilization_memory`. **SSOT procedure:** [`.cursor/skills/skill-strategy/SKILL.md`](../../.cursor/skills/skill-strategy/SKILL.md) § *Civilization memory (civ-mem) — optional slow layer* and § *Pre-write checklist* (MEM bullet).
+
+**Do:**
+
+1. **Run** `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` from repo root (e.g. `AMERICA`, `RUSSIA`) **when** `content/civilizations/<ENTITY>/MEM–RELEVANCE–<ENTITY>.md` exists.
+2. **Paste verbatim** script **stdout** or **stderr** into the reply so the thread holds the same suggestion set the agent used.
+3. **Open** the listed MEM files (and relevance spine) and **cite repo-relative paths** under **`### Links`** in `days.md` or inbox lines — **not** content-only paraphrase with no receipt.
+4. **If exit code 1** (missing relevance file, missing clone): follow **fallback** in SKILL — `CIV–STATE–*`, `CIV–INDEX–*`, [CIV-MEM-TRI-FRAME-ROUTING.md](../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md), [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../docs/skill-work/work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md), or paths **already** cited on the active `days.md` block — and **say so** in chat (which branch).
+
+**Do not:**
+
+- **Silently** choose MEM files without running the script **or** documenting the fallback branch (**PERSIA** may lack `MEM–RELEVANCE–PERSIA.md` at current pin — script fails until upstream adds it).
+- Substitute **hosts** or **non-strategy-list** voices for **strategy-commentator** analysts unless the operator instructs (e.g. do not cite **Danny Haiphong** in notebook prose by default).
+
+**Relation to other rules:** Tri-frame granularity remains [strategy-minds-granular.mdc](strategy-minds-granular.mdc). This rule only tightens **MEM file selection discipline**, not mind choice.

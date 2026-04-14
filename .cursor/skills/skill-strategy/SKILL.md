@@ -7,6 +7,8 @@ description: >-
   optional promote to STRATEGY.md. Embeds the operator’s five-thread geopolitical theory (official name TBD): polycentric voice planes + Islamabad scaffold, information / equilibrium vocabulary, daily brief §1d–§1h,
   gap matrices, weak-signal and analogy-audit discipline. PH (work-jiang) via Jiang resonance —
   not work-politics pulse or weekly brief generator.
+  Session hygiene: disk-grounded scaffolds (STATUS/days/inbox/meta); strategy-commentator roster for “every analyst” coverage; popular-academic fold prose default per NOTEBOOK-PREFERENCES;
+  MEM grounding via suggest_civ_mem_from_relevance.py + documented fallback when MEM–RELEVANCE–X is missing; tri-mind chat games are WORK brainstorm only.
 ---
 
 # Strategy pass (`skill-strategy`)
@@ -20,6 +22,15 @@ description: >-
 **Persistent frontier:** The repo holds the **running edge** (latest `days.md` block, **`### Open`**, **`### Links`**, **`meta.md`** when relevant). Each **`strategy`** invocation **updates** that checkpoint from the **last committed** block—tomorrow’s pass **reads disk**, not thread recall. Informal gloss: **memoized** strategy state (see [Accumulation and evolution](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#accumulation-and-evolution) in the architecture doc).
 
 **Optional cold start (`strategy-context`):** In a **fresh chat** (no thread memory), run `python3 scripts/strategy_context.py -u grace-mar` to print a **bounded, file-grounded readout**—notebook **Open**, inbox accumulator, daily brief §1b lead, STRATEGY + promotion ladder, commentator table—before the assistant loads long files. **`--compact`** is path/status only; **`--meta`** adds the month **`chapters/YYYY-MM/meta.md`** pointer; **`--minds`** adds Tri-Frame **`minds/outputs`** filenames (exact date or recent month scaffolds). See [work-strategy README — `strategy-context`](../../../docs/skill-work/work-strategy/README.md#strategy-session-helpers-skill-strategy). This **orients** only: it does **not** substitute a full **`strategy`** pass, **`strategy + verify`**, watch-block fills (§1d–§1h), or folding **`daily-strategy-inbox.md`** into **`days.md`**.
+
+### Session hygiene (operator alignment — low-friction)
+
+- **Metaphor vs repo work:** Language that **sounds** like a notebook heading or **lane metaphor** (e.g. resonance, helix, thread) may be **Think / probe**, not a request to **audit** files or **change** templates — unless the operator uses **implement**, **DOCSYNC**, **Fold**, or **EXECUTE** (see [operator-style.mdc](../../../.cursor/rules/operator-style.mdc) lanes).
+- **Scaffold provenance:** Multi-point **chapter scaffolds**, “since last chapter,” and “this session” **defaults** to **disk** ([STATUS.md](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md), active `chapters/YYYY-MM/days.md`, [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md), `meta.md`). If the **month chapter is still open**, resolve **“previous chapter end”** with **STATUS** + operator say-so — not chat memory alone.
+- **Who counts as an “analyst” for coverage:** “Every analyst” / **one sentence each** obligations apply to **[strategy-commentator-threads](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md)** **`analyst_id`** rows when the operator asks for **roster-complete** synthesis — **not** every voice in a **transcript** (hosts, moderators, one-off pundits) unless named for that pass.
+- **Fold prose register:** **`days.md`** **Signal / Judgment** favors **popular-academic** readability; avoid **internal repo nicknames** and **operator-only tokens** in the **notebook spine** — spell out the idea or use a **public** equivalent (workshop the wording with the operator when unsure).
+- **Pillar lists:** When the operator asks for **N orthogonal points**, prefer **one axis per point** and a **clear sequence** (e.g. facts → mechanism → material → structure → audiences) — not the same conflict **repeated** in every bullet.
+- **Tri-mind games in chat:** Numerical scoring, **rounds**, or simulated debates are **WORK brainstorming** — **not** Record, **not** gate truth; optional **menu** output only.
 
 ## Five primary threads (operator geopolitical theory)
 
@@ -191,6 +202,7 @@ Before any **Capture** or **Fold** file write, confirm:
 - [ ] **Spine only** in Signal/Judgment — bulk routed per **Bulk spillway**.
 - [ ] **Signal / Judgment / Links** at minimum for Fold; optional sections only when needed.
 - [ ] **Tension** preserved where channels disagree ([NOTEBOOK-PREFERENCES](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) Thesis A / B) — no artificial merge.
+- [ ] **MEM grounding (only if** the operator asked for upstream civilization-MEM depth **or** a Fold explicitly weaves MEM **):** Ran `python3 scripts/suggest_civ_mem_from_relevance.py <ENTITY>` **or** recorded **why** it was skipped (missing relevance spine → fallback per § *Civilization memory*); opened **at least one** MEM/STATE body from the suggestion or fallback; **repo-relative paths** appear under **`### Links`** — not paraphrase-only.
 
 ## Three minds (optional — granular)
 
@@ -225,7 +237,11 @@ Lens pass (optional — pick one, combine, or skip):
 
 **When:** Optional **structural / precedent / analogy** depth — **not** tier-A verification for breaking headlines or same-week papal primary text (use **`strategy + verify`** and [ROME-PASS.md](../../../docs/skill-work/work-strategy/work-strategy-rome/ROME-PASS.md) source order first when those claims load-bear).
 
-**How:** Fix civilization id **X** (folder under `content/civilizations/<X>/`) → `python3 scripts/suggest_civ_mem_from_relevance.py X` when `MEM–RELEVANCE–X.md` exists → open that relevance spine plus **1–2** MEM bodies per column in [CIV-MEM-TRI-FRAME-ROUTING.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md). **ROME** at some pins may **lack** `MEM–RELEVANCE–ROME.md` — use manual MEM paths from [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../../docs/skill-work/work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) and pair **AMERICA** relevance for U.S.-arena liability pulls. Optional full-text index: `python3 scripts/build_civmem_upstream_index.py build` — [CIV-MEM-UPSTREAM-SEARCH.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-UPSTREAM-SEARCH.md).
+**How:** Fix civilization id **X** (folder under `content/civilizations/<X>/`) → run `python3 scripts/suggest_civ_mem_from_relevance.py X` **when** `MEM–RELEVANCE–X.md` exists → open that relevance spine plus **1–2** MEM bodies per column in [CIV-MEM-TRI-FRAME-ROUTING.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md). **Paste script stdout (or stderr) into the chat** when the operator asked for MEM-grounded notebook synthesis — **no silent picks.**
+
+**When `MEM–RELEVANCE–X.md` is missing** (script exits `1`; clone errors; or upstream not pinned): **do not** invent MEM paths. **Fallback order:** (1) [CIV–INDEX–X](../../../research/repos/civilization_memory/content/civilizations/) + `CIV–STATE–X.md` decision-relevant sections where present; (2) [CIV-MEM-TRI-FRAME-ROUTING.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md) for which MEM class belongs in which tri-frame column; (3) **ROME** manual table in [TRUMP-LEO-CIV-MEM-BARNES-DRILL.md](../../../docs/skill-work/work-strategy/strategy-notebook/TRUMP-LEO-CIV-MEM-BARNES-DRILL.md) and optional **AMERICA** `suggest_civ_mem_from_relevance.py AMERICA` for U.S.-arena liability; (4) **already-cited** MEM paths in the active `days.md` / gap-matrix rows — **read those files** and cite the **same** repo-relative paths under **`### Links`**. **PERSIA:** At some pins there is **no** `MEM–RELEVANCE–PERSIA.md` (see `CIV–STATE–PERSIA.md` MEM discovery note) — use this fallback until the relevance spine lands upstream.
+
+Optional full-text index: `python3 scripts/build_civmem_upstream_index.py build` — [CIV-MEM-UPSTREAM-SEARCH.md](../../../docs/skill-work/work-strategy/minds/CIV-MEM-UPSTREAM-SEARCH.md).
 
 **Write:** Cite **MEM paths** (repo-relative file ids) under **`### Links`** in `days.md` or in inbox **cold:** / **hook:** lines as **receipts**. Barnes-only drills: **Recipe A** in [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) + [CIV-MIND-BARNES.md](../../../docs/skill-work/work-strategy/strategy-notebook/minds/CIV-MIND-BARNES.md) § VII.
 

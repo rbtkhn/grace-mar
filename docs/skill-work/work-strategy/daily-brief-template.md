@@ -69,6 +69,62 @@ When a weak signal includes a historical parallel, complete a short analogy audi
 
 ---
 
+## Narrative layer retrofit (post-process on generated brief)
+
+After generation, you may add a magazine-style narrative layer using
+[grok-daily-brief.md](grok-daily-brief.md). This is an operator prose pass
+on top of generated sections, not a replacement for source sections.
+
+### Required narrative blocks
+
+- **Executive summary**
+- **Top developments** (3+ items recommended)
+- **Signal vs noise**
+- **Cross-domain synthesis**
+- **Watchlist for tomorrow** (3-6 testable checks)
+- **Bottom line**
+
+### Per-development evidence contract
+
+For each development block, include:
+
+- `Evidence status: Verified | Single-source | Unverified`
+- `Primary links:` 1-3 links from in-brief sources
+- `Seam / tension:` required when channels disagree
+
+### Quant / quote guardrail
+
+Every numeric claim or attributed quote in the narrative layer must include
+either a URL from the brief source chain or the literal marker:
+`[UNVERIFIED — no primary found]`
+
+### Tri-mind layer policy
+
+Three-mind material is optional in the narrative layer. Add only when the
+operator requests it or when evidence maturity supports lens separation.
+Do not treat tri-mind as a default section for every brief.
+
+### Canonical source boundary
+
+The generated sections remain canonical for evidence anchoring:
+
+- **§2 / §2a** for headline and geopolitical source inventory
+- **§1d-§1h** for actor-channel watch passes when filled
+
+Narrative prose may summarize and prioritize, but must not supersede the
+verify contract in those sections.
+
+### Completion checks (narrative layer)
+
+A retrofit pass is complete when:
+
+- At least 3 developments are populated
+- Every development has evidence status and primary links
+- At least one seam/tension is named when claims conflict
+- Watchlist has testable checks for the next cycle
+
+---
+
 ## Not Voice / not SELF
 
 Complete synthesis in the output file; cite sources; **human sign-off** before client-facing or public ship. See [work-politics consulting-charter](../work-politics/consulting-charter.md).
