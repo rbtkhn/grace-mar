@@ -106,4 +106,12 @@ Nested `volume_6_interviews.book.chapters` — see `docs/skill-work/work-jiang/v
 
 **Next action:** Complete analysis memo for vi-13; then draft chapter outline
 
+## vi-ch14 — Interviews #14: Glenn Diesen — The Iran War & the Battle for the Petrodollar
+
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+
+**Next action:** Complete analysis memo for vi-14; then draft chapter outline
+
 *Generated from `metadata/book-architecture.yaml` (`volume_6_interviews`) — same command as Volume I queue.*

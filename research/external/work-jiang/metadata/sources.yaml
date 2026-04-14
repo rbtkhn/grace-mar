@@ -2255,6 +2255,21 @@ sources:
     curated_lecture: complete
     analysis: complete
     chapter_mapping: complete
+- source_id: vi-14
+  video_id: P_DHMUdOVdo
+  title: 'Interviews #14: Glenn Diesen — The Iran War & the Battle for the Petrodollar'
+  canonical_url: https://www.youtube.com/watch?v=P_DHMUdOVdo
+  publication_date: '2026-04-11'
+  lecture_path: lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md
+  analysis_path: analysis/P_DHMUdOVdo-interviews-14-analysis.md
+  series: interviews
+  episode: 14
+  themes: []
+  status:
+    transcript: complete
+    curated_lecture: complete
+    analysis: complete
+    chapter_mapping: complete
 - source_id: es-01
   video_id: ''
   title: Vision, Mission, Goals

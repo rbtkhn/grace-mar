@@ -32,7 +32,7 @@ End each Part I chapter with a boxed subsection per CHAPTER-DIVERGENCE-BOX.md �
 
 ### Part II — method TBD (Interviews)
 
-**Begins after:** `vi-ch13`
+**Begins after:** `vi-ch14`
 
 Operator locks evaluation mode in book/VOLUME-VI-INTERVIEWS.md (divergence-first default for Part I boxes).
 
@@ -194,5 +194,17 @@ Operator locks evaluation mode in book/VOLUME-VI-INTERVIEWS.md (divergence-first
 - **Sprint:** TBD
 - **Outline:** `chapters-volume-vi/vi-ch13/outline.md`
 - **Draft:** `chapters-volume-vi/vi-ch13/draft.md`
+
+### vi-ch14 — Interviews #14: Glenn Diesen — The Iran War & the Battle for the Petrodollar
+
+- **Purpose:** Book chapter for Interviews episode 14 — Volume VI Part I; divergence end-box per CHAPTER-DIVERGENCE-BOX.md (Volume VI default).
+- **Kind:** analysis
+- **Priority:** medium
+- **Target words:** 2800
+- **Status:** outline_pending
+- **Owner:** operator
+- **Sprint:** TBD
+- **Outline:** `chapters-volume-vi/vi-ch14/outline.md`
+- **Draft:** `chapters-volume-vi/vi-ch14/draft.md`
 
 *Generated from `metadata/book-architecture.yaml` (`volume_6_interviews`) — `python scripts/work_jiang/render_book_architecture.py`.*

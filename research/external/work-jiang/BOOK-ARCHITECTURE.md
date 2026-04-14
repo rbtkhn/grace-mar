@@ -22,10 +22,6 @@ Part I follows Jiang’s Geo-Strategy lectures in order: one chapter per class s
 - **Secondary:** researchers of civilizational thought
 - **Secondary:** readers of Jiang's channel seeking a structured path that mirrors the classroom order
 
-## Operator overlay (not published chapter text)
-
-**Tricameral polyphony (WORK):** [operator-polyphony.md](operator-polyphony.md) — operator-maintained parallel to [strategy-notebook `STRATEGY-NOTEBOOK-ARCHITECTURE.md`](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) (month `meta.md` § **Polyphony / lens tension**); not part of the student-facing book corpus. See **Parallel to Predictive History** in that file. **Maintenance:** when the PH arc or the strategy month shifts, edit this file and the active `chapters/YYYY-MM/meta.md` § Polyphony **in the same session**.
-
 ## End-of-chapter predictions (Part I)
 
 - **Minimum per chapter:** 3
