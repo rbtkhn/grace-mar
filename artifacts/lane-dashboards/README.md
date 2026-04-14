@@ -1,3 +1,17 @@
+<!-- GENERATED — run: python3 scripts/build_lane_dashboards.py -->
+
+# Lane dashboards (aggregate)
+
+**Derived operator artifact.** Work territories do not redefine the Record; this file only surfaces runtime + WORK telemetry for navigation.
+
+- **Generated:** 2026-04-14T00:07:10Z
+- **Ledger:** `/Users/robertkuhne/Documents/grace-mar/runtime/observations/index.jsonl` (missing — no runtime observations yet)
+
+## work-lanes-dashboard.json snapshot
+
+From `artifacts/work-lanes-dashboard.json` (run `build_work_lanes_dashboard.py` first). 
+
+```json
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
   "generatedAt": "2026-04-14T00:07:07.887493+00:00",
@@ -179,3 +193,16 @@
     }
   }
 }
+```
+
+## Runtime observations by lane (recent)
+
+_No observations in ledger._ Operator: `python3 scripts/runtime/log_observation.py --help`
+
+## Active lane compression / context memos
+
+_`artifacts/context/` is gitignored by default — regenerate with `scripts/compress_active_lane.py`. Listing skipped here._
+
+## Per-lane split (future)
+
+Optional follow-up: `artifacts/lane-dashboards/work-strategy.md` from the same inputs.
