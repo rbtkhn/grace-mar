@@ -76,7 +76,7 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 ---
 
-**Accumulator for:** 2026-04-13 _(system local date — maintain from clock when appending)_
+**Accumulator for:** 2026-04-14 _(system local date — maintain from clock when appending)_
 
 _(Append below this line during the day.)_
 
@@ -234,3 +234,15 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 
 - **2026-04-13** scratch folded into [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **`## 2026-04-13`** (operator **`fold`**). Supplemental quants / X / YT one-liners: **verify-first** per **Open** there; retained paste-grade blocks stay under **Retained reference** above.
 - **Mercouris monologue** (lane `diplomatic-institutional`): **Cite-grade roster** = **Ghalibaf** (transcripts’ **Larijani** = **misname**); Pope / leadership-imagery = **`narrative-escalation`** + primaries before **`Links`**-grade merge. **Verify hooks** + **Pezeshkian–Putin** table: **Retained reference** above; **mind training:** `CIV-MIND-MERCOURIS.md` **III.M**.
+
+---
+
+### Strategy ingest — work-jiang PH Volume VI (2026-04-14)
+
+**Corpus:** [LIB-0149](../../../../users/grace-mar/self-library.md#operator-analytical-books) — curated lectures + analysis memos under `research/external/work-jiang/` (`vi-14`, `vi-15`).
+
+`YT | cold: Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress / Hormuz–Malacca chokepoint story; Islamabad 10-point frame vs US walk-away; maritime “toll” extraction // hook: **vi-14** for §1c Jiang layer + Islamabad / energy spine; cite lecture not headlines | https://www.youtube.com/watch?v=P_DHMUdOVdo | verify:work-jiang-vi-14+../../../../research/external/work-jiang/lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md`
+
+`YT | cold: Jiang × Sneako × Dugin — eschatology stack (Scofield / Calvinism / Orthodox + traditionalist); Eurasian multipolarity vs US debt; Chabad as **convergence** not sole driver; katechon / antichrist closing // hook: **vi-15** tri-voice overlay; `narrative-escalation` | https://www.youtube.com/watch?v=n44OF1Y7zgo | verify:work-jiang-vi-15+thread:jiang-xueqin+../../../../research/external/work-jiang/lectures/interviews-15-sneako-jiang-xueqin-dugin-eschatology.md`
+
+`batch-analysis | 2026-04-14 | vi-14 Diesen + vi-15 Sneako/Dugin | **Tension-first:** same week’s **US–Iran** arc read through **petrodollar / chokepoint mechanics** (Diesen session) vs **theological–civilizational** stack (Dugin session), with Jiang bridging **1694→Enlightenment genealogy** and **China materialist** drag on “antichrist” urgency—**do not** merge causal chains in one Judgment. *Weak bridge:* **Islamabad negotiators as visible layer / scapegoat** motif appears in **both**—still verify each factual chain against primaries before folding.`
