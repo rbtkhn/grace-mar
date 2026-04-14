@@ -50,16 +50,16 @@ def test_truncate_words():
     assert out.endswith("…")
 
 
-def test_count_analyst_rows_sample():
-    from scripts.strategy_context import count_analyst_table_rows
+def test_count_expert_rows_sample():
+    from scripts.strategy_context import count_expert_table_rows
 
     sample = """
-| analyst_id | Anchor |
+| expert_id | Anchor |
 |------------|--------|
 | `foo-bar` | Name |
 | `baz` | Other |
 """
-    assert count_analyst_table_rows(sample) == 2
+    assert count_expert_table_rows(sample) == 2
 
 
 def test_strategy_context_smoke_compact():

@@ -347,10 +347,10 @@ what is proven vs priced vs merely loud.
 
 **Inbox lines** (paste-ready for `strategy-notebook/daily-strategy-inbox.md`):
 
-- Le Monde live | Hormuz + China/Turkey reaction line // third-party pushback vs U.S. coercion frame | https://www.lemonde.fr/international/live/2026-04-13/en-direct-guerre-au-moyen-orient-les-etats-unis-veulent-bloquer-les-ports-d-iran-des-lundi-la-chine-et-la-turquie-reclament-la-reouverture-du-detroit-d-ormuz_6676633_3210.html | verify:wire-RSS | thread:third-party-system
+- Le Monde live | Hormuz + China/Turkey reaction line // third-party pushback vs U.S. coercion frame | https://www.lemonde.fr/international/live/2026-04-13/en-direct-guerre-au-moyen-orient-les-etats-unis-veulent-bloquer-les-ports-d-iran-des-lundi-la-chine-et-la-turquie-reclament-la-reouverture-du-detroit-d-ormuz_6676633_3210.html | verify:wire-RSS | membrane:single
 - BBC Mundo | Hungary opposition win headline // EU veto politics hinge | https://www.bbc.com/mundo/articles/cly7xjewqjgo?at_medium=RSS&at_campaign=rss | verify:wire-RSS | membrane:pair
 - Le Monde live | Magyar post-election governance pledge line // coalition bargaining window | https://www.lemonde.fr/international/live/2026-04-13/en-direct-elections-en-hongrie-peter-magyar-apres-sa-victoire-electorale-face-a-viktor-orban-promet-de-gouverner-pour-tous-les-hongrois_6679608_3210.html | verify:wire-RSS
-- Roll Call | Iran war powers + expulsion talk track // domestic procedural pressure | https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/ | verify:wire-RSS | thread:hormuz-domestic
+- Roll Call | Iran war powers + expulsion talk track // domestic procedural pressure | https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/ | verify:wire-RSS | membrane:single
 - Le Monde live | Ukraine drones resume after Easter pause // parallel escalation channel | https://www.lemonde.fr/international/live/2026-04-13/en-direct-guerre-en-ukraine-moscou-et-kiev-reprennent-leurs-attaques-de-drones-apres-un-court-cessez-le-feu-pour-la-paque-orthodoxe_6679492_3210.html | verify:wire-RSS
 
 **Verify queue**

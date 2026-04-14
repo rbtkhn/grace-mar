@@ -272,10 +272,10 @@ precision claims remain conditional until primary-source passes close them.
 **Inbox lines** (paste-ready for `strategy-notebook/daily-strategy-inbox.md`):
 
 - Le Monde live | Iran-linked ships + Hormuz blockade frame + Lebanon/Israel talks in Washington // sea-lane + diplomacy stack | https://www.lemonde.fr/international/live/2026-04-14/en-direct-guerre-au-moyen-orient-washington-s-apprete-a-accueillir-les-pourparlers-de-paix-entre-le-liban-et-israel_6679867_3210.html | verify:wire-RSS | membrane:pair
-- BBC Mundo | Hormuz blockade explainer + China role line // third-party positioning | https://www.bbc.com/mundo/articles/cz90qzpjxwxo?at_medium=RSS&at_campaign=rss | verify:wire-RSS | thread:third-party-system
-- BBC News | MFA-class attribution line “China says” on Iran ports blockade // PRC reaction lane | https://www.bbc.com/news/articles/c78lleelxj4o?at_medium=RSS&at_campaign=rss | verify:wire-RSS | thread:diplomatic-institutional
+- BBC Mundo | Hormuz blockade explainer + China role line // third-party positioning | https://www.bbc.com/mundo/articles/cz90qzpjxwxo?at_medium=RSS&at_campaign=rss | verify:wire-RSS | membrane:single
+- BBC News | MFA-class attribution line “China says” on Iran ports blockade // PRC reaction lane | https://www.bbc.com/news/articles/c78lleelxj4o?at_medium=RSS&at_campaign=rss | verify:wire-RSS | membrane:single
 - Spiegel | IMF lowers global growth expectations (Iran war context) // macro constraint hint | https://www.spiegel.de/wirtschaft/iran-krieg-iwf-internationaler-waehrungsfonds-senkt-weltweite-wachstumserwartung-a-92c69b54-f568-41e6-8455-5359506f7504#ref=rss | verify:wire-RSS | membrane:single
-- Roll Call | Iran war powers + expulsion talk // Congressional procedure pressure | https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/ | verify:wire-RSS | thread:hormuz-domestic
+- Roll Call | Iran war powers + expulsion talk // Congressional procedure pressure | https://rollcall.com/2026/04/13/this-week-iran-war-powers-and-expulsion-talk/ | verify:wire-RSS | membrane:single
 - Le Monde live | Druzhba repair promise affecting Hungary oil supply // energy-route seam | https://www.lemonde.fr/international/live/2026-04-14/en-direct-guerre-en-ukraine-volodymyr-zelensky-promet-une-reparation-d-ici-a-la-fin-d-avril-de-l-oleoduc-droujba-qui-fournit-en-petrole-russe-la-hongrie_6679492_3210.html | verify:wire-RSS
 
 **Verify queue**

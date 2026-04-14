@@ -2,7 +2,7 @@
 
 **Kind:** month (first strategy-notebook chapter)  
 **Status:** `open`  
-**Operator preferences (notebook):** [NOTEBOOK-PREFERENCES.md](../../NOTEBOOK-PREFERENCES.md) — structure, fold rhythm, promotion, Judgment rules (set 2026-04-12).  
+**Operator preferences (notebook):** [NOTEBOOK-PREFERENCES.md](../../NOTEBOOK-PREFERENCES.md) — structure, weave rhythm, promotion, Judgment rules (set 2026-04-12).  
 **Theme:** Islamabad framework + Rome helix (Cannae / Teutoburg / Rhine); strategy-notebook bootstrapped; Mercouris as optional bridge only; Predictive History **Volume I** extended to twenty chapters + **student-export** checklist wired in `work-jiang`.
 
 **Retro verify pilot (2026-04):** **Complete** — duplicate `## 2026-04-11` in `days.md` reconciled; Islamabad/Hormuz pilot triage landed under **`### Web verification (2026-04-12)`** in [`chapters/2026-04/days.md`](days.md); multi-month **scale policy** in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Multi-month notebook — retro fact-check scale policy*. **Civ-mem pattern pilot (layer B):** **Complete** — **`### Civ-mem pattern check (pilot — 2026-04-12 — 2026-04-13)`** in same `days.md` (STATE + GEO MEM; `MEM–RELEVANCE` absent at pin; script skipped; WORK-only).

@@ -1,8 +1,10 @@
 # Fold learning — metrics and recursive review
 
-**Purpose:** Optional **append-only** ledger for **strategy-notebook folds** so you can compare sessions over time (compression proxies, verification surface, fold kind) and calibrate **how** you fold—not to claim a single objective “insight score.”
+**Operator command:** **`weave`** merges inbox → `days.md` (same operation this doc calls a **fold** in JSON fields). **`fold`** remains a **legacy** synonym in chat.
 
-**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Fold choice and section weighting* · [daily-strategy-inbox.md](daily-strategy-inbox.md) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
+**Purpose:** Optional **append-only** ledger for **strategy-notebook weaves** so you can compare sessions over time (compression proxies, verification surface, fold kind) and calibrate **how** you weave—not to claim a single objective “insight score.”
+
+**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting* · [daily-strategy-inbox.md](daily-strategy-inbox.md) · [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md).
 
 **Boundary:** **WORK / operator coaching** — not Record, not **MEMORY**, not **RECURSION-GATE**. Data file: `users/<id>/strategy-fold-events.jsonl` (same namespace as `pipeline-events.jsonl`; different purpose).
 
@@ -18,7 +20,7 @@
 |-------|------------|-------------|
 | `ts` | yes | ISO-8601 UTC timestamp when the log line was written |
 | `notebook_date` | yes | `YYYY-MM-DD` — target `##` heading in `chapters/YYYY-MM/days.md` |
-| `fold_kind` | yes | `manual` (operator **`fold`**), `dream` ( **`dream`** closeout), or `explicit` (other explicit instruction) |
+| `fold_kind` | yes | `manual` (operator **`weave`** / **`fold`**), `dream` ( **`dream`** closeout), or `explicit` (other explicit instruction) |
 
 **Optional fields:**
 
@@ -100,5 +102,5 @@ Optional: `--jsonl /path/to/file.jsonl` for testing or relocation; `--max-events
 
 ## See also
 
-- [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Fold choice and section weighting](STRATEGY-NOTEBOOK-ARCHITECTURE.md#fold-choice-and-section-weighting-inbox--yyyy-mm-dd)
-- [`.cursor/skills/dream/SKILL.md`](../../../../.cursor/skills/dream/SKILL.md) — optional log after **`dream`** fold
+- [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Weave choice and section weighting](STRATEGY-NOTEBOOK-ARCHITECTURE.md#weave-choice-and-section-weighting-inbox--yyyy-mm-dd)
+- [`.cursor/skills/dream/SKILL.md`](../../../../.cursor/skills/dream/SKILL.md) — optional log after **`dream`** **weave**

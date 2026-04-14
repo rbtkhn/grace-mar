@@ -131,7 +131,7 @@ Return a short night-close brief with:
 - **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
 - **capability shift** (model category): sources checked / total, REVIEW alerts, monitor alerts — or "no alerts" if quiet
 - one sentence on what tomorrow inherits from this run
-- **Strategy notebook** / **Xavier journal:** one line each when relevant — strategy-notebook is **deferred** unless the operator asked to fold in-thread; Xavier per § below
+- **Strategy notebook** / **Xavier journal:** one line each when relevant — strategy-notebook is **deferred** unless the operator asked to **weave** / **`fold`** (legacy) in-thread; Xavier per § below
 
 If nothing important changed, say so plainly. A quiet run is success.
 
@@ -214,29 +214,29 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 ## Strategy notebook (LIB-0153) — optional FYI; **not** owned by `dream`
 
-**Contract (repo):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* — **hybrid** dated + episodic sections; **inbox = raw**, **notebook = synthesized**; fold when the operator runs **`strategy`** or directs **fold** — **not** because night close ran.
+**Contract (repo):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* — **hybrid** dated + episodic sections; **inbox = raw**, **notebook = synthesized**; **weave** when the operator runs **`strategy`** or directs **`weave`** / **`fold`** (legacy) — **not** because night close ran.
 
 **Telemetry only:** `python3 scripts/auto_dream.py` (and `last-dream.json`) still include **`dream_catchup`**: `local_calendar_dates`, `previous_dream_generated_at`, `timezone`, and **`strategy_notebook_missing_day_headers`** (dates in the catch-up window with no matching `## YYYY-MM-DD` in the relevant `chapters/YYYY-MM/days.md` files). Treat this as **optional FYI** if you track calendar coverage — **not** a mandatory stub list and **not** a reason for the agent to auto-write the notebook during `dream`.
 
-**What `dream` does *not* do:** **`dream` does not** require folding [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md) into `days.md`, does **not** require minimal daily stubs, and does **not** replace a **`strategy`** session. If the operator **asks** in the same `dream` thread to fold the strategy inbox, treat that as **explicit direction** — same synthesis rules as [skill-strategy](../skill-strategy/SKILL.md) / architecture § *Daily strategy inbox*.
+**What `dream` does *not* do:** **`dream` does not** require weaving [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md) into `days.md`, does **not** require minimal daily stubs, and does **not** replace a **`strategy`** session. If the operator **asks** in the same `dream` thread to **weave** / **fold** the strategy inbox, treat that as **explicit direction** — same synthesis rules as [skill-strategy](../skill-strategy/SKILL.md) / architecture § *Daily strategy inbox*.
 
-**STATUS:** [STATUS.md](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) tracks **last substantive entry** when you close real work — update there after a fold; `dream` does not bump it by default.
+**STATUS:** [STATUS.md](../../../docs/skill-work/work-strategy/strategy-notebook/STATUS.md) tracks **last substantive entry** when you close real work — update there after a **weave**; `dream` does not bump it by default.
 
-**Optional — fold learning ledger:** After a fold, the operator may append one line with [`scripts/log_strategy_fold.py`](../../../scripts/log_strategy_fold.py) and run [`scripts/report_strategy_fold_learning.py`](../../../scripts/report_strategy_fold_learning.py) — see [FOLD-LEARNING.md](../../../docs/skill-work/work-strategy/strategy-notebook/FOLD-LEARNING.md). **Not** required for `dream` to complete.
+**Optional — fold learning ledger:** After a **weave**, the operator may append one line with [`scripts/log_strategy_fold.py`](../../../scripts/log_strategy_fold.py) and run [`scripts/report_strategy_fold_learning.py`](../../../scripts/report_strategy_fold_learning.py) — see [FOLD-LEARNING.md](../../../docs/skill-work/work-strategy/strategy-notebook/FOLD-LEARNING.md). **Not** required for `dream` to complete.
 
-**Optional — thread touch on fold:** When folding inbox into **`days.md`**, if lines contain **`thread:<id>`**, the agent **may** add **one bullet** under **`### Open`** (from [strategy-commentator-threads.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md)) **only when the operator directed that fold** — not by default at `dream`.
+**Optional — thread touch on weave:** When weaving inbox into **`days.md`**, if lines contain **`thread:<id>`**, the agent **may** add **one bullet** under **`### Open`** (from [strategy-commentator-threads.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md)) **only when the operator directed that weave** — not by default at `dream`.
 
-**Other lanes:** Xavier and dev journals keep their own **inbox → fold** habits — see **§ Xavier journal** and **§ Dev journal** below (`dream` may still **fold** those when the operator expects it; strategy-notebook does not inherit that obligation).
+**Other lanes:** Xavier and dev journals keep their own **inbox → weave / fold** habits — see **§ Xavier journal** and **§ Dev journal** below (`dream` may still **weave** those when the operator expects it; strategy-notebook does not inherit that obligation).
 
 **Agent behavior when `dream` is invoked (strategy notebook)**
 
 1. After Step 1, you **may** read **`dream_catchup.strategy_notebook_missing_day_headers`** and mention it **one line** in the night-close brief if useful — **or skip** if the operator does not calendar-track the notebook.
-2. **Do not** auto-fold strategy inbox, **do not** add stubs, **do not** edit `days.md` unless the operator **explicitly** asks in this thread.
-3. If the operator **explicitly** asks to fold strategy inbox or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
+2. **Do not** auto-weave strategy inbox, **do not** add stubs, **do not** edit `days.md` unless the operator **explicitly** asks in this thread.
+3. If the operator **explicitly** asks to **weave** / **fold** strategy inbox or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
 
 **Boundaries:** **WORK only** — not Record, not `self.md` / EVIDENCE / gate merge.
 
-**Return brief:** **Strategy notebook:** `deferred` / `FYI missing headers: …` / `folded (operator asked)` — as applicable.
+**Return brief:** **Strategy notebook:** `deferred` / `FYI missing headers: …` / `woven (operator asked)` — as applicable.
 
 ## Xavier journal (LIB-0154) — page generation (**since previous dream**)
 

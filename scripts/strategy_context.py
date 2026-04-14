@@ -102,7 +102,8 @@ def truncate_words(text: str, max_words: int) -> str:
     return " ".join(words[: max_words - 1]).rstrip(",;:") + " …"
 
 
-def count_analyst_table_rows(md: str) -> int:
+def count_expert_table_rows(md: str) -> int:
+    """Count data rows in the strategy-commentator-threads expert_id table."""
     return len(re.findall(r"^\|\s*`[a-z0-9-]+`\s*\|", md, re.MULTILINE))
 
 
@@ -202,7 +203,7 @@ def build_paragraph(
     brief_line: str,
     strategy_exists: bool,
     ladder_exists: bool,
-    analyst_rows: int,
+    expert_rows: int,
     max_words: int,
     meta_line: str | None = None,
     minds_line: str | None = None,
@@ -236,9 +237,9 @@ def build_paragraph(
         promo.append("promotion-ladder.md for stage semantics")
     if promo:
         parts.append("Promotion: " + "; ".join(promo) + ".")
-    if analyst_rows:
+    if expert_rows:
         parts.append(
-            f"Commentator index lists {analyst_rows} `analyst_id` rows (strategy-commentator-threads.md)."
+            f"Commentator index lists {expert_rows} `expert_id` rows (strategy-commentator-threads.md)."
         )
     if meta_line:
         parts.append(f"Month meta: {meta_line}")
@@ -257,7 +258,7 @@ def run_compact(
     open_bullets: list[str],
     accum: str | None,
     scratch_chars: int,
-    analyst_rows: int,
+    expert_rows: int,
     meta_path: Path | None = None,
     meta_exists: bool = False,
     meta_line: str | None = None,
@@ -290,7 +291,7 @@ def run_compact(
     lines_out.append(
         f"- inbox accumulator: {accum or '?'}; scratch below append (pre-Retained): {scratch_chars} chars"
     )
-    lines_out.append(f"- analyst_id rows (table): {analyst_rows}")
+    lines_out.append(f"- expert_id rows (table): {expert_rows}")
     return "\n".join(lines_out) + "\n"
 
 
@@ -355,7 +356,7 @@ def main() -> int:
         if exists["commentator-threads"]
         else ""
     )
-    analyst_rows = count_analyst_table_rows(threads_text) if threads_text else 0
+    expert_rows = count_expert_table_rows(threads_text) if threads_text else 0
 
     brief_line = brief_excerpt(brief_path)
 
@@ -373,7 +374,7 @@ def main() -> int:
             open_bullets=open_bullets,
             accum=accum,
             scratch_chars=scratch_chars,
-            analyst_rows=analyst_rows,
+            expert_rows=expert_rows,
             meta_path=meta_path if args.meta else None,
             meta_exists=meta_exists,
             meta_line=meta_line if args.meta else None,
@@ -392,7 +393,7 @@ def main() -> int:
             brief_line=brief_line,
             strategy_exists=exists["STRATEGY"],
             ladder_exists=exists["promotion-ladder"],
-            analyst_rows=analyst_rows,
+            expert_rows=expert_rows,
             max_words=max(40, args.max_words),
             meta_line=meta_line,
             minds_line=minds_line,
@@ -406,7 +407,7 @@ def main() -> int:
         note = (
             f"strategy-context date={d} compact={bool(args.compact)} max_words={args.max_words}; "
             f"meta={bool(args.meta)} minds={bool(args.minds)}; "
-            f"open_bullets={len(open_bullets)} analyst_rows={analyst_rows}"
+            f"open_bullets={len(open_bullets)} expert_rows={expert_rows}"
         )
         log_script = REPO_ROOT / "scripts" / "log_operator_choice.py"
         r = subprocess.run(

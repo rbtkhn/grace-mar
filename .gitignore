@@ -85,6 +85,9 @@ artifacts/evidence-stubs/*
 !artifacts/evidence-stubs/.gitkeep
 artifacts/candidate-drafts/*
 !artifacts/candidate-drafts/.gitkeep
+artifacts/shadow-merges/*
+!artifacts/shadow-merges/.gitkeep
+!artifacts/shadow-merges/README.md
 # Rejection routing feedback (rebuildable; scripts/analyze_rejection_feedback.py)
 artifacts/rejection_analysis.json
 # Forecast observability report (rebuildable; scripts/build_forecast_observability_report.py)

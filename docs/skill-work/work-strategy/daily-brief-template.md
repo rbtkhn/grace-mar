@@ -57,7 +57,7 @@ python3 scripts/merge_daily_brief_postprocess.py -u grace-mar --date 2026-04-14 
 | **5–6** | Operator synthesis + work-politics next actions |
 | **7** | **Context efficiency (CEL)** — optional footer when `config/context_budgets/daily_brief.json` has `append_cel_footer: true`; links to [context-efficiency-layer.md](../context-efficiency-layer.md), [context-compaction-protocol.md](../context-compaction-protocol.md), `session_brief --compact` |
 
-**Raw X / transcript strategy ingests:** Do **not** duplicate a full ingest list in this file — scratch lives in [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (paste-ready one-liner SSOT); fold into `days.md` per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*.
+**Raw X / transcript strategy ingests:** Do **not** duplicate a full ingest list in this file — scratch lives in [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) (paste-ready one-liner SSOT); **weave** into `days.md` per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox* (**`fold`** = legacy synonym).
 
 ---
 
@@ -154,7 +154,7 @@ When emitting **Handoff to Grace-Mar** inbox lines, follow the paste-ready unit
 rules in
 [strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)
 — optional **`cold: … // hook: …`** split, **`verify:`** tails, optional
-**`thread:<analyst_id>`**, and optional **`membrane:*`** tokens.
+**`thread:<expert_id>`**, and optional **`membrane:*`** tokens.
 
 **`verify:` token vocabulary (recommended defaults):**
 

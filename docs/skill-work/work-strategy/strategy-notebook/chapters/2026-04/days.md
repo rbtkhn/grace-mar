@@ -129,7 +129,7 @@ Append-only. Newest dated block at the **bottom**.
 
 _Recipe A ([MINDS-SKILL-STRATEGY-PATTERNS](../../minds/MINDS-SKILL-STRATEGY-PATTERNS.md) §Recipe A): Barnes only; verify oil and shipping._
 
-**Material question:** Can either side **sustain** the current posture — ceasefire diplomacy on one hand, kinetic readiness on the other — long enough for extension-game logic to bite?
+**Material question:** Can either side **sustain** the current posture — ceasefire diplomacy on one hand, kinetic readiness on the other — long enough for Davis-style extension-game logic to bite?
 
 **U.S. liabilities**
 
