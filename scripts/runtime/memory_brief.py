@@ -8,11 +8,14 @@ Does not auto-stage gate candidates; output is runtime-only. See docs/runtime/re
 from __future__ import annotations
 
 import argparse
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 _RUNTIME_DIR = Path(__file__).resolve().parent
+REPO_ROOT = _RUNTIME_DIR.parent.parent
+BUDGET_SCRIPT = REPO_ROOT / "scripts" / "prepared_context" / "build_budgeted_context.py"
 if str(_RUNTIME_DIR) not in sys.path:
     sys.path.insert(0, str(_RUNTIME_DIR))
 
@@ -20,6 +23,7 @@ from expand_observations import expanded_row  # noqa: E402
 from lane_search import filter_rows, rank_hits, format_ts_display  # noqa: E402
 from lane_timeline import build_timeline_window  # noqa: E402
 from observation_store import by_id, load_all  # noqa: E402
+from uncertainty_envelope import compute_envelope, envelope_to_markdown_block  # noqa: E402
 
 
 def _takeaway_line(obs: dict, max_len: int = 220) -> str:
@@ -59,7 +63,24 @@ def main() -> int:
         default=None,
         help="Write Markdown to this path (default: stdout only)",
     )
+    parser.add_argument(
+        "--budgeted-follow-on",
+        type=Path,
+        default=None,
+        metavar="PATH",
+        help="After writing --output, run build_budgeted_context.py with this path as output "
+        "(requires -o; passes memory brief as --include-memory-brief)",
+    )
+    parser.add_argument(
+        "--budgeted-mode",
+        choices=("compact", "medium", "deep"),
+        default="compact",
+        help="Mode for --budgeted-follow-on (default: compact)",
+    )
     args = parser.parse_args()
+
+    if args.budgeted_follow_on is not None and args.output is None:
+        parser.error("--budgeted-follow-on requires --output (brief must be written to a file first)")
 
     if args.lane is not None and args.positional:
         parser.error("use either --lane/--query or positional LANE [QUERY], not both")
@@ -166,6 +187,18 @@ def main() -> int:
             f"- Soft signal: {high_conf} match(es) with confidence ≥ 0.8 — review contradictions before staging."
         )
 
+    # Uncertainty envelope derived from top hit rows (same fields as runtime-observation.v1.json).
+    seen_ids: set[str] = set()
+    env_rows: list[dict] = []
+    for _s, row in hits:
+        oid = row.get("obs_id")
+        if oid and oid not in seen_ids:
+            seen_ids.add(str(oid))
+            env_rows.append(row)
+    if env_rows:
+        env = compute_envelope(env_rows)
+        lines.extend(["", envelope_to_markdown_block(env).rstrip()])
+
     lines.extend(
         [
             "",
@@ -182,6 +215,30 @@ def main() -> int:
         print(f"wrote {args.output}", file=sys.stderr)
     else:
         print(content, end="")
+
+    if args.budgeted_follow_on is not None and args.output is not None:
+        out_budget = args.budgeted_follow_on.resolve()
+        cmd = [
+            sys.executable,
+            str(BUDGET_SCRIPT),
+            "--lane",
+            lane,
+            "--mode",
+            args.budgeted_mode,
+            "--query",
+            q,
+            "--include-memory-brief",
+            str(args.output.resolve()),
+            "-o",
+            str(out_budget),
+            "--repo-root",
+            str(REPO_ROOT),
+        ]
+        r = subprocess.run(cmd, capture_output=True, text=True)
+        if r.returncode != 0:
+            print(r.stderr or r.stdout or "build_budgeted_context failed", file=sys.stderr)
+            return r.returncode or 1
+        print(r.stderr.strip(), file=sys.stderr)
 
     return 0
 

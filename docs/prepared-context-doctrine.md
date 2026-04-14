@@ -29,4 +29,5 @@
 
 - [evidence-to-context-pipeline.md](evidence-to-context-pipeline.md)  
 - [state-model.md](state-model.md)  
+- [abstention-policy.md](abstention-policy.md) — uncertainty envelope on runtime-derived prepared context  
 - Starter staging script: `scripts/stage-evidence.py` (optional; creates JSON stubs under `prepared-context/`)

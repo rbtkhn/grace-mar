@@ -22,6 +22,11 @@ Grace-Mar runtime observations support a **progressive disclosure** workflow ove
 4. **Prepared-context bundle** — `build_context_from_observations.py` (lane-scoped Markdown, not Record truth).
 5. **Provenance-backed gate staging** — `stage_candidate_from_observations.py` (explicit observation lineage into `recursion-gate.md`; see [provenance-staging.md](provenance-staging.md)).
 6. **Read hints + memory brief** — `read_hint.py` (soft pre-read hints) and `memory_brief.py` (one bounded Markdown brief: search → timeline → expansion); see [read-hints.md](read-hints.md).
+7. **Uncertainty envelope** — `score_evidence_sufficiency.py`, `flag_fabricated_history_risk.py`, `precheck_gate_staging.py` (advisory); doctrine: [abstention-policy.md](../abstention-policy.md).
+8. **Review orchestrator** — `review_orchestrator.py` (multi-pass Markdown packet, pre-gate or candidate); [review-orchestrator.md](../orchestration/review-orchestrator.md).
+9. **Long-horizon checkpoints / handoffs** — `checkpoint_session.py` and `build_handoff_packet.py` emit **runtime-only** Markdown under `artifacts/handoffs/` so long runs stay resumable and inspectable without conflating working memory with the Record; [long-horizon-work.md](long-horizon-work.md).
+10. **Budgeted prepared context** — `build_budgeted_context.py` assembles lane-scoped context with explicit **budget mode** and inclusion/exclusion reporting; [context-budgeting.md](context-budgeting.md).
+11. **Policy modes** — named governance envelopes (`GRACE_MAR_POLICY_MODE` / `--policy-mode`) tune staging and abstention posture without replacing gate review; [policy-modes.md](../policy-modes.md).
 
 ## Design intent
 

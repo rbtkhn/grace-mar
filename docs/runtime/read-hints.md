@@ -14,7 +14,7 @@
 
 Grace-Mar’s analogue to “file-read decision” tools elsewhere: **surface relevant runtime observations** before you re-open a large file or notebook. This is a **hinting layer**, not a block — the operator or companion always chooses whether to read again.
 
-**Normative workflow, rules, and policy:** [memory-retrieval.md](memory-retrieval.md). This page covers **`read_hint.py`** and **`memory_brief.py`** only.
+**Normative workflow, rules, and policy:** [memory-retrieval.md](memory-retrieval.md). **Abstention / uncertainty envelopes:** [abstention-policy.md](../abstention-policy.md). This page covers **`read_hint.py`** and **`memory_brief.py`** only.
 
 ## Principles
 

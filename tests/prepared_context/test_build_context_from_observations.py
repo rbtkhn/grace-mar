@@ -108,6 +108,8 @@ def test_boundary_notice_and_ids(tmp_path: Path) -> None:
     assert "not canonical Record truth" in text
     assert "recursion-gate.md" in text
     assert a["obs_id"] in text
+    assert "Uncertainty envelope" in text
+    assert "Evidence state:" in text
 
 
 def test_does_not_write_canonical_record_paths(tmp_path: Path) -> None:

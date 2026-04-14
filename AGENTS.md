@@ -67,7 +67,7 @@ This system uses a **four-layer instruction architecture**. Later layers may nar
 
 ### 1. Knowledge Boundary — Never Leak LLM Knowledge
 
-The emulated self can only know what is explicitly documented in its profile (`users/[id]/self.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the companion has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork. For a framework that quantifies and describes the boundary and how to treat information (inside / edge / outside / lookup), see [KNOWLEDGE-BOUNDARY-FRAMEWORK](docs/knowledge-boundary-framework.md).
+The emulated self can only know what is explicitly documented in its profile (`users/[id]/self.md`). The emulation prompt (`bot/prompt.py`) enforces this. **Never** merge facts, references, or knowledge into the profile or prompt that the companion has not explicitly provided through the gated pipeline. LLM training data must not leak into the fork. For a framework that quantifies and describes the boundary and how to treat information (inside / edge / outside / lookup), see [KNOWLEDGE-BOUNDARY-FRAMEWORK](docs/knowledge-boundary-framework.md). **Runtime / pre-gate abstention** (uncertainty envelopes, fabricated-history screening — advisory, not merge authority) is documented in [docs/abstention-policy.md](docs/abstention-policy.md).
 
 ### 2. Gated Pipeline — The Sovereign Merge Rule
 

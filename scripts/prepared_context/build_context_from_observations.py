@@ -20,6 +20,7 @@ if str(_RT) not in sys.path:
     sys.path.insert(0, str(_RT))
 
 from observation_store import by_id  # noqa: E402
+from uncertainty_envelope import compute_envelope, envelope_to_markdown_block  # noqa: E402
 
 
 def _sentences_from_observations(rows: list[dict], max_sentences: int = 10) -> str:
@@ -125,6 +126,9 @@ def main() -> int:
     key_pts = _key_points(rows)
     open_q = _open_questions(rows)
 
+    env = compute_envelope(rows)
+    unc_block = envelope_to_markdown_block(env)
+
     content = f"""# Runtime Observation Context
 
 Status: Runtime-only
@@ -149,6 +153,8 @@ It does not update SELF, SELF-LIBRARY, SKILLS, EVIDENCE, or recursion-gate.md.
 ## Open Questions / Uncertainties
 
 {open_q}
+
+{unc_block}
 """
 
     out = args.output

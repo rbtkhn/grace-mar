@@ -25,6 +25,7 @@ for p in (_SCRIPTS, _RUNTIME):
 from observation_store import by_id  # noqa: E402
 from repo_io import profile_dir, read_path  # noqa: E402
 from search_scoring import parse_obs_timestamp  # noqa: E402
+from policy_mode_config import load_defaults, resolve_mode, staging_decision  # noqa: E402
 from stage_gate_candidate import (  # noqa: E402
     build_block,
     convergence_check,
@@ -139,7 +140,29 @@ def main() -> int:
         default="companion",
     )
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument(
+        "--policy-mode",
+        default=None,
+        help="Policy envelope (default: GRACE_MAR_POLICY_MODE or operator_only); see docs/policy-modes.md",
+    )
+    ap.add_argument(
+        "--policy-ack",
+        action="store_true",
+        help="Acknowledge policy warn/hold (identity_bound SELF, high_risk_abstention) to proceed",
+    )
     args = ap.parse_args()
+
+    pdefs = load_defaults()
+    pol = resolve_mode(args.policy_mode, pdefs)
+    verb, reason = staging_decision(pol, args.target_surface, pdefs)
+    if verb == "blocked":
+        print(f"error: policy mode {pol}: {reason}", file=sys.stderr)
+        return 2
+    if verb in ("warn", "hold_hint") and not args.policy_ack:
+        print(f"error: policy mode {pol}: {reason} Pass --policy-ack to proceed.", file=sys.stderr)
+        return 2
+    if verb in ("warn", "hold_hint") and args.policy_ack:
+        print(f"warning: policy mode {pol} override acknowledged: {reason}", file=sys.stderr)
 
     obs_rows: list[dict] = []
     for oid in args.obs_ids:
