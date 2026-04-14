@@ -46,6 +46,8 @@ Recommended flow:
 
 Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-style prose**, **long-arc placement**, and **standing hypothesis logs** — WORK only; fold to `days.md` per [STRATEGY-NOTEBOOK-ARCHITECTURE](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md).
 
+**`strategy-context` (CLI):** Cold-thread re-entry — one bounded paragraph (default **≤120 words**) from notebook `days.md` **Open**, inbox accumulator, `daily-brief-YYYY-MM-DD.md` §1b, STRATEGY + promotion ladder + commentator index presence — or **`--compact`** paths/status only. **`--meta`** adds `chapters/YYYY-MM/meta.md` (month **Theme** excerpt); **`--minds`** adds `minds/README.md` + `minds/outputs` filenames for the date or recent month scaffolds. **`--log`** appends a **`WORK-choice`** receipt to `session-transcript.md` via `log_operator_choice.py` (pointer, not full stdout). `python3 scripts/strategy_context.py -u grace-mar` · `--date YYYY-MM-DD` · `--max-words N`
+
 | File | Role |
 |------|------|
 | [grok-daily-brief.md](grok-daily-brief.md) | Headings-only **magazine layer** on top of generated `daily-brief-YYYY-MM-DD.md`. |

@@ -19,6 +19,8 @@ description: >-
 
 **Persistent frontier:** The repo holds the **running edge** (latest `days.md` block, **`### Open`**, **`### Links`**, **`meta.md`** when relevant). Each **`strategy`** invocation **updates** that checkpoint from the **last committed** block—tomorrow’s pass **reads disk**, not thread recall. Informal gloss: **memoized** strategy state (see [Accumulation and evolution](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#accumulation-and-evolution) in the architecture doc).
 
+**Optional cold start (`strategy-context`):** In a **fresh chat** (no thread memory), run `python3 scripts/strategy_context.py -u grace-mar` to print a **bounded, file-grounded readout**—notebook **Open**, inbox accumulator, daily brief §1b lead, STRATEGY + promotion ladder, commentator table—before the assistant loads long files. **`--compact`** is path/status only; **`--meta`** adds the month **`chapters/YYYY-MM/meta.md`** pointer; **`--minds`** adds Tri-Frame **`minds/outputs`** filenames (exact date or recent month scaffolds). See [work-strategy README — `strategy-context`](../../../docs/skill-work/work-strategy/README.md#strategy-session-helpers-skill-strategy). This **orients** only: it does **not** substitute a full **`strategy`** pass, **`strategy + verify`**, watch-block fills (§1d–§1h), or folding **`daily-strategy-inbox.md`** into **`days.md`**.
+
 ## Five primary threads (operator geopolitical theory)
 
 **Official theory name:** **TBD** (deferred by operator). This skill refers to the **substance** below; when a name is chosen, update this heading and the YAML `description` in one pass.

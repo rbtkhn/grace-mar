@@ -96,6 +96,8 @@ python3 scripts/report_strategy_fold_learning.py -u grace-mar --days 30
 
 Spec: [FOLD-LEARNING.md](work-strategy/strategy-notebook/FOLD-LEARNING.md).
 
+**Strategy context (cold start):** `python3 scripts/strategy_context.py -u grace-mar` prints one **≤120-word** re-entry paragraph (notebook **Open**, inbox, daily brief §1b, STRATEGY / promotion ladder / commentator index) or **`--compact`** path/status lines; **`--meta`** / **`--minds`** add month **`meta.md`** and Tri-Frame **`minds/outputs`** pointers; **`--log`** appends a **`WORK-choice`** receipt to **`session-transcript.md`** via `log_operator_choice.py` (pointer-only note). See [work-strategy README — `strategy-context`](work-strategy/README.md#strategy-session-helpers-skill-strategy).
+
 ---
 
 ## 7. Multi-agent fork generation (experimental)
