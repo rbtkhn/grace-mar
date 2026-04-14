@@ -154,3 +154,8 @@ prepared-context/memory-brief.md
 
 # Domain migration backups (migrate-to-domain-surface.py; local only)
 backups/
+
+# Surface misclassification reports (advisory; see artifacts/README.md)
+artifacts/classification-reports/*
+!artifacts/classification-reports/.gitkeep
+!artifacts/classification-reports/README.md

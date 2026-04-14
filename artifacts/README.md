@@ -21,6 +21,7 @@ This tree holds **rebuildable, non-canonical** outputs from operator scripts. No
 | `artifacts/uncertainty-reports/` | _(optional)_ operator / CI | **Optional** sidecars for uncertainty envelope JSON — not Record; [folder README](uncertainty-reports/README.md). |
 | `artifacts/review-packets/` | `scripts/runtime/review_orchestrator.py` | **Optional** Markdown review packets (`--output`) — not Record; [folder README](review-packets/README.md). |
 | `artifacts/shadow-merges/` | `scripts/runtime/shadow_merge_simulator.py` | **Optional** Markdown shadow-merge preview reports (`--output`) — not Record; [folder README](shadow-merges/README.md), [doc](../docs/orchestration/shadow-merge-simulator.md). |
+| `artifacts/classification-reports/` | `scripts/runtime/surface_misclassification_detector.py` | **Optional** Markdown surface-classification risk reports (`--output`) — advisory, not Record; [folder README](classification-reports/README.md), [doc](../docs/orchestration/surface-misclassification-detector.md). |
 | `artifacts/handoffs/` | `checkpoint_session.py`, `build_handoff_packet.py` | **Runtime** session checkpoints and handoff packets — not Record; [folder README](handoffs/README.md), [long-horizon doctrine](../docs/runtime/long-horizon-work.md). |
 | `prepared-context/last-budget-builds.json` | `build_budgeted_context.py` | **Optional** per-lane receipt for last budgeted build (repo root); see [context-budgeting.md](../docs/runtime/context-budgeting.md). |
 

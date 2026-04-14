@@ -74,6 +74,7 @@ Reports are usually written under [`artifacts/shadow-merges/`](../../artifacts/s
 ## Related
 
 - [Review orchestrator](review-orchestrator.md) — multi-pass review packet (read-only).
+- [Surface Misclassification Detector](surface-misclassification-detector.md) — advisory ontology check (aim vs content signals) before or alongside shadow merge.
 - [Runtime vs Record](../runtime-vs-record.md) — canonical surfaces vs derived/runtime.
 - [Gate board](../gate-board.md) — derived gate snapshot (not authoritative).
 
