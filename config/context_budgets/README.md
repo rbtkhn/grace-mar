@@ -6,6 +6,7 @@ JSON files here cap **operator ritual paste size** and dream **write-path** payl
 
 | File | Consumers |
 |------|-----------|
+| `lane-defaults.json` | `scripts/prepared_context/build_budgeted_context.py` — default character budget targets per lane for `compact` / `medium` / `deep` (operator scaffolding; see [docs/runtime/context-budgeting.md](../../docs/runtime/context-budgeting.md)) |
 | `coffee.json` | `operator_daily_warmup.py` — collapsed Last dream lines, optional civ-mem/rollup lines, session tail depth |
 | `dream.json` | `auto_dream.py`, `dream_civmem_echoes.py` — civ-mem echo limits, specificity gate, rollup allow, suppress analogies when checks fail |
 | `session_brief.json` | `session_brief.py` — pending ID list limits, recovery link toggles for `--minimal` / `--compact` |

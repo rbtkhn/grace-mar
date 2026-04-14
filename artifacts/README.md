@@ -2,6 +2,8 @@
 
 This tree holds **rebuildable, non-canonical** outputs from operator scripts. Nothing here is **Record truth**; recovery always points back to source files under `users/`, `docs/`, `skills-portable/`, etc.
 
+**Repo root `prepared-context/`** (not under `artifacts/`) may hold operator drafts and `last-budget-builds.json`; see [prepared-context/README.md](../prepared-context/README.md) and [context-budgeting.md](../docs/runtime/context-budgeting.md).
+
 | Path | Produced by | Policy |
 |------|-------------|--------|
 | `artifacts/work-notes/` | `scripts/new_work_note.py` | **Scratch** work notes from `docs/templates/work-note-template.md`. **Default:** `*.md` **gitignored**; `.gitkeep` preserves the directory. Not Record. |
@@ -16,6 +18,10 @@ This tree holds **rebuildable, non-canonical** outputs from operator scripts. No
 | `artifacts/work-lanes-dashboard.json` | `scripts/build_work_lanes_dashboard.py` | **WORK** telemetry aggregate; input to lane dashboard script. |
 | `artifacts/forecast/` | `scripts/run_forecast_baselines.py` | **Forecast artifact JSON** + optional `.summary.md` — WORK-layer; [policy](forecast/README.md), [lane](../docs/skill-work/work-forecast/README.md). |
 | `artifacts/receipts/forecast/` | `scripts/run_forecast_baselines.py` | **Forecast run receipts** — legibility only; [policy](receipts/forecast/README.md). |
+| `artifacts/uncertainty-reports/` | _(optional)_ operator / CI | **Optional** sidecars for uncertainty envelope JSON — not Record; [folder README](uncertainty-reports/README.md). |
+| `artifacts/review-packets/` | `scripts/runtime/review_orchestrator.py` | **Optional** Markdown review packets (`--output`) — not Record; [folder README](review-packets/README.md). |
+| `artifacts/handoffs/` | `checkpoint_session.py`, `build_handoff_packet.py` | **Runtime** session checkpoints and handoff packets — not Record; [folder README](handoffs/README.md), [long-horizon doctrine](../docs/runtime/long-horizon-work.md). |
+| `prepared-context/last-budget-builds.json` | `build_budgeted_context.py` | **Optional** per-lane receipt for last budgeted build (repo root); see [context-budgeting.md](../docs/runtime/context-budgeting.md). |
 
 **Companion-specific large blobs** (e.g. under `users/<id>/artifacts/`) follow separate rules in `.gitignore` and instance docs — not this folder.
 

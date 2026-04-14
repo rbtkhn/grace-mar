@@ -1,0 +1,22 @@
+{
+  "work-strategy": {
+    "compact": 1200,
+    "medium": 2500,
+    "deep": 4500
+  },
+  "history-notebook": {
+    "compact": 1500,
+    "medium": 3000,
+    "deep": 5000
+  },
+  "review-orchestrator": {
+    "compact": 1000,
+    "medium": 2200,
+    "deep": 4000
+  },
+  "default": {
+    "compact": 1000,
+    "medium": 2000,
+    "deep": 3500
+  }
+}

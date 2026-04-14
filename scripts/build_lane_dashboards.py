@@ -10,19 +10,15 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-_SCRIPTS = REPO_ROOT / "scripts"
-_RUNTIME = _SCRIPTS / "runtime"
-for p in (_SCRIPTS, _RUNTIME):
-    if str(p) not in sys.path:
-        sys.path.insert(0, str(p))
 
-from ledger_paths import observations_jsonl  # noqa: E402
+
+def _ledger_path_for_root(root: Path) -> Path:
+    return root / "runtime" / "observations" / "index.jsonl"
 
 
 def _load_jsonl(path: Path) -> list[dict]:
@@ -40,12 +36,199 @@ def _load_jsonl(path: Path) -> list[dict]:
     return rows
 
 
+def _parse_lane_from_checkpoint_body(text: str) -> str | None:
+    for line in text.splitlines():
+        if line.strip().startswith("Lane:"):
+            return line.split("Lane:", 1)[1].strip()
+    return None
+
+
+def _scan_handoffs_markdown(
+    *,
+    root: Path,
+    by_lane: dict[str, list[dict]],
+    work_lanes_doc: dict | None,
+) -> str:
+    """Long-horizon checkpoints + handoff packets (runtime-only)."""
+    handoffs_root = root / "artifacts" / "handoffs"
+    ck_dir = handoffs_root / "checkpoints"
+    lanes: set[str] = set(by_lane.keys())
+    if work_lanes_doc and isinstance(work_lanes_doc.get("lanes"), dict):
+        for _k, blob in work_lanes_doc["lanes"].items():
+            if isinstance(blob, dict) and blob.get("lane"):
+                lanes.add(str(blob["lane"]))
+
+    latest_cp: dict[str, tuple[Path, float]] = {}
+    if ck_dir.is_dir():
+        for p in ck_dir.glob("*.md"):
+            try:
+                body = p.read_text(encoding="utf-8")
+                lane = _parse_lane_from_checkpoint_body(body)
+                if not lane:
+                    continue
+                lanes.add(lane)
+                try:
+                    mtime = p.stat().st_mtime
+                except OSError:
+                    mtime = 0.0
+                prev = latest_cp.get(lane)
+                if prev is None or mtime > prev[1]:
+                    latest_cp[lane] = (p, mtime)
+            except OSError:
+                continue
+
+    last_handoff: dict[str, tuple[Path, float]] = {}
+    if handoffs_root.is_dir():
+        for p in handoffs_root.glob("*.md"):
+            try:
+                head = "\n".join(p.read_text(encoding="utf-8").splitlines()[:24])
+                lane = None
+                for line in head.splitlines():
+                    if line.strip().startswith("Lane:"):
+                        lane = line.split("Lane:", 1)[1].strip()
+                        break
+                if not lane:
+                    continue
+                lanes.add(lane)
+                try:
+                    mtime = p.stat().st_mtime
+                except OSError:
+                    mtime = 0.0
+                prev = last_handoff.get(lane)
+                if prev is None or mtime > prev[1]:
+                    last_handoff[lane] = (p, mtime)
+            except OSError:
+                continue
+
+    lines: list[str] = [
+        "## Long-horizon checkpoints and handoffs\n\n",
+        "**Runtime work layer** — not Record. See `docs/runtime/long-horizon-work.md`. "
+        "Heuristics below are **legibility hints** for operators.\n\n",
+        "- **Stale (idle):** latest checkpoint file mtime older than **7 days**.\n",
+        "- **Stale (drift):** newest runtime observation for the lane is **newer** than the checkpoint "
+        "`Built:` timestamp (parsed when present; else file mtime).\n\n",
+    ]
+
+    if not lanes:
+        lines.append("_No lanes from ledger or checkpoints yet._\n\n")
+        return "".join(lines)
+
+    now_ts = datetime.now(timezone.utc).timestamp()
+    stale_idle_s = 7 * 24 * 3600
+
+    for lane in sorted(lanes):
+        lines.append(f"### {lane}\n\n")
+        cp_t = latest_cp.get(lane)
+        ho_t = last_handoff.get(lane)
+        if cp_t:
+            cp_path, cp_mtime = cp_t
+            try:
+                rel_cp = cp_path.relative_to(root)
+            except ValueError:
+                rel_cp = cp_path
+            lines.append(f"- **Latest checkpoint:** `{rel_cp}`\n")
+            built = None
+            try:
+                for bl in cp_path.read_text(encoding="utf-8").splitlines():
+                    if bl.strip().startswith("Built:"):
+                        built = bl.split("Built:", 1)[1].strip()
+                        break
+            except OSError:
+                built = None
+            idle = (now_ts - cp_mtime) > stale_idle_s
+            obs_rows = by_lane.get(lane, [])
+            obs_newer = False
+            if obs_rows and built:
+                newest_obs = max((str(r.get("timestamp") or "") for r in obs_rows), default="")
+                if newest_obs and newest_obs > built:
+                    obs_newer = True
+            elif obs_rows and not built:
+                obs_newer = True
+            flags = []
+            if idle:
+                flags.append("stale_idle")
+            if obs_newer:
+                flags.append("stale_drift")
+            if flags:
+                lines.append(f"- **Review:** {', '.join(flags)} — consider a fresh `checkpoint_session.py` pass.\n")
+            else:
+                lines.append("- **Review:** ok (heuristic)\n")
+        else:
+            lines.append("- **Latest checkpoint:** _none_\n")
+            if by_lane.get(lane):
+                lines.append(
+                    "- **Review:** stale_drift — observations exist without a lane checkpoint; consider `checkpoint_session.py`.\n"
+                )
+            else:
+                lines.append("- **Review:** _n/a_\n")
+
+        if ho_t:
+            ho_path, _ = ho_t
+            try:
+                rel_ho = ho_path.relative_to(root)
+            except ValueError:
+                rel_ho = ho_path
+            lines.append(f"- **Last handoff packet:** `{rel_ho}`\n")
+        else:
+            lines.append("- **Last handoff packet:** _none_\n")
+        lines.append("\n")
+
+    return "".join(lines)
+
+
+def _scan_budget_builds(root: Path) -> str:
+    path = root / "prepared-context" / "last-budget-builds.json"
+    lines: list[str] = [
+        "## Context efficiency (budgeted builds)\n\n",
+        "Per-lane receipts from `build_budgeted_context.py`. Not Record truth — see "
+        "[`docs/runtime/context-budgeting.md`](../../docs/runtime/context-budgeting.md).\n\n",
+    ]
+    if not path.is_file():
+        lines.append(
+            "_No receipt yet._ Run `python3 scripts/prepared_context/build_budgeted_context.py` after lane work.\n\n"
+        )
+        return "".join(lines)
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        lines.append("_Receipt present but not valid JSON._\n\n")
+        return "".join(lines)
+    lanes = data.get("lanes") if isinstance(data, dict) else None
+    if not lanes:
+        lines.append("_Empty receipt._\n\n")
+        return "".join(lines)
+    try:
+        rel = path.relative_to(root)
+    except ValueError:
+        rel = path
+    lines.append(f"- **Receipt file:** `{rel}`\n\n")
+    for lane in sorted(lanes.keys()):
+        blob = lanes[lane]
+        if not isinstance(blob, dict):
+            continue
+        mode = blob.get("mode", "")
+        built = blob.get("built", "")
+        exc = blob.get("exclusions", False)
+        out_p = blob.get("path", "")
+        bt = blob.get("budget_target", "")
+        lines.append(f"### {lane}\n\n")
+        lines.append(f"- **Last build:** `{out_p}`\n")
+        pol = blob.get("policy_mode", "")
+        lines.append(f"- **Budget class:** `{mode}` — **budget target (chars):** `{bt}`\n")
+        if pol:
+            lines.append(f"- **Policy mode:** `{pol}`\n")
+        lines.append(f"- **Built:** {built}\n")
+        lines.append(f"- **Exclusions occurred:** {'yes' if exc else 'no'}\n\n")
+    return "".join(lines)
+
+
 def render_markdown(
     *,
     by_lane: dict[str, list[dict]],
     work_lanes_doc: dict | None,
     generated_at: str,
     ledger_path: Path,
+    root: Path,
 ) -> str:
     lines: list[str] = [
         "<!-- GENERATED — run: python3 scripts/build_lane_dashboards.py -->\n\n",
@@ -70,6 +253,12 @@ def render_markdown(
             "_Missing — run `python3 scripts/build_work_lanes_dashboard.py` to populate "
             "`artifacts/work-lanes-dashboard.json`._\n\n"
         )
+
+    lines.append(
+        _scan_handoffs_markdown(root=root, by_lane=by_lane, work_lanes_doc=work_lanes_doc)
+    )
+
+    lines.append(_scan_budget_builds(root))
 
     lines.append("## Runtime observations by lane (recent)\n\n")
     if not by_lane:
@@ -109,7 +298,7 @@ def main() -> int:
     ap.add_argument("--repo-root", type=Path, default=REPO_ROOT)
     args = ap.parse_args()
     root = args.repo_root.resolve()
-    ledger = observations_jsonl()
+    ledger = _ledger_path_for_root(root)
     rows = _load_jsonl(ledger)
     by_lane: dict[str, list[dict]] = defaultdict(list)
     for r in rows:
@@ -130,6 +319,7 @@ def main() -> int:
         work_lanes_doc=work_lanes,
         generated_at=ts,
         ledger_path=ledger,
+        root=root,
     )
     out_dir = root / "artifacts" / "lane-dashboards"
     out_dir.mkdir(parents=True, exist_ok=True)

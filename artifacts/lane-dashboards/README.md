@@ -4,7 +4,7 @@
 
 **Derived operator artifact.** Work territories do not redefine the Record; this file only surfaces runtime + WORK telemetry for navigation.
 
-- **Generated:** 2026-04-14T00:07:10Z
+- **Generated:** 2026-04-14T15:36:47Z
 - **Ledger:** `/Users/robertkuhne/Documents/grace-mar/runtime/observations/index.jsonl` (missing — no runtime observations yet)
 
 ## work-lanes-dashboard.json snapshot
@@ -194,6 +194,25 @@ From `artifacts/work-lanes-dashboard.json` (run `build_work_lanes_dashboard.py` 
   }
 }
 ```
+
+## Long-horizon checkpoints and handoffs
+
+**Runtime work layer** — not Record. See `docs/runtime/long-horizon-work.md`. Heuristics below are **legibility hints** for operators.
+
+- **Stale (idle):** latest checkpoint file mtime older than **7 days**.
+- **Stale (drift):** newest runtime observation for the lane is **newer** than the checkpoint `Built:` timestamp (parsed when present; else file mtime).
+
+### work-strategy
+
+- **Latest checkpoint:** _none_
+- **Review:** _n/a_
+- **Last handoff packet:** _none_
+
+## Context efficiency (budgeted builds)
+
+Per-lane receipts from `build_budgeted_context.py`. Not Record truth — see [`docs/runtime/context-budgeting.md`](../../docs/runtime/context-budgeting.md).
+
+_No receipt yet._ Run `python3 scripts/prepared_context/build_budgeted_context.py` after lane work.
 
 ## Runtime observations by lane (recent)
 
