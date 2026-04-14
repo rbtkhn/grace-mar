@@ -30,6 +30,8 @@ Pods/
 # IDE
 .idea/
 .vscode/
+# Cursor — local plan drafts (not canonical repo state)
+.cursor/plans/
 *.swp
 *.swo
 .DS_Store

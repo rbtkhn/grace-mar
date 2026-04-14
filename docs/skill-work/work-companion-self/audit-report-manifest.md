@@ -6,14 +6,25 @@ Paths: companion-self template-manifest.json
 Lockfile: 180 paths pinned (last sync: 2026-04-06T22:22:09)
 
 ### Differ (both exist, content differs — review)
-  - config/authority-map.json — ⬆ instance moved
+  - docs/approval-inbox-spec.md — ⬇ upstream moved
+  - docs/change-review.md — ⬆⬇ both moved
+  - docs/concept.md — ⬇ upstream moved
+  - docs/layer-map.json — ⬇ upstream moved
   - docs/skill-work/README.md — ⬆⬇ both moved
   - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md — ⬆ instance moved
   - docs/skill-work/work-cadence/README.md — ⬆⬇ both moved
+  - docs/skill-work/work-cadence/harvest-packet-contract.md — ⬆⬇ both moved
   - docs/state-model.md — ⬆ instance moved
+  - docs/voice-runtime-config.md — ⬇ upstream moved
+  - runtime_config.example.json — ⬇ upstream moved
+  - schema-registry/identity-diff.v1.json — ⬇ upstream moved
+  - scripts/build-observability-report.py — ⬇ upstream moved
+  - scripts/cadence-coffee.py — ⬇ upstream moved
   - scripts/log_cadence_event.py — ⬆⬇ both moved
+  - scripts/stage-evidence.py — ⬇ upstream moved
   - users/_template/recursion-gate.md — ⬆ instance moved
   - users/_template/self-skill-think.md — ⬆ instance moved
+  - users/_template/work-dev.md — ⬇ upstream moved
 
 ### Expected drift (policy-documented; not a parity defect)
   - **docs/identity-fork-protocol.md** — Grace-mar holds IFP v1.0 full reference spec; companion-self ships the short form with a link to the full spec. Do not overwrite the instance file with the template short form on bulk sync.
@@ -25,19 +36,19 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
 ### Same (no action)
   - app/observability/.gitkeep
   - bridges/bridge-schema.json
+  - config/authority-map.json
   - config/seed-promotion-rules.json
   - config/source-of-truth.json
   - docs/CONTRADICTION-ENGINE-SPEC.md
   - docs/action-receipts.md
-  - docs/approval-inbox-spec.md
   - docs/authority-map.md
   - docs/change-review-lifecycle.md
   - docs/change-review-validation.md
-  - docs/change-review.md
   - docs/change-types.md
-  - docs/concept.md
   - docs/conflict-resolution-order.md
   - docs/contradiction-policy.md
-  ... and 154 more
+  - docs/contradiction-resolution.md
+  - docs/evidence-layer.md
+  ... and 143 more
 
-Summary: same=169 differ=8 expected_drift=3 only_template=0 only_instance=0
+Summary: same=158 differ=19 expected_drift=3 only_template=0 only_instance=0
