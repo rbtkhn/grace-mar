@@ -56,6 +56,8 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 
 **`strategy-context` (CLI):** Cold-thread re-entry — one bounded paragraph (default **≤120 words**) from notebook `days.md` **Open**, inbox accumulator, `daily-brief-YYYY-MM-DD.md` §1b, STRATEGY + promotion ladder + commentator index presence — or **`--compact`** paths/status only. **`--meta`** adds `chapters/YYYY-MM/meta.md` (month **Theme** excerpt); **`--minds`** adds `minds/README.md` + `minds/outputs` filenames for the date or recent month scaffolds. **`--log`** appends a **`WORK-choice`** receipt to `session-transcript.md` via `log_operator_choice.py` (pointer, not full stdout). `python3 scripts/strategy_context.py -u grace-mar` · `--date YYYY-MM-DD` · `--max-words N`
 
+**`strategy_thread` (CLI):** Operator **`thread`** — rebuild **`strategy-expert-<expert_id>.md`** rolling ingest blocks from [daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) lines that carry **`thread:<expert_id>`**; delegates to `strategy_expert_corpus.py` (**same** `--inbox`, `--threads`, `--out`, `--days`, `--today`, `--dry-run`). **Not** a **`weave`** (no `days.md` / knots). Spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread (terminology)](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#thread-terminology). `python3 scripts/strategy_thread.py`
+
 | File | Role |
 |------|------|
 | [grok-daily-brief.md](grok-daily-brief.md) | Headings-only **magazine layer** on top of generated `daily-brief-YYYY-MM-DD.md`. |
@@ -70,7 +72,7 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 
 | Artifact | Role |
 |----------|------|
-| **[Strategy session helpers (`skill-strategy`)](#strategy-session-helpers-skill-strategy)** | Compact index subsection **above** (Grok layer, Trump arc, Rome–Persia signal check, narrative stub, skill-strategy SKILL). |
+| **[Strategy session helpers (`skill-strategy`)](#strategy-session-helpers-skill-strategy)** | Compact index subsection **above** (`strategy-context`, **`strategy_thread`** / operator **`thread`**, Grok layer, Trump arc, Rome–Persia signal check, narrative stub, skill-strategy SKILL). |
 | **[common-inputs.md](common-inputs.md)** | Shared inputs into work-politics and work-strategy (event ingest, RSS, neutral fact summary, three lenses, gate, operator). |
 | **Transcript ingest** | [research/external/work-strategy/transcripts/README.md](../../../research/external/work-strategy/transcripts/README.md) — raw or digest `.md`/`.txt` for Perceiver / current-events / LEARN MODE. **Bulk PH pulls:** [predictive-history/README.md](../../../research/external/youtube-channels/predictive-history/README.md) (work-strategy–first — [common-inputs § PH](common-inputs.md)). |
 | **[external-tech-scan.md](external-tech-scan.md)** | Curated **themes** from long-form tech/business discourse (e.g. GTC, podcasts) — strategy vs work-politics angles; **work-dev integration lens:** [../work-dev/external-signals.md](../work-dev/external-signals.md). **Not** canonical news. |
