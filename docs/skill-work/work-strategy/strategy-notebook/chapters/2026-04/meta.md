@@ -5,13 +5,19 @@
 **Operator preferences (notebook):** [NOTEBOOK-PREFERENCES.md](../../NOTEBOOK-PREFERENCES.md) — structure, weave rhythm, promotion, Judgment rules (set 2026-04-12).  
 **Theme:** Islamabad framework + Rome helix (Cannae / Teutoburg / Rhine); strategy-notebook bootstrapped; Mercouris as optional bridge only; Predictive History **Volume I** extended to twenty chapters + **student-export** checklist wired in `work-jiang`.
 
+## April arc (one screen)
+
+**Read in one pass:** The chapter opens with **Rome / Islamabad** harvest and **notebook spine** work (04-08–09), then lands the **Islamabad–Hormuz** thesis, **web verification pilot**, and **civ-mem pattern** probe (04-12). **04-13** stacks the **Marandi × Ritter × Mercouris** knot scaffold plus **deep expert ingests** (Davis/Freeman/Mearsheimer, Parsi, Johnson) with explicit **lane splits** (faith vs ORBAT, EU accountability language vs U.S. war powers). **04-14** is the **dense weave day**: six **knot** files under [knot-index.yaml](../../knot-index.yaml), **`steve-jermy`** / **`jeffrey-sachs`** as new indexed threads, **Parsi × Davis** and **Blumenthal × Parsi** batch seams, **PH vi-14 / vi-15** as **corpus overlay** (not a wire substitute for blockade facts), plus **civilizational-strategy-surface** and **case-index** citations folded into Judgment. **04-15** records **Grok vs daily brief** triage ([daily-brief-2026-04-15.md](../../../daily-brief-2026-04-15.md)): IMF delta corrected against AP, labeled **section 1f** overlay, native **section 1g / 1h** hooks — **Judgment** names digest quarantine, **MFA/Tasnim** seam vs **04-12** falsifiers, **`thread:`** carry, and multi-theater **seam-first** rule (expand **Open** as chains land).
+
+**If May inherits debt:** Close **04-13** episode URL pins before tightening **04-14** Links; **deepen** **04-15** **Judgment** / trim **section 1f** after **`fa`** and wire burn-down; keep **inbox** `Accumulator for:` aligned with the working calendar.
+
 **Retro verify pilot (2026-04):** **Complete** — duplicate `## 2026-04-11` in `days.md` reconciled; Islamabad/Hormuz pilot triage landed under **`### Web verification (2026-04-12)`** in [`chapters/2026-04/days.md`](days.md); multi-month **scale policy** in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Multi-month notebook — retro fact-check scale policy*. **Civ-mem pattern pilot (layer B):** **Complete** — **`### Civ-mem pattern check (pilot — 2026-04-12 — 2026-04-13)`** in same `days.md` (STATE + GEO MEM; `MEM–RELEVANCE` absent at pin; script skipped; WORK-only).
 
-**Expert-thread continuity:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity (2026-04-12 → 2026-04-14)** + `batch-analysis | carry … + PH vi-14/15 + Diesen×Sachs` ( **`crosses:`** include **Parsi × Davis**, **Davis × Jermy**, **Diesen × Sachs**) → **`## 2026-04-14`** in [`days.md`](days.md) (**Weave** lead bullet + **Diesen × Sachs vs PH vi-14** seam); cross-day join key **`thread:<expert_id>`** per [strategy-commentator-threads.md](../../strategy-commentator-threads.md); new indexed anchors **`steve-jermy`**, **`jeffrey-sachs`** (2026-04-14).
+**Expert-thread continuity:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity (2026-04-12 → 2026-04-14)** + `batch-analysis | carry … + PH vi-14/15 + Diesen×Sachs` ( **`crosses:`** include **Parsi × Davis**, **Davis × Jermy**, **Diesen × Sachs**) → **`## 2026-04-14`** in [`days.md`](days.md) (**Weave** lead bullet + **Diesen × Sachs vs PH vi-14** seam); cross-day join key **`thread:<expert_id>`** per [strategy-commentator-threads.md](../../strategy-commentator-threads.md); new indexed anchors **`steve-jermy`**, **`jeffrey-sachs`** (2026-04-14); **`## 2026-04-15`** = **Grok-vs-brief** triage **Signal** + **Judgment** on digest/native seams (no new **`thread:`** lines this day).
 
 ## Hormuz week — knot registry (stub, 2026-04-12–14)
 
-**Arc:** Islamabad collapse → **04-13** expert scaffold → **04-14** batch-analysis / multi-knot density. **Registry:** [knot-index.yaml](../../knot-index.yaml) (`schema_version: 3`). **Six files** (do not merge Judgment across knots without each file’s **Receipt** / **seams**):
+**Arc:** Islamabad collapse → **04-13** expert scaffold → **04-14** batch-analysis / multi-knot density → **04-15** daily-brief native overlay + external digest triage (no new knot file). **Registry:** [knot-index.yaml](../../knot-index.yaml) (`schema_version: 3`). **Six files** (do not merge Judgment across knots without each file’s **Receipt** / **seams**):
 
 | Date | `knot_label` | File |
 |------|----------------|------|
@@ -22,7 +28,7 @@
 | 2026-04-14 | `mercouris-mearsheimer-lebanon-split` | [knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](knots/knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) |
 | 2026-04-14 | `scott-ritter-blockade-hormuz-weave` | [knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](knots/knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) |
 
-**Day spine:** [`days.md`](days.md) § **2026-04-12** · **2026-04-13** · **2026-04-14**. **Inbox pointer:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity** (two knot lines + table).
+**Day spine:** [`days.md`](days.md) § **2026-04-12** · **2026-04-13** · **2026-04-14** · **2026-04-15** (brief overlay; knots 12–14). **Inbox pointer:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity** (two knot lines + table).
 
 **Theme tail (external analysts — Johnson / Pape):**
 

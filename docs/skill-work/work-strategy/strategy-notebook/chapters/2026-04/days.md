@@ -575,6 +575,17 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 - **Grok × Grace-Mar daily brief triage:** External **Grok** strategic brief (LLM digest, **unverified**) compared to **[daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md)** — **IMF** global growth cut **3.1% vs 3.3%** (**0.2 pp**, not Grok’s **0.4 pp**) **supported** ([AP](https://apnews.com/article/economy-imf-outlook-iran-war-trump-inflation-growth-e3d8a239509abb50757f8c8d42fb32d8)). **G7 15 Apr** virtual chair/readout, **Hungary** 14-page draft **09:00 UTC**, **same-day BLS CPI** matching Grok decimals, **Ukraine** strike bundle, **Russia MoD 1.2T rubles**, **Taiwan** vote stack — **uncorroborated** in fast triage; **do not** merge into **Judgment** without primaries. **Brief file updated:** **§1f** = labeled **Grok overlay**; **§1g**/**§1h** = **MFA Fu Cong** (en + **zh**) + **AP IMF** bridge + **Tasnim EN** IRGC **12 Apr** Hormuz warning; **§2** remains RSS spine (**Reuters World** fetch still failed). **Strategy hook:** use Grace-Mar **gaps + URLs** for ship; use Grok only as **falsifiable** **hypothesis** list after line-by-line burn-down.
 
+### Judgment
+
+- **LLM digest posture:** **Grok** (and similar bundles) earns a seat as **triage**: one **supported** correction (**IMF** delta vs headline decimals) already justifies the pass; everything else stays **quarantined** in **section 1f** until a **wire or primary** row exists—**no** parallel truth stack beside the filed brief.
+- **Native brief lanes:** **MFA Fu Cong** and **Tasnim** lines belong in the **same seam discipline** as **04-14**: **speech-act** / **deterrent** signaling **does not** substitute for **CENTCOM / throughput / insurance** falsifiers from the **04-12** checklist until those items tick.
+- **`thread:` carry:** This calendar page **did not** add new expert ingests; **polyphony** for **04-15** still **indexes** on **04-12–04-14** `batch-analysis` and knots. Any **new** paste-ready lines for the day must still route **`thread:<expert_id>`** per [strategy-commentator-threads.md](../../strategy-commentator-threads.md) before **Links-grade** merge next to the Grok overlay.
+- **Multi-theater stack:** G7 / Hungary clock / CPI / Ukraine / Taiwan bullets from the digest mirror the **04-13** “supplemental brief” risk—**many theaters, one session**—so **Judgment** here stays **seam-first**: no single **“busy week”** paragraph until each chain has its own **verify** row (same rule as **04-13** Judgment on the supplemental bundle).
+
+### Analogy / tension
+
+- **Broad digest vs filed brief:** Same **structural** risk as a **one-session multi-theater transcript**—high **apparent** connectivity, **weak** per-claim receipts—so default posture remains **expand Signal / Open**, **compress Judgment** only after **per-chain** verify (architecture **Output path**: inbox → brief → **weave**).
+
 ### Links
 
 - [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) — §1f Grok overlay · §1g/§1h IMF + Hormuz native pointers

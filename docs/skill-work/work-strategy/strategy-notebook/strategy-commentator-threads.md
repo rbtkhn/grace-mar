@@ -25,6 +25,8 @@
 
 **Maintenance:** Add rows when a new anchor appears **repeatedly** in `days.md` or inbox; **deprecate** with a line in **Notes** — do not delete history without operator say-so.
 
+**Month arc pointer (chapter meta):** Cross-day **movement** and weave boundaries for the active month (example **2026-04-08–15**: Hormuz week, expert density, **04-15** Grok-vs-brief overlay) live in [chapters/2026-04/meta.md](chapters/2026-04/meta.md#april-arc-one-screen) (**April arc — one screen**). Use that block for **grep / calendar** orientation; it **does not** mint **`expert_id`** rows—this file remains the roster SSOT.
+
 **Mearsheimer vs Diesen (individual anchors):** **`john-mearsheimer`** = **John Mearsheimer** only; **`glenn-diesen`** = **Glenn Diesen** only — **no** shared **`expert_id`** for a “session pair.” Same episode with **both** speakers → **two** paste-ready lines (each **`thread:<expert_id>`**) + optional **`batch-analysis`**.
 
 ---
