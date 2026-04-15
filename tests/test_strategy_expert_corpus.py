@@ -3,12 +3,19 @@
 from __future__ import annotations
 
 from datetime import date
+from pathlib import Path
 
 from scripts.strategy_expert_corpus import (
     CANONICAL_EXPERT_IDS,
     extract_thread_ingests,
-    render_expert_file,
+    render_corpus_inner,
     rebuild_corpus,
+)
+
+REPO = Path(__file__).resolve().parent.parent
+DEFAULT_THREADS = (
+    REPO
+    / "docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md"
 )
 
 
@@ -47,7 +54,7 @@ def test_render_prunes_old_dates() -> None:
         date(2026, 4, 1): ["- old"],
         date(2026, 4, 13): ["- new"],
     }
-    text = render_expert_file(
+    text = render_corpus_inner(
         "john-mearsheimer",
         by_date,
         keep_days=7,
@@ -72,10 +79,12 @@ _(Append below this line.)_
     out = tmp_path / "corpus"
     paths = rebuild_corpus(
         inbox_path=inbox,
+        threads_path=DEFAULT_THREADS,
         out_dir=out,
         keep_days=7,
         today=date(2026, 4, 14),
         dry_run=False,
     )
     assert len(paths) == len(CANONICAL_EXPERT_IDS)
-    assert (out / "daniel-davis.md").read_text(encoding="utf-8").count("daniel-davis") >= 2
+    body = (out / "strategy-expert-daniel-davis.md").read_text(encoding="utf-8")
+    assert body.count("daniel-davis") >= 2
