@@ -88,6 +88,7 @@ Products that advertise **100% local** models, **Docker** sandboxes, or **chat v
 - [INTEGRATION-PROGRAM.md](INTEGRATION-PROGRAM.md) — one-loop export → stage → merge.
 - [openclaw-integration.md](../../openclaw-integration.md) — full integration guide.
 - [runtime/observability/README.md](../../../runtime/observability/README.md) — JSONL feeds and producers.
+- [managed-agent-design.md](managed-agent-design.md) — persistent-agent lifecycle, operator runbook, steward boundary review.
 
 ---
 
