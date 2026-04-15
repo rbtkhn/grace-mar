@@ -50,6 +50,7 @@ def _meta_path(d: str) -> Path:
 MINDS_DIR = STRATEGY_DIR / "minds"
 MINDS_README = MINDS_DIR / "README.md"
 MINDS_OUTPUTS = MINDS_DIR / "outputs"
+OBSERVABILITY_JSON = REPO_ROOT / "artifacts" / "work-strategy" / "strategy-observability.json"
 
 
 def extract_day_block(text: str, day: str) -> str | None:
@@ -191,6 +192,59 @@ def minds_excerpt(day: str) -> str:
     return f"no Tri-Frame scaffolds under minds/outputs for {y}-{m} yet; see minds/README.md."
 
 
+def health_summary() -> str | None:
+    """Read observability JSON and return a concise health block, or None."""
+    if not OBSERVABILITY_JSON.is_file():
+        return None
+    import json as _json
+
+    try:
+        doc = _json.loads(OBSERVABILITY_JSON.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    jq = doc.get("metrics", {}).get("judgment_quality", {})
+    if not jq:
+        return None
+
+    lines: list[str] = []
+    lines.append(f"Lane health (observability v{doc.get('schemaVersion', '?')}):")
+
+    total = jq.get("notebook_entries_total", 0)
+    inbox = jq.get("inbox_pending_lines", 0)
+    promo = jq.get("promotion_date_mentions", 0)
+    lines.append(f"  entries={total}  inbox_pending={inbox}  promotion_mentions={promo}")
+
+    months = jq.get("months", {})
+    for month, m in sorted(months.items()):
+        avg_sec = m.get("avg_sections_per_entry", 0)
+        avg_lnk = m.get("avg_links_per_entry", 0)
+        carry = m.get("open_carry_forward", 0)
+        dated = m.get("dated_entries", 0)
+
+        def _rate(val: float, green: float, yellow: float) -> str:
+            if val >= green:
+                return "green"
+            if val >= yellow:
+                return "yellow"
+            return "red"
+
+        sec_rating = _rate(avg_sec, 3.5, 2.5)
+        lnk_rating = _rate(avg_lnk, 2.0, 1.0)
+        carry_pct = (carry / dated * 100) if dated else 0
+        carry_rating = "green" if carry_pct < 50 else ("yellow" if carry_pct < 75 else "red")
+
+        lines.append(
+            f"  {month}: {dated} entries | sections={avg_sec} ({sec_rating}) | "
+            f"links={avg_lnk} ({lnk_rating}) | open_carry={carry}/{dated} ({carry_rating})"
+        )
+
+    inbox_rating = "green" if inbox <= 30 else ("yellow" if inbox <= 50 else "red")
+    if inbox_rating != "green":
+        lines.append(f"  inbox: {inbox_rating} — weave or prune recommended")
+
+    return "\n".join(lines)
+
+
 def build_paragraph(
     *,
     day: str,
@@ -316,6 +370,11 @@ def main() -> int:
         action="store_true",
         help="Include Tri-Frame minds/README + minds/outputs pointers for this date or month",
     )
+    ap.add_argument(
+        "--health",
+        action="store_true",
+        help="Append lane health summary from observability v2 JSON (run build_strategy_observability.py first)",
+    )
     args = ap.parse_args()
     uid = args.user.strip()
     d = (args.date or "").strip()
@@ -400,6 +459,13 @@ def main() -> int:
         )
         if not out.endswith("\n"):
             out += "\n"
+
+    if args.health:
+        hs = health_summary()
+        if hs:
+            out = out.rstrip("\n") + "\n\n" + hs + "\n"
+        else:
+            out = out.rstrip("\n") + "\n\n(observability JSON not found — run: python3 scripts/build_strategy_observability.py)\n"
 
     sys.stdout.write(out)
 
