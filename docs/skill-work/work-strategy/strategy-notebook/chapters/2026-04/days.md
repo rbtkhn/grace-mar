@@ -574,6 +574,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Signal
 
 - **Grok × Grace-Mar daily brief triage:** External **Grok** strategic brief (LLM digest, **unverified**) compared to **[daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md)** — **IMF** global growth cut **3.1% vs 3.3%** (**0.2 pp**, not Grok’s **0.4 pp**) **supported** ([AP](https://apnews.com/article/economy-imf-outlook-iran-war-trump-inflation-growth-e3d8a239509abb50757f8c8d42fb32d8)). **G7 15 Apr** virtual chair/readout, **Hungary** 14-page draft **09:00 UTC**, **same-day BLS CPI** matching Grok decimals, **Ukraine** strike bundle, **Russia MoD 1.2T rubles**, **Taiwan** vote stack — **uncorroborated** in fast triage; **do not** merge into **Judgment** without primaries. **Brief file updated:** **§1f** = labeled **Grok overlay**; **§1g**/**§1h** = **MFA Fu Cong** (en + **zh**) + **AP IMF** bridge + **Tasnim EN** IRGC **12 Apr** Hormuz warning; **§2** remains RSS spine (**Reuters World** fetch still failed). **Strategy hook:** use Grace-Mar **gaps + URLs** for ship; use Grok only as **falsifiable** **hypothesis** list after line-by-line burn-down.
+- **`weave` (operator) after `coffee` C → watch fill:** Same-day brief now carries **§1d** + **§1e** **bullets + URLs** (rolling window ~**2026-04-13 14:42** → **2026-04-15 14:42** UTC per **Assembled**): **Kremlin** Indonesian talks (**79545** EN + `ru` mirror), **RIA** Peskov **13 Apr** Iran-uranium lane (quote-check note), **Moscow Times** secondary HEU item, **Kremlin** economic meeting (**79558** EN + `ru`); **White House** Bret Baier post-Pakistan interview, **Reuters** blockade + fast-attack **principal-adjacent** wires, **U.S.–Hungary** fact sheet; **§1f** got a **maintenance** line (**Grok** stays **low / NOT verified**). **Inbox:** large **04-13 / 04-14** scratch below append remains **folded** on **04-14** / prior days—this weave **does not** re-paste the full accumulator into **`days.md`** (synthesis-only).
 
 ### Judgment
 
@@ -581,6 +582,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **Native brief lanes:** **MFA Fu Cong** and **Tasnim** lines belong in the **same seam discipline** as **04-14**: **speech-act** / **deterrent** signaling **does not** substitute for **CENTCOM / throughput / insurance** falsifiers from the **04-12** checklist until those items tick.
 - **`thread:` carry:** This calendar page **did not** add new expert ingests; **polyphony** for **04-15** still **indexes** on **04-12–04-14** `batch-analysis` and knots. Any **new** paste-ready lines for the day must still route **`thread:<expert_id>`** per [strategy-commentator-threads.md](../../strategy-commentator-threads.md) before **Links-grade** merge next to the Grok overlay.
 - **Multi-theater stack:** G7 / Hungary clock / CPI / Ukraine / Taiwan bullets from the digest mirror the **04-13** “supplemental brief” risk—**many theaters, one session**—so **Judgment** here stays **seam-first**: no single **“busy week”** paragraph until each chain has its own **verify** row (same rule as **04-13** Judgment on the supplemental bundle).
+- **Brief spine vs inbox backlog:** **§1d/§1e** grounding **closes the empty-watch gap** for **04-15** without treating the **accumulator** tail as **Judgment**—expert **`batch-analysis`** / **knot** work stays **04-14**-anchored until pins and ordering in **04-14** **Open** clear.
 
 ### Analogy / tension
 
@@ -588,10 +590,16 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ### Links
 
-- [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) — §1f Grok overlay · §1g/§1h IMF + Hormuz native pointers
-- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — carry **expert-thread** / **batch-analysis** when this day ingests new **`thread:`** lines
+- [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) — §1d · §1e · §1f Grok overlay · §1g/§1h IMF + Hormuz native pointers
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — carry **expert-thread** / **batch-analysis** when this day ingests new **`thread:`** lines; **04-13/04-14** bulk already woven **[2026-04-14](#2026-04-14)**
+- [Kremlin EN — Russian-Indonesian talks (79545)](http://en.kremlin.ru/events/president/news/79545) · [Kremlin EN — meeting on economic issues (79558)](http://en.kremlin.ru/events/president/news/79558)
+- [RIA Novosti — Peskov 13.04.2026](https://ria.ru/20260413/peskov-2086774724.html) · [The Moscow Times — Kremlin HEU offer (13 Apr)](https://www.themoscowtimes.com/2026/04/13/kremlin-repeats-offer-to-take-irans-highly-enriched-uranium-a92483)
+- [White House — VP Bret Baier interview](https://www.whitehouse.gov/videos/vp-jd-vance-sits-down-with-bret-baier-for-his-first-interview-since-returning-from-pakistan/) · [Reuters — US blockade after talks fail (13 Apr)](https://www.reuters.com/world/middle-east/us-blockade-iran-after-talks-fail-yield-a-deal-2026-04-13/) · [Reuters — Trump fast-attack warning](https://www.reuters.com/world/middle-east/trump-says-iranian-fast-attack-ships-that-come-close-us-blockade-will-be-2026-04-13/)
+- [White House — US–Hungary partnership fact sheet (Apr 2026)](https://www.whitehouse.gov/fact-sheets/2026/04/advancing-the-united-states-hungary-bilateral-partnership/)
 
 ### Open
 
-- Paste **IRNA / MFA `fa`** primaries into **daily-brief §1h** when Hormuz + talks wording is load-bearing; re-run **§1d / §1e** watch passes if Putin/Vance lines move the same news window.
+- **§1h:** paste **IRNA / MFA `fa`** primaries when Hormuz + talks wording is load-bearing (**§1d/§1e** watch pass **done** for this brief date—re-run only if **Kremlin/White House** lines move materially).
+- **§2:** restore **Reuters World** fetch when generator/config pass runs.
+- Continue **04-14** **Open** ordering: pin **04-13** canonical episode URLs **before** promoting more **04-14** Judgment to **Links-grade**.
 - If **Grok** lines graduate after verify, move facts to **Judgment** and **trim** §1f overlay to avoid double-truth.
