@@ -28,12 +28,6 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 |-----------|-----|----|-----|--------------------------------------------------|
 | `brian-berletic` | 0.74 | 0.36 | 0.58 | Industrial and sanctions-throughput arguments are a clear signature; headline battle maps age faster than factory counts, so pair him when logistics and attrition matter. Bridges to energy-system and realist lanes without replacing hull-level ORBAT work. |
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:brian-berletic`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-brian-berletic-transcript.md`](strategy-expert-brian-berletic-transcript.md) (7-day rolling verbatim) and [`strategy-expert-brian-berletic-thread.md`](strategy-expert-brian-berletic-thread.md) (distilled analytical thread).

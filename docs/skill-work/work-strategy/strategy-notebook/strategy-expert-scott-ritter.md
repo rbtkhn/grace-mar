@@ -26,12 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://scottritter.com/
 3. https://www.youtube.com/@therealscottritter
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:scott-ritter`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-## 2026-04-10
-- `YT | cold: (digest §B) Scott Ritter — hypothetical Hormuz seizure framed infeasible: long order-of-battle (Jordan–Iraq LOCs), **60–80k Marines + 120–200k Army** echelons // hook: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) quantitative table | path:docs/skill-work/work-strategy/transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md | verify:operator-transcript-digest | thread:scott-ritter`
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-scott-ritter-transcript.md`](strategy-expert-scott-ritter-transcript.md) (7-day rolling verbatim) and [`strategy-expert-scott-ritter-thread.md`](strategy-expert-scott-ritter-thread.md) (distilled analytical thread).

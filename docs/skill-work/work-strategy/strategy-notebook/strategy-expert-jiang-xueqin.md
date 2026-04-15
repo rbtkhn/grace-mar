@@ -101,13 +101,4 @@ See: [work-jiang README](../../../../research/external/work-jiang/README.md), [d
 
 ---
 
-<!-- SCRIPT-OWNED BELOW — do not hand-edit; rebuilt by strategy_thread.py -->
-## Rolling ingest
-
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:jiang-xueqin`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-## 2026-04-12
-- `YT | cold: Jiang × Sneako × Dugin — eschatology stack (Scofield / Calvinism / Orthodox + traditionalist); Eurasian multipolarity vs US debt; Chabad as **convergence** not sole driver; katechon / antichrist closing // hook: **vi-15** tri-voice overlay; `narrative-escalation` | https://www.youtube.com/watch?v=n44OF1Y7zgo | verify:work-jiang-vi-15+thread:jiang-xueqin+../../../../research/external/work-jiang/lectures/interviews-15-sneako-jiang-xueqin-dugin-eschatology.md`
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-jiang-xueqin-transcript.md`](strategy-expert-jiang-xueqin-transcript.md) (7-day rolling verbatim) and [`strategy-expert-jiang-xueqin-thread.md`](strategy-expert-jiang-xueqin-thread.md) (distilled analytical thread).

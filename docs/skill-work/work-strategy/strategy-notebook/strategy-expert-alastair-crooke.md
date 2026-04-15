@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://substack.com/@alastaircrooke
 3. https://conflictsforum.substack.com/
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:alastair-crooke`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-alastair-crooke-transcript.md`](strategy-expert-alastair-crooke-transcript.md) (7-day rolling verbatim) and [`strategy-expert-alastair-crooke-thread.md`](strategy-expert-alastair-crooke-thread.md) (distilled analytical thread).

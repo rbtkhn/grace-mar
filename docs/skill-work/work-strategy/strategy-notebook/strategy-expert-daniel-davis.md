@@ -26,12 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://www.defensepriorities.org/team/profile/daniel-davis
 3. https://nationalinterest.org/profile/daniel-l-davis
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:daniel-davis`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-## 2026-04-12
-- `X | Daniel Davis (@DanielLDavis1): Rebuts “last, best chance” as diplomacy — cites Vietnam/Korea timelines; if offer is final it is ultimatum/surrender not negotiation; Iran unlikely to accept → resumption clock; first-six-weeks military constraints unchanged; Hormuz, oil, Gulf fertilizer dearth → macro pressure on U.S. (“not a good day for America”) | https://x.com/DanielLDavis1 | verify:screenshot-ingest-status-id-unknown | thread:daniel-davis`
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-daniel-davis-transcript.md`](strategy-expert-daniel-davis-transcript.md) (7-day rolling verbatim) and [`strategy-expert-daniel-davis-thread.md`](strategy-expert-daniel-davis-thread.md) (distilled analytical thread).

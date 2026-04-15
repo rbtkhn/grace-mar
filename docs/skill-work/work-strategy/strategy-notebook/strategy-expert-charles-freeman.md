@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://home.watson.brown.edu/people/faculty/visiting-fellows/chas-freeman
 3. https://www.youtube.com/watch?v=o7RQ_ue6iY0
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:charles-freeman`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-charles-freeman-transcript.md`](strategy-expert-charles-freeman-transcript.md) (7-day rolling verbatim) and [`strategy-expert-charles-freeman-thread.md`](strategy-expert-charles-freeman-thread.md) (distilled analytical thread).

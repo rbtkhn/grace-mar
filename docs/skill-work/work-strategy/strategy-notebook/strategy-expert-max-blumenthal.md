@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://thegrayzone.com/author/max-blumenthal/
 3. https://www.patreon.com/grayzone
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:max-blumenthal`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-max-blumenthal-transcript.md`](strategy-expert-max-blumenthal-transcript.md) (7-day rolling verbatim) and [`strategy-expert-max-blumenthal-thread.md`](strategy-expert-max-blumenthal-thread.md) (distilled analytical thread).

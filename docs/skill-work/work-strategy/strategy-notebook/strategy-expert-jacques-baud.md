@@ -28,12 +28,6 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 |-----------|-----|----|-----|--------------------------------------------------|
 | `jacques-baud` | 0.76 | 0.40 | 0.62 | Law-of-war and alliance-mandate framing stays recognizable across crises; many claims hinge on classified or contested sourcing, so closure is slow. Often pulled in when the notebook needs European or UN-adjacent tension beside U.S. military-dissent lanes. |
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:jacques-baud`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-jacques-baud-transcript.md`](strategy-expert-jacques-baud-transcript.md) (7-day rolling verbatim) and [`strategy-expert-jacques-baud-thread.md`](strategy-expert-jacques-baud-thread.md) (distilled analytical thread).

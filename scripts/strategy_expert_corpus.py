@@ -1,18 +1,24 @@
 #!/usr/bin/env python3
-"""Rebuild per-expert rolling ingest blocks from daily-strategy-inbox.md.
+"""Extract raw material for per-expert thread distillation.
 
-Each indexed expert gets ``strategy-expert-<expert_id>.md`` under
-``docs/skill-work/work-strategy/strategy-notebook/``. Verbatim inbox lines that
-carry ``thread:<expert_id>`` are grouped by calendar date inside a
-script-delimited block; the **Seed** section above the markers is preserved on
-rebuild. Only the last ``--days`` calendar days are kept inside the block.
+Reads from ``strategy-expert-<id>-transcript.md`` (recent verbatim) and
+relevant knot files (where expert material was used), writes structured
+extraction to ``strategy-expert-<id>-thread.md`` between script markers.
 
-**Operator entry:** run ``python3 scripts/strategy_thread.py`` (same flags) —
-canonical name for this rebuild is **``thread``** in notebook docs.
+The output is **raw material** for assistant refinement — the assistant
+distills it into a curated analytical thread (convergences, tensions,
+drift, knot impact).
+
+**Two-step ``thread`` flow:**
+
+1. ``strategy_expert_transcript.py`` triages inbox → transcripts (automatic)
+2. This script extracts transcript + knot material → thread files
+3. Assistant refines the extraction into curated thread prose
+
+Imported by ``strategy_expert_transcript.py`` for shared constants and
+``extract_thread_ingests()``.
 
 WORK-only; not Record.
-
-See ``docs/skill-work/work-strategy/strategy-notebook/README.md`` (expert files).
 """
 
 from __future__ import annotations
@@ -23,6 +29,8 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
+
+import yaml
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -37,8 +45,10 @@ DEFAULT_INBOX = (
 DEFAULT_OUT_DIR = (
     REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 )
+DEFAULT_KNOT_INDEX = (
+    REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook/knot-index.yaml"
+)
 
-# Sync with strategy-commentator-threads.md expert_id column (table order).
 CANONICAL_EXPERT_IDS: tuple[str, ...] = (
     "seyed-marandi",
     "scott-ritter",
@@ -65,6 +75,10 @@ CANONICAL_EXPERT_IDS: tuple[str, ...] = (
 
 _EXPERT_IDS_SET = frozenset(CANONICAL_EXPERT_IDS)
 
+THREAD_MARKER_START = "<!-- strategy-expert-thread:start -->"
+THREAD_MARKER_END = "<!-- strategy-expert-thread:end -->"
+
+# Legacy markers kept for backward compat (extract_thread_ingests)
 CORPUS_MARKER_START = "<!-- strategy-expert-corpus:start -->"
 CORPUS_MARKER_END = "<!-- strategy-expert-corpus:end -->"
 
@@ -77,6 +91,7 @@ _RE_RETAINED = re.compile(
     r"### Retained reference \((\d{4}-\d{2}-\d{2})(?:\s+fold)?\)"
 )
 _RE_THREAD = re.compile(r"thread:([a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)")
+_RE_DATE_HEADING = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
 
 @dataclass(frozen=True)
@@ -222,68 +237,9 @@ def verify_index_alignment(
         )
 
 
-def build_seed_preamble(
-    expert_id: str,
-    *,
-    main_rows: dict[str, CommentatorRow],
-    metrics_rows: dict[str, MetricsRow],
-) -> str:
-    row = main_rows[expert_id]
-    mrow = metrics_rows.get(expert_id)
-    lines: list[str] = [
-        f"# Strategy expert — `{expert_id}`",
-        "",
-        "**Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`"
-        + expert_id
-        + "`** lane.",
-        "",
-        "## Seed (index mirror — operator may extend)",
-        "",
-        "The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; "
-        "edit this **Seed** section freely.",
-        "",
-        "### Commentator row (from index)",
-        "",
-        "| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |",
-        "|-----------|--------|-----------------|------------------|-----------------------------------|",
-        "| `{0}` | {1} | {2} | {3} | {4} |".format(
-            row.expert_id,
-            row.anchor,
-            row.role,
-            row.grep_tag,
-            row.pairings,
-        ),
-        "",
-    ]
-    if mrow:
-        lines += [
-            "### Quantitative metrics (illustrative — from index)",
-            "",
-            "| expert_id | SCI | AD | CTC | Plain-language note (Predictive History reader) |",
-            "|-----------|-----|----|-----|--------------------------------------------------|",
-            "| `{0}` | {1} | {2} | {3} | {4} |".format(
-                mrow.expert_id,
-                mrow.sci,
-                mrow.ad,
-                mrow.ctc,
-                mrow.note,
-            ),
-            "",
-        ]
-
-    lines += [
-        "## Rolling ingest",
-        "",
-        "**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) "
-        f"that include `thread:{expert_id}`.",
-        "**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections "
-        "inside the generated block are omitted on rebuild.",
-        "**Not Record.**",
-        "",
-        CORPUS_MARKER_START,
-    ]
-    return "\n".join(lines)
-
+# ---------------------------------------------------------------------------
+# Inbox extraction — kept for strategy_expert_transcript.py import
+# ---------------------------------------------------------------------------
 
 def extract_thread_ingests(
     text: str,
@@ -330,119 +286,161 @@ def extract_thread_ingests(
     return {k: dict(v) for k, v in out.items()}
 
 
-def render_corpus_inner(
+# ---------------------------------------------------------------------------
+# Transcript reading
+# ---------------------------------------------------------------------------
+
+def read_transcript_content(transcript_path: Path) -> list[str]:
+    """Read all content lines from a transcript file (below the triage marker)."""
+    if not transcript_path.is_file():
+        return []
+    text = transcript_path.read_text(encoding="utf-8")
+    marker = "<!-- Triage appends new date sections below. Do not add content above this line. -->"
+    idx = text.find(marker)
+    if idx != -1:
+        body = text[idx + len(marker):]
+    else:
+        body = text
+    return [ln for ln in body.strip().splitlines() if ln.strip()]
+
+
+# ---------------------------------------------------------------------------
+# Knot scanning
+# ---------------------------------------------------------------------------
+
+def find_knot_references(
     expert_id: str,
-    by_date: dict[date, list[str]],
     *,
-    keep_days: int,
-    today: date,
+    knot_index_path: Path,
+) -> list[dict]:
+    """Find knots that reference this expert (via clusters or file content)."""
+    if not knot_index_path.is_file():
+        return []
+
+    try:
+        data = yaml.safe_load(knot_index_path.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+    if not data or "knots" not in data:
+        return []
+
+    refs: list[dict] = []
+    for knot in data["knots"]:
+        clusters = knot.get("clusters", []) or []
+        if expert_id in clusters:
+            refs.append(knot)
+            continue
+        knot_path = REPO_ROOT / knot.get("path", "")
+        if knot_path.is_file():
+            content = knot_path.read_text(encoding="utf-8")
+            if f"thread:{expert_id}" in content or f"`{expert_id}`" in content:
+                refs.append(knot)
+
+    return refs
+
+
+# ---------------------------------------------------------------------------
+# Thread extraction (writes raw material to -thread.md)
+# ---------------------------------------------------------------------------
+
+def render_thread_extraction(
+    expert_id: str,
+    *,
+    transcript_lines: list[str],
+    knot_refs: list[dict],
 ) -> str:
-    """Content placed between corpus markers (no markers)."""
-    cutoff = today - timedelta(days=keep_days - 1)
-    lines: list[str] = []
+    """Render the raw extraction content for assistant refinement."""
+    parts: list[str] = []
 
-    dates_sorted = sorted(
-        (d for d in by_date if d >= cutoff and d <= today),
-        reverse=True,
-    )
-    if not dates_sorted:
-        lines.append("_(No `thread:` ingests in the current rolling window.)_")
-        lines.append("")
-        return "\n".join(lines)
+    if transcript_lines:
+        parts.append("### Recent transcript material\n")
+        for line in transcript_lines:
+            parts.append(line)
+        parts.append("")
 
-    for d in dates_sorted:
-        lines.append(f"## {d.isoformat()}")
-        for vl in by_date[d]:
-            if vl.lstrip().startswith("- "):
-                lines.append(vl)
-            else:
-                lines.append(f"- {vl}")
-        lines.append("")
+    if knot_refs:
+        parts.append("### Knot references\n")
+        for knot in knot_refs:
+            knot_path = knot.get("path", "?")
+            knot_date = knot.get("date", "?")
+            knot_label = knot.get("knot_label", "")
+            note = knot.get("note", "")
+            label_str = f" ({knot_label})" if knot_label else ""
+            note_str = f" — {note}" if note else ""
+            basename = Path(knot_path).name
+            parts.append(f"- [{basename}]({basename}) {knot_date}{label_str}{note_str}")
+        parts.append("")
 
-    return "\n".join(lines).rstrip() + "\n"
+    if not parts:
+        return "_(No transcript or knot material for extraction.)_\n"
+
+    return "\n".join(parts).rstrip() + "\n"
 
 
-def write_strategy_expert_file(
+def write_thread_file(
     dest: Path,
-    expert_id: str,
     inner: str,
-    *,
-    main_rows: dict[str, CommentatorRow],
-    metrics_rows: dict[str, MetricsRow],
 ) -> None:
+    """Write extraction content between thread markers in a -thread.md file."""
     if not dest.exists():
-        preamble = build_seed_preamble(
-            expert_id,
-            main_rows=main_rows,
-            metrics_rows=metrics_rows,
+        dest.write_text(
+            THREAD_MARKER_START + "\n" + inner.rstrip() + "\n" + THREAD_MARKER_END + "\n",
+            encoding="utf-8",
         )
-        dest.write_text(preamble + "\n" + inner.rstrip() + "\n" + CORPUS_MARKER_END + "\n", encoding="utf-8")
         return
 
     text = dest.read_text(encoding="utf-8")
-    if CORPUS_MARKER_START in text and CORPUS_MARKER_END in text:
-        before, _, rest = text.partition(CORPUS_MARKER_START)
-        _, _, after = rest.partition(CORPUS_MARKER_END)
+    if THREAD_MARKER_START in text and THREAD_MARKER_END in text:
+        before, _, rest = text.partition(THREAD_MARKER_START)
+        _, _, after = rest.partition(THREAD_MARKER_END)
         new_text = (
             before.rstrip()
             + "\n"
-            + CORPUS_MARKER_START
+            + THREAD_MARKER_START
             + "\n"
             + inner.rstrip()
             + "\n"
-            + CORPUS_MARKER_END
+            + THREAD_MARKER_END
             + "\n"
             + after.lstrip()
         )
         dest.write_text(new_text, encoding="utf-8")
         return
 
-    # Existing file without corpus markers: replace with fresh index seed + corpus.
-    preamble = build_seed_preamble(
-        expert_id,
-        main_rows=main_rows,
-        metrics_rows=metrics_rows,
+    dest.write_text(
+        text.rstrip() + "\n\n"
+        + THREAD_MARKER_START + "\n" + inner.rstrip() + "\n" + THREAD_MARKER_END + "\n",
+        encoding="utf-8",
     )
-    dest.write_text(preamble + "\n" + inner.rstrip() + "\n" + CORPUS_MARKER_END + "\n", encoding="utf-8")
 
 
-def rebuild_corpus(
+def rebuild_threads(
     *,
-    inbox_path: Path,
-    threads_path: Path,
     out_dir: Path,
-    keep_days: int,
-    today: date | None = None,
+    knot_index_path: Path,
     dry_run: bool = False,
 ) -> list[Path]:
-    today = today or datetime.now(timezone.utc).date()
-    order, main_rows, metrics_rows = parse_commentator_index(threads_path)
-    verify_index_alignment(order, main_rows=main_rows)
-
-    text = inbox_path.read_text(encoding="utf-8")
-    extracted = extract_thread_ingests(text, today=today)
-
-    out_dir.mkdir(parents=True, exist_ok=True)
+    """Extract transcript + knot material → thread files for all experts."""
     written: list[Path] = []
 
     for expert_id in CANONICAL_EXPERT_IDS:
-        by_date = extracted.get(expert_id, {})
-        inner = render_corpus_inner(
+        transcript_path = out_dir / f"strategy-expert-{expert_id}-transcript.md"
+        thread_path = out_dir / f"strategy-expert-{expert_id}-thread.md"
+
+        transcript_lines = read_transcript_content(transcript_path)
+        knot_refs = find_knot_references(expert_id, knot_index_path=knot_index_path)
+
+        inner = render_thread_extraction(
             expert_id,
-            by_date,
-            keep_days=keep_days,
-            today=today,
+            transcript_lines=transcript_lines,
+            knot_refs=knot_refs,
         )
-        dest = out_dir / f"strategy-expert-{expert_id}.md"
+
         if not dry_run:
-            write_strategy_expert_file(
-                dest,
-                expert_id,
-                inner,
-                main_rows=main_rows,
-                metrics_rows=metrics_rows,
-            )
-        written.append(dest)
+            write_thread_file(thread_path, inner)
+
+        written.append(thread_path)
 
     return written
 
@@ -450,38 +448,23 @@ def rebuild_corpus(
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument(
-        "--inbox",
-        type=Path,
-        default=DEFAULT_INBOX,
-        help="Path to daily-strategy-inbox.md",
-    )
-    p.add_argument(
-        "--threads",
-        type=Path,
-        default=DEFAULT_THREADS,
-        help="Path to strategy-commentator-threads.md (for seed tables)",
-    )
-    p.add_argument(
         "--out",
         type=Path,
         default=DEFAULT_OUT_DIR,
-        help="Output directory for strategy-expert-<id>.md files",
+        help="Directory containing expert files",
     )
-    p.add_argument("--days", type=int, default=7, help="Rolling window length (default 7)")
     p.add_argument(
-        "--today",
-        help="Override today's date (YYYY-MM-DD) for testing",
+        "--knot-index",
+        type=Path,
+        default=DEFAULT_KNOT_INDEX,
+        help="Path to knot-index.yaml",
     )
     p.add_argument("--dry-run", action="store_true", help="Parse only; do not write files")
     args = p.parse_args()
 
-    today = _parse_date_yyyy_mm_dd(args.today) if args.today else None
-    paths = rebuild_corpus(
-        inbox_path=args.inbox,
-        threads_path=args.threads,
+    paths = rebuild_threads(
         out_dir=args.out,
-        keep_days=max(1, args.days),
-        today=today,
+        knot_index_path=args.knot_index,
         dry_run=args.dry_run,
     )
     for path in paths:

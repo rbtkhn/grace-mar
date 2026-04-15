@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://theduran.com/
 3. https://www.youtube.com/@AlexMercouris
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:alexander-mercouris`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (7-day rolling verbatim) and [`strategy-expert-alexander-mercouris-thread.md`](strategy-expert-alexander-mercouris-thread.md) (distilled analytical thread).

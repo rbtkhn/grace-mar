@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://www.jeffsachs.org/
 3. http://econ.columbia.edu/jeffrey-sachs
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:jeffrey-sachs`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-jeffrey-sachs-transcript.md`](strategy-expert-jeffrey-sachs-transcript.md) (7-day rolling verbatim) and [`strategy-expert-jeffrey-sachs-thread.md`](strategy-expert-jeffrey-sachs-thread.md) (distilled analytical thread).

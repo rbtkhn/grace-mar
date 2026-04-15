@@ -17,7 +17,13 @@
 
 **How to use:** When appending a paste-ready line in [daily-strategy-inbox.md](daily-strategy-inbox.md), add **`thread:<expert_id>`** to the **`verify:`** tail **only** when the **cold** line attributes speech or analysis to that **Anchor**. Pair ingests in **`batch-analysis | YYYY-MM-DD | …`** using **Typical pairings**.
 
-**Expert ingest corpus (rolling 7 days):** Each indexed expert has a companion file **`strategy-expert-<expert_id>.md`** in this directory (same level as this index) — verbatim inbox lines (with **`thread:`**) grouped by date inside a script-delimited block; the **Seed** section above that block is operator-editable and preserved on rebuild. Run operator **`thread`**: **`python3 scripts/strategy_thread.py`** (delegates to `strategy_expert_corpus.py`; older daily sections inside the block fall off automatically). **Not Record**; only the marked rolling section is script-owned. Legacy path [`expert-ingest-corpus/README.md`](expert-ingest-corpus/README.md) redirects here. *Notebook contract (inbox → weave → `days.md`):* [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#expert-choreography) § **Expert choreography**. Operator **`thread`** vs **`weave`:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread (terminology)*.
+**Expert files (3-file model):** Each indexed expert has **three** companion files in this directory:
+
+- **`strategy-expert-<expert_id>.md`** — **cognitive profile** (operator-authored, stable). Identity, convergence/tension fingerprints, signature mechanisms, failure modes, weave cues, published sources.
+- **`strategy-expert-<expert_id>-transcript.md`** — **7-day rolling verbatim** (appended automatically by triage from inbox `thread:` lines, operator-editable for clarity, pruned after 7 days).
+- **`strategy-expert-<expert_id>-thread.md`** — **distilled analytical thread** (script extracts from transcript + knots, assistant refines into curated thread; updated by operator **`thread`** command).
+
+Run operator **`thread`**: **`python3 scripts/strategy_thread.py`** — automatically triages inbox to transcripts, then extracts transcript + knot material for thread distillation. **Not Record**. Legacy path [`expert-ingest-corpus/README.md`](expert-ingest-corpus/README.md) redirects here. *Notebook contract (inbox → weave → `days.md`):* [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#expert-choreography) § **Expert choreography**. Operator **`thread`** vs **`weave`:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread (terminology)*.
 
 **Published outlets (starter list):** Each **`strategy-expert-<expert_id>.md`** **Seed** includes **`### Published sources (operator web index)`** — at least three **content** URLs (X / Substack / outlet / institutional host; **no Wikipedia**); re-verify handles and media URLs before cite-grade use.
 

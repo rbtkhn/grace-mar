@@ -26,12 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://sonar21.com/
 3. https://larrycjohnson.substack.com/
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:larry-johnson`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-## 2026-04-10
-- `YT | cold: (digest §B) Larry Johnson — F-15/Isfahan “rescue” narrative: deployment uptick ~**March 10–11**; C-130/Little Bird load math **~30 / ~26 / ~11** personnel scenarios; agrees official story unreliable // hook: same digest §B | path:docs/skill-work/work-strategy/transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md | verify:operator-transcript-digest | thread:larry-johnson`
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-larry-johnson-transcript.md`](strategy-expert-larry-johnson-transcript.md) (7-day rolling verbatim) and [`strategy-expert-larry-johnson-thread.md`](strategy-expert-larry-johnson-thread.md) (distilled analytical thread).

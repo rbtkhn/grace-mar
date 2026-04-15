@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://publications.parliament.uk/pa/cm201314/cmselect/cmdfence/197/197vw11.htm
 3. https://www.oxfordmartin.ox.ac.uk/events/seminar-commodore-steve-jermy-strategy-for-action-using-force-wisely-in-the-21st-century
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:steve-jermy`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-steve-jermy-transcript.md`](strategy-expert-steve-jermy-transcript.md) (7-day rolling verbatim) and [`strategy-expert-steve-jermy-thread.md`](strategy-expert-steve-jermy-thread.md) (distilled analytical thread).

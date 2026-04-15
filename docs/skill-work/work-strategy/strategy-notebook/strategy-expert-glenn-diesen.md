@@ -26,12 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://eng.globalaffairs.ru/authors/glenn-diesen/
 3. https://www.rt.com/podcast/627315-diesen-ukraine-situation-bad/
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:glenn-diesen`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-## 2026-04-12
-- `YT | cold: Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress / Hormuz–Malacca chokepoint story; Islamabad 10-point frame vs US walk-away; maritime “toll” extraction // hook: **vi-14** for §1c Jiang layer + Islamabad / energy spine; cite lecture not headlines | https://www.youtube.com/watch?v=P_DHMUdOVdo | verify:work-jiang-vi-14+../../../../research/external/work-jiang/lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md | thread:glenn-diesen`
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-glenn-diesen-transcript.md`](strategy-expert-glenn-diesen-transcript.md) (7-day rolling verbatim) and [`strategy-expert-glenn-diesen-thread.md`](strategy-expert-glenn-diesen-thread.md) (distilled analytical thread).

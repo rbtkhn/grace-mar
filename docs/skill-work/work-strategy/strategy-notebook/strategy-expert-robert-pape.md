@@ -26,12 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://cpost.uchicago.edu/people/profile/robert_pape/
 3. https://escalationtrap.substack.com/
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:robert-pape`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-## 2026-04-12
-- `X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown | thread:robert-pape`
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md) (7-day rolling verbatim) and [`strategy-expert-robert-pape-thread.md`](strategy-expert-robert-pape-thread.md) (distilled analytical thread).

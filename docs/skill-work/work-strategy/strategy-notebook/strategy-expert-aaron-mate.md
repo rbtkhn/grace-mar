@@ -26,11 +26,6 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 2. https://thegrayzone.com/author/aaron-mate/
 3. https://thegrayzone.com/pushback/
 
-## Rolling ingest
+---
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:aaron-mate`.
-**Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
-**Not Record.**
-<!-- strategy-expert-corpus:start -->
-_(No `thread:` ingests in the current rolling window.)_
-<!-- strategy-expert-corpus:end -->
+**Companion files:** [`strategy-expert-aaron-mate-transcript.md`](strategy-expert-aaron-mate-transcript.md) (7-day rolling verbatim) and [`strategy-expert-aaron-mate-thread.md`](strategy-expert-aaron-mate-thread.md) (distilled analytical thread).
