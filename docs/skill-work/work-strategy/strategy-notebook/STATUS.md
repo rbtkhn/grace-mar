@@ -6,7 +6,7 @@
 |-------|--------|
 | **Project status** | `active` |
 | **Active chapter** | `2026-04` |
-| **Last substantive entry** | `2026-04-11` (Tri-Frame mind passes + daily brief substrate; see `chapters/2026-04/days.md`) — update when you close a real dated or episodic **weave** |
+| **Last substantive entry** | `2026-04-15` (Grok triage + IMF + Hormuz; 04-14 heaviest: expert threads, PH vi-14/15, case-index integration; see `chapters/2026-04/days.md`) — update when you close a real dated or episodic **weave** |
 | **Prepared stub** | _Optional_ — only if you use calendar stubs; otherwise capture in [daily-strategy-inbox.md](daily-strategy-inbox.md) and **weave** when you run **`strategy`** / explicit **`weave`** / **`fold`** (legacy) |
 | **Daily inbox** | [daily-strategy-inbox.md](daily-strategy-inbox.md) — **SSOT** (cadence + paste-ready lines); weave/prune → [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox* |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
