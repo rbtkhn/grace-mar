@@ -17,6 +17,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 | **[self-work/sync-pack](self-work/sync-pack/README.md)** | Optional template utility: manual, review-first territory sync module (contract + log + optional daily surface). |
 | **[work-cadence](work-cadence/README.md)** | Daily cadence architecture: `coffee` (morning orientation) + `dream` (night consolidation), handoff contract, runner modes, extension points for instance-specific rituals. |
 | **[work-forecast](work-forecast/README.md)** | Governed numeric / cadence forecasting — WORK artifacts, baselines, receipts; not Record truth. |
+| **[work-strategy](work-strategy/)** | Cross-territory **governed strategic accumulation** — [strategy-notebook](work-strategy/strategy-notebook/README.md), daily briefs, optional [STRATEGY.md](work-strategy/STRATEGY.md) promotion; Cursor **`skill-strategy`**; not Record truth. |
 
 ---
 
@@ -28,7 +29,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 - **New WORK territory checklist:** [work-template.md](work-template.md) — scaffold `work-<id>/` (README, history, optional LANE-CI, sources).
 - **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md).
 - **Work modules — territory history logs:** [work-modules-history-principle.md](work-modules-history-principle.md).
-- **Work-strategy (`skill-strategy`):** [work-strategy/README.md](work-strategy/README.md) — **governed strategic accumulation** in WORK (explicit seams, promotion to STRATEGY, distance from Record); activation [`.cursor/skills/skill-strategy/SKILL.md`](../../.cursor/skills/skill-strategy/SKILL.md).
+- **Work-strategy (`skill-strategy`):** Listed in **Submodules** above — [work-strategy/README.md](work-strategy/README.md); activation [`.cursor/skills/skill-strategy/SKILL.md`](../../.cursor/skills/skill-strategy/SKILL.md).
 - [Long-term objective](../long-term-objective.md) — Links to skill-work submodules.
 - [Concept](../concept.md), [Schema and API](../schema-record-api.md), [Instance patterns](../instance-patterns.md).
 - [Good Morning Brief Spec](../good-morning-brief-spec.md), [Good Night Template](../good-night-template.md), [Good Night Brief Spec](../good-night-brief-spec.md).
