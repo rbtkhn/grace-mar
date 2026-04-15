@@ -6,7 +6,7 @@
 |-------|--------|
 | **Project status** | `active` |
 | **Active chapter** | `2026-04` |
-| **Last substantive entry** | `2026-04-15` (Grok triage + **Judgment**; **`weave`** same day: brief **§1d/§1e** watch fill + `days.md` merge without inbox raw-dump; 04-14 heaviest: expert threads, PH vi-14/15, case-index; see `chapters/2026-04/days.md` + `meta.md` April arc) — update when you close a real dated or episodic **weave** |
+| **Last substantive entry** | `2026-04-14` (**`weave`**: **`scott-ritter` × `daniel-davis`** — digest §B ORBAT seam vs Davis ultimatum/resumption/macro; folded into `chapters/2026-04/days.md` **`## 2026-04-14`** **Signal**/**Judgment**/**Links**/**Open**; **04-15** Grok triage + watch fill unchanged) — update when you close a real dated or episodic **weave** |
 | **Prepared stub** | _Optional_ — only if you use calendar stubs; otherwise capture in [daily-strategy-inbox.md](daily-strategy-inbox.md) and **weave** when you run **`strategy`** / explicit **`weave`** / **`fold`** (legacy) |
 | **Daily inbox** | [daily-strategy-inbox.md](daily-strategy-inbox.md) — **SSOT** (cadence + paste-ready lines); weave/prune → [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox* |
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
