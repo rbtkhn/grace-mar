@@ -11,6 +11,8 @@
 
 **Grep anchor (Ritter×Davis):** `batch-analysis | 2026-04-14 | Ritter × Davis | crosses:scott-ritter+daniel-davis` — inbox row ↔ [`days.md`](days.md) **`## 2026-04-14`** **Signal** / **Judgment** / **Open**.
 
+**04-15 (second weave, same chapter):** **`alexander-mercouris`** **15 Apr 2026** programme × **`tri-mind`** (**B→A→C**) + **fact-check triage** receipts — [`days.md`](days.md) **`## 2026-04-15`**; optional inbox `batch-analysis | 2026-04-15 | Mercouris × tri-mind | seam:mercouris-tri-frame`.
+
 **If May inherits debt:** Close **04-13** episode URL pins before tightening **04-14** Links; **deepen** **04-15** **Judgment** / trim **section 1f** after **`fa`** and wire burn-down; keep **inbox** `Accumulator for:` aligned with the working calendar.
 
 **Retro verify pilot (2026-04):** **Complete** — duplicate `## 2026-04-11` in `days.md` reconciled; Islamabad/Hormuz pilot triage landed under **`### Web verification (2026-04-12)`** in [`chapters/2026-04/days.md`](days.md); multi-month **scale policy** in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Multi-month notebook — retro fact-check scale policy*. **Civ-mem pattern pilot (layer B):** **Complete** — **`### Civ-mem pattern check (pilot — 2026-04-12 — 2026-04-13)`** in same `days.md` (STATE + GEO MEM; `MEM–RELEVANCE` absent at pin; script skipped; WORK-only).
