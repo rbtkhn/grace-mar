@@ -2,7 +2,8 @@
 name: skill-strategy
 preferred_activation: strategy
 description: >-
-  Primary trigger: strategy. Work-strategy pass — cross-territory judgment with strategy-notebook as the primary write surface;
+  Primary trigger: strategy. Governed strategic accumulation (not loose analysis) in bounded WORK —
+  cross-territory judgment with strategy-notebook as the primary write surface;
   STRATEGY.md only when promoting stable arcs. Modes: default notebook pass; strategy + verify (web or fact-check tier, dated citations in Links); transcript ingests flag verify on rosters/stats;
   optional promote to STRATEGY.md. Embeds the operator’s five-thread geopolitical theory (official name TBD): polycentric voice planes + Islamabad scaffold, information / equilibrium vocabulary, daily brief §1d–§1h,
   gap matrices, weak-signal and analogy-audit discipline. PH (work-jiang) via Jiang resonance —

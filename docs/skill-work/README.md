@@ -28,6 +28,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 - **New WORK territory checklist:** [work-template.md](work-template.md) — scaffold `work-<id>/` (README, history, optional LANE-CI, sources).
 - **Work modules — authorized sources:** [work-modules-sources-principle.md](work-modules-sources-principle.md).
 - **Work modules — territory history logs:** [work-modules-history-principle.md](work-modules-history-principle.md).
+- **Work-strategy (`skill-strategy`):** [work-strategy/README.md](work-strategy/README.md) — **governed strategic accumulation** in WORK (explicit seams, promotion to STRATEGY, distance from Record); activation [`.cursor/skills/skill-strategy/SKILL.md`](../../.cursor/skills/skill-strategy/SKILL.md).
 - [Long-term objective](../long-term-objective.md) — Links to skill-work submodules.
 - [Concept](../concept.md), [Schema and API](../schema-record-api.md), [Instance patterns](../instance-patterns.md).
 - [Good Morning Brief Spec](../good-morning-brief-spec.md), [Good Night Template](../good-night-template.md), [Good Night Brief Spec](../good-night-brief-spec.md).
