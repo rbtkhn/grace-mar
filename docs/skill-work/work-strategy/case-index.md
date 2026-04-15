@@ -59,6 +59,8 @@ If a case is interesting but not yet reusable, keep it in a resonance note or th
 
 ## 5. How to use this file
 
+The standard workflow that invokes this check is [current-events-analysis.md](current-events-analysis.md) (§5.4 Case-index check). That pipeline requires checking this index before proposing any historical or CIV-MEM parallel.
+
 Typical use flow:
 
 1. A live event, brief, transcript, or question enters work-strategy.
@@ -67,6 +69,8 @@ Typical use flow:
 4. If no case fits well, create a resonance note instead of forcing a bad parallel.
 5. If the new pattern recurs, add or revise a case entry.
 6. If a case begins to need richer local treatment, create or update a History Notebook chapter.
+
+Case families and lenses that seed new cases are defined in [civilizational-strategy-surface.md](civilizational-strategy-surface.md).
 
 ## 6. Required entry template
 
@@ -409,7 +413,11 @@ If this file grows unwieldy, compress by:
 
 The point of this file is not completeness. The point is strategic reuse.
 
-## 10. Review protocol
+## 10. Promotion path
+
+Cases in this index often serve as Stage 1 (case hit) inputs to the [promotion ladder](promotion-ladder.md). When a case citation in the strategy notebook or current-events analysis proves reusable enough to deserve a resonance note, analogy audit, watch support, or doctrine note, the ladder defines the standard path and reasoning standard for that promotion.
+
+## 11. Review protocol
 
 When reviewing or revising entries:
 
@@ -419,7 +427,7 @@ When reviewing or revising entries:
 4. Promote repeated local use into History Notebook chapters only when richer treatment is justified.
 5. Keep labels stable once they become habitual in strategy writing.
 
-## 11. Minimal maintenance standard
+## 12. Minimal maintenance standard
 
 This file is healthy when:
 

@@ -326,19 +326,22 @@ These fields exist to reduce hand-wavy analogy drift.
 ## 11. Relation to other work-strategy artifacts
 
 ### 11.1 Strategy Notebook
-The Strategy Notebook is the primary daily judgment surface. This surface supplies reusable civilizational mechanisms that strategy writing may cite.
+The [Strategy Notebook](strategy-notebook/README.md) is the primary daily judgment surface. This surface supplies reusable civilizational mechanisms that strategy writing may cite.
 
 ### 11.2 History Notebook
 The History Notebook is the compressed local historical layer. It is the preferred place for richer operator-authored historical reasoning. This surface should point toward History Notebook chapters when repeated use justifies them.
 
 ### 11.3 Case index
-The local case index should hold the most reusable strategy-grade cases. This surface describes the families and mechanisms that make those cases useful.
+The local [case index](case-index.md) should hold the most reusable strategy-grade cases. This surface describes the families and mechanisms that make those cases useful.
 
 ### 11.4 Current-events analysis
-Current-events analysis should check this surface and the local case index before reaching for ad hoc historical analogy.
+[current-events-analysis.md](current-events-analysis.md) should check this surface and the local case index before reaching for ad hoc historical analogy.
 
 ### 11.5 Decision points
 Decision points may use this surface to frame strategic context, but recommendations remain operator judgment and WORK-only.
+
+### 11.6 Promotion ladder
+[promotion-ladder.md](promotion-ladder.md) defines the standard path for promoting material seeded by this surface (case families, lenses, mechanisms) into reusable strategy artifacts. This surface often provides Stage 1 (case hit) inputs; the ladder governs what happens next.
 
 ## 12. Creation rule for new entries
 
