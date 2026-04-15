@@ -84,3 +84,10 @@ knots:
     clusters: [scott-ritter, hormuz, blockade, expert-lattice]
     patterns: [ritter-center-weave]
     note: "Ritter blockade mechanics + sister knots + indexed threads same topic"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
+    date: "2026-04-15"
+    knot_label: uranium-offramp-dual-register
+    clusters: [uranium-offramp, iri-dual-register, legitimacy-seam, hormuz]
+    patterns: [convergence-finding, conditioned-branching, multi-register-legitimacy]
+    note: "Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack"

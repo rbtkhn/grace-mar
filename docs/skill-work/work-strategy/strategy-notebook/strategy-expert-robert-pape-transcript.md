@@ -10,3 +10,6 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-12
+- `X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown | thread:robert-pape`

@@ -8,8 +8,14 @@ WORK only; not Record.
 **Companion files:** [`strategy-expert-glenn-diesen.md`](strategy-expert-glenn-diesen.md) (profile) and [`strategy-expert-glenn-diesen-transcript.md`](strategy-expert-glenn-diesen-transcript.md) (7-day verbatim).
 
 ---
-
 <!-- strategy-expert-thread:start -->
+### Recent transcript material
+
 ## 2026-04-12
 - `YT | cold: Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress / Hormuz–Malacca chokepoint story; Islamabad 10-point frame vs US walk-away; maritime “toll” extraction // hook: **vi-14** for §1c Jiang layer + Islamabad / energy spine; cite lecture not headlines | https://www.youtube.com/watch?v=P_DHMUdOVdo | verify:work-jiang-vi-14+../../../../research/external/work-jiang/lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md | thread:glenn-diesen`
+
+### Knot references
+
+- [strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) 2026-04-14 (diesen-vi14-petrodollar-vs-sachs-hormuz) — Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment
+- [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic
 <!-- strategy-expert-thread:end -->

@@ -8,7 +8,6 @@ WORK only; not Record.
 **Companion files:** [`strategy-expert-alastair-crooke.md`](strategy-expert-alastair-crooke.md) (profile) and [`strategy-expert-alastair-crooke-transcript.md`](strategy-expert-alastair-crooke-transcript.md) (7-day verbatim).
 
 ---
-
 <!-- strategy-expert-thread:start -->
-_(No thread distillation yet.)_
+_(No transcript or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->

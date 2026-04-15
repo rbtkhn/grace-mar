@@ -10,3 +10,6 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-12
+- `X | cold: @tparsi — CNN segment: Lebanon as sticking point (U.S. must rein in Israel); floats nuclear deadlock as possible mask; nested quote chain includes AR-sourced claim of phased Lebanon ceasefire (Beirut/suburbs first) vs full stop // hook: analyst overlay for notebook Lebanon fork; pairs §1e Islamabad thread + native triangulation | https://x.com/tparsi | verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary | thread:trita-parsi`

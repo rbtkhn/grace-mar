@@ -10,3 +10,6 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-12
+- `batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`

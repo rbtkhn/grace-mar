@@ -10,3 +10,6 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+## 2026-04-12
+- `YT | cold: Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress / Hormuz–Malacca chokepoint story; Islamabad 10-point frame vs US walk-away; maritime “toll” extraction // hook: **vi-14** for §1c Jiang layer + Islamabad / energy spine; cite lecture not headlines | https://www.youtube.com/watch?v=P_DHMUdOVdo | verify:work-jiang-vi-14+../../../../research/external/work-jiang/lectures/interviews-14-glenn-diesen-iran-war-petrodollar.md | thread:glenn-diesen`

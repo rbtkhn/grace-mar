@@ -8,7 +8,6 @@ WORK only; not Record.
 **Companion files:** [`strategy-expert-jacques-baud.md`](strategy-expert-jacques-baud.md) (profile) and [`strategy-expert-jacques-baud-transcript.md`](strategy-expert-jacques-baud-transcript.md) (7-day verbatim).
 
 ---
-
 <!-- strategy-expert-thread:start -->
-_(No thread distillation yet.)_
+_(No transcript or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->
