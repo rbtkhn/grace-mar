@@ -45,3 +45,36 @@
 5. **Ownership (RACI):** operator / AI assistant drafts; Xavier / operator review; companion approves gated merges **in her repo** for identity; you approve public ship for your content.
 6. **Promotion path (her repo):** candidate → `recursion-gate.md` → approval → `process_approved_candidates.py --apply`.
 7. **Security boundary:** no secrets in shared mirror docs.
+
+---
+
+## Risk mitigation (template — Tier 1+)
+
+Per [work-template/README.md](../work-template/README.md) § *Risk-mitigation checklist*. Filled for **advisor module** obligations (mirrors, sync cadence, leakage boundary).
+
+### 1. Quantitative success criteria
+
+| Metric | Target | How to measure |
+|--------|--------|------------------|
+| Daily sync surface used | ≥1 operator touch / week when Xavier loop is active | [SYNC-DAILY.md](SYNC-DAILY.md) checkboxes or [xavier-progress-log.md](xavier-progress-log.md) dated lines |
+| Mirror drift | No silent staleness >30d on labeled “live” mirror paths | Spot-check [work-dev-mirror](work-dev-mirror/README.md) / [work-politics-mirror](work-politics-mirror/README.md) headers + `git log` on mirrored sources when in doubt |
+| Leakage discipline | Zero grace-mar Record paths in outbound advisor bundles | Run [LEAKAGE-CHECKLIST.md](LEAKAGE-CHECKLIST.md) before ship; CI label per [LANE-CI.md](LANE-CI.md) when applicable |
+
+### 2. Sustainment table
+
+| Task | Cadence | What to check |
+|------|---------|----------------|
+| SYNC-DAILY / Good Morning loop | Weekly when engaged | [SYNC-DAILY.md](SYNC-DAILY.md) still matches actual chat/repo rhythm |
+| Handbook / bundle outputs | On change to SMM or operator handbook sources | [scripts/build_xavier_handbook_bundle.py](../../../scripts/build_xavier_handbook_bundle.py) + PDF script still run clean |
+| Mirror alignment | Monthly light pass | Mirror README “last reviewed” vs upstream doc movement |
+
+### 3. Deprecation / retirement path
+
+1. Stop active advisory cadence (explicit operator decision).
+2. Close open items in [WORK-LEDGER.md](WORK-LEDGER.md) with status notes.
+3. Archive lane-specific experiments under a dated `archive/` note in this folder (README pointer), not by deleting her instance repo.
+4. Remove or downgrade automation only after no operator relies on the path; **never** delete her `users/<id>/` tree from **her** repo from grace-mar tooling.
+
+### 4. Scope creep guardrail
+
+> Any workflow that copies **gated Record** prose (`self.md`, `self-archive.md`, `recursion-gate.md` merges) from **grace-mar** into **Cici / companion-xavier** without her gate requires a **new plan** and explicit consent — not an incremental doc edit. This lane’s charter is **advisor + WORK execution**, not hosting her fork.
