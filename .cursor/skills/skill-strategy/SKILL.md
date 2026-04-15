@@ -198,6 +198,16 @@ When writing **for** `strategy` **into repo files**, generate **one of three sha
 
 **Do not** default to freeform “strategic essay” as the on-disk artifact when the target is the notebook — **shape text for the destination first**.
 
+## Knot connections (optional graph pass)
+
+During a weave pass, when a knot is created or revised, the skill may:
+
+1. Inspect adjacent knots from the same day, same watch cluster, or same mechanism pattern (via `knot-index.yaml` clusters/patterns).
+2. Propose one or two candidate [`knot-connections.yaml`](../../../docs/skill-work/work-strategy/strategy-notebook/knot-connections.yaml) edges with relation type and reason.
+3. Add edges **only** on explicit operator intent — do not auto-append.
+
+Validate after any edit: `python3 scripts/validate_knot_connections.py`.
+
 ## Frontier guard
 
 Before any **knot composition** or **`days.md`** continuity update:

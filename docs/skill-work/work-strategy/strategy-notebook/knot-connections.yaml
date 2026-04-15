@@ -1,0 +1,65 @@
+# knot-connections.yaml — governed edge layer between strategy-notebook knot pages.
+#
+# Separate from knot-index.yaml (inventory / table of contents).
+# knot-connections.yaml records *relationships* between pages.
+#
+# Validate: `python3 scripts/validate_knot_connections.py` (from repo root).
+#
+# schema_version — bump when fields change.
+#
+# Allowed relation types:
+#   supports        — one knot reinforces the thesis or evidence of another
+#   tension         — the two knots pull in different directions on the same question
+#   extends         — one knot deepens or continues the argument of another
+#   case-for        — a case page supplies evidence for a thesis or mechanism page
+#   mechanism-for   — a mechanism page supplies structural explanation for a thesis or case
+#   same-watch      — both knots track the same evolving situation
+#   sequence-next   — reading-order continuation (day-crossing or within-day)
+#
+# connections[]:
+#   from      (string, required) — repo-relative path to source knot file
+#   to        (string, required) — repo-relative path to target knot file
+#   relation  (string, required) — one of the allowed relation types above
+#   reason    (string, required) — one-line explanation of why this edge exists
+#   warrant   (list of strings, optional) — supporting tags (shared-watch, same-day, etc.)
+#   status    (string, optional) — "active" (default) or "retired"
+#
+# WORK only; not Record.
+
+schema_version: 1
+
+relations:
+  - supports
+  - tension
+  - extends
+  - case-for
+  - mechanism-for
+  - same-watch
+  - sequence-next
+
+connections:
+  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md
+    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
+    relation: tension
+    reason: "Parsi/Davis accountability framing vs Mercouris/Mearsheimer structural-incentive framing on the same theatre legitimacy question."
+    warrant:
+      - "same-day"
+      - "shared-watch:accountability-language"
+    status: active
+
+  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
+    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
+    relation: extends
+    reason: "Ritter blockade mechanics extends the Islamabad-Hormuz thesis with operational detail."
+    warrant:
+      - "shared-watch:hormuz"
+      - "sequence-cross-day"
+    status: active
+
+  - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
+    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
+    relation: mechanism-for
+    reason: "Diesen/Sachs petrodollar mechanism supplies structural explanation for the expert scaffold's Hormuz convergence."
+    warrant:
+      - "shared-watch:hormuz"
+    status: active
