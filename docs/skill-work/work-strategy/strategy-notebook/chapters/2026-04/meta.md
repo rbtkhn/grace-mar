@@ -7,6 +7,8 @@
 
 **Retro verify pilot (2026-04):** **Complete** — duplicate `## 2026-04-11` in `days.md` reconciled; Islamabad/Hormuz pilot triage landed under **`### Web verification (2026-04-12)`** in [`chapters/2026-04/days.md`](days.md); multi-month **scale policy** in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Multi-month notebook — retro fact-check scale policy*. **Civ-mem pattern pilot (layer B):** **Complete** — **`### Civ-mem pattern check (pilot — 2026-04-12 — 2026-04-13)`** in same `days.md` (STATE + GEO MEM; `MEM–RELEVANCE` absent at pin; script skipped; WORK-only).
 
+**Expert-thread continuity:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity (2026-04-12 → 2026-04-14)** + `batch-analysis | carry 04-12–04-13 expert lanes + PH vi-14/15` + **`batch-analysis | Parsi × Davis`** (`crosses:trita-parsi+daniel-davis`) → **`## 2026-04-14`** in [`days.md`](days.md); cross-day join key **`thread:<expert_id>`** per [strategy-commentator-threads.md](../../strategy-commentator-threads.md).
+
 **Theme tail (external analysts — Johnson / Pape):**
 
 - **Pause ≠ settlement:** Both threads treat the ceasefire as fragile; lane takeaway is caution on “deal = durable off-ramp” until passage, spoilers, and reconstitution are explicit in any outreach copy.
