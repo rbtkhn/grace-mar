@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `trita-parsi` | 0.74 | 0.45 | 0.69 | Washington’s story can pull him between Lebanon, nuclear scope, and what “the process” means, so the thread can feel like it crosses slightly different questions in one breath. What closes in the Beltway and what closes on the ground do not always move together. He still pairs often with other named voices, but he is not the hub everyone orbits. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/tparsi
+2. https://www.tritaparsi.com/
+3. https://quincyinst.org/author/trita-parsi/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:trita-parsi`.

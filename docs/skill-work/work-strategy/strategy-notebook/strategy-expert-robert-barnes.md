@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `robert-barnes` | 0.88 | 0.36 | 0.52 | He stays on home law and politics—who is exposed, what the chain of command implies—which keeps his voice distinct from foreign-policy generalists. Poll-driven or coalition claims often stay “maybe” until hard numbers land, so clear yes/no resolution is rarer. He is essential when the story is liability; he is less often the center of multi-country roundtables. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/barnes_law
+2. https://www.barneslawllp.com/
+3. https://www.barneslawllp.com/barnes-law-twitter/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:robert-barnes`.

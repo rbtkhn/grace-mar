@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `jeffrey-sachs` | 0.73 | 0.38 | 0.71 | Institutional-decay and macro-development framing is recognizable—UN/DC process contrasted to personalized executive behavior. Many strongest claims (war-room origin stories, capacity) need primaries before they close. Often paired with **Diesen** on multipolar episodes rather than as the widest mechanics hub. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/JeffreyASachs
+2. https://www.jeffsachs.org/
+3. http://econ.columbia.edu/jeffrey-sachs
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:jeffrey-sachs`.

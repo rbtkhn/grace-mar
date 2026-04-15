@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `scott-ritter` | 0.82 | 0.48 | 0.74 | His lane is recognizable—sea control, blockade mechanics, the military story under the headlines—so he does not drift into generic punditry as often. Operational claims need time and evidence to judge, so verdicts arrive slowly. He is often placed beside diplomats or lawyers of war in the same week’s analysis, which raises the “compares with others” score. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/RealScottRitter
+2. https://scottritter.com/
+3. https://www.youtube.com/@therealscottritter
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:scott-ritter`.

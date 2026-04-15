@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `douglas-macgregor` | 0.76 | 0.40 | 0.68 | Third-country distance from the U.S.–Israel frame is a steady theme, easy to recognize week to week. Event-linked scorekeeping is uneven because his value is often framing, not a dated bet. He still shows up in side-by-side comparisons with other realists. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/DougAMacgregor
+2. https://coloneldouglasmacgregor.com/
+3. https://www.theamericanconservative.com/author/doug-mac/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:douglas-macgregor`.

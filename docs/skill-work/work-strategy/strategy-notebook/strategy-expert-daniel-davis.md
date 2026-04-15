@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `daniel-davis` | 0.79 | 0.50 | 0.72 | Ceasefire as extension game, ultimatums, who hurts first—the architecture is easy to follow. Some forecasts need the calendar to catch up before you know. He is regularly read against other named analysts in the same crisis week. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/DanielLDavis1
+2. https://www.defensepriorities.org/team/profile/daniel-davis
+3. https://nationalinterest.org/profile/daniel-l-davis
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:daniel-davis`.

@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `larry-johnson` | 0.80 | 0.46 | 0.63 | Order-of-battle and material detail keep him in a narrow lane—useful when the question is what forces could actually do. Raid and battle narratives take time and sources to check. He shines on panels and roundtables more than as the universal hub for every thread. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/LarrySonar21
+2. https://sonar21.com/
+3. https://larrycjohnson.substack.com/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:larry-johnson`.

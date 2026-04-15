@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `aaron-mate` | 0.75 | 0.34 | 0.64 | Media-structure and ownership critiques are a steady lane—outlet naming and corporate parentage need primary documents to close. Often read beside the same Grayzone-adjacent week as Blumenthal but keeps a distinct thread id for routing. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/aaronjmate
+2. https://thegrayzone.com/author/aaron-mate/
+3. https://thegrayzone.com/pushback/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:aaron-mate`.

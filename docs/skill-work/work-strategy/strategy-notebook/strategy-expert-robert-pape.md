@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `robert-pape` | 0.81 | 0.55 | 0.77 | Escalation-as-trap is a named mechanism—demands, ratchets, staged branches—so the reader can see what would count as a test. When those pieces are written down clearly, time can actually grade the claim. That same clarity makes him a natural partner in “fork A vs fork B” discussions. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/ProfessorPape
+2. https://cpost.uchicago.edu/people/profile/robert_pape/
+3. https://escalationtrap.substack.com/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:robert-pape`.

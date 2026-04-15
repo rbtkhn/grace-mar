@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `max-blumenthal` | 0.74 | 0.33 | 0.62 | Elite-network and media-critique framing is recognizable week to week; closure on “who whispered to whom” claims often waits on tape or official denial. Pairs well with Beltway-facing or diplomatic lanes when the notebook wants an alt-media tension. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/MaxBlumenthal
+2. https://thegrayzone.com/author/max-blumenthal/
+3. https://www.patreon.com/grayzone
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:max-blumenthal`.

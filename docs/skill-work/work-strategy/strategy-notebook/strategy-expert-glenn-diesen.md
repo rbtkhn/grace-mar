@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `glenn-diesen` | 0.77 | 0.43 | 0.79 | Multipolar language is clearly his own—not a copy of standard U.S. structural realism—so you can tell when Diesen is speaking. Closure looks like his peer group: partly about time and evidence. He is frequently read alongside other realist anchors when the week demands comparison. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://www.usn.no/english/about/contact-us/employees/glenn-diesen
+2. https://eng.globalaffairs.ru/authors/glenn-diesen/
+3. https://www.rt.com/podcast/627315-diesen-ukraine-situation-bad/
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:glenn-diesen`.

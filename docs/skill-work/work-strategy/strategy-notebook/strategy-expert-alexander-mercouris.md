@@ -18,6 +18,14 @@ The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.p
 |-----------|-----|----|-----|--------------------------------------------------|
 | `alexander-mercouris` | 0.72 | 0.44 | 0.88 | The diplomatic “room” story can shade into narrative that is harder to pin to a single falsifying fact, so discipline scores a little lower. The payoff is synthesis: he is the commentator most often placed beside others to hear harmony or dissonance, which drives the bridge score to the top. |
 
+### Published sources (operator web index)
+
+Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
+
+1. https://x.com/amercouris
+2. https://theduran.com/
+3. https://www.youtube.com/@AlexMercouris
+
 ## Rolling ingest
 
 **Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:alexander-mercouris`.
