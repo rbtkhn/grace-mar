@@ -30,6 +30,7 @@
 | [ROME-PASS.md](ROME-PASS.md) | Repeatable pre-skill pass: triggers, source order, boundaries, output shape, micro-checklist. |
 | [notes/](notes/) | Dated stubs — e.g. [2026-04-03-modern-rome-papacy-thesis-stub.md](notes/2026-04-03-modern-rome-papacy-thesis-stub.md), [2026-04-05-leo-xiv-civ-mem-historical-context.md](notes/2026-04-05-leo-xiv-civ-mem-historical-context.md) (CIV-MEM scaffold × Leo XIV OSINT). |
 | [notes/exemplars/](notes/exemplars/) | Finished pass examples (shape reference for future `strategy-rome` skill). |
+| [notes/exemplars/2026-04-14-rome-pass-exemplar-case-backed.md](notes/exemplars/2026-04-14-rome-pass-exemplar-case-backed.md) | End-to-end proof: case-index check, analogy audit, watch-support decision, three-minds synthesis. |
 | `ingest/` | _(Optional)_ pointers to external captures — prefer [research/external/work-strategy/transcripts/README.md](../../../../research/external/work-strategy/transcripts/README.md) for long-form text. |
 
 ---
@@ -66,3 +67,4 @@ Append short dated lines here or in [work-strategy-history.md](../work-strategy-
 - **2026-04-05** — **Leo XIV × PRC OSINT + civ-mem:** [leo-xiv-osint-prc-brief-2026-04-04.md](../../work-politics/leo-xiv-osint-prc-brief-2026-04-04.md) ↔ [notes/2026-04-05-leo-xiv-civ-mem-historical-context.md](notes/2026-04-05-leo-xiv-civ-mem-historical-context.md); ROME-PASS **micro-checklist** recorded on note; [daily-brief-focus.md](../daily-brief-focus.md) refreshed (standing packet pointer).
 - **2026-04-06** — **ROME pass (primary + press office):** General Audience **1** Apr **2026** — *Lumen gentium* **laity** / Council catechesis — [notes/2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md](notes/2026-04-06-rome-pass-20260401-audience-lumen-gentium-laity.md).
 - **2026-04-06** — **ROME pass (wire-heavy cluster):** Easter **Urbi et Orbi** **5** Apr **2026** + **paired** **Good Friday** phones (**Herzog** + **Zelenskyy**, **3** Apr **2026**) + **Reuters** Palm Sunday / Trump–Iran framing — [notes/2026-04-06-rome-pass-easter-2026-war-diplomacy-wire-cluster.md](notes/2026-04-06-rome-pass-easter-2026-war-diplomacy-wire-cluster.md).
+- **2026-04-14** — **Case-backed exemplar:** end-to-end proof of civ-mem bridge pipeline (case-index check → analogy audit → watch support → three minds → synthesis) — [notes/exemplars/2026-04-14-rome-pass-exemplar-case-backed.md](notes/exemplars/2026-04-14-rome-pass-exemplar-case-backed.md).
