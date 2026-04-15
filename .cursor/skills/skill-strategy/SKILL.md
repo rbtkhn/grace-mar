@@ -15,9 +15,38 @@ description: >-
 
 # Strategy pass (`skill-strategy`)
 
+**Identity (one sentence):** This lane does one thing no other surface does — **cross-territory governed accumulation of judgment** with civilizational depth and explicit distance from Record truth.
+
 **Preferred activation (operator):** **`strategy`**. **Aliases:** **`strategy pass`**, **`work-strategy`**.
 
+**Default path (fast start):** [DEFAULT-PATH.md](../../../docs/skill-work/work-strategy/DEFAULT-PATH.md) — three moves for a normal pass (read frontier → capture inbox → offer menu); everything else is optional. Start there; the sections below are reference.
+
 **Bottom line (lane intent):** **Governed strategic accumulation** in a **bounded WORK layer** — not loose “analysis.” Preserve evolving **geopolitical–historical judgment** with **explicit seams**, **explicit promotion** to [STRATEGY.md](../../../docs/skill-work/work-strategy/STRATEGY.md) only when stable, and **explicit distance** from companion **Record** identity truth ([AGENTS.md](../../../AGENTS.md) hierarchy).
+
+### Required core vs reference (reading guide)
+
+| Tier | Section | When to read |
+|------|---------|--------------|
+| **Core** | Default path link (above) | Every pass — the three-move workflow |
+| **Core** | [Session hygiene](#session-hygiene-operator-alignment-low-friction) | Every pass — metaphor vs repo work, scaffold provenance, prose register |
+| **Core** | [Modes table](#modes-write-targets-and-required-shapes) | Every pass — Capture / Weave / Promote shapes |
+| **Core** | [Default moves](#default-moves-agent) | Every pass — agent step-by-step |
+| **Core** | [Pre-write checklist](#pre-write-checklist) | Before any file write |
+| **Core** | [Notebook-first write contract](#notebook-first-write-contract) | Before any file write |
+| **Core** | [Boundaries](#boundaries) | Always — WORK-only, no merge |
+| Ref | [Five primary threads](#five-primary-threads-operator-geopolitical-theory) | When day touches §1d–§1h watch threads |
+| Ref | [Post-entry lens offer](#post-entry-lens-offer) | After substantive notebook entry (optional B/M/M one-liners) |
+| Ref | [Civilization memory](#civilization-memory-civ-mem--optional-slow-layer) | When operator asks for upstream MEM depth |
+| Ref | [Predictive History](#predictive-history-work-jiang--how-it-wires-in) | When Jiang resonance wire applies |
+| Ref | [History notebook](#history-notebook-lib-0156--how-it-wires-in) | When HN mechanism pattern applies |
+| Ref | [Commentator threads](#commentator-threads-optional-correlation) | When two+ experts overlap on same crisis |
+| Ref | [Three minds](#three-minds-optional--granular) | When operator triggers tri-frame or lens |
+| Ref | [Anti-patterns](#anti-patterns) | Periodic review |
+| Ref | [Disambiguation](#disambiguation) | When unsure which skill/tool to invoke |
+
+**Core** sections are the ones you need on a normal pass. **Ref** sections are consulted when a specific feature triggers — not preloaded into every session.
+
+---
 
 **Purpose:** Run a **bounded strategy pass** over work-strategy: produce or extend the **strategy-notebook** first; touch [STRATEGY.md](../../../docs/skill-work/work-strategy/STRATEGY.md) only when promoting watches, analogy lines, or operator log entries that have **stabilized**.
 
