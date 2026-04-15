@@ -261,8 +261,8 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 
 **Join key:** same **`thread:<expert_id>`** on different dates → **accuracy / drift** lane per [strategy-commentator-threads.md](strategy-commentator-threads.md). **This block names carries only** — add new paste-ready **`thread:`** lines when **cold** attributes speech/analysis to a named indexed expert; do **not** mint **`thread:`** from headlines alone.
 
-- **Knot (2026-04-12):** [knot-2026-04-12-islamabad-hormuz-thesis-weave.md](chapters/2026-04/knots/knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad→Hormuz **Thesis A/B** + **Pape / Parsi / Freeman / Barnes** lanes ([`knot_label`](knot-index.yaml) `islamabad-hormuz-thesis-weave`).
-- **Knot (2026-04-13):** [knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](chapters/2026-04/knots/knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — **Marandi × Ritter × Mercouris** scaffold + **Davis × Freeman × Mearsheimer** parallel ([`knot_label`](knot-index.yaml) `marandi-ritter-mercouris-hormuz-scaffold`).
+- **Knot (2026-04-12):** [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad→Hormuz **Thesis A/B** + **Pape / Parsi / Freeman / Barnes** lanes ([`knot_label`](knot-index.yaml) `islamabad-hormuz-thesis-weave`).
+- **Knot (2026-04-13):** [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — **Marandi × Ritter × Mercouris** scaffold + **Davis × Freeman × Mearsheimer** parallel ([`knot_label`](knot-index.yaml) `marandi-ritter-mercouris-hormuz-scaffold`).
 
 | Prior day | Landed in `days.md` (expert-relevant) | Thread ids to **carry** into 04-14 Judgment / batch |
 |-----------|----------------------------------------|------------------------------------------------------|

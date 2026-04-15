@@ -58,7 +58,7 @@ Pins keep **Mercouris** **legitimacy** **layer** and **Mearsheimer** **structure
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
     date: "2026-04-14"
     knot_label: mercouris-mearsheimer-lebanon-split
 ```

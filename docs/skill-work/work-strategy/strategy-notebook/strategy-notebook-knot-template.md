@@ -1,6 +1,6 @@
 # Knot template — strategy-notebook (WORK only; not Record)
 
-**Use:** Copy to `chapters/YYYY-MM/knots/knot-YYYY-MM-DD-<knot_label>.md`, replace placeholders, append a row to [`knot-index.yaml`](knot-index.yaml), run `python3 scripts/validate_knot_index.py` from repo root.
+**Use:** Copy to `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<knot_label>.md`, replace placeholders, append a row to [`knot-index.yaml`](knot-index.yaml), run `python3 scripts/validate_knot_index.py` from repo root.
 
 **Naming:** Basename must contain **`knot`**. The segment after the date is the **machine slug** (see **`knot_label`** below).
 
@@ -14,7 +14,7 @@
 - A **knot** is one **atomic notebook page** — a **named, enduring unit** of strategic writing (thesis, synthesis, case, mechanism, watch, or link hub).
 - **`knot_label`** is **not** the verb "weave." It is the **stable id for this knot file** — a **short kebab-case slug** used to:
   - **Disambiguate** when **several knots share the same calendar day** (e.g. `parsi-davis` vs `sanchez-xi` on `2026-04-14`);
-  - **Match** the filename: `knot-2026-04-14-parsi-davis.md` ↔ `knot_label: parsi-davis`;
+  - **Match** the filename: `strategy-notebook-knot-2026-04-14-parsi-davis.md` ↔ `knot_label: parsi-davis`;
   - **Join** rows in [`knot-index.yaml`](knot-index.yaml) to paths on disk (sorts, tooling, validators).
 
 So: **you are labeling the knot** (the file / indexed row), not re-labeling the abstract idea of "weaving." If there is only **one** knot that day, you still use a sensible slug (`morning`, `islamabad`, `daily-weave`, …) so the basename and index stay readable.
@@ -28,7 +28,7 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 | Field | Value |
 |--------|--------|
 | **Date** | YYYY-MM-DD |
-| **knot_label** (machine slug) | `<kebab-slug>` — must match `knot-YYYY-MM-DD-<kebab-slug>.md` and [`knot-index.yaml`](knot-index.yaml) |
+| **knot_label** (machine slug) | `<kebab-slug>` — must match `strategy-notebook-knot-YYYY-MM-DD-<kebab-slug>.md` and [`knot-index.yaml`](knot-index.yaml) |
 | **Continuity entry** | [`days.md` § YYYY-MM-DD](chapters/YYYY-MM/days.md) |
 
 ### Page type (**pick per knot** — mixed types allowed)
@@ -72,7 +72,7 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 Keeping this block **in the knot file** is the default so the path and `knot_label` stay copy-paste aligned. If you prefer a **single** YAML source of truth, maintain rows **only** in [`knot-index.yaml`](knot-index.yaml) and **delete** this block from the knot.
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/YYYY-MM/knots/knot-YYYY-MM-DD-<knot_label>.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<knot_label>.md
     date: "YYYY-MM-DD"
     knot_label: <knot_label>
 ```

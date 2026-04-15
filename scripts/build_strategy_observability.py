@@ -154,7 +154,7 @@ def main() -> int:
         links_avg = _links_density(days_file)
         open_carry = _open_carry_forward(days_file)
         knots_dir = days_file.parent / "knots"
-        knot_count = len(list(knots_dir.glob("knot-*.md"))) if knots_dir.is_dir() else 0
+        knot_count = len(list(knots_dir.glob("strategy-notebook-knot-*.md"))) if knots_dir.is_dir() else 0
         total_entries += count
         month_summaries[month] = {
             "dated_entries": count,

@@ -1,6 +1,6 @@
 # knot-index.yaml — strategy-notebook knot registry (WORK only; not Record).
 #
-# New knot files: copy from knot-template.md (repo-relative: docs/skill-work/work-strategy/strategy-notebook/knot-template.md).
+# New knot files: copy from strategy-notebook-knot-template.md (repo-relative: docs/skill-work/work-strategy/strategy-notebook/strategy-notebook-knot-template.md).
 #
 # Validate: `python3 scripts/validate_knot_index.py` (from repo root).
 #
@@ -10,7 +10,7 @@
 #
 # Multiple weaves per calendar day → multiple knot *files* and multiple knots[] rows
 # with the same `date` are normal. Disambiguate with a unique basename, e.g.:
-#   knot-YYYY-MM-DD-<short-slug>.md
+#   strategy-notebook-knot-YYYY-MM-DD-<short-slug>.md
 # Slug = knot_label (morning, islamabad, tri-mind, etc.) — avoid opaque -01 -02
 # unless you prefer sequence.
 #
@@ -27,13 +27,13 @@
 #   note         (string, optional) — freeform one-line comment (not a stable key)
 #
 # Examples (commented; remove leading # to activate):
-#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-islamabad.md
+#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-islamabad.md
 #     date: "2026-04-13"
 #     knot_label: islamabad-morning
 #     clusters: [islamabad-hormuz]
 #     patterns: [escalation-trap-frame]
 #     note: "first pass after brief"
-#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-tri-mind.md
+#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-tri-mind.md
 #     date: "2026-04-13"
 #     knot_label: tri-mind
 #     clusters: [trump-leo]
@@ -43,42 +43,42 @@
 schema_version: 3
 
 knots:
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-12-islamabad-hormuz-thesis-weave.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
     date: "2026-04-12"
     knot_label: islamabad-hormuz-thesis-weave
     clusters: [islamabad, hormuz, thesis-a-b, escalation-trap]
     patterns: [pre-blockade-lattice]
     note: "Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
     date: "2026-04-13"
     knot_label: marandi-ritter-mercouris-hormuz-scaffold
     clusters: [seyed-marandi, scott-ritter, alexander-mercouris, hormuz]
     patterns: [expert-scaffold-weave]
     note: "Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
     date: "2026-04-14"
     knot_label: diesen-vi14-petrodollar-vs-sachs-hormuz
     clusters: [glenn-diesen, work-jiang-ph, hormuz]
     patterns: [ph-vi14-vs-sachs-hormuz]
     note: "Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-parsi-davis-war-powers.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md
     date: "2026-04-14"
     knot_label: parsi-davis-war-powers
     clusters: [accountability-language, war-powers, hormuz]
     patterns: [parsi-davis-crosses]
     note: "Link hub + verify pins for EU naming vs Congress lane"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
     date: "2026-04-14"
     knot_label: mercouris-mearsheimer-lebanon-split
     clusters: [lebanon-washington, tri-mind, alexander-mercouris, john-mearsheimer]
     patterns: [legitimacy-vs-structure]
     note: "Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
     date: "2026-04-14"
     knot_label: scott-ritter-blockade-hormuz-weave
     clusters: [scott-ritter, hormuz, blockade, expert-lattice]

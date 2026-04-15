@@ -31,7 +31,7 @@ Index: `docs/skill-work/work-strategy/minds/README.md`.
 ### 1.2 `skill-strategy` (strategy pass)
 
 - **Skill:** `.cursor/skills/skill-strategy/SKILL.md` — trigger: **`strategy`**, **`strategy pass`**, **`work-strategy`**.
-- **Primary write surface:** `docs/skill-work/work-strategy/strategy-notebook/` — knots (`chapters/YYYY-MM/knots/knot-*.md`) are the atomic pages; `days.md` tracks chronology and continuity (+ `meta.md` for month-level theme).
+- **Primary write surface:** `docs/skill-work/work-strategy/strategy-notebook/` — knots (`chapters/YYYY-MM/knots/strategy-notebook-knot-*.md`) are the atomic pages; `days.md` tracks chronology and continuity (+ `meta.md` for month-level theme).
 - **Architecture:** `docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md` — Signal / Judgment / Links / Open / optional verify, PH **`### Jiang resonance`**, weak-signal discipline, cross-artifact alignment (planes / lenses).
 - **Promotion:** `STRATEGY.md` only when arcs **stabilize** (not every day).
 

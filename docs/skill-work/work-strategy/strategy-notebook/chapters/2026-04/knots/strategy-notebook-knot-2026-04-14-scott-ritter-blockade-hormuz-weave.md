@@ -24,16 +24,16 @@
 
 | Day | Knot | Notes |
 |-----|------|--------|
-| **2026-04-12** | [knot-2026-04-12-islamabad-hormuz-thesis-weave.md](knot-2026-04-12-islamabad-hormuz-thesis-weave.md) | **Islamabad → Hormuz** **Thesis A/B** + **Pape/Parsi/Freeman** **fork** |
-| **2026-04-13** | [knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) | **Marandi × Ritter × Mercouris** **scaffold** **before** **04-14** **`batch-analysis`** **density** |
+| **2026-04-12** | [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) | **Islamabad → Hormuz** **Thesis A/B** + **Pape/Parsi/Freeman** **fork** |
+| **2026-04-13** | [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) | **Marandi × Ritter × Mercouris** **scaffold** **before** **04-14** **`batch-analysis`** **density** |
 
 ### Sister knots (same calendar day — cross-links)
 
 | Knot | `knot_label` | Experts (from those files) | Relation to **Ritter** blockade |
 |------|----------------|------------------------------|--------------------------------|
-| [knot-2026-04-14-parsi-davis-war-powers.md](knot-2026-04-14-parsi-davis-war-powers.md) | `parsi-davis-war-powers` | **`trita-parsi`**, **`daniel-davis`** | **Speech-act** / **war-powers** **accountability** vs **Ritter** **sea-control** mechanics — **orthogonal** planes; **Parsi × Davis** `batch-analysis` names **Mercouris**/**Barnes**/**Mearsheimer** as **layers**, not substitutes for **hull** facts. |
-| [knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) | `diesen-vi14-petrodollar-vs-sachs-hormuz` | **`glenn-diesen`**, **`jeffrey-sachs`** | **Diesen × Sachs** **Hormuz blockade** episode ([YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ)) — **institutional** / **chaos** thesis; **do not** merge **PH vi-14** petrodollar lane with **Ritter** **ORBAT** without **seam**; **Ritter** = **operations** vocabulary, **Sachs** = **DC process** **hypothesis** tier. |
-| [knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) | `mercouris-mearsheimer-lebanon-split` | **`alexander-mercouris`**, **`john-mearsheimer`** | **Lebanon**/**Washington** **fork** — **adjacent** **news week** to **Hormuz** **blockade**; use for **legitimacy vs structure** **language** only — **not** a substitute for **Ritter** **interdiction** **mechanics**. |
+| [strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) | `parsi-davis-war-powers` | **`trita-parsi`**, **`daniel-davis`** | **Speech-act** / **war-powers** **accountability** vs **Ritter** **sea-control** mechanics — **orthogonal** planes; **Parsi × Davis** `batch-analysis` names **Mercouris**/**Barnes**/**Mearsheimer** as **layers**, not substitutes for **hull** facts. |
+| [strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) | `diesen-vi14-petrodollar-vs-sachs-hormuz` | **`glenn-diesen`**, **`jeffrey-sachs`** | **Diesen × Sachs** **Hormuz blockade** episode ([YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ)) — **institutional** / **chaos** thesis; **do not** merge **PH vi-14** petrodollar lane with **Ritter** **ORBAT** without **seam**; **Ritter** = **operations** vocabulary, **Sachs** = **DC process** **hypothesis** tier. |
+| [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) | `mercouris-mearsheimer-lebanon-split` | **`alexander-mercouris`**, **`john-mearsheimer`** | **Lebanon**/**Washington** **fork** — **adjacent** **news week** to **Hormuz** **blockade**; use for **legitimacy vs structure** **language** only — **not** a substitute for **Ritter** **interdiction** **mechanics**. |
 
 ### History resonance
 
@@ -80,7 +80,7 @@ Pins keep **`scott-ritter`** **mechanics** **distinct** from **speech**/**instit
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
     date: "2026-04-14"
     knot_label: scott-ritter-blockade-hormuz-weave
 ```

@@ -33,7 +33,7 @@ def test_knot_label_kebab_invalid() -> None:
 
 
 def test_knot_label_kebab_valid(tmp_path: Path) -> None:
-    k = tmp_path / "knot-2026-04-13-test.md"
+    k = tmp_path / "strategy-notebook-knot-2026-04-13-test.md"
     k.write_text("# test\n", encoding="utf-8")
     rel = k.relative_to(tmp_path)
     errs = validate_knot_index_data(
@@ -53,8 +53,8 @@ def test_knot_label_kebab_valid(tmp_path: Path) -> None:
 
 
 def test_duplicate_date_knot_label(tmp_path: Path) -> None:
-    a = tmp_path / "knot-2026-04-13-a.md"
-    b = tmp_path / "knot-2026-04-13-b.md"
+    a = tmp_path / "strategy-notebook-knot-2026-04-13-a.md"
+    b = tmp_path / "strategy-notebook-knot-2026-04-13-b.md"
     a.write_text("# a\n", encoding="utf-8")
     b.write_text("# b\n", encoding="utf-8")
     errs = validate_knot_index_data(
@@ -62,12 +62,12 @@ def test_duplicate_date_knot_label(tmp_path: Path) -> None:
             "schema_version": 3,
             "knots": [
                 {
-                    "path": "knot-2026-04-13-a.md",
+                    "path": "strategy-notebook-knot-2026-04-13-a.md",
                     "date": "2026-04-13",
                     "knot_label": "same",
                 },
                 {
-                    "path": "knot-2026-04-13-b.md",
+                    "path": "strategy-notebook-knot-2026-04-13-b.md",
                     "date": "2026-04-13",
                     "knot_label": "same",
                 },
@@ -79,14 +79,14 @@ def test_duplicate_date_knot_label(tmp_path: Path) -> None:
 
 
 def test_deprecated_weave_label_unknown_key(tmp_path: Path) -> None:
-    k = tmp_path / "knot-2026-04-13-test.md"
+    k = tmp_path / "strategy-notebook-knot-2026-04-13-test.md"
     k.write_text("# test\n", encoding="utf-8")
     errs = validate_knot_index_data(
         {
             "schema_version": 3,
             "knots": [
                 {
-                    "path": "knot-2026-04-13-test.md",
+                    "path": "strategy-notebook-knot-2026-04-13-test.md",
                     "date": "2026-04-13",
                     "weave_label": "tri-mind",
                 }

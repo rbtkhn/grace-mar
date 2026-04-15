@@ -33,8 +33,8 @@ none this pass
 | Direction | Target | Relation |
 |-----------|--------|----------|
 | **Next day** | [`days.md` § 2026-04-13](../days.md#2026-04-13) | Long-form **Deep Dive** ingests (**Freeman**, **Mearsheimer**, **Marandi**, **Ritter**, **Mercouris**) — **mechanics + room** layer thickens; still **not** CENTCOM substitute. |
-| **Later weave** | [knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) | **Marandi × Ritter × Mercouris** shared scaffold. |
-| **Later weave** | [knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
+| **Later weave** | [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) | **Marandi × Ritter × Mercouris** shared scaffold. |
+| **Later weave** | [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **04-14** **`thread:`** **batch-analysis** lattice (Davis×Jermy, Diesen×Sachs, Parsi×Davis knots). |
 
 ### Judgment
 
@@ -65,7 +65,7 @@ none this pass
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-12-islamabad-hormuz-thesis-weave.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
     date: "2026-04-12"
     knot_label: islamabad-hormuz-thesis-weave
 ```

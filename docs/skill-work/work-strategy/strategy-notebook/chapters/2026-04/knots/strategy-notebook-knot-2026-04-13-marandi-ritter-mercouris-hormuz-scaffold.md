@@ -37,8 +37,8 @@ none this pass
 
 | Direction | Target | Relation |
 |-----------|--------|----------|
-| **Prior day** | [knot-2026-04-12-islamabad-hormuz-thesis-weave.md](knot-2026-04-12-islamabad-hormuz-thesis-weave.md) | **Thesis A/B** + **Pape/Parsi/Freeman** **fork** **before** this **scaffold** **densifies**. |
-| **Next day** | [knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
+| **Prior day** | [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) | **Thesis A/B** + **Pape/Parsi/Freeman** **fork** **before** this **scaffold** **densifies**. |
+| **Next day** | [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) | **Ritter**-centered **04-14** lattice + **Parsi×Davis** / **Diesen×Sachs** / **Mercouris×Mearsheimer** **knot** files. |
 | **Day prose** | [`days.md` § 2026-04-14](../days.md#2026-04-14) | **Continuity spine** **explicitly** **stacks** **04-12–04-14** **`thread:`** **carries**. |
 
 ### Judgment
@@ -72,7 +72,7 @@ none this pass
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
     date: "2026-04-13"
     knot_label: marandi-ritter-mercouris-hormuz-scaffold
 ```

@@ -192,7 +192,7 @@ Runnable **multi-phase** calibration (preflight, notebook, verify, tri-frame, bo
 When writing **for** `strategy` **into repo files**, generate **one of three shapes only** (chat may still explain, triage, or answer questions — that is **not** a third notebook format):
 
 1. **Inbox capture shape** — Use for default **Capture** and **`strategy ingest`**. Output **only** paste-ready lines (and optional two-tier gist) for [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md).
-2. **Knot page shape** — Use when the operator **explicitly** directs a **Weave**. Output a knot page under `chapters/YYYY-MM/knots/knot-YYYY-MM-DD-<slug>.md` per [knot-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/knot-template.md).
+2. **Knot page shape** — Use when the operator **explicitly** directs a **Weave**. Output a knot page under `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<slug>.md` per [strategy-notebook-knot-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-notebook-knot-template.md).
 3. **Days.md continuity shape** — Use alongside knot composition to update the `## YYYY-MM-DD` block in `days.md` with a thin chronology entry (which knots were active, what changed, what carries forward).
 
 **Do not** default to freeform “strategic essay” as the on-disk artifact when the target is the notebook — **shape text for the destination first**.

@@ -298,7 +298,7 @@ def build_paragraph(
     if promo:
         parts.append("Promotion: " + "; ".join(promo) + ".")
     knot_dir = _knots_dir(day)
-    knot_files = list(knot_dir.glob("knot-*.md")) if knot_dir.is_dir() else []
+    knot_files = list(knot_dir.glob("strategy-notebook-knot-*.md")) if knot_dir.is_dir() else []
     if knot_files:
         parts.append(f"Knots this month: {len(knot_files)} pages.")
     if expert_rows:
@@ -350,7 +350,7 @@ def run_compact(
         if minds_line:
             lines_out.append(f"  minds: {minds_line}")
     knot_dir = _knots_dir(day)
-    knot_files = list(knot_dir.glob("knot-*.md")) if knot_dir.is_dir() else []
+    knot_files = list(knot_dir.glob("strategy-notebook-knot-*.md")) if knot_dir.is_dir() else []
     lines_out.append(
         f"- days.md § {day}: {'present' if day_block else 'missing'}; Open bullets parsed: {len(open_bullets)}"
     )

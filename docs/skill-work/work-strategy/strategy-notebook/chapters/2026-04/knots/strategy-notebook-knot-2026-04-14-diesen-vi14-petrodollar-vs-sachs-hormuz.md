@@ -57,7 +57,7 @@ Pins keep **Glenn Diesen**’s **PH vi-14** lane and the **Glenn Diesen × Jeffr
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
     date: "2026-04-14"
     knot_label: diesen-vi14-petrodollar-vs-sachs-hormuz
 ```

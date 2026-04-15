@@ -21,12 +21,12 @@
 
 | Date | `knot_label` | File |
 |------|----------------|------|
-| 2026-04-12 | `islamabad-hormuz-thesis-weave` | [knot-2026-04-12-islamabad-hormuz-thesis-weave.md](knots/knot-2026-04-12-islamabad-hormuz-thesis-weave.md) |
-| 2026-04-13 | `marandi-ritter-mercouris-hormuz-scaffold` | [knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](knots/knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) |
-| 2026-04-14 | `diesen-vi14-petrodollar-vs-sachs-hormuz` | [knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](knots/knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) |
-| 2026-04-14 | `parsi-davis-war-powers` | [knot-2026-04-14-parsi-davis-war-powers.md](knots/knot-2026-04-14-parsi-davis-war-powers.md) |
-| 2026-04-14 | `mercouris-mearsheimer-lebanon-split` | [knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](knots/knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) |
-| 2026-04-14 | `scott-ritter-blockade-hormuz-weave` | [knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](knots/knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) |
+| 2026-04-12 | `islamabad-hormuz-thesis-weave` | [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) |
+| 2026-04-13 | `marandi-ritter-mercouris-hormuz-scaffold` | [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) |
+| 2026-04-14 | `diesen-vi14-petrodollar-vs-sachs-hormuz` | [strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](knots/strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) |
+| 2026-04-14 | `parsi-davis-war-powers` | [strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md](knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) |
+| 2026-04-14 | `mercouris-mearsheimer-lebanon-split` | [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) |
+| 2026-04-14 | `scott-ritter-blockade-hormuz-weave` | [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) |
 
 **Day spine:** [`days.md`](days.md) § **2026-04-12** · **2026-04-13** · **2026-04-14** · **2026-04-15** (brief overlay; knots 12–14). **Inbox pointer:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity** (two knot lines + table).
 
