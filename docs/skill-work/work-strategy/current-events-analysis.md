@@ -17,11 +17,23 @@ Its purpose is not merely to summarize events. Its purpose is to convert current
 - synthesis before the analytical seams are visible
 
 This workflow should remain compatible with the broader work-strategy lane, where the strategy notebook is the primary daily judgment artifact and where all outputs remain WORK-only unless separately reviewed.
+
+The **default destination** of this workflow is a **strategy-notebook** entry (after weave from [daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md) when capture started there). Other outputs are optional escalations from that notebook-first path.
+
 See:
 - [README.md](README.md)
 - [civilizational-strategy-surface.md](civilizational-strategy-surface.md)
 - [case-index.md](case-index.md)
 - [promotion-ladder.md](promotion-ladder.md)
+
+## 1.5 Default output order
+
+1. Neutral fact summary
+2. Event classification
+3. **Strategy-notebook** entry (synthesized judgment — typically after **inbox** capture and **explicit weave** per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot))
+4. Optional resonance note / analogy audit / watch support
+5. Decision point only if escalation and real options are present
+6. Optional recursion-gate staging only if explicitly requested
 
 ## 2. Core rule
 

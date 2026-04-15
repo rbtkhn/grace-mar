@@ -29,6 +29,8 @@
 
 **Not yet auto-computed:** recommendation acceptance/rejection, cross-lane reference counts — require operator logging convention.
 
+**Notebook markers (`[watch]`, `[decision]`, `[promote]`):** not counted in this JSON; definitions live in [NOTEBOOK-PREFERENCES.md](strategy-notebook/NOTEBOOK-PREFERENCES.md#escalation-marker-preference). Extend [build_strategy_observability.py](../../../scripts/build_strategy_observability.py) before documenting marker counts in this file.
+
 ## Alignment
 
 Optional alignment with [schema-registry/observability-report.v1.json](../../../schema-registry/observability-report.v1.json) for top-level dashboards is a future mapping; this file uses `schemaVersion` `2.0.0-work-strategy`.

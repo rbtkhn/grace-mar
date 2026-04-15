@@ -4,6 +4,23 @@
 
 **Relation to `skill-strategy`:** [`.cursor/skills/skill-strategy/SKILL.md`](../../../../.cursor/skills/skill-strategy/SKILL.md) is the **activation surface** for **`strategy`**. **This document**, [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md), and [daily-strategy-inbox.md](daily-strategy-inbox.md) (paste-ready line SSOT) are **incorporated by reference** into that skill — **one contract**, split across files for readability and maintenance, **not** a parallel “architecture-only” track beside the skill.
 
+<a id="default-operating-path-ssot"></a>
+
+## Default operating path (SSOT)
+
+**Canonical long-form sequence** for work-strategy judgment (inbox-first; complements the three-move minimum in [DEFAULT-PATH.md](../DEFAULT-PATH.md)):
+
+1. **Accumulate** in [`daily-strategy-inbox.md`](daily-strategy-inbox.md) — raw capture, paste-ready lines (see that file for canonical ingest shape).
+2. **Weave** into `chapters/YYYY-MM/days.md` on **explicit** operator weave intent, **`dream`** weave when adopted, or equivalent — **synthesis** (Signal / Judgment / Links / Open), not an inbox mirror.
+3. **Optionally mark** reusable material with lightweight escalation cues (`[watch]`, `[decision]`, `[promote]`) — definitions and sparing-use rules: [NOTEBOOK-PREFERENCES.md#escalation-marker-preference](NOTEBOOK-PREFERENCES.md#escalation-marker-preference).
+4. **Escalate artifacts** — watch support, analogy audit, or a **decision point** — only when a signal is maturing and **real options** are needed.
+5. **Touch [STRATEGY.md](../STRATEGY.md)** only when a watch, analogy line, operator log arc, or doctrine note has **stabilized** (promotion ladder).
+6. **Do not** update Record, SELF, EVIDENCE, or Voice from this lane.
+
+**Rule of thumb:** **Inbox** = intake SSOT for rough capture; **`days.md`** (after weave) = synthesis SSOT for governed judgment.
+
+**Default output path (chat / assistant):** chat → inbox → **`days.md` only on explicit weave** — same discipline as [Expert choreography](#expert-choreography) *Output path (default)* below.
+
 ## Weave vs fold (terminology)
 
 **Weave** is the **operator command** to merge [daily-strategy-inbox.md](daily-strategy-inbox.md) into `chapters/YYYY-MM/days.md` with Signal / Judgment / Links / Open discipline. Say **`weave`**, or run **`strategy`** with explicit **weave** intent. **Legacy synonym:** **`fold`** (paper metaphor) — still honored in chat; older grep/git and JSONL fields may keep `fold` (e.g. `fold_kind` in [FOLD-LEARNING.md](FOLD-LEARNING.md)). **Note:** Later **“Weaving …”** bullets under § *Daily strategy inbox* (Rome, Putin, §1 watches) mean **integrating a channel over months** — related textile image, **not** the same token as the **`weave`** command.

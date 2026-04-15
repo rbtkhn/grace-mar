@@ -4,6 +4,8 @@
 
 **When:** Normal day. Operator says **`strategy`** or **`strategy pass`**. No special modifiers.
 
+**Full sequence (SSOT):** When you need the **numbered** inbox-first path (accumulate → weave → optional markers → escalation → STRATEGY → no Record), use [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot). The three moves below are the **minimum**; that section is the **long-form** contract.
+
 ---
 
 ## The three moves

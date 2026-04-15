@@ -41,7 +41,17 @@ A later-stage artifact should not erase uncertainty, mismatch, or falsifier note
 ### 3.4 Compression is allowed
 Material may skip upward only when compression preserves the important structure. Not every useful insight needs every intermediate artifact.
 
-### 3.5 Demotion is allowed
+### 3.5 Notebook-origin cues
+
+Promotion often **starts** from lightweight notebook markers such as:
+
+- `[watch]`
+- `[decision]`
+- `[promote]`
+
+These markers **do not** themselves change stage. They are **intake cues** only (see [NOTEBOOK-PREFERENCES.md](strategy-notebook/NOTEBOOK-PREFERENCES.md#escalation-marker-preference)); the operator still uses this ladder to decide whether a line stays local, becomes watch support, matures into a decision point, or becomes a promotion candidate.
+
+### 3.6 Demotion is allowed
 If a promoted artifact proves weak, ornamental, or misleading, it may be demoted, compressed, merged, or retired.
 
 ## 4. Core rule

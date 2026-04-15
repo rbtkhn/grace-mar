@@ -21,6 +21,8 @@ description: >-
 
 **Default path (fast start):** [DEFAULT-PATH.md](../../../docs/skill-work/work-strategy/DEFAULT-PATH.md) — three moves for a normal pass (read frontier → capture inbox → offer menu); everything else is optional. Start there; the sections below are reference.
 
+**Full sequence (SSOT):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot) — inbox-first numbered path beyond the three moves (weave → optional markers per NOTEBOOK-PREFERENCES → escalation artifacts → STRATEGY when stable → no Record).
+
 **Bottom line (lane intent):** **Governed strategic accumulation** in a **bounded WORK layer** — not loose “analysis.” Preserve evolving **geopolitical–historical judgment** with **explicit seams**, **explicit promotion** to [STRATEGY.md](../../../docs/skill-work/work-strategy/STRATEGY.md) only when stable, and **explicit distance** from companion **Record** identity truth ([AGENTS.md](../../../AGENTS.md) hierarchy).
 
 ### Required core vs reference (reading guide)

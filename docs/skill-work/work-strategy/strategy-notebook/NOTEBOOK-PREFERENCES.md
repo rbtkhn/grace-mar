@@ -36,6 +36,20 @@
 
 ---
 
+<a id="escalation-marker-preference"></a>
+
+## Escalation marker preference
+
+**SSOT** for optional inline cues inside **`days.md`** / notebook prose (WORK-only; not Record updates):
+
+- **`[watch]`** — a reusable signal that may need follow-up or watch-support work later.
+- **`[decision]`** — a live issue that may warrant a **decision point** when real options exist.
+- **`[promote]`** — material that looks stable enough to **consider** promotion (see [promotion-ladder.md](../promotion-ladder.md)); does not itself change promotion stage.
+
+Use **sparingly**. They cue later handling in this lane; they are **not** formal status fields and **not** substitutes for the promotion ladder’s required artifacts when you promote.
+
+---
+
 <a id="external-digest-stub"></a>
 
 ## External model briefs (LLM digests — operator stub)
@@ -67,6 +81,7 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 
 | Date | Change |
 |------|--------|
+| 2026-04-15 | **Escalation marker preference:** SSOT for optional `[watch]` / `[decision]` / `[promote]` inline cues; cross-links from architecture SSOT and promotion ladder. |
 | 2026-04-12 | Initial preferences from operator questionnaire (1D, 2A, 3A, 4A, 5A, 6D, 7C, 8C, 9A, 10B, 11A, 12C, 13C). |
 | 2026-04-12 | **Leo XIV / Rome primary thread:** naming — **Leo XIV / Holy See** = voice; **ROME-PASS** / **work-strategy-rome** = hub. Implementation: architecture paragraph + `meta.md` helix + inbox grep tags + `skill-strategy` + [daily-brief-focus.md](../daily-brief-focus.md). |
 | 2026-04-12 | **JD Vance primary thread:** **VP channel** = voice; [daily-brief-jd-vance-watch.md](../daily-brief-jd-vance-watch.md) = hub — mirrored in architecture, `meta.md`, inbox tags, `skill-strategy`, [daily-brief-focus.md](../daily-brief-focus.md). |

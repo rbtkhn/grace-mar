@@ -7,6 +7,8 @@
 
 This file defines how LEARN MODE operates inside the **work-strategy** surface, bridging the canonical CMC minds from **civ-mem** with the specialized geopolitics and history focus of [`STRATEGY.md`](STRATEGY.md) (operator shorthand: **STRATEGY**).
 
+LEARN MODE is an **explicit deep-analysis mode**. It does **not** replace the normal **notebook-first** strategy pass; that default path remains [STRATEGY-NOTEBOOK-ARCHITECTURE.md — Default operating path](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md#default-operating-path-ssot) plus [DEFAULT-PATH.md](DEFAULT-PATH.md).
+
 ## Canonical mind references
 
 All LEARN MODE sessions **must** reference the three primary CMC analytical lenses (canonical templates live in **civilization_memory**). In this repo, **entry-point stubs** live under [`minds/`](minds/); each stub links to the matching `CIV–MIND–*.md` template.
