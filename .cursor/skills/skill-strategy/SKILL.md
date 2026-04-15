@@ -136,6 +136,7 @@ The threads are **voice planes for principals that are structurally non-fungible
 
 ### Agent obligations on `strategy` passes
 
+- **`weave` (knot-shape fork):** Before writing **`days.md`** or knot files on **`weave`**, present **4–6** labeled options for **this** weave’s **thesis / knot shape / content emphasis** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu* and [NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) (**Weave knot-shape menu**). Skip or shorten if the operator names the shape, **`no menu`**, or **EXECUTE** with explicit thesis.
 - **Tag the plane** when a load-bearing claim draws on a watch thread — in **Judgment** or **Links** (which MFA, which Kremlin URL, which WH readout), not only “experts say.”
 - **Split** when two channels **diverge** on scope or facts; **do not** blend into one smooth sentence without a **verify** line — [NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) (Thesis A / B).
 - **Use** [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) **plane-safe dual register** when multiple threads fire the same day.
@@ -247,6 +248,7 @@ Before placing text, classify it:
 Before any **Capture** or **Weave** file write, confirm:
 
 - [ ] Read **STATUS.md** and identified the correct chapter / target date.
+- [ ] **`weave`:** Operator saw **4–6 knot-shape / thesis** options (architecture § *Weave command — knot-shape menu*) or opted out (**`no menu`**, named shape, **EXECUTE**).
 - [ ] Chose **inbox** vs **`days.md`** vs **STRATEGY.md** (Promote only).
 - [ ] Output matches **required shape** for that destination (inbox line vs daily fragment).
 - [ ] **Spine only** in Signal/Judgment — bulk routed per **Bulk spillway**.

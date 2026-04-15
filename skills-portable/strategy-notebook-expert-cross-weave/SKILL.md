@@ -24,6 +24,10 @@ Use this skill when two indexed **`thread:<expert_id>`** lines in the daily stra
 
 ## Procedure
 
+### 0) Knot-shape fork (before any file write)
+
+When the operator invokes **`weave`** without naming a single shape, present **4–6** labeled options (**A–F** or **1–6**) that describe **this** weave’s **thesis / knot shape** (e.g. **cross-expert seam** vs **continuity-only days.md** vs **new knot file + pointer** vs **Judgment-heavy / Links-light** vs **verify-first Open**). **Stub only**—no developed weave until the operator picks. If they already said **`weave <expert-a> <expert-b>`** or **`no menu`**, skip or shorten per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*.
+
 ### 1) Name the seam
 
 - **`crosses:<expert-a>+<expert-b>`** — hyphenated ids, **alphabetical or roster order** if the repo already fixed a convention; stay consistent with inbox **`batch-analysis`** rows.
