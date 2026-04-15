@@ -141,7 +141,8 @@ Threads are **semi-permeable** by design; “optimization” here means **explic
 
 - **`membrane:single`** — this line is **not** inviting pairing; `batch-analysis` should **not** fold it into a multi-thread claim without operator intent.
 - **`membrane:pair`** — **invites** a following `batch-analysis` (same day) that names partners (e.g. after two ingests are captured).
-- **`crosses:<id>+<id>`** — rare; **explicit** authorization when one line **synthesizes** two threads (prefer two ingests + `batch-analysis` instead).
+- **`crosses:<id>+<id>`** — rare; **explicit** authorization when one line **synthesizes** two **`expert_id`** threads (prefer two ingests + `batch-analysis` instead).
+- **`seam:<slug>+<slug>`** — optional, usually on a **`batch-analysis`** line: names **which two thematic planes** are held side-by-side when **`crosses:`** is wrong (e.g. **no** **`thread:`** on one side — government **X**, **wire** bundle, **ROME** seam). Short kebab slugs; **`+`** joins them. **Distinct from `membrane:`:** **`membrane:`** = pairing **intent** on **ingests**; **`seam:`** = machine-grep **label** for **what** the batch compares.
 
 **Future automation (optional):** a small **validator script** could flag “`batch-analysis` mentions thread B but no ingest on this day has `thread:B`” — not required for the filter to work; **pairing discipline** + **git grep** already implement most of the membrane.
 
