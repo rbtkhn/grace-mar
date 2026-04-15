@@ -755,20 +755,29 @@ def run_auto_dream(
             except Exception:
                 pass
         if shift_summary is not None:
+            shift_alerts = shift_summary.get("alerts", [])
             summary["capability_shift"] = {
                 "category": shift_summary.get("category", "model"),
                 "sources_checked": shift_summary.get("sources_checked", 0),
                 "sources_total": shift_summary.get("sources_total", 0),
                 "alert_count": shift_summary.get("alert_count", 0),
-                "review_count": sum(1 for a in shift_summary.get("alerts", []) if a.get("action") == "review"),
-                "monitor_count": sum(1 for a in shift_summary.get("alerts", []) if a.get("action") == "monitor"),
+                "review_count": sum(1 for a in shift_alerts if a.get("action") == "review"),
+                "monitor_count": sum(1 for a in shift_alerts if a.get("action") == "monitor"),
+                "variant_count": sum(1 for a in shift_alerts if a.get("alert_class") == "variant"),
                 "fetch_errors": shift_summary.get("fetch_errors", []),
             }
             if shift_summary.get("alert_count", 0) > 0:
-                review_ids = [a["assumption_id"] for a in shift_summary.get("alerts", []) if a.get("action") == "review"]
+                review_ids = [a["assumption_id"] for a in shift_alerts if a.get("action") == "review"]
                 if review_ids:
                     extra_followups.append(
                         f"Capability shift: {len(review_ids)} REVIEW alert(s) ({', '.join(review_ids[:3])}) — run detect_capability_shift.py"
+                    )
+                boundary_ids = {"ASSUME-014", "ASSUME-015"}
+                boundary_hits = [a for a in shift_alerts if a["assumption_id"] in boundary_ids and a.get("action") in ("review", "monitor")]
+                if boundary_hits:
+                    extra_followups.append(
+                        "Boundary regression recommended — model safety/variant shift detected. "
+                        "Run: python3 scripts/runtime/boundary_regression.py"
                     )
 
         summary["extra_followups"] = extra_followups

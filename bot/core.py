@@ -136,6 +136,7 @@ PIPELINE_EVENTS_PATH = PROFILE_DIR / "pipeline-events.jsonl"
 LIBRARY_MISS = "LIBRARY_MISS"
 
 OPENAI_ANALYST_MODEL = os.getenv("OPENAI_ANALYST_MODEL", "gpt-4o-mini")
+OLLAMA_ANALYST_MODEL = os.getenv("OLLAMA_ANALYST_MODEL", "")
 
 RATE_LIMIT_WINDOW = int(os.getenv("RATE_LIMIT_WINDOW_SEC", "3600"))
 RATE_LIMIT_MAIN = int(os.getenv("RATE_LIMIT_MAIN", "60"))
@@ -795,7 +796,7 @@ def start_homework_session(channel_key: str) -> tuple[str | None, str | None]:
     prompt = HOMEWORK_PROMPT.format(recency_context=recency)
     try:
         result = _get_client().chat.completions.create(
-            model=OPENAI_MODEL,
+            model=_resolve_model(OPENAI_MODEL),
             messages=[
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": "Generate the 8 questions as JSON now."},
@@ -946,8 +947,9 @@ def _library_lookup(question: str, channel_key: str = "unknown") -> str | None:
         library_summary=summary,
         question=question,
     )
+    model = _resolve_model(OPENAI_ANALYST_MODEL)
     result = _get_client().chat.completions.create(
-        model=OPENAI_ANALYST_MODEL,
+        model=model,
         messages=[
             {"role": "system", "content": prompt},
             {"role": "user", "content": question},
@@ -956,7 +958,7 @@ def _library_lookup(question: str, channel_key: str = "unknown") -> str | None:
         temperature=0.2,
     )
     if u := getattr(result, "usage", None):
-        _log_tokens(channel_key, "library_lookup", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL, task_type="lookup")
+        _log_tokens(channel_key, "library_lookup", u.prompt_tokens, u.completion_tokens, model, task_type="lookup")
     reply = result.choices[0].message.content.strip()
     if LIBRARY_MISS in reply:
         return None
@@ -977,8 +979,10 @@ def _get_client() -> OpenAI:
         _client = OpenAI(base_url=OLLAMA_BASE_URL, api_key="ollama")
     elif LLM_PROVIDER == "edge":
         raise NotImplementedError(
-            "LLM_PROVIDER=edge requires the Google AI Edge SDK provider "
-            "(scripts/inference_providers/edge_provider.py). Not yet wired."
+            "LLM_PROVIDER=edge requires the Google AI Edge native SDK bridge "
+            "(Android: ML Kit GenAI / AICore; iOS: equivalent). "
+            "Use LLM_PROVIDER=ollama with a Gemma model for desktop testing. "
+            "See scripts/inference_providers/edge_provider.py and docs/inference-modes.md."
         )
     else:
         _client = OpenAI(api_key=OPENAI_API_KEY)
@@ -988,17 +992,21 @@ def _get_client() -> OpenAI:
 def _resolve_model(requested_model: str) -> str:
     """Map a requested model name to the active provider's model.
 
-    When LLM_PROVIDER is ollama, OLLAMA_MODEL overrides the default
-    OpenAI model names so callers don't need provider-specific logic.
+    When LLM_PROVIDER is ollama, OLLAMA_MODEL / OLLAMA_ANALYST_MODEL
+    override OpenAI model names so callers don't need provider-specific logic.
     """
-    if LLM_PROVIDER == "ollama" and OLLAMA_MODEL:
-        return OLLAMA_MODEL
+    if LLM_PROVIDER == "ollama":
+        if requested_model == OPENAI_ANALYST_MODEL and OLLAMA_ANALYST_MODEL:
+            return OLLAMA_ANALYST_MODEL
+        if OLLAMA_MODEL:
+            return OLLAMA_MODEL
     return requested_model
 
 
 def _rephrase_lookup(question: str, facts: str, channel_key: str = "unknown") -> str:
+    model = _resolve_model(OPENAI_MODEL)
     result = _get_client().chat.completions.create(
-        model=OPENAI_MODEL,
+        model=model,
         messages=[
             {"role": "system", "content": REPHRASE_PROMPT},
             {
@@ -1010,14 +1018,15 @@ def _rephrase_lookup(question: str, facts: str, channel_key: str = "unknown") ->
         temperature=0.9,
     )
     if u := getattr(result, "usage", None):
-        _log_tokens(channel_key, "lookup_rephrase", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="lookup")
+        _log_tokens(channel_key, "lookup_rephrase", u.prompt_tokens, u.completion_tokens, model, task_type="lookup")
     return result.choices[0].message.content
 
 
 def _lookup(question: str, channel_key: str = "unknown") -> str:
     client = _get_client()
+    model = _resolve_model(OPENAI_MODEL)
     factual = client.chat.completions.create(
-        model=OPENAI_MODEL,
+        model=model,
         messages=[
             {"role": "system", "content": LOOKUP_PROMPT},
             {"role": "user", "content": question},
@@ -1026,7 +1035,7 @@ def _lookup(question: str, channel_key: str = "unknown") -> str:
         temperature=0.3,
     )
     if u := getattr(factual, "usage", None):
-        _log_tokens(channel_key, "lookup_factual", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="lookup")
+        _log_tokens(channel_key, "lookup_factual", u.prompt_tokens, u.completion_tokens, model, task_type="lookup")
     facts = factual.choices[0].message.content
     return _rephrase_lookup(question, facts, channel_key)
 
@@ -1124,8 +1133,9 @@ def analyze_exchange(user_message: str, assistant_message: str, channel_key: str
         logger.debug("Analyst rate limit exceeded (%s), skipping", channel_key)
         return False
     try:
+        analyst_model = _resolve_model(OPENAI_ANALYST_MODEL)
         result = _get_client().chat.completions.create(
-            model=OPENAI_ANALYST_MODEL,
+            model=analyst_model,
             messages=[
                 {"role": "system", "content": ANALYST_PROMPT},
                 {"role": "user", "content": f"USER: {user_message}\nGRACE-MAR: {assistant_message}"},
@@ -1134,7 +1144,7 @@ def analyze_exchange(user_message: str, assistant_message: str, channel_key: str
             temperature=0.2,
         )
         if u := getattr(result, "usage", None):
-            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL, task_type="analyst")
+            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, analyst_model, task_type="analyst")
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return False
@@ -1314,8 +1324,9 @@ def analyze_activity_report(
         return False
     synthetic = f"USER: {user_message}\nGRACE-MAR: {ACTIVITY_REPORT_SYNTHETIC}"
     try:
+        analyst_model = _resolve_model(OPENAI_ANALYST_MODEL)
         result = _get_client().chat.completions.create(
-            model=OPENAI_ANALYST_MODEL,
+            model=analyst_model,
             messages=[
                 {"role": "system", "content": ANALYST_PROMPT},
                 {"role": "user", "content": synthetic},
@@ -1324,7 +1335,7 @@ def analyze_activity_report(
             temperature=0.2,
         )
         if u := getattr(result, "usage", None):
-            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, OPENAI_ANALYST_MODEL, task_type="analyst")
+            _log_tokens(channel_key, "analyst", u.prompt_tokens, u.completion_tokens, analyst_model, task_type="analyst")
         analysis = result.choices[0].message.content.strip()
         if analysis.upper() == "NONE":
             return False
@@ -2048,7 +2059,7 @@ def _constitutional_pass(
         client=_get_client(),
         confidence=confidence,
         trigger_flags=trigger_flags,
-        main_model=OPENAI_MODEL,
+        main_model=_resolve_model(OPENAI_MODEL),
     )
 
 
@@ -2195,14 +2206,15 @@ def get_response(channel_key: str, user_message: str) -> str:
     system_content = SYSTEM_PROMPT + evidence_block + _load_memory_appendix() + _load_chat_summary(channel_key)
     messages = [{"role": "system", "content": system_content}] + history
 
+    main_model = _resolve_model(OPENAI_MODEL)
     response = _get_client().chat.completions.create(
-        model=OPENAI_MODEL,
+        model=main_model,
         messages=messages,
         max_tokens=200,
         temperature=0.9,
     )
     if u := getattr(response, "usage", None):
-        _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="voice")
+        _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, main_model, task_type="voice")
 
     assistant_message = response.choices[0].message.content or ""
     assistant_message = _constitutional_pass(channel_key, user_message, assistant_message)
@@ -2231,7 +2243,14 @@ def get_response(channel_key: str, user_message: str) -> str:
 
 
 def transcribe_voice(audio_bytes: bytes, channel_key: str = "telegram") -> str | None:
-    """Transcribe audio via OpenAI Whisper. Returns transcript or None on failure."""
+    """Transcribe audio via OpenAI Whisper. Returns transcript or None on failure.
+
+    Non-OpenAI providers (ollama, edge) do not support Whisper; returns None
+    with a logged warning so callers degrade gracefully.
+    """
+    if LLM_PROVIDER != "openai":
+        logger.warning("Voice transcription unavailable for LLM_PROVIDER=%s (requires OpenAI Whisper)", LLM_PROVIDER)
+        return None
     import tempfile
     try:
         with tempfile.NamedTemporaryFile(suffix=".ogg", delete=False) as f:
@@ -2327,14 +2346,15 @@ def run_grounded_response(
                 messages.append({"role": role, "content": content})
     messages.append({"role": "user", "content": question})
     try:
+        grounded_model = _resolve_model(OPENAI_MODEL)
         response = _get_client().chat.completions.create(
-            model=OPENAI_MODEL,
+            model=grounded_model,
             messages=messages,
             max_tokens=250,
             temperature=0.7,
         )
         if u := getattr(response, "usage", None):
-            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, OPENAI_MODEL, task_type="voice")
+            _log_tokens(channel_key, "main", u.prompt_tokens, u.completion_tokens, grounded_model, task_type="voice")
         reply = (response.choices[0].message.content or "").strip()
         reply = _constitutional_pass(channel_key, question, reply)
         emit_pipeline_event("dyad:grounded_query", None, channel_key=channel_key, source="miniapp", replay_mode="dyad")

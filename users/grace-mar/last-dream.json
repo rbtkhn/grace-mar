@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-14T05:59:47.372101+00:00",
+  "generated_at": "2026-04-15T06:11:38.135739+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
@@ -15,7 +15,7 @@
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
   "followups": [
-    "Capture gap: Record hasn't grown in 16 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new Evidence"
+    "Capture gap: Record hasn't grown in 17 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new Evidence"
   ],
   "phases": {
     "recent": {
@@ -31,19 +31,19 @@
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-13T05:59:42.515655+00:00",
-    "window_end_utc": "2026-04-14T05:59:42.515655+00:00",
+    "window_start_utc": "2026-04-14T06:11:33.277960+00:00",
+    "window_end_utc": "2026-04-15T06:11:33.277960+00:00",
     "window_hours": 24.0,
-    "count": 8,
-    "first_ts": "2026-04-13T12:11:00+00:00",
-    "last_ts": "2026-04-14T03:30:00+00:00",
-    "span_hours": 15.32,
+    "count": 5,
+    "first_ts": "2026-04-14T14:21:00+00:00",
+    "last_ts": "2026-04-14T20:13:00+00:00",
+    "span_hours": 5.87,
     "by_mode": {
-      "work-start": 8
+      "work-start": 5
     },
     "runs": [
       {
-        "ts_iso": "2026-04-13T12:11:00+00:00",
+        "ts_iso": "2026-04-14T14:21:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -52,7 +52,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-13T16:43:00+00:00",
+        "ts_iso": "2026-04-14T14:47:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -61,7 +61,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-13T17:30:00+00:00",
+        "ts_iso": "2026-04-14T15:54:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -70,7 +70,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-13T18:25:00+00:00",
+        "ts_iso": "2026-04-14T17:10:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -79,34 +79,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-13T22:00:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-13T22:22:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-13T23:59:00+00:00",
-        "ok": true,
-        "mode": "work-start",
-        "kv": {
-          "cursor_model": "unknown",
-          "model_tier": "unknown"
-        }
-      },
-      {
-        "ts_iso": "2026-04-14T03:30:00+00:00",
+        "ts_iso": "2026-04-14T20:13:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -143,21 +116,21 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 2,
+  "suggested_execution_path_index": 0,
   "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 calendar rotation; not policy or Record.",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** \u2014 calendar rotation; not policy or Record.",
   "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
   "civmem_index_missing": false,
   "capture_gap": {
     "last_evidence_date": "2026-03-28",
     "last_evidence_id": "ACT-0050",
-    "days_since_evidence": 16,
+    "days_since_evidence": 17,
     "last_merge_date": "2026-03-28",
-    "days_since_merge": 16,
+    "days_since_merge": 17,
     "pending_count": 1,
     "level": "warning",
-    "message": "Record hasn't grown in 16 days (last: ACT-0050, 2026-03-28)"
+    "message": "Record hasn't grown in 17 days (last: ACT-0050, 2026-03-28)"
   },
   "capability_shift": {
     "category": "model",
@@ -171,23 +144,23 @@
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-13T05:53:05.258284+00:00",
+    "previous_dream_generated_at": "2026-04-14T05:59:47.372101+00:00",
     "local_calendar_dates": [
-      "2026-04-14"
+      "2026-04-15"
     ],
     "strategy_notebook_missing_day_headers": [
-      "2026-04-14"
+      "2026-04-15"
     ]
   },
   "handoffSchemaVersion": 2,
   "topActionReason": "calendar_mod3",
   "quietRun": false,
   "residueLedger": {
-    "must_resume": "Capture gap: Record hasn't grown in 16 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new",
+    "must_resume": "Capture gap: Record hasn't grown in 17 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new",
     "safe_to_drop": "",
     "blocked": "",
     "watch_later": ""
   },
-  "worktreeState": "light residue",
-  "worktreeAdvice": "leave or commit before sleep; bridge seals when you close the session."
+  "worktreeState": "risky residue",
+  "worktreeAdvice": "Large or wide diff \u2014 inspect before continuing; use bridge when closing session."
 }

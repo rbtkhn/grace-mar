@@ -42,4 +42,45 @@
 
 schema_version: 3
 
-knots: []
+knots:
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-12-islamabad-hormuz-thesis-weave.md
+    date: "2026-04-12"
+    knot_label: islamabad-hormuz-thesis-weave
+    clusters: [islamabad, hormuz, thesis-a-b, escalation-trap]
+    patterns: [pre-blockade-lattice]
+    note: "Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md
+    date: "2026-04-13"
+    knot_label: marandi-ritter-mercouris-hormuz-scaffold
+    clusters: [seyed-marandi, scott-ritter, alexander-mercouris, hormuz]
+    patterns: [expert-scaffold-weave]
+    note: "Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md
+    date: "2026-04-14"
+    knot_label: diesen-vi14-petrodollar-vs-sachs-hormuz
+    clusters: [glenn-diesen, work-jiang-ph, hormuz]
+    patterns: [ph-vi14-vs-sachs-hormuz]
+    note: "Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-parsi-davis-war-powers.md
+    date: "2026-04-14"
+    knot_label: parsi-davis-war-powers
+    clusters: [accountability-language, war-powers, hormuz]
+    patterns: [parsi-davis-crosses]
+    note: "Link hub + verify pins for EU naming vs Congress lane"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md
+    date: "2026-04-14"
+    knot_label: mercouris-mearsheimer-lebanon-split
+    clusters: [lebanon-washington, tri-mind, alexander-mercouris, john-mearsheimer]
+    patterns: [legitimacy-vs-structure]
+    note: "Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
+    date: "2026-04-14"
+    knot_label: scott-ritter-blockade-hormuz-weave
+    clusters: [scott-ritter, hormuz, blockade, expert-lattice]
+    patterns: [ritter-center-weave]
+    note: "Ritter blockade mechanics + sister knots + indexed threads same topic"

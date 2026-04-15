@@ -140,6 +140,99 @@ def _write_markdown(card: dict, path: Path) -> None:
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def _build_cmc_strategy_card(out_dir: Path, markdown: bool) -> bool:
+    """Build THINK-CIVILIZATIONAL-STRATEGY card from CMC + strategy artifacts."""
+    cmc_paths = (
+        REPO_ROOT / "research" / "repos" / "civilization_memory",
+        REPO_ROOT / "repos" / "civilization_memory",
+        REPO_ROOT.parent / "civilization_memory",
+    )
+    import os
+
+    env_path = os.getenv("CIVILIZATION_MEMORY_PATH", "").strip()
+    if env_path:
+        cmc_paths = (Path(env_path).resolve(),) + cmc_paths
+
+    cmc_root = None
+    for p in cmc_paths:
+        if p.is_dir():
+            cmc_root = p
+            break
+
+    strategy_surface = REPO_ROOT / "docs" / "skill-work" / "work-strategy" / "civilizational-strategy-surface.md"
+    case_index = REPO_ROOT / "docs" / "skill-work" / "work-strategy" / "case-index.md"
+    cmc_routing = REPO_ROOT / "docs" / "cmc-routing.md"
+
+    primitives = []
+    if cmc_root:
+        content_dir = cmc_root / "content"
+        if content_dir.is_dir():
+            for scholar in sorted(content_dir.glob("**/*SCHOLAR*.md"))[:5]:
+                rel = str(scholar.relative_to(cmc_root))
+                primitives.append(f"SCHOLAR: {rel}")
+            for template in sorted(content_dir.glob("**/CIV-MIND-*.md"))[:3]:
+                rel = str(template.relative_to(cmc_root))
+                primitives.append(f"CIV-MIND: {rel}")
+
+    strategy_refs = []
+    if strategy_surface.exists():
+        strategy_refs.append(str(strategy_surface.relative_to(REPO_ROOT)))
+    if case_index.exists():
+        strategy_refs.append(str(case_index.relative_to(REPO_ROOT)))
+    if cmc_routing.exists():
+        strategy_refs.append(str(cmc_routing.relative_to(REPO_ROOT)))
+
+    snippet = (
+        "Civilizational strategy thinking surface: bridges CMC SCHOLAR ledgers, "
+        "case-index families, and strategy-notebook judgment into reusable patterns. "
+        "Lookup: python3 scripts/cmc_lookup.py. "
+        "Ingest: python3 scripts/ingest_from_cmc.py. "
+        "Lecture: python3 scripts/cmc_lecture_helper.py."
+    )
+
+    operator_lines = [
+        "THINK-CIVILIZATIONAL-STRATEGY connects CMC primitives to operator strategy work:",
+        "",
+    ]
+    if primitives:
+        operator_lines.append("CMC primitives available:")
+        for p in primitives:
+            operator_lines.append(f"  - {p}")
+        operator_lines.append("")
+    if strategy_refs:
+        operator_lines.append("Strategy surfaces:")
+        for r in strategy_refs:
+            operator_lines.append(f"  - {r}")
+        operator_lines.append("")
+    operator_lines.extend([
+        "Scripts:",
+        "  - scripts/cmc_lookup.py — CLI lookup with --civilization filter",
+        "  - scripts/ingest_from_cmc.py — SCHOLAR to gate staging",
+        "  - scripts/cmc_lecture_helper.py — lecture reflection + gate staging",
+    ])
+
+    now = datetime.now(tz=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    card = {
+        "skill_id": "THINK-CIVILIZATIONAL-STRATEGY",
+        "title": "Civilizational Strategy (CIV-MEM bridge)",
+        "purpose": "Bridge CMC SCHOLAR ledgers, case-index mechanisms, and strategy-notebook judgment into reusable civilizational patterns for work-strategy.",
+        "runtime_snippet": _normalize_snippet(snippet),
+        "operator_view": "\n".join(operator_lines),
+        "source_path": "docs/skill-work/work-strategy/civilizational-strategy-surface.md",
+        "last_updated": now,
+        "card_type": "THINK-CIVILIZATIONAL-STRATEGY",
+        "cmc_available": cmc_root is not None,
+        "cmc_primitives": primitives,
+        "strategy_refs": strategy_refs,
+    }
+
+    out_json = out_dir / "THINK-CIVILIZATIONAL-STRATEGY.json"
+    out_json.write_text(json.dumps(card, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if markdown:
+        _write_markdown(card, out_dir / "THINK-CIVILIZATIONAL-STRATEGY.md")
+    return True
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Build derived skill card JSON/MD from portable skills.")
     parser.add_argument(
@@ -165,7 +258,10 @@ def main() -> int:
         if args.markdown:
             _write_markdown(card, args.out_dir / f"{card['skill_id']}.md")
 
-    print(f"Wrote {len(rows)} skill card(s) to {args.out_dir}")
+    if _build_cmc_strategy_card(args.out_dir, args.markdown):
+        print(f"Wrote {len(rows) + 1} skill card(s) to {args.out_dir} (including THINK-CIVILIZATIONAL-STRATEGY)")
+    else:
+        print(f"Wrote {len(rows)} skill card(s) to {args.out_dir}")
     return 0
 
 

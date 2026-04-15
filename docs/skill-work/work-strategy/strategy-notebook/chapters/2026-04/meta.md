@@ -9,6 +9,21 @@
 
 **Expert-thread continuity:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity (2026-04-12 → 2026-04-14)** + `batch-analysis | carry … + PH vi-14/15 + Diesen×Sachs` ( **`crosses:`** include **Parsi × Davis**, **Davis × Jermy**, **Diesen × Sachs**) → **`## 2026-04-14`** in [`days.md`](days.md) (**Weave** lead bullet + **Diesen × Sachs vs PH vi-14** seam); cross-day join key **`thread:<expert_id>`** per [strategy-commentator-threads.md](../../strategy-commentator-threads.md); new indexed anchors **`steve-jermy`**, **`jeffrey-sachs`** (2026-04-14).
 
+## Hormuz week — knot registry (stub, 2026-04-12–14)
+
+**Arc:** Islamabad collapse → **04-13** expert scaffold → **04-14** batch-analysis / multi-knot density. **Registry:** [knot-index.yaml](../../knot-index.yaml) (`schema_version: 3`). **Six files** (do not merge Judgment across knots without each file’s **Receipt** / **seams**):
+
+| Date | `knot_label` | File |
+|------|----------------|------|
+| 2026-04-12 | `islamabad-hormuz-thesis-weave` | [knot-2026-04-12-islamabad-hormuz-thesis-weave.md](knots/knot-2026-04-12-islamabad-hormuz-thesis-weave.md) |
+| 2026-04-13 | `marandi-ritter-mercouris-hormuz-scaffold` | [knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](knots/knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) |
+| 2026-04-14 | `diesen-vi14-petrodollar-vs-sachs-hormuz` | [knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](knots/knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) |
+| 2026-04-14 | `parsi-davis-war-powers` | [knot-2026-04-14-parsi-davis-war-powers.md](knots/knot-2026-04-14-parsi-davis-war-powers.md) |
+| 2026-04-14 | `mercouris-mearsheimer-lebanon-split` | [knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](knots/knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) |
+| 2026-04-14 | `scott-ritter-blockade-hormuz-weave` | [knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](knots/knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) |
+
+**Day spine:** [`days.md`](days.md) § **2026-04-12** · **2026-04-13** · **2026-04-14**. **Inbox pointer:** [daily-strategy-inbox.md](../../daily-strategy-inbox.md) § **Expert-thread continuity** (two knot lines + table).
+
 **Theme tail (external analysts — Johnson / Pape):**
 
 - **Pause ≠ settlement:** Both threads treat the ceasefire as fragile; lane takeaway is caution on “deal = durable off-ramp” until passage, spoilers, and reconstitution are explicit in any outreach copy.

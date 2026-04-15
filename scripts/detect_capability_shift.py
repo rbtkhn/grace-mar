@@ -254,6 +254,7 @@ def match_shifts(
             score = len(hits) / len(keywords) if keywords else 0.0
 
             if score >= threshold:
+                is_variant = assumption["id"] in _VARIANT_ASSUMPTION_IDS
                 alerts.append({
                     "assumption_id": assumption["id"],
                     "assumption": assumption.get("assumption", ""),
@@ -264,14 +265,20 @@ def match_shifts(
                     "affects": assumption.get("affects", []),
                     "gap_ids": assumption.get("gap_ids", []),
                     "notes": assumption.get("notes", ""),
-                    "action": _recommend_action(score),
+                    "action": _recommend_action(score, is_variant=is_variant),
+                    "alert_class": "variant" if is_variant else "base",
                 })
 
     alerts.sort(key=lambda a: a["score"], reverse=True)
     return alerts
 
 
-def _recommend_action(score: float) -> str:
+_VARIANT_ASSUMPTION_IDS = frozenset({"ASSUME-015"})
+
+
+def _recommend_action(score: float, *, is_variant: bool = False) -> str:
+    if is_variant:
+        return "monitor" if score >= 0.3 else "no action"
     if score >= 0.7:
         return "review"
     if score >= 0.5:
@@ -374,13 +381,17 @@ def format_alert_one_liner(result: dict) -> str:
     if n == 0 and errors > 0:
         err_names = ", ".join(e["name"] for e in result["fetch_errors"][:3])
         return f"Capability shift{cat_label} ({checked}/{total} sources): no alerts ({errors} fetch errors: {err_names})"
-    review_count = sum(1 for a in result.get("alerts", []) if a["action"] == "review")
-    monitor_count = sum(1 for a in result.get("alerts", []) if a["action"] == "monitor")
+    alerts = result.get("alerts", [])
+    review_count = sum(1 for a in alerts if a["action"] == "review")
+    monitor_count = sum(1 for a in alerts if a["action"] == "monitor")
+    variant_count = sum(1 for a in alerts if a.get("alert_class") == "variant")
     parts = []
     if review_count:
         parts.append(f"{review_count} REVIEW")
     if monitor_count:
         parts.append(f"{monitor_count} monitor")
+    if variant_count:
+        parts.append(f"{variant_count} variant")
     return f"Capability shift{cat_label} ({checked}/{total} sources): {', '.join(parts)} — run detect_capability_shift.py for details"
 
 
@@ -411,8 +422,9 @@ def format_text_report(result: dict) -> str:
 
     for alert in alerts:
         action_tag = alert["action"].upper()
+        class_tag = f" (variant)" if alert.get("alert_class") == "variant" else ""
         lines.append(
-            f"  [{action_tag}] {alert['assumption_id']} — {alert['assumption'][:80]}"
+            f"  [{action_tag}]{class_tag} {alert['assumption_id']} — {alert['assumption'][:80]}"
         )
         lines.append(
             f"    Provider: {alert['provider']} | "

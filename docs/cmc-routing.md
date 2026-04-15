@@ -75,6 +75,31 @@ Concepts alone are ambiguous ("history of Pokemon"). Route only when **2+ weak t
 - **Strong terms:** Civilizations map directly to CMC content.
 - **Weak-only gate:** Prevents broad terms like "history" from routing non-civilizational questions.
 
+## Work-strategy lookup flow
+
+In addition to the bot/Voice lookup path above, CMC may be queried during **operator work-strategy sessions** — current-events analysis, case-index checks, analogy audits, and strategy-notebook weaves.
+
+```
+work-strategy pass
+    │
+    ▼
+case-index check (case-index.md)
+    │
+    ├── Case found → cite with fit/mismatch/falsifier
+    │
+    └── No case → is this civilizational / historical?
+                    │
+                    ├── No  → resonance note or skip
+                    │
+                    └── Yes → cmc_lookup.py --civilization <entity>
+                              → hit? → seed new case or resonance note
+                              : miss → document gap, continue without
+```
+
+**CLI:** `python3 scripts/cmc_lookup.py "query" --civilization rome --json`
+
+**Governance:** CMC material entering work-strategy artifacts is governed by [brief-source-registry.md](skill-work/work-strategy/brief-source-registry.md) — source class `transcript` or `operator_note` rules apply. Historical framing requires fit, mismatch, and falsifier per [case-index.md](skill-work/work-strategy/case-index.md) and [current-events-analysis.md](skill-work/work-strategy/current-events-analysis.md) §6.
+
 ## Override
 
 For testing or special cases, `query_cmc(question, skip_routing=True)` bypasses the routing check.

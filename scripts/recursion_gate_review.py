@@ -290,6 +290,35 @@ def _duplicate_hints(candidate: dict, self_text: str) -> list[str]:
     return deduped[:3]
 
 
+def _territory_label(territory: str, channel_key: str, proposal_class: str,
+                     signal_type: str) -> str:
+    if territory == TERRITORY_WORK_POLITICS:
+        return TERRITORY_LABEL_WORK_POLITICS
+    pc_up = (proposal_class or "").upper()
+    st_low = (signal_type or "").lower()
+    ch_low = (channel_key or "").lower()
+    if pc_up.startswith("CIV_MEM") or st_low == "civilizational_insight" or "cmc-ingest" in ch_low:
+        return "CIV-MEM"
+    return "Companion"
+
+
+def _cmc_source_provenance(row: dict) -> dict | None:
+    """Extract CMC provenance metadata when the candidate originated from CMC ingest."""
+    ch = (row.get("channel_key") or "").lower()
+    st = (row.get("signal_type") or "").lower()
+    pc = (row.get("proposal_class") or "").upper()
+    if not ("cmc" in ch or st == "civilizational_insight" or pc.startswith("CIV_MEM")):
+        return None
+    source = row.get("source") or ""
+    return {
+        "is_cmc": True,
+        "ingest_channel": row.get("channel_key", ""),
+        "scholar_source": source if "SCHOLAR" in source else None,
+        "target_surface": "SELF-LIBRARY/CIV-MEM",
+        "epistemic_note": "CMC material is reference, not identity. Treat as interpretation unless independently verified.",
+    }
+
+
 def _risk_tier(candidate: dict) -> str:
     if candidate["has_conflict_markers"] or candidate["advisory_flagged"] or candidate["duplicate_hints"]:
         return "manual_escalate"
@@ -430,7 +459,8 @@ def parse_review_candidates(user_id: str = DEFAULT_USER, *, repo_root: Path | No
             "age_days": _age_days(timestamp),
             "channel_key": channel_key,
             "territory": territory,
-            "territory_label": TERRITORY_LABEL_WORK_POLITICS if territory == TERRITORY_WORK_POLITICS else "Companion",
+            "territory_label": _territory_label(territory, channel_key, eff_pc,
+                                                _extract_scalar(yaml_body, "signal_type")),
             "proposal_class": eff_pc,
             "proposal_class_raw": raw_pc or None,
             "proposal_class_inferred": pc_inferred,
@@ -475,6 +505,7 @@ def parse_review_candidates(user_id: str = DEFAULT_USER, *, repo_root: Path | No
         row["ready_for_quick_merge"] = _ready_for_quick_merge(row) and not row["duplicate_hints"]
         row["risk_tier"] = _risk_tier(row)
         row["boundary_review"] = _compute_boundary_review(row)
+        row["cmc_source_provenance"] = _cmc_source_provenance(row)
         _try_persist_boundary_classification(user_id, row)
         rows.append(row)
     rows.sort(key=lambda row: row.get("timestamp", ""), reverse=True)

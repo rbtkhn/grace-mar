@@ -190,3 +190,28 @@ assumptions:
     gap_ids: []
     last_validated: 2026-04-07
     notes: "GroupChat-as-auditable-tool is deferred because AutoGen/CrewAI pull heavy transitive dependencies. If a framework ships stdlib-only multi-agent, or a model provider builds agent teams into the API itself, revisit the deferral. Scion (GoogleCloudPlatform/scion) takes a container-isolation approach (Go binary, git worktrees, no Python deps) — different axis than framework deps but relevant if container-based agent isolation becomes standard."
+
+  - id: ASSUME-014
+    assumption: "Model abstention behavior on out-of-scope queries is stable across versions"
+    keywords: ["safety tuning", "refusal", "alignment", "fine-tune", "RLHF", "DPO", "ORPO", "safety degradation", "abstention", "guardrails"]
+    affects: ["bot/prompt.py", "docs/abstention-policy.md", "docs/knowledge-boundary-framework.md"]
+    gap_ids: []
+    last_validated: 2026-04-15
+    notes: "Knowledge-boundary enforcement relies on SYSTEM_PROMPT instructions; no runtime verification that the model still refuses correctly after updates. ORPO/DPO fine-tuning asymmetry research (April 2026) shows benign data can degrade safety. If a provider changes alignment tuning, run boundary_regression.py."
+
+  - id: ASSUME-015
+    assumption: "Domain-specialized model variants do not change the abstention or boundary behavior of the base model grace-mar uses"
+    keywords:
+      - "cyber"
+      - "specialized variant"
+      - "domain-specific"
+      - "vertical model"
+      - "fine-tuned variant"
+      - "task-specific"
+      - "enterprise variant"
+      - "education model"
+      - "safety-tuned"
+    affects: ["bot/core.py", "docs/abstention-policy.md"]
+    gap_ids: []
+    last_validated: 2026-04-15
+    notes: "Labs now ship vertical variants (e.g. GPT-5.4-Cyber, Anthropic Mythos) with different safety profiles. Grace-mar uses the general API model; if the provider routes traffic to a variant or changes the default, boundary behavior may shift. Track variant announcements via the detector; run boundary regression when a variant matches the provider grace-mar depends on."

@@ -426,6 +426,47 @@ def _build_minimal_brief_lines(
     return lines
 
 
+def _cmc_lecture_suggestions(ix_b_topics: list[str], from_record: list[str], repo_root: Path) -> list[str]:
+    """Suggest CMC Lecture topics based on active strategy-notebook threads and IX-B curiosity."""
+    strategy_dir = repo_root / "docs" / "skill-work" / "work-strategy" / "strategy-notebook"
+    active_topics: list[str] = []
+
+    days_dir = strategy_dir / "chapters"
+    if days_dir.is_dir():
+        day_files = sorted(days_dir.glob("*/days.md"), reverse=True)
+        for df in day_files[:2]:
+            text = df.read_text(encoding="utf-8")[:2000]
+            for m in re.finditer(r"^##\s+(.+)$", text, re.MULTILINE):
+                heading = m.group(1).strip()
+                if len(heading) > 10:
+                    active_topics.append(heading[:80])
+
+    civ_keywords = {
+        "empire", "dynasty", "governance", "institution", "reform", "crisis",
+        "continuity", "collapse", "succession", "doctrine", "bureaucracy",
+        "legitimacy", "diplomacy", "trade", "military", "religion", "law",
+    }
+
+    suggestions = []
+    all_topics = active_topics + ix_b_topics + from_record
+    for topic in all_topics:
+        topic_lower = topic.lower()
+        if any(kw in topic_lower for kw in civ_keywords):
+            suggestion = f"CMC Lecture: explore civilizational parallels for \"{topic[:60]}\""
+            if suggestion not in suggestions:
+                suggestions.append(suggestion)
+        if len(suggestions) >= 3:
+            break
+
+    if not suggestions:
+        if ix_b_topics:
+            suggestions.append(
+                f"CMC Lecture: scan for civilizational mechanisms related to \"{ix_b_topics[0][:60]}\""
+            )
+
+    return suggestions[:3]
+
+
 def _wisdom_questions(wisdom_content: str, ix_b_topics: list[str], n: int) -> list[str]:
     """Extract n wisdom questions. Prefer curiosity/creativity sections (IX-B)."""
     questions = []
@@ -610,6 +651,15 @@ def main() -> int:
             lines.append(f"- {q}")
     else:
         lines.append("(see docs/wisdom-questions.md)")
+
+    cmc_suggestions = _cmc_lecture_suggestions(ix_b, from_record, REPO_ROOT)
+    if cmc_suggestions:
+        lines.extend(["", "## Suggested CMC Lecture", ""])
+        for s in cmc_suggestions:
+            lines.append(f"- {s}")
+        lines.append("")
+        lines.append("_Run `python3 scripts/cmc_lecture_helper.py` after a lecture to stage reflections._")
+
     lines.append("")
     lines.extend(_replay_brief_lines(user_dir, REPO_ROOT))
     print("\n".join(lines))
