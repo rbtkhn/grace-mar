@@ -334,6 +334,9 @@ Preferred destination for richer local historical treatment when a thin case abs
 ### [decision-point-template.md](decision-point-template.md)
 Use when the analysis materially affects options, sequencing, or recommendation.
 
+### [brief-source-registry.md](brief-source-registry.md)
+Source-class and corroboration discipline for each artifact type produced by this workflow.
+
 ## 9. Minimal operator checklist
 
 Before closing a run, ask:

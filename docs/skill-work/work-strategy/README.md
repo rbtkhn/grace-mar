@@ -73,7 +73,7 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 | **[daily-brief-template.md](daily-brief-template.md)** | Spec for the combined daily brief output. |
 | **[daily-brief-minds-config.json](daily-brief-minds-config.json)** | Optional Tri-Frame **scaffold** overlays after the daily brief (Barnes / Mearsheimer / Mercouris); trimmed `CIV-MIND-*.md` paths; outputs under [minds/outputs](minds/outputs). See [minds/DAILY-BRIEF-MINDS-WORKFLOW.md](minds/DAILY-BRIEF-MINDS-WORKFLOW.md). |
 | **[daily-brief-minds-menu.md](daily-brief-minds-menu.md)** | Human-readable A–D menus per mind (program order B → M → M). |
-| **[brief-source-registry.md](brief-source-registry.md)** | Pointer only — canonical [weekly-brief source registry](../work-politics/brief-source-registry.md) lives under work-politics. |
+| **[brief-source-registry.md](brief-source-registry.md)** | Human-readable source-governance layer for work-strategy: 6 source classes, artifact-by-artifact usage policy (§6), corroboration expectations by claim strength (§9), transcript discipline (§10), historical/civilizational use policy (§7), weak-signal source bounds (§11), promotion eligibility (§8). Complements (does not duplicate) the [work-politics weekly-brief registry](../work-politics/brief-source-registry.md). WORK only. |
 | **[weak-signals.md](weak-signals.md)** | Weak-signal discipline: **§1f** block, promotion to STRATEGY **§II-A / §III-A / §IV**, analogy audit before overclaiming (WORK only). |
 | **[weak-signal-template.md](weak-signal-template.md)** | Markdown stub for **§1f** in the daily brief. |
 | **[analogy-audit-template.md](analogy-audit-template.md)** | Short form when a historical parallel is proposed (current-events + brief). |
@@ -135,7 +135,7 @@ python3 scripts/merge_daily_brief_postprocess.py -u grace-mar --date YYYY-MM-DD 
 
 Portable draft skill: [`skills-portable/_drafts/daily-brief-regen-merge/SKILL.md`](../../skills-portable/_drafts/daily-brief-regen-merge/SKILL.md).
 
-**Brief source registry:** Weekly-brief source readiness is tracked in [work-politics/brief-source-registry.md](../work-politics/brief-source-registry.md) (operator WPC rhythm). A [pointer stub](brief-source-registry.md) exists in this folder for strategy-lane discovery only.
+**Brief source registry:** Weekly-brief source readiness is tracked in [work-politics/brief-source-registry.md](../work-politics/brief-source-registry.md) (operator WPC rhythm). The [work-strategy brief-source-registry](brief-source-registry.md) governs how sources are used inside this lane — source classes, artifact-level usage policy, corroboration expectations, transcript discipline, and historical/civilizational use bounds.
 
 One script covers **work-politics + work-strategy**:
 
