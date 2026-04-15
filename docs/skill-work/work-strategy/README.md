@@ -85,7 +85,7 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 | **[watch-promotion-rules.md](watch-promotion-rules.md)** | When to promote watches and open decision points. |
 | **[decision-points/](decision-points/README.md)** | Instance files (`YYYY-MM-DD-slug.md`). |
 | **[promotion-policy.json](promotion-policy.json)** | Machine-readable stage ids (v0). |
-| **[authorized-sources.yaml](authorized-sources.yaml)** | Structured sources; pairs with [work-strategy-sources.md](work-strategy-sources.md). |
+| **[authorized-sources.yaml](authorized-sources.yaml)** | Machine-readable source registry: 6 source classes, artifact eligibility per source, trust tiers (1–4), review rules, maintenance policy. 16 sources (primary, data, reporting, analyst, transcript, operator note). Pairs with [brief-source-registry.md](brief-source-registry.md) (human policy) and [work-strategy-sources.md](work-strategy-sources.md) (URL catalog). |
 | **[source-tiers.md](source-tiers.md)** | Trust tier meanings + phased enforcement. |
 | **[observability.md](observability.md)** | Lane metrics artifact (`artifacts/work-strategy/strategy-observability.json`). |
 | **[strategy-health.md](strategy-health.md)** | How to read observability numbers. |

@@ -1,60 +1,450 @@
-# Machine-readable authorized sources for work-strategy (incremental SSOT).
-# Human-readable table: work-strategy-sources.md — keep in sync via scripts/sync_strategy_sources.py --check
+id: "p14r8x"
 version: 1
-ssot_note: "Seed subset; expand IDs to cover all rows in work-strategy-sources.md over time."
+status: active
+scope: work_only
+lane: work-strategy
+purpose: >
+  Machine-readable source registry for work-strategy. Tracks source class,
+  trust posture, artifact eligibility, review cadence, and special handling
+  for historical/civilizational use.
+
+defaults:
+  promotion_eligible: false
+  transcript_rule: >
+    Treat transcript-derived material as interpretation unless independently verified.
+  historical_use_rule: >
+    Historical or civilizational framing requires explicit fit, mismatch, and falsifier logic.
+  neutral_summary_rule: >
+    Do not present commentary or transcript rhetoric as neutral fact without corroboration.
+
+source_classes:
+  primary:
+    description: "Official or direct-source material."
+    typical_uses:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    promotion_default: true
+
+  data:
+    description: "Structured datasets, market feeds, polling with methodology, shipping/trade/energy data."
+    typical_uses:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+      - doctrine_candidate
+    promotion_default: true
+
+  reporting:
+    description: "Reputable reporting and event chronology."
+    typical_uses:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    promotion_default: true
+
+  analyst:
+    description: "Interpretive analysis, essays, newsletters, interviews."
+    typical_uses:
+      - current_events_analysis
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+    promotion_default: conditional
+
+  transcript:
+    description: "Podcasts, video transcripts, long-form discussions, lectures."
+    typical_uses:
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - watch_support
+    promotion_default: conditional
+
+  operator_note:
+    description: "Local work artifacts such as notebook entries, audits, and receipts."
+    typical_uses:
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - doctrine_candidate
+    promotion_default: conditional
+
+artifact_types:
+  neutral_fact_summary:
+    preferred_classes: [primary, data, reporting]
+    caution_classes: [analyst, transcript]
+    disallow_as_sole_basis: [analyst, transcript, operator_note]
+
+  current_events_analysis:
+    preferred_classes: [primary, data, reporting]
+    allowed_classes: [analyst, transcript, operator_note]
+
+  resonance_note:
+    allowed_classes: [primary, data, reporting, analyst, transcript, operator_note]
+
+  analogy_audit:
+    allowed_classes: [primary, data, reporting, analyst, transcript, operator_note]
+
+  watch_support:
+    preferred_classes: [primary, data, reporting]
+    allowed_classes: [analyst, transcript]
+    caution_note: >
+      Commentary may initiate a watch, but meaningful watch support should ideally
+      rest on corroborated signal.
+
+  decision_point_support:
+    preferred_classes: [primary, data, reporting]
+    allowed_classes: [analyst, transcript]
+    caution_note: >
+      Analyst or transcript material may frame options but should not usually be
+      the sole basis for a material recommendation.
+
+  strategy_notebook:
+    allowed_classes: [primary, data, reporting, analyst, transcript, operator_note]
+
+  doctrine_candidate:
+    preferred_classes: [primary, data, reporting]
+    allowed_classes: [analyst, transcript, operator_note]
+    caution_note: >
+      No doctrine candidate should rest primarily on a single commentator,
+      transcript, or hot-cycle cluster.
+
 sources:
-  - id: WS-SRC-0001
-    name: War on the Rocks
-    url: https://warontherocks.com/
-    type: outlet
-    lane_relevance: [work-strategy]
+  - id: us_white_house
+    name: "The White House"
+    url: "https://www.whitehouse.gov"
+    source_class: primary
+    lane_relevance: [political, institutional, strategic]
     trust_tier: 2
     update_cadence: daily
-    last_reviewed: "2026-04-10"
+    last_reviewed: "YYYY-MM-DD"
     promotion_eligible: true
-    notes: "National security commentary; practitioners and academics."
-    bias_scope: "US national-security frame; editorial selection."
-  - id: WS-SRC-0002
-    name: Defense News
-    url: https://www.defensenews.com/
-    type: outlet
-    lane_relevance: [work-strategy]
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    artifact_disallowed: []
+    bias_scope: "Official executive framing; may omit adverse context."
+    historical_use_notes: >
+      Useful for actor claims, declared policy, and formal signaling. Not sufficient
+      by itself for broad strategic interpretation.
+    notes: "Best used as direct-source evidence of stated U.S. executive positions."
+
+  - id: us_state
+    name: "U.S. Department of State"
+    url: "https://www.state.gov"
+    source_class: primary
+    lane_relevance: [diplomatic, geopolitical, institutional]
     trust_tier: 2
     update_cadence: daily
-    last_reviewed: "2026-04-10"
+    last_reviewed: "YYYY-MM-DD"
     promotion_eligible: true
-    notes: "Defense industry and military policy."
-    bias_scope: "Industry and US/allied policy tilt."
-  - id: WS-SRC-0003
-    name: The Cipher Brief
-    url: https://www.thecipherbrief.com/
-    type: outlet
-    lane_relevance: [work-strategy]
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    artifact_disallowed: []
+    bias_scope: "Official diplomatic framing."
+    notes: "Useful for formal positions, readouts, and declared diplomatic posture."
+
+  - id: treasury_us
+    name: "U.S. Department of the Treasury"
+    url: "https://home.treasury.gov"
+    source_class: primary
+    lane_relevance: [financial, sanctions, economic_statecraft]
     trust_tier: 2
     update_cadence: daily
-    last_reviewed: "2026-04-10"
+    last_reviewed: "YYYY-MM-DD"
     promotion_eligible: true
-    notes: "Former IC professionals; often paywalled."
-    bias_scope: "Western IC-adjacent framing."
-  - id: WS-SRC-0004
-    name: Foreign Policy
-    url: https://foreignpolicy.com/
-    type: outlet
-    lane_relevance: [work-strategy]
-    trust_tier: 2
-    update_cadence: daily
-    last_reviewed: "2026-04-10"
-    promotion_eligible: true
-    notes: "Global affairs; paywalled longform."
-    bias_scope: "Editorial line varies by author."
-  - id: WS-SRC-0005
-    name: ACLED Data
-    url: https://acleddata.com/
-    type: data
-    lane_relevance: [work-strategy]
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+      - doctrine_candidate
+    artifact_disallowed: []
+    bias_scope: "Official sanctions and financial-statecraft framing."
+    notes: "Important anchor for sanctions, enforcement, and Treasury-led statecraft."
+
+  - id: eia
+    name: "U.S. Energy Information Administration"
+    url: "https://www.eia.gov"
+    source_class: data
+    lane_relevance: [energy, chokepoints, commodities, macro]
     trust_tier: 1
     update_cadence: weekly
-    last_reviewed: "2026-04-10"
+    last_reviewed: "YYYY-MM-DD"
     promotion_eligible: true
-    notes: "Event data; methodology documented."
-    bias_scope: "Coverage gaps in low-reporting regions."
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+      - doctrine_candidate
+    artifact_disallowed: []
+    bias_scope: "Methodological/data limitations rather than overt interpretive slant."
+    historical_use_notes: >
+      Strong anchor for energy disruption, supply balance, and price-context checks.
+    notes: "One of the best anchors for energy-related work-strategy analysis."
+
+  - id: iea
+    name: "International Energy Agency"
+    url: "https://www.iea.org"
+    source_class: data
+    lane_relevance: [energy, market_structure, strategic_supply]
+    trust_tier: 1
+    update_cadence: weekly
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: true
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+      - doctrine_candidate
+    artifact_disallowed: []
+    bias_scope: "Institutional framing possible; still high-value for structured energy context."
+    notes: "Use alongside EIA for stronger energy and market structure coverage."
+
+  - id: acled
+    name: "ACLED"
+    url: "https://acleddata.com"
+    source_class: data
+    lane_relevance: [conflict, instability, escalation, watch_support]
+    trust_tier: 1
+    update_cadence: weekly
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: true
+    artifact_allowed:
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    artifact_disallowed: []
+    bias_scope: "Event-coding and collection limitations."
+    notes: "Useful for conflict trend confirmation and scale checks."
+
+  - id: wsj
+    name: "The Wall Street Journal"
+    url: "https://www.wsj.com"
+    source_class: reporting
+    lane_relevance: [financial, geopolitical, institutional, corporate]
+    trust_tier: 2
+    update_cadence: daily
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: true
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    artifact_disallowed: []
+    bias_scope: "Editorial and sourcing bias possible; verify contested claims."
+    notes: "Useful for chronology, corporate-state intersections, and financial reporting."
+
+  - id: ft
+    name: "Financial Times"
+    url: "https://www.ft.com"
+    source_class: reporting
+    lane_relevance: [financial, macro, geopolitical, elite_signaling]
+    trust_tier: 2
+    update_cadence: daily
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: true
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    artifact_disallowed: []
+    bias_scope: "Editorial framing and elite consensus bias possible."
+    notes: "High utility for cross-border financial and geopolitical developments."
+
+  - id: reuters
+    name: "Reuters"
+    url: "https://www.reuters.com"
+    source_class: reporting
+    lane_relevance: [general, geopolitics, markets, breaking_news]
+    trust_tier: 1
+    update_cadence: daily
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: true
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+      - decision_point_support
+    artifact_disallowed: []
+    bias_scope: "Wire-speed compression and source limitations."
+    notes: "Strong default chronology anchor for breaking developments."
+
+  - id: ap
+    name: "Associated Press"
+    url: "https://apnews.com"
+    source_class: reporting
+    lane_relevance: [general, institutional, breaking_news]
+    trust_tier: 1
+    update_cadence: daily
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: true
+    artifact_allowed:
+      - neutral_fact_summary
+      - current_events_analysis
+      - watch_support
+    artifact_disallowed: []
+    bias_scope: "Wire-speed compression and standard newsroom limitations."
+    notes: "Good for event baselines and public-facing institutional developments."
+
+  - id: alexander_mercouris
+    name: "Alexander Mercouris"
+    url: ""
+    source_class: analyst
+    lane_relevance: [geopolitical, civilizational, legal_historical, strategic]
+    trust_tier: 3
+    update_cadence: daily
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: conditional
+    artifact_allowed:
+      - current_events_analysis
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - watch_support
+    artifact_disallowed:
+      - neutral_fact_summary
+    bias_scope: "Strong interpretive voice; verify empirical specifics independently where needed."
+    historical_use_notes: >
+      High-value for mechanism generation, civilizational framing, and historical resonance.
+      Should not be silently treated as neutral fact authority.
+    notes: "Preferred high-signal analyst; best used for framing and hypothesis generation."
+
+  - id: robert_barnes
+    name: "Robert Barnes"
+    url: ""
+    source_class: analyst
+    lane_relevance: [legal, procedural, lawfare, domestic_political_risk]
+    trust_tier: 3
+    update_cadence: weekly
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: conditional
+    artifact_allowed:
+      - current_events_analysis
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - watch_support
+      - decision_point_support
+    artifact_disallowed:
+      - neutral_fact_summary
+    bias_scope: "Strong interpretive and adversarial framing."
+    notes: "Best for legal/procedural framing, institutional conflict, and lawfare interpretation."
+
+  - id: john_mearsheimer
+    name: "John Mearsheimer"
+    url: ""
+    source_class: analyst
+    lane_relevance: [structural_realism, great_power_competition, system_constraints]
+    trust_tier: 3
+    update_cadence: monthly
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: conditional
+    artifact_allowed:
+      - current_events_analysis
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - doctrine_candidate
+    artifact_disallowed:
+      - neutral_fact_summary
+    bias_scope: "Strong structural lens; may underweight other explanatory domains."
+    notes: "Useful for structure and power-geometry framing."
+
+  - id: predictive_history
+    name: "Predictive History"
+    url: ""
+    source_class: transcript
+    lane_relevance: [historical, civilizational, strategy, question_generation]
+    trust_tier: 4
+    update_cadence: irregular
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: conditional
+    artifact_allowed:
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - watch_support
+    artifact_disallowed:
+      - neutral_fact_summary
+    transcript_policy: >
+      Treat as hypothesis and framing input, not as neutral fact authority.
+    historical_use_notes: >
+      Strong for generating case candidates, mechanisms, and chapter ideas.
+      Requires explicit fit/mismatch/falsifier when used in current-events analysis.
+    bias_scope: "Long-form interpretive framing; rhetorical momentum risk."
+    notes: "High-value for idea generation and civilizational pattern extraction."
+
+  - id: operator_strategy_notebook
+    name: "Strategy Notebook"
+    url: ""
+    source_class: operator_note
+    lane_relevance: [local_context, strategy_memory, synthesis]
+    trust_tier: 4
+    update_cadence: continuous
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: conditional
+    artifact_allowed:
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - doctrine_candidate
+    artifact_disallowed:
+      - neutral_fact_summary
+    bias_scope: "Operator drift and recency effects."
+    notes: "Use for continuity and accumulated judgment, not as external validation."
+
+  - id: history_notebook
+    name: "History Notebook"
+    url: ""
+    source_class: operator_note
+    lane_relevance: [historical, civilizational, mechanism_memory]
+    trust_tier: 4
+    update_cadence: continuous
+    last_reviewed: "YYYY-MM-DD"
+    promotion_eligible: conditional
+    artifact_allowed:
+      - resonance_note
+      - analogy_audit
+      - strategy_notebook
+      - doctrine_candidate
+    artifact_disallowed:
+      - neutral_fact_summary
+    historical_use_notes: >
+      Preferred local destination for richer historical treatment when case-index
+      abstraction is insufficient.
+    bias_scope: "Local interpretive compression and chapter-selection bias."
+    notes: "Useful as local historical context, but not a substitute for present verification."
+
+review_rules:
+  - rule: "If artifact_type == neutral_fact_summary, do not rely solely on analyst, transcript, or operator_note."
+  - rule: "If historical framing is used, require mechanism, fit, mismatch, and falsifier."
+  - rule: "If artifact_type == decision_point_support, prefer at least one primary or data anchor."
+  - rule: "If source_class == transcript, label interpretation explicitly unless independently verified."
+  - rule: "If doctrine_candidate is proposed, require more than one source cluster or repeated local use."
+  - rule: "If a source repeatedly contributes only rhetoric and not judgment, downgrade or prune it."
+
+maintenance:
+  review_cadence: monthly
+  prune_when:
+    - "source is no longer used in real work-strategy artifacts"
+    - "source repeatedly adds rhetoric without decision value"
+    - "source registry becomes bloated or duplicative"
+  healthy_when:
+    - "human policy and yaml shape agree"
+    - "source classes map clearly to artifact types"
+    - "historical framing is disciplined rather than ornamental"
+    - "promotion eligibility remains selective"

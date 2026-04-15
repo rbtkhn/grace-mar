@@ -1,15 +1,23 @@
-# Copy one block per source into authorized-sources.yaml (or extend via sync script).
-# IDs: WS-SRC-NNNN (four digits, operator-assigned).
+# Copy one block per source into authorized-sources.yaml.
+# IDs: snake_case slug (e.g. us_white_house, alexander_mercouris).
+# source_class: primary | data | reporting | analyst | transcript | operator_note
 
-id: WS-SRC-0000
-name: ""
-url: https://
-type: outlet
-lane_relevance:
-  - work-strategy
-trust_tier: 2
-update_cadence: weekly
-last_reviewed: "YYYY-MM-DD"
-promotion_eligible: true
-notes: ""
-bias_scope: ""
+- id: example_source
+  name: ""
+  url: "https://"
+  source_class: reporting
+  lane_relevance:
+    - geopolitical
+  trust_tier: 2
+  update_cadence: weekly
+  last_reviewed: "YYYY-MM-DD"
+  promotion_eligible: true
+  artifact_allowed:
+    - neutral_fact_summary
+    - current_events_analysis
+    - watch_support
+  artifact_disallowed: []
+  bias_scope: ""
+  historical_use_notes: ""
+  transcript_policy: ""
+  notes: ""
