@@ -134,6 +134,8 @@ Dashed edge: operator-authored [history-notebook](../history-notebook/README.md)
 
 **Civilizational bridge:** [civilizational-strategy-surface.md](../civilizational-strategy-surface.md) — thin operator bridge converting civilization_memory material into reusable strategy-grade objects (8 lenses, 12 case families, fit/mismatch/falsifier discipline). Cite case families and lenses from that surface when daily judgment leans on civilizational mechanism language; keep this notebook's pages as **thin citations**, not duplicated case essays.
 
+**Case catalog:** [case-index.md](../case-index.md) — concrete instance catalog (15 initial cases) with required fit/mismatch/falsifier template. Cite cases by `CASE-XXXX` id in daily judgment and weave entries; keep richer treatment in the History Notebook.
+
 ## Daily entry template
 
 Paste under `## YYYY-MM-DD` in `days.md` (newest at bottom), **or** create `chapters/YYYY-MM/pages/YYYY-MM-DD.md` with the same headings if using one file per day. For **episodic** entries, keep the same heading set under a non-date `## …` title. One **dated** day → at most one **published** `## YYYY-MM-DD` block for that date (when you use dates at all).
