@@ -52,12 +52,18 @@
 | `alastair-crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `daniel-davis`, × `seyed-marandi`, × `trita-parsi` |
 | `glenn-diesen` | Glenn Diesen | **Eurasia / multipolar** discourse; **non-Western** institutional / rationality frames when distinct from **Mearsheimer**’s structural-realist register | `Diesen` in cold | × `john-mearsheimer`, × `douglas-macgregor`, × `robert-pape`, × `jeffrey-sachs` |
 | `jeffrey-sachs` | Jeffrey Sachs | **UN / development–macro + DC institutions** pole: **deinstitutionalization** thesis (group process vs personalized executive); **relative decline** and **multipolar** misrecognition; **Congress** war-and-peace **vacuum**; cites **NYT** “room” narratives — **hypothesis-grade** capacity/health claims stay **tier-C** unless clinical primary | `Sachs`, `IRAN`, or `Hormuz` in cold | × `glenn-diesen`, × `john-mearsheimer`, × `alexander-mercouris` |
+| `jiang-xueqin` | Jiang Xueqin (Predictive History) | **Long-horizon civilizational / game-theory** lectures; PH is the sole upstream for notebook-facing Jiang ingest | `Jiang`, `PH`, or `predictive-history` in cold | × `john-mearsheimer`, × `glenn-diesen`, × `jeffrey-sachs` |
+| `martin-armstrong` | Martin A. Armstrong (`@ArmstrongEcon`) | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold | × `steve-jermy`, × `glenn-diesen`, × `jeffrey-sachs`, × `robert-pape` |
+
+**Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang-xueqin`. Do not route PH directly into other expert lanes or directly into knots. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
 
 ### Distinctive lane shorthands (recommended sentences)
 
 - **`robert-pape`:** This lane **names escalation as a trap** — a **commitment ratchet** on **demands** plus **staged** branches (e.g. **nuclear-stockpile** logic → **ground-force** scenarios, **Stage** framing, packaged graphics) — **not** a substitute for **`scott-ritter`** **Hormuz** **mechanics**, **`alexander-mercouris`** **room** **reads**, or **`john-mearsheimer`** **alliance** **geometry** alone; use **Typical pairings** and, when folded, **`### Judgment`** bullets such as **Thesis A — Pape / “escalation trap”** in the active month’s [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md) (replace **YYYY-MM**).
 
 - **Domestic plane (do not collapse):** **`robert-barnes`** tracks **liability**, **coalition sell**, and the **executive / TS** **chain**. **Pape** may add **U.S. audience** **or** **polling** **theses** (e.g. political support **hardening** under casualties) — keep those **hypothesis-grade** until **ingested** with **`verify:`** (dated poll, screenshot, or primary); **do not** **merge** with Barnes **without** a **labeled seam**.
+
+- **`martin-armstrong`:** **Cycle / timing** and **debt–war–commodity** convergence theses — **not** a substitute for **`steve-jermy`** **diesel / fertilizer / logistics** mechanics or **`jeffrey-sachs`** **institutional** reads without **tiered** verify; treat **“computer was right on timing”** claims as **hypothesis-grade** until **disclosed methodology** or **out-of-sample** documentation exists.
 
 ### Quantitative thread metrics (illustrative — civ-mem–style calibration)
 
@@ -88,6 +94,8 @@
 | `alastair-crooke` | 0.75 | 0.39 | 0.70 | Levant room and spoiler logic hang together as a worldview. Spoiler readings often stay open until events force a fork. He appears often enough next to other specialists that the bridge score stays solid. |
 | `glenn-diesen` | 0.77 | 0.43 | 0.79 | Multipolar language is clearly his own—not a copy of standard U.S. structural realism—so you can tell when Diesen is speaking. Closure looks like his peer group: partly about time and evidence. He is frequently read alongside other realist anchors when the week demands comparison. |
 | `jeffrey-sachs` | 0.73 | 0.38 | 0.71 | Institutional-decay and macro-development framing is recognizable—UN/DC process contrasted to personalized executive behavior. Many strongest claims (war-room origin stories, capacity) need primaries before they close. Often paired with **Diesen** on multipolar episodes rather than as the widest mechanics hub. |
+| `jiang-xueqin` | 0.70 | 0.35 | 0.65 | Long-horizon PH / game-theory material is coherent inside its archive; calendar-facing checks are slow. Notebook use stays bounded by the PH routing rule; pairs with realist and multipolar lanes when the operator explicitly bridges. |
+| `martin-armstrong` | 0.68 | 0.32 | 0.55 | Cycle-timing and macro-war convergence claims are a recognizable brand; falsifiable windows need dated model outputs or method disclosure, not vibes. Useful beside energy-logistics or sovereign-debt weeks when Hormuz or fiscal stress is the question. |
 
 ---
 

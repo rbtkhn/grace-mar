@@ -57,6 +57,8 @@ CANONICAL_EXPERT_IDS: tuple[str, ...] = (
     "alastair-crooke",
     "glenn-diesen",
     "jeffrey-sachs",
+    "jiang-xueqin",
+    "martin-armstrong",
 )
 
 _EXPERT_IDS_SET = frozenset(CANONICAL_EXPERT_IDS)

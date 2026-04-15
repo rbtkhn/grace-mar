@@ -32,6 +32,5 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 **Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
 **Not Record.**
 <!-- strategy-expert-corpus:start -->
-## 2026-04-14
-- `YT | cold: Steve Jermy — same episode (**Deep Dive** / Davis host) — **close vs distant** blockade: **shooting-match** risk if **close**; **selective** interdiction → **“rogue piracy”** framing; **energy–GDP** slides (**Hormuz** closure → GDP dip / **2027–28** recovery tail per **rough** model); **Ever Given** **6:1** recovery **knock-on** (cites **Sam Mogliano**); **diesel** → **semis**/**fertilizer**/**famine** tail risks; **Ireland** barricades / **Europe** **vulnerability**; slight **disagree** w/ **Mearsheimer** “Titanic” — **“already hit the rocks”**; **Birol** worse-than-oil-shocks+COVID line (attributed) // hook: new **`steve-jermy`** **energy-systems** thread; numbers = **order-of-magnitude** until wires | https://www.youtube.com/watch?v=etxmqrdm3V0 | verify:same-URL-as-Davis-line+operator-transcript+charts-not-wire-facts | thread:steve-jermy`
+_(No `thread:` ingests in the current rolling window.)_
 <!-- strategy-expert-corpus:end -->

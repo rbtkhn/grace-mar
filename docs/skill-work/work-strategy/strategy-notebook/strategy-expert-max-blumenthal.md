@@ -32,6 +32,5 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 **Retention:** Rolling window (see script `--days`); older `## YYYY-MM-DD` sections inside the generated block are omitted on rebuild.
 **Not Record.**
 <!-- strategy-expert-corpus:start -->
-## 2026-04-14
-- `X | cold: Max Blumenthal (@MaxBlumenthal) — QT **Hot Spot** / **Morning Joe** clip (2026-04-13): **Hillary Clinton** on phone — claims **months** of **behind-the-scenes** advocacy on **Lebanon** process; Blumenthal adds **Miriam Adelson** / **Israel Hayom** (NYC) **network** thesis + alleges **Trump-admin** **warmongering** encouragement // hook: new **`max-blumenthal`** **elite-access** lane vs same-week **`trita-parsi`** **EU/Beltway** **framing**; **tier-C** until **Clinton** full quote + **MSNBC** transcript pinned | https://x.com/MaxBlumenthal/status/TBD-pin-exact | verify:operator-screenshot+pin-exact-status-URL+MSNBC-transcript-if-citing-Clinton | thread:max-blumenthal`
+_(No `thread:` ingests in the current rolling window.)_
 <!-- strategy-expert-corpus:end -->
