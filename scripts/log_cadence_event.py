@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Append a cadence event (coffee / dream / bridge / harvest / thanks) to work-cadence-events.md.
+Append a cadence event (coffee / coffee_pick / dream / bridge / harvest / thanks) to work-cadence-events.md.
 
 One line per run. Not Record truth; not self-memory; not a replacement for
 night-handoff.json or session-transcript.md. See docs/skill-work/work-cadence/.
@@ -38,12 +38,12 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVENTS_PATH = REPO_ROOT / "docs" / "skill-work" / "work-cadence" / "work-cadence-events.md"
 ANCHOR = "_(Append below this line.)_"
-KINDS = ("coffee", "dream", "bridge", "harvest", "thanks")
+KINDS = ("coffee", "coffee_pick", "dream", "bridge", "harvest", "thanks")
 
 HEADER = (
     "# Cadence events\n"
     "\n"
-    "> Append-only audit of **coffee**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.\n"
+    "> Append-only audit of **coffee**, **coffee_pick**, **dream**, **bridge**, **thanks**, and optional **harvest** runs.\n"
     "> **Not** Record truth. **Not** self-memory. **Not** a replacement for\n"
     "> handoff artifacts or `session-transcript.md`.\n"
     ">\n"

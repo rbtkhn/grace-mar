@@ -676,6 +676,27 @@ def run_auto_dream(
         )
         summary["event"] = event
 
+    if halted and emit_event:
+        cm_halt = resolve_cursor_model(explicit=cursor_model)
+        try:
+            append_cadence_event(
+                "dream",
+                user_id,
+                ok=False,
+                mode="strict",
+                cursor_model=cm_halt,
+                kv={
+                    "phase": phase,
+                    "integrity": "pass" if integrity_ok else "fail",
+                    "governance": "pass" if governance_ok else "fail",
+                    "mem_changed": str(memory_result.changed if memory_result else False).lower(),
+                    "handoff_written": "false",
+                    "halted": "true",
+                },
+            )
+        except Exception:
+            pass
+
     if apply and not halted:
         from datetime import datetime, timezone
 
@@ -837,6 +858,7 @@ def run_auto_dream(
                     "contradictions": str(counts.get("contradiction", 0)),
                     "civmem_echo_count": str(len(civ_echoes)),
                     "civmem_suppressed": str(bool(civ_suppressed)).lower(),
+                    "handoff_written": "true",
                 },
             )
         except Exception:
