@@ -23,6 +23,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CANONICAL_EXPERT_IDS: tuple[str, ...] = (
     "seyed-marandi",
     "scott-ritter",
+    "steve-jermy",
     "trita-parsi",
     "robert-barnes",
     "douglas-macgregor",
