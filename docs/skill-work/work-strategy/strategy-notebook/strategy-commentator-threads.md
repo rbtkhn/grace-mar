@@ -144,6 +144,7 @@ Threads are **semi-permeable** by design; “optimization” here means **explic
 | **Index pairings** | Pre-approved **expert × expert** crosses for `batch-analysis` — start here before inventing new pairings. |
 | **`verify:` tier** | **`tier-A`** / **`operator-transcript`** / etc. — controls how far a cross-thread line may travel outside the notebook. |
 | **One primary `thread:` per ingest** | Keeps **drift** and **accuracy** joins clean; secondary voice = **second line** or **batch-analysis**. |
+| **`crosses:` vs `seam:`** | **`crosses:<expert_id>+<expert_id>`** — use on **`batch-analysis`** when **two indexed ingests** each carry **`thread:`** for those slugs. **`seam:<slug>+<slug>`** — use when the batch compares **thematic planes** (government **X**, wire bundle, **ROME**, same-week topic fork) and **`crosses:`** would wrongly imply **two table Anchors**; example: **Spain × China** in [daily-strategy-inbox.md](daily-strategy-inbox.md) (`seam:sanchez-xi-summit+hormuz-brief-same-week`). |
 
 **Optional `verify:` tail tokens** (all **optional** — use when you want grep + intent explicit):
 

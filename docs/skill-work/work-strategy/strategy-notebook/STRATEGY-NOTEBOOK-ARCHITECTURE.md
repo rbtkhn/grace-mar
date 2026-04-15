@@ -56,6 +56,8 @@ The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **prim
 
 **Success (rough):** Clearer **month arc** and **polyphony** in `meta.md`; **more consistent** tri-mind when **stakes are high** — not necessarily more tri-mind pages in total.
 
+<a id="daily-strategy-inbox-accumulator"></a>
+
 ### Daily strategy inbox (accumulator)
 
 **Accumulator date:** The inbox’s **`Accumulator for: YYYY-MM-DD`** line tracks the **local calendar day from the system timestamp** (host clock / session “today” when the file is maintained). **Weave** does **not** advance that date by policy—only **calendar rollover** (or an edit that syncs the line to the clock) does. See [`daily-strategy-inbox.md`](daily-strategy-inbox.md) header.
