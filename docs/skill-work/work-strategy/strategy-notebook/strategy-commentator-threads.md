@@ -54,6 +54,8 @@
 | `jeffrey-sachs` | Jeffrey Sachs | **UN / development–macro + DC institutions** pole: **deinstitutionalization** thesis (group process vs personalized executive); **relative decline** and **multipolar** misrecognition; **Congress** war-and-peace **vacuum**; cites **NYT** “room” narratives — **hypothesis-grade** capacity/health claims stay **tier-C** unless clinical primary | `Sachs`, `IRAN`, or `Hormuz` in cold | × `glenn-diesen`, × `john-mearsheimer`, × `alexander-mercouris` |
 | `jiang-xueqin` | Jiang Xueqin (Predictive History) | **Long-horizon civilizational / game-theory** lectures; PH is the sole upstream for notebook-facing Jiang ingest | `Jiang`, `PH`, or `predictive-history` in cold | × `john-mearsheimer`, × `glenn-diesen`, × `jeffrey-sachs` |
 | `martin-armstrong` | Martin A. Armstrong (`@ArmstrongEcon`) | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold | × `steve-jermy`, × `glenn-diesen`, × `jeffrey-sachs`, × `robert-pape` |
+| `jacques-baud` | Jacques Baud | **NATO / UN / intelligence-adjacent** framing: **law-of-war**, **HUMINT vs OSINT** limits, **European security** and **cross-theater** reads; **convergence vs tension** between **official narrative** and **evidential** claims — **complements** **ORBAT** lanes without duplicating them | `Baud`, `NATO`, `UN`, or `EU` in cold | × `scott-ritter`, × `douglas-macgregor`, × `daniel-davis`, × `robert-barnes` |
+| `brian-berletic` | Brian Berletic (`@BrianJBerletic`, The New Atlas) | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold | × `scott-ritter`, × `steve-jermy`, × `glenn-diesen`, × `daniel-davis`, × `john-mearsheimer` |
 
 **Special routing rule — Predictive History:** PH-derived notebook-facing ingest must use `thread:jiang-xueqin`. Do not route PH directly into other expert lanes or directly into knots. See [strategy-notebook/README.md](README.md) § **Predictive History routing rule**.
 
@@ -64,6 +66,10 @@
 - **Domestic plane (do not collapse):** **`robert-barnes`** tracks **liability**, **coalition sell**, and the **executive / TS** **chain**. **Pape** may add **U.S. audience** **or** **polling** **theses** (e.g. political support **hardening** under casualties) — keep those **hypothesis-grade** until **ingested** with **`verify:`** (dated poll, screenshot, or primary); **do not** **merge** with Barnes **without** a **labeled seam**.
 
 - **`martin-armstrong`:** **Cycle / timing** and **debt–war–commodity** convergence theses — **not** a substitute for **`steve-jermy`** **diesel / fertilizer / logistics** mechanics or **`jeffrey-sachs`** **institutional** reads without **tiered** verify; treat **“computer was right on timing”** claims as **hypothesis-grade** until **disclosed methodology** or **out-of-sample** documentation exists.
+
+- **`jacques-baud`:** **Law + intel + NATO/Europe** spine for **why narratives cohere or crack** — **not** a substitute for **`scott-ritter`** **sea-control** **mechanics** or **`robert-barnes`** **domestic liability** **chain**; use **`batch-analysis`** when the same week needs **evidential tension** across **Pentagon/Western** claims vs **treaty / mandate** framing.
+
+- **`brian-berletic`:** **Production and sanctions** as **strategic variables** — **not** a second **`scott-ritter`** **ORBAT** voice; pairs when **headline** **kinetic** **wins** need a **factory / stockpile / resupply** **counter-narrative** (**`steve-jermy`** for **closure economics**, **`glenn-diesen`** for **multipolar** **institutions**).
 
 ### Quantitative thread metrics (illustrative — civ-mem–style calibration)
 
@@ -96,6 +102,8 @@
 | `jeffrey-sachs` | 0.73 | 0.38 | 0.71 | Institutional-decay and macro-development framing is recognizable—UN/DC process contrasted to personalized executive behavior. Many strongest claims (war-room origin stories, capacity) need primaries before they close. Often paired with **Diesen** on multipolar episodes rather than as the widest mechanics hub. |
 | `jiang-xueqin` | 0.70 | 0.35 | 0.65 | Long-horizon PH / game-theory material is coherent inside its archive; calendar-facing checks are slow. Notebook use stays bounded by the PH routing rule; pairs with realist and multipolar lanes when the operator explicitly bridges. |
 | `martin-armstrong` | 0.68 | 0.32 | 0.55 | Cycle-timing and macro-war convergence claims are a recognizable brand; falsifiable windows need dated model outputs or method disclosure, not vibes. Useful beside energy-logistics or sovereign-debt weeks when Hormuz or fiscal stress is the question. |
+| `jacques-baud` | 0.76 | 0.40 | 0.62 | Law-of-war and alliance-mandate framing stays recognizable across crises; many claims hinge on classified or contested sourcing, so closure is slow. Often pulled in when the notebook needs European or UN-adjacent tension beside U.S. military-dissent lanes. |
+| `brian-berletic` | 0.74 | 0.36 | 0.58 | Industrial and sanctions-throughput arguments are a clear signature; headline battle maps age faster than factory counts, so pair him when logistics and attrition matter. Bridges to energy-system and realist lanes without replacing hull-level ORBAT work. |
 
 ---
 
