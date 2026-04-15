@@ -131,7 +131,7 @@ Return a short night-close brief with:
 - **When present in `last-dream.json`:** coffee **24h rollup** (runs, mode mix, optional **menu picks** from `coffee_pick` cadence lines), **three execution paths** with **suggested index**: Steward when this run’s **integrity or governance failed**, else Steward when **gate pending > `max_pending_candidates`** (from `config/fork-config.json`), else **calendar mod-3** on tomorrow’s yearday; **`tomorrow_inherits`** one-liner (operational hint only); **civ-mem echoes** (default **one** hit above overlap threshold — each carries **“Analogy candidate only — not evidence, not recommendation, not Record”**; cite the disclaimer)
 - **capability shift** (model category): sources checked / total, REVIEW alerts, monitor alerts — or "no alerts" if quiet
 - one sentence on what tomorrow inherits from this run
-- **Strategy notebook** / **Xavier journal:** one line each when relevant — strategy-notebook is **deferred** unless the operator asked to **weave** / **`fold`** (legacy) in-thread; Xavier per § below
+- **Strategy notebook** / **Xavier journal:** one line each when relevant — strategy-notebook is **deferred** unless the operator asked to **weave** / **`weave`** in-thread; Xavier per § below
 
 If nothing important changed, say so plainly. A quiet run is success.
 
@@ -214,7 +214,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 ## Strategy notebook (LIB-0153) — optional FYI; **not** owned by `dream`
 
-**Contract (repo):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* — **hybrid** dated + episodic sections; **inbox = raw**, **notebook = synthesized**; **weave** when the operator runs **`strategy`** or directs **`weave`** / **`fold`** (legacy) — **not** because night close ran.
+**Contract (repo):** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model* — **hybrid** dated + episodic sections; **inbox = raw**, **notebook = synthesized**; **weave** when the operator runs **`strategy`** or directs **`weave`** — **not** because night close ran.
 
 **Telemetry only:** `python3 scripts/auto_dream.py` (and `last-dream.json`) still include **`dream_catchup`**: `local_calendar_dates`, `previous_dream_generated_at`, `timezone`, and **`strategy_notebook_missing_day_headers`** (dates in the catch-up window with no matching `## YYYY-MM-DD` in the relevant `chapters/YYYY-MM/days.md` files). Treat this as **optional FYI** if you track calendar coverage — **not** a mandatory stub list and **not** a reason for the agent to auto-write the notebook during `dream`.
 
@@ -232,7 +232,7 @@ If **strict** dream halts for the **same** integrity or governance **reason** mo
 
 1. After Step 1, you **may** read **`dream_catchup.strategy_notebook_missing_day_headers`** and mention it **one line** in the night-close brief if useful — **or skip** if the operator does not calendar-track the notebook.
 2. **Do not** auto-weave strategy inbox, **do not** add stubs, **do not** edit `days.md` unless the operator **explicitly** asks in this thread.
-3. If the operator **explicitly** asks to **weave** / **fold** strategy inbox or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
+3. If the operator **explicitly** asks to **weave** strategy inbox or add stubs in the same message, follow [skill-strategy](../skill-strategy/SKILL.md) and architecture; otherwise defer to a later **`strategy`** session.
 
 **Boundaries:** **WORK only** — not Record, not `self.md` / EVIDENCE / gate merge.
 

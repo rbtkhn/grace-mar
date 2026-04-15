@@ -1,6 +1,6 @@
 {
   "schemaVersion": "2.0.0-work-strategy",
-  "generatedAt": "2026-04-15T15:54:02.482687+00:00",
+  "generatedAt": "2026-04-15T18:32:51.351429+00:00",
   "lane": "work-strategy",
   "metrics": {
     "structure": {
@@ -16,8 +16,9 @@
       "months": {
         "2026-04": {
           "dated_entries": 8,
-          "avg_sections_per_entry": 3.33,
-          "avg_links_per_entry": 8.2,
+          "knot_pages": 6,
+          "avg_sections_per_entry": 3.44,
+          "avg_links_per_entry": 10.4,
           "open_carry_forward": 2
         }
       }

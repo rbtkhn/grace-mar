@@ -4,13 +4,16 @@
 |--------|--------|
 | **Date** | 2026-04-13 |
 | **knot_label** (machine slug) | `marandi-ritter-mercouris-hormuz-scaffold` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Day block** | [`days.md` § 2026-04-13](../days.md#2026-04-13) |
+| **Continuity entry** | [`days.md` § 2026-04-13](../days.md#2026-04-13) |
 
-### Role
+### Page type (**pick per knot** — mixed types allowed)
 
-- [ ] **Snapshot**
-- [x] **Abstract**
-- [x] **Link hub** — shared **Islamabad collapse + Hormuz leverage** scaffold across three **indexed** **lanes**; long prose in `days.md`
+- [ ] **Thesis page**
+- [x] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [x] **Link hub**
 
 ### Lineage — **triple anchor** (same Judgment sentence)
 
@@ -21,6 +24,14 @@
 **Same showrunner, structural lanes (not interchangeable):** **`daniel-davis`** Deep Dive × **`charles-freeman`** (process failure, ROE, Bessent vs recession — URL TBD); × **`john-mearsheimer`** (15 vs 10 point frames, bargaining asymmetry, allies clips — URL TBD). **`thread:trita-parsi`** — Breaking Points / Quincy — Ravid red-lines leak tier — **not** WH primary.
 
 **Process overlap:** **`thread:larry-johnson`** × Mercouris (Napolitano / Johnson digest vs Duran monologue) — **strip to process + price** for parity; **park** Bab el-Mandeb / pipeline under verify ([`days.md` Judgment](../days.md#2026-04-13)).
+
+### History resonance
+
+none this pass
+
+### Civilizational bridge
+
+none this pass
 
 ### Cross-day links
 

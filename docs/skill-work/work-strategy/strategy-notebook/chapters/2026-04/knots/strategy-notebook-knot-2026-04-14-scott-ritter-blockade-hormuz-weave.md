@@ -4,13 +4,16 @@
 |--------|--------|
 | **Date** | 2026-04-14 |
 | **knot_label** (machine slug) | `scott-ritter-blockade-hormuz-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Day block** | [`days.md` § 2026-04-14](../days.md) |
+| **Continuity entry** | [`days.md` § 2026-04-14](../days.md) |
 
-### Role (**pick per knot** — mixed modes allowed)
+### Page type (**pick per knot** — mixed types allowed)
 
-- [ ] **Snapshot** — freeze emphasis / wording from a weave pass  
-- [x] **Abstract** — short thesis; long prose stays in `days.md`  
-- [x] **Link hub** — pointers to inbox, **sister knots**, and **`thread:`** lines on **Hormuz blockade**  
+- [ ] **Thesis page**
+- [x] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [x] **Link hub**
 
 ### Lineage — **`thread:scott-ritter`** (anchor)
 
@@ -31,6 +34,14 @@
 | [knot-2026-04-14-parsi-davis-war-powers.md](knot-2026-04-14-parsi-davis-war-powers.md) | `parsi-davis-war-powers` | **`trita-parsi`**, **`daniel-davis`** | **Speech-act** / **war-powers** **accountability** vs **Ritter** **sea-control** mechanics — **orthogonal** planes; **Parsi × Davis** `batch-analysis` names **Mercouris**/**Barnes**/**Mearsheimer** as **layers**, not substitutes for **hull** facts. |
 | [knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) | `diesen-vi14-petrodollar-vs-sachs-hormuz` | **`glenn-diesen`**, **`jeffrey-sachs`** | **Diesen × Sachs** **Hormuz blockade** episode ([YouTube `S6mlCuvKKIQ`](https://www.youtube.com/watch?v=S6mlCuvKKIQ)) — **institutional** / **chaos** thesis; **do not** merge **PH vi-14** petrodollar lane with **Ritter** **ORBAT** without **seam**; **Ritter** = **operations** vocabulary, **Sachs** = **DC process** **hypothesis** tier. |
 | [knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) | `mercouris-mearsheimer-lebanon-split` | **`alexander-mercouris`**, **`john-mearsheimer`** | **Lebanon**/**Washington** **fork** — **adjacent** **news week** to **Hormuz** **blockade**; use for **legitimacy vs structure** **language** only — **not** a substitute for **Ritter** **interdiction** **mechanics**. |
+
+### History resonance
+
+none this pass
+
+### Civilizational bridge
+
+none this pass
 
 ### Signal
 

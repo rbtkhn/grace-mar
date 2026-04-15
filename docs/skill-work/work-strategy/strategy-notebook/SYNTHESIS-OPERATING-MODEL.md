@@ -1,6 +1,6 @@
 # Strategy notebook — synthesis operating model
 
-**Purpose:** A **single ergonomic entry point** for turning inputs into a daily `days.md` page. Deep algorithms (condense tiers, summarize-and-condense steps, word targets) stay in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md); **minds recipes** stay in [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md). This file answers: *what do I run, in what order, and where does each kind of content go?*
+**Purpose:** A **single ergonomic entry point** for turning inputs into strategy-notebook knots. Deep algorithms (condense tiers, summarize-and-condense steps, word targets) stay in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md); **minds recipes** stay in [MINDS-SKILL-STRATEGY-PATTERNS.md](../minds/MINDS-SKILL-STRATEGY-PATTERNS.md). This file answers: *what do I run, in what order, and where does each kind of content go?*
 
 **Territory:** WORK / operator strategy — not Record unless promoted through the gate.
 

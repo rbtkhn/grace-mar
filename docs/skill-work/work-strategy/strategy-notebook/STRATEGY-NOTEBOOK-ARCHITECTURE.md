@@ -11,37 +11,37 @@
 **Canonical long-form sequence** for work-strategy judgment (inbox-first; complements the three-move minimum in [DEFAULT-PATH.md](../DEFAULT-PATH.md)):
 
 1. **Accumulate** in [`daily-strategy-inbox.md`](daily-strategy-inbox.md) — raw capture, paste-ready lines (see that file for canonical ingest shape).
-2. **Weave** into `chapters/YYYY-MM/days.md` on **explicit** operator weave intent, **`dream`** weave when adopted, or equivalent — **synthesis** (Signal / Judgment / Links / Open), not an inbox mirror.
+2. **Compose or revise knot(s)** on **explicit** operator weave intent, **`dream`** weave when adopted, or equivalent — **synthesis** (Signal / Judgment / Links / Open), not an inbox mirror. Update `days.md` continuity entry for the same date.
 3. **Optionally mark** reusable material with lightweight escalation cues (`[watch]`, `[decision]`, `[promote]`) — definitions and sparing-use rules: [NOTEBOOK-PREFERENCES.md#escalation-marker-preference](NOTEBOOK-PREFERENCES.md#escalation-marker-preference).
 4. **Escalate artifacts** — watch support, analogy audit, or a **decision point** — only when a signal is maturing and **real options** are needed.
 5. **Touch [STRATEGY.md](../STRATEGY.md)** only when a watch, analogy line, operator log arc, or doctrine note has **stabilized** (promotion ladder).
 6. **Do not** update Record, SELF, EVIDENCE, or Voice from this lane.
 
-**Rule of thumb:** **Inbox** = intake SSOT for rough capture; **`days.md`** (after weave) = synthesis SSOT for governed judgment.
+**Rule of thumb:** **Inbox** = intake SSOT for rough capture; **knots** = page-level judgment (after weave); **`days.md`** = chronology and continuity.
 
-**Default output path (chat / assistant):** chat → inbox → **`days.md` only on explicit weave** — same discipline as [Expert choreography](#expert-choreography) *Output path (default)* below.
+**Default output path (chat / assistant):** chat → inbox → **knots + `days.md` continuity only on explicit weave** — same discipline as [Expert choreography](#expert-choreography) *Output path (default)* below.
 
-## Weave vs fold (terminology)
+## Weave (terminology)
 
-**Weave** is the **operator command** to merge [daily-strategy-inbox.md](daily-strategy-inbox.md) into `chapters/YYYY-MM/days.md` with Signal / Judgment / Links / Open discipline. Say **`weave`**, or run **`strategy`** with explicit **weave** intent. **Legacy synonym:** **`fold`** (paper metaphor) — still honored in chat; older grep/git and JSONL fields may keep `fold` (e.g. `fold_kind` in [FOLD-LEARNING.md](FOLD-LEARNING.md)). **Note:** Later **“Weaving …”** bullets under § *Daily strategy inbox* (Rome, Putin, §1 watches) mean **integrating a channel over months** — related textile image, **not** the same token as the **`weave`** command.
+**Weave** is the **operator command** to compose or revise knot(s) from [daily-strategy-inbox.md](daily-strategy-inbox.md) material and update `days.md` continuity. The verb describes the composing action; the knot is the product. Say **`weave`**, or run **`strategy`** with explicit **weave** intent. Older grep/git and JSONL fields may keep `fold` (e.g. `fold_kind` in [FOLD-LEARNING.md](FOLD-LEARNING.md)). **Note:** Later **“Weaving …”** bullets under § *Daily strategy inbox* (Rome, Putin, §1 watches) mean **integrating a channel over months** — related textile image, **not** the same token as the **`weave`** command.
 
 ## Thesis
 
-A **cumulative, dated record** of how the operator reads signals, weighs analogies, and steers frameworks (Islamabad, Rome, briefs, STRATEGY) — distinct from [work-strategy-history.md](../work-strategy-history.md) (lane events) and from [STRATEGY.md](../STRATEGY.md) (milestone ledger). Under **`skill-strategy`**, this notebook is the **primary surface for governed strategic accumulation** in WORK: **explicit seams**, **explicit promotion** to [STRATEGY.md](../STRATEGY.md) when arcs stabilize, and **explicit distance** from companion **Record** truth ([AGENTS.md](../../../../AGENTS.md)).
+A **cumulative, page-organized record** of how the operator reads signals, weighs analogies, and steers frameworks (Islamabad, Rome, briefs, STRATEGY) — distinct from [work-strategy-history.md](../work-strategy-history.md) (lane events) and from [STRATEGY.md](../STRATEGY.md) (milestone ledger). Under **`skill-strategy`**, this notebook is the **primary surface for governed strategic accumulation** in WORK: **explicit seams**, **explicit promotion** to [STRATEGY.md](../STRATEGY.md) when arcs stabilize, and **explicit distance** from companion **Record** truth ([AGENTS.md](../../../../AGENTS.md)).
 
 ### Symphony of Civilization (operator gloss)
 
-**Symphony of Civilization** is the notebook’s **polyphonic** image: **multiple civilizational and expert registers** (voice planes in briefs, indexed commentators in [strategy-commentator-threads.md](strategy-commentator-threads.md)) sound **together** without **collapsing** into one melody. A daily **`## YYYY-MM-DD`** page is a **movement** on the **score**; **`batch-analysis`** names **convergence vs tension** between **parts**. **Experts** (indexed voices) supply **instrument lines**; the **operator** sets **balance and tempo** (**weave** / **fold** (legacy), Thesis A/B, **`verify:`** discipline)—not the experts.
+**Symphony of Civilization** is the notebook’s **polyphonic** image: **multiple civilizational and expert registers** (voice planes in briefs, indexed commentators in [strategy-commentator-threads.md](strategy-commentator-threads.md)) sound **together** without **collapsing** into one melody. Each **knot** is a **movement** on the **score**; **`batch-analysis`** names **convergence vs tension** between **parts**. **Experts** (indexed voices) supply **instrument lines**; the **operator** sets **balance and tempo** (**weave**, Thesis A/B, **`verify:`** discipline)—not the experts.
 
 ### Primary output (work-strategy)
 
-The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **primary work output** of the work-strategy lane: **synthesized judgment** in dated and/or episodic sections (see **Entry model** above). When you use a calendar block, prefer **one `## YYYY-MM-DD` section per day you actually commit** — not a mandatory stub every day. **Inputs** that feed it — daily briefs, transcript digests, sessions, weak-signal notes, framework drafts — are **not** substitutes for the notebook; they inform **woven** pages (after **weave**).
+The **strategy-notebook knots** are the **primary written units** of the work-strategy lane: **synthesized judgment** in atomic pages composed through weaving. `days.md` + `meta.md` provide chronology and month-level state. When you use a calendar block in `days.md`, prefer **one `## YYYY-MM-DD` section per day you actually commit** — not a mandatory stub every day. **Inputs** that feed it — daily briefs, transcript digests, sessions, weak-signal notes, framework drafts — are **not** substitutes for the notebook; they inform **woven** pages (after **weave**).
 
 **Operator preferences** (minimum sections, variable length vs default word band, weave rhythm, lens offers, weekly promotion, Thesis A/B splits): [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) — **narrows** practice; architecture below remains the repo spec when no override applies.
 
 ## Entry model (operator contract)
 
-**Hybrid spine (default):** The notebook uses **`## YYYY-MM-DD`** dated blocks when a **calendar anchor** helps scanability (news cycle, brief date, “what we said that day”). It also allows **episodic or thematic** top-level sections when one day is not the right unit — e.g. `## Weave — YYYY-MM-DD–YYYY-MM-DD (short label)` (**legacy:** `## Fold — …`) or `## Lens pass — Barnes — YYYY-MM-DD`. You are **not** required to produce **exactly one** dated section per local calendar day. Prefer **one substantive block per weave** over empty stubs.
+**Hybrid spine (default):** The notebook uses **`## YYYY-MM-DD`** dated blocks in `days.md` as the **chronology layer** — tracking which knots were active, what changed, and what should be resumed tomorrow. Knots hold the substantive writing. `days.md` also allows **episodic or thematic** top-level sections when one day is not the right unit — e.g. `## Weave — YYYY-MM-DD–YYYY-MM-DD (short label)` or `## Lens pass — Barnes — YYYY-MM-DD`. You are **not** required to produce **exactly one** dated section per local calendar day. Prefer **one substantive block per weave** over empty stubs.
 
 **Inbox vs notebook:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) is the **raw accumulator** (firehose, paste-ready lines). **`days.md` / episodic headings** hold **synthesized** judgment (Signal / Judgment / Links / Open — not a raw dump). **Weaving** (inbox → notebook) is a **meaning move**, not a file-sync.
 
@@ -79,7 +79,7 @@ The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **prim
 
 **Accumulator date:** The inbox’s **`Accumulator for: YYYY-MM-DD`** line tracks the **local calendar day from the system timestamp** (host clock / session “today” when the file is maintained). **Weave** does **not** advance that date by policy—only **calendar rollover** (or an edit that syncs the line to the clock) does. See [`daily-strategy-inbox.md`](daily-strategy-inbox.md) header.
 
-**Weave timing:** **Default accountability** for weaving inbox → notebook is **operator-triggered**: a **`strategy`** session with explicit weave intent, or an explicit **`weave`** directive (**legacy:** **`fold`**) — not an automatic requirement at **`dream`**. When you weave into a **dated** block, align the target **`## YYYY-MM-DD`** with the **calendar day** you intend (timestamp-aligned). **Manual weave** anytime the operator directs (intra-day **cognitive cadence**). Updating **`Accumulator for`** at calendar rollover is unchanged — see [`daily-strategy-inbox.md`](daily-strategy-inbox.md) § *Weave rhythm*.
+**Weave timing:** **Default accountability** for weaving inbox → notebook is **operator-triggered**: a **`strategy`** session with explicit weave intent, or an explicit **`weave`** directive (**legacy:** **`weave`**) — not an automatic requirement at **`dream`**. When you weave into a **dated** block, align the target **`## YYYY-MM-DD`** with the **calendar day** you intend (timestamp-aligned). **Manual weave** anytime the operator directs (intra-day **cognitive cadence**). Updating **`Accumulator for`** at calendar rollover is unchanged — see [`daily-strategy-inbox.md`](daily-strategy-inbox.md) § *Weave rhythm*.
 
 **File:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) — **append-only** during the local day for rough captures (bullets, links, paste). **`strategy`** sessions **add** here first if you want separation between scratch and finished page; you may still draft directly in `days.md` when you prefer. The **canonical, grep-friendly line format** for strategy ingests (“paste-ready one-liner”) is specified **only** in that file’s § *Paste-ready one-liner (canonical unit)* — not duplicated here. **Optional two-tier gist** (`cold: … // hook: …`) separates **source paraphrase** from **notebook placement** — same subsection. **Multi-item** capture with optional **common analysis** (one line per excerpt, plus an optional `batch-analysis` note) lives in that file’s § *Multi-item ingest (optional common analysis)*.
 
@@ -99,7 +99,7 @@ The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **prim
 
 **On explicit operator weave (intra-day or closeout):** Weave inbox content into **`days.md`** — usually under an official **`## YYYY-MM-DD`** block, or under an **episodic** heading if that fits better (synthesize, don’t duplicate raw paste). **`dream`** does **not** require this **weave**; optional night-close reminders may mention notebook gaps — see **Entry model**. **Assistants** treat inbox as the capture target for **`strategy` ingests**; they do **not** merge into `days.md` until the operator **directs** a **weave**. The rolling inbox is **not** automatically cleared each maintenance run — keep scratch across nights if useful, **clear** manually when you want a clean buffer, and **prune** when the scratch section (below the append line) exceeds **~20000 characters** by dropping **oldest** lines first in **~5000-character blocks** until **≤ ~20000 characters** remain. If a new day begins with stale inbox lines, **weave or archive** before appending (merge into the correct dated or episodic page, or move stale lines under a one-line “backlog” note you resolve the same session).
 
-**Contrast:** `days.md` is the **durable dated journal**; the inbox is a **volatile buffer** — like a lab notebook’s tear-off sheet compiled into the bound volume at night.
+**Contrast:** `days.md` is the **durable dated continuity surface**; the inbox is a **volatile buffer** — like a lab notebook’s tear-off sheet compiled into the bound volume at night.
 
 [STRATEGY.md](../STRATEGY.md) is a **durable ledger** (watches, analogy list, operator log). **Promotion** into STRATEGY when an arc stabilizes is optional; it does **not** replace writing the notebook block.
 
@@ -107,14 +107,14 @@ The **strategy-notebook** (`chapters/YYYY-MM/days.md` + `meta.md`) is the **prim
 flowchart LR
   inputs[Briefs_transcripts_sessions]
   hn[History_notebook_LIB0156]
-  nb[Strategy_notebook_primary]
+  nb[Strategy_notebook_knots]
   st[STRATEGY_md_optional_stitch]
   inputs --> nb
   hn -.->|optional_mechanism_wires| nb
   nb --> st
 ```
 
-Dashed edge: operator-authored [history-notebook](../history-notebook/README.md) chapters supply **durable pattern IDs** and arcs; the daily page cites them in **`### History resonance`** — not a second corpus dump.
+Dashed edge: operator-authored [history-notebook](../history-notebook/README.md) chapters supply **durable pattern IDs** and arcs; knots cite them in **`### History resonance`** (Lineage section) — not a second corpus dump.
 
 ## Book promise
 
@@ -299,7 +299,7 @@ Synthesis **compresses and routes** sources into the notebook; it does **not** d
 
 ### Weave choice and section weighting (inbox → `## YYYY-MM-DD`)
 
-A **weave** is a **promotion decision**: which scratch lines become **`### Signal`**, **`### Judgment`**, **`### Links`**, and **`### Open`** — **not** a mirror of ingest order, inbox length, or equal padding in every section. **Legacy term:** **fold** (same operation).
+A **weave** is a **promotion decision**: which scratch lines become **`### Signal`**, **`### Judgment`**, **`### Links`**, and **`### Open`** — **not** a mirror of ingest order, inbox length, or equal padding in every section.
 
 | Question the weave answers | Typical landing |
 |---------------------------|-----------------|
@@ -308,15 +308,15 @@ A **weave** is a **promotion decision**: which scratch lines become **`### Signa
 | What must be **citable** without pasting bodies? | **Links** (briefs, primaries, framework paths, paste-grade pointers). |
 | What did weaving **surface as unstable** (pins, verify, next tests)? | **Open** — often grows on **early** intra-day weaves. |
 
-**Intra-day weaves** iterate **one** consolidated **`## YYYY-MM-DD`** block in `days.md`: later weaves **merge into** the same heading (edit in place; tighten **Judgment**) unless you need a rare **Update (later weave):** trace; avoid **two parallel essays** for the same calendar day **in that single block**. **Knot sidecars (optional):** if you name weave outputs as separate **`knot-*.md`** files, **multiple knots per calendar day** are expected—one file per weave wave, distinguished by basename (e.g. `knot-YYYY-MM-DD-<slug>.md`); register each row in [knot-index.yaml](knot-index.yaml) (same **`date`**, unique **`path`**). **Template:** [knot-template.md](knot-template.md). The dated `days.md` block remains the **rolling synthesis** for that day; knot files are **snapshots** or **labeled waves**—operator policy defines whether they duplicate, abstract, or link from the day block.
+**Intra-day weaves** iterate **one** consolidated **`## YYYY-MM-DD`** block in `days.md`: later weaves **merge into** the same heading (edit in place; tighten **Judgment**) unless you need a rare **Update (later weave):** trace; avoid **two parallel essays** for the same calendar day **in that single block**. **Knot files (atomic pages):** knots are the primary written units—**`knot-*.md`** files under `chapters/YYYY-MM/knots/`. **Multiple knots per calendar day** are expected—one file per page, distinguished by basename (e.g. `knot-YYYY-MM-DD-<slug>.md`); register each row in [knot-index.yaml](knot-index.yaml) (same **`date`**, unique **`path`**). **Template:** [knot-template.md](knot-template.md). The dated `days.md` block is the **chronology and continuity** layer for that day; knot files are **enduring notebook pages**—composed through weaving; `days.md` links to them and tracks continuity.
 
 **Anti-patterns:** **Judgment** bloat (every `batch-analysis` line promoted); **empty ritual** weaves; page structure that **mirrors inbox ordering**; duplicating raw paste across sections.
 
 **Operator test (one screen):** If someone read **only** this day block, what would they **know**, **believe with what caveats**, and **still need to check**? — **Signal** / **Judgment** / **Open** carry those three loads; **Links** carry **how to check**.
 
-**Optional weave ledger (recursive learning):** Append-only JSONL + CLI under `users/<id>/strategy-fold-events.jsonl` — compression proxies and optional self-ratings; **not** Record. CLI filenames still use **`fold`** for compatibility. See [FOLD-LEARNING.md](FOLD-LEARNING.md).
+**Optional weave ledger (recursive learning):** Append-only JSONL + CLI under `users/<id>/strategy-fold-events.jsonl` — compression proxies and optional self-ratings; **not** Record. CLI filenames still use **`fold`** for backward compatibility. See [FOLD-LEARNING.md](FOLD-LEARNING.md).
 
-**Optional knot registry (clusters and patterns):** [knot-index.yaml](knot-index.yaml) — machine-readable list of weave outputs whose filenames include **`knot`**. Each row: repo-relative **`path`** (unique), **`date`** (`YYYY-MM-DD`), optional **`knot_label`** (stable kebab-case id for that knot on that day—sorts, joins, tooling), optional **`clusters`** (thematic slugs), optional **`patterns`** (cross-cutting ids), optional **`note`** (freeform). **Several rows may share the same `date`** (multiple knots per day). Append when you add a knot file or choose to index a weave; **not** Record. Does not replace **`## YYYY-MM-DD`** in `days.md` unless you adopt a separate policy (single source of truth is operator choice). **Schema v3** renames **`weave_label`** → **`knot_label`**; the validator rejects the old key.
+**Knot index (table of contents):** [knot-index.yaml](knot-index.yaml) — machine-readable inventory of notebook pages whose filenames include **`knot`**. Each row: repo-relative **`path`** (unique), **`date`** (`YYYY-MM-DD`), optional **`knot_label`** (stable kebab-case id for that knot on that day—sorts, joins, tooling), optional **`clusters`** (thematic slugs), optional **`patterns`** (cross-cutting ids), optional **`note`** (freeform). **Several rows may share the same `date`** (multiple knots per day). Append when you add a knot file or choose to index a weave; **not** Record. Does not replace **`## YYYY-MM-DD`** in `days.md` unless you adopt a separate policy (single source of truth is operator choice). **Schema v3** renames **`weave_label`** → **`knot_label`**; the validator rejects the old key.
 
 **Optional tag pass (mental shorthand, not schema):** `watch`, `analogy`, `framework`, `defer` — operator labels only; not machine-enforced.
 

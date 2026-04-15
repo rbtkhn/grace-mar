@@ -153,9 +153,12 @@ def main() -> int:
         density = _section_density(days_file)
         links_avg = _links_density(days_file)
         open_carry = _open_carry_forward(days_file)
+        knots_dir = days_file.parent / "knots"
+        knot_count = len(list(knots_dir.glob("knot-*.md"))) if knots_dir.is_dir() else 0
         total_entries += count
         month_summaries[month] = {
             "dated_entries": count,
+            "knot_pages": knot_count,
             "avg_sections_per_entry": density["avg_sections"],
             "avg_links_per_entry": links_avg,
             "open_carry_forward": open_carry,

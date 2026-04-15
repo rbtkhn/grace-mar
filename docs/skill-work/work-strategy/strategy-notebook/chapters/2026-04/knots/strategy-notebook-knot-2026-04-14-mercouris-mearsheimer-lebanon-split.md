@@ -4,18 +4,23 @@
 |--------|--------|
 | **Date** | 2026-04-14 |
 | **knot_label** (machine slug) | `mercouris-mearsheimer-lebanon-split` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Day block** | [`days.md` § 2026-04-14](../days.md) |
+| **Continuity entry** | [`days.md` § 2026-04-14](../days.md) |
 
-### Role (**pick per knot** — mixed modes allowed)
+### Page type (**pick per knot** — mixed types allowed)
 
-- [ ] **Snapshot** — freeze emphasis / wording from a weave pass  
-- [x] **Abstract** — short thesis; long prose stays in `days.md`  
-- [ ] **Link hub** — almost only pointers (inbox, primaries, `batch-analysis`)  
+- [x] **Thesis page**
+- [ ] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [ ] **Link hub**
 
 ### Lineage
 
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — when present, a **`batch-analysis | … | Mercouris × Mearsheimer`** or separate **`thread:alexander-mercouris`** / **`thread:john-mearsheimer`** lines on **Lebanon**/**Israel**/**Washington** **talks** (search `Lebanon`, `Mercouris`, `Mearsheimer`). **Typical pairing:** [strategy-commentator-threads.md](../../../strategy-commentator-threads.md) (`alexander-mercouris` × `john-mearsheimer`).
 - **Expert threads:** `alexander-mercouris`, `john-mearsheimer` — **two** **Judgment** **planes**: **diplomatic** **legitimacy** / **room** **narrative** vs **offensive-realist** **incentives** / **alliance** **geometry**; **not** a merged **single** **expert** **object**.
+- **History resonance:** none this pass
+- **Civilizational bridge:** none this pass
 
 ### Signal
 

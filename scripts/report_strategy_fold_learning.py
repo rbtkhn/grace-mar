@@ -2,6 +2,9 @@
 """
 Read-only markdown report for strategy-fold-events.jsonl (fold learning ledger).
 
+Legacy name; the current operator command is 'weave'. Script and JSONL field names
+retain 'fold' for backward compatibility.
+
 Usage:
   python3 scripts/report_strategy_fold_learning.py -u grace-mar --days 30
   python3 scripts/report_strategy_fold_learning.py -u grace-mar --days 90 --max-events 200

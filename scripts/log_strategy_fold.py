@@ -2,6 +2,9 @@
 """
 Append one strategy-notebook fold event to users/<id>/strategy-fold-events.jsonl.
 
+Legacy name; the current operator command is 'weave'. Script and JSONL field names
+retain 'fold' for backward compatibility.
+
 WORK-only ledger — not Record, not MEMORY. See docs/skill-work/work-strategy/strategy-notebook/FOLD-LEARNING.md.
 
 Usage:

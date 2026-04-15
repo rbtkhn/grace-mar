@@ -1,6 +1,6 @@
 # Fold learning — metrics and recursive review
 
-**Operator command:** **`weave`** merges inbox → `days.md` (same operation this doc calls a **fold** in JSON fields). **`fold`** remains a **legacy** synonym in chat.
+**Operator command:** **`weave`** composes or revises knot(s) from inbox material and updates `days.md` continuity (same operation this doc calls a **fold** in JSON fields — `fold_kind` is a legacy field name; the current command is `weave`).
 
 **Purpose:** Optional **append-only** ledger for **strategy-notebook weaves** so you can compare sessions over time (compression proxies, verification surface, fold kind) and calibrate **how** you weave—not to claim a single objective “insight score.”
 

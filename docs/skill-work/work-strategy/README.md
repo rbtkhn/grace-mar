@@ -52,7 +52,7 @@ Recommended flow:
 
 ### Strategy session helpers (`skill-strategy`)
 
-Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-style prose**, **long-arc placement**, and **standing hypothesis logs** — WORK only; fold to `days.md` per [STRATEGY-NOTEBOOK-ARCHITECTURE](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md).
+Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-style prose**, **long-arc placement**, and **standing hypothesis logs** — WORK only; weave into knots per [STRATEGY-NOTEBOOK-ARCHITECTURE](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md).
 
 **`strategy-context` (CLI):** Cold-thread re-entry — one bounded paragraph (default **≤120 words**) from notebook `days.md` **Open**, inbox accumulator, `daily-brief-YYYY-MM-DD.md` §1b, STRATEGY + promotion ladder + commentator index presence — or **`--compact`** paths/status only. **`--meta`** adds `chapters/YYYY-MM/meta.md` (month **Theme** excerpt); **`--minds`** adds `minds/README.md` + `minds/outputs` filenames for the date or recent month scaffolds. **`--log`** appends a **`WORK-choice`** receipt to `session-transcript.md` via `log_operator_choice.py` (pointer, not full stdout). `python3 scripts/strategy_context.py -u grace-mar` · `--date YYYY-MM-DD` · `--max-words N`
 
@@ -62,7 +62,7 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 | [strategy-notebook/trump-religion-papacy-arc.md](strategy-notebook/trump-religion-papacy-arc.md) | **Trump ↔ Christianity / papacy / religion** arc (anchor 2016→); placement for **Trump–Leo** / **`narrative-escalation`** ingests. |
 | [strategy-notebook/rome-persia-legitimacy-signal-check.md](strategy-notebook/rome-persia-legitimacy-signal-check.md) | Append-only **legitimacy-plane** falsifiers (Rome–Tehran wedge); orthogonal to Hormuz/Islamabad **hard security**. |
 | [strategy-notebook/narrative-escalation-trump-timeline.md](strategy-notebook/narrative-escalation-trump-timeline.md) | **Stub** — canonical content moved to [trump-religion-papacy-arc.md](strategy-notebook/trump-religion-papacy-arc.md). |
-| [skill-strategy / SKILL](../../../.cursor/skills/skill-strategy/SKILL.md) | § **Narrative escalation**, optional **retroactive spine**, **Modes** (Capture / Fold / Promote). |
+| [skill-strategy / SKILL](../../../.cursor/skills/skill-strategy/SKILL.md) | § **Narrative escalation**, optional **retroactive spine**, **Modes** (Capture / Weave / Promote). |
 
 ---
 
@@ -100,8 +100,8 @@ Quick index for **Capture**-adjacent surfaces: **narrative register**, **Grok-st
 | **[../WORK-LAYER-HARDENING-ROADMAP.md](../WORK-LAYER-HARDENING-ROADMAP.md)** | Full work-layer sequencing (strategy → dev → cadence → dashboard). |
 | **[current-events-analysis.md](current-events-analysis.md)** | Standard workflow for converting live events into disciplined strategy judgment: Perceiver (neutral fact summary) → verify seam → event classification → case-index check → energy-chokepoint hook → analyst (structured breakdown) → resonance note or analogy audit → watch-support decision → decision-point trigger → three minds → synthesis → optional deliberation receipt. 11 sections including failure modes and operator checklist. **WORK only**. |
 | **[STRATEGY.md](STRATEGY.md)** | WORK-only ledger: CORE / **§II-A active watches** / SCHOLAR / **§III-A analogy watchlist** / **§IV operator strategy log** (additive notes in-file; not CMC `MEM–*` shards); not Record. |
-| **[strategy-notebook/](strategy-notebook/README.md)** | **Daily operator journal** for strategy judgment — PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md); optional **`### History resonance`** wires [history-notebook](history-notebook/README.md) chapter ids into each day. Not [work-strategy-history](work-strategy-history.md). WORK only. |
-| **[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)** | **SSOT** for **X / strategy ingest** scratch: cadence, **paste-ready one-liner** shape, default assistant target. Fold at **dream** → `days.md` ([architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*). |
+| **[strategy-notebook/](strategy-notebook/README.md)** | **Page-first operator notebook** for strategy judgment — knots are atomic pages; `days.md` = chronology; PH-style month chapters (`chapters/YYYY-MM/`), [architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md), [STATUS](strategy-notebook/STATUS.md); **`### History resonance`** wires [history-notebook](history-notebook/README.md) chapter ids into knots. Not [work-strategy-history](work-strategy-history.md). WORK only. |
+| **[strategy-notebook/daily-strategy-inbox.md](strategy-notebook/daily-strategy-inbox.md)** | **SSOT** for **X / strategy ingest** scratch: cadence, **paste-ready one-liner** shape, default assistant target. Weave at **dream** → `days.md` ([architecture](strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Daily strategy inbox*). |
 | **[LEARN_MODE_RULES.md](LEARN_MODE_RULES.md)** | LEARN MODE adapter: Tri-Frame protocol, extraction format, governance aligned with STRATEGY §VI. |
 | **[LEARN_MODE_OPERATOR_PROMPT.md](LEARN_MODE_OPERATOR_PROMPT.md)** | Copy-paste operator / Composer prompt for work-strategy sessions and LEARN MODE. |
 | **[minds/](minds/README.md)** | Tri-Frame entry stubs (Mercouris, Mearsheimer, Barnes) → `CIV–MIND–*.md` in civilization_memory. Advisory patterns: [minds/MINDS-SKILL-STRATEGY-PATTERNS.md](minds/MINDS-SKILL-STRATEGY-PATTERNS.md). |

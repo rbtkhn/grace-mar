@@ -4,18 +4,29 @@
 |--------|--------|
 | **Date** | 2026-04-12 |
 | **knot_label** (machine slug) | `islamabad-hormuz-thesis-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Day block** | [`days.md` § 2026-04-12](../days.md#2026-04-12) |
+| **Continuity entry** | [`days.md` § 2026-04-12](../days.md#2026-04-12) |
 
-### Role
+### Page type (**pick per knot** — mixed types allowed)
 
-- [ ] **Snapshot**
-- [x] **Abstract**
-- [x] **Link hub** — Islamabad **collapse** + executive **Hormuz blockade** rhetoric + **Thesis A / B** fork; long prose in `days.md`
+- [x] **Thesis page**
+- [ ] **Synthesis page**
+- [ ] **Case page**
+- [ ] **Mechanism page**
+- [ ] **Watch page**
+- [x] **Link hub**
 
 ### Lineage — **talks break → leverage move** (anchor)
 
 - **Primary spine:** [`days.md` § 2026-04-12](../days.md#2026-04-12) — **Islamabad → Hormuz**: failed/inconclusive direct talks; **Truth Social** blockade order (surfaced via **`daniel-davis`** repost chain) — **verify** **DoD/Navy/WH** before campaign or public ship.
 - **Indexed expert lanes (same topic — no new `expert_id`):** **`trita-parsi`** (Lebanon vs nuclear “mask,” phased ceasefire **unverified**); **`charles-freeman`** ([*India and the Global Left*](https://www.youtube.com/watch?v=Thy3e6ququ8) — Islamabad as **continuing war**, **Hormuz** / third-country hull **ROE** gap — **parallel** to inconclusive-talks wire); **`robert-pape`** (X — **Stage 3** escalation-trap graphic; **ground op** branch **scenario-grade**); **`robert-barnes`** (domestic **TS** gloss pole vs **strategic-asset** / **satirical-spiral** — see **Deprecated** note in [strategy-commentator-threads.md](../../../strategy-commentator-threads.md)); **`daniel-davis`** as **relay** surface for executive text, **not** ORBAT substitute.
+
+### History resonance
+
+none this pass
+
+### Civilizational bridge
+
+none this pass
 
 ### Cross-day links (same arc)
 

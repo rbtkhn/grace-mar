@@ -42,6 +42,11 @@ def _month_path(d: str) -> Path:
     return NOTEBOOK / "chapters" / f"{y}-{m}" / "days.md"
 
 
+def _knots_dir(d: str) -> Path:
+    y, m, _ = d.split("-")
+    return NOTEBOOK / "chapters" / f"{y}-{m}" / "knots"
+
+
 def _meta_path(d: str) -> Path:
     y, m, _ = d.split("-")
     return NOTEBOOK / "chapters" / f"{y}-{m}" / "meta.md"
@@ -220,6 +225,7 @@ def health_summary() -> str | None:
         avg_lnk = m.get("avg_links_per_entry", 0)
         carry = m.get("open_carry_forward", 0)
         dated = m.get("dated_entries", 0)
+        knots = m.get("knot_pages", 0)
 
         def _rate(val: float, green: float, yellow: float) -> str:
             if val >= green:
@@ -234,7 +240,7 @@ def health_summary() -> str | None:
         carry_rating = "green" if carry_pct < 50 else ("yellow" if carry_pct < 75 else "red")
 
         lines.append(
-            f"  {month}: {dated} entries | sections={avg_sec} ({sec_rating}) | "
+            f"  {month}: {dated} entries, {knots} knots | sections={avg_sec} ({sec_rating}) | "
             f"links={avg_lnk} ({lnk_rating}) | open_carry={carry}/{dated} ({carry_rating})"
         )
 
@@ -291,6 +297,10 @@ def build_paragraph(
         promo.append("promotion-ladder.md for stage semantics")
     if promo:
         parts.append("Promotion: " + "; ".join(promo) + ".")
+    knot_dir = _knots_dir(day)
+    knot_files = list(knot_dir.glob("knot-*.md")) if knot_dir.is_dir() else []
+    if knot_files:
+        parts.append(f"Knots this month: {len(knot_files)} pages.")
     if expert_rows:
         parts.append(
             f"Commentator index lists {expert_rows} `expert_id` rows (strategy-commentator-threads.md)."
@@ -339,9 +349,12 @@ def run_compact(
         lines_out.append(f"- {mo}/ — {'ok' if MINDS_OUTPUTS.is_dir() else 'missing'}")
         if minds_line:
             lines_out.append(f"  minds: {minds_line}")
+    knot_dir = _knots_dir(day)
+    knot_files = list(knot_dir.glob("knot-*.md")) if knot_dir.is_dir() else []
     lines_out.append(
         f"- days.md § {day}: {'present' if day_block else 'missing'}; Open bullets parsed: {len(open_bullets)}"
     )
+    lines_out.append(f"- knots this month: {len(knot_files)} pages")
     lines_out.append(
         f"- inbox accumulator: {accum or '?'}; scratch below append (pre-Retained): {scratch_chars} chars"
     )
