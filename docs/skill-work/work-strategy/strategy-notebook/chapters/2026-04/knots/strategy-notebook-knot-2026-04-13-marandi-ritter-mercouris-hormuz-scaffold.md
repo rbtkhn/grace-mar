@@ -4,7 +4,7 @@
 |--------|--------|
 | **Date** | 2026-04-13 |
 | **knot_label** (machine slug) | `marandi-ritter-mercouris-hormuz-scaffold` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Continuity entry** | [`days.md` § 2026-04-13](../days.md#2026-04-13) |
+| **Day block** | [`days.md` § 2026-04-13](../days.md#2026-04-13) |
 
 ### Page type (**pick per knot** — mixed types allowed)
 

@@ -4,7 +4,7 @@
 |--------|--------|
 | **Date** | 2026-04-12 |
 | **knot_label** (machine slug) | `islamabad-hormuz-thesis-weave` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Continuity entry** | [`days.md` § 2026-04-12](../days.md#2026-04-12) |
+| **Day block** | [`days.md` § 2026-04-12](../days.md#2026-04-12) |
 
 ### Page type (**pick per knot** — mixed types allowed)
 

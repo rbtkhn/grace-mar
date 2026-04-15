@@ -10,7 +10,7 @@
 
 ### What **`knot_label`** is (and what it is not)
 
-- **Weaving** is what you **do** (compose or revise knot pages from inbox material, tighten Judgment, promote links — the **action**).
+- **Weaving** is what you **do**: fold inbox material, expert-thread pressure, historical resonance, and judgment into a page.
 - A **knot** is one **atomic notebook page** — a **named, enduring unit** of strategic writing (thesis, synthesis, case, mechanism, watch, or link hub).
 - **`knot_label`** is **not** the verb "weave." It is the **stable id for this knot file** — a **short kebab-case slug** used to:
   - **Disambiguate** when **several knots share the same calendar day** (e.g. `parsi-davis` vs `sanchez-xi` on `2026-04-14`);
@@ -29,7 +29,7 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 |--------|--------|
 | **Date** | YYYY-MM-DD |
 | **knot_label** (machine slug) | `<kebab-slug>` — must match `strategy-notebook-knot-YYYY-MM-DD-<kebab-slug>.md` and [`knot-index.yaml`](knot-index.yaml) |
-| **Continuity entry** | [`days.md` § YYYY-MM-DD](chapters/YYYY-MM/days.md) |
+| **Day block** | [`days.md` § YYYY-MM-DD](chapters/YYYY-MM/days.md) |
 
 ### Page type (**pick per knot** — mixed types allowed)
 
@@ -50,20 +50,16 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 - **Civilizational bridge:** optional — [civilizational-strategy-surface.md](../../civilizational-strategy-surface.md) case family or lens id when CIV-MEM material grounded this page; omit if none
 
 ### Signal
-
-*(**Optional prose** — or one line: "See [`days.md`](chapters/YYYY-MM/days.md) § Signal for YYYY-MM-DD." Leave blank only if the pointer is enough.)*
+<page-level signal>
 
 ### Judgment
-
-*(**Optional prose** — or: "See `days.md` § Judgment.")*
+<page-level thesis / synthesis>
 
 ### Links
-
-*(**Optional** — primaries / wires / PH / expert corpus paths.)*
+<primaries / wires / PH / expert corpus / related knots>
 
 ### Open / verify
-
-*(**Optional** — pins, `verify:` tails, next-session tests.)*
+<pins, tests, unresolved tensions, next-session checks>
 
 ---
 

@@ -4,7 +4,7 @@
 |--------|--------|
 | **Date** | 2026-04-14 |
 | **knot_label** (machine slug) | `parsi-davis-war-powers` — matches basename and [`knot-index.yaml`](../../../knot-index.yaml) |
-| **Continuity entry** | [`days.md` § 2026-04-14](../days.md) |
+| **Day block** | [`days.md` § 2026-04-14](../days.md) |
 
 ### Page type (**pick per knot** — mixed types allowed)
 
