@@ -50,7 +50,7 @@ Pins keep **Glenn Diesen**’s **PH vi-14** lane and the **Glenn Diesen × Jeffr
 ### Open / verify
 
 - **NYT** war-room / **Sachs** capacity claims: **journalistic / hypothesis** until on-record primary or wire tier.
-- Re-run **`python3 scripts/strategy_expert_corpus.py`** if inbox **`thread:`** lines for these experts change.
+- Re-run **`python3 scripts/strategy_thread.py`** if inbox **`thread:`** lines for these experts change.
 
 ---
 

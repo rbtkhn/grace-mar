@@ -4,7 +4,7 @@
 
 ## Seed (index mirror — operator may extend)
 
-The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.py` run; edit this **Seed** section freely.
+The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.
 
 ### Commentator row (from index)
 

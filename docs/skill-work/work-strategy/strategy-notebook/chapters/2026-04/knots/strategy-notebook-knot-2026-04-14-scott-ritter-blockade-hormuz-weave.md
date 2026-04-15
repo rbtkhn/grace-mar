@@ -73,7 +73,7 @@ Pins keep **`scott-ritter`** **mechanics** **distinct** from **speech**/**instit
 ### Open / verify
 
 - [Ritter blockade mechanics — verify checklist (2026-04-13)](../../../daily-strategy-inbox.md) (inbox **§ Ritter blockade mechanics**)
-- Re-run **`python3 scripts/strategy_expert_corpus.py`** after inbox **`thread:`** updates.
+- Re-run **`python3 scripts/strategy_thread.py`** after inbox **`thread:`** updates.
 
 ---
 

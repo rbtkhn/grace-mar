@@ -7,6 +7,9 @@ carry ``thread:<expert_id>`` are grouped by calendar date inside a
 script-delimited block; the **Seed** section above the markers is preserved on
 rebuild. Only the last ``--days`` calendar days are kept inside the block.
 
+**Operator entry:** run ``python3 scripts/strategy_thread.py`` (same flags) —
+canonical name for this rebuild is **``thread``** in notebook docs.
+
 WORK-only; not Record.
 
 See ``docs/skill-work/work-strategy/strategy-notebook/README.md`` (expert files).
@@ -232,7 +235,7 @@ def build_seed_preamble(
         "",
         "## Seed (index mirror — operator may extend)",
         "",
-        "The block below **Rolling ingest** is replaced on each `strategy_expert_corpus.py` run; "
+        "The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; "
         "edit this **Seed** section freely.",
         "",
         "### Commentator row (from index)",
