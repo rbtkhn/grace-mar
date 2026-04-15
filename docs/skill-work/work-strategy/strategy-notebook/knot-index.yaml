@@ -1,0 +1,45 @@
+# knot-index.yaml — strategy-notebook knot registry (WORK only; not Record).
+#
+# New knot files: copy from knot-template.md (repo-relative: docs/skill-work/work-strategy/strategy-notebook/knot-template.md).
+#
+# Validate: `python3 scripts/validate_knot_index.py` (from repo root).
+#
+# Machine list for knots organized by cluster and pattern. Paths are POSIX paths
+# relative to the repository root. Each knot *file* should include the substring
+# "knot" in its basename (naming protocol).
+#
+# Multiple weaves per calendar day → multiple knot *files* and multiple knots[] rows
+# with the same `date` are normal. Disambiguate with a unique basename, e.g.:
+#   knot-YYYY-MM-DD-<short-slug>.md
+# Slug = knot_label (morning, islamabad, tri-mind, etc.) — avoid opaque -01 -02
+# unless you prefer sequence.
+#
+# schema_version — bump when fields change (tooling). v3: `weave_label` renamed to `knot_label`.
+#
+# knots[]:
+#   path         (string, required) — repo-relative path to the knot markdown file (unique)
+#   date         (string, required) — YYYY-MM-DD calendar day (same date may repeat across rows)
+#   knot_label   (string, optional) — stable short id for this knot on that day (tooling / sorts /
+#                  joins); kebab-case slug, e.g. islamabad-morning, tri-mind; may mirror filename
+#                  slug; omit if one knot that day or label is only in `note`
+#   clusters     (list of string, optional) — thematic cluster slugs, e.g. islamabad-hormuz
+#   patterns     (list of string, optional) — cross-cutting pattern ids, e.g. escalation-trap
+#   note         (string, optional) — freeform one-line comment (not a stable key)
+#
+# Examples (commented; remove leading # to activate):
+#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-islamabad.md
+#     date: "2026-04-13"
+#     knot_label: islamabad-morning
+#     clusters: [islamabad-hormuz]
+#     patterns: [escalation-trap-frame]
+#     note: "first pass after brief"
+#   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/knot-2026-04-13-tri-mind.md
+#     date: "2026-04-13"
+#     knot_label: tri-mind
+#     clusters: [trump-leo]
+#     patterns: [tri-mind-batch]
+#     note: "afternoon batch-analysis fold"
+
+schema_version: 3
+
+knots: []

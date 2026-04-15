@@ -279,13 +279,15 @@ A **weave** is a **promotion decision**: which scratch lines become **`### Signa
 | What must be **citable** without pasting bodies? | **Links** (briefs, primaries, framework paths, paste-grade pointers). |
 | What did weaving **surface as unstable** (pins, verify, next tests)? | **Open** — often grows on **early** intra-day weaves. |
 
-**Intra-day weaves** iterate **one** dated block: later weaves **merge into** the same **`## YYYY-MM-DD`** (edit in place; tighten **Judgment**) unless you need a rare **Update (later weave):** trace; avoid **two parallel essays** for the same calendar day.
+**Intra-day weaves** iterate **one** consolidated **`## YYYY-MM-DD`** block in `days.md`: later weaves **merge into** the same heading (edit in place; tighten **Judgment**) unless you need a rare **Update (later weave):** trace; avoid **two parallel essays** for the same calendar day **in that single block**. **Knot sidecars (optional):** if you name weave outputs as separate **`knot-*.md`** files, **multiple knots per calendar day** are expected—one file per weave wave, distinguished by basename (e.g. `knot-YYYY-MM-DD-<slug>.md`); register each row in [knot-index.yaml](knot-index.yaml) (same **`date`**, unique **`path`**). **Template:** [knot-template.md](knot-template.md). The dated `days.md` block remains the **rolling synthesis** for that day; knot files are **snapshots** or **labeled waves**—operator policy defines whether they duplicate, abstract, or link from the day block.
 
 **Anti-patterns:** **Judgment** bloat (every `batch-analysis` line promoted); **empty ritual** weaves; page structure that **mirrors inbox ordering**; duplicating raw paste across sections.
 
 **Operator test (one screen):** If someone read **only** this day block, what would they **know**, **believe with what caveats**, and **still need to check**? — **Signal** / **Judgment** / **Open** carry those three loads; **Links** carry **how to check**.
 
 **Optional weave ledger (recursive learning):** Append-only JSONL + CLI under `users/<id>/strategy-fold-events.jsonl` — compression proxies and optional self-ratings; **not** Record. CLI filenames still use **`fold`** for compatibility. See [FOLD-LEARNING.md](FOLD-LEARNING.md).
+
+**Optional knot registry (clusters and patterns):** [knot-index.yaml](knot-index.yaml) — machine-readable list of weave outputs whose filenames include **`knot`**. Each row: repo-relative **`path`** (unique), **`date`** (`YYYY-MM-DD`), optional **`knot_label`** (stable kebab-case id for that knot on that day—sorts, joins, tooling), optional **`clusters`** (thematic slugs), optional **`patterns`** (cross-cutting ids), optional **`note`** (freeform). **Several rows may share the same `date`** (multiple knots per day). Append when you add a knot file or choose to index a weave; **not** Record. Does not replace **`## YYYY-MM-DD`** in `days.md` unless you adopt a separate policy (single source of truth is operator choice).
 
 **Optional tag pass (mental shorthand, not schema):** `watch`, `analogy`, `framework`, `defer` — operator labels only; not machine-enforced.
 
