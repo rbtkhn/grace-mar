@@ -25,6 +25,16 @@
 | [write-no-rhetorical-question-closer.md](write-no-rhetorical-question-closer.md) | Craft: do not end on a rhetorical question (prefer declarative closer) |
 | *(sections in [write-operator-preferences.md](write-operator-preferences.md))* | Exposition vs. instructions; dispreferred pundit phrases (e.g. “has any bite,” “when the stakes spike”) |
 | [write-shipping-checklist.md](write-shipping-checklist.md) | **Global** pre-flight checklist for all public operator surfaces |
+| [write-exercises.md](write-exercises.md) | Test types, prompts, scaffolding for public-copy drills |
+
+## Claims and observability
+
+| Artifact | Role |
+|----------|------|
+| [`artifacts/skill-write/write-claims.json`](../../artifacts/skill-write/write-claims.json) | Operator WRITE capability claims (not companion Record) |
+| [`schemas/skill_write/write_claims.schema.json`](../../schemas/skill_write/write_claims.schema.json) | JSON Schema for write claims |
+| [`scripts/validate_write_claims.py`](../../scripts/validate_write_claims.py) | Validator with advisory warnings |
+| [`scripts/build_write_observability.py`](../../scripts/build_write_observability.py) | Observability builder (surface-aware metrics) |
 
 ## Pipelines and formal spec
 

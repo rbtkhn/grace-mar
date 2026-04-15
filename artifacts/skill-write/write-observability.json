@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0-skill-write",
+  "generatedAt": "2026-04-15T21:08:47.807390+00:00",
+  "metrics": {
+    "claim_count": 0,
+    "claims_by_capability_type": {},
+    "claims_by_level": {},
+    "claims_updated_last_30d": 0,
+    "claims_with_tests": 0,
+    "claims_without_tests": 0,
+    "tests_by_type": {},
+    "tests_by_surface": {},
+    "test_results": {},
+    "scaffolding_distribution": {},
+    "surface_coverage_pct": {
+      "locals": 0.0,
+      "x": 0.0,
+      "youtube_comment": 0.0,
+      "general": 0.0
+    },
+    "claims_with_samples": 0,
+    "stale_tested_claim_ids": []
+  },
+  "notes": [
+    "Operator WRITE observability \u2014 public-copy capability, not companion Record.",
+    "Sibling to skill-think observability."
+  ]
+}

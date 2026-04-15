@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "schemas/skill_think/think_claims.schema.json",
-  "title": "skill_think_claims",
+  "$id": "schemas/skill_write/write_claims.schema.json",
+  "title": "skill_write_claims",
   "type": "object",
   "additionalProperties": false,
   "required": ["version", "claims"],
@@ -9,7 +9,7 @@
     "version": { "type": "integer", "const": 1 },
     "ssot_note": {
       "type": "string",
-      "description": "Phase A: JSON is an index alongside prose skill-think.md; avoid drift via ritual + validator."
+      "description": "Operator WRITE claims — public-copy capability evidence, not companion Record."
     },
     "claims": {
       "type": "array",
@@ -18,7 +18,7 @@
         "additionalProperties": false,
         "required": [
           "id",
-          "topic",
+          "claim",
           "capability_type",
           "level",
           "evidence_refs",
@@ -30,23 +30,21 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^THINK-[0-9]{3,}$"
+            "pattern": "^WRITE-[0-9]{3,}$"
           },
-          "topic": { "type": "string", "minLength": 1 },
+          "claim": { "type": "string", "minLength": 1 },
           "capability_type": {
             "type": "string",
             "enum": [
-              "comprehension",
-              "recall",
-              "comparison",
-              "abstraction",
-              "analogy",
-              "question_generation",
-              "causal_reasoning",
-              "uncertainty_handling",
-              "topic_familiarity",
-              "vocabulary_acquisition",
-              "transfer_across_domains"
+              "public-copy-adaptation",
+              "surface-trim",
+              "lede-craft",
+              "closer-craft",
+              "density-control",
+              "voice-preservation",
+              "shipping-discipline",
+              "argument-compression",
+              "audience-calibration"
             ]
           },
           "level": {
@@ -58,7 +56,7 @@
             "minItems": 1,
             "items": {
               "type": "string",
-              "pattern": "^(READ|ACT)-[0-9]{4}$"
+              "pattern": "^(DRAFT|POST|WRITE|ACT|READ)-[0-9a-zA-Z-]+$"
             }
           },
           "first_observed": { "type": "string", "format": "date" },
@@ -71,18 +69,29 @@
           "notes": { "type": "string" },
           "test_type": {
             "type": "string",
-            "enum": ["compression", "recall", "transfer", "contrast", "failure_mode", "independent_use", "application"]
+            "enum": [
+              "surface_trim",
+              "lede_test",
+              "closer_test",
+              "density_control",
+              "voice_preservation",
+              "shipping_check"
+            ]
           },
           "test_date": { "type": "string", "format": "date" },
           "test_result": {
             "type": "string",
             "enum": ["pass", "partial", "fail"]
           },
+          "target_surface": {
+            "type": "string",
+            "enum": ["locals", "x", "youtube_comment", "general"]
+          },
           "scaffolding_level": {
             "type": "string",
             "enum": ["full_template", "hints_only", "none"]
           },
-          "transfer_domain": { "type": "string" },
+          "sample_ref": { "type": "string" },
           "failure_mode_notes": { "type": "string" },
           "next_test": { "type": "string" }
         }

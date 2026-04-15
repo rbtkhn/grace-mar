@@ -16,6 +16,7 @@
 | [think-claim-template.md](think-claim-template.md) | Copy-paste claim stub |
 | [think-to-ix-promotion-rules.md](think-to-ix-promotion-rules.md) | When THINK stays intake vs promotes to IX |
 | [ix-promotion-examples.md](ix-promotion-examples.md) | Examples |
+| [think-exercises.md](think-exercises.md) | Test types, prompts, scaffolding |
 | [think-update-ritual.md](think-update-ritual.md) | Operator ritual + receipts |
 | [observability.md](observability.md) | Metrics artifact + builder |
 

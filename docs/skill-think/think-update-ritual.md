@@ -16,3 +16,11 @@ After **we read / we studied**, or after editing [think-claims.json](../../artif
 ## Receipts
 
 Append-only JSON lines under `artifacts/skill-think/update-receipts/` — see script help. **Not** Record truth.
+
+## Weekly THINK test loop
+
+1. Select 1-2 existing THINK claims.
+2. Run 1 small test (see [think-exercises.md](think-exercises.md)).
+3. Record the result in `think-claims.json` (`test_type`, `test_result`, `scaffolding_level`).
+4. Update prose only if the test changed the real judgment.
+5. Optionally append a receipt.

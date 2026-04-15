@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Emit artifacts/skill-think/think-observability.json from think-claims.json.
+"""Emit artifacts/skill-write/write-observability.json from write-claims.json.
 
-Does NOT merge into schema-registry observability-report.v1 (change-proposal shape).
+Surface-aware metrics for operator WRITE capability tracking.
 
 Usage:
-  python3 scripts/build_think_observability.py
+  python3 scripts/build_write_observability.py
 """
 
 from __future__ import annotations
@@ -15,8 +15,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-CLAIMS_PATH = REPO_ROOT / "artifacts/skill-think/think-claims.json"
-OUT_PATH = REPO_ROOT / "artifacts/skill-think/think-observability.json"
+CLAIMS_PATH = REPO_ROOT / "artifacts/skill-write/write-claims.json"
+OUT_PATH = REPO_ROOT / "artifacts/skill-write/write-observability.json"
 
 
 def main() -> int:
@@ -27,8 +27,6 @@ def main() -> int:
 
     by_type = Counter(c.get("capability_type") for c in claims)
     by_level = Counter(c.get("level") for c in claims)
-    multi_evidence = sum(1 for c in claims if len(c.get("evidence_refs", [])) > 1)
-    promo = sum(1 for c in claims if c.get("promotion_candidate"))
 
     recent = 0
     for c in claims:
@@ -40,59 +38,61 @@ def main() -> int:
         except (ValueError, IndexError):
             pass
 
-    topics = Counter(c.get("topic") for c in claims)
-    top_topics = [t for t, _ in topics.most_common(5)]
-
     tested = [c for c in claims if c.get("test_type")]
     untested = [c for c in claims if not c.get("test_type")]
     tests_by_type = Counter(c.get("test_type") for c in tested)
+    tests_by_surface = Counter(
+        c.get("target_surface") for c in claims if c.get("target_surface")
+    )
     test_results = Counter(c.get("test_result") for c in tested if c.get("test_result"))
     scaffolding_dist = Counter(
         c.get("scaffolding_level") for c in tested if c.get("scaffolding_level")
     )
 
-    transferable_claims = [c for c in claims if c.get("level") == "transferable"]
-    transferable_with_test = sum(
-        1 for c in transferable_claims if c.get("test_type") == "transfer"
-    )
-    transfer_pct = (
-        round(transferable_with_test / len(transferable_claims) * 100, 1)
-        if transferable_claims
-        else 0.0
-    )
+    claims_with_samples = sum(1 for c in claims if c.get("sample_ref"))
 
-    consistent_plus = [
-        c for c in claims if c.get("level") in ("consistent", "transferable", "independent")
-    ]
-    fm_covered = sum(1 for c in consistent_plus if c.get("failure_mode_notes"))
-    fm_pct = (
-        round(fm_covered / len(consistent_plus) * 100, 1)
-        if consistent_plus
-        else 0.0
-    )
+    surfaces = ["locals", "x", "youtube_comment", "general"]
+    surface_coverage: dict[str, float] = {}
+    for s in surfaces:
+        surface_claims = [c for c in claims if c.get("target_surface") == s]
+        tested_surface = [c for c in surface_claims if c.get("test_type")]
+        if surface_claims:
+            surface_coverage[s] = round(len(tested_surface) / len(surface_claims) * 100, 1)
+        else:
+            surface_coverage[s] = 0.0
+
+    stale_tested: list[str] = []
+    stale_days = 90
+    for c in tested:
+        td = c.get("test_date", "")
+        try:
+            parts = [int(x) for x in td.split("-")]
+            if (today - date(parts[0], parts[1], parts[2])).days > stale_days:
+                stale_tested.append(c.get("id", ""))
+        except (ValueError, IndexError):
+            pass
 
     doc = {
-        "schemaVersion": "1.1.0-skill-think",
+        "schemaVersion": "1.0.0-skill-write",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "metrics": {
             "claim_count": len(claims),
             "claims_by_capability_type": dict(by_type),
             "claims_by_level": dict(by_level),
             "claims_updated_last_30d": recent,
-            "claims_with_multiple_evidence_refs": multi_evidence,
-            "open_promotion_candidates": promo,
-            "top_topics": top_topics,
             "claims_with_tests": len(tested),
             "claims_without_tests": len(untested),
             "tests_by_type": dict(tests_by_type),
+            "tests_by_surface": dict(tests_by_surface),
             "test_results": dict(test_results),
             "scaffolding_distribution": dict(scaffolding_dist),
-            "transfer_test_coverage_pct": transfer_pct,
-            "failure_mode_coverage_pct": fm_pct,
+            "surface_coverage_pct": surface_coverage,
+            "claims_with_samples": claims_with_samples,
+            "stale_tested_claim_ids": stale_tested,
         },
         "notes": [
-            "Test-coverage metrics added in v1.1.0 (exercise layer).",
-            "Sibling to work-strategy observability — not merged into observability-report.v1.",
+            "Operator WRITE observability — public-copy capability, not companion Record.",
+            "Sibling to skill-think observability.",
         ],
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

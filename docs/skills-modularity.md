@@ -196,7 +196,8 @@ Operational constraints:
 | Record and Voice | [CONCEPTUAL-FRAMEWORK](conceptual-framework.md), [AGENTS](AGENTS.md) |
 | Pipeline and merge | [PIPELINE-MAP](pipeline-map.md), [IDENTITY-FORK-PROTOCOL](identity-fork-protocol.md) |
 | THINK/READ vs SELF IX (no auto-merge) | This doc §5; [we-read-think-self-pipeline.md](we-read-think-self-pipeline.md) |
+| Cross-module flow map (allowed/disallowed flows, asymmetry, decision test) | [skills-membrane.md](skills-membrane.md) |
 
 ---
 
-*Last updated: March 2026*
+*Last updated: April 2026*

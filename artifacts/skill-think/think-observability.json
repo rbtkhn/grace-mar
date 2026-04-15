@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.0.0-skill-think",
-  "generatedAt": "2026-04-13T05:22:30.009069+00:00",
+  "schemaVersion": "1.1.0-skill-think",
+  "generatedAt": "2026-04-15T21:02:26.283910+00:00",
   "metrics": {
     "claim_count": 1,
     "claims_by_capability_type": {
@@ -14,10 +14,17 @@
     "open_promotion_candidates": 0,
     "top_topics": [
       "Example topic"
-    ]
+    ],
+    "claims_with_tests": 0,
+    "claims_without_tests": 1,
+    "tests_by_type": {},
+    "test_results": {},
+    "scaffolding_distribution": {},
+    "transfer_test_coverage_pct": 0.0,
+    "failure_mode_coverage_pct": 0.0
   },
   "notes": [
-    "Transfer-growth metrics are phase-2 (need longitudinal scoring).",
+    "Test-coverage metrics added in v1.1.0 (exercise layer).",
     "Sibling to work-strategy observability \u2014 not merged into observability-report.v1."
   ]
 }

@@ -17,6 +17,8 @@
 | [daily-brief-jiang-layer.md](../../../../docs/skill-work/work-strategy/daily-brief-jiang-layer.md) | **§1c** slow layer; PH lectures are the usual **work-jiang** book spine |
 | [work-jiang-sources.md](../../../../docs/skill-work/work-jiang/work-jiang-sources.md) | Canonical channel URL + index/transcript CLI notes |
 
+**Strategy-notebook membrane:** Predictive History remains an upstream work-strategy transcript spine. For strategy-notebook-facing use, PH material must be mediated through the Jiang expert lane (`strategy-expert-jiang-xueqin`) before weave. Direct PH → knot routing is disallowed. See [strategy-notebook/README.md](../../../../docs/skill-work/work-strategy/strategy-notebook/README.md) § **Predictive History routing rule**.
+
 ---
 
 ## Pipeline layout

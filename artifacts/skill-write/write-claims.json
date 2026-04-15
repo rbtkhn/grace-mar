@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "ssot_note": "Operator WRITE claims — public-copy capability evidence. Not companion Record (that stays in users/[id]/skill-write.md). Validated by scripts/validate_write_claims.py.",
+  "claims": []
+}

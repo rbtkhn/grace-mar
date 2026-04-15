@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Validate artifacts/skill-think/think-claims.json against schemas/skill_think/think_claims.schema.json.
+"""Validate artifacts/skill-write/write-claims.json against schemas/skill_write/write_claims.schema.json.
 
-Advisory warnings: stale last_updated, high confidence with single evidence ref,
-optional prose anchor check for THINK- ids.
+Advisory warnings: missing target_surface on surface-adaptation claims,
+missing evidence/sample on strong claims, consistent without failure_mode_notes,
+independent with scaffolding != none, test_result without test_type.
 
 Usage:
-  python3 scripts/validate_think_claims.py
-  python3 scripts/validate_think_claims.py --skill-think-md users/grace-mar/skill-think.md
+  python3 scripts/validate_write_claims.py
 """
 
 from __future__ import annotations
@@ -18,23 +18,13 @@ from datetime import date, timedelta
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_CLAIMS = REPO_ROOT / "artifacts/skill-think/think-claims.json"
-SCHEMA_PATH = REPO_ROOT / "schemas/skill_think/think_claims.schema.json"
+DEFAULT_CLAIMS = REPO_ROOT / "artifacts/skill-write/write-claims.json"
+SCHEMA_PATH = REPO_ROOT / "schemas/skill_write/write_claims.schema.json"
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument(
-        "--claims",
-        type=Path,
-        default=DEFAULT_CLAIMS,
-    )
-    ap.add_argument(
-        "--skill-think-md",
-        type=Path,
-        default=None,
-        help="If set, warn when claim id not found as substring in this file",
-    )
+    ap.add_argument("--claims", type=Path, default=DEFAULT_CLAIMS)
     args = ap.parse_args()
 
     try:
@@ -50,17 +40,12 @@ def main() -> int:
     schema = json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
     jsonschema.Draft202012Validator(schema).validate(data)
 
-    prose = ""
-    if args.skill_think_md and args.skill_think_md.is_file():
-        prose = args.skill_think_md.read_text(encoding="utf-8", errors="replace")
-
     today = date.today()
     stale_days = 90
     warnings: list[str] = []
     for c in data.get("claims", []):
         cid = c.get("id", "")
-        if prose and cid and cid not in prose:
-            warnings.append(f"anchor: {cid} not found as text in {args.skill_think_md}")
+
         lu = c.get("last_updated")
         if lu:
             try:
@@ -70,23 +55,34 @@ def main() -> int:
                     warnings.append(f"stale: {cid} last_updated {lu} (> {stale_days}d)")
             except (ValueError, IndexError):
                 pass
-        if c.get("confidence") == "high" and len(c.get("evidence_refs", [])) <= 1:
-            warnings.append(f"evidence: {cid} confidence high but only one evidence ref")
 
+        cap_type = c.get("capability_type", "")
         level = c.get("level", "")
         test_type = c.get("test_type")
         test_result = c.get("test_result")
         scaffolding = c.get("scaffolding_level")
+        target_surface = c.get("target_surface")
+        sample_ref = c.get("sample_ref")
         fm_notes = c.get("failure_mode_notes")
 
-        if level == "transferable" and test_type != "transfer":
-            warnings.append(f"test-gap: {cid} level=transferable but no transfer test")
+        if cap_type in ("public-copy-adaptation", "surface-trim") and not target_surface:
+            warnings.append(f"surface: {cid} capability_type={cap_type} but no target_surface")
+
+        if level in ("consistent", "transferable", "independent"):
+            refs = c.get("evidence_refs", [])
+            if len(refs) <= 1 and not sample_ref:
+                warnings.append(
+                    f"evidence: {cid} level={level} but thin evidence (<=1 ref, no sample_ref)"
+                )
+
         if level == "independent" and scaffolding and scaffolding != "none":
             warnings.append(
                 f"test-gap: {cid} level=independent but scaffolding={scaffolding} (expected none)"
             )
+
         if level in ("consistent", "transferable", "independent") and not fm_notes:
             warnings.append(f"test-gap: {cid} level={level} but no failure_mode_notes")
+
         if test_result and not test_type:
             warnings.append(f"orphan: {cid} has test_result but no test_type")
 
