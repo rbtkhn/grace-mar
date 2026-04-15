@@ -49,3 +49,10 @@ skills:
     verify_forbidden_substrings:
       - users/grace-mar/
       - process_approved_candidates
+  - name: strategy-notebook-expert-cross-weave
+    source: strategy-notebook-expert-cross-weave/SKILL.md
+    appendix: .cursor/skills/strategy-notebook-expert-cross-weave/CURSOR_APPENDIX.md
+    target: .cursor/skills/strategy-notebook-expert-cross-weave/SKILL.md
+    verify_forbidden_substrings:
+      - users/grace-mar/
+      - process_approved_candidates
