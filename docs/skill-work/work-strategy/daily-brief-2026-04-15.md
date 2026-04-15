@@ -63,9 +63,26 @@ _Product / integration context: [work-dev/workspace.md](../work-dev/workspace.md
 
 _Filled at **good morning** per [daily-brief-putin-watch.md](daily-brief-putin-watch.md): web scan (Kremlin schedule/transcripts, Reuters, BBC, TASS/RIA as needed), **48h** rolling window, **bullets + URLs**. RSS §2 does not replace this pass. If blank, paste after generate or re-run morning assembly._
 
+**Rolling window (UTC, anchored to Assembled):** ~**2026-04-13 14:42** → **2026-04-15 14:42** (see header). Bullets below are **WORK** ingest — cite before public use.
+
+- **2026-04-13 — Kremlin (English, official):** Talks with President of **Indonesia Prabowo Subianto** at the Kremlin; strategic partnership, trade and sectoral cooperation (energy, space, agriculture, industry, pharmaceuticals), **international and regional issues** — [Russian-Indonesian talks](http://en.kremlin.ru/events/president/news/79545).
+- **2026-04-13 — Kremlin (`ru`, official):** Same event, **Russian** presidential site entry — [kremlin.ru news / 79545](http://www.kremlin.ru/events/president/news/79545) *(native triangulation per [daily-brief-native-international-pass.md](daily-brief-native-international-pass.md))*.
+- **2026-04-13 — RIA Novosti (`ru`, state wire):** **Peskov** briefing lines on **Iran enriched uranium / Russia’s prior proposal** and US posture (paraphrase in wire; verify key quotes against Kremlin daily briefing transcript if load-bearing) — [РИА Новости, 13.04.2026](https://ria.ru/20260413/peskov-2086774724.html).
+- **2026-04-13 — English press (secondary cross-check, not Kremlin primary):** Moscow Times on Kremlin **repeating** readiness re **highly enriched uranium** offer — [The Moscow Times](https://www.themoscowtimes.com/2026/04/13/kremlin-repeats-offer-to-take-irans-highly-enriched-uranium-a92483).
+- **2026-04-15 — Kremlin (English, official):** **Meeting on economic issues** with government and **Bank of Russia** leadership (growth, industry, employment, budget context on Kremlin event page) — [Meeting on economic issues](http://en.kremlin.ru/events/president/news/79558).
+- **2026-04-15 — Kremlin (`ru`, official):** Same event — [Совещание по экономическим вопросам](http://kremlin.ru/events/president/news/79558).
+
 ## 1e. JD Vance — last 48 hours
 
 _Filled at **good morning** per [daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md): web scan (VP office / White House readouts, Congress if relevant, major wires), **48h** rolling window, **bullets + URLs**. RSS §2 may surface Vance-adjacent headlines; it does not replace this pass. If blank, paste after generate or re-run morning assembly._
+
+**Rolling window (UTC):** same anchor as **§1d** (~**2026-04-13 14:42** → **2026-04-15 14:42**).
+
+- **2026-04-13 — White House (official video):** **Bret Baier** interview — framed as first sit-down **since returning from Pakistan** — [VP JD Vance sits down with Bret Baier…](https://www.whitehouse.gov/videos/vp-jd-vance-sits-down-with-bret-baier-for-his-first-interview-since-returning-from-pakistan/).
+- **2026-04-13 — Reuters (wire):** **US blockade** of Iranian ports / Hormuz context after **Islamabad** talks reporting — pair with **White House** lines for **VP travel** vs **CENTCOM** operational claims — [US begins blockade…](https://www.reuters.com/world/middle-east/us-blockade-iran-after-talks-fail-yield-a-deal-2026-04-13/).
+- **2026-04-13 — Reuters (wire):** **Trump** warning on **Iranian fast-attack** craft vs **blockade** — **principal-adjacent**; not a substitute for **VP office** wording — [Reuters](https://www.reuters.com/world/middle-east/trump-says-iranian-fast-attack-ships-that-come-close-us-blockade-will-be-2026-04-13/).
+- **2026-04 — White House (fact sheet):** **U.S.–Hungary** bilateral partnership advance (coalition / alliance lane when **Orbán** thread is live) — [Advancing the United States-Hungary Bilateral Partnership](https://www.whitehouse.gov/fact-sheets/2026/04/advancing-the-united-states-hungary-bilateral-partnership/).
+- **Persian-primary (Tehran military register vs VP/White House):** For **IRGC / Hormuz** wording in the same news cycle, use **§1h** Tasnim bullet + **fa** primaries there — **do not** merge **military** Tehran lines with **VP** quotes without a **labeled seam** ([daily-brief-jd-vance-watch.md](daily-brief-jd-vance-watch.md), [NOTEBOOK-PREFERENCES.md](strategy-notebook/NOTEBOOK-PREFERENCES.md)).
 
 ## 1f. Weak signal worth watching
 
@@ -76,6 +93,8 @@ _Operator block per [weak-signal-template.md](weak-signal-template.md) and [weak
 **External model overlay (Grok “Daily Strategic Brief” — 2026-04-15 operator paste) — NOT verified, not Voice knowledge:** Single-arc story (“diffusion-driven compression”) that wires **G7 finance** virtual endorsement, **Hungary Tisza** draft coalition text, **Ukraine** deep-strike counts (**214** fiber drones, **52** sea drones, **third** Sevastopol depot, **312** sorties/**20h**, **five** launcher failures), **US CPI** decimals same headline day, **Taiwan** legislature splits, and **Russian MoD** **1.2 trillion** ruble supplemental into one causal closure.
 
 **Operator triage vs primaries/wires (same session):** **IMF** global growth markdown is **real** at **3.1%** vs **3.3%** January forecast (**0.2** percentage points, not Grok’s **0.4**) — [AP](https://apnews.com/article/economy-imf-outlook-iran-war-trump-inflation-growth-e3d8a239509abb50757f8c8d42fb32d8). **G7 15 Apr** virtual **Japan-chair** readout as quoted, **Hungary 14-page 09:00 UTC** draft, **same-calendar-day BLS CPI** table matching Grok’s decimals, **Taiwan** vote package, **MoD supplemental** line — **not** corroborated in fast triage; treat as **LLM-precision risk**. **Use:** notebook **hypothesis** fodder only — fold into **Judgment** only after **primary** or **twin independent wires** per claim; run [analogy-audit-template.md](analogy-audit-template.md) if any parallel from this overlay goes load-bearing in copy.
+
+**Brief maintenance (2026-04-15, coffee C → option E):** **§1d** + **§1e** filled from **Kremlin / White House / Reuters / RIA** in the rolling window above; **§1f** Grok overlay remains **low / NOT verified** — do **not** raise confidence from co-location with new watch bullets.
 
 ## 1g. PRC — last 48 hours (People’s Republic of China)
 
