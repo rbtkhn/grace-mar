@@ -303,6 +303,9 @@ If those cannot be stated, stop promotion.
 ### Decision-point template
 [decision-point-template.md](decision-point-template.md) — the main structured destination when a historical or civilizational pattern materially affects choice.
 
+### Brief source registry
+[brief-source-registry.md](brief-source-registry.md) — source-class and corroboration discipline for each artifact type this ladder may produce or consume.
+
 ## 11. Example flows
 
 ### Flow A — modest pattern

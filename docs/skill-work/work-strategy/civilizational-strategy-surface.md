@@ -343,6 +343,9 @@ Decision points may use this surface to frame strategic context, but recommendat
 ### 11.6 Promotion ladder
 [promotion-ladder.md](promotion-ladder.md) defines the standard path for promoting material seeded by this surface (case families, lenses, mechanisms) into reusable strategy artifacts. This surface often provides Stage 1 (case hit) inputs; the ladder governs what happens next.
 
+### 11.7 Brief source registry
+[brief-source-registry.md](brief-source-registry.md) governs which source classes are appropriate for each artifact type and when corroboration is required as civilizational material moves toward stronger claims.
+
 ## 12. Creation rule for new entries
 
 A new case family, mechanism, or civilizational dynamic may be added here only if at least one of the following is true:

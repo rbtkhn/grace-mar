@@ -70,7 +70,7 @@ Typical use flow:
 5. If the new pattern recurs, add or revise a case entry.
 6. If a case begins to need richer local treatment, create or update a History Notebook chapter.
 
-Case families and lenses that seed new cases are defined in [civilizational-strategy-surface.md](civilizational-strategy-surface.md).
+Case families and lenses that seed new cases are defined in [civilizational-strategy-surface.md](civilizational-strategy-surface.md). Source-class discipline and corroboration expectations for case-backed artifacts are in [brief-source-registry.md](brief-source-registry.md).
 
 ## 6. Required entry template
 
