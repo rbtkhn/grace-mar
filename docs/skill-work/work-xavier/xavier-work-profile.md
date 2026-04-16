@@ -33,6 +33,7 @@ Use **level** as a coarse signal: `learning` · `supported` · `independent` · 
 | Instance + workflow | **Cursor** + companion-self patterns | *(operator)* | See [LEARN-PATH.md](LEARN-PATH.md), [PROMPT-PATTERNS.md](PROMPT-PATTERNS.md). | |
 | SMM execution | Content plans, posting, analytics | *(operator)* | Score against [xavier-smm-capability-rubric.md](xavier-smm-capability-rubric.md). | |
 | BrewMind / field | Partner outreach, PH pilot context | *(operator)* | [brewmind-philippines-onboarding-guide.md](brewmind-philippines-onboarding-guide.md). | |
+| Instance + workflow | **[Cici](https://github.com/Xavier-x01/Cici)** — governed state, proposals queue, `.claude/` session layer | learning | **Evidence:** Phase 1 scaffold + companion contract [`fcfe437`](https://github.com/Xavier-x01/Cici/commit/fcfe4375599c7835b645c2977afc3df0d96b1214), native tooling [`901012d`](https://github.com/Xavier-x01/Cici/commit/901012d0da2be14b5b42acab1ce981ec30fe9a07) ([cici-rtf-sessions-ingest-2026-04-14.md](evidence/cici-rtf-sessions-ingest-2026-04-14.md)). **Gap:** habitual proposal review/apply, filled `CLAUDE.local.md`, merge hygiene for docs on branches ([xavier-progress-log.md](xavier-progress-log.md)). Not **independent** until one full **propose → approve → governed apply** cycle completes without operator nudge. | 2026-04-16 |
 
 _Add rows for languages, design tools, scheduling, or other stack items as needed._
 
