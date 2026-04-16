@@ -11,9 +11,26 @@ WORK only; not Record.
 
 ## Segment 1 — Narrative journal (operator)
 
-_(No narrative distillation yet — add prose above machine extraction. **`thread`** does not overwrite Segment 1.)_
+Operator-maintained **month-scale** notes (below) sit above the reconstructed backfill; **`thread`** does not overwrite this layer.
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
+
+---
+
+## 2026-01
+
+- [strength: low] **Signal:** Public lines in this window emphasize US–Iran military buildup and strike risk; Iran framed as able to disrupt regional energy and base posture if conflict widens (see reconstructed arc URLs — third-party transcripts, not in-repo verbatim).
+- [strength: low] **Mechanism:** Stresses command continuity and pre-planned resilience vs a telegraphed strike — narrative “warning” tone on escalation path.
+
+## 2026-02
+
+- [strength: low] **Signal:** Iran policy framed as a diplomatic corner: long-form commentary on negotiations vs coercion (paired sources in backfill block).
+- [strength: medium] **Tension:** Potential **versus** other experts on whether a diplomatic off-ramp exists at all — use current batch-analysis pairs to test, not this stub alone.
+
+## 2026-03
+
+- [strength: low] **Signal:** US–Israel campaign against Iran described as underperforming strategically; missile-defense and dispersal themes recur in cited pieces.
+- [strength: low] **Shift:** Emphasis moves from “buildup” framing (Jan) to “campaign trajectory / failure mode” framing (Mar) in the reconstructed arc — **drift** to be checked against April machine extraction.
 
 ---
 
