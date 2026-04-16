@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`steve-jermy`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Steve Jermy (Commodore, RN ret.) |
+| **expert_id** | `steve-jermy` |
+| **Role** | **Energy–GDP / maritime system**: Hormuz closure **recovery lags** (Ever Given–style **knock-on**), **diesel** → supply chain / semis / fertilizer; **rough-order** macro slides vs **currency-first** economics; **close vs distant** blockade **risk geometry** |
+| **Default grep tags** | `Jermy`, `IRAN`, or `Hormuz` in cold |
+| **Typical pairings** | × `daniel-davis`, × `scott-ritter`, × `john-mearsheimer` (in-show cite) |
+| **Notebook-use tags** | `stress-test` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

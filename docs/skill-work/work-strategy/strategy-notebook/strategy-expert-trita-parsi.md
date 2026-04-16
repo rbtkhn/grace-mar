@@ -15,6 +15,7 @@ WORK only; not Record.
 | **Role** | Co-founder & Executive Vice President, Quincy Institute for Responsible Statecraft; author; U.S.–Iran relations, Iranian foreign policy, Middle East geopolitics. |
 | **Default grep tags** | `IRAN`, `quincy-restraint`, `jcpoa`, `tparsi`, Parsi in cold |
 | **Typical pairings** | × `holy-see-moral`, × `seyed-marandi`, × `douglas-macgregor`, × `jeffrey-sachs`, × `alexander-mercouris` |
+| **Notebook-use tags** | `negotiate`, `narrate` |
 
 ## Convergence fingerprint
 

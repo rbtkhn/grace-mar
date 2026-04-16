@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`charles-freeman`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Charles (“Chas”) Freeman |
+| **expert_id** | `charles-freeman` |
+| **Role** | Retired **career diplomat**: **inconclusive** talks, **alliance** and **material** framing (Islamabad as diplomacy-while-war); **separate plane** from papal **moral** register |
+| **Default grep tags** | `Freeman` or `ChasFreeman` in cold |
+| **Typical pairings** | × `trita-parsi`, × `alexander-mercouris`, × [rome-persia-legitimacy-signal-check.md](rome-persia-legitimacy-signal-check.md) (**seam**, not merge) |
+| **Notebook-use tags** | `negotiate` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

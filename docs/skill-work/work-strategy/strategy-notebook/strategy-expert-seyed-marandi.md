@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`seyed-marandi`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Seyed Mohammad Marandi |
+| **expert_id** | `seyed-marandi` |
+| **Role** | Iranian English long-form: negotiation **process**, red lines, legitimacy register |
+| **Default grep tags** | `IRAN`, `TEHRAN`, or `Marandi` in cold |
+| **Typical pairings** | × `scott-ritter`, × `trita-parsi`, × `rome-ecumenical` (Pontifex / Marandi Easter) |
+| **Notebook-use tags** | `negotiate`, `narrate` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

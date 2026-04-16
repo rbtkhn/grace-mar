@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`max-blumenthal`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Max Blumenthal (`@MaxBlumenthal`) |
+| **expert_id** | `max-blumenthal` |
+| **Role** | **Grayzone** / **antiwar** pole: **U.S. Middle East** policy and **elite-access** critique; **Lebanon**/**Gulf** narrative framing; **media-layer** “who engineered what” — **access** and **backchannel** claims stay **hypothesis-grade** until **primary tape** or **on-record** source |
+| **Default grep tags** | `Blumenthal`, `Grayzone`, or `Lebanon` in cold |
+| **Typical pairings** | × `aaron-mate`, × `trita-parsi`, × `alexander-mercouris`, × `seyed-marandi`, × `charles-freeman` |
+| **Notebook-use tags** | `narrate` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

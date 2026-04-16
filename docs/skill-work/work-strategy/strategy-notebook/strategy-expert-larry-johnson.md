@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`larry-johnson`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Larry Johnson |
+| **expert_id** | `larry-johnson` |
+| **Role** | Ex-CIA / **material** and **ORBAT** emphasis: force structure, **Hormuz** geometry, **F-15/Isfahan** raid narrative reconstructions (Haiphong–Ritter roundtables) |
+| **Default grep tags** | `Johnson` or `LarryJohnson` in cold |
+| **Typical pairings** | × `scott-ritter`, × `daniel-davis`; see [transcript digest](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) |
+| **Notebook-use tags** | `validate` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

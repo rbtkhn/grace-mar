@@ -15,6 +15,7 @@ WORK only; not Record.
 | **Role** | Retired U.S. Army Lieutenant Colonel (21 years active), Senior Fellow & military expert at Defense Priorities; combat-veteran analyst focused on realistic grand strategy and restraint in U.S. foreign policy. |
 | **Default grep tags** | `IRAN`, `JDVance`, `restraint-military`, `Afghanistan-whistleblower`, Davis in cold |
 | **Typical pairings** | × `john-mearsheimer`, × `robert-pape`, × `seyed-marandi`, × `steve-jermy`, × `jeffrey-sachs`, × `alexander-mercouris` (restraint / multipolar overlaps) |
+| **Notebook-use tags** | `validate`, `authorize` |
 
 ## Convergence fingerprint
 

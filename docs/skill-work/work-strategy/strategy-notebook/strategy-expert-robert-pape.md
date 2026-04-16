@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`robert-pape`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Robert Pape (`@ProfessorPape`) |
+| **expert_id** | `robert-pape` |
+| **Role** | **Escalation Trap** / commitment ratchet on demands |
+| **Default grep tags** | `ProfessorPape` or Pape in cold |
+| **Typical pairings** | × `daniel-davis`, × `robert-barnes`, × `john-mearsheimer` |
+| **Notebook-use tags** | `validate`, `authorize` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

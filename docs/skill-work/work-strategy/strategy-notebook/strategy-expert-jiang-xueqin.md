@@ -17,6 +17,7 @@ WORK only; not Record.
 | **Role** | **Long-horizon civilizational / game-theory** lectures; PH is the sole upstream for notebook-facing Jiang ingest |
 | **Default grep tags** | `Jiang`, `PH`, or `predictive-history` in cold |
 | **Typical pairings** | x `john-mearsheimer`, x `glenn-diesen`, x `jeffrey-sachs` |
+| **Notebook-use tags** | `orient`, `historicize` |
 
 ## Convergence fingerprint
 

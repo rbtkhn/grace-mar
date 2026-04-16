@@ -15,6 +15,7 @@ WORK only; not Record.
 | **Role** | University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with **geopolitical** and **institutions** commentary (UN/DC “process vs personality” theses per index). |
 | **Default grep tags** | `Sachs`, `IRAN`, `Hormuz`, `SDSN`, `multipolar` in cold |
 | **Typical pairings** | × `glenn-diesen`, × `john-mearsheimer`, × `alexander-mercouris`, × `trita-parsi` |
+| **Notebook-use tags** | `orient`, `negotiate`, `stress-test`, `historicize` |
 
 ## Convergence fingerprint
 

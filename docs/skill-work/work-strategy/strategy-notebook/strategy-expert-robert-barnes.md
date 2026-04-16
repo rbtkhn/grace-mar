@@ -15,6 +15,7 @@ WORK only; not Record.
 | **Role** | Constitutional, civil rights, and criminal tax trial lawyer (Barnes Law LLP); political–legal commentator; co-host *Viva & Barnes: Law for the People* (with Viva Frei). |
 | **Default grep tags** | `JDVance`, `barnes`, `lawfare`, `barnes_law`, domestic liability in cold |
 | **Typical pairings** | × `robert-pape`; × `daniel-davis` (institutional skepticism seam); topic forks (JTN-style “card” vs satirical spiral) in **`batch-analysis`** without a second expert |
+| **Notebook-use tags** | `authorize` |
 
 ## Convergence fingerprint
 

@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`aaron-mate`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Aaron Maté (`@aaronjmate`) |
+| **expert_id** | `aaron-mate` |
+| **Role** | **Grayzone** / **investigative** lane: **media ownership**, **corporate skin**, and **propaganda** framing; **Israel/Palestine** vocabulary (**colonization** thesis); **CBS** / **billionaire** / outlet **lineage** claims — **tier verify** (filings, corporate docs) before **Links-grade** |
+| **Default grep tags** | `Mate`, `Maté`, `Grayzone`, or `aaronjmate` in cold |
+| **Typical pairings** | × `max-blumenthal`, × `trita-parsi`, × `alexander-mercouris`, × `seyed-marandi` |
+| **Notebook-use tags** | `narrate` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

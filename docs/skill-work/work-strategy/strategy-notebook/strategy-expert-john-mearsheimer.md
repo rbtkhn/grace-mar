@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`john-mearsheimer`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | John Mearsheimer |
+| **expert_id** | `john-mearsheimer` |
+| **Role** | **Offensive realism**: security dilemma, Israel structural, great-power geometry |
+| **Default grep tags** | `MEARSHEIMER` or `Mearsheimer` in cold |
+| **Typical pairings** | × `daniel-davis`, × `alexander-mercouris`, × `glenn-diesen`, × `jeffrey-sachs` |
+| **Notebook-use tags** | `orient`, `historicize` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

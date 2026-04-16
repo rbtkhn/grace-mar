@@ -4,6 +4,37 @@ WORK only; not Record.
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`brian-berletic`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Brian Berletic (`@BrianJBerletic`, The New Atlas) |
+| **expert_id** | `brian-berletic` |
+| **Role** | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint |
+| **Default grep tags** | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold |
+| **Typical pairings** | × `scott-ritter`, × `steve-jermy`, × `glenn-diesen`, × `daniel-davis`, × `john-mearsheimer` |
+| **Notebook-use tags** | `stress-test` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ### Published sources (operator web index)
 
 1. https://www.thenewatlas.com/

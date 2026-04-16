@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`alastair-crooke`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Alastair Crooke |
+| **expert_id** | `alastair-crooke` |
+| **Role** | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests |
+| **Default grep tags** | `Crooke` in cold |
+| **Typical pairings** | × `daniel-davis`, × `seyed-marandi`, × `trita-parsi` |
+| **Notebook-use tags** | `negotiate`, `narrate`, `historicize` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

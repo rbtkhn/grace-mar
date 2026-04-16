@@ -29,6 +29,7 @@ WORK only; not Record.
 | **Role** | <one-line lane description> |
 | **Default grep tags** | <tags in cold> |
 | **Typical pairings** | <batch-analysis partners> |
+| **Notebook-use tags** | <comma-separated from `orient`, `negotiate`, `validate`, `authorize`, `stress-test`, `narrate`, `historicize`> |
 
 ## Convergence fingerprint
 

@@ -37,6 +37,77 @@ Run operator **`thread`**: **`bin/thread`** or **`python3 scripts/strategy_threa
 
 **Mearsheimer vs Diesen (individual commentators):** **`john-mearsheimer`** = **John Mearsheimer** only; **`glenn-diesen`** = **Glenn Diesen** only — **no** shared **`expert_id`** for a “session pair.” Same episode with **both** speakers → **two** paste-ready lines (each **`thread:<expert_id>`**) + optional **`batch-analysis`**.
 
+## Notebook-use tags (reverse index)
+
+**Purpose:** Cross-cutting **usage** tags — answers “how might the notebook use this voice?” (open a frame, read talks, check plausibility, etc.). **Source of truth:** the **`Notebook-use tags`** field in each [`strategy-expert-<expert_id>.md`](strategy-expert-alexander-mercouris.md) profile (Identity table row or **`## Notebook-use tags`** section). This subsection is a **convenience mirror** for shortlists.
+
+**Guardrail:** Tags are **notebook-use families**, not ideological classes, not maintenance tiers, and **not** substitutes for **`expert_id`**, **Role**, **Default grep tags**, or **Typical pairings**. An expert may appear under **multiple** tags.
+
+**Fixed vocabulary:** `orient`, `negotiate`, `validate`, `authorize`, `stress-test`, `narrate`, `historicize`.
+
+### `orient`
+
+- `alexander-mercouris`
+- `douglas-macgregor`
+- `glenn-diesen`
+- `jeffrey-sachs`
+- `jiang-xueqin`
+- `john-mearsheimer`
+
+### `negotiate`
+
+- `alexander-mercouris`
+- `alastair-crooke`
+- `charles-freeman`
+- `jeffrey-sachs`
+- `seyed-marandi`
+- `trita-parsi`
+
+### `validate`
+
+- `daniel-davis`
+- `douglas-macgregor`
+- `jacques-baud`
+- `larry-johnson`
+- `robert-pape`
+- `scott-ritter`
+
+### `authorize`
+
+- `daniel-davis`
+- `jacques-baud`
+- `robert-barnes`
+- `robert-pape`
+- `scott-ritter`
+
+### `stress-test`
+
+- `brian-berletic`
+- `glenn-diesen`
+- `jeffrey-sachs`
+- `martin-armstrong`
+- `scott-ritter`
+- `steve-jermy`
+
+### `narrate`
+
+- `aaron-mate`
+- `alastair-crooke`
+- `alexander-mercouris`
+- `max-blumenthal`
+- `seyed-marandi`
+- `trita-parsi`
+
+### `historicize`
+
+- `alastair-crooke`
+- `alexander-mercouris`
+- `glenn-diesen`
+- `jeffrey-sachs`
+- `jiang-xueqin`
+- `john-mearsheimer`
+- `martin-armstrong`
+
 ---
 
 | expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |

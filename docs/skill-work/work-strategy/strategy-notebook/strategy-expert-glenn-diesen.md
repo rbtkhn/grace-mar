@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`glenn-diesen`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Glenn Diesen |
+| **expert_id** | `glenn-diesen` |
+| **Role** | **Eurasia / multipolar** discourse; **non-Western** institutional / rationality frames when distinct from **Mearsheimer**’s structural-realist register |
+| **Default grep tags** | `Diesen` in cold |
+| **Typical pairings** | × `john-mearsheimer`, × `douglas-macgregor`, × `robert-pape`, × `jeffrey-sachs` |
+| **Notebook-use tags** | `orient`, `stress-test`, `historicize` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

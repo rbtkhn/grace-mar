@@ -4,6 +4,37 @@ WORK only; not Record.
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`jacques-baud`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Jacques Baud |
+| **expert_id** | `jacques-baud` |
+| **Role** | **NATO / UN / intelligence-adjacent** framing: **law-of-war**, **HUMINT vs OSINT** limits, **European security** and **cross-theater** reads; **convergence vs tension** between **official narrative** and **evidential** claims — **complements** **ORBAT** lanes without duplicating them |
+| **Default grep tags** | `Baud`, `NATO`, `UN`, or `EU` in cold |
+| **Typical pairings** | × `scott-ritter`, × `douglas-macgregor`, × `daniel-davis`, × `robert-barnes` |
+| **Notebook-use tags** | `validate`, `authorize` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ### Published sources (operator web index)
 
 1. https://www.thepostil.com/

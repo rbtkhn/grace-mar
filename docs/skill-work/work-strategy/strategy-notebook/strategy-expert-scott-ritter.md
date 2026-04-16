@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`scott-ritter`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Scott Ritter |
+| **expert_id** | `scott-ritter` |
+| **Role** | U.S. **military dissent**: Hormuz **sea control**, blockade ops, Vance frame; **faith-politics** register when **Ritter** is the speaking expert |
+| **Default grep tags** | `JDVance`, `IRAN`, or `Ritter` |
+| **Typical pairings** | × `seyed-marandi`, × `robert-barnes`, × `rome-invective` (split from ecumenical) |
+| **Notebook-use tags** | `validate`, `authorize`, `stress-test` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

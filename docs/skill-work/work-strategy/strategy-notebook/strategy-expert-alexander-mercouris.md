@@ -15,6 +15,7 @@ WORK only; not Record.
 | **Role** | Independent geopolitical analyst; co-host **The Duran** (with Alex Christoforou); long-form diplomatic and multipolar commentary. **Prior:** UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see **Failure modes** — primary only for professional-conduct facts). |
 | **Default grep tags** | `Mercouris`, `The Duran`, `multipolar`, mind cite in cold |
 | **Typical pairings** | × `john-mearsheimer`, × `glenn-diesen`, × `jeffrey-sachs`, × `seyed-marandi`, × Tri-Frame [minds/](../minds/README.md) |
+| **Notebook-use tags** | `orient`, `negotiate`, `narrate`, `historicize` |
 
 ## Convergence fingerprint
 

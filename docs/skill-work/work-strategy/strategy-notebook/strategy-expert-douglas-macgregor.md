@@ -2,6 +2,37 @@
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`douglas-macgregor`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Douglas Macgregor (`@DougAMacgregor`) |
+| **expert_id** | `douglas-macgregor` |
+| **Role** | Importers / **Asia–Europe** distance from U.S.–Israel kinetic frame |
+| **Default grep tags** | `IRAN` or Macgregor in cold |
+| **Typical pairings** | × `robert-pape`, × `john-mearsheimer`, × `trita-parsi` |
+| **Notebook-use tags** | `validate`, `orient` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ## Seed (index mirror — operator may extend)
 
 The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `strategy_expert_corpus.py` run; edit this **Seed** section freely.

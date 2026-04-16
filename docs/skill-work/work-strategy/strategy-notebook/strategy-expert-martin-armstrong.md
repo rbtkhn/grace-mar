@@ -4,6 +4,37 @@ WORK only; not Record.
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`martin-armstrong`** lane.
 
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Martin A. Armstrong (`@ArmstrongEcon`) |
+| **expert_id** | `martin-armstrong` |
+| **Role** | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions |
+| **Default grep tags** | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold |
+| **Typical pairings** | × `steve-jermy`, × `glenn-diesen`, × `jeffrey-sachs`, × `robert-pape` |
+| **Notebook-use tags** | `stress-test`, `historicize` |
+
+## Convergence fingerprint
+
+*Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
+
+## Tension fingerprint
+
+*Seed profile — operator extends when upgraded.*
+
+## Signature mechanisms
+
+*Seed profile — operator extends when upgraded.*
+
+## Failure modes / overreads
+
+*Seed profile — operator extends when upgraded.*
+
+## Active weave cues
+
+*Seed profile — operator extends when upgraded.*
+
 ### Published sources (operator web index)
 
 1. https://x.com/ArmstrongEcon
