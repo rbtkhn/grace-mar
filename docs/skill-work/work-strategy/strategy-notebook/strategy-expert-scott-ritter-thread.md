@@ -12,6 +12,10 @@ WORK only; not Record.
 ## Segment 1 — Narrative journal (operator)
 
 _(No narrative distillation yet — add prose above machine extraction. **`thread`** does not overwrite Segment 1.)_
+
+Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
+
+---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
 
