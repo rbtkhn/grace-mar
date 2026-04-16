@@ -1,9 +1,71 @@
 # EVIDENCE — grace-mar
 
-Cognitive Emulator · Evidence Log
-Version: 0.1 (Initial)
+Version: 0.2
 Created: February 2026
-Status: EMPTY
+Status: ACTIVE
+
+Canonical evidence surface — not identity (SELF), not reference routing (SELF-LIBRARY), not runtime transcript storage. Normalized, provenance-linked entries with artifact references. Long raw transcripts belong under `artifacts/` and are referenced here, not inlined. Evidence may inform SELF or SKILLS only through explicit reviewed synthesis via the gated pipeline.
+
+---
+
+## Transcript handling rule
+
+Do not inline long raw transcripts in the canonical archive. § VIII (Gated Approved Log) is the primary area where this applies.
+
+- Store the raw transcript or long conversation extract under `artifacts/` (e.g. `artifacts/act-XXXX-telegram-thread.md`)
+- Create a normalized archive entry here with: date, modality, activity type, topic, `artifact_ref`, normalized summary, evidence tier
+- Inline transcript excerpts only when the exact wording is itself the evidence (e.g. a specific phrasing that reveals a knowledge boundary or personality signal)
+
+---
+
+## Entry shape (working convention)
+
+Forward-facing standard for new entries. Existing entries are not retroactively rewritten.
+
+Every durable archive entry should aim to separate four layers:
+
+1. **artifact_ref** — where the raw thing lives (path under `artifacts/`)
+2. **normalized** — structured facts about the thing
+3. **analysis_ref** — optional interpretation stored separately (e.g. `artifacts/analyses/`)
+4. **candidate_for** — optional downstream synthesis targets (THINK, WRITE, SELF)
+
+### Evidence subtypes
+
+Preferred values for `evidence_subtype`:
+
+- `reading_item`
+- `writing_sample`
+- `lookup_event`
+- `conversation_excerpt`
+- `artifact_observation`
+- `development_marker`
+
+Subtype describes the evidence class, not the topic.
+
+### Review fields
+
+- `review_status`: `active` | `compressed` | `superseded`
+- `reviewed_at`: ISO date of last review
+
+### Example (new-style entry)
+
+```yaml
+  - id: ACT-XXXX
+    date: 2026-XX-XX
+    evidence_subtype: conversation_excerpt
+    modality: text (Telegram)
+    activity_type: correction / boundary stress
+    topic: example topic
+    artifact_ref: artifacts/act-XXXX-telegram-thread.md
+    normalized:
+      summary: >
+        Short factual summary of what happened.
+      evidence_tier: 3
+    review_status: active
+    reviewed_at: 2026-XX-XX
+    candidate_for:
+      - self-skill-think
+```
 
 ---
 
@@ -1561,15 +1623,15 @@ attestations: []
 ## VII. METRICS
 
 ```yaml
-total_activities: 37
-total_read_entries: 0
-total_write_entries: 6
-total_create_entries: 8
+total_activities: 55
+total_read_entries: 1
+total_write_entries: 7
+total_create_entries: 10
 total_media_entries: 8
 total_attestations: 0
-last_activity: 2026-02-24
-last_update: 2026-02-24
-update_source: Tchaikovsky Andante cantabile (ACT-0039)
+last_activity: 2026-03-28
+last_update: 2026-04-15
+update_source: IX-C survey candidates (ACT-0055 via CANDIDATE-0097)
 ```
 
 ---
