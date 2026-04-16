@@ -3,7 +3,11 @@
 
 After **``thread:<expert_id>``** paste-ready lines are in
 ``docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md``,
-run::
+run (from repo root)::
+
+    bin/thread
+
+or::
 
     python3 scripts/strategy_thread.py
 

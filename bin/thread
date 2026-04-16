@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Operator command **thread**: same as `python3 scripts/strategy_thread.py` from repo root.
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+exec python3 "$ROOT/scripts/strategy_thread.py" "$@"
