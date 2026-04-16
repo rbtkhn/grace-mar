@@ -12,6 +12,8 @@ description: >-
 
 **Purpose:** Run **in-voice** analysis using the **Tri-Frame** minds with a **fixed letter menu** — not every pass needs all three. This is **analysis in chat** (or inbox paste) first; it is **not** a substitute for **`strategy`** unless the operator also wants notebook capture.
 
+**Design principle:** Tri-mind is the strategy **differentiator**, not the strategy **engine**. Use it when one lens is not enough, not as the default wrapper around every strategy pass.
+
 **Relation to `skill-strategy`:** [`skill-strategy`](../skill-strategy/SKILL.md) is the **lane pass** (notebook, briefs, promotion). **`tri-mind`** is **lens choreography** when the operator wants **structured** Mercouris / Mearsheimer / Barnes output. Do **not** invoke **`tri-mind`** on every `strategy` turn — [strategy-minds-granular.mdc](../../rules/strategy-minds-granular.mdc).
 
 **Relation to LEARN MODE:** If the operator is in **LEARN MODE** (full extraction, SCHOLAR hooks, strict ordering), follow [LEARN_MODE_RULES.md](../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md) — it may **override** section ordering and depth; say so when both apply.
@@ -43,6 +45,12 @@ If the operator **already** included the code with the thesis (e.g. “tri-mind 
 
 **Letter → mind map (SSOT for this skill):** **A = Mercouris**, **B = Mearsheimer**, **C = Barnes**.
 
+**Ordering rules (quick reference):**
+- Letters are always **A/B/C** = Mercouris / Mearsheimer / Barnes.
+- Duets always open in **sorted letter order** (e.g. `ba` → A then B).
+- Roundtables **vary** opening order by topic or operator override — not the same every time.
+- Do **not** import other menu orderings (e.g. B → M → M program order) into tri-mind headings.
+
 ---
 
 ## When to use
@@ -67,6 +75,16 @@ If the operator **already** included the code with the thesis (e.g. “tri-mind 
 Patterns and recipes: [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md).
 
 **Note:** [`skill-strategy`](../skill-strategy/SKILL.md) § Post-entry lens offer uses **B → M → M** program order for **one-liner** options (Barnes, Mearsheimer, Mercouris). **`tri-mind`** uses the **A/B/C** letter map above — do not conflate the two orderings when labeling output; use **A/B/C** headings here.
+
+---
+
+## Mode shapes (quick reference)
+
+| Mode | Shape |
+|------|-------|
+| **Solo** (one letter) | One substantive in-voice pass |
+| **Duet** (two letters) | Two openings in sorted order + one cross-reply round |
+| **Roundtable** (`abc`) | Three openings (varied order) + one cross-reply round + unresolved tensions |
 
 ---
 
