@@ -12,6 +12,10 @@
 
 ## Log
 
+### 2026-04-15
+
+- **GitHub sync (Cici + BrewMind site):** [evidence/brewmind-site-github-sync-2026-04-15.md](evidence/brewmind-site-github-sync-2026-04-15.md) — **[Cici](https://github.com/Xavier-x01/Cici) `main`** still [`901012d`](https://github.com/Xavier-x01/Cici/commit/901012d0da2be14b5b42acab1ce981ec30fe9a07) (no new commits); **[brew_mind](https://github.com/Xavier-x01/brew_mind)** [`480c32e`](https://github.com/Xavier-x01/brew_mind/commit/480c32e) (social links) → [`d0ac8f0`](https://github.com/Xavier-x01/brew_mind/commit/d0ac8f0) (contact email). Live: [xavier-x01.github.io/brew_mind](https://xavier-x01.github.io/brew_mind/).
+
 ### 2026-04-14
 
 - **Cici RTF ingests:** [evidence/cici-rtf-sessions-ingest-2026-04-14.md](evidence/cici-rtf-sessions-ingest-2026-04-14.md) + RTFs — (A) BrewMind companion contract merge [`fcfe437`](https://github.com/Xavier-x01/Cici/commit/fcfe4375599c7835b645c2977afc3df0d96b1214); (B) `.claude/` best-practices layer [`901012d`](https://github.com/Xavier-x01/Cici/commit/901012d0da2be14b5b42acab1ce981ec30fe9a07) (parent `fcfe437`). GitHub chain verified.
