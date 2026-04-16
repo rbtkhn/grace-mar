@@ -42,6 +42,9 @@ Notes
     <!-- backfill:<expert_id>:start -->
     <!-- backfill:<expert_id>:end -->
   above the thread markers, so reruns are idempotent.
+- Optional second pass (only after backfill has ``### YYYY-MM`` sections with bullets you want
+  compressed): ``python3 scripts/refine_backfilled_thread_arc.py --expert-id …`` — no-op when the
+  window is empty or has no month headings (preserves italic empty-state lines).
 """
 
 from __future__ import annotations
