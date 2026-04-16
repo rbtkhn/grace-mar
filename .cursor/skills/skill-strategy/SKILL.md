@@ -8,7 +8,7 @@ description: >-
   optional promote to STRATEGY.md. Embeds the operator’s five-thread geopolitical theory (official name TBD): polycentric voice planes + Islamabad scaffold, information / equilibrium vocabulary, daily brief §1d–§1h,
   gap matrices, weak-signal and analogy-audit discipline. PH (work-jiang) via Jiang resonance —
   not work-politics pulse or weekly brief generator. External LLM “strategic brief” digests: triage claims to a falsifiable table before weave; land a labeled §1f overlay in the daily brief per NOTEBOOK-PREFERENCES — never substitute for §1d–§1h until primaries.
-  Session hygiene: disk-grounded scaffolds (STATUS/days/inbox/meta); strategy-commentator roster for “every expert” coverage; popular-academic weave-time prose default per NOTEBOOK-PREFERENCES;
+  Session hygiene: disk-grounded scaffolds (STATUS/days/inbox/meta); strategy-commentator roster for “every expert” coverage; popular-academic weave-time prose default per NOTEBOOK-PREFERENCES; optional weave skeleton S1–S5 when the operator picks a primary strategy-expert (NOTEBOOK-PREFERENCES § Weave skeletons);
   MEM grounding via suggest_civ_mem_from_relevance.py + documented fallback when MEM–RELEVANCE–X is missing; tri-mind chat games are WORK brainstorm only.
   Notebook spec (STRATEGY-NOTEBOOK-ARCHITECTURE + NOTEBOOK-PREFERENCES + daily-strategy-inbox SSOT) is incorporated by reference — one contract with this skill, not optional parallel docs.
 ---
@@ -136,7 +136,8 @@ The threads are **voice planes for principals that are structurally non-fungible
 
 ### Agent obligations on `strategy` passes
 
-- **`weave` (knot-shape fork):** Before writing **`days.md`** or knot files on **`weave`**, present **4–6** labeled options for **this** weave’s **thesis / knot shape / content emphasis** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu* and [NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) (**Weave knot-shape menu**). Skip or shorten if the operator names the shape, **`no menu`**, or **EXECUTE** with explicit thesis.
+- **`weave` (knot-shape fork):** Before writing **`days.md`** or knot files on **`weave`**, present **4–6** labeled options for **this** weave’s **thesis / knot shape / content emphasis** — see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu* and [NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) (**Weave knot-shape menu**). **Scope each stub** so any resulting **`strategy-notebook-knot-*.md`** can land in **300–1000 words** (`wc -w`): say when detail lives on **`days.md`**, when Judgment is in-knot, or when to split routers vs synthesis. Skip or shorten if the operator names the shape, **`no menu`**, or **EXECUTE** with explicit thesis.
+- **Weave skeleton (S1–S5) — optional:** When the operator chooses a **primary `strategy-expert`** for the weave (or accepts a **menu** default), default **Signal / Judgment / Links / Open weighting** and **failure-mode** guardrails follow [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — **orthogonal** to the **knot-shape** fork above; multi-expert synthesis stays in the **knot body** (and compressed `days.md` when woven there).
 - **Tag the plane** when a load-bearing claim draws on a watch thread — in **Judgment** or **Links** (which MFA, which Kremlin URL, which WH readout), not only “experts say.”
 - **Split** when two channels **diverge** on scope or facts; **do not** blend into one smooth sentence without a **verify** line — [NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md) (Thesis A / B).
 - **Use** [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-work/work-strategy/minds/MINDS-SKILL-STRATEGY-PATTERNS.md) **plane-safe dual register** when multiple threads fire the same day.
@@ -194,7 +195,7 @@ Runnable **multi-phase** calibration (preflight, notebook, verify, tri-frame, bo
 When writing **for** `strategy` **into repo files**, generate **one of three shapes only** (chat may still explain, triage, or answer questions — that is **not** a third notebook format):
 
 1. **Inbox capture shape** — Use for default **Capture** and **`strategy ingest`**. Output **only** paste-ready lines (and optional two-tier gist) for [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md).
-2. **Knot page shape** — Use when the operator **explicitly** directs a **Weave**. Output a knot page under `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<slug>.md` per [strategy-notebook-knot-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-notebook-knot-template.md).
+2. **Knot page shape** — Use when the operator **explicitly** directs a **Weave**. Output a knot page under `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<slug>.md` per [strategy-notebook-knot-template.md](../../../docs/skill-work/work-strategy/strategy-notebook/strategy-notebook-knot-template.md). **Target 300–1000 words** for the knot file; overflow → `days.md` or a second knot per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](../../../docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md).
 3. **Days.md continuity shape** — Use alongside knot composition to update the `## YYYY-MM-DD` block in `days.md` with a thin chronology entry (which knots were active, what changed, what carries forward).
 
 **Do not** default to freeform “strategic essay” as the on-disk artifact when the target is the notebook — **shape text for the destination first**.
@@ -248,7 +249,8 @@ Before placing text, classify it:
 Before any **Capture** or **Weave** file write, confirm:
 
 - [ ] Read **STATUS.md** and identified the correct chapter / target date.
-- [ ] **`weave`:** Operator saw **4–6 knot-shape / thesis** options (architecture § *Weave command — knot-shape menu*) or opted out (**`no menu`**, named shape, **EXECUTE**).
+- [ ] **`weave`:** Operator saw **4–6 knot-shape / thesis** options (architecture § *Weave command — knot-shape menu*) or opted out (**`no menu`**, named shape, **EXECUTE**). If a **knot file** was written or revised, **`wc -w`** on that file is **300–1000** (or **below 300** only for explicit **`days.md`**-deferral router knots per architecture).
+- [ ] **Weave skeleton (optional):** If a **primary `strategy-expert`** was chosen for this weave, align section pressure with [NOTEBOOK-PREFERENCES § Weave skeletons (S1–S5)](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) (defaults + failure modes); skip if **`no primary`** / single-shape weave without expert spine.
 - [ ] Chose **inbox** vs **`days.md`** vs **STRATEGY.md** (Promote only).
 - [ ] Output matches **required shape** for that destination (inbox line vs daily fragment).
 - [ ] **Spine only** in Signal/Judgment — bulk routed per **Bulk spillway**.
