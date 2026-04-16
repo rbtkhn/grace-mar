@@ -3,8 +3,8 @@
 WORK only; not Record.
 
 **Source:** Distilled from [`strategy-expert-scott-ritter-transcript.md`](strategy-expert-scott-ritter-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
-**Process:** Script extracts raw material (transcript lines + knot references); assistant refines into a curated analytical thread.
-**Updated:** When the operator runs `thread`.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** **Segment 2** (between markers). Operator / assistant maintains **Segment 1** (narrative journal) above the markers.
+**Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
 **Companion files:** [`strategy-expert-scott-ritter.md`](strategy-expert-scott-ritter.md) (profile) and [`strategy-expert-scott-ritter-transcript.md`](strategy-expert-scott-ritter-transcript.md) (7-day verbatim).
 
 ---

@@ -8,10 +8,18 @@ WORK only; not Record.
 **Companion files:** [`strategy-expert-alastair-crooke.md`](strategy-expert-alastair-crooke.md) (profile) and [`strategy-expert-alastair-crooke-transcript.md`](strategy-expert-alastair-crooke-transcript.md) (7-day verbatim).
 
 ---
-<!-- strategy-expert-thread:start -->
-### Machine extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+## Segment 1 — Narrative journal (operator)
+
+_(No narrative distillation yet — add prose above machine extraction. **`thread`** does not overwrite Segment 1.)_
+
+Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
+
+---
+<!-- strategy-expert-thread:start -->
+## Segment 2 — Machine extraction (script-maintained)
+
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
 _(No transcript or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->
