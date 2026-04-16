@@ -85,6 +85,13 @@ knots:
     patterns: [ritter-center-weave]
     note: "Ritter blockade mechanics + sister knots + indexed threads same topic"
 
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md
+    date: "2026-04-14"
+    knot_label: armstrong-cash-hormuz-digital-dollar-arc
+    clusters: [minds-tri-frame, us-payment-law, hormuz-commodity, attribution]
+    patterns: [operator-weave-d, cash-cbdc-stablecoin-seam]
+    note: "Synthesis: Barnes/Mercouris/Mearsheimer mind files + Armstrong X + Fink/BlackRock + Congress.gov + Statista/Signal Gulf fertilizer; orthogonal to thread: Hormuz lattice"
+
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
     date: "2026-04-15"
     knot_label: uranium-offramp-dual-register

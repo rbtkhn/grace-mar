@@ -82,6 +82,12 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 _(Append below this line during the day.)_
 
+### Weave registry — 2026-04-14 (grep anchor)
+
+`notebook-weave | cold: Martin Armstrong (@ArmstrongEcon) X — cash versus digital economy; Larry Fink / BlackRock tokenization and “plumbing” chain; Gulf fertilizer and Hormuz-adjacent anxiety // hook: landed knot strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md (weave D); lenses from CIV-MIND Barnes, Mercouris, Mearsheimer mind files — not a thread: expert row | verify:knot-on-disk+pin-armstrong-status-URL-if-public-cite | membrane:single | grep:armstrong-cash-hormuz-digital-dollar-arc`
+
+`batch-analysis | 2026-04-14 | Armstrong cash × Gulf fertilizer × U.S. digital-dollar law | **Tension-first:** Social graphics mix physical cash, bank money, stablecoins, and a hypothetical Fed-issued retail digital dollar into one “digital” threat; statute still treats payment-stablecoin frameworks and anti-retail-central-bank-digital-currency restrictions as different objects. Gulf-origin seaborne fertilizer share (Statista citing Signal Group) is not interchangeable with a “percent through Hormuz” shipping claim. **Orthogonal** to the same-day Hormuz expert lattice (Scott Ritter blockade weave). **Weak bridge:** food-price fear and money-control fear can rise together without sharing one causal graph.`
+
 ### Wire capture — 2026-04-15 (strategy pass)
 
 `wire | cold: KREMLIN | Peskov 15 Apr: Russia willing to revisit enriched-uranium transfer proposal (Putin previously offered; US rejected); "decisively determined" to continue cooperation with Iran // hook: §1d — uranium off-ramp alive on Kremlin side; test against Islamabad "10-point" scope | https://ria.ru/20260415/peskov-2087244756.html | verify:kremlin-en-release+ria-ru-primary`
