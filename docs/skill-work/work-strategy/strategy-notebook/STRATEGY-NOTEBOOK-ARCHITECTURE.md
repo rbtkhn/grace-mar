@@ -80,6 +80,8 @@ The **strategy-notebook knots** are the **primary written units** of the work-st
 
 **Legacy note:** Older text referred to a “contextual weave menu” as a **short fork**; the **knot-shape** fork above is the **default** assistant contract for **`weave`** unless the operator opts out.
 
+**Weave skeletons (S1–S5):** When the operator picks a **primary `strategy-expert`** for the weave (or accepts a menu default), [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) § *Weave skeletons (S1–S5)* defines **five** optional **spines** (operations, power/incentives, legitimacy/room, domestic machinery, markets/macro) and a **failure mode** per spine — **orthogonal** to the **knot-shape menu** above; combine both when useful.
+
 **Shared date key (work-xavier):** The [Xavier journal](../../../work-xavier/xavier-journal/README.md) uses the same **`YYYY-MM-DD`** identifier for daily files (`YYYY-MM-DD.md`). Strategy pages stay in month `days.md` (or `pages/YYYY-MM-DD.md`); Xavier stays in `xavier-journal/` — same calendar key, different folder and purpose.
 
 ## Expert choreography

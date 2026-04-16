@@ -2,7 +2,7 @@
 
 **Status:** ACTIVE  
 **Set:** 2026-04 (from multiple-choice questionnaire)  
-**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — this file **narrows** daily practice; it does not replace architecture for repo-wide defaults (e.g. architecture still describes a **~1000w** consolidated target where no override applies).  
+**Governed by:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) — this file **narrows** daily practice; it does not replace architecture for repo-wide defaults (e.g. architecture still describes a **~1000w** consolidated **`days.md`** daily target where no override applies, and a **300–1000w** target per **`strategy-notebook-knot-*.md`** file on weave).  
 **Skill contract:** Together with the architecture doc and [daily-strategy-inbox.md](daily-strategy-inbox.md), this file is **part of** [`skill-strategy`](../../../../.cursor/skills/skill-strategy/SKILL.md) — operator defaults the skill **must** apply on a **`strategy`** pass; not optional flavor beside the skill.
 
 ---
@@ -17,7 +17,9 @@
 | **Inbox vs notebook** | **Raw paste and URL dumps** → [daily-strategy-inbox.md](daily-strategy-inbox.md). **Notebook** (knots) = **synthesis + key links**, not mirrors of the inbox. |
 | **Expert corpus (`thread`)** | Inbox lines with **`thread:<expert_id>`** → operator **`thread`** rebuilds **`strategy-expert-<expert_id>.md`** only — **`python3 scripts/strategy_thread.py`** — **not** a **`weave`** (no `days.md` / knots). Architecture § *Thread (terminology)*. |
 | **Weave → page structure** | **Promotion choice** — what lands under **Signal** vs **Judgment** vs **Links** vs **Open** follows **what you choose to weave** and at **which** weave, not inbox length or equal padding per section. Intra-day weaves **iterate one** `## YYYY-MM-DD` block (merge, don’t duplicate). See [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting*. |
-| **Weave knot-shape menu** | On **`weave`**, assistants present **4–6** labeled options (**knot thesis / shape / content emphasis**) **before** writing to disk—see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*. Operator picks a letter, says **`no menu`**, or names the shape explicitly. |
+| **Weave knot-shape menu** | On **`weave`**, assistants present **4–6** labeled options (**knot thesis / shape / content emphasis**) **before** writing to disk—see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*. Each option should be **scoped** so a resulting **knot file** (when in scope) can be written within **300–1000 words** (e.g. “thin knot + `days.md` carry,” “full in-knot synthesis,” “Links-heavy / Judgment-tight”). Operator picks a letter, says **`no menu`**, or names the shape explicitly. |
+| **Weave skeleton (primary expert)** | **S1–S5** — when **`weave`** names one **primary** `strategy-expert` (or MC pick), default **Signal / Judgment / Links / Open weighting** follows § *Weave skeletons (S1–S5)*; multi-expert analysis stays in the **knot body**; primary = **filing / spine**, not sole epistemic authority. |
+| **Knot length (weave output)** | **`strategy-notebook-knot-*.md`:** target **300–1000 words** (`wc -w`). Router / deferral knots may sit **below 300** only when prose is **explicitly** routed to **`days.md`** per architecture. |
 | **Batch-analysis / visual snapshot** | Inbox **`batch-analysis | …`** lines stay **markdown SSOT**; a future **derived** JSON snapshot for a **visual UI** should emit **`batch_analysis_refs[]`** with **`expert_ids`**, per-row **`confidence`** (`high` \| `medium` \| `low` \| `none`), and **`sources`** (`crosses` / `thread_in_line` / `upstream_verify` / `label_alias`) — **architecture** § *Batch-analysis — machine parse & visual snapshot*. Thematic batches with **no** indexed **`thread:`** may legitimately show **empty** `expert_ids`. |
 | **Judgment priority** | **Structural first** — power, incentives, constraints; narrative second. |
 | **Islamabad / US–Iran / pause** | When the day touches this thread, **always capture scope fights**: what is in/out of the **pause**, **Lebanon**, **Hormuz** definition. |
@@ -36,6 +38,52 @@
 | **Analogue-app patterns (Metaculus / Kialo / etc.)** | **Do not** add **numeric or ordinal confidence** tags, **forecast scoreboards**, or **argument-tree “impact” / branch-vote** metadata to default notebook or `skill-strategy` output — they **conflict** with the **Uncertainty** row unless this file is **revised** to allow them. Prefer **Thesis A / B** and falsifiers in `meta.md` / expert index. |
 | **Conflicting experts** | **Two Judgment bullets** — **Thesis A** / **Thesis B** — preserve tension; no forced merge. |
 | **External model briefs (LLM digests)** | **Grok-class** or other **closed-world** strategic narratives pasted for triage: **never** substitute for **§1d–§1h** watch passes or **tier-A** URLs. **Default:** one labeled **weak-signal / overlay** block in **`daily-brief-YYYY-MM-DD.md` §1f** (see [weak-signal-template.md](../weak-signal-template.md)) — **hypothesis + falsifiers**; line-by-line **fact-check** triage before any **weave** into **`days.md` Judgment**. **Do not** import **unsourced** counts, meeting quotes, or same-day **macro tables** from the digest into **Signal/Judgment** as facts. |
+
+---
+
+<a id="weave-skeletons-s1-s5"></a>
+
+## Weave skeletons (S1–S5)
+
+**Purpose:** Renames and extends the earlier **three-skeleton** idea (mechanics / legitimacy / domestic) into **five** default **spines** for a knot or day block when **`weave`** picks a **primary** `strategy-expert`. The skeleton sets **section weighting** and **Open** pressure; **all other experts** appear as **synthesis, seams, and falsifiers** in the knot **body** (and in `days.md` when woven there). **Primary** = navigation and default structure, not a claim that one voice owns the truth.
+
+### Definitions + failure modes (one line each)
+
+| ID | Name | What leads | **Failure mode** |
+|----|------|------------|-------------------|
+| **S1** | **Operations & mechanics** | Hulls, ORBAT, closure, naval facts, OSINT material claims; Judgment stresses **tier / falsify**. | **Grand-bargain, legitimacy stack, or MFA speech** smuggled in as **hull facts** without naming the **register shift**. |
+| **S2** | **Power, alliances & incentives** | Structural map — who can afford what, alliance geometry, balances; **not** ORBAT-first, not speech-act diplomacy first. | **Incentive story** displaces **receipt-tier** discipline on **observables** that would falsify the map. |
+| **S3** | **Legitimacy, institutions & room** | Diplomatic / multilateral / civilizational **register**: credibility in the room, precedents, choreography (MFA, Kremlin, UN table, long arc). | **Diplomatic credibility** substitutes for **power-structure or kinetic** checks where **seams** are load-bearing. |
+| **S4** | **Domestic political & legal machinery** | Votes, courts, war powers, escalation-trap as **binding** machinery; jurisdiction and enforceability. | **Domestic machinery** **colonizes** foreign operational claims (**pseudo–CENTCOM** from roll calls or headlines). |
+| **S5** | **Markets, macro & system constraints** | Prices, cycles, inventories, sanctions pass-through, **commodity calendar** when **arithmetic / market** leads the spine. | **Price or cycle narrative** substitutes for **tiered** commodity, hull, or wire evidence without **hypothesis-grade** labeling. |
+
+### Default primary → skeleton (`strategy-expert-*`)
+
+| Primary (`thread:`) | Default | Notes |
+|---------------------|---------|--------|
+| `scott-ritter` | **S1** | |
+| `daniel-davis` | **S1** | Ultimatum / resumption / policy–military interface. |
+| `seyed-marandi` | **S1** | Red-line / regional **hard edge**; often paired with **S2** in body. |
+| `steve-jermy` | **S1** | Naval / maritime. |
+| `brian-berletic` | **S1** | OSINT / open military-technical. |
+| `jacques-baud` | **S1** | Operational / mil-intel mechanism claims. |
+| `larry-johnson` | **S1** | OOB / feasibility / operational skepticism. |
+| `douglas-macgregor` | **S1** | Campaign-scale force mechanics — override to **S2** if weave is **grand strategic map** with little ORBAT. |
+| `john-mearsheimer` | **S2** | Alliance geometry and structural incentives. |
+| `alexander-mercouris` | **S3** | |
+| `trita-parsi` | **S3** | War-powers / accountability frames land in body vs **S4** when Congress machinery owns the title. |
+| `charles-freeman` | **S3** | |
+| `alastair-crooke` | **S3** | |
+| `glenn-diesen` | **S3** | Euro–Russian strategic narrative room. |
+| `jeffrey-sachs` | **S3** | Multilateral / development table — override toward **S5** if macro/debt/sanctions **lead**. |
+| `jiang-xueqin` | **S3** | Civilizational / education-bridge speech layer. |
+| `aaron-mate` | **S3** | Media / narrative contestation — override toward **S5** if **commodity / price** leads. |
+| `max-blumenthal` | **S3** | Investigative / counter-narrative legitimacy — same override as Mate. |
+| `robert-barnes` | **S4** | |
+| `robert-pape` | **S4** | Escalation trap / domestic lock-in — body may glue **S5** when calendar is load-bearing. |
+| `martin-armstrong` | **S5** | Market / cycle machinery. |
+
+**Overrides:** Use when inbox density or knot title makes another spine honest (e.g. **Mate** + lead = **commodity arithmetic** → weight **S5** in body while keeping **S3** primary only if narrative room still owns the file title).
 
 ---
 
@@ -63,7 +111,7 @@ Use **sparingly**. They cue later handling in this lane; they are **not** formal
 
 ## Short paste block (meta / handoff)
 
-Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links; weave-time prose popular-academic (no internal nicknames in spine). Inbox = raw; notebook = synthesis + key links. **Expert corpus:** **`thread`** → `strategy_thread.py` → `strategy-expert-*.md` only (not weave). Weave choice weights sections (Signal/Judgment/Links/Open), not inbox order. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. Putin / Kremlin: §1d watch; Kremlin vs wire. PRC / Beijing: §1g watch; MFA vs Western analysis. IRI / Tehran: §1h watch; MFA/IRNA vs Western digest (framework = Islamabad index). **External LLM strategic digests:** §1f labeled overlay + fact-check triage before weave — not §1d–§1h. PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Weave inbox at dream or explicit **weave**; not on ingest alone. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence; analogue-app confidence scores / branch-vote metadata out of band until this file revises that. Split disagreements as Thesis A / Thesis B.
+Operator notebook prefs: variable daily length; minimum Signal / Judgment / Links; weave-time prose popular-academic (no internal nicknames in spine). **Knot files (`strategy-notebook-knot-*.md`):** target **300–1000 words** on weave (`wc -w`). Inbox = raw; notebook = synthesis + key links. **Expert corpus:** **`thread`** → `strategy_thread.py` → `strategy-expert-*.md` only (not weave). **Weave skeletons S1–S5:** optional primary-expert spine + failure modes — § *Weave skeletons (S1–S5)*. Weave choice weights sections (Signal/Judgment/Links/Open), not inbox order. Judgment leads structure. Islamabad / US–Iran: scope (pause, Lebanon, Hormuz). Leo XIV / Rome: moral–diplomatic plane vs mechanics; ROME-PASS source order. JD Vance: VP channel vs cable; §1e watch doc. Putin / Kremlin: §1d watch; Kremlin vs wire. PRC / Beijing: §1g watch; MFA vs Western analysis. IRI / Tehran: §1h watch; MFA/IRNA vs Western digest (framework = Islamabad index). **External LLM strategic digests:** §1f labeled overlay + fact-check triage before weave — not §1d–§1h. PH when engaged that day. Offer B/M/M one-liners after substantive passes; lens depth in daily brief minds, notebook thin. Weave inbox at dream or explicit **weave**; not on ingest alone. Promote to STRATEGY weekly on clear thesis. STATUS minimal. Framing risk over numeric confidence; analogue-app confidence scores / branch-vote metadata out of band until this file revises that. Split disagreements as Thesis A / Thesis B.
 
 ---
 
@@ -86,6 +134,7 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 
 | Date | Change |
 |------|--------|
+| 2026-04-17 | **Weave skeletons (S1–S5):** Renumber from three conceptual skeletons to **five** (operations, power/structure, legitimacy/room, domestic machinery, markets/macro) with **one-line failure modes** per skeleton; default **primary expert → skeleton** table; summary table + short paste + anchor `weave-skeletons-s1-s5`; architecture § *Weave skeletons* pointer. |
 | 2026-04-17 | **Batch-analysis / visual snapshot:** summary table row — derived JSON may expose **`batch_analysis_refs[]`** with **`confidence`** + **`sources`** for expert navigation; pointer to architecture § *Batch-analysis — machine parse & visual snapshot*. |
 | 2026-04-16 | **Operator command `thread`:** expert rolling corpus rebuild (`strategy_thread.py` → `strategy-expert-*.md`); distinct from **`weave`** — architecture § *Thread (terminology)*; summary table + short paste + Relation to assistants. |
 | 2026-04-15 | **Escalation marker preference:** SSOT for optional `[watch]` / `[decision]` / `[promote]` inline cues; cross-links from architecture SSOT and promotion ladder. |
@@ -98,3 +147,4 @@ Operator notebook prefs: variable daily length; minimum Signal / Judgment / Link
 | 2026-04-11 | **Weave → page structure:** [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting*; inbox weave rhythm cross-link; prefs table + Relation to assistants + short paste block (explicit intra-day **weave**). |
 | 2026-04-14 | **Operator command `weave`:** Canonical name for inbox → `days.md` merge; legacy `fold` retired; **`weave`** is the canonical command ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave (terminology)*; [skill-strategy SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) **Weave** mode). |
 | 2026-04-15 | **External model briefs (LLM digests):** Summary table row + § stub — **§1f** overlay + **`strategy + verify`** falsifiable-table gate before weave; mirrored in [`skill-strategy` SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) (description + pre-write checklist + Session hygiene). |
+| 2026-04-17 | **Knot length on weave:** **`strategy-notebook-knot-*.md`** target **300–1000 words**; knot-shape menu stubs scoped to that band; architecture § *Weave command* + *Weave choice*; template + skill-strategy checklist. |
