@@ -4,6 +4,8 @@
 
 Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template)
 
+**Weave skeleton (primary expert):** When a **`weave`** names this **`thread:`** as **primary**, default **Signal / Judgment / Links / Open** pressure for the knot (and compressed `days.md` when woven there) follows [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — see the **primary → skeleton** table and **failure modes**; orthogonal to the **knot-shape** menu ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*).
+
 ---
 
 <a id="profile-template"></a>
@@ -113,9 +115,9 @@ WORK only; not Record.
 
 ---
 
-## Narrative journal
+## Segment 1 — Narrative journal (operator)
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. This section is **not** overwritten by the **`thread`** script._
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. **Segment 1** is **not** overwritten by the **`thread`** script._
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 
@@ -123,9 +125,17 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 
 <!-- strategy-expert-thread:start -->
 
-### Machine extraction (script-maintained)
+## Segment 2 — Machine extraction (script-maintained)
 
-_The block between the HTML comments is replaced on each `thread` run. Do not put the narrative journal here._
+_The block between the HTML comments is replaced on each `thread` run. **Segment 1** belongs above the start marker; do not put the narrative journal in Segment 2._
+
+### Segment 2a — Recent transcript material
+
+_(Populated by `strategy_expert_corpus.py` when transcript lines exist.)_
+
+### Segment 2b — Knot references
+
+_(Populated when knot index references this expert.)_
 
 _(No transcript or knot material for extraction.)_
 

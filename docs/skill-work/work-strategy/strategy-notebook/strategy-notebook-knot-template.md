@@ -2,6 +2,8 @@
 
 **Use:** Copy to `chapters/YYYY-MM/knots/strategy-notebook-knot-YYYY-MM-DD-<knot_label>.md`, replace placeholders, append a row to [`knot-index.yaml`](knot-index.yaml), run `python3 scripts/validate_knot_index.py` from repo root.
 
+**Weave length target:** **300–1000 words** for the knot file body (`wc -w`). If synthesis would exceed **~1000**, move bulk to [`days.md`](chapters/YYYY-MM/days.md) **or** split into another knot—see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting* (knot body length). Thin router knots **below 300** are allowed only when **deferring** narrative to `days.md` (architecture).
+
 **Naming:** Basename must contain **`knot`**. The segment after the date is the **machine slug** (see **`knot_label`** below).
 
 **Relation to `days.md`:** A knot is the **atomic strategy-notebook page** — the primary unit of notebook substance. The block **`## YYYY-MM-DD`** in [`chapters/YYYY-MM/days.md`](chapters/YYYY-MM/days.md) is the **chronology and continuity layer**: it tracks which knots were active, what changed, what tensions remained open, and what should be resumed tomorrow. `days.md` organizes time; knots hold the writing.
@@ -30,6 +32,7 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 | **Date** | YYYY-MM-DD |
 | **knot_label** (machine slug) | `<kebab-slug>` — must match `strategy-notebook-knot-YYYY-MM-DD-<kebab-slug>.md` and [`knot-index.yaml`](knot-index.yaml) |
 | **Day block** | [`days.md` § YYYY-MM-DD](chapters/YYYY-MM/days.md) |
+| **Primary expert (`thread:`) — optional** | If this knot was woven with one **primary** expert, record **`thread:<expert_id>`** (same id as [`strategy-commentator-threads.md`](strategy-commentator-threads.md)); default **Signal / Judgment / Links / Open** weighting follows [NOTEBOOK-PREFERENCES § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5). **Omit** for link-only hubs or when no single spine applies — multi-expert synthesis still belongs in the sections below. |
 
 ### Page type (**pick per knot** — mixed types allowed)
 
