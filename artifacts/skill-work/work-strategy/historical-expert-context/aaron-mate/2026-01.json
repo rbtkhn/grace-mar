@@ -1,0 +1,27 @@
+{
+  "expert_id": "aaron-mate",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-aaron-mate-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "January stays in the **investigative / accountability** lane Maté shares with The Grayzone desk: subscriber-first essays on **Trump–Iran** coercion (sanctions plus “help” rhetoric), while the same calendar window carries **lawfare / leaked-email** reporting on efforts against the outlet (often other bylines — treat as **institutional** context, not Maté byline).\n\n- [strength: medium] **Signal:** Substack piece **2026-01-14** frames “help” offers as continuation of economic war after sanctions — **mechanism** = structural pain, not diplomatic rescue.\n- [strength: low] **Tension:** Grayzone **2026-01-27** Kit Klarenberg piece on Paul Mason / legal pressure — **versus** individual **Maté** byline work; use for **outlet defense** narrative, not to attribute reporting to Maté.",
+    "bullets": [
+      "[strength: medium] **Signal:** Substack piece **2026-01-14** frames “help” offers as continuation of economic war after sanctions — **mechanism** = structural pain, not diplomatic rescue.",
+      "[strength: low] **Tension:** Grayzone **2026-01-27** Kit Klarenberg piece on Paul Mason / legal pressure — **versus** individual **Maté** byline work; use for **outlet defense** narrative, not to attribute reporting to Maté."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 1,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Signal:** Substack piece **2026-01-14** frames “help” offers as continuation of economic war after sanctions — **mechanism** = structural pain, not diplomatic rescue."
+    ],
+    "tension_lines": [
+      "[strength: low] **Tension:** Grayzone **2026-01-27** Kit Klarenberg piece on Paul Mason / legal pressure — **versus** individual **Maté** byline work; use for **outlet defense** narrative, not to attribute reporting to Maté."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

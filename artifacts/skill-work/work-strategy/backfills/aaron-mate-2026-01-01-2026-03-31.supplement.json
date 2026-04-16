@@ -1,0 +1,35 @@
+[
+  {
+    "event_date": "2026-01-14",
+    "source_type": "web",
+    "path": "https://www.aaronmate.net/p/trumps-help-offers-iranians-far-more",
+    "title": "Trump's 'help' offers Iranians far more pain (Substack)",
+    "summary": "Newsletter dated 2026-01-14: argues sanctions-imposed economic harm pairs with Trump's second bombing threat — 'help' rhetoric vs structural coercion on Iran.",
+    "anchors": ["https://www.aaronmate.net/p/trumps-help-offers-iranians-far-more"],
+    "git_last_commit": null,
+    "git_last_commit_date": null,
+    "confidence": "medium"
+  },
+  {
+    "event_date": "2026-02-25",
+    "source_type": "web",
+    "path": "https://www.youtube.com/watch?v=cnhRqPk8ezo",
+    "title": "Aaron Maté on Useful Idiots — Witkoff / Iran",
+    "summary": "YouTube upload date 2026-02-25: long-form segment on Steve Witkoff lines and Iran diplomacy in public interview format (Useful Idiots channel).",
+    "anchors": ["https://www.youtube.com/watch?v=cnhRqPk8ezo"],
+    "git_last_commit": null,
+    "git_last_commit_date": null,
+    "confidence": "medium"
+  },
+  {
+    "event_date": "2026-03-03",
+    "source_type": "web",
+    "path": "https://www.aaronmate.net/p/magas-new-excuse-for-iran-war-israel",
+    "title": "MAGA's new excuse for Iran war: Israel made us do it",
+    "summary": "Newsletter dated 2026-03-03: traces Rubio / congressional framing that Israel drove the attack decision — domestic U.S. audience, elite-access critique lane.",
+    "anchors": ["https://www.aaronmate.net/p/magas-new-excuse-for-iran-war-israel"],
+    "git_last_commit": null,
+    "git_last_commit_date": null,
+    "confidence": "medium"
+  }
+]

@@ -1,0 +1,56 @@
+{
+  "tool": "backfill_expert_thread.py",
+  "tool_version": "1",
+  "script_sha256_12": "7892c5020ae6",
+  "expert_id": "aaron-mate",
+  "start": "2026-01-01",
+  "end": "2026-03-31",
+  "aliases": [
+    "aaron mate",
+    "mate"
+  ],
+  "evidence_count": 3,
+  "evidence": [
+    {
+      "event_date": "2026-01-14",
+      "source_type": "web",
+      "path": "https://www.aaronmate.net/p/trumps-help-offers-iranians-far-more",
+      "title": "Trump's 'help' offers Iranians far more pain (Substack)",
+      "summary": "Newsletter dated 2026-01-14: argues sanctions-imposed economic harm pairs with Trump's second bombing threat — 'help' rhetoric vs structural coercion on Iran.",
+      "anchors": [
+        "https://www.aaronmate.net/p/trumps-help-offers-iranians-far-more"
+      ],
+      "git_last_commit": null,
+      "git_last_commit_date": null,
+      "confidence": "medium"
+    },
+    {
+      "event_date": "2026-02-25",
+      "source_type": "web",
+      "path": "https://www.youtube.com/watch?v=cnhRqPk8ezo",
+      "title": "Aaron Maté on Useful Idiots — Witkoff / Iran",
+      "summary": "YouTube upload date 2026-02-25: long-form segment on Steve Witkoff lines and Iran diplomacy in public interview format (Useful Idiots channel).",
+      "anchors": [
+        "https://www.youtube.com/watch?v=cnhRqPk8ezo"
+      ],
+      "git_last_commit": null,
+      "git_last_commit_date": null,
+      "confidence": "medium"
+    },
+    {
+      "event_date": "2026-03-03",
+      "source_type": "web",
+      "path": "https://www.aaronmate.net/p/magas-new-excuse-for-iran-war-israel",
+      "title": "MAGA's new excuse for Iran war: Israel made us do it",
+      "summary": "Newsletter dated 2026-03-03: traces Rubio / congressional framing that Israel drove the attack decision — domestic U.S. audience, elite-access critique lane.",
+      "anchors": [
+        "https://www.aaronmate.net/p/magas-new-excuse-for-iran-war-israel"
+      ],
+      "git_last_commit": null,
+      "git_last_commit_date": null,
+      "confidence": "medium"
+    }
+  ],
+  "supplement_merged": 3,
+  "supplement_json": "artifacts/skill-work/work-strategy/backfills/aaron-mate-2026-01-01-2026-03-31.supplement.json"
+}
