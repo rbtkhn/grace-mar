@@ -5,7 +5,7 @@ Scope: WORK-only
 Lane: work-strategy
 Purpose: Thin operator bridge between work-strategy and civilization_memory-derived civilizational reasoning
 Owner: Operator
-Last updated: 2026-04-14
+Last updated: 2026-04-16
 
 ## 1. What this surface is
 
@@ -89,7 +89,7 @@ Material from this surface may support the following local artifacts:
 
 - resonance note
 - analogy audit
-- history-notebook chapter candidate
+- history-notebook chapter candidate — for **draft scaffolding** before full chapters, use [history-notebook threads](history-notebook/threads/) and [history-notebook knots](history-notebook/knots/) (`history-civ-*`, `hn-knot-*`); keep this surface **thin** and avoid duplicating a second taxonomy (mechanisms graduate into HN knots/chapters, not parallel codexes here)
 - active watch support
 - strategy-notebook entry
 - current-events analysis

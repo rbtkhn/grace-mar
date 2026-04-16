@@ -4,6 +4,18 @@
 
 **Operator-authored compressed chapters** distilling civilizational patterns into strategy-ready reference. Five temporal volumes; **target 20 chapters per volume (100 main-era chapters)**; each chapter ~500–1000 words. Not a mirror of CIV-MEM — an independent analytical layer the operator writes and the agent reads.
 
+### Three layers (draft scaffolding)
+
+Book identity and chapter IDs remain **SSOT** in [book-architecture.yaml](book-architecture.yaml) and PH wiring in [cross-book-map.yaml](cross-book-map.yaml). These folders are **additive** working layers fed by `civilization_memory` **as a reservoir** (read and distill; do not copy upstream trees):
+
+| Layer | Location | Role |
+|-------|----------|------|
+| **Civilization threads** | [threads/](threads/) — `history-civ-*.md` | Longitudinal scratchpads: continuity, mechanism candidates, links to knots/chapters, open questions |
+| **History knots** | [knots/](knots/) — `hn-knot-*.md` | Atomic mechanism units (many mem inputs → one knot; many knots → one chapter). **Not** strategy-notebook daily knots (LIB-0153) |
+| **Chapters** | [chapters/](chapters/) + YAML ids | Finished comparative chapters (~500–1000w); cite **chapter ids** (`hn-i-v1-04`, …) from strategy-notebook **`### History resonance`** |
+
+Flow: **CIV-MEM (reservoir) → threads → knots → chapters →** short resonance lines in [strategy-notebook](../strategy-notebook/README.md). Index: [knots/README.md](knots/README.md) (knot → chapter map).
+
 - **Chapter format:** See [STYLE-GUIDE.md](STYLE-GUIDE.md)
 - **Polyphonic drafting (operator):** [POLYPHONY-WORKFLOW.md](POLYPHONY-WORKFLOW.md) — CIV-MIND passes on a neutral spine, then public translation (no mind names in chapter prose)
 - **Architecture SSOT:** [book-architecture.yaml](book-architecture.yaml) — all chapters, volumes, sub-groups, arcs
