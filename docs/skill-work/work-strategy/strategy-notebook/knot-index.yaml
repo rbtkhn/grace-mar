@@ -16,6 +16,7 @@
 # unless you prefer sequence.
 #
 # schema_version — bump when fields change (tooling). v3: `weave_label` renamed to `knot_label`.
+#   v4: optional gamification / seam fields: `weave_count`, `seam_integrity`, `qoi_check`, `kac_check`.
 #
 # knots[]:
 #   path         (string, required) — repo-relative path to the knot markdown file (unique)
@@ -26,6 +27,11 @@
 #   clusters     (list of string, optional) — thematic cluster slugs, e.g. islamabad-hormuz
 #   patterns     (list of string, optional) — cross-cutting pattern ids, e.g. escalation-trap
 #   note         (string, optional) — freeform one-line comment (not a stable key)
+#   weave_count  (int, optional) — manual tally or copy from `scripts/knot_seam_metrics.py`
+#                  (outgoing links to other knot files); must be >= 0
+#   seam_integrity (number, optional) — subjective 0–1 seam quality for this knot (not a scoreboard)
+#   qoi_check    (bool, optional) — Quality-of-information checklist done (see knot template)
+#   kac_check    (bool, optional) — Key-assumptions checklist done (see knot template)
 #
 # Examples (commented; remove leading # to activate):
 #   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-islamabad.md
@@ -41,7 +47,7 @@
 #     patterns: [tri-mind-batch]
 #     note: "afternoon batch-analysis fold"
 
-schema_version: 3
+schema_version: 4
 
 knots:
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
@@ -84,7 +90,8 @@ knots:
     knot_label: scott-ritter-blockade-hormuz-weave
     clusters: [scott-ritter, hormuz, blockade, expert-lattice]
     patterns: [ritter-center-weave]
-    note: "Ritter blockade mechanics + sister knots + indexed threads same topic"
+    weave_count: 6
+    note: "Ritter blockade mechanics + sister knots + indexed threads same topic; weave_count from knot_seam_metrics.py (outgoing knot links)"
 
   - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md
     date: "2026-04-14"

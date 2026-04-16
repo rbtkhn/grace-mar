@@ -57,6 +57,12 @@ jobs:
       - name: Validate template sync contract
         run: python scripts/validate_template_sync_contract.py
 
+      - name: Validate strategy-notebook knot index
+        run: python3 scripts/validate_knot_index.py
+
+      - name: Strategy notebook knot weave_count drift check
+        run: python3 scripts/knot_seam_metrics.py --strict-drift
+
       - name: Fork lifecycle unit tests
         run: pytest tests/test_fork_lifecycle.py -v --tb=short
 

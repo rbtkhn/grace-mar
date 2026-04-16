@@ -3,7 +3,8 @@
 
 Checks: schema keys, unique paths, paths exist under repo root, basenames contain
 ``knot``, ISO dates, optional ``knot_label`` kebab-case, list types for
-clusters/patterns. WORK only; not Record.
+clusters/patterns, optional v4 fields (``weave_count``, ``seam_integrity``,
+``qoi_check``, ``kac_check``). WORK only; not Record.
 
 Optional: ``--warn-days-md`` / ``--strict-days-md`` — each indexed knot file's
 basename should appear in ``chapters/YYYY-MM/days.md`` for weave continuity
@@ -127,6 +128,47 @@ def validate_knot_index_data(data: Any, *, repo_root: Path) -> list[str]:
         if note is not None and not isinstance(note, str):
             errs.append(f"{prefix}: note must be a string when present")
 
+        wc = row.get("weave_count")
+        if wc is not None:
+            if isinstance(wc, bool):
+                errs.append(
+                    f"{prefix}: weave_count must be a non-negative int when present "
+                    f"(not bool)"
+                )
+            elif not isinstance(wc, int):
+                errs.append(
+                    f"{prefix}: weave_count must be a non-negative int when present"
+                )
+            elif wc < 0:
+                errs.append(f"{prefix}: weave_count must be >= 0")
+
+        si = row.get("seam_integrity")
+        if si is not None:
+            if isinstance(si, bool):
+                errs.append(
+                    f"{prefix}: seam_integrity must be a number in [0, 1] when present "
+                    f"(not bool)"
+                )
+            elif isinstance(si, int):
+                if si not in (0, 1):
+                    errs.append(
+                        f"{prefix}: seam_integrity int must be 0 or 1 when present"
+                    )
+            elif isinstance(si, float):
+                if si < 0.0 or si > 1.0:
+                    errs.append(
+                        f"{prefix}: seam_integrity must be in [0.0, 1.0], got {si!r}"
+                    )
+            else:
+                errs.append(
+                    f"{prefix}: seam_integrity must be a number in [0, 1] when present"
+                )
+
+        for chk in ("qoi_check", "kac_check"):
+            v = row.get(chk)
+            if v is not None and not isinstance(v, bool):
+                errs.append(f"{prefix}: {chk} must be a boolean when present")
+
         allowed = {
             "path",
             "date",
@@ -134,6 +176,10 @@ def validate_knot_index_data(data: Any, *, repo_root: Path) -> list[str]:
             "clusters",
             "patterns",
             "note",
+            "weave_count",
+            "seam_integrity",
+            "qoi_check",
+            "kac_check",
         }
         extra = set(row.keys()) - allowed
         if extra:

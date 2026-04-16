@@ -12,6 +12,14 @@
 | **Next stitch** | Optional: roll month-end summary into [STRATEGY.md](../STRATEGY.md) §IV |
 | **Operator prefs** | [NOTEBOOK-PREFERENCES.md](NOTEBOOK-PREFERENCES.md) |
 
+## Seam / weave observability (optional)
+
+| Artifact | Role |
+|----------|------|
+| [gamification-metrics.md](gamification-metrics.md) | Guardrails + meaning of `weave_count` / `seam_integrity` / checklist flags in `knot-index.yaml` v4+ |
+| [`python3 ../../../../scripts/knot_seam_metrics.py`](../../../../scripts/knot_seam_metrics.py) | Read-only: outgoing links to other knot files vs optional `weave_count` |
+| [forecast-watch-log.md](forecast-watch-log.md) | Monthly / episodic falsifiable metrics (preferred to raw counts) |
+
 ## Next actions
 
 1. When adding new work, append a **`## YYYY-MM-DD`** block (or an episodic `##` section) at the bottom of [`chapters/2026-04/days.md`](chapters/2026-04/days.md) when ready — target **~1000 words** of consolidated analysis per **weave** where applicable (see [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Entry model*); bump **Last substantive entry** here.

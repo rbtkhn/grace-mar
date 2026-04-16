@@ -23,7 +23,7 @@
 
 ## Hormuz week — knot registry (stub, 2026-04-12–14)
 
-**Arc:** Islamabad collapse → **04-13** expert scaffold → **04-14** batch-analysis / multi-knot density → **04-15** daily-brief native overlay + external digest triage + **`weave`** into **`days.md`** **§1d/§1e** **Links** row (no new knot file). **Registry:** [knot-index.yaml](../../knot-index.yaml) (`schema_version: 3`). **Six files** (do not merge Judgment across knots without each file’s **Receipt** / **seams**):
+**Arc:** Islamabad collapse → **04-13** expert scaffold → **04-14** batch-analysis / multi-knot density → **04-15** daily-brief native overlay + external digest triage + **`weave`** into **`days.md`** **§1d/§1e** **Links** row (no new knot file). **Registry:** [knot-index.yaml](../../knot-index.yaml) (`schema_version: 4`). **Six files** (do not merge Judgment across knots without each file’s **Receipt** / **seams**):
 
 | Date | `knot_label` | File |
 |------|----------------|------|

@@ -159,6 +159,67 @@ def test_days_md_link_ok_when_basename_present(tmp_path: Path) -> None:
     assert warns == []
 
 
+def test_weave_count_negative(tmp_path: Path) -> None:
+    k = tmp_path / "strategy-notebook-knot-2026-04-13-test.md"
+    k.write_text("# test\n", encoding="utf-8")
+    errs = validate_knot_index_data(
+        {
+            "schema_version": 4,
+            "knots": [
+                {
+                    "path": "strategy-notebook-knot-2026-04-13-test.md",
+                    "date": "2026-04-13",
+                    "weave_count": -1,
+                }
+            ],
+        },
+        repo_root=tmp_path,
+    )
+    assert any("weave_count" in e for e in errs)
+
+
+def test_seam_integrity_out_of_range(tmp_path: Path) -> None:
+    k = tmp_path / "strategy-notebook-knot-2026-04-13-test.md"
+    k.write_text("# test\n", encoding="utf-8")
+    errs = validate_knot_index_data(
+        {
+            "schema_version": 4,
+            "knots": [
+                {
+                    "path": "strategy-notebook-knot-2026-04-13-test.md",
+                    "date": "2026-04-13",
+                    "seam_integrity": 1.5,
+                }
+            ],
+        },
+        repo_root=tmp_path,
+    )
+    assert any("seam_integrity" in e for e in errs)
+
+
+def test_v4_optional_fields_ok(tmp_path: Path) -> None:
+    k = tmp_path / "strategy-notebook-knot-2026-04-13-test.md"
+    k.write_text("# test\n", encoding="utf-8")
+    errs = validate_knot_index_data(
+        {
+            "schema_version": 4,
+            "knots": [
+                {
+                    "path": "strategy-notebook-knot-2026-04-13-test.md",
+                    "date": "2026-04-13",
+                    "knot_label": "trial",
+                    "weave_count": 2,
+                    "seam_integrity": 0.75,
+                    "qoi_check": True,
+                    "kac_check": False,
+                }
+            ],
+        },
+        repo_root=tmp_path,
+    )
+    assert errs == []
+
+
 def test_basename_must_contain_knot(tmp_path: Path) -> None:
     p = tmp_path / "rope-2026-04-13.md"
     p.write_text("# x\n", encoding="utf-8")

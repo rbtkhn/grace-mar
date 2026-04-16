@@ -42,6 +42,24 @@ So: **you are labeling the knot** (the file / indexed row), not re-labeling the 
 
 *(You can combine, e.g. Thesis page + Link hub.)*
 
+### Verify-before-depth (optional — reduces digest-driven drift)
+
+Tick when satisfied **before** treating synthesis depth as load-bearing. **Not** a vanity score; skip on pure link hubs if N/A.
+
+**Quality of information (QoI) — three checks**
+
+- [ ] **Sources:** Primaries or verify-tagged wires named for load-bearing claims (not only commentary).
+- [ ] **Register:** Expert / institutional / wire lanes are **not** merged without naming the seam.
+- [ ] **Time:** Claims are **dated** or explicitly **timeless** mechanism language — no stale “today” without a date.
+
+**Key assumptions (KAC) — three checks**
+
+- [ ] **Falsifier:** At least one **observable** pin, watch, or `Open` line could weaken the Judgment.
+- [ ] **Scope:** Geographic / legal / alliance scope matches the evidence (no silent scope creep).
+- [ ] **Independence:** Correlated sources are **not** counted as independent confirmation.
+
+When using [`knot-index.yaml`](knot-index.yaml) **v4+**, you may set optional **`qoi_check`** / **`kac_check`** on the index row to mirror these (manual).
+
 ### Lineage
 
 - **Inbox:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) — paste-ready lines / `batch-analysis | … |` rows this knot reflects
@@ -73,6 +91,6 @@ Keeping this block **in the knot file** is the default so the path and `knot_lab
     knot_label: <knot_label>
 ```
 
-Optional keys (omit if unused): `clusters` (list of strings), `patterns` (list of strings), `note` (string).
+Optional keys (omit if unused): `clusters` (list of strings), `patterns` (list of strings), `note` (string); **v4+** also `weave_count` (int), `seam_integrity` (0–1), `qoi_check` / `kac_check` (booleans). See [gamification-metrics.md](gamification-metrics.md).
 
 **Schema note:** `knot-index.yaml` **`knot_label`** replaces the former field **`weave_label`** (same meaning, clearer name).
