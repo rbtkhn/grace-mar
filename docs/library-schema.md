@@ -44,6 +44,8 @@ entries:
     url: ""                       # optional: canonical website, repository, or source page
     pd_url: ""                    # optional: Project Gutenberg, Wikisource, etc.
     shelf_intent: ""              # optional: canon | working_reference | operator_book | active_study | temporary_aid
+    operator_subtype: ""          # optional: operator_spine | operator_notebook | operator_journal | upstream_corpus (when shelf_intent: operator_book)
+    reviewed_at: ""               # optional: ISO date of last entry-level freshness review
     added_at: 2026-02-XX
     notes: ""                     # optional
 ```
@@ -70,6 +72,8 @@ entries:
 | **url** | No | Canonical website, repository, or source page for the entry |
 | **pd_url** | No | URL to complete public domain text (Project Gutenberg, Wikisource) — for retrieval and RAG |
 | **shelf_intent** | No | What role the entry plays: `canon`, `working_reference`, `operator_book`, `active_study`, or `temporary_aid`. See [Shelf Intent](#shelf-intent) below. |
+| **operator_subtype** | No | When `shelf_intent: operator_book`: `operator_spine`, `operator_notebook`, `operator_journal`, or `upstream_corpus`. See [Operator Subtype](#operator-subtype) below. |
+| **reviewed_at** | No | ISO date of last entry-level freshness review. Most useful on `preferred` and `high` priority entries. See [Entry Freshness](#entry-freshness) below. |
 | **added_at** | Yes | ISO date when added |
 | **notes** | No | Free-form notes |
 | **maturity** | No | 1–3 scale for content difficulty; see [Maturity](#maturity) below. Mirrors lesson difficulty. |
@@ -147,6 +151,33 @@ Optional field describing the entry's operational role in the library.
 | **temporary_aid** | Short-lived utility (e.g. a one-off reference for a specific task); archive candidate after use. |
 
 When omitted, the entry's role is inferred from `lane` and `scope`. The field is most useful for operator books and entries with non-obvious retention expectations.
+
+---
+
+## Operator Subtype
+
+Optional field for entries with `shelf_intent: operator_book`. Distinguishes retrieval object classes within the operator-book shelf.
+
+| Value | Meaning |
+|-------|---------|
+| **operator_spine** | Multivolume interpretive corpus with a stable structure (e.g. Predictive History). Deep, slow-changing, high retrieval weight. |
+| **operator_notebook** | Active WORK-territory notebook with daily/episodic entries (e.g. strategy notebook). Fast-changing, session-coupled. |
+| **operator_journal** | Process/learning journal (e.g. Xavier journal, dev journal). Reflective, lower retrieval weight than notebooks. |
+| **upstream_corpus** | Large external corpus maintained outside this instance (e.g. Civilization Memory). High volume, separate freshness cycle. |
+
+When omitted on an `operator_book` entry, the subtype is unspecified. The field helps review scripts and future UIs distinguish retrieval granularity, freshness expectations, and query suitability across operator-authored corpora.
+
+---
+
+## Entry Freshness
+
+Optional `reviewed_at` field (ISO date) records when an entry was last checked for continued relevance, scope accuracy, and appropriate `lookup_priority`.
+
+Most useful on `preferred` and `high` priority entries, where stale metadata has the highest routing impact. Entries with `lookup_priority: none` or `status: archived` rarely need freshness review.
+
+**Review trigger:** `scripts/library_review_report.py` surfaces entries whose `reviewed_at` is missing or older than 30 days alongside `preferred`/`high` entries.
+
+**Scope style note:** Each entry's `scope` list should include at least one narrow topic tag and at most one broad umbrella tag (e.g. `operator_analytical`) unless the entry genuinely spans multiple domains. Mixed scope taxonomies (topic + source class + lane in one list) are acceptable but should be internally consistent within a shelf.
 
 ---
 
