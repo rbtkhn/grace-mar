@@ -38,6 +38,51 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 - [strength: medium] **Mechanism / policy whiplash:** **Energy-strike delay**, **oil**, and **rapid Trump rhetoric shifts** (“victory” → “death and destruction” → de-escalation talk) ([*BREAKING: Trump Delays Attacks on Iran’s Energy*](https://danieldavisdeepdive.substack.com/p/breaking-trump-delays-attacks-on), **2026-03-23**; paid — preview only).
 - [strength: medium] **Tension vs April knot lane:** Q1 Davis stresses **strategy trap / ground-force / energy-pause** mechanics; compare to **April** `thread:` material on **ultimatum vs negotiation**, **resumption clock**, and **Hormuz closure** narratives — **convergence** on “no clean win,” **divergence** on **operational detail depth** (Ritter ORBAT/weave vs Davis grand-strategy warnings).
 
+<!-- backfill:daniel-davis:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `daniel-davis` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-13** — *Iran & America’s Interest* — Substack (Deep Dive).  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/iran-and-americas-interest-lt-col`
+
+- **2026-01-14** — *CLASSIC U.S. REGIME CHANGE in IRAN* (Mearsheimer × Davis).  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/prof-john-mearsheimer-classic-us`
+
+- **2026-01-16** — *Trump Hasn’t Attacked Iran — Yet*.  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/trump-hasnt-attacked-iran-yet`
+
+- **2026-01-22** — Scott Horton Show — Ukraine / Davos / Europe (episode dated on index page).  
+  _Source:_ web: `https://scotthorton.org/interviews/1-22-26-daniel-davis-on-ukraine-davos-and-the-future-of-americas-policy-towards-europe/`
+
+### 2026-02
+
+- **2026-02-10** — *Iran’s Missile Storm Incoming?*  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/irans-missile-storm-incoming`
+
+- **2026-02-13** — *UKRAINE MONEY GAME / IRAN TENSIONS*.  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/exposed-the-ukraine-money-game-iran`
+
+- **2026-02-18** — *U.S. RED LINES / IRAN RESISTS*.  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/us-red-linesiran-resists-lt-col-daniel`
+
+### 2026-03
+
+- **2026-03-16** — *GRAVE WARNING…* (strategic trap / Hormuz / off-ramp).  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/grave-warning-no-good-outcome-left`
+
+- **2026-03-20** — *IRAN WAR: There’s More Joining the Fight* (Defense Priorities guests).  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/iran-war-theres-more-joining-the`
+
+- **2026-03-23** — *BREAKING: Trump Delays Attacks on Iran’s Energy*.  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/breaking-trump-delays-attacks-on`
+
+<!-- backfill:daniel-davis:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

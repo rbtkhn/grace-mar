@@ -42,6 +42,39 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:john-mearsheimer:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `john-mearsheimer` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-15** — Judging Freedom / Iran playbook (Antiwar reprint cites appearance).  
+  _Source:_ web: `https://www.antiwar.com/blog/2026/01/16/john-mearsheimer-on-the-iran-playbook/`
+
+- **2026-01-19** — SCMP “Open Questions” / imperialism vs great-power politics — Substack.  
+  _Source:_ web: `https://mearsheimer.substack.com/p/its-not-great-power-politics-its`
+
+- **2026-01-14** — Daniel Davis Deep Dive — classic U.S. regime change in Iran (cross-appearance).  
+  _Source:_ web: `https://danieldavisdeepdive.substack.com/p/prof-john-mearsheimer-classic-us`
+
+### 2026-02
+
+- **2026-02-12** — Deep Dive on Iran w/ Danny Davis (Substack **14 Feb**).  
+  _Source:_ web: `https://mearsheimer.substack.com/p/a-deep-dive-on-iran`
+
+### 2026-03
+
+- **2026-03-11** — Chris Hedges Report lane — Unfolding Disaster in the Gulf — Substack **13 Mar**.  
+  _Source:_ web: `https://mearsheimer.substack.com/p/the-unfolding-disaster-in-the-gulf`
+
+- **2026-03-18** — Piers Morgan Uncensored — Agreeing with Piers on Iran — Substack **22 Mar**.  
+  _Source:_ web: `https://mearsheimer.substack.com/p/agreeing-with-piers-on-iran`
+
+<!-- backfill:john-mearsheimer:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

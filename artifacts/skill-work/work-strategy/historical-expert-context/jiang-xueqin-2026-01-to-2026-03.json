@@ -1,0 +1,61 @@
+{
+  "expert_id": "jiang-xueqin",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-jiang-xueqin-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January has **no calendar-indexed PH lecture row** in this strategy-notebook Q1 ledger; Q1 months may stay **episodic** or empty of public URLs — tooling still gets three **##** segments for continuity.\n\n- [strength: low] **Upstream anchor:** Predictive History YouTube (sole profile Seed).  \n  [YouTube @PredictiveHistory](https://www.youtube.com/@PredictiveHistory)",
+      "bullets": [
+        "[strength: low] **Upstream anchor:** Predictive History YouTube (sole profile Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February likewise shows **no dated notebook-facing ingest** for Jiang in-repo; long-horizon **game-theory / civilizational** material remains in the **work-jiang** archive — not collapsed into other expert lanes.\n\n- [strength: low] **Corpus pointer (WORK):** Operator-scoped lecture tree — not a dated Feb appearance claim.  \n  `../../../../research/external/work-jiang/` (repo-relative)",
+      "bullets": [
+        "[strength: low] **Corpus pointer (WORK):** Operator-scoped lecture tree — not a dated Feb appearance claim."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [
+        "[strength: low] **Corpus pointer (WORK):** Operator-scoped lecture tree — not a dated Feb appearance claim."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **scope-note** territory until the operator pins indexed transcripts; **April** machine lines may reference **vi-15** etc. — Q1 is **honest sparsity**.\n\n- [strength: low] **Repeat:** PH channel hub — verify any calendar claim against lecture index before Links merge.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: low] **Repeat:** PH channel hub — verify any calendar claim against lecture index before Links merge."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [
+        "[strength: low] **Repeat:** PH channel hub — verify any calendar claim against lecture index before Links merge."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

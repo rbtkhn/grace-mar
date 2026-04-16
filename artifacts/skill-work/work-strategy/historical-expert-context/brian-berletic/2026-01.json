@@ -1,0 +1,22 @@
+{
+  "expert_id": "brian-berletic",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-brian-berletic-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "January holds **no dated** `thread:` ingest line for Berletic in this notebook snapshot; the lane remains **industrial capacity, sanctions, proxy-war logistics** per the roster. Treat hub links as **routing anchors**, not proof of a January calendar appearance.\n\n- [strength: low] **Identity anchor:** The New Atlas — site and channel hub (profile Seed).  \n  [thenewatlas.com](https://www.thenewatlas.com/) · [YouTube @TheNewAtlas](https://www.youtube.com/@TheNewAtlas)",
+    "bullets": [
+      "[strength: low] **Identity anchor:** The New Atlas — site and channel hub (profile Seed)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

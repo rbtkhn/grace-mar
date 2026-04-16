@@ -1,0 +1,22 @@
+{
+  "expert_id": "brian-berletic",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-brian-berletic-thread.md",
+  "segment_id": "2026-02",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-02",
+    "raw_text": "February has the same **no-indexed-Q1-primary** posture in-repo; use **`batch-analysis`** when headline battlefield claims need **factory / stockpile / resupply** counterweight beside **`scott-ritter`** ORBAT lanes — per [strategy-commentator-threads](strategy-commentator-threads.md).\n\n- [strength: low] **Discovery pointer:** X handle — not a verified February posting list.  \n  [X @BrianJBerletic](https://x.com/BrianJBerletic)",
+    "bullets": [
+      "[strength: low] **Discovery pointer:** X handle — not a verified February posting list."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

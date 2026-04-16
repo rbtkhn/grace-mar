@@ -1,0 +1,57 @@
+{
+  "expert_id": "larry-johnson",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-larry-johnson-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January has **no dated** notebook `thread:` row for Johnson in this Q1 snapshot; the lane is **ex-CIA material / ORBAT / Hormuz geometry** beside Haiphong–Ritter roundtables — per roster. Hubs are anchors only.\n\n- [strength: low] **Identity anchor:** Sonar21 + Substack + X (Seed).  \n  [sonar21.com](https://sonar21.com/) · [larrycjohnson.substack.com](https://larrycjohnson.substack.com/) · [X @LarrySonar21](https://x.com/LarrySonar21)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** Sonar21 + Substack + X (Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February shows **no indexed Q1 primary** in-repo; **`scott-ritter`** / **`daniel-davis`** crosses stay **seam-labeled** when the same week needs material detail.\n\n- [strength: low] **Digest pointer (April-heavy):** Haiphong / Ritter / Johnson digest is **not** a February dated line — future operator cross-link only.  \n  [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)",
+      "bullets": [
+        "[strength: low] **Digest pointer (April-heavy):** Haiphong / Ritter / Johnson digest is **not** a February dated line — future operator cross-link only."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **thin** here; **April** machine extraction references **F-15 / Isfahan** narrative math — Q1 is **identity + routing** only.\n\n- [strength: low] **Repeat anchor:** Substack hub — no implied posting calendar.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** Substack hub — no implied posting calendar."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

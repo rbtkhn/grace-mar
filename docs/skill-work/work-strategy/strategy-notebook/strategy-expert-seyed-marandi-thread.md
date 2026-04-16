@@ -40,6 +40,42 @@ March density shifts to **war-in-progress** commentary — **military-strategy**
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:seyed-marandi:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `seyed-marandi` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-16** — Tehran-titled interview (pro-government vs riot framing).  
+  _Source:_ web: `https://www.youtube.com/watch?v=1AvXIls7lQQ`
+
+- **2026-01** — Greater Eurasia / Iran civil unrest — Singju transcript.  
+  _Source:_ web: `https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/`
+
+### 2026-02
+
+- **2026-02-11** (episode index) — Daniel Davis Deep Dive — Prof. Marandi on catastrophic war with Iran — Apple Podcasts.  
+  _Source:_ web: `https://podcasts.apple.com/us/podcast/prof-seyed-marandi-war-w-iran-will-be-catastrophic/id1761369345?i=1000749314279`
+
+- **2026-02** — Israel & U.S. launch surprise attack on Iran — Singju transcript + YouTube mirror.  
+  _Source:_ web: `https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/` · `https://www.youtube.com/watch?v=NEW44Zk7W3g`
+
+### 2026-03
+
+- **2026-03** — “Iran's Military Strategy & U.S. Miscalculations” — Glenn Diesen long-form (Marandi).  
+  _Source:_ web: `https://www.youtube.com/watch?v=IZFVTfNQjnA`
+
+- **2026-03** — “Iran Rejects Ceasefire — Demands New Status Quo”.  
+  _Source:_ web: `https://www.youtube.com/watch?v=6n1_6WKpl5A`
+
+- **2026-03** — South Pars / economic war — gas infrastructure strikes.  
+  _Source:_ web: `https://www.youtube.com/watch?v=AYLACkCWXRA`
+
+<!-- backfill:seyed-marandi:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

@@ -38,7 +38,36 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 - [strength: low] **Ambiguity:** **Alex vs Alex** co-host blocks — which segment is **Mercouris solo** line — pin per ingest.
 - [strength: medium] **Tension:** **Media/speech-act** surface (Mercouris) vs **Mearsheimer** March Substack [**Unfolding Disaster**](https://mearsheimer.substack.com/p/the-unfolding-disaster-in-the-gulf) / [**Piers**](https://mearsheimer.substack.com/p/agreeing-with-piers-on-iran) **structural** framing — **batch-analysis** compares lanes; no **voice-merge** in-thread.
 
----
+<!-- backfill:alexander-mercouris:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `alexander-mercouris` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01** — The Duran / Rumble — NATO “wartime mindset” / European rearmament debate (“NATO Preparing for WAR w/ RUSSIA”).  
+  _Source:_ web: `https://rumble.com/v6adegm-the-durans-alexander-mercouris-nato-preparing-for-war-w-russia.html`
+
+### 2026-02
+
+- **2026-02** — The Duran — Abu Dhabi talks column (Ukraine diplomatic room / empty vs substantial).  
+  _Source:_ web: `https://theduran.com/abu-dhabi-talks-empty-or-substantial/`
+
+### 2026-03
+
+- **2026-03-12** (title stack) — Hormuz closure / tanker / oil headline — The Duran (“Iran Leader: Keep Hormuz Closed…”).  
+  _Source:_ web: `https://www.youtube.com/watch?v=hbl3tuy-CA4`
+
+- **2026-03-14** — EU/UK/Russia exports / sanctions stack — The Duran YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=xLfY2QGWklM`
+
+<!-- backfill:alexander-mercouris:end -->
+
+## 2026-04
+
+_Partial month — narrative distillation for **2026-04-12 → 2026-04-15** only; not a full April ledger. Keeps `## YYYY-MM` boundaries for `strategy_historical_expert_context.py`._
 
 ### Distilled thread (2026-04-12 → 2026-04-15)
 

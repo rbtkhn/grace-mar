@@ -39,6 +39,45 @@ Kinetic **escalation** month in third-party indexes — **underestimation** thes
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:jeffrey-sachs:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `jeffrey-sachs` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-07** — India Today — regime-change playbook after Venezuela.  
+  _Source:_ web: `https://www.indiatoday.in/world/story/jeffrey-sachs-exposes-americas-regime-change-foreign-policy-playbook-after-venezuela-2847780-2026-01-07`
+
+- **2026-01** — JeffSachs.org — U.S. War on Iran / imminent attack class interview (hub).  
+  _Source:_ web: `https://www.jeffsachs.org/interviewsandmedia/tpmdr839gjx9ge4l6yfzg3g2p2m832`
+
+### 2026-02
+
+- **2026-02-09** — Consortium News — Iran’s Comprehensive Peace Proposal.  
+  _Source:_ web: `https://consortiumnews.com/2026/02/09/jeffrey-sachs-irans-comprehensive-peace-proposal/`
+
+- **2026-02-07** (class) — Inside U.S. Imperial Strategy — jeffsachs.org.  
+  _Source:_ web: `https://www.jeffsachs.org/interviewsandmedia/j9ebxfarjfynh5ks5wshfw8rk6x6ss`
+
+### 2026-03
+
+- **2026-03-13** (class) — U.S. and Israel underestimated Iran — jeffsachs.org.  
+  _Source:_ web: `https://www.jeffsachs.org/interviewsandmedia/64krp3h43e342gtwjg4lg3296c6kkg`
+
+- **2026-03-16** (class) — Israel could use nuclear weapons against Iran — jeffsachs.org.  
+  _Source:_ web: `https://www.jeffsachs.org/interviewsandmedia/28ya8raa4gstsb34al6drezprlpee3`
+
+- **2026-03-25** (class) — “Iran is the Graveyard of American Hegemony” — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=OcqIEJEk4MY`
+
+- **2026-03-31** (class) — US–Iran War Deepens — India dilemma — jeffsachs.org.  
+  _Source:_ web: `https://www.jeffsachs.org/interviewsandmedia/jzhlpzl4cp25k3d7jrz9j7bpwkwd6x`
+
+<!-- backfill:jeffrey-sachs:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

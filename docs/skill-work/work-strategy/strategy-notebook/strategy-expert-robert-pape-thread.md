@@ -11,6 +11,51 @@ WORK only; not Record.
 
 ## Segment 1 — Narrative journal (operator)
 
+**Layout:** Each **`## YYYY-MM`** block is one calendar month in Segment 1 (Q1 tool grid); the April distilled subsection below is **post-Q1** narrative. Segment 2 stays below the marker.
+
+## 2026-01
+
+January has **no dated** notebook ingest for Pape in this Q1 snapshot; the lane is **escalation trap / commitment ratchet / demand staging** — not ORBAT — per roster. Profile hubs are **anchors** only until dated rows land.
+
+- [strength: low] **Identity anchor:** Chicago Project on Security & Threats + Escalation Trap Substack + X (Seed).  
+  [CPOST profile](https://cpost.uchicago.edu/people/profile/robert_pape/) · [escalationtrap.substack.com](https://escalationtrap.substack.com/) · [X @ProfessorPape](https://x.com/ProfessorPape)
+
+## 2026-02
+
+February shows **no indexed Q1 primary** in-repo; **`daniel-davis`** / **`john-mearsheimer`** crosses stay **labeled** when coercion vocabulary meets structural-realist reads.
+
+- [strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar.
+
+## 2026-03
+
+March remains **thin** on calendar-facing rows here; **April** Cyrus Janssen / X lines stack blockade and Lebanon forks — Q1 does **not** duplicate that machinery.
+
+- [strength: low] **Repeat anchor:** CPOST profile — scope discipline unchanged.
+
+<!-- backfill:robert-pape:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `robert-pape` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary; no dated primary lines in the Q1 ledger at authoring time.
+**Rules:** Hub anchors only where dated captures are missing.
+
+### 2026-01
+
+- **2026-01** — No dated notebook ingest — CPOST profile.  
+  _Source:_ web: `https://cpost.uchicago.edu/people/profile/robert_pape/`
+
+### 2026-02
+
+- **2026-02** — No dated notebook ingest — Escalation Trap Substack.  
+  _Source:_ web: `https://escalationtrap.substack.com/`
+
+### 2026-03
+
+- **2026-03** — No dated notebook ingest — X profile pointer.  
+  _Source:_ web: `https://x.com/ProfessorPape`
+
+<!-- backfill:robert-pape:end -->
+
 ### Distilled thread (2026-04-12 → 2026-04-16)
 
 **Lane:** Pape supplies the notebook’s **coercion / commitment-ratchet** vocabulary: “escalation trap,” surrender-bar diplomacy, and blockade-as-timeline mechanics. He is used as the **U.S. position vs Iranian leverage** stress tester — not as ORBAT or as a substitute for wire readouts. Hypothesis-grade probabilities and third-player (Israel) claims stay **seam-pinned** until primaries land.

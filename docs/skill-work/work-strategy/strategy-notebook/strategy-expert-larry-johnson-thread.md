@@ -11,7 +11,51 @@ WORK only; not Record.
 
 ## Segment 1 — Narrative journal (operator)
 
-_(No narrative distillation yet — add prose above machine extraction. **`thread`** does not overwrite Segment 1.)_
+**Layout:** Each **`## YYYY-MM`** block is one calendar month in Segment 1; Segment 2 stays below the marker.
+
+## 2026-01
+
+January has **no dated** notebook `thread:` row for Johnson in this Q1 snapshot; the lane is **ex-CIA material / ORBAT / Hormuz geometry** beside Haiphong–Ritter roundtables — per roster. Hubs are anchors only.
+
+- [strength: low] **Identity anchor:** Sonar21 + Substack + X (Seed).  
+  [sonar21.com](https://sonar21.com/) · [larrycjohnson.substack.com](https://larrycjohnson.substack.com/) · [X @LarrySonar21](https://x.com/LarrySonar21)
+
+## 2026-02
+
+February shows **no indexed Q1 primary** in-repo; **`scott-ritter`** / **`daniel-davis`** crosses stay **seam-labeled** when the same week needs material detail.
+
+- [strength: low] **Digest pointer (April-heavy):** Haiphong / Ritter / Johnson digest is **not** a February dated line — future operator cross-link only.  
+  [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md)
+
+## 2026-03
+
+March remains **thin** here; **April** machine extraction references **F-15 / Isfahan** narrative math — Q1 is **identity + routing** only.
+
+- [strength: low] **Repeat anchor:** Substack hub — no implied posting calendar.
+
+<!-- backfill:larry-johnson:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `larry-johnson` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary; no dated primary lines in the Q1 ledger at authoring time.
+**Rules:** Hub anchors only where dated captures are missing.
+
+### 2026-01
+
+- **2026-01** — No dated notebook ingest — Sonar21 hub.  
+  _Source:_ web: `https://sonar21.com/`
+
+### 2026-02
+
+- **2026-02** — No dated notebook ingest — Substack hub.  
+  _Source:_ web: `https://larrycjohnson.substack.com/`
+
+### 2026-03
+
+- **2026-03** — No dated notebook ingest — X profile pointer.  
+  _Source:_ web: `https://x.com/LarrySonar21`
+
+<!-- backfill:larry-johnson:end -->
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 

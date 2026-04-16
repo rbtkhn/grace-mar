@@ -1,0 +1,22 @@
+{
+  "expert_id": "robert-barnes",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-robert-barnes-thread.md",
+  "segment_id": "2026-02",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-02",
+    "raw_text": "February shows **no indexed Q1 primary** in-repo; **`jacques-baud`** / NATO mandate crosses require explicit seams — do not collapse registers.\n\n- [strength: low] **Long-form example:** Podbean interview (profile — verify URL before cite).  \n  [Podbean — Robert Barnes interview](https://unstructured.podbean.com/e/robert-barnes-is-a-high-profile-constitutional-lawyer-and-political-gambler-defending-amy-cooper/)",
+    "bullets": [
+      "[strength: low] **Long-form example:** Podbean interview (profile — verify URL before cite)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

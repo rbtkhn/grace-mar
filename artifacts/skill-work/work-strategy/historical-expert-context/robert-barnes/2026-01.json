@@ -1,0 +1,22 @@
+{
+  "expert_id": "robert-barnes",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-robert-barnes-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "January has **no dated** notebook ingest for Barnes in this Q1 snapshot; the lane is **domestic liability / executive chain / TS framing** — not **`robert-pape`** polling — per roster. Law-firm hubs are anchors only.\n\n- [strength: low] **Identity anchor:** Barnes Law LLP + X (Seed).  \n  [barneslawllp.com](https://www.barneslawllp.com/) · [X @barnes_law](https://x.com/barnes_law)",
+    "bullets": [
+      "[strength: low] **Identity anchor:** Barnes Law LLP + X (Seed)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

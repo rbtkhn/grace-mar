@@ -1,0 +1,22 @@
+{
+  "expert_id": "larry-johnson",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-larry-johnson-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "January has **no dated** notebook `thread:` row for Johnson in this Q1 snapshot; the lane is **ex-CIA material / ORBAT / Hormuz geometry** beside Haiphong–Ritter roundtables — per roster. Hubs are anchors only.\n\n- [strength: low] **Identity anchor:** Sonar21 + Substack + X (Seed).  \n  [sonar21.com](https://sonar21.com/) · [larrycjohnson.substack.com](https://larrycjohnson.substack.com/) · [X @LarrySonar21](https://x.com/LarrySonar21)",
+    "bullets": [
+      "[strength: low] **Identity anchor:** Sonar21 + Substack + X (Seed)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 1
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

@@ -39,6 +39,39 @@ _(No narrative distillation yet — add prose above machine extraction. **`threa
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:steve-jermy:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `steve-jermy` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-30** (index) — Daniel Davis Deep Dive — U.S. power to defeat Iran — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=SAp0p_eCC3g`
+
+- **2026-01** — Ukraine Peace Talks in Paris — Davis + Jermy — Poddtoppen.  
+  _Source:_ web: `https://poddtoppen.se/podcast/1761369345/daniel-davis-deep-dive/ukraine-peace-talks-in-paris-lt-col-daniel-davis-steve-jermy`
+
+### 2026-02
+
+- **2026-02-04** (index) — The Peacemonger — USA lost at sea on Iran strategy — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=UKvnpz1WRBU`
+
+- **2026-02-09** (class) — Daniel Davis Deep Dive — forcing Russia — Apple Podcasts.  
+  _Source:_ web: `https://podcasts.apple.com/us/podcast/theres-no-forcing-russia-into-anything-lt-col-daniel/id1761369345?i=1000748980029`
+
+### 2026-03
+
+- **2026-03-26** — Navy combat vet — Opening Hormuz — Daniel Davis Deep Dive — Podscan / Apple.  
+  _Source:_ web: `https://podscan.fm/podcasts/daniel-davis-deep-dive-1/episodes/navy-combat-vet-opening-hormuz-lt-col-daniel-davis-amp-steve-jermy`
+
+- **2026-03** — Reopening Strait of Hormuz Realities — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=DY0on4YdpPY`
+
+<!-- backfill:steve-jermy:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

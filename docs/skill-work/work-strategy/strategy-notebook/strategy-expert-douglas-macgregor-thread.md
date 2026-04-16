@@ -42,6 +42,51 @@ March shifts to **open conflict** commentary — **Persian Gulf** **control** th
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:douglas-macgregor:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `douglas-macgregor` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-14** (index) — Greater Eurasia — rising war risks — Singju transcript.  
+  _Source:_ web: `https://singjupost.com/greater-eurasia-podcast-w-douglas-macgregor-on-rising-war-risks-transcript/`
+
+- **2026-01-21** (class) — Daniel Davis Deep Dive — Trump at Davos — Singju transcript.  
+  _Source:_ web: `https://singjupost.com/daniel-davis-deep-dive-w-col-douglas-macgregor-on-trump-at-davos-transcript/`
+
+- **2026-01-30** (index) — Liberty Vault / long-form — more war with Iran disastrous — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=2fNlUsgv8GU`
+
+### 2026-02
+
+- **2026-02-19** (index) — Capital Cosm Substack — 72–96h strike warning.  
+  _Source:_ web: `https://capitalcosm.substack.com/p/col-macgregor-us-about-to-launch`
+
+- **2026-02** — US–Iran diplomacy fail — Singju transcript.  
+  _Source:_ web: `https://singjupost.com/douglas-macgregor-us-iran-diplomacy-fail-transcript/`
+
+- **2026-02-26** (class) — NATO / British missiles / Ukraine — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=2eHOe0LyK9A`
+
+- **2026-02** — Bombing Iran won’t fix this — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=TfOT5ITP2Uk`
+
+### 2026-03
+
+- **2026-03** — The Iran War Just Entered A Dangerous Phase — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=VWJPiQV84w4`
+
+- **2026-03** — TRUTH About The War In Iran — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=ZWGN-2WaODU`
+
+- **2026-03** — 21st Century Wire pointer article.  
+  _Source:_ web: `https://www.21cir.com/2026/03/191016/`
+
+<!-- backfill:douglas-macgregor:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

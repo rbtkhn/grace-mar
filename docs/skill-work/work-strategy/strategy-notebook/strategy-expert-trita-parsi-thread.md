@@ -39,6 +39,39 @@ Institutional **event** layer: Quincy **webinar** on **regional shockwaves** and
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:trita-parsi:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `trita-parsi` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-13** — Al Jazeera Quotable — Iran–US diplomacy and nuclear-file scope.  
+  _Source:_ web: `https://www.aljazeera.com/video/quotable/2026/1/13/iran-us-diplomacy-wont-succeed-if-focus-on-nuclear`
+
+- **2026-01-13** — ScheerPost — Iran–US relations analysis / interview.  
+  _Source:_ web: `https://scheerpost.com/2026/01/13/trita-parsi-unveils-the-latest-insights-on-iran-us-relations/`
+
+- **2026-01** — NPR transcripts hub (nuclear talks / outcomes — pin exact segment for cite-grade).  
+  _Source:_ web: `https://www.npr.org/transcripts/nx-s1-5719169`
+
+### 2026-02
+
+- **2026-02-18** (third-party index) — “Extremely Dangerous Situation” — U.S. & Iran incentives to escalate — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=FJfn5GThhgs`
+
+- **2026-02-21** — NPR coverage class — possible outcomes on U.S. talks (same transcript hub as January).  
+  _Source:_ web: `https://www.npr.org/transcripts/nx-s1-5719169`
+
+### 2026-03
+
+- **2026-03-31** — Quincy Institute webinar — “War in Iran: Regional Shockwaves and the Search for an Exit” (moderated by Parsi).  
+  _Source:_ web: `https://quincyinst.org/events/war-in-iran-regional-shockwaves-and-the-search-for-an-exit/`
+
+<!-- backfill:trita-parsi:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)

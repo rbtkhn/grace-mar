@@ -41,6 +41,51 @@ March stacks **Marandi** interviews (military strategy, ceasefire posture, **Sou
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
+<!-- backfill:glenn-diesen:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `glenn-diesen` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+### 2026-01
+
+- **2026-01-30** (index) — Marandi on overwhelming retaliation — Greater Eurasia — YouTube.  
+  _Source:_ web: `https://www.youtube.com/watch?v=I6XHVDtHRX4`
+
+- **2026-01** — Greater Eurasia — Iran civil unrest — Singju transcript (Marandi).  
+  _Source:_ web: `https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/`
+
+- **2026-01-14** (index) — Macgregor — rising war risks — Singju transcript.  
+  _Source:_ web: `https://singjupost.com/greater-eurasia-podcast-w-douglas-macgregor-on-rising-war-risks-transcript/`
+
+### 2026-02
+
+- **2026-02-22** (class) — UN Security Council — media manipulation Ukraine war — Brave New Europe / Podscan.  
+  _Source:_ web: `https://braveneweurope.com/glenn-diesen-at-the-un-security-council-media-manipulation-in-the-ukraine-war`
+
+- **2026-02-24** (class) — NATO’s war of choice / Istanbul sabotage — Podscan.  
+  _Source:_ web: `https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/glenn-diesen-natos-war-of-choice-the-sabotage-of-the-istanbul-negotiations`
+
+- **2026-02** — Marandi — War for Survival — Podscan.  
+  _Source:_ web: `https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/seyed-m-marandi-war-for-survival-irans-strategy-as-war-is-imminent`
+
+### 2026-03
+
+- **2026-03** — Iran’s Military Strategy and U.S. Miscalculations — Brave New Europe.  
+  _Source:_ web: `https://braveneweurope.com/seyed-m-marandi-glenn-diesen-irans-military-strategy-and-u-s-miscalculations`
+
+- **2026-03** — Iran Rejects Ceasefire — Demands New Status Quo — Brave New Europe.  
+  _Source:_ web: `https://braveneweurope.com/seyed-m-marandi-glenn-diesen-iran-rejects-ceasefire-demands-new-status-quo`
+
+- **2026-03-21** (class) — Mercouris — Iran war transforms Ukraine war — Podscan.  
+  _Source:_ web: `https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/alexander-mercouris-iran-war-transforms-ukraine-war`
+
+- **2026-03** — Substack — Iran war accelerating end of U.S. dominance.  
+  _Source:_ web: `https://glenndiesen.substack.com/p/iran-war-is-accelerating-the-end`
+
+<!-- backfill:glenn-diesen:end -->
+
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
