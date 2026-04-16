@@ -31,6 +31,7 @@
 | work-xavier | [work-xavier/work-xavier-history.md](work-xavier/work-xavier-history.md) |
 | work-civ-mem | [work-civ-mem/work-civ-mem-history.md](work-civ-mem/work-civ-mem-history.md) |
 | work-alpha-school | [work-alpha-school/work-alpha-school-history.md](work-alpha-school/work-alpha-school-history.md) |
+| work-elicitation | [work-elicitation/work-elicitation-history.md](work-elicitation/work-elicitation-history.md) |
 | work-cadence | [work-cadence/work-cadence-events.md](work-cadence/work-cadence-events.md) *(per-run telemetry, not design history)* |
 
 **Optional daily journals (narrative, not milestones):** Some territories add a **journal folder** for short reflective entries (e.g. [work-dev/dev-journal](work-dev/dev-journal/README.md), [work-xavier/xavier-journal](work-xavier/xavier-journal/README.md)). Use them for **learning arc and friction**; keep **shippable milestones** in this territory’s `work-*-history.md` so grep and handoff stay one place. Journals do not replace history files.

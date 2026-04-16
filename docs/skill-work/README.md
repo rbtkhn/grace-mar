@@ -18,6 +18,7 @@ This folder holds **submodules** that support WORK, the Record, and instances: r
 | **[work-cadence](work-cadence/README.md)** | Daily cadence architecture: `coffee` (morning orientation) + `dream` (night consolidation), handoff contract, runner modes, extension points for instance-specific rituals. |
 | **[work-forecast](work-forecast/README.md)** | Governed numeric / cadence forecasting — WORK artifacts, baselines, receipts; not Record truth. |
 | **[work-strategy](work-strategy/)** | Cross-territory **governed strategic accumulation** — [strategy-notebook](work-strategy/strategy-notebook/README.md), daily briefs, optional [STRATEGY.md](work-strategy/STRATEGY.md) promotion; Cursor **`skill-strategy`**; not Record truth. |
+| **[work-elicitation](work-elicitation/)** | Tacit operator knowledge extraction — rhythms, recurring decisions, dependencies, friction, thresholds; review-first WORK artifacts that can inform cadence, strategy, think, and write; not Record truth. |
 
 ---
 
