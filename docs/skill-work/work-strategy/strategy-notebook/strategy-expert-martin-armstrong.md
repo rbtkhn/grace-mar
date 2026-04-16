@@ -16,7 +16,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `martin-armstrong` | Martin A. Armstrong (`@ArmstrongEcon`) | **Cycle / timing** models (Socrates-style), **sovereign debt** stress, **energy–food system** shocks (diesel, fertilizer) framed with **geopolitical war**; critiques **“perpetual wealth” vs “dollar crash”** as headline distractions | `Armstrong`, `debt`, `IRAN`, or `Hormuz` in cold | × `steve-jermy`, × `glenn-diesen`, × `jeffrey-sachs`, × `robert-pape` |
 

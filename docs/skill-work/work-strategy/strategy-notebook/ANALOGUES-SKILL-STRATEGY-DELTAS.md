@@ -7,7 +7,7 @@
 | Brainstorm | Already covered by |
 |------------|-------------------|
 | Atomicity / split compound Judgment | Thesis A/B, tagged bullets, pillar lists, bulk spillway, NOTEBOOK-PREFERENCES (“two bullets,” preserve tension) |
-| Anchor-first capture (Hypothesis-style) | Capture mode, paste-ready one-liners, optional `cold: … // hook: …` in [daily-strategy-inbox.md](daily-strategy-inbox.md) |
+| Commentator-first capture (Hypothesis-style) | Capture mode, paste-ready one-liners, optional `cold: … // hook: …` in [daily-strategy-inbox.md](daily-strategy-inbox.md) |
 | Multi-register / “plane” comparison (AllSides-style) | Five-thread theory, “tag the plane,” anti-patterns (headline-stack collapse, plane merge without tags), Rome prefs (moral–diplomatic vs kinetic) |
 | Calibration / falsifiers (Metaculus-style) | `meta.md` thread subsections, narrative-escalation seam, promotion ladder, commentator drift index |
 | Ingest flood / “circuit breaker” (OSINT-style) | Inbox prune (~20k), `membrane:single` / `membrane:pair` on brief RSS lines; non-neural story clustering in ingest notes |

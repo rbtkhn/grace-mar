@@ -4,7 +4,11 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from scripts.validate_knot_index import REPO_ROOT, validate_knot_index_data
+from scripts.validate_knot_index import (
+    REPO_ROOT,
+    days_md_link_warnings,
+    validate_knot_index_data,
+)
 
 
 def test_empty_knots_ok() -> None:
@@ -95,6 +99,64 @@ def test_deprecated_weave_label_unknown_key(tmp_path: Path) -> None:
         repo_root=tmp_path,
     )
     assert any("unknown keys" in e and "weave_label" in e for e in errs)
+
+
+def test_days_md_link_warning_when_basename_missing(tmp_path: Path) -> None:
+    """Knot indexed but not mentioned in chapters/YYYY-MM/days.md."""
+    nb = (
+        tmp_path
+        / "docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04"
+    )
+    knots_dir = nb / "knots"
+    knots_dir.mkdir(parents=True)
+    k = knots_dir / "strategy-notebook-knot-2026-04-13-absent-from-days.md"
+    k.write_text("# k\n", encoding="utf-8")
+    days = nb / "days.md"
+    days.write_text("## 2026-04-13\n\nno knot link here\n", encoding="utf-8")
+    rel = k.relative_to(tmp_path)
+    data = {
+        "schema_version": 3,
+        "knots": [
+            {
+                "path": str(rel).replace("\\", "/"),
+                "date": "2026-04-13",
+                "knot_label": "absent-from-days",
+            }
+        ],
+    }
+    warns = days_md_link_warnings(data, repo_root=tmp_path)
+    assert len(warns) == 1
+    assert "not found" in warns[0]
+
+
+def test_days_md_link_ok_when_basename_present(tmp_path: Path) -> None:
+    nb = (
+        tmp_path
+        / "docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04"
+    )
+    knots_dir = nb / "knots"
+    knots_dir.mkdir(parents=True)
+    k = knots_dir / "strategy-notebook-knot-2026-04-13-linked.md"
+    k.write_text("# k\n", encoding="utf-8")
+    basename = k.name
+    days = nb / "days.md"
+    days.write_text(
+        f"## 2026-04-13\n\n[{basename}](knots/{basename})\n",
+        encoding="utf-8",
+    )
+    rel = k.relative_to(tmp_path)
+    data = {
+        "schema_version": 3,
+        "knots": [
+            {
+                "path": str(rel).replace("\\", "/"),
+                "date": "2026-04-13",
+                "knot_label": "linked",
+            }
+        ],
+    }
+    warns = days_md_link_warnings(data, repo_root=tmp_path)
+    assert warns == []
 
 
 def test_basename_must_contain_knot(tmp_path: Path) -> None:

@@ -350,17 +350,26 @@ def render_thread_extraction(
     transcript_lines: list[str],
     knot_refs: list[dict],
 ) -> str:
-    """Render the raw extraction content for assistant refinement."""
+    """Render machine-layer content between -thread.md markers (overwrite each run).
+
+    Human narrative belongs *above* THREAD_MARKER_START in the file; see
+    STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread (two layers).
+    """
     parts: list[str] = []
+    parts.append("### Machine extraction (script-maintained)\n")
+    parts.append(
+        "_Auto-generated from `-transcript.md` + knot index. "
+        "The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._\n"
+    )
 
     if transcript_lines:
-        parts.append("### Recent transcript material\n")
+        parts.append("#### Recent transcript material\n")
         for line in transcript_lines:
             parts.append(line)
         parts.append("")
 
     if knot_refs:
-        parts.append("### Knot references\n")
+        parts.append("#### Knot references\n")
         for knot in knot_refs:
             knot_path = knot.get("path", "?")
             knot_date = knot.get("date", "?")
@@ -372,8 +381,8 @@ def render_thread_extraction(
             parts.append(f"- [{basename}]({basename}) {knot_date}{label_str}{note_str}")
         parts.append("")
 
-    if not parts:
-        return "_(No transcript or knot material for extraction.)_\n"
+    if not transcript_lines and not knot_refs:
+        parts.append("_(No transcript or knot material for extraction.)_\n")
 
     return "\n".join(parts).rstrip() + "\n"
 

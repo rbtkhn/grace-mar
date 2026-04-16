@@ -8,7 +8,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `alastair-crooke` | Alastair Crooke | Former diplomat / **Levant–Islamabad** “room” and **spoiler** reads; often beside **Davis** in digests | `Crooke` in cold | × `daniel-davis`, × `seyed-marandi`, × `trita-parsi` |
 

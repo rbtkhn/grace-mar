@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
-"""Parse `batch-analysis` lines from strategy inbox text → batch_analysis_refs JSON.
+"""Parse ``batch-analysis`` lines from the strategy inbox and emit a
+WORK-only JSON snapshot for visual overlays.
 
-Contract: docs/skill-work/work-strategy/strategy-notebook/STRATEGY-NOTEBOOK-ARCHITECTURE.md
-§ *Batch-analysis — machine parse & visual snapshot*.
+Spec: STRATEGY-NOTEBOOK-ARCHITECTURE.md § *Batch-analysis — machine parse
+& visual snapshot* — each element of ``batch_analysis_refs[]`` includes:
+``date``, ``label``, ``raw``, ``expert_ids``, ``confidence``, ``sources``.
 
-Usage:
-  python3 scripts/parse_batch_analysis.py [path/to/daily-strategy-inbox.md]
-  python3 scripts/parse_batch_analysis.py --stdin < inbox.md
+Usage::
 
-Stdin or file; defaults to repo daily-strategy-inbox.md when no args.
+    python3 scripts/parse_batch_analysis.py
+    python3 scripts/parse_batch_analysis.py --pretty
+    python3 scripts/parse_batch_analysis.py --dry-run
+    python3 scripts/parse_batch_analysis.py --inbox path/to/inbox.md --out path/to/out.json
+
+WORK only; not Record.
 """
 
 from __future__ import annotations
@@ -17,278 +22,273 @@ import argparse
 import json
 import re
 import sys
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-_SCRIPTS = Path(__file__).resolve().parent
-if str(_SCRIPTS) not in sys.path:
-    sys.path.insert(0, str(_SCRIPTS))
 
-from strategy_expert_corpus import CANONICAL_EXPERT_IDS, _RE_THREAD  # noqa: E402
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-ALLOWLIST = frozenset(CANONICAL_EXPERT_IDS)
+from strategy_expert_corpus import CANONICAL_EXPERT_IDS, _EXPERT_IDS_SET
 
-_RE_MINI_START = re.compile(
-    r"^---\s*batch-analysis\s*\|\s*(\d{4}-\d{2}-\d{2})\s*\|\s*(.*?)\s*---\s*$"
+DEFAULT_INBOX = (
+    REPO_ROOT
+    / "docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md"
 )
-_RE_MINI_END = re.compile(r"^---\s*end batch-analysis\s*---\s*$", re.IGNORECASE)
-_RE_CROSSES = re.compile(
-    r"crosses:([a-z0-9+-]+)(?:\s|$|,|\||\*\*)", re.IGNORECASE
+DEFAULT_OUT = (
+    REPO_ROOT / "artifacts/skill-work/work-strategy/batch-analysis-snapshot.json"
 )
 
+SCHEMA_VERSION = 1
 
-def _norm_label(label: str) -> str:
-    return " ".join(label.lower().split())
+# ---------------------------------------------------------------------------
+# Regexes
+# ---------------------------------------------------------------------------
+
+_RE_BATCH_TOKEN = re.compile(r"\bbatch-analysis\b", re.IGNORECASE)
+
+# Canonical pipe format: `batch-analysis | YYYY-MM-DD | <label> | <body>`
+# Lines may be wrapped in backticks or start with a bullet.
+_RE_PIPE = re.compile(
+    r"batch-analysis\s*\|\s*"
+    r"(\d{4}-\d{2}-\d{2})\s*\|\s*"
+    r"([^|]+?)\s*\|\s*"
+    r"(.+)",
+    re.IGNORECASE,
+)
+
+_RE_CROSSES = re.compile(r"crosses:([a-z][a-z0-9-]*(?:\+[a-z][a-z0-9-]*)+)")
+_RE_THREAD = re.compile(r"thread:([a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)")
+_RE_SEAM = re.compile(r"seam:([a-z][a-z0-9-]*(?:\+[a-z][a-z0-9-]*)*)")
+
+# Date context markers reused from inbox structure
+_RE_ACCUM = re.compile(r"\*\*Accumulator for:\*\*\s*(\d{4}-\d{2}-\d{2})")
+_RE_PRIOR = re.compile(r"\*\*Prior scratch\s*[-—–]\s*(\d{4}-\d{2}-\d{2})")
+_RE_DATE_HEADING = re.compile(r"^##\s+(\d{4}-\d{2}-\d{2})")
+
+# Build alias lookup: last name segment of each canonical slug → full slug.
+# e.g. "scott-ritter" → alias "ritter" → "scott-ritter"
+_ALIAS_TO_ID: dict[str, str] = {}
+for _cid in CANONICAL_EXPERT_IDS:
+    parts = _cid.split("-")
+    _ALIAS_TO_ID[_cid] = _cid
+    if len(parts) > 1:
+        _ALIAS_TO_ID[parts[-1]] = _cid
+        _ALIAS_TO_ID[parts[0]] = _cid
+_ALIAS_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(a) for a in sorted(_ALIAS_TO_ID, key=len, reverse=True)) + r")\b",
+    re.IGNORECASE,
+)
 
 
-def _valid_expert(slug: str) -> bool:
-    return slug in ALLOWLIST
+# ---------------------------------------------------------------------------
+# Data model
+# ---------------------------------------------------------------------------
+
+@dataclass
+class BatchRef:
+    date: str
+    label: str
+    raw: str
+    expert_ids: list[str] = field(default_factory=list)
+    confidence: str = "none"
+    sources: dict[str, list[str]] = field(default_factory=dict)
+    seams: list[str] = field(default_factory=list)
+    line_number: int = 0
+
+    def to_dict(self) -> dict:
+        d: dict = {
+            "date": self.date,
+            "label": self.label,
+            "raw": self.raw,
+            "expert_ids": self.expert_ids,
+            "confidence": self.confidence,
+            "sources": self.sources,
+        }
+        if self.seams:
+            d["seams"] = self.seams
+        return d
 
 
-def _parse_crosses(body: str) -> list[str]:
-    """Return allowlist-validated ids from crosses:id+id (+ optional repeats)."""
-    m = _RE_CROSSES.search(body)
-    if not m:
-        return []
-    raw = m.group(1).lower()
-    parts = [p.strip() for p in raw.split("+") if p.strip()]
-    out: list[str] = []
-    for p in parts:
-        if _valid_expert(p):
-            out.append(p)
-    return out
+# ---------------------------------------------------------------------------
+# Extraction
+# ---------------------------------------------------------------------------
+
+def _extract_crosses(text: str) -> list[str]:
+    """Extract canonical expert IDs from crosses:id+id markers."""
+    ids: list[str] = []
+    for m in _RE_CROSSES.finditer(text):
+        for slug in m.group(1).split("+"):
+            slug = slug.strip()
+            if slug in _EXPERT_IDS_SET and slug not in ids:
+                ids.append(slug)
+    return ids
 
 
-def _parse_threads(text: str) -> list[str]:
-    out: list[str] = []
+def _extract_threads(text: str) -> list[str]:
+    """Extract canonical expert IDs from thread:<id> markers."""
+    ids: list[str] = []
     for m in _RE_THREAD.finditer(text):
         slug = m.group(1)
-        if _valid_expert(slug):
-            out.append(slug)
-    return list(dict.fromkeys(out))
+        if slug in _EXPERT_IDS_SET and slug not in ids:
+            ids.append(slug)
+    return ids
 
 
-def _split_batch_pipe_line(line: str) -> tuple[str, str, str] | None:
-    s = line.strip().strip("`")
-    if not s.startswith("batch-analysis |"):
-        return None
-    parts = s.split(" | ", 3)
-    if len(parts) < 4:
-        return None
-    if parts[0].strip() != "batch-analysis":
-        return None
-    date_s, label, body = parts[1].strip(), parts[2].strip(), parts[3]
-    if not re.match(r"^\d{4}-\d{2}-\d{2}$", date_s):
-        return None
-    return date_s, label, body
+def _extract_seams(text: str) -> list[str]:
+    """Extract seam slugs (topology, not necessarily expert IDs)."""
+    seams: list[str] = []
+    for m in _RE_SEAM.finditer(text):
+        seams.append(m.group(1))
+    return seams
 
 
-def _extract_single_line_records(lines: list[str]) -> list[tuple[int, str, str, str, str]]:
-    """List of (line_index, date, label, body, raw_line)."""
-    out: list[tuple[int, str, str, str, str]] = []
-    for i, line in enumerate(lines):
-        sp = _split_batch_pipe_line(line)
-        if sp:
-            d, label, body = sp
-            out.append((i, d, label, body, line.rstrip()))
-    return out
+def _extract_aliases(text: str, already: set[str]) -> list[str]:
+    """Extract expert IDs by alias/name matching in body text."""
+    ids: list[str] = []
+    for m in _ALIAS_PATTERN.finditer(text):
+        canonical = _ALIAS_TO_ID.get(m.group(1).lower())
+        if canonical and canonical not in already and canonical not in ids:
+            ids.append(canonical)
+    return ids
 
 
-def _extract_mini_blocks(lines: list[str]) -> list[tuple[int, str, str, str]]:
-    """List of (start_line_index, date, label, combined_raw)."""
-    out: list[tuple[int, str, str, str]] = []
-    i = 0
-    n = len(lines)
-    while i < n:
-        m = _RE_MINI_START.match(lines[i].strip())
-        if not m:
-            i += 1
-            continue
-        d, label = m.group(1), m.group(2).strip()
-        start = i
-        i += 1
-        while i < n and not _RE_MINI_END.match(lines[i].strip()):
-            i += 1
-        if i >= n:
-            break
-        raw = "\n".join(lines[start : i + 1])
-        i += 1
-        out.append((start, d, label, raw))
-    return out
-
-
-def _upstream_threads(lines: list[str], batch_line_idx: int) -> list[str]:
-    """thread: slugs from ingest lines strictly above batch line until break."""
-    collected: list[str] = []
-    j = batch_line_idx - 1
-    while j >= 0:
-        line = lines[j]
-        stripped = line.strip()
-        if not stripped:
-            break
-        if stripped.startswith("<!--"):
-            j -= 1
-            continue
-        if stripped.startswith("#"):
-            break
-        if stripped.startswith("batch-analysis |") or stripped.startswith("`batch-analysis |"):
-            break
-        if stripped.startswith("---") and "batch-analysis" in stripped:
-            break
-        for m in _RE_THREAD.finditer(line):
-            slug = m.group(1)
-            if _valid_expert(slug):
-                collected.append(slug)
-        j -= 1
-    return list(dict.fromkeys(reversed(collected)))
-
-
-def _confidence_and_ids(
+def _assign_confidence(
     crosses: list[str],
-    thread_line: list[str],
-    upstream: list[str],
-) -> tuple[list[str], str, dict[str, list[str]]]:
-    sources: dict[str, list[str]] = {
-        "crosses": list(dict.fromkeys(crosses)),
-        "thread_in_line": list(dict.fromkeys(thread_line)),
-        "upstream_verify": list(dict.fromkeys(upstream)),
-        "label_alias": [],
-    }
-    high_ids = set(sources["crosses"]) | set(sources["thread_in_line"])
-    mid_ids = set(sources["upstream_verify"])
-    all_ids = list(dict.fromkeys(sources["crosses"] + sources["thread_in_line"] + sources["upstream_verify"]))
-
-    if high_ids:
-        conf = "high"
-    elif mid_ids:
-        conf = "medium"
-    else:
-        conf = "none"
-    return all_ids, conf, sources
+    threads: list[str],
+    aliases: list[str],
+) -> str:
+    if len(crosses) >= 2:
+        return "high"
+    if crosses or threads:
+        return "medium"
+    if len(aliases) >= 2:
+        return "medium"
+    if aliases:
+        return "low"
+    return "none"
 
 
-def parse_inbox_text(text: str) -> dict:
-    """Return a document matching the batch_analysis_refs snapshot shape."""
-    lines = text.splitlines()
-    records: list[dict] = []
+def _context_date(line: str) -> str | None:
+    """Try to extract a date context marker from a non-batch line."""
+    for rx in (_RE_ACCUM, _RE_PRIOR, _RE_DATE_HEADING):
+        m = rx.search(line)
+        if m:
+            return m.group(1)
+    return None
 
-    # Single-line batch-analysis rows
-    single_line_indices: set[int] = set()
-    for i, d, label, body, raw in _extract_single_line_records(lines):
-        single_line_indices.add(i)
-        crosses = _parse_crosses(body)
-        upstream = _upstream_threads(lines, i)
-        thread_in_line = _parse_threads(lines[i])
-        expert_ids, confidence, sources = _confidence_and_ids(
-            crosses, thread_in_line, upstream
-        )
-        records.append(
-            {
-                "date": d,
-                "label": label,
-                "raw": raw,
-                "expert_ids": expert_ids,
-                "confidence": confidence,
-                "sources": sources,
-            }
-        )
 
-    for start, d, label, raw in _extract_mini_blocks(lines):
-        if start in single_line_indices:
+# ---------------------------------------------------------------------------
+# Main parser
+# ---------------------------------------------------------------------------
+
+def parse_inbox(inbox_path: Path) -> list[BatchRef]:
+    """Parse all batch-analysis lines from the inbox file."""
+    if not inbox_path.is_file():
+        print(f"warning: inbox not found: {inbox_path}", file=sys.stderr)
+        return []
+
+    text = inbox_path.read_text(encoding="utf-8")
+    refs: list[BatchRef] = []
+    current_date: str | None = None
+
+    for line_num, line in enumerate(text.splitlines(), 1):
+        stripped = line.strip()
+
+        ctx = _context_date(stripped)
+        if ctx:
+            current_date = ctx
             continue
-        crosses = _parse_crosses(raw)
-        thread_in_line = _parse_threads(raw)
-        upstream = _upstream_threads(lines, start)
-        expert_ids, confidence, sources = _confidence_and_ids(
-            crosses, thread_in_line, upstream
-        )
-        records.append(
-            {
-                "date": d,
-                "label": label,
-                "raw": raw,
-                "expert_ids": expert_ids,
-                "confidence": confidence,
-                "sources": sources,
-            }
-        )
 
-    merged = _merge_records(records)
+        if not _RE_BATCH_TOKEN.search(stripped):
+            continue
+
+        # Strip surrounding backticks and bullets
+        raw = stripped
+        clean = stripped.lstrip("- ").strip("`").strip()
+
+        pipe_m = _RE_PIPE.search(clean)
+        if pipe_m:
+            batch_date = pipe_m.group(1)
+            label = pipe_m.group(2).strip()
+            body = pipe_m.group(3).strip()
+        elif clean.lower().startswith("batch-analysis"):
+            if "YYYY-MM-DD" in clean:
+                continue
+            batch_date = current_date or "unknown"
+            label = clean[:80]
+            body = clean
+        else:
+            # Prose mention of "batch-analysis" — not an entry line
+            continue
+
+        crosses = _extract_crosses(body)
+        threads = _extract_threads(body)
+        seams = _extract_seams(body)
+
+        already = set(crosses) | set(threads)
+        aliases = _extract_aliases(body, already)
+
+        all_ids = list(dict.fromkeys(crosses + threads + aliases))
+        confidence = _assign_confidence(crosses, threads, aliases)
+
+        sources: dict[str, list[str]] = {}
+        if crosses:
+            sources["crosses"] = crosses
+        if threads:
+            sources["thread_in_line"] = threads
+        if aliases:
+            sources["alias_match"] = aliases
+
+        refs.append(BatchRef(
+            date=batch_date,
+            label=label,
+            raw=raw,
+            expert_ids=all_ids,
+            confidence=confidence,
+            sources=sources,
+            seams=seams,
+            line_number=line_num,
+        ))
+
+    return refs
+
+
+def build_snapshot(refs: list[BatchRef]) -> dict:
     return {
-        "schemaVersion": "1.0.0-strategy-notebook-view",
-        "lane": "work-strategy",
-        "batch_analysis_refs": merged,
+        "schema_version": SCHEMA_VERSION,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "count": len(refs),
+        "batch_analysis_refs": [r.to_dict() for r in refs],
     }
 
 
-def _merge_records(records: list[dict]) -> list[dict]:
-    """Union expert_ids for same (date, normalized label); prefer high-signal ids."""
-    buckets: dict[tuple[str, str], dict] = {}
-    order: list[tuple[str, str]] = []
-
-    for r in records:
-        key = (r["date"], _norm_label(r["label"]))
-        if key not in buckets:
-            buckets[key] = dict(r)
-            order.append(key)
-            continue
-        cur = buckets[key]
-        ids = list(dict.fromkeys(cur["expert_ids"] + r["expert_ids"]))
-        cur["expert_ids"] = ids
-        # Merge sources
-        for k in ("crosses", "thread_in_line", "upstream_verify", "label_alias"):
-            cur["sources"][k] = list(
-                dict.fromkeys(cur["sources"].get(k, []) + r["sources"].get(k, []))
-            )
-        # Longer raw wins for display (usually the prose-heavy line)
-        if len(r["raw"]) > len(cur["raw"]):
-            cur["raw"] = r["raw"]
-        _recompute_confidence(cur)
-
-    for k in order:
-        _recompute_confidence(buckets[k])
-    return [buckets[k] for k in order]
-
-
-def _recompute_confidence(rec: dict) -> None:
-    s = rec["sources"]
-    crosses = s["crosses"]
-    til = s["thread_in_line"]
-    up = s["upstream_verify"]
-    la = s["label_alias"]
-    rec["expert_ids"] = list(dict.fromkeys(crosses + til + up + la))
-    if set(crosses) | set(til):
-        rec["confidence"] = "high"
-    elif up:
-        rec["confidence"] = "medium"
-    elif la:
-        rec["confidence"] = "low"
-    else:
-        rec["confidence"] = "none"
-
+# ---------------------------------------------------------------------------
+# CLI
+# ---------------------------------------------------------------------------
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument(
-        "inbox",
-        nargs="?",
-        type=Path,
-        default=REPO_ROOT
-        / "docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md",
-    )
-    ap.add_argument("--stdin", action="store_true", help="Read inbox from stdin")
-    args = ap.parse_args()
-    if args.stdin:
-        text = sys.stdin.read()
+    p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--inbox", type=Path, default=DEFAULT_INBOX)
+    p.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    p.add_argument("--pretty", action="store_true", help="Indent JSON output")
+    p.add_argument("--dry-run", action="store_true", help="Print to stdout, don't write")
+    args = p.parse_args()
+
+    refs = parse_inbox(args.inbox)
+    snapshot = build_snapshot(refs)
+
+    indent = 2 if args.pretty else None
+    output = json.dumps(snapshot, indent=indent, ensure_ascii=False)
+
+    if args.dry_run:
+        print(output)
     else:
-        p = args.inbox
-        if not p.is_file():
-            print(f"error: not a file: {p}", file=sys.stderr)
-            return 1
-        text = p.read_text(encoding="utf-8", errors="replace")
-    doc = parse_inbox_text(text)
-    json.dump(doc, sys.stdout, indent=2)
-    sys.stdout.write("\n")
+        args.out.parent.mkdir(parents=True, exist_ok=True)
+        args.out.write_text(output + "\n", encoding="utf-8")
+        print(f"ok: {len(refs)} batch-analysis refs → {args.out.relative_to(REPO_ROOT)}")
+
     return 0
 
 

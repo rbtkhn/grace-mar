@@ -8,7 +8,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `seyed-marandi` | Seyed Mohammad Marandi | Iranian English long-form: negotiation **process**, red lines, legitimacy register | `IRAN`, `TEHRAN`, or `Marandi` in cold | × `scott-ritter`, × `trita-parsi`, × `rome-ecumenical` (Pontifex / Marandi Easter) |
 

@@ -8,7 +8,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `scott-ritter` | Scott Ritter | U.S. **military dissent**: Hormuz **sea control**, blockade ops, Vance frame; **faith-politics** register when **Ritter** is the speaking expert | `JDVance`, `IRAN`, or `Ritter` | × `seyed-marandi`, × `robert-barnes`, × `rome-invective` (split from ecumenical) |
 

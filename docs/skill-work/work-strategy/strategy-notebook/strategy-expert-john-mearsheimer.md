@@ -8,7 +8,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `john-mearsheimer` | John Mearsheimer | **Offensive realism**: security dilemma, Israel structural, great-power geometry | `MEARSHEIMER` or `Mearsheimer` in cold | × `daniel-davis`, × `alexander-mercouris`, × `glenn-diesen`, × `jeffrey-sachs` |
 

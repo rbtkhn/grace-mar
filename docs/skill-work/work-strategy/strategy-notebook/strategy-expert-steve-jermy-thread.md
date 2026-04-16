@@ -9,7 +9,12 @@ WORK only; not Record.
 
 ---
 <!-- strategy-expert-thread:start -->
-### Knot references
+### Machine extraction (script-maintained)
+
+_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+
+#### Knot references
 
 - [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic
+- [strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md](strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md) 2026-04-14 (armstrong-cash-hormuz-digital-dollar-arc) — Synthesis: Barnes/Mercouris/Mearsheimer mind files + Armstrong X + Fink/BlackRock + Congress.gov + Statista/Signal Gulf fertilizer; orthogonal to thread: Hormuz lattice
 <!-- strategy-expert-thread:end -->

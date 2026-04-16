@@ -30,11 +30,23 @@
 **`thread`** (operator command — use backticks in prose so it is **not** confused with the inbox verify tail **`thread:<expert_id>`**) runs **two automatic steps** via **`python3 scripts/strategy_thread.py`**:
 
 1. **Triage** (internal, not operator-facing) — routes **`thread:<expert_id>`** lines from **`daily-strategy-inbox.md`** to per-expert **`strategy-expert-<expert_id>-transcript.md`** files (append-only, 7-day rolling window, auto-pruned). Operator may lightly edit transcripts for clarity; edits are preserved across runs.
-2. **Extraction** — reads each expert's **`-transcript.md`** (what the expert said recently) and relevant **knot files** (where that material was used), writes raw material to **`strategy-expert-<expert_id>-thread.md`** between script markers. The assistant then refines this into a curated analytical thread (convergences, tensions, drift, knot impact).
+2. **Extraction** — reads each expert's **`-transcript.md`** (what the expert said recently) and relevant **knot files** (where that material was used), writes **machine-maintained** material to **`strategy-expert-<expert_id>-thread.md`** **between** the HTML comment markers (see below). **Human narrative** lives **outside** that block.
+
+**`-thread.md` is two layers (in order top to bottom):**
+
+| Layer | Location in file | Who maintains | Purpose |
+|-------|------------------|----------------|---------|
+| **Narrative journal** | **Above** `<!-- strategy-expert-thread:start -->` | Operator / assistant | **Human-readable first:** dated prose — arc, what changed for this voice, how recent ingests relate to **knots** and **Judgment**, tensions, open pins. Read like a **short journal**, not a grep dump. The **`thread`** script **never overwrites** this section. |
+| **Machine extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | Transcript line echoes + knot index rows — **tooling / diff / handoff** input. Overwritten each run. |
+| **Optional ledger** (optional) | **After** `<!-- strategy-expert-thread:end -->` | Operator or future tooling | Optional fenced **`thread-ledger`** YAML/JSON (or similar) for stable machine keys — **not** touched by the default extractor unless a future script is added. |
+
+**Assistant default after `thread`:** Refine the **narrative journal** (above markers) into **continuous readable prose** where the operator wants it; keep **machine extraction** as-is or summarize it in the journal by reference — **do not** replace the journal with bullets-only stubs unless the operator asks.
+
+**Legacy:** Older **`-thread.md`** files may still hold long prose **inside** the markers; on the next **`thread`** run that prose can be **replaced** by raw extraction. **Migration:** move journal paragraphs **above** the start marker when editing those files.
 
 **What it is not:** **`thread`** does **not** update **`days.md`**, knot files, or the inbox **`Accumulator for:`** line. It is **not** a substitute for **`weave`**. Transcript or aggregator output still lands in the **inbox** first (paste-ready lines + **`thread:`** when the cold line attributes speech to a named indexed expert).
 
-**3-file model:** Each expert has three files — **`strategy-expert-<expert_id>.md`** (cognitive profile — operator-authored, stable), **`-transcript.md`** (7-day rolling verbatim), **`-thread.md`** (distilled analytical thread). The **`thread`** command touches only transcript and thread files; the profile file is never script-modified.
+**3-file model:** Each expert has three files — **`strategy-expert-<expert_id>.md`** (cognitive profile — operator-authored, stable), **`-transcript.md`** (7-day rolling verbatim), **`-thread.md`** (**narrative journal** + **machine extraction** + optional ledger). The **`thread`** command updates transcripts and **only the marked block** in **`-thread.md`**; the profile file is never script-modified. **Templates** for all three filenames are maintained as **one** bundle: [strategy-expert-template.md](strategy-expert-template.md) (jump anchors at top of that file).
 
 ## Thesis
 

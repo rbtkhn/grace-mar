@@ -9,5 +9,9 @@ WORK only; not Record.
 
 ---
 <!-- strategy-expert-thread:start -->
+### Machine extraction (script-maintained)
+
+_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+
 _(No transcript or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->

@@ -9,12 +9,16 @@ WORK only; not Record.
 
 ---
 <!-- strategy-expert-thread:start -->
-### Recent transcript material
+### Machine extraction (script-maintained)
+
+_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+
+#### Recent transcript material
 
 ## 2026-04-12
 - `X | cold: @tparsi — CNN segment: Lebanon as sticking point (U.S. must rein in Israel); floats nuclear deadlock as possible mask; nested quote chain includes AR-sourced claim of phased Lebanon ceasefire (Beirut/suburbs first) vs full stop // hook: analyst overlay for notebook Lebanon fork; pairs §1e Islamabad thread + native triangulation | https://x.com/tparsi | verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary | thread:trita-parsi`
 
-### Knot references
+#### Knot references
 
 - [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) 2026-04-12 (islamabad-hormuz-thesis-weave) — Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave
 - [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) 2026-04-13 (marandi-ritter-mercouris-hormuz-scaffold) — Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14

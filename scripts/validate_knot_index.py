@@ -5,6 +5,10 @@ Checks: schema keys, unique paths, paths exist under repo root, basenames contai
 ``knot``, ISO dates, optional ``knot_label`` kebab-case, list types for
 clusters/patterns. WORK only; not Record.
 
+Optional: ``--warn-days-md`` / ``--strict-days-md`` — each indexed knot file's
+basename should appear in ``chapters/YYYY-MM/days.md`` for weave continuity
+(see STRATEGY-NOTEBOOK-ARCHITECTURE). Warnings only by default; strict fails CI.
+
 Exit 0 if ok; 1 if any error (prints to stderr).
 """
 
@@ -138,6 +142,56 @@ def validate_knot_index_data(data: Any, *, repo_root: Path) -> list[str]:
     return errs
 
 
+def days_md_link_warnings(data: Any, *, repo_root: Path) -> list[str]:
+    """Return warnings when a knot basename is missing from the month's days.md.
+
+    Skips rows that fail basic path/date sanity (handled by validate_knot_index_data).
+    """
+    warns: list[str] = []
+    knots = data.get("knots") if isinstance(data, dict) else None
+    if not isinstance(knots, list):
+        return warns
+
+    notebook = (
+        repo_root
+        / "docs/skill-work/work-strategy/strategy-notebook/chapters"
+    )
+
+    for i, row in enumerate(knots):
+        prefix = f"knots[{i}]"
+        if not isinstance(row, dict):
+            continue
+        path_s = row.get("path")
+        date_s = row.get("date")
+        if not path_s or not isinstance(path_s, str):
+            continue
+        if not date_s or not isinstance(date_s, str) or not _parse_date(date_s):
+            continue
+        p = repo_root / path_s
+        if not p.is_file():
+            continue
+
+        ym = date_s[:7]
+        days_path = notebook / ym / "days.md"
+        basename = Path(path_s).name
+
+        if not days_path.is_file():
+            warns.append(
+                f"{prefix}: {days_path.relative_to(repo_root)} missing — "
+                f"cannot verify weave link for {basename!r}"
+            )
+            continue
+
+        text = days_path.read_text(encoding="utf-8")
+        if basename not in text:
+            warns.append(
+                f"{prefix}: knot basename {basename!r} not found in "
+                f"{days_path.relative_to(repo_root)} (add Signal bullet / link?)"
+            )
+
+    return warns
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument(
@@ -152,6 +206,20 @@ def main() -> int:
         default=REPO_ROOT,
         help="Repository root for resolving path entries",
     )
+    ap.add_argument(
+        "--warn-days-md",
+        action="store_true",
+        help=(
+            "After validation, warn if each knot's basename is not referenced in "
+            "chapters/YYYY-MM/days.md (weave continuity). Exit 0 unless combined "
+            "with --strict-days-md."
+        ),
+    )
+    ap.add_argument(
+        "--strict-days-md",
+        action="store_true",
+        help="Treat --warn-days-md findings as errors (exit 1).",
+    )
     args = ap.parse_args()
 
     try:
@@ -165,13 +233,25 @@ def main() -> int:
         return 1
 
     data = yaml.safe_load(args.index.read_text(encoding="utf-8"))
-    errs = validate_knot_index_data(data, repo_root=args.repo_root.resolve())
+    root = args.repo_root.resolve()
+    errs = validate_knot_index_data(data, repo_root=root)
     if errs:
         for e in errs:
             print(f"error: {e}", file=sys.stderr)
         return 1
 
     n = len(data.get("knots") or [])
+    if args.warn_days_md or args.strict_days_md:
+        dw = days_md_link_warnings(data, repo_root=root)
+        for w in dw:
+            print(f"warning: {w}", file=sys.stderr)
+        if dw and args.strict_days_md:
+            print(
+                f"error: {len(dw)} days.md weave link issue(s) (--strict-days-md)",
+                file=sys.stderr,
+            )
+            return 1
+
     print(f"ok: {args.index} ({n} knots)")
     return 0
 

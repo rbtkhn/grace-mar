@@ -8,7 +8,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `steve-jermy` | Steve Jermy (Commodore, RN ret.) | **Energy–GDP / maritime system**: Hormuz closure **recovery lags** (Ever Given–style **knock-on**), **diesel** → supply chain / semis / fertilizer; **rough-order** macro slides vs **currency-first** economics; **close vs distant** blockade **risk geometry** | `Jermy`, `IRAN`, or `Hormuz` in cold | × `daniel-davis`, × `scott-ritter`, × `john-mearsheimer` (in-show cite) |
 

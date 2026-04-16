@@ -18,7 +18,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `brian-berletic` | Brian Berletic (`@BrianJBerletic`, The New Atlas) | **Industrial capacity**, **sanctions**, **proxy-war** logistics, **force-generation** vs **headline** battlefield narratives; **long-run production** and **material** constraints as a distinct fingerprint | `Berletic`, `NewAtlas`, `sanctions`, or `IRAN` in cold | × `scott-ritter`, × `steve-jermy`, × `glenn-diesen`, × `daniel-davis`, × `john-mearsheimer` |
 

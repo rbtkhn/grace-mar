@@ -2,13 +2,15 @@
 
 WORK only; not Record.
 
-**Source:** Distilled from [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
-**Process:** Script extracts raw material (transcript lines + knot references); assistant refines into a curated analytical thread.
-**Updated:** When the operator runs `thread`.
-**Companion files:** [`strategy-expert-alexander-mercouris.md`](strategy-expert-alexander-mercouris.md) (profile) and [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (7-day verbatim).
+**Source:** Human **narrative journal** (below) + [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (7-day verbatim) + relevant knots (where this voice was used in strategy work).
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers.
+**Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
+**Companion files:** [`strategy-expert-alexander-mercouris.md`](strategy-expert-alexander-mercouris.md) (profile) and [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md).
 
 ---
-<!-- strategy-expert-thread:start -->
+
+## Narrative journal
+
 ### Distilled thread (2026-04-12 → 2026-04-15)
 
 **Lane:** Mercouris operates as the notebook's primary **institutional / narrative / diplomatic** reader. His register is layered, recursive, and civilizational in framing — he tracks who sounds credible in room diplomacy, how multilateral choreography shifts, and where zugzwang conditions emerge. The notebook uses him as the **legitimacy surface** expert: the voice that tells you what the diplomatic room looks like, not what the power structure underneath can afford. That distinction (surface vs structure) is the central discipline problem in every knot that carries his name.
@@ -22,14 +24,28 @@ WORK only; not Record.
 **Running tension:** Mercouris's CTC (cross-thread connectivity) score is the highest in the roster (0.88) but his AD (analytical discipline) is the lowest among frequent commentators (0.44). The thread reflects this: he is the expert most often placed beside others to hear harmony or dissonance, but his narrative framing can shade into arc-construction that is harder to pin to a single falsifying fact. Every knot that carries his name includes a discipline constraint for this reason.
 
 **Open:**
+
 - Pin **The Duran 04-15** canonical episode URL — likely carries Kremlin-IRI convergence analysis in his register
 - Pin **The Duran 04-13** canonical episode URL — Islamabad recap + blockade + zugzwang language
 - Watch for next Mercouris × Mearsheimer **Lebanon** material — the 04-14 fork is abstract; it needs a **dated episode** to become a case page
 
-### Knot references
+Canonical knot paths and raw ingest lines live in the **machine extraction** block below (regenerated each **`thread`** run).
 
-- [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](chapters/2026-04/knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — triple anchor; Mercouris = institutional/zugzwang lane
-- [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) — surface vs structure; falsifier = forced merge
-- [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — sister knot; Ritter mechanics lane where Mercouris is cross-referenced
-- [strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md](chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md) — Kremlin-IRI convergence + legitimacy stack; Mercouris register is the natural lens
+---
+<!-- strategy-expert-thread:start -->
+### Machine extraction (script-maintained)
+
+_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+
+#### Recent transcript material
+
+## 2026-04-12
+- `batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`
+
+#### Knot references
+
+- [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) 2026-04-13 (marandi-ritter-mercouris-hormuz-scaffold) — Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14
+- [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) 2026-04-14 (mercouris-mearsheimer-lebanon-split) — Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork
+- [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic
+- [strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md](strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md) 2026-04-15 (uranium-offramp-dual-register) — Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack
 <!-- strategy-expert-thread:end -->

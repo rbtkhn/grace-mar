@@ -23,9 +23,8 @@ DEFAULT_DIR = (
 )
 
 SKIP_FILES = {
+    # Bundle: profile + thread + transcript templates in one file (anchors).
     "strategy-expert-template.md",
-    "strategy-expert-template-thread.md",
-    "strategy-expert-template-transcript.md",
 }
 
 def _is_companion_file(name: str) -> bool:

@@ -12,7 +12,7 @@ WORK only; not Record.
 
 | Field | Value |
 |-------|-------|
-| **Anchor** | Jiang Xueqin (Predictive History) |
+| **Name** | Jiang Xueqin (Predictive History) |
 | **expert_id** | `jiang-xueqin` |
 | **Role** | **Long-horizon civilizational / game-theory** lectures; PH is the sole upstream for notebook-facing Jiang ingest |
 | **Default grep tags** | `Jiang`, `PH`, or `predictive-history` in cold |

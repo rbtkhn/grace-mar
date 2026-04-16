@@ -9,7 +9,11 @@ WORK only; not Record.
 
 ---
 <!-- strategy-expert-thread:start -->
-### Knot references
+### Machine extraction (script-maintained)
+
+_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+
+#### Knot references
 
 - [strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) 2026-04-14 (diesen-vi14-petrodollar-vs-sachs-hormuz) — Abstract PH vi-14 petrodollar vs Diesen×Sachs Hormuz; orthogonal Judgment
 - [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic

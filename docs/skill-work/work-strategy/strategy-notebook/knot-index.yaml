@@ -3,6 +3,7 @@
 # New knot files: copy from strategy-notebook-knot-template.md (repo-relative: docs/skill-work/work-strategy/strategy-notebook/strategy-notebook-knot-template.md).
 #
 # Validate: `python3 scripts/validate_knot_index.py` (from repo root).
+# Optional: `--warn-days-md` / `--strict-days-md` — knot basename should appear in that month's chapters/YYYY-MM/days.md.
 #
 # Machine list for knots organized by cluster and pattern. Paths are POSIX paths
 # relative to the repository root. Each knot *file* should include the substring

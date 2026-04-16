@@ -18,7 +18,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `jacques-baud` | Jacques Baud | **NATO / UN / intelligence-adjacent** framing: **law-of-war**, **HUMINT vs OSINT** limits, **European security** and **cross-theater** reads; **convergence vs tension** between **official narrative** and **evidential** claims — **complements** **ORBAT** lanes without duplicating them | `Baud`, `NATO`, `UN`, or `EU` in cold | × `scott-ritter`, × `douglas-macgregor`, × `daniel-davis`, × `robert-barnes` |
 

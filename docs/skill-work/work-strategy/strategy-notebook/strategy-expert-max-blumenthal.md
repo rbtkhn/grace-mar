@@ -8,7 +8,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `max-blumenthal` | Max Blumenthal (`@MaxBlumenthal`) | **Grayzone** / **antiwar** pole: **U.S. Middle East** policy and **elite-access** critique; **Lebanon**/**Gulf** narrative framing; **media-layer** “who engineered what” — **access** and **backchannel** claims stay **hypothesis-grade** until **primary tape** or **on-record** source | `Blumenthal`, `Grayzone`, or `Lebanon` in cold | × `aaron-mate`, × `trita-parsi`, × `alexander-mercouris`, × `seyed-marandi`, × `charles-freeman` |
 

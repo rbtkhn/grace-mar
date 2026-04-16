@@ -1,6 +1,89 @@
-# Strategy expert — `trita-parsi`
+# Strategy expert — Trita Parsi (`trita-parsi`)
+
+WORK only; not Record.
 
 **Canonical index:** [strategy-commentator-threads.md](strategy-commentator-threads.md) — **`trita-parsi`** lane.
+
+---
+
+## Identity
+
+| Field | Value |
+|-------|-------|
+| **Name** | Trita Parsi |
+| **expert_id** | `trita-parsi` |
+| **Role** | Co-founder & Executive Vice President, Quincy Institute for Responsible Statecraft; author; U.S.–Iran relations, Iranian foreign policy, Middle East geopolitics. |
+| **Default grep tags** | `IRAN`, `quincy-restraint`, `jcpoa`, `tparsi`, Parsi in cold |
+| **Typical pairings** | × `holy-see-moral`, × `seyed-marandi`, × `douglas-macgregor`, × `jeffrey-sachs`, × `alexander-mercouris` |
+
+## Convergence fingerprint
+
+### Recurrent convergences
+
+- `trita-parsi` + **Quincy restraint school** — diplomacy-first, military restraint, inclusive security language (shared institutional home).
+- `trita-parsi` + **realist / diplomatic historians** cited in his work — strategic logic of Iranian behavior vs purely ideological frames (books and Quincy research as load-bearing).
+
+### Convergence conditions
+
+- This expert usually converges when:
+  - The topic is **sanctions, JCPOA-scale diplomacy**, or **U.S.–Israel–Iran** triangle narratives.
+  - **Accountability language** in Western coalitions (EU/U.S. naming of conflicts) is compare–contrast material with U.S. domestic war-powers lanes.
+
+## Tension fingerprint
+
+### Recurrent tensions
+
+- `trita-parsi` × **neoconservative / hawkish Iran policy** — credibility and escalation critiques (Quincy pieces; public debates).
+- `trita-parsi` × **critics of NIAC/Quincy** — **contested** “regime alignment” allegations in public debate; treat as **hypothesis-grade** unless primary on-record chain — Quincy research vs hostile outlets needs **labeled seam**, not merged Judgment.
+
+### Tension conditions
+
+- This expert usually tensions when:
+  - **Human rights** or **regional destabilization** charges are used to **short-circuit** diplomacy framing — critics say he underplays these; supporters say he centers strategic stability — **preserve tension** in weave, do not flatten.
+
+## Signature mechanisms
+
+- **Documentary / historical diplomacy:** backchannels, “secret dealings,” declassified history — books (*Treacherous Alliance*, *A Single Roll of the Dice*, *Losing an Enemy*) as methodological model.
+- **Sanctions / escalation skepticism:** JCPOA as positive example; argues maximum pressure often backfires.
+- **Insider–outsider biography:** Iranian origins, Swedish/US education — used to contextualize Iranian incentives (bio/interviews — verify before over-weighting psychologizing).
+
+## Recurrent claims
+
+- U.S. **dominance-seeking** policy in the Middle East generates blowback; **negotiation** remains viable when structured.
+- **Trump 2.0 / restraint** recommendations** — Quincy research stream as operationalized policy memos (verify dates/titles on ingest).
+
+## Failure modes / overreads
+
+- Critics argue **under-emphasis** on Iranian non-diplomatic actions or rights issues — **contested**; notebook should **tag register** (MFA vs IRGC vs diaspora) when folding Iran material.
+- **Beltway-facing** “mask” / Lebanon-vs-nuclear scope claims from index — keep **separate** from `seyed-marandi` **room** facts without a seam.
+
+## Predictive drift / accuracy notes
+
+- Long arc: **JCPOA advocacy** → post-2018 withdrawal stress → consistent diplomacy-first framing; book timelines document shifts in U.S. posture more than pivots in his core mechanism.
+
+## Active weave cues
+
+- Pull this expert into weave when:
+  - **EU naming**, **Kallas-class** speech acts, or **“international law”** rhetoric needs a **Beltway–Brussels** lane beside **U.S. Congress** (`daniel-davis`) or **Holy See** moral register (**seam**, not merge).
+
+## Knot-use guidance
+
+- Best for: **synthesis** on diplomacy vs escalation, **link hubs** on Quincy primaries, **case** pages on JCPOA-scale bargains.
+- Usually insufficient alone for: **ORBAT**, **domestic liability** (`robert-barnes`), **faith-legitimacy** (`rome-*`) — pair per architecture.
+
+## History resonance defaults
+
+- Typical HN chapter families: deferred unless Iran negotiation arcs are already case-indexed.
+- Typical mechanism hooks: alliance stress, commitment expansion — cite `CASE-XXXX` only when merged in Judgment elsewhere.
+
+## Published sources (operator web index)
+
+1. https://www.tritaparsi.com/
+2. https://quincyinst.org/author/trita-parsi/
+3. https://x.com/tparsi
+4. https://www.losinganenemy.com/
+5. https://quincyinst.org/research/trump-2-0-restraint-foreign-policy-recommendations-for-trumps-second-term/ — example research page (verify current URL)
+6. Yale University Press — book catalogue entries for *Treacherous Alliance*, *A Single Roll of the Dice*, *Losing an Enemy* (publisher as authority for bibliographic facts)
 
 ## Seed (index mirror — operator may extend)
 
@@ -8,7 +91,7 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ### Commentator row (from index)
 
-| expert_id | Anchor | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
+| expert_id | Name | Role (one line) | Default grep tag | Typical `batch-analysis` pairings |
 |-----------|--------|-----------------|------------------|-----------------------------------|
 | `trita-parsi` | Trita Parsi (`@tparsi`) | Beltway-facing **Lebanon vs nuclear** scope; “mask” thesis | `IRAN` + Parsi in cold | × `holy-see-moral` (Pontifex Lebanon), × `seyed-marandi`, × `douglas-macgregor` |
 
@@ -17,14 +100,6 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 | expert_id | SCI | AD | CTC | Plain-language note (Predictive History reader) |
 |-----------|-----|----|-----|--------------------------------------------------|
 | `trita-parsi` | 0.74 | 0.45 | 0.69 | Washington’s story can pull him between Lebanon, nuclear scope, and what “the process” means, so the thread can feel like it crosses slightly different questions in one breath. What closes in the Beltway and what closes on the ground do not always move together. He still pairs often with other named voices, but he is not the hub everyone orbits. |
-
-### Published sources (operator web index)
-
-Where **their** commentary is published and accessible (**no Wikipedia**). Re-verify handles and media URLs before cite-grade use outside this notebook.
-
-1. https://x.com/tparsi
-2. https://www.tritaparsi.com/
-3. https://quincyinst.org/author/trita-parsi/
 
 ---
 
