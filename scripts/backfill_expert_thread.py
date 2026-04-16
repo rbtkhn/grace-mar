@@ -38,6 +38,8 @@ Notes
 -----
 - This script intentionally produces dated bullets, not smooth faux-contemporaneous prose.
 - It is conservative: if evidence is weak, it emits less.
+- For the requested ``--start`` / ``--end`` window, it always emits one ``### YYYY-MM``
+  subsection per overlapping calendar month (empty months get an italic no-evidence line).
 - It creates/updates a dedicated backfill block:
     <!-- backfill:<expert_id>:start -->
     <!-- backfill:<expert_id>:end -->
@@ -107,6 +109,27 @@ def parse_date(value: str) -> date:
 
 def month_key(d: date) -> str:
     return d.strftime("%Y-%m")
+
+
+def months_spanning_range(start: date, end: date) -> list[str]:
+    """
+    Each calendar month that overlaps [start, end], as ``YYYY-MM`` keys (sorted).
+
+    Used so the backfill block always has one ``### YYYY-MM`` subsection per month in
+    the requested window, even when that month has no eligible evidence.
+    """
+    if end < start:
+        return []
+    out: list[str] = []
+    cur = date(start.year, start.month, 1)
+    end_m = date(end.year, end.month, 1)
+    while cur <= end_m:
+        out.append(f"{cur.year:04d}-{cur.month:02d}")
+        if cur.month == 12:
+            cur = date(cur.year + 1, 1, 1)
+        else:
+            cur = date(cur.year, cur.month + 1, 1)
+    return out
 
 
 def ensure_text(path: Path) -> str:
@@ -471,6 +494,7 @@ def format_bullet(item: Evidence) -> str:
 
 def render_backfill_block(expert_id: str, start: date, end: date, evidence: list[Evidence]) -> str:
     groups = grouped_by_month(evidence)
+    month_keys = months_spanning_range(start, end)
     lines: list[str] = []
     lines.append(marker_block_start(expert_id))
     lines.append("## Backfilled historical arc (reconstructed from notebook artifacts)")
@@ -488,14 +512,19 @@ def render_backfill_block(expert_id: str, start: date, end: date, evidence: list
     )
     lines.append("")
 
-    if not groups:
+    if not month_keys:
         lines.append("_No eligible evidence found in the requested window._")
         lines.append(marker_block_end(expert_id))
         return "\n".join(lines) + "\n"
 
-    for month, items in groups.items():
+    for month in month_keys:
         lines.append(f"### {month}")
         lines.append("")
+        items = groups.get(month, [])
+        if not items:
+            lines.append("_No eligible evidence for this month._")
+            lines.append("")
+            continue
         for item in items:
             lines.append(format_bullet(item))
         lines.append("")

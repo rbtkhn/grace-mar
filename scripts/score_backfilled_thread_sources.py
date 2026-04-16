@@ -214,6 +214,9 @@ def month_has_refined_headings(section: str) -> bool:
     return bool(DATED_EVIDENCE_HEADING_RE.search(section))
 
 
+EMPTY_MONTH_LINE = "_No eligible evidence for this month._"
+
+
 def render_month_plain(month: str, bullets: list[ScoredBullet]) -> str:
     counts = Counter(b.strength for b in bullets)
     lines: list[str] = [f"### {month}", ""]
@@ -222,6 +225,10 @@ def render_month_plain(month: str, bullets: list[ScoredBullet]) -> str:
         f"medium={counts.get('medium', 0)}, low={counts.get('low', 0)}"
     )
     lines.append("")
+    if not bullets:
+        lines.append(EMPTY_MONTH_LINE)
+        lines.append("")
+        return "\n".join(lines).rstrip() + "\n"
     for b in bullets:
         lines.extend(format_scored_bullet_line(b))
     lines.append("")
@@ -246,6 +253,10 @@ def render_month_refined(
         f"medium={counts.get('medium', 0)}, low={counts.get('low', 0)}"
     )
     lines.append("")
+    if not bullets:
+        lines.append(EMPTY_MONTH_LINE)
+        lines.append("")
+        return "\n".join(lines).rstrip() + "\n"
     for b in bullets:
         lines.extend(format_scored_bullet_line(b))
     lines.append("")

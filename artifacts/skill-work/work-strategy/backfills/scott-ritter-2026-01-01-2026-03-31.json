@@ -1,7 +1,7 @@
 {
   "tool": "backfill_expert_thread.py",
   "tool_version": "1",
-  "script_sha256_12": "4ffb86e002b7",
+  "script_sha256_12": "0ac479457252",
   "expert_id": "scott-ritter",
   "start": "2026-01-01",
   "end": "2026-03-31",
