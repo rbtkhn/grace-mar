@@ -16,6 +16,17 @@ _(No narrative distillation yet — add prose above machine extraction. **`threa
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
 ---
+
+<!-- backfill:scott-ritter:start -->
+## Backfilled historical arc (reconstructed from notebook artifacts)
+
+**Scope:** `scott-ritter` from **2026-01-01** through **2026-03-31**.
+**Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
+**Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
+
+_No eligible evidence found in the requested window._
+<!-- backfill:scott-ritter:end -->
+
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
 
