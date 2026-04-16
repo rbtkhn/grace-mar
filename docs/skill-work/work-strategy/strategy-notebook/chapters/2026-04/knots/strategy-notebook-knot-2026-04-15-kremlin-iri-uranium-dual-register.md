@@ -1,11 +1,11 @@
-# Knot — 2026-04-15 — Uranium off-ramp convergence, IRI dual register, and the legitimacy seam
+# Knot — 2026-04-15 — Kremlin–IRI uranium off-ramp, dual register, and the legitimacy seam
 
 WORK only; not Record.
 
 | Field | Value |
 |--------|--------|
 | **Date** | 2026-04-15 |
-| **knot_label** (machine slug) | `uranium-offramp-dual-register` — must match `strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md` and [`knot-index.yaml`](../../../knot-index.yaml) |
+| **knot_label** (machine slug) | `kremlin-iri-uranium-dual-register` — must match `strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md` and [`knot-index.yaml`](../../../knot-index.yaml) |
 | **Day block** | [`days.md` § 2026-04-15](../days.md#2026-04-15) |
 
 ### Page type
@@ -16,13 +16,16 @@ WORK only; not Record.
 ### Lineage
 
 - **Inbox:** [`daily-strategy-inbox.md`](../../../daily-strategy-inbox.md) — Wire capture — 2026-04-15 (9 lines + 3 batch-analysis); `batch-analysis | 2026-04-15 | §1d Kremlin + §1h IRI MFA (uranium off-ramp)`, `batch-analysis | 2026-04-15 | §1h dual register (MFA vs IRGC)`, `batch-analysis | 2026-04-15 | Leo XIV + Vance (legitimacy collision)`
-- **Expert threads:** `thread:alexander-mercouris` (pending; Mercouris 04-15 episode URL not yet pinned), laterally `thread:scott-ritter` (blockade enforcement mechanics), `thread:trita-parsi` (war-powers / accountability frame for Vance "grand bargain")
+- **Expert threads:** `thread:alexander-mercouris` (pending; Mercouris 04-15 episode URL not yet pinned), laterally `thread:scott-ritter` (blockade enforcement mechanics — **see owner knot below**, not re-derived here), `thread:trita-parsi` (war-powers / accountability frame for Vance "grand bargain")
+- **Blockade mechanics owner:** [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — **hull-level / porous–blockade read**, picket vs boarding, third-country hulls, `thread:scott-ritter` ingest. This knot cites **blockade** only as **policy / register / legitimacy** context in **§1e–§1h**; **no duplicate ORBAT or sea-control prose** beyond wire-summary bullets below.
 - **History resonance:** CASE-0007 (Habsburg administrative overcomplexity — coalition coordination cost under multi-party blockade), CASE-0014 (Austro-Hungarian elite coordination strain — internal management consuming strategic bandwidth; France-UK split from US as instance)
 - **Civilizational bridge:** deferred — Kremlin-IRI enrichment convergence may warrant a CMC mechanism entry (sovereign-custody-as-compromise pattern) if the off-ramp materializes; not premature
 
 ---
 
 ### Signal
+
+**Mechanics pointer:** Interdiction semantics, **porous / political blockade** framing, and **Ritter-class** operational vocabulary → **04-14** [Scott Ritter — Hormuz blockade weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md). **Signal** here = **same-day convergence** only (**uranium off-ramp**, **IRI dual register**, **legitimacy seam**).
 
 Five-channel harvest on the same calendar day produced three convergence findings that don't appear in any single channel read:
 
@@ -74,10 +77,10 @@ A moral objection (Leo XIV) can be dismissed as non-political. An alliance defec
 ### Index row (YAML — paste into `knots:` in `knot-index.yaml`)
 
 ```yaml
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
     date: "2026-04-15"
-    knot_label: uranium-offramp-dual-register
-    clusters: [uranium-offramp, iri-dual-register, legitimacy-seam, hormuz]
+    knot_label: kremlin-iri-uranium-dual-register
+    clusters: [kremlin-iri, uranium-offramp, iri-dual-register, legitimacy-seam, hormuz]
     patterns: [convergence-finding, conditioned-branching, multi-register-legitimacy]
     note: "Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack"
 ```

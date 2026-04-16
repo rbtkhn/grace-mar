@@ -100,9 +100,16 @@ knots:
     patterns: [operator-weave-d, cash-cbdc-stablecoin-seam]
     note: "Synthesis: Barnes/Mercouris/Mearsheimer mind files + Armstrong X + Fink/BlackRock + Congress.gov + Statista/Signal Gulf fertilizer; orthogonal to thread: Hormuz lattice"
 
-  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
     date: "2026-04-15"
-    knot_label: uranium-offramp-dual-register
-    clusters: [uranium-offramp, iri-dual-register, legitimacy-seam, hormuz]
+    knot_label: kremlin-iri-uranium-dual-register
+    clusters: [kremlin-iri, uranium-offramp, iri-dual-register, legitimacy-seam, hormuz]
     patterns: [convergence-finding, conditioned-branching, multi-register-legitimacy]
     note: "Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack"
+
+  - path: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md
+    date: "2026-04-16"
+    knot_label: pape-janssen-escalation-blockade
+    clusters: [robert-pape, hormuz, escalation-trap, blockade, lebanon]
+    patterns: [pape-lattice, janssen-studio, third-player-spoiler]
+    note: "Pape Janssen escalation trap + staged blockade calendar + Israel spoiler; lattice vs Mearsheimer/Davis; Lebanon X + AP seam"

@@ -3,13 +3,13 @@
 WORK only; not Record.
 
 **Source:** Human **narrative journal** (below) + [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (7-day verbatim) + relevant knots (where this voice was used in strategy work).
-**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** **Segment 2** (between markers). Operator / assistant maintains **Segment 1** (narrative journal) above the markers.
 **Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
 **Companion files:** [`strategy-expert-alexander-mercouris.md`](strategy-expert-alexander-mercouris.md) (profile) and [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md).
 
 ---
 
-## Narrative journal
+## Segment 1 — Narrative journal (operator)
 
 ### Distilled thread (2026-04-12 → 2026-04-15)
 
@@ -29,23 +29,23 @@ WORK only; not Record.
 - Pin **The Duran 04-13** canonical episode URL — Islamabad recap + blockade + zugzwang language
 - Watch for next Mercouris × Mearsheimer **Lebanon** material — the 04-14 fork is abstract; it needs a **dated episode** to become a case page
 
-Canonical knot paths and raw ingest lines live in the **machine extraction** block below (regenerated each **`thread`** run).
+Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
 ---
 <!-- strategy-expert-thread:start -->
-### Machine extraction (script-maintained)
+## Segment 2 — Machine extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
-#### Recent transcript material
+### Segment 2a — Recent transcript material
 
 ## 2026-04-12
 - `batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`
 
-#### Knot references
+### Segment 2b — Knot references
 
 - [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) 2026-04-13 (marandi-ritter-mercouris-hormuz-scaffold) — Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14
 - [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) 2026-04-14 (mercouris-mearsheimer-lebanon-split) — Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork; Pape lane (escalation-trap / sectarian map) indexes here for expert-thread knot refs
 - [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic; weave_count from knot_seam_metrics.py (outgoing knot links)
-- [strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md](strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md) 2026-04-15 (uranium-offramp-dual-register) — Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack
+- [strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md](strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md) 2026-04-15 (kremlin-iri-uranium-dual-register) — Synthesis+Thesis: Kremlin-IRI uranium convergence, MFA vs IRGC dual register, Leo-France-UK legitimacy stack
 <!-- strategy-expert-thread:end -->

@@ -65,7 +65,7 @@ connections:
     status: active
 
   - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
+    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
     relation: extends
     reason: "04-15 uranium off-ramp thesis extends the Islamabad collapse + Thesis A/B with same-day Kremlin-IRI convergence evidence and a concrete falsifier."
     warrant:
@@ -75,7 +75,7 @@ connections:
     status: active
 
   - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
+    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
     relation: same-watch
     reason: "Both track Hormuz blockade enforcement; Ritter supplies operational mechanics, 04-15 knot supplies diplomatic/legitimacy read of the same blockade."
     warrant:
@@ -84,7 +84,7 @@ connections:
     status: active
 
   - from: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md
-    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-uranium-offramp-dual-register.md
+    to: docs/skill-work/work-strategy/strategy-notebook/chapters/2026-04/knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md
     relation: tension
     reason: "Parsi/Davis accountability language ('who authorizes the blockade') is in tension with Vance 'grand bargain' framing that bypasses war-powers debate by expanding scope."
     warrant:
