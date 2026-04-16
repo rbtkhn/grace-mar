@@ -3,13 +3,13 @@
 WORK only; not Record.
 
 **Source:** Human **narrative journal** (below) + [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md) (7-day verbatim) + relevant knots (where this voice was used in strategy work).
-**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** **Segment 2** (between markers). Operator / assistant maintains **Segment 1** (narrative journal) above the markers.
 **Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
 **Companion files:** [`strategy-expert-robert-pape.md`](strategy-expert-robert-pape.md) (profile) and [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md).
 
 ---
 
-## Narrative journal
+## Segment 1 — Narrative journal (operator)
 
 ### Distilled thread (2026-04-12 → 2026-04-16)
 
@@ -27,15 +27,15 @@ WORK only; not Record.
 - Hold **blockade day-count** claims to operator transcript + independent commodity/price series
 - Next dated **Lebanon** follow — whether Pape’s fork converges or diverges from wire on talks composition
 
-Canonical knot paths and raw ingest lines live in the **machine extraction** block below (regenerated each **`thread`** / corpus run).
+Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** / corpus run).
 
 ---
 <!-- strategy-expert-thread:start -->
-### Machine extraction (script-maintained)
+## Segment 2 — Machine extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
-#### Recent transcript material
+### Segment 2a — Recent transcript material
 
 ## 2026-04-16
 - `YT | cold: IRAN | Pape (Cyrus Janssen studio, uploaded 2026-04-16) — escalation trap: bombing for regime change failed; US cannot accept defeat; Trump needs clean win vs Obama frame; Iran unlikely to bail him out // hook: §1d–§1e week-seven arc; pairs uranium/Hormuz Judgment rows | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+youtube-watch-id-to-pin | thread:robert-pape`
@@ -46,8 +46,9 @@ _Auto-generated from `-transcript.md` + knot index. The narrative journal lives 
 ## 2026-04-12
 - `X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown | thread:robert-pape`
 
-#### Knot references
+### Segment 2b — Knot references
 
 - [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) 2026-04-12 (islamabad-hormuz-thesis-weave) — Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave
 - [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) 2026-04-14 (mercouris-mearsheimer-lebanon-split) — Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork; Pape lane (escalation-trap / sectarian map) indexes here for expert-thread knot refs
+- [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) 2026-04-16 (pape-janssen-escalation-blockade) — Pape Janssen escalation trap + staged blockade calendar + Israel spoiler; lattice vs Mearsheimer/Davis; Lebanon X + AP seam
 <!-- strategy-expert-thread:end -->
