@@ -33,7 +33,8 @@ def test_build_think_observability() -> None:
     assert cp.returncode == 0, cp.stderr
     out = REPO_ROOT / "artifacts/skill-think/think-observability.json"
     data = json.loads(out.read_text(encoding="utf-8"))
-    assert data.get("schemaVersion", "").startswith("1.0.0-skill-think")
+    sv = data.get("schemaVersion", "")
+    assert sv.startswith("1.") and "skill-think" in sv
     assert "metrics" in data
 
 

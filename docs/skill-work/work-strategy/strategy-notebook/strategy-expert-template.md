@@ -1,6 +1,6 @@
 # Strategy expert — templates (WORK only)
 
-**Single source** for the three on-disk files each commentator uses. When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` still validates real `strategy-expert-<id>.md` profiles only; this bundle file is skipped.
+**Single source** for the three on-disk files each commentator uses. When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped). `validate_strategy_expert_threads.py` checks on-disk `strategy-expert-<id>-thread.md` Segment 1 month blocks (prose vs list-only hints).
 
 Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template)
 
@@ -121,17 +121,23 @@ _Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 
+**Optional Segment 1 extensions (still above `<!-- strategy-expert-thread:start -->`):**
+
+- **`## YYYY-MM` month headings** — quarter-scale or month-scale arcs. **Default:** a short **prose lede** per month (topic + arc), then optional bullets. Bullet stacks with `[strength: …]` hooks are **compressed ledger** material — fine for lattice discipline — but they are **not** an equally canonical substitute for the prose-first journal unless the operator opts into ledger-only months (see HTML comment below).
+- **`<!-- backfill:<expert_id>:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
+- **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines. For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-segment-1.mdc`.
+
 ---
 
 <!-- strategy-expert-thread:start -->
 
 ## Segment 2 — Machine extraction (script-maintained)
 
-_The block between the HTML comments is replaced on each `thread` run. **Segment 1** belongs above the start marker; do not put the narrative journal in Segment 2._
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker. The HTML-comment block is replaced on each `thread` run._
 
 ### Segment 2a — Recent transcript material
 
-_(Populated by `strategy_expert_corpus.py` when transcript lines exist.)_
+_(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when transcript lines exist.)_
 
 ### Segment 2b — Knot references
 

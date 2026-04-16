@@ -2,8 +2,8 @@
 
 WORK only; not Record.
 
-**Source:** Distilled from [`strategy-expert-scott-ritter-transcript.md`](strategy-expert-scott-ritter-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
-**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** **Segment 2** (between markers). Operator / assistant maintains **Segment 1** (narrative journal) above the markers.
+**Source:** Human **narrative journal** (below) + [`strategy-expert-scott-ritter-transcript.md`](strategy-expert-scott-ritter-transcript.md) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
 **Companion files:** [`strategy-expert-scott-ritter.md`](strategy-expert-scott-ritter.md) (profile) and [`strategy-expert-scott-ritter-transcript.md`](strategy-expert-scott-ritter-transcript.md) (7-day verbatim).
 
@@ -11,9 +11,9 @@ WORK only; not Record.
 
 ## Segment 1 — Narrative journal (operator)
 
-Operator-maintained **month-scale** notes (below) sit above the reconstructed backfill; **`thread`** does not overwrite this layer.
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. **Segment 1** is **not** overwritten by the **`thread`** script._
 
-Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
+_(No narrative distillation yet — add prose above the markers, not inside them.)_
 
 ---
 
@@ -61,7 +61,7 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker. The HTML-comment block is replaced on each `thread` run._
 
 ### Segment 2a — Recent transcript material
 

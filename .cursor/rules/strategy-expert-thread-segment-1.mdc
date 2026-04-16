@@ -1,0 +1,25 @@
+---
+description: Expert thread Segment 1 — prose-first narrative journal (not bullet-default)
+globs:
+  - docs/skill-work/work-strategy/strategy-notebook/strategy-expert-*-thread.md
+alwaysApply: false
+---
+
+# Strategy notebook — `strategy-expert-*-thread.md` Segment 1
+
+Applies when **editing or drafting** the human layer **above** `<!-- strategy-expert-thread:start -->`.
+
+## Default (do not invert)
+
+- **Segment 1** is the **narrative journal**: **readable prose in full sentences** first (`strategy-expert-template.md` — thread section). The **`thread`** script only maintains the machine block **between** the markers; it does **not** write Segment 1.
+- **`## YYYY-MM` month headings** may use **bullets** for strength-tagged lattice / receipt hooks — that is **operator shorthand or ledger work**, not a license to **replace** the template’s prose default unless the operator chose that format.
+- When you add or extend month material: prefer **one short prose paragraph** (topic + arc) **before** a bullet stack, or a tight prose block **instead of** bullets-only — unless the operator explicitly wants ledger-only months.
+
+## Machine check
+
+- Run `python3 scripts/validate_strategy_expert_threads.py` — it **warns** when a `## YYYY-MM` block has many list lines and **no** prose lines.
+- **Opt-out (whole file, transitional):** `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->` in the human layer (documented in the template).
+
+## Do not
+
+- Treat “month bullets are common in-repo” as “bullets are equally canonical to the template” — the **template** is explicit: narrative journal, prose-first; bullets are an **optional extension**.

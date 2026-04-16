@@ -2,7 +2,7 @@
 
 # work-dev dashboard
 
-- **Generated:** `2026-04-13T05:22:38Z`
+- **Generated:** `2026-04-16T16:47:13Z`
 
 ## Reliability
 
@@ -17,7 +17,7 @@
 
 - Open gap IDs: _(none)_
 - Lane violation count (observability feed): 0
-- Continuity block count (observability feed): 23
+- Continuity block count (observability feed): 25
 
 ## Gate throughput (pipeline events)
 
@@ -26,7 +26,7 @@
 - `dyad:checkpoint_request`: 2
 - `dyad:grounded_query`: 1
 - `intent_constitutional_critique`: 20
-- `maintenance`: 14
+- `maintenance`: 18
 - `openclaw_export`: 1
 - `rejected`: 4
 - `sandbox_execution_post`: 1

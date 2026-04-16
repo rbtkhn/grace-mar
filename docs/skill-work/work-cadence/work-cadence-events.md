@@ -199,3 +199,10 @@ _(Append below this line.)_
 - **2026-04-16 00:07 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=cadence-telemetry-wired-notebook-distill-next
 - **2026-04-16 00:35 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=batch-analysis-emitter-shipped-alias-tuning-or-ci-next
 - **2026-04-16 03:09 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-16 05:28 UTC** — dream (grace-mar) ok=false mode=default cursor_model=unknown model_tier=unknown phase=both integrity=fail governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=true handoff_written=true
+- **2026-04-16 12:29 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-16 15:38 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown
+- **2026-04-16 16:21 UTC** — thanks (grace-mar) ok=true cursor_model=unknown model_tier=unknown park=self-library-archive-sharpening-dream-recursive-learning-shipped
+- **2026-04-16 16:44 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-16 16:46 UTC** — dream (demo) ok=true mode=default cursor_model=unknown model_tier=unknown phase=both integrity=pass governance=pass mem_changed=true reviewable=0 contradictions=0 civmem_echo_count=0 civmem_suppressed=false handoff_written=true
+- **2026-04-16 17:20 UTC** — coffee (grace-mar) ok=true mode=work-start cursor_model=unknown model_tier=unknown

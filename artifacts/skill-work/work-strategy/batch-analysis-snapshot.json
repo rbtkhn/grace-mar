@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-16T00:34:21.649624+00:00",
-  "count": 16,
+  "generated_at": "2026-04-16T05:09:05.164954+00:00",
+  "count": 18,
   "batch_analysis_refs": [
     {
       "date": "2026-04-14",
@@ -248,6 +248,38 @@
       "seams": [
         "mercouris-tri-frame"
       ]
+    },
+    {
+      "date": "2026-04-16",
+      "label": "Pape (Janssen) × **Mearsheimer** lattice",
+      "raw": "`batch-analysis | 2026-04-16 | Pape (Janssen) × **Mearsheimer** lattice | **Tension-first:** Pape stresses **domestic lock-in**, **calendarized blockade pain**, **Israel spoiler**, **Iran long-war** time-on-side—**not** the same analytic units as **Mearsheimer**-class **alliance incentives** / **buck-passing** / **who can afford to fight** (see indexed `john-mearsheimer` thread for geometry—**do not** force-merge). **Do not** treat Pape’s **70–80% ground** talk as structural data. **Weak bridge:** both undercut a simple **bomb-to-fold** victory story for the Hormuz arc—for **different mechanisms**.`",
+      "expert_ids": [
+        "robert-pape",
+        "john-mearsheimer"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "robert-pape",
+          "john-mearsheimer"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "label": "Pape (Janssen) × **Davis** lattice",
+      "raw": "`batch-analysis | 2026-04-16 | Pape (Janssen) × **Davis** lattice | **Tension-first:** **Davis** lane (**extension game**, ultimatum vs negotiation, **resumption clock**, U.S. macro hurt if talks read as final offer) tests **process credibility** and **timing**; Pape lane tests **commodity-shock staging**, **spoiler third player**, and **Trump exit narrative**. **Do not** merge **Rubio / negotiator-killing** specifics without dated primaries. **Weak bridge:** both model **why talks break under pressure**—**different falsifiers** (process vs domestic ratchet + shocks).`",
+      "expert_ids": [
+        "daniel-davis",
+        "robert-pape"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "daniel-davis",
+          "robert-pape"
+        ]
+      }
     }
   ]
 }

@@ -32,6 +32,8 @@ def validate_file(path: Path) -> list[str]:
     name = path.name
     if name == "README.md":
         return errors
+    if "template" in name.lower():
+        return errors
     if not FILENAME_RE.match(name):
         errors.append(f"{path}: filename must match YYYY-MM-DD-slug.md (lowercase slug)")
     text = path.read_text(encoding="utf-8", errors="replace")

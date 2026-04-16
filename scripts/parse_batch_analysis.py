@@ -156,12 +156,17 @@ def _extract_aliases(text: str, already: set[str]) -> list[str]:
 
 def _assign_confidence(
     crosses: list[str],
-    threads: list[str],
+    body_threads: list[str],
     aliases: list[str],
+    upstream_threads: list[str] | None = None,
 ) -> str:
+    """Confidence tiers. A lone ``thread:`` on the batch row is high; upstream-only pins are medium."""
+    upstream_threads = upstream_threads or []
     if len(crosses) >= 2:
         return "high"
-    if crosses or threads:
+    if body_threads and not crosses and not aliases:
+        return "high"
+    if crosses or body_threads or upstream_threads:
         return "medium"
     if len(aliases) >= 2:
         return "medium"
@@ -183,15 +188,11 @@ def _context_date(line: str) -> str | None:
 # Main parser
 # ---------------------------------------------------------------------------
 
-def parse_inbox(inbox_path: Path) -> list[BatchRef]:
-    """Parse all batch-analysis lines from the inbox file."""
-    if not inbox_path.is_file():
-        print(f"warning: inbox not found: {inbox_path}", file=sys.stderr)
-        return []
-
-    text = inbox_path.read_text(encoding="utf-8")
+def _parse_inbox_lines(text: str) -> list[BatchRef]:
+    """Parse batch-analysis rows from inbox-like text (string API for tests/tools)."""
     refs: list[BatchRef] = []
     current_date: str | None = None
+    pending_upstream_threads: list[str] = []
 
     for line_num, line in enumerate(text.splitlines(), 1):
         stripped = line.strip()
@@ -201,12 +202,16 @@ def parse_inbox(inbox_path: Path) -> list[BatchRef]:
             current_date = ctx
             continue
 
+        clean = stripped.lstrip("- ").strip("`").strip()
+
         if not _RE_BATCH_TOKEN.search(stripped):
+            th = _extract_threads(stripped)
+            if th:
+                pending_upstream_threads = th
             continue
 
         # Strip surrounding backticks and bullets
         raw = stripped
-        clean = stripped.lstrip("- ").strip("`").strip()
 
         pipe_m = _RE_PIPE.search(clean)
         if pipe_m:
@@ -230,8 +235,11 @@ def parse_inbox(inbox_path: Path) -> list[BatchRef]:
         already = set(crosses) | set(threads)
         aliases = _extract_aliases(body, already)
 
-        all_ids = list(dict.fromkeys(crosses + threads + aliases))
-        confidence = _assign_confidence(crosses, threads, aliases)
+        upstream = list(pending_upstream_threads)
+        pending_upstream_threads = []
+
+        all_ids = list(dict.fromkeys(crosses + threads + aliases + upstream))
+        confidence = _assign_confidence(crosses, threads, aliases, upstream)
 
         sources: dict[str, list[str]] = {}
         if crosses:
@@ -240,6 +248,8 @@ def parse_inbox(inbox_path: Path) -> list[BatchRef]:
             sources["thread_in_line"] = threads
         if aliases:
             sources["alias_match"] = aliases
+        if upstream:
+            sources["upstream_verify"] = upstream
 
         refs.append(BatchRef(
             date=batch_date,
@@ -252,7 +262,54 @@ def parse_inbox(inbox_path: Path) -> list[BatchRef]:
             line_number=line_num,
         ))
 
-    return refs
+    merged = _merge_batch_refs_by_date_label(refs)
+    return merged
+
+
+_CONF_RANK = {"high": 3, "medium": 2, "low": 1, "none": 0}
+
+
+def _higher_confidence(a: str, b: str) -> str:
+    return a if _CONF_RANK.get(a, 0) >= _CONF_RANK.get(b, 0) else b
+
+
+def _merge_batch_refs_by_date_label(refs: list[BatchRef]) -> list[BatchRef]:
+    """Merge consecutive refs with identical date + label (continued paste / long prose)."""
+    if not refs:
+        return []
+    out: list[BatchRef] = [refs[0]]
+    for r in refs[1:]:
+        prev = out[-1]
+        if r.date == prev.date and r.label == prev.label:
+            prev.raw = prev.raw + "\n" + r.raw
+            prev.expert_ids = list(dict.fromkeys(prev.expert_ids + r.expert_ids))
+            prev.confidence = _higher_confidence(prev.confidence, r.confidence)
+            prev.seams = list(dict.fromkeys(prev.seams + r.seams))
+            for key, vals in r.sources.items():
+                if not vals:
+                    continue
+                bucket = prev.sources.setdefault(key, [])
+                bucket.extend(x for x in vals if x not in bucket)
+            if r.line_number:
+                prev.line_number = r.line_number
+        else:
+            out.append(r)
+    return out
+
+
+def parse_inbox_text(text: str) -> dict:
+    """Parse inbox-like text and return a snapshot dict (tests, notebooks)."""
+    return build_snapshot(_parse_inbox_lines(text))
+
+
+def parse_inbox(inbox_path: Path) -> list[BatchRef]:
+    """Parse all batch-analysis lines from the inbox file."""
+    if not inbox_path.is_file():
+        print(f"warning: inbox not found: {inbox_path}", file=sys.stderr)
+        return []
+
+    text = inbox_path.read_text(encoding="utf-8")
+    return _parse_inbox_lines(text)
 
 
 def build_snapshot(refs: list[BatchRef]) -> dict:

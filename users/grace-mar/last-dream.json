@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-15T06:11:38.135739+00:00",
+  "generated_at": "2026-04-16T05:28:02.832281+00:00",
   "user_id": "grace-mar",
   "agent_surface": {
     "cursor_model": "unknown"
   },
   "strict_mode": false,
   "phase": "both",
-  "ok": true,
-  "integrity_ok": true,
+  "ok": false,
+  "integrity_ok": false,
   "governance_ok": true,
   "self_memory_changed": true,
   "reviewable_count": 0,
@@ -15,7 +15,7 @@
   "artifact_draft_count": 0,
   "promotable_draft_count": 0,
   "followups": [
-    "Capture gap: Record hasn't grown in 17 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new Evidence"
+    "Capture gap: Record hasn't grown in 18 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new Evidence"
   ],
   "phases": {
     "recent": {
@@ -24,26 +24,26 @@
       "relation_counts": {}
     },
     "structural": {
-      "integrity": "pass",
+      "integrity": "fail",
       "governance": "pass",
       "entry_count": 0,
       "relation_counts": {}
     }
   },
   "coffee_rollup_24h": {
-    "window_start_utc": "2026-04-14T06:11:33.277960+00:00",
-    "window_end_utc": "2026-04-15T06:11:33.277960+00:00",
+    "window_start_utc": "2026-04-15T05:27:56.920133+00:00",
+    "window_end_utc": "2026-04-16T05:27:56.920133+00:00",
     "window_hours": 24.0,
     "count": 5,
-    "first_ts": "2026-04-14T14:21:00+00:00",
-    "last_ts": "2026-04-14T20:13:00+00:00",
-    "span_hours": 5.87,
+    "first_ts": "2026-04-15T14:40:00+00:00",
+    "last_ts": "2026-04-16T03:09:00+00:00",
+    "span_hours": 12.48,
     "by_mode": {
       "work-start": 5
     },
     "runs": [
       {
-        "ts_iso": "2026-04-14T14:21:00+00:00",
+        "ts_iso": "2026-04-15T14:40:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -52,7 +52,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-14T14:47:00+00:00",
+        "ts_iso": "2026-04-15T17:42:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -61,7 +61,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-14T15:54:00+00:00",
+        "ts_iso": "2026-04-15T19:24:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -70,7 +70,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-14T17:10:00+00:00",
+        "ts_iso": "2026-04-15T22:23:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -79,7 +79,7 @@
         }
       },
       {
-        "ts_iso": "2026-04-14T20:13:00+00:00",
+        "ts_iso": "2026-04-16T03:09:00+00:00",
         "ok": true,
         "mode": "work-start",
         "kv": {
@@ -105,8 +105,10 @@
       "id": "build",
       "title": "Build / integrate (repo + work-dev)",
       "first_move": "python3 scripts/validate-integrity.py --user grace-mar --json",
-      "stop_rule": "Integrity passes; then optional: python3 scripts/refresh_derived_exports.py -u grace-mar",
-      "signals_used": []
+      "stop_rule": "Fix reported integrity errors before shipping.",
+      "signals_used": [
+        "integrity_fail"
+      ]
     },
     {
       "id": "steward",
@@ -116,49 +118,49 @@
       "signals_used": []
     }
   ],
-  "suggested_execution_path_index": 0,
-  "execution_path_suggestion_reason": "calendar_mod3",
-  "tomorrow_inherits": "Tomorrow inherits (hint): **Daily Brief (generator + watch slices; optional KY-4 intel when chosen)** \u2014 calendar rotation; not policy or Record.",
+  "suggested_execution_path_index": 2,
+  "execution_path_suggestion_reason": "integrity_or_governance_fail",
+  "tomorrow_inherits": "Tomorrow inherits (hint): **Steward / membrane (gate + template parity)** \u2014 integrity or governance did not fully pass this dream; not policy or Record.",
   "civmem_echoes": [],
   "civmem_disclaimer": "Analogical / historical depth from in-repo civ-mem (token overlap); not current truth, not Voice knowledge, not part of the Record.",
   "civmem_index_missing": false,
+  "civmem_suppressed_reason": "suppressed_integrity_fail",
   "capture_gap": {
     "last_evidence_date": "2026-03-28",
     "last_evidence_id": "ACT-0050",
-    "days_since_evidence": 17,
+    "days_since_evidence": 18,
     "last_merge_date": "2026-03-28",
-    "days_since_merge": 17,
+    "days_since_merge": 18,
     "pending_count": 1,
     "level": "warning",
-    "message": "Record hasn't grown in 17 days (last: ACT-0050, 2026-03-28)"
+    "message": "Record hasn't grown in 18 days (last: ACT-0050, 2026-03-28)"
   },
   "capability_shift": {
     "category": "model",
     "sources_checked": 6,
     "sources_total": 6,
-    "alert_count": 11,
+    "alert_count": 12,
     "review_count": 0,
     "monitor_count": 1,
+    "variant_count": 0,
     "fetch_errors": []
   },
   "dream_catchup": {
     "semantics": "since_previous_dream",
     "timezone": "UTC",
-    "previous_dream_generated_at": "2026-04-14T05:59:47.372101+00:00",
+    "previous_dream_generated_at": "2026-04-15T06:11:38.135739+00:00",
     "local_calendar_dates": [
-      "2026-04-15"
+      "2026-04-16"
     ],
-    "strategy_notebook_missing_day_headers": [
-      "2026-04-15"
-    ]
+    "strategy_notebook_missing_day_headers": []
   },
   "handoffSchemaVersion": 2,
-  "topActionReason": "calendar_mod3",
+  "topActionReason": "integrity_or_governance_fail",
   "quietRun": false,
   "residueLedger": {
-    "must_resume": "Capture gap: Record hasn't grown in 17 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new",
+    "must_resume": "Capture gap: Record hasn't grown in 18 days (last: ACT-0050, 2026-03-28) \u2014 run batch_ingest_observations.py or stage new",
     "safe_to_drop": "",
-    "blocked": "",
+    "blocked": "Dream reported not ok \u2014 review integrity/governance before new work.",
     "watch_later": ""
   },
   "worktreeState": "risky residue",

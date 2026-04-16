@@ -8,16 +8,9 @@ from pathlib import Path
 from scripts.strategy_expert_corpus import (
     CANONICAL_EXPERT_IDS,
     extract_thread_ingests,
-    render_corpus_inner,
-    rebuild_corpus,
+    rebuild_threads,
+    render_thread_extraction,
 )
-
-REPO = Path(__file__).resolve().parent.parent
-DEFAULT_THREADS = (
-    REPO
-    / "docs/skill-work/work-strategy/strategy-notebook/strategy-commentator-threads.md"
-)
-
 
 def test_extract_respects_bundle_and_thread() -> None:
     inbox = """
@@ -48,43 +41,27 @@ _(Append below this line.)_
     assert not out
 
 
-def test_render_prunes_old_dates() -> None:
-    today = date(2026, 4, 14)
-    by_date = {
-        date(2026, 4, 1): ["- old"],
-        date(2026, 4, 13): ["- new"],
-    }
-    text = render_corpus_inner(
+def test_render_thread_extraction_includes_transcript_and_knots() -> None:
+    text = render_thread_extraction(
         "john-mearsheimer",
-        by_date,
-        keep_days=7,
-        today=today,
+        transcript_lines=["- `transcript line`"],
+        knot_refs=[
+            {
+                "path": "chapters/k.md",
+                "date": "2026-04-13",
+                "knot_label": "weave",
+                "note": "test",
+            }
+        ],
     )
-    assert "2026-04-01" not in text
-    assert "2026-04-13" in text
-    assert "- new" in text
+    assert "Segment 2" in text
+    assert "transcript line" in text
+    assert "k.md" in text
 
 
-def test_rebuild_corpus_writes_all_indexed_experts(tmp_path) -> None:
-    inbox = tmp_path / "inbox.md"
-    inbox.write_text(
-        """**Accumulator for:** 2026-04-14 _(clock)_
-
-_(Append below this line.)_
-
-- x | thread:daniel-davis
-""",
-        encoding="utf-8",
-    )
-    out = tmp_path / "corpus"
-    paths = rebuild_corpus(
-        inbox_path=inbox,
-        threads_path=DEFAULT_THREADS,
-        out_dir=out,
-        keep_days=7,
-        today=date(2026, 4, 14),
-        dry_run=False,
-    )
+def test_rebuild_threads_returns_one_path_per_canonical_expert(tmp_path: Path) -> None:
+    knot = tmp_path / "knot-index.yaml"
+    knot.write_text("knots: []\n", encoding="utf-8")
+    paths = rebuild_threads(out_dir=tmp_path, knot_index_path=knot, dry_run=True)
     assert len(paths) == len(CANONICAL_EXPERT_IDS)
-    body = (out / "strategy-expert-daniel-davis.md").read_text(encoding="utf-8")
-    assert body.count("daniel-davis") >= 2
+    assert all(p.name.startswith("strategy-expert-") for p in paths)

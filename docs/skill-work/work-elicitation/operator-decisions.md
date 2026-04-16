@@ -61,6 +61,17 @@ It is not a full theory of the operator and not Record truth.
 - What usually determines the answer: what the operator is curious about or what feels load-bearing right now (not a fixed priority queue)
 - Common failure mode: agent assumes the operator wants to continue the same lane when they actually want to pivot
 
+### Critique-then-claim (partial adoption)
+
+- Name: present external proposal → agent claims subset → discard remainder
+- Typical context: operator pastes a large external proposal (often ~10 points) and asks "would you like to claim this as your own" or "do you agree with any of this"
+- Inputs usually consulted: existing repo state (what's already built), architectural alignment, whether proposed artifacts have material to fill them, maintenance cost of new surfaces
+- What makes it easy: the proposal is concrete and some points map cleanly to existing gaps; the agent can compare against real file contents
+- What makes it hard: the proposal mixes load-bearing fixes with speculative scaffolding; distinguishing the two requires reading the actual files, not just evaluating the proposal in isolation
+- What usually determines the answer: compression ratio — large proposals consistently compress to ~40% implementable changes. The signal is in what survives the filter.
+- Common failure mode: agent accepts the proposal wholesale to avoid conflict; or agent rejects everything to avoid work. The right move is explicit claim + explicit rejection with reasons for each.
+- Distinguishing feature vs evaluate-external-proposal: "claim" means the agent takes ownership of the filtered plan and presents it as its own recommendation, not as a modified version of someone else's proposal
+
 ### Combo-pick
 
 - Name: selecting multiple options simultaneously

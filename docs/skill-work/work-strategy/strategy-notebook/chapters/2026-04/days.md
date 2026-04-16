@@ -633,3 +633,28 @@ Barnes says both sides face material clocks and the question is which clock runs
 - If **Grok** lines graduate after verify, move facts to Judgment and trim §1f overlay.
 - Pin **The Duran — Mercouris 2026-04-15** canonical episode URL for **`thread:alexander-mercouris`** when stable.
 - Escalate **fact-check** if Judgment tightens: Saudi MFA quote primary, Russian SC full text for ORBAT numbers, Strait traffic AIS/allies readout.
+
+## 2026-04-16
+
+### Signal
+
+- **New knot (weave C):** [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) — **`knot_label`** `pape-janssen-escalation-blockade`. **Robert Pape** on **Cyrus Janssen** (YT, uploaded 2026-04-16): **escalation trap** / domestic lock-in, **staged blockade → commodity calendar** (hypothesis-grade until primaries), **Israel as third-player spoiler** (Rubio cites need primaries), **Lebanon** sectarian-map **X** (2026-04-14) + **AP** Washington talks **separate Judgment objects**. Inbox: [daily-strategy-inbox.md](../../daily-strategy-inbox.md) **Expert ingest — 2026-04-16**; expert: [`strategy-expert-robert-pape-thread.md`](../../strategy-expert-robert-pape-thread.md).
+
+### Judgment
+
+- **Thin day — full thesis on the knot page.** Pape lane stays **lattice-separated** from **`thread:john-mearsheimer`** (alliance geometry) and **`thread:daniel-davis`** (ultimatum / resumption clock) per inbox **`batch-analysis | 2026-04-16 | Pape × Mearsheimer`** and **× Davis**. **Sister continuity:** [2026-04-12 islamabad-hormuz-thesis-weave](knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [2026-04-15 kremlin-iri-uranium-dual-register](knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md) · [2026-04-14 mercouris-mearsheimer-lebanon-split](knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md).
+
+### Links
+
+- [Knot — pape-janssen-escalation-blockade](knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md)
+- [daily-brief-2026-04-16.md](../../daily-brief-2026-04-16.md) — §1f **Grok** digest archive + triage table (stubs §1d–§1h until watch pass)
+- [meta.md](meta.md) — § **Grok 2026-04-16 digest — month falsifiers**
+- Prior day: [2026-04-15](#2026-04-15)
+
+### Open
+
+- Pin **Janssen × Pape** **`watch?v=`**; **Rubio** / **spoiler** primaries; **commodity** data for blockade calendar; keep **Lebanon** map thesis **seamed** from **AP** process wire — see knot **Open / verify**.
+- **Grok 2026-04-16 digest — month falsifier chains** (gates in [meta.md](meta.md) § **Grok 2026-04-16 digest — month falsifiers**; verbatim + triage table [daily-brief-2026-04-16.md](../../daily-brief-2026-04-16.md) §1f) — **Judgment deferred** until receipts land; work **Open** first:
+  - **Hungary / Tisza execution gate:** Corroborate **08:00 UTC** text drop, **11:45** ratification, **no** energy-import carve-outs, **Orbán CC** motion dismissed, **first COREPER** vote timing — if **two or more** miss, keep **“veto collapse → aid velocity”** out of **Judgment** for this arc.
+  - **G7 SPR / sanctions text gate:** Match published **G7 finance communiqué** + member **SPR** lines to **45M bbl phased** split and **secondary-sanctions** language within **±48h** of digest **14:00 UTC** anchor — else no **Signal** lead on “multilateral inventory response”; **Links** only to what published.
+  - **Compression triad gate (Oman + MoD tempo + PPI):** Need **≥2 of 3** independent receipts (**MoD** or **OSINT** for **~30% / 72h** sortie framing; **White House + IRI MFA** on **Sunday Oman technical** scope; **BLS PPI** **+0.3% m/m** + **energy +1.8%**) before folding digest **§13 “physics / barrels / arithmetic”** into knot-grade **Judgment**; if **two fail**, keep digest closure in **§1f quarantine** — still OK to cite **IMF/AP** pass-through from **04-15** brief **without** chaining unverified **Kerch / depot** counts.

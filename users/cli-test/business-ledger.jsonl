@@ -5,3 +5,5 @@
 {"ts": "2026-04-12T00:50:01.404338+00:00", "date": "2026-04-11", "description": "Test CLI transaction", "amount_usd": 19.99, "type": "expense", "category": "materials", "venture": "test-venture"}
 {"ts": "2026-04-12T16:54:42.546629+00:00", "date": "2026-04-12", "description": "Test CLI transaction", "amount_usd": 19.99, "type": "expense", "category": "materials", "venture": "test-venture"}
 {"ts": "2026-04-13T05:22:12.160983+00:00", "date": "2026-04-12", "description": "Test CLI transaction", "amount_usd": 19.99, "type": "expense", "category": "materials", "venture": "test-venture"}
+{"ts": "2026-04-16T16:44:51.910284+00:00", "date": "2026-04-16", "description": "Test CLI transaction", "amount_usd": 19.99, "type": "expense", "category": "materials", "venture": "test-venture"}
+{"ts": "2026-04-16T16:46:41.144544+00:00", "date": "2026-04-16", "description": "Test CLI transaction", "amount_usd": 19.99, "type": "expense", "category": "materials", "venture": "test-venture"}

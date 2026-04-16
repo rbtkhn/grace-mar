@@ -49,6 +49,14 @@ It is not legal policy and not Record truth.
 - Not good enough when: missing lane contract elements (per work-template.md checklist); boundary section omits governing gate; not registered
 - Typical acceptable imperfection: operator-working files may be blank scaffolds on first ship
 
+### Premature infrastructure
+
+- Name: proposed directory, scaffold file, or review script for a surface with insufficient content
+- Good enough means: the surface has enough entries to make the infrastructure load-bearing (folders: >0 files to put in them; scripts: >~50 entries to make manual review painful; summaries: enough entries to summarize)
+- Not good enough when: the proposal creates empty directories with `.gitkeep`, template files with blank fields, or scripts that would report on 6 entries. These add maintenance surface without operational value.
+- Typical acceptable imperfection: a README describing future intent is fine as long as it doesn't create empty subfolders alongside it
+- Observed ratio: large proposals (~10 items) consistently carry ~60% premature infrastructure. The agent's job is to identify and reject that 60% explicitly.
+
 ### Cadence event
 
 - Name: coffee / thanks / dream / bridge log line

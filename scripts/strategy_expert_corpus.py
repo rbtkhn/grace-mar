@@ -356,20 +356,21 @@ def render_thread_extraction(
     STRATEGY-NOTEBOOK-ARCHITECTURE.md § Thread (two layers).
     """
     parts: list[str] = []
-    parts.append("### Machine extraction (script-maintained)\n")
+    parts.append("## Segment 2 — Machine extraction (script-maintained)\n")
     parts.append(
         "_Auto-generated from `-transcript.md` + knot index. "
-        "The narrative journal lives **above** the `<!-- strategy-expert-thread:start -->` marker._\n"
+        "**Segment 1** (narrative journal) lives **above** "
+        "the `<!-- strategy-expert-thread:start -->` marker._\n"
     )
 
     if transcript_lines:
-        parts.append("#### Recent transcript material\n")
+        parts.append("### Segment 2a — Recent transcript material\n")
         for line in transcript_lines:
             parts.append(line)
         parts.append("")
 
     if knot_refs:
-        parts.append("#### Knot references\n")
+        parts.append("### Segment 2b — Knot references\n")
         for knot in knot_refs:
             knot_path = knot.get("path", "?")
             knot_date = knot.get("date", "?")

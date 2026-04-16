@@ -1,21 +1,45 @@
 {
   "schemaVersion": "1.0.0-work-lanes-dashboard",
-  "generatedAt": "2026-04-14T00:07:07.887493+00:00",
+  "generatedAt": "2026-04-16T16:47:15.874544+00:00",
   "recordMergeAuthority": "RECURSION-GATE and companion approval only \u2014 never implied by lane metrics.",
   "lanes": {
     "work_strategy": {
-      "schemaVersion": "1.0.0-work-strategy",
-      "generatedAt": "2026-04-11T04:23:35.084601+00:00",
+      "schemaVersion": "2.0.0-work-strategy",
+      "generatedAt": "2026-04-15T18:32:51.351429+00:00",
       "lane": "work-strategy",
       "metrics": {
-        "decision_point_files": 1,
-        "decision_points_open": 0,
-        "authorized_sources_yaml_entries": 5,
-        "promotion_policy_present": true
+        "structure": {
+          "decision_point_files": 2,
+          "decision_points_open": 0,
+          "authorized_sources_yaml_entries": 16,
+          "promotion_policy_present": true
+        },
+        "judgment_quality": {
+          "notebook_entries_total": 8,
+          "inbox_pending_lines": 0,
+          "promotion_date_mentions": 22,
+          "months": {
+            "2026-04": {
+              "dated_entries": 8,
+              "knot_pages": 6,
+              "avg_sections_per_entry": 3.44,
+              "avg_links_per_entry": 10.4,
+              "open_carry_forward": 2
+            }
+          }
+        }
+      },
+      "interpretation": {
+        "avg_sections_per_entry": "4.0 = all tracked sections (Signal/Judgment/Links/Open) present; <3.0 = sections skipped regularly",
+        "avg_links_per_entry": ">2 healthy; <1 = judgment may be under-cited",
+        "open_carry_forward": "High = active threads; very high relative to entries = unresolved debt",
+        "inbox_pending_lines": "0 = clean; >30 = overdue weave; >50 = prune candidate",
+        "promotion_date_mentions": "0 is fine early; sustained 0 over months = notebook may not be feeding STRATEGY.md"
       },
       "notes": [
-        "Recommendation acceptance/rejection rates are phase-2 (need operator workflow).",
-        "Cross-lane references: manual until automated extract."
+        "Recommendation acceptance/rejection rates: need operator workflow.",
+        "Cross-lane references: manual until automated extract.",
+        "judgment_quality metrics are computed from on-disk notebook state."
       ]
     },
     "work_dev": {
@@ -143,7 +167,7 @@
       ]
     },
     "work_dev_dashboard_legacy": {
-      "generated_at": "2026-04-13T05:22:38Z",
+      "generated_at": "2026-04-16T16:47:13Z",
       "integration_status_counts": {
         "implemented": 11,
         "partial": 2,
@@ -158,7 +182,7 @@
         "validation_failed": 8,
         "openclaw_export": 1,
         "rejected": 4,
-        "maintenance": 14,
+        "maintenance": 18,
         "dyad:grounded_query": 1,
         "sandbox_execution_pre": 1,
         "sandbox_execution_post": 1
@@ -166,7 +190,7 @@
       "provenance_completeness_score": 1.0,
       "provenance_from_gate": false,
       "lane_violation_count": 0,
-      "continuity_block_count": 23,
+      "continuity_block_count": 25,
       "gap_ids_open": [],
       "notes": [
         "Lane / continuity counts come from runtime/observability/*.jsonl when present (local or CI); empty feeds => 0.",

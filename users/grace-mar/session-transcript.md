@@ -87,3 +87,9 @@
 - context: COFFEE
 - picked: D
 - note: Book Jiang/PH
+
+### [WORK-choice] 2026-04-16T03:11:52Z
+- context: COFFEE
+- picked: A
+- tags: build,work-dev
+- note: OB1 chunking spike: read architecture + mapping chunk_strategy; next wedge export self.md three strategies
