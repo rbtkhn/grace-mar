@@ -80,7 +80,7 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 ---
 
-**Accumulator for:** 2026-04-14 _(system local date — maintain from clock when appending)_
+**Accumulator for:** 2026-04-16 _(system local date — maintain from clock when appending)_
 
 _(Append below this line during the day.)_
 
@@ -317,3 +317,25 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 `batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`
 
 `batch-analysis | 2026-04-15 | Mercouris × tri-mind | seam:mercouris-tri-frame`
+
+### Expert ingest — 2026-04-16 (Robert Pape × Cyrus Janssen; operator transcript)
+
+<!-- brief-handoff-bundle: 2026-04-16 -->
+
+**Source:** operator-pasted transcript — *Professor Robert Pape: The US Can NOT Beat Iran*, interview Cyrus Janssen, **uploaded 2026-04-16** (YouTube). **Pin** canonical `watch?v=` URL on `@CyrusJanssen` when confirmed; lines below use **channel** URL + heavy **`verify:`** until pinned.
+
+`YT | cold: IRAN | Pape (Cyrus Janssen studio, uploaded 2026-04-16) — escalation trap: bombing for regime change failed; US cannot accept defeat; Trump needs clean win vs Obama frame; Iran unlikely to bail him out // hook: §1d–§1e week-seven arc; pairs uranium/Hormuz Judgment rows | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+youtube-watch-id-to-pin | thread:robert-pape`
+
+`YT | cold: IRAN | Pape — blockade **framework**: price rise → ~45d shortages → 60–90d commodity production contraction; claims **day 46**; checkpoints **May 1** shortages reporting / **Jun 1** contraction; compares 1973 shock + WWII Japan blockade // hook: §1c macro + Hormuz logistics; **do not** cite IMF / four-day-week / Asia claims without primaries | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+primary-econ-data-needed | thread:robert-pape`
+
+`YT | cold: IRAN | Pape — escalation **stages** + fork: withdrawal under Hormuz leverage → **“fourth center”** branch; **Vance** enriched-uranium-out framing; subjective **~80%+** ground op (up from ~70% Diary CEO) // hook: §1e demands vs §1h nuclear; **hypothesis-grade** probabilities—not ORBAT | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+opinion-forecast | thread:robert-pape`
+
+`YT | cold: IRAN | Pape — **Israel as spoiler** (third player in PD); May 2025 + Feb 2026 rounds; **Rubio** cited re Israeli pressure / negotiators // hook: diplomacy seam vs kinetic week; **high-stakes**—needs **primary** quotes before merge with weave | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+rubio-primary+israel-timing-primary | thread:robert-pape`
+
+`batch-analysis | 2026-04-16 | Pape (Janssen) × **Mearsheimer** lattice | **Tension-first:** Pape stresses **domestic lock-in**, **calendarized blockade pain**, **Israel spoiler**, **Iran long-war** time-on-side—**not** the same analytic units as **Mearsheimer**-class **alliance incentives** / **buck-passing** / **who can afford to fight** (see indexed `john-mearsheimer` thread for geometry—**do not** force-merge). **Do not** treat Pape’s **70–80% ground** talk as structural data. **Weak bridge:** both undercut a simple **bomb-to-fold** victory story for the Hormuz arc—for **different mechanisms**.`
+
+`batch-analysis | 2026-04-16 | Pape (Janssen) × **Davis** lattice | **Tension-first:** **Davis** lane (**extension game**, ultimatum vs negotiation, **resumption clock**, U.S. macro hurt if talks read as final offer) tests **process credibility** and **timing**; Pape lane tests **commodity-shock staging**, **spoiler third player**, and **Trump exit narrative**. **Do not** merge **Rubio / negotiator-killing** specifics without dated primaries. **Weak bridge:** both model **why talks break under pressure**—**different falsifiers** (process vs domestic ratchet + shocks).`
+
+`X | cold: LEBANON+IRAN | Pape (@ProfessorPape, **2026-04-14** post + sectarian **map** graphic) — Israel in talks w/ **Christian & Sunni** Lebanese leadership, **Shia** leaders opposed; argues trajectory likelier **south Shia cleansing + civil war** than peace // hook: same cycle as **Apr 14** U.S.-mediated Israel–Lebanon talks (see wire row); **do not** collapse sectarian map claim w/ state readout w/o seam; pairs knot mercouris-mearsheimer-lebanon-split + §1e | https://x.com/ProfessorPape | verify:pin-exact-status-URL+screenshot-Cursor-assets-image-754d51cf+ap-lebanon-israel-2026-04-14-context | thread:robert-pape`
+
+`wire | cold: LEBANON | AP 14 Apr: Israel–Lebanon rare direct talks in Washington (Rubio hosts); ceasefire / withdrawal / Hezbollah frame per wire // hook: **context shell** for Pape X map post same day—**official process** vs **sectarian civil-war thesis** stay **separate Judgment objects** until primaries pin who met whom | https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9 | verify:ap-primary`

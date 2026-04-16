@@ -14,5 +14,7 @@ WORK only; not Record.
 ## 2026-04-12
 - `batch-analysis | 2026-04-14 | Ritter × Davis | **Tension-first:** **Ritter** digest §B = **OOB / closure** skepticism on a Hollywood-grade Hormuz **seizure** at scale; **Davis** X = **ultimatum vs negotiation** + **resumption clock** + **U.S.-side macro** hurt if talks read as final offer—**convergence:** both undercut a clean **bomb → fold** story. **Do not** treat **digest quants** as **proof** of **Davis** claims or vice versa until **status URLs** + **wire** rows land. **`crosses:scott-ritter+daniel-davis`** — **membership:** **`thread:scott-ritter`** (brief-handoff bundle **2026-04-10**) + **`thread:daniel-davis`** (Prior scratch **2026-04-12** block); folded **[`## 2026-04-14`](chapters/2026-04/days.md)** **Signal**/**Judgment**/**Links**/**Open**.`
 
+
+
 ## 2026-04-10
 - `YT | cold: (digest §B) Scott Ritter — hypothetical Hormuz seizure framed infeasible: long order-of-battle (Jordan–Iraq LOCs), **60–80k Marines + 120–200k Army** echelons // hook: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) quantitative table | path:docs/skill-work/work-strategy/transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md | verify:operator-transcript-digest | thread:scott-ritter`

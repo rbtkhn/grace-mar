@@ -2,10 +2,32 @@
 
 WORK only; not Record.
 
-**Source:** Distilled from [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
-**Process:** Script extracts raw material (transcript lines + knot references); assistant refines into a curated analytical thread.
-**Updated:** When the operator runs `thread`.
-**Companion files:** [`strategy-expert-robert-pape.md`](strategy-expert-robert-pape.md) (profile) and [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md) (7-day verbatim).
+**Source:** Human **narrative journal** (below) + [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md) (7-day verbatim) + relevant knots (where this voice was used in strategy work).
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers.
+**Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
+**Companion files:** [`strategy-expert-robert-pape.md`](strategy-expert-robert-pape.md) (profile) and [`strategy-expert-robert-pape-transcript.md`](strategy-expert-robert-pape-transcript.md).
+
+---
+
+## Narrative journal
+
+### Distilled thread (2026-04-12 → 2026-04-16)
+
+**Lane:** Pape supplies the notebook’s **coercion / commitment-ratchet** vocabulary: “escalation trap,” surrender-bar diplomacy, and blockade-as-timeline mechanics. He is used as the **U.S. position vs Iranian leverage** stress tester — not as ORBAT or as a substitute for wire readouts. Hypothesis-grade probabilities and third-player (Israel) claims stay **seam-pinned** until primaries land.
+
+**04-12 (Islamabad–Hormuz weave):** The captured X line reframes the enriched-uranium demand as the same bar as pre-war and asks why a stronger Iran would fold now — explicit **escalation trap** labeling. That indexes cleanly to the **islamabad-hormuz-thesis-weave** knot as Judgment glue next to Barnes/Vance framing, not as merged fact with Pakistan collapse rows.
+
+**04-14 Lebanon fork:** The sectarian-map post is the natural **Pape** hook inside **mercouris-mearsheimer-lebanon-split**: Mercouris-class diplomatic surface vs Mearsheimer-class incentives, with Pape adding **domestic cleavage / worst-case trajectory** (cleansing + civil-war fork). Discipline: do not flatten his map claim into a single state readout; keep the seam with the same-day wire context the knot already names.
+
+**04-16 (Cyrus Janssen studio block):** Recent YT pulls stack four lanes — escalation trap vs Obama/Trump framing, **blockade calendar** claims (day-46 / May-1 / Jun-1 checkpoints), staged escalation with enriched-uranium “fourth center” fork and subjective ground-op percentages, and **Israel as spoiler** in PD rounds. Notebook use: **§1c macro**, **§1d–§1e** week arc, **§1h** nuclear seam; blockade numerics and IMF-style comparisons need **primary econ** before they travel outside this thread.
+
+**Open:**
+
+- Pin **Rubio** and **Israel timing** quotes for the spoiler thread before tight weave with diplomacy rows
+- Hold **blockade day-count** claims to operator transcript + independent commodity/price series
+- Next dated **Lebanon** follow — whether Pape’s fork converges or diverges from wire on talks composition
+
+Canonical knot paths and raw ingest lines live in the **machine extraction** block below (regenerated each **`thread`** / corpus run).
 
 ---
 <!-- strategy-expert-thread:start -->
@@ -15,10 +37,17 @@ _Auto-generated from `-transcript.md` + knot index. The narrative journal lives 
 
 #### Recent transcript material
 
+## 2026-04-16
+- `YT | cold: IRAN | Pape (Cyrus Janssen studio, uploaded 2026-04-16) — escalation trap: bombing for regime change failed; US cannot accept defeat; Trump needs clean win vs Obama frame; Iran unlikely to bail him out // hook: §1d–§1e week-seven arc; pairs uranium/Hormuz Judgment rows | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+youtube-watch-id-to-pin | thread:robert-pape`
+- `YT | cold: IRAN | Pape — blockade **framework**: price rise → ~45d shortages → 60–90d commodity production contraction; claims **day 46**; checkpoints **May 1** shortages reporting / **Jun 1** contraction; compares 1973 shock + WWII Japan blockade // hook: §1c macro + Hormuz logistics; **do not** cite IMF / four-day-week / Asia claims without primaries | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+primary-econ-data-needed | thread:robert-pape`
+- `YT | cold: IRAN | Pape — escalation **stages** + fork: withdrawal under Hormuz leverage → **“fourth center”** branch; **Vance** enriched-uranium-out framing; subjective **~80%+** ground op (up from ~70% Diary CEO) // hook: §1e demands vs §1h nuclear; **hypothesis-grade** probabilities—not ORBAT | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+opinion-forecast | thread:robert-pape`
+- `YT | cold: IRAN | Pape — **Israel as spoiler** (third player in PD); May 2025 + Feb 2026 rounds; **Rubio** cited re Israeli pressure / negotiators // hook: diplomacy seam vs kinetic week; **high-stakes**—needs **primary** quotes before merge with weave | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+rubio-primary+israel-timing-primary | thread:robert-pape`
+- `X | cold: LEBANON+IRAN | Pape (@ProfessorPape, **2026-04-14** post + sectarian **map** graphic) — Israel in talks w/ **Christian & Sunni** Lebanese leadership, **Shia** leaders opposed; argues trajectory likelier **south Shia cleansing + civil war** than peace // hook: same cycle as **Apr 14** U.S.-mediated Israel–Lebanon talks (see wire row); **do not** collapse sectarian map claim w/ state readout w/o seam; pairs knot mercouris-mearsheimer-lebanon-split + §1e | https://x.com/ProfessorPape | verify:pin-exact-status-URL+screenshot-Cursor-assets-image-754d51cf+ap-lebanon-israel-2026-04-14-context | thread:robert-pape`
 ## 2026-04-12
 - `X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown | thread:robert-pape`
 
 #### Knot references
 
 - [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) 2026-04-12 (islamabad-hormuz-thesis-weave) — Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave
+- [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) 2026-04-14 (mercouris-mearsheimer-lebanon-split) — Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork; Pape lane (escalation-trap / sectarian map) indexes here for expert-thread knot refs
 <!-- strategy-expert-thread:end -->
