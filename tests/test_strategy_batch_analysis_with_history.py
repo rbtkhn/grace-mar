@@ -73,6 +73,91 @@ def test_load_historical_context_stance_preview(tmp_path: Path) -> None:
     assert ctx.preview_lines[0] == "first bullet"
 
 
+def test_iter_month_segments_inclusive() -> None:
+    assert mod.iter_month_segments("2026-01", "2026-03") == ["2026-01", "2026-02", "2026-03"]
+    assert mod.iter_month_segments("2025-11", "2026-02") == [
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+    ]
+
+
+def test_load_historical_context_prefers_segment_files(tmp_path: Path) -> None:
+    seg_dir = tmp_path / "scott-ritter"
+    seg_dir.mkdir()
+    for month, tag in (
+        ("2026-01", "alpha"),
+        ("2026-02", "beta"),
+        ("2026-03", "gamma"),
+    ):
+        (seg_dir / f"{month}.md").write_text(
+            f"""## Historical stance summary
+- stance {tag} one
+- stance {tag} two
+
+## Prompt-ready compact block
+```text
+historical-expert-context | scott-ritter | stance={tag}
+```
+""",
+            encoding="utf-8",
+        )
+    rollup = tmp_path / "scott-ritter-2026-01-to-2026-03.md"
+    rollup.write_text(
+        """## Historical stance summary
+- rollup only
+
+## Prompt-ready compact block
+```text
+historical-expert-context | scott-ritter | stance=ROLLUP
+```
+""",
+        encoding="utf-8",
+    )
+    with patch.object(mod, "REPO_ROOT", tmp_path), patch.object(mod, "HISTORY_DIR", tmp_path):
+        ctx = mod.load_historical_context("scott-ritter", "2026-01", "2026-03")
+    assert ctx.compact_block is not None
+    assert "stance=alpha" in ctx.compact_block
+    assert "stance=beta" in ctx.compact_block
+    assert "stance=gamma" in ctx.compact_block
+    assert "ROLLUP" not in ctx.compact_block
+    assert ctx.preview_lines[0] == "stance alpha one"
+
+
+def test_load_historical_context_falls_back_when_segment_incomplete(tmp_path: Path) -> None:
+    seg_dir = tmp_path / "scott-ritter"
+    seg_dir.mkdir()
+    (seg_dir / "2026-01.md").write_text(
+        """## Historical stance summary
+- seg only
+
+## Prompt-ready compact block
+```text
+historical-expert-context | scott-ritter | stance=SEG
+```
+""",
+        encoding="utf-8",
+    )
+    rollup = tmp_path / "scott-ritter-2026-01-to-2026-03.md"
+    rollup.write_text(
+        """## Historical stance summary
+- from rollup
+
+## Prompt-ready compact block
+```text
+historical-expert-context | scott-ritter | stance=ROLLUP_OK
+```
+""",
+        encoding="utf-8",
+    )
+    with patch.object(mod, "REPO_ROOT", tmp_path), patch.object(mod, "HISTORY_DIR", tmp_path):
+        ctx = mod.load_historical_context("scott-ritter", "2026-01", "2026-03")
+    assert ctx.compact_block is not None
+    assert "ROLLUP_OK" in ctx.compact_block
+    assert "SEG" not in ctx.compact_block
+
+
 def test_main_requires_dry_run_or_apply() -> None:
     import subprocess
 

@@ -1,0 +1,31 @@
+{
+  "expert_id": "alexander-mercouris",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-alexander-mercouris-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "- [strength: medium] **Through-line:** **NATO “wartime mindset”** / European rearmament debate — Mercouris lane on **escalation spiral vs dialogue** with **EU** internal split (smaller states vs **UK/FR/DE** commitment) — primary clip: [Rumble — The Duran, “NATO Preparing for WAR w/ RUSSIA”](https://rumble.com/v6adegm-the-durans-alexander-mercouris-nato-preparing-for-war-w-russia.html) — confirm **upload date** in UI before treating as January anchor ([strength: low] if metadata ambiguous).\n- [strength: medium] **Mechanism:** **Institutional / legitimacy surface** — who sounds credible in **alliance** messaging vs **economic** strain — same structural role as **April** Duran monologue on multilateral tickers, earlier chapter.\n- [strength: low] **Ambiguity:** Rumble/YouTube mirrors vary — prefer **canonical The Duran** URL once pinned in inbox.\n- [strength: medium] **Tension / lattice:** **Orthogonal** to **Mearsheimer** Jan **SCMP / imperialism** arc (different theater); **joint** Iran surface emerges later in Q1/Q2 — hold **Mercouris × Mearsheimer** abstract fork until **dated** shared material (see April [Lebanon split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md)).",
+    "bullets": [
+      "[strength: medium] **Through-line:** **NATO “wartime mindset”** / European rearmament debate — Mercouris lane on **escalation spiral vs dialogue** with **EU** internal split (smaller states vs **UK/FR/DE** commitment) — primary clip: [Rumble — The Duran, “NATO Preparing for WAR w/ RUSSIA”](https://rumble.com/v6adegm-the-durans-alexander-mercouris-nato-preparing-for-war-w-russia.html) — confirm **upload date** in UI before treating as January anchor ([strength: low] if metadata ambiguous).",
+      "[strength: medium] **Mechanism:** **Institutional / legitimacy surface** — who sounds credible in **alliance** messaging vs **economic** strain — same structural role as **April** Duran monologue on multilateral tickers, earlier chapter.",
+      "[strength: low] **Ambiguity:** Rumble/YouTube mirrors vary — prefer **canonical The Duran** URL once pinned in inbox.",
+      "[strength: medium] **Tension / lattice:** **Orthogonal** to **Mearsheimer** Jan **SCMP / imperialism** arc (different theater); **joint** Iran surface emerges later in Q1/Q2 — hold **Mercouris × Mearsheimer** abstract fork until **dated** shared material (see April [Lebanon split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md))."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 3,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **Institutional / legitimacy surface** — who sounds credible in **alliance** messaging vs **economic** strain — same structural role as **April** Duran monologue on multilateral tickers, earlier chapter."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Through-line:** **NATO “wartime mindset”** / European rearmament debate — Mercouris lane on **escalation spiral vs dialogue** with **EU** internal split (smaller states vs **UK/FR/DE** commitment) — primary clip: [Rumble — The Duran, “NATO Preparing for WAR w/ RUSSIA”](https://rumble.com/v6adegm-the-durans-alexander-mercouris-nato-preparing-for-war-w-russia.html) — confirm **upload date** in UI before treating as January anchor ([strength: low] if metadata ambiguous).",
+      "[strength: medium] **Mechanism:** **Institutional / legitimacy surface** — who sounds credible in **alliance** messaging vs **economic** strain — same structural role as **April** Duran monologue on multilateral tickers, earlier chapter.",
+      "[strength: medium] **Tension / lattice:** **Orthogonal** to **Mearsheimer** Jan **SCMP / imperialism** arc (different theater); **joint** Iran surface emerges later in Q1/Q2 — hold **Mercouris × Mearsheimer** abstract fork until **dated** shared material (see April [Lebanon split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md))."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

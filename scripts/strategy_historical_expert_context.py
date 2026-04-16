@@ -9,7 +9,14 @@ falls back to ``### YYYY-MM`` in the same layer (after stripping the backfill HT
 Strips ``<!-- backfill:<expert_id>:start/end -->`` before segment parsing so the last
 month segment does not swallow the reconstructed arc block.
 
-Outputs markdown + JSON under ``artifacts/skill-work/work-strategy/historical-expert-context/``.
+Outputs markdown + JSON under ``artifacts/skill-work/work-strategy/historical-expert-context/``:
+
+- **Rollup (range):** ``<expert_id>-<start>-to-<end>.md`` / ``.json`` — merged window (default on).
+- **Per month:** ``<expert_id>/<YYYY-MM>.md`` / ``.json`` — one segment per file (default on).
+
+``strategy_batch_analysis_with_history.py`` prefers **per-month** files when **every** month in the
+requested window exists; otherwise it falls back to the rollup file.
+
 Does **not** change ``parse_batch_analysis.py`` — paste the compact block into inbox or prompts manually.
 
 See also: ``scripts/parse_batch_analysis.py`` for ``batch-analysis`` pipe snapshots.
@@ -319,6 +326,20 @@ def render_markdown(
     return "\n".join(lines).rstrip() + "\n"
 
 
+def render_single_month_artifact(
+    expert_id: str,
+    segment: Segment,
+    thread_relpath: str,
+    parse_note: str,
+) -> str:
+    """One month per file: same structure as the rollup, title line names the month."""
+    md = render_markdown(expert_id, [segment], thread_relpath, parse_note)
+    lines = md.splitlines()
+    if lines:
+        lines[0] = f"# Historical expert context — `{expert_id}` — `{segment.segment_id}`"
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--expert-id", required=True)
@@ -327,6 +348,16 @@ def main() -> int:
     ap.add_argument("--thread-path", default=None, type=Path)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument(
+        "--no-segment-files",
+        action="store_true",
+        help="Do not write per-month artifacts under historical-expert-context/<expert_id>/<YYYY-MM>.*",
+    )
+    ap.add_argument(
+        "--no-rollup",
+        action="store_true",
+        help="Do not write the range rollup <expert_id>-<start>-to-<end>.md/.json",
+    )
     args = ap.parse_args()
 
     if not args.dry_run and not args.apply:
@@ -363,27 +394,55 @@ def main() -> int:
         "segments": [asdict(s) for s in selected],
     }
 
-    if args.dry_run:
-        print(md)
-        if args.apply:
-            OUT_DIR.mkdir(parents=True, exist_ok=True)
+    def write_all_artifacts() -> bool:
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        wrote_any = False
+        if not args.no_segment_files and selected:
+            seg_dir = OUT_DIR / expert_id
+            seg_dir.mkdir(parents=True, exist_ok=True)
+            for s in selected:
+                smd = render_single_month_artifact(expert_id, s, relpath, parse_note)
+                seg_md_path = seg_dir / f"{s.segment_id}.md"
+                seg_md_path.write_text(smd, encoding="utf-8")
+                seg_payload = {
+                    "expert_id": expert_id,
+                    "thread_path": relpath,
+                    "segment_id": s.segment_id,
+                    "parse_note": parse_note,
+                    "segment": asdict(s),
+                }
+                seg_json_path = seg_dir / f"{s.segment_id}.json"
+                seg_json_path.write_text(
+                    json.dumps(seg_payload, indent=2, ensure_ascii=False) + "\n",
+                    encoding="utf-8",
+                )
+                print(f"Wrote {seg_md_path.relative_to(REPO_ROOT)}")
+                print(f"Wrote {seg_json_path.relative_to(REPO_ROOT)}")
+                wrote_any = True
+        if not args.no_rollup:
             out_md.write_text(md, encoding="utf-8")
             out_json.write_text(
                 json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8",
             )
-            print(f"\nWrote {out_md.relative_to(REPO_ROOT)}", file=sys.stderr)
-            print(f"Wrote {out_json.relative_to(REPO_ROOT)}", file=sys.stderr)
+            print(f"Wrote {out_md.relative_to(REPO_ROOT)}")
+            print(f"Wrote {out_json.relative_to(REPO_ROOT)}")
+            wrote_any = True
+        if not wrote_any:
+            print(
+                "Nothing written: use --no-segment-files / --no-rollup only if at least one output remains.",
+                file=sys.stderr,
+            )
+        return wrote_any
+
+    if args.dry_run:
+        print(md)
+        if args.apply and not write_all_artifacts():
+            return 2
         return 0
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
-    out_md.write_text(md, encoding="utf-8")
-    out_json.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False) + "\n",
-        encoding="utf-8",
-    )
-    print(f"Wrote {out_md.relative_to(REPO_ROOT)}")
-    print(f"Wrote {out_json.relative_to(REPO_ROOT)}")
+    if not write_all_artifacts():
+        return 2
     return 0
 
 

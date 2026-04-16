@@ -5,9 +5,11 @@ from __future__ import annotations
 from pathlib import Path
 
 from scripts.strategy_historical_expert_context import (
+    Segment,
     extract_human_layer,
     filter_segments,
     parse_segments,
+    render_single_month_artifact,
     strip_backfill_block,
 )
 
@@ -66,6 +68,22 @@ inside
     h = extract_human_layer(full)
     assert "inside" not in h
     assert "above" in h
+
+
+def test_render_single_month_artifact_title() -> None:
+    seg = Segment(
+        segment_id="2026-02",
+        raw_text="- x",
+        bullets=["b1"],
+        strength_counts={"high": 0, "medium": 0, "low": 0},
+        signal_lines=[],
+        tension_lines=[],
+        shift_lines=[],
+        source="h2",
+    )
+    md = render_single_month_artifact("e-id", seg, "docs/x.md", "note")
+    assert md.startswith("# Historical expert context — `e-id` — `2026-02`")
+    assert "Segments included: 2026-02" in md
 
 
 def test_filter_segments_range() -> None:

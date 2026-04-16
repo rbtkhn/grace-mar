@@ -1,0 +1,30 @@
+{
+  "expert_id": "seyed-marandi",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-seyed-marandi-thread.md",
+  "segment_id": "2026-03",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-03",
+    "raw_text": "March density shifts to **war-in-progress** commentary — **military-strategy** critiques, **ceasefire** posture, and **energy / South Pars** framing; **Glenn Diesen** long-form is the main discoverability spine in search bundles.\n\n- [strength: high] **Through-line:** **“Iran's Military Strategy & U.S. Miscalculations”** — **Glenn Diesen** — [YouTube IZFVTfNQjnA](https://www.youtube.com/watch?v=IZFVTfNQjnA) — re-verify **publish date** in UI (~early March 2026 in third-party indexes).\n- [strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.\n- [strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering).\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+    "bullets": [
+      "[strength: high] **Through-line:** **“Iran's Military Strategy & U.S. Miscalculations”** — **Glenn Diesen** — [YouTube IZFVTfNQjnA](https://www.youtube.com/watch?v=IZFVTfNQjnA) — re-verify **publish date** in UI (~early March 2026 in third-party indexes).",
+      "[strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.",
+      "[strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering)."
+    ],
+    "strength_counts": {
+      "high": 2,
+      "medium": 1,
+      "low": 0
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.",
+      "[strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering)."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.",
+      "[strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering)."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

@@ -6,7 +6,8 @@ WORK-only; additive. Does not modify thread, transcript, days.md, or knot files.
 
 Reads: artifacts/skill-work/work-strategy/batch-analysis-snapshot.json (batch_analysis_refs).
 
-Optional: historical-expert-context/<expert_id>-<start>-to-<end>.md
+Optional: per-month ``historical-expert-context/<expert_id>/<YYYY-MM>.md`` (preferred when the full
+window exists), else rollup ``historical-expert-context/<expert_id>-<start>-to-<end>.md``
 """
 
 from __future__ import annotations
@@ -87,7 +88,81 @@ def history_path(expert_id: str, start_seg: str, end_seg: str) -> Path:
     return HISTORY_DIR / f"{expert_id}-{start_seg}-to-{end_seg}.md"
 
 
+def iter_month_segments(start_seg: str, end_seg: str) -> list[str]:
+    """Inclusive YYYY-MM list from start_seg through end_seg."""
+    sy, sm = map(int, start_seg.split("-"))
+    ey, em = map(int, end_seg.split("-"))
+    out: list[str] = []
+    y, m = sy, sm
+    while (y, m) <= (ey, em):
+        out.append(f"{y:04d}-{m:02d}")
+        m += 1
+        if m > 12:
+            m = 1
+            y += 1
+    return out
+
+
+def segment_month_paths(expert_id: str, months: list[str]) -> list[Path]:
+    base = HISTORY_DIR / expert_id
+    return [base / f"{mm}.md" for mm in months]
+
+
+def all_segment_files_exist(expert_id: str, months: list[str]) -> bool:
+    if not months:
+        return False
+    return all(p.is_file() for p in segment_month_paths(expert_id, months))
+
+
+def stance_preview_lines_from_text(text: str, max_lines: int = 4) -> list[str]:
+    preview_lines: list[str] = []
+    capture = False
+    for raw in text.splitlines():
+        line = raw.rstrip()
+        if line.strip() == "## Historical stance summary":
+            capture = True
+            continue
+        if capture and line.startswith("## "):
+            break
+        if capture and line.startswith("- "):
+            preview_lines.append(line[2:].strip())
+        if len(preview_lines) >= max_lines:
+            break
+    return preview_lines
+
+
 def load_historical_context(expert_id: str, start_seg: str, end_seg: str) -> HistoricalContext:
+    months = iter_month_segments(start_seg, end_seg)
+    if months and all_segment_files_exist(expert_id, months):
+        paths = segment_month_paths(expert_id, months)
+        compact_parts: list[str] = []
+        for path in paths:
+            text = read_text(path)
+            cm = COMPACT_BLOCK_RE.search(text)
+            if cm:
+                compact_parts.append(cm.group(1).strip())
+
+        preview_lines: list[str] = []
+        for path in paths:
+            text = read_text(path)
+            for bullet in stance_preview_lines_from_text(text, max_lines=999):
+                if len(preview_lines) >= 4:
+                    break
+                preview_lines.append(bullet)
+            if len(preview_lines) >= 4:
+                break
+        compact_block = "\n".join(compact_parts) if compact_parts else None
+        if not preview_lines:
+            preview_lines = ["No stance-summary bullets found."]
+        rel = [p.relative_to(REPO_ROOT).as_posix() for p in paths]
+        path_display = " + ".join(rel) if len(rel) <= 3 else rel[0] + f" (+{len(rel) - 1} more segment files)"
+        return HistoricalContext(
+            expert_id=expert_id,
+            path=path_display,
+            compact_block=compact_block,
+            preview_lines=preview_lines[:4],
+        )
+
     path = history_path(expert_id, start_seg, end_seg)
     if not path.exists():
         return HistoricalContext(
@@ -101,20 +176,7 @@ def load_historical_context(expert_id: str, start_seg: str, end_seg: str) -> His
     compact_match = COMPACT_BLOCK_RE.search(text)
     compact_block = compact_match.group(1).strip() if compact_match else None
 
-    preview_lines: list[str] = []
-    capture = False
-    for raw in text.splitlines():
-        line = raw.rstrip()
-        if line.strip() == "## Historical stance summary":
-            capture = True
-            continue
-        if capture and line.startswith("## "):
-            break
-        if capture and line.startswith("- "):
-            preview_lines.append(line[2:].strip())
-        if len(preview_lines) >= 4:
-            break
-
+    preview_lines = stance_preview_lines_from_text(text, max_lines=4)
     if not preview_lines:
         preview_lines = ["No stance-summary bullets found."]
 

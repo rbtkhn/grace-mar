@@ -2,7 +2,7 @@
 
 This file documents **`scripts/strategy_batch_analysis_with_history.py`** (in-repo). Regenerate the bundle after updating snapshot or historical `.md` artifacts.
 
-**Purpose:** Read `batch-analysis-snapshot.json`, load compact historical lines from `historical-expert-context/*.md` for both experts in a pair, emit one markdown bundle under `artifacts/skill-work/work-strategy/batch-analysis-with-history/`.
+**Purpose:** Read `batch-analysis-snapshot.json`, load compact historical lines from `historical-expert-context/` for both experts in a pair (per-month `/<expert_id>/<YYYY-MM>.md` when the full window is present, else rollup `/<expert_id>-<start>-to-<end>.md`), emit one markdown bundle under `artifacts/skill-work/work-strategy/batch-analysis-with-history/`.
 
 **Run (after script exists):**
 

@@ -1,0 +1,30 @@
+{
+  "expert_id": "seyed-marandi",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-seyed-marandi-thread.md",
+  "segment_id": "2026-01",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-01",
+    "raw_text": "Early-year material frames **domestic unrest**, foreign-media narrative, and escalation warnings from **Tehran** — this register stresses **legitimacy** and **proportionality** in how Western outlets read riots versus state-aligned rallies.\n\n- [strength: high] **Through-line:** Pro-government vs riot framing — **16 Jan 2026** Tehran-titled interview (rally scale vs infiltration narrative) — primary: [YouTube — interview dated Friday 16 Jan 2026 from Tehran](https://www.youtube.com/watch?v=1AvXIls7lQQ) — verify **upload/title date** in UI before cite-grade merge.\n- [strength: medium] **Mechanism:** **Greater Eurasia** / Singju **civil-unrest** transcript lane — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**, not wire-verified battlefield fact.\n- [strength: medium] **Tension:** Same window as **Mercouris** diplomatic-room tickers vs **Marandi** legitimacy register — **batch-analysis** seam, not voice-merge.\n- [strength: low] **Lattice:** Upstream of **April** Marandi×Ritter×Mercouris [Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Q1 holds **voice discipline** only.",
+    "bullets": [
+      "[strength: high] **Through-line:** Pro-government vs riot framing — **16 Jan 2026** Tehran-titled interview (rally scale vs infiltration narrative) — primary: [YouTube — interview dated Friday 16 Jan 2026 from Tehran](https://www.youtube.com/watch?v=1AvXIls7lQQ) — verify **upload/title date** in UI before cite-grade merge.",
+      "[strength: medium] **Mechanism:** **Greater Eurasia** / Singju **civil-unrest** transcript lane — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**, not wire-verified battlefield fact.",
+      "[strength: medium] **Tension:** Same window as **Mercouris** diplomatic-room tickers vs **Marandi** legitimacy register — **batch-analysis** seam, not voice-merge.",
+      "[strength: low] **Lattice:** Upstream of **April** Marandi×Ritter×Mercouris [Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Q1 holds **voice discipline** only."
+    ],
+    "strength_counts": {
+      "high": 1,
+      "medium": 2,
+      "low": 1
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** **Greater Eurasia** / Singju **civil-unrest** transcript lane — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**, not wire-verified battlefield fact."
+    ],
+    "tension_lines": [
+      "[strength: high] **Through-line:** Pro-government vs riot framing — **16 Jan 2026** Tehran-titled interview (rally scale vs infiltration narrative) — primary: [YouTube — interview dated Friday 16 Jan 2026 from Tehran](https://www.youtube.com/watch?v=1AvXIls7lQQ) — verify **upload/title date** in UI before cite-grade merge.",
+      "[strength: medium] **Tension:** Same window as **Mercouris** diplomatic-room tickers vs **Marandi** legitimacy register — **batch-analysis** seam, not voice-merge."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}
