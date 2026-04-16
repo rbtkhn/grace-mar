@@ -21,3 +21,7 @@ _(Append below this line.)_
 
 - Mirrored **work-template.md** + **work-modules-history-principle.md** + **work-modules-sources-principle.md** to **companion-self** `docs/skill-work/` (template-adapted paths); pushed `companion-self` **main**. Grace-mar **work-template.md** footnote links to GitHub canonical copies.
 - **companion-self** README + **how-instances-consume-upgrades.md** + **companion-self-developer-plan.md**: explicit **north star** — fork + seed for **new** instances (portable constitution vs reference instance); pushed **companion-self** **main**.
+
+## 2026-04-16
+
+- **Coffee B — Steward → implement now:** Regenerated [audit-report.md](audit-report.md) (`template_diff.py --no-clone -o …/audit-report.md`, MERGING paths) and [audit-report-manifest.md](audit-report-manifest.md) (`--use-manifest`, same). **MERGING summary:** same=0, differ=1 (**AGENTS.md** — no lock baseline), expected drift IFP, six instance-only `docs/*` templates. **Manifest summary:** same=157, differ=20, expected drift=3 — review **Differ** block in manifest report for upstream vs instance arrows before the next template merge slice.

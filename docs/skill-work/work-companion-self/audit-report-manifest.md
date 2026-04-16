@@ -10,6 +10,7 @@ Lockfile: 180 paths pinned (last sync: 2026-04-06T22:22:09)
   - docs/change-review.md — ⬆⬇ both moved
   - docs/concept.md — ⬇ upstream moved
   - docs/layer-map.json — ⬇ upstream moved
+  - docs/prepared-context-doctrine.md — ⬆ instance moved
   - docs/skill-work/README.md — ⬆⬇ both moved
   - docs/skill-work/skill-work-human-teacher/human-teacher-objectives.md — ⬆ instance moved
   - docs/skill-work/work-cadence/README.md — ⬆⬇ both moved
@@ -49,6 +50,6 @@ Machine list: `docs/skill-work/work-companion-self/expected-template-drift.json`
   - docs/contradiction-policy.md
   - docs/contradiction-resolution.md
   - docs/evidence-layer.md
-  ... and 143 more
+  ... and 142 more
 
-Summary: same=158 differ=19 expected_drift=3 only_template=0 only_instance=0
+Summary: same=157 differ=20 expected_drift=3 only_template=0 only_instance=0
