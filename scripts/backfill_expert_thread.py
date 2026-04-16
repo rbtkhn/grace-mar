@@ -45,6 +45,9 @@ Notes
 - Optional second pass (only after backfill has ``### YYYY-MM`` sections with bullets you want
   compressed): ``python3 scripts/refine_backfilled_thread_arc.py --expert-id …`` — no-op when the
   window is empty or has no month headings (preserves italic empty-state lines).
+- Optional third pass: ``python3 scripts/score_backfilled_thread_sources.py --expert-id …`` adds
+  conservative ``[strength: high|medium|low]`` tags from each bullet's ``source_type:`` stub; no-op
+  when there are no month sections (same as refine).
 """
 
 from __future__ import annotations
