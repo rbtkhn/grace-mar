@@ -26,15 +26,18 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 
 ### 2026-01
 
-_No eligible evidence for this month._
+- **2026-01-27** — Transcript dated Jan 27–28, 2026: US–Iran military buildup, risks of strikes, Iran continuity and Hormuz / global energy exposure (third-party transcript page).  
+  _Source:_ web: `https://singjupost.com/scott-ritter-us-iran-war-imminent-as-military-buildup-peaks-transcript/`
 
 ### 2026-02
 
-_No eligible evidence for this month._
+- **2026-02-16** — YouTube published 2026-02-16: long-form interview on Iran policy and diplomacy (metadata and opening dated Feb 16, 2026 on episode).  
+  _Source:_ web: `https://www.youtube.com/watch?v=jJWd9zYB0WY`
 
 ### 2026-03
 
-_No eligible evidence for this month._
+- **2026-03-18** — Article dated March 18, 2026: Ritter quoted on US–Israel Iran campaign framed as failing militarily and strategically; missile defense and dispersal themes per piece.  
+  _Source:_ web: `https://greatreporter.com/2026/03/18/were-losing-this-war-scott-ritter-says-u-s-israeli-assault-on-iran-is-failing-militarily-legally-and-strategically/`
 
 <!-- backfill:scott-ritter:end -->
 

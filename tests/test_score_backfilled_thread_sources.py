@@ -15,6 +15,7 @@ def test_score_from_source_stub() -> None:
     assert score_from_source_stub("days: `chapters/2026-04/days.md`") == "high"
     assert score_from_source_stub("knot: `k.md`") == "medium"
     assert score_from_source_stub("git: `k.md` (last touch 2026-01-01 abcdef12)") == "low"
+    assert score_from_source_stub("web: `https://example.com/x`") == "low"
     assert score_from_source_stub("unknown: `z.md`") == "low"
 
 

@@ -153,6 +153,8 @@ def score_from_source_stub(source: str) -> str:
         return "medium"
     if s.startswith("git:"):
         return "low"
+    if s.startswith("web:"):
+        return "low"
     return "low"
 
 

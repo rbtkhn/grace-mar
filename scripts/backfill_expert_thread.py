@@ -50,6 +50,9 @@ Notes
 - Optional third pass: ``python3 scripts/score_backfilled_thread_sources.py --expert-id …`` adds
   conservative ``[strength: high|medium|low]`` tags from each bullet's ``source_type:`` stub; no-op
   when there are no month sections (same as refine).
+- Optional ``--supplement-json PATH``: merge operator-curated ``Evidence`` rows (e.g. dated URLs
+  from web search) before dedupe. Use ``source_type`` ``web`` and put the canonical URL in
+  ``path``; summaries must be short and tied to the cited page.
 """
 
 from __future__ import annotations
@@ -462,6 +465,25 @@ def collect_knot_evidence(
     return out
 
 
+def load_supplement_evidence(path: Path, start: date, end: date) -> list[Evidence]:
+    """Load JSON array of Evidence dicts; keep rows whose ``event_date`` falls in [start, end]."""
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(raw, list):
+        raise ValueError("supplement JSON must be a list of Evidence objects")
+    out: list[Evidence] = []
+    for row in raw:
+        if not isinstance(row, dict):
+            raise ValueError("each supplement entry must be an object")
+        item = Evidence(**row)
+        try:
+            d = parse_date(item.event_date)
+        except ValueError:
+            continue
+        if start <= d <= end:
+            out.append(item)
+    return out
+
+
 def dedupe_evidence(items: list[Evidence]) -> list[Evidence]:
     seen: set[tuple[str, str, str, str]] = set()
     out: list[Evidence] = []
@@ -573,13 +595,19 @@ def splice_backfill_into_thread(
 
 
 def build_report(
-    expert_id: str, start: date, end: date, aliases: list[str]
+    expert_id: str,
+    start: date,
+    end: date,
+    aliases: list[str],
+    supplement: Optional[list[Evidence]] = None,
 ) -> dict:
     evidence: list[Evidence] = []
     evidence.extend(collect_transcript_evidence(expert_id, aliases, start, end))
     evidence.extend(collect_days_evidence(expert_id, aliases, start, end))
     evidence.extend(collect_knot_evidence(expert_id, aliases, start, end))
     evidence.extend(git_mentions_for_expert(expert_id, aliases, start, end))
+    if supplement:
+        evidence.extend(supplement)
     evidence = dedupe_evidence(evidence)
 
     script_path = Path(__file__).resolve()
@@ -595,6 +623,7 @@ def build_report(
         "aliases": aliases,
         "evidence_count": len(evidence),
         "evidence": [asdict(e) for e in evidence],
+        "supplement_merged": len(supplement) if supplement else 0,
     }
 
 
@@ -647,6 +676,12 @@ def main() -> int:
         action="store_true",
         help="Skip writing JSON provenance sidecar",
     )
+    p.add_argument(
+        "--supplement-json",
+        type=Path,
+        default=None,
+        help="Optional JSON list of Evidence objects merged after repo collection (e.g. web URLs).",
+    )
     args = p.parse_args()
 
     expert_id = args.expert_id.strip()
@@ -663,7 +698,15 @@ def main() -> int:
     if not thread_path.is_file():
         raise SystemExit(f"Thread file not found: {thread_path}")
 
-    report = build_report(expert_id, start, end, aliases)
+    supplement: list[Evidence] = []
+    if args.supplement_json:
+        if not args.supplement_json.is_file():
+            raise SystemExit(f"Supplement file not found: {args.supplement_json}")
+        supplement = load_supplement_evidence(args.supplement_json, start, end)
+
+    report = build_report(expert_id, start, end, aliases, supplement=supplement or None)
+    if args.supplement_json:
+        report["supplement_json"] = str(args.supplement_json.resolve().relative_to(REPO_ROOT))
     evidence = [Evidence(**item) for item in report["evidence"]]
     block = render_backfill_block(expert_id, start, end, evidence)
 
@@ -671,6 +714,11 @@ def main() -> int:
     print(f"window:    {start.isoformat()} → {end.isoformat()}")
     print(f"aliases:   {', '.join(aliases)}")
     print(f"evidence:  {len(evidence)}")
+    if supplement:
+        print(
+            f"supplement: {len(supplement)} row(s) merged from "
+            f"{args.supplement_json.resolve().relative_to(REPO_ROOT)}"
+        )
     print(f"thread:    {thread_path.relative_to(REPO_ROOT)}")
     print("")
 
