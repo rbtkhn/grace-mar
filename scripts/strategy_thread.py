@@ -7,7 +7,7 @@ run::
 
     python3 scripts/strategy_thread.py
 
-This runs **two automatic steps**:
+This runs **three automatic steps**:
 
 1. **Triage** (``strategy_expert_transcript.py``) — routes ``thread:`` lines
    from the inbox to per-expert ``-transcript.md`` files (append-only, 7-day
@@ -16,6 +16,9 @@ This runs **two automatic steps**:
    transcript + relevant knots, writes raw material to ``-thread.md`` between
    script markers. The assistant then refines this into a curated analytical
    thread.
+3. **Batch-analysis snapshot** (``parse_batch_analysis.py``) — parses
+   ``batch-analysis`` lines from the inbox and writes a JSON snapshot to
+   ``artifacts/skill-work/work-strategy/batch-analysis-snapshot.json``.
 
 **Not** **``weave``**: **``thread``** updates transcript and thread files
 only; it does **not** merge into ``days.md`` or knot pages.
@@ -85,8 +88,28 @@ def main() -> int:
     for path in thread_paths:
         print(f"  thread: {path.relative_to(REPO_ROOT)}")
 
+    # Step 3: Refresh batch-analysis snapshot
+    print("--- Step 3: Batch-analysis snapshot ---")
+    from parse_batch_analysis import parse_inbox, build_snapshot
+    import json
+    batch_refs = parse_inbox(args.inbox)
+    snapshot = build_snapshot(batch_refs)
+    batch_out = REPO_ROOT / "artifacts/skill-work/work-strategy/batch-analysis-snapshot.json"
+    if args.dry_run:
+        print(f"  dry-run: {len(batch_refs)} batch-analysis refs (not written)")
+    else:
+        batch_out.parent.mkdir(parents=True, exist_ok=True)
+        batch_out.write_text(
+            json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        print(f"  snapshot: {batch_out.relative_to(REPO_ROOT)} ({len(batch_refs)} refs)")
+
     mode = "dry-run" if args.dry_run else "write"
-    print(f"\nDone ({mode}): {len(transcript_paths)} transcripts, {len(thread_paths)} threads")
+    print(
+        f"\nDone ({mode}): {len(transcript_paths)} transcripts, "
+        f"{len(thread_paths)} threads, {len(batch_refs)} batch-analysis refs"
+    )
     return 0
 
 
