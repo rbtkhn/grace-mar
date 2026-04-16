@@ -2,6 +2,7 @@
 
 | Doc | Role |
 |-----|------|
+| [handoffs/cici-brewmind-governed-steward.md](handoffs/cici-brewmind-governed-steward.md) | **Cici paste handoff** — `docs/skills/brewmind-governed-steward.md` body + optional `CLAUDE.md` line (canonical skill: [.cursor/skills/brewmind-governed-steward/SKILL.md](../../../.cursor/skills/brewmind-governed-steward/SKILL.md)) |
 | [README.md](README.md) | Advisor / project module vs Xavier’s external instance repo |
 | [xavier-work-profile.md](xavier-work-profile.md) | Employee work profile + skills portfolio (operator WORK); not her Record |
 | [xavier-progress-log.md](xavier-progress-log.md) | Operator progress / behavior notes + evidence index (paired with [work-xavier-history.md](work-xavier-history.md)) |
