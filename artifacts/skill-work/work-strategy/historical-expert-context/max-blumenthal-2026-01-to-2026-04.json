@@ -1,0 +1,76 @@
+{
+  "expert_id": "max-blumenthal",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-max-blumenthal-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January has **no dated** notebook ingest for Blumenthal in this Q1 snapshot; the lane is **Grayzone / elite-access / Middle East policy critique** — distinct from **`aaron-mate`** investigative ownership focus — per roster.\n\n- [strength: low] **Identity anchor:** Grayzone author index + X + Patreon (Seed).  \n  [thegrayzone.com — Max Blumenthal](https://thegrayzone.com/author/max-blumenthal/) · [X @MaxBlumenthal](https://x.com/MaxBlumenthal)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** Grayzone author index + X + Patreon (Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February shows **no indexed Q1 primary** in-repo; Lebanon / Gulf access claims stay **hypothesis-grade** until primary tape — per profile discipline.\n\n- [strength: low] **Support hub:** Patreon — not a dated February post list.  \n  [patreon.com/grayzone](https://www.patreon.com/grayzone)",
+      "bullets": [
+        "[strength: low] **Support hub:** Patreon — not a dated February post list."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **thin** on calendar rows here; **`seyed-marandi`** / **`trita-parsi`** seams need explicit labels when the same week is folded.\n\n- [strength: low] **Repeat anchor:** Grayzone author page — scope unchanged.",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** Grayzone author page — scope unchanged."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [
+        "[strength: low] **Repeat anchor:** Grayzone author page — scope unchanged."
+      ],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — no April machine line for Blumenthal in-repo; **Grayzone / elite-access** lane — hub anchors only._\n\n- [strength: low] **Identity anchor:** [Grayzone — Blumenthal](https://thegrayzone.com/author/max-blumenthal/) · [X @MaxBlumenthal](https://x.com/MaxBlumenthal) — not a dated April appearance list.\n- [strength: low] **Note:** Distinct from **aaron-mate** investigative ownership focus — roster seam.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: low] **Identity anchor:** [Grayzone — Blumenthal](https://thegrayzone.com/author/max-blumenthal/) · [X @MaxBlumenthal](https://x.com/MaxBlumenthal) — not a dated April appearance list.",
+        "[strength: low] **Note:** Distinct from **aaron-mate** investigative ownership focus — roster seam."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 2
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

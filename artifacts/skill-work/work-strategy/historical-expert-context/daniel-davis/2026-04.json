@@ -1,0 +1,29 @@
+{
+  "expert_id": "daniel-davis",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-daniel-davis-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — distillation from machine ingest **2026-04-12** + batch-analysis seam **2026-04-14**; not a full April ledger._\n\nApril stress-tests **ultimatum vs negotiation** and **resumption clock** on X alongside **Ritter** digest §B on Hormuz closure mechanics — same Islamabad-week lattice as Parsi war-powers and Pape escalation-trap rows.\n\n- [strength: medium] **Signal:** X line **2026-04-12** — “last, best chance” read as surrender bar; Vietnam/Korea timeline analogy; Hormuz / fertilizer / macro pressure — [X @DanielLDavis1](https://x.com/DanielLDavis1) — verify:screenshot-ingest-status-id-unknown.\n- [strength: medium] **Cross:** `crosses:scott-ritter+daniel-davis` — Ritter ORBAT skepticism vs Davis negotiation frame — [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **2026-04-14**.\n- [strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [parsi-davis-war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md).\n\n---",
+    "bullets": [
+      "[strength: medium] **Signal:** X line **2026-04-12** — “last, best chance” read as surrender bar; Vietnam/Korea timeline analogy; Hormuz / fertilizer / macro pressure — [X @DanielLDavis1](https://x.com/DanielLDavis1) — verify:screenshot-ingest-status-id-unknown.",
+      "[strength: medium] **Cross:** `crosses:scott-ritter+daniel-davis` — Ritter ORBAT skepticism vs Davis negotiation frame — [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **2026-04-14**.",
+      "[strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [parsi-davis-war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 3,
+      "low": 0
+    },
+    "signal_lines": [
+      "[strength: medium] **Signal:** X line **2026-04-12** — “last, best chance” read as surrender bar; Vietnam/Korea timeline analogy; Hormuz / fertilizer / macro pressure — [X @DanielLDavis1](https://x.com/DanielLDavis1) — verify:screenshot-ingest-status-id-unknown.",
+      "[strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [parsi-davis-war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md)."
+    ],
+    "tension_lines": [
+      "[strength: medium] **Cross:** `crosses:scott-ritter+daniel-davis` — Ritter ORBAT skepticism vs Davis negotiation frame — [`chapters/2026-04/days.md`](chapters/2026-04/days.md) **2026-04-14**."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

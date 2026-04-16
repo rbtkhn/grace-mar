@@ -17,20 +17,58 @@ _(No narrative distillation yet — add prose above machine extraction. **`threa
 
 **Macro + rogue-state** framing after the **Venezuela** arc — Sachs uses **interview** and **outlet** chains to stress **regime-change playbook** continuity and **tail-risk** to global stability; tier **honesty**: **India Today** / **jeffsachs.org** pages are **primary** hosts, not wire proof of policy moves.
 
+
+The 2026-01 segment for the Jeffrey D. Sachs lane (`jeffrey-sachs`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+When historical expert context artifacts exist for `jeffrey-sachs` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-01 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+Finally, 2026-01 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).), **pairing map** (× glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+Typical pairings on file for `jeffrey-sachs` emphasize contrast surfaces: × glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-01 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+If knots named this expert during 2026-01, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-01, read × glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi as the default **short list** of other experts whose fingerprints commonly collide with `jeffrey-sachs` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
 - [strength: high] **Through-line:** **India Today** — **7 Jan 2026** — “Iran could be next… hotter than Venezuela” — [story](https://www.indiatoday.in/world/story/jeffrey-sachs-exposes-americas-regime-change-foreign-policy-playbook-after-venezuela-2847780-2026-01-07) — **date** in URL path.
 - [strength: medium] **Mechanism:** **JeffSachs.org** — **U.S. War on Iran** — “attack is imminent” class interview — [interviews hub](https://www.jeffsachs.org/interviewsandmedia/tpmdr839gjx9ge4l6yfzg3g2p2m832) — **pin** exact **title/date** on page before **Links** merge.
 - [strength: medium] **Tension vs Quincy restraint:** Same window as **`trita-parsi`** Beltway diplomacy lane — **institutions** vs **process** emphasis — **batch-analysis** only.
-
 ## 2026-02
 
 **Doha** / **FM Araghchi** “comprehensive peace proposal” week — Sachs co-authors / comments on **Palestinian statehood** as load-bearing for **regional** settlement; keep **separate** from **Marandi** **room** facts without a labeled seam.
 
+
+When historical expert context artifacts exist for `jeffrey-sachs` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-02 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+The `jeffrey-sachs` lane’s role (University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+The 2026-02 segment for the Jeffrey D. Sachs lane (`jeffrey-sachs`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+Finally, 2026-02 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).), **pairing map** (× glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+Typical pairings on file for `jeffrey-sachs` emphasize contrast surfaces: × glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-02 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
 - [strength: high] **Through-line:** **Consortium News** — **9 Feb 2026** — “Iran’s Comprehensive Peace Proposal” — [article](https://consortiumnews.com/2026/02/09/jeffrey-sachs-irans-comprehensive-peace-proposal/) — verify **byline** + **Sybil Fares** co-author line on page.
 - [strength: medium] **Mechanism:** **Inside U.S. Imperial Strategy** — **jeffsachs.org** — Iran talks + Latin America + U.S. economy — [page](https://www.jeffsachs.org/interviewsandmedia/j9ebxfarjfynh5ks5wshfw8rk6x6ss) — indexes cite **~7 Feb 2026** class — **tier-B** for causal chains.
-
 ## 2026-03
 
 Kinetic **escalation** month in third-party indexes — **underestimation** thesis, **nuclear-use** hypotheticals, **India** / **ground-invasion** dilemmas; **YouTube** long-form for **hegemony** thesis — **capacity / health** claims about **executives** stay **tier-C** per profile.
+
+
+The `jeffrey-sachs` lane’s role (University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-03, read × glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi as the default **short list** of other experts whose fingerprints commonly collide with `jeffrey-sachs` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Open pins belong in prose, not only as bullets. For this `jeffrey-sachs` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+If knots named this expert during 2026-03, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+When historical expert context artifacts exist for `jeffrey-sachs` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-03 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-03, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+
+
+The `jeffrey-sachs` lane’s role (University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
 
 - [strength: high] **Through-line:** **U.S. and Israel underestimated Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/64krp3h43e342gtwjg4lg3296c6kkg) — **~13 Mar 2026** class in indexes.
 - [strength: medium] **Mechanism:** **Israel could use nuclear weapons against Iran** — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/28ya8raa4gstsb34al6drezprlpee3) — **~16 Mar 2026** — **hypothesis-grade** — **not** merged with **open-source** ORBAT.
@@ -38,11 +76,10 @@ Kinetic **escalation** month in third-party indexes — **underestimation** thes
 - [strength: medium] **Macro:** **US–Iran War Deepens** — India dilemma / deal talk — [jeffsachs.org](https://www.jeffsachs.org/interviewsandmedia/jzhlpzl4cp25k3d7jrz9j7bpwkwd6x) — **~31 Mar 2026** — **verify** page stamp.
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
-
 <!-- backfill:jeffrey-sachs:start -->
 ## Backfilled historical arc (reconstructed from notebook artifacts)
 
-**Scope:** `jeffrey-sachs` from **2026-01-01** through **2026-03-31**.
+**Scope:** `jeffrey-sachs` from **2026-01-01** through **2026-04-30** (partial April).
 **Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
 **Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
 
@@ -76,7 +113,35 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 - **2026-03-31** (class) — US–Iran War Deepens — India dilemma — jeffsachs.org.  
   _Source:_ web: `https://www.jeffsachs.org/interviewsandmedia/jzhlpzl4cp25k3d7jrz9j7bpwkwd6x`
 
+
+### 2026-04
+
+- **2026-04** — Notebook knot cross-ref (partial month).  
+  _Source:_ notebook: `strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md`
+
+- **2026-04** — Notebook knot cross-ref (partial month).  
+  _Source:_ notebook: `strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md`
+
 <!-- backfill:jeffrey-sachs:end -->
+## 2026-04
+
+_Partial month — April notebook use is **knot-anchored** (Diesen×Sachs abstract vs Hormuz) plus blockade weave cross-refs; no new dated Sachs primary added here._
+
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-04, read × glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi as the default **short list** of other experts whose fingerprints commonly collide with `jeffrey-sachs` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+The 2026-04 segment for the Jeffrey D. Sachs lane (`jeffrey-sachs`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on University Professor, Columbia; Director, Center for Sustainable Development; President, UN Sustainable Development Solutions Network (SDSN); economist and sustainable-development leader with geopolitical and institutions commentary (UN/DC “process vs personality” theses per index).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+If knots named this expert during 2026-04, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+When historical expert context artifacts exist for `jeffrey-sachs` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-04 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+Verification stance for Jeffrey D. Sachs in 2026-04 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
+Typical pairings on file for `jeffrey-sachs` emphasize contrast surfaces: × glenn-diesen, × john-mearsheimer, × alexander-mercouris, × trita-parsi. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-04 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+- [strength: medium] **Lattice:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — abstract **PH vi-14** petrodollar vs Sachs Hormuz fork — orthogonal Judgment, not merged Register.
+- [strength: medium] **Parallel:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — macro / closure economics seam vs Sachs institutional interviews — tier discipline.
 
 ---
 <!-- strategy-expert-thread:start -->

@@ -1,0 +1,53 @@
+# Historical expert context — `charles-freeman`
+
+WORK only; not Record.
+Source thread: `docs/skill-work/work-strategy/strategy-notebook/strategy-expert-charles-freeman-thread.md`
+Segments included: 2026-01, 2026-02, 2026-03, 2026-04
+Parse: parsed `## YYYY-MM` month segments
+
+## Batch-analysis handoff
+
+- Provenance mix across included segments: high=0, medium=2, low=3
+- Use this as historical context for compare/contrast; do not treat it as verbatim proof.
+
+## Historical stance summary
+
+- [strength: low] **Repeat anchor:** chasfreeman.net — not a dated March appearance claim.
+- [strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads.
+
+## Historical tensions
+
+- [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register.
+
+## Historical shifts / drift
+
+- No explicit shift lines detected.
+
+## Prompt-ready compact block
+
+```text
+historical-expert-context | charles-freeman | stance=[strength: low] **Repeat anchor:** chasfreeman.net — not a dated March appearance claim. || [strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads. | tensions=[strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register. | provenance=high:0,medium:2,low:3
+```
+
+## Segment notes
+
+### 2026-01
+
+- strength mix: high=0, medium=0, low=1 (h2)
+- [strength: low] **Identity anchor:** Chas Freeman site + Watson visiting profile (Seed).
+
+### 2026-02
+
+- strength mix: high=0, medium=0, low=1 (h2)
+- [strength: low] **Long-form pointer:** Example interview URL in profile — verify currency before cite (profile flags this).
+
+### 2026-03
+
+- strength mix: high=0, medium=0, low=1 (h2)
+- [strength: low] **Repeat anchor:** chasfreeman.net — not a dated March appearance claim.
+
+### 2026-04
+
+- strength mix: high=0, medium=2, low=0 (h2)
+- [strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads.
+- [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register.

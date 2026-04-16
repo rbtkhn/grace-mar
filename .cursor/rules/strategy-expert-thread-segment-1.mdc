@@ -13,11 +13,12 @@ Applies when **editing or drafting** the human layer **above** `<!-- strategy-ex
 
 - **Segment 1** is the **narrative journal**: **readable prose in full sentences** first (`strategy-expert-template.md` — thread section). The **`thread`** script only maintains the machine block **between** the markers; it does **not** write Segment 1.
 - **`## YYYY-MM` month headings** may use **bullets** for strength-tagged lattice / receipt hooks — that is **operator shorthand or ledger work**, not a license to **replace** the template’s prose default unless the operator chose that format.
-- When you add or extend month material: prefer **one short prose paragraph** (topic + arc) **before** a bullet stack, or a tight prose block **instead of** bullets-only — unless the operator explicitly wants ledger-only months.
+- Each **`## YYYY-MM` segment** should carry **at least ~500 words of prose** (words on non-bullet substantive lines; see `validate_strategy_expert_threads.py`). Bullets do **not** count toward that minimum. Scaffold: `python3 scripts/expand_strategy_expert_segment_prose.py --apply`.
+- When you add or extend month material: prefer **substantive prose** (topic + arc + notebook discipline) **before** a bullet stack, or a tight prose block **instead of** bullets-only — unless the operator explicitly wants ledger-only months.
 
 ## Machine check
 
-- Run `python3 scripts/validate_strategy_expert_threads.py` — it **warns** when a `## YYYY-MM` block has many list lines and **no** prose lines.
+- Run `python3 scripts/validate_strategy_expert_threads.py` — it **warns** when a `## YYYY-MM` block has many list lines and **no** prose lines, or when prose word count is **below 500**.
 - **Opt-out (whole file, transitional):** `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->` in the human layer (documented in the template).
 
 ## Do not

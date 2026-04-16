@@ -1,0 +1,23 @@
+{
+  "expert_id": "aaron-mate",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-aaron-mate-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — no April `thread:` machine lines in Segment 2 at authoring time; Grayzone / newsletter ingests may land later._\n\n- [strength: low] **Scope:** Keep investigative / ownership lane distinct from **max-blumenthal** — per roster; use hub anchors until dated rows pin.\n- [strength: low] **Identity anchor:** [aaronmate.net](https://www.aaronmate.net/) · [Grayzone — Maté](https://thegrayzone.com/author/aaron-mate/) — not a dated April posting list.",
+    "bullets": [
+      "[strength: low] **Scope:** Keep investigative / ownership lane distinct from **max-blumenthal** — per roster; use hub anchors until dated rows pin.",
+      "[strength: low] **Identity anchor:** [aaronmate.net](https://www.aaronmate.net/) · [Grayzone — Maté](https://thegrayzone.com/author/aaron-mate/) — not a dated April posting list."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

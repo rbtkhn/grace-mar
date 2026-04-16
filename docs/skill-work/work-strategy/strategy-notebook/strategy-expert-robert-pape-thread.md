@@ -11,31 +11,74 @@ WORK only; not Record.
 
 ## Segment 1 — Narrative journal (operator)
 
-**Layout:** Each **`## YYYY-MM`** block is one calendar month in Segment 1 (Q1 tool grid); the April distilled subsection below is **post-Q1** narrative. Segment 2 stays below the marker.
+**Layout:** Each **`## YYYY-MM`** block is one calendar month in Segment 1; **`## 2026-04`** holds April partial-month ledger + optional **`### Distilled thread`** subsection. Segment 2 stays below the marker.
 
 ## 2026-01
 
 January has **no dated** notebook ingest for Pape in this Q1 snapshot; the lane is **escalation trap / commitment ratchet / demand staging** — not ORBAT — per roster. Profile hubs are **anchors** only until dated rows land.
 
+
+If knots named this expert during 2026-01, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+The `robert-pape` lane’s role (Escalation Trap / commitment ratchet on demands) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+Finally, 2026-01 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Escalation Trap / commitment ratchet on demands), **pairing map** (× daniel-davis, × robert-barnes, × john-mearsheimer), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-01, read × daniel-davis, × robert-barnes, × john-mearsheimer as the default **short list** of other experts whose fingerprints commonly collide with `robert-pape` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Open pins belong in prose, not only as bullets. For this `robert-pape` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+When historical expert context artifacts exist for `robert-pape` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-01 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-01, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+
 - [strength: low] **Identity anchor:** Chicago Project on Security & Threats + Escalation Trap Substack + X (Seed).  
   [CPOST profile](https://cpost.uchicago.edu/people/profile/robert_pape/) · [escalationtrap.substack.com](https://escalationtrap.substack.com/) · [X @ProfessorPape](https://x.com/ProfessorPape)
-
 ## 2026-02
 
 February shows **no indexed Q1 primary** in-repo; **`daniel-davis`** / **`john-mearsheimer`** crosses stay **labeled** when coercion vocabulary meets structural-realist reads.
 
-- [strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar.
 
+When historical expert context artifacts exist for `robert-pape` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-02 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+If knots named this expert during 2026-02, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+Verification stance for Robert Pape (@ProfessorPape) in 2026-02 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
+The 2026-02 segment for the Robert Pape (@ProfessorPape) lane (`robert-pape`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Escalation Trap / commitment ratchet on demands. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-02, read × daniel-davis, × robert-barnes, × john-mearsheimer as the default **short list** of other experts whose fingerprints commonly collide with `robert-pape` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Open pins belong in prose, not only as bullets. For this `robert-pape` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+The `robert-pape` lane’s role (Escalation Trap / commitment ratchet on demands) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+- [strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar.
 ## 2026-03
 
 March remains **thin** on calendar-facing rows here; **April** Cyrus Janssen / X lines stack blockade and Lebanon forks — Q1 does **not** duplicate that machinery.
 
-- [strength: low] **Repeat anchor:** CPOST profile — scope discipline unchanged.
 
+The 2026-03 segment for the Robert Pape (@ProfessorPape) lane (`robert-pape`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Escalation Trap / commitment ratchet on demands. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-03, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+
+Finally, 2026-03 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Escalation Trap / commitment ratchet on demands), **pairing map** (× daniel-davis, × robert-barnes, × john-mearsheimer), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+Open pins belong in prose, not only as bullets. For this `robert-pape` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-03, read × daniel-davis, × robert-barnes, × john-mearsheimer as the default **short list** of other experts whose fingerprints commonly collide with `robert-pape` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Typical pairings on file for `robert-pape` emphasize contrast surfaces: × daniel-davis, × robert-barnes, × john-mearsheimer. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-03 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+
+The 2026-03 segment for the Robert Pape (@ProfessorPape) lane (`robert-pape`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Escalation Trap / commitment ratchet on demands. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+- [strength: low] **Repeat anchor:** CPOST profile — scope discipline unchanged.
 <!-- backfill:robert-pape:start -->
 ## Backfilled historical arc (reconstructed from notebook artifacts)
 
-**Scope:** `robert-pape` from **2026-01-01** through **2026-03-31**.
+**Scope:** `robert-pape` from **2026-01-01** through **2026-04-30** (partial April).
 **Status:** Reconstructed summary; no dated primary lines in the Q1 ledger at authoring time.
 **Rules:** Hub anchors only where dated captures are missing.
 
@@ -54,7 +97,32 @@ March remains **thin** on calendar-facing rows here; **April** Cyrus Janssen / X
 - **2026-03** — No dated notebook ingest — X profile pointer.  
   _Source:_ web: `https://x.com/ProfessorPape`
 
+
+### 2026-04
+
+- **2026-04** — Ledger mirror 1 (partial month).  
+  _Source:_ web: `https://www.youtube.com/@CyrusJanssen/videos`
+
+- **2026-04** — Ledger mirror 2 (partial month).  
+  _Source:_ web: `https://x.com/ProfessorPape`
+
 <!-- backfill:robert-pape:end -->
+## 2026-04
+
+_Partial month — narrative and machine coverage **2026-04-12 → 2026-04-16**; not a full April ledger._
+
+April stacks **escalation trap**, **blockade calendar**, and **Israel spoiler** lanes from Cyrus Janssen studio pulls and X — indexed to Islamabad weave + Lebanon split + Janssen escalation-blockade knot.
+
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-04, read × daniel-davis, × robert-barnes, × john-mearsheimer as the default **short list** of other experts whose fingerprints commonly collide with `robert-pape` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Typical pairings on file for `robert-pape` emphasize contrast surfaces: × daniel-davis, × robert-barnes, × john-mearsheimer. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-04 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+When historical expert context artifacts exist for `robert-pape` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-04 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+- [strength: high] **Through-line:** Janssen studio uploads **2026-04-16** — escalation trap vs regime-change failure; blockade framework (day-46 / May-1 / Jun-1 checkpoints); Israel as third player — [YouTube @CyrusJanssen](https://www.youtube.com/@CyrusJanssen/videos) — verify:operator-transcript+youtube-watch-id-to-pin.
+- [strength: medium] **Signal:** X **2026-04-14** — Lebanon sectarian map + talks seam — [X @ProfessorPape](https://x.com/ProfessorPape) — verify per ingest line.
+- [strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md).
 
 ### Distilled thread (2026-04-12 → 2026-04-16)
 

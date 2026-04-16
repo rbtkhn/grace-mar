@@ -1,0 +1,80 @@
+{
+  "expert_id": "charles-freeman",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-charles-freeman-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January carries **no dated** `thread:` line for Freeman in this notebook snapshot; the lane is **career-diplomat material / alliance framing** separate from papal moral registers — per roster. Hubs are routing anchors only.\n\n- [strength: low] **Identity anchor:** Chas Freeman site + Watson visiting profile (Seed).  \n  [chasfreeman.net](https://chasfreeman.net/) · [Watson Institute](https://home.watson.brown.edu/people/faculty/visiting-fellows/chas-freeman)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** Chas Freeman site + Watson visiting profile (Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February shows **no indexed Q1 primary** in-repo; pair with **`trita-parsi`** / **`alexander-mercouris`** only via **labeled** **`batch-analysis`** when diplomacy weeks overlap.\n\n- [strength: low] **Long-form pointer:** Example interview URL in profile — verify currency before cite (profile flags this).  \n  [YouTube o7RQ_ue6iY0](https://www.youtube.com/watch?v=o7RQ_ue6iY0)",
+      "bullets": [
+        "[strength: low] **Long-form pointer:** Example interview URL in profile — verify currency before cite (profile flags this)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **scope-only** until transcript rows land; **April** Islamabad–Hormuz weave knots may reference Freeman beside Davis/Mearsheimer scaffolds.\n\n- [strength: low] **Repeat anchor:** chasfreeman.net — not a dated March appearance claim.",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** chasfreeman.net — not a dated March appearance claim."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [
+        "[strength: low] **Repeat anchor:** chasfreeman.net — not a dated March appearance claim."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — April Segment 2 lists **knot refs** for Islamabad–Hormuz week (Davis×Freeman×Mearsheimer parallel named in scaffold); no standalone Freeman ingest line._\n\nApril uses Freeman as **career-diplomat / alliance-material** plane beside Marandi legitimacy and Ritter mechanics — **inconclusive talks** discipline per knot cross-refs.\n\n- [strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads.\n- [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads.",
+        "[strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

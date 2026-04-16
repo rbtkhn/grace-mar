@@ -1,0 +1,25 @@
+{
+  "expert_id": "larry-johnson",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-larry-johnson-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — **2026-04-10** digest §B line + Hormuz scaffold / blockade knots; not calendar-complete._\n\nApril centers **F-15 / Isfahan “rescue”** deployment narrative and C-130 / Little Bird load math from Haiphong–Ritter–Johnson digest — **same digest §B** as Ritter ORBAT skepticism lane.\n\n- [strength: medium] **Mechanism:** YT cold **2026-04-10** — F-15/Isfahan rescue narrative; deployment ~Mar 10–11; load-math scenarios — path: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — verify:operator-transcript-digest.\n- [strength: medium] **Knot lattice:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md).\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+    "bullets": [
+      "[strength: medium] **Mechanism:** YT cold **2026-04-10** — F-15/Isfahan rescue narrative; deployment ~Mar 10–11; load-math scenarios — path: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — verify:operator-transcript-digest.",
+      "[strength: medium] **Knot lattice:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md)."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 2,
+      "low": 0
+    },
+    "signal_lines": [
+      "[strength: medium] **Mechanism:** YT cold **2026-04-10** — F-15/Isfahan rescue narrative; deployment ~Mar 10–11; load-math scenarios — path: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) — verify:operator-transcript-digest."
+    ],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

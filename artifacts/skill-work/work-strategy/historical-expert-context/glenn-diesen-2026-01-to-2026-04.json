@@ -1,0 +1,97 @@
+{
+  "expert_id": "glenn-diesen",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-glenn-diesen-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "**Greater Eurasia** long-forms with **Marandi** anchor the month — **multipolar** / **non-Western** register on escalation, domestic unrest narrative, and **“limited strike”** assumptions; cross-host **Macgregor** on **rising war risk** keeps the **importer / distance** lane visible beside pure Tehran voice.\n\n- [strength: high] **Through-line:** **Marandi** on **overwhelming retaliation** to any U.S. strike — host **Diesen** — [YouTube I6XHVDtHRX4](https://www.youtube.com/watch?v=I6XHVDtHRX4) — indexes cite **~30 Jan 2026** — verify **title/date** in UI.\n- [strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam.\n- [strength: medium] **Parallel lane:** **Macgregor** — **rising war risks** — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-douglas-macgregor-on-rising-war-risks-transcript/) — third-country **distance** from U.S.–Israel frame — **do not** merge with **Marandi** lines without labels.\n- [strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only.",
+      "bullets": [
+        "[strength: high] **Through-line:** **Marandi** on **overwhelming retaliation** to any U.S. strike — host **Diesen** — [YouTube I6XHVDtHRX4](https://www.youtube.com/watch?v=I6XHVDtHRX4) — indexes cite **~30 Jan 2026** — verify **title/date** in UI.",
+        "[strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam.",
+        "[strength: medium] **Parallel lane:** **Macgregor** — **rising war risks** — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-douglas-macgregor-on-rising-war-risks-transcript/) — third-country **distance** from U.S.–Israel frame — **do not** merge with **Marandi** lines without labels.",
+        "[strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 1
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam."
+      ],
+      "tension_lines": [
+        "[strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February weight shifts to **Ukraine** **information** / **Istanbul** theses at the **UN** and podcast — still **same** multipolar toolkit; **Iran** material continues on the feed (**Marandi** “war for survival”) for cross-week **batch-analysis** with January arc.\n\n- [strength: high] **Through-line:** **UN Security Council** — **media manipulation** in the **Ukraine** war — [Brave New Europe](https://braveneweurope.com/glenn-diesen-at-the-un-security-council-media-manipulation-in-the-ukraine-war) · [Podscan episode](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/media-manipulation-in-the-ukraine-war-glenn-diesen-at-the-un-security-council) — **~22 Feb 2026** class in third-party indexes.\n- [strength: medium] **Mechanism:** **NATO’s war of choice** — **Istanbul** sabotage thesis — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/glenn-diesen-natos-war-of-choice-the-sabotage-of-the-istanbul-negotiations) — **~24 Feb 2026** — **hypothesis-grade** until primary **negotiation** docs pinned.\n- [strength: high] **Signal (Iran):** **Marandi** — **“War for Survival”** — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/seyed-m-marandi-war-for-survival-irans-strategy-as-war-is-imminent) — **imminent-war** framing — **convergence** with **Mearsheimer** structural reads only with **dated** shared material.",
+      "bullets": [
+        "[strength: high] **Through-line:** **UN Security Council** — **media manipulation** in the **Ukraine** war — [Brave New Europe](https://braveneweurope.com/glenn-diesen-at-the-un-security-council-media-manipulation-in-the-ukraine-war) · [Podscan episode](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/media-manipulation-in-the-ukraine-war-glenn-diesen-at-the-un-security-council) — **~22 Feb 2026** class in third-party indexes.",
+        "[strength: medium] **Mechanism:** **NATO’s war of choice** — **Istanbul** sabotage thesis — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/glenn-diesen-natos-war-of-choice-the-sabotage-of-the-istanbul-negotiations) — **~24 Feb 2026** — **hypothesis-grade** until primary **negotiation** docs pinned.",
+        "[strength: high] **Signal (Iran):** **Marandi** — **“War for Survival”** — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/seyed-m-marandi-war-for-survival-irans-strategy-as-war-is-imminent) — **imminent-war** framing — **convergence** with **Mearsheimer** structural reads only with **dated** shared material."
+      ],
+      "strength_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **NATO’s war of choice** — **Istanbul** sabotage thesis — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/glenn-diesen-natos-war-of-choice-the-sabotage-of-the-istanbul-negotiations) — **~24 Feb 2026** — **hypothesis-grade** until primary **negotiation** docs pinned.",
+        "[strength: high] **Signal (Iran):** **Marandi** — **“War for Survival”** — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/seyed-m-marandi-war-for-survival-irans-strategy-as-war-is-imminent) — **imminent-war** framing — **convergence** with **Mearsheimer** structural reads only with **dated** shared material."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March stacks **Marandi** interviews (military strategy, ceasefire posture, **South Pars** / energy warfare), a **Mercouris** cross-episode on **Iran** ↔ **Ukraine**, and **Substack** synthesis on **U.S. dominance** — density supports **April** knot compares without collapsing registers.\n\n- [strength: high] **Through-line:** **Iran’s Military Strategy and U.S. Miscalculations** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-irans-military-strategy-and-u-s-miscalculations) — companion to **YouTube** mirrors (re-verify **publish** date).\n- [strength: high] **Mechanism:** **Iran Rejects Ceasefire — Demands New Status Quo** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-iran-rejects-ceasefire-demands-new-status-quo) — **ceasefire** language vs **April** Lebanon / nuclear forks — **seam** not merge.\n- [strength: medium] **Cross-thread:** **Mercouris** — **Iran war transforms Ukraine war** — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/alexander-mercouris-iran-war-transforms-ukraine-war) — **~21 Mar 2026** class — **orthogonal** to **tri-mind** passes unless operator opts in.\n- [strength: medium] **Synthesis:** [Substack — Iran war accelerating end of U.S. dominance](https://glenndiesen.substack.com/p/iran-war-is-accelerating-the-end) — **operator-authored** — tier **B** for causal claims until **cited** primaries align.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).",
+      "bullets": [
+        "[strength: high] **Through-line:** **Iran’s Military Strategy and U.S. Miscalculations** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-irans-military-strategy-and-u-s-miscalculations) — companion to **YouTube** mirrors (re-verify **publish** date).",
+        "[strength: high] **Mechanism:** **Iran Rejects Ceasefire — Demands New Status Quo** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-iran-rejects-ceasefire-demands-new-status-quo) — **ceasefire** language vs **April** Lebanon / nuclear forks — **seam** not merge.",
+        "[strength: medium] **Cross-thread:** **Mercouris** — **Iran war transforms Ukraine war** — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/alexander-mercouris-iran-war-transforms-ukraine-war) — **~21 Mar 2026** class — **orthogonal** to **tri-mind** passes unless operator opts in.",
+        "[strength: medium] **Synthesis:** [Substack — Iran war accelerating end of U.S. dominance](https://glenndiesen.substack.com/p/iran-war-is-accelerating-the-end) — **operator-authored** — tier **B** for causal claims until **cited** primaries align."
+      ],
+      "strength_counts": {
+        "high": 2,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: high] **Mechanism:** **Iran Rejects Ceasefire — Demands New Status Quo** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-iran-rejects-ceasefire-demands-new-status-quo) — **ceasefire** language vs **April** Lebanon / nuclear forks — **seam** not merge.",
+        "[strength: medium] **Synthesis:** [Substack — Iran war accelerating end of U.S. dominance](https://glenndiesen.substack.com/p/iran-war-is-accelerating-the-end) — **operator-authored** — tier **B** for causal claims until **cited** primaries align."
+      ],
+      "tension_lines": [
+        "[strength: high] **Mechanism:** **Iran Rejects Ceasefire — Demands New Status Quo** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-iran-rejects-ceasefire-demands-new-status-quo) — **ceasefire** language vs **April** Lebanon / nuclear forks — **seam** not merge."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — **2026-04-12** cold ingest (Jiang × Diesen) + **2026-04-14** knots; not a full April ledger._\n\nApril folds **petrodollar / Treasury / Hormuz–Malacca** framing beside Islamabad spine — **vi-14** work-jiang lecture verify path — and abstract compare vs Sachs in dedicated knot.\n\n- [strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line.\n- [strength: medium] **Abstract fork:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — Judgment-only; not merged voice with Ritter blockade mechanics.\n- [strength: medium] **Lattice:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — closure economics seam.\n\n---",
+      "bullets": [
+        "[strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line.",
+        "[strength: medium] **Abstract fork:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — Judgment-only; not merged voice with Ritter blockade mechanics.",
+        "[strength: medium] **Lattice:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — closure economics seam."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line."
+      ],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+# Historical expert context — `max-blumenthal`
+
+WORK only; not Record.
+Source thread: `docs/skill-work/work-strategy/strategy-notebook/strategy-expert-max-blumenthal-thread.md`
+Segments included: 2026-01, 2026-02, 2026-03, 2026-04
+Parse: parsed `## YYYY-MM` month segments
+
+## Batch-analysis handoff
+
+- Provenance mix across included segments: high=0, medium=0, low=5
+- Use this as historical context for compare/contrast; do not treat it as verbatim proof.
+
+## Historical stance summary
+
+- [strength: low] **Identity anchor:** Grayzone author index + X + Patreon (Seed).
+- [strength: low] **Support hub:** Patreon — not a dated February post list.
+- [strength: low] **Repeat anchor:** Grayzone author page — scope unchanged.
+- [strength: low] **Identity anchor:** [Grayzone — Blumenthal](https://thegrayzone.com/author/max-blumenthal/) · [X @MaxBlumenthal](https://x.com/MaxBlumenthal) — not a dated April appearance list.
+- [strength: low] **Note:** Distinct from **aaron-mate** investigative ownership focus — roster seam.
+
+## Historical tensions
+
+- No explicit tension lines detected.
+
+## Historical shifts / drift
+
+- [strength: low] **Repeat anchor:** Grayzone author page — scope unchanged.
+
+## Prompt-ready compact block
+
+```text
+historical-expert-context | max-blumenthal | stance=[strength: low] **Identity anchor:** Grayzone author index + X + Patreon (Seed). || [strength: low] **Support hub:** Patreon — not a dated February post list. || [strength: low] **Repeat anchor:** Grayzone author page — scope unchanged. | shifts=[strength: low] **Repeat anchor:** Grayzone author page — scope unchanged. | provenance=high:0,medium:0,low:5
+```
+
+## Segment notes
+
+### 2026-01
+
+- strength mix: high=0, medium=0, low=1 (h2)
+- [strength: low] **Identity anchor:** Grayzone author index + X + Patreon (Seed).
+
+### 2026-02
+
+- strength mix: high=0, medium=0, low=1 (h2)
+- [strength: low] **Support hub:** Patreon — not a dated February post list.
+
+### 2026-03
+
+- strength mix: high=0, medium=0, low=1 (h2)
+- [strength: low] **Repeat anchor:** Grayzone author page — scope unchanged.
+
+### 2026-04
+
+- strength mix: high=0, medium=0, low=2 (h2)
+- [strength: low] **Identity anchor:** [Grayzone — Blumenthal](https://thegrayzone.com/author/max-blumenthal/) · [X @MaxBlumenthal](https://x.com/MaxBlumenthal) — not a dated April appearance list.
+- [strength: low] **Note:** Distinct from **aaron-mate** investigative ownership focus — roster seam.

@@ -1,0 +1,25 @@
+{
+  "expert_id": "alastair-crooke",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-alastair-crooke-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — no April `thread:` machine line or knot index row for Crooke in-repo at authoring time; **Levant–Islamabad spoiler** lane stays routing-only._\n\n- [strength: low] **Identity anchor:** [conflictsforum.org](https://conflictsforum.org/) · [Conflicts Forum Substack](https://conflictsforum.substack.com/) — not a dated April appearance list.\n- [strength: low] **Note:** Fold when **daniel-davis** / **seyed-marandi** digests carry dated Crooke appearances — verify before Links merge.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+    "bullets": [
+      "[strength: low] **Identity anchor:** [conflictsforum.org](https://conflictsforum.org/) · [Conflicts Forum Substack](https://conflictsforum.substack.com/) — not a dated April appearance list.",
+      "[strength: low] **Note:** Fold when **daniel-davis** / **seyed-marandi** digests carry dated Crooke appearances — verify before Links merge."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    },
+    "signal_lines": [],
+    "tension_lines": [
+      "[strength: low] **Identity anchor:** [conflictsforum.org](https://conflictsforum.org/) · [Conflicts Forum Substack](https://conflictsforum.substack.com/) — not a dated April appearance list."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

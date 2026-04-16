@@ -1,0 +1,24 @@
+{
+  "expert_id": "alexander-mercouris",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-alexander-mercouris-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — narrative distillation for **2026-04-12 → 2026-04-15** only; not a full April ledger. Keeps `## YYYY-MM` boundaries for `strategy_historical_expert_context.py`._\n\n### Distilled thread (2026-04-12 → 2026-04-15)\n\n**Lane:** Mercouris operates as the notebook's primary **institutional / narrative / diplomatic** reader. His register is layered, recursive, and civilizational in framing — he tracks who sounds credible in room diplomacy, how multilateral choreography shifts, and where zugzwang conditions emerge. The notebook uses him as the **legitimacy surface** expert: the voice that tells you what the diplomatic room looks like, not what the power structure underneath can afford. That distinction (surface vs structure) is the central discipline problem in every knot that carries his name.\n\n**04-12 → 04-13 arc (Islamabad collapse + Hormuz scaffold):** Mercouris's Duran monologue on 04-13 covered the Islamabad recap, blockade mechanics (Keane lineage), and multilateral tickers (Lavrov–Wang–Xi, Russian Security Council commentary). The notebook treated this as one leg of a **triple anchor** alongside Marandi (Iranian red-line authority) and Ritter (USN mechanics). The key Judgment constraint: Mercouris's analyst-constellation language and multilateral tickers **cannot be merged** with Johnson's OOB skepticism or Marandi's ecumenical register or Ritter's hull-seizure claims into one voice without seams. The lattice discipline holds — each expert occupies a structural lane, and the scaffold knot explicitly forbids collapsing them.\n\n**04-14 fork (Mercouris × Mearsheimer — Lebanon split):** The dedicated knot abstracts the orthogonal relationship: Mercouris reads **speech-act success** (who said what in the diplomatic room, how credible the messaging was, what Lebanon–Israel framing looks like). Mearsheimer reads **structural settlement** (what states can afford, how power distributes incentives, alliance geometry). The falsifier for this knot: if Lebanon/Washington progress is asserted from Mercouris-class narrative alone without Mearsheimer-class incentive checks — forced merge replaces Thesis A/B discipline. This is the sharpest methodological constraint the notebook imposes on Mercouris material.\n\n**04-15 extension (uranium off-ramp + legitimacy seam):** The new synthesis knot picks up where the Mercouris lane naturally extends. The Kremlin's uranium-transfer revival (Peskov, Lavrov) occupies exactly the institutional/diplomatic register Mercouris covers — multilateral mechanism, 2015 JCPOA precedent, Russian custody offer. The legitimacy-stack thesis (Leo XIV + France-UK + Iran MFA) is likewise his natural terrain: legitimacy choreography across multiple registers. The notebook's 04-15 Mercouris entry is *lateral* — he is referenced as a lens rather than a direct transcript source, because the 04-15 episode URL is not yet pinned.\n\n**Running tension:** Mercouris's CTC (cross-thread connectivity) score is the highest in the roster (0.88) but his AD (analytical discipline) is the lowest among frequent commentators (0.44). The thread reflects this: he is the expert most often placed beside others to hear harmony or dissonance, but his narrative framing can shade into arc-construction that is harder to pin to a single falsifying fact. Every knot that carries his name includes a discipline constraint for this reason.\n\n**Open:**\n\n- Pin **The Duran 04-15** canonical episode URL — likely carries Kremlin-IRI convergence analysis in his register\n- Pin **The Duran 04-13** canonical episode URL — Islamabad recap + blockade + zugzwang language\n- Watch for next Mercouris × Mearsheimer **Lebanon** material — the 04-14 fork is abstract; it needs a **dated episode** to become a case page\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+    "bullets": [
+      "Pin **The Duran 04-15** canonical episode URL — likely carries Kremlin-IRI convergence analysis in his register",
+      "Pin **The Duran 04-13** canonical episode URL — Islamabad recap + blockade + zugzwang language",
+      "Watch for next Mercouris × Mearsheimer **Lebanon** material — the 04-14 fork is abstract; it needs a **dated episode** to become a case page"
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "signal_lines": [],
+    "tension_lines": [],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

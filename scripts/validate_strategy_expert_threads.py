@@ -6,9 +6,12 @@ expectation is **readable prose**, with optional ``## YYYY-MM`` sections. Month-
 **bullet ledgers** (strength-tagged hooks) are allowed as *compressed* material, but
 they must not be treated as a substitute for prose without operator intent.
 
-This script **warns** (stderr) when a ``## YYYY-MM`` block has **three or more**
-list lines and **no** detected prose lines — a common assistant mistake is to fill
-months with bullets only.
+This script **warns** (stderr) when:
+
+- a ``## YYYY-MM`` block has **three or more** list lines and **no** detected prose
+  lines (bullets-only months), **or**
+- a ``## YYYY-MM`` block has **fewer than 500 words** of detected prose (words on
+  ``is_prose_line`` lines only; list lines do not count).
 
 **Opt-out (whole file):** place anywhere in the human layer (above
 ``<!-- strategy-expert-thread:start -->``)::
@@ -31,10 +34,13 @@ NOTEBOOK_DIR = REPO_ROOT / "docs/skill-work/work-strategy/strategy-notebook"
 THREAD_MARKER_START = "<!-- strategy-expert-thread:start -->"
 
 RE_MONTH_H2 = re.compile(r"^##\s+(\d{4}-\d{2})\s*$")
+RE_BACKFILL_START = re.compile(r"^<!--\s*backfill:")
 RE_LIST = re.compile(r"^\s*[-*]\s+\S")
 RE_NUM_LIST = re.compile(r"^\s*\d+\.\s+\S")
 
 OPT_OUT_BULLETS_LEDGER = "<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->"
+
+MIN_PROSE_WORDS = 500
 
 
 def expert_id_from_thread_name(name: str) -> str | None:
@@ -89,6 +95,8 @@ def iter_month_h2_bodies(human: str) -> list[tuple[str, str]]:
         while i < len(lines):
             if RE_MONTH_H2.match(lines[i]):
                 break
+            if RE_BACKFILL_START.match(lines[i].strip()):
+                break
             body_lines.append(lines[i])
             i += 1
         blocks.append((month_id, "\n".join(body_lines)))
@@ -109,6 +117,15 @@ def analyze_month_body(body: str) -> tuple[int, int]:
     return bullet, prose
 
 
+def prose_word_count(body: str) -> int:
+    """Word count on prose lines only (same rule as ``is_prose_line``)."""
+    n = 0
+    for line in body.splitlines():
+        if is_prose_line(line):
+            n += len(line.split())
+    return n
+
+
 def validate_thread_file(path: Path) -> list[str]:
     """Return warning strings for one thread file."""
     warnings: list[str] = []
@@ -124,13 +141,20 @@ def validate_thread_file(path: Path) -> list[str]:
     human = strip_backfill_block(human, eid)
 
     for month_id, body in iter_month_h2_bodies(human):
-        bullets, prose = analyze_month_body(body)
-        if bullets >= 3 and prose == 0:
+        bullets, prose_lines = analyze_month_body(body)
+        words = prose_word_count(body)
+        if bullets >= 3 and prose_lines == 0:
             warnings.append(
                 f"{path.name}: ## {month_id} — bullet-led month with no prose lines "
                 f"({bullets} list lines). Add a short prose lede or "
                 f"{OPT_OUT_BULLETS_LEDGER} if ledger-only is intentional "
                 f"(see strategy-expert-template.md — Segment 1 narrative journal)."
+            )
+        elif words < MIN_PROSE_WORDS:
+            warnings.append(
+                f"{path.name}: ## {month_id} — prose word count {words} < {MIN_PROSE_WORDS} "
+                f"(prose lines only; expand narrative or run "
+                f"`python3 scripts/expand_strategy_expert_segment_prose.py --apply`)."
             )
     return warnings
 

@@ -40,6 +40,17 @@
 | **Segment 2 — Machine extraction** | **Between** `<!-- strategy-expert-thread:start -->` and `<!-- strategy-expert-thread:end -->` | `strategy_expert_corpus.py` on each **`thread`** run | **`## Segment 2 — Machine extraction (script-maintained)`** with **`### Segment 2a — Recent transcript material`** and **`### Segment 2b — Knot references`** — transcript echoes + knot index rows. Overwritten each run. |
 | **Segment 3 — Optional ledger** (optional) | **After** `<!-- strategy-expert-thread:end -->` | Operator or future tooling | Optional fenced **`thread-ledger`** YAML/JSON — **not** touched by the default extractor unless a future script is added. |
 
+<a id="expert-thread-month-segments"></a>
+
+### Expert-thread month segments (parse contract + scripts)
+
+Within **Segment 1**, each **`## YYYY-MM`** heading opens **one month-segment** of the narrative journal (see [strategy-expert-template.md](strategy-expert-template.md)). Treat boundaries as a **parse contract** for validators and batch-analysis handoff — not decorative.
+
+- **Where a month body ends:** tooling stops the segment at the **next** `## YYYY-MM` **or** at the first line matching `<!-- backfill:` (start of the HTML backfill block). A month segment must **not** include the backfill region; otherwise word counts and segment text for that month are wrong.
+- **Backfill placement:** prefer listing **all** calendar `## YYYY-MM` segments **before** `<!-- backfill:<expert_id>:start -->`, with **`## YYYY-MM`** for the partial current month **after** the backfill block if you use one — or keep a single consistent order in-repo; the terminator rule above stays the source of truth.
+- **Prose minimum:** default expectation is **≥ ~500 words of prose per `## YYYY-MM` block** (words on non-bullet substantive lines only; list lines do not count). `python3 scripts/validate_strategy_expert_threads.py` warns when below threshold or when a month is bullets-only without prose. To scaffold from roster **Role** / **Typical pairings** (WORK-only; not Record): `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root.
+- **After you edit Segment 1 month prose materially:** re-run **`python3 scripts/strategy_historical_expert_context.py --expert-id <id> --start-segment … --end-segment … --apply`** when you rely on `artifacts/skill-work/work-strategy/historical-expert-context/` per-month or rollup files for that window — so batch-analysis and prompts see updated stance text.
+
 **Legacy:** “Two layers” meant the same split (human above markers / machine inside). **Segments** name that split explicitly for navigation and tooling.
 
 **Assistant default after `thread`:** Refine the **narrative journal** (above markers) into **continuous readable prose** where the operator wants it; keep **machine extraction** as-is or summarize it in the journal by reference — **do not** replace the journal with bullets-only stubs unless the operator asks.

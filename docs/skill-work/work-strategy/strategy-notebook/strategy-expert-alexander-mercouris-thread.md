@@ -19,29 +19,66 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 
 ## 2026-01
 
+
+When historical expert context artifacts exist for `alexander-mercouris` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-01 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+The 2026-01 segment for the Alexander Mercouris lane (`alexander-mercouris`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+Open pins belong in prose, not only as bullets. For this `alexander-mercouris` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+Verification stance for Alexander Mercouris in 2026-01 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
+Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-01 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+The `alexander-mercouris` lane’s role (Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
 - [strength: medium] **Through-line:** **NATO “wartime mindset”** / European rearmament debate — Mercouris lane on **escalation spiral vs dialogue** with **EU** internal split (smaller states vs **UK/FR/DE** commitment) — primary clip: [Rumble — The Duran, “NATO Preparing for WAR w/ RUSSIA”](https://rumble.com/v6adegm-the-durans-alexander-mercouris-nato-preparing-for-war-w-russia.html) — confirm **upload date** in UI before treating as January anchor ([strength: low] if metadata ambiguous).
 - [strength: medium] **Mechanism:** **Institutional / legitimacy surface** — who sounds credible in **alliance** messaging vs **economic** strain — same structural role as **April** Duran monologue on multilateral tickers, earlier chapter.
 - [strength: low] **Ambiguity:** Rumble/YouTube mirrors vary — prefer **canonical The Duran** URL once pinned in inbox.
 - [strength: medium] **Tension / lattice:** **Orthogonal** to **Mearsheimer** Jan **SCMP / imperialism** arc (different theater); **joint** Iran surface emerges later in Q1/Q2 — hold **Mercouris × Mearsheimer** abstract fork until **dated** shared material (see April [Lebanon split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md)).
-
 ## 2026-02
+
+
+Verification stance for Alexander Mercouris in 2026-02 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
+Open pins belong in prose, not only as bullets. For this `alexander-mercouris` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+The `alexander-mercouris` lane’s role (Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+Finally, 2026-02 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).), **pairing map** (× john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md)), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+The 2026-02 segment for the Alexander Mercouris lane (`alexander-mercouris`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-02 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
 - [strength: low] **Through-line:** **Diplomatic room** on **Ukraine** tracks (Abu Dhabi / **28-point** narratives) vs empty-talk framing — column context: [Abu Dhabi talks — The Duran](https://theduran.com/abu-dhabi-talks-empty-or-substantial/) — **page date not verified here**; use as pointer only.
 - [strength: low] **Mechanism:** Operator backlog — **pin** February **canonical episode URLs** (YouTube/Rumble) for **Hormuz-adjacent** vs **Russia–Ukraine** splits; align with **days.md** verify tier when wires land.
 - [strength: low] **Ambiguity:** Gilbert Doctorow byline vs Mercouris **live** block — do not merge without source line discipline.
 - [strength: medium] **Lattice:** Prepares **April** **Marandi×Ritter×Mercouris** [Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Mercouris stays **legitimacy surface**, not Ritter ORBAT.
-
 ## 2026-03
+
+
+The 2026-03 segment for the Alexander Mercouris lane (`alexander-mercouris`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+The `alexander-mercouris` lane’s role (Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-03, read × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md) as the default **short list** of other experts whose fingerprints commonly collide with `alexander-mercouris` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Finally, 2026-03 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).), **pairing map** (× john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md)), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-03 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+
+The 2026-03 segment for the Alexander Mercouris lane (`alexander-mercouris`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Independent geopolitical analyst; co-host The Duran (with Alex Christoforou); long-form diplomatic and multipolar commentary. Prior: UK barrister (called 2006); regulatory history on file with UK Bar Standards Board (see Failure modes — primary only for professional-conduct facts).. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
 
 - [strength: medium] **Through-line:** **Hormuz closure** / **tanker** / **oil** headline stack — The Duran title lane includes **12 Mar 2026** “Iran Leader: Keep Hormuz Closed…” — `https://www.youtube.com/watch?v=hbl3tuy-CA4` — **verify:title+date on YouTube** before merge with AIS/tanker facts.
 - [strength: medium] **Mechanism:** **Sanctions / Russian exports** + **Kiev aid** debate in mid-March Duran stack (e.g. [EU/UK/Russia exports — **14 Mar** YouTube](https://www.youtube.com/watch?v=xLfY2QGWklM)) — **cross-domain** only with explicit **verify**; do not substitute for **Mearsheimer** resource-diversion claims without cites.
 - [strength: low] **Ambiguity:** **Alex vs Alex** co-host blocks — which segment is **Mercouris solo** line — pin per ingest.
 - [strength: medium] **Tension:** **Media/speech-act** surface (Mercouris) vs **Mearsheimer** March Substack [**Unfolding Disaster**](https://mearsheimer.substack.com/p/the-unfolding-disaster-in-the-gulf) / [**Piers**](https://mearsheimer.substack.com/p/agreeing-with-piers-on-iran) **structural** framing — **batch-analysis** compares lanes; no **voice-merge** in-thread.
-
 <!-- backfill:alexander-mercouris:start -->
 ## Backfilled historical arc (reconstructed from notebook artifacts)
 
-**Scope:** `alexander-mercouris` from **2026-01-01** through **2026-03-31**.
+**Scope:** `alexander-mercouris` from **2026-01-01** through **2026-04-30** (partial April).
 **Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
 **Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
 
@@ -63,8 +100,13 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 - **2026-03-14** — EU/UK/Russia exports / sanctions stack — The Duran YouTube.  
   _Source:_ web: `https://www.youtube.com/watch?v=xLfY2QGWklM`
 
-<!-- backfill:alexander-mercouris:end -->
 
+### 2026-04
+
+- **2026-04-12 → 2026-04-15** — Partial arc (Islamabad / Hormuz / Lebanon / uranium knots); The Duran episode URLs for this window still **operator-pinned** — see human `## 2026-04` distilled thread.  
+  _Source:_ web: `https://theduran.com/`
+
+<!-- backfill:alexander-mercouris:end -->
 ## 2026-04
 
 _Partial month — narrative distillation for **2026-04-12 → 2026-04-15** only; not a full April ledger. Keeps `## YYYY-MM` boundaries for `strategy_historical_expert_context.py`._
@@ -82,6 +124,9 @@ _Partial month — narrative distillation for **2026-04-12 → 2026-04-15** only
 **Running tension:** Mercouris's CTC (cross-thread connectivity) score is the highest in the roster (0.88) but his AD (analytical discipline) is the lowest among frequent commentators (0.44). The thread reflects this: he is the expert most often placed beside others to hear harmony or dissonance, but his narrative framing can shade into arc-construction that is harder to pin to a single falsifying fact. Every knot that carries his name includes a discipline constraint for this reason.
 
 **Open:**
+
+
+Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-04 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
 - Pin **The Duran 04-15** canonical episode URL — likely carries Kremlin-IRI convergence analysis in his register
 - Pin **The Duran 04-13** canonical episode URL — Islamabad recap + blockade + zugzwang language

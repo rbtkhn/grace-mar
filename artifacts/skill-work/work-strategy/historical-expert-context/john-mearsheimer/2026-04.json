@@ -1,0 +1,27 @@
+{
+  "expert_id": "john-mearsheimer",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-john-mearsheimer-thread.md",
+  "segment_id": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segment": {
+    "segment_id": "2026-04",
+    "raw_text": "_Partial month — Segment 2 is **knot-index** only for April; no standalone Mearsheimer ingest line in machine block at authoring time._\n\nApril lattice is **Mercouris × Mearsheimer** (speech-act vs structural incentives) on Lebanon / Hormuz week — scaffold and blockade weaves carry the cross-expert seam; Pape Janssen block adds domestic escalation-trap vocabulary beside same cycle.\n\n- [strength: medium] **Fork:** [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) — diplomatic surface vs incentive geometry — **do not** voice-merge.\n- [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel plane named in knot header.\n- [strength: medium] **Lattice:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) — blockade calendar vs structural off-ramp framing — tier discipline.\n\n---",
+    "bullets": [
+      "[strength: medium] **Fork:** [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) — diplomatic surface vs incentive geometry — **do not** voice-merge.",
+      "[strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel plane named in knot header.",
+      "[strength: medium] **Lattice:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) — blockade calendar vs structural off-ramp framing — tier discipline."
+    ],
+    "strength_counts": {
+      "high": 0,
+      "medium": 3,
+      "low": 0
+    },
+    "signal_lines": [],
+    "tension_lines": [
+      "[strength: medium] **Fork:** [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) — diplomatic surface vs incentive geometry — **do not** voice-merge.",
+      "[strength: medium] **Lattice:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) — blockade calendar vs structural off-ramp framing — tier discipline."
+    ],
+    "shift_lines": [],
+    "source": "h2"
+  }
+}

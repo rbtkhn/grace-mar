@@ -29,4 +29,6 @@ python3 scripts/strategy_historical_expert_context.py \
   --expert-id daniel-davis --start-segment 2026-01 --end-segment 2026-03 --apply
 ```
 
+For **Jan–Apr** (or any month where `strategy-expert-<id>-thread.md` has a `## YYYY-MM` segment), use the same command with `--end-segment 2026-04` and align `--history-end` on the wrapper with that window.
+
 **Snapshot schema:** The wrapper should read **`batch_analysis_refs`** (not `rows`) from the snapshot JSON, and filter rows where both expert slugs appear in **`expert_ids`** or in the serialized row.

@@ -17,22 +17,66 @@ _(No narrative distillation yet — add prose above machine extraction. **`threa
 
 **Greater Eurasia** long-forms with **Marandi** anchor the month — **multipolar** / **non-Western** register on escalation, domestic unrest narrative, and **“limited strike”** assumptions; cross-host **Macgregor** on **rising war risk** keeps the **importer / distance** lane visible beside pure Tehran voice.
 
+
+Verification stance for Glenn Diesen in 2026-01 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
+The `glenn-diesen` lane’s role (Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-01, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-01, read × john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs as the default **short list** of other experts whose fingerprints commonly collide with `glenn-diesen` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Finally, 2026-01 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register), **pairing map** (× john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+Open pins belong in prose, not only as bullets. For this `glenn-diesen` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+When historical expert context artifacts exist for `glenn-diesen` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-01 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
 - [strength: high] **Through-line:** **Marandi** on **overwhelming retaliation** to any U.S. strike — host **Diesen** — [YouTube I6XHVDtHRX4](https://www.youtube.com/watch?v=I6XHVDtHRX4) — indexes cite **~30 Jan 2026** — verify **title/date** in UI.
 - [strength: medium] **Mechanism:** **Civil unrest** / **war preparation** thread — [Singju Post — Greater Eurasia + Marandi transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**; pair with **Mercouris** diplomatic tickers only via **batch-analysis** seam.
 - [strength: medium] **Parallel lane:** **Macgregor** — **rising war risks** — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-douglas-macgregor-on-rising-war-risks-transcript/) — third-country **distance** from U.S.–Israel frame — **do not** merge with **Marandi** lines without labels.
 - [strength: low] **Lattice:** Upstream of **April** **PH vi-14** / Diesen×Sachs [petrodollar vs Hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) abstract — Q1 is **voice + episode** discipline only.
-
 ## 2026-02
 
 February weight shifts to **Ukraine** **information** / **Istanbul** theses at the **UN** and podcast — still **same** multipolar toolkit; **Iran** material continues on the feed (**Marandi** “war for survival”) for cross-week **batch-analysis** with January arc.
 
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-02, read × john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs as the default **short list** of other experts whose fingerprints commonly collide with `glenn-diesen` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+Open pins belong in prose, not only as bullets. For this `glenn-diesen` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
+
+If knots named this expert during 2026-02, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+The `glenn-diesen` lane’s role (Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+Segment discipline here follows the strategy-notebook contract: Segment 1 is human journal prose; Segment 2 is machine extraction. For 2026-02, the point of a long prose block is to prevent the month from collapsing into a **compressed ledger** that *looks* like analysis but is really a hook list. Hooks are valuable; they are also incomplete without the surrounding sentences that say **why** the hook matters for knots, for open pins, or for the next verify pass.
+
+When historical expert context artifacts exist for `glenn-diesen` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-02 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+Verification stance for Glenn Diesen in 2026-02 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
 - [strength: high] **Through-line:** **UN Security Council** — **media manipulation** in the **Ukraine** war — [Brave New Europe](https://braveneweurope.com/glenn-diesen-at-the-un-security-council-media-manipulation-in-the-ukraine-war) · [Podscan episode](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/media-manipulation-in-the-ukraine-war-glenn-diesen-at-the-un-security-council) — **~22 Feb 2026** class in third-party indexes.
 - [strength: medium] **Mechanism:** **NATO’s war of choice** — **Istanbul** sabotage thesis — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/glenn-diesen-natos-war-of-choice-the-sabotage-of-the-istanbul-negotiations) — **~24 Feb 2026** — **hypothesis-grade** until primary **negotiation** docs pinned.
 - [strength: high] **Signal (Iran):** **Marandi** — **“War for Survival”** — [Podscan](https://www.podscan.fm/podcasts/glenn-diesen-greater-eurasia-podcast/episodes/seyed-m-marandi-war-for-survival-irans-strategy-as-war-is-imminent) — **imminent-war** framing — **convergence** with **Mearsheimer** structural reads only with **dated** shared material.
-
 ## 2026-03
 
 March stacks **Marandi** interviews (military strategy, ceasefire posture, **South Pars** / energy warfare), a **Mercouris** cross-episode on **Iran** ↔ **Ukraine**, and **Substack** synthesis on **U.S. dominance** — density supports **April** knot compares without collapsing registers.
+
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-03, read × john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs as the default **short list** of other experts whose fingerprints commonly collide with `glenn-diesen` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+If knots named this expert during 2026-03, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+Typical pairings on file for `glenn-diesen` emphasize contrast surfaces: × john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs. In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-03 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
+
+When historical expert context artifacts exist for `glenn-diesen` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-03 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+The 2026-03 segment for the Glenn Diesen lane (`glenn-diesen`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+
+Cross-lane convergence and tension are notebook-native concepts. For 2026-03, read × john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs as the default **short list** of other experts whose fingerprints commonly collide with `glenn-diesen` on batch passes. Convergence is not friendship; tension is not feud. Both are **pattern labels** for what repeated comparative reading tends to show, subject to update when new evidence changes the shape of disagreement.
+
+If knots named this expert during 2026-03, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
 
 - [strength: high] **Through-line:** **Iran’s Military Strategy and U.S. Miscalculations** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-irans-military-strategy-and-u-s-miscalculations) — companion to **YouTube** mirrors (re-verify **publish** date).
 - [strength: high] **Mechanism:** **Iran Rejects Ceasefire — Demands New Status Quo** — [Brave New Europe](https://braveneweurope.com/seyed-m-marandi-glenn-diesen-iran-rejects-ceasefire-demands-new-status-quo) — **ceasefire** language vs **April** Lebanon / nuclear forks — **seam** not merge.
@@ -40,11 +84,10 @@ March stacks **Marandi** interviews (military strategy, ceasefire posture, **Sou
 - [strength: medium] **Synthesis:** [Substack — Iran war accelerating end of U.S. dominance](https://glenndiesen.substack.com/p/iran-war-is-accelerating-the-end) — **operator-authored** — tier **B** for causal claims until **cited** primaries align.
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
-
 <!-- backfill:glenn-diesen:start -->
 ## Backfilled historical arc (reconstructed from notebook artifacts)
 
-**Scope:** `glenn-diesen` from **2026-01-01** through **2026-03-31**.
+**Scope:** `glenn-diesen` from **2026-01-01** through **2026-04-30** (partial April).
 **Status:** Reconstructed summary from primary notebook artifacts and best-effort git history; not contemporaneous journal prose.
 **Rules:** Dated bullets only; contradictions should be preserved in source materials rather than harmonized here.
 
@@ -84,7 +127,35 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 - **2026-03** — Substack — Iran war accelerating end of U.S. dominance.  
   _Source:_ web: `https://glenndiesen.substack.com/p/iran-war-is-accelerating-the-end`
 
+
+### 2026-04
+
+- **2026-04** — Ledger mirror 1 (partial month).  
+  _Source:_ web: `https://www.youtube.com/watch?v=P_DHMUdOVdo`
+
 <!-- backfill:glenn-diesen:end -->
+## 2026-04
+
+_Partial month — **2026-04-12** cold ingest (Jiang × Diesen) + **2026-04-14** knots; not a full April ledger._
+
+April folds **petrodollar / Treasury / Hormuz–Malacca** framing beside Islamabad spine — **vi-14** work-jiang lecture verify path — and abstract compare vs Sachs in dedicated knot.
+
+
+When historical expert context artifacts exist for `glenn-diesen` (per-month files or rollups under `artifacts/skill-work/work-strategy/historical-expert-context/`), this 2026-04 narrative should be read as **adjacent** to those summaries: the artifact compresses stance for handoff; the thread segment preserves operator-facing **arc and intent**. If the two ever diverge, treat dated ingests and explicit ledger lines as the stricter ground, and use prose to explain tension rather than smoothing it away.
+
+The 2026-04 segment for the Glenn Diesen lane (`glenn-diesen`) exists so the notebook keeps a **prose spine** alongside any strength-tagged bullets. The roster describes this voice as centered on Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register. That one-line role is not a substitute for transcript truth; it is a **routing label** so batch-analysis passes know which mechanism vocabulary to expect when dated material lands. When this month is still partial or ingest-light, the prose layer still records **where verification should attach** (knot cites, transcript rows, or hub URLs) without pretending those pins are already closed.
+
+Verification stance for Glenn Diesen in 2026-04 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
+
+Finally, 2026-04 should remain safe for **operator rotation**: someone returning after weeks should be able to read this segment and recover **lane orientation** (role: Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register), **pairing map** (× john-mearsheimer, × douglas-macgregor, × robert-pape, × jeffrey-sachs), and **next verification moves** without loading the entire quarter. That recoverability is why the minimum prose budget exists—not to pad, but to force a minimum coherent account of what this month was for in the notebook.
+
+The `glenn-diesen` lane’s role (Eurasia / multipolar discourse; non-Western institutional / rationality frames when distinct from Mearsheimer’s structural-realist register) also implies **failure-mode awareness**: where this voice tends to overread incentives, flatten complexity, or overweight a single domain. This segment is a place to name that risk in calm language when the month’s material invites it, especially before weave work pulls the voice into a knot as primary commentator. Naming failure mode is WORK hygiene; it is not an attack on the voice.
+
+If knots named this expert during 2026-04, the narrative should eventually say **which knot** and **what job** the voice did (pressure, validate, narrate) in plain English. If knot index lines are still empty, say that plainly too—absence matters for pipeline honesty. The machine block below the marker will populate knot references when the index points here; Segment 1 should still record what the operator noticed at human speed before automation catches up.
+
+- [strength: high] **Signal (cold):** Jiang × Glenn Diesen — Iran war as petrodollar / Treasury stress — [YouTube P_DHMUdOVdo](https://www.youtube.com/watch?v=P_DHMUdOVdo) — verify:work-jiang-vi-14 + lecture markdown per ingest line.
+- [strength: medium] **Abstract fork:** [diesen-vi14-petrodollar-vs-sachs-hormuz](strategy-notebook-knot-2026-04-14-diesen-vi14-petrodollar-vs-sachs-hormuz.md) — Judgment-only; not merged voice with Ritter blockade mechanics.
+- [strength: medium] **Lattice:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — closure economics seam.
 
 ---
 <!-- strategy-expert-thread:start -->

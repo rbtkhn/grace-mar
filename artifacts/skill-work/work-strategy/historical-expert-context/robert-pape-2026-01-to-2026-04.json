@@ -1,0 +1,89 @@
+{
+  "expert_id": "robert-pape",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-robert-pape-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January has **no dated** notebook ingest for Pape in this Q1 snapshot; the lane is **escalation trap / commitment ratchet / demand staging** — not ORBAT — per roster. Profile hubs are **anchors** only until dated rows land.\n\n- [strength: low] **Identity anchor:** Chicago Project on Security & Threats + Escalation Trap Substack + X (Seed).  \n  [CPOST profile](https://cpost.uchicago.edu/people/profile/robert_pape/) · [escalationtrap.substack.com](https://escalationtrap.substack.com/) · [X @ProfessorPape](https://x.com/ProfessorPape)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** Chicago Project on Security & Threats + Escalation Trap Substack + X (Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February shows **no indexed Q1 primary** in-repo; **`daniel-davis`** / **`john-mearsheimer`** crosses stay **labeled** when coercion vocabulary meets structural-realist reads.\n\n- [strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar.",
+      "bullets": [
+        "[strength: low] **Repeat:** Escalation Trap Substack index — not a verified February posting calendar."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **thin** on calendar-facing rows here; **April** Cyrus Janssen / X lines stack blockade and Lebanon forks — Q1 does **not** duplicate that machinery.\n\n- [strength: low] **Repeat anchor:** CPOST profile — scope discipline unchanged.",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** CPOST profile — scope discipline unchanged."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [
+        "[strength: low] **Repeat anchor:** CPOST profile — scope discipline unchanged."
+      ],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — narrative and machine coverage **2026-04-12 → 2026-04-16**; not a full April ledger._\n\nApril stacks **escalation trap**, **blockade calendar**, and **Israel spoiler** lanes from Cyrus Janssen studio pulls and X — indexed to Islamabad weave + Lebanon split + Janssen escalation-blockade knot.\n\n- [strength: high] **Through-line:** Janssen studio uploads **2026-04-16** — escalation trap vs regime-change failure; blockade framework (day-46 / May-1 / Jun-1 checkpoints); Israel as third player — [YouTube @CyrusJanssen](https://www.youtube.com/@CyrusJanssen/videos) — verify:operator-transcript+youtube-watch-id-to-pin.\n- [strength: medium] **Signal:** X **2026-04-14** — Lebanon sectarian map + talks seam — [X @ProfessorPape](https://x.com/ProfessorPape) — verify per ingest line.\n- [strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md).\n\n### Distilled thread (2026-04-12 → 2026-04-16)\n\n**Lane:** Pape supplies the notebook’s **coercion / commitment-ratchet** vocabulary: “escalation trap,” surrender-bar diplomacy, and blockade-as-timeline mechanics. He is used as the **U.S. position vs Iranian leverage** stress tester — not as ORBAT or as a substitute for wire readouts. Hypothesis-grade probabilities and third-player (Israel) claims stay **seam-pinned** until primaries land.\n\n**04-12 (Islamabad–Hormuz weave):** The captured X line reframes the enriched-uranium demand as the same bar as pre-war and asks why a stronger Iran would fold now — explicit **escalation trap** labeling. That indexes cleanly to the **islamabad-hormuz-thesis-weave** knot as Judgment glue next to Barnes/Vance framing, not as merged fact with Pakistan collapse rows.\n\n**04-14 Lebanon fork:** The sectarian-map post is the natural **Pape** hook inside **mercouris-mearsheimer-lebanon-split**: Mercouris-class diplomatic surface vs Mearsheimer-class incentives, with Pape adding **domestic cleavage / worst-case trajectory** (cleansing + civil-war fork). Discipline: do not flatten his map claim into a single state readout; keep the seam with the same-day wire context the knot already names.\n\n**04-16 (Cyrus Janssen studio block):** Recent YT pulls stack four lanes — escalation trap vs Obama/Trump framing, **blockade calendar** claims (day-46 / May-1 / Jun-1 checkpoints), staged escalation with enriched-uranium “fourth center” fork and subjective ground-op percentages, and **Israel as spoiler** in PD rounds. Notebook use: **§1c macro**, **§1d–§1e** week arc, **§1h** nuclear seam; blockade numerics and IMF-style comparisons need **primary econ** before they travel outside this thread.\n\n**Open:**\n\n- Pin **Rubio** and **Israel timing** quotes for the spoiler thread before tight weave with diplomacy rows\n- Hold **blockade day-count** claims to operator transcript + independent commodity/price series\n- Next dated **Lebanon** follow — whether Pape’s fork converges or diverges from wire on talks composition\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** / corpus run).\n\n---",
+      "bullets": [
+        "[strength: high] **Through-line:** Janssen studio uploads **2026-04-16** — escalation trap vs regime-change failure; blockade framework (day-46 / May-1 / Jun-1 checkpoints); Israel as third player — [YouTube @CyrusJanssen](https://www.youtube.com/@CyrusJanssen/videos) — verify:operator-transcript+youtube-watch-id-to-pin.",
+        "[strength: medium] **Signal:** X **2026-04-14** — Lebanon sectarian map + talks seam — [X @ProfessorPape](https://x.com/ProfessorPape) — verify per ingest line.",
+        "[strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md).",
+        "Pin **Rubio** and **Israel timing** quotes for the spoiler thread before tight weave with diplomacy rows",
+        "Hold **blockade day-count** claims to operator transcript + independent commodity/price series",
+        "Next dated **Lebanon** follow — whether Pape’s fork converges or diverges from wire on talks composition"
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Signal:** X **2026-04-14** — Lebanon sectarian map + talks seam — [X @ProfessorPape](https://x.com/ProfessorPape) — verify per ingest line.",
+        "[strength: medium] **Knot lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [mercouris-mearsheimer-lebanon-split](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) · [pape-janssen-escalation-blockade](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md).",
+        "Hold **blockade day-count** claims to operator transcript + independent commodity/price series"
+      ],
+      "tension_lines": [
+        "[strength: high] **Through-line:** Janssen studio uploads **2026-04-16** — escalation trap vs regime-change failure; blockade framework (day-46 / May-1 / Jun-1 checkpoints); Israel as third player — [YouTube @CyrusJanssen](https://www.youtube.com/@CyrusJanssen/videos) — verify:operator-transcript+youtube-watch-id-to-pin.",
+        "Next dated **Lebanon** follow — whether Pape’s fork converges or diverges from wire on talks composition"
+      ],
+      "shift_lines": [
+        "[strength: high] **Through-line:** Janssen studio uploads **2026-04-16** — escalation trap vs regime-change failure; blockade framework (day-46 / May-1 / Jun-1 checkpoints); Israel as third player — [YouTube @CyrusJanssen](https://www.youtube.com/@CyrusJanssen/videos) — verify:operator-transcript+youtube-watch-id-to-pin."
+      ],
+      "source": "h2"
+    }
+  ]
+}

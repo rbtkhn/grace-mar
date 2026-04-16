@@ -1,0 +1,95 @@
+{
+  "expert_id": "trita-parsi",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-trita-parsi-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "**Quincy** / Beltway-facing lane opens the year on **nuclear-talks scope** — thesis: diplomacy fails if **only** the nuclear file is centered; sanctions relief and escalation dynamics sit in the same conversation.\n\n- [strength: high] **Through-line:** **Al Jazeera** **Quotable** — **13 Jan 2026** — “Iran–US diplomacy won’t succeed if focus on nuclear issue” — [video page](https://www.aljazeera.com/video/quotable/2026/1/13/iran-us-diplomacy-wont-succeed-if-focus-on-nuclear) — primary **outlet** date in URL path.\n- [strength: medium] **Mechanism:** **ScheerPost** interview / analysis — **13 Jan 2026** — Iran–US relations insights — [scheerpost.com piece](https://scheerpost.com/2026/01/13/trita-parsi-unveils-the-latest-insights-on-iran-us-relations/) — cross-check against **Al Jazeera** pull quotes before **Judgment** merge.\n- [strength: medium] **Tension:** **NPR** nuclear-talks outcomes — transcript page [NPR](https://www.npr.org/transcripts/nx-s1-5719169) — **dismantlement** expectations vs Iranian red lines — pair with **`seyed-marandi`** register in **batch-analysis**.\n- [strength: low] **Lattice:** Upstream of **April** Parsi×Davis [war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) / EU-naming seam — Q1 is **thesis** only.",
+      "bullets": [
+        "[strength: high] **Through-line:** **Al Jazeera** **Quotable** — **13 Jan 2026** — “Iran–US diplomacy won’t succeed if focus on nuclear issue” — [video page](https://www.aljazeera.com/video/quotable/2026/1/13/iran-us-diplomacy-wont-succeed-if-focus-on-nuclear) — primary **outlet** date in URL path.",
+        "[strength: medium] **Mechanism:** **ScheerPost** interview / analysis — **13 Jan 2026** — Iran–US relations insights — [scheerpost.com piece](https://scheerpost.com/2026/01/13/trita-parsi-unveils-the-latest-insights-on-iran-us-relations/) — cross-check against **Al Jazeera** pull quotes before **Judgment** merge.",
+        "[strength: medium] **Tension:** **NPR** nuclear-talks outcomes — transcript page [NPR](https://www.npr.org/transcripts/nx-s1-5719169) — **dismantlement** expectations vs Iranian red lines — pair with **`seyed-marandi`** register in **batch-analysis**.",
+        "[strength: low] **Lattice:** Upstream of **April** Parsi×Davis [war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) / EU-naming seam — Q1 is **thesis** only."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 1
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **ScheerPost** interview / analysis — **13 Jan 2026** — Iran–US relations insights — [scheerpost.com piece](https://scheerpost.com/2026/01/13/trita-parsi-unveils-the-latest-insights-on-iran-us-relations/) — cross-check against **Al Jazeera** pull quotes before **Judgment** merge.",
+        "[strength: low] **Lattice:** Upstream of **April** Parsi×Davis [war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) / EU-naming seam — Q1 is **thesis** only."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Tension:** **NPR** nuclear-talks outcomes — transcript page [NPR](https://www.npr.org/transcripts/nx-s1-5719169) — **dismantlement** expectations vs Iranian red lines — pair with **`seyed-marandi`** register in **batch-analysis**."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "Cable and long-form **warning** tone — both sides may perceive **short-war** bargaining upside; treat as **hypothesis** until poll / military-fact rows land in `days.md`.\n\n- [strength: high] **Through-line:** **“Extremely Dangerous Situation”** — U.S. & Iran incentives to escalate — [YouTube FJfn5GThhgs](https://www.youtube.com/watch?v=FJfn5GThhgs) — third-party indexes cite **~18 Feb 2026** — verify **title/description** in UI.\n- [strength: medium] **Mechanism:** **NPR** **21 Feb 2026** class coverage of **possible outcomes** on U.S. talks — same transcript hub as January — [NPR transcripts](https://www.npr.org/transcripts/nx-s1-5719169) — **pin** exact segment URL for batch bundles.\n- [strength: medium] **Tension vs Marandi:** Beltway **process** focus vs Tehran **legitimacy** register — **seam** in weave, not merged voice.",
+      "bullets": [
+        "[strength: high] **Through-line:** **“Extremely Dangerous Situation”** — U.S. & Iran incentives to escalate — [YouTube FJfn5GThhgs](https://www.youtube.com/watch?v=FJfn5GThhgs) — third-party indexes cite **~18 Feb 2026** — verify **title/description** in UI.",
+        "[strength: medium] **Mechanism:** **NPR** **21 Feb 2026** class coverage of **possible outcomes** on U.S. talks — same transcript hub as January — [NPR transcripts](https://www.npr.org/transcripts/nx-s1-5719169) — **pin** exact segment URL for batch bundles.",
+        "[strength: medium] **Tension vs Marandi:** Beltway **process** focus vs Tehran **legitimacy** register — **seam** in weave, not merged voice."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **NPR** **21 Feb 2026** class coverage of **possible outcomes** on U.S. talks — same transcript hub as January — [NPR transcripts](https://www.npr.org/transcripts/nx-s1-5719169) — **pin** exact segment URL for batch bundles."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Tension vs Marandi:** Beltway **process** focus vs Tehran **legitimacy** register — **seam** in weave, not merged voice."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "Institutional **event** layer: Quincy **webinar** on **regional shockwaves** and **exit** framing after **kinetic** opening — use as **agenda + speaker list** receipt, not battlefield truth.\n\n- [strength: high] **Through-line:** Quincy event **“War in Iran: Regional Shockwaves and the Search for an Exit”** — moderated by Parsi — **31 Mar 2026** — [event page](https://quincyinst.org/events/war-in-iran-regional-shockwaves-and-the-search-for-an-exit/) — verify **time zone** + panel before **Links**-grade cite.\n- [strength: medium] **Lattice:** Pairs naturally with **`douglas-macgregor`** / **`seyed-marandi`** per roster — fold only with **`crosses:`** + dated primaries.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).",
+      "bullets": [
+        "[strength: high] **Through-line:** Quincy event **“War in Iran: Regional Shockwaves and the Search for an Exit”** — moderated by Parsi — **31 Mar 2026** — [event page](https://quincyinst.org/events/war-in-iran-regional-shockwaves-and-the-search-for-an-exit/) — verify **time zone** + panel before **Links**-grade cite.",
+        "[strength: medium] **Lattice:** Pairs naturally with **`douglas-macgregor`** / **`seyed-marandi`** per roster — fold only with **`crosses:`** + dated primaries."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 1,
+        "low": 0
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — **2026-04-12** X / CNN overlay ingested; war-powers + EU-naming knot **2026-04-14**; April not closed._\n\nApril stacks **Lebanon as sticking point** and nested ceasefire-quote chains on X beside **Islamabad–Hormuz** thesis week — Beltway process lane stays **seam-pinned** vs **seyed-marandi** legitimacy register.\n\n- [strength: medium] **Signal (cold):** @tparsi — CNN segment: Lebanon sticking point; nuclear deadlock as possible mask — [X @tparsi](https://x.com/tparsi) — verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary.\n- [strength: medium] **Knot:** [parsi-davis-war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) — EU naming vs Congress / war-powers lane — link hub + verify pins per knot header.\n- [strength: medium] **Lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) · [kremlin-iri-uranium-dual-register](strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md).\n\n---",
+      "bullets": [
+        "[strength: medium] **Signal (cold):** @tparsi — CNN segment: Lebanon sticking point; nuclear deadlock as possible mask — [X @tparsi](https://x.com/tparsi) — verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary.",
+        "[strength: medium] **Knot:** [parsi-davis-war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) — EU naming vs Congress / war-powers lane — link hub + verify pins per knot header.",
+        "[strength: medium] **Lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) · [kremlin-iri-uranium-dual-register](strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 3,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Signal (cold):** @tparsi — CNN segment: Lebanon sticking point; nuclear deadlock as possible mask — [X @tparsi](https://x.com/tparsi) — verify:pin-exact-status-URL-for-CNN-thread+Sweidan-primary.",
+        "[strength: medium] **Lattice:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) · [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) · [kremlin-iri-uranium-dual-register](strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md)."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Knot:** [parsi-davis-war-powers](strategy-notebook-knot-2026-04-14-parsi-davis-war-powers.md) — EU naming vs Congress / war-powers lane — link hub + verify pins per knot header."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

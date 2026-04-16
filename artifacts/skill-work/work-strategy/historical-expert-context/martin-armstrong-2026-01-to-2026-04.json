@@ -1,0 +1,76 @@
+{
+  "expert_id": "martin-armstrong",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-martin-armstrong-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "January has **no dated** notebook ingest for Armstrong in this snapshot; the lane is **cycle/timing, sovereign debt, energy–food shocks** — not a substitute for **`steve-jermy`** diesel mechanics — per roster.\n\n- [strength: low] **Identity anchor:** Armstrong Economics + X + YouTube (Seed).  \n  [armstrongeconomics.com](https://www.armstrongeconomics.com/) · [X @ArmstrongEcon](https://x.com/ArmstrongEcon) · [YouTube @MartinArmstrong](https://www.youtube.com/@MartinArmstrong)",
+      "bullets": [
+        "[strength: low] **Identity anchor:** Armstrong Economics + X + YouTube (Seed)."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February shows **no indexed Q1 primary** in-repo; “model was right on timing” claims stay **hypothesis-grade** until methodology docs exist — per roster note.\n\n- [strength: low] **Repeat:** Site hub — not a February appearance list.",
+      "bullets": [
+        "[strength: low] **Repeat:** Site hub — not a February appearance list."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March remains **scope-only**; **April** knots may fold Armstrong X on **cash / Hormuz / digital dollar** beside Mercouris/Mearsheimer/Barnes — Q1 does **not** merge voices.\n\n- [strength: low] **Repeat anchor:** Same Seed trio — calendar discipline unchanged.",
+      "bullets": [
+        "[strength: low] **Repeat anchor:** Same Seed trio — calendar discipline unchanged."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 0,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [
+        "[strength: low] **Repeat anchor:** Same Seed trio — calendar discipline unchanged."
+      ],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — no April machine line indexed here; **April** [armstrong-cash-hormuz-digital-dollar-arc](strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md) knot names Armstrong X in synthesis — see knot body for cite discipline._\n\n- [strength: medium] **Lattice (knot-index):** [armstrong-cash-hormuz-digital-dollar-arc](strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md) — cash / Hormuz / digital dollar / fertilizer stress — orthogonal to pure Ritter blockade weave.\n- [strength: low] **Hub:** [armstrongeconomics.com](https://www.armstrongeconomics.com/) · [X @ArmstrongEcon](https://x.com/ArmstrongEcon) — scope anchor until dated X rows pin.\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).\n\n---",
+      "bullets": [
+        "[strength: medium] **Lattice (knot-index):** [armstrong-cash-hormuz-digital-dollar-arc](strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md) — cash / Hormuz / digital dollar / fertilizer stress — orthogonal to pure Ritter blockade weave.",
+        "[strength: low] **Hub:** [armstrongeconomics.com](https://www.armstrongeconomics.com/) · [X @ArmstrongEcon](https://x.com/ArmstrongEcon) — scope anchor until dated X rows pin."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 1,
+        "low": 1
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

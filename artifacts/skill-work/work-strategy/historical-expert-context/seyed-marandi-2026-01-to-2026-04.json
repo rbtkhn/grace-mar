@@ -1,0 +1,96 @@
+{
+  "expert_id": "seyed-marandi",
+  "thread_path": "docs/skill-work/work-strategy/strategy-notebook/strategy-expert-seyed-marandi-thread.md",
+  "start_segment": "2026-01",
+  "end_segment": "2026-04",
+  "parse_note": "parsed `## YYYY-MM` month segments",
+  "segments": [
+    {
+      "segment_id": "2026-01",
+      "raw_text": "Early-year material frames **domestic unrest**, foreign-media narrative, and escalation warnings from **Tehran** — this register stresses **legitimacy** and **proportionality** in how Western outlets read riots versus state-aligned rallies.\n\n- [strength: high] **Through-line:** Pro-government vs riot framing — **16 Jan 2026** Tehran-titled interview (rally scale vs infiltration narrative) — primary: [YouTube — interview dated Friday 16 Jan 2026 from Tehran](https://www.youtube.com/watch?v=1AvXIls7lQQ) — verify **upload/title date** in UI before cite-grade merge.\n- [strength: medium] **Mechanism:** **Greater Eurasia** / Singju **civil-unrest** transcript lane — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**, not wire-verified battlefield fact.\n- [strength: medium] **Tension:** Same window as **Mercouris** diplomatic-room tickers vs **Marandi** legitimacy register — **batch-analysis** seam, not voice-merge.\n- [strength: low] **Lattice:** Upstream of **April** Marandi×Ritter×Mercouris [Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Q1 holds **voice discipline** only.",
+      "bullets": [
+        "[strength: high] **Through-line:** Pro-government vs riot framing — **16 Jan 2026** Tehran-titled interview (rally scale vs infiltration narrative) — primary: [YouTube — interview dated Friday 16 Jan 2026 from Tehran](https://www.youtube.com/watch?v=1AvXIls7lQQ) — verify **upload/title date** in UI before cite-grade merge.",
+        "[strength: medium] **Mechanism:** **Greater Eurasia** / Singju **civil-unrest** transcript lane — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**, not wire-verified battlefield fact.",
+        "[strength: medium] **Tension:** Same window as **Mercouris** diplomatic-room tickers vs **Marandi** legitimacy register — **batch-analysis** seam, not voice-merge.",
+        "[strength: low] **Lattice:** Upstream of **April** Marandi×Ritter×Mercouris [Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Q1 holds **voice discipline** only."
+      ],
+      "strength_counts": {
+        "high": 1,
+        "medium": 2,
+        "low": 1
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **Greater Eurasia** / Singju **civil-unrest** transcript lane — [Singju Post transcript](https://singjupost.com/greater-eurasia-podcast-w-seyed-m-marandi-on-irans-civil-unrest-transcript/) — **transcript-grade**, not wire-verified battlefield fact."
+      ],
+      "tension_lines": [
+        "[strength: high] **Through-line:** Pro-government vs riot framing — **16 Jan 2026** Tehran-titled interview (rally scale vs infiltration narrative) — primary: [YouTube — interview dated Friday 16 Jan 2026 from Tehran](https://www.youtube.com/watch?v=1AvXIls7lQQ) — verify **upload/title date** in UI before cite-grade merge.",
+        "[strength: medium] **Tension:** Same window as **Mercouris** diplomatic-room tickers vs **Marandi** legitimacy register — **batch-analysis** seam, not voice-merge."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-02",
+      "raw_text": "February clips stack **catastrophic-war** framing (long-form podcast) beside **post-strike** urgency narratives — useful for **timing** and **register** (who is speaking after which event), not for collapsing into a single “Iran position.”\n\n- [strength: high] **Through-line:** **Daniel Davis Deep Dive** — Prof. Marandi on **war with Iran** as **catastrophic** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/prof-seyed-marandi-war-w-iran-will-be-catastrophic/id1761369345?i=1000749314279) — verify **episode date** in client (index cites **11 Feb 2026** class appearances).\n- [strength: high] **Signal:** **Israel & U.S. launch surprise attack** transcript + mirror video — [Singju Post transcript](https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/) · [YouTube](https://www.youtube.com/watch?v=NEW44Zk7W3g) — **pair** with Feb **Glenn Diesen** urgent clip if the notebook needs same-week **cross-host** discipline.\n- [strength: medium] **Tension vs Parsi:** **Quincy** diplomacy-first Beltway lane vs **Marandi** **IRI-facing** legitimacy register — compare in **batch-analysis**, not merged Judgment.",
+      "bullets": [
+        "[strength: high] **Through-line:** **Daniel Davis Deep Dive** — Prof. Marandi on **war with Iran** as **catastrophic** — [Apple Podcasts episode](https://podcasts.apple.com/us/podcast/prof-seyed-marandi-war-w-iran-will-be-catastrophic/id1761369345?i=1000749314279) — verify **episode date** in client (index cites **11 Feb 2026** class appearances).",
+        "[strength: high] **Signal:** **Israel & U.S. launch surprise attack** transcript + mirror video — [Singju Post transcript](https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/) · [YouTube](https://www.youtube.com/watch?v=NEW44Zk7W3g) — **pair** with Feb **Glenn Diesen** urgent clip if the notebook needs same-week **cross-host** discipline.",
+        "[strength: medium] **Tension vs Parsi:** **Quincy** diplomacy-first Beltway lane vs **Marandi** **IRI-facing** legitimacy register — compare in **batch-analysis**, not merged Judgment."
+      ],
+      "strength_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: high] **Signal:** **Israel & U.S. launch surprise attack** transcript + mirror video — [Singju Post transcript](https://singjupost.com/seyed-m-marandi-israel-u-s-launch-surprise-attack-on-iran-transcript/) · [YouTube](https://www.youtube.com/watch?v=NEW44Zk7W3g) — **pair** with Feb **Glenn Diesen** urgent clip if the notebook needs same-week **cross-host** discipline."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Tension vs Parsi:** **Quincy** diplomacy-first Beltway lane vs **Marandi** **IRI-facing** legitimacy register — compare in **batch-analysis**, not merged Judgment."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-03",
+      "raw_text": "March density shifts to **war-in-progress** commentary — **military-strategy** critiques, **ceasefire** posture, and **energy / South Pars** framing; **Glenn Diesen** long-form is the main discoverability spine in search bundles.\n\n- [strength: high] **Through-line:** **“Iran's Military Strategy & U.S. Miscalculations”** — **Glenn Diesen** — [YouTube IZFVTfNQjnA](https://www.youtube.com/watch?v=IZFVTfNQjnA) — re-verify **publish date** in UI (~early March 2026 in third-party indexes).\n- [strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.\n- [strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering).\n\nCanonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).",
+      "bullets": [
+        "[strength: high] **Through-line:** **“Iran's Military Strategy & U.S. Miscalculations”** — **Glenn Diesen** — [YouTube IZFVTfNQjnA](https://www.youtube.com/watch?v=IZFVTfNQjnA) — re-verify **publish date** in UI (~early March 2026 in third-party indexes).",
+        "[strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.",
+        "[strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering)."
+      ],
+      "strength_counts": {
+        "high": 2,
+        "medium": 1,
+        "low": 0
+      },
+      "signal_lines": [
+        "[strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.",
+        "[strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering)."
+      ],
+      "tension_lines": [
+        "[strength: medium] **Mechanism:** **“Iran Rejects Ceasefire — Demands New Status Quo”** — [YouTube 6n1_6WKpl5A](https://www.youtube.com/watch?v=6n1_6WKpl5A) — **ceasefire** language vs **April** knot forks — hold **seam** until dated primary pins land.",
+        "[strength: high] **Signal:** **South Pars / economic war** after reported strikes on major **gas** infrastructure — [YouTube AYLACkCWXRA](https://www.youtube.com/watch?v=AYLACkCWXRA) — **adjacent** to **Jermy** energy-system lane — label **register** (MFA-style vs engineering)."
+      ],
+      "shift_lines": [],
+      "source": "h2"
+    },
+    {
+      "segment_id": "2026-04",
+      "raw_text": "_Partial month — April Segment 2 has **knot references** only (scaffold + blockade weave); no verbatim Marandi line in machine block at authoring time._\n\nApril places Marandi on the **triple scaffold** with Ritter (mechanics) and Mercouris (legitimacy surface) — Iranian red-line authority lane — **do not** collapse with ORBAT or Duran narrative alone.\n\n- [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — shared Hormuz week anchor — cross-day to 04-12 / 04-14 knots per header.\n- [strength: medium] **Parallel:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — blockade mechanics + sister knots — seam not merge.\n\n---",
+      "bullets": [
+        "[strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — shared Hormuz week anchor — cross-day to 04-12 / 04-14 knots per header.",
+        "[strength: medium] **Parallel:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — blockade mechanics + sister knots — seam not merge."
+      ],
+      "strength_counts": {
+        "high": 0,
+        "medium": 2,
+        "low": 0
+      },
+      "signal_lines": [],
+      "tension_lines": [],
+      "shift_lines": [],
+      "source": "h2"
+    }
+  ]
+}

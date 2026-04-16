@@ -18,6 +18,8 @@ python3 scripts/strategy_historical_expert_context.py \
   --apply
 ```
 
+**Range choice:** Use `--end-segment 2026-03` for **Q1-only** rollups, or `--end-segment 2026-04` (or later months as they exist in Segment 1) for **year-to-date** context through that calendar month. Wider ranges supersede narrower rollups for the same `<expert_id>` when you need Jan–Apr (or longer) in one file — older `*-2026-01-to-2026-03.md` artifacts may remain on disk until removed manually.
+
 Reads only the human layer **above** `<!-- strategy-expert-thread:start -->` in `strategy-expert-<id>-thread.md`. Strips the backfill HTML block before parsing month headings.
 
 ## On-disk layout
