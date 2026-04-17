@@ -3,16 +3,28 @@
 WORK only; not Record.
 
 **Source:** Distilled from [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
-**Process:** Script extracts raw material (transcript lines + knot references); assistant refines into a curated analytical thread.
-**Updated:** When the operator runs `thread`.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
+**Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-robert-barnes.md`](strategy-expert-robert-barnes.md) (profile) and [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (7-day verbatim).
 
 ---
+## Journal layer — Narrative (operator)
 
-## Segment 1 — Narrative journal (operator)
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-**Layout:** Each **`## YYYY-MM`** block is one calendar month in Segment 1; Segment 2 stays below the marker.
+**Layout:** Stay on **one** `strategy-expert-robert-barnes-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
 
+_(No narrative distillation yet — add prose above the markers, not inside them.)_
+
+**Optional journal-layer extensions (still above the thread start HTML comment):**
+
+- **`## YYYY-MM` month headings** — each heading opens **one month-segment** of the readable journal (quarter-scale or ongoing). **Default:** **at least ~500 words** of **prose** per month-segment (words on non-bullet substantive lines; see `validate_strategy_expert_threads.py`), then optional bullets. A short lede alone is not enough when tooling expects a full segment. Bullet stacks with `[strength: …]` hooks are **compressed ledger** material — fine for lattice discipline — but they **do not** count toward the prose minimum and are **not** an equally canonical substitute for the prose-first journal unless the operator opts into ledger-only months (see HTML comment below). To scaffold prose to the minimum from roster metadata, run `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root.
+
+- **Historical expert context (optional rebuild)** — `python3 scripts/strategy_historical_expert_context.py --expert-id robert-barnes --start-segment YYYY-MM --end-segment YYYY-MM --apply` emits batch-analysis handoff under `artifacts/skill-work/work-strategy/historical-expert-context/`: a **range rollup** (`robert-barnes-<start>-to-<end>.md`) plus **per-month** files (`robert-barnes/<YYYY-MM>.md`). [`strategy_batch_analysis_with_history.py`](../../../../scripts/strategy_batch_analysis_with_history.py) loads **per-month** artifacts when every month in the requested window exists; otherwise it uses the rollup. See `historical-expert-context/README.md` in that folder.
+
+- **`<!-- backfill:robert-barnes:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
+
+- **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines (optional `--month MM` to audit one month only). For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-journal-layer.mdc`.
 ## 2026-01
 
 January has **no dated** notebook ingest for Barnes in this Q1 snapshot; the lane is **domestic liability / executive chain / TS framing** — not **`robert-pape`** polling — per roster. Law-firm hubs are anchors only.
@@ -127,16 +139,16 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 
 ---
 <!-- strategy-expert-thread:start -->
-## Segment 2 — Machine extraction (script-maintained)
+## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
-### Segment 2a — Recent transcript material
+### Recent transcript material
 
 ## 2026-04-12
 - `X | cold: @barnes_law — “Trump doubles down on dumb”; QT Disclose.tv summarizing executive TS post (Hormuz blockade in/out, toll interdiction in international waters, mine clearing, escalation rhetoric) // hook: third **domestic** pole on Hormuz lever vs Solomon “card” / Martenson spiral; aligns §1e + notebook domestic-fork Judgment | https://x.com/barnes_law | verify:pin-exact-status-URL+archive-Truth-Social-primary | thread:robert-barnes`
 
-### Segment 2b — Knot references
+### Knot references
 
 - [strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) 2026-04-12 (islamabad-hormuz-thesis-weave) — Islamabad collapse + Thesis A/B + indexed threads; cross-links to 04-13 scaffold + 04-14 Ritter weave
 - [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic; weave_count from knot_seam_metrics.py (outgoing knot links)

@@ -3,20 +3,28 @@
 WORK only; not Record.
 
 **Source:** Human **narrative journal** (below) + [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
-**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers in **readable prose** (optional **ledger** after the end marker).
-**Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
+**Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-john-mearsheimer.md`](strategy-expert-john-mearsheimer.md) (profile) and [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (7-day verbatim).
 
 ---
+## Journal layer — Narrative (operator)
 
-## Segment 1 — Narrative journal (operator)
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. **Segment 1** is **not** overwritten by the **`thread`** script._
+**Layout:** Stay on **one** `strategy-expert-john-mearsheimer-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 
----
+**Optional journal-layer extensions (still above the thread start HTML comment):**
 
+- **`## YYYY-MM` month headings** — each heading opens **one month-segment** of the readable journal (quarter-scale or ongoing). **Default:** **at least ~500 words** of **prose** per month-segment (words on non-bullet substantive lines; see `validate_strategy_expert_threads.py`), then optional bullets. A short lede alone is not enough when tooling expects a full segment. Bullet stacks with `[strength: …]` hooks are **compressed ledger** material — fine for lattice discipline — but they **do not** count toward the prose minimum and are **not** an equally canonical substitute for the prose-first journal unless the operator opts into ledger-only months (see HTML comment below). To scaffold prose to the minimum from roster metadata, run `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root.
+
+- **Historical expert context (optional rebuild)** — `python3 scripts/strategy_historical_expert_context.py --expert-id john-mearsheimer --start-segment YYYY-MM --end-segment YYYY-MM --apply` emits batch-analysis handoff under `artifacts/skill-work/work-strategy/historical-expert-context/`: a **range rollup** (`john-mearsheimer-<start>-to-<end>.md`) plus **per-month** files (`john-mearsheimer/<YYYY-MM>.md`). [`strategy_batch_analysis_with_history.py`](../../../../scripts/strategy_batch_analysis_with_history.py) loads **per-month** artifacts when every month in the requested window exists; otherwise it uses the rollup. See `historical-expert-context/README.md` in that folder.
+
+- **`<!-- backfill:john-mearsheimer:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
+
+- **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines (optional `--month MM` to audit one month only). For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-journal-layer.mdc`.
 ## 2026-01
 
 
@@ -156,14 +164,14 @@ Verification stance for John Mearsheimer in 2026-04 should stay tier-honest: web
 
 ---
 <!-- strategy-expert-thread:start -->
-## Segment 2 — Machine extraction (script-maintained)
+## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
-### Segment 2b — Knot references
+### Knot references
 
 - [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) 2026-04-13 (marandi-ritter-mercouris-hormuz-scaffold) — Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14
 - [strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md) 2026-04-14 (mercouris-mearsheimer-lebanon-split) — Abstract Mercouris diplomatic surface vs Mearsheimer incentives; Lebanon fork; Pape lane (escalation-trap / sectarian map) indexes here for expert-thread knot refs
 - [strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) 2026-04-14 (scott-ritter-blockade-hormuz-weave) — Ritter blockade mechanics + sister knots + indexed threads same topic; weave_count from knot_seam_metrics.py (outgoing knot links)
-- [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) 2026-04-16 (pape-janssen-escalation-blockade) — Pape Janssen escalation trap + staged blockade calendar + Israel spoiler; lattice vs Mearsheimer/Davis; Lebanon X + AP seam
+- [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) 2026-04-16 (pape-janssen-escalation-blockade) — Weave D: Pape-primary Janssen trap + blockade calendar + spoiler; same-day Marandi+Blumenthal evidence streams → sister weave C; lattice vs Mearsheimer/Davis
 <!-- strategy-expert-thread:end -->

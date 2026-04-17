@@ -3,16 +3,28 @@
 WORK only; not Record.
 
 **Source:** Distilled from [`strategy-expert-brian-berletic-transcript.md`](strategy-expert-brian-berletic-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
-**Process:** Script extracts raw material (transcript lines + knot references); assistant refines into a curated analytical thread.
-**Updated:** When the operator runs `thread`.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
+**Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-brian-berletic.md`](strategy-expert-brian-berletic.md) (profile) and [`strategy-expert-brian-berletic-transcript.md`](strategy-expert-brian-berletic-transcript.md) (7-day verbatim).
 
 ---
+## Journal layer — Narrative (operator)
 
-## Segment 1 — Narrative journal (operator)
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-**Layout:** Each **`## YYYY-MM`** block is one calendar month in Segment 1; Segment 2 (machine block) stays below the marker.
+**Layout:** Stay on **one** `strategy-expert-brian-berletic-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that "Segment 2" in the month sense.
 
+_(No narrative distillation yet — add prose above the markers, not inside them.)_
+
+**Optional journal-layer extensions (still above the thread start HTML comment):**
+
+- **`## YYYY-MM` month headings** — each heading opens **one month-segment** of the readable journal (quarter-scale or ongoing). **Default:** **at least ~500 words** of **prose** per month-segment (words on non-bullet substantive lines; see `validate_strategy_expert_threads.py`), then optional bullets. A short lede alone is not enough when tooling expects a full segment. Bullet stacks with `[strength: …]` hooks are **compressed ledger** material — fine for lattice discipline — but they **do not** count toward the prose minimum and are **not** an equally canonical substitute for the prose-first journal unless the operator opts into ledger-only months (see HTML comment below). To scaffold prose to the minimum from roster metadata, run `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root.
+
+- **Historical expert context (optional rebuild)** — `python3 scripts/strategy_historical_expert_context.py --expert-id brian-berletic --start-segment YYYY-MM --end-segment YYYY-MM --apply` emits batch-analysis handoff under `artifacts/skill-work/work-strategy/historical-expert-context/`: a **range rollup** (`brian-berletic-<start>-to-<end>.md`) plus **per-month** files (`brian-berletic/<YYYY-MM>.md`). [`strategy_batch_analysis_with_history.py`](../../../../scripts/strategy_batch_analysis_with_history.py) loads **per-month** artifacts when every month in the requested window exists; otherwise it uses the rollup. See `historical-expert-context/README.md` in that folder.
+
+- **`<!-- backfill:brian-berletic:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
+
+- **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines (optional `--month MM` to audit one month only). For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-journal-layer.mdc`.
 ## 2026-01
 
 January holds **no dated** `thread:` ingest line for Berletic in this notebook snapshot; the lane remains **industrial capacity, sanctions, proxy-war logistics** per the roster. Treat hub links as **routing anchors**, not proof of a January calendar appearance.
@@ -128,9 +140,9 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 
 ---
 <!-- strategy-expert-thread:start -->
-## Segment 2 — Machine extraction (script-maintained)
+## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
 _(No transcript or knot material for extraction.)_
 <!-- strategy-expert-thread:end -->

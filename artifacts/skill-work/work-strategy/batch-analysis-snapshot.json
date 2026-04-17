@@ -1,8 +1,95 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-17T00:51:45.914521+00:00",
-  "count": 16,
+  "generated_at": "2026-04-17T20:10:46.790815+00:00",
+  "count": 21,
   "batch_analysis_refs": [
+    {
+      "date": "2026-04-17",
+      "label": "Davis × Araghchi × Trump TS",
+      "raw": "- batch-analysis | 2026-04-17 | Davis × Araghchi × Trump TS | **Tension-first:** IRI **signals** Hormuz **open** for ceasefire remainder vs **U.S. executive** **maximalist** reply **same day** — **sequenced bargaining**, not necessarily **monotonic** **Oman** **momentum** from §1f paste. **Davis** = restraint / **negotiation-window** analyst — routes to **Mearsheimer** (**incentives**) + **Mercouris** (**staging**) overlaps in [strategy-expert-daniel-davis-thread.md](strategy-expert-daniel-davis-thread.md); **does not** replace **§1h** / **§1e** primaries.",
+      "expert_ids": [
+        "daniel-davis",
+        "john-mearsheimer",
+        "alexander-mercouris"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "daniel-davis",
+          "john-mearsheimer",
+          "alexander-mercouris"
+        ],
+        "upstream_verify": [
+          "daniel-davis"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Pool vs Truth Social (dual-register)**",
+      "raw": "- batch-analysis | 2026-04-17 | **Pool vs Truth Social (dual-register)** | **Tension-first:** Wire **pool** remarks **04-17** (e.g. **Moneycontrol** on **uranium** / “**nuclear dust**” / deal **optimism**) **≠** authenticated **Truth Social** **maximalist** embed — **do not** merge into one **U.S. position** in Judgment without **both** primaries + explicit **seam**; see [daily-brief-2026-04-17.md — strategy + verify](../daily-brief-2026-04-17.md#strategy-verify-2026-04-17).",
+      "expert_ids": [],
+      "confidence": "none",
+      "sources": {}
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Marandi X × Araghchi × tri-mind (`ab+c`) seam**",
+      "raw": "- batch-analysis | 2026-04-17 | **Marandi X × Araghchi × tri-mind (`ab+c`) seam** | **Dual-register (IRI):** **§1h / @araghchi** “open…” = **MFA signal**; **@s_m_marandi** three conditions = **gloss** — same object, **two tiers** (do not one-line merge for Links-grade). **QT:** quoted block = **Araghchi**; text above = **Marandi** — tier-tag each. **Lebanon ↔ Strait:** *ceasefire durability load-bearing for how “open” is read by markets/insurers, not necessarily same-hour naval physics.* **Global economy** line = rhetorical pressure until receipts. See [strategy-expert-seyed-marandi-thread.md](strategy-expert-seyed-marandi-thread.md) § **Tri-mind resolution**.",
+      "expert_ids": [
+        "seyed-marandi"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "seyed-marandi"
+        ],
+        "upstream_verify": [
+          "seyed-marandi"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Parsi X × Marandi (04-17 X + 04-16 BP)**",
+      "raw": "- batch-analysis | 2026-04-17 | **Parsi X × Marandi (04-17 X + 04-16 BP)** | **Tension-first:** **`trita-parsi`** = Quincy **process** read (Pakistan-mediated **framework** timing, **Israeli sabotage** of US–Iran reconciliation, **Trump–Netanyahu** leverage, optional **“Iran saved Lebanon”** narrative). **`seyed-marandi`** = Tehran **insider** + **Breaking Points** (04-16): **Islamabad** authority, **Netanyahu**/lobby **block**, **Hormuz** / economy, **Lebanon** **moral** frame; **04-17** Marandi X = **gloss** on **@araghchi** (already batched above) — **third** register vs Parsi **Beltway** fourth-party synthesis. **Shared:** spoiler pressure on **Netanyahu** and **U.S. enforcement** credibility — **do not** fuse voices. | crosses:trita-parsi+seyed-marandi",
+      "expert_ids": [
+        "trita-parsi",
+        "seyed-marandi",
+        "daniel-davis"
+      ],
+      "confidence": "high",
+      "sources": {
+        "crosses": [
+          "trita-parsi",
+          "seyed-marandi"
+        ],
+        "upstream_verify": [
+          "daniel-davis",
+          "trita-parsi"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "label": "Marandi BP 04-16 × 04-13 scaffold",
+      "raw": "- batch-analysis | 2026-04-16 | Marandi BP 04-16 × 04-13 scaffold | **Tension-first:** Iranian **process** and **moral-historical** register (Islamabad authority vs Vance channel, school/synagogue/Gaza–Lebanon frames) vs **Ritter-class** **USN** / **interdiction** facts and **wire-tier** throughput — **do not** merge lanes. **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** object as **Mercouris** narrative surface — **verify** still splits **speech** from **AIS** / **DOD** readouts.",
+      "expert_ids": [
+        "scott-ritter",
+        "alexander-mercouris",
+        "seyed-marandi"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "scott-ritter",
+          "alexander-mercouris"
+        ],
+        "upstream_verify": [
+          "seyed-marandi"
+        ]
+      }
+    },
     {
       "date": "2026-04-14",
       "label": "Armstrong cash × Gulf fertilizer × U.S. digital-dollar law",

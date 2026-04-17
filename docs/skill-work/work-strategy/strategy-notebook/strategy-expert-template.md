@@ -1,6 +1,6 @@
 # Strategy expert — templates (WORK only)
 
-**Single source** for the three on-disk files each commentator uses. When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped). `validate_strategy_expert_threads.py` checks on-disk `strategy-expert-<id>-thread.md` Segment 1 month blocks (prose vs list-only hints, and **≥500 prose words** per `## YYYY-MM` unless opted out).
+**Single source** for the three on-disk files each commentator uses. When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped). `validate_strategy_expert_threads.py` checks on-disk `strategy-expert-<id>-thread.md` **journal-layer** month blocks (prose vs list-only hints, and **≥500 prose words** per `## YYYY-MM` unless opted out). Use `--month MM` (`01`–`12`) to scope checks to one calendar month across all expert-thread files; omit for a full audit.
 
 Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template)
 
@@ -110,40 +110,40 @@ WORK only; not Record.
 WORK only; not Record.
 
 **Source:** Human **narrative journal** (below) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
-**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine extraction** block between markers. Operator / assistant maintains the **narrative journal** above the markers in **readable prose** (optional **ledger** after the end marker).
-**Updated:** Narrative — when you distill; machine block — when you run **`thread`**.
+**Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
+**Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile) and [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day verbatim).
 
 ---
 
-## Segment 1 — Narrative journal (operator)
+## Journal layer — Narrative (operator)
 
-_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. **Segment 1** is **not** overwritten by the **`thread`** script._
+_Write here in full sentences. Dated arcs are welcome (e.g. **2026-04-12 → 04-15**). Cover: what this voice did this week, how it **intersects** named **knots**, convergence/tension with other **`thread:`** experts, and **Open** pins. The **journal layer** is **not** overwritten by the **`thread`** script._
 
-**Layout:** Stay on **one** `strategy-expert-<expert_id>-thread.md` file. Within Segment 1, each **calendar month** you maintain is a **segment** of that journal: label it with a **`## YYYY-MM`** heading (one segment per month, in order). That is the expert-thread segment model for tooling and historical context; it is **not** a second top-level “Segment 1/2/3” split — Segment 2 remains only the machine block below the marker.
+**Layout:** Stay on **one** `strategy-expert-<expert_id>-thread.md` file. Within the **journal layer**, each **`## YYYY-MM`** heading is a **month segment**. For **2026:** **Segment 1** = January (`## 2026-01`), **Segment 2** = February (`## 2026-02`), **Segment 3** = March (`## 2026-03`), **Segment 4** = April (`## 2026-04`, ongoing). The **machine layer** (script-maintained) is **only** the fenced block between the **strategy-expert-thread** HTML start and end comments — do not call that “Segment 2” in the month sense.
 
 _(No narrative distillation yet — add prose above the markers, not inside them.)_
 
-**Optional Segment 1 extensions (still above `<!-- strategy-expert-thread:start -->`):**
+**Optional journal-layer extensions (still above the thread start HTML comment):**
 
 - **`## YYYY-MM` month headings** — each heading opens **one month-segment** of the readable journal (quarter-scale or ongoing). **Default:** **at least ~500 words** of **prose** per month-segment (words on non-bullet substantive lines; see `validate_strategy_expert_threads.py`), then optional bullets. A short lede alone is not enough when tooling expects a full segment. Bullet stacks with `[strength: …]` hooks are **compressed ledger** material — fine for lattice discipline — but they **do not** count toward the prose minimum and are **not** an equally canonical substitute for the prose-first journal unless the operator opts into ledger-only months (see HTML comment below). To scaffold prose to the minimum from roster metadata, run `python3 scripts/expand_strategy_expert_segment_prose.py --apply` from repo root.
 - **Historical expert context (optional rebuild)** — `python3 scripts/strategy_historical_expert_context.py --expert-id <expert_id> --start-segment YYYY-MM --end-segment YYYY-MM --apply` emits batch-analysis handoff under `artifacts/skill-work/work-strategy/historical-expert-context/`: a **range rollup** (`<expert_id>-<start>-to-<end>.md`) plus **per-month** files (`<expert_id>/<YYYY-MM>.md`). [`strategy_batch_analysis_with_history.py`](../../../../scripts/strategy_batch_analysis_with_history.py) loads **per-month** artifacts when every month in the requested window exists; otherwise it uses the rollup. See `historical-expert-context/README.md` in that folder.
 - **`<!-- backfill:<expert_id>:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
-- **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines. For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-segment-1.mdc`.
+- **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines (optional `--month MM` to audit one month only). For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-journal-layer.mdc`.
 
 ---
 
 <!-- strategy-expert-thread:start -->
 
-## Segment 2 — Machine extraction (script-maintained)
+## Machine layer — Extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker. The HTML-comment block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the `<!-- strategy-expert-thread:start -->` marker. The HTML-comment block is replaced on each `thread` run._
 
-### Segment 2a — Recent transcript material
+### Recent transcript material
 
 _(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when transcript lines exist.)_
 
-### Segment 2b — Knot references
+### Knot references
 
 _(Populated when knot index references this expert.)_
 
