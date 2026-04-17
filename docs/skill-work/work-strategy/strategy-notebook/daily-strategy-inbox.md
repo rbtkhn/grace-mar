@@ -4,6 +4,10 @@
 
 **Accumulator date:** The **`YYYY-MM-DD`** on the **`Accumulator for`** line is the **local calendar date implied by the system timestamp** (host clock when the file is edited, or the session **Today's date** field in the assistant environment—same source of truth). **Do not** set or hold that date by **weave** alone; **update** it when the **actual calendar day** changes.
 
+**Footgun (why this drifts to “tomorrow”):** **`Accumulator for:` must always be *today* (operator local day)** — not the date in a **daily-brief-YYYY-MM-DD** filename you just edited, not a **Grok “Watchlist for Tomorrow”** line, and **not** a deferred batch label like **`Expert X … 2026-04-18`** (those are **subsection grep keys** and may point at a *future* calendar day on purpose; see [STATUS.md](STATUS.md) / `days.md` weave notes). If the top line shows **today + 1**, roll it back to **today** and keep future-dated work in **row text** only.
+
+**Verify (optional):** `python3 scripts/verify_strategy_inbox_accumulator.py` — exits **0** only if `Accumulator for` matches **today** on the machine; use `--date YYYY-MM-DD` to assert the **operator** calendar day when the runner’s clock differs (e.g. UTC CI). Cursor loads [`.cursor/rules/strategy-inbox-accumulator-date.mdc`](../../../../.cursor/rules/strategy-inbox-accumulator-date.mdc) when this file is open.
+
 **`Accumulator` / inbox subsection dates ≠ `days.md` headings (anti-split):** The accumulator line and labels like **`### Expert X / YT ingest — YYYY-MM-DD`** are **scratch organization and grep keys**. They **do not** require a matching **`## YYYY-MM-DD`** in [`chapters/YYYY-MM/days.md`](chapters/YYYY-MM/days.md) — especially when the operator has stated a **last-ingest boundary** or when assistant work continues across local midnights. **Weave** into the **operator-chosen notebook day** (or a single episodic heading); add a **weave date note** if publication dates and heading dates diverge. Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § `days.md` date keys — semantics and anti-split](STRATEGY-NOTEBOOK-ARCHITECTURE.md#days-md-date-semantics).
 
 **`grounding_delta` (optional):** One short line per day (or per heavy-ingest burst) naming **what changed** in MEM / relevance grounding for **this** notebook day — e.g. new `MEM–RELEVANCE–*` hook, SCHOLAR relay, or an explicit “no new grounding” stamp. **Purpose:** keep digest-heavy sessions **tied** to the repo’s grounding pipeline without merging judgment into the Record. Place it **immediately under** the **`Accumulator for:`** line (or inside the same-day scratch block) so greps and weaves see it beside fresh ingests.
@@ -90,9 +94,19 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 ---
 
-**Accumulator for:** 2026-04-18 _(system local date — maintain from clock when appending)_
+**Accumulator for:** 2026-04-17 _(system local date — maintain from clock when appending; must match **today**, not brief filenames or deferred-batch labels)_
+
+**grounding_delta:** Grok **2026-04-17** digest under [`daily-brief-2026-04-17.md`](../daily-brief-2026-04-17.md) §1f; **plus** operator **Davis / Araghchi / Trump TS** chain tied to **§1e / §1h** + triage rows (same file — **pin public URLs**); **no** new `MEM–RELEVANCE-*` hook this pass.
 
 _(Append below this line during the day.)_
+
+- digest | cold: Grok “Daily Strategic Brief” **2026-04-17** — IL–LB 10d ceasefire + UA overnight Iskander/drone barrage narrative + IMF WEO scenarios + Macron–Starmer Hormuz mission + PRC/Japan + SPR/IEA numbers // hook: **§1f quarantine** — see [daily-brief-2026-04-17.md §1f](../daily-brief-2026-04-17.md#1f-weak-signal-worth-watching); falsify strike dates + SPR magnitudes before weave | verify:external-digest+LLM-precision-risk+membrane:single | grep:grokbrief-2026-04-17+daily-brief-2026-04-17
+
+- X | cold: @DanielLDavis1 **2026-04-17 ~06:30** — QT **@araghchi**: Hormuz passage **open** for **all commercial vessels** for **remaining ceasefire period** on **coordinated route** (Ports & Maritime Organisation); Davis — back-channel diplomacy, **zero-give** warning re U.S. posture // hook: [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h** + expert mesh; **pin** @araghchi + Davis status URLs | verify:pin-x-urls+IRI-primary-chain | thread:daniel-davis | IRI+TEHRAN
+
+- X | cold: @DanielLDavis1 same calendar day — embeds **Trump** Truth Social **~09:57** (~**30 min** after Hormuz “open” framing per Davis); Davis reads **maximalist** terms (**nuclear** reprocessing / **no** money / **Lebanon–Hezbollah** separate / **Israel** **prohibited** from bombing **Lebanon** by **USA**) as **slamming door** on diplomatic space // hook: **§1e** executive primary + **falsifier** for §1f single-arc de-escalation; pin **Truth Social** full text | verify:truth-social-primary+embed-chain | thread:daniel-davis
+
+- batch-analysis | 2026-04-17 | Davis × Araghchi × Trump TS | **Tension-first:** IRI **signals** Hormuz **open** for ceasefire remainder vs **U.S. executive** **maximalist** reply **same day** — **sequenced bargaining**, not necessarily **monotonic** **Oman** **momentum** from §1f paste. **Davis** = restraint / **negotiation-window** analyst — routes to **Mearsheimer** (**incentives**) + **Mercouris** (**staging**) overlaps in [strategy-expert-daniel-davis-thread.md](strategy-expert-daniel-davis-thread.md); **does not** replace **§1h** / **§1e** primaries.
 
 ## 2026-04-16
 
