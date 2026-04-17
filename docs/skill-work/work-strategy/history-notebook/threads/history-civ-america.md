@@ -1,39 +1,73 @@
-# Thread: American continuity
+# history-civ-america
 
-**Slug:** `america` · **Volumes:** IV → V (republic → hegemon → overextension)
+## Identity
 
-## Continuity (working)
+Civilization: America  
+Thread id: `history-civ-america`  
+Phase: 1  
+Function: Longitudinal civilizational thread for America inside `history-notebook`  
+Folded into this thread: Anglia
 
-- Constitutional and continental formation; industrial scale; hegemonic management and overreach.
+## Civilizational continuity
+
+Use this section to track durable American continuities across eras.
+
+Focus on:
+
+- maritime hegemony
+- commercial-imperial inheritance
+- institutional expansion
+- ideological legitimacy
+- scale and projection
+- inherited Anglian mechanisms versus transformed American ones
+- recurring strengths
+- recurring vulnerabilities
+
+## Distilled learnings
+
+Use this section to record what the notebook is learning from America as a reusable civilizational pattern set.
+
+This thread may include:
+
+- Anglian continuities
+- British-imperial inheritance
+- American transformation and extension
+
+Prefer:
+
+- short analytical paragraphs
+- explicit mechanisms
+- tensions or contradictions
+- lessons that may travel into later chapters
 
 ## Mechanism candidates
 
-- _(stub — link to `hn-knot-*` when ancient comparative chapters need “modern bookend” contrast in STYLE-GUIDE bridges)_
+- `MC-01:`
+- `MC-02:`
+- `MC-03:`
+- `MC-04:` Sea roads / circulation — when Vol I work needs maritime-comparative contrast, wire [hn-knot-sea-roads-circulation.md](../knots/hn-knot-sea-roads-circulation.md) for `hn-i-v1-06` (ancient cases first; folded Anglia material mainly `hn-iii-anglia`, `hn-iv-anglia-imperial`).
 
-## Active knot links
-
-- _(none in initial Vol I knot batch — Vol IV–V)_
-
-## Source clusters (CIV-MEM)
-
-- Pointers only — reservoir path as in [README](README.md).
-
-## Cross-thread comparisons
-
-- English maritime predecessor; Russian continental resilience under different institutional skin.
+Write short, portable mechanism statements here.
 
 ## Candidate chapter targets
 
-- `hn-iv-america`, `hn-v-america-hegemonic`
+- `hn-i-v1-06`
+- `hn-iii-anglia`
+- `hn-iv-america`
 
-## Resonance lines (draft stubs)
+List the current `history-notebook` chapters most likely to use America (including folded Anglia).
 
-- _(one line per durable pattern when stable)_
+## Reusable resonance lines
 
-## Open questions
+- 
+- 
+- 
 
-- _(operator)_
+Write short lines that could later be cited in `strategy-notebook`.
 
 ## Next actions
 
-- Keep explicit in chapter bridges: America is **not** Vol I evidence — only comparative closure where [STYLE-GUIDE.md](../STYLE-GUIDE.md) allows cross-volume pointers.
+- review relevant CIV-MEM Anglia and America material
+- identify continuity versus transformation mechanisms
+- connect America to likely Volume I chapters
+- when drafting `hn-i-v1-06`, keep Vol I focus on ancient comparative sea-roads; use folded Anglia mainly for later-volume bridge prose per [STYLE-GUIDE.md](../STYLE-GUIDE.md)

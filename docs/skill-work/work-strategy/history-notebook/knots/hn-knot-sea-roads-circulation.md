@@ -37,7 +37,7 @@ Reservoir read; no upstream paste.
 
 ## Linked threads
 
-- [history-civ-anglia.md](../threads/history-civ-anglia.md), [history-civ-rome.md](../threads/history-civ-rome.md)
+- [history-civ-america.md](../threads/history-civ-america.md) (Anglia folded here), [history-civ-rome.md](../threads/history-civ-rome.md)
 
 ## Related knots
 

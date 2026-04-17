@@ -42,14 +42,18 @@ Flow: **CIV-MEM (reservoir) → threads → knots → chapters →** short reson
 
 Civilizations that span multiple volumes. The arc registry lives in `book-architecture.yaml`; chapters in each arc connect with cross-volume bridge prose (see [STYLE-GUIDE.md](STYLE-GUIDE.md#cross-volume-bridges-style-convention)).
 
+**Phase 1 thread files** (operator roster): eight longitudinal surfaces in [threads/](threads/) — `history-civ-persia`, `russia`, `china`, `rome`, `islam`, `america`, `germania`, `india`. **Folds:** Francia and France are folded into the **Rome** thread; **Anglia** is folded into the **America** thread (no standalone `history-civ-anglia`).
+
 | Arc | Chapters | Thread |
 |-----|----------|--------|
-| **Persian** | Vol I (`hn-i-v1-19`) → II → V | Tolerance → compression → siege governance. Vol I entry is the parity-buffer problem chapter. |
-| **Roman** | Vol I (`hn-i-v1-04`, `hn-i-v1-05`) → II | Administration and expansion → persistence after territorial loss. |
-| **Russian** | III → IV → V | Marginal resilience → rupture-regeneration → temporal compression. |
-| **American** | IV → V | Constitutional republic → industrial hegemon → overextension. |
-| **English** | III → IV | Maritime hegemony → managed decline. |
-| **Chinese** | Vol I (`hn-i-v1-16` … `hn-i-v1-18`) → II → V | Cyclical reunification → bureaucratic maturity → patience as strategy. |
+| **Persian** | Vol I (`hn-i-v1-19`) → II → V | [history-civ-persia.md](threads/history-civ-persia.md) — tolerance → compression → siege governance. |
+| **Roman / Latin West** | Vol I (`hn-i-v1-04`, `hn-i-v1-05`) → II | [history-civ-rome.md](threads/history-civ-rome.md) — administration and expansion; **Francia and France** live in this lane where analytically relevant. |
+| **Islamic** | Vol II (`hn-ii-islam`) and related | [history-civ-islam.md](threads/history-civ-islam.md) — civilizational-religious continuity. |
+| **Indian** | Comparative Vol I (e.g. `hn-i-v1-12`, `hn-i-v1-16`, `hn-i-v1-18`) | [history-civ-india.md](threads/history-civ-india.md) — plural incorporation and civilizational depth. |
+| **Chinese** | Vol I (`hn-i-v1-16` … `hn-i-v1-18`) → II → V | [history-civ-china.md](threads/history-civ-china.md) — cyclical reunification → bureaucratic maturity → patience as strategy. |
+| **Russian** | III → IV → V | [history-civ-russia.md](threads/history-civ-russia.md) — marginal resilience → rupture-regeneration → temporal compression. |
+| **Germania** | IV (`hn-iv-germany`) and adjacent | [history-civ-germania.md](threads/history-civ-germania.md) — continental strategic continuity. |
+| **American / Anglian** | III (`hn-iii-anglia`) → IV → V | [history-civ-america.md](threads/history-civ-america.md) — constitutional republic → industrial hegemon → overextension; **Anglia** (maritime hegemony → managed decline) folded here. |
 
 ---
 

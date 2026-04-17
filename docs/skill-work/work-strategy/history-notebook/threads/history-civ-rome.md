@@ -1,40 +1,72 @@
-# Thread: Roman continuity
+# history-civ-rome
 
-**Slug:** `rome` · **Volumes:** I (`hn-i-v1-04`, `hn-i-v1-05`) → II (Byzantine)
+## Identity
 
-## Continuity (working)
+Civilization: Rome  
+Thread id: `history-civ-rome`  
+Phase: 1  
+Function: Longitudinal civilizational thread for Rome inside `history-notebook`  
+Folded into this thread: Francia, France
 
-- Law, administration, and fiscal-military rhythm; expansion glory vs consolidation; Eastern persistence after Western loss.
+## Civilizational continuity
+
+Use this section to track durable Roman continuities across eras.
+
+Focus on:
+
+- incorporation after conquest
+- law and administrative continuity
+- imperial and post-imperial persistence
+- civic and institutional inheritance
+- center-periphery management
+- western Latin continuities
+- recurring strengths
+- recurring vulnerabilities
+
+## Distilled learnings
+
+Use this section to record what the notebook is learning from Rome as a reusable civilizational pattern set.
+
+This thread may include:
+
+- classical Rome
+- Roman imperial continuities
+- post-Roman Latin continuities
+- Francia and France where analytically relevant
+
+Prefer:
+
+- short analytical paragraphs
+- explicit mechanisms
+- tensions or contradictions
+- lessons that may travel into later chapters
 
 ## Mechanism candidates
 
-- _(stub — link to `hn-knot-*`)_
+- `MC-01:`
+- `MC-02:`
+- `MC-03:`
 
-## Active knot links
-
-- [hn-knot-administration-law-long-run.md](../knots/hn-knot-administration-law-long-run.md) → `hn-i-v1-04`
-- [hn-knot-expansion-ceiling-glory.md](../knots/hn-knot-expansion-ceiling-glory.md) → `hn-i-v1-05`
-
-## Source clusters (CIV-MEM)
-
-- Pointers only — reservoir path as in [README](README.md).
-
-## Cross-thread comparisons
-
-- Persian legitimacy instruments; Chinese bureaucratic standardization (`hn-i-v1-09` family).
+Write short, portable mechanism statements here.
 
 ## Candidate chapter targets
 
-- `hn-i-v1-04`, `hn-i-v1-05`, `hn-ii-rome-byzantine`
+- `hn-i-v1-04`
+- `hn-i-v1-05`
+- `hn-i-v1-07`
 
-## Resonance lines (draft stubs)
+List the current `history-notebook` chapters most likely to use Rome.
 
-- _(one line per durable pattern when stable)_
+## Reusable resonance lines
 
-## Open questions
+- 
+- 
+- 
 
-- _(operator)_
+Write short lines that could later be cited in `strategy-notebook`.
 
 ## Next actions
 
-- Tie knot drafts to comparative cases in [research/VOL-I-PROBLEM-CHAPTERS.md](../research/VOL-I-PROBLEM-CHAPTERS.md) registers.
+- review relevant CIV-MEM Rome, Francia, and France material
+- identify the main Roman continuity mechanisms
+- connect Rome to likely Volume I chapters

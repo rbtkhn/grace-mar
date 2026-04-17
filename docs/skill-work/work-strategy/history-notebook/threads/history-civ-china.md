@@ -1,39 +1,64 @@
-# Thread: Chinese continuity
+# history-civ-china
 
-**Slug:** `china` · **Volumes:** I (`hn-i-v1-16` … `hn-i-v1-18`) → II → V
+## Identity
 
-## Continuity (working)
+Civilization: China  
+Thread id: `history-civ-china`  
+Phase: 1  
+Function: Longitudinal civilizational thread for China inside `history-notebook`
 
-- Cyclical reunification; bureaucratic legibility; corridor and exchange empires; patience as grand-strategic default.
+## Civilizational continuity
+
+Use this section to track durable Chinese continuities across eras.
+
+Focus on:
+
+- reunification logic
+- bureaucratic maturity
+- dynastic renewal
+- center-periphery ordering
+- civil-military balance
+- state-civilization endurance
+- recurring strengths
+- recurring vulnerabilities
+
+## Distilled learnings
+
+Use this section to record what the notebook is learning from China as a reusable civilizational pattern set.
+
+Prefer:
+
+- short analytical paragraphs
+- explicit mechanisms
+- tensions or contradictions
+- lessons that may travel into later chapters
 
 ## Mechanism candidates
 
-- _(stub — link to `hn-knot-*`)_
+- `MC-01:`
+- `MC-02:`
+- `MC-03:`
 
-## Active knot links
-
-- [hn-knot-corridor-governance-legibility.md](../knots/hn-knot-corridor-governance-legibility.md) → `hn-i-v1-18`
-
-## Source clusters (CIV-MEM)
-
-- Pointers only — reservoir path as in [README](README.md).
-
-## Cross-thread comparisons
-
-- Roman administration; Persian parity and buffer games (`hn-i-v1-19`).
+Write short, portable mechanism statements here.
 
 ## Candidate chapter targets
 
-- `hn-i-v1-16`, `hn-i-v1-17`, `hn-i-v1-18`, `hn-ii-china-medieval`, `hn-v-china-modern`
+- `hn-i-v1-16`
+- `hn-i-v1-17`
+- `hn-i-v1-18`
 
-## Resonance lines (draft stubs)
+List the current `history-notebook` chapters most likely to use China.
 
-- _(one line per durable pattern when stable)_
+## Reusable resonance lines
 
-## Open questions
+- 
+- 
+- 
 
-- _(operator)_
+Write short lines that could later be cited in `strategy-notebook`.
 
 ## Next actions
 
-- Prefer mechanism knots over civ-by-civ chapter dumps per [VOL-I-PROBLEM-CHAPTERS.md](../research/VOL-I-PROBLEM-CHAPTERS.md).
+- review relevant CIV-MEM China material
+- identify 3–5 durable mechanisms
+- connect China to likely Volume I chapters

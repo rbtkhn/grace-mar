@@ -1,40 +1,64 @@
-# Thread: Persian continuity
+# history-civ-persia
 
-**Slug:** `persia` · **Volumes:** I (`hn-i-v1-19` anchor in Vol I) → II → V
+## Identity
 
-## Continuity (working)
+Civilization: Persia  
+Thread id: `history-civ-persia`  
+Phase: 1  
+Function: Longitudinal civilizational thread for Persia inside `history-notebook`
 
-- Tolerance-and-parity buffers under empire; later compression under siege; modern formation-under-fire themes preview in Vol V arc.
-- Distill from CIV-MEM **by pattern**, not file-by-file.
+## Civilizational continuity
+
+Use this section to track durable Persian continuities across eras.
+
+Focus on:
+
+- state form
+- legitimacy style
+- imperial technique
+- administrative habits
+- frontier management
+- corridor and trade logic
+- recurring strengths
+- recurring vulnerabilities
+
+## Distilled learnings
+
+Use this section to record what the notebook is learning from Persia as a reusable civilizational pattern set.
+
+Prefer:
+
+- short analytical paragraphs
+- explicit mechanisms
+- tensions or contradictions
+- lessons that may travel into later chapters
 
 ## Mechanism candidates
 
-- _(stub — link to `hn-knot-*` as you draft)_
+- `MC-01:`
+- `MC-02:`
+- `MC-03:`
 
-## Active knot links
-
-- [hn-knot-parity-buffers-third-shock.md](../knots/hn-knot-parity-buffers-third-shock.md) → `hn-i-v1-19`
-
-## Source clusters (CIV-MEM)
-
-- Pointers only — `users/grace-mar/SELF-LIBRARY/civilization_memory` — **do not** paste upstream bodies here.
-
-## Cross-thread comparisons
-
-- Roman administration vs Persian parity-buffer problem; Chinese corridor / exchange (when `hn-i-v1-18` work advances).
+Write short, portable mechanism statements here.
 
 ## Candidate chapter targets
 
-- `hn-i-v1-19`, `hn-ii-persia-islamic`, `hn-v-persia-modern`
+- `hn-i-v1-19`
+- `hn-i-v1-01`
+- `hn-i-v1-15`
 
-## Resonance lines (draft stubs)
+List the current `history-notebook` chapters most likely to use Persia.
 
-- _(one line per durable pattern when stable)_
+## Reusable resonance lines
 
-## Open questions
+- 
+- 
+- 
 
-- _(operator)_
+Write short lines that could later be cited in `strategy-notebook`.
 
 ## Next actions
 
-- Pull Vol I parity-buffer evidence into knots before full `hn-i-v1-19` chapter draft.
+- review relevant CIV-MEM Persia material
+- identify 3–5 durable mechanisms
+- connect Persia to likely Volume I chapters

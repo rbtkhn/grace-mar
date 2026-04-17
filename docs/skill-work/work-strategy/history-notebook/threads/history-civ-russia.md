@@ -1,39 +1,64 @@
-# Thread: Russian continuity
+# history-civ-russia
 
-**Slug:** `russia` · **Volumes:** III → IV → V (Vol I comparative touchpoints only where ancient parallels sharpen Vol I problems)
+## Identity
 
-## Continuity (working)
+Civilization: Russia  
+Thread id: `history-civ-russia`  
+Phase: 1  
+Function: Longitudinal civilizational thread for Russia inside `history-notebook`
 
-- Marginal resilience, imperial depth, rupture-regeneration, temporal compression in modern arc.
+## Civilizational continuity
+
+Use this section to track durable Russian continuities across eras.
+
+Focus on:
+
+- territorial depth
+- frontier absorption
+- state resilience
+- legitimacy under pressure
+- center-periphery control
+- military-administrative endurance
+- recurring strengths
+- recurring vulnerabilities
+
+## Distilled learnings
+
+Use this section to record what the notebook is learning from Russia as a reusable civilizational pattern set.
+
+Prefer:
+
+- short analytical paragraphs
+- explicit mechanisms
+- tensions or contradictions
+- lessons that may travel into later chapters
 
 ## Mechanism candidates
 
-- _(stub — link to `hn-knot-*` when Vol I comparative work needs a Russian mirror)_
+- `MC-01:`
+- `MC-02:`
+- `MC-03:`
 
-## Active knot links
-
-- _(none required for initial Vol I knot set — add when mapping comparative cases)_
-
-## Source clusters (CIV-MEM)
-
-- Pointers only — reservoir path as in [README](README.md).
-
-## Cross-thread comparisons
-
-- English maritime vs continental consolidation; American continental scale (later volumes).
+Write short, portable mechanism statements here.
 
 ## Candidate chapter targets
 
-- `hn-iii-russia`, `hn-iv-russia-imperial`, `hn-v-russia-modern`
+- `hn-i-v1-11`
+- `hn-i-v1-13`
+- `hn-i-v1-14`
 
-## Resonance lines (draft stubs)
+List the current `history-notebook` chapters most likely to use Russia.
 
-- _(one line per durable pattern when stable)_
+## Reusable resonance lines
 
-## Open questions
+- 
+- 
+- 
 
-- _(operator)_
+Write short lines that could later be cited in `strategy-notebook`.
 
 ## Next actions
 
-- Keep this thread thin until Vol III drafting; avoid smuggling modern Russia into Vol I chapters without labeled analogy discipline.
+- review relevant CIV-MEM Russia material
+- identify 3–5 durable mechanisms
+- connect Russia to likely Volume I chapters
