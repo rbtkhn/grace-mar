@@ -1428,7 +1428,7 @@ edge: "Introduce gate vocabulary when age-ready; link ACT rows when review sessi
         <button type="button" class="view-btn" data-panel="library">View full</button>
         <pre id="panel-library" class="full-file" style="display:none; max-height:400px; overflow:auto; margin:0.5rem 0 0; padding:0.75rem; background:var(--bg); border-radius:6px; font-size:0.85rem; white-space:pre-wrap; word-break:break-word;"># LIBRARY — grace-mar
 
-A curated return-to store of references, canon works, and influential media. It supports lookup when answering questions and preserves what has shaped the mind or belongs in Grace-Mar's long-term intellectual world.
+A governed retrieval substrate for reference-facing knowledge. Active entries shape runtime lookup order (SELF-LIBRARY → CIV-MEM → full web); `scope` and `lookup_priority` steer which questions match which sources. Also preserves return-to references, canon works, and influential media. Not SELF-KNOWLEDGE — see [boundary](../../docs/boundary-self-knowledge-self-library.md).
 
 **Cloned from companion-self** `users/_template/self-library.md` (2026-02-26). Grace-mar-specific entries (reference works, videos) appended. File renamed from library.md to self-library.md for consistency with self-* taxonomy.
 
@@ -1472,11 +1472,13 @@ entries:
     type: "book"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "operator_spine"
     engagement_status: "in_progress"
     lookup_priority: "preferred"
     scope: ["predictive_history", "work_jiang", "geo_strategy", "philosophy", "civilization_memory", "IR", "operator_analytical"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/work-jiang/BOOK-ARCHITECTURE.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-03-23
     notes: "Preferred SELF-LIBRARY source for library-first lookup (operator book lane). Multivolume Predictive History (one volume per lecture series); Volume I Geo-Strategy in progress. Working corpus: research/external/work-jiang/. Tricameral polyphony overlay (WORK): operator-polyphony.md — mirrors LIB-0153 strategy-notebook chapters/YYYY-MM/meta.md § Polyphony; update both when arc shifts. Shelf: Operator analytical books. Voice uses only gated-merge material; CIV-MEM is analytic lattice, not identity."
 
@@ -1487,11 +1489,13 @@ entries:
     type: "book"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "operator_notebook"
     engagement_status: "in_progress"
     lookup_priority: "high"
     scope: ["work_strategy", "strategy_notebook", "operator_analytical", "journal"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-strategy/strategy-notebook/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-04-09
     notes: "Operator analytical book: one dated page per day in chapters/YYYY-MM/days.md (~1000 words consolidated analysis per STRATEGY-NOTEBOOK-ARCHITECTURE) + meta.md. Tricameral polyphony in meta.md § Polyphony — parallel research/external/work-jiang/operator-polyphony.md (LIB-0149); update both when month or PH arc moves. WORK; discoverability symlink users/grace-mar/SELF-LIBRARY/strategy-notebook. Not companion Record or Voice knowledge until gated."
 
@@ -1502,11 +1506,13 @@ entries:
     type: "book"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "operator_journal"
     engagement_status: "in_progress"
     lookup_priority: "high"
     scope: ["work_xavier", "xavier_journal", "open_brain", "operator_analytical", "journal"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-xavier/xavier-journal/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-04-09
     notes: "Operator analytical book: Open Brain / work-xavier learning day log in grace-mar. WORK coaching; symlink users/grace-mar/SELF-LIBRARY/xavier-journal. Not Xavier Record or Voice knowledge until gated."
 
@@ -1517,11 +1523,13 @@ entries:
     type: "book"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "operator_journal"
     engagement_status: "in_progress"
     lookup_priority: "high"
     scope: ["work_dev", "dev_journal", "operator_analytical", "journal"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/skill-work/work-dev/dev-journal/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-04-09
     notes: "Operator analytical book: work-dev integration and tooling learning log. WORK; not Record or Voice knowledge until gated. Contrast work-dev-history.md (milestones) vs narrative journal."
 
@@ -1532,11 +1540,13 @@ entries:
     type: "reference"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "upstream_corpus"
     engagement_status: "recurring"
     lookup_priority: "high"
     scope: ["civilization_memory", "mem", "cmc", "tri_frame", "operator_analytical", "work_strategy"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/research/repos/civilization_memory/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-04-11
     notes: "Full CMC checkout: MEM, CIV–CORE, CIV–STATE, CIV–SCHOLAR, ARC, templates, governance. WORK/reference retrieval only — not SELF; aligns with docs/cmc-routing.md. Symlink under users/grace-mar/SELF-LIBRARY/civilization_memory. Distinct from LIB-0132 (Grace-Mar satellite essays under docs/civilization-memory/). Tri-frame routing: docs/skill-work/work-strategy/minds/CIV-MEM-TRI-FRAME-ROUTING.md."
 
@@ -1692,11 +1702,13 @@ entries:
     type: "book"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "upstream_corpus"
     engagement_status: "recurring"
     lookup_priority: "high"
     scope: ["predictive_history", "youtube_channels", "work_strategy", "work_jiang", "transcripts"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/youtube-channels/predictive-history/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-04-08
     notes: "Bundled operator book: bulk caption spine under research/external/youtube-channels/predictive-history/ (manifest, index, raw transcripts). Complements LIB-0149 (work-jiang multivolume book + BOOK-ARCHITECTURE). Not companion Record or Voice knowledge until gated."
 
@@ -1707,11 +1719,13 @@ entries:
     type: "book"
     status: "active"
     shelf_intent: "operator_book"
+    operator_subtype: "upstream_corpus"
     engagement_status: "recurring"
     lookup_priority: "high"
     scope: ["tucker_carlson", "youtube_channels", "work_politics", "transcripts", "IR", "media"]
     source: "url"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/research/external/youtube-channels/tucker-carlson-book/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-04-08
     notes: "Bundled operator book: one committed volume of processed TCN transcripts (INDEX + transcripts/) next to predictive-history. Channel index: research/external/youtube-channels/tucker-carlson/. Not companion Record or Voice knowledge until gated."
 
@@ -1759,6 +1773,7 @@ entries:
     scope: ["civilizations", "history", "Rome", "China", "ancient", "emperors", "pharaohs"]
     source: "manual"
     url: "https://github.com/rbtkhn/grace-mar/blob/main/docs/civilization-memory/README.md"
+    reviewed_at: 2026-04-16
     added_at: 2026-02-26
     notes: "Grace-Mar satellite only: essays, notes, hybrid encyclopedia under docs/civilization-memory/ — not the upstream MEM/STATE corpus. For full civilization_memory checkout (CMC), use LIB-0157 and research/repos/civilization_memory/ or SELF-LIBRARY/civilization_memory symlink. See docs/civilization-memory/README.md."
 
