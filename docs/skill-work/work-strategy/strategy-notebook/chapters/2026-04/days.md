@@ -607,7 +607,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ### Links
 
-- [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) — §1d · §1e · §1f Grok overlay · §1g/§1h IMF + Hormuz native pointers
+- [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) — §1d · §1e · §1f strategic digest · §1g/§1h IMF + Hormuz native pointers
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **Wire capture — 2026-04-15** + **batch-analysis** lines (incl. **Lavrov Beijing × E**); carry **expert-thread** / **`batch-analysis`** when this day ingests new **`thread:`** lines; **04-13/04-14** bulk already woven **[2026-04-14](#2026-04-14)**
 - **§1d:** [RIA — Peskov 15 Apr uranium transfer](https://ria.ru/20260415/peskov-2087244756.html) · [RIA — Peskov 15 Apr cooperation](https://ria.ru/20260415/peskov-2087245816.html) · [TASS — Lavrov urges continuation](https://tass.com/politics/2117137) · [Kremlin EN — Russian-Indonesian talks (79545)](http://en.kremlin.ru/events/president/news/79545) · [Kremlin EN — meeting on economic issues (79558)](http://en.kremlin.ru/events/president/news/79558) · [RIA — Peskov 13 Apr](https://ria.ru/20260413/peskov-2086774724.html) · [Moscow Times — Kremlin HEU offer (13 Apr)](https://www.themoscowtimes.com/2026/04/13/kremlin-repeats-offer-to-take-irans-highly-enriched-uranium-a92483)
 - **§1e:** [Independent — Vance "economic terrorism" + Hormuz (14 Apr)](https://www.independent.co.uk/news/world/americas/us-politics/vance-strait-of-hormuz-blockade-terrorism-b2957110.html) · [WH — VP Bret Baier interview](https://www.whitehouse.gov/videos/vp-jd-vance-sits-down-with-bret-baier-for-his-first-interview-since-returning-from-pakistan/) · [Reuters — US blockade after talks fail (13 Apr)](https://www.reuters.com/world/middle-east/us-blockade-iran-after-talks-fail-yield-a-deal-2026-04-13/) · [Reuters — Trump fast-attack warning](https://www.reuters.com/world/middle-east/trump-says-iranian-fast-attack-ships-that-come-close-us-blockade-will-be-2026-04-13/) · [WH — US–Hungary partnership fact sheet](https://www.whitehouse.gov/fact-sheets/2026/04/advancing-the-united-states-hungary-bilateral-partnership/)
@@ -696,16 +696,31 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 ### Signal
 
-- _Calendar scaffold only — no weave this pass._
+- **IRI FM primary (no `thread:`):** **Seyed Abbas Araghchi** **@araghchi** **2026-04-17 06:45** — **Strait of Hormuz** passage for **all commercial vessels** declared **completely open** for the **remaining ceasefire period**, on the **coordinated route** announced by **Ports and Maritime Organisation**; post opens **in line with the ceasefire in Lebanon** — **state** voice for **§1h**, **not** indexed expert speech. **Engagement** (operator screenshot): **3.3M** views — **not** a verify tier for substance.
+- **`thread:daniel-davis` — packaging same day:** **@DanielLDavis1** quotes **Araghchi** (~06:30 chain in session copy; **06:45** on **IRI** primary capture) and later embeds **Trump** **Truth Social** (~09:57 per Davis) — **analyst** lane: **back-channel diplomacy** / **zero-give** warning vs **“door shut”** read if **U.S. terms** read as **maximalist** (**nuclear** reprocessing, **no** money, **Lebanon–Hezbollah** carved out, **Israel** barred from **Lebanon** strikes by **USA**). **Davis** does **not** substitute for **@araghchi** or **WH/TS** primaries.
+- **`strategy + verify` (wire receipts):** **Gulf News** (2026-04-08) — **Araghchi** line family: Hormuz passage under **Iranian military management** during **two-week** ceasefire window — **supports** “managed passage” **arc**, not necessarily **same string** as **04-17** **X** **timestamp**. **Moneycontrol** (2026-04-17) — **Trump** **pool** remarks: **uranium** / “**nuclear dust**,” deal **optimism**, **Islamabad** venue — **supports** **optimistic executive** **channel** **same calendar day** as **Truth Social** **maximalist** **embed** ( **dual-register** — do **not** merge without **both** primaries).
+- **§1f / Grok quarantine:** [daily-brief-2026-04-17.md](../../daily-brief-2026-04-17.md) §**1f** holds **LLM strategic digest** + **contradiction digest** (Ukraine strike **date** vs brief title, **SPR** **172M/400M** vs **04-16** **45M**, **Oman** **fabrication** risk) — **hypothesis** and **triage** only until rows clear; **same-day** **Araghchi/Trump** chain is a **falsifier** for **monotonic** “**Oman** **momentum** **only**” **reads** of the paste.
+- **Expert-thread continuity (indexed lanes):** [strategy-commentator-threads.md](../../strategy-commentator-threads.md) **Official IRI / MFA voices** — **04-17** **Araghchi** **joins** **`trita-parsi`** **Lebanon vs nuclear** scope, **`seyed-marandi`** **04-16** **register** (**seam**, not same voice), **`alexander-mercouris`** **Lebanon**/**Hormuz** **institutional** surface next to [mercouris-mearsheimer-lebanon-split](knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md); **`thread:daniel-davis`** on **Davis** lines only. Inbox: [daily-strategy-inbox.md](../../daily-strategy-inbox.md) **`batch-analysis | 2026-04-17`** rows + **`notebook |`** **IRI FM** continuity line.
 
 ### Judgment
 
-- _(Deferred.)_
+- **Three clocks, one day:** (1) **IRI** X primary — Hormuz framed with Lebanon ceasefire alignment; (2) U.S. executive — pool optimism (Moneycontrol) vs Truth Social hard terms (Davis embed) — dual-register until TS full text is pinned; (3) **`thread:daniel-davis`** — negotiation-window vs ultimatum framing — orthogonal to FM text and to §1f Grok arc unless verify rows merge them with receipts.
+- Do not collapse deal-optimistic pool copy and maximalist social post into one “Trump position” in public copy without explicit seam and both primaries — see inbox `batch-analysis | 2026-04-17 | Pool vs Truth Social (dual-register)`.
+- Marandi 04-16 BP and Araghchi 04-17 FM post share the Hormuz object in different registers (elite long-form vs diplomatic tweet); same speech-vs-ORBAT split discipline as [2026-04-16](#2026-04-16).
 
 ### Links
 
-- _(Deferred.)_
+- [daily-brief-2026-04-17.md](../../daily-brief-2026-04-17.md) — **Territory signals**, **§1e** / **§1h**, **§1f** digest + triage, **[strategy + verify](../../daily-brief-2026-04-17.md#strategy-verify-2026-04-17)**
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **2026-04-17** **ingests** (digest, **X** **Davis**, **`batch-analysis`**, **`notebook`** **continuity**)
+- [Gulf News — Araghchi / Hormuz / two-week ceasefire context](https://gulfnews.com/world/mena/iran-strait-of-hormuz-will-remain-open-under-military-oversight-during-twoweek-ceasefire-what-araghchi-said-1.500499593) (2026-04-08)
+- [Moneycontrol — Trump pool remarks 2026-04-17](https://www.moneycontrol.com/world/trump-says-iran-to-give-up-enriched-uranium-signals-deal-very-soon-article-13891392.html)
+- [`strategy-expert-daniel-davis-thread.md`](../../strategy-expert-daniel-davis-thread.md) — **2026-04** **bullet** **(Araghchi** **+** **Trump** **TS** **+** **continuity** **map**)
+- [`strategy-expert-trita-parsi-thread.md`](../../strategy-expert-trita-parsi-thread.md) · [`strategy-expert-seyed-marandi-thread.md`](../../strategy-expert-seyed-marandi-thread.md) · [`strategy-expert-alexander-mercouris-thread.md`](../../strategy-expert-alexander-mercouris-thread.md) — **04-17** **continuity** **bullets**
+- [meta.md](meta.md) — **April arc** **04-17** **sentence** **(FM** **primary** **+** **Davis** **+** **dual-register**)
+- Prior day: [2026-04-16](#2026-04-16)
 
 ### Open
 
-- _(Deferred.)_
+- Pin **canonical** **status URLs:** **@araghchi** **2026-04-17** **post**, **@DanielLDavis1** **QT** **chain**, **Truth Social** **~09:57** **full** **text** **(primary** **or** **authorized** **mirror**).
+- **§1f digest:** Burn down triage rows (Ukraine night vs brief date, SPR magnitudes, Pakistan-mediated claims) before any Signal lead cites superlatives from the paste.
+- **Optional:** **`python3 scripts/strategy_thread.py`** **for** **`thread:daniel-davis`** **after** **URL** **pins** **—** **inbox** **lines** **already** **list** **`thread:`**.
