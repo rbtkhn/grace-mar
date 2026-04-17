@@ -187,10 +187,9 @@ For a dated ingest where you want **bold theses**, **clear separation**, and **v
 
 1. Under **`## YYYY-MM-DD`**, keep the show/source line (e.g. **The Duran** · expert · air date).
 2. **Above** the `~~~text` fence, add **markdown** blocks for human / GitHub preview:
-   - **`### Thesis N`** (or **`## Thesis N`** if your renderer prefers; stay consistent under the date heading).
-   - On the next line, **`**Short operator label**`** (bold thesis title — your words, not the expert’s).
+   - **`**Short operator label**`** as the only heading for each block — one concise **bold** line (your words, not the expert’s). **Do not** number blocks (no “Thesis 1”, “Thesis 2”, etc.).
    - Then **one expert sentence per paragraph** (blank line between sentences). **Only** the expert’s words in those paragraphs — whole sentences, no paraphrase.
-   - Between theses, a horizontal rule **`---`** on its own line.
+   - Between blocks, a horizontal rule **`---`** on its own line.
 3. **`~~~text` … `~~~`:** Put the **same** verbatim body you want **`thread`** / corpus extraction to see — typically the **≤ ~2000 word** copy (may match the markdown block text or be a single continuous paste). `strategy_expert_corpus.py` reads the transcript file as text; it does not render markdown, but the **fence** carries the operational verbatim.
 
 **Word budget:** Target **≤ ~2000 words** in the fence per ingest; use the checklist to drop whole sentences by thesis, or optional `python3 scripts/abridge_verbatim_transcript.py` for sentence-only boilerplate/length trim (does not assign theses). See architecture for **archive** if the fence is trimmed and you need the long episode elsewhere (git history, optional **full linear** file, or out-of-repo — not a second “scaffold FULL” naming pattern).

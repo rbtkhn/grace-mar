@@ -12,9 +12,10 @@ WORK only; not Record.
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
 
-
 ## 2026-04-18
 - `notebook | cold: Mercouris lane — Hormuz as precedent-for-Beijing problem (U.S. maritime-denial grammar portable beyond Iran); escalation risk as friction-thickening (insurance, routing, posture, rhetoric) before any notional fleet clash // hook: tri-mind narrow pass (Hormuz + PRC escalation); notebook lens fold, not Duran primary | verify:lens-fold+CIV-MIND-MERCOURIS | thread:alexander-mercouris | membrane:single | grep:Hormuz+PRC+precedent`
+
+
 
 
 
@@ -23,8 +24,6 @@ WORK only; not Record.
 **The Duran** · Alexander Mercouris · air date **2026-04-16**.
 
 Thesis-scaffold verbatim (≤2000 words; **markdown below matches `~~~text` below**). [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern).
-
-### Thesis 1
 
 **Pakistan–Iran bridge, escorts, and Islamabad II**
 
@@ -78,8 +77,6 @@ My overall sense is that the mood in Washington has shifted back toward greater 
 
 ---
 
-### Thesis 2
-
 **U.S. theory of victory, blockade limits, next escalation**
 
 I have no expectation that any of this will happen.
@@ -111,8 +108,6 @@ Both sides are gearing up for the next round, which we will likely see sometime 
 Even with additional US deployments to the Middle East, these forces still fall far short of what would be needed for a successful ground invasion of Iran — assuming such a thing is even realistically possible.
 
 ---
-
-### Thesis 3
 
 **China, blockade precedent, logistics, escalation risk**
 
@@ -157,8 +152,6 @@ The Pentagon is surely aware of these risks and will not want the situation to c
 One can understand why the Chinese are pushing hard to restart talks and end the blockade quickly.
 
 ---
-
-### Thesis 4
 
 **Russia, Saudi Arabia, Gulf architecture, second-order shifts**
 
@@ -205,8 +198,6 @@ A return to escalation next week — possibly including a risky ground operation
 If that fails or bogs down, the prospects for the kind of regional realignment the Russians are suggesting will increase, and the appearance of the Chinese navy in the Arabian Sea could become a very real possibility.
 
 ---
-
-### Thesis 5
 
 **Ukraine / Europe coda — strikes, Naryshkin, drones, Sumy**
 
@@ -465,6 +456,53 @@ Russian forces appear to be advancing through forested areas north of the city, 
 
 An intense battle for the city may be imminent, and Ukrainian defences there do not appear well organized.
 ~~~
+
+- YT | cold: Mercouris 16 Apr 2026 (The Duran) — EU drone factories for Ukraine, Medvedev warns EU, Lavrov–Saudi FM, Munir in Tehran, Hormuz blockade & China naval logic // hook: full verbatim §2026-04-16 in strategy-expert-alexander-mercouris-transcript.md | https://www.youtube.com/watch?v=TBD-canonical-episode | verify:operator-ingest+aired-2026-04-16 | thread:alexander-mercouris | aired:2026-04-16
+    
+    `BP | cold: Seyed Mohammad Marandi (Breaking Points, Tehran remote, 2026-04-16 — segment title per operator: "Israel WILL Restart Iran War") — Iran read: US never serious on 10-point framework; Netanyahu / "Zionist lobby" block; post-ceasefire military prep for next war "quite soon." Islamabad: Iranian side had full negotiation authority (Parliament Speaker + Leader consult) vs Vance on phone to Netanyahu ("reported to him" framing). Hegseth blockade/bombs quote + Caine Pacific interdiction extension → Iranian escalation "quite soon"; blockade accelerates global economic collapse narrative. JCPOA contrast: Obama-era US serious vs current. Ceasefire rationale: 12-day war lessons, rearm, Hormuz pressure on Trump economy. Hormuz: Iran will retain control; no toll-free passage; Gulf monarchies complicit. Vance "grand bargain" / "normal country" dismissed (Joe Kent resignation letter; Flynt & Hillary Mann Leverett *Going to Tehran*). Lebanon close: moral non-abandonment of Lebanese vs Israeli strikes; Pakistan round: "I don't know" // hook: `seyed-marandi` continuity from [04-13 Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md); cross `scott-ritter` ORBAT, `alexander-mercouris` institutional lane, `trita-parsi` Lebanon — tier: attributed monologue, not wire ORBAT | https://www.youtube.com/watch?v=TBD-pin-Breaking-Points-Marandi-2026-04-16 | verify:operator-transcript-paste+pin-canonical-BP-URL | thread:seyed-marandi | membrane:single | grep:IRAN+Marandi+BreakingPoints+2026-04-16`
+    
+    `batch-analysis | 2026-04-16 | Marandi BP 04-16 × 04-13 scaffold | **Tension-first:** Iranian **process** and **moral-historical** register (Islamabad authority vs Vance channel, school/synagogue/Gaza–Lebanon frames) vs **Ritter-class** **USN** / **interdiction** facts and **wire-tier** throughput — **do not** merge lanes. **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** object as **Mercouris** narrative surface — **verify** still splits **speech** from **AIS** / **DOD** readouts.`
+    
+    `ROME | cold: Leo XIV Bamenda (16 Apr) — "woe" to those who manipulate religion / God's name for military, economic, or political gain (Fides); same calendar day Hegseth used Mark 3 / Pharisees framing re U.S. press (Pentagon briefing, Examiner) // hook: two legitimacy planes — do not collapse; woven `days.md` `## 2026-04-18` + [ROME-PASS rolling seam](../work-strategy-rome/ROME-PASS.md) | https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain | verify:fides-primary+washingtonexaminer | membrane:single | grep:LeoXIV+Hegseth-2026-04-16`
+    
+    `notebook | cold: Mercouris lane — Hormuz as precedent-for-Beijing problem (U.S. maritime-denial grammar portable beyond Iran); escalation risk as friction-thickening (insurance, routing, posture, rhetoric) before any notional fleet clash // hook: tri-mind narrow pass (Hormuz + PRC escalation); notebook lens fold, not Duran primary | verify:lens-fold+CIV-MIND-MERCOURIS | thread:alexander-mercouris | membrane:single | grep:Hormuz+PRC+precedent`
+    
+    ### Weave registry — 2026-04-14 (grep anchor)
+    
+    `notebook-weave | cold: Martin Armstrong (@ArmstrongEcon) X — cash versus digital economy; Larry Fink / BlackRock tokenization and “plumbing” chain; Gulf fertilizer and Hormuz-adjacent anxiety // hook: landed knot strategy-notebook-knot-2026-04-14-armstrong-cash-hormuz-digital-dollar-arc.md (weave D); lenses from CIV-MIND Barnes, Mercouris, Mearsheimer mind files — not a thread: expert row | verify:knot-on-disk+pin-armstrong-status-URL-if-public-cite | membrane:single | grep:armstrong-cash-hormuz-digital-dollar-arc`
+    
+    `batch-analysis | 2026-04-14 | Armstrong cash × Gulf fertilizer × U.S. digital-dollar law | **Tension-first:** Social graphics mix physical cash, bank money, stablecoins, and a hypothetical Fed-issued retail digital dollar into one “digital” threat; statute still treats payment-stablecoin frameworks and anti-retail-central-bank-digital-currency restrictions as different objects. Gulf-origin seaborne fertilizer share (Statista citing Signal Group) is not interchangeable with a “percent through Hormuz” shipping claim. **Orthogonal** to the same-day Hormuz expert lattice (Scott Ritter blockade weave). **Weak bridge:** food-price fear and money-control fear can rise together without sharing one causal graph.`
+    
+    ### Wire capture — 2026-04-15 (strategy pass)
+    
+    `wire | cold: KREMLIN | Peskov 15 Apr: Russia willing to revisit enriched-uranium transfer proposal (Putin previously offered; US rejected); "decisively determined" to continue cooperation with Iran // hook: §1d — uranium off-ramp alive on Kremlin side; test against Islamabad "10-point" scope | https://ria.ru/20260415/peskov-2087244756.html | verify:kremlin-en-release+ria-ru-primary`
+    
+    `wire | cold: KREMLIN | Lavrov 15 Apr: Russia ready to help resolve enriched-uranium issue — convert to fuel grade or store in Russia (2015 precedent); urges continuation of US-Iran talks started in Pakistan // hook: §1d — Lavrov mechanism is concrete (fuel-grade conversion or custody); pairs §1h Iranian enrichment-right stance | https://tass.com/politics/2117137 | verify:tass-en`
+    
+    `wire | cold: IRI | MFA spox Baghaei: partial consensus from Islamabad, 2-3 issues remain; "no agreement expected from single round"; enrichment right "not granted by anyone" — NPT membership right, level/type "open to discussion" // hook: §1h — first official MFA framing of what's negotiable vs non-negotiable; key for Islamabad gap matrix row | https://farsnews.ir/Rahgozar_b/1776257144908428059 | verify:fars-en+mfa.ir-portal`
+    
+    `wire | cold: IRI | IRGC Maj Gen Abdollahi: US blockade could end ceasefire; Iran would block all exports/imports in Persian Gulf + Sea of Oman + Red Sea // hook: §1h — military channel escalation; distinct from MFA diplomatic tone above; test dual-register (MFA "open to discussion" vs IRGC "block everything") | https://www.aljazeera.com/news/2026/4/15/iran-warns-us-naval-blockade-threatens-ceasefire | verify:aljazeera-en`
+    
+    `wire | cold: VANCE | 14 Apr: Iran guilty of "economic terrorism" for blocking Hormuz vessels; warns "two can play that game" — no Iranian ships out; WH signals more Pakistan talks possible, "signs of progress on framework deal" // hook: §1e — "grand bargain" framing (nuclear + terrorism + economic participation, not narrow); pairs §1h MFA "2-3 issues" | https://www.independent.co.uk/news/world/americas/us-politics/vance-strait-of-hormuz-blockade-terrorism-b2957110.html | verify:wh-readout+independent`
+    
+    `wire | cold: PRC | MFA Guo Jiakun 14 Apr: blockade "irresponsible and dangerous," will "undermine ceasefire"; denied air-defense delivery reports as "completely fabricated"; warned of countermeasures if tariffs based on fabricated claims // hook: §1g — Beijing strongest language yet; half of China's crude transits Hormuz; fabrication denial is new seam (weapons-transfer vs sanctions narrative) | https://www.bbc.co.uk/news/articles/c78lleelxj4o | verify:bbc-en+cgtn-en`
+    
+    `wire | cold: ROME | Leo XIV 13 Apr (papal plane to Algeria): rejects Trump criticism; "Blessed are the peacemakers" — Gospel grounding not political; demanded ceasefire; 12 Apr "delusion of omnipotence" at St Peter's evening prayer // hook: Rome thread — Leo in-transit statement pairs Algerian apostolic journey + §1e friction; AP primary | https://apnews.com/article/vatican-pope-iran-war-trump-aa33df8902ca4f30f38e39f1d4b651b2 | verify:ap-primary+vatican.va`
+    
+    `wire | cold: HORMUZ enforcement | UK Maritime Trade Ops: enforcement 1400 UTC 13 Apr; at least 2 tankers reversed course; oil back to $100/bbl; NATO UK/France refused to join — announced separate "peaceful multinational mission" for freedom of navigation // hook: §1e enforcement mechanics; France-UK split from US is new (04-14 wires didn't carry this); test Ritter blockade checklist items 3-6 | https://gcaptain.com/all-eyes-on-hormuz-as-u-s-maritime-blockade-on-iran-enters-enforcement-phase/ | verify:gcaptain+ukmto`
+    
+    `wire | cold: Pakistan mediation 15 Apr: military chief + interior minister visiting Iran as mediators; Trump hints at second round in Pakistan, no date set // hook: Islamabad channel alive; Pakistan institutional role deepening (military + civilian); pairs §1h MFA "Pakistan as sole mediator" | https://www.aljazeera.com/news/2026/4/15/iran-warns-us-naval-blockade-threatens-ceasefire | verify:aljazeera-en+pid.gov.pk`
+    
+    `batch-analysis | 2026-04-15 | §1d Kremlin + §1h IRI MFA (uranium off-ramp) | **Tension-first:** Kremlin offers concrete **mechanism** (fuel-grade conversion or custody in Russia — 2015 precedent); IRI MFA says enrichment **right** is NPT-grounded, level/type "open to discussion" — these two positions are **compatible in principle** but **test against** US "affirmative commitment" demand (Vance pre-talk framing). **Do not** treat Kremlin offer as IRI acceptance or US acquiescence — three parties, three positions. **Weak bridge:** both reject US unilateral demand posture; Lavrov explicitly says "continuation of talks started in Pakistan."`
+    
+    `batch-analysis | 2026-04-15 | §1h dual register (MFA vs IRGC) | **Tension-first:** Iranian MFA (Baghaei) = **diplomatic opening** ("open to discussion," partial consensus, NPT rights framing); IRGC (Abdollahi) = **military escalation** (block all traffic in three seas if blockade continues). **Do not** merge into one "Iran says" — two institutions, two registers, two audiences. **Weak bridge:** both contingent on US behavior ("seriousness and good faith" / "could end ceasefire") — conditionality is the shared spine, not the threat level.`
+    
+    `batch-analysis | 2026-04-15 | Leo XIV + Vance (legitimacy collision) | **Tension-first:** Leo XIV grounds peace advocacy in **Gospel** ("Blessed are the peacemakers"), rejects Trump criticism as non-political, denounces "delusion of omnipotence." Vance grounds escalation in **economic terrorism** framing + "grand bargain" offer. **Orthogonal registers:** moral-theological vs executive-strategic — do not merge or treat Leo as "opposing" Vance in the same frame without naming the **register gap**. Same 24h window as Algerian apostolic journey.`
+    
+    `batch-analysis | 2026-04-15 | Lavrov Beijing × knot-shape E (Kremlin FM speech) | **Tension-first:** Operator-pasted **Lavrov** **Beijing** remarks (~14–15 Apr) **amplify** **knot-shape E** — **Russia–China**, **Hormuz→energy**, **sanctions**, **JCPOA/uranium**, **Islamabad** / **third-party** **support** — **official** **§1d**/**Kremlin** lane, **not** **`thread:`** expert **`crosses:`**. **Do not** let **FM** **causal** closure substitute for **AIS/Bloomberg** tier discipline on **Hormuz** facts. **UNSC** resolution **narrative** (condemn **Iran** / **Hormuz** without **root cause**) **vs** **Islamabad** talks — **falsifier pair** in **`days.md` Open**; **verify:** **MID**/**Kremlin** transcript + **MFA PRC** readout **beside** paste (CGTN/Xinhua shell already in **§1g Links**).`
+    
+    <!-- pruned 2026-04-16 (operator A): §2c RSS mirror blocks for 2026-04-13 and 2026-04-14 removed — canonical rows remain in [daily-brief-2026-04-13.md](../daily-brief-2026-04-13.md) §2c and [daily-brief-2026-04-14.md](../daily-brief-2026-04-14.md) §2c. Paste-grade **04-14** expert `thread:` + `batch-analysis` block (Parsi×Davis, Ritter, Sánchez–Xi, Davis×Jermy, Diesen×Sachs, Blumenthal×Parsi) removed after weave into [chapters/2026-04/days.md](chapters/2026-04/days.md) **`## 2026-04-14`**; recover from **git** history on this file if needed. -->
+
 
 ## 2026-04-12
 - `batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`
