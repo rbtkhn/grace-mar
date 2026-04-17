@@ -2,7 +2,7 @@
 
 WORK only; not Record.
 
-**Use:** Pick **whole sentences** only (verbatim). This sheet ranks **which sentences to keep** when building **3–6 theses** under a **≤ ~2000 word** total. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold).
+**Use:** Pick **whole sentences** only (verbatim). This sheet ranks **which sentences to keep** when building **3–6 theses** under a **≤ ~2000 word** total. **On-disk shape** (bold thesis labels, `---`, paragraphs): [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Methodology: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold).
 
 ---
 
@@ -51,4 +51,4 @@ WORK only; not Record.
 
 ---
 
-**Archive when the transcript fence is trimmed:** Dropped sentences are not in the `-transcript.md` fence. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold — Full verbatim when the fence is thesis-scaffold only](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) (git history, sidecar, or out-of-repo; optional one-line link from the date section to a sidecar).
+**Archive when the transcript fence is trimmed:** Dropped sentences are not in the `-transcript.md` fence. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) (git history, optional full-linear file, or out-of-repo). Thesis **layout** stays in [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern), not a separate `*-thesis-scaffold-FULL.md` per episode.

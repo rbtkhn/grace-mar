@@ -119,19 +119,21 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 
 **Strong-sentence discipline:** Use the repeatable checklist and tie-break rules in [THESIS-SCAFFOLD-CHECKLIST.md](THESIS-SCAFFOLD-CHECKLIST.md) (printable one-pager).
 
+**Where to put bold theses and separated paragraphs:** [strategy-expert-template.md — Thesis-first verbatim scaffold](strategy-expert-template.md#thesis-scaffold-pattern) (markdown above `~~~text` in the same `-transcript.md` date section — not a separate `*-thesis-scaffold-FULL.md` file).
+
 **Full verbatim when the fence is thesis-scaffold only (archive policy):** If the dated `~~~text` block in `strategy-expert-<expert_id>-transcript.md` holds a **≤ ~2000 word** scaffold (thesis-selected and/or sentence-trimmed) instead of a full episode paste, **dropped sentences are not recoverable from that fence**. Before relying on a trimmed fence as the only copy, choose **at least one** archive for the longer or full text:
 
 | Archive | Use when |
 |--------|----------|
 | **Git history** | You committed the long paste earlier; recovery is `git show` / `git log -p` on the transcript path (good for one-off corrections). |
-| **Sidecar file** | You want an explicit, grep-friendly artifact in-repo — e.g. `<label>-YYYY-MM-DD-thesis-scaffold-FULL.md` (thesis-organized, may still be trimmed) or a separately named **full linear verbatim** file the operator maintains. Same folder as other strategy-notebook expert files is typical. |
+| **Optional full-linear file** | You want an explicit, grep-friendly **full episode** paste in-repo (any stable name). **Thesis layout** (bold labels, `---`, thesis sections) belongs in [`strategy-expert-template.md`](strategy-expert-template.md#thesis-scaffold-pattern) on the **same date** as markdown **above** `~~~text`, not a parallel `*-thesis-scaffold-FULL.md` file per episode. |
 | **Out-of-repo** | Original transcript lives in notes, YouTube description, or another store; link it from the inbox stub or the date section if stable. |
 
-**Cross-link:** When a sidecar exists for a date, add **one line** immediately under the date’s source line (show title / air date) and **before** `~~~text`, linking to the sidecar so `thread` readers and greps find it without opening git. Not Record.
+**In-file layout:** Prefer **thesis markdown above `~~~text`** per [strategy-expert-template.md — Thesis-first verbatim scaffold](strategy-expert-template.md#thesis-scaffold-pattern) instead of a second notebook file for thesis structure. **Cross-link** to an optional **full-linear** archive only when that file holds material not in the transcript (e.g. uncut paste). Not Record.
 
 #### Worked example — Alexander Mercouris · air date **2026-04-16**
 
-Source: [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) **`## 2026-04-16`** fence. **Full thesis scaffold** (five theses, verbatim sentences, **≤ ~2000 words**): [mercouris-2026-04-16-thesis-scaffold-FULL.md](mercouris-2026-04-16-thesis-scaffold-FULL.md). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
+Source: [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) **`## 2026-04-16`** `~~~text` fence (thesis-scaffold verbatim trimmed to policy). **Shape** for bold theses + separated paragraphs: [strategy-expert-template.md#thesis-scaffold-pattern](strategy-expert-template.md#thesis-scaffold-pattern). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
 
 | Order | Thesis (operator label) | Verbatim scaffold (excerpts) |
 |------|-------------------------|--------------------------------|

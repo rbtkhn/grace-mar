@@ -177,7 +177,23 @@ WORK only; not Record.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile) and [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread).
 
-**Thesis scaffold + full verbatim (optional):** When a dated `~~~text` fence holds a **thesis-first scaffold** (≤ ~2000 words) rather than a full episode, **archive** the longer or full text per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) (git history, sidecar file, or out-of-repo). When a **sidecar** exists (e.g. `<short-label>-YYYY-MM-DD-thesis-scaffold-FULL.md`), add **one markdown line** under that date’s heading / show line and **before** `~~~text` linking to it. `python3 scripts/strategy_thread.py` still reads only what is inside the transcript file; the link is for humans and recovery.
+<a id="thesis-scaffold-pattern"></a>
+
+### Thesis-first verbatim scaffold (canonical shape — use this, not ad hoc sidecar files)
+
+**Do not** create separate `*-thesis-scaffold-FULL.md` files under `strategy-notebook/` for each episode. The **structure and convention** live **here** (template) and in [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) + [THESIS-SCAFFOLD-CHECKLIST.md](THESIS-SCAFFOLD-CHECKLIST.md).
+
+For a dated ingest where you want **bold theses**, **clear separation**, and **verbatim sentences** under each thesis:
+
+1. Under **`## YYYY-MM-DD`**, keep the show/source line (e.g. **The Duran** · expert · air date).
+2. **Above** the `~~~text` fence, add **markdown** blocks for human / GitHub preview:
+   - **`### Thesis N`** (or **`## Thesis N`** if your renderer prefers; stay consistent under the date heading).
+   - On the next line, **`**Short operator label**`** (bold thesis title — your words, not the expert’s).
+   - Then **one expert sentence per paragraph** (blank line between sentences). **Only** the expert’s words in those paragraphs — whole sentences, no paraphrase.
+   - Between theses, a horizontal rule **`---`** on its own line.
+3. **`~~~text` … `~~~`:** Put the **same** verbatim body you want **`thread`** / corpus extraction to see — typically the **≤ ~2000 word** copy (may match the markdown block text or be a single continuous paste). `strategy_expert_corpus.py` reads the transcript file as text; it does not render markdown, but the **fence** carries the operational verbatim.
+
+**Word budget:** Target **≤ ~2000 words** in the fence per ingest; use the checklist to drop whole sentences by thesis, or optional `python3 scripts/abridge_verbatim_transcript.py` for sentence-only boilerplate/length trim (does not assign theses). See architecture for **archive** if the fence is trimmed and you need the long episode elsewhere (git history, optional **full linear** file, or out-of-repo — not a second “scaffold FULL” naming pattern).
 
 ---
 
