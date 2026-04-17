@@ -2,7 +2,7 @@
 name: tri-mind
 preferred_activation: tri-mind
 description: >-
-  Tri-lens pass with a fixed A/B/C menu (Mercouris, Mearsheimer, Barnes): one letter = solo; two letters = 1-on-1 duet; abc = roundtable with topic-led or operator-chosen opening order (varied permutations, not always A→B→C).
+  Tri-lens pass with a fixed A/B/C menu (Mercouris, Mearsheimer, Barnes): one letter = solo; two letters = 1-on-1 duet; abc = roundtable with topic-led or operator-chosen opening order (varied permutations, not always A→B→C); ab+c = litigator-close (Mercouris–Mearsheimer duet then Barnes closing only — not symmetric abc).
   Triggers: tri-mind, tri-frame, tutti. WORK only; not the default on every strategy pass — see strategy-minds-granular.
 ---
 
@@ -18,7 +18,7 @@ description: >-
 
 **Relation to LEARN MODE:** If the operator is in **LEARN MODE** (full extraction, SCHOLAR hooks, strict ordering), follow [LEARN_MODE_RULES.md](../../../docs/skill-work/work-strategy/LEARN_MODE_RULES.md) — it may **override** section ordering and depth; say so when both apply.
 
-**Relation to skill-write doctrine:** **`tri-mind`** produces **analysis**, not finished **operator publishing voice**. After the pass, calibrate public copy per [write-operator-preferences.md](../../../docs/skill-write/write-operator-preferences.md). **Locals:** before paste, satisfy **[write-shipping-checklist.md](../../../docs/skill-write/write-shipping-checklist.md) step 4** (*Closer*) — see **Procedure §4 — Public copy** below; run the **full** checklist when practical.
+**Relation to skill-write doctrine:** **`tri-mind`** produces **analysis**, not finished **operator publishing voice**. After the pass, calibrate public copy per [write-operator-preferences.md](../../../docs/skill-write/write-operator-preferences.md). **Locals:** before paste, satisfy **[write-shipping-checklist.md](../../../docs/skill-write/write-shipping-checklist.md) step 4** (*Closer*) — see **Procedure §5 — Write surface** (*Public copy*) below; run the **full** checklist when practical.
 
 ---
 
@@ -33,13 +33,21 @@ Tri-mind — pick lens depth:
 - C — Barnes
 ```
 
+**Extended code (after the menu or in the same message — optional):**
+
+| Code | Meaning |
+|------|---------|
+| **`ab+c`** | **Litigator-close** — Mercouris + Mearsheimer **duet** (`ab`), then **Barnes closing only** (see **Procedure §3**). **Not** the same as **`abc`**. |
+| **`litigator-close`**, **`abc litigator-close`**, **“Barnes closes”** | Same as **`ab+c`**. |
+
 **How to read the reply** (case-insensitive; ignore spaces):
 
 | Input | Mode |
 |-------|------|
 | **One** of `a` `b` `c` | **Solo** — that mind only: one substantive in-voice block on the thesis. |
 | **Two** distinct letters (e.g. `ab`, `ba`, `ac`, `bc`) | **Duet (1-on-1)** — only those two minds: each opens **in menu order** (sort the chosen letters as **A → B → C**), then **one cross-reply round** between **just those two** (pushback / agreement / missing dimension). No third voice. |
-| **`abc`** (all three letters, any order such as `acb`, `bca` — normalize to all three present) | **Roundtable** — full three-way pass (see below). Optional same-line hint: **`abc order BCA`** / **`abc cab`** to fix **opening** order; if omitted, agent picks a **topic-led** permutation (not the same every time). |
+| **`ab+c`** or **`litigator-close`** (see table above) | **Litigator-close** — **`ab`** openings + **`ab`** cross-reply, then **one** Barnes block (no Barnes opening, no three-way cross-reply). See **Procedure §3**. |
+| **`abc`** (all three letters, any order such as `acb`, `bca` — normalize to all three present) **and not** `ab+c` | **Roundtable** — full three-way pass (see **Procedure §4**). Optional same-line hint: **`abc order BCA`** / **`abc cab`** to fix **opening** order; if omitted, agent picks a **topic-led** permutation (not the same every time). |
 
 If the operator **already** included the code with the thesis (e.g. “tri-mind `ab` … paste”), **skip** the menu and run the matching mode.
 
@@ -84,6 +92,7 @@ Patterns and recipes: [MINDS-SKILL-STRATEGY-PATTERNS.md](../../../docs/skill-wor
 |------|-------|
 | **Solo** (one letter) | One substantive in-voice pass |
 | **Duet** (two letters) | Two openings in sorted order + one cross-reply round |
+| **Litigator-close** (`ab+c`) | Mercouris + Mearsheimer duet, then **one** Barnes closing block (latch to A and B) |
 | **Roundtable** (`abc`) | Three openings (varied order) + one cross-reply round + unresolved tensions |
 
 ---
@@ -108,7 +117,27 @@ Take the **two** letters and sort them as **A < B < C** (e.g. `ba` and `ab` both
 
 **Close:** **1–3 bullets** unresolved between these two lenses.
 
-### 3. Roundtable (**abc**)
+### 3. Litigator-close (`ab+c`)
+
+**Aliases:** **`ab+c`**, **`litigator-close`**, **`abc litigator-close`**, operator phrases like **“Barnes closes”** / **“litigator last.”**
+
+**Not** interchangeable with **`abc` roundtable:** Barnes is the **concluding voice only** — he does **not** open alongside A/B, and there is **no** three-way cross-reply round. Matches **CIV-MIND-BARNES** as **orthogonal catalyst** (counsel after two “expert” frames), not a third parallel geopolitics opener.
+
+**Sequence**
+
+1. **Round 1 — Openings:** **Mercouris (A)** then **Mearsheimer (B)** — one substantive paragraph each (or tight bullets), **in-voice**, same object as **Procedure §0** thesis.
+2. **Round 2 — Cross-reply:** **A ↔ B only** — **one** round; each mind **one** paragraph responding to the **other** only. Preserve tension (same discipline as **§2 Duet**).
+3. **Round 3 — Barnes closing:** **One** **C** subsection — the **litigator**: jurisdiction, enforceability, what counts as evidence, who pays, US civic machinery when load-bearing. **Latch rule:** the block must **explicitly engage** **both** prior minds — **at least one** hook to **Mercouris’s** frame (staging, legitimacy, channels) **and** **at least one** to **Mearsheimer’s** (incentives, structure, security); may reference **cross-reply** as well as openings. Barnes **does not** “pick a winner” between A and B; he **maps** what would need to be **proven**, **binding**, or **enforced** for either story to **bite**.
+
+**Close:** **2–4 bullets** unresolved tension (optional); **no** fake consensus.
+
+**When to prefer litigator-close:** Default **three-voice** pass when the operator wants **A/B dialectic first**, **Barnes** as **closer** (typical tri-mind = Mercouris, Mearsheimer, Mercouris–Mearsheimer cross, Barnes).
+
+**When to use full `abc` roundtable instead:** Liability / jurisdiction / US institutional lever **anchors the fight from line one**; or Barnes must **interrupt** early (e.g. paymasters, sanctions, war powers before expert framing).
+
+**Optional:** **Civ-mem** mapping — after Round 3, **one** short paragraph per letter **A, B, C** in order (stable index) if the operator asked **CIV-MEM**; otherwise skip.
+
+### 4. Roundtable (**abc**)
 
 **Do not** default every roundtable to the same opening order (**A → B → C**). **Vary** how the three voices enter — the shape of the disagreement should feel **earned**, not templated.
 
@@ -137,7 +166,7 @@ If the operator asked to **integrate civ-mem** or **CIV-MEM**, add **one** parag
 
 **Close:** **Unresolved tension** — **2–4 bullets** (no fake consensus).
 
-### 4. Write surface
+### 5. Write surface
 
 Default **chat only**. To append to [daily-strategy-inbox.md](../../../docs/skill-work/work-strategy/strategy-notebook/daily-strategy-inbox.md) use **paste-ready** lines or a bounded `batch-analysis` block per inbox rules. **`chapters/YYYY-MM/days.md`** only when the operator **directs** or at **`dream`** fold — same boundary as [NOTEBOOK-PREFERENCES.md](../../../docs/skill-work/work-strategy/strategy-notebook/NOTEBOOK-PREFERENCES.md).
 
@@ -149,6 +178,7 @@ Default **chat only**. To append to [daily-strategy-inbox.md](../../../docs/skil
 
 | Variant | Behavior |
 |---------|----------|
+| **Litigator-close (`ab+c`)** | **Procedure §3** — duet **`ab`** then Barnes **closing** only; not symmetric **`abc`**. |
 | **Strict + web** | Add [fact-check](../fact-check/SKILL.md) or explicit **verify** on load-bearing claims; cite **URLs** in a final **Links** block if writing to disk. |
 | **Roundtable depth** | Extra cross-reply rounds — keep bounded; offer **condense** if output exceeds ~2k words. |
 

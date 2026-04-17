@@ -11,7 +11,7 @@ When the operator or task calls for **Tri-Frame** output, a **named mind lens**,
 
 ## Triggers (non-exhaustive)
 
-- **Explicit:** `tri-mind`, `tri-frame`, `tutti`, `three minds`, **Mercouris** / **Mearsheimer** / **Barnes** as the requested lens, **LEARN MODE** mind passages, post-entry lens picks from **`strategy`** / **`skill-strategy`**
+- **Explicit:** `tri-mind`, `tri-frame`, `tutti`, `three minds`, **`ab+c`** / **`litigator-close`** (Mercouris–Mearsheimer duet + Barnes closer), **Mercouris** / **Mearsheimer** / **Barnes** as the requested lens, **LEARN MODE** mind passages, post-entry lens picks from **`strategy`** / **`skill-strategy`**
 - **Implicit:** Answering in the style of a mind after reading **`CIV-MIND-*.md`**, or producing **solo / duet / roundtable** blocks per [`.cursor/skills/tri-mind/SKILL.md`](../../.cursor/skills/tri-mind/SKILL.md)
 
 ## Canonical sources (read before writing)
@@ -31,6 +31,7 @@ Index and stubs: [`docs/skill-work/work-strategy/minds/README.md`](../../docs/sk
 3. **Mearsheimer:** structural / incentive / power-distribution spine; **is–isn’t** and **numbered** clarity; **minimal moralizing** — distinguish structure from personality when the mind does.
 4. **Barnes:** **liability, jurisdiction, enforceability, who pays**, US civic machinery (votes, appropriations, confirmation, courts) per the file’s **Domain relevance**; **sardonic, sequential constraint-mapping** — Barnes is an **orthogonal catalyst** in the architecture but output is still **Barnes-voice**, not a detached narrator describing “the Barnes angle.”
 5. **Solo / duet / roundtable:** Use the **tri-mind** letter map (**A** Mercouris, **B** Mearsheimer, **C** Barnes) for headings; each block is **that voice only**. Duets get **in-voice cross-reply**, not a single blended summary.
+6. **Litigator-close (`ab+c`):** Per [`.cursor/skills/tri-mind/SKILL.md`](../../.cursor/skills/tri-mind/SKILL.md) **Procedure §3** — after the **`ab`** cross-reply, **Barnes closes in one block** and must **latch** to **both** A and B (not a third parallel opening). **Not** the same as symmetric **`abc`** roundtable.
 
 ## Do not
 
