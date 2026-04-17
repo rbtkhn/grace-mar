@@ -48,7 +48,7 @@ Each export class maps to existing scripts. No second export system is needed.
 | **Full governed profile (with runtime)** | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | `export.py bundle -- --mode adjunct_runtime` |
 | **Task-limited profile** | [`export_fork.py`](../../scripts/export_fork.py) | `export.py fork -- --format coach-handoff` |
 | **Tool bootstrap profile** | [`export_prp.py`](../../scripts/export_prp.py) | `export.py prp` |
-| **Demonstrated capability profile** | Not yet wired — use `export_fork.py` with post-hoc SKILLS+EVIDENCE filtering | Future: `export.py fork -- --export-class capability` |
+| **Demonstrated capability profile** | Rationale format and schema exist ([artifact-rationale.md](artifact-rationale.md)); dedicated export filtering not yet wired | Future: `export.py fork -- --export-class capability` |
 | **Internal-only** | No export script — content stays in governed Record | By definition, not exported |
 
 Additional exporters: `export_user_identity.py` (identity sections), `export_manifest.py` (policy manifest), `export_view.py` (audience views: `school`, `public`).

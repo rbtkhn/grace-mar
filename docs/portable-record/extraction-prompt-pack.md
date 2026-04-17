@@ -1,6 +1,6 @@
 # External-AI extraction prompt pack
 
-Extract structured portable working-intelligence from an external AI system (ChatGPT, Claude, Gemini, Copilot, or any tool with persistent context) into candidate objects that can enter the companion-self review pipeline.
+Extract structured portable working-identity data from an external AI system (ChatGPT, Claude, Gemini, Copilot, or any tool with persistent context) into candidate objects that can enter the companion-self review pipeline.
 
 ---
 

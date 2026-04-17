@@ -1014,7 +1014,7 @@ This section operationalizes the **forced-absorption** risk pattern defined in t
 
 ## Portability
 
-Grace-Mar already functions as a governed portable working-intelligence system through its canonical surfaces, export scripts, and gated pipeline. For the explicit layer mapping and remaining gaps, see [portable-working-identity.md](portable-working-identity.md). For a current-state inventory of what is solved and what is not, see [portable-record/current-capability-map.md](portable-record/current-capability-map.md).
+Grace-Mar already functions as a governed portable working-identity system through its canonical surfaces, export scripts, and gated pipeline. For the explicit layer mapping and remaining gaps, see [portable-working-identity.md](portable-working-identity.md). For a current-state inventory of what is solved and what is not, see [portable-record/current-capability-map.md](portable-record/current-capability-map.md).
 
 ---
 

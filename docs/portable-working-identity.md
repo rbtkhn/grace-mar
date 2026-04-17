@@ -1,6 +1,6 @@
 # Portable working identity
 
-Grace-Mar already functions as a governed portable working-intelligence system. The architecture is not aspirational — the core surfaces, exports, and governance are live. This document maps the portability layers to existing surfaces and states what remains.
+Grace-Mar already functions as a governed portable working-identity system. The architecture is not aspirational — the core surfaces, exports, intake path, and governance are live. This document maps the portability layers to existing surfaces and states what remains.
 
 ---
 
@@ -20,7 +20,7 @@ Grace-Mar already functions as a governed portable working-intelligence system. 
 
 ## Four-layer mapping
 
-Portable working intelligence maps to four layers. Each layer has a canonical Grace-Mar surface.
+Portable working identity maps to four layers. Each layer has a canonical Grace-Mar surface.
 
 | Layer | What it captures | Grace-Mar surface |
 |---|---|---|
@@ -39,12 +39,10 @@ New portability work must extend the existing PRP / export / prepared-context ar
 
 ## What remains
 
-The main remaining gap is **connectorization and external extraction ergonomics**, not core architecture:
+The core content formats, intake path, and export contract are implemented. The remaining gaps are **connectorization and operational CLI wiring**, not architecture:
 
-- **External-AI extraction prompt pack** — structured prompt for extracting portable working-intelligence from other AI systems into candidate objects
-- **Working-identity candidate schema** — normalized schema for imported context that enters review before promotion
-- **Thin MCP adapter** — read-only connector over approved surfaces (future)
-- **Portable artifact-rationale export contract** — structured export of demonstrated capability with provenance (future)
+- **Thin MCP adapter** — read-only connector over approved surfaces for tool-using agents (future)
+- **Export-class CLI wiring** — the five export classes are documented in the [export contract](portable-record/export-contract.md) but `export.py` does not yet accept an `--export-class` flag (future)
 
 See [docs/portable-record/current-capability-map.md](portable-record/current-capability-map.md) for the full inventory.
 
@@ -57,3 +55,4 @@ See [docs/portable-record/current-capability-map.md](portable-record/current-cap
 - [portable-record-prompt.md](portable-record-prompt.md) — PRP export spec
 - [EXPORT-CLI.md](EXPORT-CLI.md) — unified export CLI
 - [portable-record/current-capability-map.md](portable-record/current-capability-map.md) — current-state capability inventory
+- [portable-record/export-contract.md](portable-record/export-contract.md) — export classes and the portability surface

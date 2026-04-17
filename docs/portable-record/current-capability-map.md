@@ -20,6 +20,9 @@ These capabilities are live in the grace-mar instance.
 | **Approval Inbox / recursion-gate** | Staging queue with YAML candidates, companion approval, merge script. | Live — [`users/grace-mar/recursion-gate.md`](../../users/grace-mar/recursion-gate.md), [`scripts/process_approved_candidates.py`](../../scripts/process_approved_candidates.py) |
 | **Integrity validation** | 12-check validator covering boundary, convenience-path, and export freshness. | Live — [`scripts/validate-integrity.py`](../../scripts/validate-integrity.py) |
 | **Export contract** | Five export classes (full governed, task-limited, tool bootstrap, demonstrated capability, internal-only) over existing exporters. | Live — [export-contract.md](export-contract.md) |
+| **External-AI extraction prompt pack** | Structured prompt + import script for extracting portable working-identity from other AI systems into governed candidate objects. | Live — [extraction-prompt-pack.md](extraction-prompt-pack.md), [`scripts/import_working_identity_candidates.py`](../../scripts/import_working_identity_candidates.py) |
+| **Working-identity candidate schema** | Normalized JSON Schema for imported context that enters gate review before promotion to Record. | Live — [`schema-registry/working-identity-candidate.v1.json`](../../schema-registry/working-identity-candidate.v1.json), [working-identity-candidates.md](working-identity-candidates.md) |
+| **Artifact-rationale format** | Structured format for demonstrated capability with provenance (why it was built, not just that it exists). | Live — [artifact-rationale.md](artifact-rationale.md), [`schema-registry/artifact-rationale.v1.json`](../../schema-registry/artifact-rationale.v1.json) |
 
 ---
 
@@ -27,10 +30,8 @@ These capabilities are live in the grace-mar instance.
 
 | Gap | Description | Priority |
 |---|---|---|
-| **External-AI extraction prompt pack** | Structured prompt for extracting portable working-intelligence from other AI systems into candidate objects. | This PR set |
-| **Working-identity candidate schema** | Normalized JSON Schema for imported context that enters gate review before promotion to Record. | This PR set |
 | **Thin MCP adapter** | Read-only connector over approved surfaces for tool-using agents. | Future |
-| **Artifact-rationale format** | Structured format for demonstrated capability with provenance (why something was built, not just that it exists). | This PR set — [artifact-rationale.md](artifact-rationale.md) |
+| **Export-class CLI wiring** | The five export classes are documented in [export-contract.md](export-contract.md) but `export.py` does not yet accept an `--export-class` flag. Child scripts would need class-aware filtering. | Future |
 
 ---
 

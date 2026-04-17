@@ -1,6 +1,6 @@
 # Working-identity candidates
 
-A working-identity candidate is a structured proposal representing portable working-intelligence extracted from an external AI system, observed at runtime, or noted manually by the operator. Candidates are **non-canonical review material** — they represent what an external source believes about the companion, not what the Record has confirmed.
+A working-identity candidate is a structured proposal representing portable working-identity data extracted from an external AI system, observed at runtime, or noted manually by the operator. Candidates are **non-canonical review material** — they represent what an external source believes about the companion, not what the Record has confirmed.
 
 ---
 
