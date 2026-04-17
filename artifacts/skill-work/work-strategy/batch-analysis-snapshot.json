@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-17T20:15:45.990786+00:00",
-  "count": 21,
+  "generated_at": "2026-04-17T20:20:57.794529+00:00",
+  "count": 22,
   "batch_analysis_refs": [
     {
       "date": "2026-04-17",
@@ -67,6 +67,27 @@
         "upstream_verify": [
           "daniel-davis",
           "trita-parsi"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Freeman Grayzone × tri-mind (`ab+c`) resolve × same-day stack**",
+      "raw": "- batch-analysis | 2026-04-17 | **Freeman Grayzone × tri-mind (`ab+c`) resolve × same-day stack** | **Seam:** Freeman = **monologue** (**staging** + **incentives** + **enforceability**) — **not** wire, **not** **§1h**. **Resolve** rules in [strategy-expert-charles-freeman-thread.md](strategy-expert-charles-freeman-thread.md) § **Tri-mind resolution**. **Cross** `trita-parsi` + `seyed-marandi` + `@araghchi` **primary** — **four** **tiers**; **quant** claims (**flights**, **barrels**, **redirects**, **reserves**) **verify-first** before Judgment.",
+      "expert_ids": [
+        "charles-freeman",
+        "trita-parsi",
+        "seyed-marandi"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "charles-freeman",
+          "trita-parsi",
+          "seyed-marandi"
+        ],
+        "upstream_verify": [
+          "charles-freeman"
         ]
       }
     },

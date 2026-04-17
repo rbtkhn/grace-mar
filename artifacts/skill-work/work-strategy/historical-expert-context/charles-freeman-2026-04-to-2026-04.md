@@ -1,4 +1,4 @@
-# Historical expert context — `charles-freeman` — `2026-04`
+# Historical expert context — `charles-freeman`
 
 WORK only; not Record.
 Source thread: `docs/skill-work/work-strategy/strategy-notebook/strategy-expert-charles-freeman-thread.md`

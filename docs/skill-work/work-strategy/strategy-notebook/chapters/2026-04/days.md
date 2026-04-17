@@ -668,7 +668,7 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [Knot — weave C — marandi-blumenthal-jf-primary](knots/strategy-notebook-knot-2026-04-16-marandi-blumenthal-jf-primary.md)
 - [Knot — weave D — pape-janssen-escalation-blockade](knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md)
 - [Knot — marandi-ritter-mercouris-hormuz-scaffold (04-13)](knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — **Marandi** lane **cross-day** anchor for **04-16** BP weave
-- [`strategy-expert-seyed-marandi-thread.md`](../../strategy-expert-seyed-marandi-thread.md) — Segment 1 **Breaking Points — 2026-04-16** + machine **Segment 2a** (inbox line)
+- [`strategy-expert-seyed-marandi-thread.md`](../../strategy-expert-seyed-marandi-thread.md) — journal layer **Breaking Points — 2026-04-16** + machine layer **Recent transcript material** (inbox line)
 - [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **`## 2026-04-16`** **`- BP |`** Marandi + **`batch-analysis | 2026-04-16 | Marandi BP…`**
 - [daily-brief-2026-04-16.md](../../daily-brief-2026-04-16.md) — §1f **Grok** digest archive + triage table (stubs §1d–§1h until watch pass)
 - [meta.md](meta.md) — § **Grok 2026-04-16 digest — month falsifiers**
@@ -701,12 +701,14 @@ Barnes says both sides face material clocks and the question is which clock runs
 - **`strategy + verify` (wires):** Gulf News (2026-04-08) — Araghchi **family**: Hormuz under **Iranian military management** during **two-week** ceasefire — supports “managed passage” arc, not necessarily same string as **04-17** X timestamp. Moneycontrol (2026-04-17) — Trump **pool**: uranium / “nuclear dust,” deal optimism, Islamabad — supports **optimistic executive** channel **same calendar day** as TS maximalist embed (**dual-register**; do not merge without both primaries).
 - **§1f Grok digest:** [daily-brief-2026-04-17.md](../../daily-brief-2026-04-17.md) §**1f** — LLM paste + triage; **Q** clusters stay quarantined until verify rows clear (Ukraine night vs brief date; SPR 172M/400M vs **04-16** 45M; Oman / mediation fab risk). **Disposition table** in brief. Same-day Araghchi + Trump **falsifies** monotonic “Oman momentum only” reads of the paste.
 - **Expert-thread continuity:** [strategy-commentator-threads.md](../../strategy-commentator-threads.md) **Official IRI / MFA** — 04-17 Araghchi joins **trita-parsi** (Lebanon vs nuclear), **seyed-marandi** 04-16 register (seam), **alexander-mercouris** Lebanon/Hormuz surface ([mercouris-mearsheimer-lebanon-split](knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md)); **`thread:daniel-davis`** for Davis only. Inbox: [daily-strategy-inbox.md](../../daily-strategy-inbox.md) `batch-analysis | 2026-04-17` + `notebook |` IRI FM line.
+- **`thread:charles-freeman` — Grayzone / Nima (2026-04-17):** Amb. Freeman long-form — **performative** ceasefire / mediation vs **spoiler** **incentives**; **Israel** **aims unmet** + **Lebanon** **continuation** frame; **Hormuz** **perception vs export** **arithmetic**; **GCC hedge**; **US** **institutional** **decay** — **tri-mind** **`ab+c`** **resolve** + **five-thesis** **distillation** in [strategy-expert-charles-freeman-thread.md](../../strategy-expert-charles-freeman-thread.md) (crosses **Davis×Freeman×Mearsheimer** [scaffold](knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md)); **not** **§1h** / **wire** tier — **quant** **verify-first**.
 
 ### Judgment
 
 - **Three clocks, one day:** (1) **IRI** X primary — Hormuz framed with Lebanon ceasefire alignment; (2) U.S. executive — pool optimism (Moneycontrol) vs Truth Social hard terms (Davis embed) — dual-register until TS full text is pinned; (3) **`thread:daniel-davis`** — negotiation-window vs ultimatum framing — orthogonal to FM text and to §1f Grok arc unless verify rows merge them with receipts.
 - Do not collapse deal-optimistic pool copy and maximalist social post into one “Trump position” in public copy without explicit seam and both primaries — see inbox `batch-analysis | 2026-04-17 | Pool vs Truth Social (dual-register)`.
 - Marandi 04-16 BP and Araghchi 04-17 FM post share the Hormuz object in different registers (elite long-form vs diplomatic tweet); same speech-vs-ORBAT split discipline as [2026-04-16](#2026-04-16).
+- **Freeman** same-day **adds** a **fourth** **commentator** **plane** (career-diplomat **monologue**) beside **Parsi** / **Marandi** / **FM** — **merge** none of them into one “Iran” or “ceasefire” **Judgment** without **tier** **tags**; see inbox **`batch-analysis | 2026-04-17 | Freeman Grayzone × tri-mind`**.
 
 ### Links
 
@@ -716,11 +718,14 @@ Barnes says both sides face material clocks and the question is which clock runs
 - [Moneycontrol — Trump pool remarks 2026-04-17](https://www.moneycontrol.com/world/trump-says-iran-to-give-up-enriched-uranium-signals-deal-very-soon-article-13891392.html)
 - [`strategy-expert-daniel-davis-thread.md`](../../strategy-expert-daniel-davis-thread.md) — **2026-04** **bullet** **(Araghchi** **+** **Trump** **TS** **+** **continuity** **map**)
 - [`strategy-expert-trita-parsi-thread.md`](../../strategy-expert-trita-parsi-thread.md) · [`strategy-expert-seyed-marandi-thread.md`](../../strategy-expert-seyed-marandi-thread.md) · [`strategy-expert-alexander-mercouris-thread.md`](../../strategy-expert-alexander-mercouris-thread.md) — **04-17** **continuity** **bullets**
+- [`strategy-expert-charles-freeman-thread.md`](../../strategy-expert-charles-freeman-thread.md) — **04-17** **Grayzone** + **tri-mind** **`ab+c`** **resolve**
 - [meta.md](meta.md) — **April arc** **04-17** **sentence** **(FM** **primary** **+** **Davis** **+** **dual-register**)
 - Prior day: [2026-04-16](#2026-04-16)
 
 ### Open
 
 - Pin **canonical** **status URLs:** **@araghchi** **2026-04-17** **post**, **@DanielLDavis1** **QT** **chain**, **Truth Social** **~09:57** **full** **text** **(primary** **or** **authorized** **mirror**).
+- Pin **Grayzone** / **YouTube** canonical URL for **Freeman 2026-04-17** (replace `TBD-grayzone-freeman-2026-04-17` in inbox + transcript row).
 - **§1f digest:** **Q** rows in [daily-brief-2026-04-17.md](../../daily-brief-2026-04-17.md) **Triage disposition** — Ukraine night vs brief date, SPR reconciliation, Pakistan-mediated / Macron–Starmer / paste-only Middle East lines — before any Signal lead cites superlatives from the paste.
 - **Optional:** **`python3 scripts/strategy_thread.py`** **for** **`thread:daniel-davis`** **after** **URL** **pins** **—** **inbox** **lines** **already** **list** **`thread:`**.
+- **Optional:** **`python3 scripts/strategy_thread.py`** **`--today 2026-04-17`** **after** **Freeman** **URL** **pin** — **`thread:charles-freeman`** **ingest** **now** **in** **inbox**.

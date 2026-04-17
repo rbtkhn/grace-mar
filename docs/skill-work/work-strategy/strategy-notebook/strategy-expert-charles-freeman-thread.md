@@ -119,13 +119,32 @@ The `charles-freeman` lane’s role (Retired career diplomat: inconclusive talks
 - **2026-04** — Notebook knot cross-ref (partial month).  
   _Source:_ notebook: `strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md`
 
+- **2026-04-17** — Grayzone / Nima — Freeman monologue (Israel strategy, phony ceasefire, Hormuz, GCC hedge, US decay).  
+  _Source:_ operator transcript + [strategy-expert-charles-freeman-thread.md](strategy-expert-charles-freeman-thread.md) § Grayzone / Nima — 2026-04-17
+
 <!-- backfill:charles-freeman:end -->
 ## 2026-04
 
-_Partial month — April Segment 2 lists **knot refs** for Islamabad–Hormuz week (Davis×Freeman×Mearsheimer parallel named in scaffold); no standalone Freeman ingest line._
+_Partial month — April **Segment 2** lists **knot refs**; **2026-04-17** adds **Grayzone / Nima** operator transcript + **tri-mind** resolution (see below)._
 
 April uses Freeman as **career-diplomat / alliance-material** plane beside Marandi legitimacy and Ritter mechanics — **inconclusive talks** discipline per knot cross-refs.
 
+### Grayzone / Nima — 2026-04-17 (operator transcript)
+
+**Session title (host copy):** *Amb. Charles Freeman: Israel’s Strategy Just COLLAPSED – Trump Steps In* (intro: **Friday, April 17, 2026**).
+
+**Five theses (distilled for notebook):** (1) **Performative termination** — “ceasefire” / mediation can be **announcement** without **meeting of minds**; **electoral** and **market** **signaling** in an **unverifiable** information space. (2) **Israel strategic bind** — **no** stated **US/Israel** **objectives** **achieved** in Freeman’s read; **Netanyahu** **continuation** incentive; **Lebanon** **occupation / wasteland / annexation** appetite vs **Trump** **ceasefire** **story**; **Washington** talks as **fantasy** **foreign policy** **exercise**. (3) **Hormuz / blockade** — **perception** vs **export** **reality** (e.g. **tanker** **arithmetic** vs **Navy** **redirect** **story**); strait as **Iranian** **permissioning** (“door” metaphor); long-term posited fix: **rules-based** **Iranian–Omani** **management** (**Montreux**-style analogy). (4) **GCC hedge** / **dual containment** legacy / **multi-nodal** drift (**Saudi–Iran** **FM** channel, **UAE**, **Oman**, **Spain** **exemplar**). (5) **US institutional decay** + **Iran** **attrition** / **deterrence** — **Rubio** as **non-coordinating** figure; **Islamabad**-style round as **performance**; **morale** / **retention** claims; **NPT** / **enrichment** / **Hormuz** **rules** as **open** **structural** **issues**.
+
+**Epistemic:** **Commentator monologue** — **quant** claims (**logistic** **flights**, **barrels**, **reserve** **rates**, **interdictions**) are **verify-first** before **Judgment** or **Links-grade** merge.
+
+### Tri-mind resolution (`ab+c`, 2026-04-17)
+
+WORK **operating rules** after **Mercouris / Mearsheimer / Barnes (litigator-close)** on this appearance:
+
+1. **Three tiers, not one voice:** **Legitimacy / staging** (Mercouris) — parallel **performances** **not** **synchronizing**; **incentives / spoiler / exit** (Mearsheimer) — **alliance** **time** **horizons** **split**; **enforceability** (Barnes) — **terms** **unpinned** → **no** **single** **contract** **for** **insurers**, **allies**, or **Congress** until **primaries** **land**.
+2. **“Phony ceasefire”** holds as **hypothesis** at **speech** tier; **structural** **read** (**pause** as **instrumental**) **orthogonal** — weave with **explicit** **seam**, not **merged** **verdict**.
+3. **Hormuz** — **permissioning** / **“door”** language maps **Barnes** **lane** (published **rules** vs **coercion**); **cross-check** **export** and **interdiction** **metrics** **against** **independent** **series** before **Signal** **lead**.
+4. **Netanyahu** **jail** **if** **peace** / **US** **buildup** **numbers** / **Europe** **capabilities** — **tier** as **analyst** **claims** until **wire** or **primary** **receipts**.
 
 Open pins belong in prose, not only as bullets. For this `charles-freeman` month segment, explicitly reserve space for **what remains unresolved**: which claims await transcript confirmation, which geopolitical sub-claims depend on translation or primary document access, and which institutional facts are stable enough to reuse in weave scaffolding. That habit keeps later strategy passes from mistaking silence for certainty.
 
@@ -143,6 +162,7 @@ Verification stance for Charles (“Chas”) Freeman in 2026-04 should stay tier
 
 - [strength: medium] **Thesis weave:** [islamabad-hormuz-thesis-weave](strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) — Islamabad collapse + Thesis A/B + indexed threads.
 - [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — Davis×Freeman×Mearsheimer parallel — **seam** vs papal moral register.
+- [strength: medium] **2026-04-17 Grayzone / Nima** — operator transcript (session title on file); **tri-mind** **`ab+c`** **resolve** in § **Tri-mind resolution** above — pin canonical **YouTube** when stable.
 
 Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
 
@@ -151,6 +171,11 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 ## Machine layer — Extraction (script-maintained)
 
 _Auto-generated from `-transcript.md` + knot index. **Journal layer** (narrative) lives **above** the **strategy-expert-thread** start HTML comment. The machine-layer HTML block is replaced on each `thread` run._
+
+### Recent transcript material
+
+## 2026-04-17
+- YT | cold: **Amb. Charles Freeman** (Grayzone / Nima, **2026-04-17** — *Israel’s Strategy Just COLLAPSED – Trump Steps In*) — **Phony ceasefire** / **Trump** **rhetoric** vs **reality**; **Israel** **aims unmet** + **Netanyahu** **bind**; **Hormuz** **perception** vs **export** **story** + **GCC hedge**; **US** **decay** / **Rubio**; **Iran** **attrition** // hook: **five theses** + **tri-mind** **`ab+c`** **resolve** — [strategy-expert-charles-freeman-thread.md](strategy-expert-charles-freeman-thread.md) § **Grayzone / Nima** + **Tri-mind resolution**; crosses **Davis×Freeman×Mearsheimer** [scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) | https://www.youtube.com/watch?v=TBD-grayzone-freeman-2026-04-17 | verify:operator-transcript+pin-canonical-URL | thread:charles-freeman | grep:Freeman+Grayzone+2026-04-17
 
 ### Knot references
 
