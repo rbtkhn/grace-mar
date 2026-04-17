@@ -10,6 +10,8 @@
 
 **Thread rhythm (expert corpus):** After **`thread:<expert_id>`** lines are in this file, operator **`thread`** rebuilds **`strategy-expert-<expert_id>.md`** rolling blocks only — **`python3 scripts/strategy_thread.py`** (same flags as `scripts/strategy_expert_corpus.py`). **Not** a **`weave`**: does **not** touch **`days.md`**, knots, or **`Accumulator for`**. Spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread (terminology)*.
 
+**Split ingest (planned direction):** Long verbatim may live primarily in **`strategy-expert-<expert_id>-transcript.md`** while this file stays the **stub + grep registry** (short line, **`thread:`**, optional **`aired:YYYY-MM-DD`**, URL, **`verify:`**). One future **`strategy_ingest`**-style command would write both layers in one step; until then, manual inbox + **`thread`** triage remains the path. Full policy + CLI sketch: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Split ingest model* and § *Planned unified ingest command*.
+
 **X post ingest cadence:** Aim for **at least five** strategy ingests from X per local day (claim → why it matters → URL, plus verify tags as needed). **Five is a floor, not a cap** — capturing **more than five** on busy days is **normal**, not exceptional. Same one-line shape scales to 6+ rows without a separate workflow.
 
 ### Paste-ready one-liner (canonical unit)
@@ -87,6 +89,11 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 **Accumulator for:** 2026-04-18 _(system local date — maintain from clock when appending)_
 
 _(Append below this line during the day.)_
+
+## 2026-04-16
+
+- YT | cold: Mercouris 16 Apr 2026 (The Duran) — EU drone factories for Ukraine, Medvedev warns EU, Lavrov–Saudi FM, Munir in Tehran, Hormuz blockade & China naval logic // hook: full verbatim §2026-04-16 in strategy-expert-alexander-mercouris-transcript.md | https://www.youtube.com/watch?v=TBD-canonical-episode | verify:operator-ingest+aired-2026-04-16 | thread:alexander-mercouris | aired:2026-04-16
+
 
 `ROME | cold: Leo XIV Bamenda (16 Apr) — "woe" to those who manipulate religion / God's name for military, economic, or political gain (Fides); same calendar day Hegseth used Mark 3 / Pharisees framing re U.S. press (Pentagon briefing, Examiner) // hook: two legitimacy planes — do not collapse; woven `days.md` `## 2026-04-18` + [ROME-PASS rolling seam](../work-strategy-rome/ROME-PASS.md) | https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain | verify:fides-primary+washingtonexaminer | membrane:single | grep:LeoXIV+Hegseth-2026-04-16`
 

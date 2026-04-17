@@ -61,6 +61,76 @@ Within **Segment 1**, each **`## YYYY-MM`** heading opens **one month-segment** 
 
 **3-file model:** Each expert has three files — **`strategy-expert-<expert_id>.md`** (cognitive profile — operator-authored, stable), **`-transcript.md`** (7-day rolling verbatim **from inbox** — first `thread:` line plus optional continuation paragraphs; target **≤ ~2000 words** per block, soft **≤ ~20k words** per file after prune), **`-thread.md`** (**narrative journal** + **machine extraction** + optional ledger). The **`thread`** command updates transcripts and **only the marked block** in **`-thread.md`**; the profile file is never script-modified. **Templates** for all three filenames are maintained as **one** bundle: [strategy-expert-template.md](strategy-expert-template.md) (jump anchors at top of that file).
 
+<a id="split-ingest-model"></a>
+
+### Split ingest model (operator direction — planned)
+
+**Problem:** Long verbatim belongs in **`strategy-expert-<expert_id>-transcript.md`**, but **unified discovery** still needs a **grep-friendly registry** and a **single habitual action** (see operator preference: stub + corpus + one command).
+
+**Policy (target):**
+
+| Layer | Role |
+|-------|------|
+| **[`daily-strategy-inbox.md`](daily-strategy-inbox.md)** | **Index / stub** — at minimum one paste-ready line per capture: **`thread:<expert_id>`**, **`aired:YYYY-MM-DD`** (or equivalent) when the event has a clear **air/publication date**, short **cold** / **hook**, **URL**, **`verify:`**. Same tags as today so **`rg`** across the inbox stays the primary “what did we file?” sweep. |
+| **`strategy-expert-<expert_id>-transcript.md`** | **Corpus** — long quoted speech under **`## YYYY-MM-DD`** where that date is the **air/publication day** (not only “the day I typed”). Continuation paragraphs follow the [long-form verbatim](daily-strategy-inbox.md#long-form-verbatim-thread) rules. |
+| **`python3 scripts/strategy_thread.py`** (today) | Triage + extraction from inbox → transcript → machine block; **until** a dedicated command ships, triage still assumes inbox-sourced `thread:` blocks. |
+
+**Unified search:** Treat **inbox + `*-transcript.md`** as one habit: grep inbox for stubs and episode slugs; grep transcripts for full text — **or** (future) a generated rollup listing pointers only. **Not** Record.
+
+**Transition:** Current tooling remains valid; a future **`strategy_ingest`** (name TBD) would implement “one command” below without deleting the inbox as registry.
+
+<a id="planned-strategy-ingest-cli"></a>
+
+### Planned unified ingest command (CLI sketch — not implemented)
+
+Single entry point (working name **`strategy_ingest`** or fold into **`strategy_thread`**) — **one invocation** that updates stub + corpus + runs refresh as needed.
+
+| Flag / arg | Purpose |
+|------------|---------|
+| **`--expert <expert_id>`** | Required for expert-tagged ingest; must match [strategy-commentator-threads.md](strategy-commentator-threads.md) slug. |
+| **`--aired YYYY-MM-DD`** | **Air / publication date** for the segment (drives **`##`** section in **`-transcript.md`**). Optional only if stub-only. |
+| **`--stub-only`** | Append/update **inbox** line only (short line + URL + tags); no long body. |
+| **`--from-file <path>`** | Body text from file (avoids shell quoting); written to transcript block under **`--aired`**. |
+| **`--stdin` / `-`** | Read long body from stdin (optional alternative to **`--from-file`**). |
+| **`--inbox-path`** | Override default [`daily-strategy-inbox.md`](daily-strategy-inbox.md) (advanced). |
+| **`--dry-run`** | Print planned writes; no file changes. |
+| **`--skip-thread`** | Write stub/body only; do **not** run extraction (optional escape hatch). |
+
+**Default behavior (sketch):** With **`--expert`**, **`--aired`**, and body (**`--from-file`** or stdin), write **(1)** stub line to inbox with **`aired:`** + **`thread:`**, **(2)** append verbatim under **`## aired`** in **`-transcript.md`**, **(3)** invoke existing **`thread`** pipeline to refresh machine segments. **`--stub-only`** skips (2)–(3) or runs a minimal path.
+
+**Implementation** is **future `EXECUTE`** — this section is the contract placeholder only.
+
+<a id="verbatim-thesis-scaffold"></a>
+
+### Verbatim thesis scaffold (operator methodology)
+
+**Purpose:** Fit a long expert transcript into the **≤ ~2000 words per ingest** target for `strategy-expert-<expert_id>-transcript.md` **without changing any of the expert’s words** — by **dropping whole sentences only**, selected for **argument weight**.
+
+**Pipeline (manual or assisted):**
+
+1. **Ingest** the full transcript (into the dated `~~~text` block or your working copy).
+2. **Name 3–6 major theses** — what the episode is *arguing* in distinct threads (not a summary of everything said).
+3. **Order** those theses for **coherence** (logical build, narrative arc, or the order that matches how *you* will reuse the material in weave).
+4. Under each thesis, **paste verbatim sentences** from the transcript — **strongest first** — until the **total** is **≤ 2000 words**. Trim by removing **whole sentences** from the bottom of each thesis block (or deduplicating near-repeats) until under budget.
+
+**Editorial layer:** The **thesis list and order** are interpretive; the **sentences** stay verbatim. Treat the scaffold as **WORK** compression, not a substitute for keeping a fuller verbatim archive elsewhere if you need auditability.
+
+**Optional pass 0 (automated):** `python3 scripts/abridge_verbatim_transcript.py` — **sentence-only** boilerplate trim and length cap — can clear greetings and low-value lines *before* you pick theses. It does **not** replace thesis selection.
+
+**Strong-sentence discipline:** Use the repeatable checklist and tie-break rules in [THESIS-SCAFFOLD-CHECKLIST.md](THESIS-SCAFFOLD-CHECKLIST.md) (printable one-pager).
+
+#### Worked example — Alexander Mercouris · air date **2026-04-16**
+
+Source: [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) **`## 2026-04-16`** fence. **Full thesis scaffold** (five theses, verbatim sentences, **≤ ~2000 words**): [mercouris-2026-04-16-thesis-scaffold-FULL.md](mercouris-2026-04-16-thesis-scaffold-FULL.md). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
+
+| Order | Thesis (operator label) | Verbatim scaffold (excerpts) |
+|------|-------------------------|--------------------------------|
+| 1 | **Pakistan–Iran bridge and the Iran theatre** — Munir’s visit, public escort, **falsification** of “destroyed” air force | “At present, the main news concerning this conflict is the arrival in Tehran of the Chief of the Army Staff of the Pakistani armed forces, Field Marshal Asim Munir.” / “There may have been covert visits by officials from countries such as China or Russia, but Field Marshal Munir arrived publicly. His aircraft was escorted by Iranian fighter jets — MiG-29s and F-4 Phantoms — as it landed in Tehran.” / “President Trump has repeatedly claimed that the entire Iranian air force has been destroyed. Clearly, that is not the case.” |
+| 2 | **U.S. theory of victory and next escalation** — succession of methods, **regime change** as telos, ceasefire as prep, ground-op rumour | “The story of this conflict since 28 February has been one of the United States trying a succession of different approaches — missile strikes (often in coordination with Israel), assassinations, attacks on ports, and now a sea blockade — in the hope that one will finally unlock regime change in Iran, which I remain convinced is the ultimate objective of both the US administration and Israel.” / “Expectations of what the sea blockade can achieve are, in my view, greatly exaggerated.” / “As I discussed yesterday, the Russian Security Council has issued its own intelligence assessment, which envisages the United States attempting some form of ground operation next week — possibly against Iranian islands in the Strait of Hormuz, Kharg Island, to seize enriched uranium stockpiles near Isfahan, or even the Bushehr nuclear power plant.” |
+| 3 | **China and the blockade as precedent** — Malacca / maritime access fears, logistics debate, **Cuban Missile Crisis** analogue | “What worries Beijing most is not just any temporary disruption of Iranian oil supplies, but the precedent of the United States imposing a naval blockade on a country with which China has active and important trade relations.” / “For China — the world’s largest trading nation and a major importer of energy and raw materials — such actions look like a dress rehearsal for a potential future blockade of China itself, perhaps closing the Strait of Malacca or access to the East and South China Seas.” / “Any scenario in which Chinese warships begin escorting Iranian tankers in defiance of a US-declared blockade would represent a major international crisis — one not far removed in danger from the 1962 Cuban Missile Crisis, which also involved a naval blockade challenged at sea.” |
+| 4 | **Russia–Gulf diplomacy** — Lavrov–Saudi readout, regional dialogue, **proposals vs. U.S. objection** | “The ministers exchanged views on the situation in the Strait of Hormuz following the US-Israeli attacks on Iran and Tehran’s responses.” / “The Russians and Saudis also called for a broader dialogue involving all interested parties to coordinate long-term stability and security in the region based on a balance of interests.” / “So far, this remains only proposals and ideas. The United States will object strongly.” |
+| 5 | **Ukraine / Europe coda** — strikes, **drone production in Europe**, Sumy pressure | “On the military front, the key development in the last 24 hours was another large-scale Russian strike on Ukraine involving Geran drones, Kh-101 cruise missiles, and Iskander ballistic missiles.” / “The Russian Defence Ministry and Dmitry Medvedev have also highlighted that Ukrainian drone production has largely shifted to Europe.” / “There has also been movement on the front lines, particularly in the Sumy region. The Russians have begun leafleting the city of Sumy with political messages questioning Zelensky’s legitimacy.” |
+
 ## Thesis
 
 A **cumulative, page-organized record** of how the operator reads signals, weighs analogies, and steers frameworks (Islamabad, Rome, briefs, STRATEGY) — distinct from [work-strategy-history.md](../work-strategy-history.md) (lane events) and from [STRATEGY.md](../STRATEGY.md) (milestone ledger). Under **`skill-strategy`**, this notebook is the **primary surface for governed strategic accumulation** in WORK: **explicit seams**, **explicit promotion** to [STRATEGY.md](../STRATEGY.md) when arcs stabilize, and **explicit distance** from companion **Record** truth ([AGENTS.md](../../../../AGENTS.md)).
