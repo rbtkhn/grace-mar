@@ -177,6 +177,8 @@ WORK only; not Record.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile) and [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread).
 
+**Thesis scaffold + full verbatim (optional):** When a dated `~~~text` fence holds a **thesis-first scaffold** (≤ ~2000 words) rather than a full episode, **archive** the longer or full text per [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) (git history, sidecar file, or out-of-repo). When a **sidecar** exists (e.g. `<short-label>-YYYY-MM-DD-thesis-scaffold-FULL.md`), add **one markdown line** under that date’s heading / show line and **before** `~~~text` linking to it. `python3 scripts/strategy_thread.py` still reads only what is inside the transcript file; the link is for humans and recovery.
+
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->

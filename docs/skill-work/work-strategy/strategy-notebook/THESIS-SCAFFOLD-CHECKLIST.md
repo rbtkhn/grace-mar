@@ -48,3 +48,7 @@ WORK only; not Record.
 4. Drop **secondary illustrations** before **primary claims**.
 
 **10-second filter:** If I remove this sentence, does the thesis lose a **distinct** claim, mechanism, anchor, or correction? **No** → drop first.
+
+---
+
+**Archive when the transcript fence is trimmed:** Dropped sentences are not in the `-transcript.md` fence. See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § Verbatim thesis scaffold — Full verbatim when the fence is thesis-scaffold only](STRATEGY-NOTEBOOK-ARCHITECTURE.md#verbatim-thesis-scaffold) (git history, sidecar, or out-of-repo; optional one-line link from the date section to a sidecar).

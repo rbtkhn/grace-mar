@@ -119,6 +119,16 @@ Single entry point (working name **`strategy_ingest`** or fold into **`strategy_
 
 **Strong-sentence discipline:** Use the repeatable checklist and tie-break rules in [THESIS-SCAFFOLD-CHECKLIST.md](THESIS-SCAFFOLD-CHECKLIST.md) (printable one-pager).
 
+**Full verbatim when the fence is thesis-scaffold only (archive policy):** If the dated `~~~text` block in `strategy-expert-<expert_id>-transcript.md` holds a **≤ ~2000 word** scaffold (thesis-selected and/or sentence-trimmed) instead of a full episode paste, **dropped sentences are not recoverable from that fence**. Before relying on a trimmed fence as the only copy, choose **at least one** archive for the longer or full text:
+
+| Archive | Use when |
+|--------|----------|
+| **Git history** | You committed the long paste earlier; recovery is `git show` / `git log -p` on the transcript path (good for one-off corrections). |
+| **Sidecar file** | You want an explicit, grep-friendly artifact in-repo — e.g. `<label>-YYYY-MM-DD-thesis-scaffold-FULL.md` (thesis-organized, may still be trimmed) or a separately named **full linear verbatim** file the operator maintains. Same folder as other strategy-notebook expert files is typical. |
+| **Out-of-repo** | Original transcript lives in notes, YouTube description, or another store; link it from the inbox stub or the date section if stable. |
+
+**Cross-link:** When a sidecar exists for a date, add **one line** immediately under the date’s source line (show title / air date) and **before** `~~~text`, linking to the sidecar so `thread` readers and greps find it without opening git. Not Record.
+
 #### Worked example — Alexander Mercouris · air date **2026-04-16**
 
 Source: [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) **`## 2026-04-16`** fence. **Full thesis scaffold** (five theses, verbatim sentences, **≤ ~2000 words**): [mercouris-2026-04-16-thesis-scaffold-FULL.md](mercouris-2026-04-16-thesis-scaffold-FULL.md). Below: **five theses** in narrative order, each with **sample verbatim sentences** (short excerpt table — same episode).
