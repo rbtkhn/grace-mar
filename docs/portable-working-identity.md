@@ -39,10 +39,10 @@ New portability work must extend the existing PRP / export / prepared-context ar
 
 ## What remains
 
-The core content formats, intake path, and export contract are implemented. The remaining gaps are **connectorization and operational CLI wiring**, not architecture:
+The core content formats, intake path, export contract, and export-class CLI wiring are implemented. The remaining gap is **connectorization**, not architecture:
 
 - **Thin MCP adapter** — read-only connector over approved surfaces for tool-using agents (future)
-- **Export-class CLI wiring** — the five export classes are documented in the [export contract](portable-record/export-contract.md) but `export.py` does not yet accept an `--export-class` flag (future)
+- **Demonstrated-capability export filter** — the `capability` export class is documented and the rationale format exists, but a dedicated exporter is future
 
 See [docs/portable-record/current-capability-map.md](portable-record/current-capability-map.md) for the full inventory.
 

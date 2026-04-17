@@ -6,6 +6,7 @@ Contract: [docs/EXPORT-CLI.md](../docs/EXPORT-CLI.md) and README (Unified export
 Export classes: [docs/portable-record/export-contract.md](../docs/portable-record/export-contract.md).
 
   python scripts/export.py [-u USER] {fork|prp|identity|manifest|bundle|all} [-- EXTRA...]
+  python scripts/export.py [-u USER] --export-class {tool_bootstrap|full|task_limited} [-- EXTRA...]
 
 When EXTRA omits -u/--user, this CLI prepends -u <resolved> (env GRACE_MAR_USER_ID, else
 repo default: grace-mar when users/grace-mar exists, else _template).
@@ -33,6 +34,19 @@ SUBCOMMAND_SCRIPTS: dict[str, str] = {
     "all": "export_runtime_bundle.py",
 }
 
+EXPORT_CLASS_ROUTES: dict[str, tuple[str, list[str]]] = {
+    "tool_bootstrap": ("export_prp.py", []),
+    "full": ("export_runtime_bundle.py", ["--mode", "portable_bundle_only"]),
+    "task_limited": ("export_fork.py", ["--format", "coach-handoff"]),
+}
+
+EXPORT_CLASS_UNSUPPORTED: dict[str, str] = {
+    "capability": "not yet wired — rationale format exists but dedicated export filtering is future",
+    "internal": "not exportable by definition — internal-only content stays in the governed Record",
+}
+
+ALL_EXPORT_CLASSES = sorted(set(EXPORT_CLASS_ROUTES) | set(EXPORT_CLASS_UNSUPPORTED))
+
 
 def _default_user_id() -> str:
     env = __import__("os").environ.get("GRACE_MAR_USER_ID", "").strip()
@@ -56,13 +70,14 @@ def _argv_has_user_flag(argv: list[str]) -> bool:
 
 def _parse_export_cli(argv: list[str]) -> tuple[str | None, str, list[str]]:
     """
-    Options: -u/--user (only before subcommand).
+    Options: -u/--user and --export-class (only before subcommand).
     Then: SUBCOMMAND [--] [child args...]
     If ``--`` is present, only tokens after it go to the child; else all tokens
     after subcommand go to the child. Inject -u when child argv has no user flag.
     """
     i = 0
     explicit_user: str | None = None
+    export_class: str | None = None
     while i < len(argv):
         if argv[i] in ("-u", "--user"):
             if i + 1 >= len(argv):
@@ -71,7 +86,25 @@ def _parse_export_cli(argv: list[str]) -> tuple[str | None, str, list[str]]:
             explicit_user = argv[i + 1]
             i += 2
             continue
+        if argv[i] == "--export-class":
+            if i + 1 >= len(argv):
+                print("export.py: --export-class requires a value", file=sys.stderr)
+                sys.exit(2)
+            export_class = argv[i + 1]
+            i += 2
+            continue
         break
+
+    if export_class is not None:
+        rest = argv[i:]
+        if rest and rest[0] == "--":
+            child = list(rest[1:])
+        else:
+            child = list(rest)
+        resolved = explicit_user or _default_user_id()
+        if not _argv_has_user_flag(child):
+            child = ["-u", resolved] + child
+        return explicit_user, f"__class__{export_class}", child
 
     if i >= len(argv):
         return explicit_user, "__missing__", []
@@ -92,8 +125,10 @@ def _parse_export_cli(argv: list[str]) -> tuple[str | None, str, list[str]]:
 
 def _print_help() -> None:
     du = _default_user_id()
+    classes = ", ".join(ALL_EXPORT_CLASSES)
     print(
         f"""usage: python scripts/export.py [-u USER] {{fork|prp|identity|manifest|bundle|all}} [-- EXTRA...]
+       python scripts/export.py [-u USER] --export-class {{tool_bootstrap|full|task_limited}} [-- EXTRA...]
 
 Unified export CLI — runs the existing script under scripts/ via subprocess.
 Resolved default user when the child argv has no -u: GRACE_MAR_USER_ID, else {du!r} (repo heuristic).
@@ -106,10 +141,20 @@ Subcommands:
   bundle    -> export_runtime_bundle.py
   all       -> export_runtime_bundle.py (G1: same as bundle)
 
+Export classes (--export-class):
+  tool_bootstrap  -> export_prp.py (compact prompt for bootstrapping a new tool)
+  full            -> export_runtime_bundle.py --mode portable_bundle_only (broad governed profile)
+  task_limited    -> export_fork.py --format coach-handoff (filtered for a specific role)
+  capability      -> not yet wired
+  internal        -> not exportable by definition
+
+Known classes: {classes}
+
 Examples:
   python scripts/export.py fork -- -o out.json
-  python scripts/export.py fork -- --format json-ld -o x.jsonld
-  python scripts/export.py -u grace-mar prp -- -o prompt.txt
+  python scripts/export.py --export-class tool_bootstrap -- -o prompt.txt
+  python scripts/export.py --export-class full -- -o /tmp/bundle
+  python scripts/export.py -u grace-mar --export-class task_limited -- -o handoff.json
 
 Non-goals: export_view, export_gate_to_review_queue, … (invoke those scripts directly).
 """
@@ -137,9 +182,26 @@ def main() -> int:
         return 0
 
     _explicit, sub, child_argv = _parse_export_cli(argv)
+
+    if sub.startswith("__class__"):
+        cls_name = sub[len("__class__"):]
+        if cls_name in EXPORT_CLASS_UNSUPPORTED:
+            reason = EXPORT_CLASS_UNSUPPORTED[cls_name]
+            print(f"export.py: export class {cls_name!r} is {reason}.", file=sys.stderr)
+            return 2
+        if cls_name not in EXPORT_CLASS_ROUTES:
+            print(
+                f"export.py: unknown export class {cls_name!r}. "
+                f"Known classes: {', '.join(ALL_EXPORT_CLASSES)}",
+                file=sys.stderr,
+            )
+            return 2
+        script, extra_args = EXPORT_CLASS_ROUTES[cls_name]
+        return _run_child(script, extra_args + child_argv)
+
     if sub == "__missing__":
         print(
-            "export.py: subcommand required (fork|prp|identity|manifest|bundle|all).\n"
+            "export.py: subcommand or --export-class required.\n"
             "Try: python scripts/export.py --help",
             file=sys.stderr,
         )

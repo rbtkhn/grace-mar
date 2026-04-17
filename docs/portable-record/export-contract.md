@@ -40,16 +40,16 @@ Sensitivity filtering: entries with `sensitivity_class: non_portable` or `portab
 
 ## Current export entry points
 
-Each export class maps to existing scripts. No second export system is needed.
+Each export class maps to existing scripts. Three classes are operational via `--export-class`; two remain unwired. No second export system is needed.
 
-| Class | Script | Invocation |
-|---|---|---|
-| **Full governed profile** | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | `export.py bundle -- --mode portable_bundle_only` |
-| **Full governed profile (with runtime)** | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | `export.py bundle -- --mode adjunct_runtime` |
-| **Task-limited profile** | [`export_fork.py`](../../scripts/export_fork.py) | `export.py fork -- --format coach-handoff` |
-| **Tool bootstrap profile** | [`export_prp.py`](../../scripts/export_prp.py) | `export.py prp` |
-| **Demonstrated capability profile** | Rationale format and schema exist ([artifact-rationale.md](artifact-rationale.md)); dedicated export filtering not yet wired | Future: `export.py fork -- --export-class capability` |
-| **Internal-only** | No export script — content stays in governed Record | By definition, not exported |
+| Class | Status | Script | `--export-class` | Subcommand equivalent |
+|---|---|---|---|---|
+| **Tool bootstrap profile** | Operational | [`export_prp.py`](../../scripts/export_prp.py) | `export.py --export-class tool_bootstrap` | `export.py prp` |
+| **Full governed profile** | Operational | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | `export.py --export-class full` | `export.py bundle -- --mode portable_bundle_only` |
+| **Full governed profile (with runtime)** | Operational | [`export_runtime_bundle.py`](../../scripts/export_runtime_bundle.py) | — | `export.py bundle -- --mode adjunct_runtime` |
+| **Task-limited profile** | Operational | [`export_fork.py`](../../scripts/export_fork.py) | `export.py --export-class task_limited` | `export.py fork -- --format coach-handoff` |
+| **Demonstrated capability profile** | Not yet wired | Rationale format and schema exist ([artifact-rationale.md](artifact-rationale.md)); dedicated export filtering is future | Rejects with explanation | — |
+| **Internal-only** | Not exported | Content stays in governed Record | Rejects with explanation | — |
 
 Additional exporters: `export_user_identity.py` (identity sections), `export_manifest.py` (policy manifest), `export_view.py` (audience views: `school`, `public`).
 
@@ -66,17 +66,17 @@ This contract governs the existing export layer. It does not create a second exp
 
 ---
 
-## Future: CLI integration
+## CLI integration
 
-When child scripts grow class-aware filtering, `export.py` can add a top-level `--export-class` flag that forwards to the child. The current dispatcher structure (pure subprocess forwarding) makes this a natural extension point.
-
-Proposed future interface:
+The `--export-class` flag on `export.py` routes to the correct child script with appropriate arguments:
 
 ```
-python scripts/export.py --export-class capability fork -- -o capability-export.json
+python scripts/export.py --export-class tool_bootstrap -- -o prompt.txt
+python scripts/export.py --export-class full -- -o /tmp/bundle
+python scripts/export.py -u grace-mar --export-class task_limited -- -o handoff.json
 ```
 
-This is a TODO, not a current feature. The export-class concept is documented here for contract clarity; the dispatcher does not yet interpret it.
+Three classes are operational: `tool_bootstrap`, `full`, `task_limited`. Unsupported classes (`capability`, `internal`) exit with code 2 and an explanation. Existing subcommand invocations (`export.py fork`, `export.py prp`, etc.) continue to work unchanged.
 
 ---
 
