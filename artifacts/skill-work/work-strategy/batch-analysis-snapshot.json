@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-17T20:20:57.794529+00:00",
-  "count": 22,
+  "generated_at": "2026-04-17T20:55:50.356091+00:00",
+  "count": 24,
   "batch_analysis_refs": [
     {
       "date": "2026-04-17",
@@ -88,6 +88,41 @@
         ],
         "upstream_verify": [
           "charles-freeman"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Parsi × Ritter × Pape — AIS vs SAR vs policy**",
+      "raw": "- batch-analysis | 2026-04-17 | **Parsi × Ritter × Pape — AIS vs SAR vs policy** | **Tension-first:** **`trita-parsi`** = **sanctions / diplomacy / spoiler** incentives — whether “open strait” **policy** lines up with **compliance** and **charter** reality. **`scott-ritter`** = **naval / blockade / throughput** discourse — **sensor split**: **AIS** suppression or routing ≠ proven **closure** vs **SAR** / alternate sensing. **`robert-pape`** = **escalation economics** — **shock calendars**, blockade **pain staging**, **domestic lock-in** vs crude market reads. **Do not** merge viral **daily-count** cells with **Windward** SAR narrative without **definition** alignment and **primary** export. **Threads:** [strategy-expert-trita-parsi-thread.md](strategy-expert-trita-parsi-thread.md), [strategy-expert-scott-ritter-thread.md](strategy-expert-scott-ritter-thread.md), [strategy-expert-robert-pape-thread.md](strategy-expert-robert-pape-thread.md) — synthetic **three-way** batch (**no** `crosses:` triple in schema; grep **membership** by expert ids in prose).",
+      "expert_ids": [
+        "trita-parsi",
+        "scott-ritter",
+        "robert-pape"
+      ],
+      "confidence": "medium",
+      "sources": {
+        "alias_match": [
+          "trita-parsi",
+          "scott-ritter",
+          "robert-pape"
+        ]
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "label": "**Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis**",
+      "raw": "- batch-analysis | 2026-04-17 | **Pape X — 04-14 Lebanon fork × 04-17 truce / NYT power thesis** | **Tension-first:** **04-14** indexed ingest = **downside** / **civil-war** fork + **AP** Washington talks **seam**; **04-17** = **settlement / power-shift** read + **NYT** secondary thesis Pape spotlights — use **dated evolution**, not silent merge. **Homophone risk:** Janssen **04-16** **“fourth center”** (negotiation fork) ≠ NYT headline **“major world power”** / **“4th”** — **do not** equate in Judgment. **Membership:** `thread:robert-pape` only.",
+      "expert_ids": [
+        "robert-pape"
+      ],
+      "confidence": "high",
+      "sources": {
+        "thread_in_line": [
+          "robert-pape"
+        ],
+        "upstream_verify": [
+          "robert-pape"
         ]
       }
     },
