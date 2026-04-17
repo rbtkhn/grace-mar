@@ -639,20 +639,27 @@ Barnes says both sides face material clocks and the question is which clock runs
 ### Signal
 
 - **New knot (weave C):** [strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md](knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md) — **`knot_label`** `pape-janssen-escalation-blockade`. **Robert Pape** on **Cyrus Janssen** (YT, uploaded 2026-04-16): **escalation trap** / domestic lock-in, **staged blockade → commodity calendar** (hypothesis-grade until primaries), **Israel as third-player spoiler** (Rubio cites need primaries), **Lebanon** sectarian-map **X** (2026-04-14) + **AP** Washington talks **separate Judgment objects**. Inbox: [daily-strategy-inbox.md](../../daily-strategy-inbox.md) **Expert ingest — 2026-04-16**; expert: [`strategy-expert-robert-pape-thread.md`](../../strategy-expert-robert-pape-thread.md).
+- **`thread:seyed-marandi` — Breaking Points (2026-04-16):** **Seyed Mohammad Marandi** (Tehran remote; operator segment title **“Israel WILL Restart Iran War”**) — woven from [daily-strategy-inbox.md](../../daily-strategy-inbox.md) **`## 2026-04-16`** **`- BP |`** row + Segment 1 note in [`strategy-expert-seyed-marandi-thread.md`](../../strategy-expert-seyed-marandi-thread.md) (**Breaking Points — 2026-04-16**). **Continuity spine:** [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) (Islamabad + Hormuz + channel-authority lattice). **Epistemic:** attributed **English long-form** / **process** register — **not** wire ORBAT or **DOD** **quote-grade** without primaries (**Hegseth**/**Caine**/**Vance**/**grand bargain** clips **verify** vs **readout**/**tape**).
 
 ### Judgment
 
 - **Thin day — full thesis on the knot page.** Pape lane stays **lattice-separated** from **`thread:john-mearsheimer`** (alliance geometry) and **`thread:daniel-davis`** (ultimatum / resumption clock) per inbox **`batch-analysis | 2026-04-16 | Pape × Mearsheimer`** and **× Davis**. **Sister continuity:** [2026-04-12 islamabad-hormuz-thesis-weave](knots/strategy-notebook-knot-2026-04-12-islamabad-hormuz-thesis-weave.md) · [2026-04-15 kremlin-iri-uranium-dual-register](knots/strategy-notebook-knot-2026-04-15-kremlin-iri-uranium-dual-register.md) · [2026-04-14 mercouris-mearsheimer-lebanon-split](knots/strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md).
+- **Marandi BP 04-16 × 04-13 scaffold** (inbox **`batch-analysis | 2026-04-16`**): **Tension-first:** **Iranian process + moral-historical register** (Islamabad **full authority** vs **Vance**/**Netanyahu** channel; **school**/**synagogue**/**Gaza–Lebanon** frames) **vs** **`thread:scott-ritter`** **USN**/**interdiction** **mechanics** and **wire-tier** throughput — **do not** merge into one “Iran says” or one “U.S. Navy says.” **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** **object** as **`thread:alexander-mercouris`** **institutional** surface — **verify** still splits **speech** from **AIS** / **DOD** readouts. **Vance** “**normal country** / **grand bargain**” block in the Marandi row is **counter-speech** (e.g. **Joe Kent** letter, **Leverett** book pointer) — **not** a substitute for **WH**/**State** **primary** text if Judgment tightens.
 
 ### Links
 
 - [Knot — pape-janssen-escalation-blockade](knots/strategy-notebook-knot-2026-04-16-pape-janssen-escalation-blockade.md)
+- [Knot — marandi-ritter-mercouris-hormuz-scaffold (04-13)](knots/strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — **Marandi** lane **cross-day** anchor for **04-16** BP weave
+- [`strategy-expert-seyed-marandi-thread.md`](../../strategy-expert-seyed-marandi-thread.md) — Segment 1 **Breaking Points — 2026-04-16** + machine **Segment 2a** (inbox line)
+- [daily-strategy-inbox.md](../../daily-strategy-inbox.md) — **`## 2026-04-16`** **`- BP |`** Marandi + **`batch-analysis | 2026-04-16 | Marandi BP…`**
 - [daily-brief-2026-04-16.md](../../daily-brief-2026-04-16.md) — §1f **Grok** digest archive + triage table (stubs §1d–§1h until watch pass)
 - [meta.md](meta.md) — § **Grok 2026-04-16 digest — month falsifiers**
 - Prior day: [2026-04-15](#2026-04-15)
 
 ### Open
 
+- Pin **canonical Breaking Points / YouTube** URL for **Marandi 2026-04-16** (replace **`TBD-pin-Breaking-Points-Marandi-2026-04-16`** in inbox + transcript row).
+- **Quote verify:** **Hegseth** / **Caine** (blockade, **Pacific** interdiction) and **Vance** **grand bargain** clip — **tier** against **DOD**/**JCS**/**WH** **primary** or **full tape** before **Links-grade** merge with **Ritter**/**Davis** **ORBAT** rows.
 - Pin **Janssen × Pape** **`watch?v=`**; **Rubio** / **spoiler** primaries; **commodity** data for blockade calendar; keep **Lebanon** map thesis **seamed** from **AP** process wire — see knot **Open / verify**.
 - **Grok 2026-04-16 digest — month falsifier chains** (gates in [meta.md](meta.md) § **Grok 2026-04-16 digest — month falsifiers**; verbatim + triage table [daily-brief-2026-04-16.md](../../daily-brief-2026-04-16.md) §1f) — **Judgment deferred** until receipts land; work **Open** first:
   - **Hungary / Tisza execution gate:** Corroborate **08:00 UTC** text drop, **11:45** ratification, **no** energy-import carve-outs, **Orbán CC** motion dismissed, **first COREPER** vote timing — if **two or more** miss, keep **“veto collapse → aid velocity”** out of **Judgment** for this arc.
