@@ -1,7 +1,7 @@
 {
   "ok": true,
   "user_id": "grace-mar",
-  "generated_at": "2026-04-17T10:15:30.159866",
+  "generated_at": "2026-04-17T10:15:31.298377",
   "source": "users/grace-mar/intent.md",
   "goals": {
     "primary": "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked",
@@ -49,7 +49,7 @@
     }
   ],
   "escalation_rules": [
-    "Do not treat INTENT as permission to merge \u2014 companion approval through the gate still required",
+    "Do not treat INTENT as permission to merge — companion approval through the gate still required",
     "Escalate when two intent rules conflict and automation would pick a default",
     "Escalate when evidence linkage for a durable claim is missing or weak"
   ],
