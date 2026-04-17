@@ -110,6 +110,8 @@ _(Append below this line during the day.)_
 
 - batch-analysis | 2026-04-17 | **Pool vs Truth Social (dual-register)** | **Tension-first:** Wire **pool** remarks **04-17** (e.g. **Moneycontrol** on **uranium** / “**nuclear dust**” / deal **optimism**) **≠** authenticated **Truth Social** **maximalist** embed — **do not** merge into one **U.S. position** in Judgment without **both** primaries + explicit **seam**; see [daily-brief-2026-04-17.md — strategy + verify](../daily-brief-2026-04-17.md#strategy-verify-2026-04-17).
 
+- notebook | cold: **IRI FM** **@araghchi** **2026-04-17 06:45** — Hormuz passage for commercial vessels for **ceasefire** remainder on **PMO** coordinated route; opens **in line with** **Lebanon ceasefire** // hook: **expert-thread continuity** — **no** `thread:` (state primary); **cross** `trita-parsi` Lebanon scope, `seyed-marandi` register, `alexander-mercouris` Lebanon institutional surface, `thread:daniel-davis` QT packaging | verify:IRI-primary+cross-thread-continuity | IRI+TEHRAN+Lebanon
+
 ## 2026-04-16
 
 - YT | cold: Mercouris 16 Apr 2026 (The Duran) — EU drone factories for Ukraine, Medvedev warns EU, Lavrov–Saudi FM, Munir in Tehran, Hormuz blockade & China naval logic // hook: full verbatim §2026-04-16 in strategy-expert-alexander-mercouris-transcript.md | https://www.youtube.com/watch?v=TBD-canonical-episode | verify:operator-ingest+aired-2026-04-16 | thread:alexander-mercouris | aired:2026-04-16

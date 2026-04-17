@@ -135,6 +135,9 @@ _Partial month — April Segment 2 has **knot references** only (scaffold + bloc
 
 April places Marandi on the **triple scaffold** with Ritter (mechanics) and Mercouris (legitimacy surface) — Iranian red-line authority lane — **do not** collapse with ORBAT or Duran narrative alone.
 
+### Breaking Points — 2026-04-16 (transcript ingest)
+
+Operator-pasted **Breaking Points** appearance (**Tehran**, **2026-04-16**, segment titled **Israel WILL Restart Iran War** in session copy). Marandi extends the **Islamabad → Hormuz** week: **full delegation authority** and **Leader-linked** mandate vs **Vance** as **externally tethered** (Netanyahu phone calls; “reported to him” language); **Hegseth**/**Caine** blockade escalation as evidence the **US** is not pursuing a **JCPOA-class** serious process; **ceasefire** explained through **12-day war** lessons, **rearm**, and **Hormuz** as **leverage on Trump’s economy**; **Hormuz** governance — **Iran retains control**, **no** toll-free passage; **Vance** “**grand bargain** / **normal country**” answered with **Joe Kent** letter and **Leverett** book pointer; **Lebanon** segment as **non-tradeable** moral line vs **strike** framing. **Epistemic stance:** **register** and **Iranian elite speech** for the notebook lattice — **school casualty**, **synagogue**, **Pacific** **interdiction** expansion, and **strike** facts remain **verify-first** against **primary** **DOD**/**wire** before **Links-grade** merge with **Ritter** mechanics or **Mercouris** multilateral tickers. Indexed ingest: [daily-strategy-inbox.md](daily-strategy-inbox.md) **`thread:seyed-marandi`** row **2026-04-16**; pin **canonical** **YouTube**/**Breaking Points** URL when stable.
 
 Verification stance for Seyed Mohammad Marandi in 2026-04 should stay tier-honest: web-index rows, newsletter dates, and YouTube upload metadata differ in **claim strength**. The notebook uses `[strength: low|medium|high]` precisely because not every cite supports the same inference. Prose here can narrate **what kind of mistake** would happen if a low-strength hook were promoted to a headline judgment—without turning that caution into a substitute for fresh primary checks when the operator needs cite-grade output.
 
@@ -150,12 +153,18 @@ If knots named this expert during 2026-04, the narrative should eventually say *
 
 - [strength: medium] **Scaffold:** [marandi-ritter-mercouris-hormuz-scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) — shared Hormuz week anchor — cross-day to 04-12 / 04-14 knots per header.
 - [strength: medium] **Parallel:** [scott-ritter-blockade-hormuz-weave](strategy-notebook-knot-2026-04-14-scott-ritter-blockade-hormuz-weave.md) — blockade mechanics + sister knots — seam not merge.
+- [strength: medium] **Continuity — IRI FM primary (not `thread:seyed-marandi`):** **FM Araghchi** **2026-04-17** (**06:45** @araghchi) — **official** **Hormuz** / **ceasefire remainder** line — **same object** as **04-16** Breaking Points **register** (Hormuz control, no toll-free lane) but **diplomatic** **IRI** **voice**, not Marandi transcript. **Seam** to Marandi **red-line** vocabulary; **do not** merge voices. Brief: [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h**.
 
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
 
 _Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
+
+### Segment 2a — Recent transcript material
+
+## 2026-04-16
+- BP | cold: Seyed Mohammad Marandi (Breaking Points, Tehran remote, 2026-04-16 — segment title per operator: "Israel WILL Restart Iran War") — Iran read: US never serious on 10-point framework; Netanyahu / "Zionist lobby" block; post-ceasefire military prep for next war "quite soon." Islamabad: Iranian side had full negotiation authority (Parliament Speaker + Leader consult) vs Vance on phone to Netanyahu ("reported to him" framing). Hegseth blockade/bombs quote + Caine Pacific interdiction extension → Iranian escalation "quite soon"; blockade accelerates global economic collapse narrative. JCPOA contrast: Obama-era US serious vs current. Ceasefire rationale: 12-day war lessons, rearm, Hormuz pressure on Trump economy. Hormuz: Iran will retain control; no toll-free passage; Gulf monarchies complicit. Vance "grand bargain" / "normal country" dismissed (Joe Kent resignation letter; Flynt & Hillary Mann Leverett *Going to Tehran*). Lebanon close: moral non-abandonment of Lebanese vs Israeli strikes; Pakistan round: "I don't know" // hook: Marandi continuity from [04-13 Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md); cross scott-ritter ORBAT, alexander-mercouris institutional lane, trita-parsi Lebanon — tier: attributed monologue, not wire ORBAT | https://www.youtube.com/watch?v=TBD-pin-Breaking-Points-Marandi-2026-04-16 | verify:operator-transcript-paste+pin-canonical-BP-URL | thread:seyed-marandi | membrane:single | grep:IRAN+Marandi+BreakingPoints+2026-04-16
 
 ### Segment 2b — Knot references
 

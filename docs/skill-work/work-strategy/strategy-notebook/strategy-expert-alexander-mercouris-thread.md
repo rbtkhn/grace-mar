@@ -130,6 +130,7 @@ _Partial month — narrative distillation for **2026-04-12 → 2026-04-15** plus
 **Open:**
 
 - **Notebook lens row (inbox dated 2026-04-18):** Treat as **notebook / mind-file** material indexed to `alexander-mercouris`, not a substitute for pinning **The Duran** URLs when cite-grade Mercouris voice is required.
+- **2026-04-17 — IRI FM primary (not `thread:alexander-mercouris`):** **Araghchi** post ties **Lebanon** ceasefire language to **Hormuz** passage terms — **institutional** **legitimacy** **surface** adjacent to **Mercouris×Mearsheimer Lebanon split** [knot](strategy-notebook-knot-2026-04-14-mercouris-mearsheimer-lebanon-split.md); **cross** `trita-parsi` / `seyed-marandi` April continuity bullets. Brief: [daily-brief-2026-04-17.md](../daily-brief-2026-04-17.md) **§1h**.
 
 Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-04 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
