@@ -18,6 +18,8 @@ Plain-language entry point. Precise terms and invariants live in [glossary.md](g
 
 **Guarantees snapshot** (what the system aims to promise vs not): [architecture.md — Guarantees at a glance](architecture.md#guarantees-at-a-glance) · tooling nuance: [trust-layers.md](trust-layers.md).
 
+**Portability** (what's already portable and what's next): [portable-record/current-capability-map.md](portable-record/current-capability-map.md) · doctrine: [portable-working-identity.md](portable-working-identity.md).
+
 ---
 
 ## Procedure vs doctrine (two spines)

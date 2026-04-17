@@ -76,4 +76,5 @@ Record changes still require separate staging and approval.
 
 - [conceptual-framework.md](conceptual-framework.md) — triad and knowledge boundary  
 - [docs/skill-work/context-efficiency-layer.md](skill-work/context-efficiency-layer.md) — CEL  
-- [artifacts/README.md](../artifacts/README.md) — derived artifact policy  
+- [artifacts/README.md](../artifacts/README.md) — derived artifact policy
+- [portable-record/promotion-rules.md](portable-record/promotion-rules.md) — how approved external candidates enter canonical surfaces  

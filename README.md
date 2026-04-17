@@ -36,6 +36,7 @@ Start here:
 - **OB1-style translation** → [docs/start-here-ob1-users.md](docs/start-here-ob1-users.md)
 - Want to see the system in motion? Read [docs/orchestration/memory-brief-to-gate-demo.md](docs/orchestration/memory-brief-to-gate-demo.md).
 - Want the operator-facing interface map? See [docs/claude-surface-contract.md](docs/claude-surface-contract.md).
+- **Portability** → [docs/portable-working-identity.md](docs/portable-working-identity.md) — how the existing architecture maps to portable working-intelligence layers
 
 ## Concept
 

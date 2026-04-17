@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/artifact-rationale.v1.json",
+  "title": "Artifact rationale",
+  "description": "Portable rationale for a demonstrated capability artifact: why it was judged good and what transferable pattern it demonstrates. Companion to EVIDENCE entries.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_name",
+    "task_type",
+    "why_good",
+    "transferable_pattern"
+  ],
+  "properties": {
+    "artifact_name": {
+      "type": "string",
+      "description": "Name or short identifier of the artifact."
+    },
+    "task_type": {
+      "type": "string",
+      "description": "Category of work the artifact represents (e.g. system design, analysis, writing, tooling)."
+    },
+    "why_good": {
+      "type": "string",
+      "description": "Why this artifact was judged good — the quality signal, not just that it exists."
+    },
+    "transferable_pattern": {
+      "type": "string",
+      "description": "The reusable pattern this artifact demonstrates, abstracted from the specific context."
+    },
+    "tradeoffs": {
+      "type": "string",
+      "description": "Trade-offs considered during production (what was chosen and what was rejected)."
+    },
+    "review_criteria": {
+      "type": "string",
+      "description": "How the artifact was evaluated or what review it passed."
+    },
+    "non_portable_removed": {
+      "type": "string",
+      "description": "What context-specific or sensitive details were stripped to make this rationale portable."
+    },
+    "export_class": {
+      "type": "string",
+      "enum": ["full_governed", "task_limited", "tool_bootstrap", "capability", "internal_only"],
+      "description": "Which export class this rationale is eligible for. See docs/portable-record/export-contract.md."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Any additional context or caveats."
+    }
+  }
+}

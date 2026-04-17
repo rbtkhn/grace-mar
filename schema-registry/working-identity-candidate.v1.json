@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schema-registry/working-identity-candidate.v1.json",
+  "title": "Working-identity candidate",
+  "description": "A portable working-intelligence proposal extracted from an external AI system, runtime observation, or manual operator note. Non-canonical review material — must enter gate/review before promotion to any Record surface.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "source_type",
+    "layer_type",
+    "claim",
+    "confidence",
+    "durability_class",
+    "sensitivity_class",
+    "portability_class",
+    "proposed_target_surface"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "description": "Unique identifier for this candidate. Convention: WI-NNNN."
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "external_ai_extract",
+        "internal_runtime_observation",
+        "manual_operator_note"
+      ],
+      "description": "How this candidate was produced."
+    },
+    "layer_type": {
+      "type": "string",
+      "enum": [
+        "domain_encoding",
+        "workflow_calibration",
+        "behavioral_calibration",
+        "artifact_rationale"
+      ],
+      "description": "Which portable working-intelligence layer this candidate belongs to."
+    },
+    "claim": {
+      "type": "string",
+      "description": "One-sentence description of the observation or claim."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low"],
+      "description": "Source confidence in this claim."
+    },
+    "durability_class": {
+      "type": "string",
+      "enum": ["ephemeral", "recurring", "stable"],
+      "description": "Expected persistence of this pattern."
+    },
+    "sensitivity_class": {
+      "type": "string",
+      "enum": ["safe", "review_required", "non_portable"],
+      "description": "Whether this candidate may contain sensitive or employer-bound content."
+    },
+    "portability_class": {
+      "type": "string",
+      "enum": ["cross_tool", "role_specific", "employer_bound", "non_exportable"],
+      "description": "How portable this candidate is across tools and contexts."
+    },
+    "proposed_target_surface": {
+      "type": "string",
+      "enum": ["SELF", "SELF-LIBRARY", "SKILLS", "EVIDENCE"],
+      "description": "Which canonical Record surface this candidate should be reviewed against."
+    },
+    "source_tool": {
+      "type": "string",
+      "description": "Name of the AI system or tool that produced this candidate."
+    },
+    "source_window": {
+      "type": "string",
+      "description": "Approximate time period the source AI observed this pattern (e.g. '2025-01 to 2026-04')."
+    },
+    "supporting_examples": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Concrete examples or evidence supporting this claim."
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["pending", "approved", "rejected", "modified"],
+      "default": "pending",
+      "description": "Current review state of this candidate."
+    },
+    "review_notes": {
+      "type": "string",
+      "description": "Operator or reviewer notes about this candidate."
+    }
+  }
+}

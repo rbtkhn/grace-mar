@@ -3,6 +3,7 @@
 Unified export CLI (v1): subprocess dispatch to scripts/export_*.py.
 
 Contract: [docs/EXPORT-CLI.md](../docs/EXPORT-CLI.md) and README (Unified export CLI).
+Export classes: [docs/portable-record/export-contract.md](../docs/portable-record/export-contract.md).
 
   python scripts/export.py [-u USER] {fork|prp|identity|manifest|bundle|all} [-- EXTRA...]
 

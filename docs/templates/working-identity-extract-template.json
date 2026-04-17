@@ -1,0 +1,56 @@
+{
+  "domain_encoding": [
+    {
+      "claim": "",
+      "confidence": "high | medium | low",
+      "durability": "stable | recurring | ephemeral",
+      "examples": []
+    }
+  ],
+  "workflow_calibration": [
+    {
+      "claim": "",
+      "confidence": "high | medium | low",
+      "durability": "stable | recurring | ephemeral",
+      "examples": []
+    }
+  ],
+  "behavioral_calibration": [
+    {
+      "claim": "",
+      "confidence": "high | medium | low",
+      "durability": "stable | recurring | ephemeral",
+      "examples": []
+    }
+  ],
+  "artifact_rationale": [
+    {
+      "claim": "",
+      "confidence": "high | medium | low",
+      "durability": "stable | recurring | ephemeral",
+      "examples": []
+    }
+  ],
+  "candidate_examples": [
+    {
+      "claim": "",
+      "confidence": "high | medium | low",
+      "durability": "stable | recurring | ephemeral",
+      "examples": []
+    }
+  ],
+  "sensitivity_flags": [
+    {
+      "claim": "",
+      "confidence": "high | medium | low",
+      "durability": "stable | recurring | ephemeral",
+      "examples": []
+    }
+  ],
+  "merge_targets": [
+    "SELF",
+    "SELF-LIBRARY",
+    "SKILLS",
+    "EVIDENCE"
+  ]
+}
