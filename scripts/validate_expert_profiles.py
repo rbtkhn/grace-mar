@@ -28,7 +28,11 @@ SKIP_FILES = {
 }
 
 def _is_companion_file(name: str) -> bool:
-    return name.endswith("-thread.md") or name.endswith("-transcript.md")
+    return (
+        name.endswith("-thread.md")
+        or name.endswith("-transcript.md")
+        or name.endswith("-mind.md")
+    )
 
 REQUIRED_HEADINGS = [
     "Identity",

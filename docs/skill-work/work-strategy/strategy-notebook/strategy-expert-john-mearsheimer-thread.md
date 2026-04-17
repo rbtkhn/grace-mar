@@ -5,7 +5,7 @@ WORK only; not Record.
 **Source:** Human **narrative journal** (below) + [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
-**Companion files:** [`strategy-expert-john-mearsheimer.md`](strategy-expert-john-mearsheimer.md) (profile) and [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (7-day verbatim).
+**Companion files:** [`strategy-expert-john-mearsheimer.md`](strategy-expert-john-mearsheimer.md) (profile), [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (7-day verbatim), [`strategy-expert-john-mearsheimer-mind.md`](strategy-expert-john-mearsheimer-mind.md) (long-form mind).
 
 ---
 ## Journal layer — Narrative (operator)

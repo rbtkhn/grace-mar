@@ -17,6 +17,30 @@ WORK only; not Record.
 | **Typical pairings** | × `john-mearsheimer`, × `glenn-diesen`, × `jeffrey-sachs`, × `seyed-marandi`, × Tri-Frame [minds/](../minds/README.md) |
 | **Notebook-use tags** | `orient`, `negotiate`, `narrate`, `historicize` |
 
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` |
+| **Voice fingerprint — last reviewed** | `2026-04` |
+
+Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+
+## Tri-Frame mind (lens card — headings only)
+
+**Long-form fingerprint:** [`strategy-expert-alexander-mercouris-mind.md`](strategy-expert-alexander-mercouris-mind.md) (bundle-local copy mapped from [`minds/CIV-MIND-MERCOURIS.md`](minds/CIV-MIND-MERCOURIS.md)). **tri-mind** / rules may still cite `minds/CIV-MIND-MERCOURIS.md` until paths change.
+
+Headings-only pointers into [CIV-MIND-MERCOURIS](minds/CIV-MIND-MERCOURIS.md) for **in-voice** passes; **not** a substitute for **Duran-primary** Judgment. Read the mind file for full **LINGUISTIC FINGERPRINT** prose.
+
+| Lens section (in CIV-MIND file) | Use |
+|---------------------------------|-----|
+| **Purpose** | When tri-mind Mercouris is the requested register |
+| **LINGUISTIC FINGERPRINT** | Cadence, openers, hedging — authentic-voice discipline |
+| **Contrast / pivot tables** | Where this lens diverges from compressed notebook Judgment |
+| **Domain relevance** | Hormuz, Lebanon, Islamabad institutional “room” |
+
 ## Convergence fingerprint
 
 ### Recurrent convergences
@@ -102,4 +126,4 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ---
 
-**Companion files:** [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (7-day rolling verbatim) and [`strategy-expert-alexander-mercouris-thread.md`](strategy-expert-alexander-mercouris-thread.md) (distilled analytical thread).
+**Companion files:** [`strategy-expert-alexander-mercouris-transcript.md`](strategy-expert-alexander-mercouris-transcript.md) (7-day rolling verbatim), [`strategy-expert-alexander-mercouris-thread.md`](strategy-expert-alexander-mercouris-thread.md) (distilled analytical thread), [`strategy-expert-alexander-mercouris-mind.md`](strategy-expert-alexander-mercouris-mind.md) (long-form mind).

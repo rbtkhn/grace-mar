@@ -19,6 +19,17 @@ WORK only; not Record.
 | **Typical pairings** | x `john-mearsheimer`, x `glenn-diesen`, x `jeffrey-sachs` |
 | **Notebook-use tags** | `orient`, `historicize` |
 
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` |
+| **Voice fingerprint — last reviewed** | `2026-04` |
+
+Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+
 ## Convergence fingerprint
 
 ### Recurrent convergences

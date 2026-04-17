@@ -5,7 +5,7 @@ WORK only; not Record.
 **Source:** Distilled from [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (what the expert said recently) and relevant knots (where that material was used in strategy work).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
-**Companion files:** [`strategy-expert-robert-barnes.md`](strategy-expert-robert-barnes.md) (profile) and [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (7-day verbatim).
+**Companion files:** [`strategy-expert-robert-barnes.md`](strategy-expert-robert-barnes.md) (profile), [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (7-day verbatim), [`strategy-expert-robert-barnes-mind.md`](strategy-expert-robert-barnes-mind.md) (long-form mind).
 
 ---
 ## Journal layer — Narrative (operator)

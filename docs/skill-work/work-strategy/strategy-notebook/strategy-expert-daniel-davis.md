@@ -17,6 +17,17 @@ WORK only; not Record.
 | **Typical pairings** | × `john-mearsheimer`, × `robert-pape`, × `seyed-marandi`, × `steve-jermy`, × `jeffrey-sachs`, × `alexander-mercouris` (restraint / multipolar overlaps) |
 | **Notebook-use tags** | `validate`, `authorize` |
 
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` |
+| **Voice fingerprint — last reviewed** | `2026-04` |
+
+Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+
 ## Convergence fingerprint
 
 ### Recurrent convergences

@@ -13,6 +13,30 @@
 | **Typical pairings** | × `daniel-davis`, × `alexander-mercouris`, × `glenn-diesen`, × `jeffrey-sachs` |
 | **Notebook-use tags** | `orient`, `historicize` |
 
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` |
+| **Voice fingerprint — last reviewed** | `2026-04` |
+
+Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+
+## Tri-Frame mind (lens card — headings only)
+
+**Long-form fingerprint:** [`strategy-expert-john-mearsheimer-mind.md`](strategy-expert-john-mearsheimer-mind.md) (bundle-local copy mapped from [`minds/CIV-MIND-MEARSHEIMER.md`](minds/CIV-MIND-MEARSHEIMER.md)). **tri-mind** / rules may still cite `minds/CIV-MIND-MEARSHEIMER.md` until paths change.
+
+Headings-only pointers into [CIV-MIND-MEARSHEIMER](minds/CIV-MIND-MEARSHEIMER.md) for **in-voice** passes; **not** a substitute for **primary-ingest** Judgment when a claim must be anchored to his voice on a specific day.
+
+| Lens section (in CIV-MIND file) | Use |
+|---------------------------------|-----|
+| **Purpose** | When tri-mind Mearsheimer is the requested register |
+| **LINGUISTIC FINGERPRINT** | Cadence, is–isn't clarity — authentic-voice discipline |
+| **Contrast / pivot tables** | Where this lens diverges from compressed notebook Judgment |
+| **Domain relevance** | Great-power geometry, security dilemma, offshore balancing |
+
 ## Convergence fingerprint
 
 *Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
@@ -59,4 +83,4 @@ Where **their** commentary is published and accessible (**no Wikipedia**). Re-ve
 
 ---
 
-**Companion files:** [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (7-day rolling verbatim) and [`strategy-expert-john-mearsheimer-thread.md`](strategy-expert-john-mearsheimer-thread.md) (distilled analytical thread).
+**Companion files:** [`strategy-expert-john-mearsheimer-transcript.md`](strategy-expert-john-mearsheimer-transcript.md) (7-day rolling verbatim), [`strategy-expert-john-mearsheimer-thread.md`](strategy-expert-john-mearsheimer-thread.md) (distilled analytical thread), [`strategy-expert-john-mearsheimer-mind.md`](strategy-expert-john-mearsheimer-mind.md) (long-form mind).

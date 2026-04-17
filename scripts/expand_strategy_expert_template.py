@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
-"""Materialize the three strategy-expert files from the bundle template.
+"""Materialize the four strategy-expert files from the bundle template.
 
 Reads ``docs/skill-work/work-strategy/strategy-notebook/strategy-expert-template.md``
-(anchors ``profile-template``, ``thread-template``, ``transcript-template``) and writes:
+(anchors ``profile-template``, ``thread-template``, ``transcript-template``,
+``mind-template``) and writes:
 
 - ``strategy-expert-<expert_id>.md``
 - ``strategy-expert-<expert_id>-thread.md``
 - ``strategy-expert-<expert_id>-transcript.md``
+- ``strategy-expert-<expert_id>-mind.md``
 
 Companion links in the template (pointing at ``strategy-expert-template.md#...``) are
 rewritten to sibling filenames. Placeholders ``<expert_id>`` and ``<Full name>`` are
@@ -40,10 +42,12 @@ DEFAULT_OUT = (
 ANCHOR_PROFILE = "<a id=\"profile-template\"></a>"
 ANCHOR_THREAD = "<a id=\"thread-template\"></a>"
 ANCHOR_TRANSCRIPT = "<a id=\"transcript-template\"></a>"
+ANCHOR_MIND = "<a id=\"mind-template\"></a>"
 
 _RE_PROFILE_HEAD = re.compile(r"^[\s\n]*## Profile →[^\n]*\n\n", re.MULTILINE)
 _RE_THREAD_HEAD = re.compile(r"^[\s\n]*## Thread →[^\n]*\n\n", re.MULTILINE)
 _RE_TRANSCRIPT_HEAD = re.compile(r"^[\s\n]*## Transcript →[^\n]*\n\n", re.MULTILINE)
+_RE_MIND_HEAD = re.compile(r"^[\s\n]*## Mind →[^\n]*\n\n", re.MULTILINE)
 
 
 def _strip_bundle_section_trailer(s: str) -> str:
@@ -54,16 +58,22 @@ def _strip_bundle_section_trailer(s: str) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def _split_bundle(text: str) -> tuple[str, str, str]:
-    if ANCHOR_PROFILE not in text or ANCHOR_THREAD not in text or ANCHOR_TRANSCRIPT not in text:
+def _split_bundle(text: str) -> tuple[str, str, str, str]:
+    if (
+        ANCHOR_PROFILE not in text
+        or ANCHOR_THREAD not in text
+        or ANCHOR_TRANSCRIPT not in text
+        or ANCHOR_MIND not in text
+    ):
         raise ValueError(
-            "Bundle must contain profile, thread, and transcript anchors "
-            f"({ANCHOR_PROFILE!r}, …)"
+            "Bundle must contain profile, thread, transcript, and mind anchors "
+            f"({ANCHOR_PROFILE!r}, …, {ANCHOR_MIND!r})"
         )
     _, rest = text.split(ANCHOR_PROFILE, 1)
     profile_wrap, rest = rest.split(ANCHOR_THREAD, 1)
-    thread_wrap, transcript_wrap = rest.split(ANCHOR_TRANSCRIPT, 1)
-    return profile_wrap, thread_wrap, transcript_wrap
+    thread_wrap, rest = rest.split(ANCHOR_TRANSCRIPT, 1)
+    transcript_wrap, mind_wrap = rest.split(ANCHOR_MIND, 1)
+    return profile_wrap, thread_wrap, transcript_wrap, mind_wrap
 
 
 def _strip_profile_section(s: str) -> str:
@@ -78,6 +88,11 @@ def _strip_thread_section(s: str) -> str:
 
 def _strip_transcript_section(s: str) -> str:
     s2 = _RE_TRANSCRIPT_HEAD.sub("", s.lstrip())
+    return _strip_bundle_section_trailer(s2)
+
+
+def _strip_mind_section(s: str) -> str:
+    s2 = _RE_MIND_HEAD.sub("", s.lstrip())
     return s2.rstrip() + "\n"
 
 
@@ -96,6 +111,10 @@ def _apply_substitutions(body: str, expert_id: str, full_name: str) -> str:
     out = out.replace(
         "](strategy-expert-template.md#profile-template)",
         f"](strategy-expert-{expert_id}.md)",
+    )
+    out = out.replace(
+        "](strategy-expert-template.md#mind-template)",
+        f"](strategy-expert-{expert_id}-mind.md)",
     )
     return out
 
@@ -117,7 +136,7 @@ def main() -> int:
         "--out-dir",
         type=Path,
         default=DEFAULT_OUT,
-        help="Directory for the three strategy-expert-*.md files",
+        help="Directory for the four strategy-expert-*.md files",
     )
     ap.add_argument(
         "--dry-run",
@@ -145,17 +164,19 @@ def main() -> int:
         return 1
 
     text = args.bundle.read_text(encoding="utf-8")
-    pw, tw, xw = _split_bundle(text)
+    pw, tw, xw, mw = _split_bundle(text)
     profile_body = _apply_substitutions(_strip_profile_section(pw), eid, args.full_name)
     thread_body = _apply_substitutions(_strip_thread_section(tw), eid, args.full_name)
     transcript_body = _apply_substitutions(_strip_transcript_section(xw), eid, args.full_name)
+    mind_body = _apply_substitutions(_strip_mind_section(mw), eid, args.full_name)
 
     paths = [
         args.out_dir / f"strategy-expert-{eid}.md",
         args.out_dir / f"strategy-expert-{eid}-thread.md",
         args.out_dir / f"strategy-expert-{eid}-transcript.md",
+        args.out_dir / f"strategy-expert-{eid}-mind.md",
     ]
-    bodies = [profile_body, thread_body, transcript_body]
+    bodies = [profile_body, thread_body, transcript_body, mind_body]
 
     for p in paths:
         if p.exists() and not args.force:

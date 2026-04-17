@@ -17,6 +17,30 @@ WORK only; not Record.
 | **Typical pairings** | × `robert-pape`; × `daniel-davis` (institutional skepticism seam); topic forks (JTN-style “card” vs satirical spiral) in **`batch-analysis`** without a second expert |
 | **Notebook-use tags** | `authorize` |
 
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` |
+| **Voice fingerprint — last reviewed** | `2026-04` |
+
+Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+
+## Tri-Frame mind (lens card — headings only)
+
+**Long-form fingerprint:** [`strategy-expert-robert-barnes-mind.md`](strategy-expert-robert-barnes-mind.md) (bundle-local copy mapped from [`minds/CIV-MIND-BARNES.md`](minds/CIV-MIND-BARNES.md)). **tri-mind** / rules may still cite `minds/CIV-MIND-BARNES.md` until paths change.
+
+Headings-only pointers into [CIV-MIND-BARNES](minds/CIV-MIND-BARNES.md) for **in-voice** passes; **not** a substitute for **primary** legal or cite-grade Judgment.
+
+| Lens section (in CIV-MIND file) | Use |
+|---------------------------------|-----|
+| **Purpose** | When tri-mind Barnes is the requested register |
+| **LINGUISTIC FINGERPRINT** | Liability / jurisdiction register — authentic-voice discipline |
+| **Contrast / pivot tables** | Where this lens diverges from compressed notebook Judgment |
+| **Domain relevance** | U.S. civic machinery — votes, appropriations, courts |
+
 ## Convergence fingerprint
 
 ### Recurrent convergences
@@ -102,4 +126,4 @@ The block below **Rolling ingest** is replaced on each `strategy_thread.py` / `s
 
 ---
 
-**Companion files:** [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (7-day rolling verbatim) and [`strategy-expert-robert-barnes-thread.md`](strategy-expert-robert-barnes-thread.md) (distilled analytical thread).
+**Companion files:** [`strategy-expert-robert-barnes-transcript.md`](strategy-expert-robert-barnes-transcript.md) (7-day rolling verbatim), [`strategy-expert-robert-barnes-thread.md`](strategy-expert-robert-barnes-thread.md) (distilled analytical thread), [`strategy-expert-robert-barnes-mind.md`](strategy-expert-robert-barnes-mind.md) (long-form mind).

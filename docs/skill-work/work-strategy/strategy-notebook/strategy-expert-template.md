@@ -1,8 +1,10 @@
 # Strategy expert — templates (WORK only)
 
-**Single source** for the three on-disk files each commentator uses. When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped). `validate_strategy_expert_threads.py` checks on-disk `strategy-expert-<id>-thread.md` **journal-layer** month blocks (prose vs list-only hints, and **≥500 prose words** per `## YYYY-MM` unless opted out). Use `--month MM` (`01`–`12`) to scope checks to one calendar month across all expert-thread files; omit for a full audit.
+**Single source** for the **four** on-disk files each commentator uses (profile, thread, transcript, **mind**). When adding someone new, either copy **each** section below into its own file (name on the section heading) or run `python3 scripts/expand_strategy_expert_template.py --expert-id <slug> [--full-name "..."]` from the repo root (`--dry-run` to preview). `validate_expert_profiles.py` validates real `strategy-expert-<id>.md` profiles only (this bundle file is skipped; `-mind.md` companions are skipped too). `validate_strategy_expert_threads.py` checks on-disk `strategy-expert-<id>-thread.md` **journal-layer** month blocks (prose vs list-only hints, and **≥500 prose words** per `## YYYY-MM` unless opted out). Use `--month MM` (`01`–`12`) to scope checks to one calendar month across all expert-thread files; omit for a full audit.
 
-Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template)
+**Voice tier policy (defaults):** Tier **B** — compact **voice fingerprint** in profile — is the default once **`thread:`** ingests support it (typically ≥2 month blocks with ingest lines). Tier **C** — roster index + minimal profile — applies to **sparse** lanes until promoted. Tier **A** — long-form fingerprint in **`strategy-expert-<id>-mind.md`** (and/or legacy **`minds/CIV-MIND-*** for Tri-Frame). Numeric promotion defaults and **last reviewed** discipline live under [Profile → **Voice fingerprint (compact)**](#voice-fingerprint-compact).
+
+Jump: [Profile](#profile-template) · [Thread](#thread-template) · [Transcript](#transcript-template) · [Mind](#mind-template)
 
 **Weave skeleton (primary expert):** When a **`weave`** names this **`thread:`** as **primary**, default **Signal / Judgment / Links / Open** pressure for the knot (and compressed `days.md` when woven there) follows [NOTEBOOK-PREFERENCES.md § Weave skeletons (S1–S5)](NOTEBOOK-PREFERENCES.md#weave-skeletons-s1-s5) — see the **primary → skeleton** table and **failure modes**; orthogonal to the **knot-shape** menu ([STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave command — knot-shape menu*).
 
@@ -30,6 +32,27 @@ WORK only; not Record.
 | **Default grep tags** | <tags in cold> |
 | **Typical pairings** | <batch-analysis partners> |
 | **Notebook-use tags** | <comma-separated from `orient`, `negotiate`, `validate`, `authorize`, `stress-test`, `narrate`, `historicize`> |
+
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+_Omit or leave “roster-only (Tier C)” until **`thread:`** density supports a card._
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` (compact) · `C` (roster-only until promoted) |
+| **Voice fingerprint — last reviewed** | `YYYY-MM` — re-pass when **≥4** new `## YYYY-MM` sections since this date, **≥12** months wall time, or a **major crisis fork** (operator judgment). |
+
+**Promotion defaults (all tunable)**
+
+| Step | Heuristic |
+|------|-----------|
+| **C → B** | ≥**2** distinct calendar months each with ≥**1** `thread:` line, **or** ≥**1** thread block citing a named digest/transcript episode with Judgment — and cadence / failure modes / verify tier are stateable without pure guesswork. |
+| **B → B+** | Append when ≥**2** new month blocks add a **novel** mechanism vs prior review, or log **Fingerprint changelog** in the thread. |
+| **B → A** (long-form **`strategy-expert-<expert_id>-mind.md`** and/or `minds/`) | ≥**3** month blocks with `thread:` in a rolling **12-month** window **or** ≥**6** lifetime thread-months **and** (card would exceed ~**40–50** lines **or** long authentic-voice tables needed) **and** operator maintains the mind file — **override:** explicit decision anytime. |
+
+**Governance:** LLM “sounds like” lines are **candidates** until merged into profile or **`strategy-expert-<expert_id>-mind.md`** / `minds/`.
 
 ## Convergence fingerprint
 
@@ -97,7 +120,7 @@ WORK only; not Record.
 
 ---
 
-**Companion files:** [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day rolling verbatim) and [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled analytical thread).
+**Companion files:** [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day rolling verbatim), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled analytical thread), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form voice / linguistic fingerprint).
 
 ---
 
@@ -112,7 +135,7 @@ WORK only; not Record.
 **Source:** Human **narrative journal** (below) + [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests) + relevant **knot** files (where this expert’s material was used).
 **Process:** `python3 scripts/strategy_thread.py` triages inbox → transcript, then fills **only** the **machine layer** between the **strategy-expert-thread** HTML start and end comments. Operator / assistant maintains the **journal layer** above the start marker in **readable prose** (optional **ledger** after the end marker).
 **Updated:** Narrative — when you distill; **machine layer** — when you run **`thread`**.
-**Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile) and [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day verbatim).
+**Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (7-day verbatim), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
 
 ---
 
@@ -130,6 +153,7 @@ _(No narrative distillation yet — add prose above the markers, not inside them
 - **Historical expert context (optional rebuild)** — `python3 scripts/strategy_historical_expert_context.py --expert-id <expert_id> --start-segment YYYY-MM --end-segment YYYY-MM --apply` emits batch-analysis handoff under `artifacts/skill-work/work-strategy/historical-expert-context/`: a **range rollup** (`<expert_id>-<start>-to-<end>.md`) plus **per-month** files (`<expert_id>/<YYYY-MM>.md`). [`strategy_batch_analysis_with_history.py`](../../../../scripts/strategy_batch_analysis_with_history.py) loads **per-month** artifacts when every month in the requested window exists; otherwise it uses the rollup. See `historical-expert-context/README.md` in that folder.
 - **`<!-- backfill:<expert_id>:start -->` … `end` blocks** — reconstructed historical arc from out-of-repo URLs; not contemporaneous journal prose; keep scope/rules inside the block.
 - **Machine hint / opt-out:** `python3 scripts/validate_strategy_expert_threads.py` warns when a `## YYYY-MM` block is heavy on list lines and has **no** prose lines (optional `--month MM` to audit one month only). For a **whole file** where month bullets-only is intentional (transitional ledger), add once in the human layer: `<!-- strategy-expert-thread:segment-1-month-bullets-ledger-ok -->`. Editing assistants: `.cursor/rules/strategy-expert-thread-journal-layer.mdc`.
+- **Lens vs lane (Tri-Frame / `CIV-MIND-*` only):** Optional journal subsection **above** `<!-- strategy-expert-thread:start -->` when this expert has a **CIV-MIND-*** file: link `minds/CIV-MIND-….md`, state **lens ≠ transcript**, and when to use **`verify:lens-fold+CIV-MIND-…`** vs a **primary URL**. Filled example: [`strategy-expert-alexander-mercouris-thread.md`](strategy-expert-alexander-mercouris-thread.md) (**CIV-MIND-MERCOURIS**).
 
 ---
 
@@ -175,7 +199,7 @@ WORK only; not Record.
 **Length:** Target **≤ 2000 words** per ingest block; with **7-day** pruning, the whole file should stay near a **≤ ~20,000 word** soft ceiling (triage warns if exceeded).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
-**Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile) and [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread).
+**Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread), and [`strategy-expert-<expert_id>-mind.md`](strategy-expert-template.md#mind-template) (optional long-form mind).
 
 <a id="thesis-scaffold-pattern"></a>
 
@@ -197,3 +221,52 @@ For a dated ingest where you want **bold theses**, **clear separation**, and **v
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
+---
+
+<a id="mind-template"></a>
+
+## Mind → `strategy-expert-<expert_id>-mind.md`
+
+# Expert mind — <Full name> (`<expert_id>`)
+
+WORK only; not Record.
+
+**Epistemic fence:** This file is an **analytical voice / style fingerprint** for WORK (tri-mind, strategy passes). It is **not** biographical truth about a real person, **not** the Record, and **not** a substitute for **transcript-grounded** Judgment when a claim must be anchored to a primary line.
+
+**Provenance (when migrating from `minds/`):** If a [`minds/CIV-MIND-*.md`](minds/) file exists for this lane, populate this file by **mapping** that source into the section spine below (reformat; avoid one undifferentiated paste). Add an explicit line: *Derived from / aligned with `minds/CIV-MIND-….md`.* Until **tri-mind** / **minds-authentic-voice** paths are updated, skills may still cite `minds/CIV-MIND-*`; this **`-mind.md`** copy is the **strategy-notebook bundle-local** long read.
+
+**Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile), [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread), [`strategy-expert-<expert_id>-transcript.md`](strategy-expert-template.md#transcript-template) (verbatim ingests).
+
+| Field | Value |
+|-------|-------|
+| **Status** | `stub` · `active` |
+| **Mind — last reviewed** | `YYYY-MM` |
+
+---
+
+### I. Purpose and role
+
+- What this voice **is** in the notebook (sharpening tool, interpretive lens, style constraint).
+- What it is **not** (replacement for primary quotes, autonomous agent, etc.).
+
+### II. Lane identity
+
+- Short **register** summary: discipline, tempo, posture (operator-curated).
+
+### III. Contrast and pairings (optional)
+
+- Table or bullets: how this lane **differs** from adjacent **`thread:`** experts when both appear in a batch pass.
+
+### IV. Linguistic fingerprint
+
+- **Openers**, **transitions**, **hedging**, **argument markers** — transcript- or corpus-derived where possible.
+- Subsections as needed (IV.A, IV.B, …).
+
+### V. Domain relevance and register failure modes
+
+- Where this voice is **load-bearing** in the notebook; where it tends to **overread** or flatten.
+
+---
+
+_Stubs ship with the above headings only; Tri-Frame lanes may replace the body with mapped content from `minds/CIV-MIND-*.md`._

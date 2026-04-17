@@ -15,6 +15,17 @@ WORK only; not Record.
 | **Typical pairings** | × `scott-ritter`, × `douglas-macgregor`, × `daniel-davis`, × `robert-barnes` |
 | **Notebook-use tags** | `validate`, `authorize` |
 
+<a id="voice-fingerprint-compact"></a>
+
+## Voice fingerprint (compact) — Tier B
+
+| Field | Value |
+|-------|-------|
+| **Voice tier** | `B` |
+| **Voice fingerprint — last reviewed** | `2026-04` |
+
+Promotion and refresh defaults: [strategy-expert-template.md § Voice fingerprint (compact)](strategy-expert-template.md#voice-fingerprint-compact).
+
 ## Convergence fingerprint
 
 *Seed profile — operator extends when this lane is upgraded to a full cognitive profile.*
