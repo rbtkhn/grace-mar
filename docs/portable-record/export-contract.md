@@ -80,6 +80,12 @@ Three classes are operational: `tool_bootstrap`, `full`, `task_limited`. Unsuppo
 
 ---
 
+## MCP adapter
+
+The same export classes are available programmatically via a read-only MCP server at [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py). It wraps the existing export machinery over stdio transport — no second export stack, no write-back. Three operational classes (`tool_bootstrap`, `full`, `task_limited`) are retrievable; unsupported classes reject with explanation. See [mcp-adapter.md](../integrations/mcp-adapter.md) for configuration and response shapes.
+
+---
+
 ## Related
 
 - [current-capability-map.md](current-capability-map.md) — portability capability inventory

@@ -24,6 +24,7 @@ These capabilities are live in the grace-mar instance.
 | **Working-identity candidate schema** | Normalized JSON Schema for imported context that enters gate review before promotion to Record. | Live — [`schema-registry/working-identity-candidate.v1.json`](../../schema-registry/working-identity-candidate.v1.json), [working-identity-candidates.md](working-identity-candidates.md) |
 | **Artifact-rationale format** | Structured format for demonstrated capability with provenance (why it was built, not just that it exists). | Live — [artifact-rationale.md](artifact-rationale.md), [`schema-registry/artifact-rationale.v1.json`](../../schema-registry/artifact-rationale.v1.json) |
 | **Export-class CLI wiring** | `export.py --export-class` flag routes `tool_bootstrap`, `full`, and `task_limited` to existing child exporters. Unsupported classes reject clearly. | Live — [`scripts/export.py`](../../scripts/export.py), [export-contract.md](export-contract.md) |
+| **Thin MCP adapter** | Read-only MCP server over governed export classes for tool-using agents. Wraps existing export machinery; stdio transport; no write-back. | Live — [`integrations/mcp_adapter.py`](../../integrations/mcp_adapter.py), [mcp-adapter.md](../integrations/mcp-adapter.md) |
 
 ---
 
@@ -31,7 +32,6 @@ These capabilities are live in the grace-mar instance.
 
 | Gap | Description | Priority |
 |---|---|---|
-| **Thin MCP adapter** | Read-only connector over approved surfaces for tool-using agents. | Future |
 | **Demonstrated-capability export filter** | The `capability` export class is documented and the rationale format exists, but `export.py` does not yet have a dedicated capability-focused exporter. | Future |
 
 ---

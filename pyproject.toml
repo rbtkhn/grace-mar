@@ -23,6 +23,9 @@ miniapp = [
 reflect = [
   "openai>=1.0",
 ]
+mcp = [
+  "mcp>=1.0",
+]
 # Channel video listing + caption download for operator research (not Voice / not Record).
 youtube-research = [
   "yt-dlp>=2024.1",

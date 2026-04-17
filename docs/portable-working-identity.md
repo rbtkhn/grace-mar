@@ -39,9 +39,8 @@ New portability work must extend the existing PRP / export / prepared-context ar
 
 ## What remains
 
-The core content formats, intake path, export contract, and export-class CLI wiring are implemented. The remaining gap is **connectorization**, not architecture:
+The core content formats, intake path, export contract, export-class CLI wiring, and MCP adapter are implemented. The remaining gap is a single unwired export class:
 
-- **Thin MCP adapter** — read-only connector over approved surfaces for tool-using agents (future)
 - **Demonstrated-capability export filter** — the `capability` export class is documented and the rationale format exists, but a dedicated exporter is future
 
 See [docs/portable-record/current-capability-map.md](portable-record/current-capability-map.md) for the full inventory.
