@@ -1,19 +1,23 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-04-16T05:09:05.164954+00:00",
-  "count": 18,
+  "generated_at": "2026-04-17T00:51:45.914521+00:00",
+  "count": 16,
   "batch_analysis_refs": [
     {
       "date": "2026-04-14",
       "label": "Armstrong cash × Gulf fertilizer × U.S. digital-dollar law",
       "raw": "`batch-analysis | 2026-04-14 | Armstrong cash × Gulf fertilizer × U.S. digital-dollar law | **Tension-first:** Social graphics mix physical cash, bank money, stablecoins, and a hypothetical Fed-issued retail digital dollar into one “digital” threat; statute still treats payment-stablecoin frameworks and anti-retail-central-bank-digital-currency restrictions as different objects. Gulf-origin seaborne fertilizer share (Statista citing Signal Group) is not interchangeable with a “percent through Hormuz” shipping claim. **Orthogonal** to the same-day Hormuz expert lattice (Scott Ritter blockade weave). **Weak bridge:** food-price fear and money-control fear can rise together without sharing one causal graph.`",
       "expert_ids": [
-        "scott-ritter"
+        "scott-ritter",
+        "alexander-mercouris"
       ],
-      "confidence": "low",
+      "confidence": "medium",
       "sources": {
         "alias_match": [
           "scott-ritter"
+        ],
+        "upstream_verify": [
+          "alexander-mercouris"
         ]
       }
     },
@@ -56,9 +60,12 @@
       "expert_ids": [
         "trita-parsi"
       ],
-      "confidence": "low",
+      "confidence": "medium",
       "sources": {
         "alias_match": [
+          "trita-parsi"
+        ],
+        "upstream_verify": [
           "trita-parsi"
         ]
       }
@@ -70,9 +77,12 @@
       "expert_ids": [
         "robert-barnes"
       ],
-      "confidence": "low",
+      "confidence": "medium",
       "sources": {
         "alias_match": [
+          "robert-barnes"
+        ],
+        "upstream_verify": [
           "robert-barnes"
         ]
       }
@@ -89,6 +99,9 @@
       "sources": {
         "alias_match": [
           "trita-parsi",
+          "douglas-macgregor"
+        ],
+        "upstream_verify": [
           "douglas-macgregor"
         ]
       }
@@ -108,6 +121,9 @@
           "robert-pape",
           "daniel-davis",
           "douglas-macgregor"
+        ],
+        "upstream_verify": [
+          "daniel-davis"
         ]
       }
     },
@@ -137,6 +153,9 @@
       "sources": {
         "alias_match": [
           "glenn-diesen",
+          "jiang-xueqin"
+        ],
+        "upstream_verify": [
           "jiang-xueqin"
         ]
       }
@@ -182,7 +201,7 @@
     {
       "date": "2026-04-14",
       "label": "Ritter × Davis",
-      "raw": "`batch-analysis | 2026-04-14 | Ritter × Davis | **Tension-first:** **Ritter** digest §B = **OOB / closure** skepticism on a Hollywood-grade Hormuz **seizure** at scale; **Davis** X = **ultimatum vs negotiation** + **resumption clock** + **U.S.-side macro** hurt if talks read as final offer—**convergence:** both undercut a clean **bomb → fold** story. **Do not** treat **digest quants** as **proof** of **Davis** claims or vice versa until **status URLs** + **wire** rows land. **`crosses:scott-ritter+daniel-davis`** — **membership:** **`thread:scott-ritter`** (brief-handoff bundle **2026-04-10**) + **`thread:daniel-davis`** (Prior scratch **2026-04-12** block); folded **[`## 2026-04-14`](chapters/2026-04/days.md)** **Signal**/**Judgment**/**Links**/**Open**.`",
+      "raw": "`batch-analysis | 2026-04-14 | Ritter × Davis | **Tension-first:** **Ritter** digest §B = **OOB / closure** skepticism on a Hollywood-grade Hormuz **seizure** at scale; **Davis** X = **ultimatum vs negotiation** + **resumption clock** + **U.S.-side macro** hurt if talks read as final offer—**convergence:** both undercut a clean **bomb → fold** story. **Do not** treat **digest quants** as **proof** of **Davis** claims or vice versa until **status URLs** + **wire** rows land. **`crosses:scott-ritter+daniel-davis`** — **membership:** **`thread:scott-ritter`** (brief-handoff bundle **2026-04-10**) + **`thread:daniel-davis`** (Prior scratch **2026-04-12** block); folded **[`## 2026-04-14`](chapters/2026-04/days.md)** **Signal**/**Judgment**/**Links**/**Open**.`\n`batch-analysis | 2026-04-14 | Ritter × Davis | crosses:scott-ritter+daniel-davis`",
       "expert_ids": [
         "scott-ritter",
         "daniel-davis"
@@ -200,47 +219,17 @@
       }
     },
     {
-      "date": "2026-04-14",
-      "label": "Ritter × Davis",
-      "raw": "`batch-analysis | 2026-04-14 | Ritter × Davis | crosses:scott-ritter+daniel-davis`",
+      "date": "2026-04-15",
+      "label": "Mercouris × tri-mind",
+      "raw": "`batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`\n`batch-analysis | 2026-04-15 | Mercouris × tri-mind | seam:mercouris-tri-frame`",
       "expert_ids": [
-        "scott-ritter",
-        "daniel-davis"
+        "alexander-mercouris"
       ],
       "confidence": "high",
       "sources": {
-        "crosses": [
-          "scott-ritter",
-          "daniel-davis"
-        ]
-      }
-    },
-    {
-      "date": "2026-04-15",
-      "label": "Mercouris × tri-mind",
-      "raw": "`batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`",
-      "expert_ids": [
-        "alexander-mercouris"
-      ],
-      "confidence": "medium",
-      "sources": {
         "thread_in_line": [
           "alexander-mercouris"
-        ]
-      },
-      "seams": [
-        "mercouris-tri-frame"
-      ]
-    },
-    {
-      "date": "2026-04-15",
-      "label": "Mercouris × tri-mind",
-      "raw": "`batch-analysis | 2026-04-15 | Mercouris × tri-mind | seam:mercouris-tri-frame`",
-      "expert_ids": [
-        "alexander-mercouris"
-      ],
-      "confidence": "low",
-      "sources": {
+        ],
         "alias_match": [
           "alexander-mercouris"
         ]
@@ -262,6 +251,9 @@
         "alias_match": [
           "robert-pape",
           "john-mearsheimer"
+        ],
+        "upstream_verify": [
+          "robert-pape"
         ]
       }
     },

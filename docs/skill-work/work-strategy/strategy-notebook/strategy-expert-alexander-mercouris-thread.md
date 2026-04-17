@@ -109,7 +109,7 @@ The 2026-03 segment for the Alexander Mercouris lane (`alexander-mercouris`) exi
 <!-- backfill:alexander-mercouris:end -->
 ## 2026-04
 
-_Partial month — narrative distillation for **2026-04-12 → 2026-04-15** only; not a full April ledger. Keeps `## YYYY-MM` boundaries for `strategy_historical_expert_context.py`._
+_Partial month — narrative distillation for **2026-04-12 → 2026-04-15** plus a **2026-04-18** notebook-lens addendum; not a full April ledger. Keeps `## YYYY-MM` boundaries for `strategy_historical_expert_context.py`._
 
 ### Distilled thread (2026-04-12 → 2026-04-15)
 
@@ -121,10 +121,15 @@ _Partial month — narrative distillation for **2026-04-12 → 2026-04-15** only
 
 **04-15 extension (uranium off-ramp + legitimacy seam):** The new synthesis knot picks up where the Mercouris lane naturally extends. The Kremlin's uranium-transfer revival (Peskov, Lavrov) occupies exactly the institutional/diplomatic register Mercouris covers — multilateral mechanism, 2015 JCPOA precedent, Russian custody offer. The legitimacy-stack thesis (Leo XIV + France-UK + Iran MFA) is likewise his natural terrain: legitimacy choreography across multiple registers. The notebook's 04-15 Mercouris entry is *lateral* — he is referenced as a lens rather than a direct transcript source, because the 04-15 episode URL is not yet pinned.
 
+### Notebook lens — 2026-04-18 (inbox; not Duran primary)
+
+**Source type:** `notebook | … | thread:alexander-mercouris` in [daily-strategy-inbox.md](daily-strategy-inbox.md) — **tri-mind / `CIV-MIND-MERCOURIS`** lane synthesis filed under this expert id for grep and `thread` rebuilds, **not** a Mercouris quote or The Duran episode ingest. **Thesis (lens-fold):** U.S. Hormuz pressure is legible as **maritime-denial precedent** for Beijing; “escalation” includes **friction-thickening** (insurance, routing, posture, rhetoric) before any notional fleet-on-fleet clash. **Cross-weave:** [days.md `## 2026-04-18` Judgment](chapters/2026-04/days.md#2026-04-18) pairs this **register** with **§1g** MFA **Guo Jiakun** (14 Apr) — analyst precedent read **aligned with** PRC trade-survival logic, **without** merging FM rhetoric and AIS/tanker tiers. **Discipline:** do **not** promote this block to **transcript-grade** Mercouris until a dated Duran (or other primary) line carries the same claim in his voice; keep `verify:lens-fold+CIV-MIND-MERCOURIS` visible in Segment 2 as the epistemic tag.
+
 **Running tension:** Mercouris's CTC (cross-thread connectivity) score is the highest in the roster (0.88) but his AD (analytical discipline) is the lowest among frequent commentators (0.44). The thread reflects this: he is the expert most often placed beside others to hear harmony or dissonance, but his narrative framing can shade into arc-construction that is harder to pin to a single falsifying fact. Every knot that carries his name includes a discipline constraint for this reason.
 
 **Open:**
 
+- **04-18 lens row:** Treat as **notebook / mind-file** material indexed to `alexander-mercouris`, not a substitute for pinning **The Duran** URLs when cite-grade Mercouris voice is required.
 
 Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: × john-mearsheimer, × glenn-diesen, × jeffrey-sachs, × seyed-marandi, × Tri-Frame [minds/](../minds/README.md). In WORK, those pairings are **operational**: they tell the operator which other `thread:` lanes to open when a claim needs a second fingerprint, not a second opinion dressed as neutrality. This 2026-04 segment should be read as **mesh navigation**—which lanes to pull into the same batch pass—rather than as a claim that those voices agreed or disagreed on any particular day unless a dated bullet below says so explicitly.
 
@@ -132,16 +137,18 @@ Typical pairings on file for `alexander-mercouris` emphasize contrast surfaces: 
 - Pin **The Duran 04-13** canonical episode URL — Islamabad recap + blockade + zugzwang language
 - Watch for next Mercouris × Mearsheimer **Lebanon** material — the 04-14 fork is abstract; it needs a **dated episode** to become a case page
 
-Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run).
+Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerated each **`thread`** run). The **2026-04-18** `notebook |` row appears there verbatim; interpretation and tier discipline (**lens-fold**, not Duran primary) are in **Segment 1** → **Notebook lens — 2026-04-18**.
 
 ---
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker. The HTML-comment block is replaced on each `thread` run._
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
 ### Segment 2a — Recent transcript material
 
+## 2026-04-18
+- `notebook | cold: Mercouris lane — Hormuz as precedent-for-Beijing problem (U.S. maritime-denial grammar portable beyond Iran); escalation risk as friction-thickening (insurance, routing, posture, rhetoric) before any notional fleet clash // hook: tri-mind narrow pass (Hormuz + PRC escalation); notebook lens fold, not Duran primary | verify:lens-fold+CIV-MIND-MERCOURIS | thread:alexander-mercouris | membrane:single | grep:Hormuz+PRC+precedent`
 ## 2026-04-12
 - `batch-analysis | 2026-04-15 | Mercouris × tri-mind | **Tension-first:** thread:alexander-mercouris **15 Apr 2026** **The Duran** strand (contested Hormuz narratives, Islamabad reads, Lavrov–Wang–Xi, Russian SC commentary, attrition frame) × tri-mind **B→A→C** + solo A; fact-check triage rows in days.md **## 2026-04-15** **Links**—do not merge second-hand ORBAT with tanker AIS facts without tier discipline. seam:mercouris-tri-frame — WORK only; not a crosses: two-expert row.`
 

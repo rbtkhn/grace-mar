@@ -689,8 +689,13 @@ Barnes says both sides face material clocks and the question is which clock runs
 
 On **2026-04-16**, **Pope Leo XIV** told religious leaders in **Bamenda (Cameroon)** that **“woe”** awaits those who **manipulate religion and the very name of God for their own military, economic, or political gain**, dragging the sacred **“into darkness and filth”** — **Fides** situates the line in the **Anglophone crisis** and a **Christian–Muslim** **peace movement**, not in Washington. The **same calendar day**, **Secretary Hegseth** used **Mark 3 / Pharisees** language to criticize **U.S. press** coverage of the **Iran** war at a **Pentagon** briefing — **Washington Examiner** and other outlets quoted him directly. **Notebook rule:** **do not collapse** the **Holy See** **legitimacy** **plane** into the **U.S. executive / DoD** **speech** **plane** as a single narrative without **tags** — **parallel** **channels** can **rhyme** for observers **without** proving **Vatican** **intent** toward **the** **Pentagon**.
 
+### Judgment
+
+- **Mercouris lane × §1g PRC:** The inbox one-liner under **`thread:alexander-mercouris`** in [daily-strategy-inbox.md](../../daily-strategy-inbox.md) (Hormuz as precedent-for-Beijing / friction-thickening escalation) pairs **in register** with §1g official PRC pushback on U.S. maritime pressure — MFA **Guo Jiakun** (14 Apr): blockade “irresponsible and dangerous,” undermines ceasefire; half of China’s crude via Hormuz (brief + BBC/CGTN in [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) §1g). This Judgment names **alignment** between the Mercouris precedent read and MFA trade-survival logic — not a merged claim that either substitutes for AIS / tanker / enforcement tier discipline; see [2026-04-15](#2026-04-15) §1g Links rows.
+
 ### Links
 
 - [Fides — Bamenda, 16 Apr 2026 — “woe to those who manipulate religion…”](https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain)
 - [Washington Examiner — Hegseth, Pharisees / press, 16 Apr 2026](https://www.washingtonexaminer.com/policy/defense/4531681/hegseth-compare-journalist-pharisee-anti-media-rant/)
 - **ROME pass pointer:** [ROME-PASS.md](../../../work-strategy-rome/ROME-PASS.md) § **Rolling seam note — 2026-04-16**
+- **§1g anchor (Mercouris × PRC seam):** [daily-brief-2026-04-15.md](../../daily-brief-2026-04-15.md) §**1g** · [BBC — China: blockade “irresponsible and dangerous” (14 Apr)](https://www.bbc.co.uk/news/articles/c78lleelxj4o) · [CGTN — China warns escalation (14 Apr)](https://news.cgtn.com/news/2026-04-14/China-says-US-blockade-of-Iran-ports-risks-escalating-tensions-1MkWxWoYkRW/p.html)

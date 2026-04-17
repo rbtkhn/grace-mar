@@ -93,3 +93,15 @@
 - picked: A
 - tags: build,work-dev
 - note: OB1 chunking spike: read architecture + mapping chunk_strategy; next wedge export self.md three strategies
+
+### [WORK-choice] 2026-04-17T00:32:52Z
+- context: WORK
+- picked: A+B
+- tags: tri-mind,~15m
+- note: Follow-up menu: solo Mercouris paragraph (Hormuz+China escalation) plus session receipt per operator pick A and B.
+
+### [WORK-choice] 2026-04-17T00:37:14Z
+- context: WORK
+- picked: A+B
+- tags: strategy-notebook,inbox,~15m
+- note: Fold Mercouris Hormuz/PRC one-liner to daily-strategy-inbox (thread:alexander-mercouris); Mearsheimer solo paragraph in chat.

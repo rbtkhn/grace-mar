@@ -10,6 +10,3 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
-
-## 2026-04-10
-- `YT | cold: (digest §B) Larry Johnson — F-15/Isfahan “rescue” narrative: deployment uptick ~**March 10–11**; C-130/Little Bird load math **~30 / ~26 / ~11** personnel scenarios; agrees official story unreliable // hook: same digest §B | path:docs/skill-work/work-strategy/transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md | verify:operator-transcript-digest | thread:larry-johnson`

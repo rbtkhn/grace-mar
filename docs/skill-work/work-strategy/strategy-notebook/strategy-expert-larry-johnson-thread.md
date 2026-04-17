@@ -136,11 +136,6 @@ Canonical knot paths and raw ingest lines live in **Segment 2** below (regenerat
 
 _Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
-### Segment 2a — Recent transcript material
-
-## 2026-04-10
-- `YT | cold: (digest §B) Larry Johnson — F-15/Isfahan “rescue” narrative: deployment uptick ~**March 10–11**; C-130/Little Bird load math **~30 / ~26 / ~11** personnel scenarios; agrees official story unreliable // hook: same digest §B | path:docs/skill-work/work-strategy/transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md | verify:operator-transcript-digest | thread:larry-johnson`
-
 ### Segment 2b — Knot references
 
 - [strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md) 2026-04-13 (marandi-ritter-mercouris-hormuz-scaffold) — Marandi×Ritter×Mercouris shared scaffold; Davis×Freeman×Mearsheimer parallel; cross-day to 04-12/04-14

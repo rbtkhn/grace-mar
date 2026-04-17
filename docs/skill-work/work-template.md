@@ -37,6 +37,7 @@
 | C | Cross-links in README | Point to adjacent territories (e.g. work-dev, work-politics, work-strategy) and any scripts under `scripts/`. |
 | D | Tier 1+ artifacts (optional) | Copy or adapt from [work-template/](work-template/) — e.g. `WORK-LEDGER.md`, semantic `daily-brief-template.md`, [BOUNDARY.md](work-template/BOUNDARY.md) excerpt. |
 | E | Reality Sprint doctrine (optional) | If the lane produces **plans or roadmaps**, link [reality-sprint-block.md](reality-sprint-block.md) from the territory README so operators can append a fixed execution wedge (primary/fallback lane, first contact with reality, failure checks, cut-in-half steps). |
+| F | `STATUS.md` (optional) | When the lane has **active state that changes frequently** (current chapter, last entry, next actions). Quick agent orientation without reading the full README. Not needed for dormant or low-cadence lanes. See [skeleton](#statusmd-skeleton) below. Example: [strategy-notebook/STATUS.md](work-strategy/strategy-notebook/STATUS.md). |
 
 ---
 
@@ -99,6 +100,29 @@ _Not:_ Record truth; not Voice knowledge; not a substitute for `users/<id>/self.
 
 ---
 
+## STATUS.md skeleton
+
+Copy into `STATUS.md` when adding step F. Operator-maintained — not auto-generated.
+
+```markdown
+# work-<id> — status
+
+> Operator-maintained. Not auto-generated.
+
+| Field | Value |
+|-------|--------|
+| **Project status** | `active` / `dormant` / `archived` |
+| **Active focus** | _current working edge_ |
+| **Last substantive entry** | _date + one-line description_ |
+
+## Next actions
+
+1. ...
+2. Refresh this file when active focus shifts.
+```
+
+---
+
 ## Governance reminder
 
 - **Stage, do not merge** gate candidates unless the companion approves and the operator runs the merge script.
@@ -106,6 +130,6 @@ _Not:_ Record truth; not Voice knowledge; not a substitute for `users/<id>/self.
 
 ---
 
-**Last updated:** 2026-04-04
+**Last updated:** 2026-04-16
 
 **Upstream mirror:** A template-adapted copy (paths tuned for the public repo) lives in [companion-self `docs/skill-work/work-template.md`](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-template.md) with [work-modules-history-principle.md](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-modules-history-principle.md) and [work-modules-sources-principle.md](https://github.com/rbtkhn/companion-self/blob/main/docs/skill-work/work-modules-sources-principle.md). Refresh via `template_diff.py` / merge slices when intentionally aligning.

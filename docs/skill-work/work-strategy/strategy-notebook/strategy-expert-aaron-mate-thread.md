@@ -131,16 +131,7 @@ When historical expert context artifacts exist for `aaron-mate` (per-month files
 <!-- strategy-expert-thread:start -->
 ## Segment 2 — Machine extraction (script-maintained)
 
-_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker. The HTML-comment block is replaced on each `thread` run._
-
-### Segment 2a — Recent transcript material
-
-_(Populated by `strategy_expert_corpus.py` / `strategy_thread.py` when transcript lines exist.)_
-
-### Segment 2b — Knot references
-
-_(Populated when knot index references this expert.)_
+_Auto-generated from `-transcript.md` + knot index. **Segment 1** (narrative journal) lives **above** the `<!-- strategy-expert-thread:start -->` marker._
 
 _(No transcript or knot material for extraction.)_
-
 <!-- strategy-expert-thread:end -->

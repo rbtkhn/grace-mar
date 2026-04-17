@@ -17,5 +17,3 @@ WORK only; not Record.
 
 
 
-## 2026-04-10
-- `YT | cold: (digest §B) Scott Ritter — hypothetical Hormuz seizure framed infeasible: long order-of-battle (Jordan–Iraq LOCs), **60–80k Marines + 120–200k Army** echelons // hook: [transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md](../transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md) quantitative table | path:docs/skill-work/work-strategy/transcript-analysis-haiphong-ritter-johnson-iran-2026-04.md | verify:operator-transcript-digest | thread:scott-ritter`

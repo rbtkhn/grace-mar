@@ -19,5 +19,6 @@ WORK only; not Record.
 - `X | cold: LEBANON+IRAN | Pape (@ProfessorPape, **2026-04-14** post + sectarian **map** graphic) — Israel in talks w/ **Christian & Sunni** Lebanese leadership, **Shia** leaders opposed; argues trajectory likelier **south Shia cleansing + civil war** than peace // hook: same cycle as **Apr 14** U.S.-mediated Israel–Lebanon talks (see wire row); **do not** collapse sectarian map claim w/ state readout w/o seam; pairs knot mercouris-mearsheimer-lebanon-split + §1e | https://x.com/ProfessorPape | verify:pin-exact-status-URL+screenshot-Cursor-assets-image-754d51cf+ap-lebanon-israel-2026-04-14-context | thread:robert-pape`
 
 
+
 ## 2026-04-12
 - `X | Pape (@ProfessorPape, RT Barnes): U.S. demand Iran surrender all enriched uranium — same bar as pre-war; asks why stronger Iran would accept now; labels U.S. position “Escalation Trap” (commitment ratchet). WSJ card: Vance-led U.S. team in Pakistan / Iran war live-update frame | https://x.com/ProfessorPape | verify:screenshot-ingest-status-id-unknown | thread:robert-pape`
