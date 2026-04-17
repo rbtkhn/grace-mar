@@ -108,6 +108,8 @@ _(Append below this line during the day.)_
 
 - batch-analysis | 2026-04-17 | Davis × Araghchi × Trump TS | **Tension-first:** IRI **signals** Hormuz **open** for ceasefire remainder vs **U.S. executive** **maximalist** reply **same day** — **sequenced bargaining**, not necessarily **monotonic** **Oman** **momentum** from §1f paste. **Davis** = restraint / **negotiation-window** analyst — routes to **Mearsheimer** (**incentives**) + **Mercouris** (**staging**) overlaps in [strategy-expert-daniel-davis-thread.md](strategy-expert-daniel-davis-thread.md); **does not** replace **§1h** / **§1e** primaries.
 
+- batch-analysis | 2026-04-17 | **Pool vs Truth Social (dual-register)** | **Tension-first:** Wire **pool** remarks **04-17** (e.g. **Moneycontrol** on **uranium** / “**nuclear dust**” / deal **optimism**) **≠** authenticated **Truth Social** **maximalist** embed — **do not** merge into one **U.S. position** in Judgment without **both** primaries + explicit **seam**; see [daily-brief-2026-04-17.md — strategy + verify](../daily-brief-2026-04-17.md#strategy-verify-2026-04-17).
+
 ## 2026-04-16
 
 - YT | cold: Mercouris 16 Apr 2026 (The Duran) — EU drone factories for Ukraine, Medvedev warns EU, Lavrov–Saudi FM, Munir in Tehran, Hormuz blockade & China naval logic // hook: full verbatim §2026-04-16 in strategy-expert-alexander-mercouris-transcript.md | https://www.youtube.com/watch?v=TBD-canonical-episode | verify:operator-ingest+aired-2026-04-16 | thread:alexander-mercouris | aired:2026-04-16

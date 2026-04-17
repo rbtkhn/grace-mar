@@ -170,6 +170,26 @@ _Filled per [daily-brief-iran-watch.md](daily-brief-iran-watch.md). **Priority s
 
 - **FM Araghchi (@araghchi)** — **2026-04-17** (quoted via **@DanielLDavis1 ~06:30**): In line with **Lebanon ceasefire**, passage for **all commercial vessels** through **Strait of Hormuz** declared **completely open** for the **remaining period of ceasefire**, on the **coordinated route** as already announced by **Ports and Maritime Organisation** of the Islamic Republic of Iran. **Verify:** original **@araghchi** post + **fa** / PMO if Hormuz mechanics are load-bearing. **Not** Voice knowledge until merged through gate; **pairs** §1e Trump TS block for **same-calendar-day** **bargaining** tension.
 
+<a id="strategy-verify-2026-04-17"></a>
+
+### strategy + verify — §1e / §1h cluster (2026-04-17)
+
+_Wire pass 2026-04-17 — complements §1e bullet and §1h Araghchi line; **pin** @araghchi + Truth Social **primary** URLs when available._
+
+| Sub-claim | Verdict | Notes |
+|-----------|---------|--------|
+| **IRI** — Hormuz passage framed as permitted during **ceasefire** under **Iranian military management** (not naive “open seas”) | **Supported (wire)** | **Gulf News** (2026-04-08): FM confirmed passage **for the next two weeks** under **Iranian military management** after Tehran accepted the **two-week** ceasefire. |
+| Exact **2026-04-17 @araghchi** text (Lebanon alignment, **PMO** coordinated route, “**remaining**” window) | **Unclear** | Same **family** as wire above; **pending** **X/MFA** primary for this date’s string. |
+| **Trump 2026-04-17** — **pool** remarks on **uranium handover** / “**nuclear dust**,” deal **optimism**, **Islamabad** | **Supported (wire)** | **Moneycontrol** (2026-04-17): White House remarks as reported — breakthrough framing, weekend talks, fragile ceasefire. |
+| **Truth Social ~09:57** **maximalist** block (no money, Lebanon carve-out, etc.) as **sole** same-day U.S. readout | **Unclear** | **Requires** Truth Social **primary**; **do not** collapse with **pool** until both pinned. |
+
+**Links (verify receipts):**
+
+- [Gulf News — Araghchi / Hormuz / two-week ceasefire context](https://gulfnews.com/world/mena/iran-strait-of-hormuz-will-remain-open-under-military-oversight-during-twoweek-ceasefire-what-araghchi-said-1.500499593) (2026-04-08)
+- [Moneycontrol — Trump pool remarks, uranium / deal / Islamabad](https://www.moneycontrol.com/world/trump-says-iran-to-give-up-enriched-uranium-signals-deal-very-soon-article-13891392.html) (2026-04-17)
+
+**Seam:** Same calendar day can show **deal-optimistic pool** copy **and** a **harder** social post — **dual-register** U.S. executive signaling until primaries **reconcile** or **time-order** is proven.
+
 ## 2. Headlines (ingested RSS)
 
 _Run RSS assembly or copy-forward from generator._
@@ -180,4 +200,4 @@ Populate **§3–§7** after full `generate_work_politics_daily_brief.py` run or
 
 ---
 
-_Partial file: **§1f strategic digest merged 2026-04-17**; **§1e / §1h** partially filled from **Davis / Araghchi / Trump TS** operator capture — pin **canonical URLs**; complete watches + RSS via standard brief pipeline._
+_Partial file: **§1f strategic digest merged 2026-04-17**; **§1e / §1h** partially filled from **Davis / Araghchi / Trump TS** operator capture + **strategy + verify** wire table under **§1h** — pin **@araghchi** + **Truth Social** primaries; complete watches + RSS via standard brief pipeline._
