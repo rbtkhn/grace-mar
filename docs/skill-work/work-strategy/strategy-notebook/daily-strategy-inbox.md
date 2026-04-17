@@ -80,9 +80,11 @@ When the operator captures **two or more** excerpts in one pass, **items stay se
 
 ---
 
-**Accumulator for:** 2026-04-16 _(system local date — maintain from clock when appending)_
+**Accumulator for:** 2026-04-18 _(system local date — maintain from clock when appending)_
 
 _(Append below this line during the day.)_
+
+`ROME | cold: Leo XIV Bamenda (16 Apr) — "woe" to those who manipulate religion / God's name for military, economic, or political gain (Fides); same calendar day Hegseth used Mark 3 / Pharisees framing re U.S. press (Pentagon briefing, Examiner) // hook: two legitimacy planes — do not collapse; woven `days.md` `## 2026-04-18` + [ROME-PASS rolling seam](../work-strategy-rome/ROME-PASS.md) | https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain | verify:fides-primary+washingtonexaminer | membrane:single | grep:LeoXIV+Hegseth-2026-04-16`
 
 ### Weave registry — 2026-04-14 (grep anchor)
 

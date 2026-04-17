@@ -30,6 +30,10 @@
 - **Separate** **mind–soul** **(moral** **/** **formation** **frame)** **from** **administrative** **Vatican** **(Curia,** **finance,** **diplomatic** **machinery)** **—** **both** **real;** **do** **not** **collapse** **them** **in** **one** **sentence** **without** **naming** **the** **shift.**
 - **Public** **/** **campaign** **copy** **that** **draws** **on** **civ-mem** **—** [civ-mem-draft-protocol.md](../work-politics/civ-mem-draft-protocol.md).
 
+### Rolling seam note — 2026-04-16 (filed 2026-04-18)
+
+**Holy See legitimacy vs. U.S. executive speech (same-day):** On **16 April 2026**, **Pope Leo XIV** delivered stark **“woe”** language in **Bamenda** against **instrumentalizing religion for military, economic, and political gain** — text and context in **[Agenzia Fides](https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain)** (local **Anglophone** crisis; **interfaith** peace efforts). **The same day**, reporting captured **Defense Secretary Hegseth** using **Gospel** **(Mark 3)** **imagery** to frame **U.S. media** as **Pharisees** in a **Pentagon** briefing on the **Iran** war — e.g. **[Washington Examiner](https://www.washingtonexaminer.com/policy/defense/4531681/hegseth-compare-journalist-pharisee-anti-media-rant/)**. **ROME-pass discipline:** treat these as **two legitimacy channels** — **Roman** **moral–pastoral** **authority** **speaking** **into** **a** **Cameroon** **situation**, and **U.S.** **civilian** **military** **leadership** **speaking** **into** **domestic** **press** **relations** **and** **war** **narrative** — that **may** **resonate** **in** **global** **public** **conscience** **on** **the** **same** **day** **without** **merging** **sitz im leben** **or** **proving** **intent** **across** **capitals**. **`@Pontifex`** **syndicates** **the** **Cameroon** **line**; **primary** **remains** **Fides** **/** **Vatican** **press** **per** **Source** **order** **above**.
+
 ---
 
 ## Output shape (minimum)
@@ -68,6 +72,7 @@ Drop **redacted** **or** **public-safe** **finished** **passes** **in** [notes/e
 
 ## Revision log
 
+- **2026-04-18** — **Rolling seam note** — Leo XIV **Bamenda** (16 Apr) × Hegseth **Pentagon** **press** **briefing** **(same** **day)** — **legitimacy** **planes** **(Holy** **See** **vs** **U.S.** **executive** **speech)**; **links** **to** **Fides** **+** **Examiner**.
 - **2026-04-03** — Skeleton created (pre-skill readiness per operator **A**).
 - **2026-04-01** — First **exemplar** linked (Tucker Carlson `GyYy-QmxttU` cross-read + Leo XIV Palm Sunday homily).
 - **2026-04-01** — Second **exemplar** — wire-first **Iran** / **Middle East** peace cluster (Mar **2026**).

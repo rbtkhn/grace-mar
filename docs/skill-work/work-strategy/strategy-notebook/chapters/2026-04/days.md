@@ -658,3 +658,39 @@ Barnes says both sides face material clocks and the question is which clock runs
   - **Hungary / Tisza execution gate:** Corroborate **08:00 UTC** text drop, **11:45** ratification, **no** energy-import carve-outs, **Orbán CC** motion dismissed, **first COREPER** vote timing — if **two or more** miss, keep **“veto collapse → aid velocity”** out of **Judgment** for this arc.
   - **G7 SPR / sanctions text gate:** Match published **G7 finance communiqué** + member **SPR** lines to **45M bbl phased** split and **secondary-sanctions** language within **±48h** of digest **14:00 UTC** anchor — else no **Signal** lead on “multilateral inventory response”; **Links** only to what published.
   - **Compression triad gate (Oman + MoD tempo + PPI):** Need **≥2 of 3** independent receipts (**MoD** or **OSINT** for **~30% / 72h** sortie framing; **White House + IRI MFA** on **Sunday Oman technical** scope; **BLS PPI** **+0.3% m/m** + **energy +1.8%**) before folding digest **§13 “physics / barrels / arithmetic”** into knot-grade **Judgment**; if **two fail**, keep digest closure in **§1f quarantine** — still OK to cite **IMF/AP** pass-through from **04-15** brief **without** chaining unverified **Kerch / depot** counts.
+
+## 2026-04-17
+
+### Signal
+
+- **`strategy + verify` (two seams, cite-grade):** Closed **Macgregor × WSJ** and **Parsi × Daily Beast** claims from the **2026-04-16** commentator ingest / **`thread:`** harvest — not a full weave, a **verification stub** for notebook **Links** and **Judgment** hygiene.
+- **Douglas Macgregor (X → WSJ chain):** *Supported* — **WSJ** (2026-04-15, Terlep / Weisgerber) reporting **preliminary talks** between senior defense officials and **GM, Ford**, **GE Aerospace**, **Oshkosh** about **redirecting capacity** toward **weapons / defense manufacturing** amid depleted stocks (Ukraine / Iran context). **Downstream summary + WSJ URL:** [Independent](https://www.independent.co.uk/news/world/americas/us-politics/pentagon-gm-ford-ge-weapons-iran-war-b2958650.html). Macgregor’s **“BREAKING”** framing is **hotter** than “preliminary discussions”; core **institutional fact** matches reporting.
+- **Trita Parsi (X → Daily Beast):** *Supported as attributed quote* — [Daily Beast](https://www.thedailybeast.com/trump-humiliated-as-ships-defy-us-navy-blockade/) (2026-04-14, updated same day) quotes Parsi on a **briefing call**: Iran could respond by **closing the Strait of Aden**; **“12 percent of global oil flow”** + **dramatic** price effects — **expert scenario**, not an independent energy-stat table in the article.
+
+### Judgment
+
+- **Plane tags:** **WSJ national-security** (industrial mobilization) vs **Daily Beast** (Hormuz blockade story + **Parsi** **response options**). Do **not** merge into one “oil math” — **Hormuz** throughput language in the same TDB piece (~20% “usually” through Hormuz) is a **different line** than Parsi’s **Aden / 12%** scenario.
+- **Epistemic:** Both passes are **WORK** — **Links-grade** for **what was published**; **12%** remains **hypothesis-grade** until **EIA / BP / transit** primaries if Judgment needs a number anchor.
+
+### Links
+
+- [The Wall Street Journal — Pentagon approaches automakers / manufacturers (national security)](https://www.wsj.com/politics/national-security/pentagon-approaches-automakers-manufacturers-to-boost-weapons-production-19538557) — primary (paywalled); cited via [Independent summary](https://www.independent.co.uk/news/world/americas/us-politics/pentagon-gm-ford-ge-weapons-iran-war-b2958650.html)
+- [The Daily Beast — Trump Humiliated as Ships Defy U.S. Navy Blockade](https://www.thedailybeast.com/trump-humiliated-as-ships-defy-us-navy-blockade/) — **Parsi** quotes (Strait of Aden, 12% flow) **on Daily Beast briefing call**
+- Prior verify context: [2026-04-16](#2026-04-16) (Pape knot + Grok gates); commentator ingest lines in [daily-strategy-inbox.md](../../daily-strategy-inbox.md) when pasted
+
+### Open
+
+- **Optional tier-2:** Cross-check **“12% global oil flow”** (Aden scenario) against **EIA / BP Statistical Review / IMF** transit definitions — only if a knot or **§1d–§1h** brief line needs a **number** anchor.
+- **WSJ:** Pull **direct quotes** from the paywalled piece when the operator has access — stub above relies on **Independent** echo for open-web discipline.
+
+## 2026-04-18
+
+### Signal
+
+On **2026-04-16**, **Pope Leo XIV** told religious leaders in **Bamenda (Cameroon)** that **“woe”** awaits those who **manipulate religion and the very name of God for their own military, economic, or political gain**, dragging the sacred **“into darkness and filth”** — **Fides** situates the line in the **Anglophone crisis** and a **Christian–Muslim** **peace movement**, not in Washington. The **same calendar day**, **Secretary Hegseth** used **Mark 3 / Pharisees** language to criticize **U.S. press** coverage of the **Iran** war at a **Pentagon** briefing — **Washington Examiner** and other outlets quoted him directly. **Notebook rule:** **do not collapse** the **Holy See** **legitimacy** **plane** into the **U.S. executive / DoD** **speech** **plane** as a single narrative without **tags** — **parallel** **channels** can **rhyme** for observers **without** proving **Vatican** **intent** toward **the** **Pentagon**.
+
+### Links
+
+- [Fides — Bamenda, 16 Apr 2026 — “woe to those who manipulate religion…”](https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain)
+- [Washington Examiner — Hegseth, Pharisees / press, 16 Apr 2026](https://www.washingtonexaminer.com/policy/defense/4531681/hegseth-compare-journalist-pharisee-anti-media-rant/)
+- **ROME pass pointer:** [ROME-PASS.md](../../../work-strategy-rome/ROME-PASS.md) § **Rolling seam note — 2026-04-16**
