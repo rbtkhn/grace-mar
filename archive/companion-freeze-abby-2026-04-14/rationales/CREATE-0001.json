@@ -1,0 +1,9 @@
+{
+  "artifact_name": "CREATE-0001",
+  "task_type": "visual interpretation from text",
+  "why_good": "Rich visual interpretation of a text-only Chinese folk tale (Nine-Colored Deer / 九色鹿). Child read the story in Chinese ('a word book, not a picture book, so we have to imagine it ourselves') and produced an original visual: deer on mountaintop with rainbow scarf (her interpretation of 'nine colors'), hearts (kindness), halo (sacredness), and detailed landscape. Demonstrates cross-language comprehension (Chinese text to English art context) and interpretive composition rather than copying.",
+  "transferable_pattern": "Text-to-visual interpretation across languages: reading a narrative in one language, internalizing its symbolic content, and producing an original visual in a different cultural-linguistic context. The interpretive choices (rainbow = nine colors, hearts = kindness, halo = sacredness) show symbolic reasoning, not literal illustration.",
+  "tradeoffs": "The visual is rich but we cannot assess how much of the Chinese text was independently read vs heard/co-read. The cultural-identity signal (deliberately choosing a Chinese story) is strong but separate from the capability claim.",
+  "review_criteria": "Observed artifact (evidence tier 4). Original drawing with child commentary confirming subject, intent, and source story. Originality score 4/5, elaboration 4/5.",
+  "export_class": "capability"
+}

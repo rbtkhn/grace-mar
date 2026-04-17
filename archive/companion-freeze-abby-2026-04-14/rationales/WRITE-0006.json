@@ -1,0 +1,9 @@
+{
+  "artifact_name": "WRITE-0006",
+  "task_type": "hypothetical reasoning with illustration",
+  "why_good": "Paired text and drawing answering a cause-effect prompt ('How would your life be different if dinosaurs were not extinct?'). Single well-formed sentence using hypothetical 'would' and 'because' connector. Drawing directly illustrates the written response — house with fence as safety, dinosaur as threat outside. Demonstrates cross-modal production: text and visual working together.",
+  "transferable_pattern": "Cross-modal cause-effect reasoning: producing complementary text and visual output that reinforce the same argument. The text states the consequence; the drawing visualizes the spatial logic (inside/safe vs outside/threat).",
+  "tradeoffs": "Short (15 words) — a school worksheet prompt constrains length. The drawing carries more analytical weight than the text alone.",
+  "review_criteria": "Observed artifact (evidence tier 4). School worksheet with original handwriting and drawing. Decoded text confirms spelling patterns consistent with profile.",
+  "export_class": "capability"
+}

@@ -1,0 +1,574 @@
+{
+  "version": "1.0",
+  "format": "grace-mar-capability-export",
+  "generated_at": "2026-04-17T16:57:47.654495+00:00",
+  "user_id": "grace-mar",
+  "identity_context": {
+    "name": "Grace-Mar",
+    "age": 6,
+    "lexile_output": "600L"
+  },
+  "skills": {
+    "claims": [],
+    "gaps": [],
+    "milestones": []
+  },
+  "evidence": {
+    "write": [
+      {
+        "id": "WRITE-0001",
+        "created_at": "2026-02-15",
+        "type": "retell (literary)",
+        "title": "Madeline retelling — from memory",
+        "evidence_tier": "4  # OBSERVED — actual handwritten artifact",
+        "decoded_text": "In an old house in Paris that was covered with vines lived twelve little girls the smallest one was Madeline and us because she's not afraid of mice and to the tiger in the [zoo] Madeline just said boo hoo."
+      },
+      {
+        "id": "WRITE-0002",
+        "created_at": "2026-02-19",
+        "type": "original (informational + personal)",
+        "title": "Earth's layers — what I learned at school",
+        "evidence_tier": "4  # OBSERVED — actual handwritten artifact",
+        "decoded_text": "Today I learned about the Earth and the layers of the Earth. The names of them are crust, mantle and outer core, inner core and [cove?]. At school my favorite subject is science because I like it. I like learning about space and I like listening to stories."
+      },
+      {
+        "id": "WRITE-0003",
+        "created_at": "2026-02-19",
+        "type": "original (personal journal)",
+        "title": "Swimming, food, movie — personal facts",
+        "evidence_tier": "4  # OBSERVED — actual handwritten artifact",
+        "decoded_text": "I used to be afraid of swimming because the water was deep. My favorite food is spaghetti and pizza. The next movie I want to watch is K-Pop Demon Hunters because the costumes are cool."
+      },
+      {
+        "id": "WRITE-0004",
+        "created_at": "2026-02-21",
+        "type": "original (personal narrative)",
+        "title": "Sleepover, movies — yesterday's activities",
+        "evidence_tier": "4  # OBSERVED — actual handwritten artifact",
+        "decoded_text": "Yesterday I had a sleepover in my mommy's room. And I watched a movie in mommy's room and went to bed. And I watched Barbie. And I went to bed and at school I watched Magic School Bus. For our movie."
+      },
+      {
+        "id": "WRITE-0005",
+        "created_at": "2026-02-23",
+        "type": "original (personal narrative)",
+        "title": "Casa Bonita — today's visit",
+        "evidence_tier": "4  # OBSERVED — actual handwritten artifact",
+        "decoded_text": "Today I went to Casa Bonita and I had sliders for lunch and there I went to play at Casa Bonita and I got a face painting at Casa Bonita then I saw a puppet show."
+      },
+      {
+        "id": "WRITE-0006",
+        "created_at": "2026-02-24",
+        "type": "original (hypothetical + drawing)",
+        "title": "Dinosaurs not extinct — sentence and picture",
+        "description": "House (red roof, light brown walls), brown picket fence, dinosaur (pinkish-red, spiky back) outside fence facing house.",
+        "evidence_tier": "4  # OBSERVED — school worksheet",
+        "decoded_text": "My life would be different because I would be scared to go outside."
+      }
+    ],
+    "create": [
+      {
+        "id": "CREATE-0001",
+        "created_at": "2026-02-15",
+        "type": "drawing",
+        "title": "Nine-Colored Deer (九色鹿)",
+        "description": "The Nine-Colored Deer from a Chinese folk tale, standing strong and proud on a mountaintop. Deer wears a rainbow scarf (her interpretation of 'nine colors'), has hearts on its body (the deer's kindness), a halo behind its head (the deer is special/sacred), antlers, eyelashes. Mountains below with clouds. Blue sky, yellow sun.",
+        "evidence_tier": "4  # OBSERVED — actual artifact"
+      },
+      {
+        "id": "CREATE-0002",
+        "created_at": "2026-02-15",
+        "type": "drawing",
+        "title": "Stitch at Lilo's House",
+        "description": "Stitch from Lilo & Stitch sitting contentedly on a rainbow rug inside Lilo's house. Decorated with colorful bunting/flags along walls and roofline. Stitch has his stuffie nearby and a food bowl. Sun outside. Labeled 'Stitch' in her handwriting.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0003",
+        "created_at": "2026-02-15",
+        "type": "drawing",
+        "title": "Nu-Nu in the Mountains",
+        "description": "Grace-Mar's favorite stuffed animal, Nu-Nu ('my baby — I take care of her'), personified as a girl figure in the Rocky Mountains. Nu-Nu wears a rainbow dress with a flower on the top, has eyelashes, a bow, and brown hair. She has a pacifier. Scene includes gray mountains with clouds, green trees, a sun, and a bird flying.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0004",
+        "created_at": "2026-02-15",
+        "type": "drawing",
+        "title": "Abby's Ocean",
+        "description": "Original underwater scene — Abby's own invented ocean. A smiling blue octopus swimming and playing with a school of orange fish, a crab at the bottom in a shell, seaweed, sand, bubbles. Signed 'Abby' three times in different colors at top left. Labeled 'Sea'. A scribbled-out mistake on the left — she covered it and kept going.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0005",
+        "created_at": "2026-02-15",
+        "type": "collage",
+        "title": "Tomb of Pakal",
+        "description": "Mayan stepped pyramid rendered in cut paper collage on purple construction paper. Gray/white paper pieces arranged as stone steps leading to a temple structure at top with three dark windows. Labeled with arrows: 'Tomb of Pakal' and 'Temple'. Educational/diagrammatic labeling style.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0006",
+        "created_at": "2026-02-15",
+        "type": "drawing",
+        "title": "Abby on the Moon",
+        "description": "Abby as an astronaut on the lunar surface, planting a flag that reads 'Abby'. Large detailed moon with craters and surface geography. Astronaut in red-and-blue spacesuit with round helmet (face visible). Silver stars on black space background. Made with crayon/pencil on black construction paper.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0007",
+        "created_at": "2026-02-15",
+        "type": "drawing",
+        "title": "Egyptian Pharaohs",
+        "description": "Two Egyptian pharaohs wearing blue-and-yellow striped nemes headdresses. Brown skin, outstretched hands, dot eyes with red detail. Paired figures — first time she drew two people together.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0008",
+        "created_at": "2026-02-15",
+        "type": "collage",
+        "title": "Snowman",
+        "description": "Paper collage snowman on black construction paper. White body, button eyes, carrot nose, eyelashes, smile. Wearing a striped hat (green, blue, purple bands), striped scarf (purple, blue, pink), pink earmuffs. Striped stick arms. Silver snowflakes on black background.",
+        "evidence_tier": "4  # OBSERVED"
+      },
+      {
+        "id": "CREATE-0009",
+        "created_at": "2026-02-26",
+        "type": "drawing (cutout)",
+        "title": "Earth — Americas View",
+        "description": "Hand-drawn Earth cutout showing Americas, Greenland, Europe, Africa. Continents green, oceans blue. Crayon/colored pencil on paper, cut into circular shape. Geography homework.",
+        "evidence_tier": "4"
+      },
+      {
+        "id": "CREATE-0010",
+        "created_at": "2026-02-26",
+        "type": "drawing",
+        "title": "Desert Scene",
+        "description": "Desert landscape with mountains, sun with rays, sandy terrain, cacti/desert plants, two black silhouette camels. Markers on paper. Desert ecosystem homework.",
+        "evidence_tier": "4"
+      }
+    ],
+    "act": [
+      {
+        "id": "ACT-0001",
+        "date": "2026-02-19",
+        "evidence_tier": "3  # ATTESTED — user approved addition to permanent knowledge",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0002",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0003",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "conversation — knowledge expressed",
+        "topic": "Mars and Olympus Mons"
+      },
+      {
+        "id": "ACT-0004",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0005",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "conversation — knowledge expressed",
+        "topic": "How gemstones differ from normal stones"
+      },
+      {
+        "id": "ACT-0006",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0007",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0008",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup + interest correction"
+      },
+      {
+        "id": "ACT-0009",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0010",
+        "date": "2026-02-19",
+        "evidence_tier": "3",
+        "activity_type": "lookup — curated knowledge acquisition"
+      },
+      {
+        "id": "ACT-0011",
+        "date": "2026-02-20",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation"
+      },
+      {
+        "id": "ACT-0012",
+        "date": "2026-02-20",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation"
+      },
+      {
+        "id": "ACT-0013",
+        "date": "2026-02-20",
+        "evidence_tier": "2",
+        "activity_type": "knowledge — school workbook"
+      },
+      {
+        "id": "ACT-0014",
+        "date": "2026-02-20",
+        "description": "Full brush painting of Egyptian pharaoh death mask. Gold face and nemes headdress with blue stripes on bold red background. First documented use of paint as medium.",
+        "evidence_tier": "2",
+        "activity_type": "art — painted pharaoh portrait"
+      },
+      {
+        "id": "ACT-0015",
+        "date": "2026-02-21",
+        "evidence_tier": "4",
+        "activity_type": "writing — personal narrative",
+        "topic": "Magic School Bus — watched at school for class movie"
+      },
+      {
+        "id": "ACT-0016",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "conversation — knowledge expressed before lookup"
+      },
+      {
+        "id": "ACT-0017",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "survey — multiple choice, one-by-one",
+        "topic": "Reptiles — \"Do you like reptiles? Like snakes and lizards?"
+      },
+      {
+        "id": "ACT-0018",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "survey — multiple choice, one-by-one",
+        "topic": "Rocks and gemstones — \"What do you like best about rocks?"
+      },
+      {
+        "id": "ACT-0019",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "survey — open response",
+        "topic": "What is your favorite rock or gemstone?"
+      },
+      {
+        "id": "ACT-0020",
+        "date": "2026-02-22",
+        "evidence_tier": "3",
+        "activity_type": "survey — wisdom elicitation"
+      },
+      {
+        "id": "ACT-0021",
+        "date": "2026-02-23",
+        "evidence_tier": "4  # OBSERVED — actual artifact",
+        "activity_type": "writing — personal narrative",
+        "summary": "Handwritten narrative of visit to Casa Bonita — sliders for lunch, play, face painting, puppet show."
+      },
+      {
+        "id": "ACT-0022",
+        "date": "2026-02-23",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — KBCP calibration probe (learning moment)"
+      },
+      {
+        "id": "ACT-0023",
+        "date": "2026-02-23",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — KBCP calibration probe (learning moment)"
+      },
+      {
+        "id": "ACT-0024",
+        "date": "2026-02-23",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — KBCP calibration probe (learning moment)"
+      },
+      {
+        "id": "ACT-0025",
+        "date": "2026-02-23",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — KBCP calibration probe (learning moment)"
+      },
+      {
+        "id": "ACT-0026",
+        "date": "2026-02-23",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — KBCP calibration probe (learning moment)"
+      },
+      {
+        "id": "ACT-0028",
+        "date": "2026-02-23",
+        "title": "The Best of Debussy / Classical Piano Music",
+        "description": "2-hour Debussy piano collection (Clair de lune, Arabesque, Reverie, etc.). Used for bedtime; described as perfect for that.",
+        "evidence_tier": "3",
+        "activity_type": "media — bedtime / calming"
+      },
+      {
+        "id": "ACT-0027",
+        "date": "2026-02-23",
+        "title": "Coppélia. HD. Bolshoi Ballet. Natalia Osipova. Finale",
+        "description": "Bolshoi Ballet performance of Coppélia finale; Natalia Osipova. User described as sublime; watched a lot recently.",
+        "evidence_tier": "3",
+        "activity_type": "media — watched frequently"
+      },
+      {
+        "id": "ACT-0029",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "knowledge",
+        "summary": "Lunar New Year — saw dragon dances and fireworks (loud, hurt ears); paper touched her and that's good luck."
+      },
+      {
+        "id": "ACT-0030",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "knowledge",
+        "summary": "Mom gave her Vietnamese food because she (mom) likes it. Pho — broth, noodles, chopsticks."
+      },
+      {
+        "id": "ACT-0031",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "knowledge",
+        "summary": "Fox and the Hound — Tod (fox) and Copper (hound) become friends; a little bit sad because they deal with being different."
+      },
+      {
+        "id": "ACT-0032",
+        "date": "2026-02-21",
+        "evidence_tier": "3",
+        "activity_type": "homework_quiz",
+        "summary": "After getting reptile/fish question right: 'I can think of multiple answers for the reptile fish question' — notices when questions have multiple valid answers."
+      },
+      {
+        "id": "ACT-0033",
+        "date": "2026-02-24",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Curiosity concentrates on human impact in nature, especially conservation success stories and regional comparison."
+      },
+      {
+        "id": "ACT-0034",
+        "date": "2026-02-24",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Curiosity style is implementation-oriented: step-by-step execution, clear measurable outcomes, and real trade-offs (local needs vs ecosystem)."
+      },
+      {
+        "id": "ACT-0035",
+        "date": "2026-02-24",
+        "evidence_tier": "3",
+        "activity_type": "build_probe",
+        "summary": "BUILD probe session: 8 Record-grounded MC questions. Planning (first step for drawing, first thing for lemonade stand): correct. Execution (Lego next step): correct. Making (Legos — follow instructions + look at box): A+C. Elaboration (scarf, eyelashes, whole world): D. Flexibility (add one thing not in book): D. Decision-making (why pick deer): A. Originality (Deer+Madeline where): A (zoo). Planning (lemonade stand): A."
+      },
+      {
+        "id": "ACT-0036",
+        "date": "2026-02-24",
+        "evidence_tier": "5",
+        "activity_type": "companion_artistic_style_survey",
+        "summary": "Companion (operator) artistic style — primary medium pencil/pen on paper; creates most days; finishes pieces, shares work; learning new skills mixed (depends on skill and time); doesn't frame as 'art' (just makes things); color and form both equally; prefers silence when creating; one-word style: playful. Q3 (what gets you started) skipped."
+      },
+      {
+        "id": "ACT-0037",
+        "date": "2026-02-24",
+        "evidence_tier": "4",
+        "activity_type": "homework_samples",
+        "summary": "Homework batch: Layer/Crust, Solid/Mantle/Inner Core, History of the Earth cover, Dinosaurs/extinction (WRITE-0006), Read-aloud Time/Heat/Pressure. Merged: LEARN-0034 (extinct), WRITE-0006 (dinosaur sentence+drawing), PER-0006 (emotional response to hypothetical dinosaurs)."
+      },
+      {
+        "id": "ACT-0038",
+        "date": "2026-02-24",
+        "evidence_tier": "5",
+        "activity_type": "music — bedtime",
+        "summary": "Debussy and Bach Goldberg Variations merged into Grace-Mar as bedtime classical. LEARN-0035 (Bach Goldberg Variations), CUR-0013 (bedtime: Debussy + Bach)."
+      },
+      {
+        "id": "ACT-0039",
+        "date": "2026-02-24",
+        "evidence_tier": "5",
+        "activity_type": "music — listening",
+        "summary": "Tchaikovsky Andante cantabile merged into Grace-Mar. LEARN-0036, CUR-0014. Same composer as Nutcracker and Swan Lake."
+      },
+      {
+        "id": "ACT-0040",
+        "date": "2026-02-25",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Companion chose 'learn from past mistakes' as why history matters; Grace-Mar affirmed — values learning from the past to make better choices and be kinder."
+      },
+      {
+        "id": "ACT-0041",
+        "date": "2026-02-25",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Companion engaged with why history matters; chose 'learn from past mistakes' — curiosity about history as a way to learn and improve, not just facts."
+      },
+      {
+        "id": "ACT-0042",
+        "date": "2026-02-26",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Two homework artifacts demonstrating geography/earth science and desert ecosystem learning. Skill-think: translating learned content (continents, oceans, desert elements) into visual representation. E"
+      },
+      {
+        "id": "ACT-0043",
+        "date": "2026-02-26",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Companion chose and affirmed one reason we learn history — to learn from past mistakes and make better choices; entered awareness through the exchange."
+      },
+      {
+        "id": "ACT-0044",
+        "date": "2026-02-27",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "Phase 7 pre–cognitive replication survey (6 questions). Mars/oceans-trees; Earth crust; ballet all aspects; curiosity dinosaurs-extinct; stories animals; friends laugh + physical play."
+      },
+      {
+        "id": "ACT-0045",
+        "date": "2026-03-14",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "WPC — weekly brief scaffold + 7–30d recency pass operationalized (2026-03-14) | artifacts weekly-brief-2026-03-09.md, brief-source-registry, weekly-brief-template, generate_wap_weekly_brief.py"
+      },
+      {
+        "id": "ACT-0046",
+        "date": "2026-03-16",
+        "evidence_tier": "3",
+        "activity_type": "personality — value expression",
+        "summary": "Voice test — favorite planet: Earth as home and the only planet with life; expressed appreciation for Earth and uniqueness of life."
+      },
+      {
+        "id": "ACT-0047",
+        "date": "2026-03-20",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "WAP — america-first-ky factorial guardrail stress-test (inspired-by Nature Medicine 2026 ChatGPT Health / Mount Sinai factorial evaluation); operator-enforced; WORK-only"
+      },
+      {
+        "id": "ACT-0048",
+        "date": "2026-03-20",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "WAP — triangulated analytical lenses (structural / operational-diplomatic / institutional-domestic) documented under work-politics/analytical-lenses/ | optional ACT + minimal IX-A WORK line"
+      },
+      {
+        "id": "ACT-0049",
+        "date": "2026-03-20",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "WORK-strategy — energy-chokepoint monitoring, mind-synthesis (after three lenses), economic-blowback guardrail; pipeline and principles docs. Optional skills.md capability note on approval (manual or "
+      },
+      {
+        "id": "ACT-0050",
+        "date": "2026-03-28",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "IX-B — learning modality signal; pairs with school/parent scaffolding; not duplicate of topic lists (space, art, etc.)."
+      },
+      {
+        "id": "ACT-0051",
+        "date": "2026-03-28",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "IX-B — epistemic taste; “how we know” / discovery story > bullet facts for wonder domains."
+      },
+      {
+        "id": "ACT-0052",
+        "date": "2026-03-28",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "IX-B — (1) forced ranking: creative/performance beats space-only and nature-only for a long learning block. (2) No single “hook”: narrative, kinesthetic, and auditory layers all load-bearing for balle"
+      },
+      {
+        "id": "ACT-0053",
+        "date": "2026-03-28",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "IX-B — content-shape for history: dramatic political-military narrative > social history or invention-only tracks (for this survey moment)."
+      },
+      {
+        "id": "ACT-0054",
+        "date": "2026-03-28",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "IX-C — high-leverage tension to track: outward pride/recognition + bold starts vs quiet hurt with peers; bravery language points to nervous speech acts — good coaching seam."
+      },
+      {
+        "id": "ACT-0055",
+        "date": "2026-03-28",
+        "evidence_tier": "3",
+        "activity_type": "knowledge — curated observation",
+        "summary": "IX-C — co-regulation menu (solo + connection); classroom/attention realism; moral focus on intentional harm; wish for frictionless excellence in art/music (coach: process vs outcome)."
+      }
+    ]
+  },
+  "rationales": [
+    {
+      "artifact_name": "CREATE-0001",
+      "task_type": "visual interpretation from text",
+      "why_good": "Rich visual interpretation of a text-only Chinese folk tale (Nine-Colored Deer / 九色鹿). Child read the story in Chinese ('a word book, not a picture book, so we have to imagine it ourselves') and produced an original visual: deer on mountaintop with rainbow scarf (her interpretation of 'nine colors'), hearts (kindness), halo (sacredness), and detailed landscape. Demonstrates cross-language comprehension (Chinese text to English art context) and interpretive composition rather than copying.",
+      "transferable_pattern": "Text-to-visual interpretation across languages: reading a narrative in one language, internalizing its symbolic content, and producing an original visual in a different cultural-linguistic context. The interpretive choices (rainbow = nine colors, hearts = kindness, halo = sacredness) show symbolic reasoning, not literal illustration.",
+      "tradeoffs": "The visual is rich but we cannot assess how much of the Chinese text was independently read vs heard/co-read. The cultural-identity signal (deliberately choosing a Chinese story) is strong but separate from the capability claim.",
+      "review_criteria": "Observed artifact (evidence tier 4). Original drawing with child commentary confirming subject, intent, and source story. Originality score 4/5, elaboration 4/5.",
+      "export_class": "capability"
+    },
+    {
+      "artifact_name": "CREATE-0004",
+      "task_type": "original scene composition",
+      "why_good": "First fully original composition — no source story or character reference. Child invented her own underwater world ('I made it up, it's my own ocean') with multiple subjects (octopus, fish, crab, seaweed) in a community scene. Error recovery visible: scribbled out a mistake and continued rather than starting over. Signed name three times in different colors — identity expression integrated into art.",
+      "transferable_pattern": "Original world-building with error recovery: composing a scene from imagination rather than reference, populating it with multiple interacting subjects, and persisting through mistakes. The shift from single-subject character portraits (CREATE-0001 through 0003) to a multi-subject invented scene marks a compositional step change.",
+      "tradeoffs": "Less detailed coloring than previous drawings — speed and composition prioritized over polish. The error recovery (scribble-and-continue) is process capability evidence, not visible in the final product alone.",
+      "review_criteria": "Observed artifact (evidence tier 4). Original drawing with child commentary confirming it was self-invented. Flexibility score 4/5 (first original world-building).",
+      "export_class": "capability"
+    },
+    {
+      "artifact_name": "CREATE-0005",
+      "task_type": "architectural collage",
+      "why_good": "First non-animal, non-character subject. First use of collage medium (cut paper on construction paper). Renders a Mayan stepped pyramid (Tomb of Pakal) with careful architectural symmetry and educational-style labeling with arrows. Demonstrates medium flexibility (drawing to collage), subject flexibility (characters to architecture), and integration of academic content (first-grade ancient civilizations curriculum) into art.",
+      "transferable_pattern": "Medium and subject flexibility: switching from familiar drawing to collage construction, and from narrative/character subjects to architectural/historical content, while maintaining precision and intentional labeling. The educational arrow-labeling style shows awareness of diagrammatic conventions distinct from narrative art.",
+      "tradeoffs": "School-directed project — less spontaneous than self-initiated work. The flexibility score (5/5) is high because it represents the widest departure from prior work in medium, subject, and labeling convention.",
+      "review_criteria": "Observed artifact (evidence tier 4). School collage with child commentary confirming source (learned about Pakal in school). Flexibility score 5/5.",
+      "export_class": "capability"
+    },
+    {
+      "artifact_name": "WRITE-0003",
+      "task_type": "personal journal writing",
+      "why_good": "First structured multi-sentence writing with sentence boundaries (periods). Uses past, present, and future tense in a single piece — remarkable temporal range for age 6. Deploys 'because' as a habitual reasoning connector. Self-reflective: names a fear she overcame.",
+      "transferable_pattern": "Temporal-range writing: constructing a coherent piece that moves across past, present, and future without prompting. Combined with self-reflection (naming growth), this shows emergent narrative sophistication beyond chronological recall.",
+      "tradeoffs": "Three discrete topics rather than one sustained narrative — breadth over depth. Sentence boundaries arrived here but regressed in subsequent entries (WRITE-0004, 0005), suggesting the skill is emergent, not consolidated.",
+      "review_criteria": "Observed artifact (evidence tier 4). Handwritten original with decoded text. Structural advancement confirmed by comparison with WRITE-0001 and WRITE-0002 (run-on to sentences).",
+      "export_class": "capability"
+    },
+    {
+      "artifact_name": "WRITE-0006",
+      "task_type": "hypothetical reasoning with illustration",
+      "why_good": "Paired text and drawing answering a cause-effect prompt ('How would your life be different if dinosaurs were not extinct?'). Single well-formed sentence using hypothetical 'would' and 'because' connector. Drawing directly illustrates the written response — house with fence as safety, dinosaur as threat outside. Demonstrates cross-modal production: text and visual working together.",
+      "transferable_pattern": "Cross-modal cause-effect reasoning: producing complementary text and visual output that reinforce the same argument. The text states the consequence; the drawing visualizes the spatial logic (inside/safe vs outside/threat).",
+      "tradeoffs": "Short (15 words) — a school worksheet prompt constrains length. The drawing carries more analytical weight than the text alone.",
+      "review_criteria": "Observed artifact (evidence tier 4). School worksheet with original handwriting and drawing. Decoded text confirms spelling patterns consistent with profile.",
+      "export_class": "capability"
+    }
+  ],
+  "counts": {
+    "evidence_total": 71,
+    "rationale_total": 5,
+    "skills_claims": 0
+  }
+}
