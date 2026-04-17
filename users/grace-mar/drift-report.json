@@ -1,15 +1,1 @@
-{
-  "fork_id": "grace-mar",
-  "computed_at": "2026-03-23T03:26:27Z",
-  "drift_score": 0.0025,
-  "components": {
-    "identity_drift": 0.0,
-    "interest_drift": 0.0,
-    "skill_drift": 0.0,
-    "library_drift": 0.0,
-    "stale_merge_proxy": 0.0125
-  },
-  "signals": [],
-  "status": "expected_evolution",
-  "pending_candidates": 0
-}
+{}

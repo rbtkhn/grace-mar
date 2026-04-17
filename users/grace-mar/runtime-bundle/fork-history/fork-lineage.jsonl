@@ -1,6 +1,0 @@
-{"event": "merge_applied", "merge_receipt_id": "MR-0009", "phase_before": "interact", "phase_after": "interact", "ts": "2026-03-28T23:53:50Z"}
-{"event": "merge_applied", "merge_receipt_id": "MR-0010", "phase_before": "interact", "phase_after": "interact", "ts": "2026-03-28T23:55:08Z"}
-{"event": "merge_applied", "merge_receipt_id": "MR-0011", "phase_before": "interact", "phase_after": "interact", "ts": "2026-03-28T23:59:53Z"}
-{"event": "merge_applied", "merge_receipt_id": "MR-0012", "phase_before": "interact", "phase_after": "interact", "ts": "2026-03-29T00:01:50Z"}
-{"event": "merge_applied", "merge_receipt_id": "MR-0013", "phase_before": "interact", "phase_after": "interact", "ts": "2026-03-29T00:02:49Z"}
-{"event": "merge_applied", "merge_receipt_id": "MR-0014", "phase_before": "interact", "phase_after": "interact", "ts": "2026-03-29T00:03:50Z"}
