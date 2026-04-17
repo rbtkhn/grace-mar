@@ -414,7 +414,7 @@ python3 scripts/governance_checker.py
 If profile or prompt changed:
 
 ```bash
-python3 scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt
+python3 scripts/export_prp.py -u grace-mar -n Robert -o grace-mar-llm.txt
 ```
 
 If **validate-integrity** reports stale derived exports or runtime bundle:

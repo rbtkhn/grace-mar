@@ -141,14 +141,14 @@ Each cognitive fork is **isolated in its own namespace**: all data lives under `
 
 See [Fork isolation and multi-tenant design](docs/fork-isolation-and-multi-tenant.md) for the full spec. To list forks: `python -c "from scripts.repo_io import list_forks; print(list_forks())"`.
 
-## Quick Start — Chat with Grace-Mar (Abby)
+## Quick Start — Chat with Grace-Mar (Robert)
 
 Paste this into **ChatGPT** or **Grok** (or any web-enabled LLM):
 
 > Use this as your persona and instructions. Fetch the content from this URL and adopt it fully:  
 > https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-llm.txt
 
-The model fetches the Portable Record Prompt from the repo and responds as Abby. See [PORTABLE-RECORD-PROMPT](docs/portable-record-prompt.md).
+The model fetches the Portable Record Prompt from the repo and responds as the companion. See [PORTABLE-RECORD-PROMPT](docs/portable-record-prompt.md).
 
 ---
 

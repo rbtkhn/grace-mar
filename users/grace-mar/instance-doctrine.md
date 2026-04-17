@@ -31,13 +31,13 @@ What "good" looks like for Grace-Mar:
 
 | Metric | Target | How to verify |
 |--------|--------|---------------|
-| **Lexile compliance** | Output ≤ 600L | Manual spot-check of bot responses |
+| **Language register** | Matches companion's register | Manual spot-check of bot responses |
 | **Knowledge boundary** | No undocumented references | Bot never cites facts not in profile |
 | **Pipeline health** | Candidates processed, not stale | RECURSION-GATE queue doesn't grow unbounded |
 | **Profile growth** | IX entries increase over time | IX-A, IX-B, IX-C counts in profile |
 | **Calibrated abstention** | "I don't know" when outside knowledge | Bot says "do you want me to look it up?" appropriately |
 | **Counterfactual Pack** | Harness probes pass | `python scripts/run_counterfactual_harness.py` — run before prompt changes |
-| **self-voice** (linguistic authenticity) | In-character, Lexile-friendly, fingerprint markers | `python scripts/test_voice_linguistic_authenticity.py` — no AI disclosure, simple vocab, readability ≤6 |
+| **self-voice** (linguistic authenticity) | In-character, fingerprint markers | `python scripts/test_voice_linguistic_authenticity.py` — no AI disclosure, in-character |
 | **Voice benchmark suite** | Voice stability and boundary compliance across model/prompt updates | `python scripts/run_voice_benchmark.py` — tone, age realism, abstention, bilingual, recall fidelity, overreach; use `-o results.json` for CI/trending |
 | **Continuity fidelity** | Bridge round-trip >= 80% | `python scripts/test_bridge_continuity.py` or `pytest tests/test_bridge_continuity.py` — no LLM needed; run before bridge format changes |
 | **Performance suite** | Local micro-benchmarks + optional I/O/LLM/HTTP tiers | `python scripts/run_perf_local.py` or `pytest tests/test_perf_local.py` (tier 1 in CI); full: `python scripts/run_perf_suite.py --tier 1 2 3`; see [perf-budgets.md](../../docs/perf-budgets.md) |
@@ -84,7 +84,7 @@ Four prompts, each with a distinct role:
 |--------|---------|
 | `SYSTEM_PROMPT` | Emulation persona — defines who the self is, what they know, how they speak |
 | `ANALYST_PROMPT` | Signal detection — analyzes exchanges for profile-relevant signals |
-| `LOOKUP_PROMPT` | Knowledge lookup — rephrases search queries for age-appropriate results (e.g. Lexile, vocabulary from Record) |
+| `LOOKUP_PROMPT` | Knowledge lookup — factual research for the companion |
 | `REPHRASE_PROMPT` | Answer rephrasing — converts search results into the self's voice and vocabulary |
 
 The `SYSTEM_PROMPT` contains the self's knowledge, curiosity, and personality inline. It grows as content is merged into the fork. Apply summarization tiers to manage token count.

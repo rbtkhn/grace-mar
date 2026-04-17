@@ -15,7 +15,7 @@
 | **Sample prompt** | Done | [sample-lesson-prompt-grace-mar.txt](../sample-lesson-prompt-grace-mar.txt) — curated demo. Regenerate with generator. |
 | **Walkthrough** | Done | [work-lesson-generation-walkthrough](../work-lesson-generation-walkthrough.md) — flow, examples A–D, IX-A/B/C usage. |
 
-**Usage:** `python scripts/generate_lesson_prompt.py -u grace-mar -n Abby -o lesson.txt` — run once per day; regenerate after "we did X" merges.
+**Usage:** `python scripts/generate_lesson_prompt.py -u grace-mar -n Robert -o lesson.txt` — run once per day; regenerate after "we did X" merges.
 
 ---
 

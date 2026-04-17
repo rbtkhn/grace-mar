@@ -23,7 +23,7 @@ def test_prompt_no_forbidden_phrases():
 
 
 def test_prompt_contains_identity():
-    """Prompt should establish character (Grace-Mar, 6-year-old, etc.)."""
+    """Prompt should establish character (Grace-Mar)."""
     from bot.prompt import SYSTEM_PROMPT
 
     assert "grace-mar" in SYSTEM_PROMPT.lower() or "Grace-Mar" in SYSTEM_PROMPT

@@ -8,5 +8,5 @@ Prototype Portable Record Prompts (PRPs) for specific deployments. Same Record, 
 
 **Regenerate:**
 ```bash
-python scripts/export_prp.py -u grace-mar -n Abby -o research/prototypes/abby-llm.txt
+python scripts/export_prp.py -u grace-mar -n Robert -o research/prototypes/abby-llm.txt
 ```

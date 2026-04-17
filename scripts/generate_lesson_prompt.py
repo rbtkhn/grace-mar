@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """
+DORMANT — child-specific lesson generation. Not applicable to adult companion.
+Preserved for reference. See archive/companion-freeze-abby-2026-04-14/ for context.
+
 Generate a one-prompt-per-day lesson for the human companion to paste into ChatGPT or Grok.
 
 Reads the Record (`self.md`, `skill-think.md`) plus separate work context (`work-alpha-school.md`), extracts IX-A/B, edge, work goals,
@@ -12,7 +15,7 @@ Output: one text block for copy-paste. Run once per day; regenerate after "we di
 Usage:
     python scripts/generate_lesson_prompt.py -u grace-mar
     python scripts/generate_lesson_prompt.py -u grace-mar -o docs/skill-work/sample-lesson-prompt-grace-mar.txt
-    python scripts/generate_lesson_prompt.py -u grace-mar -n Abby -o lesson.txt
+    python scripts/generate_lesson_prompt.py -u grace-mar -n Robert -o lesson.txt
     python scripts/generate_lesson_prompt.py -u grace-mar --alpha-school --focus reading
     python scripts/generate_lesson_prompt.py -u grace-mar --tier specialized --focus math
 """

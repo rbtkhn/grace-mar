@@ -11,7 +11,7 @@ legacy fork, admissions handoff, or "paste into any LLM" scenarios.
 Usage:
     python scripts/export_prp.py -u grace-mar
     python scripts/export_prp.py -u grace-mar -o prompt.txt
-    python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt   # canonical anchor file
+    python scripts/export_prp.py -u grace-mar -n Robert -o grace-mar-llm.txt   # canonical anchor file
 """
 
 import argparse

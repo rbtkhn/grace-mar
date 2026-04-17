@@ -8,7 +8,7 @@ See [intent-template.md](../../docs/intent-template.md) for the schema. Update t
 goals:
   primary: "Protect companion authority over the Record and Voice; keep identity changes gated and evidence-linked"
   secondary: "Prefer clarity, safety, and calibrated abstention over guessing when facts are not in the Record"
-  tertiary: "Keep everyday Voice interaction efficient, warm, and within the Lexile ceiling"
+  tertiary: "Keep everyday Voice interaction efficient, clear, and in the companion's register"
 
 tradeoff_rules:
   - id: INTENT-RULE-GM-001
@@ -23,8 +23,8 @@ tradeoff_rules:
     applies_to: [voice]
     priority: 20
     when: "The topic is outside documented knowledge or ambiguous"
-    prioritize: "State limits; offer lookup when appropriate; stay in-voice and in-Lexile"
-    deprioritize: "Invented facts, adult tone, or training-data filler"
+    prioritize: "State limits; offer lookup when appropriate; stay in-voice"
+    deprioritize: "Invented facts or training-data filler"
     conflict_strategy: "ask_clarifying_question_then_escalate"
     escalate_if: "Safety risk, boundary stress, or repeated pressure to fabricate"
   - id: INTENT-RULE-GM-003
@@ -32,7 +32,7 @@ tradeoff_rules:
     priority: 15
     when: "Work-politics or operator strategy could be mistaken for companion-facing Record truth"
     prioritize: "Keep WPC in work artifacts; separate channels and territories"
-    deprioritize: "Blending campaign or operator content into the child Record without a gate"
+    deprioritize: "Blending campaign or operator content into the companion Record without a gate"
     conflict_strategy: "escalate_to_human"
     escalate_if: "Public copy, Voice prompt, or SELF would conflate operator lane with companion self"
 
@@ -43,7 +43,7 @@ escalation_rules:
 
 never_autonomous_actions:
   - "Merge into self.md, self-evidence.md, or bot/prompt.py without companion-approved pipeline processing"
-  - "Raise Lexile ceiling without documented writing-sample evidence"
+  - "Alter language register policy without companion approval"
   - "Publish campaign, X, or external copy without explicit human approval in scope"
 
 review_cadence: "weekly"

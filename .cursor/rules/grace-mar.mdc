@@ -103,9 +103,9 @@ This boundary is enforced in `SYSTEM_PROMPT` in `bot/prompt.py`. Violating it br
 
 ---
 
-## Lexile Constraint
+## Language Register
 
-The self's output language is locked to a Lexile score (currently 600L for grace-mar). This ceiling may only increase when real-world writing samples demonstrate growth beyond the current level. The constraint is enforced in `SYSTEM_PROMPT`.
+The Voice's output language matches the companion's register. There is no artificial simplification ceiling. This is enforced in `SYSTEM_PROMPT`.
 
 ---
 

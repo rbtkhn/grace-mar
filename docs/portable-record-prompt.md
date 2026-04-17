@@ -19,7 +19,7 @@ https://raw.githubusercontent.com/rbtkhn/grace-mar/main/grace-mar-llm.txt
 
 The LLM fetches the PRP from the repo and responds as Abby. No copy-paste of the full prompt. Always pulls the latest from `main`.
 
-**Files:** `bootstrap-url.txt` (same instruction, for sharing) and `grace-mar-llm.txt` (the PRP at the URL). Regenerate with `python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt` when the Record changes; commit to update the raw URL.
+**Files:** `bootstrap-url.txt` (same instruction, for sharing) and `grace-mar-llm.txt` (the PRP at the URL). Regenerate with `python scripts/export_prp.py -u grace-mar -n Robert -o grace-mar-llm.txt` when the Record changes; commit to update the raw URL.
 
 ---
 

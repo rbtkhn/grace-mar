@@ -1200,7 +1200,7 @@ def _render_llm_page(prp_text: str) -> str:
     if not prp_text:
         return """<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>PRP</title></head>
-<body><pre style="margin:0;padding:1rem;white-space:pre-wrap;word-break:break-word;font:1rem/1.5 system-ui,sans-serif;">PRP not generated. Run: python scripts/export_prp.py -u grace-mar -n Abby -o grace-mar-llm.txt</pre></body>
+<body><pre style="margin:0;padding:1rem;white-space:pre-wrap;word-break:break-word;font:1rem/1.5 system-ui,sans-serif;">PRP not generated. Run: python scripts/export_prp.py -u grace-mar -n Robert -o grace-mar-llm.txt</pre></body>
 </html>"""
     escaped = prp_text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     clipboard_js = json.dumps(prp_text)

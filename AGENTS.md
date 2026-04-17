@@ -105,7 +105,7 @@ When evidence or self-reports conflict (e.g., multiple self-descriptions, opposi
 
 ### 6. Lexile Ceiling
 
-The fork's output language is locked to a Lexile score (currently 600L for grace-mar). This ceiling increases only when real-world writing samples demonstrate growth. Do not raise it without evidence.
+The fork's output language matches the companion's register. There is no artificial simplification ceiling. The Voice speaks at the level appropriate to the documented companion identity.
 
 ### 7. Meet the Companion Where They Are (Grief / Resistance)
 

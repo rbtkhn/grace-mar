@@ -252,7 +252,7 @@ The lesson prompt generator is implemented as `scripts/generate_lesson_prompt.py
 3. Fills the minimal prompt shape (§3) **day-scoped**: one prompt containing today’s full set of goals (reading, math, WORK) so the human runs the script once per day and pastes once.
 4. Outputs one text block (or one file) for copy-paste.
 
-**Usage:** `python scripts/generate_lesson_prompt.py -u grace-mar` or `python scripts/generate_lesson_prompt.py -u grace-mar -n Abby -o docs/skill-work/sample-lesson-prompt-grace-mar-generated.txt`
+**Usage:** `python scripts/generate_lesson_prompt.py -u grace-mar` or `python scripts/generate_lesson_prompt.py -u grace-mar -n Robert -o docs/skill-work/sample-lesson-prompt-grace-mar-generated.txt`
 
 **Formative loop:** Run the generator after processing "we did X" merges so the next day's prompt reflects the updated Record.
 
@@ -267,5 +267,5 @@ Related: `scripts/export_curriculum.py` (skills edge, IX summaries); `scripts/ex
 - **skill-work** supplies work_goals (SAT), WORK edge (making/planning/creation), SCHOOL, and 2-hour alignment so lessons are goal-aware and at the edge.
 - **Examples A–D** show: (A) reading/THINK + SAT readiness, (B) math at MATH edge, (C) WORK making/planning at edge, (D) integrated 2-hour block. Example D is the one-prompt-per-day pattern: one paste, full day’s scope.
 
-**Demo:** [sample-lesson-prompt-grace-mar.txt](sample-lesson-prompt-grace-mar.txt) is a curated one-prompt-per-day lesson. **Generator:** Run `python scripts/generate_lesson_prompt.py -u grace-mar -n Abby` to produce a prompt from the current Record; regenerate when the Record changes (especially after "we did X" merges).
+**Demo:** [sample-lesson-prompt-grace-mar.txt](sample-lesson-prompt-grace-mar.txt) is a curated one-prompt-per-day lesson. **Generator:** Run `python scripts/generate_lesson_prompt.py -u grace-mar -n Robert` to produce a prompt from the current Record; regenerate when the Record changes (especially after "we did X" merges).
 
