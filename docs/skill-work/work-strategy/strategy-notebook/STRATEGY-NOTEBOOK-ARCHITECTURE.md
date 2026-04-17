@@ -163,6 +163,27 @@ The **strategy-notebook knots** are the **primary written units** of the work-st
 
 **Inbox vs notebook:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) is the **raw accumulator** (firehose, paste-ready lines). **`days.md` / episodic headings** hold **synthesized** judgment (Signal / Judgment / Links / Open — not a raw dump). **Weaving** (inbox → notebook) is a **meaning move**, not a file-sync.
 
+<a id="days-md-date-semantics"></a>
+
+### `days.md` date keys — semantics and anti-split (assistants)
+
+**Three different clocks** often appear in the same weave — do **not** conflate them:
+
+| Clock | Examples | Implication for `days.md` |
+|-------|----------|---------------------------|
+| **Operator boundary** | “I have not uploaded anything after **2026-04-16**” | Sets the **latest day block** that should claim **operator-sourced** material unless the operator adds more. **Do not** open **`## 2026-04-17`** solely to park assistant work. |
+| **Session / inbox mechanics** | **`Accumulator for: YYYY-MM-DD`** (host clock), assistant session date, **`### Expert X / YT ingest — YYYY-MM-DD`** inside the inbox | **Organizational keys** for scratch and grep — **not** automatic instructions to create a **new** `## YYYY-MM-DD` in `days.md`. |
+| **Third-party publication** | Wire dates (WSJ **Apr 15**), **`aired:YYYY-MM-DD`**, air/publication day on **`-transcript.md`** | Belongs in **Signal / Links** and **cite lines** — **not** proof that the **notebook day heading** must match that calendar date. |
+
+**Anti-split defaults (weave / `strategy` with notebook write):**
+
+1. **Prefer one consolidated `## YYYY-MM-DD` per weave episode** when the material is one logical pass — extend the existing block for that **notebook day** (see § *Intra-day weaves* below) rather than splitting across **successive calendar headings** because the **accumulator** rolled forward or a **batch-analysis** line used a different date.
+2. **Never** append a **new** bottom `## YYYY-MM-DD` in `chapters/…/days.md` **only** because: the **`Accumulator for:`** line shows a later local date; an inbox subsection title includes **`2026-04-18`**; or an external article’s byline date is later than the operator’s last upload — **unless** the operator explicitly wants a separate calendar day or the weave is genuinely **day-separated** judgment.
+3. If one block mixes **operator scope** with **older/newer wire dates**, add a short **Weave date note** (operator boundary vs publication dates) in **Signal** or **Links** — do **not** imply the heading date is an **upload receipt**.
+4. **`STATUS.md` — Last substantive entry:** Must point at a **real** `##` anchor in `days.md` (or episodic heading). After consolidating blocks, **update or remove** stale links to deleted headings.
+
+**Related:** [`daily-strategy-inbox.md`](daily-strategy-inbox.md) header (**Accumulator** vs **`days.md`**); [.cursor/rules/strategy-notebook-days-date-semantics.mdc](../../../../.cursor/rules/strategy-notebook-days-date-semantics.mdc).
+
 **Continuity (light):** [STATUS.md](STATUS.md) tracks **last substantive notebook work** (dated block or episodic weave) — a **hint**, not debt enforcement. Update it when you close a real entry; do not bump it for empty placeholders.
 
 **`dream` (night close):** End-of-day maintenance **does not** obligate strategy-notebook production. `auto_dream.py` may still report `strategy_notebook_missing_day_headers` as **FYI**; treat it as optional telemetry unless you adopt calendar-strict habits again. Notebook work runs in **`strategy`** (or explicit **`weave`**) when **you** choose — see [.cursor/skills/dream/SKILL.md](../../../../.cursor/skills/dream/SKILL.md) § *Strategy notebook*.
@@ -170,6 +191,8 @@ The **strategy-notebook knots** are the **primary written units** of the work-st
 **SELF-LIBRARY mirror:** Canonical files live here under `docs/skill-work/work-strategy/strategy-notebook/`. A symlink under `users/<id>/SELF-LIBRARY/strategy-notebook` is **convenience** only — keep mirrors in sync with edits to the canonical tree.
 
 **Weave command — knot-shape menu (assistant behavior):** When the operator says **`weave`** (or **`strategy`** with explicit weave intent), **before** editing `days.md` or knot files, present **4–6 labeled options** (e.g. **A–F**) that name **distinct knot shapes / theses / content emphases** for **this** material—not a generic work-lane menu (not coffee **A–E**, not “strategy vs dev”). Each option is a **one-line stub**: what the **knot argues**, what gets **compressed** into **Judgment**, whether a **`strategy-notebook-knot-*.md`** file is in scope, or **continuity-only** `days.md` vs **case-index**-thin cite, **verify-first** compress, **tri-mind** summary in-page vs chat-only, **batch-analysis** tail only, etc. **Knot word budget (when a knot file is in scope):** composed or revised **`strategy-notebook-knot-*.md`** pages should land in **300–1000 words** (`wc -w` on the file). Menu stubs should **signal how** the pick hits that band (e.g. thin case knot + detail on `days.md`, full synthesis in-knot, Links-heavy / Judgment-tight). **Present, don’t pre-develop:** no full weave prose until the operator picks a letter (or **`no menu`**, or **`weave <shape>`** / **EXECUTE** with an explicit thesis). If **one** shape is clearly dominant, still list **alternates** (e.g. episodic heading, Links-only Open, knot sidecar) so the fork has **at least four** real choices unless the operator forbids the menu. Same **skill-strategy** / template discipline applies after the pick.
+
+**Multi-pick weaves:** When the operator selects **two or more** menu letters (e.g. **C** and **D**) and each implies a **different primary `strategy-expert`**, **different page type**, or **non-mergeable** Judgment, default to **one knot file per letter** — distinct **`knot_label`** / basename, **`knot-index.yaml`** row, and **`days.md` Signal** line — and **cross-link** as **sister knots**. **Do not** merge into a **single** synthesis page **unless** the operator explicitly asks for one combined file. See [.cursor/skills/skill-strategy/SKILL.md](../../../../.cursor/skills/skill-strategy/SKILL.md) (Multi-pick weaves).
 
 <a id="knot-design-notebook-use-jobs"></a>
 

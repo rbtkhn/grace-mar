@@ -4,11 +4,15 @@
 
 **Accumulator date:** The **`YYYY-MM-DD`** on the **`Accumulator for`** line is the **local calendar date implied by the system timestamp** (host clock when the file is edited, or the session **Today's date** field in the assistant environment—same source of truth). **Do not** set or hold that date by **weave** alone; **update** it when the **actual calendar day** changes.
 
+**`Accumulator` / inbox subsection dates ≠ `days.md` headings (anti-split):** The accumulator line and labels like **`### Expert X / YT ingest — YYYY-MM-DD`** are **scratch organization and grep keys**. They **do not** require a matching **`## YYYY-MM-DD`** in [`chapters/YYYY-MM/days.md`](chapters/YYYY-MM/days.md) — especially when the operator has stated a **last-ingest boundary** or when assistant work continues across local midnights. **Weave** into the **operator-chosen notebook day** (or a single episodic heading); add a **weave date note** if publication dates and heading dates diverge. Full contract: [STRATEGY-NOTEBOOK-ARCHITECTURE.md § `days.md` date keys — semantics and anti-split](STRATEGY-NOTEBOOK-ARCHITECTURE.md#days-md-date-semantics).
+
 **`grounding_delta` (optional):** One short line per day (or per heavy-ingest burst) naming **what changed** in MEM / relevance grounding for **this** notebook day — e.g. new `MEM–RELEVANCE–*` hook, SCHOLAR relay, or an explicit “no new grounding” stamp. **Purpose:** keep digest-heavy sessions **tied** to the repo’s grounding pipeline without merging judgment into the Record. Place it **immediately under** the **`Accumulator for:`** line (or inside the same-day scratch block) so greps and weaves see it beside fresh ingests.
 
 **Weave rhythm (two layers):** **(1) Day-end / calendar boundary** — the **timestamp** determines **which** `## YYYY-MM-DD` page receives the **end-of-day** weave (e.g. **`dream`**, or the first maintenance pass after local midnight): that is when **stale scratch** must land on the **correct dated** block and the **accumulator line** catches up to the clock if needed. **(2) Intra-day manual weave** — the operator may direct a **weave at any time** (e.g. **`weave`**, **`weave`**, explicit instruction) to synthesize scratch into **today’s** `days.md` **for cognitive cadence** and clearer analysis; that **does not** replace the clock and **does not** bump **`Accumulator for`** to a new day. Same synthesis rules apply (Signal / Judgment / Links / Open — not a raw dump). **Which lines you weave shapes section weighting** on the page — promotion, not parity across headings: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Weave choice and section weighting*. **Optional:** log weaves for learning over time — [FOLD-LEARNING.md](FOLD-LEARNING.md) (`scripts/log_strategy_fold.py`).
 
 **Thread rhythm (expert corpus):** After **`thread:<expert_id>`** lines are in this file, operator **`thread`** rebuilds **`strategy-expert-<expert_id>.md`** rolling blocks only — **`python3 scripts/strategy_thread.py`** (same flags as `scripts/strategy_expert_corpus.py`). **Not** a **`weave`**: does **not** touch **`days.md`**, knots, or **`Accumulator for`**. Spec: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Thread (terminology)*.
+
+**Third-party scan / X-only hygiene:** Do **not** paste assistant or digest **paraphrases** (e.g. daily scan summaries without URLs) into **`strategy-expert-*-transcript.md`**. For claims that need a named expert lane, add **paste-ready lines here first** with a **URL** and **`thread:<expert_id>`** when cold attributes speech to that expert; if no primary yet, use a one-line **stub** with **`verify:pending-primary`** — verbatim transcripts stay for **actual ingested speech**, not second-hand scan text.
 
 **Split ingest (planned direction):** Long verbatim may live primarily in **`strategy-expert-<expert_id>-transcript.md`** while this file stays the **stub + grep registry** (short line, **`thread:`**, optional **`aired:YYYY-MM-DD`**, URL, **`verify:`**). One future **`strategy_ingest`**-style command would write both layers in one step; until then, manual inbox + **`thread`** triage remains the path. Full policy + CLI sketch: [STRATEGY-NOTEBOOK-ARCHITECTURE.md](STRATEGY-NOTEBOOK-ARCHITECTURE.md) § *Split ingest model* and § *Planned unified ingest command*.
 
@@ -94,8 +98,13 @@ _(Append below this line during the day.)_
 
 - YT | cold: Mercouris 16 Apr 2026 (The Duran) — EU drone factories for Ukraine, Medvedev warns EU, Lavrov–Saudi FM, Munir in Tehran, Hormuz blockade & China naval logic // hook: full verbatim §2026-04-16 in strategy-expert-alexander-mercouris-transcript.md | https://www.youtube.com/watch?v=TBD-canonical-episode | verify:operator-ingest+aired-2026-04-16 | thread:alexander-mercouris | aired:2026-04-16
 
+- BP | cold: Seyed Mohammad Marandi (Breaking Points, Tehran remote, 2026-04-16 — segment title per operator: "Israel WILL Restart Iran War") — Iran read: US never serious on 10-point framework; Netanyahu / "Zionist lobby" block; post-ceasefire military prep for next war "quite soon." Islamabad: Iranian side had full negotiation authority (Parliament Speaker + Leader consult) vs Vance on phone to Netanyahu ("reported to him" framing). Hegseth blockade/bombs quote + Caine Pacific interdiction extension → Iranian escalation "quite soon"; blockade accelerates global economic collapse narrative. JCPOA contrast: Obama-era US serious vs current. Ceasefire rationale: 12-day war lessons, rearm, Hormuz pressure on Trump economy. Hormuz: Iran will retain control; no toll-free passage; Gulf monarchies complicit. Vance "grand bargain" / "normal country" dismissed (Joe Kent resignation letter; Flynt & Hillary Mann Leverett *Going to Tehran*). Lebanon close: moral non-abandonment of Lebanese vs Israeli strikes; Pakistan round: "I don't know" // hook: Marandi continuity from [04-13 Hormuz scaffold](strategy-notebook-knot-2026-04-13-marandi-ritter-mercouris-hormuz-scaffold.md); cross scott-ritter ORBAT, alexander-mercouris institutional lane, trita-parsi Lebanon — tier: attributed monologue, not wire ORBAT | https://www.youtube.com/watch?v=TBD-pin-Breaking-Points-Marandi-2026-04-16 | verify:operator-transcript-paste+pin-canonical-BP-URL | thread:seyed-marandi | membrane:single | grep:IRAN+Marandi+BreakingPoints+2026-04-16
 
-`ROME | cold: Leo XIV Bamenda (16 Apr) — "woe" to those who manipulate religion / God's name for military, economic, or political gain (Fides); same calendar day Hegseth used Mark 3 / Pharisees framing re U.S. press (Pentagon briefing, Examiner) // hook: two legitimacy planes — do not collapse; woven `days.md` `## 2026-04-18` + [ROME-PASS rolling seam](../work-strategy-rome/ROME-PASS.md) | https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain | verify:fides-primary+washingtonexaminer | membrane:single | grep:LeoXIV+Hegseth-2026-04-16`
+- _(Notebook: top-level list boundary so thread-ingest triage does not absorb following backtick rows.)_
+
+- batch-analysis | 2026-04-16 | Marandi BP 04-16 × 04-13 scaffold | **Tension-first:** Iranian **process** and **moral-historical** register (Islamabad authority vs Vance channel, school/synagogue/Gaza–Lebanon frames) vs **Ritter-class** **USN** / **interdiction** facts and **wire-tier** throughput — **do not** merge lanes. **Weak bridge:** same **Hormuz** / **Islamabad** / **Lebanon** object as **Mercouris** narrative surface — **verify** still splits **speech** from **AIS** / **DOD** readouts.
+
+`ROME | cold: Leo XIV Bamenda (16 Apr) — "woe" to those who manipulate religion / God's name for military, economic, or political gain (Fides); same calendar day Hegseth used Mark 3 / Pharisees framing re U.S. press (Pentagon briefing, Examiner) // hook: two legitimacy planes — do not collapse; woven `days.md` `## 2026-04-16` + [ROME-PASS rolling seam](../work-strategy-rome/ROME-PASS.md) | https://www.fides.org/en/news/77580-LEO_XIV_IN_AFRICA_Pope_Leo_Woe_to_those_who_manipulate_religion_and_the_very_name_of_God_for_their_own_military_economic_or_political_gain | verify:fides-primary+washingtonexaminer | membrane:single | grep:LeoXIV+Hegseth-2026-04-16`
 
 `notebook | cold: Mercouris lane — Hormuz as precedent-for-Beijing problem (U.S. maritime-denial grammar portable beyond Iran); escalation risk as friction-thickening (insurance, routing, posture, rhetoric) before any notional fleet clash // hook: tri-mind narrow pass (Hormuz + PRC escalation); notebook lens fold, not Duran primary | verify:lens-fold+CIV-MIND-MERCOURIS | thread:alexander-mercouris | membrane:single | grep:Hormuz+PRC+precedent`
 
@@ -354,3 +363,49 @@ Islamabad and **Hormuz** coverage this week is carrying **three** **audience** s
 `X | cold: LEBANON+IRAN | Pape (@ProfessorPape, **2026-04-14** post + sectarian **map** graphic) — Israel in talks w/ **Christian & Sunni** Lebanese leadership, **Shia** leaders opposed; argues trajectory likelier **south Shia cleansing + civil war** than peace // hook: same cycle as **Apr 14** U.S.-mediated Israel–Lebanon talks (see wire row); **do not** collapse sectarian map claim w/ state readout w/o seam; pairs knot mercouris-mearsheimer-lebanon-split + §1e | https://x.com/ProfessorPape | verify:pin-exact-status-URL+screenshot-Cursor-assets-image-754d51cf+ap-lebanon-israel-2026-04-14-context | thread:robert-pape`
 
 `wire | cold: LEBANON | AP 14 Apr: Israel–Lebanon rare direct talks in Washington (Rubio hosts); ceasefire / withdrawal / Hezbollah frame per wire // hook: **context shell** for Pape X map post same day—**official process** vs **sectarian civil-war thesis** stay **separate Judgment objects** until primaries pin who met whom | https://apnews.com/article/lebanon-israel-negotiations-hezbollah-rubio-washington-88f5123bfcf4c00625e98ea14a16eef9 | verify:ap-primary`
+
+### Expert X / YT ingest — 2026-04-18 (arranged scan batch)
+
+_Subsection title date = **scratch / batch label** (same family as **Accumulator for:**) — **not** a mandate for a matching **`## 2026-04-18`** in [`chapters/YYYY-MM/days.md`](chapters/2026-04/days.md). See [STRATEGY-NOTEBOOK-ARCHITECTURE.md § `days.md` date keys](STRATEGY-NOTEBOOK-ARCHITECTURE.md#days-md-date-semantics)._
+
+<!-- operator EXECUTE: paste-ready one-liners; tier-verify before weave. scan returned no new items: steve-jermy, john-mearsheimer (do not encode absence in Segment 1). -->
+
+`X | cold: @s_m_marandi — Trump sacrificing US for Netanyahu/Zionism (US policy vs regional tensions) // hook: US–Israel seam; quote-verify | https://x.com/s_m_marandi/status/2044702856016429240 | verify:screenshot+metrics | thread:seyed-marandi`
+
+`X | cold: @s_m_marandi — Zionist regime wrecking Iran–Trump ceasefire / Hormuz progress; economic catastrophe frame // hook: Hormuz seam; hypothesis-grade blockade | https://x.com/s_m_marandi/status/2044535982322536724 | verify:quote+YT-transcript-if-linked | thread:seyed-marandi`
+
+`X | cold: @s_m_marandi — “Netanyahu did this to India” + image // hook: Netanyahu regional impact | https://x.com/s_m_marandi/status/2044715292278821003 | verify:screenshot+image | thread:seyed-marandi`
+
+`X | cold: @RealScottRitter — Ask the Inspector Ep. 304 (live Q&A) // hook: rolling show corpus | https://x.com/RealScottRitter/status/2044552836260999446 | verify:space-transcript | thread:scott-ritter`
+
+`X | cold: @RealScottRitter — Russia trip (Moscow/Chechnya); US–Israel Iran war vs US–Russia post–Alaska Summit // hook: sanctions/oil/Ukraine seam | https://x.com/RealScottRitter/status/2044502233849475530 | verify:quote+screenshot | thread:scott-ritter`
+
+`X | cold: @RealScottRitter — links/discusses “Trump Panics…” (Iran strategy) // hook: Judgment chain vs primary video | https://x.com/RealScottRitter/status/2044486846357328376 | verify:YT-transcript | thread:scott-ritter`
+
+`X | cold: @tparsi — TRT quote: Trump must constrain Israel; else ceasefire with US is hollow // hook: US–Iran ceasefire viability | https://x.com/tparsi/status/2044499619082621132 | verify:TRT-article-quote | thread:trita-parsi`
+
+`X | cold: @tparsi — Daily Beast briefing quote: Iran could close Strait of Aden; +12% oil; price shock // hook: Aden/Hormuz seam; hypothesis-grade | https://x.com/tparsi/status/2044417409411412151 | verify:Beast-primary-quote | thread:trita-parsi`
+
+`X | cold: @barnes_law — “Israel Lobby.” (reply context) // hook: domestic influence lane | https://x.com/barnes_law/status/2044601644038644196 | verify:full-thread-screenshot | thread:robert-barnes`
+
+`X | cold: @barnes_law — image post + commentary // hook: visual/context verify | https://x.com/barnes_law/status/2044601351955415360 | verify:screenshot+image | thread:robert-barnes`
+
+`X | cold: @DougAMacgregor — Pentagon → GM/Ford etc. toward weapons supply (WSJ) // hook: industrial mobilization | https://x.com/DougAMacgregor/status/2044581847452016663 | verify:WSJ-primary | thread:douglas-macgregor`
+
+`X | cold: @DougAMacgregor — BREAKING: Australian refinery explosions // hook: energy security incident | https://x.com/DougAMacgregor/status/2044527405432226084 | verify:screenshot+corroboration | thread:douglas-macgregor`
+
+`X | cold: @DougAMacgregor — Europe drafting NATO-without-US plan // hook: alliance fracture lane | https://x.com/DougAMacgregor/status/2044445245199306774 | verify:full-post-screenshot | thread:douglas-macgregor`
+
+`X | cold: @ProfessorPape — Apr 17 live: Hagel + Campbell on Iran war / China balance // hook: event pin | https://x.com/ProfessorPape/status/2044550744871768530 | verify:announcement+registration | thread:robert-pape`
+
+`X | cold: @ProfessorPape — “Victory rhetoric noise; troop movements signal”; links WaPo troops/blockade // hook: escalation trap | https://x.com/ProfessorPape/status/2044382843942440971 | verify:WaPo-primary | thread:robert-pape`
+
+`X | cold: @ProfessorPape — Israel talks with Christian/Sunni Lebanese leaders; Shia opposition; civil-war risk + map // hook: Lebanon seam; sectarian | https://x.com/ProfessorPape/status/2044253209619742888 | verify:screenshot+map | thread:robert-pape`
+
+`X | cold: @DanielLDavis1 — with Henningsen: US Iran intel shelved; “fake intel” Israel-stovepiped; maximalist demands // hook: intel–policy disconnect | https://x.com/DanielLDavis1/status/2044551426475450407 | verify:YT-transcript | thread:daniel-davis`
+
+`X | cold: @DanielLDavis1 — Congress failing Iran war test; vote out incumbents // hook: war powers | https://x.com/DanielLDavis1/status/2044525455492190534 | verify:space-transcript | thread:daniel-davis`
+
+`X | cold: @DanielLDavis1 — ceasefire calm before storm; sources: US prepping massive bombing; forces massing // hook: ORBAT hypothesis-grade | https://x.com/DanielLDavis1/status/2044494299287720163 | verify:YT-transcript | thread:daniel-davis`
+
+`YT | cold: Mercouris — Russia warns US will intensify Iran war; China navy/tankers; Putin–Xi trip // hook: multipolar escalation stack | https://www.youtube.com/watch?v=6kqD_urUtjA | verify:full-transcript | thread:alexander-mercouris`
