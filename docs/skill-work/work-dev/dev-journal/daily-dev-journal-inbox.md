@@ -14,6 +14,8 @@
 
 ---
 
-**Accumulator for (local date):** _YYYY-MM-DD_
+**Accumulator for (local date):** 2026-04-17
 
 _(Append below this line during the day.)_
+
+- **SemaClaw bridge proposal evaluated and rejected.** LLM-generated GitHub issue/PR templates for a "SemaClaw bridging plan" — proposed Docker profiles, React web UI, 4-layer plugin architecture, multi-channel adapters (Feishu/QQ/Discord), plugin loader, schema-registry, marketplace. Evaluated against actual repo: ~60% premature infrastructure, ~20% already exists (Docker Compose, gate-review app, MCP adapter Wave 4B, PR template, `src/grace_mar/`), ~20% architecturally wrong (treats Grace-Mar as multi-tenant SaaS, not sovereign single-companion system). Rejected wholesale. The proposal was generated without reading the repo.
