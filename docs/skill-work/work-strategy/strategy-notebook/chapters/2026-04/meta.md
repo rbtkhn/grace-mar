@@ -3,6 +3,7 @@
 **Kind:** month (first strategy-notebook chapter)  
 **Status:** `open`  
 **Operator preferences (notebook):** [NOTEBOOK-PREFERENCES.md](../../NOTEBOOK-PREFERENCES.md) — structure, weave rhythm, promotion, Judgment rules (set 2026-04-12).  
+**Standing cross-expert track (U.S.–Iran kinetic):** [US-IRAN-KINETIC-TRACKER.md](../../US-IRAN-KINETIC-TRACKER.md) — near-term **large-scale U.S. kinetic** on **Iran** as a **shared** **hypothesis** **object** across **`thread:`** experts; prefs § *US–Iran kinetic likelihood (cross-expert track)*.  
 **Theme:** Islamabad framework + Rome helix (Cannae / Teutoburg / Rhine); strategy-notebook bootstrapped; Mercouris as optional bridge only; Predictive History **Volume I** extended to twenty chapters + **student-export** checklist wired in `work-jiang`.
 
 ## April arc (one screen)
