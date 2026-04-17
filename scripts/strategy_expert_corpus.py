@@ -91,7 +91,12 @@ _RE_RETAINED = re.compile(
     r"### Retained reference \((\d{4}-\d{2}-\d{2})(?:\s+fold)?\)"
 )
 _RE_THREAD = re.compile(r"thread:([a-z][a-z0-9]*(?:-[a-z][a-z0-9]*)*)")
+# Dated `## YYYY-MM-DD` scratch subsection (inbox) — same pattern as transcript date headings.
 _RE_DATE_HEADING = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
+
+# Policy: long-form captures per ingest; 7-day prune keeps whole files near this band.
+MAX_VERBATIM_WORDS_PER_INGEST = 2000
+SOFT_MAX_TRANSCRIPT_FILE_WORDS = 20000
 
 
 @dataclass(frozen=True)
@@ -139,6 +144,31 @@ def _is_ingest_line(line: str) -> bool:
     if s.startswith("`") and "|" in s:
         return True
     return False
+
+
+def _word_count(s: str) -> int:
+    return len(s.split())
+
+
+def _top_level_list_item(line: str) -> bool:
+    """True if this line starts a new top-level `- ` list item (column 0 only)."""
+    return line.startswith("- ")
+
+
+def verbatim_to_transcript_lines(verbatim: str) -> list[str]:
+    """Turn one ingest block (possibly multi-line) into markdown lines for `-transcript.md`."""
+    parts = verbatim.splitlines()
+    if not parts:
+        return []
+    out: list[str] = []
+    first = parts[0].rstrip()
+    if first.lstrip().startswith("- "):
+        out.append(first)
+    else:
+        out.append(f"- {first}")
+    for pl in parts[1:]:
+        out.append(f"    {pl.rstrip()}")
+    return out
 
 
 def _split_table_row(line: str) -> list[str]:
@@ -241,12 +271,31 @@ def verify_index_alignment(
 # Inbox extraction — kept for strategy_expert_transcript.py import
 # ---------------------------------------------------------------------------
 
+def _continuation_stops_thread_block(line: str) -> bool:
+    """True if this line ends a multi-line verbatim block opened by a thread ingest."""
+    if not line.strip():
+        return False
+    if line.startswith("## "):
+        return True
+    if _date_markers(line):
+        return True
+    if _top_level_list_item(line):
+        return True
+    return False
+
+
 def extract_thread_ingests(
     text: str,
     *,
     today: date | None = None,
 ) -> dict[str, dict[date, list[str]]]:
-    """Return nested dict expert_id -> date -> list of verbatim lines."""
+    """Return nested dict expert_id -> date -> list of verbatim blocks (strings, possibly multi-line).
+
+    Each block is the first ingest line (with ``thread:``) plus continuation lines until
+    a new top-level ``- `` list item (column 0), a ``## `` heading, a scratch ``## YYYY-MM-DD``,
+    a brief-handoff / fold date marker line, or end of file. Blank lines **inside** the block
+    are kept (multi-paragraph quotes).
+    """
     today = today or datetime.now(timezone.utc).date()
     accum: str | None = None
     m = _RE_ACCUM.search(text)
@@ -258,30 +307,58 @@ def extract_thread_ingests(
         context_date = _parse_date_yyyy_mm_dd(accum)
 
     out: dict[str, dict[date, list[str]]] = defaultdict(lambda: defaultdict(list))
+    lines = text.splitlines()
+    i = 0
+    n = len(lines)
 
-    for line in text.splitlines():
+    while i < n:
+        line = lines[i]
         dm = _date_markers(line)
         if dm:
             context_date = _parse_date_yyyy_mm_dd(dm)
+            i += 1
+            continue
+
+        mh = _RE_DATE_HEADING.match(line.strip())
+        if mh:
+            context_date = _parse_date_yyyy_mm_dd(mh.group(1))
+            i += 1
             continue
 
         if not _is_ingest_line(line) or "thread:" not in line:
+            i += 1
             continue
 
         slugs = [s for s in _RE_THREAD.findall(line) if s in _EXPERT_IDS_SET]
         if not slugs:
+            i += 1
             continue
 
         use_date = context_date
         if use_date is None and accum:
             use_date = _parse_date_yyyy_mm_dd(accum)
         if use_date is None:
+            i += 1
             continue
 
-        verbatim = line.rstrip()
+        block_lines = [line.rstrip()]
+        j = i + 1
+        while j < n:
+            nxt = lines[j]
+            if not nxt.strip():
+                block_lines.append("")
+                j += 1
+                continue
+            if _continuation_stops_thread_block(nxt):
+                break
+            block_lines.append(nxt.rstrip())
+            j += 1
+
+        verbatim = "\n".join(block_lines).rstrip()
         for slug in slugs:
             if verbatim not in out[slug][use_date]:
                 out[slug][use_date].append(verbatim)
+        i = j
 
     return {k: dict(v) for k, v in out.items()}
 

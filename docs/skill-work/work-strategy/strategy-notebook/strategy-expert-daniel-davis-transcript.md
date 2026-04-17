@@ -2,7 +2,8 @@
 
 WORK only; not Record.
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:daniel-davis`, routed automatically on ingest.
+**Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:daniel-davis` (first line + optional continuation paragraphs), routed on ingest.
+**Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-daniel-davis.md`](strategy-expert-daniel-davis.md) (profile) and [`strategy-expert-daniel-davis-thread.md`](strategy-expert-daniel-davis-thread.md) (distilled thread).
@@ -10,6 +11,7 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
 
 ## 2026-04-12
 - `X | Daniel Davis (@DanielLDavis1): Rebuts “last, best chance” as diplomacy — cites Vietnam/Korea timelines; if offer is final it is ultimatum/surrender not negotiation; Iran unlikely to accept → resumption clock; first-six-weeks military constraints unchanged; Hormuz, oil, Gulf fertilizer dearth → macro pressure on U.S. (“not a good day for America”) | https://x.com/DanielLDavis1 | verify:screenshot-ingest-status-id-unknown | thread:daniel-davis`

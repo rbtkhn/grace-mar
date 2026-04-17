@@ -29,6 +29,24 @@ _(Append below this line.)_
     assert any("john-mearsheimer" in line for line in out["john-mearsheimer"][d])
 
 
+def test_multiline_thread_ingest_includes_paragraphs_until_next_bullet() -> None:
+    inbox = """
+**Accumulator for:** 2026-04-14 _(clock)_
+
+_(Append below this line.)_
+
+- YT | cold: opener // hook | https://example.com | thread:john-mearsheimer
+Second paragraph of quote without a leading dash.
+
+- X | other | thread:scott-ritter
+"""
+    out = extract_thread_ingests(inbox, today=date(2026, 4, 14))
+    d = date(2026, 4, 14)
+    block = out["john-mearsheimer"][d][0]
+    assert "Second paragraph" in block
+    assert "scott-ritter" not in block
+
+
 def test_ignores_unknown_thread_slug() -> None:
     inbox = """
 **Accumulator for:** 2026-04-14 _(clock)_

@@ -2,7 +2,8 @@
 
 WORK only; not Record.
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:robert-pape`, routed automatically on ingest.
+**Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:robert-pape` (first line + optional continuation paragraphs), routed on ingest.
+**Length:** Target **≤ 2000 words** per ingest block; whole file soft **≤ 20000 words** after prune (7-day window makes overrun unlikely).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-robert-pape.md`](strategy-expert-robert-pape.md) (profile) and [`strategy-expert-robert-pape-thread.md`](strategy-expert-robert-pape-thread.md) (distilled thread).
@@ -10,6 +11,7 @@ WORK only; not Record.
 ---
 
 <!-- Triage appends new date sections below. Do not add content above this line. -->
+
 
 ## 2026-04-16
 - `YT | cold: IRAN | Pape (Cyrus Janssen studio, uploaded 2026-04-16) — escalation trap: bombing for regime change failed; US cannot accept defeat; Trump needs clean win vs Obama frame; Iran unlikely to bail him out // hook: §1d–§1e week-seven arc; pairs uranium/Hormuz Judgment rows | https://www.youtube.com/@CyrusJanssen/videos | verify:operator-transcript+youtube-watch-id-to-pin | thread:robert-pape`

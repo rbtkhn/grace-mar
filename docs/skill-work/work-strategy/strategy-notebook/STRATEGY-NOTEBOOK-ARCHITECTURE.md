@@ -59,7 +59,7 @@ Within **Segment 1**, each **`## YYYY-MM`** heading opens **one month-segment** 
 
 **What it is not:** **`thread`** does **not** update **`days.md`**, knot files, or the inbox **`Accumulator for:`** line. It is **not** a substitute for **`weave`**. Transcript or aggregator output still lands in the **inbox** first (paste-ready lines + **`thread:`** when the cold line attributes speech to a named indexed expert).
 
-**3-file model:** Each expert has three files — **`strategy-expert-<expert_id>.md`** (cognitive profile — operator-authored, stable), **`-transcript.md`** (7-day rolling verbatim), **`-thread.md`** (**narrative journal** + **machine extraction** + optional ledger). The **`thread`** command updates transcripts and **only the marked block** in **`-thread.md`**; the profile file is never script-modified. **Templates** for all three filenames are maintained as **one** bundle: [strategy-expert-template.md](strategy-expert-template.md) (jump anchors at top of that file).
+**3-file model:** Each expert has three files — **`strategy-expert-<expert_id>.md`** (cognitive profile — operator-authored, stable), **`-transcript.md`** (7-day rolling verbatim **from inbox** — first `thread:` line plus optional continuation paragraphs; target **≤ ~2000 words** per block, soft **≤ ~20k words** per file after prune), **`-thread.md`** (**narrative journal** + **machine extraction** + optional ledger). The **`thread`** command updates transcripts and **only the marked block** in **`-thread.md`**; the profile file is never script-modified. **Templates** for all three filenames are maintained as **one** bundle: [strategy-expert-template.md](strategy-expert-template.md) (jump anchors at top of that file).
 
 ## Thesis
 

@@ -171,7 +171,8 @@ knot_paths: []
 
 WORK only; not Record.
 
-**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) that include `thread:<expert_id>`, routed automatically on ingest.
+**Source:** Verbatim **blocks** from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) whose **first line** includes `thread:<expert_id>` (optional **continuation paragraphs** on following lines until the next top-level `- ` bullet or `##` heading), routed on ingest by `strategy_expert_transcript.py`.
+**Length:** Target **≤ 2000 words** per ingest block; with **7-day** pruning, the whole file should stay near a **≤ ~20,000 word** soft ceiling (triage warns if exceeded).
 **Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.
 **Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).
 **Companion files:** [`strategy-expert-<expert_id>.md`](strategy-expert-template.md#profile-template) (profile) and [`strategy-expert-<expert_id>-thread.md`](strategy-expert-template.md#thread-template) (distilled thread).

@@ -19,6 +19,14 @@ import re
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+from strategy_expert_corpus import (
+    MAX_VERBATIM_WORDS_PER_INGEST,
+    SOFT_MAX_TRANSCRIPT_FILE_WORDS,
+    _word_count,
+    extract_thread_ingests,
+    verbatim_to_transcript_lines,
+)
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
 DEFAULT_INBOX = (
@@ -30,6 +38,30 @@ DEFAULT_OUT_DIR = (
 )
 
 TRIAGE_MARKER = "<!-- Triage appends new date sections below. Do not add content above this line. -->"
+
+
+def canonical_transcript_header(expert_id: str) -> str:
+    """Top-of-file header for `strategy-expert-<expert_id>-transcript.md` (through triage marker)."""
+    return (
+        f"# Expert transcript \u2014 `{expert_id}`\n"
+        f"\n"
+        f"WORK only; not Record.\n"
+        f"\n"
+        f"**Source:** Verbatim blocks from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) "
+        f"that include `thread:{expert_id}` (first line + optional continuation paragraphs), routed on ingest.\n"
+        f"**Length:** Target **≤ {MAX_VERBATIM_WORDS_PER_INGEST} words** per ingest block; whole file soft "
+        f"**≤ {SOFT_MAX_TRANSCRIPT_FILE_WORDS} words** after prune (7-day window makes overrun unlikely).\n"
+        f"**Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.\n"
+        f"**Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs "
+        f"(append-only, not overwrite).\n"
+        f"**Companion files:** [`strategy-expert-{expert_id}.md`](strategy-expert-{expert_id}.md) (profile) "
+        f"and [`strategy-expert-{expert_id}-thread.md`](strategy-expert-{expert_id}-thread.md) (distilled thread).\n"
+        f"\n"
+        f"---\n"
+        f"\n"
+        f"{TRIAGE_MARKER}\n"
+    )
+
 
 _RE_DATE_HEADING = re.compile(r"^## (\d{4}-\d{2}-\d{2})\s*$")
 
@@ -101,12 +133,11 @@ def triage_to_transcripts(
         expert_ids_set = expert_ids
         all_ids = tuple(sorted(expert_ids))
 
-    from strategy_expert_corpus import extract_thread_ingests
-
     inbox_text = inbox_path.read_text(encoding="utf-8")
     extracted = extract_thread_ingests(inbox_text, today=today)
 
     written: list[Path] = []
+    warn_ingest: list[str] = []
 
     for expert_id in all_ids:
         transcript_path = out_dir / f"strategy-expert-{expert_id}-transcript.md"
@@ -116,38 +147,28 @@ def triage_to_transcripts(
         if transcript_path.is_file():
             header, existing_sections = parse_transcript_file(transcript_path)
         else:
-            header = (
-                f"# Expert transcript \u2014 `{expert_id}`\n"
-                f"\n"
-                f"WORK only; not Record.\n"
-                f"\n"
-                f"**Source:** Verbatim lines from [`daily-strategy-inbox.md`](daily-strategy-inbox.md) "
-                f"that include `thread:{expert_id}`, routed automatically on ingest.\n"
-                f"**Retention:** 7-day rolling window; date sections older than 7 days are pruned automatically.\n"
-                f"**Editing:** Operator may lightly edit for clarity after triage. Edits are preserved across triage runs (append-only, not overwrite).\n"
-                f"**Companion files:** [`strategy-expert-{expert_id}.md`](strategy-expert-{expert_id}.md) (profile) "
-                f"and [`strategy-expert-{expert_id}-thread.md`](strategy-expert-{expert_id}-thread.md) (distilled thread).\n"
-                f"\n"
-                f"---\n"
-                f"\n"
-                f"{TRIAGE_MARKER}\n"
-            )
+            header = canonical_transcript_header(expert_id)
             existing_sections = {}
 
         for d, lines in new_by_date.items():
             date_str = d.isoformat()
             if date_str in existing_sections:
                 existing_lines_text = "\n".join(existing_sections[date_str])
-                for line in lines:
-                    if line.rstrip() not in existing_lines_text:
-                        existing_sections[date_str].append(line.rstrip())
+                for verbatim in lines:
+                    if verbatim.rstrip() not in existing_lines_text:
+                        msg = _warn_verbatim_size(verbatim, expert_id, date_str)
+                        if msg:
+                            warn_ingest.append(msg)
+                        existing_sections[date_str].extend(
+                            verbatim_to_transcript_lines(verbatim)
+                        )
             else:
                 section_lines = [f"## {date_str}"]
-                for line in lines:
-                    if line.strip().startswith("- "):
-                        section_lines.append(line.rstrip())
-                    else:
-                        section_lines.append(f"- {line.rstrip()}")
+                for verbatim in lines:
+                    msg = _warn_verbatim_size(verbatim, expert_id, date_str)
+                    if msg:
+                        warn_ingest.append(msg)
+                    section_lines.extend(verbatim_to_transcript_lines(verbatim))
                 existing_sections[date_str] = section_lines
 
         pruned: dict[str, list[str]] = {}
@@ -165,12 +186,33 @@ def triage_to_transcripts(
 
         final = header + "\n" + "\n\n".join(body_parts) + "\n" if body_parts else header
 
+        if body_parts and not dry_run:
+            file_words = _word_count("\n".join("\n".join(pruned[ds]) for ds in sorted(pruned.keys(), reverse=True)))
+            if file_words > SOFT_MAX_TRANSCRIPT_FILE_WORDS:
+                warn_ingest.append(
+                    f"{transcript_path.name}: total ~{file_words} words in file after prune "
+                    f"(soft cap {SOFT_MAX_TRANSCRIPT_FILE_WORDS}); consider shorter captures or rely on 7d prune."
+                )
+
         if not dry_run:
             transcript_path.write_text(final, encoding="utf-8")
 
         written.append(transcript_path)
 
+    for msg in warn_ingest:
+        print(f"strategy_expert_transcript: {msg}", flush=True)
+
     return written
+
+
+def _warn_verbatim_size(verbatim: str, expert_id: str, date_str: str) -> str | None:
+    wc = _word_count(verbatim)
+    if wc > MAX_VERBATIM_WORDS_PER_INGEST:
+        return (
+            f"{expert_id} @ {date_str}: verbatim ingest ~{wc} words "
+            f"(policy max {MAX_VERBATIM_WORDS_PER_INGEST}); split or trim if unintended."
+        )
+    return None
 
 
 def main() -> int:

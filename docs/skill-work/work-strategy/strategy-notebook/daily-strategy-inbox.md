@@ -47,6 +47,10 @@
 
 **Assistant default:** Offer **cold // hook** when the operator’s capture is **Judgment-sensitive** or **multi-chain**; otherwise **single gist** is fine.
 
+### Long-form verbatim (`thread:`)
+
+When you need **substantial quoted speech** (interview, monologue segment), put **`thread:<expert_id>`** on the **first** paste-ready line, then continue the quote on **following lines** without a leading `- ` at column 0 (plain paragraphs and blank lines are included until the next top-level `- ` bullet or `##` heading). **Budget:** **≤ ~2000 words** per block (triage warns above that); **7-day** pruning keeps each **`-transcript.md`** near a **≤ ~20k word** soft file cap. Run **`python3 scripts/strategy_thread.py`** (operator **`thread`**) to triage inbox → per-expert **`-transcript.md`**.
+
 ### Multi-item ingest (optional common analysis)
 
 When the operator captures **two or more** excerpts in one pass, **items stay separate** — still **one canonical line per excerpt** (separate grep targets; separate Links when the inbox weaves into `days.md`). **Same interview URL for two experts:** repeat the URL on **two lines**, each with its own **`thread:<id>`**; see **Same transcript, show, or panel** in [strategy-commentator-threads.md](strategy-commentator-threads.md). **Default:** assistant **drafts** the bundle in chat; **append only after operator approval** (or **`EXECUTE`**).
